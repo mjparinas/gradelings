@@ -35,7 +35,7 @@ def lines(h):
     return [re.sub(r"\s+", " ", l).strip() for l in t.split("\n") if l.strip()]
 
 
-def parse(h, marker, code_re, goal_clean, themes=False):
+def parse(h, marker, code_re, goal_clean, with_themes=False):
     L = lines(h)
     start = next(k for k, l in enumerate(L) if l.startswith(marker)) - 1
     groups, cur, code, txt, prev = [], None, None, [], ""
@@ -43,7 +43,7 @@ def parse(h, marker, code_re, goal_clean, themes=False):
     def flush(last=False):
         nonlocal code, txt
         if code and cur is not None:
-            if last and themes:
+            if last and with_themes:
                 # The theme titles follow the last outcome on the page; keep them apart from its text.
                 themes = []
                 while txt and not re.search(r"[.;:]$", txt[-1]):
@@ -105,7 +105,7 @@ def main():
     for level, cid in zip("123456789", range(395, 404)):
         data[level]["core-french"] = parse(fetch(EN + str(cid)), "Outcomes:", CORE_CODE, core_goal)
     for g, cid in [("3", 268), ("4", 269), ("5", 270), ("6", 271), ("7", 272), ("8", 273), ("9", 274), ("k", 407), ("1", 408), ("2", 409)]:
-        groups = parse(fetch(FR + str(cid)), "Résultats d’apprentissage", FR_CODE, fr_goal, themes=True)
+        groups = parse(fetch(FR + str(cid)), "Résultats d’apprentissage", FR_CODE, fr_goal, with_themes=True)
         for grp in groups:
             for o in grp["outcomes"]:
                 o["code"] = norm_code(o["code"])

@@ -9,3 +9,4 @@ import { course as immersion } from "./immersion";
 import { course as coreFrench } from "./core-french";
 
 export const courses: Course[] = withLessons([math, language, science, social, immersion, coreFrench], lessons);
+export { lessons };
