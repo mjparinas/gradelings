@@ -10,7 +10,8 @@ import { go } from "@/lib/router";
 import { useActiveProfile, useChildSettings, useDerived } from "@/lib/store";
 import { useBand } from "../band";
 import { Critter, CritterSvg, SpeechBubble } from "../Critter";
-import { Dialog, Page, ProgressBar, subjectVars } from "../ui";
+import { Page, ProgressBar, subjectVars } from "../ui";
+import { MembershipLock } from "./MembershipLock";
 import { BackButton, LevelChip, UnitDialog } from "./Practice";
 import { useAllowed } from "./useAllowed";
 
@@ -145,12 +146,7 @@ export function TrailMap() {
       </ol>
 
       <UnitDialog unitKey={selected} onClose={() => setSelected(null)} onLocked={() => setLocked(true)} />
-      <Dialog open={locked} title="Ask a grown-up" onClose={() => setLocked(false)}>
-        <p className="mb-5 font-read text-lg text-ink-soft">This lesson opens with a family membership. A grown-up can turn it on in the grown-ups area.</p>
-        <button type="button" className="btn btn-good min-h-14 w-full text-xl" onClick={() => setLocked(false)}>
-          OK
-        </button>
-      </Dialog>
+      <MembershipLock open={locked} onClose={() => setLocked(false)} />
     </Page>
   );
 }

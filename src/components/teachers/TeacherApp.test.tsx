@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { APP_NAME } from "@/lib/brand";
@@ -115,8 +115,10 @@ describe("TeacherApp", () => {
     await user.click(screen.getByRole("button", { name: /All classes/ }));
 
     await user.type(await screen.findByLabelText("Class name"), "Ontario Room");
-    await user.selectOptions(screen.getByLabelText("Grade"), "4");
-    await user.selectOptions(screen.getByLabelText("Province"), "ca-on");
+    await user.click(screen.getByRole("combobox", { name: "Grade" }));
+    await user.click(screen.getByRole("option", { name: "Grade 4" }));
+    await user.click(screen.getByRole("combobox", { name: "Province" }));
+    await user.click(screen.getByRole("option", { name: "Ontario" }));
     await user.click(screen.getByRole("button", { name: "Create class" }));
 
     await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/", "POST", {
@@ -135,8 +137,9 @@ describe("TeacherApp", () => {
     expect(screen.getByLabelText("Login code Z X 9 1 P Q")).toHaveTextContent("ZX91PQ");
     expect(screen.getByText(/Hasn’t started yet/)).toBeInTheDocument();
 
-    const dueDate = screen.getByLabelText("Due date for Counting");
-    fireEvent.change(dueDate, { target: { value: "2026-10-14" } });
+    await user.click(screen.getByRole("button", { name: "Due date for Counting" }));
+    const calendar = await screen.findByRole("dialog", { name: "Due date for Counting" });
+    await user.click(within(calendar).getByRole("button", { name: /^1 / }));
     await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/assignments/", "PATCH", expect.objectContaining({
       classId: "class-1", unitKey: "3/math/counting", dueAt: expect.any(Number),
     })));
@@ -156,7 +159,8 @@ describe("TeacherApp", () => {
     await user.click(await screen.findByRole("button", { name: "Get a new code" }));
     expect(mocks.call).toHaveBeenCalledWith("/api/classes/?id=class-1", "PATCH", undefined);
 
-    await user.selectOptions(screen.getByLabelText("Add a unit"), "3/math/patterns");
+    await user.click(screen.getByRole("combobox", { name: "Add a unit" }));
+    await user.click(screen.getByRole("option", { name: /Patterns/ }));
     await user.click(screen.getByRole("button", { name: "Assign" }));
     await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/assignments/", "POST", {
       classId: "class-1", unitKey: "3/math/patterns", dueAt: undefined,
@@ -168,12 +172,12 @@ describe("TeacherApp", () => {
 
   it("requires confirmation before deleting a student or closing a class", async () => {
     const user = userEvent.setup();
-    const confirm = vi.spyOn(window, "confirm").mockReturnValue(true);
     render(<TeacherApp />);
     await user.click(await screen.findByRole("button", { name: /Room 3/ }));
 
     await user.click(await screen.findByRole("button", { name: "Remove" }));
-    expect(confirm).toHaveBeenCalledWith(expect.stringContaining("Remove Maya?"));
+    expect(await screen.findByRole("dialog", { name: "Remove Maya?" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Yes, remove" }));
     await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/?classId=class-1&studentId=roster-1", "DELETE", undefined));
 
     await user.click(screen.getByRole("button", { name: "Close class" }));

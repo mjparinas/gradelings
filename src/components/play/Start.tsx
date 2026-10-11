@@ -6,7 +6,7 @@ import { AVAILABLE_GRADES } from "@/content";
 import { DEFAULT_FRAMEWORK, FRAMEWORKS, getFramework } from "@/content/frameworks";
 import { GRADE_LABEL, GRADE_SHORT } from "@/content/subjects";
 import type { FrameworkId, GradeId } from "@/content/types";
-import { APP_NAME } from "@/lib/brand";
+import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { MAX_CHILDREN } from "@/lib/plan";
 import { sounds } from "@/lib/sound";
 import { useDerived, useProfiles, useStore } from "@/lib/store";
@@ -14,15 +14,15 @@ import type { Profile } from "@/lib/model";
 import { Critter, CritterSvg, CRITTERS, SpeechBubble } from "../Critter";
 import { signInStudent } from "@/lib/account";
 import { Page } from "../ui";
+import { ProvinceMenu } from "./ProvinceMenu";
 
 export const AVATAR_COLOURS = ["#ff9636", "#4f8ef7", "#25b47e", "#e9559a", "#8b5cf6", "#06b6d4", "#f5b301", "#ef4444"];
 
 export function Logo({ size = "text-5xl sm:text-6xl" }: { size?: string }) {
-  const colours = ["#4f8ef7", "#e9559a", "#25b47e", "#ff9636", "#8b5cf6", "#06b6d4"];
   return (
     <h1 className={`${size} font-bold tracking-tight`} aria-label={APP_NAME}>
       {APP_NAME.split("").map((ch, i) => (
-        <span key={i} aria-hidden="true" className="inline-block animate-drop-in" style={{ color: colours[i % colours.length], animationDelay: `${i * 60}ms` }}>
+        <span key={i} aria-hidden="true" className="inline-block animate-drop-in" style={{ color: WORDMARK_COLOURS[i % WORDMARK_COLOURS.length], animationDelay: `${i * 60}ms` }}>
           {ch}
         </span>
       ))}
@@ -166,22 +166,7 @@ export function NewChild({ onDone, onCancel, first = false }: { onDone: (id: str
         <p className="mt-2 font-read text-sm text-ink-soft">
           {grade ? `${GRADE_LABEL[grade]} · ${framework.curriculumName}` : "K means Kindergarten."}
         </p>
-        {FRAMEWORKS.length > 1 && (
-          <label className="mt-3 flex flex-col items-center gap-1">
-            <span className="text-lg font-semibold">Where do you live?</span>
-            <select
-              value={frameworkId}
-              onChange={(e) => setFrameworkId(e.target.value as FrameworkId)}
-              className="min-h-12 rounded-2xl border-4 border-line bg-white px-4 text-xl font-bold"
-            >
-              {FRAMEWORKS.map((f) => (
-                <option key={f.id} value={f.id}>
-                  {f.name}
-                </option>
-              ))}
-            </select>
-          </label>
-        )}
+        {FRAMEWORKS.length > 1 && <ProvinceMenu value={frameworkId} onChange={setFrameworkId} />}
       </div>
 
       <div>

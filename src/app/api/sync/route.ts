@@ -1,5 +1,6 @@
 import type { InValue } from "@libsql/client";
 import type { AppEvent, ChildSettings, Profile } from "@/lib/model";
+import { MAX_CHILDREN } from "@/lib/plan";
 import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
 import { batch, query } from "@/server/db";
 import { familyClasswork } from "@/server/classroom";
@@ -58,6 +59,7 @@ export async function POST(req: Request) {
       /* unreadable record: treat as a normal child */
     }
   }
+  let activeChildren = existing.filter((r) => r.family_id === family && !gone.get(r.id)?.deleted).length;
 
   for (const incoming of incomingProfiles) {
     if (!incoming || !isId(incoming.id) || typeof incoming.updatedAt !== "number") continue;
@@ -75,11 +77,16 @@ export async function POST(req: Request) {
         continue;
       }
     }
+    const wasActive = Boolean(row && row.family_id === family && !gone.get(p.id)?.deleted);
+    // Families already over the limit keep those children. A new or restored child needs a free place.
+    if (!p.deleted && !wasActive && activeChildren >= MAX_CHILDREN) continue;
     mine.add(p.id);
     if (!row || p.updatedAt > Number(row.updated_at)) {
       gone.set(p.id, { deleted: Boolean(p.deleted), resetAt: p.resetAt ?? 0 });
       const data = JSON.stringify(p);
       if (data.length > MAX_JSON) continue; // never store half a JSON document
+      if (!p.deleted && !wasActive) activeChildren++;
+      else if (p.deleted && wasActive) activeChildren--;
       writes.push({
         sql: `INSERT INTO profiles (id, family_id, data, updated_at) VALUES (?, ?, ?, ?)
               ON CONFLICT(id) DO UPDATE SET data = excluded.data, updated_at = excluded.updated_at`,

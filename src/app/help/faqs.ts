@@ -1,3 +1,5 @@
+import { FRAMEWORKS } from "@/content/frameworks";
+import { listRegions } from "@/content/regions";
 import { APP_NAME } from "@/lib/brand";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, TRIAL_DAYS } from "@/lib/plan";
 
@@ -63,7 +65,7 @@ export const HELP: HelpSection[] = [
     faqs: [
       {
         q: "Which curriculum and grades does it follow?",
-        a: `Kindergarten to Grade 9 in math, English language arts, science and social studies, matched to the BC Curriculum (Yukon and the Northwest Territories follow it too, with local First Nations, Dene and Inuit content added). Ontario, Manitoba, Nova Scotia, New Brunswick, Nunavut and Alberta (the new K–6 curriculum and the Grades 7–9 programs of study) are also available for math, language, science, social studies and French (Core French and French Immersion), and Saskatchewan for math, language, science and social studies, Kindergarten to Grade 9, and parents can switch a child’s province in Children. Every unit shows the learning standard it practises. More provinces and states are planned.`,
+        a: `Kindergarten to Grade 9. Choose ${listRegions(FRAMEWORKS)} when you add a child, and you can switch province later in Children. Math, English language arts, science and social studies are in every province. French Immersion and Core French are included everywhere except Saskatchewan, and Nunavut has Core French only. Yukon and the Northwest Territories follow the BC curriculum, adapted with local First Nations, Dene and Inuit content. Every unit shows the learning standard it practises. More provinces and states are planned.`,
       },
       {
         q: "What is Adventure mode?",
@@ -79,7 +81,7 @@ export const HELP: HelpSection[] = [
       },
       {
         q: "How are the report levels worked out?",
-        a: `In BC, Yukon and the Northwest Territories, levels use the Provincial Proficiency Scale: Emerging, Developing, Proficient and Extending. In Ontario and Manitoba, they follow the Level 1 to 4 achievement scales. In Nova Scotia, reports use four steps that match the wording for your child’s grade band. In New Brunswick, they follow the four-point scale from working below to excelling. Alberta has no provincial report-card scale, so Alberta reports use four plain steps: Beginning, Approaching, Meeting and Exceeding, and Nunavut reports use the same four plain steps. In Saskatchewan, they use four levels (Beginning, Approaching, Meeting, Exemplary), since school divisions set their own report-card wording. Only first-try answers count. Proficient needs at least 75% over at least 8 recent answers, and Extending also needs 90% over 16 answers and a passed Challenge. Reports show practice in the app. They are not a report-card mark; your child’s teacher decides proficiency.`,
+        a: `In BC, Yukon and the Northwest Territories, levels use the Provincial Proficiency Scale: Emerging, Developing, Proficient and Extending. In Ontario and Manitoba, they follow the Level 1 to 4 achievement scales. In Nova Scotia, reports use four steps that match the wording for your child’s grade band. In New Brunswick, they follow the four-point scale from working below to excelling. Alberta has no provincial report-card scale, so Alberta and Nunavut reports use four plain steps: Beginning, Approaching, Meeting and Exceeding. In Saskatchewan, they use four levels (Beginning, Approaching, Meeting, Exemplary), since school divisions set their own report-card wording. Only first-try answers count. Proficient needs at least 75% over at least 8 recent answers, and Extending also needs 90% over 16 answers and a passed Challenge. Reports show practice in the app. They are not a report-card mark; your child’s teacher decides proficiency.`,
       },
       {
         q: "How does earning game time work?",
@@ -119,7 +121,7 @@ export const HELP: HelpSection[] = [
     faqs: [
       {
         q: "What does it cost?",
-        a: `The first ${TRIAL_DAYS} days are free with everything included, and no card is needed. After that the family plan is ${PRICES.month.label} or ${PRICES.year.label} (${PRICES.year.note}), in Canadian dollars, for up to ${MAX_CHILDREN} children. Taxes may be added where required.`,
+        a: `You can subscribe straight away for ${PRICES.month.label} or ${PRICES.year.label} (${PRICES.year.note}), in Canadian dollars, for up to ${MAX_CHILDREN} children. The free trial is optional: the first ${TRIAL_DAYS} days include everything, and no card is needed. Taxes may be added where required.`,
       },
       {
         q: "What stays free after the trial?",
@@ -139,7 +141,7 @@ export const HELP: HelpSection[] = [
       },
       {
         q: "What if I subscribe during the free trial?",
-        a: "You’re charged straight away, and the days left in the trial don’t carry over. If you’d like to try everything first, wait until the trial is nearly over.",
+        a: "Open Parent area → Subscribe and choose monthly or yearly. You’re charged at checkout, the paid plan starts that day, and the days left in the trial don’t carry over.",
       },
       {
         q: "Can I switch between monthly and yearly?",

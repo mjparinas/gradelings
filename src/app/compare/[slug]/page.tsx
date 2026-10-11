@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
-import { Crumbs, SitePage } from "@/components/site/SiteChrome";
+import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
 import { guidePath } from "@/components/site/guides";
 import { COMPETITORS, PRICE_CHECKED, competitorBySlug } from "@/content/compare";
 import { APP_NAME } from "@/lib/brand";
 import { FREE_UNITS_PER_COURSE, PRICES, TRIAL_DAYS } from "@/lib/plan";
+import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const c = competitorBySlug((await params).slug);
   if (!c) return {};
   return {
-    title: `${APP_NAME} vs ${c.name} for BC, Ontario and Alberta families`,
+    title: `${APP_NAME} vs ${c.name} for Canadian families`,
     description: `${APP_NAME} compared with ${c.name}: price, curriculum match, how progress is shown and what kids see. A fair look at who each is best for.`,
     alternates: { canonical: guidePath.compare(c.slug) },
   };
@@ -31,7 +31,7 @@ export default async function ComparePage({ params }: Props) {
   const c = competitorBySlug((await params).slug);
   if (!c) notFound();
   const crumbs = [{ label: "Home", href: "/" }, { label: "Compare", href: guidePath.compareIndex() }, { label: `${APP_NAME} vs ${c.name}` }];
-  const title = `${APP_NAME} vs ${c.name} for BC, Ontario and Alberta families`;
+  const title = `${APP_NAME} vs ${c.name} for Canadian families`;
 
   return (
     <SitePage>
@@ -118,10 +118,9 @@ export default async function ComparePage({ params }: Props) {
         </h2>
         <div className="flex flex-col gap-2">
           {c.faqs.map((q) => (
-            <details key={q.q} className="rounded-2xl border border-line bg-white p-4">
-              <summary className="cursor-pointer font-bold">{q.q}</summary>
+            <Disclosure key={q.q} className="rounded-2xl border border-line bg-white p-4" titleClassName="font-bold" title={q.q}>
               <p className="mt-2 font-read">{q.a}</p>
-            </details>
+            </Disclosure>
           ))}
         </div>
       </section>
@@ -145,11 +144,11 @@ export default async function ComparePage({ params }: Props) {
       </section>
 
       <section className="card mt-10 flex flex-col gap-2 p-6">
-        <p className="text-xl font-bold">Try {APP_NAME} free for {TRIAL_DAYS} days</p>
-        <p className="font-read text-ink-soft">No card needed. Everything is on, and your child’s progress is reported in your province’s report-card levels.</p>
-        <Link href="/play/" className="btn btn-good min-h-14 w-fit px-8 text-xl">
-          Try it free
-        </Link>
+        <p className="text-xl font-bold">Subscribe, or try {APP_NAME} free for {TRIAL_DAYS} days</p>
+        <p className="font-read text-ink-soft">Subscribe straight away, or start the free trial with no card. Everything is on, and your child’s progress is reported in your province’s report-card levels.</p>
+        <div className="flex flex-wrap gap-3">
+          <SubscribeActions />
+        </div>
       </section>
     </SitePage>
   );

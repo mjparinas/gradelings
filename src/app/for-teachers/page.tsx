@@ -5,6 +5,7 @@ import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { TeacherCta } from "@/components/site/TeacherCta";
 import { TEACHER_FRAMEWORKS, TEACHER_SIGNUP, teacherPath } from "@/components/site/teachers";
 import { APP_NAME } from "@/lib/brand";
+import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
 
 const curricula = TEACHER_FRAMEWORKS.map((f) => f.curriculumName).join(" or ");
@@ -79,10 +80,9 @@ export default function TeachersHub() {
         </h2>
         <div className="flex flex-col gap-2">
           {FAQS.map((f) => (
-            <details key={f.q} className="rounded-2xl border border-line bg-white p-4">
-              <summary className="cursor-pointer text-lg font-semibold">{f.q}</summary>
+            <Disclosure key={f.q} className="rounded-2xl border border-line bg-white p-4" titleClassName="text-lg font-semibold" title={f.q}>
               <p className="mt-2 font-read text-ink-soft">{f.a}</p>
-            </details>
+            </Disclosure>
           ))}
         </div>
         <p className="mt-4 font-read text-sm text-ink-soft">

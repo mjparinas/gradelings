@@ -254,6 +254,8 @@ describe("daily email job", () => {
     const mail = recaps().find((m) => m.to === "recap-yes@example.com")!;
     expect(mail.text).toContain("Maya has practised on 1 day");
     expect(mail.text).toContain("report-card mark");
+    expect(mail.text).toContain("Subscribe: ");
+    expect(mail.text).toContain("/parents/#/subscription");
     const n = recaps().length;
     await run();
     expect(recaps().length).toBe(n);
@@ -264,6 +266,8 @@ describe("daily email job", () => {
     const last = email.outbox().filter((m) => m.to === "recap-yes@example.com" && m.subject.includes("free trial ends")).at(-1)!;
     expect(last.text).toContain("Here's what the trial has done");
     expect(last.text).toContain("Maya");
+    expect(last.text).toContain("Subscribe: ");
+    expect(last.text).toContain("/parents/#/subscription");
   });
 
   it("warns after 11 months and deletes an inactive class after 12 months", async () => {

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { APP_NAME, CONTACT_EMAIL } from "@/lib/brand";
+import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
 import { ALL_FAQS, HELP } from "./faqs";
 
@@ -37,10 +38,9 @@ export default function HelpPage() {
             </h2>
             <div className="flex flex-col gap-2">
               {s.faqs.map((f) => (
-                <details key={f.q} className="rounded-2xl border border-line bg-white p-4">
-                  <summary className="cursor-pointer text-lg font-semibold">{f.q}</summary>
+                <Disclosure key={f.q} className="rounded-2xl border border-line bg-white p-4" titleClassName="text-lg font-semibold" title={f.q}>
                   <p className="mt-2 font-read text-ink-soft">{f.a}</p>
-                </details>
+                </Disclosure>
               ))}
             </div>
           </section>

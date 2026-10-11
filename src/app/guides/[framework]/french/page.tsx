@@ -7,6 +7,7 @@ import { curriculumPath, resolve } from "@/components/site/curriculum";
 import { guidePath } from "@/components/site/guides";
 import { guidesFor, GUIDE_FRAMEWORKS } from "@/content/guides";
 import { GRADE_LABEL } from "@/content/subjects";
+import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -115,10 +116,9 @@ export default async function FrenchGuidePage({ params }: Props) {
         </h2>
         <div className="flex flex-col gap-2">
           {g.faqs.map((q) => (
-            <details key={q.q} className="rounded-2xl border border-line bg-white p-4">
-              <summary className="cursor-pointer font-bold">{q.q}</summary>
+            <Disclosure key={q.q} className="rounded-2xl border border-line bg-white p-4" titleClassName="font-bold" title={q.q}>
               <p className="mt-2 font-read">{q.a}</p>
-            </details>
+            </Disclosure>
           ))}
         </div>
       </section>

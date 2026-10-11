@@ -1,5 +1,6 @@
 "use client";
 
+import { SelectMenu } from "../SelectMenu";
 import { GOAL_CHOICES, NUDGE_PRESETS, activeNudge, weekProgress } from "@/lib/familyGoal";
 import { defaultChildSettings, newId, type Profile } from "@/lib/model";
 import { useDerived, useStore } from "@/lib/store";
@@ -19,21 +20,14 @@ export function FamilyGoal({ p }: { p: Profile }) {
     <div className="mt-4 rounded-xl bg-paper p-3">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <p className="font-semibold">🎯 Weekly goal</p>
-        <label className="flex items-center gap-2 text-sm">
-          <span className="sr-only">Days a week for {p.name}</span>
-          <select
-            value={goal ?? 0}
-            onChange={(e) => update(p.id, { weeklyGoalDays: Number(e.target.value) || undefined })}
-            className="min-h-11 rounded-xl border-2 border-line bg-white px-2 font-semibold"
-          >
-            <option value={0}>No goal</option>
-            {GOAL_CHOICES.map((n) => (
-              <option key={n} value={n}>
-                {n} days a week
-              </option>
-            ))}
-          </select>
-        </label>
+        <SelectMenu
+          label={`Days a week for ${p.name}`}
+          hideLabel
+          block={false}
+          value={String(goal ?? 0)}
+          onChange={(next) => update(p.id, { weeklyGoalDays: Number(next) || undefined })}
+          options={[{ value: "0", label: "No goal" }, ...GOAL_CHOICES.map((n) => ({ value: String(n), label: `${n} days a week` }))]}
+        />
       </div>
       {progress && (
         <div className="mt-2">

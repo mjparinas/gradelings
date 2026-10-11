@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
-import { Crumbs, SitePage } from "@/components/site/SiteChrome";
+import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
 import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle } from "@/components/site/curriculum";
 import { guidePath } from "@/components/site/guides";
 import { guidesFor, GUIDE_FRAMEWORKS } from "@/content/guides";
 import { GRADE_LABEL, getSubjectMeta, gradeSlug } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
+import { TRIAL_DAYS } from "@/lib/plan";
+import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -188,20 +190,19 @@ export default async function GradeGuide({ params }: Props) {
         </h2>
         <div className="flex flex-col gap-2">
           {faqs.map((q) => (
-            <details key={q.q} className="rounded-2xl border border-line bg-white p-4">
-              <summary className="cursor-pointer font-bold">{q.q}</summary>
+            <Disclosure key={q.q} className="rounded-2xl border border-line bg-white p-4" titleClassName="font-bold" title={q.q}>
               <p className="mt-2 font-read">{q.a}</p>
-            </details>
+            </Disclosure>
           ))}
         </div>
       </section>
 
       <section className="card mt-10 flex flex-col gap-2 p-6">
         <p className="text-xl font-bold">Practise {label} skills with {APP_NAME}</p>
-        <p className="font-read text-ink-soft">Kind hints, no ads, and reports in the language of the {f.shortName} report card. Free for 30 days, no card needed.</p>
-        <Link href="/play/" className="btn btn-good min-h-14 w-fit px-8 text-xl">
-          Try it free
-        </Link>
+        <p className="font-read text-ink-soft">Kind hints, no ads, and reports in the language of the {f.shortName} report card. Subscribe now, or try it free for {TRIAL_DAYS} days with no card.</p>
+        <div className="flex flex-wrap gap-3">
+          <SubscribeActions />
+        </div>
       </section>
 
       <nav aria-label="Other grades" className="mt-8 flex flex-wrap justify-between gap-3">
