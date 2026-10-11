@@ -44,6 +44,11 @@ SOCIAL_GCOS = ["Citizenship, Power, and Governance", "Culture and Diversity", "I
 # prefixes that keep their hyphen when a line breaks after them
 KEEP_HYPHEN = {"co", "non", "self", "multi", "cross", "well", "one", "two", "three", "high", "low", "e", "pre", "post", "sub", "problem", "small"}
 HYPHEN_LOG = []
+BULLETS = {}  # "<grade>/<subject>" -> number of bullet / sub-point lines turned into parts (checked by verify_outcomes.py)
+
+
+def count_bullet(where, n=1):
+    BULLETS[where] = BULLETS.get(where, 0) + n
 
 
 def clean(s):
@@ -222,6 +227,7 @@ def parse_math(pages, where, kinder):
             elif cur is not None and cur.get("code"):
                 if t.startswith("•"):
                     cur["parts"].append(t.lstrip("• ").strip())
+                    count_bullet(where)
                 else:
                     cur["parts"][-1] = join(cur["parts"][-1], t, where)
     res, head = [], ""
@@ -257,6 +263,7 @@ def parse_coded(pages, where, kinder, strand_by_gco=None):
             elif cur is not None:
                 if re.match(r"^[-•]\s", t) or t in ("-", "•"):
                     cur["parts"].append(t[1:].strip())
+                    count_bullet(where)
                 else:
                     cur["parts"][-1] = join(cur["parts"][-1], t, where)
             else:
@@ -270,6 +277,7 @@ def parse_science(pages, where, kinder):
 
     def new_item(txt):
         nonlocal cur
+        count_bullet(where)
         cur = [txt]
         cur_unit["items"].append(cur)
 
@@ -331,9 +339,7 @@ def parse_social(pages, where, kinder):
                 cur = {"code": m.group(1), "parts": [m.group(2)], "unit": unit, "org": organizer}
                 out.append(cur)
                 head_open = False
-            elif kinder and rel is not None and rel <= 2 and cur is None or (kinder and rel is not None and rel <= 2 and not m and not head_open and cur is not None and False):
-                unit, cur, head_open, unit_kind = t, None, True, "unit"
-            elif kinder and rel is not None and rel <= 2 and not m:
+            elif kinder and rel is not None and rel <= 2:  # Kindergarten has a plain heading ("I Am Unique") instead of unit lines
                 unit, cur, head_open, unit_kind = t, None, True, "unit"
             elif head_open:
                 if unit_kind == "org":
@@ -419,6 +425,12 @@ def extract(folder):
                             problems.append((where, "social GCO label not recognised", label))
                             continue
                         g["GCO: " + std] = {"group": std, "text": stmt, "printed_label": label}
+            if kinder and subj == "language":  # Kindergarten prints no strand heading with a GCO; use the heading next to its outcomes
+                heads = list(dict.fromkeys(o["head"] for o in outs))
+                for n, hd in ((1, heads[0]), (4, heads[2]), (8, heads[3])):
+                    if f"GCO {n}" in g:
+                        g[f"GCO {n}"]["group"] = hd
+            g = {a: b for a, b in g.items() if b["text"]}  # Kindergarten science prints "GCO 1:" with no statement
             result[key] = entries
             gco[key] = g
     result["_gco"] = gco
