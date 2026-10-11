@@ -2,6 +2,7 @@ import { ALBERTA } from "./alberta/framework";
 import { MANITOBA } from "./manitoba/framework";
 import { NEW_BRUNSWICK } from "./new-brunswick/framework";
 import { NOVA_SCOTIA } from "./nova-scotia/framework";
+import { NUNAVUT } from "./nunavut/framework";
 import { ONTARIO } from "./ontario/framework";
 import { SASKATCHEWAN } from "./saskatchewan/framework";
 import type { FrameworkId, GradeId, SubjectId } from "./types";
@@ -274,6 +275,7 @@ export const FRAMEWORKS: Framework[] = [
   NORTHWEST_TERRITORIES,
   NOVA_SCOTIA,
   NEW_BRUNSWICK,
+  NUNAVUT,
 ];
 
 export const DEFAULT_FRAMEWORK: FrameworkId = "ca-bc";

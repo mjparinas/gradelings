@@ -34,6 +34,8 @@ const FRENCH_GRADES: Record<FrameworkId, { immersion: GradeId[]; "core-french": 
   "ca-ns": { immersion: range("k", "9"), "core-french": range("4", "9") },
   // New Brunswick (anglophone sector): French Immersion from Grade 1; Core French (Intensive French) from Grade 4.
   "ca-nb": { immersion: range("1", "9"), "core-french": range("4", "9") },
+  // Nunavut: French as an Additional Language for Nunavut, Grades 4 to 9. No immersion program is built.
+  "ca-nu": { immersion: [], "core-french": range("4", "9") },
 };
 
 const units = (framework: FrameworkId, grade: GradeId, subject: string) =>

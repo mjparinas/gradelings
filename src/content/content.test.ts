@@ -259,7 +259,7 @@ describe("curriculum content", () => {
         const p = join(dir, f);
         return statSync(p).isDirectory() ? walk(p) : [p];
       });
-    const offenders = [...walk(join(__dirname, "grades")), ...walk(join(__dirname, "ontario")), ...walk(join(__dirname, "alberta")), ...walk(join(__dirname, "saskatchewan")), ...walk(join(__dirname, "manitoba")), ...walk(join(__dirname, "nova-scotia")), ...walk(join(__dirname, "new-brunswick"))].filter((f) => readFileSync(f, "utf8").includes("Math.random"));
+    const offenders = [...walk(join(__dirname, "grades")), ...walk(join(__dirname, "ontario")), ...walk(join(__dirname, "alberta")), ...walk(join(__dirname, "saskatchewan")), ...walk(join(__dirname, "manitoba")), ...walk(join(__dirname, "nova-scotia")), ...walk(join(__dirname, "new-brunswick")), ...walk(join(__dirname, "nunavut"))].filter((f) => readFileSync(f, "utf8").includes("Math.random"));
     expect(offenders).toEqual([]);
   });
 
@@ -377,6 +377,16 @@ describe("curriculum content", () => {
           for (const q of [1, 2, 3].flatMap((d) => u.generate({ difficulty: d as 1 | 2 | 3 }))) {
             const text = JSON.stringify(q);
             expect(/Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada|Saskatchewan|Regina|Alberta|Manitoba|Winnipeg|Nova Scotia|Halifax|Yukon|Northwest Territories/.test(text), `${u.id}: ${q.prompt}`).toBe(false);
+          }
+        }
+      });
+
+      it("carries no other province's wording into Nunavut classrooms", () => {
+        for (const u of course.units) {
+          if (!u.standards["ca-nu"] || /^nu-/.test(u.id) || u.standards["ca-bc"]) continue;
+          for (const q of [1, 2, 3].flatMap((d) => u.generate({ difficulty: d as 1 | 2 | 3 }))) {
+            const text = JSON.stringify(q);
+            expect(/Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada|Saskatchewan|Regina|Alberta|Manitoba|Winnipeg|Nova Scotia|Halifax|New Brunswick|Yukon|Northwest Territories/.test(text), `${u.id}: ${q.prompt}`).toBe(false);
           }
         }
       });
