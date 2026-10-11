@@ -19,7 +19,7 @@ describe("homepage province coverage", () => {
     const [immersion, core] = coverage.gaps;
     expect(immersion.subjects).toEqual(["immersion"]);
     expect(immersion.style).toBe("except");
-    expect(immersion.missing.map((f) => f.id)).toEqual(["ca-sk", "ca-nu"]);
+    expect(immersion.missing.map((f) => f.id)).toEqual(["ca-sk", "ca-nl", "ca-nu"]);
     expect(core.subjects).toEqual(["core-french"]);
     expect(core.style).toBe("except");
     expect(core.missing.map((f) => f.id)).toEqual(["ca-sk"]);
@@ -43,7 +43,7 @@ describe("homepage province coverage", () => {
 
   it("names every province, with 'the' before the Northwest Territories", () => {
     expect(regionList(FRAMEWORKS)).toBe(
-      "British Columbia, Ontario, Alberta, Saskatchewan, Manitoba, Yukon, the Northwest Territories, Nova Scotia, New Brunswick and Nunavut",
+      "British Columbia, Ontario, Alberta, Saskatchewan, Manitoba, Yukon, the Northwest Territories, Nova Scotia, New Brunswick, Newfoundland and Labrador and Nunavut",
     );
   });
 

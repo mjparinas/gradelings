@@ -110,6 +110,18 @@ const EXTRA_LOADERS: Partial<Record<FrameworkId, Partial<Record<GradeId, Loader>
     "8": () => import("./nova-scotia/g8"),
     "9": () => import("./nova-scotia/g9"),
   },
+  "ca-nl": {
+    k: () => import("./newfoundland-and-labrador/k"),
+    "1": () => import("./newfoundland-and-labrador/g1"),
+    "2": () => import("./newfoundland-and-labrador/g2"),
+    "3": () => import("./newfoundland-and-labrador/g3"),
+    "4": () => import("./newfoundland-and-labrador/g4"),
+    "5": () => import("./newfoundland-and-labrador/g5"),
+    "6": () => import("./newfoundland-and-labrador/g6"),
+    "7": () => import("./newfoundland-and-labrador/g7"),
+    "8": () => import("./newfoundland-and-labrador/g8"),
+    "9": () => import("./newfoundland-and-labrador/g9"),
+  },
   "ca-nu": {
     k: () => import("./nunavut/k"),
     "1": () => import("./nunavut/g1"),

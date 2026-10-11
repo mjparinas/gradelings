@@ -17,6 +17,9 @@ const SK_OUTCOMES = JSON.parse(readFileSync(join(__dirname, "../../docs/research
 // The official Manitoba outcomes (docs/research/manitoba). Unit standards cite them by code.
 // The official Nova Scotia outcomes (docs/research/nova-scotia). Unit standards cite them by code, or by bundle or outcome title.
 // The official New Brunswick curriculum (docs/research/new-brunswick). Unit standards cite its strand and big idea ("Number: Operations").
+// The key-stage outcomes of the Atlantic Canada foundation documents (docs/research/newfoundland-and-labrador). Unit standards cite
+// a strand and key stage ("Operation sense (by Grade 6)").
+const NL_OUTCOMES = JSON.parse(readFileSync(join(__dirname, "../../docs/research/newfoundland-and-labrador/outcomes.json"), "utf8")) as Record<string, { idx: string }[]>;
 const NB_OUTCOMES = JSON.parse(readFileSync(join(__dirname, "../../docs/research/new-brunswick/outcomes.json"), "utf8")) as Record<string, { idx: string }[]>;
 const NS_OUTCOMES = JSON.parse(readFileSync(join(__dirname, "../../docs/research/nova-scotia/outcomes.json"), "utf8")) as Record<string, { idx: string }[]>;
 const MB_OUTCOMES = JSON.parse(readFileSync(join(__dirname, "../../docs/research/manitoba/outcomes.json"), "utf8")) as Record<string, { idx: string }[]>;
@@ -259,7 +262,7 @@ describe("curriculum content", () => {
         const p = join(dir, f);
         return statSync(p).isDirectory() ? walk(p) : [p];
       });
-    const offenders = [...walk(join(__dirname, "grades")), ...walk(join(__dirname, "ontario")), ...walk(join(__dirname, "alberta")), ...walk(join(__dirname, "saskatchewan")), ...walk(join(__dirname, "manitoba")), ...walk(join(__dirname, "nova-scotia")), ...walk(join(__dirname, "new-brunswick")), ...walk(join(__dirname, "nunavut"))].filter((f) => readFileSync(f, "utf8").includes("Math.random"));
+    const offenders = [...walk(join(__dirname, "grades")), ...walk(join(__dirname, "ontario")), ...walk(join(__dirname, "alberta")), ...walk(join(__dirname, "saskatchewan")), ...walk(join(__dirname, "manitoba")), ...walk(join(__dirname, "nova-scotia")), ...walk(join(__dirname, "new-brunswick")), ...walk(join(__dirname, "nunavut")), ...walk(join(__dirname, "newfoundland-and-labrador"))].filter((f) => readFileSync(f, "utf8").includes("Math.random"));
     expect(offenders).toEqual([]);
   });
 
@@ -377,6 +380,22 @@ describe("curriculum content", () => {
           for (const q of [1, 2, 3].flatMap((d) => u.generate({ difficulty: d as 1 | 2 | 3 }))) {
             const text = JSON.stringify(q);
             expect(/Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada|Saskatchewan|Regina|Alberta|Manitoba|Winnipeg|Nova Scotia|Halifax|Yukon|Northwest Territories/.test(text), `${u.id}: ${q.prompt}`).toBe(false);
+          }
+        }
+      });
+
+      it("cites real Newfoundland and Labrador strands and key stages and no other province's wording", () => {
+        const official = new Set((NL_OUTCOMES[`${course.grade}/${course.subject}`] ?? []).map((r) => r.idx));
+        for (const u of course.units) {
+          const standard = u.standards["ca-nl"];
+          if (!standard) continue;
+          expect(official.size, `${course.grade}/${course.subject} has no Newfoundland and Labrador outcomes, but ${u.id} cites one`).toBeGreaterThan(0);
+          for (const label of standard.split(" · ")[0].split("; ")) expect(official.has(label.trim()), `${u.id} cites "${label}", which is not in Newfoundland and Labrador ${course.grade}/${course.subject}`).toBe(true);
+          // Units borrowed from another province must not carry its names into Newfoundland and Labrador classrooms.
+          if (/^nl-/.test(u.id) || u.standards["ca-bc"]) continue;
+          for (const q of [1, 2, 3].flatMap((d) => u.generate({ difficulty: d as 1 | 2 | 3 }))) {
+            const text = JSON.stringify(q);
+            expect(/Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada|Saskatchewan|Regina|Alberta|Manitoba|Winnipeg|Nova Scotia|Halifax|New Brunswick|Fredericton|Yukon|Northwest Territories|Nunavut/.test(text), `${u.id}: ${q.prompt}`).toBe(false);
           }
         }
       });
