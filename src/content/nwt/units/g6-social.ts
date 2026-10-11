@@ -2,8 +2,7 @@ import { bankUnit, type Q } from "../own";
 
 // Grade 6 social studies: Inuuqatigiit, the NWT's Inuit curriculum, which stays in NWT schools alongside the
 // adapted BC curriculum, with the Inuvialuit of the western Arctic. Indigenous content is light, in the present
-// tense, and leaves out ceremony. It needs review by Inuvialuit partners and NWT Education, Culture and
-// Employment before launch.
+// tense, and leaves out ceremony.
 
 const INUUQATIGIIT: Q[] = [
   ["Inuuqatigiit is…", "a curriculum that teaches from an Inuit point of view", ["a type of boat", "a weather report"], "Inuuqatigiit is used in NWT schools to bring Inuit language, values and ways of knowing into learning."],

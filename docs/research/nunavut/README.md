@@ -18,6 +18,6 @@
 ## Known gaps
 - Citations are by guide and strand, not outcome code, because the NWT guides and the 2007 Alberta program text could not be read automatically. The match for Kindergarten to Grade 6 math and for language is by topic (WNCP-based Manitoba units), not outcome by outcome. Check against the guides before launch.
 - No territory-wide report-card scale or test schedule could be confirmed, so the framework uses four plain practice steps and the assessment guide says to ask the school.
-- Nunavut-only units contain Inuit and Inuktut content (Inuit Qaujimajatuqangit principles, the land claim, land skills, a few Inuktitut words). Facts come from public Government of Nunavut and NTI material but the content is light and **needs review by Inuit partners, Inuktut speakers and the Department of Education**. Dates and names (signing dates, boards) should be rechecked.
+- Nunavut-only units contain Inuit and Inuktut content (Inuit Qaujimajatuqangit principles, the land claim, land skills, a few Inuktitut words). Facts come from public Government of Nunavut and NTI material but the content is light. Dates and names (signing dates, boards) should be rechecked.
 - Inuktut Language Arts, the Inuktut Titiqqiriniq program, Inuinnaqtun, Aulajaaqtut (wellness) and the new Nunavut curriculum are not built.
 - The Grade 10 to 12 courses are out of scope.

@@ -3,7 +3,7 @@ import { bankUnit, type Q } from "../own";
 // More Grade 9 science units written for Manitoba outcomes that the shared units do not cover: infectious disease
 // (SCI.9.E.22), the human reproductive system (E.17), energy and magnetism (E.9, E.11), how science works
 // (D.1 to D.4), science, technology and society (D.5 to D.8, C.1, C.5), measuring and lab safety (C.2 to C.4) and
-// Indigenous ways of knowing (A.1, B.1). Indigenous content is light and needs partner review.
+// Indigenous ways of knowing (A.1, B.1). Indigenous content is light.
 
 const DISEASE: Q[] = [
   ["Which of these can cause an infectious disease?", "bacteria and viruses", ["sunshine and sleep", "magnets and wires"], "Pathogens are germs that cause disease."],
@@ -263,7 +263,7 @@ export const units = [
     title: "Ways of Knowing",
     emoji: "🌿",
     blurb: "Science, curiosity and Indigenous ways of knowing today.",
-    parentNote: "Practises ideas about scientific attitudes and belonging in science, and introduces how many First Nations, Métis and Inuit communities observe and care for the land today. This content is light and still needs review with Indigenous partners.",
+    parentNote: "Practises ideas about scientific attitudes and belonging in science, and introduces how many First Nations, Métis and Inuit communities observe and care for the land today.",
     standards: ["SCI.9.A.1, SCI.9.B.1", "Indigenous ways of knowing, being and doing, and a sense of belonging in science"],
     items: KNOWING,
   }),

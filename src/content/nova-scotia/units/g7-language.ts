@@ -2,7 +2,7 @@ import { bankUnit, type Q } from "../own";
 
 // Grade 7 English language arts, cultural expressions: communication forms, first-voice texts, perspectives and
 // the choices creators make. Mi’kmaw, Acadian, African Nova Scotian and Gaelic examples are factual and light;
-// Indigenous content is in the present tense and needs partner review.
+// Indigenous content is in the present tense.
 
 const CULTURAL: Q[] = [
   ["A cultural expression is a way a community shares its…", "ideas, stories and identity", ["bank records", "weather reports"], "Songs, stories, art and plays all show what a community values."],

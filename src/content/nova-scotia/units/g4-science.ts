@@ -1,7 +1,7 @@
 import { bankUnit, type Q } from "../own";
 
 // Grade 4 science, Nova Scotia: habitats and how living and non-living things in them depend on each other.
-// Mi'kmaw content (Netukulimk) is light, in the present tense, and needs partner review.
+// Mi'kmaw content (Netukulimk) is light and in the present tense.
 
 const HABITATS: Q[] = [
   ["A habitat is…", "the place where a plant or animal lives and finds what it needs", ["a kind of weather", "a type of rock"], "A habitat gives food, water, shelter and space."],

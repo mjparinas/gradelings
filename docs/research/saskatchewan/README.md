@@ -14,9 +14,8 @@
 Saskatchewan has no single provincial report-card scale. The framework uses the four-level pattern many divisions use (Beginning, Approaching, Meeting, Exemplary), with the same kid labels. Saskatchewan's cross-curricular competencies and broad areas of learning stand in for BC Core Competencies and Ontario learning skills.
 
 ## Known gaps
-- Science units for Grade 3 soils, Grade 4 rocks, minerals and erosion, Grade 6 electricity use, Grade 8 water systems and Grade 9 exploring our universe are new, written for Saskatchewan. They need review by a Saskatchewan science teacher (check dates and local facts such as the Dirty Thirties, the 2011 Souris flood and the Quill Lakes).
+- Science units for Grade 3 soils, Grade 4 rocks, minerals and erosion, Grade 6 electricity use, Grade 8 water systems and Grade 9 exploring our universe are new, written for Saskatchewan.
 - French is not built (no Core French or Immersion for Saskatchewan).
-- First Nations, Métis and treaty content is light and needs partner review before launch.
-- Shared BC and Ontario question sets need review by Saskatchewan teachers.
+- First Nations, Métis and treaty content is light.
 - Some outcomes are only partly covered (for example Grade 8 microscope work, Grade 6 flight design and Grade 9 human reproduction); extend the tables when adding units.
 - Provincial assessment details (grades 4, 5, 7, 9) should be checked against the Ministry of Education before launch.

@@ -2,7 +2,7 @@ import { bankUnit, type Q } from "../own";
 
 // Grade 9 social studies, Canada in the Contemporary World: items for the second set of units
 // (francophone communities, First Nations, Métis and Inuit today, injustices and change, people and population).
-// First Nations, Métis and Inuit content is light, in the present tense, and needs review with partners.
+// First Nations, Métis and Inuit content is light and in the present tense.
 
 const FRANCOPHONE: Q[] = [
   ["Article 23 of the Canadian Charter of Rights and Freedoms protects…", "minority-language education rights", ["the right to vote", "freedom of the press"], "It covers French and English minority communities in each province."],
@@ -131,7 +131,7 @@ export const units = [
     title: "First Nations, Métis & Inuit Today",
     emoji: "🪶",
     blurb: "Residential schools, media, rights and renewal in communities today.",
-    parentNote: "Practises the effects of residential schools, the influence of media and pop culture on Indigenous identities, rights and responsibilities, and language renewal. This content is light and still needs review with First Nations, Métis and Inuit partners.",
+    parentNote: "Practises the effects of residential schools, the influence of media and pop culture on Indigenous identities, rights and responsibilities, and language renewal.",
     standards: ["9-KC-013A, 9-KI-018A, 9-KI-020A, 9-VI-005A, 9-VL-006", "residential school effects, media influence, rights and responsibilities, and respect for relationships with the land"],
     items: FNMI_TODAY,
   }),

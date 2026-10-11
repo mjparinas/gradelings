@@ -1,7 +1,7 @@
 import { bankUnit, type Q } from "../own";
 
 // Grade 6 social studies, Canada: A Country of Change (1867 to the present). Outcomes are cited by code.
-// Indigenous content is light and factual, and needs review with First Nations, Métis and Inuit partners.
+// Indigenous content is light and factual.
 
 const CONFEDERATION: Q[] = [
   ["In what year did Confederation create the Dominion of Canada?", "1867", ["1776", "1905"], "Canada became a country on July 1, 1867."],
@@ -83,7 +83,7 @@ export const treaties = bankUnit({
   emoji: "🤝",
   blurb: "Treaties, reserves, the Métis, the NWMP and 1885.",
   parentNote:
-    "Practises a first, respectful look at the numbered treaties and reserves, the Métis, the North West Mounted Police, the 1885 Resistance, and the Indigenous leaders of the time. This content needs review with First Nations, Métis and Inuit partners.",
+    "Practises a first, respectful look at the numbered treaties and reserves, the Métis, the North West Mounted Police, the 1885 Resistance, and the Indigenous leaders of the time.",
   standards: ["6-KI-007, 6-KH-028, 6-KH-029, 6-KH-032", "treaties and reserves, the 1885 Resistance, the North West Mounted Police, and Indigenous leaders from 1867 to 1914"],
   items: TREATIES,
 });
@@ -299,7 +299,7 @@ export const canadaToday = bankUnit({
   emoji: "🇨🇦",
   blurb: "Rights, languages, peace and identity from 1945 to today.",
   parentNote:
-    "Practises Canada since the Second World War: the Charter of Rights and Freedoms, two official languages and multiculturalism, Franco-Manitoban history, Indigenous rights and reconciliation, Canada and the United Nations, and what shapes Canadian identity. Indigenous content needs review with partners.",
+    "Practises Canada since the Second World War: the Charter of Rights and Freedoms, two official languages and multiculturalism, Franco-Manitoban history, Indigenous rights and reconciliation, Canada and the United Nations, and what shapes Canadian identity.",
   standards: ["6-KC-005, 6-KI-013, 6-KI-013F, 6-KI-014, 6-KI-015F, 6-KI-017, 6-KI-018, 6-KI-019, 6-KG-045, 6-KE-059", "rights and freedoms, bilingual and multicultural policies, Franco-Manitoban history, Indigenous rights, Canada and the UN, and Canadian identity"],
   items: TODAY,
 });

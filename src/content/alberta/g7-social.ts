@@ -6,8 +6,7 @@ import { ab, levelOf } from "./kit";
 // Alberta Grade 7 social studies (2005): 7.1 Toward Confederation and 7.2 Following Confederation: Canadian
 // Expansions, under "Canada: Origins, Histories and Movement of Peoples". These units add the western and
 // Alberta story to the shared New France, 1713 to 1800, War of 1812 and reform units.
-// First Nations and Métis content is written in the present tense and left light; it needs review with
-// First Nations and Métis partners before launch.
+// First Nations and Métis content is written in the present tense and left light.
 
 // ---------- The fur trade in the West (7.1) ----------
 

@@ -1,7 +1,7 @@
 import { bankUnit, type Q } from "../own";
 
 // Grade 9 social studies, New Brunswick: governance, rights, identities and migration, treaties, and places and people.
-// Wabanaki and treaty content is light, in the present tense, and needs review by Wabanaki partners before launch.
+// Wabanaki and treaty content is light and in the present tense.
 
 const GOVERNANCE: Q[] = [
   ["Canada’s system of government is a…", "parliamentary democracy and constitutional monarchy", ["dictatorship", "republic with a president", "tribal council only"], "Citizens elect representatives, and the King is Canada’s head of state."],
@@ -186,7 +186,7 @@ export const treatyRelationships = bankUnit({
   emoji: "📜",
   blurb: "Agreements between Nations, and why they still matter.",
   parentNote:
-    "Practises key issues involving treaty relationships in Canada, including the Peace and Friendship treaties, the Numbered Treaties, modern treaties and reconciliation. The content is light, in the present tense, and needs review by Wabanaki partners. It follows the Grade 9 social studies skill descriptor on treaty education in the New Brunswick curriculum.",
+    "Practises key issues involving treaty relationships in Canada, including the Peace and Friendship treaties, the Numbered Treaties, modern treaties and reconciliation. The content is light and in the present tense. It follows the Grade 9 social studies skill descriptor on treaty education in the New Brunswick curriculum.",
   standards: ["Wabanaki: Treaty Education", "key issues involving treaty relationships in Canada"],
   items: TREATIES,
 });

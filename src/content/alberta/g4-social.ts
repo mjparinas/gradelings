@@ -6,7 +6,7 @@ import { ab } from "./kit";
 // Alberta Grade 4 social studies (2023 curriculum): Colonial Canada and Confederation. These units are written for
 // Alberta; no BC or Ontario unit is shared. First Nations, Métis and Inuit peoples are described as living
 // peoples, in the present tense where they are described today. The Indigenous content here is deliberately light
-// and needs review with First Nations, Métis and Inuit partners before launch.
+//.
 
 // ---------- Changes in power and influence ----------
 

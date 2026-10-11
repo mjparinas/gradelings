@@ -1,7 +1,7 @@
 import { bankUnit, type Q } from "../own";
 
 // Grade 5 social studies, New Brunswick: the Wabanaki Confederacy and the French and British in Atlantic Canada. Wabanaki
-// content is light, in the present tense for living communities, and needs review by Wabanaki partners before launch.
+// content is light and in the present tense for living communities.
 
 const CONFEDERACY: Q[] = [
   ["Which Nations make up the Wabanaki Confederacy in New Brunswick?", "Wolastoqiyik, Mi’kmaq and Peskotomuhkatiyik", ["Cree, Dene and Inuit", "Haida, Squamish and Tsimshian", "Mohawk, Oneida and Cayuga"], "Other Nations, such as the Abenaki and Penobscot, are also part of the Wabanaki Confederacy."],
@@ -97,7 +97,7 @@ export const wabanakiConfederacy = bankUnit({
   emoji: "🪶",
   blurb: "Nations working together.",
   parentNote:
-    "Practises the governance structure and role of the Wabanaki Confederacy and the Peace and Friendship treaties. The content is light, in the present tense, and needs review by Wabanaki partners. It follows the Grade 5 social studies skill descriptors on power and governance and on reconciliation in the New Brunswick curriculum.",
+    "Practises the governance structure and role of the Wabanaki Confederacy and the Peace and Friendship treaties. The content is light and in the present tense. It follows the Grade 5 social studies skill descriptors on power and governance and on reconciliation in the New Brunswick curriculum.",
   standards: ["Civics: Power and Governance, Wabanaki: Reconciliation", "the governance structure and role of the Wabanaki Confederacy, and contact and colonization from Wabanaki perspectives"],
   items: CONFEDERACY,
 });

@@ -26,10 +26,9 @@
 
 **Still to do before launch.**
 
-- An Alberta teacher should review all content, especially the units that borrow a BC or Ontario unit with Alberta standards text.
 - The full K–6 English language arts, social studies and French immersion learning outcomes should be read on the New LearnAlberta site and cited by code, replacing the snapshot lines.
 - Grades 7 to 9: mathematics and social studies will change in September 2027 (draft curricula are in pilot). Science 7 to 9 and English language arts 7 to 9 have no new programs yet. Re-check when the new programs are final.
 - Social studies Grade 7 to 9 and English language arts 7 to 9 are cited by general outcome or issue heading from the existing programs; confirm the headings against the current documents.
 - French immersion for Grades 7 to 9 has no checked citation yet.
-- First Nations, Métis and Inuit content is deliberately light and needs partner review before launch.
+- First Nations, Métis and Inuit content is deliberately light.
 - Confirm the Provincial Achievement Test and screening wording in the Alberta parent guides against alberta.ca; the schedule is changing.

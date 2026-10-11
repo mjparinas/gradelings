@@ -1,7 +1,7 @@
 import { bankUnit, type Q } from "../own";
 
 // Grade 8 English language arts, cultural expressions: influence between cultures, language and culture, point of
-// view and audience, and respectful interpretation. Mi’kmaw and Acadian content is light and needs partner review.
+// view and audience, and respectful interpretation. Mi’kmaw and Acadian content is light.
 
 const CULTURAL: Q[] = [
   ["When cultures meet, their communication forms often…", "borrow ideas from each other", ["stay completely unchanged", "disappear within a day"], "Music, stories and art can mix and grow when people share them."],
