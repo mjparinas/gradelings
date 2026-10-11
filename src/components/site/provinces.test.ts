@@ -10,16 +10,20 @@ describe("homepage province coverage", () => {
     expect(subjectList(["math"])).toBe("math");
   });
 
-  it("states the subjects every province shares, and that only Saskatchewan is without French", () => {
+  it("states the subjects every province shares, and which provinces are without French", () => {
     const coverage = provinceCoverage(FRAMEWORKS);
     expect(coverage.sharedSubjects).toEqual(["math", "language", "science", "social"]);
     expect(coverage.range).toEqual({ from: "k", to: "9" });
-    expect(coverage.gaps).toHaveLength(1);
-    const [french] = coverage.gaps;
-    expect(french.subjects).toEqual(["immersion", "core-french"]);
-    expect(french.style).toBe("except");
-    expect(french.missing.map((f) => f.id)).toEqual(["ca-sk"]);
-    expect(french.included.map((f) => f.id)).toEqual(FRAMEWORKS.filter((f) => f.id !== "ca-sk").map((f) => f.id));
+    // Saskatchewan has no French; Nunavut has Core French but no French Immersion.
+    expect(coverage.gaps).toHaveLength(2);
+    const [immersion, core] = coverage.gaps;
+    expect(immersion.subjects).toEqual(["immersion"]);
+    expect(immersion.style).toBe("except");
+    expect(immersion.missing.map((f) => f.id)).toEqual(["ca-sk", "ca-nu"]);
+    expect(core.subjects).toEqual(["core-french"]);
+    expect(core.style).toBe("except");
+    expect(core.missing.map((f) => f.id)).toEqual(["ca-sk"]);
+    expect(core.included.map((f) => f.id)).toEqual(FRAMEWORKS.filter((f) => f.id !== "ca-sk").map((f) => f.id));
   });
 
   it("names the province that has a subject when most provinces do not", () => {
@@ -39,7 +43,7 @@ describe("homepage province coverage", () => {
 
   it("names every province, with 'the' before the Northwest Territories", () => {
     expect(regionList(FRAMEWORKS)).toBe(
-      "British Columbia, Ontario, Alberta, Saskatchewan, Manitoba, Yukon, the Northwest Territories, Nova Scotia and New Brunswick",
+      "British Columbia, Ontario, Alberta, Saskatchewan, Manitoba, Yukon, the Northwest Territories, Nova Scotia, New Brunswick and Nunavut",
     );
   });
 
