@@ -54,7 +54,8 @@ async function apply(event: StripeEvent, obj: Record<string, unknown>, now: numb
     // Only a paid checkout grants premium; a delayed payment method sends a later event when it clears.
     const paid = obj.payment_status === "paid" || obj.payment_status === "no_payment_required";
     if (familyId && paid && !(await isStale(event, familyId, undefined))) {
-      await run("UPDATE families SET stripe_customer = ?, subscription_status = 'active', plan = 'premium', updated_at = ?, billing_event_at = ? WHERE id = ?", [
+      // A discount code is used up by the checkout it was applied to.
+      await run("UPDATE families SET stripe_customer = ?, subscription_status = 'active', plan = 'premium', discount_code = NULL, updated_at = ?, billing_event_at = ? WHERE id = ?", [
         obj.customer as string,
         now,
         at,

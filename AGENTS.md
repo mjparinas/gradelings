@@ -82,6 +82,10 @@ Tests are duplicated across screen sizes only where layout can break:
   - All of this lives in `src/lib/plan.ts`; read the numbers from there.
 - **Payments:** Stripe Checkout and the Billing Portal, called over raw HTTPS with no SDK (`src/server/stripe.ts`).
   - Until Stripe keys are set, billing runs in a simulated dev mode (`ALLOW_DEV_BILLING=1` turns it on in production for staging).
+- **Redeem codes** (`src/server/codes.ts`, `docs/CODES.md`): the owner makes codes through `/api/admin/codes/` (on only when `ADMIN_TOKEN` is set) and a signed-in parent enters one under Subscription > "Have a code?".
+  - An access code gives free access for a number of days, or for life (`families.access_until`; lifetime is `LIFETIME_ACCESS` in `plan.ts`). It stacks on access already granted and is kept apart from `plan`, so a Stripe webhook never undoes it.
+  - A discount code saves a percentage off for the next checkout (`families.discount_code`), sent to Stripe as a coupon made on first use; the paid checkout clears it.
+  - Each family can use a code once; codes can have a use limit and an expiry date. Wrong, disabled, expired and used-up codes all get the same answer. Class student accounts can't redeem.
 
 ### Not tied to BC: every framework, every grade
 - **Everything that differs by province or state lives in a `Framework`** (`src/content/frameworks.ts`): grades, report-card scale, report-card guide and slug.

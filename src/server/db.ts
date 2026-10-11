@@ -160,6 +160,32 @@ const SCHEMA = [
     created_at INTEGER NOT NULL
   )`,
   `CREATE INDEX IF NOT EXISTS push_subscriptions_parent ON push_subscriptions (parent_id)`,
+  // Codes the owner hands out: free access for a number of days (or for life), or a discount at checkout.
+  // `code` is stored upper-case. `days` NULL with kind 'access' means lifetime.
+  // A discount lasts `duration` ('once', 'repeating' for `months` months, or 'forever'); its Stripe coupon is made on first use.
+  `CREATE TABLE IF NOT EXISTS redeem_codes (
+    code TEXT PRIMARY KEY,
+    kind TEXT NOT NULL,
+    days INTEGER,
+    percent_off INTEGER,
+    duration TEXT,
+    months INTEGER,
+    stripe_coupon TEXT,
+    max_uses INTEGER,
+    uses INTEGER NOT NULL DEFAULT 0,
+    expires_at INTEGER,
+    note TEXT,
+    created_at INTEGER NOT NULL,
+    disabled_at INTEGER
+  )`,
+  // Each family can use a code once.
+  `CREATE TABLE IF NOT EXISTS code_redemptions (
+    code TEXT NOT NULL,
+    family_id TEXT NOT NULL,
+    redeemed_at INTEGER NOT NULL,
+    PRIMARY KEY (code, family_id)
+  )`,
+  `CREATE INDEX IF NOT EXISTS code_redemptions_family ON code_redemptions (family_id)`,
 ];
 
 /** Columns added after the first release. SQLite has no "ADD COLUMN IF NOT EXISTS". */
@@ -186,7 +212,13 @@ const CLASS_COLUMNS: [string, string][] = [
 /** A due date a teacher can set on an assigned unit (ms since epoch). */
 const ASSIGNMENT_COLUMNS: [string, string][] = [["due_at", "INTEGER"]];
 const SESSION_COLUMNS: [string, string][] = [["user_agent", "TEXT"]];
-const FAMILY_COLUMNS: [string, string][] = [["billing_event_at", "INTEGER NOT NULL DEFAULT 0"]];
+const FAMILY_COLUMNS: [string, string][] = [
+  ["billing_event_at", "INTEGER NOT NULL DEFAULT 0"],
+  // Free access from a redeemed code ends at this time (ms). Separate from `plan`, so a Stripe webhook never undoes it.
+  ["access_until", "INTEGER"],
+  // A redeemed discount code applied at the next checkout.
+  ["discount_code", "TEXT"],
+];
 
 async function addColumns(c: Client, table: string, columns: [string, string][]) {
   const have = new Set((await c.execute(`PRAGMA table_info(${table})`)).rows.map((r) => String(r.name)));

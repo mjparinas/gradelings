@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { canUse, FREE_UNITS_PER_COURSE, hasPaidPlan, isPremium, MAX_CHILDREN, PRICES, trialDaysLeft, unitOpen, upgradeOffer } from "./plan";
+import { canUse, FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, PRICES, trialDaysLeft, unitOpen, upgradeOffer } from "./plan";
 import type { FamilyInfo } from "./model";
 
 const family = (overrides: Partial<FamilyInfo> = {}) => ({
@@ -9,6 +9,25 @@ const family = (overrides: Partial<FamilyInfo> = {}) => ({
 }) as FamilyInfo;
 
 describe("family plan access", () => {
+  it("opens everything while a redeemed code's access lasts, then closes it", () => {
+    const coded = family({ plan: "free", accessUntil: 5_000 });
+    expect(hasCodeAccess(coded, 4_999)).toBe(true);
+    expect(isPremium(coded, 4_999)).toBe(true);
+    expect(hasPaidPlan(coded, 4_999)).toBe(true);
+    expect(upgradeOffer(coded, 4_999)).toBeNull();
+    expect(unitOpen(coded, 10, 4_999)).toBe(true);
+    expect(isLifetime(coded)).toBe(false);
+    expect(hasCodeAccess(coded, 5_000)).toBe(false);
+    expect(isPremium(coded, 5_000)).toBe(false);
+    expect(hasPaidPlan(coded, 5_000)).toBe(false);
+    expect(upgradeOffer(coded, 5_000)).toBe("free");
+    expect(hasCodeAccess(family({ accessUntil: null }), 1)).toBe(false);
+    const life = family({ accessUntil: LIFETIME_ACCESS });
+    expect(isLifetime(life)).toBe(true);
+    expect(isPremium(life, Date.UTC(2200, 0, 1))).toBe(true);
+    expect(isLifetime(family({ accessUntil: LIFETIME_ACCESS - 1 }))).toBe(false);
+  });
+
   it("recognizes premium plans and active subscriptions", () => {
     for (const plan of [family({ plan: "premium" }), family({ subscription: { status: "active" } as never }), family({ subscription: { status: "trialing" } as never }), family({ subscription: { status: "past_due" } as never })]) {
       expect(isPremium(plan, 1_000)).toBe(true);

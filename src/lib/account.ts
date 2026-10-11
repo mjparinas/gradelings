@@ -123,6 +123,15 @@ export async function devBilling(action: "subscribe" | "cancel", interval: "mont
   adopt(family);
 }
 
+export type RedeemResult = { kind: "access"; accessUntil: number } | { kind: "discount"; percentOff: number };
+
+/** Uses a code for free access or a discount at the next checkout. */
+export async function redeemCode(code: string): Promise<RedeemResult> {
+  const { family, result } = await post<{ family: FamilyInfo; result: RedeemResult }>("/api/codes/redeem/", { code });
+  adopt(family);
+  return result;
+}
+
 export async function deleteAccount(password: string) {
   await post("/api/account/", { password }, "DELETE");
   await useStore.getState().wipeDevice();

@@ -69,6 +69,8 @@ export async function createCheckout(opts: {
   email: string;
   customer?: string | null;
   origin: string;
+  /** A Stripe coupon from a redeemed discount code. */
+  coupon?: string | null;
 }): Promise<string> {
   const price = opts.interval === "year" ? process.env.STRIPE_PRICE_YEARLY! : process.env.STRIPE_PRICE_MONTHLY!;
   const params: Record<string, string> = {
@@ -78,14 +80,23 @@ export async function createCheckout(opts: {
     client_reference_id: opts.familyId,
     "subscription_data[metadata][family_id]": opts.familyId,
     "metadata[family_id]": opts.familyId,
-    allow_promotion_codes: "true",
     success_url: `${opts.origin}/parents/#/subscription?checkout=success`,
     cancel_url: `${opts.origin}/parents/#/subscription?checkout=cancelled`,
   };
   if (opts.customer) params.customer = opts.customer;
   else params.customer_email = opts.email;
+  // Stripe takes either a set discount or a promotion-code box, not both.
+  if (opts.coupon) params["discounts[0][coupon]"] = opts.coupon;
+  else params.allow_promotion_codes = "true";
   const session = await stripe<{ url: string }>("checkout/sessions", params);
   return session.url;
+}
+
+/** A Stripe coupon for a discount code: a percentage off once, for some months, or for as long as the plan lasts. */
+export async function createCoupon(opts: { percentOff: number; duration: "once" | "repeating" | "forever"; months?: number; name: string }): Promise<string> {
+  const params: Record<string, string> = { percent_off: String(opts.percentOff), duration: opts.duration, name: opts.name.slice(0, 40) };
+  if (opts.duration === "repeating") params.duration_in_months = String(opts.months ?? 1);
+  return (await stripe<{ id: string }>("coupons", params)).id;
 }
 
 export async function createPortal(customer: string, origin: string): Promise<string> {

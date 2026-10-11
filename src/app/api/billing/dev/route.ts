@@ -17,7 +17,7 @@ export async function POST(req: Request) {
     const interval = body.interval === "year" ? "year" : "month";
     const end = now + (interval === "year" ? 365 : 30) * 86_400_000;
     await run(
-      "UPDATE families SET subscription_status = 'active', subscription_interval = ?, current_period_end = ?, plan = 'premium', updated_at = ? WHERE id = ?",
+      "UPDATE families SET subscription_status = 'active', subscription_interval = ?, current_period_end = ?, plan = 'premium', discount_code = NULL, updated_at = ? WHERE id = ?",
       [interval, end, now, session.familyId],
     );
   }
