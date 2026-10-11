@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { canUse, FREE_UNITS_PER_COURSE, isPremium, PRICES, trialDaysLeft, unitOpen } from "./plan";
+import { canUse, FREE_UNITS_PER_COURSE, isPremium, MAX_CHILDREN, PRICES, trialDaysLeft, unitOpen } from "./plan";
 import type { FamilyInfo } from "./model";
 
 const family = (overrides: Partial<FamilyInfo> = {}) => ({
@@ -30,6 +30,10 @@ describe("family plan access", () => {
     expect(trialDaysLeft(expired, 100)).toBe(0);
     expect(canUse(expired, "fullReports", 100)).toBe(false);
     expect([0, 1, 2, FREE_UNITS_PER_COURSE].map((index) => unitOpen(expired, index, 100))).toEqual([true, true, false, false]);
+  });
+
+  it("covers three children on one family plan", () => {
+    expect(MAX_CHILDREN).toBe(3);
   });
 
   it("charges C$14.99 a month or C$119.99 a year, saving 33%", () => {

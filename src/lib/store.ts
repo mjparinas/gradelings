@@ -17,7 +17,7 @@ import {
   type FamilyInfo,
   type Profile,
 } from "./model";
-import { TRIAL_DAYS } from "./plan";
+import { MAX_CHILDREN, TRIAL_DAYS } from "./plan";
 import { celebrate, setCalmCheck } from "./juice";
 import { setHapticsCheck } from "./haptics";
 import { effectiveGoal, STRETCH_QUEST, STRETCH_REWARD } from "./goal";
@@ -167,6 +167,7 @@ export const useStore = create<State>()((set, get) => ({
   },
 
   addProfile: ({ name, avatar, colour, grade, framework = DEFAULT_FRAMEWORK, birthYear }) => {
+    if (get().profiles.filter((p) => !p.deleted).length >= MAX_CHILDREN) return "";
     const now = Date.now();
     const id = newId();
     const profile: Profile = {
