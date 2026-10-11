@@ -30,11 +30,14 @@ describe("SampleQuestion", () => {
     expect(screen.getByText("Hint: Compare the tens.")).toBeInTheDocument();
   });
 
-  it("keeps the answer inside a closed <details>", () => {
+  it("keeps the answer hidden until Show answer is opened", () => {
     show({ kind: "input", prompt: "7 + 5 = ?", hint: "Make ten.", answer: "12", suffix: "apples" });
-    const details = screen.getByText("Show answer").closest("details");
-    expect(details).not.toHaveAttribute("open");
-    expect(within(details!).getByText("12 apples")).toBeInTheDocument();
+    const showAnswer = screen.getByRole("button", { name: "Show answer" });
+    expect(showAnswer).toHaveAttribute("aria-expanded", "false");
+    expect(showAnswer).toHaveAttribute("aria-controls");
+    const panel = document.getElementById(showAnswer.getAttribute("aria-controls")!);
+    expect(panel).toHaveAttribute("hidden");
+    expect(within(panel!).getByText("12 apples")).toBeInTheDocument();
   });
 
   it("describes an order question's answer in sequence", () => {

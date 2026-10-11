@@ -10,6 +10,7 @@ import { MAX_CHILDREN } from "@/lib/plan";
 import { useProfiles, useStore } from "@/lib/store";
 import { CritterSvg, CRITTERS } from "../Critter";
 import { AVATAR_COLOURS } from "../play/Start";
+import { SelectMenu } from "../SelectMenu";
 import { Dialog } from "../ui";
 import { Avatar, PageTitle, Panel } from "./common";
 import { JoinClass } from "./JoinClass";
@@ -40,51 +41,44 @@ function ChildForm({ draft, onChange }: { draft: Draft; onChange: (d: Draft) => 
         <input value={draft.name} maxLength={20} onChange={(e) => onChange({ ...draft, name: e.target.value })} className="rounded-xl border-2 border-line px-3 py-2 text-lg" />
       </label>
       <div className="grid grid-cols-2 gap-3">
-        <label className="flex flex-col gap-1">
-          <span className="font-semibold">Birth year</span>
-          <select
-            value={draft.birthYear ?? ""}
-            onChange={(e) => {
-              const birthYear = e.target.value ? Number(e.target.value) : undefined;
+        <div>
+          <SelectMenu
+            label="Birth year"
+            size="lg"
+            value={draft.birthYear ? String(draft.birthYear) : ""}
+            onChange={(next) => {
+              const birthYear = next ? Number(next) : undefined;
               // Suggest a grade from age (a September birthday can shift it by one).
               onChange({ ...draft, birthYear, grade: birthYear && !draft.name ? gradeForAge(thisYear - birthYear) : draft.grade });
             }}
-            className="rounded-xl border-2 border-line px-3 py-2 text-lg"
-          >
-            <option value="">Not set</option>
-            {Array.from({ length: 11 }, (_, i) => thisYear - 4 - i).map((y) => (
-              <option key={y} value={y}>
-                {y}
-              </option>
-            ))}
-          </select>
+            options={[
+              { value: "", label: "Not set" },
+              ...Array.from({ length: 11 }, (_, i) => thisYear - 4 - i).map((y) => ({ value: String(y), label: String(y) })),
+            ]}
+          />
           {age !== undefined && <span className="text-sm text-ink-soft">About {age} years old (suggested: {GRADE_LABEL[gradeForAge(age)]})</span>}
-        </label>
-        <label className="flex flex-col gap-1">
-          <span className="font-semibold">Grade</span>
-          <select value={draft.grade} onChange={(e) => onChange({ ...draft, grade: e.target.value as GradeId })} className="rounded-xl border-2 border-line px-3 py-2 text-lg">
-            {AVAILABLE_GRADES.map((g) => (
-              <option key={g} value={g}>
-                {GRADE_LABEL[g]}
-              </option>
-            ))}
-          </select>
-        </label>
+        </div>
+        <SelectMenu
+          label="Grade"
+          size="lg"
+          value={draft.grade}
+          onChange={(next) => onChange({ ...draft, grade: next as GradeId })}
+          options={AVAILABLE_GRADES.map((g) => ({ value: g, label: GRADE_LABEL[g] }))}
+        />
       </div>
-      <label className="flex flex-col gap-1">
-        <span className="font-semibold">Province or state</span>
-        <select value={draft.framework} onChange={(e) => onChange({ ...draft, framework: e.target.value as FrameworkId })} className="rounded-xl border-2 border-line px-3 py-2 text-lg">
-          {FRAMEWORKS.map((f) => (
-            <option key={f.id} value={f.id}>
-              {f.name} ({f.curriculumName})
-            </option>
-          ))}
-        </select>
+      <div className="flex flex-col gap-1">
+        <SelectMenu
+          label="Province or state"
+          size="lg"
+          value={draft.framework}
+          onChange={(next) => onChange({ ...draft, framework: next as FrameworkId })}
+          options={FRAMEWORKS.map((f) => ({ value: f.id, label: `${f.name} (${f.curriculumName})` }))}
+        />
         <span className="text-sm text-ink-soft">
           Lessons and reports follow the {chosen.curriculumName}
           {chosen.subjects.length < 4 ? `, which has ${listSubjects(chosen)} so far` : ""}. Progress in the other curriculum is kept if you switch back. More provinces and states are coming.
         </span>
-      </label>
+      </div>
       <div>
         <p className="mb-2 font-semibold">Avatar</p>
         <div className="grid grid-cols-6 gap-2">

@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { call, type ClassLink } from "@/lib/classroom";
 import { useProfiles, useStore } from "@/lib/store";
 import { syncNow } from "@/lib/sync";
+import { SelectMenu } from "../SelectMenu";
 import { Panel } from "./common";
 
 // A parent links a child to a teacher's class with its join code. That is the parent's consent:
@@ -65,16 +66,7 @@ export function JoinClass() {
       ) : (
         <>
           <div className="mt-3 flex flex-wrap items-end gap-3">
-            <label className="flex flex-col text-sm font-semibold">
-              Child
-              <select className="mt-1 min-h-11 rounded-xl border border-line bg-white px-3" value={child} onChange={(e) => setProfileId(e.target.value)}>
-                {profiles.map((p) => (
-                  <option key={p.id} value={p.id}>
-                    {p.name}
-                  </option>
-                ))}
-              </select>
-            </label>
+            <SelectMenu label="Child" value={child} onChange={setProfileId} options={profiles.map((p) => ({ value: p.id, label: p.name }))} />
             <label className="flex flex-col text-sm font-semibold">
               Class code
               <input

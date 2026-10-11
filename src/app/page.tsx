@@ -12,6 +12,7 @@ import { GRADE_LABEL } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, TRIAL_DAYS } from "@/lib/plan";
 import { TEACHER_SIGNUP, teacherPath } from "@/components/site/teachers";
+import { Disclosure } from "@/components/Disclosure";
 import { JsonLd, ORG_JSON_LD, SITE_URL, absolute } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -302,10 +303,9 @@ export default function Home() {
         </h2>
         <div className="flex flex-col gap-2">
           {FAQS.map((f) => (
-            <details key={f.q} className="rounded-2xl border border-line bg-white p-4">
-              <summary className="cursor-pointer text-lg font-semibold">{f.q}</summary>
+            <Disclosure key={f.q} className="rounded-2xl border border-line bg-white p-4" titleClassName="text-lg font-semibold" title={f.q}>
               <p className="mt-2 font-read text-ink-soft">{f.a}</p>
-            </details>
+            </Disclosure>
           ))}
         </div>
       </section>

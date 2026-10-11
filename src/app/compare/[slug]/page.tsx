@@ -7,6 +7,7 @@ import { guidePath } from "@/components/site/guides";
 import { COMPETITORS, PRICE_CHECKED, competitorBySlug } from "@/content/compare";
 import { APP_NAME } from "@/lib/brand";
 import { FREE_UNITS_PER_COURSE, PRICES, TRIAL_DAYS } from "@/lib/plan";
+import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -118,10 +119,9 @@ export default async function ComparePage({ params }: Props) {
         </h2>
         <div className="flex flex-col gap-2">
           {c.faqs.map((q) => (
-            <details key={q.q} className="rounded-2xl border border-line bg-white p-4">
-              <summary className="cursor-pointer font-bold">{q.q}</summary>
+            <Disclosure key={q.q} className="rounded-2xl border border-line bg-white p-4" titleClassName="font-bold" title={q.q}>
               <p className="mt-2 font-read">{q.a}</p>
-            </details>
+            </Disclosure>
           ))}
         </div>
       </section>

@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReactNode } from "react";
+import { useId, type ReactNode } from "react";
 import { GRADE_LABEL } from "@/content/subjects";
 import type { Profile } from "@/lib/model";
 import { useProfiles } from "@/lib/store";
@@ -66,6 +66,94 @@ export function ChildTabs({ base, current }: { base: string; current?: Profile }
           <Avatar p={p} size={28} /> {p.name} <span className="text-sm opacity-70">{GRADE_LABEL[p.grade]}</span>
         </a>
       ))}
+    </div>
+  );
+}
+
+export function CheckBox({ checked, onChange, children }: { checked: boolean; onChange: () => void; children: ReactNode }) {
+  return (
+    <button type="button" role="checkbox" aria-checked={checked} onClick={onChange} className="flex min-h-11 w-full items-center gap-2 rounded-xl bg-paper px-3 py-2 text-left font-semibold">
+      <span aria-hidden="true" className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-md border-2 ${checked ? "border-good-dark bg-good text-[#0f172a]" : "border-line bg-white"}`}>
+        {checked ? (
+          <svg width="14" height="14" viewBox="0 0 24 24">
+            <path d="M5 12.5l4.2 4.2L19 7.5" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        ) : null}
+      </span>
+      {children}
+    </button>
+  );
+}
+
+export function Slider({
+  label,
+  value,
+  min,
+  max,
+  step = 1,
+  unit,
+  onChange,
+  help,
+}: {
+  label: string;
+  value: number;
+  min: number;
+  max: number;
+  step?: number;
+  unit: string;
+  onChange: (value: number) => void;
+  help?: string;
+}) {
+  const id = useId();
+  const span = max - min || 1;
+  const pct = Math.min(100, Math.max(0, ((value - min) / span) * 100));
+  const setFromX = (clientX: number, el: HTMLElement) => {
+    const rect = el.getBoundingClientRect();
+    const ratio = rect.width ? Math.min(1, Math.max(0, (clientX - rect.left) / rect.width)) : 0;
+    const raw = min + ratio * (max - min);
+    const stepped = Math.round(raw / step) * step;
+    const next = Math.min(max, Math.max(min, Number(stepped.toFixed(4))));
+    onChange(next);
+  };
+  return (
+    <div className="flex flex-col gap-1">
+      <span id={id} className="flex justify-between font-semibold">
+        {label}
+        <span className="tabular-nums">
+          {value} {unit}
+        </span>
+      </span>
+      <div
+        role="slider"
+        tabIndex={0}
+        aria-labelledby={id}
+        aria-valuemin={min}
+        aria-valuemax={max}
+        aria-valuenow={value}
+        aria-valuetext={`${value} ${unit}`}
+        aria-orientation="horizontal"
+        className="relative flex h-11 cursor-pointer items-center"
+        onPointerDown={(e) => {
+          e.currentTarget.setPointerCapture(e.pointerId);
+          setFromX(e.clientX, e.currentTarget);
+        }}
+        onPointerMove={(e) => {
+          if (e.currentTarget.hasPointerCapture(e.pointerId)) setFromX(e.clientX, e.currentTarget);
+        }}
+        onKeyDown={(e) => {
+          const dir = e.key === "ArrowRight" || e.key === "ArrowUp" ? 1 : e.key === "ArrowLeft" || e.key === "ArrowDown" ? -1 : 0;
+          if (!dir && e.key !== "Home" && e.key !== "End") return;
+          e.preventDefault();
+          if (e.key === "Home") onChange(min);
+          else if (e.key === "End") onChange(max);
+          else onChange(Math.min(max, Math.max(min, value + dir * step)));
+        }}
+      >
+        <span aria-hidden="true" className="absolute inset-x-0 h-2 rounded-full bg-line" />
+        <span aria-hidden="true" className="absolute h-2 rounded-full bg-[#4f8ef7]" style={{ width: `${pct}%` }} />
+        <span aria-hidden="true" className="absolute h-7 w-7 -translate-x-1/2 rounded-full border-2 border-[#2f6fd6] bg-white" style={{ left: `${pct}%` }} />
+      </div>
+      {help && <span className="text-sm text-ink-soft">{help}</span>}
     </div>
   );
 }
