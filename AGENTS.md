@@ -448,6 +448,12 @@ Full guide: `docs/CONTENT_GUIDE.md`. The essentials:
   - Several Big Ideas statements were written from memory; check them against curriculum.gov.bc.ca.
   - Check history dates in the Grade 4–5 social studies units.
   - Grade 8–9 content (shared helpers in `src/content/grades/kit.ts`) uses the Big Ideas and content topics published on curriculum.gov.bc.ca, but the questions and unit detail still need teacher review. The Grade 9 Indigenous history unit should be reviewed with First Peoples partners.
+- **Known content gaps:**
+  - Saskatchewan has no French.
+  - New Brunswick Kindergarten to Grade 5 math is provisional.
+  - Alberta Immersion Grades 7–9 has no checked citation yet.
+  - Lessons cover only the math units shared by BC and Ontario.
+  - A school or teacher plan and co-teachers aren't built.
 - **iOS Safari quirks** (safe areas, `100dvh`, read-aloud voices): the device layout tests now pass in real WebKit (Playwright's WebKit build, not Safari). A check on a real iPhone or iPad is still needed, especially for read-aloud voices.
 - **Deployment** is not done. Steps, env vars and the launch checklist are in `docs/DEPLOY.md`.
 - **Legal and content:** `/privacy/` and `/terms/` are drafts needing legal review; `LEGAL_NAME` and `CONTACT_EMAIL` in `src/lib/brand.ts` are placeholders.
