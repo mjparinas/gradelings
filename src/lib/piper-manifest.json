@@ -1,6 +1,6 @@
 {
-  "version": "1",
-  "voiceSource": "https://github.com/mjparinas/gradelings/releases/download/piper-voices-1/",
+  "version": "2",
+  "voiceSource": "https://github.com/mjparinas/gradelings/releases/download/piper-voices-2/",
   "engine": {
     "ort.wasm.min.js": "onnxruntime-web/dist/ort.wasm.min.js",
     "ort-wasm-simd-threaded.mjs": "onnxruntime-web/dist/ort-wasm-simd-threaded.mjs",
@@ -11,12 +11,12 @@
   },
   "voices": {
     "en": {
-      "id": "en_US-kristin-medium",
-      "name": "Kristin",
-      "credit": "Kristin voice by Bryce Beattie, trained on public-domain LibriVox recordings.",
+      "id": "en_US-amy-medium",
+      "name": "Amy",
+      "credit": "Amy voice from the Mycroft Mimic3 voices dataset, fine-tuned from the Lessac voice.",
       "files": {
-        "en_US-kristin-medium.onnx": "5849957f929cbf720c258f8458692d6103fff2f0e3d3b19c8259474bb06a18d4",
-        "en_US-kristin-medium.onnx.json": "5681426d4aead22195de70531eeeeddb46493cfaffc5764b2ea3db73428b651c"
+        "en_US-amy-medium.onnx": "b3a6e47b57b8c7fbe6a0ce2518161a50f59a9cdd8a50835c02cb02bdd6206c18",
+        "en_US-amy-medium.onnx.json": "95a23eb4d42909d38df73bb9ac7f45f597dbfcde2d1bf9526fdeaf5466977d77"
       }
     },
     "fr": {
