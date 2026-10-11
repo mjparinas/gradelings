@@ -1,0 +1,19 @@
+# One-off: adds a "superseded" note to the piper-voices-1 release. Assets are not touched.
+name: Mark piper-voices-1 superseded
+on:
+  push:
+    branches: [claude/mark-piper-voices-1-superseded]
+permissions:
+  contents: write
+jobs:
+  notes:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release view piper-voices-1 --json body -q .body > old.md
+          grep -q '^\*\*Superseded' old.md && { echo "already marked"; exit 0; }
+          { echo '**Superseded by [piper-voices-2](https://github.com/${{ github.repository }}/releases/tag/piper-voices-2)** (Amy replaces Kristin as the English voice). Kept so builds pinned to manifest version 1 still work.'; echo; cat old.md; } > new.md
+          gh release edit piper-voices-1 --notes-file new.md
