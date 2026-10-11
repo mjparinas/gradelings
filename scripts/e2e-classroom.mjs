@@ -132,6 +132,28 @@ const stored = await page.evaluate(
 );
 check(stored === 0, "no practice is left on the device after sign-out");
 
+// A co-teacher: invited by email, accepted by the invitee, sees the class and the student's work,
+// can assign units, cannot close the class or delete the student, and can leave.
+const ownerCookie = cookie;
+const coEmail = `coteacher-${Date.now()}@example.com`;
+cookie = "";
+check((await api("/api/auth/signup/", "POST", { email: coEmail, password: "correct horse" })).status === 200, "a second teacher signs up");
+const coCookie = cookie;
+await db.execute({ sql: "UPDATE parents SET email_verified_at = ? WHERE email = ?", args: [Date.now(), coEmail] });
+cookie = ownerCookie;
+check((await api("/api/classes/teachers/", "POST", { classId: cls.id, email: coEmail })).status === 200, "the owner invites a co-teacher by email");
+cookie = coCookie;
+check((await api(`/api/classes/?id=${cls.id}`)).status === 404, "an invited teacher sees nothing until they accept");
+check((await api("/api/classes/invites/", "POST", { classId: cls.id })).status === 200, "the co-teacher accepts");
+const shared = await api(`/api/classes/?id=${cls.id}`);
+check(shared.status === 200 && shared.data.role === "co-teacher" && shared.data.students.length === 1 && shared.data.roster.length === 1, "the co-teacher sees the students, results and login codes");
+check((await api("/api/classes/assignments/", "POST", { classId: cls.id, unitKey: "3/math/fractions" })).status === 200, "the co-teacher can assign a unit");
+check((await api(`/api/classes/students/?classId=${cls.id}&studentId=${added.data.students[0].id}`, "DELETE")).status === 404, "the co-teacher cannot delete a student");
+check((await api(`/api/classes/?id=${cls.id}`, "DELETE")).status === 404, "the co-teacher cannot close the class");
+check((await api(`/api/classes/teachers/?classId=${cls.id}&leave=1`, "DELETE")).status === 200, "the co-teacher can leave");
+check((await api(`/api/classes/?id=${cls.id}`)).status === 404, "a co-teacher who left has no access");
+cookie = ownerCookie;
+
 // The student's session is closed to teacher endpoints.
 await browser.close();
 if (errors.length) fail(`console errors:\n${errors.join("\n")}`);

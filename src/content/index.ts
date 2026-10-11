@@ -1,5 +1,6 @@
 import { DEFAULT_FRAMEWORK } from "./frameworks";
 import { GRADE_ORDER } from "./subjects";
+import { withLessons, type GradeLessons } from "./lessons";
 import type { Course, FrameworkId, GradeId, SubjectId, Unit } from "./types";
 
 // The content registry for the apps. Each grade's content is its own download,
@@ -9,7 +10,9 @@ import type { Course, FrameworkId, GradeId, SubjectId, Unit } from "./types";
 // Lookups only see grades that have loaded; the apps wait for the grades they need
 // (see src/lib/useGradeContent.ts). Server pages and tests use ./all instead.
 
-type Loader = () => Promise<{ courses: Course[] }>;
+// A grade module may also export its lessons ("subject/unit-id"). They are applied to every framework's
+// units with that id, so a unit only one province teaches still gets its lesson.
+type Loader = () => Promise<{ courses: Course[]; lessons?: GradeLessons }>;
 
 const LOADERS: Record<GradeId, Loader> = {
   k: () => import("./grades/k"),
@@ -240,6 +243,7 @@ export function coursesInFramework(list: Course[], framework: FrameworkId): Cour
 }
 
 const base = new Map<GradeId, Course[]>();
+const baseLessons = new Map<GradeId, GradeLessons>();
 const extras = new Map<string, Course[]>();
 const merged = new Map<GradeId, Course[]>();
 const views = new Map<string, Course[]>();
@@ -251,10 +255,13 @@ const listeners = new Set<() => void>();
 const targetId = (grade: GradeId, framework: FrameworkId) => `${framework}:${grade}`;
 
 function rebuild(grade: GradeId) {
-  const list = mergeCourses([
-    base.get(grade) ?? [],
-    ...[...extras.entries()].filter(([k]) => k.endsWith(`:${grade}`)).map(([, v]) => v),
-  ]).filter((c) => c.units.length > 0);
+  const list = withLessons(
+    mergeCourses([
+      base.get(grade) ?? [],
+      ...[...extras.entries()].filter(([k]) => k.endsWith(`:${grade}`)).map(([, v]) => v),
+    ]),
+    baseLessons.get(grade) ?? {},
+  ).filter((c) => c.units.length > 0);
   merged.set(grade, list);
   for (const key of [...views.keys()]) if (key.endsWith(`:${grade}`)) views.delete(key);
   for (const course of list) {
@@ -269,13 +276,13 @@ function notify() {
   for (const l of listeners) l();
 }
 
-function loadPart(id: string, grade: GradeId, loader: Loader, store: () => void, register: (c: Course[]) => void): Promise<void> {
+function loadPart(id: string, grade: GradeId, loader: Loader, store: () => void, register: (c: Course[], lessons?: GradeLessons) => void): Promise<void> {
   let p = pending.get(id);
   if (!p) {
     failed.delete(id);
     p = loader()
       .then((m) => {
-        register(m.courses);
+        register(m.courses, m.lessons);
         store();
       })
       .catch((err: unknown) => {
@@ -298,7 +305,10 @@ export function loadGrade(grade: GradeId, framework: FrameworkId = DEFAULT_FRAME
   const parts: Promise<void>[] = [];
   if (!base.has(grade)) {
     parts.push(
-      loadPart(`base:${grade}`, grade, LOADERS[grade], () => rebuild(grade), (c) => base.set(grade, c)),
+      loadPart(`base:${grade}`, grade, LOADERS[grade], () => rebuild(grade), (c, l) => {
+          base.set(grade, c);
+          if (l) baseLessons.set(grade, l);
+        }),
     );
   }
   for (const f of withDepends(framework)) {

@@ -26,5 +26,5 @@ Public pages that go with this: `/privacy/` (with a "Schools and classes" sectio
 1. **Real legal entity and contact details** in `src/lib/brand.ts` (`LEGAL_NAME`, `CONTACT_EMAIL`, `MAILING_ADDRESS`), then a lawyer's review of the privacy policy, terms and the agreement.
 2. **Provider answers** for the **(confirm)** items in the PIA pack (Turso encryption at rest and backups, Fly region, Resend and Sentry data handling).
 3. **Screen reader and keyboard testing** (VoiceOver, TalkBack, NVDA), then update the conformance report.
-4. **Decisions for the owner**, listed at the end of the PIA pack: whether a school plan exists and whether teachers may have more than one class owner (co-teaching).
+4. **Decisions for the owner**, listed at the end of the PIA pack: whether a school plan exists (needs the owner's pricing decision) and whether co-teachers should be able to delete students or a school office role is needed. Co-teaching itself is built.
 5. **A pilot** with one friendly school or district, which will show their actual process.

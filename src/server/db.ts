@@ -134,6 +134,24 @@ const SCHEMA = [
     UNIQUE (class_id, login_code)
   )`,
   `CREATE INDEX IF NOT EXISTS students_class ON students (class_id)`,
+  // Co-teachers: other teacher accounts that share a class with its owner. The owner invites by
+  // email; the invitation is kept by address only (so it never reveals whether an account exists)
+  // and the invitee accepts it while signed in with that confirmed email.
+  `CREATE TABLE IF NOT EXISTS class_teachers (
+    class_id TEXT NOT NULL,
+    parent_id TEXT NOT NULL,
+    joined_at INTEGER NOT NULL,
+    PRIMARY KEY (class_id, parent_id)
+  )`,
+  `CREATE INDEX IF NOT EXISTS class_teachers_parent ON class_teachers (parent_id)`,
+  `CREATE TABLE IF NOT EXISTS class_invites (
+    class_id TEXT NOT NULL,
+    email TEXT NOT NULL,
+    invited_by TEXT NOT NULL,
+    created_at INTEGER NOT NULL,
+    PRIMARY KEY (class_id, email)
+  )`,
+  `CREATE INDEX IF NOT EXISTS class_invites_email ON class_invites (email)`,
   // Browsers a parent allowed to get a "your weekly report is ready" notification. Only the push address is kept.
   `CREATE TABLE IF NOT EXISTS push_subscriptions (
     id TEXT PRIMARY KEY,

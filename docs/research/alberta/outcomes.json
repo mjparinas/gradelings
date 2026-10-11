@@ -681,5 +681,28 @@
   "LC Language competence",
   "GC Global citizenship",
   "S Strategies"
- ]
+ ],
+ "immersion-7-9": {
+  "V1": "Valoriser son apprentissage du français comme un outil de développement personnel, intellectuel et social.",
+  "CO1": "Comprendre des discours oraux et décoder des messages sonores dans des produits médiatiques pour répondre à un besoin d'information.",
+  "CO2": "Comprendre des discours oraux et décoder des messages sonores dans des produits médiatiques pour répondre à des besoins d'imaginaire, de divertissement et d'esthétique.",
+  "CO3": "Comprendre des discours oraux, des messages sonores dans des produits médiatiques pour développer une attitude positive envers la langue française et les cultures francophones.",
+  "CO4": "Planifier son écoute, en utilisant les stratégies appropriées à la situation de communication et à la tâche à réaliser.",
+  "CO5": "Gérer son écoute, en utilisant les stratégies appropriées à la situation de communication et à la tâche à réaliser.",
+  "CÉ1": "Comprendre des textes écrits et décoder des messages visuels dans des produits médiatiques pour répondre à un besoin d'information.",
+  "CÉ2": "Comprendre des textes écrits et décoder des messages visuels dans des produits médiatiques pour répondre à des besoins d'imaginaire, de divertissement et d'esthétique.",
+  "CÉ3": "Comprendre des textes écrits, des messages visuels dans des produits médiatiques pour développer une attitude positive envers la langue française et les cultures francophones.",
+  "CÉ4": "Planifier sa lecture, en utilisant les stratégies appropriées à la situation de communication et à la tâche à réaliser.",
+  "CÉ5": "Gérer sa lecture, en utilisant les stratégies appropriées à la situation de communication et à la tâche à réaliser.",
+  "PO1": "Parler pour transmettre de l'information selon son intention de communication et pour répondre à un besoin d'interaction sociale.",
+  "PO2": "Parler pour explorer le langage et pour divertir.",
+  "PO3": "Parler clairement et correctement selon la situation de communication.",
+  "PO4": "Planifier sa production orale, en analysant la situation de communication.",
+  "PO5": "Gérer sa production orale, en tenant compte de la situation de communication.",
+  "PÉ1": "Rédiger des textes pour transmettre de l'information selon son intention de communication.",
+  "PÉ2": "Écrire des textes pour répondre à un besoin d'imaginaire, pour proposer une vision du monde et pour explorer le langage.",
+  "PÉ3": "Écrire correctement selon la situation de communication.",
+  "PÉ4": "Planifier sa production écrite, en analysant la situation de communication.",
+  "PÉ5": "Gérer sa production écrite, en tenant compte de la situation de communication."
+ }
 }

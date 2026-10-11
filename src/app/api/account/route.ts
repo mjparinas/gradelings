@@ -4,6 +4,7 @@ import { sendEmail } from "@/server/email";
 import { accountDeletedEmail } from "@/server/emailTemplates";
 import { getFamilyRow } from "@/server/family";
 import { cancelSubscriptions, stripeCancellationConfigured } from "@/server/stripe";
+import { releaseTeacherAccounts } from "@/server/classroom";
 import { removeStudentsOfOwner } from "@/server/students";
 
 /** Deletes the family's account and every piece of data stored on the server. */
@@ -27,8 +28,11 @@ export async function DELETE(req: Request) {
       return error(502, "We couldn't cancel your subscription just now, so your account was not deleted. Please try again in a moment.");
     }
   }
-  // Teacher accounts: every student account in their classes goes too.
-  await removeStudentsOfOwner((await query<{ id: string }>("SELECT id FROM parents WHERE family_id = ?", [f])).map((p) => p.id));
+  // Teacher accounts: a class with a co-teacher passes to the longest-serving one (who could already
+  // see everything in it). Any class left without one loses its student accounts along with the class.
+  const accountIds = (await query<{ id: string }>("SELECT id FROM parents WHERE family_id = ?", [f])).map((p) => p.id);
+  await releaseTeacherAccounts(accountIds);
+  await removeStudentsOfOwner(accountIds);
   await batch([
     { sql: "DELETE FROM auth_tokens WHERE parent_id IN (SELECT id FROM parents WHERE family_id = ?)", args: [f] },
     { sql: "DELETE FROM push_subscriptions WHERE parent_id IN (SELECT id FROM parents WHERE family_id = ?)", args: [f] },
@@ -36,6 +40,8 @@ export async function DELETE(req: Request) {
     // Classroom mode: unlink this family's children, and remove any classes this account's teachers owned.
     { sql: "DELETE FROM class_members WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM class_members WHERE class_id IN (SELECT id FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?))", args: [f] },
+    { sql: "DELETE FROM class_teachers WHERE class_id IN (SELECT id FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?))", args: [f] },
+    { sql: "DELETE FROM class_invites WHERE class_id IN (SELECT id FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?))", args: [f] },
     { sql: "DELETE FROM class_assignments WHERE class_id IN (SELECT id FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?))", args: [f] },
     { sql: "DELETE FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?)", args: [f] },
     { sql: "DELETE FROM question_reports WHERE family_id = ?", args: [f] },

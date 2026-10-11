@@ -9,7 +9,7 @@ import type { FrameworkId, GradeId } from "@/content/types";
 import { DateField } from "@/components/DateField";
 import { SelectMenu } from "@/components/SelectMenu";
 import { APP_NAME } from "@/lib/brand";
-import { call, classInsights, type ClassSummary, type RosterEntry, type StudentRow } from "@/lib/classroom";
+import { call, classInsights, type ClassInvite, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
 import { levelInfo } from "@/lib/proficiency";
 
 // The teacher area: create a class, share its code, assign BC units and see each linked student's
@@ -70,13 +70,27 @@ function ClassList({ onOpen }: { onOpen: (id: string) => void }) {
   const [name, setName] = useState("");
   const [grade, setGrade] = useState<GradeId>("3");
   const [framework, setFramework] = useState<FrameworkId>("ca-bc");
+  const [invites, setInvites] = useState<ClassInvite[]>([]);
   const [err, setErr] = useState("");
 
   const load = useCallback(() => {
     call<{ classes: ClassSummary[] }>("/api/classes/")
       .then((r) => setClasses(r.classes))
       .catch((e: Error) => setErr(e.message));
+    call<{ invites?: ClassInvite[] }>("/api/classes/invites/")
+      .then((r) => setInvites(r.invites ?? []))
+      .catch(() => setInvites([]));
   }, []);
+  const answer = async (invite: ClassInvite, accept: boolean) => {
+    setErr("");
+    try {
+      if (accept) await call("/api/classes/invites/", "POST", { classId: invite.classId });
+      else await call(`/api/classes/invites/?classId=${encodeURIComponent(invite.classId)}`, "DELETE");
+      load();
+    } catch (x) {
+      setErr((x as Error).message);
+    }
+  };
   useEffect(load, [load]);
 
   const create = async (e: FormEvent) => {
@@ -95,13 +109,33 @@ function ClassList({ onOpen }: { onOpen: (id: string) => void }) {
     <>
       <h1 className="text-3xl font-bold">Your classes</h1>
       {classes?.length === 0 && <p className="mt-2 font-read text-ink-soft">No classes yet. Create one below, then give families the class code.</p>}
+      {invites.length > 0 && (
+        <section className="mt-4 rounded-2xl border border-line bg-white p-4" aria-label="Invitations to co-teach">
+          <h2 className="text-xl font-bold">Invitations to co-teach</h2>
+          <ul className="mt-2 divide-y divide-line">
+            {invites.map((i) => (
+              <li key={i.classId} className="flex flex-wrap items-center gap-3 py-2">
+                <span className="min-w-48 flex-1 font-read">
+                  <b>{i.name}</b> ({GRADE_LABEL[i.grade as GradeId]}) from {i.from}
+                </span>
+                <button type="button" className={`${btn} bg-[#25b47e] text-[#0f172a]`} onClick={() => void answer(i, true)}>
+                  Accept
+                </button>
+                <button type="button" className={`${btn} border border-line`} onClick={() => void answer(i, false)}>
+                  Decline
+                </button>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
       <ul className="mt-4 grid gap-3 sm:grid-cols-2">
         {classes?.map((c) => (
           <li key={c.id}>
             <button type="button" onClick={() => onOpen(c.id)} className="w-full rounded-2xl border border-line bg-white p-4 text-left">
               <span className="block text-xl font-bold">{c.name}</span>
               <span className="block font-read text-ink-soft">
-                {GRADE_LABEL[c.grade as GradeId]} · {getFramework(c.framework as FrameworkId).region} · {c.students} {c.students === 1 ? "student" : "students"} · code <b className="font-mono tracking-widest">{c.joinCode}</b>
+                {GRADE_LABEL[c.grade as GradeId]} · {getFramework(c.framework as FrameworkId).region} · {c.students} {c.students === 1 ? "student" : "students"}{c.role === "co-teacher" ? " · you co-teach" : ""} · code <b className="font-mono tracking-widest">{c.joinCode}</b>
               </span>
             </button>
           </li>
@@ -131,6 +165,9 @@ interface ClassDetail {
   due: Record<string, number>;
   students: StudentRow[];
   roster: RosterEntry[];
+  role?: "owner" | "co-teacher";
+  teachers?: TeacherEntry[];
+  invites?: { email: string; createdAt: number }[];
 }
 
 /** A date input's value ("2026-10-14") as the end of that day, local time. */
@@ -146,6 +183,7 @@ function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url
   const [busy, setBusy] = useState(false);
   const [removing, setRemoving] = useState<RosterEntry | null>(null);
   const { class: cls, roster, students } = data;
+  const isOwner = (data.role ?? "owner") === "owner";
   const byProfile = new Map(students.map((s) => [s.profileId, s]));
   return (
     <section className="mt-4 rounded-2xl border border-line bg-white p-5 print:hidden">
@@ -164,9 +202,11 @@ function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url
               <button type="button" className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => onChange(`/api/classes/students/?classId=${cls.id}&studentId=${r.id}`, "PATCH")}>
                 New code
               </button>
-              <button type="button" className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => setRemoving(r)}>
-                Remove
-              </button>
+              {isOwner && (
+                <button type="button" className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => setRemoving(r)}>
+                  Remove
+                </button>
+              )}
             </li>
           ))}
         </ul>
@@ -222,6 +262,72 @@ function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url
             </div>
           </div>
         </div>
+      )}
+    </section>
+  );
+}
+
+/** The people who teach this class. The owner invites and removes co-teachers; a co-teacher can leave. */
+function Team({ data, onChange, onLeft }: { data: ClassDetail; onChange: (url: string, method: string, body?: unknown) => Promise<void>; onLeft: () => void }) {
+  const [email, setEmail] = useState("");
+  const [sent, setSent] = useState(false);
+  const isOwner = (data.role ?? "owner") === "owner";
+  const teachers = data.teachers ?? [];
+  const invites = data.invites ?? [];
+  const id = data.class.id;
+  return (
+    <section className="mt-4 rounded-2xl border border-line bg-white p-5 print:hidden">
+      <h2 className="text-xl font-bold">Teachers</h2>
+      <p className="mt-1 font-read text-ink-soft">
+        {isOwner
+          ? "Invite a colleague with a teacher account to share this class. Co-teachers see the same students and results, can assign units, add students and print cards. Only you can close the class, change the class code, remove students or manage co-teachers."
+          : "You co-teach this class. You can see the students and results, assign units, add students and print cards. The owner closes the class and manages who else teaches it."}
+      </p>
+      <ul className="mt-3 divide-y divide-line">
+        {teachers.map((t) => (
+          <li key={t.id} className="flex flex-wrap items-center gap-3 py-2">
+            <span className="min-w-48 flex-1 font-read">
+              {t.email} <span className="text-sm text-ink-soft">({t.role === "owner" ? "owner" : "co-teacher"})</span>
+            </span>
+            {isOwner && t.role === "co-teacher" && (
+              <button type="button" aria-label={`Remove ${t.email}`} className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => void onChange(`/api/classes/teachers/?classId=${id}&teacherId=${encodeURIComponent(t.id)}`, "DELETE")}>
+                Remove
+              </button>
+            )}
+          </li>
+        ))}
+        {invites.map((i) => (
+          <li key={i.email} className="flex flex-wrap items-center gap-3 py-2">
+            <span className="min-w-48 flex-1 font-read">
+              {i.email} <span className="text-sm text-ink-soft">(invited, waiting to accept)</span>
+            </span>
+            <button type="button" aria-label={`Cancel invitation for ${i.email}`} className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => void onChange(`/api/classes/teachers/?classId=${id}&invite=${encodeURIComponent(i.email)}`, "DELETE")}>
+              Cancel
+            </button>
+          </li>
+        ))}
+      </ul>
+      {isOwner ? (
+        <form
+          className="mt-3 flex flex-wrap items-end gap-3"
+          onSubmit={async (e) => {
+            e.preventDefault();
+            await onChange("/api/classes/teachers/", "POST", { classId: id, email });
+            setEmail("");
+            setSent(true);
+          }}
+        >
+          <label className="flex flex-col text-sm font-semibold">
+            Colleague’s account email
+            <input type="email" className="mt-1 min-h-11 rounded-xl border border-line px-3" value={email} maxLength={254} onChange={(e) => { setEmail(e.target.value); setSent(false); }} required />
+          </label>
+          <button className={`${btn} bg-[#4f8ef7] text-[#0f172a]`}>Invite co-teacher</button>
+          {sent && <p role="status" className="basis-full text-sm text-ink-soft">Invitation sent. If that email belongs to a confirmed account, they’ll see it on their teacher page for 14 days.</p>}
+        </form>
+      ) : (
+        <button type="button" className={`${btn} mt-3 border border-line`} onClick={() => void onChange(`/api/classes/teachers/?classId=${id}&leave=1`, "DELETE").then(onLeft)}>
+          Leave this class
+        </button>
       )}
     </section>
   );
@@ -417,6 +523,7 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
 
   if (!data || !ready) return <p className="font-read">{err || "Loading…"}</p>;
   const { class: cls, assignments, students } = data;
+  const isOwner = (data.role ?? "owner") === "owner";
   const label = (key: string) => getUnitRef(key)?.unit.title ?? key;
   const levelLabel = (level: number) => (level < 0 ? "Not started" : levelInfo(cls.framework, cls.grade, level)?.label ?? "");
 
@@ -450,13 +557,18 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
         <p className="mt-1 font-read text-ink-soft">
           Share this with families. A parent enters it under Children in the parent area, so they choose what to share. You will only see first names, grade and practice results for the units you assign.
         </p>
-        <button type="button" className="mt-3 rounded-xl border border-line px-4 py-2 font-semibold" onClick={() => change(`/api/classes/?id=${encodeURIComponent(id)}`, "PATCH")}>
-          Get a new code
-        </button>
-        <p className="mt-1 text-sm text-ink-soft">If the code was shared too widely. Families already linked stay linked; the old code stops working.</p>
+        {isOwner && (
+          <>
+            <button type="button" className="mt-3 rounded-xl border border-line px-4 py-2 font-semibold" onClick={() => change(`/api/classes/?id=${encodeURIComponent(id)}`, "PATCH")}>
+              Get a new code
+            </button>
+            <p className="mt-1 text-sm text-ink-soft">If the code was shared too widely. Families already linked stay linked; the old code stops working.</p>
+          </>
+        )}
       </section>
 
       <Roster data={data} onChange={change} onPrint={() => setPrintMode("cards")} />
+      <Team data={data} onChange={change} onLeft={onBack} />
 
       <section className="mt-4 rounded-2xl border border-line bg-white p-5">
         <h2 className="text-xl font-bold">Assigned units</h2>
@@ -565,9 +677,10 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
         </p>
       )}
 
+      {isOwner && (
       <section className="mt-4 rounded-2xl border border-line bg-white p-5">
         <h2 className="text-xl font-bold">Close this class</h2>
-        <p className="mt-1 font-read text-ink-soft">Closing removes every link to students straight away, so you no longer see anyone’s progress. Families keep their own data.</p>
+        <p className="mt-1 font-read text-ink-soft">Closing removes every link to students and all co-teachers straight away, and deletes the student accounts you added. Families keep their own data.</p>
         {confirmClose ? (
           <button type="button" className={`${btn} mt-3 border border-[#e57a12] text-nudge-dark`} onClick={() => change(`/api/classes/?id=${id}`, "DELETE").then(onBack)}>
             Yes, close {cls.name}
@@ -578,6 +691,7 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
           </button>
         )}
       </section>
+      )}
       </div>
     </>
   );

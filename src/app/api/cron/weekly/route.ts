@@ -49,6 +49,9 @@ export async function GET(req: Request) {
       await run("UPDATE classes SET inactive_warning_at = NULL WHERE id = ? AND inactive_warning_at = ? AND last_activity_at <= ?", [cls.id, now, now - INACTIVE_WARNING_AGE]);
     } else {
       result.inactiveClassWarnings++;
+      // Co-teachers are told too, since their sign-in also keeps the class (best effort).
+      const others = await query<{ email: string }>("SELECT p.email FROM class_teachers t JOIN parents p ON p.id = t.parent_id WHERE t.class_id = ? AND p.email_verified_at IS NOT NULL", [cls.id]);
+      for (const t of others) await sendEmail(inactiveClassEmail(t.email, origin, cls.name, deleteDate)).catch(() => {});
     }
   }
 

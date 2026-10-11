@@ -12,6 +12,7 @@ import type { GradeId } from "../types";
 //   math 7–9: strand and number, e.g. "N5, PR2"
 //   science 7–9: "Unit A: Interactions and Ecosystems"
 //   social 7–9: "7.1; 7.2"; language 7–9: "General Outcome 2"; core French: "Applications; Strategies"
+//   French immersion 7–9: general outcome codes of the immersion program, e.g. "CÉ2; PÉ3"
 //   language, social studies and French immersion K–6: items from the official grade snapshot
 //   (ELA and immersion lines, social studies topic phrases), joined by "; "
 
@@ -22,6 +23,7 @@ interface Outcomes {
   "language-7-9": string[];
   "social-7-9": Record<string, string>;
   "core-french": string[];
+  "immersion-7-9": Record<string, string>;
 }
 
 const OUTCOMES = JSON.parse(readFileSync(join(__dirname, "../../../docs/research/alberta/outcomes.json"), "utf8")) as Outcomes;
@@ -114,11 +116,21 @@ describe("Alberta content", () => {
         for (const n of nums) expect(OUTCOMES["language-7-9"].some((o) => o.startsWith(`${n} `)), `${name}: ${n}`).toBe(true);
       } else if (course.subject === "core-french") {
         for (const p of first.split("; ")) expect(OUTCOMES["core-french"].some((o) => o.endsWith(` ${p}`) || o === p), `${name}: ${p}`).toBe(true);
+      } else if (course.subject === "immersion" && (g === "7" || g === "8" || g === "9")) {
+        for (const c of first.split("; ")) expect(OUTCOMES["immersion-7-9"][c], `${name}: ${c}`).toBeDefined();
       } else if (["language", "social", "immersion"].includes(course.subject) && (g <= "6" || g === "k")) {
         const items = snapshotItems(course.subject, g).map(norm);
         expect(items.length, `${course.subject} Grade ${g} snapshot`).toBeGreaterThan(0);
         for (const p of first.split("; ")) expect(items, `${name}: "${p}" is not in the Grade ${g} snapshot`).toContain(norm(p));
       }
+    }
+  });
+
+  it("checks every Grade 7 to 9 immersion unit against the immersion program's general outcomes", () => {
+    for (const g of ["7", "8", "9"]) {
+      const units = mine.filter((m) => m.course.grade === g && m.course.subject === "immersion");
+      expect(units.length, `immersion ${g}`).toBeGreaterThanOrEqual(5);
+      for (const { unit, standard } of units) expect(head(standard), `${g}/${unit.id}`).toMatch(/^(?:(?:CO|CÉ|PO|PÉ)[1-5]|V1)(?:; (?:(?:CO|CÉ|PO|PÉ)[1-5]|V1))*$/);
     }
   });
 

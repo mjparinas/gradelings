@@ -7,7 +7,11 @@
 - **Report card:** Kindergarten to Grade 8 use the four-point scale (1 working below, 2 approaching, 3 or 3+ meeting, 4 or 4+ excelling); Grade 9 uses the high school wording (numerical course grades). Source: the department's "Assessing, Evaluating, Reporting" guidelines.
 
 ## Known gaps
-- **Kindergarten to Grade 5 math is provisional.** The curriculum documents for those grades are on a gated site, so those courses reuse the Grade 6 strands and big ideas ("Number: Number Sense"). The unit content follows the Western and Northern Canadian Protocol outcomes. Replace the citations when the documents can be read.
+- **Kindergarten to Grade 5 math is provisional.** Checked again (the real source was sought, not found):
+  - `curriculum.nbed.ca/learning-areas/primary-block/mathematics/` and `.../elementary-block/mathematics/` (and their French pages under `/fr/domaines-dapprentissage/`) have **no course-comparison button**, unlike `.../middle-block/mathematics/` (cid 7643) and the Grade 9 page, so `fetch.sh`'s data endpoint has nothing for K to 5 math.
+  - They link only to "K-2 Mathematics Curriculum [NBED]" and "3-5 Mathematics Curriculum [NBED]" (PDFs, "v0.3 AUGUST 2026 final for release", English and French) and "K-8 Mathematics Resources [NBED]". All sit on `nbed.sharepoint.com` (`/sites/InDevelopment/Mathematics/Curriculum Drafts/...`, `/sites/mip`, `/sites/RPR/...`). Fetching them returns 403 or a reset connection, because the `[NBED]` tag means an NB education login is needed.
+  - The WordPress REST API (`/wp-json/wp/v2/search`, `media`) lists no K to 5 math pages or uploads; the old gnb.ca math pages return 404.
+  - So those courses reuse the Grade 6 strands and big ideas ("Number: Number Sense"), flagged `provisional` in `outcomes.json`, and the unit content follows the Western and Northern Canadian Protocol outcomes. Replace the citations if the documents become public or the department supplies them.
 - **Kindergarten to Grade 2 science and social studies** are one course, Explore Your World, so the units cite its strands.
 - **Kindergarten French Immersion** is not built, because New Brunswick's immersion program starts in Grade 1.
 - **Shared units:** most units are BC units (`share`) or units from Ontario, Manitoba, Alberta or Nova Scotia (`adopt`), and were kept only where the questions do not name another province. Some New Brunswick outcomes have no unit yet.

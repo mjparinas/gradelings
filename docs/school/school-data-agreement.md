@@ -29,7 +29,7 @@ The service runs in Montréal, Canada. The schedule lists each service provider 
 
 ## 6. Security
 
-The Provider will keep reasonable safeguards, described in the schedule (encrypted connections, hashed credentials, access limited to the teacher who owns the class, rate-limited sign-in, scrubbed error reports). `[Add independent testing commitments once a penetration test is done.]`
+The Provider will keep reasonable safeguards, described in the schedule (encrypted connections, hashed credentials, access limited to the teacher who owns the class and any co-teachers the owner invites, rate-limited sign-in, scrubbed error reports). `[Add independent testing commitments once a penetration test is done.]`
 
 ## 7. Breaches
 
@@ -37,7 +37,7 @@ The Provider will notify the School without undue delay, and within `[__]` hours
 
 ## 8. Access, correction and deletion
 
-The School can see, correct and delete a student's information through the teacher tools, and the Provider will help with any request it cannot complete itself within `[__]` days. A teacher removing a student, closing a class or deleting their account deletes the related student information at once from live systems. After 11 months without a sign-in by the teacher, a linked family or a class student, the Provider warns the teacher by email. After 12 months without a sign-in, the Provider deletes the class, assignments and class-account student information; a parent-linked child is unlinked while their family information is retained by that family account. Backups are removed on the provider's cycle, within `[__]` days.
+The School can see, correct and delete a student's information through the teacher tools, and the Provider will help with any request it cannot complete itself within `[__]` days. A teacher removing a student, closing a class or deleting their account deletes the related student information at once from live systems, except that when the owner of a class deletes their account and the class has a co-teacher, the class passes to that co-teacher and its students stay. After 11 months without a sign-in by the teacher or a co-teacher, a linked family or a class student, the Provider warns the teacher by email. After 12 months without a sign-in, the Provider deletes the class, assignments and class-account student information; a parent-linked child is unlinked while their family information is retained by that family account. Backups are removed on the provider's cycle, within `[__]` days.
 
 ## 9. End of agreement
 

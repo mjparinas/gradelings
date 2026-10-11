@@ -309,7 +309,9 @@ describe("curriculum content", () => {
         for (const u of course.units) {
           const standard = u.standards["ca-sk"];
           if (!standard) continue;
-          const codes = standard.split(" · ")[0].match(/[A-Z]{1,3}[K\d]\.\d+[ab]?/g) ?? [];
+          // French cites goals and strands (4.CS.1, 5.LK.1, 3.CÉ.2, É-DV.4), listed with ", ".
+          const isFrench = course.subject === "immersion" || course.subject === "core-french";
+          const codes = isFrench ? standard.split(" · ")[0].split(", ") : (standard.split(" · ")[0].match(/[A-Z]{1,3}[K\d]\.\d+[ab]?/g) ?? []);
           expect(codes.length, `${u.id}: "${standard}" cites no outcome`).toBeGreaterThan(0);
           for (const code of codes) expect(official.has(code), `${u.id} cites ${code}, which is not in Saskatchewan ${course.grade}/${course.subject}`).toBe(true);
           // Units borrowed from Ontario must not carry Ontario names into Saskatchewan classrooms.

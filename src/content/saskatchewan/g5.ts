@@ -4,6 +4,7 @@ import { units as sk_science_5 } from "./g5-science";
 import { units as g5_social } from "../ontario/g5-social";
 import { reuse, share, sk } from "./kit";
 import { SK_OUTCOMES as O } from "./outcomes";
+import { frenchCourses } from "./french";
 
 // Saskatchewan Grade 5. Units that BC or Ontario already teach, and that fit the Saskatchewan outcomes, are
 // shared with the outcomes they practise. The rest are written for Saskatchewan. Outcome codes are checked against
@@ -82,4 +83,5 @@ export const courses: Course[] = [
     },
     order: { "ca-sk": ["immigration-multiculturalism", "explorers-5", "fur-trade-5", "levels-of-government", "making-laws", "regions-and-resources"] },
   },
+  ...frenchCourses("5"),
 ];

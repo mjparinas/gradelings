@@ -205,6 +205,214 @@
      }
     ]
    }
+  ],
+  "immersion": [
+   {
+    "name": "Prendre conscience de l'immersion sur sa personne",
+    "outcomes": [
+     {
+      "code": "É-PC.1",
+      "text": "Découvre et partage le fait que sa vie scolaire se passe en français."
+     },
+     {
+      "code": "É-PC.2",
+      "text": "Reconnait que d'être plongé dans une langue est exigeant physiquement et mentalement."
+     },
+     {
+      "code": "É-PC.3",
+      "text": "Développe une image positive de soi, y compris une facette de son identité comme élève en immersion."
+     }
+    ]
+   },
+   {
+    "name": "Dégager et valider le sens pour soi et avec autrui",
+    "outcomes": [
+     {
+      "code": "É-DV.1",
+      "text": "Manifeste sa compréhension de messages courts et simples par différents moyens : expression, gestes, réactions, remarques (souvent dans sa langue première), dessins, images numériques, mimes et danses."
+     },
+     {
+      "code": "É-DV.2",
+      "text": "Utilise ses connaissances du sujet et de sa langue première."
+     },
+     {
+      "code": "É-DV.3",
+      "text": "Fait un rapprochement entre le contenu du message et son vécu pour vérifier sa compréhension."
+     },
+     {
+      "code": "É-DV.4",
+      "text": "Identifie les éléments particuliers d'un message vu, visionné ou lu à haute voix : début, milieu et fin d'une histoire; le sujet et quelques aspects; cause à effet; problème – solution consignes simples étapes; jeux de sonorité , répétition et rimes."
+     },
+     {
+      "code": "É-DV.5",
+      "text": "Clarifie sa compréhension en posant des questions simples en y répondant."
+     },
+     {
+      "code": "É-DV.6",
+      "text": "Explore son milieu naturel et construit, y compris : explorer et construire le sens de soi et de son monde en observant les caractéristiques des plantes, des animaux, des humains et des objets; explorer la notion d'objets à trois dimensions et les reproduire; prendre conscience de la sécurité et la mettre en pratique; comparer des quantités d'objets de 0 à 10 à l'aide de la correspondance biunivoque ; mesurer à l'aide de la comparaison directe; explorer les caractéristiques des matériaux et des objets familiers dans son environnement."
+     },
+     {
+      "code": "É-DV.7",
+      "text": "Démontre une compréhension de la notion de nombre (0 à 10), y compris : nommer; établir le lien entre le nom d'un nombre et sa quantité; représenter; décomposer; reconnaitre d'un coup d'œil des arrangements familiers de 0 à 5 objets."
+     },
+     {
+      "code": "É-DV.8",
+      "text": "Prend conscience de son corps et de ses responsabilités envers son corps."
+     },
+     {
+      "code": "É-DV.9",
+      "text": "Démontre une compréhension de la notion de régularité répétitive (deux ou trois éléments)."
+     },
+     {
+      "code": "É-DV.10",
+      "text": "Prend conscience de sa responsabilité envers l'environnement naturel."
+     },
+     {
+      "code": "É-DV.11",
+      "text": "Objective son processus de négociation de sens, avant, pendant et après et ses apprentissages avec l'enseignant ou l'enseignante, y compris: se préparer à l'écoute; s'appuyer sur le visuel les gestes, la prosodie, la structure de textes, la ponctuation; raconter ce qu'on fait quand on écoute, observe, visionne ou « lit »."
+     }
+    ]
+   },
+   {
+    "name": "Générer un message et le valider pour soi et avec autrui",
+    "outcomes": [
+     {
+      "code": "É-GV.1",
+      "text": "Fait écho, répète, imite, reproduit l'oral de la classe, le parler et les expressions personnelles de l'enseignant ou de l'enseignante, les comptines et les chansons."
+     },
+     {
+      "code": "É-GV.2",
+      "text": "Produit de brèves expressions courantes et pose des questions simples afin de répondre à des besoins concrets : détails personnels, routines quotidiennes, désirs et besoins, demandes d'information."
+     },
+     {
+      "code": "É-GV.3",
+      "text": "Produit un message ou une histoire à l'oral, à l'écrit ou représentée à l'aide de modèles, de phrases ou de mots fournis en utilisant correctement l'ordre des idées ou des mots, en montant un texte à structure répétitive ou en écrivant des phrases numériques."
+     },
+     {
+      "code": "É-GV.4",
+      "text": "Utilise le français acquis pour s'organiser mentalement et physiquement, ainsi que pour interagir avec autrui, afin de répondre à une variété d'intentions : un processus utilisé; une description de son environnement, des personnes et des expériences; des consignes ou directives; des sentiments et comportements propices aux saines relations à l'école et au travail coopératif; une expression de ses gouts; la conclusion d'une histoire collective ou lue par l'enseignant ou l'enseignante."
+     },
+     {
+      "code": "É-GV.5",
+      "text": "Utilise les gestes, la mimique, le volume, la prosodie et les supports visuels pour se faire comprendre."
+     },
+     {
+      "code": "É-GV.6",
+      "text": "Consulte et met à profit les ressources matérielles et humaines dans son environnement immédiat pour, par exemple : vérifier les mots; participer aux activités physiques; planifier une excursion résoudre un problème; faire une recherche; comparer."
+     },
+     {
+      "code": "É-GV.7",
+      "text": "Utilise ses connaissances du sujet et de sa langue première pour décrire : son environnement; des personnes; des expériences."
+     },
+     {
+      "code": "É-GV.8",
+      "text": "Démontre une compréhension de la notion que les arts sont un moyen d'exprimer les idées."
+     },
+     {
+      "code": "É-GV.9",
+      "text": "Développe son corps, y compris la motricité fine et globale, par l'amélioration : de l'endurance cardiovasculaire, la flexibilité, l'endurance musculaire et la force musculaire; des habiletés locomotrices, non locomotrices et de manipulation; des mouvements rythmiques en lien avec des habiletés locomotrices et non locomotrices."
+     },
+     {
+      "code": "É-GV.10",
+      "text": "Varie les mouvements du corps lors de la locomotion, de la non locomotion et de la manipulation par rapport à : l'espace; l'effort; les relations."
+     },
+     {
+      "code": "É-GV.11",
+      "text": "Objective en expliquant ce qu'il ou elle fait et en donnant ses raisons."
+     }
+    ]
+   },
+   {
+    "name": "Acquérir les connaissances linguistiques et les référents socioculturels",
+    "outcomes": [
+     {
+      "code": "É-AC.1",
+      "text": "Contrôle un vocabulaire varié pour expliquer et interpréter son milieu et son vécu."
+     },
+     {
+      "code": "É-AC.2",
+      "text": "Utilise des types de phrases modélisées : déclarative, impérative, interrogative."
+     },
+     {
+      "code": "É-AC.3",
+      "text": "Démontre une sensibilisation aux caractéristiques sonores et prosodiques de la langue française."
+     },
+     {
+      "code": "É-AC.4",
+      "text": "Manipule à l'oral les composantes des mots."
+     },
+     {
+      "code": "É-AC.5",
+      "text": "Associe le langage oral au symbole écrit."
+     },
+     {
+      "code": "É-AC.6",
+      "text": "Se construit un répertoire de référents socioculturels reliés à l'enfance : certaines expressions idiomatiques, des comptines, des rimes, des chansons et des personnages dans les histoires."
+     }
+    ]
+   },
+   {
+    "name": "Se positionner grâce à ses façons de voir et d'être dans le monde",
+    "outcomes": [
+     {
+      "code": "É-PO.1",
+      "text": "Se rassure en faisant part des similitudes ou des différences observées entre sa vie scolaire en français et son vécu en dehors de l'école."
+     },
+     {
+      "code": "É-PO.2",
+      "text": "Prend des risques dans son approche pour résoudre des problèmes"
+     },
+     {
+      "code": "É-PO.3",
+      "text": "Explore la démarche de la prise de décision dans les jeux de rôle et des représentations avec marionnettes."
+     },
+     {
+      "code": "É-PO.4",
+      "text": "Explore les moyens utilisés pour satisfaire ses besoins ainsi que les besoins de ses proches."
+     }
+    ]
+   },
+   {
+    "name": "Afficher sa francophonie",
+    "outcomes": [
+     {
+      "code": "É-AF.1",
+      "text": "S'adresse en français à des intervenants connus dans des situations familières, en dehors de la classe."
+     },
+     {
+      "code": "É-AF.2",
+      "text": "Partage ses expériences en immersion dans des situations initiées par lui ou elle, ou ses pairs."
+     },
+     {
+      "code": "É-AF.3",
+      "text": "Prend des risques dans : son apprentissage du français ses interactions avec autrui; sa quête pour se renseigner."
+     }
+    ]
+   },
+   {
+    "name": "Jouir intellectuellement et affectivement",
+    "outcomes": [
+     {
+      "code": "É-J.1",
+      "text": "Redemande, réclame, choisit une histoire, une chanson, une activité en français."
+     },
+     {
+      "code": "É-J.2",
+      "text": "S'implique de son propre gré dans ses efforts d'apprentissage."
+     }
+    ],
+    "themes": [
+     "Ce que j’observe dans mon monde",
+     "Je prends soins de mon corps",
+     "Les besoins des êtres vivants",
+     "Les êtres vivants et le changement des saisons",
+     "Les fêtes (anniversaires et traditions)",
+     "Les formes des maisons",
+     "Les régularités dans mon monde",
+     "Ma famille célèbre pendant l’année",
+     "Soin de soi quand il fait froid (activités d’hiver/vêtements)"
+    ]
+   }
   ]
  },
  "1": {
@@ -477,6 +685,276 @@
      }
     ]
    }
+  ],
+  "core-french": [
+   {
+    "name": "Communication Skills",
+    "outcomes": [
+     {
+      "code": "1.CS.1",
+      "text": "Demonstrate an understanding of a number of oral key words, familiar phrases, questions, and basic classroom instructions in French."
+     },
+     {
+      "code": "1.CS.2",
+      "text": "Provide basic personal information through oral expression supported by constant prompting."
+     },
+     {
+      "code": "1.CS.4",
+      "text": "Reproduce, with prompting and support, a single French key word in print."
+     }
+    ]
+   },
+   {
+    "name": "General Language Strategies",
+    "outcomes": [
+     {
+      "code": "1.GL.1",
+      "text": "Use visual and auditory clues with prompting for the interpretation of a listening or viewing experience."
+     },
+     {
+      "code": "1.GL.2",
+      "text": "Use speaking strategies in modeled learning situations."
+     }
+    ]
+   },
+   {
+    "name": "Language Knowledge",
+    "outcomes": [
+     {
+      "code": "1.LK.1",
+      "text": "Demonstrate acquisition of French language concepts, related to themes."
+     }
+    ]
+   },
+   {
+    "name": "Culture",
+    "outcomes": [
+     {
+      "code": "1.C.1",
+      "text": "Identify elements of Francophone, First Nations, and Métis cultures with prompting."
+     }
+    ]
+   }
+  ],
+  "immersion": [
+   {
+    "name": "Prendre conscience de l'immersion sur sa personne",
+    "outcomes": [
+     {
+      "code": "É-PC.1",
+      "text": "Découvre et partage le fait que sa vie scolaire se passe en français."
+     },
+     {
+      "code": "É-PC.2",
+      "text": "Reconnait que d'être plongé dans une langue est exigeant physiquement et mentalement."
+     },
+     {
+      "code": "É-PC.3",
+      "text": "Développe une image positive de soi, y compris une facette de son identité comme élève en immersion."
+     }
+    ]
+   },
+   {
+    "name": "Dégager et valider le sens pour soi et avec autrui",
+    "outcomes": [
+     {
+      "code": "É-DV.1",
+      "text": "Manifeste sa compréhension de messages courts et simples par différents moyens : expression, gestes, réactions, remarques, dessins, images numériques, mimes et danses."
+     },
+     {
+      "code": "É-DV.2",
+      "text": "Utilise ses connaissances du sujet et de sa langue première."
+     },
+     {
+      "code": "É-DV.3",
+      "text": "Fait un rapprochement entre le contenu du message et son vécu pour vérifier sa compréhension."
+     },
+     {
+      "code": "É-DV.4",
+      "text": "Identifie les éléments particuliers d'un message vu, visionné ou lu à haute voix : début, milieu et fin d'une histoire; le sujet et quelques aspects; cause à effet; problème–solution; consignes simples; étapes; jeux de sonorité, répétition et rimes; arrangements familiers."
+     },
+     {
+      "code": "É-DV.5",
+      "text": "Clarifie sa compréhension en posant des questions simples et en y répondant."
+     },
+     {
+      "code": "É-DV.6",
+      "text": "Prend conscience de son milieu naturel et construit, y compris : explorer et construire le sens de soi, de sa famille et de son monde à travers les cinq sens; examiner la notion, la fonction et l'usage d'objets à trois dimensions et décrire leur position par rapport à d'autres personnes, animaux ou objets; prendre conscience de la sécurité et la mettre en pratique; établir le lien entre les figures à deux dimensions et les objets à trois dimensions; mesurer à l'aide de la comparaison directe; décrire des changements (quotidiens et saisonniers) et les besoins correspondants; examiner les adaptations des plantes, des animaux et des êtres humains; établir le lien entre les matériaux et les objets, et leurs usages."
+     },
+     {
+      "code": "É-DV.7",
+      "text": "Démontre une compréhension de la notion de nombre (0 à 100), y compris : énoncer des suites; reconnaitre d'un coup d'oeil des arrangements familiers; compter; estimer; représenter des nombres; décomposer; comparer; reconnaitre des groupes égaux."
+     },
+     {
+      "code": "É-DV.8",
+      "text": "Prend conscience de son corps et de ses responsabilités envers son corps."
+     },
+     {
+      "code": "É-DV.9",
+      "text": "Démontre une compréhension de la notion de régularité répétitive (deux à quatre éléments)."
+     },
+     {
+      "code": "É-DV.10",
+      "text": "Prend conscience de sa responsabilité envers l'environnement naturel."
+     },
+     {
+      "code": "É-DV.11",
+      "text": "Objective son processus de négociation de sens avant, pendant et après et ses apprentissages avec l'enseignant ou l'enseignante, y compris : se préparer à l'écoute; s'appuyer sur le visuel, les gestes, la prosodie, la structure de textes, la ponctuation; raconter ce qu'on fait quand on écoute, observe, visionne ou « lit »."
+     }
+    ]
+   },
+   {
+    "name": "Générer un message et le valider pour soi et avec autrui",
+    "outcomes": [
+     {
+      "code": "É-GV.1",
+      "text": "Fait écho, répète, imite, reproduit : l'oral de la classe; le parler et les expressions personnelles de l'enseignant; les comptines et les chansons."
+     },
+     {
+      "code": "É-GV.2",
+      "text": "Produit de brèves expressions courantes et pose des questions simples afin de répondre à des besoins concrets : détails personnels; routines quotidiennes; désirs et besoins; demandes d'information."
+     },
+     {
+      "code": "É-GV.3",
+      "text": "Produit un message ou une histoire à l'oral, à l'écrit ou représentée à l'aide de modèles, de phrases ou de mots fournis en utilisant correctement l'ordre des idées ou des mots, en montant un message à structure répétitive ou en écrivant des phrases numériques."
+     },
+     {
+      "code": "É-GV.4",
+      "text": "Utilise le français acquis pour s'organiser mentalement et physiquement ainsi que pour interagir avec autrui afin de répondre à une variété d'intentions : un processus utilisé; des consignes ou directives; une description de son environnement des personnes ou des expériences; des sentiments et comportements propices aux saines relations à l'école et au travail coopératif; une expression de ses gouts; la conclusion d'une histoire collective ou lue par l'enseignant ou l'enseignante."
+     },
+     {
+      "code": "É-GV.5",
+      "text": "Utilise les gestes, la mimique, le volume, la prosodie et les supports visuels pour se faire comprendre."
+     },
+     {
+      "code": "É-GV.6",
+      "text": "Consulte et met à profit les ressources matérielles et humaines dans son environnement immédiat pour, par exemple : vérifier les mots (sens, usage et orthographe); participer aux activités physiques; planifier une excursion; résoudre un problème; faire une recherche; comparer."
+     },
+     {
+      "code": "É-GV.7",
+      "text": "Utilise ses connaissances du sujet et de sa langue première pour décrire : son environnement des personnes; des expériences."
+     },
+     {
+      "code": "É-GV.8",
+      "text": "Démontre, de façon concrète, imagée et symbolique et à l'aide de phrases simples, une compréhension de la notion d'addition (nombres dont les solutions ne dépassent pas 20) et de la notion de soustraction (les faits de soustraction correspondants), y compris le développement du calcul mental."
+     },
+     {
+      "code": "É-GV.9",
+      "text": "Démontre, de façon concrète et imagée, une compréhension de la notion d'égalité, symbole d'égalité (se limiter de 0 à 20)."
+     },
+     {
+      "code": "É-GV.10",
+      "text": "Démontre la compréhension de la notion que les arts sont un moyen d'exprimer les idées."
+     },
+     {
+      "code": "É-GV.11",
+      "text": "Développe son corps, y compris la motricité fine et globale, par l'amélioration : de l'endurance cardiovasculaire, la flexibilité, l'endurance musculaire et la force musculaire; des habiletés locomotrices, non locomotrices et de manipulation au niveau « contrôle » ou au niveau « vers le contrôle »; des mouvements rythmiques en lien avec des habiletés locomotrices et non locomotrices."
+     },
+     {
+      "code": "É-GV.12",
+      "text": "Varie les mouvements du corps lors de la locomotion, de la non locomotion et de la manipulation par rapport à : à l'espace; à l'effort; aux relations."
+     },
+     {
+      "code": "É-GV.13",
+      "text": "Applique un répertoire de stratégies et d'habiletés de jeu dans : des jeux à règles rudimentaires faisant intervenir des déplacements; des jeux de tir; des activités et jeux en milieu inhabituel."
+     },
+     {
+      "code": "É-GV.14",
+      "text": "Objective en expliquant ce qu'il ou elle fait, et en donnant ses raisons."
+     }
+    ]
+   },
+   {
+    "name": "Acquérir les connaissances linguistiques et les référents socioculturels",
+    "outcomes": [
+     {
+      "code": "É-AC.1",
+      "text": "Contrôle un vocabulaire varié pour expliquer et interpréter son milieu et son vécu."
+     },
+     {
+      "code": "É-AC.2",
+      "text": "Utilise des types de phrases modélisées : déclarative, impérative, interrogative."
+     },
+     {
+      "code": "É-AC.3",
+      "text": "Démontre une sensibilisation aux caractéristiques sonores et prosodiques de la langue française."
+     },
+     {
+      "code": "É-AC.4",
+      "text": "Manipule à l'oral les composantes des mots."
+     },
+     {
+      "code": "É-AC.5",
+      "text": "Associe le langage oral au symbole écrit."
+     },
+     {
+      "code": "É-AC.6",
+      "text": "Se construit un répertoire de référents socioculturels reliés à l'enfance : certaines expressions idiomatiques, des comptines, des rimes, des chansons et des personnages dans les histoires."
+     }
+    ]
+   },
+   {
+    "name": "Se positionner grâce à ses façons de voir et d'être dans le monde",
+    "outcomes": [
+     {
+      "code": "É-PO.1",
+      "text": "Se rassure en faisant part des similitudes ou des différences observées entre sa vie scolaire en français et son vécu en dehors de l'école."
+     },
+     {
+      "code": "É-PO.2",
+      "text": "Prend des risques dans son approche pour résoudre des problèmes."
+     },
+     {
+      "code": "É-PO.3",
+      "text": "Démontre la démarche de la prise de décision dans les jeux de rôles, des représentations avec marionnettes."
+     },
+     {
+      "code": "É-PO.4",
+      "text": "Détermine les moyens utilisés pour satisfaire ses besoins ainsi que les besoins de ses proches."
+     }
+    ]
+   },
+   {
+    "name": "Afficher sa francophonie",
+    "outcomes": [
+     {
+      "code": "É-AF.1",
+      "text": "S'adresse en français à des intervenants connus dans des situations familières, en dehors de la classe."
+     },
+     {
+      "code": "É-AF.2",
+      "text": "Partage ses expériences en immersion dans des situations initiées par lui ou ses pairs."
+     },
+     {
+      "code": "É-AF.3",
+      "text": "Prend des risques dans : son apprentissage du français ses interactions avec autrui; sa quête pour se renseigner."
+     }
+    ]
+   },
+   {
+    "name": "Jouir intellectuellement et affectivement",
+    "outcomes": [
+     {
+      "code": "É-J.1",
+      "text": "Redemande, réclame, choisit une histoire, une chanson, une activité en français."
+     },
+     {
+      "code": "É-J.2",
+      "text": "S'implique de son propre gré dans ses efforts d'apprentissage."
+     }
+    ],
+    "themes": [
+     "Ce que je porte",
+     "« Être » en première année?",
+     "Je mange bien",
+     "Je suis unique",
+     "Les animaux",
+     "Les fêtes et célébrations importantes",
+     "Les saisons",
+     "Les sens",
+     "Les sons, les lettres et les rimes"
+    ]
+   }
   ]
  },
  "2": {
@@ -730,6 +1208,311 @@
      }
     ]
    }
+  ],
+  "core-french": [
+   {
+    "name": "Communication Skills",
+    "outcomes": [
+     {
+      "code": "2.CS.1",
+      "text": "Demonstrate understanding of basic oral French messages in a short concrete sentence, a familiar question, statement, request, instruction or accolade."
+     },
+     {
+      "code": "2.CS.2",
+      "text": "Provide personal information through oral expression supported by extensive prompting."
+     },
+     {
+      "code": "2.CS.3",
+      "text": "Demonstrate understanding of key words in a simple, concrete sentence supported by an illustration or photo."
+     },
+     {
+      "code": "2.CS.4",
+      "text": "Produce a simple French sentence from a model."
+     }
+    ]
+   },
+   {
+    "name": "General Language Strategies",
+    "outcomes": [
+     {
+      "code": "2.GL.1",
+      "text": "Use listening or viewing strategies in highly structured situations."
+     },
+     {
+      "code": "2.GL.2",
+      "text": "Use speaking strategies in highly structured situations."
+     },
+     {
+      "code": "2.GL.3",
+      "text": "Use reading strategies for sentences in modeled situations."
+     },
+     {
+      "code": "2.GL.4",
+      "text": "Use writing strategies for sentences in modeled learning situations."
+     }
+    ]
+   },
+   {
+    "name": "Language Knowledge",
+    "outcomes": [
+     {
+      "code": "2.LK.1",
+      "text": "Demonstrate acquisition of French language concepts, including: numbers 1-20 common question beginnings common articles and their placement pronouns, their use and placement knowledge of key vocabulary words and phrases linked to themes."
+     }
+    ]
+   },
+   {
+    "name": "Culture",
+    "outcomes": [
+     {
+      "code": "2.C.1",
+      "text": "Identify elements of Francophone, First Nations, and Métis family cultures."
+     }
+    ]
+   }
+  ],
+  "immersion": [
+   {
+    "name": "Prendre conscience de l'immersion sur sa personne",
+    "outcomes": [
+     {
+      "code": "AP-PC.1",
+      "text": "Explique que l'immersion le fait vivre dans l'ambigüité et l'appelle à prendre des risques dans sa recherche de sens et ses tentatives d'expression."
+     },
+     {
+      "code": "AP-PC.2",
+      "text": "S'approprie le français comme outil de communication et de structuration de la pensée."
+     },
+     {
+      "code": "AP-PC.3",
+      "text": "Témoigne qu'il ou elle fait partie d'un programme d'immersion qui s'étend à plusieurs niveaux et à un nombre considérable d'élèves."
+     },
+     {
+      "code": "AP-PC.4",
+      "text": "Établit le rapport entre le fait de fonctionner toute la journée en français et son état physique et mental."
+     }
+    ]
+   },
+   {
+    "name": "Dégager et valider le sens pour soi et avec autrui",
+    "outcomes": [
+     {
+      "code": "AP-DV.1",
+      "text": "Utilise les indices visuels et sonores du message pour soutenir sa compréhension."
+     },
+     {
+      "code": "AP-DV.2",
+      "text": "Identifie le sujet et les aspects traités d'un message, oral ou écrit, illustré de quelques paragraphes dans des textes de cause à effet, problèmes-solutions, énumération ou dans les présentations d'art dramatique."
+     },
+     {
+      "code": "AP-DV.3",
+      "text": "Ressort l'intrigue, les personnages et l'ordre des évènements dans des œuvres littéraires lues ou entendues."
+     },
+     {
+      "code": "AP-DV.4",
+      "text": "Agit selon des directives multiples."
+     },
+     {
+      "code": "AP-DV.5",
+      "text": "Analyse le contenu du message pour confirmer ou nier ses connaissances antérieures, ses prédictions ou ses hypothèses, ou pour y ajouter."
+     },
+     {
+      "code": "AP-DV.6",
+      "text": "Aborde le message qui lui est destiné en faisant des prédictions, émettant des hypothèses et faisant des liens avec son vécu et ses connaissances antérieures."
+     },
+     {
+      "code": "AP-DV.7",
+      "text": "Partage et clarifie sa compréhension en posant des questions, en donnant des explications et en discutant avec ses pairs."
+     },
+     {
+      "code": "AP-DV.8",
+      "text": "Démontre une compréhension de la notion de nombre (0 à 100)."
+     },
+     {
+      "code": "AP-DV.9",
+      "text": "Explore à l'aide de l'apprentissage par enquête comment les arts sont un moyen d'exprimer des idées, y compris l'expression artistique traditionnelle des Premières Nations et des Métis de la Saskatchewan."
+     },
+     {
+      "code": "AP-DV.10",
+      "text": "Démontre une compréhension de son milieu naturel et construit, y compris : explorer, comparer et décrire les caractéristiques de sa communauté y compris les services, le travail et la diversité; analyser la notion d'objets à trois dimensions, y compris le déplacement et la gestion du positionnement d'objets et l'influence de facteurs tels que la force et la friction sur le déplacement; prendre conscience des mesures de sécurité et les mettre en pratique; établir le lien entre les figures à deux dimensions et les objets à trois dimensions; développer sa compréhension d'unités de mesure à l'aide d'unités non standards; examiner la notion du cycle de vie; explorer les notions d'air, de liquide et de solide, y compris l'eau."
+     },
+     {
+      "code": "AP-DV.11",
+      "text": "Détermine les moyens utilisés pour satisfaire : ses propres besoins et désirs; les besoins de sa communauté."
+     },
+     {
+      "code": "AP-DV.12",
+      "text": "Examine les moyens de prendre soin de son corps et comprend ses responsabilités envers son corps."
+     },
+     {
+      "code": "AP-DV.13",
+      "text": "Démontre une compréhension de la notion de régularité, y compris les régularités répétitives (trois à cinq éléments) et les régularités croissantes."
+     },
+     {
+      "code": "AP-DV.14",
+      "text": "Démontre la démarche de la prise de décision dans les jeux de rôles, des représentations avec marionnettes."
+     },
+     {
+      "code": "AP-DV.15",
+      "text": "Prend conscience de sa responsabilité envers le développement durable social et environnemental, et des actions possibles."
+     },
+     {
+      "code": "AP-DV.16",
+      "text": "Démontre une compréhension de la notion d'égalité et de la notion d'inégalité à l'aide de matériel de manipulation, de diagrammes et des symboles = et ≠ (se limiter à 0 à 100)."
+     },
+     {
+      "code": "AP-DV.17",
+      "text": "Objective son processus de négociation du sens, avant, pendant et après, en énumérant les stratégies utilisées, en expliquant celles qui n'ont pas fonctionné et en indiquant des pratiques à garder ou à modifier, y compris : se référer à la structure du texte; classer; cerner son intention de lecture, d'écoute ou de visionnement face aux textes et messages et aux interactions interpersonnelles; noter ce qu'on fait quand on écoute, visionne, observe ou lit quel que soit le contexte."
+     }
+    ]
+   },
+   {
+    "name": "Générer un message et le valider pour soi et avec autrui",
+    "outcomes": [
+     {
+      "code": "AP-GV.1",
+      "text": "Décrit à l'oral, en quelques phrases simples, y compris des expressions courantes et idiomatiques, et à l'aide d'un vocabulaire et de modèles de phrases appris dans le contexte scolaire : un évènement ou une expérience personnelle; ses gouts, ses préférences et ses besoins; son environnement; ses connaissances; son apprentissage; un problème, un conflit et des pistes de solution; une partie d'une histoire collective."
+     },
+     {
+      "code": "AP-GV.2",
+      "text": "Présente oralement ou par écrit un court message préparé, y compris les poèmes, les comptines, les ritournelles, les rôles dans les scènes dramatiques et la lecture expressive d'un court texte ou message connu."
+     },
+     {
+      "code": "AP-GV.3",
+      "text": "Élabore en groupe les critères de production y compris le destinataire, l'intention, le contenu, le format, le médium, et les valide seul ou avec autrui."
+     },
+     {
+      "code": "AP-GV.4",
+      "text": "Persévère dans sa communication en prenant des risques de formulation."
+     },
+     {
+      "code": "AP-GV.5",
+      "text": "Interagit en français avec ses pairs pour le plaisir ou pour atteindre un but."
+     },
+     {
+      "code": "AP-GV.6",
+      "text": "S'assure que son message peut être compris en soignant l'articulation, le ton de voix et l'écriture."
+     },
+     {
+      "code": "AP-GV.7",
+      "text": "Contribue au travail d'équipe initié et encadré par l'enseignant."
+     },
+     {
+      "code": "AP-GV.8",
+      "text": "Approfondit et démontre, de façon concrète, imagée et symbolique et à l'aide de phrases simples, une compréhension de la notion d'addition (nombres dont les solutions ne dépassent pas 100) et de la notion de soustraction (les faits de soustraction correspondants), y compris le développement du calcul mental dont les calculs ne dépassent pas 20."
+     },
+     {
+      "code": "AP-GV.9",
+      "text": "Développe son corps, y compris la motricité fine et globale, à l'aide de stratégies pour l'amélioration : de l'endurance cardiovasculaire, de la flexibilité, de l'endurance musculaire, de la force musculaire; des habiletés locomotrices, non locomotrices et de manipulation; des mouvements rythmiques aux transitions harmonieuses."
+     },
+     {
+      "code": "AP-GV.10",
+      "text": "Varie les mouvements du corps lors de l'exécution des habiletés locomotrices, non locomotrices et de manipulation par rapport à des variables de mouvements de base, p. ex. : l'espace, l'espace général, les niveaux, les directions, les trajectoires et les portées; l'effort, tel le temps ou la vitesse, la force et la fluidité; les relations avec des objets ou avec les autres."
+     },
+     {
+      "code": "AP-GV.11",
+      "text": "Applique un répertoire de stratégies et d'habiletés axé sur la participation active à une variété d'activités physiques telles : des jeux à règles rudimentaires, jeux de coopération et jeux d'invention; des jeux de tir; des jeux et activités en milieu inhabituel."
+     },
+     {
+      "code": "AP-GV.12",
+      "text": "Objective : en discutant des éléments du processus d'expression, avant, pendant et après, avec ses pairs ou avec son enseignant; en indiquant les pratiques à garder ou à modifier."
+     }
+    ]
+   },
+   {
+    "name": "Acquérir les connaissances linguistiques et les référents socioculturels",
+    "outcomes": [
+     {
+      "code": "AP-AC.1",
+      "text": "Utilise : les indices visuels; la morphologie; la syntaxe; la segmentation de la phrase; les syllabes; la graphophonétique; la sémantique pour négocier le sens et pour s'exprimer."
+     },
+     {
+      "code": "AP-AC.2",
+      "text": "Utilise des organisateurs graphiques et textuels et des outils de référence pour négocier le sens d'un message et pour s'exprimer."
+     },
+     {
+      "code": "AP-AC.3",
+      "text": "Utilise le vocabulaire de l'interaction et celui de ses activités quotidiennes pour exprimer ses sentiments et ses émotions."
+     },
+     {
+      "code": "AP-AC.4",
+      "text": "Enrichit ses phrases simples déclaratives en démontrant un répertoire croissant de vocabulaire et d'expressions courantes ou idiomatiques."
+     },
+     {
+      "code": "AP-AC.5",
+      "text": "Utilise une représentation visuelle du message pour l'aider dans son processus de négociation de sens et d'expression."
+     },
+     {
+      "code": "AP-AC.6",
+      "text": "Se crée des modèles et des généralisations qu'il ou elle valide et ajuste pour découvrir les règles de la langue."
+     },
+     {
+      "code": "AP-AC.7",
+      "text": "Démontre que les temps des verbes véhiculent une signification d'actions, de pensées et d'évènements dans le temps présent, passé et futur."
+     },
+     {
+      "code": "AP-AC.8",
+      "text": "Identifie des auteurs, des illustrateurs et des personnages de la littérature enfantine d'expression française, et exprime ses préférences."
+     },
+     {
+      "code": "AP-AC.9",
+      "text": "Distingue et utilise les règles de communication de base, y compris le vous pluriel et le tu singulier."
+     }
+    ]
+   },
+   {
+    "name": "Se positionner grâce à ses façons de voir et d'être dans le monde",
+    "outcomes": [
+     {
+      "code": "AP-PO.1",
+      "text": "Cherche les similitudes dans le vocabulaire, les connaissances linguistiques et les conventions, ainsi que les référents culturels pour se sécuriser."
+     },
+     {
+      "code": "AP-PO.2",
+      "text": "Développe une image positive de soi et contribue à l'image positive des autres, y compris comme facette de son identité comme élève en immersion."
+     }
+    ]
+   },
+   {
+    "name": "Afficher sa francophonie",
+    "outcomes": [
+     {
+      "code": "AP-AF.1",
+      "text": "Démontre son appartenance au groupe d'immersion en s'adressant à l'autre en français dans les occasions qui se présentent."
+     },
+     {
+      "code": "AP-AF.2",
+      "text": "Choisit des activités et des ressources, humaines ou matérielles, en français lorsqu'elles sont disponibles."
+     },
+     {
+      "code": "AP-AF.3",
+      "text": "S'efforce de bien s'exprimer."
+     }
+    ]
+   },
+   {
+    "name": "Jouir intellectuellement et affectivement",
+    "outcomes": [
+     {
+      "code": "AP-J.1",
+      "text": "Lit des livres français, regarde des films et vidéoclips et chante en français pour son plaisir."
+     },
+     {
+      "code": "AP-J.2",
+      "text": "Réagit aux drôleries."
+     }
+    ],
+    "themes": [
+     "Animaux de compagnie",
+     "Ce que nous mangeons",
+     "L’amité",
+     "Les différentes sortes de textes",
+     "Les fêtes et célébrations importantes",
+     "Les messages",
+     "Les montres et les géants",
+     "Les mystères du temps"
+    ]
+   }
   ]
  },
  "3": {
@@ -981,6 +1764,148 @@
       "code": "SP3.1",
       "text": "Demonstrate understanding of first-hand data using tally marks, charts, lists, bar graphs, and line plots (abstract pictographs), through: collecting, organizing, and representing solving situational questions."
      }
+    ]
+   }
+  ],
+  "core-french": [
+   {
+    "name": "Communication Skills",
+    "outcomes": [
+     {
+      "code": "3.CS.1",
+      "text": "Demonstrate understanding of oral French messages in limited questions, statements, courtesy requests, instructions and accolades."
+     },
+     {
+      "code": "3.CS.2",
+      "text": "Provide basic information on familiar topics supported by a range of prompting as required."
+     },
+     {
+      "code": "3.CS.3",
+      "text": "Demonstrate understanding of key words and content in a series of simple, repetitive sentences supported by illustrations or photos."
+     },
+     {
+      "code": "3.CS.4",
+      "text": "Produce a simple and repetitive text on a familiar topic based on a model."
+     }
+    ]
+   },
+   {
+    "name": "General Language Strategies",
+    "outcomes": [
+     {
+      "code": "3.GL.1",
+      "text": "Use listening or viewing strategies in structured situations."
+     },
+     {
+      "code": "3.GL.2",
+      "text": "Use speaking strategies in structured situations."
+     },
+     {
+      "code": "3.GL.3",
+      "text": "Use reading strategies for short, repetitive texts in highly structured situations."
+     },
+     {
+      "code": "3.GL.4",
+      "text": "Follow modeled steps of a shortened writing process in highly structured situations."
+     }
+    ]
+   },
+   {
+    "name": "Language Knowledge",
+    "outcomes": [
+     {
+      "code": "3.LK.1",
+      "text": "Demonstrate acquisition of French language concepts related to themes, including: numbers 1-50 various question types possessive pronouns for personal items possession adjectives indicating attributes of self and others a variety of instructions or commands. knowledge of key vocabulary words and phrases linked to themes."
+     }
+    ]
+   },
+   {
+    "name": "Culture",
+    "outcomes": [
+     {
+      "code": "3.C.1",
+      "text": "Compare basic elements of Francophone, First Nations, and Métis family cultures in communities."
+     }
+    ]
+   }
+  ],
+  "immersion": [
+   {
+    "name": "Valorisation de l'apprentissage du français et appréciation culturelle",
+    "outcomes": [
+     {
+      "code": "3.VC.1",
+      "text": "Contribuer à son développement langagier en choisissant des activités et des ressources, humaines ou matérielles, en français."
+     },
+     {
+      "code": "3.VC.2",
+      "text": "Prendre conscience de son appréciation : des courts romans d'expression française présentés oralement; des textes de littérature jeunesse d'expression française, en situation de lecture personnelle."
+     },
+     {
+      "code": "3.VC.3",
+      "text": "Démontrer une sensibilité aux cultures dans son pays et ailleurs, y compris une variété des cultures francophones."
+     }
+    ]
+   },
+   {
+    "name": "Compréhension orale",
+    "outcomes": [
+     {
+      "code": "3.CO.1",
+      "text": "Dégager le sens global dans diverses communications orales, illustrées ou non, y compris : un court poème pour enfants; un discours informatif; un épisode d'un court roman jeunesse."
+     },
+     {
+      "code": "3.CO.2",
+      "text": "Utiliser divers moyens avant, pendant et après pour orienter son écoute et soutenir sa compréhension d'un message, y compris : se préparer à l'écoute; démontrer une écoute attentive; faire des prédictions; utiliser divers indices tel que le langage non verbale et les indices visuels et sonores; établir des liens entre l'information contenue dans un message et ses connaissances antérieures; réagir au message en faisant part de ses sentiments, de ses questions ou de ses opinions."
+     }
+    ]
+   },
+   {
+    "name": "Compréhension écrite",
+    "outcomes": [
+     {
+      "code": "3.CÉ.1",
+      "text": "Dégager le contenu de divers textes : le message dans une communication écrite illustrée de cause à effet, de problèmes-solutions et d'énumération; les éléments dans une histoire illustrée permettant de répondre aux questions suivantes : Qui? Où? Quand? Quoi? Comment? Pourquoi?; le sens global d'un court texte simple sans illustrations."
+     },
+     {
+      "code": "3.CÉ.2",
+      "text": "Utiliser divers moyens (stratégies, conventions linguistiques et entrées en lecture) avant, pendant et après, avec l'aide de l'enseignant ou de l'enseignante, pour : se préparer à la période de lecture silencieuse personnelle; sélectionner un texte; comprendre un message ou un texte : faire des prédictions; établir des liens entre les éléments du texte et son expérience; consulter des ouvrages de référence; appliquer ses connaissances des conventions linguistiques; réagir à un texte à caractère narratif ou poétique / ludique en faisant part de ses gouts et de ses opinions personnelles; réfléchir sur son processus de lecture."
+     }
+    ]
+   },
+   {
+    "name": "Production orale",
+    "outcomes": [
+     {
+      "code": "3.PO.1",
+      "text": "Employer le vocabulaire et les structures de phrases relatifs aux concepts et contextes abordés, en prenant des risques dans ses tentatives d'expression, pour décrire en quelques phrases simples : un évènement ou une expérience personnelle; ses gouts, ses préférences et ses besoins; ses connaissances; son apprentissage; un problème, un conflit et des pistes de solution."
+     },
+     {
+      "code": "3.PO.2",
+      "text": "Utiliser divers moyens avant, pendant et après, avec de l'aide de l'enseignant ou de l'enseignante pour planifier et produire un message oral, y compris : établir les conditions et critères de production; adapter son message à la situation; appliquer ses connaissances des conventions linguistiques; réfléchir sur sa préparation."
+     }
+    ]
+   },
+   {
+    "name": "Production écrite",
+    "outcomes": [
+     {
+      "code": "3.PÉ.1",
+      "text": "Rédiger : plusieurs phrases pour exprimer ses gouts et ses préférences, ou décrire un environnement ou un évènement; un court texte narratif dont les personnages, le lieu, le temps et la situation initiale sont présentés."
+     },
+     {
+      "code": "3.PÉ.2",
+      "text": "Se servir du processus d'écriture, avant, pendant et après, avec l'aide de l'enseignant ou de l'enseignante, pour : établir les paramètres de son projet d'écriture, y compris l'intention d'écriture, la structure et les composantes du texte; produire un message; vérifier le contenu de son message; appliquer les conventions linguistiques à son écrit; planifier la présentation finale de son projet d'écriture; réfléchir à ce qu'il ou elle a produit."
+     }
+    ],
+    "themes": [
+     "Les émotions",
+     "Ce qu'on fait pour célébrer",
+     "La vie dans le bon vieux temps",
+     "Les romans",
+     "La poésie",
+     "La musique",
+     "Les plantes"
     ]
    }
   ]
@@ -1266,6 +2191,150 @@
       "code": "SP4.1",
       "text": "Demonstrate an understanding of many-to-one correspondence by: comparing correspondences on graphs justifying the use of many-to-one correspondences interpreting data shown using a many-to-one correspondence creating bar graphs and pictographs using many-to-one correspondence."
      }
+    ]
+   }
+  ],
+  "core-french": [
+   {
+    "name": "Communication Skills",
+    "outcomes": [
+     {
+      "code": "4.CS.1",
+      "text": "Demonstrate understanding of oral French messages in a variety of single sentence statements, questions, courtesy requests, and instructions."
+     },
+     {
+      "code": "4.CS.2",
+      "text": "Provide a variety of information through oral expression supported by occasional prompting."
+     },
+     {
+      "code": "4.CS.3",
+      "text": "Demonstrate understanding of the main idea and some details of a simple French expository or procedural text on a familiar topic."
+     },
+     {
+      "code": "4.CS.4",
+      "text": "Produce a short and simple French text on a familiar topic based on a model."
+     }
+    ]
+   },
+   {
+    "name": "General Language Strategies",
+    "outcomes": [
+     {
+      "code": "4.GL.1",
+      "text": "Use listening or viewing strategies in semi-structured situations."
+     },
+     {
+      "code": "4.GL.2",
+      "text": "Use speaking strategies in semi-structured situations."
+     },
+     {
+      "code": "4.GL.3",
+      "text": "Use reading strategies for short texts in semi-structured situations."
+     },
+     {
+      "code": "4.GL.4",
+      "text": "Implement steps of a shortened writing process in structured situations."
+     }
+    ]
+   },
+   {
+    "name": "Language Knowledge",
+    "outcomes": [
+     {
+      "code": "4.LK.1",
+      "text": "Demonstrate acquisition of French language concepts related to themes, including: numbers 1-69 statements and imperative sentences a range of – er verbs and selected – re and – ir verbs adjectives prepositions of location differences between various question types knowledge of key vocabulary words and phrases."
+     }
+    ]
+   },
+   {
+    "name": "Culture",
+    "outcomes": [
+     {
+      "code": "4.C.1",
+      "text": "Compare elements of Francophone, First Nations and Métis cultures in Saskatchewan."
+     }
+    ]
+   }
+  ],
+  "immersion": [
+   {
+    "name": "Valorisation de l'apprentissage du français et appréciation culturelle",
+    "outcomes": [
+     {
+      "code": "4.VC.1",
+      "text": "Contribuer à son développement langagier et à celui des autres en partageant ses expériences ou en offrant une rétroaction en français."
+     },
+     {
+      "code": "4.VC.2",
+      "text": "Prendre conscience de son appréciation : des chansons pour enfants, de la francophonie canadienne et mondiale; de la presse d'expression française pour enfants, en situation de lecture personnelle."
+     },
+     {
+      "code": "4.VC.3",
+      "text": "Examiner les modes de vie, l'expérience, les valeurs, les conventions et les référents culturels de sa culture et ceux d'autres cultures."
+     }
+    ]
+   },
+   {
+    "name": "Compréhension orale",
+    "outcomes": [
+     {
+      "code": "4.CO.1",
+      "text": "Dégager divers éléments dans des communications orales : les jeux de sonorité de la répétition et de la rime dans la chanson pour enfants; l'information recherchée dans un discours; les éléments permettant de répondre aux questions : Qui? Où? Quand? Quoi? Comment? et Pourquoi? dans une histoire entendue, une pièce de théâtre ou un film."
+     },
+     {
+      "code": "4.CO.2",
+      "text": "Utiliser divers moyens avant, pendant et après pour orienter son écoute et soutenir sa compréhension d'un message, y compris : préciser son intention d'écoute; démontrer une écoute attentive; faire des prédictions tout au long de l'écoute; utiliser des indices donnés par le locuteur pour soutenir sa compréhension; établir des liens entre l'information contenue dans un message, ses connaissances antérieures et ses expériences personnelles; réagir à la communication orale en faisant part de ses sentiments, de ses interrogations et de ses opinions."
+     }
+    ]
+   },
+   {
+    "name": "Compréhension écrite",
+    "outcomes": [
+     {
+      "code": "4.CÉ.1",
+      "text": "Dégager le contenu de divers types de textes : le sens global d'un poème ou d'une chanson; l'information recherchée dans un texte courant, tel qu' : un texte informatif de quelques paragraphes; une annonce publicitaire; un problème en mathématiques; les actions et les caractéristiques des personnages d'une histoire."
+     },
+     {
+      "code": "4.CÉ.2",
+      "text": "Utiliser divers moyens (stratégies, conventions linguistiques et entrées en lecture) avant, pendant et après pour : préciser son intention de lecture; identifier une ressource répondant à ses besoins de lecture, en utilisant des indices tels que sujet, présentation et niveau de difficulté; comprendre un message ou un texte : faire des prédictions; établir des liens entre l'information du texte et ses connaissances antérieures; se servir d'organisateurs graphiques; consulter divers ouvrages de référence; appliquer ses connaissances des conventions linguistiques; réagir de façon authentique au texte en faisant part de ses opinions, de ses sentiments et de ses interrogations; réfléchir sur ses stratégies de lecture."
+     }
+    ]
+   },
+   {
+    "name": "Production orale",
+    "outcomes": [
+     {
+      "code": "4.PO.1",
+      "text": "Employer le vocabulaire, les structures de phrases et une variété d'expressions idiomatiques convenant au contexte pour s'exprimer en situation interactive ou non interactive : exprimer ses gouts, ses sentiments et ses opinions; expliquer la résolution d'un problème; expliquer des directives; participer à la présentation d'une saynète."
+     },
+     {
+      "code": "4.PO.2",
+      "text": "Recourir à divers moyens avant, pendant et après pour planifier et produire un message oral, y compris : préciser son intention de communication; appliquer ses connaissances de la langue et des conventions linguistiques; prévoir et utiliser les outils pour appuyer sa présentation; établir et maintenir le contact avec le public; ajuster le débit de parole et le volume selon les consignes de l'enseignant ou de l'enseignante; réfléchir sur sa présentation orale."
+     }
+    ]
+   },
+   {
+    "name": "Production écrite",
+    "outcomes": [
+     {
+      "code": "4.PÉ.1",
+      "text": "Composer des textes courants et littéraires, y compris : un court texte courant dans lequel il ou elle développe un aspect du sujet choisi, et dont le format est respecté; un court récit dont les personnages et leurs actions sont décrits."
+     },
+     {
+      "code": "4.PÉ.2",
+      "text": "Se servir du processus d'écriture avant, pendant et après, pour : planifier son projet d'écriture et sa présentation finale, selon des intentions d'écriture variées; produire son message, selon son niveau d'apprentissage; vérifier le contenu de son message; appliquer les conventions linguistiques à son écrit; réfléchir à ce qu'il ou elle a produit."
+     }
+    ],
+    "themes": [
+     "Les talents et les intérêts",
+     "Les habits",
+     "Les fêtes et les célébrations",
+     "Qu'est-ce que la diversité culturelle et le multiculturalisme au Canada?",
+     "La nourriture",
+     "La lecture",
+     "Les langues",
+     "Les roches et les minéraux",
+     "La lumière"
     ]
    }
   ]
@@ -1555,6 +2624,150 @@
       "code": "SP5.3",
       "text": "Describe, compare, predict, and test the likelihood of outcomes in probability situations."
      }
+    ]
+   }
+  ],
+  "core-french": [
+   {
+    "name": "Communication Skills",
+    "outcomes": [
+     {
+      "code": "5.CS.1",
+      "text": "Demonstrate understanding of oral French messages in a variety of simple multi-sentence statements, requests, instructions and questions."
+     },
+     {
+      "code": "5.CS.2",
+      "text": "Exchange a variety of information on familiar topics through oral expression supported by occasional prompting."
+     },
+     {
+      "code": "5.CS.3",
+      "text": "Demonstrate understanding of the main idea and many isolated details of French expository, procedural or persuasive texts on familiar topics."
+     },
+     {
+      "code": "5.CS.4",
+      "text": "Produce various types of short texts in French on familiar topics in a structured and modeled fashion."
+     }
+    ]
+   },
+   {
+    "name": "General Language Strategies",
+    "outcomes": [
+     {
+      "code": "5.GL.1",
+      "text": "Use listening or viewing strategies in guided situations."
+     },
+     {
+      "code": "5.GL.2",
+      "text": "Use speaking strategies for an oral presentation in guided situations."
+     },
+     {
+      "code": "5.GL.3",
+      "text": "Use reading strategies for familiar French texts in guided situations."
+     },
+     {
+      "code": "5.GL.4",
+      "text": "Implement stages of the writing process in semi-structured situations."
+     }
+    ]
+   },
+   {
+    "name": "Language Knowledge",
+    "outcomes": [
+     {
+      "code": "5.LK.1",
+      "text": "Demonstrate acquisition of French language concepts related to themes, including: numbers to 100 a range of regular –er verbs some irregular verbs prepositions partitive articles agreements for adjectives pronouns in place of nouns affirmative and negative sentence constructions possessive pronouns plural form of nouns imperative tense of common verbs simple complete sentences and questions knowledge of key vocabulary words and phrases linked to themes"
+     }
+    ]
+   },
+   {
+    "name": "Culture",
+    "outcomes": [
+     {
+      "code": "5.C.1",
+      "text": "Compare elements of Francophone, First Nations, and Métis cultures in Canada."
+     }
+    ]
+   }
+  ],
+  "immersion": [
+   {
+    "name": "Valorisation de l'apprentissage du français et appréciation culturelle",
+    "outcomes": [
+     {
+      "code": "5.VC.1",
+      "text": "Contribuer à son développement langagier en faisant preuve d'initiative et de créativité et en témoignant d'un intérêt soutenu pour la qualité de ses projets d'apprentissage."
+     },
+     {
+      "code": "5.VC.2",
+      "text": "Prendre conscience de son appréciation : des romans présentés oralement, des vidéos, des films ou des pièces de théâtre d'expression française destinés aux enfants; des courts romans d'expression française, en situation de lecture personnelle."
+     },
+     {
+      "code": "5.VC.3",
+      "text": "Examiner des éléments des cultures canadiennes-françaises, métisses et des Premières Nations, tels que : les personnages et leurs contributions dans des domaines variés; les évènements historiques; les représentations culturelles."
+     }
+    ]
+   },
+   {
+    "name": "Compréhension orale",
+    "outcomes": [
+     {
+      "code": "5.CO.1",
+      "text": "Dégager le sujet et les idées principales d'une communication orale : agir selon des directives présentées en plusieurs étapes; dégager l'idée principale d'un discours; ressortir les composantes de la structure narrative, y compris la situation initiale, l'élément déclencheur, les péripéties et la situation finale, dans un film, une pièce de théâtre ou une histoire entendue."
+     },
+     {
+      "code": "5.CO.2",
+      "text": "Utiliser divers moyens avant, pendant et après pour orienter son écoute et soutenir sa compréhension d'un message, y compris : démontrer une compréhension des facteurs qui influencent la situation d'écoute, y compris en langue seconde; recourir à différents moyens de faire des prédictions sur le contenu au long de l'écoute; recourir à divers moyens pour vérifier sa compréhension au long de l'écoute; justifier sa réaction à une communication orale en faisant part de ses sentiments, de ses interrogations et de ses opinions; réfléchir sur son emploi des stratégies en compréhension orale."
+     }
+    ]
+   },
+   {
+    "name": "Compréhension écrite",
+    "outcomes": [
+     {
+      "code": "5.CÉ.1",
+      "text": "Dégager le contenu de divers types de textes : les idées principales d'un texte courant de plusieurs paragraphes quand elles sont explicites; les composantes de la structure narrative : situation initiale; élément déclencheur; péripéties; situation finale."
+     },
+     {
+      "code": "5.CÉ.2",
+      "text": "Utiliser divers moyens (stratégies, conventions linguistiques et entrées en lecture) avant, pendant et après pour : sélectionner une ressource correspondant à ses habiletés et à son intention de lecture; comprendre le message dans des textes écrits courants et littéraires : faire des prédictions à partir de diverses caractéristiques de textes dans les divers domaines d'étude; établir des liens entre son vécu et ses connaissances et l'information dans le texte; se questionner sur ce qu'il ou elle lit; appliquer ses connaissances de la langue et des conventions linguistiques; justifier sa réaction aux textes en faisant part de ses opinions, de ses sentiments et de ses interrogations; réfléchir sur son processus et ses stratégies de lecture."
+     }
+    ]
+   },
+   {
+    "name": "Production orale",
+    "outcomes": [
+     {
+      "code": "5.PO.1",
+      "text": "Employer le vocabulaire, les structures de phrases et les expressions idiomatiques convenant au contexte pour s'exprimer en situation interactive ou non interactive : raconter une histoire en réaction à une situation proposée; participer à la réalisation d'un projet de groupe à présenter à l'oral."
+     },
+     {
+      "code": "5.PO.2",
+      "text": "Recourir à divers moyens avant, pendant et après pour planifier et produire un message oral, y compris : participer à des discussions de groupe pour réaliser un projet; sélectionner le contenu de son message et les outils d'appui en fonction de son intention de communication; appliquer ses connaissances de la langue et des conventions linguistiques; établir et maintenir le contact avec le public; clarifier son message; réfléchir sur sa communication orale et sur sa démarche."
+     }
+    ]
+   },
+   {
+    "name": "Production écrite",
+    "outcomes": [
+     {
+      "code": "5.PÉ.1",
+      "text": "Composer des textes courants et littéraires de quelques paragraphes, y compris : un texte courant dans lequel il ou elle exprime ses sentiments, ses intérêts et ses opinions, et en donne des raisons; un texte courant dont le sujet est établi dans l'introduction et développé en paragraphes; un texte courant qui présente des directives ou explique une procédure simple; un récit présentant les composantes de la structure narrative : situation initiale, élément déclencheur, péripéties et situation finale."
+     },
+     {
+      "code": "5.PÉ.2",
+      "text": "Se servir de toutes les étapes du processus d'écriture avant, pendant et après, pour : planifier son projet d'écriture et sa présentation finale, selon des intentions d'écriture variées; écrire avec précision, selon son niveau d'apprentissage; vérifier le contenu de son message; appliquer les conventions linguistiques à son écrit; réfléchir à ce qu'il a écrit et à son processus d'écriture."
+     }
+    ],
+    "themes": [
+     "La paix et l'entraide",
+     "Les fêtes et les célébrations",
+     "Les instruments de percussion",
+     "Le théâtre",
+     "Les genres historiques",
+     "Le bilinguisme",
+     "Fait ou fiction?",
+     "Les technologies de la communication",
+     "Le temps"
     ]
    }
   ]
@@ -1906,6 +3119,151 @@
      }
     ]
    }
+  ],
+  "core-french": [
+   {
+    "name": "Communication Skills",
+    "outcomes": [
+     {
+      "code": "6.CS.1",
+      "text": "Demonstrate understanding of the main idea of oral French multi-sentence presentations on a variety of familiar topics in structured situations."
+     },
+     {
+      "code": "6.CS.2",
+      "text": "Discuss a variety of information on familiar topics through modeled oral expression in highly structured situations."
+     },
+     {
+      "code": "6.CS.3",
+      "text": "Demonstrate understanding of the main idea and general details in illustrated 70 - 100 word expository, procedural, persuasive and narrative texts."
+     },
+     {
+      "code": "6.CS.4",
+      "text": "Produce a 50 - 60 word expository, narrative, or procedural paragraph or short script in French based on a combination of models."
+     }
+    ]
+   },
+   {
+    "name": "General Language Strategies",
+    "outcomes": [
+     {
+      "code": "6.GL.1",
+      "text": "Use listening or viewing strategies in semi-guided situations (see page 7), such as: asking and answering questions making predictions verifying comprehension making connections visualizing summarizing synthesizing analyzing and evaluating"
+     },
+     {
+      "code": "6.GL.2",
+      "text": "Use speaking strategies in semi-guided situations (see page 7), such as: modeled language shared practice guided practice independent practice"
+     },
+     {
+      "code": "6.GL.3",
+      "text": "Use reading strategies in guided situations. (see page 27 for strategies)"
+     },
+     {
+      "code": "6.GL.4",
+      "text": "Implement stages of the writing process in guided situations, including: idea generation, drafting, editing, and publishing."
+     }
+    ]
+   },
+   {
+    "name": "Language Knowledge",
+    "outcomes": [
+     {
+      "code": "6.LK.1",
+      "text": "Demonstrate acquisition of French language concepts related to themes, including: numbers to 1 000 ordinal numbers theme-related present tense regular –er verbs, singular and plural forms theme-related present tense irregular –er verbs, singular and plural forms placement and agreement of common adjectives prepositions (à la, au, aux, du, de la) with the verbs jouer and faire."
+     }
+    ]
+   },
+   {
+    "name": "Culture",
+    "outcomes": [
+     {
+      "code": "6.C.1",
+      "text": "Relate the influence and contributions of French, First Nations, and Métis languages and cultures to place names, and lifestyles."
+     }
+    ]
+   }
+  ],
+  "immersion": [
+   {
+    "name": "Valorisation de l'apprentissage du français et appréciation culturelle",
+    "outcomes": [
+     {
+      "code": "6.VC.1",
+      "text": "S'approprier son apprentissage de la langue française."
+     },
+     {
+      "code": "6.VC.2",
+      "text": "Démontrer une ouverture d'esprit aux communications d'expression française destinées aux jeunes, y compris : des textes et messages de littérature jeunesse en situation de lecture ou de visionnement personnel; des textes et messages présentés oralement, y compris des romans et des pièces de théâtre."
+     },
+     {
+      "code": "6.VC.3",
+      "text": "Accueillir la diversité dans sa relation avec les autres."
+     }
+    ]
+   },
+   {
+    "name": "Compréhension orale",
+    "outcomes": [
+     {
+      "code": "6.CO.1",
+      "text": "Dégager le sujet, les idées et les éléments caractéristiques de diverses communications orales, y compris : les grandes idées énoncées lors d'une situation interactive; les directives dans un message injonctif qui comportent plusieurs étapes; les éléments d'un discours narratif; les liens entre les différents évènements de l'intrigue dans un discours narratif."
+     },
+     {
+      "code": "6.CO.2",
+      "text": "Sélectionner divers moyens avant, pendant et après pour vérifier et soutenir sa compréhension d'un message oral : établir son intention d'écoute en faisant appel à ses connaissances antérieures; recourir à divers moyens pour retenir l'information au long de l'écoute; recourir à différents moyens pour reconnaitre un bris de compréhension, en identifier la cause et corriger la situation; réagir au discours en établissant des liens entre certains éléments du message et son expérience personnelle; discuter de certaines techniques utilisées par le locuteur ou la locutrice pour appuyer la transmission de son message; réfléchir sur l'efficacité de son emploi des stratégies en compréhension orale."
+     }
+    ]
+   },
+   {
+    "name": "Compréhension écrite",
+    "outcomes": [
+     {
+      "code": "6.CÉ.1",
+      "text": "Dégager le sujet, les idées et les éléments caractéristiques de divers textes courants et littéraires d'origine francophone, y compris : les idées principales et les idées secondaires d'un texte informatif; les directives dans un texte injonctif qui comportent plusieurs étapes; les liens entre l'intrigue et les sentiments et les actions des personnages dans un texte narratif; les formes et les techniques employées dans des textes poétiques."
+     },
+     {
+      "code": "6.CÉ.2",
+      "text": "Utiliser divers moyens (stratégies, conventions linguistiques et entrées en lecture) avant, pendant et après pour : sélectionner une variété de textes correspondant à ses habiletés et à son intention de lecture; comprendre le message de divers textes d'origine francophone : faire des prédictions en fonction de la structure du texte; trier l'information essentielle du texte; faire appel à ses connaissances antérieures du contenu du texte; utiliser une variété de sources de référence; appliquer ses connaissances de la langue et des conventions linguistiques; réagir à une histoire en établissant des liens avec son expérience personnelle; réfléchir sur ses compétences de lecteur ou de lectrice."
+     }
+    ]
+   },
+   {
+    "name": "Production orale",
+    "outcomes": [
+     {
+      "code": "6.PO.1",
+      "text": "Employer à l'oral le vocabulaire, les structures de phrases et les expressions idiomatiques, techniques et proverbiales convenant à divers concepts et contextes : improviser en répondant à une situation proposée; partager clairement de l'information, des idées ou des évènements (réels ou fictifs), en respectant l'ordre logique ou chronologique."
+     },
+     {
+      "code": "6.PO.2",
+      "text": "Mettre en pratique systématiquement divers moyens avant, pendant et après pour produire clairement un message oral, spontané ou préparé, y compris : organiser le contenu pertinent à son intention de communication; intégrer ses connaissances de la langue française et des conventions linguistiques; utiliser les indices non verbaux pour appuyer son message et divers moyens pour communiquer clairement ses idées; réfléchir sur sa production orale."
+     }
+    ]
+   },
+   {
+    "name": "Production écrite",
+    "outcomes": [
+     {
+      "code": "6.PÉ.1",
+      "text": "Rédiger divers textes courants et littéraires, y compris : un texte informatif simple dans lequel chaque paragraphe présente une idée principale soutenue par des idées secondaires; un récit narratif comportant plus d'un évènement qui constituent l'intrigue; un texte poétique."
+     },
+     {
+      "code": "6.PÉ.2",
+      "text": "Se servir du processus d'écriture avant, pendant et après, pour écrire des textes variés clairement : organiser le contenu en fonction de son intention de communication; rédiger un texte courant ou littéraire; recourir à divers moyens pour vérifier le contenu de son message; intégrer ses connaissances de la langue française et des conventions linguistiques à son écrit; réfléchir sur sa production écrite, y compris l'efficacité de sa planification."
+     }
+    ],
+    "themes": [
+     "Moi et mon avenir",
+     "Les héros et les héroïnes",
+     "La langue et l'identité",
+     "La responsabilité globale",
+     "Le roman",
+     "Les personnages",
+     "L'art de conter",
+     "Recevoir et envoyer des messages",
+     "Les ressources naturelles",
+     "Le vol"
+    ]
+   }
   ]
  },
  "7": {
@@ -2239,6 +3597,151 @@
      }
     ]
    }
+  ],
+  "core-french": [
+   {
+    "name": "Communication Skills",
+    "outcomes": [
+     {
+      "code": "7.CS.1",
+      "text": "Demonstrate understanding of the main idea of oral French multi-sentence presentations on a variety of familiar topics in semi-structured situations."
+     },
+     {
+      "code": "7.CS.2",
+      "text": "Discuss a variety of information on familiar topics through modeled oral expression in structured situations."
+     },
+     {
+      "code": "7.CS.3",
+      "text": "Demonstrate understanding of the main idea and supporting details in illustrated 100 - 120 word, two-paragraph expository, procedural, persuasive and narrative text."
+     },
+     {
+      "code": "7.CS.4",
+      "text": "Produce 60 - 80 word expository, narrative, or procedural two- paragraph texts or scripts in French based on a combination of models."
+     }
+    ]
+   },
+   {
+    "name": "General Language Strategies",
+    "outcomes": [
+     {
+      "code": "7.GL.1",
+      "text": "Select listening or viewing strategies in highly structured situations, such as: asking and answering questions making predictions verifying comprehension making connections visualizing summarizing synthesizing analyzing and evaluating"
+     },
+     {
+      "code": "7.GL.2",
+      "text": "Select speaking strategies in highly structured situations, such as: modeled language shared practice guided practice independent practice"
+     },
+     {
+      "code": "7.GL.3",
+      "text": "Use reading strategies in semi-guided situations. (see 7.GL.1 for strategies)"
+     },
+     {
+      "code": "7.GL.4",
+      "text": "Implement stages of the writing process in semi-guided situations, including: idea generation, drafting, editing, and publishing."
+     }
+    ]
+   },
+   {
+    "name": "Language Knowledge",
+    "outcomes": [
+     {
+      "code": "7.LK.1",
+      "text": "Demonstrate acquisition of French language concepts and vocabulary related to themes, including: numbers to 10 000 theme-related present tense regular –ir verbs, (singular and plural forms) theme-related present tense irregular –ir verbs, (singular and plural forms) immediate future tense verbs, (singular and plural forms) prepositions relating to provinces and selected countries common adverbs onomatopoeic expressions verb devoir and pouvoir with infinitive verbs commands and instructions in the second person plural question transformations conjunctions comparative qualifiers French monetary representations."
+     }
+    ]
+   },
+   {
+    "name": "Culture",
+    "outcomes": [
+     {
+      "code": "7.C.1",
+      "text": "Relate the influence and contributions of Francophone, First Nations, and Métis languages and cultures to Canadian legends and stories."
+     }
+    ]
+   }
+  ],
+  "immersion": [
+   {
+    "name": "Valorisation de l'apprentissage du français et appréciation culturelle",
+    "outcomes": [
+     {
+      "code": "7.VC.1",
+      "text": "S'engager dans son processus d'apprentissage de la langue française dans une variété de situations sociolinguistiques."
+     },
+     {
+      "code": "7.VC.2",
+      "text": "Démontrer une ouverture d'esprit aux communications d'expression française destinées aux adolescents et adolescentes, y compris : romans jeunesse et albums pour adolescents; pièces de théâtre, vidéoclips ou films."
+     },
+     {
+      "code": "7.VC.3",
+      "text": "Respecter la diversité dans sa relation avec les autres."
+     }
+    ]
+   },
+   {
+    "name": "Compréhension orale",
+    "outcomes": [
+     {
+      "code": "7.CO.1",
+      "text": "Dégager le sujet, les idées et les éléments caractéristiques de diverses communications orales, y compris : les idées principales explicites et les idées secondaires d'un discours informatif; les éléments d'un message argumentatif qui peuvent influencer sa façon de penser ou son comportement; la dynamique des personnages dans un discours narratif et son impact sur le déroulement de l'histoire."
+     },
+     {
+      "code": "7.CO.2",
+      "text": "Sélectionner divers moyens avant, pendant et après pour soutenir sa compréhension d'un message oral: déterminer son intention d'écoute en faisant des prédictions; choisir différentes stratégies pour soutenir et vérifier sa compréhension au long de l'écoute; justifier sa réaction à une communication orale en faisant part de ses gouts, de ses opinions et de ses expériences personnelles; évaluer l'efficacité de certaines techniques de transmission d'un message; faire une objectivation de ses pratiques d'écoute."
+     }
+    ]
+   },
+   {
+    "name": "Compréhension écrite",
+    "outcomes": [
+     {
+      "code": "7.CÉ.1",
+      "text": "Dégager le sujet, les idées et les éléments caractéristiques de divers textes courants et littéraires d'origine francophone, y compris : les causes et effets ou les problèmes et solutions dans un texte informatif ou explicatif; les éléments d'un texte argumentatif, qui peuvent influencer sa façon de penser ou son comportement; la dynamique des personnages dans un récit narratif; le rythme et l'utilisation du vocabulaire dans des textes poétiques."
+     },
+     {
+      "code": "7.CÉ.2",
+      "text": "Utiliser une variété de moyens (stratégies, conventions linguistiques et entrées en lecture) avant, pendant et après pour : expliquer sa sélection de textes en fonction de son intention de lecture; comprendre le message de divers textes d'origine francophone : vérifier ses prédictions au long de la lecture; organiser l'information essentielle triée du texte; aire appel à ses connaissances antérieures du contenu et de la structure du texte; utiliser une variété de sources de référence; appliquer ses connaissances de la langue et des conventions linguistiques; justifier sa réaction à divers textes en faisant part de ses opinions, de ses gouts et de son vécu; évaluer ses compétences de lecteur ou de lectrice."
+     }
+    ]
+   },
+   {
+    "name": "Production orale",
+    "outcomes": [
+     {
+      "code": "7.PO.1",
+      "text": "Employer à l'oral le vocabulaire, les structures de phrases et les expressions idiomatiques, techniques et proverbiales convenant à divers concepts et contextes : raconter une histoire en faisant ressortir les éléments dramatiques d'une situation proposée; se faire comprendre dans une variété de situations et d'activités formelles ou informelles, interactives ou non interactives."
+     },
+     {
+      "code": "7.PO.2",
+      "text": "Mettre en pratique systématiquement divers moyens avant, pendant et après pour planifier et produire un message oral, spontané ou préparé, y compris : sélectionner le contenu, les structures textuelles des discours et le contenu linguistique appropriés à son intention de communication et aux intérêts et besoins du public; intégrer ses connaissances de la langue française et des conventions linguistiques; ajuster les éléments prosodiques, le contact visuel et le non-verbal avec les interlocuteurs, pour assurer la compréhension et le bon déroulement de la prise de parole ou de la discussion; faire une objectivation de sa production orale."
+     }
+    ]
+   },
+   {
+    "name": "Production écrite",
+    "outcomes": [
+     {
+      "code": "7.PÉ.1",
+      "text": "Rédiger divers textes courants et littéraires, y compris : un texte courant avec introduction, développement et conclusion; un texte argumentatif qui vise à persuader ou à inciter; un récit narratif dans lequel il ou elle établit des liens entre les sentiments des personnages et leurs actions; un texte poétique rythmique."
+     },
+     {
+      "code": "7.PÉ.2",
+      "text": "Se servir du processus d'écriture avant, pendant et après, pour écrire des textes variés clairement, et avec fluidité et précision : sélectionner le contenu et la présentation finale en fonction des intérêts et des besoins du public; rédiger un texte courant ou littéraire; recourir à une variété de moyens pour vérifier le contenu de son message; intégrer ses connaissances de la langue française et des conventions linguistiques, y compris les structures textuelles; faire une objectivation de son processus d'écriture."
+     }
+    ],
+    "themes": [
+     "Le courage",
+     "Les relations",
+     "La langue et la culture",
+     "Les enjeux historiques des francophones et des Autochtones",
+     "Le théâtre",
+     "Les auteurs",
+     "La publicité",
+     "La langue : outil de communication",
+     "La protection environnementale",
+     "Les phénomènes naturels"
+    ]
+   }
   ]
  },
  "8": {
@@ -2558,6 +4061,151 @@
       "code": "SP8.2",
       "text": "Demonstrate understanding of the probability of independent events concretely, pictorially, orally, and symbolically."
      }
+    ]
+   }
+  ],
+  "core-french": [
+   {
+    "name": "Communication Skills",
+    "outcomes": [
+     {
+      "code": "8.CS.1",
+      "text": "Demonstrate understanding of the main idea and details in oral French multi-sentence presentations on a variety of familiar topics in guided situations."
+     },
+     {
+      "code": "8.CS.2",
+      "text": "Discuss a variety of information on familiar topics through oral expression in guided situations."
+     },
+     {
+      "code": "8.CS.3",
+      "text": "Demonstrate understanding of the main idea and many supporting details in a variety of 130 - 140 word multi-paragraph expository, procedural, persuasive, and narrative texts."
+     },
+     {
+      "code": "8.CS.4",
+      "text": "Produce 80-100 word expository, narrative, or procedural multi-paragraph French texts or scripts composed of a combination of models and original student-generated text."
+     }
+    ]
+   },
+   {
+    "name": "General Language Strategies",
+    "outcomes": [
+     {
+      "code": "8.GL.1",
+      "text": "Select listening or viewing strategies in structured situations, such as: asking and answering questions making predictions verifying comprehension making connections visualizing summarizing synthesizing analyzing and evaluating"
+     },
+     {
+      "code": "8.GL.2",
+      "text": "Select speaking strategies in structured situations, such as: modeled language shared practice guided practice independent practice"
+     },
+     {
+      "code": "8.GL.3",
+      "text": "Select reading strategies in structured situations. (see 8.GL.1 for strategies)"
+     },
+     {
+      "code": "8.GL.4",
+      "text": "Implement stages of the writing process in semi-guided situations, including: idea generation, drafting, revising, editing, publishing."
+     }
+    ]
+   },
+   {
+    "name": "Language Knowledge",
+    "outcomes": [
+     {
+      "code": "8.LK.1",
+      "text": "Demonstrate acquisition of French language concepts related to themes, including: numbers to 100 000 fractional numbers present tense regular –re verbs, singular and plural forms present tense irregular –re verbs, singular and plural forms reflexive verbs, singular and plural forms, present tense passé composé of –er verbs with avoir adverbs with –ment suffix question types: intonation, inversion, interrogative pronouns transportation prepositions demonstrative adjectives."
+     }
+    ]
+   },
+   {
+    "name": "Culture",
+    "outcomes": [
+     {
+      "code": "8.C.1",
+      "text": "Compare contributions of current and past French, French Canadian, First Nations and Métis individuals and organizations to Canadian society."
+     }
+    ]
+   }
+  ],
+  "immersion": [
+   {
+    "name": "Valorisation de l'apprentissage du français et appréciation culturelle",
+    "outcomes": [
+     {
+      "code": "8.VC.1",
+      "text": "Approfondir son engagement à son apprentissage de la langue française dans une variété de situations sociolinguistiques."
+     },
+     {
+      "code": "8.VC.2",
+      "text": "Démontrer une ouverture d'esprit aux communications d'expression française pour adolescents et adolescentes, y compris : des bandes dessinées ou des courts métrages d'animation; des émissions radiophoniques, télévisées ou transmises électroniquement."
+     },
+     {
+      "code": "8.VC.3",
+      "text": "Explorer la diversité culturelle au Canada, y compris la diversité des cultures francophones, métisses et des Premières Nations."
+     }
+    ]
+   },
+   {
+    "name": "Compréhension orale",
+    "outcomes": [
+     {
+      "code": "8.CO.1",
+      "text": "Dégager le sujet, les idées et les éléments caractéristiques de diverses communications orales, y compris : la distinction entre les faits, les opinions, les hypothèses dans un discours informatif ou explicatif; le point de vue exprimé par le locuteur; certains éléments caractéristiques des œuvres poétiques, y compris le langage imagé, le rythme et les sons, et leur contribution à la transmission du message."
+     },
+     {
+      "code": "8.CO.2",
+      "text": "Sélectionner divers moyens avant, pendant et après pour soutenir sa compréhension et pour retenir l'information d'un message oral : déterminer son intention d'écoute en examinant la situation d'écoute et en établissant des hypothèses; choisir différentes stratégies en fonction de la situation d'écoute pour soutenir et vérifier sa compréhension au long de l'écoute; réagir aux éléments caractéristiques des œuvres poétiques, en exprimant ses gouts, ses sentiments ou ses opinions; faire une objectivation sur ses compétences d'écoute."
+     }
+    ]
+   },
+   {
+    "name": "Compréhension écrite",
+    "outcomes": [
+     {
+      "code": "8.CÉ.1",
+      "text": "Dégager le sujet, les idées et les éléments caractéristiques de divers textes courants et littéraires d'origine francophone, y compris : les idées principales implicites dans une variété de textes informatifs; les informations factuelles, les opinions et les hypothèses dans des textes courants; le point de vue exprimé par l'auteur, l'illustrateur ou le réalisateur; les éléments de la narration et de la description dans un texte narratif; les rôles du texte et de l'image dans un texte narratif illustré; la métaphore, la comparaison et la personnification dans des textes poétiques."
+     },
+     {
+      "code": "8.CÉ.2",
+      "text": "Utiliser une grande variété de moyens (stratégies, conventions linguistiques et entrées en lecture) avant, pendant et après pour: planifier sa lecture en fonction de ses besoins et de son intention de lecture; comprendre le message de divers textes d'origine francophone : vérifier ses prédictions au long de la lecture; faire appel à ses connaissances antérieures du contenu et de la structure du texte; utiliser diverses sources de référence; appliquer ses connaissances de la langue et des conventions linguistiques; réagir au texte à partir du point de vue exprimé par l'auteur, l'illustrateur ou le réalisateur; faire une objectivation de ses compétences de lecteur."
+     }
+    ]
+   },
+   {
+    "name": "Production orale",
+    "outcomes": [
+     {
+      "code": "8.PO.1",
+      "text": "Employer à l'oral le vocabulaire, les structures de phrases et les expressions idiomatiques, techniques et proverbiales convenant à divers concepts et contextes : présenter un problème et des solutions possibles; exprimer clairement ses idées, sentiments et expériences dans une variété de situations et d'activités formelles ou informelles, interactives ou non interactives; contribuer à des discussions de groupe de travail."
+     },
+     {
+      "code": "8.PO.2",
+      "text": "Mettre en pratique systématiquement divers moyens avant, pendant et après pour planifier et produire un message oral, spontané ou préparé, y compris : préparer sa production orale en fonction de son intention de communication; intégrer ses connaissances de la langue française et des conventions linguistiques; s'exprimer clairement et avec fluidité et précision dans des situations différentes; faire une objectivation de sa production orale."
+     }
+    ]
+   },
+   {
+    "name": "Production écrite",
+    "outcomes": [
+     {
+      "code": "8.PÉ.1",
+      "text": "Rédiger divers textes courants et littéraires, y compris : un texte courant qui présente des informations factuelles et pertinentes; un récit cohérent dans lequel il ou elle établit la dynamique entre les personnages; un texte narratif illustré dans lequel les images appuient le texte ou le texte appuie les images; des textes poétiques qui comprennent la métaphore, la comparaison et la personnification."
+     },
+     {
+      "code": "8.PÉ.2",
+      "text": "Mettre en pratique systématiquement le processus d'écriture avant, pendant et après, pour écrire des textes clairement, avec précision et variété de style, de vocabulaire et deregistre : établir des plans de travail, y compris un plan de recherche, en fonction de : son intention de communication son sujet les ressources disponibles les procédures établies la présentation finale du texte rédiger un texte courant ou littéraire; intégrer ses connaissances de la langue française et des conventions linguistiques, y compris les structures textuelles; recourir à une variété de moyens pour vérifier le contenu et la structure de son message; réfléchir sur son produit écrit et son processus d'écriture, y compris l'efficacité de son plan de recherche."
+     }
+    ],
+    "themes": [
+     "Suis-je fidèle à moi-même?",
+     "Les questions sociales",
+     "La diversité culturelle au Canada",
+     "Les communautés francophones et autochtones",
+     "La poésie",
+     "Les illustrations",
+     "Jouer avec la langue",
+     "L'importance de bien communiquer",
+     "L'eau",
+     "La vue"
     ]
    }
   ]
@@ -2971,6 +4619,151 @@
       "code": "SP9.4",
       "text": "Research and present how First Nations and Métis peoples, past and present, envision, represent, and make use of probability and statistics."
      }
+    ]
+   }
+  ],
+  "core-french": [
+   {
+    "name": "Communication Skills",
+    "outcomes": [
+     {
+      "code": "9.CS.1",
+      "text": "Demonstrate understanding of the main idea and specific details related to the main idea in oral French multi-sentence presentations on a variety of familiar topics in semi-guided situations."
+     },
+     {
+      "code": "9.CS.2",
+      "text": "Discuss a variety of information on familiar topics through oral expression in semi-guided situations."
+     },
+     {
+      "code": "9.CS.3",
+      "text": "Demonstrate understanding of the main idea and specific details in a variety of adapted or authentic 140-160 word multi-paragraph texts."
+     },
+     {
+      "code": "9.CS.4",
+      "text": "Produce a student-generated 100 - 120 word expository, narrative, procedural or persuasive multi-paragraph text or script."
+     }
+    ]
+   },
+   {
+    "name": "General Language Strategies",
+    "outcomes": [
+     {
+      "code": "9.GL.1",
+      "text": "Select listening or viewing strategies in semi-structured situations, such as: asking and answering questions making predictions verifying comprehension making connections visualizing summarizing synthesizing analyzing and evaluating"
+     },
+     {
+      "code": "9.GL.2",
+      "text": "Select speaking strategies in semi-structured situations, such as: modeled language shared practice guided practice independent practice"
+     },
+     {
+      "code": "9.GL.3",
+      "text": "Select reading strategies in semi-structured situations. (see 9.GL.1 for strategies)"
+     },
+     {
+      "code": "9.GL.4",
+      "text": "Implement stages of the writing process in guided situations, including: idea generation, drafting, editing, revising, publishing."
+     }
+    ]
+   },
+   {
+    "name": "Language Knowledge",
+    "outcomes": [
+     {
+      "code": "9.LK.1",
+      "text": "Demonstrate acquisition of French language concepts related to themes, including: numbers to 1 000 000 passé composé of regular verbs with avoir and être first person singular form of the passé composé of irregular verbs avoir, être, faire, prendre, voir, naître adjective agreement with gender and number partitive article with negation ( je n'ai pas de ) use of conjunctions que or qui, à cause de appropriate register when addressing respected people or superiors."
+     }
+    ]
+   },
+   {
+    "name": "Culture",
+    "outcomes": [
+     {
+      "code": "9.C.1",
+      "text": "Determine the effects of past and present French, French Canadian, First Nations and Métis cultures and events on contemporary and future Canadian society."
+     }
+    ]
+   }
+  ],
+  "immersion": [
+   {
+    "name": "Valorisation de l'apprentissage du français et appréciation culturelle",
+    "outcomes": [
+     {
+      "code": "9.VC.1",
+      "text": "Affirmer son engagement à son apprentissage de la langue française dans une variété de situations sociolinguistiques."
+     },
+     {
+      "code": "9.VC.2",
+      "text": "Démontrer une ouverture d'esprit aux communications d'expression française, y compris : des romans d'origine francophone pour adolescents et adolescentes; la chanson populaire canadienne-française."
+     },
+     {
+      "code": "9.VC.3",
+      "text": "Démontrer une appréciation pour la contribution à l'identité canadienne de personnages francophones, métis et des Premières Nations."
+     }
+    ]
+   },
+   {
+    "name": "Compréhension orale",
+    "outcomes": [
+     {
+      "code": "9.CO.1",
+      "text": "Dégager le sujet, les idées et les éléments caractéristiques de diverses communications orales, y compris : l'opinion ou la position exprimée par l'émetteur ou l'émettrice; certains éléments d'un discours argumentatif; certains éléments des œuvres poétiques canadiennes-françaises, y compris les messages, le rythme et les sons."
+     },
+     {
+      "code": "9.CO.2",
+      "text": "Utiliser des stratégies efficaces avant, pendant et après pour soutenir sa compréhension et pour retenir l'information d'un message oral : s'informer sur les conditions d'écoute et l'émetteur ou l'émettrice pour orienter son écoute; recourir à différentes stratégies pour tolérer l'ambigüité lors de l'écoute sans perdre le fil conducteur; réagir à certains passages d'une chanson populaire canadienne-française en exprimant ses sentiments, ses émotions et ses opinions; examiner comment les techniques et les éléments caractéristiques d'une publicité contribuent à la transmission du message; faire une objectivation sur ses compétences d'écoute en fonction du type de message oral, des conditions d'écoute ou de l'intention d'écoute."
+     }
+    ]
+   },
+   {
+    "name": "Compréhension écrite",
+    "outcomes": [
+     {
+      "code": "9.CÉ.1",
+      "text": "Dégager le sujet, les idées et les éléments caractéristiques de divers textes courants et littéraires d'origine francophone, y compris : les éléments d'un texte argumentatif qui renforcent le message; l'information et la structure dans un texte descriptif; les messages véhiculés par divers textes narratifs et les éléments particuliers à chaque type de récit; les valeurs véhiculées dans des textes poétiques canadiens-français."
+     },
+     {
+      "code": "9.CÉ.2",
+      "text": "Utiliser une gamme de moyens (stratégies, conventions linguistiques et entrées en lecture) avant, pendant et après pour : planifier sa lecture à partir des composantes textuelles; comprendre le message de divers textes d'origine francophone : proposer de nouvelles hypothèses ou prédictions; faire appel à ses connaissances antérieures; se servir d'une variété de ressources imprimées et non imprimées pour se renseigner; appliquer ses connaissances de la langue et des conventions linguistiques; réagir à la lecture aux niveaux littéral, interprétatif et critique; faire une objectivation de ses compétences de lecteur ou de lectrice."
+     }
+    ]
+   },
+   {
+    "name": "Production orale",
+    "outcomes": [
+     {
+      "code": "9.PO.1",
+      "text": "Employer le vocabulaire, les structures de phrases et les expressions idiomatiques, techniques et proverbiales convenant à divers concepts et contextes : présenter un message argumentatif qu'il ou elle a produit; exprimer clairement ses idées, sentiments et expériences dans une variété de situations et d'activités formelles ou informelles, interactives ou non interactives; faire la lecture expressive d'un texte ou d'un extrait de texte qu'il ou elle a choisi."
+     },
+     {
+      "code": "9.PO.2",
+      "text": "Mettre en pratique systématiquement divers moyens avant, pendant et après pour planifier et produire un message oral, spontané ou préparé, y compris : établir un plan de travail pour sa production orale en fonction de la situation de communication; intégrer ses connaissances de la langue française à ses apprentissages; participer oralement aux activités d'observation et d'interprétation, d'analyse et d'évaluation; faire une objectivation sur sa production orale."
+     }
+    ]
+   },
+   {
+    "name": "Production écrite",
+    "outcomes": [
+     {
+      "code": "9.PÉ.1",
+      "text": "Rédiger divers textes courants et littéraires, y compris : un texte argumentatif cohérent; un texte descriptif qui décrit une place, une personne, un évènement ou une situation; un texte narratif cohérent; des textes poétiques dont les images créées évoquent des sentiments ou des émotions."
+     },
+     {
+      "code": "9.PÉ.2",
+      "text": "Mettre en pratique systématiquement le processus d'écriture avant, pendant et après, pour écrire avec effet des textes variés clairs, précis et cohérents : établir un plan de travail pour divers sujets en tenant compte de : son intention de communication; son sujet; les ressources disponibles; l'envergure de la tâche; les procédures établies; la présentation finale du texte; rédiger un texte courant ou littéraire; intégrer ses connaissances de la langue française et des conventions linguistiques, y compris les structures textuelles; recourir à une variété de moyens pour vérifier le contenu et la structure de son message; évaluer son produit écrit et son processus d'écriture, y compris l'efficacité de son plan de travail."
+     }
+    ],
+    "themes": [
+     "Les carrières",
+     "Les transitions",
+     "La francophonie dans le monde",
+     "Passer à l'action",
+     "La poésie et la chanson",
+     "Les histoires de la tradition orale",
+     "Les variations de la langue",
+     "Les médias",
+     "L'univers",
+     "La citoyenneté numérique"
     ]
    }
   ]
