@@ -121,7 +121,7 @@ export const HELP: HelpSection[] = [
     faqs: [
       {
         q: "What does it cost?",
-        a: `The first ${TRIAL_DAYS} days are free with everything included, and no card is needed. After that the family plan is ${PRICES.month.label} or ${PRICES.year.label} (${PRICES.year.note}), in Canadian dollars, for up to ${MAX_CHILDREN} children. Taxes may be added where required.`,
+        a: `You can subscribe straight away for ${PRICES.month.label} or ${PRICES.year.label} (${PRICES.year.note}), in Canadian dollars, for up to ${MAX_CHILDREN} children. The free trial is optional: the first ${TRIAL_DAYS} days include everything, and no card is needed. Taxes may be added where required.`,
       },
       {
         q: "What stays free after the trial?",
@@ -141,7 +141,7 @@ export const HELP: HelpSection[] = [
       },
       {
         q: "What if I subscribe during the free trial?",
-        a: "You’re charged straight away, and the days left in the trial don’t carry over. If you’d like to try everything first, wait until the trial is nearly over.",
+        a: "Open Parent area → Subscribe and choose monthly or yearly. You’re charged at checkout, the paid plan starts that day, and the days left in the trial don’t carry over.",
       },
       {
         q: "Can I switch between monthly and yearly?",

@@ -3,7 +3,7 @@ import { PricingCards } from "@/components/site/Pricing";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Critter } from "@/components/Critter";
-import { SitePage } from "@/components/site/SiteChrome";
+import { SitePage, SubscribeActions } from "@/components/site/SiteChrome";
 import { coursesFor, curriculumPath, gradesWithContent } from "@/components/site/curriculum";
 import { kidPracticeSteps, provinceCoverage, regionList, subjectList } from "@/components/site/provinces";
 import { GAMES } from "@/components/play/games/types";
@@ -12,6 +12,7 @@ import { GRADE_LABEL } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, TRIAL_DAYS } from "@/lib/plan";
 import { TEACHER_SIGNUP, teacherPath } from "@/components/site/teachers";
+import { Disclosure } from "@/components/Disclosure";
 import { JsonLd, ORG_JSON_LD, SITE_URL, absolute } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -50,7 +51,7 @@ const FAQS = [
   },
   {
     q: "How much does it cost?",
-    a: `The first ${TRIAL_DAYS} days are free with everything included, no card needed. After that the family plan is ${PRICES.month.label} or ${PRICES.year.label} (CAD) for up to ${MAX_CHILDREN} children. Without a plan, the first ${FREE_UNITS_PER_COURSE} units of every subject stay free.`,
+    a: `Subscribe any time for ${PRICES.month.label} or ${PRICES.year.label} (CAD), for up to ${MAX_CHILDREN} children. The free trial is optional: the first ${TRIAL_DAYS} days include everything, with no card needed. Without a plan, the first ${FREE_UNITS_PER_COURSE} units of every subject stay free.`,
   },
   {
     q: "Are there ads or in-app purchases for kids?",
@@ -120,9 +121,7 @@ export default function Home() {
             Short, friendly lessons in math, reading, science, social studies and French that follow the curriculum, learning games your kids earn with focused practice, and parent reports that speak the same language as the report card.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link href="/play/" className="btn btn-good min-h-14 px-6 text-xl">
-              Start free for {TRIAL_DAYS} days
-            </Link>
+            <SubscribeActions trialLabel={`Start free for ${TRIAL_DAYS} days`} />
             <Link href={curriculumPath.index()} className="btn min-h-14 px-6 text-xl">
               See what&apos;s covered
             </Link>
@@ -148,7 +147,7 @@ export default function Home() {
             )}{" "}
             More provinces and states are coming.
           </p>
-          <p className="mt-3 text-sm text-ink-soft">No card needed · No ads · Works offline</p>
+          <p className="mt-3 text-sm text-ink-soft">Subscribe any time · Free trial needs no card · No ads · Works offline</p>
           <p className="mt-3 font-read text-ink-soft">
             Teacher?{" "}
             <Link href={TEACHER_SIGNUP} className="font-semibold text-[#2f6fd6] underline">
@@ -288,11 +287,11 @@ export default function Home() {
           Simple pricing for the whole family
         </h2>
         <PricingCards />
-        <div className="mt-6 flex justify-center">
-          <Link href="/play/" className="btn btn-good min-h-14 px-8 text-xl">
-            Start learning
+        <p className="mt-4 text-center">
+          <Link href="/pricing/" className="font-semibold text-[#2f6fd6] underline">
+            Pricing and billing details
           </Link>
-        </div>
+        </p>
       </section>
 
       {/* FAQ */}
@@ -302,10 +301,9 @@ export default function Home() {
         </h2>
         <div className="flex flex-col gap-2">
           {FAQS.map((f) => (
-            <details key={f.q} className="rounded-2xl border border-line bg-white p-4">
-              <summary className="cursor-pointer text-lg font-semibold">{f.q}</summary>
+            <Disclosure key={f.q} className="rounded-2xl border border-line bg-white p-4" titleClassName="text-lg font-semibold" title={f.q}>
               <p className="mt-2 font-read text-ink-soft">{f.a}</p>
-            </details>
+            </Disclosure>
           ))}
         </div>
       </section>

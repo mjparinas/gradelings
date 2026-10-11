@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState, type ReactNode } from "react";
-import { APP_NAME } from "@/lib/brand";
+import { useEffect, useState, useSyncExternalStore, type ReactNode } from "react";
+import { APP_NAME, SITE_HOST } from "@/lib/brand";
 import { refreshAccount, type BillingInfo } from "@/lib/account";
-import { isPremium, trialDaysLeft } from "@/lib/plan";
+import { hasPaidPlan, isPremium, trialDaysLeft } from "@/lib/plan";
 import { useRoute } from "@/lib/router";
 import { useProfiles, useReady, useStore } from "@/lib/store";
 import { startBackgroundSync, syncNow } from "@/lib/sync";
+import { isAndroidApp } from "@/lib/twa";
 import { ContentGate } from "../ContentGate";
 import { LoadingScreen } from "../ui";
 import { AccountPage } from "./Account";
@@ -20,18 +21,21 @@ import { ReportCardsPage } from "./ReportCards";
 import { ReportsPage } from "./Reports";
 import { SettingsPage } from "./Settings";
 import { SubscriptionPage } from "./Subscription";
+import { UpgradeBanner } from "./UpgradeBanner";
 
 const NAV = [
   { path: "", label: "Overview", icon: "🏠" },
+  { path: "subscription", label: "Subscription", icon: "⭐" },
   { path: "reports", label: "Reports", icon: "📈" },
   { path: "placement", label: "Placement", icon: "🧭" },
   { path: "children", label: "Children", icon: "🧒" },
   { path: "settings", label: "Settings", icon: "⚙️" },
-  { path: "subscription", label: "Subscription", icon: "⭐" },
   { path: "account", label: "Account & sync", icon: "☁️" },
   { path: "report-cards", label: "Report cards", icon: "📄" },
   { path: "privacy", label: "Privacy & data", icon: "🔐" },
 ];
+
+const noSubscribe = () => () => {};
 
 function SyncBadge() {
   const sync = useStore((s) => s.sync);
@@ -57,6 +61,9 @@ function SyncBadge() {
 function Shell({ children, active }: { children: ReactNode; active: string }) {
   const family = useStore((s) => s.family);
   const premium = isPremium(family);
+  const paid = hasPaidPlan(family);
+  const inAndroidApp = useSyncExternalStore(noSubscribe, isAndroidApp, () => false);
+  const days = trialDaysLeft(family);
   return (
     <div className="min-h-dvh bg-[#f6f5f1]">
       <header className="sticky top-0 z-30 border-b border-line bg-white/90 backdrop-blur" style={{ paddingTop: "env(safe-area-inset-top)" }}>
@@ -70,34 +77,41 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <span className={`rounded-full px-3 py-1 text-sm font-semibold ${premium ? "bg-good-soft text-good-dark" : "bg-nudge-soft text-nudge-dark"}`}>
-              {family.plan === "premium" || family.subscription?.status === "active"
-                ? "⭐ Premium"
-                : premium
-                  ? `Free trial · ${trialDaysLeft(family)} days left`
-                  : "Free plan"}
-            </span>
+            {paid ? (
+              <span className="rounded-full bg-good-soft px-3 py-1 text-sm font-semibold text-good-dark">⭐ Premium</span>
+            ) : inAndroidApp ? (
+              <span className="inline-flex min-h-11 items-center rounded-full bg-[#25b47e] px-3 text-sm font-bold text-[#0f172a]">Subscribe at {SITE_HOST}</span>
+            ) : (
+              <a href="#/subscription" className="inline-flex min-h-11 items-center rounded-full bg-[#25b47e] px-3 text-sm font-bold text-[#0f172a]">
+                {premium ? `Subscribe · ${days} ${days === 1 ? "day" : "days"} left` : "Subscribe"}
+              </a>
+            )}
             <SyncBadge />
           </div>
         </div>
         <nav className="mx-auto max-w-6xl overflow-x-auto px-2" aria-label="Parent sections">
           <ul className="flex gap-1 pb-2">
-            {NAV.map((n) => (
-              <li key={n.path}>
-                <a
-                  href={`#/${n.path}`}
-                  className={`flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-semibold whitespace-nowrap ${
-                    active === n.path ? "bg-[#253047] text-white" : "text-ink-soft hover:bg-black/5"
-                  }`}
-                >
-                  <span aria-hidden="true">{n.icon}</span> {n.label}
-                </a>
-              </li>
-            ))}
+            {NAV.map((n) => {
+              const subscribe = n.path === "subscription" && !paid && !inAndroidApp;
+              const label = subscribe ? "Subscribe" : n.label;
+              return (
+                <li key={n.path}>
+                  <a
+                    href={`#/${n.path}`}
+                    className={`flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-semibold whitespace-nowrap ${
+                      active === n.path ? "bg-[#253047] text-white" : subscribe ? "bg-good-soft text-[#0f172a]" : "text-ink-soft hover:bg-black/5"
+                    }`}
+                  >
+                    <span aria-hidden="true">{n.icon}</span> {label}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </nav>
       </header>
       <main className="mx-auto max-w-6xl px-4 py-6" style={{ paddingBottom: "max(2rem, env(safe-area-inset-bottom))" }}>
+        <UpgradeBanner />
         {children}
       </main>
     </div>

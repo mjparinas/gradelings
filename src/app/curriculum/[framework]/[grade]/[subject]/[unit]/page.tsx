@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { breadcrumbJsonLd } from "@/components/site/jsonld";
 import { SampleQuestion } from "@/components/site/SampleQuestion";
-import { Crumbs, SitePage } from "@/components/site/SiteChrome";
+import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
 import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, unitKey } from "@/components/site/curriculum";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { hashSeed, withSeed } from "@/content/random";
@@ -133,9 +133,7 @@ export default async function UnitPage({ params }: Props) {
         <aside className="card flex flex-col gap-3 p-5">
           <p className="text-lg font-bold">Practise this unit</p>
           <p className="font-read text-ink-soft">New questions every time, with hints, read-aloud and rewards. Works offline.</p>
-          <Link href="/play/" className="btn btn-good min-h-14 text-xl">
-            Play free
-          </Link>
+          <SubscribeActions trialLabel="Play free" className="w-full" />
         </aside>
       </div>
 

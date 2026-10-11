@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { changePassword, deleteAccount, forgotPassword, listDevices, signOutDevices, type DeviceSession, refreshAccount, resendVerification, signIn, signOut, signUp, type BillingInfo } from "@/lib/account";
 import * as localdb from "@/lib/localdb";
+import { go, useRoute } from "@/lib/router";
 import { useStore } from "@/lib/store";
 import { syncNow } from "@/lib/sync";
 import { Dialog } from "../ui";
@@ -237,6 +238,7 @@ function VerifyNotice() {
 export function AccountPage({ onBilling }: { onBilling: (b: BillingInfo | null) => void }) {
   const account = useStore((s) => s.family.account);
   const sync = useStore((s) => s.sync);
+  const { query } = useRoute();
   const [pending, setPending] = useState<number | null>(null);
   const [confirmDelete, setConfirmDelete] = useState(false);
   const [deletePassword, setDeletePassword] = useState("");
@@ -284,8 +286,16 @@ export function AccountPage({ onBilling }: { onBilling: (b: BillingInfo | null) 
             </div>
           </Panel>
         ) : (
-          <Panel title="Create a free account">
-            <AuthForm onDone={() => void refreshAccount().then(onBilling)} />
+          <Panel title={query.get("next") === "subscription" ? "Create an account to subscribe" : "Create a free account"}>
+            {query.get("next") === "subscription" && (
+              <p className="mb-3 font-read text-ink-soft">After this you&apos;ll pick monthly or yearly. The free trial is optional, and confirming your email lets you pay.</p>
+            )}
+            <AuthForm
+              onDone={() => {
+                void refreshAccount().then(onBilling);
+                if (query.get("next") === "subscription") go("/subscription");
+              }}
+            />
           </Panel>
         )}
         <Panel title="How offline sync works">

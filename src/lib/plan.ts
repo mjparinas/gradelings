@@ -5,7 +5,7 @@ import type { FamilyInfo } from "./model";
 
 export const TRIAL_DAYS = 30;
 export const FREE_UNITS_PER_COURSE = 2;
-export const MAX_CHILDREN = 4;
+export const MAX_CHILDREN = 3;
 
 export const PRICES = {
   month: { amount: 14.99, currency: "CAD", label: "$14.99/month" },
@@ -16,10 +16,25 @@ export type Feature = "allUnits" | "adventure" | "review" | "speed" | "challenge
 
 const ACTIVE = new Set(["active", "trialing", "past_due"]);
 
+/** Parent-area page where a family starts or manages a paid plan. Works before anyone opens the kids' app. */
+export const SUBSCRIBE_HREF = "/parents/#/subscription";
+
 export function isPremium(family: FamilyInfo, now = Date.now()): boolean {
   if (family.plan === "premium") return true;
   if (family.subscription && ACTIVE.has(family.subscription.status)) return true;
   return now < family.trialEndsAt;
+}
+
+/** A paid membership, as opposed to the free trial or the free plan. */
+export function hasPaidPlan(family: FamilyInfo): boolean {
+  if (family.plan === "premium") return true;
+  return Boolean(family.subscription && ACTIVE.has(family.subscription.status));
+}
+
+/** Who should see a subscribe prompt: families still on the trial, or already on the free plan. */
+export function upgradeOffer(family: FamilyInfo, now = Date.now()): "trial" | "free" | null {
+  if (hasPaidPlan(family)) return null;
+  return isPremium(family, now) ? "trial" : "free";
 }
 
 export function trialDaysLeft(family: FamilyInfo, now = Date.now()): number {

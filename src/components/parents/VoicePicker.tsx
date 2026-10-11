@@ -14,6 +14,8 @@ import {
   type VoiceOption,
   type VoiceQuality,
 } from "@/lib/speech";
+import { Disclosure } from "../Disclosure";
+import { SelectMenu } from "../SelectMenu";
 import { Panel } from "./common";
 import { PiperVoice } from "./PiperVoice";
 
@@ -59,8 +61,7 @@ function describe(o: VoiceOption): string {
 
 function Tips({ open }: { open: boolean }) {
   return (
-    <details open={open} className="rounded-xl bg-paper p-3 text-sm">
-      <summary className="cursor-pointer font-semibold">How to get a more natural voice</summary>
+    <Disclosure open={open} className="rounded-xl bg-paper p-3 text-sm" title="How to get a more natural voice">
       <ul className="mt-2 flex list-disc flex-col gap-1.5 pl-5 text-ink-soft">
         <li>
           <b>iPad and iPhone:</b> Settings → Accessibility → Spoken Content → Voices → English. Pick a voice and download its <i>Enhanced</i> or <i>Premium</i> version.
@@ -79,7 +80,7 @@ function Tips({ open }: { open: boolean }) {
         </li>
       </ul>
       <p className="mt-2 text-ink-soft">Then close and reopen {APP_NAME} so it can see the new voice.</p>
-    </details>
+    </Disclosure>
   );
 }
 
@@ -105,24 +106,18 @@ export function VoicePicker() {
         </>
       ) : (
         <div className="flex flex-col gap-3">
-          <label className="flex flex-col gap-1">
-            <span className="font-semibold">Device voice</span>
-            <select
-              value={preferred && options.some((o) => o.uri === preferred) ? preferred : ""}
-              onChange={(e) => {
-                stopSpeaking();
-                setVoicePreference(e.target.value || null);
-              }}
-              className="rounded-xl border-2 border-line bg-white px-3 py-2.5 text-base"
-            >
-              <option value="">Automatic: {best ? describe(best) : "best available"}</option>
-              {options.map((o) => (
-                <option key={o.uri} value={o.uri}>
-                  {describe(o)}
-                </option>
-              ))}
-            </select>
-          </label>
+          <SelectMenu
+            label="Device voice"
+            value={preferred && options.some((o) => o.uri === preferred) ? preferred : ""}
+            onChange={(next) => {
+              stopSpeaking();
+              setVoicePreference(next || null);
+            }}
+            options={[
+              { value: "", label: `Automatic: ${best ? describe(best) : "best available"}` },
+              ...options.map((o) => ({ value: o.uri, label: describe(o) })),
+            ]}
+          />
           <div className="flex flex-wrap items-center gap-3">
             <button type="button" className="rounded-xl bg-[#4f8ef7] px-4 py-2.5 font-bold text-[#0f172a]" onClick={() => previewVoice(preferred)}>
               ▶ Preview
@@ -161,24 +156,18 @@ function FrenchVoice() {
         </p>
       ) : (
         <>
-          <label className="flex flex-col gap-1">
-            <span className="font-semibold">Voice for French lessons</span>
-            <select
-              value={preferred && options.some((o) => o.uri === preferred) ? preferred : ""}
-              onChange={(e) => {
-                stopSpeaking();
-                setVoicePreference(e.target.value || null, "fr");
-              }}
-              className="rounded-xl border-2 border-line bg-white px-3 py-2.5 text-base"
-            >
-              <option value="">Automatic: {best ? describe(best) : "best available"}</option>
-              {options.map((o) => (
-                <option key={o.uri} value={o.uri}>
-                  {describe(o)}
-                </option>
-              ))}
-            </select>
-          </label>
+          <SelectMenu
+            label="Voice for French lessons"
+            value={preferred && options.some((o) => o.uri === preferred) ? preferred : ""}
+            onChange={(next) => {
+              stopSpeaking();
+              setVoicePreference(next || null, "fr");
+            }}
+            options={[
+              { value: "", label: `Automatic: ${best ? describe(best) : "best available"}` },
+              ...options.map((o) => ({ value: o.uri, label: describe(o) })),
+            ]}
+          />
           <div className="flex flex-wrap items-center gap-3">
             <button type="button" className="rounded-xl bg-[#4f8ef7] px-4 py-2.5 font-bold text-[#0f172a]" onClick={() => previewVoice(preferred, "fr")}>
               ▶ Preview French

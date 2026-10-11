@@ -6,23 +6,8 @@ import { getSubjectMeta, SUBJECTS } from "@/content/subjects";
 import type { SubjectId } from "@/content/types";
 import { defaultChildSettings, type ChildSettings } from "@/lib/model";
 import { useStore } from "@/lib/store";
-import { ChildTabs, NoChildren, PageTitle, Panel, Switch, useChild } from "./common";
+import { CheckBox, ChildTabs, NoChildren, PageTitle, Panel, Slider, Switch, useChild } from "./common";
 import { VoicePicker } from "./VoicePicker";
-
-function Slider({ label, value, min, max, step = 1, unit, onChange, help }: { label: string; value: number; min: number; max: number; step?: number; unit: string; onChange: (v: number) => void; help?: string }) {
-  return (
-    <label className="flex flex-col gap-1">
-      <span className="flex justify-between font-semibold">
-        {label}
-        <span className="tabular-nums">
-          {value} {unit}
-        </span>
-      </span>
-      <input type="range" min={min} max={max} step={step} value={value} onChange={(e) => onChange(Number(e.target.value))} className="accent-[#4f8ef7]" />
-      {help && <span className="text-sm text-ink-soft">{help}</span>}
-    </label>
-  );
-}
 
 export function SettingsPage({ childId }: { childId?: string }) {
   const child = useChild(childId);
@@ -104,10 +89,9 @@ export function SettingsPage({ childId }: { childId?: string }) {
           <p className="mb-3 text-sm text-ink-soft">Choose what shows up in lessons, Adventure and the Daily Challenge.</p>
           <div className="grid grid-cols-2 gap-2">
             {SUBJECTS.filter((sub) => getFramework(child.framework).subjects.includes(sub.id)).map((sub) => (
-              <label key={sub.id} className="flex items-center gap-2 rounded-xl bg-paper px-3 py-2 font-semibold">
-                <input type="checkbox" checked={s.enabledSubjects.includes(sub.id)} onChange={() => toggleSubject(sub.id)} className="h-5 w-5 accent-[#4f8ef7]" />
+              <CheckBox key={sub.id} checked={s.enabledSubjects.includes(sub.id)} onChange={() => toggleSubject(sub.id)}>
                 {getSubjectMeta(sub.id).emoji} {sub.title.big}
-              </label>
+              </CheckBox>
             ))}
           </div>
         </Panel>

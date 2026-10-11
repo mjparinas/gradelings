@@ -20,7 +20,8 @@ import { useNow } from "@/lib/useNow";
 import { useBand } from "../band";
 import { Critter, SpeechBubble, getCritter } from "../Critter";
 import { Companion } from "./Companion";
-import { Dialog, Page, ProgressBar } from "../ui";
+import { MembershipLock } from "./MembershipLock";
+import { Page, ProgressBar } from "../ui";
 import { GoalChip } from "./GoalPicker";
 import { Hud } from "./Hud";
 import { BuddyButton, MooseVisitor } from "./Secrets";
@@ -360,15 +361,7 @@ export function Hub() {
 
       <MooseVisitor />
 
-      <Dialog open={locked} title="Ask a grown-up" onClose={() => setLocked(false)}>
-        <div className="mb-4 flex justify-center">
-          <Companion mood="think" size={110} />
-        </div>
-        <p className="mb-5 font-read text-lg text-ink-soft">This part opens with a family membership. A grown-up can turn it on in the grown-ups area.</p>
-        <button type="button" className="btn btn-good min-h-14 w-full text-xl" onClick={() => setLocked(false)}>
-          OK
-        </button>
-      </Dialog>
+      <MembershipLock open={locked} onClose={() => setLocked(false)} />
     </Page>
   );
 }

@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { Critter } from "@/components/Critter";
 import { ReportCardGuide } from "@/components/ReportCardGuide";
 import { breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
-import { Crumbs, SitePage } from "@/components/site/SiteChrome";
+import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
 import { curriculumPath, frameworkBySlug } from "@/components/site/curriculum";
 import { guidePath } from "@/components/site/guides";
 import { guidesFor } from "@/content/guides";
@@ -47,9 +47,7 @@ export default async function ReportCardsPage({ params }: PageProps<"/report-car
             <p className="font-read text-ink-soft">
               {APP_NAME} tracks every unit on the same four levels, so you know exactly which skills are Proficient and which need a little more practice before the next report card.
             </p>
-            <Link href="/play/" className="btn btn-good min-h-14 w-full text-xl">
-              Try it free
-            </Link>
+            <SubscribeActions className="w-full" />
             <Link href={curriculumPath.framework(f)} className="font-semibold text-[#2f6fd6] underline">
               Browse the {f.curriculumName}
             </Link>

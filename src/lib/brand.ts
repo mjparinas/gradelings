@@ -7,6 +7,8 @@ export const MASCOT_NAME = "Ollie";
 // Used by the privacy policy and terms. Replace both before launch (see docs/DEPLOY.md).
 export const LEGAL_NAME = "Gradelings";
 export const CONTACT_EMAIL = "hello@gradelings.com";
+/** Hostname a parent types into a browser. The Android app names this site because it can't take payment. */
+export const SITE_HOST = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://gradelings.com").hostname.replace(/^www\./, "");
 /** Postal address shown in the legal pages and required in marketing email under CASL. Empty until set; nothing is shown while it is empty. */
 export const MAILING_ADDRESS = "";
 /** Bump when the privacy policy or terms change. */

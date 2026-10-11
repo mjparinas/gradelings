@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { canUse, FREE_UNITS_PER_COURSE, isPremium, PRICES, trialDaysLeft, unitOpen } from "./plan";
+import { canUse, FREE_UNITS_PER_COURSE, hasPaidPlan, isPremium, MAX_CHILDREN, PRICES, trialDaysLeft, unitOpen, upgradeOffer } from "./plan";
 import type { FamilyInfo } from "./model";
 
 const family = (overrides: Partial<FamilyInfo> = {}) => ({
@@ -24,12 +24,29 @@ describe("family plan access", () => {
     expect(unitOpen(trial, 10, 1)).toBe(true);
   });
 
+  it("offers a subscribe prompt during the trial and after it, and hides it once a family has paid", () => {
+    const trial = family({ plan: "trial", trialEndsAt: 10_000 });
+    expect(hasPaidPlan(trial)).toBe(false);
+    expect(upgradeOffer(trial, 1)).toBe("trial");
+    expect(upgradeOffer(trial, 10_000)).toBe("free");
+    expect(upgradeOffer(family({ plan: "free", trialEndsAt: 0 }), 1)).toBe("free");
+    for (const paid of [family({ plan: "premium" }), family({ subscription: { status: "active" } as never }), family({ subscription: { status: "trialing" } as never }), family({ subscription: { status: "past_due" } as never })]) {
+      expect(hasPaidPlan(paid)).toBe(true);
+      expect(upgradeOffer(paid, 1)).toBeNull();
+    }
+    expect(hasPaidPlan(family({ subscription: { status: "canceled" } as never }))).toBe(false);
+  });
+
   it("limits expired free plans to the first units in each course", () => {
     const expired = family({ trialEndsAt: 100 });
     expect(isPremium(expired, 100)).toBe(false);
     expect(trialDaysLeft(expired, 100)).toBe(0);
     expect(canUse(expired, "fullReports", 100)).toBe(false);
     expect([0, 1, 2, FREE_UNITS_PER_COURSE].map((index) => unitOpen(expired, index, 100))).toEqual([true, true, false, false]);
+  });
+
+  it("covers three children on one family plan", () => {
+    expect(MAX_CHILDREN).toBe(3);
   });
 
   it("charges C$14.99 a month or C$119.99 a year, saving 33%", () => {

@@ -4,8 +4,10 @@ import Link from "next/link";
 import { useCallback, useEffect, useState, type FormEvent } from "react";
 import { coursesForGrade, getUnitRef, loadGrade } from "@/content";
 import { FRAMEWORKS, getFramework } from "@/content/frameworks";
-import { GRADE_LABEL, GRADE_ORDER } from "@/content/subjects";
+import { GRADE_LABEL, GRADE_ORDER, getSubjectMeta } from "@/content/subjects";
 import type { FrameworkId, GradeId } from "@/content/types";
+import { DateField } from "@/components/DateField";
+import { SelectMenu } from "@/components/SelectMenu";
 import { APP_NAME } from "@/lib/brand";
 import { call, classInsights, type ClassSummary, type RosterEntry, type StudentRow } from "@/lib/classroom";
 import { levelInfo } from "@/lib/proficiency";
@@ -110,26 +112,8 @@ function ClassList({ onOpen }: { onOpen: (id: string) => void }) {
           Class name
           <input className="mt-1 min-h-11 rounded-xl border border-line px-3" value={name} maxLength={60} onChange={(e) => setName(e.target.value)} required />
         </label>
-        <label className="flex flex-col text-sm font-semibold">
-          Grade
-          <select className="mt-1 min-h-11 rounded-xl border border-line bg-white px-3" value={grade} onChange={(e) => setGrade(e.target.value as GradeId)}>
-            {GRADE_ORDER.map((g) => (
-              <option key={g} value={g}>
-                {GRADE_LABEL[g]}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label className="flex flex-col text-sm font-semibold">
-          Province
-          <select className="mt-1 min-h-11 rounded-xl border border-line bg-white px-3" value={framework} onChange={(e) => setFramework(e.target.value as FrameworkId)}>
-            {FRAMEWORKS.map((f) => (
-              <option key={f.id} value={f.id}>
-                {f.region}
-              </option>
-            ))}
-          </select>
-        </label>
+        <SelectMenu label="Grade" block={false} value={grade} onChange={(next) => setGrade(next as GradeId)} options={GRADE_ORDER.map((g) => ({ value: g, label: GRADE_LABEL[g] }))} />
+        <SelectMenu label="Province" block={false} value={framework} onChange={(next) => setFramework(next as FrameworkId)} options={FRAMEWORKS.map((f) => ({ value: f.id, label: f.region }))} />
         <button className={`${btn} bg-[#25b47e] text-[#0f172a]`}>Create class</button>
       </form>
       {err && (
@@ -160,6 +144,7 @@ const toInput = (t: number) => {
 function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url: string, method: string, body?: unknown) => Promise<void>; onPrint: () => void }) {
   const [names, setNames] = useState("");
   const [busy, setBusy] = useState(false);
+  const [removing, setRemoving] = useState<RosterEntry | null>(null);
   const { class: cls, roster, students } = data;
   const byProfile = new Map(students.map((s) => [s.profileId, s]));
   return (
@@ -179,13 +164,7 @@ function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url
               <button type="button" className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => onChange(`/api/classes/students/?classId=${cls.id}&studentId=${r.id}`, "PATCH")}>
                 New code
               </button>
-              <button
-                type="button"
-                className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold"
-                onClick={() => {
-                  if (window.confirm(`Remove ${byProfile.get(r.profileId)?.name ?? "this student"}? Their practice history is deleted and can’t be brought back.`)) void onChange(`/api/classes/students/?classId=${cls.id}&studentId=${r.id}`, "DELETE");
-                }}
-              >
+              <button type="button" className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => setRemoving(r)}>
                 Remove
               </button>
             </li>
@@ -220,6 +199,30 @@ function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url
       <p className="mt-2 text-sm text-ink-soft">
         Students sign in at {APP_NAME} with the class code <b className="font-mono">{cls.joinCode}</b> and their own code. Keep the cards somewhere private.
       </p>
+      {removing && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-4" role="dialog" aria-modal="true" aria-label={`Remove ${byProfile.get(removing.profileId)?.name ?? "this student"}?`} onClick={() => setRemoving(null)}>
+          <div className="w-full max-w-md rounded-3xl border-2 border-line bg-white p-6" onClick={(e) => e.stopPropagation()}>
+            <h2 className="mb-2 text-2xl font-bold">Remove {byProfile.get(removing.profileId)?.name ?? "this student"}?</h2>
+            <p className="mb-5 font-read text-ink-soft">Their practice history is deleted and can’t be brought back.</p>
+            <div className="flex flex-col gap-3">
+              <button
+                type="button"
+                className="min-h-12 rounded-xl bg-[#ff9f43] font-bold text-[#0f172a]"
+                onClick={() => {
+                  const student = removing;
+                  setRemoving(null);
+                  void onChange(`/api/classes/students/?classId=${cls.id}&studentId=${student.id}`, "DELETE");
+                }}
+              >
+                Yes, remove
+              </button>
+              <button type="button" className="min-h-12 rounded-xl border-2 border-line font-bold" onClick={() => setRemoving(null)}>
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
@@ -461,15 +464,13 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
           {assignments.map((k) => (
             <li key={k} className="flex items-center gap-2 rounded-full bg-black/5 py-1 pl-3 pr-1 font-read">
               {getUnitRef(k)?.unit.emoji} {label(k)}
-              <label className="flex items-center gap-1 text-sm text-ink-soft">
-                <span className="sr-only">Due date for {label(k)}</span>
-                <input
-                  type="date"
-                  className="min-h-9 rounded-lg border border-line bg-white px-1"
-                  value={data.due[k] ? toInput(data.due[k]) : ""}
-                  onChange={(e) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, dueAt: e.target.value ? endOfDay(e.target.value) : null })}
-                />
-              </label>
+              <DateField
+                label={`Due date for ${label(k)}`}
+                hideLabel
+                size="sm"
+                value={data.due[k] ? toInput(data.due[k]) : ""}
+                onChange={(next) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, dueAt: next ? endOfDay(next) : null })}
+              />
               <button type="button" aria-label={`Remove ${label(k)}`} className="min-h-9 min-w-9 rounded-full font-bold" onClick={() => change(`/api/classes/assignments/?classId=${id}&unitKey=${encodeURIComponent(k)}`, "DELETE")}>
                 ✕
               </button>
@@ -478,28 +479,20 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
           {assignments.length === 0 && <li className="font-read text-ink-soft">Nothing assigned yet.</li>}
         </ul>
         <div className="mt-3 flex flex-wrap items-end gap-3">
-          <label className="flex flex-col text-sm font-semibold">
-            Add a unit
-            <select className="mt-1 min-h-11 max-w-full rounded-xl border border-line bg-white px-3" value={pick} onChange={(e) => setPick(e.target.value)}>
-              <option value="">Choose a unit…</option>
-              {coursesForGrade(cls.grade, cls.framework).map((course) => (
-                <optgroup key={course.subject} label={course.subject}>
-                  {course.units.map((u) => {
-                    const key = `${course.grade}/${course.subject}/${u.id}`;
-                    return (
-                      <option key={key} value={key} disabled={assignments.includes(key)}>
-                        {u.emoji} {u.title}
-                      </option>
-                    );
-                  })}
-                </optgroup>
-              ))}
-            </select>
-          </label>
-          <label className="flex flex-col text-sm font-semibold">
-            Due (optional)
-            <input type="date" className="mt-1 min-h-11 rounded-xl border border-line bg-white px-3" value={due} onChange={(e) => setDue(e.target.value)} />
-          </label>
+          <SelectMenu
+            label="Add a unit"
+            value={pick}
+            onChange={setPick}
+            options={[{ value: "", label: "Choose a unit…" }]}
+            groups={coursesForGrade(cls.grade, cls.framework).map((course) => ({
+              label: getSubjectMeta(course.subject).title.big,
+              options: course.units.map((u) => {
+                const key = `${course.grade}/${course.subject}/${u.id}`;
+                return { value: key, label: `${u.emoji} ${u.title}`, disabled: assignments.includes(key) };
+              }),
+            }))}
+          />
+          <DateField label="Due (optional)" value={due} onChange={setDue} />
           <button
             type="button"
             disabled={!pick}

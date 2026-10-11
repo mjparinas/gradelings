@@ -226,6 +226,36 @@ describe("sync", () => {
     expect((await sync.POST(post("/api/sync/", {}))).status).toBe(401);
   });
 
+  it("stores at most three children, and a removed child frees a place", async () => {
+    const { cookie } = await newAccount("three-children@example.com");
+    const t = Date.now();
+    const child = (id: string, updatedAt: number, extra: Record<string, unknown> = {}) => ({ ...profile(id), updatedAt, ...extra });
+    const ids = ["lim-a", "lim-b", "lim-c", "lim-d"];
+    const first = await (await sync.POST(post("/api/sync/", { profiles: ids.map((id, i) => child(id, t + i)) }, cookie))).json();
+    expect(first.profiles.map((p: { id: string }) => p.id).sort()).toEqual(["lim-a", "lim-b", "lim-c"]);
+    const renamed = await (await sync.POST(post("/api/sync/", { profiles: [child("lim-a", t + 10, { name: "Ada" })] }, cookie))).json();
+    expect(renamed.profiles.find((p: { id: string }) => p.id === "lim-a").name).toBe("Ada");
+    await sync.POST(post("/api/sync/", { profiles: [child("lim-c", t + 20, { deleted: true })] }, cookie));
+    const added = await (await sync.POST(post("/api/sync/", { profiles: [child("lim-d", t + 30)] }, cookie))).json();
+    expect(added.profiles.filter((p: { deleted?: boolean }) => !p.deleted).map((p: { id: string }) => p.id).sort()).toEqual(["lim-a", "lim-b", "lim-d"]);
+  });
+
+  it("keeps children already on an account when the family is past the limit", async () => {
+    const { cookie, body } = await newAccount("already-four@example.com");
+    const familyId = body.family.account.familyId as string;
+    const t = Date.now();
+    const ids = ["keep-a", "keep-b", "keep-c", "keep-d"];
+    await dbm.batch(ids.map((id, i) => ({
+      sql: "INSERT INTO profiles (id, family_id, data, updated_at) VALUES (?, ?, ?, ?)",
+      args: [id, familyId, JSON.stringify({ ...profile(id), updatedAt: t + i }), t + i],
+    })));
+    const renamed = await (await sync.POST(post("/api/sync/", { profiles: [{ ...profile("keep-d"), name: "Dee", updatedAt: t + 20 }] }, cookie))).json();
+    expect(renamed.profiles.map((p: { id: string }) => p.id).sort()).toEqual(ids);
+    expect(renamed.profiles.find((p: { id: string }) => p.id === "keep-d").name).toBe("Dee");
+    const extra = await (await sync.POST(post("/api/sync/", { profiles: [{ ...profile("keep-e"), updatedAt: t + 30 }] }, cookie))).json();
+    expect(extra.profiles.map((p: { id: string }) => p.id).sort()).toEqual(ids);
+  });
+
   it("skips oversized records instead of storing half a document", async () => {
     const { cookie } = await newAccount("big@example.com");
     const big = { id: "p-big", name: "x".repeat(5000), grade: "1", avatar: "ollie", colour: "#fff", updatedAt: Date.now() };

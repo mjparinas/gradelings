@@ -1,6 +1,6 @@
 // Detects the Android app (a Trusted Web Activity, see docs/ANDROID.md). Google Play doesn't allow
-// selling subscriptions inside an app through an outside checkout, so the Android app has no
-// purchase screens; families subscribe on the website and the plan shows up here after sync.
+// selling subscriptions inside an app through an outside checkout, so the app shows no prices or
+// payment buttons. It tells parents to open the website in a browser, and the plan shows up here after sync.
 //
 // The app opens /play/?app=android (startUrl in android/twa-manifest.json). Chrome also reports
 // document.referrer as android-app://<package> on a cold start. The flag is kept in sessionStorage,

@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
-import { Crumbs, SitePage } from "@/components/site/SiteChrome";
+import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
 import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle } from "@/components/site/curriculum";
 import { guidePath } from "@/components/site/guides";
 import { HOME_TIPS, GUIDE_FRAMEWORKS } from "@/content/guides";
 import { GRADE_LABEL, ageBandFor, getSubjectMeta, gradeSlug } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
+import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -153,15 +154,14 @@ export default async function SubjectGuide({ params }: Props) {
         </h2>
         <div className="flex flex-col gap-2">
           {faqs.map((q) => (
-            <details key={q.q} className="rounded-2xl border border-line bg-white p-4">
-              <summary className="cursor-pointer font-bold">{q.q}</summary>
+            <Disclosure key={q.q} className="rounded-2xl border border-line bg-white p-4" titleClassName="font-bold" title={q.q}>
               <p className="mt-2 font-read">{q.a}</p>
-            </details>
+            </Disclosure>
           ))}
         </div>
       </section>
 
-      <section className="card mt-10 flex flex-col gap-3 p-6 sm:flex-row sm:items-center">
+      <section className="card mt-10 flex flex-col flex-wrap gap-3 p-6 sm:flex-row sm:items-center">
         <div className="flex-1">
           <p className="text-xl font-bold">Free printable {label} {name.toLowerCase()} practice sheet</p>
           <p className="font-read text-ink-soft">Questions from every unit, with an answer key.</p>
@@ -169,9 +169,7 @@ export default async function SubjectGuide({ params }: Props) {
         <Link href={guidePath.worksheet(f, grade, course.subject)} className="btn min-h-12 px-6 text-lg">
           Get the sheet
         </Link>
-        <Link href="/play/" className="btn btn-good min-h-12 px-6 text-lg">
-          Practise in {APP_NAME}
-        </Link>
+        <SubscribeActions size="md" trialLabel={`Practise in ${APP_NAME}`} />
       </section>
     </SitePage>
   );

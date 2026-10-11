@@ -1,5 +1,6 @@
 import "server-only";
 import { APP_NAME, CONTACT_EMAIL } from "@/lib/brand";
+import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, SUBSCRIBE_HREF } from "@/lib/plan";
 import type { Email } from "./email";
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
@@ -91,7 +92,7 @@ function recapLines(children: TrialChild[]): string[] {
     ]);
 }
 
-const KEEP_FREE = "After the trial, the first 2 units of every course stay free forever. The family plan keeps everything unlocked for up to 4 children.";
+const KEEP_FREE = `After the trial, the first ${FREE_UNITS_PER_COURSE} units of every course stay free forever. The family plan keeps everything unlocked for up to ${MAX_CHILDREN} children.`;
 
 /** Mid-trial: what the trial has done so far. Sent once, to parents whose children have practised. */
 export function trialRecapEmail(to: string, origin: string, daysLeft: number, children: TrialChild[]): Email {
@@ -100,8 +101,13 @@ export function trialRecapEmail(to: string, origin: string, daysLeft: number, ch
     origin,
     subject: `${APP_NAME}: what your trial has done so far`,
     heading: "Your trial so far",
-    body: [...recapLines(children), `${daysLeft} ${daysLeft === 1 ? "day" : "days"} of the free trial left. This reflects practice in the app, not a report-card mark.`, KEEP_FREE],
-    button: { label: "See full reports", url: `${origin}/parents/#/reports` },
+    body: [
+      ...recapLines(children),
+      `${daysLeft} ${daysLeft === 1 ? "day" : "days"} of the free trial left. This reflects practice in the app, not a report-card mark.`,
+      KEEP_FREE,
+      "You can subscribe now, before the trial ends. You'll be charged at checkout and the paid plan starts that day. Full reports stay in the Parent area.",
+    ],
+    button: { label: "Subscribe", url: `${origin}${SUBSCRIBE_HREF}` },
   });
 }
 
@@ -115,9 +121,9 @@ export function trialEndingEmail(to: string, origin: string, daysLeft: number, c
     body: [
       ...(recap.length ? ["Here's what the trial has done:", ...recap] : []),
       KEEP_FREE,
-      "There's nothing to do if you'd like to stay on the free units. No card was needed to start.",
+      "Subscribe before the trial ends to keep everything open. You'll be charged at checkout and the paid plan starts that day. There's nothing to do if you'd like to stay on the free units. No card was needed to start.",
     ],
-    button: { label: "See plans", url: `${origin}/parents/#/subscription` },
+    button: { label: "Subscribe", url: `${origin}${SUBSCRIBE_HREF}` },
   });
 }
 
