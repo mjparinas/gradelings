@@ -7,6 +7,7 @@ import { units as sk_science_9 } from "./g9-science";
 import { units as sk_social_9 } from "./g9-social";
 import { reuse, share, sk } from "./kit";
 import { SK_OUTCOMES as O } from "./outcomes";
+import { frenchCourses } from "./french";
 
 // Saskatchewan Grade 9. Units that BC or Ontario already teach, and that fit the Saskatchewan outcomes, are
 // shared with the outcomes they practise. The rest are written for Saskatchewan. Outcome codes are checked against
@@ -75,6 +76,7 @@ const base: Course[] = [
     units: [...sk_social_9],
     order: { "ca-sk": [...sk_social_9.map((u) => u.id)] },
   },
+  ...frenchCourses("9"),
 ];
 
 // Short "how it works" lessons, matched to units by id.

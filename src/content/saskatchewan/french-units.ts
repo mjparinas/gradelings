@@ -1,4 +1,4 @@
-import { coreQuestions, e, frQuestions, type FrItem } from "../french";
+import { coreQuestions, frQuestions, type FrItem } from "../french";
 import type { GenerateOptions, Question, Unit } from "../types";
 import { sk } from "./kit";
 
@@ -50,7 +50,7 @@ const near = (n: number, lo: number, hi: number): string[] =>
 // ---------- Level 1 (Grade 1) ----------
 
 const HELLO: FrItem[] = [
-  ["What do you say in the morning?", "Bonjour", ["Bonne nuit", "Au revoir", "Merci"], "Bonjour is the first word of French. Say it out loud.", "👋"],
+  ["How do you say hello in the morning?", "Bonjour", ["Bonne nuit", "Au revoir", "Merci"], "Bonjour is the first word of French. Say it out loud.", "👋"],
   ["How do you say goodbye?", "Au revoir", ["Bonjour", "Merci", "S'il vous plaît"], "Au revoir is what you say when you leave.", "🚪"],
   ["How do you say thank you?", "Merci", ["Bonjour", "Au revoir", "Pardon"], "Merci means thank you.", "🙏"],
   ["How do you say please?", "S'il vous plaît", ["Merci", "Bonjour", "Au revoir"], "S'il vous plaît means please.", "🙂"],
@@ -62,7 +62,7 @@ const HELLO: FrItem[] = [
   ["What does “J'ai six ans” tell us?", "I am six years old.", ["I have six pets.", "I see six.", "I like six."], "J'ai … ans tells how old you are.", "🎂"],
   ["How do you ask “How old are you?”", "Quel âge as-tu?", ["Comment t'appelles-tu?", "Comment ça va?", "Où habites-tu?"], "Quel âge as-tu? asks for an age.", "🎂"],
   ["What does “Salut” mean?", "Hi", ["Thank you", "Please", "Sorry"], "Friends often say Salut.", "🙋"],
-  ["What do you say at bedtime?", "Bonne nuit", ["Bonjour", "Merci", "Bonne journée"], "Bonne nuit means good night.", "🌙"],
+  ["How do you say good night?", "Bonne nuit", ["Bonjour", "Merci", "Bonne journée"], "Bonne nuit means good night.", "🌙"],
   ["What does “Bonne journée” wish you?", "A good day", ["A good night", "A good meal", "A good trip"], "Bonne journée means have a good day.", "☀️"],
   ["What does “À demain” mean?", "See you tomorrow", ["See you today", "Good morning", "Thank you"], "Demain means tomorrow.", "📅"],
   ["What does “De rien” mean?", "You're welcome", ["Thank you", "Please", "Goodbye"], "You say De rien after someone says merci.", "🤝"],
@@ -148,7 +148,7 @@ function numbersTo20(o?: GenerateOptions): Question[] {
   const pairs: [number, string][] = [[3, "après"], [6, "après"], [9, "après"], [12, "après"], [15, "après"], [18, "après"], [4, "avant"], [8, "avant"], [11, "avant"], [14, "avant"], [17, "avant"], [20, "avant"]];
   for (const [n, dir] of pairs) {
     const answer = dir === "après" ? n + 1 : n - 1;
-    items.push([`Quel nombre vient ${dir} ${word(n)}?`, word(answer), near(answer, 1, 20), "Count in French and listen for the next number.", undefined]);
+    items.push([`Which French word comes ${dir === "après" ? "after" : "before"} “${word(n)}” in counting?`, word(answer), near(answer, 1, 20), "Count in French and listen for the next number.", undefined]);
   }
   for (const n of [5, 7, 10, 13, 16, 19]) {
     items.push([`What number is “${word(n)}”?`, String(n), [n - 1, n + 1, n + 10].map(String), COUNT_HINT, undefined]);
@@ -215,7 +215,7 @@ const ARTICLES: FrItem[] = [
   ["Which word means “he”?", "il", ["elle", "je", "tu"], "Il is he. Elle is she.", "👦"],
   ["Which word means “she”?", "elle", ["il", "je", "tu"], "Il is he. Elle is she.", "👧"],
   ["Which word means “we”?", "nous", ["je", "tu", "elle"], "Nous is we.", "👫"],
-  ["Which word means “they” (a group of boys, or boys and girls)?", "ils", ["il", "elle", "je"], "Ils is they.", "👥"],
+  ["Which French word means they, for a group of boys or a mixed group?", "ils", ["il", "elle", "je"], "Ils is they.", "👥"],
 ];
 
 // ---------- Level 3 (Grade 3) ----------
@@ -262,7 +262,7 @@ const MINE: FrItem[] = [
   ["What does “ton chat” mean?", "your cat", ["my cat", "his cat", "our cat"], "Ton, ta and tes mean your. Mon, ma and mes mean my.", "🐱"],
   ["What does “ta sœur” mean?", "your sister", ["my sister", "her sister", "our sister"], "Ton, ta and tes mean your. Mon, ma and mes mean my.", "👧"],
   ["What does “tes crayons” mean?", "your pencils", ["my pencils", "his pencils", "the pencils"], "Ton, ta and tes mean your. Mon, ma and mes mean my.", "✏️"],
-  ["How do you say “your ball” to a friend?", "ton ballon", ["mon ballon", "ma ballon", "tes ballon"], "Ton, ta and tes mean your.", "⚽"],
+  ["What does “ton ballon” mean?", "your ball", ["my ball", "his ball", "the ball"], "Ton, ta and tes mean your. Mon, ma and mes mean my.", "⚽"],
   ["How do you say “my notebook”?", "mon cahier", ["ma cahier", "mes cahier", "la cahier"], MINE_HINT, "📓"],
   ["How do you say “my ruler”?", "ma règle", ["mon règle", "mes règle", "le règle"], MINE_HINT, "📏"],
 ];
@@ -302,22 +302,22 @@ const ATTRIBUTES: FrItem[] = [
 const ER_HINT = "Verbs that end in -er change their ending: je -e, tu -es, il -e, nous -ons, vous -ez, ils -ent.";
 
 const ER_VERBS: FrItem[] = [
-  ["Which verb form completes “Je ___ français”?", "parle", ["parles", "parlons", "parlent"], ER_HINT, "🗣️"],
-  ["Which verb form completes “Tu ___ au hockey”?", "joues", ["joue", "jouons", "jouent"], ER_HINT, "🏒"],
-  ["Which verb form completes “Elle ___ une chanson”?", "chante", ["chantes", "chantons", "chantent"], ER_HINT, "🎤"],
-  ["Which verb form completes “Nous ___ à la fête”?", "dansons", ["danse", "danses", "dansent"], ER_HINT, "💃"],
-  ["Which verb form completes “Vous ___ la télé”?", "regardez", ["regarde", "regardons", "regardent"], ER_HINT, "📺"],
-  ["Which verb form completes “Ils ___ la musique”?", "écoutent", ["écoute", "écoutes", "écoutons"], ER_HINT, "🎵"],
-  ["Which verb form completes “Je ___ la pizza”?", "aime", ["aimes", "aimons", "aiment"], ER_HINT, "🍕"],
-  ["Which verb form completes “Tu ___ un livre”?", "regardes", ["regarde", "regardons", "regardent"], ER_HINT, "📖"],
-  ["Which verb form completes “Il ___ en classe”?", "travaille", ["travailles", "travaillons", "travaillent"], ER_HINT, "✏️"],
-  ["Which verb form completes “Nous ___ au parc”?", "jouons", ["joue", "joues", "jouent"], ER_HINT, "🛝"],
-  ["Which verb form completes “Elles ___ une chanson”?", "chantent", ["chante", "chantes", "chantons"], ER_HINT, "🎶"],
-  ["Which verb form completes “Vous ___ bien”?", "parlez", ["parle", "parlons", "parlent"], ER_HINT, "🗣️"],
-  ["Which verb form completes “Nous ___ une pomme”? (manger)", "mangeons", ["mangons", "mange", "mangent"], "With nous, manger keeps an e so the g sounds soft: mangeons.", "🍎"],
-  ["Which verb form completes “Je ___ la radio”?", "écoute", ["écoutes", "écoutons", "écoutent"], ER_HINT, "📻"],
-  ["Which verb form completes “On ___ au soccer”?", "joue", ["joues", "jouons", "jouent"], "On goes with the same ending as il and elle.", "⚽"],
-  ["Which verb form completes “Tu ___ très bien”?", "danses", ["danse", "dansons", "dansent"], ER_HINT, "💃"],
+  ["Which French word completes “Je ___ français”?", "parle", ["parles", "parlons", "parlent"], ER_HINT, "🗣️"],
+  ["Which French word completes “Tu ___ au hockey”?", "joues", ["joue", "jouons", "jouent"], ER_HINT, "🏒"],
+  ["Which French word completes “Elle ___ une chanson”?", "chante", ["chantes", "chantons", "chantent"], ER_HINT, "🎤"],
+  ["Which French word completes “Nous ___ à la fête”?", "dansons", ["danse", "danses", "dansent"], ER_HINT, "💃"],
+  ["Which French word completes “Vous ___ la télé”?", "regardez", ["regarde", "regardons", "regardent"], ER_HINT, "📺"],
+  ["Which French word completes “Ils ___ la musique”?", "écoutent", ["écoute", "écoutes", "écoutons"], ER_HINT, "🎵"],
+  ["Which French word completes “Tu ___ la pizza”?", "aimes", ["aime", "aimons", "aiment"], ER_HINT, "🍕"],
+  ["Which French word completes “Tu ___ un livre”?", "regardes", ["regarde", "regardons", "regardent"], ER_HINT, "📖"],
+  ["Which French word completes “Il ___ en classe”?", "travaille", ["travailles", "travaillons", "travaillent"], ER_HINT, "✏️"],
+  ["Which French word completes “Nous ___ au parc”?", "jouons", ["joue", "joues", "jouent"], ER_HINT, "🛝"],
+  ["Which French word completes “Elles ___ une chanson”?", "chantent", ["chante", "chantes", "chantons"], ER_HINT, "🎶"],
+  ["Which French word completes “Vous ___ bien”?", "parlez", ["parle", "parlons", "parlent"], ER_HINT, "🗣️"],
+  ["Which French word completes “Nous ___ une pomme”? (manger)", "mangeons", ["mangons", "mange", "mangent"], "With nous, manger keeps an e so the g sounds soft: mangeons.", "🍎"],
+  ["Which French word completes “Nous ___ la radio”?", "écoutons", ["écoute", "écoutes", "écoutent"], ER_HINT, "📻"],
+  ["Which French word completes “On ___ au soccer”?", "joue", ["joues", "jouons", "jouent"], "On goes with the same ending as il and elle.", "⚽"],
+  ["Which French word completes “Tu ___ très bien”?", "danses", ["danse", "dansons", "dansent"], ER_HINT, "💃"],
   ["What does “parler” mean?", "to speak", ["to sing", "to play", "to eat"], "Parler is the infinitive: the name of the verb.", "🗣️"],
   ["What does “jouer” mean?", "to play", ["to speak", "to sing", "to eat"], "Jouer is the infinitive: the name of the verb.", "🎲"],
   ["What does “chanter” mean?", "to sing", ["to dance", "to play", "to listen"], "Chanter is the infinitive: the name of the verb.", "🎤"],
@@ -329,7 +329,7 @@ const ER_VERBS: FrItem[] = [
   ["What does “Ils chantent” mean?", "They sing.", ["We sing.", "I sing.", "You sing."], ER_HINT, "🎶"],
   ["How do you say “I play hockey”?", "Je joue au hockey.", ["Je jouer au hockey.", "Je jouons au hockey.", "Tu joue au hockey."], ER_HINT, "🏒"],
   ["How do you say “We speak French”?", "Nous parlons français.", ["Nous parle français.", "Nous parlez français.", "Je parlons français."], ER_HINT, "🗣️"],
-  ["How do you say “They dance”?", "Ils dansent.", ["Ils danse.", "Ils dansons.", "Il dansent."], ER_HINT, "💃"],
+  ["How do you say “we dance”?", "Nous dansons.", ["Nous danse.", "Nous dansez.", "Je dansons."], ER_HINT, "💃"],
 ];
 
 const WHERE_HINT = "Little words show where something is: sur (on), sous (under), dans (in), devant (in front of), derrière (behind).";
@@ -358,10 +358,10 @@ const WHERE: FrItem[] = [
   ["How do you say “under the table”?", "sous la table", ["sur la table", "dans la table", "devant la table"], WHERE_HINT, "🪑"],
   ["How do you say “in the box”?", "dans la boîte", ["sur la boîte", "sous la boîte", "derrière la boîte"], WHERE_HINT, "📦"],
   ["How do you say “on the desk”?", "sur le bureau", ["sous le bureau", "dans le bureau", "devant le bureau"], WHERE_HINT, "💻"],
-  ["Which sentence is a command?", "Ferme la porte.", ["La porte est fermée.", "Où est la porte?", "La porte est bleue."], "A command tells someone to do something.", "☝️"],
-  ["Which sentence is a command?", "Écoute bien.", ["Il écoute bien.", "Qui écoute?", "Elle est gentille."], "A command tells someone to do something.", "☝️"],
-  ["Which sentence is a question?", "Où est mon sac?", ["Mon sac est ici.", "Prends ton sac.", "J'ai un sac."], "A question often starts with a question word and ends with ?", "❓"],
-  ["Which sentence is a statement?", "Le chat dort.", ["Où est le chat?", "Regarde le chat!", "Qui est le chat?"], "A statement tells something and ends with a period.", "💬"],
+  ["Which answer is a command?", "Ferme la porte.", ["La porte est fermée.", "Où est la porte?", "La porte est bleue."], "A command tells someone to do something.", "☝️"],
+  ["Which answer is a command?", "Écoute bien.", ["Il écoute bien.", "Qui écoute?", "Elle est gentille."], "A command tells someone to do something.", "☝️"],
+  ["Which answer is a question?", "Où est mon sac?", ["Mon sac est ici.", "Prends ton sac.", "J'ai un sac."], "A question often starts with a question word and ends with ?", "❓"],
+  ["Which answer is a statement?", "Le chat dort.", ["Où est le chat?", "Regarde le chat!", "Qui est le chat?"], "A statement tells something and ends with a period.", "💬"],
 ];
 
 // ---------- Culture: Saskatchewan (Core French) ----------
@@ -374,10 +374,10 @@ const FRANSASKOIS: FrItem[] = [
   ["What is the Conseil des écoles fransaskoises?", "Saskatchewan's French first-language school division", ["A hockey team", "A kind of farm", "A grocery store"], "The Conseil des écoles fransaskoises (CEF) runs French first-language schools across the province.", "🏫"],
   ["In a Fransaskois school, most subjects are taught in…", "French", ["English only", "Spanish", "Latin"], "The CEF teaches in French. English language arts starts in Grade 4.", "🏫"],
   ["Gravelbourg is a Saskatchewan town known for its…", "French-speaking heritage", ["volcanoes", "ocean beaches", "tropical forests"], "Gravelbourg is one of several Saskatchewan communities with a long French-speaking history.", "⛪"],
-  ["Which language did Métis people in the West bring together with Cree to make Michif?", "French", ["Latin", "Spanish", "Greek"], "Michif is a Métis language that combines French and Cree.", "🗣️"],
+  ["Michif combines Cree with which other language?", "French", ["Latin", "Spanish", "Greek"], "Michif is a Métis language that combines French and Cree.", "🗣️"],
   ["Michif is a language spoken by some…", "Métis people", ["visitors from Mars", "ocean animals", "farm machines"], "Michif is a Métis language that combines French and Cree.", "🗣️"],
   ["What is a “ceinture fléchée”?", "a colourful woven sash", ["a hockey stick", "a type of bread", "a snowshoe"], "The sash is a symbol of Métis identity and of French Canadian voyageurs.", "🧣"],
-  ["How do you say “fiddle”?", "le violon", ["la flûte", "le tambour", "la guitare"], "Fiddle music and jigging are part of many Métis celebrations.", "🎻"],
+  ["How do you say fiddle in French?", "le violon", ["la flûte", "le tambour", "la guitare"], "Fiddle music and jigging are part of many Métis celebrations.", "🎻"],
   ["What does “la gigue” mean?", "the jig (a lively dance)", ["the river", "the wheat", "the winter"], "Jigging is a Métis dance.", "💃"],
   ["What does “le blé” mean?", "wheat", ["rice", "snow", "apple"], "Wheat is an important crop on the prairies.", "🌾"],
   ["What does “la ferme” mean?", "the farm", ["the school", "the store", "the lake"], "Many families in Saskatchewan live on farms.", "🚜"],
@@ -386,15 +386,15 @@ const FRANSASKOIS: FrItem[] = [
   ["What does “le lac” mean?", "the lake", ["the river", "the field", "the town"], "Saskatchewan has thousands of lakes.", "🏞️"],
   ["What does “la neige” mean?", "the snow", ["the rain", "the sun", "the wind"], "Winters in Saskatchewan are snowy.", "❄️"],
   ["How do you say “It is cold”?", "Il fait froid.", ["Il fait chaud.", "Il pleut.", "Il fait beau."], "Winter days in Saskatchewan are often cold.", "🥶"],
-  ["How do you say “winter”?", "l'hiver", ["l'été", "l'automne", "le printemps"], "L'hiver is the cold season.", "⛄"],
-  ["How do you say “moose”?", "un orignal", ["un loup", "un ours", "un lapin"], "Orignal is the French word for moose.", "🫎"],
+  ["How do you say winter in French?", "l'hiver", ["l'été", "l'automne", "le printemps"], "L'hiver is the cold season.", "⛄"],
+  ["How do you say moose in French?", "un orignal", ["un loup", "un ours", "un lapin"], "Orignal is the French word for moose.", "🫎"],
   ["What does “le bison” mean?", "the bison (buffalo)", ["the moose", "the wolf", "the bear"], "The bison was important to many First Nations and Métis peoples on the prairies.", "🦬"],
   ["Which language is a First Nations language of Saskatchewan?", "Dene", ["Latin", "Greek", "Italian"], "Cree, Dene, Saulteaux, Nakota and Dakota are some of the First Nations languages spoken in Saskatchewan.", "🪶"],
-  ["How do you say “Come in, welcome”?", "Entrez, bienvenue.", ["Au revoir, merci.", "Sortez, bonsoir.", "Assis, bonjour."], FRANSASKOIS_HINT, "🚪"],
+  ["What does “Entrez, bienvenue” mean?", "Come in, welcome.", ["Go out, goodbye.", "Sit down, please.", "Thank you, friend."], FRANSASKOIS_HINT, "🚪"],
   ["How do you say “thank you very much”?", "Merci beaucoup.", ["Bonjour beaucoup.", "Au revoir beaucoup.", "S'il vous plaît beaucoup."], "Beaucoup means a lot.", "🙏"],
   ["The English word “prairie” came from French. What does it mean?", "a large area of grassland", ["a kind of fish", "a mountain peak", "a frozen lake"], "French la prairie gave English the word prairie.", "🌾"],
   ["What was a voyageur?", "a canoeist who carried furs and goods in the fur trade", ["a farmer on the prairies", "a hockey goalie", "a train driver"], "Voyageurs paddled canoes along rivers and lakes.", "🛶"],
-  ["How do you say “wheat field”?", "un champ de blé", ["un lac de blé", "une école de blé", "un livre de blé"], "Un champ is a field.", "🌾"],
+  ["How do you say wheat field in French?", "un champ de blé", ["un lac de blé", "une école de blé", "un livre de blé"], "Un champ is a field.", "🌾"],
 ];
 
 const PLACE_HINT = "Many place names in Saskatchewan come from French, Cree, Dene and other languages.";
@@ -412,8 +412,8 @@ const PLACE_NAMES: FrItem[] = [
   ["Fort Qu'Appelle is a Saskatchewan town. What does “fort” mean?", "a fort (a fortified trading post)", ["a farm", "a lake", "a school"], "Forts were trading posts in the fur trade.", "🏰"],
   ["The Qu'Appelle Valley's name comes from the French “Qu'appelle?”. What does it mean?", "Who calls?", ["What time is it?", "Where is it?", "How are you?"], "A story tells of a voice that seemed to call across the valley.", "🗣️"],
   ["Which place name comes from Cree?", "Saskatoon", ["Gravelbourg", "Île-à-la-Crosse", "Saint-Louis"], "Saskatoon comes from the Cree name for the saskatoon berry, misâskwatômina.", "🫐"],
-  ["Which place name comes from a French name?", "Gravelbourg", ["Saskatoon", "Wascana", "Saskatchewan"], "Gravelbourg was named by French-speaking settlers.", "⛪"],
-  ["Saskatchewan comes from Cree and means “swift-flowing river”. Which French word means “river”?", "rivière", ["lac", "forêt", "montagne"], PLACE_HINT, "🌊"],
+  ["Which place name comes from a French name?", "Gravelbourg", ["Saskatoon", "Wascana", "Saskatchewan"], "Gravelbourg has a French name and a long French-speaking history.", "⛪"],
+  ["Which French word means river? (Saskatchewan comes from a Cree word for a swift-flowing river.)", "rivière", ["lac", "forêt", "montagne"], PLACE_HINT, "🌊"],
   ["What does “la fourrure” mean?", "fur", ["wheat", "snow", "bread"], "Fur was traded for goods in the fur trade.", "🧥"],
   ["What does “la traite des fourrures” mean?", "the fur trade", ["the wheat harvest", "the school year", "the train trip"], "The fur trade connected First Nations, Métis and French-speaking traders.", "🦫"],
   ["What does “le canot” mean?", "the canoe", ["the cart", "the horse", "the sled"], "Voyageurs travelled by canoe.", "🛶"],
@@ -423,7 +423,7 @@ const PLACE_NAMES: FrItem[] = [
   ["The English word “portage” comes from French. What does it mean?", "carrying a canoe between two waters", ["a kind of soup", "a canoe paddle", "a bridge"], "Voyageurs carried their canoes and packs over land between lakes and rivers.", "🛶"],
   ["The English word “tuque” comes from French. What is it?", "a knitted winter hat", ["a canoe", "a sled", "a mitten"], "A tuque keeps your head warm in a prairie winter.", "🧢"],
   ["What was a voyageur?", "a canoeist who carried furs and goods in the fur trade", ["a farmer on the prairies", "a hockey goalie", "a train driver"], "Voyageurs paddled canoes along rivers and lakes.", "🛶"],
-  ["Michif combines French and Cree. Which word means “language” in French?", "la langue", ["le lac", "la lune", "la laine"], "La langue means language and also tongue.", "🗣️"],
+  ["Which French word means language? (Michif combines French and Cree.)", "la langue", ["le lac", "la lune", "la laine"], "La langue means language and also tongue.", "🗣️"],
   ["How do you say “my village” (the place you live)?", "mon village", ["ma village", "mes village", "le village mon"], "Village is a masculine word, so use mon.", "🏘️"],
   ["Which of these is a Saskatchewan place name from French?", "Île-à-la-Crosse", ["Saskatoon", "Wascana", "Saskatchewan"], "Île-à-la-Crosse is a historic fur trade community in northern Saskatchewan.", "🏝️"],
 ];
@@ -431,7 +431,7 @@ const PLACE_NAMES: FrItem[] = [
 const CONTRIBUTION_HINT = "Francophone, Métis and First Nations people have shaped Canada in many ways.";
 
 const CONTRIBUTIONS: FrItem[] = [
-  ["Louis Riel was a Métis leader. Which French word means “leader” or “chief”?", "un chef", ["un livre", "un lac", "un chat"], "Un chef can be a leader.", "🧑"],
+  ["Which French word means leader or chief? (Louis Riel was a Métis leader.)", "un chef", ["un livre", "un lac", "un chat"], "Un chef can be a leader.", "🧑"],
   ["Louis Riel helped bring which province into Canada in 1870?", "Manitoba", ["Alberta", "Nova Scotia", "Newfoundland"], "Riel led the Red River Resistance, and Manitoba became a province in 1870.", "🏛️"],
   ["Louis Riel spoke which language as his first language?", "French", ["Spanish", "Latin", "Inuktitut"], "Riel was born into a French-speaking Métis family at Red River.", "🗣️"],
   ["Gabriel Dumont was a Métis leader and bison hunter. Where did he help lead the Métis in 1885?", "Batoche", ["Halifax", "Vancouver", "Toronto"], "Batoche, in Saskatchewan, is a National Historic Site.", "🏞️"],
@@ -441,8 +441,8 @@ const CONTRIBUTIONS: FrItem[] = [
   ["What does “un écrivain” mean?", "a writer", ["a singer", "a farmer", "a leader"], CONTRIBUTION_HINT, "✍️"],
   ["What does “une chanteuse” mean?", "a singer (a woman)", ["a writer", "a farmer", "a leader"], CONTRIBUTION_HINT, "🎤"],
   ["What does “un artiste” mean?", "an artist", ["a leader", "a farmer", "a teacher"], CONTRIBUTION_HINT, "🎨"],
-  ["Buffy Sainte-Marie is a Cree singer-songwriter born on a First Nation in Saskatchewan. How do you say “singer” (for a woman)?", "chanteuse", ["écrivaine", "cheffe", "exploratrice"], CONTRIBUTION_HINT, "🎤"],
-  ["Gabrielle Roy was a French-language writer from Manitoba. How do you say “writer” (for a woman)?", "écrivaine", ["chanteuse", "exploratrice", "agricultrice"], CONTRIBUTION_HINT, "✍️"],
+  ["How do you say singer, for a woman? (Buffy Sainte-Marie is a Cree singer-songwriter born on a First Nation in Saskatchewan.)", "chanteuse", ["écrivaine", "cheffe", "exploratrice"], CONTRIBUTION_HINT, "🎤"],
+  ["How do you say writer, for a woman? (Gabrielle Roy was a French-language writer from Manitoba.)", "écrivaine", ["chanteuse", "exploratrice", "agricultrice"], CONTRIBUTION_HINT, "✍️"],
   ["Céline Dion is a singer from Québec. She sings in…", "French and English", ["only Latin", "only Cree", "only German"], "Many Francophone artists sing in both French and English.", "🎤"],
   ["Canada's two official languages are…", "English and French", ["English and Cree", "French and Spanish", "English and Latin"], "The Official Languages Act of 1969 made English and French official languages of the federal government.", "🍁"],
   ["Radio-Canada is…", "Canada's French-language public broadcaster", ["a hockey team", "a grocery store", "a kind of train"], "Radio-Canada is the French-language service of the CBC.", "📻"],
@@ -452,10 +452,10 @@ const CONTRIBUTIONS: FrItem[] = [
   ["The Conseil des écoles fransaskoises serves…", "French-speaking families in Saskatchewan", ["farms in Alberta", "families in Nunavut", "visitors from other countries"], "The CEF is a French first-language school division.", "🏫"],
   ["Francophone communities live in…", "every province and territory", ["only Québec", "only Manitoba", "only the Maritimes"], "Francophone communities exist in all parts of Canada.", "🍁"],
   ["What does “les Acadiens” refer to?", "French-speaking people with roots in the Maritimes", ["people from Saskatchewan", "people from Nunavut", "visitors from France"], "Acadians are a Francophone people with a long history in the Maritime provinces.", "⚓"],
-  ["Tomson Highway is a Cree writer and musician from northern Manitoba. How do you say “writer” (for a man)?", "écrivain", ["chanteuse", "explorateur", "agriculteur"], CONTRIBUTION_HINT, "✍️"],
+  ["How do you say writer, for a man? (Tomson Highway is a Cree writer and musician from northern Manitoba.)", "écrivain", ["chanteuse", "explorateur", "agriculteur"], CONTRIBUTION_HINT, "✍️"],
   ["What does “une organisation” refer to?", "a group of people working together", ["a lake", "a kind of food", "a farm animal"], "Many organizations help communities keep their language and culture strong.", "🤝"],
   ["How do you say “thank you for your contribution”?", "Merci de ta contribution.", ["Bonjour de ta contribution.", "Au revoir de ta contribution.", "Pardon ta contribution."], CONTRIBUTION_HINT, "🙏"],
-  ["Which word means “history”?", "l'histoire", ["la géographie", "la musique", "la cuisine"], "L'histoire can also mean story.", "📜"],
+  ["Which French word means history?", "l'histoire", ["la géographie", "la musique", "la cuisine"], "L'histoire can also mean story.", "📜"],
 ];
 
 // ---------- Immersion: Saskatchewan culture (5.VC.3, 8.VC.3) ----------
@@ -479,10 +479,10 @@ const IMM5: FrItem[] = [
   ["Qu'est-ce qu'une charrette de la rivière Rouge?", "un véhicule à deux roues utilisé par les Métis", ["un bateau à voile", "un traîneau à chiens", "un train"], "Métis families used Red River carts to travel and to carry bison meat and robes.", "🛒"],
   ["Qu'est-ce que la gigue?", "une danse rapide", ["un plat d'hiver", "un bateau", "une langue"], "Jigging is a Métis dance.", "💃"],
   ["Le traité 6 a été signé en 1876. Qui l'a signé?", "des Premières Nations et la Couronne", ["des agriculteurs seulement", "des joueurs de hockey", "des explorateurs français"], "Treaty 6 covers much of central Saskatchewan and Alberta.", "📜"],
-  ["Quelle région du Canada compte plusieurs communautés francophones, comme Gravelbourg?", "la Saskatchewan", ["le Yukon seulement", "Hawaï", "le Nunavut seulement"], "Gravelbourg is a town with a long French-speaking history.", "⛪"],
-  ["Que veut dire « le Conseil des écoles fransaskoises »?", "le conseil scolaire francophone de la Saskatchewan", ["un club de hockey", "un marché de fermiers", "une bibliothèque"], "The CEF runs French first-language schools in Saskatchewan.", "🏫"],
+  ["Dans quelle province se trouve Gravelbourg, une ville au riche patrimoine francophone?", "en Saskatchewan", ["au Nouveau-Brunswick", "en Colombie-Britannique", "à l'Île-du-Prince-Édouard"], "Gravelbourg is a town with a long French-speaking history.", "⛪"],
+  ["Qu'est-ce que le Conseil des écoles fransaskoises?", "le conseil scolaire francophone de la Saskatchewan", ["un club de hockey", "un marché de fermiers", "une bibliothèque"], "The CEF runs French first-language schools in Saskatchewan.", "🏫"],
   ["Quelle saison est très froide et enneigée en Saskatchewan?", "l'hiver", ["l'été", "le printemps", "l'automne"], "Winters on the prairies are cold and snowy.", "❄️"],
-  ["Quel mot veut dire « culture »?", "les façons de vivre, les traditions et les arts d'un groupe", ["un genre de fruit", "une sorte de vent", "un outil"], IMM5_HINT, "🎭"],
+  ["Qu'est-ce que la culture d'un groupe?", "ses façons de vivre, ses traditions et ses arts", ["son âge moyen", "sa couleur préférée", "son nombre d'habitants"], IMM5_HINT, "🎭"],
   ["Quel peuple vit au Canada depuis des milliers d'années?", "les Premières Nations", ["les voyageurs du 17e siècle", "les premiers touristes", "les astronautes"], "First Nations peoples have lived here for thousands of years.", "🪶"],
   ["Qu'est-ce qu'une légende?", "une histoire transmise de génération en génération", ["une recette", "un horaire", "une carte"], "Legends and stories are passed down in many cultures.", "📖"],
   ["Qui parle français au Canada?", "des gens dans toutes les provinces et tous les territoires", ["seulement les gens du Québec", "seulement les gens du Manitoba", "personne"], "Francophone communities live across Canada.", "🍁"],
@@ -493,7 +493,7 @@ const IMM5: FrItem[] = [
 const IMM8_HINT = "Hint: Canada's cultures include French-speaking, Métis and First Nations communities, among many others.";
 
 const IMM8: FrItem[] = [
-  ["Quel quartier de Winnipeg est un centre de la communauté francophone du Manitoba?", "Saint-Boniface", ["Gastown", "Old Montreal", "Kensington"], "Saint-Boniface is a French-speaking neighbourhood of Winnipeg.", "🏘️"],
+  ["Quel quartier de Winnipeg est un centre de la communauté francophone du Manitoba?", "Saint-Boniface", ["Gastown", "Le Plateau", "Kensington"], "Saint-Boniface is a French-speaking neighbourhood of Winnipeg.", "🏘️"],
   ["Quelle communauté francophone a des racines dans les provinces maritimes?", "les Acadiens", ["les Fransaskois", "les Inuits", "les Doukhobors"], "Acadians are a Francophone people with a long history in the Maritimes.", "⚓"],
   ["Comment appelle-t-on les francophones de la Saskatchewan?", "les Fransaskois", ["les Acadiens", "les Québécois", "les Franco-Ontariens"], "Fransaskois is made from français and Saskatchewan.", "🌾"],
   ["Comment appelle-t-on les francophones de l'Ontario?", "les Franco-Ontariens", ["les Fransaskois", "les Acadiens", "les Franco-Manitobains"], IMM8_HINT, "🍁"],
@@ -503,7 +503,7 @@ const IMM8: FrItem[] = [
   ["Quelle langue des Métis combine le français et le cri?", "le michif", ["le latin", "l'anglais", "l'inuktitut"], "Michif is a Métis language.", "🗣️"],
   ["Quelles sont les deux langues officielles du Canada?", "l'anglais et le français", ["l'anglais et le cri", "le français et l'espagnol", "l'anglais et le latin"], "English and French are official languages of the federal government.", "🍁"],
   ["Que veut dire « diversité culturelle »?", "la présence de plusieurs cultures", ["une seule culture", "un type de fruit", "un sport d'hiver"], IMM8_HINT, "🌍"],
-  ["Que veut dire « Premières Nations »?", "les peuples autochtones qui vivaient ici avant l'arrivée des Européens, sans les Inuits ni les Métis", ["les premiers fermiers de la Saskatchewan", "les premiers maires", "les premiers voyageurs"], "First Nations, Inuit and Métis are the three recognized Indigenous peoples in Canada.", "🪶"],
+  ["Que veut dire « Premières Nations »?", "des peuples autochtones du Canada, distincts des Inuits et des Métis", ["les premiers fermiers de la Saskatchewan", "les premiers maires", "les premiers voyageurs"], "First Nations, Inuit and Métis are the three recognized Indigenous peoples in Canada.", "🪶"],
   ["Nomme une langue des Premières Nations de la Saskatchewan.", "le cri", ["le latin", "le grec", "l'italien"], "Cree, Dene, Saulteaux, Nakota and Dakota are some of the First Nations languages spoken in Saskatchewan.", "🪶"],
   ["Qui a aidé à faire entrer le Manitoba dans la Confédération en 1870?", "Louis Riel", ["Samuel de Champlain", "Jacques Cartier", "Tommy Douglas"], "Riel led the Red River Resistance, and Manitoba became a province in 1870.", "🏛️"],
   ["Qui a fondé Québec en 1608?", "Samuel de Champlain", ["Louis Riel", "Gabriel Dumont", "Jacques Cartier"], "Champlain founded Québec in 1608.", "🏰"],
@@ -514,7 +514,7 @@ const IMM8: FrItem[] = [
   ["Nomme une communauté francophone de la Saskatchewan.", "Gravelbourg", ["Halifax", "Whitehorse", "Charlottetown"], "Gravelbourg is a Saskatchewan town with a long French-speaking history.", "⛪"],
   ["Quel instrument fait partie de la musique métisse traditionnelle?", "le violon", ["le saxophone", "la cornemuse", "le piano à queue"], "Fiddle music and jigging are part of many Métis celebrations.", "🎻"],
   ["Que veut dire « le patrimoine »?", "ce que les gens reçoivent du passé et veulent garder", ["l'argent d'une banque", "une marque de voiture", "un type de saison"], "Heritage can be language, stories, music, buildings and traditions.", "🏛️"],
-  ["Qu'est-ce que le français a de particulier au Canada?", "il se parle d'un océan à l'autre", ["il se parle seulement à Québec", "il ne se parle pas", "il est interdit"], "French is spoken across Canada, with many local expressions.", "🍁"],
+  ["Où parle-t-on français au Canada?", "dans toutes les régions du pays", ["seulement au Québec", "seulement dans les Maritimes", "nulle part"], "French is spoken across Canada, with many local expressions.", "🍁"],
   ["Qu'est-ce qu'un orignal?", "un grand animal du Canada", ["un instrument", "un fruit", "une ville"], "Orignal is the French word for moose.", "🫎"],
   ["Parmi ces peuples, lequel n'est pas un peuple autochtone du Canada?", "les Acadiens", ["les Inuits", "les Métis", "les Premières Nations"], "Acadians are a Francophone people, not an Indigenous people.", "🌍"],
   ["Que fait une personne qui fait preuve d'ouverture à la diversité?", "elle accueille et respecte les autres cultures", ["elle évite les autres", "elle se moque des autres", "elle refuse d'écouter"], IMM8_HINT, "🤝"],
@@ -561,9 +561,3 @@ export const imm5: Unit[] = [
 export const imm8: Unit[] = [
   immersion({ id: "sk-imm8-diversite", title: "La diversité culturelle au Canada", emoji: "🍁", blurb: "Communautés francophones, métisses et autochtones", parentNote: "French Immersion culture unit: the cultural diversity of Canada, including Francophone, Métis and First Nations communities. Questions and answers are in French; hints are in English.", standards: ["8.VC.3", "cultural diversity in Canada, including Francophone, Métis and First Nations communities"], items: IMM8 }),
 ];
-
-/** Helper for tests: every item in the culture banks, for checks on facts and wording. */
-export const FRENCH_BANKS = { HELLO, CLASSROOM, FAMILY, QUESTIONS, ARTICLES, MINE, ATTRIBUTES, ER_VERBS, WHERE, FRANSASKOIS, PLACE_NAMES, CONTRIBUTIONS, IMM5, IMM8 };
-
-// `e` is re-exported for picture choices in banks that need them.
-export { e };

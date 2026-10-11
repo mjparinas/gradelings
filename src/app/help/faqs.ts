@@ -65,7 +65,7 @@ export const HELP: HelpSection[] = [
     faqs: [
       {
         q: "Which curriculum and grades does it follow?",
-        a: `Kindergarten to Grade 9. Choose ${listRegions(FRAMEWORKS)} when you add a child, and you can switch province later in Children. Math, English language arts, science and social studies are in every province. French Immersion and Core French are included everywhere except Saskatchewan, and Nunavut has Core French only. Yukon and the Northwest Territories follow the BC curriculum, adapted with local First Nations, Dene and Inuit content. Every unit shows the learning standard it practises. More provinces and states are planned.`,
+        a: `Kindergarten to Grade 9. Choose ${listRegions(FRAMEWORKS)} when you add a child, and you can switch province later in Children. Math, English language arts, science and social studies are in every province. Core French is in every province, and French Immersion is in every province except Nunavut. Yukon and the Northwest Territories follow the BC curriculum, adapted with local First Nations, Dene and Inuit content. Every unit shows the learning standard it practises. More provinces and states are planned.`,
       },
       {
         q: "What is Adventure mode?",

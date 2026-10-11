@@ -23,8 +23,9 @@ const FRENCH_GRADES: Record<FrameworkId, { immersion: GradeId[]; "core-french": 
   "ca-on": { immersion: range("1", "9"), "core-french": range("4", "9") },
   // Alberta: French Immersion from Kindergarten; the French as a Second Language program starts in Grade 4.
   "ca-ab": { immersion: range("k", "9"), "core-french": range("4", "9") },
-  // Saskatchewan French is not built yet (see docs/research/saskatchewan/README.md).
-  "ca-sk": { immersion: [], "core-french": [] },
+  // Saskatchewan: French Immersion (Kindergarten to Grade 12) and Core French (curriculum Levels 1 to 9, listed under
+  // Grades 1 to 9). Source: Saskatchewan Curriculum and saskatchewan.ca "Studying French in Saskatchewan".
+  "ca-sk": { immersion: range("k", "9"), "core-french": range("1", "9") },
   "ca-mb": { immersion: range("k", "9"), "core-french": range("4", "9") },
   // Yukon implements the BC curriculum, including BC's French programs.
   "ca-yt": { immersion: range("k", "9"), "core-french": range("5", "9") },

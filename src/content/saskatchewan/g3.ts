@@ -3,6 +3,7 @@ import { units as g3_science } from "../ontario/g3-science";
 import { units as sk_science_3 } from "./g3-science";
 import { reuse, share, sk } from "./kit";
 import { SK_OUTCOMES as O } from "./outcomes";
+import { frenchCourses } from "./french";
 
 // Saskatchewan Grade 3. Units that BC or Ontario already teach, and that fit the Saskatchewan outcomes, are
 // shared with the outcomes they practise. The rest are written for Saskatchewan. Outcome codes are checked against
@@ -72,4 +73,5 @@ export const courses: Course[] = [
     },
     order: { "ca-sk": ["maps-and-globes", "meeting-needs", "world-cultures", "global-indigenous"] },
   },
+  ...frenchCourses("3"),
 ];
