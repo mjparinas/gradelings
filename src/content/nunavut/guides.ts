@@ -49,7 +49,7 @@ export const NUNAVUT_GUIDES: FrameworkGuides = {
     closing: "These principles grow through family, Elders, the land and everyday routines.",
     title: "Inuit Qaujimajatuqangit in Nunavut, explained for parents",
     intro:
-      "Nunavut's Department of Education builds its programs on Inuit Qaujimajatuqangit (IQ), which means Inuit knowledge and ways of knowing. The Government of Nunavut describes eight IQ guiding principles. They are not marked as subjects, and they show up in how classes work and how people treat each other. Spellings and words vary from community to community, and this guide needs review by Inuit partners.",
+      "Nunavut's Department of Education builds its programs on Inuit Qaujimajatuqangit (IQ), which means Inuit knowledge and ways of knowing. The Government of Nunavut describes eight IQ guiding principles. They are not marked as subjects, and they show up in how classes work and how people treat each other. Spellings and words vary from community to community.",
     items: [
       { id: "inuuqatigiitsiarniq", name: "Inuuqatigiitsiarniq", blurb: "Respecting others, relationships and caring for people.", parts: [], atHome: ["Say thank you and listen when someone speaks.", "Ask an Elder or relative about their day."] },
       { id: "tunnganarniq", name: "Tunnganarniq", blurb: "Fostering good spirit by being open, welcoming and inclusive.", parts: [], atHome: ["Welcome a new neighbour or classmate.", "Invite someone who is alone to join a game."] },

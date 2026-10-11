@@ -2,7 +2,7 @@ import { bankUnit, type Q } from "../own";
 
 // Grade 3 social studies, Nova Scotia: where we live in Atlantic Canada, the cultures of the province and the
 // rights and responsibilities of citizens. Indigenous, African Nova Scotian, Acadian and Gaelic content is light,
-// factual and in the present tense, and needs partner review.
+// factual and in the present tense.
 
 const ATLANTIC: Q[] = [
   ["Which four provinces make up Atlantic Canada?", "Nova Scotia, New Brunswick, Prince Edward Island, Newfoundland and Labrador", ["Nova Scotia, Quebec, Ontario, Manitoba", "New Brunswick, Quebec, Alberta, Newfoundland and Labrador"], "Atlantic Canada is the group of provinces on the Atlantic coast."],
@@ -112,7 +112,7 @@ export const cultures = bankUnit({
   emoji: "🎶",
   blurb: "Songs, stories, food and fun from the people of Nova Scotia.",
   parentNote:
-    "Practises how groups in Nova Scotia, including the Mi’kmaq, Acadians, African Nova Scotians and Gaels, share their cultures. It follows the Grade 3 Nova Scotia social studies outcome on expressions of culture. Content about First Nations is light and written for partner review.",
+    "Practises how groups in Nova Scotia, including the Mi’kmaq, Acadians, African Nova Scotians and Gaels, share their cultures. It follows the Grade 3 Nova Scotia social studies outcome on expressions of culture. Content about First Nations is light.",
   standards: ["Investigate various groups through their expressions of culture", "language, music, art and celebrations of cultures in Nova Scotia"],
   items: CULTURES,
 });

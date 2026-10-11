@@ -8,7 +8,7 @@ import { levelOf, on, spaced, typeIn } from "./kit";
 // Geography (Global Settlement; Global Inequalities). The BC Grade 8 course covers the world from about
 // 600 to 1750, so none of its units are shared. All content is original. Dates were checked against
 // standard references; the units on treaties, the Métis resistances and residential schools use careful
-// wording and still need review with First Nations, Métis and Inuit partners before launch.
+// wording.
 
 const plain = (parts: UnitParts) => (opts?: GenerateOptions): Question[] => fromParts(parts, opts);
 
@@ -715,7 +715,7 @@ export const units: Unit[] = [
     emoji: "📜",
     blurb: "Agreements, reserves and laws, 1850–1890",
     standards: on("History A1.2, A1.4, A2.3, A3.3, A3.7", "legal status and rights of First Nations, the Robinson and Numbered Treaties, the Indian Act, differing perspectives and the actions of First Nations leaders"),
-    parentNote: "What treaties are and why First Nations and the Crown often understood them differently, the Robinson and Numbered Treaties, what the Indian Act did, and how First Nations leaders acted to protect their people. This unit needs review with First Nations partners before launch.",
+    parentNote: "What treaties are and why First Nations and the Crown often understood them differently, the Robinson and Numbered Treaties, what the Indian Act did, and how First Nations leaders acted to protect their people.",
     generate: plain({ items: TREATIES, orders: [TREATY_ORDER] }),
   },
   {
@@ -724,7 +724,7 @@ export const units: Unit[] = [
     emoji: "⚜️",
     blurb: "Red River, Batoche and the Métis Nation",
     standards: on("History A1.2, A1.4, A2.3, A3.1, A3.3, A3.7, A3.8", "the Red River Resistance, the Manitoba Act, the North-West Resistance, and the actions of Métis and Cree leaders"),
-    parentNote: "Who the Métis are, why the Red River Métis formed a Provisional Government, what the Manitoba Act promised, why the Métis and some Cree leaders acted in 1885 and what happened to them, and why the words historians choose matter. This unit needs review with Métis partners before launch.",
+    parentNote: "Who the Métis are, why the Red River Métis formed a Provisional Government, what the Manitoba Act promised, why the Métis and some Cree leaders acted in 1885 and what happened to them, and why the words historians choose matter.",
     generate: plain({ items: METIS }),
   },
   {
@@ -733,7 +733,7 @@ export const units: Unit[] = [
     emoji: "🧡",
     blurb: "What happened, who was affected, and why we learn it",
     standards: on("History A3.4, B1.2, B3.1, B3.6", "the origins of the residential school system, its impact on First Nations, Métis and Inuit families and communities, and resistance"),
-    parentNote: "A careful, age-appropriate introduction to the residential school system: why the government and churches set it up, how it harmed children, families and communities, the work of the Truth and Reconciliation Commission, and ways Canadians can respond. The questions do not describe abuse in detail. Please talk with your child about this unit, and note that it needs review with survivors and First Nations, Métis and Inuit partners before launch.",
+    parentNote: "A careful, age-appropriate introduction to the residential school system: why the government and churches set it up, how it harmed children, families and communities, the work of the Truth and Reconciliation Commission, and ways Canadians can respond. The questions do not describe abuse in detail. Please talk with your child about this unit.",
     generate: plain({ items: RESIDENTIAL }),
   },
   {

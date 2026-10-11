@@ -2,7 +2,7 @@ import { bankUnit, type Q } from "../own";
 
 // Grade 7 social studies, the Maritimes and Mi’kma’ki: treaties, settlement, political change, changing society,
 // World War I and Maritime communities today. Indigenous, African Nova Scotian and Acadian content is factual,
-// in the present tense for living communities, and needs partner review.
+// in the present tense for living communities.
 
 const TREATIES: Q[] = [
   ["What is the name of the Mi’kmaw homeland?", "Mi’kma’ki", ["Acadia", "Rupert’s Land"], "Mi’kma’ki is the territory the Mi’kmaq have lived in for thousands of years."],
@@ -196,7 +196,7 @@ export const mikmawTreaties = bankUnit({
   emoji: "📜",
   blurb: "Learn about Mi’kma’ki, the treaties and what happened when promises were not kept.",
   parentNote:
-    "Practises Grade 7 social studies about Mi’kma’ki, the Peace and Friendship Treaties and the impact of government policies on Mi’kmaw communities. Content is factual and needs review with Mi’kmaw partners.",
+    "Practises Grade 7 social studies about Mi’kma’ki, the Peace and Friendship Treaties and the impact of government policies on Mi’kmaw communities. Content is factual.",
   standards: [
     "Reflect on the impact of government policies and the denial of treaty rights on Mi’kmaw communities and individuals in Mi’kma’ki",
     "Mi’kma’ki, the treaties and how policies affected Mi’kmaw communities",

@@ -7,7 +7,7 @@ import { levelOf, on, typeIn } from "./kit";
 // Ontario Grade 7 Social Studies (2023): Geography (Physical Patterns in a Changing World; Natural Resources
 // Around the World) and History (New France and British North America, 1713 to 1800; Canada, 1800 to 1850).
 // Strands A and B repeat across Geography and History, so standards say which set a code belongs to.
-// The deeper First Nations, Métis and Inuit expectations are deliberately left for partner review.
+// The deeper First Nations, Métis and Inuit expectations are deliberately not written here.
 
 /** A "which year" question with hand-picked wrong years (so no wrong choice is defensibly right). */
 function yearQuestion(prompt: string, year: number, wrong: number[], hint: string): Question {

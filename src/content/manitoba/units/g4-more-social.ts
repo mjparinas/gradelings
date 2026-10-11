@@ -2,7 +2,7 @@ import { bankUnit, type Q } from "../own";
 
 // More Grade 4 social studies: the northern territory studied (Nunavut), citizenship and identity, power and
 // conflict, government and property, Manitoba places and heritage, and the skills strand (maps, research,
-// thinking). Indigenous and francophone content is light, in the present tense, and needs partner review.
+// thinking). Indigenous and francophone content is light and in the present tense.
 
 const NUNAVUT_LAND: Q[] = [
   ["Nunavut is one of Canada's…", "territories", ["provinces", "oceans"], "Canada has three territories: Yukon, Northwest Territories and Nunavut."],
@@ -341,7 +341,7 @@ export const units = [
     title: "People of the North",
     emoji: "🥁",
     blurb: "Inuit languages, art, music and stories today",
-    parentNote: "A light introduction to Inuit languages, arts, games and stories in Nunavut today, and to the idea that Inuit cultures are living and continue to change. It needs partner review.",
+    parentNote: "A light introduction to Inuit languages, arts, games and stories in Nunavut today, and to the idea that Inuit cultures are living and continue to change.",
     standards: ["4-KI-013, 4-KI-014, 4-KH-036, 4-VL-007", "Indigenous contributions, languages and communities, stories and traditions of Nunavut, and the North's place in Canada"],
     items: NUNAVUT_PEOPLE,
   }),
@@ -395,7 +395,7 @@ export const units = [
     title: "Manitoba's Heritage",
     emoji: "🎻",
     blurb: "Métis, First Nations and francophone contributions",
-    parentNote: "Practises contributions of First Nations, Métis and francophone Manitobans to the province's culture, place names and history, the effects of European settlement, and why oral tradition matters. It needs partner review.",
+    parentNote: "Practises contributions of First Nations, Métis and francophone Manitobans to the province's culture, place names and history, the effects of European settlement, and why oral tradition matters.",
     standards: ["4-KI-006A, 4-KI-006F, 4-KI-007A, 4-KI-008F, 4-KI-011, 4-KI-011A, 4-KI-012, 4-KI-012F, 4-KH-034, 4-VH-008, 4-VH-009, 4-VI-003, 4-VI-004", "Indigenous and francophone achievements and contributions, the impact of European settlement, and valuing oral tradition and diversity"],
     items: HERITAGE,
   }),

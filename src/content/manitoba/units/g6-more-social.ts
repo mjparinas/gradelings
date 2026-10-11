@@ -2,7 +2,7 @@ import { bankUnit, type Q } from "../own";
 
 // More Grade 6 social studies units for the Manitoba outcomes: Canada's geography, Canada since 1945, industry and
 // technology, citizens' rights, identity and organizations, fairness, and history skills.
-// Indigenous content is light and factual, and needs review with First Nations, Métis and Inuit partners.
+// Indigenous content is light and factual.
 
 const GEOGRAPHY: Q[] = [
   ["What is the capital city of Canada?", "Ottawa", ["Toronto", "Montréal"], "The federal government meets in Ottawa."],

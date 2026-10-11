@@ -1,7 +1,7 @@
 import { bankUnit, type Q } from "../own";
 
 // Grade 6 social studies, Nova Scotia: cross-cultural understanding, traditions and beliefs around the world, and
-// the rights of children. Indigenous content is light, in the present tense, and needs partner review. Religions
+// the rights of children. Indigenous content is light and in the present tense. Religions
 // and cultures are described respectfully and never ranked.
 
 const CROSS: Q[] = [

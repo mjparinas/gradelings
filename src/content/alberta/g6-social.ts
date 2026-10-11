@@ -6,7 +6,7 @@ import { ab } from "./kit";
 // Alberta Grade 6 Social Studies: Democracy, its history, principles and operation. Written for the
 // Alberta snapshot topics; BC and Ontario social units are not shared because they cover other topics.
 // Facts about Athens and Rome are well-established history. The Haudenosaunee unit states only widely
-// shared, non-ceremonial facts in the present tense and should be reviewed with Haudenosaunee partners.
+// shared, non-ceremonial facts in the present tense.
 
 // ---------- Principles of democracy ----------
 
@@ -338,7 +338,7 @@ export const units: Unit[] = [
     emoji: "🌳",
     blurb: "Deciding by consensus",
     standards: ab("Haudenosaunee Confederacy decision making", "how the Great Law of Peace, clan mothers and consensus guide the Confederacy"),
-    parentNote: "The Haudenosaunee Confederacy (Mohawk, Oneida, Onondaga, Cayuga, Seneca and Tuscarora), its Great Law of Peace, clan mothers and consensus decisions, in the present tense as living nations. Needs review with Haudenosaunee partners before launch.",
+    parentNote: "The Haudenosaunee Confederacy (Mohawk, Oneida, Onondaga, Cayuga, Seneca and Tuscarora), its Great Law of Peace, clan mothers and consensus decisions, in the present tense as living nations.",
     generate: ({ difficulty = 2 } = {}) => levelled(HAUDENOSAUNEE, 8, difficulty),
   },
   {

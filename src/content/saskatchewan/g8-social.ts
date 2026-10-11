@@ -5,7 +5,7 @@ import { sk } from "./kit";
 
 // Saskatchewan Grade 8 Social Studies: Canadian identity (IN8.1–RW8.3). Neither BC nor Ontario teaches this
 // course in Grade 8, so these units are written for Saskatchewan. First Nations, Métis and treaty content is kept
-// to widely shared facts and needs review with partners before launch.
+// to widely shared facts.
 
 // ---------- Culture and immigration ----------
 
@@ -191,7 +191,7 @@ export const units: Unit[] = [
     emoji: "🍁",
     blurb: "What shapes who we are as Canadians",
     standards: { "ca-sk": sk("DR8.1–DR8.3", "the significance of the land and the treaty relationship, and how historical events have shaped Canadian identity") },
-    parentNote: "How the land has shaped Canadian identity, the treaty relationship, and key events such as Confederation, residential schools, the Charter and the Truth and Reconciliation Commission. This is introductory and needs review with First Nations and Métis partners.",
+    parentNote: "How the land has shaped Canadian identity, the treaty relationship, and key events such as Confederation, residential schools, the Charter and the Truth and Reconciliation Commission. This is introductory.",
     generate: bankUnit(HISTORY, { sorts: [IDENTITY_SORT], orders: [EVENT_ORDER] }),
   },
   {

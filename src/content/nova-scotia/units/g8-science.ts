@@ -1,7 +1,7 @@
 import { bankUnit, type Q } from "../own";
 
 // Grade 8 science, Climate Change: evidence, then causes and action. Includes the Mi’kmaw view that long-term
-// observation of land and sea is evidence. Indigenous content is light, in the present tense, and needs partner review.
+// observation of land and sea is evidence. Indigenous content is light and in the present tense.
 
 const EVIDENCE: Q[] = [
   ["Which describes climate rather than weather?", "The average temperature in Halifax over 30 years", ["Today's fog in Halifax", "Tomorrow's forecast of rain"], "Weather is what happens on a given day. Climate is the pattern over many years."],

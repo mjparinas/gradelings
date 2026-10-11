@@ -156,7 +156,7 @@ export const wabanakiEmpowerment = bankUnit({
   emoji: "🪶",
   blurb: "Self-government, treaties and reconciliation.",
   parentNote:
-    "Practises how Wabanaki governance empowered Wabanaki Peoples and the effects of contact and colonization on that empowerment. The content is light, in the present tense, and needs review by Wabanaki partners. It follows the Grade 8 social studies skill descriptors on power and governance and on reconciliation in the New Brunswick curriculum.",
+    "Practises how Wabanaki governance empowered Wabanaki Peoples and the effects of contact and colonization on that empowerment. The content is light and in the present tense. It follows the Grade 8 social studies skill descriptors on power and governance and on reconciliation in the New Brunswick curriculum.",
   standards: ["Civics: Power and Governance, Wabanaki: Reconciliation", "how Wabanaki governance empowered Wabanaki Peoples, and the impact of contact and colonization on that empowerment"],
   items: WABANAKI_EMPOWERMENT,
 });

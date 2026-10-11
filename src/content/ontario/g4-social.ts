@@ -7,7 +7,7 @@ import { on } from "./kit";
 // Ontario Grade 4 Social Studies (2023): Early Societies to 1500 CE, and Political and Physical
 // Regions of Canada. The First Nation (Haudenosaunee) and Inuit societies are described as living
 // peoples. Deeper Indigenous content (ceremony, spiritual life, Elders' teachings) is not written
-// here and needs review with First Nations, Métis and Inuit partners.
+// here.
 
 // ---------- Early societies ----------
 

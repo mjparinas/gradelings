@@ -1,7 +1,7 @@
 import { bankUnit, type Q } from "../own";
 
 // Nunavut-only social studies units for Grades 3 and 4. Facts about Nunavut's places, symbols and languages come from the
-// Government of Nunavut. Inuktut words vary by community and need review by Inuktut speakers before launch.
+// Government of Nunavut. Inuktut words vary by community.
 
 const territory: Q[] = [
   ["What is the capital of Nunavut?", "Iqaluit", ["Rankin Inlet", "Cambridge Bay", "Arviat"], "Iqaluit is on Baffin Island."],
@@ -124,7 +124,7 @@ export const ourTerritory3 = bankUnit({
   emoji: "🗺️",
   blurb: "Places, symbols and facts about Nunavut.",
   parentNote:
-    "Covers Nunavut's regions, capital, communities, symbols and landscape. Some names are written in Inuktitut. Nunavut-only content, written from Government of Nunavut sources; it needs review by Inuit partners.",
+    "Covers Nunavut's regions, capital, communities, symbols and landscape. Some names are written in Inuktitut. Nunavut-only content, written from Government of Nunavut sources.",
   standards: ["Elementary Social Studies (NWT, 1993), Geography", "Nunavut's regions, communities, symbols and landscape"],
   items: territory,
 });
@@ -146,7 +146,7 @@ export const languages4 = bankUnit({
   emoji: "💬",
   blurb: "Inuktut, English and French, and how they are written.",
   parentNote:
-    "Covers Nunavut's official languages, Inuit words and the writing systems used for Inuktitut and Inuinnaqtun. A few words are given in Inuktitut; spellings and words vary by community and need review by Inuktut speakers. This does not replace Inuktut language arts.",
+    "Covers Nunavut's official languages, Inuit words and the writing systems used for Inuktitut and Inuinnaqtun. A few words are given in Inuktitut; spellings and words vary by community. This does not replace Inuktut language arts.",
   standards: ["Inuuqatigiit (NWT, 1996), Heritage and culture", "the languages of Nunavut, Inuit words, and syllabics and Roman letters"],
   items: languages,
 });

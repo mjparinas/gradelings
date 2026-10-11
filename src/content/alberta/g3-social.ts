@@ -6,7 +6,6 @@ import { ab } from "./kit";
 // Alberta Grade 3 social studies: Alberta and the prairies. Indigenous content is light and written in the
 // present tense about living communities; it names distinct peoples ("some", "many") and leaves out
 // anything sacred. Discrimination is introduced through fairness, respect and standing up for others.
-// All of it should be reviewed with Alberta teachers and with First Nations and Métis partners.
 
 // ---------- Alberta's regions and boundaries ----------
 

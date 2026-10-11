@@ -6,7 +6,7 @@ import { on } from "./kit";
 
 // Ontario Grade 3 Social Studies (2023): Communities in Canada, 1780–1850, and Living and Working in
 // Ontario. First Nations, Métis and Inuit communities are described as distinct, living peoples; the
-// deeper Indigenous expectations are not written here and need review with partners.
+// deeper Indigenous expectations are not written here.
 
 // ---------- Life in Canada, then and now ----------
 

@@ -3,7 +3,7 @@ import type { FrameworkGuides } from "../guides";
 
 // Parent guides for Ontario. Sources: the Ontario Curriculum (Mathematics 2020, Language 2023,
 // The Kindergarten Program 2016), Growing Success (2010) for learning skills and report cards,
-// and EQAO (eqao.com) for the provincial assessments. Ontario wording needs a teacher review.
+// and EQAO (eqao.com) for the provincial assessments.
 
 export const ONTARIO_GUIDES: FrameworkGuides = {
   french: {

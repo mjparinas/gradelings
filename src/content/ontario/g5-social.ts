@@ -311,7 +311,7 @@ export const units: Unit[] = [
     emoji: "🗺️",
     blurb: "First Nations, Métis and Inuit",
     standards: on("A3.1, A3.2", "major Indigenous nations and regions, and relationships among nations before and during early contact"),
-    parentNote: "Who First Nations, Métis and Inuit are, some major nations and the regions they are connected to, and how nations traded and made agreements. Wording says 'some' and 'many' because each nation is different. Needs review with Indigenous partners.",
+    parentNote: "Who First Nations, Métis and Inuit are, some major nations and the regions they are connected to, and how nations traded and made agreements. Wording says 'some' and 'many' because each nation is different.",
     generate: ({ difficulty = 2 } = {}) => levelled(PEOPLES, 8, difficulty),
   },
   {
@@ -338,7 +338,7 @@ export const units: Unit[] = [
     emoji: "🦫",
     blurb: "Trade, sharing and consequences",
     standards: on("A1.1, A1.2, A3.5, A3.6", "the fur trade, its benefits and harms, and the ethnogenesis of the Métis"),
-    parentNote: "Who traded what and why, what each side gained, the harm of disease and lost land, and how the Métis people emerged. Needs review with Indigenous partners.",
+    parentNote: "Who traded what and why, what each side gained, the harm of disease and lost land, and how the Métis people emerged.",
     generate: ({ difficulty = 2 } = {}) => levelled(FUR, 8, difficulty),
   },
   {
@@ -356,7 +356,7 @@ export const units: Unit[] = [
     emoji: "📜",
     blurb: "Past agreements, present rights",
     standards: on("A1.3, B3.6", "treaties, land claims and the duty to consult"),
-    parentNote: "What treaties and land claims are, why they still matter today, and what it means for governments to consult First Nations, Métis and Inuit. Needs review with Indigenous partners.",
+    parentNote: "What treaties and land claims are, why they still matter today, and what it means for governments to consult First Nations, Métis and Inuit.",
     generate: ({ difficulty = 2 } = {}) => levelled(TREATIES, 8, difficulty),
   },
   {
