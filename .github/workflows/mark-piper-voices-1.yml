@@ -11,6 +11,7 @@ jobs:
     steps:
       - env:
           GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
         run: |
           set -euo pipefail
           gh release view piper-voices-1 --json body -q .body > old.md
