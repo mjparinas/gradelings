@@ -12,6 +12,7 @@ import { useActiveProfile, useChildSettings, useDerived, useStore } from "@/lib/
 import { useBand } from "../band";
 import { Critter, SpeechBubble } from "../Critter";
 import { Dialog, Page, ProgressBar, subjectVars } from "../ui";
+import { MembershipLock } from "./MembershipLock";
 import { useAllowed } from "./useAllowed";
 import { useClasswork } from "./useClasswork";
 
@@ -207,12 +208,7 @@ export function UnitList({ subject }: { subject: SubjectId }) {
 
       <UnitDialog unitKey={selected} onClose={() => setSelected(null)} onLocked={() => setLocked(true)} />
 
-      <Dialog open={locked} title="Ask a grown-up" onClose={() => setLocked(false)}>
-        <p className="mb-5 font-read text-lg text-ink-soft">This lesson opens with a family membership. A grown-up can turn it on in the grown-ups area.</p>
-        <button type="button" className="btn btn-good min-h-14 w-full text-xl" onClick={() => setLocked(false)}>
-          OK
-        </button>
-      </Dialog>
+      <MembershipLock open={locked} onClose={() => setLocked(false)} />
     </Page>
   );
 }

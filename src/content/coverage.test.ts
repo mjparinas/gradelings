@@ -89,8 +89,8 @@ describe("public pages", () => {
       .filter((f) => !NO_CTA.some((n) => f.replaceAll("\\", "/").includes(`/app${n}`)))
       .filter((f) => {
         const src = readFileSync(f, "utf8");
-        // Teacher pages end with the teacher call to action instead.
-        return !/<SitePage cta\b/.test(src) && !src.includes('href="/play/"') && !src.includes("<TeacherCta");
+        // Teacher pages end with the teacher call to action. SubscribeActions includes the free-trial link.
+        return !/<SitePage cta\b/.test(src) && !src.includes('href="/play/"') && !src.includes("<TeacherCta") && !src.includes("<SubscribeActions");
       });
     expect(missing).toEqual([]);
   });

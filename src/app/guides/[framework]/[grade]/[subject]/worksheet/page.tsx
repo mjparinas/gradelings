@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { PrintButton } from "@/components/site/PrintButton";
 import { SampleQuestion, answerText } from "@/components/site/SampleQuestion";
 import { breadcrumbJsonLd } from "@/components/site/jsonld";
-import { Crumbs, SitePage } from "@/components/site/SiteChrome";
+import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
 import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, unitKey } from "@/components/site/curriculum";
 import { guidePath } from "@/components/site/guides";
 import { hashSeed, withSeed } from "@/content/random";
@@ -130,7 +130,7 @@ export default async function WorksheetPage({ params }: Props) {
         </ol>
       </section>
 
-      <section className="card mt-10 flex flex-col gap-3 p-6 print:hidden sm:flex-row sm:items-center">
+      <section className="card mt-10 flex flex-col flex-wrap gap-3 p-6 print:hidden sm:flex-row sm:items-center">
         <div className="flex-1">
           <p className="text-xl font-bold">Want more than 10 questions?</p>
           <p className="font-read text-ink-soft">
@@ -141,9 +141,7 @@ export default async function WorksheetPage({ params }: Props) {
             .
           </p>
         </div>
-        <Link href="/play/" className="btn btn-good min-h-12 px-6 text-lg">
-          Try it free
-        </Link>
+        <SubscribeActions size="md" />
       </section>
     </SitePage>
   );

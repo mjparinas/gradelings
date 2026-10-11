@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
-import { Crumbs, SitePage } from "@/components/site/SiteChrome";
+import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
 import { guidePath } from "@/components/site/guides";
 import { COMPETITORS, PRICE_CHECKED, competitorBySlug } from "@/content/compare";
 import { APP_NAME } from "@/lib/brand";
@@ -145,11 +144,11 @@ export default async function ComparePage({ params }: Props) {
       </section>
 
       <section className="card mt-10 flex flex-col gap-2 p-6">
-        <p className="text-xl font-bold">Try {APP_NAME} free for {TRIAL_DAYS} days</p>
-        <p className="font-read text-ink-soft">No card needed. Everything is on, and your child’s progress is reported in your province’s report-card levels.</p>
-        <Link href="/play/" className="btn btn-good min-h-14 w-fit px-8 text-xl">
-          Try it free
-        </Link>
+        <p className="text-xl font-bold">Subscribe, or try {APP_NAME} free for {TRIAL_DAYS} days</p>
+        <p className="font-read text-ink-soft">Subscribe straight away, or start the free trial with no card. Everything is on, and your child’s progress is reported in your province’s report-card levels.</p>
+        <div className="flex flex-wrap gap-3">
+          <SubscribeActions />
+        </div>
       </section>
     </SitePage>
   );

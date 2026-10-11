@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { GUIDE_FRAMEWORKS } from "@/content/guides";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
-import { TRIAL_DAYS } from "@/lib/plan";
+import { SUBSCRIBE_HREF, TRIAL_DAYS } from "@/lib/plan";
 import { teacherPath, TEACHER_SIGNUP } from "./teachers";
 
 export function SiteHeader() {
@@ -30,10 +30,18 @@ export function SiteHeader() {
           <Link href={teacherPath.hub()} className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
             Teachers
           </Link>
+          <a href={SUBSCRIBE_HREF} className="hidden rounded-lg px-2 py-1 font-bold hover:bg-black/5 lg:inline">
+            Subscribe
+          </a>
           <Link href="/play/" className="btn btn-good h-11 px-4 text-base">
             Play free
           </Link>
         </nav>
+      </div>
+      <div className="border-t border-line px-4 py-2 lg:hidden">
+        <a href={SUBSCRIBE_HREF} className="btn btn-good h-11 w-full text-base">
+          Subscribe
+        </a>
       </div>
     </header>
   );
@@ -154,17 +162,30 @@ export function PageCta() {
         Ready to try {APP_NAME}?
       </h2>
       <p className="font-read text-ink-soft">
-        Curriculum-matched practice for Kindergarten to Grade 9 in {provinces}, with kind hints, learning games and no ads. Free for {TRIAL_DAYS} days, no card needed.
+        Curriculum-matched practice for Kindergarten to Grade 9 in {provinces}, with kind hints, learning games and no ads. Subscribe now, or try everything free for {TRIAL_DAYS} days with no card.
       </p>
       <div className="flex flex-wrap gap-3">
-        <Link href="/play/" className="btn btn-good min-h-14 px-8 text-xl">
-          Try it free
-        </Link>
+        <SubscribeActions />
         <Link href="/pricing/" className="btn min-h-14 px-6 text-lg">
           See pricing
         </Link>
       </div>
     </section>
+  );
+}
+
+/** Subscribe is the main action. The free trial stays one tap away for parents who want to try first. */
+export function SubscribeActions({ size = "lg", trialLabel = "Try it free", className = "" }: { size?: "md" | "lg"; trialLabel?: string; className?: string }) {
+  const cls = size === "lg" ? "min-h-14 px-8 text-xl" : "min-h-12 px-6 text-lg";
+  return (
+    <>
+      <a href={SUBSCRIBE_HREF} className={`btn btn-good ${cls} ${className}`}>
+        Subscribe
+      </a>
+      <Link href="/play/" className={`btn ${cls} ${className}`}>
+        {trialLabel}
+      </Link>
+    </>
   );
 }
 
