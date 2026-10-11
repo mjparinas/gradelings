@@ -39,6 +39,7 @@ cat > "$OUT/known.txt" <<'L'
 /sites/default/files/publications/eelc_outcomes_framework_7.pdf
 /sites/default/files/publications/eelc_outcomes_framework_8.pdf
 /sites/default/files/publications/eelc_outcomes_framework_9.pdf
+/sites/default/files/publications/intermediate_pos_2025-2026.pdf
 /sites/default/files/publications/eelc_program_of_studies_k-6.pdf
 /sites/default/files/publications/intermediate_program_of_studies_and_authorized_materials.pdf
 /sites/default/files/publications/eelc_math_9_5.pdf
