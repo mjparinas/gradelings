@@ -99,20 +99,20 @@ Tests are duplicated across screen sizes only where layout can break:
 - **Scoring:** no single provincial scale, so one four-level scheme (Beginning, Approaching, Meeting, Exemplary) with the usual kid labels. Same "practice, not a report-card mark" rule.
 - **French is not built** for Saskatchewan (no French guide; the guides test only requires one where a framework has French).
 - **Shared units:** BC units via `share(...)`, Ontario units via `reuse(...)`, plus Saskatchewan-only units in `src/content/saskatchewan/`. Known gaps (French, partly covered outcomes, review needs) are listed in the research README.
-- **First Nations, Métis and treaty content** is light and needs partner review.
+- **First Nations, Métis and treaty content** is light.
 
 ### Manitoba
 - **Framework `ca-mb`, slug `manitoba`**, Kindergarten to Grade 9 in math, language, science, social studies and both French subjects (Immersion Kindergarten to Grade 9, Core French Grade 4 to 9). Standards are the learning outcomes of the Manitoba curriculum, cited by code (`5.N.1`, `ELA.5.B2.3`, `SCI.5.E.3`, `5-KH-040`) and checked by `content.test.ts` against `docs/research/manitoba/outcomes.json` (record: `docs/research/manitoba/README.md`; rebuild with `fetch.sh` and `build_outcomes.py`). Core French cites strands, not codes.
 - **Report card:** Levels 1 to 4 (with NYD). Grades 1 to 6 show levels only, Grades 7 to 9 add percentages, Kindergarten shows neither. Same kid labels and "practice, not a report-card mark" rule.
 - **Content:** BC units via `share`, Ontario units via `adopt(...)`, Manitoba-only units in `src/content/manitoba/` (`mb-` ids, `bankUnit` in `own.ts`). Helpers are in `src/content/manitoba/kit.ts`.
-- **First Nations, Métis and Inuit content** is light and needs partner review.
+- **First Nations, Métis and Inuit content** is light.
 
 ### Nova Scotia
 - **Framework `ca-ns`, slug `nova-scotia`**, Primary (Kindergarten) to Grade 9 in math, language, science, social studies and both French subjects (Immersion Primary to Grade 9, Core French Grade 4 to 9). Standards are the learning outcomes of the Nova Scotia curriculum (curriculum.novascotia.ca). Math cites outcome codes (`N06`, `PR01`); Grade 9 language cites outcome numbers (`4.4`); language Primary to Grade 8 cites the strand or outcome title; science and social studies have no codes, so they cite the learning bundle or the outcome's headline. `content.test.ts` checks every citation against `docs/research/nova-scotia/outcomes.json` (record: `docs/research/nova-scotia/README.md`; rebuild with `fetch.sh` and `build_outcomes.py`). French cites course names and strands.
 - **Report card:** the wording changes by grade band. Primary: Beginning, Developing, Meeting, Exceeding. Grades 1 to 3: ND, DE, WD. Grades 4 to 6: letter grades with Limited, Basic, Good, Thorough. Grades 7 to 9: percentage bands. Same kid labels and "practice, not a report-card mark" rule.
 - **Content:** BC units via `share`, other provinces' units via `adopt(...)` (only where the questions are free of another province's names; `content.test.ts` checks), Nova Scotia-only units in `src/content/nova-scotia/` (`ns-` ids, `bankUnit` in `own.ts`, banks in `units/`). Each own bank needs at least 24 distinct items. Helpers are in `kit.ts`.
 - **Parent guides:** French, Essential Graduation Competencies (`/guides/nova-scotia/graduation-competencies/`) and provincial assessments (Grades 3, 6 and 8; schedule changes, so the guide points to the department).
-- **Mi'kmaw, Acadian, African Nova Scotian and Gaelic content** is deliberately light and needs partner review before launch. Don't add more without that.
+- **Mi'kmaw, Acadian, African Nova Scotian and Gaelic content** is deliberately light.
 
 ### New Brunswick
 - **Framework `ca-nb`, slug `new-brunswick`**, Kindergarten to Grade 9 for the anglophone sector, in math, language, science, social studies and both French subjects (Immersion Grade 1 to 9, Core French Grade 4 to 9). The curriculum (curriculum.nbed.ca) has no outcome codes, so a unit cites a **strand and big idea** ("Number: Operations", "Wabanaki: Treaty Education"), and the standards text is the skill descriptors. `content.test.ts` checks every citation against `docs/research/new-brunswick/outcomes.json` (record: `docs/research/new-brunswick/README.md`; rebuild with `fetch.sh` and `build_outcomes.py`, which also writes `src/content/new-brunswick/overall.ts`). French cites strands.
@@ -121,23 +121,23 @@ Tests are duplicated across screen sizes only where layout can break:
 - **Report card:** Kindergarten to Grade 8 use the four-point scale (Working below 1, Approaching 2, Meeting 3 or 3+, Excelling 4 or 4+). Grade 9 uses the high school wording (numerical course grades). Same kid labels and "practice, not a report-card mark" rule.
 - **Content:** BC units via `share`, other provinces' units via `adopt(...)` (only where the questions are free of another province's names; `content.test.ts` checks), New Brunswick-only units in `src/content/new-brunswick/` (`nb-` ids, `bankUnit` in `own.ts`, banks in `units/`). Each own bank needs at least 24 distinct items. Helpers are in `kit.ts`.
 - **Parent guides:** French, global competencies (`/guides/new-brunswick/global-competencies/`) and provincial assessments (`/guides/new-brunswick/provincial-assessments/`; schedule changes, so the guide points to the department).
-- **Wabanaki, Acadian and Black Loyalist content** is deliberately light, in the present tense, and needs partner review before launch. Don't add more without that.
+- **Wabanaki, Acadian and Black Loyalist content** is deliberately light and in the present tense.
 
 ### Nunavut
 - **Framework `ca-nu`, slug `nunavut`**, Kindergarten to Grade 9 in math, language, science, social studies and Core French (Grades 4 to 9; no immersion). Nunavut's approved curriculum (Department of Education, "Nunavut Approved Curriculum and Teaching Resources", 2019 and 2023-24 editions) is mandatory and mixes guides adopted from other jurisdictions with Nunavut-made resources, in four strands (Nunavusiutit, Iqqaqqaukkaringniq, Uqausiliriniq, Aulajaaqtut). Math follows the Alberta K-9 program (2007); Kindergarten to Grade 6 science and English language arts follow the NWT guides (2004, 2011); Grades 7 to 9 science is the Nunavut adaptation of Alberta Science (2003); social studies is Inuuqatigiit and the NWT social studies guides plus the Nunavut Land Claims Agreement; French is French as an Additional Language for Nunavut (Manitoba's French: Communication and Culture). A new made-in-Nunavut curriculum is being phased in from Kindergarten and Grade 1, so recheck gov.nu.ca.
 - **Standards** cite the approved guide and its strand (for example "Alberta Mathematics K–9 (2007), Number"); `src/content/nunavut/nunavut.test.ts` checks them against `docs/research/nunavut/approved.json`.
 - **Content** is mostly reused: `src/content/nunavut/plan.ts` lists, per grade and subject, the BC units Nunavut shares and the Manitoba, Alberta, Ontario or Saskatchewan units it copies with Nunavut standards (`nunavutGrade` in `kit.ts`). Only Manitoba and Alberta units that carry no other province's names are used, and Indigenous content from other jurisdictions is never borrowed. Where the guides are WNCP-based (Kindergarten to Grade 6 math, language), the match is by topic and the citation is the strand, not an outcome code.
-- **Nunavut-only units** (`nu-` ids) are in `src/content/nunavut/units/`: territory, languages, regions, Inuit Qaujimajatuqangit, the land claim, governing Nunavut, the circumpolar world and three Arctic science units. Inuit and Inuktut content is light, present tense, and needs review by Inuit partners and the Department of Education. Inuktut words vary by community.
+- **Nunavut-only units** (`nu-` ids) are in `src/content/nunavut/units/`: territory, languages, regions, Inuit Qaujimajatuqangit, the land claim, governing Nunavut, the circumpolar world and three Arctic science units. Inuit and Inuktut content is light and in the present tense. Inuktut words vary by community.
 - **Report card:** no territory-wide scale could be confirmed, so the framework uses four plain practice steps (Beginning, Approaching, Meeting, Exceeding), like Alberta. Guides are in `src/content/nunavut/guides.ts`; the competencies page is the Inuit Qaujimajatuqangit page (`/guides/nunavut/iq-principles/`). Record: `docs/research/nunavut/`.
 
 ### Northwest Territories
 - **Framework `ca-nt`, slug `northwest-territories`**, Kindergarten to Grade 9, including BC's two French subjects. The NWT is replacing the Alberta curriculum with the BC curriculum adapted for the NWT, phased in since 2023 (NWT Education, Culture and Employment, JK-12 Curriculum Renewal; Grades 1 to 9 on it in 2026-27, Kindergarten to Grade 3 as a draft), reporting on BC's four-point proficiency scale. So an NWT course is the matching BC course with a `ca-nt` standards entry (`nwtGrade` in `src/content/nwt/kit.ts`); nothing is copied, and a new BC unit appears for the NWT automatically. Alberta is not used for the NWT.
-- **NWT-only units** live in `src/content/nwt/units/` with `nt-` ids: Our Territory (Grade 3), Dene Kede (Grade 5) and Inuuqatigiit (Grade 6) in social studies. Dene and Inuvialuit content is light, present tense, and needs review by Dene and Inuvialuit partners and NWT Education, Culture and Employment. Source and record: `docs/research/northwest-territories/`.
+- **NWT-only units** live in `src/content/nwt/units/` with `nt-` ids: Our Territory (Grade 3), Dene Kede (Grade 5) and Inuuqatigiit (Grade 6) in social studies. Dene and Inuvialuit content is light and in the present tense. Source and record: `docs/research/northwest-territories/`.
 - **Guides, report-card page and wording** are BC's reworded for the NWT (`NORTHWEST_TERRITORIES` in `frameworks.ts`, `NWT_GUIDES` in `guides.ts`).
 
 ### Yukon
 - **Framework `ca-yt`, slug `yukon`**, Kindergarten to Grade 9, including BC's two French subjects. Yukon implements the BC curriculum adapted for the Yukon and reports on BC's Provincial Proficiency Scale, so a Yukon course is the matching BC course with a `ca-yt` standards entry (`yukonGrade` in `src/content/yukon/kit.ts`); nothing is copied, and a new BC unit appears for Yukon automatically.
-- **Yukon-only units** (Yukon First Nations governance and citizenship in Grade 5 social studies) live in `src/content/yukon/units/` with `yk-` ids. Add other Yukon additions the same way. Yukon First Nations content is light, present tense, and needs review by Yukon First Nations partners. Source and record: `docs/research/yukon/`.
+- **Yukon-only units** (Yukon First Nations governance and citizenship in Grade 5 social studies) live in `src/content/yukon/units/` with `yk-` ids. Add other Yukon additions the same way. Yukon First Nations content is light and in the present tense. Source and record: `docs/research/yukon/`.
 - **Guides, report-card page and wording** are BC's reworded for the Yukon (`YUKON` in `frameworks.ts`, `YUKON_GUIDES` in `guides.ts`).
 
 ### Ontario
@@ -145,7 +145,7 @@ Tests are duplicated across screen sizes only where layout can break:
 - **Subjects:** math, language, science and technology, social studies (Grades 1 to 6), geography and history (Grades 7 and 8), Grade 9 science (SNC1W) and geography (CGC1W), Kindergarten (the Kindergarten Program), plus French as a second language.
 - **Report card:** Levels 1 to 4 (Growing Success). Grades 1 to 6 show letter grades, Grades 7 to 9 show percentage ranges, Kindergarten shows neither. The same kid labels (🌱 🌿 🌳 ⭐) and the same "practice, not a report-card mark" rule apply.
 - **Shared units:** where a BC unit truly fits, an Ontario course reuses it with Ontario's standards text (`Course.shares`). Sample the questions before sharing.
-- **First Nations, Métis and Inuit content** is deliberately light and needs partner review before launch. Don't add more without that.
+- **First Nations, Métis and Inuit content** is deliberately light.
 - **French as a second language:** Core French from Grade 4 and French Immersion from Grade 1 (Kindergarten immersion varies by board, so there is none). Extended French is not built.
 - **Parent guides:** the hub, a guide for each grade, subject help pages and printable sheets, a learning skills guide (`/guides/ontario/learning-skills/`) and an EQAO guide (`/guides/ontario/eqao/`). Check EQAO details against eqao.com before launch.
 
@@ -155,7 +155,7 @@ Tests are duplicated across screen sizes only where layout can break:
 - **Report card:** Alberta has no provincial scale. The framework uses four plain practice steps (Beginning, Approaching, Meeting, Exceeding) with the usual 🌱 🌿 🌳 ⭐ kid labels, and every report still says this is practice, not a report-card mark. Provincial Achievement Tests (Grades 6 and 9) and early literacy and numeracy screening are the "provincial assessments"; the schedule is changing, so the guides tell parents to check alberta.ca.
 - **Shared units:** an Alberta course reuses a BC or Ontario unit with Alberta standards text (`Course.shares`) only where it truly fits the Alberta grade. An Alberta child therefore downloads Ontario's file for the grade too (`EXTRA_DEPENDS` in `src/content/index.ts`). Alberta grade placement often differs (for example decimals and percent in Grade 4, integers in Grade 6, Colonial Canada and Confederation in Grade 4 social studies, ancient civilizations in Grade 5, democracy in Grade 6), so those grades have more Alberta-written units.
 - **French:** Immersion from Kindergarten to Grade 9 and Core French (the French as a Second Language program) from Grade 4 to Grade 9, in `src/content/alberta/french.ts`. Immersion Grades 7–9 has no checked citation yet.
-- **First Nations, Métis and Inuit content** is deliberately light and needs partner review before launch. Don't add more without that.
+- **First Nations, Métis and Inuit content** is deliberately light.
 - **Parent guides:** the hub, a guide for each grade, competencies (`/guides/alberta/competencies/`), the Provincial Achievement Tests page (`/guides/alberta/pat/`) and a French guide.
 
 ### Scoring follows the report card
@@ -183,11 +183,11 @@ Tests are duplicated across screen sizes only where layout can break:
   - The grades each province offers are fixed in `FRENCH_GRADES` in `src/content/coverage.test.ts`. Adding a province means adding its French rule there.
 - **They never count toward "every unit in your grade" goals or the Grade Champion trophy** (`isCoreSubject`), and reports only list French units once a child has started them.
 - **Immersion prompts are in French and set `lang: "fr"`**, so read-aloud uses a French voice (`speak(text, uri, "fr")`). Hints stay in English for parents. Core French prompts are in English with French answers.
-- **BC Big Ideas are copied word for word from the official BC PDFs** (Immersion: `en_fral_k-9_elab.pdf`; Core French: `en_languages_5-10_core-french.pdf`). Competencies and content are still to be reviewed by a French teacher. Ontario French units cite the Ontario FSL curriculum.
+- **BC Big Ideas are copied word for word from the official BC PDFs** (Immersion: `en_fral_k-9_elab.pdf`; Core French: `en_languages_5-10_core-french.pdf`). Ontario French units cite the Ontario FSL curriculum.
 - **French read-aloud** (`src/lib/readaloud.ts`) speaks each part of a question in its own language: Immersion prompts are French; Core French prompts are English with French marked in « » (`tagCoreFrench`), and `choicesLang`/`visualLang` mark French choices and stories. Parents pick a separate French voice in Settings (`grademap.voice.fr`, per device). Hints are always read in the English voice.
 - **French trophies** live in their own `FRENCH_TROPHIES` list in `src/lib/trophies.ts` (category "French"), plus a French mastery trophy per grade; French still doesn't count toward Grade Champion. French trophies and the two French practice ladders only show where the child's grade and curriculum teach that French (`applies`), so none appear in Saskatchewan or Ontario Kindergarten.
 - **Parent guide:** each province has a French guide at `/guides/{framework-slug}/french/` that compares Core French and French Immersion for that province.
-- **Verify French against the official sources:** curriculum.gov.bc.ca (`/curriculum/fral/{grade}/core` and `/curriculum/core-french/{grade}`) for BC, and the Ministry's FSL curriculum for Ontario. Have a French teacher review the wording before launch.
+- **Verify French against the official sources:** curriculum.gov.bc.ca (`/curriculum/fral/{grade}/core` and `/curriculum/core-french/{grade}`) for BC, and the Ministry's FSL curriculum for Ontario.
 
 ### Ages
 - **Three age bands** (`ageBandFor`): little (K–1), middle (2–4) and big (5–9). The band changes copy, size and features:
@@ -440,15 +440,10 @@ Full guide: `docs/CONTENT_GUIDE.md`. The essentials:
   - present tense, living communities;
   - never treat all Nations as one ("some", "many");
   - no sacred or ceremonial details and no stereotyped emoji;
-  - deeper content should be developed with partners such as FNESC.
 
 ## Open items
 
-- **Before launch, BC teachers need to review all content.**
-  - Several Big Ideas statements were written from memory; check them against curriculum.gov.bc.ca.
-  - Check history dates in the Grade 4–5 social studies units.
-  - Grade 8–9 content (shared helpers in `src/content/grades/kit.ts`) uses the Big Ideas and content topics published on curriculum.gov.bc.ca, but the questions and unit detail still need teacher review. The Grade 9 Indigenous history unit should be reviewed with First Peoples partners.
-- **iOS Safari quirks** (safe areas, `100dvh`, read-aloud voices): the device layout tests now pass in real WebKit (Playwright's WebKit build, not Safari). A check on a real iPhone or iPad is still needed, especially for read-aloud voices.
+- **iOS Safari:** the owner tested on an iPad and it works well. The device layout tests pass in real WebKit. An iPhone check is not needed.
 - **Deployment** is not done. Steps, env vars and the launch checklist are in `docs/DEPLOY.md`.
 - **Legal and content:** `/privacy/` and `/terms/` are drafts needing legal review; `LEGAL_NAME` and `CONTACT_EMAIL` in `src/lib/brand.ts` are placeholders.
 - **Accessibility:** automated checks pass, but nobody has yet tried the app with a screen reader (VoiceOver, TalkBack, NVDA) or a keyboard-only run-through, and the kids' UI has only had a simulated colour-blind pass (`scripts/colour-blind.mjs`, run by `e2e-a11y.mjs`), not testing with colour-blind children.
