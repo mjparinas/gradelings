@@ -5,7 +5,7 @@ import type { FamilyInfo } from "./model";
 
 export const TRIAL_DAYS = 30;
 export const FREE_UNITS_PER_COURSE = 2;
-export const MAX_CHILDREN = 4;
+export const MAX_CHILDREN = 3;
 
 export const PRICES = {
   month: { amount: 14.99, currency: "CAD", label: "$14.99/month" },

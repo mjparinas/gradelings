@@ -76,7 +76,7 @@ Tests are duplicated across screen sizes only where layout can break:
 
 ### Money
 - **No ads, ever. No tracking pixels. Never sell data.** Kids can never buy anything; coins are earned only by learning.
-- **Family plan:** C$14.99/month or C$119.99/year, with "Save 33%" on the yearly plan, for up to 4 children.
+- **Family plan:** C$14.99/month or C$119.99/year, with "Save 33%" on the yearly plan, for up to 3 children.
   - The plan includes a 30-day free trial with everything on and no card needed.
   - After the trial, the first 2 units of every course stay free forever.
   - All of this lives in `src/lib/plan.ts`; read the numbers from there.
@@ -263,7 +263,7 @@ Tests are duplicated across screen sizes only where layout can break:
   - Overview.
   - Reports: 7/14/30/90 days, with charts, strengths, next steps, a table of every unit and a print view.
   - Report cards, with a printable conversation sheet for each child (`src/lib/conference.ts`): where practice stands per subject in the province's own scale, what to ask the teacher and a two-week plan. It says it is practice, not a report-card mark.
-  - Children: up to 4; a birth year suggests a grade; a curriculum can be picked per child.
+  - Children: up to 3; a birth year suggests a grade; a curriculum can be picked per child.
   - Settings per child.
   - Account & sync, Subscription, and Privacy (JSON export, erase device, delete account).
 - **Calm and focus options** (per child, all off by default, in Settings): calm motion, quiet sounds, hide timers, hold trophy pop-ups until after the lesson, and shorter sessions (5 questions). They change presentation only; scoring is unchanged. They exist for children who find motion, noise or time pressure hard, including many with ADHD. Never make health claims about them.

@@ -1,5 +1,6 @@
 import "server-only";
 import { APP_NAME, CONTACT_EMAIL } from "@/lib/brand";
+import { FREE_UNITS_PER_COURSE, MAX_CHILDREN } from "@/lib/plan";
 import type { Email } from "./email";
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
@@ -91,7 +92,7 @@ function recapLines(children: TrialChild[]): string[] {
     ]);
 }
 
-const KEEP_FREE = "After the trial, the first 2 units of every course stay free forever. The family plan keeps everything unlocked for up to 4 children.";
+const KEEP_FREE = `After the trial, the first ${FREE_UNITS_PER_COURSE} units of every course stay free forever. The family plan keeps everything unlocked for up to ${MAX_CHILDREN} children.`;
 
 /** Mid-trial: what the trial has done so far. Sent once, to parents whose children have practised. */
 export function trialRecapEmail(to: string, origin: string, daysLeft: number, children: TrialChild[]): Email {

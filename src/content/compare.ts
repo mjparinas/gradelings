@@ -1,6 +1,7 @@
 import { FRAMEWORKS } from "@/content/frameworks";
 import { listRegions } from "@/content/regions";
 import { APP_NAME } from "@/lib/brand";
+import { MAX_CHILDREN } from "@/lib/plan";
 // Competitor comparison pages for the app. Facts about other products come from their public pages
 // and app store listings (see docs/research/competitors.md) and are dated, because
 // prices and features change. Keep the wording factual and fair, and re-check
@@ -39,7 +40,7 @@ export const COMPETITORS: Competitor[] = [
       {
         topic: "Price",
         them: `IXL Canada lists C$12.95 a month for one subject, C$19.95 for Math and English together, and C$24.95 for All Access, as of ${PRICE_CHECKED}. The free tier limits how many questions a child can answer each day.`,
-        us: "One family plan covers up to 4 children and every subject. There is a 30-day free trial with no card, and the first 2 units of every course stay free afterwards.",
+        us: `One family plan covers up to ${MAX_CHILDREN} children and every subject. There is a 30-day free trial with no card, and the first 2 units of every course stay free afterwards.`,
       },
       {
         topic: "How progress is shown",
