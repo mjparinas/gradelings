@@ -224,7 +224,6 @@ export const PLAN: Record<string, Entry[]> = {
     ["sound-alikes", "share", "4.4; 10.2", "homophones and homographs"],
     ["parts-of-speech", "share", "10.2", "pronouns, adverbs and other parts of speech"],
     ["super-sentences", "share", "10.2", "compound sentences, fragments and run-ons"],
-    ["mb-plan-writing", "adopt", "9.1; 9.2; 10.1", "choosing topics, planning and the four kinds of writing"],
     ["paragraph-power", "share", "9.2; 10.1", "topic sentences, supporting details and transition words"],
     ["mb-revise-writing", "adopt", "10.1; 10.4", "using vivid details, fixing unclear parts and polishing finished work"],
     ["mb-learning-goals", "adopt", "4.5", "setting goals and noticing the strategies you use as a reader"],
@@ -235,11 +234,9 @@ export const PLAN: Record<string, Entry[]> = {
     ["mb-adaptations", "adopt", "Life Science: Habitats", "how plants and animals survive where they live, with features that meet their needs"],
     ["light-4", "adopt", "Physical Science: Light", "light sources, shadows, reflection, refraction and how light travels"],
     ["sound-4", "adopt", "Physical Science: Sound", "vibrations, pitch, loudness, echoes and how we hear"],
-    ["rocks-4", "adopt", "Space and Earth Science: Rocks, Minerals, and Erosion", "igneous, sedimentary and metamorphic rocks, and how rocks and minerals form"],
     ["mb-science-skills", "adopt", "GCO 2", "measuring, predicting, testing and working safely in science"],
   ],
   "4/social": [
-    ["physical-regions-4", "adopt", "4.4.1; 4.4.2", "the landforms and climate of Canada's physical regions and what people do in each"],
   ],
   "4/core-french": [
     ["salutations-4", "adopt", "1.2; 5.1", "saying hello and goodbye and sharing simple personal information in French"],

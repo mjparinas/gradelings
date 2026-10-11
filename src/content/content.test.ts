@@ -262,7 +262,7 @@ describe("curriculum content", () => {
         const p = join(dir, f);
         return statSync(p).isDirectory() ? walk(p) : [p];
       });
-    const offenders = [...walk(join(__dirname, "grades")), ...walk(join(__dirname, "ontario")), ...walk(join(__dirname, "alberta")), ...walk(join(__dirname, "saskatchewan")), ...walk(join(__dirname, "manitoba")), ...walk(join(__dirname, "nova-scotia")), ...walk(join(__dirname, "new-brunswick")), ...walk(join(__dirname, "nunavut")), ...walk(join(__dirname, "newfoundland-and-labrador"))].filter((f) => readFileSync(f, "utf8").includes("Math.random"));
+    const offenders = [...walk(join(__dirname, "grades")), ...walk(join(__dirname, "ontario")), ...walk(join(__dirname, "alberta")), ...walk(join(__dirname, "saskatchewan")), ...walk(join(__dirname, "manitoba")), ...walk(join(__dirname, "nova-scotia")), ...walk(join(__dirname, "new-brunswick")), ...walk(join(__dirname, "nunavut")), ...walk(join(__dirname, "newfoundland-and-labrador")), ...walk(join(__dirname, "prince-edward-island"))].filter((f) => readFileSync(f, "utf8").includes("Math.random"));
     expect(offenders).toEqual([]);
   });
 
@@ -396,6 +396,17 @@ describe("curriculum content", () => {
           for (const q of [1, 2, 3].flatMap((d) => u.generate({ difficulty: d as 1 | 2 | 3 }))) {
             const text = JSON.stringify(q);
             expect(/Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada|Saskatchewan|Regina|Alberta|Manitoba|Winnipeg|Nova Scotia|Halifax|New Brunswick|Fredericton|Yukon|Northwest Territories|Nunavut/.test(text), `${u.id}: ${q.prompt}`).toBe(false);
+          }
+        }
+      });
+
+      it("carries no other province's wording into Prince Edward Island classrooms", () => {
+        for (const u of course.units) {
+          // Units written for Prince Edward Island may name the Maritime provinces; borrowed units must not name any.
+          if (!u.standards["ca-pe"] || /^pe-/.test(u.id) || u.standards["ca-bc"]) continue;
+          for (const q of [1, 2, 3].flatMap((d) => u.generate({ difficulty: d as 1 | 2 | 3 }))) {
+            const text = JSON.stringify(q);
+            expect(/Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada|Saskatchewan|Regina|Alberta|Manitoba|Winnipeg|Nova Scotia|Halifax|New Brunswick|Fredericton|Newfoundland|Yukon|Northwest Territories|Nunavut/.test(text), `${u.id}: ${q.prompt}`).toBe(false);
           }
         }
       });
