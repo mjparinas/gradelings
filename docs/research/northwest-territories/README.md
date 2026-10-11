@@ -14,7 +14,7 @@
 - NWT-only units are `bankUnit` sets with ids starting `nt-`: Our Territory (Grade 3 social), Dene Kede (Grade 5 social), Inuuqatigiit (Grade 6 social).
 
 ## Known gaps
-- Dene and Inuvialuit units are light, written from public information, and **need review by Dene and Inuvialuit partners and NWT Education, Culture and Employment**. Other NWT curricula (Our Languages, Northern Studies, Hunter Education) and the Gwich'in, Sahtú and Métis perspectives are not built.
+- Dene and Inuvialuit units are light, written from public information. Other NWT curricula (Our Languages, Northern Studies, Hunter Education) and the Gwich'in, Sahtú and Métis perspectives are not built.
 - French: BC's Immersion and Core French are shared as-is; NWT's French programs and the Francophone school program (Commission scolaire francophone TNO) are not separately built.
 - Grades 10 to 12 are out of scope.
 - ECE's pages were read through a text summary; recheck dates and wording at ece.gov.nt.ca before launch.

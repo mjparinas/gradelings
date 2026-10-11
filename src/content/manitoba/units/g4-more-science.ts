@@ -193,7 +193,7 @@ export const units = [
     title: "Ways of Knowing Nature",
     emoji: "🌲",
     blurb: "Looking closely, learning on the land, caring for it",
-    parentNote: "A light introduction to the ways First Nations, Métis and Inuit peoples observe and care for the land today, alongside curiosity, belonging and respect in science. It needs partner review.",
+    parentNote: "A light introduction to the ways First Nations, Métis and Inuit peoples observe and care for the land today, alongside curiosity, belonging and respect in science.",
     standards: ["SCI.4.A.1, SCI.4.B.1", "First Nations, Métis and Inuit ways of knowing, and curiosity and belonging in science"],
     items: WAYS,
   }),

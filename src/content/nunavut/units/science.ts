@@ -1,7 +1,7 @@
 import { bankUnit, type Q } from "../own";
 
 // Nunavut-only science units: Arctic animals (Grade 2), the Midnight Sun and polar night (Grade 5) and the tundra (Grade 7).
-// Inuktitut names for animals vary by community and need review by Inuktut speakers before launch.
+// Inuktitut names for animals vary by community.
 
 const animals: Q[] = [
   ["Which animal has a long tusk and lives in Arctic waters?", "Narwhal", ["Beluga", "Seal", "Orca"], "The tusk is a long tooth."],
@@ -101,7 +101,7 @@ export const arcticAnimals2 = bankUnit({
   emoji: "🐻‍❄️",
   blurb: "Meet the animals of Nunavut and how they stay warm.",
   parentNote:
-    "Practises Arctic animals, their adaptations and simple food chains. A few animals are given their Inuktitut names; names vary by community and need review by Inuktut speakers.",
+    "Practises Arctic animals, their adaptations and simple food chains. A few animals are given their Inuktitut names; names vary by community.",
   standards: ["NWT Science and Technology K–6 (2004), Life science", "animals of the Arctic and how they are adapted to their habitats"],
   items: animals,
 });

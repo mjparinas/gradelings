@@ -1,7 +1,7 @@
 import { bankUnit, type Q } from "../own";
 
 // Grade 8 social studies, Canada from 1920 to the present: conflicts, the Second World War and taking action.
-// Sensitive events are stated factually. Indigenous content is light and needs partner review.
+// Sensitive events are stated factually. Indigenous content is light.
 
 const CONFLICTS: Q[] = [
   ["Conscription means…", "the government requiring people to serve in the military", ["people choosing to volunteer", "soldiers getting a pay raise"], "A draft is another name for conscription. Volunteers sign up by choice."],

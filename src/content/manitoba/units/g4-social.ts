@@ -2,7 +2,7 @@ import { bankUnit, type Q } from "../own";
 
 // Grade 4 social studies, Canada's Geography (Cluster 1) and Manitoba (Clusters 2 and 3): regions, maps,
 // citizenship and government, Manitoba's land, people and history. Indigenous content is light, in the present
-// tense, and needs partner review.
+// tense.
 
 const MAP: Q[] = [
   ["Which is the capital city of Manitoba?", "Winnipeg", ["Brandon", "Thompson"], "Winnipeg is Manitoba's capital and largest city."],

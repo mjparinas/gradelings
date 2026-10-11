@@ -1,7 +1,7 @@
 import { bankUnit, type Q } from "../own";
 
 // Grade 7 social studies, New Brunswick: Wabanaki worldviews, languages and cultures. The content is light, in the present
-// tense for living communities, and needs review by Wolastoqey, Mi'kmaq and Peskotomuhkati partners before launch.
+// tense for living communities.
 
 const WORLDVIEW: Q[] = [
   ["What is a worldview?", "the way a person or group understands the world and their place in it", ["a map of the whole Earth", "a kind of telescope", "a type of weather forecast"], "Worldviews come from beliefs, values, languages and experiences."],
@@ -38,7 +38,7 @@ export const wabanakiWorldview = bankUnit({
   emoji: "🌅",
   blurb: "Languages, values and respect.",
   parentNote:
-    "Practises Wabanaki worldviews, languages, cultures and traditions, with respect for living communities. The content is light, in the present tense, and needs review by Wabanaki partners. It follows the Grade 7 social studies skill descriptors on Wabanaki identity and on culture and identity in the New Brunswick curriculum.",
+    "Practises Wabanaki worldviews, languages, cultures and traditions, with respect for living communities. The content is light and in the present tense. It follows the Grade 7 social studies skill descriptors on Wabanaki identity and on culture and identity in the New Brunswick curriculum.",
   standards: ["Wabanaki: Identity, Geography: Human Systems and Interactions", "the worldviews, languages, cultures and traditions of Wabanaki Peoples, and how worldview and culture influence identity"],
   items: WORLDVIEW,
 });

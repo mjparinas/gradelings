@@ -1,7 +1,7 @@
 import { bankUnit, type Q } from "../own";
 
 // Grade 4 social studies, Nova Scotia: what exploration is, stories of explorers and the impacts of exploration.
-// Mi'kmaw and African content is factual and in the past or present tense as fits, and needs partner review.
+// Mi'kmaw and African content is factual and in the past or present tense as fits.
 
 const EXPLORATION: Q[] = [
   ["Exploration means…", "travelling to learn about new places", ["staying home all year", "building a house"], "Explorers go to places that are new to them to find out what is there."],
@@ -121,7 +121,7 @@ export const explorationImpacts = bankUnit({
   emoji: "⚖️",
   blurb: "Look at the good and the hard things that came from exploration.",
   parentNote:
-    "Practises thinking about the positive and negative impacts of exploration, including trade and new maps as well as disease and loss of land for First Nations, and how the same event looks different to different people. It follows the Grade 4 Nova Scotia social studies outcome on the impacts of exploration. Content about First Nations is handled carefully and needs partner review.",
+    "Practises thinking about the positive and negative impacts of exploration, including trade and new maps as well as disease and loss of land for First Nations, and how the same event looks different to different people. It follows the Grade 4 Nova Scotia social studies outcome on the impacts of exploration. Content about First Nations is handled carefully.",
   standards: ["Evaluate the impacts of exploration", "positive and negative effects and different perspectives"],
   items: IMPACTS,
 });

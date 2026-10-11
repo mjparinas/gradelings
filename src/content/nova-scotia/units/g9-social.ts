@@ -2,7 +2,7 @@ import { bankUnit, type Q } from "../own";
 
 // Grade 9 social studies, Citizenship 9: service learning, rights and responsibilities, financial, digital,
 // governance and global citizenship. Balanced and non-partisan: no party is named and platform examples are generic.
-// Indigenous content is light, in the present tense, and needs partner review.
+// Indigenous content is light and in the present tense.
 
 const ENGAGED: Q[] = [
   ["A service learning project is best described as…", "learning by helping meet a real community need", ["a school test about volunteering", "a fundraiser where only adults take part"], "Service learning joins real service to the community with thinking about what you learn from it."],
@@ -199,7 +199,7 @@ export const citizenRights = bankUnit({
   title: "Who Am I as a Citizen?",
   emoji: "🪪",
   blurb: "Rights, responsibilities and how they have grown.",
-  parentNote: "Practises citizens' rights and responsibilities, worldview, how rights have changed for groups once shut out, treaties, the Charter and reconciliation, as in Nova Scotia's Citizenship 9 course. Indigenous content is light and is to be reviewed with community partners.",
+  parentNote: "Practises citizens' rights and responsibilities, worldview, how rights have changed for groups once shut out, treaties, the Charter and reconciliation, as in Nova Scotia's Citizenship 9 course. Indigenous content is light.",
   standards: ["Who Am I as a Citizen?", "rights and responsibilities, worldview, treaties, the Charter and reconciliation"],
   items: RIGHTS,
 });

@@ -1,6 +1,6 @@
 import { bankUnit, type Q } from "../own";
 
-// Grade 1 social studies: Mi'kmaw communities in Nova Scotia (light, present tense, needs partner review) and
+// Grade 1 social studies: Mi'kmaw communities in Nova Scotia (light, present tense) and
 // needs and wants.
 
 const MIKMAW: Q[] = [

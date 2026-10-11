@@ -41,7 +41,7 @@ export const firstPeoples = bankUnit({
   title: "First Peoples Before Contact",
   emoji: "🪶",
   blurb: "Stories, land and leadership",
-  parentNote: "First Peoples' origin stories and migration theories, the ice age and the land, how diverse Nations lived, led and traded, and why oral tradition matters. The wording says 'some' and 'many' because each Nation is different. This content needs review with Indigenous partners.",
+  parentNote: "First Peoples' origin stories and migration theories, the ice age and the land, how diverse Nations lived, led and traded, and why oral tradition matters. The wording says 'some' and 'many' because each Nation is different.",
   standards: ["5-KI-004, 5-KI-005, 5-KI-006, 5-KL-014, 5-KL-017, 5-KP-046, 5-KE-050, 5-VH-008, 5-VP-014", "First Peoples' stories, cultures, land and leadership before contact"],
   items: FIRST,
 });
@@ -127,7 +127,7 @@ export const furTrade = bankUnit({
   title: "The Fur Trade and the Red River Métis",
   emoji: "🛶",
   blurb: "Trade, routes and the Métis",
-  parentNote: "The fur trade, the Hudson's Bay and North West Companies, the people who made it work, and the origins and rise of the Red River Métis. Needs review with Métis partners.",
+  parentNote: "The fur trade, the Hudson's Bay and North West Companies, the people who made it work, and the origins and rise of the Red River Métis.",
   standards: ["5-KI-009, 5-KL-020, 5-KL-021, 5-KH-030, 5-KH-031, 5-KH-032, 5-KH-034, 5-KH-035, 5-KH-036, 5-KG-044, 5-KP-049, 5-KE-052, 5-KE-053, 5-VI-003, 5-VL-007", "the fur trade, its people and routes, and the Red River Métis"],
   items: FUR,
 });

@@ -18,6 +18,5 @@
 
 **Still to do before launch.**
 
-- An Ontario teacher should review the wording and the units that borrow a BC unit with Ontario standards text (`Course.shares`).
 - Grade 7 to 9 report-card percentages should be confirmed against the current *Growing Success* text.
 - Grade 9 uses the destreamed courses MTH1W and ENL1W; confirm with a teacher that this matches what families expect.

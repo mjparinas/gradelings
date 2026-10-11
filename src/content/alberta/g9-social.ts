@@ -8,8 +8,7 @@ import { q, unitSet, type Item } from "../ontario/g9-science";
 // the United States. BC's Grade 9 is history and Ontario's is the geography of Canada, so no existing
 // units are shared; every unit here is written for the Alberta topics.
 //
-// Treaty and Métis content is kept short and factual (some Nations, present tense). It needs review with
-// First Nations, Métis and Inuit partners before launch.
+// Treaty and Métis content is kept short and factual (some Nations, present tense).
 
 // ---------- 9.1 Governance ----------
 
@@ -285,7 +284,7 @@ export const units: Unit[] = [
     emoji: "🤝",
     blurb: "Treaties 6, 7 and 8, Métis Settlements and reconciliation",
     standards: ab("9.1", "treaties and the rights of First Nations, Métis and Inuit peoples in Canada, and reconciliation"),
-    parentNote: "The treaty areas of Alberta, the Métis Settlements, the Constitution's recognition of First Nations, Inuit and Métis rights, residential schools and the Calls to Action. These topics need care; talk about them together. Review with First Nations and Métis partners is planned before launch.",
+    parentNote: "The treaty areas of Alberta, the Métis Settlements, the Constitution's recognition of First Nations, Inuit and Métis rights, residential schools and the Calls to Action. These topics need care; talk about them together.",
     generate: (opts) => unitSet(TREATIES, levelOf(opts), []),
   },
   {
