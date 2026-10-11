@@ -1,4 +1,6 @@
 import type { Course } from "../types";
+import { withLessons } from "../lessons";
+import { lessons } from "../lessons/g6";
 import { frenchCourses } from "./french";
 import { ab } from "./kit";
 import { units as mathUnits } from "./g6-math";
@@ -15,7 +17,7 @@ const LANG_WRITE = "Refine and adjust writing through creative and critical thin
 const LANG_CONVENTIONS = "Apply grammar, spelling, and punctuation accurately and skillfully in written communication.";
 const LANG_ORGANIZED = "Analyze how a variety of texts are organized and can influence understandings of ourselves, other people, and the world.";
 
-export const courses: Course[] = [
+const base: Course[] = [
   {
     grade: "6",
     subject: "math",
@@ -128,3 +130,6 @@ export const courses: Course[] = [
   },
   ...frenchCourses("6"),
 ];
+
+// Short "how it works" lessons, matched to units by id.
+export const courses: Course[] = withLessons(base, lessons);

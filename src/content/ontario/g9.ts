@@ -1,4 +1,6 @@
 import type { Course } from "../types";
+import { withLessons } from "../lessons";
+import { lessons } from "../lessons/g9";
 import { units as languageUnits } from "./g9-language";
 import { units as mathUnits } from "./g9-math";
 import { G9_SCIENCE, G9_SOCIAL } from "./g9-overall-ss";
@@ -43,7 +45,7 @@ const G9_LANGUAGE: string[] = [
   "D3 Publishing, Presenting, and Reflecting: Select suitable and effective media, techniques, and tools to publish and present final texts, and critically analyze how well the texts address various topics"
 ];
 
-export const courses: Course[] = [
+const base: Course[] = [
   {
     grade: "9",
     subject: "math",
@@ -96,3 +98,6 @@ export const courses: Course[] = [
   },
   ...frenchCourses("9"),
 ];
+
+// Short "how it works" lessons, matched to units by id.
+export const courses: Course[] = withLessons(base, lessons);

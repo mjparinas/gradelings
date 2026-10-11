@@ -1,4 +1,6 @@
 import type { Course } from "../types";
+import { withLessons } from "../lessons";
+import { lessons } from "../lessons/g8";
 import { courses as alberta } from "../alberta/g8";
 import { courses as manitoba } from "../manitoba/g8";
 import { courses as ontario } from "../ontario/g8";
@@ -12,7 +14,7 @@ import { adopt, course, poolOf } from "./kit";
 // Units BC, Ontario, Alberta or Manitoba already has are listed with the New Brunswick outcomes they practise.
 
 
-export const courses: Course[] = [
+const base: Course[] = [
   course("8", "math", {
     share: {
       "squares-and-roots": ["Number: Operations", "perfect squares, square roots and estimating square roots"],
@@ -67,3 +69,6 @@ export const courses: Course[] = [
   }),
   ...frenchCourses("8"),
 ];
+
+// Short "how it works" lessons, matched to units by id.
+export const courses: Course[] = withLessons(base, lessons);

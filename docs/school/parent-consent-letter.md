@@ -12,7 +12,7 @@ This year our class is using **Gradelings** for extra practice in `[math, readin
 
 **What is kept about your child.** A first name or nickname (`[for example: first name only]`), our class's grade, an avatar and practice results. Nothing else.
 
-**Who sees it.** Only me, as the teacher who runs the class, and only your child's first name, grade and results on the units I assign. The service runs in Montréal, Canada. Its full privacy policy is at `[https://gradelings.com/privacy/]`.
+**Who sees it.** Only me, as the teacher who runs the class `[and any co-teacher I invite to share the class: delete if none]`, and only your child's first name, grade and results on the units I assign. The service runs in Montréal, Canada. Its full privacy policy is at `[https://gradelings.com/privacy/]`.
 
 **Your choices.** You may say no, and your child will do the same learning another way. You may ask to see or delete what is kept about your child at any time by contacting me or `[CONTACT_EMAIL]`. When I remove your child from the class, their information is deleted. If the class has no sign-in for 11 months, the teacher receives a warning; after 12 months without a sign-in, the class and its class-account student information are deleted automatically. Parent-linked children are unlinked, and their family information stays with their family account.
 

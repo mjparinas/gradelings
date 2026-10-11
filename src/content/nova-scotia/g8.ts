@@ -1,4 +1,6 @@
 import type { Course } from "../types";
+import { withLessons } from "../lessons";
+import { lessons } from "../lessons/g8";
 import { courses as alberta } from "../alberta/g8";
 import { courses as manitoba } from "../manitoba/g8";
 import { courses as ontario } from "../ontario/g8";
@@ -15,7 +17,7 @@ import { advocacy, conflicts, worldWarTwo } from "./units/g8-social";
 const CELLS = "Healthy Cells, Healthy Systems";
 const FLUIDS = "Hydraulic and Pneumatic Systems";
 
-export const courses: Course[] = [
+const base: Course[] = [
   course("8", "math", {
     share: {
       "squares-and-roots": ["N01, N02", "perfect squares, square roots and estimating square roots"],
@@ -73,3 +75,6 @@ export const courses: Course[] = [
   }),
   ...frenchCourses("8"),
 ];
+
+// Short "how it works" lessons, matched to units by id.
+export const courses: Course[] = withLessons(base, lessons);

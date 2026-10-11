@@ -8,3 +8,4 @@ import { course as social } from "./social";
 import { course as immersion } from "./immersion";
 
 export const courses: Course[] = withLessons([math, language, science, social, immersion], lessons);
+export { lessons };

@@ -1,4 +1,6 @@
 import type { Course } from "../types";
+import { withLessons } from "../lessons";
+import { lessons } from "../lessons/g9";
 import { courses as alberta } from "../alberta/g9";
 import { courses as manitoba } from "../manitoba/g9";
 import { courses as ontario } from "../ontario/g9";
@@ -12,7 +14,7 @@ import { adopt, course, poolOf } from "./kit";
 // or Manitoba already has are listed with the New Brunswick outcomes they practise.
 
 
-export const courses: Course[] = [
+const base: Course[] = [
   course("9", "math", {
     share: {
       "rational-numbers": ["Number: Operations", "operations with rational numbers"],
@@ -75,3 +77,6 @@ export const courses: Course[] = [
   }),
   ...frenchCourses("9"),
 ];
+
+// Short "how it works" lessons, matched to units by id.
+export const courses: Course[] = withLessons(base, lessons);

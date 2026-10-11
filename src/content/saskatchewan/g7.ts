@@ -1,4 +1,6 @@
 import type { Course } from "../types";
+import { withLessons } from "../lessons";
+import { lessons } from "../lessons/g7";
 import { units as g7_math } from "../ontario/g7-math";
 import { units as g7_science } from "../ontario/g7-science";
 import { units as sk_social_7 } from "./g7-social";
@@ -9,7 +11,7 @@ import { SK_OUTCOMES as O } from "./outcomes";
 // shared with the outcomes they practise. The rest are written for Saskatchewan. Outcome codes are checked against
 // docs/research/saskatchewan/outcomes.json in content.test.ts.
 
-export const courses: Course[] = [
+const base: Course[] = [
   {
     grade: "7",
     subject: "math",
@@ -76,3 +78,6 @@ export const courses: Course[] = [
     order: { "ca-sk": [...sk_social_7.map((u) => u.id)] },
   },
 ];
+
+// Short "how it works" lessons, matched to units by id.
+export const courses: Course[] = withLessons(base, lessons);

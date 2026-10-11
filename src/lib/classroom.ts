@@ -7,6 +7,23 @@ export interface ClassSummary {
   framework: string;
   joinCode: string;
   students: number;
+  /** Owner of the class, or a co-teacher the owner invited. Older responses omit it (owner). */
+  role?: "owner" | "co-teacher";
+}
+
+export interface TeacherEntry {
+  id: string;
+  email: string;
+  role: "owner" | "co-teacher";
+}
+
+export interface ClassInvite {
+  classId: string;
+  name: string;
+  grade: string;
+  framework: string;
+  from: string;
+  createdAt: number;
 }
 
 export interface StudentRow {

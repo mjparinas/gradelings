@@ -1,4 +1,6 @@
 import type { Course } from "../types";
+import { withLessons } from "../lessons";
+import { lessons } from "../lessons/g7";
 import { courses as alberta } from "../alberta/g7";
 import { courses as manitoba } from "../manitoba/g7";
 import { courses as ontario } from "../ontario/g7";
@@ -8,4 +10,7 @@ import { circumpolar7, iqInPractice7 } from "./units/g5-g9-social";
 import { tundra7 } from "./units/science";
 
 // Nunavut 7.
-export const courses: Course[] = nunavutGrade("7", [manitoba, alberta, ontario, saskatchewan], { social: { units: [circumpolar7, iqInPractice7] }, science: { units: [tundra7] } });
+const base: Course[] = nunavutGrade("7", [manitoba, alberta, ontario, saskatchewan], { social: { units: [circumpolar7, iqInPractice7] }, science: { units: [tundra7] } });
+
+// Short "how it works" lessons, matched to units by id.
+export const courses: Course[] = withLessons(base, lessons);

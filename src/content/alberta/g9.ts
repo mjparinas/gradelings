@@ -1,4 +1,6 @@
 import type { Course } from "../types";
+import { withLessons } from "../lessons";
+import { lessons } from "../lessons/g9";
 import { frenchCourses } from "./french";
 import { units as mathUnits } from "./g9-math";
 import { units as scienceUnits } from "./g9-science";
@@ -40,7 +42,7 @@ const G9_SOCIAL: string[] = [
   "9.2 Issues for Canadians: Economic Systems in Canada and the United States: how the two countries organize their economies and trade with each other",
 ];
 
-export const courses: Course[] = [
+const base: Course[] = [
   {
     grade: "9",
     subject: "math",
@@ -106,3 +108,6 @@ export const courses: Course[] = [
   },
   ...frenchCourses("9"),
 ];
+
+// Short "how it works" lessons, matched to units by id.
+export const courses: Course[] = withLessons(base, lessons);

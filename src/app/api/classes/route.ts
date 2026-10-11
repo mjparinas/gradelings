@@ -1,5 +1,5 @@
 import { error, getSession, json, newId, rateLimited, sameOrigin } from "@/server/auth";
-import { assignmentDue, assignmentKeys, classProgress, isFramework, MAX_CLASSES, newJoinCode, ownedClass } from "@/server/classroom";
+import { assignmentDue, assignmentKeys, classProgress, classTeachers, isFramework, MAX_CLASSES, newJoinCode, ownedClass, pendingInvites, removeClassTeachers, teachingClass } from "@/server/classroom";
 import { query, run } from "@/server/db";
 import { classRoster, removeClassStudents } from "@/server/students";
 import { GRADE_ORDER } from "@/content/subjects";
@@ -14,22 +14,29 @@ export async function GET(req: Request) {
   if (id) {
     // Building a class view reads every student's history, so it is rate limited.
     if (await rateLimited(`classview:${session.parentId}`, 60, 10 * 60_000)) return error(429, "Too many refreshes. Try again in a minute.");
-    const cls = await ownedClass(id, session.parentId);
-    if (!cls) return error(404, "Class not found");
+    const found = await teachingClass(id, session.parentId);
+    if (!found) return error(404, "Class not found");
+    const { cls, role } = found;
     return json({
       class: { id: cls.id, name: cls.name, grade: cls.grade, framework: cls.framework, joinCode: cls.join_code },
+      role,
+      teachers: await classTeachers(cls),
+      // Pending invitations are the owner's business.
+      invites: role === "owner" ? await pendingInvites(cls.id) : [],
       assignments: await assignmentKeys(cls.id),
       due: await assignmentDue(cls.id),
       students: await classProgress(cls.id),
       roster: await classRoster(cls.id),
     });
   }
-  const rows = await query<{ id: string; name: string; grade: string; framework: string; join_code: string; students: number }>(
-    `SELECT c.id, c.name, c.grade, c.framework, c.join_code, (SELECT COUNT(*) FROM class_members m WHERE m.class_id = c.id) AS students
-     FROM classes c WHERE c.owner_parent_id = ? AND c.closed_at IS NULL ORDER BY c.created_at`,
-    [session.parentId],
+  const rows = await query<{ id: string; name: string; grade: string; framework: string; join_code: string; students: number; owner_parent_id: string }>(
+    `SELECT c.id, c.name, c.grade, c.framework, c.join_code, c.owner_parent_id, (SELECT COUNT(*) FROM class_members m WHERE m.class_id = c.id) AS students
+     FROM classes c WHERE c.closed_at IS NULL AND (c.owner_parent_id = ? OR c.id IN (SELECT class_id FROM class_teachers WHERE parent_id = ?)) ORDER BY c.created_at`,
+    [session.parentId, session.parentId],
   );
-  return json({ classes: rows.map((r) => ({ id: r.id, name: r.name, grade: r.grade, framework: r.framework, joinCode: r.join_code, students: Number(r.students) })) });
+  return json({
+    classes: rows.map((r) => ({ id: r.id, name: r.name, grade: r.grade, framework: r.framework, joinCode: r.join_code, students: Number(r.students), role: r.owner_parent_id === session.parentId ? "owner" : "co-teacher" })),
+  });
 }
 
 export async function POST(req: Request) {
@@ -83,7 +90,7 @@ export async function PATCH(req: Request) {
   return error(500, "Couldn’t make a new code. Try again.");
 }
 
-/** Closes a class. Links to students are removed, so the teacher no longer sees anyone's progress. */
+/** Closes a class (owner only). Co-teachers lose access with it. Links to students are removed, so the teacher no longer sees anyone's progress. */
 export async function DELETE(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req);
@@ -94,6 +101,7 @@ export async function DELETE(req: Request) {
   await removeClassStudents(id);
   await run("DELETE FROM class_members WHERE class_id = ?", [id]);
   await run("DELETE FROM class_assignments WHERE class_id = ?", [id]);
+  await removeClassTeachers(id);
   await run("UPDATE classes SET closed_at = ?, join_code = ? WHERE id = ?", [Date.now(), `X${id.slice(0, 10)}`, id]);
   return json({ closed: true });
 }

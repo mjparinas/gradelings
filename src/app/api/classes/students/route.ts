@@ -1,18 +1,19 @@
 import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
-import { ownedClass } from "@/server/classroom";
+import { ownedClass, teachingClass } from "@/server/classroom";
 import { addStudents, cleanStudentName, removeStudent, resetStudentCode } from "@/server/students";
 
 // A teacher adds students to a class they own. Each gets a login code; there is no email or password.
 
 const MAX_BATCH = 40;
 
-async function teacherClass(req: Request, classId: string) {
+// Co-teachers can add students and reprint or reset login codes; only the owner can delete a student's account.
+async function teacherClass(req: Request, classId: string, ownerOnly = false) {
   if (!sameOrigin(req)) return { fail: error(403, "Bad origin") };
   const session = await getSession(req);
   if (!session) return { fail: error(401, "Not signed in") };
-  const cls = await ownedClass(classId, session.parentId);
-  if (!cls) return { fail: error(404, "Class not found") };
-  return { session, cls };
+  const found = ownerOnly ? await ownedClass(classId, session.parentId).then((c) => c && { cls: c }) : await teachingClass(classId, session.parentId);
+  if (!found) return { fail: error(404, "Class not found") };
+  return { session, cls: found.cls };
 }
 
 /** Adds students by first name or nickname. */
@@ -34,7 +35,7 @@ export async function POST(req: Request) {
 /** Removes a student and deletes everything stored about them. */
 export async function DELETE(req: Request) {
   const params = new URL(req.url).searchParams;
-  const found = await teacherClass(req, params.get("classId") ?? "");
+  const found = await teacherClass(req, params.get("classId") ?? "", true);
   if (found.fail) return found.fail;
   const removed = await removeStudent(found.cls!.id, params.get("studentId") ?? "");
   return removed ? json({ removed: true }) : error(404, "Student not found");
