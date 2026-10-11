@@ -117,11 +117,11 @@ import type { Course, GradeId, SubjectId } from "./types";
 // into the first download. ESLint enforces this; the apps use ./index.
 
 // Each grade's lessons, applied to every framework's units with the same id (as the apps do in ./index).
-const GRADE_MODULES: Record<GradeId, { lessons?: GradeLessons }> = { k: gradeK, "1": grade1, "2": grade2, "3": grade3, "4": grade4, "5": grade5, "6": grade6, "7": grade7, "8": grade8, "9": grade9 };
+const GRADE_MODULES: Record<GradeId, object> = { k: gradeK, "1": grade1, "2": grade2, "3": grade3, "4": grade4, "5": grade5, "6": grade6, "7": grade7, "8": grade8, "9": grade9 };
 
 /** Every course with at least one unit. */
 export const COURSES: Course[] = mergeCourses([k, g1, g2, g3, g4, g5, g6, g7, g8, g9, onK, on1, on2, on3, on4, on5, on6, on7, on8, on9, abK, ab1, ab2, ab3, ab4, ab5, ab6, ab7, ab8, ab9, skK, sk1, sk2, sk3, sk4, sk5, sk6, sk7, sk8, sk9, mbK, mb1, mb2, mb3, mb4, mb5, mb6, mb7, mb8, mb9, ytK, yt1, yt2, yt3, yt4, yt5, yt6, yt7, yt8, yt9, ntK, nt1, nt2, nt3, nt4, nt5, nt6, nt7, nt8, nt9, nsK, ns1, ns2, ns3, ns4, ns5, ns6, ns7, ns8, ns9, nbK, nb1, nb2, nb3, nb4, nb5, nb6, nb7, nb8, nb9, nuK, nu1, nu2, nu3, nu4, nu5, nu6, nu7, nu8, nu9])
-  .map((c) => withLessons([c], GRADE_MODULES[c.grade].lessons ?? {})[0])
+  .map((c) => withLessons([c], (GRADE_MODULES[c.grade] as { lessons?: GradeLessons }).lessons ?? {})[0])
   .filter((c) => c.units.length > 0);
 
 export function getCourse(grade: GradeId, subject: SubjectId | string): Course | undefined {
