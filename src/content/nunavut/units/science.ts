@@ -1,0 +1,128 @@
+import { bankUnit, type Q } from "../own";
+
+// Nunavut-only science units: Arctic animals (Grade 2), the Midnight Sun and polar night (Grade 5) and the tundra (Grade 7).
+// Inuktitut names for animals vary by community and need review by Inuktut speakers before launch.
+
+const animals: Q[] = [
+  ["Which animal has a long tusk and lives in Arctic waters?", "Narwhal", ["Beluga", "Seal", "Orca"], "The tusk is a long tooth."],
+  ["Which big white bear hunts seals on the sea ice?", "Polar bear", ["Grizzly bear", "Black bear", "Panda"], "In Inuktitut it is called nanuq."],
+  ["What does a muskox have to stay warm?", "A thick, shaggy coat", ["Feathers", "Scales", "A shell"], "Its soft under-wool is called qiviut."],
+  ["Which animal travels in large herds over the tundra?", "Caribou", ["Penguin", "Lion", "Frog"], "In Inuktitut it is called tuktu."],
+  ["Which bird is white in winter and brown in summer?", "Rock ptarmigan", ["Robin", "Crow", "Duck"], "Its feathers help it hide."],
+  ["What colour is an Arctic hare's fur in winter?", "White", ["Green", "Purple", "Bright red"], "White fur hides it in the snow."],
+  ["Which large owl is white and hunts on the tundra?", "Snowy owl", ["Barn owl", "Great horned owl", "Screech owl"], "In Inuktitut it is called ukpik."],
+  ["What does a seal have under its skin to stay warm in cold water?", "Blubber", ["Feathers", "Shell", "Hair spikes"], "Blubber is a thick layer of fat."],
+  ["Which animal has two long tusks and lives near the sea ice?", "Walrus", ["Wolf", "Moose", "Fox"], "In Inuktitut it is called aiviq."],
+  ["What does an Arctic fox's coat do in the seasons?", "Changes colour", ["Falls off", "Turns to scales", "Never changes"], "It helps the fox hide."],
+  ["Which small animal do snowy owls and Arctic foxes often hunt?", "Lemming", ["Moose", "Elk", "Bear"], "Lemmings are small, round rodents."],
+  ["Which sea mammal is called “the white whale”?", "Beluga", ["Narwhal", "Seal", "Dolphin"], "Belugas are white as adults."],
+  ["Where do polar bears like to hunt?", "On sea ice", ["In a desert", "In a forest", "In a swamp"], "They hunt seals from the ice."],
+  ["Which fish is found in the cold waters of Nunavut?", "Arctic char", ["Clownfish", "Goldfish", "Tuna"], "In Inuktitut fish are called iqaluk."],
+  ["Which animal is a sled dog of Nunavut?", "Canadian Inuit Dog", ["Poodle", "Beagle", "Chihuahua"], "It is a strong, hardy dog called a qimmiq."],
+  ["Why do animals in the Arctic have thick fur or fat?", "To stay warm", ["To look nice", "To be loud", "To be fast"], "The Arctic is very cold."],
+  ["What is an adaptation?", "A body part or habit that helps an animal live", ["A kind of food", "A weather report", "A school lesson"], "Thick fur is an example."],
+  ["Why is white fur useful for a polar bear?", "It helps it blend in with snow and ice", ["It makes it taller", "It makes it noisy", "It makes it slow"], "Camouflage helps it hunt."],
+  ["Which animal lives in a burrow on the tundra and eats plants?", "Lemming", ["Narwhal", "Walrus", "Beluga"], "It is small and furry."],
+  ["Which animal eats lichen on the tundra?", "Caribou", ["Narwhal", "Beluga", "Walrus"], "Lichen is a food for caribou."],
+  ["Which animal hunts ringed seals at breathing holes in the ice?", "Polar bear", ["Caribou", "Muskox", "Lemming"], "Seals need to come up to breathe.", true],
+  ["Which of these animals is a mammal that lives in the sea?", "Beluga", ["Arctic char", "Snowy owl", "Rock ptarmigan"], "Mammals breathe air and feed their young milk.", true],
+  ["Which animal makes its home in a den under the snow in winter?", "Arctic fox", ["Walrus", "Beluga", "Narwhal"], "The snow keeps it warm.", true],
+  ["Which two animals both have tusks?", "Narwhal and walrus", ["Caribou and muskox", "Seal and owl", "Fox and hare"], "Tusks are long teeth.", true],
+  ["A muskox herd forms a circle to protect…", "Calves", ["Fish", "Rocks", "Plants"], "Adults guard the young.", true],
+  ["Why do many Arctic birds fly south in the fall?", "To find food and warmth", ["To watch snow", "To fly higher", "To lay eggs on ice"], "Many return in spring.", true],
+  ["What is a food chain?", "Who eats whom in nature", ["A shopping list", "A chain of ice", "A road map"], "Plants → lemming → owl.", true],
+  ["Which animal could be the third link in this chain: lichen → caribou → ?", "Wolf", ["Moss", "Fish", "Butterfly"], "A wolf hunts caribou.", true],
+];
+
+const midnight: Q[] = [
+  ["Why do we have seasons?", "Earth is tilted as it orbits the Sun", ["Earth gets closer and farther", "The Moon changes", "The Sun gets bigger"], "The tilt changes how directly the Sun's light hits."],
+  ["About how many degrees is Earth's axis tilted?", "23.5°", ["5°", "90°", "180°"], "It's a small tilt, but it matters."],
+  ["How long does Earth take to orbit the Sun?", "One year", ["One day", "One month", "Ten years"], "Earth goes around the Sun once a year."],
+  ["How long does Earth take to spin once?", "About 24 hours", ["One week", "One year", "One hour"], "That is one day and night."],
+  ["What is the Midnight Sun?", "When the Sun stays above the horizon all day and night", ["A very bright Moon", "A kind of snow", "A cloud"], "It happens in summer near the poles."],
+  ["What is polar night?", "When the Sun stays below the horizon for a day or more", ["A very bright night", "A snowstorm", "A kind of fish"], "It happens in winter near the poles."],
+  ["The Arctic Circle is at about…", "66.5° N", ["0°", "23.5° N", "90° N"], "North of this line the Midnight Sun and polar night happen."],
+  ["Is Iqaluit north or south of the Arctic Circle?", "South", ["North", "On it", "At the North Pole"], "Iqaluit is at about 63° N.", true],
+  ["Which June date is the summer solstice, the longest day in the north?", "About June 21", ["About January 1", "About March 1", "About October 31"], "It's the start of summer."],
+  ["Which December date is the winter solstice, the shortest day in the north?", "About December 21", ["About June 21", "About April 1", "About August 31"], "It's the start of winter."],
+  ["In summer, the north end of Earth's axis tilts…", "Toward the Sun", ["Away from the Sun", "Into the Moon", "Nowhere"], "That gives long days in the north."],
+  ["In winter, the north end of Earth's axis tilts…", "Away from the Sun", ["Toward the Sun", "Toward Mars", "Nowhere"], "That gives short days in the north."],
+  ["Why is summer in the Arctic still cool even with long days?", "The Sun stays low in the sky", ["The Sun is far away", "The Sun is off", "The Moon is cold"], "Low Sun means less heat."],
+  ["On which day are day and night about equal everywhere?", "An equinox", ["A solstice", "A new moon", "A leap day"], "Equal night."],
+  ["What causes day and night?", "Earth spinning", ["The Sun moving around Earth", "The Moon blocking the Sun", "Clouds"], "Earth rotates."],
+  ["Which causes the aurora (northern lights)?", "Particles from the Sun hitting the atmosphere", ["Reflections from snow", "Lamps in towns", "The Moon"], "Gases glow when particles hit them.", true],
+  ["Aurora are best seen…", "On dark, clear nights", ["At noon", "In summer midday", "During a blizzard"], "You need a dark sky.", true],
+  ["Why can people near the North Pole see the Sun all day in summer?", "The pole tilts toward the Sun", ["The Sun is bigger there", "It is closer to the Sun", "The Moon lights it"], "Tilt keeps the area in sunlight.", true],
+  ["Which way does the Sun rise?", "In the east", ["In the west", "In the north", "In the south"], "It sets in the west."],
+  ["In the Arctic summer, you might see the Sun…", "Circle the sky without setting", ["Set at 3 p.m.", "Never appear", "Move backwards"], "It stays up all day.", true],
+  ["What do people in Arctic communities do during long summer days?", "Stay active outside late into the evening", ["Sleep all day", "Close schools", "Hide from the Sun"], "They enjoy the light.", true],
+  ["What do people do to cope with long dark winter days?", "Use lights and keep routines", ["Ignore time", "Stop talking", "Move to the Moon"], "Light and routine help.", true],
+  ["Which statement is true about seasons?", "Seasons are not caused by Earth's distance from the Sun", ["Seasons come from distance", "Seasons come from the Moon", "Seasons come from wind"], "Tilt causes seasons.", true],
+  ["Twilight is…", "The soft light before sunrise or after sunset", ["A kind of storm", "A snow shape", "A planet"], "It happens when the Sun is just below the horizon.", true],
+  ["Compared with Iqaluit, which place has a longer Midnight Sun period?", "A place farther north", ["A place farther south", "The same everywhere", "A place at the equator"], "The farther north, the more days.", true],
+  ["The equator has…", "About 12 hours of daylight all year", ["Months of darkness", "Months of Midnight Sun", "No sunlight"], "It stays near equal day and night.", true],
+  ["Which tool can show Earth's tilt?", "A globe", ["A ruler", "A scale", "A clock"], "Globes show the axis tilt.", true],
+];
+
+const tundra: Q[] = [
+  ["What is permafrost?", "Ground that stays frozen for at least two years", ["Soft summer mud", "A kind of snow", "A type of ice cream"], "Perma means lasting."],
+  ["What is the active layer?", "The top layer of ground that thaws in summer", ["A kind of ice cap", "A mountain", "A river"], "It sits above the permafrost."],
+  ["Why are there few trees on the tundra?", "It is cold and windy with a short growing season", ["There is too much rain", "There is no sunlight", "There is no air"], "Roots can't grow in frozen ground."],
+  ["What is the tree line?", "The northern edge where trees can grow", ["A line of trees in a park", "A rope", "A ruler"], "North of it there are no tall trees."],
+  ["Which of these is a producer on the tundra?", "Lichen", ["Caribou", "Wolf", "Owl"], "Producers make their own food from sunlight."],
+  ["Which of these is a producer on the tundra?", "Willow shrub", ["Snowy owl", "Arctic fox", "Polar bear"], "It's a low plant."],
+  ["Which of these is a consumer?", "Lemming", ["Moss", "Lichen", "Cotton grass"], "Consumers eat other living things."],
+  ["Which of these is a decomposer?", "Fungi", ["Caribou", "Snowy owl", "Wolf"], "They break down dead material."],
+  ["What does an Arctic fox mostly eat?", "Lemmings and birds", ["Grass", "Fruit", "Seaweed"], "It is a carnivore."],
+  ["What does a caribou eat?", "Lichen and plants", ["Fish only", "Seals", "Owls"], "It is a herbivore."],
+  ["What does a wolf eat on the tundra?", "Caribou and other animals", ["Moss", "Lichen", "Cotton grass"], "It is a carnivore."],
+  ["Which food chain is correct?", "Lichen → caribou → wolf", ["Wolf → caribou → lichen", "Caribou → lichen → wolf", "Lichen → wolf → caribou"], "Arrows point to what eats it."],
+  ["Which food chain is correct?", "Sedge → lemming → snowy owl", ["Snowy owl → lemming → sedge", "Lemming → sedge → owl", "Owl → sedge → lemming"], "Arrows point to what eats it."],
+  ["What happens when permafrost thaws?", "The ground can sink and buildings can shift", ["The ground gets harder", "The sea freezes", "Trees grow tall overnight"], "Frozen ground holds soil together."],
+  ["Why do many buildings in Arctic communities sit on posts or pilings?", "So heat from the building does not thaw the ground", ["To look tall", "To keep out birds", "To stay dry from rivers"], "Heat could melt permafrost.", true],
+  ["Thawing permafrost can release…", "Greenhouse gases", ["Fresh water only", "More snow", "Sand"], "Frozen plant matter holds carbon.", true],
+  ["Why is the tundra called a polar desert in many places?", "It gets very little precipitation", ["It is hot", "It has sand dunes", "It has no cold"], "Little snow and rain fall.", true],
+  ["How long is the plant growing season on the tundra?", "Short, only a few weeks to months", ["All year", "Twelve months", "None"], "Summers are short and cool."],
+  ["Which plant has bright purple flowers on the tundra?", "Purple saxifrage", ["Sunflower", "Rose", "Tulip"], "It is Nunavut's territorial flower."],
+  ["Which birds visit the tundra in summer to nest?", "Snow geese", ["Penguins", "Parrots", "Flamingos"], "Many migrate from the south.", true],
+  ["Why do tundra plants stay low to the ground?", "To avoid wind and keep warm", ["To hide from owls", "To be seen", "To catch rain"], "Low plants stay out of the wind."],
+  ["What would happen to lemmings if the owls disappeared?", "There might be more lemmings for a while", ["There would be no lemmings", "Lemmings would turn into birds", "Nothing would change"], "Predators keep numbers balanced.", true],
+  ["What does biodiversity mean?", "The variety of living things in a place", ["The temperature", "The size of a lake", "A kind of rock"], "Many kinds of life.", true],
+  ["Why is the tundra fragile?", "Plants grow slowly and damage takes a long time to heal", ["It is covered with ice cream", "It has too much rain", "It has no animals"], "Slow growth.", true],
+  ["Which statement is true about the tundra?", "It has cold winters, short summers and little rain", ["It is hot and wet", "It is full of tall trees", "It has no snow"], "These are tundra conditions.", true],
+  ["How can people protect the tundra?", "Leave no garbage and stay on paths", ["Dig holes", "Drive anywhere", "Leave campfires burning"], "Be respectful of the land.", true],
+  ["Avatittinnik Kamatsiarniq means…", "Respect and care for the land, animals and environment", ["Hunting without limits", "Moving away", "Ignoring nature"], "It's an Inuit principle.", true],
+  ["Elders and scientists both can help us understand changes in the tundra by…", "Sharing what they have seen and measured", ["Guessing", "Ignoring the land", "Staying inside"], "Both kinds of knowledge matter.", true],
+];
+
+export const arcticAnimals2 = bankUnit({
+  id: "nu-arctic-animals-2",
+  title: "Animals of the Arctic",
+  emoji: "🐻‍❄️",
+  blurb: "Meet the animals of Nunavut and how they stay warm.",
+  parentNote:
+    "Practises Arctic animals, their adaptations and simple food chains. A few animals are given their Inuktitut names; names vary by community and need review by Inuktut speakers.",
+  standards: ["NWT Science and Technology K–6 (2004), Life science", "animals of the Arctic and how they are adapted to their habitats"],
+  items: animals,
+});
+
+export const midnightSun5 = bankUnit({
+  id: "nu-midnight-sun-5",
+  title: "Midnight Sun and Polar Night",
+  emoji: "🌞",
+  blurb: "Why the Sun never sets in summer and never rises in winter.",
+  parentNote: "Explains Earth's tilt, the seasons, the Arctic Circle and why far-northern places have very long days and very long nights.",
+  standards: ["NWT Science and Technology K–6 (2004), Earth and space science", "Earth's tilt, the seasons, and long days and nights near the poles"],
+  items: midnight,
+});
+
+export const tundra7 = bankUnit({
+  id: "nu-tundra-7",
+  title: "Tundra Ecosystems",
+  emoji: "🌱",
+  blurb: "Permafrost, tundra plants and the food chains of the north.",
+  parentNote:
+    "Covers tundra conditions, permafrost, food chains and a changing Arctic. The Nunavut adaptation of the Alberta Science 7–9 program encourages learning with Elders and from the land alongside the classroom.",
+  standards: ["Nunavut adaptation of Alberta Science 7–9 (2003), Unit A: Interactions and Ecosystems", "tundra ecosystems, permafrost and food chains"],
+  items: tundra,
+});

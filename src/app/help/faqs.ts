@@ -65,7 +65,7 @@ export const HELP: HelpSection[] = [
     faqs: [
       {
         q: "Which curriculum and grades does it follow?",
-        a: `Kindergarten to Grade 9. Choose ${listRegions(FRAMEWORKS)} when you add a child, and you can switch province later in Children. Math, English language arts, science and social studies are in every province. French Immersion and Core French are included everywhere except Saskatchewan. Yukon and the Northwest Territories follow the BC curriculum, adapted with local First Nations, Dene and Inuit content. Every unit shows the learning standard it practises. More provinces and states are planned.`,
+        a: `Kindergarten to Grade 9. Choose ${listRegions(FRAMEWORKS)} when you add a child, and you can switch province later in Children. Math, English language arts, science and social studies are in every province. French Immersion and Core French are included everywhere except Saskatchewan, and Nunavut has Core French only. Yukon and the Northwest Territories follow the BC curriculum, adapted with local First Nations, Dene and Inuit content. Every unit shows the learning standard it practises. More provinces and states are planned.`,
       },
       {
         q: "What is Adventure mode?",
@@ -81,7 +81,7 @@ export const HELP: HelpSection[] = [
       },
       {
         q: "How are the report levels worked out?",
-        a: `In BC, Yukon and the Northwest Territories, levels use the Provincial Proficiency Scale: Emerging, Developing, Proficient and Extending. In Ontario and Manitoba, they follow the Level 1 to 4 achievement scales. In Nova Scotia, reports use four steps that match the wording for your child’s grade band. In New Brunswick, they follow the four-point scale from working below to excelling. Alberta has no provincial report-card scale, so Alberta reports use four plain steps: Beginning, Approaching, Meeting and Exceeding. In Saskatchewan, they use four levels (Beginning, Approaching, Meeting, Exemplary), since school divisions set their own report-card wording. Only first-try answers count. Proficient needs at least 75% over at least 8 recent answers, and Extending also needs 90% over 16 answers and a passed Challenge. Reports show practice in the app. They are not a report-card mark; your child’s teacher decides proficiency.`,
+        a: `In BC, Yukon and the Northwest Territories, levels use the Provincial Proficiency Scale: Emerging, Developing, Proficient and Extending. In Ontario and Manitoba, they follow the Level 1 to 4 achievement scales. In Nova Scotia, reports use four steps that match the wording for your child’s grade band. In New Brunswick, they follow the four-point scale from working below to excelling. Alberta has no provincial report-card scale, so Alberta and Nunavut reports use four plain steps: Beginning, Approaching, Meeting and Exceeding. In Saskatchewan, they use four levels (Beginning, Approaching, Meeting, Exemplary), since school divisions set their own report-card wording. Only first-try answers count. Proficient needs at least 75% over at least 8 recent answers, and Extending also needs 90% over 16 answers and a passed Challenge. Reports show practice in the app. They are not a report-card mark; your child’s teacher decides proficiency.`,
       },
       {
         q: "How does earning game time work?",

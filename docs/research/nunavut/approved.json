@@ -1,0 +1,461 @@
+{
+ "k/math": {
+  "guides": [
+   "Alberta Mathematics K–9 (2007)"
+  ],
+  "areas": [
+   "Number",
+   "Patterns and Relations",
+   "Shape and Space",
+   "Statistics and Probability"
+  ]
+ },
+ "k/language": {
+  "guides": [
+   "NWT English Language Arts (2011)"
+  ],
+  "areas": [
+   "Comprehension",
+   "Production"
+  ]
+ },
+ "k/science": {
+  "guides": [
+   "NWT Science and Technology K–6 (2004)"
+  ],
+  "areas": [
+   "Life science",
+   "Physical science",
+   "Earth and space science"
+  ]
+ },
+ "k/social": {
+  "guides": [
+   "Inuuqatigiit (NWT, 1996)"
+  ],
+  "areas": [
+   "Heritage and culture",
+   "History",
+   "Geography",
+   "Environmental science",
+   "Civics and economics"
+  ]
+ },
+ "1/math": {
+  "guides": [
+   "Alberta Mathematics K–9 (2007)"
+  ],
+  "areas": [
+   "Number",
+   "Patterns and Relations",
+   "Shape and Space",
+   "Statistics and Probability"
+  ]
+ },
+ "1/language": {
+  "guides": [
+   "NWT English Language Arts (2011)"
+  ],
+  "areas": [
+   "Comprehension",
+   "Production"
+  ]
+ },
+ "1/science": {
+  "guides": [
+   "NWT Science and Technology K–6 (2004)"
+  ],
+  "areas": [
+   "Life science",
+   "Physical science",
+   "Earth and space science"
+  ]
+ },
+ "1/social": {
+  "guides": [
+   "Inuuqatigiit (NWT, 1996)",
+   "Elementary Social Studies (NWT, 1993)"
+  ],
+  "areas": [
+   "Heritage and culture",
+   "History",
+   "Geography",
+   "Environmental science",
+   "Civics and economics"
+  ]
+ },
+ "2/math": {
+  "guides": [
+   "Alberta Mathematics K–9 (2007)"
+  ],
+  "areas": [
+   "Number",
+   "Patterns and Relations",
+   "Shape and Space",
+   "Statistics and Probability"
+  ]
+ },
+ "2/language": {
+  "guides": [
+   "NWT English Language Arts (2011)"
+  ],
+  "areas": [
+   "Comprehension",
+   "Production"
+  ]
+ },
+ "2/science": {
+  "guides": [
+   "NWT Science and Technology K–6 (2004)"
+  ],
+  "areas": [
+   "Life science",
+   "Physical science",
+   "Earth and space science"
+  ]
+ },
+ "2/social": {
+  "guides": [
+   "Inuuqatigiit (NWT, 1996)",
+   "Elementary Social Studies (NWT, 1993)"
+  ],
+  "areas": [
+   "Heritage and culture",
+   "History",
+   "Geography",
+   "Environmental science",
+   "Civics and economics"
+  ]
+ },
+ "3/math": {
+  "guides": [
+   "Alberta Mathematics K–9 (2007)"
+  ],
+  "areas": [
+   "Number",
+   "Patterns and Relations",
+   "Shape and Space",
+   "Statistics and Probability"
+  ]
+ },
+ "3/language": {
+  "guides": [
+   "NWT English Language Arts (2011)"
+  ],
+  "areas": [
+   "Comprehension",
+   "Production"
+  ]
+ },
+ "3/science": {
+  "guides": [
+   "NWT Science and Technology K–6 (2004)"
+  ],
+  "areas": [
+   "Life science",
+   "Physical science",
+   "Earth and space science"
+  ]
+ },
+ "3/social": {
+  "guides": [
+   "Inuuqatigiit (NWT, 1996)",
+   "Elementary Social Studies (NWT, 1993)"
+  ],
+  "areas": [
+   "Heritage and culture",
+   "History",
+   "Geography",
+   "Environmental science",
+   "Civics and economics"
+  ]
+ },
+ "4/math": {
+  "guides": [
+   "Alberta Mathematics K–9 (2007)"
+  ],
+  "areas": [
+   "Number",
+   "Patterns and Relations",
+   "Shape and Space",
+   "Statistics and Probability"
+  ]
+ },
+ "4/language": {
+  "guides": [
+   "NWT English Language Arts (2011)"
+  ],
+  "areas": [
+   "Comprehension",
+   "Production"
+  ]
+ },
+ "4/science": {
+  "guides": [
+   "NWT Science and Technology K–6 (2004)"
+  ],
+  "areas": [
+   "Life science",
+   "Physical science",
+   "Earth and space science"
+  ]
+ },
+ "4/social": {
+  "guides": [
+   "Inuuqatigiit (NWT, 1996)",
+   "Elementary Social Studies (NWT, 1993)"
+  ],
+  "areas": [
+   "Heritage and culture",
+   "History",
+   "Geography",
+   "Environmental science",
+   "Civics and economics"
+  ]
+ },
+ "4/core-french": {
+  "guides": [
+   "French as an Additional Language for Nunavut, Grades 4–9"
+  ],
+  "areas": null
+ },
+ "5/math": {
+  "guides": [
+   "Alberta Mathematics K–9 (2007)"
+  ],
+  "areas": [
+   "Number",
+   "Patterns and Relations",
+   "Shape and Space",
+   "Statistics and Probability"
+  ]
+ },
+ "5/language": {
+  "guides": [
+   "NWT English Language Arts (2011)"
+  ],
+  "areas": [
+   "Comprehension",
+   "Production"
+  ]
+ },
+ "5/science": {
+  "guides": [
+   "NWT Science and Technology K–6 (2004)"
+  ],
+  "areas": [
+   "Life science",
+   "Physical science",
+   "Earth and space science"
+  ]
+ },
+ "5/social": {
+  "guides": [
+   "Inuuqatigiit (NWT, 1996)",
+   "Elementary Social Studies (NWT, 1993)"
+  ],
+  "areas": [
+   "Heritage and culture",
+   "History",
+   "Geography",
+   "Environmental science",
+   "Civics and economics"
+  ]
+ },
+ "5/core-french": {
+  "guides": [
+   "French as an Additional Language for Nunavut, Grades 4–9"
+  ],
+  "areas": null
+ },
+ "6/math": {
+  "guides": [
+   "Alberta Mathematics K–9 (2007)"
+  ],
+  "areas": [
+   "Number",
+   "Patterns and Relations",
+   "Shape and Space",
+   "Statistics and Probability"
+  ]
+ },
+ "6/language": {
+  "guides": [
+   "NWT English Language Arts (2011)"
+  ],
+  "areas": [
+   "Comprehension",
+   "Production"
+  ]
+ },
+ "6/science": {
+  "guides": [
+   "NWT Science and Technology K–6 (2004)"
+  ],
+  "areas": [
+   "Life science",
+   "Physical science",
+   "Earth and space science"
+  ]
+ },
+ "6/social": {
+  "guides": [
+   "Inuuqatigiit (NWT, 1996)",
+   "Elementary Social Studies (NWT, 1993)"
+  ],
+  "areas": [
+   "Heritage and culture",
+   "History",
+   "Geography",
+   "Environmental science",
+   "Civics and economics"
+  ]
+ },
+ "6/core-french": {
+  "guides": [
+   "French as an Additional Language for Nunavut, Grades 4–9"
+  ],
+  "areas": null
+ },
+ "7/math": {
+  "guides": [
+   "Alberta Mathematics K–9 (2007)"
+  ],
+  "areas": [
+   "Number",
+   "Patterns and Relations",
+   "Shape and Space",
+   "Statistics and Probability"
+  ]
+ },
+ "7/language": {
+  "guides": [
+   "NWT English Language Arts (2011)"
+  ],
+  "areas": [
+   "Comprehension",
+   "Production"
+  ]
+ },
+ "7/science": {
+  "guides": [
+   "Nunavut adaptation of Alberta Science 7–9 (2003)"
+  ],
+  "areas": null
+ },
+ "7/social": {
+  "guides": [
+   "Inuuqatigiit (NWT, 1996)",
+   "Junior Secondary Social Studies (NWT, 1993)",
+   "Civics in the Junior Secondary Social Studies Curriculum (NWT, 1998)",
+   "Nunavut Land Claims Agreement"
+  ],
+  "areas": [
+   "Heritage and culture",
+   "History",
+   "Geography",
+   "Environmental science",
+   "Civics and economics"
+  ]
+ },
+ "7/core-french": {
+  "guides": [
+   "French as an Additional Language for Nunavut, Grades 4–9"
+  ],
+  "areas": null
+ },
+ "8/math": {
+  "guides": [
+   "Alberta Mathematics K–9 (2007)"
+  ],
+  "areas": [
+   "Number",
+   "Patterns and Relations",
+   "Shape and Space",
+   "Statistics and Probability"
+  ]
+ },
+ "8/language": {
+  "guides": [
+   "NWT English Language Arts (2011)"
+  ],
+  "areas": [
+   "Comprehension",
+   "Production"
+  ]
+ },
+ "8/science": {
+  "guides": [
+   "Nunavut adaptation of Alberta Science 7–9 (2003)"
+  ],
+  "areas": null
+ },
+ "8/social": {
+  "guides": [
+   "Inuuqatigiit (NWT, 1996)",
+   "Junior Secondary Social Studies (NWT, 1993)",
+   "Civics in the Junior Secondary Social Studies Curriculum (NWT, 1998)",
+   "Nunavut Land Claims Agreement"
+  ],
+  "areas": [
+   "Heritage and culture",
+   "History",
+   "Geography",
+   "Environmental science",
+   "Civics and economics"
+  ]
+ },
+ "8/core-french": {
+  "guides": [
+   "French as an Additional Language for Nunavut, Grades 4–9"
+  ],
+  "areas": null
+ },
+ "9/math": {
+  "guides": [
+   "Alberta Mathematics K–9 (2007)"
+  ],
+  "areas": [
+   "Number",
+   "Patterns and Relations",
+   "Shape and Space",
+   "Statistics and Probability"
+  ]
+ },
+ "9/language": {
+  "guides": [
+   "NWT English Language Arts (2011)"
+  ],
+  "areas": [
+   "Comprehension",
+   "Production"
+  ]
+ },
+ "9/science": {
+  "guides": [
+   "Nunavut adaptation of Alberta Science 7–9 (2003)"
+  ],
+  "areas": null
+ },
+ "9/social": {
+  "guides": [
+   "Inuuqatigiit (NWT, 1996)",
+   "Junior Secondary Social Studies (NWT, 1993)",
+   "Civics in the Junior Secondary Social Studies Curriculum (NWT, 1998)",
+   "Nunavut Land Claims Agreement"
+  ],
+  "areas": [
+   "Heritage and culture",
+   "History",
+   "Geography",
+   "Environmental science",
+   "Civics and economics"
+  ]
+ },
+ "9/core-french": {
+  "guides": [
+   "French as an Additional Language for Nunavut, Grades 4–9"
+  ],
+  "areas": null
+ }
+}
