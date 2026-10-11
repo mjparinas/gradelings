@@ -248,3 +248,17 @@ export function inactiveClassEmail(to: string, origin: string, className: string
     button: { label: `Sign in to ${APP_NAME}`, url: `${origin}/teachers/` },
   });
 }
+
+export function classInviteEmail(to: string, origin: string, className: string, ownerEmail: string): Email {
+  return layout({
+    to,
+    origin,
+    subject: `${ownerEmail} invited you to co-teach “${className}” on ${APP_NAME}`,
+    heading: "You were invited to co-teach a class",
+    body: [
+      `${ownerEmail} invited you to share the class “${className}”. As a co-teacher you can see the class, its students’ first names and practice results on the assigned units, and you can assign units and print login cards.`,
+      "Sign in to your teacher page and choose Accept to join. The invitation lasts 14 days. If you weren't expecting it, ignore this email and nothing is shared.",
+    ],
+    button: { label: "See the invitation", url: `${origin}/teachers/` },
+  });
+}

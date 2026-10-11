@@ -4,7 +4,7 @@ import { getCourse, loadGrade, parseUnitKey } from "@/content";
 import { FRAMEWORKS } from "@/content/frameworks";
 import type { FrameworkId, GradeId } from "@/content/types";
 import { unitLevel } from "@/lib/proficiency";
-import { query } from "./db";
+import { batch, query, run } from "./db";
 import { loadChildReport } from "./reportData";
 
 // Classroom mode. A teacher owns a class and shares its join code. A parent chooses to link a
@@ -14,6 +14,10 @@ import { loadChildReport } from "./reportData";
 export const MAX_CLASSES = 10;
 export const MAX_STUDENTS = 40;
 export const MAX_ASSIGNMENTS = 60;
+export const MAX_CO_TEACHERS = 5;
+export const MAX_PENDING_INVITES = 10;
+/** An invitation stops working after this long. */
+export const INVITE_TTL = 14 * 86_400_000;
 
 // No 0/O or 1/I/L, so a code is easy to read off a whiteboard.
 const CODE_CHARS = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
@@ -37,6 +41,87 @@ export interface ClassRow {
 
 export async function ownedClass(id: string, parentId: string): Promise<ClassRow | undefined> {
   return (await query<ClassRow>("SELECT * FROM classes WHERE id = ? AND owner_parent_id = ? AND closed_at IS NULL", [id, parentId]))[0];
+}
+
+export type TeacherRole = "owner" | "co-teacher";
+
+/**
+ * A class the signed-in account teaches: as its owner or as an accepted co-teacher. Co-teachers
+ * can view the class, add students, print cards, reset a student's code and manage assignments.
+ * Everything destructive or about who has access (closing the class, a new join code, removing a
+ * student, inviting or removing co-teachers) stays with the owner: use `ownedClass` for those.
+ */
+export async function teachingClass(id: string, parentId: string): Promise<{ cls: ClassRow; role: TeacherRole } | undefined> {
+  const owned = await ownedClass(id, parentId);
+  if (owned) return { cls: owned, role: "owner" };
+  const rows = await query<ClassRow>(
+    `SELECT c.* FROM classes c JOIN class_teachers t ON t.class_id = c.id
+     WHERE c.id = ? AND t.parent_id = ? AND c.closed_at IS NULL`,
+    [id, parentId],
+  );
+  return rows[0] ? { cls: rows[0], role: "co-teacher" } : undefined;
+}
+
+export interface TeacherEntry {
+  /** Account id; opaque to the browser. */
+  id: string;
+  email: string;
+  role: TeacherRole;
+}
+
+/** The owner and accepted co-teachers of a class, owner first. */
+export async function classTeachers(cls: ClassRow): Promise<TeacherEntry[]> {
+  const owner = await query<{ id: string; email: string }>("SELECT id, email FROM parents WHERE id = ?", [cls.owner_parent_id]);
+  const others = await query<{ id: string; email: string }>(
+    "SELECT p.id, p.email FROM class_teachers t JOIN parents p ON p.id = t.parent_id WHERE t.class_id = ? ORDER BY t.joined_at, p.id",
+    [cls.id],
+  );
+  return [
+    ...owner.map((o) => ({ id: o.id, email: o.email, role: "owner" as const })),
+    ...others.map((o) => ({ id: o.id, email: o.email, role: "co-teacher" as const })),
+  ];
+}
+
+export async function pendingInvites(classId: string, now = Date.now()): Promise<{ email: string; createdAt: number }[]> {
+  const rows = await query<{ email: string; created_at: number }>("SELECT email, created_at FROM class_invites WHERE class_id = ? AND created_at > ? ORDER BY created_at", [classId, now - INVITE_TTL]);
+  return rows.map((r) => ({ email: r.email, createdAt: Number(r.created_at) }));
+}
+
+/** Erases every co-teacher link and invitation for a class (closing, deleting or inactivity). */
+export async function removeClassTeachers(classId: string): Promise<void> {
+  await batch([
+    { sql: "DELETE FROM class_teachers WHERE class_id = ?", args: [classId] },
+    { sql: "DELETE FROM class_invites WHERE class_id = ?", args: [classId] },
+  ]);
+}
+
+/**
+ * Called before accounts are deleted. Each class they own either moves to its longest-serving
+ * co-teacher outside the deleted accounts (who could already see all of it, so access doesn't widen
+ * and the class's students keep their work), or, with no co-teacher, loses its student accounts
+ * like any class with no teacher. Then the accounts' own co-teaching links and open invitations go.
+ */
+export async function releaseTeacherAccounts(parentIds: string[]): Promise<void> {
+  const gone = new Set(parentIds);
+  for (const owner of parentIds) {
+    const classes = await query<{ id: string }>("SELECT id FROM classes WHERE owner_parent_id = ?", [owner]);
+    for (const c of classes) {
+      const heir = (await query<{ parent_id: string }>("SELECT parent_id FROM class_teachers WHERE class_id = ? ORDER BY joined_at, parent_id", [c.id])).find((t) => !gone.has(t.parent_id));
+      if (heir) {
+        await batch([
+          { sql: "UPDATE classes SET owner_parent_id = ? WHERE id = ? AND owner_parent_id = ?", args: [heir.parent_id, c.id, owner] },
+          { sql: "DELETE FROM class_teachers WHERE class_id = ? AND parent_id = ?", args: [c.id, heir.parent_id] },
+          { sql: "DELETE FROM class_invites WHERE class_id = ? AND invited_by = ?", args: [c.id, owner] },
+        ]);
+      }
+    }
+  }
+  for (const id of parentIds) {
+    // Classes still owned by a deleted account have no heir: the caller removes their students.
+    await run("DELETE FROM class_teachers WHERE parent_id = ?", [id]);
+    await run("DELETE FROM class_invites WHERE invited_by = ?", [id]);
+    await run("DELETE FROM class_invites WHERE email = (SELECT email FROM parents WHERE id = ?)", [id]);
+  }
 }
 
 export const isFramework = (v: unknown): v is FrameworkId => FRAMEWORKS.some((f) => f.id === v);
