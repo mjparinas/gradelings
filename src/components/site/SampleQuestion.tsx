@@ -1,10 +1,11 @@
 import { formatMoney } from "@/content/money";
 import { hashSeed, shuffle, withSeed } from "@/content/random";
 import type { Question } from "@/content/types";
+import { Disclosure } from "../Disclosure";
 import { Blocks, Coin, QuestionVisual, Shape, WithBlanks } from "../visuals";
 
 // A static, read-only preview of a question for the public curriculum pages,
-// with the answer tucked into a <details>. The real, interactive version lives in /play/.
+// with the answer tucked away until a parent asks to see it. The real, interactive version lives in /play/.
 
 export function answerText(q: Question): string {
   switch (q.kind) {
@@ -102,8 +103,7 @@ export function SampleQuestion({ q, n, seedText, className = "" }: { q: Question
         </div>
       )}
       <Body q={q} seed={hashSeed(seedText)} />
-      <details className="rounded-xl bg-good-soft px-3 py-2">
-        <summary className="cursor-pointer font-semibold text-good-dark">Show answer</summary>
+      <Disclosure className="rounded-xl bg-good-soft px-3 py-2" titleClassName="font-semibold text-good-dark" title="Show answer">
         <p className="mt-1 font-read text-lg font-bold">{answerText(q)}</p>
         {q.kind === "build" && (
           <div className="my-2">
@@ -111,7 +111,7 @@ export function SampleQuestion({ q, n, seedText, className = "" }: { q: Question
           </div>
         )}
         <p className="font-read text-sm text-ink-soft">Hint: {q.hint}</p>
-      </details>
+      </Disclosure>
     </li>
   );
 }

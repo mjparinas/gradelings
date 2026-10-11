@@ -8,6 +8,7 @@ import { guidePath } from "@/components/site/guides";
 import { HOME_TIPS, GUIDE_FRAMEWORKS } from "@/content/guides";
 import { GRADE_LABEL, ageBandFor, getSubjectMeta, gradeSlug } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
+import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -153,10 +154,9 @@ export default async function SubjectGuide({ params }: Props) {
         </h2>
         <div className="flex flex-col gap-2">
           {faqs.map((q) => (
-            <details key={q.q} className="rounded-2xl border border-line bg-white p-4">
-              <summary className="cursor-pointer font-bold">{q.q}</summary>
+            <Disclosure key={q.q} className="rounded-2xl border border-line bg-white p-4" titleClassName="font-bold" title={q.q}>
               <p className="mt-2 font-read">{q.a}</p>
-            </details>
+            </Disclosure>
           ))}
         </div>
       </section>

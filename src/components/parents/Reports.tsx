@@ -10,6 +10,7 @@ import { eventsFor, useChildSettings, useDerived, useStore } from "@/lib/store";
 import { getTrophy, TIER_STYLE } from "@/lib/trophies";
 import { ColumnChart, LevelStacks, LineChart, RowBars, StatTile } from "./charts";
 import { ShareReport } from "./ShareReport";
+import { Disclosure } from "../Disclosure";
 import { ChildTabs, NoChildren, PageTitle, Panel, useChild } from "./common";
 
 const pct = (v: number) => `${Math.round(v * 100)}%`;
@@ -165,10 +166,7 @@ export function ReportsPage({ childId }: { childId?: string }) {
           const units = report.units.filter((u) => u.ref.course.subject === s.id);
           if (!units.length) return null;
           return (
-            <details key={s.id} className="border-t border-line py-2" open={period <= 14}>
-              <summary className="cursor-pointer py-1 text-lg font-bold">
-                {s.emoji} {s.title.big}
-              </summary>
+            <Disclosure key={s.id} className="border-t border-line py-2" titleClassName="py-1 text-lg font-bold" title={`${s.emoji} ${s.title.big}`} open={period <= 14}>
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-sm">
                   <thead>
@@ -198,7 +196,7 @@ export function ReportsPage({ childId }: { childId?: string }) {
                   </tbody>
                 </table>
               </div>
-            </details>
+            </Disclosure>
           );
         })}
       </Panel>
