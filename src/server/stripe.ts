@@ -88,6 +88,15 @@ export async function createCheckout(opts: {
   return session.url;
 }
 
+/** Takes `cents` off the customer's next invoice (a negative balance is a credit in Stripe). */
+export async function creditCustomer(customer: string, cents: number, currency: string, description: string): Promise<void> {
+  await stripe(`customers/${encodeURIComponent(customer)}/balance_transactions`, {
+    amount: String(-Math.abs(cents)),
+    currency: currency.toLowerCase(),
+    description,
+  });
+}
+
 export async function createPortal(customer: string, origin: string): Promise<string> {
   const session = await stripe<{ url: string }>("billing_portal/sessions", {
     customer,

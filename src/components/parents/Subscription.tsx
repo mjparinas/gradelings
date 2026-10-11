@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState, useSyncExternalStore } from "react";
-import { SITE_HOST } from "@/lib/brand";
-import { devBilling, openBillingPortal, refreshAccount, resendVerification, startCheckout, type BillingInfo } from "@/lib/account";
-import { FREE_UNITS_PER_COURSE, hasPaidPlan, isPremium, MAX_CHILDREN, PRICES, trialDaysLeft, upgradeOffer } from "@/lib/plan";
+import { APP_NAME, SITE_HOST } from "@/lib/brand";
+import { devBilling, loadReferral, openBillingPortal, refreshAccount, resendVerification, startCheckout, type BillingInfo, type ReferralInfo } from "@/lib/account";
+import { FREE_UNITS_PER_COURSE, hasPaidPlan, isPremium, MAX_CHILDREN, PRICES, REFERRAL_BONUS_DAYS, trialDaysLeft, upgradeOffer } from "@/lib/plan";
+import { inviteLink } from "@/lib/referral";
 import { useRoute } from "@/lib/router";
 import { useStore } from "@/lib/store";
 import { isAndroidApp } from "@/lib/twa";
@@ -169,8 +170,59 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
           )}
           {error && <p className="mt-3 font-semibold text-nudge-dark">{error}</p>}
         </Panel>
+        {family.account && !family.account.student && !inAndroidApp && <ReferralPanel />}
       </div>
     </>
+  );
+}
+
+/** "Give a month, get a month": the parent's invite link and what it has earned. */
+function ReferralPanel() {
+  const [info, setInfo] = useState<ReferralInfo | null>(null);
+  const [failed, setFailed] = useState(false);
+  const [copied, setCopied] = useState(false);
+  useEffect(() => {
+    void loadReferral().then(setInfo, () => setFailed(true));
+  }, []);
+  const link = info ? inviteLink(window.location.origin, info.code) : "";
+  return (
+    <Panel title="🎁 Give a month, get a month">
+      <p className="font-read">
+        Share your link with another family. They get {REFERRAL_BONUS_DAYS} extra days of free trial, and once they confirm their email you get a free month. No card needed.
+      </p>
+      {failed ? (
+        <p className="mt-3 text-sm text-ink-soft">Your invite link needs an internet connection. Try again when you&apos;re online.</p>
+      ) : !info ? (
+        <p className="mt-3 text-sm text-ink-soft">Loading your link…</p>
+      ) : (
+        <div className="mt-3 flex flex-col gap-3">
+          <input readOnly aria-label="Your invite link" value={link} onFocus={(e) => e.currentTarget.select()} className="rounded-xl border-2 border-line px-3 py-2 text-base" />
+          <div className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              className="rounded-xl bg-[#25b47e] px-4 py-2 font-bold text-[#0f172a]"
+              onClick={() => {
+                const done = () => {
+                  setCopied(true);
+                  setTimeout(() => setCopied(false), 2500);
+                };
+                void navigator.clipboard?.writeText(link).then(done, () => {});
+              }}
+            >
+              {copied ? "Copied!" : "Copy link"}
+            </button>
+            {typeof navigator !== "undefined" && "share" in navigator && (
+              <button type="button" className="rounded-xl border border-line px-4 py-2 font-semibold" onClick={() => void navigator.share({ url: link, text: `Try ${APP_NAME} for free:` }).catch(() => {})}>
+                Share…
+              </button>
+            )}
+          </div>
+          <p className="text-sm text-ink-soft">
+            Your code: <b>{info.code}</b> · {info.joined} {info.joined === 1 ? "family has" : "families have"} joined · {info.monthsEarned} of {info.maxMonths} free months earned
+          </p>
+        </div>
+      )}
+    </Panel>
   );
 }
 

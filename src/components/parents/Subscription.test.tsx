@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { SITE_HOST } from "@/lib/brand";
 import type { FamilyInfo } from "@/lib/model";
@@ -22,6 +22,7 @@ vi.mock("@/lib/account", () => ({
   devBilling: vi.fn(),
   openBillingPortal: vi.fn(),
   resendVerification: vi.fn(),
+  loadReferral: vi.fn().mockResolvedValue({ code: "ABCD2345", joined: 2, rewarded: 1, monthsEarned: 1, maxMonths: 12, bonusDays: 30 }),
 }));
 
 import { SubscriptionPage } from "./Subscription";
@@ -73,5 +74,27 @@ describe("SubscriptionPage", () => {
     render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
     expect(screen.getByText("Confirm your email to subscribe.")).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Subscribe yearly/ })).toBeDisabled();
+  });
+
+  it("shows a parent their invite link and what it has earned", async () => {
+    state.android = false;
+    state.family = {
+      plan: "trial",
+      trialEndsAt: Date.now() + 5 * 86_400_000,
+      updatedAt: 1,
+      account: { email: "parent@example.com", familyId: "fam", verified: true },
+    };
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    expect(screen.getByRole("heading", { name: /Give a month, get a month/ })).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByLabelText("Your invite link")).toHaveValue(`${window.location.origin}/account/invite/?ref=ABCD2345`));
+    expect(screen.getByText(/2 families have joined/)).toBeInTheDocument();
+    expect(screen.getByText(/1 of 12 free months earned/)).toBeInTheDocument();
+  });
+
+  it("keeps the invite panel away from signed-out visitors", () => {
+    state.android = false;
+    state.family = { plan: "trial", trialEndsAt: Date.now() + 5 * 86_400_000, updatedAt: 1 };
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    expect(screen.queryByRole("heading", { name: /Give a month/ })).not.toBeInTheDocument();
   });
 });
