@@ -37,6 +37,9 @@ const FRENCH_GRADES: Record<FrameworkId, { immersion: GradeId[]; "core-french": 
   // Newfoundland and Labrador: Core French is organized from Grade 4. French Immersion (early from Kindergarten, late from Grade 7)
   // is not built, because its curriculum guides are not public (see docs/research/newfoundland-and-labrador/README.md).
   "ca-nl": { immersion: [], "core-french": range("4", "9") },
+  // Prince Edward Island: Core French begins no later than Grade 4 (Grades 1 to 3 are local pilots). Early (from Kindergarten), Middle
+  // (Grade 4) and Late (Grade 7) French Immersion are not built, because their curriculum guides are not public.
+  "ca-pe": { immersion: [], "core-french": range("4", "9") },
   // Nunavut: French as an Additional Language for Nunavut, Grades 4 to 9. No immersion program is built.
   "ca-nu": { immersion: [], "core-french": range("4", "9") },
 };

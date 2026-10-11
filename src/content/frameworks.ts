@@ -5,6 +5,7 @@ import { NEWFOUNDLAND_AND_LABRADOR } from "./newfoundland-and-labrador/framework
 import { NOVA_SCOTIA } from "./nova-scotia/framework";
 import { NUNAVUT } from "./nunavut/framework";
 import { ONTARIO } from "./ontario/framework";
+import { PRINCE_EDWARD_ISLAND } from "./prince-edward-island/framework";
 import { SASKATCHEWAN } from "./saskatchewan/framework";
 import type { FrameworkId, GradeId, SubjectId } from "./types";
 
@@ -277,6 +278,7 @@ export const FRAMEWORKS: Framework[] = [
   NOVA_SCOTIA,
   NEW_BRUNSWICK,
   NEWFOUNDLAND_AND_LABRADOR,
+  PRINCE_EDWARD_ISLAND,
   NUNAVUT,
 ];
 

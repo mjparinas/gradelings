@@ -122,6 +122,18 @@ const EXTRA_LOADERS: Partial<Record<FrameworkId, Partial<Record<GradeId, Loader>
     "8": () => import("./newfoundland-and-labrador/g8"),
     "9": () => import("./newfoundland-and-labrador/g9"),
   },
+  "ca-pe": {
+    k: () => import("./prince-edward-island/k"),
+    "1": () => import("./prince-edward-island/g1"),
+    "2": () => import("./prince-edward-island/g2"),
+    "3": () => import("./prince-edward-island/g3"),
+    "4": () => import("./prince-edward-island/g4"),
+    "5": () => import("./prince-edward-island/g5"),
+    "6": () => import("./prince-edward-island/g6"),
+    "7": () => import("./prince-edward-island/g7"),
+    "8": () => import("./prince-edward-island/g8"),
+    "9": () => import("./prince-edward-island/g9"),
+  },
   "ca-nu": {
     k: () => import("./nunavut/k"),
     "1": () => import("./nunavut/g1"),

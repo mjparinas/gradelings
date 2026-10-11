@@ -1,0 +1,351 @@
+import { bankUnit, type Q } from "../own";
+
+// Grade 5 science and social studies, Prince Edward Island: weather, the body, the Middle Ages, and First Nations and
+// Inuit societies. Indigenous content is light, in the present tense for living communities, and needs review by
+// Mi’kmaq partners (for example the Mi’kmaq Confederacy of PEI) and the PEI Department of Education before launch.
+//
+// Sources checked:
+// The Canadian Encyclopedia, "Prince Edward Island" (Mi’kmaq call the island Epekwitk) (thecanadianencyclopedia.ca)
+// Parks Canada, Skmaqn–Port-la-Joye–Fort Amherst National Historic Site, culture and history (parks.canada.ca)
+// The Canadian Encyclopedia, "Mi’kmaq" (seven districts, Grand Council, consensus) (thecanadianencyclopedia.ca)
+// The Canadian Encyclopedia, "Peace and Friendship Treaties" (thecanadianencyclopedia.ca)
+// Crown-Indigenous Relations and Northern Affairs Canada, "Peace and Friendship Treaties (1725-1779)" (rcaanc-cirnac.gc.ca)
+// The Canadian Encyclopedia, "Iroquois" (Haudenosaunee, Great Law of Peace) (thecanadianencyclopedia.ca)
+// The Canadian Encyclopedia, "John A. Hopps" and "Cardiac Pacemaker" (thecanadianencyclopedia.ca)
+// The Canadian Encyclopedia, "Frederick Banting" and "Insulin" (thecanadianencyclopedia.ca)
+// Standard textbook facts for the weather and body units (instruments, clouds, water cycle, systems of the body)
+// Standard medieval European feudal structure (monarch, nobles, knights, clergy, peasants)
+//
+// Left out because unverified: how Inuit in Atlantic Canada made specific decisions, named leaders or councils of any
+// Nation other than the Mi’kmaq Grand Council, dates of Mi’kmaq presence on the island (sources differ), the 1713
+// founding of a French fortress, and details of the Acadian and Mi’kmaq alliance beyond the yearly gathering at Port la Joye.
+
+const WEATHER_TOOLS: Q[] = [
+  ["Which instrument measures air temperature?", "a thermometer", ["a rain gauge", "a wind vane", "a ruler"], "It often has a thin tube with a coloured line inside."],
+  ["What does a rain gauge measure?", "how much rain has fallen", ["how fast the wind blows", "how warm the air is", "which way the wind blows"], "It collects water in a container with a scale."],
+  ["What does a wind vane show?", "the direction the wind is blowing from", ["how hard it rained", "the temperature", "how many clouds are in the sky"], "It swings around to point into the wind."],
+  ["Which instrument measures wind speed?", "an anemometer", ["a thermometer", "a rain gauge", "a wind vane"], "Its little cups spin faster in stronger wind."],
+  ["A wind vane points north. From which direction is the wind blowing?", "from the north", ["from the south", "from the east", "from the west"], "A wind vane points into the wind.", true],
+  ["Which unit do we use to give air temperature in Canada?", "degrees Celsius", ["kilograms", "millimetres per hour", "litres"], "The symbol looks like °C."],
+  ["A rain gauge has 12 mm of water in it. What does that tell us?", "12 mm of rain fell", ["it was 12 degrees outside", "the wind blew at 12 km/h", "12 clouds were in the sky"], "A rain gauge measures rain in millimetres."],
+  ["A thermometer shows −5 °C. What kind of weather is that?", "below freezing", ["a hot summer day", "warm and sunny", "a mild spring day"], "Water freezes at 0 °C."],
+  ["What does an anemometer reading of 40 km/h tell you?", "the wind speed", ["the temperature", "the amount of rain", "the type of cloud"], "The unit km/h tells you something is moving."],
+  ["Which two things does a weather watcher need to measure to describe the wind?", "speed and direction", ["height and weight", "colour and shape", "rain and snow"], "One instrument measures each of these."],
+  ["Which tool would you use to measure how much snow or rain fell in a day?", "a precipitation gauge", ["a thermometer", "an anemometer", "a wind vane"], "Precipitation means water falling from the sky."],
+  ["What is cloud cover?", "how much of the sky is covered by clouds", ["how high the clouds are", "how cold the clouds are", "how fast the clouds fall"], "You can estimate it by looking up."],
+  ["Which cloud is flat and spread out like a grey blanket?", "stratus", ["cumulus", "cirrus", "thunderhead"], "Think of the word “layer”."],
+  ["Which cloud looks puffy, like cotton balls, with a flat bottom?", "cumulus", ["stratus", "cirrus", "fog"], "Fair-weather clouds are often this kind."],
+  ["Which cloud is thin, wispy and very high in the sky?", "cirrus", ["stratus", "cumulus", "fog"], "These clouds are made of tiny ice crystals."],
+  ["A cloud does not fit stratus, cumulus or cirrus. How could you record it?", "as “other”", ["as stratus", "as cumulus", "do not record it"], "Weather watchers use a group for clouds that do not match."],
+  ["Two students look at the same cloud. One says stratus and one says cumulus. What is true?", "Results can vary between observers", ["One of them must be wrong", "Clouds cannot be classified", "The cloud is not real"], "Judging clouds takes practice.", true],
+  ["A weather table shows Monday 12 °C, Tuesday 14 °C, Wednesday 16 °C. What is the pattern?", "The temperature is rising each day", ["The temperature is falling", "The temperature stays the same", "There is no pattern"], "Look at how each number changes."],
+  ["A table lists 0 mm, 0 mm, 6 mm, 0 mm of rain for four days. On which day did it rain?", "the third day", ["the first day", "the second day", "the fourth day"], "Find the number that is not zero."],
+  ["A bar graph shows daily high temperatures. What does the tallest bar show?", "the warmest day", ["the coldest day", "the rainiest day", "the windiest day"], "A taller bar means a bigger number."],
+  ["A line graph of temperature goes up, then down, then up again. What does that show?", "The temperature changes from day to day", ["The temperature never changes", "It rained every day", "The graph is wrong"], "A line that moves shows change.", true],
+  ["Why do weather watchers record data at the same time each day?", "so the readings can be fairly compared", ["so the weather stays the same", "so the instruments last longer", "so clouds stay away"], "Temperature changes across a day."],
+  ["Why is a table a good way to record weather data?", "It keeps the measurements organized", ["It changes the weather", "It makes the rain stop", "It hides patterns"], "Rows and columns make numbers easy to find."],
+  ["The saying goes, “Red sky at night, sailor’s delight.” What does it say will probably happen?", "fair weather tomorrow", ["a storm tonight", "snow in summer", "an earthquake"], "Sailors used this saying long ago.", true],
+  ["Weather folklore is…", "a saying people use to guess the weather", ["a kind of cloud", "an instrument", "a unit of rain"], "These sayings are passed down, and they are not always right."],
+  ["Why should you check weather folklore against instrument readings?", "Sayings are not always right", ["Instruments are never right", "Folklore is always right", "Weather never changes"], "Evidence helps us test a saying."],
+  ["Which is the best estimate for a pleasant spring afternoon in this region?", "15 °C", ["−30 °C", "45 °C", "90 °C"], "Think of a light jacket day."],
+  ["Which is the best estimate for the temperature of a cold winter morning?", "−10 °C", ["25 °C", "40 °C", "100 °C"], "Water outside would freeze."],
+  ["Which wind speed would be a gentle breeze?", "10 km/h", ["120 km/h", "200 km/h", "300 km/h"], "A gentle breeze barely moves tree branches."],
+  ["Which wind speed is a very strong storm wind?", "100 km/h", ["5 km/h", "10 km/h", "0 km/h"], "Such winds can knock down trees.", true],
+  ["You see a clear blue sky with almost no clouds. What is the cloud cover?", "very low", ["very high", "the same as an overcast sky", "impossible to say"], "Count how much of the sky has clouds."],
+  ["Early in the morning the temperature is 4 °C. Which is a reasonable estimate for 3 p.m. on a sunny day?", "10 °C", ["−20 °C", "−5 °C", "4 °C below zero"], "The sun warms the air through the day.", true],
+  ["A rain gauge is placed under a tree. Why might the reading be too low?", "Leaves can block the rain", ["Trees make rain stop", "Rain gauges only work indoors", "Trees heat the water"], "Put it in an open space.", true],
+  ["Why is a wind vane put on top of a tall pole or roof?", "so buildings and trees do not block the wind", ["so rain can fall in it", "so it stays warm", "so clouds can touch it"], "Wind moves best in open spaces.", true],
+];
+
+const AIR_AND_SUN: Q[] = [
+  ["What is the main source of energy for Earth’s weather?", "the sun", ["the moon", "the stars", "the ocean floor"], "It warms the land, water and air."],
+  ["What does the sun’s energy do to the air near the ground?", "It warms it", ["It freezes it", "It makes it heavier", "It removes it"], "That is why summer days are warm."],
+  ["Which warms up faster in sunlight: dark soil or water?", "soil", ["water", "they warm at the same speed", "neither warms up"], "Water takes longer to heat."],
+  ["On a sunny day, a pail of soil and a pail of water sit in the sun. After an hour, which is warmer?", "the soil", ["the water", "they are exactly the same", "the pail"], "Use a thermometer to compare.", true],
+  ["Which cools down more slowly at night: land or a lake?", "the lake", ["the land", "they cool at the same speed", "neither cools"], "Water holds heat longer than soil.", true],
+  ["Why does a beach feel hot on a sunny day but the ocean water feels cooler?", "Sand warms up faster than water", ["Sand is made of ice", "The sun only shines on sand", "Water has no energy"], "Land heats faster than water."],
+  ["What tool would you use to compare the temperature of soil and water in the sun?", "a thermometer", ["a rain gauge", "a wind vane", "a compass"], "It measures how warm something is."],
+  ["Why is the same place colder in winter than in summer?", "It gets less direct sunlight", ["The sun goes out", "The air gets heavier", "The ocean dries up"], "Sunlight is weaker and days are shorter."],
+  ["What is wind?", "air that is moving", ["air that is not there", "water in the sky", "a very hot cloud"], "You can feel it on your face."],
+  ["You blow up a balloon. What does this show about air?", "Air takes up space", ["Air has no mass", "Air is a liquid", "Air is a solid"], "The balloon gets bigger because air fills it."],
+  ["An empty ball and a ball full of air are put on a balance. The full one is heavier. What does that show?", "Air has mass", ["Air has no mass", "Air is lighter than nothing", "Balls grow when empty"], "Mass means how much matter there is.", true],
+  ["You try to push an upside-down empty cup straight into water. Water stays out at first. Why?", "The air inside takes up space", ["Water is afraid of cups", "The cup is too cold", "Air is heavier than water"], "Air is in the way.", true],
+  ["A balloon is placed over the neck of a bottle and the bottle is set in hot water. What happens?", "The balloon grows bigger", ["The balloon shrinks", "The balloon pops right away", "Nothing changes at all"], "The air inside takes up more space when warm."],
+  ["What happens to air when it is heated?", "It expands", ["It disappears", "It turns to water", "It turns to ice"], "Expand means to take up more space."],
+  ["When air is cooled, what usually happens to the space it takes up?", "It takes up less space", ["It takes up more space", "It stops being air", "It becomes a solid right away"], "The opposite of heating.", true],
+  ["Which is lighter for the same space: warm air or cold air?", "warm air", ["cold air", "they are exactly the same", "neither has mass"], "Warm air spreads out more.", true],
+  ["What does warm air do in a room?", "It rises", ["It sinks to the floor", "It stays still", "It disappears"], "That is why it is warmer near the ceiling."],
+  ["Cold air next to a window sinks. What happens to the air near the floor?", "It feels cooler", ["It feels hotter", "It disappears", "It turns to rain"], "Cool air collects low."],
+  ["Warm air near a heater rises. What does the cooler air in the room do?", "It moves in to take its place", ["It rises up too", "It stops moving", "It turns into water"], "Air flows in circles."],
+  ["Two air masses meet: one warm and one cold. What usually happens?", "The warm air rises over the cold air", ["The cold air rises over the warm air", "Both air masses disappear", "Both turn to ice"], "Cold air is heavier and stays low."],
+  ["Warm water meets cold water. Where does the warm water usually go?", "It rises above the cold water", ["It sinks below the cold water", "It disappears", "It turns into air"], "Warm water is lighter than cold water."],
+  ["During a sunny day by the sea, the land warms faster than the water. Which way does the breeze blow near the shore?", "from the sea to the land", ["from the land to the sea", "straight up only", "there is never any breeze"], "Cool air moves in to replace the rising warm air.", true],
+  ["Why do we feel a draft along the floor on a cold day?", "Cold air sinks and flows along the floor", ["Warm air sinks", "The floor makes wind", "The ceiling is colder"], "Cold air is heavy."],
+  ["Where does most weather happen?", "in the air around Earth", ["deep under the ground", "on the moon", "in space"], "It is the layer we live in."],
+  ["What happens to water in a puddle on a warm sunny day?", "It evaporates into the air", ["It turns to rock", "It stays forever", "It freezes in summer"], "Heat turns liquid water into water vapour."],
+  ["What is evaporation?", "liquid water changing into water vapour", ["water vapour changing into liquid", "rain falling", "snow melting"], "Think of a puddle drying up."],
+  ["What is condensation?", "water vapour cooling into liquid droplets", ["liquid water turning into vapour", "rain falling from a cloud", "ice melting"], "Think of drops on the outside of a cold glass."],
+  ["What is precipitation?", "water falling from clouds as rain, snow, sleet or hail", ["water vapour rising", "clouds forming", "a puddle drying"], "It comes down from the sky."],
+  ["Which list puts the water cycle in a good order?", "evaporation, condensation, precipitation", ["precipitation, evaporation, condensation", "condensation, precipitation, evaporation only", "precipitation, condensation, evaporation"], "Water rises first, then it forms clouds, then it falls.", true],
+  ["How do clouds form?", "Water vapour cools and condenses into tiny droplets", ["Smoke from the ground gathers", "The sun makes cotton", "Wind makes ice"], "Cooling changes vapour into liquid."],
+  ["Why is the water cycle called a cycle?", "The water keeps moving around again and again", ["It happens only once", "It only happens in winter", "It stops at the clouds"], "A cycle goes around and repeats."],
+  ["Which part of the water cycle takes water from lakes and oceans into the air?", "evaporation", ["condensation", "precipitation", "freezing only"], "The sun warms the water.", true],
+  ["In your community, the temperature is 2 °C on Monday, 5 °C on Tuesday and 8 °C on Wednesday. What do you predict for Thursday?", "It will likely be warmer", ["It will be −20 °C for sure", "It will be exactly 2 °C", "No prediction is possible"], "Use the pattern of change.", true],
+  ["Weather often changes with the seasons. Which is a pattern in local weather?", "Winters are colder than summers", ["It snows every day of the year", "It never rains", "Winters are hotter than summers"], "Think about the year.", true],
+];
+
+const BODY_INVESTIGATIONS: Q[] = [
+  ["Which question about the body can be tested?", "Does my heart beat faster after I jog?", ["Is jogging fun?", "Is my heart pretty?", "Do hearts have feelings?"], "A testable question can be answered with measurements."],
+  ["Which question is a testable question?", "How does 30 seconds of jumping change my breathing rate?", ["Why is breathing nice?", "Who is the best breather?", "Is air happy?"], "You can count breaths before and after."],
+  ["In a heart-rate test, what should you change on purpose?", "the kind or amount of exercise", ["the person being tested", "the instrument", "the time of day between trials"], "That is the variable you are testing."],
+  ["You test how exercise affects heart rate. Which should be kept the same?", "the person being tested", ["the amount of exercise", "nothing at all", "the heart rate"], "A fair test controls variables."],
+  ["Why do scientists control variables?", "so only one thing changes in a test", ["so the test takes longer", "so nothing is measured", "so results are always the same"], "That way you know what caused the result."],
+  ["How can you find your heart rate?", "count your pulse beats for a set time", ["count the steps you take", "measure your height", "weigh your lunch"], "Feel your pulse at your wrist or neck."],
+  ["Heart rate is measured in…", "beats per minute", ["litres per hour", "kilograms", "degrees"], "Count beats in one minute."],
+  ["Which is a unit for breathing rate?", "breaths per minute", ["kilometres per hour", "grams", "litres per kilogram"], "Count how many times you breathe in a minute."],
+  ["A graph shows a student’s heart rate: 70, 110, 140, 90 beats per minute during rest, jogging, sprinting, and cooling. When was it highest?", "while sprinting", ["at rest", "while jogging", "while cooling"], "Find the biggest number."],
+  ["On a heart-rate graph, the line goes up after exercise. What does that show?", "Heart rate rises with exercise", ["Heart rate falls with exercise", "The heart stops", "Exercise has no effect"], "Muscles need more oxygen."],
+  ["Why does your breathing speed up when you run?", "Your body needs more oxygen", ["Your body needs less air", "Your lungs get smaller", "Your heart stops"], "Muscles use oxygen to work."],
+  ["Which would you expect: heart rate at rest or after running?", "lower at rest", ["higher at rest", "the same in both", "zero at rest"], "Your heart works harder when you run."],
+  ["Which organ pumps blood around the body?", "the heart", ["the lungs", "the kidneys", "the stomach"], "It beats all day and all night."],
+  ["Which organs filter waste from the blood to make urine?", "the kidneys", ["the lungs", "the heart", "the stomach"], "You have two of them."],
+  ["Which organ stores urine until you go to the toilet?", "the bladder", ["the kidney", "the heart", "the lung"], "It is like a stretchy bag."],
+  ["Which tubes carry urine from the kidneys to the bladder?", "the ureters", ["the windpipe", "the veins", "the nerves"], "There is one for each kidney."],
+  ["Which part of the excretory system carries urine out of the body?", "the urethra", ["the ureter", "the kidney", "the heart"], "It is the last tube in the path."],
+  ["Besides kidneys, which organ helps remove waste by sweating?", "the skin", ["the heart", "the brain", "the bones"], "Sweat carries out water and some salts."],
+  ["Which organs let your body get rid of carbon dioxide when you breathe out?", "the lungs", ["the kidneys", "the bladder", "the stomach"], "Breathing out removes a waste gas."],
+  ["What is the main job of the excretory system?", "to remove waste from the body", ["to pump blood", "to digest food", "to send messages"], "Excrete means to get rid of waste."],
+  ["Which list shows urine’s path in the right order?", "kidney, ureter, bladder, urethra", ["bladder, kidney, ureter, urethra", "urethra, bladder, ureter, kidney", "ureter, kidney, urethra, bladder"], "It starts where the blood is filtered.", true],
+  ["Which part of the body is the control centre of the nervous system?", "the brain", ["the heart", "the lungs", "the kidneys"], "It sends and receives messages."],
+  ["What do nerves do?", "carry messages between the brain and body", ["pump blood", "break down food", "store waste"], "They work like tiny wires."],
+  ["What do muscles do to make a bone move?", "pull on it", ["push it away like a spring", "turn to bone", "send nerve messages"], "A muscle gets shorter when it contracts."],
+  ["What is the main job of the skeleton?", "to hold up and protect the body", ["to digest food", "to filter blood", "to make urine"], "Bones form a frame."],
+  ["You decide to kick a ball. Which list shows how the systems work together?", "nerves send a message, muscles pull, bones move", ["bones send a message, nerves pull, muscles move", "muscles think, bones pull, nerves move", "kidneys send a message, bones pull"], "Message first, then pull, then move.", true],
+  ["What does a joint allow?", "bones to bend and move", ["food to be digested", "blood to be filtered", "air to enter lungs"], "Your elbow and knee are joints."],
+  ["How is response time measured in a ruler-drop test?", "how far the ruler falls before you catch it", ["how tall you are", "how loud you shout", "how many bones you have"], "A quicker catch means less distance."],
+  ["In a ruler-drop test, Sam catches the ruler at 8 cm, 6 cm, 5 cm, and 4 cm. What pattern is there?", "Sam gets quicker with practice", ["Sam gets slower", "Sam never catches it", "Sam’s response stays the same"], "The distances get smaller.", true],
+  ["In response-time trials, one result is much slower than the others. What could explain it?", "the person was distracted", ["the ruler turned into a bird", "all humans have the same time", "the result must be perfect"], "A single odd result is called a discrepancy.", true],
+  ["Why do scientists repeat a response-time test several times?", "to check the results and spot patterns", ["to make it harder", "to wear out the ruler", "to get a different person"], "One trial can be a fluke."],
+  ["Which is a medical technology that helps a person who has lost a leg walk again?", "an artificial limb", ["a thermometer", "a rain gauge", "a wind vane"], "It is also called a prosthetic."],
+  ["Studying how the body moves led to which kind of device?", "exercise machines", ["rain gauges", "weather balloons", "telescopes"], "They help people train muscles."],
+  ["Which Canadian researchers helped discover insulin in the early 1920s?", "Frederick Banting and Charles Best", ["Alexander Graham Bell and Marie Curie", "Isaac Newton and Albert Einstein", "Terry Fox and Wayne Gretzky"], "Insulin helps people with diabetes."],
+  ["Which Canadian engineer helped build an early pacemaker for hearts?", "John Hopps", ["Samuel Morse", "Thomas Edison", "Isaac Newton"], "He worked at a national research council.", true],
+];
+
+const MIDDLE_AGES: Q[] = [
+  ["About when were the Middle Ages?", "about 500 to 1500", ["about 1900 to 2000", "about 100 to 300", "about 3000 BCE"], "They came after ancient Rome and before modern times."],
+  ["In the Middle Ages in Europe, who stood at the top of society?", "the king or queen", ["the peasants", "the farmers", "the merchants"], "A monarch ruled the kingdom."],
+  ["Which group worked the land and grew food in a medieval village?", "peasants", ["knights", "kings", "nobles"], "Most people in the Middle Ages were farmers."],
+  ["What was a knight’s main job?", "to fight and protect the lord", ["to grow food", "to bake bread", "to write books"], "He was trained as a soldier."],
+  ["What is a social structure?", "how a society is organized into groups with different roles", ["a type of castle", "a kind of food", "a school building"], "It shows who does what and who answers to whom."],
+  ["Who owned large areas of land and ruled over them for the king?", "nobles, or lords", ["peasants", "monks", "servants"], "They received land in return for loyalty."],
+  ["What did a lord give to a knight?", "land or a place to live and be protected", ["a pay cheque", "a train ticket", "a car"], "In return, the knight promised service."],
+  ["What did a knight owe a lord?", "loyalty and military service", ["a pile of gold coins every day", "a hot-air balloon", "nothing at all"], "Loyalty was a promise.", true],
+  ["What did peasants often owe to a lord?", "work and a share of what they grew", ["a new castle", "a sword", "a ship"], "In return they got protection and a place to live."],
+  ["What did a lord give to the peasants in return?", "protection and use of land", ["a lot of money", "a new house every year", "nothing"], "The relationship went both ways."],
+  ["Which group often looked after the churches and kept books by hand?", "the clergy, such as monks", ["knights", "peasants", "merchants"], "Monks copied books carefully by hand."],
+  ["Which group was largest in medieval society?", "peasants", ["nobles", "kings", "knights"], "Most people worked the land."],
+  ["Which list shows the right order from top to bottom?", "king, nobles, knights, peasants", ["peasants, knights, nobles, king", "knights, king, peasants, nobles", "nobles, king, peasants, knights"], "Think of a pyramid with the king at the point.", true],
+  ["Who lived in the castle?", "the lord and his family", ["all the peasants", "only knights’ horses", "nobody"], "Castles were homes and fortresses."],
+  ["Where did most peasants live?", "in small houses in a village", ["in a castle", "in a palace", "on a ship"], "They lived close to the fields."],
+  ["Why were castles built with thick stone walls?", "to protect people from attack", ["to look pretty", "to keep fish in", "to grow plants"], "Safety mattered a lot."],
+  ["A woman spends her days planting and harvesting grain in a medieval village. Which group is she in?", "peasants", ["nobles", "knights", "the royal family"], "She works the land."],
+  ["A man in armour guards the lord’s castle. Which group is he in?", "knights", ["peasants", "monks", "merchants"], "Armour was for fighting."],
+  ["A person copies books by hand in a monastery. Which group is she or he in?", "the clergy", ["knights", "peasants", "kings"], "Monks and nuns did this work."],
+  ["Why did the king depend on nobles?", "They helped rule and supplied soldiers", ["They did the farming", "They built boats", "They made schoolbooks"], "A king could not do everything alone.", true],
+  ["Why did the nobles depend on peasants?", "Peasants grew the food", ["Peasants wrote the laws", "Peasants led armies", "Peasants taught knights"], "Without farmers there is no food."],
+  ["Why did peasants depend on lords and knights?", "They offered protection", ["They taught peasants to fly", "They gave out free food forever", "They weren’t needed"], "Dangers like raids were common."],
+  ["Why was social structure important in the Middle Ages?", "It gave everyone a role so the society could work", ["It let everyone choose any job", "It made everyone equal", "It stopped all food growing"], "Everybody depended on others."],
+  ["How did a person usually get their place in society in the Middle Ages?", "mostly by the family they were born into", ["by passing a test at school", "by voting", "by buying a ticket"], "It was hard to change your place.", true],
+  ["How was life different for a noble and a peasant?", "The noble usually had more land and comfort", ["The peasant lived in a castle", "The noble worked in the field every day", "Both lived the same way"], "Nobles held land and wealth."],
+  ["What would a peasant child usually be doing by age 10 or so?", "helping on the family farm", ["studying at a university", "training to be king", "flying a plane"], "Everyone helped at harvest time."],
+  ["Why was a harvest so important in a medieval village?", "Food for the winter depended on it", ["It meant a school holiday", "It made the castle bigger", "It brought a new king"], "A poor harvest meant hunger."],
+  ["A lord promises protection and a peasant promises work. What do we call this kind of two-way duty?", "an agreement of mutual duties", ["a game", "a holiday", "a trade war"], "Each side owes something.", true],
+  ["In a medieval society, who made most of the laws in a kingdom?", "the king, with the help of nobles", ["the peasants", "the children", "the shopkeepers only"], "Power was held at the top.", true],
+  ["Which statement shows that groups depended on each other?", "Knights protected farmers, and farmers fed knights", ["Knights grew all the food", "Farmers fought all the wars", "Kings did all the work"], "Both groups needed the other.", true],
+  ["What was a manor?", "a lord’s estate with a house and farmland", ["a type of sword", "a boat", "a book"], "Peasants lived and worked on it."],
+  ["If knights stopped protecting the village, what would likely happen?", "The people might be in danger", ["The farmers would become kings", "Food would grow faster", "Nothing would change"], "Protection was one of their duties.", true],
+];
+
+const FIRST_NATIONS_INUIT: Q[] = [
+  ["What are the Mi’kmaq?", "a First Nation whose homeland includes Prince Edward Island", ["a type of boat", "a kind of fish", "a European country"], "They are living communities today."],
+  ["What do the Mi’kmaq call Prince Edward Island?", "Epekwitk", ["Kanata", "Wabanaki", "Inuktut"], "It is a Mi’kmaw word."],
+  ["Are First Nations and Inuit communities still here today?", "Yes, they are living communities today", ["No, they all disappeared", "Only in books", "Only in museums"], "They are part of Canada now."],
+  ["Which statement is correct?", "First Nations and Inuit are different peoples", ["All Indigenous peoples are the same", "There is only one language", "They share one culture"], "Each society has its own history."],
+  ["How many First Nations languages were spoken long ago?", "many different languages", ["only one", "none", "just two"], "Each Nation has its own language."],
+  ["Which of these is one of the Indigenous peoples of Canada, alongside First Nations and Métis?", "Inuit", ["Vikings", "Romans", "Normans"], "They live in the north of Canada."],
+  ["Which people live mainly in the Arctic regions of Canada?", "Inuit", ["Mi’kmaq", "Haudenosaunee", "Cree"], "Their homeland is called Inuit Nunangat."],
+  ["Which word is most accurate: “Some First Nations lived by the sea” or “All First Nations lived by the sea”?", "Some", ["All", "None", "Every"], "Nations lived in many different places.", true],
+  ["Which sentence is right?", "Many Nations hunted, fished and gathered food", ["All Nations ate the same foods", "No Nation hunted", "Nations never moved"], "Different places gave different foods."],
+  ["Why did people in different places live differently?", "Each place had a different environment", ["Everyone had the same land", "No one lived outside", "People did not think"], "Land, water, plants and animals differ."],
+  ["People who lived by the sea or rivers often relied on…", "fishing", ["farming the desert", "mining coal", "building skyscrapers"], "Rivers and the sea held lots of food."],
+  ["The Mi’kmaq moved with the seasons in their homeland. Why?", "to find food in different places at different times", ["because they were lost", "to avoid school", "because they had no homes"], "Fish, game and plants vary by season."],
+  ["What did people living in woodlands use to make homes and tools?", "materials from the forest, such as wood and bark", ["steel and plastic", "bricks from a store", "glass panels"], "They used what was close by."],
+  ["The Mi’kmaq made wigwams. What were they used for?", "homes", ["boats only", "schools only", "sleds"], "They were covered in materials such as bark."],
+  ["What did Inuit use to travel across the sea and ice in the north?", "kayaks and dog sleds", ["horses and carts", "trains", "steamships"], "These suited the land and water.", true],
+  ["How did Inuit families get what they needed in the Arctic?", "by hunting, fishing and using what the land offered", ["by farming wheat", "by mining gold only", "by shopping at malls"], "Animals gave food, clothing and tools."],
+  ["Why did Inuit wear clothing made from animal skins and fur?", "to stay warm in the cold", ["to look like a bear", "to be fashionable only", "to hide from the sun"], "The Arctic is very cold."],
+  ["What did Mi’kmaq people use canoes for?", "travelling on rivers and along the coast", ["flying", "digging", "farming wheat"], "Water was a main highway."],
+  ["Fish, shellfish, berries and plants were part of what for many coastal Nations?", "their food", ["their weather", "their maps", "their roads"], "Food came from land and water."],
+  ["How did children in many communities learn important skills?", "by watching, listening and doing with family and Elders", ["only from computers", "only from books", "they didn’t learn"], "Learning happened every day."],
+  ["What is an Elder in an Indigenous community?", "a respected person who shares knowledge", ["a kind of tree", "a rule book", "a government office"], "Elders help teach younger people."],
+  ["How was knowledge passed down in many Nations before writing was common?", "through stories and teaching", ["through television", "by email", "by satellite"], "People told and retold stories."],
+  ["What is oral tradition?", "passing on knowledge by telling it aloud", ["writing in a diary", "a kind of drum", "a hunting tool"], "Oral means spoken."],
+  ["Why were stories important to many First Nations and Inuit?", "They carried history, values and skills", ["They were only for fun", "They took the place of food", "They were a kind of weather"], "Stories teach.", true],
+  ["How do First Nations and Inuit communities keep their languages alive today?", "by speaking and teaching them", ["by forgetting them", "by stopping stories", "by avoiding children"], "Language lessons and family use both help."],
+  ["Which sentence uses “some” and “many” well?", "Some Nations lived by the coast, and many used canoes", ["All Nations lived by the coast", "No Nations used canoes", "Every Nation had the same home"], "Avoid saying “all”.", true],
+  ["The Mi’kmaq homeland, Mi’kma’ki, included which kind of places?", "coasts, rivers and forests", ["only deserts", "only mountains of ice", "only prairies"], "It was a land with water and forests."],
+  ["Mi’kmaq people have lived on Epekwitk for…", "a very long time, long before Europeans came", ["only a few years", "since last century", "since the railway"], "Sources say thousands of years.", true],
+  ["How did Nations use the plants and animals around them?", "for food, tools, clothing and shelter", ["only for decoration", "they never used them", "only for games"], "Nothing useful was wasted."],
+  ["Why is it better to name a Nation, such as the Mi’kmaq, than to say “all Indigenous people”?", "It respects each people’s own identity", ["It is shorter", "It rhymes", "It is a weather word"], "Names matter.", true],
+  ["Which sentence describes First Nations and Inuit in an accurate, respectful way?", "They are diverse peoples with their own cultures, languages and ways of life", ["They all lived and live exactly the same", "They were only in the past", "They had no culture"], "Each is different.", true],
+  ["Why might two Nations make different homes?", "They live in different environments with different materials", ["They don’t need homes", "They can’t build", "They all hate wood"], "Environment shapes how people live.", true],
+];
+
+const DECISION_MAKING: Q[] = [
+  ["What is a decision-making practice?", "a way a group chooses what to do", ["a type of tool", "a weather pattern", "a kind of food"], "Groups need ways to choose together."],
+  ["Many First Nations and Inuit communities include Elders when making decisions. Why?", "Elders have knowledge and experience", ["Elders have the most money", "Elders live far away", "Elders are always strict"], "Their wisdom helps the group."],
+  ["What is consensus?", "an agreement that everyone can accept", ["a vote where the winner takes all", "one person deciding", "a kind of contest"], "People talk until they agree."],
+  ["In a consensus, how does a group reach a decision?", "They talk until they agree", ["One person picks", "They flip a coin", "They fight"], "Everyone listens and shares."],
+  ["Which is a good way to treat others in a group discussion?", "listen carefully to each person", ["interrupt loudly", "ignore speakers", "only talk about yourself"], "Respectful listening matters.", true],
+  ["The Mi’kmaq Grand Council, the Sante’ Mawio’mi, is a traditional…", "governing council", ["fishing boat", "school", "storm"], "It still exists today."],
+  ["How many districts make up Mi’kma’ki in the traditional system?", "seven", ["two", "twenty", "one hundred"], "Each district sent leaders to the council."],
+  ["How did the Mi’kmaq Grand Council usually make discussions work?", "by consensus", ["by a coin toss", "by one ruler’s order", "by a fight"], "People spoke until they agreed."],
+  ["A Mi’kmaq district in the traditional system was…", "a part of Mi’kma’ki with its own leaders", ["a type of canoe", "a hunting tool", "a kind of food"], "Districts joined in a council."],
+  ["What is a leader called in many First Nations communities, among other names?", "a chief", ["a pirate", "a knight", "an emperor"], "Different Nations use different words."],
+  ["What did a chief often do in many communities?", "listen to the people and help the group decide", ["decide everything alone", "fish all day", "build ships"], "A leader serves the community.", true],
+  ["Which is true about leaders in many First Nations?", "They were respected because people trusted their wisdom", ["They took everything for themselves", "They never listened", "They were chosen by lottery"], "Trust mattered.", true],
+  ["The Haudenosaunee Confederacy is an alliance guided by…", "the Great Law of Peace", ["a ship’s map", "a medieval king", "a hockey rule"], "It helped Nations work together."],
+  ["Why did Nations in an alliance meet in councils?", "to talk and agree on shared matters", ["to avoid each other", "to shop", "to sleep"], "Councils helped them cooperate."],
+  ["Who might take part in decision making in a community?", "Elders, leaders and other community members", ["only visitors", "only children", "only animals"], "Many voices could be heard.", true],
+  ["Why might a community talk for a long time before deciding?", "so many views can be heard and everyone can agree", ["because they have nothing to do", "to get tired", "to avoid a choice"], "Taking time is part of consensus."],
+  ["Why did people listen to one another in a council?", "to respect each person and find the best choice", ["to be loud", "to win by shouting", "to be bored"], "Listening builds understanding."],
+  ["Which practice is more like consensus?", "talking until all can agree", ["the loudest voice wins", "a ruler decides alone", "coin toss only"], "Consensus means agreement."],
+  ["Which practice is more like a vote?", "choosing the option most people support", ["talking until all agree", "waiting for a leader’s order", "asking Elders only"], "Count hands or ballots.", true],
+  ["Many Inuit communities valued Elders’ guidance. What does this show?", "knowledge from experience mattered", ["Elders were ignored", "only children decided", "age did not matter"], "Elders know the land and the people.", true],
+  ["Why is a group decision often stronger than one made by one person?", "More people’s ideas and needs are included", ["It is always faster", "It needs fewer people", "It never changes"], "More views help.", true],
+  ["Why did Nations need to decide things together about food and travel?", "Their choices affected everyone in the group", ["Nothing mattered", "They had no choices", "They had no leaders"], "A community shares the results.", true],
+  ["The Mi’kmaq Grand Council has existed for a long time. Does it still meet today?", "Yes, it still exists", ["No, it ended long ago", "It was never real", "It is only a game"], "Sources say it survives today."],
+  ["Which of these shows a shared decision?", "A council agrees on where to fish this season", ["One person takes all the fish", "Nobody talks", "A stranger picks for them"], "Shared means the group is involved."],
+  ["Two groups need to agree on how to share a river for fishing. What is a respectful practice?", "meet and talk until both are satisfied", ["fight right away", "take all the fish", "ignore the other group"], "Talking builds peace.", true],
+  ["How are a council and a classroom meeting alike?", "Both let people share ideas and agree on a choice", ["Both have kings", "Both use castles", "Both have no rules"], "Groups use talk to decide.", true],
+  ["How is the Mi’kmaq Grand Council different from a medieval European king’s rule?", "The council made decisions together, not one ruler alone", ["The council had a castle", "The king used consensus", "They are the same"], "Compare who decides.", true],
+  ["Why do leaders listen to the community?", "Their job is to serve the people", ["They want to be loud", "They don’t care", "They want to leave"], "A leader works for the group."],
+  ["What does it mean to “come to an agreement”?", "to all accept the same choice", ["to disagree forever", "to leave a meeting", "to give orders"], "People find a shared answer."],
+  ["Which society used a council guided by the Great Law of Peace?", "the Haudenosaunee", ["the Inuit only", "the Vikings", "the Romans"], "It is an alliance of Nations.", true],
+  ["Which group is a First Nation with a traditional Grand Council in Atlantic Canada?", "the Mi’kmaq", ["the Vikings", "the Romans", "the Normans"], "They share Mi’kma’ki.", true],
+  ["Why is it important to learn about decision-making practices of First Nations and Inuit?", "They show different ways people govern themselves", ["They are the same as all others", "They are not real", "They happened nowhere"], "Learning builds respect."],
+];
+
+const MEETING: Q[] = [
+  ["Before Europeans arrived, who already lived in what is now Atlantic Canada?", "First Nations, such as the Mi’kmaq, and Inuit", ["English fishers only", "French soldiers only", "Nobody"], "Indigenous peoples have lived here for thousands of years."],
+  ["Which groups met in what became Atlantic Canada?", "the English, the French, First Nations and Inuit", ["the Romans and Greeks", "the Vikings and Aztecs only", "the Dutch and Japanese only"], "Four groups shared the region."],
+  ["Which Europeans traded furs with the Mi’kmaq early on?", "the French", ["the Romans", "the Greeks", "the Egyptians"], "They traded for furs."],
+  ["What did Mi’kmaq people trade to Europeans?", "furs", ["cars", "telephones", "computers"], "Beaver fur was prized in Europe."],
+  ["What did Europeans trade to First Nations?", "metal tools, kettles and cloth", ["smart phones", "jet planes", "plastic toys"], "Metal tools were useful."],
+  ["Why did the French and First Nations trade?", "Each had goods the other wanted", ["They had to by law", "They had no other choice", "Trade was against the rules"], "Trade benefits both sides."],
+  ["Who were the Acadians?", "French-speaking settlers in Atlantic Canada", ["Mi’kmaq leaders", "Viking sailors", "Roman soldiers"], "They made their homes along the coast."],
+  ["The Mi’kmaq and the French were often…", "allies", ["strangers who never met", "invaders", "builders of castles"], "They often worked together.", true],
+  ["Each year the Mi’kmaq and French met at which place on Epekwitk to renew their alliance?", "Port la Joye", ["Confederation Bridge", "Anne’s Hill", "Cavendish"], "It is now a national historic site."],
+  ["What does it mean to renew an alliance?", "to promise again to stay friends and help each other", ["to break a promise", "to start a war", "to sell land"], "Allies keep their friendship strong."],
+  ["Who fought over land and trade in Atlantic Canada for many years?", "the English and the French", ["the Mi’kmaq and the Inuit", "the Vikings and the Romans", "no one"], "Both wanted control."],
+  ["The English and the French both wanted control of land and trade. What did this cause?", "conflict between them", ["no change", "peace forever", "bridges"], "Competition caused trouble.", true],
+  ["Were the Mi’kmaq affected by the English and French conflicts?", "Yes, because the conflicts happened on their homeland", ["No, they were never there", "No, they lived far away", "Yes, because they were kings"], "They lived in the same lands.", true],
+  ["What were the Peace and Friendship Treaties?", "agreements between the British and several First Nations", ["a kind of ship", "a war", "a tax"], "Treaties were promises."],
+  ["The Peace and Friendship Treaties were signed from 1725 to…", "1779", ["1599", "1999", "1299"], "They covered more than 50 years."],
+  ["According to Canada, the Peace and Friendship Treaties did not…", "give up the Nations’ rights to land", ["promise peace", "mention hunting", "mention fishing"], "They guaranteed hunting and fishing rights."],
+  ["The treaties guaranteed the Mi’kmaq and other Nations rights to…", "hunt and fish", ["own planes", "build highways", "vote in 1500"], "These rights remain important today."],
+  ["Were the Peace and Friendship Treaties an example of cooperation?", "Yes, they were agreements to live in peace", ["No, they were declarations of war", "No, they were weather charts", "No, they were songs"], "The word peace is in the name."],
+  ["Which of these is a cooperative interaction?", "trading furs for tools", ["burning a village", "taking land by force", "refusing to talk"], "Cooperation helps both sides."],
+  ["Which of these is a conflict?", "fighting over land and trade", ["sharing food in a feast", "signing a peace treaty", "trading goods"], "Conflict means a fight or disagreement."],
+  ["In 1755 the British forced thousands of Acadians to leave their homes. What is this event called?", "the Expulsion of the Acadians", ["the Great Fair", "the Gold Rush", "the Fur Trade"], "Many families were separated.", true],
+  ["Was the expulsion of the Acadians cooperative?", "No, it was a harsh action by the British", ["Yes, everyone agreed", "Yes, it was a trade", "It was a peace treaty"], "People were forced to go.", true],
+  ["Put these in order: Acadian expulsion (1755), first Peace and Friendship Treaty (1725), treaties of 1760–61.", "1725, 1755, 1760–61", ["1755, 1725, 1760–61", "1760–61, 1755, 1725", "1725, 1760–61, 1755"], "Start with the smallest year.", true],
+  ["Which came first: the arrival of Mi’kmaq people on Epekwitk or the arrival of the English?", "the arrival of the Mi’kmaq", ["the arrival of the English", "they came together", "neither came"], "The Mi’kmaq have lived here for thousands of years.", true],
+  ["Why did First Nations trade with newcomers?", "to get useful goods like metal tools", ["because they had to", "because they had nothing", "to avoid winter"], "Trade met needs."],
+  ["Why did Europeans want furs?", "to make hats and clothing and to sell", ["to build ships", "to power cars", "to make bread"], "Fur was valuable in Europe."],
+  ["How did First Nations help newcomers in the early years?", "by sharing knowledge about the land and travel", ["by building cities for them", "by taking them to space", "by giving them planes"], "Local knowledge helped newcomers live here."],
+  ["Which of these was an interaction between the Inuit and Europeans?", "trading goods and meeting on the coast", ["building a bridge", "flying together", "launching satellites"], "Some Inuit met and traded with newcomers.", true],
+  ["The English and Mi’kmaq made treaties. Why?", "to keep peace and set rules for living side by side", ["to start a war", "to take all the land", "to avoid talking"], "A treaty is a formal promise.", true],
+  ["After a treaty, the groups agreed to…", "respect each other and live in peace", ["fight more", "leave forever", "stop trading"], "That is the goal of a peace treaty."],
+  ["Which sentence is best about the Mi’kmaq today?", "The Mi’kmaq are a living Nation with communities on the island", ["They no longer exist", "They only live in museums", "They left long ago"], "Mi’kmaq communities are part of PEI today."],
+  ["Why do historians use treaties as sources?", "They show what groups promised each other", ["They show the weather", "They list recipes", "They teach maths"], "Treaties are written records.", true],
+];
+
+export const peWeatherTools5 = bankUnit({
+  id: "pe-weather-tools-5",
+  title: "Weather Watchers",
+  emoji: "🌦️",
+  blurb: "Instruments, clouds and records",
+  parentNote:
+    "Children use instruments to measure temperature, wind, precipitation and cloud cover, classify clouds and record weather data.",
+  standards: ["Earth and Space Science: Weather", "weather instruments, measuring and recording weather, and classifying clouds"],
+  items: WEATHER_TOOLS,
+});
+
+export const peAirAndSun5 = bankUnit({
+  id: "pe-air-and-sun-5",
+  title: "Sun, Air and Weather",
+  emoji: "☀️",
+  blurb: "Energy, air and water move weather",
+  parentNote:
+    "Children relate the sun’s energy to weather, learn that air takes up space and has mass, and see how warm and cold air and water masses move.",
+  standards: ["Earth and Space Science: Weather", "how the sun's energy, moving air and water masses and the water cycle shape weather"],
+  items: AIR_AND_SUN,
+});
+
+export const peBodyInvestigations5 = bankUnit({
+  id: "pe-body-investigations-5",
+  title: "Heart Rate and Reaction Time",
+  emoji: "⏱️",
+  blurb: "Test the body",
+  parentNote:
+    "Children investigate what affects breathing and heart rate, and how fast the body responds, and learn how the excretory system works.",
+  standards: [
+    "Life Science: Meeting Basic Needs and Maintaining a Healthy Body",
+    "testing factors that affect breathing, heart rate and response time, and the excretory system",
+  ],
+  items: BODY_INVESTIGATIONS,
+});
+
+export const peMiddleAges5 = bankUnit({
+  id: "pe-middle-ages-5",
+  title: "Life in the Middle Ages",
+  emoji: "🏰",
+  blurb: "Who did what in the Middle Ages",
+  parentNote: "Children explain why social structure mattered in a society of the Middle Ages.",
+  standards: ["5.3.1", "the importance of social structure in a society from the Middle Ages"],
+  items: MIDDLE_AGES,
+});
+
+export const peFirstNationsInuit5 = bankUnit({
+  id: "pe-first-nations-inuit-5",
+  title: "First Nations and Inuit Societies",
+  emoji: "🪶",
+  blurb: "Diverse societies before contact",
+  parentNote: "Children learn about the diverse societies of First Nations and Inuit in what later became Canada.",
+  standards: ["5.4.1", "the diverse societies of First Nations and Inuit in what later became Canada"],
+  items: FIRST_NATIONS_INUIT,
+});
+
+export const peDecisionMaking5 = bankUnit({
+  id: "pe-decision-making-5",
+  title: "Deciding Together",
+  emoji: "🤲",
+  blurb: "How First Nations and Inuit made decisions",
+  parentNote:
+    "Children examine how decisions were made in First Nations and Inuit societies in what later became Atlantic Canada.",
+  standards: ["5.4.2", "decision-making practices in First Nations and Inuit societies in what later became Atlantic Canada"],
+  items: DECISION_MAKING,
+});
+
+export const peMeetingInAtlanticCanada5 = bankUnit({
+  id: "pe-meeting-in-atlantic-canada-5",
+  title: "Meeting in Atlantic Canada",
+  emoji: "🚢",
+  blurb: "English, French, First Nations and Inuit",
+  parentNote:
+    "Children examine interactions between the English, the French, and First Nations and Inuit in what later became Atlantic Canada.",
+  standards: ["5.5.1", "interactions among the English, French, First Nations and Inuit in what later became Atlantic Canada"],
+  items: MEETING,
+});

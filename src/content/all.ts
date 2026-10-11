@@ -56,6 +56,16 @@ import { courses as nl6 } from "./newfoundland-and-labrador/g6";
 import { courses as nl7 } from "./newfoundland-and-labrador/g7";
 import { courses as nl8 } from "./newfoundland-and-labrador/g8";
 import { courses as nl9 } from "./newfoundland-and-labrador/g9";
+import { courses as peK } from "./prince-edward-island/k";
+import { courses as pe1 } from "./prince-edward-island/g1";
+import { courses as pe2 } from "./prince-edward-island/g2";
+import { courses as pe3 } from "./prince-edward-island/g3";
+import { courses as pe4 } from "./prince-edward-island/g4";
+import { courses as pe5 } from "./prince-edward-island/g5";
+import { courses as pe6 } from "./prince-edward-island/g6";
+import { courses as pe7 } from "./prince-edward-island/g7";
+import { courses as pe8 } from "./prince-edward-island/g8";
+import { courses as pe9 } from "./prince-edward-island/g9";
 import { courses as nsK } from "./nova-scotia/k";
 import { courses as ns1 } from "./nova-scotia/g1";
 import { courses as ns2 } from "./nova-scotia/g2";
@@ -116,7 +126,7 @@ import type { Course, GradeId, SubjectId } from "./types";
 // into the first download. ESLint enforces this; the apps use ./index.
 
 /** Every course with at least one unit. */
-export const COURSES: Course[] = mergeCourses([k, g1, g2, g3, g4, g5, g6, g7, g8, g9, onK, on1, on2, on3, on4, on5, on6, on7, on8, on9, abK, ab1, ab2, ab3, ab4, ab5, ab6, ab7, ab8, ab9, skK, sk1, sk2, sk3, sk4, sk5, sk6, sk7, sk8, sk9, mbK, mb1, mb2, mb3, mb4, mb5, mb6, mb7, mb8, mb9, ytK, yt1, yt2, yt3, yt4, yt5, yt6, yt7, yt8, yt9, ntK, nt1, nt2, nt3, nt4, nt5, nt6, nt7, nt8, nt9, nsK, ns1, ns2, ns3, ns4, ns5, ns6, ns7, ns8, ns9, nbK, nb1, nb2, nb3, nb4, nb5, nb6, nb7, nb8, nb9, nuK, nu1, nu2, nu3, nu4, nu5, nu6, nu7, nu8, nu9, nlK, nl1, nl2, nl3, nl4, nl5, nl6, nl7, nl8, nl9]).filter(
+export const COURSES: Course[] = mergeCourses([k, g1, g2, g3, g4, g5, g6, g7, g8, g9, onK, on1, on2, on3, on4, on5, on6, on7, on8, on9, abK, ab1, ab2, ab3, ab4, ab5, ab6, ab7, ab8, ab9, skK, sk1, sk2, sk3, sk4, sk5, sk6, sk7, sk8, sk9, mbK, mb1, mb2, mb3, mb4, mb5, mb6, mb7, mb8, mb9, ytK, yt1, yt2, yt3, yt4, yt5, yt6, yt7, yt8, yt9, ntK, nt1, nt2, nt3, nt4, nt5, nt6, nt7, nt8, nt9, nsK, ns1, ns2, ns3, ns4, ns5, ns6, ns7, ns8, ns9, nbK, nb1, nb2, nb3, nb4, nb5, nb6, nb7, nb8, nb9, nuK, nu1, nu2, nu3, nu4, nu5, nu6, nu7, nu8, nu9, nlK, nl1, nl2, nl3, nl4, nl5, nl6, nl7, nl8, nl9, peK, pe1, pe2, pe3, pe4, pe5, pe6, pe7, pe8, pe9]).filter(
   (c) => c.units.length > 0,
 );
 
