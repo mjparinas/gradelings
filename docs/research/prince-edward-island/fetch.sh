@@ -26,7 +26,19 @@ pages="
 "
 
 # Known direct links (from search results; the grade pages above should list the rest).
+# The Grade 4 file is "eelc_outcomes_framework_4.pdf", so the other grades are tried under the same pattern.
+# A name that does not exist is skipped (the site answers 404 or an HTML page, which is deleted below).
 cat > "$OUT/known.txt" <<'L'
+/sites/default/files/publications/eelc_outcomes_framework_k.pdf
+/sites/default/files/publications/eelc_outcomes_framework_kindergarten.pdf
+/sites/default/files/publications/eelc_outcomes_framework_1.pdf
+/sites/default/files/publications/eelc_outcomes_framework_2.pdf
+/sites/default/files/publications/eelc_outcomes_framework_3.pdf
+/sites/default/files/publications/eelc_outcomes_framework_5.pdf
+/sites/default/files/publications/eelc_outcomes_framework_6.pdf
+/sites/default/files/publications/eelc_outcomes_framework_7.pdf
+/sites/default/files/publications/eelc_outcomes_framework_8.pdf
+/sites/default/files/publications/eelc_outcomes_framework_9.pdf
 /sites/default/files/publications/eelc_program_of_studies_k-6.pdf
 /sites/default/files/publications/intermediate_program_of_studies_and_authorized_materials.pdf
 /sites/default/files/publications/eelc_math_9_5.pdf
@@ -41,13 +53,15 @@ for p in $pages; do
 done
 cat "$OUT/known.txt" >> "$OUT/links.txt"
 # Keep curriculum documents only, make links absolute, drop duplicates.
-sed "s#^/#$BASE/#" "$OUT/links.txt" | grep -i 'eelc_\|program_of_studies\|curriculum' | sort -u > "$OUT/urls.txt"
+sed "s#^/#$BASE/#" "$OUT/links.txt" | grep -i 'eelc_\|program_of_studies\|curriculum\|outcomes' | sort -u > "$OUT/urls.txt"
 echo "$(wc -l < "$OUT/urls.txt") PDFs to download"
 while read -r url; do
   f="$OUT/$(basename "$url")"
   [ -s "$f" ] && continue
   echo "get $url"
   curl -sSL -A "$UA" -o "$f" "$url" || echo "  failed: $url"
+  # Keep only real PDFs: a missing file comes back as an HTML error page.
+  if [ -f "$f" ] && [ "$(head -c 4 "$f")" != "%PDF" ]; then rm -f "$f"; echo "  not a PDF (skipped): $url"; fi
   sleep 2
 done < "$OUT/urls.txt"
 rm -f "$OUT/page.html"
