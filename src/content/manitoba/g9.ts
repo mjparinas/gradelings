@@ -1,6 +1,4 @@
 import type { Course } from "../types";
-import { withLessons } from "../lessons";
-import { lessons } from "../lessons/g9";
 import { courses as ontario } from "../ontario/g9";
 import { frenchCourses } from "./french";
 import { adopt, course, unitsOf } from "./kit";
@@ -16,7 +14,7 @@ import { units as moreSocialB } from "./units/g9-more-social-b";
 // curriculum (strands A to D), science the Grade 9 science outcomes (SCI.9) and social studies Canada in the Contemporary
 // World (9-K outcomes). Units BC or Ontario already has are listed with the Manitoba outcomes they practise.
 
-const base: Course[] = [
+export const courses: Course[] = [
   course("9", "math", {
     share: {
       "exponent-laws": ["9.N.1, 9.N.2, 9.N.4", "powers with integral bases, laws of exponents and the order of operations"],
@@ -67,6 +65,3 @@ const base: Course[] = [
   }),
   ...frenchCourses("9"),
 ];
-
-// Short "how it works" lessons, matched to units by id.
-export const courses: Course[] = withLessons(base, lessons);

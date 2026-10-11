@@ -1,6 +1,4 @@
 import type { Course } from "../types";
-import { withLessons } from "../lessons";
-import { lessons } from "../lessons/g5";
 import { frenchCourses } from "./french";
 import { G5_LANGUAGE, G5_MATH, G5_SCIENCE, G5_SOCIAL } from "./g5-overall";
 import { units as languageUnits } from "./g5-language";
@@ -12,7 +10,7 @@ import { ab } from "./kit";
 // Alberta Grade 5. Units the BC or Ontario course already has are shared with Alberta's own standards text.
 // Social studies (Ancient civilizations) is written new for Alberta.
 
-const base: Course[] = [
+export const courses: Course[] = [
   {
     grade: "5",
     subject: "math",
@@ -80,6 +78,3 @@ const base: Course[] = [
   },
   ...frenchCourses("5"),
 ];
-
-// Short "how it works" lessons, matched to units by id.
-export const courses: Course[] = withLessons(base, lessons);

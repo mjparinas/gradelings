@@ -1,6 +1,4 @@
 import type { Course } from "../types";
-import { withLessons } from "../lessons";
-import { lessons } from "../lessons/g6";
 import { courses as alberta } from "../alberta/g6";
 import { courses as manitoba } from "../manitoba/g6";
 import { courses as ontario } from "../ontario/g6";
@@ -18,7 +16,7 @@ const LIFE = "Life Science: Diversity of Life";
 const CULTURE = "Investigate the role of culture in communities";
 const GLOBAL = "Implement age appropriate actions that demonstrate responsibility as global citizens";
 
-const base: Course[] = [
+export const courses: Course[] = [
   course("6", "math", {
     share: {
       "thousandths-to-billions": ["N01, N02", "place value from billions to thousandths, and solving problems with whole numbers and decimals"],
@@ -87,6 +85,3 @@ const base: Course[] = [
   }),
   ...frenchCourses("6"),
 ];
-
-// Short "how it works" lessons, matched to units by id.
-export const courses: Course[] = withLessons(base, lessons);

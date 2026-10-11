@@ -1,6 +1,4 @@
 import type { Course } from "../types";
-import { withLessons } from "../lessons";
-import { lessons } from "../lessons/g8";
 import { G8_LANGUAGE, G8_MATH } from "./g8-overall";
 import { units as languageUnits } from "./g8-language";
 import { units as mathUnits } from "./g8-math";
@@ -13,7 +11,7 @@ import { units as socialUnits } from "./g8-social";
 // Ontario Grade 8. Units the BC course also has are shared; the rest are written for the
 // Ontario expectations.
 
-const base: Course[] = [
+export const courses: Course[] = [
   {
     grade: "8",
     subject: "math",
@@ -70,6 +68,3 @@ const base: Course[] = [
   },
   ...frenchCourses("8"),
 ];
-
-// Short "how it works" lessons, matched to units by id.
-export const courses: Course[] = withLessons(base, lessons);

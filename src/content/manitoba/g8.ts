@@ -1,6 +1,4 @@
 import type { Course } from "../types";
-import { withLessons } from "../lessons";
-import { lessons } from "../lessons/g8";
 import { units as ontarioMath } from "../ontario/g8-math";
 import { units as ontarioLanguage } from "../ontario/g8-language";
 import { units as ontarioScience } from "../ontario/g8-science";
@@ -18,7 +16,7 @@ import { units as moreSocialB } from "./units/g8-more-social-b";
 // curriculum (strands A to D), science the Grade 8 science outcomes (SCI.8) and social studies Origins of Western Society
 // (8-K outcomes). Units BC or Ontario already has are listed with the Manitoba outcomes they practise.
 
-const base: Course[] = [
+export const courses: Course[] = [
   course("8", "math", {
     share: {
       "squares-and-roots": ["8.N.1, 8.N.2", "perfect squares, square roots and estimating square roots of whole numbers"],
@@ -80,6 +78,3 @@ const base: Course[] = [
   }),
   ...frenchCourses("8"),
 ];
-
-// Short "how it works" lessons, matched to units by id.
-export const courses: Course[] = withLessons(base, lessons);

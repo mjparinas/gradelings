@@ -1,6 +1,4 @@
 import type { Course } from "../types";
-import { withLessons } from "../lessons";
-import { lessons } from "../lessons/g5";
 import { courses as alberta } from "../alberta/g5";
 import { courses as manitoba } from "../manitoba/g5";
 import { courses as ontario } from "../ontario/g5";
@@ -15,7 +13,7 @@ import { adopt, course, poolOf } from "./kit";
 // BC, Ontario, Alberta, Saskatchewan or Manitoba already has are listed with the New Brunswick outcomes they practise.
 
 
-const base: Course[] = [
+export const courses: Course[] = [
   course("5", "math", {
     share: {
       "numbers-to-a-million": ["Number: Number Sense", "representing and partitioning whole numbers to 1 000 000"],
@@ -82,6 +80,3 @@ const base: Course[] = [
   }),
   ...frenchCourses("5"),
 ];
-
-// Short "how it works" lessons, matched to units by id.
-export const courses: Course[] = withLessons(base, lessons);

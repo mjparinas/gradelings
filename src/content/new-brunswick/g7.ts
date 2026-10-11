@@ -1,6 +1,4 @@
 import type { Course } from "../types";
-import { withLessons } from "../lessons";
-import { lessons } from "../lessons/g7";
 import { courses as alberta } from "../alberta/g7";
 import { courses as manitoba } from "../manitoba/g7";
 import { courses as ontario } from "../ontario/g7";
@@ -15,7 +13,7 @@ import { adopt, course, poolOf } from "./kit";
 // Units BC, Ontario, Alberta or Manitoba already has are listed with the New Brunswick outcomes they practise.
 
 
-const base: Course[] = [
+export const courses: Course[] = [
   course("7", "math", {
     share: {
       "integer-add-subtract": ["Number: Operations", "adding and subtracting integers"],
@@ -85,6 +83,3 @@ const base: Course[] = [
   }),
   ...frenchCourses("7"),
 ];
-
-// Short "how it works" lessons, matched to units by id.
-export const courses: Course[] = withLessons(base, lessons);

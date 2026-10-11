@@ -1,6 +1,4 @@
 import type { Course } from "../types";
-import { withLessons } from "../lessons";
-import { lessons } from "../lessons/g6";
 import { courses as ontario } from "../ontario/g6";
 import { frenchCourses } from "./french";
 import { adopt, course, unitsOf } from "./kit";
@@ -16,7 +14,7 @@ import { canadaToday, confederation, depression, government, homesteads, railway
 // and social studies Canada: A Country of Change (1867 to the present). Units BC or Ontario already has are listed with the
 // Manitoba outcomes they practise.
 
-const base: Course[] = [
+export const courses: Course[] = [
   course("6", "math", {
     share: {
       "thousandths-to-billions": ["6.N.1", "place value for numbers greater than one million, reading, writing and comparing large numbers"],
@@ -92,6 +90,3 @@ const base: Course[] = [
   }),
   ...frenchCourses("6"),
 ];
-
-// Short "how it works" lessons, matched to units by id.
-export const courses: Course[] = withLessons(base, lessons);

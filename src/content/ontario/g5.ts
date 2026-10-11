@@ -1,6 +1,4 @@
 import type { Course } from "../types";
-import { withLessons } from "../lessons";
-import { lessons } from "../lessons/g5";
 import { G5_LANGUAGE, G5_MATH } from "./overall";
 import { G5_SCIENCE, G5_SOCIAL } from "./g5-overall-ss";
 import { units as languageUnits } from "./g5-language";
@@ -13,7 +11,7 @@ import { frenchCourses } from "./french";
 // Ontario Grade 5. Units the BC course also has are shared; the rest are written for the
 // Ontario expectations.
 
-const base: Course[] = [
+export const courses: Course[] = [
   {
     grade: "5",
     subject: "math",
@@ -73,6 +71,3 @@ const base: Course[] = [
   },
   ...frenchCourses("5"),
 ];
-
-// Short "how it works" lessons, matched to units by id.
-export const courses: Course[] = withLessons(base, lessons);

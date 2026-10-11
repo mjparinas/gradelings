@@ -1,6 +1,4 @@
 import type { Course } from "../types";
-import { withLessons } from "../lessons";
-import { lessons } from "../lessons/g7";
 import { frenchCourses } from "./french";
 import { units as mathUnits } from "./g7-math";
 import { units as scienceUnits } from "./g7-science";
@@ -11,7 +9,7 @@ import { ab } from "./kit";
 // the rest are written for the Alberta programs of study (Mathematics K–9, 2007; English Language Arts, 2000;
 // Science 7–9, 2003; Social Studies, 2005).
 
-const base: Course[] = [
+export const courses: Course[] = [
   {
     grade: "7",
     subject: "math",
@@ -183,6 +181,3 @@ const base: Course[] = [
   },
   ...frenchCourses("7"),
 ];
-
-// Short "how it works" lessons, matched to units by id.
-export const courses: Course[] = withLessons(base, lessons);

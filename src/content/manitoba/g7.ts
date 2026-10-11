@@ -1,6 +1,4 @@
 import type { Course } from "../types";
-import { withLessons } from "../lessons";
-import { lessons } from "../lessons/g7";
 import { courses as ontario } from "../ontario/g7";
 import { frenchCourses } from "./french";
 import { adopt, course, unitsOf } from "./kit";
@@ -25,7 +23,7 @@ import { climateChange, humanRights, latLong, qualityOfLife, worldMap } from "./
 // ecosystems) and social studies Canada in the Contemporary World (7-K outcomes: global geography, human rights, quality of life).
 // Units BC or Ontario already has are listed with the Manitoba outcomes they practise.
 
-const base: Course[] = [
+export const courses: Course[] = [
   course("7", "math", {
     share: {
       "integer-add-subtract": ["7.N.6", "adding and subtracting integers"],
@@ -105,6 +103,3 @@ const base: Course[] = [
   }),
   ...frenchCourses("7"),
 ];
-
-// Short "how it works" lessons, matched to units by id.
-export const courses: Course[] = withLessons(base, lessons);

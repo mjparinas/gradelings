@@ -1,6 +1,4 @@
 import type { Course } from "../types";
-import { withLessons } from "../lessons";
-import { lessons } from "../lessons/g5";
 import { frenchCourses } from "./french";
 import { course } from "./kit";
 import { cells, climate, friction, weather } from "./units/g5-science";
@@ -14,7 +12,7 @@ import { confederation, earlyColonies, firstPeoples, furTrade, skills } from "./
 // curriculum (strands A to D), science the Grade 5 science outcomes (SCI.5) and social studies The Mosaic of Canada
 // (5-K outcomes). Units BC already has are listed with the Manitoba outcomes they practise.
 
-const base: Course[] = [
+export const courses: Course[] = [
   course("5", "math", {
     share: {
       "numbers-to-a-million": ["5.N.1", "representing and describing whole numbers to 1 000 000"],
@@ -66,6 +64,3 @@ const base: Course[] = [
   }),
   ...frenchCourses("5"),
 ];
-
-// Short "how it works" lessons, matched to units by id.
-export const courses: Course[] = withLessons(base, lessons);

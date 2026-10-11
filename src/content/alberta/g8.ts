@@ -1,6 +1,4 @@
 import type { Course } from "../types";
-import { withLessons } from "../lessons";
-import { lessons } from "../lessons/g8";
 import { ab } from "./kit";
 import { frenchCourses } from "./french";
 import { units as languageUnits } from "./g8-language";
@@ -12,7 +10,7 @@ import { units as socialUnits } from "./g8-social";
 // standards text; the rest are written for the Alberta programs of study (Mathematics K–9, 2007; English
 // Language Arts, 2000; Science 7–9, 2003; Social Studies, 2005).
 
-const base: Course[] = [
+export const courses: Course[] = [
   {
     grade: "8",
     subject: "math",
@@ -119,6 +117,3 @@ const base: Course[] = [
   },
   ...frenchCourses("8"),
 ];
-
-// Short "how it works" lessons, matched to units by id.
-export const courses: Course[] = withLessons(base, lessons);
