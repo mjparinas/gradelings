@@ -28,6 +28,7 @@ import { StickerBook } from "./StickerBook";
 import { Room } from "./Room";
 import { TrailMap } from "./TrailMap";
 import { TrophyRoom } from "./Trophies";
+import { Treasures } from "./Treasures";
 
 const MODES: Mode[] = ["practice", "adventure", "review", "speed", "daily", "challenge"];
 
@@ -46,6 +47,8 @@ function Screen() {
       return <LessonScreen key={query.get("scope") ?? ""} unitKey={query.get("scope") ?? ""} />;
     case "map":
       return <TrailMap />;
+    case "treasures":
+      return <Treasures />;
     case "stickers":
       return <StickerBook />;
     case "room":

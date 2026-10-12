@@ -12,7 +12,8 @@ import { useBand } from "../band";
 import { Critter, CritterSvg, SpeechBubble } from "../Critter";
 import { Page, ProgressBar, subjectVars } from "../ui";
 import { MembershipLock } from "./MembershipLock";
-import { BackButton, LevelChip, UnitDialog } from "./Practice";
+import { LevelChip, UnitDialog } from "./Practice";
+import { TreasureBack } from "./Treasures";
 import { useAllowed } from "./useAllowed";
 
 // The trail map: each subject is a winding path of lessons. Every lesson lights up as the child
@@ -38,7 +39,7 @@ export function TrailMap() {
     return (
       <Page className="gap-6">
         <header className="flex items-center gap-3">
-          <BackButton />
+          <TreasureBack />
           <h1 className="text-3xl font-bold sm:text-4xl">Trail Map</h1>
         </header>
         <p className="font-read text-xl text-ink-soft">Ask a grown-up to turn on a subject to see your trail.</p>
@@ -62,7 +63,7 @@ export function TrailMap() {
   return (
     <Page style={subjectVars(meta)} className="gap-5">
       <header className="flex items-center gap-3">
-        <BackButton />
+        <TreasureBack />
         <h1 className="text-3xl font-bold sm:text-4xl">🧭 Trail Map</h1>
       </header>
 

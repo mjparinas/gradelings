@@ -6,7 +6,7 @@ import { sounds } from "@/lib/sound";
 import { useActiveProfile, useDerived, useStore } from "@/lib/store";
 import { CritterSvg } from "../Critter";
 import { Page } from "../ui";
-import { BackButton } from "./Practice";
+import { TreasureBack } from "./Treasures";
 
 /** The room scene. Sizes are in container-width units so it scales down to a 320 px phone. */
 export function RoomScene({ layout, companion }: { layout: Partial<Record<RoomSlot, RoomItem>>; companion?: string }) {
@@ -52,7 +52,7 @@ export function Room() {
     <Page className="gap-5">
       <header className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-3">
-          <BackButton />
+          <TreasureBack />
           <h1 className="text-3xl font-bold sm:text-4xl">🏠 My Room</h1>
         </div>
         <span className="flex h-14 items-center gap-1 rounded-2xl bg-white px-4 text-2xl font-bold shadow-[0_4px_0_var(--color-line)]">🪙 {d.coins}</span>

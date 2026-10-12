@@ -21,6 +21,7 @@ vi.mock("@/lib/store", () => ({
   useStore: () => () => {},
 }));
 
+import { BandProvider } from "../band";
 import { Hud } from "./Hud";
 
 describe("Hud coins", () => {
@@ -46,5 +47,20 @@ describe("Hud coins", () => {
     render(<Hud />);
     expect(screen.queryByRole("button", { name: /Open the shop/ })).not.toBeInTheDocument();
     expect(screen.getByLabelText("42 coins")).toBeInTheDocument();
+  });
+});
+
+describe("Hud level", () => {
+  it("shows the XP numbers to older kids, and only the level ring to little kids", () => {
+    const first = render(<Hud />);
+    expect(screen.getByText(/10\/160/)).toBeInTheDocument();
+    first.unmount();
+    render(
+      <BandProvider value="little">
+        <Hud />
+      </BandProvider>,
+    );
+    expect(screen.getByLabelText("Level 3")).toBeInTheDocument();
+    expect(screen.queryByText(/10\/160/)).not.toBeInTheDocument();
   });
 });

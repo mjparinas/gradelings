@@ -10,7 +10,7 @@ import { gameTime } from "@/lib/gametime";
 import { effectiveGoal } from "@/lib/goal";
 import { dayKey } from "@/lib/model";
 import { canUse, type Feature } from "@/lib/plan";
-import { dailyQuests, weekDays, weeklyQuests, weekStart } from "@/lib/quests";
+import { dailyQuests, weekDays, weeklyQuests, weekStart, type Quest } from "@/lib/quests";
 import { nextUp } from "@/lib/nextup";
 import { levelInfo, unitLevel } from "@/lib/proficiency";
 import type { FlagKey } from "@/lib/flags";
@@ -88,11 +88,21 @@ export function Hub() {
   const nextInfo = next ? levelInfo(profile.framework, profile.grade, next.level) : undefined;
   const refresher = refresherUnit({ grade: profile.grade, framework: profile.framework, derived: d, subjects, allowed, now });
   const classwork = useClasswork();
+  // Little kids see one quest at a time, the first not yet done, and no weekly goals.
+  const littleQuest = quests.find((q) => !claimed.includes(q.id));
+  // ...and at most one suggestion card: "Almost there" first.
+  const card = next && nextRef ? "next" : refresher ? "refresher" : suggested ? "suggested" : undefined;
 
   // Welcome-back and streak copy is always warm and forward-looking, never about something lost.
   const returning = d.totals.answers > 0 && d.streak.current === 0 && d.activeDays > 0 && !d.streak.activeToday;
-  const message = !d.totals.answers
-    ? `${greeting(profile.name, new Date(now).getHours())} Tap the big button to start your first adventure!`
+  const hello = greeting(profile.name, new Date(now).getHours());
+  // Little kids get one short line: most can't read yet, and it is read aloud.
+  const message = little
+    ? minutes >= goal
+      ? `You did it, ${profile.name}! 🎉`
+      : `${hello} Let's play!`
+    : !d.totals.answers
+    ? `${hello} Tap the big button to start your first adventure!`
     : minutes >= goal
       ? `You hit today's goal! ${minutes} minutes of learning. Amazing!`
       : returning
@@ -101,7 +111,7 @@ export function Hub() {
           ? d.streak.saved
             ? `A rest-day shield kept your ${d.streak.current}-day streak safe. 🛡️ Play today to keep it going!`
             : `Day ${d.streak.current + 1} of your streak is waiting for you! 🔥`
-          : `${greeting(profile.name, new Date(now).getHours())} ${goal - minutes} more minutes to reach today's goal.`;
+          : `${hello} ${goal - minutes} more minutes to reach today's goal.`;
   const mood = minutes >= goal ? "cheer" : returning ? "sleepy" : "wave";
 
   const gameDesc = !games.enabled
@@ -112,7 +122,16 @@ export function Hub() {
         ? `Learn ${Math.ceil(games.nextInSeconds / 60)} more min`
         : "Done for today";
 
-  const tiles: Tile[] = [
+  const lessonsTile: Tile = { id: "practice", title: little ? "Lessons" : "Practice", desc: "Pick a subject and topic", icon: "📚", colour: "#4f8ef7", dark: "#2f6fd6", href: "#/practice" };
+  const arcadeTile: Tile = { id: "arcade", title: little ? "Games" : "Arcade", desc: gameDesc, icon: "🕹️", colour: "#7c4fe0", dark: "#5d34c4", href: "#/arcade", feature: "arcade", flag: "arcade" };
+  // Kindergarten and Grade 1 get three big picture tiles. The collections sit behind My Treasures and
+  // the Daily Challenge moves to the Lessons screen, so there is less to read and choose from here.
+  const littleTiles: Tile[] = [
+    lessonsTile,
+    arcadeTile,
+    { id: "treasures", title: "Treasures", desc: "", icon: "💎", colour: "#f0bd2a", dark: "#b88905", href: "#/treasures" },
+  ];
+  const tiles: Tile[] = little ? littleTiles : [
     {
       id: "daily",
       title: "Daily Challenge",
@@ -124,24 +143,20 @@ export function Hub() {
       done: dailyDone,
       flag: "daily-challenge",
     },
-    { id: "practice", title: little ? "Lessons" : "Practice", desc: "Pick a subject and topic", icon: "📚", colour: "#4f8ef7", dark: "#2f6fd6", href: "#/practice" },
+    lessonsTile,
     { id: "trail", title: "Trail Map", desc: "See how far you've come", icon: "🧭", colour: "#f08a4b", dark: "#c46a2c", href: "#/map" },
-    ...(little
-      ? []
-      : [
-          { id: "speed", title: "Speed Run", desc: "How many in 60 seconds?", icon: "⚡", colour: "#e9559a", dark: "#c43a7c", href: "#/speed", feature: "speed" as Feature, flag: "speed-run" as FlagKey },
-          {
-            id: "review",
-            title: "Review",
-            desc: weak ? `${weak} tricky spot${weak === 1 ? "" : "s"} to practise` : "Practise tricky spots",
-            icon: "🔍",
-            colour: "#25b47e",
-            dark: "#16925f",
-            href: "#/session?mode=review&scope=mix",
-            feature: "review" as Feature,
-          },
-        ]),
-    { id: "arcade", title: little ? "Games" : "Arcade", desc: gameDesc, icon: "🕹️", colour: "#7c4fe0", dark: "#5d34c4", href: "#/arcade", feature: "arcade", flag: "arcade" },
+    { id: "speed", title: "Speed Run", desc: "How many in 60 seconds?", icon: "⚡", colour: "#e9559a", dark: "#c43a7c", href: "#/speed", feature: "speed", flag: "speed-run" },
+    {
+      id: "review",
+      title: "Review",
+      desc: weak ? `${weak} tricky spot${weak === 1 ? "" : "s"} to practise` : "Practise tricky spots",
+      icon: "🔍",
+      colour: "#25b47e",
+      dark: "#16925f",
+      href: "#/session?mode=review&scope=mix",
+      feature: "review",
+    },
+    arcadeTile,
     { id: "stickers", title: "Sticker Book", desc: "Collect them all", icon: "📒", colour: "#e9559a", dark: "#c43a7c", href: "#/stickers", flag: "sticker-book" },
     { id: "trophies", title: "Trophies", desc: `${Object.keys(d.trophies).length} earned · ${d.trophyPoints} pts`, icon: "🏆", colour: "#f0bd2a", dark: "#b88905", href: "#/trophies" },
     { id: "room", title: "My Room", desc: "Decorate with your coins", icon: "🏠", colour: "#f08a4b", dark: "#c46a2c", href: "#/room", flag: "my-room" },
@@ -194,9 +209,27 @@ export function Hub() {
 
       {!isStudent && <ParentNote />}
 
-      <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+      <div className={`grid grid-cols-2 gap-3 sm:gap-4 ${little ? "sm:grid-cols-3" : "lg:grid-cols-3"}`}>
         {shown.map((t, i) => {
           const isLocked = t.feature && !canUse(family, t.feature);
+          // An odd last little tile spans the row on phones, so the three sit as two plus one wide.
+          const wide = little && i === shown.length - 1 && shown.length % 2 === 1;
+          if (little) {
+            return (
+              <div key={t.id} className={`animate-rise-in ${wide ? "col-span-2 sm:col-span-1" : ""}`} style={{ animationDelay: `${80 + i * 60}ms` }}>
+                <button
+                  type="button"
+                  onClick={() => open(t)}
+                  className="btn relative h-full min-h-36 w-full flex-col items-center justify-center gap-2 p-4 text-center short:min-h-28"
+                  style={{ "--btn-bg": t.colour, "--btn-edge": t.dark, "--btn-fg": onColour(t.colour) } as CSSProperties}
+                >
+                  {isLocked && <span className="absolute top-2 right-2 rounded-full bg-black/25 px-2 py-0.5 text-sm">🔒</span>}
+                  <span className="text-6xl drop-shadow-sm narrow:text-5xl" aria-hidden="true">{t.icon}</span>
+                  <span className="block text-3xl leading-tight font-bold narrow:text-2xl">{t.title}</span>
+                </button>
+              </div>
+            );
+          }
           return (
             <div key={t.id} className="animate-rise-in" style={{ animationDelay: `${80 + i * 60}ms` }}>
               <button
@@ -255,53 +288,59 @@ export function Hub() {
         </section>
       )}
 
-      <section className="card p-4 sm:p-5">
-        <h2 className="mb-3 flex items-center justify-between text-xl font-bold sm:text-2xl">
-          <span>🎯 Today&apos;s quests</span>
-          <span className="text-sm font-semibold text-ink-soft">New quests tomorrow</span>
-        </h2>
-        <ul className="flex flex-col gap-2.5">
-          {quests.map((q) => {
-            const got = claimed.includes(q.id);
-            const value = Math.min(q.target, q.progress(dayStat));
-            return (
-              <li key={q.id} className={`flex items-center gap-3 rounded-2xl p-2.5 ${got ? "bg-good-soft" : "bg-paper"}`}>
-                <span className="text-3xl">{got ? "✅" : q.icon}</span>
-                <div className="flex-1">
-                  <p className="font-read text-lg font-bold">{q.title}</p>
-                  <ProgressBar value={value} max={q.target} height={12} label={q.title} />
-                </div>
-                <span className="rounded-full bg-[#fff4cc] px-3 py-1 text-sm font-bold text-[#7a5700]">🪙 {q.reward}</span>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
+      {little ? (
+        <LittleQuest quest={littleQuest} progress={littleQuest ? Math.min(littleQuest.target, littleQuest.progress(dayStat)) : 0} />
+      ) : (
+        <>
+        <section className="card p-4 sm:p-5">
+          <h2 className="mb-3 flex items-center justify-between text-xl font-bold sm:text-2xl">
+            <span>🎯 Today&apos;s quests</span>
+            <span className="text-sm font-semibold text-ink-soft">New quests tomorrow</span>
+          </h2>
+          <ul className="flex flex-col gap-2.5">
+            {quests.map((q) => {
+              const got = claimed.includes(q.id);
+              const value = Math.min(q.target, q.progress(dayStat));
+              return (
+                <li key={q.id} className={`flex items-center gap-3 rounded-2xl p-2.5 ${got ? "bg-good-soft" : "bg-paper"}`}>
+                  <span className="text-3xl">{got ? "✅" : q.icon}</span>
+                  <div className="flex-1">
+                    <p className="font-read text-lg font-bold">{q.title}</p>
+                    <ProgressBar value={value} max={q.target} height={12} label={q.title} />
+                  </div>
+                  <span className="rounded-full bg-[#fff4cc] px-3 py-1 text-sm font-bold text-[#7a5700]">🪙 {q.reward}</span>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
 
-      <section className="card p-4 sm:p-5">
-        <h2 className="mb-3 flex items-center justify-between text-xl font-bold sm:text-2xl">
-          <span>🗓️ This week</span>
-          <span className="text-sm font-semibold text-ink-soft">New goals on Monday</span>
-        </h2>
-        <ul className="flex flex-col gap-2.5">
-          {weekly.map((q) => {
-            const got = weekClaimed.includes(q.id);
-            const value = Math.min(q.target, q.progress(weekStats));
-            return (
-              <li key={q.id} className={`flex items-center gap-3 rounded-2xl p-2.5 ${got ? "bg-good-soft" : "bg-paper"}`}>
-                <span className="text-3xl">{got ? "✅" : q.icon}</span>
-                <div className="flex-1">
-                  <p className="font-read text-lg font-bold">{q.title}</p>
-                  <ProgressBar value={value} max={q.target} height={12} label={q.title} />
-                </div>
-                <span className="rounded-full bg-[#fff4cc] px-3 py-1 text-sm font-bold text-[#7a5700]">🪙 {q.reward}</span>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
+        <section className="card p-4 sm:p-5">
+          <h2 className="mb-3 flex items-center justify-between text-xl font-bold sm:text-2xl">
+            <span>🗓️ This week</span>
+            <span className="text-sm font-semibold text-ink-soft">New goals on Monday</span>
+          </h2>
+          <ul className="flex flex-col gap-2.5">
+            {weekly.map((q) => {
+              const got = weekClaimed.includes(q.id);
+              const value = Math.min(q.target, q.progress(weekStats));
+              return (
+                <li key={q.id} className={`flex items-center gap-3 rounded-2xl p-2.5 ${got ? "bg-good-soft" : "bg-paper"}`}>
+                  <span className="text-3xl">{got ? "✅" : q.icon}</span>
+                  <div className="flex-1">
+                    <p className="font-read text-lg font-bold">{q.title}</p>
+                    <ProgressBar value={value} max={q.target} height={12} label={q.title} />
+                  </div>
+                  <span className="rounded-full bg-[#fff4cc] px-3 py-1 text-sm font-bold text-[#7a5700]">🪙 {q.reward}</span>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+        </>
+      )}
 
-      {refresher && (
+      {(!little || card === "refresher") && refresher && (
         <a
           href={`#/session?mode=practice&scope=${encodeURIComponent(refresher.key)}`}
           className="card flex items-center gap-3 p-4"
@@ -319,7 +358,7 @@ export function Hub() {
         </a>
       )}
 
-      {next && nextRef && (
+      {(!little || card === "next") && next && nextRef && (
         <a
           href={`#/session?mode=practice&scope=${encodeURIComponent(next.key)}`}
           className="card flex items-center gap-3 p-4"
@@ -337,7 +376,7 @@ export function Hub() {
         </a>
       )}
 
-      {suggested && suggested.key !== next?.key && (
+      {(!little || card === "suggested") && suggested && suggested.key !== next?.key && (
         <a
           href={`#/session?mode=practice&scope=${encodeURIComponent(suggested.key)}`}
           className="card flex items-center gap-3 p-4"
@@ -375,4 +414,36 @@ export function Hub() {
 
 export function goHome() {
   go("/");
+}
+
+/** Little kids' single quest: a big picture, a short title and dots (or a bar for long quests) instead of a list. */
+function LittleQuest({ quest, progress }: { quest?: Quest; progress: number }) {
+  if (!quest) {
+    return (
+      <section className="card flex items-center gap-3 bg-good-soft p-4" aria-label="Today's quest">
+        <span className="text-5xl">✅</span>
+        <p className="font-read text-2xl font-bold">All quests done today!</p>
+      </section>
+    );
+  }
+  return (
+    <section className="card flex items-center gap-4 p-4" aria-label="Today's quest">
+      <span className="text-5xl" aria-hidden="true">
+        {quest.icon}
+      </span>
+      <div className="flex flex-1 flex-col gap-2">
+        <p className="font-read text-xl font-bold sm:text-2xl">{quest.title}</p>
+        {quest.target <= 10 ? (
+          <span className="flex flex-wrap gap-1.5" role="progressbar" aria-label={quest.title} aria-valuemin={0} aria-valuemax={quest.target} aria-valuenow={progress}>
+            {Array.from({ length: quest.target }, (_, i) => (
+              <span key={i} className={`h-5 w-5 rounded-full border-2 ${i < progress ? "border-good bg-good" : "border-ink-soft/50 bg-white"}`} />
+            ))}
+          </span>
+        ) : (
+          <ProgressBar value={progress} max={quest.target} height={16} label={quest.title} />
+        )}
+      </div>
+      <span className="rounded-full bg-[#fff4cc] px-3 py-1 text-lg font-bold text-[#7a5700]">🪙 {quest.reward}</span>
+    </section>
+  );
 }

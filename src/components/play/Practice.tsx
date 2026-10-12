@@ -5,10 +5,13 @@ import { useState, type CSSProperties } from "react";
 import { coursesForGrade, getUnitRef, unitKey } from "@/content";
 import { getSubjectMeta } from "@/content/subjects";
 import type { SubjectId } from "@/content/types";
+import { dayKey } from "@/lib/model";
 import { canUse } from "@/lib/plan";
 import { levelInfo, nextStep, unitLevel } from "@/lib/proficiency";
+import { useIsOn } from "@/lib/remoteFlags";
 import { go, href } from "@/lib/router";
 import { useActiveProfile, useChildSettings, useDerived, useStore } from "@/lib/store";
+import { useNow } from "@/lib/useNow";
 import { useBand } from "../band";
 import { Critter, SpeechBubble } from "../Critter";
 import { Dialog, Page, ProgressBar, subjectVars } from "../ui";
@@ -85,7 +88,29 @@ export function SubjectPicker() {
           );
         })}
       </div>
+      {band === "little" && <DailyCard />}
     </Page>
+  );
+}
+
+/** Little kids find the Daily Challenge here, on the Lessons screen, so their home screen stays to three tiles. */
+function DailyCard() {
+  const d = useDerived();
+  const isOn = useIsOn();
+  const done = d.dailyDone.includes(dayKey(useNow()));
+  if (!isOn("daily-challenge")) return null;
+  return (
+    <a
+      href={href("/session", { mode: "daily", scope: "mix" })}
+      className="btn w-full items-center justify-start gap-4 p-5 text-left"
+      style={{ "--btn-bg": "#ffb020", "--btn-edge": "#d68a00", "--btn-fg": onColour("#ffb020") } as CSSProperties}
+    >
+      <span className="text-5xl" aria-hidden="true">
+        ☀️
+      </span>
+      <span className="flex-1 text-3xl font-bold">Daily Challenge</span>
+      {done && <span className="rounded-full bg-white/40 px-3 py-1 text-lg font-bold">✓</span>}
+    </a>
   );
 }
 

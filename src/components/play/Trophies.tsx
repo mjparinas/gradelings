@@ -6,7 +6,7 @@ import { useActiveProfile, useDerived } from "@/lib/store";
 import { CRITTERS, CritterSvg } from "../Critter";
 import { Page, ProgressBar } from "../ui";
 import { LevelBadge } from "./Hud";
-import { BackButton } from "./Practice";
+import { TreasureBack } from "./Treasures";
 
 const TIERS: Tier[] = ["platinum", "gold", "silver", "bronze"];
 const CATEGORIES: TrophyCategory[] = ["Getting started", "Practice", "Streaks", "Mastery", "Modes", "Arcade", "Collector", "Journey", "French", "Secret"];
@@ -42,7 +42,7 @@ export function TrophyRoom() {
   return (
     <Page className="gap-5">
       <header className="flex items-center gap-3">
-        <BackButton />
+        <TreasureBack />
         <h1 className="text-3xl font-bold sm:text-4xl">🏆 Trophies</h1>
       </header>
 

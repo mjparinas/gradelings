@@ -72,6 +72,7 @@ vi.mock("./StickerBook", () => ({ StickerBook: screenStub("StickerBook") }));
 vi.mock("./Room", () => ({ Room: screenStub("Room") }));
 vi.mock("./TrailMap", () => ({ TrailMap: screenStub("TrailMap") }));
 vi.mock("./Trophies", () => ({ TrophyRoom: screenStub("TrophyRoom") }));
+vi.mock("./Treasures", () => ({ Treasures: screenStub("Treasures") }));
 
 import { PlayApp } from "./PlayApp";
 
@@ -161,6 +162,7 @@ describe("PlayApp routes", () => {
     ["practice/math", "UnitList subject=math"],
     ["lesson?scope=3/math/add", "LessonScreen unitKey=3/math/add"],
     ["map", "TrailMap"],
+    ["treasures", "Treasures"],
     ["stickers", "StickerBook"],
     ["room", "Room"],
     ["speed", "SpeedPicker"],

@@ -10,7 +10,7 @@ import { useActiveProfile, useChildSettings, useDerived } from "@/lib/store";
 import { useBand } from "../band";
 import { Critter, SpeechBubble } from "../Critter";
 import { Page, ProgressBar, subjectVars } from "../ui";
-import { BackButton } from "./Practice";
+import { TreasureBack } from "./Treasures";
 
 type PageId = SubjectId | "moments";
 
@@ -41,7 +41,7 @@ export function StickerBook() {
   return (
     <Page style={meta ? subjectVars(meta) : undefined} className="gap-5">
       <header className="flex items-center gap-3">
-        <BackButton />
+        <TreasureBack />
         <h1 className="text-3xl font-bold sm:text-4xl">📒 Sticker Book</h1>
       </header>
 

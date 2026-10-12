@@ -5,6 +5,7 @@ import { allUnitRefs, loadGrade, type UnitRef } from "@/content";
 import type { AgeBand } from "@/content/types";
 import { derive, type DayStat, type Derived, type UnitStat } from "@/lib/derive";
 import { dayKey, type FamilyInfo } from "@/lib/model";
+import { dailyQuests } from "@/lib/quests";
 import { BandProvider } from "../band";
 
 // Monday 12 October 2026, 9 a.m. local time.
@@ -177,13 +178,25 @@ describe("Hub tiles", () => {
     expect(window.location.hash).toBe("#/practice");
   });
 
-  it("little kids get Let's Play, Lessons and Games, with no Speed Run or Review", () => {
+  it("little kids get Let's Play and three picture tiles: Lessons, Games and Treasures", () => {
     show("little");
     expect(screen.getByRole("button", { name: /Let's Play!/ })).toBeInTheDocument();
-    expect(tile("Lessons")).toBeInTheDocument();
-    expect(tile("Games")).toBeInTheDocument();
-    expect(screen.queryByText("Speed Run")).not.toBeInTheDocument();
-    expect(screen.queryByText("Review")).not.toBeInTheDocument();
+    const tiles = screen.getAllByRole("button").filter((b) => b.querySelector("span.block") && !/Let.s Play/.test(b.textContent ?? ""));
+    expect(tiles.map((b) => b.textContent)).toEqual(["📚Lessons", "🕹️Games", "💎Treasures"]);
+    // No small print under the tiles, and the collections and extra modes live elsewhere.
+    expect(screen.queryByText("Pick a subject and topic")).not.toBeInTheDocument();
+    for (const gone of ["Speed Run", "Review", "Daily Challenge", "Trail Map", "Sticker Book", "Trophies", "My Room", "Shop"]) {
+      expect(screen.queryByText(gone)).not.toBeInTheDocument();
+    }
+    fireEvent.click(tile("Treasures"));
+    expect(window.location.hash).toBe("#/treasures");
+  });
+
+  it("little kids' Games tile still asks for a grown-up on the free plan", () => {
+    h.family = free;
+    show("little");
+    expect(within(tile("Games")).getByText("🔒")).toBeInTheDocument();
+    expect(within(tile("Lessons")).queryByText("🔒")).not.toBeInTheDocument();
   });
 
   it("hides the tiles the admin switched off", () => {
@@ -231,6 +244,54 @@ describe("Hub tiles", () => {
     const lists = screen.getAllByRole("list");
     expect(within(lists[0]).getAllByRole("listitem")).toHaveLength(3);
     expect(within(lists[1]).getAllByRole("listitem")).toHaveLength(2);
+  });
+});
+
+describe("Hub for little kids", () => {
+  it("says one short line instead of a paragraph", () => {
+    const { unmount } = show("little");
+    expect(message()).toHaveTextContent(/^Good morning, Ava! Let's play!$/);
+    unmount();
+    set({ totals: { answers: 40 } as Derived["totals"], days: { [TODAY]: day({ learnSeconds: 11 * 60 }) } });
+    h.settings = { ...h.settings, dailyGoalMinutes: 10 };
+    show("little");
+    expect(message()).toHaveTextContent(/^You did it, Ava! 🎉$/);
+  });
+
+  it("shows one quest at a time with dots, and no weekly goals", () => {
+    const quests = dailyQuests("p1", TODAY, "little");
+    set({ questsClaimed: { [TODAY]: [quests[0].id] } });
+    show("little");
+    expect(screen.queryByRole("heading", { name: /Today's quests/ })).not.toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: /This week/ })).not.toBeInTheDocument();
+    const quest = screen.getByRole("region", { name: "Today's quest" });
+    expect(quest).toHaveTextContent(quests[1].title);
+    expect(quest).not.toHaveTextContent(quests[0].title);
+    const bar = within(quest).getByRole("progressbar", { name: quests[1].title });
+    expect(bar).toHaveAttribute("aria-valuemax", String(quests[1].target));
+  });
+
+  it("cheers when every quest is done today", () => {
+    set({ questsClaimed: { [TODAY]: dailyQuests("p1", TODAY, "little").map((q) => q.id) } });
+    show("little");
+    expect(screen.getByRole("region", { name: "Today's quest" })).toHaveTextContent("All quests done today!");
+  });
+
+  it("shows at most one suggestion card, Almost there first", () => {
+    const [near, strong] = mathRefs();
+    set({
+      units: { [near.key]: stat(near.key, 6, 5), [strong.key]: stat(strong.key, 20, 19, NOW - 30 * DAY) },
+      totals: { answers: 26 } as Derived["totals"],
+    });
+    const { unmount } = show("little");
+    expect(screen.getByTestId("next-up")).toBeInTheDocument();
+    expect(screen.queryByTestId("refresher")).not.toBeInTheDocument();
+    expect(screen.queryByText(/Try this lesson/)).not.toBeInTheDocument();
+    unmount();
+    // Older kids still get every card.
+    show();
+    expect(screen.getByTestId("next-up")).toBeInTheDocument();
+    expect(screen.getByTestId("refresher")).toBeInTheDocument();
   });
 });
 
