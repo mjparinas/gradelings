@@ -15,7 +15,14 @@ export const EMAIL_IMAGES = {
  * wordmark's font on the site, for the name. Apple Mail, iOS Mail and Outlook for Mac show them; Gmail and Outlook for
  * Windows ignore web fonts and use the fallbacks.
  */
-export const EMAIL_FONTS = {
+export interface EmailFont {
+  family: string;
+  stack: string;
+  /** Each weight is served as `${path}.woff2` and `${path}.woff`. */
+  files: readonly { weight: number; path: string }[];
+}
+
+export const EMAIL_FONTS: Record<"text" | "wordmark", EmailFont> = {
   text: {
     family: "Andika",
     stack: "Andika,system-ui,'Segoe UI',Arial,sans-serif",
@@ -29,4 +36,4 @@ export const EMAIL_FONTS = {
     stack: "Fredoka,'Arial Rounded MT Bold','Trebuchet MS',system-ui,Arial,sans-serif",
     files: [{ weight: 700, path: "/email/fonts/fredoka-700-v1" }],
   },
-} as const;
+};
