@@ -3,6 +3,7 @@ import { secretsMatch, unsubscribeToken } from "@/server/auth";
 import { query, run } from "@/server/db";
 import { sendEmail } from "@/server/email";
 import { inactiveClassEmail, reminderEmail, trialEndingEmail, trialRecapEmail, weeklyEmail, type ReminderChild, type TrialChild, type WeeklyChild } from "@/server/emailTemplates";
+import { trackJob } from "@/server/monitor";
 import { deleteInactiveClass } from "@/server/students";
 
 // Runs once a day (see vercel.json). Vercel sends `Authorization: Bearer $CRON_SECRET`.
@@ -19,6 +20,11 @@ export const maxDuration = 300;
 export async function GET(req: Request) {
   const secret = process.env.CRON_SECRET;
   if (!secret || !secretsMatch(req.headers.get("authorization") ?? "", `Bearer ${secret}`)) return new Response("Unauthorized", { status: 401 });
+  // Each run is recorded for the admin panel's System page.
+  return trackJob("daily", () => daily(req));
+}
+
+async function daily(req: Request): Promise<Response> {
   const origin = (process.env.NEXT_PUBLIC_SITE_URL ?? "").replace(/\/$/, "") || new URL(req.url).origin;
   const now = Date.now();
   const result = { trialNotices: 0, trialRecaps: 0, weekly: 0, reminders: 0, inactiveClassWarnings: 0, inactiveClassesDeleted: 0, studentsDeleted: 0 };

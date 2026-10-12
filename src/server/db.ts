@@ -274,6 +274,26 @@ const SCHEMA = [
     until INTEGER NOT NULL,
     at INTEGER NOT NULL
   )`,
+  // Scheduled job runs and incoming webhooks, for the admin panel's System page. No personal data:
+  // job counts and webhook event types only. Rows older than 60 days are cleared as new ones arrive.
+  `CREATE TABLE IF NOT EXISTS job_runs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    job TEXT NOT NULL,
+    started_at INTEGER NOT NULL,
+    finished_at INTEGER,
+    ok INTEGER,
+    detail TEXT
+  )`,
+  `CREATE INDEX IF NOT EXISTS job_runs_job ON job_runs (job, started_at)`,
+  `CREATE TABLE IF NOT EXISTS webhook_log (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    source TEXT NOT NULL,
+    at INTEGER NOT NULL,
+    ok INTEGER NOT NULL,
+    type TEXT,
+    error TEXT
+  )`,
+  `CREATE INDEX IF NOT EXISTS webhook_log_source ON webhook_log (source, at)`,
 ];
 
 /** Columns added after the first release. SQLite has no "ADD COLUMN IF NOT EXISTS". */

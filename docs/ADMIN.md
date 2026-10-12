@@ -47,6 +47,18 @@ The list lives in the environment, never the database, so nothing a request writ
 - **Flags:** switch a feature off for everyone or roll it out to a percentage of families. See below.
 - **A/B tests:** see below.
 - **Reports:** "Report a problem" submissions grouped by question, most reported first. Clear a question once it's fixed or checked.
+- **System** (`src/server/systemHealth.ts`, `GET /api/admin/system/`, `?refresh=1` to skip the one-minute cache): one card per part of the stack, then the providers' status pages. Every token stays on the server; the page only gets results, and the Settings card shows a setting's name, never its value. A check that isn't set up shows **Not set up** with the settings to add; a service that errors or takes over 8 seconds shows **Down** without holding up the rest.
+  - **Database:** answer time of `SELECT 1`, families, practice events and when practice was last saved.
+  - **Uptime:** the `uptime.yml` workflow's pings over 24 hours and 7 days, the last failure, and how long the site has been down while its "uptime" issue is open. Needs `GITHUB_TOKEN` and `GITHUB_REPOSITORY`.
+  - **Deploys (Vercel):** what's live in production, a failed latest production deploy, failed deploys in 7 days, deploys in 24 hours against the Hobby limit of 100, and the commit this server runs. Needs `VERCEL_TOKEN` and `VERCEL_PROJECT_ID` (plus `VERCEL_TEAM_ID` for a team project).
+  - **Builds (GitHub Actions):** the latest CI runs on main, and any running now.
+  - **Errors (Sentry):** unresolved issues seen in 14 days, with events, how long each has been open and when last seen. Needs `SENTRY_AUTH_TOKEN`, `SENTRY_ORG` and `SENTRY_PROJECT` (`SENTRY_API_BASE=https://de.sentry.io` for an EU organization).
+  - **Payments (Stripe):** whether the key works and its mode, events Stripe couldn't deliver in 7 days, and the app's own webhook record (received, failed, and why).
+  - **Email (Resend):** sending domains and whether they're verified, emails in 30 days with bounce and spam rates (warns at Resend's limits, 4% and 0.08%, from 20 emails), and the last delivery report.
+  - **Daily email job:** each run of `/api/cron/weekly/` (`job_runs`, `src/server/monitor.ts`), what it sent, and a warning when it hasn't run for 26 hours.
+  - **Settings:** every required and recommended setting is present, and `ALLOW_DEV_BILLING` isn't on in production.
+  - **Provider status pages:** Vercel, GitHub, Sentry, Resend, Stripe and Turso, with open incidents and how long each has been open.
+  - Webhook records (`webhook_log`) and job runs are kept 60 days and hold no personal data.
 - **Log:** the last 200 changes made in the panel.
 
 ## Feature flags
