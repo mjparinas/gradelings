@@ -89,6 +89,7 @@ try {
   // Account shows it on and ready, without a parent doing anything.
   await page.goto(BASE + "/parents/#/account");
   await enterPin(page, true);
+  await page.getByRole("button", { name: "Change voice" }).click();
   const piper = page.getByTestId("piper-en");
   await piper.getByRole("button", { name: "▶ Preview", exact: true }).waitFor({ timeout: 15000 });
   if ((await piper.getByRole("switch", { name: /Use the offline voice/ }).getAttribute("aria-checked")) !== "true") throw new Error("the offline voice isn't on by default");

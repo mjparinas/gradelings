@@ -27,6 +27,8 @@ export function PiperVoice({ language }: { language: SpeechLanguage }) {
   if (!piperSupported()) return language === "en" ? <p className="text-sm text-ink-soft">This browser can&apos;t run the offline voice.</p> : null;
 
   const french = language === "fr";
+  // The French voice downloads by itself the first time French is read aloud, so there's no button for it.
+  if (french && voice.state === "missing") return null;
   const download = () => {
     // Downloading by hand means the parent wants to hear it.
     if (!french) setPiperEnabled(true);

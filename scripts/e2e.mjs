@@ -226,6 +226,9 @@ async function eventsWaiting(page) {
     await page.goto(`${BASE}/parents/#/account`);
     await page.waitForTimeout(500);
     if (!(await vis(page.getByRole("heading", { name: /Parent PIN/ })))) errors.push("account: the parent PIN panel is missing");
+    // The voice in use is shown with a sample; the choices are folded under "Change voice".
+    if (!(await vis(page.getByText(/Reading with:/)))) errors.push("account: the voice in use isn't shown");
+    await page.getByRole("button", { name: "Change voice" }).click();
     // The most natural voice comes first, and a parent's choice is used everywhere.
     const voice = page.getByRole("combobox", { name: "Device voice", exact: true });
     await voice.click();

@@ -87,11 +87,11 @@ describe("PiperVoice", () => {
     expect(screen.getByRole("button", { name: "⬇ Download voice" })).toBeInTheDocument();
   });
 
-  it("holds the French download while the English one is running", () => {
-    setState(voice("downloading", { loaded: 10e6, total: 40e6 }), voice("missing"));
-    render(<PiperVoice language="fr" />);
-    expect(screen.getByRole("button", { name: /Download French voice/ })).toBeDisabled();
-    expect(screen.queryByText(/Best on Wi-Fi/)).not.toBeInTheDocument();
+  it("shows nothing for a French voice that isn't here yet: it downloads by itself when French is read aloud", () => {
+    setState(voice("missing"), voice("missing"));
+    const { container } = render(<PiperVoice language="fr" />);
+    expect(container).toBeEmptyDOMElement();
+    expect(screen.queryByRole("button", { name: /Download French voice/ })).not.toBeInTheDocument();
   });
 
   it("shows download progress", () => {
