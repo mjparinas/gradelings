@@ -13,6 +13,8 @@ import { canUse, type Feature } from "@/lib/plan";
 import { dailyQuests, weekDays, weeklyQuests, weekStart } from "@/lib/quests";
 import { nextUp } from "@/lib/nextup";
 import { levelInfo, unitLevel } from "@/lib/proficiency";
+import type { FlagKey } from "@/lib/flags";
+import { useIsOn } from "@/lib/remoteFlags";
 import { signOutStudent } from "@/lib/account";
 import { go } from "@/lib/router";
 import { useActiveProfile, useChildSettings, useDerived, useStore } from "@/lib/store";
@@ -41,6 +43,8 @@ interface Tile {
   dark: string;
   href: string;
   feature?: Feature;
+  /** The admin panel can switch this tile off for everyone (src/lib/flags.ts). */
+  flag?: FlagKey;
   badge?: string;
   done?: boolean;
 }
@@ -59,6 +63,7 @@ export function Hub() {
   const family = useStore((s) => s.family);
   const isStudent = Boolean(family.account?.student);
   const allowed = useAllowed();
+  const isOn = useIsOn();
   const [locked, setLocked] = useState(false);
   const now = useNow();
   const today = dayKey(now);
@@ -117,13 +122,14 @@ export function Hub() {
       dark: "#d68a00",
       href: "#/session?mode=daily&scope=mix",
       done: dailyDone,
+      flag: "daily-challenge",
     },
     { id: "practice", title: little ? "Lessons" : "Practice", desc: "Pick a subject and topic", icon: "📚", colour: "#4f8ef7", dark: "#2f6fd6", href: "#/practice" },
     { id: "trail", title: "Trail Map", desc: "See how far you've come", icon: "🧭", colour: "#f08a4b", dark: "#c46a2c", href: "#/map" },
     ...(little
       ? []
       : [
-          { id: "speed", title: "Speed Run", desc: "How many in 60 seconds?", icon: "⚡", colour: "#e9559a", dark: "#c43a7c", href: "#/speed", feature: "speed" as Feature },
+          { id: "speed", title: "Speed Run", desc: "How many in 60 seconds?", icon: "⚡", colour: "#e9559a", dark: "#c43a7c", href: "#/speed", feature: "speed" as Feature, flag: "speed-run" as FlagKey },
           {
             id: "review",
             title: "Review",
@@ -135,12 +141,13 @@ export function Hub() {
             feature: "review" as Feature,
           },
         ]),
-    { id: "arcade", title: little ? "Games" : "Arcade", desc: gameDesc, icon: "🕹️", colour: "#7c4fe0", dark: "#5d34c4", href: "#/arcade", feature: "arcade" },
-    { id: "stickers", title: "Sticker Book", desc: "Collect them all", icon: "📒", colour: "#e9559a", dark: "#c43a7c", href: "#/stickers" },
+    { id: "arcade", title: little ? "Games" : "Arcade", desc: gameDesc, icon: "🕹️", colour: "#7c4fe0", dark: "#5d34c4", href: "#/arcade", feature: "arcade", flag: "arcade" },
+    { id: "stickers", title: "Sticker Book", desc: "Collect them all", icon: "📒", colour: "#e9559a", dark: "#c43a7c", href: "#/stickers", flag: "sticker-book" },
     { id: "trophies", title: "Trophies", desc: `${Object.keys(d.trophies).length} earned · ${d.trophyPoints} pts`, icon: "🏆", colour: "#f0bd2a", dark: "#b88905", href: "#/trophies" },
-    { id: "room", title: "My Room", desc: "Decorate with your coins", icon: "🏠", colour: "#f08a4b", dark: "#c46a2c", href: "#/room" },
-    { id: "shop", title: "Shop", desc: `🪙 ${d.coins} to spend`, icon: "🛍️", colour: "#06b6d4", dark: "#0891b2", href: "#/shop" },
+    { id: "room", title: "My Room", desc: "Decorate with your coins", icon: "🏠", colour: "#f08a4b", dark: "#c46a2c", href: "#/room", flag: "my-room" },
+    { id: "shop", title: "Shop", desc: `🪙 ${d.coins} to spend`, icon: "🛍️", colour: "#06b6d4", dark: "#0891b2", href: "#/shop", flag: "shop" },
   ];
+  const shown = tiles.filter((t) => !t.flag || isOn(t.flag));
 
   const open = (t: { href: string; feature?: Feature }) => {
     if (t.feature && !canUse(family, t.feature)) setLocked(true);
@@ -188,7 +195,7 @@ export function Hub() {
       {!isStudent && <ParentNote />}
 
       <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
-        {tiles.map((t, i) => {
+        {shown.map((t, i) => {
           const isLocked = t.feature && !canUse(family, t.feature);
           return (
             <div key={t.id} className="animate-rise-in" style={{ animationDelay: `${80 + i * 60}ms` }}>
@@ -359,7 +366,7 @@ export function Hub() {
 
       {!isStudent && <InstallChip little={little} />}
 
-      <MooseVisitor />
+      {isOn("secrets") && <MooseVisitor />}
 
       <MembershipLock open={locked} onClose={() => setLocked(false)} />
     </Page>

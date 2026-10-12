@@ -1,6 +1,7 @@
 import { error, getSession, json, newId, rateLimited, sameOrigin } from "@/server/auth";
 import { assignmentDue, assignmentKeys, classProgress, classTeachers, isFramework, MAX_CLASSES, newJoinCode, ownedClass, pendingInvites, removeClassTeachers, teachingClass } from "@/server/classroom";
 import { query, run } from "@/server/db";
+import { isFlagOn } from "@/server/flags";
 import { classRoster, removeClassStudents } from "@/server/students";
 import { GRADE_ORDER } from "@/content/subjects";
 
@@ -44,6 +45,7 @@ export async function POST(req: Request) {
   const session = await getSession(req);
   if (!session) return error(401, "Sign in to create a class.");
   // Teachers see children's first names and results, so the account's email has to be confirmed first.
+  if (!(await isFlagOn("new-classes", session.familyId))) return error(503, "New classes can't be created just now. Please try again later.");
   if (!session.verified) return error(403, "Please confirm your email first. Classes show children's progress, so we only allow them for confirmed accounts.");
   if (await rateLimited(`class:${session.parentId}`, 20, 60 * 60_000)) return error(429, "Too many classes created. Try again later.");
   const body = (await req.json().catch(() => null)) as { name?: unknown; grade?: unknown; framework?: unknown } | null;

@@ -26,6 +26,7 @@ node scripts/e2e-devices.mjs http://localhost:3000                # layout on 14
 node scripts/e2e-offline.mjs                                      # real offline (starts its own server)
 node scripts/e2e-classroom.mjs http://localhost:3000              # teacher adds a student, who signs in with codes, opens a lesson and practises
 node scripts/e2e-a11y.mjs http://localhost:3000                   # axe-core WCAG 2.2 A/AA, plus colour-blind checks (screenshots in e2e-shots/a11y)
+node scripts/e2e-admin.mjs http://localhost:3000                  # admin panel (server needs ADMIN_EMAILS=admin-e2e@example.com): flags, codes, A/B tests, users, axe scan
 ```
 
 Before you push, run tests, lint and typecheck. For UI or flow changes, also run the e2e scripts.
@@ -82,7 +83,7 @@ Tests are duplicated across screen sizes only where layout can break:
   - All of this lives in `src/lib/plan.ts`; read the numbers from there.
 - **Payments:** Stripe Checkout and the Billing Portal, called over raw HTTPS with no SDK (`src/server/stripe.ts`).
   - Until Stripe keys are set, billing runs in a simulated dev mode (`ALLOW_DEV_BILLING=1` turns it on in production for staging).
-- **Redeem codes** (`src/server/codes.ts`, `docs/CODES.md`): the owner makes codes through `/api/admin/codes/` (on only when `ADMIN_TOKEN` is set) and a signed-in parent enters one under Subscription > "Have a code?".
+- **Redeem codes** (`src/server/codes.ts`, `docs/CODES.md`): the owner makes codes in the admin panel (or through `/api/admin/codes/` with `ADMIN_TOKEN` from scripts) and a signed-in parent enters one under Subscription > "Have a code?".
   - An access code gives free access for a number of days, or for life (`families.access_until`; lifetime is `LIFETIME_ACCESS` in `plan.ts`). It stacks on access already granted and is kept apart from `plan`, so a Stripe webhook never undoes it.
   - A discount code saves a percentage off for the next checkout (`families.discount_code`), sent to Stripe as a coupon made on first use; the paid checkout clears it.
   - Each family can use a code once; codes can have a use limit and an expiry date. Wrong, disabled, expired and used-up codes all get the same answer. Class student accounts can't redeem.
@@ -303,6 +304,13 @@ Tests are duplicated across screen sizes only where layout can break:
 - **"Is it working?" panel** on Reports (`src/lib/progressSince.ts`): units started and Proficient-or-higher now against 30, 90 or 180 days ago, and which units moved up a level. Computed from events and unit keys only.
 - **Weekly goal and notes:** a parent can set a weekly "days practised" goal per child and pick one of a fixed list of kind notes from a dropdown and send it (`NUDGE_PRESETS` in `src/lib/familyGoal.ts`). Both live in the child's synced settings; progress is computed from events. The note shows once on the child's home screen and expires after 3 days. No free text, no push to children.
 - **Strengths need real mastery:** at least 8 attempts and 75% accuracy.
+
+### Admin panel (`/admin/`)
+- **Full guide:** `docs/ADMIN.md`. An admin is an ordinary account whose confirmed email is in `ADMIN_EMAILS`; the list lives in the environment so no request can grant it. Without it, `/api/admin/*` answers 404. Every admin route goes through `requireAdmin` (`src/server/admin.ts`): 404 for non-admins, same-origin check on changes, and every change is written to `admin_audit`.
+- **Sections:** overview numbers, users (search, trial and access changes, confirm email, sign out everywhere, per-family flag overrides, delete), codes (on top of `/api/admin/codes/`), feature flags, A/B tests, question reports and the change log.
+- **Feature flags are defined in code** (`FLAGS` in `src/lib/flags.ts`); the database holds only their state, rollout and per-family overrides. When you add a feature that may need switching off, add a flag and read it with `useFlag`/`useIsOn` (kids' app, `src/lib/remoteFlags.ts`) or `isFlagOn` (server). Flags reach devices through `/api/flags/` and are cached for offline use.
+- **A/B tests** are created in the panel; code reads them with `useVariant` or `variantsFor`. Variants are fixed once a test starts. Results count signed-in families only.
+- **Privacy:** the panel never shows children's names or results, and leaves class student accounts out. Keep it that way, and keep `deleteFamilyData` (`src/server/deleteFamily.ts`) complete when adding tables keyed by family.
 
 ### Classroom mode (`/teachers/`)
 - **A teacher is an ordinary account** that creates classes (`classes`, `class_members`, `class_assignments`). No billing change: classes are free for now.

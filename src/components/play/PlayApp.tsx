@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
+import type { FlagKey } from "@/lib/flags";
+import { refreshFlags, useIsOn } from "@/lib/remoteFlags";
 import { ageBandFor } from "@/content/subjects";
 import type { FrameworkId, GradeId, SubjectId } from "@/content/types";
 import type { Mode } from "@/lib/model";
@@ -29,8 +31,14 @@ import { TrophyRoom } from "./Trophies";
 
 const MODES: Mode[] = ["practice", "adventure", "review", "speed", "daily", "challenge"];
 
+/** Screens the admin panel can switch off for everyone (src/lib/flags.ts). A switched-off screen shows the home screen. */
+const SCREEN_FLAGS: Record<string, FlagKey> = { stickers: "sticker-book", room: "my-room", speed: "speed-run", arcade: "arcade", shop: "shop" };
+
 function Screen() {
   const { path, query } = useRoute();
+  const isOn = useIsOn();
+  const flag = SCREEN_FLAGS[path[0]] ?? (path[0] === "session" && query.get("mode") === "daily" ? "daily-challenge" : path[0] === "session" && query.get("mode") === "speed" ? "speed-run" : undefined);
+  if (flag && !isOn(flag)) return <Hub />;
   switch (path[0]) {
     case "practice":
       return path[1] ? <UnitList key={path[1]} subject={path[1] as SubjectId} /> : <SubjectPicker />;
@@ -69,6 +77,18 @@ export function PlayApp() {
   const ready = useReady();
   const profiles = useProfiles();
   const active = useActiveProfile();
+  const familyId = useStore((s) => s.family.account?.familyId ?? "");
+  const isOn = useIsOn();
+
+  // Feature flags: on open, when the signed-in family changes and whenever the app comes back into view.
+  useEffect(() => {
+    void refreshFlags();
+    const onVisible = () => {
+      if (document.visibilityState === "visible") void refreshFlags();
+    };
+    document.addEventListener("visibilitychange", onVisible);
+    return () => document.removeEventListener("visibilitychange", onVisible);
+  }, [familyId]);
 
   useEffect(() => {
     // Keyed on `ready` so a hot-reloaded (reset) store in development loads again.
@@ -92,7 +112,7 @@ export function PlayApp() {
           <Screen />
         </div>
         <Toasts />
-        <SecretsListener />
+        {isOn("secrets") && <SecretsListener />}
       </BandProvider>
     </ContentGate>
   );

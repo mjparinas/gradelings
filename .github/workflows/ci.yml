@@ -15,6 +15,8 @@ permissions:
 
 env:
   NEXT_TELEMETRY_DISABLED: 1
+  # The admin account scripts/e2e-admin.mjs signs in with (docs/ADMIN.md).
+  ADMIN_EMAILS: admin-e2e@example.com
 
 # Everything below runs in parallel. The browser tests only wait for the build, not for the
 # quick static checks, so a slow lint never delays them. The last job, "CI passed", is the one
@@ -177,6 +179,7 @@ jobs:
           - { name: "sync and offline", serve: true, run: "node scripts/e2e.mjs http://localhost:3000 e2e-shots --part sync --offline" }
           - { name: "classroom", serve: true, run: "node scripts/e2e-classroom.mjs http://localhost:3000 e2e-shots/classroom" }
           - { name: "placement", serve: true, run: "node scripts/e2e-placement.mjs http://localhost:3000 e2e-shots/placement" }
+          - { name: "admin panel", serve: true, run: "node scripts/e2e-admin.mjs http://localhost:3000 e2e-shots/admin" }
           # Starts and stops its own server, so only the service worker can answer.
           - { name: "offline", serve: false, run: "node scripts/e2e-offline.mjs" }
     steps:
