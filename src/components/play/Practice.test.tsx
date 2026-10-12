@@ -28,6 +28,8 @@ const h = vi.hoisted(() => {
     /** Unit ids the plan opens. */
     open: new Set(["add", "sub", "time", "rhyme"]),
     assigned: [] as string[],
+    dailyDone: [] as string[],
+    off: new Set<string>(),
   };
 });
 
@@ -49,8 +51,10 @@ vi.mock("@/lib/store", () => ({
   useStore: (select: (s: unknown) => unknown) => select({ family: {} }),
   useActiveProfile: () => ({ id: "p1", name: "Ava", grade: "2", framework: "ca-bc", companion: "ollie" }),
   useChildSettings: () => h.settings,
-  useDerived: () => ({ units: h.units, speedBest: h.speedBest, level: 1 }),
+  useDerived: () => ({ units: h.units, speedBest: h.speedBest, level: 1, dailyDone: h.dailyDone }),
 }));
+vi.mock("@/lib/remoteFlags", () => ({ useIsOn: () => (key: string) => !h.off.has(key) }));
+vi.mock("@/lib/useNow", () => ({ useNow: () => new Date(2026, 9, 12, 9, 0).getTime() }));
 vi.mock("../Critter", () => ({
   Critter: () => null,
   SpeechBubble: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
@@ -73,6 +77,8 @@ beforeEach(() => {
   h.premium = true;
   h.open = new Set(["add", "sub", "time", "rhyme"]);
   h.assigned = [];
+  h.dailyDone = [];
+  h.off = new Set();
 });
 
 describe("SubjectPicker", () => {
@@ -91,6 +97,27 @@ describe("SubjectPicker", () => {
     inBand("little", <SubjectPicker />);
     expect(screen.getByRole("heading", { name: "Lessons" })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /Numbers/ })).toBeInTheDocument();
+  });
+
+  it("gives little kids the Daily Challenge here, since their home screen has no tile for it", () => {
+    const first = inBand("little", <SubjectPicker />);
+    const daily = screen.getByRole("link", { name: /Daily Challenge/ });
+    expect(daily).toHaveAttribute("href", "#/session");
+    expect(daily).not.toHaveTextContent("✓");
+    first.unmount();
+    h.dailyDone = ["2026-10-12"];
+    const second = inBand("little", <SubjectPicker />);
+    expect(screen.getByRole("link", { name: /Daily Challenge/ })).toHaveTextContent("✓");
+    second.unmount();
+    // Not for older kids, who have their own tile.
+    inBand("middle", <SubjectPicker />);
+    expect(screen.queryByRole("link", { name: /Daily Challenge/ })).not.toBeInTheDocument();
+  });
+
+  it("hides the little kids' Daily Challenge when the admin switched it off", () => {
+    h.off = new Set(["daily-challenge"]);
+    inBand("little", <SubjectPicker />);
+    expect(screen.queryByRole("link", { name: /Daily Challenge/ })).not.toBeInTheDocument();
   });
 });
 

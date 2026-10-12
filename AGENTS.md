@@ -219,6 +219,7 @@ Tests are duplicated across screen sizes only where layout can break:
     - Bigger buttons and text, read-aloud on by default.
     - No Speed Run or Review tile; they go straight into lessons.
     - The adaptive mode is called "Let's Play!" and the arcade "Games".
+    - **A calm home screen** (`Hub.tsx`): Let's Play plus three big picture tiles with one word each (Lessons, Games, Treasures) and no small print. Treasures (`#/treasures`, `Treasures.tsx`) holds Stickers, Trophies, My Room, Shop and Trail Map, and those screens' Back goes to it. The Daily Challenge sits on the Lessons screen. One short greeting line, one daily quest at a time (dots, no weekly list; all quests are still claimed), at most one suggestion card ("Almost there" first) and no XP numbers in the top bar. Don't add tiles or cards to their home screen; put new things behind Treasures or Lessons.
 
 ### Modes
 - **Adventure** is the headline mode and needs no topic picking.

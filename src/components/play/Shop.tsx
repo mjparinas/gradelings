@@ -8,7 +8,7 @@ import { sounds } from "@/lib/sound";
 import { useActiveProfile, useDerived, useStore } from "@/lib/store";
 import { Critter, CritterSvg } from "../Critter";
 import { Dialog, Page, ProgressBar } from "../ui";
-import { BackButton } from "./Practice";
+import { TreasureBack } from "./Treasures";
 
 const TABS: { kind: ItemKind; label: string; icon: string }[] = [
   { kind: "companion", label: "Buddies", icon: "🐾" },
@@ -42,7 +42,7 @@ export function Shop() {
     <Page className="gap-5">
       <header className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-3">
-          <BackButton />
+          <TreasureBack />
           <h1 className="text-3xl font-bold sm:text-4xl">🛍️ Shop</h1>
         </div>
         <span className="flex h-14 items-center gap-1 rounded-2xl bg-white px-4 text-2xl font-bold shadow-[0_4px_0_var(--color-line)]">🪙 {d.coins}</span>

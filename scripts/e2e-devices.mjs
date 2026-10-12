@@ -303,6 +303,18 @@ async function deepChecks(device, browser, descriptor, page) {
   await play.waitFor();
   const playPos = await onScreen(kpage, play);
   record(device, "Kindergarten hub: Let's Play above the fold", playPos.ok, playPos.detail);
+  // Little kids get three big picture tiles; the collections sit behind Treasures.
+  await noSideScroll(device, kpage, "Kindergarten hub");
+  const tiles = kpage.getByRole("button", { name: /^(🔒\s*)?(Lessons|Games|Treasures)$/ });
+  record(device, "Kindergarten hub: three tiles", (await tiles.count()) === 3, `${await tiles.count()} tiles`);
+  await checkTargets(device, "Kindergarten hub: tiles at least 64 px", tiles, 64);
+  await shot(kpage, device, "8-kindergarten-hub");
+  await kpage.getByRole("button", { name: /Treasures/ }).click();
+  await kpage.getByRole("heading", { name: /My Treasures/ }).waitFor();
+  await noSideScroll(device, kpage, "Treasures");
+  await checkTargets(device, "Treasures: tiles at least 64 px", kpage.getByRole("main").getByRole("link"), 64);
+  await kpage.getByRole("button", { name: "Back" }).click();
+  await play.waitFor();
   await play.click();
   await kpage.getByRole("button", { name: "Stop", exact: true }).waitFor();
   await kpage.waitForTimeout(400);
@@ -310,7 +322,7 @@ async function deepChecks(device, browser, descriptor, page) {
   record(device, "Kindergarten: prompt text at least 28 px", promptPx >= 28, `${promptPx} px`);
   await checkTargets(device, "Kindergarten: answer buttons at least 64 px", kpage.locator('[data-testid="choice"], [data-testid="sort-item"], [data-testid="bin"], [data-testid="pool-item"]'), 64);
   await noSideScroll(device, kpage, "Kindergarten question");
-  await shot(kpage, device, "8-kindergarten");
+  await shot(kpage, device, "8-kindergarten-question");
   await ctx.close();
 }
 

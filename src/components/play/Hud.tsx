@@ -4,6 +4,7 @@ import { getItem } from "@/lib/shop";
 import { useFlag } from "@/lib/remoteFlags";
 import { go } from "@/lib/router";
 import { useActiveProfile, useDerived, useStore } from "@/lib/store";
+import { useBand } from "../band";
 import { CritterSvg } from "../Critter";
 
 /** A level badge with an XP ring around it, like a console profile. */
@@ -42,6 +43,8 @@ export function Hud() {
   const profile = useActiveProfile()!;
   const d = useDerived();
   const setActive = useStore((s) => s.setActive);
+  // Little kids just see the level ring: "35/80 XP" means nothing to a pre-reader.
+  const little = useBand() === "little";
   const title = getItem(profile.title);
   const trophies = Object.keys(d.trophies).length;
   // A broken streak is never shown as 0: the flame sleeps and the total days practised stays, so progress is never lost.
@@ -82,11 +85,13 @@ export function Hud() {
       <div className="flex items-center gap-2">
         <span className="flex h-16 items-center gap-2 rounded-2xl bg-white pr-3 pl-1 shadow-[0_4px_0_var(--color-line)]" title={`${d.levelXp} / ${d.levelNeed} XP`}>
           <LevelBadge level={d.level} progress={d.levelXp / d.levelNeed} size={52} />
-          <span className="hidden text-sm leading-tight font-semibold text-ink-soft sm:block">
-            {d.levelXp}/{d.levelNeed}
-            <br />
-            XP
-          </span>
+          {!little && (
+            <span className="hidden text-sm leading-tight font-semibold text-ink-soft sm:block">
+              {d.levelXp}/{d.levelNeed}
+              <br />
+              XP
+            </span>
+          )}
         </span>
         {shopOn ? (
           <button type="button" className="btn h-16 gap-1 px-3 text-xl" onClick={() => go("/shop")} aria-label={`${d.coins} coins. Open the shop`}>
