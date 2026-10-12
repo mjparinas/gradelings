@@ -9,6 +9,7 @@ import { LIFETIME_ACCESS } from "@/lib/plan";
 const state = vi.hoisted(() => ({
   family: { plan: "trial", trialEndsAt: Date.now() + 5 * 86_400_000, updatedAt: 1 } as FamilyInfo,
   android: false,
+  ios: false,
   query: new URLSearchParams(),
 }));
 
@@ -18,7 +19,7 @@ vi.mock("@/lib/store", () => ({
 vi.mock("@/lib/router", () => ({
   useRoute: () => ({ path: ["subscription"], query: state.query }),
 }));
-vi.mock("@/lib/twa", () => ({ isAndroidApp: () => state.android }));
+vi.mock("@/lib/twa", () => ({ isStoreApp: () => state.android || state.ios, isIosApp: () => state.ios }));
 vi.mock("@/lib/account", () => ({
   refreshAccount: vi.fn(),
   startCheckout: vi.fn(),
@@ -36,6 +37,7 @@ const billing = { stripe: true, dev: false };
 describe("SubscriptionPage", () => {
   it("lets a parent subscribe without an account by creating one first", () => {
     state.android = false;
+    state.ios = false;
     state.family = { plan: "trial", trialEndsAt: Date.now() + 5 * 86_400_000, updatedAt: 1 };
     render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
     expect(screen.getByRole("heading", { name: "Subscribe" })).toBeInTheDocument();
@@ -46,6 +48,7 @@ describe("SubscriptionPage", () => {
 
   it("charges at checkout when the trial has less than two days left", () => {
     state.android = false;
+    state.ios = false;
     state.family = {
       plan: "trial",
       trialEndsAt: Date.now() + 86_400_000,
@@ -58,6 +61,7 @@ describe("SubscriptionPage", () => {
 
   it("offers yearly and monthly checkout during the trial once the email is confirmed", () => {
     state.android = false;
+    state.ios = false;
     state.family = {
       plan: "trial",
       trialEndsAt: Date.now() + 5 * 86_400_000,
@@ -82,6 +86,7 @@ describe("SubscriptionPage", () => {
 
   it("holds checkout until the email is confirmed", () => {
     state.android = false;
+    state.ios = false;
     state.family = {
       plan: "free",
       trialEndsAt: 0,
@@ -95,6 +100,7 @@ describe("SubscriptionPage", () => {
 
   it("shows a parent their invite link and what it has earned", async () => {
     state.android = false;
+    state.ios = false;
     state.family = {
       plan: "trial",
       trialEndsAt: Date.now() + 5 * 86_400_000,
@@ -110,6 +116,7 @@ describe("SubscriptionPage", () => {
 
   it("keeps the invite panel away from signed-out visitors", () => {
     state.android = false;
+    state.ios = false;
     state.family = { plan: "trial", trialEndsAt: Date.now() + 5 * 86_400_000, updatedAt: 1 };
     render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
     expect(screen.queryByRole("heading", { name: /free month/ })).not.toBeInTheDocument();
@@ -126,10 +133,12 @@ describe("SubscriptionPage", () => {
     render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
     await waitFor(() => expect(screen.getByLabelText("Your invite link")).toBeInTheDocument());
     state.android = false;
+    state.ios = false;
   });
 
   it("redeems a code and says what it gave", async () => {
     state.android = false;
+    state.ios = false;
     state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account: { email: "parent@example.com", familyId: "fam", verified: true } };
     vi.mocked(redeemCode).mockResolvedValueOnce({ kind: "discount", percentOff: 20 }).mockRejectedValueOnce(new Error("That code isn't valid. Check it and try again."));
     render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
@@ -146,6 +155,7 @@ describe("SubscriptionPage", () => {
 
   it("shows code access, a waiting discount, and hides the code box for lifetime access", () => {
     state.android = false;
+    state.ios = false;
     const account = { email: "parent@example.com", familyId: "fam", verified: true };
     state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account, accessUntil: Date.UTC(2027, 5, 1, 12) };
     const { unmount } = render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
@@ -172,6 +182,7 @@ describe("SubscriptionPage", () => {
     expect(screen.getByRole("heading", { name: "Have a code?" })).toBeInTheDocument();
     expect(screen.queryByRole("button", { name: /Subscribe yearly/ })).not.toBeInTheDocument();
     state.android = false;
+    state.ios = false;
   });
 });
 
@@ -179,6 +190,7 @@ describe("SubscriptionPage billing actions", () => {
   const account = { email: "parent@example.com", familyId: "fam", verified: true };
   beforeEach(() => {
     state.android = false;
+    state.ios = false;
     state.query = new URLSearchParams();
     vi.mocked(startCheckout).mockReset().mockResolvedValue(undefined);
     vi.mocked(devBilling).mockReset().mockResolvedValue(undefined);
@@ -272,6 +284,17 @@ describe("SubscriptionPage billing actions", () => {
     render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
     expect(screen.getByText(/Billing changes aren't made in this app/)).toBeInTheDocument();
     expect(document.body).not.toHaveTextContent(SITE_HOST);
+  });
+
+  it("shows the iOS app no prices, subscribe buttons or code box, and doesn't name the website", () => {
+    state.ios = true;
+    state.family = { plan: "trial", trialEndsAt: Date.now() + 5 * 86_400_000, updatedAt: 1, account };
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    expect(screen.getAllByText(/This app can't take a payment/).length).toBeGreaterThan(0);
+    expect(screen.queryByText("Have a code?")).not.toBeInTheDocument();
+    expect(document.body).not.toHaveTextContent("$");
+    expect(document.body).not.toHaveTextContent(SITE_HOST);
+    state.ios = false;
   });
 
   it("explains what a time-limited code covers, and that lifetime access needs nothing", () => {

@@ -7,6 +7,7 @@ const state = vi.hoisted(() => ({
   family: { plan: "trial", trialEndsAt: Date.now() + 3 * 86_400_000, updatedAt: 1 } as FamilyInfo,
   path: [""] as string[],
   android: false,
+  ios: false,
 }));
 
 vi.mock("@/lib/store", () => ({
@@ -16,7 +17,7 @@ vi.mock("@/lib/router", () => ({
   useRoute: () => ({ path: state.path, query: new URLSearchParams() }),
 }));
 vi.mock("@/lib/twa", () => ({
-  isAndroidApp: () => state.android,
+  isStoreApp: () => state.android || state.ios, isIosApp: () => state.ios,
 }));
 
 import { UpgradeBanner } from "./UpgradeBanner";
@@ -26,6 +27,7 @@ describe("UpgradeBanner", () => {
     state.family = { plan: "trial", trialEndsAt: Date.now() + 3 * 86_400_000, updatedAt: 1 };
     state.path = [""];
     state.android = false;
+    state.ios = false;
     render(<UpgradeBanner />);
     expect(screen.getByRole("heading", { name: "Subscribe before the trial ends" })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Create an account to subscribe" })).toHaveAttribute("href", "#/account?next=subscription");
@@ -35,6 +37,7 @@ describe("UpgradeBanner", () => {
     state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account: { email: "a@b.co", familyId: "f" } };
     state.path = [""];
     state.android = false;
+    state.ios = false;
     render(<UpgradeBanner />);
     expect(screen.getByRole("heading", { name: "Subscribe to unlock the full app" })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Subscribe" })).toHaveAttribute("href", "#/subscription");
@@ -43,6 +46,7 @@ describe("UpgradeBanner", () => {
   it("stays hidden once the family has paid and on the subscribe page", () => {
     state.family = { plan: "premium", trialEndsAt: 0, updatedAt: 1 };
     state.android = false;
+    state.ios = false;
     const { rerender, container } = render(<UpgradeBanner />);
     expect(container).toBeEmptyDOMElement();
 

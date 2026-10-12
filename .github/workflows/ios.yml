@@ -1,0 +1,127 @@
+name: iOS
+
+# Builds and tests the iPhone and iPad app (docs/IOS.md) on a Mac runner, and, when run by hand
+# with "Upload to TestFlight" ticked, signs it and uploads it to App Store Connect.
+#
+# The tests run only when something in ios/ changes, because Mac runners are slow and, on a
+# private repository, use minutes faster. The site changes the app without a new build.
+
+on:
+  pull_request:
+    paths: ["ios/**", ".github/workflows/ios.yml"]
+  push:
+    branches: [main]
+    paths: ["ios/**", ".github/workflows/ios.yml"]
+  workflow_dispatch:
+    inputs:
+      upload:
+        description: Sign and upload to TestFlight (needs the Apple secrets in docs/IOS.md)
+        type: boolean
+        default: false
+
+concurrency:
+  group: ios-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: iOS build and tests (iPhone and iPad)
+    runs-on: macos-15
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v7
+      - name: Generate the Xcode project
+        working-directory: ios
+        run: |
+          brew install xcodegen
+          xcodegen generate
+      - name: Pick an iPhone and an iPad simulator
+        id: sims
+        run: |
+          list=$(xcrun simctl list devices available -j)
+          pick() { echo "$list" | jq -r --arg p "$1" '[.devices | to_entries[] | select(.key | test("iOS")) | .value[] | select(.name | startswith($p))] | last | .udid'; }
+          iphone=$(pick "iPhone")
+          ipad=$(pick "iPad")
+          if [ -z "$iphone" ] || [ "$iphone" = null ] || [ -z "$ipad" ] || [ "$ipad" = null ]; then
+            echo "::error::No iPhone or iPad simulator on this runner"; xcrun simctl list devices available; exit 1
+          fi
+          echo "iphone=$iphone" >> "$GITHUB_OUTPUT"
+          echo "ipad=$ipad" >> "$GITHUB_OUTPUT"
+      - name: Test on iPhone and iPad
+        working-directory: ios
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project Gradelings.xcodeproj -scheme Gradelings \
+            -destination "id=${{ steps.sims.outputs.iphone }}" \
+            -destination "id=${{ steps.sims.outputs.ipad }}" \
+            CODE_SIGNING_ALLOWED=NO | tee "$RUNNER_TEMP/xcodebuild.log" | grep -E "error:|warning: .*\.swift|Test Case|Executed|\*\* TEST" || true
+          grep -q "\*\* TEST SUCCEEDED \*\*" "$RUNNER_TEMP/xcodebuild.log"
+      - name: Release build compiles
+        working-directory: ios
+        run: |
+          set -o pipefail
+          xcodebuild build -project Gradelings.xcodeproj -scheme Gradelings -configuration Release \
+            -destination "generic/platform=iOS" CODE_SIGNING_ALLOWED=NO | tail -5
+
+  testflight:
+    name: Upload to TestFlight
+    needs: test
+    if: github.event_name == 'workflow_dispatch' && inputs.upload
+    runs-on: macos-15
+    timeout-minutes: 40
+    env:
+      APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+      ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+      ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+      ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+    steps:
+      - name: Check the Apple secrets are set
+        run: |
+          missing=0
+          for v in APPLE_TEAM_ID ASC_KEY_ID ASC_ISSUER_ID ASC_KEY_P8; do
+            if [ -z "${!v}" ]; then echo "::error::Repository secret $v isn't set (see docs/IOS.md)"; missing=1; fi
+          done
+          exit $missing
+      - uses: actions/checkout@v7
+      - name: Generate the Xcode project
+        working-directory: ios
+        run: |
+          brew install xcodegen
+          xcodegen generate
+      - name: Write the App Store Connect key
+        run: |
+          umask 077
+          printf '%s\n' "$ASC_KEY_P8" > "$RUNNER_TEMP/AuthKey.p8"
+      - name: Archive
+        working-directory: ios
+        run: |
+          set -o pipefail
+          xcodebuild archive \
+            -project Gradelings.xcodeproj -scheme Gradelings -configuration Release \
+            -destination "generic/platform=iOS" \
+            -archivePath "$RUNNER_TEMP/Gradelings.xcarchive" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$RUNNER_TEMP/AuthKey.p8" \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID" \
+            DEVELOPMENT_TEAM="$APPLE_TEAM_ID" \
+            CURRENT_PROJECT_VERSION="${{ github.run_number }}" | tail -20
+      - name: Sign and upload to App Store Connect
+        working-directory: ios
+        run: |
+          set -o pipefail
+          xcodebuild -exportArchive \
+            -archivePath "$RUNNER_TEMP/Gradelings.xcarchive" \
+            -exportOptionsPlist ExportOptions.plist \
+            -exportPath "$RUNNER_TEMP/export" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$RUNNER_TEMP/AuthKey.p8" \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID" | tail -20
+      - name: Remove the key
+        if: always()
+        run: rm -f "$RUNNER_TEMP/AuthKey.p8"

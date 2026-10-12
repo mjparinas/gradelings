@@ -7,7 +7,7 @@ import { firstChargeAt, FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLif
 import { inviteLink } from "@/lib/referral";
 import { useRoute } from "@/lib/router";
 import { useStore } from "@/lib/store";
-import { isAndroidApp } from "@/lib/twa";
+import { isIosApp, isStoreApp } from "@/lib/twa";
 import { PageTitle, Panel } from "./common";
 
 const noSubscribe = () => () => {};
@@ -28,7 +28,9 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   // The server snapshot is false so the first render matches the static page.
-  const inAndroidApp = useSyncExternalStore(noSubscribe, isAndroidApp, () => false);
+  const inStoreApp = useSyncExternalStore(noSubscribe, isStoreApp, () => false);
+  // The App Store doesn't allow unlocking paid content with a code from outside Apple, so the iOS app has no "Have a code?" box.
+  const inIosApp = useSyncExternalStore(noSubscribe, isIosApp, () => false);
   const premium = isPremium(family);
   const paid = hasPaidPlan(family);
   const chargeAt = firstChargeAt(family.trialEndsAt, Boolean(family.subscription));
@@ -64,7 +66,7 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
         sub={
           paid
             ? "One family membership covers all your children."
-            : inAndroidApp
+            : inStoreApp
               ? "This app can't take a payment. A family membership shows up here once you sign in."
             : offer === "trial"
               ? `Free trial · ${trialDaysLeft(family)} ${trialDaysLeft(family) === 1 ? "day" : "days"} left. You can subscribe now, before it ends.`
@@ -107,7 +109,7 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
         </Panel>
 
         <Panel title={subscribed ? "Manage" : paid ? "Your membership" : "Choose a plan"}>
-          {inAndroidApp ? (
+          {inStoreApp ? (
             <p className="font-read">
               {paid ? (
                 "Billing changes aren't made in this app. Your membership stays active on every device you sign in to."
@@ -192,7 +194,7 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
           {error && <p className="mt-3 font-semibold text-nudge-dark">{error}</p>}
         </Panel>
         {family.account && !family.account.student && <ReferralPanel />}
-        {family.account && !lifetime && <RedeemPanel />}
+        {family.account && !lifetime && !inIosApp && <RedeemPanel />}
       </div>
     </>
   );

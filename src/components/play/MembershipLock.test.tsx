@@ -3,8 +3,8 @@ import { SITE_HOST } from "@/lib/brand";
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 
-const state = vi.hoisted(() => ({ android: false }));
-vi.mock("@/lib/twa", () => ({ isAndroidApp: () => state.android }));
+const state = vi.hoisted(() => ({ android: false, ios: false }));
+vi.mock("@/lib/twa", () => ({ isStoreApp: () => state.android || state.ios, isIosApp: () => state.ios }));
 vi.mock("./Companion", () => ({ Companion: () => <div /> }));
 
 import { MembershipLock } from "./MembershipLock";
@@ -23,5 +23,14 @@ describe("MembershipLock", () => {
     expect(screen.getByRole("dialog")).toHaveTextContent("Ask a grown-up about it.");
     expect(screen.getByRole("dialog")).not.toHaveTextContent(SITE_HOST);
     expect(screen.queryByRole("link", { name: "Grown-ups: subscribe" })).not.toBeInTheDocument();
+  });
+
+  it("asks for a grown-up in the iOS app too, with no payment link", () => {
+    state.android = false;
+    state.ios = true;
+    render(<MembershipLock open onClose={() => {}} />);
+    expect(screen.getByRole("dialog")).toHaveTextContent("Ask a grown-up about it.");
+    expect(screen.queryByRole("link", { name: "Grown-ups: subscribe" })).not.toBeInTheDocument();
+    state.ios = false;
   });
 });

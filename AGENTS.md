@@ -28,6 +28,7 @@ node scripts/e2e-classroom.mjs http://localhost:3000              # teacher adds
 node scripts/e2e-a11y.mjs http://localhost:3000                   # axe-core WCAG 2.2 A/AA, plus colour-blind checks (screenshots in e2e-shots/a11y)
 node scripts/e2e-keyboard.mjs http://localhost:3000               # keyboard-only run-through (skip link, focus rings, a session by keys, parent PIN and tabs) and Windows high contrast
 node scripts/e2e-admin.mjs http://localhost:3000                  # admin panel (server needs ADMIN_EMAILS=admin-e2e@example.com): to-do list, funnel, traffic, emails, inbox, automations, flags, codes, A/B tests, users and billing, CSV, system, maintenance mode, axe scan
+node scripts/ios-screenshots.mjs http://localhost:3000            # App Store screenshots, iPhone 6.9" and iPad 13" (docs/IOS.md)
 ```
 
 Before you push, run tests, lint and typecheck. For UI or flow changes, also run the e2e scripts.
@@ -36,6 +37,7 @@ Whenever you add a new feature, write a test for it in the same change. When ext
 
 - **Playwright** is a dev dependency, pinned. Install the browsers once with `npx playwright install chromium webkit` (on Linux add `npx playwright install-deps`).
 - **CI** (`.github/workflows/ci.yml`) runs types, lint, unit tests and the build in parallel, then the browser tests in parallel on separate machines (device layouts in three shards, accessibility, keyboard and high contrast, playthrough, offline). Require the "CI passed" job in branch protection.
+- **iOS** (`.github/workflows/ios.yml`): when `ios/` changes, a Mac runner builds the app and runs its Swift tests on an iPhone and an iPad simulator. Run it by hand to sign and upload to TestFlight (secrets in `docs/IOS.md`). There is no Mac here, so this workflow is the only Swift compiler check.
 - **Stale styles:** if a change to `globals.css` (`@theme`, `@custom-variant`) doesn't show up in a build, delete `.next` and rebuild.
 
 ### What the e2e scripts cover
@@ -75,7 +77,8 @@ Tests are duplicated across screen sizes only where layout can break:
   - making it as compelling as a good video game.
   - Research is in `docs/research/`.
 - **Name:** "Gradelings" is a working name. It is set once in `src/lib/brand.ts`; never hard-code it elsewhere. The name was chosen because it works across provinces and countries.
-- **Platform:** a web-first installable app (PWA) built with Next.js. Android is a Trusted Web Activity that wraps `/play/` (`android/`, `docs/ANDROID.md`), not Capacitor. Don't add features that only work in a native shell.
+- **Platform:** a web-first installable app (PWA) built with Next.js. Android is a Trusted Web Activity that wraps `/play/` (`android/`, `docs/ANDROID.md`), not Capacitor. iPhone and iPad share one universal app, a small native Swift shell around `WKWebView` (`ios/`, `docs/IOS.md`), also not Capacitor: it adds offline (app-bound domain), haptics, the share sheet, printing and downloads, and opens only `/play/`, `/parents/`, `/account/` and `/shared/` in the app. Don't add features that only work in a native shell.
+- **Store apps sell nothing:** inside the Android and iOS apps (`isStoreApp` in `src/lib/twa.ts`) there are no prices, payment buttons, subscribe prompts or mention of where to pay, and the iOS app has no redeem-code box (`isIosApp`). In-App Purchase isn't built (owner's decision, `docs/IOS.md`).
 
 ### Money
 - **No ads, ever. Never sell data.** Kids can never buy anything; coins are earned only by learning. The one exception is testing: a device signed in to an admin account shows unlimited coins (`TEST_COINS`, `docs/ADMIN.md`), never stored or synced.

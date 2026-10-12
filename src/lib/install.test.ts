@@ -107,6 +107,17 @@ describe("which install nudge to show", () => {
     expect(installKind()).toBe("bookmark");
   });
 
+  it("never asks inside the iOS app, which is already installed", () => {
+    as(`${IPHONE} AppleWebKit/605.1.15 Mobile/15E148 GradelingsApp-iOS/1.0.0`, 5);
+    sessionStorage.clear();
+    try {
+      expect(installKind()).toBeNull();
+      expect(installKind(true)).toBeNull();
+    } finally {
+      sessionStorage.clear();
+    }
+  });
+
   it("stays quiet on desktop Chromium, which offers its own install event", () => {
     as(WINDOWS, 0);
     Object.defineProperty(window, "onbeforeinstallprompt", { configurable: true, value: null });

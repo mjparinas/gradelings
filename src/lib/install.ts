@@ -1,5 +1,7 @@
 /** Helpers for the "Add to Home Screen" nudge shown in the parent area. */
 
+import { isIosApp } from "./twa";
+
 export const INSTALL_SNOOZE_DAYS = 30;
 export const KIDS_SNOOZE_DAYS = 7;
 const KEY = "grademap.install.dismissed";
@@ -76,7 +78,8 @@ export function snooze(now = Date.now(), key = KEY) {
 
 /** Which nudge to show right now, if any. */
 export function installKind(kids = false): InstallKind {
-  if (isStandalone()) return null;
+  // The iOS app is a web view, so it never reports standalone; it is already installed.
+  if (isStandalone() || isIosApp()) return null;
   if (kids ? isSnoozed(Date.now(), KIDS_KEY, KIDS_SNOOZE_DAYS) : isSnoozed()) return null;
   if (deferred) return "prompt";
   if (isIos()) return "ios";

@@ -4,19 +4,19 @@ import { useSyncExternalStore } from "react";
 import { firstChargeAt, FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, trialDaysLeft, upgradeOffer } from "@/lib/plan";
 import { useRoute } from "@/lib/router";
 import { useStore } from "@/lib/store";
-import { isAndroidApp } from "@/lib/twa";
+import { isStoreApp } from "@/lib/twa";
 
 const noSubscribe = () => () => {};
 
-/** A subscribe prompt on every parent screen except the subscribe page itself. None in the Android app. */
+/** A subscribe prompt on every parent screen except the subscribe page itself. None in the store apps. */
 export function UpgradeBanner() {
   const family = useStore((s) => s.family);
   const offer = upgradeOffer(family);
   const { path } = useRoute();
-  const inAndroidApp = useSyncExternalStore(noSubscribe, isAndroidApp, () => false);
+  const inStoreApp = useSyncExternalStore(noSubscribe, isStoreApp, () => false);
   if (!offer || path[0] === "subscription") return null;
-  // Google Play doesn't allow pointing to a payment outside the app, so the Android app shows no subscribe prompt.
-  if (inAndroidApp) return null;
+  // Google Play and the App Store don't allow pointing to a payment outside the app, so the store apps show no subscribe prompt.
+  if (inStoreApp) return null;
 
   const href = family.account ? "#/subscription" : "#/account?next=subscription";
   const days = trialDaysLeft(family);

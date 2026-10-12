@@ -9,7 +9,7 @@ import { useRoute } from "@/lib/router";
 import { useProfiles, useReady, useStore } from "@/lib/store";
 import { VoicePreload } from "@/components/VoicePreload";
 import { startBackgroundSync, syncNow } from "@/lib/sync";
-import { isAndroidApp } from "@/lib/twa";
+import { isStoreApp } from "@/lib/twa";
 import { ContentGate } from "../ContentGate";
 import { LoadingScreen } from "../ui";
 import { AccountPage } from "./Account";
@@ -64,7 +64,7 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
   const family = useStore((s) => s.family);
   const premium = isPremium(family);
   const paid = hasPaidPlan(family);
-  const inAndroidApp = useSyncExternalStore(noSubscribe, isAndroidApp, () => false);
+  const inStoreApp = useSyncExternalStore(noSubscribe, isStoreApp, () => false);
   const days = trialDaysLeft(family);
   return (
     <div className="min-h-dvh bg-[#f6f5f1]">
@@ -83,7 +83,7 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
             <SyncBadge />
             {paid ? (
               <span className="rounded-full bg-good-soft px-3 py-1 text-sm font-semibold text-good-dark">⭐ Premium</span>
-            ) : inAndroidApp ? null : (
+            ) : inStoreApp ? null : (
               <a href="#/subscription" className="inline-flex min-h-11 items-center rounded-full bg-[#25b47e] px-3 text-sm font-bold text-[#0f172a]">
                 {premium ? `Subscribe · ${days} ${days === 1 ? "day" : "days"} left` : "Subscribe"}
               </a>
@@ -93,7 +93,7 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
         <nav className="mx-auto max-w-6xl overflow-x-auto px-2" aria-label="Parent sections">
           <ul className="flex gap-1 pb-2">
             {NAV.map((n) => {
-              const subscribe = n.path === "subscription" && !paid && !inAndroidApp;
+              const subscribe = n.path === "subscription" && !paid && !inStoreApp;
               const label = subscribe ? "Subscribe" : n.label;
               return (
                 <li key={n.path}>

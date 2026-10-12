@@ -1,7 +1,8 @@
 "use client";
 
 // Light taps and buzzes on phones and tablets, through the Web Vibration API.
-// Android browsers support it. iOS and iPadOS Safari do not, so there it quietly does nothing.
+// Android browsers support it. iOS and iPadOS Safari do not, so there it quietly does nothing; the
+// iOS app adds navigator.vibrate and plays it as taps on the device (ios/Gradelings/NativeBridge.js).
 
 // The store says whether the active child has vibration on. It's injected rather than
 // imported so public pages don't load the store.
