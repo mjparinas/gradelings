@@ -6,7 +6,7 @@ import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { TeacherCta } from "@/components/site/TeacherCta";
 import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle } from "@/components/site/curriculum";
 import { TEACHER_FRAMEWORKS, teacherPath } from "@/components/site/teachers";
-import { GRADE_LABEL, getSubjectMeta, gradeSlug } from "@/content/subjects";
+import { GRADE_LABEL, getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { JsonLd } from "@/lib/site";
 
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const r = await find(params);
   if (!r) return {};
   const { framework: f, grade } = r;
-  const subjects = coursesFor(f, grade).map((c) => subjectSeoTitle(c.subject).toLowerCase());
+  const subjects = coursesFor(f, grade).map((c) => subjectInSentence(subjectSeoTitle(c.subject)));
   return {
     title: `${GRADE_LABEL[grade]} ${f.shortName} units to assign to your class`,
     description: `${GRADE_LABEL[grade]} ${f.curriculumName} units for teachers: ${subjects.join(", ")}. Assign them to your class in ${APP_NAME} and see each student's practice.`,

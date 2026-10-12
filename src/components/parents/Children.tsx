@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { AVAILABLE_GRADES } from "@/content";
 import { FRAMEWORKS, getFramework, type Framework } from "@/content/frameworks";
-import { getSubjectMeta, GRADE_LABEL, gradeForAge } from "@/content/subjects";
+import { getSubjectMeta, GRADE_LABEL, gradeForAge, subjectInSentence } from "@/content/subjects";
 import type { FrameworkId, GradeId } from "@/content/types";
 import type { Profile } from "@/lib/model";
 import { MAX_CHILDREN } from "@/lib/plan";
@@ -27,11 +27,13 @@ interface Draft {
 const thisYear = new Date().getFullYear();
 
 function listSubjects(f: Framework): string {
-  const names = f.subjects.map((s) => getSubjectMeta(s).title.big.toLowerCase());
+  const names = f.subjects.map((s) => subjectInSentence(getSubjectMeta(s).title.big));
   return names.length > 1 ? `${names.slice(0, -1).join(", ")} and ${names[names.length - 1]}` : names[0];
 }
 
-function ChildForm({ draft, onChange }: { draft: Draft; onChange: (d: Draft) => void }) {
+function ChildForm({ draft, onChange, isNew }: { draft: Draft; onChange: (d: Draft) => void; isNew: boolean }) {
+  // A new child's grade follows the birth year until the parent picks a grade themselves.
+  const [gradePicked, setGradePicked] = useState(false);
   const chosen = getFramework(draft.framework);
   const age = draft.birthYear ? thisYear - draft.birthYear : undefined;
   return (
@@ -49,7 +51,7 @@ function ChildForm({ draft, onChange }: { draft: Draft; onChange: (d: Draft) => 
             onChange={(next) => {
               const birthYear = next ? Number(next) : undefined;
               // Suggest a grade from age (a September birthday can shift it by one).
-              onChange({ ...draft, birthYear, grade: birthYear && !draft.name ? gradeForAge(thisYear - birthYear) : draft.grade });
+              onChange({ ...draft, birthYear, grade: birthYear && isNew && !gradePicked ? gradeForAge(thisYear - birthYear) : draft.grade });
             }}
             options={[
               { value: "", label: "Not set" },
@@ -62,7 +64,10 @@ function ChildForm({ draft, onChange }: { draft: Draft; onChange: (d: Draft) => 
           label="Grade"
           size="lg"
           value={draft.grade}
-          onChange={(next) => onChange({ ...draft, grade: next as GradeId })}
+          onChange={(next) => {
+            setGradePicked(true);
+            onChange({ ...draft, grade: next as GradeId });
+          }}
           options={AVAILABLE_GRADES.map((g) => ({ value: g, label: GRADE_LABEL[g] }))}
         />
       </div>
@@ -181,7 +186,7 @@ export function ChildrenPage() {
       <Dialog open={!!editing && !!draft} title={editing === "new" ? "Add a child" : "Edit child"} onClose={() => setEditing(null)}>
         {draft && (
           <div className="flex flex-col gap-4">
-            <ChildForm draft={draft} onChange={setDraft} />
+            <ChildForm key={editing === "new" ? "new" : editing?.id} draft={draft} onChange={setDraft} isNew={editing === "new"} />
             <button type="button" disabled={!draft.name.trim()} className="btn btn-good min-h-14 text-xl" onClick={save}>
               Save
             </button>

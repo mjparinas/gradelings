@@ -36,7 +36,7 @@ const flag = { key: "shop", label: "Shop", description: "The pretend coin shop."
 const family = {
   family: { id: "fam-1", createdAt: 1, plan: "trial", trialEndsAt: Date.now() + 86_400_000, accessUntil: null, discountCode: null, stripeCustomer: null, subscriptionStatus: null, subscriptionInterval: null, currentPeriodEnd: null },
   parents: [{ id: "p-1", email: "pat@example.com", createdAt: 1, verified: false, weeklyReport: false }],
-  children: [{ grade: "3", framework: "ca-on" }],
+  children: [{ grade: "3", framework: "ca-on" }, { grade: "5", framework: "zz-unknown" }, { grade: "1", framework: "" }],
   activity: { events: 10, lastActive: null },
   sessions: { active: 1, lastSignIn: null },
   classes: 0,
@@ -127,7 +127,8 @@ describe("AdminApp", () => {
     render(<AdminApp />);
     await user.click(await screen.findByRole("button", { name: "Users" }));
     await user.click(await screen.findByRole("button", { name: "pat@example.com" }));
-    expect(await screen.findByText(/Grade 3 \(Ontario\)/)).toBeInTheDocument();
+    // An unknown province is shown as saved, not as the default; no province means the default.
+    expect(await screen.findByText("Grade 3 (Ontario), Grade 5 (zz-unknown), Grade 1 (British Columbia)")).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Give lifetime access" }));
     expect(sent("/api/admin/users/", "POST")).toEqual({ familyId: "fam-1", action: "grant-access", days: null });
     expect(await screen.findByText("Lifetime access given.")).toBeInTheDocument();

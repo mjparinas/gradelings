@@ -80,6 +80,24 @@ describe("ChildrenPage", () => {
     expect(screen.getByText(`${GRADE_LABEL[ben.grade]} · Ontario · about 8 years old`)).toBeInTheDocument();
   });
 
+  it("suggests the grade from the birth year even when the name was typed first", async () => {
+    render(<ChildrenPage />);
+    await userEvent.click(screen.getByRole("button", { name: "+ Add a child" }));
+    fireEvent.change(screen.getByRole("textbox"), { target: { value: "Mo" } });
+    await pick("Birth year", String(thisYear - 9));
+    expect(screen.getByRole("combobox", { name: "Grade" })).toHaveTextContent(GRADE_LABEL[gradeForAge(9)]);
+    await userEvent.click(screen.getByRole("button", { name: "Save" }));
+    expect(live()[0]).toMatchObject({ name: "Mo", grade: gradeForAge(9) });
+  });
+
+  it("keeps a grade the parent picked when the birth year changes afterwards", async () => {
+    render(<ChildrenPage />);
+    await userEvent.click(screen.getByRole("button", { name: "+ Add a child" }));
+    await pick("Grade", "Grade 4");
+    await pick("Birth year", String(thisYear - 6));
+    expect(screen.getByRole("combobox", { name: "Grade" })).toHaveTextContent("Grade 4");
+  });
+
   it("lets the parent override the suggested grade", async () => {
     render(<ChildrenPage />);
     await userEvent.click(screen.getByRole("button", { name: "+ Add a child" }));

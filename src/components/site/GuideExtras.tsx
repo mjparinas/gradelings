@@ -102,7 +102,8 @@ export async function assessmentMetadata(params: Params): Promise<Metadata> {
   if (!r) return {};
   const a = guidesFor(r.framework.id).assessment;
   return {
-    title: `The ${a.short} explained: ${a.name} for Grade ${a.grades.join(" and Grade ")} parents`,
+    // Some provinces and territories list no fixed assessment grades.
+    title: `The ${a.short} explained: ${a.name} for ${a.grades.length ? `Grade ${a.grades.join(" and Grade ")}` : r.framework.shortName} parents`,
     description: `What the ${a.name} is, who takes it, what it covers, how results are described, and how to help your child feel ready. A plain-language guide for ${r.framework.shortName} parents.`,
     alternates: { canonical: guidePath.assessment(r.framework) },
   };
@@ -150,18 +151,28 @@ export async function AssessmentView({ params }: { params: Params }) {
             <li key={t}>{t}</li>
           ))}
         </ul>
-        <p className="mt-3 font-read text-lg">
-          Practise the grade-level skills with {APP_NAME}:
-          {a.grades.map((g, i) => (
-            <span key={g}>
-              {i === 0 ? " " : " and "}
-              <Link href={curriculumPath.grade(f, g)} className="font-semibold text-[#2f6fd6] underline">
-                {GRADE_LABEL[g]}
-              </Link>
-            </span>
-          ))}
-          .
-        </p>
+        {a.grades.length > 0 ? (
+          <p className="mt-3 font-read text-lg">
+            Practise the grade-level skills with {APP_NAME}:
+            {a.grades.map((g, i) => (
+              <span key={g}>
+                {i === 0 ? " " : " and "}
+                <Link href={curriculumPath.grade(f, g)} className="font-semibold text-[#2f6fd6] underline">
+                  {GRADE_LABEL[g]}
+                </Link>
+              </span>
+            ))}
+            .
+          </p>
+        ) : (
+          <p className="mt-3 font-read text-lg">
+            Practise the grade-level skills with {APP_NAME}:{" "}
+            <Link href={curriculumPath.framework(f)} className="font-semibold text-[#2f6fd6] underline">
+              every grade in the {f.curriculumName}
+            </Link>
+            .
+          </p>
+        )}
       </section>
 
       <section aria-labelledby="faq" className="mt-10 max-w-3xl">

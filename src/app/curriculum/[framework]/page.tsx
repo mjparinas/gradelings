@@ -5,7 +5,7 @@ import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, subjectTitle } from "@/components/site/curriculum";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { GUIDES } from "@/content/guides";
-import { GRADE_LABEL, getSubjectMeta } from "@/content/subjects";
+import { GRADE_LABEL, getSubjectMeta, subjectInSentence } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 
 export const dynamicParams = false;
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps<"/curriculum/[frame
   const f = r.framework;
   return {
     title: `${f.curriculumName} practice, Kindergarten to ${GRADE_LABEL[f.grades[f.grades.length - 1]]}`,
-    description: `Kid-friendly practice for the ${f.curriculumName} (${f.name}): ${f.subjects.map((s) => subjectSeoTitle(s).toLowerCase()).join(", ")} from Kindergarten to ${GRADE_LABEL[f.grades[f.grades.length - 1]]}, with sample questions for every unit.`,
+    description: `Kid-friendly practice for the ${f.curriculumName} (${f.name}): ${f.subjects.map((s) => subjectInSentence(subjectSeoTitle(s))).join(", ")} from Kindergarten to ${GRADE_LABEL[f.grades[f.grades.length - 1]]}, with sample questions for every unit.`,
     alternates: { canonical: curriculumPath.framework(f) },
   };
 }

@@ -9,7 +9,7 @@ import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle
 import { guidePath } from "@/components/site/guides";
 import { hashSeed, withSeed } from "@/content/random";
 import { GUIDE_FRAMEWORKS } from "@/content/guides";
-import { GRADE_LABEL, getSubjectMeta, gradeSlug } from "@/content/subjects";
+import { GRADE_LABEL, getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
 import type { Course, Question } from "@/content/types";
 import { APP_NAME } from "@/lib/brand";
 import { JsonLd, absolute } from "@/lib/site";
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const name = subjectSeoTitle(course.subject);
   return {
     title: `Free printable ${GRADE_LABEL[grade]} ${name} practice sheet (${f.shortName})`,
-    description: `A free ${GRADE_LABEL[grade]} ${name.toLowerCase()} practice sheet with an answer key, matched to the ${f.curriculumName}. Print it or work through it on screen.`,
+    description: `A free ${GRADE_LABEL[grade]} ${subjectInSentence(name)} practice sheet with an answer key, matched to the ${f.curriculumName}. Print it or work through it on screen.`,
     alternates: { canonical: guidePath.worksheet(f, grade, course.subject) },
   };
 }
@@ -81,7 +81,7 @@ export default async function WorksheetPage({ params }: Props) {
             "@context": "https://schema.org",
             "@type": "LearningResource",
             name: `${label} ${name} practice sheet (${f.shortName})`,
-            description: `Free ${label} ${name.toLowerCase()} practice questions with an answer key, matched to the ${f.curriculumName}.`,
+            description: `Free ${label} ${subjectInSentence(name)} practice questions with an answer key, matched to the ${f.curriculumName}.`,
             url: absolute(path),
             inLanguage: "en-CA",
             learningResourceType: "Worksheet",
@@ -136,7 +136,7 @@ export default async function WorksheetPage({ params }: Props) {
           <p className="font-read text-ink-soft">
             In {APP_NAME} the questions change every time and adjust to your child, with hints and kind feedback.{" "}
             <Link href={curriculumPath.subject(f, grade, course.subject)} className="font-semibold text-[#2f6fd6] underline">
-              See all {name.toLowerCase()} units
+              See all {subjectInSentence(name)} units
             </Link>
             .
           </p>

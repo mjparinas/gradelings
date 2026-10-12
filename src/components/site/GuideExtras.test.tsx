@@ -50,9 +50,14 @@ describe("provincial assessment guide", () => {
     expect(facts).toHaveTextContent(`Your school and ${a.source} have the current information.`);
     const prepare = screen.getByRole("region", { name: "How to help your child feel ready" });
     for (const t of a.prepare) expect(within(prepare).getByText(t)).toBeInTheDocument();
-    // Each grade that writes it links to that grade's units in this province.
-    expect(within(prepare).queryAllByRole("link").map((l) => l.textContent)).toEqual(a.grades.map((g) => GRADE_LABEL[g]));
-    for (const g of a.grades) expect(within(prepare).getByRole("link", { name: GRADE_LABEL[g] })).toHaveAttribute("href", `/curriculum/${f.slug}/${gradeSlug(g)}/`);
+    // Each grade that writes it links to that grade's units in this province; with no fixed grades, the whole curriculum.
+    if (a.grades.length) {
+      expect(within(prepare).queryAllByRole("link").map((l) => l.textContent)).toEqual(a.grades.map((g) => GRADE_LABEL[g]));
+      for (const g of a.grades) expect(within(prepare).getByRole("link", { name: GRADE_LABEL[g] })).toHaveAttribute("href", `/curriculum/${f.slug}/${gradeSlug(g)}/`);
+    } else {
+      expect(within(prepare).getByRole("link", { name: `every grade in the ${f.curriculumName}` })).toHaveAttribute("href", `/curriculum/${f.slug}/`);
+    }
+    expect(prepare.textContent).not.toMatch(/:\s*\./);
     for (const q of a.faqs) expect(screen.getByRole("button", { name: q.q })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: guidesFor(id).competencies.label })).toHaveAttribute("href", `/guides/${f.slug}/${guidesFor(id).competencies.slug}/`);
   });
@@ -62,6 +67,13 @@ describe("provincial assessment guide", () => {
     expect(meta.title).toBe(`The FSA explained: ${guidesFor("ca-bc").assessment.name} for Grade 4 and Grade 7 parents`);
     expect(meta.alternates?.canonical).toBe("/guides/bc/fsa/");
     expect(meta.description).toContain("BC parents");
+  });
+
+  it("names the territory instead of a grade where no grades are fixed", async () => {
+    expect(guidesFor("ca-nu").assessment.grades).toEqual([]);
+    const meta = await assessmentMetadata(params("nunavut"));
+    expect(meta.title).toBe(`The ${guidesFor("ca-nu").assessment.short} explained: ${guidesFor("ca-nu").assessment.name} for Nunavut parents`);
+    expect(meta.title).not.toMatch(/Grade\s+parents/);
   });
 
   it("404s an unknown province on both pages", async () => {

@@ -6,7 +6,7 @@ import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome
 import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle } from "@/components/site/curriculum";
 import { guidePath } from "@/components/site/guides";
 import { guidesFor, GUIDE_FRAMEWORKS } from "@/content/guides";
-import { GRADE_LABEL, getSubjectMeta, gradeSlug } from "@/content/subjects";
+import { GRADE_LABEL, getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { TRIAL_DAYS } from "@/lib/plan";
 import { Disclosure } from "@/components/Disclosure";
@@ -22,7 +22,7 @@ type Props = PageProps<"/guides/[framework]/[grade]">;
 
 /** "math, English language arts and science" */
 function listOf(names: string[]): string {
-  const n = names.map((s) => (s.startsWith("English") ? s : s.toLowerCase()));
+  const n = names.map(subjectInSentence);
   return n.length > 1 ? `${n.slice(0, -1).join(", ")} and ${n[n.length - 1]}` : n.join("");
 }
 
@@ -57,7 +57,7 @@ export default async function GradeGuide({ params }: Props) {
   const faqs = [
     {
       q: `What do kids learn in ${label} in ${f.name}?`,
-      a: `${label} covers ${courses.map((c) => subjectSeoTitle(c.subject).toLowerCase()).join(", ")} in the ${f.curriculumName}. ${note.overview}`,
+      a: `${label} covers ${courses.map((c) => subjectInSentence(subjectSeoTitle(c.subject))).join(", ")} in the ${f.curriculumName}. ${note.overview}`,
     },
     {
       q: `How is ${label} reported in ${f.shortName}?`,
@@ -116,7 +116,7 @@ export default async function GradeGuide({ params }: Props) {
                     </>
                   )}
                   <p className="font-read text-ink-soft">
-                    {c.units.length} units, including {c.units.slice(0, 4).map((u) => u.title.toLowerCase()).join(", ")}.
+                    {c.units.length} units, including {c.units.slice(0, 4).map((u) => u.title).join(", ")}.
                   </p>
                   <div className="flex flex-wrap gap-x-4 gap-y-1 font-semibold">
                     <Link href={guidePath.subject(f, grade, c.subject)} className="text-[#2f6fd6] underline">
@@ -160,7 +160,7 @@ export default async function GradeGuide({ params }: Props) {
         <p className="mt-2 font-read text-lg">
           {guidesFor(f.id).competencies.gradeLine}{" "}
           <Link href={guidePath.competencies(f)} className="font-semibold text-[#2f6fd6] underline">
-            Read about {guidesFor(f.id).competencies.label.toLowerCase()}
+            Read about {guidesFor(f.id).competencies.label}
           </Link>
           .
         </p>
@@ -177,7 +177,7 @@ export default async function GradeGuide({ params }: Props) {
           <ul className="mt-2 flex list-disc flex-col gap-1 pl-5 font-read text-lg">
             {prevCourses.map((c) => (
               <li key={c.subject}>
-                <b>{subjectSeoTitle(c.subject)}:</b> {c.units.slice(0, 5).map((u) => u.title.toLowerCase()).join(", ")}
+                <b>{subjectSeoTitle(c.subject)}:</b> {c.units.slice(0, 5).map((u) => u.title).join(", ")}
               </li>
             ))}
           </ul>

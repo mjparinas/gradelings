@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useState, type FormEvent, type ReactNode } from "react";
-import { getFramework } from "@/content/frameworks";
+import { FRAMEWORKS, getFramework } from "@/content/frameworks";
 import { GRADE_LABEL } from "@/content/subjects";
-import type { FrameworkId, GradeId } from "@/content/types";
+import type { GradeId } from "@/content/types";
 import { DateField } from "@/components/DateField";
 import { SelectMenu } from "@/components/SelectMenu";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
@@ -29,6 +29,12 @@ const when = (t: number) => new Date(t).toLocaleString("en-CA", { year: "numeric
 const accessText = (t: number | null) => (!t ? "—" : t > Date.now() + 50 * 365 * 86_400_000 ? "Lifetime" : t < Date.now() ? `Ended ${day(t)}` : `Until ${day(t)}`);
 const pct = (n: number, d: number) => (d ? `${Math.round((n / d) * 1000) / 10}%` : "—");
 const endOfDay = (v: string) => new Date(`${v}T23:59:00`).getTime();
+
+/** A child's province as saved: no province means the default one, an unknown id is shown as it is (not as the default). */
+function regionName(framework: string): string {
+  if (!framework) return getFramework().region;
+  return FRAMEWORKS.find((f) => f.id === framework)?.region ?? framework;
+}
 
 function Notice({ err, ok }: { err?: string; ok?: string }) {
   if (err)
@@ -279,7 +285,7 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
         </dl>
         <h3 className="mt-4 font-bold">Children</h3>
         <p className="font-read">
-          {d.children.length === 0 ? "None yet." : d.children.map((c) => `${GRADE_LABEL[c.grade as GradeId] ?? c.grade} (${getFramework(c.framework as FrameworkId)?.region ?? c.framework})`).join(", ")}
+          {d.children.length === 0 ? "None yet." : d.children.map((c) => `${GRADE_LABEL[c.grade as GradeId] ?? c.grade} (${regionName(c.framework)})`).join(", ")}
         </p>
         <p className="text-sm text-ink-soft">Names and results stay private to the family.</p>
         {d.redemptions.length > 0 && (

@@ -178,7 +178,7 @@ const toInput = (t: number) => {
 };
 
 /** Add students by first name, share each one's login code, and print the cards. */
-function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url: string, method: string, body?: unknown) => Promise<void>; onPrint: () => void }) {
+function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url: string, method: string, body?: unknown) => Promise<boolean>; onPrint: () => void }) {
   const [names, setNames] = useState("");
   const [busy, setBusy] = useState(false);
   const [removing, setRemoving] = useState<RosterEntry | null>(null);
@@ -216,8 +216,8 @@ function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url
         onSubmit={async (e) => {
           e.preventDefault();
           setBusy(true);
-          await onChange("/api/classes/students/", "POST", { classId: cls.id, names: names.split(/\n|,/).map((n) => n.trim()).filter(Boolean) });
-          setNames("");
+          // Keep the typed names when adding them failed, so nothing has to be retyped.
+          if (await onChange("/api/classes/students/", "POST", { classId: cls.id, names: names.split(/\n|,/).map((n) => n.trim()).filter(Boolean) })) setNames("");
           setBusy(false);
         }}
       >
@@ -268,7 +268,7 @@ function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url
 }
 
 /** The people who teach this class. The owner invites and removes co-teachers; a co-teacher can leave. */
-function Team({ data, onChange, onLeft }: { data: ClassDetail; onChange: (url: string, method: string, body?: unknown) => Promise<void>; onLeft: () => void }) {
+function Team({ data, onChange, onLeave }: { data: ClassDetail; onChange: (url: string, method: string, body?: unknown) => Promise<boolean>; onLeave: (url: string) => void }) {
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
   const isOwner = (data.role ?? "owner") === "owner";
@@ -312,7 +312,7 @@ function Team({ data, onChange, onLeft }: { data: ClassDetail; onChange: (url: s
           className="mt-3 flex flex-wrap items-end gap-3"
           onSubmit={async (e) => {
             e.preventDefault();
-            await onChange("/api/classes/teachers/", "POST", { classId: id, email });
+            if (!(await onChange("/api/classes/teachers/", "POST", { classId: id, email }))) return;
             setEmail("");
             setSent(true);
           }}
@@ -325,7 +325,7 @@ function Team({ data, onChange, onLeft }: { data: ClassDetail; onChange: (url: s
           {sent && <p role="status" className="basis-full text-sm text-ink-soft">Invitation sent. If that email belongs to a confirmed account, they’ll see it on their teacher page for 14 days.</p>}
         </form>
       ) : (
-        <button type="button" className={`${btn} mt-3 border border-line`} onClick={() => void onChange(`/api/classes/teachers/?classId=${id}&leave=1`, "DELETE").then(onLeft)}>
+        <button type="button" className={`${btn} mt-3 border border-line`} onClick={() => onLeave(`/api/classes/teachers/?classId=${id}&leave=1`)}>
           Leave this class
         </button>
       )}
@@ -527,11 +527,24 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
   const label = (key: string) => getUnitRef(key)?.unit.title ?? key;
   const levelLabel = (level: number) => (level < 0 ? "Not started" : levelInfo(cls.framework, cls.grade, level)?.label ?? "");
 
-  const change = async (url: string, method: string, body?: unknown) => {
+  /** Sends a change and reloads the class. Resolves false (with the error shown) when the change failed. */
+  const change = async (url: string, method: string, body?: unknown): Promise<boolean> => {
     setErr("");
     try {
       await call(url, method, body);
-      await load();
+    } catch (e) {
+      setErr((e as Error).message);
+      return false;
+    }
+    await load().catch(() => undefined);
+    return true;
+  };
+  /** Closing or leaving: nothing left to reload, so only go back once the server agreed. */
+  const leave = async (url: string) => {
+    setErr("");
+    try {
+      await call(url, "DELETE");
+      onBack();
     } catch (e) {
       setErr((e as Error).message);
     }
@@ -568,7 +581,7 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
       </section>
 
       <Roster data={data} onChange={change} onPrint={() => setPrintMode("cards")} />
-      <Team data={data} onChange={change} onLeft={onBack} />
+      <Team data={data} onChange={change} onLeave={leave} />
 
       <section className="mt-4 rounded-2xl border border-line bg-white p-5">
         <h2 className="text-xl font-bold">Assigned units</h2>
@@ -682,7 +695,7 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
         <h2 className="text-xl font-bold">Close this class</h2>
         <p className="mt-1 font-read text-ink-soft">Closing removes every link to students and all co-teachers straight away, and deletes the student accounts you added. Families keep their own data.</p>
         {confirmClose ? (
-          <button type="button" className={`${btn} mt-3 border border-[#e57a12] text-nudge-dark`} onClick={() => change(`/api/classes/?id=${id}`, "DELETE").then(onBack)}>
+          <button type="button" className={`${btn} mt-3 border border-[#e57a12] text-nudge-dark`} onClick={() => void leave(`/api/classes/?id=${id}`)}>
             Yes, close {cls.name}
           </button>
         ) : (
