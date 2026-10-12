@@ -85,6 +85,72 @@ describe("admin dashboard", () => {
     expect(await screen.findByText("Checked 7 paid invoices; 3 belong to families here.")).toBeInTheDocument();
   });
 
+  it("opens the list behind a tile in a window that Escape closes, and links emails to the family", async () => {
+    const detail = {
+      title: "Paying families",
+      intro: "Every paying family.",
+      summary: [{ label: "Recurring a month", value: 1499, kind: "money" }],
+      tables: [
+        {
+          columns: [
+            { label: "Account", kind: "account" },
+            { label: "Renews", kind: "date" },
+            { label: "Past due", kind: "yesno" },
+          ],
+          rows: [{ familyId: "fam-1", cells: ["payer@example.com", Date.UTC(2026, 6, 1), false] }],
+          total: 250,
+        },
+      ],
+    };
+    mocks.call.mockImplementation((url: string) => Promise.resolve(url.startsWith("/api/admin/stats/detail/") ? detail : data()));
+    const onOpenFamily = vi.fn();
+    const user = userEvent.setup();
+    render(<Dashboard onOpenFamily={onOpenFamily} />);
+    await screen.findByRole("heading", { name: "Revenue and profit" });
+    const opener = within(tile("Paying")).getByRole("button");
+    await user.click(opener);
+    const dialog = await screen.findByRole("dialog", { name: "Paying families" });
+    expect(mocks.call).toHaveBeenCalledWith("/api/admin/stats/detail/?view=paying");
+    expect(within(dialog).getByRole("button", { name: "Close" })).toHaveFocus();
+    expect(within(dialog).getByText("$14.99")).toBeInTheDocument();
+    expect(within(dialog).getByText("Jul 1, 2026")).toBeInTheDocument();
+    expect(within(dialog).getByText("No")).toBeInTheDocument();
+    expect(within(dialog).getByText(/Showing the first 1 of 250/)).toBeInTheDocument();
+
+    await user.keyboard("{Escape}");
+    expect(screen.queryByRole("dialog")).toBeNull();
+    expect(opener).toHaveFocus();
+
+    await user.click(opener);
+    await user.click(await screen.findByRole("button", { name: "payer@example.com" }));
+    expect(onOpenFamily).toHaveBeenCalledWith("fam-1");
+    expect(screen.queryByRole("dialog")).toBeNull();
+  });
+
+  it("breaks profit down by month without asking the server", async () => {
+    mocks.call.mockResolvedValue(data());
+    const user = userEvent.setup();
+    render(<Dashboard />);
+    await screen.findByRole("heading", { name: "Revenue and profit" });
+    mocks.call.mockClear();
+    await user.click(within(tile("Profit this month")).getByRole("button"));
+    const dialog = screen.getByRole("dialog", { name: "Profit by month" });
+    expect(within(dialog).getAllByRole("row")).toHaveLength(13);
+    expect(within(dialog).getByText("Projected profit")).toBeInTheDocument();
+    expect(mocks.call).not.toHaveBeenCalled();
+    await user.click(within(dialog).getByRole("button", { name: "Close" }));
+    expect(screen.queryByRole("dialog")).toBeNull();
+  });
+
+  it("says so when a list can't load", async () => {
+    mocks.call.mockImplementation((url: string) => (url.startsWith("/api/admin/stats/detail/") ? Promise.reject(new Error("Not allowed")) : Promise.resolve(data())));
+    const user = userEvent.setup();
+    render(<Dashboard />);
+    await screen.findByRole("heading", { name: "Revenue and profit" });
+    await user.click(within(tile("Children")).getByRole("button"));
+    expect(await within(screen.getByRole("dialog")).findByRole("alert")).toHaveTextContent("Not allowed");
+  });
+
   it("shows an error when the numbers can't load", async () => {
     mocks.call.mockImplementation(() => Promise.reject(new Error("Stats unavailable")));
     render(<Dashboard />);

@@ -1,21 +1,22 @@
 // @vitest-environment jsdom
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
-import { describe, expect, it, vi } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import { SITE_HOST } from "@/lib/brand";
 import type { FamilyInfo } from "@/lib/model";
-import { redeemCode } from "@/lib/account";
+import { devBilling, loadReferral, openBillingPortal, redeemCode, refreshAccount, resendVerification, startCheckout } from "@/lib/account";
 import { LIFETIME_ACCESS } from "@/lib/plan";
 
 const state = vi.hoisted(() => ({
   family: { plan: "trial", trialEndsAt: Date.now() + 5 * 86_400_000, updatedAt: 1 } as FamilyInfo,
   android: false,
+  query: new URLSearchParams(),
 }));
 
 vi.mock("@/lib/store", () => ({
   useStore: (sel: (s: { family: FamilyInfo }) => unknown) => sel({ family: state.family }),
 }));
 vi.mock("@/lib/router", () => ({
-  useRoute: () => ({ path: ["subscription"], query: new URLSearchParams() }),
+  useRoute: () => ({ path: ["subscription"], query: state.query }),
 }));
 vi.mock("@/lib/twa", () => ({ isAndroidApp: () => state.android }));
 vi.mock("@/lib/account", () => ({
@@ -158,5 +159,153 @@ describe("SubscriptionPage", () => {
     expect(screen.getByRole("heading", { name: "Have a code?" })).toBeInTheDocument();
     expect(screen.queryByRole("button", { name: /Subscribe yearly/ })).not.toBeInTheDocument();
     state.android = false;
+  });
+});
+
+describe("SubscriptionPage billing actions", () => {
+  const account = { email: "parent@example.com", familyId: "fam", verified: true };
+  beforeEach(() => {
+    state.android = false;
+    state.query = new URLSearchParams();
+    vi.mocked(startCheckout).mockReset().mockResolvedValue(undefined);
+    vi.mocked(devBilling).mockReset().mockResolvedValue(undefined);
+    vi.mocked(openBillingPortal).mockReset().mockResolvedValue(undefined);
+  });
+
+  it("sends a yearly or monthly choice to Stripe checkout", async () => {
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account };
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    expect(screen.getByText(/The free plan keeps the first \d+ units of each subject/)).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: /Subscribe yearly/ }));
+    await waitFor(() => expect(startCheckout).toHaveBeenCalledWith("year"));
+    fireEvent.click(screen.getByRole("button", { name: /Subscribe monthly/ }));
+    await waitFor(() => expect(startCheckout).toHaveBeenCalledWith("month"));
+    expect(devBilling).not.toHaveBeenCalled();
+  });
+
+  it("shows why checkout failed and lets the parent try again", async () => {
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account };
+    vi.mocked(startCheckout).mockRejectedValueOnce(new Error("You're offline. Connect to the internet and try again."));
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    fireEvent.click(screen.getByRole("button", { name: /Subscribe yearly/ }));
+    expect(await screen.findByText("You're offline. Connect to the internet and try again.")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Subscribe yearly/ })).toBeEnabled();
+  });
+
+  it("simulates a subscription in development mode and says so", async () => {
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account };
+    render(<SubscriptionPage billing={{ stripe: false, dev: true }} onBilling={() => {}} />);
+    expect(screen.getByText(/Stripe isn't configured, so these buttons simulate a subscription/)).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: /Subscribe monthly/ }));
+    await waitFor(() => expect(devBilling).toHaveBeenCalledWith("subscribe", "month"));
+    expect(startCheckout).not.toHaveBeenCalled();
+  });
+
+  it("waits for a connection before offering plans", () => {
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account };
+    render(<SubscriptionPage billing={null} onBilling={() => {}} />);
+    expect(screen.getByText(/Connecting… \(subscriptions need an internet connection\)/)).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Subscribe yearly/ })).toBeDisabled();
+  });
+
+  it("resends the confirmation link from the subscribe page", async () => {
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account: { ...account, verified: false } };
+    vi.mocked(resendVerification).mockResolvedValueOnce(undefined);
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    fireEvent.click(screen.getByRole("button", { name: "Send the link again" }));
+    expect(await screen.findByRole("button", { name: "Sent. Check your inbox" })).toBeDisabled();
+  });
+
+  it("lets the parent ask again if resending the link failed", async () => {
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account: { ...account, verified: false } };
+    vi.mocked(resendVerification).mockRejectedValueOnce(new Error("offline"));
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    fireEvent.click(screen.getByRole("button", { name: "Send the link again" }));
+    await waitFor(() => expect(screen.getByRole("button", { name: "Send the link again" })).toBeEnabled());
+  });
+
+  it("opens the Stripe billing portal for a subscriber, with the renewal date", async () => {
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account, subscription: { status: "active", interval: "year", currentPeriodEnd: Date.UTC(2027, 2, 3, 12) } };
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    expect(screen.getByRole("heading", { name: "Subscription" })).toBeInTheDocument();
+    expect(screen.getByText("⭐ Premium (yearly)")).toBeInTheDocument();
+    expect(screen.getByText("Renews March 3, 2027")).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: "Manage billing, change plan or cancel" }));
+    await waitFor(() => expect(openBillingPortal).toHaveBeenCalled());
+  });
+
+  it("cancels a simulated subscription in development mode", async () => {
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account, subscription: { status: "trialing", interval: "month" } };
+    render(<SubscriptionPage billing={{ stripe: false, dev: true }} onBilling={() => {}} />);
+    expect(screen.getByText("⭐ Premium (monthly)")).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: "Cancel (development mode)" }));
+    await waitFor(() => expect(devBilling).toHaveBeenCalledWith("cancel"));
+  });
+
+  it("thanks the parent after checkout and refreshes the plan from the server", async () => {
+    state.query = new URLSearchParams("checkout=success");
+    state.family = { plan: "premium", trialEndsAt: 0, updatedAt: 1, account };
+    vi.mocked(refreshAccount).mockResolvedValueOnce({ stripe: true, dev: false });
+    const onBilling = vi.fn();
+    render(<SubscriptionPage billing={billing} onBilling={onBilling} />);
+    expect(screen.getByText("🎉 Thank you! Your membership is active.")).toBeInTheDocument();
+    await waitFor(() => expect(onBilling).toHaveBeenCalledWith({ stripe: true, dev: false }));
+    expect(screen.getByText("Your membership is active.")).toBeInTheDocument();
+  });
+
+  it("tells an Android member to manage the plan on the website", () => {
+    state.android = true;
+    state.family = { plan: "premium", trialEndsAt: 0, updatedAt: 1, account };
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    expect(screen.getByText(/To change or cancel your membership, open/)).toBeInTheDocument();
+  });
+
+  it("explains what a time-limited code covers, and that lifetime access needs nothing", () => {
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account, accessUntil: Date.UTC(2027, 0, 10, 12) };
+    const { unmount } = render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    expect(screen.getByText("Your code gives your family everything until January 10, 2027. You can subscribe here when it ends.")).toBeInTheDocument();
+    unmount();
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account, accessUntil: LIFETIME_ACCESS };
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    expect(screen.getByText("Your code gives your family lifetime access. There's nothing to pay.")).toBeInTheDocument();
+  });
+
+  it("says what an access code gave", async () => {
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account };
+    vi.mocked(redeemCode).mockResolvedValueOnce({ kind: "access", accessUntil: Date.UTC(2027, 5, 1, 12) }).mockResolvedValueOnce({ kind: "access", accessUntil: LIFETIME_ACCESS });
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    fireEvent.change(screen.getByLabelText("Code"), { target: { value: "GIFT" } });
+    fireEvent.click(screen.getByRole("button", { name: "Redeem" }));
+    await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("🎉 Everything is open until June 1, 2027."));
+    expect(screen.getByLabelText("Code")).toHaveValue("");
+    fireEvent.change(screen.getByLabelText("Code"), { target: { value: "FOREVER" } });
+    fireEvent.click(screen.getByRole("button", { name: "Redeem" }));
+    await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("🎉 Your family has lifetime access."));
+  });
+
+  it("copies and shares the invite link", async () => {
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account };
+    const writeText = vi.fn().mockResolvedValue(undefined);
+    const share = vi.fn().mockResolvedValue(undefined);
+    Object.defineProperty(navigator, "clipboard", { value: { writeText }, configurable: true });
+    Object.defineProperty(navigator, "share", { value: share, configurable: true });
+    vi.mocked(loadReferral).mockResolvedValueOnce({ code: "ONE23456", joined: 1, rewarded: 0, monthsEarned: 0, maxMonths: 12, bonusDays: 30 });
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    const link = `${window.location.origin}/account/invite/?ref=ONE23456`;
+    await waitFor(() => expect(screen.getByLabelText("Your invite link")).toHaveValue(link));
+    expect(screen.getByText(/1 family has joined/)).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: "Copy link" }));
+    expect(writeText).toHaveBeenCalledWith(link);
+    expect(await screen.findByRole("button", { name: "Copied!" })).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: "Share…" }));
+    expect(share).toHaveBeenCalledWith(expect.objectContaining({ url: link }));
+    delete (navigator as { share?: unknown }).share;
+  });
+
+  it("says the invite link needs a connection when it can't load", async () => {
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account };
+    vi.mocked(loadReferral).mockRejectedValueOnce(new Error("offline"));
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    expect(await screen.findByText(/Your invite link needs an internet connection/)).toBeInTheDocument();
   });
 });

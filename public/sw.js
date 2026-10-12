@@ -8,8 +8,8 @@
 //   this worker took control of the page.
 // - /api/ is never cached: progress is saved in IndexedDB and synced by the app.
 // - The Piper voice (/piper/{version}/, /piper-worker.js) lives in its own cache, which only
-//   the parent's download in Settings fills (src/lib/piper.ts), and which is kept across
-//   updates because it is about 100 MB.
+//   the app's voice download fills (src/lib/piper.ts), and which is kept across updates
+//   because it is about 100 MB.
 const CACHE = "grademap-v3";
 const PIPER_CACHE = "grademap-piper";
 const SHELLS = ["/play/", "/parents/", "/"];

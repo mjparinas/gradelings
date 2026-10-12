@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { computeMetrics, fee, monthStart, type FamilyFacts, type MetricsInput, type PaymentFacts } from "./adminMetrics";
+import { computeMetrics, familyGroup, fee, monthStart, type FamilyFacts, type MetricsInput, type PaymentFacts } from "./adminMetrics";
 import { LIFETIME_ACCESS } from "./plan";
 
 const DAY = 86_400_000;
@@ -41,6 +41,15 @@ function metrics(over: Partial<MetricsInput> = {}) {
 }
 
 describe("customer groups", () => {
+  it("puts a family in one group, paying first, then code access, then trial", () => {
+    const f = { plan: "trial", accessUntil: null, trialEndsAt: NOW + DAY };
+    expect(familyGroup(f, NOW)).toBe("trial");
+    expect(familyGroup({ ...f, trialEndsAt: NOW }, NOW)).toBe("free");
+    expect(familyGroup({ ...f, accessUntil: NOW + 1 }, NOW)).toBe("code");
+    expect(familyGroup({ ...f, accessUntil: NOW }, NOW)).toBe("trial");
+    expect(familyGroup({ ...f, plan: "premium", accessUntil: NOW + 1 }, NOW)).toBe("paying");
+  });
+
   it("puts every family in exactly one group", () => {
     const m = metrics({
       families: [

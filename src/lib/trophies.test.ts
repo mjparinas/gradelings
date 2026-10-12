@@ -192,3 +192,35 @@ describe("which trophies are earned", () => {
     expect(visibleTrophies(d, { grade: "4", framework: "ca-bc" }).map((t) => t.id)).toContain("master-math-5");
   });
 });
+
+describe("trophies that depend on the child's curriculum", () => {
+  it("shows the French trophies wherever the grade teaches either kind of French, and only there", () => {
+    const empty = derive([]);
+    for (const ctx of CONTEXTS) {
+      const refs = allUnitRefs(ctx.grade, ctx.framework);
+      const teachesFrench = refs.some((r) => r.course.subject === "immersion" || r.course.subject === "core-french");
+      const shown = visibleTrophies(empty, ctx).some((t) => t.id === "french-first");
+      expect(shown, `${ctx.framework} ${ctx.grade}`).toBe(teachesFrench);
+    }
+    // Core French with no Immersion (Newfoundland and Labrador) still counts.
+    const nl: TrophyContext = { grade: "6", framework: "ca-nl" };
+    expect(allUnitRefs(nl.grade, nl.framework).some((r) => r.course.subject === "immersion")).toBe(false);
+    expect(visibleTrophies(empty, nl).map((t) => t.id)).toContain("french-first");
+  });
+
+  it("awards Polymath at exactly 3 Proficient units in every core subject", () => {
+    const ctx: TrophyContext = { grade: "4", framework: "ca-bc" };
+    const refs = allUnitRefs(ctx.grade, ctx.framework);
+    const withUnits = (perSubject: number) => {
+      const d = derive([]);
+      for (const s of ["math", "language", "science", "social"] as SubjectId[]) {
+        for (const r of refs.filter((u) => u.course.subject === s).slice(0, perSubject)) d.units[r.key] = unitAt(r.key, 2);
+      }
+      return d;
+    };
+    const polymath = getTrophy("polymath-4")!;
+    expect(polymath.progress(withUnits(3), ctx)).toEqual({ value: 4, target: 4 });
+    expect(newlyEarned(withUnits(3), ctx).map((t) => t.id)).toContain("polymath-4");
+    expect(polymath.progress(withUnits(2), ctx).value).toBe(0);
+  });
+});

@@ -3,11 +3,12 @@ import { PricingCards } from "@/components/site/Pricing";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Critter } from "@/components/Critter";
-import { SitePage, SubscribeActions } from "@/components/site/SiteChrome";
-import { coursesFor, curriculumPath, gradesWithContent } from "@/components/site/curriculum";
+import { SitePage } from "@/components/site/SiteChrome";
+import { curriculumPath } from "@/components/site/curriculum";
 import { kidPracticeSteps, provinceCoverage, regionList } from "@/components/site/provinces";
+import { DEFAULT_GOAL_MINUTES } from "@/lib/model";
 import { GAMES } from "@/components/play/games/types";
-import { FRAMEWORKS, type Framework } from "@/content/frameworks";
+import { FRAMEWORKS } from "@/content/frameworks";
 import { GRADE_LABEL } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, TRIAL_DAYS } from "@/lib/plan";
@@ -22,14 +23,18 @@ export const metadata: Metadata = {
 };
 
 const FEATURES = [
-  { icon: "🗺️", title: "Adventure mode", body: "No menus to dig through. One tap starts a mix of questions from every subject, weighted toward the skills that need practice or haven't been tried yet." },
-  { icon: "⏱️", title: "Learn first, then play", body: "Focused practice earns arcade time. You choose the ratio (20 minutes of learning unlocks 5 minutes of games by default) and a daily cap." },
-  { icon: "🏆", title: "Trophies, levels & quests", body: "Bronze to platinum trophies with console-style pop-ups, XP and levels, daily quests, streaks and a shop of critter companions." },
-  { icon: "🎯", title: "Modes for every mood", body: "Practice, Review for tricky spots, Speed Run against the clock, a Daily Challenge, and a timed Challenge to show mastery." },
-  { icon: "📈", title: "Reports you can read", body: "Progress follows your province's report-card levels, with weekly trends, strengths, next steps and printable summaries." },
+  { icon: "💛", title: "Kind when they get it wrong", body: "A wrong answer gets a hint and another try. Feedback is gentle and encouraging, never a buzzer and never shaming." },
+  { icon: "⏱️", title: "Screen time you can feel good about", body: "Games unlock only after focused practice. You choose the ratio (20 minutes of learning for 5 minutes of games by default) and a daily cap." },
+  { icon: "🏆", title: "Plays like a video game", body: "Trophies, levels, daily quests, streaks and critter companions keep kids coming back, and every one of them is earned by learning." },
+  { icon: "🗺️", title: "Picks what to practise for them", body: "One tap starts Adventure, a mix of subjects that leans toward the skills that need work. No menus to dig through." },
   { icon: "📶", title: "Works offline", body: "Install it on a tablet or phone and it keeps working with no internet. Progress, scores and trophies sync when you're back online." },
   { icon: "🙈", title: "No ads, ever", body: "No ads, no tracking pixels and no selling data. Kids see a first name and an avatar, nothing more." },
-  { icon: "👨‍👩‍👧", title: "One plan, whole family", body: `Up to ${MAX_CHILDREN} children on one family plan, each with their own grade, settings and progress.` },
+];
+
+const STEPS = [
+  { title: "Add your child", body: "Pick their grade and province. It takes two minutes." },
+  { title: "They play and practise", body: "One tap starts Adventure. A wrong answer gets a hint and another try, never a buzzer." },
+  { title: "You see where they stand", body: "Reports use your report card's levels and suggest what to practise next." },
 ];
 
 const INCLUSIVE = [
@@ -41,8 +46,16 @@ const INCLUSIVE = [
 
 const FAQS = [
   {
+    q: "What happens when the free trial ends?",
+    a: `Nothing is charged, because we never asked for a card. Your child keeps their progress and trophies, and the first ${FREE_UNITS_PER_COURSE} units of every subject stay free. Subscribe whenever you want the rest.`,
+  },
+  {
+    q: "How much time does it take?",
+    a: `The daily goal is ${DEFAULT_GOAL_MINUTES.little} minutes for Kindergarten and Grade 1 and ${DEFAULT_GOAL_MINUTES.other} minutes for older kids. You can change it in Settings.`,
+  },
+  {
     q: `Which grades does ${APP_NAME} cover?`,
-    a: "Kindergarten to Grade 9, in math, English language arts, science and social studies. The text, buttons and read-aloud adapt to the child's age: big pictures and spoken prompts for Kindergarten and Grade 1, more independence for older kids.",
+    a: "Kindergarten to Grade 9, in math, English language arts, science and social studies, plus French Immersion and Core French where your province teaches them. The text, buttons and read-aloud adapt to the child's age: big pictures and spoken prompts for Kindergarten and Grade 1, more independence for older kids.",
   },
   {
     q: "Is it matched to our provincial curriculum?",
@@ -58,7 +71,7 @@ const FAQS = [
   },
   {
     q: "How much does it cost?",
-    a: `Subscribe any time for ${PRICES.month.label} or ${PRICES.year.label} (CAD), for up to ${MAX_CHILDREN} children. The free trial is optional: the first ${TRIAL_DAYS} days include everything, with no card needed. Without a plan, the first ${FREE_UNITS_PER_COURSE} units of every subject stay free.`,
+    a: `Try everything free for ${TRIAL_DAYS} days, no card needed. After that, the family plan is ${PRICES.month.label} or ${PRICES.year.label} (CAD) for up to ${MAX_CHILDREN} children. Without a plan, the first ${FREE_UNITS_PER_COURSE} units of every subject stay free.`,
   },
   {
     q: "Are there ads or in-app purchases for kids?",
@@ -66,8 +79,46 @@ const FAQS = [
   },
 ];
 
-function unitsIn(framework: Framework): number {
-  return gradesWithContent(framework).reduce((n, g) => n + coursesFor(framework, g).reduce((m, c) => m + c.units.length, 0), 0);
+/** A drawn preview of the app for the hero: a question with its hint, and a few rows of the parent report. */
+function AppPreview() {
+  const levels = FRAMEWORKS[0].scoringFor("3").levels;
+  const rows = [
+    { unit: "Multiplication facts", level: levels[2] },
+    { unit: "Fractions", level: levels[1] },
+    { unit: "Telling time", level: levels[3] },
+  ];
+  return (
+    <figure className="relative mx-auto flex w-full max-w-md flex-col gap-3">
+      <div className="card p-4" aria-hidden="true">
+        <div className="flex items-center gap-3">
+          <Critter id="hoot" mood="think" size={56} />
+          <p className="font-read text-xl font-semibold">What is 3 × 4?</p>
+        </div>
+        <ul className="mt-3 grid grid-cols-4 gap-2 font-read text-lg">
+          {["7", "10", "12", "14"].map((c) => (
+            <li key={c} className={`rounded-xl border-2 py-2 text-center ${c === "7" ? "border-line text-ink-soft line-through" : "border-line bg-white"}`}>
+              {c}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-3 rounded-xl bg-[#fff4cc] px-3 py-2 font-read text-[#5c4300]">💡 So close! Think of 3 groups of 4. Try again.</p>
+      </div>
+      <div className="card p-4" aria-hidden="true">
+        <p className="text-sm font-bold text-ink-soft">Parent report · Math</p>
+        <ul className="mt-2 flex flex-col gap-2">
+          {rows.map((r) => (
+            <li key={r.unit} className="flex items-center justify-between gap-2 font-read">
+              <span>{r.unit}</span>
+              <span className="rounded-full bg-paper px-3 py-0.5 text-sm font-semibold">
+                {r.level.icon} {r.level.label}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <figcaption className="text-center text-sm text-ink-soft">A question with a hint, and the parent report it feeds.</figcaption>
+    </figure>
+  );
 }
 
 export default function Home() {
@@ -109,34 +160,39 @@ export default function Home() {
             Practice that feels like play. <span className="text-[#4f8ef7]">Progress you can read.</span>
           </h1>
           <p className="mt-4 max-w-xl font-read text-lg text-ink-soft sm:text-xl">
-            Short, friendly lessons in math, reading, science, social studies and French that follow the curriculum, learning games your kids earn with focused practice, and parent reports that speak the same language as the report card.
+            About {DEFAULT_GOAL_MINUTES.other} minutes a day of practice matched to your child&apos;s grade and province, in math, reading, science, social studies and French. Your child earns game time by learning. You see their progress in the same words as their report card.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <SubscribeActions trialLabel={`Start free for ${TRIAL_DAYS} days`} />
-            <Link href={curriculumPath.index()} className="btn min-h-14 px-6 text-xl">
-              See what&apos;s covered
+            <Link href="/play/" className="btn btn-good min-h-14 px-8 text-xl">
+              Start your free {TRIAL_DAYS}-day trial
             </Link>
-          <p className="mt-4 text-sm text-ink-soft">Subscribe any time · Free trial needs no card · No ads · Works offline</p>
-          </div>
-          <p className="mt-3 font-read text-ink-soft">
-            Teacher?{" "}
-            <Link href={TEACHER_SIGNUP} className="font-semibold text-[#2f6fd6] underline">
-              Create a free teacher account
+            <Link href="/pricing/" className="btn min-h-14 px-6 text-xl">
+              See plans
             </Link>
-            .
-          </p>
-        </div>
-        <div className="relative mx-auto grid max-w-md grid-cols-3 items-end gap-2" aria-hidden="true">
-          <Critter id="hoot" mood="wave" size={120} className="justify-self-center" />
-          <Critter id="ollie" mood="cheer" size={170} className="justify-self-center" />
-          <Critter id="ruby" mood="happy" size={120} className="justify-self-center" />
-          <Critter id="bolt" mood="think" size={110} className="col-start-1 justify-self-center" />
-          <div className="rounded-3xl bg-white p-3 text-center shadow-sm">
-            <p className="text-3xl">🏆</p>
-            <p className="text-sm font-bold">Trophy unlocked!</p>
           </div>
-          <Critter id="juniper" mood="happy" size={110} className="justify-self-center" />
+          <p className="mt-4 text-sm text-ink-soft">No card needed · Nothing is charged when the trial ends · No ads, ever · Works offline</p>
         </div>
+        <AppPreview />
+      </section>
+
+      {/* How it works */}
+      <section aria-labelledby="how" className="py-8">
+        <h2 id="how" className="mb-6 text-3xl font-bold sm:text-4xl">
+          How it works
+        </h2>
+        <ol className="grid gap-4 md:grid-cols-3">
+          {STEPS.map((step, i) => (
+            <li key={step.title} className="card flex gap-4 p-5">
+              <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#4f8ef7] text-2xl font-bold text-[#0f172a]" aria-hidden="true">
+                {i + 1}
+              </span>
+              <div>
+                <h3 className="text-xl font-bold">{step.title}</h3>
+                <p className="mt-1 font-read text-ink-soft">{step.body}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
       </section>
 
       {/* Features */}
@@ -145,7 +201,7 @@ export default function Home() {
           Built so kids want to come back
         </h2>
         <p className="mb-6 max-w-2xl font-read text-lg text-ink-soft">The pull of a good video game, pointed at the skills on the report card.</p>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {FEATURES.map((f) => (
             <div key={f.title} className="card p-5">
               <p className="text-4xl" aria-hidden="true">
@@ -180,17 +236,16 @@ export default function Home() {
       {/* Coverage */}
       <section aria-labelledby="coverage" className="py-8">
         <h2 id="coverage" className="mb-2 text-3xl font-bold sm:text-4xl">
-          Every province, every grade
+          Matched to your province
         </h2>
         <p className="mb-6 max-w-2xl font-read text-lg text-ink-soft">
-          {coverage.range ? `${GRADE_LABEL[coverage.range.from]} to ${GRADE_LABEL[coverage.range.to]}. ` : ""}
-          Each unit is matched to your province&apos;s learning standards.
+          {coverage.range ? `${GRADE_LABEL[coverage.range.from]} to ${GRADE_LABEL[coverage.range.to]} across ${FRAMEWORKS.length} provinces and territories. ` : ""}
+          Pick yours to see every unit your child will practise.
         </p>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           {FRAMEWORKS.map((f) => (
-            <Link key={f.id} href={curriculumPath.framework(f)} className="card flex flex-col gap-1 p-4 hover:border-[#4f8ef7]">
-              <span className="text-xl font-bold">{f.region}</span>
-              <span className="text-sm text-ink-soft">{unitsIn(f)} units</span>
+            <Link key={f.id} href={curriculumPath.framework(f)} className="card flex min-h-12 items-center p-4 text-lg font-bold hover:border-[#4f8ef7]">
+              {f.region}
             </Link>
           ))}
         </div>
@@ -204,7 +259,7 @@ export default function Home() {
               Speaks your report card&apos;s language
             </h2>
             <p className="mt-3 font-read text-lg text-ink-soft">
-              Parent reports use your province&apos;s own report-card levels, in plain words, so you can see what the wording means and what to practise next. Kids see the same four steps in every province. This describes practice, not a report-card mark.
+              Parent reports use your province&apos;s own report-card levels, in plain words, so you can see what the wording means and what to practise next. Your child sees four friendly steps instead, from {kidSteps[0]?.icon} {kidSteps[0]?.kidLabel} to {kidSteps[kidSteps.length - 1]?.icon} {kidSteps[kidSteps.length - 1]?.kidLabel}. This describes practice, not a report-card mark.
             </p>
             <Link href="/report-cards/" className="btn mt-5 min-h-12 px-5 text-lg">
               Report cards by province
@@ -250,6 +305,44 @@ export default function Home() {
         </p>
       </section>
 
+      {/* Pricing */}
+      <section aria-labelledby="pricing" className="py-8">
+        <h2 id="pricing" className="mb-2 text-3xl font-bold sm:text-4xl">
+          Simple pricing for the whole family
+        </h2>
+        <p className="mb-6 max-w-2xl font-read text-lg text-ink-soft">Up to {MAX_CHILDREN} children on one plan, each with their own grade, settings and progress.</p>
+        <PricingCards />
+        <p className="mt-4 text-center">
+          <Link href="/pricing/" className="font-semibold text-[#2f6fd6] underline">
+            Pricing and billing details
+          </Link>
+        </p>
+      </section>
+
+      {/* FAQ */}
+      <section aria-labelledby="faq" className="py-8">
+        <h2 id="faq" className="mb-4 text-3xl font-bold sm:text-4xl">
+          Questions from parents
+        </h2>
+        <div className="flex flex-col gap-2">
+          {FAQS.map((f) => (
+            <Disclosure key={f.q} className="rounded-2xl border border-line bg-white p-4" titleClassName="text-lg font-semibold" title={f.q}>
+              <p className="mt-2 font-read text-ink-soft">{f.a}</p>
+            </Disclosure>
+          ))}
+        </div>
+      </section>
+      {/* Last call to action */}
+      <section aria-labelledby="try" className="my-8 rounded-3xl bg-white p-6 text-center sm:p-10">
+        <h2 id="try" className="text-3xl font-bold sm:text-4xl">
+          See if your child likes it
+        </h2>
+        <p className="mx-auto mt-3 max-w-xl font-read text-lg text-ink-soft">Everything is open for {TRIAL_DAYS} days. No card, and nothing to cancel.</p>
+        <Link href="/play/" className="btn btn-good mt-5 min-h-14 px-8 text-xl">
+          Start your free {TRIAL_DAYS}-day trial
+        </Link>
+      </section>
+
       {/* Teachers */}
       <section aria-labelledby="teachers" className="my-8 rounded-3xl bg-[#e8f1ff] p-6 sm:p-10">
         <div className="grid items-center gap-6 md:grid-cols-[1.4fr_1fr]">
@@ -277,32 +370,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section aria-labelledby="pricing" className="py-8">
-        <h2 id="pricing" className="mb-6 text-3xl font-bold sm:text-4xl">
-          Simple pricing for the whole family
-        </h2>
-        <PricingCards />
-        <p className="mt-4 text-center">
-          <Link href="/pricing/" className="font-semibold text-[#2f6fd6] underline">
-            Pricing and billing details
-          </Link>
-        </p>
-      </section>
-
-      {/* FAQ */}
-      <section aria-labelledby="faq" className="py-8">
-        <h2 id="faq" className="mb-4 text-3xl font-bold sm:text-4xl">
-          Questions from parents
-        </h2>
-        <div className="flex flex-col gap-2">
-          {FAQS.map((f) => (
-            <Disclosure key={f.q} className="rounded-2xl border border-line bg-white p-4" titleClassName="text-lg font-semibold" title={f.q}>
-              <p className="mt-2 font-read text-ink-soft">{f.a}</p>
-            </Disclosure>
-          ))}
-        </div>
-      </section>
     </SitePage>
   );
 }

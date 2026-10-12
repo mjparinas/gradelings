@@ -1,0 +1,141 @@
+// @vitest-environment jsdom
+import { fireEvent, render, screen, within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
+import { allUnitRefs, loadGrade, type UnitRef } from "@/content";
+import { defaultChildSettings, type AppEvent, type FamilyInfo, type Profile } from "@/lib/model";
+
+// Real store and Grade 3 lessons; the install prompt has its own tests, so it stays hidden here.
+vi.mock("@/lib/localdb", () => ({
+  getKV: vi.fn().mockResolvedValue(undefined),
+  setKV: vi.fn().mockResolvedValue(undefined),
+  putEvents: vi.fn().mockResolvedValue(undefined),
+  allEvents: vi.fn().mockResolvedValue([]),
+  deleteProfileEvents: vi.fn().mockResolvedValue(undefined),
+  clearAll: vi.fn().mockResolvedValue(undefined),
+}));
+vi.mock("./InstallNudge", () => ({ InstallNudge: () => null }));
+
+import { NUDGE_PRESETS } from "@/lib/familyGoal";
+import { useStore } from "@/lib/store";
+import { Overview } from "./Overview";
+
+const DAY = 86_400_000;
+const kid = (id: string, name: string): Profile => ({ id, name, avatar: "ollie", colour: "#fff", grade: "3", framework: "ca-bc", createdAt: 1, updatedAt: 1 });
+const guest: FamilyInfo = { plan: "trial", trialEndsAt: 0, updatedAt: 1 };
+
+let math: UnitRef;
+beforeAll(async () => {
+  await loadGrade("3", "ca-bc");
+  math = allUnitRefs("3", "ca-bc").find((r) => r.course.subject === "math")!;
+});
+
+let n = 0;
+const answers = (profileId: string, t: number, count: number, right: number): AppEvent[] =>
+  Array.from({ length: count }, (_, i) => ({ id: `e${n++}`, profileId, t: t + i * 1000, type: "answer", unit: math.key, correct: i < right, attempts: 1, revealed: false, ms: 60_000, mode: "practice" }) as AppEvent);
+
+beforeEach(() => {
+  useStore.setState({ profiles: [kid("a", "Ava")], events: [], settings: {}, family: guest });
+});
+
+const card = (name: string) => screen.getByText(name, { selector: "p.text-xl" }).closest("section")!;
+
+describe("Overview", () => {
+  it("nudges a parent without an account to back up progress", () => {
+    render(<Overview />);
+    expect(screen.getByText(/Progress is saved on this device only\./)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Create a free account" })).toHaveAttribute("href", "#/account");
+  });
+
+  it("drops the backup nudge once signed in", () => {
+    useStore.setState({ family: { ...guest, account: { email: "p@example.com", familyId: "f" } } });
+    render(<Overview />);
+    expect(screen.queryByText(/Progress is saved on this device only\./)).not.toBeInTheDocument();
+  });
+
+  it("asks for a child when there are none", () => {
+    useStore.setState({ profiles: [] });
+    render(<Overview />);
+    expect(screen.getByRole("link", { name: "Add a child" })).toBeInTheDocument();
+  });
+
+  it("shows an empty week for a child who hasn't practised", () => {
+    render(<Overview />);
+    const ava = card("Ava");
+    expect(ava).toHaveTextContent("Grade 3 · Level 1 · 🔥 0-day streak");
+    expect(ava).toHaveTextContent("This week0 min");
+    expect(ava).toHaveTextContent("First-try right–");
+    expect(ava).toHaveTextContent("Hasn't practised yet");
+    expect(within(ava).getAllByText("Not started yet").length).toBeGreaterThan(0);
+    expect(within(ava).getByRole("link", { name: "Full report →" })).toHaveAttribute("href", "#/reports/a");
+  });
+
+  it("totals this week's minutes, questions and first-try accuracy, ignoring older practice", () => {
+    useStore.setState({ events: [...answers("a", Date.now() - 60_000 * 10, 6, 3), ...answers("a", Date.now() - 20 * DAY, 4, 4)] });
+    render(<Overview />);
+    const ava = card("Ava");
+    expect(ava).toHaveTextContent("This week6 min");
+    expect(ava).toHaveTextContent("Questions6");
+    expect(ava).toHaveTextContent("First-try right50%");
+    expect(ava).toHaveTextContent("Last practised");
+    // 3 of 6 right is Developing on the BC scale.
+    expect(ava).toHaveTextContent(/Math🌿 mostly Developing · 1\/\d+ units started/);
+  });
+
+  it("celebrates a month of learning with a milestone card that says it is practice", () => {
+    useStore.setState({ events: [...answers("a", Date.now() - 40 * DAY, 6, 6), ...answers("a", Date.now() - DAY, 6, 6)] });
+    render(<Overview />);
+    const milestones = screen.getByRole("heading", { name: "Ava's milestones" }).closest("section")!;
+    expect(milestones).toHaveTextContent("1 month of learning");
+    expect(milestones).toHaveTextContent("These reflect practice in the app, not a report-card mark.");
+  });
+
+  it("shows a card for each child with only that child's practice", () => {
+    useStore.setState({ profiles: [kid("a", "Ava"), kid("b", "Ben")], events: answers("b", Date.now() - 60_000 * 10, 6, 6) });
+    render(<Overview />);
+    expect(card("Ava")).toHaveTextContent("Questions0");
+    expect(card("Ben")).toHaveTextContent("Questions6");
+    expect(within(card("Ben")).getByRole("link", { name: "Full report →" })).toHaveAttribute("href", "#/reports/b");
+  });
+
+  it("sets a weekly days goal and shows this week's progress", async () => {
+    useStore.setState({ events: answers("a", Date.now() - 60_000 * 10, 6, 6) });
+    render(<Overview />);
+    await userEvent.click(screen.getByRole("combobox", { name: "Days a week for Ava" }));
+    fireEvent.pointerDown(screen.getByRole("option", { name: "3 days a week" }));
+    expect(useStore.getState().settings.a.weeklyGoalDays).toBe(3);
+    expect(screen.getByRole("list", { name: "1 of 3 days practised this week" })).toBeInTheDocument();
+    expect(screen.getByText("1 of 3 days so far this week.")).toBeInTheDocument();
+
+    await userEvent.click(screen.getByRole("combobox", { name: "Days a week for Ava" }));
+    fireEvent.pointerDown(screen.getByRole("option", { name: "No goal" }));
+    expect(useStore.getState().settings.a.weeklyGoalDays).toBeUndefined();
+    expect(screen.queryByText(/days so far this week/)).not.toBeInTheDocument();
+  });
+
+  it("celebrates a weekly goal that has been reached", () => {
+    useStore.setState({
+      events: answers("a", Date.now() - 60_000 * 10, 6, 6),
+      settings: { a: { ...defaultChildSettings("a", false, "3"), weeklyGoalDays: 1 } },
+    });
+    render(<Overview />);
+    expect(screen.getByText("Ava reached the goal this week. 🎉")).toBeInTheDocument();
+  });
+
+  it("sends a note picked from the fixed list, never free text", async () => {
+    render(<Overview />);
+    expect(screen.getByText("The note appears once on their home screen. We never send a push to children.")).toBeInTheDocument();
+    expect(screen.queryByRole("textbox")).not.toBeInTheDocument();
+    await userEvent.click(screen.getByRole("combobox", { name: "Note for Ava" }));
+    fireEvent.pointerDown(screen.getByRole("option", { name: NUDGE_PRESETS[11].text }));
+    await userEvent.click(screen.getByRole("button", { name: "Send" }));
+    expect(useStore.getState().settings.a.nudge).toMatchObject({ preset: NUDGE_PRESETS[11].id });
+    expect(screen.getByText(`Sent: "${NUDGE_PRESETS[11].text}" It shows on Ava's home screen the next time they open the app.`)).toBeInTheDocument();
+  });
+
+  it("stops showing a sent note once it has expired", () => {
+    useStore.setState({ settings: { a: { ...defaultChildSettings("a", false, "3"), nudge: { id: "x", preset: "proud", sentAt: Date.now() - 4 * DAY } } } });
+    render(<Overview />);
+    expect(screen.queryByText(/^Sent:/)).not.toBeInTheDocument();
+  });
+});

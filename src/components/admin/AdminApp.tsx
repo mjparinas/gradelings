@@ -112,13 +112,13 @@ function SignIn({ onDone }: { onDone: () => void }) {
 
 // ---------- Overview ----------
 
-function Overview() {
+function Overview({ onOpenFamily }: { onOpenFamily: (id: string) => void }) {
   return (
     <section aria-labelledby="overview-h">
       <h2 id="overview-h" className="text-2xl font-bold">
         Overview
       </h2>
-      <Dashboard />
+      <Dashboard onOpenFamily={onOpenFamily} />
     </section>
   );
 }
@@ -164,10 +164,10 @@ function planText(u: { plan: string; trialEndsAt: number; subscriptionStatus: st
   return "Free";
 }
 
-function Users({ flags }: { flags: FlagRow[] }) {
+function Users({ flags, initialOpen = null }: { flags: FlagRow[]; initialOpen?: string | null }) {
   const [q, setQ] = useState("");
   const [users, setUsers] = useState<UserRow[] | null>(null);
-  const [open, setOpen] = useState<string | null>(null);
+  const [open, setOpen] = useState<string | null>(initialOpen);
   const [err, setErr] = useState("");
   const search = useCallback((query: string) => {
     call<{ users: UserRow[] }>(`/api/admin/users/?q=${encodeURIComponent(query)}`).then(
@@ -906,14 +906,23 @@ type Tab = (typeof TABS)[number];
 
 function Panel() {
   const [tab, setTab] = useState<Tab>("Overview");
+  // A family opened from a dashboard list: Users starts on that family's page.
+  const [family, setFamily] = useState<string | null>(null);
   const [flags, setFlags] = useState<FlagRow[] | null>(null);
   const loadFlags = useCallback(() => {
     call<{ flags: FlagRow[] }>("/api/admin/flags/").then((r) => setFlags(r.flags), () => setFlags([]));
   }, []);
   useEffect(loadFlags, [loadFlags]);
   const body: Record<Tab, ReactNode> = {
-    Overview: <Overview />,
-    Users: <Users flags={flags ?? []} />,
+    Overview: (
+      <Overview
+        onOpenFamily={(id) => {
+          setFamily(id);
+          setTab("Users");
+        }}
+      />
+    ),
+    Users: <Users key={family ?? ""} flags={flags ?? []} initialOpen={family} />,
     Codes: <Codes />,
     Flags: <Flags flags={flags} reload={loadFlags} />,
     "A/B tests": <Experiments />,
@@ -928,7 +937,10 @@ function Panel() {
             key={t}
             type="button"
             aria-current={tab === t ? "page" : undefined}
-            onClick={() => setTab(t)}
+            onClick={() => {
+              setFamily(null);
+              setTab(t);
+            }}
             className={`${btn} ${tab === t ? "bg-[#0f172a] text-white" : "border border-line bg-white"}`}
           >
             {t}

@@ -3,11 +3,11 @@
 // Read-aloud with the device's own voices (Web Speech API), so it works offline
 // and costs nothing. Voice quality varies hugely between devices, so we rank the
 // installed voices and pick the most natural one; parents can choose another in
-// Settings (saved per device, because every device has different voices). A parent can
-// also download the Piper voice (src/lib/piper.ts), which then reads instead of the device
-// voice; if it fails, the device voice takes over.
+// Settings (saved per device, because every device has different voices). By default the Piper
+// voice (src/lib/piper.ts) downloads in the background the first time read-aloud is used and
+// then reads instead of the device voice; until it's here, or if it fails, the device voice reads.
 
-import { piperCanSpeak, piperMightSpeak, piperWanted, speakPiper, stopPiper } from "./piper";
+import { autoDownloadPiper, markPiperFailed, piperCanSpeak, piperMightSpeak, piperWanted, speakPiper, stopPiper } from "./piper";
 
 /** English is the app's language; French is for French Immersion and Core French questions. */
 export type SpeechLanguage = "en" | "fr";
@@ -213,14 +213,19 @@ function utter(text: string, option: VoiceOption | undefined, onFail?: () => voi
 
 function queue(text: string, voiceUri: string | null | undefined, language: SpeechLanguage, onDone?: () => void) {
   // A named voice (the device-voice preview in Settings) always uses that voice.
-  if (voiceUri !== undefined || !piperMightSpeak(language)) return queueDevice(text, voiceUri, language, onDone);
+  if (voiceUri !== undefined) return queueDevice(text, voiceUri, language, onDone);
+  void autoDownloadPiper(language).catch(() => false);
+  if (!piperMightSpeak(language)) return queueDevice(text, voiceUri, language, onDone);
   const id = run;
   void piperWanted(language).then((wanted) => {
     if (id !== run) return;
     if (!wanted) return queueDevice(text, voiceUri, language, onDone);
     speakPiper(forSpeech(text, language), language, PIPER_RATE[language]).then(
       () => id === run && onDone?.(),
-      () => id === run && queueDevice(text, voiceUri, language, onDone),
+      () => {
+        markPiperFailed(language);
+        if (id === run) queueDevice(text, voiceUri, language, onDone);
+      },
     );
   });
 }
