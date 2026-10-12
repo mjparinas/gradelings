@@ -24,7 +24,7 @@ export function SiteHeader() {
           <Link href="/report-cards/" className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
             Report cards
           </Link>
-          <Link href="/parents/" className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
+          <Link prefetch={false} href="/parents/" className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
             Parents
           </Link>
           <Link href={teacherPath.hub()} className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
@@ -33,7 +33,8 @@ export function SiteHeader() {
           <a href={SUBSCRIBE_HREF} className="hidden rounded-lg px-2 py-1 font-bold hover:bg-black/5 lg:inline">
             Subscribe
           </a>
-          <Link href="/play/" className="btn btn-good h-11 px-4 text-base">
+          {/* The apps are big single-page bundles: fetch them on tap, not on every public page view. */}
+          <Link prefetch={false} href="/play/" className="btn btn-good h-11 px-4 text-base">
             Play free
           </Link>
         </nav>
@@ -90,12 +91,12 @@ export function SiteFooter() {
           <p className="font-bold">For families</p>
           <ul className="mt-2 space-y-1 text-sm">
             <li>
-              <Link className="text-ink-soft hover:underline" href="/play/">
+              <Link prefetch={false} className="text-ink-soft hover:underline" href="/play/">
                 Start learning
               </Link>
             </li>
             <li>
-              <Link className="text-ink-soft hover:underline" href="/parents/">
+              <Link prefetch={false} className="text-ink-soft hover:underline" href="/parents/">
                 Parent area
               </Link>
             </li>
@@ -105,7 +106,7 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
-              <Link className="text-ink-soft hover:underline" href={TEACHER_SIGNUP}>
+              <Link prefetch={false} className="text-ink-soft hover:underline" href={TEACHER_SIGNUP}>
                 Teacher sign in
               </Link>
             </li>
@@ -182,7 +183,7 @@ export function SubscribeActions({ size = "lg", trialLabel = "Try it free", clas
       <a href={SUBSCRIBE_HREF} className={`btn btn-good ${cls} ${className}`}>
         Subscribe
       </a>
-      <Link href="/play/" className={`btn ${cls} ${className}`}>
+      <Link prefetch={false} href="/play/" className={`btn ${cls} ${className}`}>
         {trialLabel}
       </Link>
     </>

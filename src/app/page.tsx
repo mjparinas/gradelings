@@ -163,7 +163,7 @@ export default function Home() {
             About {DEFAULT_GOAL_MINUTES.other} minutes a day of practice matched to your child&apos;s grade and province, in math, reading, science, social studies and French. Your child earns game time by learning. You see their progress in the same words as their report card.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link href="/play/" className="btn btn-good min-h-14 px-8 text-xl">
+            <Link prefetch={false} href="/play/" className="btn btn-good min-h-14 px-8 text-xl">
               Start your free {TRIAL_DAYS}-day trial
             </Link>
             <Link href="/pricing/" className="btn min-h-14 px-6 text-xl">
@@ -338,7 +338,7 @@ export default function Home() {
           See if your child likes it
         </h2>
         <p className="mx-auto mt-3 max-w-xl font-read text-lg text-ink-soft">Everything is open for {TRIAL_DAYS} days. No card, and nothing to cancel.</p>
-        <Link href="/play/" className="btn btn-good mt-5 min-h-14 px-8 text-xl">
+        <Link prefetch={false} href="/play/" className="btn btn-good mt-5 min-h-14 px-8 text-xl">
           Start your free {TRIAL_DAYS}-day trial
         </Link>
       </section>
@@ -354,7 +354,7 @@ export default function Home() {
               Create a class, pick your province, and assign units from that curriculum. Families join with a code and choose what is shared. Classes are free for now.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
-              <Link href={TEACHER_SIGNUP} className="btn btn-good min-h-12 px-5 text-lg">
+              <Link prefetch={false} href={TEACHER_SIGNUP} className="btn btn-good min-h-12 px-5 text-lg">
                 Create a free teacher account
               </Link>
               <Link href={teacherPath.hub()} className="btn min-h-12 px-5 text-lg">

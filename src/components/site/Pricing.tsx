@@ -12,7 +12,7 @@ export function PricingCards() {
             $0 <span className="text-base font-semibold text-ink-soft">for {TRIAL_DAYS} days</span>
           </p>
           <p className="mt-2 font-read text-ink-soft">Everything included. No card needed. Afterwards, the first {FREE_UNITS_PER_COURSE} units of every subject stay free.</p>
-          <Link href="/play/" className="btn mt-4 min-h-12 px-4 text-lg">
+          <Link prefetch={false} href="/play/" className="btn mt-4 min-h-12 px-4 text-lg">
             Start free
           </Link>
         </div>
