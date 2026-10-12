@@ -92,17 +92,18 @@ describe("Piper download on this device", () => {
   });
   afterEach(() => vi.unstubAllGlobals());
 
-  it("starts off, downloads with progress, and is used once switched on", async () => {
+  it("is on by default, downloads with progress, and is used once here", async () => {
     const piper = await import("./piper");
     expect(await piper.piperWanted("en")).toBe(false);
-    expect(piper.getPiperState().voices.en.state).toBe("missing");
+    expect(piper.getPiperState()).toMatchObject({ enabled: true, voices: { en: { state: "missing" } } });
     expect(await piper.piperDownloadBytes("en")).toBe(10);
 
     await piper.downloadPiper("en");
     const s = piper.getPiperState();
     expect(s.voices.en).toMatchObject({ state: "ready", loaded: 10, total: 10 });
     expect(s.voices.fr.state).toBe("missing");
-    // Downloaded but not switched on yet.
+    expect(await piper.piperWanted("en")).toBe(true);
+    piper.setPiperEnabled(false);
     expect(await piper.piperWanted("en")).toBe(false);
     piper.setPiperEnabled(true);
     expect(await piper.piperWanted("en")).toBe(true);
@@ -141,9 +142,9 @@ describe("Piper download on this device", () => {
 
   it("knows without waiting when Piper won't read, so the device voice starts inside the tap", async () => {
     let piper = await import("./piper");
+    await piper.piperWanted("en");
     expect(piper.piperMightSpeak("en")).toBe(false);
     await piper.downloadPiper("en");
-    piper.setPiperEnabled(true);
     vi.resetModules();
     piper = await import("./piper");
     // Switched on but not checked yet: it might, so read-aloud waits for the check.
@@ -153,6 +154,11 @@ describe("Piper download on this device", () => {
     expect(piper.piperMightSpeak("fr")).toBe(false);
     piper.setPiperEnabled(false);
     expect(piper.piperMightSpeak("en")).toBe(false);
+    piper.setPiperEnabled(true);
+    // After Piper fails, the device voice reads for the rest of the visit.
+    piper.markPiperFailed("en");
+    expect(piper.piperMightSpeak("en")).toBe(false);
+    expect(await piper.piperWanted("en")).toBe(false);
   });
 
   it("removing French keeps English, and removing English turns the voice off", async () => {
@@ -166,6 +172,100 @@ describe("Piper download on this device", () => {
     await piper.removePiper("en");
     expect(piper.getPiperState().enabled).toBe(false);
     expect(caches.stores.has(piper.PIPER_CACHE)).toBe(false);
+  });
+});
+
+describe("Piper as the default voice", () => {
+  let caches: ReturnType<typeof fakeCaches>;
+  let storage: Map<string, string>;
+  let nav: { onLine: boolean; webdriver?: boolean; connection?: object; storage?: object };
+  beforeEach(() => {
+    vi.resetModules();
+    caches = fakeCaches();
+    storage = new Map<string, string>();
+    nav = { onLine: true };
+    vi.stubGlobal("window", globalThis);
+    vi.stubGlobal("navigator", nav);
+    vi.stubGlobal("caches", caches.api);
+    vi.stubGlobal("Worker", class {});
+    vi.stubGlobal("AudioContext", class {});
+    vi.stubGlobal("localStorage", { getItem: (k: string) => storage.get(k) ?? null, setItem: (k: string, v: string) => storage.set(k, v), removeItem: (k: string) => storage.delete(k) });
+    vi.stubGlobal("fetch", vi.fn(async (url: string) => serve(url)));
+  });
+  afterEach(() => vi.unstubAllGlobals());
+
+  it("downloads a language's voice in the background the first time it's read, then uses it", async () => {
+    const piper = await import("./piper");
+    expect(await piper.autoDownloadPiper("en")).toBe(true);
+    expect(await piper.piperWanted("en")).toBe(true);
+    // French waits until French is read aloud.
+    expect(piper.getPiperState().voices.fr.state).toBe("missing");
+    expect(await piper.autoDownloadPiper("en")).toBe(false);
+    expect(await piper.autoDownloadPiper("fr")).toBe(true);
+    expect(await piper.piperWanted("fr")).toBe(true);
+  });
+
+  it("doesn't download on mobile data, Data Saver, offline, in test browsers, or with little space", async () => {
+    const piper = await import("./piper");
+    for (const connection of [{ type: "cellular" }, { saveData: true }, { effectiveType: "2g" }]) {
+      nav.connection = connection;
+      expect(await piper.autoDownloadPiper("en"), JSON.stringify(connection)).toBe(false);
+    }
+    nav.connection = { type: "wifi", effectiveType: "4g" };
+    nav.onLine = false;
+    expect(await piper.autoDownloadPiper("en")).toBe(false);
+    nav.onLine = true;
+    nav.webdriver = true;
+    expect(await piper.autoDownloadPiper("en")).toBe(false);
+    nav.webdriver = false;
+    nav.storage = { estimate: async () => ({ quota: 300e6, usage: 200e6 }) };
+    expect(await piper.autoDownloadPiper("en")).toBe(false);
+    expect(piper.getPiperState().voices.en.state).toBe("missing");
+    expect(fetch).not.toHaveBeenCalled();
+  });
+
+  it("keeps a parent's choice: switched off, or a device voice picked before", async () => {
+    storage.set("grademap.voice", "Samantha");
+    let piper = await import("./piper");
+    expect(await piper.autoDownloadPiper("en")).toBe(false);
+    expect(piper.getPiperState().enabled).toBe(false);
+    // Switching it on wins over the picked device voice.
+    piper.setPiperEnabled(true);
+    vi.resetModules();
+    piper = await import("./piper");
+    expect(await piper.autoDownloadPiper("en")).toBe(true);
+
+    storage.clear();
+    storage.set("grademap.piper", "off");
+    vi.resetModules();
+    piper = await import("./piper");
+    expect(await piper.autoDownloadPiper("fr")).toBe(false);
+    expect(piper.getPiperState().voices.fr.state).toBe("missing");
+  });
+
+  it("doesn't download when the admin flag is off", async () => {
+    storage.set("grademap.flags", JSON.stringify({ flags: { "piper-auto-download": false }, variants: {} }));
+    const piper = await import("./piper");
+    expect(await piper.autoDownloadPiper("en")).toBe(false);
+  });
+
+  it("a background download that fails shows no error and waits before trying again", async () => {
+    vi.stubGlobal("fetch", vi.fn(async () => new Response("", { status: 503 })));
+    const piper = await import("./piper");
+    expect(await piper.autoDownloadPiper("en")).toBe(true);
+    expect(piper.getPiperState().voices.en).toMatchObject({ state: "missing" });
+    expect(piper.getPiperState().voices.en.error).toBeUndefined();
+    expect(await piper.autoDownloadPiper("en")).toBe(false);
+  });
+
+  it("removing the English voice switches it off, so it doesn't come back by itself", async () => {
+    let piper = await import("./piper");
+    await piper.autoDownloadPiper("en");
+    await piper.removePiper("en");
+    vi.resetModules();
+    piper = await import("./piper");
+    expect(await piper.autoDownloadPiper("en")).toBe(false);
+    expect(piper.getPiperState().enabled).toBe(false);
   });
 });
 
@@ -256,18 +356,18 @@ describe("Piper download problems", () => {
     expect(piper.piperCanSpeak()).toBe(false);
   });
 
-  it("stays off when storage is blocked", async () => {
+  it("falls back to the default (on) when storage is blocked, without throwing", async () => {
     const blocked = () => {
       throw new Error("SecurityError");
     };
     vi.stubGlobal("localStorage", { getItem: blocked, setItem: blocked, removeItem: blocked });
     const piper = await import("./piper");
     await piper.downloadPiper("en");
-    expect(() => piper.setPiperEnabled(true)).not.toThrow();
-    expect(piper.piperMightSpeak("en")).toBe(false);
+    expect(() => piper.setPiperEnabled(false)).not.toThrow();
+    expect(piper.piperMightSpeak("en")).toBe(true);
     vi.resetModules();
     const again = await import("./piper");
-    expect(await again.piperWanted("en")).toBe(false);
+    expect(await again.piperWanted("en")).toBe(true);
   });
 
   it("treats a broken cache as missing voices", async () => {
@@ -295,24 +395,29 @@ describe("Piper download problems", () => {
 class FakeWorker {
   static all: FakeWorker[] = [];
   posted: Record<string, unknown>[] = [];
-  private listeners = new Set<(e: MessageEvent) => void>();
+  private listeners = new Map<string, Set<(e: MessageEvent) => void>>();
   constructor(readonly url: string) {
     FakeWorker.all.push(this);
   }
   postMessage(m: Record<string, unknown>) {
     this.posted.push(m);
   }
-  addEventListener(_: string, l: (e: MessageEvent) => void) {
-    this.listeners.add(l);
+  addEventListener(type: string, l: (e: MessageEvent) => void) {
+    if (!this.listeners.has(type)) this.listeners.set(type, new Set());
+    this.listeners.get(type)!.add(l);
   }
-  removeEventListener(_: string, l: (e: MessageEvent) => void) {
-    this.listeners.delete(l);
+  removeEventListener(type: string, l: (e: MessageEvent) => void) {
+    this.listeners.get(type)?.delete(l);
   }
   emit(data: unknown) {
-    for (const l of [...this.listeners]) l({ data } as MessageEvent);
+    for (const l of [...(this.listeners.get("message") ?? [])]) l({ data } as MessageEvent);
+  }
+  /** The worker script itself failed to load or crashed. */
+  crash() {
+    for (const l of [...(this.listeners.get("error") ?? [])]) l({} as MessageEvent);
   }
   get listening() {
-    return this.listeners.size;
+    return this.listeners.get("message")?.size ?? 0;
   }
 }
 
@@ -409,6 +514,46 @@ describe("speakPiper", () => {
     const p = piper.speakPiper("Hi.", "en");
     worker().emit({ type: "error", id: lastSpeak().id, message: "model failed" });
     await expect(p).rejects.toThrow("model failed");
+  });
+
+  it("rejects when the worker can't load, and starts a fresh worker next time", async () => {
+    const p = piper.speakPiper("Hi.", "en");
+    worker().crash();
+    await expect(p).rejects.toThrow("The voice couldn't load.");
+    const q = piper.speakPiper("Hi again.", "en");
+    expect(FakeWorker.all).toHaveLength(2);
+    piper.stopPiper();
+    await q;
+  });
+
+  it("gives up and cancels when no sound starts in time, so the device voice can read", async () => {
+    vi.useFakeTimers();
+    try {
+      const p = piper.speakPiper("Hi.", "en");
+      const { id } = lastSpeak();
+      const failed = expect(p).rejects.toThrow("The voice took too long to start.");
+      await vi.advanceTimersByTimeAsync(piper.PIPER_FIRST_AUDIO_MS);
+      await failed;
+      expect(worker().posted.at(-1)).toEqual({ type: "cancel", id });
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it("keeps reading past the time limit once sound has started", async () => {
+    vi.useFakeTimers();
+    try {
+      const p = piper.speakPiper("One. Two.", "en");
+      const { id } = lastSpeak();
+      chunk(id, 100);
+      await vi.advanceTimersByTimeAsync(piper.PIPER_FIRST_AUDIO_MS * 2);
+      expect(worker().posted.at(-1)).toMatchObject({ type: "speak" });
+      audio().sources[0].onended!();
+      chunk(id, 0);
+      await expect(p).resolves.toBeUndefined();
+    } finally {
+      vi.useRealTimers();
+    }
   });
 
   it("ends quietly when the worker fails after it started speaking", async () => {

@@ -10,7 +10,8 @@
 //   1. a Grade 5 child's lessons work in a fresh tab with the server gone;
 //   2. adding a Kindergartener offline (never downloaded) shows the friendly screen;
 //   3. once the server is back, "Try again" loads Kindergarten;
-//   4. the Piper voice, downloaded in Settings, reads a question aloud with the server gone.
+//   4. the Piper voice downloads by itself the first time a question is read aloud, is on in
+//      Settings without a parent touching it, and reads a question aloud with the server gone.
 import { spawn } from "node:child_process";
 import fs from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -56,6 +57,9 @@ try {
   const ctx = await browser.newContext({ viewport: { width: 1180, height: 820 }, reducedMotion: "reduce" });
   // Counts audio clips that start playing, so we know the Piper voice really made sound.
   await ctx.addInitScript(() => {
+    // The app skips the background voice download in automated browsers; this test is the one
+    // place that checks it really happens.
+    Object.defineProperty(Navigator.prototype, "webdriver", { get: () => false });
     window.__audioClips = 0;
     const start = AudioBufferSourceNode.prototype.start;
     AudioBufferSourceNode.prototype.start = function (...args) {
@@ -74,14 +78,21 @@ try {
   await page.getByRole("button", { name: /Adventure/ }).waitFor();
   await page.waitForTimeout(5000); // let the worker take control and keep the lessons
 
-  // A parent downloads the offline voice and turns it on.
+  // Reading a question aloud starts the offline voice download in the background.
+  await page.getByRole("button", { name: /Adventure/ }).click({ force: true });
+  await questionOnScreen(page).waitFor({ timeout: 15000 });
+  await page.getByRole("button", { name: "Read it to me" }).click();
+  // The list of files is saved last, once everything else is in.
+  const voiceSaved = () => page.evaluate(async () => (await (await caches.open("grademap-piper")).keys()).some((r) => r.url.endsWith("/files.json")));
+  for (const t0 = Date.now(); !(await voiceSaved()); await sleep(1000)) if (Date.now() - t0 > 180000) throw new Error("the offline voice didn't download by itself");
+
+  // Settings shows it on and ready, without a parent doing anything.
   await page.goto(BASE + "/parents/#/settings");
   await enterPin(page, true);
   const piper = page.getByTestId("piper-en");
-  await piper.getByRole("button", { name: /Download voice/ }).click();
-  await piper.getByRole("switch", { name: /Use the offline voice/ }).waitFor({ timeout: 180000 });
-  await piper.getByRole("switch", { name: /Use the offline voice/ }).click();
-  console.log("✓ online: the Piper voice downloads and can be switched on");
+  await piper.getByRole("button", { name: "▶ Preview", exact: true }).waitFor({ timeout: 15000 });
+  if ((await piper.getByRole("switch", { name: /Use the offline voice/ }).getAttribute("aria-checked")) !== "true") throw new Error("the offline voice isn't on by default");
+  console.log("✓ online: the Piper voice downloads by itself and is on by default");
 
   await stopServer();
   if (await fetch(BASE + "/").then(() => true, () => false)) throw new Error("server still answering");
