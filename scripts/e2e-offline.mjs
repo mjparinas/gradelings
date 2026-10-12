@@ -11,10 +11,12 @@
 //   2. adding a Kindergartener offline (never downloaded) shows the friendly screen;
 //   3. once the server is back, "Try again" loads Kindergarten;
 //   4. the Piper voice downloads by itself the first time a question is read aloud, is on under
-//      Account without a parent touching it, and reads a question aloud with the server gone.
+//      Account without a parent touching it, and reads a question aloud with the server gone;
+//   5. in maintenance mode, the saved kids' app keeps working while a new device gets the maintenance page.
 import { spawn } from "node:child_process";
 import fs from "node:fs";
 import { fileURLToPath } from "node:url";
+import { createClient } from "@libsql/client";
 import { chromium } from "playwright";
 import { enterPin } from "./helpers.mjs";
 
@@ -128,6 +130,27 @@ try {
   await tab.getByRole("button", { name: "Try again" }).click();
   await tab.getByRole("button", { name: /Let's Play/ }).waitFor({ timeout: 20000 });
   console.log("✓ online again: Try again loads Kindergarten");
+
+  // Maintenance mode, switched straight in the database; the server reads it again within 15 seconds.
+  const db = createClient({ url: process.env.DATABASE_URL ?? "file:./data/grademap.db", authToken: process.env.DATABASE_AUTH_TOKEN });
+  const maintenance = (on) =>
+    db.execute({
+      sql: "INSERT INTO admin_settings (key, value, updated_at) VALUES ('maintenance', ?, ?) ON CONFLICT (key) DO UPDATE SET value = excluded.value, updated_at = excluded.updated_at",
+      args: [JSON.stringify(on ? { on: true, since: Date.now() } : { on: false, since: null }), Date.now()],
+    });
+  await maintenance(true);
+  try {
+    await sleep(16000);
+    await tab.goto(BASE + "/play/");
+    await tab.getByRole("button", { name: /Let's Play|Adventure/ }).first().waitFor({ timeout: 15000 });
+    console.log("✓ maintenance: the saved kids' app keeps working");
+    const fresh = await (await browser.newContext()).newPage();
+    const res = await fresh.goto(BASE + "/play/");
+    if (res?.status() !== 503 || !(await fresh.getByRole("heading", { name: /is under maintenance/ }).isVisible())) throw new Error("a new device didn't get the maintenance page");
+    console.log("✓ maintenance: a new device gets the maintenance page");
+  } finally {
+    await maintenance(false);
+  }
 } catch (e) {
   errors.push(e instanceof Error ? e.message.split("\n")[0] : String(e));
 } finally {

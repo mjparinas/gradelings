@@ -16,6 +16,7 @@ import { FamilyBilling } from "./Billing";
 import { Funnel } from "./Funnel";
 import { Traffic } from "./Traffic";
 import { System } from "./System";
+import { MaintenanceBanner, MaintenanceCard, type MaintenanceState } from "./Maintenance";
 import { parseVariants, type ExperimentStatus, type FlagScope, type Variant } from "@/lib/flags";
 import { verdict } from "@/lib/abVerdict";
 import type { Segment } from "@/lib/adminEmails";
@@ -994,6 +995,11 @@ function Panel() {
       () => setTodo(null),
     );
   }, []);
+  // Maintenance mode: the banner shows on every tab while it is on; the switch is on the System tab.
+  const [maintenance, setMaintenance] = useState<MaintenanceState | null>(null);
+  useEffect(() => {
+    call<MaintenanceState>("/api/admin/maintenance/").then(setMaintenance, () => setMaintenance(null));
+  }, []);
   const [flags, setFlags] = useState<FlagRow[] | null>(null);
   const loadFlags = useCallback(() => {
     call<{ flags: FlagRow[] }>("/api/admin/flags/").then((r) => setFlags(r.flags), () => setFlags([]));
@@ -1033,11 +1039,17 @@ function Panel() {
     Flags: <Flags flags={flags} reload={loadFlags} />,
     "A/B tests": <Experiments />,
     Reports: <Reports />,
-    System: <System />,
+    System: (
+      <>
+        <MaintenanceCard state={maintenance} onChange={setMaintenance} />
+        <System />
+      </>
+    ),
     Log: <AuditLog />,
   };
   return (
     <>
+      <MaintenanceBanner state={maintenance} onChange={setMaintenance} />
       <nav aria-label="Admin sections" className="-mx-1 mb-5 flex flex-wrap gap-2">
         {TABS.map((t) => (
           <button
