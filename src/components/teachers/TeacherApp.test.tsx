@@ -183,7 +183,7 @@ describe("TeacherApp", () => {
     await user.click(screen.getByRole("button", { name: "Close class" }));
     expect(await screen.findByRole("button", { name: "Yes, close Room 3" })).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Yes, close Room 3" }));
-    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/?id=class-1", "DELETE", undefined));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/?id=class-1", "DELETE"));
     expect(await screen.findByRole("heading", { name: "Your classes" })).toBeInTheDocument();
   });
 
@@ -223,8 +223,59 @@ describe("TeacherApp", () => {
     expect(screen.getByRole("button", { name: "Print login cards" })).toBeInTheDocument();
     for (const name of ["Remove", "Close class", "Get a new code", "Invite co-teacher"]) expect(screen.queryByRole("button", { name })).not.toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Leave this class" }));
-    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/teachers/?classId=class-1&leave=1", "DELETE", undefined));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/teachers/?classId=class-1&leave=1", "DELETE"));
     expect(await screen.findByRole("heading", { name: "Your classes" })).toBeInTheDocument();
+  });
+
+  it("stays on the class and shows why when closing or leaving fails", async () => {
+    const failing = (role: string) => (url: string, method = "GET") => {
+      if (url === "/api/auth/me/") return Promise.resolve({ family: { account: { student: false } } });
+      if (url === "/api/classes/" && method === "GET") return Promise.resolve({ classes: [{ ...cls, role }] });
+      if (url === "/api/classes/?id=class-1" && method === "GET") return Promise.resolve({ ...detail, role, teachers: [], invites: [] });
+      if (method === "DELETE") return Promise.reject(new Error("You're offline. Try again when you're connected."));
+      return Promise.resolve({});
+    };
+    mocks.call.mockImplementation(failing("owner"));
+    const user = userEvent.setup();
+    const { unmount } = render(<TeacherApp />);
+    await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+    await user.click(await screen.findByRole("button", { name: "Close class" }));
+    await user.click(await screen.findByRole("button", { name: "Yes, close Room 3" }));
+    expect(await screen.findByText("You're offline. Try again when you're connected.")).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: "Your classes" })).not.toBeInTheDocument();
+    unmount();
+
+    mocks.call.mockImplementation(failing("co-teacher"));
+    render(<TeacherApp />);
+    await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+    await user.click(await screen.findByRole("button", { name: "Leave this class" }));
+    expect(await screen.findByText("You're offline. Try again when you're connected.")).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: "Your classes" })).not.toBeInTheDocument();
+  });
+
+  it("keeps the typed names and email when adding students or inviting fails", async () => {
+    mocks.call.mockImplementation((url: string, method = "GET") => {
+      if (url === "/api/auth/me/") return Promise.resolve({ family: { account: { student: false } } });
+      if (url === "/api/classes/" && method === "GET") return Promise.resolve({ classes: [cls] });
+      if (url === "/api/classes/?id=class-1" && method === "GET") return Promise.resolve({ ...detail, role: "owner", teachers: [], invites: [] });
+      if (method === "POST") return Promise.reject(new Error("That didn't work. Try again."));
+      return Promise.resolve({});
+    });
+    const user = userEvent.setup();
+    render(<TeacherApp />);
+    await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+    const names = await screen.findByLabelText(/First names, one per line/);
+    await user.type(names, "Sam");
+    await user.click(screen.getByRole("button", { name: /Add students?/ }));
+    expect(await screen.findByText("That didn't work. Try again.")).toBeInTheDocument();
+    expect(names).toHaveValue("Sam");
+
+    const email = screen.getByLabelText("Colleague’s account email");
+    await user.type(email, "new@example.com");
+    await user.click(screen.getByRole("button", { name: "Invite co-teacher" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/teachers/", "POST", { classId: "class-1", email: "new@example.com" }));
+    expect(email).toHaveValue("new@example.com");
+    expect(screen.queryByText(/Invitation sent/)).not.toBeInTheDocument();
   });
 
   it("lists invitations to co-teach and accepts one", async () => {

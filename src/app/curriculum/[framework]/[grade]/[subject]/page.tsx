@@ -5,7 +5,7 @@ import { breadcrumbJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, subjectTitle } from "@/components/site/curriculum";
 import { FRAMEWORKS } from "@/content/frameworks";
-import { GRADE_LABEL, getSubjectMeta, gradeSlug } from "@/content/subjects";
+import { GRADE_LABEL, getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
 import { JsonLd, absolute } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -23,9 +23,9 @@ export async function generateMetadata({ params }: PageProps<"/curriculum/[frame
   const name = subjectSeoTitle(course.subject);
   return {
     title: `${GRADE_LABEL[grade]} ${name}: ${f.shortName} curriculum practice`,
-    description: `${GRADE_LABEL[grade]} ${name.toLowerCase()} in ${f.name}: ${course.units
+    description: `${GRADE_LABEL[grade]} ${subjectInSentence(name)} in ${f.name}: ${course.units
       .slice(0, 5)
-      .map((u) => u.title.toLowerCase())
+      .map((u) => u.title)
       .join(", ")} and more. ${f.overviewLabel}, ${f.standardLabel.toLowerCase()}s and free sample questions.`,
     alternates: { canonical: curriculumPath.subject(f, grade, course.subject) },
   };

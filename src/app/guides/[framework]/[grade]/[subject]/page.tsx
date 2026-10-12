@@ -6,7 +6,7 @@ import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome
 import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle } from "@/components/site/curriculum";
 import { guidePath } from "@/components/site/guides";
 import { HOME_TIPS, GUIDE_FRAMEWORKS } from "@/content/guides";
-import { GRADE_LABEL, ageBandFor, getSubjectMeta, gradeSlug } from "@/content/subjects";
+import { GRADE_LABEL, ageBandFor, getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const name = subjectSeoTitle(course.subject);
   return {
     title: `${GRADE_LABEL[grade]} ${name} help at home (${f.shortName} curriculum)`,
-    description: `How to help your ${GRADE_LABEL[grade]} child with ${name.toLowerCase()} at home in ${f.name}: what they learn this year, simple activities, and what the report card levels mean.`,
+    description: `How to help your ${GRADE_LABEL[grade]} child with ${subjectInSentence(name)} at home in ${f.name}: what they learn this year, simple activities, and what the report card levels mean.`,
     alternates: { canonical: guidePath.subject(f, grade, course.subject) },
   };
 }
@@ -45,14 +45,14 @@ export default async function SubjectGuide({ params }: Props) {
   const levels = f.scoringFor(grade).levels;
   const faqs = [
     {
-      q: `How can I help my ${label} child with ${name.toLowerCase()}?`,
+      q: `How can I help my ${label} child with ${subjectInSentence(name)}?`,
       a: `${tips.slice(0, 2).join(" ")} Keep sessions short, about 10 to 15 minutes, and stop on a success.`,
     },
     {
-      q: `What does my child learn in ${label} ${name.toLowerCase()} in ${f.shortName}?`,
-      a: `The ${f.curriculumName} ${label} ${name.toLowerCase()} units include ${course.units
+      q: `What does my child learn in ${label} ${subjectInSentence(name)} in ${f.shortName}?`,
+      a: `The ${f.curriculumName} ${label} ${subjectInSentence(name)} units include ${course.units
         .slice(0, 6)
-        .map((u) => u.title.toLowerCase())
+        .map((u) => u.title)
         .join(", ")}.`,
     },
   ];
@@ -71,7 +71,7 @@ export default async function SubjectGuide({ params }: Props) {
           faqJsonLd(faqs),
           articleJsonLd({
             headline: `${label} ${name} help at home (${f.shortName})`,
-            description: `How to help a ${label} child with ${name.toLowerCase()} at home in ${f.name}.`,
+            description: `How to help a ${label} child with ${subjectInSentence(name)} at home in ${f.name}.`,
             path: guidePath.subject(f, grade, course.subject),
           }),
         ]}
@@ -81,7 +81,7 @@ export default async function SubjectGuide({ params }: Props) {
         <span aria-hidden="true">{meta.emoji}</span> {label} {name}: how to help at home
       </h1>
       <p className="mt-2 max-w-3xl font-read text-lg text-ink-soft">
-        What your child learns in {label} {name.toLowerCase()} in the {f.curriculumName}, and simple things to try at home.
+        What your child learns in {label} {subjectInSentence(name)} in the {f.curriculumName}, and simple things to try at home.
       </p>
 
       {bigIdeas.length > 0 && (
@@ -99,7 +99,7 @@ export default async function SubjectGuide({ params }: Props) {
 
       <section aria-labelledby="tips" className="mt-8 max-w-3xl">
         <h2 id="tips" className="text-2xl font-bold">
-          Easy ways to practise {name.toLowerCase()} at home
+          Easy ways to practise {subjectInSentence(name)} at home
         </h2>
         <ul className="mt-2 flex list-disc flex-col gap-2 pl-5 font-read text-lg">
           {tips.map((t) => (
@@ -163,7 +163,7 @@ export default async function SubjectGuide({ params }: Props) {
 
       <section className="card mt-10 flex flex-col flex-wrap gap-3 p-6 sm:flex-row sm:items-center">
         <div className="flex-1">
-          <p className="text-xl font-bold">Free printable {label} {name.toLowerCase()} practice sheet</p>
+          <p className="text-xl font-bold">Free printable {label} {subjectInSentence(name)} practice sheet</p>
           <p className="font-read text-ink-soft">Questions from every unit, with an answer key.</p>
         </div>
         <Link href={guidePath.worksheet(f, grade, course.subject)} className="btn min-h-12 px-6 text-lg">
