@@ -7,6 +7,23 @@ export const TRIAL_DAYS = 30;
 export const FREE_UNITS_PER_COURSE = 2;
 export const MAX_CHILDREN = 3;
 
+/** Referrals: when a friend signs up with your code and confirms their email, you get a free month of this length. */
+export const REFERRAL_BONUS_DAYS = 30;
+/** A family can earn at most this many free months from referrals. */
+export const REFERRAL_MAX_REWARDS = 12;
+/** Unambiguous characters only (no 0/O, 1/I/L), so a code read aloud or typed from a screenshot works. */
+export const REFERRAL_ALPHABET = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
+export const REFERRAL_CODE_LENGTH = 8;
+
+/** Shape check only; whether a code belongs to a family is decided on the server. */
+export function normalizeReferralCode(raw: unknown): string | null {
+  if (typeof raw !== "string") return null;
+  const code = raw.trim().toUpperCase();
+  if (code.length !== REFERRAL_CODE_LENGTH) return null;
+  for (const ch of code) if (!REFERRAL_ALPHABET.includes(ch)) return null;
+  return code;
+}
+
 export const PRICES = {
   month: { amount: 14.99, currency: "CAD", label: "$14.99/month" },
   year: { amount: 119.99, currency: "CAD", label: "$119.99/year", note: "Save 33%" },

@@ -92,6 +92,15 @@ export async function createCheckout(opts: {
   return session.url;
 }
 
+/** Takes `cents` off the customer's next invoice (a negative balance is a credit in Stripe). */
+export async function creditCustomer(customer: string, cents: number, currency: string, description: string): Promise<void> {
+  await stripe(`customers/${encodeURIComponent(customer)}/balance_transactions`, {
+    amount: String(-Math.abs(cents)),
+    currency: currency.toLowerCase(),
+    description,
+  });
+}
+
 /** A Stripe coupon for a discount code: a percentage off once, for some months, or for as long as the plan lasts. */
 export async function createCoupon(opts: { percentOff: number; duration: "once" | "repeating" | "forever"; months?: number; name: string }): Promise<string> {
   const params: Record<string, string> = { percent_off: String(opts.percentOff), duration: opts.duration, name: opts.name.slice(0, 40) };

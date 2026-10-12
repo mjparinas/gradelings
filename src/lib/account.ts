@@ -1,6 +1,7 @@
 "use client";
 
 import type { FamilyInfo } from "./model";
+import { clearReferralCode, savedReferralCode } from "./referral";
 import { useStore } from "./store";
 import { syncNow } from "./sync";
 
@@ -34,7 +35,9 @@ export async function signUp(email: string, password: string) {
     email,
     password,
     trialEndsAt: useStore.getState().family.trialEndsAt,
+    referralCode: savedReferralCode() ?? undefined,
   });
+  clearReferralCode();
   adopt(family);
   await syncNow();
 }
@@ -157,4 +160,19 @@ export async function listDevices(): Promise<DeviceSession[]> {
 /** Signs out one device, or every device but this one when no id is given. */
 export async function signOutDevices(id?: string) {
   await post(`/api/auth/sessions/${id ? `?id=${encodeURIComponent(id)}` : ""}`, undefined, "DELETE");
+}
+
+export interface ReferralInfo {
+  code: string;
+  joined: number;
+  rewarded: number;
+  monthsEarned: number;
+  maxMonths: number;
+  bonusDays: number;
+}
+
+export async function loadReferral(): Promise<ReferralInfo> {
+  const res = await fetch("/api/referral/", { credentials: "same-origin" });
+  if (!res.ok) throw new Error("Couldn't load your invite link.");
+  return (await res.json()) as ReferralInfo;
 }
