@@ -90,8 +90,9 @@ export async function rewardReferrer(familyId: string, now = Date.now()): Promis
   const referred = (await query<{ referred_by: string }>("SELECT referred_by FROM families WHERE id = ?", [familyId]))[0];
   const referrerId = referred?.referred_by;
   if (!referrerId) return false;
-  const already = Number((await query<{ n: number }>("SELECT COUNT(*) AS n FROM families WHERE referred_by = ? AND referral_rewarded_at IS NOT NULL AND id != ?", [referrerId, familyId]))[0]?.n ?? 0);
-  if (already >= REFERRAL_MAX_REWARDS) return false;
+  // The cap is counted on the referrer's own row and claimed in one statement, so deleting rewarded
+  // accounts can't reset it and simultaneous confirmations can't go over it.
+  if (!(await run("UPDATE families SET referral_rewards = referral_rewards + 1 WHERE id = ? AND referral_rewards < ?", [referrerId, REFERRAL_MAX_REWARDS]))) return false;
   const referrer = (await query<{ trial_ends_at: number; stripe_customer: string | null; subscription_status: string | null; current_period_end: number | null }>(
     "SELECT trial_ends_at, stripe_customer, subscription_status, current_period_end FROM families WHERE id = ?",
     [referrerId],
@@ -108,6 +109,7 @@ export async function rewardReferrer(familyId: string, now = Date.now()): Promis
     } catch (e) {
       console.error("[referral] could not credit the referrer's Stripe balance", (e as Error).message);
       await run("UPDATE families SET referral_rewarded_at = NULL WHERE id = ?", [familyId]); // try again on a later confirmation
+      await run("UPDATE families SET referral_rewards = referral_rewards - 1 WHERE id = ? AND referral_rewards > 0", [referrerId]);
       return false;
     }
   }

@@ -15,12 +15,15 @@ export function adminEmails(): Set<string> {
   );
 }
 
-/** The signed-in admin, or null. A student session, an unconfirmed email or an unlisted one is never an admin. */
+/** The signed-in admin, or null. A student session, an unconfirmed or unlisted email, or a sign-in from before the email was confirmed is never an admin. */
 export async function getAdmin(req: Request): Promise<SessionInfo | null> {
   const allowed = adminEmails();
   if (!allowed.size) return null;
   const session = await getSession(req);
   if (!session || !session.verified || !allowed.has(session.email.toLowerCase())) return null;
+  // Only a sign-in made after the email was confirmed. Otherwise someone who signed up with an admin's
+  // address before its owner did would become admin the moment the owner clicked the confirmation link.
+  if (session.verifiedAt == null || session.createdAt < session.verifiedAt) return null;
   return session;
 }
 

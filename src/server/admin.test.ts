@@ -65,7 +65,7 @@ const cookieOf = (res: Response) => (res.headers.get("set-cookie") ?? "").split(
 async function account(address: string, verified = true) {
   const res = await signup.POST(req("/api/auth/signup/", "POST", { email: address, password: "correct horse" }));
   expect(res.status).toBe(200);
-  if (verified) await dbm.run("UPDATE parents SET email_verified_at = ? WHERE email = ?", [Date.now(), address]);
+  if (verified) await dbm.run("UPDATE parents SET email_verified_at = ? WHERE email = ?", [Date.now() - 60_000, address]);
   const familyId = (await dbm.query<{ family_id: string }>("SELECT family_id FROM parents WHERE email = ?", [address]))[0].family_id;
   return { cookie: cookieOf(res), familyId };
 }
@@ -102,6 +102,26 @@ describe("who is an admin", () => {
   it("needs a confirmed email", async () => {
     const unconfirmed = await account("someone-else@example.com", false);
     expect((await as(unconfirmed.cookie).get(adminMe, "/api/admin/me/")).status).toBe(404);
+  });
+
+  it("never makes a sign-in from before the email was confirmed an admin", async () => {
+    // Someone signs up first with an address listed in ADMIN_EMAILS and keeps that session. Its owner
+    // later clicks the confirmation link; the earlier session must stay an ordinary one.
+    const address = "someone-else@example.com"; // listed in ADMIN_EMAILS
+    if (!(await dbm.query("SELECT 1 FROM parents WHERE email = ?", [address])).length) await account(address, false);
+    const login = (await import("@/app/api/auth/login/route")) as unknown as Mod;
+    const signIn = async () => cookieOf(await login.POST(req("/api/auth/login/", "POST", { email: address, password: "correct horse" })));
+    await dbm.run("UPDATE parents SET email_verified_at = NULL WHERE email = ?", [address]);
+    const squatter = await signIn();
+    const tick = () => new Promise((r) => setTimeout(r, 5));
+    await tick();
+    await dbm.run("UPDATE parents SET email_verified_at = ? WHERE email = ?", [Date.now(), address]);
+    expect((await as(squatter).get(adminMe, "/api/admin/me/")).status).toBe(404);
+    // Signing in after confirming (which needs the password) works.
+    await tick();
+    expect((await as(await signIn()).get(adminMe, "/api/admin/me/")).status).toBe(200);
+    expect((await as(squatter).get(adminMe, "/api/admin/me/")).status).toBe(404);
+    await dbm.run("UPDATE parents SET email_verified_at = NULL WHERE email = ?", [address]);
   });
 
   it("refuses changes from another site", async () => {

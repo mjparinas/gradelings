@@ -3,7 +3,8 @@ import type { AppEvent, ChildSettings, Profile } from "@/lib/model";
 import { MAX_CHILDREN } from "@/lib/plan";
 import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
 import { batch, query } from "@/server/db";
-import { familyClasswork } from "@/server/classroom";
+import { familyClasswork, isFramework } from "@/server/classroom";
+import { GRADE_ORDER } from "@/content/subjects";
 import { getFamilyRow, toFamilyInfo } from "@/server/family";
 
 // Two-way sync. Devices upload events they haven't sent yet, plus any profile
@@ -15,6 +16,8 @@ const PAGE = 2000;
 /** Most events one family can store; a real child makes a few thousand a year. */
 const MAX_FAMILY_EVENTS = 250_000;
 const MAX_JSON = 4000;
+/** Most child records (deleted ones included) one family can store. Families have at most 3 children at a time. */
+const MAX_FAMILY_PROFILES = 50;
 const EVENT_TYPES = new Set(["answer", "session", "play", "game", "trophy", "secret", "buy", "quest", "goal", "placement"]);
 
 interface SyncBody {
@@ -25,6 +28,19 @@ interface SyncBody {
 }
 
 const isId = (v: unknown): v is string => typeof v === "string" && v.length > 0 && v.length <= 64;
+
+/**
+ * A child record the rest of the app can rely on: a real grade and province (teacher views and reports
+ * load content by them) and a short first name with no control characters (it appears in emails).
+ */
+function cleanProfile(p: Profile): Profile | null {
+  if (p.deleted) return p;
+  if (!GRADE_ORDER.includes(p.grade) || typeof p.name !== "string") return null;
+  const name = p.name.replace(/[\u0000-\u001f\u007f]/g, "").replace(/\s+/g, " ").trim().slice(0, 40);
+  if (!name) return null;
+  // An unknown province is dropped, so the child falls back to the default curriculum.
+  return { ...p, name, framework: isFramework(p.framework) ? p.framework : (undefined as unknown as Profile["framework"]) };
+}
 
 export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
@@ -60,6 +76,7 @@ export async function POST(req: Request) {
     }
   }
   let activeChildren = existing.filter((r) => r.family_id === family && !gone.get(r.id)?.deleted).length;
+  let storedProfiles = mine.size;
 
   for (const incoming of incomingProfiles) {
     if (!incoming || !isId(incoming.id) || typeof incoming.updatedAt !== "number") continue;
@@ -77,25 +94,32 @@ export async function POST(req: Request) {
         continue;
       }
     }
+    const clean = cleanProfile(p);
+    if (!clean) continue;
+    p = clean;
     const wasActive = Boolean(row && row.family_id === family && !gone.get(p.id)?.deleted);
     // Families already over the limit keep those children. A new or restored child needs a free place.
     if (!p.deleted && !wasActive && activeChildren >= MAX_CHILDREN) continue;
-    mine.add(p.id);
     if (!row || p.updatedAt > Number(row.updated_at)) {
-      gone.set(p.id, { deleted: Boolean(p.deleted), resetAt: p.resetAt ?? 0 });
       const data = JSON.stringify(p);
       if (data.length > MAX_JSON) continue; // never store half a JSON document
+      if (!row && storedProfiles >= MAX_FAMILY_PROFILES) continue;
+      if (!row) storedProfiles++;
+      mine.add(p.id);
+      gone.set(p.id, { deleted: Boolean(p.deleted), resetAt: p.resetAt ?? 0 });
       if (!p.deleted && !wasActive) activeChildren++;
       else if (p.deleted && wasActive) activeChildren--;
       writes.push({
         sql: `INSERT INTO profiles (id, family_id, data, updated_at) VALUES (?, ?, ?, ?)
-              ON CONFLICT(id) DO UPDATE SET data = excluded.data, updated_at = excluded.updated_at`,
+              ON CONFLICT(id) DO UPDATE SET data = excluded.data, updated_at = excluded.updated_at
+              WHERE profiles.family_id = excluded.family_id`,
         args: [p.id, family, data, p.updatedAt],
       });
       // Deleting a child removes their history from the server too.
       if (p.deleted) {
         writes.push({ sql: "DELETE FROM events WHERE profile_id = ? AND family_id = ?", args: [p.id, family] });
         writes.push({ sql: "DELETE FROM class_members WHERE profile_id = ? AND family_id = ?", args: [p.id, family] });
+        writes.push({ sql: "DELETE FROM report_shares WHERE profile_id = ? AND family_id = ?", args: [p.id, family] });
       }
       else if (p.resetAt) {
         writes.push({ sql: "DELETE FROM events WHERE profile_id = ? AND family_id = ? AND t <= ?", args: [p.id, family, p.resetAt] });
@@ -110,7 +134,7 @@ export async function POST(req: Request) {
     writes.push({
       sql: `INSERT INTO child_settings (profile_id, family_id, data, updated_at) VALUES (?, ?, ?, ?)
             ON CONFLICT(profile_id) DO UPDATE SET data = excluded.data, updated_at = excluded.updated_at
-            WHERE excluded.updated_at > child_settings.updated_at`,
+            WHERE excluded.updated_at > child_settings.updated_at AND child_settings.family_id = excluded.family_id`,
       args: [s.profileId, family, settingsJson, s.updatedAt],
     });
   }

@@ -64,7 +64,10 @@ async function apply(event: StripeEvent, obj: Record<string, unknown>, now: numb
     const familyId = (obj.client_reference_id as string) ?? (obj.metadata as Record<string, string>)?.family_id;
     // Only a paid checkout grants premium; a delayed payment method sends a later event when it clears.
     const paid = obj.payment_status === "paid" || obj.payment_status === "no_payment_required";
-    if (familyId && paid && !(await isStale(event, familyId, undefined))) {
+    // Only our own subscription checkout. A one-off payment on the same Stripe account (a Payment Link,
+    // where a buyer can set client_reference_id themselves) must never unlock the plan.
+    const subscription = obj.mode === "subscription" && !!obj.subscription;
+    if (familyId && paid && subscription && !(await isStale(event, familyId, undefined))) {
       // A discount code is used up by the checkout it was applied to.
       await run("UPDATE families SET stripe_customer = ?, subscription_status = 'active', plan = 'premium', discount_code = NULL, updated_at = ?, billing_event_at = ? WHERE id = ?", [
         obj.customer as string,
@@ -85,14 +88,16 @@ async function apply(event: StripeEvent, obj: Record<string, unknown>, now: numb
     const familyId = (obj.metadata as Record<string, string>)?.family_id;
     if (await isStale(event, familyId, obj.customer as string)) return;
     const args = [status, interval, periodEnd, premium ? "premium" : "free", now, at];
+    // A new subscription has used up any discount code, even when its checkout paid later (delayed payment methods).
+    const discount = event.type === "customer.subscription.created" ? ", discount_code = NULL" : "";
     if (familyId) {
       await run(
-        "UPDATE families SET subscription_status = ?, subscription_interval = ?, current_period_end = ?, plan = ?, updated_at = ?, billing_event_at = ?, stripe_customer = COALESCE(stripe_customer, ?) WHERE id = ?",
+        `UPDATE families SET subscription_status = ?, subscription_interval = ?, current_period_end = ?, plan = ?, updated_at = ?, billing_event_at = ?, stripe_customer = COALESCE(stripe_customer, ?)${discount} WHERE id = ?`,
         [...args, obj.customer as string, familyId],
       );
     } else {
       await run(
-        "UPDATE families SET subscription_status = ?, subscription_interval = ?, current_period_end = ?, plan = ?, updated_at = ?, billing_event_at = ? WHERE stripe_customer = ?",
+        `UPDATE families SET subscription_status = ?, subscription_interval = ?, current_period_end = ?, plan = ?, updated_at = ?, billing_event_at = ?${discount} WHERE stripe_customer = ?`,
         [...args, obj.customer as string],
       );
     }

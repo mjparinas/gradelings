@@ -330,6 +330,9 @@ const FAMILY_COLUMNS: [string, string][] = [
   ["referral_code", "TEXT"],
   ["referred_by", "TEXT"],
   ["referral_rewarded_at", "INTEGER"],
+  // How many free months this family has earned by referring others. Kept on the referrer, so deleting
+  // and re-creating a referred account can't reset the cap.
+  ["referral_rewards", "INTEGER NOT NULL DEFAULT 0"],
   // Free access from a redeemed code ends at this time (ms). Separate from `plan`, so a Stripe webhook never undoes it.
   ["access_until", "INTEGER"],
   // A redeemed discount code applied at the next checkout.
@@ -343,7 +346,12 @@ async function addColumns(c: Client, table: string, columns: [string, string][])
 
 async function migrate(c: Client) {
   await addColumns(c, "sessions", SESSION_COLUMNS);
+  const hadRewardCount = (await c.execute("PRAGMA table_info(families)")).rows.some((r) => String(r.name) === "referral_rewards");
   await addColumns(c, "families", FAMILY_COLUMNS);
+  if (!hadRewardCount) {
+    // Once, when the counter arrives: start it from the rewards already given.
+    await c.execute("UPDATE families SET referral_rewards = (SELECT COUNT(*) FROM families r WHERE r.referred_by = families.id AND r.referral_rewarded_at IS NOT NULL)");
+  }
   await c.execute("CREATE UNIQUE INDEX IF NOT EXISTS families_referral_code ON families (referral_code)");
   await c.execute("CREATE INDEX IF NOT EXISTS families_referred_by ON families (referred_by)");
   await addColumns(c, "classes", CLASS_COLUMNS);

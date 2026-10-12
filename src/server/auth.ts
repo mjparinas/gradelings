@@ -15,6 +15,9 @@ export interface SessionInfo {
   familyId: string;
   email: string;
   verified: boolean;
+  /** When this session was signed in, and when the account's email was confirmed (ms; null if not yet). */
+  createdAt: number;
+  verifiedAt: number | null;
   /** A class-owned student account. Students can sync and play, and nothing else. */
   student: boolean;
 }
@@ -122,15 +125,16 @@ export function readCookieToken(req: Request): string {
 export async function getSession(req: Request, opts: { student?: boolean } = {}): Promise<SessionInfo | null> {
   const token = readCookie(req, COOKIE);
   if (!token) return null;
-  const rows = await query<{ parent_id: string; family_id: string; expires_at: number; email: string; email_verified_at: number | null; role: string }>(
-    `SELECT s.parent_id, s.family_id, s.expires_at, p.email, p.email_verified_at, p.role FROM sessions s JOIN parents p ON p.id = s.parent_id WHERE s.token_hash = ?`,
+  const rows = await query<{ parent_id: string; family_id: string; expires_at: number; created_at: number; email: string; email_verified_at: number | null; role: string }>(
+    `SELECT s.parent_id, s.family_id, s.expires_at, s.created_at, p.email, p.email_verified_at, p.role FROM sessions s JOIN parents p ON p.id = s.parent_id WHERE s.token_hash = ?`,
     [sha(token)],
   );
   const row = rows[0];
   if (!row || Number(row.expires_at) < Date.now()) return null;
   const student = row.role === "student";
   if (student && !opts.student) return null;
-  return { parentId: row.parent_id, familyId: row.family_id, email: row.email, verified: Boolean(row.email_verified_at), student };
+  const verifiedAt = row.email_verified_at == null ? null : Number(row.email_verified_at);
+  return { parentId: row.parent_id, familyId: row.family_id, email: row.email, verified: verifiedAt != null, student, createdAt: Number(row.created_at), verifiedAt };
 }
 
 export async function endSession(req: Request): Promise<void> {
