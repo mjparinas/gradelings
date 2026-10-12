@@ -2,7 +2,7 @@
 // monthly costs, opens the list behind a tile (and a family from it), switches the Shop off
 // (and the kids' app hides it), makes a code, saves an A/B test, finds a family and gives it access,
 // works the to-do list, writes an email to a family (no email is really sent: the server has no email keys),
-// opens the Emails, Inbox, Funnel, Automations and System tabs, the billing panel and the CSV download, and every tab passes the axe-core accessibility scan. A non-admin account
+// opens the Emails, Inbox, Funnel, Traffic, Automations and System tabs, the billing panel and the CSV download, and every tab passes the axe-core accessibility scan. A non-admin account
 // is turned away.
 //
 //   ADMIN_EMAILS=admin-e2e@example.com npm start      # in one terminal, after npm run build
@@ -218,6 +218,13 @@ if (await vis(stuck)) {
   await stuck.click();
   check(await page.getByText(/This send reaches|Nobody in this group/).waitFor({ timeout: 8000 }).then(() => true, () => false), "a funnel link opens the Emails tab on that group");
 }
+
+// Traffic: without Google or Vercel keys, each part says which settings to add.
+await tab("Traffic");
+check(await page.getByText(/GOOGLE_SERVICE_ACCOUNT_KEY/).waitFor({ timeout: 15000 }).then(() => true, () => false), "the Traffic tab says how to set up Search Console");
+check(await vis(page.getByRole("heading", { name: "Visits to the public pages" })), "the Traffic tab has a visits section");
+await shot("traffic");
+await scan("traffic");
 
 // Automations: every nudge starts off, and nothing is switched on here.
 await tab("Automations");
