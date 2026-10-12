@@ -47,6 +47,8 @@ export async function createSession(parentId: string, familyId: string, req?: Re
     now,
     (req?.headers.get("user-agent") ?? "").slice(0, 200),
   ]);
+  // Sessions are removed at sign-out, so the last sign-in is kept on the account for the admin panel.
+  await run("UPDATE parents SET last_login_at = ? WHERE id = ?", [now, parentId]);
   // A class stays active while its owner, a co-teacher or a linked family signs in. Student sign-ins are
   // associated with their class in the student login route.
   await run(

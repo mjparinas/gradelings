@@ -1,7 +1,9 @@
 // End-to-end check of the admin panel: the admin signs in, sees the overview and its charts, saves the
 // monthly costs, opens the list behind a tile (and a family from it), switches the Shop off
 // (and the kids' app hides it), makes a code, saves an A/B test, finds a family and gives it access,
-// and every tab passes the axe-core accessibility scan. A non-admin account is turned away.
+// works the to-do list, writes an email to a family (no email is really sent: the server has no email keys),
+// opens the Emails and Inbox tabs, and every tab passes the axe-core accessibility scan. A non-admin account
+// is turned away.
 //
 //   ADMIN_EMAILS=admin-e2e@example.com npm start      # in one terminal, after npm run build
 //   node scripts/e2e-admin.mjs http://localhost:3000 e2e-shots/admin
@@ -40,6 +42,8 @@ async function account(email) {
 const parentEmail = `parent-${Date.now()}@example.com`;
 await account(ADMIN);
 await account(parentEmail);
+// Signed up 5 days ago and never practised, so the parent is on the admin's to-do list.
+await db.execute({ sql: "UPDATE families SET created_at = ? WHERE id = (SELECT family_id FROM parents WHERE email = ?)", args: [Date.now() - 5 * 86_400_000, parentEmail] });
 
 const browser = await chromium.launch();
 const context = await browser.newContext({ viewport: { width: 1280, height: 900 }, reducedMotion: "reduce" });
@@ -60,7 +64,8 @@ async function scan(name) {
   if (!violations.length) console.log(`ok   ${name} has no automated accessibility problems`);
 }
 const tab = async (name) => {
-  await page.getByRole("navigation", { name: "Admin sections" }).getByRole("button", { name, exact: true }).click();
+  // "To do" carries a count after its name.
+  await page.getByRole("navigation", { name: "Admin sections" }).getByRole("button", name === "To do" ? { name: /^To do/ } : { name, exact: true }).click();
   await page.waitForTimeout(400);
 };
 async function signIn(email) {
@@ -159,6 +164,26 @@ check(await page.getByText(/Running since/).first().waitFor({ timeout: 8000 }).t
 await shot("experiments");
 await scan("experiments");
 
+// The to-do list suggests a "getting started" email to the parent who never practised.
+await tab("To do");
+const item = page.getByRole("listitem").filter({ hasText: parentEmail });
+check(await item.getByText("Signed up, never practised").waitFor({ timeout: 8000 }).then(() => true, () => false), "the to-do list shows a family that never practised");
+await item.getByRole("button", { name: "Write email" }).click();
+check(await vis(item.getByLabel("Preview").getByText(/Getting started with/)), "the to-do item opens a getting-started email");
+await shot("todo");
+await scan("to do");
+
+// The Emails tab counts who a group send would reach; nothing is sent.
+await tab("Emails");
+check(await page.getByText(/This send reaches|Nobody in this group/).waitFor({ timeout: 8000 }).then(() => true, () => false), "the Emails tab counts who a group send reaches");
+check(await vis(page.getByRole("region", { name: "Emails sent" })), "the email log lists account emails");
+await shot("emails");
+await scan("emails");
+
+await tab("Inbox");
+check(await page.getByText(/Email isn.t set up yet/).waitFor({ timeout: 8000 }).then(() => true, () => false), "the inbox says when email isn't set up");
+await scan("inbox");
+
 // Find the parent and give lifetime access.
 await tab("Users");
 await page.getByLabel("Search by email or family id").fill(parentEmail);
@@ -167,6 +192,11 @@ await page.getByRole("button", { name: parentEmail }).click();
 await page.getByRole("button", { name: "Give lifetime access" }).click();
 check(await page.getByText("Lifetime access given.").waitFor({ timeout: 8000 }).then(() => true, () => false), "the admin gives a family lifetime access");
 check(await vis(page.getByText("Lifetime", { exact: true })), "the family shows lifetime access");
+check(await vis(page.getByRole("heading", { name: "Email this family" })), "a family's page offers to email them");
+check(await vis(page.getByText(/Last sign-in:/)), "a family's page shows the last sign-in");
+// With no email keys on the server, sending is refused and nothing goes out.
+await page.getByRole("button", { name: "Send email" }).click();
+check(await page.getByText("The email couldn't be sent. Check the email settings.").waitFor({ timeout: 8000 }).then(() => true, () => false), "sending without email keys says so");
 await shot("user");
 await scan("user");
 

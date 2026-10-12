@@ -278,3 +278,33 @@ export function classInviteEmail(to: string, origin: string, className: string, 
     button: { label: "See the invitation", url: `${origin}/teachers/` },
   });
 }
+
+/**
+ * A message the owner sends from the admin panel. It is marketing under Canada's anti-spam law, so it always has the
+ * unsubscribe link (news and tips only) and the mailing address in the footer.
+ */
+export function adminMessageEmail(
+  to: string,
+  origin: string,
+  m: { subject: string; label: string; paragraphs: string[]; button: { label: string; path: string } | null },
+  unsubToken: string,
+  sentBy: string,
+): Email {
+  const q = encodeURIComponent(unsubToken);
+  return {
+    ...layout({
+      kind: "admin",
+      to,
+      origin,
+      unsubscribeUrl: `${origin}/api/email/unsubscribe/?kind=updates&token=${q}`,
+      unsubscribePage: `${origin}/account/unsubscribe/?kind=updates&token=${q}`,
+      subject: m.subject,
+      heading: m.subject,
+      body: m.paragraphs,
+      button: m.button ? { label: m.button.label, url: `${origin}${m.button.path}` } : undefined,
+      footnote: "You're getting this because you have an account. You can turn off news and tips any time.",
+    }),
+    label: m.label,
+    sentBy,
+  };
+}

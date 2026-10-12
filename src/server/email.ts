@@ -18,6 +18,8 @@ export interface Email {
   sentBy?: string;
   /** What the email log shows instead of the subject (admin mail keeps its subject before names are filled in). */
   label?: string;
+  /** Extra headers, such as In-Reply-To on a reply. */
+  headers?: Record<string, string>;
 }
 
 export interface SentEmail extends Email {
@@ -61,8 +63,13 @@ async function deliver(email: Email): Promise<{ ok: boolean; skipped?: boolean; 
         subject: email.subject,
         html: email.html,
         text: email.text,
-        ...(email.unsubscribeUrl
-          ? { headers: { "List-Unsubscribe": `<${email.unsubscribeUrl}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" } }
+        ...(email.unsubscribeUrl || email.headers
+          ? {
+              headers: {
+                ...email.headers,
+                ...(email.unsubscribeUrl ? { "List-Unsubscribe": `<${email.unsubscribeUrl}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" } : {}),
+              },
+            }
           : {}),
       }),
     });

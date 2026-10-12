@@ -28,6 +28,7 @@ const family = (over: Record<string, unknown> = {}) => ({
   redemptions: [{ code: "ABCD", kind: "access", redeemedAt: 1 }, { code: "GONE", kind: null, redeemedAt: 1 }],
   overrides: { shop: false },
   experiments: { "home-colours": "variant" },
+  emails: [],
   ...over,
 });
 
@@ -37,6 +38,9 @@ function asAdmin(extra: Handler = () => undefined) {
     const custom = extra(url, method, body);
     if (custom !== undefined) return custom instanceof Promise ? custom : Promise.resolve(custom);
     if (url === "/api/admin/me/") return Promise.resolve({ email: "owner@example.com" });
+    if (url === "/api/admin/queue/" && method === "GET") return Promise.resolve({ items: [] });
+    if (url.startsWith("/api/admin/email/") && method === "GET") return Promise.resolve({ emails: [], counts30: {}, resendWebhook: true });
+    if (url === "/api/admin/inbox/" && method === "GET") return Promise.resolve({ configured: true, items: [], hasMore: false });
     if (url === "/api/admin/flags/" && method === "GET") return Promise.resolve({ flags: [flag()] });
     if (url.startsWith("/api/admin/users/?q=")) return Promise.resolve({ users: [] });
     if (url === "/api/admin/codes/" && method === "GET") return Promise.resolve({ codes: [] });
@@ -465,5 +469,52 @@ describe("AdminApp question reports and change log", () => {
     await openTab("Log");
     expect(await screen.findByText("No changes yet.")).toBeInTheDocument();
     await waitFor(() => expect(screen.queryByRole("table")).not.toBeInTheDocument());
+  });
+});
+
+describe("AdminApp engagement", () => {
+  it("shows how many to-do items wait, and opens a message from the list in the inbox", async () => {
+    asAdmin((url, method) => {
+      if (url === "/api/admin/queue/" && method === "GET")
+        return {
+          items: [
+            { key: "inbox:m1", kind: "inbox", title: "Email waiting for an answer", detail: "“Help” from Lee", at: 1, action: { type: "inbox", id: "m1" } },
+            { key: "reports", kind: "reports", title: "Question reports", detail: "2 waiting.", at: 1, action: { type: "reports" } },
+          ],
+        };
+      if (url === "/api/admin/inbox/?id=m1") return { message: { id: "m1", from: "lee@example.com", fromEmail: "lee@example.com", subject: "Help", receivedAt: 1, attachments: 0, familyId: null, handledAt: null, repliedAt: null, text: "Hi", replyTo: "lee@example.com", attachmentNames: [] } };
+    });
+    const user = userEvent.setup();
+    render(<AdminApp />);
+    const todo = await screen.findByRole("button", { name: /^To do\s*2\s*waiting$/ });
+    await user.click(todo);
+    await user.click(await screen.findByRole("button", { name: "Read and reply" }));
+    expect(screen.getByRole("button", { name: "Inbox" })).toHaveAttribute("aria-current", "page");
+    expect(await screen.findByRole("heading", { name: "Help" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: /^To do/ }));
+    await user.click(await screen.findByRole("button", { name: "Open reports" }));
+    expect(screen.getByRole("button", { name: "Reports" })).toHaveAttribute("aria-current", "page");
+  });
+
+  it("shows last sign-in and practice in Users, and emailing on a family's page", async () => {
+    const now = Date.now();
+    asAdmin((url) => {
+      if (url === "/api/admin/users/?q=")
+        return { users: [{ familyId: "fam-1", email: "pat@example.com", createdAt: now, plan: "trial", trialEndsAt: now + DAY, accessUntil: null, subscriptionStatus: null, lastLogin: now - 2 * DAY, lastPractice: null }] };
+      if (url === "/api/admin/users/?id=fam-1")
+        return family({
+          parents: [{ id: "p-1", email: "pat@example.com", createdAt: 1, verified: true, weeklyReport: true, practiceReminders: false, newsAndTips: true, bouncedAt: null, lastLogin: now - 2 * DAY }],
+          emails: [{ id: "e1", familyId: "fam-1", email: "pat@example.com", kind: "admin", label: "Ollie misses {children}!", status: "delivered", sentAt: now - 3 * DAY, sentBy: "owner@example.com" }],
+        });
+    });
+    const user = await openTab("Users");
+    const row = within(await screen.findByRole("table")).getAllByRole("row")[1];
+    expect([...row.children].slice(4).map((c) => c.textContent)).toEqual(["2 days ago", "Never"]);
+    await user.click(screen.getByRole("button", { name: "pat@example.com" }));
+    expect(await screen.findByRole("heading", { name: "Email this family" })).toBeInTheDocument();
+    expect(screen.getByText(/Last emailed from here 3 days ago/)).toBeInTheDocument();
+    expect(screen.getByText(/news and tips on/)).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Send email" }));
+    expect(sent("/api/admin/email/", "POST")).toMatchObject({ action: "send", familyId: "fam-1" });
   });
 });

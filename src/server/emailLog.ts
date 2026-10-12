@@ -87,9 +87,18 @@ export interface EmailLogRow {
 export async function emailLog(opts: { familyId?: string; kind?: string; status?: string; limit?: number } = {}): Promise<EmailLogRow[]> {
   const where: string[] = [];
   const args: (string | number)[] = [];
-  if (opts.familyId) (where.push("l.family_id = ?"), args.push(opts.familyId));
-  if (opts.kind) (where.push("l.kind = ?"), args.push(opts.kind));
-  if (opts.status) (where.push("l.status = ?"), args.push(opts.status));
+  if (opts.familyId) {
+    where.push("l.family_id = ?");
+    args.push(opts.familyId);
+  }
+  if (opts.kind) {
+    where.push("l.kind = ?");
+    args.push(opts.kind);
+  }
+  if (opts.status) {
+    where.push("l.status = ?");
+    args.push(opts.status);
+  }
   const rows = await query<Record<string, unknown>>(
     `SELECT l.id, l.family_id, l.kind, l.label, l.status, l.sent_at, l.updated_at, l.sent_by, p.email
      FROM email_log l LEFT JOIN parents p ON p.id = l.parent_id

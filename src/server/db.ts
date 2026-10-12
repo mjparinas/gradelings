@@ -267,6 +267,13 @@ const SCHEMA = [
   `CREATE INDEX IF NOT EXISTS email_log_family ON email_log (family_id, sent_at)`,
   `CREATE INDEX IF NOT EXISTS email_log_sent ON email_log (sent_at)`,
   `CREATE INDEX IF NOT EXISTS email_log_provider ON email_log (provider_id)`,
+  // Mail Resend received for us: only whether the admin has dealt with or answered it. The messages stay in Resend.
+  `CREATE TABLE IF NOT EXISTS inbox_state (
+    email_id TEXT PRIMARY KEY,
+    handled_at INTEGER,
+    replied_at INTEGER,
+    replied_by TEXT
+  )`,
   // To-do items the admin dismissed or snoozed, by item key, until a time.
   `CREATE TABLE IF NOT EXISTS admin_queue_hidden (
     key TEXT PRIMARY KEY,

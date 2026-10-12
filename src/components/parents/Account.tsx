@@ -106,7 +106,7 @@ function AuthForm({ onDone }: { onDone: () => void }) {
   );
 }
 
-type EmailPref = "weeklyReport" | "practiceReminders";
+type EmailPref = "weeklyReport" | "practiceReminders" | "adminMail";
 
 function EmailToggle({ pref, title, hint, verified }: { pref: EmailPref; title: string; hint: string; verified: boolean }) {
   const [on, setOn] = useState<boolean | null>(null);
@@ -282,6 +282,7 @@ export function AccountPage({ onBilling }: { onBilling: (b: BillingInfo | null) 
               hint="A friendly note to you, never to your child, after a few quiet days. At most once a week."
               verified={account.verified !== false}
             />
+            <EmailToggle pref="adminMail" title="News and tips" hint="Now and then, a note from us: new features, ideas to try and offers. Never to your child." verified={account.verified !== false} />
             <PushToggle />
             {sync.error && <p className="mt-2 text-sm text-nudge-dark">{sync.error}</p>}
             <div className="mt-4 flex flex-wrap gap-2">
