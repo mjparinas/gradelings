@@ -267,7 +267,7 @@ export function onMeteredConnection(): boolean {
 
 /**
  * Starts downloading a language's voice in the background when Piper is on but the voice isn't
- * here yet (when the app opens and a child has read-aloud on). Never on mobile data or Data Saver, never when the device is short
+ * here yet (when the app opens and a child has read-aloud on, or when a question is read aloud). Never on mobile data or Data Saver, never when the device is short
  * of space, and not in automated test browsers (each would fetch the whole voice). Read-aloud
  * carries on with the device voice meanwhile. Resolves with whether a download ran.
  */

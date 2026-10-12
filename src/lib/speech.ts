@@ -5,9 +5,10 @@
 // installed voices and pick the most natural one; parents can choose another in
 // Settings (saved per device, because every device has different voices). By default the Piper
 // voice (src/lib/piper.ts) downloads in the background when the app opens for a child with
-// read-aloud on, and then reads instead of the device voice; until it's here, or if it fails, the device voice reads.
+// read-aloud on, or the first time the speaker button is tapped, and then reads instead of the
+// device voice; until it's here, or if it fails, the device voice reads.
 
-import { markPiperFailed, piperCanSpeak, piperMightSpeak, piperWanted, speakPiper, stopPiper } from "./piper";
+import { autoDownloadPiper, markPiperFailed, piperCanSpeak, piperMightSpeak, piperWanted, speakPiper, stopPiper } from "./piper";
 
 /** English is the app's language; French is for French Immersion and Core French questions. */
 export type SpeechLanguage = "en" | "fr";
@@ -217,6 +218,8 @@ function utter(text: string, option: VoiceOption | undefined, onFail?: () => voi
 function queue(text: string, voiceUri: string | null | undefined, language: SpeechLanguage, onDone?: () => void) {
   // A named voice (the device-voice preview in Settings) always uses that voice.
   if (voiceUri !== undefined) return queueDevice(text, voiceUri, language, onDone);
+  // Hearing a question (the speaker button, in any grade) is the moment to fetch that language's voice.
+  void autoDownloadPiper(language).catch(() => false);
   if (!piperMightSpeak(language)) return queueDevice(text, voiceUri, language, onDone);
   const id = run;
   void piperWanted(language).then((wanted) => {

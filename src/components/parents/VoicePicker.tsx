@@ -100,7 +100,7 @@ function CurrentVoice({ current }: { current: VoiceOption | undefined }) {
         <span className="font-semibold">Reading with: </span>
         {usingPiper ? `${amy}, the offline natural voice` : device}
       </p>
-      {waiting && <p className="text-sm text-ink-soft">{amy}, a natural voice that works offline, downloads by itself once a child has &ldquo;Read questions out loud&rdquo; on (it waits while this device is on mobile data).</p>}
+      {waiting && <p className="text-sm text-ink-soft">{amy}, a natural voice that works offline, downloads by itself once a child has &ldquo;Read questions out loud&rdquo; on or taps 🔊 (it waits while this device is on mobile data).</p>}
       <button
         type="button"
         className="self-start rounded-xl bg-[#4f8ef7] px-4 py-2.5 font-bold text-[#0f172a]"

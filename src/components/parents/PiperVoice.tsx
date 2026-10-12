@@ -74,7 +74,7 @@ export function PiperVoice({ language }: { language: SpeechLanguage }) {
             <p className="text-sm text-ink-soft">
               {french
                 ? "It downloads by itself for a child with \"Read questions out loud\" and French switched on, when this device isn't on mobile data."
-                : "It downloads by itself once a child has \"Read questions out loud\" on (Kindergarten and Grade 1 have it on), when this device isn't on mobile data. Until then, read-aloud uses the device voice below."}
+                : "It downloads by itself once a child has \"Read questions out loud\" on (Kindergarten and Grade 1 have it on) or taps 🔊, when this device isn't on mobile data. Until then, read-aloud uses the device voice below."}
             </p>
           )}
           <button
