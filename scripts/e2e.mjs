@@ -205,6 +205,11 @@ async function eventsWaiting(page) {
     await page.goto(`${BASE}/parents/`);
     await enterPin(page, true);
     await shot(page, "20-parent-overview", true);
+    // Kind notes: picked from a dropdown, then sent.
+    await page.getByRole("combobox", { name: "Note for Maya" }).click();
+    await page.getByRole("listbox", { name: "Note for Maya" }).getByRole("option", { name: /Love you lots/ }).click();
+    await page.getByRole("button", { name: "Send", exact: true }).click();
+    if (!(await page.getByRole("status").filter({ hasText: 'Sent: "Love you lots! 💕"' }).count())) errors.push("parent note: sending from the dropdown didn't confirm");
     await page.goto(`${BASE}/parents/#/settings`);
     await page.waitForTimeout(500);
     await page.getByRole("switch", { name: /Free play/ }).first().click();
