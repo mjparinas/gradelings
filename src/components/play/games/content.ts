@@ -9,6 +9,8 @@ const G: Record<GradeId, number> = { k: 0, "1": 1, "2": 2, "3": 3, "4": 4, "5": 
 
 export interface MuncherRule {
   title: string;
+  /** The rule as read aloud at the start of each round. */
+  speak: string;
   /** Makes one cell: its text, and whether it fits the rule. */
   cell: (good: boolean) => { text: string; good: boolean };
   why: (text: string) => string;
@@ -16,9 +18,10 @@ export interface MuncherRule {
 
 const isPrime = (n: number) => n > 1 && Array.from({ length: Math.floor(Math.sqrt(n)) - 1 }, (_, i) => i + 2).every((d) => n % d !== 0);
 
-function numberRule(title: string, range: [number, number], test: (n: number) => boolean, why: (n: number) => string): MuncherRule {
+function numberRule(title: string, range: [number, number], test: (n: number) => boolean, why: (n: number) => string, speak = title): MuncherRule {
   return {
     title,
+    speak,
     cell: (good) => {
       for (let i = 0; i < 200; i++) {
         const n = randInt(range[0], range[1]);
@@ -33,6 +36,7 @@ function numberRule(title: string, range: [number, number], test: (n: number) =>
 function sumRule(target: number, maxPart: number): MuncherRule {
   return {
     title: `Munch sums that make ${target}`,
+    speak: `Munch the sums that make ${target}`,
     cell: (good) => {
       const a = randInt(0, Math.min(target, maxPart));
       const b = good ? target - a : randInt(0, maxPart);
@@ -51,6 +55,7 @@ function productRule(target: number): MuncherRule {
   for (let a = 1; a <= target; a++) if (target % a === 0 && target / a <= 12 && a <= 12) pairs.push([a, target / a]);
   return {
     title: `Munch products that make ${target}`,
+    speak: `Munch the products that make ${target}`,
     cell: (good) => {
       if (good) {
         const [a, b] = pick(pairs);
@@ -72,6 +77,7 @@ function productRule(target: number): MuncherRule {
 function fractionHalfRule(): MuncherRule {
   return {
     title: "Munch fractions equal to ½",
+    speak: "Munch the fractions equal to one half",
     cell: (good) => {
       const d = pick([2, 4, 6, 8, 10, 12, 14, 16, 20]);
       if (good) return { text: `${d / 2}/${d}`, good: true };
@@ -88,7 +94,7 @@ export function muncherRules(grade: GradeId): MuncherRule[] {
   if (g === 0) {
     const n = randInt(1, 9);
     return [
-      numberRule(`Munch the ${n}s`, [0, 10], (x) => x === n, (x) => `That's ${x}. Look for ${n}!`),
+      numberRule(`Munch the ${n}s`, [0, 10], (x) => x === n, (x) => `That's ${x}. Look for ${n}!`, `Munch the number ${n}`),
       numberRule("Munch numbers bigger than 5", [0, 10], (x) => x > 5, (x) => `${x} is not bigger than 5.`),
       numberRule("Munch numbers smaller than 4", [0, 10], (x) => x < 4, (x) => `${x} is not smaller than 4.`),
     ];
@@ -130,6 +136,7 @@ export function muncherRules(grade: GradeId): MuncherRule[] {
       : [numberRule("Munch multiples of 8", [1, 100], (x) => x % 8 === 0, (x) => `${x} ÷ 8 has a remainder.`)]),
     {
       title: "Munch decimals bigger than 0.5",
+      speak: "Munch the decimals bigger than zero point five",
       cell: (good: boolean) => {
         const v = good ? randInt(51, 99) / 100 : randInt(1, 50) / 100;
         return { text: String(v), good };
