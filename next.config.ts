@@ -28,6 +28,8 @@ const nextConfig: NextConfig = {
         source: "/:file(icon-192\\.png|icon-512\\.png|icon-maskable-512\\.png|apple-touch-icon\\.png|icon\\.svg)",
         headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }],
       },
+      // Email images carry a version in their name (src/lib/emailImages.ts), so they never change in place.
+      { source: "/email/:file*", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }] },
     ];
   },
   // Runs as a normal Next.js server (pages are still pre-rendered where possible)
