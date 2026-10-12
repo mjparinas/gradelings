@@ -1,0 +1,364 @@
+import { bankUnit, type Q } from "../own";
+
+// Kindergarten and Grade 1 science and social studies, Prince Edward Island. Indigenous content is light, in the present
+// tense for living communities, and needs review by Mi’kmaq partners (for example the Mi’kmaq Confederacy of PEI) and the
+// PEI Department of Education before launch.
+//
+// Sources checked:
+// The Canadian Encyclopedia, "Reserves on Prince Edward Island" (thecanadianencyclopedia.ca)
+// Mi’kmaq Confederacy of PEI, "Our Communities" (mcpei.ca/our-communities)
+// Government of PEI, "Traditional place name signs tell the story of Mi’kmaq across Epekwitk" (news release)
+// The Canadian Encyclopedia, "Confederation Bridge" (thecanadianencyclopedia.ca)
+// Standard textbook facts for senses, materials, seasons, needs and wants, goods and services, maps and community change.
+//
+// Left out because unverified: any number of years the Mi’kmaq have lived on the island, ceremonial or sacred details,
+// specific historic dates, and which seasonal movements or tools were used by particular Nations.
+
+const SENSE_WORDS: Q[] = [
+  ["Which word tells how a drum can sound?", "loud", ["sticky", "sour", "round"], "Think about what your ears would hear."],
+  ["Which word tells how a lemon tastes?", "sour", ["loud", "bumpy", "tiny"], "Your tongue tells you this one."],
+  ["Which word tells how a pillow feels?", "soft", ["salty", "bright", "squeaky"], "Squish it in your hands."],
+  ["Which word tells how a sunny day looks?", "bright", ["bumpy", "salty", "squeaky"], "Your eyes see lots of light."],
+  ["Which word tells how a mouse sounds?", "squeaky", ["sour", "cold", "round"], "Mice make a tiny high sound."],
+  ["Which word tells how ice feels?", "cold", ["loud", "sweet", "tiny"], "Touch an ice cube and you will know."],
+  ["A pretzel with lots of salt tastes…", "salty", ["bumpy", "quiet", "tiny"], "Salt has a strong taste on your tongue."],
+  ["Which word tells how a ball looks?", "round", ["loud", "salty", "sour"], "A ball has no corners."],
+  ["Which word tells how an ant looks?", "tiny", ["loud", "sweet", "cold"], "An ant is very, very small."],
+  ["Which word tells how a whisper sounds?", "quiet", ["bright", "bumpy", "sour"], "A whisper is not a big sound."],
+  ["Which word tells how a stony path feels?", "bumpy", ["sweet", "quiet", "round"], "Your feet would go up and down."],
+  ["Which word tells how a sugar cookie tastes?", "sweet", ["loud", "bumpy", "cold"], "Sugar tastes sweet."],
+  ["Which word tells how a campfire smells?", "smoky", ["squeaky", "bumpy", "tiny"], "Your nose can smell the smoke."],
+  ["Which part of us do we use to hear a bell?", "ears", ["eyes", "nose", "tongue"], "Ears are for hearing."],
+  ["Which part of us do we use to smell a flower?", "nose", ["ears", "eyes", "hands"], "Sniff, sniff!"],
+  ["Which part of us do we use to taste soup?", "tongue", ["ears", "eyes", "toes"], "Your tongue has taste buds."],
+  ["Which part of us do we use to see a rainbow?", "eyes", ["ears", "nose", "tongue"], "Open your eyes wide."],
+  ["We feel a warm blanket with our…", "skin", ["eyes", "ears", "nose"], "Touch works all over your skin."],
+  ["You feel a fuzzy sock with your hands. Which sense is that?", "touch", ["sight", "hearing", "smell"], "Hands and fingers help us touch."],
+  ["Which pair of words can both tell how a bunny feels?", "soft and fluffy", ["loud and sour", "salty and bright", "squeaky and tiny"], "Think about petting a bunny.", true],
+  ["A lemon candy is sweet and sour. Which sense tells you?", "taste", ["hearing", "sight", "touch"], "You use your tongue.", true],
+  ["You smell something sweet in the oven. What is it?", "fresh cookies", ["a soft pillow", "a loud horn", "a bumpy rock"], "Only one of these has a smell.", true],
+  ["Your eyes are shut. Which sense can still tell you a bell is ringing?", "hearing", ["sight", "taste", "smell"], "Ears keep working with your eyes closed.", true],
+  ["A thing is round, red and shiny. Which sense tells you that?", "sight", ["hearing", "taste", "smell"], "Colours and shapes are things we look at.", true],
+  ["What is the opposite of bumpy?", "smooth", ["loud", "sour", "tiny"], "Think of a flat, even table.", true],
+  ["What is the opposite of tiny?", "huge", ["round", "sweet", "cold"], "Think of something very, very big.", true],
+];
+
+export const peSenseWordsK = bankUnit({
+  id: "pe-sense-words-k",
+  title: "Sense Words",
+  emoji: "👂",
+  blurb: "Words for what we see, hear and feel",
+  parentNote:
+    "Builds the words children use to describe what they notice with their senses. Your child matches describing words to sights, sounds, smells, tastes and textures.",
+  standards: ["Exploring the World Using Our Senses", "using describing words for what we see, hear, smell, taste and touch"],
+  items: SENSE_WORDS,
+});
+
+const CONNECT: Q[] = [
+  ["What can link two towns so cars can drive between them?", "a road", ["a pillow", "a cloud", "a spoon"], "Cars drive on it."],
+  ["A bridge helps cars cross a…", "river", ["carpet", "cupboard", "bed"], "A bridge goes over water."],
+  ["What carries a letter to a friend in another town?", "the mail", ["a cake", "a puddle", "a drum"], "A mail carrier brings letters."],
+  ["A parcel from far away comes to your door. Who brings it?", "a delivery driver", ["a teacher", "a crossing guard", "a farmer"], "They drive a truck or van."],
+  ["Where do apples and potatoes in a store often start?", "on a farm", ["in a toy box", "in a bath", "in the sky"], "Farmers grow them in the ground or on trees."],
+  ["Grandma lives in another community. How can you visit?", "drive or take a bus", ["dig a tunnel", "float on a cloud", "shrink like a bug"], "Real trips use real vehicles."],
+  ["Which can take you far away very fast?", "a plane", ["a wagon", "a skateboard", "a scooter"], "It flies high in the sky."],
+  ["Which vehicle floats on water?", "a boat", ["a bus", "a bike", "a train"], "Boats cross harbours and seas."],
+  ["Two towns both have a school. What does that tell us?", "They are alike in one way", ["They are the same town", "They have no roads", "They have no people"], "Both have something in common."],
+  ["Why do people from other towns visit a big fair?", "to have fun together", ["to sleep there", "to hide", "to lose things"], "Fairs are for fun."],
+  ["Two towns play a soccer game. What are they doing?", "sharing a game", ["building a bridge", "baking bread", "sending mail"], "They meet to play."],
+  ["Who takes people from one town to another?", "a bus driver", ["a baker", "a dentist", "a teacher"], "A bus goes along the road."],
+  ["Fish for supper may come from the…", "sea", ["bed", "roof", "desk"], "Boats go out to catch them."],
+  ["What do we put on a letter so it finds its way?", "an address", ["a bubble", "a sock", "a leaf"], "It says where the letter is going."],
+  ["Why do we need roads between towns?", "so people and things can get there", ["so trees can nap", "to stop the wind", "to make rain"], "Roads let us travel."],
+  ["A truck brings milk to the store. Where did it start?", "a dairy farm", ["a toy shop", "a gym", "a shoe store"], "Cows give milk."],
+  ["Where do letters get sorted and sent?", "the post office", ["a bakery", "a pool", "a toy shop"], "Mail is sorted there."],
+  ["People travel to a market in the next town. Why?", "to buy and sell things", ["to nap", "to paint the sky", "to hide"], "Markets have things to trade."],
+  ["A farmer far away grows wheat. What do we make from it?", "bread", ["rain", "bricks", "soap"], "Flour from wheat goes into bread."],
+  ["Two towns each have a fire station. What is the same?", "both have helpers who keep people safe", ["both have the same name", "both are on the moon", "both are made of snow"], "Think about what firefighters do.", true],
+  ["How can you share news with a friend in a far town?", "call or send a message", ["whisper really loud", "wave at the moon", "knock on the sky"], "Phones and mail carry words far.", true],
+  ["A toy is made in one place and sold in another. How does it get there?", "a truck or ship carries it", ["it walks by itself", "it floats on a cloud", "a bird carries it"], "Vehicles move goods.", true],
+  ["Why do people in a town need other towns?", "to get things they do not have", ["to lose their things", "to stop talking", "to stay indoors"], "No one place has everything.", true],
+  ["The Confederation Bridge joins our island to the mainland. What does it do?", "helps cars cross the water", ["makes the water warm", "stops the boats", "gives out mail"], "It is a road over the sea.", true],
+  ["Which list shows ways to travel to another community?", "car, bus, boat, plane", ["bed, spoon, hat, cup", "tree, rock, cloud, sun", "pen, book, desk, door"], "Pick things that move people.", true],
+  ["What do two towns share if they use the same road?", "a way to travel", ["a pet fish", "a set of toys", "a birthday"], "The road links them.", true],
+];
+
+export const peCommunitiesConnectK = bankUnit({
+  id: "pe-communities-connect-k",
+  title: "Communities Connect",
+  emoji: "🚌",
+  blurb: "How places near and far are linked",
+  parentNote:
+    "Introduces the idea that our community is connected to other communities, for example by roads, mail, food and visits. Your child begins to see that people depend on places beyond their own.",
+  standards: ["3.2", "how our community is connected to other communities"],
+  items: CONNECT,
+});
+
+const MAPS: Q[] = [
+  ["A map is a picture of a place seen from…", "above", ["underneath", "inside a box", "behind a wall"], "Think of a bird flying over."],
+  ["A map can show us…", "the way to a place", ["how a song sounds", "how soup tastes", "how a flower smells"], "Maps help us find places."],
+  ["On a classroom map, a small square says DOOR. What is it?", "the door", ["the window", "the rug", "the sink"], "Read the label."],
+  ["On a classroom map, how do we find the desks?", "look for the desk shapes", ["look for the moon", "listen for a bell", "smell the paper"], "Maps use little shapes."],
+  ["On a map, a book picture stands for the…", "library", ["airport", "beach", "gas pump"], "Libraries have books."],
+  ["A blue wavy line on a map often shows…", "water", ["a road", "a house", "a hill"], "Think of a river or the sea."],
+  ["On a map, a green patch might show a…", "park", ["lake", "bus", "school"], "Green is often grass and trees."],
+  ["The school is next to the park. They are…", "close together", ["far apart", "upside down", "in the sky"], "Next to means very near."],
+  ["The pool is far from the farm. What does that mean?", "They are a long way apart", ["They are touching", "They are the same place", "They sit on top of each other"], "Far means a long way."],
+  ["The park is between the school and the library. Where is it?", "in the middle of the two", ["far from both", "on top of the school", "under the library"], "Between means in the middle."],
+  ["On a map, houses on the same street are…", "near each other", ["on the moon", "in different countries", "under water"], "A street keeps them close."],
+  ["A path goes from the gate to the slide. What do you do?", "follow the path to the slide", ["swim to the gate", "fly to the moon", "stay at the slide"], "Walk along the line."],
+  ["Start at the door. Go past the sink. Stop at the rug. Where are you?", "at the rug", ["at the door", "at the sink", "at the window"], "Stop where the path ends."],
+  ["Which of these is a map?", "a drawing of a classroom from above", ["a photo of a smiling cat", "a drawing of a rainbow", "a picture of a cake"], "A map shows where things are."],
+  ["On a play yard map, a swing picture shows the…", "swing set", ["sandbox", "fence", "tree"], "A symbol stands for a real thing."],
+  ["A little red square on a street map could be a…", "house", ["cloud", "lake", "song"], "Squares often show buildings."],
+  ["What might you see on a neighbourhood map?", "streets and buildings", ["tunes and smells", "tastes and sounds", "dreams and wishes"], "Maps show places."],
+  ["You want to find the school. What helps most?", "a map of the neighbourhood", ["a pot of paint", "a bag of leaves", "a pair of mittens"], "A map shows where places are."],
+  ["A plane symbol on a map often shows an…", "airport", ["pond", "school", "farm"], "Planes take off and land there.", true],
+  ["The door is at the top of the map. The desk is under it. Where is the desk?", "below the door on the map", ["above the door", "on the door", "outside the map"], "Under means lower down.", true],
+  ["A map is a…", "small picture of a real place", ["real place itself", "toy you can eat", "song about a place"], "It is not the real place, only a picture.", true],
+  ["A map has a star next to the school. What does it do?", "marks where the school is", ["makes the school bigger", "makes the school sing", "moves the school"], "A symbol points to a place.", true],
+  ["On a map, the swing is to the left of the gate. Where is the swing?", "to the left of the gate", ["to the right of the gate", "up in the sky", "under the ground"], "Left is the side of your left hand.", true],
+  ["The shop is far from the farm but near the school. Which two are close?", "the shop and the school", ["the shop and the farm", "the farm and the sky", "the school and the sun"], "Look for the word near.", true],
+  ["Which is true of a map?", "It shows a place from above", ["It shows a place from the side", "It makes sounds", "It is always very big"], "Imagine looking down from the sky.", true],
+];
+
+export const peFirstMapsK = bankUnit({
+  id: "pe-first-maps-k",
+  title: "My First Maps",
+  emoji: "🗺️",
+  blurb: "Pictures that show where things are",
+  parentNote:
+    "Introduces maps as pictures that show where places are. Your child finds familiar places on a simple map of a classroom or neighbourhood.",
+  standards: ["3.3", "beginning to understand maps as pictures of places"],
+  items: MAPS,
+});
+
+const TOYS: Q[] = [
+  ["Which scrap is best for a toy car’s wheel?", "a bottle cap", ["a sheet of paper", "a bit of string", "a stick"], "A wheel is round and hard."],
+  ["Which scrap is best for a strong toy body?", "a cardboard box", ["a piece of tissue", "a bit of string", "a cotton ball"], "It must keep its shape."],
+  ["Which makes a bendy tail on a toy snake?", "a bendy straw", ["a brick", "a glass jar", "a rock"], "It must bend and move."],
+  ["Which scrap floats best for a toy boat?", "a foam tray", ["a rock", "a metal spoon", "a glass marble"], "Light things float."],
+  ["Which is everyday scrap?", "an empty yogurt cup", ["a brand new bicycle", "a gold ring", "a pair of new shoes"], "Scrap is things we would throw out."],
+  ["Which will not work well as a wheel?", "a flat square of card", ["a bottle cap", "a round lid", "a spool"], "A wheel must be round to roll."],
+  ["Why is tissue a poor choice for a strong body?", "It tears too easily", ["It is too heavy", "It is too hard", "It is too round"], "Strong parts must not rip."],
+  ["Make it, plan it or test it. Which comes first?", "plan it", ["test it", "play with it", "put it away"], "Think before you build."],
+  ["After you build a toy, what should you do?", "test it to see if it works", ["throw it away right away", "forget about it", "give up"], "Try it out."],
+  ["Your toy car will not roll. What could you try?", "use rounder wheels", ["paint it", "give it a name", "put it on a shelf"], "Wheels must be round."],
+  ["Which material is bendy?", "a rubber band", ["a stone", "a glass jar", "a brick"], "It stretches and bends."],
+  ["Which is hard and does not bend?", "a wooden block", ["a rubber band", "a sock", "a ribbon"], "It keeps its shape."],
+  ["Which is soft stuffing for a toy?", "a cotton ball", ["a rock", "a nail", "a metal can"], "Soft things squish."],
+  ["Which scrap makes a good toy drum?", "a round oatmeal container", ["a wet sponge", "a ball of string", "a feather"], "A drum is hollow."],
+  ["To stick two pieces of cardboard, you could use…", "glue or tape", ["rain or snow", "salt or pepper", "sand or leaves"], "These hold things together."],
+  ["Why do we ask a grown-up before using scissors?", "They can be sharp", ["They are too soft", "They are too small", "They are too loud"], "Safety first."],
+  ["A toy boat sinks. What change might help it float?", "use a lighter material", ["add a rock", "fill it with water", "add a metal key"], "Heavy things sink.", true],
+  ["A toy bridge must hold a small car. Which scrap is best?", "a stiff cardboard strip", ["a wet paper towel", "a tissue", "a ribbon"], "It must not sag.", true],
+  ["You want a toy that spins in the wind. Which is the best choice?", "thin, light paper", ["a heavy stone", "a thick brick", "a lump of clay"], "Light things turn easily.", true],
+  ["Which toy part should be made of something that bends?", "a tail that swings", ["a wheel that rolls", "a floor that is flat", "a block that holds weight"], "Moving parts may need to bend.", true],
+  ["A tower of tissue boxes falls over. What might help?", "a wider, stronger base", ["a taller tower", "a lighter bottom", "a wobbly top"], "A wide base stands steadier.", true],
+  ["Foam or stone: which is better for a toy that floats?", "foam, because it is light", ["stone, because it is heavy", "stone, because it is hard", "both float the same"], "Light things float.", true],
+  ["Why do we test our toy?", "to see what to make better", ["so it breaks", "to hide it", "to make noise"], "Testing shows what to fix.", true],
+  ["A toy needs to be light and fairly strong. Which scrap fits?", "a cardboard tube", ["a tissue", "a cotton ball", "a sheet of foil"], "It must hold its shape.", true],
+];
+
+export const peMakeAToy1 = bankUnit({
+  id: "pe-make-a-toy-1",
+  title: "Toy Makers",
+  emoji: "🧸",
+  blurb: "Build a toy from scrap materials",
+  parentNote:
+    "Practises choosing scrap materials for a model or toy, and thinking about which materials work best for each part.",
+  standards: ["Physical Science - Materials, Objects and our Senses (PS)", "choosing scrap materials to build a model or toy"],
+  items: TOYS,
+});
+
+const SEASONS: Q[] = [
+  ["Which season comes after winter?", "spring", ["summer", "autumn", "winter"], "Flowers begin to grow."],
+  ["Which season comes just before autumn?", "summer", ["winter", "spring", "autumn"], "It is the warm one."],
+  ["Which season is the coldest, with lots of snow?", "winter", ["summer", "spring", "autumn"], "Think of mittens and sleds."],
+  ["Leaves turn red and orange and fall in…", "autumn", ["spring", "summer", "winter"], "It is also called fall."],
+  ["What do we wear on a snowy day?", "a warm coat and mittens", ["a swimsuit", "sandals and shorts", "a sun hat only"], "Stay warm!"],
+  ["What do we wear on a hot summer day?", "shorts and a T-shirt", ["snow pants", "a thick scarf", "mittens"], "Wear light clothes."],
+  ["In spring, rain helps flowers to…", "grow", ["freeze", "vanish", "melt"], "Plants need water."],
+  ["Which is a fun summer activity?", "swimming at the beach", ["making a snowman", "sliding on ice", "shovelling snow"], "Summer is warm."],
+  ["Which is a fun winter activity?", "going sledding", ["swimming at the beach", "picking daisies", "raking leaves"], "You need snow."],
+  ["In autumn, many people rake…", "leaves", ["waves", "stars", "rainbows"], "Leaves fall to the ground."],
+  ["In spring, many baby animals are…", "born", ["frozen", "lost", "sleeping all day"], "New life begins."],
+  ["Which animal sleeps through the cold winter?", "a groundhog", ["a dolphin", "a goldfish", "a seagull"], "It sleeps in a burrow."],
+  ["Many birds fly away when it gets cold. Where do they go?", "to a warmer place", ["to the bottom of the sea", "into a cave", "to the moon"], "They look for food and warmth."],
+  ["What happens to snow in warm spring weather?", "It melts", ["It grows", "It sings", "It turns red"], "Warmth turns it to water."],
+  ["What do we see on trees in spring?", "new buds and leaves", ["thick ice", "falling snow", "bare branches only"], "Trees wake up."],
+  ["Which do we pick in autumn?", "apples", ["icicles", "snowflakes", "frost"], "Orchards are busy in autumn."],
+  ["How many seasons are there in a year?", "four", ["two", "three", "six"], "Spring, summer, autumn, winter."],
+  ["In summer, we keep cool by…", "playing in a sprinkler", ["wearing a snowsuit", "sitting by a fire", "drinking hot cocoa"], "Cool water helps on hot days."],
+  ["Why do we turn on lights earlier in winter?", "It gets dark sooner", ["The sun is too hot", "The days are longer", "Birds are louder"], "Winter has less daylight.", true],
+  ["Which stays the same in all four seasons?", "Day and night take turns", ["It always snows", "Leaves are always red", "It is always hot"], "Think of morning and bedtime.", true],
+  ["Why do many trees look bare in winter?", "Their leaves fell in autumn", ["They like the snow", "It rained too much", "Birds ate the leaves"], "Leaves drop before winter.", true],
+  ["A squirrel stores nuts in autumn. What is it ready for?", "the cold winter", ["a hot summer", "a beach day", "a spring fair"], "Food is hard to find in winter.", true],
+  ["After winter, the days get…", "longer", ["shorter", "darker", "snowier"], "The sun stays up more.", true],
+  ["Which list has only things for summer?", "sandals, sunhat, swimsuit", ["mittens, boots, scarf", "toque, parka, snow pants", "scarf, wool socks, toque"], "Pick the warm-weather things.", true],
+  ["In summer, the sun sets late. What does that mean?", "We have long, bright evenings", ["It is dark at four o’clock", "Nights are very long", "The sun never shows"], "There is more daylight.", true],
+];
+
+export const peFourSeasons1 = bankUnit({
+  id: "pe-four-seasons-1",
+  title: "Four Seasons",
+  emoji: "🍂",
+  blurb: "What each season is like",
+  parentNote:
+    "Practises describing each of the four seasons: the weather, what people wear and do, and what plants and animals do.",
+  standards: ["Earth and Space Science (ESS): Daily and Seasonal Changes", "describing the weather, clothes, activities and nature of each of the four seasons"],
+  items: SEASONS,
+});
+
+const NEEDS: Q[] = [
+  ["Which is a need?", "food", ["a toy robot", "a video game", "a candy bar"], "We cannot live without it."],
+  ["Which is a want?", "a new toy", ["water", "a warm home", "healthy food"], "We can live without it."],
+  ["We need water to…", "stay alive and healthy", ["build a robot", "win a prize", "play a game"], "Our bodies need water."],
+  ["A home gives us…", "shelter", ["a prize", "a game", "a trip"], "It keeps us safe and warm."],
+  ["A warm coat is a need when it is…", "snowy and cold", ["very hot", "sunny and warm", "bedtime"], "Cold weather needs warm clothes."],
+  ["Which is something all people need?", "clean water", ["a skateboard", "a drum set", "a cartoon"], "Everyone must drink."],
+  ["A want is something we…", "like to have but can live without", ["must have to stay alive", "find only in a store", "never ever get"], "Wants are nice extras."],
+  ["A need is something we…", "must have to live", ["only want on birthdays", "buy every week", "trade for a toy"], "We cannot go without it."],
+  ["Sam wants a puppy. Ana does not. What does this show?", "People want different things", ["Everyone wants the same", "Ana is wrong", "Sam needs a puppy"], "Wants are different for each person."],
+  ["It snows all winter. What does a family need?", "warm boots", ["sandals", "a beach towel", "a sun hat"], "Weather changes what we need."],
+  ["It is hot all year. Which does a family need more?", "light clothes", ["snow pants", "thick mittens", "a heavy scarf"], "Pick clothes for the weather."],
+  ["A family lives on a farm. Where might their vegetables come from?", "their own garden", ["a toy shop", "the sky", "a bookstore"], "Where we live changes how we get food."],
+  ["Money helps a family to…", "buy what they need", ["stop the rain", "slow down time", "grow taller"], "Money pays for things."],
+  ["Mom has a little money. She buys bread first. Why?", "Bread is a need", ["Bread is a toy", "Bread is a game", "Bread is a want"], "Food comes first."],
+  ["Who helps meet a family’s needs?", "people who work", ["only one worker", "no one", "only animals"], "Many workers help."],
+  ["You swap your apple for a friend’s pear. This is called…", "trading", ["racing", "painting", "hiding"], "Each of you gets something."],
+  ["Sharing food with a neighbour helps them meet their…", "needs", ["tricks", "jokes", "colours"], "Food is a need."],
+  ["Which one is a want, not a need?", "a sparkly hat", ["a bed to sleep in", "a glass of water", "a loaf of bread"], "A hat that sparkles is a nice extra."],
+  ["You have a little money. Which do you buy first?", "a coat for winter", ["a toy", "a game", "a sticker"], "Needs come before wants.", true],
+  ["You can only get one: a puppet or a ball. What do you do?", "choose the one you want most", ["take both", "take your friend’s", "grab them all"], "We make choices when we cannot have it all.", true],
+  ["How does weather affect a family’s food?", "Good weather helps crops grow", ["Weather has no part in food", "Rain makes food disappear", "Snow grows apples"], "Plants need sun and rain.", true],
+  ["Why can’t every family get the same things?", "Where they live and their money can differ", ["Everyone has the same money", "All stores are the same", "Nobody ever shares"], "Families are in different places.", true],
+  ["A storm blocks the road to the store. What may happen?", "The family may not get food right away", ["The storm brings new toys", "Food falls from the sky", "The family stops needing food"], "Where we live and the weather matter.", true],
+  ["A family with more money may…", "be able to buy more things", ["need less food", "not need water", "get taller"], "Money lets us buy.", true],
+  ["A school gives mittens to kids who need them. This is…", "sharing to meet a need", ["a trade for toys", "a game", "a want for fun"], "Mittens keep hands warm.", true],
+];
+
+export const peNeedsAndWants1 = bankUnit({
+  id: "pe-needs-and-wants-1",
+  title: "Needs and Wants",
+  emoji: "🛒",
+  blurb: "What we need and what we want",
+  parentNote: "Practises telling needs from wants, and what affects how families meet their needs and wants.",
+  standards: ["1.4.1; 1.4.2", "telling needs from wants and what affects how they are met"],
+  items: NEEDS,
+});
+
+const GOODS: Q[] = [
+  ["A good is a thing you can…", "touch and keep", ["only hear", "only wish for", "only dream about"], "Goods are things."],
+  ["A service is work someone does to…", "help other people", ["hide from you", "be a toy", "grow a tree"], "Services are jobs."],
+  ["Bread is a…", "good", ["service", "place", "month"], "You can hold bread."],
+  ["A dentist gives a…", "service", ["good", "toy", "shoe"], "A dentist helps with teeth."],
+  ["A bus driver gives people a ride. This is a…", "service", ["good", "loaf", "boot"], "It is work done for others."],
+  ["Which is a good?", "a pair of boots", ["a haircut", "a bus ride", "a doctor’s visit"], "You can hold boots."],
+  ["Which is a service?", "a visit to the doctor", ["a pair of boots", "a loaf of bread", "a bike"], "A doctor helps you."],
+  ["Apples are…", "goods", ["services", "songs", "jobs"], "Apples are things."],
+  ["A teacher helps you learn. That is a…", "service", ["good", "toy", "snack"], "Teaching is work for others."],
+  ["Which job gives a service?", "a firefighter", ["a toy maker", "a bread maker", "a coat maker"], "A firefighter helps people."],
+  ["Which job makes goods?", "a shoemaker", ["a nurse", "a bus driver", "a crossing guard"], "A shoemaker makes shoes."],
+  ["A community cannot make everything. So it…", "gets some things from other places", ["stops needing things", "uses only toys", "never trades"], "Communities depend on each other."],
+  ["Bananas do not grow in our cold winters. How do we get them?", "They come from warm places", ["They grow in the snow", "A baker makes them", "We dig them up"], "Trucks and ships bring them."],
+  ["Lobster is caught near our island. Where might it be sent?", "to other places to sell", ["nowhere at all", "to the moon", "to the sun"], "Goods travel to other communities."],
+  ["How do goods travel to a store?", "by truck, train, boat or plane", ["by dreams", "by sneezes", "by shadows"], "Vehicles carry goods."],
+  ["A farm sends potatoes to a far town. What is this?", "sharing goods with another place", ["a dentist visit", "a haircut", "a movie"], "Places help each other."],
+  ["Who brings goods from a farm to a store?", "a truck driver", ["a dentist", "a barber", "a lifeguard"], "They drive a truck."],
+  ["A baker buys wheat from a farmer. The farmer buys bread. This is…", "helping each other by trading", ["fighting", "hiding", "sleeping"], "Each one needs the other."],
+  ["Which is a good you can eat?", "an apple", ["a haircut", "a bus ride", "a lesson"], "You can hold and eat it."],
+  ["A town has a baker but no dentist. What can it do?", "ask a dentist from another town to help", ["close the bakery", "forget about teeth", "wait for one to appear"], "Communities help each other.", true],
+  ["Which pair has one good and one service?", "a loaf of bread and a haircut", ["a haircut and a bus ride", "a coat and a hat", "a shoe and a sock"], "One is a thing, one is work.", true],
+  ["A fisher catches fish. A trucker brings them to town. Who does the service?", "the trucker", ["the fish", "the boat", "the net"], "Moving goods is work for others.", true],
+  ["Which shows a town depending on others?", "A town buys oranges from far away", ["A town grows its own garden", "A child draws a picture", "A cat naps in the sun"], "Oranges do not grow in cold places.", true],
+  ["A small town has no toy factory. Where do its toys come from?", "a factory in another place", ["the clouds", "the town’s trees", "the snow"], "Toys are made elsewhere.", true],
+  ["Which service keeps swimmers safe?", "a lifeguard watching the water", ["a jar of jam", "a wool sweater", "a toy boat"], "A service is work, not a thing.", true],
+];
+
+export const peGoodsAndServices1 = bankUnit({
+  id: "pe-goods-and-services-1",
+  title: "Goods and Services",
+  emoji: "🚚",
+  blurb: "How communities share what they make",
+  parentNote:
+    "Introduces goods (things) and services (work people do), and how communities depend on each other to exchange them.",
+  standards: ["1.4.3", "how communities depend on each other for goods and services"],
+  items: GOODS,
+});
+
+const THEN_NOW: Q[] = [
+  ["Long ago, how did many people travel on land?", "by horse and cart", ["by jet", "by rocket", "by electric car"], "There were no cars yet."],
+  ["Which is a newer way to travel?", "an airplane", ["a horse and cart", "a canoe", "a sled with dogs"], "It flies."],
+  ["Long ago, many homes were heated by…", "a wood stove", ["a heat pump", "a remote", "a computer"], "People burned wood."],
+  ["Long ago, there was no electric light. People used…", "candles or oil lamps", ["light bulbs", "TV screens", "phones"], "They made light with flames."],
+  ["In many homes today, water comes out of a…", "tap", ["horse", "hat", "lamp"], "Turn it on."],
+  ["Long ago, people carried water home in…", "pails", ["wallets", "jet packs", "ovens"], "A pail holds water."],
+  ["Long ago, how did people send messages far away?", "by letter", ["by text message", "by video call", "by email"], "They wrote on paper."],
+  ["Today we can talk to far-away family on a…", "video call", ["wooden spoon", "paper lantern", "sled"], "You can see each other."],
+  ["Which was used first to get around?", "a horse and cart", ["a car", "a jet plane", "a rocket"], "It is much older."],
+  ["Old photos are often…", "black and white", ["in 3D", "with sound", "glowing"], "Early cameras had no colour."],
+  ["Who can tell you about the past of your community?", "an older person who lived there", ["a brand new toy", "a baby bird", "a paper bag"], "They remember."],
+  ["Which stays the same over time?", "families caring for each other", ["wood stoves in every home", "horse carts on every road", "letters only"], "Some things never change."],
+  ["Long ago, were there as many cars as today?", "No, there were far fewer", ["Yes, exactly the same", "There were more cars", "Every house had three"], "Cars came later."],
+  ["Long ago, much food was grown or made…", "close to home", ["in space", "by robots", "far away only"], "Families grew a lot of their own."],
+  ["Today, many families buy food at a…", "store", ["well", "barn only", "canoe"], "We shop for food."],
+  ["Which is older, a wood stove or a microwave?", "a wood stove", ["a microwave oven", "a phone", "a TV"], "People cooked on wood first."],
+  ["Which was used first to send news?", "a letter carried by horse", ["a text message", "a video call", "an email"], "Letters are very old.", true],
+  ["Long ago, towns traded by boat and cart. Today they also use…", "trucks and planes", ["wishes", "whistling", "shadows"], "Faster vehicles carry goods.", true],
+  ["Why can we visit far-away places faster now?", "We have faster vehicles", ["Roads are made of snow", "The ground is smaller", "Time is slower"], "Planes and cars are fast.", true],
+  ["A trip to the next town took a day. Now it takes…", "less time", ["more time", "no cars", "exactly a day"], "Cars are faster than carts.", true],
+  ["Which shows long ago first, then now?", "oil lamp, then light bulb", ["light bulb, then oil lamp", "phone, then letter", "car, then horse cart"], "The older one comes first.", true],
+  ["What is a good question to ask an older person?", "What was school like when you were young?", ["What will I eat for lunch?", "How tall will I grow?", "What is the moon made of?"], "Ask about their past.", true],
+  ["Old buildings still stand in many communities. What do they show?", "how people built long ago", ["what will be built next", "how to bake bread", "where the moon is"], "They are clues from the past.", true],
+  ["Letters, then phones, then video calls. What do they show?", "Ways to share messages have changed", ["Nothing ever changes", "Messages are gone", "People stopped talking"], "Each new way is quicker.", true],
+];
+
+export const peThenAndNow1 = bankUnit({
+  id: "pe-then-and-now-1",
+  title: "Then and Now",
+  emoji: "🕰️",
+  blurb: "How life in a community changes",
+  parentNote:
+    "Looks at how the way people live in their community has changed over time, and how contact between communities has changed.",
+  standards: ["1.3.2; 1.3.4", "how life in a community and links between communities change over time"],
+  items: THEN_NOW,
+});
+
+const PLACE: Q[] = [
+  ["Who have lived on this land for a very long time?", "Indigenous peoples", ["only visitors", "no one", "only ships"], "They were here first."],
+  ["Do Indigenous peoples live in communities here today?", "Yes, many do", ["No, never", "Only in books", "Only long ago"], "They are here now."],
+  ["The Mi’kmaw name for our island is…", "Epekwitk", ["Confederation", "Charlottetown", "Summerside"], "It is a Mi’kmaw word."],
+  ["The Mi’kmaq are…", "Indigenous people with a home on this island", ["visitors from space", "a type of fish", "a kind of boat"], "They are people."],
+  ["Why is the land important to Indigenous peoples?", "It is their home and they care for it", ["It is just empty space", "It is only for building", "It is for nobody"], "Home matters to everyone."],
+  ["How can we show respect for the land?", "keep it clean and care for it", ["throw trash on it", "dig up flowers", "break branches"], "Take care of it."],
+  ["How should we treat the first peoples of this land?", "with kindness and respect", ["by ignoring them", "by laughing", "by being rude"], "Everyone deserves respect."],
+  ["Today, Mi’kmaq children go to school and play like you. True or not?", "True, they live today", ["Not true, they are gone", "Not true, they are in books", "Not true, they are robots"], "Mi’kmaq people live here now.", true],
+  ["Mi’kmaq places have names in…", "the Mi’kmaw language", ["only a robot language", "no language", "only Latin"], "Many places have two names."],
+  ["Abegweit is a Mi’kmaq First Nation on the island. Who lives there?", "Mi’kmaq families", ["only tourists", "no one", "only robots"], "It is a community today."],
+  ["Which is a Mi’kmaq community on our island today?", "Lennox Island", ["Green Gables", "Borden-Carleton", "Cavendish"], "Families live there now."],
+  ["How has the island changed over time?", "There are many more roads and buildings", ["There are fewer roads", "There is no land left", "There are no animals"], "People built more.", true],
+  ["Who has cared for this island for a very long time?", "the Mi’kmaq", ["only today’s tourists", "only a few robots", "a school class"], "They have lived here a long time."],
+  ["What does respect mean?", "to treat with care and kindness", ["to ignore", "to laugh at", "to hide from"], "Be kind."],
+  ["At a park, how do we show respect for the land?", "stay on paths and take litter home", ["pick every flower", "chase all the animals", "leave trash"], "Leave it nice."],
+  ["Which action cares for the land?", "planting a tree", ["dropping litter", "trampling flowers", "dumping paint"], "Trees help the land."],
+  ["A friend’s family is Mi’kmaq. What can you do?", "learn and ask kindly", ["make fun of them", "tell them to leave", "guess rudely"], "Be curious and kind."],
+  ["A place can have more than one name. Why?", "Different peoples named it in their own languages", ["Names are mistakes", "Maps are magic", "Places change every day"], "People speak different languages.", true],
+  ["Why learn the names Indigenous peoples gave places?", "to honour the people and their language", ["to make maps longer", "to win a game", "to change the weather"], "Names matter to people.", true],
+  ["Indigenous peoples were here before Charlottetown was built. So…", "they lived here long before", ["they came after", "they built it last year", "they have never been here"], "They have a long history here.", true],
+  ["Which sentence is kind and true?", "Indigenous peoples live in our communities today.", ["Indigenous peoples are only in stories.", "Indigenous peoples are all the same.", "Indigenous peoples have gone away."], "People are alive today.", true],
+  ["There are many Indigenous Nations. Are they all the same?", "No, each has its own language and ways", ["Yes, exactly the same", "They have no ways", "They have only one name"], "Each Nation is different.", true],
+  ["Why do we say Mi’kmaq people live here, not lived here?", "They are still here today", ["It sounds shorter", "They are in a movie", "It is a rule for songs"], "They are part of our communities now.", true],
+  ["Mi’kmaq communities on the island today include…", "families, schools and workplaces", ["only empty fields", "only old stories", "only ships"], "Communities are alive today."],
+];
+
+export const peFirstPeoplesPlace1 = bankUnit({
+  id: "pe-first-peoples-place-1",
+  title: "People and Place",
+  emoji: "🌎",
+  blurb: "Indigenous peoples and the land",
+  parentNote:
+    "Introduces, with respect and in the present tense, that Indigenous peoples have a long relationship with the land and that this relationship has changed over time. Needs review with Indigenous partners before launch.",
+  standards: ["1.3.3", "how Indigenous peoples' relationship with place has changed over time"],
+  items: PLACE,
+});
