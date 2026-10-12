@@ -238,6 +238,15 @@ const SCHEMA = [
   )`,
   `CREATE INDEX IF NOT EXISTS payments_paid_at ON payments (paid_at)`,
   `CREATE INDEX IF NOT EXISTS payments_family ON payments (family_id)`,
+  // Why a subscription was cancelled, from the reason the parent picked in Stripe's billing portal. One row
+  // per subscription; the reason only, never the comment. family_id is cleared when a family deletes its account.
+  `CREATE TABLE IF NOT EXISTS cancellations (
+    subscription_id TEXT PRIMARY KEY,
+    family_id TEXT,
+    reason TEXT NOT NULL,
+    at INTEGER NOT NULL
+  )`,
+  `CREATE INDEX IF NOT EXISTS cancellations_at ON cancellations (at)`,
   // Values the admin sets in the panel, such as monthly running costs.
   `CREATE TABLE IF NOT EXISTS admin_settings (
     key TEXT PRIMARY KEY,

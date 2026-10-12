@@ -3,7 +3,7 @@
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { APP_NAME, SITE_HOST } from "@/lib/brand";
 import { devBilling, loadReferral, openBillingPortal, redeemCode, refreshAccount, resendVerification, startCheckout, type BillingInfo, type ReferralInfo } from "@/lib/account";
-import { FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, PRICES, trialDaysLeft, upgradeOffer } from "@/lib/plan";
+import { firstChargeAt, FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, PRICES, trialDaysLeft, upgradeOffer } from "@/lib/plan";
 import { inviteLink } from "@/lib/referral";
 import { useRoute } from "@/lib/router";
 import { useStore } from "@/lib/store";
@@ -31,6 +31,7 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
   const inAndroidApp = useSyncExternalStore(noSubscribe, isAndroidApp, () => false);
   const premium = isPremium(family);
   const paid = hasPaidPlan(family);
+  const chargeAt = firstChargeAt(family.trialEndsAt, Boolean(family.subscription));
   const subscribed = Boolean(family.subscription && ["active", "trialing", "past_due"].includes(family.subscription.status));
   const offer = upgradeOffer(family);
   const needsEmail = Boolean(family.account && family.account.verified === false);
@@ -86,7 +87,10 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
           </p>
           {codeAccess && !lifetime && <p className="text-ink-soft">Free access until {longDate(family.accessUntil!)}</p>}
           {subscribed && family.subscription?.currentPeriodEnd && (
-            <p className="text-ink-soft">Renews {longDate(family.subscription.currentPeriodEnd)}</p>
+            <p className="text-ink-soft">
+              {family.subscription.status === "trialing" ? "Free trial until" : "Renews"} {longDate(family.subscription.currentPeriodEnd)}
+              {family.subscription.status === "trialing" && ". Your first payment is that day."}
+            </p>
           )}
           {!premium && (
             <p className="mt-2 font-read text-ink-soft">
@@ -152,7 +156,9 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
               )}
               {offer === "trial" && (
                 <p className="font-read">
-                  Subscribing now keeps everything open. You&apos;re charged at checkout, the paid plan starts that day, and days left in the trial don&apos;t carry over.
+                  {chargeAt
+                    ? `Subscribing now keeps everything open and keeps your free days. Your card is saved at checkout and the first payment is on ${longDate(chargeAt)}, when the trial ends. Cancel before then and you pay nothing.`
+                    : "Subscribing now keeps everything open. You're charged at checkout and the paid plan starts that day."}
                 </p>
               )}
               {needsEmail && billing?.stripe && (

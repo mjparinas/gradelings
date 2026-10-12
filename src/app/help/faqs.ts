@@ -141,7 +141,7 @@ export const HELP: HelpSection[] = [
       },
       {
         q: "What if I subscribe during the free trial?",
-        a: "Open Parent area → Subscribe and choose monthly or yearly. You’re charged at checkout, the paid plan starts that day, and the days left in the trial don’t carry over.",
+        a: "Open Parent area → Subscribe and choose monthly or yearly. If you subscribe during the trial, you keep your free days: your card is saved at checkout and the first payment is taken when the trial ends. Cancel before then and you pay nothing.",
       },
       {
         q: "Can I switch between monthly and yearly?",

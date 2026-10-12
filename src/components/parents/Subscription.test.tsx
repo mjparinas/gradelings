@@ -44,6 +44,18 @@ describe("SubscriptionPage", () => {
     expect(screen.getByRole("link", { name: /Subscribe yearly/ })).toHaveAttribute("href", "#/account?next=subscription");
   });
 
+  it("charges at checkout when the trial has less than two days left", () => {
+    state.android = false;
+    state.family = {
+      plan: "trial",
+      trialEndsAt: Date.now() + 86_400_000,
+      updatedAt: 1,
+      account: { email: "parent@example.com", familyId: "fam", verified: true },
+    };
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    expect(screen.getByText(/charged at checkout and the paid plan starts that day/i)).toBeInTheDocument();
+  });
+
   it("offers yearly and monthly checkout during the trial once the email is confirmed", () => {
     state.android = false;
     state.family = {
@@ -55,7 +67,7 @@ describe("SubscriptionPage", () => {
     render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
     expect(screen.getByRole("button", { name: /Subscribe yearly/ })).toBeEnabled();
     expect(screen.getByRole("button", { name: /Subscribe monthly/ })).toBeEnabled();
-    expect(screen.getByText(/days left in the trial don't carry over/i)).toBeInTheDocument();
+    expect(screen.getByText(/keeps your free days.*first payment is on/i)).toBeInTheDocument();
   });
 
   it("tells Android parents to open the website, and shows no plan buttons", () => {

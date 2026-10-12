@@ -1,3 +1,4 @@
+import { cancelReason } from "@/lib/cancelReasons";
 import { query, run } from "@/server/db";
 import { familyPath, sendAlert } from "@/server/alerts";
 import { recordWebhook } from "@/server/monitor";
@@ -83,6 +84,15 @@ async function apply(event: StripeEvent, obj: Record<string, unknown>, now: numb
     const periodEnd = Number(obj.current_period_end ?? items[0]?.current_period_end ?? 0) * 1000 || null;
     const premium = ["active", "trialing", "past_due"].includes(status);
     const familyId = (obj.metadata as Record<string, string>)?.family_id;
+    // The reason a parent picked when cancelling in the billing portal. Kept even when the event is stale.
+    const reason = cancelReason((obj.cancellation_details as Record<string, unknown> | undefined)?.feedback);
+    if (reason && typeof obj.id === "string") {
+      await run(
+        `INSERT INTO cancellations (subscription_id, family_id, reason, at) VALUES (?, COALESCE(?, (SELECT id FROM families WHERE stripe_customer = ?)), ?, ?)
+         ON CONFLICT(subscription_id) DO UPDATE SET reason = excluded.reason`,
+        [obj.id, familyId ?? null, obj.customer as string, reason, now],
+      );
+    }
     if (await isStale(event, familyId, obj.customer as string)) return;
     const args = [status, interval, periodEnd, premium ? "premium" : "free", now, at];
     if (familyId) {

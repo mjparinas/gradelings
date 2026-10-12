@@ -37,7 +37,7 @@ Nothing here can be done from code; each step needs an account, a key or a domai
 6. **Use Play App Signing** when you create the app in the Play Console (it is the default). Google re-signs the app with its own key, so **the fingerprint that matters is Google's**: Play Console > your app > App integrity > App signing > "SHA-256 certificate fingerprint".
 7. **Set `ANDROID_CERT_SHA256`** in Vercel to that fingerprint. To also test an APK you built locally, add the upload key's fingerprint too (`keytool -list -v -keystore grademap-upload.keystore`), comma-separated. No redeploy of the build is needed: the route reads the variable on each request.
 8. **Check the link:** open `https://<domain>/.well-known/assetlinks.json` (it should list your fingerprint) and, with the app installed on a device, confirm there is no browser bar. If the bar shows, the fingerprint, package id or host doesn't match.
-9. **Fill in the Play listing:** screenshots (phone, 7" and 10" tablet), descriptions, the privacy policy URL (`/privacy/`), the Data safety form and the content rating questionnaire.
+9. **Fill in the Play listing:** screenshots (phone, 7" and 10" tablet), descriptions, the privacy policy URL (`/privacy/`), the Data safety form and the content rating questionnaire. The text and every form answer are drafted in `docs/PLAY_LISTING.md`.
 
 For later releases, raise `appVersionCode` and `appVersionName` in `android/twa-manifest.json`, run `npx @bubblewrap/cli build`, and upload the new bundle. Site changes need no new release.
 

@@ -315,6 +315,23 @@ describe("Stripe webhook", () => {
     const info = await (await me.GET(new Request("http://localhost/api/auth/me/", { headers: { cookie } }))).json();
     expect(info.family.plan).toBe("trial");
   });
+
+  it("keeps the reason a parent picked when cancelling, without their comment", async () => {
+    const { cookie } = await newAccount("leaving@example.com");
+    const familyId = (await dbm.query<{ family_id: string }>("SELECT family_id FROM parents WHERE email = ?", ["leaving@example.com"]))[0].family_id;
+    const payload = JSON.stringify({
+      id: "evt_leaving",
+      created: Math.floor(Date.now() / 1000),
+      type: "customer.subscription.updated",
+      data: { object: { id: "sub_leaving", status: "active", customer: "cus_leaving", metadata: { family_id: familyId }, cancel_at_period_end: true, cancellation_details: { reason: "cancellation_requested", feedback: "too_expensive", comment: "Ava loved it but money is tight" } } },
+    });
+    expect((await hook(payload, sign(payload))).status).toBe(200);
+    const rows = await dbm.query<Record<string, unknown>>("SELECT * FROM cancellations WHERE subscription_id = ?", ["sub_leaving"]);
+    expect(rows).toHaveLength(1);
+    expect(rows[0]).toMatchObject({ family_id: familyId, reason: "too_expensive" });
+    expect(JSON.stringify(rows[0])).not.toContain("Ava");
+    expect(cookie).toBeTruthy();
+  });
 });
 
 describe("signup race", () => {

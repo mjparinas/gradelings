@@ -46,6 +46,7 @@ vi.mock("@/lib/store", () => {
     useChildSettings: () => h.settings,
   };
 });
+vi.mock("./SaveProgress", () => ({ SaveProgress: () => null }));
 vi.mock("./plans", () => ({ makePlan: () => h.plan }));
 vi.mock("./useAllowed", () => ({ useAllowed: () => () => true }));
 vi.mock("@/content", () => ({ getUnitRef: (key: string) => (key === "2/math/add" ? h.unit : undefined) }));

@@ -2,7 +2,7 @@
 
 import { useSyncExternalStore } from "react";
 import { SITE_HOST } from "@/lib/brand";
-import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, trialDaysLeft, upgradeOffer } from "@/lib/plan";
+import { firstChargeAt, FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, trialDaysLeft, upgradeOffer } from "@/lib/plan";
 import { useRoute } from "@/lib/router";
 import { useStore } from "@/lib/store";
 import { isAndroidApp } from "@/lib/twa";
@@ -43,7 +43,13 @@ export function UpgradeBanner() {
           </>
         )}
       </p>
-      {offer === "trial" && <p className="mt-1 text-sm text-ink-soft">You&apos;re charged at checkout. The paid plan starts that day, and leftover trial days don&apos;t carry over.</p>}
+      {offer === "trial" && (
+        <p className="mt-1 text-sm text-ink-soft">
+          {firstChargeAt(family.trialEndsAt, Boolean(family.subscription))
+            ? "You keep your free days: the first payment is when the trial ends."
+            : "You're charged at checkout. The paid plan starts that day."}
+        </p>
+      )}
       <a href={href} className="btn btn-good mt-3 min-h-12 px-5 text-lg">
         {family.account ? "Subscribe" : "Create an account to subscribe"}
       </a>

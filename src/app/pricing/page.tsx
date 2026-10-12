@@ -56,7 +56,7 @@ export default function PricingPage() {
             <b>After the trial, the free plan stays.</b> The first {FREE_UNITS_PER_COURSE} units of every course remain open. Adventure, Review, Speed Run, Challenge, the arcade games and units {FREE_UNITS_PER_COURSE + 1} and up need the family plan. Progress is never deleted: it is waiting if you subscribe later.
           </li>
           <li>
-            <b>Subscribe when you’re ready, including during the trial.</b> Choose monthly or yearly in the Parent area. You pay at checkout, and your card is charged at the start of each period. If you subscribe during the trial, you’re charged right away, the paid plan starts that day, and the remaining trial days don’t carry over.
+            <b>Subscribe when you’re ready, including during the trial.</b> Choose monthly or yearly in the Parent area. You pay at checkout, and your card is charged at the start of each period. If you subscribe during the trial, you keep your free days: your card is saved at checkout and the first payment is taken when the trial ends.
           </li>
           <li>
             <b>It renews automatically</b> at the same price each month or year until you cancel. If we ever change the price, we’ll email you before it affects your plan, and you can cancel before then.

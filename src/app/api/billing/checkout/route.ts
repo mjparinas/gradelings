@@ -1,5 +1,6 @@
 import { appOrigin, error, getSession, json, sameOrigin } from "@/server/auth";
 import { pendingDiscount, stripeCouponFor } from "@/server/codes";
+import { firstChargeAt } from "@/lib/plan";
 import { getFamilyRow } from "@/server/family";
 import { createCheckout, stripeConfigured } from "@/server/stripe";
 
@@ -19,7 +20,9 @@ export async function POST(req: Request) {
   try {
     const discount = await pendingDiscount(family?.discount_code);
     const coupon = discount ? await stripeCouponFor(discount) : null;
-    const url = await createCheckout({ interval, familyId: session.familyId, email: session.email, customer: family?.stripe_customer, origin, coupon });
+    // Subscribing during the trial keeps the days left: the first charge is when the trial ends.
+    const startAt = family ? firstChargeAt(Number(family.trial_ends_at), Boolean(family.subscription_status)) : null;
+    const url = await createCheckout({ interval, familyId: session.familyId, email: session.email, customer: family?.stripe_customer, origin, coupon, firstChargeAt: startAt });
     return json({ url });
   } catch (e) {
     return error(502, (e as Error).message);
