@@ -4,7 +4,7 @@ import { useEffect, useState, useSyncExternalStore } from "react";
 import { APP_NAME } from "@/lib/brand";
 import { devBilling, loadReferral, openBillingPortal, redeemCode, refreshAccount, resendVerification, startCheckout, type BillingInfo, type ReferralInfo } from "@/lib/account";
 import { firstChargeAt, FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, PRICES, trialDaysLeft, upgradeOffer } from "@/lib/plan";
-import { inviteLink } from "@/lib/referral";
+import { inviteLink, rememberMyInvite } from "@/lib/referral";
 import { useRoute } from "@/lib/router";
 import { useStore } from "@/lib/store";
 import { isAndroidApp } from "@/lib/twa";
@@ -204,7 +204,10 @@ function ReferralPanel() {
   const [failed, setFailed] = useState(false);
   const [copied, setCopied] = useState(false);
   useEffect(() => {
-    void loadReferral().then(setInfo, () => setFailed(true));
+    void loadReferral().then((r) => {
+      setInfo(r);
+      rememberMyInvite(r.code);
+    }, () => setFailed(true));
   }, []);
   const link = info ? inviteLink(window.location.origin, info.code) : "";
   return (

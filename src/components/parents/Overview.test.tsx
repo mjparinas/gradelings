@@ -90,6 +90,20 @@ describe("Overview", () => {
     expect(milestones).toHaveTextContent("These reflect practice in the app, not a report-card mark.");
   });
 
+  it("shares a milestone as a card with no name on it, carrying the parent's invite code", async () => {
+    const writeText = vi.fn(async () => {});
+    Object.defineProperty(navigator, "clipboard", { value: { writeText }, configurable: true });
+    localStorage.setItem("gradelings.myInvite", "ABCD2345");
+    useStore.setState({ events: answers("a", Date.now() - DAY, 100, 100) });
+    render(<Overview />);
+    const milestones = screen.getByRole("heading", { name: "Ava's milestones" }).closest("section")!;
+    expect(milestones).toHaveTextContent("never your child's name");
+    await userEvent.click(within(milestones).getByRole("button", { name: "Share “100 questions right on the first try”" }));
+    expect(writeText).toHaveBeenCalledWith(`${window.location.origin}/milestone/count/right/100/?ref=ABCD2345`);
+    expect(within(milestones).getByRole("button", { name: "Share “100 questions right on the first try”" })).toHaveTextContent("Link copied!");
+    localStorage.clear();
+  });
+
   it("shows a card for each child with only that child's practice", () => {
     useStore.setState({ profiles: [kid("a", "Ava"), kid("b", "Ben")], events: answers("b", Date.now() - 60_000 * 10, 6, 6) });
     render(<Overview />);

@@ -56,7 +56,7 @@ describe("milestones", () => {
   it("marks days practised at 30, 100, 180, 365 and 730", () => {
     expect(byId(stats({ activeDays: 29 }), "days")).toBeUndefined();
     expect(byId(stats({ activeDays: 30 }), "days")).toEqual({
-      id: "days", icon: "📅", title: "30 days practised", detail: "Learning doesn't need to be every day. Sam has shown up on 30 different days.",
+      id: "days", icon: "📅", title: "30 days practised", detail: "Learning doesn't need to be every day. Sam has shown up on 30 different days.", share: { kind: "days", n: 30 },
     });
     expect([99, 100, 179, 180, 364, 365, 729, 730, 5000].map((n) => byId(stats({ activeDays: n }), "days")?.title)).toEqual([
       "30 days practised", "100 days practised", "100 days practised", "180 days practised", "180 days practised",
@@ -72,7 +72,7 @@ describe("milestones", () => {
   it("marks first-try answers at 100, 500, 1,000, 5,000, 10,000 and 25,000", () => {
     expect(byId(stats({ correct: 99 }), "right")).toBeUndefined();
     expect(byId(stats({ correct: 1234, answers: 2000 }), "right")).toEqual({
-      id: "right", icon: "✅", title: "1,000 questions right on the first try", detail: "1,234 in total, out of 2,000 answered.",
+      id: "right", icon: "✅", title: "1,000 questions right on the first try", detail: "1,234 in total, out of 2,000 answered.", share: { kind: "right", n: 1000 },
     });
     expect([100, 499, 500, 4999, 5000, 9999, 10000, 24999, 25000, 90000].map((n) => byId(stats({ correct: n }), "right")?.title.split(" ")[0])).toEqual([
       "100", "100", "500", "1,000", "5,000", "5,000", "10,000", "10,000", "25,000", "25,000",
@@ -83,11 +83,11 @@ describe("milestones", () => {
     expect(byId(stats({ units: [unit("a")] }), "grew")).toBeUndefined();
     expect(byId(stats({ units: [unit("a")] }), "kept")).toBeUndefined();
     expect(byId(stats({ units: [unit("a", { grew: true }), unit("b")] }), "grew")).toEqual({
-      id: "grew", icon: "🌿", title: "1 unit grown from Emerging to Proficient", detail: "Practice paid off: Sam stuck with topics that started out tricky.",
+      id: "grew", icon: "🌿", title: "1 unit grown from Emerging to Proficient", detail: "Practice paid off: Sam stuck with topics that started out tricky.", share: { kind: "grew", n: 1 },
     });
     expect(byId(stats({ units: [unit("a", { grew: true }), unit("b", { grew: true })] }), "grew")?.title).toBe("2 units grown from Emerging to Proficient");
     expect(byId(stats({ units: [unit("a", { kept: true }), unit("b")] }), "kept")).toEqual({
-      id: "kept", icon: "🧠", title: "Remembered 1 unit after a month away", detail: "Sam came back to old topics and was still Proficient.",
+      id: "kept", icon: "🧠", title: "Remembered 1 unit after a month away", detail: "Sam came back to old topics and was still Proficient.", share: { kind: "kept", n: 1 },
     });
     expect(byId(stats({ units: [unit("a", { kept: true }), unit("b", { kept: true })] }), "kept")?.title).toBe("Remembered 2 units after a month away");
   });
@@ -111,7 +111,7 @@ describe("milestones", () => {
   it("mentions a best streak from 14 days", () => {
     expect(byId(stats({ bestStreak: 13 }), "streak")).toBeUndefined();
     expect(byId(stats({ bestStreak: 14 }), "streak")).toEqual({
-      id: "streak", icon: "🔥", title: "Best streak: 14 days", detail: "A streak is a bonus, not a rule. Rest-day shields cover a missed day.",
+      id: "streak", icon: "🔥", title: "Best streak: 14 days", detail: "A streak is a bonus, not a rule. Rest-day shields cover a missed day.", share: { kind: "streak", n: 14 },
     });
   });
 

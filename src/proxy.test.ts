@@ -39,6 +39,12 @@ describe("shared report proxy", () => {
     expect(first.headers.get("x-middleware-request-content-security-policy")).toBe(policy);
   });
 
+  it("gives shared milestone cards a nonce too, since they are also rendered per request", async () => {
+    vi.stubEnv("NODE_ENV", "production");
+    const res = await proxy(new NextRequest("https://app.test/milestone/count/right/100/"));
+    expect(nonceOf(res.headers.get("Content-Security-Policy"))).toBeTruthy();
+  });
+
   it("leaves development to next.config's permissive policy", async () => {
     vi.stubEnv("NODE_ENV", "development");
     const res = await proxy(new NextRequest("https://app.test/shared/abc/"));

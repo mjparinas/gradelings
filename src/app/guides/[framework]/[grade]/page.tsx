@@ -11,6 +11,7 @@ import { APP_NAME } from "@/lib/brand";
 import { TRIAL_DAYS } from "@/lib/plan";
 import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
+import { ShareButton } from "@/components/site/ShareButton";
 
 export const dynamicParams = false;
 
@@ -89,6 +90,9 @@ export default async function GradeGuide({ params }: Props) {
         What your child learns in {label} in {f.shortName}
       </h1>
       <p className="mt-2 max-w-3xl font-read text-lg text-ink-soft">{note.overview}</p>
+      <div className="mt-3">
+        <ShareButton path={guidePath.grade(f, grade)} title={title} text={`What kids learn in ${label} in ${f.shortName}, and how to help at home:`} label="Share this guide" />
+      </div>
 
       <section aria-labelledby="subjects" className="mt-8">
         <h2 id="subjects" className="mb-3 text-2xl font-bold">

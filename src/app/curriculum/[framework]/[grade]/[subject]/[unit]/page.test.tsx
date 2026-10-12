@@ -39,6 +39,7 @@ describe("curriculum unit page", () => {
     expect(samples.map((s) => s.textContent)).toEqual(["Question 1", "Question 2", "Question 3", "Question 4", "Question 5", "Question 6"]);
     // The side panel's own call to action, besides the header's.
     expect(within(screen.getByRole("complementary")).getByRole("link", { name: "Play free" })).toHaveAttribute("href", "/play/");
+    expect(within(screen.getByRole("complementary")).getByRole("button", { name: /Share these questions/ })).toBeInTheDocument();
   });
 
   it("links the previous and next unit and the grade's other subjects", async () => {

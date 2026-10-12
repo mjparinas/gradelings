@@ -10,6 +10,7 @@ import { hashSeed, withSeed } from "@/content/random";
 import { GRADE_LABEL, getSubjectMeta, gradeSlug } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { JsonLd, absolute } from "@/lib/site";
+import { ShareButton } from "@/components/site/ShareButton";
 
 export const dynamicParams = false;
 
@@ -134,6 +135,7 @@ export default async function UnitPage({ params }: Props) {
           <p className="text-lg font-bold">Practise this unit</p>
           <p className="font-read text-ink-soft">New questions every time, with hints, read-aloud and rewards. Works offline.</p>
           <SubscribeActions trialLabel="Play free" className="w-full" />
+          <ShareButton path={path} title={`${unit.title}: ${GRADE_LABEL[grade]} ${name}`} text={`Can your ${GRADE_LABEL[grade]} child solve these? Free ${unit.title} practice:`} label="Share these questions" />
         </aside>
       </div>
 

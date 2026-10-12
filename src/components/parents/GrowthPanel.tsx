@@ -1,13 +1,16 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { getUnitRef } from "@/content";
+import { getCourse, getUnitRef } from "@/content";
 import { getFramework } from "@/content/frameworks";
 import { growthSince } from "@/lib/progressSince";
+import { LEVEL_WORDS, unitMilestonePath } from "@/lib/milestoneShare";
+import { gradeSlug } from "@/content/subjects";
 import type { Profile } from "@/lib/model";
 import { eventsFor, useDerived, useStore } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 import { Panel } from "./common";
+import { ShareMilestone } from "./ShareMilestone";
 
 const PERIODS = [30, 90, 180] as const;
 
@@ -18,7 +21,8 @@ export function GrowthPanel({ p }: { p: Profile }) {
   const now = useNow();
   const [days, setDays] = useState<number>(90);
   const g = useMemo(() => growthSince(eventsFor(events, p), now, days, d), [events, p, now, days, d]);
-  const scheme = getFramework(p.framework).scoringFor(p.grade);
+  const framework = getFramework(p.framework);
+  const scheme = framework.scoringFor(p.grade);
   if (!d.totals.answers) return null;
   const label = (level: number) => scheme.levels[level]?.label ?? "Not started";
   const gained = g.proficientNow - g.proficientThen;
@@ -60,8 +64,13 @@ export function GrowthPanel({ p }: { p: Profile }) {
             return (
               <li key={m.key} className="flex flex-wrap items-center justify-between gap-2 rounded-xl bg-paper px-3 py-2 text-sm">
                 <span className="font-semibold">{ref ? `${ref.unit.emoji} ${ref.unit.title}` : m.key}</span>
-                <span className="text-ink-soft">
-                  {label(m.from)} → <b>{label(m.to)}</b>
+                <span className="flex items-center gap-2 text-ink-soft">
+                  <span>
+                    {label(m.from)} → <b>{label(m.to)}</b>
+                  </span>
+                  {ref && LEVEL_WORDS[m.to] && getCourse(ref.course.grade, ref.course.subject, framework.id)?.units.some((u) => u.id === ref.unit.id && u.standards[framework.id]) && (
+                    <ShareMilestone path={unitMilestonePath(framework.slug, gradeSlug(ref.course.grade), ref.course.subject, ref.unit.id, m.to)} what={`${LEVEL_WORDS[m.to].verb} in ${ref.unit.title}`} />
+                  )}
                 </span>
               </li>
             );

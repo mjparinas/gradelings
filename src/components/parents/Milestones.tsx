@@ -3,10 +3,12 @@
 import { useMemo } from "react";
 import { derive } from "@/lib/derive";
 import { milestones } from "@/lib/milestones";
+import { countMilestonePath, countTitle } from "@/lib/milestoneShare";
 import type { Profile } from "@/lib/model";
 import { eventsFor, useDerived, useStore } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 import { Panel } from "./common";
+import { ShareMilestone } from "./ShareMilestone";
 
 /** Milestone cards for a child, such as "1 year of learning". Renders nothing until there's something to celebrate. */
 export function Milestones({ p, limit }: { p: Profile; limit?: number }) {
@@ -26,14 +28,15 @@ export function Milestones({ p, limit }: { p: Profile; limit?: number }) {
         {shown.map((m) => (
           <li key={m.id} className="flex items-start gap-3 rounded-xl bg-paper p-3">
             <span className="text-3xl" aria-hidden="true">{m.icon}</span>
-            <span>
+            <span className="flex-1">
               <span className="block font-bold">{m.title}</span>
               <span className="block text-sm text-ink-soft">{m.detail}</span>
             </span>
+            {m.share && countTitle(m.share.kind, m.share.n) && <ShareMilestone path={countMilestonePath(m.share.kind, m.share.n)} what={countTitle(m.share.kind, m.share.n)!} />}
           </li>
         ))}
       </ul>
-      <p className="mt-3 text-xs text-ink-soft">These reflect practice in the app, not a report-card mark. Your child&apos;s teacher decides proficiency.</p>
+      <p className="mt-3 text-xs text-ink-soft">These reflect practice in the app, not a report-card mark. Your child&apos;s teacher decides proficiency. A shared card shows the milestone only, never your child&apos;s name.</p>
     </Panel>
   );
 }

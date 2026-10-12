@@ -203,6 +203,29 @@ describe("refreshAccount", () => {
     expect(await account.refreshAccount()).toBeNull();
     expect(useStore.getState().family.account).toBeUndefined();
   });
+
+  it("remembers the parent's own invite code for share links, and forgets it when signed out", async () => {
+    routes["GET /api/auth/me/"] = () => json({ family: signedIn, billing: { stripe: true, dev: false } });
+    routes["GET /api/referral/"] = () => json({ code: "ABCD2345", joined: 0, rewarded: 0, monthsEarned: 0, maxMonths: 6, bonusDays: 30 });
+    await account.refreshAccount();
+    await vi.waitFor(() => expect(storage.get("gradelings.myInvite")).toBe("ABCD2345"));
+    // Known now, so it isn't asked for again.
+    await account.refreshAccount();
+    expect(calls.filter((c) => c.url === "/api/referral/")).toHaveLength(1);
+    routes["GET /api/auth/me/"] = () => json({}, 401);
+    await account.refreshAccount();
+    expect(storage.has("gradelings.myInvite")).toBe(false);
+    storage.set("gradelings.myInvite", "ABCD2345");
+    routes["POST /api/auth/logout/"] = () => json({});
+    await account.signOut();
+    expect(storage.has("gradelings.myInvite")).toBe(false);
+  });
+
+  it("never asks for an invite code for a class student account", async () => {
+    routes["GET /api/auth/me/"] = () => json({ family: family({ account: { email: "", familyId: "s", student: true }, updatedAt: 99 }), billing: { stripe: false, dev: false } });
+    await account.refreshAccount();
+    expect(calls.map((c) => c.url)).toEqual(["/api/auth/me/"]);
+  });
 });
 
 describe("billing and codes", () => {

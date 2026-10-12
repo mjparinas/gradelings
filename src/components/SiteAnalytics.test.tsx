@@ -38,6 +38,7 @@ describe("SiteAnalytics", () => {
     "https://gradelings.com/play",
     "https://gradelings.com/parents/#/reports",
     "https://gradelings.com/shared/abc123/",
+    "https://gradelings.com/milestone/unit/bc/grade-4/math/fractions/2/",
     "https://gradelings.com/account/reset/?token=x",
     "https://gradelings.com/api/sync/",
   ])("never measures the private page %s", (url) => {

@@ -63,6 +63,14 @@ describe("printable practice sheet", () => {
     expect(screen.getByRole("link", { name: "Try it free" })).toHaveAttribute("href", "/play/");
   });
 
+  it("can be shared, or saved to Pinterest with its tall image", async () => {
+    await sheet("bc", "grade-2", "language");
+    expect(screen.getByRole("button", { name: /Share this sheet/ })).toBeInTheDocument();
+    const pin = new URL(screen.getByRole("link", { name: /Save to Pinterest/ }).getAttribute("href")!);
+    expect(pin.searchParams.get("media")).toMatch(/\/guides\/bc\/grade-2\/language\/worksheet\/pin\.png$/);
+    expect(pin.searchParams.get("url")).toMatch(/\/guides\/bc\/grade-2\/language\/worksheet\/$/);
+  });
+
   it("keeps the names of languages capitalized mid-sentence", async () => {
     await sheet("bc", "grade-5", "immersion");
     expect(screen.getByRole("link", { name: "See all French Immersion units" })).toHaveAttribute("href", "/curriculum/bc/grade-5/immersion/");

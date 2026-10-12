@@ -7,6 +7,7 @@ import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle
 import { FRAMEWORKS } from "@/content/frameworks";
 import { GRADE_LABEL, getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
 import { JsonLd, absolute } from "@/lib/site";
+import { ShareButton } from "@/components/site/ShareButton";
 
 export const dynamicParams = false;
 
@@ -67,6 +68,9 @@ export default async function SubjectPage({ params }: PageProps<"/curriculum/[fr
         {course.units.length} units matched to the {f.curriculumName}
         {subjectTitle(course.subject, grade) !== name ? `. Kids see this subject as “${subjectTitle(course.subject, grade)}”.` : "."}
       </p>
+      <div className="mt-3">
+        <ShareButton path={curriculumPath.subject(f, grade, course.subject)} title={`${GRADE_LABEL[grade]} ${name} (${f.shortName})`} text={`Free ${GRADE_LABEL[grade]} ${name} practice, matched to the ${f.curriculumName}:`} />
+      </div>
 
       {bigIdeas.length > 0 && (
         <section aria-labelledby="big-ideas" className="mt-6 rounded-3xl p-5 sm:p-6" style={{ background: meta.colourSoft }}>

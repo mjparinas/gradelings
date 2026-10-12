@@ -7,8 +7,8 @@ import { maintenanceOn } from "@/server/maintenance";
 // Two jobs:
 // - Maintenance mode (switched in the admin panel): every page and API route except the home page, the admin
 //   panel and a few machine endpoints answers 503 with a short message (src/lib/maintenance.ts).
-// - Shared reports are rendered on every request, so they can't be hashed at build time like the
-//   other pages. Next.js reads the nonce from the request's policy and puts it on its own scripts.
+// - Shared reports and shared milestone cards are rendered on every request, so they can't be hashed
+//   at build time like the other pages. Next.js reads the nonce from the request's policy and puts it on its own scripts.
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   if (!openDuringMaintenance(pathname) && (await maintenanceOn())) {
@@ -16,7 +16,7 @@ export async function proxy(request: NextRequest) {
     if (pathname.startsWith("/api/")) return NextResponse.json({ error: MAINTENANCE_MESSAGE }, { status: 503, headers });
     return new NextResponse(maintenancePage(APP_NAME), { status: 503, headers: { ...headers, "Content-Type": "text/html; charset=utf-8" } });
   }
-  if (!pathname.startsWith("/shared/")) return NextResponse.next();
+  if (!pathname.startsWith("/shared/") && !pathname.startsWith("/milestone/")) return NextResponse.next();
   if (process.env.NODE_ENV === "development") return NextResponse.next(); // next.config.ts sets a dev policy
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
   const policy = noncePolicy(nonce);

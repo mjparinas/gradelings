@@ -29,6 +29,7 @@ import { hasTestCoins } from "./remoteFlags";
 import { getRoomItem, isRoomOwned } from "./room";
 import { getItem, isUnlocked, STARTER } from "./shop";
 import { setQuietCheck, setSoundCheck } from "./sound";
+import { forgetMyInvite } from "./referral";
 import { getTrophy, newlyEarned, TIER_STYLE } from "./trophies";
 
 export interface Toast {
@@ -430,6 +431,7 @@ export const useStore = create<State>()((set, get) => ({
 
   wipeDevice: async () => {
     await localdb.clearAll();
+    forgetMyInvite();
     deriveCache.clear();
     set({
       profiles: [],

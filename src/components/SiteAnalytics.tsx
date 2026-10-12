@@ -4,8 +4,8 @@ import { Analytics, type BeforeSendEvent } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Cookieless page-view counts and page-speed measurements for the public site only. The kids' app, the parent area and
-// shared reports are never measured, so nothing a child does reaches analytics.
-const PRIVATE_PREFIXES = ["/play", "/parents", "/shared", "/account", "/api"];
+// shared reports and shared milestones are never measured, so nothing a child does reaches analytics.
+const PRIVATE_PREFIXES = ["/play", "/parents", "/shared", "/milestone", "/account", "/api"];
 
 function isPublic(url: string): boolean {
   const { pathname } = new URL(url, "https://example.invalid");

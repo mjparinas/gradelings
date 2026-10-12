@@ -11,6 +11,7 @@ import { guidesFor } from "@/content/guides";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { APP_NAME } from "@/lib/brand";
 import { JsonLd } from "@/lib/site";
+import { ShareButton } from "@/components/site/ShareButton";
 
 export const dynamicParams = false;
 
@@ -48,6 +49,7 @@ export default async function ReportCardsPage({ params }: PageProps<"/report-car
               {APP_NAME} tracks every unit on the same four levels, so you know exactly which skills are Proficient and which need a little more practice before the next report card.
             </p>
             <SubscribeActions className="w-full" />
+            <ShareButton path={`/report-cards/${f.slug}/`} title={`${f.shortName} report cards, explained`} text={`What the ${f.shortName} report card levels mean, in plain words:`} label="Share this explainer" />
             <Link href={curriculumPath.framework(f)} className="font-semibold text-[#2f6fd6] underline">
               Browse the {f.curriculumName}
             </Link>

@@ -1,7 +1,7 @@
 "use client";
 
 import type { FamilyInfo } from "./model";
-import { clearReferralCode, savedReferralCode } from "./referral";
+import { clearReferralCode, forgetMyInvite, myInviteCode, rememberMyInvite, savedReferralCode } from "./referral";
 import { useStore } from "./store";
 import { syncNow } from "./sync";
 
@@ -87,6 +87,7 @@ export async function signOut() {
   await post("/api/auth/logout/").catch(() => {});
   useStore.getState().setFamily({ account: undefined }, true);
   useStore.getState().setSync({ status: "signed-out" });
+  forgetMyInvite();
   useStore.getState().mergeRemote({ events: [], profiles: [], settings: [], classwork: [] }); // Teacher work is for linked accounts only.
 }
 
@@ -100,11 +101,14 @@ export async function refreshAccount(): Promise<BillingInfo | null> {
     const res = await fetch("/api/auth/me/", { credentials: "same-origin" });
     if (res.status === 401) {
       if (useStore.getState().family.account) useStore.getState().setFamily({ account: undefined }, true);
+      forgetMyInvite();
       return null;
     }
     if (!res.ok) return null;
     const data = (await res.json()) as { family: FamilyInfo; billing: BillingInfo };
     adopt(data.family);
+    // Remember the parent's invite code once, so public pages' Share buttons can carry it.
+    if (data.family.account && !data.family.account.student && !myInviteCode()) void loadReferral().then((r) => rememberMyInvite(r.code), () => {});
     return data.billing;
   } catch {
     return null;
