@@ -7,10 +7,12 @@
 //   files it has loaded ("cache-urls") so they're kept even if they arrived before
 //   this worker took control of the page.
 // - /api/ is never cached: progress is saved in IndexedDB and synced by the app.
+// - Shared report links (/shared/{token}/) and anything sent with no-store are never cached, so a
+//   report stops opening on a device once its link is revoked or expires.
 // - The Piper voice (/piper/{version}/, /piper-worker.js) lives in its own cache, which only
 //   the app's voice download fills (src/lib/piper.ts), and which is kept across updates
 //   because it is about 100 MB.
-const CACHE = "grademap-v3";
+const CACHE = "grademap-v4";
 const PIPER_CACHE = "grademap-piper";
 const SHELLS = ["/play/", "/parents/", "/"];
 const EXTRAS = ["/manifest.webmanifest", "/icon.svg", "/icon-192.png", "/icon-512.png"];
@@ -61,7 +63,7 @@ self.addEventListener("message", (event) => {
 });
 
 function store(request, response) {
-  if (response.ok && response.type === "basic") {
+  if (response.ok && response.type === "basic" && !/no-store/i.test(response.headers.get("cache-control") || "")) {
     const copy = response.clone();
     caches.open(CACHE).then((cache) => cache.put(request, copy));
   }
@@ -78,7 +80,7 @@ self.addEventListener("fetch", (event) => {
   const { request } = event;
   const url = new URL(request.url);
   if (request.method !== "GET" || url.origin !== self.location.origin) return;
-  if (url.pathname.startsWith("/api/")) return;
+  if (url.pathname.startsWith("/api/") || url.pathname.startsWith("/shared/")) return;
   // Client-side navigation data. If it fails offline, Next falls back to a full
   // page load, which the navigation branch below serves from the cache.
   if (request.headers.get("RSC") || url.searchParams.has("_rsc")) return;

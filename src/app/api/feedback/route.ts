@@ -1,4 +1,4 @@
-import { clientIp, error, getSession, json, newId, rateLimited, sameOrigin } from "@/server/auth";
+import { appOrigin, clientIp, error, getSession, json, newId, rateLimited, sameOrigin } from "@/server/auth";
 import { run } from "@/server/db";
 import { sendEmail } from "@/server/email";
 import { questionReportEmail } from "@/server/emailTemplates";
@@ -27,6 +27,6 @@ export async function POST(req: Request) {
     reason.id,
     Date.now(),
   ]);
-  await sendEmail(questionReportEmail(CONTACT_EMAIL, { unitKey: body.unitKey, prompt, reason: reason.label }, new URL(req.url).origin));
+  await sendEmail(questionReportEmail(CONTACT_EMAIL, { unitKey: body.unitKey, prompt, reason: reason.label }, appOrigin(req)));
   return json({ ok: true });
 }

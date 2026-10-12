@@ -256,9 +256,31 @@ describe("sync", () => {
     expect(extra.profiles.map((p: { id: string }) => p.id).sort()).toEqual(ids);
   });
 
+  it("refuses a child with no real grade, and cleans the name and province", async () => {
+    const { cookie } = await newAccount("odd@example.com");
+    const res = await (
+      await sync.POST(
+        post("/api/sync/", { profiles: [{ ...profile("odd-a"), grade: "zz" }, { ...profile("odd-b"), name: " Ma\u0000ya\r\n ", framework: "nowhere" }] }, cookie),
+      )
+    ).json();
+    expect(res.profiles.map((p: { id: string }) => p.id)).toEqual(["odd-b"]);
+    expect(res.profiles[0].name).toBe("Maya");
+    expect(res.profiles[0].framework).toBeUndefined();
+  });
+
+  it("stores a limited number of child records, deleted ones included", async () => {
+    const { cookie } = await newAccount("churn@example.com");
+    for (let round = 0; round < 4; round++) {
+      const batch = Array.from({ length: 20 }, (_, i) => ({ ...profile(`churn-${round}-${i}`), deleted: true }));
+      await sync.POST(post("/api/sync/", { profiles: batch }, cookie));
+    }
+    const familyId = (await dbm.query<{ family_id: string }>("SELECT family_id FROM parents WHERE email = ?", ["churn@example.com"]))[0].family_id;
+    expect(Number((await dbm.query<{ n: number }>("SELECT COUNT(*) AS n FROM profiles WHERE family_id = ?", [familyId]))[0].n)).toBe(50);
+  });
+
   it("skips oversized records instead of storing half a document", async () => {
     const { cookie } = await newAccount("big@example.com");
-    const big = { id: "p-big", name: "x".repeat(5000), grade: "1", avatar: "ollie", colour: "#fff", updatedAt: Date.now() };
+    const big = { id: "p-big", name: "Big", room: { wall: "x".repeat(5000) }, grade: "1", avatar: "ollie", colour: "#fff", updatedAt: Date.now() };
     const res = await (await sync.POST(post("/api/sync/", { profiles: [big] }, cookie))).json();
     expect(res.profiles).toEqual([]);
   });
@@ -285,7 +307,7 @@ describe("Stripe webhook", () => {
       const payload = JSON.stringify({ id, created, type, data: { object } });
       expect((await hook(payload, sign(payload))).status).toBe(200);
     };
-    await send("checkout.session.completed", { client_reference_id: familyId, customer: "cus_1", payment_status: "paid" });
+    await send("checkout.session.completed", { client_reference_id: familyId, customer: "cus_1", payment_status: "paid", mode: "subscription", subscription: "sub_1" });
     await send("customer.subscription.updated", { status: "active", customer: "cus_1", current_period_end: 2_000_000_000, items: { data: [{ price: { recurring: { interval: "year" } } }] } });
     let info = await (await me.GET(new Request("http://localhost/api/auth/me/", { headers: { cookie } }))).json();
     expect(info.family.plan).toBe("premium");
@@ -331,6 +353,16 @@ describe("Stripe webhook", () => {
     expect(rows[0]).toMatchObject({ family_id: familyId, reason: "too_expensive" });
     expect(JSON.stringify(rows[0])).not.toContain("Ava");
     expect(cookie).toBeTruthy();
+  });
+
+  it("does not grant premium for a paid checkout that isn't a subscription", async () => {
+    // A Payment Link on the same Stripe account lets the buyer set client_reference_id themselves.
+    const { cookie } = await newAccount("oneoff@example.com");
+    const familyId = (await dbm.query<{ family_id: string }>("SELECT family_id FROM parents WHERE email = ?", ["oneoff@example.com"]))[0].family_id;
+    const payload = JSON.stringify({ id: "evt_oneoff", created: Math.floor(Date.now() / 1000), type: "checkout.session.completed", data: { object: { client_reference_id: familyId, customer: "cus_o", payment_status: "paid", mode: "payment" } } });
+    expect((await hook(payload, sign(payload))).status).toBe(200);
+    const info = await (await me.GET(new Request("http://localhost/api/auth/me/", { headers: { cookie } }))).json();
+    expect(info.family.plan).toBe("trial");
   });
 });
 

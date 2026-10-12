@@ -7,6 +7,7 @@ import { refreshAccount, type BillingInfo } from "@/lib/account";
 import { hasPaidPlan, isPremium, trialDaysLeft } from "@/lib/plan";
 import { useRoute } from "@/lib/router";
 import { useProfiles, useReady, useStore } from "@/lib/store";
+import { VoicePreload } from "@/components/VoicePreload";
 import { startBackgroundSync, syncNow } from "@/lib/sync";
 import { isAndroidApp } from "@/lib/twa";
 import { ContentGate } from "../ContentGate";
@@ -194,6 +195,7 @@ export function ParentApp() {
   // Reports need each child's lessons; settings and billing still work if a download fails.
   return (
     <ContentGate targets={profiles.map((p) => ({ grade: p.grade, framework: p.framework }))} optional>
+      <VoicePreload />
       <Shell active={tab}>{page}</Shell>
     </ContentGate>
   );

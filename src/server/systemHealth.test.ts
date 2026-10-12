@@ -77,7 +77,7 @@ function req(path: string, method = "GET", body?: string, headers: Record<string
 async function account(address: string) {
   const res = await signup.POST(req("/api/auth/signup/", "POST", JSON.stringify({ email: address, password: "correct horse" })));
   expect(res.status).toBe(200);
-  await dbm.run("UPDATE parents SET email_verified_at = ? WHERE email = ?", [Date.now(), address]);
+  await dbm.run("UPDATE parents SET email_verified_at = ? WHERE email = ?", [Date.now() - 60_000, address]);
   return (res.headers.get("set-cookie") ?? "").split(";")[0];
 }
 

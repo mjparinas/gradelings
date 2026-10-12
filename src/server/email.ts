@@ -37,6 +37,8 @@ export function outbox(): SentEmail[] {
 }
 
 export async function sendEmail(email: Email): Promise<{ ok: boolean; skipped?: boolean }> {
+  // A subject is one line: names, class names and inbound subjects end up in it.
+  email = { ...email, subject: email.subject.replace(/[\u0000-\u001f\u007f]+/g, " ").replace(/\s+/g, " ").trim() };
   const result = await deliver(email);
   if (email.kind) {
     // The log never stops an email: it is written after sending, and a failure only shows in the server log.

@@ -67,6 +67,8 @@ describe("classroom mode", () => {
     expect((await post({ name: "Room 3", grade: "2", framework: "nowhere" })).status).toBe(400);
     const { class: cls } = await (await post({ name: "Room 3", grade: "2", framework: "ca-on" })).json();
     expect(cls.framework).toBe("ca-on");
+    const { class: tidy } = await (await post({ name: " Room\r\n4\u0000 ", grade: "2" })).json();
+    expect(tidy.name).toBe("Room 4");
     const assign = (unitKey: string) => assignments.POST(req("/api/classes/assignments/", "POST", { classId: cls.id, unitKey }, teacher));
     expect((await assign("2/math/numbers-to-200")).status).toBe(200);
     expect((await assign("2/math/tens-and-ones")).status).toBe(400);

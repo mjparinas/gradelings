@@ -23,7 +23,7 @@ export const FLAGS: readonly FlagDef[] = [
   { key: "sticker-book", label: "Sticker Book", description: "The Sticker Book tile and screen.", scope: "app", defaultOn: true },
   { key: "my-room", label: "My Room", description: "The My Room tile and screen.", scope: "app", defaultOn: true },
   { key: "shop", label: "Shop", description: "The pretend coin shop.", scope: "app", defaultOn: true },
-  { key: "piper-auto-download", label: "Offline voice download", description: "Downloads the offline natural voice in the background the first time read-aloud is used on a device (not on mobile data). Off: parents can still download it in Settings.", scope: "app", defaultOn: true },
+  { key: "piper-auto-download", label: "Offline voice download", description: "Downloads the offline natural voice in the background when the app opens, for children with read-aloud on (not on mobile data). Off: parents can still download it in Settings.", scope: "app", defaultOn: true },
   { key: "secrets", label: "Easter eggs", description: "The hidden surprises: the Konami code, secret words and the moose on the home screen.", scope: "app", defaultOn: true },
   { key: "save-progress-card", label: "Save progress card", description: "Asks a grown-up to make a free account at the end of a lesson on a device with no account (after the first lesson, then daily in the trial's last week).", scope: "app", defaultOn: true },
   { key: "signups", label: "New sign-ups", description: "Creating new parent and teacher accounts. Turn off to pause sign-ups.", scope: "server", defaultOn: true },

@@ -185,10 +185,10 @@ describe("VoicePicker", () => {
     expect(h.preview).not.toHaveBeenCalled();
   });
 
-  it("says the offline voice downloads by itself while it isn't here yet", () => {
+  it("says when the offline voice downloads while it isn't here yet", () => {
     h.piper = { enabled: true, voices: { en: { state: "missing" }, fr: { state: "missing" } } };
     render(<VoicePicker />);
     expect(screen.getByText(/Reading with:/).parentElement).toHaveTextContent("Reading with: Aria (sounds natural)");
-    expect(screen.getByText(/a natural voice that works offline, downloads by itself/)).toBeInTheDocument();
+    expect(screen.getByText(/a natural voice that works offline, downloads by itself once a child has/)).toBeInTheDocument();
   });
 });

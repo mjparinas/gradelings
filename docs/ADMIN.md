@@ -11,7 +11,7 @@ ADMIN_EMAILS=owner@example.com
 ```
 
 1. Sign up at `/play/` or `/teachers/` with that email and confirm it from the email link.
-2. Open `/admin/` and sign in.
+2. Open `/admin/` and sign in. Only a sign-in made after the email was confirmed counts: if you were already signed in from signing up, sign out and back in once. This stops someone who signed up first with an admin's address from becoming admin when its owner clicks the confirmation link.
 
 The list lives in the environment, never the database, so nothing a request writes can make someone an admin. Without `ADMIN_EMAILS` the panel and every `/api/admin/*` route answer 404 (except `/api/admin/codes/`, which still accepts `ADMIN_TOKEN` for scripts, see `docs/CODES.md`). Every change made in the panel is written to `admin_audit` with the admin's email and shown under **Log**.
 

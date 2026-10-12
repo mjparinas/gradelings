@@ -48,7 +48,7 @@ let ip = 0;
 const req = (path: string, cookie?: string) => new Request(`http://localhost${path}`, { headers: { host: "localhost", "x-forwarded-for": `10.6.0.${++ip % 250}`, ...(cookie ? { cookie } : {}) } });
 async function account(address: string) {
   const res = await signup.POST(new Request("http://localhost/api/auth/signup/", { method: "POST", headers: { "content-type": "application/json", host: "localhost", "x-forwarded-for": `10.6.1.${++ip % 250}` }, body: JSON.stringify({ email: address, password: "correct horse" }) }));
-  await dbm.run("UPDATE parents SET email_verified_at = ? WHERE email = ?", [Date.now(), address]);
+  await dbm.run("UPDATE parents SET email_verified_at = ? WHERE email = ?", [Date.now() - 60_000, address]);
   return (res.headers.get("set-cookie") ?? "").split(";")[0];
 }
 

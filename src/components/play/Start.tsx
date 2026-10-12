@@ -75,7 +75,7 @@ export function ClassSignIn({ onBack }: { onBack: () => void }) {
   const [studentCode, setStudentCode] = useState("");
   const [err, setErr] = useState("");
   const [busy, setBusy] = useState(false);
-  const clean = (v: string) => v.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 6);
+  const clean = (v: string, length: number) => v.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, length);
   const field = "mt-1 min-h-16 w-full rounded-2xl border-2 border-line bg-white px-4 text-center font-mono text-3xl font-bold uppercase tracking-[0.3em]";
   return (
     <Page className="items-center justify-center gap-5 text-center">
@@ -97,18 +97,18 @@ export function ClassSignIn({ onBack }: { onBack: () => void }) {
       >
         <label className="block text-lg font-bold">
           Class code
-          <input className={field} value={classCode} onChange={(e) => setClassCode(clean(e.target.value))} autoComplete="off" autoCapitalize="characters" spellCheck={false} inputMode="text" maxLength={6} required />
+          <input className={field} value={classCode} onChange={(e) => setClassCode(clean(e.target.value, 6))} autoComplete="off" autoCapitalize="characters" spellCheck={false} inputMode="text" maxLength={6} required />
         </label>
         <label className="block text-lg font-bold">
           My code
-          <input className={field} value={studentCode} onChange={(e) => setStudentCode(clean(e.target.value))} autoComplete="off" autoCapitalize="characters" spellCheck={false} inputMode="text" maxLength={6} required />
+          <input className={field} value={studentCode} onChange={(e) => setStudentCode(clean(e.target.value, 8))} autoComplete="off" autoCapitalize="characters" spellCheck={false} inputMode="text" maxLength={8} required />
         </label>
         {err && (
           <p role="alert" className="rounded-2xl bg-white p-3 text-center font-read text-lg text-nudge-dark">
             {err}
           </p>
         )}
-        <button className="btn btn-good min-h-16 text-2xl" disabled={busy || classCode.length < 6 || studentCode.length < 6}>
+        <button className="btn btn-good min-h-16 text-2xl" disabled={busy || classCode.length < 6 || studentCode.length < 8}>
           {busy ? "Signing in…" : "Let's go! →"}
         </button>
       </form>

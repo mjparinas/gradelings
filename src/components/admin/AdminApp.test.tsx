@@ -94,6 +94,8 @@ describe("AdminApp", () => {
     const header = screen.getByRole("banner");
     expect(within(header).getByText("Admin")).toHaveClass("rounded-full");
     expect(header.textContent!.startsWith(APP_NAME)).toBe(true);
+    // The wordmark goes to the homepage.
+    expect(within(header).getByRole("link", { name: APP_NAME })).toHaveAttribute("href", "/");
     await user.click(screen.getByRole("button", { name: "Flags" }));
     await user.click(await screen.findByRole("switch"));
     expect(sent("/api/admin/flags/", "PUT")).toEqual({ key: "shop", enabled: false, rollout: 100 });
