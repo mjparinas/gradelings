@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { breadcrumbJsonLd } from "@/components/site/jsonld";
+import { appJsonLd, breadcrumbJsonLd } from "@/components/site/jsonld";
 import { PricingCards } from "@/components/site/Pricing";
 import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
 import { APP_NAME } from "@/lib/brand";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, TRIAL_DAYS } from "@/lib/plan";
-import { JsonLd, SITE_URL } from "@/lib/site";
+import { JsonLd } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -20,16 +20,7 @@ export default function PricingPage() {
       <JsonLd
         data={[
           breadcrumbJsonLd(crumbs),
-          {
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: `${APP_NAME} family plan`,
-            url: `${SITE_URL}/pricing/`,
-            offers: [
-              { "@type": "Offer", name: "Monthly", price: PRICES.month.amount, priceCurrency: PRICES.month.currency },
-              { "@type": "Offer", name: "Yearly", price: PRICES.year.amount, priceCurrency: PRICES.year.currency },
-            ],
-          },
+          appJsonLd(),
         ]}
       />
       <Crumbs items={crumbs} />
