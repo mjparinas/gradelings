@@ -2,7 +2,7 @@
 
 import { useEffect, useSyncExternalStore } from "react";
 import { APP_NAME } from "@/lib/brand";
-import { normalizeReferralCode, REFERRAL_BONUS_DAYS, TRIAL_DAYS } from "@/lib/plan";
+import { normalizeReferralCode, TRIAL_DAYS } from "@/lib/plan";
 import { saveReferralCode } from "@/lib/referral";
 import { LinkCard } from "../AccountLinkPage";
 
@@ -15,14 +15,13 @@ export function InviteView() {
     saveReferralCode(ref);
   }, [ref]);
   const valid = ref === null ? null : normalizeReferralCode(ref) !== null;
-  const total = TRIAL_DAYS + REFERRAL_BONUS_DAYS;
   return (
     <LinkCard title={`A friend invited you to ${APP_NAME}`}>
       {valid !== true ? (
         <p className="font-read text-ink-soft">That invite link looks incomplete, but you can still start your {TRIAL_DAYS}-day free trial below.</p>
       ) : (
         <p className="font-read text-ink-soft">
-          Sign up and your free trial is {total} days instead of {TRIAL_DAYS}: everything on, no card needed. Your friend gets a free month too.
+          Start your {TRIAL_DAYS}-day free trial with everything on and no card needed. When you confirm your email, your friend gets a free month as a thank-you.
         </p>
       )}
       <a href="/parents/#/account" className="btn btn-good min-h-14 px-4 text-xl">

@@ -7,7 +7,6 @@ import * as localdb from "@/lib/localdb";
 import { go, useRoute } from "@/lib/router";
 import { useStore } from "@/lib/store";
 import { savedReferralCode } from "@/lib/referral";
-import { REFERRAL_BONUS_DAYS } from "@/lib/plan";
 import { syncNow } from "@/lib/sync";
 import { Dialog } from "../ui";
 import { PageTitle, Panel } from "./common";
@@ -74,7 +73,7 @@ function AuthForm({ onDone }: { onDone: () => void }) {
       {notice && <p className="rounded-xl bg-[#e8f7f0] p-3 font-semibold">{notice}</p>}
       {error && <p className="font-semibold text-nudge-dark">{error}</p>}
       {mode === "signup" && invited && (
-        <p className="rounded-xl bg-[#e8f7f0] p-3 font-semibold">🎁 A friend invited you: you&apos;ll get {REFERRAL_BONUS_DAYS} extra days of free trial.</p>
+        <p className="rounded-xl bg-[#e8f7f0] p-3 font-semibold">🎁 A friend invited you. When you confirm your email, they get a free month. Thank you!</p>
       )}
       {mode === "signup" && (
         <p className="text-sm text-ink-soft">

@@ -3,7 +3,7 @@
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { APP_NAME, SITE_HOST } from "@/lib/brand";
 import { devBilling, loadReferral, openBillingPortal, refreshAccount, resendVerification, startCheckout, type BillingInfo, type ReferralInfo } from "@/lib/account";
-import { FREE_UNITS_PER_COURSE, hasPaidPlan, isPremium, MAX_CHILDREN, PRICES, REFERRAL_BONUS_DAYS, trialDaysLeft, upgradeOffer } from "@/lib/plan";
+import { FREE_UNITS_PER_COURSE, hasPaidPlan, isPremium, MAX_CHILDREN, PRICES, trialDaysLeft, upgradeOffer } from "@/lib/plan";
 import { inviteLink } from "@/lib/referral";
 import { useRoute } from "@/lib/router";
 import { useStore } from "@/lib/store";
@@ -170,13 +170,13 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
           )}
           {error && <p className="mt-3 font-semibold text-nudge-dark">{error}</p>}
         </Panel>
-        {family.account && !family.account.student && !inAndroidApp && <ReferralPanel />}
+        {family.account && !family.account.student && <ReferralPanel />}
       </div>
     </>
   );
 }
 
-/** "Give a month, get a month": the parent's invite link and what it has earned. */
+/** The parent's invite link and what it has earned. */
 function ReferralPanel() {
   const [info, setInfo] = useState<ReferralInfo | null>(null);
   const [failed, setFailed] = useState(false);
@@ -186,9 +186,9 @@ function ReferralPanel() {
   }, []);
   const link = info ? inviteLink(window.location.origin, info.code) : "";
   return (
-    <Panel title="🎁 Give a month, get a month">
+    <Panel title="🎁 Share and get a free month">
       <p className="font-read">
-        Share your link with another family. They get {REFERRAL_BONUS_DAYS} extra days of free trial, and once they confirm their email you get a free month. No card needed.
+        Share your link with another family. When they sign up and confirm their email, you get a free month. They don&apos;t need to pay anything.
       </p>
       {failed ? (
         <p className="mt-3 text-sm text-ink-soft">Your invite link needs an internet connection. Try again when you&apos;re online.</p>

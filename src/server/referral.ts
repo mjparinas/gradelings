@@ -4,9 +4,9 @@ import { REFERRAL_ALPHABET, REFERRAL_BONUS_DAYS, REFERRAL_CODE_LENGTH, REFERRAL_
 import { query, run } from "./db";
 import { creditCustomer, stripeCancellationConfigured } from "./stripe";
 
-// "Give a month, get a month." A new family that signs up with a code gets extra trial days at once.
-// The family that shared the code gets a free month when the new parent confirms their email, so a
-// throwaway address earns nothing. Each family can be referred once and is thanked once.
+// Referrals reward the sharer only. The family that shared a code gets a free month when a new parent who
+// signed up with it confirms their email, so a throwaway address earns nothing. The new family's trial is
+// unchanged. Each family can be referred once and its referrer is thanked once.
 
 const DAY = 86_400_000;
 

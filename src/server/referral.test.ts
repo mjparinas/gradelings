@@ -68,14 +68,14 @@ describe("referral codes", () => {
   });
 });
 
-describe("giving a month, getting a month", () => {
-  it("extends a referred family's trial, then thanks the referrer once the email is confirmed", async () => {
+describe("thanking the referrer", () => {
+  it("leaves a referred family's trial alone, then thanks the referrer once the email is confirmed", async () => {
     const { cookie } = await join_("giver@example.com");
     const { code } = (await (await referral.GET(req("/api/referral/", "GET", undefined, cookie))).json()) as { code: string };
     const before = (await familyOf("giver@example.com")).trial_ends_at;
 
     const friend = await join_("friend@example.com", code.toLowerCase());
-    expect(friend.trialEndsAt - Date.now()).toBeGreaterThan((plan.TRIAL_DAYS + plan.REFERRAL_BONUS_DAYS - 1) * DAY);
+    expect(friend.trialEndsAt - Date.now()).toBeLessThanOrEqual(plan.TRIAL_DAYS * DAY);
     expect((await familyOf("friend@example.com")).referred_by).toBe((await familyOf("giver@example.com")).id);
 
     // Nothing for the referrer until the friend's email is confirmed.

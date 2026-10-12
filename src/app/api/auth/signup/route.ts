@@ -4,7 +4,7 @@ import { sendEmail } from "@/server/email";
 import { verifyEmail } from "@/server/emailTemplates";
 import { getFamilyRow, toFamilyInfo } from "@/server/family";
 import { normalizeReferralCode, TRIAL_DAYS } from "@/lib/plan";
-import { bonusTrialEnd, referrerFor } from "@/server/referral";
+import { referrerFor } from "@/server/referral";
 
 export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
@@ -21,11 +21,11 @@ export async function POST(req: Request) {
   const now = Date.now();
   const maxTrial = now + TRIAL_DAYS * 86_400_000;
   // Keep the trial this device already started, so signing up doesn't restart it.
-  let trialEndsAt = Math.min(maxTrial, Math.max(now, Number(body?.trialEndsAt) || maxTrial));
-  // A friend's code adds a month to the trial. An unknown code is ignored quietly, so codes can't be guessed from the reply.
+  const trialEndsAt = Math.min(maxTrial, Math.max(now, Number(body?.trialEndsAt) || maxTrial));
+  // A friend's code is remembered so the referrer can be thanked once this email is confirmed. The new family's
+  // trial is unchanged. An unknown code is ignored quietly, so codes can't be guessed from the reply.
   const code = normalizeReferralCode(body?.referralCode);
   const referrer = code ? await referrerFor(code) : null;
-  if (referrer) trialEndsAt = bonusTrialEnd(trialEndsAt);
   const familyId = newId();
   const parentId = newId();
   const hash = await hashPassword(password);

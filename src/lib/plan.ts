@@ -7,7 +7,7 @@ export const TRIAL_DAYS = 30;
 export const FREE_UNITS_PER_COURSE = 2;
 export const MAX_CHILDREN = 3;
 
-/** Referrals: a friend who signs up with your code gets this many extra trial days, and you get a free month of this length. */
+/** Referrals: when a friend signs up with your code and confirms their email, you get a free month of this length. */
 export const REFERRAL_BONUS_DAYS = 30;
 /** A family can earn at most this many free months from referrals. */
 export const REFERRAL_MAX_REWARDS = 12;
