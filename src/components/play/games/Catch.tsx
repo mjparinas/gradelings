@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useEffectEvent, useRef, useState } from "react";
+import { useEffect, useEffectEvent, useRef, useState, type ReactNode } from "react";
 import { chance, pick } from "@/content/random";
 import { burstFrom, floatText } from "@/lib/juice";
 import { sounds } from "@/lib/sound";
@@ -9,23 +9,53 @@ import { catchRounds, type CatchRound } from "./content";
 import type { GameProps } from "./types";
 
 // Things fall from the sky. Slide the basket to catch the ones that fit.
+// `FallingCatch` is the engine; Critter Catch and Clock Catch give it their rounds.
 
-interface Drop {
-  id: number;
-  emoji: string;
+/** One thing that can fall: what it says if missed, and how it looks. */
+export interface FallingThing {
   label: string;
+  /** Shown in the "+10" burst when caught. */
+  mark: string;
+  visual: ReactNode;
+  /** Keep the label off the falling thing (when it would give the answer away). */
+  hideLabel?: boolean;
+}
+
+export interface FallRound {
+  title: string;
+  speak: string;
+  drop: (good: boolean) => FallingThing;
+}
+
+interface Drop extends FallingThing {
+  id: number;
   good: boolean;
   x: number;
   y: number;
   speed: number;
 }
 
-export function Catch({ grade, band, onScore, onLevel, onOver }: GameProps) {
+export function Catch(props: GameProps) {
+  const [rounds] = useState(() => catchRounds(props.grade));
+  return <FallingCatch {...props} round={(i) => fromCatchRound(rounds[i % rounds.length])} />;
+}
+
+function fromCatchRound(r: CatchRound): FallRound {
+  return {
+    title: r.title,
+    speak: r.speak,
+    drop: (good) => {
+      const item = good ? pick(r.good) : pick(r.bad);
+      return { label: item.label, mark: item.emoji, visual: <span className="text-5xl drop-shadow">{item.emoji}</span> };
+    },
+  };
+}
+
+export function FallingCatch({ band, onScore, onLevel, onOver, round: makeRound }: GameProps & { round: (index: number) => FallRound }) {
   const arena = useRef<HTMLDivElement>(null);
   const basketRef = useRef<HTMLDivElement>(null);
-  const [rounds] = useState(() => catchRounds(grade));
-  const [roundIdx, setRoundIdx] = useState(0);
-  const round: CatchRound = rounds[roundIdx % rounds.length];
+  const roundIdx = useRef(0);
+  const [round, setRound] = useState<FallRound>(() => makeRound(0));
   const [drops, setDrops] = useState<Drop[]>([]);
   const [basket, setBasket] = useState(0.5);
   const [score, setScore] = useState(0);
@@ -55,7 +85,7 @@ export function Catch({ grade, band, onScore, onLevel, onOver }: GameProps) {
   useEffect(() => {
     const t = setInterval(() => {
       const good = chance(0.5);
-      const item = good ? pick(round.good) : pick(round.bad);
+      const item = round.drop(good);
       dropsRef.current = [
         ...dropsRef.current,
         { id: nextId.current++, ...item, good, x: 0.08 + Math.random() * 0.84, y: -60, speed: (140 + level * 22 + Math.random() * 60) * slow },
@@ -69,11 +99,11 @@ export function Catch({ grade, band, onScore, onLevel, onOver }: GameProps) {
     if (d.good) {
       sounds.pop(4);
       burstFrom(basketRef.current, 12);
-      floatText(basketRef.current, `+10 ${d.emoji}`);
+      floatText(basketRef.current, `+10 ${d.mark}`);
       setScore((s) => s + 10);
       setCaught((c) => c + 1);
       // A new category every 10 catches.
-      if ((caught + 1) % 10 === 0) setRoundIdx((i) => i + 1);
+      if ((caught + 1) % 10 === 0) setRound(makeRound(++roundIdx.current));
     } else {
       sounds.boop();
       floatText(basketRef.current, `✗ ${d.label}`, "#e57a12");
@@ -148,8 +178,8 @@ export function Catch({ grade, band, onScore, onLevel, onOver }: GameProps) {
         <div className="absolute inset-x-0 bottom-0 h-12 bg-[#7ccf6b]" />
         {drops.map((d) => (
           <div key={d.id} className="absolute flex -translate-x-1/2 flex-col items-center" style={{ left: `${d.x * 100}%`, top: d.y }}>
-            <span className="text-5xl drop-shadow">{d.emoji}</span>
-            <span className="rounded-full bg-white/85 px-2 text-sm font-bold text-ink">{d.label}</span>
+            {d.visual}
+            {!d.hideLabel && <span className="rounded-full bg-white/85 px-2 text-sm font-bold text-ink">{d.label}</span>}
           </div>
         ))}
         <div ref={basketRef} key={gulp} className="absolute bottom-6 -translate-x-1/2 animate-gulp text-7xl" style={{ left: `${basket * 100}%` }}>

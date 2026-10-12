@@ -39,7 +39,7 @@ These are the next steps. This report will be updated with results.
 | 1.2 Time-based media | Not applicable | No audio or video content. Sounds are effects only. |
 | 1.3 Adaptable | Partially supports | Semantic headings, lists and tables on content pages. Not yet verified with a screen reader. |
 | 1.4 Distinguishable | Supports (automated) | Contrast, reflow to 320 px, text spacing options. |
-| 2.1 Keyboard accessible | Partially supports | Questions, the kids' app menus, the parent PIN and the parent area work with a keyboard alone (scripted check). **Known gap:** most arcade games need pointer or touch (Number Munchers has arrow keys). |
+| 2.1 Keyboard accessible | Partially supports | Questions, the kids' app menus, the parent PIN and the parent area work with a keyboard alone (scripted check). **Known gap:** some arcade games need pointer or touch (Number Munchers and the two catch games have arrow keys; Map Dash, Timeline Snap, Coin Shop, Equation Tower and Word Bridge are buttons, with number keys for choices). |
 | 2.2 Enough time | Supports | Timed modes (Speed Run, Challenge) are optional. A per-child "hide timers" option exists. Practice has no time limit. |
 | 2.3 Seizures and physical reactions | Not verified | Motion can be turned off per child and follows the device setting. Flash rates of effects such as confetti have not been measured. |
 | 2.4 Navigable | Partially supports | Page titles and headings, a skip-to-content link, and a visible focus ring on every Tab stop that is never fully hidden (scripted check). Focus order not yet verified by hand. When a kids' app screen changes, focus returns to the top of the page rather than to the new heading. |
@@ -51,7 +51,7 @@ These are the next steps. This report will be updated with results.
 
 ## Known limitations
 
-- The arcade games (Number Munchers, Word Ninja, Critter Catch, Bubble Pop, Memory Match) are visual and timed. They are optional rewards and are not needed to learn or to complete assigned work.
+- The arcade games (Number Munchers, Word Ninja, Critter Catch, Bubble Pop, Memory Match, Map Dash, Timeline Snap, Clock Catch, Word Bridge, Coin Shop, Equation Tower) are visual and timed. They are optional rewards and are not needed to learn or to complete assigned work.
 - Read-aloud quality depends on the voices installed on the device.
 - Some pictures in questions (for example base-ten blocks or clocks) are described in the question text, but not every picture has a long description.
 

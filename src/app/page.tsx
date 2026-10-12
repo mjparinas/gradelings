@@ -209,7 +209,7 @@ export default function Home() {
         <h2 id="games" className="mb-6 text-3xl font-bold sm:text-4xl">
           Learning games, earned with practice
         </h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {GAMES.map((g) => (
             <div key={g.id} className="rounded-3xl p-5" style={{ background: g.colour, color: onColour(g.colour) }}>
               <p className="text-4xl" aria-hidden="true">
