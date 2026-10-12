@@ -43,6 +43,7 @@ function asAdmin(extra: Handler = () => undefined) {
     if (url === "/api/admin/inbox/" && method === "GET") return Promise.resolve({ configured: true, items: [], hasMore: false });
     if (url === "/api/admin/flags/" && method === "GET") return Promise.resolve({ flags: [flag()] });
     if (url.startsWith("/api/admin/users/?q=")) return Promise.resolve({ users: [] });
+    if (url.startsWith("/api/admin/billing/?familyId=")) return Promise.resolve({ stripe: false, customer: null, payments: [], subscriptions: [], stripeError: null });
     if (url === "/api/admin/codes/" && method === "GET") return Promise.resolve({ codes: [] });
     if (url === "/api/admin/experiments/" && method === "GET") return Promise.resolve({ experiments: [] });
     if (url === "/api/admin/reports/" && method === "GET") return Promise.resolve({ reports: [] });
@@ -391,6 +392,28 @@ describe("AdminApp A/B tests", () => {
     expect(await screen.findByText("Stopped.")).toBeInTheDocument();
   });
 
+  it("names the leader and makes it everyone's with one tap", async () => {
+    asAdmin((url, method) => {
+      if (url === "/api/admin/experiments/" && method === "GET") return { experiments: [exp({})] };
+    });
+    const user = await openTab("A/B tests");
+    const card = (await screen.findByRole("heading", { name: "home-colours" })).closest("li")!;
+    expect(within(card).getByRole("status")).toHaveTextContent(/warm is ahead: 25% of families paying against 10%/);
+    await user.click(within(card).getByRole("button", { name: "Use warm for everyone" }));
+    expect(sent("/api/admin/experiments/", "PATCH")).toEqual({ key: "home-colours", action: "stop", winner: "warm" });
+    expect(await within(card).findByText("Stopped. Everyone now sees warm.")).toBeInTheDocument();
+  });
+
+  it("says it's too early with few families, and offers no winner", async () => {
+    asAdmin((url, method) => {
+      if (url === "/api/admin/experiments/" && method === "GET") return { experiments: [exp({ results: [{ variant: "control", families: 5, paid: 0, active: 0, paidP: null, activeP: null }, { variant: "warm", families: 6, paid: 3, active: 3, paidP: 0.1, activeP: 0.1 }] })] };
+    });
+    await openTab("A/B tests");
+    const card = (await screen.findByRole("heading", { name: "home-colours" })).closest("li")!;
+    expect(within(card).getByRole("status")).toHaveTextContent(/Too early to call/);
+    expect(within(card).queryByRole("button", { name: /for everyone/ })).not.toBeInTheDocument();
+  });
+
   it("starts a draft and deletes a test only after confirming", async () => {
     asAdmin((url, method) => {
       if (url === "/api/admin/experiments/" && method === "GET") return { experiments: [exp({ status: "draft", startedAt: null, results: [], description: "" })] };
@@ -516,5 +539,43 @@ describe("AdminApp engagement", () => {
     expect(screen.getByText(/news and tips on/)).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Send email" }));
     expect(sent("/api/admin/email/", "POST")).toMatchObject({ action: "send", familyId: "fam-1" });
+  });
+  it("emails the group stuck at a funnel step from the Emails tab", async () => {
+    asAdmin((url) => {
+      if (url === "/api/admin/funnel/?days=90") return { steps: [100, 80, 40, 30, 10, 5].map((count, i) => ({ id: `s${i}`, label: `Step ${i}`, count, ofStart: count / 100, ofPrevious: 1 })) };
+      if (url === "/api/admin/email/?segment=no-child") return { total: 3, ready: 3, batch: 3, skipped: { unconfirmed: 0, unsubscribed: 0, bounced: 0, recent: 0 }, sample: [] };
+    });
+    const user = await openTab("Funnel");
+    await user.click(await screen.findByRole("button", { name: "Email the families who haven't added a child" }));
+    expect(screen.getByRole("button", { name: "Emails" })).toHaveAttribute("aria-current", "page");
+    expect(await screen.findByRole("combobox", { name: "Group" })).toHaveTextContent("No child added");
+    expect(mocks.call).toHaveBeenCalledWith("/api/admin/email/?segment=no-child");
+  });
+
+  it("opens straight on a family from a link in an alert, with its billing", async () => {
+    window.history.replaceState(null, "", "/admin/?family=fam-1");
+    try {
+      asAdmin((url) => {
+        if (url === "/api/admin/users/?id=fam-1") return family({ family: { ...family().family, subscriptionStatus: "past_due" } });
+      });
+      render(<AdminApp />);
+      expect(await screen.findByRole("heading", { name: "Billing" })).toBeInTheDocument();
+      expect(screen.getByRole("button", { name: "Users" })).toHaveAttribute("aria-current", "page");
+      expect(screen.getByText("Their last payment failed.")).toBeInTheDocument();
+    } finally {
+      window.history.replaceState(null, "", "/");
+    }
+  });
+
+  it("opens the tab named in the link, and offers the CSV downloads", async () => {
+    window.history.replaceState(null, "", "/admin/?tab=Users");
+    try {
+      asAdmin();
+      render(<AdminApp />);
+      expect(await screen.findByRole("link", { name: "Download accounts CSV" })).toHaveAttribute("href", "/api/admin/export/?type=users");
+      expect(screen.getByRole("link", { name: "Download payments CSV" })).toHaveAttribute("href", "/api/admin/export/?type=payments");
+    } finally {
+      window.history.replaceState(null, "", "/");
+    }
   });
 });

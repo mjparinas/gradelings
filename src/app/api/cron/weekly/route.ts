@@ -3,6 +3,8 @@ import { secretsMatch, unsubscribeToken } from "@/server/auth";
 import { query, run } from "@/server/db";
 import { sendEmail } from "@/server/email";
 import { inactiveClassEmail, reminderEmail, trialEndingEmail, trialRecapEmail, weeklyEmail, type ReminderChild, type TrialChild, type WeeklyChild } from "@/server/emailTemplates";
+import { sendAlert, sendDigest } from "@/server/alerts";
+import { runAutomations } from "@/server/automations";
 import { trackJob } from "@/server/monitor";
 import { deleteInactiveClass } from "@/server/students";
 
@@ -20,8 +22,15 @@ export const maxDuration = 300;
 export async function GET(req: Request) {
   const secret = process.env.CRON_SECRET;
   if (!secret || !secretsMatch(req.headers.get("authorization") ?? "", `Bearer ${secret}`)) return new Response("Unauthorized", { status: 401 });
-  // Each run is recorded for the admin panel's System page.
-  return trackJob("daily", () => daily(req));
+  // Each run is recorded for the admin panel's System page, and a failed run alerts the admins.
+  try {
+    const res = await trackJob("daily", () => daily(req));
+    if (!res.ok) await sendAlert("job-failed", { subject: "The daily email job failed", lines: [`It answered ${res.status}.`], path: "/admin/?tab=System" });
+    return res;
+  } catch (e) {
+    await sendAlert("job-failed", { subject: "The daily email job failed", lines: [(e as Error).message.slice(0, 300)], path: "/admin/?tab=System" });
+    throw e;
+  }
 }
 
 async function daily(req: Request): Promise<Response> {
@@ -192,5 +201,8 @@ async function daily(req: Request): Promise<Response> {
     }
   }
 
-  return Response.json(result);
+  // Automatic nudges the owner switched on in the admin panel, then the owner's morning digest.
+  const automations = await runAutomations(origin, now);
+  const digest = await sendDigest(origin, now).catch((e: Error) => (console.error("[digest] failed", e.message), 0));
+  return Response.json({ ...result, automations, digest });
 }

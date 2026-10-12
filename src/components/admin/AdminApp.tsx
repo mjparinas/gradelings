@@ -11,8 +11,13 @@ import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { call } from "@/lib/classroom";
 import { Dashboard } from "./Dashboard";
 import { Emails, FamilyEmail, formatAgo, Inbox, Queue, type EmailRow } from "./Engage";
+import { Automations } from "./Automations";
+import { FamilyBilling } from "./Billing";
+import { Funnel } from "./Funnel";
 import { System } from "./System";
 import { parseVariants, type ExperimentStatus, type FlagScope, type Variant } from "@/lib/flags";
+import { verdict } from "@/lib/abVerdict";
+import type { Segment } from "@/lib/adminEmails";
 
 // The site-wide admin panel. Only accounts listed in ADMIN_EMAILS (with a confirmed email) get past the
 // server; everyone else sees a sign-in form or "not an admin". It talks to /api/admin/* only, so it stays
@@ -204,7 +209,17 @@ function Users({ flags, initialOpen = null }: { flags: FlagRow[]; initialOpen?: 
   if (open) return <UserDetail id={open} flags={flags} onBack={() => { setOpen(null); search(q); }} />;
   return (
     <section aria-labelledby="users-h">
-      <h2 id="users-h" className="text-2xl font-bold">Users</h2>
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <h2 id="users-h" className="text-2xl font-bold">Users</h2>
+        <p className="flex flex-wrap gap-x-4">
+          <a className="min-h-11 font-semibold text-[#2a5bd7] underline" href="/api/admin/export/?type=users" download>
+            Download accounts CSV
+          </a>
+          <a className="min-h-11 font-semibold text-[#2a5bd7] underline" href="/api/admin/export/?type=payments" download>
+            Download payments CSV
+          </a>
+        </p>
+      </div>
       <form
         className="mt-3 flex flex-wrap items-end gap-2"
         onSubmit={(e) => {
@@ -382,6 +397,8 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
           Sign out everywhere
         </button>
       </div>
+
+      <FamilyBilling familyId={id} pastDue={d.family.subscriptionStatus === "past_due"} />
 
       <FamilyEmail familyId={id} parent={d.parents[0]} emails={d.emails} />
 
@@ -720,6 +737,21 @@ interface ExperimentRow {
 
 const pText = (p: number | null) => (p == null ? "" : p < 0.05 ? ` (p ${p < 0.001 ? "< 0.001" : `= ${p.toFixed(3)}`}, significant)` : ` (p = ${p.toFixed(2)})`);
 
+/** Which variant is ahead and how sure that is, with a button to use it for everyone. */
+function Verdict({ e, busy, onPick }: { e: ExperimentRow; busy: boolean; onPick: (winner: string) => void }) {
+  const v = verdict(e.results);
+  return (
+    <div className={`mt-3 rounded-xl p-3 ${v.ready ? "bg-[#e3f6ee]" : "bg-[#f1f5f9]"}`} role="status">
+      <p className="font-semibold">{v.message}</p>
+      {v.leader && (
+        <button type="button" className={`${v.ready ? primary : quiet} mt-2`} disabled={busy} onClick={() => onPick(v.leader!)}>
+          Use {v.leader} for everyone
+        </button>
+      )}
+    </div>
+  );
+}
+
 function ExperimentCard({ e, reload }: { e: ExperimentRow; reload: () => void }) {
   const [winner, setWinner] = useState(e.variants[0]?.name ?? "");
   const [confirmDelete, setConfirmDelete] = useState(false);
@@ -762,6 +794,7 @@ function ExperimentCard({ e, reload }: { e: ExperimentRow; reload: () => void })
           <p className="mt-1 text-sm text-ink-soft">Signed-in families are counted the first time their app asks for the test. p compares each variant with the control; under 0.05 is unlikely to be chance.</p>
         </div>
       )}
+      {e.status === "running" && <Verdict e={e} busy={busy} onPick={(w) => void act("/api/admin/experiments/", "PATCH", { key: e.key, action: "stop", winner: w }, `Stopped. Everyone now sees ${w}.`)} />}
       <div className="mt-3 flex flex-wrap items-end gap-2">
         {e.status === "draft" && (
           <button type="button" disabled={busy} className={primary} onClick={() => void act("/api/admin/experiments/", "PATCH", { key: e.key, action: "start" }, "Started.")}>
@@ -933,13 +966,23 @@ function AuditLog() {
 
 // ---------- The app ----------
 
-const TABS = ["Overview", "To do", "Users", "Emails", "Inbox", "Codes", "Flags", "A/B tests", "Reports", "System", "Log"] as const;
+const TABS = ["Overview", "To do", "Users", "Funnel", "Emails", "Inbox", "Automations", "Codes", "Flags", "A/B tests", "Reports", "System", "Log"] as const;
 type Tab = (typeof TABS)[number];
 
+/** `?tab=` and `?family=` from a link in an alert email, read once when the panel opens. */
+function linkTarget(): { tab: Tab; family: string | null } {
+  const q = new URLSearchParams(typeof window === "undefined" ? "" : window.location.search);
+  const family = q.get("family");
+  const tab = q.get("tab");
+  return { tab: family ? "Users" : (TABS as readonly string[]).includes(tab ?? "") ? (tab as Tab) : "Overview", family };
+}
+
 function Panel() {
-  const [tab, setTab] = useState<Tab>("Overview");
+  const [tab, setTab] = useState<Tab>(() => linkTarget().tab);
   // A family opened from a dashboard list: Users starts on that family's page.
-  const [family, setFamily] = useState<string | null>(null);
+  const [family, setFamily] = useState<string | null>(() => linkTarget().family);
+  // A group picked from the funnel: Emails starts on it.
+  const [segment, setSegment] = useState<Segment>("quiet-7");
   // A message opened from the to-do list: Inbox starts on it.
   const [inboxId, setInboxId] = useState<string | null>(null);
   // How many to-do items are waiting, shown on the tab. Loaded once here so the count shows from any tab.
@@ -973,7 +1016,16 @@ function Panel() {
       />
     ),
     Users: <Users key={family ?? ""} flags={flags ?? []} initialOpen={family} />,
-    Emails: <Emails onOpenFamily={openFamily} />,
+    Funnel: (
+      <Funnel
+        onEmailGroup={(g) => {
+          setSegment(g);
+          setTab("Emails");
+        }}
+      />
+    ),
+    Emails: <Emails key={segment} initialSegment={segment} onOpenFamily={openFamily} />,
+    Automations: <Automations />,
     Inbox: <Inbox key={inboxId ?? ""} initialId={inboxId} onOpenFamily={openFamily} />,
     Codes: <Codes />,
     Flags: <Flags flags={flags} reload={loadFlags} />,

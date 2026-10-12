@@ -5,6 +5,7 @@ import { SelectMenu } from "@/components/SelectMenu";
 import { fillMessage, LIMITS, MESSAGE_PRESETS, paragraphs, SEGMENTS, type AdminMessage, type Segment } from "@/lib/adminEmails";
 import { call } from "@/lib/classroom";
 import { EMAIL_KINDS, EMAIL_STATUSES, emailKindLabel, emailStatusLabel } from "@/lib/emailKinds";
+import { fillReply, REPLY_LIMITS, type SavedReply } from "@/lib/savedReplies";
 
 // The admin panel's engagement tools: the to-do list, writing and sending emails (to one family or a group),
 // the email log and the inbox of mail people send us. Children's first names only go into an email when it's
@@ -55,7 +56,7 @@ const fromPreset = (id: string): AdminMessage => {
 };
 
 /** What the email will look like, with a stand-in for the children's names. */
-function Preview({ m }: { m: AdminMessage }) {
+export function Preview({ m }: { m: AdminMessage }) {
   return (
     <div className="rounded-xl border border-line bg-[#f7f5f0] p-4" aria-label="Preview">
       <p className="text-sm font-semibold text-ink-soft">Preview</p>
@@ -247,12 +248,12 @@ export function EmailTable({ emails, onOpenFamily, showAccount = true }: { email
 }
 
 /** The Emails tab: what went out and what happened to it, and sending to a group. */
-export function Emails({ onOpenFamily }: { onOpenFamily: (id: string) => void }) {
+export function Emails({ onOpenFamily, initialSegment = "quiet-7" }: { onOpenFamily: (id: string) => void; initialSegment?: Segment }) {
   const [kind, setKind] = useState("");
   const [status, setStatus] = useState("");
   const [data, setData] = useState<{ emails: EmailRow[]; counts30: Record<string, number>; resendWebhook: boolean } | null>(null);
   const [err, setErr] = useState("");
-  const [segment, setSegment] = useState<Segment>("quiet-7");
+  const [segment, setSegment] = useState<Segment>(initialSegment);
   const load = useCallback(() => {
     const q = new URLSearchParams({ ...(kind ? { kind } : {}), ...(status ? { status } : {}) });
     call<NonNullable<typeof data>>(`/api/admin/email/?${q}`).then(setData, (e: Error) => setErr(e.message));
@@ -308,7 +309,12 @@ export function Emails({ onOpenFamily }: { onOpenFamily: (id: string) => void })
       </div>
 
       <div className={card}>
-        <h3 className="text-xl font-bold">Sent emails</h3>
+        <div className="flex flex-wrap items-baseline justify-between gap-2">
+          <h3 className="text-xl font-bold">Sent emails</h3>
+          <a className="min-h-11 font-semibold text-[#2a5bd7] underline" href="/api/admin/export/?type=emails" download>
+            Download CSV
+          </a>
+        </div>
         <div className="mt-2 flex flex-wrap gap-2">
           <SelectMenu label="Kind" block={false} value={kind} onChange={setKind} options={[{ value: "", label: "Every kind" }, ...Object.entries(EMAIL_KINDS).map(([k, l]) => ({ value: k, label: l }))]} />
           <SelectMenu label="Status" block={false} value={status} onChange={setStatus} options={[{ value: "", label: "Any status" }, ...Object.entries(EMAIL_STATUSES).map(([k, l]) => ({ value: k, label: l }))]} />
@@ -323,6 +329,9 @@ export function Emails({ onOpenFamily }: { onOpenFamily: (id: string) => void })
 const SEGMENT_PRESET: Record<Segment, string> = {
   "quiet-7": "miss-you",
   "never-practised": "getting-started",
+  "no-child": "getting-started",
+  "tried-few": "miss-you",
+  "engaged-not-paying": "keep-going",
   "trial-ending": "trial-ending",
   "trial-over": "come-back",
   cancelled: "feedback",
@@ -498,6 +507,7 @@ export function Inbox({ initialId = null, onOpenFamily }: { initialId?: string |
       </h2>
       <p className="max-w-3xl text-sm text-ink-soft">Mail people send to your Resend receiving address. Messages stay in Resend; they&apos;re shown here as plain text.</p>
       <Notice err={err} />
+      <SavedRepliesEditor />
       {!list ? (
         <p className="font-read">Loading…</p>
       ) : !list.configured ? (
@@ -531,6 +541,7 @@ export function Inbox({ initialId = null, onOpenFamily }: { initialId?: string |
 }
 
 function InboxRead({ id, onBack, onOpenFamily }: { id: string; onBack: () => void; onOpenFamily: (id: string) => void }) {
+  const [replies] = useSavedReplies();
   const [m, setM] = useState<InboxMessage | null>(null);
   const [err, setErr] = useState("");
   const [reply, setReply] = useState("");
@@ -585,6 +596,20 @@ function InboxRead({ id, onBack, onOpenFamily }: { id: string; onBack: () => voi
           <div className={card}>
             <h3 className="text-xl font-bold">Reply to {m.replyTo}</h3>
             {m.repliedAt && <p className="text-sm text-ink-soft">You answered this {ago(m.repliedAt)}.</p>}
+            {replies && replies.length > 0 && (
+              <div className="mt-2">
+                <SelectMenu
+                  label="Insert a saved reply"
+                  block={false}
+                  value=""
+                  onChange={(rid) => {
+                    const r = replies.find((x) => x.id === rid);
+                    if (r) setReply((cur) => (cur.trim() ? `${cur.trimEnd()}\n\n${fillReply(r.body)}` : fillReply(r.body)));
+                  }}
+                  options={[{ value: "", label: "Pick one…" }, ...replies.map((r) => ({ value: r.id, label: r.title }))]}
+                />
+              </div>
+            )}
             <label className="mt-2 flex flex-col text-sm font-semibold">
               Your reply
               <textarea className={`${field} min-h-36 py-2 font-normal`} maxLength={10_000} value={reply} onChange={(e) => setReply(e.target.value)} />
@@ -609,6 +634,88 @@ function InboxRead({ id, onBack, onOpenFamily }: { id: string; onBack: () => voi
         </>
       )}
     </section>
+  );
+}
+
+// ---------- Saved replies ----------
+
+function useSavedReplies(): [SavedReply[] | null, () => void, string] {
+  const [list, setList] = useState<SavedReply[] | null>(null);
+  const [err, setErr] = useState("");
+  const load = useCallback(() => {
+    call<{ replies: SavedReply[] }>("/api/admin/replies/").then((r) => setList(r.replies), (e: Error) => setErr(e.message));
+  }, []);
+  useEffect(load, [load]);
+  return [list, load, err];
+}
+
+/** Adding, changing and removing the inbox's saved replies. The whole list is saved at once. */
+function SavedRepliesEditor() {
+  const [list, reload, loadErr] = useSavedReplies();
+  const [open, setOpen] = useState(false);
+  const [draft, setDraft] = useState<SavedReply[] | null>(null);
+  const [msg, setMsg] = useState<{ err?: string; ok?: string }>({});
+  const [busy, setBusy] = useState(false);
+  const items = draft ?? list ?? [];
+  const edit = (i: number, patch: Partial<SavedReply>) => setDraft(items.map((r, j) => (j === i ? { ...r, ...patch } : r)));
+  const save = async () => {
+    setBusy(true);
+    setMsg({});
+    try {
+      await call("/api/admin/replies/", "PUT", { replies: items });
+      setMsg({ ok: "Saved replies updated." });
+      setDraft(null);
+      reload();
+    } catch (e) {
+      setMsg({ err: (e as Error).message });
+    } finally {
+      setBusy(false);
+    }
+  };
+  return (
+    <div className={card}>
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <h3 className="text-xl font-bold">Saved replies</h3>
+        <button type="button" className="min-h-11 font-semibold text-[#2a5bd7] underline" aria-expanded={open} onClick={() => setOpen(!open)}>
+          {open ? "Close" : `Edit (${list?.length ?? 0})`}
+        </button>
+      </div>
+      <p className="text-sm text-ink-soft">Answers to common questions you can insert into a reply and change before sending. {"{app}"} becomes the app&apos;s name.</p>
+      <Notice err={loadErr} />
+      {open && (
+        <div className="mt-3 flex flex-col gap-3">
+          {items.map((r, i) => (
+            <div key={r.id} className="rounded-xl border border-line p-3">
+              <label className="flex flex-col text-sm font-semibold">
+                Title
+                <input className={field} maxLength={REPLY_LIMITS.title} value={r.title} onChange={(e) => edit(i, { title: e.target.value })} />
+              </label>
+              <label className="mt-2 flex flex-col text-sm font-semibold">
+                Reply
+                <textarea className={`${field} min-h-28 py-2 font-normal`} maxLength={REPLY_LIMITS.body} value={r.body} onChange={(e) => edit(i, { body: e.target.value })} />
+              </label>
+              <button type="button" className={`${quiet} mt-2`} onClick={() => setDraft(items.filter((_, j) => j !== i))}>
+                Remove
+              </button>
+            </div>
+          ))}
+          <div className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              className={quiet}
+              disabled={items.length >= REPLY_LIMITS.count}
+              onClick={() => setDraft([...items, { id: `reply-${Date.now().toString(36)}`, title: "New reply", body: "" }])}
+            >
+              Add a reply
+            </button>
+            <button type="button" className={primary} disabled={busy || !draft} onClick={() => void save()}>
+              Save replies
+            </button>
+          </div>
+          <Notice {...msg} />
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -672,4 +779,4 @@ export function FamilyEmail({ familyId, parent, emails }: { familyId: string; pa
   );
 }
 
-export { day as formatDay, ago as formatAgo };
+export { day as formatDay, ago as formatAgo, Badge, Notice };

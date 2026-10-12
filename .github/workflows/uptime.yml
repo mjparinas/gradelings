@@ -28,6 +28,7 @@ jobs:
     env:
       UPTIME_URL: ${{ vars.UPTIME_URL }}
       GH_TOKEN: ${{ github.token }}
+      CRON_SECRET: ${{ secrets.CRON_SECRET }}
     steps:
       - name: Ping /api/health/
         id: ping
@@ -56,6 +57,13 @@ jobs:
             gh issue create --repo "$GITHUB_REPOSITORY" --label uptime --title "Site is down" --body "$msg"
           fi
           exit 1
+
+      # Optional: with the repository secret CRON_SECRET set (the same value as the site's), the site also checks
+      # its database, Stripe, email and the rest, and emails the admins when one goes down.
+      - name: Check the other services
+        if: steps.ping.outputs.code == '200' && env.CRON_SECRET != ''
+        run: |
+          curl -sS -o /dev/null -w 'watch -> %{http_code}\n' --max-time 60 -H "Authorization: Bearer $CRON_SECRET" "${UPTIME_URL%/}/api/cron/watch/" || true
 
       - name: Close the downtime issue once the site is back
         if: steps.ping.outputs.code == '200'

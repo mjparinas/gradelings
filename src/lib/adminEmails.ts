@@ -61,12 +61,23 @@ export const MESSAGE_PRESETS: MessagePreset[] = [
     body: "You recently cancelled your {app} subscription. We're a small team, and hearing why helps us more than anything.\n\nJust reply to this email with a line or two. Thank you for giving us a try.",
     button: null,
   },
+  {
+    id: "keep-going",
+    name: "Keep the momentum",
+    when: "Practising often, not paying",
+    subject: "{children} is on a roll with {app}",
+    body: `{children} has been practising on several days, which is exactly how skills stick.\n\nThe family plan keeps every lesson, game and report open for up to ${MAX_CHILDREN} children. Either way, the first ${FREE_UNITS_PER_COURSE} units of every course stay free forever.`,
+    button: { label: "See the family plan", path: SUBSCRIBE_HREF },
+  },
   { id: "custom", name: "Write your own", when: "Anything else", subject: "", body: "", button: null },
 ];
 
 export const SEGMENTS = {
   "quiet-7": { name: "Gone quiet", description: "Practised before, but not in the last 7 days (up to 60)." },
   "never-practised": { name: "Never practised", description: "Signed up 2 or more days ago, and no child has practised yet." },
+  "no-child": { name: "No child added", description: "Signed up 2 to 60 days ago and hasn't added a child." },
+  "tried-few": { name: "Tried it, then stopped", description: "Practised on only 1 or 2 days, nothing in the last 3 days, not paying." },
+  "engaged-not-paying": { name: "Practising often, not paying", description: "Practised on 3 or more days, not paying, no code access." },
   "trial-ending": { name: "Trial ending", description: "Trial ends in the next 7 days, not paying, no code access." },
   "trial-over": { name: "Trial over, not paying", description: "Trial ended in the last 60 days, not paying, no code access." },
   cancelled: { name: "Cancelled", description: "Cancelled a subscription in the last 90 days." },
