@@ -3,6 +3,9 @@
 
 export type ItemKind = "companion" | "confetti" | "title";
 
+/** How a celebration's pieces move (see `celebrate` in juice.ts). Cannons is the default. */
+export type CelebrationPattern = "cannons" | "fall" | "float" | "fireworks";
+
 export interface ShopItem {
   id: string;
   kind: ItemKind;
@@ -12,6 +15,8 @@ export interface ShopItem {
   icon: string;
   critter?: string;
   confetti?: string[];
+  /** How the celebration's pieces move. Leave it out for cannons from both sides. */
+  pattern?: CelebrationPattern;
   /** Must be reached before it can be bought. Coins alone aren't enough. */
   unlock?: { level?: number; trophy?: string; label: string };
 }
@@ -39,18 +44,33 @@ export const SHOP: ShopItem[] = [
   // Celebration styles.
   { id: "classic", kind: "confetti", name: "Classic confetti", cost: 0, icon: "🎉", confetti: [] },
   { id: "hearts", kind: "confetti", name: "Hearts", cost: 150, icon: "💖", confetti: ["💖", "💜", "💛"] },
-  { id: "snow", kind: "confetti", name: "Snowflakes", cost: 150, icon: "❄️", confetti: ["❄️", "⛄"] },
-  { id: "leaves", kind: "confetti", name: "Maple leaves", cost: 150, icon: "🍁", confetti: ["🍁", "🍂"] },
+  { id: "snow", kind: "confetti", name: "Snowflakes", cost: 150, icon: "❄️", confetti: ["❄️", "⛄"], pattern: "fall" },
+  { id: "leaves", kind: "confetti", name: "Maple leaves", cost: 150, icon: "🍁", confetti: ["🍁", "🍂"], pattern: "fall" },
+  { id: "balloons", kind: "confetti", name: "Balloons", cost: 150, icon: "🎈", confetti: ["🎈", "🎈", "🎀"], pattern: "float" },
+  { id: "fruit", kind: "confetti", name: "Fruit salad", cost: 150, icon: "🍓", confetti: ["🍓", "🍉", "🍌", "🍇"] },
+  { id: "number-magic", kind: "confetti", name: "Number magic", cost: 150, icon: "🔢", confetti: ["🔢", "💯", "🧮", "✨"] },
+  { id: "story-time", kind: "confetti", name: "Story time", cost: 150, icon: "📚", confetti: ["📚", "✏️", "⭐"] },
   { id: "stars", kind: "confetti", name: "Stars", cost: 200, icon: "⭐", confetti: ["⭐", "🌟", "✨"] },
+  { id: "butterflies", kind: "confetti", name: "Butterflies", cost: 200, icon: "🦋", confetti: ["🦋", "🌼"], pattern: "float" },
+  { id: "music", kind: "confetti", name: "Music notes", cost: 200, icon: "🎵", confetti: ["🎵", "🎶", "🎸"], pattern: "float" },
+  { id: "garden", kind: "confetti", name: "Garden", cost: 200, icon: "🌻", confetti: ["🌻", "🌷", "🐝"], pattern: "fall" },
+  { id: "sports", kind: "confetti", name: "Sports day", cost: 200, icon: "⚽", confetti: ["⚽", "🏀", "🏒", "🥅"] },
   { id: "sea", kind: "confetti", name: "Under the sea", cost: 250, icon: "🐠", confetti: ["🐠", "🐚", "🐙"] },
+  { id: "dinos", kind: "confetti", name: "Dinosaurs", cost: 250, icon: "🦕", confetti: ["🦕", "🦖", "🌿"] },
   { id: "space", kind: "confetti", name: "Space", cost: 300, icon: "🚀", confetti: ["🚀", "🪐", "🌟"] },
-  { id: "rain", kind: "confetti", name: "Rain City", cost: 200, icon: "🌧️", confetti: ["💧", "☔", "🌧️"], unlock: { level: 8, label: "Reach level 8" } },
+  { id: "unicorns", kind: "confetti", name: "Unicorns", cost: 300, icon: "🦄", confetti: ["🦄", "🌈", "✨"], pattern: "float" },
+  { id: "rain", kind: "confetti", name: "Rain City", cost: 200, icon: "🌧️", confetti: ["💧", "☔", "🌧️"], pattern: "fall", unlock: { level: 8, label: "Reach level 8" } },
   { id: "pancakes", kind: "confetti", name: "Pancake stack", cost: 200, icon: "🥞", confetti: ["🥞", "🍁", "🧈"], unlock: { trophy: "streak-7", label: "Win Week Warrior" } },
-  { id: "blossoms", kind: "confetti", name: "Cherry blossoms", cost: 250, icon: "🌸", confetti: ["🌸", "💮"], unlock: { level: 10, label: "Reach level 10" } },
-  { id: "fireworks", kind: "confetti", name: "Fireworks", cost: 300, icon: "🎆", confetti: ["🎆", "🎇", "✨"], unlock: { level: 15, label: "Reach level 15" } },
+  { id: "blossoms", kind: "confetti", name: "Cherry blossoms", cost: 250, icon: "🌸", confetti: ["🌸", "💮"], pattern: "fall", unlock: { level: 10, label: "Reach level 10" } },
+  { id: "robots", kind: "confetti", name: "Robots", cost: 250, icon: "🤖", confetti: ["🤖", "⚙️", "🔋"], unlock: { level: 12, label: "Reach level 12" } },
+  { id: "fireworks", kind: "confetti", name: "Fireworks", cost: 300, icon: "🎆", confetti: ["🎆", "🎇", "✨"], pattern: "fireworks", unlock: { level: 15, label: "Reach level 15" } },
   { id: "rainbow", kind: "confetti", name: "Rainbow", cost: 300, icon: "🌈", confetti: ["🌈", "☁️", "⭐"], unlock: { level: 20, label: "Reach level 20" } },
+  { id: "shooting-stars", kind: "confetti", name: "Shooting stars", cost: 350, icon: "🌠", confetti: ["🌠", "💫", "⭐"], pattern: "fireworks", unlock: { trophy: "proficient-10", label: "Win Forest" } },
+  { id: "dragons", kind: "confetti", name: "Dragons", cost: 400, icon: "🐉", confetti: ["🐉", "🔥", "✨"], unlock: { level: 25, label: "Reach level 25" } },
   { id: "gold", kind: "confetti", name: "Gold coins", cost: 400, icon: "🪙", confetti: ["🪙", "✨"], unlock: { trophy: "coins-1000", label: "Win Treasure Hunter" } },
-  { id: "aurora", kind: "confetti", name: "Northern lights", cost: 500, icon: "🌌", confetti: ["🌌", "✨", "💚"], unlock: { level: 35, label: "Reach level 35" } },
+  { id: "bookworm-party", kind: "confetti", name: "Book party", cost: 400, icon: "📖", confetti: ["📖", "🐛", "🌟"], pattern: "float", unlock: { trophy: "correct-1000", label: "Win Knowledge Machine" } },
+  { id: "aurora", kind: "confetti", name: "Northern lights", cost: 500, icon: "🌌", confetti: ["🌌", "✨", "💚"], pattern: "fall", unlock: { level: 35, label: "Reach level 35" } },
+  { id: "royal", kind: "confetti", name: "Royal parade", cost: 600, icon: "👑", confetti: ["👑", "💎", "✨"], pattern: "fireworks", unlock: { level: 50, label: "Reach level 50" } },
 
   // Titles shown under your name.
   { id: "rookie", kind: "title", name: "Rookie", cost: 0, icon: "🌱" },
@@ -72,6 +92,12 @@ export const SHOP: ShopItem[] = [
 
 export function getItem(id: string | undefined): ShopItem | undefined {
   return SHOP.find((i) => i.id === id);
+}
+
+/** The pieces and movement for a child's chosen celebration; anything unknown gets classic confetti. */
+export function celebrationOf(id: string | undefined): { emoji: string[]; pattern: CelebrationPattern } {
+  const item = getItem(id);
+  return item?.kind === "confetti" ? { emoji: item.confetti ?? [], pattern: item.pattern ?? "cannons" } : { emoji: [], pattern: "cannons" };
 }
 
 export function isOwned(id: string, owned: string[]): boolean {
