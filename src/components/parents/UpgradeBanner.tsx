@@ -1,31 +1,22 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import { SITE_HOST } from "@/lib/brand";
-import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, trialDaysLeft, upgradeOffer } from "@/lib/plan";
+import { firstChargeAt, FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, trialDaysLeft, upgradeOffer } from "@/lib/plan";
 import { useRoute } from "@/lib/router";
 import { useStore } from "@/lib/store";
 import { isAndroidApp } from "@/lib/twa";
 
 const noSubscribe = () => () => {};
 
-/** A subscribe prompt on every parent screen except the subscribe page itself. In the Android app it names the website, with no payment button. */
+/** A subscribe prompt on every parent screen except the subscribe page itself. None in the Android app. */
 export function UpgradeBanner() {
   const family = useStore((s) => s.family);
   const offer = upgradeOffer(family);
   const { path } = useRoute();
   const inAndroidApp = useSyncExternalStore(noSubscribe, isAndroidApp, () => false);
   if (!offer || path[0] === "subscription") return null;
-  if (inAndroidApp) {
-    return (
-      <section className="mb-5 rounded-2xl border-2 border-[#25b47e] bg-good-soft p-5">
-        <h2 className="text-xl font-bold">Subscribe at {SITE_HOST}</h2>
-        <p className="mt-1 font-read">
-          This app can&apos;t take a payment. Open <b>{SITE_HOST}</b> in your browser to subscribe. Sign in with the same account and your membership shows up here.
-        </p>
-      </section>
-    );
-  }
+  // Google Play doesn't allow pointing to a payment outside the app, so the Android app shows no subscribe prompt.
+  if (inAndroidApp) return null;
 
   const href = family.account ? "#/subscription" : "#/account?next=subscription";
   const days = trialDaysLeft(family);
@@ -43,7 +34,13 @@ export function UpgradeBanner() {
           </>
         )}
       </p>
-      {offer === "trial" && <p className="mt-1 text-sm text-ink-soft">You&apos;re charged at checkout. The paid plan starts that day, and leftover trial days don&apos;t carry over.</p>}
+      {offer === "trial" && (
+        <p className="mt-1 text-sm text-ink-soft">
+          {firstChargeAt(family.trialEndsAt, Boolean(family.subscription))
+            ? "You keep your free days: the first payment is when the trial ends."
+            : "You're charged at checkout. The paid plan starts that day."}
+        </p>
+      )}
       <a href={href} className="btn btn-good mt-3 min-h-12 px-5 text-lg">
         {family.account ? "Subscribe" : "Create an account to subscribe"}
       </a>

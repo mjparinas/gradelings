@@ -180,10 +180,11 @@ describe("ParentApp", () => {
     expect(within(screen.getByRole("navigation")).getByRole("link", { name: /Subscription/ })).toBeInTheDocument();
   });
 
-  it("names the website instead of a payment link inside the Android app", async () => {
+  it("shows no subscribe prompt or website inside the Android app (Google Play's payments rules)", async () => {
     h.android = true;
     const header = await open();
-    expect(within(header).getByText(`Subscribe at ${SITE_HOST}`)).toBeInTheDocument();
+    expect(within(header).queryByText(new RegExp(SITE_HOST))).not.toBeInTheDocument();
+    expect(within(header).queryByText(/Subscribe/)).not.toBeInTheDocument();
     expect(within(header).queryByRole("link", { name: /Subscribe/ })).not.toBeInTheDocument();
     expect(within(screen.getByRole("navigation")).getByRole("link", { name: /Subscription/ })).toBeInTheDocument();
   });

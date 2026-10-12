@@ -81,6 +81,8 @@ Tests are duplicated across screen sizes only where layout can break:
 - **No ads, ever. No tracking pixels. Never sell data.** Kids can never buy anything; coins are earned only by learning. The one exception is testing: a device signed in to an admin account shows unlimited coins (`TEST_COINS`, `docs/ADMIN.md`), never stored or synced.
 - **Family plan:** C$14.99/month or C$119.99/year, with "Save 33%" on the yearly plan, for up to 3 children.
   - The plan includes a 30-day free trial with everything on and no card needed.
+  - Subscribing during the trial keeps the days left: checkout saves the card and starts a Stripe trial that ends with ours (`firstChargeAt` in `plan.ts`), unless fewer than 49 hours are left or the family had a paid plan before.
+  - A device with no account gets a quiet "For grown-ups" card at the end of a lesson (after the first lesson, then daily in the trial's last week; `src/lib/saveNudge.ts`, flag `save-progress-card`), because trial emails need an account.
   - After the trial, the first 2 units of every course stay free forever.
   - All of this lives in `src/lib/plan.ts`; read the numbers from there.
 - **Payments:** Stripe Checkout and the Billing Portal, called over raw HTTPS with no SDK (`src/server/stripe.ts`).

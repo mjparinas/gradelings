@@ -82,7 +82,8 @@ export async function GET(req: Request) {
     redemptions,
     reports,
   });
-  return json({ ...metrics, stripe: stripeCancellationConfigured() });
+  const cancelReasons = await query<{ reason: string; n: number }>("SELECT reason, COUNT(*) AS n FROM cancellations WHERE at >= ? GROUP BY reason", [now - 365 * DAY]);
+  return json({ ...metrics, stripe: stripeCancellationConfigured(), cancelReasons: cancelReasons.map((c) => ({ reason: c.reason, n: Number(c.n) })) });
 }
 
 /** Saves the monthly running costs, or copies paid invoices from Stripe. */

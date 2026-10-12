@@ -1,5 +1,6 @@
 import { onColour } from "@/lib/contrast";
 import { PricingCards } from "@/components/site/Pricing";
+import { ParentQuotes } from "@/components/site/ParentQuotes";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Critter } from "@/components/Critter";
@@ -293,6 +294,8 @@ export default function Home() {
           </Link>
         </p>
       </section>
+
+      <ParentQuotes />
 
       {/* Pricing */}
       <section aria-labelledby="pricing" className="py-8">

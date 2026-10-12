@@ -68,6 +68,19 @@ export function upgradeOffer(family: FamilyInfo, now = Date.now()): "trial" | "f
   return isPremium(family, now) ? "trial" : "free";
 }
 
+/** Stripe needs a trial to run at least 48 hours; an hour more covers the time spent at checkout. */
+export const MIN_TRIAL_CARRY_MS = 49 * 3_600_000;
+
+/**
+ * When a family that subscribes now is first charged: the end of their free trial, so subscribing
+ * early never costs trial days, or null when they're charged at checkout (the trial is over or
+ * nearly over, or they had a paid plan before and the trial was already used).
+ */
+export function firstChargeAt(trialEndsAt: number, subscribedBefore: boolean, now = Date.now()): number | null {
+  if (subscribedBefore || trialEndsAt - now < MIN_TRIAL_CARRY_MS) return null;
+  return trialEndsAt;
+}
+
 export function trialDaysLeft(family: FamilyInfo, now = Date.now()): number {
   return Math.max(0, Math.ceil((family.trialEndsAt - now) / 86_400_000));
 }

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { canUse, FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, PRICES, trialDaysLeft, unitOpen, upgradeOffer } from "./plan";
+import { canUse, firstChargeAt, MIN_TRIAL_CARRY_MS, FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, PRICES, trialDaysLeft, unitOpen, upgradeOffer } from "./plan";
 import type { FamilyInfo } from "./model";
 
 const family = (overrides: Partial<FamilyInfo> = {}) => ({
@@ -74,5 +74,20 @@ describe("family plan access", () => {
       year: { amount: 119.99, currency: "CAD", label: "$119.99/year", note: "Save 33%" },
     });
     expect(Math.round((1 - PRICES.year.amount / (PRICES.month.amount * 12)) * 100)).toBe(33);
+  });
+});
+
+describe("first charge when subscribing during the trial", () => {
+  const now = 1_000_000_000_000;
+  it("waits for the trial to end so no free days are lost", () => {
+    expect(firstChargeAt(now + 10 * 86_400_000, false, now)).toBe(now + 10 * 86_400_000);
+    expect(firstChargeAt(now + MIN_TRIAL_CARRY_MS, false, now)).toBe(now + MIN_TRIAL_CARRY_MS);
+  });
+  it("charges at checkout when the trial is over or nearly over, which Stripe can't delay", () => {
+    expect(firstChargeAt(now + MIN_TRIAL_CARRY_MS - 1, false, now)).toBeNull();
+    expect(firstChargeAt(now - 1, false, now)).toBeNull();
+  });
+  it("never gives a second trial to a family that had a paid plan", () => {
+    expect(firstChargeAt(now + 10 * 86_400_000, true, now)).toBeNull();
   });
 });

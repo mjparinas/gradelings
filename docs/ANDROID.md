@@ -37,7 +37,7 @@ Nothing here can be done from code; each step needs an account, a key or a domai
 6. **Use Play App Signing** when you create the app in the Play Console (it is the default). Google re-signs the app with its own key, so **the fingerprint that matters is Google's**: Play Console > your app > App integrity > App signing > "SHA-256 certificate fingerprint".
 7. **Set `ANDROID_CERT_SHA256`** in Vercel to that fingerprint. To also test an APK you built locally, add the upload key's fingerprint too (`keytool -list -v -keystore grademap-upload.keystore`), comma-separated. No redeploy of the build is needed: the route reads the variable on each request.
 8. **Check the link:** open `https://<domain>/.well-known/assetlinks.json` (it should list your fingerprint) and, with the app installed on a device, confirm there is no browser bar. If the bar shows, the fingerprint, package id or host doesn't match.
-9. **Fill in the Play listing:** screenshots (phone, 7" and 10" tablet), descriptions, the privacy policy URL (`/privacy/`), the Data safety form and the content rating questionnaire.
+9. **Fill in the Play listing:** screenshots (phone, 7" and 10" tablet), descriptions, the privacy policy URL (`/privacy/`), the Data safety form and the content rating questionnaire. The text and every form answer are drafted in `docs/PLAY_LISTING.md`.
 
 For later releases, raise `appVersionCode` and `appVersionName` in `android/twa-manifest.json`, run `npx @bubblewrap/cli build`, and upload the new bundle. Site changes need no new release.
 
@@ -46,7 +46,7 @@ For later releases, raise `appVersionCode` and `appVersionName` in `android/twa-
 Google Play generally requires subscriptions for digital content sold inside an app to use Google Play Billing (with a fee), and doesn't allow sending people from the app to an outside checkout such as Stripe. Decision: **the Android app has no purchase screens** and families subscribe on the website. Their plan syncs to the app like any other device.
 
 - The app opens `/play/?app=android` (`startUrl` in `android/twa-manifest.json`). `src/lib/twa.ts` (`isAndroidApp`) reads that, or the `android-app://` referrer, and keeps it in `sessionStorage`.
-- On the parent area, the lock dialog and the Subscription page, the Android app tells parents to open gradelings.com in a browser to subscribe. It shows no prices, payment buttons or link into checkout.
+- The Android app shows no prices, payment buttons, subscribe prompts or link into checkout, and doesn't name the website as a place to pay (Google Play counts that as steering). The Subscription page says only that the app can't take a payment and that a membership shows up once the parent signs in; the lock dialog asks the child to ask a grown-up; the subscribe banner and header button are hidden.
 - Rejection is still possible. Check Google's current payments policy before you submit, and if it asks for more, the fallback is Google Play Billing (not built).
 - The Families policy also applies because the app is for children. The no-ads, no-tracking and no-purchases-by-kids rules in `AGENTS.md` fit it, and the parent area is behind the PIN gate.
 

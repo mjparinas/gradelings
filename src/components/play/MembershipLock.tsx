@@ -1,7 +1,6 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import { SITE_HOST } from "@/lib/brand";
 import { SUBSCRIBE_HREF } from "@/lib/plan";
 import { isAndroidApp } from "@/lib/twa";
 import { Dialog } from "../ui";
@@ -19,7 +18,7 @@ export function MembershipLock({ open, onClose }: { open: boolean; onClose: () =
       </div>
       <p className="mb-5 font-read text-lg text-ink-soft">
         {inAndroidApp ? (
-          <>This part opens with a family membership. A grown-up can subscribe at <b>{SITE_HOST}</b> in a browser.</>
+          "This part opens with a family membership. Ask a grown-up about it."
         ) : (
           "This part opens with a family membership. A grown-up can subscribe in the grown-ups area."
         )}

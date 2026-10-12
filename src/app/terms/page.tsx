@@ -38,7 +38,7 @@ export default function TermsPage() {
             The family plan unlocks everything for up to {MAX_CHILDREN} children and costs {PRICES.month.label} or {PRICES.year.label} ({PRICES.month.currency}). Taxes may be added where required.
           </li>
           <li>When the trial ends we don’t charge you. You keep the free units unless you choose to subscribe.</li>
-          <li>You can subscribe at any time, including during the trial, and you don’t have to start the trial first. If you subscribe during the trial, you’re charged at checkout, the paid plan starts that day, and the days left in the trial don’t carry over.</li>
+          <li>You can subscribe at any time, including during the trial, and you don’t have to start the trial first. If you subscribe during the trial, your card is saved at checkout and your first payment is taken when the trial ends, so you keep the days left. If you cancel before then, you pay nothing. If fewer than about two days of the trial are left, or you had a paid plan before, you’re charged at checkout and the paid plan starts that day.</li>
           <li>Features and prices can change. We’ll tell you by email before a price change affects your subscription, and you can cancel before it takes effect.</li>
         </ul>
       </Section>

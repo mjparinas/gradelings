@@ -71,6 +71,8 @@ export async function createCheckout(opts: {
   origin: string;
   /** A Stripe coupon from a redeemed discount code. */
   coupon?: string | null;
+  /** Bill from this time (ms) instead of today, so the rest of the free trial is kept. */
+  firstChargeAt?: number | null;
 }): Promise<string> {
   const price = opts.interval === "year" ? process.env.STRIPE_PRICE_YEARLY! : process.env.STRIPE_PRICE_MONTHLY!;
   const params: Record<string, string> = {
@@ -85,6 +87,11 @@ export async function createCheckout(opts: {
   };
   if (opts.customer) params.customer = opts.customer;
   else params.customer_email = opts.email;
+  if (opts.firstChargeAt) {
+    // The card is still taken at checkout; the first payment waits for the trial to end.
+    params["subscription_data[trial_end]"] = String(Math.floor(opts.firstChargeAt / 1000));
+    params.payment_method_collection = "always";
+  }
   // Stripe takes either a set discount or a promotion-code box, not both.
   if (opts.coupon) params["discounts[0][coupon]"] = opts.coupon;
   else params.allow_promotion_codes = "true";

@@ -62,7 +62,7 @@ Turso offers Canadian locations only on its Fly provider (its AWS list has none)
    **The trailing slash is required.** Stripe does not follow redirects.
    Events: `checkout.session.completed`, `customer.subscription.created`, `customer.subscription.updated`, `customer.subscription.deleted`, plus `invoice.paid` and `charge.refunded` for the admin dashboard's revenue numbers, and `invoice.payment_failed` and `charge.dispute.created` for the admin alerts.
 3. Copy the endpoint's signing secret to `STRIPE_WEBHOOK_SECRET`.
-4. In Stripe's Billing Portal settings, enable cancel, update payment method and plan switching between the two prices.
+4. In Stripe's Billing Portal settings, enable cancel, update payment method and plan switching between the two prices. Turn on **Cancellation reasons** (all eight options), so the admin dashboard can show why families cancel, and set **trial update behaviour** to *continue trial*, so a parent who switches plan during the free trial isn't charged early. (Both are already set in the sandbox.)
 5. Test the whole flow in Stripe test mode first (card `4242 4242 4242 4242`). The 30-day free trial is handled by the app, not by Stripe, so no card is needed to start.
 
 ## 5. Email (Resend) and error reports (Sentry)
