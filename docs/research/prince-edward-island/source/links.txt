@@ -1,0 +1,15 @@
+/sites/default/files/publications/eelc_outcomes_framework_k.pdf
+/sites/default/files/publications/eelc_outcomes_framework_kindergarten.pdf
+/sites/default/files/publications/eelc_outcomes_framework_1.pdf
+/sites/default/files/publications/eelc_outcomes_framework_2.pdf
+/sites/default/files/publications/eelc_outcomes_framework_3.pdf
+/sites/default/files/publications/eelc_outcomes_framework_5.pdf
+/sites/default/files/publications/eelc_outcomes_framework_6.pdf
+/sites/default/files/publications/eelc_outcomes_framework_7.pdf
+/sites/default/files/publications/eelc_outcomes_framework_8.pdf
+/sites/default/files/publications/eelc_outcomes_framework_9.pdf
+/sites/default/files/publications/eelc_program_of_studies_k-6.pdf
+/sites/default/files/publications/intermediate_program_of_studies_and_authorized_materials.pdf
+/sites/default/files/publications/eelc_math_9_5.pdf
+/sites/default/files/publications/eelc_socialstudies_9.pdf
+/sites/default/files/publications/eelc_outcomes_framework_4.pdf

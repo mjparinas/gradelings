@@ -6,22 +6,24 @@ const piper = vi.hoisted(() => ({
   wanted: false,
   fail: false,
   spoken: [] as { text: string; lang: string }[],
+  rates: [] as number[],
   stops: 0,
 }));
 vi.mock("./piper", () => ({
   piperCanSpeak: () => piper.wanted,
   piperMightSpeak: () => piper.wanted,
   piperWanted: async () => piper.wanted,
-  speakPiper: async (text: string, lang: string) => {
+  speakPiper: async (text: string, lang: string, rate: number) => {
     if (piper.fail) throw new Error("no wasm");
     piper.spoken.push({ text, lang });
+    piper.rates.push(rate);
   },
   stopPiper: () => void piper.stops++,
 }));
 
 const synthSaid: string[] = [];
 beforeEach(() => {
-  Object.assign(piper, { wanted: false, fail: false, spoken: [], stops: 0 });
+  Object.assign(piper, { wanted: false, fail: false, spoken: [], rates: [], stops: 0 });
   synthSaid.length = 0;
   vi.stubGlobal("window", globalThis);
   vi.stubGlobal("navigator", { onLine: true });
@@ -62,6 +64,15 @@ describe("read-aloud with the Piper voice", () => {
     await flush();
     expect(piper.spoken).toEqual([{ text: "3 minus 1 = mot manquant", lang: "fr" }]);
     expect(synthSaid).toEqual([]);
+  });
+
+  it("reads Amy faster than her natural pace, in questions and the Settings preview", async () => {
+    piper.wanted = true;
+    const { speak, previewPiper } = await import("./speech");
+    speak("Hello");
+    await flush();
+    await previewPiper("en");
+    expect(piper.rates).toEqual([1.15, 1.15]);
   });
 
   it("falls back to the device voice when Piper can't play", async () => {

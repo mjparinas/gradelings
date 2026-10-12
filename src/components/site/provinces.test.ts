@@ -12,15 +12,15 @@ describe("homepage province coverage", () => {
 
   it("states the subjects every province shares, and which provinces are without French Immersion", () => {
     const coverage = provinceCoverage(FRAMEWORKS);
-    // Every province has Core French; Nunavut has Core French but no French Immersion.
+    // Every province has Core French; Newfoundland and Labrador, Prince Edward Island and Nunavut have no French Immersion.
     expect(coverage.sharedSubjects).toEqual(["math", "language", "science", "social", "core-french"]);
     expect(coverage.range).toEqual({ from: "k", to: "9" });
     expect(coverage.gaps).toHaveLength(1);
     const [immersion] = coverage.gaps;
     expect(immersion.subjects).toEqual(["immersion"]);
     expect(immersion.style).toBe("except");
-    expect(immersion.missing.map((f) => f.id)).toEqual(["ca-nu"]);
-    expect(immersion.included.map((f) => f.id)).toEqual(FRAMEWORKS.filter((f) => f.id !== "ca-nu").map((f) => f.id));
+    expect(immersion.missing.map((f) => f.id)).toEqual(["ca-nl", "ca-pe", "ca-nu"]);
+    expect(immersion.included.map((f) => f.id)).toEqual(FRAMEWORKS.filter((f) => !["ca-nl", "ca-pe", "ca-nu"].includes(f.id)).map((f) => f.id));
   });
 
   it("names the province that has a subject when most provinces do not", () => {
@@ -40,7 +40,7 @@ describe("homepage province coverage", () => {
 
   it("names every province, with 'the' before the Northwest Territories", () => {
     expect(regionList(FRAMEWORKS)).toBe(
-      "British Columbia, Ontario, Alberta, Saskatchewan, Manitoba, Yukon, the Northwest Territories, Nova Scotia, New Brunswick and Nunavut",
+      "British Columbia, Ontario, Alberta, Saskatchewan, Manitoba, Yukon, the Northwest Territories, Nova Scotia, New Brunswick, Newfoundland and Labrador, Prince Edward Island and Nunavut",
     );
   });
 

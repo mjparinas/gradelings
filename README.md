@@ -1,6 +1,6 @@
 # Gradelings
 
-Curriculum-matched practice, learning games and parent reports for **Kindergarten to Grade 9**. It covers the BC, Ontario, Alberta, Saskatchewan, Manitoba, Yukon, Northwest Territories, Nova Scotia, New Brunswick and Nunavut curricula, and other provinces and US states can be added. The app name is set in `src/lib/brand.ts`.
+Curriculum-matched practice, learning games and parent reports for **Kindergarten to Grade 9**. It covers the BC, Ontario, Alberta, Saskatchewan, Manitoba, Yukon, Northwest Territories, Nova Scotia, New Brunswick, Newfoundland and Labrador, Prince Edward Island and Nunavut curricula, and other provinces and US states can be added. The app name is set in `src/lib/brand.ts`.
 
 It's a web app first: it runs in any browser, installs to a tablet or phone home screen, and **works offline**. Progress, scores and trophies sync to the family account when the device is back online.
 
@@ -77,6 +77,7 @@ With no configuration it uses a local SQLite file (`./data/grademap.db`) and **s
 | `STRIPE_SECRET_KEY` | Stripe secret key. Billing is simulated until this and both price IDs are set. |
 | `STRIPE_PRICE_MONTHLY`, `STRIPE_PRICE_YEARLY` | Price IDs for the family plan (C$14.99/month, C$119.99/year). |
 | `STRIPE_WEBHOOK_SECRET` | Signing secret for `/api/billing/webhook`. |
+| `ADMIN_TOKEN` | Turns on the admin API for redeem codes (`docs/CODES.md`). At least 24 random characters. |
 | `ALLOW_DEV_BILLING` | Set to `1` to allow simulated billing in a production build (staging only). |
 
 ### Stripe setup

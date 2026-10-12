@@ -45,6 +45,7 @@ export async function DELETE(req: Request) {
     { sql: "DELETE FROM class_assignments WHERE class_id IN (SELECT id FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?))", args: [f] },
     { sql: "DELETE FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?)", args: [f] },
     { sql: "DELETE FROM question_reports WHERE family_id = ?", args: [f] },
+    { sql: "DELETE FROM code_redemptions WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM events WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM child_settings WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM profiles WHERE family_id = ?", args: [f] },
