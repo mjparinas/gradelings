@@ -1,4 +1,5 @@
 import "server-only";
+import type { EmailKind } from "@/lib/emailKinds";
 
 // Email goes out through Resend over plain HTTPS (no SDK). Set RESEND_API_KEY and EMAIL_FROM
 // (for example `Gradelings <hello@gradelings.com>`). Without a key, emails are logged in
@@ -11,6 +12,12 @@ export interface Email {
   text: string;
   /** Adds the one-click unsubscribe header to bulk mail like the weekly report. */
   unsubscribeUrl?: string;
+  /** Mail with a kind is recorded in the admin panel's email log, against the account it went to. */
+  kind?: EmailKind;
+  /** The admin who sent it, for mail sent from the admin panel. */
+  sentBy?: string;
+  /** What the email log shows instead of the subject (admin mail keeps its subject before names are filled in). */
+  label?: string;
 }
 
 export interface SentEmail extends Email {
@@ -28,6 +35,16 @@ export function outbox(): SentEmail[] {
 }
 
 export async function sendEmail(email: Email): Promise<{ ok: boolean; skipped?: boolean }> {
+  const result = await deliver(email);
+  if (email.kind) {
+    // The log never stops an email: it is written after sending, and a failure only shows in the server log.
+    const status = result.skipped ? "skipped" : result.ok ? "sent" : "failed";
+    await import("./emailLog").then((m) => m.logEmail(email, status, result.id)).catch((e: Error) => console.error("[email] could not log", e.message));
+  }
+  return { ok: result.ok, ...(result.skipped ? { skipped: true } : {}) };
+}
+
+async function deliver(email: Email): Promise<{ ok: boolean; skipped?: boolean; id?: string }> {
   if (!emailConfigured()) {
     if (process.env.NODE_ENV === "production") return { ok: false, skipped: true };
     outbox().push({ ...email, at: Date.now() });
@@ -50,7 +67,8 @@ export async function sendEmail(email: Email): Promise<{ ok: boolean; skipped?: 
       }),
     });
     if (!res.ok) console.error(`[email] Resend answered ${res.status}`);
-    return { ok: res.ok };
+    const id = res.ok ? ((await res.json().catch(() => null)) as { id?: unknown } | null)?.id : undefined;
+    return { ok: res.ok, id: typeof id === "string" ? id : undefined };
   } catch (e) {
     console.error("[email] could not reach Resend", (e as Error).message);
     return { ok: false };
