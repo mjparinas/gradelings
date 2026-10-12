@@ -91,7 +91,7 @@ check(await vis(page.getByRole("img", { name: "Sign-ups per week" })), "the over
 await page.getByLabel("Monthly running costs (CAD)").fill("120");
 await page.getByRole("button", { name: "Save costs" }).click();
 check(await page.getByText("Monthly costs saved.").waitFor({ timeout: 8000 }).then(() => true, () => false), "the admin saves monthly costs for profit");
-check(await vis(page.getByText("with costs of $120.00 a month")), "the projected profit uses the costs");
+check(await page.getByText("with costs of $120.00 a month").waitFor({ timeout: 8000 }).then(() => true, () => false), "the projected profit uses the costs");
 await shot("overview");
 await scan("overview");
 

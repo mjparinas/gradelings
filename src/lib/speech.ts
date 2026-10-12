@@ -4,8 +4,9 @@
 // and costs nothing. Voice quality varies hugely between devices, so we rank the
 // installed voices and pick the most natural one; parents can choose another in
 // Settings (saved per device, because every device has different voices). By default the Piper
-// voice (src/lib/piper.ts) downloads in the background the first time read-aloud is used and
-// then reads instead of the device voice; until it's here, or if it fails, the device voice reads.
+// voice (src/lib/piper.ts) downloads in the background when the app opens for a child with
+// read-aloud on, or the first time the speaker button is tapped, and then reads instead of the
+// device voice; until it's here, or if it fails, the device voice reads.
 
 import { autoDownloadPiper, markPiperFailed, piperCanSpeak, piperMightSpeak, piperWanted, speakPiper, stopPiper } from "./piper";
 
@@ -171,6 +172,9 @@ const RATE = 0.92;
 // as well made her drag; she reads a bit faster than her natural pace instead.
 export const PIPER_RATE: Record<SpeechLanguage, number> = { en: 1.15, fr: RATE };
 
+// Pauses (such as between a question and its answers) are half as long when Piper reads.
+export const PIPER_PAUSE_SCALE = 0.5;
+
 // Chrome on Android silently drops an utterance spoken straight after cancel(), so there speech
 // waits this long after a cancel. Still well inside the tap's user activation.
 const ANDROID_CANCEL_GAP = 150;
@@ -214,6 +218,7 @@ function utter(text: string, option: VoiceOption | undefined, onFail?: () => voi
 function queue(text: string, voiceUri: string | null | undefined, language: SpeechLanguage, onDone?: () => void) {
   // A named voice (the device-voice preview in Settings) always uses that voice.
   if (voiceUri !== undefined) return queueDevice(text, voiceUri, language, onDone);
+  // Hearing a question (the speaker button, in any grade) is the moment to fetch that language's voice.
   void autoDownloadPiper(language).catch(() => false);
   if (!piperMightSpeak(language)) return queueDevice(text, voiceUri, language, onDone);
   const id = run;
@@ -290,7 +295,9 @@ export function speakSegments(segments: readonly SpeechPiece[]) {
     const go = () => {
       if (id === run) queue(piece.text, undefined, piece.lang, next);
     };
-    if (piece.pause) pauseTimer = setTimeout(go, piece.pause);
+    // Piper takes a moment to make each piece, so its pauses are shorter to feel the same.
+    const pause = piece.pause && piperMightSpeak(piece.lang) ? piece.pause * PIPER_PAUSE_SCALE : piece.pause;
+    if (pause) pauseTimer = setTimeout(go, pause);
     else go();
   };
   next();
