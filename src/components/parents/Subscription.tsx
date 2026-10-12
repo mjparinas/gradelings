@@ -2,14 +2,15 @@
 
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { SITE_HOST } from "@/lib/brand";
-import { devBilling, openBillingPortal, refreshAccount, resendVerification, startCheckout, type BillingInfo } from "@/lib/account";
-import { FREE_UNITS_PER_COURSE, hasPaidPlan, isPremium, MAX_CHILDREN, PRICES, trialDaysLeft, upgradeOffer } from "@/lib/plan";
+import { devBilling, openBillingPortal, redeemCode, refreshAccount, resendVerification, startCheckout, type BillingInfo } from "@/lib/account";
+import { FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, PRICES, trialDaysLeft, upgradeOffer } from "@/lib/plan";
 import { useRoute } from "@/lib/router";
 import { useStore } from "@/lib/store";
 import { isAndroidApp } from "@/lib/twa";
 import { PageTitle, Panel } from "./common";
 
 const noSubscribe = () => () => {};
+const longDate = (t: number) => new Date(t).toLocaleDateString("en-CA", { dateStyle: "long" });
 
 const INCLUDED = [
   "Every unit in every subject, Kindergarten to Grade 9",
@@ -33,6 +34,8 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
   const offer = upgradeOffer(family);
   const needsEmail = Boolean(family.account && family.account.verified === false);
   const checkout = query.get("checkout");
+  const codeAccess = hasCodeAccess(family);
+  const lifetime = codeAccess && isLifetime(family);
   const [resent, setResent] = useState<"idle" | "sending" | "sent">("idle");
 
   useEffect(() => {
@@ -70,14 +73,19 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
       <div className="grid gap-5 lg:grid-cols-2">
         <Panel title="Your plan">
           <p className="text-2xl font-bold">
-            {paid
+            {lifetime
+              ? "⭐ Premium · lifetime access"
+              : paid && !subscribed && codeAccess
+                ? "⭐ Premium from your code"
+                : paid
               ? `⭐ Premium${family.subscription?.interval ? ` (${family.subscription.interval === "year" ? "yearly" : "monthly"})` : ""}`
               : premium
                 ? `Free trial · ${trialDaysLeft(family)} ${trialDaysLeft(family) === 1 ? "day" : "days"} left`
                 : "Free plan"}
           </p>
+          {codeAccess && !lifetime && <p className="text-ink-soft">Free access until {longDate(family.accessUntil!)}</p>}
           {subscribed && family.subscription?.currentPeriodEnd && (
-            <p className="text-ink-soft">Renews {new Date(family.subscription.currentPeriodEnd).toLocaleDateString("en-CA", { dateStyle: "long" })}</p>
+            <p className="text-ink-soft">Renews {longDate(family.subscription.currentPeriodEnd)}</p>
           )}
           {!premium && (
             <p className="mt-2 font-read text-ink-soft">
@@ -115,7 +123,13 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
               <PlanChoices />
             </div>
           ) : paid && !subscribed ? (
-            <p className="font-read">Your membership is active.</p>
+            <p className="font-read">
+              {lifetime
+                ? "Your code gives your family lifetime access. There's nothing to pay."
+                : codeAccess
+                  ? `Your code gives your family everything until ${longDate(family.accessUntil!)}. You can subscribe here when it ends.`
+                  : "Your membership is active."}
+            </p>
           ) : subscribed ? (
             <div className="flex flex-col gap-3">
               {billing?.stripe ? (
@@ -130,6 +144,11 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
             </div>
           ) : (
             <div className="flex flex-col gap-3">
+              {family.discount && (
+                <p className="rounded-xl bg-good-soft p-3 font-semibold">
+                  🎟️ Code {family.discount.code}: {family.discount.percentOff}% off is taken off at checkout.
+                </p>
+              )}
               {offer === "trial" && (
                 <p className="font-read">
                   Subscribing now keeps everything open. You&apos;re charged at checkout, the paid plan starts that day, and days left in the trial don&apos;t carry over.
@@ -169,8 +188,72 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
           )}
           {error && <p className="mt-3 font-semibold text-nudge-dark">{error}</p>}
         </Panel>
+        {family.account && !lifetime && <RedeemPanel />}
       </div>
     </>
+  );
+}
+
+/** A box for a code from a school, a partner or a gift: free access for a while, or a discount. */
+function RedeemPanel() {
+  const [code, setCode] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [message, setMessage] = useState<{ ok: boolean; text: string } | null>(null);
+  const submit = async () => {
+    setBusy(true);
+    setMessage(null);
+    try {
+      const result = await redeemCode(code);
+      setCode("");
+      setMessage({
+        ok: true,
+        text:
+          result.kind === "discount"
+            ? `🎉 ${result.percentOff}% off is saved for when you subscribe.`
+            : result.accessUntil >= LIFETIME_ACCESS
+              ? "🎉 Your family has lifetime access."
+              : `🎉 Everything is open until ${longDate(result.accessUntil)}.`,
+      });
+    } catch (e) {
+      setMessage({ ok: false, text: (e as Error).message });
+    } finally {
+      setBusy(false);
+    }
+  };
+  return (
+    <Panel title="Have a code?">
+      <form
+        className="flex flex-col gap-3 sm:flex-row"
+        onSubmit={(e) => {
+          e.preventDefault();
+          if (code.trim()) void submit();
+        }}
+      >
+        <label className="sr-only" htmlFor="redeem-code">
+          Code
+        </label>
+        <input
+          id="redeem-code"
+          value={code}
+          onChange={(e) => setCode(e.target.value)}
+          autoComplete="off"
+          autoCapitalize="characters"
+          spellCheck={false}
+          maxLength={40}
+          placeholder="ABCD-EFGH-JKMN"
+          className="min-h-12 flex-1 rounded-xl border border-line px-3 font-mono text-lg uppercase"
+        />
+        <button type="submit" disabled={busy || !code.trim()} className="btn btn-good min-h-12 px-5 text-lg disabled:opacity-60">
+          {busy ? "Checking…" : "Redeem"}
+        </button>
+      </form>
+      <p className="mt-2 text-sm text-ink-soft">A code can give your family free access for a while, or money off when you subscribe. Each code works once per family.</p>
+      {message && (
+        <p role="status" className={`mt-3 font-semibold ${message.ok ? "text-good-dark" : "text-nudge-dark"}`}>
+          {message.text}
+        </p>
+      )}
+    </Panel>
   );
 }
 

@@ -19,21 +19,35 @@ const ACTIVE = new Set(["active", "trialing", "past_due"]);
 /** Parent-area page where a family starts or manages a paid plan. Works before anyone opens the kids' app. */
 export const SUBSCRIBE_HREF = "/parents/#/subscription";
 
+/** `accessUntil` for a code that never runs out: the latest time a JavaScript Date can hold. */
+export const LIFETIME_ACCESS = 8_640_000_000_000_000;
+
+/** Free access from a redeemed code (lifetime, a year, six months...), as opposed to a subscription. */
+export function hasCodeAccess(family: FamilyInfo, now = Date.now()): boolean {
+  return Boolean(family.accessUntil && now < family.accessUntil);
+}
+
+export function isLifetime(family: FamilyInfo): boolean {
+  return (family.accessUntil ?? 0) >= LIFETIME_ACCESS;
+}
+
 export function isPremium(family: FamilyInfo, now = Date.now()): boolean {
   if (family.plan === "premium") return true;
+  if (hasCodeAccess(family, now)) return true;
   if (family.subscription && ACTIVE.has(family.subscription.status)) return true;
   return now < family.trialEndsAt;
 }
 
-/** A paid membership, as opposed to the free trial or the free plan. */
-export function hasPaidPlan(family: FamilyInfo): boolean {
+/** A membership (paid, or granted by a code), as opposed to the free trial or the free plan. */
+export function hasPaidPlan(family: FamilyInfo, now = Date.now()): boolean {
   if (family.plan === "premium") return true;
+  if (hasCodeAccess(family, now)) return true;
   return Boolean(family.subscription && ACTIVE.has(family.subscription.status));
 }
 
 /** Who should see a subscribe prompt: families still on the trial, or already on the free plan. */
 export function upgradeOffer(family: FamilyInfo, now = Date.now()): "trial" | "free" | null {
-  if (hasPaidPlan(family)) return null;
+  if (hasPaidPlan(family, now)) return null;
   return isPremium(family, now) ? "trial" : "free";
 }
 

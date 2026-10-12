@@ -83,6 +83,10 @@ export interface FamilyInfo {
   plan: "trial" | "free" | "premium";
   trialEndsAt: number;
   subscription?: { status: string; interval?: "month" | "year"; currentPeriodEnd?: number };
+  /** Free access from a redeemed code ends at this time (ms); `LIFETIME_ACCESS` never ends. Null when there is none. */
+  accessUntil?: number | null;
+  /** A redeemed discount code waiting for the next checkout. */
+  discount?: { code: string; percentOff: number } | null;
   updatedAt: number;
 }
 
