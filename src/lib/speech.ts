@@ -154,9 +154,23 @@ export function currentVoice(language: SpeechLanguage = "en"): VoiceOption | und
 }
 
 /** Turn on-screen symbols into words a speech engine reads naturally. */
-function forSpeech(text: string, language: SpeechLanguage = "en"): string {
+// Phonics writes a held sound by stretching the letter ("sss", "vvv", "shhh"), but every voice
+// reads that as the letter's name over and over ("ess ess ess"). Read aloud, each becomes one
+// short sound in the same "buh", "tuh" style the lessons already use for b and t.
+const STRETCHED = /\b(?:([bcdfghjklmnpqrstvz])\1{2,}|(sh|ch|th)h+)\b/gi;
+const SOUND_OF: Record<string, string> = { c: "k", q: "k" };
+
+/** Turns a stretched letter sound into one short spoken sound: "vvv" → "vuh", "shhh" → "shuh". */
+export function speakStretched(text: string): string {
+  return text.replace(STRETCHED, (_, letter: string | undefined, pair: string | undefined) => {
+    const sound = pair ?? letter!;
+    return `${SOUND_OF[sound.toLowerCase()] ?? sound}uh`;
+  });
+}
+
+export function forSpeech(text: string, language: SpeechLanguage = "en"): string {
   const blank = language === "fr" ? " mot manquant " : " blank ";
-  return text
+  return (language === "en" ? speakStretched(text) : text)
     .replace(/☐/g, blank)
     .replace(/(\d+)¢/g, "$1 cents")
     .replace(/−/g, " minus ")
