@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
-import { EMAIL_IMAGES } from "@/lib/emailImages";
+import { EMAIL_FONT, EMAIL_IMAGES } from "@/lib/emailImages";
 import * as t from "./emailTemplates";
 
 const O = "https://app.test";
@@ -38,6 +38,15 @@ describe("branding in every email", () => {
   it("spells the name in the logo's colours, one per letter", () => {
     const letters = APP_NAME.split("").map((ch, i) => `<span style="color:${WORDMARK_COLOURS[i % WORDMARK_COLOURS.length]}">${ch}</span>`).join("");
     for (const e of every) expect(e.html).toContain(letters);
+  });
+
+  it("sets the text in Andika, loaded from our own site", () => {
+    for (const e of every) {
+      expect(e.html).toContain(`font-family:${EMAIL_FONT.stack}`);
+      for (const f of EMAIL_FONT.files) expect(e.html).toContain(`url(${O}${f.path}.woff2)`);
+      expect(e.html).not.toContain("fonts.googleapis");
+    }
+    for (const f of EMAIL_FONT.files) for (const ext of ["woff2", "woff"]) expect(existsSync(join(process.cwd(), "public", `${f.path}.${ext}`))).toBe(true);
   });
 
   it("has the image files the emails point to, as PNGs (mail clients don't show SVG)", () => {

@@ -30,6 +30,8 @@ const nextConfig: NextConfig = {
       },
       // Email images carry a version in their name (src/lib/emailImages.ts), so they never change in place.
       { source: "/email/:file*", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }] },
+      // Mail apps load the email font from another origin, and browsers only use cross-origin fonts with CORS.
+      { source: "/email/fonts/:file*", headers: [{ key: "Access-Control-Allow-Origin", value: "*" }] },
     ];
   },
   // Runs as a normal Next.js server (pages are still pre-rendered where possible)
