@@ -1,6 +1,6 @@
 import "server-only";
 import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS, WORDMARK_COLOURS } from "@/lib/brand";
-import { EMAIL_FONT, EMAIL_IMAGES } from "@/lib/emailImages";
+import { EMAIL_FONTS, EMAIL_IMAGES } from "@/lib/emailImages";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, SUBSCRIBE_HREF } from "@/lib/plan";
 import type { EmailKind } from "@/lib/emailKinds";
 import type { Email } from "./email";
@@ -30,7 +30,7 @@ function wordmark(): string {
   const letters = APP_NAME.split("")
     .map((ch, i) => `<span style="color:${WORDMARK_COLOURS[i % WORDMARK_COLOURS.length]}">${esc(ch)}</span>`)
     .join("");
-  return `<span style="font-family:${EMAIL_FONT.stack};font-size:30px;font-weight:700;letter-spacing:-0.5px;line-height:1">${letters}</span>`;
+  return `<span style="font-family:${EMAIL_FONTS.wordmark.stack};font-size:30px;font-weight:700;letter-spacing:-0.75px;line-height:1">${letters}</span>`;
 }
 
 /** The logo and Ollie at the top of every email, linking to the site. Tables, because Outlook ignores flexbox. */
@@ -42,10 +42,11 @@ function header(origin: string): string {
 </tr></table>`;
 }
 
-/** Andika from our own site, for the clients that load web fonts. */
+/** Andika and Fredoka from our own site, for the clients that load web fonts. */
 function fontFaces(origin: string): string {
-  return EMAIL_FONT.files
-    .map((f) => `@font-face{font-family:${EMAIL_FONT.family};font-style:normal;font-weight:${f.weight};src:url(${esc(origin)}${f.path}.woff2) format("woff2"),url(${esc(origin)}${f.path}.woff) format("woff")}`)
+  return Object.values(EMAIL_FONTS)
+    .flatMap((font) => font.files.map((f) => ({ ...f, family: font.family })))
+    .map((f) => `@font-face{font-family:${f.family};font-style:normal;font-weight:${f.weight};src:url(${esc(origin)}${f.path}.woff2) format("woff2"),url(${esc(origin)}${f.path}.woff) format("woff")}`)
     .join("");
 }
 
@@ -54,7 +55,7 @@ function layout(p: Parts): Email {
   const button = p.button
     ? `<p style="margin:24px 0"><a href="${esc(p.button.url)}" style="background:#25b47e;color:#fff;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:12px;display:inline-block">${esc(p.button.label)}</a></p>`
     : "";
-  const html = `<!doctype html><html><head><meta charset="utf-8"><style>${fontFaces(p.origin)}</style></head><body style="margin:0;background:#f7f5f0;font-family:${EMAIL_FONT.stack};color:#1d2233">
+  const html = `<!doctype html><html><head><meta charset="utf-8"><style>${fontFaces(p.origin)}</style></head><body style="margin:0;background:#f7f5f0;font-family:${EMAIL_FONTS.text.stack};color:#1d2233">
 <div style="max-width:520px;margin:0 auto;padding:24px">
 ${header(p.origin)}
 <div style="background:#fff;border-radius:16px;padding:24px;line-height:1.55">
