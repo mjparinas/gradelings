@@ -37,7 +37,7 @@ describe("branding in every email", () => {
 
   it("spells the name in the logo's colours, one per letter", () => {
     const letters = APP_NAME.split("").map((ch, i) => `<span style="color:${WORDMARK_COLOURS[i % WORDMARK_COLOURS.length]}">${ch}</span>`).join("");
-    for (const e of every) expect(e.html).toContain(letters);
+    for (const e of every) expect(e.html).toContain(`font-family:${EMAIL_FONT.stack};font-size:30px;font-weight:700;letter-spacing:-0.5px;line-height:1">${letters}`);
   });
 
   it("sets the text in Andika, loaded from our own site", () => {

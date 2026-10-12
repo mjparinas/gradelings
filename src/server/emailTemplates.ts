@@ -30,7 +30,7 @@ function wordmark(): string {
   const letters = APP_NAME.split("")
     .map((ch, i) => `<span style="color:${WORDMARK_COLOURS[i % WORDMARK_COLOURS.length]}">${esc(ch)}</span>`)
     .join("");
-  return `<span style="font-family:Fredoka,'Arial Rounded MT Bold','Trebuchet MS',system-ui,Arial,sans-serif;font-size:30px;font-weight:700;letter-spacing:-0.5px;line-height:1">${letters}</span>`;
+  return `<span style="font-family:${EMAIL_FONT.stack};font-size:30px;font-weight:700;letter-spacing:-0.5px;line-height:1">${letters}</span>`;
 }
 
 /** The logo and Ollie at the top of every email, linking to the site. Tables, because Outlook ignores flexbox. */
