@@ -186,6 +186,11 @@ export async function rateLimited(key: string, limit = 10, windowMs = 10 * 60_00
   return Number(rows[0]?.count ?? 1) > limit;
 }
 
+/** Gives back one use of a limit, for an attempt that turned out fine (a correct code). */
+export async function refundRateLimit(key: string): Promise<void> {
+  await run("UPDATE rate_limits SET count = count - 1 WHERE key = ? AND count > 0", [key]);
+}
+
 // ---------- One-time tokens (password reset, email confirmation) ----------
 
 export type TokenKind = "reset" | "verify";

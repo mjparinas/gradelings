@@ -55,10 +55,10 @@ describe("teacher-made student accounts", () => {
     const added = await (await studentRoutes.POST(req("/api/classes/students/", "POST", { classId: cls.id, names: ["Maya", " Sam <b>", ""] }, t))).json();
     expect(added.students.map((s: { name: string }) => s.name)).toEqual(["Maya", "Sam b"]);
     const [maya] = added.students as { loginCode: string; profileId: string }[];
-    expect(maya.loginCode).toMatch(/^[A-Z2-9]{6}$/);
+    expect(maya.loginCode).toMatch(/^[A-HJKMNP-Z2-9]{8}$/);
 
     // Wrong codes fail; the right pair signs in.
-    expect((await studentLogin.POST(req("/api/students/login/", "POST", { classCode: cls.joinCode, studentCode: "ZZZZZZ" }))).status).toBe(401);
+    expect((await studentLogin.POST(req("/api/students/login/", "POST", { classCode: cls.joinCode, studentCode: "ZZZZZZZZ" }))).status).toBe(401);
     const login = await studentLogin.POST(req("/api/students/login/", "POST", { classCode: cls.joinCode, studentCode: maya.loginCode }));
     expect(login.status).toBe(200);
     const cookie = (login.headers.get("set-cookie") ?? "").split(";")[0];
@@ -142,14 +142,50 @@ describe("teacher-made student accounts", () => {
     expect(await dbm.query("SELECT 1 FROM profiles WHERE id = ?", [made.students[0].profileId])).toHaveLength(0);
   });
 
-  it("limits guessing at the login", async () => {
+  it("limits wrong codes per network, never correct ones, and never locks a class out", async () => {
     const t = await teacher("st-teacher4@example.com");
     const cls = await classWith(t);
-    await studentRoutes.POST(req("/api/classes/students/", "POST", { classId: cls.id, names: ["Zed"] }, t));
-    const attempt = () =>
-      studentLogin.POST(new Request("http://localhost/api/students/login/", { method: "POST", headers: { "content-type": "application/json", "x-forwarded-for": "10.9.9.9" }, body: JSON.stringify({ classCode: cls.joinCode, studentCode: "AAAAAA" }) }));
+    const names = Array.from({ length: 30 }, (_, i) => `Kid ${i + 1}`);
+    const { students } = (await (await studentRoutes.POST(req("/api/classes/students/", "POST", { classId: cls.id, names }, t))).json()) as { students: { loginCode: string }[] };
+    expect(students).toHaveLength(30);
+    const attempt = (studentCode: string, ip: string) =>
+      studentLogin.POST(new Request("http://localhost/api/students/login/", { method: "POST", headers: { "content-type": "application/json", "x-forwarded-for": ip }, body: JSON.stringify({ classCode: cls.joinCode, studentCode }) }));
+
+    // A whole class signs in from one school network, twice over, with a few typos.
+    const school = "10.8.8.8";
+    for (const round of [1, 2]) {
+      for (const s of students) expect((await attempt(s.loginCode, school)).status, `round ${round}`).toBe(200);
+    }
+    for (let i = 0; i < 5; i++) expect((await attempt("AAAAAAAA", school)).status).toBe(401);
+    expect((await attempt(students[0].loginCode, school)).status).toBe(200);
+
+    // Someone guessing from another network is stopped there...
     let last = 0;
-    for (let i = 0; i < 20; i++) last = (await attempt()).status;
+    for (let i = 0; i < 40; i++) last = (await attempt("BBBBBBBB", "10.9.9.9")).status;
     expect(last).toBe(429);
+    expect((await attempt(students[1].loginCode, "10.9.9.9")).status).toBe(429);
+    // ...while the class keeps signing in.
+    expect((await attempt(students[1].loginCode, school)).status).toBe(200);
+  });
+
+  it("emails the admins, without locking anyone out, when a class gets many wrong codes from many networks", async () => {
+    const { outbox } = await import("@/server/email");
+    process.env.ADMIN_EMAILS = "alerts-admin@example.com";
+    try {
+      await teacher("alerts-admin@example.com");
+      const t = await teacher("st-teacher5@example.com");
+      const cls = await classWith(t);
+      const { students } = (await (await studentRoutes.POST(req("/api/classes/students/", "POST", { classId: cls.id, names: ["Ivy"] }, t))).json()) as { students: { loginCode: string }[] };
+      const attempt = (studentCode: string, ip: string) =>
+        studentLogin.POST(new Request("http://localhost/api/students/login/", { method: "POST", headers: { "content-type": "application/json", "x-forwarded-for": ip }, body: JSON.stringify({ classCode: cls.joinCode, studentCode }) }));
+      const before = outbox().length;
+      for (let i = 0; i < 310; i++) await attempt("CCCCCCCC", `10.7.${Math.floor(i / 20)}.${i % 20}`);
+      const alerts = outbox().slice(before).filter((m) => m.to === "alerts-admin@example.com");
+      expect(alerts).toHaveLength(1);
+      expect(alerts[0].subject).toContain("wrong student sign-ins");
+      expect((await attempt(students[0].loginCode, "10.6.0.1")).status).toBe(200);
+    } finally {
+      delete process.env.ADMIN_EMAILS;
+    }
   });
 });
