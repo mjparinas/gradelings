@@ -169,7 +169,7 @@ export const HELP: HelpSection[] = [
       },
       {
         q: "Are there ads or purchases for kids?",
-        a: "No ads, no tracking pixels, and we never sell information. Children can’t buy anything; coins are earned only by learning and spent in a pretend shop.",
+        a: "No ads, and we never sell information. Children can’t buy anything; coins are earned only by learning and spent in a pretend shop.",
       },
     ],
   },

@@ -78,7 +78,7 @@ Tests are duplicated across screen sizes only where layout can break:
 - **Platform:** a web-first installable app (PWA) built with Next.js. Android is a Trusted Web Activity that wraps `/play/` (`android/`, `docs/ANDROID.md`), not Capacitor. Don't add features that only work in a native shell.
 
 ### Money
-- **No ads, ever. No tracking pixels. Never sell data.** Kids can never buy anything; coins are earned only by learning. The one exception is testing: a device signed in to an admin account shows unlimited coins (`TEST_COINS`, `docs/ADMIN.md`), never stored or synced.
+- **No ads, ever. Never sell data.** Kids can never buy anything; coins are earned only by learning. The one exception is testing: a device signed in to an admin account shows unlimited coins (`TEST_COINS`, `docs/ADMIN.md`), never stored or synced.
 - **Family plan:** C$14.99/month or C$119.99/year, with "Save 33%" on the yearly plan, for up to 3 children.
   - The plan includes a 30-day free trial with everything on and no card needed.
   - Subscribing during the trial keeps the days left: checkout saves the card and starts a Stripe trial that ends with ours (`firstChargeAt` in `plan.ts`), unless fewer than 49 hours are left or the family had a paid plan before.
@@ -328,7 +328,7 @@ Tests are duplicated across screen sizes only where layout can break:
 - **A/B tests** are created in the panel; code reads them with `useVariant` or `variantsFor`. Variants are fixed once a test starts. Results count signed-in families only. A running test shows a plain verdict and a "Use it for everyone" button (`src/lib/abVerdict.ts`).
 - **Automatic nudges** (`src/lib/automations.ts`) are each off until an admin types `TURN ON`, have a daily limit (at most 50), follow the panel's email rules and reach a family at most once in 30 days. Never turn one on, or ship one on by default, without the owner's go-ahead. Alerts (`src/server/alerts.ts`) go only to admin accounts; `/api/cron/watch/` is called by the Uptime workflow when the `CRON_SECRET` repository secret is set.
 - **Refunds and cancelling now** need `REFUND` or `CANCEL` typed; the failed-payment email is a billing notice (kind `billing`) that ignores news and tips but never goes to a bounced address. CSV downloads (`/api/admin/export/`) never carry children's names or results, and escape formula cells (`src/lib/csv.ts`).
-- **Admin email** (`src/server/adminEmail.ts`): goes only to confirmed accounts with **News and tips** on (`parents.admin_mail`) and an address that hasn't bounced, always with an unsubscribe link and the mailing address (CASL). `{children}` is filled in at send time only; the email log stores kind, subject as written and status, never bodies. No open or click tracking.
+- **Admin email** (`src/server/adminEmail.ts`): goes only to confirmed accounts with **News and tips** on (`parents.admin_mail`) and an address that hasn't bounced, always with an unsubscribe link and the mailing address (CASL). `{children}` is filled in at send time only; the email log stores kind, subject as written and status, never bodies. Resend's open and click tracking is on for the domain (decided October 2026, when the "no tracking" promise was dropped); `/privacy/` says so. Don't add other tracking or analytics without the owner's go-ahead, and keep `/privacy/` true to what is used.
 - **Privacy:** the panel never shows children's names or results, and leaves class student accounts out. Keep it that way, and keep `deleteFamilyData` (`src/server/deleteFamily.ts`) complete when adding tables keyed by family.
 
 ### Classroom mode (`/teachers/`)
@@ -367,6 +367,7 @@ Tests are duplicated across screen sizes only where layout can break:
   - practice results.
 - **No free text, photos or voice recordings from kids.**
 - **Parents can export everything or delete everything** at any time.
+- **Analytics in use, all disclosed on `/privacy/`:** Vercel Web Analytics and Speed Insights (cookieless, public pages only, `SiteAnalytics.tsx`), Cloudflare Web Analytics (cookieless, set up at Cloudflare, not in code) and Resend's open and click tracking on emails. There is no analytics in the kids' app or parent area. We no longer promise "no tracking" (owner, October 2026), so never write that promise into copy; keep `/privacy/` and `docs/school/` true whenever a provider or setting changes.
 
 ## Design decisions
 

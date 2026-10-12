@@ -22,7 +22,7 @@ Google Play's payments policy doesn't let an app sell digital content outside Go
   > • Calm mode turns off timers, motion and noise for children who find them hard.
   > • Up to 3 children on one family plan, each with their own grade and settings.
   >
-  > No ads, ever. No tracking. We never sell data. Children can never buy anything; coins are earned only by learning.
+  > No ads, ever. We never sell data. Children can never buy anything; coins are earned only by learning.
   >
   > Start with a free trial. After it ends, the first units of every subject stay free.
 

@@ -182,7 +182,7 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         q: `Does ${APP_NAME} show ads or sell things to kids?`,
-        a: "Never. There are no ads, no tracking pixels and no in-app purchases for kids. Parents control the plan.",
+        a: "Never. There are no ads and no in-app purchases for kids. Parents control the plan.",
       },
     ],
   },

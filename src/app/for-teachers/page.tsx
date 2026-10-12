@@ -30,7 +30,7 @@ const FAQS = [
   { q: "Do I have to enter students myself?", a: "No. Parents link their own child with your join code, so you never type in student details, and there are no student passwords to manage." },
   { q: "Is this a report-card mark?", a: `No. ${APP_NAME} shows how a student is practising. The teacher decides proficiency, as on the report card.` },
   { q: "Which curriculum does it follow?", a: `Each class follows one province: ${regions}. Units are matched to the ${curricula}, from Kindergarten to Grade 9. Other provinces are on the way.` },
-  { q: "Are there ads?", a: "No ads, no tracking pixels and no selling of data. Kids cannot buy anything." },
+  { q: "Are there ads?", a: "No ads and no selling of data. Kids cannot buy anything." },
 ];
 
 export default function TeachersHub() {
