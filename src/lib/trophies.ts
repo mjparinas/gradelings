@@ -4,6 +4,7 @@ import type { FrameworkId, GradeId, SubjectId } from "@/content/types";
 import type { Derived } from "./derive";
 import type { Mode } from "./model";
 import { SHOP } from "./shop";
+import { getGame } from "./arcade";
 import { unitLevel } from "./proficiency";
 
 // Console-style trophies: bronze, silver, gold and one platinum per grade.
@@ -62,8 +63,14 @@ function unitsInGrade(grade: GradeId, framework: FrameworkId, subject?: SubjectI
   return allUnitRefs(grade, framework).filter((r) => (subject ? r.course.subject === subject : isCoreSubject(r.course.subject))).length;
 }
 
+/** A game trophy only shows where the game has content for the grade. */
+const fitsGame = (id: string) => (ctx: TrophyContext) => !!getGame(id)?.grades?.includes(ctx.grade);
+
 const ALL_MODES: Mode[] = ["practice", "adventure", "review", "speed", "daily", "challenge"];
+/** The five classic games, open from the start in every grade ("Arcade Fan"). */
 export const ARCADE_GAMES = ["munchers", "ninja", "catch", "bubbles", "memory"];
+/** Every grade has at least this many games once they're unlocked (Kindergarten has seven). */
+export const EXPLORER_GAMES = 7;
 
 const GRADES: GradeId[] = ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const gradeName = (g: GradeId) => (g === "k" ? "Kindergarten" : `Grade ${g}`);
@@ -135,6 +142,7 @@ const frenchUnits = (d: Derived, grade: GradeId, framework: FrameworkId, min: nu
 const hasFrench = (ctx: TrophyContext) => unitsInGrade(ctx.grade, ctx.framework, "immersion") + unitsInGrade(ctx.grade, ctx.framework, "core-french") > 0;
 
 const FRENCH_TROPHIES: Trophy[] = ([
+  { id: "bridge-300", name: "Bridge Builder", description: "Score 300 in Word Bridge.", tier: "silver", icon: "🌉", category: "French", progress: count(300, (d) => d.gameBest.bridge ?? 0) },
   { id: "french-first", name: "Bonjour!", description: "Answer your first French question.", tier: "bronze", icon: "👋", category: "French", progress: count(1, frenchAnswers) },
   { id: "french-100", name: "Petit à petit", description: "Answer 100 French questions.", tier: "silver", icon: "🥐", category: "French", progress: count(100, frenchAnswers) },
   { id: "french-500", name: "Très bien!", description: "Get 500 French questions right.", tier: "gold", icon: "🥖", category: "French", progress: count(500, frenchCorrect) },
@@ -217,12 +225,18 @@ export const TROPHIES: Trophy[] = [
 
   // Arcade
   { id: "game-first", name: "Game On", description: "Play an arcade game.", tier: "bronze", icon: "🕹️", category: "Arcade", progress: count(1, (d) => Object.values(d.gamesPlayed).reduce((a, b) => a + b, 0)) },
-  { id: "game-all", name: "Arcade Fan", description: "Play every arcade game.", tier: "silver", icon: "👾", category: "Arcade", progress: count(ARCADE_GAMES.length, (d) => ARCADE_GAMES.filter((g) => d.gamesPlayed[g]).length) },
+  { id: "game-all", name: "Arcade Fan", description: "Play all five classic arcade games.", tier: "silver", icon: "👾", category: "Arcade", progress: count(ARCADE_GAMES.length, (d) => ARCADE_GAMES.filter((g) => d.gamesPlayed[g]).length) },
   { id: "munchers-500", name: "Big Muncher", description: "Score 500 in Number Munchers.", tier: "silver", icon: "🟢", category: "Arcade", progress: count(500, (d) => d.gameBest.munchers ?? 0) },
   { id: "ninja-300", name: "Word Ninja", description: "Score 300 in Word Ninja.", tier: "silver", icon: "🥷", category: "Arcade", progress: count(300, (d) => d.gameBest.ninja ?? 0) },
   { id: "catch-300", name: "Safe Hands", description: "Score 300 in Critter Catch.", tier: "silver", icon: "🧺", category: "Arcade", progress: count(300, (d) => d.gameBest.catch ?? 0) },
   { id: "bubbles-300", name: "Bubble Boss", description: "Score 300 in Bubble Pop.", tier: "silver", icon: "🫧", category: "Arcade", progress: count(300, (d) => d.gameBest.bubbles ?? 0) },
   { id: "memory-200", name: "Elephant Memory", description: "Score 200 in Memory Match.", tier: "silver", icon: "🐘", category: "Arcade", progress: count(200, (d) => d.gameBest.memory ?? 0) },
+  { id: "game-explorer", name: "Arcade Explorer", description: `Play ${EXPLORER_GAMES} different arcade games.`, tier: "silver", icon: "🧭", category: "Arcade", progress: count(EXPLORER_GAMES, (d) => Object.keys(d.gamesPlayed).filter((g) => getGame(g)).length) },
+  { id: "map-300", name: "Map Master", description: "Score 300 in Map Dash.", tier: "silver", icon: "🗺️", category: "Arcade", progress: count(300, (d) => d.gameBest.map ?? 0) },
+  { id: "timeline-300", name: "Time Traveller", description: "Score 300 in Timeline Snap.", tier: "silver", icon: "🧩", category: "Arcade", progress: count(300, (d) => d.gameBest.timeline ?? 0) },
+  { id: "clock-300", name: "Right on Time", description: "Score 300 in Clock Catch.", tier: "silver", icon: "⏰", category: "Arcade", applies: fitsGame("clock"), progress: count(300, (d) => d.gameBest.clock ?? 0) },
+  { id: "coins-300", name: "Shopkeeper", description: "Score 300 in Coin Shop.", tier: "silver", icon: "🪙", category: "Arcade", applies: fitsGame("coins"), progress: count(300, (d) => d.gameBest.coins ?? 0) },
+  { id: "tower-300", name: "Tower Builder", description: "Score 300 in Equation Tower.", tier: "silver", icon: "⚖️", category: "Arcade", applies: fitsGame("tower"), progress: count(300, (d) => d.gameBest.tower ?? 0) },
 
   // Collector
   { id: "level-5", name: "Level 5", description: "Reach level 5.", tier: "bronze", icon: "5️⃣", category: "Collector", progress: count(5, (d) => d.level) },

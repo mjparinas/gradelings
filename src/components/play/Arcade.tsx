@@ -13,12 +13,19 @@ import { useBand } from "../band";
 import { SpeechBubble } from "../Critter";
 import { Companion } from "./Companion";
 import { Page, ProgressBar } from "../ui";
+import { arcadeFor, gameFits, gameUnlocked, getGame, type GameInfo } from "@/lib/arcade";
 import { Bubbles } from "./games/Bubbles";
 import { Catch } from "./games/Catch";
+import { ClockCatch } from "./games/ClockCatch";
+import { CoinShop } from "./games/CoinShop";
+import { MapDash } from "./games/MapDash";
 import { Memory } from "./games/Memory";
 import { Munchers } from "./games/Munchers";
 import { Ninja } from "./games/Ninja";
-import { GAMES, type GameProps } from "./games/types";
+import { Timeline } from "./games/Timeline";
+import { Tower } from "./games/Tower";
+import { WordBridge } from "./games/WordBridge";
+import type { GameProps } from "./games/types";
 import { BackButton } from "./Practice";
 
 const COMPONENTS: Record<string, (p: GameProps) => React.ReactElement> = {
@@ -27,6 +34,12 @@ const COMPONENTS: Record<string, (p: GameProps) => React.ReactElement> = {
   catch: Catch,
   bubbles: Bubbles,
   memory: Memory,
+  map: MapDash,
+  timeline: Timeline,
+  clock: ClockCatch,
+  bridge: WordBridge,
+  coins: CoinShop,
+  tower: Tower,
 };
 
 function mmss(seconds: number): string {
@@ -72,11 +85,13 @@ function TimeBank() {
 }
 
 export function Arcade() {
+  const profile = useActiveProfile();
   const settings = useChildSettings();
   const d = useDerived();
   const band = useBand();
   const t = gameTime(settings, d);
   const canPlay = t.enabled && t.availableSeconds > 0;
+  const games = arcadeFor({ grade: profile?.grade ?? "k", subjects: settings?.enabledSubjects });
   return (
     <Page className="gap-5">
       <header className="flex items-center gap-3">
@@ -85,27 +100,52 @@ export function Arcade() {
       </header>
       <TimeBank />
       <div className="grid gap-4 sm:grid-cols-2">
-        {GAMES.map((g, i) => (
+        {games.map((g, i) => (
           <div key={g.id} className="animate-rise-in" style={{ animationDelay: `${i * 70}ms` }}>
-            <button
-              type="button"
-              disabled={!canPlay}
-              onClick={() => go(`/arcade/${g.id}`)}
-              className={`btn h-full w-full items-start justify-start gap-4 p-4 text-left ${canPlay ? "" : "opacity-60"}`}
-              style={{ "--btn-bg": g.colour, "--btn-edge": g.dark, "--btn-fg": onColour(g.colour) } as CSSProperties}
-            >
-              <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-3xl bg-white/25 text-5xl">{canPlay ? g.icon : "🔒"}</span>
-              <span>
-                <span className="block text-sm font-semibold opacity-80">{g.subject}</span>
-                <span className="block text-2xl font-bold">{g.title}</span>
-                <span className="block font-read text-sm">{g.desc}</span>
-                <span className="mt-1 block text-sm font-bold">Best: {d.gameBest[g.id] ?? 0}</span>
-              </span>
-            </button>
+            <GameTile game={g} level={d.level} canPlay={canPlay} best={d.gameBest[g.id] ?? 0} />
           </div>
         ))}
       </div>
     </Page>
+  );
+}
+
+function GameTile({ game: g, level, canPlay, best }: { game: GameInfo; level: number; canPlay: boolean; best: number }) {
+  const open = gameUnlocked(g, level);
+  if (!open) {
+    return (
+      <div className="card flex h-full w-full items-start gap-4 p-4">
+        <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-3xl text-5xl" style={{ background: g.colour }} aria-hidden="true">
+          🔒
+        </span>
+        <span>
+          <span className="block text-sm font-semibold text-ink-soft">{g.subject}</span>
+          <span className="block text-2xl font-bold">{g.title}</span>
+          <span className="block font-read text-sm">{g.desc}</span>
+          <span className="mt-1 block font-bold">
+            Unlocks at level {g.unlockLevel}. You&apos;re level {level}!
+          </span>
+          <ProgressBar value={level} max={g.unlockLevel ?? 1} className="mt-2" height={10} label={`Level ${level} of ${g.unlockLevel}`} />
+        </span>
+      </div>
+    );
+  }
+  return (
+    <button
+      type="button"
+      disabled={!canPlay}
+      onClick={() => go(`/arcade/${g.id}`)}
+      className={`btn h-full w-full items-start justify-start gap-4 p-4 text-left ${canPlay ? "" : "opacity-60"}`}
+      style={{ "--btn-bg": g.colour, "--btn-edge": g.dark, "--btn-fg": onColour(g.colour) } as CSSProperties}
+    >
+      <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-3xl bg-white/25 text-5xl">{canPlay ? g.icon : "🔒"}</span>
+      <span>
+        <span className="block text-sm font-semibold opacity-80">{g.subject}</span>
+        <span className="block text-2xl font-bold">{g.title}</span>
+        <span className="block font-read text-sm">{g.desc}</span>
+        <span className="mt-1 block text-sm font-bold">Best: {best}</span>
+      </span>
+    </button>
   );
 }
 
@@ -114,8 +154,32 @@ export function GameScreen({ id }: { id: string }) {
   const settings = useChildSettings();
   const band = useBand();
   const d = useDerived();
+  const info = getGame(id);
+  if (!info || !COMPONENTS[id]) return null;
+  const ctx = { grade: profile.grade, subjects: settings?.enabledSubjects };
+  // A locked game, or one with nothing for this child, opened from an old link.
+  if (!gameFits(info, ctx) || !gameUnlocked(info, d.level)) {
+    return (
+      <Page className="items-center justify-center gap-5 text-center">
+        <Companion mood="wave" size={130} />
+        <h1 className="text-4xl font-bold">🔒 {info.title}</h1>
+        <p className="font-read text-xl">{gameFits(info, ctx) ? `Keep learning! This game unlocks at level ${info.unlockLevel}.` : "This game isn't part of your grade's arcade."}</p>
+        <button type="button" className="btn min-h-14 w-full max-w-sm text-xl" onClick={() => go("/arcade")}>
+          Back to {band === "little" ? "games" : "the arcade"}
+        </button>
+      </Page>
+    );
+  }
+  return <GamePlay id={id} />;
+}
+
+function GamePlay({ id }: { id: string }) {
+  const profile = useActiveProfile()!;
+  const settings = useChildSettings();
+  const band = useBand();
+  const d = useDerived();
   const log = useStore((s) => s.log);
-  const info = GAMES.find((g) => g.id === id);
+  const info = getGame(id);
   const Game = COMPONENTS[id];
   const [phase, setPhase] = useState<"ready" | "playing" | "over">("ready");
   const [round, setRound] = useState(0);
@@ -246,7 +310,7 @@ export function GameScreen({ id }: { id: string }) {
           🎮 {mmss(left)}
         </span>
       </header>
-      <Game key={round} grade={profile.grade} band={band} onScore={onScore} onLevel={onLevel} onOver={onOver} />
+      <Game key={round} grade={profile.grade} band={band} subjects={settings?.enabledSubjects} onScore={onScore} onLevel={onLevel} onOver={onOver} />
     </Page>
   );
 }

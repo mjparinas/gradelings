@@ -22,6 +22,7 @@ import { celebrate, setCalmCheck } from "./juice";
 import { setHapticsCheck } from "./haptics";
 import { vibrationOn } from "./settingChoices";
 import { effectiveGoal, STRETCH_QUEST, STRETCH_REWARD } from "./goal";
+import { gamesOpenedBetween } from "./arcade";
 import { growthStage } from "./buddy";
 import { dailyQuests, weekDays, weeklyQuests, weekStart } from "./quests";
 import { hasTestCoins } from "./remoteFlags";
@@ -298,11 +299,15 @@ export const useStore = create<State>()((set, get) => ({
     if (after.level > before.level) {
       const grown = growthStage(after.level);
       const grew = grown.stage > growthStage(before.level).stage;
+      // A new arcade game can open at this level (only said when games are on for this child).
+      const settings = state.settings[profile.id];
+      const opened = settings?.gamesEnabled === false ? [] : gamesOpenedBetween(before.level, after.level, { grade: profile.grade, subjects: settings?.enabledSubjects });
+      const unlock = opened.length ? `New game unlocked: ${opened.map((g) => g.title).join(" and ")}!` : "";
       toasts.unshift({
         kind: "level",
         title: `Level ${after.level}!`,
-        subtitle: grew ? `Your buddy grew into a ${grown.name}!` : "You levelled up!",
-        icon: grew ? "🌟" : "⬆️",
+        subtitle: [grew ? `Your buddy grew into a ${grown.name}!` : unlock ? "" : "You levelled up!", unlock].filter(Boolean).join(" "),
+        icon: grew ? "🌟" : opened.length ? opened[0].icon : "⬆️",
       });
     }
 

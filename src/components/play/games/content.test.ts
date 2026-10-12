@@ -37,6 +37,15 @@ function fits(title: string, text: string): boolean {
     return n >= 50 && n < 150 && Math.round(n / 100) * 100 === 100;
   }
   if (title === "Munch negative numbers") return Number(text) < 0;
+  if (title === "Munch numbers greater than −5") return Number(text) > -5;
+  if (title === "Munch square numbers") return Number.isInteger(Math.sqrt(Number(text)));
+  if (title === "Munch cube numbers") return [1, 8, 27, 64, 125].includes(Number(text));
+  if (title === "Munch powers of 2") return [1, 2, 4, 8, 16, 32, 64, 128, 256].includes(Number(text));
+  if (title === "Munch percents greater than 50%") return /^\d+%$/.test(text) && Number(text.slice(0, -1)) > 50;
+  if (title === "Munch fractions equal to ¾") {
+    const [n, d] = text.split("/").map(Number);
+    return d > 0 && n * 4 === d * 3;
+  }
   if (title === "Munch decimals bigger than 0.5") return Number(text) > 0.5;
   if (title === "Munch fractions equal to ½") {
     const [n, d] = text.split("/").map(Number);
@@ -127,6 +136,8 @@ describe("Number Munchers", () => {
       expect(titles.includes("negative")).toBe(band(grade) >= 7);
       expect(titles.includes("decimal")).toBe(band(grade) >= 6);
       expect(titles.includes("multiples of 8")).toBe(grade === "6");
+      // Grades 6 to 9 get a bigger rule book than the younger grades.
+      if (band(grade) >= 6) expect(rules.length, grade).toBeGreaterThanOrEqual(6);
       if (grade === "k") {
         for (const rule of rules) {
           const n = Number(rule.cell(true).text);
@@ -224,17 +235,32 @@ describe("Word Ninja", () => {
           }
           expect(round.decoys.some((w) => round.targets.includes(w))).toBe(false);
         } else {
-          expect(round.title).toMatch(/Slice words that mean “(big|happy|fast|smart)”/);
+          expect(round.title).toMatch(/^Slice (words that mean “\w+”|words that mean the opposite of “\w+”|the (adverbs|pronouns|conjunctions|prepositions))$/);
           if (round.title.includes("big")) {
             expect(round.targets).toContain("huge");
             expect(round.decoys).toContain("tiny");
           }
-          if (round.title.includes("happy")) expect(round.decoys).toContain("sad");
-          if (round.title.includes("fast")) expect(round.decoys).toContain("slow");
+          if (round.title === "Slice words that mean “happy”") expect(round.decoys).toContain("sad");
+          if (round.title.includes("“fast”")) expect(round.decoys).toContain("slow");
           if (round.title.includes("smart")) expect(round.targets).toContain("clever");
+          if (round.title.includes("opposite of “ancient”")) {
+            expect(round.targets).toContain("modern");
+            expect(round.decoys).toContain("old");
+          }
+          if (round.title === "Slice the adverbs") expect(round.targets).toContain("quickly");
+          if (round.title === "Slice the prepositions") expect(round.decoys).not.toContain("but");
+          // Parts of speech only from Grade 7.
+          if (g === 6) expect(round.title).not.toMatch(/^Slice the /);
         }
       }
     }
+  });
+
+  it("gives Grades 6 to 9 more kinds of rounds than before", () => {
+    const titles = (grade: GradeId) => new Set(Array.from({ length: 400 }, (_, seed) => withSeed(seed + 1, () => ninjaRound(grade)).title));
+    expect(titles("6").size).toBeGreaterThanOrEqual(10);
+    expect([...titles("8")]).toEqual(expect.arrayContaining(["Slice the adverbs", "Slice the pronouns", "Slice the conjunctions", "Slice the prepositions"]));
+    expect([...titles("9")].some((t) => t.includes("opposite"))).toBe(true);
   });
 });
 
@@ -266,10 +292,23 @@ describe("Critter Catch", () => {
         expect(titles).toEqual(["Catch living things", "Catch the plant-eaters", "Catch renewable resources"]);
         expectRound(grade, "Catch the plant-eaters", "rabbit", "lion");
         expectRound(grade, "Catch renewable resources", "sunlight", "oil");
-      } else {
-        expect(titles).toEqual(["Catch living things", "Catch the planets", "Catch electrical conductors"]);
+      } else if (g === 6) {
+        expect(titles).toEqual(["Catch living things", "Catch the planets", "Catch the vertebrates"]);
         expectRound(grade, "Catch the planets", "Earth", "Sun");
+        expectRound(grade, "Catch the vertebrates", "frog", "worm");
+      } else if (g === 7) {
+        expect(titles).toEqual(["Catch living things", "Catch chemical changes", "Catch the mixtures"]);
+        expectRound(grade, "Catch chemical changes", "rusting nail", "melting ice");
+        expectRound(grade, "Catch the mixtures", "salt water", "salt");
+      } else if (g === 8) {
+        expect(titles).toEqual(["Catch living things", "Catch parts only plant cells have", "Catch transparent materials"]);
+        expectRound(grade, "Catch parts only plant cells have", "cell wall", "nucleus");
+        expectRound(grade, "Catch transparent materials", "clear glass", "wood");
+      } else {
+        expect(titles).toEqual(["Catch living things", "Catch electrical conductors", "Catch the elements", "Catch the metals"]);
         expectRound(grade, "Catch electrical conductors", "steel bolt", "wood");
+        expectRound(grade, "Catch the elements", "oxygen", "water");
+        expectRound(grade, "Catch the metals", "copper", "sulfur");
       }
     }
   });
@@ -279,7 +318,7 @@ describe("Bubble Pop", () => {
   it("pops letters, rhymes or word skills that really belong, and never both lists", () => {
     const seen = new Set<string>();
     for (let seed = 1; seed <= 40; seed++) {
-      for (const grade of ["3", "4", "6", "9"] as GradeId[]) {
+      for (const grade of ["3", "4", "5"] as GradeId[]) {
         const round = withSeed(seed, () => bubbleRound(grade));
         seen.add(round.title);
         const overlap = round.good.filter((w) => round.bad.includes(w));
@@ -299,6 +338,24 @@ describe("Bubble Pop", () => {
       }
     }
     expect([...seen].sort()).toEqual(["Pop correctly spelled words", "Pop words with 3 syllables", "Pop words with the prefix un-"]);
+
+    // Grades 6 to 9 have their own, harder rounds.
+    const older = new Set<string>();
+    for (let seed = 1; seed <= 60; seed++) {
+      for (const grade of ["6", "9"] as GradeId[]) {
+        const round = withSeed(seed, () => bubbleRound(grade));
+        older.add(round.title);
+        expect(round.good.filter((w) => round.bad.includes(w)), round.title).toEqual([]);
+        expect(round.good.length).toBeGreaterThanOrEqual(5);
+        if (round.title === "Pop correctly spelled words") expect(round.good).toContain("necessary");
+        if (round.title === "Pop words where -less means without") expect(round.bad).toContain("unless");
+        if (round.title.startsWith("Pop words with the prefix pre-")) {
+          for (const word of round.good) expect(word.startsWith("pre"), word).toBe(true);
+        }
+      }
+    }
+    expect(older.size).toBe(5);
+    expect(older.has("Pop words with the prefix un-")).toBe(false);
 
     const heads = new Set<string>();
     for (let seed = 1; seed <= 80; seed++) {
@@ -341,6 +398,12 @@ describe("Memory Match", () => {
     hot: "cold",
     Egypt: "pyramids",
     "🐄": "🥛",
+    "√81": "9",
+    "2³": "8",
+    "H₂O": "water",
+    "−2 × −5": "10",
+    bio: "life",
+    Premier: "leads a province's government",
   };
 
   it("pairs a prompt with its real match, and the set fits the grade", () => {
@@ -366,7 +429,8 @@ describe("Memory Match", () => {
         if (g <= 1) expect(equation || province || percent).toBe(false);
         if (g >= 2 && g <= 3) expect(province || percent).toBe(false);
         if (g >= 4 && g <= 5) expect(equation || province).toBe(true);
-        if (g >= 6) expect(percent || story).toBe(true);
+        const older = /[√²³⁵₂₃₄]|−|bio|Prime Minister/.test(sample);
+        if (g >= 6) expect(percent || story || older).toBe(true);
         if (g >= 2 && g <= 3) {
           if (equation) sawSum = true;
           if (pairs.some((pair) => pair.a === "hot")) sawOpposite = true;
@@ -376,6 +440,28 @@ describe("Memory Match", () => {
         expect(sawSum, grade).toBe(true);
         expect(sawOpposite, grade).toBe(true);
       }
+    }
+  });
+});
+
+describe("Memory Match, Grades 6 to 9", () => {
+  const value = (expr: string) => Function(`return (${expr.replaceAll("−", "-").replaceAll("×", "*").replaceAll("÷", "/").replace(/(-?\d+)\s*\*\s*(-?\d+)/g, "($1)*($2)")});`)() as number;
+
+  it("has several sets in each grade, and the maths pairs are right", () => {
+    for (const grade of ["6", "7", "8", "9"] as GradeId[]) {
+      const sets = new Set<string>();
+      for (let seed = 1; seed <= 60; seed++) {
+        const pairs = withSeed(seed, () => memoryPairs(grade, 8));
+        sets.add(pairs.map((p) => p.a).sort().join("|"));
+        for (const { a, b } of pairs) {
+          if (/^−?\d+ [+−×÷] −?\d+$/.test(a)) expect(value(a), a).toBe(Number(b.replace("−", "-")));
+          const root = a.match(/^√(\d+)$/);
+          if (root) expect(Math.sqrt(Number(root[1]))).toBe(Number(b));
+          const power = a.match(/^(\d+)([²³⁵])$/);
+          if (power) expect(Number(power[1]) ** { "²": 2, "³": 3, "⁵": 5 }[power[2] as "²"]).toBe(Number(b));
+        }
+      }
+      expect(sets.size, grade).toBeGreaterThanOrEqual(4);
     }
   });
 });

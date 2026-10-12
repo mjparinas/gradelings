@@ -4,7 +4,8 @@ import { FRAMEWORKS } from "@/content/frameworks";
 import type { GradeId, SubjectId } from "@/content/types";
 import { derive, type Derived, type UnitStat } from "./derive";
 import { SHOP } from "./shop";
-import { ARCADE_GAMES, getTrophy, newlyEarned, TIER_STYLE, TROPHIES, trophyTier, visibleTrophies, type TrophyContext } from "./trophies";
+import { arcadeFor, GAMES } from "./arcade";
+import { EXPLORER_GAMES, getTrophy, newlyEarned, TIER_STYLE, TROPHIES, trophyTier, visibleTrophies, type TrophyContext } from "./trophies";
 
 const GRADES: GradeId[] = ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const CONTEXTS: TrophyContext[] = FRAMEWORKS.flatMap((f) => GRADES.map((grade) => ({ grade, framework: f.id })));
@@ -31,8 +32,8 @@ function didEverything(level: 2 | 3): Derived {
   d.streak = { ...d.streak, best: BIG, shieldsUsed: 1 };
   d.dailyDone = Array.from({ length: 1000 }, (_, i) => `day-${i}`);
   d.speedBest = { mix: BIG };
-  d.gameBest = Object.fromEntries(ARCADE_GAMES.map((g) => [g, BIG]));
-  d.gamesPlayed = Object.fromEntries(ARCADE_GAMES.map((g) => [g, 1]));
+  d.gameBest = Object.fromEntries(GAMES.map((g) => [g.id, BIG]));
+  d.gamesPlayed = Object.fromEntries(GAMES.map((g) => [g.id, 1]));
   d.days = { "2026-10-01": { day: "2026-10-01", learnSeconds: 0, answers: BIG, correct: BIG, sessions: 1, perfect: 0, playSeconds: 0, bestRun: 0, subjects: {}, modes: {} } };
   d.level = BIG;
   d.owned = SHOP.map((i) => i.id);
@@ -98,8 +99,22 @@ describe("trophy progress", () => {
 });
 
 describe("the trophy list", () => {
-  it("has 186 trophies with the secret ones hidden", () => {
-    expect(TROPHIES).toHaveLength(186);
+  it("can reach Arcade Explorer in every grade without French", () => {
+    for (const grade of GRADES) {
+      expect(arcadeFor({ grade }).length, grade).toBeGreaterThanOrEqual(EXPLORER_GAMES);
+    }
+  });
+
+  it("only shows a new game's trophy in the grades that have the game", () => {
+    const shown = (grade: GradeId) => visibleTrophies(derive([]), { grade, framework: "ca-bc" }).map((t) => t.id);
+    expect(shown("k")).not.toContain("clock-300");
+    expect(shown("2")).toEqual(expect.arrayContaining(["clock-300", "coins-300", "tower-300", "map-300", "timeline-300"]));
+    expect(shown("7")).not.toContain("coins-300");
+    expect(shown("7")).toContain("tower-300");
+  });
+
+  it("has 193 trophies with the secret ones hidden", () => {
+    expect(TROPHIES).toHaveLength(193);
     expect(TROPHIES.filter((t) => t.hidden).map((t) => t.id).sort()).toEqual(
       ["early-bird", "konami", "marathon", "dizzy-ollie", "polite-moose", "secret-word", "palindrome", "make-a-wish", ...GRADES.map((g) => `polymath-${g}`)].sort(),
     );

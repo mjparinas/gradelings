@@ -92,6 +92,40 @@ async function parents(page, hash = "") {
   if (await vis(page.getByRole("heading", { name: "Parents only" }))) await enterPin(page, false);
 }
 
+/** Adds 300 arcade results (about level 7) for the active child and turns on French Immersion, straight in IndexedDB. */
+async function seedArcade(page) {
+  await page.evaluate(
+    () =>
+      new Promise((resolve, reject) => {
+        const req = indexedDB.open("grademap");
+        req.onerror = () => reject(req.error);
+        req.onsuccess = () => {
+          const db = req.result;
+          const tx = db.transaction(["kv", "events"], "readwrite");
+          const kv = tx.objectStore("kv");
+          const active = kv.get("activeId");
+          active.onsuccess = () => {
+            const profileId = active.result;
+            const now = Date.now() - 60_000;
+            for (let i = 0; i < 300; i++) {
+              const id = `e2e-seed-${profileId}-${i}`;
+              tx.objectStore("events").put({ id, profileId, synced: 0, event: { id, profileId, t: now + i, type: "game", game: "e2e-seed", score: 0, level: 1 } });
+            }
+            const settings = kv.get("settings");
+            settings.onsuccess = () => {
+              const all = settings.result ?? {};
+              const s = all[profileId];
+              if (s) all[profileId] = { ...s, enabledSubjects: [...new Set([...s.enabledSubjects, "immersion"])], updatedAt: Date.now() };
+              kv.put(all, "settings");
+            };
+          };
+          tx.oncomplete = () => resolve(undefined);
+          tx.onerror = () => reject(tx.error);
+        };
+      }),
+  );
+}
+
 async function eventsWaiting(page) {
   return page.evaluate(
     () =>
@@ -275,11 +309,22 @@ async function eventsWaiting(page) {
     await page.waitForTimeout(500);
     if (!(await vis(page.getByRole("heading", { name: "Your data, your choice" })))) errors.push("old privacy link: Account didn't show the privacy panels");
 
-    // Arcade with free play on
+    // Arcade with free play on. The newer games start locked.
     await page.goto(`${BASE}/play/#/arcade`);
     await page.waitForTimeout(600);
     await shot(page, "23-arcade", true);
-    for (const g of ["munchers", "ninja", "catch", "bubbles", "memory"]) {
+    if (!(await vis(page.getByText(/Unlocks at level 6/).first()))) errors.push("arcade: Equation Tower isn't shown as locked");
+    if (await vis(page.getByRole("button", { name: /Word Bridge/ }))) errors.push("arcade: Word Bridge shows without French turned on");
+    // Unlock everything: enough game events for level 7, and French Immersion on, then reload.
+    await seedArcade(page);
+    await page.goto(`${BASE}/play/#/arcade`);
+    await page.reload();
+    await page.waitForTimeout(1200);
+    await shot(page, "23b-arcade-unlocked", true);
+    for (const g of ["Map Dash", "Timeline Snap", "Clock Catch", "Word Bridge", "Coin Shop", "Equation Tower"]) {
+      if (!(await vis(page.getByRole("button", { name: new RegExp(g) })))) errors.push(`arcade: ${g} isn't open after levelling up`);
+    }
+    for (const g of ["munchers", "ninja", "catch", "bubbles", "memory", "map", "timeline", "clock", "bridge", "coins", "tower"]) {
       await page.goto(`${BASE}/play/#/arcade/${g}`);
       await page.waitForTimeout(400);
       await page.getByRole("button", { name: /Play!/ }).click({ force: true });

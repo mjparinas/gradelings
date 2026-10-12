@@ -13,6 +13,8 @@ const h = vi.hoisted(() => ({
   time: {} as Record<string, unknown>,
   settings: {} as Record<string, unknown>,
   gameBest: {} as Record<string, number>,
+  level: 1,
+  grade: "3",
 }));
 
 // Each game is a stand-in that lets the test report a score, a level or a game over.
@@ -39,9 +41,9 @@ vi.mock("@/lib/speech", () => ({ stopSpeaking: h.stopSpeaking }));
 vi.mock("@/lib/sound", () => ({ sounds: { complete: vi.fn() } }));
 vi.mock("@/lib/store", () => ({
   useStore: (select: (s: unknown) => unknown) => select({ log: h.log }),
-  useActiveProfile: () => ({ id: "p1", name: "Ava", grade: "3", framework: "ca-bc", confetti: "hearts" }),
+  useActiveProfile: () => ({ id: "p1", name: "Ava", grade: h.grade, framework: "ca-bc", confetti: "hearts" }),
   useChildSettings: () => h.settings,
-  useDerived: () => ({ gameBest: h.gameBest }),
+  useDerived: () => ({ gameBest: h.gameBest, level: h.level }),
 }));
 vi.mock("../Critter", () => ({ SpeechBubble: ({ children }: { children: React.ReactNode }) => <div>{children}</div> }));
 vi.mock("./Companion", () => ({ Companion: () => null }));
@@ -51,6 +53,12 @@ vi.mock("./games/Ninja", () => stub("Ninja"));
 vi.mock("./games/Catch", () => stub("Catch"));
 vi.mock("./games/Bubbles", () => stub("Bubbles"));
 vi.mock("./games/Memory", () => stub("Memory"));
+vi.mock("./games/MapDash", () => stub("MapDash"));
+vi.mock("./games/Timeline", () => stub("Timeline"));
+vi.mock("./games/ClockCatch", () => stub("ClockCatch"));
+vi.mock("./games/WordBridge", () => stub("WordBridge"));
+vi.mock("./games/CoinShop", () => stub("CoinShop"));
+vi.mock("./games/Tower", () => stub("Tower"));
 
 import { Arcade, GameScreen } from "./Arcade";
 
@@ -73,6 +81,8 @@ beforeEach(() => {
   });
   h.settings = {};
   h.gameBest = {};
+  h.level = 1;
+  h.grade = "3";
   time({});
 });
 
@@ -110,7 +120,7 @@ describe("Arcade", () => {
     time({ freePlay: true, availableSeconds: 65, nextInSeconds: 600 });
     render(<Arcade />);
     expect(screen.getByText("Free play is on! 1:05 left today.")).toBeInTheDocument();
-    expect(screen.queryByRole("progressbar")).not.toBeInTheDocument();
+    expect(screen.queryByRole("progressbar", { name: "Learning time until the next game minutes" })).not.toBeInTheDocument();
   });
 
   it("tells the child when a grown-up has turned games off", () => {
@@ -118,6 +128,38 @@ describe("Arcade", () => {
     render(<Arcade />);
     expect(screen.getByText(/Games are turned off right now/)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Word Ninja/ })).toBeDisabled();
+  });
+
+  it("shows the newer games locked until their level, with how far the child has to go", () => {
+    h.level = 3;
+    render(<Arcade />);
+    // Map Dash (level 2) and Timeline Snap (level 3) are open; the rest wait.
+    expect(screen.getByRole("button", { name: /Map Dash/ })).toBeEnabled();
+    expect(screen.getByRole("button", { name: /Timeline Snap/ })).toBeEnabled();
+    expect(screen.queryByRole("button", { name: /Clock Catch/ })).not.toBeInTheDocument();
+    expect(screen.getByText("Clock Catch")).toBeInTheDocument();
+    expect(screen.getByText("Unlocks at level 6. You're level 3!")).toBeInTheDocument();
+    expect(screen.getByRole("progressbar", { name: "Level 3 of 5" })).toBeInTheDocument();
+    click(/Map Dash/);
+    expect(h.go).toHaveBeenCalledWith("/arcade/map");
+  });
+
+  it("only lists the games that fit the child's grade, and Word Bridge only with French on", () => {
+    h.level = 50;
+    h.grade = "k";
+    const { unmount } = render(<Arcade />);
+    const names = () => screen.getAllByRole("button").map((b) => b.textContent ?? "");
+    expect(names().some((n) => n.includes("Map Dash"))).toBe(true);
+    expect(names().some((n) => n.includes("Coin Shop"))).toBe(false);
+    expect(names().some((n) => n.includes("Equation Tower"))).toBe(false);
+    expect(names().some((n) => n.includes("Word Bridge"))).toBe(false);
+    unmount();
+    h.grade = "8";
+    h.settings = { enabledSubjects: ["math", "core-french"] };
+    render(<Arcade />);
+    expect(names().some((n) => n.includes("Equation Tower"))).toBe(true);
+    expect(names().some((n) => n.includes("Clock Catch"))).toBe(false);
+    expect(names().some((n) => n.includes("Word Bridge"))).toBe(true);
   });
 
   it("calls it Games for little kids", () => {
@@ -132,6 +174,30 @@ describe("Arcade", () => {
 
 describe("GameScreen", () => {
   afterEach(() => vi.useRealTimers());
+
+  it("keeps a locked game shut, even from a saved link", () => {
+    render(<GameScreen id="tower" />);
+    expect(screen.getByRole("heading", { name: /Equation Tower/ })).toBeInTheDocument();
+    expect(screen.getByText("Keep learning! This game unlocks at level 6.")).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /Play!/ })).not.toBeInTheDocument();
+    click(/Back to the arcade/);
+    expect(h.go).toHaveBeenCalledWith("/arcade");
+  });
+
+  it("says when a game isn't part of the child's grade", () => {
+    h.level = 50;
+    h.grade = "k";
+    render(<GameScreen id="coins" />);
+    expect(screen.getByText("This game isn't part of your grade's arcade.")).toBeInTheDocument();
+  });
+
+  it("opens an unlocked newer game and passes the child's subjects", () => {
+    h.level = 6;
+    h.settings = { enabledSubjects: ["math", "immersion"] };
+    render(<GameScreen id="bridge" />);
+    click(/Play!/);
+    expect(screen.getByTestId("game")).toHaveTextContent("WordBridge");
+  });
 
   it("renders nothing for an unknown game", () => {
     const { container } = render(<GameScreen id="pinball" />);

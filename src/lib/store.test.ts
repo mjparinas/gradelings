@@ -183,6 +183,21 @@ describe("logging practice", () => {
     expect(st().events.filter((e) => e.type === "trophy" && e.trophy === "first-answer")).toHaveLength(1);
   });
 
+  it("says on the level-up toast when a new arcade game opens, unless games are off", () => {
+    st().addProfile(child);
+    st().log(Array.from({ length: 6 }, () => answer()));
+    const level = st().toasts.find((t) => t.kind === "level");
+    expect(level?.title).toBe("Level 2!");
+    expect(level?.subtitle).toBe("New game unlocked: Map Dash!");
+    expect(level?.icon).toBe("🗺️");
+
+    useStore.setState({ toasts: [] });
+    const quiet = st().addProfile({ ...child, name: "B" });
+    st().updateSettings(quiet, { gamesEnabled: false });
+    st().log(Array.from({ length: 6 }, () => answer()));
+    expect(st().toasts.find((t) => t.kind === "level")?.subtitle).toBe("You levelled up!");
+  });
+
   it("completes today's answer quest once, and puts a level-up first", () => {
     const id = st().addProfile(child);
     st().log(Array.from({ length: 40 }, () => answer()));

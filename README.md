@@ -17,7 +17,7 @@ It's a web app first: it runs in any browser, installs to a tablet or phone home
   - **Daily Challenge:** the same 10 questions for everyone today.
   - **Challenge:** a timed mastery check with no retries, which unlocks the "Extending" level.
 - **Built-in timers:** a daily-goal timer, session timers in the timed modes, and a **learn-to-play** timer. By default every 20 minutes of learning unlocks 5 minutes of arcade games; parents set the ratio, a daily cap, or free play.
-- **Arcade:** Number Munchers (math), Word Ninja (a swipe-to-slice sight-word game), Critter Catch (science), Bubble Pop (phonics) and Memory Match. Content adapts to the child's grade.
+- **Arcade:** Number Munchers (math), Word Ninja (a swipe-to-slice sight-word game), Critter Catch (science), Bubble Pop (phonics) and Memory Match, plus six games that unlock as a child levels up: Map Dash (social studies), Timeline Snap (putting things in order), Clock Catch (telling time), Word Bridge (French), Coin Shop (money) and Equation Tower (equations). Content adapts to the child's grade.
 - **Gamification:**
   - About 55 trophies (bronze, silver, gold and a platinum "Grade Champion") with console-style toast pop-ups.
   - XP and levels, coins, daily quests and streaks.

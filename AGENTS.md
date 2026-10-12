@@ -262,7 +262,7 @@ Tests are duplicated across screen sizes only where layout can break:
   - Session bonuses: +15 per session, +25 when perfect, +40 for the Daily Challenge, +30 for passing a Challenge.
   - Level *n* needs `80 + 40(n−1)` XP.
 - **Coins** come from correct answers, sessions, games, trophies and quests. They're spent in a pretend shop on critter companions, titles and confetti styles.
-- **Trophies:** 186 in the list, about 115 visible to a child at any one grade (mastery trophies are per grade), including a French group kept in its own list (`src/lib/trophies.ts`), in Xbox/PlayStation-style tiers. Everything a child can do has a trophy: every subject (a practice ladder for each of math, language, science, social studies and both French subjects), every mode, every arcade game, streaks, levels, shop, and mastery for every grade and subject.
+- **Trophies:** 193 in the list, about 105 visible to a child at any one grade (mastery trophies are per grade), including a French group kept in its own list (`src/lib/trophies.ts`), in Xbox/PlayStation-style tiers. Everything a child can do has a trophy: every subject (a practice ladder for each of math, language, science, social studies and both French subjects), every mode, every arcade game, streaks, levels, shop, and mastery for every grade and subject.
 
   | Tier | Points | Coins |
   | --- | --- | --- |
@@ -288,8 +288,12 @@ Tests are duplicated across screen sizes only where layout can break:
 - **Parent milestone cards** (`src/lib/milestones.ts`) appear on the Overview and Reports; they describe practice, not a report-card mark.
 
 ### Arcade games
-- **Number Munchers** (math), **Word Ninja** (a Fruit Ninja-style game with Dolch sight words by grade), **Critter Catch** (science), **Bubble Pop** (phonics) and **Memory Match**.
-- **Game content adapts to the child's grade.** New games must teach something.
+- **Open from the start:** **Number Munchers** (math), **Word Ninja** (a Fruit Ninja-style game with Dolch sight words by grade), **Critter Catch** (science), **Bubble Pop** (phonics) and **Memory Match**.
+- **Unlocked by levelling up** (`unlockLevel` in `src/lib/arcade.ts`; a locked tile shows the level it needs, and the level-up toast names a game that opens): **Map Dash** (level 2, social studies: position and compass words, then provinces, capitals, oceans and regions of Canada on a tile map), **Timeline Snap** (level 3, putting life cycles, history, inventions and numbers in order), **Clock Catch** (level 4, Grades 1 to 4, analogue clocks), **Word Bridge** (level 4, French vocabulary and grammar, shown only to a child with a French subject on; Immersion questions are in French), **Coin Shop** (level 5, Grades 1 to 5, paying and making change with Canadian coins) and **Equation Tower** (level 6, Grades 2 to 9, missing numbers up to x on both sides).
+- **Every game lists the grades it has content for** (`grades` in `src/lib/arcade.ts`); a game outside the child's grade is not shown, and its trophy is hidden (`applies`). Every grade has at least 7 games, which "Arcade Explorer" counts on.
+- **Arcade games have no daily or weekly quests,** because parents can turn games off and game time is earned, so a game quest could be impossible that day.
+- **Game content adapts to the child's grade,** and Grades 6 to 9 have their own rounds in every game (rules, word sets, catch rounds, bubble sets and memory sets per grade). New games must teach something, and their content needs a test that checks every answer (`games/content.test.ts`, `games/newGames.test.ts`).
+- **The tap-to-answer games share `games/kit.tsx`** (score, three hearts, a per-question timer that pauses when the app is hidden, number keys for choices). Critter Catch and Clock Catch share the falling-catch engine in `games/Catch.tsx`.
 
 ### Parent area (`/parents/`)
 - **A PIN gate protects it.** The PIN is salted and hashed with SHA-256 on the device. "Forgot PIN" asks a multiplication question young kids can't answer.
