@@ -125,7 +125,7 @@ export const ourTerritory3 = bankUnit({
   blurb: "Places, symbols and facts about Nunavut.",
   parentNote:
     "Covers Nunavut's regions, capital, communities, symbols and landscape. Some names are written in Inuktitut. Nunavut-only content, written from Government of Nunavut sources.",
-  standards: ["Nunavut Social Studies K–6 (2025), Nunavusiutit", "Nunavut's regions, communities, symbols and landscape"],
+  standards: ["Nunavut Social Studies K–6 (2025), 3.C.2; 3.L.5", "Nunavut's regions, communities, symbols and landscape"],
   items: territory,
 });
 

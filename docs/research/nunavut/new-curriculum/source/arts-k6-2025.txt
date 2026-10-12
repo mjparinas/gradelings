@@ -1,0 +1,3370 @@
+AE
+Uqausiliriniq
+ᑕᑯᒥᓇᖅᑐᓕᕆᓂᕐᒥᒃ 
+ᐃᓕᓐᓂᐊᕈᑦ
+Hanaujaqnikkut Ilihaqnikkut 
+Ilihaidjutit
+Arts Education Curriculum
+ᐃᓕᓐᓂᐊᓕᓵᖅᑐᓂᑦ ᖁᑦᑎᖕᓂᓕᖕᓄᑦ 6
+Inuinnaqtun Numiktiqhimajuq
+Ilihalihaaqtunit Puqtuniq 6-mut
+Kindergarten to Grade 6
+
+Department of Education
+Government of Nunavut
+PO Box 1000, Station 960
+Iqaluit, NU X0A 0H0
+© 2023 Government of Nunavut
+Images © 2023 Government of Nunavut
+
+ᐃᓗᓕᖏᑦ
+ILULINGIT
+CONTENTS
+ SECTION
+Acknowledgements....................................................................................................................................1.1
+Preface.......................................................................................................................................................................2.1
+Introduction.......................................................................................................................................................3.1
+Introduction to the Nunavut curriculum, Kindergarten to Grade 6.......3.1
+Introduction to the Arts Education Curriculum.....................................................3.6
+What is the Arts Education Curriculum? .............................................................. 3.6
+Rationale........................................................................................................................... 3.7
+Goals................................................................................................................................... 3.7
+Organization of the Arts Education Curriculum.....................................................3.8
+Curriculum Foundation............................................................................................... 3.10
+Major Understandings.................................................................................................. 3.10
+Learning Strands............................................................................................................ 3.11
+Learning Concepts and Learning Outcomes.......................................................... 3.12
+Other information......................................................................................................... 3.14
+Notice if the student................................................................................................................3.14
+Additional notes..........................................................................................................................3.14
+Inuit Qaujimajatuqangit (IQ) in Arts Education.......................................................3.16
+Arts-Integrated Learning and the Creative Process..............................................3.17
+Teaching from a Cross-Curricular Perspective ........................................................3.18
+Use of Information and Communication Technology.......................................3.19
+
+Learning Outcomes by Grade .......................................................................................................4.1
+Kindergarten ..............................................................................................................................................4.1
+Grade 1...............................................................................................................................................................4.7
+Grade 2 ..............................................................................................................................................................4.13
+Grade 3 ..............................................................................................................................................................4.21
+Grade 4 ..............................................................................................................................................................4.29
+Grade 5 ..............................................................................................................................................................4.35
+Grade 6..............................................................................................................................................................4.41
+Glossary....................................................................................................................................................................5.1
+
+Reproducibles ...................................................................................................................................................6.1
+Overview of Experimenting and Creating Learning Outcomes, 
+Kindergarten to Grade 6 ................................................................................................................6.2
+Overview of Connecting and Reflecting Learning Outcomes, 
+Kindergarten to Grade 6 ................................................................................................................6.4
+Overview of Interpreting and Responding Learning Outcomes, 
+Kindergarten to Grade 6 ................................................................................................................6.6
+Overview of Experimenting and Creating Learner Progressions, 
+Kindergarten to Grade 6............................................................................................. 6.8
+Overview of Connecting and Reflecting Learner Progressions, 
+Kindergarten to Grade 6............................................................................................. 6.14
+Overview of Interpreting and Responding Learner Progressions, 
+Kindergarten to Grade 6............................................................................................. 6.20
+Learning Outcomes Checklists: Kindergarten .......................................................6.26
+Learning Outcomes Checklists: Grade 1........................................................................6.27
+Learning Outcomes Checklists: Grade 2 .......................................................................6.28
+Learning Outcomes Checklists: Grade 3 .......................................................................6.30
+Learning Outcomes Checklists: Grade 4 .......................................................................6.31
+Learning Outcomes Checklists: Grade 5 .......................................................................6.32
+Learning Outcomes Checklists: Grade 6.......................................................................6.33
+
+
+
+ᐃᑲᔪᖅᓯᒪᔪᑦ
+IKAJUQSIMAJUT
+ACKNOWLEDGEMENTS
+
+
+
+Arts Education Curriculum 1.1
+ᐃᑲᔪᖅᓯᒪᔪᑦ
+IKAJUQSIMAJUT
+ACKNOWLEDGEMENTS 
+The Nunavut Department of Education would like to extend its sincere 
+gratitude to the large number of people who have worked hard to develop 
+this made-in-Nunavut K-6 Curriculum. The process has been going on 
+for many years and has included Elders, educators, department staff, 
+community members, and subject matter specialists, as well as those 
+involved in editing and design. 
+The Inuit Qaujimajatuqangit Principles are not only embedded in the 
+curriculum but also truly facilitated its development. Nunavut Elders 
+contributed greatly to the Inuit Qaujimajatuqangit Education Framework 
+for Nunavut Curriculum (2007), which formed the foundation for this 
+curriculum. Extensive consultations and meetings with educators, Elders, 
+and other stakeholders prior to the writing of actual learning outcomes, 
+helped create the framework and the content for the curriculum. In the 
+holistic tradition of Inuit culture, there was close collaboration among 
+the writers of the different subject areas to ensure that the educational 
+experience of Nunavut children would be fully integrated. 
+The valuable efforts, knowledge, skills, and experience of all contributors 
+have helped to fulfill one of Nunavut’s fundamental goals as a territory: to 
+provide our students with a unique Nunavut-made curriculum – one in 
+which our learners can see themselves and their communities and which 
+will influence them long into the future.
+
+
+
+ᓇᓗᓇᐃᖅᓯᔾᔪᑦ 
+NALUNAIQSIJJUT
+PREFACE
+
+ᓇᓗᓇᐃᖅᓯᔾᔪᑦ
+NALUNAIQSIJJUT
+PREFACE
+Arts Education is an essential component of a well-rounded education for 
+Nunavut children. Art classes engage students in a living and evolving 
+Inuit art culture that reflects their heritage and supports their physical, 
+intellectual, social, emotional, and spiritual health. 
+Art is part of who we are as Inuit. It reflects our heritage and supports our 
+well-being. It's not just about making pretty things, it's about expressing 
+ourselves, solving problems, and communicating. Young people read books 
+with illustrations, and they rely on art even before they learn to read. This 
+helps keep the mind focused on the story. That is why Arts Education is so 
+important for young people in Nunavut.
+The kindergarten to Grade 6 Arts Education Curriculum embraces a 
+holistic and inclusive approach that makes the arts accessible for all 
+students. It supports educators in nurturing students’ creativity, artistic 
+skills, and self-expression.
+When I was very young, we lived in a camp near Iglulik. Inuit didn't 
+write back then. Everything was oral. I used to do little drawings on gum 
+wrappers. That's when I started being an artist. As children keep learning 
+art, they improve. They will begin to develop their own signature, a style 
+like no one else’s.
+2.1 Preface
+
+Arts Education Curriculum 2.2
+The Arts Education Curriculum will encourage students to cultivate their 
+imaginations, and discover new perspectives in a supportive environment 
+that reflects their lived experiences. This new curriculum is thoughtfully 
+designed to build on students’ learning and ensure they feel supported as 
+they explore new concepts and mediums. It will give them the opportunity 
+to learn to express themselves through different mediums so they can 
+choose the medium they like best.
+I'm glad to see this new curriculum. It builds on the work of our Elders and 
+educators. It will help our young people grow strong in their traditions and 
+prepare them for a bright future.
+Germaine Arnattaujuq
+Originally from Iglulik, Nunavut
+August 2024 
+
+
+
+ᑕᑯᖅᑯᔾᔨᔾᔪᑦ
+TAKUQQUJJIJJUT 
+INTRODUCTION 
+
+
+
+Arts Education Curriculum 3.1
+ᑕᑯᖅᑯᔾᔨᔾᔪᑦ ᓄᓇᕗᒻᒥ ᐃᓕᓐᓂᐊᕈᑎᓂᒃ 
+ᐃᓕᓐᓂᐊᓕᓵᖅᑐᓂᑦ ᖁᑦᑎᖕᓂᓕᖕᓄᑦ 6
+TAKUQQUJJIJJUT NUNAVUMMI ILINNIARUTINIK 
+ILINNIALISAAQTUNIT QUTTINGNILINGNUT 6
+INTRODUCTION TO THE NUNAVUT CURRICULUM,
+KINDERGARTEN TO GRADE 6
+As stated in the Inuit Qaujimajatuqangit Education Framework for Nunavut 
+Curriculum, “schooling in Nunavut should provide support to students in all 
+areas of their development so that they can achieve personal goals, become 
+well-equipped to contribute and serve their families and communities, 
+demonstrate leadership and healthy attitudes, and be able to actively 
+participate and contribute as Nunavut takes on new roles in the global 
+community.”¹ To achieve this vision for education in Nunavut, it is imperative 
+that the curriculum in all subject areas promotes holistic critical thinking 
+and encourages continuous learning that can be transferred across contexts. 
+It must also promote inclusion and provide opportunities to differentiate 
+learning experiences to meet the needs of all students. The updated Nunavut 
+Curriculum Framework will provide a common structure for the curriculum 
+in each subject area and support this holistic, cross-curricular approach to 
+teaching and learning.
+—
+Notes
+1. Nunavut Department of Education, Inuit Qaujimajatuqangit Education Framework 
+for Nunavut Curriculum (2007), 19.
+
+3.2 Introduction
+Curriculum Foundations Subject area(s)
+ Nunavusiutit • Social Studies
+ Iqqaqqaukkaringniq • Mathematics
+• Science
+ Uqausiliriniq
+• Inuktut Language Arts - 
+1st Language, Enhanced (IL1e)
+• Inuktut Language Arts - 
+1st Language (IL1)
+• Inuktitut 2nd Language (IL2)
+• Inuinnaqtun 2nd Language (IL2)
+• English Language Arts - 
+1st Language (EL1)
+• English 2nd Language (EL2)
+• Arts Education
+ Aulajaaqtut • Physical Education, Health, 
+ and Wellness
+The Curriculum Foundations—Nunavusiutit, Iqqaqqaukkaringniq, 
+Uqausiliriniq, and Aulajaaqtut—are at the centre of the curriculum in each 
+subject area. According to the Inuit Qaujimajatuqangit Education Framework 
+for Nunavut Curriculum, the foundations “are generic in nature, transcend 
+subject-specific content areas, and result in the application and transfer of 
+specific learning to new contexts and situations. This approach to learning is 
+designed to focus on the development of complex intellectual (metacognitive) 
+skills and lead students to transformational ways of thinking and processing. 
+This type of approach helps students understand the connections between 
+various learnings and the strategies that lead to successful application of 
+learning in new contexts.”² Within the Curriculum Foundations are the 
+subject areas. These are areas of learning organized as discrete disciplines 
+and taught in systemic ways over time.
+—
+Notes
+2. Nunavut Department of Education, Inuit Qaujimajatuqangit Education Framework for 
+Nunavut Curriculum, 49.
+
+Arts Education Curriculum 3.3
+—
+Notes
+3. G. Wiggins and J. McTighe, Understanding by Design, expanded 2nd ed. 
+(Alexandria, VA: ASCD, 2005).
+The aims and principles of the Curriculum Foundations inform the Major 
+Understandings in each subject area. Major Understandings are broad 
+statements that reflect the essential principles and core ideas within a 
+subject area that can be transferred across different areas of learning.³ These 
+Major Understandings anchor the curriculum in the purpose for learning 
+in each subject area and the values of Inuit Qaujimajatuqangit (IQ). They 
+act as a lens through which teachers can make decisions about planning, 
+instruction, and assessment.
+The Major Understandings are explored through the Learning Strands, 
+which represent the key concepts and processes within each subject area 
+and the relationships among them. The Learning Strands remain consistent 
+across grades and will encourage a richer exploration of how these concepts 
+and processes work together over time. Within each Learning Strand, there 
+are Learning Concepts and grade-specific Learning Outcomes. The 
+Learning Concepts outline the constructs, processes, and patterns within 
+each Learning Strand. These concepts provide a structure through which 
+students can organize and connect the Learning Outcomes. Learning 
+Outcomes define the key knowledge, skills, and understandings students will 
+develop at each grade level. These become the building blocks that support 
+deeper conceptual understanding.
+In addition, each grade level has Guiding Questions. The Guiding Questions 
+will help link the Learning Concepts and Learning Outcomes back 
+to the Curriculum Foundations. By building connections among the knowledge, 
+skills, and understandings they have acquired, students will be able to explore 
+the principles of the Curriculum Foundations in age-appropriate ways.
+Teachers can use the Guiding Questions: 
+• In daily classroom activities and discussions
+• As part of assessment tasks
+• To plan units or themes
+• To inspire inquiry-based projects
+
+3.4 Introduction
+ᓄᓇᕗᒻᒥ ᐃᓕᓐᓂᐊᕈᑎᒃᓴᓕᐅᕈᑎᐅᑉ 
+ᑐᖖᒐᕕᖓ
+NUNAVUMMI ILINNIARUTIKSALIURUTIUP 
+TUNNGAVINGA 
+NUNAVUT CURRICULUM FRAMEWORK
+LearningOutcomes
+LearningStrands
+MajorUnderstandings
+Curriculum 
+Foundations
+LearningConcepts
+
+Arts Education Curriculum 3.5
+INUIT QAUJIMAJATUQANGIT (IQ) 
+PRINCIPLES
+• Qanuqtuurunnarniq
+• Avatimik Kamattiarniq
+• Piliriqatigiingniq
+• Pilimmaksarniq
+• Aajiqatigiingniq
+• Pijitsirniq
+• Inuuqatigiitsiarniq
+• Tunnganarniq
+GUIDING QUESTIONS
+Guiding Questions aim to build 
+connections among Learning 
+Outcomes, Learning Concepts, and 
+Curriculum Foundations.
+
+3.6 Introduction
+ᐱᒋᐊᕈᑎᖏᑦ ᑕᑯᒥᓇᖅᑐᓕᕆᓂᕐᒥᒃ 
+ᐃᓕᓐᓂᐊᕈᑦ
+PIGIARUTINGIT TAKUMINAQTULIRINIRMIK 
+ILINNIARUT
+INTRODUCTION TO THE ARTS EDUCATION 
+CURRICULUM
+What is the Arts Education Curriculum?
+Art, like language, can connect community, history, culture, and identity. 
+Inuit artists have been drawing inspiration from their culture, their history, 
+and their environment to create art for millennia.4
+ Art in Nunavut integrates 
+traditional and modern practises into artistic works that are unique to the 
+people, the geography, and the culture of the territory. 
+Historically, the Fine Arts curriculum has been divided into distinct 
+disciplines and limited to the areas of visual arts, music, dance, and 
+drama. These disciplines often rely on Eurocentric representations and 
+interpretations of art and do not always reflect the perspectives and creative 
+practises of Indigenous communities. The new Nunavut Kindergarten–Grade 
+6 Arts Education Curriculum takes a holistic approach to teaching and 
+learning through the arts and focuses on the processes, experiences, and 
+benefits of creating art and developing a creative practise. It also embraces 
+the creative practises and traditions of Inuit and emphasizes the exploration 
+of the creative works of local artists, Elders, and other community members. 
+Not all learning can be sustained by language alone; the arts can be used as 
+a medium of inquiry to open more pathways for exploration, communication, 
+and expression. When students use creative practises to make connections 
+between the arts and other subject areas, they gain a deeper understanding 
+of both. Interdisciplinary projects that use art as a foundation allow students 
+to explore new subject material and demonstrate their learning.
+—
+Notes
+4. Nunavut Department of Culture and Heritage, “Arts.”
+
+Arts Education Curriculum 3.7
+Rationale
+The Nunavut Kindergarten–Grade 6 Arts Education Curriculum is designed 
+to give students opportunities to develop their own creative processes while 
+also exploring the views, perspectives, and experiences of others. Creating and 
+responding to art can foster students’ curiosity, critical and creative thinking, 
+and problem-solving skills. Art also helps them learn empathy, develop 
+their identity, and work toward a sense of well-being. This curriculum aims 
+to provide a well-rounded Arts Education experience that will encourage 
+students to make cross-curricular connections and see the role art can play 
+in their lives outside the classroom.
+Goals 
+From Kindergarten to Grade 6, students will:
+• Develop skills and tools to express themselves creatively.
+• Communicate their thoughts, feelings, and perspectives through art.
+• Acknowledge and appreciate the creative processes and artistic 
+works of others.
+• Respond to works of art using critical thinking and problem-solving 
+skills.
+• Investigate Inuit culture and history through traditional artistic 
+processes and practises.
+• Explore how art can contribute to positive health and well-being.
+
+3.8 Introduction
+ᐋᖅᑭᒃᓯᒪᓂᖏᑦ ᑕᑯᒥᓇᖅᑐᓕᕆᓂᕐᒧᑦ 
+ᐃᓕᓐᓂᐊᕈᑦ
+AAQQIKSIMANINGIT TAKUMINAQTULIRINIRMUT 
+ILINNIARUT
+ORGANIZATION OF THE ARTS EDUCATION 
+CURRICULUM
+
+Arts Education Curriculum 3.9
+Curriculum Foundation
+Uqausiliriniq
+Major Understandings
+1. Creating and responding to art allows us to build a deeper understanding 
+and empathy for ourselves and others in our community. 
+2. Engaging with art allows us to connect to places, histories, cultures, and 
+ideas across time.
+3. Playful and holistic exploration of artistic practises allows us to nurture 
+meaningful creative expression. 
+4. Reflecting on creative works, both our own and others’, fosters creative 
+thinking, problem-solving, and knowledge for the future.
+Learning Strands
+Experimenting and Creating | Connecting and Reflecting | 
+Interpreting and Responding
+Learning Concepts
+Kindergarten: Art and Play
+Grade 1: Art and My Community
+Grade 2: Art and the Land
+Grade 3: Indigenous Art
+Grade 4: Art and Media
+Grade 5: Art and Identity
+Grade 6: Art in Action
+Learning Outcomes
+
+3.10 Introduction
+Curriculum Foundation
+The Arts Education Curriculum is part of the Uqausiliriniq Curriculum 
+Foundation. The Uqausiliriniq Curriculum Foundation focuses on 
+relationships in communication and language development, creative and 
+artistic expression, and reflective and critical thinking. The principles of 
+the Uqausiliriniq Curriculum Foundation include building relationships, 
+respecting others, thinking creatively and seeking to understand, and 
+improving on the present while building strength for the future.
+Major Understandings
+The principles of Uqausiliriniq inform the four Major Understandings within 
+the Arts Education Curriculum that continue from Kindergarten to Grade 6. 
+These Major Understandings reflect the essential learning within the subject 
+area and can act as a lens through which teachers can make decisions about 
+planning, instruction, and assessment. The Major Understandings for the 
+Arts Education Curriculum are: 
+1. Creating and responding to art allows us to build a deeper understanding 
+and empathy for ourselves and others in our community.
+2. Engaging with art allows us to connect to places, histories, cultures, and 
+ideas across time.
+3. Playful and holistic exploration of artistic practises allows us to nurture 
+meaningful creative expression.
+4. Reflecting on creative works, both our own and others’, fosters creative 
+thinking, problem-solving, and knowledge for the future.
+
+Arts Education Curriculum 3.11
+Learning Strands 
+The Arts Education Curriculum has been organized by grade and then 
+further broken down into three Learning Strands: Experimenting and 
+Creating, Connecting and Reflecting, and Interpreting and Responding. 
+Experimenting and Creating 
+In this strand, students will explore a variety of artistic processes and 
+techniques to generate and develop creative works.
+Connecting and Reflecting
+In this strand, students will cultivate their own creative practise and 
+investigate the role art can play in building their identity and maintaining 
+their well-being.
+Interpreting and Responding
+In this strand, students will examine and evaluate the artistic works 
+of others to understand how they communicate meaning across place 
+and time.
+
+3.12 Introduction
+Learning Concepts and Learning Outcomes 
+Students will explore the Learning Strands through Learning Concepts, 
+which are unique to the subject area. In Arts Education, it is valuable to place 
+learning within a context to provide a focus for students to see themselves 
+in the learning, to help them connect what they are learning to the outside 
+world, and to maintain consistency in classrooms across Nunavut. The 
+Learning Concepts offer a useful learning habitat conducive to developing the 
+Major Understandings and nurturing Inuit Qaujimajatuqangit (IQ) through 
+the arts.
+The Learning Concepts for each grade are: 
+Kindergarten: Art and Play
+In Kindergarten, students will explore themselves and the world around 
+them through play. Play encourages creativity by inviting new possibilities, 
+ideas, and relationships and helps to develop each child’s unique perspective 
+and individual style of creative expression.
+Grade 1: Art and My Community
+In Grade 1, students will explore the role communities play in the creation of 
+art. Students will experiment with and apply the theme of community as 
+they consider how artists reflect on place and belonging within their work.
+Grade 2: Art and the Land
+In Grade 2, students will focus on the relationship between art and the 
+land. They will explore how the land teaches, connects, and inspires them 
+as artists through inquiry, experimentation, and play. 
+Grade 3: Indigenous Art
+In Grade 3, students will focus on Indigenous art and explore the practises 
+and materials used by Indigenous artists around the world to represent 
+place, time, culture, histories, and ideas. 
+
+Arts Education Curriculum 3.13
+Grade 4: Art and Media
+In Grade 4, students will expand their understanding of how art is produced, 
+presented, and performed by exploring different forms of media and 
+technology that artists use to create and share their work.
+Grade 5: Art and Identity
+In Grade 5, students will reflect on who they are as individuals and explore 
+their identity through creative practises to develop a better understanding 
+of themselves, their community, and the world around them.
+Grade 6: Art in Action
+In Grade 6, students will examine how art can inspire change and prompt 
+meaningful conversations about questions or issues that are important to 
+the artist, their community, and the world around them.
+The Learning Outcomes in the Arts Education Curriculum are specific 
+to each grade level; however, some Learning Outcomes continue across 
+grades to provide students with additional time and support to develop 
+essential skills, practises, and understandings related to Arts Education.
+
+3.14 Introduction
+Other information
+Notice if the student
+Below the Learning Outcomes, the section headed “Notice if the student”
+outlines examples of how students may demonstrate their learning. They 
+may demonstrate their learning by saying, doing, or representing.
+Additional notes
+The “Additional notes” section provides other information about the 
+Learning Outcomes, including definitions of any potentially unfamiliar 
+vocabulary, additional information, and resources and examples to support 
+student learning.
+“Begins to”
+This has been added to some of the Learning Outcomes and descriptors 
+to signify that students should be attempting to demonstrate observable 
+behaviours connected to the Learning Outcome throughout the year, but 
+that continued support and modelling from the teacher is required.
+
+Arts Education Curriculum 3.15
+Arts Education Curriculum 4.1
+KINDERGARTEN: EXPERIMENTING AND CREATING
+Guiding Question: What can I imagine and create? 
+Learning 
+Concept
+Learning Outcome
+By the end of Kindergarten, students will:
+Art and Play K.EC.1 
+Explore elements of design (line, shape, form, space, colour, 
+texture, and value) through brainstorming, role play, and 
+experimentation.
+ 
+Notice if the student:
+• Consistently participates in modelled activities 
+• Tries a variety of elements, processes, and techniques during independent play 
+Additional notes:
+Elements refer to the definable components of a creative work.
+In Kindergarten, elements may include:
+• Line, shape, and colour in visual art
+• Beat, rhythm, and tempo in music
+• Body and action in dance
+• Character, setting, and plot in dramatic play
+Processes and techniques refer to the different ways creative works can be 
+expressed, made, or produced. 
+In Kindergarten, processes and techniques may include:
+• Brainstorming
+• Improvisation or role play
+• Experimentation
+Other information
+Learning Strand
+Guiding Question
+Learning Concept
+Learning 
+Strand
+Grade level
+Learning 
+Outcome
+K.EC.1
+Learning Outcome
+
+3.16 Introduction
+ᐃᓄᐃᑦ ᖃᐅᔨᒪᔭᑐᖃᖏᑦ 
+ᑕᑯᒥᓇᖅᑐᓕᕆᓂᕐᒧᑦ 
+ᐃᓕᓐᓂᐊᕈᑎᖏᓐᓂ
+INUIT QAUJIMAJATUQANGIT 
+TAKUMINAQTULIRINIRMUT ILINNIARUTINGINNI
+INUIT QAUJIMAJATUQANGIT (IQ) IN 
+ARTS EDUCATION 
+Inuit Qaujimajatuqangit, or “that which Inuit have always known to be true,” 
+are the foundation for social, emotional, spiritual, mental, and physical wellbeing. When learning is embedded in culture, it supports a sense of identity, 
+a feeling of belonging, and a connection to those around us.5
+ The broad and 
+versatile nature of Arts Education makes it an excellent vehicle for teaching 
+IQ. While students and teachers should be engaging with the eight IQ 
+Principles holistically, the Arts Education Curriculum provides opportunities 
+to focus specifically on:
+• Pilimmaksarniq (developing skills through observation, mentoring, 
+practise, and effort)
+• Qanuqtuurunnarniq (being innovative and resourceful)
+• Inuuqatigiitsiarniq (respecting others, relationships, and caring for 
+people)
+—
+Notes
+5. Shirley Tagalik, “Inuit Qaujimajatuqangit: The Role of Indigenous Knowledge in 
+Supporting Wellness in Inuit Communities in Nunavut,” Child & Youth Health (National 
+Collaborating Centre for Aboriginal Health, 2009–2010). 
+
+Arts Education Curriculum 3.17
+ᑕᑯᒥᓇᖅᑐᓕᕆᓂᕐᒧᑦ ᐃᓕᓐᓂᐊᕈᑎᑦ 
+ᐃᓱᒪᒃᑯᓪᓗ ᓴᓇᔪᓐᓇᕐᓂᕐᒧᑦ
+TAKUMINAQTULIRINIRMUT ILINNIARUTIT 
+ISUMAKKULLU SANAJUNNARNIRMUT
+ARTS-INTEGRATED LEARNING AND THE 
+CREATIVE PROCESS
+Arts-integrated learning is an instructional approach that involves using the 
+arts as an avenue through which students apply and connect content from 
+other subject areas. In a non-integrated classroom, students switch between 
+subjects without developing any connections between them and only learn 
+the content, skills, and understandings of each discipline. Connecting the 
+arts to other subjects in a meaningful, integrative way emphasizes the 
+Major Understandings of each subject and fosters learning, particularly for 
+comprehension and application. The arts are not in service of the content; 
+instead, the content and the arts are connected through the creative process.
+Engagement in the creative process is at the core of arts integration. The 
+creative process is reflected in the three Learning Strands: Experimenting 
+and Creating, Connecting and Reflecting, and Interpreting and Responding. 
+By not placing emphasis on the final product but celebrating exploration, 
+practise, and reflection, students gain critical thinking skills that apply to all 
+areas of learning. The creative process teaches students to use their inherent 
+curiosity to ask questions, engage with content, and seek answers through 
+exploration and experimentation.
+
+3.18 Introduction
+ᐃᓕᓐᓂᐊᖅᑎᑦᑎᓂᖅ 
+ᐃᓕᓐᓂᐊᕈᑎᓕᒫᑦ ᐊᑐᕐᓗᒋᑦ
+ILINNIAQTITTINIQ ILINNIARUTILIMAAT 
+ATURLUGIT
+TEACHING FROM A CROSS-CURRICULAR 
+PERSPECTIVE
+According to the Inuit Qaujimajatuqangit Education Framework for 
+Nunavut Curriculum, the four Curriculum Foundations—Nunavusiutit, 
+Iqqaqqaukkaringniq, Uqausiliriniq, and Aulajaaqtut—were designed to 
+promote a holistic approach to education that encourages students to 
+transfer learning across subject areas and develop deeper, transformative 
+ways of thinking and learning. Planning learning experiences around 
+thematic units or integrated projects can provide students with 
+opportunities to apply their learning in different contexts. 
+Within the Kindergarten–Grade 6 Arts Education Curriculum, there are 
+many ways for students to build on prior knowledge and connect what 
+they are learning to their lives outside the classroom. The Arts Education 
+Curriculum is designed to be used as a tool to integrate different subject 
+areas and help students broaden and deepen their skills and understandings 
+by transferring them into new settings and contexts. The Arts Education 
+Educator Handbook will provide more examples and suggestions for how to 
+integrate this curriculum meaningfully with learning experiences in other 
+subject areas.
+
+Arts Education Curriculum 3.19
+ᖃᕆᓴᐅᔭᓕᕆᓗᓂ ᐃᓕᓐᓂᐊᕈᑎᑦ
+QARISAUJALIRILUNI ILINNIARUTIT
+USE OF INFORMATION AND COMMUNICATION 
+TECHNOLOGY
+The use of information and communication technology is an important 
+part of Arts Education. Using these tools to support the Arts Education 
+Curriculum, where available, can help enhance student learning and 
+allow them to use the tools in a supervised environment. Students can use 
+technology to develop and produce their own creative works and find and 
+explore the creative works of others.
+A fundamental aspect of Arts Education is imitating and reproducing art. 
+Fair dealing is a part of copyright law that allows schools to use copyrighted 
+material for educational purposes. Students should be able to distinguish 
+between situations in which it is appropriate and situations in which it is 
+inappropriate to use someone else’s work. While claiming another’s work as 
+your own is plagiarism, the goal should not be to stop students from copying 
+but rather to initiate a discussion about originality and giving credit to an 
+artist when their work has been used.
+All these applications of technology can have a positive impact on students’ 
+creative practise and learning within Arts Education. However, it is also 
+important that students learn to use technology safely and do not put 
+themselves and others at risk. They need to learn to differentiate between 
+reliable and unreliable sources of information and to create personal 
+boundaries to manage their use of technology outside of school.
+More information and resources related to the use of information and 
+communication technology can be found in the Arts Education Educator 
+Handbook.
+
+
+
+ᐃᓕᑕᐅᔭᕆᐊᓖᑦ 
+ᖁᑦᑎᖕᓂᖏᑦ ᒪᓕᒡᓗᒋᑦ 
+ILITAUJARIALIIT 
+QUTTINGNINGIT MALIGLUGIT
+LEARNING OUTCOMES 
+BY GRADE 
+
+3.22
+Arts Education Curriculum
+ᐃᓕᓐᓂᐊᓕᓵᖅᑐᑦ
+ILINNIALISAAQTUT
+KINDERGARTEN
+
+Arts Education Curriculum 4.1
+KINDERGARTEN: EXPERIMENTING AND CREATING
+Guiding Question: What can I imagine and create? 
+Learning 
+Concept
+Learning Outcome
+By the end of Kindergarten, students will:
+Art and Play K.EC.1 
+Explore elements of design (line, shape, form, space, colour, 
+texture, and value) through brainstorming, role play, and 
+experimentation.
+ 
+Notice if the student:
+• Consistently participates in modelled activities.
+• Tries a variety of elements, processes, and techniques during independent play. 
+Additional notes:
+Elements refer to the definable components of a creative work.
+In Kindergarten, elements may include:
+• Line, shape, and colour in visual art
+• Beat, rhythm, and tempo in music
+• Body and action in dance
+• Character, setting, and plot in dramatic play
+Processes and techniques refer to the different ways creative works can be 
+expressed, made, or produced. 
+In Kindergarten, processes and techniques may include:
+• Brainstorming
+• Improvisation or role play
+• Experimentation
+
+4.2
+K.EC.2 
+Begin to use a variety of artistic tools and materials for different 
+purposes. 
+ 
+Notice if the student:
+• Makes attempts to use different artistic tools in guided and independent contexts.
+• Uses a range of different materials provided during modelled and independent 
+ activities.
+Additional notes:
+Tools and materials refer to the various instruments, supplies, and resources used 
+by individuals to create, express, and explore artistic concepts and ideas.
+Artistic tools and materials for students in Kindergarten may include:
+• Paintbrushes, markers, pencils, crayons, and chalk
+• Scissors, rulers, stencils, stamps, and needles and thread or string
+• Natural materials such as rocks, sticks, and snow
+• Technology such as cameras and audio recorders
+• Puppets, costumes, and dramatic props
+• Musical instruments
+• Recycled materials
+To ensure students’ safety, it is important to model how to handle all tools and 
+materials in the classroom before providing them for students to use independently. 
+Kindergarten ◊ Experimenting and Creating 
+
+Arts Education Curriculum 4.3
+KINDERGARTEN: CONNECTING AND REFLECTING
+Guiding Question: What can I imagine and create?
+Learning 
+Concept
+Learning Outcome
+By the end of Kindergarten, students will:
+Art and Play K.CR.1 
+Engage in activities that develop artistic skill through curiosity, 
+exploration, and imagination and begin to express thoughts and 
+feelings about them. 
+ 
+Notice if the student:
+• Communicates using words, sounds, images, facial expressions, and body 
+ movements.
+• Represents people, events, and other important aspects of their life in different ways.
+Additional notes:
+Creative practises refer to activities or pursuits that develop artistic skill through 
+curiosity, exploration, and imagination.
+K.CR.2 
+Begin to develop an awareness of artistic skills/activities they 
+enjoy.
+ 
+Notice if the student:
+• Makes choices about creative practises to try in the classroom.
+• Stays engaged in the creative activities they choose.
+
+4.4
+K.CR.3 
+Begin to develop artistic skills by engaging in activities with 
+others that promote curiosity, exploration, and imagination.
+ 
+Notice if the student:
+• Joins others in activities such as singing, dancing, making and constructing, and 
+ dramatic play.
+• Acknowledges the ideas and contributions of others in creative activities
+• Works with peers toward a collective idea.
+Additional notes:
+Creative practises refer to activities or pursuits that develop artistic skill through 
+curiosity, exploration, and imagination.
+It is important for students to have opportunities to engage in creative practises 
+independently and with others. Sharing creative experiences with others is one way 
+the arts can support individual and collective health and well-being. For example, 
+when students play together in a dramatic play centre, they have the opportunity 
+to act out and experiment with different emotions and experiences and to negotiate 
+and build relationships with their peers.
+Kindergarten ◊ Connecting and Reflecting
+
+Arts Education Curriculum 4.5
+KINDERGARTEN: INTERPRETING AND RESPONDING
+Guiding Question: What can I imagine and create?
+Learning 
+Concept
+Learning Outcome
+By the end of Kindergarten, students will:
+Art and Play K.IR.1 
+Observe and discuss art forms they see in daily life and how 
+they may relate to community and culture.
+ 
+Notice if the student:
+• Comments on, points out, or communicates in another way about things around 
+ them that they find beautiful, pleasurable, inspiring, or interesting.
+• Shares stories, objects, photos, or other artifacts that represent creative practises 
+ in their family or community (for example, talking about a dance competition 
+ they went to or showing a sample of beadwork from a family member). 
+Additional notes:
+Creative practises refer to activities or pursuits that develop artistic skill through 
+curiosity, exploration, and imagination.
+K.IR.2 
+Make personal connections to the creative works of others. 
+ 
+Notice if the student:
+• Shows interest in the creative works of others.
+• Responds to the creative works of others using words, pictures, gestures, or other 
+ forms of communication.
+• Expresses things that they like, that are familiar to them, or that remind them of 
+ something in their own life.
+Additional notes:
+Creative works refer to tangible products of creative activities or practises. 
+Examples of creative works for Kindergarten may include skits and plays, drawings 
+and paintings, vocal or instrumental music, dances, craftwork, and puppets and 
+puppet shows.
+Consider inviting local artists, musicians, filmmakers, or other community 
+members to the class to show their creative work to students.
+
+4.6
+Arts Education Curriculum
+ᖁᑦᑎᖕᓂᓖᑦ 1
+QUTTINGNILIIT 1
+GRADE 1 
+
+Arts Education Curriculum 4.7
+GRADE 1: EXPERIMENTING AND CREATING
+Guiding Question: How do we express our creativity?
+Learning 
+Concept
+Learning Outcome
+By the end of Grade 1, students will:
+Art and My
+Community
+1.EC.1 
+Actively engage with a variety of elements, processes, and 
+techniques through play.
+ 
+Notice if the student:
+• Consistently participates in modelled creative activities.
+• Tries a variety of elements, processes, and techniques during independent play. 
+Additional notes:
+Elements refer to the definable components of a creative work.
+In Grade 1, elements may include:
+• Line, shape, colour, and pattern in visual art
+• Beat, rhythm, pitch, and tempo in music
+• Body, action, and space in dance
+• Character, setting, and plot in dramatic play
+Processes and techniques refer to the different ways creative works can be 
+expressed, made, or produced. 
+In Grade 1, these processes and techniques may include:
+• Brainstorming
+• Improvisation or role play
+• Experimentation
+
+4.8
+1.EC.2 
+Actively engage in using artistic tools and materials efficiently 
+and safely for different purposes.
+ 
+Notice if the student:
+• Uses different artistic tools in guided and independent contexts.
+• Makes adjustments to use tools more effectively.
+• Tries out different materials provided during modelled and independent activities.
+Additional notes:
+Tools and materials refer to the various instruments, supplies, and resources used 
+by individuals to create, express, and explore artistic concepts and ideas.
+Artistic tools and materials for students in Grade 1 may include:
+• Paintbrushes, markers, pencils, crayons, and chalk
+• Scissors, rulers, stencils, stamps, and needles and thread or string
+• Natural materials such as rocks, sticks, and snow
+• Technology such as cameras and audio recorders
+• Puppets and dramatic props
+• Musical instruments
+• Consumables such as paper, fabric, clay, beads, paint, and glue
+• Recycled materials 
+To ensure students’ safety, it is important to model how to handle all tools and 
+materials in the classroom before providing them for students to use independently.
+Grade 1 ◊ Experimenting and Creating
+
+Arts Education Curriculum 4.9
+GRADE 1: CONNECTING AND REFLECTING
+Guiding Question: How do we express our creativity?
+Learning 
+Concept
+Learning Outcome
+By the end of Grade 1, students will:
+Art and My
+Community
+1.CR.1 
+Express thoughts, feelings, and interests by engaging in 
+activities that promote artistic skill development through 
+exploration, imagination, and play.
+ 
+Notice if the student:
+• Communicates using words, sounds, images, facial expressions, and body 
+ movements.
+• Represents people, events, or other important aspects of their life in creative works.
+Additional notes:
+Creative practises refer to activities that develop artistic skill through curiosity, 
+exploration, and imagination.
+Creative works refer to tangible products of creative activities or practises.
+1.CR.2
+Identify artistic activities that they enjoy.
+ 
+Notice if the student:
+• Shows preferences for particular creative practises or activities.
+• Stays engaged in the creative activities they choose.
+• Participates in creative activities independently and with others.
+Additional notes:
+It is important for students to have opportunities to engage in creative practises 
+independently and with others. Sharing creative experiences with others is one way 
+the arts can support individual and collective health and well-being.
+
+4.10
+1.CR.3 
+Share art and creative works (visual art, music, dance, or 
+dramatic play) with others.
+ 
+Notice if the student:
+• Takes turns and expresses ideas during creative play with others.
+• Shares or talks about creative works with teachers and peers.
+• Selects work to display in the classroom.
+• Documents creative work to share with others (for example, using a camera or 
+ other technology to take a picture or video of their work to show in the classroom 
+ or at home).
+Additional notes:
+Creative works refer to tangible products of creative activities or practises.
+1.CR.4
+Begin to reflect on their own art processes.
+ 
+Notice if the student:
+• Talks about or communicates plans or ideas for new creative works
+• Asks for help during creative activities as needed
+• Attempts to improve creative works through practise
+Grade 1 ◊ Connecting and Reflecting 
+
+Arts Education Curriculum 4.11
+GRADE 1: INTERPRETING AND RESPONDING
+Guiding Question: How do we express our creativity?
+Learning 
+Concept
+Learning Outcome
+By the end of Grade 1, students will:
+Art and My
+Community
+1.IR.1 
+Recognize the thoughts, feelings, and actions of others through art.
+ 
+Notice if the student:
+• Shows interest in the creative works of others.
+• Responds to the creative works of others using words, pictures, gestures, or other 
+ forms of communication.
+• Expresses things in creative works that they like, that are familiar to them, or 
+ that remind them of something in their own life. 
+Additional notes:
+Creative works refer to tangible products of creative activities or practises.
+1.IR.2
+Observe and respond to creative works of local or regional creative 
+communities.
+ 
+Notice if the student:
+• Participates in activities related to creative works from their community or region.
+• Responds to the creative works of others using words, pictures, gestures, or other 
+ forms of communication.
+Additional notes:
+Consider inviting local artists, musicians, filmmakers, or other community members 
+to the class to show their creative work to students.
+
+4.12
+Arts Education Curriculum
+ᖁᑦᑎᖕᓂᓖᑦ 2
+QUTTINGNILIIT 2
+GRADE 2 
+
+Arts Education Curriculum 4.13
+GRADE 2: EXPERIMENTING AND CREATING
+Guiding Question: What inspires me to be creative?
+Learning 
+Concept
+Learning Outcome
+By the end of Grade 2, students will:
+Art and the Land 2.EC.1 
+Produce simple art/creative works using a variety of artistic 
+elements, processes, and techniques. 
+ 
+Notice if the student:
+• Actively participates in modelled and independent creative activities.
+• Tries new processes and techniques.
+• Brainstorms ideas and makes attempts to produce or perform creative works in 
+ different contexts.
+Additional notes:
+Creative works refer to tangible products of creative activities or practises.
+Elements refer to the definable components of a creative work.
+In Grade 2, elements may include:
+• Line, shape, colour, texture, and pattern in visual art
+• Rhythm, pitch, timbre, and texture or harmony in music
+• Body, action, space, and time in dance
+• Character, setting, plot, and time in drama
+Processes and techniques refer to the different ways creative works can be 
+expressed, made, or produced. 
+In Grade 2, processes and techniques may include:
+• Brainstorming and preparing
+• Experimenting
+• Implementing or executing
+• Problem-solving
+
+4.14
+2.EC.2 
+Understand the use and function of different tools and 
+materials for creating specific art forms. 
+ 
+Notice if the student:
+• Understands the function and purpose of different tools and materials.
+• Can gather the tools and materials they need independently.
+• Asks for specific tools or materials if they are not available.
+Additional notes:
+Tools and materials refer to the various instruments, supplies, and resources used 
+by individuals to create, express, and explore artistic concepts and ideas.
+Artistic tools and materials for students in Grade 2 may include:
+• Paintbrushes, markers, pencils, crayons, and chalk
+• Scissors, rulers, stencils, and stamps
+• Small tools and needles and thread or string
+• Natural materials such as rocks, sticks, and snow
+• Technology such as cameras and audio recorders
+• Puppets and dramatic props
+• Musical instruments
+• Consumables such as paper, fabric, clay, beads, paint, and glue
+• Recycled materials 
+Grade 2 ◊ Experimenting and Creating
+
+Arts Education Curriculum 4.15
+GRADE 2: CONNECTING AND REFLECTING
+Guiding Question: What inspires me to be creative?
+Learning 
+Concept
+Learning Outcome
+By the end of Grade 2, students will:
+Art and the 
+Land
+2.CR.1 
+Express thoughts, feelings, and interests by engaging in activities 
+that promote artistic skill development through exploration, 
+imagination, and play. 
+ 
+Notice if the student:
+• Communicates using words, sounds, images, facial expressions, and body 
+ movements.
+• Represents people, events, or other important aspects of their life in different ways.
+• Makes choices in creative works for specific purposes.
+Additional notes:
+Creative practises refer to activities and pursuits that develop artistic skill through 
+curiosity, exploration, and imagination.
+Creative works refer to tangible products of creative activities or practises.
+2.CR.2 
+Select and engage in art activities (visual art, dance, drama, 
+music) that they enjoy on their own or with others.
+ 
+Notice if the student:
+• Shows preferences for particular creative practises or activities.
+• Stays engaged in creative activities they choose.
+• Expresses themselves during creative activities with others.
+Additional notes:
+It is important for students to have opportunities to engage in creative practises 
+independently and with others. Sharing creative experiences with others is one way 
+the arts can support individual and collective health and well-being.
+
+4.16
+2.CR.3 
+Share, present, or perform creative works for others.
+ 
+Notice if the student:
+• Shares or talks about creative works with teachers and peers.
+• Selects work to display in the classroom. 
+• Documents creative work to share with others (for example, using a camera or 
+ other technology to take a picture or video of their work to show in the classroom 
+ or at home).
+Additional notes:
+Creative works refer to tangible products of creative activities or practises.
+2.CR.4
+Reflect on their own art processes for growth and improvement.
+ 
+Notice if the student:
+• Makes plans for new creative works.
+• Seeks support for creative works as needed.
+• Begins to set goals for creative works.
+Grade 2 ◊ Connecting and Reflecting
+
+Arts Education Curriculum 4.17
+GRADE 2: INTERPRETING AND RESPONDING
+Guiding Question: What inspires me to be creative?
+Learning 
+Concept
+Learning Outcome
+By the end of Grade 2, students will:
+Art and the Land 2.IR.1 
+Identify and describe different purposes and motivations for 
+creating art.
+ 
+Notice if the student:
+• Talks about or shares different reasons for creating art, such as:
+ ° For pleasure or enjoyment
+ ° To build relationships with family, friends, or the community
+ ° To share messages or tell stories
+ ° To express feelings or ideas
+ ° To document or record a place, time, or event
+2.IR.2 
+Describe the ways artists use tools, materials, processes, and 
+techniques to communicate meaning through art.
+ 
+Notice if the student:
+• Uses prior knowledge of artistic tools, processes, and techniques.
+• Makes connections between a creative work and the tools, processes, and 
+ techniques that were used to create it.
+Additional notes:
+Processes and techniques refer to the different ways creative works can be 
+expressed, made, or produced. 
+In Grade 2, processes and techniques may include:
+• Brainstorming and preparing
+• Experimenting
+• Implementing or executing
+• Problem-solving
+Creative works refer to tangible products of creative activities or practises.
+In Grade 2, students might consider how a painter chooses colours to show different 
+seasons or how a musician uses specific instruments to communicate a mood or an 
+energy level.
+
+4.18
+2.IR.3 
+Ask questions about the creative works of local and regional 
+artists and communities.
+ 
+Notice if the student:
+• Shows interest in the creative works of others.
+• Participates in activities related to creative works from their community or region.
+• Uses words, pictures, gestures, or other methods to communicate.
+Additional notes:
+Creative works refer to tangible products of creative activities or practises.
+Consider inviting local artists, musicians, filmmakers, or other community members 
+to the class to show their creative work to students.
+Grade 2 ◊ Interpreting and Responding
+
+Arts Education Curriculum 4.19
+
+4.20
+Arts Education Curriculum
+ᖁᑦᑎᖕᓂᓖᑦ 3
+QUTTINGNILIIT 3
+GRADE 3
+
+Arts Education Curriculum 4.21
+GRADE 3: EXPERIMENTING AND CREATING
+Guiding Question: What makes someone an artist or creator?
+Learning 
+Concept
+Learning Outcome
+By the end of Grade 3, students will:
+Indigenous Art 3.EC.1 
+Generate creative works inspired by curiosity and interest. 
+ 
+Notice if the student:
+• Actively participates in modelled and independent creative activities.
+• Tries new processes and techniques.
+• Uses observations, questions, and personal experiences as inspiration for creative 
+ works. 
+Additional notes:
+Creative works refer to tangible products of creative activities or practises.
+Processes and techniques refer to the different ways creative works can be expressed, 
+made, or produced. 
+In Grade 3, processes and techniques may include:
+• Brainstorming and preparing
+• Experimenting
+• Implementing or executing
+• Problem-solving
+3.EC.2
+Explore a variety of artistic elements and techniques through 
+intentional choices of tools, materials, processes, forms, and 
+techniques. 
+ 
+Notice if the student:
+• Considers how artistic tools, materials, elements, processes, and techniques can 
+ be used in different ways.
+• Selects tools, materials, elements, processes, and techniques for specific purposes.
+
+4.22
+Additional notes:
+Tools and materials refer to the various instruments, supplies, and resources used 
+by individuals to create, express, and explore artistic concepts and ideas.
+Elements refer to the definable components of a creative work.
+In Grade 3, elements may include:
+• Line, shape, colour, texture, pattern, form, and repetition in visual art
+• Rhythm, pitch, timbre, form, dynamics, and texture or harmony in music
+• Body, action, space, time, and energy in dance
+• Character, time and place, plot, and tension in drama
+Grade 3 ◊ Experimenting and Creating 
+
+Arts Education Curriculum 4.23
+GRADE 3: CONNECTING AND REFLECTING
+Guiding Question: What makes someone an artist or creator?
+Learning 
+Concept
+Learning Outcome
+By the end of Grade 3, students will:
+Indigenous Art 3.CR.1 
+Use art (visual art, dance, music, drama) to express emotions, 
+ideas, and experiences for a specific purpose. 
+ 
+Notice if the student:
+• Communicates using words, sounds, images, facial expressions, and body movements.
+• Represents feelings, ideas, experiences, or other important aspects of their life 
+ using creative practises.
+• Makes choices in creative works for specific purposes. 
+Additional notes:
+Creative practises refer to activities or pursuits that develop artistic skill through 
+curiosity, exploration, and imagination.
+Creative works refer to tangible products of creative activities or practises.
+3.CR.2 
+Express how art activities and experiences can contribute to 
+personal well-being. 
+ 
+Notice if the student:
+• Engages in creative practises for pleasure, enjoyment, or personal interest.
+• Talks about or expresses how creative practises affect their emotions, mood, 
+ energy levels, perspectives, and/or relationships.
+Additional notes:
+It is important for students to have opportunities to engage in creative practises 
+independently and with others. Sharing creative experiences with others is one 
+way the arts can support individual and collective health and well-being.
+To support students’ exploration of arts and well-being, consider inviting local 
+artists, musicians, filmmakers, or other community members to the class to talk 
+about their own processes and the role their creative practise plays in their life, 
+health, well-being, and so on. 
+
+4.24 Grade 3 ◊ Connecting and Reflecting
+3.CR.3 
+Select and prepare specific art and creative works to present or 
+perform for others.
+ 
+Notice if the student:
+• Shares or talks about creative works.
+• Selects work to present or perform based on personal criteria.
+• Practises, adjusts, or makes improvements to creative works they have selected 
+ to present or perform.
+Additional notes:
+Creative works refer to tangible products of creative activities or practises.
+Personal criteria refer to the individual standards students use to determine 
+which creative works they will share or not share with others. For example, 
+a student may decide that they are comfortable sharing pieces of visual art 
+(paintings, drawings, and so on) with others, but that they do not feel comfortable 
+sharing a dance or drama performance in front of an audience; a student may 
+select a piece of beadwork to share that they have spent a lot of time on and had a 
+chance to improve or enhance rather than a new piece.
+3.CR.4
+Reflect on the creative process to identify challenges and 
+resolutions that arise when creating art (visual art, dance, 
+music, drama).
+ 
+Notice if the student:
+• Seeks support or additional resources for creative works as needed.
+• Demonstrates perseverance and begins to build stamina for tackling creative 
+ challenges.
+
+Arts Education Curriculum 4.25
+GRADE 3: INTERPRETING AND RESPONDING
+Guiding Question: What makes someone an artist or creator?
+Learning 
+Concept
+Learning Outcome
+By the end of Grade 3, students will:
+Indigenous Art 3.IR.1 
+Acknowledge and appreciate ideas and perspectives in the 
+creative works of others. 
+ 
+Notice if the student:
+• Observes or interacts with the creative works of others.
+• Describes and makes connections to the ideas, perspectives, or experiences 
+ represented in the creative works of others.
+• Uses respectful language when commenting on the creative works of others.
+Additional notes:
+Creative works refer to tangible products of creative activities or practises.
+3.IR.2 
+Explain how artists make decisions about the tools, materials, 
+processes, and techniques they use to communicate meaning 
+through art.
+ 
+Notice if the student:
+• Uses prior knowledge of artistic tools, processes, and techniques.
+• Makes connections between a creative work and the tools, processes, and 
+ techniques that were used to create it.
+• Offers suggestions about why a specific tool, process, or technique was used.
+
+4.26
+Additional notes:
+Processes and techniques refer to the different ways creative works can be 
+expressed, made, or produced. 
+In Grade 3, processes and techniques may include:
+• Brainstorming and preparing
+• Experimenting
+• Implementing or executing
+• Problem-solving
+In Grade 3, students may demonstrate this outcome by, for example, considering 
+how a dancer uses drum dancing to learn about and share traditional practises. Or 
+they may explore how a sculptor uses found or recycled materials in their work to 
+raise awareness about environmental stewardship.
+3.IR.3 
+Examine and ask questions about the influence of art in their 
+local community or region across time. 
+ 
+Notice if the student:
+• Uses prior knowledge to identify creative works and artistic traditions from their 
+ community or region.
+• Explores local and regional creative works and artistic traditions from the past.
+• Observes the ways in which art in their community or region has or has not 
+ changed over time.
+Additional notes:
+Creative works refer to tangible products of creative activities or practises.
+Grade 3 ◊ Interpreting and Responding
+
+Arts Education Curriculum 4.27
+
+4.28
+Arts Education Curriculum
+ᖁᑦᑎᖕᓂᓖᑦ 4
+QUTTINGNILIIT 4
+GRADE 4
+
+Arts Education Curriculum 4.29
+GRADE 4: EXPERIMENTING AND CREATING
+Guiding Question: What is the purpose of art, and what can it be used for?
+Learning 
+Concept
+Learning Outcome
+By the end of Grade 4, students will:
+Art and Media 4.EC.1 
+Generate creative works and art in different contexts and for 
+different purposes. 
+ 
+Notice if the student:
+• Actively participates in modelled and independent creative activities.
+• Tries new processes and techniques. 
+• Uses observations, questions, research, and personal experiences as inspiration for 
+ creative works. 
+Additional notes:
+Creative works refer to tangible products of creative activities or practises.
+Processes and techniques refer to the different ways creative works can be 
+expressed, made, or produced. 
+In Grade 4, processes techniques may include:
+• Brainstorming and preparing
+• Experimenting
+• Implementing or executing
+• Problem-solving
+• Refining
+4.EC.2
+Practise artistic processes and techniques to improve creative 
+works.
+ 
+Notice if the student:
+• Considers how processes and techniques can be used in different ways.
+• Adjusts and refines processes and techniques based on feedback from peers, 
+ teachers, Elders, or other knowledge holders.
+
+4.30
+GRADE 4: CONNECTING AND REFLECTING
+Guiding Question: What is the purpose of art, and what can it be used for?
+Learning 
+Concept
+Learning Outcome
+By the end of Grade 4, students will:
+Art and Media 4.CR.1 
+Employ creative practises using various media and technology 
+to communicate emotions, ideas, experiences, and perspectives 
+effectively.
+ 
+Notice if the student:
+• Expresses themselves using words, sounds, images, props, facial expressions, and 
+ body movements .
+• Attempts to communicate messages or ideas, tell stories, or share things that are 
+ important to them through creative practises.
+• Makes choices in creative works for a specific purpose.
+Additional notes:
+Creative practises refer to activities or pursuits that develop artistic skill through 
+curiosity, exploration, and imagination.
+Creative works refer to tangible products of creative activities or practises.
+4.CR.2
+Experiment with diverse creative practises to support personal 
+well-being.
+ 
+Notice if the student:
+• Observes and notes how different creative practises affect their emotions, mood, 
+ energy levels, perspectives, and/or relationships.
+• Engages with creative practises independently and with others.
+• Takes creative risks and engages with new creative activities.
+Additional notes:
+It is important for students to have opportunities to engage in creative practises 
+independently and with others. Sharing creative experiences with others is one way 
+the arts can support individual and collective health and well-being.
+To support students’ exploration of arts and well-being, consider inviting local 
+artists, musicians, filmmakers, or other community members to the class to talk 
+about their own processes and the role their creative practise play in their lives, 
+health, well-being, and so on. 
+Grade 4 ◊ Connecting and Reflecting
+
+Arts Education Curriculum 4.31
+4.CR.3
+Plan, develop, and share creative works that reflect the 
+intersection of art, media, and technology.
+ 
+Notice if the student:
+• Selects creative works they want to present and share and explains their choices.
+• Begins to refine or enhance work before presenting or performing it.
+• Begins to consider the audience for their work (for example, would it help to 
+ have a microphone when singing a song? Do they need a stand to display their 
+ painting?)
+• Begin to consider to role media and technology plays in the artistic processes and 
+ the influence it has on creativity.
+Additional notes:
+Creative works refer to tangible products of creative activities or practises.
+4.CR.4
+Set goals and work through challenges within their creative 
+process.
+ 
+Notice if the student:
+• Identifies goals for creative works. 
+• Acknowledges and celebrates progress toward their goals.
+• Seeks support and additional resources for creative works as needed.
+• Demonstrates perseverance and builds stamina for tackling creative challenges.
+
+4.32
+Guiding Question: What is the purpose of art, and what can it be used for?
+Learning 
+Concept
+Learning Outcome
+By the end of Grade 4, students will:
+Art and Media 4.IR.1 
+Examine and discuss various perspectives and messages in the 
+arts and creative works of others.
+ 
+Notice if the student:
+• Observes or interacts with the creative works of others.
+• Describes and analyzes the ideas, perspectives, or experiences represented in the 
+ creative works of others.
+• Explains, writes, or communicates in other ways about their interpretations.
+• Uses respectful language when commenting on the creative works of others.
+Additional notes:
+Creative works refer to tangible products of creative activities or practises.
+In Grade 4, it is important to give students an opportunity to explore how art is 
+produced, presented, and performed using a variety of different media, including 
+film and television, photography, radio and other audio formats, print and digital 
+advertising, and social media.
+Grade 4 ◊ Interpreting and Responding
+GRADE 4: INTERPRETING AND RESPONDING
+
+Arts Education Curriculum 4.33
+4.IR.2
+Analyze the tools, materials, processes, and techniques an artist 
+uses to communicate meaning through art.
+ 
+Notice if the student:
+• Makes connections between a creative work and the tools, processes, and 
+ techniques that were used to create it.
+• Uses prior knowledge to explain why a specific tool, process, or technique was used.
+• Begins to critique the effectiveness of an artist’s choice of tools, processes, or 
+ techniques during modelled or guided activities.
+Additional notes:
+A critique refers to a specific, constructive, and informed judgment that focuses on 
+the creation, not the creator.
+Processes and techniques refer to the different ways creative works can be 
+expressed, made, or produced. 
+In Grade 4, processes and techniques may include:
+• Brainstorming and preparing
+• Experimenting
+• Implementing or executing
+• Problem-solving
+• Refining
+4.IR.3
+Compare creative works that represent the circumpolar regions 
+across time.
+ 
+Notice if the student:
+• Uses prior knowledge to identify creative works and artistic traditions from their 
+ community or region.
+• Explores contemporary and traditional creative works and artistic practises from 
+ other communities within the circumpolar regions.
+• Observes the ways in which art in these regions has or has not changed over time. 
+Additional notes:
+Creative works refer to tangible products of creative activities or practises.
+The circumpolar regions include the northern lands of Canada, Finland, Denmark 
+(including Greenland and the Faroe Islands), Iceland, Norway, Russia, Sweden, and 
+the United States (Alaska).
+
+4.34
+Arts Education Curriculum
+ᖁᑦᑎᖕᓂᓖᑦ 5
+QUTTINGNILIIT 5
+GRADE 5
+
+Arts Education Curriculum 4.35
+GRADE 5: EXPERIMENTING AND CREATING
+Guiding Question: How do I express myself through art?
+Learning 
+Concept
+Learning Outcome
+By the end of Grade 5, students will:
+Art and Identity 5.EC.1 
+Employ diverse artistic techniques and mediums to express 
+their cultural identity and personal experiences.
+ 
+Notice if the student:
+• Actively participates in modelled and independent creative activities.
+• Uses observations, questions, research, personal experiences, and the creative 
+ works of others as inspiration. 
+Additional notes:
+Creative works refer to tangible products of creative activities or practises.
+5.EC.2 
+Adapt and enhance artistic processes and techniques for a 
+variety of contexts and purposes.
+ 
+Notice if the student:
+• Experiments with processes and techniques inspired by other artists.
+• Makes plans to use processes and techniques to develop ideas.
+• Adjusts processes and techniques based on feedback from peers, teachers, Elders, 
+ or other knowledge holders.
+Additional notes:
+Processes and techniques refer to the different ways creative works can be 
+expressed, made, or produced. 
+In Grade 5, processes and techniques may include:
+• Brainstorming and preparing
+• Experimenting
+• Implementing or executing
+• Problem-solving
+• Refining or clarifying
+As students look to other artists and creators for inspiration, it is important to refer to 
+the Use of Information and Communication Technology and Fair Dealing document to 
+help students understand the appropriate ways to use or refer to someone else’s work.
+See the Arts Educator Handbook for more information.
+
+4.36
+Guiding Question: How do I express myself through art?
+Learning 
+Concept
+Learning Outcome
+By the end of Grade 5, students will:
+Art and Identity 5.CR.1 
+Use art activities and/or performances to explore identity 
+and self-concept, and demonstrate how these activities/
+performances promote personal well-being.
+ 
+Notice if the student:
+• Expresses themselves using words, sounds, images, props, facial expressions, and 
+ body movements.
+• Attempts to communicate messages or ideas, tell stories, or share things that are 
+ important to them through their creative work.
+• Asks themselves questions through their creative work about who they are, where 
+ they come from, what they believe, and what is important to them.
+Additional notes:
+Creative practises refer to activities or pursuits that develop artistic skill through 
+curiosity, exploration, and imagination.
+Identity refers to the characteristics or qualities that distinguish a person or group. 
+Identity can be shaped by factors like race or ethnicity, culture, gender and gender 
+expression, sexuality, religion, and social roles.
+Self-concept refers to a strong set of beliefs and perceptions about who you are.
+Creative works refer to tangible products of creative activities or practises.
+Students may be able to draw on prior knowledge about identity and self-concept 
+from the Physical Education, Health, and Wellness Curriculum to support their 
+learning. 
+Grade 5 ◊ Connecting and Reflecting
+GRADE 5: CONNECTING AND REFLECTING
+
+Arts Education Curriculum 4.37
+5.CR.2
+Plan, develop, and refine creative works to present or perform 
+for others.
+ 
+Notice if the student:
+• Brainstorms ideas for a creative work with the intention of presenting or 
+ performing it for others.
+• Makes a plan to produce and present or perform a creative work.
+• Refines or enhances work.
+• Considers the most effective ways to present or perform their work (for example, 
+ would it help to have a microphone when singing a song? Do they need a stand 
+ to display their painting?) 
+Additional notes:
+Creative works refer to tangible products of creative activities or practises.
+5.CR.3
+Ask questions of themselves and others about their creative 
+process.
+ 
+Notice if the student:
+• Identifies their strengths and challenges related to different creative processes 
+ and techniques.
+• Connects with peers, mentors, Elders, knowledge holders, and other resources to 
+ learn about their creative processes.
+Additional notes:
+Processes and techniques refer to the different ways creative works can be 
+expressed, made, or produced. 
+In Grade 5, processes and techniques may include:
+• Brainstorming and preparing
+• Experimenting
+• Implementing or executing
+• Problem-solving
+• Refining or clarifying
+
+4.38
+Guiding Question: How do I express myself through art?
+Learning 
+Concept
+Learning Outcome
+By the end of Grade 5, students will:
+Art and Identity 5.IR.1 
+Describe, explain, or analyze creative works and art using 
+knowledge of artistic processes and techniques. 
+ 
+Notice if the student:
+• Uses prior knowledge to describe and analyze the creative works of others.
+• Explains, writes, or communicates in other ways about their interpretations.
+• Critiques the effectiveness of an artist’s choice of tools, materials, processes, or 
+ techniques during modelled or guided activities.
+• Uses respectful language when commenting on the creative works of others.
+Additional notes:
+Processes and techniques refer to the different ways creative works can be 
+expressed, made, or produced. 
+In Grade 5, processes and techniques may include:
+• Brainstorming and preparing
+• Experimenting
+• Implementing or executing
+• Problem-solving
+• Refining or clarifying
+Creative works refer to tangible products of creative activities or practises.
+A critique refers to a specific, constructive, and informed judgment that focuses on 
+the creation, not the creator.
+GRADE 5: INTERPRETING AND RESPONDING
+Grade 5 ◊ Interpreting and Responding
+
+Arts Education Curriculum 4.39
+5.IR.2
+Investigate the impact of Indigenous art and artists on 
+communities around the world.
+ 
+Notice if the student:
+• Uses prior knowledge of Indigenous artists and creative practises in Indigenous 
+ communities.
+• Describes how the role of art in Indigenous communities has or has not changed 
+ over time.
+• Considers the ways in which Indigenous art and artists have instigated or 
+ contributed to changes in Indigenous and non-Indigenous communities around 
+ the world.
+Additional notes:
+Creative practises refer to activities or pursuits that develop artistic skill through 
+curiosity, exploration, and imagination.
+
+4.40
+Arts Education Curriculum
+ᖁᑦᑎᖕᓂᓖᑦ 6
+QUTTINGNILIIT 6
+GRADE 6 
+
+Arts Education Curriculum 4.41
+GRADE 6: EXPERIMENTING AND CREATING
+Guiding Question: In what ways can art connect the past, the present, and the future?
+Learning 
+Concept
+Learning Outcome
+By the end of Grade 6, students will:
+Art in Action 6.EC.1 
+Generate creative works prompted by inquiry and analysis.
+ 
+Notice if the student:
+• Actively participates in modelled and independent creative activities.
+• Uses observations, questions, research, personal experiences, and the creative 
+ works of others as inspiration. 
+Additional notes:
+Creative works refer to tangible products of creative activities or practises.
+6.EC.2 
+Refine and enhance artistic processes and techniques for a 
+variety of contexts and purposes.
+ 
+Notice if the student:
+• Uses and modifies processes and techniques inspired by other artists.
+• Makes plans to use processes and techniques to develop ideas.
+• Continues to adjust and improve processes and techniques based on feedback.
+ from peers, teachers, Elders, or other knowledge holders.
+Additional notes:
+Processes and techniques refer to the different ways creative works can be 
+expressed, made, or produced. 
+In Grade 6, processes and techniques may include:
+• Brainstorming and preparing
+• Experimenting
+• Implementing or executing
+• Problem-solving
+• Refining or clarifying
+As students look to other artists and creators for inspiration, it is important to 
+refer to the Use of Information and Communication Technology and Fair Dealing 
+document to make sure students understand the appropriate ways to use or refer to 
+someone else’s work. 
+See the Arts Educator Handbook for more information.
+
+4.42 Grade 6 ◊ Connecting and Reflecting
+Guiding Question: In what ways can art connect the past, the present, and the future? 
+Learning 
+Concept
+Learning Outcome
+By the end of Grade 6, students will:
+Art in Action 6.CR.1 
+Develop thoughtful questions and responses that demonstrate 
+the ability to connect art with real-world issues and experiences.
+ 
+Notice if the student:
+• Uses creative practises to communicate, explain, or ask questions about what 
+ they see, watch, read, hear, or believe.
+• Expresses themselves using words, sounds, images, props, facial expressions, and 
+ body movements.
+Additional notes:
+Creative practises refer to activities or pursuits that develop artistic skill through 
+curiosity, exploration, and imagination.
+6.CR.2
+Cultivate creative practises in daily life that support personal 
+well-being.
+ 
+Notice if the student:
+• Explains how different creative practises affect their emotions, mood, energy 
+ levels, perspectives, and/or relationships.
+• Looks for ways to extend or deepen their creative practises.
+• Engages with creative practises independently and with others.
+• Makes plans to integrate creative practises into their daily routines.
+Additional notes:
+It is important for students to have opportunities to engage in creative practises 
+independently and with others. Sharing creative experiences with others is one way 
+the arts can support individual and collective health and well-being.
+To support students’ exploration of arts and well-being, consider inviting local 
+artists, musicians, filmmakers, or other community members to the class to talk 
+about their own processes and the role their creative practise play in their lives, 
+health, well-being, and so on. 
+GRADE 6: CONNECTING AND REFLECTING
+
+Arts Education Curriculum 4.43
+6.CR.3 
+Collaborate with peers or other community members to create 
+artwork promoting specific ideas or issues.
+ 
+Notice if the student:
+• Brainstorms ideas for a creative work with the intention of presenting or 
+ performing it for others.
+• Expresses a perspective or point of view through their work.
+• Refines or enhances work they plan to present or perform.
+• Considers the audience for their work.
+Additional notes:
+Creative works refer to tangible products of creative activities or practises.
+6.CR.4 
+Explore and identify how creative practises bring about changes 
+in themselves and the community.
+ 
+Notice if the student:
+• Reflects on their strengths and challenges within the creative process.
+• Investigates artists who use their creative practise to take action for causes or 
+ issues that are important to their community.
+• Connects with peers, mentors, Elders, or knowledge holders who inspire them.
+Additional notes:
+Creative practises refer to activities or pursuits that develop artistic skill through 
+curiosity, exploration, and imagination.
+
+4.44 Grade 6 ◊ Interpreting and Responding 
+Guiding Question: In what ways can art connect the past, the present, and the future? 
+Learning 
+Concept
+Learning Outcome
+By the end of Grade 6, students will:
+Art in Action 6.IR.1 
+Provide feedback and evaluation of creative works using specific 
+criteria.
+ 
+Notice if the student:
+• Uses prior knowledge to describe and analyze the creative works of others.
+• Establishes criteria during modelled or guided activities.
+• Explains, writes, or communicates in other ways about their interpretations 
+ of creative works.
+• Uses respectful language when commenting on the creative works of others.
+Additional notes:
+Creative works refer to tangible products of creative activities or practises.
+6.IR.2
+Examine the relationships between art, language, culture, and 
+history.
+ 
+Notice if the student:
+• Considers how art influences or shapes the world around them (their style, the 
+ way they communicate, what they consume, etc.) 
+• Explores how art has been documented, shared, and used by specific communities 
+ throughout history.
+• Investigates how art has instigated or contributed to changes in different 
+ communities or regions over time.
+Additional notes:
+This is a good opportunity to encourage students to make connections with what 
+they have learned or are learning in Language Arts and Social Studies.
+GRADE 6: INTERPRETING AND RESPONDING
+
+Arts Education Curriculum 4.45
+
+
+
+ᐅᖃᐅᓰᑦ ᑐᑭᖏᑦ
+UQAUSIIT TUKINGIT
+GLOSSARY
+
+
+
+Arts Education Curriculum 5.1
+ᐅᖃᐅᓰᑦ ᑐᑭᖏᑦ 
+UQAUSIIT TUKINGIT
+GLOSSARY 
+The following definitions and examples are intended to help teachers use 
+this document. The examples provided are suggestions and are not meant to 
+be exhaustive.
+creative practises
+Activities or pursuits that develop artistic skill through curiosity, 
+exploration, and imagination.
+creative works
+Tangible products of creative activities or practises.
+critique
+A specific, constructive, and informed judgment that focuses on the 
+creation, not the creator.
+elements
+The definable components of a creative work.
+personal criteria
+The individual standards students use to determine which creative works 
+they will share or not share with others.
+processes and techniques
+The different ways creative works can be expressed, made, or produced.
+tools and materials
+The various instruments, supplies, and resources used by individuals to 
+create, express, and explore artistic concepts and ideas.
+
+
+
+ᐊᒥᓱᕈᖅᑎᒐᒃᓴᑦ
+AMISURUQTIGAKSAT 
+REPRODUCIBLES
+
+Learning Strand: Experimenting and Creating
+Kindergarten Grade 1 Grade 2
+Learning Concepts Art and Play Art and My Community Art and the Land
+Learning Outcomes
+By the end of Kindergarten, 
+students will:
+By the end of Grade 1, 
+students will:
+By the end of Grade 2, 
+students will:
+K.EC.1 
+Explore elements of 
+design (line, shape, form, 
+space, colour, texture, 
+and value) through 
+brainstorming, role play, 
+and experimentation.
+K.EC.2
+Begin to use a variety of 
+artistic tools and materials 
+for different purposes.
+1.EC.1
+Actively engage with 
+a variety of elements, 
+processes, and techniques 
+through play.
+1.EC.2
+Actively engage in using 
+artistic tools and materials 
+efficiently and safely for 
+different purposes.
+2.EC.1
+Produce simple art/creative 
+works using a variety of 
+artistic elements, processes, 
+and techniques. 
+2.EC.2
+Understand the use and 
+function of different tools 
+and materials for creating 
+specific art forms. 
+Overview of Experimenting and Creating Learning Outcomes, 
+Kindergarten to Grade 6
+Overview of Experimenting and Creating Learning Outcomes, 
+6.2 Kindergarten to Grade 6
+
+Major Understandings:
+1. Creating and responding to art allows us to build a deeper understanding and empathy for ourselves and others 
+in our community.
+2. Engaging with art allows us to connect to places, histories, cultures, and ideas across time.
+3. Playful and holistic exploration of artistic practises allows us to nurture meaningful creative expression.
+4. Reflecting on creative works, both our own and others’, fosters creative thinking, problem-solving, and knowledge 
+for the future.
+Learning Strand: Experimenting and Creating
+Grade 3 Grade 4 Grade 5 Grade 6
+Indigenous Art Art and Media Art and Identity Art in Action
+Learning Outcomes
+By the end of Grade 3, 
+students will:
+By the end of Grade 4, 
+students will:
+By the end of Grade 5, 
+students will:
+By the end of Grade 6, 
+students will:
+3.EC.1
+Generate creative works 
+inspired by curiosity and 
+interest.
+3.EC.2
+Explore a variety of artistic 
+elements and techniques 
+through intentional 
+choices of tools, materials, 
+processes, forms, and 
+techniques.
+4.EC.1
+Generate creative works 
+and art in different 
+contexts and for different 
+purposes. 
+4.EC.2
+Practise artistic processes 
+and techniques to improve 
+creative works.
+5.EC.1
+Employ diverse artistic 
+techniques and mediums 
+to express their cultural 
+identity and personal 
+experiences.
+5.EC.2
+Adapt and enhance artistic 
+processes and techniques 
+for a variety of contexts 
+and purposes.
+6.EC.1
+Generate creative works 
+prompted by inquiry and 
+analysis.
+6.EC.2
+Refine and enhance artistic 
+processes and techniques 
+for a variety of contexts 
+and purposes.
+6.3
+Overview of Experimenting and Creating Learning Outcomes, 
+Kindergarten to Grade 6
+
+Learning Strand: Connecting and Reflecting
+Kindergarten Grade 1 Grade 2
+Learning Concepts Art and Play Art and My Community Art and the Land
+Learning Outcomes
+By the end of Kindergarten, 
+students will:
+By the end of Grade 1, 
+students will:
+By the end of Grade 2, 
+students will:
+K.CR.1 
+Engage in activities 
+that develop artistic 
+skill through curiosity, 
+exploration, and 
+imagination and begin 
+to express thoughts and 
+feelings about them.
+K.CR.2
+Begin to develop an 
+awareness of artistic skills/
+activities they enjoy.
+K.CR.3
+Begin to develop artistic 
+skills by engaging in 
+activities with others 
+that promote curiosity, 
+exploration, and 
+imagination. 
+1.CR.1
+Express thoughts, feelings, 
+and interests by engaging 
+in activities that promote 
+artistic skill development 
+through exploration, 
+imagination, and play.
+1.CR.2
+Identify artistic activities 
+that they enjoy.
+1.CR.3
+Share art and creative 
+works (visual art, music, 
+dance, or dramatic play) 
+with others.
+1.CR.4
+Begin to reflect on their 
+own art processes.
+2.CR.1
+Express thoughts, feelings, 
+and interests by engaging 
+in activities that promote 
+artistic skill development 
+through exploration, 
+imagination, and play. 
+2.CR.2
+Select and engage in art 
+activities (visual art, dance, 
+drama, music) that they 
+enjoy on their own or with 
+others.
+2.CR.3
+Share, present, or perform 
+creative works for others.
+2.CR.4
+Reflect on their own art 
+processes for growth and 
+improvement.
+Overview of Connecting and Reflecting Learning Outcomes, 
+Kindergarten to Grade 6
+6.4
+Overview of Connecting and Reflecting Learning Outcomes, 
+Kindergarten to Grade 6
+
+Major Understandings:
+1. Creating and responding to art allows us to build a deeper understanding and empathy for ourselves and others 
+in our community.
+2. Engaging with art allows us to connect to places, histories, cultures, and ideas across time.
+3. Playful and holistic exploration of artistic practises allows us to nurture meaningful creative expression.
+4. Reflecting on creative works, both our own and others’, fosters creative thinking, problem-solving, and knowledge 
+for the future.
+Learning Strand: Connecting and Reflecting
+Grade 3 Grade 4 Grade 5 Grade 6
+Indigenous Art Art and Media Art and Identity Art in Action
+Learning Outcomes
+By the end of Grade 3, 
+students will:
+By the end of Grade 4, 
+students will:
+By the end of Grade 5, 
+students will:
+By the end of Grade 6, 
+students will:
+3.CR.1
+Use art (visual art, dance, 
+music, drama) to express 
+emotions, ideas, and 
+experiences for a specific 
+purpose.
+3.CR.2
+Express how art activities 
+and experiences can 
+contribute to personal 
+well-being.
+3.CR.3
+Select and prepare specific 
+art and creative works to 
+present or perform for 
+others.
+3.CR.4
+Reflect on the creative 
+process to identify 
+challenges and resolutions 
+that arise when creating 
+art (visual art, dance, 
+music, drama).
+4.CR.1
+Employ creative practises 
+using various media 
+and technology to 
+communicate emotions, 
+ideas, experiences, and 
+perspectives effectively. 
+4.CR.2
+Experiment with diverse 
+creative practises to 
+support personal wellbeing. 
+4.CR.3
+Plan, develop, and share 
+creative works that reflect 
+the intersection of art, 
+media, and technology. 
+4.CR.4
+Set goals and work through 
+challenges within their 
+creative process.
+5.CR.1
+Use art activities and/
+or performances to 
+explore identity and selfconcept, and demonstrate 
+how these activities/
+performances promote 
+personal well-being.
+5.CR.2
+Plan, develop, and refine 
+creative works to present or 
+perform for others.
+5.CR.3
+Ask questions of themselves 
+and others about their 
+creative process.
+6.CR.1
+Develop thoughtful 
+questions and responses 
+that demonstrate the 
+ability to connect art 
+with real-world issues and 
+experiences.
+6.CR.2
+Cultivate creative practises 
+in daily life that support 
+personal well-being.
+6.CR.3
+Collaborate with peers 
+or other community 
+members to create artwork 
+promoting specific ideas or 
+issues.
+6.CR.4
+Explore and identify 
+how creative practises 
+bring about changes 
+in themselves and the 
+community.
+6.5
+Overview of Connecting and Reflecting Learning Outcomes, 
+Kindergarten to Grade 6
+
+Learning Strand: Interpreting and Responding
+Kindergarten Grade 1 Grade 2
+Learning Concepts Art and Play Art and My Community Art and the Land
+Learning Outcomes
+By the end of Kindergarten, 
+students will:
+By the end of Grade 1, 
+students will:
+By the end of Grade 2, 
+students will:
+K.IR.1 
+Observe and discuss art 
+forms they see in daily life 
+and how they may relate 
+to community and culture.
+K.IR.2
+Make personal connections 
+to the creative works of 
+others. 
+1.IR.1
+Recognize the thoughts, 
+feelings, and actions of 
+others through art.
+1.IR.2
+Observe and respond to 
+creative works of local 
+or regional creative 
+communities.
+2.IR.1
+Identify and describe 
+different purposes and 
+motivations for creating 
+art.
+2.IR.2
+Describe the ways artists 
+use tools, processes, 
+and techniques to 
+communicate meaning 
+through art.
+2.IR.3
+Ask questions about the 
+creative works of local 
+and regional artists and 
+communities.
+Overview of Interpreting and Responding Learning Outcomes, 
+Kindergarten to Grade 6
+6.6
+Overview of Interpreting and Responding Learning Outcomes, 
+Kindergarten to Grade 6
+
+Major Understandings:
+1. Creating and responding to art allows us to build a deeper understanding and empathy for ourselves and others 
+in our community.
+2. Engaging with art allows us to connect to places, histories, cultures, and ideas across time.
+3. Playful and holistic exploration of artistic practises allows us to nurture meaningful creative expression.
+4. Reflecting on creative works, both our own and others’, fosters creative thinking, problem-solving, and knowledge 
+for the future.
+Learning Strand: Interpreting and Responding
+Grade 3 Grade 4 Grade 5 Grade 6
+Indigenous Art Art and Media Art and Identity Art in Action
+Learning Outcomes
+By the end of Grade 3, 
+students will:
+By the end of Grade 4, 
+students will:
+By the end of Grade 5, 
+students will:
+By the end of Grade 6, 
+students will:
+3.IR.1
+Acknowledge and 
+appreciate ideas and 
+perspectives in the creative 
+works of others.
+3.IR.2
+Explain how artists make 
+decisions about the tools, 
+processes, and techniques 
+they use to communicate 
+meaning through art.
+3.IR.3
+Examine and ask questions 
+about the influence of art 
+in their local community 
+or region across time.
+4.IR.1
+Examine and discuss 
+various perspectives and 
+messages in arts and 
+creative works of others.
+4.IR.2
+Analyze the tools, processes, 
+and techniques an artist 
+uses to communicate 
+meaning through art.
+4.IR.3
+Compare creative works 
+that represent the 
+circumpolar regions across 
+time.
+5.IR.1
+Describe, explain, or 
+analyze creative works 
+and art using knowledge 
+of artistic processes and 
+techniques. 
+5.IR.2
+Investigate the impact of 
+Indigenous art and artists 
+on communities around 
+the world.
+6.IR.1
+Provide feedback and 
+evaluation of creative 
+works using specific 
+criteria.
+6.IR.2
+Examine the relationships 
+between art, language, 
+culture, and history.
+6.7
+Overview of Interpreting and Responding Learning Outcomes, 
+Kindergarten to Grade 6
+
+Experimenting and Creating Revised Learner Progressions, 
+Kindergarten to Grade 6
+6.8
+Experimenting and Creating Learner Progressions, 
+Kindergarten to Grade 6
+KINDERGARTEN
+Learning Concepts ART AND PLAY
+Experimenting 
+and Creating
+Overarching Learning Progression:
+• Explore various forms of artistic expression through play, including 
+visual arts, textile making, dance, music, and dramatic play.
+• Incorporate traditional Inuit games (such as “the bone game” and, 
+“Qilalugaq, Tulugak, Okalik”), traditional art, and storytelling into playbased art activities to explore feelings and ideas with art.
+• Introduce basic concepts of shape, line, space, value, form, 
+and texture through sensory exploration.
+Skills and 
+Competencies
+Artistic Elements: 
+• Visual art: line, shape, colour
+• Music: beat, rhythm, tempo
+• Dance: body, action
+• Dramatic play: character, 
+setting, plot 
+Processes and Techniques: 
+• Brainstorming, improvisation or 
+role play, experimentation 
+• Creative work in producing tangible products 
+highlighting creative practises and activities
+• Application of knowledge of various elements, processes, 
+techniques, tools, materials through experimentation
+
+6.9
+Experimenting and Creating Learner Progressions, 
+Kindergarten to Grade 6
+GRADE 1
+Learning Concepts ART AND MY COMMUNITY
+Experimenting 
+and Creating
+Overarching Learning Progression:
+• Engage with local art forms and traditions, such as Inuit carving, drum dancing, 
+printmaking or throat singing, and create art pieces inspired by these practises.
+• Identify the various forms of art - dance, music, drama, media arts, visual arts.
+• Use art to express personal connections to community and family traditions.
+Skills and 
+Competencies
+Artistic Elements: 
+• Visual art: pattern
+• Music: pitch
+• Dance: space
+Tools and Materials: 
+• Paintbrushes, markers, pencils, 
+crayons, chalk, scissors, rulers, 
+stencils, stamps, needles, 
+and thread or string
+• Natural materials such 
+as rocks, sticks, snow
+• Technology such as cameras, 
+audio recorders
+• Puppets, dramatic props
+• Musical instruments
+• Consumables such as paper, 
+fabric, clay beads, paint, glue
+• Recycled materials
+Applications and Purposes:
+• Independently 
+experiments with 
+the varied tools, 
+materials, elements, 
+processes, techniques
+• Adjusts to use tools 
+more effectively e.g., 
+grip on pencil
+
+GRADE 2
+Learning Concepts ART AND THE LAND
+Experimenting 
+and Creating
+Overarching Learning Progression:
+• Study the unique geography, wildlife, and landscapes of Nunavut, resulting in artistic 
+exploration of the varied aspects that Nunavut presents through artistic exploration.
+• Create artworks in a variety of media inspired by the landscapes of Inuit Nunangat.
+• Explore colours and materials inspired by the natural landscapes of Nunavut.
+Skills and 
+Competencies
+Artistic Elements: 
+• Visual art: texture
+• Music: timbre, texture
+• Dance: timing and 
+creative expression
+• Drama: timing and 
+creative expression
+Processes and Techniques: 
+• Preparing, experimenting, 
+implementing 
+or executing, 
+problem-solving
+Tools and Materials:
+• Small tools, tangibles, 
+and manipulatives
+• Understand the function and 
+purpose of varied elements, 
+processes, techniques, 
+tools, and materials
+• Independently brainstorms 
+and produces creative works 
+utilizing new processes and 
+techniques that reflect elements 
+borrowed from the land
+GRADE 3
+Learning Concepts INDIGENOUS ART
+Experimenting 
+and Creating
+Overarching Learning Progression:
+• Explore the rich heritage and history of Inuit and other Indigenous art forms, 
+including sculpture, dance, music, printmaking,, textile arts, traditional 
+clothing, traditional shelters, and traditional modes of transportation.
+• Study the cultural significance of art in storytelling, ceremony, and everyday 
+life for various Indigenous Peoples across the circumpolar regions.
+• Create original artworks inspired by traditional Indigenous motifs and techniques.
+Skills and 
+Competencies
+Artistic Elements: 
+• Visual art: pattern, 
+form, repetition
+• Music: form, dynamics, 
+texture/harmony
+• Dance: energy and rhythm
+• Drama: tension and delivery
+Processes and Techniques:
+• Inspiration is achieved through observations, 
+questions, personal experiences
+• Consideration of the varied uses of tools, 
+materials, elements, processes, techniques
+• Continued independent experimentation 
+with various art mediums and forms 
+• Break down the process of storytelling 
+and identify its various elements
+6.10
+Experimenting and Creating Learner Progressions, 
+Kindergarten to Grade 6
+
+GRADE 4
+Learning Concepts ART AND MEDIA
+Experimenting 
+and Creating
+Overarching Learning Progression:
+• Investigate how modern media and technology can be used 
+to share stories and preserve cultural heritage.
+• Experiment with digital art tools (online and offline) and multimedia storytelling techniques.
+• Explore the representation of Nunavut/Inuit culture in 
+contemporary media and popular culture.
+Skills and 
+Competencies
+Artistic Elements (refined): 
+• Visual art: pattern, 
+form, repetition
+• Music: form, dynamics, 
+texture/harmony
+• Dance: energy, 
+rhythm, and flow
+• Drama: tension, 
+expressions, and delivery
+Processes and Techniques:
+• Refining processes and 
+techniques based on feedback 
+from knowledge holders:
+• Peer
+• Teacher
+• Elders
+Tools and Materials:
+• Media art forms 
+• Indigenous artists and 
+their use of media forms
+• Technology integration 
+and art forms
+GRADE 5
+Learning Concepts ART AND IDENTITY
+Experimenting 
+and Creating
+Overarching Learning Progression:
+• Reflect on personal and cultural identities within the context of Nunavut's diverse communities
+• Create artworks that explore themes of identity, belonging, and cultural pride.
+• Study the work of contemporary Indigenous artists and their 
+contributions to art and cultural expression.
+Skills and 
+Competencies
+Artistic Elements (refined): 
+• Visual art: pattern, 
+form, repetition
+• Music: form, dynamics, 
+texture/harmony
+• Dance: energy, rhythm, 
+tempo, and flow
+• Drama: tension, expressions, 
+language, and delivery
+Processes and Techniques:
+• Clarifying and applying 
+design elements 
+• Inspiration: research, 
+creative work of others
+• Independent creation 
+of product inspired 
+by other artists
+Tools and Materials:
+• Art as a tool of selfexpression
+• Indigenous artists and 
+their interpretation 
+of self-expression
+• Indigenous artists and 
+their choice of medium 
+for self expressions 
+and interpretations
+6.11
+Experimenting and Creating Learner Progressions, 
+Kindergarten to Grade 6
+
+GRADE 6
+Learning Concepts ART IN ACTION
+Experimenting 
+and Creating
+Overarching Learning Progression:
+• Use art, in its various forms, as a tool for advocacy and social change within Nunavut 
+communities.
+• Explore issues such as environmental conservation, social justice, and cultural revitalization 
+through art projects.
+• Collaborate on community art initiatives that address local challenges and celebrate cultural 
+resilience.
+• Explore how advocacy through art connects to other subjects such as history, social studies, 
+science, etc.
+Skills and 
+Competencies
+Artistic Elements 
+(refined): 
+• Visual art: pattern, 
+form, repetition
+• Music: form, 
+dynamics, texture/
+harmony
+• Dance: energy, 
+rhythm, tempo, 
+and flow
+• Drama: tension, 
+expressions, language, 
+and delivery
+Processes and 
+Techniques:
+• Identify modification 
+of processes and 
+techniques as inspired 
+by other artists
+• Understands there 
+are appropriate ways 
+to use or refer to 
+someone else’s work
+Tools and Materials:
+• Historical and geographical context 
+of art and its connection to life 
+• Historical and geographical context 
+of the arts and their impact on 
+communities across the North
+• Exploring the impact as a tool to 
+drive social and societal change 
+• Exploring the impact of art as a 
+tool for activism and social justice
+• Exploring the impact of 
+arts and artists as a driving 
+force to foster advocacy
+6.12
+Experimenting and Creating Learner Progressions, 
+Kindergarten to Grade 6
+
+6.13
+Experimenting and Creating Learner Progressions, 
+Kindergarten to Grade 6
+
+Connecting and Reflecting Revised Learner Progressions, 
+Kindergarten to Grade 6
+6.14
+Connecting and Reflecting Learner Progressions, 
+Kindergarten to Grade 6
+KINDERGARTEN
+Learning Concepts ART AND PLAY
+Connecting and 
+Reflecting
+Overarching Learning Progression:
+• Engage in exploratory play with colours, shapes, and textures, 
+fostering creativity and sensory development.
+• Integrate elements from other learning (e.g., integration of basic math 
+concepts such as counting and sorting through art activities).
+• Introduction to traditional Inuit games and storytelling as forms of 
+artistic expression, connecting art with cultural heritage.
+Skills and 
+Competencies
+Communicating 
+through Various 
+Art Forms:
+• Words
+• Sounds
+• Images
+• Facial expressions
+• Body movements
+• Colours 
+• Textures
+• Sensory elements
+Creative Expressions: 
+• Representation of people, events, and 
+other important information can 
+be represented in different ways:
+• Singing
+• Dancing
+• Making
+• Constructing
+• Dramatic play 
+• Exploration of self-chosen activities
+• Personal choices about creative 
+practises and stays engaged
+Tools and Materials:
+• Traditional games
+• Oral history and 
+storytelling
+• Arts and culture 
+
+6.15
+Connecting and Reflecting Learner Progressions, 
+Kindergarten to Grade 6
+GRADE 1
+Learning Concepts ART AND MY COMMUNITY
+Connecting and 
+Reflecting
+Overarching Learning Progression:
+• Connect with their local community through art, creating artworks that 
+reflect their environment, landmarks, and cultural traditions.
+• Integration of social studies concepts such as community roles and 
+responsibilities into community-themed art projects.
+• Introduction to basic principles of colour theory and concepts of “space” 
+and “value” through community-inspired art activities.
+Skills and 
+Competencies
+Communicating 
+through Various 
+Art Forms:
+• Words
+• Sounds
+• Images
+• Facial 
+expressions
+• Body 
+movements
+Creative Expressions: 
+• Chooses creative 
+practises independently 
+and stays engaged
+• Creative work can be 
+documented and shared 
+through different tools 
+and mediums
+• Using a camera to take 
+picture or video
+• Creative work can be 
+improved through practise
+Tools and Materials:
+• Land-based art projects
+• Traditional art mediums 
+and art practises 
+• Authentic cultural art exploration
+• Cross-curricular connections 
+between exploring the land 
+from a social and communal 
+lens and an artistic lens
+• Spatial awareness in arts
+
+GRADE 2
+Learning Concepts ART AND THE LAND
+Connecting and 
+Reflecting
+Overarching Learning Progression:
+• Explore and engage with the natural landscapes of Nunavut and 
+their cultural significance through artistic exploration.
+• Integration of science concepts such as Earth, space, climate, 
+and ecology into land-based art projects.
+• Introduction to traditional Inuit art forms inspired by the land, 
+such as landscape painting, sculptures/carvings, traditional tattoos, 
+igloos, caribou skin tents, traditional qamutiq runners etc.
+Skills and 
+Competencies
+Communicating 
+through Various 
+Art Forms (refined 
+techniques):
+• Words
+• Sounds
+• Images
+• Facial expressions
+• Body movements
+Creative Expressions and Process:
+• Creation of creative works for 
+specific purposes can be made 
+by personal, independent choice
+• Creative work can be:
+• Shared
+• Presented
+• Performed
+• Goals can be set and plans 
+made for creative work
+Tools and materials:
+• Land-based art projects
+• Traditional art mediums 
+and art practises 
+• Authentic cultural 
+art exploration
+• Cross-curricular connections 
+between exploring the 
+land from a scientific lens 
+and an artistic lens
+GRADE 3
+Learning Concepts INDIGENOUS ART
+Connecting and 
+Reflecting
+Overarching Learning Progression:
+• Engage with the rich heritage of Indigenous art forms, including 
+Inuit carving, printmaking, and textile arts.
+• Integration of IQ, “being a good citizen”, and social studies concepts such as 
+cultural identity and heritage preservation into Indigenous art activities.
+• Introduction to storytelling and symbolism in Indigenous art, exploring 
+themes of tradition, spirituality, and connection to the land.
+Skills and 
+Competencies
+Creative Expressions and Process: 
+• Creative practises can be engaged in for:
+• Pleasure
+• Enjoyment
+• Personal interest
+• Personal criteria can be used to 
+choose work to present and perform
+• Stamina and perseverance are 
+needed to tackle creative challenges
+Local representation 
+of creators of creative 
+practise include:
+• Local artists
+• Musicians
+• Filmmakers
+• Other community 
+members
+Creative works 
+can be improved 
+through:
+• Practise
+• Adjustments
+• Teacher and 
+Peer feedback 
+• Self assessment
+6.16
+Connecting and Reflecting Learner Progressions, 
+Kindergarten to Grade 6
+
+GRADE 4
+Learning Concepts ART AND MEDIA
+Connecting and 
+Reflecting
+Overarching Learning Progression:
+• Explore the intersection of art and media, learning about digital 
+art tools and techniques for creative expression.
+• Integration of technology concepts such as digital imaging, graphic design, and 
+multimedia storytelling into art projects through online and offline examples.
+• Introduction to media literacy and critical thinking skills through the analysis 
+of representations of Nunavut/Inuit culture in contemporary media.
+Skills and 
+Competencies
+Communicating 
+through Various 
+Art Forms:
+• Images
+• Props
+• Facial 
+expressions
+• Media art forms
+Creative Expressions 
+and Process: 
+• Creative practises 
+can be used to:
+• Communicate 
+messages
+• Communicate 
+ideas
+• Tell stories
+• Share things of 
+importance
+• Creative risk 
+taking with new 
+creative activities
+Local 
+representation 
+of creators of 
+creative practise 
+include:
+• Local artists
+• Musicians
+• Filmmakers
+• Other 
+community 
+members
+Improving Creative 
+Practises:
+• Be refined, enhanced 
+prior to presentation
+• Require consideration 
+of the audience 
+and correlating 
+requirements (usage 
+of the microphone, 
+painting display stand
+• Progress toward goals 
+can be personally 
+acknowledged 
+and celebrated
+6.17
+Connecting and Reflecting Learner Progressions, 
+Kindergarten to Grade 6
+
+GRADE 5
+Learning Concepts ART AND IDENTITY
+Connecting and 
+Reflecting
+Overarching Learning Progression:
+• Reflect on personal and cultural identities through art, exploring 
+themes of belonging, diversity, and self-expression.
+• Integration of language arts concepts such as introduction to portraiture and self-portraiture 
+as forms of artistic expression, exploring the concept of identity through visual representation.
+Skills and 
+Competencies
+Communicating 
+through Various 
+Art Forms:
+• Creative works 
+can lead to 
+personal 
+questions:
+• Who they are
+• Where do 
+they come 
+from
+• What do 
+they believe 
+• What is 
+important 
+to them
+Creative Expressions 
+and Process: 
+• Identity is 
+characteristics 
+or qualities that 
+distinguish a person 
+or group and can be 
+shaped by factors like:
+• Race or ethnicity
+• Culture
+• Genre
+• Gender expression
+• Sexuality
+• Religion
+• Social roles
+• Self-concept
+• Creative practises 
+can be integrated 
+into daily routines
+Expanded 
+knowledge 
+of creative 
+work planning 
+considering: 
+• Most effective 
+ways to present 
+or perform 
+their work
+• Self-identify 
+strengths and 
+challenges related 
+to different 
+creative processes 
+and techniques
+Learn about 
+authentic creative 
+processes: 
+• Connect with:
+• Peers
+• Mentors
+• Elders
+• Knowledge 
+holders
+• Other resources
+6.18
+Connecting and Reflecting Learner Progressions, 
+Kindergarten to Grade 6
+
+GRADE 6
+Learning Concepts ART IN ACTION
+Connecting and 
+Reflecting
+Overarching Learning Progression:
+• Use art as a tool for advocacy and social change within their communities, addressing local 
+issues and promoting cultural awareness.
+• Integration of civics and citizenship concepts such as social justice, activism, and community 
+engagement into art activism projects such as projects that use art to inspire positive changes 
+in the world.
+• Introduction to public art and community-based art initiatives, culminating in students to 
+collaborating on projects that make a positive impact in their communities.
+Skills and 
+Competencies
+Communicating through 
+Various Art Forms: 
+• Expanded knowledge of the 
+use of creative practises to:
+• Communicate
+• Explain
+• Ask questions about 
+what they:
+• See
+• Watch
+• Read
+• Hear
+• Believe
+Creative Practises 
+and Applications: 
+• Energy levels
+• Mood
+• Emotions
+• Perspectives
+• Explore ways to deepen or 
+extend creative practises
+• Integrating arts into 
+daily routines
+Creative practises can 
+express:
+• Perspective
+• Point of view
+• Take action for causes 
+or issues that are 
+important to them and 
+can be investigated
+6.19
+Connecting and Reflecting Learner Progressions, 
+Kindergarten to Grade 6
+
+Interpreting and Responding Revised Learner Progressions, 
+Kindergarten to Grade 6
+6.20
+Interpreting and Responding Learner Progressions, 
+Kindergarten to Grade 6
+KINDERGARTEN
+Learning Concepts ART AND PLAY
+Interpreting and 
+Responding
+Overarching Learning Progression:
+• Explore various art materials and techniques through playful 
+experimentation, fostering curiosity and self-expression.
+• Integration of language arts concepts such as storytelling 
+and oral tradition into dramatic play activities.
+• Introduction to basic math concepts such as patterns and 
+shapes through playful art exploration.
+Skills and 
+Competencies
+Personal Communication 
+and Art Forms: 
+• Expression of things they like:
+• That are familiar to them
+• That remind them of 
+something in their own life
+• Comment on or point 
+out if art forms are:
+• Beautiful 
+• Pleasurable
+• Inspiring
+• Interesting
+Personal Expressions 
+and Art Forms: 
+• Words
+• Pictures
+• Gestures
+• Other forms of 
+communication
+Creative works 
+can include:
+• Skits
+• Plays
+• Drawings
+• Paintings
+• Vocal music
+• Instrumental music
+• Dance
+• Craftwork
+• Puppets and 
+puppet shows
+
+6.21
+Interpreting and Responding Learner Progressions, 
+Kindergarten to Grade 6
+GRADE 1
+Learning Concepts ART AND MY COMMUNITY
+Interpreting and 
+Responding
+Overarching Learning Progression:
+• Represent the local community through art, creating artworks that 
+reflect their environment, landmarks, and cultural traditions.
+• Integration of social studies concepts such as community roles and 
+responsibilities into community-themed art projects.
+• Introduction to basic principles of colour theory and spatial 
+reasoning through community-inspired art activities.
+Skills and 
+Competencies
+Communities and regions have different creative works. Grade 1 students refine the their 
+skills in regards to the community they explore through the following:
+Personal Communication and 
+Art Forms: 
+• Expression of things 
+they like:
+• That are familiar to them
+• That remind them 
+of something in 
+their own life
+• Comment on or point 
+out if art forms are:
+• Beautiful 
+• Pleasurable
+• Inspiring
+• Interesting
+Personal Expressions 
+and Art Forms: 
+• Words
+• Pictures
+• Gestures
+• Other forms of 
+communication
+Creative works can include:
+• Skits
+• Plays
+• Drawings
+• Paintings
+• Vocal music
+• Instrumental music
+• Dance
+• Craftwork
+• Puppets and puppet shows
+
+GRADE 2
+Learning Concepts ART AND THE LAND
+Interpreting and 
+Responding
+Overarching Learning Progression:
+• Interpret the natural landscapes of Nunavut through artistic 
+expression, exploring the beauty and significance of the land.
+• Integration of science concepts such as geology, climate, and 
+ecology into landscape-themed art projects.
+• Introduction to traditional Inuit art forms inspired by the land, such as landscape 
+painting, traditional structures/transportation, printmaking and sculpture.
+Skills and 
+Competencies
+Art can be created for 
+different reasons including:
+• Pleasure or enjoyment
+• To build relationships with 
+family, friends, community
+• Share messages or tell stories
+• Express feelings or ideas
+• Document or record a place, time, event
+Connections can be made to 
+creative work and the use of:
+• Tools
+• Processes
+• Techniques 
+that were used to create them
+GRADE 3
+Learning Concepts INDIGENOUS ART
+Interpreting and 
+Responding
+Overarching Learning Progression:
+• Interpret Indigenous art forms, learning about their cultural significance and symbolism.
+• Integration of history and social studies concepts, such as cultural 
+identity and heritage preservation, into Indigenous art activities.
+• Introduction to storytelling and symbolism in Indigenous art, exploring 
+themes of tradition, spirituality, and connection to the land.
+Skills and 
+Competencies
+Creative works 
+of others can 
+be:
+• Observed
+• Interacted 
+with
+Resulting in 
+connections to 
+the: 
+• Ideas
+• Perspectives
+• Experiences
+• Representations 
+in others’ work
+Extended knowledge of why 
+an artist used a specific:
+• Specific tool
+• Process
+• Technique 
+were used
+• Drum dancing can be 
+used to teach and share 
+traditional practises
+• Sculptures can use found 
+or recycled materials in 
+work to raise awareness of 
+environmental stewardship
+Prior knowledge 
+can be used to 
+identify:
+• Creative works
+• Artistic 
+traditions 
+from their 
+community or 
+region including 
+work from 
+the past and 
+the inherent 
+changes (if any) 
+over time
+6.22
+Interpreting and Responding Learner Progressions, 
+Kindergarten to Grade 6
+
+GRADE 4
+Learning Concepts ART AND MEDIA
+Interpreting and 
+Responding
+Overarching Learning Progression:
+• Interpret and respond to contemporary media representations of Nunavut/
+Inuit culture, analyzing and critiquing their portrayal.
+• Integration of technology concepts such as digital imaging, graphic 
+design, and multimedia storytelling into art projects.
+• Introduction to media literacy and critical thinking skills through the analysis 
+of representations of Nunavut/Inuit culture in contemporary media.
+Skills and 
+Competencies
+Interpreting and 
+responding to various arts 
+forms: 
+• Extended knowledge 
+of interacting with 
+the creative works 
+of others with:
+• Description
+• Analysis
+• Explaining
+• Writing
+Art Forms and Media Arts:
+• Produced
+• Presented 
+• Performed using a variety 
+of media including:
+• Film 
+• Television
+• Photography
+• Radio
+• Other audio formats 
+(podcasts, etc.)
+• Print advertising
+• Digital advertising
+• Social media 
+Interpreting and critiquing 
+various art forms: 
+• The effectiveness of 
+an artist’s choice of:
+• Tools
+• Processes or techniques 
+• Critique based on informed 
+judgement that focuses on 
+the creation not the creator
+• Extended knowledge of 
+exploring contemporary 
+and traditional creative 
+words and artistic practises 
+from other communities 
+in the circumpolar region
+6.23
+Interpreting and Responding Learner Progressions, 
+Kindergarten to Grade 6
+
+GRADE 5
+Learning Concepts ART AND IDENTITY
+Interpreting and 
+Responding
+Overarching Learning Progression:
+• Interpret and reflect on personal and cultural identities through art, 
+exploring themes of belonging, diversity, and self-expression.
+• Integration of language arts concepts such as narrative writing 
+and poetry into identity-themed art projects.
+• Introduction to portraiture and self-portraiture as forms of artistic expression, 
+exploring the concept of identity through visual representation.
+Skills and 
+Competencies
+In Grade 5, students explore self identity and self expression through art. The 
+following elements of self expression are explored throughout Grade 5:
+• The role of art has changed in some places and not 
+changed in other Indigenous communities.
+• Indigenous art and artists have instigated or contributed to changes in Indigenous 
+and non-Indigenous communities around the world and needs to be considered.
+6.24
+Interpreting and Responding Learner Progressions, 
+Kindergarten to Grade 6
+
+GRADE 6
+Learning Concepts ART IN ACTION
+Interpreting and 
+Responding
+Overarching Learning Progression:
+• Interpret social issues and take action through art, using creative expression as a means of 
+advocacy and activism.
+• Integration of civics and citizenship concepts such as social justice, activism, and community 
+engagement into art activism projects.
+• Introduction to public art and community-based art initiatives, culminating in students 
+collaborating on projects that raise awareness and promote positive change in their 
+communities.
+Skills and 
+Competencies
+• Specific criteria can be used to evaluate creative works.
+• The world that surrounds us as individuals has been 
+influenced and shaped by art, which affects:
+• Personal style
+• Way communication occurs
+• What they personally consume
+• Specific communities differ in the way they:
+• Document
+• Share
+• Use art
+• Specific communities and regions have had art instigate and contribute to change.
+• Creative practises refer to activities or pursuits that develop artistic 
+skills through curiosity, exploration, and imagination.
+6.25
+Interpreting and Responding Learner Progressions, 
+Kindergarten to Grade 6
+
+Experimenting and Creating
+ NOTES
+K.EC.1 Explore elements of design (line, shape, 
+form, space, colour, texture, and value) 
+through brainstorming, role play, and 
+experimentation.
+K.EC.2 Begin to use a variety of artistic tools and 
+materials for different purposes.
+Connecting and Reflecting
+ NOTES
+K.CR.1 Engage in activities that develop artistic 
+skill through curiosity, exploration, and 
+imagination and begin to express thoughts 
+and feelings about them.
+K.CR.2 Begin to develop an awareness of artistic 
+skills/activities they enjoy.
+K.CR.3 Begin to develop artistic skills by engaging in 
+activities with others that promote curiosity, 
+exploration, and imagination.
+Interpreting and Responding
+ NOTES
+K.IR.1 Observe and discuss art forms they see 
+in daily life and how they may relate to 
+community and culture.
+K.IR.2 Make personal connections to the creative 
+works of others.
+LEARNING OUTCOMES CHECKLISTS: KINDERGARTEN
+Name: _____________________________________
+6.26 Arts Education Learning Outcomes checklists: Kindergarten
+
+Arts Education Learning Outcomes checklists: Grade 1 6.27
+Experimenting and Creating
+ NOTES
+1.EC.1 Actively engage with a variety of elements, 
+processes, and techniques through play.
+1.EC.2 Actively engage in using artistic tools and 
+materials efficiently and safely for different 
+purposes.
+Connecting and Reflecting
+ NOTES
+1.CR.1 Express thoughts, feelings, and interests by 
+engaging in activities that promote artistic 
+skill development through exploration, 
+imagination, and play.
+1.CR.2 Identify artistic activities that they enjoy.
+1.CR.3 Share art and creative works (visual art, 
+music, dance, or dramatic play) with others.
+1.CR.4 Begin to reflect on their own art processes.
+Interpreting and Responding
+ NOTES
+1.IR.1 Recognize the thoughts, feelings, and actions 
+of others through art.
+1.IR.2 Observe and respond to creative works of 
+local or regional creative communities.
+LEARNING OUTCOMES CHECKLISTS: GRADE 1
+Name: _____________________________________
+
+6.28
+Experimenting and Creating
+ NOTES
+2.EC.1 Produce simple art/creative works using a 
+variety of artistic elements, processes, and 
+techniques.
+2.EC.2 Understand the use and function for 
+different tools and materials for creating 
+specific art forms.
+Connecting and Reflecting
+ NOTES
+2.CR.1 Express thoughts, feelings, and interest by 
+engaging in activities that promote artistic skill 
+development through exploration, imagination, 
+and play.
+2.CR.2 Select and engage in art activities (visual art, 
+dance, drama, music) that they enjoy on their 
+own or with others.
+2.CR.3 Share, present, or perform creative works for 
+others.
+2.CR.4 Reflect on their own art processes for growth and 
+improvement.
+LEARNING OUTCOMES CHECKLISTS: GRADE 2
+Name: _____________________________________
+Arts Education Learning Outcomes checklists: Grade 2
+
+Arts Education Learning Outcomes checklists: Grade 2 6.29
+Interpreting and Responding
+ NOTES
+2.IR.1 Identify and describe different purposes and 
+motivations for creating art.
+2.IR.2 Describe the ways artists use tools, processes, 
+and techniques to communicate meaning 
+through art.
+2.IR.3 Ask questions about the creative works of 
+local and regional artists and communities.
+
+6.30 Arts Education Learning Outcomes checklists: Grade 3
+Experimenting and Creating
+ NOTES
+3.EC.1 Generate creative works inspired by curiosity 
+and interest.
+3.EC.2 Explore a variety of artistic elements and 
+techniques through intentional choices 
+of tools, materials, processes, forms, and 
+techniques.
+Connecting and Reflecting
+ NOTES
+3.CR.1 Use art (visual art, dance, music, drama) to express 
+emotions, ideas, and experiences for a specific 
+purpose.
+3.CR.2 Express how art activities and experiences can 
+contribute to personal well-being.
+3.CR.3 Select and prepare specific art and creative works 
+to present or perform for others.
+3.CR.4 Reflect on the creative process to identify 
+challenges and resolutions that arise when 
+creating art (visual art, dance, music, drama).
+Interpreting and Responding
+ NOTES
+3.IR.1 Acknowledge and appreciate ideas and 
+perspectives in the creative works of others.
+3.IR.2 Explain how artists make decisions about the 
+tools, processes, and techniques they use to 
+communicate meaning through art.
+3.IR.3 Examine and ask questions about the influence 
+of art in their local community or region across 
+time.
+LEARNING OUTCOMES CHECKLISTS: GRADE 3
+Name: _____________________________________
+
+Arts Education Learning Outcomes checklists: Grade 4 6.31
+Experimenting and Creating
+ NOTES
+4.EC.1 Generate creative works and art in different 
+contexts and for different purposes.
+4.EC.2 Practise artistic processes and techniques to 
+improve creative works.
+Connecting and Reflecting
+ NOTES
+4.CR.1 Employ creative practises using various media 
+and technology to communicate emotions, ideas, 
+experiences, and perspectives effectively.
+4.CR.2 Experiment with diverse creative practises to 
+support personal well-being.
+4.CR.3 Plan, develop, and share creative works that 
+reflect the intersection of art, media, and 
+technology.
+4.CR.4 Set goals and work through challenges within 
+their creative process.
+Interpreting and Responding
+ NOTES
+4.IR.1 Examine and discuss various perspectives 
+and messages in arts and creative works of 
+others.
+4.IR.2 Analyze the tools, processes, and techniques 
+an artist uses to communicate meaning 
+through art.
+4.IR.3 Compare creative works that represent the 
+circumpolar regions across time.
+LEARNING OUTCOMES CHECKLISTS: GRADE 4
+Name: _____________________________________
+
+6.32 Arts Education Learning Outcomes checklists: Grade 5
+LEARNING OUTCOMES CHECKLISTS: GRADE 5
+Name: _____________________________________
+Experimenting and Creating
+ NOTES
+5.EC.1 Employ diverse artistic techniques and 
+mediums to express their cultural identity 
+and personal experiences.
+5.EC.2 Adapt and enhance artistic processes and 
+techniques for a variety of contexts and 
+purposes.
+Connecting and Reflecting
+ NOTES
+5.CR.1 Use art activities and/or performances to explore 
+identity and self-concept, and demonstrate how 
+these activities/performances promote personal 
+well-being.
+5.CR.2 Plan, develop, and refine creative works to present 
+or perform for others.
+5.CR.3 Ask questions of themselves and others about 
+their creative process.
+Interpreting and Responding
+ NOTES
+5.IR.1 Describe, explain, or analyze creative works 
+and art using knowledge of artistic processes 
+and techniques.
+5.IR.2 Investigate the impact of Indigenous art and 
+artists on communities around the world.
+
+Arts Education Learning Outcomes checklists: Grade 6 6.33
+LEARNING OUTCOMES CHECKLISTS: GRADE 6
+Name: _____________________________________
+Experimenting and Creating
+ NOTES
+6.EC.1 Generate creative works prompted by inquiry 
+and analysis.
+6.EC.2 Refine and enhance artistic processes and 
+techniques for a variety of contexts and 
+purposes.
+Connecting and Reflecting
+ NOTES
+6.CR.1 Develop thoughtful questions and responses that 
+demonstrate the ability to connect art with realworld issues and experiences.
+6.CR.2 Cultivate creative practises in daily life that 
+support personal well-being.
+6.CR.3 Collaborate with peers or other community 
+members to create artwork promoting specific 
+ideas or issues.
+6.CR.4 Explore and identify how creative practises bring 
+about changes in themselves and the community.
+Interpreting and Responding
+ NOTES
+6.IR.1 Provide feedback and evaluation of creative 
+works using specific criteria.
+6.IR.2 Examine the relationships between art, 
+language, culture, and history.
+

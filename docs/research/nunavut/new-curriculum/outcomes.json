@@ -1,0 +1,3760 @@
+{
+ "math": {
+  "guide": "Nunavut Mathematics K–6 (2025)",
+  "strands": [
+   "Number",
+   "Patterns and Relations",
+   "Shape and Space",
+   "Statistics and Probability"
+  ],
+  "grades": {
+   "k": [
+    {
+     "code": "K.N.1.1",
+     "strand": "Number",
+     "text": "Say the count sequences from 0 to 20."
+    },
+    {
+     "code": "K.N.1.2",
+     "strand": "Number",
+     "text": "Represent amounts from 0 to 20 in a variety of ways."
+    },
+    {
+     "code": "K.N.1.3",
+     "strand": "Number",
+     "text": "Compare and order whole numbers from 0 to 20."
+    },
+    {
+     "code": "K.N.1.4",
+     "strand": "Number",
+     "text": "Demonstrate an understanding of cardinality in a counting sequence to 20."
+    },
+    {
+     "code": "K.N.1.5",
+     "strand": "Number",
+     "text": "Subitize quantities of 0 to 10 objects."
+    },
+    {
+     "code": "K.N.2.1",
+     "strand": "Number",
+     "text": "Add and subtract whole numbers with answers to 20 using concrete objects."
+    },
+    {
+     "code": "K.N.2.2",
+     "strand": "Number",
+     "text": "Apply modelled strategies of operation when solving problems."
+    },
+    {
+     "code": "K.N.2.3",
+     "strand": "Number",
+     "text": "Describe numbers using benchmarks of 5 and 10."
+    },
+    {
+     "code": "K.PR.1.1",
+     "strand": "Patterns and Relations",
+     "text": "Sort familiar objects into groups based on a single attribute."
+    },
+    {
+     "code": "K.PR.1.2",
+     "strand": "Patterns and Relations",
+     "text": "Identify and describe simple repeating patterns (e.g., AB, AAB, ABB) using everyday objects such as stones and shells."
+    },
+    {
+     "code": "K.PR.1.3",
+     "strand": "Patterns and Relations",
+     "text": "Represent and extend patterns through various mediums, such as drawing, arranging objects, and using digital tools."
+    },
+    {
+     "code": "K.PR.2.1",
+     "strand": "Patterns and Relations",
+     "text": "Compare the number of objects in different sets (to 10)."
+    },
+    {
+     "code": "K.PR.2.2",
+     "strand": "Patterns and Relations",
+     "text": "Represent equality and inequality using concrete objects."
+    },
+    {
+     "code": "K.SS.1.1",
+     "strand": "Shape and Space",
+     "text": "Identify and describe measurable attributes of lines, 2D, and 3D objects."
+    },
+    {
+     "code": "K.SS.1.2",
+     "strand": "Shape and Space",
+     "text": "Understand and compare sizes, lengths, weights, and capacities using everyday objects like stones and shells."
+    },
+    {
+     "code": "K.SS.1.3",
+     "strand": "Shape and Space",
+     "text": "Sequence the days of the week and the occurrence of daily events."
+    },
+    {
+     "code": "K.SS.1.4",
+     "strand": "Shape and Space",
+     "text": "Identify Canadian coins and count up to 10 using play money."
+    },
+    {
+     "code": "K.SS.2.1",
+     "strand": "Shape and Space",
+     "text": "Identify and name basic 2D shapes (circle, square, triangle, rectangle) using everyday objects and natural items."
+    },
+    {
+     "code": "K.SS.2.2",
+     "strand": "Shape and Space",
+     "text": "Sort familiar objects using a single shape attribute and explain the sorting rule."
+    },
+    {
+     "code": "K.SS.2.3",
+     "strand": "Shape and Space",
+     "text": "Build and describe 3D objects."
+    },
+    {
+     "code": "K.SS.3.1",
+     "strand": "Shape and Space",
+     "text": "Begin to describe location using positional and directional language."
+    },
+    {
+     "code": "K.SP.1.1",
+     "strand": "Statistics and Probability",
+     "text": "Begin to ask simple questions about data sets."
+    },
+    {
+     "code": "K.SP.1.2",
+     "strand": "Statistics and Probability",
+     "text": "Collect simple data through observations and activities, such as counting objects found in nature, like stones or flowers, fostering data collection skills."
+    },
+    {
+     "code": "K.SP.1.3",
+     "strand": "Statistics and Probability",
+     "text": "Represent data sets in concrete graphs."
+    },
+    {
+     "code": "K.SP.1.4",
+     "strand": "Statistics and Probability",
+     "text": "Interpret data in concrete graphs."
+    }
+   ],
+   "1": [
+    {
+     "code": "1.N.1.1",
+     "strand": "Number",
+     "text": "Say the count sequences from 0 to 100."
+    },
+    {
+     "code": "1.N.1.2",
+     "strand": "Number",
+     "text": "Represent equality and inequality using appropriate symbols."
+    },
+    {
+     "code": "1.N.1.3",
+     "strand": "Number",
+     "text": "Compare and order whole numbers from 0 to 100."
+    },
+    {
+     "code": "1.N.1.4",
+     "strand": "Number",
+     "text": "Estimate and verify quantities of up to 100."
+    },
+    {
+     "code": "1.N.1.5",
+     "strand": "Number",
+     "text": "Compare wholes and halves."
+    },
+    {
+     "code": "1.N.2.1",
+     "strand": "Number",
+     "text": "Add and subtract whole numbers with answers up to 20, using a variety of strategies."
+    },
+    {
+     "code": "1.N.2.2",
+     "strand": "Number",
+     "text": "Apply mental math strategies to add and subtract whole numbers to 20."
+    },
+    {
+     "code": "1.PR.1.1",
+     "strand": "Patterns and Relations",
+     "text": "Sort a variety of objects into groups based on at least one attribute."
+    },
+    {
+     "code": "1.PR.1.2",
+     "strand": "Patterns and Relations",
+     "text": "Explain the sorting rule of sorted objects."
+    },
+    {
+     "code": "1.PR.1.3",
+     "strand": "Patterns and Relations",
+     "text": "Extend simple repeating patterns and describe the extension using terms like \"repeat\" and \"core,\" demonstrating an understanding of the structure of patterns."
+    },
+    {
+     "code": "1.PR.1.4",
+     "strand": "Patterns and Relations",
+     "text": "Reproduce and extend single-attribute repeating patterns."
+    },
+    {
+     "code": "1.PR.1.5",
+     "strand": "Patterns and Relations",
+     "text": "Apply the rule of a pattern to create new sequences, demonstrating an understanding of how the rule governs the pattern."
+    },
+    {
+     "code": "1.PR.2.1",
+     "strand": "Patterns and Relations",
+     "text": "Demonstrate an understanding of equality as a balance and inequality as an imbalance."
+    },
+    {
+     "code": "1.PR.2.2",
+     "strand": "Patterns and Relations",
+     "text": "Represent equality and inequality using appropriate symbols."
+    },
+    {
+     "code": "1.PR.2.3",
+     "strand": "Patterns and Relations",
+     "text": "Represent simple addition and subtraction situations using objects, drawings, and symbolic notation, showing their understanding of basic operations."
+    },
+    {
+     "code": "1.SS.1.1",
+     "strand": "Shape and Space",
+     "text": "Use direct and indirect comparison to compare objects according to length, mass, and capacity."
+    },
+    {
+     "code": "1.SS.1.2",
+     "strand": "Shape and Space",
+     "text": "Estimate length, mass, and capacity of objects using non-standard units."
+    },
+    {
+     "code": "1.SS.1.3",
+     "strand": "Shape and Space",
+     "text": "Measure length and height using non\u0002standard units and begin to use standard units (centimeres and metres), developing foundational measurement skills."
+    },
+    {
+     "code": "1.SS.1.4",
+     "strand": "Shape and Space",
+     "text": "Sequence the occurrence of daily and weekly events."
+    },
+    {
+     "code": "1.SS.1.5",
+     "strand": "Shape and Space",
+     "text": "Compare the duration of activities using non-standard units of time."
+    },
+    {
+     "code": "1.SS.1.6",
+     "strand": "Shape and Space",
+     "text": "Use a calendar to identify and classify days, weeks, months, and events."
+    },
+    {
+     "code": "1.SS.1.7",
+     "strand": "Shape and Space",
+     "text": "Recognize and name Canadian coins, understanding their values and uses."
+    },
+    {
+     "code": "1.SS.2.1",
+     "strand": "Shape and Space",
+     "text": "Describe properties of 2D shapes (number of sides and corners) and 3D shapes (faces, edges, and vertices), developing foundational understanding of shape attributes."
+    },
+    {
+     "code": "1.SS.2.2",
+     "strand": "Shape and Space",
+     "text": "Sort and classify shapes based on their properties, applying knowledge of shape attributes to organize geometric figures."
+    },
+    {
+     "code": "1.SS.2.3",
+     "strand": "Shape and Space",
+     "text": "Compare 2D shapes to parts of 3D objects."
+    },
+    {
+     "code": "1.SS.3.1",
+     "strand": "Shape and Space",
+     "text": "Describe locations using positional, directional, and ordinal language."
+    },
+    {
+     "code": "1.SP.1.1",
+     "strand": "Statistics and Probability",
+     "text": "Participate in creating and answering simple questions about data sets."
+    },
+    {
+     "code": "1.SP.1.2",
+     "strand": "Statistics and Probability",
+     "text": "Apply modelled strategies to sort data based on a single attribute."
+    },
+    {
+     "code": "1.SP.1.3",
+     "strand": "Statistics and Probability",
+     "text": "Represent data in concrete graphs and tally charts."
+    },
+    {
+     "code": "1.SP.1.4",
+     "strand": "Statistics and Probability",
+     "text": "Read and interpret concrete graphs and tally charts."
+    }
+   ],
+   "2": [
+    {
+     "code": "2.N.1.1",
+     "strand": "Number",
+     "text": "Say count sequences from 0 to 1,000."
+    },
+    {
+     "code": "2.N.1.2",
+     "strand": "Number",
+     "text": "Represent whole numbers or amounts from 0 to 1,000 in a variety of ways."
+    },
+    {
+     "code": "2.N.1.3",
+     "strand": "Number",
+     "text": "Compare and order whole numbers from 0 to 1,000."
+    },
+    {
+     "code": "2.N.1.4",
+     "strand": "Number",
+     "text": "Uses ordinal numbers to describe the order or position of whole numbers (1st through 10th)."
+    },
+    {
+     "code": "2.N.1.5",
+     "strand": "Number",
+     "text": "Estimate and verify quantities of up to 1,000."
+    },
+    {
+     "code": "2.N.1.6",
+     "strand": "Number",
+     "text": "Demonstrate if a given number (up to 1,000) is even or odd."
+    },
+    {
+     "code": "2.N.1.7",
+     "strand": "Number",
+     "text": "Compare wholes, halves, and quarters."
+    },
+    {
+     "code": "2.N.2.1",
+     "strand": "Number",
+     "text": "Add and subtract whole numbers with answers up to 100, using a variety of strategies."
+    },
+    {
+     "code": "2.N.2.2",
+     "strand": "Number",
+     "text": "Demonstrate mental math strategies to add and subtract whole numbers to 100."
+    },
+    {
+     "code": "2.N.2.3",
+     "strand": "Number",
+     "text": "Divide sets of whole numbers to 20 into equal groups."
+    },
+    {
+     "code": "2.PR.1.1",
+     "strand": "Patterns and Relations",
+     "text": "Sort objects into groups based on at least two attributes and explain the sorting rule."
+    },
+    {
+     "code": "2.PR.1.2",
+     "strand": "Patterns and Relations",
+     "text": "Determine the core in multiple-attribute repeating patterns."
+    },
+    {
+     "code": "2.PR.1.3",
+     "strand": "Patterns and Relations",
+     "text": "Reproduce and extend multi-attribute repeating patterns containing three to five elements."
+    },
+    {
+     "code": "2.PR.1.4",
+     "strand": "Patterns and Relations",
+     "text": "Translate repeating ABC patterns from one representation to another."
+    },
+    {
+     "code": "2.PR.1.5",
+     "strand": "Patterns and Relations",
+     "text": "Investigate simple increasing patterns using concrete objects."
+    },
+    {
+     "code": "2.PR.2.1",
+     "strand": "Patterns and Relations",
+     "text": "Determine whether addition and subtraction number sentences involving one- and two digit numbers are true or false."
+    },
+    {
+     "code": "2.PR.2.2",
+     "strand": "Patterns and Relations",
+     "text": "Determine the unknown whole number in an addition or subtraction number sentence, up to 100."
+    },
+    {
+     "code": "2.PR.2.3",
+     "strand": "Patterns and Relations",
+     "text": "Explain the concept of equality by using visual aids such as drawings or balance scales to demonstrate that both sides of an equation represent the same value."
+    },
+    {
+     "code": "2.SS.1.1",
+     "strand": "Shape and Space",
+     "text": "Measure length in centimetres and metres."
+    },
+    {
+     "code": "2.SS.1.2",
+     "strand": "Shape and Space",
+     "text": "Estimate length using personally meaningful referents for centimetres and metres."
+    },
+    {
+     "code": "2.SS.1.3",
+     "strand": "Shape and Space",
+     "text": "Compare and order objects by length."
+    },
+    {
+     "code": "2.SS.1.4",
+     "strand": "Shape and Space",
+     "text": "Estimate and compare the duration of familiar activities using appropriate non\u0002standard units of time."
+    },
+    {
+     "code": "2.SS.1.5",
+     "strand": "Shape and Space",
+     "text": "Tell time in one-hour intervals using analog and digital clocks or devices."
+    },
+    {
+     "code": "2.SS.1.6",
+     "strand": "Shape and Space",
+     "text": "Use a calendar to identify days, weeks, months, dates, events, and seasons."
+    },
+    {
+     "code": "2.SS.1.7",
+     "strand": "Shape and Space",
+     "text": "Compare the value of different Canadian coins and make simple purchases."
+    },
+    {
+     "code": "2.SS.2.1",
+     "strand": "Shape and Space",
+     "text": "Sort 3D objects and 2D shapes using two attributes and explain the sorting rule."
+    },
+    {
+     "code": "2.SS.2.2",
+     "strand": "Shape and Space",
+     "text": "Recognize, name, and describe 3D objects."
+    },
+    {
+     "code": "2.SS.2.3",
+     "strand": "Shape and Space",
+     "text": "Compose and decompose composite 3D objects and 2D shapes."
+    },
+    {
+     "code": "2.SS.3.1",
+     "strand": "Shape and Space",
+     "text": "Give and follow simple directions to change the position and location of 2D shapes and 3D objects."
+    },
+    {
+     "code": "2.SS.3.2",
+     "strand": "Shape and Space",
+     "text": "Identify half and quarter turns."
+    },
+    {
+     "code": "2.SS.3.3",
+     "strand": "Shape and Space",
+     "text": "Identify lines of symmetry and create symmetrical shapes through reflections, demonstrating proficiency in recognizing and applying reflection symmetry."
+    },
+    {
+     "code": "2.SP.1.1",
+     "strand": "Statistics and Probability",
+     "text": "Develop questions for surveys and observations based on curiosity about the world around them."
+    },
+    {
+     "code": "2.SP.1.2",
+     "strand": "Statistics and Probability",
+     "text": "Represent data using one-to-one correspondence in concrete graphs, pictographs, and tally charts."
+    },
+    {
+     "code": "2.SP.1.3",
+     "strand": "Statistics and Probability",
+     "text": "Read and interpret tally charts and pictographs."
+    },
+    {
+     "code": "2.SP.1.4",
+     "strand": "Statistics and Probability",
+     "text": "Identify patterns and trends in data, and make basic predictions, fostering skills in analyzing and interpreting data to draw meaningful conclusions."
+    }
+   ],
+   "3": [
+    {
+     "code": "3.N.1.1",
+     "strand": "Number",
+     "text": "Say count sequences from 0 to 10,000."
+    },
+    {
+     "code": "3.N.1.2",
+     "strand": "Number",
+     "text": "Represent whole numbers or amounts from 0 to 10,000 in a variety of ways."
+    },
+    {
+     "code": "3.N.1.3",
+     "strand": "Number",
+     "text": "Compare and order whole numbers from 0 to 10,000."
+    },
+    {
+     "code": "3.N.1.4",
+     "strand": "Number",
+     "text": "Estimate and verify quantities of up to 10,000."
+    },
+    {
+     "code": "3.N.1.5",
+     "strand": "Number",
+     "text": "Identify the value of a digit depending on its place in a number, recognizing the place values of ones, tens, hundreds, and thousands."
+    },
+    {
+     "code": "3.N.1.6",
+     "strand": "Number",
+     "text": "Compose and decompose numbers using place value (e.g., 345 is 300 + 40 + 5)."
+    },
+    {
+     "code": "3.N.1.7",
+     "strand": "Number",
+     "text": "Demonstrate parts of a whole using fractions."
+    },
+    {
+     "code": "3.N.1.8",
+     "strand": "Number",
+     "text": "Recognize the decimal point and understand its role in separating whole numbers from fractional parts."
+    },
+    {
+     "code": "3.N.2.1",
+     "strand": "Number",
+     "text": "Add and subtract whole numbers with answers up to 1,000, using a variety of strategies."
+    },
+    {
+     "code": "3.N.2.2",
+     "strand": "Number",
+     "text": "Demonstrate mental math strategies to add and subtract whole numbers to 100."
+    },
+    {
+     "code": "3.N.2.3",
+     "strand": "Number",
+     "text": "Solve multiplication problems involving single-digit whole numbers, using a variety of strategies."
+    },
+    {
+     "code": "3.N.2.4",
+     "strand": "Number",
+     "text": "Represent division concepts using concrete and pictorial representations."
+    },
+    {
+     "code": "3.PR.1.1",
+     "strand": "Patterns and Relations",
+     "text": "Investigate increasing and decreasing patterns in concrete, pictorial, and symbolic forms."
+    },
+    {
+     "code": "3.PR.1.2",
+     "strand": "Patterns and Relations",
+     "text": "Recognize and describe increasing and decreasing patterns using numbers and shapes, identifying the rule that causes the pattern to change."
+    },
+    {
+     "code": "3.PR.1.3",
+     "strand": "Patterns and Relations",
+     "text": "Translate increasing and decreasing patterns from one form to another."
+    },
+    {
+     "code": "3.PR.2.1",
+     "strand": "Patterns and Relations",
+     "text": "Begin to use symbols to represent unknown quantities in expressions and equations."
+    },
+    {
+     "code": "3.PR.2.2",
+     "strand": "Patterns and Relations",
+     "text": "Solve one-step equations involving addition and subtraction with whole numbers and an unknown symbol."
+    },
+    {
+     "code": "3.PR.2.3",
+     "strand": "Patterns and Relations",
+     "text": "Verify solutions to equations by substituting the value of the variable back into the original equation."
+    },
+    {
+     "code": "3.SS.1.1",
+     "strand": "Shape and Space",
+     "text": "Measure length in millimetres, centimetres, metres, and kilometres."
+    },
+    {
+     "code": "3.SS.1.2",
+     "strand": "Shape and Space",
+     "text": "Solve problems involving the perimeter of regular and irregular polygons."
+    },
+    {
+     "code": "3.SS.1.3",
+     "strand": "Shape and Space",
+     "text": "Estimate perimeter using personal referents."
+    },
+    {
+     "code": "3.SS.1.4",
+     "strand": "Shape and Space",
+     "text": "Measure mass in grams and kilograms."
+    },
+    {
+     "code": "3.SS.1.5",
+     "strand": "Shape and Space",
+     "text": "Estimate mass using personally meaningful referents for gram and kilogram."
+    },
+    {
+     "code": "3.SS.1.6",
+     "strand": "Shape and Space",
+     "text": "Measure capacity in millilitres and litres."
+    },
+    {
+     "code": "3.SS.1.7",
+     "strand": "Shape and Space",
+     "text": "Estimate capacity using personally meaningful referents for millilitre and litre."
+    },
+    {
+     "code": "3.SS.1.8",
+     "strand": "Shape and Space",
+     "text": "Tell time in one-hour and half-hour intervals using analog and digital clocks."
+    },
+    {
+     "code": "3.SS.1.9",
+     "strand": "Shape and Space",
+     "text": "Identify times as a.m. or p.m."
+    },
+    {
+     "code": "3.SS.1.10",
+     "strand": "Shape and Space",
+     "text": "Introduce temperature measurement using thermometers, focusing on Celsius, understanding how temperature is measured and its practical applications."
+    },
+    {
+     "code": "3.SS.1.11",
+     "strand": "Shape and Space",
+     "text": "Calculate total cost of items in a simulated shopping activity using addition."
+    },
+    {
+     "code": "3.SS.2.1",
+     "strand": "Shape and Space",
+     "text": "Identify and describe 3D objects according to the shapes of the faces, edges, and vertices."
+    },
+    {
+     "code": "3.SS.2.2",
+     "strand": "Shape and Space",
+     "text": "Construct models of 3D shapes and describe the faces."
+    },
+    {
+     "code": "3.SS.3.1",
+     "strand": "Shape and Space",
+     "text": "Identify lines of symmetry in the environment."
+    },
+    {
+     "code": "3.SS.3.2",
+     "strand": "Shape and Space",
+     "text": "Create designs that have lines of symmetry within them."
+    },
+    {
+     "code": "3.SS.3.3",
+     "strand": "Shape and Space",
+     "text": "Apply translations to create patterns and designs, demonstrating proficiency in shifting shapes to form new arrangements."
+    },
+    {
+     "code": "3.SP.1.1",
+     "strand": "Statistics and Probability",
+     "text": "Collect and record data to answer questions about themselves, others, and the land."
+    },
+    {
+     "code": "3.SP.1.2",
+     "strand": "Statistics and Probability",
+     "text": "Represent data using one-to-one correspondence in frequency tables and bar graphs."
+    },
+    {
+     "code": "3.SP.1.3",
+     "strand": "Statistics and Probability",
+     "text": "Read and interpret frequency tables and bar graphs."
+    },
+    {
+     "code": "3.SP.1.4",
+     "strand": "Statistics and Probability",
+     "text": "Analyze data to identify relationships and patterns, and discuss implications, fostering critical thinking skills in data analysis and interpretation. Probability"
+    },
+    {
+     "code": "3.SP.2.1",
+     "strand": "Statistics and Probability",
+     "text": "Describe the likelihood of familiar events occurring using probability language."
+    },
+    {
+     "code": "3.SP.2.2",
+     "strand": "Statistics and Probability",
+     "text": "Represent the likelihood of events on a probability line."
+    }
+   ],
+   "4": [
+    {
+     "code": "4.N.1.1",
+     "strand": "Number",
+     "text": "Represent whole numbers or amounts from 0 to 100,000 in a variety of ways."
+    },
+    {
+     "code": "4.N.1.2",
+     "strand": "Number",
+     "text": "Compare and order whole numbers from 0 to 100,000."
+    },
+    {
+     "code": "4.N.1.3",
+     "strand": "Number",
+     "text": "Demonstrate parts of a whole using decimals to tenths."
+    },
+    {
+     "code": "4.N.1.4",
+     "strand": "Number",
+     "text": "Compare and order fractions and decimals to tenths."
+    },
+    {
+     "code": "4.N.1.5",
+     "strand": "Number",
+     "text": "Understand and apply place value concepts to read, write, and compare multi-digit whole numbers up to 1,000,000, using base-ten numerals, number names, and expanded form."
+    },
+    {
+     "code": "4.N.2.1",
+     "strand": "Number",
+     "text": "Add and subtract whole numbers with answers up to 10,000, using a variety of strategies."
+    },
+    {
+     "code": "4.N.2.2",
+     "strand": "Number",
+     "text": "Add and subtract decimal numbers to tenths."
+    },
+    {
+     "code": "4.N.2.3",
+     "strand": "Number",
+     "text": "Estimate sums and differences when adding and subtracting decimal numbers to tenths."
+    },
+    {
+     "code": "4.N.2.4",
+     "strand": "Number",
+     "text": "Demonstrate mental math strategies to determine multiplication and related division facts to 100."
+    },
+    {
+     "code": "4.N.2.5",
+     "strand": "Number",
+     "text": "Represent and solve multiplication problems that involve multiplying two\u0002and three-digit numbers by one-digit numbers, using a variety of strategies."
+    },
+    {
+     "code": "4.N.2.6",
+     "strand": "Number",
+     "text": "Represent and solve division problems that involve dividing one- and two-digit numbers by one-digit numbers, with or without remainder."
+    },
+    {
+     "code": "4.PR.1.1",
+     "strand": "Patterns and Relations",
+     "text": "Describe pattern rules in charts and tables."
+    },
+    {
+     "code": "4.PR.1.2",
+     "strand": "Patterns and Relations",
+     "text": "Translate increasing and decreasing patterns from concrete representations to charts and tables."
+    },
+    {
+     "code": "4.PR.1.3",
+     "strand": "Patterns and Relations",
+     "text": "Solve problems involving increasing and decreasing patterns in charts and tables."
+    },
+    {
+     "code": "4.PR.1.4",
+     "strand": "Patterns and Relations",
+     "text": "Identify and describe more complex number patterns, including arithmetic sequences, by recognizing the rule governing the sequence."
+    },
+    {
+     "code": "4.PR.2.1",
+     "strand": "Patterns and Relations",
+     "text": "Uses symbols to represent unknown quantities in expressions and equations."
+    },
+    {
+     "code": "4.PR.2.2",
+     "strand": "Patterns and Relations",
+     "text": "Solve one-step equations involving addition, subtraction, multiplication, and division with whole numbers and an unknown symbol, verifying their solution by substitution."
+    },
+    {
+     "code": "4.SS.1.1",
+     "strand": "Shape and Space",
+     "text": "Demonstrate the relationships between millimetres, centimetres, metres, and kilometres."
+    },
+    {
+     "code": "4.SS.1.2",
+     "strand": "Shape and Space",
+     "text": "Solve problems involving the perimeter of regular and irregular polygons, including finding an unknown side."
+    },
+    {
+     "code": "4.SS.1.3",
+     "strand": "Shape and Space",
+     "text": "Estimate and measure area using non\u0002standard and square units."
+    },
+    {
+     "code": "4.SS.1.4",
+     "strand": "Shape and Space",
+     "text": "Tell time in one-hour, half-hour, quarter-hour, and five-minute intervals using analog and digital clocks."
+    },
+    {
+     "code": "4.SS.1.5",
+     "strand": "Shape and Space",
+     "text": "Read and record dates on a calendar in different formats."
+    },
+    {
+     "code": "4.SS.1.6",
+     "strand": "Shape and Space",
+     "text": "Create a simple budget for a class project, tracking expenses and savings."
+    },
+    {
+     "code": "4.SS.2.1",
+     "strand": "Shape and Space",
+     "text": "Sort regular and irregular polygons according to their angles and number of sides."
+    },
+    {
+     "code": "4.SS.2.2",
+     "strand": "Shape and Space",
+     "text": "Compare and classify quadrilaterals by their geometric properties."
+    },
+    {
+     "code": "4.SS.3.1",
+     "strand": "Shape and Space",
+     "text": "Use grids to give and follow directions."
+    },
+    {
+     "code": "4.SS.3.2",
+     "strand": "Shape and Space",
+     "text": "Create lines of symmetry in 2D shapes or designs."
+    },
+    {
+     "code": "4.SP.1.1",
+     "strand": "Statistics and Probability",
+     "text": "Collect and organize larger data sets through experiments and research, demonstrating proficiency in managing and organizing data effectively."
+    },
+    {
+     "code": "4.SP.1.2",
+     "strand": "Statistics and Probability",
+     "text": "Use multiple types of graphs and tables to represent data, including histograms, developing skills in selecting appropriate representations for different types of data."
+    },
+    {
+     "code": "4.SP.1.3",
+     "strand": "Statistics and Probability",
+     "text": "Perform more detailed analysis of data, including measures of central tendency (mean, median, mode)."
+    },
+    {
+     "code": "4.SP.1.4",
+     "strand": "Statistics and Probability",
+     "text": "Analyze data from community-based projects, such as studying local wildlife populations or traditional hunting practices, integrating cultural contexts into data analysis and interpretation."
+    },
+    {
+     "code": "4.SP.2.1",
+     "strand": "Statistics and Probability",
+     "text": "Compare the likelihood of events occurring in experiments using probability language."
+    },
+    {
+     "code": "4.SP.2.2",
+     "strand": "Statistics and Probability",
+     "text": "Use charts and graphs to represent the outcomes of probability experiments."
+    }
+   ],
+   "5": [
+    {
+     "code": "5.N.1.1",
+     "strand": "Number",
+     "text": "Represent whole numbers or amounts between 0 and 1,000,000 in a variety of ways."
+    },
+    {
+     "code": "5.N.1.2",
+     "strand": "Number",
+     "text": "Compare and order whole numbers from 0 to 1,000,000."
+    },
+    {
+     "code": "5.N.1.3",
+     "strand": "Number",
+     "text": "Demonstrate parts of a whole using decimals to hundredths."
+    },
+    {
+     "code": "5.N.1.4",
+     "strand": "Number",
+     "text": "Compare and order fractions and decimals to hundredths."
+    },
+    {
+     "code": "5.N.1.5",
+     "strand": "Number",
+     "text": "Represent equivalent fractions for commonly used fractions."
+    },
+    {
+     "code": "5.N.1.6",
+     "strand": "Number",
+     "text": "Understand and use place value to read, write, and compare decimals to thousandths, and to round decimals to any given place."
+    },
+    {
+     "code": "5.N.2.1",
+     "strand": "Number",
+     "text": "Add and subtract whole numbers with answers up to 100,000, and decimals to hundredths."
+    },
+    {
+     "code": "5.N.2.2",
+     "strand": "Number",
+     "text": "Estimate sums and differences when adding and subtracting whole numbers to 100,000 and decimals to hundredths."
+    },
+    {
+     "code": "5.N.2.3",
+     "strand": "Number",
+     "text": "Solve multiplication problems that involve multiplying two- and three- digit numbers by one- and two-digit numbers, using a variety of strategies."
+    },
+    {
+     "code": "5.N.2.4",
+     "strand": "Number",
+     "text": "Solve division problems that involve one-, two-, and three-digit numbers."
+    },
+    {
+     "code": "5.PR.1.1",
+     "strand": "Patterns and Relations",
+     "text": "Represent increasing and decreasing patterns within tables of values."
+    },
+    {
+     "code": "5.PR.1.2",
+     "strand": "Patterns and Relations",
+     "text": "Describe pattern rules in tables of values."
+    },
+    {
+     "code": "5.PR.1.3",
+     "strand": "Patterns and Relations",
+     "text": "Translate increasing and decreasing patterns from concrete representations to charts and tables of values."
+    },
+    {
+     "code": "5.PR.2.1",
+     "strand": "Patterns and Relations",
+     "text": "Evaluate an expression by substituting a known whole-number value for a variable."
+    },
+    {
+     "code": "5.PR.2.2",
+     "strand": "Patterns and Relations",
+     "text": "Use variable notations, expressions, and equations to represent problems."
+    },
+    {
+     "code": "5.PR.2.3",
+     "strand": "Patterns and Relations",
+     "text": "Solve and verify one-step equations with letter variables and whole-number solutions."
+    },
+    {
+     "code": "5.PR.2.4",
+     "strand": "Patterns and Relations",
+     "text": "Evaluate expressions involving multiple operations and parentheses, demonstrating an understanding of the order of operations."
+    },
+    {
+     "code": "5.PR.2.5",
+     "strand": "Patterns and Relations",
+     "text": "Solve multi-step equations involving combinations of addition, subtraction, multiplication, and division, verifying their solutions through substitution."
+    },
+    {
+     "code": "5.SS.1.1",
+     "strand": "Shape and Space",
+     "text": "Solve problems involving the area of rectangles and squares."
+    },
+    {
+     "code": "5.SS.1.2",
+     "strand": "Shape and Space",
+     "text": "Estimate area using personally meaningful referents for square centimetres and square metres."
+    },
+    {
+     "code": "5.SS.1.3",
+     "strand": "Shape and Space",
+     "text": "Investigate the relationship between the perimeter and the area of rectangles and squares."
+    },
+    {
+     "code": "5.SS.1.4",
+     "strand": "Shape and Space",
+     "text": "Describe angles as equal to, less than, or greater than a right angle."
+    },
+    {
+     "code": "5.SS.1.5",
+     "strand": "Shape and Space",
+     "text": "Solve problems related to minutes, hours, days, weeks, months, years, and cycles."
+    },
+    {
+     "code": "5.SS.1.6",
+     "strand": "Shape and Space",
+     "text": "Tell time in one-hour, half-hour, quarter-hour, and one-minute intervals using analog and digital clocks."
+    },
+    {
+     "code": "5.SS.1.7",
+     "strand": "Shape and Space",
+     "text": "Plan and manage a small fundraising project, including budgeting and reporting."
+    },
+    {
+     "code": "5.SS.2.1",
+     "strand": "Shape and Space",
+     "text": "Identify and describe prisms, pyramids, and cones according to their edges, vertices, and faces."
+    },
+    {
+     "code": "5.SS.2.2",
+     "strand": "Shape and Space",
+     "text": "Construct prisms, pyramids, and cones from nets and other 2D representations."
+    },
+    {
+     "code": "5.SS.3.1",
+     "strand": "Shape and Space",
+     "text": "Perform single transformations on 2D shapes."
+    },
+    {
+     "code": "5.SP.1.1",
+     "strand": "Statistics and Probability",
+     "text": "Collect and record first- and second-hand data using a variety of methods."
+    },
+    {
+     "code": "5.SP.1.2",
+     "strand": "Statistics and Probability",
+     "text": "Represent data using one-to-one and many-to-one correspondence in double\u0002bar graphs."
+    },
+    {
+     "code": "5.SP.1.3",
+     "strand": "Statistics and Probability",
+     "text": "Read and interpret double-bar graphs."
+    },
+    {
+     "code": "5.SP.2.1",
+     "strand": "Statistics and Probability",
+     "text": "Represent the probabilities of independent events in a variety of ways, including fractions and ratios."
+    },
+    {
+     "code": "5.SP.2.2",
+     "strand": "Statistics and Probability",
+     "text": "Predict and test the probability of an independent event through single\u0002outcome experiments."
+    },
+    {
+     "code": "5.SP.2.3",
+     "strand": "Statistics and Probability",
+     "text": "Understand the concept of theoretical probability and how it relates to experimental probability, developing proficiency in applying theoretical concepts to practical situations."
+    }
+   ],
+   "6": [
+    {
+     "code": "6.N.1.1",
+     "strand": "Number",
+     "text": "Express a part of a whole as a percentage in a variety of ways."
+    },
+    {
+     "code": "6.N.1.2",
+     "strand": "Number",
+     "text": "Compare and order fractions, decimals, and percentages to thousandths."
+    },
+    {
+     "code": "6.N.1.3",
+     "strand": "Number",
+     "text": "Demonstrate equivalent fractions for any given fraction."
+    },
+    {
+     "code": "6.N.1.4",
+     "strand": "Number",
+     "text": "Represent and interpret simple ratios."
+    },
+    {
+     "code": "6.N.2.1",
+     "strand": "Number",
+     "text": "Add and subtract whole numbers with answers up to 1,000,000 and decimal numbers to thousandths."
+    },
+    {
+     "code": "6.N.2.2",
+     "strand": "Number",
+     "text": "Identify common factors and multiples of whole numbers."
+    },
+    {
+     "code": "6.N.2.3",
+     "strand": "Number",
+     "text": "Multiply decimal numbers by one-digit whole numbers in daily life contexts."
+    },
+    {
+     "code": "6.N.2.4",
+     "strand": "Number",
+     "text": "Represent and solve division problems that involve dividing decimal numbers by single-digit whole numbers."
+    },
+    {
+     "code": "6.N.2.5",
+     "strand": "Number",
+     "text": "Apply order of operations to evaluate numerical expressions (excluding exponents) involving whole numbers."
+    },
+    {
+     "code": "6.PR.1.1",
+     "strand": "Patterns and Relations",
+     "text": "Represent increasing and decreasing patterns in graphs."
+    },
+    {
+     "code": "6.PR.1.2",
+     "strand": "Patterns and Relations",
+     "text": "Describe patterns in graphs that use increasing or decreasing patterns."
+    },
+    {
+     "code": "6.PR.1.3",
+     "strand": "Patterns and Relations",
+     "text": "Use function tables to represent and analyze patterns, identifying the input\u0002output relationships and recognizing patterns in the data."
+    },
+    {
+     "code": "6.PR.1.4",
+     "strand": "Patterns and Relations",
+     "text": "Analyze, create, and predict complex patterns, including those with multiple rules governing their sequences."
+    },
+    {
+     "code": "6.PR.2.1",
+     "strand": "Patterns and Relations",
+     "text": "Explain the concept of coefficients in expressions, recognizing them as the numerical factors attached to variables."
+    },
+    {
+     "code": "6.PR.2.2",
+     "strand": "Patterns and Relations",
+     "text": "Solve and verify one-step equations, including equations with whole-number coefficients and solutions."
+    },
+    {
+     "code": "6.SS.1.1",
+     "strand": "Shape and Space",
+     "text": "Solve problems involving the perimeter of complex shapes."
+    },
+    {
+     "code": "6.SS.1.2",
+     "strand": "Shape and Space",
+     "text": "Solve problems involving the area of triangles, parallelograms, and trapezoids."
+    },
+    {
+     "code": "6.SS.1.3",
+     "strand": "Shape and Space",
+     "text": "Estimate and measure volume by counting unit cubes."
+    },
+    {
+     "code": "6.SS.1.4",
+     "strand": "Shape and Space",
+     "text": "Measure and construct angles."
+    },
+    {
+     "code": "6.SS.1.5",
+     "strand": "Shape and Space",
+     "text": "Identify angles as right, straight, acute, obtuse, or reflex."
+    },
+    {
+     "code": "6.SS.1.6",
+     "strand": "Shape and Space",
+     "text": "Solve problems involving converting units of time."
+    },
+    {
+     "code": "6.SS.1.7",
+     "strand": "Shape and Space",
+     "text": "Tell time, including 24-hour time systems, using analog and digital clocks."
+    },
+    {
+     "code": "6.SS.2.1",
+     "strand": "Shape and Space",
+     "text": "Compare and classify triangles by their geometric properties."
+    },
+    {
+     "code": "6.SS.3.1",
+     "strand": "Shape and Space",
+     "text": "Plot and read points (coordinates) of a coordinate plane."
+    },
+    {
+     "code": "6.SS.3.2",
+     "strand": "Shape and Space",
+     "text": "Carry out single transformations on 2D shapes in the first quadrant of the coordinate plane."
+    },
+    {
+     "code": "6.SP.1.1",
+     "strand": "Statistics and Probability",
+     "text": "Design and conduct comprehensive data collection projects, including surveys and field studies, demonstrating advanced skills in planning and executing data collection processes."
+    },
+    {
+     "code": "6.SP.1.2",
+     "strand": "Statistics and Probability",
+     "text": "Create and interpret advanced graphical representations, such as scatter plots and box plots, developing proficiency in visualizing and communicating complex data sets."
+    },
+    {
+     "code": "6.SP.1.3",
+     "strand": "Statistics and Probability",
+     "text": "Read and interpret line graphs."
+    },
+    {
+     "code": "6.SP.1.4",
+     "strand": "Statistics and Probability",
+     "text": "Use statistical methods to analyze data, identify trends, and make predictions, applying advanced analytical techniques to draw meaningful insights from data."
+    },
+    {
+     "code": "6.SP.1.5",
+     "strand": "Statistics and Probability",
+     "text": "Analyze and interpret financial data from a business or local organization, making cost decisions and recommendations."
+    },
+    {
+     "code": "6.SP.2.1",
+     "strand": "Statistics and Probability",
+     "text": "Represent the probabilities of independent events in a variety of ways, including fractions, decimals, and percentages."
+    },
+    {
+     "code": "6.SP.2.2",
+     "strand": "Statistics and Probability",
+     "text": "Predict and test the probability of two independent events through single\u0002outcome experiments."
+    },
+    {
+     "code": "6.SP.2.3",
+     "strand": "Statistics and Probability",
+     "text": "Use probability models to solve problems and make predictions, demonstrating proficiency in applying probability concepts to practical scenarios."
+    }
+   ]
+  }
+ },
+ "language": {
+  "guide": "Nunavut English Language Arts K–6 (2025)",
+  "strands": [
+   "Oral Communication",
+   "Reading",
+   "Writing and Representing"
+  ],
+  "grades": {
+   "k": [
+    {
+     "code": "K.OC.1.1",
+     "strand": "Oral Communication",
+     "text": "Follow simple directions in classroom routines and play-based experiences."
+    },
+    {
+     "code": "K.OC.1.2",
+     "strand": "Oral Communication",
+     "text": "Listen and observe when others speak or tell stories."
+    },
+    {
+     "code": "K.OC.1.3",
+     "strand": "Oral Communication",
+     "text": "Demonstrate awareness of sounds and patterns in spoken language through songs, chants, rhymes, and games."
+    },
+    {
+     "code": "K.OC.2.1",
+     "strand": "Oral Communication",
+     "text": "Begin to communicate thoughts, feelings, and information through non-verbal communication, gestures, and simple sentences."
+    },
+    {
+     "code": "K.OC.2.2",
+     "strand": "Oral Communication",
+     "text": "Explore new vocabulary during classroom routines and play-based experiences."
+    },
+    {
+     "code": "K.OC.2.3",
+     "strand": "Oral Communication",
+     "text": "Begin to share experiences, feelings, and/or ideas with others."
+    },
+    {
+     "code": "K.OC.2.4",
+     "strand": "Oral Communication",
+     "text": "Listen and respond to oral stories about self and family with curiosity, interest, and inquiry."
+    },
+    {
+     "code": "K.OC.3.1",
+     "strand": "Oral Communication",
+     "text": "Begin to collaborate and work together with peers during classroom routines and play\u0002based experiences."
+    },
+    {
+     "code": "K.OC.3.2",
+     "strand": "Oral Communication",
+     "text": "Build relationships and shared understanding through Inuuqatigiitsiarniq and Tunnganarniq."
+    },
+    {
+     "code": "K.R.1.1",
+     "strand": "Reading",
+     "text": "Begin to respond to texts by expressing feelings and simple observations."
+    },
+    {
+     "code": "K.R.1.2",
+     "strand": "Reading",
+     "text": "Begin to demonstrate basic comprehension strategies to make meaning from texts."
+    },
+    {
+     "code": "K.R.1.3",
+     "strand": "Reading",
+     "text": "Demonstrate Pilimmaksarniq by expressing interest in learning more about topics."
+    },
+    {
+     "code": "K.R.2.1",
+     "strand": "Reading",
+     "text": "Demonstrate awareness of concepts of print."
+    },
+    {
+     "code": "K.R.2.2",
+     "strand": "Reading",
+     "text": "Recognize and name letters of the alphabet, with support."
+    },
+    {
+     "code": "K.R.2.3",
+     "strand": "Reading",
+     "text": "Begin to recognize relationships between letters and sounds in printed text."
+    },
+    {
+     "code": "K.R.2.4",
+     "strand": "Reading",
+     "text": "Recognize high-frequency words in patterned texts."
+    },
+    {
+     "code": "K.R.2.5",
+     "strand": "Reading",
+     "text": "Experiment with expression during shared reading activities, with support."
+    },
+    {
+     "code": "K.R.3.1",
+     "strand": "Reading",
+     "text": "Demonstrate understanding that reading have a purpose."
+    },
+    {
+     "code": "K.R.3.2",
+     "strand": "Reading",
+     "text": "Recognize some text forms."
+    },
+    {
+     "code": "K.R.3.3",
+     "strand": "Reading",
+     "text": "Begin to talk about reading experiences."
+    },
+    {
+     "code": "K.W.1.1",
+     "strand": "Writing and Representing",
+     "text": "Demonstrate interest in writing and drawing for various purposes."
+    },
+    {
+     "code": "K.W.1.2",
+     "strand": "Writing and Representing",
+     "text": "Demonstrate awareness that writing and drawing can take different forms."
+    },
+    {
+     "code": "K.W.1.3",
+     "strand": "Writing and Representing",
+     "text": "Make choices in drawing and writing, with support."
+    },
+    {
+     "code": "K.W.2.1",
+     "strand": "Writing and Representing",
+     "text": "Talk about what to draw and write using modelled vocabulary."
+    },
+    {
+     "code": "K.W.2.2",
+     "strand": "Writing and Representing",
+     "text": "Attempt to write and draw to share simple messages with others."
+    },
+    {
+     "code": "K.W.2.3",
+     "strand": "Writing and Representing",
+     "text": "Develop an awareness that writing and drawing can be improved."
+    },
+    {
+     "code": "K.W.2.4",
+     "strand": "Writing and Representing",
+     "text": "Begin to talk about writing and drawing experiences using modelled vocabulary."
+    },
+    {
+     "code": "K.W.3.1",
+     "strand": "Writing and Representing",
+     "text": "Form letters of the alphabet, with support."
+    },
+    {
+     "code": "K.W.3.2",
+     "strand": "Writing and Representing",
+     "text": "Begin to write letters to approximate sounds heard in spoken language."
+    },
+    {
+     "code": "K.W.3.3",
+     "strand": "Writing and Representing",
+     "text": "Begin to write familiar words, with support."
+    },
+    {
+     "code": "K.W.3.4",
+     "strand": "Writing and Representing",
+     "text": "Demonstrate awareness of basic punctuation."
+    }
+   ],
+   "1": [
+    {
+     "code": "1.OC.1.1",
+     "strand": "Oral Communication",
+     "text": "Respond to directions in classroom routines using verbal and non-verbal responses."
+    },
+    {
+     "code": "1.OC.1.2",
+     "strand": "Oral Communication",
+     "text": "Demonstrate purposeful listening in familiar contexts through modelled behaviour."
+    },
+    {
+     "code": "1.OC.1.3",
+     "strand": "Oral Communication",
+     "text": "Demonstrate understanding of sounds and patterns in spoken language."
+    },
+    {
+     "code": "1.OC.2.1",
+     "strand": "Oral Communication",
+     "text": "Communicate thoughts, feelings, information, and opinions through non\u0002verbal communication, gestures, and complete sentences."
+    },
+    {
+     "code": "1.OC.2.2",
+     "strand": "Oral Communication",
+     "text": "Experiment with new vocabulary for different purposes in the classroom during guided activities."
+    },
+    {
+     "code": "1.OC.2.3",
+     "strand": "Oral Communication",
+     "text": "Share personal experiences, interests, and ideas with others using modelled vocabulary."
+    },
+    {
+     "code": "1.OC.2.4",
+     "strand": "Oral Communication",
+     "text": "Make connections to oral stories about family and community."
+    },
+    {
+     "code": "1.OC.3.1",
+     "strand": "Oral Communication",
+     "text": "Collaborate and work together with peers in small-group and whole-class contexts."
+    },
+    {
+     "code": "1.OC.3.2",
+     "strand": "Oral Communication",
+     "text": "Build relationships and shared understanding through Inuuqatigiitsiarniq and Tunnganarniq."
+    },
+    {
+     "code": "1.R.1.1",
+     "strand": "Reading",
+     "text": "Respond to texts by expressing feelings, questions, and simple observations."
+    },
+    {
+     "code": "1.R.1.2",
+     "strand": "Reading",
+     "text": "Demonstrate basic comprehension strategies to make meaning from texts, with support."
+    },
+    {
+     "code": "1.R.1.3",
+     "strand": "Reading",
+     "text": "Explore decisions made by authors or text creators during guided classroom activities."
+    },
+    {
+     "code": "1.R.1.4",
+     "strand": "Reading",
+     "text": "Demonstrate Pilimmaksarniq by asking questions."
+    },
+    {
+     "code": "1.R.2.1",
+     "strand": "Reading",
+     "text": "Apply concepts of print during guided reading activities."
+    },
+    {
+     "code": "1.R.2.2",
+     "strand": "Reading",
+     "text": "Identify all uppercase and lowercase letters of the alphabet."
+    },
+    {
+     "code": "1.R.2.3",
+     "strand": "Reading",
+     "text": "Demonstrate understanding of letter-sound relationships and patterns."
+    },
+    {
+     "code": "1.R.2.4",
+     "strand": "Reading",
+     "text": "Identify personally significant words and high-frequency words in texts."
+    },
+    {
+     "code": "1.R.2.5",
+     "strand": "Reading",
+     "text": "Begin to use basic punctuation to make meaning from printed text."
+    },
+    {
+     "code": "1.R.3.1",
+     "strand": "Reading",
+     "text": "Identify purposes for reading in daily life through modelled behaviour."
+    },
+    {
+     "code": "1.R.3.2",
+     "strand": "Reading",
+     "text": "Identify text forms and text features in familiar texts."
+    },
+    {
+     "code": "1.R.3.3",
+     "strand": "Reading",
+     "text": "Talk about reading experiences during guided activities."
+    },
+    {
+     "code": "1.W.1.1",
+     "strand": "Writing and Representing",
+     "text": "Begin to create texts for different purposes using modelled vocabulary."
+    },
+    {
+     "code": "1.W.1.2",
+     "strand": "Writing and Representing",
+     "text": "Explore a variety of text forms."
+    },
+    {
+     "code": "1.W.1.3",
+     "strand": "Writing and Representing",
+     "text": "Experiment with word choice and design."
+    },
+    {
+     "code": "1.W.2.1",
+     "strand": "Writing and Representing",
+     "text": "Begin to plan and develop ideas for writing and representing."
+    },
+    {
+     "code": "1.W.2.2",
+     "strand": "Writing and Representing",
+     "text": "Produce texts about familiar topics and experiences, and to tell stories."
+    },
+    {
+     "code": "1.W.2.3",
+     "strand": "Writing and Representing",
+     "text": "Begin to identify ways to improve the clarity of texts."
+    },
+    {
+     "code": "1.W.2.4",
+     "strand": "Writing and Representing",
+     "text": "Talk about writing and representing experiences using modelled vocabulary."
+    },
+    {
+     "code": "1.W.3.1",
+     "strand": "Writing and Representing",
+     "text": "Write most letters of the alphabet legibly, including uppercase and lowercase letters."
+    },
+    {
+     "code": "1.W.3.2",
+     "strand": "Writing and Representing",
+     "text": "Use knowledge of letter-sound relationships to spell words."
+    },
+    {
+     "code": "1.W.3.3",
+     "strand": "Writing and Representing",
+     "text": "Begin to write simple and complete sentences with support."
+    },
+    {
+     "code": "1.W.3.4",
+     "strand": "Writing and Representing",
+     "text": "Attempt to use basic punctuation and capitalization."
+    }
+   ],
+   "2": [
+    {
+     "code": "2.OC.1.1",
+     "strand": "Oral Communication",
+     "text": "Respond to oral texts and directions through appropriate verbal responses, non-verbal communication, and gestures in familiar contexts."
+    },
+    {
+     "code": "2.OC.1.2",
+     "strand": "Oral Communication",
+     "text": "Demonstrate purposeful listening in familiar contexts."
+    },
+    {
+     "code": "2.OC.1.3",
+     "strand": "Oral Communication",
+     "text": "Demonstrates phonological awareness by identifying sounds and patterns in spoken language."
+    },
+    {
+     "code": "2.OC.2.1",
+     "strand": "Oral Communication",
+     "text": "Communicate thoughts, feelings, information, and opinions through well\u0002formed sentences."
+    },
+    {
+     "code": "2.OC.2.2",
+     "strand": "Oral Communication",
+     "text": "Begin to incorporate new vocabulary for different purposes in the classroom."
+    },
+    {
+     "code": "2.OC.2.3",
+     "strand": "Oral Communication",
+     "text": "Begin to use simple visual aids to make small-group and whole-class oral presentations."
+    },
+    {
+     "code": "2.OC.2.4",
+     "strand": "Oral Communication",
+     "text": "Investigate ways in which oral stories are important to their community."
+    },
+    {
+     "code": "2.OC.3.1",
+     "strand": "Oral Communication",
+     "text": "Collaborate and work together with peers to solve problems in a variety of group contexts."
+    },
+    {
+     "code": "2.OC.3.2",
+     "strand": "Oral Communication",
+     "text": "Build relationships and shared understanding through Inuuqatigiitsiarniq and Tunnganarniq."
+    },
+    {
+     "code": "2.R.1.1",
+     "strand": "Reading",
+     "text": "Respond to a variety of texts by expressing feelings, questions, opinions, and observations."
+    },
+    {
+     "code": "2.R.1.2",
+     "strand": "Reading",
+     "text": "Use comprehension strategies to make inferences and support understanding during and after reading."
+    },
+    {
+     "code": "2.R.1.3",
+     "strand": "Reading",
+     "text": "Compare ways authors or text creators represent similar topics, themes, or relationships."
+    },
+    {
+     "code": "2.R.1.4",
+     "strand": "Reading",
+     "text": "Demonstrate Pilimmaksarniq by seeking information on topics of personal interest."
+    },
+    {
+     "code": "2.R.2.1",
+     "strand": "Reading",
+     "text": "Use modelled strategies to read familiar and unfamiliar words."
+    },
+    {
+     "code": "2.R.2.2",
+     "strand": "Reading",
+     "text": "Demonstrate understanding of familiar word structures such as prefixes, suffixes, homophones, and homographs."
+    },
+    {
+     "code": "2.R.2.3",
+     "strand": "Reading",
+     "text": "Use punctuation to draw meaning from printed text."
+    },
+    {
+     "code": "2.R.2.4",
+     "strand": "Reading",
+     "text": "Attempt to read out loud with appropriate tone, expression, and intonation."
+    },
+    {
+     "code": "2.R.3.1",
+     "strand": "Reading",
+     "text": "Begin to make connections between text forms and their purposes for reading."
+    },
+    {
+     "code": "2.R.3.2",
+     "strand": "Reading",
+     "text": "Identify ways in which structure and organization of the text help with understanding and clarity, with support."
+    },
+    {
+     "code": "2.R.3.3",
+     "strand": "Reading",
+     "text": "Begin to reflect on reading strengths and set reading goals based on co-constructed criteria."
+    },
+    {
+     "code": "2.W.1.1",
+     "strand": "Writing and Representing",
+     "text": "Create texts for daily life purposes and for familiar audiences."
+    },
+    {
+     "code": "2.W.1.2",
+     "strand": "Writing and Representing",
+     "text": "Begin to select text forms for different purposes using a co-constructed criteria."
+    },
+    {
+     "code": "2.W.1.3",
+     "strand": "Writing and Representing",
+     "text": "Explore different ways to express feelings or attitudes in texts with support."
+    },
+    {
+     "code": "2.W.2.1",
+     "strand": "Writing and Representing",
+     "text": "Plan and develop ideas for writing and representing, with support"
+    },
+    {
+     "code": "2.W.2.2",
+     "strand": "Writing and Representing",
+     "text": "Produce texts about topics, experiences, and to tell stories, including supporting details."
+    },
+    {
+     "code": "2.W.2.3",
+     "strand": "Writing and Representing",
+     "text": "Identify ways to improve meaning of a text through a revising and editing process."
+    },
+    {
+     "code": "2.W.2.4",
+     "strand": "Writing and Representing",
+     "text": "Publish self-selected texts and discuss the writing process with support."
+    },
+    {
+     "code": "2.W.3.1",
+     "strand": "Writing and Representing",
+     "text": "Write all letters of the alphabet legibly, including uppercase and lowercase letters."
+    },
+    {
+     "code": "2.W.3.2",
+     "strand": "Writing and Representing",
+     "text": "Demonstrate some spelling conventions by using various reference tools."
+    },
+    {
+     "code": "2.W.3.3",
+     "strand": "Writing and Representing",
+     "text": "Experiment with writing sentences that vary in structure and length, through modelled activities."
+    },
+    {
+     "code": "2.W.3.4",
+     "strand": "Writing and Representing",
+     "text": "Use basic punctuation and capitalization to support meaning in writing."
+    }
+   ],
+   "3": [
+    {
+     "code": "3.OC.1.1",
+     "strand": "Oral Communication",
+     "text": "Respond to oral texts and directions in a variety of contexts through appropriate verbal responses, non-verbal communication, and gestures."
+    },
+    {
+     "code": "3.OC.1.2",
+     "strand": "Oral Communication",
+     "text": "Use familiar listening strategies in social and academic contexts."
+    },
+    {
+     "code": "3.OC.2.1",
+     "strand": "Oral Communication",
+     "text": "Communicate thoughts, ideas, information, and opinions, including supporting details."
+    },
+    {
+     "code": "3.OC.2.2",
+     "strand": "Oral Communication",
+     "text": "Incorporate new vocabulary to explore, compare, inquire, and describe during guided classroom activities."
+    },
+    {
+     "code": "3.OC.2.3",
+     "strand": "Oral Communication",
+     "text": "Deliver small-group and whole-class oral presentations using co-constructed criteria."
+    },
+    {
+     "code": "3.OC.2.4",
+     "strand": "Oral Communication",
+     "text": "Investigate the ways in which Elders and other knowledge holders share their stories."
+    },
+    {
+     "code": "3.OC.3.1",
+     "strand": "Oral Communication",
+     "text": "Collaborate and work together with peers to solve problems and complete group tasks."
+    },
+    {
+     "code": "3.OC.3.2",
+     "strand": "Oral Communication",
+     "text": "Build relationships and shared understanding through Inuuqatigiitsiarniq and Tunnganarniq."
+    },
+    {
+     "code": "3.R.1.1",
+     "strand": "Reading",
+     "text": "Respond to a variety of texts by expressing feelings, questions, opinions, and observations using a variety of techniques."
+    },
+    {
+     "code": "3.R.1.2",
+     "strand": "Reading",
+     "text": "Use comprehension strategies to monitor and support understanding before, during, and after reading."
+    },
+    {
+     "code": "3.R.1.3",
+     "strand": "Reading",
+     "text": "Recognize different points of view in texts by identifying implicit and explicit messaging."
+    },
+    {
+     "code": "3.R.1.4",
+     "strand": "Reading",
+     "text": "Demonstrate Pilimmaksarniq by expanding knowledge on topics of personal interest."
+    },
+    {
+     "code": "3.R.2.1",
+     "strand": "Reading",
+     "text": "Apply word-solving strategies to read unfamiliar words."
+    },
+    {
+     "code": "3.R.2.2",
+     "strand": "Reading",
+     "text": "Examines various word structures such as prefixes and suffixes, homophones and homographs to expand understanding."
+    },
+    {
+     "code": "3.R.2.3",
+     "strand": "Reading",
+     "text": "Use punctuation to support comprehension of texts."
+    },
+    {
+     "code": "3.R.2.4",
+     "strand": "Reading",
+     "text": "Read out loud with appropriate expression and pacing."
+    },
+    {
+     "code": "3.R.3.1",
+     "strand": "Reading",
+     "text": "Make connections between text forms and their purposes for reading."
+    },
+    {
+     "code": "3.R.3.2",
+     "strand": "Reading",
+     "text": "Examine how text features and text structures organize information and ideas in texts focusing on descriptive and figurative language."
+    },
+    {
+     "code": "3.R.3.3",
+     "strand": "Reading",
+     "text": "Reflect on reading strengths and set reading goals using co-constructed criteria and rubrics."
+    },
+    {
+     "code": "3.W.1.1",
+     "strand": "Writing and Representing",
+     "text": "Create texts for familiar purposes by making choices in writing that reflect different audiences."
+    },
+    {
+     "code": "3.W.1.2",
+     "strand": "Writing and Representing",
+     "text": "Select specific text forms for different purposes using co-constructed criteria and rubrics."
+    },
+    {
+     "code": "3.W.1.3",
+     "strand": "Writing and Representing",
+     "text": "Begin to develop a voice in texts to express feelings or attitudes using various language structures."
+    },
+    {
+     "code": "3.W.2.1",
+     "strand": "Writing and Representing",
+     "text": "Use modelled planning strategies to develop and organize ideas for writing and representing."
+    },
+    {
+     "code": "3.W.2.2",
+     "strand": "Writing and Representing",
+     "text": "Produce organized texts about topics, experiences, and to tell stories using various language structures."
+    },
+    {
+     "code": "3.W.2.3",
+     "strand": "Writing and Representing",
+     "text": "Develop revising and editing skills to improve their own texts using co-constructed criteria and rubrics."
+    },
+    {
+     "code": "3.W.2.4",
+     "strand": "Writing and Representing",
+     "text": "Publish self-selected texts and share them with an audience, including supporting details."
+    },
+    {
+     "code": "3.W.3.1",
+     "strand": "Writing and Representing",
+     "text": "Write most familiar words with conventional spelling using various reference tools with limited support."
+    },
+    {
+     "code": "3.W.3.2",
+     "strand": "Writing and Representing",
+     "text": "Write sentences of varied structure and length with limited support."
+    },
+    {
+     "code": "3.W.3.3",
+     "strand": "Writing and Representing",
+     "text": "Use punctuation and capitalization to support meaning in writing."
+    }
+   ],
+   "4": [
+    {
+     "code": "4.OC.1.1",
+     "strand": "Oral Communication",
+     "text": "Listen for information and details important to the text or task."
+    },
+    {
+     "code": "4.OC.1.2",
+     "strand": "Oral Communication",
+     "text": "Use listening strategies in social and academic contexts."
+    },
+    {
+     "code": "4.OC.2.1",
+     "strand": "Oral Communication",
+     "text": "Communicate thoughts, ideas, and opinions, including key information and details."
+    },
+    {
+     "code": "4.OC.2.2",
+     "strand": "Oral Communication",
+     "text": "Use vocabulary appropriate for the purpose and audience of the message."
+    },
+    {
+     "code": "4.OC.2.3",
+     "strand": "Oral Communication",
+     "text": "Plan, rehearse, and deliver oral presentations using co-constructed criteria and rubrics."
+    },
+    {
+     "code": "4.OC.2.4",
+     "strand": "Oral Communication",
+     "text": "Examine the purposes of oral stories in various communities."
+    },
+    {
+     "code": "4.OC.3.1",
+     "strand": "Oral Communication",
+     "text": "Collaborate and work together with peers to complete tasks and projects."
+    },
+    {
+     "code": "4.OC.3.2",
+     "strand": "Oral Communication",
+     "text": "Build relationships and shared understanding through Inuuqatigiitsiarniq and Tunnganarniq."
+    },
+    {
+     "code": "4.R.1.1",
+     "strand": "Reading",
+     "text": "Respond to texts by reflecting on ideas and information in the texts."
+    },
+    {
+     "code": "4.R.1.2",
+     "strand": "Reading",
+     "text": "Use comprehension strategies before, during, and after reading to monitor understanding and confirm meaning."
+    },
+    {
+     "code": "4.R.1.3",
+     "strand": "Reading",
+     "text": "Determine ways in which perspective may influence understanding by analyzing implicit and explicit messaging of a text."
+    },
+    {
+     "code": "4.R.1.4",
+     "strand": "Reading",
+     "text": "Demonstrate Pilimmaksarniq by seeking information and sharing it with others."
+    },
+    {
+     "code": "4.R.2.1",
+     "strand": "Reading",
+     "text": "Read texts using word-solving strategies."
+    },
+    {
+     "code": "4.R.2.2",
+     "strand": "Reading",
+     "text": "Use complex punctuation to support comprehension of texts."
+    },
+    {
+     "code": "4.R.2.3",
+     "strand": "Reading",
+     "text": "Read out loud with appropriate expression, pacing, and phrasing."
+    },
+    {
+     "code": "4.R.3.1",
+     "strand": "Reading",
+     "text": "Begin to select texts for specific purposes using co-constructed criteria and rubrics."
+    },
+    {
+     "code": "4.R.3.2",
+     "strand": "Reading",
+     "text": "Use familiar text features and text structures to access information and support understanding."
+    },
+    {
+     "code": "4.R.3.3",
+     "strand": "Reading",
+     "text": "Reflect on reading strengths and seek ways to improve using co-constructed criteria and rubrics."
+    },
+    {
+     "code": "4.W.1.1",
+     "strand": "Writing and Representing",
+     "text": "Create texts using information and details that are relevant and purposeful for the intended audience."
+    },
+    {
+     "code": "4.W.1.2",
+     "strand": "Writing and Representing",
+     "text": "Demonstrate some text features and text structures based on the text form."
+    },
+    {
+     "code": "4.W.1.3",
+     "strand": "Writing and Representing",
+     "text": "Develop a voice by writing and representing texts that express feelings or attitudes."
+    },
+    {
+     "code": "4.W.2.1",
+     "strand": "Writing and Representing",
+     "text": "Use some planning strategies to develop and organize ideas for writing and representing."
+    },
+    {
+     "code": "4.W.2.2",
+     "strand": "Writing and Representing",
+     "text": "Produce well-organized texts about topics, experiences, and to tell stories using co\u0002constructed criteria with limited support."
+    },
+    {
+     "code": "4.W.2.3",
+     "strand": "Writing and Representing",
+     "text": "Use revising and editing skills to enhance their own texts using co-constructed"
+    },
+    {
+     "code": "4.W.2.4",
+     "strand": "Writing and Representing",
+     "text": "Publish self-selected texts and present them to an audience using co-constructed criteria to self-evaluate."
+    },
+    {
+     "code": "4.W.3.1",
+     "strand": "Writing and Representing",
+     "text": "Use spelling strategies to spell unfamiliar words."
+    },
+    {
+     "code": "4.W.3.2",
+     "strand": "Writing and Representing",
+     "text": "Write a variety of sentence structures and short paragraphs using transition words and phrases."
+    },
+    {
+     "code": "4.W.3.3",
+     "strand": "Writing and Representing",
+     "text": "Use appropriate punctuation and capitalization to communicate effectively in writing."
+    }
+   ],
+   "5": [
+    {
+     "code": "5.OC.1.1",
+     "strand": "Oral Communication",
+     "text": "Listen for and respond appropriately to specific information and details important to the text or task."
+    },
+    {
+     "code": "5.OC.1.2",
+     "strand": "Oral Communication",
+     "text": "Select and use listening strategies in social and academic contexts."
+    },
+    {
+     "code": "5.OC.2.1",
+     "strand": "Oral Communication",
+     "text": "Communicate detailed thoughts, ideas, information, and opinions effectively."
+    },
+    {
+     "code": "5.OC.2.2",
+     "strand": "Oral Communication",
+     "text": "Select vocabulary that is appropriate to the purpose and audience of the message."
+    },
+    {
+     "code": "5.OC.2.3",
+     "strand": "Oral Communication",
+     "text": "Plan, rehearse, and deliver organized oral presentations with consideration for purpose and audience."
+    },
+    {
+     "code": "5.OC.2.4",
+     "strand": "Oral Communication",
+     "text": "Retell or reimagine familiar stories using oral storytelling processes and appropriate vocabulary."
+    },
+    {
+     "code": "5.OC.3.1",
+     "strand": "Oral Communication",
+     "text": "Collaborate and work together with peers to make decisions and complete tasks and projects."
+    },
+    {
+     "code": "5.OC.3.2",
+     "strand": "Oral Communication",
+     "text": "Build relationships and shared understanding through Inuuqatigiitsiarniq and Tunnganarniq."
+    },
+    {
+     "code": "5.R.1.1",
+     "strand": "Reading",
+     "text": "Reflect on the ideas, information, and perspectives presented in different texts."
+    },
+    {
+     "code": "5.R.1.2",
+     "strand": "Reading",
+     "text": "Select and apply comprehension strategies to monitor and extend understanding."
+    },
+    {
+     "code": "5.R.1.3",
+     "strand": "Reading",
+     "text": "Recognize bias and stereotyping within texts from different perspectives."
+    },
+    {
+     "code": "5.R.1.4",
+     "strand": "Reading",
+     "text": "Demonstrate Pilimmaksarniq by summarizing information and sharing it with others."
+    },
+    {
+     "code": "5.R.2.1",
+     "strand": "Reading",
+     "text": "Read texts using a variety of word-solving strategies and co-constructed criteria."
+    },
+    {
+     "code": "5.R.2.2",
+     "strand": "Reading",
+     "text": "Determine how complex punctuation supports meaning in texts."
+    },
+    {
+     "code": "5.R.2.3",
+     "strand": "Reading",
+     "text": "Begin to sustain reading of extended texts using appropriate expression, intonation, and stress."
+    },
+    {
+     "code": "5.R.3.1",
+     "strand": "Reading",
+     "text": "Select and use texts for specific purposes using co-constructed criteria and guidelines."
+    },
+    {
+     "code": "5.R.3.2",
+     "strand": "Reading",
+     "text": "Use a variety of text features and text structures to enhance understanding of texts using language devices such as figurative language."
+    },
+    {
+     "code": "5.R.3.3",
+     "strand": "Reading",
+     "text": "Evaluate reading strategies and seek ways to improve using a co-constructed criteria."
+    },
+    {
+     "code": "5.W.1.1",
+     "strand": "Writing and Representing",
+     "text": "Make choices that reflect the purpose and audience of the text including relevant information and details."
+    },
+    {
+     "code": "5.W.1.2",
+     "strand": "Writing and Representing",
+     "text": "Use appropriate text structures and text features to create a variety of text forms."
+    },
+    {
+     "code": "5.W.1.3",
+     "strand": "Writing and Representing",
+     "text": "Develop a voice by choosing words, images, or tones suitable for different audiences using co-constructed guidelines."
+    },
+    {
+     "code": "5.W.2.1",
+     "strand": "Writing and Representing",
+     "text": "Use planning strategies to develop and organize ideas for writing and representing."
+    },
+    {
+     "code": "5.W.2.2",
+     "strand": "Writing and Representing",
+     "text": "Develop the focus and clarity of texts through drafting by referring to co\u0002constructed criteria and guidelines."
+    },
+    {
+     "code": "5.W.2.3",
+     "strand": "Writing and Representing",
+     "text": "Use a variety of revising and editing skills such as constructive feedback and self\u0002reflections to enhance the quality of texts."
+    },
+    {
+     "code": "5.W.2.4",
+     "strand": "Writing and Representing",
+     "text": "Publish self-selected texts and include elements of effective presentation to enhance the final product."
+    },
+    {
+     "code": "5.W.3.1",
+     "strand": "Writing and Representing",
+     "text": "Use spelling strategies to support communication in writing."
+    },
+    {
+     "code": "5.W.3.2",
+     "strand": "Writing and Representing",
+     "text": "Write a variety of sentence structures, including paragraphs that follow structure and flow."
+    },
+    {
+     "code": "5.W.3.3",
+     "strand": "Writing and Representing",
+     "text": "Use appropriate punctuation to enhance meaning."
+    }
+   ],
+   "6": [
+    {
+     "code": "6.OC.1.1",
+     "strand": "Oral Communication",
+     "text": "Use key information from complex oral texts to accomplish tasks and solve problems."
+    },
+    {
+     "code": "6.OC.1.2",
+     "strand": "Oral Communication",
+     "text": "Select and use listening strategies in various contexts adjusting active listening based on the situation."
+    },
+    {
+     "code": "6.OC.2.1",
+     "strand": "Oral Communication",
+     "text": "Communicate effectively in a variety of purposeful ways while acknowledging different points of view."
+    },
+    {
+     "code": "6.OC.2.2",
+     "strand": "Oral Communication",
+     "text": "Plan, rehearse, and deliver organized oral presentations for various purposes and audiences."
+    },
+    {
+     "code": "6.OC.2.3",
+     "strand": "Oral Communication",
+     "text": "Create or reimagine oral stories in an oral storytelling process by organizing events in a sequence."
+    },
+    {
+     "code": "6.OC.3.1",
+     "strand": "Oral Communication",
+     "text": "Collaborate and work together with peers through collaborative decision-making and consensus building."
+    },
+    {
+     "code": "6.OC.3.2",
+     "strand": "Oral Communication",
+     "text": "Build relationships and shared understanding through Inuuqatigiitsiarniq and Tunnganarniq."
+    },
+    {
+     "code": "6.R.1.1",
+     "strand": "Reading",
+     "text": "Reflect on the ideas, information, and perspectives presented within, between, and beyond texts."
+    },
+    {
+     "code": "6.R.1.2",
+     "strand": "Reading",
+     "text": "Reflect on comprehension strategies used to monitor and extend understanding."
+    },
+    {
+     "code": "6.R.1.3",
+     "strand": "Reading",
+     "text": "Identify bias and stereotyping within texts from different perspectives, considering how personal and social context can shape one’s understanding."
+    },
+    {
+     "code": "6.R.1.4",
+     "strand": "Reading",
+     "text": "Demonstrate Pilimmaksarniq by synthesizing information from various sources."
+    },
+    {
+     "code": "6.R.2.1",
+     "strand": "Reading",
+     "text": "Read more complex texts using a variety of word-solving, self-monitoring, and self\u0002correcting strategies."
+    },
+    {
+     "code": "6.R.2.2",
+     "strand": "Reading",
+     "text": "Sustain reading of extended texts using appropriate intonation, expression, and stress."
+    },
+    {
+     "code": "6.R.3.1",
+     "strand": "Reading",
+     "text": "Select and use a variety of texts from different genres for specific purposes."
+    },
+    {
+     "code": "6.R.3.2",
+     "strand": "Reading",
+     "text": "Examine a variety of text features and text structures to enhance understanding of various genres."
+    },
+    {
+     "code": "6.R.3.3",
+     "strand": "Reading",
+     "text": "Evaluate reading strategies and seek ways to improve using co-constructed criteria and self-evaluation rubrics."
+    },
+    {
+     "code": "6.W.1.1",
+     "strand": "Writing and Representing",
+     "text": "Make choices in language and form that reflect the purpose and audience of the text."
+    },
+    {
+     "code": "6.W.1.2",
+     "strand": "Writing and Representing",
+     "text": "Use appropriate text structures and text features to create a variety of text forms."
+    },
+    {
+     "code": "6.W.1.3",
+     "strand": "Writing and Representing",
+     "text": "Establish a voice in texts creatively by experimenting with imagery, similes, alliteration, and metaphor."
+    },
+    {
+     "code": "6.W.2.1",
+     "strand": "Writing and Representing",
+     "text": "Select and use a variety of planning strategies to develop and organize ideas for writing and representing."
+    },
+    {
+     "code": "6.W.2.2",
+     "strand": "Writing and Representing",
+     "text": "Develop texts with a clear and purposeful focus through drafting and following self\u0002evaluation guidelines."
+    },
+    {
+     "code": "6.W.2.3",
+     "strand": "Writing and Representing",
+     "text": "Use revising and editing processes to enhance the quality, clarity, and effectiveness of texts."
+    },
+    {
+     "code": "6.W.2.4",
+     "strand": "Writing and Representing",
+     "text": "Publish self-selected texts and include elements of effective presentation adjusted according to the audience."
+    },
+    {
+     "code": "6.W.3.1",
+     "strand": "Writing and Representing",
+     "text": "Apply a variety of spelling strategies independently to spell unfamiliar and complex words, adding clarity to writing."
+    },
+    {
+     "code": "6.W.3.2",
+     "strand": "Writing and Representing",
+     "text": "Write a variety of sentence structures and paragraphs using appropriate sequencing and supporting details."
+    },
+    {
+     "code": "6.W.3.3",
+     "strand": "Writing and Representing",
+     "text": "Use appropriate punctuation consistently to enhance meaning."
+    }
+   ]
+  }
+ },
+ "science": {
+  "guide": "Nunavut Science K–6 (2025)",
+  "strands": [
+   "The Material World",
+   "Physics",
+   "Earth and Space",
+   "Life Sciences"
+  ],
+  "grades": {
+   "k": [
+    {
+     "code": "K.MW.1.1",
+     "strand": "The Material World",
+     "text": "Explore the properties of materials that they can see, hear, touch, smell, and taste."
+    },
+    {
+     "code": "K.MW.1.2",
+     "strand": "The Material World",
+     "text": "Identify familiar materials found in commonly used objects."
+    },
+    {
+     "code": "K.MW.1.3",
+     "strand": "The Material World",
+     "text": "Share ways they can reduce waste of materials."
+    },
+    {
+     "code": "K.MW.1.4",
+     "strand": "The Material World",
+     "text": "Determine how to safely engage with a variety of materials through sensory exploration."
+    },
+    {
+     "code": "K.P.1.1",
+     "strand": "Physics",
+     "text": "Distinguish between a push and a pull."
+    },
+    {
+     "code": "K.P.1.2",
+     "strand": "Physics",
+     "text": "Observe and describe the ways objects move."
+    },
+    {
+     "code": "K.P.1.3",
+     "strand": "Physics",
+     "text": "Explore how the properties of materials (shape, size, and weight) affect how they move."
+    },
+    {
+     "code": "K.ES.1.1",
+     "strand": "Earth and Space",
+     "text": "Identify the difference between night and day by describing what can be seen in the sky."
+    },
+    {
+     "code": "K.ES.1.2",
+     "strand": "Earth and Space",
+     "text": "Observe patterns and cycles in the sky."
+    },
+    {
+     "code": "K.ES.1.3",
+     "strand": "Earth and Space",
+     "text": "Observe and describe local weather using vocabulary such as: cold, warm, hot, cloudy, sunny, snowing, blizzard, white out, and windy."
+    },
+    {
+     "code": "K.ES.1.4",
+     "strand": "Earth and Space",
+     "text": "Explore the impact of changes in daily weather on animals, plants, and humans."
+    },
+    {
+     "code": "K.ES.1.5",
+     "strand": "Earth and Space",
+     "text": "Identify ways in which observing our daily weather can help keep ourselves safe and comfortable."
+    },
+    {
+     "code": "K.ES.1.6",
+     "strand": "Earth and Space",
+     "text": "Share traditional stories, knowledge, practices, and routines relating to local weather."
+    },
+    {
+     "code": "K.LS.1.1",
+     "strand": "Life Sciences",
+     "text": "Identify and explore the differences between living and non-living things."
+    },
+    {
+     "code": "K.LS.1.2",
+     "strand": "Life Sciences",
+     "text": "Identify local plants and animals."
+    },
+    {
+     "code": "K.LS.1.3",
+     "strand": "Life Sciences",
+     "text": "Describe the basic needs of plants and animals."
+    },
+    {
+     "code": "K.LS.1.4",
+     "strand": "Life Sciences",
+     "text": "Investigate uses for local plants and animals."
+    },
+    {
+     "code": "K.LS.1.5",
+     "strand": "Life Sciences",
+     "text": "Share traditional stories, knowledge, practices, and routines related to respecting plants and animals."
+    }
+   ],
+   "1": [
+    {
+     "code": "1.MW.1.1",
+     "strand": "The Material World",
+     "text": "Explore and describe characteristics of materials using sensory observations. Use appropriate vocabulary related to their investigations."
+    },
+    {
+     "code": "1.MW.1.2",
+     "strand": "The Material World",
+     "text": "Classify objects based on developing knowledge of human made and natural materials."
+    },
+    {
+     "code": "1.MW.1.3",
+     "strand": "The Material World",
+     "text": "Investigate how humans and animals use materials from the land to create stable structures."
+    },
+    {
+     "code": "1.MW.1.4",
+     "strand": "The Material World",
+     "text": "Use the design process to construct a stable structure by selecting, combining, joining, and shaping materials."
+    },
+    {
+     "code": "1.MW.1.5",
+     "strand": "The Material World",
+     "text": "Explore with peers how they can use and reuse different materials."
+    },
+    {
+     "code": "1.P.1.1",
+     "strand": "Physics",
+     "text": "Identify the role or effect that force plays in our daily lives."
+    },
+    {
+     "code": "1.P.1.2",
+     "strand": "Physics",
+     "text": "Recognize and understand the different types of forces we encounter and experience in everyday activities."
+    },
+    {
+     "code": "1.P.1.3",
+     "strand": "Physics",
+     "text": "Experiment and investigate the difference between contact and non-contact forces."
+    },
+    {
+     "code": "1.P.1.4",
+     "strand": "Physics",
+     "text": "Investigate factors that affect the movement of different objects."
+    },
+    {
+     "code": "1.ES.1.1",
+     "strand": "Earth and Space",
+     "text": "Compare and represent daily and seasonal changes in natural phenomena through observing, measuring, sequencing, and recording."
+    },
+    {
+     "code": "1.ES.1.2",
+     "strand": "Earth and Space",
+     "text": "Examine and understand the relationship between the seasons and their effects on weather patterns."
+    },
+    {
+     "code": "1.ES.1.3",
+     "strand": "Earth and Space",
+     "text": "Investigate ways in which plants, animals, and humans adapt to daily and seasonal changes."
+    },
+    {
+     "code": "1.ES.1.4",
+     "strand": "Earth and Space",
+     "text": "Share traditional stories, customs, and routines relating to the seasons."
+    },
+    {
+     "code": "1.LS.1.1",
+     "strand": "Life Sciences",
+     "text": "Identify the physical characteristics of various plants and animals and explain how these characteristics help them meet their basic needs."
+    },
+    {
+     "code": "1.LS.1.2",
+     "strand": "Life Sciences",
+     "text": "Identify and describe the local habitats of animals and plants."
+    },
+    {
+     "code": "1.LS.1.3",
+     "strand": "Life Sciences",
+     "text": "Investigate and explore different features and adaptations of animals and how they are used to survive in different environments."
+    },
+    {
+     "code": "1.LS.1.4",
+     "strand": "Life Sciences",
+     "text": "Investigate and explore different features of plants and how they are used to survive in different environments."
+    },
+    {
+     "code": "1.LS.1.5",
+     "strand": "Life Sciences",
+     "text": "Investigate the relationships between plants, animals, and humans."
+    },
+    {
+     "code": "1.LS.1.6",
+     "strand": "Life Sciences",
+     "text": "Share traditional stories, knowledge, practices, and routines relating to the parts of plants and animals."
+    }
+   ],
+   "2": [
+    {
+     "code": "2.MW.1.1",
+     "strand": "The Material World",
+     "text": "Explore and describe characteristics of materials using their sensory observations. Use appropriate vocabulary related to their investigations."
+    },
+    {
+     "code": "2.MW.1.2",
+     "strand": "The Material World",
+     "text": "Investigate and compare the effectiveness of different materials for building stable structures."
+    },
+    {
+     "code": "2.MW.1.3",
+     "strand": "The Material World",
+     "text": "Investigate the properties of common liquids, solids, and gases."
+    },
+    {
+     "code": "2.MW.1.4",
+     "strand": "The Material World",
+     "text": "Investigate and identify physical and chemical changes in different states of matter."
+    },
+    {
+     "code": "2.MW.1.5",
+     "strand": "The Material World",
+     "text": "Identify indicators of physical and chemical changes."
+    },
+    {
+     "code": "2.P.1.1",
+     "strand": "Physics",
+     "text": "Investigate the properties of light using the senses."
+    },
+    {
+     "code": "2.P.1.2",
+     "strand": "Physics",
+     "text": "Investigate the properties of sound using the senses."
+    },
+    {
+     "code": "2.P.1.3",
+     "strand": "Physics",
+     "text": "Investigate and identify natural and artificial sources of light and sound."
+    },
+    {
+     "code": "2.P.1.4",
+     "strand": "Physics",
+     "text": "Observe and describe the behaviour of light."
+    },
+    {
+     "code": "2.P.1.5",
+     "strand": "Physics",
+     "text": "Identify differences in tone, pitch, and volume when producing sounds."
+    },
+    {
+     "code": "2.P.1.6",
+     "strand": "Physics",
+     "text": "Analyze the advantages and risks associated with light and sound, including the negative effects of noise and light pollution."
+    },
+    {
+     "code": "2.ES.1.1",
+     "strand": "Earth and Space",
+     "text": "Identify sources of water in the natural and built environments."
+    },
+    {
+     "code": "2.ES.1.2",
+     "strand": "Earth and Space",
+     "text": "Examine the relationship between water and life."
+    },
+    {
+     "code": "2.ES.1.3",
+     "strand": "Earth and Space",
+     "text": "Describe the stages of the water cycle, including evaporation, condensation, precipitation, and collection."
+    },
+    {
+     "code": "2.ES.1.4",
+     "strand": "Earth and Space",
+     "text": "Investigate how seasonal changes to local water sources influence human activity."
+    },
+    {
+     "code": "2.ES.1.5",
+     "strand": "Earth and Space",
+     "text": "Demonstrate understanding of the importance of water conservation and use this developing knowledge to assess their personal and household uses of water, and create a plan to use water responsibly."
+    },
+    {
+     "code": "2.ES.1.6",
+     "strand": "Earth and Space",
+     "text": "Explore traditional stories, knowledge, practices, and routines relating to water."
+    },
+    {
+     "code": "2.LS.1.1",
+     "strand": "Life Sciences",
+     "text": "Describe and classify a wide range of animals according to various characteristics and behaviours."
+    },
+    {
+     "code": "2.LS.1.2",
+     "strand": "Life Sciences",
+     "text": "Describe and classify a wide range of plants according to various physical characteristics and traits."
+    },
+    {
+     "code": "2.LS.1.3",
+     "strand": "Life Sciences",
+     "text": "Compare the life cycles of animals and plants that have similar and different life cycles."
+    },
+    {
+     "code": "2.LS.1.4",
+     "strand": "Life Sciences",
+     "text": "Investigate the physical characteristics and behaviours of animals as they grow and develop."
+    },
+    {
+     "code": "2.LS.1.5",
+     "strand": "Life Sciences",
+     "text": "Investigate the physical changes in plants as they grow and develop."
+    },
+    {
+     "code": "2.LS.1.6",
+     "strand": "Life Sciences",
+     "text": "Share traditional stories, knowledge, practices, and routines relating to life cycles."
+    }
+   ],
+   "3": [
+    {
+     "code": "3.MW.1.1",
+     "strand": "The Material World",
+     "text": "Design experiments to demonstrate how matter has mass and takes up space."
+    },
+    {
+     "code": "3.MW.1.2",
+     "strand": "The Material World",
+     "text": "Apply the understanding of chemical and physical changes to demonstrate the conversion of mass from one form to another."
+    },
+    {
+     "code": "3.MW.1.3",
+     "strand": "The Material World",
+     "text": "Demonstrate through experiments that air has mass and takes up space like other states of matter."
+    },
+    {
+     "code": "3.MW.1.4",
+     "strand": "The Material World",
+     "text": "Demonstrate through experiments that liquids have mass and take up space like other states of matter."
+    },
+    {
+     "code": "3.MW.1.5",
+     "strand": "The Material World",
+     "text": "Demonstrate through experiments that solids have mass and take up space like other states of matter."
+    },
+    {
+     "code": "3.MW.1.6",
+     "strand": "The Material World",
+     "text": "Show how atoms are arranged and spaced in different states of matter, such as solids, liquids, and gases."
+    },
+    {
+     "code": "3.MW.1.7",
+     "strand": "The Material World",
+     "text": "Investigate the volume, shape, and mass of different states of matter through experiments."
+    },
+    {
+     "code": "3.P.1.1",
+     "strand": "Physics",
+     "text": "Explain how atoms move and interact at different levels of thermal energy, illustrating the changes in their movement as temperature varies."
+    },
+    {
+     "code": "3.P.1.2",
+     "strand": "Physics",
+     "text": "Design experiments to demonstrate the transfer of thermal energy through conduction, convection, and radiation."
+    },
+    {
+     "code": "3.P.1.3",
+     "strand": "Physics",
+     "text": "Investigate traditional ways of manipulating thermal energy for survival."
+    },
+    {
+     "code": "3.P.1.4",
+     "strand": "Physics",
+     "text": "Investigate and experiment how insulators and conductors are used to allow or stop the transfer of energy."
+    },
+    {
+     "code": "3.P.1.5",
+     "strand": "Physics",
+     "text": "Design experiments or models to demonstrate the transfer of kinetic energy."
+    },
+    {
+     "code": "3.P.1.6",
+     "strand": "Physics",
+     "text": "Investigate how light energy moves and changes directions."
+    },
+    {
+     "code": "3.P.1.7",
+     "strand": "Physics",
+     "text": "Investigate how sound energy moves and changes directions."
+    },
+    {
+     "code": "3.ES.1.1",
+     "strand": "Earth and Space",
+     "text": "Identify components and common uses of the Earth’s surface."
+    },
+    {
+     "code": "3.ES.1.2",
+     "strand": "Earth and Space",
+     "text": "Examine the physical properties of rocks."
+    },
+    {
+     "code": "3.ES.1.3",
+     "strand": "Earth and Space",
+     "text": "Explore and understand the process of rock formation and rock cycle."
+    },
+    {
+     "code": "3.ES.1.4",
+     "strand": "Earth and Space",
+     "text": "Examine types of landforms."
+    },
+    {
+     "code": "3.ES.1.5",
+     "strand": "Earth and Space",
+     "text": "Explain how climate affects the Earth’s surface, including its impact on permafrost."
+    },
+    {
+     "code": "3.ES.1.6",
+     "strand": "Earth and Space",
+     "text": "Investigate traditional stories, knowledge, and uses of rocks."
+    },
+    {
+     "code": "3.LS.1.1",
+     "strand": "Life Sciences",
+     "text": "Identify local habitats and biodiversity and compare it to other habitats around the world."
+    },
+    {
+     "code": "3.LS.1.2",
+     "strand": "Life Sciences",
+     "text": "Explore and compare how animals and plants from different habitats use the land to meet their needs."
+    },
+    {
+     "code": "3.LS.1.3",
+     "strand": "Life Sciences",
+     "text": "Consider how changes to a habitat can affect different plants and animals."
+    },
+    {
+     "code": "3.LS.1.4",
+     "strand": "Life Sciences",
+     "text": "Investigate the local migration patterns of Arctic animals, and explore ideas as to why these migration patterns have changed in recent years."
+    },
+    {
+     "code": "3.LS.1.5",
+     "strand": "Life Sciences",
+     "text": "Share traditional stories, knowledge, practices, and routines relating to habitats."
+    }
+   ],
+   "4": [
+    {
+     "code": "4.MW.1.1",
+     "strand": "The Material World",
+     "text": "Compare the properties of solids, liquids, and gases."
+    },
+    {
+     "code": "4.MW.1.2",
+     "strand": "The Material World",
+     "text": "Experiment with phase changes between solids, liquids, and gases such as evaporation and condensation, melting and freezing, evaporation and sublimation, etc."
+    },
+    {
+     "code": "4.MW.1.3",
+     "strand": "The Material World",
+     "text": "Explore and understand the concept of density in regards to different states of matter."
+    },
+    {
+     "code": "4.MW.1.4",
+     "strand": "The Material World",
+     "text": "Explain the relationship between density and heat."
+    },
+    {
+     "code": "4.MW.1.5",
+     "strand": "The Material World",
+     "text": "Examine the impacts of changing states of matter on the land and its impacts on daily life in the North."
+    },
+    {
+     "code": "4.P.1.1",
+     "strand": "Physics",
+     "text": "Identify and classify different forms of energy and their uses in daily life."
+    },
+    {
+     "code": "4.P.1.2",
+     "strand": "Physics",
+     "text": "Understand the law of conservation of energy and its applications in daily life."
+    },
+    {
+     "code": "4.P.1.3",
+     "strand": "Physics",
+     "text": "Demonstrate the law of the conservation of energy through energy transformations and apply knowledge of energy transformations to solve problems."
+    },
+    {
+     "code": "4.P.1.4",
+     "strand": "Physics",
+     "text": "Experiment with devices that transform one form of energy into another."
+    },
+    {
+     "code": "4.P.1.5",
+     "strand": "Physics",
+     "text": "Investigate common energy transformations."
+    },
+    {
+     "code": "4.P.1.6",
+     "strand": "Physics",
+     "text": "Demonstrate safety practices and protocols for working with different forms of energy."
+    },
+    {
+     "code": "4.P.1.7",
+     "strand": "Physics",
+     "text": "Investigate practices and opportunities for energy conservation."
+    },
+    {
+     "code": "4.ES.1.1",
+     "strand": "Earth and Space",
+     "text": "Investigate local and territorial uses of Earth’s natural resources."
+    },
+    {
+     "code": "4.ES.1.2",
+     "strand": "Earth and Space",
+     "text": "Compare and contrast renewable and non-renewable resources."
+    },
+    {
+     "code": "4.ES.1.3",
+     "strand": "Earth and Space",
+     "text": "Examine the properties of rocks and minerals, and their uses."
+    },
+    {
+     "code": "4.ES.1.4",
+     "strand": "Earth and Space",
+     "text": "Demonstrate the rock cycle."
+    },
+    {
+     "code": "4.ES.1.5",
+     "strand": "Earth and Space",
+     "text": "Investigate the impacts of mining on the land."
+    },
+    {
+     "code": "4.ES.1.6",
+     "strand": "Earth and Space",
+     "text": "Consider how our local environment affects how we live."
+    },
+    {
+     "code": "4.ES.1.7",
+     "strand": "Earth and Space",
+     "text": "Share traditional stories, knowledge, practices, and routines relating to resource conservation."
+    },
+    {
+     "code": "4.LS.1.1",
+     "strand": "Life Sciences",
+     "text": "Investigate the roles of a variety of plants and animals in the local ecosystem as producers, consumers, and decomposers."
+    },
+    {
+     "code": "4.LS.1.2",
+     "strand": "Life Sciences",
+     "text": "Construct food chains and webs to demonstrate the transfer of energy and show understanding of how all organisms are interconnected."
+    },
+    {
+     "code": "4.LS.1.3",
+     "strand": "Life Sciences",
+     "text": "Assess interdependent relationships in an environment and explore how changes to an ecosystem can affect different plants and animals."
+    },
+    {
+     "code": "4.LS.1.4",
+     "strand": "Life Sciences",
+     "text": "Share traditional stories, knowledge, practices, and routines relating to interconnectedness on the land."
+    }
+   ],
+   "5": [
+    {
+     "code": "5.MW.1.1",
+     "strand": "The Material World",
+     "text": "Identify the parts of a solution."
+    },
+    {
+     "code": "5.MW.1.2",
+     "strand": "The Material World",
+     "text": "Share examples of everyday solutions."
+    },
+    {
+     "code": "5.MW.1.3",
+     "strand": "The Material World",
+     "text": "Investigate factors that affect the solubility of substances in water."
+    },
+    {
+     "code": "5.MW.1.4",
+     "strand": "The Material World",
+     "text": "Compare the viscosity of various liquids."
+    },
+    {
+     "code": "5.MW.1.5",
+     "strand": "The Material World",
+     "text": "Apply techniques for the separation of solutions."
+    },
+    {
+     "code": "5.MW.1.6",
+     "strand": "The Material World",
+     "text": "Explain the effects of soluble and insoluble substances on the land."
+    },
+    {
+     "code": "5.P.1.1",
+     "strand": "Physics",
+     "text": "Distinguish between human-made machines and those found in nature."
+    },
+    {
+     "code": "5.P.1.2",
+     "strand": "Physics",
+     "text": "Experiment with simple machines to see how they function and identify levers, wedges, inclined planes, pulleys, screws, and wheels and axles in daily life."
+    },
+    {
+     "code": "5.P.1.3",
+     "strand": "Physics",
+     "text": "Design experiments to discern that using a machine lessens the amount of force required to complete a task."
+    },
+    {
+     "code": "5.P.1.4",
+     "strand": "Physics",
+     "text": "Investigate traditional tools and modern tools and identify which types of simple machines they are and what type of tasks they can achieve."
+    },
+    {
+     "code": "5.P.1.5",
+     "strand": "Physics",
+     "text": "Demonstrate ways to increase and decrease power."
+    },
+    {
+     "code": "5.P.1.6",
+     "strand": "Physics",
+     "text": "Design or improve machines to perform specific tasks."
+    },
+    {
+     "code": "5.P.1.7",
+     "strand": "Physics",
+     "text": "Begin to develop a basic understanding of units of measurement using SI and Imperial units."
+    },
+    {
+     "code": "5.ES.1.1",
+     "strand": "Earth and Space",
+     "text": "Investigate how the land changes over time."
+    },
+    {
+     "code": "5.ES.1.2",
+     "strand": "Earth and Space",
+     "text": "Investigate the effects of weathering and erosion on the environment."
+    },
+    {
+     "code": "5.ES.1.3",
+     "strand": "Earth and Space",
+     "text": "Investigate the tectonic process."
+    },
+    {
+     "code": "5.ES.1.4",
+     "strand": "Earth and Space",
+     "text": "Assess the relationship between human activity and changes to the land."
+    },
+    {
+     "code": "5.ES.1.5",
+     "strand": "Earth and Space",
+     "text": "Assess how climate change affects the environment."
+    },
+    {
+     "code": "5.ES.1.6",
+     "strand": "Earth and Space",
+     "text": "Investigate how Inuit ways of knowing inform protection for the land in Nunavut, the country, and the world."
+    },
+    {
+     "code": "5.ES.1.7",
+     "strand": "Earth and Space",
+     "text": "Share traditional stories, knowledge, practices, and routines relating to changes to the land."
+    },
+    {
+     "code": "5.LS.1.1",
+     "strand": "Life Sciences",
+     "text": "Describe the basic structures and functions of various parts of the human body."
+    },
+    {
+     "code": "5.LS.1.2",
+     "strand": "Life Sciences",
+     "text": "Compare and contrasts the internal organs and body structures of mammals, birds, fish, reptiles, and amphibians."
+    },
+    {
+     "code": "5.LS.1.3",
+     "strand": "Life Sciences",
+     "text": "Compare and contrast the anatomy of different plants such as trees, shrubs, bushes, ferns, herbs, perennials, deciduous, and evergreen."
+    },
+    {
+     "code": "5.LS.1.4",
+     "strand": "Life Sciences",
+     "text": "Investigate how plants, animals, and humans adapt to survive in their environment."
+    },
+    {
+     "code": "5.LS.1.5",
+     "strand": "Life Sciences",
+     "text": "Share traditional stories, knowledge, practices, and routines about survival adaptations."
+    }
+   ],
+   "6": [
+    {
+     "code": "6.MW.1.1",
+     "strand": "The Material World",
+     "text": "Recognize the difference between a mixture and a solution and compare their properties."
+    },
+    {
+     "code": "6.MW.1.2",
+     "strand": "The Material World",
+     "text": "Explore and investigate the observable properties of homogeneous mixtures."
+    },
+    {
+     "code": "6.MW.1.3",
+     "strand": "The Material World",
+     "text": "Explore and investigate the observable properties of heterogeneous mixtures."
+    },
+    {
+     "code": "6.MW.1.4",
+     "strand": "The Material World",
+     "text": "Analyze the observable properties of familiar homogeneous and heterogeneous mixtures."
+    },
+    {
+     "code": "6.MW.1.5",
+     "strand": "The Material World",
+     "text": "Recognize through investigation the difference between a colloid and a suspension and design experiments with colloids and suspensions to examine their properties."
+    },
+    {
+     "code": "6.MW.1.6",
+     "strand": "The Material World",
+     "text": "Express the potentially dangerous or damaging effects of mixing materials of different properties."
+    },
+    {
+     "code": "6.MW.1.7",
+     "strand": "The Material World",
+     "text": "Begin to investigate common techniques used to separate the components of a variety of mixtures."
+    },
+    {
+     "code": "6.MW.1.8",
+     "strand": "The Material World",
+     "text": "Create commonly used mixtures."
+    },
+    {
+     "code": "6.P.1.1",
+     "strand": "Physics",
+     "text": "Understand and describe the difference between balanced and unbalanced forces and design experiments to showcase them in action."
+    },
+    {
+     "code": "6.P.1.2",
+     "strand": "Physics",
+     "text": "Explain Newton’s three laws of motion and their application in daily life."
+    },
+    {
+     "code": "6.P.1.3",
+     "strand": "Physics",
+     "text": "Investigate factors that influence the force of gravity."
+    },
+    {
+     "code": "6.P.1.4",
+     "strand": "Physics",
+     "text": "Understand and explore Bernoulli’s Principle of Flight and its applications in daily life."
+    },
+    {
+     "code": "6.P.1.5",
+     "strand": "Physics",
+     "text": "Investigate the forces of flight applying the basic understanding of Bernoulli’s Principle."
+    },
+    {
+     "code": "6.P.1.6",
+     "strand": "Physics",
+     "text": "Apply the knowledge of drag, lift, thrust, and air pressure when designing flying devices."
+    },
+    {
+     "code": "6.ES.1.1",
+     "strand": "Earth and Space",
+     "text": "Demonstrate an understanding of how water contributes to Earth’s survival."
+    },
+    {
+     "code": "6.ES.1.2",
+     "strand": "Earth and Space",
+     "text": "Identify, describe, and compare the different planets within our solar system."
+    },
+    {
+     "code": "6.ES.1.3",
+     "strand": "Earth and Space",
+     "text": "Design models to explore the difference between rotation and revolutions."
+    },
+    {
+     "code": "6.ES.1.4",
+     "strand": "Earth and Space",
+     "text": "Design a model to demonstrate Earth’s axis, rotation, and revolution around the Sun."
+    },
+    {
+     "code": "6.ES.1.5",
+     "strand": "Earth and Space",
+     "text": "Investigate how Earth’s location in our solar system, galaxy, and universe makes it habitable for living things."
+    },
+    {
+     "code": "6.ES.1.6",
+     "strand": "Earth and Space",
+     "text": "Compare extreme environments on Earth to outer space."
+    },
+    {
+     "code": "6.ES.1.7",
+     "strand": "Earth and Space",
+     "text": "Research local and global contributions to and impacts on space exploration and technologies."
+    },
+    {
+     "code": "6.ES.1.8",
+     "strand": "Earth and Space",
+     "text": "Share traditional stories, knowledge, practices, and routines related to our solar system."
+    },
+    {
+     "code": "6.LS.1.1",
+     "strand": "Life Sciences",
+     "text": "Describe how parts of the human body work together as systems."
+    },
+    {
+     "code": "6.LS.1.2",
+     "strand": "Life Sciences",
+     "text": "Compare the functions of different organs in the human body to those of other species and identify the differences."
+    },
+    {
+     "code": "6.LS.1.3",
+     "strand": "Life Sciences",
+     "text": "Investigate how our body systems interact and work together to create a unique ecosystem."
+    },
+    {
+     "code": "6.LS.1.4",
+     "strand": "Life Sciences",
+     "text": "Share traditional stories, knowledge, practices, and routines about body systems."
+    }
+   ]
+  }
+ },
+ "social": {
+  "guide": "Nunavut Social Studies K–6 (2025)",
+  "strands": [
+   "Communities",
+   "Stories",
+   "Land"
+  ],
+  "grades": {
+   "k": [
+    {
+     "code": "K.C.1",
+     "strand": "Communities",
+     "text": "Activate prior knowledge by asking questions about kinship and identity."
+    },
+    {
+     "code": "K.C.2",
+     "strand": "Communities",
+     "text": "Identify specific characteristics that make up their own unique identity (for example, personality traits, interests, hobbies, skills, and talents)."
+    },
+    {
+     "code": "K.C.3",
+     "strand": "Communities",
+     "text": "Demonstrate their own identity through verbal expression, behaviour (actions) and visual representations (images, pictures, drawings, etc.)."
+    },
+    {
+     "code": "K.C.4",
+     "strand": "Communities",
+     "text": "Demonstrate an understanding of how an awareness of others’ identities can help build healthy relationships (through celebrating differences, listening to understand others’ ideas and opinions, acknowledging others’ identities, etc.)"
+    },
+    {
+     "code": "K.C.5",
+     "strand": "Communities",
+     "text": "Demonstrate an understanding of needs versus wants and begin to ask questions about their own needs at home and at school."
+    },
+    {
+     "code": "K.C.6",
+     "strand": "Communities",
+     "text": "Demonstrate an understanding of responsibilities and begin to identify their responsibilities at home and at school."
+    },
+    {
+     "code": "K.C.7",
+     "strand": "Communities",
+     "text": "Identify who helps meet their needs at home and at school."
+    },
+    {
+     "code": "K.C.8",
+     "strand": "Communities",
+     "text": "Identify ways to help their families and their classroom community."
+    },
+    {
+     "code": "K.C.9",
+     "strand": "Communities",
+     "text": "Collaborate and work together with peers in Authentic Inquiry to contribute to building their Kindergarten community."
+    },
+    {
+     "code": "K.S.1",
+     "strand": "Stories",
+     "text": "Explore family stories by asking questions (for example, ask questions using the 5 Ws)."
+    },
+    {
+     "code": "K.S.2",
+     "strand": "Stories",
+     "text": "Listen to and share personal stories of significance with peers."
+    },
+    {
+     "code": "K.S.3",
+     "strand": "Stories",
+     "text": "Demonstrate an awareness of how stories help us understand ourselves and our families."
+    },
+    {
+     "code": "K.S.4",
+     "strand": "Stories",
+     "text": "Collaborate and work together with peers in Authentic Inquiry related to stories that are significant to them and their peers."
+    },
+    {
+     "code": "K.L.1",
+     "strand": "Land",
+     "text": "Explore their understanding of how the land provides for us."
+    },
+    {
+     "code": "K.L.2",
+     "strand": "Land",
+     "text": "Demonstrate an understanding of needs and identify the things we need to live."
+    },
+    {
+     "code": "K.L.3",
+     "strand": "Land",
+     "text": "Demonstrate an awareness of maps as representations of real places. Represent places on the land that are important to them through images, words, maps, etc."
+    },
+    {
+     "code": "K.L.4",
+     "strand": "Land",
+     "text": "Make and share simple observations about the land, including weather, sky, animals, plants, water, and ice."
+    },
+    {
+     "code": "K.L.5",
+     "strand": "Land",
+     "text": "Collaborate and work together with peers in Authentic Inquiry to brainstorm, discuss, and plan ways to show the connection between the land and their needs."
+    }
+   ],
+   "1": [
+    {
+     "code": "1.C.1",
+     "strand": "Communities",
+     "text": "Activate prior knowledge about different kinds of communities through discussions and questioning."
+    },
+    {
+     "code": "1.C.2",
+     "strand": "Communities",
+     "text": "Demonstrate an understanding of what community means and identify characteristics of a healthy community."
+    },
+    {
+     "code": "1.C.3",
+     "strand": "Communities",
+     "text": "Explore various communities in Nunavut and examine different perspectives among individuals and groups about issues affecting their local community as well as other communities in Nunavut."
+    },
+    {
+     "code": "1.C.4",
+     "strand": "Communities",
+     "text": "Demonstrate respect and sensitivity for diversity through words, images, and actions."
+    },
+    {
+     "code": "1.C.5",
+     "strand": "Communities",
+     "text": "Demonstrate an understanding of rights, roles, and responsibilities by exploring these concepts in the local community, through inquiry."
+    },
+    {
+     "code": "1.C.6",
+     "strand": "Communities",
+     "text": "Demonstrate an understanding of leadership and give examples of leadership in their communities (Elders, mayor, community volunteers, etc.)"
+    },
+    {
+     "code": "1.C.7",
+     "strand": "Communities",
+     "text": "Examine how rights, roles, and responsibilities change over time and in different situations."
+    },
+    {
+     "code": "1.C.8",
+     "strand": "Communities",
+     "text": "Demonstrate respect and sensitivity for the rights of others."
+    },
+    {
+     "code": "1.C.9",
+     "strand": "Communities",
+     "text": "Collaborate and work together with peers in Authentic Inquiry by exploring and comparing various communities within Nunavut."
+    },
+    {
+     "code": "1.S.1",
+     "strand": "Stories",
+     "text": "Using the 5 Ws, explore traditional stories of local and other communities."
+    },
+    {
+     "code": "1.S.2",
+     "strand": "Stories",
+     "text": "Identify significant events and figures in the community’s past and present and demonstrate how events from the past have influenced the community today."
+    },
+    {
+     "code": "1.S.3",
+     "strand": "Stories",
+     "text": "Explore the local community’s history by gathering information using a variety of sources, including Elders, knowledge keepers, and local visitor centers. Describe some of the ways that the local community has changed or stayed the same over time."
+    },
+    {
+     "code": "1.S.4",
+     "strand": "Stories",
+     "text": "Sequence events from the community’s past."
+    },
+    {
+     "code": "1.S.5",
+     "strand": "Stories",
+     "text": "Demonstrate how stories from the community’s past have influenced the community today."
+    },
+    {
+     "code": "1.S.6",
+     "strand": "Stories",
+     "text": "Recount a significant story from their local community or another Nunavut community using information or evidence from multiple sources including Elders and community knowledge keepers."
+    },
+    {
+     "code": "1.L.1",
+     "strand": "Land",
+     "text": "Explore their understanding of the impact of human actions on the land."
+    },
+    {
+     "code": "1.L.2",
+     "strand": "Land",
+     "text": "Describe how people use the natural and human-made features in and around the community to meet their needs."
+    },
+    {
+     "code": "1.L.3",
+     "strand": "Land",
+     "text": "Describe how the land shapes life in the community."
+    },
+    {
+     "code": "1.L.4",
+     "strand": "Land",
+     "text": "Identify different local Inuktut place names and explain how they describe the land. Describe local Inuit landmarks and significant places."
+    },
+    {
+     "code": "1.L.5",
+     "strand": "Land",
+     "text": "Construct and use maps that represent the local community and the surrounding land. Identify significant places on the map, including community landmarks."
+    },
+    {
+     "code": "1.L.6",
+     "strand": "Land",
+     "text": "Make and share observations about the land, including weather, sky, animals, plants, water, and ice. Give examples of how daily life is influenced by the environment/land."
+    },
+    {
+     "code": "1.L.7",
+     "strand": "Land",
+     "text": "Collaborate and work together with peers in Authentic Inquiry related to how the relationship of their community to the land can be strengthened."
+    }
+   ],
+   "2": [
+    {
+     "code": "2.C.1",
+     "strand": "Communities",
+     "text": "Activate prior knowledge about communities in Canada through discussions and questioning."
+    },
+    {
+     "code": "2.C.2",
+     "strand": "Communities",
+     "text": "Explore the physical features of several communities in Canada. Identify and compare these features."
+    },
+    {
+     "code": "2.C.3",
+     "strand": "Communities",
+     "text": "Identify communities on a map of Canada and explore the diversity among the land and people."
+    },
+    {
+     "code": "2.C.4",
+     "strand": "Communities",
+     "text": "Demonstrate an awareness of factors that influence diversity among and between Canadian communities."
+    },
+    {
+     "code": "2.C.5",
+     "strand": "Communities",
+     "text": "Explore their rights as Canadians through inquiry."
+    },
+    {
+     "code": "2.C.6",
+     "strand": "Communities",
+     "text": "Identify some of the rights and responsibilities shared by Canadians."
+    },
+    {
+     "code": "2.C.7",
+     "strand": "Communities",
+     "text": "Explore the various types of leadership practised in Canadian communities and compare these leadership practises to their local communities or other known communities."
+    },
+    {
+     "code": "2.C.8",
+     "strand": "Communities",
+     "text": "Describe how Canadians’ rights and responsibilities may have changed over time and may not always be fulfilled."
+    },
+    {
+     "code": "2.C.9",
+     "strand": "Communities",
+     "text": "Investigate examples of when rights and responsibilities have been neglected in Canada and describe some of the consequences."
+    },
+    {
+     "code": "2.C.10",
+     "strand": "Communities",
+     "text": "Collaborate and work together with peers in an Authentic Inquiry to explore and engage with a Canadian community outside of Nunavut."
+    },
+    {
+     "code": "2.S.1",
+     "strand": "Stories",
+     "text": "Activate prior knowledge about the purposes of stories."
+    },
+    {
+     "code": "2.S.2",
+     "strand": "Stories",
+     "text": "Identify past events in other places (including events from other Nunavut communities) that significantly shaped their local community."
+    },
+    {
+     "code": "2.S.3",
+     "strand": "Stories",
+     "text": "Explore another Nunavut community’s history by gathering information using a variety of sources, including Elders, knowledge keepers, and visitor centers. Describe some of the ways that the community has changed and stayed the same over time."
+    },
+    {
+     "code": "2.S.4",
+     "strand": "Stories",
+     "text": "Explore stories from the past from different regions in Nunavut or communities outside of Nunavut. Demonstrate awareness of how these stories from the past can help shape the community today."
+    },
+    {
+     "code": "2.S.5",
+     "strand": "Stories",
+     "text": "Collaborate and work together with peers in Authentic Inquiry about a significant story of a community."
+    },
+    {
+     "code": "2.L.1",
+     "strand": "Land",
+     "text": "Explore their current understanding of the movement of air, water, and animals."
+    },
+    {
+     "code": "2.L.2",
+     "strand": "Land",
+     "text": "Explore how the water, air, and some animals circulate over great distances. Demonstrate understanding of maps through the use of cardinal directions and through distinguishing between land and water masses on maps."
+    },
+    {
+     "code": "2.L.3",
+     "strand": "Land",
+     "text": "Identify ways that the land here can be affected by human activity in other places. Demonstrate care and concern for the land in their actions (for example, the 3 Rs, community clean-up, etc.)."
+    },
+    {
+     "code": "2.L.4",
+     "strand": "Land",
+     "text": "Make and share observations about unusual changes in the land, including weather, sky, animals, plants, water, and ice."
+    },
+    {
+     "code": "2.L.5",
+     "strand": "Land",
+     "text": "Demonstrate awareness of how everyone is responsible for Avatimik Kamattiarniq (environmental stewardship)."
+    },
+    {
+     "code": "2.L.6",
+     "strand": "Land",
+     "text": "Collaborate and work together with peers in Authentic Inquiry related to how people’s relationship to land is changing, here and elsewhere, and the possible consequences."
+    }
+   ],
+   "3": [
+    {
+     "code": "3.C.1",
+     "strand": "Communities",
+     "text": "Activate prior knowledge by exploring questions about Indigenous Peoples in Canada and the world."
+    },
+    {
+     "code": "3.C.2",
+     "strand": "Communities",
+     "text": "Demonstrate an awareness of their own Inuit heritage and culture, and compare their way of life to Indigenous Peoples elsewhere."
+    },
+    {
+     "code": "3.C.3",
+     "strand": "Communities",
+     "text": "Learn about Indigenous Peoples in other parts of Canada and the world, and use maps to identify and represent Indigenous Peoples in other parts of Canada and the world."
+    },
+    {
+     "code": "3.C.4",
+     "strand": "Communities",
+     "text": "Activate prior knowledge about rights and responsibilities and inquire about Indigenous Peoples in Canada and in other parts of the world."
+    },
+    {
+     "code": "3.C.5",
+     "strand": "Communities",
+     "text": "Identify common rights and responsibilities of Indigenous Peoples in Canada and in other parts of the world."
+    },
+    {
+     "code": "3.C.6",
+     "strand": "Communities",
+     "text": "Investigate challenges faced by Indigenous Peoples in Canada and in other parts of the world with respect to rights and around responsibilities."
+    },
+    {
+     "code": "3.C.7",
+     "strand": "Communities",
+     "text": "Explore the role of leadership in maintaining rights and responsibilities and identify formal and informal types of leadership."
+    },
+    {
+     "code": "3.C.8",
+     "strand": "Communities",
+     "text": "Collaborate and work together with peers in Authentic Inquiry to explore shared experiences of diverse Indigenous Peoples in Canada and the world."
+    },
+    {
+     "code": "3.S.1",
+     "strand": "Stories",
+     "text": "Through discussions and questions, explore how we learn about the past."
+    },
+    {
+     "code": "3.S.2",
+     "strand": "Stories",
+     "text": "Demonstrate an awareness of how accounts and evidence of the past may vary according to different perspectives."
+    },
+    {
+     "code": "3.S.3",
+     "strand": "Stories",
+     "text": "Summarize an oral narrative and explain its significance. Demonstrate awareness that oral tradition/narrative are a source of historical information."
+    },
+    {
+     "code": "3.S.4",
+     "strand": "Stories",
+     "text": "Demonstrate an awareness of the significance of Inuit oral narrative in understanding the past."
+    },
+    {
+     "code": "3.S.5",
+     "strand": "Stories",
+     "text": "Collaborate and work together with peers in Authentic Inquiry to develop and share an oral narrative about a significant event."
+    },
+    {
+     "code": "3.L.1",
+     "strand": "Land",
+     "text": "Explore their current understanding of Inuit beliefs about respecting the land through questioning."
+    },
+    {
+     "code": "3.L.2",
+     "strand": "Land",
+     "text": "Identify various Inuit practises that demonstrate respect for the land."
+    },
+    {
+     "code": "3.L.3",
+     "strand": "Land",
+     "text": "Describe some of the potential consequences of being disrespectful to the land."
+    },
+    {
+     "code": "3.L.4",
+     "strand": "Land",
+     "text": "Explore the relationship Indigenous People in other parts of Canada have with the land."
+    },
+    {
+     "code": "3.L.5",
+     "strand": "Land",
+     "text": "Construct and use maps that show places of cultural significance for Inuit or Indigenous Peoples in another place. Identify the continents and oceans on a map or globe and identify regions, countries, or places on a map that are of cultural significance for Inuit or other Indigenous Peoples."
+    },
+    {
+     "code": "3.L.6",
+     "strand": "Land",
+     "text": "Make and share observations about unusual changes to the land, including weather, sky, animals, plants, water, and ice, and how these affect the local community."
+    },
+    {
+     "code": "3.L.7",
+     "strand": "Land",
+     "text": "Collaborate and work together with peers in Authentic Inquiry related to Inuit and other Indigenous Peoples’ knowledge about living well with the land."
+    }
+   ],
+   "4": [
+    {
+     "code": "4.C.1",
+     "strand": "Communities",
+     "text": "Activate prior knowledge about the movement of people within and to the North."
+    },
+    {
+     "code": "4.C.2",
+     "strand": "Communities",
+     "text": "Demonstrate an understanding of migration and explore reasons people move to new places."
+    },
+    {
+     "code": "4.C.3",
+     "strand": "Communities",
+     "text": "Explore Inuit way of life prior to the arrival of non-Inuit. Demonstrate an understanding of the transition that has occurred in the North since the arrival of non-Inuit."
+    },
+    {
+     "code": "4.C.4",
+     "strand": "Communities",
+     "text": "Activate prior knowledge about Nunavut’s creation through inquiry."
+    },
+    {
+     "code": "4.C.5",
+     "strand": "Communities",
+     "text": "Explore the creation of Nunavut as a territory and identify reasons Inuit leaders fought to create Nunavut."
+    },
+    {
+     "code": "4.C.6",
+     "strand": "Communities",
+     "text": "Examine the Nunavut Land Claims Agreement and identify areas related to protecting land, culture, and language. Explore the significance of this connection."
+    },
+    {
+     "code": "4.C.7",
+     "strand": "Communities",
+     "text": "Collaborate and work together with peers in Authentic Inquiry related to ways that the Nunavut Land Claims Agreement addresses the needs of Inuit in Nunavut."
+    },
+    {
+     "code": "4.S.1",
+     "strand": "Stories",
+     "text": "Explore their current understanding of contact between Inuit and non-Inuit by asking questions."
+    },
+    {
+     "code": "4.S.2",
+     "strand": "Stories",
+     "text": "Explore life in the North before the arrival of non\u0002Inuit by examining different types of evidence."
+    },
+    {
+     "code": "4.S.3",
+     "strand": "Stories",
+     "text": "Explore the different stages of contact with non\u0002Inuit and compare how Inuit life changed during the different stages."
+    },
+    {
+     "code": "4.S.4",
+     "strand": "Stories",
+     "text": "Explore and describe significant events influencing Inuit in Nunavut."
+    },
+    {
+     "code": "4.S.5",
+     "strand": "Stories",
+     "text": "Collaborate and work together with peers in Authentic Inquiry examining to what extent has Inuit resilience has played a role in responding to colonization."
+    },
+    {
+     "code": "4.L.1",
+     "strand": "Land",
+     "text": "Explore their current understanding about land ownership by asking questions."
+    },
+    {
+     "code": "4.L.2",
+     "strand": "Land",
+     "text": "Explore how different beliefs about the land can lead to different types of land use."
+    },
+    {
+     "code": "4.L.3",
+     "strand": "Land",
+     "text": "Explore the positive and negative influences of different types of industry in Northern Canada."
+    },
+    {
+     "code": "4.L.4",
+     "strand": "Land",
+     "text": "Explore the Nunavut Land Claims Agreement and identify ways it may help to protect the land."
+    },
+    {
+     "code": "4.L.5",
+     "strand": "Land",
+     "text": "Make, record, and share observations about human impacts on the land, including weather, sky, animals, plants, water, and ice."
+    },
+    {
+     "code": "4.L.6",
+     "strand": "Land",
+     "text": "Identify the provinces, territories, and capital cities in Canada on a map, and use maps to show places in Northern Canada that require environmental protection."
+    },
+    {
+     "code": "4.L.7",
+     "strand": "Land",
+     "text": "Collaborate and work together with peers in Authentic Inquiry assessing the choices involved in a current or historic land-use project in Northern Canada."
+    }
+   ],
+   "5": [
+    {
+     "code": "5.C.1",
+     "strand": "Communities",
+     "text": "Ask questions about immigration to and movement of people within Canada."
+    },
+    {
+     "code": "5.C.2",
+     "strand": "Communities",
+     "text": "Explore some of the reasons people have immigrated to Canada and the impacts of this immigration."
+    },
+    {
+     "code": "5.C.3",
+     "strand": "Communities",
+     "text": "Demonstrate an understanding of the ways in which immigration and multiculturalism have influenced Canadian identity."
+    },
+    {
+     "code": "5.C.4",
+     "strand": "Communities",
+     "text": "Activate prior knowledge by exploring and asking questions about different regions in Canada."
+    },
+    {
+     "code": "5.C.5",
+     "strand": "Communities",
+     "text": "Demonstrate an awareness of the resources and the areas of need for the different regions in Canada."
+    },
+    {
+     "code": "5.C.6",
+     "strand": "Communities",
+     "text": "Use maps to demonstrate the diverse resources of Canada’s regions."
+    },
+    {
+     "code": "5.C.7",
+     "strand": "Communities",
+     "text": "Demonstrate an awareness that there are different levels of government in Canada with different responsibilities (for example, municipal, territorial, federal, Inuit, etc.)"
+    },
+    {
+     "code": "5.C.8",
+     "strand": "Communities",
+     "text": "Collaborate and work together with peers in Authentic Inquiry related to the economic inequality among Canada’s regions and possible solutions."
+    },
+    {
+     "code": "5.S.1",
+     "strand": "Stories",
+     "text": "Explore current understanding of diverse stories from Canada’s past."
+    },
+    {
+     "code": "5.S.2",
+     "strand": "Stories",
+     "text": "Examine significant stories and diverse perspectives about peoples in Canada and Canada’s past using different types of evidence."
+    },
+    {
+     "code": "5.S.3",
+     "strand": "Stories",
+     "text": "Collaborate and work together with peers in Authentic Inquiry related to a significant event in the development of Canada that affected different people in different ways."
+    },
+    {
+     "code": "5.L.1",
+     "strand": "Land",
+     "text": "Explore their current understanding of land\u0002use decisions in Canada by asking questions."
+    },
+    {
+     "code": "5.L.2",
+     "strand": "Land",
+     "text": "Make connections between natural resources, economic activities, ways of life, identity, and land-use decisions."
+    },
+    {
+     "code": "5.L.3",
+     "strand": "Land",
+     "text": "Demonstrate awareness of the impact of economic activities on the land in Canada using evidence and various sources."
+    },
+    {
+     "code": "5.L.4",
+     "strand": "Land",
+     "text": "Identify key physical features of Northern Canada on a map (such as landforms, bodies of water, etc.) and use maps to compare traditional and contemporary land use."
+    },
+    {
+     "code": "5.L.5",
+     "strand": "Land",
+     "text": "Identify the provinces, territories, and capital cities in Canada on a map, and use maps to show places in Northern Canada that require environmental protection."
+    },
+    {
+     "code": "5.L.6",
+     "strand": "Land",
+     "text": "Demonstrate ways that being connected to the land can help people make wise land-use decisions."
+    },
+    {
+     "code": "5.L.7",
+     "strand": "Land",
+     "text": "Collaborate and work together with peers in Authentic Inquiry related to how the relationship of their own community or another Canadian community to the land is changing."
+    }
+   ],
+   "6": [
+    {
+     "code": "6.C.1",
+     "strand": "Communities",
+     "text": "Activate prior knowledge about countries helping others. Explore the term foreign aid."
+    },
+    {
+     "code": "6.C.2",
+     "strand": "Communities",
+     "text": "Identify specific ways that Canadians help people in other countries."
+    },
+    {
+     "code": "6.C.3",
+     "strand": "Communities",
+     "text": "Investigate how organizations around the world work together to address global issues."
+    },
+    {
+     "code": "6.C.4",
+     "strand": "Communities",
+     "text": "Demonstrate an understanding of different types of international cooperation."
+    },
+    {
+     "code": "6.C.5",
+     "strand": "Communities",
+     "text": "Use maps to demonstrate and interpret the need for international cooperation and aid around the world."
+    },
+    {
+     "code": "6.C.6",
+     "strand": "Communities",
+     "text": "Activate prior knowledge about governments and human rights through inquiry."
+    },
+    {
+     "code": "6.C.7",
+     "strand": "Communities",
+     "text": "Demonstrate understanding of the United Nations Declaration of Human Rights by examining the core principles of human rights."
+    },
+    {
+     "code": "6.C.8",
+     "strand": "Communities",
+     "text": "Compare how different types of national and international governments address and protect human rights."
+    },
+    {
+     "code": "6.C.9",
+     "strand": "Communities",
+     "text": "Collaborate and work together with peers in Authentic Inquiry related to how the world can work together to reduce global disparity."
+    },
+    {
+     "code": "6.S.1",
+     "strand": "Stories",
+     "text": "Explore their understanding of where we get information about current events through questioning."
+    },
+    {
+     "code": "6.S.2",
+     "strand": "Stories",
+     "text": "Demonstrate awareness of the significance of media in governance."
+    },
+    {
+     "code": "6.S.3",
+     "strand": "Stories",
+     "text": "Demonstrate an understanding of bias and identify bias in different types of media."
+    },
+    {
+     "code": "6.S.4",
+     "strand": "Stories",
+     "text": "Explore how and why bias may influence stories or the reporting of events."
+    },
+    {
+     "code": "6.S.5",
+     "strand": "Stories",
+     "text": "Collaborate and work together with peers in Authentic Inquiry related to the presence and impact of bias in the media and test the reliability of a variety of media sources."
+    },
+    {
+     "code": "6.L.1",
+     "strand": "Land",
+     "text": "Explore their understanding of land-use conflicts with discussion and questioning."
+    },
+    {
+     "code": "6.L.2",
+     "strand": "Land",
+     "text": "Describe how different perspectives on land use can create conflict."
+    },
+    {
+     "code": "6.L.3",
+     "strand": "Land",
+     "text": "Demonstrate awareness of the impact of human activity on the environment."
+    },
+    {
+     "code": "6.L.4",
+     "strand": "Land",
+     "text": "Identify on a map of Canada, places, and regions of historical significance, including existing or potential land-use conflicts."
+    },
+    {
+     "code": "6.L.5",
+     "strand": "Land",
+     "text": "Explore and share potential challenges to land changes including climate, animals, water, and ice."
+    },
+    {
+     "code": "6.L.6",
+     "strand": "Land",
+     "text": "Collaborate and work together with peers in Authentic Inquiry to examine a past or present conflict over land use and propose a viable resolution."
+    }
+   ]
+  }
+ }
+}

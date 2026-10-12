@@ -59,7 +59,9 @@ describe("Prince Edward Island", () => {
   it("adds the Prince Edward Island-only units for Prince Edward Island alone", () => {
     const own = COURSES.flatMap((c) => c.units.filter((u) => u.id.startsWith("pe-")).map((u) => ({ g: c.grade, u })));
     expect(own.length).toBeGreaterThan(10);
-    for (const { g, u } of own) expect(Object.keys(u.standards), `${g}/${u.id}`).toEqual(["ca-pe"]);
+    // Nunavut may copy a unit that names no province (src/content/nunavut/plan.ts); the copy carries Nunavut standards only.
+    for (const { g, u } of own) expect([["ca-pe"], ["ca-nu"]], `${g}/${u.id}`).toContainEqual(Object.keys(u.standards));
+    expect(own.filter(({ u }) => u.standards["ca-pe"]).length).toBeGreaterThan(10);
   });
 
   it("has parent guides for French, the CAMET competencies and the provincial assessments", () => {

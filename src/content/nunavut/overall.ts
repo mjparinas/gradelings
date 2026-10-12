@@ -14,22 +14,22 @@ const NEW_CURRICULUM = "The new Nunavut curriculum is grounded in Inuit Qaujimaj
 const NEW: Record<string, string[]> = {
   math: [
     "Iqqaqqaukkaringniq: concepts in mathematics, analytical and critical thinking, and solution-seeking.",
-    "Number, patterns, shape and measurement, and data, often through hands-on activities and everyday life.",
+    "Number, Patterns and Relations, Shape and Space, and Statistics and Probability, often through hands-on activities and life on the land.",
     NEW_CURRICULUM,
   ],
   language: [
     "Uqausiliriniq: communication and language, creative and artistic expression, and reflective and critical thinking.",
-    "Listening, speaking, reading, writing and representing in English.",
+    "Oral Communication, Reading, and Writing and Representing in English.",
     NEW_CURRICULUM,
   ],
   science: [
     "Iqqaqqaukkaringniq: ways to describe and improve our world through science and technology.",
-    "Asking questions and investigating living things, materials and the world around us.",
+    "The Material World, Physics, Earth and Space, and Life Sciences, alongside traditional knowledge of the land.",
     NEW_CURRICULUM,
   ],
   social: [
     "Nunavusiutit: heritage and culture, history, geography, environmental science, and civics and economics.",
-    "Families, communities and the land, starting close to home.",
+    "Communities, Stories and Land, starting close to home.",
     NEW_CURRICULUM,
   ],
 };
