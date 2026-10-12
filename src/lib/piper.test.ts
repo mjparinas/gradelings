@@ -168,3 +168,296 @@ describe("Piper download on this device", () => {
     expect(caches.stores.has(piper.PIPER_CACHE)).toBe(false);
   });
 });
+
+describe("Piper download problems", () => {
+  let caches: ReturnType<typeof fakeCaches>;
+  let fetchMock: ReturnType<typeof vi.fn>;
+  beforeEach(() => {
+    vi.resetModules();
+    caches = fakeCaches();
+    const storage = new Map<string, string>();
+    vi.stubGlobal("window", globalThis);
+    vi.stubGlobal("caches", caches.api);
+    vi.stubGlobal("Worker", class {});
+    vi.stubGlobal("AudioContext", class {});
+    vi.stubGlobal("localStorage", { getItem: (k: string) => storage.get(k) ?? null, setItem: (k: string, v: string) => storage.set(k, v), removeItem: (k: string) => storage.delete(k) });
+    fetchMock = vi.fn(async (url: string) => serve(url));
+    vi.stubGlobal("fetch", fetchMock);
+    vi.stubGlobal("navigator", { onLine: true });
+  });
+  afterEach(() => vi.unstubAllGlobals());
+
+  it("says the voice isn't available when the server doesn't serve it", async () => {
+    const piper = await import("./piper");
+    fetchMock.mockImplementation(async () => new Response("", { status: 404 }));
+    expect(await piper.piperDownloadBytes("en")).toBeUndefined();
+    await piper.downloadPiper("en");
+    expect(piper.getPiperState().voices.en).toMatchObject({ state: "missing", error: "The voice isn't available right now." });
+  });
+
+  it("says the voice isn't available when the list has no voice for the language", async () => {
+    const piper = await import("./piper");
+    const list = { ...LIST, voices: { en: LIST.voices.en } };
+    fetchMock.mockImplementation(async (url: string) => (url.endsWith("files.json") ? new Response(JSON.stringify(list)) : serve(url)));
+    expect(await piper.piperDownloadBytes("fr")).toBeUndefined();
+    await piper.downloadPiper("fr");
+    expect(piper.getPiperState().voices.fr).toMatchObject({ state: "missing", error: "The voice isn't available right now." });
+  });
+
+  it("stops cleanly when a file fails half-way, and only fetches what is still missing next time", async () => {
+    const piper = await import("./piper");
+    fetchMock.mockImplementation(async (url: string) => (url.endsWith("en.onnx") ? new Response("", { status: 500 }) : serve(url)));
+    await piper.downloadPiper("en");
+    expect(piper.getPiperState().voices.en).toMatchObject({ state: "missing", error: "The download stopped. Check the connection and try again." });
+    // The engine arrived before the failure and is kept.
+    expect(caches.stores.get(piper.PIPER_CACHE)!.has(`${piper.PIPER_BASE}engine.wasm`)).toBe(true);
+
+    fetchMock.mockClear();
+    fetchMock.mockImplementation(async (url: string) => serve(url));
+    await piper.downloadPiper("en");
+    const fetched = fetchMock.mock.calls.map(([u]) => u as string);
+    expect(fetched).not.toContain(`${piper.PIPER_BASE}engine.wasm`);
+    expect(fetched).toContain(`${piper.PIPER_BASE}en.onnx`);
+    expect(piper.getPiperState().voices.en).toMatchObject({ state: "ready", total: 4, loaded: 4, error: undefined });
+  });
+
+  it("gives a general message for unexpected failures while online", async () => {
+    const piper = await import("./piper");
+    fetchMock.mockImplementation(async (url: string) => (url.endsWith("files.json") ? new Response("not json") : serve(url)));
+    await piper.downloadPiper("en");
+    expect(piper.getPiperState().voices.en.error).toBe("The download didn't finish. Try again.");
+    fetchMock.mockImplementation(async () => Promise.reject(new TypeError("network")));
+    expect(await piper.piperDownloadBytes("en")).toBeUndefined();
+  });
+
+  it("asks the browser to keep the files when space runs low", async () => {
+    const persist = vi.fn(async () => true);
+    vi.stubGlobal("navigator", { onLine: true, storage: { persist } });
+    const piper = await import("./piper");
+    await piper.downloadPiper("en");
+    expect(persist).toHaveBeenCalledOnce();
+  });
+
+  it("removing a voice with no saved list clears the whole cache", async () => {
+    const piper = await import("./piper");
+    const store = await caches.api.open(piper.PIPER_CACHE);
+    await store.put(`${piper.PIPER_BASE}engine.wasm`, new Response("x"));
+    await piper.removePiper("fr");
+    expect(caches.stores.has(piper.PIPER_CACHE)).toBe(false);
+  });
+
+  it("is off and missing where the browser can't run it", async () => {
+    vi.stubGlobal("Worker", undefined);
+    const piper = await import("./piper");
+    expect(piper.piperSupported()).toBe(false);
+    expect(await piper.piperWanted("en")).toBe(false);
+    expect(piper.getPiperState().voices).toMatchObject({ en: { state: "missing" }, fr: { state: "missing" } });
+    expect(piper.piperMightSpeak("en")).toBe(false);
+    expect(piper.piperCanSpeak()).toBe(false);
+  });
+
+  it("stays off when storage is blocked", async () => {
+    const blocked = () => {
+      throw new Error("SecurityError");
+    };
+    vi.stubGlobal("localStorage", { getItem: blocked, setItem: blocked, removeItem: blocked });
+    const piper = await import("./piper");
+    await piper.downloadPiper("en");
+    expect(() => piper.setPiperEnabled(true)).not.toThrow();
+    expect(piper.piperMightSpeak("en")).toBe(false);
+    vi.resetModules();
+    const again = await import("./piper");
+    expect(await again.piperWanted("en")).toBe(false);
+  });
+
+  it("treats a broken cache as missing voices", async () => {
+    vi.stubGlobal("caches", { open: async () => Promise.reject(new Error("QuotaExceeded")) });
+    const piper = await import("./piper");
+    expect(await piper.piperWanted("en")).toBe(false);
+    expect(piper.getPiperState().voices.fr.state).toBe("missing");
+  });
+
+  it("tells subscribers about changes until they unsubscribe", async () => {
+    const piper = await import("./piper");
+    const listener = vi.fn();
+    const stop = piper.subscribePiper(listener);
+    piper.setPiperEnabled(true);
+    expect(listener).toHaveBeenCalled();
+    stop();
+    listener.mockClear();
+    piper.setPiperEnabled(false);
+    expect(listener).not.toHaveBeenCalled();
+  });
+});
+
+// ---- Speaking, with a fake worker and audio graph ----
+
+class FakeWorker {
+  static all: FakeWorker[] = [];
+  posted: Record<string, unknown>[] = [];
+  private listeners = new Set<(e: MessageEvent) => void>();
+  constructor(readonly url: string) {
+    FakeWorker.all.push(this);
+  }
+  postMessage(m: Record<string, unknown>) {
+    this.posted.push(m);
+  }
+  addEventListener(_: string, l: (e: MessageEvent) => void) {
+    this.listeners.add(l);
+  }
+  removeEventListener(_: string, l: (e: MessageEvent) => void) {
+    this.listeners.delete(l);
+  }
+  emit(data: unknown) {
+    for (const l of [...this.listeners]) l({ data } as MessageEvent);
+  }
+  get listening() {
+    return this.listeners.size;
+  }
+}
+
+interface FakeSource {
+  buffer: { duration: number } | null;
+  start: ReturnType<typeof vi.fn>;
+  stop: ReturnType<typeof vi.fn>;
+  onended: (() => void) | null;
+  connect: () => void;
+}
+class FakeAudio {
+  static all: FakeAudio[] = [];
+  state = "suspended";
+  currentTime = 5;
+  destination = {};
+  sources: FakeSource[] = [];
+  resume = vi.fn(async () => void (this.state = "running"));
+  constructor() {
+    FakeAudio.all.push(this);
+  }
+  createBuffer(_channels: number, length: number, rate: number) {
+    return { duration: length / rate, copyToChannel: vi.fn() };
+  }
+  createBufferSource() {
+    const s: FakeSource = { buffer: null, start: vi.fn(), stop: vi.fn(), onended: null, connect: () => undefined };
+    this.sources.push(s);
+    return s;
+  }
+}
+
+describe("speakPiper", () => {
+  let piper: typeof import("./piper");
+  const worker = () => FakeWorker.all[0];
+  const audio = () => FakeAudio.all[0];
+  const lastSpeak = () => worker().posted.filter((m) => m.type === "speak").at(-1)! as { id: number; sentences: string[] };
+  const chunk = (id: number, samples: number) => worker().emit({ type: "chunk", id, pcm: new Float32Array(samples), sampleRate: 1000 });
+
+  beforeEach(async () => {
+    vi.resetModules();
+    FakeWorker.all = [];
+    FakeAudio.all = [];
+    vi.stubGlobal("Worker", FakeWorker);
+    vi.stubGlobal("AudioContext", FakeAudio);
+    piper = await import("./piper");
+  });
+  afterEach(() => vi.unstubAllGlobals());
+
+  it("sends the sentences to the worker and plays each chunk right after the one before", async () => {
+    let done = false;
+    const p = piper.speakPiper("Hello there. How are you?", "fr", 0.92).then(() => (done = true));
+    expect(audio().resume).toHaveBeenCalledOnce();
+    expect(worker().url).toBe("/piper-worker.js");
+    const speak = lastSpeak();
+    expect(speak).toMatchObject({ type: "speak", base: piper.PIPER_BASE, voice: piper.PIPER_VOICES.fr.id, sentences: ["Hello there.", "How are you?"], rate: 0.92 });
+
+    chunk(speak.id, 500);
+    chunk(speak.id, 250);
+    const [a, b] = audio().sources;
+    expect(a.start).toHaveBeenCalledWith(5.02);
+    expect(b.start).toHaveBeenCalledWith(5.52);
+
+    a.onended!();
+    await Promise.resolve();
+    expect(done).toBe(false);
+    b.onended!();
+    await p;
+    expect(worker().listening).toBe(0);
+  });
+
+  it("finishes after the last sentence even when a chunk is silent", async () => {
+    const p = piper.speakPiper("One. Two.", "en");
+    const { id } = lastSpeak();
+    chunk(id, 100);
+    audio().sources[0].onended!();
+    chunk(id, 0);
+    await expect(p).resolves.toBeUndefined();
+  });
+
+  it("says nothing for text with no words, and keeps one worker and audio context", async () => {
+    await piper.speakPiper("... !", "en");
+    expect(worker()).toBeUndefined();
+    await piper.speakPiper("", "en");
+    const p = piper.speakPiper("Hi.", "en");
+    piper.stopPiper();
+    await p;
+    const q = piper.speakPiper("Hi again.", "en");
+    piper.stopPiper();
+    await q;
+    expect(FakeWorker.all).toHaveLength(1);
+    expect(FakeAudio.all).toHaveLength(1);
+  });
+
+  it("rejects when the worker fails before any sound, so the device voice can take over", async () => {
+    const p = piper.speakPiper("Hi.", "en");
+    worker().emit({ type: "error", id: lastSpeak().id, message: "model failed" });
+    await expect(p).rejects.toThrow("model failed");
+  });
+
+  it("ends quietly when the worker fails after it started speaking", async () => {
+    const p = piper.speakPiper("One. Two.", "en");
+    const { id } = lastSpeak();
+    chunk(id, 100);
+    worker().emit({ type: "error", id, message: "late failure" });
+    await expect(p).resolves.toBeUndefined();
+  });
+
+  it("ignores messages for other requests", async () => {
+    let done = false;
+    const p = piper.speakPiper("Hi.", "en").then(() => (done = true));
+    const { id } = lastSpeak();
+    worker().emit({ type: "error", id: id + 100, message: "not mine" });
+    worker().emit({ type: "progress", id });
+    worker().emit(null);
+    await Promise.resolve();
+    expect(done).toBe(false);
+    expect(audio().sources).toHaveLength(0);
+    chunk(id, 0);
+    await p;
+  });
+
+  it("stopping cancels the request, silences queued audio and resolves", async () => {
+    const p = piper.speakPiper("One. Two.", "en");
+    const { id } = lastSpeak();
+    chunk(id, 100);
+    const src = audio().sources[0];
+    src.stop.mockImplementationOnce(() => {
+      throw new Error("InvalidStateError");
+    });
+    piper.stopPiper();
+    await expect(p).resolves.toBeUndefined();
+    expect(worker().posted.at(-1)).toEqual({ type: "cancel", id });
+    expect(src.onended).toBeNull();
+    // A late chunk for the stopped request plays nothing.
+    chunk(id, 100);
+    expect(audio().sources).toHaveLength(1);
+  });
+
+  it("starting a new sentence stops the one still playing", async () => {
+    const first = piper.speakPiper("First.", "en");
+    const firstId = lastSpeak().id;
+    const second = piper.speakPiper("Second.", "en");
+    await expect(first).resolves.toBeUndefined();
+    expect(worker().posted).toContainEqual({ type: "cancel", id: firstId });
+    expect(lastSpeak().id).toBeGreaterThan(firstId);
+    piper.stopPiper();
+    await second;
+  });
+});

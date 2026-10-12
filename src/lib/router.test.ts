@@ -1,6 +1,7 @@
 // @vitest-environment jsdom
+import { act, renderHook } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import { back, go, href, parse } from "./router";
+import { back, go, href, parse, useRoute } from "./router";
 
 describe("hash router", () => {
   it("decodes path parts and parses query values", () => {
@@ -37,5 +38,30 @@ describe("hash router", () => {
     const previous = window.location.hash;
     back("/play");
     expect(window.location.hash).not.toBe(previous);
+  });
+});
+
+describe("useRoute", () => {
+  const navigate = (hash: string) =>
+    act(() => {
+      window.location.hash = hash;
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    });
+
+  it("follows the hash, treating an empty one as home, and scrolls each new screen to the top", () => {
+    const scrollTo = vi.spyOn(window, "scrollTo").mockImplementation(() => {});
+    window.location.hash = "";
+    const { result, unmount } = renderHook(() => useRoute());
+    expect(result.current.path).toEqual([]);
+
+    navigate("#/unit/math%2Fadd?mode=review");
+    expect(result.current.path).toEqual(["unit", "math/add"]);
+    expect(result.current.query.get("mode")).toBe("review");
+    expect(scrollTo).toHaveBeenCalledWith({ top: 0 });
+
+    unmount();
+    navigate("#/shop");
+    expect(result.current.path).toEqual(["unit", "math/add"]);
+    scrollTo.mockRestore();
   });
 });
