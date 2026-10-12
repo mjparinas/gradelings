@@ -4,7 +4,9 @@ import { overall } from "./overall";
 
 // Helpers shared by the Nunavut grade files. Nunavut has no outcome codes of its own: its approved curriculum is a mix of
 // guides adopted from Alberta and the NWT plus Nunavut-made resources. A standard cites the approved guide and its strand
-// ("Alberta Mathematics K–9 (2007), Number"), which content.test.ts checks against docs/research/nunavut/approved.json.
+// ("Alberta Mathematics K–9 (2007), Number"); grades already on the new Nunavut curriculum cite its subject document and
+// strand ("Nunavut Mathematics K–6 (2025), Iqqaqqaukkaringniq"). nunavut.test.ts checks both against
+// docs/research/nunavut/approved.json.
 
 /** Standards text for a unit: the approved guide and strand, then a short plain description. */
 export function nu(citation: string, text: string): Unit["standards"] {

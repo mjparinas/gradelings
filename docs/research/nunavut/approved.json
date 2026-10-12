@@ -1,173 +1,213 @@
 {
  "k/math": {
   "guides": [
-   "Alberta Mathematics K–9 (2007)"
+   "Nunavut Mathematics K–6 (2025)"
   ],
   "areas": [
-   "Number",
-   "Patterns and Relations",
-   "Shape and Space",
-   "Statistics and Probability"
+   "Iqqaqqaukkaringniq"
+  ],
+  "curriculum": "Nunavut Curriculum (Kindergarten to Grade 6, 2025)",
+  "inForceFrom": "2025-26",
+  "replaces": [
+   "Alberta Mathematics K–9 (2007)"
   ]
  },
  "k/language": {
   "guides": [
-   "NWT English Language Arts (2011)"
+   "Nunavut English Language Arts K–6 (2025)"
   ],
   "areas": [
-   "Comprehension",
-   "Production"
+   "Uqausiliriniq"
+  ],
+  "curriculum": "Nunavut Curriculum (Kindergarten to Grade 6, 2025)",
+  "inForceFrom": "2025-26",
+  "replaces": [
+   "NWT English Language Arts (2011)"
   ]
  },
  "k/science": {
   "guides": [
-   "NWT Science and Technology K–6 (2004)"
+   "Nunavut Science K–6 (2025)"
   ],
   "areas": [
-   "Life science",
-   "Physical science",
-   "Earth and space science"
+   "Iqqaqqaukkaringniq"
+  ],
+  "curriculum": "Nunavut Curriculum (Kindergarten to Grade 6, 2025)",
+  "inForceFrom": "2025-26",
+  "replaces": [
+   "NWT Science and Technology K–6 (2004)"
   ]
  },
  "k/social": {
   "guides": [
-   "Inuuqatigiit (NWT, 1996)"
+   "Nunavut Social Studies K–6 (2025)"
   ],
   "areas": [
-   "Heritage and culture",
-   "History",
-   "Geography",
-   "Environmental science",
-   "Civics and economics"
+   "Nunavusiutit"
+  ],
+  "curriculum": "Nunavut Curriculum (Kindergarten to Grade 6, 2025)",
+  "inForceFrom": "2025-26",
+  "replaces": [
+   "Inuuqatigiit (NWT, 1996)"
   ]
  },
  "1/math": {
   "guides": [
-   "Alberta Mathematics K–9 (2007)"
+   "Nunavut Mathematics K–6 (2025)"
   ],
   "areas": [
-   "Number",
-   "Patterns and Relations",
-   "Shape and Space",
-   "Statistics and Probability"
+   "Iqqaqqaukkaringniq"
+  ],
+  "curriculum": "Nunavut Curriculum (Kindergarten to Grade 6, 2025)",
+  "inForceFrom": "2025-26",
+  "replaces": [
+   "Alberta Mathematics K–9 (2007)"
   ]
  },
  "1/language": {
   "guides": [
-   "NWT English Language Arts (2011)"
+   "Nunavut English Language Arts K–6 (2025)"
   ],
   "areas": [
-   "Comprehension",
-   "Production"
+   "Uqausiliriniq"
+  ],
+  "curriculum": "Nunavut Curriculum (Kindergarten to Grade 6, 2025)",
+  "inForceFrom": "2025-26",
+  "replaces": [
+   "NWT English Language Arts (2011)"
   ]
  },
  "1/science": {
   "guides": [
-   "NWT Science and Technology K–6 (2004)"
+   "Nunavut Science K–6 (2025)"
   ],
   "areas": [
-   "Life science",
-   "Physical science",
-   "Earth and space science"
+   "Iqqaqqaukkaringniq"
+  ],
+  "curriculum": "Nunavut Curriculum (Kindergarten to Grade 6, 2025)",
+  "inForceFrom": "2025-26",
+  "replaces": [
+   "NWT Science and Technology K–6 (2004)"
   ]
  },
  "1/social": {
   "guides": [
-   "Inuuqatigiit (NWT, 1996)",
-   "Elementary Social Studies (NWT, 1993)"
+   "Nunavut Social Studies K–6 (2025)"
   ],
   "areas": [
-   "Heritage and culture",
-   "History",
-   "Geography",
-   "Environmental science",
-   "Civics and economics"
+   "Nunavusiutit"
+  ],
+  "curriculum": "Nunavut Curriculum (Kindergarten to Grade 6, 2025)",
+  "inForceFrom": "2025-26",
+  "replaces": [
+   "Inuuqatigiit (NWT, 1996)",
+   "Elementary Social Studies (NWT, 1993)"
   ]
  },
  "2/math": {
   "guides": [
-   "Alberta Mathematics K–9 (2007)"
+   "Nunavut Mathematics K–6 (2025)"
   ],
   "areas": [
-   "Number",
-   "Patterns and Relations",
-   "Shape and Space",
-   "Statistics and Probability"
+   "Iqqaqqaukkaringniq"
+  ],
+  "curriculum": "Nunavut Curriculum (Kindergarten to Grade 6, 2025)",
+  "inForceFrom": "2026-27",
+  "replaces": [
+   "Alberta Mathematics K–9 (2007)"
   ]
  },
  "2/language": {
   "guides": [
-   "NWT English Language Arts (2011)"
+   "Nunavut English Language Arts K–6 (2025)"
   ],
   "areas": [
-   "Comprehension",
-   "Production"
+   "Uqausiliriniq"
+  ],
+  "curriculum": "Nunavut Curriculum (Kindergarten to Grade 6, 2025)",
+  "inForceFrom": "2026-27",
+  "replaces": [
+   "NWT English Language Arts (2011)"
   ]
  },
  "2/science": {
   "guides": [
-   "NWT Science and Technology K–6 (2004)"
+   "Nunavut Science K–6 (2025)"
   ],
   "areas": [
-   "Life science",
-   "Physical science",
-   "Earth and space science"
+   "Iqqaqqaukkaringniq"
+  ],
+  "curriculum": "Nunavut Curriculum (Kindergarten to Grade 6, 2025)",
+  "inForceFrom": "2026-27",
+  "replaces": [
+   "NWT Science and Technology K–6 (2004)"
   ]
  },
  "2/social": {
   "guides": [
-   "Inuuqatigiit (NWT, 1996)",
-   "Elementary Social Studies (NWT, 1993)"
+   "Nunavut Social Studies K–6 (2025)"
   ],
   "areas": [
-   "Heritage and culture",
-   "History",
-   "Geography",
-   "Environmental science",
-   "Civics and economics"
+   "Nunavusiutit"
+  ],
+  "curriculum": "Nunavut Curriculum (Kindergarten to Grade 6, 2025)",
+  "inForceFrom": "2026-27",
+  "replaces": [
+   "Inuuqatigiit (NWT, 1996)",
+   "Elementary Social Studies (NWT, 1993)"
   ]
  },
  "3/math": {
   "guides": [
-   "Alberta Mathematics K–9 (2007)"
+   "Nunavut Mathematics K–6 (2025)"
   ],
   "areas": [
-   "Number",
-   "Patterns and Relations",
-   "Shape and Space",
-   "Statistics and Probability"
+   "Iqqaqqaukkaringniq"
+  ],
+  "curriculum": "Nunavut Curriculum (Kindergarten to Grade 6, 2025)",
+  "inForceFrom": "2026-27",
+  "replaces": [
+   "Alberta Mathematics K–9 (2007)"
   ]
  },
  "3/language": {
   "guides": [
-   "NWT English Language Arts (2011)"
+   "Nunavut English Language Arts K–6 (2025)"
   ],
   "areas": [
-   "Comprehension",
-   "Production"
+   "Uqausiliriniq"
+  ],
+  "curriculum": "Nunavut Curriculum (Kindergarten to Grade 6, 2025)",
+  "inForceFrom": "2026-27",
+  "replaces": [
+   "NWT English Language Arts (2011)"
   ]
  },
  "3/science": {
   "guides": [
-   "NWT Science and Technology K–6 (2004)"
+   "Nunavut Science K–6 (2025)"
   ],
   "areas": [
-   "Life science",
-   "Physical science",
-   "Earth and space science"
+   "Iqqaqqaukkaringniq"
+  ],
+  "curriculum": "Nunavut Curriculum (Kindergarten to Grade 6, 2025)",
+  "inForceFrom": "2026-27",
+  "replaces": [
+   "NWT Science and Technology K–6 (2004)"
   ]
  },
  "3/social": {
   "guides": [
-   "Inuuqatigiit (NWT, 1996)",
-   "Elementary Social Studies (NWT, 1993)"
+   "Nunavut Social Studies K–6 (2025)"
   ],
   "areas": [
-   "Heritage and culture",
-   "History",
-   "Geography",
-   "Environmental science",
-   "Civics and economics"
+   "Nunavusiutit"
+  ],
+  "curriculum": "Nunavut Curriculum (Kindergarten to Grade 6, 2025)",
+  "inForceFrom": "2026-27",
+  "replaces": [
+   "Inuuqatigiit (NWT, 1996)",
+   "Elementary Social Studies (NWT, 1993)"
   ]
  },
  "4/math": {

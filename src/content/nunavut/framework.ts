@@ -3,8 +3,8 @@ import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
 // Nunavut. The Department of Education makes the approved curriculum mandatory. It mixes guides adopted from Alberta
 // (mathematics, Grades 7 to 9 science) and the Northwest Territories (English language arts, Kindergarten to Grade 6
 // science, social studies) with Nunavut-made resources, and is organized in four strands: Nunavusiutit, Iqqaqqaukkaringniq,
-// Uqausiliriniq and Aulajaaqtut. A new made-in-Nunavut curriculum is being phased in from Kindergarten and Grade 1, so check the
-// Department's approved curriculum list. Nunavut has no report-card scale Gradelings could confirm, so the four steps
+// Uqausiliriniq and Aulajaaqtut. A new made-in-Nunavut curriculum replaces those guides one grade a year (Kindergarten and Grade 1
+// in 2025-26, Grades 2 and 3 in 2026-27, then one more grade each September), so Kindergarten to Grade 3 cite it. Nunavut has no report-card scale Gradelings could confirm, so the four steps
 // below are a plain practice scale, not a Nunavut scale. Sources and the checking record are in docs/research/nunavut/.
 
 const LEVELS: ProficiencyLevel[] = [
