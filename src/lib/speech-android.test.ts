@@ -6,6 +6,8 @@ vi.mock("./piper", () => ({
   piperCanSpeak: () => false,
   piperMightSpeak: () => false,
   piperWanted: async () => false,
+  autoDownloadPiper: async () => false,
+  markPiperFailed: () => {},
   speakPiper: async () => {},
   stopPiper: () => {},
 }));
