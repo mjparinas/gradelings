@@ -1,3 +1,4 @@
+import { createHmac } from "node:crypto";
 import { mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -10,14 +11,16 @@ const dir = mkdtempSync(join(tmpdir(), "grademap-admin-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 delete process.env.RESEND_API_KEY;
 delete process.env.ADMIN_TOKEN;
+delete process.env.STRIPE_SECRET_KEY;
+process.env.STRIPE_WEBHOOK_SECRET = "whsec_admin";
 const ADMIN_EMAIL = "owner@example.com";
 
 type Mod = Record<string, (req: Request) => Promise<Response>>;
-let signup: Mod, login: Mod, me: Mod, adminMe: Mod, stats: Mod, flags: Mod, experiments: Mod, users: Mod, reports: Mod, auditLog: Mod, codes: Mod, publicFlags: Mod, redeem: Mod, classes: Mod, feedback: Mod;
+let signup: Mod, login: Mod, me: Mod, adminMe: Mod, stats: Mod, flags: Mod, experiments: Mod, users: Mod, reports: Mod, auditLog: Mod, codes: Mod, publicFlags: Mod, redeem: Mod, classes: Mod, feedback: Mod, webhook: Mod;
 let dbm: typeof import("@/server/db");
 
 beforeAll(async () => {
-  [signup, login, me, adminMe, stats, flags, experiments, users, reports, auditLog, codes, publicFlags, redeem, classes, feedback] = (await Promise.all([
+  [signup, login, me, adminMe, stats, flags, experiments, users, reports, auditLog, codes, publicFlags, redeem, classes, feedback, webhook] = (await Promise.all([
     import("@/app/api/auth/signup/route"),
     import("@/app/api/auth/login/route"),
     import("@/app/api/auth/me/route"),
@@ -33,6 +36,7 @@ beforeAll(async () => {
     import("@/app/api/codes/redeem/route"),
     import("@/app/api/classes/route"),
     import("@/app/api/feedback/route"),
+    import("@/app/api/billing/webhook/route"),
   ])) as unknown as Mod[];
   dbm = await import("@/server/db");
 });
@@ -298,15 +302,66 @@ describe("codes, reports, stats and the change log", () => {
   it("counts families without class student accounts", async () => {
     const s = await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json();
     const real = Number((await dbm.query<{ n: number }>("SELECT COUNT(*) AS n FROM parents WHERE role != 'student'"))[0].n);
-    expect(s.families).toBe(real);
-    expect(s.classes).toBe(1);
-    expect(s.children).toBe(1);
+    expect(s.people.families).toBe(real);
+    expect(s.people.parents).toBe(real);
+    expect(s.people.classes).toBe(1);
+    expect(s.people.teachers).toBe(1);
+    expect(s.people.children).toBe(1);
+    expect(s.acquisition.thisMonth + s.acquisition.lastMonth).toBeGreaterThanOrEqual(1);
+    expect(s.engagement.daily).toHaveLength(30);
+    expect(s.revenue.months).toHaveLength(12);
+    expect(s.stripe).toBe(false);
+  });
+
+  it("records paid invoices and refunds from Stripe and shows them as revenue", async () => {
+    const payer = await account("payer@example.com");
+    await dbm.run("UPDATE families SET stripe_customer = 'cus_payer', plan = 'premium', subscription_interval = 'month' WHERE id = ?", [payer.familyId]);
+    const hook = (type: string, object: Record<string, unknown>) => {
+      const payload = JSON.stringify({ id: `evt_${type}_${Math.random()}`, created: Math.floor(Date.now() / 1000), type, data: { object } });
+      const t = Math.floor(Date.now() / 1000);
+      const sig = `t=${t},v1=${createHmac("sha256", "whsec_admin").update(`${t}.${payload}`).digest("hex")}`;
+      return webhook.POST(new Request("http://localhost/api/billing/webhook/", { method: "POST", headers: { "stripe-signature": sig }, body: payload }));
+    };
+    const paidAt = Math.floor(Date.now() / 1000) - 60;
+    const invoice = { id: "in_1", customer: "cus_payer", amount_paid: 1499, currency: "cad", status_transitions: { paid_at: paidAt }, lines: { data: [{ price: { recurring: { interval: "month" } } }] } };
+    expect((await hook("invoice.paid", invoice)).status).toBe(200);
+    expect((await hook("invoice.paid", invoice)).status).toBe(200); // a second event for the same invoice changes nothing
+    // An invoice for someone who isn't a family here (another product on the same Stripe account) is ignored.
+    expect((await hook("invoice.paid", { ...invoice, id: "in_other", customer: "cus_stranger" })).status).toBe(200);
+    const rows = await dbm.query<{ id: string; family_id: string; amount: number; interval: string; paid_at: number }>("SELECT id, family_id, amount, interval, paid_at FROM payments");
+    expect(rows).toEqual([{ id: "in_1", family_id: payer.familyId, amount: 1499, interval: "month", paid_at: paidAt * 1000 }]);
+
+    let s = await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json();
+    expect(s.revenue.thisMonth).toBe(1499);
+    expect(s.customers.paying).toBe(1);
+    expect(s.revenue.mrr).toBe(1499);
+
+    await hook("charge.refunded", { id: "ch_1", invoice: "in_1", amount_refunded: 500 });
+    s = await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json();
+    expect(s.revenue.thisMonth).toBe(999);
+
+    // Deleting the family keeps the money in the totals but unlinks it.
+    expect((await as(admin.cookie).send(users, "POST", "/api/admin/users/", { familyId: payer.familyId, action: "delete", confirm: "payer@example.com" })).status).toBe(200);
+    expect(await dbm.query("SELECT family_id FROM payments")).toEqual([{ family_id: null }]);
+    s = await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json();
+    expect(s.revenue.thisMonth).toBe(999);
+  });
+
+  it("saves monthly costs for profit, and only imports from Stripe when it is set up", async () => {
+    expect((await as(admin.cookie).send(stats, "POST", "/api/admin/stats/", { action: "costs", monthlyCosts: -1 })).status).toBe(400);
+    expect((await as(admin.cookie).send(stats, "POST", "/api/admin/stats/", { action: "costs", monthlyCosts: 42.5 })).status).toBe(200);
+    const s = await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json();
+    expect(s.revenue.monthlyCosts).toBe(4250);
+    expect(s.revenue.months[0].costs).toBe(4250);
+    expect((await as(admin.cookie).send(stats, "POST", "/api/admin/stats/", { action: "import" })).status).toBe(400);
+    expect((await as(admin.cookie).send(stats, "POST", "/api/admin/stats/", { action: "nope" })).status).toBe(400);
+    expect((await as(parent.cookie).send(stats, "POST", "/api/admin/stats/", { action: "costs", monthlyCosts: 1 })).status).toBe(404);
   });
 
   it("records every change with who made it", async () => {
     const entries = (await (await as(admin.cookie).get(auditLog, "/api/admin/audit/")).json()).entries as { admin: string; action: string; detail: string | null }[];
     const actions = new Set(entries.map((e) => e.action));
-    for (const a of ["flag.set", "user.override", "experiment.create", "experiment.start", "experiment.stop", "experiment.delete", "user.extend-trial", "user.grant-access", "user.remove-access", "user.verify-email", "user.sign-out", "user.delete", "code.create", "code.disable", "reports.clear"]) {
+    for (const a of ["flag.set", "user.override", "experiment.create", "experiment.start", "experiment.stop", "experiment.delete", "user.extend-trial", "user.grant-access", "user.remove-access", "user.verify-email", "user.sign-out", "user.delete", "code.create", "code.disable", "reports.clear", "stats.costs"]) {
       expect(actions.has(a), a).toBe(true);
     }
     expect(entries.every((e) => e.admin === ADMIN_EMAIL)).toBe(true);

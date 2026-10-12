@@ -84,7 +84,7 @@ With no configuration it uses a local SQLite file (`./data/grademap.db`) and **s
 ### Stripe setup
 
 1. Create a product "Family plan" with two recurring prices in CAD (monthly and yearly).
-2. Add a webhook endpoint at `https://<your-site>/api/billing/webhook/` (with the trailing slash: Stripe doesn't follow redirects) for `checkout.session.completed`, `customer.subscription.created`, `customer.subscription.updated` and `customer.subscription.deleted`.
+2. Add a webhook endpoint at `https://<your-site>/api/billing/webhook/` (with the trailing slash: Stripe doesn't follow redirects) for `checkout.session.completed`, `customer.subscription.created`, `customer.subscription.updated`, `customer.subscription.deleted`, `invoice.paid` and `charge.refunded` (the last two feed the admin dashboard's revenue numbers).
 3. Turn on the customer portal (Settings → Billing → Customer portal) so parents can manage or cancel.
 
 ### Deploying

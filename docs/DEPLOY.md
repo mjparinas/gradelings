@@ -56,7 +56,7 @@ Turso offers Canadian locations only on its Fly provider (its AWS list has none)
 1. Create a product "Gradelings Family" with two recurring prices in CAD: **C$14.99 / month** and **C$119.99 / year**. Copy their ids to `STRIPE_PRICE_MONTHLY` and `STRIPE_PRICE_YEARLY`. (Plan numbers live in `src/lib/plan.ts`.)
 2. Add a webhook endpoint: `https://<your-domain>/api/billing/webhook/`
    **The trailing slash is required.** Stripe does not follow redirects.
-   Events: `checkout.session.completed`, `customer.subscription.created`, `customer.subscription.updated`, `customer.subscription.deleted`.
+   Events: `checkout.session.completed`, `customer.subscription.created`, `customer.subscription.updated`, `customer.subscription.deleted`, plus `invoice.paid` and `charge.refunded` for the admin dashboard's revenue numbers.
 3. Copy the endpoint's signing secret to `STRIPE_WEBHOOK_SECRET`.
 4. In Stripe's Billing Portal settings, enable cancel, update payment method and plan switching between the two prices.
 5. Test the whole flow in Stripe test mode first (card `4242 4242 4242 4242`). The 30-day free trial is handled by the app, not by Stripe, so no card is needed to start.

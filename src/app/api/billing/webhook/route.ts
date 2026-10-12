@@ -1,9 +1,11 @@
 import { query, run } from "@/server/db";
+import { recordInvoice, recordRefund } from "@/server/payments";
 import { verifyWebhook } from "@/server/stripe";
 
 // Stripe tells us when a subscription starts, renews, changes or ends.
 // Configure the endpoint in Stripe for: checkout.session.completed,
-// customer.subscription.created, customer.subscription.updated, customer.subscription.deleted.
+// customer.subscription.created, customer.subscription.updated, customer.subscription.deleted,
+// and, for the admin dashboard's revenue numbers, invoice.paid and charge.refunded.
 
 interface StripeEvent {
   id?: string;
@@ -48,6 +50,9 @@ async function isStale(event: StripeEvent, familyId: string | undefined, custome
 
 async function apply(event: StripeEvent, obj: Record<string, unknown>, now: number) {
   const at = (event.created ?? 0) * 1000;
+
+  if (event.type === "invoice.paid") await recordInvoice(obj, at || now);
+  if (event.type === "charge.refunded") await recordRefund(obj);
 
   if (event.type === "checkout.session.completed") {
     const familyId = (obj.client_reference_id as string) ?? (obj.metadata as Record<string, string>)?.family_id;

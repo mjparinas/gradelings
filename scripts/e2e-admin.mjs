@@ -1,4 +1,5 @@
-// End-to-end check of the admin panel: the admin signs in, sees the overview, switches the Shop off
+// End-to-end check of the admin panel: the admin signs in, sees the overview and its charts, saves the
+// monthly costs, switches the Shop off
 // (and the kids' app hides it), makes a code, saves an A/B test, finds a family and gives it access,
 // and every tab passes the axe-core accessibility scan. A non-admin account is turned away.
 //
@@ -80,6 +81,12 @@ await page.getByRole("button", { name: "Sign out" }).click();
 await page.getByRole("heading", { name: "Admin sign in" }).waitFor();
 await signIn(ADMIN);
 check(await page.getByText("Families", { exact: true }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the admin sees the overview");
+check(await vis(page.getByRole("img", { name: "Revenue by month" })), "the overview charts revenue by month");
+check(await vis(page.getByRole("img", { name: "Sign-ups per week" })), "the overview charts sign-ups");
+await page.getByLabel("Monthly running costs (CAD)").fill("120");
+await page.getByRole("button", { name: "Save costs" }).click();
+check(await page.getByText("Monthly costs saved.").waitFor({ timeout: 8000 }).then(() => true, () => false), "the admin saves monthly costs for profit");
+check(await vis(page.getByText("with costs of $120.00 a month")), "the projected profit uses the costs");
 await shot("overview");
 await scan("overview");
 

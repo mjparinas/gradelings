@@ -12,7 +12,7 @@ const TEXT_2 = "#52514e";
 export const LEVEL_RAMP = ["#b7d3f6", "#6da7ec", "#2a78d6", "#104281"];
 export const NOT_STARTED = "#e3e2de";
 
-function niceMax(v: number): number {
+export function niceMax(v: number): number {
   if (v <= 0) return 1;
   const pow = Math.pow(10, Math.floor(Math.log10(v)));
   const n = v / pow;
@@ -84,32 +84,43 @@ export function ColumnChart({
   data,
   format = (v) => String(Math.round(v)),
   unit,
+  xLabel = "Day",
+  floor = 1,
 }: {
   title: string;
   subtitle?: string;
   data: { label: string; value: number; detail?: string }[];
   format?: (v: number) => string;
   unit: string;
+  /** Heading of the first column in the table view. */
+  xLabel?: string;
+  /** The scale reaches at least this high, so a chart of small or zero values still has a sensible axis. */
+  floor?: number;
 }) {
   const [hover, setHover] = useState<number | null>(null);
   const W = 600;
   const H = 200;
-  const left = 34;
   const bottom = 26;
-  const max = niceMax(Math.max(...data.map((d) => d.value), 1));
-  const ticks = Number.isInteger(max / 2) ? [0, max / 2, max] : [0, max];
+  // Values below zero (a month that lost money) hang from a zero line instead of the bottom.
+  const lowest = Math.min(...data.map((d) => d.value), 0);
+  const highest = Math.max(...data.map((d) => d.value), lowest < 0 ? 0 : floor);
+  const max = highest > 0 ? niceMax(highest) : 0;
+  const min = lowest < 0 ? -niceMax(-lowest) : 0;
+  const ticks = min < 0 ? [min, 0, ...(max > 0 ? [max] : [])] : Number.isInteger(max / 2) ? [0, max / 2, max] : [0, max];
+  const left = Math.max(34, 7 * Math.max(...ticks.map((t) => format(t).length)) + 10);
   const band = (W - left) / data.length;
   const bw = Math.min(24, band * 0.6);
-  const y = (v: number) => H - bottom - (v / max) * (H - bottom - 8);
+  const y = (v: number) => H - bottom - ((v - min) / (max - min)) * (H - bottom - 8);
+  const base = y(0);
   const labelEvery = Math.ceil(data.length / 7);
 
   return (
-    <ChartFrame title={title} subtitle={subtitle} table={<SimpleTable headers={["Day", unit]} rows={data.map((d) => [d.label, format(d.value)])} />}>
+    <ChartFrame title={title} subtitle={subtitle} table={<SimpleTable headers={[xLabel, unit]} rows={data.map((d) => [d.label, format(d.value)])} />}>
       <div className="relative">
         <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label={title} onMouseLeave={() => setHover(null)}>
           {ticks.map((t) => (
             <g key={t}>
-              <line x1={left} x2={W} y1={y(t)} y2={y(t)} stroke={GRID} strokeWidth="1" />
+              <line x1={left} x2={W} y1={y(t)} y2={y(t)} stroke={t === 0 && min < 0 ? "#b9b8b3" : GRID} strokeWidth="1" />
               <text x={left - 6} y={y(t) + 4} textAnchor="end" fontSize="11" fill={TEXT_2}>
                 {format(t)}
               </text>
@@ -118,17 +129,19 @@ export function ColumnChart({
           {data.map((d, i) => {
             const cx = left + band * i + band / 2;
             const top = y(d.value);
-            const h = H - bottom - top;
+            const h = base - top;
             const r = Math.min(4, h);
+            const opacity = hover === null || hover === i ? 1 : 0.55;
             return (
               <g key={i}>
                 {d.value > 0 && (
                   <path
-                    d={`M${cx - bw / 2} ${H - bottom} V${top + r} Q${cx - bw / 2} ${top} ${cx - bw / 2 + r} ${top} H${cx + bw / 2 - r} Q${cx + bw / 2} ${top} ${cx + bw / 2} ${top + r} V${H - bottom} Z`}
+                    d={`M${cx - bw / 2} ${base} V${top + r} Q${cx - bw / 2} ${top} ${cx - bw / 2 + r} ${top} H${cx + bw / 2 - r} Q${cx + bw / 2} ${top} ${cx + bw / 2} ${top + r} V${base} Z`}
                     fill={BLUE}
-                    opacity={hover === null || hover === i ? 1 : 0.55}
+                    opacity={opacity}
                   />
                 )}
+                {d.value < 0 && <rect x={cx - bw / 2} y={base} width={bw} height={top - base} fill={BLUE} opacity={opacity} />}
                 {i % labelEvery === 0 && (
                   <text x={cx} y={H - 8} textAnchor="middle" fontSize="11" fill={TEXT_2}>
                     {d.label}
@@ -140,7 +153,7 @@ export function ColumnChart({
           })}
         </svg>
         {hover !== null && (
-          <Tooltip x={((left + band * hover + band / 2) / W) * 100} y={(y(data[hover].value) / H) * 100}>
+          <Tooltip x={((left + band * hover + band / 2) / W) * 100} y={(Math.min(y(data[hover].value), base) / H) * 100}>
             <b>{data[hover].label}</b> · {format(data[hover].value)} {unit}
             {data[hover].detail && <span className="block text-white/75">{data[hover].detail}</span>}
           </Tooltip>
@@ -157,12 +170,15 @@ export function LineChart({
   data,
   format,
   max = 1,
+  xLabel = "Week of",
 }: {
   title: string;
   subtitle?: string;
   data: { label: string; value: number | null; detail?: string }[];
   format: (v: number) => string;
   max?: number;
+  /** Heading of the first column in the table view, and the tooltip's lead-in when it is "Week of". */
+  xLabel?: string;
 }) {
   const [hover, setHover] = useState<number | null>(null);
   const W = 600;
@@ -183,7 +199,7 @@ export function LineChart({
   const lastIdx = data.map((d) => d.value !== null).lastIndexOf(true);
 
   return (
-    <ChartFrame title={title} subtitle={subtitle} table={<SimpleTable headers={["Week of", "Value"]} rows={data.map((d) => [d.label, d.value === null ? "–" : format(d.value)])} />}>
+    <ChartFrame title={title} subtitle={subtitle} table={<SimpleTable headers={[xLabel, "Value"]} rows={data.map((d) => [d.label, d.value === null ? "–" : format(d.value)])} />}>
       <div className="relative">
         <svg
           viewBox={`0 0 ${W} ${H}`}
@@ -228,7 +244,7 @@ export function LineChart({
         </svg>
         {hover !== null && data[hover].value !== null && (
           <Tooltip x={(x(hover) / W) * 100} y={(y(data[hover].value!) / H) * 100 - 4}>
-            <b>Week of {data[hover].label}</b> · {format(data[hover].value!)}
+            <b>{xLabel === "Week of" ? `Week of ${data[hover].label}` : data[hover].label}</b> · {format(data[hover].value!)}
             {data[hover].detail && <span className="block text-white/75">{data[hover].detail}</span>}
           </Tooltip>
         )}
@@ -238,13 +254,26 @@ export function LineChart({
 }
 
 /** Horizontal bars with row labels (e.g. questions per subject). */
-export function RowBars({ title, subtitle, rows }: { title: string; subtitle?: string; rows: { label: string; value: number; note: string }[] }) {
+export function RowBars({
+  title,
+  subtitle,
+  rows,
+  headers = ["Subject", "Questions", "Detail"],
+  empty = "No practice in this period yet.",
+}: {
+  title: string;
+  subtitle?: string;
+  rows: { label: string; value: number; note: string }[];
+  /** Table view headings: the row label, the value and the note. */
+  headers?: [string, string, string];
+  empty?: string;
+}) {
   const max = Math.max(...rows.map((r) => r.value), 1);
   const [hover, setHover] = useState<number | null>(null);
   return (
-    <ChartFrame title={title} subtitle={subtitle} table={<SimpleTable headers={["Subject", "Questions", "Detail"]} rows={rows.map((r) => [r.label, r.value, r.note])} />}>
+    <ChartFrame title={title} subtitle={subtitle} table={<SimpleTable headers={headers} rows={rows.map((r) => [r.label, r.value, r.note])} />}>
       {rows.length === 0 ? (
-        <p className="text-sm text-[#52514e]">No practice in this period yet.</p>
+        <p className="text-sm text-[#52514e]">{empty}</p>
       ) : (
         <ul className="flex flex-col gap-3">
           {rows.map((r, i) => (
