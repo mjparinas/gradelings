@@ -35,6 +35,19 @@ describe("CoinsQuestion", () => {
     expect(onAttempt.mock.calls[1][0]).toBe(true);
   });
 
+  it("checks with Enter once a coin is in, unless Enter is pressing a coin", async () => {
+    const onAttempt = setup();
+    await userEvent.keyboard("{Enter}");
+    expect(onAttempt).not.toHaveBeenCalled(); // nothing in the purse yet
+    add("quarter, 25¢").focus();
+    await userEvent.keyboard("{Enter}");
+    expect(onAttempt).not.toHaveBeenCalled(); // Enter pressed the quarter
+    (document.activeElement as HTMLElement).blur();
+    await userEvent.keyboard("{Enter}");
+    expect(onAttempt).toHaveBeenCalledTimes(1);
+    expect(onAttempt.mock.calls[0][0]).toBe(false);
+  });
+
   it("holds at most 14 coins", async () => {
     setup({ ...q, target: 70 });
     const nickel = add("nickel, 5¢");

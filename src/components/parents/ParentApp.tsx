@@ -23,6 +23,7 @@ import { SettingsPage } from "./Settings";
 import { SubscriptionPage } from "./Subscription";
 import { UpgradeBanner } from "./UpgradeBanner";
 import { ReportTabs } from "./common";
+import { MAIN_ID, SkipLink } from "@/components/SkipLink";
 
 const NAV = [
   { path: "", label: "Overview", icon: "🏠" },
@@ -67,6 +68,7 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
   const days = trialDaysLeft(family);
   return (
     <div className="min-h-dvh bg-[#f6f5f1]">
+      <SkipLink />
       <header className="sticky top-0 z-30 border-b border-line bg-white/90 backdrop-blur" style={{ paddingTop: "env(safe-area-inset-top)" }}>
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-3">
           <div className="flex items-center gap-3">
@@ -99,6 +101,7 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
                 <li key={n.path}>
                   <a
                     href={`#/${n.path}`}
+                    aria-current={active === n.path ? "page" : undefined}
                     className={`flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-semibold whitespace-nowrap ${
                       active === n.path ? "bg-[#253047] text-white" : subscribe ? "bg-good-soft text-[#0f172a]" : "text-ink-soft hover:bg-black/5"
                     }`}
@@ -111,7 +114,7 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
           </ul>
         </nav>
       </header>
-      <main className="mx-auto max-w-6xl px-4 py-6" style={{ paddingBottom: "max(2rem, env(safe-area-inset-bottom))" }}>
+      <main id={MAIN_ID} tabIndex={-1} className="mx-auto max-w-6xl px-4 py-6" style={{ paddingBottom: "max(2rem, env(safe-area-inset-bottom))" }}>
         <UpgradeBanner />
         {children}
       </main>

@@ -19,6 +19,7 @@ import { System } from "./System";
 import { parseVariants, type ExperimentStatus, type FlagScope, type Variant } from "@/lib/flags";
 import { verdict } from "@/lib/abVerdict";
 import type { Segment } from "@/lib/adminEmails";
+import { MAIN_ID, SkipLink } from "@/components/SkipLink";
 
 // The site-wide admin panel. Only accounts listed in ADMIN_EMAILS (with a confirmed email) get past the
 // server; everyone else sees a sign-in form or "not an admin". It talks to /api/admin/* only, so it stays
@@ -1089,6 +1090,7 @@ export function AdminApp() {
 
   return (
     <div className="min-h-dvh bg-[#f6f5f1]">
+      <SkipLink />
       <header className="border-b border-line bg-white" style={{ paddingTop: "env(safe-area-inset-top)" }}>
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-2 px-4 py-3">
           <span className="flex items-center gap-2">
@@ -1112,7 +1114,7 @@ export function AdminApp() {
           </div>
         </div>
       </header>
-      <main className="mx-auto max-w-5xl px-4 py-6">
+      <main id={MAIN_ID} tabIndex={-1} className="mx-auto max-w-5xl px-4 py-6">
         {state.kind === "loading" && <p className="font-read">Loading…</p>}
         {state.kind === "signed-out" && <SignIn onDone={check} />}
         {state.kind === "not-admin" && (

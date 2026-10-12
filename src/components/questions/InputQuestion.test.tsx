@@ -78,6 +78,18 @@ describe("InputQuestion", () => {
     expect(onAttempt.mock.calls[0][0]).toBe(true);
   });
 
+  it("lets Enter press a focused keypad key without also checking the answer", async () => {
+    const onAttempt = setup();
+    await userEvent.keyboard("1");
+    screen.getByRole("button", { name: "2" }).focus();
+    await userEvent.keyboard("{Enter}");
+    expect(screen.getByLabelText("Your answer: 12")).toBeInTheDocument();
+    expect(onAttempt).not.toHaveBeenCalled();
+    screen.getByRole("button", { name: "Check ✓" }).focus();
+    await userEvent.keyboard("{Enter}");
+    expect(onAttempt).toHaveBeenCalledTimes(1);
+  });
+
   it("only shows a minus key on the integer keypad", async () => {
     const { unmount } = render(<InputQuestion q={base} status="answering" onAttempt={vi.fn()} onSlip={vi.fn()} />);
     expect(screen.queryByRole("button", { name: "−" })).not.toBeInTheDocument();

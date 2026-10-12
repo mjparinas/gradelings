@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, type CSSProperties } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import type { Choice, ChoiceQuestion as Q } from "@/content/types";
+import { choiceIndexForKey, shortcutBlocked } from "@/lib/keys";
 import { Coin, Shape } from "../visuals";
 import { isLocked, type QuestionProps } from "./types";
 
@@ -14,6 +15,7 @@ function layoutFor(choices: Choice[]): "tiles" | "big" | "list" {
 export function ChoiceQuestion({ q, status, onAttempt }: QuestionProps<Q>) {
   const [wrong, setWrong] = useState<string[]>([]);
   const [picked, setPicked] = useState<string | null>(null);
+  const buttons = useRef<(HTMLButtonElement | null)[]>([]);
   const locked = isLocked(status);
   const layout = layoutFor(q.choices);
   const longest = Math.max(...q.choices.map((c) => c.label.length));
@@ -28,6 +30,21 @@ export function ChoiceQuestion({ q, status, onAttempt }: QuestionProps<Q>) {
           ? "grid-cols-2 max-w-xl"
           : "grid-cols-3";
 
+  // Number keys pick a choice: 1 is the first. Clicking the button keeps every effect the same as a tap.
+  useEffect(() => {
+    if (locked) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (shortcutBlocked(e)) return;
+      const i = choiceIndexForKey(e.key, q.choices.length);
+      const b = i === null ? null : buttons.current[i];
+      if (!b || b.disabled) return;
+      e.preventDefault();
+      b.click();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [locked, q.choices.length]);
+
   return (
     <div className={`mx-auto grid w-full gap-3 sm:gap-4 ${grid}`}>
       {q.choices.map((c, i) => {
@@ -38,9 +55,14 @@ export function ChoiceQuestion({ q, status, onAttempt }: QuestionProps<Q>) {
         return (
           <div key={c.id} className="animate-rise-in" style={{ animationDelay: `${i * 70}ms` }}>
             <button
+              ref={(el) => {
+                buttons.current[i] = el;
+              }}
               type="button"
               data-quiet
               data-testid="choice"
+              aria-keyshortcuts={i < 9 ? String(i + 1) : undefined}
+              data-state={showRight ? "right" : isWrong ? "wrong" : undefined}
               disabled={locked || isWrong}
               onClick={(e) => {
                 setPicked(c.id);
