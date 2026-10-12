@@ -61,6 +61,21 @@ describe("SortQuestion", () => {
     expect(screen.getByText(/All sorted/)).toBeInTheDocument();
   });
 
+  it("reads the next item aloud after a right basket, without a tap", async () => {
+    const onSpeak = vi.fn();
+    render(<SortQuestion q={q} status="answering" onAttempt={vi.fn()} onSlip={vi.fn()} onSpeak={onSpeak} />);
+    const [living, notLiving] = screen.getAllByTestId("bin");
+    // "cat" is picked first; a wrong basket only says the basket's name.
+    await userEvent.click(notLiving);
+    expect(onSpeak).toHaveBeenLastCalledWith("not living");
+    await userEvent.click(living);
+    expect(onSpeak).toHaveBeenLastCalledWith("rock");
+    await userEvent.click(notLiving);
+    expect(onSpeak).toHaveBeenLastCalledWith("tree");
+    await userEvent.click(living);
+    expect(onSpeak).toHaveBeenLastCalledWith("living");
+  });
+
   it("locks the baskets once the question is answered", () => {
     setup("correct");
     for (const bin of screen.getAllByTestId("bin")) expect(bin).toBeDisabled();

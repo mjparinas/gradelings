@@ -5,7 +5,7 @@ import { useCallback, useEffect, useEffectEvent, useRef, useState, type CSSPrope
 import { gameTime } from "@/lib/gametime";
 import { celebrate } from "@/lib/juice";
 import { go } from "@/lib/router";
-import { getItem } from "@/lib/shop";
+import { celebrationOf } from "@/lib/shop";
 import { sounds } from "@/lib/sound";
 import { stopSpeaking } from "@/lib/speech";
 import { useActiveProfile, useChildSettings, useDerived, useStore } from "@/lib/store";
@@ -211,7 +211,10 @@ function GamePlay({ id }: { id: string }) {
       setWhy(reason);
       setPhase("over");
       sounds.complete();
-      if (score.current > bestBefore && score.current > 0) celebrate(getItem(profile.confetti)?.confetti ?? []);
+      if (score.current > bestBefore && score.current > 0) {
+        const celebration = celebrationOf(profile.confetti);
+        celebrate(celebration.emoji, celebration.pattern);
+      }
     },
     [phase, flush, log, id, profile.confetti, bestBefore],
   );

@@ -15,6 +15,7 @@ vi.mock("./localdb", () => ({
 
 import { useStore } from "./store";
 import { startBackgroundSync, syncNow } from "./sync";
+import { MAINTENANCE_SYNC_MESSAGE } from "./maintenance";
 
 const account = { email: "p@example.com", familyId: "fam1" };
 const answer = (id: string, profileId = "kid1", t = 1000): AppEvent => ({
@@ -167,6 +168,14 @@ describe("syncNow", () => {
     fetchMock.mockResolvedValueOnce(new Response("oops", { status: 503 }));
     await syncNow();
     expect(useStore.getState().sync).toMatchObject({ status: "error", error: "Sync failed (503)", cursor: 7 });
+    expect(db.synced.size).toBe(0);
+  });
+
+  it("says the site is under maintenance and keeps the events for later", async () => {
+    db.unsynced = [answer("e1")];
+    fetchMock.mockResolvedValueOnce(new Response("{}", { status: 503, headers: { "x-maintenance": "on" } }));
+    await syncNow();
+    expect(useStore.getState().sync).toMatchObject({ status: "error", error: MAINTENANCE_SYNC_MESSAGE, cursor: 7 });
     expect(db.synced.size).toBe(0);
   });
 

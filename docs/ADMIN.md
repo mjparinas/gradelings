@@ -55,7 +55,7 @@ The list lives in the environment, never the database, so nothing a request writ
 - **Flags:** switch a feature off for everyone or roll it out to a percentage of families. See below.
 - **A/B tests:** see below.
 - **Reports:** "Report a problem" submissions grouped by question, most reported first. Clear a question once it's fixed or checked.
-- **System** (`src/server/systemHealth.ts`, `GET /api/admin/system/`, `?refresh=1` to skip the one-minute cache): one card per part of the stack, then the providers' status pages. Every token stays on the server; the page only gets results, and the Settings card shows a setting's name, never its value. A check that isn't set up shows **Not set up** with the settings to add; a service that errors or takes over 8 seconds shows **Down** without holding up the rest.
+- **System** starts with the **Maintenance mode** switch (below), then the health checks (`src/server/systemHealth.ts`, `GET /api/admin/system/`, `?refresh=1` to skip the one-minute cache): one card per part of the stack, then the providers' status pages. Every token stays on the server; the page only gets results, and the Settings card shows a setting's name, never its value. A check that isn't set up shows **Not set up** with the settings to add; a service that errors or takes over 8 seconds shows **Down** without holding up the rest.
   - **Database:** answer time of `SELECT 1`, families, practice events and when practice was last saved.
   - **Uptime:** the `uptime.yml` workflow's pings over 24 hours and 7 days, the last failure, and how long the site has been down while its "uptime" issue is open. Needs `GITHUB_TOKEN` and `GITHUB_REPOSITORY`.
   - **Deploys (Vercel):** what's live in production, a failed latest production deploy, failed deploys in 7 days, deploys in 24 hours against the Hobby limit of 100, and the commit this server runs. Needs `VERCEL_TOKEN` and `VERCEL_PROJECT_ID` (plus `VERCEL_TEAM_ID` for a team project).
@@ -68,6 +68,17 @@ The list lives in the environment, never the database, so nothing a request writ
   - **Provider status pages:** Vercel, GitHub, Sentry, Resend, Stripe and Turso, with open incidents and how long each has been open.
   - Webhook records (`webhook_log`) and job runs are kept 60 days and hold no personal data.
 - **Log:** the last 200 changes made in the panel.
+
+## Maintenance mode
+
+`src/lib/maintenance.ts`, `src/server/maintenance.ts`, `src/proxy.ts`, `GET/PUT /api/admin/maintenance/`. Switched on the **System** tab (type `TURN ON`); switching it off needs no typing. Both are in the change log (`maintenance.on`, `maintenance.off`).
+
+- **While it's on,** every page except the home page answers `503` with a short "under maintenance" page, and every API route answers `503` with `{ error }`. Every answer carries `x-maintenance: on`.
+- **Still working:** the home page, the admin panel and its API, signing in and out (`/api/auth/login/`, `/logout/`, `/me/`), the Stripe and Resend webhooks, unsubscribe links, the scheduled jobs (`/api/cron/`), the uptime check (`/api/health/`) and static files.
+- **Devices keep working offline:** the service worker treats a maintenance answer for `/play/` or `/parents/` like no connection and opens the saved copy. Sync waits, telling parents under Account that progress is saved on the device, and uploads when maintenance ends. A device that never saved the app sees the maintenance page.
+- **Every admin tab shows a banner** while it's on, with **Turn off maintenance mode**.
+- **Timing:** each server re-reads the switch every 15 seconds, so it can take that long to reach every visitor. If the database can't be read, the site stays open.
+- **Cost:** the proxy runs on every page request, not only on shared reports, so Vercel counts a proxy (middleware) call for each page view.
 
 ## Alerts and the morning digest
 

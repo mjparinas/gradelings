@@ -1,9 +1,22 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { noncePolicy } from "@/lib/csp.mjs";
+import { APP_NAME } from "@/lib/brand";
+import { MAINTENANCE_HEADER, MAINTENANCE_MESSAGE, MAINTENANCE_RETRY_SECONDS, maintenancePage, openDuringMaintenance } from "@/lib/maintenance";
+import { maintenanceOn } from "@/server/maintenance";
 
-// Shared reports are rendered on every request, so they can't be hashed at build time like the
-// other pages. Next.js reads the nonce from the request's policy and puts it on its own scripts.
-export function proxy(request: NextRequest) {
+// Two jobs:
+// - Maintenance mode (switched in the admin panel): every page and API route except the home page, the admin
+//   panel and a few machine endpoints answers 503 with a short message (src/lib/maintenance.ts).
+// - Shared reports are rendered on every request, so they can't be hashed at build time like the
+//   other pages. Next.js reads the nonce from the request's policy and puts it on its own scripts.
+export async function proxy(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+  if (!openDuringMaintenance(pathname) && (await maintenanceOn())) {
+    const headers = { "Cache-Control": "no-store", "Retry-After": String(MAINTENANCE_RETRY_SECONDS), [MAINTENANCE_HEADER]: "on" };
+    if (pathname.startsWith("/api/")) return NextResponse.json({ error: MAINTENANCE_MESSAGE }, { status: 503, headers });
+    return new NextResponse(maintenancePage(APP_NAME), { status: 503, headers: { ...headers, "Content-Type": "text/html; charset=utf-8" } });
+  }
+  if (!pathname.startsWith("/shared/")) return NextResponse.next();
   if (process.env.NODE_ENV === "development") return NextResponse.next(); // next.config.ts sets a dev policy
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
   const policy = noncePolicy(nonce);
@@ -14,4 +27,5 @@ export function proxy(request: NextRequest) {
   return response;
 }
 
-export const config = { matcher: "/shared/:path*" };
+// Everything but build files and files with an extension (icons, the manifest, the service worker, voices).
+export const config = { matcher: "/((?!_next/static|_next/image|.*\\.[A-Za-z0-9]+$).*)" };

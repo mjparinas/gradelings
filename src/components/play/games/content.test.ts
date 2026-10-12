@@ -126,7 +126,12 @@ describe("Number Munchers", () => {
     for (const grade of GRADES) {
       const rules = withSeed(band(grade) + 11, () => muncherRules(grade));
       expect(rules.length).toBeGreaterThanOrEqual(3);
-      for (const rule of rules) checkCells(rule);
+      for (const rule of rules) {
+        checkCells(rule);
+        // Read aloud at the start of each round, so it must say the rule in words the voice reads well.
+        expect(rule.speak, rule.title).toMatch(/^Munch /);
+        expect(rule.speak, rule.title).not.toMatch(/[½]|\d+s\b/);
+      }
       const titles = rules.map((r) => r.title).join(" ");
       expect(titles.includes("negative")).toBe(band(grade) >= 7);
       expect(titles.includes("decimal")).toBe(band(grade) >= 6);

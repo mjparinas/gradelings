@@ -226,7 +226,7 @@ describe("GameScreen", () => {
     expect(h.stopSpeaking).toHaveBeenCalled();
     expect(screen.getByText("🏆 New best score!")).toBeInTheDocument();
     expect(screen.getByText("Best: 50")).toBeInTheDocument();
-    expect(h.celebrate).toHaveBeenCalledWith(["💖", "💜", "💛"]);
+    expect(h.celebrate).toHaveBeenCalledWith(["💖", "💜", "💛"], "cannons");
     // Ending twice doesn't log twice.
     expect(screen.queryByText("out of lives")).not.toBeInTheDocument();
     click(/Play again/);

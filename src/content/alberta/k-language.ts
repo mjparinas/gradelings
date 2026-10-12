@@ -18,7 +18,7 @@ const TALK: Item[] = [
   q("Which sentence tells about a poem?", "A poem has rhyming words.", ["A poem is a tall chair.", "A poem cooks lunch."], "Poems often have rhymes and a beat.", { emoji: "📜", d: 2 }),
   q("Sam says, “I saw a big red truck.” What did Sam tell about?", "a truck", ["a boat", "a snow day"], "Listen for the main thing in what someone says.", { emoji: "🚚" }),
   q("Everyone is sharing in a circle. How do you know it is your turn?", "The talker passes to you", ["You jump in right away", "You go to the door"], "Sharing circles use turns so everybody is heard.", { d: 2 }),
-  q("Which one is the best way to say what you need?", "May I have some water, please?", ["Water now!", "mmm"], "Clear words and a kind voice help others understand.", { d: 2 }),
+  q("Which one is the best way to say what you need?", "May I have some water, please?", ["Water now!", "Hmm."], "Clear words and a kind voice help others understand.", { d: 2 }),
   q("Which sentence says it all?", "My cat sleeps on the couch.", ["My cat", "on the couch the"], "A complete idea tells who or what and what they do.", { d: 3 }),
   q("You tell a story. Which word helps the listener know when?", "yesterday", ["purple", "round"], "Words like yesterday, today and later tell when.", { d: 3 }),
   q("Which is a poem line that rhymes with “cat”?", "The cat sat on a mat.", ["The dog ran in the sun.", "A fish swims in a bowl."], "Cat, sat and mat all end with the same sound.", { d: 3 }),

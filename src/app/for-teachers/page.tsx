@@ -46,7 +46,7 @@ export default function TeachersHub() {
           Assign {regions} curriculum units, see how your students are practising, and let learning games be the reward for focused work. No ads, no student passwords, and families stay in control.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link href={TEACHER_SIGNUP} className="btn btn-good min-h-14 px-6 text-xl">
+          <Link prefetch={false} href={TEACHER_SIGNUP} className="btn btn-good min-h-14 px-6 text-xl">
             Create a free teacher account
           </Link>
           {TEACHER_FRAMEWORKS.map((f) => (

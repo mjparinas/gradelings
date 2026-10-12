@@ -9,6 +9,8 @@ const G: Record<GradeId, number> = { k: 0, "1": 1, "2": 2, "3": 3, "4": 4, "5": 
 
 export interface MuncherRule {
   title: string;
+  /** The rule as read aloud at the start of each round. */
+  speak: string;
   /** Makes one cell: its text, and whether it fits the rule. */
   cell: (good: boolean) => { text: string; good: boolean };
   why: (text: string) => string;
@@ -16,9 +18,10 @@ export interface MuncherRule {
 
 const isPrime = (n: number) => n > 1 && Array.from({ length: Math.floor(Math.sqrt(n)) - 1 }, (_, i) => i + 2).every((d) => n % d !== 0);
 
-function numberRule(title: string, range: [number, number], test: (n: number) => boolean, why: (n: number) => string): MuncherRule {
+function numberRule(title: string, range: [number, number], test: (n: number) => boolean, why: (n: number) => string, speak = title): MuncherRule {
   return {
     title,
+    speak,
     cell: (good) => {
       for (let i = 0; i < 200; i++) {
         const n = randInt(range[0], range[1]);
@@ -33,6 +36,7 @@ function numberRule(title: string, range: [number, number], test: (n: number) =>
 function sumRule(target: number, maxPart: number): MuncherRule {
   return {
     title: `Munch sums that make ${target}`,
+    speak: `Munch the sums that make ${target}`,
     cell: (good) => {
       const a = randInt(0, Math.min(target, maxPart));
       const b = good ? target - a : randInt(0, maxPart);
@@ -51,6 +55,7 @@ function productRule(target: number): MuncherRule {
   for (let a = 1; a <= target; a++) if (target % a === 0 && target / a <= 12 && a <= 12) pairs.push([a, target / a]);
   return {
     title: `Munch products that make ${target}`,
+    speak: `Munch the products that make ${target}`,
     cell: (good) => {
       if (good) {
         const [a, b] = pick(pairs);
@@ -76,6 +81,7 @@ const isPowerOfTwo = (n: number) => n >= 1 && Number.isInteger(n) && (n & (n - 1
 function fractionThreeQuartersRule(): MuncherRule {
   return {
     title: "Munch fractions equal to ¾",
+    speak: "Munch the fractions equal to three quarters",
     cell: (good) => {
       const d = pick([4, 8, 12, 16, 20, 24, 28, 32, 40]);
       if (good) return { text: `${(d / 4) * 3}/${d}`, good: true };
@@ -90,6 +96,7 @@ function fractionThreeQuartersRule(): MuncherRule {
 function percentRule(): MuncherRule {
   return {
     title: "Munch percents greater than 50%",
+    speak: "Munch the percents greater than fifty percent",
     cell: (good) => ({ text: `${good ? randInt(51, 99) : randInt(1, 50)}%`, good }),
     why: (t) => `${t} is not more than half.`,
   };
@@ -98,6 +105,7 @@ function percentRule(): MuncherRule {
 function fractionHalfRule(): MuncherRule {
   return {
     title: "Munch fractions equal to ½",
+    speak: "Munch the fractions equal to one half",
     cell: (good) => {
       const d = pick([2, 4, 6, 8, 10, 12, 14, 16, 20]);
       if (good) return { text: `${d / 2}/${d}`, good: true };
@@ -114,7 +122,7 @@ export function muncherRules(grade: GradeId): MuncherRule[] {
   if (g === 0) {
     const n = randInt(1, 9);
     return [
-      numberRule(`Munch the ${n}s`, [0, 10], (x) => x === n, (x) => `That's ${x}. Look for ${n}!`),
+      numberRule(`Munch the ${n}s`, [0, 10], (x) => x === n, (x) => `That's ${x}. Look for ${n}!`, `Munch the number ${n}`),
       numberRule("Munch numbers bigger than 5", [0, 10], (x) => x > 5, (x) => `${x} is not bigger than 5.`),
       numberRule("Munch numbers smaller than 4", [0, 10], (x) => x < 4, (x) => `${x} is not smaller than 4.`),
     ];
@@ -151,6 +159,7 @@ export function muncherRules(grade: GradeId): MuncherRule[] {
   // Grades 6 to 9: a bigger rule book for each grade, so older kids see more variety.
   const decimals: MuncherRule = {
     title: "Munch decimals bigger than 0.5",
+    speak: "Munch the decimals bigger than zero point five",
     cell: (good: boolean) => {
       const v = good ? randInt(51, 99) / 100 : randInt(1, 50) / 100;
       return { text: String(v), good };
@@ -175,7 +184,7 @@ export function muncherRules(grade: GradeId): MuncherRule[] {
       fractionHalfRule(),
       negatives,
       decimals,
-      numberRule("Munch numbers greater than −5", [-20, 20], (x) => x > -5, (x) => `${x} is not greater than −5.`),
+      numberRule("Munch numbers greater than −5", [-20, 20], (x) => x > -5, (x) => `${x} is not greater than −5.`, "Munch numbers greater than negative five"),
       fractionThreeQuartersRule(),
       numberRule("Munch multiples of 12", [1, 150], (x) => x % 12 === 0, (x) => `${x} ÷ 12 has a remainder.`),
     ];
