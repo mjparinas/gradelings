@@ -275,7 +275,7 @@ async function deepChecks(device, browser, descriptor, page) {
   await freePlay.click();
   await page.waitForFunction((el) => el?.getAttribute("aria-checked") === "true", await freePlay.elementHandle());
   await page.getByRole("switch", { name: /Calm motion/ }).click();
-  await page.getByRole("switch", { name: /Hide timers/ }).click();
+  await page.getByRole("radio", { name: "Hide all" }).click();
   await page.waitForTimeout(600); // let the settings reach IndexedDB before leaving the page
   await page.goto(`${BASE}/play/#/arcade/ninja`);
   const calmClass = await page

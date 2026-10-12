@@ -6,6 +6,7 @@ import { derive, xpForLevel } from "./derive";
 import { dayKey, defaultChildSettings, type AppEvent } from "./model";
 import { unitLevel } from "./proficiency";
 import { dailyQuests } from "./quests";
+import { timerChoice, timerPatch } from "./timers";
 import { newlyEarned, TROPHIES } from "./trophies";
 
 // The apps download a grade's lessons before using them; do the same here.
@@ -148,6 +149,29 @@ describe("quests", () => {
     const a = dailyQuests("p1", day, "middle").map((q) => q.id);
     expect(dailyQuests("p1", day, "middle").map((q) => q.id)).toEqual(a);
     expect(a).toHaveLength(3);
+  });
+});
+
+describe("timers in lessons", () => {
+  it("reads every saved combination of the old two switches", () => {
+    expect(timerChoice({ showTimer: true })).toBe("clock");
+    expect(timerChoice({ showTimer: false })).toBe("countdown");
+    expect(timerChoice({ showTimer: true, hideTimers: true })).toBe("hidden");
+    expect(timerChoice({ showTimer: false, hideTimers: true })).toBe("hidden");
+    expect(timerChoice(undefined)).toBe("countdown");
+  });
+
+  it("defaults to the clock for older children and countdowns only for little ones", () => {
+    expect(timerChoice(defaultChildSettings("p", false))).toBe("clock");
+    expect(timerChoice(defaultChildSettings("p", true))).toBe("countdown");
+  });
+
+  it("round-trips each choice, and hiding keeps the clock choice for when timers come back", () => {
+    for (const choice of ["clock", "countdown", "hidden"] as const) {
+      for (const start of [defaultChildSettings("p", false), defaultChildSettings("p", true)]) expect(timerChoice({ ...start, ...timerPatch(choice) })).toBe(choice);
+    }
+    const hidden = { ...defaultChildSettings("p", false), ...timerPatch("hidden") };
+    expect(timerChoice({ ...hidden, hideTimers: false })).toBe("clock");
   });
 });
 

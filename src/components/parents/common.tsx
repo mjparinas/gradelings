@@ -41,6 +41,32 @@ export function Switch({ label, help, value, onChange }: { label: string; help?:
   );
 }
 
+export function Choice<T extends string>({ label, help, value, options, onChange }: { label: string; help?: string; value: T; options: { value: T; label: string }[]; onChange: (v: T) => void }) {
+  const id = useId();
+  return (
+    <div className="rounded-xl bg-paper px-4 py-3">
+      <span id={id} className="block font-semibold">
+        {label}
+      </span>
+      {help && <span className="block text-sm text-ink-soft">{help}</span>}
+      <div role="radiogroup" aria-labelledby={id} className="mt-2 grid grid-cols-3 gap-2 narrow:grid-cols-1">
+        {options.map((o) => (
+          <button
+            key={o.value}
+            type="button"
+            role="radio"
+            aria-checked={value === o.value}
+            onClick={() => onChange(o.value)}
+            className={`min-h-11 rounded-lg border-2 px-2 py-1 text-sm font-semibold ${value === o.value ? "border-good-dark bg-good text-[#0f172a]" : "border-line bg-white"}`}
+          >
+            {o.label}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function Avatar({ p, size = 48 }: { p: Profile; size?: number }) {
   return (
     <span className="flex shrink-0 items-center justify-center rounded-2xl p-0.5" style={{ background: p.colour, width: size, height: size }}>
