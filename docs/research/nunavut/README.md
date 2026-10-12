@@ -14,6 +14,7 @@
 - `approved.json` lists, per grade and subject, the approved guides and the strand names a unit may cite. `nunavut.test.ts` checks every Nunavut citation against it.
 - `src/content/nunavut/plan.ts` was generated once from the Manitoba pool (Kindergarten to Grade 6 math and science, all language, social studies and Core French) and the Alberta pool (Grades 7-9 math and science). BC units are shared; the rest are copied with Nunavut standards only. Units whose questions name another province, city or Indigenous nation were left out.
 - Social studies: only skills, citizenship, community and map units were reused. World-history units (ancient, medieval) were left out because the approved NWT guides are not those courses.
+- Skills units written for Nunavut (`src/content/nunavut/units/skills.ts`): compass directions between real communities (Grade 4, rounded coordinates, asked only when clearly one compass point), map scale (Grade 4), time zones (Grade 8, only communities whose zone is settled: Qikiqtaaluk Eastern, Kivalliq Central, Kitikmeot Mountain; Coral Harbour keeps its own time and is left out) and population data with made-up communities (Grade 9). Recheck community time zones before launch.
 
 ## Known gaps
 - Citations are by guide and strand, not outcome code, because the NWT guides and the 2007 Alberta program text could not be read automatically. The match for Kindergarten to Grade 6 math and for language is by topic (WNCP-based Manitoba units), not outcome by outcome. Check against the guides before launch.

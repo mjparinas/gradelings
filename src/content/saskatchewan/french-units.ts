@@ -520,24 +520,223 @@ const IMM8: FrItem[] = [
   ["Que fait une personne qui fait preuve d'ouverture à la diversité?", "elle accueille et respecte les autres cultures", ["elle évite les autres", "elle se moque des autres", "elle refuse d'écouter"], IMM8_HINT, "🤝"],
 ];
 
+// ---------- More Level 1 to 3 themes ----------
+
+/** Picture items whose wrong answers are other words from the same list (no synonyms in a list). */
+function pictureItems(pairs: [emoji: string, word: string][], prompt: string, hint: string): FrItem[] {
+  return pairs.map(([emoji, word], i) => [prompt, word, [1, 3, 5].map((k) => pairs[(i + k) % pairs.length][1]), hint, emoji]);
+}
+
+/** "What does … mean?" items from [French, English] pairs; wrong answers are other English meanings. */
+function meaningItems(pairs: [fr: string, en: string, emoji: string][], hint: string): FrItem[] {
+  return pairs.map(([fr, en, emoji], i) => [`What does “${fr}” mean?`, en, [2, 4, 6].map((k) => pairs[(i + k) % pairs.length][1]), hint, emoji]);
+}
+
+const COLOUR_HINT = "Say the colour word out loud in French as you look at the picture.";
+
+const COLOUR_DOTS: [string, string][] = [
+  ["🔴", "rouge"], ["🔵", "bleu"], ["🟡", "jaune"], ["🟢", "vert"], ["🟠", "orange"], ["🟣", "violet"], ["⚫", "noir"], ["⚪", "blanc"], ["🟤", "brun"],
+];
+
+const COLOURS: FrItem[] = [
+  ...pictureItems(COLOUR_DOTS, "Which French word goes with the colour?", COLOUR_HINT),
+  ...meaningItems([
+    ["rouge", "red", "🔴"], ["bleu", "blue", "🔵"], ["jaune", "yellow", "🟡"], ["vert", "green", "🟢"], ["orange", "orange", "🟠"],
+    ["violet", "purple", "🟣"], ["noir", "black", "⚫"], ["blanc", "white", "⚪"], ["brun", "brown", "🟤"], ["rose", "pink", "🎨"], ["gris", "grey", "🎨"],
+  ], "Colour words are some of the first French words you learn."),
+  ["How do you say red?", "rouge", ["bleu", "vert", "jaune"], COLOUR_HINT, "🍓"],
+  ["How do you say blue?", "bleu", ["rouge", "noir", "jaune"], COLOUR_HINT, "💧"],
+  ["How do you say yellow?", "jaune", ["vert", "rouge", "blanc"], COLOUR_HINT, "🍌"],
+  ["How do you say green?", "vert", ["bleu", "jaune", "rouge"], COLOUR_HINT, "🐸"],
+  ["How do you say black?", "noir", ["blanc", "rouge", "vert"], COLOUR_HINT, "🎩"],
+  ["How do you say white?", "blanc", ["noir", "bleu", "jaune"], COLOUR_HINT, "❄️"],
+  ["How do you say pink?", "rose", ["rouge", "violet", "gris"], COLOUR_HINT, "🎀"],
+  ["How do you say grey?", "gris", ["blanc", "bleu", "brun"], COLOUR_HINT, "🐘"],
+  ["How do you say purple?", "violet", ["rose", "bleu", "vert"], COLOUR_HINT, "🍇"],
+  ["How do you say brown?", "brun", ["noir", "orange", "gris"], COLOUR_HINT, "🐻"],
+  ["Which French word is the colour of the banana?", "jaune", ["bleu", "noir", "violet"], COLOUR_HINT, "🍌"],
+  ["Which French word is the colour of the snow?", "blanc", ["noir", "rouge", "vert"], COLOUR_HINT, "⛄"],
+  ["Which French word is the colour of the frog?", "vert", ["rouge", "blanc", "violet"], COLOUR_HINT, "🐸"],
+  ["Which French word is the colour of the strawberry?", "rouge", ["bleu", "vert", "noir"], COLOUR_HINT, "🍓"],
+  ["Which French word is the colour of the grapes?", "violet", ["jaune", "blanc", "orange"], COLOUR_HINT, "🍇"],
+  ["Which French word is the colour of the carrot?", "orange", ["bleu", "noir", "vert"], COLOUR_HINT, "🥕"],
+  ["What does “Ma couleur préférée est le bleu” mean?", "My favourite colour is blue.", ["My favourite colour is red.", "I don't like blue.", "My shirt is blue."], "Préférée means favourite.", "💙"],
+  ["What does “C'est rouge” mean?", "It is red.", ["It is blue.", "I like red.", "It is big."], "C'est means it is.", "🍎"],
+];
+
+const ANIMAL_HINT = "Look at the animal and say its French name out loud.";
+
+const ANIMAL_PICS: [string, string][] = [
+  ["🐱", "le chat"], ["🐶", "le chien"], ["🐟", "le poisson"], ["🐦", "l'oiseau"], ["🐰", "le lapin"], ["🐴", "le cheval"],
+  ["🐄", "la vache"], ["🐷", "le cochon"], ["🐑", "le mouton"], ["🐔", "la poule"], ["🦆", "le canard"], ["🐻", "l'ours"],
+  ["🦊", "le renard"], ["🐭", "la souris"], ["🐸", "la grenouille"], ["🦬", "le bison"], ["🐢", "la tortue"], ["🦋", "le papillon"],
+];
+
+const ANIMALS: FrItem[] = [
+  ...pictureItems(ANIMAL_PICS, "Which French word goes with the picture?", ANIMAL_HINT),
+  ...meaningItems([
+    ["le chat", "the cat", "🐱"], ["le chien", "the dog", "🐶"], ["le poisson", "the fish", "🐟"], ["l'oiseau", "the bird", "🐦"],
+    ["le lapin", "the rabbit", "🐰"], ["le cheval", "the horse", "🐴"], ["la vache", "the cow", "🐄"], ["le cochon", "the pig", "🐷"],
+    ["le renard", "the fox", "🦊"], ["la souris", "the mouse", "🐭"], ["la grenouille", "the frog", "🐸"], ["la tortue", "the turtle", "🐢"],
+  ], ANIMAL_HINT),
+  ["Which French word names the animal that says “meuh”?", "la vache", ["le chat", "le canard", "le chien"], "In French, a cow says meuh.", "🐄"],
+  ["Which French word names the animal that says “miaou”?", "le chat", ["la vache", "le chien", "le mouton"], "In French, a cat says miaou.", "🐱"],
+  ["Which French word names the animal that says “ouaf ouaf”?", "le chien", ["le chat", "la poule", "le cochon"], "In French, a dog says ouaf ouaf.", "🐶"],
+  ["Which French word names the animal that says “coin-coin”?", "le canard", ["la vache", "le cheval", "le chat"], "In French, a duck says coin-coin.", "🦆"],
+  ["Which French word names the animal that says “bêê”?", "le mouton", ["le chien", "le canard", "la souris"], "In French, a sheep says bêê.", "🐑"],
+  ["What does “J'ai un chien” mean?", "I have a dog.", ["I am a dog.", "I see a cat.", "I like dogs."], "J'ai means I have.", "🐶"],
+  ["What does “J'aime les chats” mean?", "I like cats.", ["I have a cat.", "I see a dog.", "I am a cat."], "J'aime means I like or I love.", "🐱"],
+];
+
+// Level 2 (Grade 2)
+
+const FOOD_HINT = "Say the food word out loud in French as you look at the picture.";
+
+const FOOD_PICS: [string, string][] = [
+  ["🍎", "une pomme"], ["🍌", "une banane"], ["🍞", "du pain"], ["🧀", "du fromage"], ["🥛", "du lait"], ["🥕", "une carotte"],
+  ["🍓", "une fraise"], ["🍇", "des raisins"], ["🍗", "du poulet"], ["🍰", "du gâteau"], ["🥚", "un œuf"], ["🌽", "du maïs"],
+  ["🍅", "une tomate"], ["🍲", "de la soupe"], ["🥔", "une pomme de terre"], ["🍪", "un biscuit"],
+];
+
+const FOOD: FrItem[] = [
+  ...pictureItems(FOOD_PICS, "Which French word goes with the picture?", FOOD_HINT),
+  ...meaningItems([
+    ["une pomme", "an apple", "🍎"], ["du pain", "some bread", "🍞"], ["du fromage", "some cheese", "🧀"], ["du lait", "some milk", "🥛"],
+    ["de l'eau", "some water", "💧"], ["une fraise", "a strawberry", "🍓"], ["un œuf", "an egg", "🥚"], ["du jus", "some juice", "🧃"],
+  ], FOOD_HINT),
+  ["What does “J'aime les pommes” mean?", "I like apples.", ["I don't like apples.", "I have an apple.", "I want a banana."], "J'aime means I like.", "🍎"],
+  ["What does “Je n'aime pas le lait” mean?", "I don't like milk.", ["I like milk.", "I have milk.", "I want more milk."], "Ne… pas makes a sentence negative.", "🥛"],
+  ["What does “J'ai faim” mean?", "I am hungry.", ["I am thirsty.", "I am tired.", "I am cold."], "In French you say I have hunger: j'ai faim.", "😋"],
+  ["What does “J'ai soif” mean?", "I am thirsty.", ["I am hungry.", "I am happy.", "I am hot."], "In French you say I have thirst: j'ai soif.", "🥤"],
+  ["What does “Bon appétit!” mean?", "Enjoy your meal!", ["Good night!", "Thank you!", "Hurry up!"], "People say bon appétit before they eat.", "🍽️"],
+  ["What does “C'est délicieux!” mean?", "It's delicious!", ["It's hot!", "It's too big!", "It's mine!"], "Délicieux sounds like delicious.", "😋"],
+  ["How do you say “I like cheese”?", "J'aime le fromage.", ["Je n'aime pas le fromage.", "J'ai le fromage.", "Je suis le fromage."], "Start with J'aime.", "🧀"],
+  ["How do you say “I don't like carrots”?", "Je n'aime pas les carottes.", ["J'aime les carottes.", "J'ai des carottes.", "Je mange des carottes."], "Put ne before aime and pas after it.", "🥕"],
+  ["How do you ask for water politely?", "De l'eau, s'il vous plaît.", ["Au revoir, de l'eau.", "Je n'aime pas l'eau.", "C'est de l'eau."], "S'il vous plaît means please.", "💧"],
+  ["Which answer fits “Tu aimes la pizza?”", "Oui, j'aime la pizza.", ["J'ai sept ans.", "Il fait froid.", "C'est mardi."], "The question asks if you like pizza.", "🍕"],
+];
+
+const WEATHER_HINT = "Il fait… and il… describe the weather. Look at the picture.";
+
+const WEATHER: FrItem[] = [
+  ["Which sentence says the weather in the picture?", "Il pleut.", ["Il neige.", "Il fait soleil.", "Il fait du vent."], WEATHER_HINT, "🌧️"],
+  ["Which sentence says the weather in the picture?", "Il neige.", ["Il pleut.", "Il fait chaud.", "Il fait soleil."], WEATHER_HINT, "🌨️"],
+  ["Which sentence says the weather in the picture?", "Il fait soleil.", ["Il neige.", "Il pleut.", "Il fait du vent."], WEATHER_HINT, "☀️"],
+  ["Which sentence says the weather in the picture?", "Il fait du vent.", ["Il fait soleil.", "Il neige.", "Il fait chaud."], WEATHER_HINT, "🌬️"],
+  ["Which sentence says the weather in the picture?", "Il fait froid.", ["Il fait chaud.", "Il pleut.", "Il fait soleil."], WEATHER_HINT, "🥶"],
+  ["Which sentence says the weather in the picture?", "Il fait chaud.", ["Il fait froid.", "Il neige.", "Il fait du vent."], WEATHER_HINT, "🥵"],
+  ["Which sentence says the weather in the picture?", "Il y a un orage.", ["Il fait soleil.", "Il neige.", "Il fait chaud."], WEATHER_HINT, "⛈️"],
+  ["Which sentence says the weather in the picture?", "C'est nuageux.", ["Il fait soleil.", "Il neige.", "Il fait chaud."], WEATHER_HINT, "☁️"],
+  ["What does “Il pleut” mean?", "It is raining.", ["It is snowing.", "It is sunny.", "It is windy."], WEATHER_HINT, "🌧️"],
+  ["What does “Il neige” mean?", "It is snowing.", ["It is raining.", "It is hot.", "It is sunny."], WEATHER_HINT, "🌨️"],
+  ["What does “Il fait froid” mean?", "It is cold.", ["It is hot.", "It is raining.", "It is windy."], WEATHER_HINT, "🥶"],
+  ["What does “Il fait chaud” mean?", "It is hot.", ["It is cold.", "It is snowing.", "It is cloudy."], WEATHER_HINT, "🥵"],
+  ["What does “Il fait du vent” mean?", "It is windy.", ["It is sunny.", "It is snowing.", "It is cold."], WEATHER_HINT, "🌬️"],
+  ["What does “Quel temps fait-il?” ask?", "What is the weather like?", ["What time is it?", "What day is it?", "How old are you?"], "Le temps can mean the weather.", "🌦️"],
+  ["Which French word goes with the picture?", "l'hiver", ["l'été", "le printemps", "l'automne"], "The four seasons: l'hiver, le printemps, l'été, l'automne.", "⛄"],
+  ["Which French word goes with the picture?", "le printemps", ["l'hiver", "l'été", "l'automne"], "The four seasons: l'hiver, le printemps, l'été, l'automne.", "🌷"],
+  ["Which French word goes with the picture?", "l'été", ["l'hiver", "le printemps", "l'automne"], "The four seasons: l'hiver, le printemps, l'été, l'automne.", "🏖️"],
+  ["Which French word goes with the picture?", "l'automne", ["l'été", "le printemps", "l'hiver"], "The four seasons: l'hiver, le printemps, l'été, l'automne.", "🍂"],
+  ["What does “l'hiver” mean?", "winter", ["summer", "spring", "fall"], "In l'hiver it is cold and snowy on the prairies.", "⛄"],
+  ["What does “l'été” mean?", "summer", ["winter", "fall", "spring"], "L'été is the hottest season.", "🏖️"],
+  ["What does “le printemps” mean?", "spring", ["summer", "winter", "fall"], "In le printemps, the snow melts and plants start to grow.", "🌷"],
+  ["What does “l'automne” mean?", "fall", ["spring", "summer", "winter"], "In l'automne, leaves change colour.", "🍂"],
+  ["What does “une tuque” mean?", "a warm winter hat", ["a raincoat", "a pair of boots", "a scarf"], "In Canada, a warm knitted winter hat is une tuque.", "❄️"],
+  ["What does “des mitaines” mean?", "mittens", ["boots", "a coat", "an umbrella"], "Mitaines keep your hands warm in winter.", "❄️"],
+  ["Which French word goes with the picture?", "un manteau", ["une tuque", "des bottes", "un parapluie"], "Un manteau keeps you warm outside.", "🧥"],
+  ["Which French word goes with the picture?", "des bottes", ["un manteau", "des mitaines", "une tuque"], "Bottes keep your feet dry and warm.", "🥾"],
+  ["Which French word goes with the picture?", "un parapluie", ["un manteau", "des bottes", "un foulard"], "Use un parapluie when il pleut.", "☂️"],
+  ["Which French word goes with the picture?", "un foulard", ["un parapluie", "des bottes", "un manteau"], "Un foulard is a scarf for your neck.", "🧣"],
+  ["Which French word names something to wear when “il neige”?", "une tuque", ["un maillot de bain", "des sandales", "un short"], "When it snows, keep your head warm.", "❄️"],
+  ["Which French word names something to take outside when “il pleut”?", "un parapluie", ["des lunettes de soleil", "un maillot de bain", "une luge"], "A parapluie keeps the rain off.", "🌧️"],
+];
+
+// Level 3 (Grade 3)
+
+const COMMAND3_HINT = "Your teacher uses short commands. Find the verb at the start.";
+
+const COMMANDS: FrItem[] = [
+  ["What does “Prenez un crayon” mean?", "Take a pencil.", ["Close your book.", "Sit down.", "Put away your pencil."], COMMAND3_HINT, "✏️"],
+  ["What does “Écrivez votre nom” mean?", "Write your name.", ["Say your name.", "Read your name.", "Draw your name."], COMMAND3_HINT, "📝"],
+  ["What does “Lisez la phrase” mean?", "Read the sentence.", ["Write the sentence.", "Draw the sentence.", "Cut the sentence."], COMMAND3_HINT, "📖"],
+  ["What does “Dessinez un chat” mean?", "Draw a cat.", ["Colour a cat.", "Cut out a cat.", "Find a cat."], COMMAND3_HINT, "🎨"],
+  ["What does “Coloriez l'image” mean?", "Colour the picture.", ["Cut the picture.", "Glue the picture.", "Draw a picture."], COMMAND3_HINT, "🖍️"],
+  ["What does “Découpez le cercle” mean?", "Cut out the circle.", ["Colour the circle.", "Glue the circle.", "Draw a circle."], COMMAND3_HINT, "✂️"],
+  ["What does “Collez la feuille” mean?", "Glue the sheet.", ["Cut the sheet.", "Read the sheet.", "Fold the sheet."], COMMAND3_HINT, "📄"],
+  ["What does “Rangez vos affaires” mean?", "Put your things away.", ["Take out your things.", "Find your things.", "Share your things."], COMMAND3_HINT, "🎒"],
+  ["What does “Tournez la page” mean?", "Turn the page.", ["Read the page.", "Tear the page.", "Close the page."], COMMAND3_HINT, "📖"],
+  ["What does “Travaillez avec un partenaire” mean?", "Work with a partner.", ["Work alone.", "Talk to the teacher.", "Play with a friend."], COMMAND3_HINT, "👫"],
+  ["What does “Formez un cercle” mean?", "Make a circle.", ["Draw a circle.", "Make a line.", "Sit in a row."], COMMAND3_HINT, "⭕"],
+  ["What does “Comptez jusqu'à dix” mean?", "Count to ten.", ["Write ten words.", "Wait ten minutes.", "Read ten pages."], COMMAND3_HINT, "🔟"],
+  ["What does “Montrez-moi” mean?", "Show me.", ["Tell me.", "Give me.", "Help me."], COMMAND3_HINT, "👀"],
+  ["What does “Attendez votre tour” mean?", "Wait your turn.", ["Take your turn.", "Turn around.", "Go first."], COMMAND3_HINT, "⏳"],
+  ["What does “Chuchotez” mean?", "Whisper.", ["Shout.", "Sing.", "Laugh."], COMMAND3_HINT, "🤫"],
+  ["What does “Mettez votre manteau” mean?", "Put on your coat.", ["Take off your coat.", "Hang up your coat.", "Find your coat."], COMMAND3_HINT, "🧥"],
+  ["What does “Bravo!” mean?", "Well done!", ["Be quiet!", "Hurry up!", "Try again!"], "Bravo and Super! are accolades: words of praise.", "👏"],
+  ["What does “Excellent travail!” mean?", "Excellent work!", ["Too much work!", "Start working!", "Work quietly!"], "Teachers say this when you do great work.", "⭐"],
+  ["What does “Essaie encore!” mean?", "Try again!", ["Well done!", "Stop!", "Sit down!"], "Encore means again.", "🔁"],
+  ["What does “Je ne comprends pas” mean?", "I don't understand.", ["I don't know you.", "I am not here.", "I don't like it."], "Comprendre means to understand.", "🤔"],
+  ["What does “Pouvez-vous répéter, s'il vous plaît?” mean?", "Can you repeat, please?", ["Can you sit down, please?", "Can you help me, please?", "Can you open the door, please?"], "Répéter means to repeat.", "🔁"],
+  ["What does “Est-ce que je peux aller aux toilettes?” ask?", "May I go to the washroom?", ["May I go outside?", "May I get a drink?", "May I go home?"], "Toilettes means washroom.", "🚻"],
+  ["What does “Excusez-moi” mean?", "Excuse me.", ["Thank you.", "Good morning.", "See you soon."], "Use it to get someone's attention politely.", "🙋"],
+  ["How do you say “I don't understand”?", "Je ne comprends pas.", ["Je comprends.", "Je ne sais pas.", "Je suis là."], "Ne… pas goes around the verb.", "🤔"],
+  ["How do you ask “May I have a pencil, please?”", "Est-ce que je peux avoir un crayon, s'il vous plaît?", ["Prenez un crayon.", "Voici un crayon.", "Je n'ai pas de crayon."], "Est-ce que je peux… asks may I.", "✏️"],
+  ["How do you say “Thank you very much”?", "Merci beaucoup.", ["De rien.", "S'il vous plaît.", "Excusez-moi."], "Beaucoup means very much.", "🙏"],
+  ["How do you say “close the door”?", "Fermez la porte.", ["Ouvrez la porte.", "Regardez la porte.", "Dessinez la porte."], "Fermer means to close; ouvrir means to open.", "🚪"],
+  ["How do you say “open the window”?", "Ouvrez la fenêtre.", ["Fermez la fenêtre.", "Regardez la fenêtre.", "Lavez la fenêtre."], "Ouvrir means to open.", "🪟"],
+  ["How do you say “write the date”?", "Écrivez la date.", ["Lisez la date.", "Dessinez la date.", "Dites la date."], "Écrire means to write.", "📅"],
+  ["How do you say “listen to the song”?", "Écoutez la chanson.", ["Chantez la chanson.", "Lisez la chanson.", "Écrivez la chanson."], "Écouter means to listen.", "🎵"],
+  ["How do you say “sing with the class”?", "Chantez avec la classe.", ["Dansez avec la classe.", "Lisez avec la classe.", "Venez avec la classe."], "Chanter means to sing.", "🎤"],
+];
+
+const CAL_HINT = "The days of the week in French: lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche.";
+const MONTH_HINT = "The months in French: janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre.";
+const DAYS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
+const DAYS_EN = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+const MONTHS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
+const MONTHS_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+const CALENDAR: FrItem[] = [
+  ...DAYS.map((d, i): FrItem => [`How do you say ${DAYS_EN[i]}?`, d, [1, 2, 4].map((k) => DAYS[(i + k) % 7]), CAL_HINT, "📅"]),
+  ...DAYS.map((d, i): FrItem => [`Which French word is the day after “${d}”?`, DAYS[(i + 1) % 7], [DAYS[(i + 2) % 7], DAYS[(i + 6) % 7], DAYS[(i + 4) % 7]], CAL_HINT, "➡️"]),
+  ...MONTHS.map((m, i): FrItem => [`How do you say ${MONTHS_EN[i]}?`, m, [1, 4, 8].map((k) => MONTHS[(i + k) % 12]), MONTH_HINT, "🗓️"]),
+  ...MONTHS.map((m, i): FrItem => [`Which French word is the month after “${m}”?`, MONTHS[(i + 1) % 12], [MONTHS[(i + 2) % 12], MONTHS[(i + 11) % 12], MONTHS[(i + 6) % 12]], MONTH_HINT, "➡️"]),
+  ["Which French word names the month of Canada Day (July 1)?", "juillet", ["juin", "août", "mai"], MONTH_HINT, "🍁"],
+  ["Which French word names the month of Halloween?", "octobre", ["novembre", "septembre", "décembre"], MONTH_HINT, "🎃"],
+  ["Which French word names the month of New Year's Day?", "janvier", ["février", "décembre", "mars"], MONTH_HINT, "🎉"],
+  ["What does “aujourd'hui” mean?", "today", ["tomorrow", "yesterday", "next week"], "Aujourd'hui is today, hier is yesterday, demain is tomorrow.", "📅"],
+  ["What does “hier” mean?", "yesterday", ["today", "tomorrow", "next year"], "Aujourd'hui is today, hier is yesterday, demain is tomorrow.", "⬅️"],
+  ["What does “la fin de semaine” mean?", "the weekend", ["the end of the year", "the month", "the morning"], "In Canada, the weekend is often called la fin de semaine.", "🛌"],
+  ["What does “Quelle est la date aujourd'hui?” ask?", "What is the date today?", ["What time is it?", "What day was yesterday?", "How old are you?"], "La date means the date.", "🗓️"],
+  ["What does “Mon anniversaire est le 12 mai” mean?", "My birthday is May 12.", ["My birthday is March 12.", "I am 12 years old.", "Today is May 12."], "Anniversaire means birthday.", "🎂"],
+  ["What does “C'est le premier septembre” mean?", "It is September 1.", ["It is September 7.", "It is the first week.", "It is November 1."], "In French dates, the first day of the month is le premier.", "🗓️"],
+  ["What does “Aujourd'hui, c'est lundi” mean?", "Today is Monday.", ["Tomorrow is Monday.", "Yesterday was Monday.", "Today is Sunday."], CAL_HINT, "📅"],
+];
+
 // ---------- The units ----------
 
 export const cf1: Unit[] = [
   core({ id: "sk-cf1-bonjour", title: "Hello and my name", emoji: "👋", blurb: "Greetings, polite words and who you are", parentNote: "Level 1 Core French starts with key words and phrases: bonjour, merci, au revoir, je m'appelle… and how old you are.", standards: ["1.CS.1, 1.CS.2, 1.GL.2", "understanding key words and phrases, and giving basic personal information orally"], items: HELLO }),
   core({ id: "sk-cf1-classe", title: "In the classroom", emoji: "🏫", blurb: "Classroom words and your teacher's commands", parentNote: "Names of classroom objects and the short commands a French teacher uses: écoutez, regardez, levez la main.", standards: ["1.CS.1, 1.CS.4, 1.GL.1", "understanding basic classroom instructions, and linking a French word to a picture"], items: CLASSROOM }),
   core({ id: "sk-cf1-famille", title: "My family", emoji: "👨‍👩‍👧‍👦", blurb: "Mom, dad, brother, sister", parentNote: "Family words with ma and mon: ma maman, mon papa, ma sœur, mon frère.", standards: ["1.CS.1, 1.CS.4, 1.LK.1", "key words about family, linked to a picture"], items: FAMILY }),
+  core({ id: "sk-cf1-couleurs", title: "Colours", emoji: "🎨", blurb: "Rouge, bleu, jaune, vert", parentNote: "French colour words, matched to pictures and to everyday things (a yellow banana, white snow), plus saying a favourite colour.", standards: ["1.CS.1, 1.GL.1, 1.LK.1", "key words for colours, understood with the help of pictures"], items: COLOURS }),
+  core({ id: "sk-cf1-animaux", title: "Animals", emoji: "🐾", blurb: "Le chat, le chien, la vache", parentNote: "Names of pets, farm animals and prairie animals in French, the sounds animals make in French, and short sentences such as j'ai un chien.", standards: ["1.CS.1, 1.GL.1, 1.LK.1", "key words for animals, understood with the help of pictures and sounds"], items: ANIMALS }),
 ];
 
 export const cf2: Unit[] = [
   unit({ id: "sk-cf2-nombres", title: "Numbers 1 to 20", emoji: "🔢", blurb: "Count in French", parentNote: "Counting objects and saying the number words from un to vingt, plus the number before and after.", standards: ["2.CS.1, 2.LK.1", "numbers 1 to 20 in French"], generate: numbersTo20 }),
   core({ id: "sk-cf2-questions", title: "Question words", emoji: "❓", blurb: "Qui? Où? Quand? Comment?", parentNote: "Common question beginnings (qui, où, quand, pourquoi, comment, combien) and answers that fit them.", standards: ["2.CS.1, 2.CS.2, 2.LK.1", "common question beginnings, and answering a familiar question"], items: QUESTIONS }),
   core({ id: "sk-cf2-articles", title: "Le, la, un, une, je, tu", emoji: "🔤", blurb: "Little words in front of nouns", parentNote: "Articles (le, la, les, un, une) and pronouns (je, tu, il, elle, nous, ils).", standards: ["2.CS.4, 2.GL.4, 2.LK.1", "common articles and pronouns, used to build a simple sentence"], items: ARTICLES }),
+  core({ id: "sk-cf2-nourriture", title: "Food I like", emoji: "🍎", blurb: "J'aime, je n'aime pas", parentNote: "Food words with pictures, and simple sentences to say what you like and don't like, that you are hungry or thirsty, and to ask politely.", standards: ["2.CS.1, 2.CS.3, 2.LK.1", "key food words in simple sentences, supported by pictures"], items: FOOD }),
+  core({ id: "sk-cf2-meteo", title: "Weather and seasons", emoji: "🌦️", blurb: "Il pleut, il neige, l'hiver", parentNote: "Weather sentences (il pleut, il neige, il fait froid), the four seasons, and winter clothing words such as une tuque and des mitaines.", standards: ["2.CS.1, 2.CS.3, 2.LK.1", "short weather sentences and season and clothing words, supported by pictures"], items: WEATHER }),
 ];
 
 export const cf3: Unit[] = [
   unit({ id: "sk-cf3-nombres", title: "Numbers 21 to 50", emoji: "🔢", blurb: "Vingt-et-un to cinquante", parentNote: "Reading and saying the numbers from 21 to 50 in French, and adding small numbers.", standards: ["3.CS.1, 3.LK.1", "numbers to 50 in French"], generate: numbersTo50 }),
   core({ id: "sk-cf3-mon-ma-mes", title: "Mon, ma, mes", emoji: "🎒", blurb: "My and your things", parentNote: "Possessive words for personal items: mon, ma, mes (my) and ton, ta, tes (your).", standards: ["3.CS.4, 3.LK.1", "possessive words for personal items"], items: MINE }),
   core({ id: "sk-cf3-moi", title: "Describing me and others", emoji: "🙂", blurb: "Je suis grand, elle est drôle", parentNote: "Adjectives that describe people, with je suis, tu es, il est and elle est; hair and eye colour.", standards: ["3.CS.2, 3.CS.4, 3.LK.1", "describing self and others with simple adjectives"], items: ATTRIBUTES }),
+  core({ id: "sk-cf3-consignes", title: "Class instructions", emoji: "📋", blurb: "Écrivez, lisez, découpez", parentNote: "The instructions, courtesy requests and praise used in a French class: écrivez votre nom, je ne comprends pas, pouvez-vous répéter?, bravo!", standards: ["3.CS.1, 3.LK.1", "understanding instructions, courtesy requests and accolades"], items: COMMANDS }),
+  core({ id: "sk-cf3-calendrier", title: "Days, months and dates", emoji: "🗓️", blurb: "Lundi, janvier, aujourd'hui", parentNote: "Days of the week and months of the year in French, what comes next, and saying the date and your birthday.", standards: ["3.CS.2, 3.LK.1", "days, months and dates, used to give basic information"], items: CALENDAR }),
 ];
 
 export const cf4: Unit[] = [

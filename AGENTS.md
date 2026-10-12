@@ -432,6 +432,7 @@ Full guide: `docs/CONTENT_GUIDE.md`. The essentials:
 
 - **Generation:**
   - Every unit has `generate({ difficulty })` that returns 6–10 questions (8 by convention) at difficulty 1, 2 or 3.
+  - **Every course has enough to practise:** each framework's grade and subject needs at least 5 units and 250 distinct questions (French: 5 units and 120). `src/content/depth.test.ts` counts them and lists the few known exceptions.
   - **Never use `Math.random` in content.** Use the seeded helpers in `src/content/random.ts`.
 - **Questions must be fair:**
   - the answer is among the choices;

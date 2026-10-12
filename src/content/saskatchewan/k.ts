@@ -60,12 +60,15 @@ export const courses: Course[] = [
     units: [...reuse(k_social, {
       "places-near-me": sk("DRK.1", "where people, places and environments are in relation to each other"),
       "caring-for-nature": sk("RWK.2", "caring for the environment through daily actions"),
+      "we-belong": sk("INK.2, PAK.2", "the different groups children belong to, and respecting ideas that differ from our own"),
     })],
     shares: {
       "all-about-me": share("INK.1, INK.2", "similarities and differences among individuals, and the diversity of groups in the classroom"),
       "helpers-and-rules": share("PAK.1, PAK.2", "classroom, playground and school rules, and working through disagreements"),
+      "families": share("INK.2, RWK.1", "how families are alike and different, and sharing tasks at home"),
+      "needs-and-wants": share("RWK.1", "managing resources in families: telling needs from wants"),
     },
-    order: { "ca-sk": ["all-about-me", "helpers-and-rules", "places-near-me", "caring-for-nature"] },
+    order: { "ca-sk": ["all-about-me", "families", "we-belong", "helpers-and-rules", "needs-and-wants", "places-near-me", "caring-for-nature"] },
   },
   ...frenchCourses("k"),
 ];

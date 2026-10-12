@@ -175,6 +175,74 @@ const ECON: Item[] = [
   hq("Which action best shows critical thinking about a purchase?", "asking whether you need it, what it costs and what happens to it later", ["buying because a friend did", "buying the first one you see", "buying because of an ad"], "Good choices consider both short- and long-term effects.", "🧠"),
 ];
 
+// ---------- Levels of government and the life of a law ----------
+
+const LEVEL_SORT: SortSet = {
+  prompt: "Which level of government is mainly responsible? Tap an item, then tap its basket.",
+  hint: "The federal government looks after things for the whole country, the province runs schools and health care, and the municipality looks after local services.",
+  bins: [
+    { id: "federal", label: "federal", emoji: "🍁" },
+    { id: "provincial", label: "provincial", emoji: "🏛️" },
+    { id: "municipal", label: "municipal", emoji: "🏘️" },
+  ],
+  items: [
+    { label: "passports", emoji: "🛂", bin: "federal" },
+    { label: "the Canadian Armed Forces", emoji: "🎖️", bin: "federal" },
+    { label: "Canada's money (currency)", emoji: "💵", bin: "federal" },
+    { label: "schools and education", emoji: "🏫", bin: "provincial" },
+    { label: "driver's licences", emoji: "🚗", bin: "provincial" },
+    { label: "running hospitals", emoji: "🏥", bin: "provincial" },
+    { label: "garbage pickup", emoji: "🗑️", bin: "municipal" },
+    { label: "local parks and playgrounds", emoji: "🌳", bin: "municipal" },
+    { label: "clearing snow from city streets", emoji: "❄️", bin: "municipal" },
+  ],
+};
+
+const LAW_ORDER = order("Put the steps in order for how an idea becomes a provincial law that is put into action.", "A law starts with a problem people notice, becomes a bill, is passed and signed, and then is put into action and checked.", [
+  ["People notice a problem and call for change", "📣"],
+  ["A bill is written and introduced in the legislature", "📄"],
+  ["MLAs debate the bill and vote on it", "🗳️"],
+  ["The Lieutenant Governor gives Royal Assent", "👑"],
+  ["The law comes into force", "📅"],
+  ["Officials enforce the law and review how well it works", "🔍"],
+]);
+
+const LAWS: Item[] = [
+  q("What are Canada's three main levels of government?", "federal, provincial and municipal", ["federal, national and royal", "school, family and club", "provincial, city and street"], "Each level has its own responsibilities. First Nations also have their own governments.", "🏛️"),
+  q("Where does Saskatchewan's legislature meet?", "Regina", ["Saskatoon", "Ottawa", "Prince Albert"], "The Legislative Building in Regina sits beside Wascana Lake.", "🏛️"),
+  q("Where does Canada's Parliament meet?", "Ottawa", ["Regina", "Toronto", "Montreal"], "Ottawa is the capital of Canada.", "🍁"),
+  q("A member of Saskatchewan's Legislative Assembly is called…", "an MLA", ["an MP", "a senator", "a mayor"], "MLA stands for Member of the Legislative Assembly.", "🧑‍💼"),
+  q("Who leads the government of a province?", "the premier", ["the prime minister", "the mayor", "the Governor General"], "The premier is usually the leader of the party with the most seats in the legislature.", "🧑‍💼"),
+  q("Who leads the government of Canada?", "the prime minister", ["the premier", "the reeve", "the Lieutenant Governor"], "The prime minister usually leads the party with the most seats in the House of Commons.", "🍁"),
+  q("A law made by a city, town or rural municipality is called a…", "bylaw", ["treaty", "charter", "budget"], "Bylaws cover local things such as parking, pets and noise.", "🏘️"),
+  q("Who leads a city or town council?", "the mayor", ["the premier", "the Governor General", "the Speaker"], "In a rural municipality, the council is led by a reeve.", "🏘️"),
+  q("A bill is…", "a proposed law that has not been passed yet", ["a law that has been passed", "a court decision", "an election result"], "Once it is passed and given Royal Assent, it becomes an act.", "📄"),
+  q("When a bill is passed and receives Royal Assent, it becomes…", "an act (a law)", ["a petition", "a bylaw", "a ballot"], "Acts are the laws passed by Parliament or a legislature.", "📜"),
+  q("Who gives Royal Assent to bills passed by Saskatchewan's legislature?", "the Lieutenant Governor", ["the prime minister", "the mayor of Regina", "the Chief Justice"], "The Lieutenant Governor represents the Crown in the province.", "👑"),
+  q("Who gives Royal Assent to bills passed by Parliament?", "the Governor General", ["the premier", "the Speaker", "a senator"], "The Governor General represents the Crown in Canada.", "👑"),
+  q("Saskatchewan's legislature has one house. Canada's Parliament has two. They are…", "the House of Commons and the Senate", ["the House of Commons and the Supreme Court", "the Senate and city council", "the Cabinet and the school board"], "A federal bill must pass both houses.", "🏛️"),
+  q("What do courts do with laws?", "interpret them and decide how they apply to a case", ["write new bills", "hold elections", "print money"], "Judges decide what a law means in a real situation.", "⚖️"),
+  q("What is the highest court in Canada?", "the Supreme Court of Canada", ["the House of Commons", "a city council", "the Senate"], "Its decisions apply across the country.", "⚖️"),
+  q("Which is one way citizens can help shape a new law?", "speak to a committee or write to their MLA", ["ignore the news", "wait until it passes", "only complain to friends"], "Committees often hear from the public about a bill.", "✉️"),
+  q("In a classroom, a teacher decides the date of a test. This is a decision made by…", "a person in authority", ["consensus", "a majority vote", "a referendum"], "Some decisions are made by the person responsible for a group.", "🧑‍🏫"),
+  q("A referendum is when…", "voters decide a single question directly", ["judges decide a case", "the premier picks a cabinet", "a bill is read for the first time"], "Referendums ask citizens to vote yes or no on one question.", "🗳️"),
+  q("A sports team's players vote for a captain. The person with the most votes wins. This is…", "majority rule", ["consensus", "a dictatorship", "a court ruling"], "In majority rule, the choice with the most votes wins.", "🏒"),
+  q("Which level of government runs public schools in Saskatchewan?", "the provincial government, with school divisions", ["the federal government only", "the municipal government only", "no government"], "Education is a provincial responsibility under the Constitution.", "🏫"),
+  q("A family's dog barks all night. Which law would most likely deal with this?", "a municipal noise or animal bylaw", ["a federal tax law", "a treaty", "a Supreme Court ruling"], "Local issues are usually handled by local bylaws.", "🐕"),
+  q("Who enforces laws such as speeding rules?", "police officers", ["teachers", "senators", "the Speaker"], "Police enforce laws; courts decide cases.", "🚓"),
+  q("Why do new laws often come into force on a later date?", "to give people and organizations time to get ready", ["because laws are a secret", "because nobody reads them", "so they can be ignored"], "For example, businesses may need time to change how they work.", "📅"),
+  q("What is the Cabinet?", "the premier's or prime minister's team of ministers who lead government departments", ["a court of judges", "a group of mayors", "the opposition party"], "Each minister is responsible for an area such as health or education.", "🗂️"),
+  q("Which of these is a responsibility of the federal government?", "national defence", ["garbage pickup", "local parks", "public schools"], "The federal government handles matters for the whole country.", "🍁"),
+  hq("Why might a government ask the public for comments before writing a bill?", "to understand the problem and how the law would affect different people", ["to delay all laws forever", "because the public writes every bill", "because comments are required for every bylaw"], "Consultation can make a law fairer and easier to follow.", "💬"),
+  hq("After a law is passed, regulations are often made. What are regulations?", "detailed rules that explain how the law will work", ["a list of election results", "court cases from the past", "a new constitution"], "Acts set the main rules; regulations fill in the details.", "📑"),
+  hq("Why might a law be changed (amended) a few years after it is passed?", "it did not work as planned, or times and needs changed", ["laws can never be changed", "the first law was secret", "laws expire every year"], "Governments review laws and update them.", "🔁"),
+  hq("Which shows the courts checking the power of a government?", "a court rules that part of a law goes against the Charter of Rights and Freedoms", ["a mayor opens a park", "an MLA gives a speech", "a citizen signs a petition"], "The Charter is part of the Constitution, and laws must follow it.", "⚖️"),
+  hq("A group of students wants a safer crosswalk near their school. Which level of government should they contact first?", "their municipal council", ["the Supreme Court", "the Senate", "the Governor General"], "Local streets and crosswalks are usually a municipal matter.", "🚸"),
+  hq("Besides federal, provincial and municipal governments, which governments make decisions for many communities in Canada?", "First Nations governments, such as band councils", ["school clubs", "sports leagues", "private companies"], "Many First Nations make laws and decisions on matters such as their lands, membership and services.", "🏛️"),
+  hq("Which is a strength of consensus decision making?", "everyone's view is heard and the group supports the final choice", ["it is always the fastest way", "only one person decides", "nobody needs to talk"], "Consensus can take longer, but people are more likely to support the result.", "🤝"),
+  hq("A provincial law and a federal law appear to conflict on the same topic. Who usually settles the question?", "the courts", ["the mayor", "the school board", "a newspaper"], "Courts decide which level of government has the power over a topic.", "⚖️"),
+];
+
 export const units: Unit[] = [
   {
     id: "sk-culture-8",
@@ -211,5 +279,14 @@ export const units: Unit[] = [
     standards: { "ca-sk": sk("RW8.1–RW8.3", "Canada's mixed market economy, consumerism, personal consumer choices and environmental stewardship") },
     parentNote: "How a mixed market economy works, supply and demand, the effects of consumerism, making responsible consumer choices and caring for the environment.",
     generate: bankUnit(ECON, { sorts: [WANTS_SORT] }),
+  },
+  {
+    id: "sk-laws-8",
+    title: "Governments & Laws",
+    emoji: "📜",
+    blurb: "Who decides what, and how a law is put into action",
+    standards: { "ca-sk": sk("PA8.2, PA8.3", "power and authority in different decision-making processes, and the path of a law from first idea to putting it into action") },
+    parentNote: "The responsibilities of federal, provincial and municipal governments, who leads each, bylaws, acts and regulations, the role of courts, and how a law goes from an idea to being enforced and reviewed.",
+    generate: bankUnit(LAWS, { sorts: [LEVEL_SORT], orders: [LAW_ORDER] }),
   },
 ];

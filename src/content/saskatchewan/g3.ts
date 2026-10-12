@@ -1,6 +1,7 @@
 import type { Course } from "../types";
 import { units as g3_science } from "../ontario/g3-science";
 import { units as sk_science_3 } from "./g3-science";
+import { units as sk_social_3 } from "./g3-social";
 import { reuse, share, sk } from "./kit";
 import { SK_OUTCOMES as O } from "./outcomes";
 import { frenchCourses } from "./french";
@@ -64,14 +65,14 @@ export const courses: Course[] = [
     grade: "3",
     subject: "social",
     bigIdeas: { "ca-sk": O["3"].social },
-    units: [],
+    units: [...sk_social_3],
     shares: {
       "maps-and-globes": share("DR3.1", "model representations of Earth: maps and globes"),
       "meeting-needs": share("RW3.1", "how communities around the world meet needs and wants"),
       "world-cultures": share("IN3.1, IN3.2", "daily life, cultures and traditions in communities around the world"),
       "global-indigenous": share("DR3.3", "beliefs about living on and with the land"),
     },
-    order: { "ca-sk": ["maps-and-globes", "meeting-needs", "world-cultures", "global-indigenous"] },
+    order: { "ca-sk": ["maps-and-globes", "meeting-needs", "world-cultures", "global-indigenous", ...sk_social_3.map((u) => u.id)] },
   },
   ...frenchCourses("3"),
 ];
