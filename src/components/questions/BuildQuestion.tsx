@@ -2,6 +2,7 @@
 
 import { useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { replay } from "@/lib/juice";
+import { useCheckShortcut } from "@/lib/keys";
 import { sounds } from "@/lib/sound";
 import type { BuildQuestion as Q } from "@/content/types";
 import { HundredFlat, OneCube, TenRod } from "../visuals";
@@ -31,6 +32,8 @@ export function BuildQuestion({ q, status, onAttempt }: QuestionProps<Q>) {
   const st = revealed ? Math.floor((q.target % 100) / 10) : tens;
   const so = revealed ? q.target % 10 : ones;
   const value = sh * 100 + st * 10 + so;
+  const checkButton = useRef<HTMLButtonElement>(null);
+  useCheckShortcut(checkButton, !locked && value !== 0);
 
   const change = (dh: number, dt: number, d1: number) => {
     const nh = Math.min(9, Math.max(0, hundreds + dh));
@@ -153,6 +156,7 @@ export function BuildQuestion({ q, status, onAttempt }: QuestionProps<Q>) {
         type="button"
         data-quiet
         disabled={locked || value === 0}
+        ref={checkButton}
         onClick={(e) => onAttempt(value === q.target, e.currentTarget)}
         className={`btn btn-good min-h-18 w-full max-w-sm text-3xl ${locked || value === 0 ? "opacity-50" : ""}`}
       >

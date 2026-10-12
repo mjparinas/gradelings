@@ -34,8 +34,8 @@ export function Switch({ label, help, value, onChange }: { label: string; help?:
         <span className="block font-semibold">{label}</span>
         {help && <span className="block text-sm text-ink-soft">{help}</span>}
       </span>
-      <span className={`relative h-8 w-14 shrink-0 rounded-full transition-colors ${value ? "bg-good" : "bg-ink/20"}`} aria-hidden="true">
-        <span className={`absolute top-1 h-6 w-6 rounded-full bg-white shadow transition-all ${value ? "left-7" : "left-1"}`} />
+      <span className={`switch-track relative h-8 w-14 shrink-0 rounded-full transition-colors ${value ? "bg-good" : "bg-ink/20"}`} aria-hidden="true">
+        <span className={`switch-knob absolute top-1 h-6 w-6 rounded-full bg-white shadow transition-all ${value ? "left-7" : "left-1"}`} />
       </span>
     </button>
   );
@@ -175,8 +175,8 @@ export function Slider({
           else onChange(Math.min(max, Math.max(min, value + dir * step)));
         }}
       >
-        <span aria-hidden="true" className="absolute inset-x-0 h-2 rounded-full bg-line" />
-        <span aria-hidden="true" className="absolute h-2 rounded-full bg-[#4f8ef7]" style={{ width: `${pct}%` }} />
+        <span aria-hidden="true" className="progress-track absolute inset-x-0 h-2 rounded-full bg-line" />
+        <span aria-hidden="true" className="progress-fill absolute h-2 rounded-full bg-[#4f8ef7]" style={{ width: `${pct}%` }} />
         <span aria-hidden="true" className="absolute h-7 w-7 -translate-x-1/2 rounded-full border-2 border-[#2f6fd6] bg-white" style={{ left: `${pct}%` }} />
       </div>
       {help && <span className="text-sm text-ink-soft">{help}</span>}

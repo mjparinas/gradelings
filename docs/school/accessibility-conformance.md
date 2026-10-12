@@ -2,8 +2,8 @@
 
 Product: Gradelings (kids' app `/play/`, parent area `/parents/`, teacher area `/teachers/`, public pages)
 Standard: WCAG 2.2 levels A and AA. Districts often ask for 2.1 AA; 2.2 includes every 2.1 criterion.
-Date: October 10, 2026
-Method: **self-assessed, automated testing only so far.** No assistive-technology testing has been done by a person yet.
+Date: October 12, 2026
+Method: **self-assessed, automated and scripted testing only so far.** No assistive-technology testing has been done by a person yet.
 
 ## What has been tested
 
@@ -17,11 +17,15 @@ Method: **self-assessed, automated testing only so far.** No assistive-technolog
 | Reading comfort | Per-child options for roomy text and high contrast; Andika font for questions | Built in |
 | Read-aloud | Device voices through the Web Speech API; every question can be read aloud | Built in |
 | Text alternatives for charts | Every parent chart has tooltips and a table view | Built in |
+| Keyboard-only use | `node scripts/e2e-keyboard.mjs` in CI: Tab through the public pages, kids' app and every parent tab (each stop must show a focus ring and not be hidden), then a whole practice session, the parent PIN and the parent tabs with keys alone | Passes. Runs on every pull request. |
+| Skip to main content | A skip link is the first Tab stop on public, parent, teacher and admin pages | Built in, checked by the keyboard script |
+| Keyboard shortcuts in questions | Number keys pick a choice; Enter checks; the keypad and PIN take typed digits | Built in |
+| Windows high contrast (forced colours) | Picked options, right and wrong answers, switches, sliders and progress bars keep a border or system colour | Built in, checked by the keyboard script |
 
 ## What has not been tested yet
 
 - Screen readers: VoiceOver (iOS and macOS), TalkBack, NVDA. **Not done.**
-- Keyboard-only use of every screen. **Not done.**
+- Keyboard-only use by a person. A script drives the main flows by keyboard (above), but nobody has done it by hand yet, and the teacher and admin areas aren't in the script.
 - Switch access, voice control and screen magnifiers.
 - Testing with students who use assistive technology.
 
@@ -35,12 +39,12 @@ These are the next steps. This report will be updated with results.
 | 1.2 Time-based media | Not applicable | No audio or video content. Sounds are effects only. |
 | 1.3 Adaptable | Partially supports | Semantic headings, lists and tables on content pages. Not yet verified with a screen reader. |
 | 1.4 Distinguishable | Supports (automated) | Contrast, reflow to 320 px, text spacing options. |
-| 2.1 Keyboard accessible | Partially supports | Not yet fully tested. **Known gap:** the arcade games need pointer or touch. |
+| 2.1 Keyboard accessible | Partially supports | Questions, the kids' app menus, the parent PIN and the parent area work with a keyboard alone (scripted check). **Known gap:** most arcade games need pointer or touch (Number Munchers has arrow keys). |
 | 2.2 Enough time | Supports | Timed modes (Speed Run, Challenge) are optional. A per-child "hide timers" option exists. Practice has no time limit. |
 | 2.3 Seizures and physical reactions | Not verified | Motion can be turned off per child and follows the device setting. Flash rates of effects such as confetti have not been measured. |
-| 2.4 Navigable | Partially supports | Page titles and headings. **Known gap:** no skip-to-content link yet. Focus order not yet verified by hand. |
+| 2.4 Navigable | Partially supports | Page titles and headings, a skip-to-content link, and a visible focus ring on every Tab stop that is never fully hidden (scripted check). Focus order not yet verified by hand. When a kids' app screen changes, focus returns to the top of the page rather than to the new heading. |
 | 2.5 Input modalities | Partially supports | Big touch targets (checked in CI). Question types use taps. The arcade games use swipes or pointer movement, which have no alternative. |
-| 3.1 Readable | Partially supports | The page language is set to English (Canada); French questions are not yet marked with a language attribute, although read-aloud uses a French voice. |
+| 3.1 Readable | Supports | The page language is set to English (Canada); French questions, choices and stories are marked with `lang="fr"`, and read-aloud uses a French voice. |
 | 3.2 Predictable | Supports | Consistent navigation; nothing changes context on focus. |
 | 3.3 Input assistance | Supports (automated) | axe-core finds labels on form fields; error wording has not been reviewed by a person against this criterion. |
 | 4.1 Compatible | Supports (automated) | Valid names, roles and values per axe-core. |

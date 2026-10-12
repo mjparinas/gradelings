@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { replay } from "@/lib/juice";
+import { onControl, shortcutBlocked } from "@/lib/keys";
 import { sounds } from "@/lib/sound";
 import type { InputQuestion as Q } from "@/content/types";
 import { isLocked, type QuestionProps } from "./types";
@@ -73,13 +74,14 @@ export function InputQuestion({ q, status, onAttempt }: QuestionProps<Q>) {
   // Hardware keyboards.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (locked) return;
+      if (locked || shortcutBlocked(e)) return;
       if (/^\d$/.test(e.key)) press(e.key);
       else if (e.key === "Backspace") press("⌫");
       else if (e.key === "." && pad === "decimal") press(".");
       else if (e.key === "/" && pad === "fraction") press("/");
       else if (e.key === "-" && pad === "integer") press("−");
-      else if (e.key === "Enter") submit(box.current);
+      // On a focused keypad key, Enter presses that key; anywhere else it checks the answer.
+      else if (e.key === "Enter" && !onControl(e)) submit(box.current);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);

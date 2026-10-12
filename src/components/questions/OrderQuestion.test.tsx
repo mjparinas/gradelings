@@ -66,4 +66,15 @@ describe("OrderQuestion", () => {
     expect(screen.queryByRole("button", { name: "Check ✓" })).not.toBeInTheDocument();
     expect(screen.getAllByRole("button").map((b) => b.textContent)).toEqual(["one", "two", "three"]);
   });
+
+  it("checks with Enter once every item is placed", async () => {
+    const onAttempt = setup();
+    await userEvent.keyboard("{Enter}");
+    expect(onAttempt).not.toHaveBeenCalled();
+    for (const label of ["one", "two", "three"]) await userEvent.click(screen.getByRole("button", { name: label }));
+    (document.activeElement as HTMLElement).blur();
+    await userEvent.keyboard("{Enter}");
+    expect(onAttempt).toHaveBeenCalledTimes(1);
+    expect(onAttempt.mock.calls[0][0]).toBe(true);
+  });
 });

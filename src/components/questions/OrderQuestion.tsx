@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { shuffle } from "@/content/random";
 import { replay } from "@/lib/juice";
+import { useCheckShortcut } from "@/lib/keys";
 import { sounds } from "@/lib/sound";
 import type { OrderQuestion as Q } from "@/content/types";
 import { isLocked, type QuestionProps } from "./types";
@@ -23,6 +24,8 @@ export function OrderQuestion({ q, status, onAttempt }: QuestionProps<Q>) {
   const shown = status === "revealed" ? q.items.map((i) => i.id) : placed;
   const byId = (id: string) => q.items.find((i) => i.id === id)!;
   const full = placed.length === q.items.length;
+  const checkButton = useRef<HTMLButtonElement>(null);
+  useCheckShortcut(checkButton, !locked && full);
 
   const place = (id: string) => {
     sounds.pop(placed.length);
@@ -123,6 +126,7 @@ export function OrderQuestion({ q, status, onAttempt }: QuestionProps<Q>) {
           type="button"
           data-quiet
           disabled={!full}
+          ref={checkButton}
           onClick={(e) => check(e.currentTarget)}
           className={`btn btn-good min-h-18 w-full max-w-sm text-3xl ${full ? "animate-pulse-soft" : "opacity-50"}`}
         >

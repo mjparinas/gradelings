@@ -144,7 +144,7 @@ export function NewChild({ onDone, onCancel, first = false }: { onDone: (id: str
         placeholder="Type a name"
         aria-label="Name"
         autoComplete="off"
-        className="w-full max-w-md rounded-2xl border-4 border-line bg-white px-5 py-4 text-center font-read text-3xl font-bold outline-none focus:border-[#4f8ef7]"
+        className="w-full max-w-md rounded-2xl border-4 border-line bg-white px-5 py-4 text-center font-read text-3xl font-bold focus:border-[#4f8ef7]"
       />
 
       <div className="w-full max-w-2xl">

@@ -26,6 +26,7 @@ node scripts/e2e-devices.mjs http://localhost:3000                # layout on 14
 node scripts/e2e-offline.mjs                                      # real offline (starts its own server)
 node scripts/e2e-classroom.mjs http://localhost:3000              # teacher adds a student, who signs in with codes, opens a lesson and practises
 node scripts/e2e-a11y.mjs http://localhost:3000                   # axe-core WCAG 2.2 A/AA, plus colour-blind checks (screenshots in e2e-shots/a11y)
+node scripts/e2e-keyboard.mjs http://localhost:3000               # keyboard-only run-through (skip link, focus rings, a session by keys, parent PIN and tabs) and Windows high contrast
 node scripts/e2e-admin.mjs http://localhost:3000                  # admin panel (server needs ADMIN_EMAILS=admin-e2e@example.com): to-do list, funnel, traffic, emails, inbox, automations, flags, codes, A/B tests, users and billing, CSV, system, axe scan
 ```
 
@@ -34,7 +35,7 @@ Before you push, run tests, lint and typecheck. For UI or flow changes, also run
 Whenever you add a new feature, write a test for it in the same change. When extending an existing feature, add or update tests for the behavior you changed.
 
 - **Playwright** is a dev dependency, pinned. Install the browsers once with `npx playwright install chromium webkit` (on Linux add `npx playwright install-deps`).
-- **CI** (`.github/workflows/ci.yml`) runs types, lint, unit tests and the build in parallel, then the browser tests in parallel on separate machines (device layouts in three shards, accessibility, playthrough, offline). Require the "CI passed" job in branch protection.
+- **CI** (`.github/workflows/ci.yml`) runs types, lint, unit tests and the build in parallel, then the browser tests in parallel on separate machines (device layouts in three shards, accessibility, keyboard and high contrast, playthrough, offline). Require the "CI passed" job in branch protection.
 - **Stale styles:** if a change to `globals.css` (`@theme`, `@custom-variant`) doesn't show up in a build, delete `.next` and rebuild.
 
 ### What the e2e scripts cover
@@ -60,6 +61,7 @@ Tests are duplicated across screen sizes only where layout can break:
   - Toasts not blocking taps.
 - **`e2e.mjs`:** the full playthrough on an iPad-sized screen plus a phone. It covers every mode and game, the parent area, sign-up, two-device sync, and offline progress uploading on reconnect. CI runs it as three parts, `--part modes`, `--part parents` and `--part sync --offline`; with no `--part` it runs everything.
 - **`e2e-classroom.mjs`:** a teacher (made through the API, email confirmed straight in the database file) adds a student; the student signs in with codes, sees the assignment, opens a lesson, practises and signs out; the teacher sees the results.
+- **`e2e-keyboard.mjs`:** a keyboard-only run-through on a 1366×768 Chromebook. Every screen is walked with Tab (each stop needs a focus ring and must not be hidden under a sticky header or the feedback bar); the skip link, a whole Adventure session and a money practice unit (number keys, the keypad, Enter, Tab), the parent PIN and every parent tab are driven with keys alone. Then it turns on forced colours (Windows high contrast) and checks switches, sliders, progress bars and right answers still show. Run it against a production build: the `next dev` overlay traps Tab.
 - **`e2e-offline.mjs`:** stops the server so only the service worker can answer. Playwright's `setOffline()` doesn't cut off service worker requests, so it can't prove the cache works.
 - **WebKit:** iPhone and iPad profiles run in WebKit when it's installed, otherwise in Chromium at the same size, pixel ratio and touch settings.
 
@@ -399,6 +401,11 @@ Tests are duplicated across screen sizes only where layout can break:
  - Never replace or delete a release's assets. To change a voice, upload a new `piper-voices-{n}` release, update the manifest's hashes and bump `version`.
  - Show each voice's credit line; the French voice is CC BY 4.0.
  - A cloud neural voice (Azure, Google or OpenAI, with a shared audio cache) is the option if device voices aren't good enough. It's not built; ask the owner before adding one, because it has a running cost.
+- **Keyboard and high contrast** (WCAG 2.1.1, 2.4.1, 2.4.7):
+  - Every page with a header starts with a "Skip to main content" link (`src/components/SkipLink.tsx`); each `<main>` carries `id={MAIN_ID}` and `tabIndex={-1}`. The link moves focus without touching the URL, because the apps use hash routes.
+  - In questions, number keys pick a choice (1 is the first; `aria-keyshortcuts`), and Enter presses Check unless focus is on another button (`src/lib/keys.ts`). The keypad and PIN also take typed digits. No visible key hints, to keep the kids' screen calm.
+  - Never remove the focus ring (`outline-none`) without a replacement ring.
+  - Windows high contrast (`forced-colors`) drops fills, so anything shown only by colour needs a border or system colour in the `@media (forced-colors: active)` block in `globals.css`: a picked option (`aria-pressed`, `aria-current`, `aria-checked`), right and wrong answers (`data-state`), switches (`switch-track`, `switch-knob`) and progress bars and sliders (`progress-track`, `progress-fill`). Mark the active item in a nav with `aria-current="page"`.
 - **"Juice it or lose it":**
   - Squash-and-stretch buttons and synthesized sounds with slight pitch variation (no audio files).
   - Bursts, floating "+XP" text, screen thumps and confetti.
@@ -493,5 +500,5 @@ Full guide: `docs/CONTENT_GUIDE.md`. The essentials:
 - **iOS Safari:** the owner tested on an iPad and it works well. The device layout tests pass in real WebKit. An iPhone check is not needed.
 - **Deployment** is not done. Steps, env vars and the launch checklist are in `docs/DEPLOY.md`.
 - **Legal and content:** `/privacy/` and `/terms/` are drafts needing legal review; `LEGAL_NAME` and `CONTACT_EMAIL` in `src/lib/brand.ts` are placeholders.
-- **Accessibility:** automated checks pass, but nobody has yet tried the app with a screen reader (VoiceOver, TalkBack, NVDA) or a keyboard-only run-through, and the kids' UI has only had a simulated colour-blind pass (`scripts/colour-blind.mjs`, run by `e2e-a11y.mjs`), not testing with colour-blind children.
+- **Accessibility:** automated checks and a scripted keyboard-only run-through (`e2e-keyboard.mjs`) pass, but nobody has yet tried the app with a screen reader (VoiceOver, TalkBack, NVDA) or done a keyboard run-through by hand, and the kids' UI has only had a simulated colour-blind pass (`scripts/colour-blind.mjs`, run by `e2e-a11y.mjs`), not testing with colour-blind children.
 - **CSP on a real host:** production has no `'unsafe-inline'`, but the page-level policy lives in a `<meta>` tag that `scripts/csp-postbuild.mjs` writes into `.next/server/**/*.html` after the build. It is tested with `next start`, not yet on Vercel. After the first deploy, check that a prerendered page (e.g. `/play/`) still has the tag and loads with no console errors.

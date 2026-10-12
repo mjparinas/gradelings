@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { COIN_NAMES, formatMoney } from "@/content/money";
 import { replay } from "@/lib/juice";
+import { useCheckShortcut } from "@/lib/keys";
 import { sounds } from "@/lib/sound";
 import type { CoinsQuestion as Q } from "@/content/types";
 import { Coin } from "../visuals";
@@ -31,6 +32,8 @@ export function CoinsQuestion({ q, status, onAttempt }: QuestionProps<Q>) {
 
   const shown = status === "revealed" ? makeChange(q.target, q.coins).map((cents, id) => ({ id, cents })) : purse;
   const total = shown.reduce((s, c) => s + c.cents, 0);
+  const checkButton = useRef<HTMLButtonElement>(null);
+  useCheckShortcut(checkButton, !locked && total !== 0);
 
   const add = (cents: number) => {
     if (purse.length >= MAX_COINS) {
@@ -93,6 +96,7 @@ export function CoinsQuestion({ q, status, onAttempt }: QuestionProps<Q>) {
         type="button"
         data-quiet
         disabled={locked || total === 0}
+        ref={checkButton}
         onClick={(e) => onAttempt(total === q.target, e.currentTarget)}
         className={`btn btn-good min-h-18 w-full max-w-sm text-3xl ${locked || total === 0 ? "opacity-50" : ""}`}
       >
