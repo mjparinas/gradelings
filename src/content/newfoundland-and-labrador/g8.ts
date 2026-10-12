@@ -6,7 +6,8 @@ import { courses as novaScotia } from "../nova-scotia/g8";
 import { courses as ontario } from "../ontario/g8";
 import { courses as saskatchewan } from "../saskatchewan/g8";
 import { nlGrade } from "./kit";
+import { economy } from "./units/g8-social";
 import { confederation } from "./units/g8-g9-social";
 
 // Newfoundland and Labrador Grade 8.
-export const courses: Course[] = nlGrade("8", [ontario, manitoba, alberta, saskatchewan, novaScotia, newBrunswick], { social: { units: [confederation], first: true } });
+export const courses: Course[] = nlGrade("8", [ontario, manitoba, alberta, saskatchewan, novaScotia, newBrunswick], { social: { units: [economy, confederation], first: true } });

@@ -421,6 +421,7 @@ export const PLAN: Record<string, Entry[]> = {
     ["quality-of-life-8", "adopt", "Interdependence (by Grade 9)", "measuring quality of life, inequalities and ways of helping"],
     ["people-on-the-move", "share", "Time, continuity and change (by Grade 9)", "migration, growing cities and changing living standards"],
     ["exploration-and-exchange", "share", "Time, continuity and change (by Grade 9)", "voyages of exploration and the exchange of goods, ideas and people"],
+    ["mb-evidence-8", "adopt", "Time, continuity and change (by Grade 9)", "choosing and judging primary and secondary sources, comparing accounts and drawing conclusions from evidence"],
   ],
   "8/core-french": [
     ["passe-present-futur", "share", "Communication (by Grade 9)", "talking about the past, present and future in French"],

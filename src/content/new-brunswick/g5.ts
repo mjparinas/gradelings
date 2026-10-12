@@ -6,6 +6,7 @@ import { courses as saskatchewan } from "../saskatchewan/g5";
 import { courses as novaScotia } from "../nova-scotia/g5";
 import { acadiaLoyalists, wabanakiConfederacy, worldviewEconomics } from "./units/g5-social";
 import { nervousSystem } from "./units/g5-science";
+import { atlanticMeetings } from "./units/g5-social-meetings";
 import { frenchCourses } from "./french";
 import { adopt, course, poolOf } from "./kit";
 
@@ -76,9 +77,10 @@ export const courses: Course[] = [
       "learning-from-the-past": ["History: Sources and Methods", "how historians use evidence and thinking concepts to answer questions about the past"],
     },
     adopted: adopt(poolOf("social", ontario, manitoba, novaScotia), {
+      "explorers-5": ["History: Events and Peoples", "interactions between the first and founding peoples of Atlantic Canada"],
     }),
-    own: [wabanakiConfederacy, acadiaLoyalists, worldviewEconomics],
-    order: ["learning-from-the-past", "nb-acadia-loyalists-5", "nb-wabanaki-confederacy-5", "nb-worldview-economics-5"],
+    own: [atlanticMeetings, wabanakiConfederacy, acadiaLoyalists, worldviewEconomics],
+    order: ["learning-from-the-past", "explorers-5", "nb-atlantic-meetings-5", "nb-acadia-loyalists-5", "nb-wabanaki-confederacy-5", "nb-worldview-economics-5"],
   }),
   ...frenchCourses("5"),
 ];

@@ -7,7 +7,8 @@
 ## Mapping
 - BC units that fit an outcome are shared with `share(...)` (`src/content/saskatchewan/kit.ts`).
 - Ontario-only units are reused with `reuse(...)` and Saskatchewan outcome text.
-- Saskatchewan-only units (treaties, the Prairies, the North, and others) are new `bankUnit` sets in `g4-social.ts`, `g5-science.ts`, `g7-social.ts`, `g8-social.ts` and `g9-social.ts`.
+- Saskatchewan-only units (treaties, the Prairies, the North, and others) are new `bankUnit` sets in `g2-social.ts`, `g3-social.ts`, `g4-social.ts`, `g5-science.ts`, `g7-social.ts`, `g8-social.ts` and `g9-social.ts`.
+- Grade 9 social studies (Roots of Canadian Society) also reuses four BC Grade 7 ancient-civilization units (`where-civilizations-grew`, `laws-and-government`, `trade-networks`, `inventions-and-timelines`) with Grade 9 outcomes, and Grade 7 reuses Ontario's `sustainability-7` (RW7.3).
 - `outcomes.ts` is generated from `outcomes.json` and used as `bigIdeas` (one strand per entry).
 
 ## Scale
@@ -31,7 +32,7 @@ Saskatchewan has no single provincial report-card scale. The framework uses the 
 
 **Mapping:**
 - Immersion units are BC units shared with Saskatchewan citations (`french.ts`). Grade 3 to 9 grammar units cite `PÉ.2` (writing with the language conventions), reading units `CÉ.1`/`CÉ.2`, speaking units `PO.1`/`PO.2`, and so on; Kindergarten to Grade 2 units cite the program components for vocabulary, sounds, sentences and stories.
-- Core French Grades 5 to 9 are BC units shared with the Level's goals (`5.CS.2`, `7.LK.1`, `8.C.1`). Grade 4 reuses Ontario's six Grade 4 units. Grades 1 to 3 are written for Saskatchewan (`sk-cf1-*`, `sk-cf2-*`, `sk-cf3-*`), as are two Grade 4 units and the culture units at Levels 4, 6 and 8 and in Immersion Grades 5 and 8.
+- Core French Grades 5 to 9 are BC units shared with the Level's goals (`5.CS.2`, `7.LK.1`, `8.C.1`). Grade 4 reuses Ontario's six Grade 4 units. Grades 1 to 3 are written for Saskatchewan (`sk-cf1-*`, `sk-cf2-*`, `sk-cf3-*`; five units each: greetings, classroom, family, colours, animals; numbers, questions, articles, food, weather; numbers, possessives, describing, class instructions, calendar), as are two Grade 4 units and the culture units at Levels 4, 6 and 8 and in Immersion Grades 5 and 8.
 - Coverage test: `src/content/saskatchewan/french.test.ts`.
 
 **Not verified:** the Ministry does not say which grade a division must start Core French; the grades here follow the curriculum's levels. Level 2 and 3 Core French culture outcomes (`2.C.1`, `3.C.1`) and Levels 1 to 3 General Language Strategies are not practised by any unit. The facts in the culture units (Gravelbourg, Michif, the Qu'Appelle Valley name, Buffy Sainte-Marie's birthplace, Louis Riel and Gabriel Dumont, Treaty 6 in 1876) come from general knowledge, not from the Ministry, and need checking.

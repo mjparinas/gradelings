@@ -1,6 +1,7 @@
 import type { Course } from "../types";
 import { units as g7_math } from "../ontario/g7-math";
 import { units as g7_science } from "../ontario/g7-science";
+import { units as g7_geography } from "../ontario/g7-social";
 import { units as sk_social_7 } from "./g7-social";
 import { reuse, share, sk } from "./kit";
 import { SK_OUTCOMES as O } from "./outcomes";
@@ -73,8 +74,10 @@ export const courses: Course[] = [
     grade: "7",
     subject: "social",
     bigIdeas: { "ca-sk": O["7"].social },
-    units: [...sk_social_7],
-    order: { "ca-sk": [...sk_social_7.map((u) => u.id)] },
+    units: [...sk_social_7, ...reuse(g7_geography, {
+      "sustainability-7": sk("RW7.3, IN7.2", "perspectives on resource use, sustainable choices and ecological stewardship of economies"),
+    })],
+    order: { "ca-sk": [...sk_social_7.map((u) => u.id), "sustainability-7"] },
   },
   ...frenchCourses("7"),
 ];

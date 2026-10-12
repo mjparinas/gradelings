@@ -1,5 +1,5 @@
 import { shuffle } from "../../random";
-import type { OrderQuestion, Question, Course } from "../../types";
+import type { OrderQuestion, Question, Course, GenerateOptions } from "../../types";
 import { fromBank, sortQuestion, type BankItem } from "../../bank";
 
 // ---------- Life Cycles ----------
@@ -33,7 +33,7 @@ const FROG: OrderQuestion = {
   prompt: "Put the frog's life cycle in order.",
   hint: "Frogs start as eggs in a pond. Tadpoles hatch, grow legs, and become frogs.",
   items: [
-    { id: "egg", label: "eggs in a pond", emoji: "🫧" },
+    { id: "egg", label: "eggs in a pond", emoji: "🧪" },
     { id: "tadpole", label: "tadpole" },
     { id: "froglet", label: "tadpole with legs" },
     { id: "frog", label: "frog", emoji: "🐸" },
@@ -232,7 +232,7 @@ const LIFE_BANK: BankItem[] = [
     right: { label: "a puppy", emoji: "🐶" },
     wrong: [
       { label: "a caterpillar", emoji: "🐛" },
-      { label: "a tadpole", emoji: "🫧" },
+      { label: "a tadpole", emoji: "🧪" },
     ],
     hint: "Puppies are mammals. They are born alive and drink milk.",
   },
@@ -261,7 +261,7 @@ const LIFE_BANK: BankItem[] = [
     right: { label: "cones", emoji: "🌲" },
     wrong: [
       { label: "shells", emoji: "🐚" },
-      { label: "bubbles", emoji: "🫧" },
+      { label: "bubbles", emoji: "🧪" },
     ],
     hint: "Pine cones hold seeds, which can grow into new trees.",
   },
@@ -1119,6 +1119,339 @@ function water(): Question[] {
   return [WATER_CYCLE, ...shuffle([sortQuestion(WATER_SORT, 3), ...fromBank(WATER_BANK, 6)])];
 }
 
+// ---------- Changing Materials ----------
+
+// Bank items marked `hard` are stretch questions: difficulty 1 uses only the easier
+// items, 2 mixes in a few, 3 is mostly stretch.
+type LevelItem = BankItem & { hard?: true };
+
+function levelled(bank: LevelItem[], count: number, difficulty: 1 | 2 | 3): Question[] {
+  const easy = bank.filter((b) => !b.hard);
+  const hard = bank.filter((b) => b.hard);
+  const want = difficulty === 1 ? 0 : difficulty === 2 ? Math.ceil(count / 3) : Math.ceil((count * 2) / 3);
+  const nHard = Math.min(want, hard.length);
+  return [...fromBank(easy, count - nHard), ...fromBank(hard, nHard)];
+}
+
+const CHANGE_SORT = {
+  prompt: "Same material or a new one? Tap an item, then tap its basket.",
+  hint: "Cutting, bending, melting and mixing keep the same material. Cooking and burning make something new.",
+  bins: [
+    { id: "same", label: "same material", emoji: "✂️" },
+    { id: "new", label: "new material made", emoji: "🔥" },
+  ],
+  items: [
+    { label: "cut paper", emoji: "✂️", bin: "same" },
+    { label: "fold a paper plane", emoji: "✈️", bin: "same" },
+    { label: "chop carrots", emoji: "🥕", bin: "same" },
+    { label: "melt an ice cube", emoji: "🧊", bin: "same" },
+    { label: "squish clay into a ball", emoji: "⚪", bin: "same" },
+    { label: "bake a cake", emoji: "🎂", bin: "new" },
+    { label: "toast bread", emoji: "🍞", bin: "new" },
+    { label: "burn wood in a campfire", emoji: "🔥", bin: "new" },
+    { label: "fry an egg", emoji: "🍳", bin: "new" },
+  ],
+};
+
+const CHANGE_BANK: LevelItem[] = [
+  {
+    prompt: "You cut a sheet of paper into strips. What is it still made of?",
+    right: { label: "paper", emoji: "📄" },
+    wrong: [
+      { label: "wood chips", emoji: "🪵" },
+      { label: "plastic", emoji: "🥤" },
+    ],
+    hint: "Cutting changes the shape and size, but the material stays the same.",
+  },
+  {
+    prompt: "Which is a way to change a material by bending?",
+    right: { label: "curl a pipe cleaner into a ring", emoji: "➰" },
+    wrong: [
+      { label: "bake cookies", emoji: "🍪" },
+      { label: "burn a candle", emoji: "🕯️" },
+    ],
+    hint: "Bending changes an object's shape without making anything new.",
+  },
+  {
+    prompt: "Which one changes a material by cooling it?",
+    right: { label: "putting juice in the freezer", emoji: "🧊" },
+    wrong: [
+      { label: "toasting bread", emoji: "🍞" },
+      { label: "cutting an apple", emoji: "🍎" },
+    ],
+    hint: "Cooling means making something colder. Juice can freeze into an ice pop.",
+  },
+  {
+    prompt: "Which one changes a material by warming it?",
+    right: { label: "melting butter in a pan", emoji: "🧈" },
+    wrong: [
+      { label: "folding a towel", emoji: "🧺" },
+      { label: "freezing water", emoji: "❄️" },
+    ],
+    hint: "Warming means making something hotter. Butter melts when it gets warm.",
+  },
+  {
+    prompt: "You mix red and yellow paint. What colour do you get?",
+    right: { label: "orange", emoji: "🟠" },
+    wrong: [
+      { label: "blue", emoji: "🔵" },
+      { label: "black", emoji: "⚫" },
+    ],
+    hint: "Mixing materials can make something with new colours. Red and yellow make orange.",
+  },
+  {
+    prompt: "You mix blue and yellow paint. What colour do you get?",
+    right: { label: "green", emoji: "🟢" },
+    wrong: [
+      { label: "red", emoji: "🔴" },
+      { label: "white", emoji: "⚪" },
+    ],
+    hint: "Blue and yellow mixed together make green.",
+  },
+  {
+    prompt: "What happens to sugar when you stir it into warm water?",
+    right: "it seems to disappear into the water",
+    wrong: ["it turns into a rock", "it floats like a boat"],
+    hint: "Sugar dissolves. It breaks into tiny bits you can't see, but you can still taste it!",
+    emoji: "🥄",
+  },
+  {
+    prompt: "Which change makes something brand-new that you can't change back?",
+    right: { label: "baking cookie dough into cookies", emoji: "🍪" },
+    wrong: [
+      { label: "cutting paper", emoji: "✂️" },
+      { label: "bending a straw", emoji: "🥤" },
+    ],
+    hint: "Cooking makes new materials. You can't turn a cookie back into dough!",
+  },
+  {
+    prompt: "When wood burns in a fire, it turns into…",
+    right: { label: "ash and smoke", emoji: "💨" },
+    wrong: [
+      { label: "more wood", emoji: "🪵" },
+      { label: "ice", emoji: "🧊" },
+    ],
+    hint: "Burning makes new materials. Wood becomes ash and smoke.",
+  },
+  {
+    prompt: "What happens to a raw egg when you cook it?",
+    right: { label: "it turns solid and can't turn back", emoji: "🍳" },
+    wrong: [
+      { label: "it turns into a chick", emoji: "🐣" },
+      { label: "it melts into water", emoji: "💧" },
+    ],
+    hint: "Cooking changes an egg for good. That is a chemical change.",
+  },
+  {
+    prompt: "Which tool would you use to change the shape of paper?",
+    right: { label: "scissors", emoji: "✂️" },
+    wrong: [
+      { label: "a thermometer", emoji: "🌡️" },
+      { label: "a magnet", emoji: "🧲" },
+    ],
+    hint: "Scissors cut paper into new shapes.",
+  },
+  {
+    prompt: "You squeeze a ball of clay into a snake shape. Is it still clay?",
+    right: "yes, only the shape changed",
+    wrong: ["no, it became metal", "no, it became water"],
+    hint: "Squeezing and rolling change the shape, not the material.",
+    emoji: "🐍",
+  },
+  {
+    prompt: "Bread changes colour and gets crunchy in a toaster. This happens because of…",
+    right: { label: "heat", emoji: "🔥" },
+    wrong: [
+      { label: "cold", emoji: "❄️" },
+      { label: "a magnet", emoji: "🧲" },
+    ],
+    hint: "Heat cooks the bread and makes new materials that taste toasty.",
+  },
+  {
+    prompt: "Which one is a way of changing material by mixing?",
+    right: { label: "stirring flour, eggs and milk into batter", emoji: "🥣" },
+    wrong: [
+      { label: "cutting a ribbon", emoji: "🎀" },
+      { label: "folding a shirt", emoji: "👕" },
+    ],
+    hint: "Mixing puts different materials together.",
+  },
+  {
+    prompt: "A melted crayon cools down. What happens?",
+    right: { label: "it becomes solid again", emoji: "🖍️" },
+    wrong: [
+      { label: "it turns into paper", emoji: "📄" },
+      { label: "it stays a liquid forever", emoji: "💧" },
+    ],
+    hint: "Wax melts when warm and hardens when it cools. That change can go back.",
+  },
+  {
+    prompt: "Which material bends easily without breaking?",
+    right: { label: "a rubber band", emoji: "➰" },
+    wrong: [
+      { label: "a glass cup", emoji: "🥛" },
+      { label: "a rock", emoji: "🪨" },
+    ],
+    hint: "Rubber is stretchy and bendy. Glass and rock break if you bend them.",
+  },
+  {
+    prompt: "Why do we cook food?",
+    right: "cooking changes food so it is safe and tasty to eat",
+    wrong: ["cooking turns food into ice", "cooking makes food disappear"],
+    hint: "Heat changes food. Many foods are safer and softer after cooking.",
+    emoji: "🍲",
+  },
+  {
+    prompt: "Chopping a carrot into pieces is a change in…",
+    right: "size and shape",
+    wrong: ["what it is made of", "its colour inside"],
+    hint: "Each piece is still carrot. Only the size and shape changed.",
+    emoji: "🥕",
+  },
+  {
+    prompt: "Some plants, like berries, can be crushed and mixed with water to make…",
+    right: { label: "dye to colour cloth", emoji: "🧶" },
+    wrong: [
+      { label: "glass", emoji: "🪟" },
+      { label: "metal", emoji: "🔩" },
+    ],
+    hint: "Crushed plants can give their colour to water. People use it to dye cloth.",
+    hard: true,
+  },
+  {
+    prompt: "An iron nail left out in the rain turns orange-brown. This is called…",
+    right: { label: "rusting", emoji: "🔩" },
+    wrong: [
+      { label: "melting", emoji: "🧊" },
+      { label: "freezing", emoji: "❄️" },
+    ],
+    hint: "Iron and water and air make rust, a new material. It is a chemical change.",
+    hard: true,
+  },
+  {
+    prompt: "Which change can you undo?",
+    right: { label: "folding a paper plane, then unfolding it", emoji: "✈️" },
+    wrong: [
+      { label: "burning a match", emoji: "🔥" },
+      { label: "baking bread", emoji: "🍞" },
+    ],
+    hint: "Folding only changes the shape. You can unfold it again.",
+    hard: true,
+  },
+  {
+    prompt: "A change that makes a new material, like burning or cooking, is called a…",
+    right: "chemical change",
+    wrong: ["physical change", "push"],
+    hint: "Chemical changes make new materials. Physical changes only change shape, size or state.",
+    emoji: "🧪",
+    hard: true,
+  },
+  {
+    prompt: "A change in shape, size or state, like cutting or melting, is called a…",
+    right: "physical change",
+    wrong: ["chemical change", "life cycle"],
+    hint: "In a physical change, the material is still the same stuff.",
+    emoji: "✂️",
+    hard: true,
+  },
+  {
+    prompt: "Which is a chemical change?",
+    right: { label: "a candle wick burning", emoji: "🕯️" },
+    wrong: [
+      { label: "ice melting", emoji: "🧊" },
+      { label: "paper being torn", emoji: "📄" },
+    ],
+    hint: "Burning makes smoke and ash, which are new materials.",
+    hard: true,
+  },
+  {
+    prompt: "Which is a physical change?",
+    right: { label: "snow melting into water", emoji: "⛄" },
+    wrong: [
+      { label: "a log burning", emoji: "🔥" },
+      { label: "a cake baking", emoji: "🎂" },
+    ],
+    hint: "Melting snow is still water. Nothing new is made.",
+    hard: true,
+  },
+  {
+    prompt: "Sand and small pebbles are mixed in a jar. Can you separate them again?",
+    right: "yes, with a sieve",
+    wrong: ["no, they became one new rock", "only by cooking them"],
+    hint: "A sieve lets the sand fall through and keeps the pebbles.",
+    emoji: "🪨",
+    hard: true,
+  },
+  {
+    prompt: "Why would someone cut wood into boards?",
+    right: { label: "to build things like a shelf or a birdhouse", emoji: "🪵" },
+    wrong: [
+      { label: "to turn the wood into water", emoji: "💧" },
+      { label: "to make the wood alive again", emoji: "🌳" },
+    ],
+    hint: "We change the shape of materials so we can use them in new ways.",
+    hard: true,
+  },
+  {
+    prompt: "Wet clay is shaped into a bowl and then fired in a very hot oven. Can it turn back into soft clay?",
+    right: "no, the heat changed it for good",
+    wrong: ["yes, just add water", "yes, put it in the freezer"],
+    hint: "High heat changes clay into hard pottery. It can't go back.",
+    emoji: "🏺",
+    hard: true,
+  },
+  {
+    prompt: "Popcorn kernels are heated and pop. What kind of change is this?",
+    right: { label: "a change that can't be undone", emoji: "🍿" },
+    wrong: [
+      { label: "a change you can easily undo", emoji: "🔄" },
+      { label: "no change at all", emoji: "🚫" },
+    ],
+    hint: "You can't put popped popcorn back into a kernel!",
+    hard: true,
+  },
+  {
+    prompt: "A chocolate bar melts in a warm car, then cools at home. Is it still chocolate?",
+    right: "yes, it is still chocolate",
+    wrong: ["no, it is now bread", "no, it is now plastic"],
+    hint: "Melting and cooling are physical changes. The chocolate is the same stuff.",
+    emoji: "🍫",
+    hard: true,
+  },
+  {
+    prompt: "A recipe says to bake the muffins until they are golden. Which change happens?",
+    right: { label: "wet batter turns into fluffy muffins", emoji: "🧁" },
+    wrong: [
+      { label: "the muffins turn back into flour", emoji: "🌾" },
+      { label: "the batter freezes", emoji: "🧊" },
+    ],
+    hint: "Baking makes new materials with new textures and smells.",
+    hard: true,
+  },
+  {
+    prompt: "What can warn you that a chemical change is happening?",
+    right: { label: "a new smell, colour, smoke or bubbles", emoji: "🧪" },
+    wrong: [
+      { label: "the object only gets a new shape", emoji: "✂️" },
+      { label: "nothing at all changes", emoji: "😐" },
+    ],
+    hint: "New smells, colours, gas bubbles or smoke are clues that something new is made.",
+    hard: true,
+  },
+  {
+    prompt: "Why must an adult help when we change materials with heat?",
+    right: "heat and fire can burn us",
+    wrong: ["heat is always cold", "adults like to cook alone"],
+    hint: "Stay safe! Hot pans, ovens and flames can hurt.",
+    emoji: "🧯",
+    hard: true,
+  },
+];
+
+function changingMaterials({ difficulty = 2 }: GenerateOptions = {}): Question[] {
+  return shuffle([sortQuestion(CHANGE_SORT, difficulty === 1 ? 2 : 3), ...levelled(CHANGE_BANK, 7, difficulty)]);
+}
+
 export const course: Course = {
   grade: "2",
   subject: "science",
@@ -1166,6 +1499,16 @@ export const course: Course = {
       standards: { "ca-bc": "The water cycle; water sources including local watersheds; water conservation" },
       parentNote: "The water cycle, where our water comes from, and simple ways to save water and keep rivers clean.",
       generate: water,
+    },
+    {
+      id: "changing-materials",
+      title: "Changing Materials",
+      emoji: "✂️",
+      blurb: "Cut, bend, mix, cook and burn",
+      standards: { "ca-bc": "Physical ways of changing materials (warming, cooling, cutting, bending, stirring, mixing); chemical ways of changing materials (cooking, burning)" },
+      parentNote:
+        "Ways to change materials: cutting, bending, mixing, warming and cooling keep the same material, while cooking, burning and rusting make something new.",
+      generate: changingMaterials,
     },
   ],
 };

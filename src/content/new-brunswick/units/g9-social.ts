@@ -31,6 +31,16 @@ const GOVERNANCE: Q[] = [
   ["How are Senators chosen?", "appointed by the Governor General on the advice of the Prime Minister", ["elected by voters", "chosen by teachers", "drawn by lottery"], "The Senate reviews bills from the House of Commons.", true],
   ["Wabanaki Nations have governed themselves for thousands of years. Today, many communities have…", "a chief and council as well as Elders who guide decisions", ["no leaders", "only a king", "only a mayor"], "Governance includes both traditional and modern ways."],
   ["What does separation of powers mean?", "different branches, such as the legislature and the courts, have different jobs", ["only one person makes all decisions", "courts write laws", "voters judge cases"], "It helps keep power balanced.", true],
+  ["What is Question Period?", "time when members of the House question the government", ["a lunch break for MPs", "the final vote on the budget", "a court hearing"], "It happens on most sitting days and is often lively."],
+  ["Who represents the King in New Brunswick?", "the Lieutenant Governor", ["the Premier", "the Governor General", "the Mayor of Fredericton"], "The Lieutenant Governor gives Royal Assent to provincial bills."],
+  ["What does MLA stand for?", "Member of the Legislative Assembly", ["Minister of Local Affairs", "Mayor of a Large Area", "Member of the Law Academy"], "New Brunswick voters elect MLAs to the Legislative Assembly."],
+  ["What does the Speaker of the House of Commons do?", "keeps order during debates", ["writes the budget", "leads the Opposition", "appoints judges"], "The Speaker is elected by the members and stays neutral."],
+  ["What is a political party?", "a group of people with shared ideas who try to get elected to govern", ["a celebration after an election", "a court of law", "a government department"], "Parties choose candidates and share their plans with voters."],
+  ["What is a municipality?", "a city, town or village with its own local government", ["a federal department", "a type of court", "a political party"], "Municipal councils are elected by local voters."],
+  ["Which level of government makes criminal law in Canada?", "federal", ["provincial", "municipal", "school district"], "The Criminal Code applies across the whole country.", true],
+  ["In Canada’s electoral system, the candidate with the most votes in a riding wins. This is called…", "first past the post", ["proportional representation", "a referendum", "a royal appointment"], "A candidate can win without more than half the votes.", true],
+  ["Which law, passed in 1982, brought Canada’s Constitution home and added the Charter of Rights and Freedoms?", "the Constitution Act, 1982", ["the Indian Act", "the Official Languages Act", "the Canada Elections Act"], "Before 1982, changing the Constitution needed Britain’s Parliament.", true],
+  ["In which languages does the Government of New Brunswick offer its services?", "English and French", ["English only", "French only", "English and Spanish"], "New Brunswick is Canada’s only officially bilingual province."],
 ];
 
 const RIGHTS_ROLES: Q[] = [
