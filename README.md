@@ -22,7 +22,7 @@ It's a web app first: it runs in any browser, installs to a tablet or phone home
   - About 55 trophies (bronze, silver, gold and a platinum "Grade Champion") with console-style toast pop-ups.
   - XP and levels, coins, daily quests and streaks.
   - A shop of critter companions, titles and confetti styles.
-- **Mascots:** Ollie the Otter guides, with a guide for each subject (Hoot the owl for math, Ruby the fox for reading, Bolt the beaver for science, Juniper the bear for social studies) plus seven critters to unlock. They're all drawn as SVG, change mood, and their eyes follow your finger.
+- **Mascots:** Ollie the Otter guides, with a guide for each subject (Hoot the owl for math, Ruby the fox for reading, Bolt the beaver for science, Juniper the bear for social studies) plus twenty-five more buddies to earn in the shop. They're all drawn as SVG, change mood, and their eyes follow your finger.
 - **Juice:** squash-and-stretch buttons, synthesized sounds, bursts, floating "+XP" text and confetti. All of it respects "reduce motion".
 - **Question types:** multiple choice, build-a-number with base-ten blocks, make-an-amount with coins and bills, put in order, sort into baskets, and typed answers on an on-screen keypad (whole numbers, decimals, fractions, integers).
 

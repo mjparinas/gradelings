@@ -2,7 +2,8 @@
 import { act, fireEvent, render } from "@testing-library/react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { GROWTH_STAGES } from "@/lib/buddy";
-import { CRITTERS, Critter, CritterSvg, SpeechBubble, getCritter, type Mood } from "./Critter";
+import { SHOP } from "@/lib/shop";
+import { AVATARS, CRITTERS, Critter, CritterSvg, SpeechBubble, getCritter, type Mood } from "./Critter";
 
 const svgOf = (props: { id: string; mood?: Mood; stage?: number }) => render(<CritterSvg {...props} />).container.querySelector("svg")!;
 
@@ -24,6 +25,14 @@ describe("getCritter", () => {
   it("gives every critter a unique id and name", () => {
     expect(new Set(CRITTERS.map((c) => c.id)).size).toBe(CRITTERS.length);
     expect(new Set(CRITTERS.map((c) => c.name)).size).toBe(CRITTERS.length);
+  });
+
+  it("sells every critter as a buddy, and offers only the non-shop ones as avatars", () => {
+    const buddies = SHOP.filter((i) => i.kind === "companion").map((i) => i.critter);
+    expect(buddies.sort()).toEqual(CRITTERS.map((c) => c.id).sort());
+    expect(AVATARS.map((c) => c.id)).toEqual(CRITTERS.filter((c) => !c.shopOnly).map((c) => c.id));
+    expect(AVATARS.length).toBe(15);
+    expect(CRITTERS.filter((c) => c.shopOnly).length).toBe(15);
   });
 });
 
@@ -73,6 +82,25 @@ describe("CritterSvg", () => {
     expect(svgOf({ id: "shelly" }).querySelector('ellipse[fill="#8a6b3a"]'), "Shelly's shell").not.toBeNull();
     expect(svgOf({ id: "rocco" }).querySelector('path[fill="#3b3f46"]'), "Rocco's mask").not.toBeNull();
     expect(svgOf({ id: "poppy" }).querySelector('path[fill="#f7f8fb"]'), "Poppy's white face").not.toBeNull();
+  });
+
+  it("draws the shop buddies' own features", () => {
+    expect(svgOf({ id: "sunny" }).querySelectorAll('g[fill="#c4622d"] circle').length, "Sunny's mane").toBeGreaterThan(10);
+    expect(svgOf({ id: "hazel" }).querySelector('path[fill="#6f4e36"]'), "Hazel's spikes").not.toBeNull();
+    expect(svgOf({ id: "ember" }).querySelector('g[fill="#8fd6e8"]'), "Ember's wings").not.toBeNull();
+    expect(svgOf({ id: "luna" }).querySelector('path[fill="#ffd45e"]'), "Luna's horn").not.toBeNull();
+    expect(svgOf({ id: "pepper" }).querySelector('path[fill="#e0433a"]'), "Pepper's toque").not.toBeNull();
+    expect(svgOf({ id: "daisy" }).querySelector('path[fill="#ffffff"]'), "Daisy's stripe").not.toBeNull();
+    expect(svgOf({ id: "mochi" }).querySelector('g[stroke="#d7832d"]'), "Mochi's tabby stripes").not.toBeNull();
+    expect(svgOf({ id: "biscuit" }).querySelectorAll('g[fill="#a8743f"] path'), "Biscuit's floppy ears").toHaveLength(2);
+    expect(svgOf({ id: "petunia" }).querySelectorAll('ellipse[fill="#9b4a5e"]'), "Petunia's nostrils").toHaveLength(2);
+    expect(svgOf({ id: "pip" }).querySelectorAll('circle[r="26"]'), "Pip's big ears").toHaveLength(2);
+  });
+
+  it("gives whiskers to a cat but not to a dragon or unicorn", () => {
+    const whiskers = (id: string) => svgOf({ id }).querySelector('g[stroke="#c9a98a"]');
+    expect(whiskers("mochi")).not.toBeNull();
+    for (const id of ["ember", "luna", "juniper", "bao", "shelly"]) expect(whiskers(id), id).toBeNull();
   });
 
   it("gives each nose type its own shape, and a beak opens only to cheer", () => {

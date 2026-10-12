@@ -11,7 +11,7 @@ import { MAX_CHILDREN } from "@/lib/plan";
 import { sounds } from "@/lib/sound";
 import { useDerived, useProfiles, useStore } from "@/lib/store";
 import type { Profile } from "@/lib/model";
-import { Critter, CritterSvg, CRITTERS, SpeechBubble } from "../Critter";
+import { AVATARS, Critter, CritterSvg, SpeechBubble } from "../Critter";
 import { signInStudent } from "@/lib/account";
 import { Page } from "../ui";
 import { ProvinceMenu } from "./ProvinceMenu";
@@ -123,7 +123,7 @@ export function ClassSignIn({ onBack }: { onBack: () => void }) {
 export function NewChild({ onDone, onCancel, first = false }: { onDone: (id: string) => void; onCancel?: () => void; first?: boolean }) {
   const [name, setName] = useState("");
   const [grade, setGrade] = useState<GradeId | null>(null);
-  const [avatar, setAvatar] = useState(CRITTERS[0].id);
+  const [avatar, setAvatar] = useState(AVATARS[0].id);
   const addProfile = useStore((s) => s.addProfile);
   const ready = name.trim().length > 0 && grade !== null;
   const [frameworkId, setFrameworkId] = useState<FrameworkId>(DEFAULT_FRAMEWORK);
@@ -172,7 +172,7 @@ export function NewChild({ onDone, onCancel, first = false }: { onDone: (id: str
       <div>
         <p className="mb-3 text-2xl font-semibold">Pick your animal</p>
         <div className="grid grid-cols-4 gap-2.5 sm:grid-cols-6">
-          {CRITTERS.map((c, i) => (
+          {AVATARS.map((c, i) => (
             <button
               key={c.id}
               type="button"
@@ -195,7 +195,7 @@ export function NewChild({ onDone, onCancel, first = false }: { onDone: (id: str
           className={`btn btn-good min-h-20 text-3xl ${ready ? "" : "opacity-50"}`}
           onClick={() => {
             if (!grade) return;
-            const idx = CRITTERS.findIndex((c) => c.id === avatar);
+            const idx = AVATARS.findIndex((c) => c.id === avatar);
             const id = addProfile({ name, avatar, colour: AVATAR_COLOURS[idx % AVATAR_COLOURS.length], grade, framework: frameworkId });
             sounds.complete();
             onDone(id);

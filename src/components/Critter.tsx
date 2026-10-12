@@ -4,13 +4,16 @@ import { useEffect, useRef, type CSSProperties, type ReactNode } from "react";
 
 // The mascot cast, all drawn from one parametric SVG so they share a style,
 // moods and pointer-following eyes. Ollie the Otter is the main guide; each
-// subject has its own guide; the rest can be unlocked in the shop.
+// subject has its own guide; the rest can be unlocked in the shop. The ones marked
+// `shopOnly` are earned buddies, kept out of the "pick your animal" avatar list.
 
 export type Mood = "happy" | "cheer" | "think" | "oops" | "wave" | "sleepy";
 
-type Ears = "round" | "small" | "pointy" | "long" | "tufts" | "none";
-type Nose = "button" | "beak" | "bill" | "snout";
-type Extra = "shell" | "glasses" | "goggles" | "hat" | "mask" | "antlers" | "turtle" | "panda" | "horn" | "scarf" | "teeth" | "puffin";
+type Ears = "round" | "small" | "pointy" | "long" | "tufts" | "big" | "floppy" | "none";
+type Nose = "button" | "beak" | "bill" | "snout" | "big" | "pig" | "dots";
+type Extra =
+  | "shell" | "glasses" | "goggles" | "hat" | "mask" | "antlers" | "turtle" | "panda" | "horn" | "scarf" | "teeth" | "puffin"
+  | "mane" | "stripes" | "spikes" | "dragon" | "unicorn" | "patch" | "bumps" | "tuft" | "sloth" | "toque" | "skunk";
 
 export interface CritterDef {
   id: string;
@@ -26,6 +29,8 @@ export interface CritterDef {
   nose: Nose;
   noseColour: string;
   extras: Extra[];
+  /** Only bought in the shop, not offered as a profile avatar. */
+  shopOnly?: boolean;
 }
 
 export const CRITTERS: CritterDef[] = [
@@ -44,7 +49,42 @@ export const CRITTERS: CritterDef[] = [
   { id: "willow", name: "Willow", species: "wolf", fur: "#8d97a8", furDark: "#5f6877", face: "#e6ebf2", belly: "#e6ebf2", ears: "pointy", earInner: "#414857", nose: "button", noseColour: "#2b2f36", extras: ["scarf"] },
   { id: "frost", name: "Frost", species: "arctic fox", fur: "#f4f8fc", furDark: "#c5d3e3", face: "#ffffff", belly: "#ffffff", ears: "pointy", earInner: "#9db4cf", nose: "button", noseColour: "#2b2f36", extras: [] },
   { id: "nori", name: "Nori", species: "narwhal", fur: "#7fa6d6", furDark: "#5a84b8", face: "#dbe9fa", belly: "#dbe9fa", ears: "none", nose: "button", noseColour: "#3a5a85", extras: ["horn"] },
+  // Shop buddies added in October 2026.
+  { id: "pip", name: "Pip", species: "mouse", fur: "#b8bcc6", furDark: "#8d929e", face: "#eef0f4", belly: "#eef0f4", ears: "big", earInner: "#ffb8cf", nose: "button", noseColour: "#ff8fb1", extras: [], shopOnly: true },
+  { id: "ziggy", name: "Ziggy", species: "chick", fur: "#ffd84a", furDark: "#f0b81f", face: "#fff1a8", belly: "#fff1a8", ears: "none", nose: "beak", noseColour: "#ff9a2e", extras: ["tuft"], shopOnly: true },
+  { id: "mochi", name: "Mochi", species: "cat", fur: "#f3a956", furDark: "#d7832d", face: "#fff1df", belly: "#fff1df", ears: "pointy", earInner: "#ffb8cf", nose: "button", noseColour: "#ff8fa8", extras: ["stripes"], shopOnly: true },
+  { id: "biscuit", name: "Biscuit", species: "puppy", fur: "#e0b07a", furDark: "#a8743f", face: "#fbeedd", belly: "#fbeedd", ears: "floppy", nose: "big", noseColour: "#3d2a20", extras: ["patch"], shopOnly: true },
+  { id: "petunia", name: "Petunia", species: "pig", fur: "#f6a5b8", furDark: "#e27f98", face: "#fbc6d2", belly: "#fbc6d2", ears: "pointy", earInner: "#e27f98", nose: "pig", noseColour: "#f48aa5", extras: [], shopOnly: true },
+  { id: "tango", name: "Tango", species: "frog", fur: "#6cc24a", furDark: "#4a9a30", face: "#c9ef9e", belly: "#e3f7c4", ears: "none", nose: "dots", noseColour: "#3f7f2a", extras: ["bumps"], shopOnly: true },
+  { id: "hazel", name: "Hazel", species: "hedgehog", fur: "#a87c5a", furDark: "#6f4e36", face: "#f5e3c8", belly: "#f5e3c8", ears: "small", nose: "button", noseColour: "#3d2a20", extras: ["spikes"], shopOnly: true },
+  { id: "kiki", name: "Kiki", species: "koala", fur: "#9ea4ae", furDark: "#7a808b", face: "#d5d9df", belly: "#eef0f3", ears: "big", earInner: "#f4f1ec", nose: "big", noseColour: "#3a3f4a", extras: [], shopOnly: true },
+  { id: "pepper", name: "Pepper", species: "penguin", fur: "#2f3445", furDark: "#1d2130", face: "#f7f8fb", belly: "#f7f8fb", ears: "none", nose: "beak", noseColour: "#ffa83d", extras: ["toque"], shopOnly: true },
+  { id: "daisy", name: "Daisy", species: "skunk", fur: "#33384a", furDark: "#1f2330", face: "#eef0f4", belly: "#eef0f4", ears: "small", nose: "button", noseColour: "#ff8fb1", extras: ["skunk"], shopOnly: true },
+  { id: "sage", name: "Sage", species: "sloth", fur: "#a89480", furDark: "#7a6654", face: "#efe2cf", belly: "#efe2cf", ears: "none", nose: "big", noseColour: "#4a3a2e", extras: ["sloth"], shopOnly: true },
+  { id: "zuzu", name: "Zuzu", species: "zebra", fur: "#eceef2", furDark: "#3a3f4a", face: "#ffffff", belly: "#ffffff", ears: "pointy", earInner: "#2b2f36", nose: "snout", noseColour: "#2b2f36", extras: ["stripes"], shopOnly: true },
+  { id: "sunny", name: "Sunny", species: "lion", fur: "#f2b347", furDark: "#c98320", face: "#fde3b0", belly: "#fde3b0", ears: "round", earInner: "#c98320", nose: "button", noseColour: "#7a4a2a", extras: ["mane"], shopOnly: true },
+  { id: "ember", name: "Ember", species: "dragon", fur: "#5bbf6a", furDark: "#3a8f4a", face: "#d4f2a8", belly: "#d4f2a8", ears: "none", nose: "dots", noseColour: "#2f6b3a", extras: ["dragon"], shopOnly: true },
+  { id: "luna", name: "Luna", species: "unicorn", fur: "#fbf7ff", furDark: "#d9cdee", face: "#ffffff", belly: "#ffffff", ears: "pointy", earInner: "#ffb8cf", nose: "dots", noseColour: "#c9a3d9", extras: ["unicorn"], shopOnly: true },
 ];
+
+/** The critters a child can pick as their profile picture. */
+export const AVATARS = CRITTERS.filter((c) => !c.shopOnly);
+
+/** Species that don't get whiskers drawn beside a button nose. */
+const NO_WHISKERS = new Set(["turtle", "narwhal", "bear", "panda"]);
+
+/** Points of a spiky ring around the head, for the hedgehog. */
+const SPIKES = Array.from({ length: 23 }, (_, i) => {
+  const a = Math.PI * (0.92 + (i / 22) * 1.16);
+  const r = i % 2 ? 80 : 54;
+  return `${(100 + r * Math.cos(a)).toFixed(1)} ${(92 + r * Math.sin(a)).toFixed(1)}`;
+}).join(" L");
+
+/** Scallops of a lion's mane, all the way round the head. */
+const MANE = Array.from({ length: 14 }, (_, i) => {
+  const a = (i / 14) * Math.PI * 2;
+  return [100 + 64 * Math.cos(a), 92 + 64 * Math.sin(a)] as const;
+});
 
 export function getCritter(id: string | undefined): CritterDef {
   return CRITTERS.find((c) => c.id === id) ?? CRITTERS[0];
@@ -96,6 +136,18 @@ function EarsLayer({ c }: { c: CritterDef }) {
           <ellipse cx="126" cy="24" rx="6" ry="28" fill={inner} transform="rotate(12 126 24)" />
         </g>
       );
+    case "big":
+      return (
+        <g>
+          <circle cx="50" cy="52" r="26" fill={c.fur} />
+          <circle cx="150" cy="52" r="26" fill={c.fur} />
+          <circle cx="52" cy="54" r="15" fill={inner} />
+          <circle cx="148" cy="54" r="15" fill={inner} />
+        </g>
+      );
+    case "floppy":
+      // Drawn again over the head in FrontEars so they hang down the cheeks.
+      return null;
     case "tufts":
       return (
         <g fill={c.furDark}>
@@ -141,7 +193,7 @@ function Eyes({ mood, c }: { mood: Mood; c: CritterDef }) {
 }
 
 function Mouth({ mood, c }: { mood: Mood; c: CritterDef }) {
-  const y = c.nose === "snout" ? 6 : 0;
+  const y = c.nose === "snout" || c.nose === "pig" ? 6 : 0;
   if (c.nose === "beak" || c.nose === "bill") {
     if (mood === "cheer") return <path d="M92 112 Q100 124 108 112 Z" fill="#7a2e35" />;
     return null;
@@ -175,6 +227,28 @@ function NoseLayer({ c }: { c: CritterDef }) {
           <path d="M84 98 Q100 92 116 98 L108 120 Q100 124 92 120 Z" fill={c.noseColour} />
           <path d="M90 104 Q100 100 110 104" stroke="#ffd23d" strokeWidth="4" fill="none" />
           <path d="M84 98 Q100 92 116 98" stroke="#ffd23d" strokeWidth="3" fill="none" />
+        </g>
+      );
+    case "big":
+      return (
+        <g>
+          <ellipse cx="100" cy="100" rx="14" ry="11" fill={c.noseColour} />
+          <ellipse cx="95" cy="96.5" rx="4.5" ry="2.5" fill="#fff" opacity="0.45" />
+        </g>
+      );
+    case "pig":
+      return (
+        <g>
+          <ellipse cx="100" cy="104" rx="17" ry="12" fill={c.noseColour} stroke={c.furDark} strokeWidth="2.5" />
+          <ellipse cx="94" cy="104" rx="3" ry="4.5" fill="#9b4a5e" />
+          <ellipse cx="106" cy="104" rx="3" ry="4.5" fill="#9b4a5e" />
+        </g>
+      );
+    case "dots":
+      return (
+        <g fill={c.noseColour}>
+          <ellipse cx="94" cy="101" rx="2.5" ry="3" />
+          <ellipse cx="106" cy="101" rx="2.5" ry="3" />
         </g>
       );
     case "snout":
@@ -249,6 +323,33 @@ function BackLayer({ c }: { c: CritterDef }) {
           <path d="M70 140 L100 128 L130 140 L130 172 L100 184 L70 172 Z" fill="#9c7740" opacity="0.6" />
         </g>
       )}
+      {c.extras.includes("mane") && (
+        <g fill="#c4622d">
+          <circle cx="100" cy="92" r="66" />
+          {MANE.map(([x, y], i) => (
+            <circle key={i} cx={x} cy={y} r="17" />
+          ))}
+        </g>
+      )}
+      {c.extras.includes("spikes") && <path d={`M${SPIKES} Z`} fill={c.furDark} strokeLinejoin="round" />}
+      {c.extras.includes("dragon") && (
+        <g strokeWidth="2.5" strokeLinejoin="round">
+          <g fill="#8fd6e8" stroke="#4fa7c2">
+            <path d="M58 146 L14 104 Q22 120 18 132 Q30 130 34 142 Q42 140 46 152 Z" />
+            <path d="M142 146 L186 104 Q178 120 182 132 Q170 130 166 142 Q158 140 154 152 Z" />
+          </g>
+          <g fill="#ffe6a3" stroke="#e0b44a">
+            <path d="M66 52 L58 16 L86 40 Z" />
+            <path d="M134 52 L142 16 L114 40 Z" />
+          </g>
+        </g>
+      )}
+      {c.extras.includes("bumps") && (
+        <g fill={c.fur}>
+          <circle cx="72" cy="46" r="18" />
+          <circle cx="128" cy="46" r="18" />
+        </g>
+      )}
       {c.extras.includes("antlers") && (
         <g fill="#d9b277" stroke="#b88d4f" strokeWidth="2" strokeLinejoin="round">
           <path d="M60 50 C40 40 30 20 38 10 C42 22 50 26 54 24 C52 14 56 6 62 4 C62 16 66 26 70 30 C72 22 78 16 84 16 C80 28 76 40 68 52 Z" />
@@ -263,6 +364,40 @@ function FaceExtras({ c }: { c: CritterDef }) {
   // The puffin's white face sits under everything else.
   if (!c.extras.includes("puffin")) return null;
   return <path d="M52 92 Q60 60 100 56 Q140 60 148 92 Q140 120 100 124 Q60 120 52 92 Z" fill="#f7f8fb" />;
+}
+
+/** Patterns painted on the head, under the eyes. */
+function HeadMarks({ c }: { c: CritterDef }) {
+  return (
+    <g>
+      {c.extras.includes("stripes") && (
+        <g stroke={c.furDark} strokeWidth="5" strokeLinecap="round" fill="none">
+          <path d="M100 36 V52" />
+          <path d="M86 38 Q88 46 85 54" />
+          <path d="M114 38 Q112 46 115 54" />
+        </g>
+      )}
+      {c.extras.includes("skunk") && <path d="M90 36 Q100 32 110 36 L104 70 Q100 74 96 70 Z" fill="#ffffff" />}
+      {c.extras.includes("patch") && <ellipse cx="121" cy="86" rx="17" ry="16" fill={c.furDark} opacity="0.55" />}
+      {c.extras.includes("sloth") && (
+        <g fill="#6b5646">
+          <ellipse cx="76" cy="91" rx="20" ry="11" transform="rotate(18 76 91)" />
+          <ellipse cx="124" cy="91" rx="20" ry="11" transform="rotate(-18 124 91)" />
+        </g>
+      )}
+    </g>
+  );
+}
+
+/** Ears that hang down in front of the head, like a puppy's. */
+function FrontEars({ c }: { c: CritterDef }) {
+  if (c.ears !== "floppy") return null;
+  return (
+    <g fill={c.furDark}>
+      <path d="M62 44 Q34 40 34 76 Q34 104 48 112 Q60 100 62 76 Q66 56 62 44 Z" />
+      <path d="M138 44 Q166 40 166 76 Q166 104 152 112 Q140 100 138 76 Q134 56 138 44 Z" />
+    </g>
+  );
 }
 
 function TopExtras({ c }: { c: CritterDef }) {
@@ -301,6 +436,29 @@ function TopExtras({ c }: { c: CritterDef }) {
         <g>
           <path d="M96 40 L100 0 L104 40 Z" fill="#f3ead2" stroke="#d6c9a5" strokeWidth="2" strokeLinejoin="round" />
           <path d="M97 30 L103 26 M98 20 L102 17 M99 11 L101 9" stroke="#d6c9a5" strokeWidth="1.5" />
+        </g>
+      )}
+      {c.extras.includes("toque") && (
+        <g>
+          <path d="M52 60 Q52 22 100 20 Q148 22 148 60 Z" fill="#e0433a" />
+          <rect x="48" y="52" width="104" height="14" rx="7" fill="#b72f28" />
+          <path d="M60 58 h80" stroke="#fff" strokeWidth="3" strokeDasharray="6 6" />
+          <circle cx="100" cy="18" r="11" fill="#ffffff" stroke="#e4e6ec" strokeWidth="2" />
+        </g>
+      )}
+      {c.extras.includes("tuft") && (
+        <g fill="none" stroke={c.furDark} strokeWidth="5" strokeLinecap="round">
+          <path d="M100 36 Q96 22 104 14" />
+          <path d="M100 36 Q88 28 86 18" />
+          <path d="M100 36 Q112 28 116 20" />
+        </g>
+      )}
+      {c.extras.includes("unicorn") && (
+        <g>
+          <path d="M60 52 Q62 30 84 30 Q78 40 86 46 Q74 44 70 56 Z" fill="#c9a3f5" />
+          <path d="M70 46 Q76 32 94 34 Q86 42 92 50 Q82 46 78 56 Z" fill="#ff9fcf" />
+          <path d="M94 40 L100 2 L106 40 Z" fill="#ffd45e" stroke="#e0a91f" strokeWidth="2" strokeLinejoin="round" />
+          <path d="M96 30 L104 26 M97 20 L103 17 M98 11 L102 9" stroke="#e0a91f" strokeWidth="1.5" />
         </g>
       )}
       {c.extras.includes("scarf") && (
@@ -364,6 +522,8 @@ export function CritterSvg({ id, mood = "happy", stage = 1 }: { id: string; mood
         <circle cx="100" cy="90" r="56" fill={headFill} />
         <FaceExtras c={c} />
         {c.nose !== "bill" && <ellipse cx="100" cy="101" rx="45" ry="36" fill={c.face} opacity={c.extras.includes("panda") ? 0 : 1} />}
+        <HeadMarks c={c} />
+        <FrontEars c={c} />
         {c.extras.includes("mask") && (
           <path d="M58 80 Q80 66 100 82 Q120 66 142 80 Q140 98 120 98 Q108 98 100 90 Q92 98 80 98 Q60 98 58 80 Z" fill="#3b3f46" />
         )}
@@ -377,8 +537,8 @@ export function CritterSvg({ id, mood = "happy", stage = 1 }: { id: string; mood
         <Eyes mood={mood} c={c} />
         <circle cx="66" cy="106" r="8" fill="#ff9fb0" opacity="0.55" />
         <circle cx="134" cy="106" r="8" fill="#ff9fb0" opacity="0.55" />
-        {c.nose === "button" && c.species !== "turtle" && c.species !== "narwhal" && (
-          <g stroke="#c9a98a" strokeWidth="2" strokeLinecap="round" opacity={c.species === "bear" || c.species === "panda" ? 0 : 1}>
+        {c.nose === "button" && !NO_WHISKERS.has(c.species) && (
+          <g stroke="#c9a98a" strokeWidth="2" strokeLinecap="round">
             <path d="M80 104 L56 99" />
             <path d="M80 109 L55 110" />
             <path d="M120 104 L144 99" />

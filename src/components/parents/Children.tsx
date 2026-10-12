@@ -8,7 +8,7 @@ import type { FrameworkId, GradeId } from "@/content/types";
 import type { Profile } from "@/lib/model";
 import { MAX_CHILDREN } from "@/lib/plan";
 import { useProfiles, useStore } from "@/lib/store";
-import { CritterSvg, CRITTERS } from "../Critter";
+import { AVATARS, CritterSvg } from "../Critter";
 import { AVATAR_COLOURS } from "../play/Start";
 import { SelectMenu } from "../SelectMenu";
 import { Dialog } from "../ui";
@@ -87,7 +87,7 @@ function ChildForm({ draft, onChange, isNew }: { draft: Draft; onChange: (d: Dra
       <div>
         <p className="mb-2 font-semibold">Avatar</p>
         <div className="grid grid-cols-6 gap-2">
-          {CRITTERS.map((c, i) => (
+          {AVATARS.map((c, i) => (
             <button
               key={c.id}
               type="button"
