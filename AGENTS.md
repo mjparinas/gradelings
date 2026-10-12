@@ -385,7 +385,7 @@ Tests are duplicated across screen sizes only where layout can break:
 - **Mascots:** an original cast drawn from one parametric SVG (`src/components/Critter.tsx`). Every critter shares the same moods, and their eyes follow the pointer.
   - Ollie the Otter is the guide.
   - Each subject has its own guide: Hoot the owl (math), Ruby the fox (reading), Bolt the beaver (science) and Juniper the bear (social studies).
-  - Seven more critters can be unlocked in the shop.
+  - Twenty-five more critters can be bought in the shop (ten of them also picked as avatars; the fifteen marked `shopOnly` are shop-only buddies, some locked behind a level or trophy).
 - **Read-aloud uses the device's own voices** (Web Speech API, `src/lib/speech.ts`) until the Piper voice below has downloaded, and whenever Piper can't play, so it's free and works offline.
   - Installed voices are ranked by quality, and locale only breaks ties between similar voices:
     - first, "Natural", "Neural" and "Premium" voices;
