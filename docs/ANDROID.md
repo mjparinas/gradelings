@@ -46,7 +46,7 @@ For later releases, raise `appVersionCode` and `appVersionName` in `android/twa-
 Google Play generally requires subscriptions for digital content sold inside an app to use Google Play Billing (with a fee), and doesn't allow sending people from the app to an outside checkout such as Stripe. Decision: **the Android app has no purchase screens** and families subscribe on the website. Their plan syncs to the app like any other device.
 
 - The app opens `/play/?app=android` (`startUrl` in `android/twa-manifest.json`). `src/lib/twa.ts` (`isAndroidApp`) reads that, or the `android-app://` referrer, and keeps it in `sessionStorage`.
-- On the parent area, the lock dialog and the Subscription page, the Android app tells parents to open gradelings.com in a browser to subscribe. It shows no prices, payment buttons or link into checkout.
+- The Android app shows no prices, payment buttons, subscribe prompts or link into checkout, and doesn't name the website as a place to pay (Google Play counts that as steering). The Subscription page says only that the app can't take a payment and that a membership shows up once the parent signs in; the lock dialog asks the child to ask a grown-up; the subscribe banner and header button are hidden.
 - Rejection is still possible. Check Google's current payments policy before you submit, and if it asks for more, the fallback is Google Play Billing (not built).
 - The Families policy also applies because the app is for children. The no-ads, no-tracking and no-purchases-by-kids rules in `AGENTS.md` fit it, and the parent area is behind the PIN gate.
 

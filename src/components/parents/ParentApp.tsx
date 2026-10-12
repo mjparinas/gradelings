@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState, useSyncExternalStore, type ReactNode } from "react";
-import { APP_NAME, SITE_HOST } from "@/lib/brand";
+import { APP_NAME } from "@/lib/brand";
 import { refreshAccount, type BillingInfo } from "@/lib/account";
 import { hasPaidPlan, isPremium, trialDaysLeft } from "@/lib/plan";
 import { useRoute } from "@/lib/router";
@@ -80,9 +80,7 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
             <SyncBadge />
             {paid ? (
               <span className="rounded-full bg-good-soft px-3 py-1 text-sm font-semibold text-good-dark">⭐ Premium</span>
-            ) : inAndroidApp ? (
-              <span className="inline-flex min-h-11 items-center rounded-full bg-[#25b47e] px-3 text-sm font-bold text-[#0f172a]">Subscribe at {SITE_HOST}</span>
-            ) : (
+            ) : inAndroidApp ? null : (
               <a href="#/subscription" className="inline-flex min-h-11 items-center rounded-full bg-[#25b47e] px-3 text-sm font-bold text-[#0f172a]">
                 {premium ? `Subscribe · ${days} ${days === 1 ? "day" : "days"} left` : "Subscribe"}
               </a>

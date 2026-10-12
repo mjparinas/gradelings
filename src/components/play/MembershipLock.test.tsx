@@ -17,10 +17,11 @@ describe("MembershipLock", () => {
     expect(screen.getByRole("button", { name: "OK" })).toBeInTheDocument();
   });
 
-  it("tells a grown-up in the Android app to subscribe on the website, with no payment link", () => {
+  it("asks for a grown-up in the Android app without naming the website or a payment link", () => {
     state.android = true;
     render(<MembershipLock open onClose={() => {}} />);
-    expect(screen.getByRole("dialog")).toHaveTextContent(`subscribe at ${SITE_HOST} in a browser`);
+    expect(screen.getByRole("dialog")).toHaveTextContent("Ask a grown-up about it.");
+    expect(screen.getByRole("dialog")).not.toHaveTextContent(SITE_HOST);
     expect(screen.queryByRole("link", { name: "Grown-ups: subscribe" })).not.toBeInTheDocument();
   });
 });

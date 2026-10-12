@@ -2,14 +2,9 @@
 
 Everything to paste into Play Console for the Android app (`docs/ANDROID.md`), and the answers to its forms. The answers below match the code as of October 2026. If the data we keep, the providers or the payment flow change, update this file and the forms together.
 
-## Before you submit: one decision
+## Payments in the app
 
-Google Play's payments policy doesn't let an app sell digital content outside Google Play Billing, and it also limits text that sends people to pay somewhere else. Today the Android app shows no prices or payment buttons, but the parent area, the lock dialog and the Subscription page say "open gradelings.com in your browser to subscribe" (`isAndroidApp` in `src/lib/twa.ts`). A reviewer may count that as steering.
-
-- **Lowest risk:** in the Android app, say only that the family's plan shows here once they sign in, with no mention of where to subscribe. Families who found us on the web still subscribe there.
-- **Keep the wording:** it may pass, and the fallback is Google Play Billing (not built).
-
-Check Google's current Payments policy page before submitting, because the rules change by country.
+Google Play's payments policy doesn't let an app sell digital content outside Google Play Billing, and it also limits text that sends people to pay somewhere else. So the Android app (`isAndroidApp` in `src/lib/twa.ts`) shows no prices, no payment buttons, no subscribe prompts and no mention of where to subscribe (decided October 2026). It only says the app can't take a payment and that a family's membership shows up once they sign in. Families subscribe on the website, which they found us through. If a reviewer still objects, the fallback is Google Play Billing (not built). Check Google's current Payments policy page before submitting, because the rules change by country.
 
 ## Store listing
 

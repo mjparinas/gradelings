@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useSyncExternalStore } from "react";
-import { APP_NAME, SITE_HOST } from "@/lib/brand";
+import { APP_NAME } from "@/lib/brand";
 import { devBilling, loadReferral, openBillingPortal, redeemCode, refreshAccount, resendVerification, startCheckout, type BillingInfo, type ReferralInfo } from "@/lib/account";
 import { firstChargeAt, FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, PRICES, trialDaysLeft, upgradeOffer } from "@/lib/plan";
 import { inviteLink } from "@/lib/referral";
@@ -65,7 +65,7 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
           paid
             ? "One family membership covers all your children."
             : inAndroidApp
-              ? `Open ${SITE_HOST} in your browser to subscribe. This app can't take a payment.`
+              ? "This app can't take a payment. A family membership shows up here once you sign in."
             : offer === "trial"
               ? `Free trial · ${trialDaysLeft(family)} ${trialDaysLeft(family) === 1 ? "day" : "days"} left. You can subscribe now, before it ends.`
               : "The free trial is optional. Subscribe whenever you're ready, including before you've tried the app."
@@ -110,13 +110,9 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
           {inAndroidApp ? (
             <p className="font-read">
               {paid ? (
-                <>
-                  To change or cancel your membership, open <b>{SITE_HOST}</b> in your browser.
-                </>
+                "Billing changes aren't made in this app. Your membership stays active on every device you sign in to."
               ) : (
-                <>
-                  To subscribe, open <b>{SITE_HOST}</b> in your browser. This app can&apos;t take a payment. Sign in with the same account and your membership shows up here.
-                </>
+                "This app can't take a payment. If your family has a membership, sign in with the same account and it shows up here."
               )}
             </p>
           ) : !family.account ? (

@@ -70,11 +70,12 @@ describe("SubscriptionPage", () => {
     expect(screen.getByText(/keeps your free days.*first payment is on/i)).toBeInTheDocument();
   });
 
-  it("tells Android parents to open the website, and shows no plan buttons", () => {
+  it("never points Android parents to the website, and shows no plan buttons", () => {
     state.android = true;
     state.family = { plan: "trial", trialEndsAt: Date.now() + 5 * 86_400_000, updatedAt: 1 };
     render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
-    expect(screen.getByText(/To subscribe, open/)).toHaveTextContent(SITE_HOST);
+    expect(screen.getByText(/sign in with the same account and it shows up here/)).toBeInTheDocument();
+    expect(document.body).not.toHaveTextContent(SITE_HOST);
     expect(screen.queryByRole("button", { name: /Subscribe yearly/ })).not.toBeInTheDocument();
     expect(screen.queryByRole("link", { name: /Subscribe/ })).not.toBeInTheDocument();
   });
@@ -265,11 +266,12 @@ describe("SubscriptionPage billing actions", () => {
     expect(screen.getByText("Your membership is active.")).toBeInTheDocument();
   });
 
-  it("tells an Android member to manage the plan on the website", () => {
+  it("tells an Android member billing isn't changed in the app, without naming the website", () => {
     state.android = true;
     state.family = { plan: "premium", trialEndsAt: 0, updatedAt: 1, account };
     render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
-    expect(screen.getByText(/To change or cancel your membership, open/)).toBeInTheDocument();
+    expect(screen.getByText(/Billing changes aren't made in this app/)).toBeInTheDocument();
+    expect(document.body).not.toHaveTextContent(SITE_HOST);
   });
 
   it("explains what a time-limited code covers, and that lifetime access needs nothing", () => {
