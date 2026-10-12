@@ -231,6 +231,25 @@ const SCHEMA = [
     target TEXT,
     detail TEXT
   )`,
+  // Money Stripe collected, one row per paid invoice, for the admin dashboard's revenue numbers. Amounts in
+  // cents. family_id is cleared when a family deletes its account, so the totals stay but nobody is linked.
+  `CREATE TABLE IF NOT EXISTS payments (
+    id TEXT PRIMARY KEY,
+    family_id TEXT,
+    amount INTEGER NOT NULL,
+    refunded INTEGER NOT NULL DEFAULT 0,
+    currency TEXT NOT NULL,
+    interval TEXT,
+    paid_at INTEGER NOT NULL
+  )`,
+  `CREATE INDEX IF NOT EXISTS payments_paid_at ON payments (paid_at)`,
+  `CREATE INDEX IF NOT EXISTS payments_family ON payments (family_id)`,
+  // Values the admin sets in the panel, such as monthly running costs.
+  `CREATE TABLE IF NOT EXISTS admin_settings (
+    key TEXT PRIMARY KEY,
+    value TEXT NOT NULL,
+    updated_at INTEGER NOT NULL
+  )`,
 ];
 
 /** Columns added after the first release. SQLite has no "ADD COLUMN IF NOT EXISTS". */

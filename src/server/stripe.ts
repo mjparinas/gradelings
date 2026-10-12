@@ -116,6 +116,16 @@ export async function createPortal(customer: string, origin: string): Promise<st
   return session.url;
 }
 
+/** One page of paid invoices, newest first, for the admin dashboard's "Import from Stripe". */
+export async function listPaidInvoices(startingAfter?: string): Promise<{ invoices: Record<string, unknown>[]; hasMore: boolean }> {
+  const params = new URLSearchParams({ status: "paid", limit: "100" });
+  if (startingAfter) params.set("starting_after", startingAfter);
+  const res = await fetch(`https://api.stripe.com/v1/invoices?${params}`, { headers: { authorization: `Bearer ${process.env.STRIPE_SECRET_KEY}` } });
+  const data = (await res.json()) as { data?: Record<string, unknown>[]; has_more?: boolean; error?: { message: string } };
+  if (!res.ok) throw new Error(data.error?.message ?? `Stripe error ${res.status}`);
+  return { invoices: data.data ?? [], hasMore: Boolean(data.has_more) };
+}
+
 /** Verifies the Stripe-Signature header (v1 scheme, 5-minute tolerance). */
 export function verifyWebhook(payload: string, header: string | null, secret = process.env.STRIPE_WEBHOOK_SECRET): boolean {
   if (!header || !secret) return false;

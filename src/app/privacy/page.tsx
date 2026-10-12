@@ -39,7 +39,7 @@ export default function PrivacyPage() {
         </p>
         <ul>
           <li>Your email address and a password. Passwords are stored only as a salted scrypt hash, never in readable form.</li>
-          <li>Subscription details: your plan, billing interval and renewal date. Payments are handled by Stripe, so we never see or store your card number.</li>
+          <li>Subscription details: your plan, billing interval, renewal date and the amounts paid (when you delete your account, the amounts stay in our totals with nothing linking them to you). Payments are handled by Stripe, so we never see or store your card number.</li>
           <li>Referrals: a referral code for your family, and, if you signed up through a friend’s link, which family’s code you used. A parent can’t see who used their code, only how many families joined and how many free months that earned.</li>
         </ul>
         <p>

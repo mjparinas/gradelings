@@ -9,9 +9,28 @@ vi.mock("@/lib/classroom", async (importOriginal) => {
   return { ...actual, call: mocks.call };
 });
 
+import { computeMetrics } from "@/lib/adminMetrics";
 import { AdminApp } from "./AdminApp";
 
-const stats = { families: 12, new7: 3, new30: 9, trialing: 4, paid: 5, monthly: 3, yearly: 2, codeAccess: 1, children: 20, active7: 7, active30: 10, classes: 2, students: 30, redemptions: 4, reports: 1 };
+const now = Date.now();
+const stats = {
+  ...computeMetrics({
+    now,
+    families: [{ createdAt: now - 86_400_000, plan: "premium", trialEndsAt: now, subscriptionStatus: "active", subscriptionInterval: "month", billingEventAt: now, accessUntil: null, referred: false, verified: true, practised: true }],
+    parents: 1,
+    children: 2,
+    teachers: 0,
+    students: 0,
+    classes: 0,
+    payments: [],
+    activity: [],
+    activeFamilies: { d1: 1, d7: 1, d30: 1 },
+    monthlyCosts: 0,
+    redemptions: 0,
+    reports: 0,
+  }),
+  stripe: false,
+};
 const flag = { key: "shop", label: "Shop", description: "The pretend coin shop.", scope: "app", defaultOn: true, enabled: true, rollout: 100, changed: false, overrides: 0 };
 const family = {
   family: { id: "fam-1", createdAt: 1, plan: "trial", trialEndsAt: Date.now() + 86_400_000, accessUntil: null, discountCode: null, stripeCustomer: null, subscriptionStatus: null, subscriptionInterval: null, currentPeriodEnd: null },
@@ -63,7 +82,7 @@ describe("AdminApp", () => {
     const user = userEvent.setup();
     render(<AdminApp />);
     expect(await screen.findByText("Families")).toBeInTheDocument();
-    expect(screen.getByText("3 new this week, 9 in 30 days")).toBeInTheDocument();
+    expect(screen.getByText("1 monthly, 0 yearly")).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Flags" }));
     await user.click(await screen.findByRole("switch"));
     expect(sent("/api/admin/flags/", "PUT")).toEqual({ key: "shop", enabled: false, rollout: 100 });

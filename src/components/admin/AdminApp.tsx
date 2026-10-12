@@ -9,6 +9,7 @@ import { DateField } from "@/components/DateField";
 import { SelectMenu } from "@/components/SelectMenu";
 import { APP_NAME } from "@/lib/brand";
 import { call } from "@/lib/classroom";
+import { Dashboard } from "./Dashboard";
 import { parseVariants, type ExperimentStatus, type FlagScope, type Variant } from "@/lib/flags";
 
 // The site-wide admin panel. Only accounts listed in ADMIN_EMAILS (with a confirmed email) get past the
@@ -111,55 +112,13 @@ function SignIn({ onDone }: { onDone: () => void }) {
 
 // ---------- Overview ----------
 
-interface Stats {
-  families: number;
-  new7: number;
-  new30: number;
-  trialing: number;
-  paid: number;
-  monthly: number;
-  yearly: number;
-  codeAccess: number;
-  children: number;
-  active7: number;
-  active30: number;
-  classes: number;
-  students: number;
-  redemptions: number;
-  reports: number;
-}
-
 function Overview() {
-  const [stats, setStats] = useState<Stats | null>(null);
-  const [err, setErr] = useState("");
-  useEffect(() => {
-    call<Stats>("/api/admin/stats/").then(setStats, (e: Error) => setErr(e.message));
-  }, []);
-  if (!stats) return err ? <Notice err={err} /> : <p className="font-read">Loading…</p>;
-  const tiles: [string, number, string?][] = [
-    ["Families", stats.families, `${stats.new7} new this week, ${stats.new30} in 30 days`],
-    ["Paying", stats.paid, `${stats.monthly} monthly, ${stats.yearly} yearly`],
-    ["In free trial", stats.trialing],
-    ["Access from a code or admin", stats.codeAccess],
-    ["Children", stats.children],
-    ["Families practising", stats.active7, `this week (${stats.active30} in 30 days)`],
-    ["Open classes", stats.classes, `${stats.students} student accounts`],
-    ["Codes redeemed", stats.redemptions],
-    ["Question reports", stats.reports],
-  ];
   return (
     <section aria-labelledby="overview-h">
-      <h2 id="overview-h" className="text-2xl font-bold">Overview</h2>
-      <ul className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {tiles.map(([label, n, sub]) => (
-          <li key={label} className={card}>
-            <span className="block text-sm font-semibold text-ink-soft">{label}</span>
-            <span className="block text-3xl font-bold">{n.toLocaleString("en-CA")}</span>
-            {sub && <span className="block text-sm text-ink-soft">{sub}</span>}
-          </li>
-        ))}
-      </ul>
-      <p className="mt-3 text-sm text-ink-soft">Class student accounts are not counted as families.</p>
+      <h2 id="overview-h" className="text-2xl font-bold">
+        Overview
+      </h2>
+      <Dashboard />
     </section>
   );
 }

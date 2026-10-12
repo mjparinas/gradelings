@@ -28,6 +28,8 @@ export async function deleteFamilyData(f: string): Promise<void> {
     { sql: "DELETE FROM code_redemptions WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM flag_overrides WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM experiment_assignments WHERE family_id = ?", args: [f] },
+    // Payments stay in the revenue totals but no longer point at anyone.
+    { sql: "UPDATE payments SET family_id = NULL WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM events WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM child_settings WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM profiles WHERE family_id = ?", args: [f] },

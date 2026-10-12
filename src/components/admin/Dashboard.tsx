@@ -1,0 +1,237 @@
+"use client";
+
+import { useCallback, useEffect, useState, type FormEvent, type ReactNode } from "react";
+import { ColumnChart, LineChart, niceMax, RowBars } from "@/components/parents/charts";
+import { call } from "@/lib/classroom";
+import type { Metrics } from "@/lib/adminMetrics";
+import { FREE_UNITS_PER_COURSE } from "@/lib/plan";
+
+// The admin overview: customers, growth, practice and money, with charts. Counts and sums only.
+
+type Data = Metrics & { stripe: boolean };
+
+const btn = "min-h-11 rounded-xl px-4 font-bold disabled:opacity-50";
+const primary = `${btn} bg-[#4f8ef7] text-[#0f172a]`;
+const quiet = `${btn} border border-line bg-white`;
+const card = "rounded-2xl border border-line bg-white p-4";
+
+const num = (n: number) => n.toLocaleString("en-CA");
+const money = (cents: number) => (cents / 100).toLocaleString("en-CA", { style: "currency", currency: "CAD", maximumFractionDigits: Math.abs(cents) >= 100_000 ? 0 : 2 });
+/** Short money for chart axes: $950, $1.2k, -$300. */
+const moneyShort = (cents: number) => {
+  const d = cents / 100;
+  const a = Math.abs(d);
+  const s = a >= 1_000_000 ? `${Math.round(a / 100_000) / 10}M` : a >= 1000 ? `${Math.round(a / 100) / 10}k` : String(Math.round(a));
+  return `${d < 0 ? "-" : ""}$${s}`;
+};
+const share = (r: number | null) => (r === null ? "—" : `${Math.round(r * 1000) / 10}%`);
+
+function change(now: number, before: number, what: string): string {
+  if (!before) return now ? `up from 0 ${what}` : `none ${what} either`;
+  const d = Math.round(((now - before) / before) * 100);
+  return d === 0 ? `same as ${what}` : `${d > 0 ? "up" : "down"} ${Math.abs(d)}% on ${what}`;
+}
+
+function Tile({ label, value, sub }: { label: string; value: string; sub?: ReactNode }) {
+  return (
+    <li className={card}>
+      <span className="block text-sm font-semibold text-ink-soft">{label}</span>
+      <span className="block text-2xl font-bold tabular-nums sm:text-3xl">{value}</span>
+      {sub && <span className="block text-sm text-ink-soft">{sub}</span>}
+    </li>
+  );
+}
+
+function Section({ id, title, intro, children }: { id: string; title: string; intro?: string; children: ReactNode }) {
+  return (
+    <section aria-labelledby={id} className="mt-8 first:mt-4">
+      <h3 id={id} className="text-xl font-bold">
+        {title}
+      </h3>
+      {intro && <p className="mt-1 max-w-3xl text-sm text-ink-soft">{intro}</p>}
+      {children}
+    </section>
+  );
+}
+
+const tiles = "mt-3 grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-4";
+const charts = "mt-3 grid gap-3 lg:grid-cols-2";
+
+export function Dashboard() {
+  const [data, setData] = useState<Data | null>(null);
+  const [err, setErr] = useState("");
+  const load = useCallback(() => call<Data>("/api/admin/stats/").then(setData, (e: Error) => setErr(e.message)), []);
+  useEffect(() => {
+    load();
+  }, [load]);
+  if (!data) return err ? <p role="alert" className="mt-2 text-nudge-dark">{err}</p> : <p className="font-read">Loading…</p>;
+
+  const { people, customers: c, acquisition: a, engagement: e, revenue: r } = data;
+  const year = new Date(data.generatedAt).getUTCFullYear();
+  const groups = [
+    { label: "Paying", value: c.paying, note: share(people.families ? c.paying / people.families : null) },
+    { label: "In free trial", value: c.trialing, note: share(people.families ? c.trialing / people.families : null) },
+    { label: "Access from a code", value: c.codeAccess, note: share(people.families ? c.codeAccess / people.families : null) },
+    { label: "Free (trial over)", value: c.free, note: share(people.families ? c.free / people.families : null) },
+  ];
+
+  return (
+    <div>
+      <p className="text-sm text-ink-soft">
+        Class student accounts are left out, and days and months are UTC. Updated {new Date(data.generatedAt).toLocaleString("en-CA", { dateStyle: "medium", timeStyle: "short" })}{" "}
+        <button type="button" className="font-semibold text-[#2a5bd7] underline" onClick={() => load()}>
+          Refresh
+        </button>
+      </p>
+
+      <Section id="money-h" title="Revenue and profit" intro="Revenue is what Stripe collected, less refunds. Fees are estimated at 2.9% + 30¢ a payment. Monthly recurring revenue uses list prices, with yearly plans counted as a twelfth a month. Profit takes off fees and the monthly costs you enter below.">
+        <ul className={tiles}>
+          <Tile label="Monthly recurring revenue" value={money(r.mrr)} sub={`${money(r.arr)} a year at this rate`} />
+          <Tile label="Revenue this month" value={money(r.thisMonth)} sub={`${money(r.lastMonth)} last month`} />
+          <Tile label="Profit this month" value={money(r.profitThisMonth)} sub={`after ${money(r.feesThisMonth)} fees and costs so far`} />
+          <Tile label={`Revenue in ${year} so far`} value={money(r.yearToDate)} sub={`profit ${money(r.profitYearToDate)}`} />
+          <Tile label={`Projected revenue for ${year}`} value={money(r.projectedYear)} sub="so far, plus MRR for the rest of the year" />
+          <Tile label={`Projected profit for ${year}`} value={money(r.projectedProfitYear)} sub={`with costs of ${money(r.monthlyCosts)} a month`} />
+          <Tile label="Revenue per paying family" value={r.arppu === null ? "—" : money(Math.round(r.arppu))} sub="a month, on average" />
+          <Tile
+            label="Cancelled in 30 days"
+            value={num(r.cancelled30)}
+            sub={r.churnRate === null ? "no paying families yet" : `${share(r.churnRate)} churn${r.lifetimeValue === null ? "" : `, about ${money(r.lifetimeValue)} per customer over their time`}`}
+          />
+        </ul>
+        <div className={charts}>
+          <ColumnChart title="Revenue by month" subtitle="Collected by Stripe, less refunds" data={r.months.map((m) => ({ label: m.label, value: m.revenue, detail: `${money(m.fees)} fees (est.)` }))} format={moneyShort} unit="revenue" xLabel="Month" floor={10_000} />
+          <ColumnChart
+            title="Profit by month"
+            subtitle="Revenue less estimated fees and monthly costs"
+            data={r.months.map((m) => ({ label: m.label, value: m.profit, detail: `${money(m.revenue)} revenue, ${money(m.fees)} fees, ${money(m.costs)} costs` }))}
+            format={moneyShort}
+            unit="profit"
+            floor={10_000}
+            xLabel="Month"
+          />
+          <LineChart
+            title="Paying families by month"
+            subtitle="Families with a payment covering the month"
+            data={r.months.map((m) => ({ label: m.label, value: m.paying }))}
+            format={(v) => num(Math.round(v))}
+            max={niceMax(Math.max(2, ...r.months.map((m) => m.paying)))}
+            xLabel="Month"
+          />
+        </div>
+        <MoneyTools data={data} reload={load} />
+      </Section>
+
+      <Section id="customers-h" title="Customers">
+        <ul className={tiles}>
+          <Tile label="Families" value={num(people.families)} sub={`${num(people.parents)} parent and teacher accounts`} />
+          <Tile label="Paying" value={num(c.paying)} sub={`${num(c.monthly)} monthly, ${num(c.yearly)} yearly${c.pastDue ? `, ${num(c.pastDue)} past due` : ""}`} />
+          <Tile label="In free trial" value={num(c.trialing)} />
+          <Tile label="Free (trial over, not paying)" value={num(c.free)} sub={`first ${FREE_UNITS_PER_COURSE} units of each course`} />
+          <Tile label="Access from a code or admin" value={num(c.codeAccess)} sub={`${num(c.lifetime)} lifetime`} />
+          <Tile label="Children" value={num(people.children)} sub={`${(Math.round(people.childrenPerFamily * 10) / 10).toLocaleString("en-CA")} per family`} />
+          <Tile label="Teachers" value={num(people.teachers)} sub={`${num(people.classes)} open classes, ${num(people.students)} student accounts`} />
+          <Tile label="Codes redeemed" value={num(data.other.redemptions)} sub={`${num(data.other.reports)} question reports waiting`} />
+        </ul>
+        <div className={charts}>
+          <RowBars title="Where families are" subtitle="Every family is in exactly one group" rows={groups} headers={["Group", "Families", "Share"]} empty="No families yet." />
+        </div>
+      </Section>
+
+      <Section id="growth-h" title="Growth" intro="Activation is the share of families who signed up in the last 90 days and have practised at least once. Trial to paid is the share of trials that ended in the last 90 days whose family pays now.">
+        <ul className={tiles}>
+          <Tile label="Sign-ups this month" value={num(a.thisMonth)} sub={`${num(a.lastMonth)} last month`} />
+          <Tile label="Sign-ups, last 30 days" value={num(a.last30)} sub={change(a.last30, a.previous30, "the 30 days before")} />
+          <Tile label="Trial to paid" value={share(a.trialConversion)} sub={`${num(a.trialsConverted)} of ${num(a.trialsEnded)} trials that ended`} />
+          <Tile label="Paying share of families" value={share(a.paidShare)} />
+          <Tile label="Activation" value={share(a.activationRate)} sub="new families who practised" />
+          <Tile label="Email confirmed" value={share(a.confirmedRate)} />
+          <Tile label="From a referral" value={num(a.referred)} sub={`${share(a.referredRate)} of families`} />
+          <Tile label="Families who have paid" value={num(r.customersEver)} sub="in the last two years" />
+        </ul>
+        <div className={charts}>
+          <ColumnChart title="Sign-ups per week" subtitle="Last 26 weeks" data={a.weekly} unit="sign-ups" xLabel="Week of" />
+          <ColumnChart title="Sign-ups per month" subtitle="Last 12 months" data={a.monthly} unit="sign-ups" xLabel="Month" />
+        </div>
+      </Section>
+
+      <Section id="practice-h" title="Practice">
+        <ul className={tiles}>
+          <Tile label="Families practising today" value={num(e.d1)} sub="last 24 hours" />
+          <Tile label="This week" value={num(e.d7)} sub={`${num(e.d30)} in 30 days`} />
+          <Tile label="Stickiness" value={share(e.stickiness)} sub="daily ÷ monthly practising families" />
+          <Tile label="Questions answered, 30 days" value={num(e.answers30)} sub={`${num(e.minutes30)} minutes`} />
+        </ul>
+        <div className={charts}>
+          <ColumnChart title="Families practising per day" subtitle="Last 30 days" data={e.daily.map((d) => ({ label: d.label, value: d.families }))} unit="families" />
+          <ColumnChart title="Questions answered per day" subtitle="Last 30 days" data={e.daily.map((d) => ({ label: d.label, value: d.answers, detail: `${num(d.minutes)} minutes` }))} unit="questions" />
+        </div>
+      </Section>
+    </div>
+  );
+}
+
+/** Monthly costs (for profit) and the Stripe import. */
+function MoneyTools({ data, reload }: { data: Data; reload: () => void }) {
+  const [costs, setCosts] = useState(String(data.revenue.monthlyCosts / 100));
+  const [busy, setBusy] = useState(false);
+  const [msg, setMsg] = useState<{ ok?: string; err?: string }>({});
+  const run = async (body: unknown, done: (res: Record<string, number>) => string) => {
+    setBusy(true);
+    setMsg({});
+    try {
+      const res = await call<Record<string, number>>("/api/admin/stats/", "POST", body);
+      setMsg({ ok: done(res) });
+      reload();
+    } catch (e) {
+      setMsg({ err: (e as Error).message });
+    } finally {
+      setBusy(false);
+    }
+  };
+  const save = (ev: FormEvent) => {
+    ev.preventDefault();
+    run({ action: "costs", monthlyCosts: Number(costs) }, () => "Monthly costs saved.");
+  };
+  return (
+    <div className={`${card} mt-3 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-end`}>
+      <form onSubmit={save} className="flex flex-wrap items-end gap-2">
+        <label className="flex flex-col text-sm font-semibold">
+          Monthly running costs (CAD)
+          <input
+            className="mt-1 min-h-11 w-40 rounded-xl border border-line bg-white px-3"
+            type="number"
+            inputMode="decimal"
+            min="0"
+            step="0.01"
+            value={costs}
+            onChange={(ev) => setCosts(ev.target.value)}
+            aria-describedby="costs-help"
+          />
+        </label>
+        <button disabled={busy} className={primary}>
+          Save costs
+        </button>
+      </form>
+      {data.stripe && (
+        <button type="button" disabled={busy} className={quiet} onClick={() => run({ action: "import" }, (res) => `Checked ${num(res.seen ?? 0)} paid invoices; ${num(res.stored ?? 0)} belong to families here.`)}>
+          Import payments from Stripe
+        </button>
+      )}
+      <p id="costs-help" className="text-sm text-ink-soft sm:basis-full">
+        Hosting, email, tools and anything else you pay each month. New payments arrive through the Stripe webhook (it needs the invoice.paid and charge.refunded events);
+        {data.stripe ? " import fills in older ones." : " set STRIPE_SECRET_KEY to import older ones."}
+      </p>
+      {msg.err && (
+        <p role="alert" className="text-nudge-dark sm:basis-full">
+          {msg.err}
+        </p>
+      )}
+      {msg.ok && (
+        <p role="status" className="text-[#16794f] sm:basis-full">
+          {msg.ok}
+        </p>
+      )}
+    </div>
+  );
+}
