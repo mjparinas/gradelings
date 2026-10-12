@@ -9,6 +9,14 @@ export const NUDGE_PRESETS = [
   { id: "together", text: "Let's practise together today 💛" },
   { id: "great-week", text: "Great week so far. Keep it going! 🌈" },
   { id: "tell-me", text: "I can't wait to hear what you learned 📚" },
+  { id: "keep-trying", text: "Mistakes help your brain grow. Keep trying! 🌱" },
+  { id: "hard-work", text: "I see how hard you're working. Well done! 💪" },
+  { id: "show-me", text: "Can you show me something new you learned? 🤩" },
+  { id: "you-can", text: "You've got this! I believe in you 🚀" },
+  { id: "fun-today", text: "Have fun learning today! 🎈" },
+  { id: "streak", text: "Every day you practise, you get stronger 🔥" },
+  { id: "teach-me", text: "Will you teach me something tonight? 🦉" },
+  { id: "love-you", text: "Love you lots! 💕" },
 ] as const;
 
 /** A note stops showing after this long if the child hasn't opened the app. */

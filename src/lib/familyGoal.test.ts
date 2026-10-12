@@ -42,5 +42,10 @@ describe("parent notes", () => {
   });
   it("are fixed phrases with unique ids, never free text", () => {
     expect(new Set(NUDGE_PRESETS.map((n) => n.id)).size).toBe(NUDGE_PRESETS.length);
+    expect(new Set(NUDGE_PRESETS.map((n) => n.text)).size).toBe(NUDGE_PRESETS.length);
+  });
+  it("offer more than the original four, all short enough to read on a small home screen", () => {
+    expect(NUDGE_PRESETS.length).toBeGreaterThan(4);
+    for (const n of NUDGE_PRESETS) expect(n.text.length).toBeLessThanOrEqual(60);
   });
 });
