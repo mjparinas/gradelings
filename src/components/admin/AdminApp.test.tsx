@@ -154,4 +154,49 @@ describe("AdminApp", () => {
     await user.click(screen.getByRole("button", { name: "Users" }));
     expect(await screen.findByRole("heading", { name: "Users" })).toBeInTheDocument();
   });
+
+  it("shows a banner on every tab while maintenance mode is on, and turns it off from there", async () => {
+    asAdmin();
+    const base = mocks.call.getMockImplementation()!;
+    mocks.call.mockImplementation((url: string, method = "GET", body?: unknown) => {
+      if (url === "/api/admin/maintenance/" && method === "GET") return Promise.resolve({ on: true, since: Date.UTC(2026, 9, 12, 18) });
+      if (url === "/api/admin/maintenance/" && method === "PUT") return Promise.resolve({ on: false, since: null });
+      return base(url, method, body);
+    });
+    const user = userEvent.setup();
+    render(<AdminApp />);
+    const banner = await screen.findByRole("region", { name: /Maintenance mode is on/ });
+    expect(banner).toHaveTextContent("Visitors only see the home page (on since");
+    await user.click(screen.getByRole("button", { name: "Codes" }));
+    expect(screen.getByRole("region", { name: /Maintenance mode is on/ })).toBeInTheDocument();
+    await user.click(within(banner).getByRole("button", { name: "Turn off maintenance mode" }));
+    expect(sent("/api/admin/maintenance/", "PUT")).toEqual({ on: false });
+    await waitFor(() => expect(screen.queryByRole("region", { name: /Maintenance mode is on/ })).not.toBeInTheDocument());
+  });
+
+  it("turns maintenance mode on from the System tab only after TURN ON is typed", async () => {
+    asAdmin();
+    const base = mocks.call.getMockImplementation()!;
+    mocks.call.mockImplementation((url: string, method = "GET", body?: unknown) => {
+      if (url === "/api/admin/maintenance/" && method === "GET") return Promise.resolve({ on: false, since: null });
+      if (url === "/api/admin/maintenance/" && method === "PUT") return Promise.resolve({ on: true, since: Date.now() });
+      if (url.startsWith("/api/admin/system/")) return Promise.reject(new Error("Not now"));
+      return base(url, method, body);
+    });
+    const user = userEvent.setup();
+    render(<AdminApp />);
+    await screen.findByText("Families");
+    expect(screen.queryByRole("region", { name: /Maintenance mode is on/ })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "System" }));
+    const card = await screen.findByRole("region", { name: "Maintenance mode" });
+    expect(within(card).getByText("Off.")).toBeInTheDocument();
+    await user.click(within(card).getByRole("button", { name: "Turn on maintenance mode…" }));
+    const start = within(card).getByRole("button", { name: "Start maintenance" });
+    expect(start).toBeDisabled();
+    await user.type(within(card).getByLabelText("Type TURN ON to confirm"), "TURN ON");
+    await user.click(start);
+    expect(sent("/api/admin/maintenance/", "PUT")).toEqual({ on: true, confirm: "TURN ON" });
+    expect(await screen.findByRole("region", { name: /Maintenance mode is on/ })).toBeInTheDocument();
+    expect(within(card).getByText("On now.")).toBeInTheDocument();
+  });
 });

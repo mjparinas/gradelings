@@ -2,6 +2,7 @@
 
 import type { Classwork } from "./classroom";
 import * as localdb from "./localdb";
+import { MAINTENANCE_HEADER, MAINTENANCE_SYNC_MESSAGE } from "./maintenance";
 import type { AppEvent, ChildSettings, FamilyInfo, Profile } from "./model";
 import { useStore } from "./store";
 
@@ -62,6 +63,7 @@ async function doSync(): Promise<void> {
         state.setSync({ status: "signed-out" });
         return;
       }
+      if (res.status === 503 && res.headers.get(MAINTENANCE_HEADER)) throw new Error(MAINTENANCE_SYNC_MESSAGE);
       if (!res.ok) throw new Error(`Sync failed (${res.status})`);
       const data = (await res.json()) as SyncResponse;
       await localdb.markSynced(data.accepted);
