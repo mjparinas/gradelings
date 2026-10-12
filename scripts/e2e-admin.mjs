@@ -2,7 +2,7 @@
 // monthly costs, opens the list behind a tile (and a family from it), switches the Shop off
 // (and the kids' app hides it), makes a code, saves an A/B test, finds a family and gives it access,
 // works the to-do list, writes an email to a family (no email is really sent: the server has no email keys),
-// opens the Emails, Inbox and System tabs, and every tab passes the axe-core accessibility scan. A non-admin account
+// opens the Emails, Inbox, Funnel, Automations and System tabs, the billing panel and the CSV download, and every tab passes the axe-core accessibility scan. A non-admin account
 // is turned away.
 //
 //   ADMIN_EMAILS=admin-e2e@example.com npm start      # in one terminal, after npm run build
@@ -197,8 +197,43 @@ check(await vis(page.getByText(/Last sign-in:/)), "a family's page shows the las
 // With no email keys on the server, sending is refused and nothing goes out.
 await page.getByRole("button", { name: "Send email" }).click();
 check(await page.getByText("The email couldn't be sent. Check the email settings.").waitFor({ timeout: 8000 }).then(() => true, () => false), "sending without email keys says so");
+check(await vis(page.getByRole("heading", { name: "Billing" })), "a family's page shows its billing");
+check(await vis(page.getByText(/Stripe isn.t set up/)), "billing says when Stripe isn't set up");
 await shot("user");
 await scan("user");
+
+// The CSV downloads hold accounts, never children.
+const csv = await page.evaluate(async () => (await fetch("/api/admin/export/?type=users")).text());
+check(csv.startsWith("family_id,email,signed_up") && csv.includes(parentEmail) && !csv.includes("Sam"), "the accounts CSV lists the parent and no child's name");
+const payCsv = await page.evaluate(async () => (await fetch("/api/admin/export/?type=payments")).headers.get("content-disposition"));
+check(/^attachment; filename="payments-\d{4}-\d{2}-\d{2}\.csv"$/.test(payCsv ?? ""), "the payments CSV downloads as a file");
+
+// The funnel shows how far families got and links each stuck group to the Emails tab.
+await tab("Funnel");
+check(await page.getByRole("heading", { name: "1. Signed up" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the Funnel tab shows the steps");
+await shot("funnel");
+await scan("funnel");
+const stuck = page.getByRole("button", { name: /^Email the families/ }).first();
+if (await vis(stuck)) {
+  await stuck.click();
+  check(await page.getByText(/This send reaches|Nobody in this group/).waitFor({ timeout: 8000 }).then(() => true, () => false), "a funnel link opens the Emails tab on that group");
+}
+
+// Automations: every nudge starts off, and nothing is switched on here.
+await tab("Automations");
+check(await page.getByRole("heading", { name: "Alerts to you" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the Automations tab shows the alerts");
+const nudges = page.getByRole("listitem").filter({ has: page.getByRole("button", { name: "Edit the email" }) });
+check((await nudges.count()) >= 4 && (await nudges.getByText("On", { exact: true }).count()) === 0, "every automatic nudge starts off");
+await nudges.first().getByRole("button", { name: "Turn on" }).click();
+check(await nudges.first().getByRole("button", { name: "Start sending" }).isDisabled(), "turning a nudge on waits for TURN ON to be typed");
+await shot("automations");
+await scan("automations");
+
+// Saved replies in the inbox.
+await tab("Inbox");
+await page.getByRole("button", { name: /^Edit \(\d+\)$/ }).click();
+check(await vis(page.getByRole("button", { name: "Add a reply" })), "the inbox offers saved replies to edit");
+await scan("saved replies");
 
 // The System page checks every service from the server; tokens never reach the browser. The status pages are
 // read live, so only the parts that don't depend on the network are checked here.

@@ -308,3 +308,37 @@ export function adminMessageEmail(
     sentBy,
   };
 }
+
+/** An alert or the morning digest, to an admin account. Account emails only; never children's names. */
+export function alertEmail(to: string, origin: string, a: { subject: string; heading: string; lines: string[]; path?: string; button?: string }): Email {
+  return layout({
+    kind: "alert",
+    to,
+    origin,
+    subject: a.subject,
+    heading: a.heading,
+    body: a.lines,
+    button: { label: a.button ?? "Open the admin panel", url: `${origin}${a.path ?? "/admin/"}` },
+    footnote: "You get this because your account is an admin. Turn alerts or the digest off in the admin panel under Automations.",
+  });
+}
+
+/** Tells a family a payment didn't go through, with a link to update the card. A billing notice, so it goes even with news and tips off. */
+export function paymentProblemEmail(to: string, origin: string, sentBy: string): Email {
+  return {
+    ...layout({
+      kind: "billing",
+      to,
+      origin,
+      subject: `Your ${APP_NAME} payment didn't go through`,
+      heading: "Your payment didn't go through",
+      body: [
+        `We couldn't take the latest payment for your ${APP_NAME} family plan. This often happens when a card expires or a bank holds a charge.`,
+        "You can update your card in the Parent area under Subscription. Everything stays unlocked while you sort it out, and nothing is lost.",
+      ],
+      button: { label: "Update payment details", url: `${origin}/parents/#/subscription` },
+      footnote: "Questions? Just reply to this email.",
+    }),
+    sentBy,
+  };
+}

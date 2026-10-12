@@ -13,6 +13,10 @@ import { adminMessageEmail } from "./emailTemplates";
 const DAY = 86_400_000;
 const REAL = "NOT EXISTS (SELECT 1 FROM parents s WHERE s.family_id = f.id AND s.role = 'student')";
 const LAST_PRACTICE = "(SELECT MAX(e.t) FROM events e WHERE e.family_id = f.id)";
+/** Days (UTC) with any practice. */
+export const PRACTICE_DAYS = "(SELECT COUNT(DISTINCT e.t / 86400000) FROM events e WHERE e.family_id = f.id)";
+/** A child profile that hasn't been deleted (deleted ones stay as tombstones for sync). */
+export const LIVE_PROFILE = "COALESCE(json_extract(pr.data, '$.deleted'), 0) = 0";
 
 function segmentWhere(segment: Segment, now: number): { sql: string; args: number[] } {
   switch (segment) {
@@ -20,6 +24,12 @@ function segmentWhere(segment: Segment, now: number): { sql: string; args: numbe
       return { sql: `${LAST_PRACTICE} BETWEEN ? AND ?`, args: [now - 60 * DAY, now - 7 * DAY] };
     case "never-practised":
       return { sql: "f.created_at < ? AND NOT EXISTS (SELECT 1 FROM events e WHERE e.family_id = f.id)", args: [now - 2 * DAY] };
+    case "no-child":
+      return { sql: `f.created_at < ? AND f.created_at > ? AND NOT EXISTS (SELECT 1 FROM profiles pr WHERE pr.family_id = f.id AND ${LIVE_PROFILE})`, args: [now - 2 * DAY, now - 60 * DAY] };
+    case "tried-few":
+      return { sql: `f.plan != 'premium' AND ${PRACTICE_DAYS} BETWEEN 1 AND 2 AND ${LAST_PRACTICE} < ?`, args: [now - 3 * DAY] };
+    case "engaged-not-paying":
+      return { sql: `f.plan != 'premium' AND COALESCE(f.access_until, 0) <= ? AND ${PRACTICE_DAYS} >= 3`, args: [now] };
     case "trial-ending":
       return { sql: "f.plan != 'premium' AND f.trial_ends_at > ? AND f.trial_ends_at <= ? AND COALESCE(f.access_until, 0) <= ?", args: [now, now + 7 * DAY, now] };
     case "trial-over":
@@ -66,7 +76,8 @@ export interface Audience {
   total: number;
 }
 
-export async function segmentAudience(segment: Segment, now = Date.now()): Promise<Audience> {
+/** Everyone in a group, split into who can be emailed now and why the rest can't. */
+export async function segmentMembers(segment: Segment, now = Date.now()) {
   const { sql, args } = segmentWhere(segment, now);
   const all = await recipients(sql, args);
   const skipped = { unconfirmed: 0, unsubscribed: 0, bounced: 0, recent: 0 };
@@ -76,7 +87,12 @@ export async function segmentAudience(segment: Segment, now = Date.now()): Promi
     else if (r.lastAdminMail != null && r.lastAdminMail > now - ADMIN_MAIL_GAP_DAYS * DAY) skipped.recent++;
     else ready.push(r);
   }
-  return { sendTo: ready.slice(0, SEND_BATCH), ready: ready.length, skipped, total: all.length };
+  return { ready, skipped, total: all.length };
+}
+
+export async function segmentAudience(segment: Segment, now = Date.now()): Promise<Audience> {
+  const { ready, skipped, total } = await segmentMembers(segment, now);
+  return { sendTo: ready.slice(0, SEND_BATCH), ready: ready.length, skipped, total };
 }
 
 export async function familyRecipient(familyId: string): Promise<Recipient | null> {

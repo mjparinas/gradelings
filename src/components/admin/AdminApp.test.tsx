@@ -55,6 +55,7 @@ function asAdmin() {
     if (url === "/api/admin/flags/" && method === "GET") return Promise.resolve({ flags: [flag] });
     if (url.startsWith("/api/admin/users/?q=")) return Promise.resolve({ users: [{ familyId: "fam-1", email: "pat@example.com", createdAt: 1, plan: "trial", trialEndsAt: Date.now() + 86_400_000, accessUntil: null, subscriptionStatus: null }] });
     if (url === "/api/admin/users/?id=fam-1") return Promise.resolve(family);
+    if (url.startsWith("/api/admin/billing/?familyId=")) return Promise.resolve({ stripe: false, customer: null, payments: [], subscriptions: [], stripeError: null });
     if (url === "/api/admin/stats/detail/?view=families")
       return Promise.resolve({ title: "Families", summary: [], tables: [{ columns: [{ label: "Account", kind: "account" }], rows: [{ familyId: "fam-1", cells: ["pat@example.com"] }], total: 1 }] });
     if (url === "/api/admin/codes/" && method === "GET") return Promise.resolve({ codes: [] });

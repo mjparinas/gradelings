@@ -139,3 +139,58 @@ export function verifyWebhook(payload: string, header: string | null, secret = p
     .map((p) => p.slice(3));
   return signatures.some((sig) => sig.length === expected.length && timingSafeEqual(Buffer.from(sig), Buffer.from(expected)));
 }
+
+async function stripeGet<T>(path: string): Promise<T> {
+  const res = await fetch(`https://api.stripe.com/v1/${path}`, { headers: { authorization: `Bearer ${process.env.STRIPE_SECRET_KEY}` } });
+  const data = (await res.json()) as T & { error?: { message: string } };
+  if (!res.ok) throw new Error(data.error?.message ?? `Stripe error ${res.status}`);
+  return data;
+}
+
+export interface SubscriptionInfo {
+  id: string;
+  status: string;
+  cancelAtPeriodEnd: boolean;
+  currentPeriodEnd: number | null;
+}
+
+/** A customer's subscriptions that haven't ended, for the admin panel. */
+export async function listSubscriptions(customer: string): Promise<SubscriptionInfo[]> {
+  const data = await stripeGet<{ data: Record<string, unknown>[] }>(`subscriptions?${new URLSearchParams({ customer, status: "all", limit: "20" })}`);
+  return data.data
+    .filter((s) => s.status !== "canceled" && s.status !== "incomplete_expired")
+    .map((s) => {
+      const items = (s.items as { data?: { current_period_end?: number }[] } | undefined)?.data ?? [];
+      const end = Number(s.current_period_end ?? items[0]?.current_period_end ?? 0);
+      return { id: String(s.id), status: String(s.status), cancelAtPeriodEnd: Boolean(s.cancel_at_period_end), currentPeriodEnd: end ? end * 1000 : null };
+    });
+}
+
+/** Cancels at the end of the paid period (true), or takes that back (false). */
+export async function setCancelAtPeriodEnd(subscription: string, cancel: boolean): Promise<void> {
+  await stripe(`subscriptions/${encodeURIComponent(subscription)}`, { cancel_at_period_end: String(cancel) });
+}
+
+/** Ends one subscription now. */
+export async function cancelSubscriptionNow(subscription: string): Promise<void> {
+  const res = await fetch(`https://api.stripe.com/v1/subscriptions/${encodeURIComponent(subscription)}`, { method: "DELETE", headers: { authorization: `Bearer ${process.env.STRIPE_SECRET_KEY}` } });
+  if (!res.ok) throw new Error(((await res.json()) as { error?: { message: string } }).error?.message ?? `Stripe error ${res.status}`);
+}
+
+/**
+ * Refunds part or all of a paid invoice. Newer Stripe API versions list an invoice's payments separately,
+ * so the payment is looked up there first, then on the invoice itself.
+ */
+export async function refundInvoice(invoice: string, cents: number, note: string): Promise<{ id: string; amount: number }> {
+  const inv = await stripeGet<Record<string, unknown>>(`invoices/${encodeURIComponent(invoice)}?expand[]=payments`);
+  const payments = ((inv.payments as { data?: { payment?: { payment_intent?: unknown; charge?: unknown } }[] } | undefined)?.data ?? []).map((p) => p.payment ?? {});
+  const pick = (v: unknown) => (typeof v === "string" ? v : v && typeof v === "object" && typeof (v as { id?: unknown }).id === "string" ? (v as { id: string }).id : null);
+  const intent = payments.map((p) => pick(p.payment_intent)).find(Boolean) ?? pick(inv.payment_intent);
+  const charge = intent ? null : (payments.map((p) => pick(p.charge)).find(Boolean) ?? pick(inv.charge));
+  if (!intent && !charge) throw new Error("Stripe has no payment on this invoice to refund.");
+  const params: Record<string, string> = { amount: String(cents), reason: "requested_by_customer", "metadata[note]": note.slice(0, 200), "metadata[invoice]": invoice };
+  if (intent) params.payment_intent = intent;
+  else params.charge = charge!;
+  const r = await stripe<{ id: string; amount: number }>("refunds", params);
+  return { id: r.id, amount: Number(r.amount) };
+}

@@ -12,6 +12,8 @@ export const EMAIL_KINDS = {
   "class-inactive": "Class inactivity warning",
   "class-invite": "Co-teacher invitation",
   admin: "Sent from the admin panel",
+  billing: "Payment problem notice",
+  alert: "Alert or digest to an admin",
   reply: "Your reply to their email",
 } as const;
 export type EmailKind = keyof typeof EMAIL_KINDS;

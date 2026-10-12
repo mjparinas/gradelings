@@ -59,7 +59,7 @@ Turso offers Canadian locations only on its Fly provider (its AWS list has none)
 1. Create a product "Gradelings Family" with two recurring prices in CAD: **C$14.99 / month** and **C$119.99 / year**. Copy their ids to `STRIPE_PRICE_MONTHLY` and `STRIPE_PRICE_YEARLY`. (Plan numbers live in `src/lib/plan.ts`.)
 2. Add a webhook endpoint: `https://<your-domain>/api/billing/webhook/`
    **The trailing slash is required.** Stripe does not follow redirects.
-   Events: `checkout.session.completed`, `customer.subscription.created`, `customer.subscription.updated`, `customer.subscription.deleted`, plus `invoice.paid` and `charge.refunded` for the admin dashboard's revenue numbers.
+   Events: `checkout.session.completed`, `customer.subscription.created`, `customer.subscription.updated`, `customer.subscription.deleted`, plus `invoice.paid` and `charge.refunded` for the admin dashboard's revenue numbers, and `invoice.payment_failed` and `charge.dispute.created` for the admin alerts.
 3. Copy the endpoint's signing secret to `STRIPE_WEBHOOK_SECRET`.
 4. In Stripe's Billing Portal settings, enable cancel, update payment method and plan switching between the two prices.
 5. Test the whole flow in Stripe test mode first (card `4242 4242 4242 4242`). The 30-day free trial is handled by the app, not by Stripe, so no card is needed to start.
@@ -75,7 +75,7 @@ Turso offers Canadian locations only on its Fly provider (its AWS list has none)
 
 `GET /api/health/` returns 200 when the app and database answer (one `SELECT 1`) and 503 otherwise. It is public, uncached and reveals nothing beyond pass/fail.
 
-- **Built in:** `.github/workflows/uptime.yml` pings it every 15 minutes (with 3 tries), opens a single "Site is down" issue labelled `uptime` on failure and closes it when the site recovers. It does nothing until you set the repository variable `UPTIME_URL` (Settings > Secrets and variables > Actions > Variables) to the site origin, e.g. `https://www.gradelings.com` (the host that answers directly; redirects aren't followed, so a redirecting origin reads as down). GitHub can delay scheduled runs, so it is a safety net, not a precise monitor.
+- **Built in:** `.github/workflows/uptime.yml` pings it every 15 minutes (with 3 tries), opens a single "Site is down" issue labelled `uptime` on failure and closes it when the site recovers. It does nothing until you set the repository variable `UPTIME_URL` (Settings > Secrets and variables > Actions > Variables) to the site origin, e.g. `https://www.gradelings.com` (the host that answers directly; redirects aren't followed, so a redirecting origin reads as down). GitHub can delay scheduled runs, so it is a safety net, not a precise monitor. Also add the repository secret `CRON_SECRET` (Settings > Secrets and variables > Actions > Secrets, the same value as the site's): the workflow then calls `/api/cron/watch/`, which checks the database, Stripe, email and the rest and emails the admins when one goes down (`docs/ADMIN.md`).
 - **Free external alternatives** (not set up): UptimeRobot (5-minute checks), Better Stack, or Vercel's own monitoring. Point any of them at `https://<your domain>/api/health/`; they can email or text you faster than GitHub issues do.
 
 ## 6. Launch checklist

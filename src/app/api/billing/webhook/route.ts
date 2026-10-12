@@ -1,4 +1,5 @@
 import { query, run } from "@/server/db";
+import { familyPath, sendAlert } from "@/server/alerts";
 import { recordWebhook } from "@/server/monitor";
 import { recordInvoice, recordRefund } from "@/server/payments";
 import { verifyWebhook } from "@/server/stripe";
@@ -57,6 +58,7 @@ async function apply(event: StripeEvent, obj: Record<string, unknown>, now: numb
 
   if (event.type === "invoice.paid") await recordInvoice(obj, at || now);
   if (event.type === "charge.refunded") await recordRefund(obj);
+  if (event.type === "invoice.payment_failed" || event.type === "charge.dispute.created") await alertBilling(event.type, obj, now);
 
   if (event.type === "checkout.session.completed") {
     const familyId = (obj.client_reference_id as string) ?? (obj.metadata as Record<string, string>)?.family_id;
@@ -94,5 +96,21 @@ async function apply(event: StripeEvent, obj: Record<string, unknown>, now: numb
         [...args, obj.customer as string],
       );
     }
+  }
+}
+
+/** Tells the admins about a failed payment or a dispute, with a link to the family. */
+async function alertBilling(type: string, obj: Record<string, unknown>, now: number) {
+  const customer = typeof obj.customer === "string" ? obj.customer : null;
+  const fam = customer
+    ? (await query<{ id: string; email: string | null }>("SELECT f.id, (SELECT p.email FROM parents p WHERE p.family_id = f.id ORDER BY p.created_at LIMIT 1) AS email FROM families f WHERE f.stripe_customer = ?", [customer]))[0]
+    : undefined;
+  const amount = Number(obj.amount_due ?? obj.amount ?? 0);
+  const money = `${(amount / 100).toFixed(2)} ${String(obj.currency ?? "cad").toUpperCase()}`;
+  const who = fam?.email ?? customer ?? "an unknown customer";
+  if (type === "invoice.payment_failed") {
+    await sendAlert(`payment-failed:${fam?.id ?? customer}`, { subject: `A payment failed for ${who}`, lines: [`Stripe couldn't take ${money} (attempt ${Number(obj.attempt_count ?? 1)}).`, "From the family's page you can email them a link to update their card."], path: fam ? familyPath(fam.id) : "/admin/" }, now);
+  } else {
+    await sendAlert(`dispute:${String(obj.id ?? customer)}`, { subject: `A payment was disputed by ${who}`, lines: [`A dispute was opened for ${money}. Respond in Stripe before the deadline.`], path: fam ? familyPath(fam.id) : "/admin/" }, now);
   }
 }
