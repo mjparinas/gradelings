@@ -21,8 +21,6 @@ const MIN = {
  * Key: `framework/grade/subject`.
  */
 const KNOWN_THIN: Record<string, string> = {
-  // New Brunswick science Grades 3 to 9 is being written on its own branch (claude/project-thread-kwnkc9).
-  "ca-nb/4/science": "New Brunswick Grade 4 science units are on their own branch",
 };
 
 const SEEDS = 20;
