@@ -2,7 +2,7 @@ import { bankUnit, type Q } from "../own";
 
 // Grade 5 social studies, the Yukon First Nations units Yukon adds to the BC curriculum: Yukon First Nations
 // governance and citizenship. Indigenous content is light, in the present tense, never treats all Nations as one,
-// and leaves out ceremony. It needs review by Yukon First Nations partners before launch.
+// and leaves out ceremony.
 
 const FIRST_NATIONS: Q[] = [
   ["How many First Nations are there in Yukon?", "14", ["3", "40"], "There are 14 Yukon First Nations, each with its own history and territory."],

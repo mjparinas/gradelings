@@ -1,7 +1,7 @@
 import { bankUnit, type Q } from "../own";
 
 // Grade 4 social studies, New Brunswick: Wabanaki lands and Canada's physical regions. Wabanaki content is light, in the present
-// tense for living communities, and needs review by Wolastoqey, Mi'kmaq and Peskotomuhkati partners before launch.
+// tense for living communities.
 
 const LANDS: Q[] = [
   ["What is the name of the Mi’kmaw homeland?", "Mi’kma’ki", ["Wolastoq", "Peskotomuhkati", "Wabanaki"], "Mi’kma’ki reaches across parts of New Brunswick, Nova Scotia, Prince Edward Island and beyond."],
@@ -99,7 +99,7 @@ export const wabanakiLands = bankUnit({
   emoji: "🛶",
   blurb: "Mi’kma’ki, the Wolastoq and Peskotomuhkati lands.",
   parentNote:
-    "Practises the districts of Mi’kma’ki and the traditional territories of the Wolastoqiyik and Peskotomuhkatiyik, and Wabanaki Peoples’ relationships with the natural environment. The content is light, in the present tense, and needs review by Wabanaki partners.",
+    "Practises the districts of Mi’kma’ki and the traditional territories of the Wolastoqiyik and Peskotomuhkatiyik, and Wabanaki Peoples’ relationships with the natural environment. The content is light and in the present tense.",
   standards: ["Geography: Places and Regions, Wabanaki: Identity", "the districts of Mi’kma’ki, Wolastoqiyik and Peskotomuhkatiyik territory, and Wabanaki relationships with the land"],
   items: LANDS,
 });

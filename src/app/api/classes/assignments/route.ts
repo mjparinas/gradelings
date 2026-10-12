@@ -1,14 +1,14 @@
 import { error, getSession, json, sameOrigin } from "@/server/auth";
-import { cleanDueAt, MAX_ASSIGNMENTS, ownedClass, validUnit } from "@/server/classroom";
+import { cleanDueAt, MAX_ASSIGNMENTS, teachingClass, validUnit } from "@/server/classroom";
 import { query, run } from "@/server/db";
 
-/** Assigns a unit from the class’s province to a class. */
+/** Assigns a unit from the class’s province to a class. The owner and co-teachers can all manage assignments. */
 export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req);
   if (!session) return error(401, "Not signed in");
   const body = (await req.json().catch(() => null)) as { classId?: unknown; unitKey?: unknown; dueAt?: unknown } | null;
-  const cls = typeof body?.classId === "string" ? await ownedClass(body.classId, session.parentId) : undefined;
+  const cls = typeof body?.classId === "string" ? (await teachingClass(body.classId, session.parentId))?.cls : undefined;
   if (!cls) return error(404, "Class not found");
   const key = typeof body?.unitKey === "string" ? body.unitKey : "";
   if (!(await validUnit(key, cls.grade, cls.framework))) return error(400, "That unit isn’t part of this class’s grade.");
@@ -25,7 +25,7 @@ export async function PATCH(req: Request) {
   const session = await getSession(req);
   if (!session) return error(401, "Not signed in");
   const body = (await req.json().catch(() => null)) as { classId?: unknown; unitKey?: unknown; dueAt?: unknown } | null;
-  const cls = typeof body?.classId === "string" ? await ownedClass(body.classId, session.parentId) : undefined;
+  const cls = typeof body?.classId === "string" ? (await teachingClass(body.classId, session.parentId))?.cls : undefined;
   if (!cls) return error(404, "Class not found");
   const dueAt = cleanDueAt(body?.dueAt);
   if (dueAt === undefined) return error(400, "Choose a due date within the next year.");
@@ -38,7 +38,7 @@ export async function DELETE(req: Request) {
   const session = await getSession(req);
   if (!session) return error(401, "Not signed in");
   const params = new URL(req.url).searchParams;
-  const cls = await ownedClass(params.get("classId") ?? "", session.parentId);
+  const cls = (await teachingClass(params.get("classId") ?? "", session.parentId))?.cls;
   if (!cls) return error(404, "Class not found");
   await run("DELETE FROM class_assignments WHERE class_id = ? AND unit_key = ?", [cls.id, params.get("unitKey") ?? ""]);
   return json({ ok: true });

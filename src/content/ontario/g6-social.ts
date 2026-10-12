@@ -5,10 +5,9 @@ import { on } from "./kit";
 
 // Ontario Grade 6 Social Studies (2023): Strand A, Communities in Canada, Past and Present, and
 // Strand B, Canada's Interactions with the Global Community. BC's map skills, global challenges and
-// trade units are shared. The Indigenous history units state well-established facts only and are
-// flagged in their parent notes for review with First Nations, Métis and Inuit partners; deeper
+// trade units are shared. The Indigenous history units state well-established facts only; deeper
 // expectations (A2.1, A3.7 Jewish communities, A3.9 community comparisons, A3.10 the child's own
-// community) are left for teacher and partner development.
+// community) are not written here.
 
 // ---------- Canadian identities (A1.1, A1.4, A3.4, A3.11) ----------
 
@@ -307,7 +306,7 @@ export const units: Unit[] = [
     emoji: "🛶",
     blurb: "Names, art, inventions and ideas",
     standards: on("A1.2, A3.1, A3.4", "contributions of First Nations, Métis and Inuit communities, and Indigenous place names and territories"),
-    parentNote: "Contributions of First Nations, Métis and Inuit communities to art, place names, food, sport and inventions, and why Indigenous communities are diverse and living. Needs review with Indigenous partners.",
+    parentNote: "Contributions of First Nations, Métis and Inuit communities to art, place names, food, sport and inventions, and why Indigenous communities are diverse and living.",
     generate: ({ difficulty = 2 } = {}) => levelled(CONTRIBUTIONS, 8, difficulty),
   },
   {
@@ -334,7 +333,7 @@ export const units: Unit[] = [
     emoji: "🧡",
     blurb: "Treaties, rights and reconciliation",
     standards: on("A3.5, A3.8", "significant events in the histories of First Nations, Métis and Inuit communities"),
-    parentNote: "Well-documented events: the Royal Proclamation, the Indian Act, residential schools and the apology, the Red River Resistance, the creation of Nunavut, and reconciliation. Needs review with First Nations, Métis and Inuit partners before launch.",
+    parentNote: "Well-documented events: the Royal Proclamation, the Indian Act, residential schools and the apology, the Red River Resistance, the creation of Nunavut, and reconciliation.",
     generate: ({ difficulty = 2 } = {}) => levelled(INDIGENOUS_HISTORY, 8, difficulty),
   },
   {

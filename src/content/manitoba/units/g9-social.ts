@@ -1,8 +1,7 @@
 import { bankUnit, type Q } from "../own";
 
 // Grade 9 social studies, Canada in the Contemporary World. Units are written for the Manitoba outcomes
-// (9-KC, 9-KI, 9-KG, 9-KE, 9-KL, 9-KP, 9-KH). Treaty, residential school and Métis content is light and
-// needs partner review before launch.
+// (9-KC, 9-KI, 9-KG, 9-KE, 9-KL, 9-KP, 9-KH). Treaty, residential school and Métis content is light.
 
 const RIGHTS: Q[] = [
   ["Which document did the United Nations adopt in 1948 to list the rights every person has?", "The Universal Declaration of Human Rights", ["The Canadian Charter of Rights and Freedoms", "The Constitution Act, 1867"], "The UN adopted the Universal Declaration of Human Rights in 1948."],
@@ -202,7 +201,7 @@ export const units = [
     title: "Treaties & Justice",
     emoji: "🤝",
     blurb: "Treaties, self-determination and the justice system in Manitoba.",
-    parentNote: "Practises how treaties, self-government and land agreements connect First Nations, Métis and Inuit peoples with Canada, and how the justice system in Manitoba works, including Indigenous approaches to justice. This content is light and still needs review with Indigenous partners.",
+    parentNote: "Practises how treaties, self-government and land agreements connect First Nations, Métis and Inuit peoples with Canada, and how the justice system in Manitoba works, including Indigenous approaches to justice.",
     standards: ["9-KC-010, 9-KC-010A, 9-KL-027, 9-KP-045", "the justice system in Manitoba, Indigenous perspectives on justice, treaties and self-determination"],
     items: TREATIES,
   }),

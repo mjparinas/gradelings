@@ -175,8 +175,14 @@ describe("which trophies are earned", () => {
     expect(ids("5", "ca-bc")).toContain("subject-core-french-250");
     for (const id of [...french, "subject-immersion-250", "subject-core-french-250"]) {
       expect(ids("k", "ca-on"), id).not.toContain(id);
-      expect(ids("4", "ca-sk"), id).not.toContain(id);
     }
+    // Saskatchewan teaches French Immersion from Kindergarten and Core French from Level 1 (Grade 1).
+    expect(ids("k", "ca-sk")).toEqual(expect.arrayContaining([...french, "subject-immersion-250"]));
+    expect(ids("k", "ca-sk")).not.toContain("subject-core-french-250");
+    expect(ids("1", "ca-sk")).toContain("subject-core-french-250");
+    // Nunavut has Core French but no French Immersion.
+    expect(ids("4", "ca-nu")).toContain("subject-core-french-250");
+    expect(ids("4", "ca-nu")).not.toContain("subject-immersion-250");
     expect(ids("4", "ca-sk")).toContain("subject-math-100");
   });
 

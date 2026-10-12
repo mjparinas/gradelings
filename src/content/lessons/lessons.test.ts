@@ -39,4 +39,16 @@ describe("unit lessons", () => {
     const covered = sharedMath.filter((u) => u.lesson).length;
     expect(covered).toBe(sharedMath.length);
   });
+
+  it("covers every math unit in Grades 5 to 9, in every framework", () => {
+    const missing = COURSES.filter((c) => c.subject === "math" && ["5", "6", "7", "8", "9"].includes(c.grade))
+      .flatMap((c) => c.units.filter((u) => !u.lesson).map((u) => `${c.grade}/${u.id}`));
+    expect([...new Set(missing)]).toEqual([]);
+  });
+
+  it("covers every math unit in Kindergarten and Grades 1 to 4, in every framework", () => {
+    const missing = COURSES.filter((c) => c.subject === "math" && ["k", "1", "2", "3", "4"].includes(c.grade))
+      .flatMap((c) => c.units.filter((u) => !u.lesson).map((u) => `${c.grade}/${u.id}`));
+    expect([...new Set(missing)]).toEqual([]);
+  });
 });

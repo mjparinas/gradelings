@@ -6,7 +6,10 @@ import { ab } from "./kit";
 // Core French is French as a Second Language, Grades 4 to 9 (Alberta's nine-year FSL program, 2004), whose
 // general outcomes are Applications, Language competence, Global citizenship and Strategies.
 // Units the BC French courses also have are shared; Grade 4 Core French shares the Ontario units.
-// The Grades 7–9 immersion citations are descriptive only and still need a French teacher's review.
+// Grades 7–9 immersion cite the general learning outcomes (résultats d'apprentissage généraux) of Alberta
+// Learning's Français langue seconde – Immersion program of studies (1998, grade-by-grade edition 2000):
+// V1, CO1–5, CÉ1–5, PO1–5, PÉ1–5. They are checked against docs/research/alberta/outcomes.json. A French
+// teacher should still review which outcome each unit is matched to.
 
 type Kind = "listen" | "speak" | "read" | "write" | "culture" | "sound" | "story";
 
@@ -79,6 +82,34 @@ const IMMERSION_SNAPSHOT: Record<string, Record<string, string>> = {
 
 type Plan = Record<string, Kind>;
 
+// Grades 7–9 immersion: the general outcomes a kind of unit practises (see docs/research/alberta/outcomes.json),
+// with a few units that fit a different outcome than their kind's default.
+const JH_BY_KIND: Record<Kind, string> = {
+  listen: "CO1; CO2",
+  speak: "PO1; PO3",
+  read: "CÉ1; CÉ2",
+  write: "PÉ3",
+  culture: "CO3; CÉ3",
+  sound: "PO3",
+  story: "CÉ2",
+};
+const JH_BY_UNIT: Record<string, string> = {
+  "paragraphe-argumentatif": "PÉ1",
+  "portrait-de-personnage": "PÉ2",
+  "sequence-descriptive": "PÉ1",
+  "registres-de-langue": "PO3",
+  "registres-et-expose": "PO1; PO3",
+  "structure-des-textes": "CÉ1; CÉ4",
+  "figures-de-style": "CÉ2",
+  poesie: "CÉ2",
+  legende: "CÉ2",
+  theatre: "CÉ2",
+  fable: "CÉ2",
+  roman: "CÉ2",
+  "schema-narratif": "CÉ2",
+  "inferences-et-themes": "CÉ2",
+};
+
 const CORE: Partial<Record<GradeId, Plan>> = {
   "4": { "salutations-4": "speak", "ma-classe": "listen", "couleurs-4": "speak", "nombres-4": "listen", "calendrier-4": "read", "animaux-4": "speak" },
   "5": { salutations: "speak", "sons-et-accents": "sound", nombres: "speak", "genre-et-nombre": "write", gouts: "speak", descriptions: "write", "communautes-francophones": "culture", respect: "culture" },
@@ -109,8 +140,8 @@ function immersionShares(grade: GradeId, plan: Plan): NonNullable<Course["shares
   const lines = IMMERSION_SNAPSHOT[grade];
   return Object.fromEntries(
     Object.entries(plan).map(([id, kind]) => {
-      // Kindergarten to Grade 6 cite the official grade snapshot. Grades 7 to 9 name the program.
-      const citation = lines ? (lines[kind] ?? lines.read) : "Alberta French immersion language arts, Grades 7 to 9";
+      // Kindergarten to Grade 6 cite the official grade snapshot. Grades 7 to 9 cite general outcomes.
+      const citation = lines ? (lines[kind] ?? lines.read) : (JH_BY_UNIT[id] ?? JH_BY_KIND[kind]);
       return [id, { standards: ab(citation, KIND_TEXT[kind]) }];
     }),
   );

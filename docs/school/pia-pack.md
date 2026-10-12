@@ -25,6 +25,7 @@ Gradelings is a web app (installable, with an Android wrapper) for practice and 
 | Login code | Student | Sign-in | Database | Replaced on request; removed with the student |
 | Email and password hash (scrypt) | Teacher | Sign-in, account messages | Database | Account deleted |
 | Class name, grade, province, class code, assigned units and due dates | Class | Running the class | Database | Class closed |
+| Co-teacher links (teacher account id, date joined) and open invitations (the invited email address, who invited, date) | Teacher | Sharing a class with colleagues | Database | Left, removed, class closed or deleted, invitation accepted, declined, cancelled or 14 days old, or either account deleted |
 | Sign-in sessions (hashed token, browser type, time) | Both | Staying signed in, 90 days | Database | Expiry, sign-out or deletion |
 | Request logs (IP address, browser type, time) | Both | Security and operation | Host logs | **(confirm)** host retention |
 | Attempt counters per IP address and class code | Both | Blocking code guessing | Database | Minutes to an hour |
@@ -37,7 +38,8 @@ Gradelings is a web app (installable, with an Android wrapper) for practice and 
 
 - **Teacher:** each student's first name, avatar, grade, last active date, and level, first-try accuracy and number of questions for the units they assigned. Not the student's play on other units, not coins, trophies or games.
 - **Student:** only their own account.
-- **Other teachers:** nothing. A class belongs to the teacher who created it.
+- **Co-teachers:** a class belongs to the teacher who created it (the owner). The owner can invite other teacher accounts by email; the invitee must accept while signed in with that confirmed email. A co-teacher sees exactly what the owner sees (first name, avatar, grade, results on the assigned units, login codes) and can assign units, add students, reset a student's code and print cards. Only the owner can close the class, get a new class code, delete a student, or invite and remove co-teachers. A class has at most five co-teachers, and a co-teacher can leave at any time. The owner and co-teachers see each other's account email.
+- **Other teachers:** nothing.
 - **Gradelings staff:** operational access for support and security only **(confirm access policy before signing)**.
 - **Parents** (for linked children): the full family view at home, as for any family.
 
@@ -75,11 +77,12 @@ If a district requires all providers to be in Canada, Resend and Sentry are the 
 | --- | --- |
 | Teacher removes a student | The student's account, profile, settings, practice history and sessions, at once |
 | Teacher closes a class | Every student account in it, at once, and the assignments |
-| Teacher deletes their account | Every class and student account they own, at once |
+| Teacher deletes their account | A class with no co-teacher: the class and every student account in it, at once. A class with a co-teacher passes to the one who has taught it longest (who could already see all of it), and its students stay. The deleted teacher's own co-teacher links and invitations are removed |
+| Co-teacher leaves, is removed, or deletes their account | Their link to the class, at once. The students and the class stay |
 | Teacher gets a new code for a student | The old code stops working and the student is signed out everywhere |
 | Parent unlinks a child | The teacher stops seeing the child at once; the family keeps its data |
 
-Classes with no teacher, parent or student sign-in for 11 months trigger a warning email to the teacher. At 12 months, the class, its assignments and class-account student data are deleted automatically. Children linked by a parent are unlinked, but their family data is kept. Backups roll off on the database provider's cycle **(confirm)**.
+Classes with no owner, co-teacher, parent or student sign-in for 11 months trigger a warning email to the owner and co-teachers. At 12 months, the class, its assignments and class-account student data (and the co-teacher links and invitations) are deleted automatically. Children linked by a parent are unlinked, but their family data is kept. Backups roll off on the database provider's cycle **(confirm)**.
 
 ## 8. Security controls
 
@@ -87,7 +90,7 @@ Classes with no teacher, parent or student sign-in for 11 months trigger a warni
 - Passwords hashed with scrypt; sessions stored hashed; HttpOnly, SameSite cookies; `__Host-` prefix in production; same-origin checks on changes.
 - Student login codes are six characters from a 31-character alphabet. Sign-in is rate limited per device and per class, so guessing is impractical, and a teacher can issue a new code at any time.
 - A student session works only for syncing the student's own play. Every teacher, parent and billing endpoint refuses it. A student cannot rename, regrade or delete their own profile or add others.
-- Teacher access to a class is checked against the signed-in owner on every request.
+- Teacher access to a class is checked against the signed-in owner or accepted co-teacher on every request, and owner-only actions are checked against the owner. An invitation belongs to an email address, so it never reveals whether an account exists, and it can be accepted only by a confirmed account with that address.
 - Error reports are scrubbed of personal data before leaving the server or device.
 - Not done yet: an independent penetration test, SOC 2, a written incident-response plan. **A pen test before a first district contract is recommended.**
 
@@ -107,5 +110,5 @@ See [accessibility-conformance.md](accessibility-conformance.md) and `/accessibi
 
 1. **Canadian-only providers.** Replace or switch off Resend and Sentry for school deployments?
 2. **School or district plan.** Classes are free today. Say so in the agreement or set a price.
-3. **Several teachers on one class** (co-teaching, a school office role). Not built; today one account owns a class.
+3. **Several teachers on one class.** Co-teaching is built (an owner plus up to five invited co-teachers; only the owner closes the class or deletes students). Still open: a school office or administrator role, and whether a co-teacher should also be allowed to delete students.
 4. **Birth year.** Already absent from class accounts. Keep it that way.

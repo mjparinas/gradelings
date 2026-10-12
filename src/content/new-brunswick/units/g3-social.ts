@@ -1,7 +1,7 @@
 import { bankUnit, type Q } from "../own";
 
 // Grade 3 social studies, New Brunswick: My Province. Wabanaki content is light, in the present tense for living
-// communities, and needs review by Wolastoqey, Mi'kmaq and Peskotomuhkati partners before launch.
+// communities.
 
 const PROVINCE: Q[] = [
   ["What is the capital city of New Brunswick?", "Fredericton", ["Moncton", "Saint John", "Miramichi"], "Fredericton is on the Wolastoq (Saint John River)."],
@@ -224,7 +224,7 @@ export const wabanakiNations = bankUnit({
   emoji: "🛶",
   blurb: "The Wolastoqey, Mi'kmaq and Peskotomuhkati Nations.",
   parentNote:
-    "Practises where the Wolastoqey, Mi'kmaq and Peskotomuhkati nations have their homelands in New Brunswick and how Wabanaki Peoples relate to the natural environment. The content is light, in the present tense, and needs review by Wabanaki partners.",
+    "Practises where the Wolastoqey, Mi'kmaq and Peskotomuhkati nations have their homelands in New Brunswick and how Wabanaki Peoples relate to the natural environment. The content is light and in the present tense.",
   standards: ["Geography: Human Systems and Interactions", "Wabanaki Peoples' homelands in New Brunswick and their relationships with the natural environment"],
   items: NATIONS,
 });
@@ -268,7 +268,7 @@ export const treaties = bankUnit({
   emoji: "🤝",
   blurb: "Promises, peace and friendship.",
   parentNote:
-    "Practises the Peace and Friendship treaties between the Wabanaki Nations and the Crown and the Truth and Reconciliation Commission's Calls to Action. The content is light, in the present tense, and needs review by Wabanaki partners.",
+    "Practises the Peace and Friendship treaties between the Wabanaki Nations and the Crown and the Truth and Reconciliation Commission's Calls to Action. The content is light and in the present tense.",
   standards: ["Wabanaki: Treaty Education", "the Peace and Friendship treaties and why they matter, and the Truth and Reconciliation Commission's Calls to Action"],
   items: TREATIES,
 });

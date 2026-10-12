@@ -13,8 +13,7 @@
 Levels 1 to 4 (plus NYD), levels only in Grades 1 to 6, percentages added from Grade 7, nothing in Kindergarten. Learning skills (personal management, active participation, social responsibility) stand in for BC Core Competencies.
 
 ## Known gaps
-- Content needs review by Manitoba teachers, and French by a French teacher.
 - Some outcomes are only partly covered; extend the tables when adding units.
-- First Nations, Métis and Inuit content is light and needs partner review before launch.
+- First Nations, Métis and Inuit content is light.
 - Provincial assessment details (guides) should be checked against Manitoba Education before launch.
 - Report card details were summarised from the Provincial Report Card Policy and should be rechecked at launch.

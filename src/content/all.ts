@@ -117,6 +117,17 @@ import { courses as sk7 } from "./saskatchewan/g7";
 import { courses as sk8 } from "./saskatchewan/g8";
 import { courses as sk9 } from "./saskatchewan/g9";
 import { mergeCourses } from "./index";
+import { withLessons, type GradeLessons } from "./lessons";
+import * as gradeK from "./grades/k";
+import * as grade1 from "./grades/g1";
+import * as grade2 from "./grades/g2";
+import * as grade3 from "./grades/g3";
+import * as grade4 from "./grades/g4";
+import * as grade5 from "./grades/g5";
+import * as grade6 from "./grades/g6";
+import * as grade7 from "./grades/g7";
+import * as grade8 from "./grades/g8";
+import * as grade9 from "./grades/g9";
 import { courses as g8 } from "./grades/g8";
 import { courses as g9 } from "./grades/g9";
 import type { Course, GradeId, SubjectId } from "./types";
@@ -125,10 +136,13 @@ import type { Course, GradeId, SubjectId } from "./types";
 // Never import this from client code (the apps): it would put all content back
 // into the first download. ESLint enforces this; the apps use ./index.
 
+// Each grade's lessons, applied to every framework's units with the same id (as the apps do in ./index).
+const GRADE_MODULES: Record<GradeId, object> = { k: gradeK, "1": grade1, "2": grade2, "3": grade3, "4": grade4, "5": grade5, "6": grade6, "7": grade7, "8": grade8, "9": grade9 };
+
 /** Every course with at least one unit. */
-export const COURSES: Course[] = mergeCourses([k, g1, g2, g3, g4, g5, g6, g7, g8, g9, onK, on1, on2, on3, on4, on5, on6, on7, on8, on9, abK, ab1, ab2, ab3, ab4, ab5, ab6, ab7, ab8, ab9, skK, sk1, sk2, sk3, sk4, sk5, sk6, sk7, sk8, sk9, mbK, mb1, mb2, mb3, mb4, mb5, mb6, mb7, mb8, mb9, ytK, yt1, yt2, yt3, yt4, yt5, yt6, yt7, yt8, yt9, ntK, nt1, nt2, nt3, nt4, nt5, nt6, nt7, nt8, nt9, nsK, ns1, ns2, ns3, ns4, ns5, ns6, ns7, ns8, ns9, nbK, nb1, nb2, nb3, nb4, nb5, nb6, nb7, nb8, nb9, nuK, nu1, nu2, nu3, nu4, nu5, nu6, nu7, nu8, nu9, nlK, nl1, nl2, nl3, nl4, nl5, nl6, nl7, nl8, nl9, peK, pe1, pe2, pe3, pe4, pe5, pe6, pe7, pe8, pe9]).filter(
-  (c) => c.units.length > 0,
-);
+export const COURSES: Course[] = mergeCourses([k, g1, g2, g3, g4, g5, g6, g7, g8, g9, onK, on1, on2, on3, on4, on5, on6, on7, on8, on9, abK, ab1, ab2, ab3, ab4, ab5, ab6, ab7, ab8, ab9, skK, sk1, sk2, sk3, sk4, sk5, sk6, sk7, sk8, sk9, mbK, mb1, mb2, mb3, mb4, mb5, mb6, mb7, mb8, mb9, ytK, yt1, yt2, yt3, yt4, yt5, yt6, yt7, yt8, yt9, ntK, nt1, nt2, nt3, nt4, nt5, nt6, nt7, nt8, nt9, nsK, ns1, ns2, ns3, ns4, ns5, ns6, ns7, ns8, ns9, nbK, nb1, nb2, nb3, nb4, nb5, nb6, nb7, nb8, nb9, nuK, nu1, nu2, nu3, nu4, nu5, nu6, nu7, nu8, nu9, nlK, nl1, nl2, nl3, nl4, nl5, nl6, nl7, nl8, nl9, peK, pe1, pe2, pe3, pe4, pe5, pe6, pe7, pe8, pe9])
+  .map((c) => withLessons([c], (GRADE_MODULES[c.grade] as { lessons?: GradeLessons }).lessons ?? {})[0])
+  .filter((c) => c.units.length > 0);
 
 export function getCourse(grade: GradeId, subject: SubjectId | string): Course | undefined {
   return COURSES.find((c) => c.grade === grade && c.subject === subject);

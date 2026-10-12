@@ -5,7 +5,7 @@ import { sk } from "./kit";
 
 // Saskatchewan Grade 4 Social Studies: Saskatchewan, its people, land, treaties, governments and resources.
 // Written for the Saskatchewan outcomes IN4.1–RW4.3. First Nations and Métis content is kept to widely
-// shared facts and needs review with First Nations and Métis partners before launch.
+// shared facts.
 
 // ---------- People of Saskatchewan ----------
 
@@ -258,7 +258,7 @@ export const units: Unit[] = [
     emoji: "📜",
     blurb: "Agreements, promises and “We are all Treaty people”",
     standards: { "ca-sk": sk("DR4.3, DR4.2", "the Treaty relationship in Saskatchewan and what it means today") },
-    parentNote: "What treaties are, the six numbered treaties that cover Saskatchewan, why oral history matters, and how treaty promises still matter today. This is introductory and needs review with First Nations partners.",
+    parentNote: "What treaties are, the six numbered treaties that cover Saskatchewan, why oral history matters, and how treaty promises still matter today. This is introductory.",
     generate: bankUnit(TREATIES),
   },
   {

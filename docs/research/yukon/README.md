@@ -15,7 +15,7 @@
 - The scale, report-card page and guides reuse BC's, reworded for the Yukon (`YUKON` in `frameworks.ts`, `YUKON_GUIDES` in `guides.ts`).
 
 ## Known gaps
-- Yukon First Nations content is light, in the present tense, and **needs review by Yukon First Nations partners and Yukon Education** before launch; the Grade 5 units were written from the public course titles, not the full Yukon materials.
+- Yukon First Nations content is light, in the present tense; the Grade 5 units were written from the public course titles, not the full Yukon materials.
 - The Yukon French First Language (Francophone) program is not built.
 - The Grade 10 to 12 Yukon courses are out of scope (Kindergarten to Grade 9 only).
 - Yukon Education's own pages were not readable automatically; recheck the report-card and assessment details at yukon.ca before launch.

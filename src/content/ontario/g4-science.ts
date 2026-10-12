@@ -6,7 +6,7 @@ import { on } from "./kit";
 
 // Ontario Grade 4 Science and Technology (2022): Habitats and Communities, Light and Sound, Machines
 // and Their Mechanisms, and Rocks, Minerals, and Geological Processes. First Nations, Métis and Inuit
-// geological knowledges (E2.6) are not written here and need review with partners.
+// geological knowledges (E2.6) are not written here.
 
 // ---------- Habitats and communities ----------
 

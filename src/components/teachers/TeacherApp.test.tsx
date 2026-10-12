@@ -186,4 +186,58 @@ describe("TeacherApp", () => {
     await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/?id=class-1", "DELETE", undefined));
     expect(await screen.findByRole("heading", { name: "Your classes" })).toBeInTheDocument();
   });
+
+  it("lets the owner invite a co-teacher by email and shows pending invitations", async () => {
+    mocks.call.mockImplementation((url: string, method = "GET") => {
+      if (url === "/api/auth/me/") return Promise.resolve({ family: { account: { student: false } } });
+      if (url === "/api/classes/" && method === "GET") return Promise.resolve({ classes: [cls] });
+      if (url === "/api/classes/?id=class-1") {
+        return Promise.resolve({ ...detail, role: "owner", teachers: [{ id: "o", email: "owner@example.com", role: "owner" }, { id: "c", email: "co@example.com", role: "co-teacher" }], invites: [{ email: "wait@example.com", createdAt: 1 }] });
+      }
+      return Promise.resolve({});
+    });
+    const user = userEvent.setup();
+    render(<TeacherApp />);
+    await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+    expect(await screen.findByText("co@example.com")).toBeInTheDocument();
+    expect(screen.getByText(/invited, waiting to accept/)).toBeInTheDocument();
+    await user.type(screen.getByLabelText("Colleague’s account email"), "new@example.com");
+    await user.click(screen.getByRole("button", { name: "Invite co-teacher" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/teachers/", "POST", { classId: "class-1", email: "new@example.com" }));
+    await user.click(screen.getByRole("button", { name: "Remove co@example.com" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/teachers/?classId=class-1&teacherId=c", "DELETE", undefined));
+  });
+
+  it("shows a co-teacher only the tools they have, and lets them leave", async () => {
+    mocks.call.mockImplementation((url: string, method = "GET") => {
+      if (url === "/api/auth/me/") return Promise.resolve({ family: { account: { student: false } } });
+      if (url === "/api/classes/" && method === "GET") return Promise.resolve({ classes: [{ ...cls, role: "co-teacher" }] });
+      if (url === "/api/classes/?id=class-1") return Promise.resolve({ ...detail, role: "co-teacher", teachers: [{ id: "o", email: "owner@example.com", role: "owner" }], invites: [] });
+      return Promise.resolve({});
+    });
+    const user = userEvent.setup();
+    render(<TeacherApp />);
+    expect(await screen.findByText(/you co-teach/)).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: /Room 3/ }));
+    await screen.findByRole("heading", { name: "Teachers" });
+    expect(screen.getByRole("button", { name: "Print login cards" })).toBeInTheDocument();
+    for (const name of ["Remove", "Close class", "Get a new code", "Invite co-teacher"]) expect(screen.queryByRole("button", { name })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Leave this class" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/teachers/?classId=class-1&leave=1", "DELETE", undefined));
+    expect(await screen.findByRole("heading", { name: "Your classes" })).toBeInTheDocument();
+  });
+
+  it("lists invitations to co-teach and accepts one", async () => {
+    mocks.call.mockImplementation((url: string, method = "GET") => {
+      if (url === "/api/auth/me/") return Promise.resolve({ family: { account: { student: false } } });
+      if (url === "/api/classes/" && method === "GET") return Promise.resolve({ classes: [] });
+      if (url === "/api/classes/invites/" && method === "GET") return Promise.resolve({ invites: [{ classId: "class-9", name: "Room 9", grade: "4", framework: "ca-bc", from: "lead@example.com", createdAt: 1 }] });
+      return Promise.resolve({});
+    });
+    const user = userEvent.setup();
+    render(<TeacherApp />);
+    expect(await screen.findByText(/lead@example.com/)).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Accept" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/invites/", "POST", { classId: "class-9" }));
+  });
 });

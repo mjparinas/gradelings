@@ -73,7 +73,7 @@ export interface SubjectGap {
   /** Provinces that are missing at least one of them. */
   missing: Framework[];
   /**
-   * "except" when most provinces include the subjects ("everywhere except Saskatchewan").
+   * "except" when most provinces include the subjects ("everywhere except Nunavut").
    * "only" when naming the provinces that have them is the shorter sentence.
    */
   style: "except" | "only";

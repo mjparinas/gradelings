@@ -1,11 +1,49 @@
+import { APP_NAME } from "@/lib/brand";
 import type { FrameworkGuides } from "../guides";
 
 // Parent guides for Saskatchewan. Sources: the Saskatchewan Curriculum (curriculum.gov.sk.ca), including its
 // broad areas of learning and cross-curricular competencies, and the Ministry of Education's announcement of the
 // provincial student assessment program (saskatchewan.ca, November 2024). Saskatchewan has no single provincial
-// report card, so the report-card wording is general. The wording needs a Saskatchewan teacher's review.
+// report card, so the report-card wording is general. The French guide draws on the Core French and Français en
+// immersion curricula and on "Studying French in Saskatchewan" (saskatchewan.ca). The wording needs a Saskatchewan
+// teacher's review.
 
 export const SASKATCHEWAN_GUIDES: FrameworkGuides = {
+  french: {
+    metaTail: "Core French has Levels 1 to 9, matched to Grades 1 to 9 here; French Immersion runs from Kindergarten.",
+    browse: ["4", "k"],
+    title: "Core French and French Immersion in Saskatchewan: a guide for parents",
+    intro: `Saskatchewan families often wonder how Core French and French Immersion differ, when each starts and how to help at home without speaking French. The Ministry of Education offers both as second-language programs from Kindergarten to Grade 12, and ${APP_NAME} practises both as optional subjects you can switch on for each child.`,
+    compare: [
+      { title: "What it is", core: "French taught as a subject for part of the week, alongside classes in English.", immersion: "A program where French is the language of instruction for much of the school day, in most subjects other than English language arts." },
+      { title: "When it starts", core: "The curriculum has Levels 1 to 9, and Level 1 is the beginning level no matter the grade. Your school division decides when students start, so many begin in the middle grades.", immersion: "Kindergarten to Grade 12, in the school divisions that offer it. Kindergarten to Grade 2 follow an interdisciplinary French program, and Grades 3 to 9 follow Français en immersion." },
+      { title: "Who it suits", core: "Every child can learn some French. No earlier French is needed.", immersion: "Families who want their child to become functionally fluent in French. Programs and entry points differ by division, so check with yours." },
+      { title: "Name in the curriculum", core: "Core French (Levels 1 to 9)", immersion: "Français en immersion" },
+      { title: `In ${APP_NAME}`, core: "Grades 1 to 9, where the level matches the grade. Prompts are in English, with French words and sentences to read, choose and build.", immersion: "Kindergarten to Grade 9. Prompts and stories are in French, with English hints for parents." },
+    ],
+    sections: [
+      { title: "What Core French children learn", body: "Each level has four goals: communication skills (understanding, speaking, reading and writing French), general language strategies, language knowledge such as numbers, verbs and question words, and culture. Children start with key words, greetings and classroom instructions, then move to sentences, short paragraphs and longer texts. The Culture goal looks at Francophone, First Nations and Métis cultures, starting with Saskatchewan." },
+      { title: "What French Immersion children learn", body: "In immersion, children learn to listen, speak, read and write in French, and learn other subjects in French too. In Grades 3 to 9 the strands are valuing the French language and culture, listening, reading, speaking and writing. How much of the day is in French, and when English language arts is added, depends on the school division." },
+      { title: "Francophone schools are different", body: "The Conseil des écoles fransaskoises is Saskatchewan's French first-language school division. It teaches in French for families whose children are entitled to Francophone education. That is a different program from Core French and French Immersion, and it is not built in this app." },
+      { title: "How report cards describe French", body: `Saskatchewan has no single provincial report-card scale, so your school division decides the wording. French is reported the way other subjects are in your division. ${APP_NAME} shows practice, not a report-card mark, so ask your child's teacher what the level means for your child.` },
+      { title: "Helping if you don't speak French", body: "You don't need French to help. Ask your child to teach you a word each day, listen while they read aloud, and celebrate effort over accuracy. Mistakes are a normal part of learning a language." },
+      { title: `How ${APP_NAME} fits in`, body: "French is off by default. A parent can switch on Immersion, Core French or both for each child in Settings, under Subjects. French is not counted toward the Grade Champion trophy, and French lessons are read aloud with a French voice from your device. You can pick that voice in Settings. Core French in Saskatchewan is organized by level, so a child who started French later than Grade 1 may find their grade's lessons a step ahead. Ask your child's teacher which level fits." },
+    ],
+    atHome: [
+      "Pick one new French word each day and use it at dinner or on the way to school.",
+      "Label a few household objects with sticky notes in French.",
+      "Listen to French songs or watch a short French video together and talk about what you noticed.",
+      "Ask your child to read a page aloud in French, then retell it to you in English.",
+      "Learn the French names of some Saskatchewan places, such as Gravelbourg or Île-à-la-Crosse, and look them up on a map.",
+    ],
+    faqs: [
+      { q: "When does Core French start in Saskatchewan?", a: "The Core French curriculum has Levels 1 to 9, and Level 1 is the beginning level regardless of grade. Each school division decides which grade starts, so ask your school how much time French gets each week." },
+      { q: "Can my child start French Immersion later?", a: "Some divisions offer later entry, and some have limited spaces. Entry rules differ, so ask your school division." },
+      { q: "Will French Immersion hurt my child's English?", a: "English language arts is still taught in immersion, and the Ministry describes immersion students as becoming proficient in English and functionally fluent in French. If you are worried, talk with your child's teacher." },
+      { q: `Do French marks count toward the Grade Champion trophy in ${APP_NAME}?`, a: "No. French is a separate, optional set of subjects. Children earn their own French trophies instead." },
+      { q: `Does ${APP_NAME} replace French class?`, a: "No. It gives short, kind practice that matches the outcomes in the Saskatchewan curriculum. It doesn't replace a teacher, and its levels are not a report-card mark." },
+    ],
+  },
   competencies: {
     slug: "cross-curricular-competencies",
     label: "Cross-curricular competencies",

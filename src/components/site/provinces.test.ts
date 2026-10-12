@@ -10,25 +10,22 @@ describe("homepage province coverage", () => {
     expect(subjectList(["math"])).toBe("math");
   });
 
-  it("states the subjects every province shares, and which provinces are without French", () => {
+  it("states the subjects every province shares, and which provinces are without French Immersion", () => {
     const coverage = provinceCoverage(FRAMEWORKS);
-    expect(coverage.sharedSubjects).toEqual(["math", "language", "science", "social"]);
+    // Every province has Core French; Newfoundland and Labrador, Prince Edward Island and Nunavut have no French Immersion.
+    expect(coverage.sharedSubjects).toEqual(["math", "language", "science", "social", "core-french"]);
     expect(coverage.range).toEqual({ from: "k", to: "9" });
-    // Saskatchewan has no French; Nunavut has Core French but no French Immersion.
-    expect(coverage.gaps).toHaveLength(2);
-    const [immersion, core] = coverage.gaps;
+    expect(coverage.gaps).toHaveLength(1);
+    const [immersion] = coverage.gaps;
     expect(immersion.subjects).toEqual(["immersion"]);
     expect(immersion.style).toBe("except");
-    expect(immersion.missing.map((f) => f.id)).toEqual(["ca-sk", "ca-nl", "ca-pe", "ca-nu"]);
-    expect(core.subjects).toEqual(["core-french"]);
-    expect(core.style).toBe("except");
-    expect(core.missing.map((f) => f.id)).toEqual(["ca-sk"]);
-    expect(core.included.map((f) => f.id)).toEqual(FRAMEWORKS.filter((f) => f.id !== "ca-sk").map((f) => f.id));
+    expect(immersion.missing.map((f) => f.id)).toEqual(["ca-nl", "ca-pe", "ca-nu"]);
+    expect(immersion.included.map((f) => f.id)).toEqual(FRAMEWORKS.filter((f) => !["ca-nl", "ca-pe", "ca-nu"].includes(f.id)).map((f) => f.id));
   });
 
   it("names the province that has a subject when most provinces do not", () => {
     const bc = getFramework("ca-bc");
-    const sk = getFramework("ca-sk");
+    const sk = withSubjects(getFramework("ca-sk"), ["math", "language", "science", "social"]);
     const ab = withSubjects(getFramework("ca-ab"), ["math", "language", "science", "social"]);
     const coverage = provinceCoverage([bc, sk, ab]);
     expect(coverage.gaps).toEqual([

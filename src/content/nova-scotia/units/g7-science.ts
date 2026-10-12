@@ -1,7 +1,7 @@
 import { bankUnit, type Q } from "../own";
 
 // Grade 7 science, Nova Scotia: interconnected life and Netukulimk (Environmental Action), and changing coastlines
-// (Geological Evolution). Indigenous content is light, in the present tense, and needs partner review.
+// (Geological Evolution). Indigenous content is light and in the present tense.
 
 const LIFE: Q[] = [
   ["Which living things make their own food using sunlight?", "producers", ["consumers", "decomposers"], "Plants and algae are producers. They use sunlight, water and air to make food."],
@@ -71,7 +71,7 @@ export const netukulimk = bankUnit({
   emoji: "🌿",
   blurb: "How living things depend on each other, and how we can care for them.",
   parentNote:
-    "Practises how living things and their environment are connected: food webs, energy flow, populations, relationships and human impact. It includes Netukulimk, the Mi’kmaw approach of taking what is needed from the land and sea in a way that keeps everything healthy for the future. Indigenous content is light and will be reviewed with community partners.",
+    "Practises how living things and their environment are connected: food webs, energy flow, populations, relationships and human impact. It includes Netukulimk, the Mi’kmaw approach of taking what is needed from the land and sea in a way that keeps everything healthy for the future. Indigenous content is light.",
   standards: [
     "Environmental Action",
     "food webs, producers, consumers, decomposers, relationships, human impact, Netukulimk and stewardship",

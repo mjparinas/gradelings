@@ -2,7 +2,7 @@ import { bankUnit, type Q } from "../own";
 
 // Grade 5 social studies, Nova Scotia: how First Nations and Inuit societies made decisions, and how Indigenous
 // peoples, the French and the British met in what later became Atlantic Canada. Indigenous content is light, in the
-// present tense for living communities, and needs partner review.
+// present tense for living communities.
 
 const DECIDE: Q[] = [
   ["The Mi’kmaq are the First People of which territory?", "Mi’kma’ki", ["Nunatsiavut", "Rupert’s Land"], "Mi’kma’ki is the Mi’kmaw name for their territory, which includes what is now Nova Scotia."],
@@ -70,7 +70,7 @@ export const decisionMaking = bankUnit({
   emoji: "🤝",
   blurb: "How did people decide things together long ago, and how do they now?",
   parentNote:
-    "Practises how First Nations and Inuit societies in what later became Atlantic Canada made decisions, including Mi’kmaw governance, consensus and the role of Elders. Content is light, in the present tense, and will be reviewed with community partners.",
+    "Practises how First Nations and Inuit societies in what later became Atlantic Canada made decisions, including Mi’kmaw governance, consensus and the role of Elders. Content is light, in the present tense.",
   standards: [
     "Investigate decision-making practices in First Nations and Inuit societies in what later became Atlantic Canada",
     "how Mi’kmaw and Inuit communities decide together: Elders, consensus, sharing and the seasons",

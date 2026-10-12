@@ -101,7 +101,7 @@ export const NUNAVUT: Framework = {
       },
       {
         q: "Does Gradelings teach in Inuktut?",
-        a: "Not yet. Gradelings is in English, with a few Inuktut words and names in Nunavut units, which need review by Inuktut speakers. It does not replace Inuktut language arts at school.",
+        a: "Not yet. Gradelings is in English, with a few Inuktut words and names in Nunavut units. It does not replace Inuktut language arts at school.",
       },
       {
         q: "Does Gradelings give a grade?",

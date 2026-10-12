@@ -2,7 +2,7 @@ import { bankUnit, type Q } from "../own";
 
 // Grade 5 social studies: Dene Kede, the NWT's Dene curriculum, which stays in NWT schools alongside the adapted
 // BC curriculum. Indigenous content is light, in the present tense, never treats all Nations as one, and leaves out
-// ceremony. It needs review by Dene partners and NWT Education, Culture and Employment before launch.
+// ceremony.
 
 const DENE_KEDE: Q[] = [
   ["Dene Kede is…", "a curriculum that teaches from a Dene point of view", ["a kind of boat", "a type of weather"], "Dene Kede is used in NWT schools to weave Dene language, ways of knowing and the land into learning."],

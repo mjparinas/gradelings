@@ -146,6 +146,8 @@ export async function deleteInactiveClass(classId: string, cutoff: number, warni
     { sql: "DELETE FROM students WHERE class_id = ? AND " + predicate, args: args([classId]) },
     { sql: "DELETE FROM class_members WHERE class_id = ? AND " + predicate, args: args([classId]) },
     { sql: "DELETE FROM class_assignments WHERE class_id = ? AND " + predicate, args: args([classId]) },
+    { sql: "DELETE FROM class_teachers WHERE class_id = ? AND " + predicate, args: args([classId]) },
+    { sql: "DELETE FROM class_invites WHERE class_id = ? AND " + predicate, args: args([classId]) },
     { sql: "DELETE FROM classes WHERE id = ? AND closed_at IS NULL AND inactive_warning_at <= ? AND last_activity_at <= ?", args: [classId, warningCutoff, cutoff] },
   ]);
   const remains = await query<{ id: string }>("SELECT id FROM classes WHERE id = ?", [classId]);

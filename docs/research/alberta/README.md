@@ -8,6 +8,7 @@
 - The Alberta K–9 Mathematics Program of Studies with Achievement Indicators (2007). It is the source of the Grade 7 to 9 specific outcomes, cited by strand and number (`N5`, `PR2`, `SS3`, `SP1`).
 - Science Grades 7–8–9 Program of Studies (2003, updated 2009 and 2014): the five units in each grade.
 - French as a Second Language Nine-Year Program of Studies, Grades 4 to 12 (2004): the four general outcomes (Applications, Language competence, Global citizenship, Strategies).
+- Programme d'études par année scolaire, Français langue seconde – Immersion, septième année (Alberta Learning, 2000; ISBN 0-7785-0804-8), the grade edition of the 1998 French immersion program of studies. Read from https://open.alberta.ca/publications/0778508048 (PDF: `2398090-2000-7imm.pdf`). It is the source of the immersion general learning outcomes (résultats d'apprentissage généraux, RAG) for Grades 7 to 9: `V1`, `CO1`–`CO5` (compréhension orale), `CÉ1`–`CÉ5` (compréhension écrite), `PO1`–`PO5` (production orale) and `PÉ1`–`PÉ5` (production écrite). The document says the RAG apply from Kindergarten to Grade 12, and its tables of specific outcomes run across Grades 6 to 9.
 - Alberta's curriculum renewal timeline (alberta.ca/curriculum-subject-areas): K–6 is in place, with Grades 4 to 6 social studies mandatory from September 2026. Draft Grades 7 to 9 mathematics and social studies are being piloted in 2026–27 and become mandatory in September 2027. Grades 7 to 9 science is following a different track.
 
 `outcomes.json` holds the codes and lines the tests check against:
@@ -16,6 +17,7 @@
 - `math["7"|"8"|"9"]`: the strand-and-number codes found in the 2007 program.
 - `science["7-9-units"]`: the Grade 7 to 9 science units.
 - `snapshots`: the official "snapshot by grade" lines (English language arts, French immersion, science) and topic phrases (social studies). K–6 language, social studies and French immersion units cite these verbatim, because the full learning outcomes for those subjects are only published on the New LearnAlberta site (curriculum.learnalberta.ca), which we could not read automatically.
+- `immersion-7-9`: the 21 general outcome codes of the French immersion program with their statements (in French, from the Grade 7 edition).
 - `language-7-9`, `social-7-9`, `core-french`: the general outcome and issue headings for the older Grades 7 to 9 programs and the French as a Second Language program.
 
 **How content is checked.** Each Alberta standard is written as `ab("4N1.1, 4N2.1", "plain words")` (`src/content/alberta/kit.ts`). `src/content/alberta/alberta.test.ts` reads the citation before the ` · ` and fails if it names a code, unit or snapshot line that is not in `outcomes.json` for that grade and subject. Questions go through the same fairness checks as BC and Ontario content.
@@ -26,10 +28,9 @@
 
 **Still to do before launch.**
 
-- An Alberta teacher should review all content, especially the units that borrow a BC or Ontario unit with Alberta standards text.
 - The full K–6 English language arts, social studies and French immersion learning outcomes should be read on the New LearnAlberta site and cited by code, replacing the snapshot lines.
 - Grades 7 to 9: mathematics and social studies will change in September 2027 (draft curricula are in pilot). Science 7 to 9 and English language arts 7 to 9 have no new programs yet. Re-check when the new programs are final.
 - Social studies Grade 7 to 9 and English language arts 7 to 9 are cited by general outcome or issue heading from the existing programs; confirm the headings against the current documents.
-- French immersion for Grades 7 to 9 has no checked citation yet.
-- First Nations, Métis and Inuit content is deliberately light and needs partner review before launch.
+- French immersion for Grades 7 to 9 cites general outcomes only (`CÉ2`, `PÉ3` and so on). The Grade 8 and Grade 9 editions of the program could not be found: open.alberta.ca holds only the Grade 7 edition, the old education.alberta.ca program pages return 404, and the Internet Archive is blocked from our build environment. The Grade 7 edition's tables mark each specific outcome across Grades 6 to 9, so specific outcomes could be added from it, but they were not. A French teacher should confirm which general outcome each unit is matched to (`JH_BY_KIND` and `JH_BY_UNIT` in `src/content/alberta/french.ts`). The new Alberta K–6 immersion curriculum is on New LearnAlberta; Grades 7 to 9 follow the 1998 program until a new one is published.
+- First Nations, Métis and Inuit content is deliberately light.
 - Confirm the Provincial Achievement Test and screening wording in the Alberta parent guides against alberta.ca; the schedule is changing.
