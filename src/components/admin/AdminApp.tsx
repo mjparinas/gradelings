@@ -1092,14 +1092,13 @@ export function AdminApp() {
       <header className="border-b border-line bg-white" style={{ paddingTop: "env(safe-area-inset-top)" }}>
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-2 px-4 py-3">
           <span className="flex items-center gap-2">
-            <span className="text-2xl font-bold tracking-tight">
-              <span className="sr-only">{APP_NAME}</span>
+            <Link href="/" className="text-2xl font-bold tracking-tight" aria-label={APP_NAME}>
               {APP_NAME.split("").map((ch, i) => (
                 <span key={i} aria-hidden="true" style={{ color: WORDMARK_COLOURS[i % WORDMARK_COLOURS.length] }}>
                   {ch}
                 </span>
               ))}
-            </span>
+            </Link>
             <span className="rounded-full bg-[#0f172a] px-3 py-1 text-sm font-bold tracking-wide text-white uppercase">Admin</span>
           </span>
           <div className="flex items-center gap-3">
