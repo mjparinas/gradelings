@@ -8,7 +8,7 @@ const confetti = vi.hoisted(() => {
 });
 vi.mock("canvas-confetti", () => ({ default: confetti }));
 
-import { burstFrom, celebrate, floatText, prefersReducedMotion, replay, setCalmCheck, warmConfetti } from "./juice";
+import { burstFrom, celebrate, floatText, MIN_BURST_GAP_MS, prefersReducedMotion, replay, setCalmCheck, warmConfetti } from "./juice";
 
 let reduce = false;
 const matchMedia = vi.fn((q: string) => ({ matches: q === "(prefers-reduced-motion: reduce)" && reduce }));
@@ -122,6 +122,75 @@ describe("celebrate", () => {
     expect(confetti.shapeFromText.mock.calls.map((c) => c[0].text)).toEqual(["🍁", "⭐"]);
     expect(confetti.mock.calls[0][0]).toMatchObject({ particleCount: 40, scalar: 2, shapes: [{ text: "🍁" }, { text: "⭐" }] });
     expect(confetti.mock.calls[2][0]).toMatchObject({ particleCount: 50, shapes: [{ text: "🍁" }, { text: "⭐" }] });
+  });
+});
+
+describe("celebration patterns", () => {
+  const PATTERNS = ["cannons", "fall", "float", "fireworks"] as const;
+
+  /** The times (ms after the first) at which each confetti call fired. */
+  async function timeline(pattern: (typeof PATTERNS)[number]) {
+    vi.useFakeTimers();
+    const times: number[] = [];
+    confetti.mockImplementation(() => times.push(Date.now()));
+    const start = Date.now();
+    celebrate(["⭐"], pattern);
+    await vi.advanceTimersByTimeAsync(5000);
+    confetti.mockImplementation(() => undefined);
+    return times.map((t) => t - start);
+  }
+
+  it("drifts down from above the top for a falling style", async () => {
+    await timeline("fall");
+    const calls = confetti.mock.calls.map((c) => c[0]);
+    expect(calls).toHaveLength(3);
+    for (const o of calls) expect(o).toMatchObject({ angle: 270, origin: { y: -0.1 } });
+  });
+
+  it("rises from below the bottom and floats up for a floating style", async () => {
+    await timeline("float");
+    const calls = confetti.mock.calls.map((c) => c[0]);
+    expect(calls).toHaveLength(3);
+    for (const o of calls) {
+      expect(o).toMatchObject({ angle: 90, origin: { y: 1.05 } });
+      expect(o.gravity).toBeLessThan(0);
+    }
+  });
+
+  it("bursts fireworks all the way round, high on the screen", async () => {
+    await timeline("fireworks");
+    const calls = confetti.mock.calls.map((c) => c[0]);
+    expect(calls).toHaveLength(3);
+    for (const o of calls) {
+      expect(o.spread).toBe(360);
+      expect(o.origin.y).toBeLessThan(0.5);
+    }
+  });
+
+  it.each(PATTERNS)("never fires bursts close enough to flicker more than 3 times a second (%s)", async (pattern) => {
+    expect(MIN_BURST_GAP_MS).toBeGreaterThan(1000 / 3);
+    const times = await timeline(pattern);
+    expect(times.length).toBeGreaterThan(1);
+    const starts = [...new Set(times)].sort((a, b) => a - b);
+    for (let i = 1; i < starts.length; i++) expect(starts[i] - starts[i - 1]).toBeGreaterThanOrEqual(MIN_BURST_GAP_MS);
+    // Within any one second there are at most 3 separate bursts.
+    for (const t of starts) expect(starts.filter((u) => u >= t && u < t + 1000).length).toBeLessThanOrEqual(3);
+  });
+
+  it.each(PATTERNS)("plays nothing with reduced motion or calm mode (%s)", async (pattern) => {
+    setCalmCheck(() => true);
+    await timeline(pattern);
+    expect(confetti).not.toHaveBeenCalled();
+    setCalmCheck(() => false);
+    reduce = true;
+    await timeline(pattern);
+    expect(confetti).not.toHaveBeenCalled();
+  });
+
+  it("keeps every burst behind the reduced-motion guard of the library too", async () => {
+    for (const pattern of PATTERNS) await timeline(pattern);
+    expect(confetti.mock.calls.length).toBeGreaterThan(0);
+    for (const c of confetti.mock.calls) expect(c[0].disableForReducedMotion).toBe(true);
   });
 });
 

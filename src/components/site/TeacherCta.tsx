@@ -11,7 +11,7 @@ export function TeacherCta({ showHub = true }: { showHub?: boolean }) {
       </h2>
       <p className="font-read text-ink-soft">Classes are free for now. Create a teacher account, share a join code with families and assign units in minutes.</p>
       <div className="flex flex-wrap gap-3">
-        <Link href={TEACHER_SIGNUP} className="btn btn-good min-h-14 px-8 text-xl">
+        <Link prefetch={false} href={TEACHER_SIGNUP} className="btn btn-good min-h-14 px-8 text-xl">
           Create a free teacher account
         </Link>
         {showHub && (
