@@ -1,6 +1,7 @@
 "use client";
 
 import type confettiType from "canvas-confetti";
+import type { CelebrationPattern } from "./shop";
 
 type Confetti = typeof confettiType;
 type ConfettiShape = confettiType.Shape;
@@ -82,22 +83,57 @@ export function replay(el: Element | null, className: string) {
   el.addEventListener("animationend", () => el.classList.remove(className), { once: true });
 }
 
-/** A big two-sided celebration for finishing a unit. Pass emoji for a themed style. */
-export function celebrate(emoji: string[] = []) {
+/** Shortest gap between two bursts in one celebration. Keeps any flicker under 3 a second (WCAG 2.3.1). */
+export const MIN_BURST_GAP_MS = 380;
+
+/**
+ * A big celebration for finishing a unit. Pass emoji for a themed style, and a pattern for how the
+ * pieces move: cannons from both sides (the default), pieces drifting down from the top, pieces
+ * floating up from the bottom, or a few fireworks bursting in the sky one after another.
+ */
+export function celebrate(emoji: string[] = [], pattern: CelebrationPattern = "cannons") {
   if (prefersReducedMotion()) return;
   void loadConfetti().then((confetti) => {
     const shapes = emoji.length ? emoji.map((text) => confetti.shapeFromText({ text, scalar: 2 })) : undefined;
     const base = { colors: COLOURS, disableForReducedMotion: true, zIndex: 60, ticks: 240, ...(shapes ? { shapes, scalar: 2 } : {}) };
-    confetti({ ...base, particleCount: shapes ? 40 : 90, spread: 70, angle: 60, origin: { x: 0, y: 0.75 }, startVelocity: 58 });
-    confetti({ ...base, particleCount: shapes ? 40 : 90, spread: 70, angle: 120, origin: { x: 1, y: 0.75 }, startVelocity: 58 });
-    setTimeout(() => {
-      confetti({
-        ...base,
-        particleCount: shapes ? 50 : 140,
-        spread: 130,
-        origin: { x: 0.5, y: 0.3 },
-        ...(shapes ? {} : { scalar: 1.15, shapes: ["star", "square", "circle"] as ConfettiShape[] }),
+    const plain = { scalar: 1.15, shapes: ["star", "square", "circle"] as ConfettiShape[] };
+    const later = (step: number, fire: () => void) => (step === 0 ? fire() : setTimeout(fire, step * MIN_BURST_GAP_MS));
+    if (pattern === "fall") {
+      // Three soft waves across the top that drift down, like snow.
+      for (let step = 0; step < 3; step++) {
+        later(step, () =>
+          confetti({ ...base, particleCount: shapes ? 24 : 70, spread: 160, angle: 270, startVelocity: 8, gravity: 1, drift: step - 1, ticks: 300, origin: { x: 0.2 + step * 0.3, y: -0.1 } }),
+        );
+      }
+    } else if (pattern === "float") {
+      // Pieces rise gently from the bottom and float off the top, like balloons.
+      for (let step = 0; step < 3; step++) {
+        later(step, () =>
+          confetti({ ...base, particleCount: shapes ? 18 : 60, spread: 50, angle: 90, startVelocity: 30, gravity: -0.25, decay: 0.95, ticks: 320, origin: { x: 0.25 + step * 0.25, y: 1.05 } }),
+        );
+      }
+    } else if (pattern === "fireworks") {
+      // Round bursts high up, one at a time and never faster than MIN_BURST_GAP_MS.
+      const spots = [
+        { x: 0.3, y: 0.3 },
+        { x: 0.7, y: 0.25 },
+        { x: 0.5, y: 0.4 },
+      ];
+      spots.forEach((origin, step) =>
+        later(step, () => confetti({ ...base, particleCount: shapes ? 30 : 80, spread: 360, startVelocity: 26, gravity: 0.6, decay: 0.91, ticks: 200, origin })),
+      );
+    } else {
+      confetti({ ...base, particleCount: shapes ? 40 : 90, spread: 70, angle: 60, origin: { x: 0, y: 0.75 }, startVelocity: 58 });
+      confetti({ ...base, particleCount: shapes ? 40 : 90, spread: 70, angle: 120, origin: { x: 1, y: 0.75 }, startVelocity: 58 });
+      later(1, () => {
+        confetti({
+          ...base,
+          particleCount: shapes ? 50 : 140,
+          spread: 130,
+          origin: { x: 0.5, y: 0.3 },
+          ...(shapes ? {} : plain),
+        });
       });
-    }, 380);
+    }
   }, () => undefined);
 }

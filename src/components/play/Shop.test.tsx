@@ -5,6 +5,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 const h = vi.hoisted(() => ({
   buy: vi.fn(() => true),
   celebrate: vi.fn(),
+  reduced: false,
   d: { coins: 0, level: 1, owned: [] as string[], trophies: {} as Record<string, number> },
 }));
 
@@ -13,7 +14,7 @@ vi.mock("@/lib/store", () => ({
   useActiveProfile: () => ({ id: "p1", name: "Ava", companion: "ollie", confetti: "classic", title: "rookie" }),
   useDerived: () => h.d,
 }));
-vi.mock("@/lib/juice", () => ({ celebrate: h.celebrate }));
+vi.mock("@/lib/juice", () => ({ celebrate: h.celebrate, prefersReducedMotion: () => h.reduced }));
 vi.mock("@/lib/sound", () => ({ sounds: { pop: vi.fn(), complete: vi.fn() } }));
 vi.mock("@/lib/router", () => ({ go: vi.fn() }));
 vi.mock("../Critter", () => ({ Critter: () => null, CritterSvg: () => null }));
@@ -25,6 +26,7 @@ const dialog = () => screen.getByRole("dialog");
 
 beforeEach(() => {
   vi.clearAllMocks();
+  h.reduced = false;
   h.d = { coins: 0, level: 1, owned: [], trophies: {} };
 });
 
@@ -44,7 +46,7 @@ describe("Shop", () => {
     expect(within(dialog()).getByText(/It costs/)).toHaveTextContent("It costs 🪙 120. You have 🪙 200.");
     fireEvent.click(within(dialog()).getByRole("button", { name: "Buy it!" }));
     expect(h.buy).toHaveBeenCalledWith("hoot");
-    expect(h.celebrate).toHaveBeenCalledWith([]);
+    expect(h.celebrate).toHaveBeenCalledWith([], "cannons");
     expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
   });
 
@@ -93,6 +95,51 @@ describe("Shop", () => {
     fireEvent.click(item(/^Math Whiz, owned$/));
     expect(h.buy).toHaveBeenCalledWith("math-whiz");
     expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+  });
+
+  it("buying a celebration plays it with its own pieces and movement", () => {
+    h.d.coins = 200;
+    render(<Shop />);
+    fireEvent.click(screen.getByRole("tab", { name: /Celebrations/ }));
+    fireEvent.click(item(/^Balloons, 150 coins$/));
+    fireEvent.click(within(dialog()).getByRole("button", { name: "Buy it!" }));
+    expect(h.buy).toHaveBeenCalledWith("balloons");
+    expect(h.celebrate).toHaveBeenCalledWith(["🎈", "🎈", "🎀"], "float");
+  });
+
+  it("lets a child peek at a celebration before buying, even one they can't afford yet", () => {
+    h.d.coins = 0;
+    render(<Shop />);
+    fireEvent.click(screen.getByRole("tab", { name: /Celebrations/ }));
+    fireEvent.click(item(/^Snowflakes, 150 coins$/));
+    fireEvent.click(within(dialog()).getByRole("button", { name: /Peek at it/ }));
+    expect(h.celebrate).toHaveBeenCalledWith(["❄️", "⛄"], "fall");
+    expect(h.buy).not.toHaveBeenCalled();
+    expect(dialog()).toBeInTheDocument();
+  });
+
+  it("has no peek button with reduced or calm motion, and none for buddies", () => {
+    h.d.coins = 500;
+    render(<Shop />);
+    fireEvent.click(item(/^Hoot the Owl/));
+    expect(within(dialog()).queryByRole("button", { name: /Peek/ })).not.toBeInTheDocument();
+    fireEvent.click(within(dialog()).getByRole("button", { name: "Not now" }));
+    h.reduced = true;
+    fireEvent.click(screen.getByRole("tab", { name: /Celebrations/ }));
+    fireEvent.click(item(/^Fireworks/));
+    expect(within(dialog()).queryByRole("button", { name: /Peek/ })).not.toBeInTheDocument();
+  });
+
+  it("switching to an owned celebration plays it, and tapping the one in use doesn't", () => {
+    h.d.owned = ["fireworks"];
+    h.d.level = 15;
+    render(<Shop />);
+    fireEvent.click(screen.getByRole("tab", { name: /Celebrations/ }));
+    fireEvent.click(item(/^Classic confetti, equipped$/));
+    expect(h.celebrate).not.toHaveBeenCalled();
+    fireEvent.click(item(/^Fireworks, owned$/));
+    expect(h.buy).toHaveBeenCalledWith("fireworks");
+    expect(h.celebrate).toHaveBeenCalledWith(["🎆", "🎇", "✨"], "fireworks");
   });
 
   it("a failed purchase doesn't celebrate", () => {

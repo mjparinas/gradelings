@@ -11,7 +11,7 @@ import { effectiveGoal } from "@/lib/goal";
 import { dayKey, type Mode } from "@/lib/model";
 import { levelInfo, nextStep, unitLevel } from "@/lib/proficiency";
 import { go } from "@/lib/router";
-import { getItem } from "@/lib/shop";
+import { celebrationOf } from "@/lib/shop";
 import { sounds } from "@/lib/sound";
 import { speakQuestion } from "@/lib/readaloud";
 import { speak, speakSegments, stopSpeaking } from "@/lib/speech";
@@ -557,12 +557,12 @@ function Summary({ plan, results, startDerived }: { plan: Plan; results: Result[
   const best = plan.mode === "speed" ? (startDerived.speedBest[plan.scope] ?? 0) : 0;
   const newBest = plan.mode === "speed" && correct > best;
   const passed = plan.mode === "challenge" && ratio >= 0.8;
-  const confetti = getItem(profile.confetti)?.confetti ?? [];
+  const celebration = celebrationOf(profile.confetti);
 
   useEffect(() => {
     if (total === 0) return;
     sounds.complete();
-    celebrate(confetti);
+    celebrate(celebration.emoji, celebration.pattern);
     const timers = Array.from({ length: stars }, (_, i) =>
       setTimeout(() => {
         sounds.starLand(i);

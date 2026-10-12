@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { GROWTH_STAGES, growthStage, nextGrowthStage } from "@/lib/buddy";
-import { celebrate } from "@/lib/juice";
-import { isUnlocked, SHOP, type ItemKind, type ShopItem } from "@/lib/shop";
+import { celebrate, prefersReducedMotion } from "@/lib/juice";
+import { celebrationOf, isUnlocked, SHOP, type ItemKind, type ShopItem } from "@/lib/shop";
 import { sounds } from "@/lib/sound";
 import { useActiveProfile, useDerived, useStore } from "@/lib/store";
 import { Critter, CritterSvg } from "../Critter";
@@ -31,10 +31,17 @@ export function Shop() {
 
   const unlocked = (item: ShopItem) => isUnlocked(item, d.level, d.trophies);
 
+  const show = (item: ShopItem) => {
+    const c = celebrationOf(item.id);
+    celebrate(c.emoji, c.pattern);
+  };
+
   const choose = (item: ShopItem) => {
     if (owned(item)) {
       buy(item.id);
       sounds.pop(3);
+      // Switching celebrations plays the new one, so a child sees what they picked.
+      if (item.kind === "confetti" && !equipped(item)) show(item);
     } else setConfirm(item);
   };
 
@@ -122,7 +129,7 @@ export function Shop() {
                   onClick={() => {
                     if (buy(confirm.id)) {
                       sounds.complete();
-                      celebrate(confirm.confetti ?? []);
+                      show(confirm);
                     }
                     setConfirm(null);
                   }}
@@ -132,6 +139,11 @@ export function Shop() {
               </>
             ) : (
               <p className="font-read text-lg">You need 🪙 {confirm.cost - d.coins} more coins. Keep learning to earn them!</p>
+            )}
+            {confirm.kind === "confetti" && !prefersReducedMotion() && (
+              <button type="button" className="btn min-h-14 w-full text-xl" onClick={() => show(confirm)}>
+                👀 Peek at it
+              </button>
             )}
             <button type="button" className="btn min-h-14 w-full text-xl" onClick={() => setConfirm(null)}>
               {unlocked(confirm) && d.coins >= confirm.cost ? "Not now" : "OK"}

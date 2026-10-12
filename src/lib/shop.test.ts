@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { getItem, isOwned, isUnlocked, SHOP, STARTER, type ShopItem } from "./shop";
+import { celebrationOf, getItem, isOwned, isUnlocked, SHOP, STARTER, type ShopItem } from "./shop";
 import { getTrophy } from "./trophies";
 
 describe("shop", () => {
@@ -58,6 +58,37 @@ describe("shop items", () => {
         expect(u.label, item.id).toBe(`Win ${trophy!.name}`);
       }
     }
+  });
+
+  it("gives every item its own id, and every celebration its own name and icon", () => {
+    expect(new Set(SHOP.map((i) => i.id)).size).toBe(SHOP.length);
+    const styles = SHOP.filter((i) => i.kind === "confetti");
+    expect(new Set(styles.map((i) => i.name)).size).toBe(styles.length);
+    expect(new Set(styles.map((i) => i.icon)).size).toBe(styles.length);
+    expect(styles.length).toBeGreaterThanOrEqual(29);
+  });
+
+  it("only sets a movement pattern on celebrations, and uses every pattern somewhere", () => {
+    for (const item of SHOP) if (item.kind !== "confetti") expect(item.pattern, item.id).toBeUndefined();
+    const used = new Set(SHOP.filter((i) => i.kind === "confetti").map((i) => i.pattern ?? "cannons"));
+    expect([...used].sort()).toEqual(["cannons", "fall", "fireworks", "float"]);
+  });
+
+  it("has celebrations at every price, from first coins to the long goals", () => {
+    const styles = SHOP.filter((i) => i.kind === "confetti" && i.cost > 0);
+    expect(styles.filter((i) => i.cost <= 150 && !i.unlock).length).toBeGreaterThanOrEqual(4);
+    expect(styles.filter((i) => i.unlock).length).toBeGreaterThanOrEqual(10);
+    // Coins are only earned by learning, so prices stay inside the shop's range.
+    for (const i of styles) expect(i.cost, i.id).toBeLessThanOrEqual(600);
+  });
+
+  it("looks up a child's celebration, falling back to classic for anything that isn't one", () => {
+    expect(celebrationOf("balloons")).toEqual({ emoji: ["🎈", "🎈", "🎀"], pattern: "float" });
+    expect(celebrationOf("hearts")).toEqual({ emoji: ["💖", "💜", "💛"], pattern: "cannons" });
+    expect(celebrationOf("classic")).toEqual({ emoji: [], pattern: "cannons" });
+    expect(celebrationOf("hoot")).toEqual({ emoji: [], pattern: "cannons" });
+    expect(celebrationOf("gone")).toEqual({ emoji: [], pattern: "cannons" });
+    expect(celebrationOf(undefined)).toEqual({ emoji: [], pattern: "cannons" });
   });
 
   it("keeps the rarest buddies behind a level", () => {
