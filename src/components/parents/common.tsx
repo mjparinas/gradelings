@@ -41,7 +41,7 @@ export function Switch({ label, help, value, onChange }: { label: string; help?:
   );
 }
 
-export function Choice<T extends string>({ label, help, value, options, onChange }: { label: string; help?: string; value: T; options: { value: T; label: string }[]; onChange: (v: T) => void }) {
+export function Choice<T extends string>({ label, help, value, options, onChange }: { label: string; help?: string; value: T | null; options: { value: T; label: string }[]; onChange: (v: T) => void }) {
   const id = useId();
   return (
     <div className="rounded-xl bg-paper px-4 py-3">
@@ -196,5 +196,32 @@ export function NoChildren() {
         No children yet. <a className="font-bold text-[#2f6fd6] underline" href="#/children">Add a child</a> to get started.
       </p>
     </Panel>
+  );
+}
+
+const REPORT_TABS = [
+  { path: "reports", label: "Progress" },
+  { path: "placement", label: "Placement test" },
+  { path: "report-cards", label: "Report card" },
+];
+
+/** The three views under Reports, keeping the chosen child. */
+export function ReportTabs({ current, childId }: { current: string; childId?: string }) {
+  return (
+    <nav aria-label="Report views" className="mb-5 print:hidden">
+      <ul className="flex flex-wrap gap-2">
+        {REPORT_TABS.map((t) => (
+          <li key={t.path}>
+            <a
+              href={`#/${t.path}${childId ? `/${childId}` : ""}`}
+              aria-current={current === t.path ? "page" : undefined}
+              className={`flex min-h-11 items-center rounded-full border-2 px-4 text-sm font-semibold ${current === t.path ? "border-[#253047] bg-[#253047] text-white" : "border-line bg-white"}`}
+            >
+              {t.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }

@@ -20,6 +20,7 @@ import {
 import { MAX_CHILDREN, TRIAL_DAYS } from "./plan";
 import { celebrate, setCalmCheck } from "./juice";
 import { setHapticsCheck } from "./haptics";
+import { vibrationOn } from "./settingChoices";
 import { effectiveGoal, STRETCH_QUEST, STRETCH_REWARD } from "./goal";
 import { growthStage } from "./buddy";
 import { dailyQuests, weekDays, weeklyQuests, weekStart } from "./quests";
@@ -460,7 +461,7 @@ function activeSettings(): ChildSettings | undefined {
 setSoundCheck(() => activeSettings()?.sound ?? true);
 setQuietCheck(() => Boolean(activeSettings()?.quietSounds));
 setCalmCheck(() => Boolean(activeSettings()?.calmMotion));
-setHapticsCheck(() => activeSettings()?.haptics !== false && !activeSettings()?.calmMotion);
+setHapticsCheck(() => vibrationOn(activeSettings()));
 
 // A "calm" class on the page stops CSS animations too (see globals.css).
 if (typeof document !== "undefined") {

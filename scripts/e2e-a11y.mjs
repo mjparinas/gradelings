@@ -161,7 +161,7 @@ console.log("Parent area");
 await page.goto(`${BASE}/parents/`);
 await scan(page, "PIN gate");
 await enterPin(page, true);
-for (const route of ["", "reports", "report-cards", "children", "settings", "account", "subscription", "privacy"]) {
+for (const route of ["", "reports", "placement", "report-cards", "children", "settings", "account", "subscription"]) {
   await page.goto(`${BASE}/parents/#/${route}`);
   await scan(page, `/parents/#/${route}`);
 }

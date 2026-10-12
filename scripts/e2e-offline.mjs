@@ -10,7 +10,7 @@
 //   1. a Grade 5 child's lessons work in a fresh tab with the server gone;
 //   2. adding a Kindergartener offline (never downloaded) shows the friendly screen;
 //   3. once the server is back, "Try again" loads Kindergarten;
-//   4. the Piper voice, downloaded in Settings, reads a question aloud with the server gone.
+//   4. the Piper voice, downloaded under Account, reads a question aloud with the server gone.
 import { spawn } from "node:child_process";
 import fs from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -75,7 +75,7 @@ try {
   await page.waitForTimeout(5000); // let the worker take control and keep the lessons
 
   // A parent downloads the offline voice and turns it on.
-  await page.goto(BASE + "/parents/#/settings");
+  await page.goto(BASE + "/parents/#/account");
   await enterPin(page, true);
   const piper = page.getByTestId("piper-en");
   await piper.getByRole("button", { name: /Download voice/ }).click();
