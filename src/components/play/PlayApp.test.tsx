@@ -26,6 +26,7 @@ vi.mock("@/lib/router", () => ({
 vi.mock("@/lib/remoteFlags", () => ({ refreshFlags: h.refreshFlags, useIsOn: () => (k: string) => !h.off.has(k) }));
 vi.mock("@/lib/sync", () => ({ startBackgroundSync: h.startBackgroundSync }));
 vi.mock("@/lib/useGradeContent", () => ({ prefetchGrades: h.prefetchGrades }));
+vi.mock("@/components/VoicePreload", () => ({ VoicePreload: () => null }));
 vi.mock("@/lib/store", () => ({
   useReady: () => h.ready,
   useProfiles: () => h.profiles,

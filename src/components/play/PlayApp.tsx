@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { VoicePreload } from "@/components/VoicePreload";
 import type { FlagKey } from "@/lib/flags";
 import { refreshFlags, useIsOn } from "@/lib/remoteFlags";
 import { ageBandFor } from "@/content/subjects";
@@ -110,6 +111,7 @@ export function PlayApp() {
   return (
     <ContentGate targets={[{ grade: active.grade, framework: active.framework }]} onSwitch={profiles.length > 1 ? () => useStore.getState().setActive(null) : undefined}>
       <Prefetch />
+      <VoicePreload />
       <BandProvider value={band}>
         <div data-band={band} key={active.id}>
           <Screen />

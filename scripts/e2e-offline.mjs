@@ -10,7 +10,7 @@
 //   1. a Grade 5 child's lessons work in a fresh tab with the server gone;
 //   2. adding a Kindergartener offline (never downloaded) shows the friendly screen;
 //   3. once the server is back, "Try again" loads Kindergarten;
-//   4. the Piper voice downloads by itself the first time a question is read aloud, is on under
+//   4. the Piper voice downloads by itself when the app opens (nothing read aloud), is on under
 //      Account without a parent touching it, and reads a question aloud with the server gone.
 import { spawn } from "node:child_process";
 import fs from "node:fs";
@@ -78,10 +78,7 @@ try {
   await page.getByRole("button", { name: /Adventure/ }).waitFor();
   await page.waitForTimeout(5000); // let the worker take control and keep the lessons
 
-  // Reading a question aloud starts the offline voice download in the background.
-  await page.getByRole("button", { name: /Adventure/ }).click({ force: true });
-  await questionOnScreen(page).waitFor({ timeout: 15000 });
-  await page.getByRole("button", { name: "Read it to me" }).click();
+  // The offline voice downloads in the background once the app has opened, with nothing read aloud.
   // The list of files is saved last, once everything else is in.
   const voiceSaved = () => page.evaluate(async () => (await (await caches.open("grademap-piper")).keys()).some((r) => r.url.endsWith("/files.json")));
   for (const t0 = Date.now(); !(await voiceSaved()); await sleep(1000)) if (Date.now() - t0 > 180000) throw new Error("the offline voice didn't download by itself");

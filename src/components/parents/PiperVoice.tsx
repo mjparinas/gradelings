@@ -9,7 +9,7 @@ const mb = (bytes: number) => `${Math.max(1, Math.round(bytes / 1e6))} MB`;
 
 /**
  * The Piper voice for one language on this device. English carries the on/off switch, which is on
- * by default: the voice then downloads by itself the first time read-aloud is used.
+ * by default: the voice then downloads by itself in the background when the app opens.
  */
 export function PiperVoice({ language }: { language: SpeechLanguage }) {
   const piper = useSyncExternalStore<PiperState | undefined>(subscribePiper, getPiperState, () => undefined);
@@ -27,7 +27,7 @@ export function PiperVoice({ language }: { language: SpeechLanguage }) {
   if (!piperSupported()) return language === "en" ? <p className="text-sm text-ink-soft">This browser can&apos;t run the offline voice.</p> : null;
 
   const french = language === "fr";
-  // The French voice downloads by itself the first time French is read aloud, so there's no button for it.
+  // The French voice downloads by itself once a child has French switched on, so there's no button for it.
   if (french && voice.state === "missing") return null;
   const download = () => {
     // Downloading by hand means the parent wants to hear it.
@@ -73,8 +73,8 @@ export function PiperVoice({ language }: { language: SpeechLanguage }) {
           {piper.enabled && (
             <p className="text-sm text-ink-soft">
               {french
-                ? "It downloads by itself the first time a French lesson is read aloud, when this device isn't on mobile data."
-                : "It downloads by itself the first time read-aloud is used, when this device isn't on mobile data. Until then, read-aloud uses the device voice below."}
+                ? "It downloads by itself in the background once a child has French switched on, when this device isn't on mobile data."
+                : "It downloads by itself in the background, when this device isn't on mobile data. Until then, read-aloud uses the device voice below."}
             </p>
           )}
           <button

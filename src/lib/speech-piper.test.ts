@@ -92,6 +92,41 @@ describe("read-aloud with the Piper voice", () => {
     expect(synthSaid).toEqual(["Hello", "Again"]);
   });
 
+  it("halves the pause before the answers when Piper reads", async () => {
+    vi.useFakeTimers();
+    try {
+      piper.wanted = true;
+      const { speakSegments } = await import("./speech");
+      speakSegments([
+        { text: "Which is bigger?", lang: "en" },
+        { text: "Seven", lang: "en", pause: 600 },
+      ]);
+      await vi.advanceTimersByTimeAsync(299);
+      expect(piper.spoken.map((s) => s.text)).toEqual(["Which is bigger?"]);
+      await vi.advanceTimersByTimeAsync(2);
+      expect(piper.spoken.map((s) => s.text)).toEqual(["Which is bigger?", "Seven"]);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it("keeps the full pause for the device voice", async () => {
+    vi.useFakeTimers();
+    try {
+      const { speakSegments } = await import("./speech");
+      speakSegments([
+        { text: "Which is bigger?", lang: "en" },
+        { text: "Seven", lang: "en", pause: 600 },
+      ]);
+      await vi.advanceTimersByTimeAsync(599);
+      expect(synthSaid).toEqual(["Which is bigger?"]);
+      await vi.advanceTimersByTimeAsync(2);
+      expect(synthSaid).toEqual(["Which is bigger?", "Seven"]);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
   it("starts the background download of each language's voice when it is read, but not for a device-voice preview", async () => {
     const { speak, speakSegments, previewVoice } = await import("./speech");
     speak("Hello");
