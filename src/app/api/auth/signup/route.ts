@@ -3,11 +3,14 @@ import { batch, query } from "@/server/db";
 import { sendEmail } from "@/server/email";
 import { verifyEmail } from "@/server/emailTemplates";
 import { getFamilyRow, toFamilyInfo } from "@/server/family";
+import { isFlagOn } from "@/server/flags";
 import { normalizeReferralCode, TRIAL_DAYS } from "@/lib/plan";
 import { referrerFor } from "@/server/referral";
 
 export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
+  // The admin panel can pause sign-ups (the "signups" flag).
+  if (!(await isFlagOn("signups", null))) return error(503, "New accounts are paused for a little while. Please try again later.");
   if (await rateLimited(`signup:${clientIp(req)}`, 5)) return error(429, "Too many attempts. Try again in a few minutes.");
   const body = (await req.json().catch(() => null)) as { email?: string; password?: string; trialEndsAt?: number; referralCode?: string } | null;
   const email = body?.email?.trim().toLowerCase() ?? "";

@@ -186,6 +186,51 @@ const SCHEMA = [
     PRIMARY KEY (code, family_id)
   )`,
   `CREATE INDEX IF NOT EXISTS code_redemptions_family ON code_redemptions (family_id)`,
+  // Admin panel. Flags are defined in src/lib/flags.ts; a row exists once an admin has changed one.
+  `CREATE TABLE IF NOT EXISTS feature_flags (
+    key TEXT PRIMARY KEY,
+    enabled INTEGER NOT NULL,
+    rollout INTEGER NOT NULL DEFAULT 100,
+    updated_at INTEGER NOT NULL
+  )`,
+  // A flag forced on or off for one family (testers, a school trying something early).
+  `CREATE TABLE IF NOT EXISTS flag_overrides (
+    key TEXT NOT NULL,
+    family_id TEXT NOT NULL,
+    enabled INTEGER NOT NULL,
+    created_at INTEGER NOT NULL,
+    PRIMARY KEY (key, family_id)
+  )`,
+  `CREATE INDEX IF NOT EXISTS flag_overrides_family ON flag_overrides (family_id)`,
+  // A/B tests. `variants` is JSON: [{ name, weight }]; the first is the control.
+  `CREATE TABLE IF NOT EXISTS experiments (
+    key TEXT PRIMARY KEY,
+    description TEXT NOT NULL DEFAULT '',
+    status TEXT NOT NULL DEFAULT 'draft',
+    variants TEXT NOT NULL,
+    winner TEXT,
+    created_at INTEGER NOT NULL,
+    started_at INTEGER,
+    stopped_at INTEGER
+  )`,
+  // Which variant a signed-in family was shown, recorded the first time it asked, so results can be counted.
+  `CREATE TABLE IF NOT EXISTS experiment_assignments (
+    experiment TEXT NOT NULL,
+    family_id TEXT NOT NULL,
+    variant TEXT NOT NULL,
+    assigned_at INTEGER NOT NULL,
+    PRIMARY KEY (experiment, family_id)
+  )`,
+  `CREATE INDEX IF NOT EXISTS experiment_assignments_family ON experiment_assignments (family_id)`,
+  // Every change made in the admin panel: who, what and when.
+  `CREATE TABLE IF NOT EXISTS admin_audit (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    at INTEGER NOT NULL,
+    admin TEXT NOT NULL,
+    action TEXT NOT NULL,
+    target TEXT,
+    detail TEXT
+  )`,
 ];
 
 /** Columns added after the first release. SQLite has no "ADD COLUMN IF NOT EXISTS". */

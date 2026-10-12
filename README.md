@@ -77,7 +77,8 @@ With no configuration it uses a local SQLite file (`./data/grademap.db`) and **s
 | `STRIPE_SECRET_KEY` | Stripe secret key. Billing is simulated until this and both price IDs are set. |
 | `STRIPE_PRICE_MONTHLY`, `STRIPE_PRICE_YEARLY` | Price IDs for the family plan (C$14.99/month, C$119.99/year). |
 | `STRIPE_WEBHOOK_SECRET` | Signing secret for `/api/billing/webhook`. |
-| `ADMIN_TOKEN` | Turns on the admin API for redeem codes (`docs/CODES.md`). At least 24 random characters. |
+| `ADMIN_EMAILS` | Comma-separated emails of admin accounts. Turns on the admin panel at `/admin/` (`docs/ADMIN.md`). |
+| `ADMIN_TOKEN` | Optional. Lets scripts call the redeem-code API with a Bearer token (`docs/CODES.md`). At least 24 random characters. |
 | `ALLOW_DEV_BILLING` | Set to `1` to allow simulated billing in a production build (staging only). |
 
 ### Stripe setup
