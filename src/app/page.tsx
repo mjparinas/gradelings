@@ -32,6 +32,13 @@ const FEATURES = [
   { icon: "👨‍👩‍👧", title: "One plan, whole family", body: `Up to ${MAX_CHILDREN} children on one family plan, each with their own grade, settings and progress.` },
 ];
 
+const INCLUSIVE = [
+  { icon: "🧘", title: "Calm and focus options", body: "For children who find motion, noise or time pressure hard, including many with ADHD: calm motion, quiet sounds, hidden timers, trophy pop-ups held until the lesson ends, and five-question sessions." },
+  { icon: "📖", title: "Easier reading", body: "Questions use Andika, a font designed for beginning readers. Parents can add roomy spacing between letters, words and lines, or high contrast." },
+  { icon: "🔊", title: "Read-aloud", body: "Every question can be read aloud with the voices on the device, in French for French questions. It's on by default for Kindergarten and Grade 1." },
+  { icon: "🎨", title: "Checked for colour blindness", body: "Screens are checked against WCAG 2.2 AA contrast rules and a simulated colour-blind pass. Right answers get a tick as well as green, and the reduced motion setting is always respected." },
+];
+
 const FAQS = [
   {
     q: `Which grades does ${APP_NAME} cover?`,
@@ -215,6 +222,32 @@ export default function Home() {
             ))}
           </ol>
         </div>
+      </section>
+
+      {/* Accessibility */}
+      <section aria-labelledby="inclusive" className="py-8">
+        <h2 id="inclusive" className="mb-2 text-3xl font-bold sm:text-4xl">
+          Made for every kind of learner
+        </h2>
+        <p className="mb-6 max-w-2xl font-read text-lg text-ink-soft">
+          Each child gets their own settings. They change how things look and sound, never the scoring.
+        </p>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {INCLUSIVE.map((f) => (
+            <div key={f.title} className="card p-5">
+              <p className="text-4xl" aria-hidden="true">
+                {f.icon}
+              </p>
+              <h3 className="mt-2 text-xl font-bold">{f.title}</h3>
+              <p className="mt-1 font-read text-ink-soft">{f.body}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-4">
+          <Link href="/accessibility/" className="font-semibold text-[#2f6fd6] underline">
+            What we&apos;ve tested, and what we haven&apos;t yet
+          </Link>
+        </p>
       </section>
 
       {/* Teachers */}
