@@ -30,6 +30,7 @@ import { QuestionVisual } from "../visuals";
 import { makePlan, type Item, type Plan } from "./plans";
 import { useAllowed } from "./useAllowed";
 import { useNow } from "@/lib/useNow";
+import { timerChoice } from "@/lib/timers";
 
 const PRAISE = ["Great job!", "You got it!", "Super!", "Awesome!", "Way to go!", "Nailed it!", "Brilliant!"];
 const NUDGE = ["Almost! Try again.", "So close! Have another go.", "Good try! Look again."];
@@ -146,7 +147,7 @@ function Runner({ plan }: { plan: Plan }) {
   useEffect(() => {
     if (remaining === undefined || done) return;
     const whole = Math.ceil(remaining);
-    if (whole <= 5 && whole > 0 && whole !== lastTick.current && !settings?.hideTimers) {
+    if (whole <= 5 && whole > 0 && whole !== lastTick.current && timerChoice(settings) !== "hidden") {
       lastTick.current = whole;
       sounds.tick();
     }
@@ -351,8 +352,9 @@ function Runner({ plan }: { plan: Plan }) {
 
   const progressValue = plan.total ? index + (answered ? 1 : 0) : plan.checkpoint ? (index % plan.checkpoint) + (answered ? 1 : 0) : 0;
   const progressMax = plan.total ?? plan.checkpoint ?? 1;
-  const hideTimers = Boolean(settings?.hideTimers);
-  const timerText = hideTimers ? null : remaining !== undefined ? formatTime(remaining) : settings?.showTimer ? formatTime(elapsed) : null;
+  const timers = timerChoice(settings);
+  const hideTimers = timers === "hidden";
+  const timerText = hideTimers ? null : remaining !== undefined ? formatTime(remaining) : timers === "clock" ? formatTime(elapsed) : null;
   const urgent = !hideTimers && remaining !== undefined && remaining <= 10;
 
   return (

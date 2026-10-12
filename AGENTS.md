@@ -243,7 +243,7 @@ Tests are duplicated across screen sizes only where layout can break:
 - **The tone is soft:** a gentle "try again" sound, not a buzzer, and encouraging messages. Never shame a child.
 
 ### Timers and the learn-to-play loop
-- **Daily goal timer:** 10 minutes for little kids, 15 for everyone else. A child can tap the minutes on the home screen to pick Easy (about two thirds), Regular (the parent's goal) or Stretch (a third more) for the day (`src/lib/goal.ts`, a `goal` event). Finishing a Stretch goal earns +15 coins once a day. Parents can turn the choice off in Settings. A session timer appears in timed modes, and the elapsed timer is optional (`showTimer`).
+- **Daily goal timer:** 10 minutes for little kids, 15 for everyone else. A child can tap the minutes on the home screen to pick Easy (about two thirds), Regular (the parent's goal) or Stretch (a third more) for the day (`src/lib/goal.ts`, a `goal` event). Finishing a Stretch goal earns +15 coins once a day. Parents can turn the choice off in Settings. Parents pick one "Timers in lessons" setting in Settings > Calm and focus (`src/lib/timers.ts`): Show all (an elapsed clock, plus countdowns in timed modes), Countdowns only (the little-kid default) or Hide all (a quiet bar in timed modes). It is stored in the older `showTimer` and `hideTimers` fields, with `hideTimers` winning, so saved choices and older devices keep working.
 - **Learning earns arcade time,** Pomodoro-style. The default is 20 minutes of learning for 5 minutes of games, with a cap of 20 game minutes a day.
   - Parents can change all of these, turn games off, or allow free play (`src/lib/gametime.ts`).
 - **Learning time is counted per answer, capped at 60 seconds,** so leaving the app open doesn't earn time.
@@ -294,7 +294,7 @@ Tests are duplicated across screen sizes only where layout can break:
   - Children: up to 3; a birth year suggests a grade; a curriculum can be picked per child.
   - Settings per child.
   - Account & sync, Subscription, and Privacy (JSON export, erase device, delete account).
-- **Calm and focus options** (per child, all off by default, in Settings): calm motion, quiet sounds, hide timers, hold trophy pop-ups until after the lesson, and shorter sessions (5 questions). They change presentation only; scoring is unchanged. They exist for children who find motion, noise or time pressure hard, including many with ADHD. Never make health claims about them.
+- **Calm and focus options** (per child, all off by default, in Settings): calm motion, quiet sounds, timers in lessons (Hide all), hold trophy pop-ups until after the lesson, and shorter sessions (5 questions). They change presentation only; scoring is unchanged. They exist for children who find motion, noise or time pressure hard, including many with ADHD. Never make health claims about them.
 - **Easier reading options** (per child, off by default): roomy text and high contrast, next to the calm options.
 - **Account email:** parents confirm their email (needed before real Stripe checkout and weekly email), can reset a forgotten password, and can opt in to a weekly progress email. Email goes through Resend (`src/server/email.ts`); without keys it is skipped. Never put a child's information in an email beyond first name and practice totals.
 - **Trial emails:** a confirmed parent gets one mid-trial recap 4 to 10 days before the trial ends (only if a child has practised), then the existing "trial ends soon" notice repeats the recap. First names and practice totals only, framed as practice, not a mark.

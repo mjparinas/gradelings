@@ -6,8 +6,15 @@ import { getSubjectMeta, SUBJECTS } from "@/content/subjects";
 import type { SubjectId } from "@/content/types";
 import { defaultChildSettings, type ChildSettings } from "@/lib/model";
 import { useStore } from "@/lib/store";
-import { CheckBox, ChildTabs, NoChildren, PageTitle, Panel, Slider, Switch, useChild } from "./common";
+import { timerChoice, timerPatch, type TimerChoice } from "@/lib/timers";
+import { CheckBox, ChildTabs, Choice, NoChildren, PageTitle, Panel, Slider, Switch, useChild } from "./common";
 import { VoicePicker } from "./VoicePicker";
+
+const TIMER_HELP: Record<TimerChoice, string> = {
+  clock: "Shows how long the lesson has taken, and the countdown in Speed Run and Challenge.",
+  countdown: "No clock in normal lessons. Speed Run and Challenge still show their countdown.",
+  hidden: "No clocks, countdown numbers, ticks or streak counter. Speed Run and Challenge show a quiet bar instead and still end on time.",
+};
 
 export function SettingsPage({ childId }: { childId?: string }) {
   const child = useChild(childId);
@@ -35,9 +42,6 @@ export function SettingsPage({ childId }: { childId?: string }) {
           <div className="mt-4">
             <Switch label="Let them pick a lighter or stretch goal" value={!s.lockGoal} onChange={(v) => set({ lockGoal: !v })} help="Each day your child can choose Easy, Regular (your goal) or Stretch, which is a little longer. Turn off to always use your goal." />
           </div>
-          <div className="mt-4">
-            <Switch label="Show a timer during lessons" value={s.showTimer} onChange={(v) => set({ showTimer: v })} help="Timed modes (Speed Run, Challenge) always show their countdown." />
-          </div>
         </Panel>
 
         <Panel title="🌤️ Calm and focus">
@@ -50,7 +54,17 @@ export function SettingsPage({ childId }: { childId?: string }) {
             </button>
             <Switch label="Calm motion" value={Boolean(s.calmMotion)} onChange={(v) => set({ calmMotion: v })} help="No confetti, bursts, floating text or screen shakes." />
             <Switch label="Quiet sounds" value={Boolean(s.quietSounds)} onChange={(v) => set({ quietSounds: v })} help="Keeps gentle taps and feedback; no fanfares, chimes or countdown ticks." />
-            <Switch label="Hide timers" value={Boolean(s.hideTimers)} onChange={(v) => set({ hideTimers: v })} help="Hides clocks and countdown numbers. Speed Run and Challenge show a quiet bar instead and still end on time." />
+            <Choice
+              label="Timers in lessons"
+              value={timerChoice(s)}
+              options={[
+                { value: "clock", label: "Show all" },
+                { value: "countdown", label: "Countdowns only" },
+                { value: "hidden", label: "Hide all" },
+              ]}
+              onChange={(v) => set(timerPatch(v))}
+              help={TIMER_HELP[timerChoice(s)]}
+            />
             <Switch label="Hold trophy pop-ups until after the lesson" value={Boolean(s.quietToasts)} onChange={(v) => set({ quietToasts: v })} help="Nothing appears on screen while your child is working on a question." />
             <Switch label="Hints count as first try" value={Boolean(s.freeHints)} onChange={(v) => set({ freeHints: v })} help="Children can open a hint before answering. Normally that counts like a retry. Turn this on if asking for help should never lower their accuracy." />
             <Switch label="Shorter sessions" value={Boolean(s.shortSessions)} onChange={(v) => set({ shortSessions: v })} help="Five questions at a time in Adventure (with a break screen) and Review." />
