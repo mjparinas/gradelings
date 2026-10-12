@@ -5,8 +5,8 @@ final class AppConfigTests: XCTestCase {
     func testOpensTheKidsAppWithTheIosFlag() {
         let config = AppConfig.fromBundle(Bundle(for: WebViewController.self))
         XCTAssertEqual(config.startPath, "/play/?app=ios")
-        XCTAssertEqual(config.startURL.path, "/play/")
-        XCTAssertEqual(config.startURL.query, "app=ios")
+        // URL.path drops the trailing slash, so compare the whole URL.
+        XCTAssertTrue(config.startURL.absoluteString.hasSuffix("/play/?app=ios"))
         XCTAssertFalse(config.host.isEmpty)
     }
 
@@ -23,8 +23,10 @@ final class AppConfigTests: XCTestCase {
         XCTAssertEqual(AppConfig.from(info: ["GradelingsOrigin": "http://localhost:3000"]).startURL.absoluteString, "http://localhost:3000/play/?app=ios")
     }
 
-    func testSupportsEveryOrientationOnIpad() {
-        let info = Bundle(for: WebViewController.self).infoDictionary ?? [:]
+    func testSupportsEveryOrientationOnIpad() throws {
+        // The file as built: at runtime iOS folds the ~ipad keys into the plain ones on an iPad.
+        let url = try XCTUnwrap(Bundle(for: WebViewController.self).url(forResource: "Info", withExtension: "plist"))
+        let info = try XCTUnwrap(PropertyListSerialization.propertyList(from: Data(contentsOf: url), format: nil) as? [String: Any])
         XCTAssertEqual((info["UISupportedInterfaceOrientations~ipad"] as? [String])?.count, 4)
         XCTAssertEqual(info["UIRequiresFullScreen"] as? Bool, false, "Split View and Stage Manager")
     }

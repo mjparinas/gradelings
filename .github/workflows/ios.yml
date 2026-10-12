@@ -58,7 +58,7 @@ jobs:
             -project Gradelings.xcodeproj -scheme Gradelings \
             -destination "id=${{ steps.sims.outputs.iphone }}" \
             -destination "id=${{ steps.sims.outputs.ipad }}" \
-            CODE_SIGNING_ALLOWED=NO | tee "$RUNNER_TEMP/xcodebuild.log" | grep -E "error:|warning: .*\.swift|Test Case|Executed|\*\* TEST" || true
+            CODE_SIGNING_ALLOWED=NO | tee "$RUNNER_TEMP/xcodebuild.log" | grep -E "error|failed|warning: .*\.swift|Executed|\*\* TEST" || true
           grep -q "\*\* TEST SUCCEEDED \*\*" "$RUNNER_TEMP/xcodebuild.log"
       - name: Release build compiles
         working-directory: ios
