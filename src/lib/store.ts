@@ -23,6 +23,7 @@ import { setHapticsCheck } from "./haptics";
 import { effectiveGoal, STRETCH_QUEST, STRETCH_REWARD } from "./goal";
 import { growthStage } from "./buddy";
 import { dailyQuests, weekDays, weeklyQuests, weekStart } from "./quests";
+import { hasTestCoins } from "./remoteFlags";
 import { getRoomItem, isRoomOwned } from "./room";
 import { getItem, isUnlocked, STARTER } from "./shop";
 import { setQuietCheck, setSoundCheck } from "./sound";
@@ -99,7 +100,13 @@ function newFamily(): FamilyInfo {
 }
 
 // Derived stats are cached per child and recomputed only when their events change.
-const deriveCache = new Map<string, { events: AppEvent[]; resetAt: number; day: string; value: Derived }>();
+const deriveCache = new Map<string, { events: AppEvent[]; resetAt: number; day: string; testCoins: boolean; value: Derived }>();
+
+/**
+ * Coins added on a device signed in to an admin account, so the owner can try the shop and My Room with their
+ * own children. Only the balance changes: nothing is stored or synced, and trophies still count real coins.
+ */
+export const TEST_COINS = 1_000_000;
 
 export function eventsFor(events: AppEvent[], profile: Profile | undefined): AppEvent[] {
   if (!profile) return [];
@@ -114,11 +121,13 @@ export function derivedFor(state: Pick<State, "events" | "profiles">, profileId:
   const key = profileId ?? "";
   const cached = deriveCache.get(key);
   const today = dayKey(Date.now());
-  if (cached && cached.events === state.events && cached.resetAt === (profile?.resetAt ?? 0) && cached.day === today) {
+  const testCoins = hasTestCoins();
+  if (cached && cached.events === state.events && cached.resetAt === (profile?.resetAt ?? 0) && cached.day === today && cached.testCoins === testCoins) {
     return cached.value;
   }
-  const value = derive(eventsFor(state.events, profile));
-  deriveCache.set(key, { events: state.events, resetAt: profile?.resetAt ?? 0, day: today, value });
+  const derived = derive(eventsFor(state.events, profile));
+  const value = testCoins ? { ...derived, coins: derived.coins + TEST_COINS } : derived;
+  deriveCache.set(key, { events: state.events, resetAt: profile?.resetAt ?? 0, day: today, testCoins, value });
   return value;
 }
 

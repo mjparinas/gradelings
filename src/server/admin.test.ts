@@ -122,6 +122,15 @@ describe("feature flags", () => {
     expect((await forDevice()).flags.shop).toBe(true);
   });
 
+  it("give unlimited test coins to an admin account's devices only", async () => {
+    const res = async (cookie?: string) => (await (await publicFlags.GET(req("/api/flags/?d=device-abcdef12", "GET", undefined, cookie))).json()) as { testCoins?: boolean };
+    expect((await res(admin.cookie)).testCoins).toBe(true);
+    expect((await res(parent.cookie)).testCoins).toBeUndefined();
+    expect((await res()).testCoins).toBeUndefined();
+    delete process.env.ADMIN_EMAILS;
+    expect((await res(admin.cookie)).testCoins).toBeUndefined();
+  });
+
   it("switch off for everyone, signed in or not, and back on", async () => {
     expect((await as(admin.cookie).send(flags, "PUT", "/api/admin/flags/", { key: "shop", enabled: false })).status).toBe(200);
     expect((await forDevice()).flags.shop).toBe(false);
