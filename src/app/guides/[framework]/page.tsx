@@ -30,7 +30,7 @@ export async function generateMetadata({
   const f = r.framework;
   return {
     title: `${f.name} parent guides and free printable practice sheets`,
-    description: `Free guides for ${f.shortName} parents: what each grade learns in the ${f.curriculumName}, how to help at home, ${guidesFor(f.id).competencies.label.toLowerCase()}, the ${guidesFor(f.id).assessment.short} and printable practice sheets for ${GRADE_LABEL[f.grades[0]]} to ${GRADE_LABEL[f.grades[f.grades.length - 1]]}.`,
+    description: `Free guides for ${f.shortName} parents: what each grade learns in the ${f.curriculumName}, how to help at home, ${guidesFor(f.id).competencies.label}, the ${guidesFor(f.id).assessment.short} and printable practice sheets for ${GRADE_LABEL[f.grades[0]]} to ${GRADE_LABEL[f.grades[f.grades.length - 1]]}.`,
     alternates: { canonical: guidePath.hub(r.framework) },
   };
 }

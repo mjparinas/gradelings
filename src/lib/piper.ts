@@ -7,7 +7,7 @@ import type { SpeechLanguage } from "./speech";
 // Piper: a natural-sounding voice that runs on the device, so it works offline and the same on
 // every tablet. On by default: the first time read-aloud is used in a language, its voice
 // downloads in the background (not on mobile data or Data Saver) while the device voice reads,
-// and Piper reads from then on. A parent can switch it off or remove it per device in Settings,
+// and Piper reads from then on. A parent can switch it off or remove it per device under Account,
 // and a parent who picked a device voice keeps it. The files are large (see
 // public/piper/{version}/files.json), are served by this site and are kept in their own cache,
 // which the service worker leaves alone when the app updates.

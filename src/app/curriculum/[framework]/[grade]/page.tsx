@@ -5,7 +5,7 @@ import { breadcrumbJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, subjectTitle } from "@/components/site/curriculum";
 import { FRAMEWORKS } from "@/content/frameworks";
-import { GRADE_LABEL, getSubjectMeta, gradeSlug } from "@/content/subjects";
+import { GRADE_LABEL, getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { JsonLd } from "@/lib/site";
 
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: PageProps<"/curriculum/[frame
   const r = resolve(await params);
   if (!r) return {};
   const { framework: f, grade } = r;
-  const subjects = coursesFor(f, grade).map((c) => subjectSeoTitle(c.subject).toLowerCase());
+  const subjects = coursesFor(f, grade).map((c) => subjectInSentence(subjectSeoTitle(c.subject)));
   return {
     title: `${GRADE_LABEL[grade]} ${f.shortName} curriculum practice`,
     description: `What kids learn in ${GRADE_LABEL[grade]} in ${f.name}: ${subjects.join(", ")}. Every unit explained for parents, with free sample questions matched to the ${f.curriculumName}.`,

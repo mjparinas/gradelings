@@ -16,24 +16,24 @@ import { ChildrenPage } from "./Children";
 import { Gate } from "./Gate";
 import { Overview } from "./Overview";
 import { PlacementPage } from "./Placement";
-import { PrivacyPage } from "./Privacy";
 import { ReportCardsPage } from "./ReportCards";
 import { ReportsPage } from "./Reports";
 import { SettingsPage } from "./Settings";
 import { SubscriptionPage } from "./Subscription";
 import { UpgradeBanner } from "./UpgradeBanner";
+import { ReportTabs } from "./common";
 
 const NAV = [
   { path: "", label: "Overview", icon: "🏠" },
   { path: "subscription", label: "Subscription", icon: "⭐" },
   { path: "reports", label: "Reports", icon: "📈" },
-  { path: "placement", label: "Placement", icon: "🧭" },
   { path: "children", label: "Children", icon: "🧒" },
   { path: "settings", label: "Settings", icon: "⚙️" },
-  { path: "account", label: "Account & sync", icon: "☁️" },
-  { path: "report-cards", label: "Report cards", icon: "📄" },
-  { path: "privacy", label: "Privacy & data", icon: "🔐" },
+  { path: "account", label: "Account", icon: "☁️" },
 ];
+
+/** Older links still open: Placement and Report cards live under Reports, Privacy under Account. */
+const NAV_PARENT: Record<string, string> = { placement: "reports", "report-cards": "reports", privacy: "account" };
 
 const noSubscribe = () => () => {};
 
@@ -165,6 +165,9 @@ export function ParentApp() {
     case "placement":
       page = <PlacementPage childId={path[1]} />;
       break;
+    case "report-cards":
+      page = <ReportCardsPage childId={path[1]} />;
+      break;
     case "children":
       page = <ChildrenPage />;
       break;
@@ -175,21 +178,25 @@ export function ParentApp() {
       page = <SubscriptionPage billing={billing} onBilling={setBilling} />;
       break;
     case "account":
-      page = <AccountPage onBilling={setBilling} />;
-      break;
-    case "report-cards":
-      page = <ReportCardsPage childId={path[1]} />;
-      break;
     case "privacy":
-      page = <PrivacyPage />;
+      page = <AccountPage onBilling={setBilling} />;
       break;
     default:
       page = <Overview />;
   }
+  const tab = NAV_PARENT[section] ?? section;
+  if (tab === "reports") {
+    page = (
+      <>
+        <ReportTabs current={section} childId={path[1]} />
+        {page}
+      </>
+    );
+  }
   // Reports need each child's lessons; settings and billing still work if a download fails.
   return (
     <ContentGate targets={profiles.map((p) => ({ grade: p.grade, framework: p.framework }))} optional>
-      <Shell active={section}>{page}</Shell>
+      <Shell active={tab}>{page}</Shell>
     </ContentGate>
   );
 }

@@ -212,9 +212,24 @@ async function eventsWaiting(page) {
     if (!(await page.getByRole("status").filter({ hasText: 'Sent: "Love you lots! 💕"' }).count())) errors.push("parent note: sending from the dropdown didn't confirm");
     await page.goto(`${BASE}/parents/#/settings`);
     await page.waitForTimeout(500);
-    await page.getByRole("switch", { name: /Free play/ }).first().click();
+    await page.getByRole("radio", { name: "Free play" }).click();
+    // One "Calm mode" switch turns on the calm options, and Sounds shows Gentle while it's on.
+    await page.getByRole("switch", { name: /Calm mode/ }).click();
+    if ((await page.getByRole("radio", { name: "Gentle" }).getAttribute("aria-checked")) !== "true") errors.push("calm mode: sounds didn't switch to Gentle");
+    if ((await page.getByRole("radio", { name: "Hide all" }).getAttribute("aria-checked")) !== "true") errors.push("calm mode: timers weren't hidden");
+    await page.getByRole("switch", { name: /Calm mode/ }).click();
+    if (await page.getByRole("switch", { name: /Hints count as first try/ }).isVisible()) errors.push("settings: advanced options should start folded");
+    await shot(page, "21-parent-settings", true);
+    if ((await page.getByRole("navigation", { name: "Parent sections" }).getByRole("link").count()) !== 6) errors.push("parent nav: expected 6 tabs");
 
-    // Read-aloud voice: the most natural voice comes first, and a parent's choice is used everywhere.
+    // Read-aloud voice (under Account, because it belongs to this device)
+    await page.goto(`${BASE}/parents/#/account`);
+    await page.waitForTimeout(500);
+    if (!(await vis(page.getByRole("heading", { name: /Parent PIN/ })))) errors.push("account: the parent PIN panel is missing");
+    // The voice in use is shown with a sample; the choices are folded under "Change voice".
+    if (!(await vis(page.getByText(/Reading with:/)))) errors.push("account: the voice in use isn't shown");
+    await page.getByRole("button", { name: "Change voice" }).click();
+    // The most natural voice comes first, and a parent's choice is used everywhere.
     const voice = page.getByRole("combobox", { name: "Device voice", exact: true });
     await voice.click();
     const voiceList = page.getByRole("listbox", { name: "Device voice" });
@@ -236,7 +251,7 @@ async function eventsWaiting(page) {
     await page.keyboard.press("Escape");
     await page.getByRole("button", { name: "▶ Preview French", exact: true }).click();
     if (!/Denise/.test((await spoken(page)).at(-1)?.voice ?? "")) errors.push("french preview didn't use a French voice");
-    await shot(page, "21-parent-settings", true);
+    await shot(page, "21b-parent-account", true);
     await page.goto(`${BASE}/play/#/`);
     await page.getByRole("button", { name: /Adventure/ }).click({ force: true });
     await page.getByRole("button", { name: "Read it to me" }).click();
@@ -247,11 +262,18 @@ async function eventsWaiting(page) {
     await page.getByRole("dialog").getByRole("button", { name: "Stop", exact: true }).click({ force: true });
     await page.goto(`${BASE}/parents/`);
     await enterPin(page, false);
-    for (const p of ["reports", "report-cards", "children", "subscription", "privacy"]) {
+    for (const p of ["reports", "placement", "report-cards", "children", "subscription"]) {
       await page.goto(`${BASE}/parents/#/${p}`);
       await page.waitForTimeout(700);
       await shot(page, `22-parent-${p}`, true);
     }
+    // Placement and Report card are views under Reports; the old Privacy link opens Account.
+    await page.goto(`${BASE}/parents/#/report-cards`);
+    await page.waitForTimeout(500);
+    if ((await page.getByRole("navigation", { name: "Report views" }).getByRole("link").count()) !== 3) errors.push("reports: the Progress / Placement / Report card views are missing");
+    await page.goto(`${BASE}/parents/#/privacy`);
+    await page.waitForTimeout(500);
+    if (!(await vis(page.getByRole("heading", { name: "Your data, your choice" })))) errors.push("old privacy link: Account didn't show the privacy panels");
 
     // Arcade with free play on
     await page.goto(`${BASE}/play/#/arcade`);

@@ -79,6 +79,17 @@ export const SUBJECTS: SubjectMeta[] = [
 /** The four subjects every child studies. French is opt-in (Settings), so it never counts toward "every unit" goals. */
 export const CORE_SUBJECTS: SubjectId[] = ["math", "language", "science", "social"];
 
+// Language names and French program names stay capitalized mid-sentence.
+const PROPER_SUBJECT_WORDS = new Set(["English", "French", "Français", "Core", "Immersion"]);
+
+/** A subject name for use mid-sentence: "Language Arts" → "language arts", "French Immersion" stays as is. */
+export function subjectInSentence(title: string): string {
+  return title
+    .split(" ")
+    .map((word) => (PROPER_SUBJECT_WORDS.has(word) ? word : word.toLowerCase()))
+    .join(" ");
+}
+
 export function isCoreSubject(id: SubjectId | string): boolean {
   return (CORE_SUBJECTS as string[]).includes(id);
 }

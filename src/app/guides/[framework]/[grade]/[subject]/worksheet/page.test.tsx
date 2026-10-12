@@ -59,8 +59,15 @@ describe("printable practice sheet", () => {
     expect(document.querySelector("main header")).toHaveTextContent(f.curriculumName);
     await userEvent.click(screen.getByRole("button", { name: /Print this sheet/ }));
     expect(print).toHaveBeenCalledOnce();
-    expect(screen.getByRole("link", { name: /^See all .+ units$/ })).toHaveAttribute("href", "/curriculum/new-brunswick/grade-2/language/");
+    expect(screen.getByRole("link", { name: "See all English language arts units" })).toHaveAttribute("href", "/curriculum/new-brunswick/grade-2/language/");
     expect(screen.getByRole("link", { name: "Try it free" })).toHaveAttribute("href", "/play/");
+  });
+
+  it("keeps the names of languages capitalized mid-sentence", async () => {
+    await sheet("bc", "grade-5", "immersion");
+    expect(screen.getByRole("link", { name: "See all French Immersion units" })).toHaveAttribute("href", "/curriculum/bc/grade-5/immersion/");
+    const meta = await generateMetadata(props("bc", "grade-5", "core-french"));
+    expect(meta.description).toContain("Grade 5 Core French practice sheet");
   });
 
   it("builds metadata and 404s a subject that isn't taught", async () => {

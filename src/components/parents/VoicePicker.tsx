@@ -1,13 +1,14 @@
 "use client";
 
 import { APP_NAME } from "@/lib/brand";
-import { setPiperEnabled } from "@/lib/piper";
+import { getPiperState, PIPER_VOICES, piperSupported, setPiperEnabled, subscribePiper, type PiperState } from "@/lib/piper";
 import { useSyncExternalStore } from "react";
 import {
   canSpeak,
   chooseVoice,
   getVoiceOptions,
   getVoicePreference,
+  previewPiper,
   previewVoice,
   setVoicePreference,
   stopSpeaking,
@@ -85,6 +86,36 @@ function Tips({ open }: { open: boolean }) {
   );
 }
 
+/** What read-aloud uses on this device right now, with a sample, so most parents never need to change it. */
+function CurrentVoice({ current }: { current: VoiceOption | undefined }) {
+  const piper = useSyncExternalStore<PiperState | undefined>(subscribePiper, getPiperState, () => undefined);
+  const supported = piper !== undefined && piperSupported();
+  const amy = PIPER_VOICES.en.name;
+  const usingPiper = supported && piper.enabled && piper.voices.en.state === "ready";
+  const waiting = supported && piper.enabled && piper.voices.en.state !== "ready";
+  const device = current ? `${shortName(current.name)} (${QUALITY[current.quality].label.toLowerCase()})` : "the device voice";
+  return (
+    <div className="flex flex-col gap-2 rounded-xl bg-paper p-4">
+      <p>
+        <span className="font-semibold">Reading with: </span>
+        {usingPiper ? `${amy}, the offline natural voice` : device}
+      </p>
+      {waiting && <p className="text-sm text-ink-soft">{amy}, a natural voice that works offline, downloads by itself the first time read-aloud is used on Wi-Fi.</p>}
+      <button
+        type="button"
+        className="self-start rounded-xl bg-[#4f8ef7] px-4 py-2.5 font-bold text-[#0f172a]"
+        onClick={() => {
+          stopSpeaking();
+          if (usingPiper) void previewPiper("en").catch(() => previewVoice(getVoicePreference()));
+          else previewVoice(getVoicePreference());
+        }}
+      >
+        ▶ Hear it
+      </button>
+    </div>
+  );
+}
+
 /** Read-aloud voice for this device. Voices are part of each device, so this isn't synced. */
 export function VoicePicker() {
   const options = useSyncExternalStore(subscribeVoices, getVoiceOptions, () => NONE);
@@ -95,48 +126,53 @@ export function VoicePicker() {
 
   return (
     <Panel title="🗣️ Read-aloud voice (this device)">
-      <div className="mb-4">
-        <PiperVoice language="en" />
-      </div>
       {!canSpeak() ? (
         <p className="text-ink-soft">This browser can&apos;t read aloud.</p>
-      ) : options.length === 0 ? (
-        <>
-          <p className="mb-3 text-ink-soft">No English voices found on this device yet.</p>
-          <Tips open />
-        </>
       ) : (
-        <div className="flex flex-col gap-3">
-          <SelectMenu
-            label="Device voice"
-            value={preferred && options.some((o) => o.uri === preferred) ? preferred : ""}
-            onChange={(next) => {
-              stopSpeaking();
-              setVoicePreference(next || null);
-              // Picking a device voice means the parent wants to hear it.
-              if (next) setPiperEnabled(false);
-            }}
-            options={[
-              { value: "", label: `Automatic: ${best ? describe(best) : "best available"}` },
-              ...options.map((o) => ({ value: o.uri, label: describe(o) })),
-            ]}
-          />
-          <div className="flex flex-wrap items-center gap-3">
-            <button type="button" className="rounded-xl bg-[#4f8ef7] px-4 py-2.5 font-bold text-[#0f172a]" onClick={() => previewVoice(preferred)}>
-              ▶ Preview
-            </button>
-            {current && (
-              <span className={`rounded-full px-3 py-1 text-sm font-semibold ${QUALITY[current.quality].className}`}>
-                {shortName(current.name)}: {QUALITY[current.quality].label}
-              </span>
-            )}
-          </div>
-          {current?.online && <p className="text-sm text-ink-soft">This voice needs internet. When offline, read-aloud switches to the best voice on the device.</p>}
-          <p className="text-sm text-ink-soft">Each device has its own voices, so choose one on every tablet or phone your children use. When the offline voice is on, this one is only used until it has downloaded or if it can&apos;t play. Choosing a voice here switches the offline voice off.</p>
-          <Tips open={best?.quality === "basic" || best?.quality === "standard"} />
-        </div>
+        <CurrentVoice current={current ?? undefined} />
       )}
-      {canSpeak() && <FrenchVoice />}
+      <Disclosure title="Change voice" className="mt-3 rounded-xl border-2 border-line px-4">
+        <div className="flex flex-col gap-4 pb-4">
+          <PiperVoice language="en" />
+          {!canSpeak() ? null : options.length === 0 ? (
+            <>
+              <p className="text-ink-soft">No English voices found on this device yet.</p>
+              <Tips open />
+            </>
+          ) : (
+            <div className="flex flex-col gap-3">
+              <SelectMenu
+                label="Device voice"
+                value={preferred && options.some((o) => o.uri === preferred) ? preferred : ""}
+                onChange={(next) => {
+                  stopSpeaking();
+                  setVoicePreference(next || null);
+                  // Picking a device voice means the parent wants to hear it.
+                  if (next) setPiperEnabled(false);
+                }}
+                options={[
+                  { value: "", label: `Automatic: ${best ? describe(best) : "best available"}` },
+                  ...options.map((o) => ({ value: o.uri, label: describe(o) })),
+                ]}
+              />
+              <div className="flex flex-wrap items-center gap-3">
+                <button type="button" className="rounded-xl bg-[#4f8ef7] px-4 py-2.5 font-bold text-[#0f172a]" onClick={() => previewVoice(preferred)}>
+                  ▶ Preview
+                </button>
+                {current && (
+                  <span className={`rounded-full px-3 py-1 text-sm font-semibold ${QUALITY[current.quality].className}`}>
+                    {shortName(current.name)}: {QUALITY[current.quality].label}
+                  </span>
+                )}
+              </div>
+              {current?.online && <p className="text-sm text-ink-soft">This voice needs internet. When offline, read-aloud switches to the best voice on the device.</p>}
+              <p className="text-sm text-ink-soft">Each device has its own voices, so choose one on every tablet or phone your children use. When the offline voice is on, this one is only used until it has downloaded or if it can&apos;t play. Choosing a voice here switches the offline voice off.</p>
+              <Tips open={best?.quality === "basic" || best?.quality === "standard"} />
+            </div>
+          )}
+          {canSpeak() && <FrenchVoice />}
+        </div>
+      </Disclosure>
     </Panel>
   );
 }

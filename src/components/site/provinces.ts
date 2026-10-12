@@ -1,5 +1,5 @@
 import type { Framework } from "@/content/frameworks";
-import { SUBJECTS } from "@/content/subjects";
+import { SUBJECTS, subjectInSentence } from "@/content/subjects";
 import type { GradeId, SubjectId } from "@/content/types";
 import { subjectSeoTitle } from "./curriculum";
 
@@ -9,8 +9,6 @@ function orderedSubjects(ids: Iterable<SubjectId>): SubjectId[] {
   return SUBJECTS.map((s) => s.id).filter((id) => have.has(id));
 }
 
-const PROPER_SUBJECT_WORDS = new Set(["English", "French", "Core", "Immersion"]);
-
 function joinAnd(items: readonly string[]): string {
   if (items.length <= 1) return items[0] ?? "";
   if (items.length === 2) return `${items[0]} and ${items[1]}`;
@@ -19,12 +17,7 @@ function joinAnd(items: readonly string[]): string {
 
 /** "math, English language arts, science and social studies" */
 export function subjectList(ids: readonly SubjectId[]): string {
-  const names = orderedSubjects(ids).map((id) =>
-    subjectSeoTitle(id)
-      .split(" ")
-      .map((word) => (PROPER_SUBJECT_WORDS.has(word) ? word : word.toLowerCase()))
-      .join(" "),
-  );
+  const names = orderedSubjects(ids).map((id) => subjectInSentence(subjectSeoTitle(id)));
   return joinAnd(names);
 }
 

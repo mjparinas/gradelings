@@ -1,10 +1,10 @@
 // @vitest-environment jsdom
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { fireEvent, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { defaultChildSettings, type ChildSettings, type Profile } from "@/lib/model";
 
-// The real store runs; the device database is faked. The voice picker has its own tests.
+// The real store runs; the device database is faked.
 vi.mock("@/lib/localdb", () => ({
   getKV: vi.fn().mockResolvedValue(undefined),
   setKV: vi.fn().mockResolvedValue(undefined),
@@ -13,7 +13,6 @@ vi.mock("@/lib/localdb", () => ({
   deleteProfileEvents: vi.fn().mockResolvedValue(undefined),
   clearAll: vi.fn().mockResolvedValue(undefined),
 }));
-vi.mock("./VoicePicker", () => ({ VoicePicker: () => null }));
 
 import { useStore } from "@/lib/store";
 import { SettingsPage } from "./Settings";
@@ -21,6 +20,8 @@ import { SettingsPage } from "./Settings";
 const kid = (id: string, name: string, over: Partial<Profile> = {}): Profile => ({ id, name, avatar: "ollie", colour: "#fff", grade: "3", framework: "ca-bc", createdAt: 1, updatedAt: 1, ...over });
 const stored = (id = "a"): ChildSettings => useStore.getState().settings[id];
 const sw = (name: string | RegExp) => screen.getByRole("switch", { name });
+const radio = (name: string) => screen.getByRole("radio", { name });
+const choice = (group: string, name: string) => within(screen.getByRole("radiogroup", { name: group })).getByRole("radio", { name });
 
 beforeEach(() => {
   useStore.setState({ profiles: [kid("a", "Ava")], settings: {}, pin: null, sync: { cursor: 0, status: "signed-out", dirtyProfiles: [], dirtyFamily: false } });
@@ -57,6 +58,14 @@ describe("SettingsPage", () => {
     expect(screen.getByRole("tab", { name: /Ben/ })).toHaveAttribute("aria-selected", "true");
   });
 
+  it("keeps the rarely changed options folded under Advanced options", async () => {
+    render(<SettingsPage />);
+    const advanced = screen.getByText("🛠️ Advanced options").closest("details")!;
+    expect(advanced).not.toHaveAttribute("open");
+    expect(advanced).toHaveTextContent("Let them pick a lighter or stretch goal");
+    expect(advanced).toHaveTextContent("Hints count as first try");
+  });
+
   it("locks the daily goal when the child may not pick a lighter or stretch goal", async () => {
     render(<SettingsPage />);
     const pickGoal = sw(/Let them pick a lighter or stretch goal/);
@@ -66,34 +75,53 @@ describe("SettingsPage", () => {
     expect(pickGoal).toHaveAttribute("aria-checked", "false");
   });
 
-  it("turns every calm option on with one button, and off again", async () => {
+  it("turns every calm option on with one switch, and off again", async () => {
     render(<SettingsPage />);
-    await userEvent.click(screen.getByRole("button", { name: "Turn on all calm options" }));
+    const calm = sw(/Calm mode/);
+    expect(calm).toHaveAttribute("aria-checked", "false");
+    await userEvent.click(calm);
     expect(stored()).toMatchObject({ calmMotion: true, quietSounds: true, hideTimers: true, quietToasts: true, shortSessions: true });
-    expect(screen.getByRole("radio", { name: "Hide all" })).toHaveAttribute("aria-checked", "true");
-    // Calm motion also turns vibration off.
-    expect(sw(/Vibration/)).toHaveAttribute("aria-checked", "false");
-    await userEvent.click(screen.getByRole("button", { name: "Turn all calm options off" }));
+    expect(calm).toHaveAttribute("aria-checked", "true");
+    expect(radio("Hide all")).toHaveAttribute("aria-checked", "true");
+    // Gentle sounds is one of the calm options, so the Sounds choice shows it.
+    expect(radio("Gentle")).toHaveAttribute("aria-checked", "true");
+    await userEvent.click(calm);
     expect(stored()).toMatchObject({ calmMotion: false, quietSounds: false, hideTimers: false, quietToasts: false, shortSessions: false });
   });
 
-  it("calls it 'all on' only when every calm option is on", async () => {
+  it("shows calm mode as on only when every calm option is on", async () => {
     render(<SettingsPage />);
     await userEvent.click(sw(/Calm motion/));
-    await userEvent.click(sw(/Quiet sounds/));
-    expect(stored()).toMatchObject({ calmMotion: true, quietSounds: true });
-    expect(screen.getByRole("button", { name: "Turn on all calm options" })).toBeInTheDocument();
+    await userEvent.click(sw(/Hold trophy pop-ups/));
+    await userEvent.click(sw(/Shorter sessions/));
+    await userEvent.click(radio("Gentle"));
+    expect(sw(/Calm mode/)).toHaveAttribute("aria-checked", "false");
+    await userEvent.click(radio("Hide all"));
+    expect(sw(/Calm mode/)).toHaveAttribute("aria-checked", "true");
   });
 
   it("stores the timer choice in the fields older devices read", async () => {
     render(<SettingsPage />);
-    expect(screen.getByRole("radio", { name: "Show all" })).toHaveAttribute("aria-checked", "true");
-    await userEvent.click(screen.getByRole("radio", { name: "Countdowns only" }));
+    expect(radio("Show all")).toHaveAttribute("aria-checked", "true");
+    await userEvent.click(radio("Countdowns only"));
     expect(stored()).toMatchObject({ hideTimers: false, showTimer: false });
     expect(screen.getByText(/No clock in normal lessons/)).toBeInTheDocument();
-    await userEvent.click(screen.getByRole("radio", { name: "Hide all" }));
+    await userEvent.click(radio("Hide all"));
     expect(stored().hideTimers).toBe(true);
     expect(screen.getByText(/Speed Run and Challenge show a quiet bar instead/)).toBeInTheDocument();
+  });
+
+  it("stores the sounds choice in the fields older devices read, with vibration following it", async () => {
+    render(<SettingsPage />);
+    expect(choice("Sounds", "Full")).toHaveAttribute("aria-checked", "true");
+    await userEvent.click(choice("Sounds", "Off"));
+    expect(stored()).toMatchObject({ sound: false, haptics: false });
+    expect(screen.getByText("No sounds or vibration. Read-aloud still works.")).toBeInTheDocument();
+    await userEvent.click(radio("Gentle"));
+    expect(stored()).toMatchObject({ sound: true, quietSounds: true, haptics: true });
+    await userEvent.click(choice("Sounds", "Full"));
+    expect(stored()).toMatchObject({ sound: true, quietSounds: false });
+    expect(screen.queryByRole("switch", { name: /Vibration/ })).not.toBeInTheDocument();
   });
 
   it("saves the other per-child switches", async () => {
@@ -102,37 +130,39 @@ describe("SettingsPage", () => {
       [/Hold trophy pop-ups/, "quietToasts"],
       [/Hints count as first try/, "freeHints"],
       [/Shorter sessions/, "shortSessions"],
+      [/Calm motion/, "calmMotion"],
       [/Roomy text/, "roomyText"],
       [/High contrast/, "highContrast"],
     ] as const) {
       await userEvent.click(sw(name));
       expect(stored()[key]).toBe(true);
     }
-    await userEvent.click(sw(/^Sounds/));
-    expect(stored().sound).toBe(false);
-    await userEvent.click(sw(/Vibration/));
-    expect(stored().haptics).toBe(false);
     // Grade 3 doesn't read aloud by default.
     await userEvent.click(sw(/Read questions out loud/));
     expect(stored().autoRead).toBe(true);
   });
 
-  it("explains the learn-to-play timer and hides it when games are off", async () => {
+  it("offers games as earn, free play or off, with the ratio under Advanced options", async () => {
     render(<SettingsPage />);
+    expect(radio("Earn game time")).toHaveAttribute("aria-checked", "true");
     expect(screen.getByText("Every 20 minutes of learning unlocks 5 minutes of games, up to 20 minutes a day.")).toBeInTheDocument();
-    fireEvent.keyDown(screen.getByRole("slider", { name: /Game time earned/ }), { key: "ArrowRight" });
+    const ratio = screen.getByRole("slider", { name: /Game time earned/ });
+    expect(ratio.closest("details")).toHaveTextContent("Advanced options");
+    fireEvent.keyDown(ratio, { key: "ArrowRight" });
     expect(stored().rewardGameMinutes).toBe(6);
     expect(screen.getByText(/unlocks 6 minutes of games/)).toBeInTheDocument();
 
-    await userEvent.click(sw(/Free play/));
-    expect(stored().freePlay).toBe(true);
+    await userEvent.click(radio("Free play"));
+    expect(stored()).toMatchObject({ gamesEnabled: true, freePlay: true });
     expect(screen.queryByRole("slider", { name: /Learning needed/ })).not.toBeInTheDocument();
-    expect(screen.getByText("Up to 20 minutes of games a day.")).toBeInTheDocument();
+    expect(screen.getByText("Games are open any time, up to 20 minutes a day.")).toBeInTheDocument();
 
-    await userEvent.click(sw(/Arcade games/));
+    await userEvent.click(choice("Games", "Off"));
     expect(stored().gamesEnabled).toBe(false);
-    expect(screen.queryByRole("switch", { name: /Free play/ })).not.toBeInTheDocument();
     expect(screen.queryByRole("slider", { name: /Most game time per day/ })).not.toBeInTheDocument();
+    // Turning games back on keeps free play.
+    await userEvent.click(radio("Free play"));
+    expect(stored()).toMatchObject({ gamesEnabled: true, freePlay: true });
   });
 
   it("lists the province's subjects, turns French on, and never turns the last subject off", async () => {
@@ -149,22 +179,10 @@ describe("SettingsPage", () => {
     expect(screen.getByRole("checkbox", { name: /Math/ })).toHaveAttribute("aria-checked", "true");
   });
 
-  it("changes the parent PIN: digits only, 4 to 6 of them", async () => {
+  it("leaves the device-wide voice and PIN to the Account page", () => {
     render(<SettingsPage />);
-    const box = screen.getByRole("textbox", { name: "New PIN (4–6 digits)" });
-    const change = screen.getByRole("button", { name: "Change PIN" });
-    fireEvent.change(box, { target: { value: "12a" } });
-    expect(box).toHaveValue("12");
-    expect(change).toBeDisabled();
-    fireEvent.change(box, { target: { value: "12345678" } });
-    expect(box).toHaveValue("123456");
-    await userEvent.click(change);
-    expect(await screen.findByText("Saved ✓")).toBeInTheDocument();
-    expect(box).toHaveValue("");
-    expect(await useStore.getState().checkPin("123456")).toBe(true);
-    expect(await useStore.getState().checkPin("1234")).toBe(false);
-    // Typing again hides the old confirmation.
-    fireEvent.change(box, { target: { value: "9" } });
-    await waitFor(() => expect(screen.queryByText("Saved ✓")).not.toBeInTheDocument());
+    expect(screen.queryByRole("button", { name: "Change PIN" })).not.toBeInTheDocument();
+    expect(screen.queryByText(/Read-aloud voice/)).not.toBeInTheDocument();
+    expect(screen.getByText(/The read-aloud voice and parent PIN are under Account\./)).toBeInTheDocument();
   });
 });

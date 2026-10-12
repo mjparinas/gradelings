@@ -9,8 +9,11 @@ import { useStore } from "@/lib/store";
 import { savedReferralCode } from "@/lib/referral";
 import { syncNow } from "@/lib/sync";
 import { Dialog } from "../ui";
-import { PageTitle, Panel } from "./common";
-import { PushToggle } from "./PushToggle";
+import { emailChoice, emailPatch, type EmailChoice, type EmailPrefs } from "@/lib/settingChoices";
+import { Choice, PageTitle, Panel } from "./common";
+import { ParentPin } from "./ParentPin";
+import { PrivacyPanels } from "./Privacy";
+import { VoicePicker } from "./VoicePicker";
 
 const noSubscribe = () => () => {};
 
@@ -106,41 +109,61 @@ function AuthForm({ onDone }: { onDone: () => void }) {
   );
 }
 
-type EmailPref = "weeklyReport" | "practiceReminders" | "adminMail";
+const EMAIL_HELP: Record<EmailChoice, string> = {
+  weekly: "A short summary every Sunday. Unsubscribe any time.",
+  both: "The Sunday summary, plus a friendly note to you, never to your child, after a few quiet days. At most once a week.",
+  none: "No progress emails. You still get receipts and account emails.",
+};
 
-function EmailToggle({ pref, title, hint, verified }: { pref: EmailPref; title: string; hint: string; verified: boolean }) {
-  const [on, setOn] = useState<boolean | null>(null);
+function EmailChoicePanel({ verified }: { verified: boolean }) {
+  const [prefs, setPrefs] = useState<(EmailPrefs & { adminMail?: boolean }) | null>(null);
   const [error, setError] = useState("");
   useEffect(() => {
     void fetch("/api/account/prefs/", { credentials: "same-origin" })
       .then((r) => (r.ok ? r.json() : null))
-      .then((d: Partial<Record<EmailPref, boolean>> | null) => setOn(d?.[pref] ?? null))
-      .catch(() => setOn(null));
-  }, [pref]);
-  if (on === null) return null;
-  async function toggle() {
+      .then((d: (EmailPrefs & { adminMail?: boolean }) | null) => setPrefs(d))
+      .catch(() => setPrefs(null));
+  }, []);
+  if (!prefs) return null;
+  const value = emailChoice(prefs);
+  async function save(patch: Partial<EmailPrefs & { adminMail: boolean }>) {
     setError("");
     const res = await fetch("/api/account/prefs/", {
       method: "POST",
       credentials: "same-origin",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ [pref]: !on }),
+      body: JSON.stringify(patch),
     }).catch(() => null);
-    const data = (await res?.json().catch(() => ({}))) as (Partial<Record<EmailPref, boolean>> & { error?: string }) | undefined;
-    if (res?.ok) setOn(Boolean(data?.[pref]));
+    const data = (await res?.json().catch(() => ({}))) as (EmailPrefs & { adminMail?: boolean; error?: string }) | undefined;
+    if (res?.ok && data) setPrefs({ weeklyReport: Boolean(data.weeklyReport), practiceReminders: Boolean(data.practiceReminders), adminMail: Boolean(data.adminMail) });
     else setError(data?.error ?? "You’re offline. Try again when connected.");
   }
+  const pick = (choice: EmailChoice) => save(emailPatch(choice));
   return (
     <div className="mt-3">
-      <button type="button" role="switch" aria-checked={on} onClick={() => void toggle()} className="flex w-full items-center justify-between gap-4 rounded-xl bg-paper px-4 py-3 text-left">
-        <span>
-          <span className="block font-semibold">{title}</span>
-          <span className="block text-sm text-ink-soft">{verified ? hint : "Confirm your email first to turn this on."}</span>
-        </span>
-        <span className={`relative h-8 w-14 shrink-0 rounded-full transition-colors ${on ? "bg-good" : "bg-ink/20"}`} aria-hidden="true">
-          <span className={`absolute top-1 h-6 w-6 rounded-full bg-white shadow transition-all ${on ? "left-7" : "left-1"}`} />
-        </span>
-      </button>
+      <Choice
+        label="Progress emails"
+        value={value}
+        options={[
+          { value: "weekly", label: "Weekly summary" },
+          { value: "both", label: "Summary and reminders" },
+          { value: "none", label: "None" },
+        ]}
+        onChange={(v) => void pick(v)}
+        help={!verified ? "Confirm your email first to turn these on." : value ? EMAIL_HELP[value] : "Practice reminders only. Pick an option to change it."}
+      />
+      <div className="mt-3">
+        <Choice
+          label="News and tips"
+          value={prefs.adminMail === false ? "off" : "on"}
+          options={[
+            { value: "on", label: "On" },
+            { value: "off", label: "Off" },
+          ]}
+          onChange={(v) => void save({ adminMail: v === "on" })}
+          help="Now and then, a note from us: new features, ideas to try and offers. Never to your child."
+        />
+      </div>
       {error && <p className="mt-1 text-sm text-nudge-dark">{error}</p>}
     </div>
   );
@@ -259,71 +282,68 @@ export function AccountPage({ onBilling }: { onBilling: (b: BillingInfo | null) 
 
   return (
     <>
-      <PageTitle title="Account & sync" sub="Back up progress and keep every device in step." />
-      <div className="grid gap-5 lg:grid-cols-2">
-        {account ? (
-          <Panel title="☁️ Signed in">
-            <p className="text-lg">
-              <b>{account.email}</b>
-            </p>
-            <dl className="mt-3 grid grid-cols-2 gap-2 text-sm">
-              <dt className="text-ink-soft">Status</dt>
-              <dd className="font-semibold capitalize">{sync.status}</dd>
-              <dt className="text-ink-soft">Last synced</dt>
-              <dd className="font-semibold">{sync.lastSyncAt ? new Date(sync.lastSyncAt).toLocaleString("en-CA") : "Not yet"}</dd>
-              <dt className="text-ink-soft">Waiting to upload</dt>
-              <dd className="font-semibold">{pending ?? "…"} events</dd>
-            </dl>
-            {account.verified === false && <VerifyNotice />}
-            <EmailToggle pref="weeklyReport" title="Weekly progress email" hint="A short summary every Sunday. Unsubscribe any time." verified={account.verified !== false} />
-            <EmailToggle
-              pref="practiceReminders"
-              title="Practice reminders"
-              hint="A friendly note to you, never to your child, after a few quiet days. At most once a week."
-              verified={account.verified !== false}
-            />
-            <EmailToggle pref="adminMail" title="News and tips" hint="Now and then, a note from us: new features, ideas to try and offers. Never to your child." verified={account.verified !== false} />
-            <PushToggle />
-            {sync.error && <p className="mt-2 text-sm text-nudge-dark">{sync.error}</p>}
-            <div className="mt-4 flex flex-wrap gap-2">
-              <button type="button" className="rounded-xl bg-[#4f8ef7] px-4 py-2 font-bold text-[#0f172a]" onClick={() => void syncNow()}>
-                Sync now
+      <PageTitle title="Account" sub="Sign-in and sync, emails, this device, and your data." />
+      {/* Two independent columns, so the tall voice panel doesn't leave gaps beside the short ones. */}
+      <div className="grid items-start gap-5 lg:grid-cols-2">
+        <div className="flex flex-col gap-5">
+          {account ? (
+            <Panel title="☁️ Signed in">
+              <p className="text-lg">
+                <b>{account.email}</b>
+              </p>
+              <p className="mt-1 text-sm text-ink-soft">{sync.lastSyncAt ? `Synced ${new Date(sync.lastSyncAt).toLocaleString("en-CA")}` : "Not synced yet"}</p>
+              {account.verified === false && <VerifyNotice />}
+              <EmailChoicePanel verified={account.verified !== false} />
+              {sync.error && <p className="mt-2 text-sm text-nudge-dark">{sync.error}</p>}
+              <div className="mt-4 flex flex-wrap gap-2">
+                <button type="button" className="rounded-xl bg-[#4f8ef7] px-4 py-2 font-bold text-[#0f172a]" onClick={() => void syncNow()}>
+                  Sync now
+                </button>
+                <button type="button" className="rounded-xl border border-line px-4 py-2 font-semibold" onClick={() => void signOut()}>
+                  Sign out
+                </button>
+              </div>
+              <details className="mt-4 text-sm">
+                <summary className="cursor-pointer font-semibold">Sync details</summary>
+                <dl className="mt-2 grid grid-cols-2 gap-2">
+                  <dt className="text-ink-soft">Status</dt>
+                  <dd className="font-semibold capitalize">{sync.status}</dd>
+                  <dt className="text-ink-soft">Waiting to upload</dt>
+                  <dd className="font-semibold">{pending ?? "…"} events</dd>
+                </dl>
+                <p className="mt-2 text-ink-soft">
+                  Progress is saved on this device first and merges answer by answer, so nothing is lost offline. <a className="underline" href="/help/">More in Help</a>.
+                </p>
+              </details>
+            </Panel>
+          ) : (
+            <Panel title={query.get("next") === "subscription" ? "Create an account to subscribe" : "Create a free account"}>
+              {query.get("next") === "subscription" && (
+                <p className="mb-3 font-read text-ink-soft">After this you&apos;ll pick monthly or yearly. The free trial is optional, and confirming your email lets you pay.</p>
+              )}
+              <AuthForm
+                onDone={() => {
+                  void refreshAccount().then(onBilling);
+                  if (query.get("next") === "subscription") go("/subscription");
+                }}
+              />
+            </Panel>
+          )}
+          {account && <SecurityPanel />}
+          <ParentPin />
+          <PrivacyPanels />
+          {account && (
+            <Panel title="Delete account">
+              <p className="mb-3 font-read text-ink-soft">Permanently deletes your account and all progress stored on our servers, and clears this device.</p>
+              <button type="button" className="rounded-xl border border-[#e57a12] px-4 py-2 font-semibold text-nudge-dark" onClick={() => setConfirmDelete(true)}>
+                Delete my account…
               </button>
-              <button type="button" className="rounded-xl border border-line px-4 py-2 font-semibold" onClick={() => void signOut()}>
-                Sign out
-              </button>
-            </div>
-          </Panel>
-        ) : (
-          <Panel title={query.get("next") === "subscription" ? "Create an account to subscribe" : "Create a free account"}>
-            {query.get("next") === "subscription" && (
-              <p className="mb-3 font-read text-ink-soft">After this you&apos;ll pick monthly or yearly. The free trial is optional, and confirming your email lets you pay.</p>
-            )}
-            <AuthForm
-              onDone={() => {
-                void refreshAccount().then(onBilling);
-                if (query.get("next") === "subscription") go("/subscription");
-              }}
-            />
-          </Panel>
-        )}
-        <Panel title="How offline sync works">
-          <ul className="flex list-disc flex-col gap-2 pl-5 font-read text-ink-soft">
-            <li>Everything your children do is saved on the device first, so the app works with no internet at all.</li>
-            <li>When the device is online and you&apos;re signed in, new progress uploads automatically, and progress from your other devices downloads.</li>
-            <li>Progress merges answer by answer, so nothing is lost even if two devices were used offline at the same time.</li>
-            <li>Changes to names, grades and settings sync too. The most recent change wins.</li>
-          </ul>
-        </Panel>
-        {account && <SecurityPanel />}
-        {account && (
-          <Panel title="Delete account">
-            <p className="mb-3 font-read text-ink-soft">Permanently deletes your account and all progress stored on our servers, and clears this device.</p>
-            <button type="button" className="rounded-xl border border-[#e57a12] px-4 py-2 font-semibold text-nudge-dark" onClick={() => setConfirmDelete(true)}>
-              Delete my account…
-            </button>
-          </Panel>
-        )}
+            </Panel>
+          )}
+        </div>
+        <div className="flex flex-col gap-5">
+          <VoicePicker />
+        </div>
       </div>
       <Dialog open={confirmDelete} title="Delete everything?" onClose={() => setConfirmDelete(false)}>
         <p className="mb-3 font-read text-ink-soft">This can&apos;t be undone. Type your password to confirm.</p>

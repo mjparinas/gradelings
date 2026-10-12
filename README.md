@@ -37,9 +37,9 @@ It's a web app first: it runs in any browser, installs to a tablet or phone home
 - **Report cards:** every unit on the report-card scale (BC: Emerging, Developing, Proficient, Extending) with a plain-language explainer.
 - **Children:** add up to 3, edit names, birth year (a grade is suggested from age), grade, curriculum and avatar; reset or remove.
 - **Settings per child:** daily goal, timer visibility, learn-to-play ratio and cap, games on/off, subjects, sound, read-aloud.
-- **Calm and focus options:** per child, parents can turn off in-app motion and celebration sounds, hide timers, hold trophy pop-ups until after the lesson, and use five-question sessions.
+- **Calm and focus options:** per child, one "Calm mode" switch (or each option on its own) can turn off in-app motion and celebration sounds, hide timers, hold trophy pop-ups until after the lesson, and use five-question sessions.
 - **Read-aloud voice (per device):** the most natural installed voice is picked automatically; parents can choose another with a preview and get tips for installing better voices.
-- **Account & sync** (email confirmation, password reset, optional weekly progress email, share a read-only report link), **Subscription** (Stripe), **Privacy** (JSON export, erase device, delete account).
+- **Account** (sign-in and sync, email confirmation, password reset, optional progress emails, read-aloud voice and parent PIN for this device, JSON export, erase device, delete account) and **Subscription** (Stripe). Reports has three views: progress (with a read-only share link), the placement test and the report card.
 
 ### For search engines (public pages)
 
