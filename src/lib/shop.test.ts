@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { getItem, isOwned, isUnlocked, SHOP, STARTER, type ShopItem } from "./shop";
+import { getTrophy } from "./trophies";
 
 describe("shop", () => {
   it("gives every child the free starter buddy, confetti and title", () => {
@@ -33,5 +34,34 @@ describe("shop", () => {
       if (item.kind === "confetti") expect(Array.isArray(item.confetti), item.id).toBe(true);
       if (item.kind !== "companion") expect(item.critter, item.id).toBeUndefined();
     }
+  });
+});
+
+describe("shop items", () => {
+  it("throws real pieces for every paid confetti style, and leaves the free one to the default burst", () => {
+    for (const item of SHOP.filter((i) => i.kind === "confetti")) {
+      if (item.cost === 0) expect(item.confetti, item.id).toEqual([]);
+      else expect(item.confetti!.length, item.id).toBeGreaterThan(0);
+    }
+  });
+
+  it("labels every locked item with exactly what unlocks it, and only asks for trophies that exist", () => {
+    const locked = SHOP.filter((i) => i.unlock);
+    expect(locked.length).toBeGreaterThan(0);
+    for (const item of locked) {
+      const u = item.unlock!;
+      expect(u.level !== undefined || u.trophy !== undefined, item.id).toBe(true);
+      if (u.level !== undefined) expect(u.label, item.id).toBe(`Reach level ${u.level}`);
+      if (u.trophy !== undefined) {
+        const trophy = getTrophy(u.trophy);
+        expect(trophy, `${item.id} needs ${u.trophy}`).toBeDefined();
+        expect(u.label, item.id).toBe(`Win ${trophy!.name}`);
+      }
+    }
+  });
+
+  it("keeps the rarest buddies behind a level", () => {
+    for (const id of ["marlo", "willow", "frost"]) expect(isUnlocked(getItem(id)!, 1, {}), id).toBe(false);
+    expect(isUnlocked(getItem("frost")!, 30, {})).toBe(true);
   });
 });

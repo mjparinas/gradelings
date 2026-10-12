@@ -1,7 +1,7 @@
 import { mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { afterAll, beforeAll, describe, expect, it } from "vitest";
+import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 
 const dir = mkdtempSync(join(tmpdir(), "grademap-referral-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
@@ -140,5 +140,55 @@ describe("thanking the referrer", () => {
     await dbm.run("UPDATE parents SET role = 'student' WHERE family_id = ?", [id]);
     expect((await referral.GET(req("/api/referral/", "GET", undefined, cookie))).status).toBe(401); // student sessions are narrow by design
     expect(await ref.ensureReferralCode(id)).toBeNull();
+  });
+});
+
+describe("thanking a real Stripe subscriber", () => {
+  afterEach(() => {
+    vi.unstubAllEnvs();
+    vi.unstubAllGlobals();
+    vi.restoreAllMocks();
+  });
+
+  async function payingReferrer(address: string) {
+    const { cookie } = await join_(address);
+    const id = (await familyOf(address)).id;
+    const { code } = (await (await referral.GET(req("/api/referral/", "GET", undefined, cookie))).json()) as { code: string };
+    await dbm.run("UPDATE families SET subscription_status = 'active', plan = 'premium', stripe_customer = ?, current_period_end = 123 WHERE id = ?", [`cus_${id}`, id]);
+    return { id, code };
+  }
+
+  it("takes a month's price off their next Stripe invoice instead of moving dates", async () => {
+    vi.stubEnv("STRIPE_SECRET_KEY", "sk_test_ref");
+    const fetchMock = vi.fn(async () => new Response("{}", { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+    const { id, code } = await payingReferrer("stripe-payer@example.com");
+    await join_("stripe-pal@example.com", code);
+    await confirm("stripe-pal@example.com");
+
+    const credits = fetchMock.mock.calls.filter((c) => String((c as unknown[])[0]).includes("/balance_transactions"));
+    expect(credits).toHaveLength(1);
+    const [url, init] = credits[0] as unknown as [string, RequestInit];
+    expect(url).toBe(`https://api.stripe.com/v1/customers/${encodeURIComponent(`cus_${id}`)}/balance_transactions`);
+    expect(new URLSearchParams(String(init.body)).get("amount")).toBe(String(-Math.round(plan.PRICES.month.amount * 100)));
+    const row = (await dbm.query<{ current_period_end: number }>("SELECT current_period_end FROM families WHERE id = ?", [id]))[0];
+    expect(Number(row.current_period_end)).toBe(123);
+  });
+
+  it("releases the reward when Stripe refuses, so a later confirmation can try again", async () => {
+    vi.stubEnv("STRIPE_SECRET_KEY", "sk_test_ref");
+    vi.spyOn(console, "error").mockImplementation(() => undefined);
+    vi.stubGlobal("fetch", vi.fn(async () => new Response(JSON.stringify({ error: { message: "No such customer" } }), { status: 400 })));
+    const { code } = await payingReferrer("stripe-fail@example.com");
+    await join_("stripe-fail-pal@example.com", code);
+    const pal = (await familyOf("stripe-fail-pal@example.com")).id;
+
+    expect(await ref.rewardReferrer(pal)).toBe(false);
+    const after = await dbm.query<{ referral_rewarded_at: number | null }>("SELECT referral_rewarded_at FROM families WHERE id = ?", [pal]);
+    expect(after[0].referral_rewarded_at).toBeNull();
+
+    vi.stubGlobal("fetch", vi.fn(async () => new Response("{}", { status: 200 })));
+    expect(await ref.rewardReferrer(pal)).toBe(true);
+    expect(await ref.rewardReferrer(pal)).toBe(false); // Thanked once only.
   });
 });

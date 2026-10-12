@@ -374,26 +374,35 @@ export const useStore = create<State>()((set, get) => ({
     const newEvents = events.filter((e) => !known.has(e.id));
     // Last write wins for profiles and settings.
     const byId = new Map(state.profiles.map((p) => [p.id, p]));
+    let profilesChanged = false;
     for (const raw of profiles) {
       const p = withFramework(raw);
       const mine = byId.get(p.id);
-      if (!mine || p.updatedAt > mine.updatedAt) byId.set(p.id, p);
+      if (!mine || p.updatedAt > mine.updatedAt) {
+        byId.set(p.id, p);
+        profilesChanged = true;
+      }
     }
+    let settingsChanged = false;
     const mergedSettings = { ...state.settings };
     for (const s of settings) {
       const mine = mergedSettings[s.profileId];
-      if (!mine || s.updatedAt > mine.updatedAt) mergedSettings[s.profileId] = s;
+      if (!mine || s.updatedAt > mine.updatedAt) {
+        mergedSettings[s.profileId] = s;
+        settingsChanged = true;
+      }
     }
-    const mergedProfiles = [...byId.values()];
+    // Keep the old references when nothing changed: background sync treats a new reference as new progress.
+    const mergedProfiles = profilesChanged ? [...byId.values()] : state.profiles;
     set({
       events: newEvents.length ? [...state.events, ...newEvents] : state.events,
       profiles: mergedProfiles,
-      settings: mergedSettings,
+      settings: settingsChanged ? mergedSettings : state.settings,
       family: family ? { ...state.family, ...family, account: state.family.account } : state.family,
     });
     if (newEvents.length) void localdb.putEvents(newEvents, 1);
-    save("profiles", mergedProfiles);
-    save("settings", mergedSettings);
+    if (profilesChanged) save("profiles", mergedProfiles);
+    if (settingsChanged) save("settings", mergedSettings);
     if (family) save("family", get().family);
     if (classwork) {
       set({ classwork });

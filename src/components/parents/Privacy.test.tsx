@@ -1,0 +1,78 @@
+// @vitest-environment jsdom
+import { render, screen, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import type { AppEvent, Profile } from "@/lib/model";
+
+const h = vi.hoisted(() => ({ push: vi.fn(), clearAll: vi.fn() }));
+vi.mock("@/lib/localdb", () => ({
+  getKV: vi.fn().mockResolvedValue(undefined),
+  setKV: vi.fn().mockResolvedValue(undefined),
+  putEvents: vi.fn().mockResolvedValue(undefined),
+  allEvents: vi.fn().mockResolvedValue([]),
+  deleteProfileEvents: vi.fn().mockResolvedValue(undefined),
+  clearAll: h.clearAll,
+}));
+vi.mock("next/navigation", () => ({ useRouter: () => ({ push: h.push }) }));
+
+import { APP_NAME } from "@/lib/brand";
+import { useStore } from "@/lib/store";
+import { PrivacyPage } from "./Privacy";
+
+const ava: Profile = { id: "a", name: "Ava", avatar: "ollie", colour: "#fff", grade: "3", framework: "ca-bc", createdAt: 1, updatedAt: 1 };
+const event = { id: "e1", profileId: "a", t: 5, type: "answer", unit: "3/math/x", correct: true, attempts: 1, revealed: false, ms: 900, mode: "practice" } as AppEvent;
+
+beforeEach(() => {
+  h.push.mockReset();
+  h.clearAll.mockReset().mockResolvedValue(undefined);
+  useStore.setState({ profiles: [ava], events: [event], settings: {}, activeId: "a", pin: { hash: "h", salt: "s" } });
+});
+afterEach(() => vi.restoreAllMocks());
+
+describe("PrivacyPage", () => {
+  it("says what is stored, and that there are no ads, tracking pixels or data sales", () => {
+    render(<PrivacyPage />);
+    expect(screen.getByText(/No free text, photos or voice recordings\./)).toBeInTheDocument();
+    expect(screen.getByText("No ads, no tracking pixels, and we never sell data.")).toBeInTheDocument();
+  });
+
+  it("downloads every child, setting and answer as a dated JSON file", async () => {
+    let blob: Blob | undefined;
+    const createObjectURL = vi.fn((b: Blob) => {
+      blob = b;
+      return "blob:export";
+    });
+    const revokeObjectURL = vi.fn();
+    Object.assign(URL, { createObjectURL, revokeObjectURL });
+    let downloaded = "";
+    vi.spyOn(HTMLAnchorElement.prototype, "click").mockImplementation(function (this: HTMLAnchorElement) {
+      downloaded = this.download;
+    });
+    render(<PrivacyPage />);
+    await userEvent.click(screen.getByRole("button", { name: "⬇️ Download all data (JSON)" }));
+    expect(downloaded).toMatch(new RegExp(`^${APP_NAME.toLowerCase()}-export-\\d{4}-\\d{2}-\\d{2}\\.json$`));
+    expect(blob!.type).toBe("application/json");
+    const data = JSON.parse(await blob!.text());
+    expect(data.app).toBe(APP_NAME);
+    expect(data.profiles).toEqual([ava]);
+    expect(data.events).toEqual([event]);
+    // The parent PIN never leaves the device in an export.
+    expect(data).not.toHaveProperty("pin");
+    expect(revokeObjectURL).toHaveBeenCalledWith("blob:export");
+  });
+
+  it("erases this device only after confirming, then goes back to the kids' area", async () => {
+    render(<PrivacyPage />);
+    await userEvent.click(screen.getByRole("button", { name: "Erase everything on this device" }));
+    expect(screen.getByRole("dialog", { name: "Erase this device?" })).toHaveTextContent("If you're signed in, your account keeps a copy.");
+    await userEvent.click(screen.getByRole("button", { name: "Cancel" }));
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    expect(h.clearAll).not.toHaveBeenCalled();
+
+    await userEvent.click(screen.getByRole("button", { name: "Erase everything on this device" }));
+    await userEvent.click(screen.getByRole("button", { name: "Yes, erase" }));
+    await waitFor(() => expect(h.push).toHaveBeenCalledWith("/play/"));
+    expect(h.clearAll).toHaveBeenCalled();
+    expect(useStore.getState()).toMatchObject({ profiles: [], events: [], pin: null, activeId: null });
+  });
+});

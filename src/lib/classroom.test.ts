@@ -1,5 +1,5 @@
-import { describe, expect, it } from "vitest";
-import { classInsights, type StudentRow } from "./classroom";
+import { afterEach, describe, expect, it, vi } from "vitest";
+import { call, classInsights, type StudentRow } from "./classroom";
 
 const DAY = 86_400_000;
 const NOW = 100 * DAY;
@@ -38,5 +38,29 @@ describe("classInsights", () => {
 
   it("flags no one when nothing is assigned", () => {
     expect(classInsights([student("a", [], null)], [], name, NOW).checkIn).toEqual([]);
+  });
+});
+
+describe("call (teacher API helper)", () => {
+  afterEach(() => vi.unstubAllGlobals());
+
+  it("sends JSON only when there is a body, with the session cookie", async () => {
+    const fetchMock = vi.fn(async () => new Response(JSON.stringify({ classes: [] })));
+    vi.stubGlobal("fetch", fetchMock);
+    expect(await call("/api/classes/")).toEqual({ classes: [] });
+    await call("/api/classes/", "POST", { name: "Room 4" });
+    const [, get] = fetchMock.mock.calls[0] as unknown as [string, RequestInit];
+    const [, post] = fetchMock.mock.calls[1] as unknown as [string, RequestInit];
+    expect(get).toMatchObject({ method: "GET", credentials: "same-origin", headers: undefined, body: undefined });
+    expect(post).toMatchObject({ method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ name: "Room 4" }) });
+  });
+
+  it("explains refusals, unreadable errors and a lost connection in plain words", async () => {
+    vi.stubGlobal("fetch", vi.fn(async () => new Response(JSON.stringify({ error: "That class is full." }), { status: 400 })));
+    await expect(call("/api/classes/students/", "POST", {})).rejects.toThrow("That class is full.");
+    vi.stubGlobal("fetch", vi.fn(async () => new Response("<html>", { status: 500 })));
+    await expect(call("/api/classes/")).rejects.toThrow("Something went wrong (500).");
+    vi.stubGlobal("fetch", vi.fn(async () => Promise.reject(new TypeError("Failed to fetch"))));
+    await expect(call("/api/classes/")).rejects.toThrow(/offline/);
   });
 });

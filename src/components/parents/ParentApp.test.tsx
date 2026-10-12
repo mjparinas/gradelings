@@ -1,0 +1,201 @@
+// @vitest-environment jsdom
+import { act, render, screen, within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import type { FamilyInfo, Profile } from "@/lib/model";
+
+// The real store boots from a faked device database. Each section has its own tests, so here they are
+// stand-ins that show which page the parent area chose and what it was given.
+const h = vi.hoisted(() => ({
+  kv: {} as Record<string, unknown>,
+  syncNow: vi.fn(),
+  startBackgroundSync: vi.fn(),
+  android: false,
+  billing: [] as unknown[],
+}));
+vi.mock("@/lib/localdb", () => ({
+  getKV: vi.fn(async (key: string) => h.kv[key]),
+  setKV: vi.fn().mockResolvedValue(undefined),
+  putEvents: vi.fn().mockResolvedValue(undefined),
+  allEvents: vi.fn().mockResolvedValue([]),
+  unsyncedEvents: vi.fn().mockResolvedValue([]),
+  deleteProfileEvents: vi.fn().mockResolvedValue(undefined),
+  clearAll: vi.fn().mockResolvedValue(undefined),
+}));
+vi.mock("@/lib/sync", () => ({ syncNow: h.syncNow, startBackgroundSync: h.startBackgroundSync }));
+vi.mock("@/lib/twa", () => ({ isAndroidApp: () => h.android }));
+vi.mock("next/link", () => ({ default: ({ href, children, className }: { href: string; children: React.ReactNode; className?: string }) => <a href={href} className={className}>{children}</a> }));
+vi.mock("./Gate", () => ({ Gate: ({ onPass }: { onPass: () => void }) => <button onClick={onPass}>Unlock</button> }));
+vi.mock("./Overview", () => ({ Overview: () => <p>page:overview</p> }));
+vi.mock("./Reports", () => ({ ReportsPage: ({ childId }: { childId?: string }) => <p>page:reports:{childId ?? "-"}</p> }));
+vi.mock("./Placement", () => ({ PlacementPage: ({ childId }: { childId?: string }) => <p>page:placement:{childId ?? "-"}</p> }));
+vi.mock("./Children", () => ({ ChildrenPage: () => <p>page:children</p> }));
+vi.mock("./Settings", () => ({ SettingsPage: ({ childId }: { childId?: string }) => <p>page:settings:{childId ?? "-"}</p> }));
+vi.mock("./Account", () => ({ AccountPage: () => <p>page:account</p> }));
+vi.mock("./ReportCards", () => ({ ReportCardsPage: ({ childId }: { childId?: string }) => <p>page:report-cards:{childId ?? "-"}</p> }));
+vi.mock("./Privacy", () => ({ PrivacyPage: () => <p>page:privacy</p> }));
+vi.mock("./Subscription", () => ({
+  SubscriptionPage: ({ billing }: { billing: unknown }) => {
+    h.billing.push(billing);
+    return <p>page:subscription</p>;
+  },
+}));
+
+import { SITE_HOST } from "@/lib/brand";
+import { useStore } from "@/lib/store";
+import { ParentApp } from "./ParentApp";
+
+const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status });
+const fetchMock = vi.fn();
+const account = { email: "p@example.com", familyId: "f", verified: true };
+const trial = (days: number, over: Partial<FamilyInfo> = {}): FamilyInfo => ({ plan: "trial", trialEndsAt: Date.now() + days * 86_400_000 - 1000, updatedAt: 1, ...over });
+const ava: Profile = { id: "a", name: "Ava", avatar: "ollie", colour: "#fff", grade: "3", framework: "ca-bc", createdAt: 1, updatedAt: 1 };
+
+beforeEach(() => {
+  h.kv = { family: trial(5), deviceId: "dev" };
+  h.syncNow.mockReset().mockResolvedValue(undefined);
+  h.startBackgroundSync.mockReset();
+  h.android = false;
+  h.billing = [];
+  // The server returns the same family the device has.
+  fetchMock.mockReset().mockImplementation(async () => json({ family: h.kv.family, billing: { stripe: true, dev: false } }));
+  vi.stubGlobal("fetch", fetchMock);
+  // The router scrolls to the top on every hash change; jsdom has no scrolling.
+  window.scrollTo = vi.fn() as unknown as typeof window.scrollTo;
+  window.location.hash = "#/";
+  useStore.setState({ ready: false, profiles: [], events: [], family: trial(5), sync: { cursor: 0, status: "signed-out", dirtyProfiles: [], dirtyFamily: false } });
+});
+afterEach(() => vi.unstubAllGlobals());
+
+/** Boots the app, passes the PIN gate and returns the header. */
+async function open(hash = "#/") {
+  window.location.hash = hash;
+  render(<ParentApp />);
+  await userEvent.click(await screen.findByRole("button", { name: "Unlock" }));
+  // The first page waits for the children's lessons to download, which can be slow on a busy machine.
+  return screen.findByRole("banner", {}, { timeout: 15_000 });
+}
+
+describe("ParentApp", () => {
+  it("loads the device's data, starts background sync, then asks for the PIN", async () => {
+    render(<ParentApp />);
+    expect(screen.getByText("Getting ready…")).toBeInTheDocument();
+    expect(await screen.findByRole("button", { name: "Unlock" })).toBeInTheDocument();
+    expect(h.startBackgroundSync).toHaveBeenCalledTimes(1);
+    // Signed out: no account check.
+    expect(fetchMock).not.toHaveBeenCalled();
+    expect(screen.queryByText("page:overview")).not.toBeInTheDocument();
+  });
+
+  it("checks a signed-in account at /api/auth/me/ and hands billing to the subscription page", async () => {
+    h.kv.family = trial(5, { account });
+    await open("#/subscription");
+    expect(fetchMock).toHaveBeenCalledWith("/api/auth/me/", { credentials: "same-origin" });
+    expect(screen.getByText("page:subscription")).toBeInTheDocument();
+    expect(h.billing.at(-1)).toEqual({ stripe: true, dev: false });
+  });
+
+  it("keeps class student accounts out of the parent area", async () => {
+    h.kv.family = trial(5, { account: { ...account, student: true } });
+    render(<ParentApp />);
+    expect(await screen.findByRole("heading", { name: "This is a class account" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Back to learning" })).toHaveAttribute("href", "/play/");
+    expect(screen.queryByRole("button", { name: "Unlock" })).not.toBeInTheDocument();
+  });
+
+  it.each([
+    ["#/", "page:overview"],
+    ["#/reports/b", "page:reports:b"],
+    ["#/placement", "page:placement:-"],
+    ["#/children", "page:children"],
+    ["#/settings/a", "page:settings:a"],
+    ["#/account", "page:account"],
+    ["#/report-cards/a", "page:report-cards:a"],
+    ["#/privacy", "page:privacy"],
+    ["#/no-such-page", "page:overview"],
+  ])("routes %s to the right section", async (hash, text) => {
+    await open(hash);
+    expect(screen.getByText(text)).toBeInTheDocument();
+  });
+
+  it("follows hash changes without asking for the PIN again", async () => {
+    await open("#/");
+    await act(async () => {
+      window.location.hash = "#/children";
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    });
+    expect(screen.getByText("page:children")).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Unlock" })).not.toBeInTheDocument();
+  });
+
+  it("marks the current section in the navigation", async () => {
+    await open("#/children");
+    const nav = screen.getByRole("navigation", { name: "Parent sections" });
+    expect(within(nav).getByRole("link", { name: /Children/ }).className).toContain("bg-[#253047]");
+    expect(within(nav).getByRole("link", { name: /Reports/ }).className).not.toContain("bg-[#253047]");
+  });
+
+  it("offers Subscribe with the trial days left during the trial", async () => {
+    const header = await open();
+    expect(within(header).getByRole("link", { name: "Subscribe · 5 days left" })).toHaveAttribute("href", "#/subscription");
+    expect(within(screen.getByRole("navigation")).getByRole("link", { name: /Subscribe$/ })).toHaveAttribute("href", "#/subscription");
+  });
+
+  it("says 1 day, singular, on the last day of the trial", async () => {
+    h.kv.family = trial(1);
+    const header = await open();
+    expect(within(header).getByRole("link", { name: "Subscribe · 1 day left" })).toBeInTheDocument();
+  });
+
+  it("says just Subscribe after the trial", async () => {
+    h.kv.family = trial(-1, { plan: "free" });
+    await open();
+    const top = screen.getAllByRole("link", { name: "Subscribe" })[0];
+    expect(top).toHaveAttribute("href", "#/subscription");
+    expect(screen.queryByRole("link", { name: /days? left/ })).not.toBeInTheDocument();
+  });
+
+  it("shows Premium, and the plain Subscription section, to a paying family", async () => {
+    h.kv.family = trial(-1, { plan: "premium", account });
+    const header = await open();
+    expect(within(header).getByText("⭐ Premium")).toBeInTheDocument();
+    expect(within(header).queryByRole("link", { name: /Subscribe/ })).not.toBeInTheDocument();
+    expect(within(screen.getByRole("navigation")).getByRole("link", { name: /Subscription/ })).toBeInTheDocument();
+  });
+
+  it("names the website instead of a payment link inside the Android app", async () => {
+    h.android = true;
+    const header = await open();
+    expect(within(header).getByText(`Subscribe at ${SITE_HOST}`)).toBeInTheDocument();
+    expect(within(header).queryByRole("link", { name: /Subscribe/ })).not.toBeInTheDocument();
+    expect(within(screen.getByRole("navigation")).getByRole("link", { name: /Subscription/ })).toBeInTheDocument();
+  });
+
+  it("shows the sync state in the header and syncs when tapped", async () => {
+    const header = await open();
+    const badge = within(header).getByRole("button", { name: /Saved on this device/ });
+    await userEvent.click(badge);
+    expect(h.syncNow).toHaveBeenCalled();
+
+    const states: [Partial<ReturnType<typeof useStore.getState>["sync"]>, RegExp][] = [
+      [{ status: "syncing" }, /Syncing…/],
+      [{ status: "offline" }, /Offline · will sync later/],
+      [{ status: "error" }, /Sync problem · retrying/],
+      [{ status: "idle", lastSyncAt: undefined }, /Ready to sync/],
+      [{ status: "idle", lastSyncAt: Date.now() }, /☁️ Synced /],
+    ];
+    act(() => useStore.setState({ family: { ...useStore.getState().family, account } }));
+    for (const [sync, text] of states) {
+      act(() => useStore.setState({ sync: { ...useStore.getState().sync, ...sync } }));
+      expect(within(header).getByRole("button", { name: text })).toBeInTheDocument();
+    }
+  });
+
+  it("downloads each child's lessons before showing a page", async () => {
+    h.kv.profiles = [ava];
+    await open("#/");
+    expect(screen.getByText("page:overview")).toBeInTheDocument();
+    const { isGradeLoaded } = await import("@/content");
+    expect(isGradeLoaded("3", "ca-bc")).toBe(true);
+  });
+});
