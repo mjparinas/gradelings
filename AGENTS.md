@@ -26,7 +26,7 @@ node scripts/e2e-devices.mjs http://localhost:3000                # layout on 14
 node scripts/e2e-offline.mjs                                      # real offline (starts its own server)
 node scripts/e2e-classroom.mjs http://localhost:3000              # teacher adds a student, who signs in with codes, opens a lesson and practises
 node scripts/e2e-a11y.mjs http://localhost:3000                   # axe-core WCAG 2.2 A/AA, plus colour-blind checks (screenshots in e2e-shots/a11y)
-node scripts/e2e-admin.mjs http://localhost:3000                  # admin panel (server needs ADMIN_EMAILS=admin-e2e@example.com): flags, codes, A/B tests, users, axe scan
+node scripts/e2e-admin.mjs http://localhost:3000                  # admin panel (server needs ADMIN_EMAILS=admin-e2e@example.com): to-do list, emails, inbox, flags, codes, A/B tests, users, axe scan
 ```
 
 Before you push, run tests, lint and typecheck. For UI or flow changes, also run the e2e scripts.
@@ -76,7 +76,7 @@ Tests are duplicated across screen sizes only where layout can break:
 - **Platform:** a web-first installable app (PWA) built with Next.js. Android is a Trusted Web Activity that wraps `/play/` (`android/`, `docs/ANDROID.md`), not Capacitor. Don't add features that only work in a native shell.
 
 ### Money
-- **No ads, ever. No tracking pixels. Never sell data.** Kids can never buy anything; coins are earned only by learning.
+- **No ads, ever. No tracking pixels. Never sell data.** Kids can never buy anything; coins are earned only by learning. The one exception is testing: a device signed in to an admin account shows unlimited coins (`TEST_COINS`, `docs/ADMIN.md`), never stored or synced.
 - **Family plan:** C$14.99/month or C$119.99/year, with "Save 33%" on the yearly plan, for up to 3 children.
   - The plan includes a 30-day free trial with everything on and no card needed.
   - After the trial, the first 2 units of every course stay free forever.
@@ -312,9 +312,10 @@ Tests are duplicated across screen sizes only where layout can break:
 
 ### Admin panel (`/admin/`)
 - **Full guide:** `docs/ADMIN.md`. An admin is an ordinary account whose confirmed email is in `ADMIN_EMAILS`; the list lives in the environment so no request can grant it. Without it, `/api/admin/*` answers 404. Every admin route goes through `requireAdmin` (`src/server/admin.ts`): 404 for non-admins, same-origin check on changes, and every change is written to `admin_audit`.
-- **Sections:** a business dashboard (customers, sign-ups, trial conversion, practice, revenue, profit and projections with charts; `src/lib/adminMetrics.ts`, revenue from the `payments` table the Stripe webhook fills; most tiles open the list behind them, `src/server/adminDetail.ts`), users (search, trial and access changes, confirm email, sign out everywhere, per-family flag overrides, delete), codes (on top of `/api/admin/codes/`), feature flags, A/B tests, question reports and the change log.
+- **Sections:** a business dashboard (customers, sign-ups, trial conversion, practice, revenue, profit and projections with charts; `src/lib/adminMetrics.ts`, revenue from the `payments` table the Stripe webhook fills; most tiles open the list behind them, `src/server/adminDetail.ts`), a to-do list (`src/server/adminQueue.ts`: families worth a nudge, failed payments, unanswered mail), users (search, last sign-in and practice, trial and access changes, confirm email, sign out everywhere, per-family flag overrides, emailing the family, delete), emails (the email log with Resend delivery reports, and group sends that need `SEND n` typed back), the inbox (mail Resend receives, read live, answered as plain text), codes (on top of `/api/admin/codes/`), feature flags, A/B tests, question reports and the change log.
 - **Feature flags are defined in code** (`FLAGS` in `src/lib/flags.ts`); the database holds only their state, rollout and per-family overrides. When you add a feature that may need switching off, add a flag and read it with `useFlag`/`useIsOn` (kids' app, `src/lib/remoteFlags.ts`) or `isFlagOn` (server). Flags reach devices through `/api/flags/` and are cached for offline use.
 - **A/B tests** are created in the panel; code reads them with `useVariant` or `variantsFor`. Variants are fixed once a test starts. Results count signed-in families only.
+- **Admin email** (`src/server/adminEmail.ts`): goes only to confirmed accounts with **News and tips** on (`parents.admin_mail`) and an address that hasn't bounced, always with an unsubscribe link and the mailing address (CASL). `{children}` is filled in at send time only; the email log stores kind, subject as written and status, never bodies. No open or click tracking.
 - **Privacy:** the panel never shows children's names or results, and leaves class student accounts out. Keep it that way, and keep `deleteFamilyData` (`src/server/deleteFamily.ts`) complete when adding tables keyed by family.
 
 ### Classroom mode (`/teachers/`)

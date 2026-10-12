@@ -10,6 +10,7 @@ import { SelectMenu } from "@/components/SelectMenu";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { call } from "@/lib/classroom";
 import { Dashboard } from "./Dashboard";
+import { Emails, FamilyEmail, formatAgo, Inbox, Queue, type EmailRow } from "./Engage";
 import { parseVariants, type ExperimentStatus, type FlagScope, type Variant } from "@/lib/flags";
 
 // The site-wide admin panel. Only accounts listed in ADMIN_EMAILS (with a confirmed email) get past the
@@ -139,6 +140,8 @@ interface UserRow {
   trialEndsAt: number;
   accessUntil: number | null;
   subscriptionStatus: string | null;
+  lastLogin: number | null;
+  lastPractice: number | null;
 }
 
 interface FamilyDetail {
@@ -154,7 +157,18 @@ interface FamilyDetail {
     subscriptionInterval: string | null;
     currentPeriodEnd: number | null;
   };
-  parents: { id: string; email: string; createdAt: number; verified: boolean; weeklyReport: boolean }[];
+  parents: {
+    id: string;
+    email: string;
+    createdAt: number;
+    verified: boolean;
+    weeklyReport: boolean;
+    practiceReminders: boolean;
+    newsAndTips: boolean;
+    bouncedAt: number | null;
+    lastLogin: number | null;
+  }[];
+  emails: EmailRow[];
   children: { grade: string; framework: string }[];
   activity: { events: number; lastActive: number | null };
   sessions: { active: number; lastSignIn: number | null };
@@ -206,19 +220,21 @@ function Users({ flags, initialOpen = null }: { flags: FlagRow[]; initialOpen?: 
       <Notice err={err} />
       {users && (
         <div className="mt-3 overflow-x-auto rounded-2xl border border-line bg-white">
-          <table className="w-full min-w-[36rem] text-left">
+          <table className="w-full min-w-[48rem] text-left">
             <thead>
               <tr className="border-b border-line">
                 <th scope="col" className="p-3">Email</th>
                 <th scope="col" className="p-3">Joined</th>
                 <th scope="col" className="p-3">Plan</th>
                 <th scope="col" className="p-3">Code access</th>
+                <th scope="col" className="p-3">Last sign-in</th>
+                <th scope="col" className="p-3">Last practice</th>
               </tr>
             </thead>
             <tbody>
               {users.length === 0 && (
                 <tr>
-                  <td colSpan={4} className="p-3 text-ink-soft">No accounts match.</td>
+                  <td colSpan={6} className="p-3 text-ink-soft">No accounts match.</td>
                 </tr>
               )}
               {users.map((u) => (
@@ -231,6 +247,8 @@ function Users({ flags, initialOpen = null }: { flags: FlagRow[]; initialOpen?: 
                   <td className="p-3">{day(u.createdAt)}</td>
                   <td className="p-3">{planText(u)}</td>
                   <td className="p-3">{accessText(u.accessUntil)}</td>
+                  <td className="p-3">{u.lastLogin ? formatAgo(u.lastLogin) : "—"}</td>
+                  <td className="p-3">{u.lastPractice ? formatAgo(u.lastPractice) : "Never"}</td>
                 </tr>
               ))}
             </tbody>
@@ -279,6 +297,7 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
           <div><dt className="inline font-semibold">Subscription: </dt><dd className="inline">{f.subscriptionStatus ? `${f.subscriptionStatus}${f.subscriptionInterval ? `, ${f.subscriptionInterval}ly` : ""}${f.currentPeriodEnd ? `, renews ${day(f.currentPeriodEnd)}` : ""}` : "None"}</dd></div>
           <div><dt className="inline font-semibold">Waiting discount: </dt><dd className="inline">{f.discountCode ?? "None"}</dd></div>
           <div><dt className="inline font-semibold">Last practice: </dt><dd className="inline">{day(d.activity.lastActive)} ({d.activity.events.toLocaleString("en-CA")} events)</dd></div>
+          <div><dt className="inline font-semibold">Last sign-in: </dt><dd className="inline">{d.parents[0]?.lastLogin ? formatAgo(d.parents[0].lastLogin) : "—"}</dd></div>
           <div><dt className="inline font-semibold">Signed in on: </dt><dd className="inline">{d.sessions.active} {d.sessions.active === 1 ? "device" : "devices"}</dd></div>
           <div><dt className="inline font-semibold">Open classes: </dt><dd className="inline">{d.classes}</dd></div>
           <div><dt className="inline font-semibold">Family id: </dt><dd className="inline break-all font-mono text-sm">{f.id}</dd></div>
@@ -345,7 +364,11 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
           {d.parents.map((p) => (
             <li key={p.id} className="flex flex-wrap items-center gap-2">
               <span className="break-all">{p.email}</span>
-              <span className="text-sm text-ink-soft">{p.verified ? "email confirmed" : "email not confirmed"}</span>
+              <span className="text-sm text-ink-soft">
+                {p.verified ? "email confirmed" : "email not confirmed"}
+                {p.bouncedAt ? ", bouncing" : ""}
+                {`, weekly report ${p.weeklyReport ? "on" : "off"}, reminders ${p.practiceReminders ? "on" : "off"}, news and tips ${p.newsAndTips ? "on" : "off"}`}
+              </span>
               {!p.verified && (
                 <button type="button" disabled={busy} className={quiet} onClick={() => void run("verify-email", { parentId: p.id }, "Email marked as confirmed.")}>
                   Mark email confirmed
@@ -358,6 +381,8 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
           Sign out everywhere
         </button>
       </div>
+
+      <FamilyEmail familyId={id} parent={d.parents[0]} emails={d.emails} />
 
       <div className={card}>
         <h3 className="text-xl font-bold">Feature flags for this family</h3>
@@ -907,28 +932,48 @@ function AuditLog() {
 
 // ---------- The app ----------
 
-const TABS = ["Overview", "Users", "Codes", "Flags", "A/B tests", "Reports", "Log"] as const;
+const TABS = ["Overview", "To do", "Users", "Emails", "Inbox", "Codes", "Flags", "A/B tests", "Reports", "Log"] as const;
 type Tab = (typeof TABS)[number];
 
 function Panel() {
   const [tab, setTab] = useState<Tab>("Overview");
   // A family opened from a dashboard list: Users starts on that family's page.
   const [family, setFamily] = useState<string | null>(null);
+  // A message opened from the to-do list: Inbox starts on it.
+  const [inboxId, setInboxId] = useState<string | null>(null);
+  // How many to-do items are waiting, shown on the tab. Loaded once here so the count shows from any tab.
+  const [todo, setTodo] = useState<number | null>(null);
+  useEffect(() => {
+    call<{ items: unknown[] }>("/api/admin/queue/").then(
+      (r) => setTodo(r.items?.length ?? null),
+      () => setTodo(null),
+    );
+  }, []);
   const [flags, setFlags] = useState<FlagRow[] | null>(null);
   const loadFlags = useCallback(() => {
     call<{ flags: FlagRow[] }>("/api/admin/flags/").then((r) => setFlags(r.flags), () => setFlags([]));
   }, []);
   useEffect(loadFlags, [loadFlags]);
+  const openFamily = (id: string) => {
+    setFamily(id);
+    setTab("Users");
+  };
   const body: Record<Tab, ReactNode> = {
-    Overview: (
-      <Overview
-        onOpenFamily={(id) => {
-          setFamily(id);
-          setTab("Users");
+    Overview: <Overview onOpenFamily={openFamily} />,
+    "To do": (
+      <Queue
+        onOpenFamily={openFamily}
+        onReports={() => setTab("Reports")}
+        onInbox={(id) => {
+          setInboxId(id);
+          setTab("Inbox");
         }}
+        onCount={setTodo}
       />
     ),
     Users: <Users key={family ?? ""} flags={flags ?? []} initialOpen={family} />,
+    Emails: <Emails onOpenFamily={openFamily} />,
+    Inbox: <Inbox key={inboxId ?? ""} initialId={inboxId} onOpenFamily={openFamily} />,
     Codes: <Codes />,
     Flags: <Flags flags={flags} reload={loadFlags} />,
     "A/B tests": <Experiments />,
@@ -945,11 +990,21 @@ function Panel() {
             aria-current={tab === t ? "page" : undefined}
             onClick={() => {
               setFamily(null);
+              setInboxId(null);
               setTab(t);
             }}
             className={`${btn} ${tab === t ? "bg-[#0f172a] text-white" : "border border-line bg-white"}`}
           >
             {t}
+            {t === "To do" && todo ? (
+              <>
+                {" "}
+                <span className="ml-1 rounded-full bg-[#ff9636] px-2 text-sm text-[#0f172a]">
+                  {todo}
+                  <span className="sr-only"> waiting</span>
+                </span>
+              </>
+            ) : null}
           </button>
         ))}
       </nav>

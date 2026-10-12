@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { act, fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { act, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { FamilyInfo } from "@/lib/model";
@@ -214,6 +214,17 @@ describe("AccountPage signed in", () => {
     await userEvent.click(screen.getByRole("radio", { name: "None" }));
     await waitFor(() => expect(screen.getByRole("radio", { name: "None" })).toHaveAttribute("aria-checked", "true"));
     expect(bodyOf("POST", "/api/account/prefs/")).toEqual({ weeklyReport: false, practiceReminders: false });
+  });
+
+  it("turns news and tips off and on", async () => {
+    routes["GET /api/account/prefs/"] = () => json({ weeklyReport: false, practiceReminders: false, adminMail: true });
+    routes["POST /api/account/prefs/"] = (init) => json({ weeklyReport: false, practiceReminders: false, adminMail: true, ...JSON.parse(String(init!.body)) });
+    render(<AccountPage onBilling={vi.fn()} />);
+    const news = await screen.findByRole("radiogroup", { name: "News and tips" });
+    expect(within(news).getByRole("radio", { name: "On" })).toHaveAttribute("aria-checked", "true");
+    await userEvent.click(within(news).getByRole("radio", { name: "Off" }));
+    await waitFor(() => expect(within(news).getByRole("radio", { name: "Off" })).toHaveAttribute("aria-checked", "true"));
+    expect(bodyOf("POST", "/api/account/prefs/")).toEqual({ adminMail: false });
   });
 
   it("picks no option for reminders without the weekly summary, which older versions allowed", async () => {

@@ -48,6 +48,17 @@ describe("UnsubscribeView", () => {
     expect(await screen.findByText(/You won’t get practice reminders any more\./)).toBeInTheDocument();
   });
 
+  it("stops news and tips when the link is for them", async () => {
+    openAt("/account/unsubscribe/?kind=updates&token=u1");
+    fetchMock.mockResolvedValue(new Response(null, { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+    render(<UnsubscribeView />);
+    expect(await screen.findByRole("heading", { name: "Stop news and tips?" })).toBeInTheDocument();
+    await userEvent.click(screen.getByRole("button", { name: "Unsubscribe" }));
+    expect(fetchMock).toHaveBeenCalledWith("/api/email/unsubscribe/?kind=updates&token=u1", { method: "POST" });
+    expect(await screen.findByText(/You won’t get news and tips from us any more\./)).toBeInTheDocument();
+  });
+
   it("can't be pressed without a token", async () => {
     openAt("/account/unsubscribe/");
     render(<UnsubscribeView />);

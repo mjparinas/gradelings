@@ -3,6 +3,7 @@ import { audit, requireAdmin } from "@/server/admin";
 import { extendAccess } from "@/server/codes";
 import { query, run } from "@/server/db";
 import { deleteFamilyData } from "@/server/deleteFamily";
+import { emailLog } from "@/server/emailLog";
 import { familyOverrides, setOverride } from "@/server/flags";
 import { cancelSubscriptions, stripeCancellationConfigured } from "@/server/stripe";
 import { flagDef } from "@/lib/flags";
@@ -21,6 +22,8 @@ interface FamilyListRow {
   trial_ends_at: number;
   access_until: number | null;
   subscription_status: string | null;
+  last_login_at: number | null;
+  last_practice: number | null;
 }
 
 /** `?q=` searches by email (or an exact family id); with no query, the newest 50 accounts. `?id=` gives one family. */
@@ -36,7 +39,8 @@ export async function GET(req: Request) {
   const q = (url.searchParams.get("q") ?? "").trim().toLowerCase().slice(0, 200);
   const like = `%${q.replace(/[\\%_]/g, (c) => `\\${c}`)}%`;
   const rows = await query<FamilyListRow>(
-    `SELECT p.family_id, p.email, p.created_at, f.plan, f.trial_ends_at, f.access_until, f.subscription_status
+    `SELECT p.family_id, p.email, p.created_at, f.plan, f.trial_ends_at, f.access_until, f.subscription_status, p.last_login_at,
+       (SELECT MAX(e.t) FROM events e WHERE e.family_id = p.family_id) AS last_practice
      FROM parents p JOIN families f ON f.id = p.family_id
      WHERE p.role != 'student' AND (? = '' OR p.email LIKE ? ESCAPE '\\' OR p.family_id = ?)
      ORDER BY p.created_at DESC LIMIT 50`,
@@ -51,6 +55,8 @@ export async function GET(req: Request) {
       trialEndsAt: Number(r.trial_ends_at),
       accessUntil: r.access_until == null ? null : Number(r.access_until),
       subscriptionStatus: r.subscription_status,
+      lastLogin: r.last_login_at == null ? null : Number(r.last_login_at),
+      lastPractice: r.last_practice == null ? null : Number(r.last_practice),
     })),
   });
 }
@@ -58,12 +64,23 @@ export async function GET(req: Request) {
 async function familyDetail(id: string) {
   const family = (await query<Record<string, unknown>>("SELECT * FROM families WHERE id = ?", [id]))[0];
   if (!family) return null;
-  const parents = await query<{ id: string; email: string; created_at: number; email_verified_at: number | null; role: string; weekly_report: number }>(
-    "SELECT id, email, created_at, email_verified_at, role, weekly_report FROM parents WHERE family_id = ? ORDER BY created_at",
+  const parents = await query<{
+    id: string;
+    email: string;
+    created_at: number;
+    email_verified_at: number | null;
+    role: string;
+    weekly_report: number;
+    practice_reminders: number;
+    admin_mail: number;
+    email_bounced_at: number | null;
+    last_login_at: number | null;
+  }>(
+    "SELECT id, email, created_at, email_verified_at, role, weekly_report, practice_reminders, admin_mail, email_bounced_at, last_login_at FROM parents WHERE family_id = ? ORDER BY created_at",
     [id],
   );
   if (!parents.length || parents.some((p) => p.role === "student")) return null;
-  const [profiles, activity, sessions, redemptions, overrides, experiments, classes] = await Promise.all([
+  const [profiles, activity, sessions, redemptions, overrides, experiments, classes, emails] = await Promise.all([
     query<{ data: string }>("SELECT data FROM profiles WHERE family_id = ?", [id]),
     query<{ n: number; last: number | null }>("SELECT COUNT(*) AS n, MAX(t) AS last FROM events WHERE family_id = ?", [id]),
     query<{ n: number; last: number | null }>("SELECT COUNT(*) AS n, MAX(created_at) AS last FROM sessions WHERE family_id = ? AND expires_at > ?", [id, Date.now()]),
@@ -74,6 +91,7 @@ async function familyDetail(id: string) {
     familyOverrides(id),
     query<{ experiment: string; variant: string }>("SELECT experiment, variant FROM experiment_assignments WHERE family_id = ?", [id]),
     query<{ n: number }>("SELECT COUNT(*) AS n FROM classes WHERE closed_at IS NULL AND owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?)", [id]),
+    emailLog({ familyId: id, limit: 50 }),
   ]);
   const children = profiles.flatMap((p) => {
     try {
@@ -97,7 +115,18 @@ async function familyDetail(id: string) {
       subscriptionInterval: family.subscription_interval ?? null,
       currentPeriodEnd: n(family.current_period_end),
     },
-    parents: parents.map((p) => ({ id: p.id, email: p.email, createdAt: Number(p.created_at), verified: p.email_verified_at != null, weeklyReport: Boolean(Number(p.weekly_report)) })),
+    parents: parents.map((p) => ({
+      id: p.id,
+      email: p.email,
+      createdAt: Number(p.created_at),
+      verified: p.email_verified_at != null,
+      weeklyReport: Boolean(Number(p.weekly_report)),
+      practiceReminders: Boolean(Number(p.practice_reminders)),
+      newsAndTips: Boolean(Number(p.admin_mail)),
+      bouncedAt: n(p.email_bounced_at),
+      lastLogin: n(p.last_login_at),
+    })),
+    emails,
     children,
     activity: { events: Number(activity[0]?.n ?? 0), lastActive: n(activity[0]?.last) },
     sessions: { active: Number(sessions[0]?.n ?? 0), lastSignIn: n(sessions[0]?.last) },

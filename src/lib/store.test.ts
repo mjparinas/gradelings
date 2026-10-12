@@ -15,7 +15,8 @@ import * as localdb from "./localdb";
 import { dayKey, type AppEvent, type ChildSettings, type FamilyInfo, type Profile } from "./model";
 import { MAX_CHILDREN, TRIAL_DAYS } from "./plan";
 import { STRETCH_QUEST, STRETCH_REWARD } from "./goal";
-import { derivedFor, eventsFor, useStore } from "./store";
+import { setRemoteFlags } from "./remoteFlags";
+import { derivedFor, eventsFor, TEST_COINS, useStore } from "./store";
 
 const child = { name: "A", avatar: "ollie", colour: "#fff", grade: "2" as const };
 const st = () => useStore.getState();
@@ -235,6 +236,24 @@ describe("the shop", () => {
     st().equip("rookie");
     st().equip("classic");
     expect(st().profiles[0]).toMatchObject({ title: "rookie", confetti: "classic" });
+  });
+
+  it("gives an admin account's children unlimited coins, without storing any", () => {
+    const id = st().addProfile(child);
+    expect(st().buy("hoot")).toBe(false);
+    setRemoteFlags({ flags: {}, variants: {}, testCoins: true });
+    try {
+      expect(derivedFor(st(), id).coins).toBe(TEST_COINS);
+      expect(st().buy("hoot")).toBe(true);
+      const d = derivedFor(st(), id);
+      // Only the balance changes: trophies still count coins really earned (here, a shop trophy's reward).
+      expect(d.coins).toBe(TEST_COINS - 120 + d.coinsEarned);
+      expect(d.coinsEarned).toBeLessThan(120);
+      expect(st().events.filter((e) => e.type === "buy")).toHaveLength(1);
+    } finally {
+      setRemoteFlags({ flags: {}, variants: {} });
+    }
+    expect(derivedFor(st(), id).coins).toBeLessThan(0);
   });
 
   it("keeps level-locked items locked whatever the coins", () => {

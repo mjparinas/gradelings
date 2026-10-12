@@ -1,12 +1,15 @@
 import "server-only";
 import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS } from "@/lib/brand";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, SUBSCRIBE_HREF } from "@/lib/plan";
+import type { EmailKind } from "@/lib/emailKinds";
 import type { Email } from "./email";
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
 
 interface Parts {
   to: string;
+  /** Logged in the admin panel's email log; left out for mail that isn't to an account (question reports). */
+  kind?: EmailKind;
   subject: string;
   heading: string;
   /** Plain paragraphs. */
@@ -50,11 +53,12 @@ ${MAILING_ADDRESS ? `<p style="font-size:12px;color:#5b6478;margin:4px 4px 0">${
     // CASL requires the sender's postal address in every commercial message.
     ...(MAILING_ADDRESS ? [`${LEGAL_NAME} · ${MAILING_ADDRESS}`] : []),
   ].join("\n");
-  return { to: p.to, subject: p.subject, html, text, unsubscribeUrl: p.unsubscribeUrl };
+  return { to: p.to, subject: p.subject, html, text, unsubscribeUrl: p.unsubscribeUrl, kind: p.kind };
 }
 
 export function verifyEmail(to: string, origin: string, token: string): Email {
   return layout({
+    kind: "verify",
     to,
     origin,
     subject: `Confirm your email for ${APP_NAME}`,
@@ -67,6 +71,7 @@ export function verifyEmail(to: string, origin: string, token: string): Email {
 
 export function resetEmail(to: string, origin: string, token: string): Email {
   return layout({
+    kind: "reset",
     to,
     origin,
     subject: `Reset your ${APP_NAME} password`,
@@ -100,6 +105,7 @@ const KEEP_FREE = `After the trial, the first ${FREE_UNITS_PER_COURSE} units of 
 /** Mid-trial: what the trial has done so far. Sent once, to parents whose children have practised. */
 export function trialRecapEmail(to: string, origin: string, daysLeft: number, children: TrialChild[]): Email {
   return layout({
+    kind: "trial-recap",
     to,
     origin,
     subject: `${APP_NAME}: what your trial has done so far`,
@@ -117,6 +123,7 @@ export function trialRecapEmail(to: string, origin: string, daysLeft: number, ch
 export function trialEndingEmail(to: string, origin: string, daysLeft: number, children: TrialChild[] = []): Email {
   const recap = recapLines(children);
   return layout({
+    kind: "trial-ending",
     to,
     origin,
     subject: `Your ${APP_NAME} free trial ends in ${daysLeft} ${daysLeft === 1 ? "day" : "days"}`,
@@ -160,6 +167,7 @@ export function weeklyEmail(to: string, origin: string, children: WeeklyChild[],
     ...(c.month ? [monthLine(c.name, c.month)] : []),
   ]);
   return layout({
+    kind: "weekly",
     to,
     origin,
     unsubscribeUrl: `${origin}/api/email/unsubscribe/?token=${encodeURIComponent(unsubToken)}`,
@@ -184,6 +192,7 @@ export function reminderEmail(to: string, origin: string, children: ReminderChil
   const lines = children.map((c) => `${c.name} last practised ${c.daysQuiet} days ago. A short session today, even 10 minutes, picks the momentum right back up.`);
   const q = encodeURIComponent(unsubToken);
   return layout({
+    kind: "reminder",
     to,
     origin,
     unsubscribeUrl: `${origin}/api/email/unsubscribe/?kind=reminders&token=${q}`,
@@ -208,6 +217,7 @@ export function questionReportEmail(to: string, p: { unitKey: string; prompt: st
 
 export function newSignInEmail(to: string, origin: string, device: string): Email {
   return layout({
+    kind: "new-sign-in",
     to,
     origin,
     subject: `New sign-in to your ${APP_NAME} account`,
@@ -219,6 +229,7 @@ export function newSignInEmail(to: string, origin: string, device: string): Emai
 
 export function passwordChangedEmail(to: string, origin: string): Email {
   return layout({
+    kind: "password-changed",
     to,
     origin,
     subject: `Your ${APP_NAME} password was changed`,
@@ -239,6 +250,7 @@ export function accountDeletedEmail(to: string, origin: string): Email {
 
 export function inactiveClassEmail(to: string, origin: string, className: string, deleteDate: string): Email {
   return layout({
+    kind: "class-inactive",
     to,
     origin,
     subject: `Your ${APP_NAME} class “${className}” will be deleted in 1 month`,
@@ -254,6 +266,7 @@ export function inactiveClassEmail(to: string, origin: string, className: string
 
 export function classInviteEmail(to: string, origin: string, className: string, ownerEmail: string): Email {
   return layout({
+    kind: "class-invite",
     to,
     origin,
     subject: `${ownerEmail} invited you to co-teach “${className}” on ${APP_NAME}`,
@@ -264,4 +277,34 @@ export function classInviteEmail(to: string, origin: string, className: string, 
     ],
     button: { label: "See the invitation", url: `${origin}/teachers/` },
   });
+}
+
+/**
+ * A message the owner sends from the admin panel. It is marketing under Canada's anti-spam law, so it always has the
+ * unsubscribe link (news and tips only) and the mailing address in the footer.
+ */
+export function adminMessageEmail(
+  to: string,
+  origin: string,
+  m: { subject: string; label: string; paragraphs: string[]; button: { label: string; path: string } | null },
+  unsubToken: string,
+  sentBy: string,
+): Email {
+  const q = encodeURIComponent(unsubToken);
+  return {
+    ...layout({
+      kind: "admin",
+      to,
+      origin,
+      unsubscribeUrl: `${origin}/api/email/unsubscribe/?kind=updates&token=${q}`,
+      unsubscribePage: `${origin}/account/unsubscribe/?kind=updates&token=${q}`,
+      subject: m.subject,
+      heading: m.subject,
+      body: m.paragraphs,
+      button: m.button ? { label: m.button.label, url: `${origin}${m.button.path}` } : undefined,
+      footnote: "You're getting this because you have an account. You can turn off news and tips any time.",
+    }),
+    label: m.label,
+    sentBy,
+  };
 }

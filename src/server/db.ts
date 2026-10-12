@@ -244,6 +244,36 @@ const SCHEMA = [
     value TEXT NOT NULL,
     updated_at INTEGER NOT NULL
   )`,
+  // Emails sent to accounts: which kind, when, and what Resend reported back (delivered, bounced...).
+  // No message bodies, so children's names never land here; an admin email keeps its subject before names are filled in.
+  `CREATE TABLE IF NOT EXISTS email_log (
+    id TEXT PRIMARY KEY,
+    family_id TEXT NOT NULL,
+    parent_id TEXT NOT NULL,
+    kind TEXT NOT NULL,
+    label TEXT,
+    status TEXT NOT NULL,
+    provider_id TEXT,
+    sent_at INTEGER NOT NULL,
+    updated_at INTEGER NOT NULL,
+    sent_by TEXT
+  )`,
+  `CREATE INDEX IF NOT EXISTS email_log_family ON email_log (family_id, sent_at)`,
+  `CREATE INDEX IF NOT EXISTS email_log_sent ON email_log (sent_at)`,
+  `CREATE INDEX IF NOT EXISTS email_log_provider ON email_log (provider_id)`,
+  // Mail Resend received for us: only whether the admin has dealt with or answered it. The messages stay in Resend.
+  `CREATE TABLE IF NOT EXISTS inbox_state (
+    email_id TEXT PRIMARY KEY,
+    handled_at INTEGER,
+    replied_at INTEGER,
+    replied_by TEXT
+  )`,
+  // To-do items the admin dismissed or snoozed, by item key, until a time.
+  `CREATE TABLE IF NOT EXISTS admin_queue_hidden (
+    key TEXT PRIMARY KEY,
+    until INTEGER NOT NULL,
+    at INTEGER NOT NULL
+  )`,
 ];
 
 /** Columns added after the first release. SQLite has no "ADD COLUMN IF NOT EXISTS". */
@@ -258,6 +288,11 @@ const PARENT_COLUMNS: [string, string][] = [
   ["last_nudge_at", "INTEGER"],
   // 'parent' for ordinary accounts, 'student' for a class-owned student account (no email, no password).
   ["role", "TEXT NOT NULL DEFAULT 'parent'"],
+  ["last_login_at", "INTEGER"],
+  // News and tips the owner sends from the admin panel (on unless the parent unsubscribes).
+  ["admin_mail", "INTEGER NOT NULL DEFAULT 1"],
+  // Set when Resend reports a bounce or a spam complaint, so the panel stops emailing the address.
+  ["email_bounced_at", "INTEGER"],
 ];
 
 /** Which province's curriculum a class assigns units from, and its inactivity-retention state. */

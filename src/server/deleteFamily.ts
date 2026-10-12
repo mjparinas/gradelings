@@ -24,6 +24,7 @@ export async function deleteFamilyData(f: string): Promise<void> {
     { sql: "DELETE FROM class_assignments WHERE class_id IN (SELECT id FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?))", args: [f] },
     { sql: "DELETE FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?)", args: [f] },
     { sql: "DELETE FROM question_reports WHERE family_id = ?", args: [f] },
+    { sql: "DELETE FROM email_log WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM code_redemptions WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM flag_overrides WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM experiment_assignments WHERE family_id = ?", args: [f] },

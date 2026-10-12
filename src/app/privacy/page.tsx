@@ -93,6 +93,9 @@ export default function PrivacyPage() {
         <p>
           If you choose, we also send a short weekly progress email (it includes each child’s first name and practice totals, and nothing else about them), and you can create a read-only link to a child’s report. Anyone with that link can see that child’s name, grade and the practice totals in the report, until it expires after 30 days or you stop sharing it. You opt in to the weekly email yourself, after confirming your email address, and you can stop it at any time in the Parent area or with the unsubscribe link in each email. You can also opt in to a gentle practice reminder, sent only to you (never to your child) after a few quiet days and at most once a week; it includes only a child’s first name and how many days it has been, and has its own unsubscribe link. Account and billing messages are not marketing and are sent as long as you have an account.
         </p>
+        <p>
+          Once your email is confirmed, we may now and then send you news and tips: new features, ideas to try at home, or an offer. These can greet your child by first name, are sent only to you, and you can turn them off at any time under Account &amp; sync or with the unsubscribe link in each one. For each email we send to your account we keep a short record of which kind it was, when it went and whether it was delivered, bounced or marked as spam (reported to us by our email provider), never its contents, so we can stop emailing an address that doesn’t work. We don’t track whether you open or click our emails. If you email us, our email provider keeps your message and we keep only whether we have answered it.
+        </p>
         <p>We don’t use children’s information for advertising or to build profiles for any other purpose.</p>
       </Section>
 

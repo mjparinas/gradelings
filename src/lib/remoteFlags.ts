@@ -11,6 +11,8 @@ const DEVICE_KEY = "grademap.device";
 interface Remote {
   flags: Record<string, boolean>;
   variants: Record<string, string>;
+  /** Signed in to an admin account: the children have unlimited coins for testing (see /api/flags/). */
+  testCoins?: boolean;
 }
 
 const EMPTY: Remote = { flags: {}, variants: {} };
@@ -23,7 +25,7 @@ function load(): Remote {
   loaded = true;
   try {
     const saved = JSON.parse(localStorage.getItem(KEY) ?? "null") as Partial<Remote> | null;
-    if (saved && typeof saved === "object") current = { flags: saved.flags ?? {}, variants: saved.variants ?? {} };
+    if (saved && typeof saved === "object") current = { flags: saved.flags ?? {}, variants: saved.variants ?? {}, ...(saved.testCoins === true ? { testCoins: true } : {}) };
   } catch {
     /* storage blocked or unreadable: defaults */
   }
@@ -46,7 +48,7 @@ export function deviceId(): string {
 }
 
 export function setRemoteFlags(next: Remote): void {
-  current = { flags: { ...next.flags }, variants: { ...next.variants } };
+  current = { flags: { ...next.flags }, variants: { ...next.variants }, ...(next.testCoins === true ? { testCoins: true } : {}) };
   loaded = true;
   try {
     localStorage.setItem(KEY, JSON.stringify(current));
@@ -63,10 +65,15 @@ export async function refreshFlags(): Promise<void> {
     const res = await fetch(`/api/flags/${d ? `?d=${d}` : ""}`, { credentials: "same-origin", cache: "no-store" });
     if (!res.ok) return;
     const data = (await res.json()) as Partial<Remote>;
-    if (data && typeof data.flags === "object") setRemoteFlags({ flags: data.flags ?? {}, variants: data.variants ?? {} });
+    if (data && typeof data.flags === "object") setRemoteFlags({ flags: data.flags ?? {}, variants: data.variants ?? {}, testCoins: data.testCoins === true });
   } catch {
     /* offline */
   }
+}
+
+/** Whether this device is signed in to an admin account, whose children get unlimited coins for testing. */
+export function hasTestCoins(): boolean {
+  return load().testCoins === true;
 }
 
 /** Whether a flag is on for this device right now (its default until the server has answered). */

@@ -116,28 +116,29 @@ const EMAIL_HELP: Record<EmailChoice, string> = {
 };
 
 function EmailChoicePanel({ verified }: { verified: boolean }) {
-  const [prefs, setPrefs] = useState<EmailPrefs | null>(null);
+  const [prefs, setPrefs] = useState<(EmailPrefs & { adminMail?: boolean }) | null>(null);
   const [error, setError] = useState("");
   useEffect(() => {
     void fetch("/api/account/prefs/", { credentials: "same-origin" })
       .then((r) => (r.ok ? r.json() : null))
-      .then((d: EmailPrefs | null) => setPrefs(d))
+      .then((d: (EmailPrefs & { adminMail?: boolean }) | null) => setPrefs(d))
       .catch(() => setPrefs(null));
   }, []);
   if (!prefs) return null;
   const value = emailChoice(prefs);
-  async function pick(choice: EmailChoice) {
+  async function save(patch: Partial<EmailPrefs & { adminMail: boolean }>) {
     setError("");
     const res = await fetch("/api/account/prefs/", {
       method: "POST",
       credentials: "same-origin",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify(emailPatch(choice)),
+      body: JSON.stringify(patch),
     }).catch(() => null);
-    const data = (await res?.json().catch(() => ({}))) as (EmailPrefs & { error?: string }) | undefined;
-    if (res?.ok && data) setPrefs({ weeklyReport: Boolean(data.weeklyReport), practiceReminders: Boolean(data.practiceReminders) });
+    const data = (await res?.json().catch(() => ({}))) as (EmailPrefs & { adminMail?: boolean; error?: string }) | undefined;
+    if (res?.ok && data) setPrefs({ weeklyReport: Boolean(data.weeklyReport), practiceReminders: Boolean(data.practiceReminders), adminMail: Boolean(data.adminMail) });
     else setError(data?.error ?? "You’re offline. Try again when connected.");
   }
+  const pick = (choice: EmailChoice) => save(emailPatch(choice));
   return (
     <div className="mt-3">
       <Choice
@@ -151,6 +152,18 @@ function EmailChoicePanel({ verified }: { verified: boolean }) {
         onChange={(v) => void pick(v)}
         help={!verified ? "Confirm your email first to turn these on." : value ? EMAIL_HELP[value] : "Practice reminders only. Pick an option to change it."}
       />
+      <div className="mt-3">
+        <Choice
+          label="News and tips"
+          value={prefs.adminMail === false ? "off" : "on"}
+          options={[
+            { value: "on", label: "On" },
+            { value: "off", label: "Off" },
+          ]}
+          onChange={(v) => void save({ adminMail: v === "on" })}
+          help="Now and then, a note from us: new features, ideas to try and offers. Never to your child."
+        />
+      </div>
       {error && <p className="mt-1 text-sm text-nudge-dark">{error}</p>}
     </div>
   );

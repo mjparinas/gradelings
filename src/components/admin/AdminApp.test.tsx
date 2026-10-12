@@ -43,11 +43,14 @@ const family = {
   redemptions: [],
   overrides: {},
   experiments: {},
+  emails: [],
 };
 
 function asAdmin() {
   mocks.call.mockImplementation((url: string, method = "GET") => {
     if (url === "/api/admin/me/") return Promise.resolve({ email: "owner@example.com" });
+    if (url === "/api/admin/queue/" && method === "GET") return Promise.resolve({ items: [] });
+    if (url.startsWith("/api/admin/email/") && method === "GET") return Promise.resolve({ emails: [], counts30: {}, resendWebhook: true });
     if (url === "/api/admin/stats/") return Promise.resolve(stats);
     if (url === "/api/admin/flags/" && method === "GET") return Promise.resolve({ flags: [flag] });
     if (url.startsWith("/api/admin/users/?q=")) return Promise.resolve({ users: [{ familyId: "fam-1", email: "pat@example.com", createdAt: 1, plan: "trial", trialEndsAt: Date.now() + 86_400_000, accessUntil: null, subscriptionStatus: null }] });
