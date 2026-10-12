@@ -16,11 +16,11 @@ process.env.STRIPE_WEBHOOK_SECRET = "whsec_admin";
 const ADMIN_EMAIL = "owner@example.com";
 
 type Mod = Record<string, (req: Request) => Promise<Response>>;
-let signup: Mod, login: Mod, me: Mod, adminMe: Mod, stats: Mod, flags: Mod, experiments: Mod, users: Mod, reports: Mod, auditLog: Mod, codes: Mod, publicFlags: Mod, redeem: Mod, classes: Mod, feedback: Mod, webhook: Mod;
+let signup: Mod, login: Mod, me: Mod, adminMe: Mod, stats: Mod, flags: Mod, experiments: Mod, users: Mod, reports: Mod, auditLog: Mod, codes: Mod, publicFlags: Mod, redeem: Mod, classes: Mod, feedback: Mod, webhook: Mod, statsDetail: Mod;
 let dbm: typeof import("@/server/db");
 
 beforeAll(async () => {
-  [signup, login, me, adminMe, stats, flags, experiments, users, reports, auditLog, codes, publicFlags, redeem, classes, feedback, webhook] = (await Promise.all([
+  [signup, login, me, adminMe, stats, flags, experiments, users, reports, auditLog, codes, publicFlags, redeem, classes, feedback, webhook, statsDetail] = (await Promise.all([
     import("@/app/api/auth/signup/route"),
     import("@/app/api/auth/login/route"),
     import("@/app/api/auth/me/route"),
@@ -37,6 +37,7 @@ beforeAll(async () => {
     import("@/app/api/classes/route"),
     import("@/app/api/feedback/route"),
     import("@/app/api/billing/webhook/route"),
+    import("@/app/api/admin/stats/detail/route"),
   ])) as unknown as Mod[];
   dbm = await import("@/server/db");
 });
@@ -356,6 +357,52 @@ describe("codes, reports, stats and the change log", () => {
     expect((await as(admin.cookie).send(stats, "POST", "/api/admin/stats/", { action: "import" })).status).toBe(400);
     expect((await as(admin.cookie).send(stats, "POST", "/api/admin/stats/", { action: "nope" })).status).toBe(400);
     expect((await as(parent.cookie).send(stats, "POST", "/api/admin/stats/", { action: "costs", monthlyCosts: 1 })).status).toBe(404);
+  });
+
+  it("opens the list behind each dashboard tile, with emails but never children's names", async () => {
+    const { DETAIL_VIEWS } = await import("@/lib/adminDetail");
+    const view = (v: string, cookie = admin.cookie) => as(cookie).get(statsDetail, `/api/admin/stats/detail/?view=${v}`);
+    expect((await view("families", parent.cookie)).status).toBe(404);
+    expect((await view("nope")).status).toBe(400);
+    expect((await as(admin.cookie).get(statsDetail, "/api/admin/stats/detail/")).status).toBe(400);
+
+    const coder = await account("coder@example.com");
+    await dbm.run("UPDATE families SET plan = 'premium', subscription_interval = 'year', current_period_end = ? WHERE id = ?", [Date.now() + 1e9, coder.familyId]);
+    for (const v of DETAIL_VIEWS) {
+      const res = await view(v);
+      expect(res.status, v).toBe(200);
+      const d = await res.json();
+      expect(d.title, v).toBeTruthy();
+      expect(d.tables.length, v).toBeGreaterThan(0);
+      for (const t of d.tables) for (const r of t.rows) expect(r.cells, v).toHaveLength(t.columns.length);
+      const text = JSON.stringify(d);
+      expect(text, v).not.toContain("Secretname");
+      expect(text, v).not.toContain("student-parent@example.com");
+    }
+
+    const paying = await (await view("paying")).json();
+    expect(paying.tables[0].rows).toEqual([expect.objectContaining({ familyId: coder.familyId, cells: expect.arrayContaining(["coder@example.com", "Yearly"]) })]);
+    expect(paying.summary.find((s: { label: string }) => s.label === "Yearly").value).toBe(1);
+
+    const families = await (await view("families")).json();
+    const emails = families.tables[0].rows.map((r: { cells: unknown[] }) => r.cells[0]);
+    expect(emails).toEqual(expect.arrayContaining([ADMIN_EMAIL, "parent@example.com", "coder@example.com"]));
+    expect(families.tables[0].rows.find((r: { cells: unknown[] }) => r.cells[0] === "coder@example.com").cells[2]).toBe("Paying");
+
+    // The refunded payment of the deleted family is still listed, without a link to a family.
+    const month = await (await view("payments-month")).json();
+    expect(month.tables[0].rows).toEqual([{ cells: [expect.any(Number), "Deleted account", "Monthly", 1499, 500, expect.any(Number)] }]);
+    expect(month.summary.find((s: { label: string }) => s.label === "Collected").value).toBe(1499);
+
+    const children = await (await view("children")).json();
+    expect(children.tables[0].rows).toEqual([{ cells: ["Grade 3", 1] }]);
+    expect(children.tables[1].rows).toEqual([{ cells: ["Ontario", 1] }]);
+
+    const signups = await (await view("signups")).json();
+    expect(signups.tables[1].rows).toHaveLength(60);
+
+    const teachers = await (await view("teachers")).json();
+    expect(teachers.tables[0].rows).toHaveLength(1);
   });
 
   it("records every change with who made it", async () => {

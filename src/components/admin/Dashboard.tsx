@@ -4,9 +4,12 @@ import { useCallback, useEffect, useState, type FormEvent, type ReactNode } from
 import { ColumnChart, LineChart, niceMax, RowBars } from "@/components/parents/charts";
 import { call } from "@/lib/classroom";
 import type { Metrics } from "@/lib/adminMetrics";
+import type { Detail, DetailView } from "@/lib/adminDetail";
 import { FREE_UNITS_PER_COURSE } from "@/lib/plan";
+import { DetailModal } from "./DetailModal";
 
-// The admin overview: customers, growth, practice and money, with charts. Counts and sums only.
+// The admin overview: customers, growth, practice and money, with charts. Counts and sums only here; most
+// tiles open a window with the list behind the number.
 
 type Data = Metrics & { stripe: boolean };
 
@@ -32,14 +35,65 @@ function change(now: number, before: number, what: string): string {
   return d === 0 ? `same as ${what}` : `${d > 0 ? "up" : "down"} ${Math.abs(d)}% on ${what}`;
 }
 
-function Tile({ label, value, sub }: { label: string; value: string; sub?: ReactNode }) {
-  return (
-    <li className={card}>
-      <span className="block text-sm font-semibold text-ink-soft">{label}</span>
-      <span className="block text-2xl font-bold tabular-nums sm:text-3xl">{value}</span>
+type Source = { view: DetailView } | { detail: Detail };
+
+function Tile({ label, value, sub, onOpen }: { label: string; value: string; sub?: ReactNode; onOpen?: () => void }) {
+  const body = (
+    <>
+      <span className="block text-sm font-semibold text-ink-soft">{label}</span>{" "}
+      <span className="block text-2xl font-bold tabular-nums sm:text-3xl">{value}</span>{" "}
       {sub && <span className="block text-sm text-ink-soft">{sub}</span>}
+    </>
+  );
+  if (!onOpen) return <li className={card}>{body}</li>;
+  return (
+    <li className="flex">
+      <button
+        type="button"
+        onClick={onOpen}
+        aria-haspopup="dialog"
+        className={`${card} relative flex w-full flex-col pr-8 text-left transition-colors hover:border-[#2a78d6] hover:bg-[#f5f9ff] focus-visible:border-[#2a78d6]`}
+      >
+        {body}
+        <span aria-hidden className="absolute top-3 right-3 text-lg leading-none font-bold text-[#2a5bd7]">
+          ›
+        </span>
+        <span className="sr-only">, show details</span>
+      </button>
     </li>
   );
+}
+
+/** The month-by-month money breakdown behind the profit and projection tiles, built from the dashboard data. */
+function moneyDetail(data: Data, title: string): Detail {
+  const r = data.revenue;
+  return {
+    title,
+    intro:
+      "Profit is revenue less estimated Stripe fees (2.9% + 30¢ a payment) and the monthly costs you entered. The projection adds monthly recurring revenue for the rest of the year to what has come in so far, and takes off fees and a full year of costs.",
+    summary: [
+      { label: "Revenue so far", value: r.yearToDate, kind: "money" },
+      { label: "Profit so far", value: r.profitYearToDate, kind: "money" },
+      { label: "Rest of year at MRR", value: r.projectedYear - r.yearToDate, kind: "money" },
+      { label: "Projected revenue", value: r.projectedYear, kind: "money" },
+      { label: "Projected profit", value: r.projectedProfitYear, kind: "money" },
+    ],
+    tables: [
+      {
+        title: "By month",
+        columns: [
+          { label: "Month", kind: "text" },
+          { label: "Revenue", kind: "money" },
+          { label: "Fees (est.)", kind: "money" },
+          { label: "Costs", kind: "money" },
+          { label: "Profit", kind: "money" },
+          { label: "Paying families", kind: "number" },
+        ],
+        rows: [...r.months].reverse().map((m) => ({ cells: [m.label, m.revenue, m.fees, m.costs, m.profit, m.paying] })),
+        total: r.months.length,
+      },
+    ],
+  };
 }
 
 function Section({ id, title, intro, children }: { id: string; title: string; intro?: string; children: ReactNode }) {
@@ -57,9 +111,10 @@ function Section({ id, title, intro, children }: { id: string; title: string; in
 const tiles = "mt-3 grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-4";
 const charts = "mt-3 grid gap-3 lg:grid-cols-2";
 
-export function Dashboard() {
+export function Dashboard({ onOpenFamily }: { onOpenFamily?: (id: string) => void }) {
   const [data, setData] = useState<Data | null>(null);
   const [err, setErr] = useState("");
+  const [open, setOpen] = useState<Source | null>(null);
   const load = useCallback(() => call<Data>("/api/admin/stats/").then(setData, (e: Error) => setErr(e.message)), []);
   useEffect(() => {
     load();
@@ -67,6 +122,8 @@ export function Dashboard() {
   if (!data) return err ? <p role="alert" className="mt-2 text-nudge-dark">{err}</p> : <p className="font-read">Loading…</p>;
 
   const { people, customers: c, acquisition: a, engagement: e, revenue: r } = data;
+  const show = (view: DetailView) => () => setOpen({ view });
+  const showMoney = (title: string) => () => setOpen({ detail: moneyDetail(data, title) });
   const year = new Date(data.generatedAt).getUTCFullYear();
   const groups = [
     { label: "Paying", value: c.paying, note: share(people.families ? c.paying / people.families : null) },
@@ -77,8 +134,21 @@ export function Dashboard() {
 
   return (
     <div>
+      {open && (
+        <DetailModal
+          source={open}
+          onClose={() => setOpen(null)}
+          onOpenFamily={
+            onOpenFamily &&
+            ((id) => {
+              setOpen(null);
+              onOpenFamily(id);
+            })
+          }
+        />
+      )}
       <p className="text-sm text-ink-soft">
-        Class student accounts are left out, and days and months are UTC. Updated {new Date(data.generatedAt).toLocaleString("en-CA", { dateStyle: "medium", timeStyle: "short" })}{" "}
+        Class student accounts are left out, and days and months are UTC. Tiles with an arrow open the list behind them. Updated {new Date(data.generatedAt).toLocaleString("en-CA", { dateStyle: "medium", timeStyle: "short" })}{" "}
         <button type="button" className="font-semibold text-[#2a5bd7] underline" onClick={() => load()}>
           Refresh
         </button>
@@ -86,14 +156,14 @@ export function Dashboard() {
 
       <Section id="money-h" title="Revenue and profit" intro="Revenue is what Stripe collected, less refunds. Fees are estimated at 2.9% + 30¢ a payment. Monthly recurring revenue uses list prices, with yearly plans counted as a twelfth a month. Profit takes off fees and the monthly costs you enter below.">
         <ul className={tiles}>
-          <Tile label="Monthly recurring revenue" value={money(r.mrr)} sub={`${money(r.arr)} a year at this rate`} />
-          <Tile label="Revenue this month" value={money(r.thisMonth)} sub={`${money(r.lastMonth)} last month`} />
-          <Tile label="Profit this month" value={money(r.profitThisMonth)} sub={`after ${money(r.feesThisMonth)} fees and costs so far`} />
-          <Tile label={`Revenue in ${year} so far`} value={money(r.yearToDate)} sub={`profit ${money(r.profitYearToDate)}`} />
-          <Tile label={`Projected revenue for ${year}`} value={money(r.projectedYear)} sub="so far, plus MRR for the rest of the year" />
-          <Tile label={`Projected profit for ${year}`} value={money(r.projectedProfitYear)} sub={`with costs of ${money(r.monthlyCosts)} a month`} />
-          <Tile label="Revenue per paying family" value={r.arppu === null ? "—" : money(Math.round(r.arppu))} sub="a month, on average" />
-          <Tile
+          <Tile onOpen={show("paying")} label="Monthly recurring revenue" value={money(r.mrr)} sub={`${money(r.arr)} a year at this rate`} />
+          <Tile onOpen={show("payments-month")} label="Revenue this month" value={money(r.thisMonth)} sub={`${money(r.lastMonth)} last month`} />
+          <Tile onOpen={showMoney("Profit by month")} label="Profit this month" value={money(r.profitThisMonth)} sub={`after ${money(r.feesThisMonth)} fees and costs so far`} />
+          <Tile onOpen={show("payments-year")} label={`Revenue in ${year} so far`} value={money(r.yearToDate)} sub={`profit ${money(r.profitYearToDate)}`} />
+          <Tile onOpen={showMoney(`Projection for ${year}`)} label={`Projected revenue for ${year}`} value={money(r.projectedYear)} sub="so far, plus MRR for the rest of the year" />
+          <Tile onOpen={showMoney(`Projection for ${year}`)} label={`Projected profit for ${year}`} value={money(r.projectedProfitYear)} sub={`with costs of ${money(r.monthlyCosts)} a month`} />
+          <Tile onOpen={show("paying")} label="Revenue per paying family" value={r.arppu === null ? "—" : money(Math.round(r.arppu))} sub="a month, on average" />
+          <Tile onOpen={show("cancelled")}
             label="Cancelled in 30 days"
             value={num(r.cancelled30)}
             sub={r.churnRate === null ? "no paying families yet" : `${share(r.churnRate)} churn${r.lifetimeValue === null ? "" : `, about ${money(r.lifetimeValue)} per customer over their time`}`}
@@ -124,14 +194,14 @@ export function Dashboard() {
 
       <Section id="customers-h" title="Customers">
         <ul className={tiles}>
-          <Tile label="Families" value={num(people.families)} sub={`${num(people.parents)} parent and teacher accounts`} />
-          <Tile label="Paying" value={num(c.paying)} sub={`${num(c.monthly)} monthly, ${num(c.yearly)} yearly${c.pastDue ? `, ${num(c.pastDue)} past due` : ""}`} />
-          <Tile label="In free trial" value={num(c.trialing)} />
-          <Tile label="Free (trial over, not paying)" value={num(c.free)} sub={`first ${FREE_UNITS_PER_COURSE} units of each course`} />
-          <Tile label="Access from a code or admin" value={num(c.codeAccess)} sub={`${num(c.lifetime)} lifetime`} />
-          <Tile label="Children" value={num(people.children)} sub={`${(Math.round(people.childrenPerFamily * 10) / 10).toLocaleString("en-CA")} per family`} />
-          <Tile label="Teachers" value={num(people.teachers)} sub={`${num(people.classes)} open classes, ${num(people.students)} student accounts`} />
-          <Tile label="Codes redeemed" value={num(data.other.redemptions)} sub={`${num(data.other.reports)} question reports waiting`} />
+          <Tile onOpen={show("families")} label="Families" value={num(people.families)} sub={`${num(people.parents)} parent and teacher accounts`} />
+          <Tile onOpen={show("paying")} label="Paying" value={num(c.paying)} sub={`${num(c.monthly)} monthly, ${num(c.yearly)} yearly${c.pastDue ? `, ${num(c.pastDue)} past due` : ""}`} />
+          <Tile onOpen={show("trialing")} label="In free trial" value={num(c.trialing)} />
+          <Tile onOpen={show("free")} label="Free (trial over, not paying)" value={num(c.free)} sub={`first ${FREE_UNITS_PER_COURSE} units of each course`} />
+          <Tile onOpen={show("code-access")} label="Access from a code or admin" value={num(c.codeAccess)} sub={`${num(c.lifetime)} lifetime`} />
+          <Tile onOpen={show("children")} label="Children" value={num(people.children)} sub={`${(Math.round(people.childrenPerFamily * 10) / 10).toLocaleString("en-CA")} per family`} />
+          <Tile onOpen={show("teachers")} label="Teachers" value={num(people.teachers)} sub={`${num(people.classes)} open classes, ${num(people.students)} student accounts`} />
+          <Tile onOpen={show("codes")} label="Codes redeemed" value={num(data.other.redemptions)} sub={`${num(data.other.reports)} question reports waiting`} />
         </ul>
         <div className={charts}>
           <RowBars title="Where families are" subtitle="Every family is in exactly one group" rows={groups} headers={["Group", "Families", "Share"]} empty="No families yet." />
@@ -140,14 +210,14 @@ export function Dashboard() {
 
       <Section id="growth-h" title="Growth" intro="Activation is the share of families who signed up in the last 90 days and have practised at least once. Trial to paid is the share of trials that ended in the last 90 days whose family pays now.">
         <ul className={tiles}>
-          <Tile label="Sign-ups this month" value={num(a.thisMonth)} sub={`${num(a.lastMonth)} last month`} />
-          <Tile label="Sign-ups, last 30 days" value={num(a.last30)} sub={change(a.last30, a.previous30, "the 30 days before")} />
-          <Tile label="Trial to paid" value={share(a.trialConversion)} sub={`${num(a.trialsConverted)} of ${num(a.trialsEnded)} trials that ended`} />
-          <Tile label="Paying share of families" value={share(a.paidShare)} />
-          <Tile label="Activation" value={share(a.activationRate)} sub="new families who practised" />
-          <Tile label="Email confirmed" value={share(a.confirmedRate)} />
-          <Tile label="From a referral" value={num(a.referred)} sub={`${share(a.referredRate)} of families`} />
-          <Tile label="Families who have paid" value={num(r.customersEver)} sub="in the last two years" />
+          <Tile onOpen={show("signups")} label="Sign-ups this month" value={num(a.thisMonth)} sub={`${num(a.lastMonth)} last month`} />
+          <Tile onOpen={show("signups")} label="Sign-ups, last 30 days" value={num(a.last30)} sub={change(a.last30, a.previous30, "the 30 days before")} />
+          <Tile onOpen={show("trial-conversion")} label="Trial to paid" value={share(a.trialConversion)} sub={`${num(a.trialsConverted)} of ${num(a.trialsEnded)} trials that ended`} />
+          <Tile onOpen={show("families")} label="Paying share of families" value={share(a.paidShare)} />
+          <Tile onOpen={show("activation")} label="Activation" value={share(a.activationRate)} sub="new families who practised" />
+          <Tile onOpen={show("unconfirmed")} label="Email confirmed" value={share(a.confirmedRate)} />
+          <Tile onOpen={show("referrals")} label="From a referral" value={num(a.referred)} sub={`${share(a.referredRate)} of families`} />
+          <Tile onOpen={show("customers-ever")} label="Families who have paid" value={num(r.customersEver)} sub="in the last two years" />
         </ul>
         <div className={charts}>
           <ColumnChart title="Sign-ups per week" subtitle="Last 26 weeks" data={a.weekly} unit="sign-ups" xLabel="Week of" />
@@ -157,10 +227,10 @@ export function Dashboard() {
 
       <Section id="practice-h" title="Practice">
         <ul className={tiles}>
-          <Tile label="Families practising today" value={num(e.d1)} sub="last 24 hours" />
-          <Tile label="This week" value={num(e.d7)} sub={`${num(e.d30)} in 30 days`} />
-          <Tile label="Stickiness" value={share(e.stickiness)} sub="daily ÷ monthly practising families" />
-          <Tile label="Questions answered, 30 days" value={num(e.answers30)} sub={`${num(e.minutes30)} minutes`} />
+          <Tile onOpen={show("practising")} label="Families practising today" value={num(e.d1)} sub="last 24 hours" />
+          <Tile onOpen={show("practising")} label="This week" value={num(e.d7)} sub={`${num(e.d30)} in 30 days`} />
+          <Tile onOpen={show("practising")} label="Stickiness" value={share(e.stickiness)} sub="daily ÷ monthly practising families" />
+          <Tile onOpen={show("practising")} label="Questions answered, 30 days" value={num(e.answers30)} sub={`${num(e.minutes30)} minutes`} />
         </ul>
         <div className={charts}>
           <ColumnChart title="Families practising per day" subtitle="Last 30 days" data={e.daily.map((d) => ({ label: d.label, value: d.families }))} unit="families" />

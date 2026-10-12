@@ -10,9 +10,9 @@ const WEEK = 7 * DAY;
 export const STRIPE_FEE_RATE = 0.029;
 export const STRIPE_FEE_FIXED = 30;
 /** Access that runs past this many years from now counts as lifetime. */
-const LIFETIME_YEARS = 50;
-const MONTHLY_CENTS = Math.round(PRICES.month.amount * 100);
-const YEARLY_CENTS = Math.round(PRICES.year.amount * 100);
+export const LIFETIME_YEARS = 50;
+export const MONTHLY_CENTS = Math.round(PRICES.month.amount * 100);
+export const YEARLY_CENTS = Math.round(PRICES.year.amount * 100);
 
 export interface FamilyFacts {
   createdAt: number;
@@ -136,6 +136,16 @@ const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 const monthLabel = (t: number) => `${MONTHS[new Date(t).getUTCMonth()]} ${new Date(t).getUTCFullYear()}`;
 const dayLabel = (t: number) => `${MONTHS[new Date(t).getUTCMonth()]} ${new Date(t).getUTCDate()}`;
 
+export type FamilyGroup = "paying" | "code" | "trial" | "free";
+
+/** Which customer group a family is in right now: the first that fits, so each family is in exactly one. */
+export function familyGroup(f: Pick<FamilyFacts, "plan" | "accessUntil" | "trialEndsAt">, now: number): FamilyGroup {
+  if (f.plan === "premium") return "paying";
+  if (f.accessUntil && f.accessUntil > now) return "code";
+  if (f.trialEndsAt > now) return "trial";
+  return "free";
+}
+
 export function computeMetrics(input: MetricsInput): Metrics {
   const { now, families, payments } = input;
   const lifetimeFrom = now + LIFETIME_YEARS * 365 * DAY;
@@ -152,15 +162,16 @@ export function computeMetrics(input: MetricsInput): Metrics {
     cancelled30 = 0;
   for (const f of families) {
     if (f.subscriptionStatus === "canceled" && f.billingEventAt > now - 30 * DAY) cancelled30++;
-    if (f.plan === "premium") {
+    const group = familyGroup(f, now);
+    if (group === "paying") {
       paying++;
       if (f.subscriptionInterval === "year") yearly++;
       else if (f.subscriptionInterval === "month") monthly++;
       if (f.subscriptionStatus === "past_due") pastDue++;
-    } else if (f.accessUntil && f.accessUntil > now) {
+    } else if (group === "code") {
       codeAccess++;
-      if (f.accessUntil >= lifetimeFrom) lifetime++;
-    } else if (f.trialEndsAt > now) trialing++;
+      if (f.accessUntil! >= lifetimeFrom) lifetime++;
+    } else if (group === "trial") trialing++;
     else free++;
   }
 

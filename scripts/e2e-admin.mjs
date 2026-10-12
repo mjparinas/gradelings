@@ -1,5 +1,5 @@
 // End-to-end check of the admin panel: the admin signs in, sees the overview and its charts, saves the
-// monthly costs, switches the Shop off
+// monthly costs, opens the list behind a tile (and a family from it), switches the Shop off
 // (and the kids' app hides it), makes a code, saves an A/B test, finds a family and gives it access,
 // and every tab passes the axe-core accessibility scan. A non-admin account is turned away.
 //
@@ -89,6 +89,27 @@ check(await page.getByText("Monthly costs saved.").waitFor({ timeout: 8000 }).th
 check(await vis(page.getByText("with costs of $120.00 a month")), "the projected profit uses the costs");
 await shot("overview");
 await scan("overview");
+
+// A tile opens the list behind it; an email in the list opens that family in Users.
+await page.getByRole("button", { name: /^Families \d/ }).click();
+const list = page.getByRole("dialog", { name: "Families" });
+check(await list.getByRole("button", { name: parentEmail }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the Families tile lists the families");
+await page.screenshot({ path: `${OUT}/overview-families.png` });
+await page.setViewportSize({ width: 360, height: 740 });
+await page.waitForTimeout(200);
+check(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), "on a phone the list window doesn't scroll the page sideways");
+await page.screenshot({ path: `${OUT}/overview-families-phone.png` });
+await page.setViewportSize({ width: 1280, height: 900 });
+await scan("families list");
+await page.keyboard.press("Escape");
+check(!(await vis(list)), "Escape closes the list");
+await page.getByRole("button", { name: /^Profit this month / }).click();
+check(await vis(page.getByRole("dialog", { name: "Profit by month" })), "the profit tile breaks profit down by month");
+await page.getByRole("button", { name: "Close" }).click();
+await page.getByRole("button", { name: /^Families \d/ }).click();
+await list.getByRole("button", { name: parentEmail }).click();
+check(await page.getByRole("button", { name: "Give lifetime access" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "an email in the list opens the family in Users");
+await tab("Overview");
 
 // Switch the Shop off, and the kids' app hides it. The switch shows the saved state, so it changes
 // once the server has answered.
