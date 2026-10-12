@@ -99,4 +99,34 @@ describe("parent Gate", () => {
     expect(screen.getByText("That's not right. Try again.")).toBeInTheDocument();
     expect(screen.getByRole("heading").textContent).toMatch(/What is/);
   });
+
+  it("takes the PIN from the keyboard: digits, Backspace and Enter", async () => {
+    store.pin = { hash: "h", salt: "s" };
+    store.checkPin.mockImplementation(async (p: string) => p === "2468");
+    const onPass = vi.fn();
+    render(<Gate onPass={onPass} />);
+    await userEvent.keyboard("2469{Backspace}");
+    expect(screen.getByRole("img", { name: "3 digits entered" })).toBeInTheDocument();
+    await userEvent.keyboard("8{Enter}");
+    await waitFor(() => expect(onPass).toHaveBeenCalled());
+    expect(store.checkPin).toHaveBeenCalledWith("2468");
+  });
+
+  it("ignores letters and caps typed PINs at 6 digits", async () => {
+    store.pin = { hash: "h", salt: "s" };
+    render(<Gate onPass={vi.fn()} />);
+    await userEvent.keyboard("12ab34567");
+    expect(screen.getByRole("img", { name: "6 digits entered" })).toBeInTheDocument();
+  });
+
+  it("doesn't submit twice when Enter presses a focused keypad button", async () => {
+    store.pin = { hash: "h", salt: "s" };
+    store.checkPin.mockResolvedValue(false);
+    render(<Gate onPass={vi.fn()} />);
+    await userEvent.keyboard("123");
+    screen.getByRole("button", { name: "4" }).focus();
+    await userEvent.keyboard("{Enter}");
+    expect(screen.getByRole("img", { name: "4 digits entered" })).toBeInTheDocument();
+    expect(store.checkPin).not.toHaveBeenCalled();
+  });
 });
