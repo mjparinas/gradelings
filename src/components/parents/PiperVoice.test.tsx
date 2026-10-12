@@ -87,7 +87,7 @@ describe("PiperVoice", () => {
     expect(screen.getByRole("button", { name: "⬇ Download voice" })).toBeInTheDocument();
   });
 
-  it("shows nothing for a French voice that isn't here yet: it downloads by itself once a child has French on", () => {
+  it("shows nothing for a French voice that isn't here yet: it downloads by itself for a child with read-aloud and French on", () => {
     setState(voice("missing"), voice("missing"));
     const { container } = render(<PiperVoice language="fr" />);
     expect(container).toBeEmptyDOMElement();

@@ -5,8 +5,9 @@ import { isOn } from "./remoteFlags";
 import type { SpeechLanguage } from "./speech";
 
 // Piper: a natural-sounding voice that runs on the device, so it works offline and the same on
-// every tablet. On by default: the voices download in the background when the app opens (not on
-// mobile data or Data Saver) while the device voice reads, and Piper reads from then on. A parent
+// every tablet. On by default: the voices download in the background when the app opens, for
+// children with read-aloud on (src/components/VoicePreload.tsx; not on mobile data or Data Saver),
+// while the device voice reads, and Piper reads from then on. A parent
 // can switch it off or remove it per device under Account. The files are large (see
 // public/piper/{version}/files.json), are served by this site and are kept in their own cache,
 // which the service worker leaves alone when the app updates.
@@ -266,7 +267,7 @@ export function onMeteredConnection(): boolean {
 
 /**
  * Starts downloading a language's voice in the background when Piper is on but the voice isn't
- * here yet (when the app opens, and again whenever read-aloud is used, in case that failed). Never on mobile data or Data Saver, never when the device is short
+ * here yet (when the app opens and a child has read-aloud on). Never on mobile data or Data Saver, never when the device is short
  * of space, and not in automated test browsers (each would fetch the whole voice). Read-aloud
  * carries on with the device voice meanwhile. Resolves with whether a download ran.
  */

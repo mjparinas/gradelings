@@ -127,13 +127,11 @@ describe("read-aloud with the Piper voice", () => {
     }
   });
 
-  it("starts the background download of each language's voice when it is read, but not for a device-voice preview", async () => {
-    const { speak, speakSegments, previewVoice } = await import("./speech");
+  it("doesn't start a voice download itself: that only happens for children with read-aloud on", async () => {
+    const { speak } = await import("./speech");
     speak("Hello");
     expect(synthSaid).toEqual(["Hello"]);
-    speakSegments([{ text: "chat", lang: "fr" }]);
-    previewVoice(null);
-    expect(piper.autoDownloads).toEqual(["en", "fr"]);
+    expect(piper.autoDownloads).toEqual([]);
   });
 
   it("previewing a device voice always uses that voice", async () => {

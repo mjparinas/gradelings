@@ -17,16 +17,26 @@ beforeEach(() => {
 afterEach(() => vi.useRealTimers());
 
 describe("VoicePreload", () => {
-  it("downloads the English voice in the background when the app opens, without waiting for read-aloud", () => {
-    h.settings = { a: { enabledSubjects: ["math", "language"] } };
+  it("downloads the English voice in the background when a child has read-aloud on", () => {
+    h.settings = { a: { autoRead: false, enabledSubjects: ["math"] }, b: { autoRead: true, enabledSubjects: ["math", "language"] } };
     render(<VoicePreload />);
     expect(h.preload).not.toHaveBeenCalled();
     vi.advanceTimersByTime(10_000);
     expect(h.preload).toHaveBeenCalledWith(["en"]);
   });
 
-  it("adds the French voice once a child has French switched on", () => {
-    h.settings = { a: { enabledSubjects: ["math"] }, b: { enabledSubjects: ["math", "core-french"] } };
+  it("downloads nothing when no child has read-aloud on, and only adds French for a reading child who takes it", () => {
+    h.settings = { a: { autoRead: false, enabledSubjects: ["math", "immersion"] } };
+    const { unmount } = render(<VoicePreload />);
+    vi.advanceTimersByTime(10_000);
+    expect(h.preload).not.toHaveBeenCalled();
+    unmount();
+    h.settings = { a: { autoRead: true, enabledSubjects: ["math"] }, b: { autoRead: false, enabledSubjects: ["core-french"] } };
+    const second = render(<VoicePreload />);
+    vi.advanceTimersByTime(10_000);
+    expect(h.preload).toHaveBeenLastCalledWith(["en"]);
+    second.unmount();
+    h.settings = { a: { autoRead: true, enabledSubjects: ["math", "core-french"] } };
     render(<VoicePreload />);
     vi.advanceTimersByTime(10_000);
     expect(h.preload).toHaveBeenCalledWith(["en", "fr"]);
