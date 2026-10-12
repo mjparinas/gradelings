@@ -2,7 +2,7 @@
 // monthly costs, opens the list behind a tile (and a family from it), switches the Shop off
 // (and the kids' app hides it), makes a code, saves an A/B test, finds a family and gives it access,
 // works the to-do list, writes an email to a family (no email is really sent: the server has no email keys),
-// opens the Emails and Inbox tabs, and every tab passes the axe-core accessibility scan. A non-admin account
+// opens the Emails, Inbox and System tabs, and every tab passes the axe-core accessibility scan. A non-admin account
 // is turned away.
 //
 //   ADMIN_EMAILS=admin-e2e@example.com npm start      # in one terminal, after npm run build
@@ -199,6 +199,15 @@ await page.getByRole("button", { name: "Send email" }).click();
 check(await page.getByText("The email couldn't be sent. Check the email settings.").waitFor({ timeout: 8000 }).then(() => true, () => false), "sending without email keys says so");
 await shot("user");
 await scan("user");
+
+// The System page checks every service from the server; tokens never reach the browser. The status pages are
+// read live, so only the parts that don't depend on the network are checked here.
+await tab("System");
+check(await page.getByRole("heading", { name: "Database", exact: true }).waitFor({ timeout: 30000 }).then(() => true, () => false), "the System tab shows the database check");
+check(await vis(page.getByRole("heading", { name: "Provider status pages" })), "the System tab shows the providers' status pages");
+check(await vis(page.getByText(/Set VERCEL_TOKEN/)), "a check that isn't set up says which settings to add");
+await shot("system");
+await scan("system");
 
 for (const name of ["Reports", "Log"]) {
   await tab(name);

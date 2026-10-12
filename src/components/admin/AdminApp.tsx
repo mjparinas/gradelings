@@ -11,6 +11,7 @@ import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { call } from "@/lib/classroom";
 import { Dashboard } from "./Dashboard";
 import { Emails, FamilyEmail, formatAgo, Inbox, Queue, type EmailRow } from "./Engage";
+import { System } from "./System";
 import { parseVariants, type ExperimentStatus, type FlagScope, type Variant } from "@/lib/flags";
 
 // The site-wide admin panel. Only accounts listed in ADMIN_EMAILS (with a confirmed email) get past the
@@ -932,7 +933,7 @@ function AuditLog() {
 
 // ---------- The app ----------
 
-const TABS = ["Overview", "To do", "Users", "Emails", "Inbox", "Codes", "Flags", "A/B tests", "Reports", "Log"] as const;
+const TABS = ["Overview", "To do", "Users", "Emails", "Inbox", "Codes", "Flags", "A/B tests", "Reports", "System", "Log"] as const;
 type Tab = (typeof TABS)[number];
 
 function Panel() {
@@ -978,6 +979,7 @@ function Panel() {
     Flags: <Flags flags={flags} reload={loadFlags} />,
     "A/B tests": <Experiments />,
     Reports: <Reports />,
+    System: <System />,
     Log: <AuditLog />,
   };
   return (

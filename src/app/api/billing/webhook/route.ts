@@ -1,4 +1,5 @@
 import { query, run } from "@/server/db";
+import { recordWebhook } from "@/server/monitor";
 import { recordInvoice, recordRefund } from "@/server/payments";
 import { verifyWebhook } from "@/server/stripe";
 
@@ -17,6 +18,7 @@ interface StripeEvent {
 export async function POST(req: Request) {
   const payload = await req.text();
   if (!verifyWebhook(payload, req.headers.get("stripe-signature"))) {
+    await recordWebhook("stripe", false, null, "Bad signature");
     return new Response("Bad signature", { status: 400 });
   }
   let event: StripeEvent;
@@ -34,8 +36,10 @@ export async function POST(req: Request) {
     await apply(event, obj, now);
   } catch (e) {
     await run("DELETE FROM stripe_events WHERE id = ?", [event.id]); // let Stripe retry
+    await recordWebhook("stripe", false, event.type, (e as Error).message);
     throw e;
   }
+  await recordWebhook("stripe", true, event.type);
   return new Response("ok");
 }
 
