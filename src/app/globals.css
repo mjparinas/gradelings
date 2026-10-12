@@ -346,3 +346,80 @@ html.contrast :focus-visible {
   outline-offset: 3px;
   box-shadow: 0 0 0 7px #ffffff;
 }
+
+/* "Skip to main content": off screen until a keyboard user tabs to it (WCAG 2.4.1). */
+.skip-link {
+  position: fixed;
+  left: 0.75rem;
+  top: -4rem;
+  z-index: 100;
+  border-radius: 0.75rem;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+}
+.skip-link:focus {
+  top: max(0.75rem, env(safe-area-inset-top));
+}
+/* The skip link focuses <main> itself; a ring around the whole page isn't useful. */
+main[tabindex="-1"]:focus {
+  outline: none;
+}
+
+/*
+ * Windows high-contrast themes (forced colours). The browser swaps every colour for the
+ * person's theme and drops backgrounds and shadows, so anything shown only by a fill
+ * (a picked option, a switch, a progress bar, a right or wrong answer) gets a border,
+ * an outline or a system colour here instead.
+ */
+@media (forced-colors: active) {
+  .btn,
+  .card {
+    border-color: ButtonText;
+  }
+  .btn:disabled {
+    border-color: GrayText;
+    color: GrayText;
+  }
+  :focus-visible,
+  html.contrast :focus-visible {
+    outline: 4px solid Highlight;
+    outline-offset: 3px;
+  }
+  [aria-pressed="true"],
+  [aria-current="page"],
+  [aria-current="true"],
+  [aria-selected="true"],
+  [aria-checked="true"]:not([role="switch"]) {
+    border: 3px solid Highlight;
+  }
+  /* Answers: the right one gets a thick solid edge (it also shows ✓), a wrong one a dashed edge. */
+  [data-state="right"] {
+    border: 6px solid Highlight;
+  }
+  [data-state="wrong"] {
+    border: 3px dashed GrayText;
+  }
+  .switch-track {
+    border: 2px solid ButtonText;
+  }
+  .switch-knob {
+    forced-color-adjust: none;
+    background: ButtonText;
+  }
+  [aria-checked="true"] .switch-knob {
+    background: Highlight;
+  }
+  /* Progress bars and the parent sliders share these. */
+  .progress-track {
+    border: 2px solid CanvasText;
+  }
+  .progress-fill {
+    forced-color-adjust: none;
+    background: Highlight !important;
+  }
+  .skip-link {
+    border: 2px solid ButtonText;
+  }
+}

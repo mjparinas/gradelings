@@ -1,9 +1,11 @@
 import { onColour } from "@/lib/contrast";
 import { PricingCards } from "@/components/site/Pricing";
+import { ParentQuotes } from "@/components/site/ParentQuotes";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Critter } from "@/components/Critter";
 import { SitePage } from "@/components/site/SiteChrome";
+import { appJsonLd } from "@/components/site/jsonld";
 import { curriculumPath } from "@/components/site/curriculum";
 import { kidPracticeSteps, provinceCoverage, regionList } from "@/components/site/provinces";
 import { DEFAULT_GOAL_MINUTES } from "@/lib/model";
@@ -14,7 +16,7 @@ import { APP_NAME } from "@/lib/brand";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, TRIAL_DAYS } from "@/lib/plan";
 import { TEACHER_SIGNUP, teacherPath } from "@/components/site/teachers";
 import { Disclosure } from "@/components/Disclosure";
-import { JsonLd, ORG_JSON_LD, SITE_URL, absolute } from "@/lib/site";
+import { JsonLd, ORG_JSON_LD, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: { absolute: `${APP_NAME} · Curriculum practice and learning games for Kindergarten to Grade 9` },
@@ -131,19 +133,7 @@ export default function Home() {
         data={[
           ORG_JSON_LD,
           { "@context": "https://schema.org", "@type": "WebSite", name: APP_NAME, url: SITE_URL },
-          {
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            name: APP_NAME,
-            applicationCategory: "EducationalApplication",
-            operatingSystem: "Web, Android, iOS, Windows, macOS, ChromeOS",
-            url: absolute("/play/"),
-            audience: { "@type": "EducationalAudience", educationalRole: "student" },
-            offers: [
-              { "@type": "Offer", name: "Family plan (monthly)", price: PRICES.month.amount, priceCurrency: PRICES.month.currency },
-              { "@type": "Offer", name: "Family plan (yearly)", price: PRICES.year.amount, priceCurrency: PRICES.year.currency },
-            ],
-          },
+          appJsonLd(),
           {
             "@context": "https://schema.org",
             "@type": "FAQPage",
@@ -304,6 +294,8 @@ export default function Home() {
           </Link>
         </p>
       </section>
+
+      <ParentQuotes />
 
       {/* Pricing */}
       <section aria-labelledby="pricing" className="py-8">

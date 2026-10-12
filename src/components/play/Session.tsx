@@ -1,6 +1,7 @@
 "use client";
 
 import { ReportQuestion } from "./ReportQuestion";
+import { SaveProgress } from "./SaveProgress";
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { getUnitRef } from "@/content";
 import type { Question } from "@/content/types";
@@ -652,6 +653,7 @@ function Summary({ plan, results, startDerived }: { plan: Plan; results: Result[
             {unit ? "More lessons →" : "Home →"}
           </button>
         </div>
+        {total > 0 && <SaveProgress />}
       </div>
     </Page>
   );

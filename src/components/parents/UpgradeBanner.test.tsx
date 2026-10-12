@@ -1,7 +1,6 @@
 // @vitest-environment jsdom
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import { SITE_HOST } from "@/lib/brand";
 import type { FamilyInfo } from "@/lib/model";
 
 const state = vi.hoisted(() => ({
@@ -53,14 +52,11 @@ describe("UpgradeBanner", () => {
     expect(container).toBeEmptyDOMElement();
   });
 
-  it("tells Android parents to subscribe in a browser, with no payment button", () => {
+  it("shows nothing in the Android app (Google Play's payments rules)", () => {
     state.family = { plan: "trial", trialEndsAt: Date.now() + 86_400_000, updatedAt: 1 };
     state.path = [""];
     state.android = true;
-    render(<UpgradeBanner />);
-    expect(screen.getByRole("heading", { name: `Subscribe at ${SITE_HOST}` })).toBeInTheDocument();
-    expect(screen.getByText(/Open/)).toHaveTextContent(SITE_HOST);
-    expect(screen.getByText(/in your browser to subscribe/i)).toBeInTheDocument();
-    expect(screen.queryByRole("link")).not.toBeInTheDocument();
+    const { container } = render(<UpgradeBanner />);
+    expect(container).toBeEmptyDOMElement();
   });
 });

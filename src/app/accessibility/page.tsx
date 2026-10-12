@@ -21,7 +21,7 @@ export default function AccessibilityPage() {
         <div className="mt-6 flex flex-col gap-6">
           <Section title="Where we are">
             <p>
-              We aim to meet WCAG 2.2 level AA. Our automated checks against those rules pass on the kids’ app, the parent area, the teacher area and the public pages, and they run on every change we make. <strong>We have not yet tested with screen readers or with keyboard-only use, so we cannot say the app fully meets the standard.</strong> Schools can ask us for our conformance report.
+              We aim to meet WCAG 2.2 level AA. Our automated checks against those rules pass on the kids’ app, the parent area, the teacher area and the public pages, and they run on every change we make. A scripted keyboard-only run-through also passes on every change. <strong>We have not yet tested with screen readers, or done a keyboard run-through by hand, so we cannot say the app fully meets the standard.</strong> Schools can ask us for our conformance report.
             </p>
           </Section>
           <Section title="What is built in">
@@ -33,12 +33,14 @@ export default function AccessibilityPage() {
               <li>Colours that pass contrast checks and a simulated colour-blind check. Charts use a single colour family and have table views.</li>
               <li>Hints and a second try on every question. No time pressure in normal practice.</li>
               <li>Everything respects the device’s reduced motion setting.</li>
+              <li>Keyboard use: a “Skip to main content” link, a clear focus ring, number keys to pick an answer and Enter to check it.</li>
+              <li>Windows high contrast themes keep picked answers, switches and progress bars visible.</li>
             </ul>
           </Section>
           <Section title="What we know is missing">
             <ul>
-              <li>We haven’t tested with VoiceOver, TalkBack or NVDA, or with a keyboard alone, yet.</li>
-              <li>The arcade games are visual and need a finger or pointer. They are optional rewards, and nothing assigned depends on them.</li>
+              <li>We haven’t tested with VoiceOver, TalkBack or NVDA yet, or done a keyboard run-through by hand.</li>
+              <li>The arcade games are visual and most need a finger or pointer. They are optional rewards, and nothing assigned depends on them.</li>
               <li>Some pictures in questions are described in the question text, but not every picture has a longer description.</li>
             </ul>
           </Section>

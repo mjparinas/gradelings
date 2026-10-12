@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState, useSyncExternalStore, type ReactNode } from "react";
-import { APP_NAME, SITE_HOST } from "@/lib/brand";
+import { APP_NAME } from "@/lib/brand";
 import { refreshAccount, type BillingInfo } from "@/lib/account";
 import { hasPaidPlan, isPremium, trialDaysLeft } from "@/lib/plan";
 import { useRoute } from "@/lib/router";
@@ -23,6 +23,7 @@ import { SettingsPage } from "./Settings";
 import { SubscriptionPage } from "./Subscription";
 import { UpgradeBanner } from "./UpgradeBanner";
 import { ReportTabs } from "./common";
+import { MAIN_ID, SkipLink } from "@/components/SkipLink";
 
 const NAV = [
   { path: "", label: "Overview", icon: "🏠" },
@@ -67,6 +68,7 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
   const days = trialDaysLeft(family);
   return (
     <div className="min-h-dvh bg-[#f6f5f1]">
+      <SkipLink />
       <header className="sticky top-0 z-30 border-b border-line bg-white/90 backdrop-blur" style={{ paddingTop: "env(safe-area-inset-top)" }}>
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-3">
           <div className="flex items-center gap-3">
@@ -81,9 +83,7 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
             <SyncBadge />
             {paid ? (
               <span className="rounded-full bg-good-soft px-3 py-1 text-sm font-semibold text-good-dark">⭐ Premium</span>
-            ) : inAndroidApp ? (
-              <span className="inline-flex min-h-11 items-center rounded-full bg-[#25b47e] px-3 text-sm font-bold text-[#0f172a]">Subscribe at {SITE_HOST}</span>
-            ) : (
+            ) : inAndroidApp ? null : (
               <a href="#/subscription" className="inline-flex min-h-11 items-center rounded-full bg-[#25b47e] px-3 text-sm font-bold text-[#0f172a]">
                 {premium ? `Subscribe · ${days} ${days === 1 ? "day" : "days"} left` : "Subscribe"}
               </a>
@@ -99,6 +99,7 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
                 <li key={n.path}>
                   <a
                     href={`#/${n.path}`}
+                    aria-current={active === n.path ? "page" : undefined}
                     className={`flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-semibold whitespace-nowrap ${
                       active === n.path ? "bg-[#253047] text-white" : subscribe ? "bg-good-soft text-[#0f172a]" : "text-ink-soft hover:bg-black/5"
                     }`}
@@ -111,7 +112,7 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
           </ul>
         </nav>
       </header>
-      <main className="mx-auto max-w-6xl px-4 py-6" style={{ paddingBottom: "max(2rem, env(safe-area-inset-bottom))" }}>
+      <main id={MAIN_ID} tabIndex={-1} className="mx-auto max-w-6xl px-4 py-6" style={{ paddingBottom: "max(2rem, env(safe-area-inset-bottom))" }}>
         <UpgradeBanner />
         {children}
       </main>

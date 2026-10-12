@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState, useSyncExternalStore } from "react";
-import { APP_NAME, SITE_HOST } from "@/lib/brand";
+import { APP_NAME } from "@/lib/brand";
 import { devBilling, loadReferral, openBillingPortal, redeemCode, refreshAccount, resendVerification, startCheckout, type BillingInfo, type ReferralInfo } from "@/lib/account";
-import { FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, PRICES, trialDaysLeft, upgradeOffer } from "@/lib/plan";
+import { firstChargeAt, FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, PRICES, trialDaysLeft, upgradeOffer } from "@/lib/plan";
 import { inviteLink } from "@/lib/referral";
 import { useRoute } from "@/lib/router";
 import { useStore } from "@/lib/store";
@@ -31,6 +31,7 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
   const inAndroidApp = useSyncExternalStore(noSubscribe, isAndroidApp, () => false);
   const premium = isPremium(family);
   const paid = hasPaidPlan(family);
+  const chargeAt = firstChargeAt(family.trialEndsAt, Boolean(family.subscription));
   const subscribed = Boolean(family.subscription && ["active", "trialing", "past_due"].includes(family.subscription.status));
   const offer = upgradeOffer(family);
   const needsEmail = Boolean(family.account && family.account.verified === false);
@@ -64,7 +65,7 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
           paid
             ? "One family membership covers all your children."
             : inAndroidApp
-              ? `Open ${SITE_HOST} in your browser to subscribe. This app can't take a payment.`
+              ? "This app can't take a payment. A family membership shows up here once you sign in."
             : offer === "trial"
               ? `Free trial · ${trialDaysLeft(family)} ${trialDaysLeft(family) === 1 ? "day" : "days"} left. You can subscribe now, before it ends.`
               : "The free trial is optional. Subscribe whenever you're ready, including before you've tried the app."
@@ -86,7 +87,10 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
           </p>
           {codeAccess && !lifetime && <p className="text-ink-soft">Free access until {longDate(family.accessUntil!)}</p>}
           {subscribed && family.subscription?.currentPeriodEnd && (
-            <p className="text-ink-soft">Renews {longDate(family.subscription.currentPeriodEnd)}</p>
+            <p className="text-ink-soft">
+              {family.subscription.status === "trialing" ? "Free trial until" : "Renews"} {longDate(family.subscription.currentPeriodEnd)}
+              {family.subscription.status === "trialing" && ". Your first payment is that day."}
+            </p>
           )}
           {!premium && (
             <p className="mt-2 font-read text-ink-soft">
@@ -106,13 +110,9 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
           {inAndroidApp ? (
             <p className="font-read">
               {paid ? (
-                <>
-                  To change or cancel your membership, open <b>{SITE_HOST}</b> in your browser.
-                </>
+                "Billing changes aren't made in this app. Your membership stays active on every device you sign in to."
               ) : (
-                <>
-                  To subscribe, open <b>{SITE_HOST}</b> in your browser. This app can&apos;t take a payment. Sign in with the same account and your membership shows up here.
-                </>
+                "This app can't take a payment. If your family has a membership, sign in with the same account and it shows up here."
               )}
             </p>
           ) : !family.account ? (
@@ -152,7 +152,9 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
               )}
               {offer === "trial" && (
                 <p className="font-read">
-                  Subscribing now keeps everything open. You&apos;re charged at checkout, the paid plan starts that day, and days left in the trial don&apos;t carry over.
+                  {chargeAt
+                    ? `Subscribing now keeps everything open and keeps your free days. Your card is saved at checkout and the first payment is on ${longDate(chargeAt)}, when the trial ends. Cancel before then and you pay nothing.`
+                    : "Subscribing now keeps everything open. You're charged at checkout and the paid plan starts that day."}
                 </p>
               )}
               {needsEmail && billing?.stripe && (

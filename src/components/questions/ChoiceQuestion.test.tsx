@@ -57,4 +57,38 @@ describe("ChoiceQuestion", () => {
     expect(screen.getByRole("button", { name: "5" })).toHaveClass("btn-primary");
     expect(screen.getByRole("button", { name: "4" })).not.toHaveClass("btn-primary");
   });
+
+  it("picks a choice with its number key", async () => {
+    const { onAttempt } = setup();
+    await userEvent.keyboard("2");
+    expect(onAttempt).toHaveBeenCalledTimes(1);
+    expect(onAttempt.mock.calls[0][0]).toBe(true);
+    expect(screen.getByRole("button", { name: "5" })).toHaveAttribute("aria-keyshortcuts", "2");
+  });
+
+  it("ignores number keys past the last choice, with a modifier held, or once answered", async () => {
+    const { onAttempt, rerender } = setup();
+    await userEvent.keyboard("9");
+    await userEvent.keyboard("{Control>}1{/Control}");
+    expect(onAttempt).not.toHaveBeenCalled();
+    rerender(<ChoiceQuestion q={q} status="correct" onAttempt={onAttempt} onSlip={vi.fn()} />);
+    await userEvent.keyboard("2");
+    expect(onAttempt).not.toHaveBeenCalled();
+  });
+
+  it("doesn't pick a choice already ruled out", async () => {
+    const { onAttempt } = setup();
+    await userEvent.keyboard("1");
+    await userEvent.keyboard("1");
+    expect(onAttempt).toHaveBeenCalledTimes(1);
+  });
+
+  it("marks right and wrong answers for high-contrast themes", async () => {
+    const { rerender, onAttempt } = setup();
+    await userEvent.click(screen.getByRole("button", { name: "6" }));
+    expect(screen.getByRole("button", { name: "6" })).toHaveAttribute("data-state", "wrong");
+    rerender(<ChoiceQuestion q={q} status="revealed" onAttempt={onAttempt} onSlip={vi.fn()} />);
+    expect(screen.getByRole("button", { name: /5/ })).toHaveAttribute("data-state", "right");
+    expect(screen.getByRole("button", { name: "4" })).not.toHaveAttribute("data-state");
+  });
 });

@@ -1,4 +1,5 @@
 import { APP_NAME } from "@/lib/brand";
+import { PRICES } from "@/lib/plan";
 import { absolute } from "@/lib/site";
 
 export function breadcrumbJsonLd(items: { label: string; href?: string }[]) {
@@ -35,5 +36,32 @@ export function articleJsonLd(a: { headline: string; description: string; path: 
     isAccessibleForFree: true,
     author: { "@type": "Organization", name: APP_NAME },
     publisher: { "@type": "Organization", name: APP_NAME, url: absolute("/") },
+  };
+}
+
+/**
+ * The app itself, with the family plan's prices. Used on the home and pricing pages.
+ * It is a SoftwareApplication, not a Product: Google's Product snippets expect reviews or
+ * ratings, and we have no real ones to give. Never add made-up `review` or `aggregateRating`.
+ */
+export function appJsonLd() {
+  const offer = (name: string, p: { amount: number; currency: string }) => ({
+    "@type": "Offer",
+    name,
+    price: p.amount,
+    priceCurrency: p.currency,
+    availability: "https://schema.org/InStock",
+    url: absolute("/pricing/"),
+  });
+  return {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": `${absolute("/")}#app`,
+    name: APP_NAME,
+    applicationCategory: "EducationalApplication",
+    operatingSystem: "Web, Android, iOS, Windows, macOS, ChromeOS",
+    url: absolute("/play/"),
+    audience: { "@type": "EducationalAudience", educationalRole: "student" },
+    offers: [offer("Family plan (monthly)", PRICES.month), offer("Family plan (yearly)", PRICES.year)],
   };
 }

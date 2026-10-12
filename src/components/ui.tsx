@@ -57,7 +57,7 @@ export function ProgressBar({
   const pct = max ? Math.min(100, (value / max) * 100) : 0;
   return (
     <div
-      className={`relative overflow-hidden rounded-full ${className}`}
+      className={`progress-track relative overflow-hidden rounded-full ${className}`}
       style={{ height, background: track }}
       role="progressbar"
       aria-label={label}
@@ -66,7 +66,7 @@ export function ProgressBar({
       aria-valuenow={value}
     >
       <div
-        className="relative h-full overflow-hidden rounded-full"
+        className="progress-fill relative h-full overflow-hidden rounded-full"
         style={{
           width: `${pct}%`,
           minWidth: pct > 0 ? 20 : 0,

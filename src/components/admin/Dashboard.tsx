@@ -5,13 +5,14 @@ import { ColumnChart, LineChart, niceMax, RowBars } from "@/components/parents/c
 import { call } from "@/lib/classroom";
 import type { Metrics } from "@/lib/adminMetrics";
 import type { Detail, DetailView } from "@/lib/adminDetail";
+import { cancelReasonRows } from "@/lib/cancelReasons";
 import { FREE_UNITS_PER_COURSE } from "@/lib/plan";
 import { DetailModal } from "./DetailModal";
 
 // The admin overview: customers, growth, practice and money, with charts. Counts and sums only here; most
 // tiles open a window with the list behind the number.
 
-type Data = Metrics & { stripe: boolean };
+type Data = Metrics & { stripe: boolean; cancelReasons?: { reason: string; n: number }[] };
 
 const btn = "min-h-11 rounded-xl px-4 font-bold disabled:opacity-50";
 const primary = `${btn} bg-[#4f8ef7] text-[#0f172a]`;
@@ -222,6 +223,13 @@ export function Dashboard({ onOpenFamily }: { onOpenFamily?: (id: string) => voi
         <div className={charts}>
           <ColumnChart title="Sign-ups per week" subtitle="Last 26 weeks" data={a.weekly} unit="sign-ups" xLabel="Week of" />
           <ColumnChart title="Sign-ups per month" subtitle="Last 12 months" data={a.monthly} unit="sign-ups" xLabel="Month" />
+          <RowBars
+            title="Why families cancel"
+            subtitle="The reason picked in Stripe's billing portal, last 12 months"
+            rows={cancelReasonRows(data.cancelReasons ?? [])}
+            headers={["Reason", "Cancellations", "Share"]}
+            empty="No cancellations with a reason yet."
+          />
         </div>
       </Section>
 

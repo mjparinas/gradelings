@@ -48,6 +48,15 @@ describe("checkout", () => {
     expect(sent.allow_promotion_codes).toBeUndefined();
   });
 
+  it("keeps the rest of the free trial by starting the subscription with a trial that ends with it", async () => {
+    fetchMock.mockResolvedValueOnce(ok({ url: "u" }));
+    await createCheckout({ familyId: "fam1", email: "p@example.com", interval: "year", origin: "https://app.test", firstChargeAt: 1_900_000_000_500 });
+    expect(form()).toMatchObject({ "subscription_data[trial_end]": "1900000000", payment_method_collection: "always" });
+    fetchMock.mockResolvedValueOnce(ok({ url: "u" }));
+    await createCheckout({ familyId: "fam1", email: "p@example.com", interval: "year", origin: "https://app.test", firstChargeAt: null });
+    expect(form(1)["subscription_data[trial_end]"]).toBeUndefined();
+  });
+
   it("passes on Stripe's error message, or the status when there is none", async () => {
     fetchMock.mockResolvedValueOnce(new Response(JSON.stringify({ error: { message: "No such price" } }), { status: 400 }));
     await expect(createCheckout({ familyId: "f", email: "e", interval: "month", origin: "o" })).rejects.toThrow("No such price");

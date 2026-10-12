@@ -56,4 +56,15 @@ describe("BuildQuestion", () => {
     expect(screen.getByText("23")).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Check ✓" })).toBeDisabled();
   });
+
+  it("checks with Enter, while Enter on a block button adds that block", async () => {
+    const onAttempt = setup();
+    screen.getByRole("button", { name: "+ Ten" }).focus();
+    await userEvent.keyboard("{Enter}{Enter}");
+    expect(onAttempt).not.toHaveBeenCalled();
+    (document.activeElement as HTMLElement).blur();
+    await userEvent.keyboard("{Enter}");
+    expect(onAttempt).toHaveBeenCalledTimes(1);
+    expect(onAttempt.mock.calls[0][0]).toBe(false); // 20, not 23
+  });
 });

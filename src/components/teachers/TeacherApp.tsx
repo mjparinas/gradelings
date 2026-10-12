@@ -11,6 +11,7 @@ import { SelectMenu } from "@/components/SelectMenu";
 import { APP_NAME } from "@/lib/brand";
 import { call, classInsights, type ClassInvite, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
 import { levelInfo } from "@/lib/proficiency";
+import { MAIN_ID, SkipLink } from "@/components/SkipLink";
 
 // The teacher area: create a class, share its code, assign BC units and see each linked student's
 // practice results. Each class follows one province (BC, Ontario or Alberta). It talks to the server only (no kids' store), so it stays light.
@@ -723,6 +724,7 @@ export function TeacherApp() {
 
   return (
     <div className="min-h-dvh bg-[#f6f5f1]">
+      <SkipLink />
       <header className="border-b border-line bg-white" style={{ paddingTop: "env(safe-area-inset-top)" }}>
         <div className="mx-auto flex max-w-4xl items-center justify-between gap-2 px-4 py-3">
           <span className="text-lg font-bold">
@@ -742,7 +744,7 @@ export function TeacherApp() {
           </div>
         </div>
       </header>
-      <main className="mx-auto max-w-4xl px-4 py-6">
+      <main id={MAIN_ID} tabIndex={-1} className="mx-auto max-w-4xl px-4 py-6">
         {signedIn === null ? <p className="font-read">Loading…</p> : !signedIn ? <AuthForm onDone={() => setSignedIn(true)} /> : classId ? <ClassPage id={classId} onBack={() => setClassId(null)} /> : <ClassList onOpen={setClassId} />}
       </main>
     </div>

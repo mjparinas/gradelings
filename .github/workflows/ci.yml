@@ -173,6 +173,7 @@ jobs:
       matrix:
         include:
           - { name: "accessibility", serve: true, run: "node scripts/e2e-a11y.mjs http://localhost:3000 e2e-shots/a11y" }
+          - { name: "keyboard and high contrast", serve: true, run: "node scripts/e2e-keyboard.mjs http://localhost:3000 e2e-shots/keyboard" }
           # The playthrough is split in three so no part is the slowest job.
           - { name: "playthrough modes", serve: true, run: "node scripts/e2e.mjs http://localhost:3000 e2e-shots --part modes" }
           - { name: "parent area and arcade", serve: true, run: "node scripts/e2e.mjs http://localhost:3000 e2e-shots --part parents" }
