@@ -28,10 +28,12 @@ const check = (cond, msg) => {
   else console.log("ok  ", msg);
 };
 
-const db = createClient({ url: process.env.DATABASE_URL ?? "file:./data/grademap.db", authToken: process.env.DATABASE_AUTH_TOKEN });
+// Opened after the first sign-up, which is when the server creates the database file.
+let db;
 async function account(email) {
   const res = await fetch(`${BASE}/api/auth/signup/`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ email, password: PASSWORD }) });
   check(res.status === 200 || res.status === 409, `account ${email} exists`);
+  db ??= createClient({ url: process.env.DATABASE_URL ?? "file:./data/grademap.db", authToken: process.env.DATABASE_AUTH_TOKEN });
   await db.execute({ sql: "UPDATE parents SET email_verified_at = ? WHERE email = ?", args: [Date.now(), email] });
 }
 const parentEmail = `parent-${Date.now()}@example.com`;
