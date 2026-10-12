@@ -1,6 +1,7 @@
 "use client";
 
 import { getItem } from "@/lib/shop";
+import { useFlag } from "@/lib/remoteFlags";
 import { go } from "@/lib/router";
 import { useActiveProfile, useDerived, useStore } from "@/lib/store";
 import { CritterSvg } from "../Critter";
@@ -50,6 +51,13 @@ export function Hud() {
     : d.streak.current > 0
       ? `${d.streak.current} day streak. ${d.activeDays} days practised in total.${d.streak.shields ? ` ${d.streak.shields} rest-day ${d.streak.shields === 1 ? "shield" : "shields"}.` : ""}`
       : "Practise today to start a streak";
+  // The coins open the shop, unless the admin panel has switched the shop off.
+  const shopOn = useFlag("shop");
+  const coins = (
+    <>
+      🪙 <span key={d.coins} className="inline-block animate-pop-in">{d.coins}</span>
+    </>
+  );
 
   return (
     <header className="flex flex-wrap items-center justify-between gap-2">
@@ -80,9 +88,15 @@ export function Hud() {
             XP
           </span>
         </span>
-        <span className="flex h-16 items-center gap-1 rounded-2xl bg-white px-3 text-xl font-bold shadow-[0_4px_0_var(--color-line)]" aria-label={`${d.coins} coins`}>
-          🪙 <span key={d.coins} className="inline-block animate-pop-in">{d.coins}</span>
-        </span>
+        {shopOn ? (
+          <button type="button" className="btn h-16 gap-1 px-3 text-xl" onClick={() => go("/shop")} aria-label={`${d.coins} coins. Open the shop`}>
+            {coins}
+          </button>
+        ) : (
+          <span className="flex h-16 items-center gap-1 rounded-2xl bg-white px-3 text-xl font-bold shadow-[0_4px_0_var(--color-line)]" aria-label={`${d.coins} coins`}>
+            {coins}
+          </span>
+        )}
         <span
           className={`flex h-16 items-center gap-1 rounded-2xl px-3 text-xl font-bold shadow-[0_4px_0_var(--color-line)] ${
             d.streak.activeToday ? "bg-nudge-soft text-nudge-dark" : "bg-white text-ink-soft"
