@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Critter } from "@/components/Critter";
 import { SitePage, SubscribeActions } from "@/components/site/SiteChrome";
 import { coursesFor, curriculumPath, gradesWithContent } from "@/components/site/curriculum";
-import { kidPracticeSteps, provinceCoverage, regionList, subjectList } from "@/components/site/provinces";
+import { kidPracticeSteps, provinceCoverage, regionList } from "@/components/site/provinces";
 import { GAMES } from "@/components/play/games/types";
 import { FRAMEWORKS, type Framework } from "@/content/frameworks";
 import { GRADE_LABEL } from "@/content/subjects";
@@ -59,22 +59,6 @@ const FAQS = [
   },
 ];
 
-function ProvinceLinks({ frameworks, withRange = false }: { frameworks: readonly Framework[]; /** Adds each province's grade span when they don't share one. */ withRange?: boolean }) {
-  return frameworks.map((f, i) => {
-    const from = GRADE_LABEL[f.grades[0]];
-    const to = GRADE_LABEL[f.grades[f.grades.length - 1]];
-    return (
-      <span key={f.id}>
-        {i > 0 && (i === frameworks.length - 1 ? " and " : ", ")}
-        <Link href={curriculumPath.framework(f)} className="font-semibold text-[#2f6fd6] underline">
-          {f.region}
-          {withRange ? ` (${from === to ? from : `${from} to ${to}`})` : ""}
-        </Link>
-      </span>
-    );
-  });
-}
-
 function unitsIn(framework: Framework): number {
   return gradesWithContent(framework).reduce((n, g) => n + coursesFor(framework, g).reduce((m, c) => m + c.units.length, 0), 0);
 }
@@ -125,29 +109,8 @@ export default function Home() {
             <Link href={curriculumPath.index()} className="btn min-h-14 px-6 text-xl">
               See what&apos;s covered
             </Link>
+          <p className="mt-4 text-sm text-ink-soft">Subscribe any time · Free trial needs no card · No ads · Works offline</p>
           </div>
-          <p className="mt-4 max-w-xl font-read text-ink-soft">
-            Choose your province when you add a child: <ProvinceLinks frameworks={FRAMEWORKS} withRange={coverage.range === null} />.
-          </p>
-          <p className="mt-2 max-w-xl font-read text-ink-soft">
-            They cover {subjectList(coverage.sharedSubjects)}
-            {coverage.range ? ` from ${GRADE_LABEL[coverage.range.from]} to ${GRADE_LABEL[coverage.range.to]}` : ""}.
-            {coverage.gaps.map((gap) =>
-              gap.style === "except" ? (
-                <span key={gap.subjects.join(",")}>
-                  {" "}
-                  {subjectList(gap.subjects)} {gap.subjects.length === 1 ? "is" : "are"} included everywhere except <ProvinceLinks frameworks={gap.missing} />.
-                </span>
-              ) : (
-                <span key={gap.subjects.join(",")}>
-                  {" "}
-                  <ProvinceLinks frameworks={gap.included} /> also {gap.included.length === 1 ? "includes" : "include"} {subjectList(gap.subjects)}.
-                </span>
-              ),
-            )}{" "}
-            More provinces and states are coming.
-          </p>
-          <p className="mt-3 text-sm text-ink-soft">Subscribe any time · Free trial needs no card · No ads · Works offline</p>
           <p className="mt-3 font-read text-ink-soft">
             Teacher?{" "}
             <Link href={TEACHER_SIGNUP} className="font-semibold text-[#2f6fd6] underline">
