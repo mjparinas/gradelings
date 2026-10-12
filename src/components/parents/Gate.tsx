@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useStore } from "@/lib/store";
 import { Critter } from "../Critter";
 
@@ -9,6 +9,26 @@ import { Critter } from "../Critter";
 // needs it. "Forgot PIN" asks a multiplication question young kids can't do.
 
 function Keypad({ value, onChange, onSubmit, max = 6 }: { value: string; onChange: (v: string) => void; onSubmit: () => void; max?: number }) {
+  // On a computer the PIN can be typed too: digits, Backspace, and Enter for OK.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+      if (/^[0-9]$/.test(e.key)) {
+        e.preventDefault();
+        if (value.length < max) onChange(value + e.key);
+      } else if (e.key === "Backspace") {
+        e.preventDefault();
+        onChange(value.slice(0, -1));
+      } else if (e.key === "Enter") {
+        // Enter on a focused button or link already clicks it; don't also submit.
+        if (e.repeat || (e.target instanceof Element && e.target.closest("button, a"))) return;
+        e.preventDefault();
+        onSubmit();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [value, onChange, onSubmit, max]);
   return (
     <div className="grid w-full max-w-xs grid-cols-3 gap-2.5">
       {["1", "2", "3", "4", "5", "6", "7", "8", "9", "⌫", "0", "OK"].map((k) => (
