@@ -4,7 +4,7 @@ Codes give a family free access for a while (or for life), or a discount on thei
 
 ## Turning it on
 
-Set `ADMIN_TOKEN` to at least 24 random characters (for example `openssl rand -base64 32`). Without it, `/api/admin/codes/` answers 404. Every call sends `Authorization: Bearer $ADMIN_TOKEN`.
+The easiest way to make and disable codes is the admin panel at `/admin/` (**Codes**), which needs `ADMIN_EMAILS` (`docs/ADMIN.md`). For scripts, set `ADMIN_TOKEN` to at least 24 random characters (for example `openssl rand -base64 32`). Without it (and without a signed-in admin), `/api/admin/codes/` answers 404. Every call sends `Authorization: Bearer $ADMIN_TOKEN`.
 
 ## Making codes
 

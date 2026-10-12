@@ -40,7 +40,7 @@ Gradelings is a web app (installable, with an Android wrapper) for practice and 
 - **Student:** only their own account.
 - **Co-teachers:** a class belongs to the teacher who created it (the owner). The owner can invite other teacher accounts by email; the invitee must accept while signed in with that confirmed email. A co-teacher sees exactly what the owner sees (first name, avatar, grade, results on the assigned units, login codes) and can assign units, add students, reset a student's code and print cards. Only the owner can close the class, get a new class code, delete a student, or invite and remove co-teachers. A class has at most five co-teachers, and a co-teacher can leave at any time. The owner and co-teachers see each other's account email.
 - **Other teachers:** nothing.
-- **Gradelings staff:** operational access for support and security only **(confirm access policy before signing)**.
+- **Gradelings staff:** operational access for support and security only **(confirm access policy before signing)**. The admin panel (`/admin/`, limited to listed, confirmed staff accounts) shows parent account emails and billing state but never children's names or results, and leaves class student accounts out entirely. Every change made there is logged.
 - **Parents** (for linked children): the full family view at home, as for any family.
 
 ## 5. Data flow

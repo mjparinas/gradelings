@@ -1,0 +1,315 @@
+import { mkdtempSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { afterAll, beforeAll, beforeEach, describe, expect, it } from "vitest";
+import { LIFETIME_ACCESS } from "@/lib/plan";
+
+// The admin panel's API, through the real route handlers against a throwaway SQLite file.
+
+const dir = mkdtempSync(join(tmpdir(), "grademap-admin-"));
+process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
+delete process.env.RESEND_API_KEY;
+delete process.env.ADMIN_TOKEN;
+const ADMIN_EMAIL = "owner@example.com";
+
+type Mod = Record<string, (req: Request) => Promise<Response>>;
+let signup: Mod, login: Mod, me: Mod, adminMe: Mod, stats: Mod, flags: Mod, experiments: Mod, users: Mod, reports: Mod, auditLog: Mod, codes: Mod, publicFlags: Mod, redeem: Mod, classes: Mod, feedback: Mod;
+let dbm: typeof import("@/server/db");
+
+beforeAll(async () => {
+  [signup, login, me, adminMe, stats, flags, experiments, users, reports, auditLog, codes, publicFlags, redeem, classes, feedback] = (await Promise.all([
+    import("@/app/api/auth/signup/route"),
+    import("@/app/api/auth/login/route"),
+    import("@/app/api/auth/me/route"),
+    import("@/app/api/admin/me/route"),
+    import("@/app/api/admin/stats/route"),
+    import("@/app/api/admin/flags/route"),
+    import("@/app/api/admin/experiments/route"),
+    import("@/app/api/admin/users/route"),
+    import("@/app/api/admin/reports/route"),
+    import("@/app/api/admin/audit/route"),
+    import("@/app/api/admin/codes/route"),
+    import("@/app/api/flags/route"),
+    import("@/app/api/codes/redeem/route"),
+    import("@/app/api/classes/route"),
+    import("@/app/api/feedback/route"),
+  ])) as unknown as Mod[];
+  dbm = await import("@/server/db");
+});
+beforeEach(() => {
+  process.env.ADMIN_EMAILS = ` ${ADMIN_EMAIL.toUpperCase()} , someone-else@example.com`;
+});
+afterAll(() => rmSync(dir, { recursive: true, force: true }));
+
+let ip = 0;
+function req(path: string, method = "GET", body?: unknown, cookie?: string, origin?: string): Request {
+  return new Request(`http://localhost${path}`, {
+    method,
+    headers: {
+      "content-type": "application/json",
+      host: "localhost",
+      "x-forwarded-for": `10.2.0.${++ip % 250}`,
+      ...(cookie ? { cookie } : {}),
+      ...(origin ? { origin } : {}),
+    },
+    body: body === undefined ? undefined : JSON.stringify(body),
+  });
+}
+const cookieOf = (res: Response) => (res.headers.get("set-cookie") ?? "").split(";")[0];
+
+async function account(address: string, verified = true) {
+  const res = await signup.POST(req("/api/auth/signup/", "POST", { email: address, password: "correct horse" }));
+  expect(res.status).toBe(200);
+  if (verified) await dbm.run("UPDATE parents SET email_verified_at = ? WHERE email = ?", [Date.now(), address]);
+  const familyId = (await dbm.query<{ family_id: string }>("SELECT family_id FROM parents WHERE email = ?", [address]))[0].family_id;
+  return { cookie: cookieOf(res), familyId };
+}
+
+let admin: { cookie: string; familyId: string };
+let parent: { cookie: string; familyId: string };
+beforeAll(async () => {
+  admin = await account(ADMIN_EMAIL);
+  parent = await account("parent@example.com");
+});
+
+const as = (cookie: string) => ({
+  get: (mod: Mod, path: string) => mod.GET(req(path, "GET", undefined, cookie)),
+  send: (mod: Mod, method: string, path: string, body?: unknown) => mod[method](req(path, method, body, cookie)),
+});
+
+describe("who is an admin", () => {
+  it("is a confirmed account listed in ADMIN_EMAILS, case and spaces ignored", async () => {
+    const res = await as(admin.cookie).get(adminMe, "/api/admin/me/");
+    expect(res.status).toBe(200);
+    expect((await res.json()).email).toBe(ADMIN_EMAIL);
+  });
+
+  it("answers 404 to everyone else, and to everyone when ADMIN_EMAILS is unset", async () => {
+    expect((await adminMe.GET(req("/api/admin/me/"))).status).toBe(404);
+    expect((await as(parent.cookie).get(adminMe, "/api/admin/me/")).status).toBe(404);
+    for (const mod of [stats, flags, experiments, users, reports, auditLog]) expect((await as(parent.cookie).get(mod, "/api/admin/x/")).status).toBe(404);
+    expect((await as(parent.cookie).get(codes, "/api/admin/codes/")).status).toBe(404);
+    delete process.env.ADMIN_EMAILS;
+    expect((await as(admin.cookie).get(adminMe, "/api/admin/me/")).status).toBe(404);
+    expect((await as(admin.cookie).get(codes, "/api/admin/codes/")).status).toBe(404);
+  });
+
+  it("needs a confirmed email", async () => {
+    const unconfirmed = await account("someone-else@example.com", false);
+    expect((await as(unconfirmed.cookie).get(adminMe, "/api/admin/me/")).status).toBe(404);
+  });
+
+  it("refuses changes from another site", async () => {
+    const res = await flags.PUT(req("/api/admin/flags/", "PUT", { key: "shop", enabled: false }, admin.cookie, "https://evil.example"));
+    expect(res.status).toBe(403);
+    const code = await codes.POST(req("/api/admin/codes/", "POST", { kind: "access" }, admin.cookie, "https://evil.example"));
+    expect(code.status).toBe(404);
+  });
+});
+
+describe("feature flags", () => {
+  const forDevice = async (cookie?: string, device = "device-abcdef12") =>
+    (await (await publicFlags.GET(req(`/api/flags/?d=${device}`, "GET", undefined, cookie))).json()) as { flags: Record<string, boolean>; variants: Record<string, string> };
+
+  it("start at their defaults for everyone", async () => {
+    const list = (await (await as(admin.cookie).get(flags, "/api/admin/flags/")).json()).flags as { key: string; enabled: boolean; changed: boolean }[];
+    expect(list.find((f) => f.key === "shop")).toMatchObject({ enabled: true, changed: false });
+    expect((await forDevice()).flags.shop).toBe(true);
+  });
+
+  it("switch off for everyone, signed in or not, and back on", async () => {
+    expect((await as(admin.cookie).send(flags, "PUT", "/api/admin/flags/", { key: "shop", enabled: false })).status).toBe(200);
+    expect((await forDevice()).flags.shop).toBe(false);
+    expect((await forDevice(parent.cookie)).flags.shop).toBe(false);
+    await as(admin.cookie).send(flags, "PUT", "/api/admin/flags/", { key: "shop", enabled: true, rollout: 100 });
+    expect((await forDevice(parent.cookie)).flags.shop).toBe(true);
+  });
+
+  it("reject unknown flags and bad rollouts", async () => {
+    expect((await as(admin.cookie).send(flags, "PUT", "/api/admin/flags/", { key: "made-up", enabled: true })).status).toBe(400);
+    expect((await as(admin.cookie).send(flags, "PUT", "/api/admin/flags/", { key: "shop", enabled: "yes" })).status).toBe(400);
+    expect((await as(admin.cookie).send(flags, "PUT", "/api/admin/flags/", { key: "shop", enabled: true, rollout: 101 })).status).toBe(400);
+  });
+
+  it("roll out to part of the devices, and an override beats it for one family", async () => {
+    await as(admin.cookie).send(flags, "PUT", "/api/admin/flags/", { key: "arcade", enabled: true, rollout: 50 });
+    const on = await Promise.all(Array.from({ length: 40 }, (_, i) => forDevice(undefined, `device-${String(i).padStart(8, "0")}`)));
+    const share = on.filter((r) => r.flags.arcade).length;
+    expect(share).toBeGreaterThan(5);
+    expect(share).toBeLessThan(35);
+
+    await as(admin.cookie).send(flags, "PUT", "/api/admin/flags/", { key: "arcade", enabled: false });
+    expect((await as(admin.cookie).send(users, "POST", "/api/admin/users/", { familyId: parent.familyId, action: "override", key: "arcade", enabled: true })).status).toBe(200);
+    expect((await forDevice(parent.cookie)).flags.arcade).toBe(true);
+    expect((await forDevice()).flags.arcade).toBe(false);
+    const list = (await (await as(admin.cookie).get(flags, "/api/admin/flags/")).json()).flags as { key: string; overrides: number }[];
+    expect(list.find((f) => f.key === "arcade")!.overrides).toBe(1);
+    await as(admin.cookie).send(users, "POST", "/api/admin/users/", { familyId: parent.familyId, action: "override", key: "arcade", enabled: null });
+    expect((await forDevice(parent.cookie)).flags.arcade).toBe(false);
+    await as(admin.cookie).send(flags, "PUT", "/api/admin/flags/", { key: "arcade", enabled: true });
+  });
+
+  it("pause sign-ups, redeeming codes and new classes on the server", async () => {
+    await as(admin.cookie).send(flags, "PUT", "/api/admin/flags/", { key: "signups", enabled: false });
+    expect((await signup.POST(req("/api/auth/signup/", "POST", { email: "late@example.com", password: "correct horse" }))).status).toBe(503);
+    await as(admin.cookie).send(flags, "PUT", "/api/admin/flags/", { key: "signups", enabled: true });
+    expect((await signup.POST(req("/api/auth/signup/", "POST", { email: "late@example.com", password: "correct horse" }))).status).toBe(200);
+
+    await as(admin.cookie).send(flags, "PUT", "/api/admin/flags/", { key: "redeem-codes", enabled: false });
+    expect((await as(parent.cookie).send(redeem, "POST", "/api/codes/redeem/", { code: "ABCDEFGHJKMN" })).status).toBe(503);
+    await as(admin.cookie).send(flags, "PUT", "/api/admin/flags/", { key: "redeem-codes", enabled: true });
+    expect((await as(parent.cookie).send(redeem, "POST", "/api/codes/redeem/", { code: "ABCDEFGHJKMN" })).status).toBe(400);
+
+    await as(admin.cookie).send(flags, "PUT", "/api/admin/flags/", { key: "new-classes", enabled: false });
+    expect((await as(parent.cookie).send(classes, "POST", "/api/classes/", { name: "Room 1", grade: "3" })).status).toBe(503);
+    await as(admin.cookie).send(flags, "PUT", "/api/admin/flags/", { key: "new-classes", enabled: true });
+    expect((await as(parent.cookie).send(classes, "POST", "/api/classes/", { name: "Room 1", grade: "3" })).status).toBe(200);
+  });
+});
+
+describe("A/B tests", () => {
+  const variantsFor = async (cookie?: string) => ((await (await publicFlags.GET(req("/api/flags/", "GET", undefined, cookie))).json()) as { variants: Record<string, string> }).variants;
+  const list = async () => (await (await as(admin.cookie).get(experiments, "/api/admin/experiments/")).json()).experiments as { key: string; status: string; winner: string | null; results: { variant: string; families: number; paid: number }[] }[];
+
+  it("go from draft to running to stopped, counting families as they are shown a variant", async () => {
+    const variants = [{ name: "control", weight: 50 }, { name: "bright", weight: 50 }];
+    expect((await as(admin.cookie).send(experiments, "POST", "/api/admin/experiments/", { key: "home-colours", description: "Brighter home", variants })).status).toBe(200);
+    expect((await as(admin.cookie).send(experiments, "POST", "/api/admin/experiments/", { key: "home-colours", variants })).status).toBe(409);
+    expect((await as(admin.cookie).send(experiments, "POST", "/api/admin/experiments/", { key: "Bad Key", variants })).status).toBe(400);
+
+    // A draft shows everyone the control and counts nobody.
+    expect((await variantsFor(parent.cookie))["home-colours"]).toBe("control");
+    expect((await list())[0].results).toEqual([]);
+    expect((await as(admin.cookie).send(experiments, "PATCH", "/api/admin/experiments/", { key: "home-colours", action: "edit", variants: [...variants, { name: "dark", weight: 10 }] })).status).toBe(200);
+
+    expect((await as(admin.cookie).send(experiments, "PATCH", "/api/admin/experiments/", { key: "home-colours", action: "start" })).status).toBe(200);
+    expect((await as(admin.cookie).send(experiments, "PATCH", "/api/admin/experiments/", { key: "home-colours", action: "start" })).status).toBe(409);
+    expect((await as(admin.cookie).send(experiments, "PATCH", "/api/admin/experiments/", { key: "home-colours", action: "edit", variants })).status).toBe(409);
+
+    const seen = (await variantsFor(parent.cookie))["home-colours"];
+    expect(["control", "bright", "dark"]).toContain(seen);
+    expect((await variantsFor(parent.cookie))["home-colours"]).toBe(seen);
+    await variantsFor(); // signed out: bucketed, not counted
+    await dbm.run("UPDATE families SET plan = 'premium' WHERE id = ?", [parent.familyId]);
+    const results = (await list()).find((e) => e.key === "home-colours")!.results;
+    expect(results.map((r) => r.variant)).toEqual(["control", "bright", "dark"]);
+    expect(results.reduce((n, r) => n + r.families, 0)).toBe(1);
+    expect(results.find((r) => r.variant === seen)).toMatchObject({ families: 1, paid: 1 });
+
+    expect((await as(admin.cookie).send(experiments, "PATCH", "/api/admin/experiments/", { key: "home-colours", action: "stop", winner: "nope" })).status).toBe(400);
+    expect((await as(admin.cookie).send(experiments, "PATCH", "/api/admin/experiments/", { key: "home-colours", action: "stop", winner: "bright" })).status).toBe(200);
+    expect((await variantsFor(parent.cookie))["home-colours"]).toBe("bright");
+    expect((await variantsFor())["home-colours"]).toBe("bright");
+    expect((await list()).find((e) => e.key === "home-colours")).toMatchObject({ status: "stopped", winner: "bright" });
+
+    expect((await as(admin.cookie).send(experiments, "DELETE", "/api/admin/experiments/?key=home-colours")).status).toBe(200);
+    expect((await variantsFor(parent.cookie))["home-colours"]).toBeUndefined();
+    expect(await dbm.query("SELECT * FROM experiment_assignments WHERE experiment = 'home-colours'")).toEqual([]);
+    expect((await as(admin.cookie).send(experiments, "DELETE", "/api/admin/experiments/?key=home-colours")).status).toBe(404);
+    await dbm.run("UPDATE families SET plan = 'trial' WHERE id = ?", [parent.familyId]);
+  });
+});
+
+describe("users", () => {
+  const detail = async (familyId: string) => (await as(admin.cookie).get(users, `/api/admin/users/?id=${familyId}`)).json();
+  const act = (body: Record<string, unknown>) => as(admin.cookie).send(users, "POST", "/api/admin/users/", body);
+
+  it("are found by email, and class student accounts are left out", async () => {
+    await dbm.run("INSERT INTO families (id, created_at, trial_ends_at, plan, updated_at) VALUES ('student-fam', 1, 1, 'premium', 1)");
+    await dbm.run("INSERT INTO parents (id, family_id, email, password_hash, created_at, role) VALUES ('student-p', 'student-fam', 'student-parent@example.com', 'x', 1, 'student')");
+    const found = (await (await as(admin.cookie).get(users, "/api/admin/users/?q=parent")).json()).users as { email: string }[];
+    expect(found.map((u) => u.email)).toEqual(["parent@example.com"]);
+    const all = (await (await as(admin.cookie).get(users, "/api/admin/users/")).json()).users as { email: string }[];
+    expect(all.map((u) => u.email)).toContain(ADMIN_EMAIL);
+    expect(all.map((u) => u.email)).not.toContain("student-parent@example.com");
+    expect((await as(admin.cookie).get(users, "/api/admin/users/?id=student-fam")).status).toBe(404);
+    // A % in the search is a literal, not a wildcard.
+    expect((await (await as(admin.cookie).get(users, "/api/admin/users/?q=%25")).json()).users).toEqual([]);
+  });
+
+  it("shows a family's plan and children's grades, never their names", async () => {
+    await dbm.run("INSERT INTO profiles (id, family_id, data, updated_at) VALUES ('kid-1', ?, ?, 1)", [parent.familyId, JSON.stringify({ id: "kid-1", name: "Secretname", grade: "3", framework: "ca-on" })]);
+    const d = await detail(parent.familyId);
+    expect(d.children).toEqual([{ grade: "3", framework: "ca-on" }]);
+    expect(JSON.stringify(d)).not.toContain("Secretname");
+    expect(d.parents[0]).toMatchObject({ email: "parent@example.com", verified: true });
+  });
+
+  it("can extend a trial, give and remove access, confirm an email and sign out everywhere", async () => {
+    const before = (await detail(parent.familyId)).family.trialEndsAt as number;
+    expect((await act({ familyId: parent.familyId, action: "extend-trial", days: 10 })).status).toBe(200);
+    expect((await detail(parent.familyId)).family.trialEndsAt).toBe(before + 10 * 86_400_000);
+    expect((await act({ familyId: parent.familyId, action: "extend-trial", days: 0 })).status).toBe(400);
+
+    expect((await act({ familyId: parent.familyId, action: "grant-access", days: 30 })).status).toBe(200);
+    const until = (await detail(parent.familyId)).family.accessUntil as number;
+    expect(until).toBeGreaterThan(Date.now() + 29 * 86_400_000);
+    const fam = (await (await me.GET(req("/api/auth/me/", "GET", undefined, parent.cookie))).json()).family;
+    expect(fam.accessUntil).toBe(until);
+    expect((await act({ familyId: parent.familyId, action: "grant-access", days: null })).status).toBe(200);
+    expect((await detail(parent.familyId)).family.accessUntil).toBe(LIFETIME_ACCESS);
+    expect((await act({ familyId: parent.familyId, action: "remove-access" })).status).toBe(200);
+    expect((await detail(parent.familyId)).family.accessUntil).toBeNull();
+
+    const late = (await dbm.query<{ id: string; family_id: string }>("SELECT id, family_id FROM parents WHERE email = 'late@example.com'"))[0];
+    expect((await act({ familyId: late.family_id, action: "verify-email", parentId: parent.familyId })).status).toBe(400);
+    expect((await act({ familyId: late.family_id, action: "verify-email", parentId: late.id })).status).toBe(200);
+    expect((await detail(late.family_id)).parents[0].verified).toBe(true);
+
+    const second = cookieOf(await login.POST(req("/api/auth/login/", "POST", { email: "parent@example.com", password: "correct horse" })));
+    expect((await act({ familyId: parent.familyId, action: "sign-out" })).status).toBe(200);
+    expect((await me.GET(req("/api/auth/me/", "GET", undefined, second))).status).toBe(401);
+    parent.cookie = cookieOf(await login.POST(req("/api/auth/login/", "POST", { email: "parent@example.com", password: "correct horse" })));
+
+    expect((await act({ familyId: parent.familyId, action: "fly" })).status).toBe(400);
+    expect((await act({ familyId: "missing", action: "sign-out" })).status).toBe(404);
+  });
+
+  it("deletes an account only with its email typed out, and never the admin's own", async () => {
+    const doomed = await account("doomed@example.com");
+    await dbm.run("INSERT INTO flag_overrides (key, family_id, enabled, created_at) VALUES ('shop', ?, 0, 1)", [doomed.familyId]);
+    expect((await act({ familyId: doomed.familyId, action: "delete", confirm: "parent@example.com" })).status).toBe(400);
+    expect((await act({ familyId: admin.familyId, action: "delete", confirm: ADMIN_EMAIL })).status).toBe(400);
+    expect((await act({ familyId: doomed.familyId, action: "delete", confirm: " Doomed@Example.com " })).status).toBe(200);
+    expect(await dbm.query("SELECT id FROM parents WHERE family_id = ?", [doomed.familyId])).toEqual([]);
+    expect(await dbm.query("SELECT key FROM flag_overrides WHERE family_id = ?", [doomed.familyId])).toEqual([]);
+    expect((await me.GET(req("/api/auth/me/", "GET", undefined, doomed.cookie))).status).toBe(401);
+  });
+});
+
+describe("codes, reports, stats and the change log", () => {
+  it("lets the signed-in admin make and disable codes without the token", async () => {
+    const res = await as(admin.cookie).send(codes, "POST", "/api/admin/codes/", { kind: "access", days: 30, maxUses: 5, note: "Panel test" });
+    expect(res.status).toBe(200);
+    const made = (await res.json()).code as { code: string };
+    const listed = (await (await as(admin.cookie).get(codes, "/api/admin/codes/")).json()).codes as { code: string }[];
+    expect(listed.map((c) => c.code)).toContain(made.code);
+    expect((await as(admin.cookie).send(codes, "DELETE", "/api/admin/codes/", { code: made.code })).status).toBe(200);
+  });
+
+  it("lists question reports by question and clears them", async () => {
+    for (let i = 0; i < 2; i++) expect((await feedback.POST(req("/api/feedback/", "POST", { unitKey: "3/math/counting", prompt: "What is 2 + 2?", reason: "wrong-answer" }))).status).toBe(200);
+    const list = (await (await as(admin.cookie).get(reports, "/api/admin/reports/")).json()).reports as { unitKey: string; count: number }[];
+    expect(list[0]).toMatchObject({ unitKey: "3/math/counting", count: 2 });
+    expect((await (await as(admin.cookie).send(reports, "DELETE", "/api/admin/reports/", { unitKey: "3/math/counting", prompt: "What is 2 + 2?" })).json()).removed).toBe(2);
+    expect((await (await as(admin.cookie).get(reports, "/api/admin/reports/")).json()).reports).toEqual([]);
+  });
+
+  it("counts families without class student accounts", async () => {
+    const s = await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json();
+    const real = Number((await dbm.query<{ n: number }>("SELECT COUNT(*) AS n FROM parents WHERE role != 'student'"))[0].n);
+    expect(s.families).toBe(real);
+    expect(s.classes).toBe(1);
+    expect(s.children).toBe(1);
+  });
+
+  it("records every change with who made it", async () => {
+    const entries = (await (await as(admin.cookie).get(auditLog, "/api/admin/audit/")).json()).entries as { admin: string; action: string; detail: string | null }[];
+    const actions = new Set(entries.map((e) => e.action));
+    for (const a of ["flag.set", "user.override", "experiment.create", "experiment.start", "experiment.stop", "experiment.delete", "user.extend-trial", "user.grant-access", "user.remove-access", "user.verify-email", "user.sign-out", "user.delete", "code.create", "code.disable", "reports.clear"]) {
+      expect(actions.has(a), a).toBe(true);
+    }
+    expect(entries.every((e) => e.admin === ADMIN_EMAIL)).toBe(true);
+    expect(entries.find((e) => e.action === "user.delete")!.detail).not.toContain("doomed");
+  });
+});

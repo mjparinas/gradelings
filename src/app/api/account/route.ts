@@ -1,11 +1,10 @@
 import { appOrigin, clearCookie, clientIp, error, getSession, json, rateLimited, sameOrigin, verifyPassword } from "@/server/auth";
-import { batch, query } from "@/server/db";
+import { query } from "@/server/db";
+import { deleteFamilyData } from "@/server/deleteFamily";
 import { sendEmail } from "@/server/email";
 import { accountDeletedEmail } from "@/server/emailTemplates";
 import { getFamilyRow } from "@/server/family";
 import { cancelSubscriptions, stripeCancellationConfigured } from "@/server/stripe";
-import { releaseTeacherAccounts } from "@/server/classroom";
-import { removeStudentsOfOwner } from "@/server/students";
 
 /** Deletes the family's account and every piece of data stored on the server. */
 export async function DELETE(req: Request) {
@@ -28,31 +27,7 @@ export async function DELETE(req: Request) {
       return error(502, "We couldn't cancel your subscription just now, so your account was not deleted. Please try again in a moment.");
     }
   }
-  // Teacher accounts: a class with a co-teacher passes to the longest-serving one (who could already
-  // see everything in it). Any class left without one loses its student accounts along with the class.
-  const accountIds = (await query<{ id: string }>("SELECT id FROM parents WHERE family_id = ?", [f])).map((p) => p.id);
-  await releaseTeacherAccounts(accountIds);
-  await removeStudentsOfOwner(accountIds);
-  await batch([
-    { sql: "DELETE FROM auth_tokens WHERE parent_id IN (SELECT id FROM parents WHERE family_id = ?)", args: [f] },
-    { sql: "DELETE FROM push_subscriptions WHERE parent_id IN (SELECT id FROM parents WHERE family_id = ?)", args: [f] },
-    { sql: "DELETE FROM report_shares WHERE family_id = ?", args: [f] },
-    // Classroom mode: unlink this family's children, and remove any classes this account's teachers owned.
-    { sql: "DELETE FROM class_members WHERE family_id = ?", args: [f] },
-    { sql: "DELETE FROM class_members WHERE class_id IN (SELECT id FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?))", args: [f] },
-    { sql: "DELETE FROM class_teachers WHERE class_id IN (SELECT id FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?))", args: [f] },
-    { sql: "DELETE FROM class_invites WHERE class_id IN (SELECT id FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?))", args: [f] },
-    { sql: "DELETE FROM class_assignments WHERE class_id IN (SELECT id FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?))", args: [f] },
-    { sql: "DELETE FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?)", args: [f] },
-    { sql: "DELETE FROM question_reports WHERE family_id = ?", args: [f] },
-    { sql: "DELETE FROM code_redemptions WHERE family_id = ?", args: [f] },
-    { sql: "DELETE FROM events WHERE family_id = ?", args: [f] },
-    { sql: "DELETE FROM child_settings WHERE family_id = ?", args: [f] },
-    { sql: "DELETE FROM profiles WHERE family_id = ?", args: [f] },
-    { sql: "DELETE FROM sessions WHERE family_id = ?", args: [f] },
-    { sql: "DELETE FROM parents WHERE family_id = ?", args: [f] },
-    { sql: "DELETE FROM families WHERE id = ?", args: [f] },
-  ]);
+  await deleteFamilyData(f);
   if (session.verified) await sendEmail(accountDeletedEmail(session.email, appOrigin(req)));
   return json({ ok: true }, { cookie: clearCookie() });
 }

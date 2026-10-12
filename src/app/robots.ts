@@ -6,7 +6,7 @@ export const dynamic = "force-static";
 export default function robots(): MetadataRoute.Robots {
   return {
     // The kids' app, parent area and API are private and personal; the public pages are for search.
-    rules: { userAgent: "*", allow: "/", disallow: ["/play/", "/parents/", "/api/", "/account/", "/shared/", "/teachers/"] },
+    rules: { userAgent: "*", allow: "/", disallow: ["/play/", "/parents/", "/api/", "/account/", "/shared/", "/teachers/", "/admin/"] },
     sitemap: absolute("/sitemap.xml"),
   };
 }
