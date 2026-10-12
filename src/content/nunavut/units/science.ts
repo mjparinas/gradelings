@@ -102,7 +102,7 @@ export const arcticAnimals2 = bankUnit({
   blurb: "Meet the animals of Nunavut and how they stay warm.",
   parentNote:
     "Practises Arctic animals, their adaptations and simple food chains. A few animals are given their Inuktitut names; names vary by community.",
-  standards: ["NWT Science and Technology K–6 (2004), Life science", "animals of the Arctic and how they are adapted to their habitats"],
+  standards: ["Nunavut Science K–6 (2025), Iqqaqqaukkaringniq", "animals of the Arctic and how they are adapted to their habitats"],
   items: animals,
 });
 

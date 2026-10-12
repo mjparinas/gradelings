@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { COURSES } from "../all";
 import { getFramework } from "../frameworks";
+import { overall, NEW_CURRICULUM_GRADES } from "./overall";
 
 // The approved guides per grade and subject, from the Nunavut Department of Education's Approved Curriculum and Teaching
 // Resources (docs/research/nunavut/README.md).
@@ -49,6 +50,26 @@ describe("Nunavut", () => {
     expect(own.length).toBe(20);
     for (const { g, s, u } of own) {
       expect(Object.keys(u.standards), `${g}/${s}/${u.id}`).toEqual(["ca-nu"]);
+    }
+  });
+
+  it("cites the new Nunavut curriculum in the grades already taught with it, and the approved guides elsewhere", () => {
+    const CORE = ["math", "language", "science", "social"];
+    for (const [key, approved] of Object.entries(APPROVED) as [string, { guides: string[]; inForceFrom?: string }][]) {
+      const [grade, subject] = key.split("/");
+      if (!CORE.includes(subject)) continue;
+      const isNew = (NEW_CURRICULUM_GRADES as readonly string[]).includes(grade);
+      expect(Boolean(approved.inForceFrom), `${key}: inForceFrom in approved.json`).toBe(isNew);
+      for (const g of approved.guides) expect(g.startsWith("Nunavut ") && g.endsWith("K–6 (2025)"), `${key}: ${g}`).toBe(isNew);
+      expect(overall(grade as never, subject as never).some((line) => line.includes("new Nunavut curriculum")), `${key}: Big Ideas`).toBe(isNew);
+    }
+    for (const g of ["k", "1", "2", "3"]) {
+      for (const c of COURSES.filter((c) => c.grade === g)) {
+        for (const u of c.units) {
+          const standard = u.standards["ca-nu"];
+          if (standard) expect(standard, `${g}/${c.subject}/${u.id}`).toMatch(/^Nunavut (Mathematics|English Language Arts|Science|Social Studies) K–6 \(2025\), /);
+        }
+      }
     }
   });
 

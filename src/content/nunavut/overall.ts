@@ -2,7 +2,37 @@ import type { GradeId, SubjectId } from "../types";
 
 // What a Nunavut course page shows parents as its learning focus. Nunavut's approved guides are organized in four strands
 // (Nunavusiutit, Iqqaqqaukkaringniq, Uqausiliriniq, Aulajaaqtut; Nunavut Department of Education, Approved Curriculum and
-// Teaching Resources), and the guides themselves are listed in docs/research/nunavut/approved.json.
+// Teaching Resources), and the guides themselves are listed in docs/research/nunavut/approved.json. Kindergarten to Grade 3 now
+// follow the new made-in-Nunavut curriculum (Kindergarten and Grade 1 from 2025-26, Grades 2 and 3 from 2026-27), so those
+// grades describe it instead of the adopted guides.
+
+/** Grades already taught with the new Nunavut curriculum. Add the next grade each September as the territory phases it in. */
+export const NEW_CURRICULUM_GRADES: readonly GradeId[] = ["k", "1", "2", "3"];
+
+const NEW_CURRICULUM = "The new Nunavut curriculum is grounded in Inuit Qaujimajatuqangit and taught in Inuktut and English.";
+
+const NEW: Record<string, string[]> = {
+  math: [
+    "Iqqaqqaukkaringniq: concepts in mathematics, analytical and critical thinking, and solution-seeking.",
+    "Number, patterns, shape and measurement, and data, often through hands-on activities and everyday life.",
+    NEW_CURRICULUM,
+  ],
+  language: [
+    "Uqausiliriniq: communication and language, creative and artistic expression, and reflective and critical thinking.",
+    "Listening, speaking, reading, writing and representing in English.",
+    NEW_CURRICULUM,
+  ],
+  science: [
+    "Iqqaqqaukkaringniq: ways to describe and improve our world through science and technology.",
+    "Asking questions and investigating living things, materials and the world around us.",
+    NEW_CURRICULUM,
+  ],
+  social: [
+    "Nunavusiutit: heritage and culture, history, geography, environmental science, and civics and economics.",
+    "Families, communities and the land, starting close to home.",
+    NEW_CURRICULUM,
+  ],
+};
 
 const MATH = [
   "Iqqaqqaukkaringniq: concepts in mathematics, analytical and critical thinking, and solution-seeking.",
@@ -42,6 +72,7 @@ const FRENCH = [
 ];
 
 export function overall(grade: GradeId, subject: SubjectId): string[] {
+  if (NEW_CURRICULUM_GRADES.includes(grade) && NEW[subject]) return NEW[subject];
   switch (subject) {
     case "math":
       return MATH;

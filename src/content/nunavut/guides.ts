@@ -96,19 +96,19 @@ export const NUNAVUT_GUIDES: FrameworkGuides = {
   },
   gradeNotes: {
     k: {
-      overview: "Kindergarten builds early learning through play, stories and songs, often in Inuktut. Children explore language, early number ideas, their community and the land around them.",
+      overview: "Kindergarten builds early learning through play, stories and songs, often in Inuktut. Children explore language, early number ideas, their community and the land around them. Since fall 2025, Kindergarten follows the new made-in-Nunavut curriculum.",
       lookFor: "Look for comments on listening, early letters and sounds, counting and comparing, and getting along with classmates.",
     },
     "1": {
-      overview: "Grade 1 is where reading, writing and number sense start to grow quickly. Children work with numbers to 20, patterns and shapes, and learn about their community, the seasons and living things.",
+      overview: "Grade 1 is where reading, writing and number sense start to grow quickly. Children work with numbers to 20, patterns and shapes, and learn about their community, the seasons and living things. Since fall 2025, Grade 1 follows the new made-in-Nunavut curriculum.",
       lookFor: "Look for comments on reading simple texts, writing a few sentences, counting and adding, and taking part in class.",
     },
     "2": {
-      overview: "In Grade 2, reading becomes smoother and writing gets longer. Math moves to numbers to 100, addition and subtraction, patterns and graphs. Science looks at animals and materials, including the animals of the Arctic.",
+      overview: "In Grade 2, reading becomes smoother and writing gets longer. Math moves to numbers to 100, addition and subtraction, patterns and graphs. Science looks at animals and materials, including the animals of the Arctic. Since fall 2026, Grade 2 follows the new made-in-Nunavut curriculum.",
       lookFor: "Look for fluent reading, longer writing, comfort with adding and subtracting, and the ability to explain thinking.",
     },
     "3": {
-      overview: "Grade 3 builds strong reading and early multiplication. Students learn more about Nunavut: its regions, communities and symbols, and how people live together.",
+      overview: "Grade 3 builds strong reading and early multiplication. Students learn more about Nunavut: its regions, communities and symbols, and how people live together. Since fall 2026, Grade 3 follows the new made-in-Nunavut curriculum.",
       lookFor: "Look for comments about reading comprehension, paragraph writing, early multiplication and using what they know about Nunavut.",
     },
     "4": {
