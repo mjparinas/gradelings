@@ -66,7 +66,7 @@ const SHARING: Item[] = [
   q("A friend asks for your password “just to see.” You should…", "say no and tell a trusted adult if they keep asking", ["share it", "post it online", "write it on a poster"], "Passwords are private.", "🔐"),
   q("Why is it a good idea to log out of a shared computer?", "so others cannot see or change your work", ["so it gets faster", "to waste time", "so the screen turns blue"], "Logging out protects your information.", "💻"),
   q("An unfamiliar person online asks where you live. What should you do?", "not answer and tell a trusted adult", ["tell them quickly", "send a photo", "give your phone number"], "Keep personal details private.", "🚫"),
-  q("Which is an example of a digital folder name that is easy to understand?", "“Bison Report”", ["“zzz”", "“stuff3”", "“new new new”"], "Clear names help you find your work.", "📁"),
+  q("Which is an example of a digital folder name that is easy to understand?", "“Bison Report”", ["“xyz”", "“stuff3”", "“new new new”"], "Clear names help you find your work.", "📁"),
   hq("You want to share a classmate's idea in your group. What is the fair thing to do?", "say it was their idea", ["act like it was yours", "hide it", "change their words and keep it"], "Credit goes to the person who thought of it.", "🌟"),
   hq("A website is full of ads and has no author. Which of these should you do?", "check a more trusted source before using the facts", ["use it anyway", "share it with the class right away", "copy it all"], "Trusted sources show who made them and why.", "🛑"),
 ];
