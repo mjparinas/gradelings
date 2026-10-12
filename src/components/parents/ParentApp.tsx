@@ -77,6 +77,7 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
             </span>
           </div>
           <div className="flex items-center gap-2">
+            <SyncBadge />
             {paid ? (
               <span className="rounded-full bg-good-soft px-3 py-1 text-sm font-semibold text-good-dark">⭐ Premium</span>
             ) : inAndroidApp ? (
@@ -86,7 +87,6 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
                 {premium ? `Subscribe · ${days} ${days === 1 ? "day" : "days"} left` : "Subscribe"}
               </a>
             )}
-            <SyncBadge />
           </div>
         </div>
         <nav className="mx-auto max-w-6xl overflow-x-auto px-2" aria-label="Parent sections">
