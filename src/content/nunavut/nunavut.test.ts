@@ -11,6 +11,12 @@ const APPROVED = JSON.parse(readFileSync(join(__dirname, "../../../docs/research
   string,
   { guides: string[]; areas: string[] | null }
 >;
+// The outcomes of the new Nunavut curriculum, read from the Department's K–6 subject documents
+// (docs/research/nunavut/new-curriculum/README.md).
+const OUTCOMES = JSON.parse(readFileSync(join(__dirname, "../../../docs/research/nunavut/new-curriculum/outcomes.json"), "utf8")) as Record<
+  string,
+  { guide: string; grades: Record<string, { code: string }[]> }
+>;
 
 describe("Nunavut", () => {
   it("is selectable and reports on four plain practice steps", () => {
@@ -68,6 +74,22 @@ describe("Nunavut", () => {
         for (const u of c.units) {
           const standard = u.standards["ca-nu"];
           if (standard) expect(standard, `${g}/${c.subject}/${u.id}`).toMatch(/^Nunavut (Mathematics|English Language Arts|Science|Social Studies) K–6 \(2025\), /);
+        }
+      }
+    }
+  });
+
+  it("cites real outcome codes of the new Nunavut curriculum, for the unit's own grade and subject", () => {
+    for (const g of NEW_CURRICULUM_GRADES) {
+      for (const c of COURSES.filter((c) => c.grade === g && c.subject in OUTCOMES)) {
+        const { guide, grades } = OUTCOMES[c.subject];
+        const codes = new Set(grades[g].map((o) => o.code));
+        const cited = c.units.filter((u) => u.standards["ca-nu"]);
+        expect(cited.length, `${g}/${c.subject}`).toBeGreaterThan(0);
+        for (const u of cited) {
+          const head = u.standards["ca-nu"]!.split(" · ")[0];
+          expect(head.startsWith(`${guide}, `), `${g}/${c.subject}/${u.id}: ${head}`).toBe(true);
+          for (const code of head.slice(guide.length + 2).split("; ")) expect(codes, `${g}/${c.subject}/${u.id} cites ${code}`).toContain(code);
         }
       }
     }
