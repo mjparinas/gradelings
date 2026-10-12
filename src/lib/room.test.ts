@@ -29,6 +29,27 @@ describe("room items", () => {
     for (const id of Object.values(ROOM_STARTER)) expect(getRoomItem(id)?.cost).toBe(0);
     for (const { slot } of ROOM_SLOTS) expect(ROOM_ITEMS.some((i) => i.slot === slot && i.cost > 0), slot).toBe(true);
   });
+  it("give every slot a cheap first buy and a level-locked goal for older kids", () => {
+    for (const { slot } of ROOM_SLOTS) {
+      const paid = ROOM_ITEMS.filter((i) => i.slot === slot && i.cost > 0);
+      expect(Math.min(...paid.map((i) => i.cost)), slot).toBeLessThanOrEqual(60);
+      expect(paid.some((i) => i.unlock), slot).toBe(true);
+    }
+    for (const i of ROOM_ITEMS.filter((i) => i.cost > 0)) {
+      expect(i.cost, i.id).toBeGreaterThanOrEqual(50);
+      expect(i.cost, i.id).toBeLessThanOrEqual(400);
+      // Higher levels ask for more coins, so a big goal never costs less than a free-to-buy one.
+      if (i.unlock) expect(i.cost, i.id).toBeGreaterThanOrEqual(150);
+    }
+  });
+  it("paint walls and floors, and give every item a name and icon unique in its slot", () => {
+    for (const i of ROOM_ITEMS) expect(Boolean(i.paint), i.id).toBe(i.slot === "wall" || i.slot === "floor");
+    for (const { slot } of ROOM_SLOTS) {
+      const inSlot = ROOM_ITEMS.filter((i) => i.slot === slot);
+      expect(new Set(inSlot.map((i) => i.name)).size, slot).toBe(inSlot.length);
+      expect(new Set(inSlot.map((i) => i.icon)).size, slot).toBe(inSlot.length);
+    }
+  });
   it("show the starter room, and only owned items placed in the right slot", () => {
     expect(Object.keys(roomLayout(undefined, []))).toEqual(["wall", "floor"]);
     expect(roomLayout({ plant: "room-plant-cactus" }, [])).not.toHaveProperty("plant");

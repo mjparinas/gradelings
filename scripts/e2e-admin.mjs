@@ -2,7 +2,7 @@
 // monthly costs, opens the list behind a tile (and a family from it), switches the Shop off
 // (and the kids' app hides it), makes a code, saves an A/B test, finds a family and gives it access,
 // works the to-do list, writes an email to a family (no email is really sent: the server has no email keys),
-// opens the Emails, Inbox, Funnel, Traffic, Automations and System tabs, the billing panel and the CSV download, and every tab passes the axe-core accessibility scan. A non-admin account
+// opens the Emails, Inbox, Funnel, Traffic, Automations and System tabs, the billing panel and the CSV download, turns maintenance mode on and off, and every tab passes the axe-core accessibility scan. A non-admin account
 // is turned away.
 //
 //   ADMIN_EMAILS=admin-e2e@example.com npm start      # in one terminal, after npm run build
@@ -251,11 +251,32 @@ check(await vis(page.getByText(/Set VERCEL_TOKEN/)), "a check that isn't set up 
 await shot("system");
 await scan("system");
 
+// Maintenance mode: only the home page and this panel keep working, and every tab shows a banner.
+const maintenance = page.getByRole("region", { name: "Maintenance mode" });
+await maintenance.getByRole("button", { name: "Turn on maintenance mode…" }).click();
+await maintenance.getByLabel("Type TURN ON to confirm").fill("TURN ON");
+await maintenance.getByRole("button", { name: "Start maintenance" }).click();
+const banner = page.getByRole("region", { name: /Maintenance mode is on/ });
+check(await banner.waitFor({ timeout: 8000 }).then(() => true, () => false), "turning on maintenance mode shows a banner");
+await scan("maintenance");
+const home = await page.request.get(`${BASE}/`);
+const play = await page.request.get(`${BASE}/play/`);
+const sync = await page.request.post(`${BASE}/api/sync/`, { data: {} });
+check(home.status() === 200, "the home page still works during maintenance");
+check(play.status() === 503 && (await play.text()).includes("is under maintenance"), "other pages show the maintenance message");
+check(sync.status() === 503 && sync.headers()["x-maintenance"] === "on", "sync waits during maintenance");
+await tab("Codes");
+check(await vis(banner), "the banner shows on every admin tab");
+await banner.getByRole("button", { name: "Turn off maintenance mode" }).click();
+check(await banner.waitFor({ state: "detached", timeout: 8000 }).then(() => true, () => false), "turning maintenance mode off hides the banner");
+check((await page.request.get(`${BASE}/play/`)).status() === 200, "pages work again once maintenance mode is off");
+
 for (const name of ["Reports", "Log"]) {
   await tab(name);
   await scan(name.toLowerCase());
 }
 check(await vis(page.getByText("user.grant-access")), "the change log records the change");
+check(await vis(page.getByText("maintenance.on")), "the change log records maintenance mode");
 
 await browser.close();
 if (errors.length) fail(`console errors:\n${errors.join("\n")}`);

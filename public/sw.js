@@ -113,14 +113,16 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
+  const saved = () =>
+    caches
+      .match(request, { ignoreSearch: request.mode === "navigate" })
+      .then((hit) => hit || (request.mode === "navigate" ? caches.match(shellFor(url.pathname)) : undefined));
+  // Maintenance mode (src/lib/maintenance.ts): a saved kids' app or parent area keeps working as if offline;
+  // every other page shows the maintenance message.
+  const app = url.pathname.startsWith("/play") || url.pathname.startsWith("/parents");
   event.respondWith(
     fetch(request)
-      .then((res) => store(request, res))
-      .catch(() =>
-        caches
-          .match(request, { ignoreSearch: request.mode === "navigate" })
-          .then((hit) => hit || (request.mode === "navigate" ? caches.match(shellFor(url.pathname)) : undefined))
-          .then((hit) => hit || Response.error()),
-      ),
+      .then((res) => (res.status === 503 && res.headers.get("x-maintenance") ? (app ? saved() : Promise.resolve()).then((hit) => hit || res) : store(request, res)))
+      .catch(() => saved().then((hit) => hit || Response.error())),
   );
 });
