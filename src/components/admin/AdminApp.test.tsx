@@ -52,6 +52,8 @@ function asAdmin() {
     if (url === "/api/admin/flags/" && method === "GET") return Promise.resolve({ flags: [flag] });
     if (url.startsWith("/api/admin/users/?q=")) return Promise.resolve({ users: [{ familyId: "fam-1", email: "pat@example.com", createdAt: 1, plan: "trial", trialEndsAt: Date.now() + 86_400_000, accessUntil: null, subscriptionStatus: null }] });
     if (url === "/api/admin/users/?id=fam-1") return Promise.resolve(family);
+    if (url === "/api/admin/stats/detail/?view=families")
+      return Promise.resolve({ title: "Families", summary: [], tables: [{ columns: [{ label: "Account", kind: "account" }], rows: [{ familyId: "fam-1", cells: ["pat@example.com"] }], total: 1 }] });
     if (url === "/api/admin/codes/" && method === "GET") return Promise.resolve({ codes: [] });
     if (url === "/api/admin/codes/" && method === "POST") return Promise.resolve({ code: { display: "ABCD-EFGH-JKMN" } });
     if (url === "/api/admin/experiments/" && method === "GET") return Promise.resolve({ experiments: [] });
@@ -129,5 +131,20 @@ describe("AdminApp", () => {
     await user.click(screen.getByRole("button", { name: "Give lifetime access" }));
     expect(sent("/api/admin/users/", "POST")).toEqual({ familyId: "fam-1", action: "grant-access", days: null });
     expect(await screen.findByText("Lifetime access given.")).toBeInTheDocument();
+  });
+
+  it("opens a family in Users from an email in a dashboard list", async () => {
+    asAdmin();
+    const user = userEvent.setup();
+    render(<AdminApp />);
+    await user.click(await screen.findByRole("button", { name: /^Families 1 / }));
+    await user.click(await within(await screen.findByRole("dialog", { name: "Families" })).findByRole("button", { name: "pat@example.com" }));
+    expect(screen.queryByRole("dialog")).toBeNull();
+    expect(screen.getByRole("button", { name: "Users" })).toHaveAttribute("aria-current", "page");
+    expect(await screen.findByText(/Grade 3 \(Ontario\)/)).toBeInTheDocument();
+    // Going back to Users from the tabs shows the list again.
+    await user.click(screen.getByRole("button", { name: "Overview" }));
+    await user.click(screen.getByRole("button", { name: "Users" }));
+    expect(await screen.findByRole("heading", { name: "Users" })).toBeInTheDocument();
   });
 });
