@@ -224,16 +224,11 @@ describe("Piper as the default voice", () => {
     expect(fetch).not.toHaveBeenCalled();
   });
 
-  it("keeps a parent's choice: switched off, or a device voice picked before", async () => {
+  it("is on even where a device voice was picked before, and stays off once a parent switches it off", async () => {
     storage.set("grademap.voice", "Samantha");
     let piper = await import("./piper");
-    expect(await piper.autoDownloadPiper("en")).toBe(false);
-    expect(piper.getPiperState().enabled).toBe(false);
-    // Switching it on wins over the picked device voice.
-    piper.setPiperEnabled(true);
-    vi.resetModules();
-    piper = await import("./piper");
     expect(await piper.autoDownloadPiper("en")).toBe(true);
+    expect(piper.getPiperState().enabled).toBe(true);
 
     storage.clear();
     storage.set("grademap.piper", "off");
@@ -241,6 +236,12 @@ describe("Piper as the default voice", () => {
     piper = await import("./piper");
     expect(await piper.autoDownloadPiper("fr")).toBe(false);
     expect(piper.getPiperState().voices.fr.state).toBe("missing");
+  });
+
+  it("preloads English, then French, one after the other", async () => {
+    const piper = await import("./piper");
+    await piper.preloadPiperVoices(["en", "fr"]);
+    expect(piper.getPiperState().voices).toMatchObject({ en: { state: "ready" }, fr: { state: "ready" } });
   });
 
   it("doesn't download when the admin flag is off", async () => {

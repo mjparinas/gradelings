@@ -58,7 +58,7 @@ async function family(address: string, opts: { verified?: boolean; children?: nu
   const profiles = Array.from({ length: opts.children ?? 1 }, (_, i) => {
     const id = `${address.split("@")[0]}-kid${i}`;
     ids.push(id);
-    return { id, name: i ? "Leo" : "Maya", grade: "2", framework: "bc", avatar: "ollie", colour: "#fff", createdAt: now, updatedAt: now };
+    return { id, name: i ? "Leo" : "Maya", grade: "2", framework: "ca-bc", avatar: "ollie", colour: "#fff", createdAt: now, updatedAt: now };
   });
   const events = ids.flatMap((id) =>
     Array.from({ length: 10 }, (_, i) => ({
@@ -99,6 +99,16 @@ describe("shared reports", () => {
 
     expect(await (await share.GET(req(`/api/share/?profileId=${a.ids[0]}`, "GET", undefined, a.cookie))).json()).toEqual({ active: 1 });
     await share.DELETE(req(`/api/share/?profileId=${a.ids[0]}`, "DELETE", undefined, a.cookie));
+    expect(await reportData.loadSharedReport(token)).toBeNull();
+  });
+
+  it("stops a link working when the child is deleted, and restoring the child doesn't bring it back", async () => {
+    const a = await family("share-del@example.com");
+    const { url } = await (await share.POST(req("/api/share/", "POST", { profileId: a.ids[0], days: 14 }, a.cookie))).json();
+    const token = /\/shared\/([^/]+)\//.exec(url)![1];
+    const child = { id: a.ids[0], name: "Maya", grade: "2", framework: "ca-bc", avatar: "ollie", colour: "#fff", createdAt: 1 };
+    await sync.POST(req("/api/sync/", "POST", { profiles: [{ ...child, deleted: true, updatedAt: Date.now() + 1 }] }, a.cookie));
+    await sync.POST(req("/api/sync/", "POST", { profiles: [{ ...child, updatedAt: Date.now() + 2 }] }, a.cookie));
     expect(await reportData.loadSharedReport(token)).toBeNull();
   });
 

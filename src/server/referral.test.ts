@@ -134,6 +134,19 @@ describe("thanking the referrer", () => {
     expect(summary).toMatchObject({ joined: plan.REFERRAL_MAX_REWARDS + 2, monthsEarned: plan.REFERRAL_MAX_REWARDS });
   });
 
+  it("keeps the cap when rewarded accounts are deleted and signed up again", async () => {
+    const { deleteFamilyData } = await import("@/server/deleteFamily");
+    const { cookie } = await join_("farmer@example.com");
+    const { code } = (await (await referral.GET(req("/api/referral/", "GET", undefined, cookie))).json()) as { code: string };
+    const start = (await familyOf("farmer@example.com")).trial_ends_at;
+    for (let i = 0; i < plan.REFERRAL_MAX_REWARDS + 3; i++) {
+      await join_("sock@example.com", code);
+      await confirm("sock@example.com");
+      await deleteFamilyData((await familyOf("sock@example.com")).id);
+    }
+    expect((await familyOf("farmer@example.com")).trial_ends_at).toBe(start + plan.REFERRAL_MAX_REWARDS * plan.REFERRAL_BONUS_DAYS * DAY);
+  });
+
   it("gives class accounts no code, and their code can't be used", async () => {
     const { cookie } = await join_("teacher@example.com");
     const id = (await familyOf("teacher@example.com")).id;

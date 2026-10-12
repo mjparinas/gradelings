@@ -49,7 +49,8 @@ export async function POST(req: Request) {
   if (!session.verified) return error(403, "Please confirm your email first. Classes show children's progress, so we only allow them for confirmed accounts.");
   if (await rateLimited(`class:${session.parentId}`, 20, 60 * 60_000)) return error(429, "Too many classes created. Try again later.");
   const body = (await req.json().catch(() => null)) as { name?: unknown; grade?: unknown; framework?: unknown } | null;
-  const name = typeof body?.name === "string" ? body.name.trim().slice(0, 60) : "";
+  // One line of plain text: it appears in invitation emails and on printed cards.
+  const name = typeof body?.name === "string" ? body.name.replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim().slice(0, 60) : "";
   const grade = String(body?.grade ?? "");
   const framework = body?.framework === undefined ? "ca-bc" : body.framework;
   if (!isFramework(framework)) return error(400, "Choose a province.");

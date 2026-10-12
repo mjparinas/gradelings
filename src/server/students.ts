@@ -14,7 +14,8 @@ import { MAX_STUDENTS, type ClassRow } from "./classroom";
 // in a hidden family record that is deleted when the student is removed or the class is closed.
 
 const CODE_CHARS = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
-export const STUDENT_CODE_LENGTH = 6;
+/** Eight characters from 31 (about 8.5 × 10^11 codes), so guessing one even with the class code is impractical. */
+export const STUDENT_CODE_LENGTH = 8;
 
 export function newStudentCode(): string {
   return Array.from({ length: STUDENT_CODE_LENGTH }, () => CODE_CHARS[randomInt(CODE_CHARS.length)]).join("");

@@ -5,10 +5,10 @@ import { isOn } from "./remoteFlags";
 import type { SpeechLanguage } from "./speech";
 
 // Piper: a natural-sounding voice that runs on the device, so it works offline and the same on
-// every tablet. On by default: the first time read-aloud is used in a language, its voice
-// downloads in the background (not on mobile data or Data Saver) while the device voice reads,
-// and Piper reads from then on. A parent can switch it off or remove it per device under Account,
-// and a parent who picked a device voice keeps it. The files are large (see
+// every tablet. On by default: the voices download in the background when the app opens, for
+// children with read-aloud on (src/components/VoicePreload.tsx; not on mobile data or Data Saver),
+// while the device voice reads, and Piper reads from then on. A parent
+// can switch it off or remove it per device under Account. The files are large (see
 // public/piper/{version}/files.json), are served by this site and are kept in their own cache,
 // which the service worker leaves alone when the app updates.
 
@@ -17,8 +17,6 @@ export const PIPER_CACHE = "grademap-piper";
 const LIST_URL = `${PIPER_BASE}files.json`;
 const WORKER_URL = "/piper-worker.js";
 const PREF_KEY = "grademap.piper";
-// The parent's English device voice (src/lib/speech.ts). Picking one means they want that voice.
-const DEVICE_VOICE_KEY = "grademap.voice";
 
 export type PiperVoiceState = "checking" | "missing" | "downloading" | "ready";
 
@@ -82,15 +80,10 @@ export function piperSupported(): boolean {
   return typeof window !== "undefined" && typeof Worker !== "undefined" && typeof WebAssembly !== "undefined" && "caches" in window && typeof AudioContext !== "undefined";
 }
 
-/**
- * Whether read-aloud should use Piper on this device: the parent's switch if they have set it,
- * otherwise on, unless they picked a device voice (which they then keep hearing).
- */
+/** Whether read-aloud should use Piper on this device: on unless a parent switched it off. */
 function readEnabled(): boolean {
   try {
-    const pref = localStorage.getItem(PREF_KEY);
-    if (pref === "on" || pref === "off") return pref === "on";
-    return !localStorage.getItem(DEVICE_VOICE_KEY);
+    return localStorage.getItem(PREF_KEY) !== "off";
   } catch {
     // Private mode: nothing saved, so the default.
     return true;
@@ -273,8 +266,8 @@ export function onMeteredConnection(): boolean {
 }
 
 /**
- * Starts downloading a language's voice in the background when read-aloud is used and Piper is on
- * but the voice isn't here yet. Never on mobile data or Data Saver, never when the device is short
+ * Starts downloading a language's voice in the background when Piper is on but the voice isn't
+ * here yet (when the app opens and a child has read-aloud on, or when a question is read aloud). Never on mobile data or Data Saver, never when the device is short
  * of space, and not in automated test browsers (each would fetch the whole voice). Read-aloud
  * carries on with the device voice meanwhile. Resolves with whether a download ran.
  */
@@ -295,6 +288,11 @@ export async function autoDownloadPiper(language: SpeechLanguage): Promise<boole
   }
   await downloadPiper(language, { quiet: true });
   return true;
+}
+
+/** Downloads each language's voice in turn, in the background (see autoDownloadPiper). */
+export async function preloadPiperVoices(languages: readonly SpeechLanguage[]): Promise<void> {
+  for (const language of languages) await autoDownloadPiper(language).catch(() => false);
 }
 
 /** Removes one language's voice from this device (and the engine once no voice is left). */

@@ -69,7 +69,7 @@ await page.getByRole("button", { name: "My teacher gave me a code" }).click();
 
 // A wrong code is refused kindly.
 await page.getByLabel("Class code").fill(cls.joinCode);
-await page.getByLabel("My code").fill("ZZZZZZ");
+await page.getByLabel("My code").fill("ZZZZZZZZ");
 await page.getByRole("button", { name: /Let.s go/ }).click();
 check(await page.getByRole("alert").filter({ hasText: /don.t match/ }).waitFor({ timeout: 8000 }).then(() => true, () => false), "a wrong code is refused with a kind message");
 

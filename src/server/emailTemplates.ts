@@ -1,5 +1,6 @@
 import "server-only";
-import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS } from "@/lib/brand";
+import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS, WORDMARK_COLOURS } from "@/lib/brand";
+import { EMAIL_FONTS, EMAIL_IMAGES } from "@/lib/emailImages";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, SUBSCRIBE_HREF } from "@/lib/plan";
 import type { EmailKind } from "@/lib/emailKinds";
 import type { Email } from "./email";
@@ -24,14 +25,39 @@ interface Parts {
   origin: string;
 }
 
-/** One simple layout for every email: no images, no tracking pixels. */
+/** The name in the logo's colours, one per letter as on the site. Text, not an image, so it shows even with images off. */
+function wordmark(): string {
+  const letters = APP_NAME.split("")
+    .map((ch, i) => `<span style="color:${WORDMARK_COLOURS[i % WORDMARK_COLOURS.length]}">${esc(ch)}</span>`)
+    .join("");
+  return `<span style="font-family:${EMAIL_FONTS.wordmark.stack};font-size:30px;font-weight:700;letter-spacing:-0.75px;line-height:1">${letters}</span>`;
+}
+
+/** The logo and Ollie at the top of every email, linking to the site. Tables, because Outlook ignores flexbox. */
+function header(origin: string): string {
+  const ollie = EMAIL_IMAGES.ollie;
+  return `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 16px"><tr>
+<td style="vertical-align:middle;padding-right:10px"><a href="${esc(origin)}/" style="text-decoration:none;color:#5b6478"><img src="${esc(origin)}${ollie.path}" width="${ollie.size}" height="${ollie.size}" alt="${esc(ollie.alt)}" style="display:block;border:0;font-size:12px;color:#5b6478"></a></td>
+<td style="vertical-align:middle"><a href="${esc(origin)}/" style="text-decoration:none">${wordmark()}</a></td>
+</tr></table>`;
+}
+
+/** Andika and Fredoka from our own site, for the clients that load web fonts. */
+function fontFaces(origin: string): string {
+  return Object.values(EMAIL_FONTS)
+    .flatMap((font) => font.files.map((f) => ({ ...f, family: font.family })))
+    .map((f) => `@font-face{font-family:${f.family};font-style:normal;font-weight:${f.weight};src:url(${esc(origin)}${f.path}.woff2) format("woff2"),url(${esc(origin)}${f.path}.woff) format("woff")}`)
+    .join("");
+}
+
+/** One simple layout for every email: the logo and Ollie from our own site, no tracking pixels. */
 function layout(p: Parts): Email {
   const button = p.button
     ? `<p style="margin:24px 0"><a href="${esc(p.button.url)}" style="background:#25b47e;color:#fff;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:12px;display:inline-block">${esc(p.button.label)}</a></p>`
     : "";
-  const html = `<!doctype html><html><body style="margin:0;background:#f7f5f0;font-family:system-ui,Segoe UI,Arial,sans-serif;color:#1d2233">
+  const html = `<!doctype html><html><head><meta charset="utf-8"><style>${fontFaces(p.origin)}</style></head><body style="margin:0;background:#f7f5f0;font-family:${EMAIL_FONTS.text.stack};color:#1d2233">
 <div style="max-width:520px;margin:0 auto;padding:24px">
-<p style="font-size:22px;font-weight:700;margin:0 0 16px;color:#4f8ef7">${esc(APP_NAME)}</p>
+${header(p.origin)}
 <div style="background:#fff;border-radius:16px;padding:24px;line-height:1.55">
 <h1 style="font-size:22px;margin:0 0 12px">${esc(p.heading)}</h1>
 ${p.body.map((t) => `<p style="margin:0 0 12px">${esc(t)}</p>`).join("")}

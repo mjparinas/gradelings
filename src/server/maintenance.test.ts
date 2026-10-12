@@ -46,7 +46,7 @@ const req = (path: string, cookie?: string, method = "GET", body?: unknown) =>
   });
 async function account(address: string) {
   const res = await signup.POST(req("/api/auth/signup/", undefined, "POST", { email: address, password: "correct horse" }));
-  await dbm.run("UPDATE parents SET email_verified_at = ? WHERE email = ?", [Date.now(), address]);
+  await dbm.run("UPDATE parents SET email_verified_at = ? WHERE email = ?", [Date.now() - 60_000, address]);
   return (res.headers.get("set-cookie") ?? "").split(";")[0];
 }
 const visit = (path: string) => proxy(new NextRequest(`http://localhost${path}`));

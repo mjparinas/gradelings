@@ -72,7 +72,7 @@ const cookieOf = (res: Response) => (res.headers.get("set-cookie") ?? "").split(
 async function account(address: string, opts: { verified?: boolean; createdAgo?: number } = {}) {
   const res = await signup.POST(req("/api/auth/signup/", "POST", { email: address, password: "correct horse" }));
   expect(res.status).toBe(200);
-  if (opts.verified !== false) await dbm.run("UPDATE parents SET email_verified_at = ? WHERE email = ?", [Date.now(), address]);
+  if (opts.verified !== false) await dbm.run("UPDATE parents SET email_verified_at = ? WHERE email = ?", [Date.now() - 60_000, address]);
   const familyId = (await dbm.query<{ family_id: string }>("SELECT family_id FROM parents WHERE email = ?", [address]))[0].family_id;
   if (opts.createdAgo) await dbm.run("UPDATE families SET created_at = ? WHERE id = ?", [Date.now() - opts.createdAgo, familyId]);
   // Signing up sends the confirmation email; drop it so tests count only what the tools send.
