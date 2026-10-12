@@ -167,6 +167,10 @@ function forSpeech(text: string, language: SpeechLanguage = "en"): string {
 // A touch slower than normal for young listeners.
 const RATE = 0.92;
 
+// Piper voices have their own natural pace. Amy (English) is unhurried already, so slowing her
+// as well made her drag; she reads a bit faster than her natural pace instead.
+export const PIPER_RATE: Record<SpeechLanguage, number> = { en: 1.15, fr: RATE };
+
 // Chrome on Android silently drops an utterance spoken straight after cancel(), so there speech
 // waits this long after a cancel. Still well inside the tap's user activation.
 const ANDROID_CANCEL_GAP = 150;
@@ -214,7 +218,7 @@ function queue(text: string, voiceUri: string | null | undefined, language: Spee
   void piperWanted(language).then((wanted) => {
     if (id !== run) return;
     if (!wanted) return queueDevice(text, voiceUri, language, onDone);
-    speakPiper(forSpeech(text, language), language, RATE).then(
+    speakPiper(forSpeech(text, language), language, PIPER_RATE[language]).then(
       () => id === run && onDone?.(),
       () => id === run && queueDevice(text, voiceUri, language, onDone),
     );
@@ -305,5 +309,5 @@ export function previewVoice(uri: string | null, language: SpeechLanguage = "en"
 export function previewPiper(language: SpeechLanguage = "en"): Promise<void> {
   if (typeof window === "undefined") return Promise.resolve();
   cancelAll();
-  return speakPiper(forSpeech(SAMPLE[language], language), language, RATE);
+  return speakPiper(forSpeech(SAMPLE[language], language), language, PIPER_RATE[language]);
 }
