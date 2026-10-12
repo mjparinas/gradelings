@@ -4,7 +4,7 @@ For a school or district that is completing a PIA (BC: FIPPA s. 69; Ontario and 
 
 ## 1. The service
 
-Gradelings is a web app (installable, with an Android wrapper) for practice and games matched to the BC, Ontario and Alberta curricula, Kindergarten to Grade 9. In a school it is a practice aid. Its levels reflect practice, not a report-card mark; the teacher decides proficiency. There are no ads, no tracking and no sale of data.
+Gradelings is a web app (installable, with an Android wrapper) for practice and games matched to the BC, Ontario and Alberta curricula, Kindergarten to Grade 9. In a school it is a practice aid. Its levels reflect practice, not a report-card mark; the teacher decides proficiency. There are no ads and no sale of data.
 
 ## 2. Who uses it and how accounts work
 
@@ -64,10 +64,11 @@ Students' devices also keep a copy of progress in the browser (IndexedDB and loc
 | --- | --- | --- | --- |
 | Vercel | App hosting, functions in Montréal (`yul1`) | Requests, logs | Canada for functions **(confirm: edge and logging may be outside Canada)** |
 | Turso on Fly | Database | All account data above | Montréal **(confirm region and encryption at rest)** |
-| Resend | Teacher emails | Teacher email address and message | United States |
+| Resend | Teacher emails | Teacher email address and message; whether each email was opened and which links were clicked (open and click tracking is on) | United States |
 | Sentry | Crash reports | Scrubbed errors | United States or EU |
 | Stripe | Parent payments | Parent email and payment | United States. Not used for schools while classes are free. |
 | Vercel Web Analytics | Anonymous page counts on public pages only | Page, country | Switched off in the student app and teacher area |
+| Cloudflare Web Analytics | Visit counts for the website, without cookies | Page, country, referring site | **(confirm which pages it covers)** |
 
 If a district requires all providers to be in Canada, Resend and Sentry are the gaps; both can be switched off for a school-only deployment. Decision for the owner.
 

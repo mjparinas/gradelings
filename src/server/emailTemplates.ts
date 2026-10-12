@@ -50,7 +50,7 @@ function fontFaces(origin: string): string {
     .join("");
 }
 
-/** One simple layout for every email: the logo and Ollie from our own site, no tracking pixels. */
+/** One simple layout for every email: the logo and Ollie from our own site. */
 function layout(p: Parts): Email {
   const button = p.button
     ? `<p style="margin:24px 0"><a href="${esc(p.button.url)}" style="background:#25b47e;color:#fff;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:12px;display:inline-block">${esc(p.button.label)}</a></p>`

@@ -9,6 +9,7 @@ BC has no provincial approval list: each of the 60 districts decides for itself,
 | [pia-pack.md](pia-pack.md) | The answers a district asks for: data inventory, data flow, service providers, retention, access, security, breach handling. Written from the code as it is today. | Draft. Facts checked against the repo; items marked **(confirm)** need a provider's written answer. |
 | [school-data-agreement.md](school-data-agreement.md) | A short data agreement a school or district can sign. | Draft template. Needs a lawyer and a real legal entity. |
 | [parent-consent-letter.md](parent-consent-letter.md) | A letter a teacher can send home. | Draft template for teachers and districts to adapt. |
+| [tracking-legal-notes.md](tracking-legal-notes.md) | What analytics and email tracking are in use, and the children's-privacy questions (PIPEDA, provincial law, COPPA, Google Play) for the lawyer review. | Notes for the lawyer. Not legal advice. |
 | [accessibility-conformance.md](accessibility-conformance.md) | WCAG 2.2 A/AA conformance report in the shape districts ask for (a VPAT-style table). | Automated checks and a scripted keyboard-only run-through. Screen reader testing and a keyboard run-through by a person are still to do. |
 
 Public pages that go with this: `/privacy/` (with a "Schools and classes" section), `/terms/` (teachers and classes) and `/accessibility/`.

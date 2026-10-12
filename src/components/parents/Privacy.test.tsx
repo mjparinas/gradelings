@@ -30,10 +30,10 @@ beforeEach(() => {
 afterEach(() => vi.restoreAllMocks());
 
 describe("PrivacyPanels", () => {
-  it("says what is stored, and that there are no ads, tracking pixels or data sales", () => {
+  it("says what is stored, and that there are no ads or data sales", () => {
     render(<PrivacyPanels />);
     expect(screen.getByText(/No free text, photos or voice recordings\./)).toBeInTheDocument();
-    expect(screen.getByText("No ads, no tracking pixels, and we never sell data.")).toBeInTheDocument();
+    expect(screen.getByText("No ads, and we never sell data.")).toBeInTheDocument();
   });
 
   it("downloads every child, setting and answer as a dated JSON file", async () => {
