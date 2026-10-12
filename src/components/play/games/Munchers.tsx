@@ -4,6 +4,7 @@ import { useCallback, useEffect, useEffectEvent, useRef, useState } from "react"
 import { pick, randInt, shuffle } from "@/content/random";
 import { burstFrom, floatText } from "@/lib/juice";
 import { sounds } from "@/lib/sound";
+import { speak } from "@/lib/speech";
 import { CritterSvg } from "../../Critter";
 import { muncherRules, type MuncherRule } from "./content";
 import type { GameProps } from "./types";
@@ -98,6 +99,9 @@ export function Munchers({ grade, band, onScore, onLevel, onOver }: GameProps) {
 
   useEffect(() => onScore(score), [score, onScore]);
   useEffect(() => onLevel(level), [level, onLevel]);
+  useEffect(() => {
+    speak(rule.speak);
+  }, [rule]);
 
   // Step toward a tapped square, then munch it.
   const posRef = useRef(pos);
@@ -184,7 +188,9 @@ export function Munchers({ grade, band, onScore, onLevel, onOver }: GameProps) {
   return (
     <div className="flex w-full flex-col items-center gap-3">
       <div className="flex w-full max-w-3xl items-center justify-between gap-2">
-        <p className="rounded-2xl bg-white px-4 py-2 text-xl font-bold shadow-[0_4px_0_var(--color-line)] sm:text-2xl">{rule.title}</p>
+        <button type="button" onClick={() => speak(rule.speak)} className="btn min-h-14 px-4 text-xl sm:text-2xl">
+          🔊 {rule.title}
+        </button>
         <p className="text-2xl" aria-label={`${lives} lives`}>
           {"❤️".repeat(Math.max(0, lives))}
           <span className="opacity-30">{"🤍".repeat(Math.max(0, 3 - lives))}</span>

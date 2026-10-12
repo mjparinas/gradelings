@@ -5,7 +5,7 @@ import type { AgeBand } from "@/content/types";
 
 // A fixed rule and no randomness: the first 8 cells of every board fit the rule ("G1"…), the rest don't ("B9"…).
 // Grumbles spawn in the first free corner and always try to step up first, then down.
-const h = vi.hoisted(() => ({ n: 0, boop: vi.fn(), complete: vi.fn() }));
+const h = vi.hoisted(() => ({ n: 0, round: 0, boop: vi.fn(), complete: vi.fn(), speak: vi.fn() }));
 vi.mock("@/content/random", () => ({
   pick: <T,>(items: readonly T[]) => items[0],
   randInt: (min: number) => min,
@@ -15,6 +15,7 @@ vi.mock("./content", () => ({
   muncherRules: () => [
     {
       title: "Munch the G numbers",
+      speak: `Munch the G numbers, round ${++h.round}`,
       cell: (good: boolean) => ({ text: `${good ? "G" : "B"}${++h.n}`, good }),
       why: (text: string) => `${text} is not a G number.`,
     },
@@ -22,6 +23,7 @@ vi.mock("./content", () => ({
 }));
 vi.mock("@/lib/juice", () => ({ burstFrom: vi.fn(), floatText: vi.fn() }));
 vi.mock("@/lib/sound", () => ({ sounds: { boop: h.boop, complete: h.complete, pop: vi.fn(), tap: vi.fn() } }));
+vi.mock("@/lib/speech", () => ({ speak: h.speak }));
 vi.mock("../../Critter", () => ({ CritterSvg: () => <svg data-testid="muncher" /> }));
 
 import { Munchers } from "./Munchers";
@@ -49,6 +51,7 @@ const clearBoard = () => {
 beforeEach(() => {
   vi.useFakeTimers();
   h.n = 0;
+  h.round = 0;
   vi.clearAllMocks();
 });
 afterEach(() => vi.useRealTimers());
@@ -56,7 +59,7 @@ afterEach(() => vi.useRealTimers());
 describe("Number Munchers", () => {
   it("munching a number that fits the rule scores 10 and empties the square", () => {
     play();
-    expect(screen.getByText("Munch the G numbers")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Munch the G numbers/ })).toBeInTheDocument();
     expect(lives()).toBe("3 lives");
     fireEvent.click(screen.getByRole("button", { name: "G1" }));
     expect(lastScore()).toBe(10);
@@ -96,6 +99,17 @@ describe("Number Munchers", () => {
     expect(props.onOver).toHaveBeenCalledTimes(1);
   });
 
+  it("reads the goal aloud at the start, from the speaker button, and again on each new board", () => {
+    play("little");
+    expect(h.speak).toHaveBeenCalledTimes(1);
+    expect(h.speak).toHaveBeenLastCalledWith("Munch the G numbers, round 1");
+    fireEvent.click(screen.getByRole("button", { name: /Munch the G numbers/ }));
+    expect(h.speak).toHaveBeenCalledTimes(2);
+    clearBoard();
+    wait(700);
+    expect(h.speak).toHaveBeenLastCalledWith("Munch the G numbers, round 2");
+  });
+
   it("the arrow keys never move the muncher off the board", () => {
     play();
     key("ArrowLeft");
@@ -127,7 +141,7 @@ describe("Number Munchers", () => {
     expect(screen.getByText("A Grumble got you!")).toBeInTheDocument();
     expect(lives()).toBe("2 lives");
     // Sent to the far corner, out of the muncher's way.
-    const squares = screen.getAllByRole("button");
+    const squares = screen.getAllByRole("button").filter((b) => !/Munch/.test(b.textContent ?? ""));
     expect(squares[29]).toHaveTextContent("👾");
   });
 
