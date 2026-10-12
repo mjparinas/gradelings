@@ -6,7 +6,7 @@ import { frenchCourses } from "./french";
 import { adopt, course, poolOf } from "./kit";
 import { culturalExpressions8 } from "./units/g8-language";
 import { climateAction, climateEvidence } from "./units/g8-science";
-import { advocacy, conflicts, worldWarTwo } from "./units/g8-social";
+import { advocacy, changingCanada, conflicts, equity, indigenousExperiences, worldWarTwo } from "./units/g8-social";
 
 // Nova Scotia Grade 8. Math follows the Grade 8 mathematics outcomes (N, PR, M, G, SP), English language arts the six Grade 8
 // strands, science the three Grade 8 learning bundles and social studies the six Grade 8 outcomes (Canada from 1920).
@@ -66,10 +66,8 @@ export const courses: Course[] = [
     order: ["cells-and-life", "particles-and-matter", "viscosity-flow-8", "density-buoyancy-8", "pressure-pascal-8", "hydraulics-pneumatics-8", "ns-climate-evidence-8", "ns-climate-action-8"],
   }),
   course("8", "social", {
-    adopted: adopt(poolOf("social", ontario, manitoba, alberta), {
-    }),
-    own: [conflicts, worldWarTwo, advocacy],
-    order: ["ns-conflicts-8", "ns-world-war-2-8", "ns-advocacy-8"],
+    own: [indigenousExperiences, equity, changingCanada, conflicts, worldWarTwo, advocacy],
+    order: ["ns-indigenous-experiences-8", "ns-equity-8", "ns-changing-canada-8", "ns-conflicts-8", "ns-world-war-2-8", "ns-advocacy-8"],
   }),
   ...frenchCourses("8"),
 ];

@@ -2,6 +2,7 @@ import type { Course } from "../types";
 import { units as g2_language } from "../ontario/g2-language";
 import { units as g2_science } from "../ontario/g2-science";
 import { units as g2_social } from "../ontario/g2-social";
+import { units as sk_social_2 } from "./g2-social";
 import { reuse, share, sk } from "./kit";
 import { SK_OUTCOMES as O } from "./outcomes";
 import { frenchCourses } from "./french";
@@ -66,13 +67,13 @@ export const courses: Course[] = [
     units: [...reuse(g2_social, {
       "groups-in-our-community": sk("IN2.2", "the groups and cultures in the local community"),
       "then-and-now": sk("DR2.1", "the history of the local community and its people"),
-    })],
+    }), ...sk_social_2],
     shares: {
       "needs-and-wants": share("RW2.1", "how the local community meets the needs and wants of its members"),
       "communities-in-canada": share("IN2.1, IN2.2", "characteristics of communities and the cultural groups in them"),
       "caring-citizens": share("PA2.3, RW2.3", "rights and responsibilities, and acting for a sustainable community"),
     },
-    order: { "ca-sk": ["needs-and-wants", "communities-in-canada", "groups-in-our-community", "then-and-now", "caring-citizens"] },
+    order: { "ca-sk": ["needs-and-wants", "communities-in-canada", "groups-in-our-community", "then-and-now", "caring-citizens", ...sk_social_2.map((u) => u.id)] },
   },
   ...frenchCourses("2"),
 ];

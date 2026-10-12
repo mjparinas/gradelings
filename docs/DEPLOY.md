@@ -20,7 +20,7 @@ Gradelings is a standard Next.js 16 app (Node runtime, no custom server). This g
 | `EMAIL_FROM` | For email | Sender, e.g. `Gradelings <hello@gradelings.com>`. The domain must be verified in Resend (add its SPF and DKIM DNS records). |
 | `CRON_SECRET` | For the daily job | Any long random string. Vercel sends it as `Authorization: Bearer …` to `/api/cron/weekly/`; the route refuses calls without it. The job sends inactive-class warnings and deletes eligible classes as well as handling email reminders. |
 | `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY` | Optional | Turn on the Sunday "weekly report is ready" browser notification for grown-ups. Generate a P-256 pair once: `node -e "const c=require('crypto');const k=c.generateKeyPairSync('ec',{namedCurve:'prime256v1'});const j=k.privateKey.export({format:'jwk'});console.log('VAPID_PUBLIC_KEY='+Buffer.concat([Buffer.from([4]),Buffer.from(j.x,'base64url'),Buffer.from(j.y,'base64url')]).toString('base64url'));console.log('VAPID_PRIVATE_KEY='+j.d)"`. Without them the toggle is hidden. Keep the private key secret; never change the public key once parents have subscribed. |
-| `SENTRY_DSN` / `NEXT_PUBLIC_SENTRY_DSN` | Optional | Turns on error reports (server / browser). Off when unset. Reports are scrubbed of emails, cookies and request bodies before they leave (`src/lib/sentry-scrub.ts`). |
+| `SENTRY_DSN` / `NEXT_PUBLIC_SENTRY_DSN` | Optional | Turns on error reports (server / browser). Off when unset. The server falls back to `NEXT_PUBLIC_SENTRY_DSN` when `SENTRY_DSN` is unset, so the Vercel Sentry integration (which sets only the public one) covers both. Reports are scrubbed of emails, cookies and request bodies before they leave (`src/lib/sentry-scrub.ts`). |
 | `ANDROID_CERT_SHA256` | For the Android app | Comma-separated SHA-256 fingerprints of the app's signing keys (Google's Play App Signing key first). Served at `/.well-known/assetlinks.json`. See `docs/ANDROID.md`. |
 | `ADMIN_EMAILS` | For the admin panel | Comma-separated emails of admin accounts (each must sign up and confirm its email). Turns on `/admin/` and `/api/admin/*` (`docs/ADMIN.md`). Without it they answer 404. |
 | `ADMIN_TOKEN` | Optional | At least 24 random characters. Lets scripts call `/api/admin/codes/` with a Bearer token (`docs/CODES.md`); the admin panel doesn't need it. |
@@ -86,6 +86,7 @@ Turso offers Canadian locations only on its Fly provider (its AWS list has none)
 - [ ] CI is green on the pull request (`.github/workflows/ci.yml` runs tests, lint, types, build, device layouts, accessibility and offline checks).
 - [ ] Turso backups: confirm point-in-time recovery is available on your plan and practise one restore.
 - [ ] Stripe test-mode checkout, portal and webhook round trip updates the Subscription screen.
+- [ ] Referrals: sign up with a friend's `/account/invite/?ref=CODE` link, confirm the email, and check the referrer gets a free month. For a paying referrer this adds a one-month credit to their Stripe customer balance (`creditCustomer`), so verify it in Stripe test mode.
 - [ ] Switch Stripe to live keys; run one real checkout and refund it.
 - [ ] `/play/`, `/parents/` and `/api/` stay `noindex`; public pages are indexed.
 - [ ] Submit the sitemap in Google Search Console.

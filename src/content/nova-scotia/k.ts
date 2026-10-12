@@ -4,7 +4,7 @@ import { courses as manitoba } from "../manitoba/k";
 import { courses as ontario } from "../ontario/k";
 import { frenchCourses } from "./french";
 import { adopt, course, poolOf } from "./kit";
-import { celebrations } from "./units/k-social";
+import { celebrations, workingTogether } from "./units/k-social";
 import { sandAndWater } from "./units/k-science";
 
 // Nova Scotia Primary (Kindergarten). Math follows the Primary mathematics outcomes (N, PR, M, G), English language arts the
@@ -68,8 +68,8 @@ export const courses: Course[] = [
       "we-belong": [GROUPS, "groups that matter to us, and how people cooperate"],
       "fair-and-kind": [COOPERATION, "kind actions, and working through disagreements"],
     }),
-    own: [celebrations],
-    order: ["families", "we-belong", "fair-and-kind", "helpers-and-rules", "ns-celebrations-k"],
+    own: [celebrations, workingTogether],
+    order: ["families", "we-belong", "fair-and-kind", "helpers-and-rules", "ns-working-together-k", "ns-celebrations-k"],
   }),
   ...frenchCourses("k"),
 ];

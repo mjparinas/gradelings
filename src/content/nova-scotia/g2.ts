@@ -4,7 +4,7 @@ import { courses as manitoba } from "../manitoba/g2";
 import { courses as ontario } from "../ontario/g2";
 import { frenchCourses } from "./french";
 import { adopt, course, poolOf } from "./kit";
-import { consumers, contributions, sustainableCommunities } from "./units/g2-social";
+import { communityChange, consumers, contributions, sustainableCommunities } from "./units/g2-social";
 
 // Nova Scotia Grade 2. Math follows the Grade 2 mathematics outcomes (N, PR, M, G, SP), English language arts the Grade 2 ELA
 // strand outcomes (A1 to C3), science the four Grade 2 learning bundles and social studies the four Grade 2 outcomes. Units
@@ -72,8 +72,8 @@ export const courses: Course[] = [
     adopted: adopt(poolOf("social", ontario, manitoba, alberta), {
       "then-and-now": ["Investigate change in the community", "how communities and ways of living change over time"],
     }),
-    own: [contributions, consumers, sustainableCommunities],
-    order: ["then-and-now", "ns-contributions-2", "needs-and-wants", "ns-consumers-2", "ns-sustainable-communities-2"],
+    own: [communityChange, contributions, consumers, sustainableCommunities],
+    order: ["then-and-now", "ns-community-change-2", "ns-contributions-2", "needs-and-wants", "ns-consumers-2", "ns-sustainable-communities-2"],
   }),
   ...frenchCourses("2"),
 ];

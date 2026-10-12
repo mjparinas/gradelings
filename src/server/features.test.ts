@@ -172,6 +172,16 @@ describe("daily email job", () => {
     expect(email.outbox().length).toBe(count); // not twice in one week
   });
 
+  it("puts the postal address in every email's footer", async () => {
+    const { MAILING_ADDRESS } = await import("@/lib/brand");
+    const { verifyEmail, weeklyEmail } = await import("@/server/emailTemplates");
+    expect(MAILING_ADDRESS).not.toBe("");
+    for (const e of [verifyEmail("a@example.com", "https://x.test", "t"), weeklyEmail("a@example.com", "https://x.test", [], "u")]) {
+      expect(e.text).toContain(MAILING_ADDRESS);
+      expect(e.html).toContain(MAILING_ADDRESS);
+    }
+  });
+
   it("adds a month summary to the weekly email on the first Sunday of the month only", async () => {
     const { monthLine } = await import("@/server/emailTemplates");
     expect(monthLine("Maya", { minutes: 240, answers: 900, previousAnswers: 700, activeDays: 12 })).toBe("Your month: Maya practised on 12 days, 240 min in all, 900 questions, up from 700 the month before. 🎉");

@@ -813,6 +813,316 @@ function maps({ difficulty = 2 }: GenerateOptions = {}): Question[] {
   return shuffle([...mapQuestions, nearFar(difficulty), ...levelled(MAP_BANK, bankCount, difficulty)]);
 }
 
+// ---------- Then & Now ----------
+
+const THEN_NOW_SORT: SortSet = {
+  prompt: "Long ago or today? Tap an item, then tap its basket.",
+  hint: "Think about what your great-grandparents used when they were little, long before phones and computers.",
+  bins: [
+    { id: "then", label: "long ago", emoji: "🕰️" },
+    { id: "now", label: "today", emoji: "📱" },
+  ],
+  items: [
+    { label: "horse and wagon", emoji: "🐴", bin: "then" },
+    { label: "candle for light", emoji: "🕯️", bin: "then" },
+    { label: "washboard for clothes", emoji: "🧺", bin: "then" },
+    { label: "oil lamp", emoji: "🪔", bin: "then" },
+    { label: "wood stove for cooking", emoji: "🪵", bin: "then" },
+    { label: "tablet", emoji: "📱", bin: "now" },
+    { label: "laptop", emoji: "💻", bin: "now" },
+    { label: "electric car", emoji: "🚗", bin: "now" },
+    { label: "video call", emoji: "🤳", bin: "now" },
+  ],
+};
+
+const CHANGE_BANK: Item[] = [
+  {
+    prompt: "A photo of your town from long ago shows dirt roads. Today there are…",
+    right: { label: "paved roads", emoji: "🛣️" },
+    wrong: [
+      { label: "no roads at all", emoji: "🚫" },
+      { label: "rivers instead of roads", emoji: "🏞️" },
+    ],
+    hint: "Communities change over time. Many dirt roads were paved.",
+  },
+  {
+    prompt: "What is one thing that has changed since your grandparents were kids?",
+    right: { label: "phones we can carry", emoji: "📱" },
+    wrong: [
+      { label: "kids still need to sleep", emoji: "😴" },
+      { label: "the sun still rises", emoji: "🌅" },
+    ],
+    hint: "Phones you carry in your pocket are new. Sleep and sunrise haven't changed!",
+  },
+  {
+    prompt: "What has stayed the same since long ago?",
+    right: { label: "families care for each other", emoji: "👨‍👩‍👧" },
+    wrong: [
+      { label: "everyone uses tablets", emoji: "📱" },
+      { label: "everyone drives electric cars", emoji: "🚗" },
+    ],
+    hint: "Some things change, like tools. Others stay the same, like families caring.",
+  },
+  {
+    prompt: "How can we learn what our community was like long ago?",
+    right: { label: "look at old photos", emoji: "📷" },
+    wrong: [
+      { label: "look at tomorrow's weather", emoji: "🌤️" },
+      { label: "count the cars today", emoji: "🚗" },
+    ],
+    hint: "Old photos, maps and stories show us the past.",
+  },
+  {
+    prompt: "Where can you see old objects from your community's past?",
+    right: { label: "a museum", emoji: "🏛️" },
+    wrong: [
+      { label: "a gas station", emoji: "⛽" },
+      { label: "a car wash", emoji: "🚿" },
+    ],
+    hint: "Museums keep and show objects from long ago.",
+  },
+  {
+    prompt: "Who could tell you what your town was like 60 years ago?",
+    right: { label: "an older person who lived here", emoji: "🧓" },
+    wrong: [
+      { label: "a baby", emoji: "👶" },
+      { label: "a new puppy", emoji: "🐶" },
+    ],
+    hint: "People who have lived somewhere a long time remember how it used to be.",
+  },
+  {
+    prompt: "A new library opens in your town. This is a…",
+    right: { label: "community event", emoji: "📚" },
+    wrong: [
+      { label: "kind of weather", emoji: "🌧️" },
+      { label: "family chore", emoji: "🧹" },
+    ],
+    hint: "New buildings and openings are important events in a community.",
+  },
+  {
+    prompt: "Many new families move to a town. What might the town need?",
+    right: { label: "more homes and schools", emoji: "🏘️" },
+    wrong: [
+      { label: "fewer homes", emoji: "🏚️" },
+      { label: "no schools", emoji: "🚫" },
+    ],
+    hint: "When a community grows, it needs more places to live and learn.",
+  },
+  {
+    prompt: "Which is a celebration many communities hold?",
+    right: { label: "a parade or festival", emoji: "🎉" },
+    wrong: [
+      { label: "a power outage", emoji: "🔌" },
+      { label: "a traffic jam", emoji: "🚗" },
+    ],
+    hint: "Parades and festivals bring people together to celebrate.",
+  },
+  {
+    prompt: "Canada Day is on July 1. It happens…",
+    right: { label: "every year on the same day", emoji: "📅" },
+    wrong: [
+      { label: "only once, ever", emoji: "1️⃣" },
+      { label: "every morning", emoji: "🌅" },
+    ],
+    hint: "Holidays like Canada Day are planned for the same day every year.",
+  },
+  {
+    prompt: "A storm knocks the power out. Was this planned?",
+    right: { label: "no, it was unplanned", emoji: "⛈️" },
+    wrong: [
+      { label: "yes, it was on the calendar", emoji: "📅" },
+      { label: "yes, like a birthday", emoji: "🎂" },
+    ],
+    hint: "Some events are scheduled, like holidays. Others surprise us, like storms.",
+  },
+  {
+    prompt: "Which event is planned ahead (scheduled)?",
+    right: { label: "a school concert", emoji: "🎤" },
+    wrong: [
+      { label: "a surprise snowstorm", emoji: "🌨️" },
+      { label: "a tree falling in the wind", emoji: "🌳" },
+    ],
+    hint: "Scheduled events are put on the calendar ahead of time.",
+  },
+  {
+    prompt: "Long ago, how did many kids get to school?",
+    right: { label: "they walked", emoji: "🚶" },
+    wrong: [
+      { label: "they flew in a plane", emoji: "✈️" },
+      { label: "they took a subway", emoji: "🚇" },
+    ],
+    hint: "Many kids long ago walked to school, sometimes a long way.",
+  },
+  {
+    prompt: "Long ago, families often washed clothes…",
+    right: { label: "by hand in a tub", emoji: "🧺" },
+    wrong: [
+      { label: "in a washing machine", emoji: "🌀" },
+      { label: "at a car wash", emoji: "🚿" },
+    ],
+    hint: "Before washing machines, people scrubbed clothes by hand.",
+  },
+  {
+    prompt: "Who leads the council in a town or city?",
+    right: { label: "the mayor", emoji: "🏛️" },
+    wrong: [
+      { label: "the baker", emoji: "🍞" },
+      { label: "a lifeguard", emoji: "🏊" },
+    ],
+    hint: "The mayor and council make decisions for a town or city.",
+  },
+  {
+    prompt: "Which service brings clean water to homes?",
+    right: { label: "water pipes from the town", emoji: "🚰" },
+    wrong: [
+      { label: "the toy store", emoji: "🧸" },
+      { label: "the movie theatre", emoji: "🎬" },
+    ],
+    hint: "Communities build pipes to bring clean water to homes and schools.",
+  },
+  {
+    prompt: "Who comes when there is an emergency?",
+    right: { label: "police, firefighters and paramedics", emoji: "🚑" },
+    wrong: [
+      { label: "the ice cream truck", emoji: "🍦" },
+      { label: "the mail carrier", emoji: "📬" },
+    ],
+    hint: "Emergency services help people quickly when something goes wrong.",
+  },
+  {
+    prompt: "A store on Main Street closes and a café opens. The street has…",
+    right: { label: "changed", emoji: "🔄" },
+    wrong: [
+      { label: "disappeared", emoji: "💨" },
+      { label: "turned into a lake", emoji: "🏞️" },
+    ],
+    hint: "Businesses open and close. That is one way a community changes.",
+  },
+  {
+    prompt: "Why might a town build a new bridge?",
+    right: { label: "to help people cross the river", emoji: "🌉" },
+    wrong: [
+      { label: "to stop the river", emoji: "🛑" },
+      { label: "to keep people home", emoji: "🏠" },
+    ],
+    hint: "Bridges help people and cars cross water.",
+  },
+  {
+    prompt: "Before people built a town here, the land was…",
+    right: { label: "home to Indigenous peoples", emoji: "🌲" },
+    wrong: [
+      { label: "empty of all people", emoji: "🚫" },
+      { label: "a big parking lot", emoji: "🅿️" },
+    ],
+    hint: "Indigenous peoples have lived on this land for a very long time, and still do.",
+    hard: true,
+  },
+  {
+    prompt: "Which tells about a community's past AND present?",
+    right: { label: "old and new photos side by side", emoji: "🖼️" },
+    wrong: [
+      { label: "only today's weather", emoji: "🌤️" },
+      { label: "a grocery list", emoji: "📝" },
+    ],
+    hint: "Comparing old and new pictures shows what changed and what stayed the same.",
+    hard: true,
+  },
+  {
+    prompt: "Your grandparents watched TV with a few channels. Today kids can…",
+    right: { label: "stream shows on many devices", emoji: "📺" },
+    wrong: [
+      { label: "never watch shows", emoji: "🚫" },
+      { label: "only listen to the radio", emoji: "📻" },
+    ],
+    hint: "Technology has changed a lot since your grandparents were young.",
+    hard: true,
+  },
+  {
+    prompt: "Put on a timeline, which came first?",
+    right: { label: "the town was started", emoji: "🏡" },
+    wrong: [
+      { label: "the new school opened", emoji: "🏫" },
+      { label: "last week's soccer game", emoji: "⚽" },
+    ],
+    hint: "A timeline shows events in order. A town has to start before it can grow.",
+    hard: true,
+  },
+  {
+    prompt: "A big new store opens and a small shop closes. Who might this affect?",
+    right: { label: "shop owners and shoppers", emoji: "🛍️" },
+    wrong: [
+      { label: "nobody at all", emoji: "🤷" },
+      { label: "only the birds", emoji: "🐦" },
+    ],
+    hint: "Changes in a community affect different people in different ways.",
+    hard: true,
+  },
+  {
+    prompt: "Why does a growing town need more buses?",
+    right: { label: "more people need to get around", emoji: "🚌" },
+    wrong: [
+      { label: "buses like to be busy", emoji: "😄" },
+      { label: "fewer people live there", emoji: "📉" },
+    ],
+    hint: "More people means more need for transportation.",
+    hard: true,
+  },
+  {
+    prompt: "Who gets to decide where a new park will go in town?",
+    right: { label: "the town council, after listening to people", emoji: "🏛️" },
+    wrong: [
+      { label: "one kid on the swings", emoji: "🧒" },
+      { label: "a passing tourist", emoji: "📸" },
+    ],
+    hint: "Councils make decisions for the whole community and listen to its people.",
+    hard: true,
+  },
+  {
+    prompt: "Why is your school an important place in the community?",
+    right: { label: "children learn and families meet there", emoji: "🏫" },
+    wrong: [
+      { label: "it sells cars", emoji: "🚗" },
+      { label: "nobody uses it", emoji: "🚫" },
+    ],
+    hint: "Important places are ones that matter to many people.",
+    hard: true,
+  },
+  {
+    prompt: "What is one way new houses can change the land?",
+    right: { label: "fields or forests become streets", emoji: "🏗️" },
+    wrong: [
+      { label: "the ocean moves away", emoji: "🌊" },
+      { label: "mountains grow taller", emoji: "🏔️" },
+    ],
+    hint: "When communities grow, people change the land to build.",
+    hard: true,
+  },
+  {
+    prompt: "Where do the mayor and council usually meet?",
+    right: { label: "town hall", emoji: "🏛️" },
+    wrong: [
+      { label: "the beach", emoji: "🏖️" },
+      { label: "the bakery", emoji: "🥐" },
+    ],
+    hint: "Town or city hall is where local government works.",
+    hard: true,
+  },
+  {
+    prompt: "Old and new: which is the newest way to talk to Grandma far away?",
+    right: { label: "a video call", emoji: "🤳" },
+    wrong: [
+      { label: "a letter on a ship", emoji: "🚢" },
+      { label: "a telegram", emoji: "📜" },
+    ],
+    hint: "Letters on ships came first, then telegrams, then video calls.",
+    hard: true,
+  },
+];
+
+function thenAndNow({ difficulty = 2 }: GenerateOptions = {}): Question[] {
+  return shuffle([sortQuestion(THEN_NOW_SORT, perBin(difficulty)), ...levelled(CHANGE_BANK, 7, difficulty)]);
+}
+
 export const course: Course = {
   grade: "1",
   subject: "social",
@@ -869,6 +1179,19 @@ export const course: Course = {
       parentNote:
         "Reading a simple map with north at the top, using north, south, east and west, map symbols and legends, and near and far.",
       generate: maps,
+    },
+    {
+      id: "then-and-now-1",
+      title: "Then & Now",
+      emoji: "🕰️",
+      blurb: "How our community changes",
+      standards: {
+        "ca-bc":
+          "Key events and developments in the local community; characteristics of the local community that provide organization and meet the needs of the community",
+      },
+      parentNote:
+        "How communities change over time (new buildings, roads and technology), what stays the same, planned and unplanned events, and the local government and services that keep a community running.",
+      generate: thenAndNow,
     },
   ],
 };

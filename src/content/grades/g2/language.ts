@@ -1,5 +1,6 @@
 import { chance, pick, sample, shuffle, textChoice } from "../../random";
-import type { Question, Course } from "../../types";
+import type { Question, Course, GenerateOptions } from "../../types";
+import { fromBank, type BankItem } from "../../bank";
 
 // ---------- Rhyme Time ----------
 
@@ -17,6 +18,16 @@ const RHYMES: { word: string; emoji: string; rhymes: { word: string; emoji: stri
   { word: "fish", emoji: "🐟", rhymes: [{ word: "dish", emoji: "🍽️" }] },
   { word: "clock", emoji: "🕐", rhymes: [{ word: "sock", emoji: "🧦" }, { word: "rock", emoji: "🪨" }] },
   { word: "bed", emoji: "🛏️", rhymes: [{ word: "sled", emoji: "🛷" }, { word: "bread", emoji: "🍞" }] },
+  { word: "hen", emoji: "🐔", rhymes: [{ word: "pen", emoji: "🖊️" }, { word: "ten", emoji: "🔟" }] },
+  { word: "king", emoji: "🤴", rhymes: [{ word: "ring", emoji: "💍" }] },
+  { word: "bug", emoji: "🐛", rhymes: [{ word: "mug", emoji: "☕" }] },
+  { word: "tie", emoji: "👔", rhymes: [{ word: "pie", emoji: "🥧" }, { word: "fly", emoji: "🪰" }] },
+  { word: "light", emoji: "💡", rhymes: [{ word: "kite", emoji: "🪁" }, { word: "night", emoji: "🌃" }] },
+  { word: "train", emoji: "🚆", rhymes: [{ word: "rain", emoji: "🌧️" }, { word: "chain", emoji: "⛓️" }] },
+  { word: "bone", emoji: "🦴", rhymes: [{ word: "phone", emoji: "📱" }] },
+  { word: "duck", emoji: "🦆", rhymes: [{ word: "truck", emoji: "🚚" }] },
+  { word: "nose", emoji: "👃", rhymes: [{ word: "rose", emoji: "🌹" }] },
+  { word: "van", emoji: "🚐", rhymes: [{ word: "pan", emoji: "🍳" }] },
 ];
 
 const FAMILIES: Record<string, string[]> = {
@@ -26,6 +37,10 @@ const FAMILIES: Record<string, string[]> = {
   un: ["sun", "run", "fun", "bun"],
   ake: ["cake", "make", "lake", "bake"],
   ell: ["bell", "shell", "tell", "well"],
+  ug: ["bug", "rug", "hug", "mug"],
+  in: ["pin", "fin", "win", "tin"],
+  ot: ["pot", "dot", "cot", "hot"],
+  ap: ["cap", "map", "tap", "nap"],
 };
 
 function rhymes(): Question[] {
@@ -70,21 +85,29 @@ const DIGRAPHS: Record<string, { word: string; emoji: string }[]> = {
     { word: "sheep", emoji: "🐑" },
     { word: "shoe", emoji: "👟" },
     { word: "shark", emoji: "🦈" },
+    { word: "shirt", emoji: "👕" },
+    { word: "shadow", emoji: "👤" },
   ],
   ch: [
     { word: "chair", emoji: "🪑" },
     { word: "cheese", emoji: "🧀" },
     { word: "chick", emoji: "🐤" },
     { word: "cherries", emoji: "🍒" },
+    { word: "chocolate", emoji: "🍫" },
+    { word: "chopsticks", emoji: "🥢" },
   ],
   th: [
     { word: "thumb", emoji: "👍" },
     { word: "three", emoji: "3️⃣" },
     { word: "thread", emoji: "🧵" },
+    { word: "thunder", emoji: "⛈️" },
+    { word: "thermometer", emoji: "🌡️" },
   ],
   wh: [
     { word: "whale", emoji: "🐳" },
     { word: "wheat", emoji: "🌾" },
+    { word: "white", emoji: "🤍" },
+    { word: "whisper", emoji: "🤫" },
   ],
 };
 
@@ -94,18 +117,27 @@ const VOWEL_TEAMS: Record<string, { word: string; emoji: string }[]> = {
     { word: "bee", emoji: "🐝" },
     { word: "feet", emoji: "🦶" },
     { word: "sheep", emoji: "🐑" },
+    { word: "seed", emoji: "🌱" },
+    { word: "queen", emoji: "👑" },
+    { word: "teeth", emoji: "🦷" },
   ],
   ai: [
     { word: "rain", emoji: "🌧️" },
     { word: "snail", emoji: "🐌" },
     { word: "train", emoji: "🚆" },
     { word: "mail", emoji: "📬" },
+    { word: "paint", emoji: "🎨" },
+    { word: "tail", emoji: "🐕" },
+    { word: "chain", emoji: "⛓️" },
   ],
   oa: [
     { word: "boat", emoji: "⛵" },
     { word: "goat", emoji: "🐐" },
     { word: "soap", emoji: "🧼" },
     { word: "road", emoji: "🛣️" },
+    { word: "coat", emoji: "🧥" },
+    { word: "toast", emoji: "🍞" },
+    { word: "toad", emoji: "🐸" },
   ],
 };
 
@@ -121,6 +153,16 @@ const SYLLABLES: { word: string; emoji: string; count: number }[] = [
   { word: "dinosaur", emoji: "🦕", count: 3 },
   { word: "watermelon", emoji: "🍉", count: 4 },
   { word: "caterpillar", emoji: "🐛", count: 4 },
+  { word: "frog", emoji: "🐸", count: 1 },
+  { word: "tree", emoji: "🌳", count: 1 },
+  { word: "rabbit", emoji: "🐰", count: 2 },
+  { word: "turtle", emoji: "🐢", count: 2 },
+  { word: "monkey", emoji: "🐒", count: 2 },
+  { word: "kangaroo", emoji: "🦘", count: 3 },
+  { word: "octopus", emoji: "🐙", count: 3 },
+  { word: "tomato", emoji: "🍅", count: 3 },
+  { word: "helicopter", emoji: "🚁", count: 4 },
+  { word: "alligator", emoji: "🐊", count: 4 },
 ];
 
 function blankOut(word: string, part: string): string {
@@ -186,6 +228,18 @@ const GOOD_SENTENCES = [
   "I love my new boots!",
   "We can build a fort.",
   "Is it time for lunch?",
+  "The frog hopped on a log.",
+  "Kenji has a blue bike.",
+  "Where did the ball go?",
+  "We made a big snowman!",
+  "The bird sang a song.",
+  "Ravi reads every night.",
+  "May I have some water?",
+  "Our class planted beans.",
+  "That was so much fun!",
+  "Ana drew a purple cat.",
+  "The bus stops at the corner.",
+  "How tall is that tree?",
 ];
 
 const END_MARKS: { text: string; mark: "." | "?" | "!" }[] = [
@@ -209,10 +263,25 @@ const END_MARKS: { text: string; mark: "." | "?" | "!" }[] = [
   { text: "Jay has two cats", mark: "." },
   { text: "The moon is bright tonight", mark: "." },
   { text: "Lena likes to paint", mark: "." },
+  { text: "Where are my mittens", mark: "?" },
+  { text: "Can I help you", mark: "?" },
+  { text: "Why is the sky blue", mark: "?" },
+  { text: "When does the movie start", mark: "?" },
+  { text: "Hurry, the bus is leaving", mark: "!" },
+  { text: "Wow, look at that rainbow", mark: "!" },
+  { text: "Help, my kite is stuck", mark: "!" },
+  { text: "Hooray, we found the puppy", mark: "!" },
+  { text: "The cat sleeps on the mat", mark: "." },
+  { text: "We eat lunch at noon", mark: "." },
+  { text: "Priya has a red scarf", mark: "." },
+  { text: "Leaves fall in autumn", mark: "." },
 ];
 
-const NAMES = ["maya", "kelowna", "monday", "canada", "ollie", "vancouver", "sam", "friday", "amir", "toronto"];
-const PLAIN_WORDS = ["park", "dog", "apple", "school", "happy", "river", "chair", "jump"];
+const NAMES = [
+  "maya", "kelowna", "monday", "canada", "ollie", "vancouver", "sam", "friday", "amir", "toronto",
+  "kenji", "tuesday", "july", "priya", "saturday", "lena", "october", "ravi", "january", "zoe",
+];
+const PLAIN_WORDS = ["park", "dog", "apple", "school", "happy", "river", "chair", "jump", "table", "garden", "bread", "funny"];
 
 function sentences(): Question[] {
   const correct: Question[] = sample(GOOD_SENTENCES, 3).map((s) =>
@@ -763,6 +832,18 @@ const COMPOUNDS = [
   { a: "pop", b: "corn", word: "popcorn", emoji: "🍿" },
   { a: "sun", b: "flower", word: "sunflower", emoji: "🌻" },
   { a: "foot", b: "ball", word: "football", emoji: "🏈" },
+  { a: "rain", b: "coat", word: "raincoat", emoji: "🧥" },
+  { a: "tooth", b: "brush", word: "toothbrush", emoji: "🪥" },
+  { a: "lady", b: "bug", word: "ladybug", emoji: "🐞" },
+  { a: "pan", b: "cake", word: "pancake", emoji: "🥞" },
+  { a: "air", b: "plane", word: "airplane", emoji: "✈️" },
+  { a: "snow", b: "flake", word: "snowflake", emoji: "❄️" },
+  { a: "basket", b: "ball", word: "basketball", emoji: "🏀" },
+  { a: "water", b: "melon", word: "watermelon", emoji: "🍉" },
+  { a: "back", b: "pack", word: "backpack", emoji: "🎒" },
+  { a: "sail", b: "boat", word: "sailboat", emoji: "⛵" },
+  { a: "blue", b: "berry", word: "blueberry", emoji: "🫐" },
+  { a: "foot", b: "print", word: "footprint", emoji: "👣" },
 ];
 
 const OPPOSITES: [string, string][] = [
@@ -774,6 +855,14 @@ const OPPOSITES: [string, string][] = [
   ["day", "night"],
   ["open", "closed"],
   ["full", "empty"],
+  ["wet", "dry"],
+  ["loud", "quiet"],
+  ["early", "late"],
+  ["push", "pull"],
+  ["first", "last"],
+  ["clean", "dirty"],
+  ["thick", "thin"],
+  ["win", "lose"],
 ];
 
 const PLURALS = [
@@ -783,6 +872,14 @@ const PLURALS = [
   { one: "fox", many: "foxes", wrong: "foxs", emoji: "🦊" },
   { one: "bus", many: "buses", wrong: "buss", emoji: "🚌" },
   { one: "dish", many: "dishes", wrong: "dishs", emoji: "🍽️" },
+  { one: "frog", many: "frogs", wrong: "froges", emoji: "🐸" },
+  { one: "duck", many: "ducks", wrong: "duckes", emoji: "🦆" },
+  { one: "pig", many: "pigs", wrong: "piges", emoji: "🐷" },
+  { one: "sock", many: "socks", wrong: "sockes", emoji: "🧦" },
+  { one: "glass", many: "glasses", wrong: "glasss", emoji: "🥛" },
+  { one: "peach", many: "peaches", wrong: "peachs", emoji: "🍑" },
+  { one: "watch", many: "watches", wrong: "watchs", emoji: "⌚" },
+  { one: "dress", many: "dresses", wrong: "dresss", emoji: "👗" },
 ];
 
 function words(): Question[] {
@@ -822,6 +919,437 @@ function words(): Question[] {
   );
 
   return shuffle([...compounds, ...opposites, ...plurals]);
+}
+
+// ---------- Book Explorers ----------
+
+// Bank items marked `hard` are stretch questions: difficulty 1 uses only the easier
+// items, 2 mixes in a few, 3 is mostly stretch.
+type LevelItem = BankItem & { hard?: true };
+
+function levelled(bank: LevelItem[], count: number, difficulty: 1 | 2 | 3): Question[] {
+  const easy = bank.filter((b) => !b.hard);
+  const hard = bank.filter((b) => b.hard);
+  const want = difficulty === 1 ? 0 : difficulty === 2 ? Math.ceil(count / 3) : Math.ceil((count * 2) / 3);
+  const nHard = Math.min(want, hard.length);
+  return shuffle([...fromBank(easy, count - nHard), ...fromBank(hard, nHard)]);
+}
+
+const BOOK_BANK: LevelItem[] = [
+  {
+    prompt: "Who writes the words in a book?",
+    right: { label: "the author", emoji: "✍️" },
+    wrong: [
+      { label: "the illustrator", emoji: "🎨" },
+      { label: "the reader", emoji: "📖" },
+    ],
+    hint: "The author is the person who writes the words.",
+  },
+  {
+    prompt: "Who draws the pictures in a book?",
+    right: { label: "the illustrator", emoji: "🎨" },
+    wrong: [
+      { label: "the author", emoji: "✍️" },
+      { label: "the librarian", emoji: "📚" },
+    ],
+    hint: "An illustrator makes the pictures, or illustrations.",
+  },
+  {
+    prompt: "The name of a book is called its…",
+    right: "title",
+    wrong: ["page", "chapter"],
+    hint: "The title is the name of the book. You find it on the cover.",
+    emoji: "📕",
+  },
+  {
+    prompt: "Where do you usually find the title and the author's name?",
+    right: { label: "on the front cover", emoji: "📘" },
+    wrong: [
+      { label: "on the last page only", emoji: "📄" },
+      { label: "inside a picture of a tree", emoji: "🌳" },
+    ],
+    hint: "Look at the front cover first. It shows the title and who wrote the book.",
+  },
+  {
+    prompt: "A long book can be split into parts. Each part is called a…",
+    right: "chapter",
+    wrong: ["caption", "label"],
+    hint: "Chapter books are split into chapters, and each one has its own number or title.",
+    emoji: "📚",
+  },
+  {
+    prompt: "Which part of a book lists the chapters and their page numbers?",
+    right: "the table of contents",
+    wrong: ["the front cover", "a caption"],
+    hint: "The table of contents is near the front. It helps you find each chapter.",
+    emoji: "📑",
+  },
+  {
+    prompt: "The words under a photo that tell about it are called a…",
+    right: "caption",
+    wrong: ["title", "chapter"],
+    hint: "A caption is a short sentence that explains a picture or photo.",
+    emoji: "🖼️",
+  },
+  {
+    prompt: "A drawing with labels that shows the parts of something is a…",
+    right: "diagram",
+    wrong: ["story", "poem"],
+    hint: "A diagram uses a picture and labels, like one that shows the parts of a plant.",
+    emoji: "🌱",
+  },
+  {
+    prompt: "In a diagram of a bird, the words “beak” and “wing” are…",
+    right: "labels",
+    wrong: ["chapters", "titles"],
+    hint: "Labels name the parts of a picture. A line often points to each part.",
+    emoji: "🐦",
+  },
+  {
+    prompt: "A big word at the top of a section that tells what it is about is a…",
+    right: "heading",
+    wrong: ["caption", "page number"],
+    hint: "Headings are like little titles. They tell you what each part is about.",
+    emoji: "🔠",
+  },
+  {
+    prompt: "Why do some books print a word in bold, dark letters?",
+    right: "to show it is an important word",
+    wrong: ["because the printer made a mistake", "to show the word is not needed"],
+    hint: "Bold words stand out. They are often important words you should notice.",
+  },
+  {
+    prompt: "You see a page number at the bottom of a page. What does it help you do?",
+    right: "find your place in the book",
+    wrong: ["know who drew the pictures", "know how the story ends"],
+    hint: "Page numbers help you find a page and keep your place.",
+    emoji: "📄",
+  },
+  {
+    prompt: "Pictures in a book can help you…",
+    right: { label: "understand and guess what is happening", emoji: "🔍" },
+    wrong: [
+      { label: "skip all the words", emoji: "⏩" },
+      { label: "find the author's phone number", emoji: "📞" },
+    ],
+    hint: "Looking at pictures is a good reading strategy. They give clues about the words.",
+  },
+  {
+    prompt: "A book with true facts about real animals is…",
+    right: "non-fiction",
+    wrong: ["a fairy tale", "a made-up story"],
+    hint: "Non-fiction books tell true facts about real things.",
+    emoji: "🐻",
+  },
+  {
+    prompt: "A story about a dragon who bakes cakes is…",
+    right: "fiction",
+    wrong: ["non-fiction", "a recipe"],
+    hint: "Fiction is made up by the author. Dragons who bake are pretend!",
+    emoji: "🐉",
+  },
+  {
+    prompt: "Which text tells you how to make something, step by step?",
+    right: { label: "a recipe", emoji: "🧁" },
+    wrong: [
+      { label: "a birthday card", emoji: "💌" },
+      { label: "a poem", emoji: "🎵" },
+    ],
+    hint: "A recipe lists what you need and the steps to follow.",
+  },
+  {
+    prompt: "Which text helps you find your way to a place?",
+    right: { label: "a map", emoji: "🗺️" },
+    wrong: [
+      { label: "a joke book", emoji: "😂" },
+      { label: "a shopping list", emoji: "📝" },
+    ],
+    hint: "A map shows where places are and how to get there.",
+  },
+  {
+    prompt: "Which text helps you remember what to buy at the store?",
+    right: { label: "a list", emoji: "📝" },
+    wrong: [
+      { label: "a fairy tale", emoji: "🧚" },
+      { label: "a map of the ocean", emoji: "🌊" },
+    ],
+    hint: "A list is a quick way to write down things to remember.",
+  },
+  {
+    prompt: "Which text would you send to tell your grandma about your week?",
+    right: { label: "a letter", emoji: "✉️" },
+    wrong: [
+      { label: "a recipe", emoji: "🍲" },
+      { label: "a table of contents", emoji: "📑" },
+    ],
+    hint: "A letter is written to a person. It starts with “Dear”.",
+  },
+  {
+    prompt: "A letter often starts with which word?",
+    right: "Dear",
+    wrong: ["Chapter", "Ingredients"],
+    hint: "Letters start with a greeting, like “Dear Grandma,”.",
+    emoji: "✉️",
+  },
+  {
+    prompt: "Why do people read a recipe?",
+    right: "to learn how to cook something",
+    wrong: ["to hear a bedtime story", "to find a street"],
+    hint: "Different texts have different jobs. A recipe teaches you how to cook.",
+    emoji: "🍳",
+  },
+  {
+    prompt: "Why do people read a funny story?",
+    right: "to enjoy it and laugh",
+    wrong: ["to find a street", "to learn the steps to bake bread"],
+    hint: "Some texts are for fun. Stories can make us laugh and wonder.",
+    emoji: "😂",
+  },
+  {
+    prompt: "A poster for a school fun fair is mostly meant to…",
+    right: "tell people about the event",
+    wrong: ["teach them how to bake bread", "tell a long fairy tale"],
+    hint: "Posters share information quickly with big words and pictures.",
+    emoji: "🎪",
+  },
+  {
+    prompt: "What does an illustration mean?",
+    right: "a picture in a book",
+    wrong: ["the last word in a book", "the name of the author"],
+    hint: "Illustrations are pictures that go with the words.",
+    emoji: "🖍️",
+  },
+  {
+    prompt: "In a list of steps, why are there numbers 1, 2, 3?",
+    right: "to show the order of the steps",
+    wrong: ["to count the pictures", "to show the page is old"],
+    hint: "Numbered steps tell you what to do first, next and last.",
+    emoji: "🔢",
+    hard: true,
+  },
+  {
+    prompt: "You want to find facts about owls on a website. Where do you type “owls”?",
+    right: { label: "in the search box", emoji: "🔍" },
+    wrong: [
+      { label: "in the page number", emoji: "📄" },
+      { label: "on the front cover", emoji: "📘" },
+    ],
+    hint: "A search box on a website helps you find what you are looking for.",
+    hard: true,
+  },
+  {
+    prompt: "A book about frogs has the heading “What Frogs Eat”. What will that part tell?",
+    right: "what frogs eat",
+    wrong: ["where the author lives", "how to build a boat"],
+    hint: "A heading tells you what the next part is about.",
+    emoji: "🐸",
+    hard: true,
+  },
+  {
+    prompt: "A photo shows a tall tree. The caption says “A cedar can grow very tall.” What does the caption do?",
+    right: "it tells about the photo",
+    wrong: ["it tells the end of a story", "it lists the chapters"],
+    hint: "Captions explain what you see in a picture.",
+    emoji: "🌲",
+    hard: true,
+  },
+  {
+    prompt: "You want the chapter about whales. What is the fastest way to find it?",
+    right: "look in the table of contents",
+    wrong: ["read every page from the start", "look at the back cover only"],
+    hint: "The table of contents tells you which page each chapter starts on.",
+    emoji: "🐳",
+    hard: true,
+  },
+  {
+    prompt: "Which one is a non-fiction book?",
+    right: { label: "All About Bees", emoji: "🐝" },
+    wrong: [
+      { label: "The Bee Who Flew to the Moon", emoji: "🌙" },
+      { label: "Princess Bee and the Magic Hive", emoji: "👑" },
+    ],
+    hint: "Non-fiction books give true facts. Bees can't fly to the moon!",
+    hard: true,
+  },
+  {
+    prompt: "Which title sounds like a made-up story (fiction)?",
+    right: { label: "The Talking Teapot", emoji: "🫖" },
+    wrong: [
+      { label: "How Rain Forms", emoji: "🌧️" },
+      { label: "Facts About Deer", emoji: "🦌" },
+    ],
+    hint: "Teapots can't really talk, so the author made it up.",
+    hard: true,
+  },
+  {
+    prompt: "Some words in a story are in quotation marks “like this”. They show…",
+    right: "what a character says",
+    wrong: ["the title of the book", "a page number"],
+    hint: "Quotation marks show the words someone says out loud. That's dialogue.",
+    emoji: "💬",
+    hard: true,
+  },
+  {
+    prompt: "Where in a story do you meet the characters and the setting?",
+    right: "the beginning",
+    wrong: ["the very last word", "the back cover"],
+    hint: "Stories have a beginning, a middle and an end. The beginning introduces who and where.",
+    emoji: "📖",
+    hard: true,
+  },
+  {
+    prompt: "In which part of a story is the problem usually solved?",
+    right: "the end",
+    wrong: ["the title", "the table of contents"],
+    hint: "A story's problem gets solved near the end.",
+    emoji: "🏁",
+    hard: true,
+  },
+  {
+    prompt: "A list says: milk, eggs, bread. Why is it written this way?",
+    right: "it is quick to read and remember",
+    wrong: ["it tells a long story", "it explains how to bake bread"],
+    hint: "Lists are short on purpose. Each line is one thing.",
+    emoji: "📝",
+    hard: true,
+  },
+  {
+    prompt: "A recipe has a part called “What you need”. What will it list?",
+    right: "the things to cook with",
+    wrong: ["the characters", "the chapters"],
+    hint: "Recipes list what you need first, then the steps.",
+    emoji: "🥣",
+    hard: true,
+  },
+  {
+    prompt: "Before reading, you look at the cover and pictures to guess what will happen. That is…",
+    right: "making a prediction",
+    wrong: ["writing a list", "skipping the book"],
+    hint: "Good readers make predictions, then read to check them.",
+    emoji: "🔮",
+    hard: true,
+  },
+  {
+    prompt: "A word doesn't make sense when you read it. What can you do?",
+    right: "reread the sentence and check",
+    wrong: ["close the book forever", "skip every word after it"],
+    hint: "Ask: Does it look right? Sound right? Make sense? Then try again.",
+    emoji: "🔁",
+    hard: true,
+  },
+];
+
+function bookExplorers({ difficulty = 2 }: GenerateOptions = {}): Question[] {
+  return levelled(BOOK_BANK, 8, difficulty);
+}
+
+// ---------- Joining Sentences ----------
+
+/** Two short sentences joined with a comma and a joining word. */
+const JOINS: { first: string; second: string; join: "and" | "but" | "so" | "or"; wrong: string[] }[] = [
+  { first: "I was hungry", second: "I ate an apple", join: "so", wrong: ["but", "or"] },
+  { first: "It was raining", second: "we played inside", join: "so", wrong: ["but", "or"] },
+  { first: "The dog was muddy", second: "we gave it a bath", join: "so", wrong: ["but", "or"] },
+  { first: "Maya was tired", second: "she went to bed early", join: "so", wrong: ["but", "or"] },
+  { first: "The room was dark", second: "Leo turned on the light", join: "so", wrong: ["but", "or"] },
+  { first: "It was cold outside", second: "Ravi put on his mittens", join: "so", wrong: ["but", "or"] },
+  { first: "The plant was dry", second: "Ana watered it", join: "so", wrong: ["but", "or"] },
+  { first: "Sam was thirsty", second: "he drank some water", join: "so", wrong: ["but", "or"] },
+  { first: "I wanted to swim", second: "the pool was closed", join: "but", wrong: ["so", "or"] },
+  { first: "Zoe looked for her hat", second: "she could not find it", join: "but", wrong: ["so", "or"] },
+  { first: "The hill was steep", second: "Kenji rode his bike to the top", join: "but", wrong: ["so", "or"] },
+  { first: "The soup smelled good", second: "it was too hot to eat", join: "but", wrong: ["so", "or"] },
+  { first: "We planted seeds", second: "nothing grew yet", join: "but", wrong: ["so", "or"] },
+  { first: "Priya likes cats", second: "she is allergic to them", join: "but", wrong: ["so", "or"] },
+  { first: "The water was cold", second: "we jumped in anyway", join: "but", wrong: ["so", "or"] },
+  { first: "Noah has a dog", second: "Lena has a cat", join: "and", wrong: ["or", "because"] },
+  { first: "We sang a song", second: "then we danced", join: "and", wrong: ["or", "because"] },
+  { first: "Amir drew a boat", second: "Zoe drew a whale", join: "and", wrong: ["or", "because"] },
+  { first: "The sun came out", second: "the birds began to sing", join: "and", wrong: ["or", "because"] },
+  { first: "I fed the fish", second: "my sister fed the cat", join: "and", wrong: ["or", "because"] },
+  { first: "Maya read a book", second: "Jay built a fort", join: "and", wrong: ["or", "because"] },
+  { first: "Do you want milk", second: "do you want juice", join: "or", wrong: ["so", "because"] },
+  { first: "We can walk to the park", second: "we can ride our bikes", join: "or", wrong: ["so", "because"] },
+  { first: "Should we paint", second: "should we play with clay", join: "or", wrong: ["so", "because"] },
+  { first: "You can have a pear", second: "you can have a plum", join: "or", wrong: ["so", "because"] },
+  { first: "Is the cat inside", second: "is it in the yard", join: "or", wrong: ["so", "because"] },
+];
+
+const JOIN_HINTS: Record<string, string> = {
+  so: "Use so when the second part happens because of the first part.",
+  but: "Use but when the second part is a surprise or a change.",
+  and: "Use and to add one more idea that goes with the first.",
+  or: "Use or when there is a choice.",
+};
+
+const COMPOUND_BANK: LevelItem[] = [
+  {
+    prompt: "Which one is a compound sentence (two ideas joined together)?",
+    right: "The sun came out, and we went to the park.",
+    wrong: ["We went to the park.", "The sunny park."],
+    hint: "A compound sentence joins two complete ideas with a word like and, but or so.",
+  },
+  {
+    prompt: "Which one is a compound sentence?",
+    right: "Jay likes soccer, but Ana likes hockey.",
+    wrong: ["Jay likes soccer.", "Soccer and hockey."],
+    hint: "Look for two ideas, each with its own who and what happened, joined by a word.",
+  },
+  {
+    prompt: "Which one is a compound sentence?",
+    right: "The bell rang, so we lined up.",
+    wrong: ["The bell rang.", "The loud bell."],
+    hint: "Two complete ideas joined by so make a compound sentence.",
+  },
+  {
+    prompt: "Which one is a compound sentence?",
+    right: "We can draw, or we can read.",
+    wrong: ["We can draw.", "Drawing or reading."],
+    hint: "A compound sentence has two parts that could each be a sentence on its own.",
+  },
+  {
+    prompt: "Which word is the joining word? “I ran fast, but I lost the race.”",
+    right: "but",
+    wrong: ["ran", "race"],
+    hint: "Joining words like and, but, or and so connect two ideas.",
+    hard: true,
+  },
+  {
+    prompt: "Which word is the joining word? “It was late, so we went home.”",
+    right: "so",
+    wrong: ["late", "home"],
+    hint: "Find the small word that links the two ideas.",
+    hard: true,
+  },
+  {
+    prompt: "What goes before the joining word in a compound sentence?",
+    right: "a comma ,",
+    wrong: ["a question mark ?", "nothing ever"],
+    hint: "Put a comma before and, but, or and so when they join two sentences.",
+    hard: true,
+  },
+  {
+    prompt: "Join the sentences: “The cat is black.” “The dog is white.” Which is right?",
+    right: "The cat is black, and the dog is white.",
+    wrong: ["The cat is black and. The dog is white", "the cat is black, and the dog is white"],
+    hint: "Use one capital at the start, a comma before and, and one period at the end.",
+    hard: true,
+  },
+];
+
+function joinQuestion(j: (typeof JOINS)[number]): Question {
+  return textChoice(
+    "Which word best joins the two ideas?",
+    j.join,
+    j.wrong,
+    JOIN_HINTS[j.join],
+    { type: "equation", text: `${j.first}, ☐ ${j.second}${j.join === "or" ? "?" : "."}` },
+  );
+}
+
+function joiningSentences({ difficulty = 2 }: GenerateOptions = {}): Question[] {
+  const bankCount = difficulty === 1 ? 2 : 3;
+  return shuffle([...sample(JOINS, 8 - bankCount).map(joinQuestion), ...levelled(COMPOUND_BANK, bankCount, difficulty)]);
 }
 
 export const course: Course = {
@@ -883,6 +1411,25 @@ export const course: Course = {
       standards: { "ca-bc": "Language features: word patterns, vocabulary and plurals" },
       parentNote: "Building compound words, finding opposites and spelling plurals (-s and -es).",
       generate: words,
+    },
+    {
+      id: "book-explorers",
+      title: "Book Explorers",
+      emoji: "📚",
+      blurb: "Titles, captions and kinds of texts",
+      standards: { "ca-bc": "Story/text: text features and vocabulary associated with texts; how different text structures reflect different purposes" },
+      parentNote:
+        "Book words (author, illustrator, title, chapter, table of contents, caption, heading, diagram), fiction and non-fiction, and what letters, recipes, maps and lists are for.",
+      generate: bookExplorers,
+    },
+    {
+      id: "joining-sentences",
+      title: "Joining Sentences",
+      emoji: "🔗",
+      blurb: "Join ideas with and, but, so, or",
+      standards: { "ca-bc": "Language features, structures and conventions: sentence structure (compound sentences)" },
+      parentNote: "Joining two short sentences into one compound sentence with and, but, so or or, and putting a comma before the joining word.",
+      generate: joiningSentences,
     },
   ],
 };

@@ -46,7 +46,7 @@ describe("Nunavut", () => {
 
   it("adds the Nunavut-only units for Nunavut alone", () => {
     const own = COURSES.flatMap((c) => c.units.filter((u) => u.id.startsWith("nu-")).map((u) => ({ g: c.grade, s: c.subject, u })));
-    expect(own.length).toBe(16);
+    expect(own.length).toBe(20);
     for (const { g, s, u } of own) {
       expect(Object.keys(u.standards), `${g}/${s}/${u.id}`).toEqual(["ca-nu"]);
     }

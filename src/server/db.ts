@@ -259,6 +259,10 @@ const ASSIGNMENT_COLUMNS: [string, string][] = [["due_at", "INTEGER"]];
 const SESSION_COLUMNS: [string, string][] = [["user_agent", "TEXT"]];
 const FAMILY_COLUMNS: [string, string][] = [
   ["billing_event_at", "INTEGER NOT NULL DEFAULT 0"],
+  // Referrals: this family's shareable code, the family that referred it, and when that family was thanked.
+  ["referral_code", "TEXT"],
+  ["referred_by", "TEXT"],
+  ["referral_rewarded_at", "INTEGER"],
   // Free access from a redeemed code ends at this time (ms). Separate from `plan`, so a Stripe webhook never undoes it.
   ["access_until", "INTEGER"],
   // A redeemed discount code applied at the next checkout.
@@ -273,6 +277,8 @@ async function addColumns(c: Client, table: string, columns: [string, string][])
 async function migrate(c: Client) {
   await addColumns(c, "sessions", SESSION_COLUMNS);
   await addColumns(c, "families", FAMILY_COLUMNS);
+  await c.execute("CREATE UNIQUE INDEX IF NOT EXISTS families_referral_code ON families (referral_code)");
+  await c.execute("CREATE INDEX IF NOT EXISTS families_referred_by ON families (referred_by)");
   await addColumns(c, "classes", CLASS_COLUMNS);
   // Existing classes start their inactivity period from creation until a later sign-in.
   await c.execute("UPDATE classes SET last_activity_at = created_at WHERE last_activity_at = 0");

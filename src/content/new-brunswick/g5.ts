@@ -5,6 +5,8 @@ import { courses as ontario } from "../ontario/g5";
 import { courses as saskatchewan } from "../saskatchewan/g5";
 import { courses as novaScotia } from "../nova-scotia/g5";
 import { acadiaLoyalists, wabanakiConfederacy, worldviewEconomics } from "./units/g5-social";
+import { nervousSystem } from "./units/g5-science";
+import { atlanticMeetings } from "./units/g5-social-meetings";
 import { frenchCourses } from "./french";
 import { adopt, course, poolOf } from "./kit";
 
@@ -67,16 +69,18 @@ export const courses: Course[] = [
       "matter-changes-5": ["Scientific Literacy: Sensemaking", "physical and chemical changes"],
       "changes-of-state-5": ["Scientific Literacy: Sensemaking", "changes of state"],
     }),
-    order: ["mb-weather-5", "mb-friction-5", "simple-machines", "digestion-and-breathing", "heart-bones-muscles", "changes-of-state-5", "matter-changes-5"],
+    own: [nervousSystem],
+    order: ["nb-nervous-system-5", "mb-weather-5", "mb-friction-5", "simple-machines", "digestion-and-breathing", "heart-bones-muscles", "changes-of-state-5", "matter-changes-5"],
   }),
   course("5", "social", {
     share: {
       "learning-from-the-past": ["History: Sources and Methods", "how historians use evidence and thinking concepts to answer questions about the past"],
     },
     adopted: adopt(poolOf("social", ontario, manitoba, novaScotia), {
+      "explorers-5": ["History: Events and Peoples", "interactions between the first and founding peoples of Atlantic Canada"],
     }),
-    own: [wabanakiConfederacy, acadiaLoyalists, worldviewEconomics],
-    order: ["learning-from-the-past", "nb-acadia-loyalists-5", "nb-wabanaki-confederacy-5", "nb-worldview-economics-5"],
+    own: [atlanticMeetings, wabanakiConfederacy, acadiaLoyalists, worldviewEconomics],
+    order: ["learning-from-the-past", "explorers-5", "nb-atlantic-meetings-5", "nb-acadia-loyalists-5", "nb-wabanaki-confederacy-5", "nb-worldview-economics-5"],
   }),
   ...frenchCourses("5"),
 ];

@@ -142,6 +142,7 @@ export const PLAN: Record<string, Entry[]> = {
     ["caring-citizens", "share", "Elementary Social Studies (NWT, 1993), Geography", "caring for the environment and for shared places"],
     ["mb-working-together", "adopt", "Elementary Social Studies (NWT, 1993), Civics and economics", "cooperation, peaceful conflict solving, respectful listening, leadership and contributing"],
     ["mb-finding-out", "adopt", "Elementary Social Studies (NWT, 1993), History", "research questions, sources, organizers, opinions, media influence and presenting"],
+    ["talking-together-ab", "adopt", "Elementary Social Studies (NWT, 1993), Civics and economics", "talking, listening and making decisions together in a group"],
   ],
   "3/math": [
     ["numbers-to-1000", "share", "Alberta Mathematics K–9 (2007), Number", "counting, representing, comparing and ordering numbers to 1000, and place value"],
@@ -197,6 +198,7 @@ export const PLAN: Record<string, Entry[]> = {
     ["mb-global-communities", "adopt", "Elementary Social Studies (NWT, 1993), History", "ways of life, culture and how land and resources shape work, goods and homes"],
     ["mb-working-together", "adopt", "Elementary Social Studies (NWT, 1993), Civics and economics", "collaborating, interacting fairly, listening to perspectives and presenting information"],
     ["mb-ask-and-find", "adopt", "Elementary Social Studies (NWT, 1993), Heritage and culture", "gathering and recording information, using tools and forming research questions"],
+    ["meeting-needs", "share", "Elementary Social Studies (NWT, 1993), Geography", "how people in different climates and places meet their needs for food, clothing and shelter"],
   ],
   "4/math": [
     ["numbers-to-10000", "share", "Alberta Mathematics K–9 (2007), Number", "representing, comparing and ordering whole numbers to 10 000"],
@@ -237,7 +239,7 @@ export const PLAN: Record<string, Entry[]> = {
     ["mb-engineering", "adopt", "NWT Science and Technology K–6 (2004), Physical science", "taking action on issues, careers that use science, engineering, choosing solutions and the effects of technology"],
   ],
   "4/social": [
-
+    ["mb-power-conflict", "adopt", "Elementary Social Studies (NWT, 1993), Civics and economics", "rules, fairness, roles in groups and solving conflicts peacefully"],
   ],
   "4/core-french": [
     ["salutations-4", "adopt", "French as an Additional Language for Nunavut, Grades 4–9, Oral Communication", "speaking and interacting in French with attention to message, fluency and accuracy"],
@@ -293,6 +295,8 @@ export const PLAN: Record<string, Entry[]> = {
   "5/social": [
     ["mb-history-skills-5", "adopt", "Elementary Social Studies (NWT, 1993), History", "map skills, historical sources, fact and opinion, and working fairly with others"],
     ["mb-respectful-talk-5", "adopt", "Elementary Social Studies (NWT, 1993), Heritage and culture", "respecting others, listening, respectful language, supporting opinions, negotiating and presenting ideas"],
+    ["making-laws", "share", "Elementary Social Studies (NWT, 1993), Civics and economics", "how laws are made in Canada, Parliament, and how citizens take part in local democracy"],
+    ["informed-citizens-ab", "adopt", "Elementary Social Studies (NWT, 1993), History", "primary and secondary sources, perspective, bias, and being an informed citizen"],
   ],
   "5/core-french": [
     ["salutations", "share", "French as an Additional Language for Nunavut, Grades 4–9, Oral Communication", "speaking and interacting in French with attention to message, fluency and accuracy"],
@@ -351,6 +355,8 @@ export const PLAN: Record<string, Entry[]> = {
   "6/social": [
     ["mb-fairness-and-respect", "adopt", "Elementary Social Studies (NWT, 1993), Civics and economics", "resolving conflict fairly, recognizing bias and discrimination, and supporting solutions to inequities"],
     ["inquiry-6", "adopt", "Elementary Social Studies (NWT, 1993), History", "primary and secondary sources, fact and opinion, and checking sources"],
+    ["cities-and-migration", "share", "Elementary Social Studies (NWT, 1993), Geography", "why people move, push and pull factors, and how cities grow around the world"],
+    ["media-literacy", "share", "Elementary Social Studies (NWT, 1993), Civics and economics", "fact and opinion, reliable sources, and how media shapes what people think"],
   ],
   "6/core-french": [
     ["motifs-de-lettres", "share", "French as an Additional Language for Nunavut, Grades 4–9, Oral Communication", "listening to understand a message in French"],
@@ -412,6 +418,8 @@ export const PLAN: Record<string, Entry[]> = {
   ],
   "7/social": [
     ["mb-7-working-together", "adopt", "Junior Secondary Social Studies (NWT, 1993), Civics and economics", "working with others, resolving conflicts, fair decisions, listening, respectful language, persuasive expression, presenting and respecting others' points of view"],
+    ["landforms-processes-7", "adopt", "Junior Secondary Social Studies (NWT, 1993), Geography", "landforms, weathering, erosion and glaciers, and reading topographic maps"],
+    ["sk-democracy-7", "adopt", "Civics in the Junior Secondary Social Studies Curriculum (NWT, 1998), Civics and economics", "democracy and other systems of government, and how citizens in circumpolar countries take part"],
   ],
   "7/core-french": [
     ["directions", "share", "French as an Additional Language for Nunavut, Grades 4–9, Oral Communication", "speaking and interacting in French with attention to message, fluency and accuracy"],
@@ -472,6 +480,8 @@ export const PLAN: Record<string, Entry[]> = {
   "8/social": [
     ["mb-history-skills-8", "adopt", "Junior Secondary Social Studies (NWT, 1993), History", "historical sources and evidence, timelines, maps, and fact from opinion"],
     ["mb-evidence-8", "adopt", "Junior Secondary Social Studies (NWT, 1993), History", "choosing, organizing and interpreting sources, planning research, context, evidence and changing interpretations"],
+    ["quality-of-life-8", "adopt", "Junior Secondary Social Studies (NWT, 1993), Geography", "quality of life, development indicators, and fair trade around the world"],
+    ["maps-graphs-8", "adopt", "Junior Secondary Social Studies (NWT, 1993), Geography", "maps, scale, GIS, and reading graphs and population pyramids"],
   ],
   "8/core-french": [
     ["passe-present-futur", "share", "French as an Additional Language for Nunavut, Grades 4–9, Writing", "writing clear, simple French texts for a purpose"],
@@ -519,7 +529,7 @@ export const PLAN: Record<string, Entry[]> = {
     ["space-exploration-ab", "adopt", "Nunavut adaptation of Alberta Science 7–9 (2003), Unit E: Space Exploration", "telescopes, satellites, remote sensing and the challenges of living and working in space"],
   ],
   "9/social": [
-
+    ["population-issues-9", "adopt", "Junior Secondary Social Studies (NWT, 1993), Geography", "population change, aging, immigration and where newcomers settle in Canada"],
   ],
   "9/core-french": [
     ["temps-9", "share", "French as an Additional Language for Nunavut, Grades 4–9, Writing", "writing clear, simple French texts for a purpose"],

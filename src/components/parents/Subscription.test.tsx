@@ -24,6 +24,7 @@ vi.mock("@/lib/account", () => ({
   devBilling: vi.fn(),
   openBillingPortal: vi.fn(),
   resendVerification: vi.fn(),
+  loadReferral: vi.fn().mockResolvedValue({ code: "ABCD2345", joined: 2, rewarded: 1, monthsEarned: 1, maxMonths: 12, bonusDays: 30 }),
   redeemCode: vi.fn(),
 }));
 
@@ -76,6 +77,41 @@ describe("SubscriptionPage", () => {
     render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
     expect(screen.getByText("Confirm your email to subscribe.")).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Subscribe yearly/ })).toBeDisabled();
+  });
+
+  it("shows a parent their invite link and what it has earned", async () => {
+    state.android = false;
+    state.family = {
+      plan: "trial",
+      trialEndsAt: Date.now() + 5 * 86_400_000,
+      updatedAt: 1,
+      account: { email: "parent@example.com", familyId: "fam", verified: true },
+    };
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    expect(screen.getByRole("heading", { name: /free month/ })).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByLabelText("Your invite link")).toHaveValue(`${window.location.origin}/account/invite/?ref=ABCD2345`));
+    expect(screen.getByText(/2 families have joined/)).toBeInTheDocument();
+    expect(screen.getByText(/1 of 12 free months earned/)).toBeInTheDocument();
+  });
+
+  it("keeps the invite panel away from signed-out visitors", () => {
+    state.android = false;
+    state.family = { plan: "trial", trialEndsAt: Date.now() + 5 * 86_400_000, updatedAt: 1 };
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    expect(screen.queryByRole("heading", { name: /free month/ })).not.toBeInTheDocument();
+  });
+
+  it("still shows the invite link inside the Android app", async () => {
+    state.android = true;
+    state.family = {
+      plan: "trial",
+      trialEndsAt: Date.now() + 5 * 86_400_000,
+      updatedAt: 1,
+      account: { email: "parent@example.com", familyId: "fam", verified: true },
+    };
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    await waitFor(() => expect(screen.getByLabelText("Your invite link")).toBeInTheDocument());
+    state.android = false;
   });
 
   it("redeems a code and says what it gave", async () => {

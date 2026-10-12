@@ -1,5 +1,5 @@
 import "server-only";
-import { APP_NAME, CONTACT_EMAIL } from "@/lib/brand";
+import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS } from "@/lib/brand";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, SUBSCRIBE_HREF } from "@/lib/plan";
 import type { Email } from "./email";
 
@@ -36,6 +36,7 @@ ${button}
 ${p.footnote ? `<p style="font-size:13px;color:#5b6478;margin:0">${esc(p.footnote)}</p>` : ""}
 </div>
 <p style="font-size:12px;color:#5b6478;margin:16px 4px 0">${esc(APP_NAME)} has no ads and never sells your information. <a href="${esc(p.origin)}/privacy/" style="color:#5b6478">Privacy</a> · Questions? ${esc(CONTACT_EMAIL)}${p.unsubscribePage ? ` · <a href="${esc(p.unsubscribePage)}" style="color:#5b6478">Unsubscribe</a>` : ""}</p>
+${MAILING_ADDRESS ? `<p style="font-size:12px;color:#5b6478;margin:4px 4px 0">${esc(LEGAL_NAME)} · ${esc(MAILING_ADDRESS)}</p>` : ""}
 </div></body></html>`;
   const text = [
     p.heading,
@@ -46,6 +47,8 @@ ${p.footnote ? `<p style="font-size:13px;color:#5b6478;margin:0">${esc(p.footnot
     "",
     `${APP_NAME} has no ads and never sells your information. Privacy: ${p.origin}/privacy/`,
     ...(p.unsubscribePage ? [`Unsubscribe: ${p.unsubscribePage}`] : []),
+    // CASL requires the sender's postal address in every commercial message.
+    ...(MAILING_ADDRESS ? [`${LEGAL_NAME} · ${MAILING_ADDRESS}`] : []),
   ].join("\n");
   return { to: p.to, subject: p.subject, html, text, unsubscribeUrl: p.unsubscribeUrl };
 }

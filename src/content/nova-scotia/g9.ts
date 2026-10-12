@@ -4,7 +4,7 @@ import { courses as manitoba } from "../manitoba/g9";
 import { courses as ontario } from "../ontario/g9";
 import { frenchCourses } from "./french";
 import { adopt, course, poolOf } from "./kit";
-import { citizenRights, digitalCitizenship, engagedCitizenship, financialCitizenship, globalCitizenship, governance } from "./units/g9-social";
+import { citizenRights, digitalCitizenship, engagedCitizenship, financialCitizenship, globalCitizenship, governance, lawmaking } from "./units/g9-social";
 
 // Nova Scotia Grade 9. Math follows the Grade 9 mathematics outcomes (N, PR, G, SP), English language arts the numbered
 // Grade 9 outcomes, science the four Grade 9 learning bundles and social studies Citizenship 9. Units BC, Ontario, Alberta
@@ -67,10 +67,8 @@ export const courses: Course[] = [
     order: ["reproduction", "cells-from-cells", "atoms-and-electrons", "atoms-9", "periodic-table-9", "compounds-9", "static-charges-9", "electric-current", "circuits-9", "electrical-energy-9", "space-exploration-ab"],
   }),
   course("9", "social", {
-    share: {
-    },
-    own: [engagedCitizenship, citizenRights, financialCitizenship, digitalCitizenship, governance, globalCitizenship],
-    order: ["ns-citizen-rights-9", "ns-governance-9", "ns-digital-citizenship-9", "ns-financial-citizenship-9", "ns-global-citizenship-9", "ns-engaged-citizenship-9"],
+    own: [engagedCitizenship, citizenRights, financialCitizenship, digitalCitizenship, governance, lawmaking, globalCitizenship],
+    order: ["ns-citizen-rights-9", "ns-governance-9", "ns-lawmaking-9", "ns-digital-citizenship-9", "ns-financial-citizenship-9", "ns-global-citizenship-9", "ns-engaged-citizenship-9"],
   }),
   ...frenchCourses("9"),
 ];

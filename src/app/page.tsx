@@ -111,7 +111,7 @@ export default function Home() {
       />
 
       {/* Hero */}
-      <section className="grid items-center gap-8 py-6 md:grid-cols-[1.1fr_1fr] md:py-12">
+      <section className="grid items-center gap-8 pb-6 md:grid-cols-[1.1fr_1fr] md:pt-4 md:pb-12">
         <div>
           <p className="mb-3 inline-flex rounded-full bg-[#fff4cc] px-3 py-1 text-sm font-bold text-[#8a6400]">Canadian curriculum · Kindergarten to Grade 9</p>
           <h1 className="text-4xl leading-tight font-bold sm:text-5xl lg:text-6xl">

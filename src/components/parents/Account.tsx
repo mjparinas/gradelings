@@ -1,15 +1,18 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { changePassword, deleteAccount, forgotPassword, listDevices, signOutDevices, type DeviceSession, refreshAccount, resendVerification, signIn, signOut, signUp, type BillingInfo } from "@/lib/account";
 import * as localdb from "@/lib/localdb";
 import { go, useRoute } from "@/lib/router";
 import { useStore } from "@/lib/store";
+import { savedReferralCode } from "@/lib/referral";
 import { syncNow } from "@/lib/sync";
 import { Dialog } from "../ui";
 import { PageTitle, Panel } from "./common";
 import { PushToggle } from "./PushToggle";
+
+const noSubscribe = () => () => {};
 
 function AuthForm({ onDone }: { onDone: () => void }) {
   const [mode, setMode] = useState<"signup" | "signin" | "forgot">("signup");
@@ -18,6 +21,8 @@ function AuthForm({ onDone }: { onDone: () => void }) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
+  // The server snapshot is false so the first render matches the static page.
+  const invited = useSyncExternalStore(noSubscribe, () => savedReferralCode() !== null, () => false);
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setBusy(true);
@@ -67,6 +72,9 @@ function AuthForm({ onDone }: { onDone: () => void }) {
       )}
       {notice && <p className="rounded-xl bg-[#e8f7f0] p-3 font-semibold">{notice}</p>}
       {error && <p className="font-semibold text-nudge-dark">{error}</p>}
+      {mode === "signup" && invited && (
+        <p className="rounded-xl bg-[#e8f7f0] p-3 font-semibold">🎁 A friend invited you. When you confirm your email, they get a free month. Thank you!</p>
+      )}
       {mode === "signup" && (
         <p className="text-sm text-ink-soft">
           By creating an account you confirm you are a parent or guardian and agree to the{" "}
