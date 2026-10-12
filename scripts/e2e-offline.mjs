@@ -10,8 +10,8 @@
 //   1. a Grade 5 child's lessons work in a fresh tab with the server gone;
 //   2. adding a Kindergartener offline (never downloaded) shows the friendly screen;
 //   3. once the server is back, "Try again" loads Kindergarten;
-//   4. the Piper voice downloads by itself the first time a question is read aloud, is on in
-//      Settings without a parent touching it, and reads a question aloud with the server gone.
+//   4. the Piper voice downloads by itself the first time a question is read aloud, is on under
+//      Account without a parent touching it, and reads a question aloud with the server gone.
 import { spawn } from "node:child_process";
 import fs from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -86,9 +86,10 @@ try {
   const voiceSaved = () => page.evaluate(async () => (await (await caches.open("grademap-piper")).keys()).some((r) => r.url.endsWith("/files.json")));
   for (const t0 = Date.now(); !(await voiceSaved()); await sleep(1000)) if (Date.now() - t0 > 180000) throw new Error("the offline voice didn't download by itself");
 
-  // Settings shows it on and ready, without a parent doing anything.
-  await page.goto(BASE + "/parents/#/settings");
+  // Account shows it on and ready, without a parent doing anything.
+  await page.goto(BASE + "/parents/#/account");
   await enterPin(page, true);
+  await page.getByRole("button", { name: "Change voice" }).click();
   const piper = page.getByTestId("piper-en");
   await piper.getByRole("button", { name: "▶ Preview", exact: true }).waitFor({ timeout: 15000 });
   if ((await piper.getByRole("switch", { name: /Use the offline voice/ }).getAttribute("aria-checked")) !== "true") throw new Error("the offline voice isn't on by default");

@@ -17,7 +17,7 @@ vi.mock("next/navigation", () => ({ useRouter: () => ({ push: h.push }) }));
 
 import { APP_NAME } from "@/lib/brand";
 import { useStore } from "@/lib/store";
-import { PrivacyPage } from "./Privacy";
+import { PrivacyPanels } from "./Privacy";
 
 const ava: Profile = { id: "a", name: "Ava", avatar: "ollie", colour: "#fff", grade: "3", framework: "ca-bc", createdAt: 1, updatedAt: 1 };
 const event = { id: "e1", profileId: "a", t: 5, type: "answer", unit: "3/math/x", correct: true, attempts: 1, revealed: false, ms: 900, mode: "practice" } as AppEvent;
@@ -29,9 +29,9 @@ beforeEach(() => {
 });
 afterEach(() => vi.restoreAllMocks());
 
-describe("PrivacyPage", () => {
+describe("PrivacyPanels", () => {
   it("says what is stored, and that there are no ads, tracking pixels or data sales", () => {
-    render(<PrivacyPage />);
+    render(<PrivacyPanels />);
     expect(screen.getByText(/No free text, photos or voice recordings\./)).toBeInTheDocument();
     expect(screen.getByText("No ads, no tracking pixels, and we never sell data.")).toBeInTheDocument();
   });
@@ -48,7 +48,7 @@ describe("PrivacyPage", () => {
     vi.spyOn(HTMLAnchorElement.prototype, "click").mockImplementation(function (this: HTMLAnchorElement) {
       downloaded = this.download;
     });
-    render(<PrivacyPage />);
+    render(<PrivacyPanels />);
     await userEvent.click(screen.getByRole("button", { name: "⬇️ Download all data (JSON)" }));
     expect(downloaded).toMatch(new RegExp(`^${APP_NAME.toLowerCase()}-export-\\d{4}-\\d{2}-\\d{2}\\.json$`));
     expect(blob!.type).toBe("application/json");
@@ -62,7 +62,7 @@ describe("PrivacyPage", () => {
   });
 
   it("erases this device only after confirming, then goes back to the kids' area", async () => {
-    render(<PrivacyPage />);
+    render(<PrivacyPanels />);
     await userEvent.click(screen.getByRole("button", { name: "Erase everything on this device" }));
     expect(screen.getByRole("dialog", { name: "Erase this device?" })).toHaveTextContent("If you're signed in, your account keeps a copy.");
     await userEvent.click(screen.getByRole("button", { name: "Cancel" }));

@@ -152,14 +152,8 @@ const SCHEMA = [
     PRIMARY KEY (class_id, email)
   )`,
   `CREATE INDEX IF NOT EXISTS class_invites_email ON class_invites (email)`,
-  // Browsers a parent allowed to get a "your weekly report is ready" notification. Only the push address is kept.
-  `CREATE TABLE IF NOT EXISTS push_subscriptions (
-    id TEXT PRIMARY KEY,
-    parent_id TEXT NOT NULL,
-    endpoint TEXT NOT NULL UNIQUE,
-    created_at INTEGER NOT NULL
-  )`,
-  `CREATE INDEX IF NOT EXISTS push_subscriptions_parent ON push_subscriptions (parent_id)`,
+  // Weekly-report browser notifications were removed (the weekly email says the same); drop any saved push addresses.
+  `DROP TABLE IF EXISTS push_subscriptions`,
   // Codes the owner hands out: free access for a number of days (or for life), or a discount at checkout.
   // `code` is stored upper-case. `days` NULL with kind 'access' means lifetime.
   // A discount lasts `duration` ('once', 'repeating' for `months` months, or 'forever'); its Stripe coupon is made on first use.
@@ -260,7 +254,6 @@ const PARENT_COLUMNS: [string, string][] = [
   ["last_weekly_at", "INTEGER"],
   ["trial_notice_at", "INTEGER"],
   ["trial_recap_at", "INTEGER"],
-  ["last_push_at", "INTEGER"],
   ["practice_reminders", "INTEGER NOT NULL DEFAULT 0"],
   ["last_nudge_at", "INTEGER"],
   // 'parent' for ordinary accounts, 'student' for a class-owned student account (no email, no password).

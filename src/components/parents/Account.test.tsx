@@ -5,7 +5,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { FamilyInfo } from "@/lib/model";
 
 // The real store and the real account calls run; only the device database, the sync
-// loop, the Next router and push are faked, and fetch answers like the server would.
+// loop and the Next router are faked, and fetch answers like the server would.
 const h = vi.hoisted(() => ({ push: vi.fn(), syncNow: vi.fn(), unsynced: [] as unknown[] }));
 vi.mock("@/lib/localdb", () => ({
   getKV: vi.fn().mockResolvedValue(undefined),
@@ -19,7 +19,6 @@ vi.mock("@/lib/localdb", () => ({
 }));
 vi.mock("@/lib/sync", () => ({ syncNow: h.syncNow, startBackgroundSync: vi.fn() }));
 vi.mock("next/navigation", () => ({ useRouter: () => ({ push: h.push }) }));
-vi.mock("@/lib/push", () => ({ pushSupported: () => false, pushState: vi.fn(), enablePush: vi.fn(), disablePush: vi.fn() }));
 
 import { useStore } from "@/lib/store";
 import { saveReferralCode } from "@/lib/referral";
@@ -178,12 +177,14 @@ describe("AccountPage signed in", () => {
     useStore.setState({ family: signedIn(), sync: { cursor: 5, status: "idle", lastSyncAt: undefined, dirtyProfiles: [], dirtyFamily: false } });
   });
 
-  it("shows the email, sync status and how many events wait to upload", async () => {
+  it("shows the email and sync time, with the upload count folded under Sync details", async () => {
     h.unsynced = [{}, {}, {}];
     render(<AccountPage onBilling={vi.fn()} />);
     expect(screen.getByText("parent@example.com")).toBeInTheDocument();
-    expect(screen.getByText("Not yet")).toBeInTheDocument();
-    expect(await screen.findByText("3 events")).toBeInTheDocument();
+    expect(screen.getByText("Not synced yet")).toBeInTheDocument();
+    const details = screen.getByText("Sync details").closest("details")!;
+    expect(details).not.toHaveAttribute("open");
+    await waitFor(() => expect(details).toHaveTextContent("3 events"));
   });
 
   it("shows a sync error and syncs or signs out on request", async () => {
@@ -200,35 +201,58 @@ describe("AccountPage signed in", () => {
     expect(useStore.getState().sync.status).toBe("signed-out");
   });
 
-  it("loads both email preferences and saves a toggle to /api/account/prefs/", async () => {
-    routes["POST /api/account/prefs/"] = (init) => json({ weeklyReport: JSON.parse(String(init!.body)).weeklyReport });
+  it("saves one progress-email choice to both preferences at /api/account/prefs/", async () => {
+    routes["GET /api/account/prefs/"] = () => json({ weeklyReport: true, practiceReminders: false });
+    routes["POST /api/account/prefs/"] = (init) => json(JSON.parse(String(init!.body)));
     render(<AccountPage onBilling={vi.fn()} />);
-    const weekly = await screen.findByRole("switch", { name: /Weekly progress email/ });
-    const reminders = screen.getByRole("switch", { name: /Practice reminders/ });
-    expect(weekly).toHaveAttribute("aria-checked", "false");
-    expect(reminders).toHaveAttribute("aria-checked", "true");
-    expect(reminders).toHaveTextContent("never to your child");
-    await userEvent.click(weekly);
-    await waitFor(() => expect(weekly).toHaveAttribute("aria-checked", "true"));
-    expect(bodyOf("POST", "/api/account/prefs/")).toEqual({ weeklyReport: true });
+    const weekly = await screen.findByRole("radio", { name: "Weekly summary" });
+    expect(weekly).toHaveAttribute("aria-checked", "true");
+    await userEvent.click(screen.getByRole("radio", { name: "Summary and reminders" }));
+    await waitFor(() => expect(screen.getByRole("radio", { name: "Summary and reminders" })).toHaveAttribute("aria-checked", "true"));
+    expect(bodyOf("POST", "/api/account/prefs/")).toEqual({ weeklyReport: true, practiceReminders: true });
+    expect(screen.getByText(/never to your child/)).toBeInTheDocument();
+    await userEvent.click(screen.getByRole("radio", { name: "None" }));
+    await waitFor(() => expect(screen.getByRole("radio", { name: "None" })).toHaveAttribute("aria-checked", "true"));
+    expect(bodyOf("POST", "/api/account/prefs/")).toEqual({ weeklyReport: false, practiceReminders: false });
   });
 
-  it("keeps an email toggle as it was and explains when the change fails", async () => {
+  it("picks no option for reminders without the weekly summary, which older versions allowed", async () => {
+    render(<AccountPage onBilling={vi.fn()} />);
+    await screen.findByRole("radiogroup", { name: "Progress emails" });
+    for (const name of ["Weekly summary", "Summary and reminders", "None"]) expect(screen.getByRole("radio", { name })).toHaveAttribute("aria-checked", "false");
+    expect(screen.getByText("Practice reminders only. Pick an option to change it.")).toBeInTheDocument();
+  });
+
+  it("keeps the email choice as it was and explains when the change fails", async () => {
+    routes["GET /api/account/prefs/"] = () => json({ weeklyReport: false, practiceReminders: false });
     routes["POST /api/account/prefs/"] = () => json({ error: "Confirm your email first." }, 403);
     useStore.setState({ family: signedIn(false) });
     render(<AccountPage onBilling={vi.fn()} />);
-    const weekly = await screen.findByRole("switch", { name: /Weekly progress email/ });
-    expect(weekly).toHaveTextContent("Confirm your email first to turn this on.");
-    await userEvent.click(weekly);
+    const none = await screen.findByRole("radio", { name: "None" });
+    expect(screen.getByText("Confirm your email first to turn these on.")).toBeInTheDocument();
+    await userEvent.click(screen.getByRole("radio", { name: "Weekly summary" }));
     expect(await screen.findByText("Confirm your email first.")).toBeInTheDocument();
-    expect(weekly).toHaveAttribute("aria-checked", "false");
+    expect(none).toHaveAttribute("aria-checked", "true");
   });
 
-  it("falls back to an offline message when the preference can't be saved", async () => {
+  it("falls back to an offline message when the choice can't be saved", async () => {
     routes["POST /api/account/prefs/"] = () => Promise.reject(new TypeError("offline"));
     render(<AccountPage onBilling={vi.fn()} />);
-    await userEvent.click(await screen.findByRole("switch", { name: /Practice reminders/ }));
+    await userEvent.click(await screen.findByRole("radio", { name: "Weekly summary" }));
     expect(await screen.findByText("You’re offline. Try again when connected.")).toBeInTheDocument();
+  });
+
+  it("has no browser notification switch: the Sunday push was removed", async () => {
+    render(<AccountPage onBilling={vi.fn()} />);
+    await screen.findByRole("radiogroup", { name: "Progress emails" });
+    expect(screen.queryByRole("switch", { name: /notification/i })).not.toBeInTheDocument();
+  });
+
+  it("keeps this device's voice and PIN, and the privacy panels, on the Account page", () => {
+    render(<AccountPage onBilling={vi.fn()} />);
+    expect(screen.getByRole("heading", { name: "🗣️ Read-aloud voice (this device)" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "🔒 Parent PIN (this device)" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Your data, your choice" })).toBeInTheDocument();
   });
 
   it("hides the email toggles when the preferences can't be loaded", async () => {
@@ -236,7 +260,7 @@ describe("AccountPage signed in", () => {
     render(<AccountPage onBilling={vi.fn()} />);
     await waitFor(() => expect(calls("GET", "/api/account/prefs/").length).toBeGreaterThan(0));
     await act(async () => {});
-    expect(screen.queryByRole("switch", { name: /Weekly progress email/ })).not.toBeInTheDocument();
+    expect(screen.queryByRole("radiogroup", { name: "Progress emails" })).not.toBeInTheDocument();
   });
 
   it("asks an unconfirmed parent to confirm, and resends the link once", async () => {

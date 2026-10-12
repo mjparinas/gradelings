@@ -271,9 +271,10 @@ async function deepChecks(device, browser, descriptor, page) {
   // An arcade game: turn on free play, then check the play area fits.
   await page.goto(`${BASE}/parents/#/settings`);
   await enterPin(page, false);
-  const freePlay = page.getByRole("switch", { name: /Free play/ }).first();
+  const freePlay = page.getByRole("radio", { name: "Free play" });
   await freePlay.click();
   await page.waitForFunction((el) => el?.getAttribute("aria-checked") === "true", await freePlay.elementHandle());
+  await page.getByText("Customize calm mode").click();
   await page.getByRole("switch", { name: /Calm motion/ }).click();
   await page.getByRole("radio", { name: "Hide all" }).click();
   await page.waitForTimeout(600); // let the settings reach IndexedDB before leaving the page

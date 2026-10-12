@@ -43,7 +43,7 @@ export const HELP: HelpSection[] = [
       },
       {
         q: "I didn’t get an email.",
-        a: "Check your spam or junk folder first, and make sure you typed the address you signed up with. Confirmation emails can be sent again from Parent area → Account & sync. If it still doesn’t arrive, write to us and we’ll help.",
+        a: "Check your spam or junk folder first, and make sure you typed the address you signed up with. Confirmation emails can be sent again from Parent area → Account. If it still doesn’t arrive, write to us and we’ll help.",
       },
       {
         q: "Does it work offline?",
@@ -77,7 +77,7 @@ export const HELP: HelpSection[] = [
       },
       {
         q: "Can my child ask for a hint before answering?",
-        a: "Yes. In practice, Adventure, Review and the Daily Challenge there’s a “Need a hint?” button. Because the hint helps, an answer given after opening it counts like a retry: it earns a little XP but doesn’t add to “right on the first try”. If your child tends to avoid asking for help, you can switch on “Hints count as first try” for them in Parent area → Settings. Reports show how many hints were opened.",
+        a: "Yes. In practice, Adventure, Review and the Daily Challenge there’s a “Need a hint?” button. Because the hint helps, an answer given after opening it counts like a retry: it earns a little XP but doesn’t add to “right on the first try”. If your child tends to avoid asking for help, you can switch on “Hints count as first try” for them in Parent area → Settings → Advanced options. Reports show how many hints were opened.",
       },
       {
         q: "How are the report levels worked out?",
@@ -85,7 +85,7 @@ export const HELP: HelpSection[] = [
       },
       {
         q: "How does earning game time work?",
-        a: "Learning earns arcade time. By default every 20 minutes of learning unlocks 5 minutes of games, up to 20 minutes a day. You can change every number, turn games off, or allow free play in Parent area → Settings.",
+        a: "Learning earns arcade time. By default every 20 minutes of learning unlocks 5 minutes of games, up to 20 minutes a day. In Parent area → Settings you can turn games off, allow free play or change the daily maximum, and change the learning-to-games ratio under Advanced options.",
       },
       {
         q: "What if a question seems wrong?",
@@ -99,11 +99,11 @@ export const HELP: HelpSection[] = [
     faqs: [
       {
         q: "Can I make the app calmer for my child?",
-        a: "Yes. In Parent area → Settings there’s a “Calm and focus” section, set separately for each child. You can turn off confetti and other motion, keep only gentle sounds, hide timers (timed modes show a quiet bar instead), hold trophy pop-ups until after a lesson, and use five-question sessions.",
+        a: "Yes. In Parent area → Settings there’s a “Calm and focus” section, set separately for each child. One “Calm mode” switch turns off confetti and other motion, keeps only gentle sounds, hides timers (timed modes show a quiet bar instead), holds trophy pop-ups until after a lesson and uses five-question sessions. “Customize calm mode” lets you pick just the ones you want.",
       },
       {
         q: "Can I make the text easier to read?",
-        a: "Yes. Under “Easier reading” in the same settings page, “Roomy text” adds space between letters, words and lines, and “High contrast” uses darker text and firmer outlines.",
+        a: "Yes. Under “Reading and sound” in the same settings page, “Roomy text” adds space between letters, words and lines, and “High contrast” uses darker text and firmer outlines.",
       },
       {
         q: "Does turning these on change my child’s results?",
@@ -165,7 +165,7 @@ export const HELP: HelpSection[] = [
       },
       {
         q: "Why do I need to confirm my email before subscribing?",
-        a: "So that receipts, renewals and password resets reach you. Use Parent area → Account & sync to resend the confirmation email.",
+        a: "So that receipts, renewals and password resets reach you. Use Parent area → Account to resend the confirmation email.",
       },
       {
         q: "Are there ads or purchases for kids?",

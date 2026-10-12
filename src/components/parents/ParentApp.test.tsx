@@ -33,7 +33,6 @@ vi.mock("./Children", () => ({ ChildrenPage: () => <p>page:children</p> }));
 vi.mock("./Settings", () => ({ SettingsPage: ({ childId }: { childId?: string }) => <p>page:settings:{childId ?? "-"}</p> }));
 vi.mock("./Account", () => ({ AccountPage: () => <p>page:account</p> }));
 vi.mock("./ReportCards", () => ({ ReportCardsPage: ({ childId }: { childId?: string }) => <p>page:report-cards:{childId ?? "-"}</p> }));
-vi.mock("./Privacy", () => ({ PrivacyPage: () => <p>page:privacy</p> }));
 vi.mock("./Subscription", () => ({
   SubscriptionPage: ({ billing }: { billing: unknown }) => {
     h.billing.push(billing);
@@ -111,7 +110,8 @@ describe("ParentApp", () => {
     ["#/settings/a", "page:settings:a"],
     ["#/account", "page:account"],
     ["#/report-cards/a", "page:report-cards:a"],
-    ["#/privacy", "page:privacy"],
+    // Privacy & data moved into Account; the old link still opens it.
+    ["#/privacy", "page:account"],
     ["#/no-such-page", "page:overview"],
   ])("routes %s to the right section", async (hash, text) => {
     await open(hash);
@@ -126,6 +126,23 @@ describe("ParentApp", () => {
     });
     expect(screen.getByText("page:children")).toBeInTheDocument();
     expect(screen.queryByRole("button", { name: "Unlock" })).not.toBeInTheDocument();
+  });
+
+  it("has six sections, with Placement and Report card as views under Reports", async () => {
+    await open("#/placement/a");
+    const nav = screen.getByRole("navigation", { name: "Parent sections" });
+    expect(within(nav).getAllByRole("link").map((l) => l.textContent?.trim())).toEqual(["🏠 Overview", "⭐ Subscribe", "📈 Reports", "🧒 Children", "⚙️ Settings", "☁️ Account"]);
+    expect(within(nav).getByRole("link", { name: /Reports/ }).className).toContain("bg-[#253047]");
+    const views = screen.getByRole("navigation", { name: "Report views" });
+    expect(within(views).getByRole("link", { name: "Progress" })).toHaveAttribute("href", "#/reports/a");
+    expect(within(views).getByRole("link", { name: "Placement test" })).toHaveAttribute("aria-current", "page");
+    expect(within(views).getByRole("link", { name: "Report card" })).toHaveAttribute("href", "#/report-cards/a");
+  });
+
+  it("shows no report views outside Reports, and marks Account for the old privacy link", async () => {
+    await open("#/privacy");
+    expect(screen.queryByRole("navigation", { name: "Report views" })).not.toBeInTheDocument();
+    expect(within(screen.getByRole("navigation", { name: "Parent sections" })).getByRole("link", { name: /Account/ }).className).toContain("bg-[#253047]");
   });
 
   it("marks the current section in the navigation", async () => {
