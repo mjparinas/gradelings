@@ -17,9 +17,9 @@ export function SortQuestion({ q, status, onAttempt, onSlip, onSpeak }: Question
 
   const drop = (binId: string) => {
     if (!selected || locked) return;
-    onSpeak?.(q.bins.find((b) => b.id === binId)?.label ?? "");
     const el = binRefs.current[binId];
     if (selected.bin !== binId) {
+      onSpeak?.(q.bins.find((b) => b.id === binId)?.label ?? "");
       replay(el, "animate-shake");
       onSlip(el);
       return;
@@ -28,9 +28,13 @@ export function SortQuestion({ q, status, onAttempt, onSlip, onSpeak }: Question
     setSorted(next);
     setSelectedId(null);
     replay(el, "animate-gulp");
-    if (Object.keys(next).length === q.items.length) {
+    const upNext = q.items.find((i) => !next[i.id]);
+    if (!upNext) {
+      onSpeak?.(q.bins.find((b) => b.id === binId)?.label ?? "");
       onAttempt(true, el);
     } else {
+      // Read the next item straight away, so a child who listens doesn't have to tap it first.
+      onSpeak?.(upNext.label);
       sounds.pop(Object.keys(next).length);
       burstFrom(el, 10);
     }
