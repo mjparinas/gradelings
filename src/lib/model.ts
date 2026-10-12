@@ -151,10 +151,13 @@ export function dayKey(t: number): string {
 /** Grades whose children have read-aloud switched on by default. Parents can still turn it off per child. */
 export const AUTO_READ_GRADES: readonly GradeId[] = ["k", "1"];
 
+/** Daily goal a new child starts with. Little kids (Kindergarten and Grade 1) get the shorter one. */
+export const DEFAULT_GOAL_MINUTES = { little: 10, other: 15 } as const;
+
 export function defaultChildSettings(profileId: string, little: boolean, grade?: GradeId): ChildSettings {
   return {
     profileId,
-    dailyGoalMinutes: little ? 10 : 15,
+    dailyGoalMinutes: little ? DEFAULT_GOAL_MINUTES.little : DEFAULT_GOAL_MINUTES.other,
     learnMinutesPerReward: 20,
     rewardGameMinutes: 5,
     maxGameMinutesPerDay: 20,
