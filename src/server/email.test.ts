@@ -29,6 +29,12 @@ describe("without Resend keys", () => {
     expect(fetchMock).not.toHaveBeenCalled();
   });
 
+  it("keeps a subject to one line", async () => {
+    const before = outbox().length;
+    await sendEmail({ ...mail, subject: "Join\r\nBcc: someone@example.com\tnow " });
+    expect(outbox().slice(before)[0].subject).toBe("Join Bcc: someone@example.com now");
+  });
+
   it("skips it in production, so nothing pretends to have been sent", async () => {
     vi.stubEnv("NODE_ENV", "production");
     const before = outbox().length;

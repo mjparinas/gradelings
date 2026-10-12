@@ -197,7 +197,11 @@ export async function classProgress(classId: string): Promise<StudentProgress[]>
   const keys = await assignmentKeys(classId);
   const out: StudentProgress[] = [];
   for (const m of members) {
-    const data = await loadChildReport(m.family_id, m.profile_id, 90);
+    // One unreadable child record must not take the whole class view down with it.
+    const data = await loadChildReport(m.family_id, m.profile_id, 90).catch((e) => {
+      console.error("[classroom] could not load a member's report", (e as Error).message);
+      return null;
+    });
     if (!data) continue;
     const byKey = new Map(data.report.units.map((u) => [u.ref.key, u]));
     out.push({

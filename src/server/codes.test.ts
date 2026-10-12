@@ -216,7 +216,7 @@ describe("redeeming codes", () => {
       for (const k of Object.keys(env)) delete process.env[k];
     }
 
-    const payload = JSON.stringify({ id: "evt_deal", created: Math.floor(Date.now() / 1000), type: "checkout.session.completed", data: { object: { client_reference_id: familyId, customer: "cus_d", payment_status: "paid" } } });
+    const payload = JSON.stringify({ id: "evt_deal", created: Math.floor(Date.now() / 1000), type: "checkout.session.completed", data: { object: { client_reference_id: familyId, customer: "cus_d", payment_status: "paid", mode: "subscription", subscription: "sub_d" } } });
     const t = Math.floor(Date.now() / 1000);
     const sig = `t=${t},v1=${createHmac("sha256", "whsec_test").update(`${t}.${payload}`).digest("hex")}`;
     await webhook.POST(new Request("http://localhost/api/billing/webhook/", { method: "POST", headers: { "stripe-signature": sig }, body: payload }));
@@ -227,6 +227,18 @@ describe("redeeming codes", () => {
     // A subscribed family has nothing to discount.
     const later = await makeCode({ kind: "discount", percentOff: 10 });
     expect((await redeem.POST(req("/api/codes/redeem/", { code: later.code }, { cookie }))).status).toBe(409);
+  });
+
+  it("clears a discount when the subscription starts, even if its checkout paid later", async () => {
+    const { cookie, familyId } = await newAccount("slowpay@example.com");
+    const deal = await makeCode({ kind: "discount", percentOff: 15 });
+    await redeem.POST(req("/api/codes/redeem/", { code: deal.code }, { cookie }));
+    expect((await family(cookie)).discount).toEqual({ code: deal.code, percentOff: 15 });
+    const payload = JSON.stringify({ id: "evt_slow", created: Math.floor(Date.now() / 1000), type: "customer.subscription.created", data: { object: { status: "active", customer: "cus_slow", metadata: { family_id: familyId } } } });
+    const t = Math.floor(Date.now() / 1000);
+    const sig = `t=${t},v1=${createHmac("sha256", "whsec_test").update(`${t}.${payload}`).digest("hex")}`;
+    await webhook.POST(new Request("http://localhost/api/billing/webhook/", { method: "POST", headers: { "stripe-signature": sig }, body: payload }));
+    expect((await family(cookie)).discount).toBeNull();
   });
 
   it("removes a family's redemptions when the account is deleted", async () => {

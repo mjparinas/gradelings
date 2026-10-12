@@ -64,16 +64,19 @@ describe("ClassSignIn", () => {
     await userEvent.type(screen.getByLabelText("Class code"), "3x");
     expect(screen.getByLabelText("Class code")).toHaveValue("ABC123");
     await userEvent.type(screen.getByLabelText("My code"), "zz9qq7");
+    expect(go).toBeDisabled();
+    await userEvent.type(screen.getByLabelText("My code"), "-k4x");
+    expect(screen.getByLabelText("My code")).toHaveValue("ZZ9QQ7K4");
     expect(go).toBeEnabled();
     await userEvent.click(go);
-    expect(h.signInStudent).toHaveBeenCalledWith("ABC123", "ZZ9QQ7");
+    expect(h.signInStudent).toHaveBeenCalledWith("ABC123", "ZZ9QQ7K4");
   });
 
   it("shows the server's message when the codes don't work, and lets the child try again", async () => {
     h.signInStudent.mockRejectedValue(new Error("Those codes don't match. Check with your teacher."));
     render(<ClassSignIn onBack={() => {}} />);
     await userEvent.type(screen.getByLabelText("Class code"), "ABC123");
-    await userEvent.type(screen.getByLabelText("My code"), "XYZ789");
+    await userEvent.type(screen.getByLabelText("My code"), "XYZ789AB");
     await userEvent.click(screen.getByRole("button", { name: /Let's go!/ }));
     expect(await screen.findByRole("alert")).toHaveTextContent("Those codes don't match.");
     expect(screen.getByRole("button", { name: /Let's go!/ })).toBeEnabled();
