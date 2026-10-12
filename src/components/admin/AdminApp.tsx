@@ -7,7 +7,7 @@ import { GRADE_LABEL } from "@/content/subjects";
 import type { FrameworkId, GradeId } from "@/content/types";
 import { DateField } from "@/components/DateField";
 import { SelectMenu } from "@/components/SelectMenu";
-import { APP_NAME } from "@/lib/brand";
+import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { call } from "@/lib/classroom";
 import { Dashboard } from "./Dashboard";
 import { parseVariants, type ExperimentStatus, type FlagScope, type Variant } from "@/lib/flags";
@@ -962,8 +962,16 @@ export function AdminApp() {
     <div className="min-h-dvh bg-[#f6f5f1]">
       <header className="border-b border-line bg-white" style={{ paddingTop: "env(safe-area-inset-top)" }}>
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-2 px-4 py-3">
-          <span className="text-lg font-bold">
-            {APP_NAME} <span className="font-semibold text-ink-soft">admin</span>
+          <span className="flex items-center gap-2">
+            <span className="text-2xl font-bold tracking-tight">
+              <span className="sr-only">{APP_NAME}</span>
+              {APP_NAME.split("").map((ch, i) => (
+                <span key={i} aria-hidden="true" style={{ color: WORDMARK_COLOURS[i % WORDMARK_COLOURS.length] }}>
+                  {ch}
+                </span>
+              ))}
+            </span>
+            <span className="rounded-full bg-[#0f172a] px-3 py-1 text-sm font-bold tracking-wide text-white uppercase">Admin</span>
           </span>
           <div className="flex items-center gap-3">
             {state.kind === "admin" && <span className="hidden text-sm text-ink-soft sm:inline">{state.email}</span>}

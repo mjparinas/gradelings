@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
@@ -10,6 +10,7 @@ vi.mock("@/lib/classroom", async (importOriginal) => {
 });
 
 import { computeMetrics } from "@/lib/adminMetrics";
+import { APP_NAME } from "@/lib/brand";
 import { AdminApp } from "./AdminApp";
 
 const now = Date.now();
@@ -83,6 +84,10 @@ describe("AdminApp", () => {
     render(<AdminApp />);
     expect(await screen.findByText("Families")).toBeInTheDocument();
     expect(screen.getByText("1 monthly, 0 yearly")).toBeInTheDocument();
+    // The header carries the site's coloured wordmark and an "Admin" pill.
+    const header = screen.getByRole("banner");
+    expect(within(header).getByText("Admin")).toHaveClass("rounded-full");
+    expect(header.textContent!.startsWith(APP_NAME)).toBe(true);
     await user.click(screen.getByRole("button", { name: "Flags" }));
     await user.click(await screen.findByRole("switch"));
     expect(sent("/api/admin/flags/", "PUT")).toEqual({ key: "shop", enabled: false, rollout: 100 });
