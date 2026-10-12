@@ -371,7 +371,7 @@ Tests are duplicated across screen sizes only where layout can break:
   - Ollie the Otter is the guide.
   - Each subject has its own guide: Hoot the owl (math), Ruby the fox (reading), Bolt the beaver (science) and Juniper the bear (social studies).
   - Seven more critters can be unlocked in the shop.
-- **Read-aloud uses the device's own voices by default** (Web Speech API, `src/lib/speech.ts`), so it's free and works offline.
+- **Read-aloud uses the device's own voices** (Web Speech API, `src/lib/speech.ts`) until the Piper voice below has downloaded, and whenever Piper can't play, so it's free and works offline.
   - Installed voices are ranked by quality, and locale only breaks ties between similar voices:
     - first, "Natural", "Neural" and "Premium" voices;
     - then "Enhanced" and Google voices;
@@ -381,9 +381,10 @@ Tests are duplicated across screen sizes only where layout can break:
   - Cloud voices (Edge's Natural voices, Google voices) are skipped when offline, with a retry on an on-device voice if one fails.
   - Parents can pick a voice with a preview in Settings. The choice is saved per device in `localStorage`, not synced, because every device has different voices.
  - Pitch stays at 1; raising it makes good voices sound processed.
-- **Optional Piper voice** (`src/lib/piper.ts`, `public/piper-worker.js`): a parent can download a neural voice in Settings (Amy for English, Siwis for French, listed in `src/lib/piper-manifest.json` with file hashes). It runs on the device in a web worker (WebAssembly and ONNX Runtime), so it costs nothing to run and works offline once downloaded.
- - Off by default; the choice is per device in `localStorage`, and the files live in their own Cache Storage, so a parent can remove them.
- - When it's on, read-aloud uses it; if it fails, the device voice takes over. A device-voice preview in Settings always uses the device voice.
+- **Piper voice, on by default** (`src/lib/piper.ts`, `public/piper-worker.js`): a neural voice (Amy for English, Siwis for French, listed in `src/lib/piper-manifest.json` with file hashes). It runs on the device in a web worker (WebAssembly and ONNX Runtime), so it costs nothing to run and works offline once downloaded.
+ - The first time read-aloud is used in a language, that language's voice downloads in the background (`autoDownloadPiper`) while the device voice reads; Piper reads from then on. French only downloads once French is read aloud. No background download on mobile data, Data Saver or a 2G connection (where the browser reports it; Safari doesn't), when the device has little space, offline, or in automated browsers (`navigator.webdriver`, so e2e runs don't each fetch about 100 MB). A failed background download shows no error and is retried after 10 minutes. The `piper-auto-download` feature flag turns background downloads off.
+ - A parent's choice wins: the switch in Settings is saved per device in `localStorage` (`grademap.piper` = `on`/`off`). With no saved choice it's on, unless the parent picked an English device voice (`grademap.voice`); picking one turns Piper off, and removing the English voice turns it off too. Downloading by hand turns it on. The files live in their own Cache Storage, so a parent can remove them.
+ - If Piper fails (an error, or no sound within 15 s), the device voice reads that question and every later one in that language until the page reloads. A device-voice preview in Settings always uses the device voice.
  - Speed: device voices read a touch slow (0.92), but Amy is unhurried already, so she reads at 1.15 (`PIPER_RATE` in `src/lib/speech.ts`). Siwis keeps 0.92.
  - We host every file ourselves. The site serves them from `/piper/{version}/`. The engine is copied from `node_modules`; the voices come from our GitHub release `piper-voices-{version}` (copied unchanged from rhasspy/piper-voices). `scripts/fetch-piper.mjs` downloads them, checks the sha256 and puts them in `public/piper/` (gitignored) on `prebuild` and, optionally, on `dev`. Don't commit the voice files to git or Git LFS (about 127 MB).
  - Never replace or delete a release's assets. To change a voice, upload a new `piper-voices-{n}` release, update the manifest's hashes and bump `version`.

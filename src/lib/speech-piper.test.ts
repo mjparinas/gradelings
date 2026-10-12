@@ -8,11 +8,15 @@ const piper = vi.hoisted(() => ({
   spoken: [] as { text: string; lang: string }[],
   rates: [] as number[],
   stops: 0,
+  autoDownloads: [] as string[],
+  failed: [] as string[],
 }));
 vi.mock("./piper", () => ({
   piperCanSpeak: () => piper.wanted,
-  piperMightSpeak: () => piper.wanted,
-  piperWanted: async () => piper.wanted,
+  piperMightSpeak: (lang: string) => piper.wanted && !piper.failed.includes(lang),
+  piperWanted: async (lang: string) => piper.wanted && !piper.failed.includes(lang),
+  autoDownloadPiper: async (lang: string) => void piper.autoDownloads.push(lang),
+  markPiperFailed: (lang: string) => void piper.failed.push(lang),
   speakPiper: async (text: string, lang: string, rate: number) => {
     if (piper.fail) throw new Error("no wasm");
     piper.spoken.push({ text, lang });
@@ -23,7 +27,7 @@ vi.mock("./piper", () => ({
 
 const synthSaid: string[] = [];
 beforeEach(() => {
-  Object.assign(piper, { wanted: false, fail: false, spoken: [], rates: [], stops: 0 });
+  Object.assign(piper, { wanted: false, fail: false, spoken: [], rates: [], stops: 0, autoDownloads: [], failed: [] });
   synthSaid.length = 0;
   vi.stubGlobal("window", globalThis);
   vi.stubGlobal("navigator", { onLine: true });
@@ -82,6 +86,19 @@ describe("read-aloud with the Piper voice", () => {
     speak("Hello");
     await flush();
     expect(synthSaid).toEqual(["Hello"]);
+    // Then the device voice reads straight away, inside the tap, for the rest of the visit.
+    expect(piper.failed).toEqual(["en"]);
+    speak("Again");
+    expect(synthSaid).toEqual(["Hello", "Again"]);
+  });
+
+  it("starts the background download of each language's voice when it is read, but not for a device-voice preview", async () => {
+    const { speak, speakSegments, previewVoice } = await import("./speech");
+    speak("Hello");
+    expect(synthSaid).toEqual(["Hello"]);
+    speakSegments([{ text: "chat", lang: "fr" }]);
+    previewVoice(null);
+    expect(piper.autoDownloads).toEqual(["en", "fr"]);
   });
 
   it("previewing a device voice always uses that voice", async () => {

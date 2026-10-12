@@ -7,7 +7,10 @@ import { Switch } from "./common";
 
 const mb = (bytes: number) => `${Math.max(1, Math.round(bytes / 1e6))} MB`;
 
-/** The downloadable Piper voice for one language on this device. English carries the on/off switch. */
+/**
+ * The Piper voice for one language on this device. English carries the on/off switch, which is on
+ * by default: the voice then downloads by itself the first time read-aloud is used.
+ */
 export function PiperVoice({ language }: { language: SpeechLanguage }) {
   const piper = useSyncExternalStore<PiperState | undefined>(subscribePiper, getPiperState, () => undefined);
   const [size, setSize] = useState<number>();
@@ -24,6 +27,22 @@ export function PiperVoice({ language }: { language: SpeechLanguage }) {
   if (!piperSupported()) return language === "en" ? <p className="text-sm text-ink-soft">This browser can&apos;t run the offline voice.</p> : null;
 
   const french = language === "fr";
+  const download = () => {
+    // Downloading by hand means the parent wants to hear it.
+    if (!french) setPiperEnabled(true);
+    void downloadPiper(language);
+  };
+  const toggle = (
+    <Switch
+      label="Use the offline voice for read-aloud"
+      value={piper.enabled}
+      onChange={(on) => {
+        stopSpeaking();
+        setPiperEnabled(on);
+      }}
+      help="On this device only. Turn it off to use the device voice instead."
+    />
+  );
   const name = PIPER_VOICES[language].name;
   const preview = () => {
     stopSpeaking();
@@ -45,23 +64,31 @@ export function PiperVoice({ language }: { language: SpeechLanguage }) {
         </p>
       </div>
 
+      {!french && toggle}
+
       {voice.state === "missing" && (
         <>
+          {piper.enabled && (
+            <p className="text-sm text-ink-soft">
+              {french
+                ? "It downloads by itself the first time a French lesson is read aloud, when this device isn't on mobile data."
+                : "It downloads by itself the first time read-aloud is used, when this device isn't on mobile data. Until then, read-aloud uses the device voice below."}
+            </p>
+          )}
           <button
             type="button"
             className="self-start rounded-xl bg-[#4f8ef7] px-4 py-2.5 font-bold text-[#0f172a] disabled:opacity-40"
-            disabled={french && piper.voices.en.state === "downloading"}
-            onClick={() => void downloadPiper(language)}
+            disabled={piper.voices[french ? "en" : "fr"].state === "downloading"}
+            onClick={download}
           >
-            ⬇ Download {french ? "French voice" : "voice"}
-            {size ? ` (${mb(size)})` : ""}
+            {`⬇ Download ${french ? "French voice" : "voice"}${piper.enabled ? " now" : ""}${size ? ` (${mb(size)})` : ""}`}
           </button>
           {voice.error && (
             <p role="alert" className="text-sm font-semibold text-nudge-dark">
               {voice.error}
             </p>
           )}
-          {!french && <p className="text-sm text-ink-soft">Best on Wi-Fi. Until it&apos;s downloaded, read-aloud uses the device voice below.</p>}
+          {!french && !piper.enabled && <p className="text-sm text-ink-soft">Best on Wi-Fi. Until it&apos;s downloaded and switched on, read-aloud uses the device voice below.</p>}
         </>
       )}
 
@@ -83,17 +110,6 @@ export function PiperVoice({ language }: { language: SpeechLanguage }) {
 
       {voice.state === "ready" && (
         <>
-          {!french && (
-            <Switch
-              label="Use the offline voice for read-aloud"
-              value={piper.enabled}
-              onChange={(on) => {
-                stopSpeaking();
-                setPiperEnabled(on);
-              }}
-              help="On this device only. Turn it off to use the device voice instead."
-            />
-          )}
           <div className="flex flex-wrap items-center gap-3">
             <button type="button" className="rounded-xl bg-[#4f8ef7] px-4 py-2.5 font-bold text-[#0f172a]" onClick={preview} disabled={previewing}>
               {previewing ? "Speaking…" : french ? "▶ Preview French" : "▶ Preview"}

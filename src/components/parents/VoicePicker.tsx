@@ -1,6 +1,7 @@
 "use client";
 
 import { APP_NAME } from "@/lib/brand";
+import { setPiperEnabled } from "@/lib/piper";
 import { useSyncExternalStore } from "react";
 import {
   canSpeak,
@@ -112,6 +113,8 @@ export function VoicePicker() {
             onChange={(next) => {
               stopSpeaking();
               setVoicePreference(next || null);
+              // Picking a device voice means the parent wants to hear it.
+              if (next) setPiperEnabled(false);
             }}
             options={[
               { value: "", label: `Automatic: ${best ? describe(best) : "best available"}` },
@@ -129,7 +132,7 @@ export function VoicePicker() {
             )}
           </div>
           {current?.online && <p className="text-sm text-ink-soft">This voice needs internet. When offline, read-aloud switches to the best voice on the device.</p>}
-          <p className="text-sm text-ink-soft">Each device has its own voices, so choose one on every tablet or phone your children use. When the offline voice is on, this one is only used if it can&apos;t play.</p>
+          <p className="text-sm text-ink-soft">Each device has its own voices, so choose one on every tablet or phone your children use. When the offline voice is on, this one is only used until it has downloaded or if it can&apos;t play. Choosing a voice here switches the offline voice off.</p>
           <Tips open={best?.quality === "basic" || best?.quality === "standard"} />
         </div>
       )}
