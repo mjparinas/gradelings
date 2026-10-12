@@ -2,6 +2,7 @@ import type { Course } from "../types";
 import { units as g9_language } from "../ontario/g9-language";
 import { units as g9_science } from "../ontario/g9-science";
 import { units as sk_science_9 } from "./g9-science";
+import { course as bc_social_7 } from "../grades/g7/social";
 import { units as sk_social_9 } from "./g9-social";
 import { reuse, share, sk } from "./kit";
 import { SK_OUTCOMES as O } from "./outcomes";
@@ -10,6 +11,15 @@ import { frenchCourses } from "./french";
 // Saskatchewan Grade 9. Units that BC or Ontario already teach, and that fit the Saskatchewan outcomes, are
 // shared with the outcomes they practise. The rest are written for Saskatchewan. Outcome codes are checked against
 // docs/research/saskatchewan/outcomes.json in content.test.ts.
+
+// BC Grade 7 social studies (ancient civilizations) teaches the early societies that Saskatchewan studies in
+// Grade 9 (Roots of Canadian Society), so those units are reused with Grade 9 outcomes.
+const g9_ancient = reuse(bc_social_7.units, {
+  "where-civilizations-grew": sk("DR9.3", "how rivers, climate and landforms shaped early societies such as Mesopotamia, Egypt, Greece and Rome"),
+  "laws-and-government": sk("PA9.1, PA9.3", "power, authority and law in societies of the past, and the roles of their members"),
+  "trade-networks": sk("RW9.2", "trade, transportation and specialization in societies of the past"),
+  "inventions-and-timelines": sk("RW9.3, DR9.2", "technologies of past societies that still shape life today, and placing key events on a timeline"),
+});
 
 export const courses: Course[] = [
   {
@@ -71,8 +81,8 @@ export const courses: Course[] = [
     grade: "9",
     subject: "social",
     bigIdeas: { "ca-sk": O["9"].social },
-    units: [...sk_social_9],
-    order: { "ca-sk": [...sk_social_9.map((u) => u.id)] },
+    units: [...sk_social_9, ...g9_ancient],
+    order: { "ca-sk": [...sk_social_9.map((u) => u.id), ...g9_ancient.map((u) => u.id)] },
   },
   ...frenchCourses("9"),
 ];

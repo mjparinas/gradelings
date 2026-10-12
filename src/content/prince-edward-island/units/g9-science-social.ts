@@ -396,3 +396,57 @@ export const peSocialAction9 = bankUnit({
   standards: ["SCO12; SCO13", "ways people create change, and planning action on a local or global issue"],
   items: SOCIAL_ACTION,
 });
+
+// DT1 and DT2: the physical features that make places significant, and how climate and people affect each other.
+// Standard physical geography facts only.
+const CLIMATES: Q[] = [
+  ["What is the difference between weather and climate?", "weather is day to day; climate is the average over many years", ["they mean the same thing", "climate changes every hour", "weather is measured over 30 years"], "Climate is the long-term pattern."],
+  ["Climate is usually described using averages over about…", "30 years", ["one week", "one year", "300 years"], "A long record smooths out unusual years."],
+  ["Why are places near the equator usually warmer than places near the poles?", "the Sun’s rays strike them more directly", ["they are closer to the Sun by thousands of kilometres", "they have more clouds", "they have taller mountains"], "Direct rays concentrate the Sun’s energy."],
+  ["As you climb a mountain, the temperature usually…", "drops", ["rises", "stays the same", "doubles"], "Air is thinner and cooler higher up."],
+  ["Why do coastal places often have milder climates than inland places?", "water heats and cools more slowly than land", ["the ocean is always hot", "coasts have no wind", "the sea blocks sunlight"], "This is the effect of nearness to water."],
+  ["A climate with mild winters, cool summers and lots of precipitation near an ocean is called…", "maritime", ["continental", "desert", "polar"], "Maritime means related to the sea."],
+  ["A climate with hot summers and very cold winters far from the ocean is called…", "continental", ["maritime", "tropical", "Mediterranean"], "It is found in the middle of large land masses."],
+  ["What is a rain shadow?", "a dry area on the side of a mountain away from moist winds", ["a dark rain cloud", "a flood plain", "a wet valley"], "Air drops its moisture on the windward side."],
+  ["Moist air rises up the windward side of a mountain. What usually happens?", "it cools and drops rain or snow", ["it warms and stays dry", "it turns into wind only", "it sinks into the ground"], "Rising air cools, and cool air holds less water."],
+  ["What are prevailing winds?", "winds that usually blow from the same direction in a region", ["winds that only blow at night", "winds made by fans", "winds that never move"], "Much of Canada has westerly winds."],
+  ["How can ocean currents affect a coast’s climate?", "warm currents warm it and cold currents cool it", ["they have no effect", "they make it a desert", "they stop all rain"], "Currents carry heat around the globe."],
+  ["What is a biome?", "a large region with a similar climate, plants and animals", ["a single tree", "a city neighbourhood", "a weather forecast"], "Tundra and rainforest are examples."],
+  ["Which is the largest land biome on Earth?", "the boreal forest (taiga)", ["the tropical rainforest", "the hot desert", "the savanna"], "It stretches across northern Canada, Europe and Asia."],
+  ["Which biome is treeless, cold and has permafrost?", "tundra", ["savanna", "temperate deciduous forest", "tropical rainforest"], "It lies north of the tree line."],
+  ["Which biome has hot, wet weather all year and the most kinds of living things?", "tropical rainforest", ["tundra", "boreal forest", "desert"], "It is found near the equator."],
+  ["Which is the world’s largest tropical rainforest?", "the Amazon", ["the Sahara", "the Gobi", "the Prairies"], "It is in South America."],
+  ["Which is the largest hot desert in the world?", "the Sahara", ["the Amazon", "the Arctic", "the Alps"], "It is in northern Africa."],
+  ["What makes a place a desert?", "it gets very little precipitation", ["it is always hot", "it has sand everywhere", "it is near the equator"], "Antarctica is a cold desert."],
+  ["Which biome has grasses, few trees and is often used for growing grain?", "temperate grassland", ["tundra", "tropical rainforest", "coniferous forest"], "Wide, open plains are an example."],
+  ["Which biome has trees that lose their leaves each fall?", "temperate deciduous forest", ["tundra", "desert", "taiga"], "Maples and oaks are common there."],
+  ["What is a savanna?", "a tropical grassland with scattered trees and wet and dry seasons", ["an icy plain", "a mountain forest", "a deep lake"], "Large herds of grazing animals live there."],
+  ["What is a monsoon?", "a seasonal wind shift that brings a very rainy season", ["a type of mountain", "a cold ocean current", "a desert storm with no rain"], "Parts of South Asia depend on it for crops."],
+  ["What does a climograph show?", "a place’s average monthly temperature and precipitation", ["a country’s population", "the height of mountains", "the number of cities"], "It combines a line graph and a bar graph."],
+  ["On a climograph, the bars usually show…", "precipitation", ["temperature", "population", "elevation"], "The line usually shows temperature."],
+  ["A place’s warmest month averages 18 °C and its coldest −12 °C. What is its annual temperature range?", "30 °C", ["6 °C", "18 °C", "12 °C"], "Subtract the coldest from the warmest."],
+  ["Monthly precipitation is 80, 90, 100 and 70 mm. What is the total for the four months?", "340 mm", ["240 mm", "300 mm", "370 mm"], "Add all four numbers."],
+  ["What is arable land?", "land that can be used to grow crops", ["land covered by ice", "land under the ocean", "land used only for roads"], "Only a small share of Earth’s land is arable."],
+  ["Why do few people live in very cold or very dry biomes?", "it is hard to grow food and find water there", ["it is illegal to live there", "there is no air", "maps do not show them"], "Climate limits farming and water."],
+  ["How do people in hot, dry places often design homes?", "thick walls and small windows to keep heat out", ["glass walls to let heat in", "no roofs", "open sides with no walls"], "Buildings adapt to climate.", true],
+  ["Clearing a rainforest for farms is an example of…", "people changing the environment", ["the environment changing people", "a natural disaster", "continuity"], "Ask who or what caused the change.", true],
+  ["A long drought forces farmers to move away. This is an example of…", "the environment influencing people", ["people causing a drought", "globalization", "urban sprawl"], "Ask what caused the move.", true],
+  ["Why is the tundra especially sensitive to climate change?", "warming thaws permafrost and changes the land", ["it has no living things", "it is getting colder", "it has too many trees"], "Thawing ground can sink and release gases.", true],
+  ["Why does Prince Edward Island have a milder climate than places at the same latitude far inland?", "the surrounding sea moderates its temperatures", ["it is closer to the equator than all inland places", "it has high mountains", "it has a desert climate"], "Think about nearness to water.", true],
+  ["Two cities lie at the same latitude. One is at sea level, the other high in the mountains. Which is usually colder?", "the city high in the mountains", ["the city at sea level", "they are always the same", "it cannot be known"], "Elevation affects temperature.", true],
+  ["Why is Antarctica considered a desert?", "it gets very little precipitation", ["it is hot", "it is covered in sand", "it has no ice"], "Deserts are defined by dryness, not heat.", true],
+  ["Which factor would best explain why a coastal city has wet winters?", "moist winds blowing in from the ocean", ["being far from water", "a rain shadow", "high latitude only"], "Air over the ocean picks up moisture.", true],
+  ["A place is significant for farming because of flat land, rich soil and a long growing season. Which concept is this?", "geographic significance", ["globalization", "urbanization", "inflation"], "Physical features can make places important.", true],
+  ["Why might a ski resort and a farm in the same valley view a warm, snowless winter differently?", "the resort loses business while the farm may be less affected", ["both always lose money", "neither cares about weather", "snow only matters to farms"], "Different activities depend on climate in different ways.", true],
+];
+
+export const peClimatesBiomes9 = bankUnit({
+  id: "pe-climates-biomes-9",
+  title: "World Climates and Biomes",
+  emoji: "🌍",
+  blurb: "Climate factors and world biomes",
+  parentNote:
+    "Practises what controls climate (latitude, elevation, nearness to water, winds and currents), the world’s major biomes, reading climographs, and how climate and people affect each other.",
+  standards: ["DT1; DT2", "how physical features and climate make places significant, and how people and environments influence each other"],
+  items: CLIMATES,
+});

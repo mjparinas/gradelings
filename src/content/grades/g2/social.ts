@@ -1,5 +1,5 @@
 import { shuffle } from "../../random";
-import type { Question, Course } from "../../types";
+import type { Question, Course, GenerateOptions } from "../../types";
 import { fromBank, sortQuestion, type BankItem } from "../../bank";
 
 // ---------- Needs & Wants ----------
@@ -680,6 +680,655 @@ function caring(): Question[] {
   return shuffle([sortQuestion(EARTH_SORT, 3), ...fromBank(CARING_BANK, 7)]);
 }
 
+// Bank items marked `hard` are stretch questions: difficulty 1 uses only the easier
+// items, 2 mixes in a few, 3 is mostly stretch.
+type LevelItem = BankItem & { hard?: true };
+
+function levelled(bank: LevelItem[], count: number, difficulty: 1 | 2 | 3): Question[] {
+  const easy = bank.filter((b) => !b.hard);
+  const hard = bank.filter((b) => b.hard);
+  const want = difficulty === 1 ? 0 : difficulty === 2 ? Math.ceil(count / 3) : Math.ceil((count * 2) / 3);
+  const nHard = Math.min(want, hard.length);
+  return [...fromBank(easy, count - nHard), ...fromBank(hard, nHard)];
+}
+
+// ---------- Lands & Waters ----------
+
+const LAND_WATER_SORT = {
+  prompt: "Is it land or water? Tap an item, then tap its basket.",
+  hint: "Landforms are shapes of the land. Bodies of water are places filled with water.",
+  bins: [
+    { id: "land", label: "landform", emoji: "⛰️" },
+    { id: "water", label: "body of water", emoji: "🌊" },
+  ],
+  items: [
+    { label: "mountain", emoji: "🏔️", bin: "land" },
+    { label: "island", emoji: "🏝️", bin: "land" },
+    { label: "valley", emoji: "🏞️", bin: "land" },
+    { label: "desert", emoji: "🏜️", bin: "land" },
+    { label: "hill", emoji: "⛰️", bin: "land" },
+    { label: "ocean", emoji: "🌊", bin: "water" },
+    { label: "lake", emoji: "🛶", bin: "water" },
+    { label: "river", emoji: "🐟", bin: "water" },
+    { label: "pond", emoji: "🦆", bin: "water" },
+  ],
+};
+
+const WORLD_BANK: LevelItem[] = [
+  {
+    prompt: "Land with water all around it is called an…",
+    right: { label: "island", emoji: "🏝️" },
+    wrong: [
+      { label: "ocean", emoji: "🌊" },
+      { label: "valley", emoji: "🏞️" },
+    ],
+    hint: "An island is land with water on every side.",
+  },
+  {
+    prompt: "A very tall, steep landform with a peak at the top is a…",
+    right: { label: "mountain", emoji: "🏔️" },
+    wrong: [
+      { label: "lake", emoji: "🛶" },
+      { label: "plain", emoji: "🌾" },
+    ],
+    hint: "Mountains are the tallest landforms. Some have snow on top all year.",
+  },
+  {
+    prompt: "Low land between hills or mountains is a…",
+    right: { label: "valley", emoji: "🏞️" },
+    wrong: [
+      { label: "peak", emoji: "🗻" },
+      { label: "island", emoji: "🏝️" },
+    ],
+    hint: "A valley is the low land between higher land. Rivers often flow through valleys.",
+  },
+  {
+    prompt: "Wide, flat land with few hills is called a…",
+    right: { label: "plain", emoji: "🌾" },
+    wrong: [
+      { label: "mountain", emoji: "🏔️" },
+      { label: "canyon", emoji: "🏜️" },
+    ],
+    hint: "Plains are flat and wide. They are often good for farming.",
+  },
+  {
+    prompt: "A very dry place that gets very little rain is a…",
+    right: { label: "desert", emoji: "🏜️" },
+    wrong: [
+      { label: "rainforest", emoji: "🌴" },
+      { label: "lake", emoji: "🛶" },
+    ],
+    hint: "Deserts get very little rain. Some are hot and some are cold.",
+  },
+  {
+    prompt: "Water that flows across the land toward a lake or the ocean is a…",
+    right: { label: "river", emoji: "🏞️" },
+    wrong: [
+      { label: "hill", emoji: "⛰️" },
+      { label: "pond", emoji: "🦆" },
+    ],
+    hint: "A river moves. It flows downhill until it reaches a lake or the sea.",
+  },
+  {
+    prompt: "A big body of water with land all around it is a…",
+    right: { label: "lake", emoji: "🛶" },
+    wrong: [
+      { label: "island", emoji: "🏝️" },
+      { label: "desert", emoji: "🏜️" },
+    ],
+    hint: "A lake is water with land around it. An island is the opposite: land with water around it!",
+  },
+  {
+    prompt: "The biggest bodies of salt water on Earth are…",
+    right: { label: "oceans", emoji: "🌊" },
+    wrong: [
+      { label: "ponds", emoji: "🦆" },
+      { label: "puddles", emoji: "💧" },
+    ],
+    hint: "Oceans are huge and salty. They cover most of the Earth.",
+  },
+  {
+    prompt: "Places near the equator, the middle of the Earth, are usually…",
+    right: { label: "hot", emoji: "☀️" },
+    wrong: [
+      { label: "frozen all year", emoji: "🧊" },
+      { label: "snowy every day", emoji: "❄️" },
+    ],
+    hint: "The sun shines strongly on the middle of the Earth, so it is warm there.",
+  },
+  {
+    prompt: "Places near the North Pole and the South Pole are…",
+    right: { label: "very cold", emoji: "🧊" },
+    wrong: [
+      { label: "hot and dry", emoji: "🌵" },
+      { label: "warm and rainy", emoji: "🌴" },
+    ],
+    hint: "The poles are the coldest places on Earth, covered in ice and snow.",
+  },
+  {
+    prompt: "Which plant grows well in a hot, dry desert?",
+    right: { label: "cactus", emoji: "🌵" },
+    wrong: [
+      { label: "rice in a flooded field", emoji: "🌾" },
+      { label: "moss in a wet forest", emoji: "🌿" },
+    ],
+    hint: "A cactus stores water inside, so it can live where it rarely rains.",
+  },
+  {
+    prompt: "Which animal lives where it is icy and cold?",
+    right: { label: "polar bear", emoji: "🐻‍❄️" },
+    wrong: [
+      { label: "camel", emoji: "🐪" },
+      { label: "parrot", emoji: "🦜" },
+    ],
+    hint: "Polar bears have thick fur and fat to stay warm in the Arctic.",
+  },
+  {
+    prompt: "Which animal is built for life in a hot, sandy desert?",
+    right: { label: "camel", emoji: "🐪" },
+    wrong: [
+      { label: "penguin", emoji: "🐧" },
+      { label: "seal", emoji: "🦭" },
+    ],
+    hint: "Camels can go a long time without drinking water.",
+  },
+  {
+    prompt: "A warm, wet forest with lots of rain all year is a…",
+    right: { label: "rainforest", emoji: "🌴" },
+    wrong: [
+      { label: "desert", emoji: "🏜️" },
+      { label: "glacier", emoji: "🧊" },
+    ],
+    hint: "Rainforests get rain almost every day, so plants grow tall and thick.",
+  },
+  {
+    prompt: "A round model of the whole Earth is a…",
+    right: { label: "globe", emoji: "🌍" },
+    wrong: [
+      { label: "compass", emoji: "🧭" },
+      { label: "ruler", emoji: "📏" },
+    ],
+    hint: "A globe is shaped like a ball, just like the Earth.",
+  },
+  {
+    prompt: "The very large pieces of land on Earth are called…",
+    right: "continents",
+    wrong: ["islands", "ponds"],
+    hint: "There are seven continents. We live on the continent of North America.",
+    emoji: "🗺️",
+  },
+  {
+    prompt: "Which continent is Canada part of?",
+    right: "North America",
+    wrong: ["Africa", "Australia"],
+    hint: "Canada is in North America, along with the United States and Mexico.",
+    emoji: "🌎",
+  },
+  {
+    prompt: "How many continents are there on Earth?",
+    right: "7",
+    wrong: ["3", "12"],
+    hint: "There are seven continents: Africa, Antarctica, Asia, Australia, Europe, North America and South America.",
+    emoji: "🌍",
+  },
+  {
+    prompt: "On a map or globe, most of the Earth is coloured…",
+    right: { label: "blue, for water", emoji: "🌊" },
+    wrong: [
+      { label: "green, for forests", emoji: "🌲" },
+      { label: "brown, for deserts", emoji: "🏜️" },
+    ],
+    hint: "Water covers most of the Earth, so maps and globes show lots of blue.",
+  },
+  {
+    prompt: "Which continent is covered in ice and is the coldest place on Earth?",
+    right: "Antarctica",
+    wrong: ["Africa", "South America"],
+    hint: "Antarctica is at the South Pole. Penguins live there.",
+    emoji: "🐧",
+  },
+  {
+    prompt: "A huge, slow-moving body of ice on land is a…",
+    right: { label: "glacier", emoji: "🧊" },
+    wrong: [
+      { label: "river", emoji: "🏞️" },
+      { label: "beach", emoji: "🏖️" },
+    ],
+    hint: "Glaciers are made of snow packed into ice over many, many years.",
+  },
+  {
+    prompt: "A small body of still water, smaller than a lake, is a…",
+    right: { label: "pond", emoji: "🦆" },
+    wrong: [
+      { label: "ocean", emoji: "🌊" },
+      { label: "mountain", emoji: "🏔️" },
+    ],
+    hint: "Ponds are small and still. Frogs and ducks often live there.",
+  },
+  {
+    prompt: "In a place with very cold winters, what do homes need most?",
+    right: { label: "heat to keep warm", emoji: "🔥" },
+    wrong: [
+      { label: "a pool on the roof", emoji: "🏊" },
+      { label: "open windows all winter", emoji: "🪟" },
+    ],
+    hint: "Climate changes what people need. Cold places need warm homes and clothes.",
+    hard: true,
+  },
+  {
+    prompt: "Why do many homes in very hot places have thick walls and shady windows?",
+    right: "to stay cool inside",
+    wrong: ["to keep snow out", "to stay warm in winter storms"],
+    hint: "Thick walls and shade keep out the hot sun.",
+    emoji: "☀️",
+    hard: true,
+  },
+  {
+    prompt: "Many towns grow up beside rivers. Why?",
+    right: { label: "people need water for drinking, food and travel", emoji: "🛶" },
+    wrong: [
+      { label: "rivers keep people away", emoji: "🚫" },
+      { label: "rivers make the land dry", emoji: "🏜️" },
+    ],
+    hint: "Rivers give water for drinking and farming, and a way to travel.",
+    hard: true,
+  },
+  {
+    prompt: "Kids in a hot country and kids in a cold country both need…",
+    right: { label: "food, water and a safe home", emoji: "🏠" },
+    wrong: [
+      { label: "a snowsuit", emoji: "🧥" },
+      { label: "a sun hat every day", emoji: "👒" },
+    ],
+    hint: "Some needs change with the climate, but everyone needs food, water and shelter.",
+    hard: true,
+  },
+  {
+    prompt: "Which one is a body of water, not a landform?",
+    right: { label: "bay", emoji: "⛵" },
+    wrong: [
+      { label: "hill", emoji: "⛰️" },
+      { label: "plain", emoji: "🌾" },
+    ],
+    hint: "A bay is part of an ocean or lake that curves into the land.",
+    hard: true,
+  },
+  {
+    prompt: "A long, narrow beach where the land meets the ocean is part of the…",
+    right: "coast",
+    wrong: ["desert", "prairie"],
+    hint: "The coast is where land and sea meet.",
+    emoji: "🏖️",
+    hard: true,
+  },
+  {
+    prompt: "Snow and ice melt on mountains in spring. Where does the water go?",
+    right: { label: "into streams and rivers", emoji: "🏞️" },
+    wrong: [
+      { label: "up to the moon", emoji: "🌙" },
+      { label: "into the desert sand forever", emoji: "🏜️" },
+    ],
+    hint: "Melted snow runs downhill into streams, rivers and lakes.",
+    hard: true,
+  },
+  {
+    prompt: "People on a small island often travel to the mainland by…",
+    right: { label: "ferry or boat", emoji: "⛴️" },
+    wrong: [
+      { label: "train under every island", emoji: "🚆" },
+      { label: "camel", emoji: "🐪" },
+    ],
+    hint: "The land around a community shapes how people travel.",
+    hard: true,
+  },
+  {
+    prompt: "Which job would you most likely find in a farming community on the plains?",
+    right: { label: "grain farmer", emoji: "🌾" },
+    wrong: [
+      { label: "deep-sea diver", emoji: "🤿" },
+      { label: "glacier guide", emoji: "🧊" },
+    ],
+    hint: "Flat land with good soil is great for growing grain.",
+    hard: true,
+  },
+  {
+    prompt: "In which climate would people most likely wear light clothes all year?",
+    right: { label: "a hot, rainy place near the equator", emoji: "🌴" },
+    wrong: [
+      { label: "the Arctic", emoji: "🧊" },
+      { label: "a snowy mountain top", emoji: "🏔️" },
+    ],
+    hint: "Near the equator it is warm all year, so heavy coats aren't needed.",
+    hard: true,
+  },
+  {
+    prompt: "What is weather that a place has most years, like hot summers and cold winters, called?",
+    right: "climate",
+    wrong: ["a holiday", "a landform"],
+    hint: "Weather is what happens today. Climate is what a place is usually like over many years.",
+    emoji: "🌦️",
+    hard: true,
+  },
+  {
+    prompt: "Which big ocean is between Canada and Asia?",
+    right: "the Pacific Ocean",
+    wrong: ["the Atlantic Ocean", "the Arctic Ocean"],
+    hint: "The Pacific Ocean is on Canada's west side. Asia is across it.",
+    emoji: "🌏",
+    hard: true,
+  },
+  {
+    prompt: "Which big ocean is between Canada and Europe?",
+    right: "the Atlantic Ocean",
+    wrong: ["the Pacific Ocean", "the Indian Ocean"],
+    hint: "The Atlantic Ocean is on Canada's east side. Europe is across it.",
+    emoji: "🌍",
+    hard: true,
+  },
+  {
+    prompt: "Many people in the world live near water. Why is it important to keep lakes and oceans clean?",
+    right: { label: "people, plants and animals all need clean water", emoji: "💧" },
+    wrong: [
+      { label: "dirty water is better for fish", emoji: "🐟" },
+      { label: "only one town uses the water", emoji: "🏘️" },
+    ],
+    hint: "Water connects communities. What one place puts in the water can reach many others.",
+    hard: true,
+  },
+];
+
+function landsAndWaters({ difficulty = 2 }: GenerateOptions = {}): Question[] {
+  return shuffle([sortQuestion(LAND_WATER_SORT, difficulty === 1 ? 2 : 3), ...levelled(WORLD_BANK, 7, difficulty)]);
+}
+
+// ---------- Leaders & Services ----------
+
+const GOODS_SERVICES_SORT = {
+  prompt: "Is it a good or a service? Tap an item, then tap its basket.",
+  hint: "Goods are things you can hold. Services are jobs people do to help others.",
+  bins: [
+    { id: "good", label: "good", emoji: "📦" },
+    { id: "service", label: "service", emoji: "🛠️" },
+  ],
+  items: [
+    { label: "apples", emoji: "🍎", bin: "good" },
+    { label: "a bike", emoji: "🚲", bin: "good" },
+    { label: "a book", emoji: "📕", bin: "good" },
+    { label: "a sweater", emoji: "🧶", bin: "good" },
+    { label: "a haircut", emoji: "💇", bin: "service" },
+    { label: "a bus ride", emoji: "🚌", bin: "service" },
+    { label: "a check-up at the dentist", emoji: "🦷", bin: "service" },
+    { label: "fixing a car", emoji: "🔧", bin: "service" },
+  ],
+};
+
+const LEADERS_BANK: LevelItem[] = [
+  {
+    prompt: "Who leads the council of a town or city?",
+    right: { label: "the mayor", emoji: "🏛️" },
+    wrong: [
+      { label: "the crossing guard", emoji: "🚸" },
+      { label: "the baker", emoji: "🍞" },
+    ],
+    hint: "Towns and cities elect a mayor and councillors to make decisions.",
+  },
+  {
+    prompt: "The group that makes decisions for a town or city is the…",
+    right: "council",
+    wrong: ["choir", "team bus"],
+    hint: "Councillors meet together on the town or city council.",
+    emoji: "🏛️",
+  },
+  {
+    prompt: "Where does a city council often meet?",
+    right: { label: "city hall", emoji: "🏛️" },
+    wrong: [
+      { label: "the skating rink", emoji: "⛸️" },
+      { label: "a grocery store", emoji: "🛒" },
+    ],
+    hint: "City hall (or the town hall) is where the mayor and council meet.",
+  },
+  {
+    prompt: "Many First Nations communities choose a chief and…",
+    right: "a council",
+    wrong: ["a sports team", "a bus driver"],
+    hint: "Many First Nations communities have a chief and council who make decisions for the community.",
+    emoji: "🌲",
+  },
+  {
+    prompt: "In many Indigenous communities, Elders are respected because they…",
+    right: { label: "share knowledge and give advice", emoji: "🧓" },
+    wrong: [
+      { label: "drive the fire trucks", emoji: "🚒" },
+      { label: "sell the most toys", emoji: "🧸" },
+    ],
+    hint: "Elders have lived a long time and share what they know with the community.",
+  },
+  {
+    prompt: "How do adults choose a mayor?",
+    right: { label: "they vote", emoji: "🗳️" },
+    wrong: [
+      { label: "they flip a coin", emoji: "🪙" },
+      { label: "the tallest person wins", emoji: "📏" },
+    ],
+    hint: "In an election, adult citizens vote for the people they want as leaders.",
+  },
+  {
+    prompt: "A person who helps the community without being paid is a…",
+    right: { label: "volunteer", emoji: "🙋" },
+    wrong: [
+      { label: "customer", emoji: "🛍️" },
+      { label: "tourist", emoji: "📸" },
+    ],
+    hint: "Volunteers give their time to help, like coaching a team or helping at a food bank.",
+  },
+  {
+    prompt: "Who helps keep people safe and makes sure laws are followed?",
+    right: { label: "police officers", emoji: "👮" },
+    wrong: [
+      { label: "librarians", emoji: "📚" },
+      { label: "painters", emoji: "🎨" },
+    ],
+    hint: "Police officers are part of the services a community provides.",
+  },
+  {
+    prompt: "Buses and trains that everyone can ride are called…",
+    right: "public transit",
+    wrong: ["private jets", "toy trains"],
+    hint: "Public transit is a service that helps people get around the community.",
+    emoji: "🚌",
+  },
+  {
+    prompt: "Which service brings clean water to homes?",
+    right: { label: "the water system", emoji: "🚰" },
+    wrong: [
+      { label: "the movie theatre", emoji: "🎬" },
+      { label: "the toy store", emoji: "🧸" },
+    ],
+    hint: "Communities build pipes and treatment plants so homes get clean water.",
+  },
+  {
+    prompt: "Things you can buy and hold, like food and toys, are called…",
+    right: "goods",
+    wrong: ["services", "rules"],
+    hint: "Goods are things. Services are jobs people do for us.",
+    emoji: "🛒",
+  },
+  {
+    prompt: "A job someone does for you, like cutting your hair, is a…",
+    right: "service",
+    wrong: ["good", "landform"],
+    hint: "A service is work done to help someone.",
+    emoji: "💇",
+  },
+  {
+    prompt: "Your class must pick a game. Everyone votes and the game with the most votes wins. This is…",
+    right: "majority rule",
+    wrong: ["a secret", "a landform"],
+    hint: "Majority rule means the choice with the most votes is picked.",
+    emoji: "✋",
+  },
+  {
+    prompt: "Your group talks until everyone agrees on a plan. This is called…",
+    right: "reaching a consensus",
+    wrong: ["flipping a coin", "giving up"],
+    hint: "A consensus is when the whole group agrees.",
+    emoji: "🤝",
+  },
+  {
+    prompt: "Who makes the rules for your classroom?",
+    right: { label: "your teacher, often with the class", emoji: "🧑‍🏫" },
+    wrong: [
+      { label: "the mayor", emoji: "🏛️" },
+      { label: "a visitor at the door", emoji: "🚪" },
+    ],
+    hint: "Different leaders make decisions for different places.",
+  },
+  {
+    prompt: "A food bank helps people who…",
+    right: { label: "can't buy enough food right now", emoji: "🥫" },
+    wrong: [
+      { label: "want a new video game", emoji: "🎮" },
+      { label: "need a haircut", emoji: "💇" },
+    ],
+    hint: "Communities help people who can't meet their basic needs, like food.",
+  },
+  {
+    prompt: "What does a bylaw officer do?",
+    right: { label: "checks that town rules are followed", emoji: "📋" },
+    wrong: [
+      { label: "teaches swimming", emoji: "🏊" },
+      { label: "bakes bread", emoji: "🍞" },
+    ],
+    hint: "Bylaws are rules made by a town or city council, like where dogs must be on a leash.",
+  },
+  {
+    prompt: "Who pays for roads, parks and fire halls in a community?",
+    right: { label: "everyone shares the cost through taxes", emoji: "💰" },
+    wrong: [
+      { label: "only children", emoji: "🧒" },
+      { label: "nobody, they are free to build", emoji: "🆓" },
+    ],
+    hint: "Adults pay taxes. The money pays for services everyone uses.",
+  },
+  {
+    prompt: "How can a kid help make a decision in their community?",
+    right: { label: "share ideas with leaders, like writing a letter", emoji: "✉️" },
+    wrong: [
+      { label: "shout at the council", emoji: "📢" },
+      { label: "ignore the problem", emoji: "🙈" },
+    ],
+    hint: "Kids can share ideas respectfully, even before they are old enough to vote.",
+    hard: true,
+  },
+  {
+    prompt: "The council wants a new park. Some people want a parking lot instead. A fair way to decide is to…",
+    right: { label: "listen to many people, then vote", emoji: "🗳️" },
+    wrong: [
+      { label: "let one person choose for fun", emoji: "🎲" },
+      { label: "never decide", emoji: "⏳" },
+    ],
+    hint: "Good leaders listen to different points of view before deciding.",
+    hard: true,
+  },
+  {
+    prompt: "When the teacher decides alone, without a vote, that is…",
+    right: "authority rule",
+    wrong: ["majority rule", "consensus"],
+    hint: "Authority rule means a leader makes the decision.",
+    emoji: "🧑‍🏫",
+    hard: true,
+  },
+  {
+    prompt: "A small village might not have a hospital. Where might people go?",
+    right: { label: "to a hospital in a bigger town nearby", emoji: "🏥" },
+    wrong: [
+      { label: "to the library", emoji: "📚" },
+      { label: "to the beach", emoji: "🏖️" },
+    ],
+    hint: "Big communities often have more services than small ones.",
+    hard: true,
+  },
+  {
+    prompt: "Why might a big city have more bus routes than a small village?",
+    right: "more people need to get around",
+    wrong: ["villages have no roads at all", "buses only work in cities"],
+    hint: "The size of a community changes which services it needs.",
+    emoji: "🚌",
+    hard: true,
+  },
+  {
+    prompt: "Families can get a home by buying it or by…",
+    right: "renting it",
+    wrong: ["borrowing it from the library", "drawing it"],
+    hint: "Renting means paying to live in a home that someone else owns.",
+    emoji: "🏠",
+    hard: true,
+  },
+  {
+    prompt: "Libraries, parks and fire halls are paid for with public money. This means they are for…",
+    right: { label: "everyone in the community", emoji: "👨‍👩‍👧‍👦" },
+    wrong: [
+      { label: "only the mayor", emoji: "🏛️" },
+      { label: "only people who own a car", emoji: "🚗" },
+    ],
+    hint: "Public services are shared by the whole community.",
+    hard: true,
+  },
+  {
+    prompt: "A storm knocks down trees across town. Which service helps clear the roads?",
+    right: { label: "public works crews", emoji: "🚜" },
+    wrong: [
+      { label: "the ice cream shop", emoji: "🍦" },
+      { label: "the music teacher", emoji: "🎻" },
+    ],
+    hint: "Public works crews look after roads, water pipes and parks.",
+    hard: true,
+  },
+  {
+    prompt: "Every child in the world has the right to food, water, school and safety. These are…",
+    right: "human rights",
+    wrong: ["chores", "wants"],
+    hint: "Human rights belong to every person, wherever they live.",
+    emoji: "🌍",
+    hard: true,
+  },
+  {
+    prompt: "A flood hits a town far away. How can people in other communities help?",
+    right: { label: "send help, like food, water and supplies", emoji: "📦" },
+    wrong: [
+      { label: "do nothing because it is far", emoji: "🤷" },
+      { label: "laugh at the news", emoji: "😆" },
+    ],
+    hint: "Global citizens help others, near and far.",
+    hard: true,
+  },
+  {
+    prompt: "A councillor's job is to…",
+    right: { label: "help make decisions for the community", emoji: "🏛️" },
+    wrong: [
+      { label: "teach one class at school", emoji: "🏫" },
+      { label: "deliver pizza", emoji: "🍕" },
+    ],
+    hint: "Councillors are elected to make decisions with the mayor.",
+    hard: true,
+  },
+  {
+    prompt: "Why do adults vote in elections?",
+    right: { label: "to choose leaders who make decisions for everyone", emoji: "🗳️" },
+    wrong: [
+      { label: "to win a prize", emoji: "🏆" },
+      { label: "to pick their favourite colour", emoji: "🎨" },
+    ],
+    hint: "Voting lets citizens have a say in who leads their community.",
+    hard: true,
+  },
+];
+
+function leadersAndServices({ difficulty = 2 }: GenerateOptions = {}): Question[] {
+  return shuffle([sortQuestion(GOODS_SERVICES_SORT, difficulty === 1 ? 2 : 3), ...levelled(LEADERS_BANK, 7, difficulty)]);
+}
+
 export const course: Course = {
   grade: "2",
   subject: "social",
@@ -718,6 +1367,26 @@ export const course: Course = {
       standards: { "ca-bc": "Rights, roles and responsibilities of individuals and communities; local actions with global consequences" },
       parentNote: "Rights and responsibilities, community helpers, and how small local actions help the planet.",
       generate: caring,
+    },
+    {
+      id: "lands-and-waters",
+      title: "Lands & Waters",
+      emoji: "🌍",
+      blurb: "Landforms, climates and continents",
+      standards: { "ca-bc": "Diverse features of the environment in other parts of Canada and the world: climate zones, landforms, bodies of water, plants and animals" },
+      parentNote:
+        "Naming landforms and bodies of water, hot and cold climate zones, the continents and oceans, and how the land and climate shape the way people live.",
+      generate: landsAndWaters,
+    },
+    {
+      id: "leaders-and-services",
+      title: "Leaders & Services",
+      emoji: "🏛️",
+      blurb: "Who decides, and who helps",
+      standards: { "ca-bc": "Roles and responsibilities of regional governments; how people's needs and wants are met in communities (goods and services)" },
+      parentNote:
+        "Mayors, councils, chiefs and Elders, community services and who pays for them, goods and services, and fair ways to make a group decision (voting, consensus).",
+      generate: leadersAndServices,
     },
   ],
 };

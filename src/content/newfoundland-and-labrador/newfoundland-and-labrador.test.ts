@@ -67,7 +67,7 @@ describe("Newfoundland and Labrador", () => {
   it("adds the Newfoundland and Labrador-only units for Newfoundland and Labrador alone", () => {
     const own = COURSES.flatMap((c) => c.units.filter((u) => u.id.startsWith("nl-")).map((u) => ({ g: c.grade, u })));
     expect(own.map((o) => o.u.id).sort()).toEqual(
-      ["nl-agreements-9", "nl-confederation-8", "nl-explorers-5", "nl-fishery-5", "nl-government-6", "nl-peoples-4", "nl-province-3", "nl-resources-7"].sort(),
+      ["nl-agreements-9", "nl-confederation-8", "nl-economy-8", "nl-erosion-4", "nl-exploration-4", "nl-exploration-tools-4", "nl-explorers-4", "nl-explorers-5", "nl-fishery-5", "nl-government-6", "nl-peoples-4", "nl-province-3", "nl-resources-7", "nl-rocks-minerals-4"].sort(),
     );
     for (const { g, u } of own) expect(Object.keys(u.standards), `${g}/${u.id}`).toEqual(["ca-nl"]);
   });

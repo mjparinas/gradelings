@@ -1,4 +1,4 @@
-import { shuffle } from "../../random";
+import { pick, shuffle } from "../../random";
 import type { Course, GenerateOptions, OrderQuestion, Question } from "../../types";
 import { fromBank, sortQuestion, type BankItem, type SortSet } from "../../bank";
 
@@ -702,6 +702,391 @@ function helpersRules({ difficulty = 2 }: GenerateOptions = {}): Question[] {
   return shuffle([sortFor(RULES_SORT, difficulty), ...leveled(HELPERS_EASY, HELPERS_HARD, 7, difficulty)]);
 }
 
+// ---------- My Story ----------
+
+const BABY_SORT: SortSet = {
+  prompt: "Baby or big kid? Tap a picture, then its basket.",
+  hint: "Babies need lots of help. Now that you're bigger, you can do more things yourself!",
+  bins: [
+    { id: "baby", label: "when I was a baby", emoji: "👶" },
+    { id: "now", label: "now that I'm bigger", emoji: "🧒" },
+  ],
+  items: [
+    { label: "drink from a bottle", emoji: "🍼", bin: "baby" },
+    { label: "crawl", emoji: "🐛", bin: "baby" },
+    { label: "sleep in a crib", emoji: "🛏️", bin: "baby" },
+    { label: "ride in a stroller", emoji: "🚼", bin: "baby" },
+    { label: "ride a bike", emoji: "🚲", bin: "now" },
+    { label: "go to school", emoji: "🏫", bin: "now" },
+    { label: "draw a picture", emoji: "🖍️", bin: "now" },
+    { label: "put on my shoes", emoji: "👟", bin: "now" },
+  ],
+};
+
+const STORY_ORDERS: OrderQuestion[] = [
+  {
+    kind: "order",
+    prompt: "Put your day in order.",
+    hint: "What do you do first when you wake up? What do you do last?",
+    items: [
+      { id: "wake", label: "wake up", emoji: "⏰" },
+      { id: "eat", label: "eat breakfast", emoji: "🥣" },
+      { id: "school", label: "go to school", emoji: "🏫" },
+      { id: "sleep", label: "go to sleep", emoji: "😴" },
+    ],
+  },
+  {
+    kind: "order",
+    prompt: "Put these days in order.",
+    hint: "Yesterday is already over. Today is now. Tomorrow comes next.",
+    items: [
+      { id: "y", label: "yesterday", emoji: "⬅️" },
+      { id: "t", label: "today", emoji: "📍" },
+      { id: "n", label: "tomorrow", emoji: "➡️" },
+    ],
+  },
+  {
+    kind: "order",
+    prompt: "Put the seasons in order. Start with spring.",
+    hint: "Spring, then summer, then fall, then winter. Then spring comes again!",
+    items: [
+      { id: "sp", label: "spring", emoji: "🌷" },
+      { id: "su", label: "summer", emoji: "☀️" },
+      { id: "fa", label: "fall", emoji: "🍂" },
+      { id: "wi", label: "winter", emoji: "⛄" },
+    ],
+  },
+  {
+    kind: "order",
+    prompt: "Put the birthday party in order.",
+    hint: "First the cake comes out, then you blow out the candles, then everyone eats.",
+    items: [
+      { id: "cake", label: "bring out the cake", emoji: "🎂" },
+      { id: "blow", label: "blow out the candles", emoji: "🕯️" },
+      { id: "eat", label: "eat the cake", emoji: "🍰" },
+    ],
+  },
+  {
+    kind: "order",
+    prompt: "Put the morning in order.",
+    hint: "Think about getting ready for school, one step at a time.",
+    items: [
+      { id: "dress", label: "get dressed", emoji: "👕" },
+      { id: "shoes", label: "put on shoes", emoji: "👟" },
+      { id: "walk", label: "walk to school", emoji: "🚶" },
+    ],
+  },
+];
+
+const STORY_EASY: BankItem[] = [
+  {
+    prompt: "Which is a big day in a kid's life?",
+    right: { label: "the first day of school", emoji: "🏫" },
+    wrong: [
+      { label: "brushing teeth", emoji: "🪥" },
+      { label: "eating a snack", emoji: "🍎" },
+    ],
+    hint: "Some days are extra special, like starting school.",
+  },
+  {
+    prompt: "Leo lost his first tooth! That is a…",
+    right: { label: "special event", emoji: "🦷" },
+    wrong: [
+      { label: "kind of food", emoji: "🍕" },
+      { label: "type of weather", emoji: "☁️" },
+    ],
+    hint: "Losing a first tooth is an important event in growing up.",
+  },
+  {
+    prompt: "Maya's family has a new baby. How might Maya help?",
+    right: { label: "sing the baby a song", emoji: "🎵" },
+    wrong: [
+      { label: "take the baby's bottle", emoji: "🍼" },
+      { label: "shout near the baby", emoji: "📢" },
+    ],
+    hint: "Big brothers and sisters can help in gentle ways.",
+  },
+  {
+    prompt: "When were you the smallest?",
+    right: { label: "when you were a baby", emoji: "👶" },
+    wrong: [
+      { label: "today", emoji: "📍" },
+      { label: "when you are a grown-up", emoji: "🧑" },
+    ],
+    hint: "Everyone starts small. We grow bigger every year.",
+  },
+  {
+    prompt: "What day comes after today?",
+    right: { label: "tomorrow", emoji: "➡️" },
+    wrong: [
+      { label: "yesterday", emoji: "⬅️" },
+      { label: "last week", emoji: "🗓️" },
+    ],
+    hint: "Tomorrow is the next day. Yesterday was the day before.",
+  },
+  {
+    prompt: "What day came before today?",
+    right: { label: "yesterday", emoji: "⬅️" },
+    wrong: [
+      { label: "tomorrow", emoji: "➡️" },
+      { label: "next week", emoji: "🗓️" },
+    ],
+    hint: "Yesterday is the day that is already over.",
+  },
+  {
+    prompt: "What do we celebrate each year on the day we were born?",
+    right: { label: "a birthday", emoji: "🎂" },
+    wrong: [
+      { label: "a snow day", emoji: "❄️" },
+      { label: "a school day", emoji: "🏫" },
+    ],
+    hint: "Your birthday comes once a year. You turn one year older!",
+  },
+  {
+    prompt: "Every year on your birthday, you get…",
+    right: { label: "one year older", emoji: "🎈" },
+    wrong: [
+      { label: "one year younger", emoji: "👶" },
+      { label: "a new name", emoji: "🏷️" },
+    ],
+    hint: "We grow a little older every year.",
+  },
+  {
+    prompt: "How can you learn about when you were a baby?",
+    right: { label: "look at baby photos", emoji: "📷" },
+    wrong: [
+      { label: "look at the weather", emoji: "🌤️" },
+      { label: "count your toys", emoji: "🧸" },
+    ],
+    hint: "Photos help us remember the past.",
+  },
+  {
+    prompt: "Who can tell you stories about long ago?",
+    right: { label: "a grandparent", emoji: "🧓" },
+    wrong: [
+      { label: "a new baby", emoji: "👶" },
+      { label: "a puppy", emoji: "🐶" },
+    ],
+    hint: "Older family members remember things from long ago.",
+  },
+  {
+    prompt: "Which season has snow in many places?",
+    right: { label: "winter", emoji: "⛄" },
+    wrong: [
+      { label: "summer", emoji: "☀️" },
+      { label: "spring", emoji: "🌷" },
+    ],
+    hint: "Winter is the coldest season.",
+  },
+  {
+    prompt: "In which season do leaves fall from many trees?",
+    right: { label: "fall", emoji: "🍂" },
+    wrong: [
+      { label: "summer", emoji: "☀️" },
+      { label: "winter", emoji: "⛄" },
+    ],
+    hint: "That's why we call it fall! Leaves change colour and drop.",
+  },
+  {
+    prompt: "Ana's family got a new puppy. That is a…",
+    right: { label: "big family event", emoji: "🐶" },
+    wrong: [
+      { label: "math problem", emoji: "➕" },
+      { label: "kind of weather", emoji: "🌧️" },
+    ],
+    hint: "A new pet is an important change for a family.",
+  },
+  {
+    prompt: "Jay's family moved to a new house. How might Jay feel?",
+    right: { label: "excited and a little nervous", emoji: "😊" },
+    wrong: [
+      { label: "like a fish", emoji: "🐟" },
+      { label: "like a tree", emoji: "🌳" },
+    ],
+    hint: "Big changes can make us feel many feelings at once.",
+  },
+  {
+    prompt: "What can you do now that a baby can't?",
+    right: { label: "ride a bike", emoji: "🚲" },
+    wrong: [
+      { label: "drink milk", emoji: "🥛" },
+      { label: "sleep", emoji: "😴" },
+    ],
+    hint: "You've grown! Babies drink milk and sleep too, but they can't ride a bike.",
+  },
+  {
+    prompt: "Which one shows a special family memory?",
+    right: { label: "a photo album", emoji: "📔" },
+    wrong: [
+      { label: "a garbage can", emoji: "🗑️" },
+      { label: "a traffic light", emoji: "🚦" },
+    ],
+    hint: "Families keep photos to remember special times.",
+  },
+  {
+    prompt: "Where does your community play sports and swim?",
+    right: { label: "a recreation centre", emoji: "🏊" },
+    wrong: [
+      { label: "a gas station", emoji: "⛽" },
+      { label: "a bank", emoji: "🏦" },
+    ],
+    hint: "A rec centre has pools, gyms and rinks for everyone.",
+  },
+  {
+    prompt: "A new school is built in your town. That is a…",
+    right: { label: "community event", emoji: "🏫" },
+    wrong: [
+      { label: "kind of animal", emoji: "🐻" },
+      { label: "bedtime story", emoji: "📖" },
+    ],
+    hint: "New buildings change a community. People notice and talk about them.",
+  },
+  {
+    prompt: "Which place is special to many kids?",
+    right: { label: "the playground", emoji: "🛝" },
+    wrong: [
+      { label: "a busy highway", emoji: "🛣️" },
+      { label: "a parking lot", emoji: "🅿️" },
+    ],
+    hint: "Special places are where we have fun and make memories.",
+  },
+];
+
+const STORY_HARD: BankItem[] = [
+  {
+    prompt: "Long ago, how did many people send news far away?",
+    right: { label: "they wrote letters", emoji: "✉️" },
+    wrong: [
+      { label: "they sent a text", emoji: "📱" },
+      { label: "they made a video call", emoji: "💻" },
+    ],
+    hint: "Phones that send texts are new. Long ago people wrote letters.",
+  },
+  {
+    prompt: "Which toy could a child have played with long, long ago?",
+    right: { label: "a wooden yo-yo", emoji: "🪀" },
+    wrong: [
+      { label: "a tablet game", emoji: "📱" },
+      { label: "a video game", emoji: "🎮" },
+    ],
+    hint: "Long ago, toys were often made of wood or cloth.",
+  },
+  {
+    prompt: "Long, long ago, before cars, how did many people travel?",
+    right: { label: "by horse or on foot", emoji: "🐴" },
+    wrong: [
+      { label: "by airplane", emoji: "✈️" },
+      { label: "by electric car", emoji: "🚗" },
+    ],
+    hint: "Cars and planes are newer. Long ago, people walked or used horses.",
+  },
+  {
+    prompt: "Grandma shows you her old teddy bear. It is a family…",
+    right: { label: "treasure", emoji: "🧸" },
+    wrong: [
+      { label: "chore", emoji: "🧹" },
+      { label: "rule", emoji: "📋" },
+    ],
+    hint: "Old things that hold family memories are treasures.",
+  },
+  {
+    prompt: "What stays the same as you grow up?",
+    right: { label: "you are still you", emoji: "😊" },
+    wrong: [
+      { label: "your shoe size", emoji: "👟" },
+      { label: "how tall you are", emoji: "📏" },
+    ],
+    hint: "Your body grows, but you are still the same special person.",
+  },
+  {
+    prompt: "Why do families tell stories about the past?",
+    right: { label: "to remember and share who they are", emoji: "💬" },
+    wrong: [
+      { label: "to make you sleepy", emoji: "😴" },
+      { label: "to finish homework", emoji: "📝" },
+    ],
+    hint: "Family stories help us know where we come from.",
+  },
+  {
+    prompt: "Which one is from now, not long ago?",
+    right: { label: "a tablet", emoji: "📱" },
+    wrong: [
+      { label: "a horse and wagon", emoji: "🐴" },
+      { label: "a candle for light", emoji: "🕯️" },
+    ],
+    hint: "Tablets are new. Long ago, people used candles and horses.",
+  },
+  {
+    prompt: "Kenji's family came to Canada from far away. That is part of his…",
+    right: { label: "family story", emoji: "📖" },
+    wrong: [
+      { label: "lunch box", emoji: "🍱" },
+      { label: "shoe size", emoji: "👟" },
+    ],
+    hint: "Where a family came from is part of their story.",
+  },
+  {
+    prompt: "An old photo shows your street with no houses. What changed?",
+    right: { label: "houses were built", emoji: "🏘️" },
+    wrong: [
+      { label: "the sky moved away", emoji: "☁️" },
+      { label: "nothing changed", emoji: "🚫" },
+    ],
+    hint: "Old photos show how a place has changed over time.",
+  },
+  {
+    prompt: "What might change in your community over time?",
+    right: { label: "new buildings and parks", emoji: "🏗️" },
+    wrong: [
+      { label: "the sun stops shining", emoji: "🌑" },
+      { label: "the seasons stop", emoji: "🛑" },
+    ],
+    hint: "Communities change as people build new places.",
+  },
+  {
+    prompt: "Which happens every year?",
+    right: { label: "your birthday", emoji: "🎂" },
+    wrong: [
+      { label: "losing your first tooth", emoji: "🦷" },
+      { label: "getting your very first tooth", emoji: "👶" },
+    ],
+    hint: "Some events happen only once. A birthday comes every year.",
+  },
+  {
+    prompt: "Which happens only once in your life?",
+    right: { label: "your first day of kindergarten", emoji: "🎒" },
+    wrong: [
+      { label: "eating lunch", emoji: "🥪" },
+      { label: "going to sleep", emoji: "😴" },
+    ],
+    hint: "We eat and sleep every day, but a first day only happens once.",
+  },
+  {
+    prompt: "Before electric lights, how did people see at night?",
+    speak: "Long ago, before electric lights, how did people see at night?",
+    right: { label: "with candles and lamps", emoji: "🕯️" },
+    wrong: [
+      { label: "with phone screens", emoji: "📱" },
+      { label: "with TV light", emoji: "📺" },
+    ],
+    hint: "Long ago, people used fire, candles and oil lamps for light.",
+  },
+  {
+    prompt: "What is the same for kids long ago and kids today?",
+    right: { label: "they like to play", emoji: "🤸" },
+    wrong: [
+      { label: "they all had tablets", emoji: "📱" },
+      { label: "they all rode in cars", emoji: "🚗" },
+    ],
+    hint: "Some things change, but kids have always loved to play!",
+  },
+];
+
+function myStory({ difficulty = 2 }: GenerateOptions = {}): Question[] {
+  const first = difficulty === 1 ? sortFor(BABY_SORT, difficulty) : pick(STORY_ORDERS);
+  return shuffle([first, ...leveled(STORY_EASY, STORY_HARD, 7, difficulty)]);
+}
+
 export const course: Course = {
   grade: "k",
   subject: "social",
@@ -757,6 +1142,19 @@ export const course: Course = {
       parentNote:
         "Community helpers and places, classroom rules like taking turns, being responsible, and learning that Indigenous peoples were the first people of this land.",
       generate: helpersRules,
+    },
+    {
+      id: "my-story",
+      title: "My Story",
+      emoji: "📸",
+      blurb: "Growing up, then and now",
+      standards: {
+        "ca-bc":
+          "Personal and family history and traditions; people, places, and events in the local community",
+      },
+      parentNote:
+        "Big events in a child's life, yesterday, today and tomorrow, putting events in order, and noticing what has changed since long ago and what has stayed the same.",
+      generate: myStory,
     },
   ],
 };

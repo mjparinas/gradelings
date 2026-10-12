@@ -5,6 +5,7 @@ import { courses as ontario } from "../ontario/g8";
 import { courses as saskatchewan } from "../saskatchewan/g8";
 import { nunavutGrade } from "./kit";
 import { makingNunavut8 } from "./units/g5-g9-social";
+import { timeZones8 } from "./units/skills";
 
 // Nunavut 8.
-export const courses: Course[] = nunavutGrade("8", [manitoba, alberta, ontario, saskatchewan], { social: { units: [makingNunavut8] } });
+export const courses: Course[] = nunavutGrade("8", [manitoba, alberta, ontario, saskatchewan], { social: { units: [makingNunavut8, timeZones8] } });
