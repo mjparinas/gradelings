@@ -114,4 +114,13 @@ describe("SubscriptionPage", () => {
     expect(screen.getByText("⭐ Premium · lifetime access")).toBeInTheDocument();
     expect(screen.queryByRole("heading", { name: "Have a code?" })).not.toBeInTheDocument();
   });
+
+  it("offers the code box in the Android app too, where it can't take a payment", () => {
+    state.android = true;
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account: { email: "parent@example.com", familyId: "fam", verified: true } };
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    expect(screen.getByRole("heading", { name: "Have a code?" })).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /Subscribe yearly/ })).not.toBeInTheDocument();
+    state.android = false;
+  });
 });

@@ -188,7 +188,7 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
           )}
           {error && <p className="mt-3 font-semibold text-nudge-dark">{error}</p>}
         </Panel>
-        {family.account && !inAndroidApp && !lifetime && <RedeemPanel />}
+        {family.account && !lifetime && <RedeemPanel />}
       </div>
     </>
   );
