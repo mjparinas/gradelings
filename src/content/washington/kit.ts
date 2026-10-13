@@ -1,5 +1,5 @@
 import type { Course, GradeId, SubjectId } from "../types";
-import { planGrade, type OwnUnits, type PlanOptions } from "../placement";
+import { planGrade, type OwnUnits, type PlanOptions, type Pool } from "../placement";
 import { PLAN } from "./plan";
 import { FOCUS } from "./focus";
 import { wa } from "./cite";
@@ -18,13 +18,14 @@ export { wa };
 export type Entry = readonly [id: string, kind: "share" | "adopt", codes: string, text: string];
 
 /**
- * One Washington grade. `pool` is the grade's courses from the provinces whose units Washington copies. The plan in
- * ./plan lists, for each course, the units Washington uses: BC units are shared as they are (`share`, which adds the
- * Washington standards to the BC unit), and other provinces' units are copied with Washington standards only (`adopt`),
- * so they never show up for another framework by accident. A copy keeps the original's id and questions, so progress
- * carries over. Washington's own units (`wa-` ids) come from the grade's own file in ./units (own-g4.ts and so on), passed in as `own`.
+ * One Washington grade. `pool` is, per subject, the unit files Washington copies from in this grade (listed in each
+ * grade file, so its download carries only those files). The plan in ./plan lists, for each course, the units
+ * Washington uses: BC units are shared as they are (`share`, which adds the Washington standards to the BC unit), and
+ * other provinces' units are copied with Washington standards only (`adopt`), so they never show up for another
+ * framework by accident. A copy keeps the original's id and questions, so progress carries over. Washington's own units
+ * (`wa-` ids) come from the grade's own file in ./units (own-g4.ts and so on), passed in as `own`.
  */
-export function washingtonGrade(grade: GradeId, pool: Course[][], own: Partial<Record<SubjectId, OwnUnits>>): Course[] {
+export function washingtonGrade(grade: GradeId, pool: Pool, own: Partial<Record<SubjectId, OwnUnits>>): Course[] {
   return planGrade(OPTIONS, grade, pool, own);
 }
 
