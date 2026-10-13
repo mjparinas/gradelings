@@ -6,6 +6,7 @@ import { courses as novaScotia } from "../nova-scotia/g1";
 import { courses as ontario } from "../ontario/g1";
 import { courses as saskatchewan } from "../saskatchewan/g1";
 import { washingtonGrade } from "./kit";
+import { OWN } from "./units/own-g1";
 
 // Washington Grade 1.
-export const courses: Course[] = washingtonGrade("1", [ontario, alberta, manitoba, saskatchewan, novaScotia, newBrunswick]);
+export const courses: Course[] = washingtonGrade("1", [ontario, alberta, manitoba, saskatchewan, novaScotia, newBrunswick], OWN);
