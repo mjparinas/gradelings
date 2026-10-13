@@ -36,3 +36,40 @@ export function clearReferralCode() {
 export function inviteLink(origin: string, code: string): string {
   return `${origin}/account/invite/?ref=${encodeURIComponent(code)}`;
 }
+
+// A signed-in parent's own code, remembered on this device so the Share buttons on public pages
+// can add it to the links they share (`?ref=`) without a network call. Cleared on sign-out.
+const MINE = "gradelings.myInvite";
+
+export function rememberMyInvite(raw: unknown) {
+  const code = normalizeReferralCode(raw);
+  if (!code) return;
+  try {
+    localStorage.setItem(MINE, code);
+  } catch {
+    // Blocked storage: shared links just go without the code.
+  }
+}
+
+export function myInviteCode(): string | null {
+  try {
+    return normalizeReferralCode(localStorage.getItem(MINE));
+  } catch {
+    return null;
+  }
+}
+
+export function forgetMyInvite() {
+  try {
+    localStorage.removeItem(MINE);
+  } catch {
+    // Nothing to forget.
+  }
+}
+
+/** A page link to share, carrying the parent's invite code when they have one on this device. */
+export function shareLink(origin: string, path: string, code = myInviteCode()): string {
+  const url = new URL(path, origin);
+  if (code) url.searchParams.set("ref", code);
+  return url.toString();
+}

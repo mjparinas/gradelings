@@ -6,6 +6,7 @@ import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { SUBSCRIBE_HREF, TRIAL_DAYS } from "@/lib/plan";
 import { teacherPath, TEACHER_SIGNUP } from "./teachers";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
+import { RefCapture } from "./ShareButton";
 
 export function SiteHeader() {
   return (
@@ -195,6 +196,7 @@ export function SubscribeActions({ size = "lg", trialLabel = "Try it free", clas
 export function SitePage({ children, cta = false }: { children: ReactNode; /** Ends the page with the call to action. */ cta?: boolean }) {
   return (
     <>
+      <RefCapture />
       <SiteHeader />
       <main id={MAIN_ID} tabIndex={-1} className="mx-auto max-w-6xl px-4 py-8">
         {children}

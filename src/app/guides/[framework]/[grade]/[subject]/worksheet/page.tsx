@@ -13,6 +13,7 @@ import { GRADE_LABEL, getSubjectMeta, gradeSlug, subjectInSentence } from "@/con
 import type { Course, Question } from "@/content/types";
 import { APP_NAME } from "@/lib/brand";
 import { JsonLd, absolute } from "@/lib/site";
+import { PinLink, ShareButton } from "@/components/site/ShareButton";
 
 export const dynamicParams = false;
 
@@ -108,7 +109,11 @@ export default async function WorksheetPage({ params }: Props) {
             {f.curriculumName} · from {APP_NAME} · Name: ______________________
           </p>
         </div>
-        <PrintButton />
+        <div className="flex flex-wrap gap-2 sm:flex-col">
+          <PrintButton />
+          <ShareButton path={path} title={`${label} ${name} practice sheet`} text={`A free ${label} ${subjectInSentence(name)} practice sheet with answers:`} label="Share this sheet" />
+          <PinLink path={path} media={absolute(`${path}pin.png`)} description={`Free printable ${label} ${name} worksheet with answer key (${f.shortName} curriculum)`} />
+        </div>
       </header>
 
       <ol className="mt-6 grid items-start gap-4 md:grid-cols-2 print:block print:space-y-4">

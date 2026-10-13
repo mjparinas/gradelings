@@ -1,4 +1,5 @@
 import type { Derived } from "./derive";
+import type { CountKind } from "./milestoneShare";
 import { unitLevel } from "./proficiency";
 
 // Plain-language milestones for the grown-ups' Overview and Reports. They describe
@@ -9,6 +10,8 @@ export interface Milestone {
   icon: string;
   title: string;
   detail: string;
+  /** What a shared card for it may say (src/lib/milestoneShare.ts); none for milestones that aren't shared. */
+  share?: { kind: CountKind; n: number };
 }
 
 const DAY = 86_400_000;
@@ -40,24 +43,24 @@ export function milestones(name: string, d: Derived, past: Derived | undefined, 
 
   const days = reached(d.activeDays, [30, 100, 180, 365, 730]);
   if (days && !out.some((m) => m.id === "anniversary" && days < 100)) {
-    out.push({ id: "days", icon: "📅", title: `${fmt(days)} days practised`, detail: `Learning doesn't need to be every day. ${name} has shown up on ${fmt(d.activeDays)} different days.` });
+    out.push({ id: "days", icon: "📅", title: `${fmt(days)} days practised`, detail: `Learning doesn't need to be every day. ${name} has shown up on ${fmt(d.activeDays)} different days.`, share: { kind: "days", n: days } });
   }
 
   const right = reached(d.totals.correct, [100, 500, 1000, 5000, 10000, 25000]);
-  if (right) out.push({ id: "right", icon: "✅", title: `${fmt(right)} questions right on the first try`, detail: `${fmt(d.totals.correct)} in total, out of ${fmt(d.totals.answers)} answered.` });
+  if (right) out.push({ id: "right", icon: "✅", title: `${fmt(right)} questions right on the first try`, detail: `${fmt(d.totals.correct)} in total, out of ${fmt(d.totals.answers)} answered.`, share: { kind: "right", n: right } });
 
   const grew = Object.values(d.units).filter((u) => u.grew).length;
-  if (grew) out.push({ id: "grew", icon: "🌿", title: `${grew} unit${grew === 1 ? "" : "s"} grown from Emerging to Proficient`, detail: `Practice paid off: ${name} stuck with topics that started out tricky.` });
+  if (grew) out.push({ id: "grew", icon: "🌿", title: `${grew} unit${grew === 1 ? "" : "s"} grown from Emerging to Proficient`, detail: `Practice paid off: ${name} stuck with topics that started out tricky.`, share: { kind: "grew", n: grew } });
 
   const kept = Object.values(d.units).filter((u) => u.kept).length;
-  if (kept) out.push({ id: "kept", icon: "🧠", title: `Remembered ${kept} unit${kept === 1 ? "" : "s"} after a month away`, detail: `${name} came back to old topics and was still Proficient.` });
+  if (kept) out.push({ id: "kept", icon: "🧠", title: `Remembered ${kept} unit${kept === 1 ? "" : "s"} after a month away`, detail: `${name} came back to old topics and was still Proficient.`, share: { kind: "kept", n: kept } });
 
   if (past && past.totals.answers > 0) {
     const more = proficientUnits(d) - proficientUnits(past);
     if (more > 0) out.push({ id: "since", icon: "📈", title: `${more} more Proficient unit${more === 1 ? "" : "s"} than six months ago`, detail: `Proficient in ${proficientUnits(d)} units now, compared with ${proficientUnits(past)} then.` });
   }
 
-  if (d.streak.best >= 14) out.push({ id: "streak", icon: "🔥", title: `Best streak: ${d.streak.best} days`, detail: "A streak is a bonus, not a rule. Rest-day shields cover a missed day." });
+  if (d.streak.best >= 14) out.push({ id: "streak", icon: "🔥", title: `Best streak: ${d.streak.best} days`, detail: "A streak is a bonus, not a rule. Rest-day shields cover a missed day.", share: { kind: "streak", n: d.streak.best } });
 
   return out;
 }

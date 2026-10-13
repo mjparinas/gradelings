@@ -10,6 +10,7 @@ import { GRADE_LABEL, ageBandFor, getSubjectMeta, gradeSlug, subjectInSentence }
 import { APP_NAME } from "@/lib/brand";
 import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
+import { ShareButton } from "@/components/site/ShareButton";
 
 export const dynamicParams = false;
 
@@ -83,6 +84,9 @@ export default async function SubjectGuide({ params }: Props) {
       <p className="mt-2 max-w-3xl font-read text-lg text-ink-soft">
         What your child learns in {label} {subjectInSentence(name)} in the {f.curriculumName}, and simple things to try at home.
       </p>
+      <div className="mt-3">
+        <ShareButton path={guidePath.subject(f, grade, course.subject)} title={`${label} ${name}: how to help at home`} text={`Easy ways to help with ${label} ${subjectInSentence(name)} at home:`} label="Share this guide" />
+      </div>
 
       {bigIdeas.length > 0 && (
         <section aria-labelledby="ideas" className="mt-6 rounded-3xl p-5 sm:p-6" style={{ background: meta.colourSoft }}>
