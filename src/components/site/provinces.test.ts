@@ -47,7 +47,7 @@ describe("homepage province coverage", () => {
 
   it("names every province, with 'the' before the Northwest Territories", () => {
     expect(regionList(FRAMEWORKS)).toBe(
-      "British Columbia, Ontario, Alberta, Saskatchewan, Manitoba, Yukon, the Northwest Territories, Nova Scotia, New Brunswick, Newfoundland and Labrador, Prince Edward Island, Nunavut and Washington",
+      "British Columbia, Ontario, Alberta, Saskatchewan, Manitoba, Yukon, the Northwest Territories, Nova Scotia, New Brunswick, Newfoundland and Labrador, Prince Edward Island, Nunavut, Washington and Oregon",
     );
   });
 
@@ -92,14 +92,18 @@ describe("provinces and states in marketing copy", () => {
   it("names the regions, adding states once one is offered", () => {
     expect(regionSummary(ca)).toBe(`${ca.length} provinces and territories`);
     expect(regionSummary([...ca, wa])).toBe(`${ca.length} Canadian provinces and territories and Washington State`);
+    const or = getFramework("us-or");
+    expect(regionSummary([...ca, wa, or])).toBe(`${ca.length} Canadian provinces and territories, plus Washington and Oregon`);
+    expect(regionSummary([wa, or])).toBe("Washington and Oregon");
+    expect(regionSummary([...ca, wa, or, wa, or])).toBe(`${ca.length} Canadian provinces and territories and 4 US states`);
     expect(regionWord(ca)).toBe("province");
     expect(regionWord([...ca, wa])).toBe("province or state");
     expect(offersUsd(ca)).toBe(false);
     expect(offersUsd([...ca, wa])).toBe(true);
   });
 
-  it("offers Washington on the public site", () => {
-    expect(FRAMEWORKS.map((f) => f.id)).toContain("us-wa");
-    expect(regionSummary(FRAMEWORKS)).toContain("Washington State");
+  it("offers Washington and Oregon on the public site", () => {
+    expect(FRAMEWORKS.map((f) => f.id)).toEqual(expect.arrayContaining(["us-wa", "us-or"]));
+    expect(regionSummary(FRAMEWORKS)).toContain("plus Washington and Oregon");
   });
 });

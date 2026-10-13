@@ -26,15 +26,15 @@ const sampleOf = (generate: (o: { difficulty: 1 | 2 | 3 }) => Question[]) =>
   [1, 2, 3].flatMap((seed) => ([1, 2, 3] as const).flatMap((difficulty) => withSeed(seed * 101 + difficulty, () => generate({ difficulty }))));
 
 describe("Oregon", () => {
-  it("is a US framework in US English, not offered to families yet", () => {
+  it("is a US framework in US English, offered to families", () => {
     const or = getFramework("oregon");
     expect(or.id).toBe("us-or");
     expect(or.country).toBe("US");
     expect(localeOf(or)).toBe("en-US");
     expect(or.subjects).toEqual(["math", "language", "science", "social"]);
     expect(or.scoringFor("4").levels.map((l) => l.label)).toEqual(["Beginning", "Approaching", "Meeting", "Exceeding"]);
-    expect(UPCOMING_FRAMEWORKS).toContain(or);
-    expect(FRAMEWORKS).not.toContain(or);
+    expect(FRAMEWORKS).toContain(or);
+    expect(UPCOMING_FRAMEWORKS).not.toContain(or);
   });
 
   it("has a focus list for every course", () => {
