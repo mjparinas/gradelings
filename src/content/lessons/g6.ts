@@ -163,4 +163,35 @@ export const lessons: GradeLessons = {
     ["Find the two points on the line.", "10 − 4 = 6."],
     "6 cm",
   ),
+  // Washington
+  "math/wa-g6-fraction-division": lesson(
+    ["To divide by a fraction, multiply by its reciprocal (flip it).", "Keep the first fraction, change ÷ to ×, flip the second.", "Simplify the answer."],
+    "What is 3/4 ÷ 1/8?",
+    ["3/4 × 8/1 = 24/4.", "24/4 = 6."],
+    "6",
+  ),
+  "math/wa-g6-statistics": lesson(
+    ["Mean: add the values and divide by how many there are.", "Median: the middle value in order. Range: greatest − least.", "IQR: Q3 − Q1, the spread of the middle half."],
+    "What is the mean of 4, 7, 9 and 12?",
+    ["4 + 7 + 9 + 12 = 32.", "32 ÷ 4 = 8."],
+    "8",
+  ),
+  "math/wa-g6-coordinate-plane": lesson(
+    ["Left of 0 is negative x. Below 0 is negative y.", "Quadrant I is (+, +), II is (−, +), III is (−, −), IV is (+, −).", "Across an axis, one coordinate changes sign."],
+    "How far apart are (−3, 2) and (5, 2)?",
+    ["Same y, so count across.", "3 to get to 0, then 5 more: 3 + 5."],
+    "8 units",
+  ),
+  "math/wa-g6-unit-rates": lesson(
+    ["A unit rate is the amount for 1.", "Divide the total by the number of units.", "Compare unit prices to find the better buy."],
+    "4 notebooks cost $6.00. What is the price of one?",
+    ["$6.00 ÷ 4 = $1.50."],
+    "$1.50",
+  ),
+  "math/wa-g6-nets": lesson(
+    ["A net is a solid unfolded flat.", "Find the area of every face in the net.", "Add them all: that is the surface area."],
+    "A box is 2 cm by 3 cm by 4 cm. What is its surface area?",
+    ["Two 2 × 3 faces: 12.", "Two 2 × 4 faces: 16.", "Two 3 × 4 faces: 24.", "12 + 16 + 24 = 52."],
+    "52 cm²",
+  ),
 };

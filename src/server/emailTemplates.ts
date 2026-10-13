@@ -1,6 +1,7 @@
 import "server-only";
 import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS, WORDMARK_COLOURS } from "@/lib/brand";
 import { EMAIL_FONTS, EMAIL_IMAGES } from "@/lib/emailImages";
+import { CONSENT_NOTICE } from "@/lib/coppa";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, SUBSCRIBE_HREF } from "@/lib/plan";
 import type { EmailKind } from "@/lib/emailKinds";
 import type { Email } from "./email";
@@ -271,6 +272,33 @@ export function accountDeletedEmail(to: string, origin: string): Email {
     subject: `Your ${APP_NAME} account was deleted`,
     heading: "Your account was deleted",
     body: ["Your account, your children's progress on our servers and any shared report links have been deleted, and any subscription was cancelled.", `If you didn't do this, write to ${CONTACT_EMAIL} straight away.`],
+  });
+}
+
+/**
+ * US parental consent (COPPA "email plus"): the confirmation sent when a parent agrees, and the delayed one
+ * sent a day or more later. Both repeat the notice and carry a link to withdraw consent, which deletes the
+ * children's information from our servers. Transactional: no unsubscribe link, no child's name.
+ */
+export function consentEmail(to: string, origin: string, token: string, followUp = false): Email {
+  return layout({
+    kind: "consent",
+    to,
+    origin,
+    subject: followUp ? `Reminder: you gave ${APP_NAME} permission for your children` : `You gave ${APP_NAME} permission for your children`,
+    heading: followUp ? "A reminder about your permission" : "Thanks for your permission",
+    body: [
+      followUp
+        ? `A day or more ago, someone using this email address agreed that ${APP_NAME} may keep their children's information to sync it between devices. We're writing again so you can be sure it was you.`
+        : `You agreed that ${APP_NAME} may keep your children's information on our servers, so their progress syncs between your devices and shows in your reports.`,
+      `What we keep: ${CONSENT_NOTICE.collect}`,
+      `Why: ${CONSENT_NOTICE.why}`,
+      CONSENT_NOTICE.never,
+      CONSENT_NOTICE.retention,
+      "If this wasn't you, or you change your mind, use the button below. We'll delete your children's information from our servers and stop syncing it. Progress on your devices stays where it is.",
+    ],
+    button: { label: "Withdraw my permission", url: `${origin}/account/consent/?token=${encodeURIComponent(token)}` },
+    footnote: `You can also review or delete everything in the Parent area under Account. Our full privacy policy, including the section for families in the United States, is at ${origin}/privacy/.`,
   });
 }
 

@@ -48,6 +48,31 @@ describe("Coin", () => {
   });
 });
 
+describe("US coins", () => {
+  it.each([
+    [1, "penny, 1¢"],
+    [5, "nickel, 5¢"],
+    [10, "dime, 10¢"],
+    [25, "quarter, 25¢"],
+    [50, "half-dollar, 50¢"],
+  ])("names the %i¢ US coin and prints its value", (cents, name) => {
+    render(<Coin cents={cents} currency="USD" />);
+    expect(screen.getByRole("img", { name })).toHaveTextContent(name.split(", ")[1]);
+  });
+
+  it("draws US $1 as a bill, not a loonie", () => {
+    const { container } = render(<Coin cents={100} currency="USD" />);
+    expect(screen.getByRole("img", { name: "$1 bill" })).toHaveAttribute("width", "110");
+    expect(container.querySelector("polygon")).toBeNull();
+  });
+
+  it("passes a coins picture's currency to each coin", () => {
+    show({ type: "coins", coins: [1, 50], currency: "USD" });
+    expect(screen.getByRole("img", { name: "penny, 1¢" })).toBeInTheDocument();
+    expect(screen.getByRole("img", { name: "half-dollar, 50¢" })).toBeInTheDocument();
+  });
+});
+
 describe("Shape", () => {
   const shapes: ShapeName[] = ["triangle", "square", "rectangle", "pentagon", "hexagon", "octagon", "circle", "oval", "rhombus", "trapezoid", "parallelogram", "cube", "sphere", "cylinder", "cone", "rectangular-prism", "pyramid"];
 

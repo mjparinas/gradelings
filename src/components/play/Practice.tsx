@@ -118,7 +118,8 @@ function DailyCard() {
 export function UnitDialog({ unitKey: key, onClose, onLocked }: { unitKey: string | null; onClose: () => void; onLocked: () => void }) {
   const d = useDerived();
   const family = useStore((s) => s.family);
-  const ref = key ? getUnitRef(key) : undefined;
+  const framework = useActiveProfile()?.framework;
+  const ref = key ? getUnitRef(key, framework) : undefined;
   const stat = key ? d.units[key] : undefined;
   return (
     <Dialog open={!!ref} title={ref ? `${ref.unit.emoji} ${ref.unit.title}` : ""} onClose={onClose}>

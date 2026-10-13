@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { COURSES } from "./all";
-import { FRAMEWORKS } from "./frameworks";
+import { FRAMEWORKS, UPCOMING_FRAMEWORKS } from "./frameworks";
 import { coursesInFramework } from "./index";
 import { CORE_SUBJECTS } from "./subjects";
 import { hashSeed, withSeed } from "./random";
@@ -62,7 +62,8 @@ function courseDepth(course: Course): number {
 describe("every course has enough practice", () => {
   it("meets the minimum units and distinct questions in every framework, grade and subject", () => {
     const thin: string[] = [];
-    for (const f of FRAMEWORKS) {
+    // Frameworks not offered yet are checked too, so they launch complete.
+    for (const f of [...FRAMEWORKS, ...UPCOMING_FRAMEWORKS]) {
       for (const course of coursesInFramework(COURSES, f.id)) {
         const key = `${f.id}/${course.grade}/${course.subject}`;
         if (KNOWN_THIN[key]) continue;

@@ -2,9 +2,11 @@ import type { InValue } from "@libsql/client";
 import type { AppEvent, ChildSettings, Profile } from "@/lib/model";
 import { MAX_CHILDREN } from "@/lib/plan";
 import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
-import { batch, query } from "@/server/db";
+import { batch, query, run } from "@/server/db";
 import { familyClasswork, isFramework } from "@/server/classroom";
+import { UPCOMING_FRAMEWORKS } from "@/content/frameworks";
 import { GRADE_ORDER } from "@/content/subjects";
+import { familyCountry } from "@/lib/coppa";
 import { getFamilyRow, toFamilyInfo } from "@/server/family";
 
 // Two-way sync. Devices upload events they haven't sent yet, plus any profile
@@ -38,8 +40,10 @@ function cleanProfile(p: Profile): Profile | null {
   if (!GRADE_ORDER.includes(p.grade) || typeof p.name !== "string") return null;
   const name = p.name.replace(/[\u0000-\u001f\u007f]/g, "").replace(/\s+/g, " ").trim().slice(0, 40);
   if (!name) return null;
-  // An unknown province is dropped, so the child falls back to the default curriculum.
-  return { ...p, name, framework: isFramework(p.framework) ? p.framework : (undefined as unknown as Profile["framework"]) };
+  // An unknown province is dropped, so the child falls back to the default curriculum. Upcoming frameworks
+  // (Washington) are kept: no screen offers them yet, and a US child must keep their state once consent allows storing them.
+  const known = isFramework(p.framework) || UPCOMING_FRAMEWORKS.some((f) => f.id === p.framework);
+  return { ...p, name, framework: known ? p.framework : (undefined as unknown as Profile["framework"]) };
 }
 
 export async function POST(req: Request) {
@@ -52,15 +56,33 @@ export async function POST(req: Request) {
   const body = (await req.json().catch(() => null)) as SyncBody | null;
   if (!body) return error(400, "Bad request");
   const list = <T,>(v: unknown): T[] => (Array.isArray(v) ? (v as T[]) : []);
-  const incomingEvents = list<AppEvent>(body.events).slice(0, MAX_EVENTS);
-  const incomingProfiles = list<Profile>(body.profiles).slice(0, 20);
-  const incomingSettings = list<ChildSettings>(body.settings).slice(0, 20);
+  let incomingEvents = list<AppEvent>(body.events).slice(0, MAX_EVENTS);
+  let incomingProfiles = list<Profile>(body.profiles).slice(0, 20);
+  let incomingSettings = list<ChildSettings>(body.settings).slice(0, 20);
 
   // Which profiles belong to this family (and which belong to someone else).
   const existing = await query<{ id: string; family_id: string; updated_at: number; data: string }>(
     `SELECT id, family_id, updated_at, data FROM profiles WHERE family_id = ? OR id IN (${incomingProfiles.map(() => "?").join(",") || "''"})`,
     [family, ...incomingProfiles.map((p) => p?.id ?? "")],
   );
+
+  // The family's country comes from the first child added (src/lib/coppa.ts). It can change only while the
+  // server holds no child of this family, so once a child is stored the country stays put.
+  let famRow = await getFamilyRow(family);
+  if (famRow && !session.student && !existing.some((r) => r.family_id === family)) {
+    const country = familyCountry(incomingProfiles.filter((p) => p && typeof p === "object" && isId(p.id)));
+    if (country !== (famRow.country === "US" ? "US" : "CA")) {
+      await run("UPDATE families SET country = ?, updated_at = ? WHERE id = ?", [country, Date.now(), family]);
+      famRow = await getFamilyRow(family);
+    }
+  }
+  // A US family's children stay on the device until a parent gives consent: nothing about them is stored here,
+  // and their events aren't acknowledged, so the device sends them again once consent is recorded.
+  if (famRow && !session.student && famRow.country === "US" && !famRow.consent_at) {
+    incomingEvents = [];
+    incomingProfiles = [];
+    incomingSettings = [];
+  }
   const owner = new Map(existing.map((r) => [r.id, r]));
   const writes: { sql: string; args: InValue[] }[] = [];
   const mine = new Set(existing.filter((r) => r.family_id === family).map((r) => r.id));
@@ -172,7 +194,7 @@ export async function POST(req: Request) {
   );
   const profiles = await query<{ data: string }>("SELECT data FROM profiles WHERE family_id = ?", [family]);
   const settings = await query<{ data: string }>("SELECT data FROM child_settings WHERE family_id = ?", [family]);
-  const famRow = await getFamilyRow(family);
+  famRow = await getFamilyRow(family);
 
   return json({
     accepted,

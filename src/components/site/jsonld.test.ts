@@ -18,4 +18,16 @@ describe("appJsonLd", () => {
       expect(o.availability).toBe("https://schema.org/InStock");
     }
   });
+
+  it("lists US offers apart, with their region, only when asked for", () => {
+    const both = appJsonLd(["CAD", "USD"]);
+    expect(both.offers.map((o) => [o.priceCurrency, o.eligibleRegion])).toEqual([
+      ["CAD", "CA"],
+      ["CAD", "CA"],
+      ["USD", "US"],
+      ["USD", "US"],
+    ]);
+    expect(both.offers[2].name).toBe("Family plan (monthly), USD");
+    expect(app.offers.every((o) => !("eligibleRegion" in o))).toBe(true);
+  });
 });

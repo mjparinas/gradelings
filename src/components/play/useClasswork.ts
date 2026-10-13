@@ -24,12 +24,12 @@ export function useClasswork(): Assigned[] {
     for (const c of classwork) {
       if (c.profileId !== profile?.id) continue;
       for (const key of c.unitKeys) {
-        const ref = getUnitRef(key);
+        const ref = getUnitRef(key, profile?.framework);
         if (!ref || seen.has(key)) continue;
         seen.add(key);
         out.push({ ref, className: c.className, dueAt: c.due?.[key] });
       }
     }
     return out;
-  }, [classwork, profile?.id]);
+  }, [classwork, profile?.id, profile?.framework]);
 }

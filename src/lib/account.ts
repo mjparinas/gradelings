@@ -130,6 +130,19 @@ export async function devBilling(action: "subscribe" | "cancel", interval: "mont
   adopt(family);
 }
 
+/** A US parent agrees to the consent notice (src/lib/coppa.ts); their children's progress then starts syncing. */
+export async function giveConsent() {
+  const { family } = await post<{ family: FamilyInfo }>("/api/account/consent/", { agree: true });
+  adopt(family);
+  await syncNow();
+}
+
+/** A US parent withdraws consent: the server deletes their children's information. This device keeps its copy. */
+export async function withdrawConsent() {
+  const { family } = await post<{ family: FamilyInfo }>("/api/account/consent/", { withdraw: true });
+  adopt(family);
+}
+
 export type RedeemResult = { kind: "access"; accessUntil: number } | { kind: "discount"; percentOff: number };
 
 /** Uses a code for free access or a discount at the next checkout. */

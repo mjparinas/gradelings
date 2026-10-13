@@ -5,12 +5,14 @@ import { sendEmail } from "@/server/email";
 import { inactiveClassEmail, reminderEmail, trialEndingEmail, trialRecapEmail, weeklyEmail, type ReminderChild, type TrialChild, type WeeklyChild } from "@/server/emailTemplates";
 import { sendAlert, sendDigest } from "@/server/alerts";
 import { runAutomations } from "@/server/automations";
+import { sendConsentFollowUps } from "@/server/consent";
 import { trackJob } from "@/server/monitor";
 import { deleteInactiveClass } from "@/server/students";
 
 // Runs once a day (see vercel.json). Vercel sends `Authorization: Bearer $CRON_SECRET`.
 // Every day: a one-time trial recap 4 to 10 days before the trial ends, and a "trial ends soon" notice to confirmed parents, once. On Sundays: the weekly report
-// to parents who opted in (with a month summary on the first Sunday of the month). Every day: a gentle practice reminder, to opted-in parents only, at most once a week.
+// to parents who opted in (with a month summary on the first Sunday of the month). Every day: a gentle practice reminder, to opted-in parents only, at most once a week,
+// and the delayed confirmation of US parental consent (src/server/consent.ts), once, a day or more after it was given.
 
 const DAY = 86_400_000;
 const YEAR = 365.25 * DAY;
@@ -201,8 +203,10 @@ async function daily(req: Request): Promise<Response> {
     }
   }
 
+  const consentFollowUps = await sendConsentFollowUps(origin, now).catch((e: Error) => (console.error("[consent] follow-ups failed", e.message), 0));
+
   // Automatic nudges the owner switched on in the admin panel, then the owner's morning digest.
   const automations = await runAutomations(origin, now);
   const digest = await sendDigest(origin, now).catch((e: Error) => (console.error("[digest] failed", e.message), 0));
-  return Response.json({ ...result, automations, digest });
+  return Response.json({ ...result, consentFollowUps, automations, digest });
 }

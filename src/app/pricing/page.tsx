@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { appJsonLd, breadcrumbJsonLd } from "@/components/site/jsonld";
-import { PricingCards } from "@/components/site/Pricing";
+import { PricingWithCurrency } from "@/components/site/PricingSwitch";
 import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
 import { APP_NAME } from "@/lib/brand";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, TRIAL_DAYS } from "@/lib/plan";
@@ -25,9 +25,9 @@ export default function PricingPage() {
       />
       <Crumbs items={crumbs} />
       <h1 className="text-4xl font-bold">Simple pricing for the whole family</h1>
-      <p className="mt-2 max-w-2xl font-read text-lg text-ink-soft">One plan covers up to {MAX_CHILDREN} children, every grade from Kindergarten to Grade 9, every mode and every game. Prices are in Canadian dollars; taxes may be added.</p>
+      <p className="mt-2 max-w-2xl font-read text-lg text-ink-soft">One plan covers up to {MAX_CHILDREN} children, every grade from Kindergarten to Grade 9, every mode and every game.</p>
       <div className="mt-8">
-        <PricingCards />
+        <PricingWithCurrency />
       </div>
       <ul className="mt-8 flex max-w-2xl flex-col gap-2 font-read text-lg">
         <li>✓ No ads, and we never sell information.</li>

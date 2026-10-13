@@ -1,6 +1,7 @@
 import "server-only";
 import { randomInt } from "node:crypto";
-import { REFERRAL_ALPHABET, REFERRAL_BONUS_DAYS, REFERRAL_CODE_LENGTH, REFERRAL_MAX_REWARDS, PRICES } from "@/lib/plan";
+import { APP_NAME } from "@/lib/brand";
+import { REFERRAL_ALPHABET, REFERRAL_BONUS_DAYS, REFERRAL_CODE_LENGTH, REFERRAL_MAX_REWARDS, pricesFor } from "@/lib/plan";
 import { query, run } from "./db";
 import { creditCustomer, stripeCancellationConfigured } from "./stripe";
 
@@ -93,17 +94,18 @@ export async function rewardReferrer(familyId: string, now = Date.now()): Promis
   // The cap is counted on the referrer's own row and claimed in one statement, so deleting rewarded
   // accounts can't reset it and simultaneous confirmations can't go over it.
   if (!(await run("UPDATE families SET referral_rewards = referral_rewards + 1 WHERE id = ? AND referral_rewards < ?", [referrerId, REFERRAL_MAX_REWARDS]))) return false;
-  const referrer = (await query<{ trial_ends_at: number; stripe_customer: string | null; subscription_status: string | null; current_period_end: number | null }>(
-    "SELECT trial_ends_at, stripe_customer, subscription_status, current_period_end FROM families WHERE id = ?",
+  const referrer = (await query<{ trial_ends_at: number; stripe_customer: string | null; subscription_status: string | null; current_period_end: number | null; country: string | null }>(
+    "SELECT trial_ends_at, stripe_customer, subscription_status, current_period_end, country FROM families WHERE id = ?",
     [referrerId],
   ))[0];
   if (!referrer) return false;
 
   const paying = referrer.subscription_status && ["active", "trialing", "past_due"].includes(referrer.subscription_status);
   if (paying && referrer.stripe_customer && stripeCancellationConfigured()) {
-    // A real subscriber: take one month's price off their next invoice.
+    // A real subscriber: take one month's price off their next invoice, in the currency they pay in.
     try {
-      await creditCustomer(referrer.stripe_customer, Math.round(PRICES.month.amount * 100), "CAD", "Gradelings referral: one free month");
+      const month = pricesFor(referrer.country === "US" ? "US" : "CA").month;
+      await creditCustomer(referrer.stripe_customer, Math.round(month.amount * 100), month.currency, `${APP_NAME} referral: one free month`);
       await run("UPDATE families SET updated_at = ? WHERE id = ?", [now, referrerId]);
       return true;
     } catch (e) {

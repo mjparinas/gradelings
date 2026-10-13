@@ -174,4 +174,44 @@ export const lessons: GradeLessons = {
     ["Standing it up only turns it.", "The pencil is still 15 cm."],
     "15 cm",
   ),
+  // Washington
+  "math/wa-g2-money": lesson(
+    ["Penny 1¢, nickel 5¢, dime 10¢, quarter 25¢, dollar $1 (100¢).", "Count the biggest coins first.", "Then count on with the smaller coins."],
+    "A quarter, a dime, a nickel and 2 pennies. How much?",
+    ["25¢, then 35¢, then 40¢.", "2 pennies more: 41¢, 42¢."],
+    "42¢",
+    { type: "coins", coins: [25, 10, 5, 1, 1], currency: "USD" },
+  ),
+  "math/wa-g2-clock": lesson(
+    ["The short hand shows the hour.", "Count by 5s from the 12 to the long hand for the minutes.", "a.m. is morning. p.m. is afternoon and evening."],
+    "The short hand is just past 4. The long hand is on the 5.",
+    ["The hour is 4.", "5, 10, 15, 20, 25: 25 minutes."],
+    "4:25",
+    { type: "clock", hour: 4, minute: 25 },
+  ),
+  "math/wa-g2-inches-feet": lesson(
+    ["An inch is about the width of a quarter.", "12 inches make 1 foot. 3 feet make 1 yard.", "To find how much longer, subtract the shorter length."],
+    "A ribbon is 14 inches. A string is 9 inches. How much longer is the ribbon?",
+    ["14 − 9 = 5."],
+    "5 inches",
+  ),
+  "math/wa-g2-arrays": lesson(
+    ["An array has equal rows.", "Add the same number once for each row.", "This is a first step to multiplying."],
+    "3 rows with 4 in each row. How many in all?",
+    ["4 + 4 + 4 = 12."],
+    "12",
+    { type: "array", rows: 3, cols: 4, emoji: "🍓" },
+  ),
+  "math/wa-g2-add-1000": lesson(
+    ["Add the hundreds, then the tens, then the ones.", "Regroup 10 ones as a ten, or 10 tens as a hundred.", "10 more or 100 more changes just one digit."],
+    "What is 345 + 132?",
+    ["300 + 100 = 400.", "40 + 30 = 70.", "5 + 2 = 7.", "400 + 70 + 7 = 477."],
+    "477",
+  ),
+  "math/wa-g2-data": lesson(
+    ["Read each bar against the numbers on the side.", "Subtract to find how many more or fewer.", "Add the bars to find how many in all."],
+    "Dogs: 12. Cats: 7. How many more chose dogs?",
+    ["12 − 7 = 5."],
+    "5",
+  ),
 };

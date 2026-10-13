@@ -1,6 +1,7 @@
 "use client";
 
 import type { Classwork } from "./classroom";
+import { consentNeeded } from "./coppa";
 import * as localdb from "./localdb";
 import { MAINTENANCE_HEADER, MAINTENANCE_SYNC_MESSAGE } from "./maintenance";
 import type { AppEvent, ChildSettings, FamilyInfo, Profile } from "./model";
@@ -46,7 +47,9 @@ async function doSync(): Promise<void> {
   try {
     for (let round = 0; round < 20; round++) {
       const state = useStore.getState();
-      const events = await localdb.unsyncedEvents(BATCH);
+      // A US family's progress stays on the device until a parent gives consent (the server would refuse it anyway).
+      // Profiles still go up, unstored, so the server can tell which country the family is in.
+      const events = consentNeeded(state.family) ? [] : await localdb.unsyncedEvents(BATCH);
       const res = await fetch("/api/sync/", {
         method: "POST",
         credentials: "same-origin",

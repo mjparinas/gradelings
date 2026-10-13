@@ -21,6 +21,15 @@ Public pages that go with this: `/privacy/` (with a "Schools and classes" sectio
 - The teacher sees first name, grade, avatar and results on the units they assigned, plus a "what to look at next" list.
 - Removing a student, closing a class and deleting a teacher account each delete the students' data at once.
 
+## Schools in the United States (Washington)
+
+Washington is built as content but not offered yet (`UPCOMING_FRAMEWORKS` in `src/content/frameworks.ts`), and classes can only follow a Canadian province today (`isFramework` in `src/server/classroom.ts`), so no US class can exist yet. When Washington classes are switched on:
+
+- **Consent.** Under COPPA a school can consent on parents' behalf for educational use. Student accounts a teacher adds are never asked for parental consent (only family accounts are; `src/lib/coppa.ts`), so the teacher's add-students screen for a US class should carry one line saying the school is consenting on parents' behalf for educational use only. That line isn't built yet, because there is no US class to show it on.
+- **FERPA.** For a school, the Provider acts as a "school official" with a legitimate educational interest: it works under the school's direct control, uses education records only for the purpose they were shared for, and doesn't re-disclose them. Section 12 of `school-data-agreement.md` says so.
+- **Data agreement.** Washington districts mostly sign the Student Data Privacy Consortium's National Data Privacy Agreement (NDPA), with the Washington state exhibit, through the Washington Student Privacy Alliance. Offer to sign that rather than our own template; `school-data-agreement.md` section 12 lists what we can commit to.
+- **Washington law.** `/privacy/` ("Families in the United States") states our SUPER Act commitments (no targeted advertising, no sale, no profiling beyond the school's purpose, deletion on request, a security program, notice before material changes) and that we collect no consumer health data under the My Health My Data Act.
+
 ## Still to do before a district can say yes
 
 1. **Real legal entity and contact details** in `src/lib/brand.ts` (`LEGAL_NAME`, `CONTACT_EMAIL`, `MAILING_ADDRESS`), then a lawyer's review of the privacy policy, terms and the agreement.

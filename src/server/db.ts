@@ -346,6 +346,16 @@ const FAMILY_COLUMNS: [string, string][] = [
   ["access_until", "INTEGER"],
   // A redeemed discount code applied at the next checkout.
   ["discount_code", "TEXT"],
+  // 'US' when the first child added follows a US curriculum (src/lib/coppa.ts); decides the currency and US consent.
+  ["country", "TEXT NOT NULL DEFAULT 'CA'"],
+  // US parental consent (COPPA): when it was given, to which notice version, how ('email-plus' or 'payment'),
+  // the token in the emails' withdraw link, when the delayed confirmation went out and when it was last withdrawn.
+  ["consent_at", "INTEGER"],
+  ["consent_version", "TEXT"],
+  ["consent_method", "TEXT"],
+  ["consent_token", "TEXT"],
+  ["consent_followup_at", "INTEGER"],
+  ["consent_revoked_at", "INTEGER"],
 ];
 
 async function addColumns(c: Client, table: string, columns: [string, string][]) {

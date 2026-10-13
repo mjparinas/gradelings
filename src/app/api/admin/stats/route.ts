@@ -22,7 +22,7 @@ export async function GET(req: Request) {
   const now = Date.now();
   const [families, parents, children, teachers, students, classes, payments, activity, d1, d7, d30, costs, redemptions, reports] = await Promise.all([
     query<Record<string, unknown>>(
-      `SELECT f.created_at, f.plan, f.trial_ends_at, f.subscription_status, f.subscription_interval, f.billing_event_at, f.access_until,
+      `SELECT f.created_at, f.plan, f.trial_ends_at, f.subscription_status, f.subscription_interval, f.billing_event_at, f.access_until, f.country,
          f.referred_by IS NOT NULL AS referred,
          EXISTS (SELECT 1 FROM parents p WHERE p.family_id = f.id AND p.email_verified_at IS NOT NULL) AS verified,
          EXISTS (SELECT 1 FROM events e WHERE e.family_id = f.id) AS practised
@@ -36,8 +36,8 @@ export async function GET(req: Request) {
     ),
     count("SELECT COUNT(*) AS n FROM students"),
     count("SELECT COUNT(*) AS n FROM classes WHERE closed_at IS NULL"),
-    query<{ family_id: string | null; amount: number; refunded: number; interval: string | null; paid_at: number }>(
-      "SELECT family_id, amount, refunded, interval, paid_at FROM payments WHERE paid_at >= ?",
+    query<{ family_id: string | null; amount: number; refunded: number; interval: string | null; paid_at: number; currency: string }>(
+      "SELECT family_id, amount, refunded, interval, paid_at, currency FROM payments WHERE paid_at >= ?",
       [Date.UTC(new Date(now).getUTCFullYear() - 2, 0, 1)],
     ),
     query<{ day: number; families: number; answers: number; ms: number }>(
@@ -66,6 +66,7 @@ export async function GET(req: Request) {
     referred: Boolean(Number(f.referred)),
     verified: Boolean(Number(f.verified)),
     practised: Boolean(Number(f.practised)),
+    country: f.country === "US" ? "US" : "CA",
   }));
   const metrics = computeMetrics({
     now,
@@ -75,7 +76,7 @@ export async function GET(req: Request) {
     teachers,
     students,
     classes,
-    payments: payments.map((p) => ({ familyId: p.family_id ?? null, amount: Number(p.amount), refunded: Number(p.refunded), interval: p.interval ?? null, paidAt: Number(p.paid_at) })),
+    payments: payments.map((p) => ({ familyId: p.family_id ?? null, amount: Number(p.amount), refunded: Number(p.refunded), interval: p.interval ?? null, paidAt: Number(p.paid_at), currency: String(p.currency ?? "cad") })),
     activity: activity.map((a) => ({ day: Number(a.day), families: Number(a.families), answers: Number(a.answers ?? 0), ms: Number(a.ms ?? 0) })),
     activeFamilies: { d1, d7, d30 },
     monthlyCosts: Number(costs ?? 0) || 0,

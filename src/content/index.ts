@@ -1,4 +1,5 @@
-import { DEFAULT_FRAMEWORK } from "./frameworks";
+import { DEFAULT_FRAMEWORK, getFramework } from "./frameworks";
+import { localeOf, localizeUnit } from "./locale";
 import { GRADE_ORDER } from "./subjects";
 import { withLessons, type GradeLessons } from "./lessons";
 import type { Course, FrameworkId, GradeId, SubjectId, Unit } from "./types";
@@ -149,6 +150,18 @@ const EXTRA_LOADERS: Partial<Record<FrameworkId, Partial<Record<GradeId, Loader>
     "8": () => import("./nunavut/g8"),
     "9": () => import("./nunavut/g9"),
   },
+  "us-wa": {
+    k: () => import("./washington/k"),
+    "1": () => import("./washington/g1"),
+    "2": () => import("./washington/g2"),
+    "3": () => import("./washington/g3"),
+    "4": () => import("./washington/g4"),
+    "5": () => import("./washington/g5"),
+    "6": () => import("./washington/g6"),
+    "7": () => import("./washington/g7"),
+    "8": () => import("./washington/g8"),
+    "9": () => import("./washington/g9"),
+  },
   "ca-nb": {
     k: () => import("./new-brunswick/k"),
     "1": () => import("./new-brunswick/g1"),
@@ -251,11 +264,13 @@ function applyShares(course: Course): Course {
   };
 }
 
-/** A framework's view of courses: only the units it has standards for. */
+/** A framework's view of courses: only the units it has standards for, in the framework's spelling. */
 export function coursesInFramework(list: Course[], framework: FrameworkId): Course[] {
+  const locale = localeOf(getFramework(framework));
   return list
     .map((c) => {
       let units = c.units.every((u) => u.standards[framework]) ? c.units : c.units.filter((u) => u.standards[framework]);
+      if (locale !== "en-CA") units = units.map((u) => localizeUnit(u, locale));
       const order = c.order?.[framework];
       if (order) {
         const rank = (u: Unit) => (order.includes(u.id) ? order.indexOf(u.id) : order.length);
@@ -381,12 +396,19 @@ export function getCourse(grade: GradeId, subject: SubjectId | string, framework
   return coursesForGrade(grade, framework).find((c) => c.subject === subject);
 }
 
-export function getUnitRef(key: string): UnitRef | undefined {
-  return refs.get(key);
+/** A unit by key. Pass the child's framework to get it in that framework's spelling (US English for a state). */
+export function getUnitRef(key: string, framework?: FrameworkId): UnitRef | undefined {
+  const ref = refs.get(key);
+  if (!ref || !framework) return ref;
+  const locale = localeOf(getFramework(framework));
+  return locale === "en-CA" ? ref : { ...ref, unit: localizeUnit(ref.unit, locale) };
 }
 
 export function allUnitRefs(grade: GradeId, framework: FrameworkId): UnitRef[] {
   return coursesForGrade(grade, framework).flatMap((course) =>
-    course.units.map((unit) => refs.get(unitKey(course.grade, course.subject, unit.id))!),
+    course.units.map((unit) => {
+      const ref = refs.get(unitKey(course.grade, course.subject, unit.id))!;
+      return ref.unit === unit ? ref : { ...ref, unit };
+    }),
   );
 }

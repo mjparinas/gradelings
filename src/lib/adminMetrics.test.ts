@@ -131,6 +131,31 @@ describe("money", () => {
     expect(m.revenue.arppu).toBe(m.revenue.mrr / 2);
   });
 
+  it("keeps US families' USD apart from the CAD numbers, and converts nothing", () => {
+    const m = metrics({
+      families: [
+        family({ plan: "premium", subscriptionInterval: "month" }),
+        family({ plan: "premium", subscriptionInterval: "year", country: "US" }),
+        family({ plan: "premium", subscriptionInterval: "month", country: "US" }),
+      ],
+      payments: [pay({ paidAt: Date.UTC(2026, 2, 2) }), pay({ familyId: "us1", paidAt: Date.UTC(2026, 2, 3), amount: 11999, interval: "year", currency: "usd" }), pay({ familyId: "us2", paidAt: Date.UTC(2026, 1, 3), currency: "USD" })],
+    });
+    // CAD: only the Canadian family and the CAD payment.
+    expect(m.revenue.mrr).toBe(1499);
+    expect(m.revenue.arppu).toBe(1499);
+    expect(m.revenue.thisMonth).toBe(1499);
+    expect(m.revenue.yearToDate).toBe(1499);
+    expect(m.revenue.months.at(-1)!.fees).toBe(fee(1499));
+    expect(m.revenue.usd).toEqual({ mrr: 1499 + Math.round(11999 / 12), arr: (1499 + Math.round(11999 / 12)) * 12, paying: 2, thisMonth: 11999, lastMonth: 1499, yearToDate: 11999 + 1499 });
+    // Families are still counted once, whatever they pay in.
+    expect(m.customers.paying).toBe(3);
+    expect(m.revenue.customersEver).toBe(3);
+  });
+
+  it("has no USD numbers until a US family pays", () => {
+    expect(metrics({ families: [family({ plan: "premium", subscriptionInterval: "month" })], payments: [pay()] }).revenue.usd).toBeNull();
+  });
+
   it("sums payments by month, less refunds, with estimated fees and costs", () => {
     const m = metrics({
       monthlyCosts: 5000,

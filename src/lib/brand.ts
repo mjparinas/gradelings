@@ -12,6 +12,6 @@ export const SITE_HOST = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://gr
 /** Postal address shown in the legal pages and every email's footer (CASL requires it in commercial email). Nothing is shown while it is empty. */
 export const MAILING_ADDRESS = "603 Front Street #810, Lynden, WA 98264";
 /** Bump when the privacy policy or terms change. */
-export const LEGAL_UPDATED = "October 12, 2026";
+export const LEGAL_UPDATED = "October 13, 2026";
 /** Date of the AI review of the privacy policy and terms (see docs/DEPLOY.md). This is not a lawyer's review. */
 export const LEGAL_AI_REVIEWED = "October 9, 2026";

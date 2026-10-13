@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { createCheckout, createCoupon, createPortal, creditCustomer, devBillingAllowed, listPaidInvoices } from "./stripe";
+import { createCheckout, createCoupon, createPortal, creditCustomer, devBillingAllowed, listPaidInvoices, stripePrices } from "./stripe";
 
 const fetchMock = vi.fn<(url: string, init?: RequestInit) => Promise<Response>>();
 const ok = (body: unknown) => new Response(JSON.stringify(body), { status: 200 });
@@ -55,6 +55,28 @@ describe("checkout", () => {
     fetchMock.mockResolvedValueOnce(ok({ url: "u" }));
     await createCheckout({ familyId: "fam1", email: "p@example.com", interval: "year", origin: "https://app.test", firstChargeAt: null });
     expect(form(1)["subscription_data[trial_end]"]).toBeUndefined();
+  });
+
+  it("bills a US family in US dollars with Stripe Tax and the billing address, and leaves Canadian checkout without tax", async () => {
+    vi.stubEnv("STRIPE_PRICE_MONTHLY_USD", "price_usd_month");
+    vi.stubEnv("STRIPE_PRICE_YEARLY_USD", "price_usd_year");
+    fetchMock.mockImplementation(async () => ok({ url: "u" }));
+    await createCheckout({ familyId: "fam1", email: "p@example.com", interval: "month", origin: "https://app.test", currency: "USD" });
+    expect(form(0)).toMatchObject({ "line_items[0][price]": "price_usd_month", "automatic_tax[enabled]": "true", billing_address_collection: "required", customer_email: "p@example.com" });
+    expect(form(0)["customer_update[address]"]).toBeUndefined();
+    await createCheckout({ familyId: "fam1", email: "p@example.com", interval: "year", origin: "https://app.test", currency: "USD", customer: "cus_1" });
+    expect(form(1)).toMatchObject({ "line_items[0][price]": "price_usd_year", customer: "cus_1", "customer_update[address]": "auto" });
+    await createCheckout({ familyId: "fam1", email: "p@example.com", interval: "year", origin: "https://app.test", currency: "CAD" });
+    const cad = form(2);
+    expect(cad["line_items[0][price]"]).toBe("price_year");
+    for (const key of ["automatic_tax[enabled]", "billing_address_collection", "customer_update[address]"]) expect(cad[key]).toBeUndefined();
+  });
+
+  it("refuses a US checkout when the USD prices aren't set, without calling Stripe", async () => {
+    expect(stripePrices("USD")).toBeNull();
+    expect(stripePrices("CAD")).toEqual({ month: "price_month", year: "price_year" });
+    await expect(createCheckout({ familyId: "f", email: "e", interval: "month", origin: "o", currency: "USD" })).rejects.toThrow("Payments in USD aren't set up yet.");
+    expect(fetchMock).not.toHaveBeenCalled();
   });
 
   it("passes on Stripe's error message, or the status when there is none", async () => {

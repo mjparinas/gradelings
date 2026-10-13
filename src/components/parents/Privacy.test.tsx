@@ -14,6 +14,8 @@ vi.mock("@/lib/localdb", () => ({
   clearAll: h.clearAll,
 }));
 vi.mock("next/navigation", () => ({ useRouter: () => ({ push: h.push }) }));
+const acct = vi.hoisted(() => ({ withdrawConsent: vi.fn(async () => {}) }));
+vi.mock("@/lib/account", () => acct);
 
 import { APP_NAME } from "@/lib/brand";
 import { useStore } from "@/lib/store";
@@ -25,7 +27,7 @@ const event = { id: "e1", profileId: "a", t: 5, type: "answer", unit: "3/math/x"
 beforeEach(() => {
   h.push.mockReset();
   h.clearAll.mockReset().mockResolvedValue(undefined);
-  useStore.setState({ profiles: [ava], events: [event], settings: {}, activeId: "a", pin: { hash: "h", salt: "s" } });
+  useStore.setState({ profiles: [ava], events: [event], settings: {}, activeId: "a", pin: { hash: "h", salt: "s" }, family: { plan: "trial", trialEndsAt: 0, updatedAt: 1 } });
 });
 afterEach(() => vi.restoreAllMocks());
 
@@ -56,9 +58,22 @@ describe("PrivacyPanels", () => {
     expect(data.app).toBe(APP_NAME);
     expect(data.profiles).toEqual([ava]);
     expect(data.events).toEqual([event]);
+    expect(data.family).toEqual({ country: "CA", consentAt: null });
     // The parent PIN never leaves the device in an export.
     expect(data).not.toHaveProperty("pin");
     expect(revokeObjectURL).toHaveBeenCalledWith("blob:export");
+  });
+
+  it("lets a US parent who gave consent withdraw it, after confirming; nobody else sees it", async () => {
+    const { unmount } = render(<PrivacyPanels />);
+    expect(screen.queryByRole("button", { name: "Withdraw permission" })).not.toBeInTheDocument();
+    unmount();
+    useStore.setState({ family: { plan: "trial", trialEndsAt: 0, updatedAt: 1, country: "US", consentAt: Date.UTC(2026, 9, 1), account: { email: "p@example.com", familyId: "f" } } });
+    render(<PrivacyPanels />);
+    await userEvent.click(screen.getByRole("button", { name: "Withdraw permission" }));
+    expect(screen.getByRole("dialog", { name: "Withdraw your permission?" })).toBeInTheDocument();
+    await userEvent.click(screen.getByRole("button", { name: "Yes, withdraw" }));
+    expect(acct.withdrawConsent).toHaveBeenCalledTimes(1);
   });
 
   it("erases this device only after confirming, then goes back to the kids' area", async () => {
