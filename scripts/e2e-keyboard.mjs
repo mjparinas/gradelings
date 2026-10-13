@@ -140,6 +140,10 @@ async function playByKeys(page, target, label, until = async () => false) {
       await page.keyboard.press(String(state.open.findIndex(Boolean) + 1));
     } else if (state.kind === "keypad") {
       await page.keyboard.type("12");
+      // Enter presses Check unless focus is on another control, where it presses that control (a keypad key, 🔊). After
+      // the Tab walk over the first question, focus can be left on one, so go to Check first; otherwise Enter checks.
+      const onControl = await page.evaluate(() => !!document.activeElement?.closest("button, a, input, select, textarea"));
+      if (onControl) ok = await tabTo(page, /Check/);
       await page.keyboard.press("Enter");
     } else if (state.kind === "order") {
       while (ok && (await page.locator('[data-testid="pool-item"]').count())) {
