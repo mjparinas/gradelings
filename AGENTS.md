@@ -515,6 +515,8 @@ Tests are duplicated across screen sizes only where layout can break:
 
 - **Curriculum locks** (`src/content/locks/`, checked by `src/content/lock.test.ts`): each framework's lock lists its courses, units in order, and a hash of each unit's text, standard and questions at fixed seeds; `sizes.json` records each grade's download per framework (gzipped source reached from the grade files the apps load). Units are shared, so a change to one unit can reach many frameworks: after an intended change, run `npm run curriculum:lock` and commit the locks, and check the diff names only the frameworks you meant to change. A download that grows more than 10% fails until it is re-recorded; check nothing extra is imported first. On a merge conflict in a lock file, take either side and re-run the command.
 
+- **Placing units in a framework** (`src/content/placement.ts`): every framework shares BC units, adopts copies of other frameworks' units and adds its own through the same helpers (`planGrade` for plan-driven frameworks, `courseOf` and `adoptUnits` for hand-built courses, `followBcGrade` for Yukon and the NWT). Each framework's `kit.ts` only names its id, citation style and plan. Fix placement behaviour there, not in a kit.
+
 Full guide: `docs/CONTENT_GUIDE.md`. The essentials:
 
 - **Generation:**
