@@ -493,6 +493,7 @@ Tests are duplicated across screen sizes only where layout can break:
   - **Never import `src/content/all.ts` (every grade) from client code.** It's for statically generated pages and tests, and ESLint blocks it elsewhere.
   - **Scoring must not depend on which grades have loaded.** Code that runs over events (`derive`, reports) reads the subject from the unit key (`parseUnitKey`) instead of looking up content.
   - Trophies that count "every unit in your grade" use a target of at least 1, so an unloaded grade can never award them.
+- **Country facts live in one module** (`src/lib/country.ts`): locale, currency, number grouping, the region word, the grade range and whether parental consent applies. Read them with `countryOf(framework or family)` instead of testing `country === "US"`; parse stored codes with `toCountryCode` (empty means Canada, unknown throws). Data that differs by country (game rounds, capitals, history) is a `Record<CountryCode, …>`, so adding a country is a type error until every record has it. Public page copy that differs by country still checks the code where it is written.
 - **The kids' app and parent area are single-page apps with hash routes** (`src/lib/router.ts`), so every screen works offline from one cached page.
 - **Server:** libsql, a local SQLite file in dev and Turso in production.
   - Auth hashes passwords with scrypt. Sessions are random tokens stored hashed, in an HttpOnly cookie, with a same-origin check.
