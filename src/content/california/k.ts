@@ -8,6 +8,7 @@ import { courses as oregon } from "../oregon/k";
 import { courses as saskatchewan } from "../saskatchewan/k";
 import { courses as washington } from "../washington/k";
 import { californiaGrade } from "./kit";
+import { OWN } from "./units/own-k";
 
 // California Kindergarten.
 export const courses: Course[] = californiaGrade("k", [
@@ -19,4 +20,4 @@ export const courses: Course[] = californiaGrade("k", [
   saskatchewan,
   novaScotia,
   newBrunswick,
-]);
+], OWN);
