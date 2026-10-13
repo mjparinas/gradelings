@@ -19,9 +19,13 @@ import {
   type StatusPage,
   type SystemReport,
 } from "@/lib/systemHealth";
+import { createHash } from "node:crypto";
+import { PRICES_BY_CURRENCY, type Currency } from "@/lib/plan";
 import { query } from "./db";
 import { emailCounts } from "./emailLog";
 import { recentJobRuns, webhookSummary } from "./monitor";
+import { getSetting, setSetting } from "./payments";
+import { stripePrices, testCheckout } from "./stripe";
 
 // Runs the System page's checks. Every token stays on the server: each check reads its own settings, asks the
 // service with a read-only token, and returns only what the page shows. A check that isn't set up says so
@@ -328,6 +332,127 @@ export async function errorsCheck(now = Date.now()): Promise<HealthCheck> {
 
 // ---------- Stripe ----------
 
+/** The events the app's webhook handles (src/app/api/billing/webhook/route.ts, docs/DEPLOY.md). */
+export const STRIPE_EVENTS = [
+  "checkout.session.completed",
+  "customer.subscription.created",
+  "customer.subscription.updated",
+  "customer.subscription.deleted",
+  "invoice.paid",
+  "charge.refunded",
+  "invoice.payment_failed",
+  "charge.dispute.created",
+];
+/** A passing checkout test is trusted this long (or until the key or a price id changes), so the 15-minute watch doesn't open a session each time. */
+export const CHECKOUT_TEST_MS = 6 * 3_600_000;
+const CHECKOUT_TEST_KEY = "stripe_checkout_test";
+
+interface StripePrice {
+  id: string;
+  active: boolean;
+  currency: string;
+  livemode: boolean;
+  unit_amount: number | null;
+  recurring: { interval: string } | null;
+}
+
+/** A Stripe GET that hands back Stripe's own error message instead of throwing it. */
+async function stripeGet<T>(key: string, path: string): Promise<{ ok: true; data: T } | { ok: false; status: number; message: string }> {
+  let res: Response;
+  try {
+    res = await fetch(`https://api.stripe.com/v1/${path}`, { headers: { authorization: `Bearer ${key}` }, cache: "no-store", signal: AbortSignal.timeout(TIMEOUT) });
+  } catch (e) {
+    return { ok: false, status: 0, message: (e as Error).name === "TimeoutError" ? "Stripe didn't answer in time." : "Couldn't reach Stripe." };
+  }
+  const body = (await res.json().catch(() => ({}))) as T & { error?: { message?: string } };
+  if (!res.ok) return { ok: false, status: res.status, message: body.error?.message ?? `Stripe answered ${res.status}.` };
+  return { ok: true, data: body };
+}
+
+/** One configured price: it exists for this key, is active, recurring on the right interval, in the right currency and at the advertised amount. */
+export async function priceRow(key: string, live: boolean, label: string, id: string, interval: "month" | "year", currency: Currency): Promise<CheckRow> {
+  const r = await stripeGet<StripePrice>(key, `prices/${encodeURIComponent(id)}`);
+  if (!r.ok) return { label, value: r.status === 404 ? `${id} doesn't exist for this ${live ? "live" : "test"} key.` : r.message, state: "down" };
+  const p = r.data;
+  const want = Math.round(PRICES_BY_CURRENCY[currency][interval].amount * 100);
+  const amount = p.unit_amount === null ? "no set amount" : `${(p.unit_amount / 100).toFixed(2)} ${p.currency.toUpperCase()}`;
+  const problem = !p.active
+    ? "is archived, so checkout refuses it"
+    : p.livemode !== live
+      ? `is a ${p.livemode ? "live" : "test"} price but the key is ${live ? "live" : "test"}`
+      : p.currency.toLowerCase() !== currency.toLowerCase()
+        ? `is in ${p.currency.toUpperCase()}, not ${currency}`
+        : p.recurring?.interval !== interval
+          ? `bills ${p.recurring ? `every ${p.recurring.interval}` : "once"}, not every ${interval}`
+          : p.unit_amount !== want
+            ? `charges ${amount} but the site shows ${(want / 100).toFixed(2)} ${currency}`
+            : "";
+  return { label, value: problem ? `${id} ${problem}.` : `${amount} every ${interval}, active`, state: problem ? "down" : "ok" };
+}
+
+interface CheckoutTest {
+  at: number;
+  fp: string;
+  results: { currency: Currency; error?: string }[];
+}
+
+/**
+ * Opens and at once expires a Checkout Session per currency that's set up (see `testCheckout`). Nobody can pay
+ * it, so nothing is charged. A pass is kept for CHECKOUT_TEST_MS; a failure is tried again on the next look.
+ */
+async function checkoutTest(key: string, currencies: Currency[], now: number): Promise<CheckoutTest> {
+  const fp = createHash("sha256")
+    .update([key, ...currencies.flatMap((c) => Object.values(stripePrices(c) ?? {}))].join("|"))
+    .digest("hex")
+    .slice(0, 16);
+  const saved = await getSetting(CHECKOUT_TEST_KEY).then((v) => (v ? (JSON.parse(v) as CheckoutTest) : null)).catch(() => null);
+  if (saved && saved.fp === fp && now - saved.at < CHECKOUT_TEST_MS && saved.results.every((r) => !r.error)) return saved;
+  const origin = env("NEXT_PUBLIC_SITE_URL").replace(/\/$/, "") || "https://gradelings.com";
+  const results = await Promise.all(
+    currencies.map((currency) =>
+      testCheckout(currency, origin, now).then(
+        () => ({ currency }),
+        (e: Error) => ({ currency, error: e.message }),
+      ),
+    ),
+  );
+  const test = { at: now, fp, results };
+  await setSetting(CHECKOUT_TEST_KEY, JSON.stringify(test)).catch(() => {});
+  return test;
+}
+
+/** Whether a webhook endpoint in Stripe sends the events the app needs to this site. */
+async function webhookEndpointRows(key: string, live: boolean): Promise<CheckRow[]> {
+  const r = await stripeGet<{ data: { id: string; url: string; status: string; enabled_events: string[]; livemode: boolean }[] }>(key, "webhook_endpoints?limit=100");
+  if (!r.ok) return [{ label: "Webhook endpoint", value: r.status === 403 ? "The key can't read webhook endpoints." : r.message, state: "warn" }];
+  const host = (u: string) => {
+    try {
+      return new URL(u).hostname.replace(/^www\./, "");
+    } catch {
+      return "";
+    }
+  };
+  const site = host(env("NEXT_PUBLIC_SITE_URL"));
+  const ours = r.data.data.filter((w) => {
+    try {
+      return new URL(w.url).pathname === "/api/billing/webhook/" && (!site || host(w.url) === site);
+    } catch {
+      return false;
+    }
+  });
+  const enabled = ours.filter((w) => w.status === "enabled");
+  if (!enabled.length) {
+    return [{ label: "Webhook endpoint", value: ours.length ? `${ours[0].url} is turned off in Stripe.` : `No ${live ? "live" : "test"} webhook sends to ${site || "this site"}/api/billing/webhook/.`, state: "down" }];
+  }
+  const w = enabled[0];
+  const missing = w.enabled_events.includes("*") ? [] : STRIPE_EVENTS.filter((e) => !w.enabled_events.includes(e));
+  return [
+    { label: "Webhook endpoint", value: `${w.url}, on`, state: "ok" },
+    { label: "Webhook events", value: missing.length ? `Missing: ${missing.join(", ")}` : `All ${STRIPE_EVENTS.length} the app needs`, state: missing.length ? "warn" : "ok" },
+    ...(env("STRIPE_WEBHOOK_SECRET") ? [] : [{ label: "Webhook secret", value: "STRIPE_WEBHOOK_SECRET isn't set, so every webhook is refused.", state: "down" as CheckState }]),
+  ];
+}
+
 export async function paymentsCheck(now = Date.now()): Promise<HealthCheck> {
   const key = env("STRIPE_SECRET_KEY");
   const hooks = await webhookSummary("stripe", now - 7 * DAY);
@@ -339,27 +464,74 @@ export async function paymentsCheck(now = Date.now()): Promise<HealthCheck> {
   if (!key) return { id: "payments", title: "Payments (Stripe)", state: "off", summary: "Stripe isn't set up, so billing runs in practice mode.", rows: hookRows, setup: "Set STRIPE_SECRET_KEY, the two price ids and STRIPE_WEBHOOK_SECRET (docs/DEPLOY.md)." };
   const headers = { authorization: `Bearer ${key}` };
   const live = key.startsWith("sk_live_") || key.startsWith("rk_live_");
+  // The key works at all; anything else Stripe can't read is shown on its own row below.
   await getJson("Stripe", "https://api.stripe.com/v1/balance", headers);
-  const failed = await getJson<{ data: { id: string; type: string; created: number }[] }>(
-    "Stripe",
-    `https://api.stripe.com/v1/events?delivery_success=false&limit=10&created[gte]=${Math.floor((now - 7 * DAY) / 1000)}`,
-    headers,
-  ).catch(() => null);
+
+  const currencies = (["CAD", "USD"] as const).filter((c) => stripePrices(c));
+  const [account, failed, prices, endpoint, portal, tax, test] = await Promise.all([
+    stripeGet<{ charges_enabled?: boolean; requirements?: { disabled_reason?: string | null; currently_due?: string[] } }>(key, "account"),
+    getJson<{ data: { id: string; type: string; created: number }[] }>(
+      "Stripe",
+      `https://api.stripe.com/v1/events?delivery_success=false&limit=10&created[gte]=${Math.floor((now - 7 * DAY) / 1000)}`,
+      headers,
+    ).catch(() => null),
+    Promise.all(
+      (["CAD", "USD"] as const).flatMap((c) => {
+        const p = stripePrices(c);
+        if (!p) return [];
+        return [priceRow(key, live, `${c} monthly price`, p.month, "month", c), priceRow(key, live, `${c} yearly price`, p.year, "year", c)];
+      }),
+    ),
+    webhookEndpointRows(key, live),
+    stripeGet<{ data: { active: boolean }[] }>(key, "billing_portal/configurations?is_default=true&limit=1"),
+    currencies.includes("USD") ? stripeGet<{ status?: string }>(key, "tax/settings") : null,
+    currencies.length ? checkoutTest(key, [...currencies], now) : null,
+  ]);
+
+  // A test key on the real site means no family can actually pay; anywhere else it is expected.
+  const production = env("VERCEL_ENV") === "production";
+  const rows: CheckRow[] = [{ label: "Key", value: live ? "Live mode" : production ? "Test mode on the live site, so no real payment can go through" : "Test mode", state: live ? "ok" : production ? "down" : undefined }];
+  if (account.ok) {
+    const a = account.data;
+    const due = a.requirements?.currently_due?.length ?? 0;
+    rows.push({
+      label: "Account can take payments",
+      value: a.charges_enabled ? (due ? `Yes, but Stripe wants ${plural(due, "detail")} soon` : "Yes") : `No${a.requirements?.disabled_reason ? ` (${a.requirements.disabled_reason})` : ""}`,
+      state: !a.charges_enabled ? "down" : due ? "warn" : "ok",
+    });
+  }
+  if (!currencies.length) rows.push({ label: "Prices", value: "STRIPE_PRICE_MONTHLY and STRIPE_PRICE_YEARLY aren't set, so checkout is off.", state: "down" });
+  rows.push(...prices);
+  if (!currencies.includes("USD")) rows.push({ label: "USD prices", value: "Not set up (only needed for US families)." });
+  if (test) {
+    for (const r of test.results) {
+      rows.push({ label: `Test checkout (${r.currency})`, value: r.error ? `Stripe refused it: ${r.error}` : "Opened and closed a checkout, nothing charged", at: test.at, state: r.error ? "down" : "ok" });
+    }
+  }
+  if (tax) rows.push({ label: "Stripe Tax (US checkout)", value: tax.ok ? (tax.data.status === "active" ? "Active" : "Not finished in Stripe") : tax.message, state: tax.ok && tax.data.status === "active" ? "ok" : "warn" });
+  rows.push(...endpoint);
+  rows.push({
+    label: "Billing portal",
+    value: portal.ok ? (portal.data.data.some((c) => c.active) ? "Set up" : "No default portal, so Manage subscription fails") : portal.message,
+    state: portal.ok && portal.data.data.some((c) => c.active) ? "ok" : "warn",
+  });
   const undelivered = failed?.data ?? [];
-  const state: CheckState = undelivered.length || hooks.failed ? "warn" : "ok";
-  return {
-    id: "payments",
-    title: "Payments (Stripe)",
-    state,
-    summary: undelivered.length ? `Stripe couldn't deliver ${plural(undelivered.length, "event")} to the app this week.` : hooks.failed ? `${plural(hooks.failed, "webhook")} failed in the app this week.` : `The ${live ? "live" : "test"} key works.`,
-    rows: [
-      { label: "Key", value: live ? "Live mode" : "Test mode", state: live ? "ok" : "warn" },
-      ...(failed ? [{ label: "Undelivered events in 7 days", value: String(undelivered.length), state: (undelivered.length ? "warn" : "ok") as CheckState }] : []),
-      ...undelivered.slice(0, 5).map((e) => ({ label: `Undelivered: ${e.type}`, value: e.id, at: e.created * 1000, state: "warn" as CheckState })),
-      ...hookRows,
-    ],
-    link: { label: "Stripe webhooks", href: "https://dashboard.stripe.com/webhooks" },
-  };
+  if (failed) rows.push({ label: "Undelivered events in 7 days", value: String(undelivered.length), state: undelivered.length ? "warn" : "ok" });
+  rows.push(...undelivered.slice(0, 5).map((e) => ({ label: `Undelivered: ${e.type}`, value: e.id, at: e.created * 1000, state: "warn" as CheckState })));
+  rows.push(...hookRows);
+
+  const broken = rows.filter((r) => r.state === "down");
+  const state: CheckState = broken.length ? "down" : rows.some((r) => r.state === "warn") || hooks.failed ? "warn" : "ok";
+  const summary = broken.length
+    ? `Checkout needs fixing: ${broken[0].label}${broken.length > 1 ? ` and ${broken.length - 1} more` : ""}.`
+    : undelivered.length
+      ? `Stripe couldn't deliver ${plural(undelivered.length, "event")} to the app this week.`
+      : hooks.failed
+        ? `${plural(hooks.failed, "webhook")} failed in the app this week.`
+        : state === "warn"
+          ? `Checkout works with the ${live ? "live" : "test"} key; see the rows marked for a look.`
+          : `Checkout works with the ${live ? "live" : "test"} key, and nothing was charged to check.`;
+  return { id: "payments", title: "Payments (Stripe)", state, summary, rows, link: { label: "Stripe webhooks", href: "https://dashboard.stripe.com/webhooks" } };
 }
 
 // ---------- Email (Resend) ----------

@@ -72,7 +72,7 @@ export async function cancelSubscriptions(customer: string): Promise<number> {
   return cancelled;
 }
 
-export async function createCheckout(opts: {
+export interface CheckoutOptions {
   interval: "month" | "year";
   familyId: string;
   email: string;
@@ -84,7 +84,10 @@ export async function createCheckout(opts: {
   firstChargeAt?: number | null;
   /** CAD (the default) or USD for a US family. */
   currency?: Currency;
-}): Promise<string> {
+}
+
+/** The Checkout Session parameters for a family, shared with the admin panel's no-charge checkout test. */
+export function checkoutParams(opts: CheckoutOptions): Record<string, string> {
   const currency = opts.currency ?? "CAD";
   const prices = stripePrices(currency);
   if (!prices) throw new Error(`Payments in ${currency} aren't set up yet.`);
@@ -116,8 +119,31 @@ export async function createCheckout(opts: {
   // Stripe takes either a set discount or a promotion-code box, not both.
   if (opts.coupon) params["discounts[0][coupon]"] = opts.coupon;
   else params.allow_promotion_codes = "true";
-  const session = await stripe<{ url: string }>("checkout/sessions", params);
+  return params;
+}
+
+export async function createCheckout(opts: CheckoutOptions): Promise<string> {
+  const session = await stripe<{ url: string }>("checkout/sessions", checkoutParams(opts));
   return session.url;
+}
+
+/**
+ * Proves checkout works without charging anyone: opens a Checkout Session exactly as a family's would be
+ * (same prices, tax and trial settings), then expires it at once so it can never be paid. Throws Stripe's
+ * own message when it refuses.
+ */
+export async function testCheckout(currency: Currency, origin: string, now = Date.now()): Promise<void> {
+  const params = checkoutParams({
+    interval: "month",
+    familyId: "health-check",
+    email: "health-check@example.com",
+    origin,
+    firstChargeAt: now + 30 * 86_400_000,
+    currency,
+  });
+  params["metadata[health_check]"] = "1";
+  const session = await stripe<{ id: string }>("checkout/sessions", params);
+  await stripe(`checkout/sessions/${encodeURIComponent(session.id)}/expire`, {});
 }
 
 /** Takes `cents` off the customer's next invoice (a negative balance is a credit in Stripe). */
