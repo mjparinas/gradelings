@@ -265,9 +265,12 @@ describe("curriculum content", () => {
     const walk = (dir: string): string[] =>
       readdirSync(dir).flatMap((f) => {
         const p = join(dir, f);
-        return statSync(p).isDirectory() ? walk(p) : [p];
+        return f === "node_modules" ? [] : statSync(p).isDirectory() ? walk(p) : [p];
       });
-    const offenders = [...walk(join(__dirname, "grades")), ...walk(join(__dirname, "ontario")), ...walk(join(__dirname, "alberta")), ...walk(join(__dirname, "saskatchewan")), ...walk(join(__dirname, "manitoba")), ...walk(join(__dirname, "nova-scotia")), ...walk(join(__dirname, "new-brunswick")), ...walk(join(__dirname, "nunavut")), ...walk(join(__dirname, "newfoundland-and-labrador")), ...walk(join(__dirname, "prince-edward-island"))].filter((f) => readFileSync(f, "utf8").includes("Math.random"));
+    // Every content file, in every framework's folder. random.ts wraps it (seeded) and types.ts mentions it in a comment.
+    const offenders = walk(__dirname)
+      .filter((f) => /\.tsx?$/.test(f) && !/\.test\.tsx?$/.test(f) && !/[\\/](random|types)\.ts$/.test(f))
+      .filter((f) => readFileSync(f, "utf8").includes("Math.random"));
     expect(offenders).toEqual([]);
   });
 

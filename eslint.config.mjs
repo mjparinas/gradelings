@@ -16,8 +16,14 @@ const eslintConfig = defineConfig([
         {
           patterns: [
             {
-              group: ["**/content/all", "./all", "**/content/grades/*", "./grades/*"],
+              group: ["**/content/all", "./all", "**/content/grades/*", "./grades/*", "!./grades/manifest", "!./grades/framework"],
               message: "Client code must load grades on demand via @/content (loadGrade / useGradeContent), not import them statically.",
+            },
+            {
+              // GUIDES loads every framework's guide copy with a top-level await; the apps only need its types.
+              group: ["**/content/guides", "./guides", "../guides"],
+              allowTypeImports: true,
+              message: "Parent guide copy is for the public pages (server only). Import its types with `import type`.",
             },
           ],
         },
