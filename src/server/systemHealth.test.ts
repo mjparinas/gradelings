@@ -29,6 +29,11 @@ const KEYS = [
   "NEXT_PUBLIC_SENTRY_DSN",
   "STRIPE_SECRET_KEY",
   "STRIPE_WEBHOOK_SECRET",
+  "STRIPE_PRICE_MONTHLY",
+  "STRIPE_PRICE_YEARLY",
+  "STRIPE_PRICE_MONTHLY_USD",
+  "STRIPE_PRICE_YEARLY_USD",
+  "NEXT_PUBLIC_SITE_URL",
   "RESEND_API_KEY",
   "EMAIL_FROM",
   "RESEND_WEBHOOK_SECRET",
@@ -273,15 +278,111 @@ describe("errors (Sentry)", () => {
 });
 
 describe("payments (Stripe)", () => {
-  it("checks the key, undelivered events and the app's own webhook log", async () => {
+  const S = "https://api.stripe.com/v1/";
+  const price = (id: string, unit_amount: number, currency: string, interval: string, extra: object = {}) => ({ id, active: true, livemode: true, unit_amount, currency, recurring: { interval }, ...extra });
+  const EVENTS = ["checkout.session.completed", "customer.subscription.created", "customer.subscription.updated", "customer.subscription.deleted", "invoice.paid", "charge.refunded", "invoice.payment_failed", "charge.dispute.created"];
+  /** A live Stripe account set up the way docs/DEPLOY.md says, with any route replaced. */
+  function healthyStripe(over: Record<string, unknown> = {}) {
+    return stubFetch({
+      [`${S}balance`]: { available: [] },
+      [`${S}events`]: { data: [] },
+      [`${S}account`]: { charges_enabled: true, requirements: { currently_due: [] } },
+      [`${S}prices/price_m`]: price("price_m", 1499, "cad", "month"),
+      [`${S}prices/price_y`]: price("price_y", 11999, "cad", "year"),
+      [`${S}prices/price_mu`]: price("price_mu", 1499, "usd", "month"),
+      [`${S}prices/price_yu`]: price("price_yu", 11999, "usd", "year"),
+      [`${S}webhook_endpoints`]: { data: [{ id: "we_1", url: "https://www.example.com/api/billing/webhook/", status: "enabled", enabled_events: EVENTS, livemode: true }] },
+      [`${S}billing_portal/configurations`]: { data: [{ active: true, is_default: true }] },
+      [`${S}tax/settings`]: { status: "active" },
+      [`${S}checkout/sessions`]: { id: "cs_1" },
+      ...over,
+    });
+  }
+  beforeEach(async () => {
     process.env.STRIPE_SECRET_KEY = "sk_live_x";
+    process.env.STRIPE_WEBHOOK_SECRET = "whsec_x";
+    process.env.STRIPE_PRICE_MONTHLY = "price_m";
+    process.env.STRIPE_PRICE_YEARLY = "price_y";
+    process.env.STRIPE_PRICE_MONTHLY_USD = "price_mu";
+    process.env.STRIPE_PRICE_YEARLY_USD = "price_yu";
+    process.env.NEXT_PUBLIC_SITE_URL = "https://example.com";
+    await dbm.run("DELETE FROM admin_settings WHERE key = 'stripe_checkout_test'");
+    await dbm.run("DELETE FROM webhook_log");
+  });
+  const row = (c: { rows: { label: string }[] }, label: string) => c.rows.find((r) => r.label === label) as { label: string; value: string; state?: string } | undefined;
+
+  it("proves checkout works without charging: prices, account, webhook, portal, tax and a test checkout", async () => {
+    const calls = healthyStripe();
+    const c = await health.paymentsCheck(NOW);
+    expect(c.state).toBe("ok");
+    expect(c.summary).toBe("Checkout works with the live key, and nothing was charged to check.");
+    expect(row(c, "Key")).toMatchObject({ value: "Live mode", state: "ok" });
+    expect(row(c, "CAD monthly price")).toMatchObject({ value: "14.99 CAD every month, active", state: "ok" });
+    expect(row(c, "USD yearly price")).toMatchObject({ value: "119.99 USD every year, active", state: "ok" });
+    expect(row(c, "Test checkout (CAD)")).toMatchObject({ state: "ok" });
+    expect(row(c, "Test checkout (USD)")).toMatchObject({ state: "ok" });
+    expect(row(c, "Webhook events")).toMatchObject({ value: "All 8 the app needs", state: "ok" });
+    expect(row(c, "Billing portal")).toMatchObject({ state: "ok" });
+    expect(row(c, "Stripe Tax (US checkout)")).toMatchObject({ value: "Active", state: "ok" });
+    // Each test checkout is closed straight after it opens, so nobody can pay it.
+    expect(calls.filter((x) => x.url === `${S}checkout/sessions`)).toHaveLength(2);
+    expect(calls.filter((x) => x.url === `${S}checkout/sessions/cs_1/expire`)).toHaveLength(2);
+    // A pass is trusted for hours, so the 15-minute watch doesn't open a checkout every time.
+    const again = healthyStripe();
+    await health.paymentsCheck(NOW + 3_600_000);
+    expect(again.some((x) => x.url.startsWith(`${S}checkout/sessions`))).toBe(false);
+    const later = healthyStripe();
+    await health.paymentsCheck(NOW + health.CHECKOUT_TEST_MS + 1);
+    expect(later.filter((x) => x.url === `${S}checkout/sessions`)).toHaveLength(2);
+  });
+
+  it("tests checkout again at once when a price id changes", async () => {
+    healthyStripe();
+    await health.paymentsCheck(NOW);
+    process.env.STRIPE_PRICE_MONTHLY = "price_m2";
+    const calls = healthyStripe({ [`${S}prices/price_m2`]: price("price_m2", 1499, "cad", "month") });
+    await health.paymentsCheck(NOW + 60_000);
+    expect(calls.filter((x) => x.url === `${S}checkout/sessions`)).toHaveLength(2);
+  });
+
+  it("is down when checkout would fail, naming what to fix", async () => {
+    healthyStripe({
+      [`${S}prices/price_m`]: new Response(JSON.stringify({ error: { message: "No such price: 'price_m'; a similar object exists in test mode" } }), { status: 404 }),
+      [`${S}prices/price_y`]: price("price_y", 9999, "cad", "year"),
+      [`${S}prices/price_mu`]: price("price_mu", 1499, "usd", "month", { active: false }),
+      [`${S}webhook_endpoints`]: { data: [{ id: "we_1", url: "https://example.com/api/billing/webhook/", status: "enabled", enabled_events: EVENTS.slice(0, 4), livemode: true }] },
+      // Both test checkouts are refused, so each gets its own answer.
+      [`${S}checkout/sessions`]: () => new Response(JSON.stringify({ error: { message: "Stripe Tax has not been activated on your account." } }), { status: 400 }),
+    });
+    const c = await health.paymentsCheck(NOW);
+    expect(c.state).toBe("down");
+    expect(c.summary).toBe("Checkout needs fixing: CAD monthly price and 4 more.");
+    expect(row(c, "CAD monthly price")).toMatchObject({ value: "price_m doesn't exist for this live key.", state: "down" });
+    expect(row(c, "CAD yearly price")).toMatchObject({ value: "price_y charges 99.99 CAD but the site shows 119.99 CAD.", state: "down" });
+    expect(row(c, "USD monthly price")).toMatchObject({ value: "price_mu is archived, so checkout refuses it.", state: "down" });
+    expect(row(c, "Test checkout (USD)")).toMatchObject({ value: "Stripe refused it: Stripe Tax has not been activated on your account.", state: "down" });
+    expect(row(c, "Webhook events")).toMatchObject({ value: "Missing: invoice.paid, charge.refunded, invoice.payment_failed, charge.dispute.created", state: "warn" });
+  });
+
+  it("is down with a test key on the live site, or no webhook to this site", async () => {
+    process.env.STRIPE_SECRET_KEY = "sk_test_x";
+    process.env.VERCEL_ENV = "production";
+    healthyStripe({ [`${S}webhook_endpoints`]: { data: [{ id: "we_2", url: "https://other.example/api/billing/webhook/", status: "enabled", enabled_events: ["*"], livemode: false }] } });
+    const c = await health.paymentsCheck(NOW);
+    expect(c.state).toBe("down");
+    expect(row(c, "Key")).toMatchObject({ state: "down" });
+    expect(row(c, "CAD monthly price")?.value).toBe("price_m is a live price but the key is test.");
+    expect(row(c, "Webhook endpoint")).toMatchObject({ value: "No test webhook sends to example.com/api/billing/webhook/.", state: "down" });
+  });
+
+  it("checks undelivered events and the app's own webhook log", async () => {
     await monitor.recordWebhook("stripe", false, "invoice.paid", "boom", NOW - DAY);
-    stubFetch({ "https://api.stripe.com/v1/balance": { available: [] }, "https://api.stripe.com/v1/events": { data: [{ id: "evt_1", type: "invoice.paid", created: (NOW - DAY) / 1000 }] } });
+    healthyStripe({ [`${S}events`]: { data: [{ id: "evt_1", type: "invoice.paid", created: (NOW - DAY) / 1000 }] } });
     const c = await health.paymentsCheck(NOW);
     expect(c.state).toBe("warn");
     expect(c.summary).toBe("Stripe couldn't deliver 1 event to the app this week.");
     expect(c.rows[0]).toMatchObject({ label: "Key", value: "Live mode" });
-    expect(c.rows.find((r) => r.label === "Webhooks in 7 days")?.value).toBe("1 received, 1 failed");
+    expect(row(c, "Webhooks in 7 days")?.value).toBe("1 received, 1 failed");
   });
 });
 
