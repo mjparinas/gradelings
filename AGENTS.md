@@ -17,6 +17,7 @@ Gradelings is curriculum-matched practice, learning games and parent reports for
 ```bash
 npm run dev                 # http://localhost:3000
 npm test                    # content checks for every unit + logic tests + province parity checks (~20 s)
+npm run curriculum:lock     # re-record src/content/locks/ after an intended content change (see Content rules)
 npm run test:mutation       # Stryker on the scoring/rules files in src/lib (~9 min from scratch, seconds when incremental); report in reports/mutation/
 npm run test:mutation:server  # Stryker on sync, billing webhook, auth, consent, codes, students and admin (~1 h from scratch); report in reports/mutation-server/
 npm run lint
@@ -510,6 +511,8 @@ Tests are duplicated across screen sizes only where layout can break:
   - `/play/`, `/parents/` and `/api/` are `noindex` and disallowed in `robots.ts`.
 
 ## Content rules
+
+- **Curriculum locks** (`src/content/locks/`, checked by `src/content/lock.test.ts`): each framework's lock lists its courses, units in order, and a hash of each unit's text, standard and questions at fixed seeds; `sizes.json` records each grade's download per framework (gzipped source reached from the grade files the apps load). Units are shared, so a change to one unit can reach many frameworks: after an intended change, run `npm run curriculum:lock` and commit the locks, and check the diff names only the frameworks you meant to change. A download that grows more than 10% fails until it is re-recorded; check nothing extra is imported first. On a merge conflict in a lock file, take either side and re-run the command.
 
 Full guide: `docs/CONTENT_GUIDE.md`. The essentials:
 

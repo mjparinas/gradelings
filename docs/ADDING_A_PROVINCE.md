@@ -19,6 +19,7 @@ Everything that differs by jurisdiction lives in a `Framework` (`src/content/fra
    - **Site-wide copy:** search for every hand-written list of regions, scales or prices and add the new one: help FAQs (`src/app/help/faqs.ts`), comparison pages (`src/content/compare.ts`), home and pricing pages, metadata, manifest and terms. Prefer reading names from `FRAMEWORKS` (`regionList`, `listRegions`).
    - **A new country** also needs its currency and prices (`plan.ts`), a spelling and number layer (`src/content/locale.ts`), grade wording (`gradeLabel`), its privacy and consent rules on `/privacy/` and in `docs/school/`, and comparison-page facts for its families (prices in its currency, its app store).
    - Anything not done goes in the PR description and under Open items in AGENTS.md.
-7. **Run** `npm test`, `npm run lint`, `npx tsc --noEmit`, `npm run build`, and the e2e scripts in AGENTS.md.
+7. **Lock it.** Run `npm run curriculum:lock` to write `src/content/locks/<id>.json` and record its download sizes. Only the new framework's lock (and `sizes.json`) should change; if another framework's lock changes, the new content reached into it.
+8. **Run** `npm test`, `npm run lint`, `npx tsc --noEmit`, `npm run build`, and the e2e scripts in AGENTS.md.
 
 Progress is shared across frameworks for shared unit ids, so a child who switches province keeps the progress they earned on units both provinces teach.

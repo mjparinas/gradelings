@@ -205,7 +205,7 @@ const EXTRA_LOADERS: Partial<Record<FrameworkId, Partial<Record<GradeId, Loader>
  * `shares`, so an Alberta child downloads Ontario's file for the grade too (those units stay hidden unless
  * they carry Alberta standards).
  */
-const EXTRA_DEPENDS: Partial<Record<FrameworkId, FrameworkId[]>> = { "ca-ab": ["ca-on"] };
+export const EXTRA_DEPENDS: Partial<Record<FrameworkId, FrameworkId[]>> = { "ca-ab": ["ca-on"] };
 
 const withDepends = (framework: FrameworkId): FrameworkId[] => [framework, ...(EXTRA_DEPENDS[framework] ?? [])];
 
