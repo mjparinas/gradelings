@@ -210,7 +210,8 @@ describe("logging practice", () => {
     expect(st().toasts.some((t) => t.title === "Quest complete!")).toBe(true);
     const claimed = quests.length;
     st().log([answer()]);
-    expect(st().events.filter((e) => e.type === "quest" && e.day === today).length).toBe(claimed);
+    // Count every quest: a weekly one is keyed by Monday's date, so a today-only count misses it when one completes.
+    expect(st().events.filter((e) => e.type === "quest").length).toBe(claimed);
   });
 
   it("gives the stretch bonus once a stretch goal's minutes are reached", () => {
