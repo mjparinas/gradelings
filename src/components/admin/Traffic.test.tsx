@@ -64,4 +64,11 @@ describe("Traffic", () => {
     expect(await screen.findByText(/Set GOOGLE_SERVICE_ACCOUNT_KEY/)).toBeInTheDocument();
     expect(screen.getByText("Couldn't read it: Vercel Analytics answered 403.")).toBeInTheDocument();
   });
+
+  it("says when the plan keeps fewer days, and skips the comparison", async () => {
+    mocks.call.mockResolvedValue({ days: 90, search: { state: "setup", setup: "Set it." }, visits: { state: "ok", report: { ...visits, start: "2026-09-12", keptDays: 31, previous: null } } });
+    render(<Traffic />);
+    expect(await screen.findByText(/Vercel keeps 31 days on this plan/)).toBeInTheDocument();
+    expect(screen.queryByText(/days before/)).not.toBeInTheDocument();
+  });
 });
