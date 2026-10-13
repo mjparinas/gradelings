@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { COURSES } from "./all";
 import { allUnitRefs, AVAILABLE_GRADES, coursesForGrade, coursesInFramework, getUnitRef, isGradeLoaded, loadGrade, parseUnitKey, unitKey } from "./index";
+import { moneyOf } from "./money";
 import { ageBandFor } from "./subjects";
 import type { Course, FrameworkId, Question, Visual } from "./types";
 
@@ -204,11 +205,15 @@ function checkQuestion(q: Question, course: Course) {
       expect(q.target).toBeGreaterThanOrEqual(1);
       expect(q.target).toBeLessThanOrEqual(q.hundreds ? 999 : 99);
       break;
-    case "coins":
-      expect(q.target % 5).toBe(0);
+    case "coins": {
+      // Canada has no pennies, so Canadian amounts are multiples of 5¢; US amounts can be any number of cents.
+      const smallest = q.currency === "USD" ? 1 : 5;
+      expect(q.target % smallest).toBe(0);
       expect(q.target).toBeGreaterThan(0);
-      expect(q.coins).toContain(5);
+      expect(q.coins).toContain(smallest);
+      expect(q.coins.every((c) => moneyOf(q.currency).includes(c))).toBe(true);
       break;
+    }
     case "order":
       expect(q.items.length).toBeGreaterThanOrEqual(3);
       expect(q.items.length).toBeLessThanOrEqual(6);

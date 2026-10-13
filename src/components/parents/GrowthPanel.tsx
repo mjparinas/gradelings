@@ -60,7 +60,7 @@ export function GrowthPanel({ p }: { p: Profile }) {
       {g.moved.length > 0 && (
         <ul className="mt-3 flex flex-col gap-1.5">
           {g.moved.slice(0, 6).map((m) => {
-            const ref = getUnitRef(m.key);
+            const ref = getUnitRef(m.key, framework.id);
             return (
               <li key={m.key} className="flex flex-wrap items-center justify-between gap-2 rounded-xl bg-paper px-3 py-2 text-sm">
                 <span className="font-semibold">{ref ? `${ref.unit.emoji} ${ref.unit.title}` : m.key}</span>

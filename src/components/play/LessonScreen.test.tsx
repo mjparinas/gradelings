@@ -17,7 +17,7 @@ const h = vi.hoisted(() => ({
 
 vi.mock("@/lib/router", () => ({ go: h.go }));
 vi.mock("@/lib/speech", () => ({ speak: h.speak, stopSpeaking: h.stopSpeaking }));
-vi.mock("@/lib/store", () => ({ useChildSettings: () => h.settings }));
+vi.mock("@/lib/store", () => ({ useChildSettings: () => h.settings, useActiveProfile: () => ({ framework: "ca-bc" }) }));
 vi.mock("@/content", () => ({
   getUnitRef: (key: string) => (key === "1/math/count-on" ? { key, course: { subject: "math" }, unit: { title: "Counting on", emoji: "➕", lesson: h.lesson } } : undefined),
 }));

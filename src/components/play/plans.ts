@@ -76,7 +76,7 @@ export function makePlan(input: PlanInput): Plan | null {
   });
 
   if (mode === "practice" || mode === "challenge") {
-    const ref = getUnitRef(scope);
+    const ref = getUnitRef(scope, framework);
     if (!ref) return null;
     const challenge = mode === "challenge";
     const difficulty = challenge ? 3 : difficultyFromMastery(derived.units[ref.key]?.mastery);

@@ -1,5 +1,5 @@
 import { Fragment, type ReactNode } from "react";
-import { COIN_NAMES } from "@/content/money";
+import { coinName, type Currency } from "@/content/money";
 import type { ShapeName, Visual } from "@/content/types";
 
 const INK = "#253047";
@@ -29,18 +29,30 @@ const COIN_STYLE: Record<number, { size: number; fill: string; ring: string; tex
   200: { size: 82, fill: "#d6dbe1", ring: "#9ea6b0", text: "#7a5600", label: "$2" },
 };
 
+// US coins: a copper penny, silver nickel, dime, quarter and half-dollar. $1 is a bill.
+const US_COIN_STYLE: Record<number, { size: number; fill: string; ring: string; text: string; label: string }> = {
+  1: { size: 52, fill: "#d9a07a", ring: "#a8673f", text: "#5c2f12", label: "1¢" },
+  5: { size: 60, fill: "#d9dde3", ring: "#a9b0ba", text: "#4b5563", label: "5¢" },
+  10: { size: 48, fill: "#e3e6ea", ring: "#aeb5be", text: "#4b5563", label: "10¢" },
+  25: { size: 66, fill: "#d6dbe1", ring: "#9ea6b0", text: "#374151", label: "25¢" },
+  50: { size: 80, fill: "#dfe3e8", ring: "#9ea6b0", text: "#374151", label: "50¢" },
+};
+
 const BILL_STYLE: Record<number, { fill: string; dark: string; label: string }> = {
+  100: { fill: "#8a9a5b", dark: "#5f6d38", label: "$1" },
   500: { fill: "#5b9bea", dark: "#2f6fd6", label: "$5" },
   1000: { fill: "#a98af0", dark: "#7b55d9", label: "$10" },
   2000: { fill: "#57c18a", dark: "#2c9461", label: "$20" },
   5000: { fill: "#ef7272", dark: "#cc3d3d", label: "$50" },
 };
 
-export function Coin({ cents, scale = 1 }: { cents: number; scale?: number }) {
-  const bill = BILL_STYLE[cents];
+export function Coin({ cents, scale = 1, currency = "CAD" }: { cents: number; scale?: number; currency?: Currency }) {
+  const us = currency === "USD";
+  // $1 is a coin (the loonie) in Canada and a bill in the US.
+  const bill = cents === 100 && !us ? undefined : BILL_STYLE[cents];
   if (bill) {
     return (
-      <svg width={110 * scale} height={56 * scale} viewBox="0 0 110 56" role="img" aria-label={COIN_NAMES[cents]}>
+      <svg width={110 * scale} height={56 * scale} viewBox="0 0 110 56" role="img" aria-label={coinName(cents, currency)}>
         <rect x="2" y="2" width="106" height="52" rx="6" fill={bill.fill} stroke={bill.dark} strokeWidth="3" />
         <rect x="9" y="9" width="92" height="38" rx="4" fill="none" stroke="#ffffff" strokeOpacity="0.5" strokeWidth="1.5" />
         <circle cx="80" cy="28" r="13" fill="#ffffff" opacity="0.3" />
@@ -50,11 +62,11 @@ export function Coin({ cents, scale = 1 }: { cents: number; scale?: number }) {
       </svg>
     );
   }
-  const c = COIN_STYLE[cents] ?? COIN_STYLE[5];
+  const c = (us ? US_COIN_STYLE[cents] : COIN_STYLE[cents]) ?? COIN_STYLE[5];
   const size = c.size * scale;
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100" role="img" aria-label={`${COIN_NAMES[cents]}, ${c.label}`}>
-      {cents === 100 ? (
+    <svg width={size} height={size} viewBox="0 0 100 100" role="img" aria-label={`${coinName(cents, currency)}, ${c.label}`}>
+      {cents === 100 && !us ? (
         <polygon
           points={Array.from({ length: 11 }, (_, i) => {
             const a = (i / 11) * Math.PI * 2 - Math.PI / 2;
@@ -67,7 +79,7 @@ export function Coin({ cents, scale = 1 }: { cents: number; scale?: number }) {
       ) : (
         <circle cx="50" cy="50" r="46" fill={c.fill} stroke={c.ring} strokeWidth="5" />
       )}
-      {cents === 200 && <circle cx="50" cy="50" r="30" fill="#f2c74e" stroke="#c9971a" strokeWidth="3" />}
+      {cents === 200 && !us && <circle cx="50" cy="50" r="30" fill="#f2c74e" stroke="#c9971a" strokeWidth="3" />}
       <circle cx="50" cy="50" r="38" fill="none" stroke={c.ring} strokeWidth="1.5" strokeDasharray="2 3" opacity="0.7" />
       <ellipse cx="36" cy="30" rx="14" ry="7" fill="#fff" opacity="0.45" transform="rotate(-25 36 30)" />
       <text x="50" y="51" textAnchor="middle" dominantBaseline="central" fontFamily="var(--font-fredoka)" fontWeight="700" fontSize={c.label.length > 2 ? 30 : 34} fill={c.text}>
@@ -733,7 +745,7 @@ export function QuestionVisual({ visual }: { visual: Visual }) {
         <div className="flex flex-wrap items-center justify-center gap-3">
           {visual.coins.map((c, i) => (
             <div key={i} className="animate-pop-in" style={{ animationDelay: `${i * 70}ms` }}>
-              <Coin cents={c} scale={1.15} />
+              <Coin cents={c} scale={1.15} currency={visual.currency} />
             </div>
           ))}
         </div>

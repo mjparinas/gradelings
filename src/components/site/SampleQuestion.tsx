@@ -37,7 +37,7 @@ function Body({ q, seed }: { q: Question; seed: number }) {
             <li key={c.id} className={chip}>
               {c.emoji && <span className="text-2xl">{c.emoji}</span>}
               {c.shape && <Shape shape={c.shape} size={44} />}
-              {c.coin && <Coin cents={c.coin} scale={0.6} />}
+              {c.coin && <Coin cents={c.coin} scale={0.6} currency={q.currency} />}
               {!c.coin && <span>{c.label}</span>}
             </li>
           ))}
@@ -49,7 +49,7 @@ function Body({ q, seed }: { q: Question; seed: number }) {
       return (
         <div className="flex flex-wrap items-center gap-2" aria-label="Coins to choose from">
           {q.coins.map((c, i) => (
-            <Coin key={i} cents={c} scale={0.6} />
+            <Coin key={i} cents={c} scale={0.6} currency={q.currency} />
           ))}
         </div>
       );
