@@ -1,4 +1,5 @@
-import type { Course, GradeId, SubjectId, Unit } from "../types";
+import type { Course, GradeId } from "../types";
+import { planGrade, type PlanOptions } from "../placement";
 import { PLAN } from "./plan";
 import { OWN } from "./units";
 import { FOCUS } from "./focus";
@@ -23,30 +24,17 @@ export type Entry = readonly [id: string, kind: "share" | "adopt", codes: string
  * A copy keeps the original's id and questions, so progress carries over.
  */
 export function oregonGrade(grade: GradeId, pool: Course[][]): Course[] {
-  const subjects: SubjectId[] = ["math", "language", "science", "social"];
-  return subjects.map((subject) => {
-    const entries = PLAN[`${grade}/${subject}`] ?? [];
-    const available = pool.flatMap((courses) => courses.filter((c) => c.subject === subject).flatMap((c) => c.units));
-    const shares: NonNullable<Course["shares"]> = {};
-    const units: Unit[] = [];
-    for (const [id, kind, codes, text] of entries) {
-      if (kind === "share") {
-        shares[id] = { standards: ore(codes, text) };
-        continue;
-      }
-      const unit = available.find((u) => u.id === id);
-      if (!unit) throw new Error(`Oregon: no unit "${id}" to adopt in ${grade}/${subject}`);
-      units.push({ ...unit, standards: ore(codes, text) });
-    }
-    const own = OWN[subject]?.[grade] ?? [];
-    units.push(...own);
-    return {
-      grade,
-      subject,
-      bigIdeas: { "us-or": FOCUS[`${grade}/${subject}`] ?? [] },
-      units,
-      shares,
-      order: { "us-or": [...entries.map((e) => e[0]), ...own.map((u) => u.id)] },
-    };
-  });
+  const own = Object.fromEntries(SUBJECTS.map((subject) => [subject, { units: OWN[subject]?.[grade] ?? [] }]));
+  return planGrade(OPTIONS, grade, pool, own);
 }
+
+const SUBJECTS = ["math", "language", "science", "social"] as const;
+
+const OPTIONS: PlanOptions = {
+  framework: "us-or",
+  name: "Oregon",
+  cite: (codes, text) => ore(codes, text),
+  plan: PLAN,
+  focus: (grade, subject) => FOCUS[`${grade}/${subject}`] ?? [],
+  subjects: [...SUBJECTS],
+};

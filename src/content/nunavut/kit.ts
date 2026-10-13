@@ -1,4 +1,5 @@
 import type { Course, GradeId, SubjectId, Unit } from "../types";
+import { citeFor, planGrade, type OwnUnits, type PlanOptions } from "../placement";
 import { PLAN } from "./plan";
 import { overall } from "./overall";
 
@@ -10,14 +11,12 @@ import { overall } from "./overall";
 
 /** Standards text for a unit: the approved guide and strand, then a short plain description. */
 export function nu(citation: string, text: string): Unit["standards"] {
-  return { "ca-nu": `${citation} · ${text}` };
+  return CITE(citation, text);
 }
 
-/** Units written for Nunavut, with the order they sit in (own units are listed after the adopted ones unless `order` says otherwise). */
-export interface OwnUnits {
-  units: Unit[];
-  order?: string[];
-}
+const CITE = citeFor("ca-nu");
+
+export type { OwnUnits };
 
 /**
  * One Nunavut grade. `pool` is the grade's courses from the provinces whose units Nunavut adopts (Manitoba, Alberta, Ontario
@@ -27,32 +26,14 @@ export interface OwnUnits {
  * the new Nunavut curriculum moves some topics up or down a grade, so a unit can be copied from the grade that teaches it elsewhere.
  */
 export function nunavutGrade(grade: GradeId, pool: Course[][], own: Partial<Record<SubjectId, OwnUnits>> = {}, lift: Course[][] = []): Course[] {
-  const subjects = new Set<string>([...Object.keys(PLAN).filter((k) => k.startsWith(`${grade}/`)).map((k) => k.split("/")[1]), ...Object.keys(own)]);
-  return [...subjects].map((subject) => {
-    const entries = PLAN[`${grade}/${subject}`] ?? [];
-    const unitsOf = (from: Course[][]) => from.flatMap((courses) => courses.filter((c) => c.subject === subject).flatMap((c) => c.units));
-    const available = unitsOf(pool);
-    const lifted = unitsOf(lift);
-    const shares: NonNullable<Course["shares"]> = {};
-    const units: Unit[] = [];
-    for (const [id, kind, citation, text] of entries) {
-      if (kind === "share") {
-        shares[id] = { standards: nu(citation, text) };
-        continue;
-      }
-      const unit = (kind === "lift" ? lifted : available).find((u) => u.id === id);
-      if (!unit) throw new Error(`Nunavut: no unit "${id}" to ${kind} in ${grade}/${subject}`);
-      units.push({ ...unit, standards: nu(citation, text) });
-    }
-    const mine = own[subject as SubjectId];
-    units.push(...(mine?.units ?? []));
-    return {
-      grade,
-      subject: subject as SubjectId,
-      bigIdeas: { "ca-nu": overall(grade, subject as SubjectId) },
-      units,
-      shares,
-      order: { "ca-nu": mine?.order ?? [...(mine?.units ?? []).map((u) => u.id), ...entries.map((e) => e[0])] },
-    };
-  });
+  return planGrade(OPTIONS, grade, pool, own, lift);
 }
+
+const OPTIONS: PlanOptions = {
+  framework: "ca-nu",
+  name: "Nunavut",
+  cite: CITE,
+  plan: PLAN,
+  focus: overall,
+  ownFirst: true,
+};
