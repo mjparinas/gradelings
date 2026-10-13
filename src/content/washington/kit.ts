@@ -1,7 +1,6 @@
-import type { Course, GradeId } from "../types";
-import { planGrade, type PlanOptions } from "../placement";
+import type { Course, GradeId, SubjectId } from "../types";
+import { planGrade, type OwnUnits, type PlanOptions } from "../placement";
 import { PLAN } from "./plan";
-import { OWN } from "./units";
 import { FOCUS } from "./focus";
 import { wa } from "./cite";
 
@@ -23,10 +22,9 @@ export type Entry = readonly [id: string, kind: "share" | "adopt", codes: string
  * ./plan lists, for each course, the units Washington uses: BC units are shared as they are (`share`, which adds the
  * Washington standards to the BC unit), and other provinces' units are copied with Washington standards only (`adopt`),
  * so they never show up for another framework by accident. A copy keeps the original's id and questions, so progress
- * carries over. Washington's own units (`wa-` ids) come from ./units.
+ * carries over. Washington's own units (`wa-` ids) come from the grade's own file in ./units (own-g4.ts and so on), passed in as `own`.
  */
-export function washingtonGrade(grade: GradeId, pool: Course[][]): Course[] {
-  const own = Object.fromEntries(SUBJECTS.map((subject) => [subject, { units: OWN[subject]?.[grade] ?? [] }]));
+export function washingtonGrade(grade: GradeId, pool: Course[][], own: Partial<Record<SubjectId, OwnUnits>>): Course[] {
   return planGrade(OPTIONS, grade, pool, own);
 }
 

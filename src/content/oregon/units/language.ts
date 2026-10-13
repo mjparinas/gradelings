@@ -1,9 +1,8 @@
-import type { GenerateOptions, GradeId, Question, Unit } from "../../types";
+import type { GenerateOptions, Question, Unit } from "../../types";
 import { RML_8, RML_9 } from "../../washington/units/language-rml-upper";
 import { ore } from "../cite";
-import { STORY_OR_FACTS, FIRSTHAND_SECONDHAND } from "./language-reading";
 
-// Oregon-only language units, per grade. Oregon has no Research and Media Literacy strand, so Washington's research and
+// Oregon copies of two Washington language units. Oregon has no Research and Media Literacy strand, so Washington's research and
 // media units are cited to Oregon's writing, speaking and informational reading codes. Most are adopted in
 // ../plan/language.ts. Two hold a few questions that don't fit Oregon (a Washington statehood source, and "native
 // advertising", which oregon.test.ts reads as a Tribal word), so Oregon has its own copies (`or-` ids) without them.
@@ -40,7 +39,7 @@ const unitById = (units: Unit[], id: string): Unit => {
   return u;
 };
 
-const WEIGH_THE_EVIDENCE = forOregon(
+export const WEIGH_THE_EVIDENCE = forOregon(
   unitById(RML_8, "wa-g8-weigh-the-evidence"),
   "or-g8-weigh-the-evidence",
   "ELA.8.W.8; ELA.8.RI.8",
@@ -49,7 +48,7 @@ const WEIGH_THE_EVIDENCE = forOregon(
   /Washington/,
 );
 
-const MEDIA_ANALYSIS = forOregon(
+export const MEDIA_ANALYSIS = forOregon(
   unitById(RML_9, "wa-g9-media-analysis"),
   "or-g9-media-analysis",
   "ELA.9-10.RI.7; ELA.9-10.SL.2",
@@ -57,10 +56,3 @@ const MEDIA_ANALYSIS = forOregon(
   "Students analyze the purposes and techniques of media messages (rhetorical appeals, framing, propaganda, sponsored content, deepfakes) and how beliefs and algorithms shape interpretation.",
   /native advertising/i,
 );
-
-export const OWN_LANGUAGE: Partial<Record<GradeId, Unit[]>> = {
-  "1": [STORY_OR_FACTS],
-  "4": [FIRSTHAND_SECONDHAND],
-  "8": [WEIGH_THE_EVIDENCE],
-  "9": [MEDIA_ANALYSIS],
-};

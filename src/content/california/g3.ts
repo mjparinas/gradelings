@@ -8,6 +8,7 @@ import { courses as oregon } from "../oregon/g3";
 import { courses as saskatchewan } from "../saskatchewan/g3";
 import { courses as washington } from "../washington/g3";
 import { californiaGrade } from "./kit";
+import { OWN } from "./units/own-g3";
 
 // California Grade 3.
 export const courses: Course[] = californiaGrade("3", [
@@ -19,4 +20,4 @@ export const courses: Course[] = californiaGrade("3", [
   saskatchewan,
   novaScotia,
   newBrunswick,
-]);
+], OWN);
