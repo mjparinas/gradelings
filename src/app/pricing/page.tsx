@@ -29,9 +29,12 @@ export default function PricingPage() {
       <Crumbs items={crumbs} />
       <h1 className="text-4xl font-bold">Simple pricing for the whole family</h1>
       <p className="mt-2 max-w-2xl font-read text-lg text-ink-soft">One plan covers up to {MAX_CHILDREN} children, every grade from Kindergarten to Grade 9, every mode and every game.{offersUsd(FRAMEWORKS) ? " Families in Canada pay in Canadian dollars, and families in the US in US dollars." : ""}</p>
-      <div className="mt-8">
+      <section className="mt-8" aria-labelledby="plans">
+        <h2 id="plans" className="sr-only">
+          Plans
+        </h2>
         <PricingWithCurrency usd={offersUsd(FRAMEWORKS)} />
-      </div>
+      </section>
       <ul className="mt-8 flex max-w-2xl flex-col gap-2 font-read text-lg">
         <li>✓ No ads, and we never sell information.</li>
         <li>✓ Children can’t buy anything. Coins are earned only by learning.</li>
