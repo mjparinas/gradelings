@@ -11,6 +11,7 @@ Everything that differs by jurisdiction lives in a `Framework` (`src/content/fra
    - `bigIdeas`: strand headings.
 4. **Register the grade.** Add the grade loader to `src/content/index.ts` and `all.ts`. Each grade and framework is its own download.
 5. **Check the standard codes.** Extend the test in `content.test.ts` so the codes in `standards` must exist in the official data.
-6. **Run** `npm test`, `npm run lint`, `npx tsc --noEmit`, `npm run build`, and the e2e scripts in AGENTS.md.
+6. **Lock it.** Run `npm run curriculum:lock` to write `src/content/locks/<id>.json` and record its download sizes. Only the new framework's lock (and `sizes.json`) should change; if another framework's lock changes, the new content reached into it.
+7. **Run** `npm test`, `npm run lint`, `npx tsc --noEmit`, `npm run build`, and the e2e scripts in AGENTS.md.
 
 Progress is shared across frameworks for shared unit ids, so a child who switches province keeps the progress they earned on units both provinces teach.

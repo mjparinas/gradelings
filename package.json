@@ -10,7 +10,8 @@
     "lint": "eslint",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage && node scripts/coverage-summary.mjs",
-    "test:mutation": "stryker run"
+    "test:mutation": "stryker run",
+    "curriculum:lock": "UPDATE_LOCKS=1 vitest run src/content/lock.test.ts"
   },
   "dependencies": {
     "@libsql/client": "^0.18.0",
