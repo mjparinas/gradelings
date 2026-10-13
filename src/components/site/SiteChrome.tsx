@@ -34,6 +34,9 @@ export function SiteHeader() {
           <Link href={teacherPath.hub()} className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
             Teachers
           </Link>
+          <Link href="/about/" className="hidden rounded-lg px-2 py-1 hover:bg-black/5 lg:inline">
+            About
+          </Link>
           <a href={SUBSCRIBE_HREF} className="hidden rounded-lg px-2 py-1 font-bold hover:bg-black/5 lg:inline">
             Subscribe
           </a>
@@ -122,6 +125,11 @@ export function SiteFooter() {
             <li>
               <Link className="text-ink-soft hover:underline" href="/help/">
                 Help
+              </Link>
+            </li>
+            <li>
+              <Link className="text-ink-soft hover:underline" href="/about/">
+                About us
               </Link>
             </li>
             <li>

@@ -20,6 +20,8 @@ export interface Email {
   label?: string;
   /** Extra headers, such as In-Reply-To on a reply. */
   headers?: Record<string, string>;
+  /** Where a reply goes, such as the parent who wrote through the contact form. */
+  replyTo?: string;
 }
 
 export interface SentEmail extends Email {
@@ -65,6 +67,7 @@ async function deliver(email: Email): Promise<{ ok: boolean; skipped?: boolean; 
         subject: email.subject,
         html: email.html,
         text: email.text,
+        ...(email.replyTo ? { reply_to: email.replyTo } : {}),
         ...(email.unsubscribeUrl || email.headers
           ? {
               headers: {
