@@ -120,7 +120,7 @@ export default function PrivacyPage() {
             <strong>Cloudflare Web Analytics</strong>, which runs our domain and counts visits to our website, such as which pages are visited, from which country and which site sent the visitor. It sets no cookies.
           </li>
           <li>
-            <strong>Our hosting and database providers</strong>, which store the account and progress data described above on our behalf. Our servers and database are in Montréal, Canada. Some service providers above, such as Stripe, Resend, Sentry and Cloudflare, may process limited information outside Canada.
+            <strong>Our hosting and database providers</strong>, which store the account and progress data described above on our behalf. Our servers are in Montréal, Canada, and our database is in Virginia, United States. Some other service providers above, such as Stripe, Resend, Sentry and Cloudflare, may also process limited information outside Canada.
           </li>
         </ul>
         <p>
@@ -148,7 +148,7 @@ export default function PrivacyPage() {
           <strong>Your rights as a parent.</strong> You can review your children’s information (download it as a file from the Parent area under Account), have it deleted (delete a child, or your account), and refuse further collection or use at any time by withdrawing consent in the Parent area or with the link in our confirmation emails. Withdrawing deletes the children’s information from our servers and stops syncing; the app keeps working on your device. You can also email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
         </p>
         <p>
-          <strong>Where it is stored.</strong> Our servers and database are in Montréal, Canada. The service providers listed under “Who we share it with” may process limited information in the United States or elsewhere.
+          <strong>Where it is stored.</strong> Our servers are in Montréal, Canada, and our database is in Virginia, United States. The service providers listed under “Who we share it with” may process limited information in the United States or elsewhere.
         </p>
         <p>
           <strong>Operator.</strong> {LEGAL_NAME} operates {APP_NAME} and is the only operator collecting children’s information through it. Contact us at <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>

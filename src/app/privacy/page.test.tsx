@@ -29,7 +29,7 @@ describe("families in the United States", () => {
       "first name or nickname, grade, an optional birth year",
       "we email you again a day or more later",
       "refuse further collection",
-      "Montréal, Canada",
+      "our database is in Virginia, United States",
       "reportfraud.ftc.gov",
       "Student User Privacy in Education Rights Act",
       "never use students’ information for targeted advertising",

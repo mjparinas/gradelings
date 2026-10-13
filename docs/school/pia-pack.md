@@ -49,7 +49,7 @@ Gradelings is a web app (installable, with an Android wrapper) for practice and 
 Student's device (browser, saves on the device first)
    |  HTTPS, signed-in cookie
    v
-Gradelings app servers, Montreal  --->  Database (Turso, Montreal)
+Gradelings app servers, Montreal  --->  Database (Turso, Virginia, US)
    |
    +--> Resend: teacher account emails only (confirmation, password reset)
    +--> Sentry: crash reports, scrubbed of names, emails, cookies and what was tapped
@@ -63,14 +63,14 @@ Students' devices also keep a copy of progress in the browser (IndexedDB and loc
 | Provider | Purpose | Data it sees | Location |
 | --- | --- | --- | --- |
 | Vercel | App hosting, functions in Montréal (`yul1`) | Requests, logs | Canada for functions **(confirm: edge and logging may be outside Canada)** |
-| Turso on Fly | Database | All account data above | Montréal **(confirm region and encryption at rest)** |
+| Turso (on AWS) | Database | All account data above | Virginia, United States (`aws-us-east-1`) **(confirm encryption at rest)** |
 | Resend | Teacher emails | Teacher email address and message; whether each email was opened and which links were clicked (open and click tracking is on) | United States |
 | Sentry | Crash reports | Scrubbed errors | United States or EU |
 | Stripe | Parent payments | Parent email and payment | United States. Not used for schools while classes are free. |
 | Vercel Web Analytics | Anonymous page counts on public pages only | Page, country | Switched off in the student app and teacher area |
 | Cloudflare Web Analytics | Visit counts for the website, without cookies | Page, country, referring site | **(confirm which pages it covers)** |
 
-If a district requires all providers to be in Canada, Resend and Sentry are the gaps; both can be switched off for a school-only deployment. Decision for the owner.
+If a district requires all providers to be in Canada, the database (Turso, Virginia), Resend and Sentry are the gaps. Resend and Sentry can be switched off for a school-only deployment; the database would need a different host, since Turso has no Canadian location. Decision for the owner.
 
 ## 7. Retention and deletion
 
@@ -109,7 +109,7 @@ See [accessibility-conformance.md](accessibility-conformance.md) and `/accessibi
 
 ## 12. Decisions for the owner
 
-1. **Canadian-only providers.** Replace or switch off Resend and Sentry for school deployments?
+1. **Canadian-only providers.** Move the database to a Canadian host, and replace or switch off Resend and Sentry, for school deployments?
 2. **School or district plan.** Classes are free today. Say so in the agreement or set a price.
 3. **Several teachers on one class.** Co-teaching is built (an owner plus up to five invited co-teachers; only the owner closes the class or deletes students). Still open: a school office or administrator role, and whether a co-teacher should also be allowed to delete students.
 4. **Birth year.** Already absent from class accounts. Keep it that way.
