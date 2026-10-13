@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { LivePromo } from "@/lib/promo";
 import { savedPromoCode } from "@/lib/promoCode";
-import { PromoBanner } from "./PromoBanner";
+import { forgetPromo, PromoBanner } from "./PromoBanner";
 
 const promo: LivePromo = {
   id: "p1",
@@ -22,6 +22,7 @@ function serve(p: LivePromo | null) {
 }
 
 beforeEach(() => {
+  forgetPromo();
   localStorage.clear();
   sessionStorage.clear();
 });
@@ -49,6 +50,25 @@ describe("PromoBanner", () => {
     expect(again.container).toBeEmptyDOMElement();
   });
 
+  it("shows at once on the next page, without fetching again, so a nav-bar link doesn't shift the page", async () => {
+    serve(promo);
+    const first = render(<PromoBanner />);
+    await screen.findByText(promo.headline);
+    first.unmount();
+    render(<PromoBanner />);
+    expect(screen.getByText(promo.headline)).toBeInTheDocument();
+    expect(fetch).toHaveBeenCalledTimes(1);
+  });
+
+  it("asks again on the next page when the feed failed", async () => {
+    vi.stubGlobal("fetch", vi.fn(async () => Promise.reject(new Error("offline"))));
+    render(<PromoBanner />).unmount();
+    await act(async () => {});
+    serve(promo);
+    render(<PromoBanner />);
+    expect(await screen.findByText(promo.headline)).toBeInTheDocument();
+  });
+
   it("stays hidden once dismissed", async () => {
     serve(promo);
     const first = render(<PromoBanner />);
@@ -71,6 +91,8 @@ describe("PromoBanner", () => {
 
   it("stays off the account pages, such as resetting a password", async () => {
     serve(promo);
+    render(<PromoBanner />).unmount();
+    await act(async () => {});
     window.history.replaceState(null, "", "/account/reset/");
     const { container } = render(<PromoBanner />);
     await act(async () => {});

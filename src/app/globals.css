@@ -347,11 +347,17 @@ html.contrast :focus-visible {
   box-shadow: 0 0 0 7px #ffffff;
 }
 
-/* "Skip to main content": off screen until a keyboard user tabs to it (WCAG 2.4.1). */
+/*
+  "Skip to main content": hidden until a keyboard user tabs to it (WCAG 2.4.1).
+  It is the first thing on every page, and Next.js reads the page's top edge from it to decide whether a
+  navigation needs to scroll. So it sits at the top of the document (absolute, not fixed) and is clipped
+  rather than moved off screen: moved above the viewport, every nav-bar link scrolled the page past the
+  sale banner to the header.
+*/
 .skip-link {
-  position: fixed;
+  position: absolute;
   left: 0.75rem;
-  top: -4rem;
+  top: max(0.75rem, env(safe-area-inset-top));
   z-index: 100;
   border-radius: 0.75rem;
   background: #0f172a;
@@ -359,8 +365,13 @@ html.contrast :focus-visible {
   padding: 0.75rem 1rem;
   font-weight: 700;
 }
-.skip-link:focus {
-  top: max(0.75rem, env(safe-area-inset-top));
+.skip-link:not(:focus) {
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 /* The skip link focuses <main> itself; a ring around the whole page isn't useful. */
 main[tabindex="-1"]:focus {
