@@ -1,3 +1,4 @@
+import { toCountryCode } from "@/lib/country";
 import { error, json } from "@/server/auth";
 import { audit, requireAdmin } from "@/server/admin";
 import { query } from "@/server/db";
@@ -41,7 +42,7 @@ function loaders(now: number): Loaders {
           referred: Boolean(Number(f.referred)),
           verified: Boolean(Number(f.verified)),
           practised: Boolean(Number(f.practised)),
-          country: f.country === "US" ? "US" : "CA",
+          country: toCountryCode(f.country),
         }),
       ),
     parents: () => count("SELECT COUNT(*) AS n FROM parents WHERE role != 'student'"),

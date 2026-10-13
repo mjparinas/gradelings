@@ -119,9 +119,12 @@ const WORDS: Record<Dir, { little: string; compass: string }> = {
   right: { little: "to the right of", compass: "east of" },
 };
 
+/** Town places that go by another name in a country. */
+const PLACE_NAMES: Record<Country, Record<string, string>> = { CA: {}, US: { "fire hall": "fire station" } };
+
 export function townQuestion(compass: boolean, country: Country = "CA"): MapQuestion {
   // A fire hall is a fire station in the US.
-  const placed = shuffle(PLACES).map((p) => (country === "US" && p.name === "fire hall" ? { ...p, name: "fire station" } : p));
+  const placed = shuffle(PLACES).map((p) => ({ ...p, name: PLACE_NAMES[country][p.name] ?? p.name }));
   const tiles: MapTile[] = placed.map((p, i) => ({ id: p.name, label: p.name, name: p.name, emoji: p.emoji, col: i % 3, row: Math.floor(i / 3) }));
   const at = (col: number, row: number) => tiles.find((t) => t.col === col && t.row === row);
   // Pick a place and a direction that has a neighbour, so there is exactly one right answer.
@@ -366,10 +369,15 @@ function usQuestion(g: number): MapQuestion {
  * Canadian children get Canada's provinces and territories, US children the states.
  */
 export function mapQuestion(grade: GradeId, country: Country = "CA"): MapQuestion {
-  const g = G[grade];
-  if (country === "US") return usQuestion(g);
+  return COUNTRY_QUESTION[country](G[grade]);
+}
+
+/** Canada's rounds: the town, then oceans, provinces and territories, capitals and facts. */
+function canadaQuestion(g: number): MapQuestion {
   if (g <= 1) return townQuestion(false);
   if (g <= 3) return pick([() => townQuestion(true), () => townQuestion(true), oceanQuestion])();
   if (g <= 5) return pick([findQuestion, capitalQuestion, capitalQuestion, oceanQuestion])();
   return pick([capitalQuestion, factQuestion, factQuestion, factQuestion])();
 }
+
+const COUNTRY_QUESTION: Record<Country, (g: number) => MapQuestion> = { CA: canadaQuestion, US: (g) => usQuestion(g) };

@@ -1,11 +1,7 @@
 import { FRAMEWORKS, type Framework } from "@/content/frameworks";
+import { COUNTRIES, COUNTRY_ORDER, type CountryCode } from "./country";
 
-export type Country = Framework["country"];
-
-/** What the pickers call each country's group. */
-export const COUNTRY_NAME: Record<Country, string> = { CA: "Canada", US: "United States" };
-
-const COUNTRY_ORDER: Country[] = ["CA", "US"];
+export type Country = CountryCode;
 
 export interface FrameworkGroup {
   country: Country;
@@ -19,7 +15,7 @@ export interface FrameworkGroup {
  * the first US state launches there is one group.
  */
 export function frameworkGroups(list: readonly Framework[] = FRAMEWORKS): FrameworkGroup[] {
-  return COUNTRY_ORDER.map((country) => ({ country, label: COUNTRY_NAME[country], frameworks: list.filter((f) => f.country === country) })).filter((g) => g.frameworks.length > 0);
+  return COUNTRY_ORDER.map((country) => ({ country, label: COUNTRIES[country].name, frameworks: list.filter((f) => f.country === country) })).filter((g) => g.frameworks.length > 0);
 }
 
 /** The same frameworks in the order the grouped pickers show them, for keyboard movement and type-ahead. */

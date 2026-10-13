@@ -1,3 +1,4 @@
+import { COUNTRIES, COUNTRY_ORDER, countryOf } from "@/lib/country";
 import type { Framework } from "@/content/frameworks";
 import { SUBJECTS, subjectInSentence } from "@/content/subjects";
 import type { GradeId, SubjectId } from "@/content/types";
@@ -122,7 +123,7 @@ export function provinceCoverage(frameworks: readonly Framework[]): ProvinceCove
 
 /** True once a US curriculum is offered, so public pages show US dollars beside Canadian dollars. */
 export function offersUsd(frameworks: readonly Pick<Framework, "country">[]): boolean {
-  return frameworks.some((f) => f.country === "US");
+  return frameworks.some((f) => countryOf(f).currency === "USD");
 }
 
 export interface CountryGroup {
@@ -134,10 +135,7 @@ export interface CountryGroup {
 
 /** Frameworks grouped for pickers: Canadian provinces and territories first, then US states. Empty groups are left out. */
 export function byCountry(frameworks: readonly Framework[]): CountryGroup[] {
-  const groups: CountryGroup[] = [
-    { country: "CA", heading: "Canada", frameworks: frameworks.filter((f) => f.country === "CA") },
-    { country: "US", heading: "United States", frameworks: frameworks.filter((f) => f.country === "US") },
-  ];
+  const groups: CountryGroup[] = COUNTRY_ORDER.map((country) => ({ country, heading: COUNTRIES[country].name, frameworks: frameworks.filter((f) => f.country === country) }));
   return groups.filter((g) => g.frameworks.length > 0);
 }
 
@@ -165,5 +163,6 @@ export function regionSummary(frameworks: readonly Framework[]): string {
 
 /** The currencies public pages list prices in: Canadian dollars, plus US dollars once a US curriculum is offered. */
 export function siteCurrencies(frameworks: readonly Pick<Framework, "country">[]): ("CAD" | "USD")[] {
-  return offersUsd(frameworks) ? ["CAD", "USD"] : ["CAD"];
+  const offered = new Set(frameworks.map((f) => countryOf(f).currency));
+  return [...new Set(["CAD" as const, ...COUNTRY_ORDER.map((c) => COUNTRIES[c].currency)])].filter((c) => c === "CAD" || offered.has(c));
 }

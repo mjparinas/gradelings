@@ -1,5 +1,6 @@
 "use client";
 
+import { countryOf } from "@/lib/country";
 import { useEffect, useRef, useState } from "react";
 import { sounds } from "@/lib/sound";
 import { speak } from "@/lib/speech";
@@ -36,7 +37,7 @@ function Piece({ m, small }: { m: Money; small?: boolean }) {
 }
 
 export function CoinShop({ grade, band, country = "CA", onScore, onLevel, onOver }: GameProps) {
-  const currency = country === "US" ? "USD" : "CAD";
+  const currency = countryOf(country).currency;
   const run = useRun({ onScore, onLevel, onOver }, 5);
   const [order, setOrder] = useState<ShopOrder>(() => shopOrder(grade, currency));
   const [given, setGiven] = useState<Money[]>([]);

@@ -55,6 +55,7 @@ const SCHEME: ScoringScheme = {
 
 export const NUNAVUT: Framework = {
   id: "ca-nu",
+  regionKind: "territory",
   slug: "nunavut",
   name: "Nunavut",
   shortName: "Nunavut",

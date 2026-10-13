@@ -1,3 +1,4 @@
+import { toCountryCode } from "@/lib/country";
 import { appOrigin, error, getSession, json, sameOrigin } from "@/server/auth";
 import { pendingDiscount, stripeCouponFor } from "@/server/codes";
 import { currencyFor, firstChargeAt } from "@/lib/plan";
@@ -17,7 +18,7 @@ export async function POST(req: Request) {
     return error(409, "You already have a subscription. Use Manage billing to change or cancel it.");
   }
   // A US family pays in US dollars, with US sales tax worked out by Stripe Tax.
-  const currency = currencyFor(family?.country === "US" ? "US" : "CA");
+  const currency = currencyFor(toCountryCode(family?.country));
   if (!stripePrices(currency)) return error(503, "Payments in US dollars aren't available yet. Please try again later.");
   const origin = appOrigin(req);
   try {

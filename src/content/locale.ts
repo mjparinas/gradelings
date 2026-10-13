@@ -1,3 +1,4 @@
+import { countryOf } from "@/lib/country";
 import type { Framework } from "./frameworks";
 import type { Choice, GradeId, Lesson, Question, Unit, Visual } from "./types";
 
@@ -11,13 +12,12 @@ export type Locale = "en-CA" | "en-US";
 
 /** The English a framework's content and copy are shown in. */
 export function localeOf(framework: Pick<Framework, "country">): Locale {
-  return framework.country === "US" ? "en-US" : "en-CA";
+  return countryOf(framework).locale;
 }
 
 /** What a framework's region is called in sentences: "province", "territory" or "state". */
-export function regionKind(framework: Pick<Framework, "country" | "id">): "province" | "territory" | "state" {
-  if (framework.country === "US") return "state";
-  return framework.id === "ca-yt" || framework.id === "ca-nt" || framework.id === "ca-nu" ? "territory" : "province";
+export function regionKind(framework: Pick<Framework, "country" | "regionKind">): "province" | "territory" | "state" {
+  return framework.regionKind ?? countryOf(framework).regionKind;
 }
 
 const ORDINAL: Record<string, string> = { "1": "1st", "2": "2nd", "3": "3rd" };

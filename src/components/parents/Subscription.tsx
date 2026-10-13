@@ -1,5 +1,6 @@
 "use client";
 
+import { countryOf } from "@/lib/country";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { APP_NAME } from "@/lib/brand";
 import { devBilling, loadReferral, openBillingPortal, redeemCode, refreshAccount, resendVerification, startCheckout, type BillingInfo, type ReferralInfo } from "@/lib/account";
@@ -15,7 +16,7 @@ const longDate = (t: number) => new Date(t).toLocaleDateString("en-CA", { dateSt
 
 /** What the plan includes. US families read the grade range the US way. */
 export const includedFor = (country?: "CA" | "US") => [
-  country === "US" ? "Every unit in every subject, kindergarten through 9th grade" : "Every unit in every subject, Kindergarten to Grade 9",
+  `Every unit in every subject, ${countryOf(country).gradeRange}`,
   "Adventure, Review, Speed Run and Challenge modes",
   "The arcade games, with your learn-to-play timer",
   "Full progress reports over time",

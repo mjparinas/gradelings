@@ -1,4 +1,5 @@
 import "server-only";
+import { toCountryCode } from "@/lib/country";
 import type { FamilyInfo } from "@/lib/model";
 import { query } from "./db";
 
@@ -45,7 +46,7 @@ export function toFamilyInfo(row: FamilyRow, email: string, verified = true, stu
     // Null rather than missing, so a device drops access that was taken away.
     accessUntil: row.access_until ? Number(row.access_until) : null,
     discount: row.discount_code && row.discount_percent ? { code: row.discount_code, percentOff: Number(row.discount_percent) } : null,
-    country: row.country === "US" ? "US" : "CA",
+    country: toCountryCode(row.country),
     consentAt: row.consent_at ? Number(row.consent_at) : null,
     updatedAt: Number(row.updated_at),
   };
