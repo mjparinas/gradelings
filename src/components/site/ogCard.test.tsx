@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { GET as pinImage } from "@/app/guides/[framework]/[grade]/[subject]/worksheet/pin.png/route";
+import { GET as gradePinImage } from "@/app/guides/[framework]/[grade]/pin.png/route";
 import { ogCard, pinCard, titleSize } from "./ogCard";
 import { countMilestoneCard, unitCard, worksheetCard } from "./ogText";
 
@@ -22,6 +23,14 @@ describe("share images", () => {
     expect(ok.headers.get("content-type")).toBe("image/png");
     const missing = await pinImage(new Request("https://x.test/"), { params: Promise.resolve({ framework: "quebec", grade: "grade-3", subject: "math" }) });
     expect(missing.status).toBe(404);
+  }, 30_000);
+
+  it("draws a grade's printable sheets pin with up to six subjects, and only for real grades", async () => {
+    const ok = await gradePinImage(new Request("https://x.test/"), { params: Promise.resolve({ framework: "bc", grade: "grade-6" }) });
+    expect(await pngSize(ok)).toEqual({ width: 1000, height: 1500 });
+    for (const p of [{ framework: "quebec", grade: "grade-6" }, { framework: "bc", grade: "grade-42" }]) {
+      expect((await gradePinImage(new Request("https://x.test/"), { params: Promise.resolve(p) })).status).toBe(404);
+    }
   }, 30_000);
 
   it("shrinks long titles", () => {
