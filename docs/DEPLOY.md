@@ -38,20 +38,20 @@ Billing is live only when `STRIPE_SECRET_KEY`, `STRIPE_PRICE_MONTHLY` and `STRIP
 ## 2. Database (Turso)
 
 ```bash
-turso db locations                        # confirm the Canadian locations (Montréal `yul`, Toronto `yyz`) are still listed
-turso db create grademap --location yul   # Montréal. `vercel.json` runs functions in yul1 (Montréal) to match
+turso db locations                        # AWS regions only; none in Canada
+turso db create grademap --location aws-us-east-1   # Virginia, where production's database is
 turso db show grademap --url              # -> DATABASE_URL
 turso db tokens create grademap           # -> DATABASE_AUTH_TOKEN
 ```
 
-Turso offers Canadian locations only on its Fly provider (its AWS list has none), and a database cannot move between providers, so create it with the CLI rather than from the Vercel Marketplace unless the Marketplace lets you pick a Canadian location. Canadian hosting makes BC district privacy reviews easier (no "Supplemental Review" for storage outside Canada). Tables are created on first use (`CREATE TABLE IF NOT EXISTS` in `src/server/db.ts`), so there is no migration step. Create a separate database for staging.
+Production's database was created through the Vercel Marketplace in AWS us-east-1 (Virginia). Turso now offers only AWS locations, none of them in Canada, so the data is stored in the United States; `/privacy/` and `docs/school/` say so. Storage outside Canada can mean a "Supplemental Review" in a BC district privacy review; keeping data in Canada would need a different database host (owner decided October 2026 to leave it in Virginia). Tables are created on first use (`CREATE TABLE IF NOT EXISTS` in `src/server/db.ts`), so there is no migration step. Create a separate database for staging.
 
 ## 3. Hosting (Vercel)
 
 1. Import `mjparinas/gradelings`; the Next.js preset needs no changes (`npm run build`, `npm start`).
 2. Add the variables above to the Production environment. Use a separate set (test Stripe keys, a staging Turso database, `ALLOW_DEV_BILLING=1` if you want fake billing) for Preview.
 3. Add the domain, and set `NEXT_PUBLIC_SITE_URL` to match it. Redeploy so the build picks it up.
-4. Region: `vercel.json` pins functions to `yul1` (Montréal), next to Turso's Montréal location. Change both together if your users are elsewhere. Sentry (US or EU only) and Resend are not Canadian-hosted; they are listed as service providers in `/privacy/`.
+4. Region: `vercel.json` pins functions to `yul1` (Montréal), while the database is in Virginia (`aws-us-east-1`), so every database call crosses that distance. An occasional "fetch failed" (connect timeout to `*.turso.io`) on `/api/sync/` comes from this hop; the device keeps its unsynced answers and retries on the next sync. Moving functions to `iad1` would put them next to the database. Sentry (US or EU only) and Resend are not Canadian-hosted; they are listed as service providers in `/privacy/`.
 5. Preview deployments are off: `ignoreCommand` in `vercel.json` skips every build except the `main` branch, so pull requests don't use up the daily deployment limit. To preview a branch, temporarily remove that line.
 6. The daily email job is declared in `vercel.json` (`/api/cron/weekly/`, 15:00 UTC). Cron only runs on production deployments, and only once `CRON_SECRET` is set.
 

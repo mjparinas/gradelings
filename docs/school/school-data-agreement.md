@@ -25,7 +25,7 @@ For each student: a first name or nickname, the class grade and curriculum, an a
 
 ## 5. Where it is stored
 
-The service runs in Montréal, Canada. The schedule lists each service provider and where it handles information. The Provider will tell the School before adding a provider or moving storage outside Canada, and the School may end the agreement if it objects.
+The service's servers run in Montréal, Canada, and its database is in Virginia, United States. The schedule lists each service provider and where it handles information. The Provider will tell the School before adding a provider or moving storage to another country, and the School may end the agreement if it objects.
 
 ## 6. Security
 
@@ -53,7 +53,7 @@ Privacy contact: `[CONTACT_EMAIL]`. This agreement is governed by the laws of `[
 
 ## 12. Schools in the United States
 
-For a school in the United States, the Provider is a "school official" under the Family Educational Rights and Privacy Act (FERPA): it performs a service the School would otherwise do itself, is under the School's direct control for the use and upkeep of student records, uses them only for the purpose they were shared for and does not re-disclose them. The School consents on parents' behalf under the Children's Online Privacy Protection Act (COPPA) for educational use only; the Provider uses student information for nothing else. Washington districts usually sign the Student Data Privacy Consortium's National Data Privacy Agreement (NDPA) with the Washington exhibit; where they do, it replaces this template. In line with Washington's Student User Privacy in Education Rights Act (SUPER Act), the Provider does not use student information for targeted advertising, does not sell it, builds no profile of a student except for the School's educational purposes, deletes it at the School's request, keeps a security program (section 6) and gives notice before a material change to how it is handled. Student information is stored in Montréal, Canada (section 5).
+For a school in the United States, the Provider is a "school official" under the Family Educational Rights and Privacy Act (FERPA): it performs a service the School would otherwise do itself, is under the School's direct control for the use and upkeep of student records, uses them only for the purpose they were shared for and does not re-disclose them. The School consents on parents' behalf under the Children's Online Privacy Protection Act (COPPA) for educational use only; the Provider uses student information for nothing else. Washington districts usually sign the Student Data Privacy Consortium's National Data Privacy Agreement (NDPA) with the Washington exhibit; where they do, it replaces this template. In line with Washington's Student User Privacy in Education Rights Act (SUPER Act), the Provider does not use student information for targeted advertising, does not sell it, builds no profile of a student except for the School's educational purposes, deletes it at the School's request, keeps a security program (section 6) and gives notice before a material change to how it is handled. Student information is stored in Virginia, United States (section 5).
 
 **Schedule A: service providers.** Copy the table in [pia-pack.md](pia-pack.md), section 6, current at signing.
 
