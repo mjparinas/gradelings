@@ -152,46 +152,57 @@ export async function visitsReport(days: TrafficPeriod, now = Date.now()): Promi
   if (!bearer || !project) return { state: "setup", setup: VISITS_SETUP };
   const team = env("VERCEL_TEAM_ID");
   const d = periodDates(days, now);
-  const since = `${d.start}T00:00:00.000Z`;
-  const until = `${d.end}T23:59:59.999Z`;
-  const ask = async (by: string, from = since, to = until, limit = 10) => {
-    const q = new URLSearchParams({ projectId: project, since: from, until: to, by, limit: String(limit), ...(team ? { teamId: team } : {}) });
+  const ask = async (by: string, from: string, to: string, limit = 10) => {
+    const q = new URLSearchParams({ projectId: project, since: `${from}T00:00:00.000Z`, until: `${to}T23:59:59.999Z`, by, limit: String(limit), ...(team ? { teamId: team } : {}) });
     const r = await fetchJson<{ data?: VisitRow[]; result?: { data?: VisitRow[] } }>("Vercel Analytics", `https://api.vercel.com/v1/query/web-analytics/visits/aggregate?${q}`, {
       headers: { authorization: `Bearer ${bearer}`, accept: "application/json" },
     });
     return r.data ?? r.result?.data ?? [];
   };
-  try {
+  /** `keep` is how many days back the plan lets us read (Hobby: 31), or null for no limit. */
+  const read = async (keep: number | null): Promise<VisitsReport> => {
+    const oldest = keep ? periodDates(keep, now).start : "";
+    const start = oldest && oldest > d.start ? oldest : d.start;
+    // Compare only with a whole period before; a cut-short one would make every change look like growth.
+    const comparable = !oldest || d.prevStart >= oldest;
     // Totals by year so a visitor counts once (daily rows would count them once a day); only a period across
     // New Year counts them twice.
     const [totals, previous, daily, pages, referrers, countries] = await Promise.all([
-      ask("year"),
-      ask("year", `${d.prevStart}T00:00:00.000Z`, `${d.prevEnd}T23:59:59.999Z`),
-      ask("day", since, until, 100),
-      ask("requestPath"),
-      ask("referrerHostname"),
-      ask("country"),
+      ask("year", start, d.end),
+      comparable ? ask("year", d.prevStart, d.prevEnd) : Promise.resolve(null),
+      ask("day", start, d.end, 100),
+      ask("requestPath", start, d.end),
+      ask("referrerHostname", start, d.end),
+      ask("country", start, d.end),
     ]);
     const n = (v: unknown) => (typeof v === "number" ? v : 0);
     const total = (rows: VisitRow[]) => ({ visitors: rows.reduce((s, r) => s + n(r.visitors), 0), pageviews: rows.reduce((s, r) => s + n(r.pageviews), 0) });
     const list = (rows: VisitRow[], dim: string) => rows.filter((r) => r[dim] && r[dim] !== "Others").map((r) => ({ key: String(r[dim]), visitors: n(r.visitors), pageviews: n(r.pageviews) }));
     const t = total(totals);
     return {
-      state: "ok",
-      report: {
-        start: d.start,
-        end: d.end,
-        visitors: t.visitors,
-        pageviews: t.pageviews,
-        previous: total(previous),
-        daily: daily.map((r) => ({ date: String(r.timestamp ?? "").slice(0, 10), visitors: n(r.visitors), pageviews: n(r.pageviews) })),
-        pages: list(pages, "requestPath"),
-        referrers: list(referrers, "referrerHostname"),
-        countries: list(countries, "country"),
-      },
+      start,
+      end: d.end,
+      ...(start !== d.start ? { keptDays: keep ?? undefined } : {}),
+      visitors: t.visitors,
+      pageviews: t.pageviews,
+      previous: previous ? total(previous) : null,
+      daily: daily.map((r) => ({ date: String(r.timestamp ?? "").slice(0, 10), visitors: n(r.visitors), pageviews: n(r.pageviews) })),
+      pages: list(pages, "requestPath"),
+      referrers: list(referrers, "referrerHostname"),
+      countries: list(countries, "country"),
     };
+  };
+  try {
+    return { state: "ok", report: await read(null) };
   } catch (e) {
-    return { state: "error", error: (e as Error).message };
+    // Vercel's Hobby plan answers 400 "... only grants access to the latest 31 days of data": read what it keeps.
+    const keep = /latest (\d+) days/.exec((e as Error).message)?.[1];
+    if (!keep) return { state: "error", error: (e as Error).message };
+    try {
+      return { state: "ok", report: await read(Number(keep)) };
+    } catch (e2) {
+      return { state: "error", error: (e2 as Error).message };
+    }
   }
 }
 

@@ -189,6 +189,25 @@ describe("Vercel Web Analytics", () => {
     expect((calls[0].init?.headers as Record<string, string>).authorization).toBe("Bearer vercel-secret");
   });
 
+  it("reads the 31 days a Hobby plan keeps, without comparing with a cut-short period", async () => {
+    process.env.VERCEL_TOKEN = "vercel-secret";
+    process.env.VERCEL_PROJECT_ID = "prj_1";
+    const calls = fakeServices();
+    const vercel = vi.mocked(fetch).getMockImplementation()!;
+    vi.mocked(fetch).mockImplementation(async (input, init) => {
+      const since = new URL(String(input)).searchParams.get("since");
+      if (since && since < "2026-09-12")
+        return new Response(JSON.stringify({ error: { message: "Invalid request: the hobby plan only grants access to the latest 31 days of data." } }), { status: 400 });
+      return vercel(input, init);
+    });
+    const r = await traffic.visitsReport(90, NOW);
+    if (r.state !== "ok") throw new Error(JSON.stringify(r));
+    expect(r.report).toMatchObject({ start: "2026-09-12", end: "2026-10-12", keptDays: 31, visitors: 80, previous: null });
+    // Every retried question stays inside the 31 days.
+    const retried = calls.filter((c) => c.url.includes("since=2026-09-12"));
+    expect(retried.length).toBe(5);
+  });
+
   it("asks for the settings it needs", async () => {
     expect(await traffic.visitsReport(28, NOW)).toMatchObject({ state: "setup", setup: expect.stringMatching(/VERCEL_TOKEN/) });
   });
