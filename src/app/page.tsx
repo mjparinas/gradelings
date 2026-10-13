@@ -121,7 +121,7 @@ function AppPreview() {
           ))}
         </ul>
       </div>
-      <figcaption className="text-center text-sm text-ink-soft">A question with a hint, and the parent report it feeds.</figcaption>
+      <figcaption className="text-center text-sm text-ink-soft">Kids get a gentle hint when they miss, and parents see the progress in their report.</figcaption>
     </figure>
   );
 }
