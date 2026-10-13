@@ -111,6 +111,13 @@ describe("FamilyBilling", () => {
 });
 
 describe("Funnel", () => {
+  it("shows every step under its name while the numbers load", () => {
+    mocks.call.mockImplementation(() => new Promise(() => {}));
+    render(<Funnel onEmailGroup={() => {}} />);
+    for (const name of ["1. Signed up", "2. Confirmed their email", "3. Added a child"]) expect(screen.getByRole("heading", { name })).toBeInTheDocument();
+    expect(screen.getByRole("list")).toHaveAttribute("aria-busy", "true");
+  });
+
   const steps = (counts: number[]) => ({ steps: counts.map((count, i) => ({ id: `s${i}`, label: ["Signed up", "Confirmed their email", "Added a child", "A child practised", "Practised on 3 or more days", "Paid"][i], count, ofStart: count / counts[0], ofPrevious: i ? count / counts[i - 1] : 1 })) });
 
   it("shows each step, the biggest drop and an email link per stuck group", async () => {
@@ -148,11 +155,19 @@ describe("Automations", () => {
   });
   const data = (s = status()) => ({ automations: [s], alerts: { instant: true, digest: false }, alertRecipients: 1 });
 
+  it("shows every card under its name while the settings load", async () => {
+    mocks.call.mockImplementation(() => new Promise(() => {}));
+    render(<Automations />);
+    expect(screen.getByRole("heading", { name: "Alerts to you" })).toBeInTheDocument();
+    for (const name of ["Ollie misses you", "Add your child", "Come back after a try", "Free lessons are waiting"]) expect(screen.getByRole("heading", { name })).toBeInTheDocument();
+    expect(screen.getByText("Loading…").closest('[aria-busy="true"]')).not.toBeNull();
+  });
+
   it("turns a nudge on only after TURN ON is typed", async () => {
     respond((url, method) => (url === "/api/admin/automations/" && method === "GET" ? data() : undefined));
     const user = userEvent.setup();
     render(<Automations />);
-    const card = (await screen.findByRole("heading", { name: "Ollie misses you" })).closest("li")!;
+    const card = (await screen.findByRole("heading", { name: "Ollie misses you", level: 3 })).closest("li")!;
     expect(card).toHaveTextContent("Off");
     expect(card).toHaveTextContent("If it were on, the next daily run would email 12 of the 12 families waiting (limit 20 a day).");
     await user.click(within(card).getByRole("button", { name: "Turn on" }));
@@ -168,7 +183,7 @@ describe("Automations", () => {
     respond((url, method) => (url === "/api/admin/automations/" && method === "GET" ? data(on) : undefined));
     const user = userEvent.setup();
     render(<Automations />);
-    const card = (await screen.findByRole("heading", { name: "Ollie misses you" })).closest("li")!;
+    const card = (await screen.findByRole("heading", { name: "Ollie misses you", level: 3 })).closest("li")!;
     expect(card).toHaveTextContent("(owner@example.com)");
     await user.click(within(card).getByRole("button", { name: "Turn off" }));
     expect(sent("/api/admin/automations/")).toEqual({ id: "quiet-7", action: "switch", on: false });

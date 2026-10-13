@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { call } from "@/lib/classroom";
 import type { Cell, CellKind, Detail, DetailView } from "@/lib/adminDetail";
+import { LoadingRows } from "./Skeleton";
 
 // The window a dashboard tile opens: a few headline numbers, then the list behind the tile. Lists come from
 // /api/admin/stats/detail/ (or are built in the panel, for the money breakdowns). Emails open the family in Users.
@@ -117,7 +118,7 @@ export function DetailModal({
             {err}
           </p>
         )}
-        {!detail && !err && <p className="mt-3 font-read">Loading…</p>}
+        {!detail && !err && <LoadingRows rows={6} />}
         {detail && (
           <>
             {detail.intro && <p className="mt-1 text-sm text-ink-soft">{detail.intro}</p>}

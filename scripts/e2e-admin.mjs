@@ -231,6 +231,7 @@ await scan("traffic");
 await tab("Automations");
 check(await page.getByRole("heading", { name: "Alerts to you" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the Automations tab shows the alerts");
 const nudges = page.getByRole("listitem").filter({ has: page.getByRole("button", { name: "Edit the email" }) });
+await nudges.first().waitFor({ timeout: 8000 });
 check((await nudges.count()) >= 4 && (await nudges.getByText("On", { exact: true }).count()) === 0, "every automatic nudge starts off");
 await nudges.first().getByRole("button", { name: "Turn on" }).click();
 check(await nudges.first().getByRole("button", { name: "Start sending" }).isDisabled(), "turning a nudge on waits for TURN ON to be typed");

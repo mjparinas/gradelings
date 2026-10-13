@@ -5,6 +5,7 @@ import { LIMITS, type AdminMessage } from "@/lib/adminEmails";
 import { AUTOMATIONS, MAX_DAILY_CAP, TURN_ON, type AutomationConfig } from "@/lib/automations";
 import { call } from "@/lib/classroom";
 import { Badge, formatAgo, formatDay, Notice, Preview } from "./Engage";
+import { Bars } from "./Skeleton";
 
 // The Automations tab: the owner's alerts and morning digest, and automatic nudges. Every nudge is off until
 // the owner switches it on here (typing TURN ON); the daily job then sends it to at most its daily limit.
@@ -201,7 +202,25 @@ export function Automations() {
       </h2>
       <Notice err={err} />
       {!data ? (
-        !err && <p className="font-read">Loading…</p>
+        !err && (
+          // Every card is drawn at once under its own name; the settings fill in when they arrive.
+          <div aria-busy="true" className="flex flex-col gap-4">
+            <p className="sr-only">Loading…</p>
+            <div className={card}>
+              <h3 className="text-xl font-bold">Alerts to you</h3>
+              <Bars className="mt-2" />
+            </div>
+            <h3 className="text-xl font-bold">Automatic nudges</h3>
+            <ul className="grid gap-3 lg:grid-cols-2">
+              {AUTOMATIONS.map((def) => (
+                <li key={def.id} className={card}>
+                  <h4 className="text-lg font-bold">{def.name}</h4>
+                  <Bars className="mt-2" />
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
       ) : (
         <>
           <Alerts data={data} reload={load} />

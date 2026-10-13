@@ -15,6 +15,7 @@ import { Automations } from "./Automations";
 import { FamilyBilling } from "./Billing";
 import { Funnel } from "./Funnel";
 import { Traffic } from "./Traffic";
+import { LoadingCards, LoadingRows, TableRowsShape } from "./Skeleton";
 import { System } from "./System";
 import { MaintenanceBanner, MaintenanceCard, type MaintenanceState } from "./Maintenance";
 import { parseVariants, type ExperimentStatus, type FlagScope, type Variant } from "@/lib/flags";
@@ -237,9 +238,9 @@ function Users({ flags, initialOpen = null }: { flags: FlagRow[]; initialOpen?: 
         <button className={primary}>Search</button>
       </form>
       <Notice err={err} />
-      {users && (
+      {(users || !err) && (
         <div className="mt-3 overflow-x-auto rounded-2xl border border-line bg-white">
-          <table className="w-full min-w-[48rem] text-left">
+          <table className="w-full min-w-[48rem] text-left" aria-busy={!users}>
             <thead>
               <tr className="border-b border-line">
                 <th scope="col" className="p-3">Email</th>
@@ -251,12 +252,13 @@ function Users({ flags, initialOpen = null }: { flags: FlagRow[]; initialOpen?: 
               </tr>
             </thead>
             <tbody>
-              {users.length === 0 && (
+              {!users && <TableRowsShape cols={6} rows={6} />}
+              {users?.length === 0 && (
                 <tr>
                   <td colSpan={6} className="p-3 text-ink-soft">No accounts match.</td>
                 </tr>
               )}
-              {users.map((u) => (
+              {users?.map((u) => (
                 <tr key={`${u.familyId}:${u.email}`} className="border-b border-line last:border-0">
                   <th scope="row" className="p-3 font-normal">
                     <button type="button" className="min-h-11 text-left font-semibold underline" onClick={() => setOpen(u.familyId)}>
@@ -299,7 +301,17 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
         <button type="button" className={`${quiet} mt-3`} onClick={onBack}>Back to users</button>
       </section>
     );
-  if (!d) return loadErr ? <Notice err={loadErr} /> : <p className="font-read">Loading…</p>;
+  if (!d)
+    return loadErr ? (
+      <Notice err={loadErr} />
+    ) : (
+      <section className="flex flex-col gap-4">
+        <button type="button" className="self-start font-semibold underline" onClick={onBack}>
+          ← All users
+        </button>
+        <LoadingCards count={4} className="" />
+      </section>
+    );
   const f = d.family;
   return (
     <section aria-labelledby="user-h" className="flex flex-col gap-4">
@@ -622,6 +634,7 @@ function Codes() {
             </tr>
           </thead>
           <tbody>
+            {!codes && <TableRowsShape cols={6} />}
             {codes?.length === 0 && (
               <tr>
                 <td colSpan={6} className="p-3 text-ink-soft">No codes yet.</td>
@@ -712,7 +725,7 @@ function Flags({ flags, reload }: { flags: FlagRow[] | null; reload: () => void 
         Switch a feature off for everyone, or roll it out to a share of families (the same families each time). Devices pick up a change the next time the app opens or comes back into view. To force a flag for one family, open them under Users.
       </p>
       {!flags ? (
-        <p className="font-read">Loading…</p>
+        <LoadingRows rows={6} />
       ) : (
         <ul className={`mt-3 divide-y divide-line ${card}`}>
           {flags.map((f) => (
@@ -867,6 +880,7 @@ function Experiments() {
         <button disabled={busy} className={`${primary} self-start`}>Save draft</button>
         <Notice err={err} ok={ok} />
       </form>
+      {!list && <LoadingCards count={2} className="" />}
       {list?.length === 0 && <p className="font-read text-ink-soft">No tests yet.</p>}
       <ul className="flex flex-col gap-3">
         {list?.map((e) => <ExperimentCard key={`${e.key}:${e.status}:${e.winner}`} e={e} reload={load} />)}
@@ -897,6 +911,7 @@ function Reports() {
       <h2 id="reports-h" className="text-2xl font-bold">Question reports</h2>
       <p className="mt-1 font-read text-ink-soft">What children and parents flagged with &quot;Report a problem&quot;, most reported first. Clear a question once it is fixed or checked.</p>
       <Notice err={err} ok={ok} />
+      {!reports && <LoadingCards count={3} />}
       {reports?.length === 0 && <p className="mt-3 font-read">Nothing reported.</p>}
       <ul className="mt-3 flex flex-col gap-3">
         {reports?.map((r) => (
@@ -936,6 +951,7 @@ function AuditLog() {
     <section aria-labelledby="log-h">
       <h2 id="log-h" className="text-2xl font-bold">Change log</h2>
       <p className="mt-1 font-read text-ink-soft">Every change made here, newest first.</p>
+      {!rows && <LoadingRows rows={8} />}
       {rows?.length === 0 && <p className="mt-3 font-read">No changes yet.</p>}
       {rows && rows.length > 0 && (
         <div className="mt-3 overflow-x-auto rounded-2xl border border-line bg-white">

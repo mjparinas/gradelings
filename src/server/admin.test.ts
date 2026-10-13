@@ -343,6 +343,24 @@ describe("codes, reports, stats and the change log", () => {
     expect(s.stripe).toBe(false);
   });
 
+  it("answers for one overview section at a time, with the same numbers as the whole", async () => {
+    const whole = await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json();
+    const part = async (section: string) => (await as(admin.cookie).get(stats, `/api/admin/stats/?section=${section}`)).json();
+    const money = await part("money");
+    expect(money.revenue).toEqual(whole.revenue);
+    expect(money.stripe).toBe(false);
+    const customers = await part("customers");
+    expect(customers).toMatchObject({ people: whole.people, customers: whole.customers, other: whole.other });
+    const growth = await part("growth");
+    expect(growth).toMatchObject({ acquisition: whole.acquisition, customersEver: whole.revenue.customersEver, cancelReasons: whole.cancelReasons });
+    const practice = await part("practice");
+    expect(practice.engagement.d30).toBe(whole.engagement.d30);
+    expect(practice.engagement.daily).toHaveLength(30);
+    expect(practice.revenue).toBeUndefined();
+    expect((await as(admin.cookie).get(stats, "/api/admin/stats/?section=nope")).status).toBe(400);
+    expect((await as(parent.cookie).get(stats, "/api/admin/stats/?section=money")).status).toBe(404);
+  });
+
   it("records paid invoices and refunds from Stripe and shows them as revenue", async () => {
     const payer = await account("payer@example.com");
     await dbm.run("UPDATE families SET stripe_customer = 'cus_payer', plan = 'premium', subscription_interval = 'month' WHERE id = ?", [payer.familyId]);

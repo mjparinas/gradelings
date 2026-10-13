@@ -6,6 +6,7 @@ import { SEGMENTS, type Segment } from "@/lib/adminEmails";
 import { call } from "@/lib/classroom";
 import { biggestDrop, FUNNEL_PERIODS, FUNNEL_STEPS, type FunnelStep } from "@/lib/funnel";
 import { Notice } from "./Engage";
+import { Bars } from "./Skeleton";
 
 // The sign-up funnel: how far families who signed up in a period got, where most stop, and a way to email the
 // families stuck at each step. Bars use the reports' single blue, with the numbers written beside them.
@@ -32,7 +33,23 @@ export function Funnel({ onEmailGroup }: { onEmailGroup: (segment: Segment) => v
       </div>
       <Notice err={err} />
       {!steps ? (
-        !err && <p className="font-read">Loading…</p>
+        !err && (
+          // Every step is drawn at once under its own name; the numbers fill in when they arrive.
+          <ol className="flex flex-col gap-2" aria-busy="true">
+            {FUNNEL_STEPS.map((s, i) => (
+              <li key={s.id} className={card}>
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 className="font-bold">
+                    {i + 1}. {s.label}
+                  </h3>
+                  <span className="sr-only">Loading…</span>
+                  <Bars widths={["w-40"]} />
+                </div>
+                <Bars widths={["w-full"]} className="mt-3" />
+              </li>
+            ))}
+          </ol>
+        )
       ) : steps[0].count === 0 ? (
         <p className={`${card} font-read`}>Nobody signed up in this period yet.</p>
       ) : (

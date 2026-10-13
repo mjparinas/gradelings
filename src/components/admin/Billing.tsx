@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { CANCEL_CONFIRM, REFUND_CONFIRM } from "@/lib/adminBilling";
 import { call } from "@/lib/classroom";
 import { Badge, formatDay, Notice } from "./Engage";
+import { Bars } from "./Skeleton";
 
 // A family's billing on its admin page: payments with refunds, the live subscription with cancel and resume,
 // and the "please update your card" email when a payment failed. Refunding and cancelling now need a word typed.
@@ -200,7 +201,12 @@ export function FamilyBilling({ familyId, pastDue }: { familyId: string; pastDue
         </div>
       )}
       {!d ? (
-        !err && <p className="font-read">Loading…</p>
+        !err && (
+          <div aria-busy="true" className="mt-2">
+            <p className="sr-only">Loading…</p>
+            <Bars widths={["w-1/3", "w-2/3", "w-1/2"]} />
+          </div>
+        )
       ) : (
         <>
           {!d.stripe && <p className="mt-1 text-sm text-ink-soft">Stripe isn&apos;t set up, so refunds and cancelling are off.</p>}

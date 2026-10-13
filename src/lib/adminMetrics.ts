@@ -334,3 +334,54 @@ export function computeMetrics(input: MetricsInput): Metrics {
     other: { redemptions: input.redemptions, reports: input.reports },
   };
 }
+
+// ---------- One section at a time ----------
+
+/** The overview's sections, each loaded on its own so a slow query only holds up its own tiles. */
+export const METRIC_SECTIONS = ["money", "customers", "growth", "practice"] as const;
+export type MetricSection = (typeof METRIC_SECTIONS)[number];
+export const isMetricSection = (s: string): s is MetricSection => (METRIC_SECTIONS as readonly string[]).includes(s);
+
+/** What each section reads; the rest of the input can be left empty. */
+export const SECTION_INPUTS: Record<MetricSection, readonly (keyof Omit<MetricsInput, "now">)[]> = {
+  money: ["families", "payments", "monthlyCosts"],
+  customers: ["families", "parents", "children", "teachers", "students", "classes", "redemptions", "reports"],
+  growth: ["families", "payments"],
+  practice: ["activity", "activeFamilies"],
+};
+
+export interface SectionMetrics {
+  money: { generatedAt: number; revenue: Metrics["revenue"] };
+  customers: { generatedAt: number; people: Metrics["people"]; customers: Metrics["customers"]; other: Metrics["other"] };
+  growth: { generatedAt: number; acquisition: Metrics["acquisition"]; customersEver: number };
+  practice: { generatedAt: number; engagement: Metrics["engagement"] };
+}
+
+/** An input with nothing in it, for the parts a section doesn't read. */
+export const emptyInput = (now: number): MetricsInput => ({
+  now,
+  families: [],
+  parents: 0,
+  children: 0,
+  teachers: 0,
+  students: 0,
+  classes: 0,
+  payments: [],
+  activity: [],
+  activeFamilies: { d1: 0, d7: 0, d30: 0 },
+  monthlyCosts: 0,
+  redemptions: 0,
+  reports: 0,
+});
+
+/** The part of the metrics one section shows. */
+export function sectionOf<S extends MetricSection>(m: Metrics, section: S): SectionMetrics[S] {
+  const at = m.generatedAt;
+  const parts: { [K in MetricSection]: () => SectionMetrics[K] } = {
+    money: () => ({ generatedAt: at, revenue: m.revenue }),
+    customers: () => ({ generatedAt: at, people: m.people, customers: m.customers, other: m.other }),
+    growth: () => ({ generatedAt: at, acquisition: m.acquisition, customersEver: m.revenue.customersEver }),
+    practice: () => ({ generatedAt: at, engagement: m.engagement }),
+  };
+  return parts[section]() as SectionMetrics[S];
+}
