@@ -2,7 +2,7 @@ import { createHmac } from "node:crypto";
 import { mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { afterAll, beforeAll, describe, expect, it } from "vitest";
+import { afterAll, beforeAll, describe, expect, it, vi } from "vitest";
 
 // US families: country from the first child, the COPPA consent gate in sync, consent and withdraw routes,
 // the confirmation emails and the USD checkout. Real route handlers against a throwaway SQLite file.
@@ -161,6 +161,23 @@ describe("a US family", () => {
     const res = await (await consentRoute.POST(post("/api/account/consent/", { withdraw: true }, cookie))).json();
     expect(res.family.consentAt).toBeNull();
     expect(await stored(familyId)).toEqual({ profiles: 0, events: 0, settings: 0 });
+  });
+
+  it("tries the delayed confirmation again the next day when it couldn't be sent", async () => {
+    const { cookie, familyId } = await newAccount("us-retry@example.com");
+    await sync.POST(post("/api/sync/", { profiles: [child("ur-1", "us-wa")] }, cookie));
+    await consentRoute.POST(post("/api/account/consent/", { agree: true }, cookie));
+    const due = Number((await family(familyId)).consent_at) + 86_400_000;
+    // In production with no email provider, nothing goes out.
+    vi.stubEnv("NODE_ENV", "production");
+    try {
+      await consent.sendConsentFollowUps("https://app.test", due);
+    } finally {
+      vi.unstubAllEnvs();
+    }
+    expect((await family(familyId)).consent_followup_at).toBeNull();
+    await consent.sendConsentFollowUps("https://app.test", due + 86_400_000);
+    expect(Number((await family(familyId)).consent_followup_at)).toBe(due + 86_400_000);
   });
 
   it("counts a paid checkout as consent, recorded from the webhook", async () => {

@@ -87,6 +87,21 @@ describe("teacher-made student accounts", () => {
     expect(who.family.account.student).toBe(true);
   });
 
+  it("syncs a US class student's practice without asking for a parent's consent", async () => {
+    const t = await teacher("us-st-teacher@example.com");
+    const cls = await classWith(t, "us-wa");
+    const added = await (await studentRoutes.POST(req("/api/classes/students/", "POST", { classId: cls.id, names: ["Ava"] }, t))).json();
+    const [ava] = added.students as { loginCode: string; profileId: string }[];
+    const login = await studentLogin.POST(req("/api/students/login/", "POST", { classCode: cls.joinCode, studentCode: ava.loginCode }));
+    const cookie = (login.headers.get("set-cookie") ?? "").split(";")[0];
+    // Even if the class account's family were marked as US, the school's consent covers it.
+    await dbm.run("UPDATE families SET country = 'US' WHERE id = (SELECT family_id FROM students WHERE profile_id = ?)", [ava.profileId]);
+    const answer = { id: "us-st-e1", profileId: ava.profileId, type: "answer", t: Date.now() - 1000, unitKey: "3/math/x", correct: true };
+    const res = await (await sync.POST(req("/api/sync/", "POST", { events: [answer] }, cookie))).json();
+    expect(res.accepted).toEqual(["us-st-e1"]);
+    expect(res.profiles).toHaveLength(1);
+  });
+
   it("shows the teacher the students' progress and removes everything on request", async () => {
     const t = await teacher("st-teacher2@example.com");
     const cls = await classWith(t);

@@ -3,13 +3,13 @@ import Link from "next/link";
 import { breadcrumbJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { guidePath } from "@/components/site/guides";
-import { COMPETITORS } from "@/content/compare";
+import { COMPETITORS, familiesWord } from "@/content/compare";
 import { APP_NAME } from "@/lib/brand";
 import { JsonLd } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: `${APP_NAME} compared with IXL, Khan Academy and Prodigy`,
-  description: `A fair, plain comparison of ${APP_NAME} with other learning apps for Canadian families: price, curriculum match, how progress is shown and what kids see.`,
+  description: `A fair, plain comparison of ${APP_NAME} with other learning apps for ${familiesWord()}: price, curriculum match, how progress is shown and what kids see.`,
   alternates: { canonical: guidePath.compareIndex() },
 };
 
