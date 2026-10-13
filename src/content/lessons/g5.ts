@@ -207,4 +207,11 @@ export const lessons: GradeLessons = {
     ["4 × 3 = 12 cubes in one layer.", "2 layers: 12 × 2 = 24."],
     "24 cubic inches",
   ),
+  // California
+  "math/ca-g5-prime-factors": lesson(
+    ["A prime number has exactly two factors: 1 and itself (2, 3, 5, 7, 11 …).", "Make a factor tree: split the number into two factors, then keep splitting any factor that isn't prime.", "The primes at the ends of the branches, multiplied together, make the number."],
+    "Write 24 as a product of prime factors.",
+    ["24 = 2 × 12.", "12 = 2 × 6, and 6 = 2 × 3.", "24 = 2 × 2 × 2 × 3."],
+    "2 × 2 × 2 × 3",
+  ),
 };

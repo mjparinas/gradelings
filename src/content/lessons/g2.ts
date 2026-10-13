@@ -214,4 +214,11 @@ export const lessons: GradeLessons = {
     ["12 − 7 = 5."],
     "5",
   ),
+  // California
+  "math/ca-g2-estimate": lesson(
+    ["To estimate, round each number to a friendly number, like the nearest ten or hundred.", "Add or subtract the rounded numbers in your head.", "Use the estimate to check: a real answer should be close to it."],
+    "About how much is 38 + 41? Round to the nearest ten.",
+    ["38 is about 40. 41 is about 40.", "40 + 40 = 80."],
+    "about 80",
+  ),
 };

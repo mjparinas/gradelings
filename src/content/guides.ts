@@ -11,6 +11,7 @@ import { NUNAVUT_GUIDES } from "./nunavut/guides";
 import { SASKATCHEWAN_GUIDES } from "./saskatchewan/guides";
 import { WASHINGTON_GUIDES } from "./washington/guides";
 import { OREGON_GUIDES } from "./oregon/guides";
+import { CALIFORNIA_GUIDES } from "./california/guides";
 import type { AgeBand, FrameworkId, GradeId, SubjectId } from "./types";
 
 // Parent-facing guide copy that differs by province. Like frameworks.ts, this is
@@ -465,7 +466,7 @@ const NWT_GUIDES: FrameworkGuides = {
   },
 };
 
-export const GUIDES: Partial<Record<FrameworkId, FrameworkGuides>> = { "ca-pe": PRINCE_EDWARD_ISLAND_GUIDES, "ca-nl": NEWFOUNDLAND_AND_LABRADOR_GUIDES, "ca-nu": NUNAVUT_GUIDES, "ca-nb": NEW_BRUNSWICK_GUIDES, "ca-ns": NOVA_SCOTIA_GUIDES, "ca-nt": NWT_GUIDES, "ca-yt": YUKON_GUIDES, "ca-bc": BC_GUIDES, "ca-on": ONTARIO_GUIDES, "ca-ab": ALBERTA_GUIDES, "ca-sk": SASKATCHEWAN_GUIDES, "ca-mb": MANITOBA_GUIDES, "us-wa": WASHINGTON_GUIDES, "us-or": OREGON_GUIDES };
+export const GUIDES: Partial<Record<FrameworkId, FrameworkGuides>> = { "ca-pe": PRINCE_EDWARD_ISLAND_GUIDES, "ca-nl": NEWFOUNDLAND_AND_LABRADOR_GUIDES, "ca-nu": NUNAVUT_GUIDES, "ca-nb": NEW_BRUNSWICK_GUIDES, "ca-ns": NOVA_SCOTIA_GUIDES, "ca-nt": NWT_GUIDES, "ca-yt": YUKON_GUIDES, "ca-bc": BC_GUIDES, "ca-on": ONTARIO_GUIDES, "ca-ab": ALBERTA_GUIDES, "ca-sk": SASKATCHEWAN_GUIDES, "ca-mb": MANITOBA_GUIDES, "us-wa": WASHINGTON_GUIDES, "us-or": OREGON_GUIDES, "us-ca": CALIFORNIA_GUIDES };
 
 export const GUIDE_FRAMEWORKS = FRAMEWORKS.filter((f) => GUIDES[f.id]);
 

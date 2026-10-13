@@ -47,6 +47,8 @@ const FRENCH_GRADES: Record<FrameworkId, { immersion: GradeId[]; "core-french": 
   "us-wa": { immersion: [], "core-french": [] },
   // Oregon: no French subject (see docs/research/oregon/README.md).
   "us-or": { immersion: [], "core-french": [] },
+  // California: no French subject (see docs/research/california/README.md).
+  "us-ca": { immersion: [], "core-french": [] },
 };
 
 const units = (framework: FrameworkId, grade: GradeId, subject: string) =>
