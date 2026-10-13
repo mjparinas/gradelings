@@ -30,7 +30,7 @@ export default function PricingPage() {
         <PricingCards />
       </div>
       <ul className="mt-8 flex max-w-2xl flex-col gap-2 font-read text-lg">
-        <li>✓ No ads, no tracking pixels, and we never sell information.</li>
+        <li>✓ No ads, and we never sell information.</li>
         <li>✓ Children can’t buy anything. Coins are earned only by learning.</li>
         <li>✓ Cancel any time in the Parent area. You keep access until the end of the period you’ve paid for.</li>
         <li>✓ After the trial, the first {FREE_UNITS_PER_COURSE} units of every course stay free forever.</li>

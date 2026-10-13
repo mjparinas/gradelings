@@ -38,7 +38,7 @@ export function PrivacyPanels() {
           <li>A first name (or nickname), grade, optional birth year and avatar for each child.</li>
           <li>Practice results: which unit, right or wrong, and how long it took. No free text, photos or voice recordings.</li>
           <li>Your email and a securely hashed password if you create an account.</li>
-          <li>No ads, no tracking pixels, and we never sell data.</li>
+          <li>No ads, and we never sell data.</li>
         </ul>
       </Panel>
       <Panel title="Your data, your choice">

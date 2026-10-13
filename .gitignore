@@ -57,3 +57,11 @@ next-env.d.ts
 
 # Piper read-aloud files, written by scripts/fetch-piper.mjs
 /public/piper/
+
+# iOS build output (docs/IOS.md). The Xcode project is generated from ios/project.yml.
+/ios/Gradelings.xcodeproj/
+/ios/build/
+/ios/DerivedData/
+*.p8
+*.p12
+*.mobileprovision

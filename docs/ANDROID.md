@@ -48,7 +48,7 @@ Google Play generally requires subscriptions for digital content sold inside an 
 - The app opens `/play/?app=android` (`startUrl` in `android/twa-manifest.json`). `src/lib/twa.ts` (`isAndroidApp`) reads that, or the `android-app://` referrer, and keeps it in `sessionStorage`.
 - The Android app shows no prices, payment buttons, subscribe prompts or link into checkout, and doesn't name the website as a place to pay (Google Play counts that as steering). The Subscription page says only that the app can't take a payment and that a membership shows up once the parent signs in; the lock dialog asks the child to ask a grown-up; the subscribe banner and header button are hidden.
 - Rejection is still possible. Check Google's current payments policy before you submit, and if it asks for more, the fallback is Google Play Billing (not built).
-- The Families policy also applies because the app is for children. The no-ads, no-tracking and no-purchases-by-kids rules in `AGENTS.md` fit it, and the parent area is behind the PIN gate.
+- The Families policy also applies because the app is for children. The no-ads and no-purchases-by-kids rules in `AGENTS.md` fit it, there is no analytics in the kids' app, and the parent area is behind the PIN gate.
 
 ## Testing before you publish
 

@@ -17,7 +17,8 @@ export default function PrivacyPage() {
     >
       <Section title="The short version">
         <ul>
-          <li>We show no ads, use no advertising or tracking pixels, and never sell or rent your family’s information.</li>
+          <li>We show no ads and never sell or rent your family’s information.</li>
+          <li>We measure visits to our public website, and our email provider tells us when an email we send you is opened or a link in it is clicked. See “Who we share it with” below.</li>
           <li>We keep a child’s first name or nickname, grade, an optional birth year, an avatar and their practice results. Nothing else about them.</li>
           <li>Children don’t type free text, upload photos or record their voice.</li>
           <li>You can export or delete everything yourself, at any time, from the Parent area.</li>
@@ -57,7 +58,7 @@ export default function PrivacyPage() {
           <strong>On your device:</strong> the app saves progress on the device first, so it works offline, using the browser’s local storage and IndexedDB. Your Parent area PIN is stored there too, salted and hashed, and your read-aloud voice choice is kept per device. If you never sign in, this information stays on that device and is not sent to us.
         </p>
         <p>
-          <strong>Automatically:</strong> our servers keep ordinary technical logs (such as IP address, browser type and the time of a request) for security and to keep the service running. To block repeated guessing of passwords, we also keep a short-lived counter of sign-in, sign-up and reset attempts for each IP address. On our public pages only (not the kids’ app, the parent area, shared reports or shared milestones) we count anonymous page views; see “Who we share it with” below. We use no advertising trackers.
+          <strong>Automatically:</strong> our servers keep ordinary technical logs (such as IP address, browser type and the time of a request) for security and to keep the service running. To block repeated guessing of passwords, we also keep a short-lived counter of sign-in, sign-up and reset attempts for each IP address. We also measure visits to our website and whether our emails are opened and clicked; see “Who we share it with” below.
         </p>
       </Section>
 
@@ -94,7 +95,7 @@ export default function PrivacyPage() {
           If you choose, we also send a short weekly progress email (it includes each child’s first name and practice totals, and nothing else about them), and you can create a read-only link to a child’s report. Anyone with that link can see that child’s name, grade and the practice totals in the report, until it expires after 30 days or you stop sharing it. You can also share a milestone card (such as “Grew into a Tree in Fractions” or “100 questions right on the first try”); it shows only that milestone and, for a topic, the grade and subject, never your child’s name, and we keep no record of it. You opt in to the weekly email yourself, after confirming your email address, and you can stop it at any time in the Parent area or with the unsubscribe link in each email. You can also opt in to a gentle practice reminder, sent only to you (never to your child) after a few quiet days and at most once a week; it includes only a child’s first name and how many days it has been, and has its own unsubscribe link. Account and billing messages are not marketing and are sent as long as you have an account.
         </p>
         <p>
-          Once your email is confirmed, we may now and then send you news and tips: new features, ideas to try at home, or an offer. These can greet your child by first name, are sent only to you, and you can turn them off at any time under Account &amp; sync or with the unsubscribe link in each one. For each email we send to your account we keep a short record of which kind it was, when it went and whether it was delivered, bounced or marked as spam (reported to us by our email provider), never its contents, so we can stop emailing an address that doesn’t work. We don’t track whether you open or click our emails. If you email us, our email provider keeps your message and we keep only whether we have answered it.
+          Once your email is confirmed, we may now and then send you news and tips: new features, ideas to try at home, or an offer. These can greet your child by first name, are sent only to you, and you can turn them off at any time under Account &amp; sync or with the unsubscribe link in each one. For each email we send to your account we keep a short record of which kind it was, when it went and whether it was delivered, bounced or marked as spam (reported to us by our email provider), never its contents, so we can stop emailing an address that doesn’t work. Our email provider also records whether each email was opened and which links in it were clicked (it adds a tiny image to the email and sends links through its own address first), and we use that to see which emails are useful. Turning off images in your email app stops the open count. If you email us, our email provider keeps your message and we keep only whether we have answered it.
         </p>
         <p>We don’t use children’s information for advertising or to build profiles for any other purpose.</p>
       </Section>
@@ -106,16 +107,19 @@ export default function PrivacyPage() {
             <strong>Stripe</strong>, to take payments and manage subscriptions. Stripe receives your email and payment details under its own privacy policy.
           </li>
           <li>
-            <strong>Resend</strong>, to deliver the emails we send you (such as email confirmation, password resets and the weekly report). It receives your email address and the message, which can include a child’s first name and practice totals.
+            <strong>Resend</strong>, to deliver the emails we send you (such as email confirmation, password resets and the weekly report). It receives your email address and the message, which can include a child’s first name and practice totals. It also records when an email is opened and which links are clicked, along with the time, the device’s IP address and the email app or browser used.
           </li>
           <li>
             <strong>Sentry</strong>, to tell us when the app crashes. Error reports are stripped of names, email addresses, cookies and what was typed or tapped before they leave your device or our server, and are not used for anything else.
           </li>
           <li>
-            <strong>Vercel Web Analytics and Speed Insights</strong>, to count anonymous page views and measure how fast our public website loads, such as which pages are visited, from which country and how quickly they appear. It sets no cookies and builds no profile of a visitor. It is switched off in the kids’ app, the parent area, shared reports, shared milestones and account pages, so nothing a child does is measured.
+            <strong>Vercel Web Analytics and Speed Insights</strong>, to count anonymous page views and measure how fast our public website loads, such as which pages are visited, from which country and how quickly they appear. It sets no cookies. It is switched off in the kids’ app, the parent area, shared reports, shared milestones and account pages.
           </li>
           <li>
-            <strong>Our hosting and database providers</strong>, which store the account and progress data described above on our behalf. Our servers and database are in Montréal, Canada. Some service providers above, such as Stripe, Resend and Sentry, may process limited information outside Canada.
+            <strong>Cloudflare Web Analytics</strong>, which runs our domain and counts visits to our website, such as which pages are visited, from which country and which site sent the visitor. It sets no cookies.
+          </li>
+          <li>
+            <strong>Our hosting and database providers</strong>, which store the account and progress data described above on our behalf. Our servers and database are in Montréal, Canada. Some service providers above, such as Stripe, Resend, Sentry and Cloudflare, may process limited information outside Canada.
           </li>
         </ul>
         <p>
@@ -125,7 +129,7 @@ export default function PrivacyPage() {
 
       <Section title="Cookies and similar storage">
         <p>
-          We use one essential, HttpOnly cookie to keep you signed in to your parent account. We also use your browser’s local storage and a service worker to save progress, settings and app files so {APP_NAME} works offline. We don’t use advertising or analytics cookies (our page-view counts are cookieless), so there is no cookie banner to dismiss.
+          We use one essential, HttpOnly cookie to keep you signed in to your parent account. We also use your browser’s local storage and a service worker to save progress, settings and app files so {APP_NAME} works offline. We don’t use advertising or analytics cookies (our website analytics are cookieless), so there is no cookie banner to dismiss.
         </p>
       </Section>
 

@@ -30,7 +30,7 @@ const FEATURES = [
   { icon: "🏆", title: "Plays like a video game", body: "Trophies, levels, daily quests, streaks and critter companions keep kids coming back, and every one of them is earned by learning." },
   { icon: "🗺️", title: "Picks what to practise for them", body: "One tap starts Adventure, a mix of subjects that leans toward the skills that need work. No menus to dig through." },
   { icon: "📶", title: "Works offline", body: "Install it on a tablet or phone and it keeps working with no internet. Progress, scores and trophies sync when you're back online." },
-  { icon: "🙈", title: "No ads, ever", body: "No ads, no tracking pixels and no selling data. Kids see a first name and an avatar, nothing more." },
+  { icon: "🙈", title: "No ads, ever", body: "No ads and no selling data. Kids see a first name and an avatar, nothing more." },
 ];
 
 const STEPS = [
