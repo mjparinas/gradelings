@@ -61,6 +61,19 @@ export const currencyFor = (country: Country | null | undefined): Currency => co
 /** The family plan's prices for a family or visitor in this country. */
 export const pricesFor = (country: Country | null | undefined) => PRICES_BY_CURRENCY[currencyFor(country)];
 
+/**
+ * What the plan costs per child per month with a full family of MAX_CHILDREN, to the nearest cent
+ * (yearly: 119.99 / 12 / 3 = 3.33; monthly: 14.99 / 3 = 5.00). Pricing copy leads with this, always saying
+ * "with 3 children".
+ */
+export function perChildMonthly(currency: Currency, interval: "month" | "year"): number {
+  const price = PRICES_BY_CURRENCY[currency][interval].amount;
+  return Math.round(((interval === "year" ? price / 12 : price) / MAX_CHILDREN) * 100) / 100;
+}
+
+/** "$3.33" or "US$3.33". */
+export const money = (amount: number, currency: Currency) => `${currency === "USD" ? "US$" : "$"}${amount.toFixed(2)}`;
+
 /** How a currency is named in a sentence ("Prices in Canadian dollars"). */
 export const CURRENCY_NAME: Record<Currency, string> = { CAD: "Canadian dollars", USD: "US dollars" };
 

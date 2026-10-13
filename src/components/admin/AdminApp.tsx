@@ -16,6 +16,7 @@ import { FamilyBilling } from "./Billing";
 import { Funnel } from "./Funnel";
 import { Traffic } from "./Traffic";
 import { LoadingCards, LoadingRows, TableRowsShape } from "./Skeleton";
+import { Sales } from "./Sales";
 import { System } from "./System";
 import { MaintenanceBanner, MaintenanceCard, type MaintenanceState } from "./Maintenance";
 import { parseVariants, type ExperimentStatus, type FlagScope, type Variant } from "@/lib/flags";
@@ -985,7 +986,7 @@ function AuditLog() {
 
 // ---------- The app ----------
 
-const TABS = ["Overview", "To do", "Users", "Funnel", "Traffic", "Emails", "Inbox", "Automations", "Codes", "Flags", "A/B tests", "Reports", "System", "Log"] as const;
+const TABS = ["Overview", "To do", "Users", "Funnel", "Traffic", "Emails", "Inbox", "Automations", "Codes", "Sales", "Flags", "A/B tests", "Reports", "System", "Log"] as const;
 type Tab = (typeof TABS)[number];
 
 /** `?tab=` and `?family=` from a link in an alert email, read once when the panel opens. */
@@ -1053,6 +1054,7 @@ function Panel() {
     Automations: <Automations />,
     Inbox: <Inbox key={inboxId ?? ""} initialId={inboxId} onOpenFamily={openFamily} />,
     Codes: <Codes />,
+    Sales: <Sales />,
     Flags: <Flags flags={flags} reload={loadFlags} />,
     "A/B tests": <Experiments />,
     Reports: <Reports />,

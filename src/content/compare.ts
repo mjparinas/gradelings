@@ -1,7 +1,11 @@
 import { FRAMEWORKS } from "@/content/frameworks";
 import { listRegions } from "@/content/regions";
 import { APP_NAME } from "@/lib/brand";
-import { MAX_CHILDREN, type Country } from "@/lib/plan";
+import { MAX_CHILDREN, money, perChildMonthly, PRICES_BY_CURRENCY, type Country, type Currency } from "@/lib/plan";
+
+/** "From $3.33 a month per child (C$119.99 a year for up to 3 children)": our price, led by the cost per child. */
+const perChild = (c: Currency) =>
+  `From ${money(perChildMonthly(c, "year"), c)} a month per child (${c === "USD" ? "US$" : "C$"}${PRICES_BY_CURRENCY[c].year.amount} a year for up to ${MAX_CHILDREN} children).`;
 // Competitor comparison pages for the app. Facts about other products come from their public pages
 // and app store listings (see docs/research/competitors.md) and are dated, because
 // prices and features change. Keep the wording factual and fair, and re-check
@@ -45,13 +49,13 @@ export const COMPETITORS: Competitor[] = [
         topic: "Price in Canada",
         country: "CA",
         them: `IXL Canada lists C$12.95 a month for one subject, C$19.95 for Math and English together, and C$24.95 for All Access, as of ${PRICE_CHECKED}. The free tier limits how many questions a child can answer each day.`,
-        us: `One family plan covers up to ${MAX_CHILDREN} children and every subject. There is a 30-day free trial with no card, and the first 2 units of every course stay free afterwards.`,
+        us: `${perChild("CAD")} One family plan covers every subject. There is a 30-day free trial with no card, and the first 2 units of every course stay free afterwards.`,
       },
       {
         topic: "Price in the US",
         country: "US",
         them: `IXL's US site lists US$9.95 a month for one subject, US$15.95 for Math and English language arts together, and US$19.95 for Core subjects (Math, English language arts, Science and Social studies), as of ${PRICE_CHECKED}. The free tier limits how many questions a child can answer each day.`,
-        us: `One family plan in US dollars covers up to ${MAX_CHILDREN} children and every subject. There is a 30-day free trial with no card, and the first 2 units of every course stay free afterwards.`,
+        us: `${perChild("USD")} One family plan in US dollars covers every subject. There is a 30-day free trial with no card, and the first 2 units of every course stay free afterwards.`,
       },
       {
         topic: "Curriculum",
@@ -118,7 +122,7 @@ export const COMPETITORS: Competitor[] = [
       {
         topic: "Price",
         them: "Free.",
-        us: "A family plan after a 30-day free trial. The first 2 units of every course stay free forever.",
+        us: `A family plan after a 30-day free trial, from ${money(perChildMonthly("CAD", "year"), "CAD")} a month per child with ${MAX_CHILDREN} children. The first 2 units of every course stay free forever.`,
       },
       {
         topic: "Curriculum in Canada",
@@ -190,13 +194,13 @@ export const COMPETITORS: Competitor[] = [
         topic: "Price in Canada",
         country: "CA",
         them: `The core game is free. On the Canadian App Store, memberships were C$12.99 to C$25.99 a month, or C$74.99 to C$154.99 a year, as of ${PRICE_CHECKED}.`,
-        us: "A family plan, with no in-game purchases. Kids can never buy anything; coins are earned only by learning.",
+        us: `${perChild("CAD")} No in-game purchases: kids can never buy anything, and coins are earned only by learning.`,
       },
       {
         topic: "Price in the US",
         country: "US",
         them: `The core game is free. On the US App Store, memberships were US$12.99 to US$25.99 a month, or US$74.99 to US$154.99 a year, as of ${PRICE_CHECKED}.`,
-        us: "A family plan in US dollars, with no in-game purchases. Kids can never buy anything; coins are earned only by learning.",
+        us: `${perChild("USD")} No in-game purchases: kids can never buy anything, and coins are earned only by learning.`,
       },
       {
         topic: "Selling inside the game",

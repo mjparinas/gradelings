@@ -180,6 +180,25 @@ const SCHEMA = [
     PRIMARY KEY (code, family_id)
   )`,
   `CREATE INDEX IF NOT EXISTS code_redemptions_family ON code_redemptions (family_id)`,
+  // The founding-family code, made once so the owner never has to (FOUNDER_CODE in src/lib/promo.ts): 33% off
+  // every payment. Disabling or changing it in the admin panel sticks, because an existing row is left alone.
+  `INSERT OR IGNORE INTO redeem_codes (code, kind, percent_off, duration, note, created_at)
+    VALUES ('FOUNDER', 'discount', 33, 'forever', 'Founding families: 33% off for life', CAST(strftime('%s', 'now') AS INTEGER) * 1000)`,
+  // Site-wide sales (src/server/promo.ts): a banner on the public pages naming a redeem code, from starts_at to ends_at.
+  `CREATE TABLE IF NOT EXISTS promotions (
+    id TEXT PRIMARY KEY,
+    preset TEXT NOT NULL,
+    emoji TEXT NOT NULL,
+    headline TEXT NOT NULL,
+    body TEXT NOT NULL,
+    code TEXT NOT NULL,
+    link TEXT NOT NULL,
+    starts_at INTEGER NOT NULL,
+    ends_at INTEGER NOT NULL,
+    created_at INTEGER NOT NULL,
+    created_by TEXT NOT NULL,
+    stopped_at INTEGER
+  )`,
   // Admin panel. Flags are defined in src/lib/flags.ts; a row exists once an admin has changed one.
   `CREATE TABLE IF NOT EXISTS feature_flags (
     key TEXT PRIMARY KEY,
