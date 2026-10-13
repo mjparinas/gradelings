@@ -153,7 +153,7 @@ export default function Home() {
             Practice that feels like play. <span className="text-[#4f8ef7]">Progress you can read.</span>
           </h1>
           <p className="mt-4 max-w-xl font-read text-lg text-ink-soft sm:text-xl">
-            About {DEFAULT_GOAL_MINUTES.other} minutes a day of practice matched to your child&apos;s grade and {regionWord(FRAMEWORKS)}, in math, reading, science, social studies and French{offersUsd(FRAMEWORKS) ? " (French in Canada)" : ""}. Your child earns game time by learning. You see their progress in the same words as their report card.
+            About {DEFAULT_GOAL_MINUTES.other} minutes a day of practice matched to your child&apos;s grade and {regionWord(FRAMEWORKS)}, in math, reading, science, social studies and French{offersUsd(FRAMEWORKS) ? " (in Canada)" : ""}. Your child earns game time by learning. You see their progress in the same words as their report card.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link prefetch={false} href="/play/" className="btn btn-good min-h-14 px-8 text-xl">
