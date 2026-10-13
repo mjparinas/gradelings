@@ -200,4 +200,17 @@ export const lessons: GradeLessons = {
     ["d = 3.", "4 + 9 × 3 = 31."],
     "31",
   ),
+  // Oregon
+  "math/or-g9-trig": lesson(
+    ["Name the sides from angle A: opposite, adjacent (next to A) and the hypotenuse (across from the right angle).", "SOH CAH TOA: sin = opposite ÷ hypotenuse, cos = adjacent ÷ hypotenuse, tan = opposite ÷ adjacent.", "Pick the ratio that uses the side you know and the side you want, then solve."],
+    "sin A = 0.6 and the hypotenuse is 20 cm. How long is the side opposite A?",
+    ["sin A = opposite ÷ hypotenuse.", "opposite = 0.6 × 20."],
+    "12 cm",
+  ),
+  "math/or-g9-coordinate-geometry": lesson(
+    ["Distance: make a right triangle from the change in x and the change in y, then use the Pythagorean Theorem.", "Midpoint: average the x-coordinates and average the y-coordinates.", "Parallel lines have equal slopes. Perpendicular slopes multiply to −1."],
+    "What is the distance from (1, 2) to (7, 10)?",
+    ["Change in x: 6. Change in y: 8.", "√(6² + 8²) = √100."],
+    "10",
+  ),
 };

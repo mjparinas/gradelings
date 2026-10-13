@@ -105,7 +105,7 @@ export const RML_K: Unit = bankUnit({
   title: "Ask and Find Out",
   emoji: "🔎",
   blurb: "Ask questions and look for answers",
-  parentNote: "Children practise asking who, what, where, when and why questions and choosing where to look for answers: a book, a grown-up, a picture or a simple test. This is the research and inquiry part of the Washington standards.",
+  parentNote: "Children practise asking who, what, where, when and why questions and choosing where to look for answers: a book, a grown-up, a picture or a simple test. This is the research and inquiry part of the standards.",
   standards: ["ELA.K.RML.1", "asking questions and seeking answers from provided sources"],
   items: K_ASK,
 });
@@ -115,7 +115,7 @@ export const RML_1: Unit = bankUnit({
   title: "Messages All Around",
   emoji: "📺",
   blurb: "Who made it, and why?",
-  parentNote: "Children look at everyday messages, like signs, ads, cards and videos, and practise asking who made them, why, and how they make us feel. This is the media literacy part of the Washington standards.",
+  parentNote: "Children look at everyday messages, like signs, ads, cards and videos, and practise asking who made them, why, and how they make us feel. This is the media literacy part of the standards.",
   standards: ["ELA.1.RML.1; ELA.1.RML.2; ELA.1.RML.3; ELA.1.RML.4; ELA.1.RML.5", "the purposes, parts and makers of media messages and our reactions to them"],
   items: G1_MESSAGES,
 });

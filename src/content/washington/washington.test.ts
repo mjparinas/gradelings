@@ -84,9 +84,10 @@ describe("Washington", () => {
     }
   });
 
-  it("keeps Washington-only units for Washington alone", () => {
+  it("keeps Washington-only units for US states alone", () => {
+    // Other states may adopt them (Oregon does); no Canadian framework ever gets them.
     const own = washington.filter(({ u }) => u.id.startsWith("wa-"));
-    for (const { u, key } of own) expect(Object.keys(u.standards), key).toEqual(["us-wa"]);
+    for (const { u, key } of own) for (const f of Object.keys(u.standards)) expect(f, key).toMatch(/^us-/);
   });
 
   it("shares only BC units; other provinces' units are adopted", () => {

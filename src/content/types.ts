@@ -7,7 +7,7 @@ import type { Currency } from "./money";
 export type GradeId = "k" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
 export type SubjectId = "math" | "language" | "science" | "social" | "immersion" | "core-french";
 /** A curriculum framework: a province, state or national standard set. */
-export type FrameworkId = "ca-bc" | "ca-on" | "ca-ab" | "ca-sk" | "ca-mb" | "ca-yt" | "ca-nt" | "ca-ns" | "ca-nb" | "ca-nl" | "ca-pe" | "ca-nu" | "us-wa";
+export type FrameworkId = "ca-bc" | "ca-on" | "ca-ab" | "ca-sk" | "ca-mb" | "ca-yt" | "ca-nt" | "ca-ns" | "ca-nb" | "ca-nl" | "ca-pe" | "ca-nu" | "us-wa" | "us-or";
 /** UI and wording adapt to the child's age band. */
 export type AgeBand = "little" | "middle" | "big";
 
