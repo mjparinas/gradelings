@@ -284,6 +284,68 @@ describe("sync", () => {
     const res = await (await sync.POST(post("/api/sync/", { profiles: [big] }, cookie))).json();
     expect(res.profiles).toEqual([]);
   });
+
+  it("refuses cross-site posts", async () => {
+    const { cookie } = await newAccount("sync-csrf@example.com");
+    const req = post("/api/sync/", { profiles: [profile("csrf-1")] }, cookie);
+    req.headers.set("origin", "https://evil.example");
+    expect((await sync.POST(req)).status).toBe(403);
+  });
+
+  it("keeps a child's practice when the child is renamed, and removes it when they're reset or deleted", async () => {
+    const { cookie, body } = await newAccount("history@example.com");
+    const familyId = body.family.account.familyId as string;
+    const t0 = Date.now() - 60_000;
+    const at = (id: string, profileId: string, t: number) => ({ ...event(id, profileId), t });
+    const ids = async (profileId: string) => (await dbm.query<{ id: string }>("SELECT id FROM events WHERE family_id = ? AND profile_id = ? ORDER BY id", [familyId, profileId])).map((r) => r.id);
+    await sync.POST(post("/api/sync/", { profiles: [{ ...profile("hist"), updatedAt: t0 }], events: [at("h1", "hist", t0 + 1), at("h2", "hist", t0 + 3)] }, cookie));
+    await sync.POST(post("/api/sync/", { profiles: [{ ...profile("hist"), name: "Mia", updatedAt: t0 + 10 }] }, cookie));
+    expect(await ids("hist")).toEqual(["h1", "h2"]);
+
+    // A reset drops what came before it and keeps what came after.
+    await sync.POST(post("/api/sync/", { profiles: [{ ...profile("hist"), resetAt: t0 + 2, updatedAt: t0 + 20 }] }, cookie));
+    expect(await ids("hist")).toEqual(["h2"]);
+
+    await dbm.run("INSERT INTO class_members (class_id, profile_id, family_id, joined_at) VALUES ('cls-hist', 'hist', ?, 1)", [familyId]);
+    await sync.POST(post("/api/sync/", { profiles: [{ ...profile("hist"), deleted: true, updatedAt: t0 + 30 }] }, cookie));
+    expect(await ids("hist")).toEqual([]);
+    expect(await dbm.query("SELECT 1 FROM class_members WHERE profile_id = 'hist'")).toHaveLength(0);
+  });
+
+  it("never lets one family change another family's child or settings", async () => {
+    const a = await newAccount("owner-a@example.com");
+    const b = await newAccount("intruder-b@example.com");
+    const t = Date.now() - 10_000;
+    await sync.POST(post("/api/sync/", { profiles: [{ ...profile("owned"), updatedAt: t }], settings: [{ profileId: "owned", updatedAt: t, dailyGoalMinutes: 15 }] }, a.cookie));
+    const res = await (
+      await sync.POST(
+        post("/api/sync/", { profiles: [{ ...profile("owned"), name: "Hacked", updatedAt: t + 100 }], settings: [{ profileId: "owned", updatedAt: t + 100, dailyGoalMinutes: 99 }], events: [event("intrude", "owned")] }, b.cookie),
+      )
+    ).json();
+    expect(res.profiles).toEqual([]);
+    expect(res.settings).toEqual([]);
+    expect(res.accepted).toEqual([]);
+    const mine = await (await sync.POST(post("/api/sync/", { cursor: 0 }, a.cookie))).json();
+    expect(mine.profiles[0].name).toBe("Maya");
+    expect(mine.settings[0].dailyGoalMinutes).toBe(15);
+    expect(mine.events).toEqual([]);
+  });
+
+  it("refuses events from the future, oversized events and settings, and settings for an unknown child", async () => {
+    const { cookie } = await newAccount("odd-events@example.com");
+    const now = Date.now();
+    const res = await (
+      await sync.POST(
+        post("/api/sync/", {
+          profiles: [profile("oe")],
+          events: [{ ...event("future", "oe"), t: now + 2 * 86_400_000 }, { ...event("huge", "oe"), note: "x".repeat(2100) }, { ...event("fine", "oe"), t: now + 60_000 }],
+          settings: [{ profileId: "oe", updatedAt: now, room: "x".repeat(5000) }, { profileId: "not-mine", updatedAt: now }],
+        }, cookie),
+      )
+    ).json();
+    expect(res.accepted).toEqual(["fine"]);
+    expect(res.settings).toEqual([]);
+  });
 });
 
 describe("Stripe webhook", () => {
@@ -296,6 +358,14 @@ describe("Stripe webhook", () => {
     expect((await hook(payload, null)).status).toBe(400);
     expect((await hook(payload, sign(payload, "whsec_other"))).status).toBe(400);
     expect((await hook(payload, sign(payload, "whsec_test", Math.floor(Date.now() / 1000) - 3600))).status).toBe(400);
+  });
+
+  it("accepts a header carrying an old and a new signature while the secret is being rolled", async () => {
+    const t = Math.floor(Date.now() / 1000);
+    const payload = JSON.stringify({ id: "evt_rolled", created: t, type: "customer.subscription.updated", data: { object: { status: "active", customer: "cus_rolled" } } });
+    const old = createHmac("sha256", "whsec_old").update(`${t}.${payload}`).digest("hex");
+    expect((await hook(payload, `${sign(payload, "whsec_test", t)},v1=${old}`)).status).toBe(200);
+    expect((await hook(payload, `t=${t},v1=${old},v1=short`)).status).toBe(400);
   });
 
   it("moves a family between premium and free as the subscription changes", async () => {
@@ -352,6 +422,32 @@ describe("Stripe webhook", () => {
     expect(rows).toHaveLength(1);
     expect(rows[0]).toMatchObject({ family_id: familyId, reason: "too_expensive" });
     expect(JSON.stringify(rows[0])).not.toContain("Ava");
+    expect(cookie).toBeTruthy();
+  });
+
+  it("grants premium for a subscription checkout once it is paid, or when a code makes it free, and never before", async () => {
+    const checkout = async (address: string, payment_status: string) => {
+      const { cookie } = await newAccount(address);
+      const familyId = (await dbm.query<{ family_id: string }>("SELECT family_id FROM parents WHERE email = ?", [address]))[0].family_id;
+      const object = { client_reference_id: familyId, customer: `cus_${payment_status}`, payment_status, mode: "subscription", subscription: `sub_${payment_status}` };
+      const payload = JSON.stringify({ id: `evt_${address}`, created: Math.floor(Date.now() / 1000), type: "checkout.session.completed", data: { object } });
+      expect((await hook(payload, sign(payload))).status).toBe(200);
+      return (await (await me.GET(new Request("http://localhost/api/auth/me/", { headers: { cookie } }))).json()).family.plan;
+    };
+    expect(await checkout("sub-unpaid@example.com", "unpaid")).toBe("trial");
+    expect(await checkout("sub-free@example.com", "no_payment_required")).toBe("premium");
+    expect(await checkout("sub-paid@example.com", "paid")).toBe("premium");
+  });
+
+  it("reads the renewal date from the subscription item on newer Stripe API versions", async () => {
+    const { cookie } = await newAccount("item-period@example.com");
+    const familyId = (await dbm.query<{ family_id: string }>("SELECT family_id FROM parents WHERE email = ?", ["item-period@example.com"]))[0].family_id;
+    const object = { status: "active", customer: "cus_item", metadata: { family_id: familyId }, items: { data: [{ current_period_end: 2_000_000_000, price: { recurring: { interval: "month" } } }] } };
+    const payload = JSON.stringify({ id: "evt_item_period", created: Math.floor(Date.now() / 1000), type: "customer.subscription.updated", data: { object } });
+    expect((await hook(payload, sign(payload))).status).toBe(200);
+    const row = (await dbm.query<{ current_period_end: number; subscription_interval: string }>("SELECT current_period_end, subscription_interval FROM families WHERE id = ?", [familyId]))[0];
+    expect(Number(row.current_period_end)).toBe(2_000_000_000_000);
+    expect(row.subscription_interval).toBe("month");
     expect(cookie).toBeTruthy();
   });
 
@@ -447,6 +543,29 @@ describe("subscriptions", () => {
   });
 });
 
+describe("sessions", () => {
+  it("signs out a session once it has expired", async () => {
+    const { cookie } = await newAccount("expired@example.com");
+    const meNow = () => me.GET(new Request("http://localhost/api/auth/me/", { headers: { cookie } }));
+    expect((await (await meNow()).json()).family.account.email).toBe("expired@example.com");
+    const parent = (await dbm.query<{ id: string }>("SELECT id FROM parents WHERE email = ?", ["expired@example.com"]))[0];
+    await dbm.run("UPDATE sessions SET expires_at = ? WHERE parent_id = ?", [Date.now() - 1000, parent.id]);
+    expect((await meNow()).status).toBe(401);
+    expect((await sync.POST(post("/api/sync/", {}, cookie))).status).toBe(401);
+  });
+
+  it("marks the session cookie Secure in production only", () => {
+    expect(auth.sessionCookie("tok", 60)).not.toContain("Secure");
+    vi.stubEnv("NODE_ENV", "production");
+    try {
+      expect(auth.sessionCookie("tok", 60)).toMatch(/; HttpOnly; SameSite=Lax; Max-Age=60; Secure$/);
+      expect(auth.clearCookie()).toMatch(/Max-Age=0; Secure$/);
+    } finally {
+      vi.unstubAllEnvs();
+    }
+  });
+});
+
 describe("account security", () => {
   it("asks for the password before deleting an account", async () => {
     const { cookie } = await newAccount("careful@example.com");
@@ -490,6 +609,10 @@ describe("account deletion", () => {
     await sync.POST(post("/api/sync/", { profiles: [{ id: "pg", name: "Kid", grade: "1", avatar: "ollie", colour: "#fff", updatedAt: Date.now() }], events: [{ id: "eg", profileId: "pg", type: "answer", t: Date.now() - 1000 }], settings: [{ profileId: "pg", updatedAt: Date.now() }] }, cookie));
     const parent = (await dbm.query<{ id: string; family_id: string }>("SELECT id, family_id FROM parents WHERE email = ?", ["gone@example.com"]))[0];
     await dbm.run("INSERT INTO report_shares (token_hash, family_id, profile_id, days, created_at, expires_at) VALUES ('h', ?, 'pg', 7, 1, 2)", [parent.family_id]);
+    await dbm.run("INSERT INTO class_members (class_id, profile_id, family_id, joined_at) VALUES ('someone-elses-class', 'pg', ?, 1)", [parent.family_id]);
+    await dbm.run("INSERT INTO question_reports (id, family_id, unit_key, prompt, reason, created_at) VALUES ('qr-gone', ?, '1/math/x', 'Q', 'wrong', 1)", [parent.family_id]);
+    await dbm.run("INSERT INTO experiment_assignments (experiment, family_id, variant, assigned_at) VALUES ('exp-gone', ?, 'a', 1)", [parent.family_id]);
+    await dbm.run("INSERT INTO cancellations (subscription_id, family_id, reason, at) VALUES ('sub-gone', ?, 'too_expensive', 1)", [parent.family_id]);
 
     const res = await account.DELETE(post("/api/account/", { password: "correct horse" }, cookie, "DELETE"));
     expect(res.status).toBe(200);
@@ -502,8 +625,14 @@ describe("account deletion", () => {
       ["sessions", "family_id", parent.family_id],
       ["report_shares", "family_id", parent.family_id],
       ["auth_tokens", "parent_id", parent.id],
+      ["class_members", "family_id", parent.family_id],
+      ["question_reports", "family_id", parent.family_id],
+      ["experiment_assignments", "family_id", parent.family_id],
+      ["cancellations", "family_id", parent.family_id],
     ]) {
       expect(await dbm.query(`SELECT 1 FROM ${table} WHERE ${col} = ?`, [val]), table).toHaveLength(0);
     }
+    // The cancellation reason stays in the totals without pointing at anyone.
+    expect(await dbm.query("SELECT family_id FROM cancellations WHERE subscription_id = 'sub-gone'")).toEqual([{ family_id: null }]);
   });
 });
