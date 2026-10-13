@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { render, screen, waitFor } from "@testing-library/react";
+import { act, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
@@ -38,9 +38,20 @@ beforeEach(() => {
   mocks.call.mockReset();
 });
 
+/** Answers each part's request from a whole report; parts named in `hold` wait until released. */
+function serve(data: Record<string, unknown>, hold: string[] = []) {
+  const held: Record<string, () => void> = {};
+  mocks.call.mockImplementation((url: string) => {
+    const part = new URL(url, "http://x").searchParams.get("part")!;
+    if (hold.includes(part)) return new Promise((resolve) => (held[part] = () => resolve(data[part])));
+    return Promise.resolve(data[part]);
+  });
+  return held;
+}
+
 describe("Traffic", () => {
   it("shows Google search and visits, and changes the period", async () => {
-    mocks.call.mockResolvedValue({ days: 28, search: { state: "ok", report: search }, visits: { state: "ok", report: visits } });
+    serve({ days: 28, search: { state: "ok", report: search }, visits: { state: "ok", report: visits } });
     const user = userEvent.setup();
     render(<Traffic />);
     expect(await screen.findByText("Clicks from Google")).toBeInTheDocument();
@@ -53,20 +64,43 @@ describe("Traffic", () => {
     expect(screen.getAllByText("www.google.com").length).toBeGreaterThan(0);
     await user.click(screen.getByRole("combobox", { name: "Period" }));
     await user.click(screen.getByRole("option", { name: "Last 90 days" }));
-    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/admin/traffic/?days=90"));
-    await user.click(screen.getByRole("button", { name: "Check again" }));
-    expect(mocks.call).toHaveBeenLastCalledWith("/api/admin/traffic/?days=90&refresh=1");
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/admin/traffic/?days=90&part=search"));
+    expect(mocks.call).toHaveBeenCalledWith("/api/admin/traffic/?days=90&part=visits");
+    await user.click(await screen.findByRole("button", { name: "Check again" }));
+    expect(mocks.call).toHaveBeenCalledWith("/api/admin/traffic/?days=90&part=search&refresh=1");
+    expect(mocks.call).toHaveBeenLastCalledWith("/api/admin/traffic/?days=90&part=visits&refresh=1");
+  });
+
+  it("shows each part as soon as it arrives, with placeholders until then", async () => {
+    const held = serve({ search: { state: "ok", report: search }, visits: { state: "ok", report: visits } }, ["visits"]);
+    render(<Traffic />);
+    expect(screen.getByRole("heading", { name: "Visits to the public pages" })).toBeInTheDocument();
+    expect(await screen.findByText("Clicks from Google")).toBeInTheDocument();
+    const visitsSection = screen.getByRole("heading", { name: "Visits to the public pages" }).closest("section")!;
+    expect(visitsSection.querySelector('[aria-busy="true"]')).not.toBeNull();
+    expect(screen.getByRole("button", { name: "Checking…" })).toBeDisabled();
+    await act(async () => held.visits());
+    expect(screen.getByText("up 60% on the 28 days before")).toBeInTheDocument();
+    expect(visitsSection.querySelector('[aria-busy="true"]')).toBeNull();
+    expect(screen.getByRole("button", { name: "Check again" })).toBeEnabled();
+  });
+
+  it("shows a part that couldn't load without holding up the other", async () => {
+    mocks.call.mockImplementation((url: string) => (url.includes("part=visits") ? Promise.reject(new Error("Not found")) : Promise.resolve({ state: "ok", report: search })));
+    render(<Traffic />);
+    expect(await screen.findByText("Couldn't read it: Not found")).toBeInTheDocument();
+    expect(await screen.findByText("Clicks from Google")).toBeInTheDocument();
   });
 
   it("says what to set up, and why a part failed", async () => {
-    mocks.call.mockResolvedValue({ days: 28, search: { state: "setup", setup: "Set GOOGLE_SERVICE_ACCOUNT_KEY." }, visits: { state: "error", error: "Vercel Analytics answered 403." } });
+    serve({ days: 28, search: { state: "setup", setup: "Set GOOGLE_SERVICE_ACCOUNT_KEY." }, visits: { state: "error", error: "Vercel Analytics answered 403." } });
     render(<Traffic />);
     expect(await screen.findByText(/Set GOOGLE_SERVICE_ACCOUNT_KEY/)).toBeInTheDocument();
     expect(screen.getByText("Couldn't read it: Vercel Analytics answered 403.")).toBeInTheDocument();
   });
 
   it("says when the plan keeps fewer days, and skips the comparison", async () => {
-    mocks.call.mockResolvedValue({ days: 90, search: { state: "setup", setup: "Set it." }, visits: { state: "ok", report: { ...visits, start: "2026-09-12", keptDays: 31, previous: { visitors: 0, pageviews: 0 } } } });
+    serve({ days: 90, search: { state: "setup", setup: "Set it." }, visits: { state: "ok", report: { ...visits, start: "2026-09-12", keptDays: 31, previous: { visitors: 0, pageviews: 0 } } } });
     render(<Traffic />);
     expect(await screen.findByText(/Vercel keeps 31 days on this plan/)).toBeInTheDocument();
     expect(screen.queryByText(/days before/)).not.toBeInTheDocument();

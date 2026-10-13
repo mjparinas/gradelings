@@ -223,6 +223,7 @@ if (await vis(stuck)) {
 await tab("Traffic");
 check(await page.getByText(/GOOGLE_SERVICE_ACCOUNT_KEY/).waitFor({ timeout: 15000 }).then(() => true, () => false), "the Traffic tab says how to set up Search Console");
 check(await vis(page.getByRole("heading", { name: "Visits to the public pages" })), "the Traffic tab has a visits section");
+check(await page.locator('[aria-busy="true"]').first().waitFor({ state: "detached", timeout: 15000 }).then(() => true, () => false), "both Traffic parts finish loading");
 await shot("traffic");
 await scan("traffic");
 
