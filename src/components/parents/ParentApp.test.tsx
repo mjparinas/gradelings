@@ -23,7 +23,7 @@ vi.mock("@/lib/localdb", () => ({
   clearAll: vi.fn().mockResolvedValue(undefined),
 }));
 vi.mock("@/lib/sync", () => ({ syncNow: h.syncNow, startBackgroundSync: h.startBackgroundSync }));
-vi.mock("@/lib/twa", () => ({ isAndroidApp: () => h.android }));
+vi.mock("@/lib/twa", () => ({ isStoreApp: () => h.android }));
 vi.mock("next/link", () => ({ default: ({ href, children, className }: { href: string; children: React.ReactNode; className?: string }) => <a href={href} className={className}>{children}</a> }));
 vi.mock("./Gate", () => ({ Gate: ({ onPass }: { onPass: () => void }) => <button onClick={onPass}>Unlock</button> }));
 vi.mock("./Overview", () => ({ Overview: () => <p>page:overview</p> }));
