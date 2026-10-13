@@ -181,4 +181,41 @@ export const lessons: GradeLessons = {
     ["3 + 1 = 4."],
     "4",
   ),
+  // Washington
+  "math/wa-g8-exponent-rules": lesson(
+    ["Multiply powers with the same base: add the exponents.", "Divide: subtract the exponents. Power of a power: multiply them.", "a⁰ = 1, and a⁻ⁿ = 1/aⁿ."],
+    "Simplify 2³ × 2⁴.",
+    ["Same base, so add: 3 + 4 = 7."],
+    "2⁷",
+  ),
+  "math/wa-g8-systems": lesson(
+    ["The solution is the point that works in both equations.", "Set the two expressions for y equal and solve for x, then find y.", "Same slope, different intercept: no solution. Same line: infinitely many."],
+    "Where do y = 2x + 1 and y = x + 4 meet?",
+    ["2x + 1 = x + 4, so x = 3.", "y = 3 + 4 = 7."],
+    "(3, 7)",
+  ),
+  "math/wa-g8-functions": lesson(
+    ["A function gives each input exactly one output.", "A repeated x with two different y-values is not a function.", "A linear function has a constant rate of change: y = mx + b."],
+    "Is {(1, 4), (2, 5), (1, 6)} a function?",
+    ["The input 1 has two outputs, 4 and 6."],
+    "No",
+  ),
+  "math/wa-g8-round-volume": lesson(
+    ["Cylinder: V = πr²h.", "Cone: V = ⅓πr²h, one third of the matching cylinder.", "Sphere: V = (4/3)πr³."],
+    "A cylinder has radius 3 cm and height 5 cm. What is its volume, in terms of π?",
+    ["r² = 9.", "9 × 5 = 45."],
+    "45π cm³",
+  ),
+  "math/wa-g8-slope": lesson(
+    ["Slope = change in y ÷ change in x.", "In y = mx + b, m is the slope and b is the starting value.", "For a proportional graph, the slope is the unit rate."],
+    "What is the slope through (1, 2) and (4, 11)?",
+    ["Change in y: 11 − 2 = 9.", "Change in x: 4 − 1 = 3.", "9 ÷ 3 = 3."],
+    "3",
+  ),
+  "math/wa-g8-two-way-tables": lesson(
+    ["A two-way table sorts data by two questions at once.", "Find a row, then read across to the column.", "Compare row percents to look for an association."],
+    "20 students play sports; 15 of them have a pet. What percent of them have a pet?",
+    ["15 ÷ 20 = 0.75.", "0.75 = 75%."],
+    "75%",
+  ),
 };

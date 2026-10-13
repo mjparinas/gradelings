@@ -551,7 +551,7 @@ function Summary({ plan, results, startDerived }: { plan: Plan; results: Result[
   const stars = total === 0 ? 0 : ratio >= 0.85 ? 3 : ratio >= 0.6 ? 2 : 1;
   const xp = d.xp - startDerived.xp;
   const coins = d.coins - startDerived.coins;
-  const unit = getUnitRef(plan.scope);
+  const unit = getUnitRef(plan.scope, profile.framework);
   const level = unit ? unitLevel(d.units[unit.key]) : -1;
   const info = unit ? levelInfo(profile.framework, profile.grade, level) : undefined;
   const best = plan.mode === "speed" ? (startDerived.speedBest[plan.scope] ?? 0) : 0;

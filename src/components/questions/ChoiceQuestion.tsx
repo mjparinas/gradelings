@@ -84,7 +84,7 @@ export function ChoiceQuestion({ q, status, onAttempt }: QuestionProps<Q>) {
                 <>
                   {c.emoji && <span className="text-5xl leading-none sm:text-6xl">{c.emoji}</span>}
                   {c.shape && <Shape shape={c.shape} size={80} />}
-                  {c.coin && <Coin cents={c.coin} />}
+                  {c.coin && <Coin cents={c.coin} currency={q.currency} />}
                 </>
               )}
               <span lang={q.choicesLang} className={layout === "tiles" ? "font-read leading-tight" : ""}>

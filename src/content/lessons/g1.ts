@@ -153,4 +153,24 @@ export const lessons: GradeLessons = {
     ["A group of 10 is easy to see.", "The jar looks like 2 groups of 10."],
     "About 20",
   ),
+  // Washington
+  "math/wa-g1-clock": lesson(
+    ["The short hand shows the hour.", "Long hand on 12: it is o'clock.", "Long hand on 6: it is half past."],
+    "The short hand is past 3. The long hand is on 6.",
+    ["The hour is 3.", "Long hand on 6 means 30 minutes."],
+    "3:30",
+    { type: "clock", hour: 3, minute: 30 },
+  ),
+  "math/wa-g1-tens-jumps": lesson(
+    ["10 more: the tens digit goes up 1.", "10 less: the tens digit goes down 1.", "The ones digit stays the same."],
+    "What is 10 more than 47?",
+    ["4 tens become 5 tens.", "The 7 ones stay."],
+    "57",
+  ),
+  "math/wa-g1-data": lesson(
+    ["Count each row of the graph.", "Find the most and the fewest.", "Subtract to find how many more."],
+    "5 chose 🐶 and 3 chose 🐱. How many more chose 🐶?",
+    ["5 − 3 = 2."],
+    "2",
+  ),
 };

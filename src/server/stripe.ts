@@ -1,12 +1,21 @@
 import "server-only";
 import { createHmac, timingSafeEqual } from "node:crypto";
+import type { Currency } from "@/lib/plan";
 
 // Stripe over plain HTTPS: no SDK needed. Set these environment variables:
 //   STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET,
-//   STRIPE_PRICE_MONTHLY, STRIPE_PRICE_YEARLY (recurring Price ids)
+//   STRIPE_PRICE_MONTHLY, STRIPE_PRICE_YEARLY (recurring Price ids, in CAD)
+//   STRIPE_PRICE_MONTHLY_USD, STRIPE_PRICE_YEARLY_USD (the same plan in USD, for US families)
 
 export function stripeConfigured(): boolean {
   return Boolean(process.env.STRIPE_SECRET_KEY && process.env.STRIPE_PRICE_MONTHLY && process.env.STRIPE_PRICE_YEARLY);
+}
+
+/** The recurring Price ids for one currency, or null when that currency isn't set up (US checkout then answers that it's unavailable). */
+export function stripePrices(currency: Currency): { month: string; year: string } | null {
+  const env = process.env;
+  const [month, year] = currency === "USD" ? [env.STRIPE_PRICE_MONTHLY_USD, env.STRIPE_PRICE_YEARLY_USD] : [env.STRIPE_PRICE_MONTHLY, env.STRIPE_PRICE_YEARLY];
+  return env.STRIPE_SECRET_KEY && month && year ? { month, year } : null;
 }
 
 /** Cancellation only needs the secret key; price ids are needed to start billing. */
@@ -73,8 +82,13 @@ export async function createCheckout(opts: {
   coupon?: string | null;
   /** Bill from this time (ms) instead of today, so the rest of the free trial is kept. */
   firstChargeAt?: number | null;
+  /** CAD (the default) or USD for a US family. */
+  currency?: Currency;
 }): Promise<string> {
-  const price = opts.interval === "year" ? process.env.STRIPE_PRICE_YEARLY! : process.env.STRIPE_PRICE_MONTHLY!;
+  const currency = opts.currency ?? "CAD";
+  const prices = stripePrices(currency);
+  if (!prices) throw new Error(`Payments in ${currency} aren't set up yet.`);
+  const price = prices[opts.interval];
   const params: Record<string, string> = {
     mode: "subscription",
     "line_items[0][price]": price,
@@ -87,6 +101,13 @@ export async function createCheckout(opts: {
   };
   if (opts.customer) params.customer = opts.customer;
   else params.customer_email = opts.email;
+  if (currency === "USD") {
+    // US sales tax: Stripe Tax works it out from the billing address, collected here. Canadian checkout is unchanged.
+    params["automatic_tax[enabled]"] = "true";
+    params.billing_address_collection = "required";
+    // Stripe Tax needs the address saved on an existing customer too.
+    if (opts.customer) params["customer_update[address]"] = "auto";
+  }
   if (opts.firstChargeAt) {
     // The card is still taken at checkout; the first payment waits for the trial to end.
     params["subscription_data[trial_end]"] = String(Math.floor(opts.firstChargeAt / 1000));
@@ -108,7 +129,10 @@ export async function creditCustomer(customer: string, cents: number, currency: 
   });
 }
 
-/** A Stripe coupon for a discount code: a percentage off once, for some months, or for as long as the plan lasts. */
+/**
+ * A Stripe coupon for a discount code: a percentage off once, for some months, or for as long as the plan lasts.
+ * A percentage has no currency, so one coupon works for CAD and USD checkouts alike.
+ */
 export async function createCoupon(opts: { percentOff: number; duration: "once" | "repeating" | "forever"; months?: number; name: string }): Promise<string> {
   const params: Record<string, string> = { percent_off: String(opts.percentOff), duration: opts.duration, name: opts.name.slice(0, 40) };
   if (opts.duration === "repeating") params.duration_in_months = String(opts.months ?? 1);

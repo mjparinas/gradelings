@@ -22,6 +22,8 @@ const card = "rounded-2xl border border-line bg-white p-4";
 const num = (n: number) => n.toLocaleString("en-CA");
 const money = (cents: number) => (cents / 100).toLocaleString("en-CA", { style: "currency", currency: "CAD", maximumFractionDigits: Math.abs(cents) >= 100_000 ? 0 : 2 });
 /** Short money for chart axes: $950, $1.2k, -$300. */
+/** US families pay in USD, shown apart and never added to the CAD numbers. */
+const moneyUsd = (cents: number) => `US${(cents / 100).toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: Math.abs(cents) >= 100_000 ? 0 : 2 })}`;
 const moneyShort = (cents: number) => {
   const d = cents / 100;
   const a = Math.abs(d);
@@ -155,7 +157,7 @@ export function Dashboard({ onOpenFamily }: { onOpenFamily?: (id: string) => voi
         </button>
       </p>
 
-      <Section id="money-h" title="Revenue and profit" intro="Revenue is what Stripe collected, less refunds. Fees are estimated at 2.9% + 30¢ a payment. Monthly recurring revenue uses list prices, with yearly plans counted as a twelfth a month. Profit takes off fees and the monthly costs you enter below.">
+      <Section id="money-h" title="Revenue and profit" intro="Money is in Canadian dollars; US families' payments in US dollars are shown on their own tile. Revenue is what Stripe collected, less refunds. Fees are estimated at 2.9% + 30¢ a payment. Monthly recurring revenue uses list prices, with yearly plans counted as a twelfth a month. Profit takes off fees and the monthly costs you enter below.">
         <ul className={tiles}>
           <Tile onOpen={show("paying")} label="Monthly recurring revenue" value={money(r.mrr)} sub={`${money(r.arr)} a year at this rate`} />
           <Tile onOpen={show("payments-month")} label="Revenue this month" value={money(r.thisMonth)} sub={`${money(r.lastMonth)} last month`} />
@@ -164,6 +166,14 @@ export function Dashboard({ onOpenFamily }: { onOpenFamily?: (id: string) => voi
           <Tile onOpen={showMoney(`Projection for ${year}`)} label={`Projected revenue for ${year}`} value={money(r.projectedYear)} sub="so far, plus MRR for the rest of the year" />
           <Tile onOpen={showMoney(`Projection for ${year}`)} label={`Projected profit for ${year}`} value={money(r.projectedProfitYear)} sub={`with costs of ${money(r.monthlyCosts)} a month`} />
           <Tile onOpen={show("paying")} label="Revenue per paying family" value={r.arppu === null ? "—" : money(Math.round(r.arppu))} sub="a month, on average" />
+          {r.usd && (
+            <Tile
+              onOpen={show("paying")}
+              label="US families (USD, not in the totals above)"
+              value={moneyUsd(r.usd.thisMonth)}
+              sub={`this month · ${moneyUsd(r.usd.mrr)} MRR from ${num(r.usd.paying)} paying · ${moneyUsd(r.usd.yearToDate)} in ${year}`}
+            />
+          )}
           <Tile onOpen={show("cancelled")}
             label="Cancelled in 30 days"
             value={num(r.cancelled30)}

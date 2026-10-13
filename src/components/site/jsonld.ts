@@ -1,5 +1,5 @@
 import { APP_NAME } from "@/lib/brand";
-import { PRICES } from "@/lib/plan";
+import { PRICES_BY_CURRENCY, type Currency } from "@/lib/plan";
 import { absolute } from "@/lib/site";
 
 export function breadcrumbJsonLd(items: { label: string; href?: string }[]) {
@@ -43,13 +43,17 @@ export function articleJsonLd(a: { headline: string; description: string; path: 
  * The app itself, with the family plan's prices. Used on the home and pricing pages.
  * It is a SoftwareApplication, not a Product: Google's Product snippets expect reviews or
  * ratings, and we have no real ones to give. Never add made-up `review` or `aggregateRating`.
+ * Canadian prices only: pages are static and US prices stay hidden until launch, when "USD" can be passed
+ * to list the US offers too (each with its region, so the two are never mixed up).
  */
-export function appJsonLd() {
+export function appJsonLd(currencies: Currency[] = ["CAD"]) {
+  const both = currencies.length > 1;
   const offer = (name: string, p: { amount: number; currency: string }) => ({
     "@type": "Offer",
-    name,
+    name: both ? `${name}, ${p.currency}` : name,
     price: p.amount,
     priceCurrency: p.currency,
+    ...(both ? { eligibleRegion: p.currency === "USD" ? "US" : "CA" } : {}),
     availability: "https://schema.org/InStock",
     url: absolute("/pricing/"),
   });
@@ -62,6 +66,6 @@ export function appJsonLd() {
     operatingSystem: "Web, Android, iOS, Windows, macOS, ChromeOS",
     url: absolute("/play/"),
     audience: { "@type": "EducationalAudience", educationalRole: "student" },
-    offers: [offer("Family plan (monthly)", PRICES.month), offer("Family plan (yearly)", PRICES.year)],
+    offers: currencies.flatMap((c) => [offer("Family plan (monthly)", PRICES_BY_CURRENCY[c].month), offer("Family plan (yearly)", PRICES_BY_CURRENCY[c].year)]),
   };
 }

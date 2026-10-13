@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalPage, Section } from "@/components/site/Legal";
 import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS } from "@/lib/brand";
-import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, TRIAL_DAYS } from "@/lib/plan";
+import { CURRENCY_NAME, FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, TRIAL_DAYS } from "@/lib/plan";
 
 export const metadata: Metadata = {
   title: "Terms of use",
@@ -113,6 +113,19 @@ export default function TermsPage() {
 
       <Section title="Governing law">
         <p>These terms are governed by the laws of British Columbia and the federal laws of Canada that apply there. Disputes will be handled by the courts of British Columbia, unless consumer law where you live gives you the right to use your own courts.</p>
+      </Section>
+
+      <Section title="Families in the United States" id="united-states">
+        <ul>
+          <li>
+            A family is billed in {CURRENCY_NAME.USD} when the first child added follows a US state’s curriculum. The family plan then costs {PRICES_BY_CURRENCY.USD.month.label} or {PRICES_BY_CURRENCY.USD.year.label}, plus sales tax where it applies. Tax depends on your billing address and is shown at checkout before you pay.
+          </li>
+          <li>Everything else above applies the same way: the free trial, the free units, renewal, cancelling and refunds.</li>
+          <li>Before your children’s progress is saved on our servers, we ask for your consent as a parent, as US law requires. How that works is in the “Families in the United States” section of our <Link href="/privacy/#united-states">privacy policy</Link>.</li>
+          <li>
+            The governing law section above doesn’t take away the protection of the consumer laws of the state where you live, or your right to bring a claim in your own state’s courts where those laws give it. Nothing in these terms limits rights you have as a consumer that can’t be waived.
+          </li>
+        </ul>
       </Section>
 
       <Section title="Contact us">

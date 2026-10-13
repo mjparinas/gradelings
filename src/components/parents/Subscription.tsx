@@ -3,7 +3,7 @@
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { APP_NAME } from "@/lib/brand";
 import { devBilling, loadReferral, openBillingPortal, redeemCode, refreshAccount, resendVerification, startCheckout, type BillingInfo, type ReferralInfo } from "@/lib/account";
-import { firstChargeAt, FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, PRICES, trialDaysLeft, upgradeOffer } from "@/lib/plan";
+import { firstChargeAt, FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, CURRENCY_NAME, pricesFor, trialDaysLeft, upgradeOffer } from "@/lib/plan";
 import { inviteLink, rememberMyInvite } from "@/lib/referral";
 import { useRoute } from "@/lib/router";
 import { useStore } from "@/lib/store";
@@ -317,6 +317,8 @@ function RedeemPanel() {
 }
 
 function PlanChoices({ disabled, onPick }: { disabled?: boolean; onPick?: (interval: "month" | "year") => void }) {
+  // A US family sees and pays US dollars; everyone else Canadian dollars.
+  const prices = pricesFor(useStore((s) => s.family.country));
   return (
     <div className="flex flex-col gap-3">
       {(["year", "month"] as const).map((interval) => {
@@ -325,9 +327,9 @@ function PlanChoices({ disabled, onPick }: { disabled?: boolean; onPick?: (inter
           <>
             <span>
               <span className="block text-lg font-bold">{interval === "year" ? "Subscribe yearly" : "Subscribe monthly"}</span>
-              <span className="block text-sm text-ink-soft">{interval === "year" ? `${PRICES.year.note} · billed once a year` : "Cancel any time"}</span>
+              <span className="block text-sm text-ink-soft">{interval === "year" ? `${prices.year.note} · billed once a year` : "Cancel any time"}</span>
             </span>
-            <span className="text-xl font-bold">{PRICES[interval].label}</span>
+            <span className="text-xl font-bold">{prices[interval].label}</span>
           </>
         );
         if (!onPick) {
@@ -343,7 +345,7 @@ function PlanChoices({ disabled, onPick }: { disabled?: boolean; onPick?: (inter
           </button>
         );
       })}
-      <p className="text-sm text-ink-soft">Prices in Canadian dollars. Payments are handled securely by Stripe; we never see your card details.</p>
+      <p className="text-sm text-ink-soft">Prices in {CURRENCY_NAME[prices.month.currency]}{prices.month.currency === "USD" ? ", plus sales tax where it applies" : ""}. Payments are handled securely by Stripe; we never see your card details.</p>
     </div>
   );
 }

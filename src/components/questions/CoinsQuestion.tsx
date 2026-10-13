@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { COIN_NAMES, formatMoney } from "@/content/money";
+import { coinName, formatMoney } from "@/content/money";
 import { replay } from "@/lib/juice";
 import { useCheckShortcut } from "@/lib/keys";
 import { sounds } from "@/lib/sound";
@@ -56,14 +56,14 @@ export function CoinsQuestion({ q, status, onAttempt }: QuestionProps<Q>) {
               type="button"
               data-quiet
               disabled={locked}
-              aria-label={`Take out ${COIN_NAMES[c.cents]}`}
+              aria-label={`Take out ${coinName(c.cents, q.currency)}`}
               className="animate-drop-in rounded-full"
               onClick={() => {
                 sounds.whoosh();
                 setPurse((p) => p.filter((x) => x.id !== c.id));
               }}
             >
-              <Coin cents={c.cents} scale={0.95} />
+              <Coin cents={c.cents} scale={0.95} currency={q.currency} />
             </button>
           ))}
         </div>
@@ -86,8 +86,8 @@ export function CoinsQuestion({ q, status, onAttempt }: QuestionProps<Q>) {
             onClick={() => add(c)}
             className="btn min-h-28 min-w-28 flex-col px-4 py-2 text-lg"
           >
-            <Coin cents={c} scale={1.1} />
-            <span className="font-read">{COIN_NAMES[c]}</span>
+            <Coin cents={c} scale={1.1} currency={q.currency} />
+            <span className="font-read">{coinName(c, q.currency)}</span>
           </button>
         ))}
       </div>

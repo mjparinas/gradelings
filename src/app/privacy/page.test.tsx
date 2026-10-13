@@ -19,6 +19,26 @@ describe("privacy page", () => {
   });
 });
 
+describe("families in the United States", () => {
+  it("gives the COPPA notice, consent method, rights, storage and complaint route, and the Washington commitments", () => {
+    render(<PrivacyPage />);
+    const section = screen.getByRole("heading", { name: "Families in the United States" }).closest("section")!;
+    expect(section).toHaveAttribute("id", "united-states");
+    for (const text of [
+      "Children’s Online Privacy Protection Act",
+      "first name or nickname, grade, an optional birth year",
+      "we email you again a day or more later",
+      "refuse further collection",
+      "Montréal, Canada",
+      "reportfraud.ftc.gov",
+      "Student User Privacy in Education Rights Act",
+      "never use students’ information for targeted advertising",
+      "My Health My Data Act",
+      "presentation preferences",
+    ]) expect(section).toHaveTextContent(text);
+  });
+});
+
 // The "no tracking" promise was dropped (October 2026), so no copy may make it again.
 describe("site copy", () => {
   const files = [

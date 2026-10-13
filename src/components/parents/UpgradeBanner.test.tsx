@@ -33,6 +33,20 @@ describe("UpgradeBanner", () => {
     expect(screen.getByRole("link", { name: "Create an account to subscribe" })).toHaveAttribute("href", "#/account?next=subscription");
   });
 
+  it("quotes Canadian prices to Canadian families and US prices to US families", () => {
+    state.path = [""];
+    state.android = false;
+    state.ios = false;
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1 };
+    const { unmount } = render(<UpgradeBanner />);
+    expect(screen.getByText(/\$119\.99\/year \(Save 33%\) or \$14\.99\/month/)).toBeInTheDocument();
+    expect(screen.queryByText(/US\$/)).not.toBeInTheDocument();
+    unmount();
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, country: "US" };
+    render(<UpgradeBanner />);
+    expect(screen.getByText(/US\$119\.99\/year \(Save 33%\) or US\$14\.99\/month/)).toBeInTheDocument();
+  });
+
   it("links a signed-in family straight to the subscribe page, including after the trial", () => {
     state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account: { email: "a@b.co", familyId: "f" } };
     state.path = [""];

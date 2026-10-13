@@ -93,4 +93,18 @@ export const lessons: GradeLessons = {
     ["A ball rolls away.", "A box has flat faces, so it stacks."],
     "A box",
   ),
+  // Washington
+  "math/wa-k-count-to-100": lesson(
+    ["Count by tens: 10, 20, 30 ... 100.", "You can start counting at any number.", "11 to 19 are ten and some more ones."],
+    "10 and 4 more. What number is that?",
+    ["Ten ones fill the frame.", "4 more make 14."],
+    "14",
+    { type: "tenFrame", filled: 10, extra: 4 },
+  ),
+  "math/wa-k-sort-and-count": lesson(
+    ["Sort things into groups that match.", "Count each group.", "The group with the most is the biggest."],
+    "3 🍎 and 5 🍌. Which has more?",
+    ["Count: 3 apples, 5 bananas.", "5 is more than 3."],
+    "🍌",
+  ),
 };

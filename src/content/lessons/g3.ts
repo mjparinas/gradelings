@@ -161,4 +161,29 @@ export const lessons: GradeLessons = {
     ["Hexa- means 6.", "A hexagon has 6 sides."],
     "6",
   ),
+  // Washington
+  "math/wa-g3-times-tens": lesson(
+    ["Use the basic fact first.", "Then multiply by 10: the answer is that many tens.", "6 × 40 is 6 × 4 tens."],
+    "What is 6 × 40?",
+    ["6 × 4 = 24.", "24 tens = 240."],
+    "240",
+  ),
+  "math/wa-g3-two-step": lesson(
+    ["Read the story and find the two steps.", "Do the first step, then use its answer in the second.", "Check: is the answer close to an estimate?"],
+    "Maya buys 4 packs of 6 stickers and gives away 5. How many are left?",
+    ["Step 1: 4 × 6 = 24.", "Step 2: 24 − 5 = 19."],
+    "19",
+  ),
+  "math/wa-g3-inch-ruler": lesson(
+    ["Each inch on the ruler is split into 4 equal parts.", "Count the whole inches, then the parts: 2/4 is the same as 1/2.", "A line plot shows how many objects have each length."],
+    "A crayon starts at 0 and ends at the second mark after 2. How long is it?",
+    ["2 whole inches.", "2 marks is 2/4 = 1/2."],
+    "2 1/2 inches",
+  ),
+  "math/wa-g3-scaled-graphs": lesson(
+    ["Read the key: one picture can stand for 2, 5 or 10.", "Multiply the pictures by the key.", "Subtract to compare two rows."],
+    "Each 🌷 stands for 5. Spring has 4 🌷. How many chose spring?",
+    ["4 × 5 = 20."],
+    "20",
+  ),
 };

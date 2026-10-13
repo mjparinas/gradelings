@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { canUse, firstChargeAt, MIN_TRIAL_CARRY_MS, FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, PRICES, trialDaysLeft, unitOpen, upgradeOffer } from "./plan";
+import { canUse, currencyFor, CURRENCY_NAME, firstChargeAt, pricesFor, PRICES_BY_CURRENCY, MIN_TRIAL_CARRY_MS, FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, PRICES, trialDaysLeft, unitOpen, upgradeOffer } from "./plan";
 import type { FamilyInfo } from "./model";
 
 const family = (overrides: Partial<FamilyInfo> = {}) => ({
@@ -89,5 +89,32 @@ describe("first charge when subscribing during the trial", () => {
   });
   it("never gives a second trial to a family that had a paid plan", () => {
     expect(firstChargeAt(now + 10 * 86_400_000, true, now)).toBeNull();
+  });
+});
+
+describe("prices by country", () => {
+  it("charges US families in US dollars and everyone else in Canadian dollars", () => {
+    expect(currencyFor("US")).toBe("USD");
+    expect(currencyFor("CA")).toBe("CAD");
+    expect(currencyFor(undefined)).toBe("CAD");
+    expect(currencyFor(null)).toBe("CAD");
+    expect(pricesFor("CA")).toBe(PRICES);
+    expect(pricesFor(undefined)).toBe(PRICES);
+    expect(pricesFor("US")).toEqual({
+      month: { amount: 14.99, currency: "USD", label: "US$14.99/month" },
+      year: { amount: 119.99, currency: "USD", label: "US$119.99/year", note: "Save 33%" },
+    });
+  });
+
+  it("labels each currency so the two can't be confused, with the same saving", () => {
+    for (const [currency, p] of Object.entries(PRICES_BY_CURRENCY)) {
+      for (const price of [p.month, p.year]) {
+        expect(price.currency).toBe(currency);
+        expect(price.label.startsWith(currency === "USD" ? "US$" : "$")).toBe(true);
+        expect(price.label).toContain(String(price.amount));
+      }
+      expect(p.year.note).toBe(`Save ${Math.round((1 - p.year.amount / (p.month.amount * 12)) * 100)}%`);
+    }
+    expect(CURRENCY_NAME).toEqual({ CAD: "Canadian dollars", USD: "US dollars" });
   });
 });

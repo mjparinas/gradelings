@@ -169,4 +169,42 @@ export const lessons: GradeLessons = {
     ["Two pairs of parallel sides: a parallelogram.", "Four right angles: a rectangle."],
     "A rectangle",
   ),
+  // Washington
+  "math/wa-g5-conversions": lesson(
+    ["Big unit to small unit: multiply. Small unit to big unit: divide.", "Know the facts: 12 in = 1 ft, 16 oz = 1 lb, 4 qt = 1 gal, 100 cm = 1 m, 1000 g = 1 kg.", "Change to the same unit before you add or subtract."],
+    "A rope is 4 yards long. How many feet is that?",
+    ["1 yard = 3 feet.", "4 × 3 = 12."],
+    "12 feet",
+  ),
+  "math/wa-g5-expressions": lesson(
+    ["Do what is inside parentheses ( ) first, then brackets [ ].", "Then multiply and divide, left to right.", "Then add and subtract, left to right."],
+    "What is 3 × [2 + (4 × 5)]?",
+    ["4 × 5 = 20.", "2 + 20 = 22.", "3 × 22 = 66."],
+    "66",
+  ),
+  "math/wa-g5-coordinates": lesson(
+    ["A point is written (x, y).", "Start at (0, 0). Go right x units, then up y units.", "Points on the x-axis have y = 0."],
+    "Start at (0, 0). Go 4 right and 2 up. Where are you?",
+    ["x = 4, y = 2."],
+    "(4, 2)",
+    { type: "grid", size: 6, points: [{ x: 4, y: 2, label: "A" }] },
+  ),
+  "math/wa-g5-fraction-multiply": lesson(
+    ["To multiply fractions, multiply the tops and multiply the bottoms.", "A fraction is a division: 3/4 means 3 ÷ 4.", "Dividing by a unit fraction asks how many of it fit."],
+    "What is 2/3 × 3/5?",
+    ["Tops: 2 × 3 = 6.", "Bottoms: 3 × 5 = 15.", "6/15 = 2/5."],
+    "2/5",
+  ),
+  "math/wa-g5-add-unlike": lesson(
+    ["Find a common denominator.", "Rename each fraction with that denominator.", "Add or subtract the tops. Keep the bottom. Simplify."],
+    "What is 1/2 + 1/3?",
+    ["Common denominator: 6.", "1/2 = 3/6 and 1/3 = 2/6.", "3/6 + 2/6 = 5/6."],
+    "5/6",
+  ),
+  "math/wa-g5-volume": lesson(
+    ["Volume counts the unit cubes that fill a solid.", "For a box, V = length × width × height.", "For two boxes stuck together, add their volumes."],
+    "A box is 4 in long, 3 in wide and 2 in high. What is its volume?",
+    ["4 × 3 = 12 cubes in one layer.", "2 layers: 12 × 2 = 24."],
+    "24 cubic inches",
+  ),
 };

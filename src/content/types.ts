@@ -2,10 +2,12 @@
 // units carry learning-standard text per framework (e.g. "ca-bc"), and the
 // scoring scheme and report-card language live with the framework.
 
+import type { Currency } from "./money";
+
 export type GradeId = "k" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
 export type SubjectId = "math" | "language" | "science" | "social" | "immersion" | "core-french";
 /** A curriculum framework: a province, state or national standard set. */
-export type FrameworkId = "ca-bc" | "ca-on" | "ca-ab" | "ca-sk" | "ca-mb" | "ca-yt" | "ca-nt" | "ca-ns" | "ca-nb" | "ca-nl" | "ca-pe" | "ca-nu";
+export type FrameworkId = "ca-bc" | "ca-on" | "ca-ab" | "ca-sk" | "ca-mb" | "ca-yt" | "ca-nt" | "ca-ns" | "ca-nb" | "ca-nl" | "ca-pe" | "ca-nu" | "us-wa";
 /** UI and wording adapt to the child's age band. */
 export type AgeBand = "little" | "middle" | "big";
 
@@ -39,8 +41,8 @@ export type Visual =
   | { type: "dots"; count: number; emoji?: string }
   /** Base-ten blocks. */
   | { type: "blocks"; hundreds?: number; tens: number; ones: number }
-  /** Coins and bills, in cents (5, 10, 25, 100, 200, 500, 1000, 2000, 5000). */
-  | { type: "coins"; coins: number[] }
+  /** Coins and bills, in cents (5, 10, 25, 100, 200, 500, 1000, 2000, 5000; US money adds 1 and 50). */
+  | { type: "coins"; coins: number[]; currency?: Currency }
   | { type: "ruler"; length: number; emoji: string }
   | {
       type: "pictograph";
@@ -112,6 +114,8 @@ interface BaseQuestion {
   /** Shown after a miss, and again with the answer if they still need help. */
   hint: string;
   visual?: Visual;
+  /** The money its coins, coin choices and pictures show. Canadian unless set. */
+  currency?: Currency;
 }
 
 export interface ChoiceQuestion extends BaseQuestion {

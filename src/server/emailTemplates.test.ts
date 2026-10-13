@@ -22,6 +22,8 @@ const every = [
   t.adminMessageEmail("a@example.com", O, { subject: "News", label: "n", paragraphs: ["Hi"], button: null }, "u", "admin"),
   t.alertEmail("a@example.com", O, { subject: "Alert", heading: "Alert", lines: ["x"] }),
   t.paymentProblemEmail("a@example.com", O, "admin"),
+  t.consentEmail("a@example.com", O, "tok"),
+  t.consentEmail("a@example.com", O, "tok", true),
 ];
 
 describe("branding in every email", () => {
@@ -56,5 +58,22 @@ describe("branding in every email", () => {
       expect(existsSync(file)).toBe(true);
       expect(readFileSync(file).subarray(1, 4).toString()).toBe("PNG");
     }
+  });
+});
+
+describe("US parental consent emails", () => {
+  it("repeat the notice and carry the withdraw link, now and in the delayed confirmation", () => {
+    for (const followUp of [false, true]) {
+      const e = t.consentEmail("a@example.com", O, "t/1", followUp);
+      expect(e.kind).toBe("consent");
+      expect(e.text).toContain(`${O}/account/consent/?token=t%2F1`);
+      expect(e.text).toContain("first name or nickname");
+      expect(e.text).toMatch(/don’t sell/);
+      expect(e.text).toMatch(/delete your children's information from our servers/);
+      // Transactional: no unsubscribe header.
+      expect(e.unsubscribeUrl).toBeUndefined();
+    }
+    expect(t.consentEmail("a@example.com", O, "x", true).subject).toMatch(/^Reminder/);
+    expect(t.consentEmail("a@example.com", O, "x").subject).not.toMatch(/^Reminder/);
   });
 });

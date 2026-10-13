@@ -1,5 +1,7 @@
 import { cancelReason } from "@/lib/cancelReasons";
+import { appOrigin } from "@/server/auth";
 import { query, run } from "@/server/db";
+import { recordConsent } from "@/server/consent";
 import { familyPath, sendAlert } from "@/server/alerts";
 import { recordWebhook } from "@/server/monitor";
 import { recordInvoice, recordRefund } from "@/server/payments";
@@ -35,7 +37,7 @@ export async function POST(req: Request) {
   // Stripe redelivers events: handle each id once.
   if ((await run("INSERT OR IGNORE INTO stripe_events (id, created_at) VALUES (?, ?)", [event.id, now])) === 0) return new Response("ok");
   try {
-    await apply(event, obj, now);
+    await apply(req, event, obj, now);
   } catch (e) {
     await run("DELETE FROM stripe_events WHERE id = ?", [event.id]); // let Stripe retry
     await recordWebhook("stripe", false, event.type, (e as Error).message);
@@ -54,7 +56,7 @@ async function isStale(event: StripeEvent, familyId: string | undefined, custome
   return !!rows[0] && at < Number(rows[0].billing_event_at);
 }
 
-async function apply(event: StripeEvent, obj: Record<string, unknown>, now: number) {
+async function apply(req: Request, event: StripeEvent, obj: Record<string, unknown>, now: number) {
   const at = (event.created ?? 0) * 1000;
 
   if (event.type === "invoice.paid") await recordInvoice(obj, at || now);
@@ -76,6 +78,10 @@ async function apply(event: StripeEvent, obj: Record<string, unknown>, now: numb
         at,
         familyId,
       ]);
+      // For a US family, a paid checkout also counts as parental consent under COPPA. Recorded when there is none
+      // yet, but the app never depends on it: the Parent area asks any US family without consent directly.
+      const email = (obj.customer_details as { email?: unknown } | undefined)?.email ?? obj.customer_email;
+      await recordConsent(familyId, "payment", typeof email === "string" ? email : null, appOrigin(req), now);
     }
   }
 

@@ -84,7 +84,7 @@ export function Hub() {
   const little = band === "little";
   const unitKeys = allUnitRefs(profile.grade, profile.framework).filter((r) => subjects.includes(r.course.subject) && allowed(r)).map((r) => r.key);
   const next = nextUp(d, unitKeys);
-  const nextRef = next ? getUnitRef(next.key) : undefined;
+  const nextRef = next ? getUnitRef(next.key, profile.framework) : undefined;
   const nextInfo = next ? levelInfo(profile.framework, profile.grade, next.level) : undefined;
   const refresher = refresherUnit({ grade: profile.grade, framework: profile.framework, derived: d, subjects, allowed, now });
   const classwork = useClasswork();
@@ -385,7 +385,7 @@ export function Hub() {
           <span className="text-4xl">{suggested.unit.emoji}</span>
           <span className="flex-1">
             <span className="block text-sm font-semibold text-ink-soft">Try this lesson · {getSubjectMeta(suggested.course.subject).title[band]}</span>
-            <span className="block text-xl font-bold">{getUnitRef(suggested.key)?.unit.title}</span>
+            <span className="block text-xl font-bold">{getUnitRef(suggested.key, profile.framework)?.unit.title}</span>
           </span>
           <span className="text-2xl">▶</span>
         </a>

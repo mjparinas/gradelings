@@ -51,6 +51,10 @@ The classroom tools are `[free for the School at the date of signing / priced as
 
 Privacy contact: `[CONTACT_EMAIL]`. This agreement is governed by the laws of `[British Columbia / Ontario / Alberta]` and Canada. Changes must be agreed in writing.
 
+## 12. Schools in the United States
+
+For a school in the United States, the Provider is a "school official" under the Family Educational Rights and Privacy Act (FERPA): it performs a service the School would otherwise do itself, is under the School's direct control for the use and upkeep of student records, uses them only for the purpose they were shared for and does not re-disclose them. The School consents on parents' behalf under the Children's Online Privacy Protection Act (COPPA) for educational use only; the Provider uses student information for nothing else. Washington districts usually sign the Student Data Privacy Consortium's National Data Privacy Agreement (NDPA) with the Washington exhibit; where they do, it replaces this template. In line with Washington's Student User Privacy in Education Rights Act (SUPER Act), the Provider does not use student information for targeted advertising, does not sell it, builds no profile of a student except for the School's educational purposes, deletes it at the School's request, keeps a security program (section 6) and gives notice before a material change to how it is handled. Student information is stored in Montréal, Canada (section 5).
+
 **Schedule A: service providers.** Copy the table in [pia-pack.md](pia-pack.md), section 6, current at signing.
 
 |  | Provider | School |

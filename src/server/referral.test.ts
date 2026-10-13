@@ -188,6 +188,20 @@ describe("thanking a real Stripe subscriber", () => {
     expect(Number(row.current_period_end)).toBe(123);
   });
 
+  it("credits a US referrer in US dollars", async () => {
+    vi.stubEnv("STRIPE_SECRET_KEY", "sk_test_ref");
+    const fetchMock = vi.fn(async () => new Response("{}", { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+    const { id, code } = await payingReferrer("us-payer@example.com");
+    await dbm.run("UPDATE families SET country = 'US' WHERE id = ?", [id]);
+    await join_("us-pal@example.com", code);
+    await confirm("us-pal@example.com");
+    const credit = fetchMock.mock.calls.find((c) => String((c as unknown[])[0]).includes("/balance_transactions")) as unknown as [string, RequestInit];
+    const form = new URLSearchParams(String(credit[1].body));
+    expect(form.get("currency")).toBe("usd");
+    expect(form.get("amount")).toBe(String(-Math.round(plan.PRICES_BY_CURRENCY.USD.month.amount * 100)));
+  });
+
   it("releases the reward when Stripe refuses, so a later confirmation can try again", async () => {
     vi.stubEnv("STRIPE_SECRET_KEY", "sk_test_ref");
     vi.spyOn(console, "error").mockImplementation(() => undefined);

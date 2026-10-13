@@ -5,7 +5,7 @@ import { getUnitRef } from "@/content";
 import { getSubjectMeta } from "@/content/subjects";
 import { go } from "@/lib/router";
 import { speak, stopSpeaking } from "@/lib/speech";
-import { useChildSettings } from "@/lib/store";
+import { useActiveProfile, useChildSettings } from "@/lib/store";
 import { useBand } from "../band";
 import { Critter, SpeechBubble } from "../Critter";
 import { QuestionVisual } from "../visuals";
@@ -21,7 +21,7 @@ export function lessonSpeech(lesson: NonNullable<ReturnType<typeof getUnitRef>>[
 
 /** A short "how it works" before practising: a few steps and one worked example. */
 export function LessonScreen({ unitKey }: { unitKey: string }) {
-  const ref = getUnitRef(unitKey);
+  const ref = getUnitRef(unitKey, useActiveProfile()?.framework);
   const band = useBand();
   const settings = useChildSettings();
   const lesson = ref?.unit.lesson;
