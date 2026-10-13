@@ -209,16 +209,30 @@ export async function visitsReport(days: TrafficPeriod, now = Date.now()): Promi
 
 // ---------- Both ----------
 
-const cache = new Map<number, { at: number; data: TrafficData }>();
+export const TRAFFIC_PARTS = ["search", "visits"] as const;
+export type TrafficPart = (typeof TRAFFIC_PARTS)[number];
+export const isTrafficPart = (p: string): p is TrafficPart => (TRAFFIC_PARTS as readonly string[]).includes(p);
+
+// One entry per part and period, so the tab can ask for both parts at once and show each as it arrives. The
+// promise is kept, so two requests at the same time call the service once.
+const cache = new Map<string, { at: number; value: Promise<TrafficData[TrafficPart]> }>();
+
+/** Search Console or Vercel visits for the last `days`, kept for 10 minutes unless `refresh`. */
+export function trafficPart<P extends TrafficPart>(part: P, days: TrafficPeriod, opts: { refresh?: boolean; now?: number } = {}): Promise<TrafficData[P]> {
+  const now = opts.now ?? Date.now();
+  const key = `${part}:${days}`;
+  const hit = cache.get(key);
+  if (!opts.refresh && hit && now - hit.at < TRAFFIC_CACHE_MS) return hit.value as Promise<TrafficData[P]>;
+  const value = (part === "search" ? searchReport(days, now) : visitsReport(days, now)) as Promise<TrafficData[P]>;
+  cache.set(key, { at: now, value });
+  // A failed read isn't kept, so the next look tries again.
+  value.catch(() => cache.get(key)?.value === value && cache.delete(key));
+  return value;
+}
 
 export async function trafficReport(days: TrafficPeriod, opts: { refresh?: boolean; now?: number } = {}): Promise<TrafficData> {
-  const now = opts.now ?? Date.now();
-  const hit = cache.get(days);
-  if (!opts.refresh && hit && now - hit.at < TRAFFIC_CACHE_MS) return hit.data;
-  const [search, visits] = await Promise.all([searchReport(days, now), visitsReport(days, now)]);
-  const data = { days, search, visits };
-  cache.set(days, { at: now, data });
-  return data;
+  const [search, visits] = await Promise.all([trafficPart("search", days, opts), trafficPart("visits", days, opts)]);
+  return { days, search, visits };
 }
 
 /** For tests. */

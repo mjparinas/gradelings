@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { computeMetrics, familyGroup, fee, monthStart, type FamilyFacts, type MetricsInput, type PaymentFacts } from "./adminMetrics";
+import { computeMetrics, emptyInput, familyGroup, fee, METRIC_SECTIONS, monthStart, SECTION_INPUTS, sectionOf, type FamilyFacts, type MetricsInput, type PaymentFacts } from "./adminMetrics";
 import { LIFETIME_ACCESS } from "./plan";
 
 const DAY = 86_400_000;
@@ -244,5 +244,39 @@ describe("monthStart", () => {
   it("moves across years", () => {
     expect(monthStart(Date.UTC(2026, 0, 20), -1)).toBe(Date.UTC(2025, 11, 1));
     expect(monthStart(Date.UTC(2026, 11, 20), 1)).toBe(Date.UTC(2027, 0, 1));
+  });
+});
+
+describe("one section at a time", () => {
+  it("gives each section the same numbers from only the inputs it reads", () => {
+    const full: MetricsInput = {
+      now: NOW,
+      families: [
+        family({ plan: "premium", subscriptionInterval: "month", referred: true }),
+        family({ plan: "premium", subscriptionInterval: "year", createdAt: NOW - 3 * DAY, country: "US" }),
+        family({ subscriptionStatus: "canceled", billingEventAt: NOW - 2 * DAY }),
+        family({ trialEndsAt: NOW + 5 * DAY, createdAt: NOW - 10 * DAY, verified: false, practised: false }),
+        family({ accessUntil: LIFETIME_ACCESS }),
+      ],
+      parents: 6,
+      children: 8,
+      teachers: 2,
+      students: 30,
+      classes: 3,
+      payments: [pay(), pay({ familyId: "f2", amount: 11999, interval: "year", paidAt: NOW - 40 * DAY }), pay({ familyId: "f3", refunded: 1499, paidAt: NOW - 70 * DAY }), pay({ familyId: "f4", currency: "usd" })],
+      activity: [
+        { day: Math.floor(NOW / DAY), families: 3, answers: 40, ms: 400_000 },
+        { day: Math.floor(NOW / DAY) - 2, families: 1, answers: 12, ms: 90_000 },
+      ],
+      activeFamilies: { d1: 3, d7: 4, d30: 5 },
+      monthlyCosts: 5000,
+      redemptions: 2,
+      reports: 1,
+    };
+    const all = computeMetrics(full);
+    for (const section of METRIC_SECTIONS) {
+      const input = { ...emptyInput(NOW), ...Object.fromEntries(SECTION_INPUTS[section].map((k) => [k, full[k]])) } as MetricsInput;
+      expect(sectionOf(computeMetrics(input), section)).toEqual(sectionOf(all, section));
+    }
   });
 });

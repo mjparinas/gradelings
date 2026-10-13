@@ -46,6 +46,37 @@ export interface SystemReport {
   statusPages: StatusPage[];
 }
 
+/** The checks, in the order the page shows them, so it can draw every card before its result arrives. */
+export const CHECKS = [
+  { id: "database", title: "Database" },
+  { id: "uptime", title: "Uptime" },
+  { id: "deploys", title: "Deploys (Vercel)" },
+  { id: "builds", title: "Builds (GitHub Actions)" },
+  { id: "errors", title: "Errors (Sentry)" },
+  { id: "payments", title: "Payments (Stripe)" },
+  { id: "email", title: "Email (Resend)" },
+  { id: "job", title: "Daily email job" },
+  { id: "settings", title: "Settings" },
+] as const;
+export type CheckId = (typeof CHECKS)[number]["id"];
+
+/** The providers' public status pages, in the order the page shows them. */
+export const STATUS_PAGES = [
+  { name: "Vercel", url: "https://www.vercel-status.com" },
+  { name: "GitHub", url: "https://www.githubstatus.com" },
+  { name: "Sentry", url: "https://status.sentry.io" },
+  { name: "Resend", url: "https://resend-status.com" },
+  { name: "Stripe", url: "https://status.stripe.com" },
+  { name: "Turso", url: "https://status.turso.tech" },
+] as const;
+export type StatusPageName = (typeof STATUS_PAGES)[number]["name"];
+
+/** One card's answer from `/api/admin/system/?check=` or `?page=`: the result and when it was checked. */
+export interface CheckResult<T> {
+  checkedAt: number;
+  result: T;
+}
+
 const RANK: Record<CheckState, number> = { off: 0, ok: 1, warn: 2, down: 3 };
 
 /** The worst state among some states, ignoring checks that are off (ok when all are off). */

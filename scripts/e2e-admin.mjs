@@ -223,6 +223,7 @@ if (await vis(stuck)) {
 await tab("Traffic");
 check(await page.getByText(/GOOGLE_SERVICE_ACCOUNT_KEY/).waitFor({ timeout: 15000 }).then(() => true, () => false), "the Traffic tab says how to set up Search Console");
 check(await vis(page.getByRole("heading", { name: "Visits to the public pages" })), "the Traffic tab has a visits section");
+check(await page.locator('[aria-busy="true"]').first().waitFor({ state: "detached", timeout: 15000 }).then(() => true, () => false), "both Traffic parts finish loading");
 await shot("traffic");
 await scan("traffic");
 
@@ -230,6 +231,7 @@ await scan("traffic");
 await tab("Automations");
 check(await page.getByRole("heading", { name: "Alerts to you" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the Automations tab shows the alerts");
 const nudges = page.getByRole("listitem").filter({ has: page.getByRole("button", { name: "Edit the email" }) });
+await nudges.first().waitFor({ timeout: 8000 });
 check((await nudges.count()) >= 4 && (await nudges.getByText("On", { exact: true }).count()) === 0, "every automatic nudge starts off");
 await nudges.first().getByRole("button", { name: "Turn on" }).click();
 check(await nudges.first().getByRole("button", { name: "Start sending" }).isDisabled(), "turning a nudge on waits for TURN ON to be typed");
@@ -243,9 +245,13 @@ check(await vis(page.getByRole("button", { name: "Add a reply" })), "the inbox o
 await scan("saved replies");
 
 // The System page checks every service from the server; tokens never reach the browser. The status pages are
-// read live, so only the parts that don't depend on the network are checked here.
+// read live, so only the parts that don't depend on the network are checked here. Every card shows at once and
+// fills in when its own check is done.
 await tab("System");
-check(await page.getByRole("heading", { name: "Database", exact: true }).waitFor({ timeout: 30000 }).then(() => true, () => false), "the System tab shows the database check");
+check(await page.getByRole("heading", { name: "Database", exact: true }).waitFor({ timeout: 5000 }).then(() => true, () => false), "the System tab shows every card straight away");
+const database = page.locator("li").filter({ has: page.getByRole("heading", { name: "Database", exact: true }) });
+check(await database.getByText(/answered in \d+ ms/).waitFor({ timeout: 30000 }).then(() => true, () => false), "the database card fills in when its check is done");
+check(await page.locator('[aria-busy="true"]').first().waitFor({ state: "detached", timeout: 30000 }).then(() => true, () => false), "every card finishes loading");
 check(await vis(page.getByRole("heading", { name: "Provider status pages" })), "the System tab shows the providers' status pages");
 check(await vis(page.getByText(/Set VERCEL_TOKEN/)), "a check that isn't set up says which settings to add");
 await shot("system");

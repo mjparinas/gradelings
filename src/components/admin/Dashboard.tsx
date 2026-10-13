@@ -1,18 +1,18 @@
 "use client";
 
-import { useCallback, useEffect, useState, type FormEvent, type ReactNode } from "react";
+import { useCallback, useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 import { ColumnChart, LineChart, niceMax, RowBars } from "@/components/parents/charts";
 import { call } from "@/lib/classroom";
-import type { Metrics } from "@/lib/adminMetrics";
+import { METRIC_SECTIONS, type MetricSection, type SectionMetrics } from "@/lib/adminMetrics";
 import type { Detail, DetailView } from "@/lib/adminDetail";
 import { cancelReasonRows } from "@/lib/cancelReasons";
 import { FREE_UNITS_PER_COURSE } from "@/lib/plan";
 import { DetailModal } from "./DetailModal";
+import { ChartShape, Loading, TileShape } from "./Skeleton";
 
 // The admin overview: customers, growth, practice and money, with charts. Counts and sums only here; most
 // tiles open a window with the list behind the number.
 
-type Data = Metrics & { stripe: boolean; cancelReasons?: { reason: string; n: number }[] };
 
 const btn = "min-h-11 rounded-xl px-4 font-bold disabled:opacity-50";
 const primary = `${btn} bg-[#4f8ef7] text-[#0f172a]`;
@@ -68,7 +68,7 @@ function Tile({ label, value, sub, onOpen }: { label: string; value: string; sub
 }
 
 /** The month-by-month money breakdown behind the profit and projection tiles, built from the dashboard data. */
-function moneyDetail(data: Data, title: string): Detail {
+function moneyDetail(data: { revenue: SectionMetrics["money"]["revenue"] }, title: string): Detail {
   const r = data.revenue;
   return {
     title,
@@ -114,27 +114,191 @@ function Section({ id, title, intro, children }: { id: string; title: string; in
 const tiles = "mt-3 grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-4";
 const charts = "mt-3 grid gap-3 lg:grid-cols-2";
 
-export function Dashboard({ onOpenFamily }: { onOpenFamily?: (id: string) => void }) {
-  const [data, setData] = useState<Data | null>(null);
-  const [err, setErr] = useState("");
-  const [open, setOpen] = useState<Source | null>(null);
-  const load = useCallback(() => call<Data>("/api/admin/stats/").then(setData, (e: Error) => setErr(e.message)), []);
-  useEffect(() => {
-    load();
-  }, [load]);
-  if (!data) return err ? <p role="alert" className="mt-2 text-nudge-dark">{err}</p> : <p className="font-read">Loading…</p>;
+type Parts = {
+  money?: SectionMetrics["money"] & { stripe: boolean };
+  customers?: SectionMetrics["customers"];
+  growth?: SectionMetrics["growth"] & { cancelReasons?: { reason: string; n: number }[] };
+  practice?: SectionMetrics["practice"];
+};
 
-  const { people, customers: c, acquisition: a, engagement: e, revenue: r } = data;
-  const show = (view: DetailView) => () => setOpen({ view });
-  const showMoney = (title: string) => () => setOpen({ detail: moneyDetail(data, title) });
-  const year = new Date(data.generatedAt).getUTCFullYear();
+/** A section's tiles and charts as grey shapes, until its numbers arrive. */
+function SectionLoading({ tiles: n, charts: c }: { tiles: number; charts: number }) {
+  return (
+    <Loading>
+      <ul className={tiles}>
+        {Array.from({ length: n }, (_, i) => (
+          <li key={i}>
+            <TileShape />
+          </li>
+        ))}
+      </ul>
+      <div className={charts}>
+        {Array.from({ length: c }, (_, i) => (
+          <ChartShape key={i} />
+        ))}
+      </div>
+    </Loading>
+  );
+}
+
+function Money({ m, show, onDetail, reload }: { m: NonNullable<Parts["money"]>; show: (view: DetailView) => () => void; onDetail: (d: Detail) => void; reload: () => void }) {
+  const r = m.revenue;
+  const year = new Date(m.generatedAt).getUTCFullYear();
+  const showMoney = (title: string) => () => onDetail(moneyDetail(m, title));
+  return (
+    <>
+      <ul className={tiles}>
+        <Tile onOpen={show("paying")} label="Monthly recurring revenue" value={money(r.mrr)} sub={`${money(r.arr)} a year at this rate`} />
+        <Tile onOpen={show("payments-month")} label="Revenue this month" value={money(r.thisMonth)} sub={`${money(r.lastMonth)} last month`} />
+        <Tile onOpen={showMoney("Profit by month")} label="Profit this month" value={money(r.profitThisMonth)} sub={`after ${money(r.feesThisMonth)} fees and costs so far`} />
+        <Tile onOpen={show("payments-year")} label={`Revenue in ${year} so far`} value={money(r.yearToDate)} sub={`profit ${money(r.profitYearToDate)}`} />
+        <Tile onOpen={showMoney(`Projection for ${year}`)} label={`Projected revenue for ${year}`} value={money(r.projectedYear)} sub="so far, plus MRR for the rest of the year" />
+        <Tile onOpen={showMoney(`Projection for ${year}`)} label={`Projected profit for ${year}`} value={money(r.projectedProfitYear)} sub={`with costs of ${money(r.monthlyCosts)} a month`} />
+        <Tile onOpen={show("paying")} label="Revenue per paying family" value={r.arppu === null ? "—" : money(Math.round(r.arppu))} sub="a month, on average" />
+        {r.usd && (
+          <Tile
+            onOpen={show("paying")}
+            label="US families (USD, not in the totals above)"
+            value={moneyUsd(r.usd.thisMonth)}
+            sub={`this month · ${moneyUsd(r.usd.mrr)} MRR from ${num(r.usd.paying)} paying · ${moneyUsd(r.usd.yearToDate)} in ${year}`}
+          />
+        )}
+        <Tile onOpen={show("cancelled")}
+          label="Cancelled in 30 days"
+          value={num(r.cancelled30)}
+          sub={r.churnRate === null ? "no paying families yet" : `${share(r.churnRate)} churn${r.lifetimeValue === null ? "" : `, about ${money(r.lifetimeValue)} per customer over their time`}`}
+        />
+      </ul>
+      <div className={charts}>
+        <ColumnChart title="Revenue by month" subtitle="Collected by Stripe, less refunds" data={r.months.map((m) => ({ label: m.label, value: m.revenue, detail: `${money(m.fees)} fees (est.)` }))} format={moneyShort} unit="revenue" xLabel="Month" floor={10_000} />
+        <ColumnChart
+          title="Profit by month"
+          subtitle="Revenue less estimated fees and monthly costs"
+          data={r.months.map((m) => ({ label: m.label, value: m.profit, detail: `${money(m.revenue)} revenue, ${money(m.fees)} fees, ${money(m.costs)} costs` }))}
+          format={moneyShort}
+          unit="profit"
+          floor={10_000}
+          xLabel="Month"
+        />
+        <LineChart
+          title="Paying families by month"
+          subtitle="Families with a payment covering the month"
+          data={r.months.map((m) => ({ label: m.label, value: m.paying }))}
+          format={(v) => num(Math.round(v))}
+          max={niceMax(Math.max(2, ...r.months.map((m) => m.paying)))}
+          xLabel="Month"
+        />
+      </div>
+      <MoneyTools data={m} reload={reload} />
+    </>
+  );
+}
+function Customers({ c: d, show }: { c: NonNullable<Parts["customers"]>; show: (view: DetailView) => () => void }) {
+  const { people, customers: c } = d;
   const groups = [
     { label: "Paying", value: c.paying, note: share(people.families ? c.paying / people.families : null) },
     { label: "In free trial", value: c.trialing, note: share(people.families ? c.trialing / people.families : null) },
     { label: "Access from a code", value: c.codeAccess, note: share(people.families ? c.codeAccess / people.families : null) },
     { label: "Free (trial over)", value: c.free, note: share(people.families ? c.free / people.families : null) },
   ];
+  return (
+    <>
+      <ul className={tiles}>
+        <Tile onOpen={show("families")} label="Families" value={num(people.families)} sub={`${num(people.parents)} parent and teacher accounts`} />
+        <Tile onOpen={show("paying")} label="Paying" value={num(c.paying)} sub={`${num(c.monthly)} monthly, ${num(c.yearly)} yearly${c.pastDue ? `, ${num(c.pastDue)} past due` : ""}`} />
+        <Tile onOpen={show("trialing")} label="In free trial" value={num(c.trialing)} />
+        <Tile onOpen={show("free")} label="Free (trial over, not paying)" value={num(c.free)} sub={`first ${FREE_UNITS_PER_COURSE} units of each course`} />
+        <Tile onOpen={show("code-access")} label="Access from a code or admin" value={num(c.codeAccess)} sub={`${num(c.lifetime)} lifetime`} />
+        <Tile onOpen={show("children")} label="Children" value={num(people.children)} sub={`${(Math.round(people.childrenPerFamily * 10) / 10).toLocaleString("en-CA")} per family`} />
+        <Tile onOpen={show("teachers")} label="Teachers" value={num(people.teachers)} sub={`${num(people.classes)} open classes, ${num(people.students)} student accounts`} />
+        <Tile onOpen={show("codes")} label="Codes redeemed" value={num(d.other.redemptions)} sub={`${num(d.other.reports)} question reports waiting`} />
+      </ul>
+      <div className={charts}>
+        <RowBars title="Where families are" subtitle="Every family is in exactly one group" rows={groups} headers={["Group", "Families", "Share"]} empty="No families yet." />
+      </div>
+    </>
+  );
+}
+function Growth({ g, show }: { g: NonNullable<Parts["growth"]>; show: (view: DetailView) => () => void }) {
+  const a = g.acquisition;
+  return (
+    <>
+      <ul className={tiles}>
+        <Tile onOpen={show("signups")} label="Sign-ups this month" value={num(a.thisMonth)} sub={`${num(a.lastMonth)} last month`} />
+        <Tile onOpen={show("signups")} label="Sign-ups, last 30 days" value={num(a.last30)} sub={change(a.last30, a.previous30, "the 30 days before")} />
+        <Tile onOpen={show("trial-conversion")} label="Trial to paid" value={share(a.trialConversion)} sub={`${num(a.trialsConverted)} of ${num(a.trialsEnded)} trials that ended`} />
+        <Tile onOpen={show("families")} label="Paying share of families" value={share(a.paidShare)} />
+        <Tile onOpen={show("activation")} label="Activation" value={share(a.activationRate)} sub="new families who practised" />
+        <Tile onOpen={show("unconfirmed")} label="Email confirmed" value={share(a.confirmedRate)} />
+        <Tile onOpen={show("referrals")} label="From a referral" value={num(a.referred)} sub={`${share(a.referredRate)} of families`} />
+        <Tile onOpen={show("customers-ever")} label="Families who have paid" value={num(g.customersEver)} sub="in the last two years" />
+      </ul>
+      <div className={charts}>
+        <ColumnChart title="Sign-ups per week" subtitle="Last 26 weeks" data={a.weekly} unit="sign-ups" xLabel="Week of" />
+        <ColumnChart title="Sign-ups per month" subtitle="Last 12 months" data={a.monthly} unit="sign-ups" xLabel="Month" />
+        <RowBars
+          title="Why families cancel"
+          subtitle="The reason picked in Stripe's billing portal, last 12 months"
+          rows={cancelReasonRows(g.cancelReasons ?? [])}
+          headers={["Reason", "Cancellations", "Share"]}
+          empty="No cancellations with a reason yet."
+        />
+      </div>
+    </>
+  );
+}
+function Practice({ e, show }: { e: NonNullable<Parts["practice"]>["engagement"]; show: (view: DetailView) => () => void }) {
+  return (
+    <>
+      <ul className={tiles}>
+        <Tile onOpen={show("practising")} label="Families practising today" value={num(e.d1)} sub="last 24 hours" />
+        <Tile onOpen={show("practising")} label="This week" value={num(e.d7)} sub={`${num(e.d30)} in 30 days`} />
+        <Tile onOpen={show("practising")} label="Stickiness" value={share(e.stickiness)} sub="daily ÷ monthly practising families" />
+        <Tile onOpen={show("practising")} label="Questions answered, 30 days" value={num(e.answers30)} sub={`${num(e.minutes30)} minutes`} />
+      </ul>
+      <div className={charts}>
+        <ColumnChart title="Families practising per day" subtitle="Last 30 days" data={e.daily.map((d) => ({ label: d.label, value: d.families }))} unit="families" />
+        <ColumnChart title="Questions answered per day" subtitle="Last 30 days" data={e.daily.map((d) => ({ label: d.label, value: d.answers, detail: `${num(d.minutes)} minutes` }))} unit="questions" />
+      </div>
+    </>
+  );
+}
 
+export function Dashboard({ onOpenFamily }: { onOpenFamily?: (id: string) => void }) {
+  const [parts, setParts] = useState<Parts>({});
+  const [errs, setErrs] = useState<Partial<Record<MetricSection, string>>>({});
+  const [open, setOpen] = useState<Source | null>(null);
+  // Answers from before a refresh are dropped.
+  const round = useRef(0);
+  const load = useCallback(() => {
+    const mine = ++round.current;
+    for (const section of METRIC_SECTIONS) {
+      call<Parts[typeof section]>(`/api/admin/stats/?section=${section}`).then(
+        (r) => {
+          if (mine !== round.current) return;
+          setParts((p) => ({ ...p, [section]: r }));
+          setErrs((e) => ({ ...e, [section]: undefined }));
+        },
+        (e: Error) => mine === round.current && setErrs((x) => ({ ...x, [section]: e.message })),
+      );
+    }
+  }, []);
+  useEffect(load, [load]);
+  const refresh = () => {
+    setParts({});
+    setErrs({});
+    load();
+  };
+
+  const show = (view: DetailView) => () => setOpen({ view });
+  const loaded = METRIC_SECTIONS.flatMap((k) => parts[k] ?? []);
+  const generatedAt = loaded.length === METRIC_SECTIONS.length ? Math.min(...loaded.map((p) => p.generatedAt)) : null;
+  const failed = (section: MetricSection) =>
+    errs[section] ? (
+      <p role="alert" className="mt-3 text-nudge-dark">
+        {errs[section]}
+      </p>
+    ) : null;
   return (
     <div>
       {open && (
@@ -151,116 +315,39 @@ export function Dashboard({ onOpenFamily }: { onOpenFamily?: (id: string) => voi
         />
       )}
       <p className="text-sm text-ink-soft">
-        Class student accounts are left out, and days and months are UTC. Tiles with an arrow open the list behind them. Updated {new Date(data.generatedAt).toLocaleString("en-CA", { dateStyle: "medium", timeStyle: "short" })}{" "}
-        <button type="button" className="font-semibold text-[#2a5bd7] underline" onClick={() => load()}>
+        Class student accounts are left out, and days and months are UTC. Tiles with an arrow open the list behind them.{" "}
+        {generatedAt ? `Updated ${new Date(generatedAt).toLocaleString("en-CA", { dateStyle: "medium", timeStyle: "short" })} ` : "Loading… "}
+        <button type="button" className="font-semibold text-[#2a5bd7] underline" onClick={refresh}>
           Refresh
         </button>
       </p>
 
       <Section id="money-h" title="Revenue and profit" intro="Money is in Canadian dollars; US families' payments in US dollars are shown on their own tile. Revenue is what Stripe collected, less refunds. Fees are estimated at 2.9% + 30¢ a payment. Monthly recurring revenue uses list prices, with yearly plans counted as a twelfth a month. Profit takes off fees and the monthly costs you enter below.">
-        <ul className={tiles}>
-          <Tile onOpen={show("paying")} label="Monthly recurring revenue" value={money(r.mrr)} sub={`${money(r.arr)} a year at this rate`} />
-          <Tile onOpen={show("payments-month")} label="Revenue this month" value={money(r.thisMonth)} sub={`${money(r.lastMonth)} last month`} />
-          <Tile onOpen={showMoney("Profit by month")} label="Profit this month" value={money(r.profitThisMonth)} sub={`after ${money(r.feesThisMonth)} fees and costs so far`} />
-          <Tile onOpen={show("payments-year")} label={`Revenue in ${year} so far`} value={money(r.yearToDate)} sub={`profit ${money(r.profitYearToDate)}`} />
-          <Tile onOpen={showMoney(`Projection for ${year}`)} label={`Projected revenue for ${year}`} value={money(r.projectedYear)} sub="so far, plus MRR for the rest of the year" />
-          <Tile onOpen={showMoney(`Projection for ${year}`)} label={`Projected profit for ${year}`} value={money(r.projectedProfitYear)} sub={`with costs of ${money(r.monthlyCosts)} a month`} />
-          <Tile onOpen={show("paying")} label="Revenue per paying family" value={r.arppu === null ? "—" : money(Math.round(r.arppu))} sub="a month, on average" />
-          {r.usd && (
-            <Tile
-              onOpen={show("paying")}
-              label="US families (USD, not in the totals above)"
-              value={moneyUsd(r.usd.thisMonth)}
-              sub={`this month · ${moneyUsd(r.usd.mrr)} MRR from ${num(r.usd.paying)} paying · ${moneyUsd(r.usd.yearToDate)} in ${year}`}
-            />
-          )}
-          <Tile onOpen={show("cancelled")}
-            label="Cancelled in 30 days"
-            value={num(r.cancelled30)}
-            sub={r.churnRate === null ? "no paying families yet" : `${share(r.churnRate)} churn${r.lifetimeValue === null ? "" : `, about ${money(r.lifetimeValue)} per customer over their time`}`}
-          />
-        </ul>
-        <div className={charts}>
-          <ColumnChart title="Revenue by month" subtitle="Collected by Stripe, less refunds" data={r.months.map((m) => ({ label: m.label, value: m.revenue, detail: `${money(m.fees)} fees (est.)` }))} format={moneyShort} unit="revenue" xLabel="Month" floor={10_000} />
-          <ColumnChart
-            title="Profit by month"
-            subtitle="Revenue less estimated fees and monthly costs"
-            data={r.months.map((m) => ({ label: m.label, value: m.profit, detail: `${money(m.revenue)} revenue, ${money(m.fees)} fees, ${money(m.costs)} costs` }))}
-            format={moneyShort}
-            unit="profit"
-            floor={10_000}
-            xLabel="Month"
-          />
-          <LineChart
-            title="Paying families by month"
-            subtitle="Families with a payment covering the month"
-            data={r.months.map((m) => ({ label: m.label, value: m.paying }))}
-            format={(v) => num(Math.round(v))}
-            max={niceMax(Math.max(2, ...r.months.map((m) => m.paying)))}
-            xLabel="Month"
-          />
-        </div>
-        <MoneyTools data={data} reload={load} />
+        {failed("money") ?? (!parts.money ? <SectionLoading tiles={8} charts={3} /> : <Money m={parts.money} show={show} onDetail={(detail) => setOpen({ detail })} reload={load} />)}
       </Section>
+
 
       <Section id="customers-h" title="Customers">
-        <ul className={tiles}>
-          <Tile onOpen={show("families")} label="Families" value={num(people.families)} sub={`${num(people.parents)} parent and teacher accounts`} />
-          <Tile onOpen={show("paying")} label="Paying" value={num(c.paying)} sub={`${num(c.monthly)} monthly, ${num(c.yearly)} yearly${c.pastDue ? `, ${num(c.pastDue)} past due` : ""}`} />
-          <Tile onOpen={show("trialing")} label="In free trial" value={num(c.trialing)} />
-          <Tile onOpen={show("free")} label="Free (trial over, not paying)" value={num(c.free)} sub={`first ${FREE_UNITS_PER_COURSE} units of each course`} />
-          <Tile onOpen={show("code-access")} label="Access from a code or admin" value={num(c.codeAccess)} sub={`${num(c.lifetime)} lifetime`} />
-          <Tile onOpen={show("children")} label="Children" value={num(people.children)} sub={`${(Math.round(people.childrenPerFamily * 10) / 10).toLocaleString("en-CA")} per family`} />
-          <Tile onOpen={show("teachers")} label="Teachers" value={num(people.teachers)} sub={`${num(people.classes)} open classes, ${num(people.students)} student accounts`} />
-          <Tile onOpen={show("codes")} label="Codes redeemed" value={num(data.other.redemptions)} sub={`${num(data.other.reports)} question reports waiting`} />
-        </ul>
-        <div className={charts}>
-          <RowBars title="Where families are" subtitle="Every family is in exactly one group" rows={groups} headers={["Group", "Families", "Share"]} empty="No families yet." />
-        </div>
+        {failed("customers") ?? (!parts.customers ? <SectionLoading tiles={8} charts={1} /> : <Customers c={parts.customers} show={show} />)}
       </Section>
+
 
       <Section id="growth-h" title="Growth" intro="Activation is the share of families who signed up in the last 90 days and have practised at least once. Trial to paid is the share of trials that ended in the last 90 days whose family pays now.">
-        <ul className={tiles}>
-          <Tile onOpen={show("signups")} label="Sign-ups this month" value={num(a.thisMonth)} sub={`${num(a.lastMonth)} last month`} />
-          <Tile onOpen={show("signups")} label="Sign-ups, last 30 days" value={num(a.last30)} sub={change(a.last30, a.previous30, "the 30 days before")} />
-          <Tile onOpen={show("trial-conversion")} label="Trial to paid" value={share(a.trialConversion)} sub={`${num(a.trialsConverted)} of ${num(a.trialsEnded)} trials that ended`} />
-          <Tile onOpen={show("families")} label="Paying share of families" value={share(a.paidShare)} />
-          <Tile onOpen={show("activation")} label="Activation" value={share(a.activationRate)} sub="new families who practised" />
-          <Tile onOpen={show("unconfirmed")} label="Email confirmed" value={share(a.confirmedRate)} />
-          <Tile onOpen={show("referrals")} label="From a referral" value={num(a.referred)} sub={`${share(a.referredRate)} of families`} />
-          <Tile onOpen={show("customers-ever")} label="Families who have paid" value={num(r.customersEver)} sub="in the last two years" />
-        </ul>
-        <div className={charts}>
-          <ColumnChart title="Sign-ups per week" subtitle="Last 26 weeks" data={a.weekly} unit="sign-ups" xLabel="Week of" />
-          <ColumnChart title="Sign-ups per month" subtitle="Last 12 months" data={a.monthly} unit="sign-ups" xLabel="Month" />
-          <RowBars
-            title="Why families cancel"
-            subtitle="The reason picked in Stripe's billing portal, last 12 months"
-            rows={cancelReasonRows(data.cancelReasons ?? [])}
-            headers={["Reason", "Cancellations", "Share"]}
-            empty="No cancellations with a reason yet."
-          />
-        </div>
+        {failed("growth") ?? (!parts.growth ? <SectionLoading tiles={8} charts={3} /> : <Growth g={parts.growth} show={show} />)}
       </Section>
 
+
       <Section id="practice-h" title="Practice">
-        <ul className={tiles}>
-          <Tile onOpen={show("practising")} label="Families practising today" value={num(e.d1)} sub="last 24 hours" />
-          <Tile onOpen={show("practising")} label="This week" value={num(e.d7)} sub={`${num(e.d30)} in 30 days`} />
-          <Tile onOpen={show("practising")} label="Stickiness" value={share(e.stickiness)} sub="daily ÷ monthly practising families" />
-          <Tile onOpen={show("practising")} label="Questions answered, 30 days" value={num(e.answers30)} sub={`${num(e.minutes30)} minutes`} />
-        </ul>
-        <div className={charts}>
-          <ColumnChart title="Families practising per day" subtitle="Last 30 days" data={e.daily.map((d) => ({ label: d.label, value: d.families }))} unit="families" />
-          <ColumnChart title="Questions answered per day" subtitle="Last 30 days" data={e.daily.map((d) => ({ label: d.label, value: d.answers, detail: `${num(d.minutes)} minutes` }))} unit="questions" />
-        </div>
+        {failed("practice") ?? (!parts.practice ? <SectionLoading tiles={4} charts={2} /> : <Practice e={parts.practice.engagement} show={show} />)}
       </Section>
+
     </div>
   );
 }
 
+
 /** Monthly costs (for profit) and the Stripe import. */
-function MoneyTools({ data, reload }: { data: Data; reload: () => void }) {
+function MoneyTools({ data, reload }: { data: { revenue: SectionMetrics["money"]["revenue"]; stripe: boolean }; reload: () => void }) {
   const [costs, setCosts] = useState(String(data.revenue.monthlyCosts / 100));
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<{ ok?: string; err?: string }>({});

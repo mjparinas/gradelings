@@ -6,6 +6,7 @@ import { fillMessage, LIMITS, MESSAGE_PRESETS, paragraphs, SEGMENTS, type AdminM
 import { call } from "@/lib/classroom";
 import { EMAIL_KINDS, EMAIL_STATUSES, emailKindLabel, emailStatusLabel } from "@/lib/emailKinds";
 import { fillReply, REPLY_LIMITS, type SavedReply } from "@/lib/savedReplies";
+import { Bars, LoadingCards, LoadingRows } from "./Skeleton";
 
 // The admin panel's engagement tools: the to-do list, writing and sending emails (to one family or a group),
 // the email log and the inbox of mail people send us. Children's first names only go into an email when it's
@@ -159,7 +160,10 @@ export function Composer({ familyId, segment, preset = "miss-you", onSent }: { f
       {segment && (
         <div className="rounded-xl bg-[#f1f5f9] p-3">
           {!audience ? (
-            <p className="font-read">Counting who this reaches…</p>
+            <p className="font-read" aria-busy="true">
+              Counting who this reaches…
+              <Bars widths={["w-1/2", "w-3/4"]} className="mt-2" />
+            </p>
           ) : (
             <>
               <p className="font-semibold">
@@ -278,7 +282,7 @@ export function Emails({ onOpenFamily, initialSegment = "quiet-7" }: { onOpenFam
           ].map(([label, value]) => (
             <div key={label} className="rounded-xl bg-[#f1f5f9] p-3">
               <dt className="text-sm font-semibold text-ink-soft">{label}</dt>
-              <dd className="text-xl font-bold tabular-nums">{value}</dd>
+              <dd className="text-xl font-bold tabular-nums">{data ? value : <Bars widths={["w-1/2"]} className="mt-2" />}</dd>
             </div>
           ))}
         </dl>
@@ -320,7 +324,7 @@ export function Emails({ onOpenFamily, initialSegment = "quiet-7" }: { onOpenFam
           <SelectMenu label="Status" block={false} value={status} onChange={setStatus} options={[{ value: "", label: "Any status" }, ...Object.entries(EMAIL_STATUSES).map(([k, l]) => ({ value: k, label: l }))]} />
         </div>
         <Notice err={err} />
-        {data && <EmailTable emails={data.emails} onOpenFamily={onOpenFamily} />}
+        {data ? <EmailTable emails={data.emails} onOpenFamily={onOpenFamily} /> : !err && <LoadingRows rows={6} />}
       </div>
     </section>
   );
@@ -401,7 +405,7 @@ export function Queue({ onOpenFamily, onReports, onInbox, onCount }: { onOpenFam
       </p>
       <Notice err={err} />
       {!items ? (
-        <p className="font-read">Loading…</p>
+        !err && <LoadingCards count={4} className="" />
       ) : items.length === 0 ? (
         <p className={`${card} font-read`}>Nothing to do right now. 🎉</p>
       ) : (
@@ -509,7 +513,7 @@ export function Inbox({ initialId = null, onOpenFamily }: { initialId?: string |
       <Notice err={err} />
       <SavedRepliesEditor />
       {!list ? (
-        <p className="font-read">Loading…</p>
+        !err && <LoadingRows rows={6} className="" />
       ) : !list.configured ? (
         <p className={`${card} font-read`}>Email isn&apos;t set up yet (RESEND_API_KEY and EMAIL_FROM).</p>
       ) : list.items.length === 0 ? (
@@ -573,7 +577,7 @@ function InboxRead({ id, onBack, onOpenFamily }: { id: string; onBack: () => voi
       </button>
       <Notice err={err} />
       {!m ? (
-        !err && <p className="font-read">Loading…</p>
+        !err && <LoadingCards count={2} className="" />
       ) : (
         <>
           <div className={card}>

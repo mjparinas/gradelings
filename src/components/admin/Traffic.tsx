@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { ColumnChart, RowBars } from "@/components/parents/charts";
 import { SelectMenu } from "@/components/SelectMenu";
 import { call } from "@/lib/classroom";
@@ -9,6 +9,8 @@ import { formatAgo, Notice } from "./Engage";
 
 // The Traffic tab: Google search (Search Console) and visits to the public pages (Vercel Web Analytics). Both are
 // read on the server; the page only gets numbers. Charts use the reports' single blue and each has a table view.
+// Each part is asked for on its own and shows placeholders until it arrives, so a slow service only holds up its
+// own section.
 
 const card = "rounded-2xl border border-line bg-white p-4";
 const btn = "min-h-11 rounded-xl px-4 font-bold disabled:opacity-50";
@@ -24,6 +26,36 @@ function Tile({ label, value, sub }: { label: string; value: string; sub?: strin
       <p className="text-2xl font-bold tabular-nums">{value}</p>
       {sub && <p className="text-sm text-ink-soft">{sub}</p>}
     </div>
+  );
+}
+
+const bar = "rounded bg-[#eef2f7]";
+
+/** A section still loading: grey tiles and chart blocks in the shape of what's coming. */
+function Placeholder() {
+  return (
+    <>
+    <p className="sr-only">Loading…</p>
+    <div aria-hidden="true" className="flex flex-col gap-3 motion-safe:animate-pulse">
+      <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-4">
+        {[0, 1, 2, 3].map((i) => (
+          <div key={i} className={`${card} flex flex-col gap-2`}>
+            <div className={`h-3 w-2/3 ${bar}`} />
+            <div className={`h-7 w-1/2 ${bar}`} />
+            <div className={`h-3 w-3/4 ${bar}`} />
+          </div>
+        ))}
+      </div>
+      <div className="grid gap-3 lg:grid-cols-2">
+        {[0, 1].map((i) => (
+          <div key={i} className={`${card} flex flex-col gap-2`}>
+            <div className={`h-4 w-1/2 ${bar}`} />
+            <div className={`h-40 w-full ${bar}`} />
+          </div>
+        ))}
+      </div>
+    </div>
+    </>
   );
 }
 
@@ -119,27 +151,28 @@ function Visits({ r, days }: { r: VisitsReport; days: number }) {
   );
 }
 
+type Parts = { [P in keyof Omit<TrafficData, "days">]?: TrafficData[P] };
+
 export function Traffic() {
   const [days, setDays] = useState("28");
-  const [data, setData] = useState<TrafficData | null>(null);
-  const [err, setErr] = useState("");
-  const [busy, setBusy] = useState(false);
+  const [parts, setParts] = useState<Parts>({});
+  // Answers for an earlier period, or from before "Check again", are dropped.
+  const round = useRef(0);
   const load = useCallback(
     (refresh = false) => {
-      return call<TrafficData>(`/api/admin/traffic/?days=${days}${refresh ? "&refresh=1" : ""}`).then(
-        (r) => {
-          setErr("");
-          setData(r);
-        },
-        (e: Error) => setErr(e.message),
-      );
+      const mine = ++round.current;
+      for (const part of ["search", "visits"] as const) {
+        call<TrafficData[typeof part]>(`/api/admin/traffic/?days=${days}&part=${part}${refresh ? "&refresh=1" : ""}`).then(
+          (r) => mine === round.current && setParts((s) => ({ ...s, [part]: r })),
+          (e: Error) => mine === round.current && setParts((s) => ({ ...s, [part]: { state: "error", error: e.message } })),
+        );
+      }
     },
     [days],
   );
-  useEffect(() => {
-    void load();
-  }, [load]);
+  useEffect(() => load(), [load]);
   const d = Number(days);
+  const busy = !parts.search || !parts.visits;
   return (
     <section aria-labelledby="traffic-h" className="flex flex-col gap-5">
       <div className="flex flex-wrap items-end justify-between gap-2">
@@ -147,34 +180,40 @@ export function Traffic() {
           Traffic
         </h2>
         <div className="flex flex-wrap items-end gap-2">
-          <SelectMenu label="Period" block={false} value={days} onChange={setDays} options={TRAFFIC_PERIODS.map((p) => ({ value: String(p), label: `Last ${p} days` }))} />
+          <SelectMenu
+            label="Period"
+            block={false}
+            value={days}
+            onChange={(v) => {
+              if (v === days) return;
+              setParts({});
+              setDays(v);
+            }}
+            options={TRAFFIC_PERIODS.map((p) => ({ value: String(p), label: `Last ${p} days` }))}
+          />
           <button
             type="button"
             className={quiet}
             disabled={busy}
-            onClick={async () => {
-              setBusy(true);
-              await load(true);
-              setBusy(false);
+            onClick={() => {
+              setParts({});
+              load(true);
             }}
           >
             {busy ? "Checking…" : "Check again"}
           </button>
         </div>
       </div>
-      <Notice err={err} />
-      {!data ? (
-        !err && <p className="font-read">Loading…</p>
-      ) : (
-        <>
-          <Section id="search-h" title="Google search" intro="From Google Search Console. Google's numbers settle a few days late, so the period ends three days ago.">
-            {data.search.state === "ok" ? <Search r={data.search.report} days={d} /> : <Unavailable part={data.search} />}
-          </Section>
-          <Section id="visits-h" title="Visits to the public pages" intro="From Vercel Web Analytics, which sets no cookies and is switched off in the kids' app, the parent area and account pages, so nothing a child does is counted.">
-            {data.visits.state === "ok" ? <Visits r={data.visits.report} days={d} /> : <Unavailable part={data.visits} />}
-          </Section>
-        </>
-      )}
+      <Section id="search-h" title="Google search" intro="From Google Search Console. Google's numbers settle a few days late, so the period ends three days ago.">
+        <div aria-busy={!parts.search} className="flex flex-col gap-3">
+          {!parts.search ? <Placeholder /> : parts.search.state === "ok" ? <Search r={parts.search.report} days={d} /> : <Unavailable part={parts.search} />}
+        </div>
+      </Section>
+      <Section id="visits-h" title="Visits to the public pages" intro="From Vercel Web Analytics, which sets no cookies and is switched off in the kids' app, the parent area and account pages, so nothing a child does is counted.">
+        <div aria-busy={!parts.visits} className="flex flex-col gap-3">
+          {!parts.visits ? <Placeholder /> : parts.visits.state === "ok" ? <Visits r={parts.visits.report} days={d} /> : <Unavailable part={parts.visits} />}
+        </div>
+      </Section>
     </section>
   );
 }

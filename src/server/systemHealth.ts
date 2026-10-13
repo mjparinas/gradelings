@@ -1,6 +1,11 @@
 import "server-only";
 import {
   betterStackState,
+  CHECKS,
+  STATUS_PAGES,
+  type CheckId,
+  type CheckResult,
+  type StatusPageName,
   emailRateState,
   NEVER_IN_PRODUCTION,
   SETTINGS,
@@ -477,13 +482,6 @@ interface StatuspageSummary {
   incidents?: { name: string; started_at?: string; created_at?: string; shortlink?: string; status?: string }[];
 }
 
-const STATUSPAGES = [
-  { name: "Vercel", url: "https://www.vercel-status.com" },
-  { name: "GitHub", url: "https://www.githubstatus.com" },
-  { name: "Sentry", url: "https://status.sentry.io" },
-  { name: "Resend", url: "https://resend-status.com" },
-];
-
 async function statuspage(name: string, url: string): Promise<StatusPage> {
   const d = await getJson<StatuspageSummary>(name, `${url}/api/v2/summary.json`).catch(() => getJson<StatuspageSummary>(name, `${url}/api/v2/status.json`));
   return {
@@ -508,40 +506,80 @@ async function tursoStatus(): Promise<StatusPage> {
   return { name: "Turso", url: "https://status.turso.tech", state: betterStackState(s), description: s ? s[0].toUpperCase() + s.slice(1) : "Unknown", incidents: [] };
 }
 
-export async function statusPages(): Promise<StatusPage[]> {
-  const pages = [...STATUSPAGES.map((p) => ({ name: p.name, url: p.url, run: () => statuspage(p.name, p.url) })), { name: "Stripe", url: "https://status.stripe.com", run: stripeStatus }, { name: "Turso", url: "https://status.turso.tech", run: tursoStatus }];
-  return Promise.all(pages.map((p) => p.run().catch((e: Error): StatusPage => ({ name: p.name, url: p.url, state: "warn", description: `Couldn't read the status page: ${e.message}`, incidents: [] }))));
+const STATUS_RUNNERS: Record<StatusPageName, () => Promise<StatusPage>> = {
+  Vercel: () => statuspage("Vercel", "https://www.vercel-status.com"),
+  GitHub: () => statuspage("GitHub", "https://www.githubstatus.com"),
+  Sentry: () => statuspage("Sentry", "https://status.sentry.io"),
+  Resend: () => statuspage("Resend", "https://resend-status.com"),
+  Stripe: stripeStatus,
+  Turso: tursoStatus,
+};
+
+/** One provider's status page; a page that can't be read is "worth a look", never an error. */
+async function readStatusPage(name: StatusPageName): Promise<StatusPage> {
+  const url = STATUS_PAGES.find((p) => p.name === name)!.url;
+  return STATUS_RUNNERS[name]().catch((e: Error): StatusPage => ({ name, url, state: "warn", description: `Couldn't read the status page: ${e.message}`, incidents: [] }));
 }
 
-// ---------- All together ----------
+export async function statusPages(): Promise<StatusPage[]> {
+  return Promise.all(STATUS_PAGES.map((p) => readStatusPage(p.name)));
+}
 
-let cache: { at: number; report: SystemReport } | null = null;
+// ---------- One card at a time, or all together ----------
+
+const RUNNERS: Record<CheckId, (now: number) => Promise<HealthCheck>> = {
+  database: () => databaseCheck(),
+  uptime: (now) => uptimeCheck(now),
+  deploys: (now) => deploysCheck(now),
+  builds: () => buildsCheck(),
+  errors: (now) => errorsCheck(now),
+  payments: (now) => paymentsCheck(now),
+  email: (now) => emailCheck(now),
+  job: (now) => jobCheck(now),
+  settings: async () => settingsCheck(),
+};
+
+export const isCheckId = (id: string): id is CheckId => CHECKS.some((c) => c.id === id);
+export const isStatusPageName = (name: string): name is StatusPageName => STATUS_PAGES.some((p) => p.name === name);
+
 /** Results are kept this long, so opening the page again doesn't call every service again. */
 export const CACHE_MS = 60_000;
+// Each card has its own entry, so the page can ask for every card at once and show each as it arrives.
+const cache = new Map<string, { at: number; value: Promise<unknown> }>();
 
-export async function systemReport(opts: { refresh?: boolean; now?: number } = {}): Promise<SystemReport> {
+function cached<T>(key: string, opts: { refresh?: boolean; now?: number }, run: (now: number) => Promise<T>): Promise<CheckResult<T>> {
   const now = opts.now ?? Date.now();
-  if (!opts.refresh && cache && now - cache.at < CACHE_MS) return cache.report;
-  const [checks, pages] = await Promise.all([
-    Promise.all([
-      safely("database", "Database", databaseCheck),
-      safely("uptime", "Uptime", () => uptimeCheck(now)),
-      safely("deploys", "Deploys (Vercel)", () => deploysCheck(now)),
-      safely("builds", "Builds (GitHub Actions)", buildsCheck),
-      safely("errors", "Errors (Sentry)", () => errorsCheck(now)),
-      safely("payments", "Payments (Stripe)", () => paymentsCheck(now)),
-      safely("email", "Email (Resend)", () => emailCheck(now)),
-      safely("job", "Daily email job", () => jobCheck(now)),
-      safely("settings", "Settings", async () => settingsCheck()),
-    ]),
-    statusPages(),
-  ]);
-  const report = { checkedAt: now, checks, statusPages: pages };
-  cache = { at: now, report };
-  return report;
+  const hit = cache.get(key);
+  if (!opts.refresh && hit && now - hit.at < CACHE_MS) return hit.value.then((result) => ({ checkedAt: hit.at, result: result as T }));
+  const value = run(now);
+  cache.set(key, { at: now, value });
+  // A failed run isn't kept, so the next look tries again.
+  value.catch(() => cache.get(key)?.value === value && cache.delete(key));
+  return value.then((result) => ({ checkedAt: now, result }));
+}
+
+/** One check, turning an unexpected error into a "down" card. */
+export function runCheck(id: CheckId, opts: { refresh?: boolean; now?: number } = {}): Promise<CheckResult<HealthCheck>> {
+  const title = CHECKS.find((c) => c.id === id)!.title;
+  return cached(`check:${id}`, opts, (now) => safely(id, title, () => RUNNERS[id](now)));
+}
+
+/** One provider's status page. */
+export function runStatusPage(name: StatusPageName, opts: { refresh?: boolean; now?: number } = {}): Promise<CheckResult<StatusPage>> {
+  return cached(`page:${name}`, opts, () => readStatusPage(name));
+}
+
+/** Every check and status page together, for the alerts and the morning digest. */
+export async function systemReport(opts: { refresh?: boolean; now?: number } = {}): Promise<SystemReport> {
+  const [checks, pages] = await Promise.all([Promise.all(CHECKS.map((c) => runCheck(c.id, opts))), Promise.all(STATUS_PAGES.map((p) => runStatusPage(p.name, opts)))]);
+  return {
+    checkedAt: Math.min(...checks.map((c) => c.checkedAt), ...pages.map((p) => p.checkedAt)),
+    checks: checks.map((c) => c.result),
+    statusPages: pages.map((p) => p.result),
+  };
 }
 
 /** For tests. */
 export function clearSystemCache() {
-  cache = null;
+  cache.clear();
 }

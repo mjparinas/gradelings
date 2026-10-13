@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { render, screen, within } from "@testing-library/react";
+import { act, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
@@ -15,9 +15,9 @@ import { Dashboard } from "./Dashboard";
 const DAY = 86_400_000;
 const now = Date.UTC(2026, 5, 15, 12);
 
+/** Every section's fields in one object, so any `?section=` request can be answered with it. */
 function data(over: Partial<MetricsInput> = {}, stripe = false) {
-  return {
-    ...computeMetrics({
+  const m = computeMetrics({
       now,
       families: [
         { createdAt: now - 3 * DAY, plan: "premium", trialEndsAt: now, subscriptionStatus: "active", subscriptionInterval: "month", billingEventAt: now, accessUntil: null, referred: true, verified: true, practised: true },
@@ -35,9 +35,8 @@ function data(over: Partial<MetricsInput> = {}, stripe = false) {
       redemptions: 1,
       reports: 0,
       ...over,
-    }),
-    stripe,
-  };
+    });
+  return { ...m, customersEver: m.revenue.customersEver, stripe };
 }
 
 const tile = (label: string) => screen.getByText(label, { selector: "span.text-ink-soft" }).closest("li")!;
@@ -66,6 +65,26 @@ describe("admin dashboard", () => {
     expect(screen.getByText("Where families are")).toBeInTheDocument();
     // Without Stripe there is nothing to import.
     expect(screen.queryByRole("button", { name: "Import payments from Stripe" })).toBeNull();
+  });
+
+  it("draws every section at once and fills each in as its numbers arrive", async () => {
+    const held: Record<string, () => void> = {};
+    mocks.call.mockImplementation((url: string) => {
+      const section = new URL(url, "http://x").searchParams.get("section")!;
+      if (section === "practice") return new Promise((resolve) => (held.practice = () => resolve(data())));
+      return Promise.resolve(data());
+    });
+    render(<Dashboard />);
+    for (const s of ["money", "customers", "growth", "practice"]) expect(mocks.call).toHaveBeenCalledWith(`/api/admin/stats/?section=${s}`);
+    for (const name of ["Revenue and profit", "Customers", "Growth", "Practice"]) expect(screen.getByRole("heading", { name })).toBeInTheDocument();
+    expect(await screen.findByText("Monthly recurring revenue")).toBeInTheDocument();
+    const practice = screen.getByRole("heading", { name: "Practice" }).closest("section")!;
+    expect(practice.querySelector('[aria-busy="true"]')).not.toBeNull();
+    expect(within(practice).getByText("Loading…")).toBeInTheDocument();
+    expect(screen.queryByText(/^Updated /)).toBeNull();
+    await act(async () => held.practice());
+    expect(practice.querySelector('[aria-busy="true"]')).toBeNull();
+    expect(within(tile("Questions answered, 30 days")).getByText("30")).toBeInTheDocument();
   });
 
   it("saves the monthly costs and imports from Stripe", async () => {
@@ -154,6 +173,9 @@ describe("admin dashboard", () => {
   it("shows an error when the numbers can't load", async () => {
     mocks.call.mockImplementation(() => Promise.reject(new Error("Stats unavailable")));
     render(<Dashboard />);
-    expect(await screen.findByRole("alert")).toHaveTextContent("Stats unavailable");
+    // Each section says so on its own.
+    const alerts = await screen.findAllByRole("alert");
+    expect(alerts).toHaveLength(4);
+    for (const a of alerts) expect(a).toHaveTextContent("Stats unavailable");
   });
 });

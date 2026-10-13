@@ -118,6 +118,36 @@ describe("the route", () => {
     expect(r.statusPages.map((p: { name: string }) => p.name)).toEqual(["Vercel", "GitHub", "Sentry", "Resend", "Stripe", "Turso"]);
   });
 
+  it("answers for one card at a time, so the page can show each as it is ready", async () => {
+    stubFetch({});
+    process.env.ADMIN_EMAILS = `${ADMIN_EMAIL},cards@example.com`;
+    const admin = await account("cards@example.com");
+    const one = await system.GET(req("/api/admin/system/?check=settings", "GET", undefined, { cookie: admin }));
+    expect(one.status).toBe(200);
+    const c = await one.json();
+    expect(c.result).toMatchObject({ id: "settings", title: "Settings" });
+    expect(typeof c.checkedAt).toBe("number");
+    const page = await (await system.GET(req("/api/admin/system/?page=Turso", "GET", undefined, { cookie: admin }))).json();
+    expect(page.result).toMatchObject({ name: "Turso", url: "https://status.turso.tech" });
+    expect((await system.GET(req("/api/admin/system/?check=nope", "GET", undefined, { cookie: admin }))).status).toBe(404);
+    expect((await system.GET(req("/api/admin/system/?page=nope", "GET", undefined, { cookie: admin }))).status).toBe(404);
+    expect((await system.GET(req("/api/admin/system/?check=settings"))).status).toBe(404);
+  });
+
+  it("calls each service once while a card's answer is cached", async () => {
+    process.env.GITHUB_TOKEN = "t";
+    process.env.GITHUB_REPOSITORY = "owner/app";
+    const calls = stubFetch({});
+    await Promise.all([health.runCheck("builds", { now: NOW }), health.runCheck("builds", { now: NOW })]);
+    const n = calls.length;
+    expect(n).toBeGreaterThan(0);
+    const again = await health.runCheck("builds", { now: NOW + 30_000 });
+    expect(calls.length).toBe(n);
+    expect(again.checkedAt).toBe(NOW);
+    await health.runCheck("builds", { now: NOW + 30_000, refresh: true });
+    expect(calls.length).toBe(2 * n);
+  });
+
   it("never sends a token to the browser", async () => {
     process.env.GITHUB_TOKEN = "ghp_secret-github";
     process.env.GITHUB_REPOSITORY = "owner/app";

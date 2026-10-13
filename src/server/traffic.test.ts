@@ -99,6 +99,9 @@ describe("traffic route", () => {
     const body = await res.json();
     expect(body).toMatchObject({ days: 7, search: { state: "setup" }, visits: { state: "setup" } });
     expect(body.search.setup).toMatch(/GOOGLE_SERVICE_ACCOUNT_KEY/);
+    const one = await route.GET(req("/api/admin/traffic/?days=7&part=visits", admin));
+    expect(await one.json()).toMatchObject({ state: "setup", setup: expect.stringMatching(/VERCEL_TOKEN/) });
+    expect((await route.GET(req("/api/admin/traffic/?days=7&part=nope", admin))).status).toBe(400);
   });
 });
 
@@ -232,5 +235,19 @@ describe("the whole report", () => {
     expect(calls.length).toBeGreaterThan(n);
     const text = JSON.stringify(a);
     for (const secret of ["vercel-secret", "ya29.secret-access", "PRIVATE KEY", "reader@project"]) expect(text).not.toContain(secret);
+  });
+
+  it("reads one part at a time, calling the service once while it is cached", async () => {
+    process.env.VERCEL_TOKEN = "vercel-secret";
+    process.env.VERCEL_PROJECT_ID = "prj_1";
+    const calls = fakeServices();
+    const [a, b] = await Promise.all([traffic.trafficPart("visits", 28, { now: NOW }), traffic.trafficPart("visits", 28, { now: NOW })]);
+    expect(a).toEqual(b);
+    expect(a.state).toBe("ok");
+    const n = calls.length;
+    expect(calls.some((c) => c.url.includes("/searchAnalytics/"))).toBe(false);
+    await traffic.trafficPart("visits", 28, { now: NOW + 60_000 });
+    expect(calls.length).toBe(n);
+    expect((await traffic.trafficPart("search", 28, { now: NOW })).state).toBe("setup");
   });
 });
