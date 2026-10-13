@@ -1,11 +1,15 @@
 import { FRAMEWORKS } from "@/content/frameworks";
 import { listRegions } from "@/content/regions";
 import { APP_NAME } from "@/lib/brand";
-import { MAX_CHILDREN } from "@/lib/plan";
+import { MAX_CHILDREN, type Country } from "@/lib/plan";
 // Competitor comparison pages for the app. Facts about other products come from their public pages
 // and app store listings (see docs/research/competitors.md) and are dated, because
 // prices and features change. Keep the wording factual and fair, and re-check
 // every figure when you change PRICE_CHECKED.
+//
+// One page serves families in every country we offer. A row, question or source that is only true in one
+// country carries `country`, and is shown only while that country has a framework (`forCountries`).
+// Every competitor needs a price and curriculum row for each country (guides.test.ts checks).
 
 export const PRICE_CHECKED = "October 2026";
 
@@ -17,12 +21,12 @@ export interface Competitor {
   who: string;
   goodAt: string[];
   /** How they differ from us, written as plain facts. */
-  differences: { topic: string; them: string; us: string }[];
+  differences: { topic: string; them: string; us: string; country?: Country }[];
   /** Pick them if... / pick us if... */
   chooseThem: string[];
   chooseUs: string[];
-  sources: { label: string; url: string }[];
-  faqs: { q: string; a: string }[];
+  sources: { label: string; url: string; country?: Country }[];
+  faqs: { q: string; a: string; country?: Country }[];
 }
 
 export const COMPETITORS: Competitor[] = [
@@ -38,9 +42,21 @@ export const COMPETITORS: Competitor[] = [
     ],
     differences: [
       {
-        topic: "Price",
+        topic: "Price in Canada",
+        country: "CA",
         them: `IXL Canada lists C$12.95 a month for one subject, C$19.95 for Math and English together, and C$24.95 for All Access, as of ${PRICE_CHECKED}. The free tier limits how many questions a child can answer each day.`,
         us: `One family plan covers up to ${MAX_CHILDREN} children and every subject. There is a 30-day free trial with no card, and the first 2 units of every course stay free afterwards.`,
+      },
+      {
+        topic: "Price in the US",
+        country: "US",
+        them: `IXL's US site lists US$9.95 a month for one subject, US$15.95 for Math and English language arts together, and US$19.95 for Core subjects (Math, English language arts, Science and Social studies), as of ${PRICE_CHECKED}. The free tier limits how many questions a child can answer each day.`,
+        us: `One family plan in US dollars covers up to ${MAX_CHILDREN} children and every subject. There is a 30-day free trial with no card, and the first 2 units of every course stay free afterwards.`,
+      },
+      {
+        topic: "Curriculum",
+        them: "Skills are mapped to provincial curricula in Canada and to state standards in the US, including Washington, Oregon and California.",
+        us: "Every unit is matched to a learning standard in your child's province or state, and the units are ordered the way that grade is taught there.",
       },
       {
         topic: "How progress is shown",
@@ -65,14 +81,22 @@ export const COMPETITORS: Competitor[] = [
       "You have more than one child and want one price.",
     ],
     sources: [
-      { label: "IXL Canada family pricing", url: "https://ca.ixl.com/membership/family/pricing" },
-      { label: "IXL British Columbia math standards", url: "https://ca.ixl.com/standards/british-columbia/math" },
+      { label: "IXL Canada family pricing", url: "https://ca.ixl.com/membership/family/pricing", country: "CA" },
+      { label: "IXL British Columbia math standards", url: "https://ca.ixl.com/standards/british-columbia/math", country: "CA" },
+      { label: "IXL US family pricing", url: "https://www.ixl.com/membership/family/pricing", country: "US" },
+      { label: "IXL Washington math standards", url: "https://www.ixl.com/standards/washington/math", country: "US" },
       { label: "Common Sense Media review of IXL", url: "https://www.commonsensemedia.org/website-reviews/ixl" },
     ],
     faqs: [
       {
         q: `Is ${APP_NAME} a good alternative to IXL for Canadian families?`,
-        a: `It can be, depending on what you want. IXL has a much larger skill library. ${APP_NAME} is smaller and built around provincial curricula and report-card levels for ${listRegions(FRAMEWORKS)}, with a gentler hint-and-retry style and one family price.`,
+        country: "CA",
+        a: `It can be, depending on what you want. IXL has a much larger skill library. ${APP_NAME} is smaller and built around provincial curricula and report-card levels for ${listRegions(FRAMEWORKS.filter((f) => f.country === "CA"))}, with a gentler hint-and-retry style and one family price.`,
+      },
+      {
+        q: `Is ${APP_NAME} a good alternative to IXL for US families?`,
+        country: "US",
+        a: `It can be, depending on what you want. IXL has a much larger skill library and covers every US state. ${APP_NAME} covers ${listRegions(FRAMEWORKS.filter((f) => f.country === "US"))}, with units matched to each state's learning standards, a gentler hint-and-retry style and one family price in US dollars for up to ${MAX_CHILDREN} children.`,
       },
       {
         q: `Does ${APP_NAME} have a SmartScore?`,
@@ -97,9 +121,16 @@ export const COMPETITORS: Competitor[] = [
         us: "A family plan after a 30-day free trial. The first 2 units of every course stay free forever.",
       },
       {
-        topic: "Curriculum",
+        topic: "Curriculum in Canada",
+        country: "CA",
         them: "Course order follows US standards. A 2015 mapping linked some Grade 4 to 6 content to Ontario and British Columbia, and it hasn't been updated for current provincial curricula, as far as we could find.",
-        us: "Every unit is matched to a learning standard in your child's province or state, and that standard is listed for parents.",
+        us: "Every unit is matched to a learning standard in your child's province, and that standard is listed for parents.",
+      },
+      {
+        topic: "Curriculum in the US",
+        country: "US",
+        them: "Math courses are aligned to the Common Core, and Khan Academy maps its math content to state standards for most grades in every state. Science and social studies are organized as general courses rather than by state grade.",
+        us: "Every unit, in math, English language arts, science and social studies, is matched to a learning standard in your child's state, and that standard is listed for parents.",
       },
       {
         topic: "Parent guidance",
@@ -120,12 +151,23 @@ export const COMPETITORS: Competitor[] = [
     ],
     sources: [
       { label: "Khan Academy: does it cost money?", url: "https://support.khanacademy.org/hc/en-us/articles/202260114-Does-it-cost-money-to-use-Khan-Academy" },
-      { label: "Khan Academy blog, 2015: Ontario and BC mapping", url: "https://blog.khanacademy.org/the-learning-partnership-helps-bring-khan-academy/" },
+      { label: "Khan Academy blog, 2015: Ontario and BC mapping", url: "https://blog.khanacademy.org/the-learning-partnership-helps-bring-khan-academy/", country: "CA" },
+      {
+        label: "Khan Academy: is math content aligned to Common Core or state standards?",
+        url: "https://support.khanacademy.org/hc/en-us/articles/16758363457805-Is-Khan-Academy-math-content-aligned-to-Common-Core-or-other-U-S-state-standards",
+        country: "US",
+      },
     ],
     faqs: [
       {
         q: "Is Khan Academy aligned to Canadian curricula?",
+        country: "CA",
         a: "Khan Academy's courses follow US standards. We found a 2015 mapping to Ontario and British Columbia for some Grade 4 to 6 content, and nothing current for the provinces we cover. Check with your child's teacher if you want to be sure a topic is taught in their grade.",
+      },
+      {
+        q: "Is Khan Academy aligned to my state's standards?",
+        country: "US",
+        a: "For math, largely yes: its courses follow the Common Core, and it maps its math content to most grades in every state's standards. For science and social studies, its courses are general rather than matched to your state's grade-by-grade standards. Check with your child's teacher if you want to be sure a topic is taught in their grade.",
       },
       {
         q: `Can I use Khan Academy and ${APP_NAME} together?`,
@@ -145,9 +187,16 @@ export const COMPETITORS: Competitor[] = [
     ],
     differences: [
       {
-        topic: "Price",
+        topic: "Price in Canada",
+        country: "CA",
         them: `The core game is free. On the Canadian App Store, memberships were C$12.99 to C$25.99 a month, or C$74.99 to C$154.99 a year, as of ${PRICE_CHECKED}.`,
         us: "A family plan, with no in-game purchases. Kids can never buy anything; coins are earned only by learning.",
+      },
+      {
+        topic: "Price in the US",
+        country: "US",
+        them: `The core game is free. On the US App Store, memberships were US$12.99 to US$25.99 a month, or US$74.99 to US$154.99 a year, as of ${PRICE_CHECKED}.`,
+        us: "A family plan in US dollars, with no in-game purchases. Kids can never buy anything; coins are earned only by learning.",
       },
       {
         topic: "Selling inside the game",
@@ -155,9 +204,16 @@ export const COMPETITORS: Competitor[] = [
         us: "No ads and no upsells to children, ever.",
       },
       {
-        topic: "Curriculum",
+        topic: "Curriculum in Canada",
+        country: "CA",
         them: "Canadian content follows the Ontario curriculum. We didn't find a match to the British Columbia curriculum.",
-        us: `Matched to the curriculum in ${listRegions(FRAMEWORKS)}.`,
+        us: `Matched to the curriculum in ${listRegions(FRAMEWORKS.filter((f) => f.country === "CA"))}.`,
+      },
+      {
+        topic: "Curriculum in the US",
+        country: "US",
+        them: "US math content follows the Common Core, grade by grade.",
+        us: `Matched to the state standards in ${listRegions(FRAMEWORKS.filter((f) => f.country === "US"))}, in math, English language arts, science and social studies from Kindergarten to Grade 9.`,
       },
       {
         topic: "Subjects",
@@ -172,7 +228,8 @@ export const COMPETITORS: Competitor[] = [
       "You want clear reports in your province's or state's report-card language.",
     ],
     sources: [
-      { label: "Prodigy on the Canadian App Store", url: "https://apps.apple.com/ca/app/id950795722" },
+      { label: "Prodigy on the Canadian App Store", url: "https://apps.apple.com/ca/app/id950795722", country: "CA" },
+      { label: "Prodigy on the US App Store", url: "https://apps.apple.com/us/app/id950795722", country: "US" },
       { label: "Prodigy math curriculum standards", url: "https://www.prodigygame.com/main-en/math-curriculum-standards/" },
     ],
     faqs: [
@@ -190,4 +247,18 @@ export const COMPETITORS: Competitor[] = [
 
 export function competitorBySlug(slug: string): Competitor | undefined {
   return COMPETITORS.find((c) => c.slug === slug);
+}
+
+/** The countries we offer a curriculum in, in the order pages list them: Canada, then the US. */
+export const OFFERED_COUNTRIES: Country[] = (["CA", "US"] as const).filter((c) => FRAMEWORKS.some((f) => f.country === c));
+
+/** A competitor with only the rows, questions and sources for the countries we offer. */
+export function forCountries(c: Competitor, countries: readonly Country[] = OFFERED_COUNTRIES): Competitor {
+  const keep = (x: { country?: Country }) => !x.country || countries.includes(x.country);
+  return { ...c, differences: c.differences.filter(keep), faqs: c.faqs.filter(keep), sources: c.sources.filter(keep) };
+}
+
+/** "Canadian families", or "families in Canada and the US" once a US state is offered. */
+export function familiesWord(countries: readonly Country[] = OFFERED_COUNTRIES): string {
+  return countries.includes("US") ? "families in Canada and the US" : "Canadian families";
 }

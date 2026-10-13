@@ -4,6 +4,15 @@ Research date: 2026-10-08. "Fetched" means I loaded the page directly on that da
 
 ---
 
+## US prices and alignment (for the comparison pages)
+
+Checked 2026-10-13 for Washington, Oregon and California families.
+- **IXL (US site):** the family pricing page embeds `"currency":"USD"` with "Single subject" $9.95 (Math or Language arts), "Combo package" $15.95 (Math and Language arts) and "Core subjects" $19.95 (Math, Language arts, Science, Social studies), per month — [IXL family pricing](https://www.ixl.com/membership/family/pricing). Its state pages say its skills are aligned to the Washington K-12 Learning Standards, the Oregon Mathematics Standards and the California Common Core Content Standards — [Washington](https://www.ixl.com/standards/washington/math), [Oregon](https://www.ixl.com/standards/oregon/math), [California](https://www.ixl.com/standards/california/math).
+- **Prodigy (US App Store):** Core US$12.99/mo or US$74.99/yr; Plus US$19.99/mo or US$114.99/yr; Ultra US$25.99/mo or US$154.99/yr — [App Store US](https://apps.apple.com/us/app/id950795722). Its curriculum page lists US Common Core content by grade (the Grade 1 to 8 range it states is on the Ontario section) — [Prodigy curriculum page](https://www.prodigygame.com/main-en/math-curriculum-standards/).
+- **Khan Academy:** free. Its help centre says the math courses are aligned to the Common Core and its math content is mapped to state standards for most grades in all states — [Khan Academy support](https://support.khanacademy.org/hc/en-us/articles/16758363457805-Is-Khan-Academy-math-content-aligned-to-Common-Core-or-other-U-S-state-standards).
+
+---
+
 ## Competitor matrix (summary of all findings below)
 
 ### Takeaway

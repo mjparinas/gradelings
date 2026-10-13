@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { COMPETITORS } from "@/content/compare";
+import { COMPETITORS, OFFERED_COUNTRIES, familiesWord, forCountries } from "@/content/compare";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { GUIDES, GUIDE_FRAMEWORKS } from "@/content/guides";
 import { GRADE_ORDER } from "@/content/subjects";
@@ -50,6 +50,32 @@ describe("guide pages", () => {
     expect(text).not.toContain("BC, Ontario or Alberta");
     expect(text).toContain("Saskatchewan");
     expect(text).toContain("New Brunswick");
+  });
+
+  it("gives families in every country we offer their own price and curriculum facts on each comparison page", () => {
+    // Region parity (AGENTS.md): a US family must not see only Canadian prices and app stores.
+    expect(OFFERED_COUNTRIES).toEqual([...new Set(FRAMEWORKS.map((f) => f.country))].sort());
+    for (const c of COMPETITORS) {
+      for (const country of OFFERED_COUNTRIES) {
+        const rows = c.differences.filter((d) => !d.country || d.country === country);
+        expect(rows.some((d) => d.topic.startsWith("Price")), `${c.slug} price for ${country}`).toBe(true);
+        expect(rows.some((d) => d.topic.startsWith("Curriculum")), `${c.slug} curriculum for ${country}`).toBe(true);
+        expect(c.faqs.some((q) => q.country === country || !q.country), `${c.slug} questions for ${country}`).toBe(true);
+      }
+    }
+  });
+
+  it("leaves out another country's rows, questions and sources", () => {
+    for (const c of COMPETITORS) {
+      const ca = forCountries(c, ["CA"]);
+      expect(JSON.stringify(ca)).not.toContain("US$");
+      expect([...ca.differences, ...ca.faqs, ...ca.sources].every((x) => x.country !== "US")).toBe(true);
+      const us = forCountries(c, ["US"]);
+      expect(JSON.stringify(us)).not.toContain("C$");
+      expect(JSON.stringify(us)).not.toContain("Canadian App Store");
+    }
+    expect(familiesWord(["CA"])).toBe("Canadian families");
+    expect(familiesWord(["CA", "US"])).toBe("families in Canada and the US");
   });
 
   it("gives every competitor sources and a fair take for both sides", () => {

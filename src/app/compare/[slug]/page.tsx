@@ -3,9 +3,9 @@ import { notFound } from "next/navigation";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
 import { guidePath } from "@/components/site/guides";
-import { COMPETITORS, PRICE_CHECKED, competitorBySlug } from "@/content/compare";
+import { COMPETITORS, OFFERED_COUNTRIES, PRICE_CHECKED, competitorBySlug, familiesWord, forCountries } from "@/content/compare";
 import { APP_NAME } from "@/lib/brand";
-import { FREE_UNITS_PER_COURSE, PRICES, TRIAL_DAYS } from "@/lib/plan";
+import { FREE_UNITS_PER_COURSE, TRIAL_DAYS, pricesFor } from "@/lib/plan";
 import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
 
@@ -21,17 +21,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const c = competitorBySlug((await params).slug);
   if (!c) return {};
   return {
-    title: `${APP_NAME} vs ${c.name} for Canadian families`,
+    title: `${APP_NAME} vs ${c.name} for ${familiesWord()}`,
     description: `${APP_NAME} compared with ${c.name}: price, curriculum match, how progress is shown and what kids see. A fair look at who each is best for.`,
     alternates: { canonical: guidePath.compare(c.slug) },
   };
 }
 
 export default async function ComparePage({ params }: Props) {
-  const c = competitorBySlug((await params).slug);
-  if (!c) notFound();
+  const found = competitorBySlug((await params).slug);
+  if (!found) notFound();
+  const c = forCountries(found);
+  // "$14.99/month or $119.99/year in Canada, US$14.99/month or US$119.99/year in the US".
+  const planPrices = OFFERED_COUNTRIES.map((country) => {
+    const p = pricesFor(country);
+    const where = OFFERED_COUNTRIES.length > 1 ? (country === "US" ? " in the US" : " in Canada") : "";
+    return `${p.month.label} or ${p.year.label}${where}`;
+  }).join(", ");
   const crumbs = [{ label: "Home", href: "/" }, { label: "Compare", href: guidePath.compareIndex() }, { label: `${APP_NAME} vs ${c.name}` }];
-  const title = `${APP_NAME} vs ${c.name} for Canadian families`;
+  const title = `${APP_NAME} vs ${c.name} for ${familiesWord()}`;
 
   return (
     <SitePage>
@@ -87,7 +94,7 @@ export default async function ComparePage({ params }: Props) {
           </table>
         </div>
         <p className="mt-2 font-read text-sm text-ink-soft">
-          {APP_NAME} family plan: {PRICES.month.label} or {PRICES.year.label}, with a {TRIAL_DAYS}-day free trial and the first {FREE_UNITS_PER_COURSE} units of every course free afterwards. Facts about {c.name} are from its public pages, checked {PRICE_CHECKED}. Prices and features change, so please confirm on their site.
+          {APP_NAME} family plan: {planPrices}, with a {TRIAL_DAYS}-day free trial and the first {FREE_UNITS_PER_COURSE} units of every course free afterwards. Facts about {c.name} are from its public pages, checked {PRICE_CHECKED}. Prices and features change, so please confirm on their site.
         </p>
       </section>
 
