@@ -4,7 +4,8 @@ import { GrowthPanel } from "./GrowthPanel";
 import { Milestones } from "./Milestones";
 import { useMemo, useState } from "react";
 import { getFramework } from "@/content/frameworks";
-import { GRADE_LABEL, getSubjectMeta, SUBJECTS } from "@/content/subjects";
+import { getSubjectMeta, SUBJECTS } from "@/content/subjects";
+import { gradeLabel } from "@/lib/gradeLabel";
 import { buildReport } from "@/lib/reports";
 import { eventsFor, useChildSettings, useDerived, useStore } from "@/lib/store";
 import { getTrophy, TIER_STYLE } from "@/lib/trophies";
@@ -36,7 +37,7 @@ export function ReportsPage({ childId }: { childId?: string }) {
     <>
       <PageTitle
         title={`${child.name}'s report`}
-        sub={`${GRADE_LABEL[child.grade]} · ${getFramework(child.framework).curriculumName}`}
+        sub={`${gradeLabel(child.grade, child.framework)} · ${getFramework(child.framework).curriculumName}`}
         action={
           <div className="flex flex-wrap gap-2 print:hidden">
             {[7, 14, 30, 90].map((p) => (
@@ -154,7 +155,7 @@ export function ReportsPage({ childId }: { childId?: string }) {
           ) : (
             <p className="font-read text-ink-soft">Nothing stands out as tricky right now. 🎉 Adventure and Review mode automatically focus on weaker spots.</p>
           )}
-          {report.notStarted > 0 && <p className="mt-3 text-sm text-ink-soft">{report.notStarted} units in {GRADE_LABEL[child.grade]} haven&apos;t been started yet.</p>}
+          {report.notStarted > 0 && <p className="mt-3 text-sm text-ink-soft">{report.notStarted} units in {gradeLabel(child.grade, child.framework)} haven&apos;t been started yet.</p>}
         </Panel>
       </div>
 

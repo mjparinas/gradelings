@@ -2,6 +2,7 @@
 
 import { onColour } from "@/lib/contrast";
 import { useCallback, useEffect, useEffectEvent, useRef, useState, type CSSProperties } from "react";
+import { getFramework } from "@/content/frameworks";
 import { gameTime } from "@/lib/gametime";
 import { celebrate } from "@/lib/juice";
 import { go } from "@/lib/router";
@@ -91,7 +92,7 @@ export function Arcade() {
   const band = useBand();
   const t = gameTime(settings, d);
   const canPlay = t.enabled && t.availableSeconds > 0;
-  const games = arcadeFor({ grade: profile?.grade ?? "k", subjects: settings?.enabledSubjects });
+  const games = arcadeFor({ grade: profile?.grade ?? "k", subjects: settings?.enabledSubjects, framework: profile?.framework });
   return (
     <Page className="gap-5">
       <header className="flex items-center gap-3">
@@ -156,7 +157,7 @@ export function GameScreen({ id }: { id: string }) {
   const d = useDerived();
   const info = getGame(id);
   if (!info || !COMPONENTS[id]) return null;
-  const ctx = { grade: profile.grade, subjects: settings?.enabledSubjects };
+  const ctx = { grade: profile.grade, subjects: settings?.enabledSubjects, framework: profile.framework };
   // A locked game, or one with nothing for this child, opened from an old link.
   if (!gameFits(info, ctx) || !gameUnlocked(info, d.level)) {
     return (
@@ -310,7 +311,7 @@ function GamePlay({ id }: { id: string }) {
           🎮 {mmss(left)}
         </span>
       </header>
-      <Game key={round} grade={profile.grade} band={band} subjects={settings?.enabledSubjects} onScore={onScore} onLevel={onLevel} onOver={onOver} />
+      <Game key={round} grade={profile.grade} band={band} subjects={settings?.enabledSubjects} country={getFramework(profile.framework).country} onScore={onScore} onLevel={onLevel} onOver={onOver} />
     </Page>
   );
 }

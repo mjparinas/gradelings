@@ -3,7 +3,8 @@ import { render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { getFramework } from "@/content/frameworks";
 import { GUIDE_FRAMEWORKS, guidesFor } from "@/content/guides";
-import { GRADE_LABEL, gradeSlug } from "@/content/subjects";
+import { gradeSlug } from "@/content/subjects";
+import { gradeLabel } from "./curriculum";
 import { AssessmentView, CompetenciesView, assessmentMetadata, competenciesMetadata } from "./GuideExtras";
 
 // next.config.ts sets trailingSlash, which next/link reads from this variable.
@@ -52,8 +53,8 @@ describe("provincial assessment guide", () => {
     for (const t of a.prepare) expect(within(prepare).getByText(t)).toBeInTheDocument();
     // Each grade that writes it links to that grade's units in this province; with no fixed grades, the whole curriculum.
     if (a.grades.length) {
-      expect(within(prepare).queryAllByRole("link").map((l) => l.textContent)).toEqual(a.grades.map((g) => GRADE_LABEL[g]));
-      for (const g of a.grades) expect(within(prepare).getByRole("link", { name: GRADE_LABEL[g] })).toHaveAttribute("href", `/curriculum/${f.slug}/${gradeSlug(g)}/`);
+      expect(within(prepare).queryAllByRole("link").map((l) => l.textContent)).toEqual(a.grades.map((g) => gradeLabel(f, g)));
+      for (const g of a.grades) expect(within(prepare).getByRole("link", { name: gradeLabel(f, g) })).toHaveAttribute("href", `/curriculum/${f.slug}/${gradeSlug(g)}/`);
     } else {
       expect(within(prepare).getByRole("link", { name: `every grade in the ${f.curriculumName}` })).toHaveAttribute("href", `/curriculum/${f.slug}/`);
     }

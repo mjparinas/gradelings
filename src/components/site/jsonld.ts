@@ -43,8 +43,8 @@ export function articleJsonLd(a: { headline: string; description: string; path: 
  * The app itself, with the family plan's prices. Used on the home and pricing pages.
  * It is a SoftwareApplication, not a Product: Google's Product snippets expect reviews or
  * ratings, and we have no real ones to give. Never add made-up `review` or `aggregateRating`.
- * Canadian prices only: pages are static and US prices stay hidden until launch, when "USD" can be passed
- * to list the US offers too (each with its region, so the two are never mixed up).
+ * Canadian prices by default; pages pass `siteCurrencies(FRAMEWORKS)` so the US offers are listed too once a US
+ * curriculum is offered (each with its region, so the two are never mixed up).
  */
 export function appJsonLd(currencies: Currency[] = ["CAD"]) {
   const both = currencies.length > 1;

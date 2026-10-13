@@ -3,10 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
-import { curriculumPath, resolve } from "@/components/site/curriculum";
+import { curriculumPath, resolve, gradeLabel, say } from "@/components/site/curriculum";
 import { guidePath } from "@/components/site/guides";
 import { guidesFor } from "@/content/guides";
-import { GRADE_LABEL } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
@@ -91,7 +90,7 @@ export async function CompetenciesView({ params }: { params: Params }) {
         <Link href={guidePath.hub(f)} className="font-semibold text-[#2f6fd6] underline">
           browse all {f.shortName} parent guides
         </Link>
-        . {APP_NAME} practises subject skills; {g.closing}
+        . {APP_NAME} {say(f, "practises")} subject skills; {g.closing}
       </p>
     </SitePage>
   );
@@ -103,7 +102,10 @@ export async function assessmentMetadata(params: Params): Promise<Metadata> {
   const a = guidesFor(r.framework.id).assessment;
   return {
     // Some provinces and territories list no fixed assessment grades.
-    title: `The ${a.short} explained: ${a.name} for ${a.grades.length ? `Grade ${a.grades.join(" and Grade ")}` : r.framework.shortName} parents`,
+    title:
+      r.framework.country === "US"
+        ? `${a.name}, explained for ${r.framework.shortName} parents`
+        : `The ${a.short} explained: ${a.name} for ${a.grades.length ? `Grade ${a.grades.join(" and Grade ")}` : r.framework.shortName} parents`,
     description: `What the ${a.name} is, who takes it, what it covers, how results are described, and how to help your child feel ready. A plain-language guide for ${r.framework.shortName} parents.`,
     alternates: { canonical: guidePath.assessment(r.framework) },
   };
@@ -153,12 +155,12 @@ export async function AssessmentView({ params }: { params: Params }) {
         </ul>
         {a.grades.length > 0 ? (
           <p className="mt-3 font-read text-lg">
-            Practise the grade-level skills with {APP_NAME}:
+            {say(f, "Practise")} the grade-level skills with {APP_NAME}:
             {a.grades.map((g, i) => (
               <span key={g}>
-                {i === 0 ? " " : " and "}
+                {i === 0 ? " " : i === a.grades.length - 1 ? " and " : ", "}
                 <Link href={curriculumPath.grade(f, g)} className="font-semibold text-[#2f6fd6] underline">
-                  {GRADE_LABEL[g]}
+                  {gradeLabel(f, g)}
                 </Link>
               </span>
             ))}
@@ -166,7 +168,7 @@ export async function AssessmentView({ params }: { params: Params }) {
           </p>
         ) : (
           <p className="mt-3 font-read text-lg">
-            Practise the grade-level skills with {APP_NAME}:{" "}
+            {say(f, "Practise")} the grade-level skills with {APP_NAME}:{" "}
             <Link href={curriculumPath.framework(f)} className="font-semibold text-[#2f6fd6] underline">
               every grade in the {f.curriculumName}
             </Link>

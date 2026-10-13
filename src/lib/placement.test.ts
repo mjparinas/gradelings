@@ -102,6 +102,9 @@ describe("placement", () => {
     expect(placementSentence(result("5"), "Maya", "3")).toBe("Maya handled Grade 5 work, which is ahead of Grade 3.");
     expect(placementSentence(result("1"), "Maya", "3")).toBe("Maya found Grade 3 work tricky, and is most comfortable around Grade 1.");
     expect(placementSentence(result("k"), "Maya", "1")).toBe("Maya found Grade 1 work tricky, and is most comfortable around Kindergarten.");
+    // A family on a US curriculum reads US grade names.
+    expect(placementSentence(result("5"), "Maya", "3", "us-wa")).toBe("Maya handled 5th grade work, which is ahead of 3rd grade.");
+    expect(placementSentence(result("3"), "Maya", "3", "ca-on")).toBe("Maya is working at a Grade 3 level in this subject.");
   });
 
   it("stores a placement as an event and keeps the latest one per subject", () => {

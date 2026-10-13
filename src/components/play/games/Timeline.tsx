@@ -24,9 +24,9 @@ function deal(set: OrderSet): Card[] {
   return [...cards].reverse();
 }
 
-export function Timeline({ grade, band, onScore, onLevel, onOver }: GameProps) {
+export function Timeline({ grade, band, country, onScore, onLevel, onOver }: GameProps) {
   const run = useRun({ onScore, onLevel, onOver }, 3);
-  const [set, setSet] = useState<OrderSet>(() => orderSet(grade));
+  const [set, setSet] = useState<OrderSet>(() => orderSet(grade, country));
   const [cards, setCards] = useState<Card[]>(() => deal(set));
   const [placed, setPlaced] = useState(0);
   const [n, setN] = useState(0);
@@ -41,7 +41,7 @@ export function Timeline({ grade, band, onScore, onLevel, onOver }: GameProps) {
   }, [set]);
 
   const next = () => {
-    const s = orderSet(grade);
+    const s = orderSet(grade, country);
     setSet(s);
     setCards(deal(s));
     setPlaced(0);

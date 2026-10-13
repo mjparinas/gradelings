@@ -5,8 +5,7 @@ import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
 // the Common Core, required from 2027–28), the K–12 Science Learning Standards (the Next Generation Science
 // Standards) and the 2019 social studies standards. Washington has no statewide report card, so the four steps below
 // are a plain practice scale like Alberta's. Sources and the checking record are in docs/research/washington/.
-// Washington is not offered to families yet: it sits in UPCOMING_FRAMEWORKS until its content and the US launch
-// work are done (see the Washington plan).
+// Washington launched in October 2026 as the first US state (FRAMEWORKS in ../frameworks.ts).
 
 const LEVELS: ProficiencyLevel[] = [
   {

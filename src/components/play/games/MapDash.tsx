@@ -8,9 +8,9 @@ import type { GameProps } from "./types";
 
 // Map Dash: a question at the top, a map below. Tap the right place before the timer runs out.
 
-export function MapDash({ grade, band, onScore, onLevel, onOver }: GameProps) {
+export function MapDash({ grade, band, country = "CA", onScore, onLevel, onOver }: GameProps) {
   const run = useRun({ onScore, onLevel, onOver });
-  const [q, setQ] = useState<MapQuestion>(() => mapQuestion(grade));
+  const [q, setQ] = useState<MapQuestion>(() => mapQuestion(grade, country));
   const [n, setN] = useState(0);
   const [shown, setShown] = useState<{ id: string; ok: boolean } | null>(null);
   const [note, setNote] = useState("");
@@ -23,7 +23,7 @@ export function MapDash({ grade, band, onScore, onLevel, onOver }: GameProps) {
 
   const next = () => {
     setShown(null);
-    setQ(mapQuestion(grade));
+    setQ(mapQuestion(grade, country));
     setN((x) => x + 1);
   };
 
@@ -80,7 +80,9 @@ export function MapDash({ grade, band, onScore, onLevel, onOver }: GameProps) {
           const row = Math.floor(i / board.cols);
           const t = board.tiles.find((x) => x.col === col && x.row === row);
           if (!t) return <span key={i} aria-hidden="true" />;
-          const ocean = !town && !!t.emoji;
+          const ocean = !town && !!t.water;
+          // Region and country names ("Northeast", "Mexico") are longer than a postal abbreviation.
+          const word = !town && !ocean && t.label.length > 2;
           const state = shown?.id === t.id ? (shown.ok ? "right" : "wrong") : undefined;
           return (
             <button
@@ -107,14 +109,14 @@ export function MapDash({ grade, band, onScore, onLevel, onOver }: GameProps) {
               }`}
             >
               {t.emoji && <span className={town ? "text-4xl sm:text-5xl short:text-xl" : "text-xl sm:text-2xl short:hidden"} aria-hidden="true">{t.emoji}</span>}
-              <span className={town ? "font-read text-sm sm:text-base narrow:text-xs" : ocean ? "text-[10px] leading-tight sm:text-xs" : "text-lg sm:text-2xl"}>{t.label}</span>
-              {!town && !ocean && <span className="hidden text-[11px] leading-tight font-semibold opacity-80 md:block short:hidden">{t.name}</span>}
+              <span className={town ? "font-read text-sm sm:text-base narrow:text-xs" : ocean ? "text-[10px] leading-tight sm:text-xs" : word ? "text-[11px] leading-tight break-words sm:text-base" : "text-lg sm:text-2xl"}>{t.label}</span>
+              {!town && !ocean && !word && <span className="hidden text-[11px] leading-tight font-semibold opacity-80 md:block short:hidden">{t.name}</span>}
             </button>
           );
         })}
       </div>
       <p className="min-h-7 font-read text-lg text-ink-soft short:text-base" aria-live="polite">
-        {note || (town ? "Tap a place on the map." : "Tap a square on the map of Canada.")}
+        {note || (town ? "Tap a place on the map." : board.kind === "usa" ? "Tap a square on the map of the United States." : "Tap a square on the map of Canada.")}
       </p>
     </div>
   );

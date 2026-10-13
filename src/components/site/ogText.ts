@@ -1,7 +1,10 @@
-import { coursesFor, curriculumPath, frameworkBySlug, resolve, subjectSeoTitle, unitKey } from "@/components/site/curriculum";
+import { coursesFor, curriculumPath, frameworkBySlug, gradeLabel, gradeSpan, resolve, subjectSeoTitle, unitKey } from "@/components/site/curriculum";
+import type { Framework } from "@/content/frameworks";
+import { localeOf } from "@/content/locale";
 import { APP_NAME } from "@/lib/brand";
 import { LEVEL_WORDS, countTitle } from "@/lib/milestoneShare";
-import { GRADE_LABEL, GRADE_ORDER, getSubjectMeta } from "@/content/subjects";
+import { getSubjectMeta } from "@/content/subjects";
+import type { GradeId } from "@/content/types";
 import { hashSeed, withSeed } from "@/content/random";
 import type { Question } from "@/content/types";
 import type { OgCardText, OgQuestion } from "./ogCard";
@@ -14,23 +17,26 @@ type Params = { framework: string; grade?: string; subject?: string; unit?: stri
 
 const subjectsLine = (subjects: string[]) => subjects.map((s) => subjectSeoTitle(s as never)).join(" · ");
 
-function gradeRange(grades: readonly string[]): string {
-  const sorted = GRADE_ORDER.filter((g) => grades.includes(g));
-  return `${GRADE_LABEL[sorted[0]]} to ${GRADE_LABEL[sorted[sorted.length - 1]]}`;
+/** "Can your Grade 4 solve this?" in Canada, "Can your 4th grader solve this?" in the US. */
+function gradeChild(f: Framework, grade: GradeId): string {
+  if (grade === "k") return "Kindergartner";
+  return localeOf(f) === "en-US" ? `${gradeLabel(f, grade)}r` : gradeLabel(f, grade);
 }
+
+const practise = (f: Framework) => (localeOf(f) === "en-US" ? "practice" : "practise");
 
 export function curriculumCard(params: Params): OgCardText | undefined {
   const r = resolve(params);
   if (!r) return undefined;
   const { framework: f } = r;
-  if (!params.grade) return { kicker: `${f.name} curriculum`, title: `${gradeRange(f.grades)} practice`, line: "Math · Language Arts · Science · Social Studies · French" };
+  if (!params.grade) return { kicker: `${f.name} curriculum`, title: `${gradeSpan(f, true)} practice`, line: `Math · Language Arts · Science · Social Studies${f.subjects.some((s) => s === "immersion" || s === "core-french") ? " · French" : ""}` };
   const grade = r.grade;
   if (!r.course) {
-    return { kicker: `${f.name} curriculum`, title: `${GRADE_LABEL[grade]} practice`, line: subjectsLine(coursesFor(f, grade).map((c) => c.subject)) };
+    return { kicker: `${f.name} curriculum`, title: `${gradeLabel(f, grade)} practice`, line: subjectsLine(coursesFor(f, grade).map((c) => c.subject)) };
   }
   return {
-    kicker: `${f.name} curriculum · ${GRADE_LABEL[grade]}`,
-    title: `${GRADE_LABEL[grade]} ${subjectSeoTitle(r.course.subject)}`,
+    kicker: `${f.name} curriculum · ${gradeLabel(f, grade)}`,
+    title: `${gradeLabel(f, grade)} ${subjectSeoTitle(r.course.subject)}`,
     line: r.course.units.slice(0, 3).map((u) => u.title).join(" · "),
     colour: getSubjectMeta(r.course.subject).colour,
     critter: critterFor(r.course.subject),
@@ -41,12 +47,12 @@ export function guideCard(params: Params): OgCardText | undefined {
   const r = resolve(params);
   if (!r) return undefined;
   const { framework: f } = r;
-  if (!params.grade) return { kicker: `Parent guides · ${f.name}`, title: "Help your child at home", line: `${gradeRange(f.grades)}, in the words of the report card` };
+  if (!params.grade) return { kicker: `Parent guides · ${f.name}`, title: "Help your child at home", line: `${gradeSpan(f, true)}, in the words of the report card` };
   const grade = r.grade;
-  if (!r.course) return { kicker: `Parent guide · ${f.name}`, title: `${GRADE_LABEL[grade]}: what your child learns`, line: "And how to help at home, in a few minutes a day" };
+  if (!r.course) return { kicker: `Parent guide · ${f.name}`, title: `${gradeLabel(f, grade)}: what your child learns`, line: "And how to help at home, in a few minutes a day" };
   return {
-    kicker: `Parent guide · ${f.name} · ${GRADE_LABEL[grade]}`,
-    title: `${GRADE_LABEL[grade]} ${subjectSeoTitle(r.course.subject)} help at home`,
+    kicker: `Parent guide · ${f.name} · ${gradeLabel(f, grade)}`,
+    title: `${gradeLabel(f, grade)} ${subjectSeoTitle(r.course.subject)} help at home`,
     line: "Easy tips, a printable worksheet and free practice",
     colour: getSubjectMeta(r.course.subject).colour,
     critter: critterFor(r.course.subject),
@@ -75,13 +81,13 @@ export function cardQuestion(q: Question): OgQuestion | undefined {
   return undefined;
 }
 
-/** "Can your Grade 4 solve this?" with one of the unit's own questions, seeded like the unit page. */
+/** "Can your Grade 4 solve this?" ("4th grader" in the US) with one of the unit's own questions, seeded like the unit page. */
 export function unitCard(params: Params): OgCardText | undefined {
   const r = resolve(params);
   if (!r?.course || !r.unit || !r.unit.standards[r.framework.id]) return undefined;
   const { framework: f, grade, course, unit } = r;
   const base = {
-    kicker: `${f.shortName} · ${GRADE_LABEL[grade]} ${subjectSeoTitle(course.subject)} · ${unit.title}`,
+    kicker: `${f.shortName} · ${gradeLabel(f, grade)} ${subjectSeoTitle(course.subject)} · ${unit.title}`,
     colour: getSubjectMeta(course.subject).colour,
     critter: critterFor(course.subject),
   };
@@ -90,10 +96,10 @@ export function unitCard(params: Params): OgCardText | undefined {
     const qs = withSeed(hashSeed(`${key}:card:${difficulty}`), () => unit.generate({ difficulty }));
     for (const q of qs) {
       const question = cardQuestion(q);
-      if (question) return { ...base, title: grade === "k" ? "Can your Kindergartner solve this?" : `Can your ${GRADE_LABEL[grade]} solve this?`, question };
+      if (question) return { ...base, title: `Can your ${gradeChild(f, grade)} solve this?`, question };
     }
   }
-  return { ...base, kicker: `${f.name} curriculum · ${GRADE_LABEL[grade]}`, title: unit.title, line: `${GRADE_LABEL[grade]} ${subjectSeoTitle(course.subject)} practice` };
+  return { ...base, kicker: `${f.name} curriculum · ${gradeLabel(f, grade)}`, title: unit.title, line: `${gradeLabel(f, grade)} ${subjectSeoTitle(course.subject)} practice` };
 }
 
 /** The tall Pinterest card for a printable worksheet. */
@@ -102,9 +108,9 @@ export function worksheetCard(params: Params): OgCardText | undefined {
   if (!r?.course) return undefined;
   const { framework: f, grade, course } = r;
   return {
-    kicker: `${f.name} · ${GRADE_LABEL[grade]}`,
-    title: `${GRADE_LABEL[grade]} ${subjectSeoTitle(course.subject)} worksheet`,
-    line: "Print it, try it, then practise free",
+    kicker: `${f.name} · ${gradeLabel(f, grade)}`,
+    title: `${gradeLabel(f, grade)} ${subjectSeoTitle(course.subject)} worksheet`,
+    line: `Print it, try it, then ${practise(f)} free`,
     colour: getSubjectMeta(course.subject).colour,
     critter: critterFor(course.subject),
     items: course.units.slice(0, 4).map((u) => u.title),
@@ -119,8 +125,8 @@ export function gradeSheetsCard(params: { framework: string; grade: string }): O
   const courses = coursesFor(f, grade);
   if (!courses.length) return undefined;
   return {
-    kicker: `${f.name} · ${GRADE_LABEL[grade]}`,
-    title: `${GRADE_LABEL[grade]} printable worksheets`,
+    kicker: `${f.name} · ${gradeLabel(f, grade)}`,
+    title: `${gradeLabel(f, grade)} printable worksheets`,
     line: `${courses.length} free sheets with answer keys`,
     items: courses.map((c) => subjectSeoTitle(c.subject)),
     itemColours: courses.map((c) => getSubjectMeta(c.subject).colour),
@@ -141,13 +147,13 @@ export function unitMilestoneCard(params: { framework: string; grade: string; su
   if (!r?.course || !r.unit || !r.unit.standards[r.framework.id]) return undefined;
   const { framework: f, grade, course, unit } = r;
   return {
-    kicker: `A milestone · ${GRADE_LABEL[grade]} ${subjectSeoTitle(course.subject)}`,
+    kicker: `A milestone · ${gradeLabel(f, grade)} ${subjectSeoTitle(course.subject)}`,
     title: `${words.verb} in ${unit.title}!`,
     line: `Practice in ${APP_NAME}, matched to the ${f.curriculumName}`,
     colour: getSubjectMeta(course.subject).colour,
     critter: critterFor(course.subject),
     badge: words.badge,
-    more: { href: curriculumPath.unit(f, grade, course.subject, unit.id), label: `Try ${GRADE_LABEL[grade]} ${unit.title} questions` },
+    more: { href: curriculumPath.unit(f, grade, course.subject, unit.id), label: `Try ${gradeLabel(f, grade)} ${unit.title} questions` },
   };
 }
 

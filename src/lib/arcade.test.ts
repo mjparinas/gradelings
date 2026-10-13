@@ -20,6 +20,9 @@ describe("the arcade's games", () => {
     expect(gameFits(getGame("tower")!, { grade: "9" })).toBe(true);
     expect(gameFits(getGame("bridge")!, { grade: "3", subjects: ["math"] })).toBe(false);
     expect(gameFits(getGame("bridge")!, { grade: "3", subjects: ["core-french"] })).toBe(true);
+    // French left on from a move to a curriculum without French (Washington) doesn't show Word Bridge.
+    expect(gameFits(getGame("bridge")!, { grade: "5", subjects: ["core-french"], framework: "us-wa" })).toBe(false);
+    expect(gameFits(getGame("bridge")!, { grade: "5", subjects: ["core-french"], framework: "ca-bc" })).toBe(true);
     expect(hasFrenchOn(["immersion"])).toBe(true);
     expect(hasFrenchOn()).toBe(false);
     expect(arcadeFor({ grade: "k" }).map((g) => g.id)).toEqual(["munchers", "ninja", "catch", "bubbles", "memory", "map", "timeline"]);

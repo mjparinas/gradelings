@@ -1,5 +1,6 @@
 import { pick, randInt, sample, shuffle } from "@/content/random";
 import type { GradeId } from "@/content/types";
+import type { Country } from "./types";
 
 // Learning content for the arcade, adapted to each grade.
 
@@ -481,7 +482,29 @@ export interface Pair {
   b: string;
 }
 
-export function memoryPairs(grade: GradeId, count: number): Pair[] {
+/** Grades 4 and 5 match places to capitals: provinces in Canada, states in the US. */
+const PROVINCE_CAPITALS: Pair[] = [
+  { a: "British Columbia", b: "Victoria" },
+  { a: "Alberta", b: "Edmonton" },
+  { a: "Saskatchewan", b: "Regina" },
+  { a: "Manitoba", b: "Winnipeg" },
+  { a: "Ontario", b: "Toronto" },
+  { a: "Quebec", b: "Quebec City" },
+  { a: "Nova Scotia", b: "Halifax" },
+  { a: "Nunavut", b: "Iqaluit" },
+];
+const STATE_CAPITALS: Pair[] = [
+  { a: "Washington", b: "Olympia" },
+  { a: "Oregon", b: "Salem" },
+  { a: "California", b: "Sacramento" },
+  { a: "Idaho", b: "Boise" },
+  { a: "Texas", b: "Austin" },
+  { a: "New York", b: "Albany" },
+  { a: "Florida", b: "Tallahassee" },
+  { a: "Alaska", b: "Juneau" },
+];
+
+export function memoryPairs(grade: GradeId, count: number, country: Country = "CA"): Pair[] {
   const g = G[grade];
   const sets: Pair[][] =
     g <= 1
@@ -522,16 +545,7 @@ export function memoryPairs(grade: GradeId, count: number): Pair[] {
           ]
         : g <= 5
           ? [
-              [
-                { a: "British Columbia", b: "Victoria" },
-                { a: "Alberta", b: "Edmonton" },
-                { a: "Saskatchewan", b: "Regina" },
-                { a: "Manitoba", b: "Winnipeg" },
-                { a: "Ontario", b: "Toronto" },
-                { a: "Quebec", b: "Quebec City" },
-                { a: "Nova Scotia", b: "Halifax" },
-                { a: "Nunavut", b: "Iqaluit" },
-              ],
+              country === "US" ? STATE_CAPITALS : PROVINCE_CAPITALS,
               [
                 { a: "7 × 8", b: "56" },
                 { a: "6 × 9", b: "54" },
@@ -543,7 +557,7 @@ export function memoryPairs(grade: GradeId, count: number): Pair[] {
                 { a: "9 × 9", b: "81" },
               ],
             ]
-          : olderMemorySets(g);
+          : olderMemorySets(g, country === "US" ? US_GOVERNMENT : GOVERNMENT);
   return sample(pick(sets), count);
 }
 
@@ -587,6 +601,16 @@ const GOVERNMENT: Pair[] = [
   { a: "Supreme Court", b: "Canada's highest court" },
   { a: "Charter", b: "rights and freedoms" },
 ];
+const US_GOVERNMENT: Pair[] = [
+  { a: "President", b: "leads the executive branch" },
+  { a: "Governor", b: "leads a state's government" },
+  { a: "Mayor", b: "leads a city or town council" },
+  { a: "Congress", b: "makes federal laws" },
+  { a: "Senate", b: "two senators per state" },
+  { a: "House of Representatives", b: "seats by population" },
+  { a: "Supreme Court", b: "the nation's highest court" },
+  { a: "Bill of Rights", b: "the first ten amendments" },
+];
 const INTEGERS: Pair[] = [
   { a: "−3 + 5", b: "2" },
   { a: "−4 × 3", b: "−12" },
@@ -629,11 +653,11 @@ const ROOTS_SQUARE: Pair[] = [
 ];
 
 /** Grades 6 to 9: a few sets per grade, so older kids get variety. */
-function olderMemorySets(g: number): Pair[][] {
-  if (g === 6) return [PERCENTS, CIVILIZATIONS, ROOTS, GOVERNMENT];
+function olderMemorySets(g: number, government: Pair[]): Pair[][] {
+  if (g === 6) return [PERCENTS, CIVILIZATIONS, ROOTS, government];
   if (g === 7) return [PERCENTS, ROOTS, INTEGERS, FORMULAS];
   if (g === 8) return [EXPONENTS, ROOTS_SQUARE, FORMULAS, INTEGERS];
-  return [EXPONENTS, ROOTS_SQUARE, FORMULAS, GOVERNMENT];
+  return [EXPONENTS, ROOTS_SQUARE, FORMULAS, government];
 }
 
 export function shuffled<T>(items: T[]): T[] {

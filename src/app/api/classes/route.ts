@@ -53,7 +53,7 @@ export async function POST(req: Request) {
   const name = typeof body?.name === "string" ? body.name.replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim().slice(0, 60) : "";
   const grade = String(body?.grade ?? "");
   const framework = body?.framework === undefined ? "ca-bc" : body.framework;
-  if (!isFramework(framework)) return error(400, "Choose a province.");
+  if (!isFramework(framework)) return error(400, "Choose a province or state.");
   if (!name) return error(400, "Give the class a name.");
   if (!(GRADE_ORDER as string[]).includes(grade)) return error(400, "Choose a grade.");
   const mine = await query<{ n: number }>("SELECT COUNT(*) AS n FROM classes WHERE owner_parent_id = ? AND closed_at IS NULL", [session.parentId]);

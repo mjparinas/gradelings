@@ -10,11 +10,13 @@ import type { GameProps } from "./types";
 // Coin Shop: tap coins onto the counter to pay (or give change), then press Pay.
 
 const LOOK: Record<string, { bg: string; ring: string; size: string; text: string }> = {
+  penny: { bg: "#e0a070", ring: "#a0582a", size: "h-12 w-12 narrow:h-10 narrow:w-10 short:h-9 short:w-9", text: "1¢" },
   nickel: { bg: "#d7dbe0", ring: "#8a939e", size: "h-14 w-14 narrow:h-11 narrow:w-11 short:h-10 short:w-10", text: "5¢" },
   dime: { bg: "#e4e7eb", ring: "#9aa3ad", size: "h-12 w-12 narrow:h-10 narrow:w-10 short:h-9 short:w-9", text: "10¢" },
   quarter: { bg: "#d0d5db", ring: "#7d8792", size: "h-16 w-16 narrow:h-12 narrow:w-12 short:h-11 short:w-11", text: "25¢" },
   loonie: { bg: "#e9c45a", ring: "#b48a16", size: "h-16 w-16 narrow:h-12 narrow:w-12 short:h-11 short:w-11", text: "$1" },
   toonie: { bg: "#e9c45a", ring: "#9aa3ad", size: "h-[4.25rem] w-[4.25rem] narrow:h-13 narrow:w-13 short:h-12 short:w-12", text: "$2" },
+  one: { bg: "#b9dfb0", ring: "#4f8a4a", size: "h-12 w-20 narrow:h-10 narrow:w-16 short:h-9 short:w-14", text: "$1" },
   five: { bg: "#8fc3f0", ring: "#3c7fc0", size: "h-12 w-20 narrow:h-10 narrow:w-16 short:h-9 short:w-14", text: "$5" },
 };
 
@@ -33,9 +35,10 @@ function Piece({ m, small }: { m: Money; small?: boolean }) {
   );
 }
 
-export function CoinShop({ grade, band, onScore, onLevel, onOver }: GameProps) {
+export function CoinShop({ grade, band, country = "CA", onScore, onLevel, onOver }: GameProps) {
+  const currency = country === "US" ? "USD" : "CAD";
   const run = useRun({ onScore, onLevel, onOver }, 5);
-  const [order, setOrder] = useState<ShopOrder>(() => shopOrder(grade));
+  const [order, setOrder] = useState<ShopOrder>(() => shopOrder(grade, currency));
   const [given, setGiven] = useState<Money[]>([]);
   const [n, setN] = useState(0);
   const [note, setNote] = useState("");
@@ -49,7 +52,7 @@ export function CoinShop({ grade, band, onScore, onLevel, onOver }: GameProps) {
   }, [order]);
 
   const next = () => {
-    setOrder(shopOrder(grade));
+    setOrder(shopOrder(grade, currency));
     setGiven([]);
     setDone(false);
     setN((x) => x + 1);

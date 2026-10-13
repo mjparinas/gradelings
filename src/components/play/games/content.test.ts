@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { withSeed } from "@/content/random";
 import type { GradeId } from "@/content/types";
+import { canadianWords } from "@/content/locale";
 import { bubbleRound, catchRounds, memoryPairs, muncherRules, ninjaRound, shuffled, type MuncherRule } from "./content";
 
 const GRADES: GradeId[] = ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -441,6 +442,39 @@ describe("Memory Match", () => {
         expect(sawOpposite, grade).toBe(true);
       }
     }
+  });
+});
+
+describe("Memory Match in the United States", () => {
+  it("matches states to capitals and US government, never Canada's", () => {
+    const FACTS: Record<string, string> = {
+      Washington: "Olympia",
+      Oregon: "Salem",
+      Texas: "Austin",
+      "New York": "Albany",
+      Governor: "leads a state's government",
+      President: "leads the executive branch",
+      "Bill of Rights": "the first ten amendments",
+    };
+    const seen = new Set<string>();
+    for (const grade of GRADES) {
+      for (let seed = 1; seed <= 40; seed++) {
+        const pairs = withSeed(seed, () => memoryPairs(grade, 8, "US"));
+        for (const { a, b } of pairs) {
+          expect(canadianWords(`${a} ${b}`), a).toEqual([]);
+          if (FACTS[a]) {
+            expect(b, a).toBe(FACTS[a]);
+            seen.add(a);
+          }
+        }
+      }
+    }
+    expect(seen).toContain("Washington");
+    expect(seen).toContain("Governor");
+    // Canadian children keep provinces and Canada's government.
+    const ca = new Set<string>();
+    for (let seed = 1; seed <= 20; seed++) for (const p of withSeed(seed, () => memoryPairs("4", 8, "CA"))) ca.add(p.a);
+    expect(ca).toContain("British Columbia");
   });
 });
 

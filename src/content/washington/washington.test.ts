@@ -26,15 +26,15 @@ const sampleOf = (generate: (o: { difficulty: 1 | 2 | 3 }) => Question[]) =>
   [1, 2, 3].flatMap((seed) => ([1, 2, 3] as const).flatMap((difficulty) => withSeed(seed * 101 + difficulty, () => generate({ difficulty }))));
 
 describe("Washington", () => {
-  it("is a US framework in US English, not offered to families yet", () => {
+  it("is a US framework in US English, offered to families", () => {
     const wa = getFramework("washington");
     expect(wa.id).toBe("us-wa");
     expect(wa.country).toBe("US");
     expect(localeOf(wa)).toBe("en-US");
     expect(wa.subjects).toEqual(["math", "language", "science", "social"]);
     expect(wa.scoringFor("4").levels.map((l) => l.label)).toEqual(["Beginning", "Approaching", "Meeting", "Exceeding"]);
-    expect(UPCOMING_FRAMEWORKS).toContain(wa);
-    expect(FRAMEWORKS).not.toContain(wa);
+    expect(FRAMEWORKS).toContain(wa);
+    expect(UPCOMING_FRAMEWORKS).not.toContain(wa);
   });
 
   it("has a focus list for every course", () => {
@@ -84,9 +84,10 @@ describe("Washington", () => {
     }
   });
 
-  it("keeps Washington-only units for Washington alone", () => {
+  it("keeps Washington-only units for US states alone", () => {
+    // Other states may adopt them (Oregon does); no Canadian framework ever gets them.
     const own = washington.filter(({ u }) => u.id.startsWith("wa-"));
-    for (const { u, key } of own) expect(Object.keys(u.standards), key).toEqual(["us-wa"]);
+    for (const { u, key } of own) for (const f of Object.keys(u.standards)) expect(f, key).toMatch(/^us-/);
   });
 
   it("shares only BC units; other provinces' units are adopted", () => {

@@ -30,7 +30,7 @@ vi.mock("@/lib/account", () => ({
   redeemCode: vi.fn(),
 }));
 
-import { SubscriptionPage } from "./Subscription";
+import { includedFor, SubscriptionPage } from "./Subscription";
 
 const billing = { stripe: true, dev: false };
 
@@ -183,6 +183,14 @@ describe("SubscriptionPage", () => {
     expect(screen.queryByRole("button", { name: /Subscribe yearly/ })).not.toBeInTheDocument();
     state.android = false;
     state.ios = false;
+  });
+});
+
+describe("includedFor", () => {
+  it("says the grade range the US way for a US family", () => {
+    expect(includedFor("US")[0]).toBe("Every unit in every subject, kindergarten through 9th grade");
+    expect(includedFor("CA")[0]).toBe("Every unit in every subject, Kindergarten to Grade 9");
+    expect(includedFor(undefined)[0]).toBe(includedFor("CA")[0]);
   });
 });
 

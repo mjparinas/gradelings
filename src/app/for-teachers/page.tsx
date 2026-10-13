@@ -3,13 +3,16 @@ import Link from "next/link";
 import { breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { TeacherCta } from "@/components/site/TeacherCta";
+import { regionList, regionWord } from "@/components/site/provinces";
 import { TEACHER_FRAMEWORKS, TEACHER_SIGNUP, teacherPath } from "@/components/site/teachers";
 import { APP_NAME } from "@/lib/brand";
 import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
 
 const curricula = TEACHER_FRAMEWORKS.map((f) => f.curriculumName).join(" or ");
-const regions = TEACHER_FRAMEWORKS.map((f) => f.region).join(" and ");
+const regions = regionList(TEACHER_FRAMEWORKS);
+/** "province", or "province or state" once a US state can have classes. */
+const region = regionWord(TEACHER_FRAMEWORKS);
 
 export const metadata: Metadata = {
   title: `${APP_NAME} for teachers: classroom practice matched to the ${curricula}`,
@@ -20,7 +23,7 @@ export const metadata: Metadata = {
 const STEPS = [
   { title: "Create a class", body: "Sign up as a teacher, name your class and choose its grade. You get a short join code." },
   { title: "Families join", body: "A parent enters the code under Children → Join a class. Nothing about a child is shared until they do, and they can leave at any time." },
-  { title: "Assign units", body: `Choose your province when you create the class, then pick units from its curriculum. Assigned units appear as “From your teacher” on each child's home screen, even offline.` },
+  { title: "Assign units", body: `Choose your ${region} when you create the class, then pick units from its curriculum. Assigned units appear as “From your teacher” on each child's home screen, even offline.` },
   { title: "See practice results", body: "See each linked student's level, accuracy and attempts on the units you assigned. It shows practice, not a report-card mark." },
 ];
 
@@ -29,7 +32,7 @@ const FAQS = [
   { q: "What can I see about my students?", a: "Only what a parent has chosen to share by linking their child to your class: first name, avatar, grade, and level, accuracy and attempts on the units you assigned. Nothing else." },
   { q: "Do I have to enter students myself?", a: "No. Parents link their own child with your join code, so you never type in student details, and there are no student passwords to manage." },
   { q: "Is this a report-card mark?", a: `No. ${APP_NAME} shows how a student is practising. The teacher decides proficiency, as on the report card.` },
-  { q: "Which curriculum does it follow?", a: `Each class follows one province: ${regions}. Units are matched to the ${curricula}, from Kindergarten to Grade 9. Other provinces are on the way.` },
+  { q: "Which curriculum does it follow?", a: `Each class follows one ${region}: ${regions}. Units are matched to the ${curricula}, from Kindergarten to Grade 9. Other provinces and states are on the way.` },
   { q: "Are there ads?", a: "No ads and no selling of data. Kids cannot buy anything." },
 ];
 

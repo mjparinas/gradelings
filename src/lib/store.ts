@@ -302,7 +302,7 @@ export const useStore = create<State>()((set, get) => ({
       const grew = grown.stage > growthStage(before.level).stage;
       // A new arcade game can open at this level (only said when games are on for this child).
       const settings = state.settings[profile.id];
-      const opened = settings?.gamesEnabled === false ? [] : gamesOpenedBetween(before.level, after.level, { grade: profile.grade, subjects: settings?.enabledSubjects });
+      const opened = settings?.gamesEnabled === false ? [] : gamesOpenedBetween(before.level, after.level, { grade: profile.grade, subjects: settings?.enabledSubjects, framework: profile.framework });
       const unlock = opened.length ? `New game unlocked: ${opened.map((g) => g.title).join(" and ")}!` : "";
       toasts.unshift({
         kind: "level",

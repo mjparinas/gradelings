@@ -1,6 +1,7 @@
 "use client";
 
-import { GRADE_LABEL, getSubjectMeta } from "@/content/subjects";
+import { getSubjectMeta } from "@/content/subjects";
+import { gradeLabel } from "@/lib/gradeLabel";
 import { getFramework } from "@/content/frameworks";
 import { dayKey, type Profile } from "@/lib/model";
 import { subjectSummaries } from "@/lib/proficiency";
@@ -27,7 +28,7 @@ function ChildCard({ p }: { p: Profile }) {
         <div className="flex-1">
           <p className="text-xl font-bold">{p.name}</p>
           <p className="text-sm text-ink-soft">
-            {GRADE_LABEL[p.grade]} · Level {d.level} · 🔥 {d.streak.current}-day streak
+            {gradeLabel(p.grade, p.framework)} · Level {d.level} · 🔥 {d.streak.current}-day streak
           </p>
         </div>
         <a href={`#/reports/${p.id}`} className="rounded-xl bg-[#253047] px-3 py-2 text-sm font-bold text-white">

@@ -3,10 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
-import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle } from "@/components/site/curriculum";
+import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, gradeLabel, say } from "@/components/site/curriculum";
 import { guidePath } from "@/components/site/guides";
 import { guidesFor, GUIDE_FRAMEWORKS } from "@/content/guides";
-import { GRADE_LABEL, getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
+import { getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { TRIAL_DAYS } from "@/lib/plan";
 import { Disclosure } from "@/components/Disclosure";
@@ -32,8 +32,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!r) return {};
   const { framework: f, grade } = r;
   return {
-    title: `What your child learns in ${GRADE_LABEL[grade]} in ${f.shortName}: a parent's guide`,
-    description: `${GRADE_LABEL[grade]} in ${f.name}: what is taught in ${listOf(coursesFor(f, grade).map((c) => subjectSeoTitle(c.subject)))}, what to look for on the report card, and how to help at home. Matched to the ${f.curriculumName}.`,
+    title: `What your child learns in ${gradeLabel(f, grade)} in ${f.shortName}: a parent's guide`,
+    description: `${gradeLabel(f, grade)} in ${f.name}: what is taught in ${listOf(coursesFor(f, grade).map((c) => subjectSeoTitle(c.subject)))}, what to look for on the report card, and how to help at home. Matched to the ${f.curriculumName}.`,
     alternates: { canonical: guidePath.grade(f, grade) },
   };
 }
@@ -42,7 +42,7 @@ export default async function GradeGuide({ params }: Props) {
   const r = resolve(await params);
   if (!r) notFound();
   const { framework: f, grade } = r;
-  const label = GRADE_LABEL[grade];
+  const label = gradeLabel(f, grade);
   const note = guidesFor(f.id).gradeNotes[grade];
   if (!note) notFound();
   const courses = coursesFor(f, grade);
@@ -111,7 +111,7 @@ export default async function GradeGuide({ params }: Props) {
                 <div className="flex flex-col gap-3 p-5">
                   {ideas.length > 0 && (
                     <>
-                      <p className="font-bold">Big Ideas</p>
+                      <p className="font-bold">{f.country === "US" ? f.overviewLabel : "Big Ideas"}</p>
                       <ul className="list-disc pl-5 font-read">
                         {ideas.map((b) => (
                           <li key={b}>{b}</li>
@@ -213,7 +213,7 @@ export default async function GradeGuide({ params }: Props) {
             Ready for {label}?
           </h2>
           <p className="mt-2 font-read text-lg">
-            {label} builds on what your child practised in {GRADE_LABEL[prev]}. If a skill feels shaky, a few short practice sessions before or early in the year can help:
+            {label} builds on what your child {say(f, "practised")} in {gradeLabel(f, prev)}. If a skill feels shaky, a few short practice sessions before or early in the year can help:
           </p>
           <ul className="mt-2 flex list-disc flex-col gap-1 pl-5 font-read text-lg">
             {prevCourses.map((c) => (
@@ -239,7 +239,7 @@ export default async function GradeGuide({ params }: Props) {
       </section>
 
       <section className="card mt-10 flex flex-col gap-2 p-6">
-        <p className="text-xl font-bold">Practise {label} skills with {APP_NAME}</p>
+        <p className="text-xl font-bold">{say(f, "Practise")} {label} skills with {APP_NAME}</p>
         <p className="font-read text-ink-soft">Kind hints, no ads, and reports in the language of the {f.shortName} report card. Subscribe now, or try it free for {TRIAL_DAYS} days with no card.</p>
         <div className="flex flex-wrap gap-3">
           <SubscribeActions />
@@ -249,14 +249,14 @@ export default async function GradeGuide({ params }: Props) {
       <nav aria-label="Other grades" className="mt-8 flex flex-wrap justify-between gap-3">
         {prev ? (
           <Link href={guidePath.grade(f, prev)} className="btn min-h-12 px-4 text-lg">
-            ← {GRADE_LABEL[prev]}
+            ← {gradeLabel(f, prev)}
           </Link>
         ) : (
           <span />
         )}
         {next && (
           <Link href={guidePath.grade(f, next)} className="btn min-h-12 px-4 text-lg">
-            {GRADE_LABEL[next]} →
+            {gradeLabel(f, next)} →
           </Link>
         )}
       </nav>

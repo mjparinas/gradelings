@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useId, useRef, useState, type FocusEvent as ReactFocusEvent, type KeyboardEvent as ReactKeyboardEvent } from "react";
-import { FRAMEWORKS, getFramework } from "@/content/frameworks";
+import { useEffect, useId, useMemo, useRef, useState, type FocusEvent as ReactFocusEvent, type KeyboardEvent as ReactKeyboardEvent } from "react";
+import { FRAMEWORKS, getFramework, type Framework } from "@/content/frameworks";
+import { frameworkGroups } from "@/lib/frameworkGroups";
 import type { FrameworkId } from "@/content/types";
 import { sounds } from "@/lib/sound";
 
@@ -12,10 +13,13 @@ const MENU_ROOM = 300;
 const MENU_CHROME = 12 + 6 + 16 + 6 + 4;
 
 /**
- * Province picker for the new-child screen. A native select can't match the
+ * Province (or state) picker for the new-child screen. A native select can't match the
  * chunky buttons around it, so this is a listbox in the same style.
  */
-export function ProvinceMenu({ value, onChange }: { value: FrameworkId; onChange: (id: FrameworkId) => void }) {
+export function ProvinceMenu({ value, onChange, frameworks = FRAMEWORKS }: { value: FrameworkId; onChange: (id: FrameworkId) => void; frameworks?: readonly Framework[] }) {
+  // Provinces and territories, then states once a US state is offered; keys move through them in this order.
+  const GROUPS = useMemo(() => frameworkGroups(frameworks), [frameworks]);
+  const LIST: Framework[] = useMemo(() => GROUPS.flatMap((g) => g.frameworks), [GROUPS]);
   const uid = useId();
   const labelId = `${uid}-label`;
   const buttonId = `${uid}-button`;
@@ -27,16 +31,16 @@ export function ProvinceMenu({ value, onChange }: { value: FrameworkId; onChange
   const [open, setOpen] = useState(false);
   const [dropUp, setDropUp] = useState(false);
   const [menuMax, setMenuMax] = useState(360);
-  const [active, setActive] = useState(() => Math.max(0, FRAMEWORKS.findIndex((f) => f.id === value)));
+  const [active, setActive] = useState(() => Math.max(0, LIST.findIndex((f) => f.id === value)));
   const chosen = getFramework(value);
 
   useEffect(() => () => clearTimeout(typedTimer.current), []);
 
   useEffect(() => {
     if (!open) return;
-    const option = document.getElementById(`${listId}-${FRAMEWORKS[active]?.id}`);
+    const option = document.getElementById(`${listId}-${LIST[active]?.id}`);
     if (typeof option?.scrollIntoView === "function") option.scrollIntoView({ block: "nearest" });
-  }, [open, active, listId]);
+  }, [open, active, listId, LIST]);
 
   useEffect(() => {
     if (!open) return;
@@ -68,7 +72,7 @@ export function ProvinceMenu({ value, onChange }: { value: FrameworkId; onChange
   };
 
   const openAtSelection = () => {
-    setActive(Math.max(0, FRAMEWORKS.findIndex((f) => f.id === value)));
+    setActive(Math.max(0, LIST.findIndex((f) => f.id === value)));
     placeMenu();
     setOpen(true);
   };
@@ -82,7 +86,7 @@ export function ProvinceMenu({ value, onChange }: { value: FrameworkId; onChange
   };
 
   const findMatch = (query: string, start: number) => {
-    const names = FRAMEWORKS.map((f) => f.name.toLowerCase());
+    const names = LIST.map((f) => f.name.toLowerCase());
     const fromHere = names.findIndex((name, i) => i >= start && name.startsWith(query));
     if (fromHere >= 0) return fromHere;
     return names.findIndex((name) => name.startsWith(query));
@@ -119,7 +123,7 @@ export function ProvinceMenu({ value, onChange }: { value: FrameworkId; onChange
     if (e.key === "ArrowDown") {
       e.preventDefault();
       if (!open) openAtSelection();
-      else setActive((i) => Math.min(FRAMEWORKS.length - 1, i + 1));
+      else setActive((i) => Math.min(LIST.length - 1, i + 1));
       return;
     }
     if (e.key === "ArrowUp") {
@@ -139,19 +143,45 @@ export function ProvinceMenu({ value, onChange }: { value: FrameworkId; onChange
       e.preventDefault();
       if (!open) placeMenu();
       setOpen(true);
-      setActive(FRAMEWORKS.length - 1);
+      setActive(LIST.length - 1);
       return;
     }
     if (e.key === "Enter" || e.key === " ") {
       if (!open) return;
       e.preventDefault();
-      choose(FRAMEWORKS[active].id);
+      choose(LIST[active].id);
       return;
     }
     if (e.key.length === 1 && /[a-z]/i.test(e.key)) {
       e.preventDefault();
       typeAhead(e.key);
     }
+  };
+
+  const option = (f: Framework) => {
+    const i = LIST.indexOf(f);
+    const selected = f.id === value;
+    const current = i === active;
+    return (
+      <li
+        key={f.id}
+        id={`${listId}-${f.id}`}
+        role="option"
+        aria-selected={selected}
+        className={`flex min-h-14 cursor-pointer items-center justify-between gap-3 rounded-2xl border-[3px] px-4 text-left text-lg font-semibold select-none ${
+          selected ? "border-good-dark bg-good text-[#0f172a]" : current ? "border-help bg-help-soft text-ink" : "border-line bg-white text-ink"
+        }`}
+        onMouseEnter={() => setActive(i)}
+        onPointerDown={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          choose(f.id);
+        }}
+      >
+        <span className="min-w-0 leading-tight">{f.name}</span>
+        {selected && <Check />}
+      </li>
+    );
   };
 
   return (
@@ -180,30 +210,18 @@ export function ProvinceMenu({ value, onChange }: { value: FrameworkId; onChange
         {open && (
           <div className={`card absolute z-30 w-full p-2 ${dropUp ? "bottom-full mb-3" : "top-full mt-3"}`}>
             <ul id={listId} role="listbox" aria-labelledby={labelId} className="flex flex-col gap-1.5 overflow-y-auto overscroll-contain" style={{ maxHeight: menuMax }}>
-              {FRAMEWORKS.map((f, i) => {
-                const selected = f.id === value;
-                const current = i === active;
-                return (
-                  <li
-                    key={f.id}
-                    id={`${listId}-${f.id}`}
-                    role="option"
-                    aria-selected={selected}
-                    className={`flex min-h-14 cursor-pointer items-center justify-between gap-3 rounded-2xl border-[3px] px-4 text-left text-lg font-semibold select-none ${
-                      selected ? "border-good-dark bg-good text-[#0f172a]" : current ? "border-help bg-help-soft text-ink" : "border-line bg-white text-ink"
-                    }`}
-                    onMouseEnter={() => setActive(i)}
-                    onPointerDown={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      choose(f.id);
-                    }}
-                  >
-                    <span className="min-w-0 leading-tight">{f.name}</span>
-                    {selected && <Check />}
-                  </li>
-                );
-              })}
+              {GROUPS.length > 1
+                ? GROUPS.map((g) => (
+                    <li key={g.country} role="group" aria-label={g.label} className="flex flex-col gap-1.5">
+                      <span aria-hidden="true" className="px-2 pt-1 text-sm font-bold tracking-wide text-ink-soft">
+                        {g.label}
+                      </span>
+                      <ul role="none" className="flex flex-col gap-1.5">
+                        {g.frameworks.map(option)}
+                      </ul>
+                    </li>
+                  ))
+                : LIST.map(option)}
             </ul>
           </div>
         )}

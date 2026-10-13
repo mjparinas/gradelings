@@ -46,7 +46,7 @@ export default async function ReportCardsPage({ params }: PageProps<"/report-car
             <Critter id="ollie" mood="wave" size={110} />
             <p className="text-xl font-bold">See it skill by skill</p>
             <p className="font-read text-ink-soft">
-              {APP_NAME} tracks every unit on the same four levels, so you know exactly which skills are Proficient and which need a little more practice before the next report card.
+              {APP_NAME} tracks every unit on the same four levels, so you know exactly which skills are {f.country === "US" ? f.scoringFor("3").levels[2]?.label : "Proficient"} and which need a little more practice before the next report card.
             </p>
             <SubscribeActions className="w-full" />
             <ShareButton path={`/report-cards/${f.slug}/`} title={`${f.shortName} report cards, explained`} text={`What the ${f.shortName} report card levels mean, in plain words:`} label="Share this explainer" />

@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, type ReactNode } from "react";
-import { GRADE_LABEL } from "@/content/subjects";
+import { gradeLabel } from "@/lib/gradeLabel";
 import type { Profile } from "@/lib/model";
 import { useProfiles } from "@/lib/store";
 import { CritterSvg } from "../Critter";
@@ -89,7 +89,7 @@ export function ChildTabs({ base, current }: { base: string; current?: Profile }
           href={`#/${base}/${p.id}`}
           className={`flex items-center gap-2 rounded-xl border px-3 py-2 font-semibold ${p.id === current?.id ? "border-[#253047] bg-[#253047] text-white" : "border-line bg-white"}`}
         >
-          <Avatar p={p} size={28} /> {p.name} <span className="text-sm opacity-70">{GRADE_LABEL[p.grade]}</span>
+          <Avatar p={p} size={28} /> {p.name} <span className="text-sm opacity-70">{gradeLabel(p.grade, p.framework)}</span>
         </a>
       ))}
     </div>

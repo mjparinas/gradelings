@@ -1,10 +1,9 @@
 // @vitest-environment jsdom
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import { coursesFor, gradesWithContent } from "@/components/site/curriculum";
+import { coursesFor, gradesWithContent, gradeLabel } from "@/components/site/curriculum";
 import { TEACHER_FRAMEWORKS, teacherPath } from "@/components/site/teachers";
 import { getFramework } from "@/content/frameworks";
-import { GRADE_LABEL } from "@/content/subjects";
 import TeacherFrameworkPage, { generateMetadata, generateStaticParams } from "./page";
 
 // next.config.ts sets trailingSlash, which next/link reads from this variable.
@@ -20,14 +19,14 @@ describe("teacher framework page", () => {
   it.each(TEACHER_FRAMEWORKS.map((f) => [f.slug, f.id] as const))("%s: a tile per grade with its unit count", async (slug, id) => {
     const f = getFramework(id);
     render(await TeacherFrameworkPage(props(slug)));
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(`${f.region} classroom practice, Kindergarten to Grade 9`);
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(`${f.region} classroom practice, ${f.country === "US" ? "Kindergarten through 9th grade" : "Kindergarten to Grade 9"}`);
     for (const g of gradesWithContent(f)) {
       const units = coursesFor(f, g).reduce((n, c) => n + c.units.length, 0);
       const tile = document.querySelector<HTMLElement>(`main a[href="${teacherPath.grade(f, g)}"]`)!;
-      expect(tile).toHaveTextContent(GRADE_LABEL[g]);
+      expect(tile).toHaveTextContent(gradeLabel(f, g));
       expect(tile).toHaveTextContent(`${units} units`);
     }
-    expect(screen.getByRole("main")).toHaveTextContent("Practice results describe how a student is practising, not a report-card mark.");
+    expect(screen.getByRole("main")).toHaveTextContent(f.country === "US" ? "Practice results describe how a student is practicing, not a report-card mark." : "Practice results describe how a student is practising, not a report-card mark.");
     expect(screen.getByRole("link", { name: "Create a free teacher account" })).toHaveAttribute("href", "/teachers/");
   });
 

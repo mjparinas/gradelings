@@ -1,7 +1,8 @@
 import { coursesInFramework, unitKey } from "@/content";
 import { COURSES } from "@/content/all";
 import { FRAMEWORKS, getFramework, type Framework } from "@/content/frameworks";
-import { GRADE_LABEL, ageBandFor, getSubjectMeta, gradeFromSlug, gradeSlug } from "@/content/subjects";
+import { ageBandFor, getSubjectMeta, gradeFromSlug, gradeSlug } from "@/content/subjects";
+import { gradeName, localeOf, localizeText } from "@/content/locale";
 import type { Course, GradeId, SubjectId, Unit } from "@/content/types";
 
 // Shared lookups for the public curriculum pages. URLs look like
@@ -78,8 +79,30 @@ export function allCurriculumPaths(): string[] {
   return paths;
 }
 
+/** A grade as the framework's country says it: "Grade 4" in Canada, "4th grade" in the US. */
+export function gradeLabel(framework: Pick<Framework, "country">, grade: GradeId): string {
+  return gradeName(grade, localeOf(framework));
+}
+
+/**
+ * The framework's grade range in a sentence: "Kindergarten to Grade 9" in Canada, "kindergarten through 9th grade"
+ * in the US. Pass `start` for the start of a sentence or a title.
+ */
+export function gradeSpan(framework: Pick<Framework, "country" | "grades">, start = false): string {
+  const first = framework.grades[0];
+  const last = framework.grades[framework.grades.length - 1];
+  if (localeOf(framework) !== "en-US") return `${gradeLabel(framework, first)} to ${gradeLabel(framework, last)}`;
+  const text = `${first === "k" ? "kindergarten" : gradeLabel(framework, first)} through ${gradeLabel(framework, last)}`;
+  return start ? text[0].toUpperCase() + text.slice(1) : text;
+}
+
+/** Page copy in the framework's English: US spelling ("practice", "color") on a state's pages. */
+export function say(framework: Pick<Framework, "country">, text: string): string {
+  return localizeText(text, localeOf(framework));
+}
+
 export function gradeHeading(framework: Framework, grade: GradeId): string {
-  return `${GRADE_LABEL[grade]} ${framework.shortName}`;
+  return `${gradeLabel(framework, grade)} ${framework.shortName}`;
 }
 
 export { getFramework, unitKey };

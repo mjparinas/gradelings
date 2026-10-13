@@ -1,5 +1,6 @@
 import { getFramework } from "@/content/frameworks";
-import { CORE_SUBJECTS, getSubjectMeta, GRADE_LABEL } from "@/content/subjects";
+import { gradeName, localeOf } from "@/content/locale";
+import { CORE_SUBJECTS, getSubjectMeta } from "@/content/subjects";
 import type { GradeId, SubjectId } from "@/content/types";
 import type { FrameworkId } from "@/content/types";
 import type { Derived } from "./derive";
@@ -119,13 +120,13 @@ export function buildConferenceSheet({ name, grade, framework, report, derived, 
   if (firstGrowing) questions.push(`${name} is finding “${firstGrowing.ref.unit.title}” tricky in practice. Are you seeing that in class, and what would help most at home?`);
   const next = subjects.find((s) => s.level >= 0 && s.level < scheme.levels.length - 1);
   if (next) questions.push(`In ${next.title}, what would help ${name} move from ${next.levelLabel} to ${scheme.levels[next.level + 1].label}?`);
-  questions.push(`What does ${scheme.levels[Math.min(2, scheme.levels.length - 1)].label} look like in ${GRADE_LABEL[grade]}? Can you show me an example?`);
+  questions.push(`What does ${scheme.levels[Math.min(2, scheme.levels.length - 1)].label} look like in ${gradeName(grade, localeOf(f))}? Can you show me an example?`);
   questions.push(`Which learning skills and work habits is ${name} working on, and how can we support them at home?`);
   questions.push("How can I tell whether practice at home is helping?");
 
   return {
     name,
-    gradeLabel: GRADE_LABEL[grade],
+    gradeLabel: gradeName(grade, localeOf(f)),
     curriculumName: f.curriculumName,
     scaleName: scheme.name,
     subjects,

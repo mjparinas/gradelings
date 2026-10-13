@@ -5,11 +5,11 @@ import { PrintButton } from "@/components/site/PrintButton";
 import { SampleQuestion, answerText } from "@/components/site/SampleQuestion";
 import { breadcrumbJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
-import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, unitKey } from "@/components/site/curriculum";
+import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, unitKey, gradeLabel } from "@/components/site/curriculum";
 import { guidePath } from "@/components/site/guides";
 import { hashSeed, withSeed } from "@/content/random";
 import { GUIDE_FRAMEWORKS } from "@/content/guides";
-import { GRADE_LABEL, getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
+import { getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
 import type { Course, Question } from "@/content/types";
 import { APP_NAME } from "@/lib/brand";
 import { JsonLd, absolute } from "@/lib/site";
@@ -33,8 +33,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { framework: f, grade, course } = r;
   const name = subjectSeoTitle(course.subject);
   return {
-    title: `Free printable ${GRADE_LABEL[grade]} ${name} practice sheet (${f.shortName})`,
-    description: `A free ${GRADE_LABEL[grade]} ${subjectInSentence(name)} practice sheet with an answer key, matched to the ${f.curriculumName}. Print it or work through it on screen.`,
+    title: `Free printable ${gradeLabel(f, grade)} ${name} practice sheet (${f.shortName})`,
+    description: `A free ${gradeLabel(f, grade)} ${subjectInSentence(name)} practice sheet with an answer key, matched to the ${f.curriculumName}. Print it or work through it on screen.`,
     alternates: { canonical: guidePath.worksheet(f, grade, course.subject) },
   };
 }
@@ -60,7 +60,7 @@ export default async function WorksheetPage({ params }: Props) {
   const r = resolve(await params);
   if (!r?.course) notFound();
   const { framework: f, grade, course } = r;
-  const label = GRADE_LABEL[grade];
+  const label = gradeLabel(f, grade);
   const name = subjectSeoTitle(course.subject);
   const meta = getSubjectMeta(course.subject);
   const items = sheetQuestions(course);

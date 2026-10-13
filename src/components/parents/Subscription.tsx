@@ -13,8 +13,9 @@ import { PageTitle, Panel } from "./common";
 const noSubscribe = () => () => {};
 const longDate = (t: number) => new Date(t).toLocaleDateString("en-CA", { dateStyle: "long" });
 
-const INCLUDED = [
-  "Every unit in every subject, Kindergarten to Grade 9",
+/** What the plan includes. US families read the grade range the US way. */
+export const includedFor = (country?: "CA" | "US") => [
+  country === "US" ? "Every unit in every subject, kindergarten through 9th grade" : "Every unit in every subject, Kindergarten to Grade 9",
   "Adventure, Review, Speed Run and Challenge modes",
   "The arcade games, with your learn-to-play timer",
   "Full progress reports over time",
@@ -100,7 +101,7 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
             </p>
           )}
           <ul className="mt-4 flex flex-col gap-1.5">
-            {INCLUDED.map((x) => (
+            {includedFor(family.country).map((x) => (
               <li key={x} className="flex gap-2">
                 <span className="text-good">✓</span> {x}
               </li>

@@ -9,6 +9,8 @@ import { PRINCE_EDWARD_ISLAND_GUIDES } from "./prince-edward-island/guides";
 import { NOVA_SCOTIA_GUIDES } from "./nova-scotia/guides";
 import { NUNAVUT_GUIDES } from "./nunavut/guides";
 import { SASKATCHEWAN_GUIDES } from "./saskatchewan/guides";
+import { WASHINGTON_GUIDES } from "./washington/guides";
+import { OREGON_GUIDES } from "./oregon/guides";
 import type { AgeBand, FrameworkId, GradeId, SubjectId } from "./types";
 
 // Parent-facing guide copy that differs by province. Like frameworks.ts, this is
@@ -99,7 +101,7 @@ export const HOME_TIPS: Record<SubjectId, Record<AgeBand, string[]>> = {
     ],
     middle: [
       "Practise math facts in short bursts, such as five minutes while dinner cooks.",
-      "Let your child handle small cash purchases, working out the change in multiples of 5¢.",
+      "Let your child handle small cash purchases, working out the change together.",
       "Cook together and double or halve a recipe.",
       "Ask “How do you know?” after an answer, even when it is right.",
     ],
@@ -463,7 +465,7 @@ const NWT_GUIDES: FrameworkGuides = {
   },
 };
 
-export const GUIDES: Partial<Record<FrameworkId, FrameworkGuides>> = { "ca-pe": PRINCE_EDWARD_ISLAND_GUIDES, "ca-nl": NEWFOUNDLAND_AND_LABRADOR_GUIDES, "ca-nu": NUNAVUT_GUIDES, "ca-nb": NEW_BRUNSWICK_GUIDES, "ca-ns": NOVA_SCOTIA_GUIDES, "ca-nt": NWT_GUIDES, "ca-yt": YUKON_GUIDES, "ca-bc": BC_GUIDES, "ca-on": ONTARIO_GUIDES, "ca-ab": ALBERTA_GUIDES, "ca-sk": SASKATCHEWAN_GUIDES, "ca-mb": MANITOBA_GUIDES };
+export const GUIDES: Partial<Record<FrameworkId, FrameworkGuides>> = { "ca-pe": PRINCE_EDWARD_ISLAND_GUIDES, "ca-nl": NEWFOUNDLAND_AND_LABRADOR_GUIDES, "ca-nu": NUNAVUT_GUIDES, "ca-nb": NEW_BRUNSWICK_GUIDES, "ca-ns": NOVA_SCOTIA_GUIDES, "ca-nt": NWT_GUIDES, "ca-yt": YUKON_GUIDES, "ca-bc": BC_GUIDES, "ca-on": ONTARIO_GUIDES, "ca-ab": ALBERTA_GUIDES, "ca-sk": SASKATCHEWAN_GUIDES, "ca-mb": MANITOBA_GUIDES, "us-wa": WASHINGTON_GUIDES, "us-or": OREGON_GUIDES };
 
 export const GUIDE_FRAMEWORKS = FRAMEWORKS.filter((f) => GUIDES[f.id]);
 

@@ -2,14 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { appJsonLd, breadcrumbJsonLd } from "@/components/site/jsonld";
 import { PricingWithCurrency } from "@/components/site/PricingSwitch";
+import { offersUsd, siteCurrencies } from "@/components/site/provinces";
 import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
+import { FRAMEWORKS } from "@/content/frameworks";
 import { APP_NAME } from "@/lib/brand";
-import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, TRIAL_DAYS } from "@/lib/plan";
+import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, TRIAL_DAYS } from "@/lib/plan";
 import { JsonLd } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description: `${APP_NAME} is free for ${TRIAL_DAYS} days, then ${PRICES.month.label} or ${PRICES.year.label} for up to ${MAX_CHILDREN} children. No ads, and the first ${FREE_UNITS_PER_COURSE} units of every course stay free.`,
+  description: `${APP_NAME} is free for ${TRIAL_DAYS} days, then ${PRICES.month.label} or ${PRICES.year.label} (CAD)${offersUsd(FRAMEWORKS) ? `, or ${PRICES_BY_CURRENCY.USD.month.label} or ${PRICES_BY_CURRENCY.USD.year.label} in the US,` : ""} for up to ${MAX_CHILDREN} children. No ads, and the first ${FREE_UNITS_PER_COURSE} units of every course stay free.`,
   alternates: { canonical: "/pricing/" },
 };
 
@@ -20,14 +22,14 @@ export default function PricingPage() {
       <JsonLd
         data={[
           breadcrumbJsonLd(crumbs),
-          appJsonLd(),
+          appJsonLd(siteCurrencies(FRAMEWORKS)),
         ]}
       />
       <Crumbs items={crumbs} />
       <h1 className="text-4xl font-bold">Simple pricing for the whole family</h1>
-      <p className="mt-2 max-w-2xl font-read text-lg text-ink-soft">One plan covers up to {MAX_CHILDREN} children, every grade from Kindergarten to Grade 9, every mode and every game.</p>
+      <p className="mt-2 max-w-2xl font-read text-lg text-ink-soft">One plan covers up to {MAX_CHILDREN} children, every grade from Kindergarten to Grade 9, every mode and every game.{offersUsd(FRAMEWORKS) ? " Families in Canada pay in Canadian dollars, and families in the US in US dollars." : ""}</p>
       <div className="mt-8">
-        <PricingWithCurrency />
+        <PricingWithCurrency usd={offersUsd(FRAMEWORKS)} />
       </div>
       <ul className="mt-8 flex max-w-2xl flex-col gap-2 font-read text-lg">
         <li>✓ No ads, and we never sell information.</li>

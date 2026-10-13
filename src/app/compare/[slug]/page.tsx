@@ -145,7 +145,7 @@ export default async function ComparePage({ params }: Props) {
 
       <section className="card mt-10 flex flex-col gap-2 p-6">
         <p className="text-xl font-bold">Subscribe, or try {APP_NAME} free for {TRIAL_DAYS} days</p>
-        <p className="font-read text-ink-soft">Subscribe straight away, or start the free trial with no card. Everything is on, and your child’s progress is reported in your province’s report-card levels.</p>
+        <p className="font-read text-ink-soft">Subscribe straight away, or start the free trial with no card. Everything is on, and your child’s progress is reported in your province’s or state’s report-card levels.</p>
         <div className="flex flex-wrap gap-3">
           <SubscribeActions />
         </div>

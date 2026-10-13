@@ -162,6 +162,18 @@ const EXTRA_LOADERS: Partial<Record<FrameworkId, Partial<Record<GradeId, Loader>
     "8": () => import("./washington/g8"),
     "9": () => import("./washington/g9"),
   },
+  "us-or": {
+    k: () => import("./oregon/k"),
+    "1": () => import("./oregon/g1"),
+    "2": () => import("./oregon/g2"),
+    "3": () => import("./oregon/g3"),
+    "4": () => import("./oregon/g4"),
+    "5": () => import("./oregon/g5"),
+    "6": () => import("./oregon/g6"),
+    "7": () => import("./oregon/g7"),
+    "8": () => import("./oregon/g8"),
+    "9": () => import("./oregon/g9"),
+  },
   "ca-nb": {
     k: () => import("./new-brunswick/k"),
     "1": () => import("./new-brunswick/g1"),

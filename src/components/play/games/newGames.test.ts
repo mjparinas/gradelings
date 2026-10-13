@@ -3,8 +3,9 @@ import { withSeed } from "@/content/random";
 import type { GradeId } from "@/content/types";
 import { bridgeQuestion, frenchStep } from "./bridge";
 import { clockMinutes, clockRound, decoyTime, digital, handAngles, inWords, sameTime } from "./clock";
-import { fewestPieces, formatMoney, MONEY, sayMoney, shopOrder } from "./coins";
-import { CANADA, mapQuestion, townQuestion } from "./map";
+import { canadianWords } from "@/content/locale";
+import { fewestPieces, formatMoney, MONEY, sayMoney, shopOrder, US_MONEY } from "./coins";
+import { CANADA, mapQuestion, regionBoard, STATES, townQuestion, US_FACTS, US_REGIONS, usaBoard, type UsRegion } from "./map";
 import { orderSet, spaced } from "./timeline";
 import { equation, towerChoices } from "./tower";
 
@@ -340,5 +341,173 @@ describe("Map Dash", () => {
       const two = withSeed(seed, () => mapQuestion("2"));
       expect(two.prompt).not.toMatch(/above|below|left|right/);
     }
+  });
+});
+
+describe("Map Dash in the United States", () => {
+  const REGIONS = Object.keys(US_REGIONS) as UsRegion[];
+
+  it("places all 50 states, each once, on its own square of its Census region's map", () => {
+    expect(STATES).toHaveLength(50);
+    expect(new Set(STATES.map((st) => st.id)).size).toBe(50);
+    expect(new Set(STATES.map((st) => st.capital)).size).toBe(50);
+    const count = (r: UsRegion) => STATES.filter((st) => st.region === r).length;
+    expect([count("west"), count("midwest"), count("south"), count("northeast")]).toEqual([13, 12, 16, 9]);
+    for (const region of REGIONS) {
+      const board = regionBoard(region);
+      const spots = board.tiles.map((t) => `${t.col},${t.row}`);
+      expect(new Set(spots).size, region).toBe(spots.length);
+      for (const t of board.tiles) {
+        expect(t.col, t.id).toBeLessThan(board.cols);
+        expect(t.row, t.id).toBeLessThan(board.rows);
+      }
+      // Small enough to tap on a phone, like the map of Canada.
+      expect(board.cols).toBeLessThanOrEqual(6);
+    }
+    expect(STATES.find((st) => st.id === "wa")).toMatchObject({ name: "Washington", capital: "Olympia", region: "west" });
+    expect(STATES.find((st) => st.id === "ny")?.capital).toBe("Albany");
+  });
+
+  it("lists every right state for a fact, and only states on that map", () => {
+    for (const f of US_FACTS) {
+      const ids = regionBoard(f.region).tiles.map((t) => t.id);
+      for (const a of f.answers) expect(ids, f.prompt).toContain(a);
+      for (const a of f.answers) expect(STATES.find((st) => st.id === a)?.region, f.prompt).toBe(f.region);
+    }
+    const fact = (prompt: string) => US_FACTS.find((f) => f.prompt === prompt)!.answers.sort();
+    expect(fact("Tap a Four Corners state")).toEqual(["az", "co", "nm", "ut"]);
+    expect(fact("Tap a New England state")).toEqual(["ct", "ma", "me", "nh", "ri", "vt"]);
+    expect(fact("Tap the smallest state")).toEqual(["ri"]);
+    expect(fact("Tap the largest state by area")).toEqual(["ak"]);
+  });
+
+  it("only marks real answers right, in every grade", () => {
+    for (const grade of GRADES) {
+      for (const seed of seeds(80)) {
+        const q = withSeed(seed, () => mapQuestion(grade, "US"));
+        const ids = q.board.tiles.map((t) => t.id);
+        expect(q.board.kind, q.prompt).not.toBe("canada");
+        for (const a of q.answers) expect(ids, q.prompt).toContain(a);
+        const capital = q.prompt.match(/whose capital is (.+)$/);
+        if (capital) expect(STATES.find((st) => st.id === q.answers[0])?.capital).toBe(capital[1]);
+        const named = q.prompt.match(/^Tap (.+)$/)?.[1];
+        const state = STATES.find((st) => st.name === named);
+        if (state) expect(q.answers).toEqual([state.id]);
+        const region = q.prompt.match(/^Tap the region (.+) is in$/);
+        if (region) expect(q.answers).toEqual([STATES.find((st) => st.name === region[1])!.region]);
+        if (q.prompt.includes("west coast")) expect(q.answers).toEqual(["pacific"]);
+        if (q.prompt.includes("east coast")) expect(q.answers).toEqual(["atlantic"]);
+        if (q.prompt.includes("north of the United States")) expect(q.answers).toEqual(["canada"]);
+        if (q.prompt.includes("south of the United States")) expect(q.answers).toEqual(["mexico"]);
+        // No provinces, territories or Canadian places in a US child's game, beyond Canada as a neighbour.
+        expect(canadianWords(`${q.prompt} ${q.why}`).filter((w) => w !== "Canada"), q.prompt).toEqual([]);
+      }
+    }
+  });
+
+  it("keeps position and compass words for little kids, with a fire station instead of a fire hall", () => {
+    let station = false;
+    for (const seed of seeds(40)) {
+      const k = withSeed(seed, () => mapQuestion("k", "US"));
+      expect(k.board.kind).toBe("town");
+      expect(k.prompt).not.toMatch(/north|south|east|west/);
+      expect(k.board.tiles.map((t) => t.name)).not.toContain("fire hall");
+      if (k.board.tiles.some((t) => t.name === "fire station")) station = true;
+    }
+    expect(station).toBe(true);
+    for (const seed of seeds(40)) expect(withSeed(seed, () => townQuestion(true)).board.tiles.map((t) => t.name)).toContain("fire hall");
+  });
+
+  it("shows the regions with Canada to the north, Mexico to the south and an ocean on each coast", () => {
+    const at = (id: string) => usaBoard().tiles.find((t) => t.id === id)!;
+    expect(at("canada").row).toBeLessThan(at("midwest").row);
+    expect(at("mexico").row).toBeGreaterThan(at("west").row);
+    expect(at("pacific").col).toBeLessThan(at("west").col);
+    expect(at("atlantic").col).toBeGreaterThan(at("northeast").col);
+    expect(at("pacific").water && at("atlantic").water).toBe(true);
+    expect(at("canada").water).toBeFalsy();
+  });
+
+  it("keeps Canadian children on the map of Canada", () => {
+    for (const seed of seeds(40)) {
+      const q = withSeed(seed, () => mapQuestion("5"));
+      expect(q.board.kind).toBe("canada");
+      expect(withSeed(seed, () => mapQuestion("5", "CA"))).toEqual(q);
+    }
+  });
+});
+
+describe("Coin Shop in the United States", () => {
+  it("pays with US coins and bills, any number of cents, that the counter can make", () => {
+    let odd = false;
+    for (const grade of ["1", "2", "3", "4", "5"] as GradeId[]) {
+      for (const seed of seeds(80)) {
+        const order = withSeed(seed, () => shopOrder(grade, "USD"));
+        expect(order.target).toBeGreaterThan(0);
+        if (order.target % 5 !== 0) odd = true;
+        for (const m of order.money) expect(US_MONEY, m.name).toContain(m);
+        expect(order.money.map((m) => m.id)).not.toContain("loonie");
+        expect(order.money.map((m) => m.id)).not.toContain("toonie");
+        expect(fewestPieces(order.target, order.money), `${grade} ${order.target}`).toBeLessThan(Infinity);
+        expect(canadianWords(order.prompt + order.speak)).toEqual([]);
+        if (grade === "1") expect(order.target).toBeLessThanOrEqual(50);
+        if (grade === "2") expect(order.target).toBeLessThanOrEqual(100);
+        if (grade === "3") expect(order.target).toBeGreaterThan(100);
+        if (Number(grade) >= 4) {
+          const cents = (m: string) => (m.endsWith("¢") ? Number(m.slice(0, -1)) : Math.round(Number(m.slice(1)) * 100));
+          const [, price, paid] = order.prompt.match(/costs (\S+)\. They pay (\S+)\. Give/)!;
+          expect(cents(paid) - cents(price)).toBe(order.target);
+        }
+      }
+    }
+    expect(odd).toBe(true);
+  });
+
+  it("has pennies and a $1 bill, and counts the fewest pieces", () => {
+    expect(US_MONEY.map((m) => m.cents)).toEqual([1, 5, 10, 25, 100, 500]);
+    expect(US_MONEY.find((m) => m.cents === 100)).toMatchObject({ name: "$1 bill", bill: true });
+    expect(fewestPieces(141, US_MONEY)).toBe(5);
+    expect(fewestPieces(3, US_MONEY)).toBe(3);
+    expect(sayMoney(1)).toBe("1 cent");
+    expect(sayMoney(201)).toBe("2 dollars and 1 cent");
+  });
+
+  it("keeps Canadian children on Canadian money", () => {
+    for (const seed of seeds(20)) expect(withSeed(seed, () => shopOrder("3", "CAD"))).toEqual(withSeed(seed, () => shopOrder("3")));
+  });
+});
+
+describe("Timeline Snap and Memory Match in the United States", () => {
+  it("puts US history in order instead of Canada's, with commas in big numbers", () => {
+    const before: [string, string][] = [
+      ["The Declaration of Independence", "The Constitution is signed"],
+      ["The Constitution is signed", "The Louisiana Purchase"],
+      ["California becomes a state", "Washington becomes a state"],
+      ["Washington becomes a state", "Alaska and Hawaii become states"],
+      ["Women win the right to vote", "Brown v. Board of Education"],
+      ["Alaska and Hawaii become states", "The Civil Rights Act"],
+      ["The Civil Rights Act", "The Americans with Disabilities Act"],
+    ];
+    let checked = 0;
+    let commas = false;
+    for (const grade of GRADES) {
+      for (const seed of seeds(120)) {
+        const set = withSeed(seed, () => orderSet(grade, "US"));
+        const labels = set.items.map((i) => i.label);
+        expect(canadianWords(`${set.title} ${labels.join(" ")}`), labels.join(", ")).toEqual([]);
+        for (const l of labels) expect(l).not.toMatch(/\d \d{3}/);
+        if (labels.some((l) => /^\d{1,3},\d{3}$/.test(l))) commas = true;
+        for (const [a, b] of before) {
+          if (labels.includes(a) && labels.includes(b)) {
+            expect(labels.indexOf(a), `${a} before ${b}`).toBeLessThan(labels.indexOf(b));
+            checked++;
+          }
+        }
+      }
+    }
+    expect(checked).toBeGreaterThan(30);
+    expect(commas).toBe(true);
+    expect(spaced(54321, "US")).toBe("54,321");
+    expect(spaced(4321, "US")).toBe("4321");
   });
 });

@@ -7,6 +7,7 @@ import { SUBSCRIBE_HREF, TRIAL_DAYS } from "@/lib/plan";
 import { teacherPath, TEACHER_SIGNUP } from "./teachers";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
 import { RefCapture } from "./ShareButton";
+import { byCountry, regionList } from "./provinces";
 
 export function SiteHeader() {
   return (
@@ -159,7 +160,10 @@ export function SiteFooter() {
  * enough always has a button to start practising.
  */
 export function PageCta() {
-  const provinces = FRAMEWORKS.map((f) => f.region).join(" and ");
+  // Every region by name, Canadian provinces and territories first, then US states.
+  const provinces = byCountry(FRAMEWORKS)
+    .map((g) => regionList(g.frameworks))
+    .join(", and in ");
   return (
     <section aria-labelledby="page-cta" className="card mt-10 flex flex-col gap-3 p-6">
       <h2 id="page-cta" className="text-2xl font-bold">

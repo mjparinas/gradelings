@@ -1,7 +1,7 @@
 "use client";
 
 import { getFramework } from "@/content/frameworks";
-import { GRADE_LABEL } from "@/content/subjects";
+import { gradeLabel } from "@/lib/gradeLabel";
 import { ReportCardGuide } from "../ReportCardGuide";
 import { ChildTabs, Panel, useChild } from "./common";
 import { ConferenceSheet } from "./ConferenceSheet";
@@ -20,7 +20,7 @@ export function ReportCardsPage({ childId }: { childId?: string }) {
       </Panel>
       <Panel title="Talking with your child's teacher" className="print:hidden">
         <ul className="flex list-disc flex-col gap-2 pl-5 font-read">
-          <li>Which learning areas should we focus on at home{child ? ` for ${GRADE_LABEL[child.grade]}` : ""}?</li>
+          <li>Which learning areas should we focus on at home{child ? ` for ${gradeLabel(child.grade, child.framework)}` : ""}?</li>
           <li>What does “Proficient” look like for this area? Can you show me an example?</li>
           <li>How can I tell if practice at home is helping?</li>
           <li>Which learning skills and work habits is my child working on, and how can we support them?</li>

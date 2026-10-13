@@ -1,7 +1,8 @@
 import { pick, randInt, sample } from "@/content/random";
 import type { GradeId } from "@/content/types";
+import type { Country } from "./types";
 
-// Timeline Snap: cards to put in order. Sequences (life cycles, the day, Canadian history,
+// Timeline Snap: cards to put in order. Sequences (life cycles, the day, Canadian or US history,
 // inventions) and number lines (whole numbers, fractions, decimals, integers) by grade.
 
 export interface OrderItem {
@@ -75,7 +76,7 @@ const PLANETS: Sequence = {
   speak: "Put the planets in order, closest to the Sun first",
   items: [it("Mercury", "⚪"), it("Venus", "🟡"), it("Earth", "🌍"), it("Mars", "🔴"), it("Jupiter", "🟠"), it("Saturn", "🪐"), it("Uranus", "🔵"), it("Neptune", "🔵")],
 };
-const CONFEDERATION: Sequence = {
+const CANADA_GROWS: Sequence = {
   title: "Canada grows: earliest first",
   speak: "Put these in order, earliest first",
   items: [
@@ -88,7 +89,7 @@ const CONFEDERATION: Sequence = {
     it("Nunavut is created", "🧊"),
   ],
 };
-const CANADA_1900S: Sequence = {
+const CANADA_HISTORY: Sequence = {
   title: "Canada's history: earliest first",
   speak: "Put these events in order, earliest first",
   items: [
@@ -97,6 +98,29 @@ const CANADA_1900S: Sequence = {
     it("The maple leaf flag is raised", "🍁"),
     it("The Charter of Rights and Freedoms", "📜"),
     it("Nunavut is created", "🧊"),
+  ],
+};
+const US_GROWS: Sequence = {
+  title: "The United States grows: earliest first",
+  speak: "Put these in order, earliest first",
+  items: [
+    it("The Declaration of Independence", "📜"),
+    it("The Constitution is signed", "🖋️"),
+    it("The Louisiana Purchase", "🗺️"),
+    it("California becomes a state", "🌉"),
+    it("Washington becomes a state", "🌲"),
+    it("Alaska and Hawaii become states", "🏝️"),
+  ],
+};
+const US_1900S: Sequence = {
+  title: "US history: earliest first",
+  speak: "Put these events in order, earliest first",
+  items: [
+    it("Women win the right to vote", "🗳️"),
+    it("Brown v. Board of Education", "🏫"),
+    it("Alaska and Hawaii become states", "🏝️"),
+    it("The Civil Rights Act", "⚖️"),
+    it("The Americans with Disabilities Act", "♿"),
   ],
 };
 const INVENTIONS: Sequence = {
@@ -130,10 +154,10 @@ function from(seq: Sequence, count: number): OrderSet {
   return { title: seq.title, speak: seq.speak, items: picks.map((i) => seq.items[i]) };
 }
 
-/** Canadian spacing for big numbers (12 345), none for four digits. */
-export function spaced(n: number): string {
+/** Canadian spacing for big numbers (12 345), or US commas (12,345); none for four digits. */
+export function spaced(n: number, country: Country = "CA"): string {
   const s = String(Math.abs(n));
-  const body = s.length <= 4 ? s : s.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  const body = s.length <= 4 ? s : s.replace(/\B(?=(\d{3})+(?!\d))/g, country === "US" ? "," : " ");
   return n < 0 ? `−${body}` : body;
 }
 
@@ -143,9 +167,9 @@ function distinct(count: number, make: () => number): number[] {
   return [...seen];
 }
 
-function wholeNumbers(max: number, count: number): OrderSet {
+function wholeNumbers(max: number, count: number, country: Country = "CA"): OrderSet {
   const values = distinct(count, () => randInt(0, max)).sort((a, b) => a - b);
-  return { title: "Smallest number first", speak: "Put the numbers in order, smallest first", items: values.map((v) => it(spaced(v))) };
+  return { title: "Smallest number first", speak: "Put the numbers in order, smallest first", items: values.map((v) => it(spaced(v, country))) };
 }
 
 function integers(count: number): OrderSet {
@@ -203,9 +227,13 @@ function valued(list: [string, number][], count: number, title: string, speak: s
 }
 
 /** One set of cards for the grade. Little kids get 4 cards; everyone else 5 (when the set has them). */
-export function orderSet(grade: GradeId): OrderSet {
+export function orderSet(grade: GradeId, country: Country = "CA"): OrderSet {
   const g = G[grade];
   const n = g <= 1 ? 4 : 5;
+  const us = country === "US";
+  // A child on a US curriculum puts US history in order instead of Canada's.
+  const grows = us ? US_GROWS : CANADA_GROWS;
+  const modern = us ? US_1900S : CANADA_HISTORY;
   const options: (() => OrderSet)[] =
     g === 0
       ? [() => from(ROUTINE, n), () => from(PLANT, n), () => from(BUTTERFLY, n), () => from(SIZES, n), () => wholeNumbers(10, n)]
@@ -216,15 +244,15 @@ export function orderSet(grade: GradeId): OrderSet {
           : g === 3
             ? [() => from(MONTHS, n), () => from(FROG, n), () => from(DAYS, n), () => wholeNumbers(1000, n)]
             : g === 4
-              ? [() => from(CONFEDERATION, n), () => from(PLANETS, n), () => wholeNumbers(99999, n), () => decimals(n)]
+              ? [() => from(grows, n), () => from(PLANETS, n), () => wholeNumbers(99999, n, country), () => decimals(n)]
               : g === 5
-                ? [() => from(CONFEDERATION, n), () => from(PLANETS, n), () => decimals(n), () => valued(UNIT_FRACTIONS, n, "Least to greatest", "Put the fractions in order from least to greatest")]
+                ? [() => from(grows, n), () => from(PLANETS, n), () => decimals(n), () => valued(UNIT_FRACTIONS, n, "Least to greatest", "Put the fractions in order from least to greatest")]
                 : g === 6
                   ? [() => from(ANCIENT, n), () => from(INVENTIONS, n), () => from(SPACE, n), () => integers(n), () => valued(MIXED, n, "Least to greatest", "Put these in order from least to greatest")]
                   : g === 7
-                    ? [() => from(CANADA_1900S, n), () => from(INVENTIONS, n), () => integers(n), () => valued(MIXED, n, "Least to greatest", "Put these in order from least to greatest")]
+                    ? [() => from(modern, n), () => from(INVENTIONS, n), () => integers(n), () => valued(MIXED, n, "Least to greatest", "Put these in order from least to greatest")]
                     : g === 8
-                      ? [() => from(ORGANIZATION, n), () => from(SPACE, n), () => from(CANADA_1900S, n), () => valued(POWERS, n, "Least to greatest", "Put the powers in order from least to greatest")]
-                      : [() => from(ORGANIZATION, n), () => from(CANADA_1900S, n), () => valued(POWERS, n, "Least to greatest", "Put the powers in order from least to greatest"), () => valued(SCIENTIFIC, n, "Least to greatest", "Put the numbers in order from least to greatest")];
+                      ? [() => from(ORGANIZATION, n), () => from(SPACE, n), () => from(modern, n), () => valued(POWERS, n, "Least to greatest", "Put the powers in order from least to greatest")]
+                      : [() => from(ORGANIZATION, n), () => from(modern, n), () => valued(POWERS, n, "Least to greatest", "Put the powers in order from least to greatest"), () => valued(SCIENTIFIC, n, "Least to greatest", "Put the numbers in order from least to greatest")];
   return pick(options)();
 }

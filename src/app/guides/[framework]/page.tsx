@@ -9,10 +9,12 @@ import {
   gradesWithContent,
   resolve,
   subjectSeoTitle,
+  gradeLabel,
+  gradeSpan,
 } from "@/components/site/curriculum";
 import { guidePath } from "@/components/site/guides";
 import { GUIDE_FRAMEWORKS, guidesFor } from "@/content/guides";
-import { GRADE_LABEL, getSubjectMeta } from "@/content/subjects";
+import { getSubjectMeta } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { JsonLd } from "@/lib/site";
 
@@ -30,7 +32,7 @@ export async function generateMetadata({
   const f = r.framework;
   return {
     title: `${f.name} parent guides and free printable practice sheets`,
-    description: `Free guides for ${f.shortName} parents: what each grade learns in the ${f.curriculumName}, how to help at home, ${guidesFor(f.id).competencies.label}, the ${guidesFor(f.id).assessment.short} and printable practice sheets for ${GRADE_LABEL[f.grades[0]]} to ${GRADE_LABEL[f.grades[f.grades.length - 1]]}.`,
+    description: `Free guides for ${f.shortName} parents: what each grade learns in the ${f.curriculumName}, how to help at home, ${guidesFor(f.id).competencies.label}, the ${guidesFor(f.id).assessment.short} and printable practice sheets for ${gradeSpan(f)}.`,
     alternates: { canonical: guidePath.hub(r.framework) },
   };
 }
@@ -137,7 +139,7 @@ export default async function GuidesHub({
             <section key={g} className="card flex flex-col gap-2 p-5">
               <h3 className="text-2xl font-bold">
                 <Link href={guidePath.grade(f, g)} className="hover:underline">
-                  {GRADE_LABEL[g]}
+                  {gradeLabel(f, g)}
                 </Link>
               </h3>
               <ul className="flex flex-col gap-1">
