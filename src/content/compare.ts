@@ -45,12 +45,12 @@ export const COMPETITORS: Competitor[] = [
       {
         topic: "How progress is shown",
         them: "SmartScore rises as kids answer correctly in a row and falls on mistakes. Common Sense Media notes that some children find this stressful.",
-        us: "Wrong answers get a hint and another try. Only first-try answers count towards accuracy, and stars never go down. Progress is reported in your province's own report-card levels.",
+        us: "Wrong answers get a hint and another try. Only first-try answers count towards accuracy, and stars never go down. Progress is reported in your province's or state's own report-card levels.",
       },
       {
         topic: "Report card language",
         them: "Reports are organized around skills and scores.",
-        us: "Reports use the words on your province's report card, with a plain-language “at home” note for each level.",
+        us: "Reports use the words on your province's or state's report card, with a plain-language “at home” note for each level.",
       },
       {
         topic: "Games and offline use",
@@ -60,7 +60,7 @@ export const COMPETITORS: Competitor[] = [
     ],
     chooseThem: ["You want the widest range of skills and grades in one place.", "Your child likes working towards a score."],
     chooseUs: [
-      "You want practice that follows your province's curriculum and speaks the language of your child's report card.",
+      "You want practice that follows your province's or state's curriculum and speaks the language of your child's report card.",
       "You'd like a gentler feel, with hints, retries and no scores that go down.",
       "You have more than one child and want one price.",
     ],
@@ -76,7 +76,7 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         q: `Does ${APP_NAME} have a SmartScore?`,
-        a: `No. ${APP_NAME} shows each unit on your province's report-card scale, based on recent first-try accuracy. It says clearly that this reflects practice, not a report card mark.`,
+        a: `No. ${APP_NAME} shows each unit on your province's or state's report-card scale, based on recent first-try accuracy. It says clearly that this reflects practice, not a report card mark.`,
       },
     ],
   },
@@ -99,12 +99,12 @@ export const COMPETITORS: Competitor[] = [
       {
         topic: "Curriculum",
         them: "Course order follows US standards. A 2015 mapping linked some Grade 4 to 6 content to Ontario and British Columbia, and it hasn't been updated for current provincial curricula, as far as we could find.",
-        us: "Every unit is matched to a learning standard in your child's province, and that standard is listed for parents.",
+        us: "Every unit is matched to a learning standard in your child's province or state, and that standard is listed for parents.",
       },
       {
         topic: "Parent guidance",
         them: "Learning is largely self-directed, with limited guidance for parents.",
-        us: "Reports for parents in your province's report-card levels, with strengths, next steps and a guide to that province's report card.",
+        us: "Reports for parents in your province's or state's report-card levels, with strengths, next steps and a guide to that province's or state's report card.",
       },
       {
         topic: "Games",
@@ -167,9 +167,9 @@ export const COMPETITORS: Competitor[] = [
     ],
     chooseThem: ["Your child will only practise inside a big, story-driven game.", "You want a free math option to try."],
     chooseUs: [
-      "You want practice matched to your province's curriculum, in math, language arts, science and social studies.",
+      "You want practice matched to your province's or state's curriculum, in math, language arts, science and social studies.",
       "You don't want your child to see ads or purchase offers.",
-      "You want clear reports in your province's report-card language.",
+      "You want clear reports in your province's or state's report-card language.",
     ],
     sources: [
       { label: "Prodigy on the Canadian App Store", url: "https://apps.apple.com/ca/app/id950795722" },

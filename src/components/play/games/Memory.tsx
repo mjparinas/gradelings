@@ -14,18 +14,18 @@ interface Card {
   text: string;
 }
 
-function deal(grade: GameProps["grade"], pairs: number): Card[] {
-  const list = memoryPairs(grade, pairs);
+function deal(grade: GameProps["grade"], pairs: number, country: GameProps["country"]): Card[] {
+  const list = memoryPairs(grade, pairs, country);
   return shuffled(list.flatMap((p, i) => [
     { id: i * 2, pair: i, text: p.a },
     { id: i * 2 + 1, pair: i, text: p.b },
   ]));
 }
 
-export function Memory({ grade, band, onScore, onLevel, onOver }: GameProps) {
+export function Memory({ grade, band, country, onScore, onLevel, onOver }: GameProps) {
   const pairs = band === "little" ? 4 : band === "middle" ? 6 : 8;
   const [level, setLevel] = useState(1);
-  const [cards, setCards] = useState<Card[]>(() => deal(grade, pairs));
+  const [cards, setCards] = useState<Card[]>(() => deal(grade, pairs, country));
   const [open, setOpen] = useState<number[]>([]);
   const [matched, setMatched] = useState<number[]>([]);
   const [moves, setMoves] = useState(0);
@@ -58,7 +58,7 @@ export function Memory({ grade, band, onScore, onLevel, onOver }: GameProps) {
           setScore((s) => s + 30 + bonus);
           sounds.complete();
           setTimeout(() => {
-            setCards(deal(grade, pairs));
+            setCards(deal(grade, pairs, country));
             setMatched([]);
             setMoves(0);
             setLevel((l) => l + 1);

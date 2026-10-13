@@ -3,10 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
-import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle } from "@/components/site/curriculum";
+import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, gradeLabel, say } from "@/components/site/curriculum";
 import { guidePath } from "@/components/site/guides";
 import { HOME_TIPS, GUIDE_FRAMEWORKS } from "@/content/guides";
-import { GRADE_LABEL, ageBandFor, getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
+import { ageBandFor, getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
@@ -28,8 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { framework: f, grade, course } = r;
   const name = subjectSeoTitle(course.subject);
   return {
-    title: `${GRADE_LABEL[grade]} ${name} help at home (${f.shortName} curriculum)`,
-    description: `How to help your ${GRADE_LABEL[grade]} child with ${subjectInSentence(name)} at home in ${f.name}: what they learn this year, simple activities, and what the report card levels mean.`,
+    title: `${gradeLabel(f, grade)} ${name} help at home (${f.shortName} curriculum)`,
+    description: `How to help your ${gradeLabel(f, grade)} child with ${subjectInSentence(name)} at home in ${f.name}: what they learn this year, simple activities, and what the report card levels mean.`,
     alternates: { canonical: guidePath.subject(f, grade, course.subject) },
   };
 }
@@ -38,11 +38,11 @@ export default async function SubjectGuide({ params }: Props) {
   const r = resolve(await params);
   if (!r?.course) notFound();
   const { framework: f, grade, course } = r;
-  const label = GRADE_LABEL[grade];
+  const label = gradeLabel(f, grade);
   const name = subjectSeoTitle(course.subject);
   const meta = getSubjectMeta(course.subject);
   const bigIdeas = course.bigIdeas[f.id] ?? [];
-  const tips = HOME_TIPS[course.subject][ageBandFor(grade)];
+  const tips = HOME_TIPS[course.subject][ageBandFor(grade)].map((t) => say(f, t));
   const levels = f.scoringFor(grade).levels;
   const faqs = [
     {
@@ -91,7 +91,7 @@ export default async function SubjectGuide({ params }: Props) {
       {bigIdeas.length > 0 && (
         <section aria-labelledby="ideas" className="mt-6 rounded-3xl p-5 sm:p-6" style={{ background: meta.colourSoft }}>
           <h2 id="ideas" className="text-2xl font-bold">
-            The Big Ideas this year
+            {f.country === "US" ? `${f.overviewLabel} this year` : "The Big Ideas this year"}
           </h2>
           <ul className="mt-2 flex list-disc flex-col gap-1 pl-5 font-read text-lg">
             {bigIdeas.map((b) => (
@@ -103,7 +103,7 @@ export default async function SubjectGuide({ params }: Props) {
 
       <section aria-labelledby="tips" className="mt-8 max-w-3xl">
         <h2 id="tips" className="text-2xl font-bold">
-          Easy ways to practise {subjectInSentence(name)} at home
+          Easy ways to {say(f, "practise")} {subjectInSentence(name)} at home
         </h2>
         <ul className="mt-2 flex list-disc flex-col gap-2 pl-5 font-read text-lg">
           {tips.map((t) => (
@@ -173,7 +173,7 @@ export default async function SubjectGuide({ params }: Props) {
         <Link href={guidePath.worksheet(f, grade, course.subject)} className="btn min-h-12 px-6 text-lg">
           Get the sheet
         </Link>
-        <SubscribeActions size="md" trialLabel={`Practise in ${APP_NAME}`} />
+        <SubscribeActions size="md" trialLabel={say(f, `Practise in ${APP_NAME}`)} />
       </section>
     </SitePage>
   );

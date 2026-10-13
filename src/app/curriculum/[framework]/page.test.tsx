@@ -1,9 +1,8 @@
 // @vitest-environment jsdom
 import { render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import { coursesFor, curriculumPath, gradesWithContent } from "@/components/site/curriculum";
+import { coursesFor, curriculumPath, gradesWithContent, gradeLabel } from "@/components/site/curriculum";
 import { FRAMEWORKS } from "@/content/frameworks";
-import { GRADE_LABEL } from "@/content/subjects";
 import FrameworkPage, { generateMetadata, generateStaticParams } from "./page";
 
 // next.config.ts sets trailingSlash, which next/link reads from this variable.
@@ -18,10 +17,10 @@ describe("curriculum framework page", () => {
 
   it.each(FRAMEWORKS.map((f) => [f.slug, f] as const))("%s: a card for every grade with each subject's unit count", async (slug, f) => {
     render(await FrameworkPage(props(slug)));
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(`${f.curriculumName}: Kindergarten to Grade 9`);
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(`${f.curriculumName}: ${f.country === "US" ? "Kindergarten through 9th grade" : "Kindergarten to Grade 9"}`);
     for (const g of gradesWithContent(f)) {
-      const card = screen.getByRole("heading", { level: 2, name: GRADE_LABEL[g] }).closest("section")!;
-      expect(within(card).getByRole("link", { name: GRADE_LABEL[g] })).toHaveAttribute("href", curriculumPath.grade(f, g));
+      const card = screen.getByRole("heading", { level: 2, name: gradeLabel(f, g) }).closest("section")!;
+      expect(within(card).getByRole("link", { name: gradeLabel(f, g) })).toHaveAttribute("href", curriculumPath.grade(f, g));
       const links = within(card).getAllByRole("listitem").map((li) => within(li).getByRole("link"));
       const courses = coursesFor(f, g);
       expect(links.map((a) => a.getAttribute("href"))).toEqual(courses.map((c) => curriculumPath.subject(f, g, c.subject)));

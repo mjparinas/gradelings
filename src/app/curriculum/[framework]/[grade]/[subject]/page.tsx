@@ -3,9 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { breadcrumbJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
-import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, subjectTitle } from "@/components/site/curriculum";
+import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, subjectTitle, gradeLabel } from "@/components/site/curriculum";
 import { FRAMEWORKS } from "@/content/frameworks";
-import { GRADE_LABEL, getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
+import { getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
 import { JsonLd, absolute } from "@/lib/site";
 import { ShareButton } from "@/components/site/ShareButton";
 
@@ -23,8 +23,8 @@ export async function generateMetadata({ params }: PageProps<"/curriculum/[frame
   const { framework: f, grade, course } = r;
   const name = subjectSeoTitle(course.subject);
   return {
-    title: `${GRADE_LABEL[grade]} ${name}: ${f.shortName} curriculum practice`,
-    description: `${GRADE_LABEL[grade]} ${subjectInSentence(name)} in ${f.name}: ${course.units
+    title: `${gradeLabel(f, grade)} ${name}: ${f.shortName} curriculum practice`,
+    description: `${gradeLabel(f, grade)} ${subjectInSentence(name)} in ${f.name}: ${course.units
       .slice(0, 5)
       .map((u) => u.title)
       .join(", ")} and more. ${f.overviewLabel}, ${f.standardLabel.toLowerCase()}s and free sample questions.`,
@@ -43,7 +43,7 @@ export default async function SubjectPage({ params }: PageProps<"/curriculum/[fr
     { label: "Home", href: "/" },
     { label: "Curriculum", href: curriculumPath.index() },
     { label: f.curriculumName, href: curriculumPath.framework(f) },
-    { label: GRADE_LABEL[grade], href: curriculumPath.grade(f, grade) },
+    { label: gradeLabel(f, grade), href: curriculumPath.grade(f, grade) },
     { label: name },
   ];
 
@@ -55,21 +55,21 @@ export default async function SubjectPage({ params }: PageProps<"/curriculum/[fr
           {
             "@context": "https://schema.org",
             "@type": "ItemList",
-            name: `${GRADE_LABEL[grade]} ${name} units`,
+            name: `${gradeLabel(f, grade)} ${name} units`,
             itemListElement: course.units.map((u, i) => ({ "@type": "ListItem", position: i + 1, name: u.title, url: absolute(curriculumPath.unit(f, grade, course.subject, u.id)) })),
           },
         ]}
       />
       <Crumbs items={crumbs} />
       <h1 className="flex items-center gap-3 text-4xl font-bold">
-        <span aria-hidden="true">{meta.emoji}</span> {GRADE_LABEL[grade]} {name}
+        <span aria-hidden="true">{meta.emoji}</span> {gradeLabel(f, grade)} {name}
       </h1>
       <p className="mt-2 max-w-3xl font-read text-lg text-ink-soft">
         {course.units.length} units matched to the {f.curriculumName}
         {subjectTitle(course.subject, grade) !== name ? `. Kids see this subject as “${subjectTitle(course.subject, grade)}”.` : "."}
       </p>
       <div className="mt-3">
-        <ShareButton path={curriculumPath.subject(f, grade, course.subject)} title={`${GRADE_LABEL[grade]} ${name} (${f.shortName})`} text={`Free ${GRADE_LABEL[grade]} ${name} practice, matched to the ${f.curriculumName}:`} />
+        <ShareButton path={curriculumPath.subject(f, grade, course.subject)} title={`${gradeLabel(f, grade)} ${name} (${f.shortName})`} text={`Free ${gradeLabel(f, grade)} ${name} practice, matched to the ${f.curriculumName}:`} />
       </div>
 
       {bigIdeas.length > 0 && (

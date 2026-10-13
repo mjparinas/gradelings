@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { AVAILABLE_GRADES } from "@/content";
-import { FRAMEWORKS, getFramework, type Framework } from "@/content/frameworks";
-import { getSubjectMeta, GRADE_LABEL, gradeForAge, subjectInSentence } from "@/content/subjects";
+import { getFramework, type Framework } from "@/content/frameworks";
+import { getSubjectMeta, gradeForAge, subjectInSentence } from "@/content/subjects";
 import type { FrameworkId, GradeId } from "@/content/types";
+import { frameworkMenu } from "@/lib/frameworkGroups";
+import { gradeLabel } from "@/lib/gradeLabel";
 import type { Profile } from "@/lib/model";
 import { MAX_CHILDREN } from "@/lib/plan";
 import { useProfiles, useStore } from "@/lib/store";
@@ -58,7 +60,7 @@ function ChildForm({ draft, onChange, isNew }: { draft: Draft; onChange: (d: Dra
               ...Array.from({ length: 11 }, (_, i) => thisYear - 4 - i).map((y) => ({ value: String(y), label: String(y) })),
             ]}
           />
-          {age !== undefined && <span className="text-sm text-ink-soft">About {age} years old (suggested: {GRADE_LABEL[gradeForAge(age)]})</span>}
+          {age !== undefined && <span className="text-sm text-ink-soft">About {age} years old (suggested: {gradeLabel(gradeForAge(age), draft.framework)})</span>}
         </div>
         <SelectMenu
           label="Grade"
@@ -68,7 +70,7 @@ function ChildForm({ draft, onChange, isNew }: { draft: Draft; onChange: (d: Dra
             setGradePicked(true);
             onChange({ ...draft, grade: next as GradeId });
           }}
-          options={AVAILABLE_GRADES.map((g) => ({ value: g, label: GRADE_LABEL[g] }))}
+          options={AVAILABLE_GRADES.map((g) => ({ value: g, label: gradeLabel(g, draft.framework) }))}
         />
       </div>
       <div className="flex flex-col gap-1">
@@ -77,7 +79,7 @@ function ChildForm({ draft, onChange, isNew }: { draft: Draft; onChange: (d: Dra
           size="lg"
           value={draft.framework}
           onChange={(next) => onChange({ ...draft, framework: next as FrameworkId })}
-          options={FRAMEWORKS.map((f) => ({ value: f.id, label: `${f.name} (${f.curriculumName})` }))}
+          {...frameworkMenu((f) => `${f.name} (${f.curriculumName})`)}
         />
         <span className="text-sm text-ink-soft">
           Lessons and reports follow the {chosen.curriculumName}
@@ -158,7 +160,7 @@ export function ChildrenPage() {
               <div className="flex-1">
                 <p className="text-xl font-bold">{p.name}</p>
                 <p className="text-sm text-ink-soft">
-                  {GRADE_LABEL[p.grade]} · {getFramework(p.framework).name}
+                  {gradeLabel(p.grade, p.framework)} · {getFramework(p.framework).name}
                   {p.birthYear ? ` · about ${thisYear - p.birthYear} years old` : ""}
                 </p>
               </div>

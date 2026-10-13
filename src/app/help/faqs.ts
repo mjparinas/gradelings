@@ -1,7 +1,11 @@
 import { FRAMEWORKS } from "@/content/frameworks";
 import { listRegions } from "@/content/regions";
 import { APP_NAME } from "@/lib/brand";
-import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, TRIAL_DAYS } from "@/lib/plan";
+import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, TRIAL_DAYS } from "@/lib/plan";
+
+const US_STATES = FRAMEWORKS.filter((f) => f.country === "US");
+/** "Washington", or "Washington and Oregon": the US states offered, for answers that need a US sentence. */
+const usStates = listRegions(US_STATES);
 
 export interface HelpSection {
   id: string;
@@ -65,7 +69,7 @@ export const HELP: HelpSection[] = [
     faqs: [
       {
         q: "Which curriculum and grades does it follow?",
-        a: `Kindergarten to Grade 9. Choose ${listRegions(FRAMEWORKS)} when you add a child, and you can switch province later in Children. Math, English language arts, science and social studies are in every province. Core French is in every province, and French Immersion is in every province except Nunavut. Yukon and the Northwest Territories follow the BC curriculum, adapted with local First Nations, Dene and Inuit content. Every unit shows the learning standard it practises. More provinces and states are planned.`,
+        a: `Kindergarten to Grade 9. Choose ${listRegions(FRAMEWORKS)} when you add a child, and you can switch ${US_STATES.length ? "province or state" : "province"} later in Children. Math, English language arts, science and social studies are in every province${US_STATES.length ? " and state" : ""}. Core French is in every province, and French Immersion is in every province except Newfoundland and Labrador, Prince Edward Island and Nunavut. Yukon and the Northwest Territories follow the BC curriculum, adapted with local First Nations, Dene and Inuit content.${US_STATES.length ? ` In ${usStates}, units follow the state's learning standards and are shown in US spelling, with grades named the US way (“4th grade”); there is no French in US states yet.` : ""} Every unit shows the learning standard it practises. More provinces and states are planned.`,
       },
       {
         q: "What is Adventure mode?",
@@ -81,7 +85,7 @@ export const HELP: HelpSection[] = [
       },
       {
         q: "How are the report levels worked out?",
-        a: `In BC, Yukon and the Northwest Territories, levels use the Provincial Proficiency Scale: Emerging, Developing, Proficient and Extending. In Ontario and Manitoba, they follow the Level 1 to 4 achievement scales. In Nova Scotia, reports use four steps that match the wording for your child’s grade band. In New Brunswick, they follow the four-point scale from working below to excelling. In Prince Edward Island, reports use four plain practice steps (Beginning, Approaching, Meeting, Exceeding) you can match to your child’s own report card. In Newfoundland and Labrador, Kindergarten to Grade 6 follow the four-point rating from Not Yet Achieving to Excellent, and Grades 7 to 9 use four practice steps alongside percentage marks. Alberta has no provincial report-card scale, so Alberta and Nunavut reports use four plain steps: Beginning, Approaching, Meeting and Exceeding. In Saskatchewan, they use four levels (Beginning, Approaching, Meeting, Exemplary), since school divisions set their own report-card wording. Only first-try answers count. Proficient needs at least 75% over at least 8 recent answers, and Extending also needs 90% over 16 answers and a passed Challenge. Reports show practice in the app. They are not a report-card mark; your child’s teacher decides proficiency.`,
+        a: `In BC, Yukon and the Northwest Territories, levels use the Provincial Proficiency Scale: Emerging, Developing, Proficient and Extending. In Ontario and Manitoba, they follow the Level 1 to 4 achievement scales. In Nova Scotia, reports use four steps that match the wording for your child’s grade band. In New Brunswick, they follow the four-point scale from working below to excelling. In Prince Edward Island, reports use four plain practice steps (Beginning, Approaching, Meeting, Exceeding) you can match to your child’s own report card. In Newfoundland and Labrador, Kindergarten to Grade 6 follow the four-point rating from Not Yet Achieving to Excellent, and Grades 7 to 9 use four practice steps alongside percentage marks. Alberta has no provincial report-card scale, so Alberta and Nunavut reports use four plain steps: Beginning, Approaching, Meeting and Exceeding. In Saskatchewan, they use four levels (Beginning, Approaching, Meeting, Exemplary), since school divisions set their own report-card wording.${US_STATES.length ? ` ${usStates} has no statewide report card, so reports use the same four plain steps: Beginning, Approaching, Meeting and Exceeding.` : ""} Only first-try answers count. Proficient needs at least 75% over at least 8 recent answers, and Extending also needs 90% over 16 answers and a passed Challenge. Reports show practice in the app. They are not a report-card mark; your child’s teacher decides proficiency.`,
       },
       {
         q: "How does earning game time work?",
@@ -121,7 +125,7 @@ export const HELP: HelpSection[] = [
     faqs: [
       {
         q: "What does it cost?",
-        a: `You can subscribe straight away for ${PRICES.month.label} or ${PRICES.year.label} (${PRICES.year.note}), in Canadian dollars, for up to ${MAX_CHILDREN} children. The free trial is optional: the first ${TRIAL_DAYS} days include everything, and no card is needed. Taxes may be added where required.`,
+        a: `You can subscribe straight away for ${PRICES.month.label} or ${PRICES.year.label} (${PRICES.year.note}), in Canadian dollars, for up to ${MAX_CHILDREN} children.${US_STATES.length ? ` Families in the US pay ${PRICES_BY_CURRENCY.USD.month.label} or ${PRICES_BY_CURRENCY.USD.year.label} in US dollars.` : ""} The free trial is optional: the first ${TRIAL_DAYS} days include everything, and no card is needed. Taxes may be added where required.`,
       },
       {
         q: "What stays free after the trial?",
@@ -161,7 +165,9 @@ export const HELP: HelpSection[] = [
       },
       {
         q: "How are taxes shown?",
-        a: "Prices are in Canadian dollars. Where tax applies, the total is shown at checkout before you pay.",
+        a: US_STATES.length
+          ? "Canadian families pay in Canadian dollars and US families in US dollars. Where tax applies, including US sales tax based on your billing address, the total is shown at checkout before you pay."
+          : "Prices are in Canadian dollars. Where tax applies, the total is shown at checkout before you pay.",
       },
       {
         q: "Why do I need to confirm my email before subscribing?",

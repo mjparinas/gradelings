@@ -3,7 +3,7 @@ import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES_BY_CURRENCY, SUBSCRIBE_HREF
 
 /**
  * The three plan cards, shared by the landing page and the pricing page. All numbers come from lib/plan.ts.
- * Canadian dollars unless the pricing page's switch (behind the `us-launch` flag) asks for US dollars.
+ * Canadian dollars unless the pricing page's CAD/USD switch (shown once a US curriculum is offered) asks for US dollars.
  */
 export function PricingCards({ currency = "CAD" }: { currency?: Currency }) {
   const prices = PRICES_BY_CURRENCY[currency];

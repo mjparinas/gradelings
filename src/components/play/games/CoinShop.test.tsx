@@ -2,12 +2,15 @@
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-const h = vi.hoisted(() => ({ speak: vi.fn() }));
+const h = vi.hoisted(() => ({ speak: vi.fn(), asked: vi.fn() }));
 vi.mock("./coins", async (actual) => {
   const real = await actual<typeof import("./coins")>();
   return {
     ...real,
-    shopOrder: () => ({ target: 35, item: "🍎", money: real.MONEY.slice(0, 3), prompt: "🍎 costs 35¢. Pay exactly 35¢.", speak: "It costs 35 cents. Pay exactly 35 cents." }),
+    shopOrder: (...args: unknown[]) => {
+      h.asked(...args);
+      return { target: 35, item: "🍎", money: real.MONEY.slice(0, 3), prompt: "🍎 costs 35¢. Pay exactly 35¢.", speak: "It costs 35 cents. Pay exactly 35 cents." };
+    },
   };
 });
 vi.mock("@/lib/juice", () => ({ burstFrom: vi.fn(), floatText: vi.fn() }));
@@ -29,6 +32,13 @@ beforeEach(() => {
 afterEach(() => vi.useRealTimers());
 
 describe("Coin Shop", () => {
+  it("pays in the money of the child's country", () => {
+    render(<CoinShop grade="2" band="middle" {...props} />);
+    expect(h.asked).toHaveBeenLastCalledWith("2", "CAD");
+    render(<CoinShop grade="2" band="middle" country="US" {...props} />);
+    expect(h.asked).toHaveBeenLastCalledWith("2", "USD");
+  });
+
   it("pays the exact amount with the fewest coins for a bonus", () => {
     render(<CoinShop grade="2" band="middle" {...props} />);
     expect(h.speak).toHaveBeenCalledWith("It costs 35 cents. Pay exactly 35 cents.");

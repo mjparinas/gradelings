@@ -153,6 +153,13 @@ describe("ChildrenPage", () => {
     expect(live()[0]).toMatchObject({ id: "a", name: "Avery", grade: "5", birthYear: thisYear - 6 });
   });
 
+  it("names a Washington child's grade the US way", () => {
+    useStore.setState({ profiles: [kid("a", "Ava", { grade: "4", framework: "us-wa" }), kid("b", "Ben")] });
+    render(<ChildrenPage />);
+    expect(screen.getByText(/4th grade · Washington/)).toBeInTheDocument();
+    expect(screen.getByText(/Grade 3 · British Columbia/)).toBeInTheDocument();
+  });
+
   it("links each child to their own settings", () => {
     useStore.setState({ profiles: [kid("a", "Ava")] });
     render(<ChildrenPage />);

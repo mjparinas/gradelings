@@ -1,11 +1,11 @@
 // @vitest-environment jsdom
 import { render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import { coursesFor, curriculumPath, gradesWithContent } from "@/components/site/curriculum";
+import { coursesFor, curriculumPath, gradesWithContent, gradeLabel } from "@/components/site/curriculum";
 import { guidePath } from "@/components/site/guides";
 import { getFramework } from "@/content/frameworks";
 import { GUIDE_FRAMEWORKS, guidesFor } from "@/content/guides";
-import { GRADE_LABEL, gradeSlug } from "@/content/subjects";
+import { gradeSlug } from "@/content/subjects";
 import GradeGuide, { generateMetadata, generateStaticParams } from "./page";
 
 // next.config.ts sets trailingSlash, which next/link reads from this variable.
@@ -38,15 +38,15 @@ describe("grade guide page", () => {
   it.each(GUIDE_FRAMEWORKS.map((f) => [f.slug, f.id] as const))("%s Grade 4: names the curriculum, every subject and the neighbouring grades", async (slug, id) => {
     const f = getFramework(id);
     const { container } = render(await GradeGuide(props(slug, "grade-4")));
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(`What your child learns in Grade 4 in ${f.shortName}`);
-    expect(screen.getByRole("heading", { name: `Grade 4 subjects in the ${f.curriculumName}` })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(`What your child learns in ${gradeLabel(f, "4")} in ${f.shortName}`);
+    expect(screen.getByRole("heading", { name: `${gradeLabel(f, "4")} subjects in the ${f.curriculumName}` })).toBeInTheDocument();
     for (const c of coursesFor(f, "4")) {
       expect(screen.getAllByRole("link", { name: "All units" }).map((a) => a.getAttribute("href"))).toContain(curriculumPath.subject(f, "4", c.subject));
       expect(screen.getAllByRole("link", { name: "Help at home" }).map((a) => a.getAttribute("href"))).toContain(guidePath.subject(f, "4", c.subject));
     }
     const nav = screen.getByRole("navigation", { name: "Other grades" });
-    expect(within(nav).getByRole("link", { name: "← Grade 3" })).toHaveAttribute("href", guidePath.grade(f, "3"));
-    expect(within(nav).getByRole("link", { name: "Grade 5 →" })).toHaveAttribute("href", guidePath.grade(f, "5"));
+    expect(within(nav).getByRole("link", { name: `← ${gradeLabel(f, "3")}` })).toHaveAttribute("href", guidePath.grade(f, "3"));
+    expect(within(nav).getByRole("link", { name: `${gradeLabel(f, "5")} →` })).toHaveAttribute("href", guidePath.grade(f, "5"));
 
     // The report card answer uses this province's own level names.
     const levels = f.scoringFor("4").levels.map((l) => l.label).join(", ");
@@ -76,8 +76,8 @@ describe("grade guide page", () => {
     for (const g of gradesWithContent(bc)) {
       const { container, unmount } = render(await GradeGuide(props("bc", gradeSlug(g))));
       const writes = fsa.grades.includes(g);
-      expect(!!screen.queryByRole("link", { name: `Read the ${fsa.short} guide` }), GRADE_LABEL[g]).toBe(writes);
-      expect(faqAnswers(container)[1].includes(fsa.name), GRADE_LABEL[g]).toBe(writes);
+      expect(!!screen.queryByRole("link", { name: `Read the ${fsa.short} guide` }), g).toBe(writes);
+      expect(faqAnswers(container)[1].includes(fsa.name), g).toBe(writes);
       unmount();
     }
   });

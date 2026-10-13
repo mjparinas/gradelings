@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import { coursesFor, curriculumPath, gradesWithContent } from "@/components/site/curriculum";
+import { coursesFor, curriculumPath, gradesWithContent, gradeLabel } from "@/components/site/curriculum";
 import { TEACHER_FRAMEWORKS, teacherPath } from "@/components/site/teachers";
 import { getFramework } from "@/content/frameworks";
 import { gradeSlug } from "@/content/subjects";
@@ -24,7 +24,7 @@ describe("teacher grade page", () => {
   it.each(TEACHER_FRAMEWORKS.map((f) => [f.slug, f.id] as const))("%s Grade 6: every unit to assign, linked to its public page", async (slug, id) => {
     const f = getFramework(id);
     render(await TeacherGradePage(props(slug, "grade-6")));
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(`Grade 6 ${f.shortName} units to assign`);
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(`${gradeLabel(f, "6")} ${f.shortName} units to assign`);
     expect(screen.getByRole("main")).toHaveTextContent(`matched to the ${f.curriculumName}`);
     const hrefs = [...document.querySelectorAll("main section.card li a")].map((a) => a.getAttribute("href"));
     expect(hrefs).toEqual(coursesFor(f, "6").flatMap((c) => c.units.map((u) => curriculumPath.unit(f, "6", c.subject, u.id))));

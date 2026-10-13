@@ -1,11 +1,10 @@
 // @vitest-environment jsdom
 import { render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import { gradesWithContent } from "@/components/site/curriculum";
+import { gradesWithContent, gradeLabel } from "@/components/site/curriculum";
 import { guidePath } from "@/components/site/guides";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { GUIDE_FRAMEWORKS, guidesFor } from "@/content/guides";
-import { GRADE_LABEL } from "@/content/subjects";
 import GuidesHub, { generateMetadata, generateStaticParams } from "./page";
 
 // next.config.ts sets trailingSlash, which next/link reads from this variable.
@@ -39,7 +38,7 @@ describe("guides hub page", () => {
     expect(!!within(main).queryByRole("link", { name: "Core French and French Immersion" })).toBe(!!guides.french);
 
     for (const g of gradesWithContent(f)) {
-      expect(within(main).getByRole("link", { name: GRADE_LABEL[g] })).toHaveAttribute("href", guidePath.grade(f, g));
+      expect(within(main).getByRole("link", { name: gradeLabel(f, g) })).toHaveAttribute("href", guidePath.grade(f, g));
     }
     // Every grade card offers a printable sheet for each of its subjects, all under this framework's slug.
     const sheets = within(main).getAllByRole("link", { name: "Printable sheet" });

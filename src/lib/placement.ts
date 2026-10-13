@@ -1,7 +1,8 @@
 import { coursesForGrade, unitKey } from "@/content";
-import { DEFAULT_FRAMEWORK } from "@/content/frameworks";
+import { DEFAULT_FRAMEWORK, getFramework } from "@/content/frameworks";
+import { gradeName, localeOf } from "@/content/locale";
 import { rand, sample } from "@/content/random";
-import { GRADE_LABEL, GRADE_ORDER } from "@/content/subjects";
+import { GRADE_ORDER } from "@/content/subjects";
 import type { FrameworkId, GradeId, Question, SubjectId } from "@/content/types";
 import type { AppEvent, EventOf } from "./model";
 
@@ -156,12 +157,13 @@ export function compareToGrade(placed: GradeId, current: GradeId): "below" | "at
   return d < 0 ? "below" : d > 0 ? "above" : "at";
 }
 
-export function placementSentence(result: PlacementResult, name: string, current: GradeId): string {
-  const placed = GRADE_LABEL[result.placedGrade];
+export function placementSentence(result: PlacementResult, name: string, current: GradeId, framework?: FrameworkId | string): string {
+  const label = (g: GradeId) => gradeName(g, localeOf(getFramework(framework)));
+  const placed = label(result.placedGrade);
   const where = compareToGrade(result.placedGrade, current);
   if (where === "at") return `${name} is working at a ${placed} level in this subject.`;
-  if (where === "above") return `${name} handled ${placed} work, which is ahead of ${GRADE_LABEL[current]}.`;
-  return `${name} found ${GRADE_LABEL[current]} work tricky, and is most comfortable around ${placed}.`;
+  if (where === "above") return `${name} handled ${placed} work, which is ahead of ${label(current)}.`;
+  return `${name} found ${label(current)} work tricky, and is most comfortable around ${placed}.`;
 }
 
 export function toEvent(result: PlacementResult): Omit<PlacementEvent, "id" | "t" | "profileId"> {

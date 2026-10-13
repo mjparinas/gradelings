@@ -1,5 +1,16 @@
 // Browser calls for classroom mode (teachers and parents). All need a connection and a signed-in account.
 
+/**
+ * Shown to a teacher with a class on a US curriculum. In the US a school can consent for an educational service on
+ * parents' behalf (a school official under FERPA, school authorization under COPPA), so student accounts skip the
+ * parent consent step.
+ */
+export const US_CLASS_CONSENT =
+  "In the US, your school gives consent for this classroom use on parents' behalf: we act as a school official under FERPA, and your school authorizes student accounts under COPPA.";
+
+/** Whether a class follows a US curriculum, so the school-consent line applies. */
+export const isUsClass = (framework: { country: string }) => framework.country === "US";
+
 export interface ClassSummary {
   id: string;
   name: string;

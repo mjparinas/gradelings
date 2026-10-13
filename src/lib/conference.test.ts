@@ -8,7 +8,7 @@ import { buildReport } from "./reports";
 const NOW = Date.parse("2026-10-10T12:00:00Z");
 
 beforeAll(async () => {
-  await Promise.all([loadGrade("3", "ca-bc"), loadGrade("3", "ca-on")]);
+  await Promise.all([loadGrade("3", "ca-bc"), loadGrade("3", "ca-on"), loadGrade("3", "us-wa")]);
 });
 
 const answers = (unit: string, right: number, wrong: number, start = 0): AppEvent[] =>
@@ -25,7 +25,7 @@ const answers = (unit: string, right: number, wrong: number, start = 0): AppEven
     mode: "practice" as const,
   }));
 
-function sheet(framework: "ca-bc" | "ca-on", events: AppEvent[]) {
+function sheet(framework: "ca-bc" | "ca-on" | "us-wa", events: AppEvent[]) {
   const derived = derive(events, NOW);
   const report = buildReport(events, derived, "3", framework, 90, NOW);
   return buildConferenceSheet({ name: "Maya", grade: "3", framework, report, derived, dailyGoalMinutes: 15 });
@@ -41,6 +41,13 @@ describe("report card conversation sheet", () => {
     expect(on.curriculumName).toMatch(/Ontario/);
     expect(bc.scaleName).not.toBe(on.scaleName);
     expect(bc.subjects.map((s) => s.subject)).toEqual(["math", "language", "science", "social"]);
+  });
+
+  it("names the grade the way the family's country does", () => {
+    expect(sheet("ca-bc", events).gradeLabel).toBe("Grade 3");
+    const wa = sheet("us-wa", []);
+    expect(wa.gradeLabel).toBe("3rd grade");
+    expect(wa.questions.join(" ")).toContain("in 3rd grade?");
   });
 
   it("names strengths and tricky spots from real practice", () => {

@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useMemo } from "react";
 import { getUnitRef, parseUnitKey } from "@/content";
 import { DEFAULT_FRAMEWORK, getFramework } from "@/content/frameworks";
-import { GRADE_LABEL, getSubjectMeta } from "@/content/subjects";
+import { getSubjectMeta } from "@/content/subjects";
+import { gradeLabel } from "@/lib/gradeLabel";
 import type { GradeId, SubjectId } from "@/content/types";
 import { compareToGrade, latestPlacements, PLACEMENT_SUBJECTS, placementSentence, STAGE_SIZE, type PlacementEvent } from "@/lib/placement";
 import { eventsFor, useStore } from "@/lib/store";
@@ -12,11 +13,11 @@ import { useGradeContent } from "@/lib/useGradeContent";
 import type { Profile } from "@/lib/model";
 import { ChildTabs, NoChildren, PageTitle, Panel, useChild } from "./common";
 
-function unitTitle(key: string): string {
+function unitTitle(key: string, framework?: string): string {
   const ref = getUnitRef(key);
   if (ref) return `${ref.unit.emoji} ${ref.unit.title}`;
   const parsed = parseUnitKey(key);
-  return parsed ? `${GRADE_LABEL[parsed.grade]} · ${parsed.unitId}` : key;
+  return parsed ? `${gradeLabel(parsed.grade, framework)} · ${parsed.unitId}` : key;
 }
 
 function SubjectResult({ child, subject, result }: { child: Profile; subject: SubjectId; result?: PlacementEvent }) {
@@ -36,11 +37,11 @@ function SubjectResult({ child, subject, result }: { child: Profile; subject: Su
       </div>
       {!result ? (
         <p className="mt-3 font-read text-ink-soft">
-          Not taken yet. {child.name} answers about 8 to 16 questions, starting at {GRADE_LABEL[child.grade]} and moving up or down. It takes about 5 minutes and is not scored out loud, so it stays low-pressure.
+          Not taken yet. {child.name} answers about 8 to 16 questions, starting at {gradeLabel(child.grade, child.framework)} and moving up or down. It takes about 5 minutes and is not scored out loud, so it stays low-pressure.
         </p>
       ) : (
         <>
-          <p className="mt-3 text-lg font-bold">{placementSentence(result, child.name, child.grade)}</p>
+          <p className="mt-3 text-lg font-bold">{placementSentence(result, child.name, child.grade, child.framework)}</p>
           <p className="font-read text-sm text-ink-soft">
             Taken {new Date(result.t).toLocaleDateString("en-CA", { dateStyle: "medium" })}
             {result.confidence === "low" && " · A close call: answers were mixed, so treat this as a starting point."}
@@ -48,7 +49,7 @@ function SubjectResult({ child, subject, result }: { child: Profile; subject: Su
           <ul className="mt-4 flex flex-col gap-2" aria-label="Results by grade">
             {result.stages.map((s) => (
               <li key={s.grade} className="flex items-center gap-3 text-sm">
-                <span className="w-28 shrink-0 font-semibold">{GRADE_LABEL[s.grade as GradeId]}</span>
+                <span className="w-28 shrink-0 font-semibold">{gradeLabel(s.grade as GradeId, child.framework)}</span>
                 <span className="h-3 flex-1 overflow-hidden rounded-full bg-black/10" aria-hidden="true">
                   <span className="block h-full rounded-full bg-[#2a78d6]" style={{ width: `${(s.correct / s.total) * 100}%` }} />
                 </span>
@@ -60,10 +61,10 @@ function SubjectResult({ child, subject, result }: { child: Profile; subject: Su
           </ul>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             <div className="rounded-xl bg-paper p-4">
-              <h3 className="font-bold">Good places to start ({GRADE_LABEL[result.placedGrade]})</h3>
+              <h3 className="font-bold">Good places to start ({gradeLabel(result.placedGrade, child.framework)})</h3>
               <ul className="mt-1 list-disc pl-5 font-read">
                 {result.startUnits.map((k) => (
-                  <li key={k}>{unitTitle(k)}</li>
+                  <li key={k}>{unitTitle(k, child.framework)}</li>
                 ))}
               </ul>
             </div>
@@ -72,7 +73,7 @@ function SubjectResult({ child, subject, result }: { child: Profile; subject: Su
                 <h3 className="font-bold">Worth a quick revisit</h3>
                 <ul className="mt-1 list-disc pl-5 font-read">
                   {result.reviewUnits.map((k) => (
-                    <li key={k}>{unitTitle(k)}</li>
+                    <li key={k}>{unitTitle(k, child.framework)}</li>
                   ))}
                 </ul>
               </div>
@@ -81,10 +82,10 @@ function SubjectResult({ child, subject, result }: { child: Profile; subject: Su
           {where !== "at" && (
             <div className="mt-4 flex flex-wrap items-center gap-3 rounded-xl border border-[#4f8ef7]/40 bg-[#eef4ff] p-4">
               <p className="min-w-0 flex-1 font-read">
-                Lessons follow {child.name}&apos;s grade ({GRADE_LABEL[child.grade]}). To practise {GRADE_LABEL[result.placedGrade]} lessons instead, switch the grade. Their progress is kept.
+                Lessons follow {child.name}&apos;s grade ({gradeLabel(child.grade, child.framework)}). To practise {gradeLabel(result.placedGrade, child.framework)} lessons instead, switch the grade. Their progress is kept.
               </p>
               <button type="button" onClick={() => updateProfile(child.id, { grade: result.placedGrade })} className="rounded-xl bg-[#253047] px-3 py-2 text-sm font-bold text-white">
-                Practise {GRADE_LABEL[result.placedGrade]}
+                Practise {gradeLabel(result.placedGrade, child.framework)}
               </button>
             </div>
           )}

@@ -2,7 +2,9 @@
 import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { FRAMEWORKS } from "@/content/frameworks";
 import { APP_NAME } from "@/lib/brand";
+import { US_CLASS_CONSENT } from "@/lib/classroom";
 
 const mocks = vi.hoisted(() => ({ call: vi.fn() }));
 
@@ -117,14 +119,49 @@ describe("TeacherApp", () => {
     await user.type(await screen.findByLabelText("Class name"), "Ontario Room");
     await user.click(screen.getByRole("combobox", { name: "Grade" }));
     await user.click(screen.getByRole("option", { name: "Grade 4" }));
-    await user.click(screen.getByRole("combobox", { name: "Province" }));
+    // "Province", or "Province or state" once a US state is offered.
+    await user.click(screen.getByRole("combobox", { name: /^Province/ }));
     await user.click(screen.getByRole("option", { name: "Ontario" }));
+    expect(screen.queryByText(US_CLASS_CONSENT)).not.toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Create class" }));
 
     await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/", "POST", {
       name: "Ontario Room", grade: "4", framework: "ca-on",
     }));
     expect(await screen.findByText("Students (1)")).toBeInTheDocument();
+  });
+
+  it("tells the teacher of a Washington class that the school consents for students, and not a Canadian one", async () => {
+    const user = userEvent.setup();
+    const wa = { ...cls, id: "class-wa", name: "Room 4W", grade: "4", framework: "us-wa" };
+    const base = mocks.call.getMockImplementation()!;
+    mocks.call.mockImplementation((url: string, method = "GET") => {
+      if (url === "/api/classes/" && method === "GET") return Promise.resolve({ classes: [cls, wa] });
+      if (url === "/api/classes/?id=class-wa") return Promise.resolve({ ...detail, class: wa });
+      return base(url, method);
+    });
+    render(<TeacherApp />);
+    // US grade names on the class list.
+    expect(await screen.findByText(/4th grade · Washington/)).toBeInTheDocument();
+    await user.click(await screen.findByRole("button", { name: /Room 4W/ }));
+    expect(await screen.findByText(US_CLASS_CONSENT)).toBeInTheDocument();
+    expect(US_CLASS_CONSENT).toMatch(/FERPA/);
+    expect(US_CLASS_CONSENT).toMatch(/COPPA/);
+    await user.click(screen.getByRole("button", { name: /All classes/ }));
+    await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+    expect(await screen.findByRole("heading", { name: "Room 3" })).toBeInTheDocument();
+    expect(screen.queryByText(US_CLASS_CONSENT)).not.toBeInTheDocument();
+  });
+
+  it.runIf(FRAMEWORKS.some((f) => f.id === "us-wa"))("offers Washington when creating a class, with the school-consent line", async () => {
+    const user = userEvent.setup();
+    render(<TeacherApp />);
+    await user.click(await screen.findByRole("combobox", { name: "Province or state" }));
+    expect(screen.getByRole("group", { name: "United States" })).toBeInTheDocument();
+    await user.click(screen.getByRole("option", { name: "Washington" }));
+    expect(screen.getByText(US_CLASS_CONSENT)).toBeInTheDocument();
+    await user.click(screen.getByRole("combobox", { name: "Grade" }));
+    expect(screen.getByRole("option", { name: "4th grade" })).toBeInTheDocument();
   });
 
   it("shows practice as practice, sends due dates and adds students by name", async () => {

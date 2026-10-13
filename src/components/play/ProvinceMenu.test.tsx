@@ -2,7 +2,7 @@
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
-import { FRAMEWORKS } from "@/content/frameworks";
+import { FRAMEWORKS, getFramework } from "@/content/frameworks";
 import { ProvinceMenu } from "./ProvinceMenu";
 
 const menu = () => screen.getByRole("combobox", { name: "Where do you live?" });
@@ -28,6 +28,26 @@ describe("ProvinceMenu", () => {
     expect(onChange).toHaveBeenCalledWith("ca-ab");
     expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
     expect(box).toHaveFocus();
+  });
+
+  it("groups Canadian provinces and US states, and keys move through both", async () => {
+    const onChange = vi.fn();
+    const offered = [...FRAMEWORKS.filter((f) => f.country === "CA"), getFramework("washington")];
+    render(<ProvinceMenu value="ca-bc" onChange={onChange} frameworks={offered} />);
+    await userEvent.click(menu());
+    const canada = screen.getByRole("group", { name: "Canada" });
+    const us = screen.getByRole("group", { name: "United States" });
+    expect(within(canada).getByRole("option", { name: "Ontario" })).toBeInTheDocument();
+    expect(within(us).getByRole("option", { name: "Washington" })).toBeInTheDocument();
+    expect(within(us).queryByRole("option", { name: "Ontario" })).not.toBeInTheDocument();
+    await userEvent.keyboard("{End}{Enter}");
+    expect(onChange).toHaveBeenCalledWith("us-wa");
+  });
+
+  it("shows no country headings while only Canada is offered", async () => {
+    render(<ProvinceMenu value="ca-bc" onChange={vi.fn()} frameworks={FRAMEWORKS.filter((f) => f.country === "CA")} />);
+    await userEvent.click(menu());
+    expect(screen.queryByRole("group")).not.toBeInTheDocument();
   });
 
   it("chooses a province with the arrow keys", async () => {

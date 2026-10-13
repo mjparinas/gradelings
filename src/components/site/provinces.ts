@@ -119,3 +119,46 @@ export function provinceCoverage(frameworks: readonly Framework[]): ProvinceCove
     gaps,
   };
 }
+
+/** True once a US curriculum is offered, so public pages show US dollars beside Canadian dollars. */
+export function offersUsd(frameworks: readonly Pick<Framework, "country">[]): boolean {
+  return frameworks.some((f) => f.country === "US");
+}
+
+export interface CountryGroup {
+  country: Framework["country"];
+  /** Heading for a picker: "Canada" or "United States". */
+  heading: string;
+  frameworks: Framework[];
+}
+
+/** Frameworks grouped for pickers: Canadian provinces and territories first, then US states. Empty groups are left out. */
+export function byCountry(frameworks: readonly Framework[]): CountryGroup[] {
+  const groups: CountryGroup[] = [
+    { country: "CA", heading: "Canada", frameworks: frameworks.filter((f) => f.country === "CA") },
+    { country: "US", heading: "United States", frameworks: frameworks.filter((f) => f.country === "US") },
+  ];
+  return groups.filter((g) => g.frameworks.length > 0);
+}
+
+/** "province", or "province or state" once a US state is offered. For sentences like "Pick their grade and province". */
+export function regionWord(frameworks: readonly Pick<Framework, "country">[]): string {
+  return offersUsd(frameworks) ? "province or state" : "province";
+}
+
+/**
+ * Where the curriculum is offered, for marketing copy: "12 provinces and territories", or
+ * "12 Canadian provinces and territories and Washington State" once a state is offered.
+ */
+export function regionSummary(frameworks: readonly Framework[]): string {
+  const ca = frameworks.filter((f) => f.country === "CA").length;
+  const us = frameworks.filter((f) => f.country === "US");
+  if (!us.length) return `${ca} provinces and territories`;
+  const states = us.length === 1 ? `${us[0].region} State` : `${us.length} US states`;
+  return ca ? `${ca} Canadian provinces and territories and ${states}` : states;
+}
+
+/** The currencies public pages list prices in: Canadian dollars, plus US dollars once a US curriculum is offered. */
+export function siteCurrencies(frameworks: readonly Pick<Framework, "country">[]): ("CAD" | "USD")[] {
+  return offersUsd(frameworks) ? ["CAD", "USD"] : ["CAD"];
+}

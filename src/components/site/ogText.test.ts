@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { FRAMEWORKS } from "@/content/frameworks";
+import { FRAMEWORKS, getFramework } from "@/content/frameworks";
 import { gradeSlug } from "@/content/subjects";
 import { coursesFor, gradesWithContent } from "./curriculum";
 import { cardQuestion, countMilestoneCard, curriculumCard, guideCard, gradeSheetsCard, reportCardCard, unitCard, unitMilestoneCard, worksheetCard } from "./ogText";
@@ -15,7 +15,7 @@ describe("share cards", () => {
 
   it("has a card for every curriculum, guide and report-card page that gets one", () => {
     for (const f of FRAMEWORKS) {
-      expect(curriculumCard({ framework: f.slug })?.title).toMatch(/Kindergarten to Grade 9 practice|to Grade/);
+      expect(curriculumCard({ framework: f.slug })?.title).toMatch(f.country === "US" ? /^Kindergarten through 9th grade practice$/ : /Kindergarten to Grade 9 practice|to Grade/);
       expect(reportCardCard(f.slug)?.title).toContain(f.shortName);
       for (const g of gradesWithContent(f)) {
         expect(curriculumCard({ framework: f.slug, grade: gradeSlug(g) })).toBeDefined();
@@ -26,6 +26,17 @@ describe("share cards", () => {
       expect(guideCard({ framework: f.slug })).toBeDefined();
       for (const g of gradesWithContent(f)) for (const c of coursesFor(f, g)) expect(guideCard({ framework: f.slug, grade: gradeSlug(g), subject: c.subject })?.title).toContain("help at home");
     }
+  });
+
+  it("speaks US English on a state's cards: 4th grade, 4th grader, practice, no French", () => {
+    expect(curriculumCard({ framework: "washington" })).toMatchObject({ title: "Kindergarten through 9th grade practice", line: "Math · Language Arts · Science · Social Studies" });
+    expect(curriculumCard({ framework: "washington", grade: "grade-4", subject: "math" })).toMatchObject({ kicker: "Washington curriculum · 4th grade", title: "4th grade Math" });
+    expect(guideCard({ framework: "washington" })?.line).toBe("Kindergarten through 9th grade, in the words of the report card");
+    expect(worksheetCard({ framework: "washington", grade: "grade-4", subject: "math" })?.line).toBe("Print it, try it, then practice free");
+    expect(worksheetCard({ framework: "bc", grade: "grade-4", subject: "math" })?.line).toBe("Print it, try it, then practise free");
+    const unit = coursesFor(getFramework("us-wa"), "4").find((c) => c.subject === "math")!.units.find((u) => unitCard({ framework: "washington", grade: "grade-4", subject: "math", unit: u.id })?.question)!;
+    expect(unitCard({ framework: "washington", grade: "grade-4", subject: "math", unit: unit.id })?.title).toBe("Can your 4th grader solve this?");
+    expect(curriculumCard({ framework: "bc" })?.line).toContain("French");
   });
 
   it("has no card for a page that doesn't exist", () => {

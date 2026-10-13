@@ -15,12 +15,13 @@ const h = vi.hoisted(() => ({
   gameBest: {} as Record<string, number>,
   level: 1,
   grade: "3",
+  framework: "ca-bc",
 }));
 
 // Each game is a stand-in that lets the test report a score, a level or a game over.
 const stub = vi.hoisted(() => (name: string) => ({
-  [name]: ({ onScore, onLevel, onOver, band }: GameProps) => (
-    <div data-testid="game" data-band={band}>
+  [name]: ({ onScore, onLevel, onOver, band, country }: GameProps) => (
+    <div data-testid="game" data-band={band} data-country={country}>
       {name}
       <button type="button" onClick={() => onScore(50)}>
         score 50
@@ -41,7 +42,7 @@ vi.mock("@/lib/speech", () => ({ stopSpeaking: h.stopSpeaking }));
 vi.mock("@/lib/sound", () => ({ sounds: { complete: vi.fn() } }));
 vi.mock("@/lib/store", () => ({
   useStore: (select: (s: unknown) => unknown) => select({ log: h.log }),
-  useActiveProfile: () => ({ id: "p1", name: "Ava", grade: h.grade, framework: "ca-bc", confetti: "hearts" }),
+  useActiveProfile: () => ({ id: "p1", name: "Ava", grade: h.grade, framework: h.framework, confetti: "hearts" }),
   useChildSettings: () => h.settings,
   useDerived: () => ({ gameBest: h.gameBest, level: h.level }),
 }));
@@ -83,6 +84,7 @@ beforeEach(() => {
   h.gameBest = {};
   h.level = 1;
   h.grade = "3";
+  h.framework = "ca-bc";
   time({});
 });
 
@@ -197,6 +199,21 @@ describe("GameScreen", () => {
     render(<GameScreen id="bridge" />);
     click(/Play!/);
     expect(screen.getByTestId("game")).toHaveTextContent("WordBridge");
+  });
+
+  it("tells a game which country the child's curriculum is in", () => {
+    h.level = 6;
+    render(<GameScreen id="map" />);
+    click(/Play!/);
+    expect(screen.getByTestId("game")).toHaveAttribute("data-country", "CA");
+  });
+
+  it("gives a child on Washington's curriculum the US version of a game", () => {
+    h.level = 6;
+    h.framework = "us-wa";
+    render(<GameScreen id="coins" />);
+    click(/Play!/);
+    expect(screen.getByTestId("game")).toHaveAttribute("data-country", "US");
   });
 
   it("renders nothing for an unknown game", () => {

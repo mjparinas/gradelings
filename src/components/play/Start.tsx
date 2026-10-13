@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { AVAILABLE_GRADES } from "@/content";
 import { DEFAULT_FRAMEWORK, FRAMEWORKS, getFramework } from "@/content/frameworks";
-import { GRADE_LABEL, GRADE_SHORT } from "@/content/subjects";
+import { GRADE_SHORT } from "@/content/subjects";
+import { gradeLabel } from "@/lib/gradeLabel";
 import type { FrameworkId, GradeId } from "@/content/types";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { MAX_CHILDREN } from "@/lib/plan";
@@ -157,14 +158,14 @@ export function NewChild({ onDone, onCancel, first = false }: { onDone: (id: str
               aria-pressed={grade === g}
               onClick={() => setGrade(g)}
               className={`btn h-16 min-w-16 px-4 text-2xl ${grade === g ? "btn-good scale-110" : ""}`}
-              aria-label={GRADE_LABEL[g]}
+              aria-label={gradeLabel(g, frameworkId)}
             >
               {GRADE_SHORT[g]}
             </button>
           ))}
         </div>
         <p className="mt-2 font-read text-sm text-ink-soft">
-          {grade ? `${GRADE_LABEL[grade]} · ${framework.curriculumName}` : "K means Kindergarten."}
+          {grade ? `${gradeLabel(grade, frameworkId)} · ${framework.curriculumName}` : "K means Kindergarten."}
         </p>
         {FRAMEWORKS.length > 1 && <ProvinceMenu value={frameworkId} onChange={setFrameworkId} />}
       </div>
@@ -222,7 +223,7 @@ function PlayerTile({ p, onPick }: { p: Profile; onPick: () => void }) {
       </span>
       <span className="text-2xl font-bold">{p.name}</span>
       <span className="text-base text-ink-soft">
-        {GRADE_LABEL[p.grade]} · Lv {d.level}
+        {gradeLabel(p.grade, p.framework)} · Lv {d.level}
       </span>
     </button>
   );

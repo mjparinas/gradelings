@@ -7,13 +7,14 @@ import { Critter } from "@/components/Critter";
 import { SitePage } from "@/components/site/SiteChrome";
 import { appJsonLd } from "@/components/site/jsonld";
 import { curriculumPath } from "@/components/site/curriculum";
-import { kidPracticeSteps, provinceCoverage, regionList } from "@/components/site/provinces";
+import { byCountry, kidPracticeSteps, offersUsd, provinceCoverage, regionList, regionSummary, regionWord, siteCurrencies } from "@/components/site/provinces";
 import { DEFAULT_GOAL_MINUTES } from "@/lib/model";
 import { GAMES } from "@/components/play/games/types";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { GRADE_LABEL } from "@/content/subjects";
+import { TEACHER_FRAMEWORKS } from "@/components/site/teachers";
 import { APP_NAME } from "@/lib/brand";
-import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, TRIAL_DAYS } from "@/lib/plan";
+import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, TRIAL_DAYS } from "@/lib/plan";
 import { TEACHER_SIGNUP, teacherPath } from "@/components/site/teachers";
 import { Disclosure } from "@/components/Disclosure";
 import { JsonLd, ORG_JSON_LD, SITE_URL } from "@/lib/site";
@@ -34,7 +35,7 @@ const FEATURES = [
 ];
 
 const STEPS = [
-  { title: "Add your child", body: "Pick their grade and province. It takes two minutes." },
+  { title: "Add your child", body: `Pick their grade and ${regionWord(FRAMEWORKS)}. It takes two minutes.` },
   { title: "They play and practise", body: "One tap starts Adventure. A wrong answer gets a hint and another try, never a buzzer." },
   { title: "You see where they stand", body: "Reports use your report card's levels and suggest what to practise next." },
 ];
@@ -57,11 +58,13 @@ const FAQS = [
   },
   {
     q: `Which grades does ${APP_NAME} cover?`,
-    a: "Kindergarten to Grade 9, in math, English language arts, science and social studies, plus French Immersion and Core French where your province teaches them. The text, buttons and read-aloud adapt to the child's age: big pictures and spoken prompts for Kindergarten and Grade 1, more independence for older kids.",
+    a: `Kindergarten to Grade 9, in math, English language arts, science and social studies, plus French Immersion and Core French where your province teaches them${offersUsd(FRAMEWORKS) ? " (US states have no French yet)" : ""}. The text, buttons and read-aloud adapt to the child's age: big pictures and spoken prompts for Kindergarten and Grade 1, more independence for older kids.`,
   },
   {
-    q: "Is it matched to our provincial curriculum?",
-    a: `Yes. Choose ${regionList(FRAMEWORKS)} when you add a child. Every unit is tagged with that province's learning standard, and parent reports use that province's report-card levels. More provinces and states are on the way.`,
+    q: offersUsd(FRAMEWORKS) ? "Is it matched to our province's or state's curriculum?" : "Is it matched to our provincial curriculum?",
+    a: offersUsd(FRAMEWORKS)
+      ? `Yes. Choose ${regionList(FRAMEWORKS)} when you add a child. Every unit is tagged with that province's or state's learning standard, and parent reports use its report-card levels. More provinces and states are on the way.`
+      : `Yes. Choose ${regionList(FRAMEWORKS)} when you add a child. Every unit is tagged with that province's learning standard, and parent reports use that province's report-card levels. More provinces and states are on the way.`,
   },
   {
     q: "Does it work without internet?",
@@ -73,7 +76,7 @@ const FAQS = [
   },
   {
     q: "How much does it cost?",
-    a: `Try everything free for ${TRIAL_DAYS} days, no card needed. After that, the family plan is ${PRICES.month.label} or ${PRICES.year.label} (CAD) for up to ${MAX_CHILDREN} children. Without a plan, the first ${FREE_UNITS_PER_COURSE} units of every subject stay free.`,
+    a: `Try everything free for ${TRIAL_DAYS} days, no card needed. After that, the family plan is ${PRICES.month.label} or ${PRICES.year.label} (CAD)${offersUsd(FRAMEWORKS) ? `, or ${PRICES_BY_CURRENCY.USD.month.label} or ${PRICES_BY_CURRENCY.USD.year.label} for families in the US,` : ""} for up to ${MAX_CHILDREN} children. Without a plan, the first ${FREE_UNITS_PER_COURSE} units of every subject stay free.`,
   },
   {
     q: "Are there ads or in-app purchases for kids?",
@@ -133,7 +136,7 @@ export default function Home() {
         data={[
           ORG_JSON_LD,
           { "@context": "https://schema.org", "@type": "WebSite", name: APP_NAME, url: SITE_URL },
-          appJsonLd(),
+          appJsonLd(siteCurrencies(FRAMEWORKS)),
           {
             "@context": "https://schema.org",
             "@type": "FAQPage",
@@ -145,12 +148,12 @@ export default function Home() {
       {/* Hero */}
       <section className="grid items-center gap-8 pb-6 md:grid-cols-[1.1fr_1fr] md:pt-4 md:pb-12">
         <div>
-          <p className="mb-3 inline-flex rounded-full bg-[#fff4cc] px-3 py-1 text-sm font-bold text-[#8a6400]">Canadian curriculum · Kindergarten to Grade 9</p>
+          <p className="mb-3 inline-flex rounded-full bg-[#fff4cc] px-3 py-1 text-sm font-bold text-[#8a6400]">{offersUsd(FRAMEWORKS) ? "Canadian and US curriculum" : "Canadian curriculum"} · Kindergarten to Grade 9</p>
           <h1 className="text-4xl leading-tight font-bold sm:text-5xl lg:text-6xl">
             Practice that feels like play. <span className="text-[#4f8ef7]">Progress you can read.</span>
           </h1>
           <p className="mt-4 max-w-xl font-read text-lg text-ink-soft sm:text-xl">
-            About {DEFAULT_GOAL_MINUTES.other} minutes a day of practice matched to your child&apos;s grade and province, in math, reading, science, social studies and French. Your child earns game time by learning. You see their progress in the same words as their report card.
+            About {DEFAULT_GOAL_MINUTES.other} minutes a day of practice matched to your child&apos;s grade and {regionWord(FRAMEWORKS)}, in math, reading, science, social studies and French{offersUsd(FRAMEWORKS) ? " (French in Canada)" : ""}. Your child earns game time by learning. You see their progress in the same words as their report card.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link prefetch={false} href="/play/" className="btn btn-good min-h-14 px-8 text-xl">
@@ -226,19 +229,24 @@ export default function Home() {
       {/* Coverage */}
       <section aria-labelledby="coverage" className="py-8">
         <h2 id="coverage" className="mb-2 text-3xl font-bold sm:text-4xl">
-          Matched to your province
+          Matched to your {regionWord(FRAMEWORKS)}
         </h2>
         <p className="mb-6 max-w-2xl font-read text-lg text-ink-soft">
-          {coverage.range ? `${GRADE_LABEL[coverage.range.from]} to ${GRADE_LABEL[coverage.range.to]} across ${FRAMEWORKS.length} provinces and territories. ` : ""}
+          {coverage.range ? `${GRADE_LABEL[coverage.range.from]} to ${GRADE_LABEL[coverage.range.to]} across ${regionSummary(FRAMEWORKS)}. ` : ""}
           Pick yours to see every unit your child will practise.
         </p>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-          {FRAMEWORKS.map((f) => (
-            <Link key={f.id} href={curriculumPath.framework(f)} className="card flex min-h-12 items-center p-4 text-lg font-bold hover:border-[#4f8ef7]">
-              {f.region}
-            </Link>
-          ))}
-        </div>
+        {byCountry(FRAMEWORKS).map((group, i, groups) => (
+          <div key={group.country} className={i > 0 ? "mt-5" : ""}>
+            {groups.length > 1 && <h3 className="mb-2 text-xl font-bold">{group.heading}</h3>}
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+              {group.frameworks.map((f) => (
+                <Link key={f.id} href={curriculumPath.framework(f)} className="card flex min-h-12 items-center p-4 text-lg font-bold hover:border-[#4f8ef7]">
+                  {f.region}
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
       </section>
 
       {/* Report cards */}
@@ -249,10 +257,10 @@ export default function Home() {
               Speaks your report card&apos;s language
             </h2>
             <p className="mt-3 font-read text-lg text-ink-soft">
-              Parent reports use your province&apos;s own report-card levels, in plain words, so you can see what the wording means and what to practise next. Your child sees four friendly steps instead, from {kidSteps[0]?.icon} {kidSteps[0]?.kidLabel} to {kidSteps[kidSteps.length - 1]?.icon} {kidSteps[kidSteps.length - 1]?.kidLabel}. This describes practice, not a report-card mark.
+              Parent reports use your {offersUsd(FRAMEWORKS) ? "province's or state's" : "province's"} own report-card levels, in plain words, so you can see what the wording means and what to practise next. Your child sees four friendly steps instead, from {kidSteps[0]?.icon} {kidSteps[0]?.kidLabel} to {kidSteps[kidSteps.length - 1]?.icon} {kidSteps[kidSteps.length - 1]?.kidLabel}. This describes practice, not a report-card mark.
             </p>
             <Link href="/report-cards/" className="btn mt-5 min-h-12 px-5 text-lg">
-              Report cards by province
+              Report cards by {regionWord(FRAMEWORKS).replace(" or ", " and ")}
             </Link>
           </div>
           <ol className="grid grid-cols-2 gap-3">
@@ -343,7 +351,7 @@ export default function Home() {
               Teaching a class?
             </h2>
             <p className="mt-3 font-read text-lg text-ink-soft">
-              Create a class, pick your province, and assign units from that curriculum. Families join with a code and choose what is shared. Classes are free for now.
+              Create a class, pick your {regionWord(TEACHER_FRAMEWORKS)}, and assign units from that curriculum. Families join with a code and choose what is shared. Classes are free for now.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <Link prefetch={false} href={TEACHER_SIGNUP} className="btn btn-good min-h-12 px-5 text-lg">

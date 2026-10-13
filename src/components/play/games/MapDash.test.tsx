@@ -3,9 +3,11 @@ import { act, fireEvent, render, screen } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 // A fixed 2 × 1 town: the store is right, the school is wrong.
-const h = vi.hoisted(() => ({ speak: vi.fn(), boop: vi.fn() }));
+const h = vi.hoisted(() => ({ speak: vi.fn(), boop: vi.fn(), asked: vi.fn() }));
 vi.mock("./map", () => ({
-  mapQuestion: () => ({
+  mapQuestion: (...args: unknown[]) => {
+    h.asked(...args);
+    return {
     board: {
       kind: "town",
       cols: 2,
@@ -19,7 +21,8 @@ vi.mock("./map", () => ({
     speak: "Tap the place to the right of the school",
     answers: ["store"],
     why: "The store is to the right of the school.",
-  }),
+    };
+  },
 }));
 vi.mock("@/lib/juice", () => ({ burstFrom: vi.fn(), floatText: vi.fn() }));
 vi.mock("@/lib/sound", () => ({ sounds: { pop: vi.fn(), boop: h.boop, tap: vi.fn() } }));
@@ -71,6 +74,13 @@ describe("Map Dash", () => {
     expect(lives()).toBe("0 lives");
     wait(800);
     expect(props.onOver).toHaveBeenCalled();
+  });
+
+  it("asks about the child's own country: Canada unless the curriculum is American", () => {
+    render(<MapDash grade="4" band="big" {...props} />);
+    expect(h.asked).toHaveBeenLastCalledWith("4", "CA");
+    render(<MapDash grade="4" band="big" country="US" {...props} />);
+    expect(h.asked).toHaveBeenLastCalledWith("4", "US");
   });
 
   it("doesn't run the clock while the app is in the background", () => {

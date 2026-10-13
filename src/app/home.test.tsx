@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { render, screen, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { FREE_UNITS_PER_COURSE, TRIAL_DAYS } from "@/lib/plan";
+import { FREE_UNITS_PER_COURSE, PRICES_BY_CURRENCY, TRIAL_DAYS } from "@/lib/plan";
 import Home from "./page";
 
 describe("home page", () => {
@@ -32,5 +32,17 @@ describe("home page", () => {
   it("doesn't claim every province", () => {
     render(<Home />);
     expect(screen.queryByText(/Every province/)).toBeNull();
+  });
+
+  it("offers Canadian provinces and US states, grouped, with US prices in the FAQ", () => {
+    render(<Home />);
+    const coverage = screen.getByRole("heading", { name: "Matched to your province or state" }).closest("section")!;
+    expect(within(coverage).getByRole("heading", { name: "Canada" })).toBeInTheDocument();
+    expect(within(coverage).getByRole("heading", { name: "United States" })).toBeInTheDocument();
+    expect(within(coverage).getByRole("link", { name: "Washington" }).getAttribute("href")).toMatch(/^\/curriculum\/washington\/?$/);
+    expect(coverage.textContent).toContain("Canadian provinces and territories and Washington State");
+    const faq = screen.getByRole("heading", { name: "Questions from parents" }).closest("section")!;
+    expect(faq.textContent).toContain(PRICES_BY_CURRENCY.USD.month.label);
+    expect(faq.textContent).toContain("Washington");
   });
 });

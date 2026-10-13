@@ -4,9 +4,9 @@ import { notFound } from "next/navigation";
 import { breadcrumbJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { TeacherCta } from "@/components/site/TeacherCta";
-import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle } from "@/components/site/curriculum";
+import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, gradeLabel } from "@/components/site/curriculum";
 import { TEACHER_FRAMEWORKS, teacherPath } from "@/components/site/teachers";
-import { GRADE_LABEL, getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
+import { getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { JsonLd } from "@/lib/site";
 
@@ -29,8 +29,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { framework: f, grade } = r;
   const subjects = coursesFor(f, grade).map((c) => subjectInSentence(subjectSeoTitle(c.subject)));
   return {
-    title: `${GRADE_LABEL[grade]} ${f.shortName} units to assign to your class`,
-    description: `${GRADE_LABEL[grade]} ${f.curriculumName} units for teachers: ${subjects.join(", ")}. Assign them to your class in ${APP_NAME} and see each student's practice.`,
+    title: `${gradeLabel(f, grade)} ${f.shortName} units to assign to your class`,
+    description: `${gradeLabel(f, grade)} ${f.curriculumName} units for teachers: ${subjects.join(", ")}. Assign them to your class in ${APP_NAME} and see each student's practice.`,
     alternates: { canonical: teacherPath.grade(f, grade) },
   };
 }
@@ -43,7 +43,7 @@ export default async function TeacherGradePage({ params }: Props) {
     { label: "Home", href: "/" },
     { label: "For teachers", href: teacherPath.hub() },
     { label: f.region, href: teacherPath.framework(f) },
-    { label: GRADE_LABEL[grade] },
+    { label: gradeLabel(f, grade) },
   ];
   const grades = gradesWithContent(f);
   const i = grades.indexOf(grade);
@@ -53,10 +53,10 @@ export default async function TeacherGradePage({ params }: Props) {
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <Crumbs items={crumbs} />
       <h1 className="text-4xl font-bold">
-        {GRADE_LABEL[grade]} {f.shortName} units to assign
+        {gradeLabel(f, grade)} {f.shortName} units to assign
       </h1>
       <p className="mt-2 max-w-3xl font-read text-lg text-ink-soft">
-        Every {GRADE_LABEL[grade]} unit in {APP_NAME}, matched to the {f.curriculumName}. Open a unit to read what it covers and try sample questions, then assign it to your class.
+        Every {gradeLabel(f, grade)} unit in {APP_NAME}, matched to the {f.curriculumName}. Open a unit to read what it covers and try sample questions, then assign it to your class.
       </p>
       <div className="mt-6 grid gap-5 lg:grid-cols-2">
         {coursesFor(f, grade).map((c) => {
@@ -89,14 +89,14 @@ export default async function TeacherGradePage({ params }: Props) {
       <nav aria-label="Other grades" className="mt-8 flex flex-wrap justify-between gap-3">
         {i > 0 ? (
           <Link href={teacherPath.grade(f, grades[i - 1])} className="btn min-h-12 px-4 text-lg">
-            ← {GRADE_LABEL[grades[i - 1]]}
+            ← {gradeLabel(f, grades[i - 1])}
           </Link>
         ) : (
           <span />
         )}
         {i < grades.length - 1 && (
           <Link href={teacherPath.grade(f, grades[i + 1])} className="btn min-h-12 px-4 text-lg">
-            {GRADE_LABEL[grades[i + 1]]} →
+            {gradeLabel(f, grades[i + 1])} →
           </Link>
         )}
       </nav>

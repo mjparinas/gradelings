@@ -4,17 +4,22 @@ import Link from "next/link";
 import { useCallback, useEffect, useState, type FormEvent } from "react";
 import { coursesForGrade, getUnitRef, loadGrade } from "@/content";
 import { FRAMEWORKS, getFramework } from "@/content/frameworks";
-import { GRADE_LABEL, GRADE_ORDER, getSubjectMeta } from "@/content/subjects";
+import { GRADE_ORDER, getSubjectMeta } from "@/content/subjects";
 import type { FrameworkId, GradeId } from "@/content/types";
 import { DateField } from "@/components/DateField";
 import { SelectMenu } from "@/components/SelectMenu";
 import { APP_NAME } from "@/lib/brand";
-import { call, classInsights, type ClassInvite, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
+import { call, classInsights, isUsClass, US_CLASS_CONSENT, type ClassInvite, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
+import { frameworkGroups, frameworkMenu } from "@/lib/frameworkGroups";
+import { gradeLabel } from "@/lib/gradeLabel";
 import { levelInfo } from "@/lib/proficiency";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
 
 // The teacher area: create a class, share its code, assign BC units and see each linked student's
-// practice results. Each class follows one province (BC, Ontario or Alberta). It talks to the server only (no kids' store), so it stays light.
+// practice results. Each class follows one province, territory or state (FRAMEWORKS). It talks to the server only (no kids' store), so it stays light.
+
+/** "Province" while only Canada is offered, "Province or state" once a US state is. */
+const REGION_LABEL = frameworkGroups(FRAMEWORKS).length > 1 ? "Province or state" : "Province";
 
 const pct = (v: number) => `${Math.round(v * 100)}%`;
 const btn = "min-h-11 rounded-xl px-4 font-bold";
@@ -117,7 +122,7 @@ function ClassList({ onOpen }: { onOpen: (id: string) => void }) {
             {invites.map((i) => (
               <li key={i.classId} className="flex flex-wrap items-center gap-3 py-2">
                 <span className="min-w-48 flex-1 font-read">
-                  <b>{i.name}</b> ({GRADE_LABEL[i.grade as GradeId]}) from {i.from}
+                  <b>{i.name}</b> ({gradeLabel(i.grade as GradeId, i.framework)}) from {i.from}
                 </span>
                 <button type="button" className={`${btn} bg-[#25b47e] text-[#0f172a]`} onClick={() => void answer(i, true)}>
                   Accept
@@ -136,7 +141,7 @@ function ClassList({ onOpen }: { onOpen: (id: string) => void }) {
             <button type="button" onClick={() => onOpen(c.id)} className="w-full rounded-2xl border border-line bg-white p-4 text-left">
               <span className="block text-xl font-bold">{c.name}</span>
               <span className="block font-read text-ink-soft">
-                {GRADE_LABEL[c.grade as GradeId]} · {getFramework(c.framework as FrameworkId).region} · {c.students} {c.students === 1 ? "student" : "students"}{c.role === "co-teacher" ? " · you co-teach" : ""} · code <b className="font-mono tracking-widest">{c.joinCode}</b>
+                {gradeLabel(c.grade as GradeId, c.framework)} · {getFramework(c.framework as FrameworkId).region} · {c.students} {c.students === 1 ? "student" : "students"}{c.role === "co-teacher" ? " · you co-teach" : ""} · code <b className="font-mono tracking-widest">{c.joinCode}</b>
               </span>
             </button>
           </li>
@@ -147,9 +152,10 @@ function ClassList({ onOpen }: { onOpen: (id: string) => void }) {
           Class name
           <input className="mt-1 min-h-11 rounded-xl border border-line px-3" value={name} maxLength={60} onChange={(e) => setName(e.target.value)} required />
         </label>
-        <SelectMenu label="Grade" block={false} value={grade} onChange={(next) => setGrade(next as GradeId)} options={GRADE_ORDER.map((g) => ({ value: g, label: GRADE_LABEL[g] }))} />
-        <SelectMenu label="Province" block={false} value={framework} onChange={(next) => setFramework(next as FrameworkId)} options={FRAMEWORKS.map((f) => ({ value: f.id, label: f.region }))} />
+        <SelectMenu label="Grade" block={false} value={grade} onChange={(next) => setGrade(next as GradeId)} options={GRADE_ORDER.map((g) => ({ value: g, label: gradeLabel(g, framework) }))} />
+        <SelectMenu label={REGION_LABEL} block={false} value={framework} onChange={(next) => setFramework(next as FrameworkId)} {...frameworkMenu((f) => f.region)} />
         <button className={`${btn} bg-[#25b47e] text-[#0f172a]`}>Create class</button>
+        {isUsClass(getFramework(framework)) && <p className="w-full font-read text-sm text-ink-soft">{US_CLASS_CONSENT}</p>}
       </form>
       {err && (
         <p role="alert" className="mt-3 text-nudge-dark">
@@ -192,6 +198,7 @@ function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url
       <p className="mt-1 font-read text-ink-soft">
         Add students by first name or nickname. Each gets a code to sign in with at {APP_NAME} (no email or password). The class stores only that name, the class grade and practice results, and deletes it all when you remove the student or close the class.
       </p>
+      {isUsClass(getFramework(cls.framework)) && <p className="mt-2 font-read text-ink-soft">{US_CLASS_CONSENT}</p>}
       {roster.length > 0 && (
         <ul className="mt-3 divide-y divide-line">
           {roster.map((r) => (
@@ -446,7 +453,7 @@ function PrintSheet({ data, label, mode }: { data: ClassDetail; label: (key: str
   return (
     <div className="hidden print:block">
       <h1 className="text-2xl font-bold">
-        {cls.name} · {GRADE_LABEL[cls.grade]} · {getFramework(cls.framework).curriculumName}
+        {cls.name} · {gradeLabel(cls.grade, cls.framework)} · {getFramework(cls.framework).curriculumName}
       </h1>
       <p className="text-sm">
         Practice summary printed {new Date(now).toLocaleDateString("en-CA", { dateStyle: "long" })}. This reflects practice in {APP_NAME}, not a report-card mark.
@@ -560,7 +567,7 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
       </button>
       <h1 className="text-3xl font-bold">{cls.name}</h1>
       <p className="font-read text-ink-soft">
-        {GRADE_LABEL[cls.grade]} · {getFramework(cls.framework).curriculumName}
+        {gradeLabel(cls.grade, cls.framework)} · {getFramework(cls.framework).curriculumName}
       </p>
 
       <section className="mt-4 rounded-2xl border border-line bg-white p-5">

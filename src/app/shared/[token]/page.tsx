@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { gradeName, localeOf } from "@/content/locale";
 import { getFramework } from "@/content/frameworks";
-import { GRADE_LABEL, getSubjectMeta } from "@/content/subjects";
+import { getSubjectMeta } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { levelInfo } from "@/lib/proficiency";
 import { loadSharedReport } from "@/server/reportData";
@@ -41,7 +42,7 @@ export default async function SharedReport({ params }: PageProps<"/shared/[token
         <p className="text-sm font-semibold text-ink-soft">{APP_NAME} · shared progress report</p>
         <h1 className="text-4xl font-bold">{profile.name}’s report</h1>
         <p className="font-read text-lg text-ink-soft">
-          {GRADE_LABEL[profile.grade]} · {framework.curriculumName} · last {days} days
+          {gradeName(profile.grade, localeOf(framework))} · {framework.curriculumName} · last {days} days
         </p>
       </header>
 

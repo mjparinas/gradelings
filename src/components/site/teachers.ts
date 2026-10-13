@@ -7,8 +7,12 @@ import { gradesWithContent } from "./curriculum";
 // Public pages for teachers. The classroom area itself (/teachers/) is a private app and stays
 // noindex; these pages are what search visitors land on before they create a teacher account.
 
-/** Frameworks the classroom area can assign units from. Classes follow BC, Ontario, Alberta, Saskatchewan, Manitoba, Yukon, the Northwest Territories, Nova Scotia, New Brunswick, Newfoundland and Labrador, Prince Edward Island or Nunavut (see TeacherApp). */
-const TEACHER_FRAMEWORK_IDS = ["ca-bc", "ca-on", "ca-ab", "ca-sk", "ca-mb", "ca-yt", "ca-nt", "ca-ns", "ca-nb", "ca-nl", "ca-pe", "ca-nu"];
+/**
+ * Frameworks the classroom area can assign units from. Classes follow BC, Ontario, Alberta, Saskatchewan, Manitoba,
+ * Yukon, the Northwest Territories, Nova Scotia, New Brunswick, Newfoundland and Labrador, Prince Edward Island,
+ * Nunavut or Washington (see TeacherApp). Filtered by FRAMEWORKS, so a framework still upcoming gets no teacher pages.
+ */
+export const TEACHER_FRAMEWORK_IDS = ["ca-bc", "ca-on", "ca-ab", "ca-sk", "ca-mb", "ca-yt", "ca-nt", "ca-ns", "ca-nb", "ca-nl", "ca-pe", "ca-nu", "us-wa"];
 
 export const TEACHER_FRAMEWORKS: Framework[] = FRAMEWORKS.filter((f) => TEACHER_FRAMEWORK_IDS.includes(f.id));
 
