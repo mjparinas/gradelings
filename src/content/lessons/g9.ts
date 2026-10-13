@@ -151,4 +151,53 @@ export const lessons: GradeLessons = {
     ["The two chances add to 100%.", "100 − 30 = 70."],
     "70%",
   ),
+  // Washington
+  "math/wa-g9-functions": lesson(
+    ["f(x) is the output of f when the input is x.", "To find f(3), replace every x with 3.", "The domain is all the inputs. The range is all the outputs."],
+    "f(x) = 2x − 5. What is f(4)?",
+    ["2 × 4 − 5 = 8 − 5."],
+    "3",
+  ),
+  "math/wa-g9-inequalities": lesson(
+    ["Solve an inequality like an equation.", "If you multiply or divide by a negative number, flip the sign.", "Check with a number from your answer."],
+    "Solve −2x + 3 > 11.",
+    ["Subtract 3: −2x > 8.", "Divide by −2 and flip: x < −4."],
+    "x < −4",
+  ),
+  "math/wa-g9-systems": lesson(
+    ["Line the equations up, x under x and y under y.", "Add or subtract them so one variable cancels.", "Solve, then substitute back to find the other variable."],
+    "Solve x + y = 10 and x − y = 4.",
+    ["Add: 2x = 14, so x = 7.", "7 + y = 10, so y = 3."],
+    "(7, 3)",
+  ),
+  "math/wa-g9-exponential": lesson(
+    ["Linear: add the same amount each step.", "Exponential: multiply by the same factor each step.", "In y = a(b)ˣ, a is the start and b is the growth factor."],
+    "A population of 100 doubles each year. How many after 3 years?",
+    ["100 × 2 × 2 × 2.", "100 × 8 = 800."],
+    "800",
+  ),
+  "math/wa-g9-quadratics": lesson(
+    ["To factor x² + bx + c, find two numbers that multiply to c and add to b.", "If a product is 0, one of the factors is 0.", "x² = k has two answers: √k and −√k."],
+    "Solve x² + 5x + 6 = 0.",
+    ["2 × 3 = 6 and 2 + 3 = 5: (x + 2)(x + 3) = 0.", "x + 2 = 0 or x + 3 = 0."],
+    "x = −2 or x = −3",
+  ),
+  "math/wa-g9-formulas": lesson(
+    ["Treat the other letters like numbers.", "Undo each operation on the letter you want, in reverse order.", "Do the same thing to both sides."],
+    "Solve d = rt for t.",
+    ["t is multiplied by r.", "Divide both sides by r."],
+    "t = d/r",
+  ),
+  "math/wa-g9-two-way-tables": lesson(
+    ["A joint frequency is one cell. A row total is a marginal frequency.", "A conditional percent is a cell ÷ its row total.", "Two things changing together does not prove one causes the other."],
+    "Of 40 students who ate breakfast, 30 felt rested. What percent is that?",
+    ["30 ÷ 40 = 0.75."],
+    "75%",
+  ),
+  "math/wa-g9-sequences": lesson(
+    ["Arithmetic sequences add the same difference d.", "Term n = first term + (n − 1) × d.", "Geometric sequences multiply by the same ratio."],
+    "What is term 10 of 4, 7, 10, 13, ...?",
+    ["d = 3.", "4 + 9 × 3 = 31."],
+    "31",
+  ),
 };

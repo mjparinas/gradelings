@@ -193,4 +193,35 @@ export const lessons: GradeLessons = {
     ["Bisect means cut in half.", "80 ÷ 2 = 40."],
     "40°",
   ),
+  // Washington
+  "math/wa-g7-signed-multiply": lesson(
+    ["Multiply or divide the numbers as usual.", "Same signs give a positive answer.", "Different signs give a negative answer."],
+    "What is −6 × 4?",
+    ["6 × 4 = 24.", "Different signs: negative."],
+    "−24",
+  ),
+  "math/wa-g7-proportional": lesson(
+    ["In a proportional relationship, y ÷ x is the same for every pair.", "That ratio is the constant of proportionality, k.", "The equation is y = kx."],
+    "x = 2, y = 10 and x = 5, y = 25. What is k?",
+    ["10 ÷ 2 = 5 and 25 ÷ 5 = 5."],
+    "k = 5",
+  ),
+  "math/wa-g7-angles": lesson(
+    ["Complementary angles add to 90°. Supplementary angles add to 180°.", "Vertical angles (opposite when lines cross) are equal.", "Write an equation and solve for the missing angle."],
+    "Two angles are supplementary. One is 65°. What is the other?",
+    ["180 − 65 = 115."],
+    "115°",
+  ),
+  "math/wa-g7-sampling": lesson(
+    ["The population is the whole group. A sample is part of it.", "A random sample gives everyone an equal chance to be picked.", "Use the sample's fraction to estimate for the population."],
+    "In a random sample of 50 students, 10 bike to school. About how many of 400 students bike?",
+    ["10/50 = 1/5.", "1/5 of 400 = 80."],
+    "About 80",
+  ),
+  "math/wa-g7-scale-drawings": lesson(
+    ["The scale tells how a drawing length matches a real length.", "Multiply by the scale to find real lengths.", "Find real side lengths first, then the real area."],
+    "On a map, 1 cm stands for 5 m. A path is 7 cm. How long is it really?",
+    ["7 × 5 = 35."],
+    "35 m",
+  ),
 };

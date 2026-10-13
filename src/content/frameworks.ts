@@ -7,6 +7,7 @@ import { NUNAVUT } from "./nunavut/framework";
 import { ONTARIO } from "./ontario/framework";
 import { PRINCE_EDWARD_ISLAND } from "./prince-edward-island/framework";
 import { SASKATCHEWAN } from "./saskatchewan/framework";
+import { WASHINGTON } from "./washington/framework";
 import type { FrameworkId, GradeId, SubjectId } from "./types";
 
 // Everything that differs between provinces/states lives here: names, which
@@ -282,8 +283,14 @@ export const FRAMEWORKS: Framework[] = [
   NUNAVUT,
 ];
 
+/**
+ * Frameworks being built but not offered yet. They have content and tests, but no public pages, no place in the
+ * province pickers and no sitemap entries until they move into FRAMEWORKS. getFramework still finds them.
+ */
+export const UPCOMING_FRAMEWORKS: Framework[] = [WASHINGTON];
+
 export const DEFAULT_FRAMEWORK: FrameworkId = "ca-bc";
 
 export function getFramework(id: FrameworkId | string = DEFAULT_FRAMEWORK): Framework {
-  return FRAMEWORKS.find((f) => f.id === id || f.slug === id) ?? FRAMEWORKS[0];
+  return [...FRAMEWORKS, ...UPCOMING_FRAMEWORKS].find((f) => f.id === id || f.slug === id) ?? FRAMEWORKS[0];
 }

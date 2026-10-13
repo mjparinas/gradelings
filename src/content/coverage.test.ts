@@ -2,7 +2,7 @@ import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { COURSES } from "./all";
-import { FRAMEWORKS } from "./frameworks";
+import { FRAMEWORKS, UPCOMING_FRAMEWORKS } from "./frameworks";
 import { CORE_SUBJECTS, GRADE_ORDER } from "./subjects";
 import { withSeed } from "./random";
 import type { FrameworkId, GradeId } from "./types";
@@ -43,22 +43,27 @@ const FRENCH_GRADES: Record<FrameworkId, { immersion: GradeId[]; "core-french": 
   "ca-pe": { immersion: [], "core-french": range("4", "9") },
   // Nunavut: French as an Additional Language for Nunavut, Grades 4 to 9. No immersion program is built.
   "ca-nu": { immersion: [], "core-french": range("4", "9") },
+  // Washington: no French subject. Its world-language programs are mostly Spanish (see docs/research/washington/README.md).
+  "us-wa": { immersion: [], "core-french": [] },
 };
 
 const units = (framework: FrameworkId, grade: GradeId, subject: string) =>
   COURSES.find((c) => c.grade === grade && c.subject === subject)?.units.filter((u) => u.standards[framework]) ?? [];
 
+// Content checks also cover frameworks that are not offered yet, so they are complete before they launch.
+const CONTENT_FRAMEWORKS = [...FRAMEWORKS, ...UPCOMING_FRAMEWORKS];
+
 describe("every framework covers every grade and subject", () => {
   it("has a French row for every framework", () => {
-    for (const f of FRAMEWORKS) expect(FRENCH_GRADES[f.id], `French grades for ${f.id}`).toBeDefined();
+    for (const f of CONTENT_FRAMEWORKS) expect(FRENCH_GRADES[f.id], `French grades for ${f.id}`).toBeDefined();
   });
 
   it("offers each framework's grades as Kindergarten to Grade 9", () => {
-    for (const f of FRAMEWORKS) expect(f.grades, f.id).toEqual(GRADE_ORDER);
+    for (const f of CONTENT_FRAMEWORKS) expect(f.grades, f.id).toEqual(GRADE_ORDER);
   });
 
   it("has math, language, science and social studies in every grade, with Big Ideas or strands", () => {
-    for (const f of FRAMEWORKS) {
+    for (const f of CONTENT_FRAMEWORKS) {
       for (const grade of f.grades) {
         for (const subject of CORE_SUBJECTS) {
           expect(units(f.id, grade, subject).length, `${f.id} ${grade}/${subject}`).toBeGreaterThanOrEqual(3);
@@ -70,7 +75,7 @@ describe("every framework covers every grade and subject", () => {
   });
 
   it("has French in exactly the grades the province teaches it", () => {
-    for (const f of FRAMEWORKS) {
+    for (const f of CONTENT_FRAMEWORKS) {
       for (const grade of f.grades) {
         for (const subject of ["immersion", "core-french"] as const) {
           const expected = FRENCH_GRADES[f.id][subject].includes(grade);

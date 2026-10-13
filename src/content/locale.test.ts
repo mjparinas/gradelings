@@ -10,6 +10,7 @@ describe("US spelling", () => {
     expect(usSpelling("My favourite colour is grey.")).toBe("My favorite color is gray.");
     expect(usSpelling("Colour the CENTRE.")).toBe("Color the CENTER.");
     expect(usSpelling("She practised for 2 metres, then kept practising.")).toBe("She practiced for 2 meters, then kept practicing.");
+    expect(usSpelling("Walk to the fire hall. Fire halls have trucks.")).toBe("Walk to the fire station. Fire stations have trucks.");
     expect(usSpelling("We travelled and labelled the neighbours' litres.")).toBe("We traveled and labeled the neighbors' liters.");
     expect(usSpelling("Organise and summarise, then analyse it.")).toBe("Organize and summarize, then analyze it.");
   });
@@ -146,6 +147,7 @@ describe("Canada words", () => {
   it("finds words that tie a question to Canada", () => {
     expect(canadianWords("Pay with a loonie in Ottawa.")).toEqual(["loonie", "Ottawa"]);
     expect(canadianWords("Which province is east of Manitoba?")).toEqual(["province", "Manitoba"]);
+    expect(canadianWords("Add the GST, then use BEDMAS.")).toEqual(["GST", "BEDMAS"]);
     expect(canadianWords("Count the apples.")).toEqual([]);
     // Whole words only.
     expect(canadianWords("Ontarians")).toEqual([]);

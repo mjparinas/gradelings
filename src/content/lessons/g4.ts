@@ -157,4 +157,23 @@ export const lessons: GradeLessons = {
     ["One angle is 90°, a right angle.", "So it is a right triangle."],
     "A right triangle",
   ),
+  // Washington
+  "math/wa-g4-customary": lesson(
+    ["1 foot = 12 inches. 1 yard = 3 feet. 1 pound = 16 ounces.", "1 gallon = 4 quarts. 1 quart = 2 pints. 1 pint = 2 cups.", "Big unit to small unit: multiply."],
+    "How many ounces are in 3 pounds?",
+    ["1 pound = 16 ounces.", "3 × 16 = 48."],
+    "48 ounces",
+  ),
+  "math/wa-g4-line-plots": lesson(
+    ["A line plot or table shows how many things have each measurement.", "To compare lengths, subtract fractions with the same denominator.", "To compare groups, look at the same row in each group."],
+    "The longest ribbon is 7/8 in and the shortest is 3/8 in. What is the difference?",
+    ["7/8 − 3/8 = 4/8.", "4/8 = 1/2."],
+    "1/2 inch",
+  ),
+  "math/wa-g4-times-as-many": lesson(
+    ["“3 times as many” means multiply by 3.", "“3 more than” means add 3.", "If you know the bigger amount, divide to find the smaller one."],
+    "Ana has 4 stickers. Jay has 3 times as many. How many does Jay have?",
+    ["3 times as many as 4 is 3 × 4."],
+    "12",
+  ),
 };

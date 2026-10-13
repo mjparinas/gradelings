@@ -150,6 +150,18 @@ const EXTRA_LOADERS: Partial<Record<FrameworkId, Partial<Record<GradeId, Loader>
     "8": () => import("./nunavut/g8"),
     "9": () => import("./nunavut/g9"),
   },
+  "us-wa": {
+    k: () => import("./washington/k"),
+    "1": () => import("./washington/g1"),
+    "2": () => import("./washington/g2"),
+    "3": () => import("./washington/g3"),
+    "4": () => import("./washington/g4"),
+    "5": () => import("./washington/g5"),
+    "6": () => import("./washington/g6"),
+    "7": () => import("./washington/g7"),
+    "8": () => import("./washington/g8"),
+    "9": () => import("./washington/g9"),
+  },
   "ca-nb": {
     k: () => import("./new-brunswick/k"),
     "1": () => import("./new-brunswick/g1"),

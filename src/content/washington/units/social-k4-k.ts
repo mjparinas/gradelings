@@ -1,0 +1,96 @@
+import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
+
+// Washington Kindergarten social studies (theme: Self, near and far, now and then): goods and services, and how
+// weather and land shape our days. Prompts stay at 80 characters or fewer with three choices.
+
+const GOODS: Q[] = [
+  ["Which one is a good, a thing you can hold?", "an apple", ["a haircut", "a bus ride"], "A good is a thing. You can touch it."],
+  ["Which one is a service, a job someone does for you?", "a haircut", ["a pencil", "a toy car"], "A service is help that someone gives."],
+  ["A baker makes bread to sell. The baker is a…", "producer", ["consumer", "customer"], "A producer makes or grows things."],
+  ["Maya buys a book at the store. Maya is a…", "consumer", ["producer", "farmer"], "A consumer buys and uses things."],
+  ["A farmer grows carrots. The farmer is a…", "producer", ["consumer", "shopper"], "Growing food makes the farmer a producer."],
+  ["Who gives a service to keep your teeth healthy?", "a dentist", ["a bus", "a backpack"], "A dentist checks and cleans teeth."],
+  ["Which one is a good you can eat?", "a banana", ["a checkup", "a story time"], "Food is a good."],
+  ["A mail carrier brings letters. That is a…", "service", ["good", "toy"], "Bringing the mail is a job done for people."],
+  ["Jay eats the soup his dad bought. Jay is a…", "consumer", ["producer", "builder"], "People who use things are consumers."],
+  ["Which one is a good you can wear?", "a hat", ["a car wash", "a music lesson"], "Clothes are goods."],
+  ["Who makes chairs and tables out of wood?", "a carpenter", ["a doctor", "a lifeguard"], "A carpenter is a producer who builds with wood."],
+  ["Which one is a service?", "a doctor's checkup", ["a crayon", "a ball"], "A checkup is help from a doctor."],
+  ["Firefighters keep us safe. Who pays them?", "the town, with everyone's money", ["one child", "nobody"], "Towns pay for helpers that everyone uses."],
+  ["Which helper works for the whole town?", "a firefighter", ["a toy maker", "a candy seller"], "Fire helpers serve everyone in town."],
+  ["A library is for everyone in town. It is a…", "public place", ["private home", "secret place"], "Public places are shared by everyone."],
+  ["Which one is a store owned by a person or a family?", "a corner bakery", ["a public park", "a fire station"], "A family can own a shop. That is private."],
+  ["Many apples are grown in Washington. Apples are a…", "good", ["service", "rule"], "Apples are things you can hold and eat."],
+  ["Which food do many farms in Washington grow?", "apples", ["pineapples", "coconuts"], "Washington grows lots of apples."],
+  ["Fishers catch fish to sell. They are…", "producers", ["consumers", "teachers"], "Catching fish to sell is making goods."],
+  ["Which one is a good made from trees?", "paper", ["water", "a song"], "Paper is made from wood."],
+  ["Ana pays for a bus ride. The bus ride is a…", "service", ["good", "toy"], "The driver does a job for Ana."],
+  ["Who helps sick pets get better?", "a vet", ["a baker", "a pilot"], "A vet gives a service to animals."],
+  ["Which helper is a public service?", "a school teacher", ["a toy store", "a pizza shop"], "Public schools are for everyone."],
+  ["Kenji washes his neighbour's car for pay. He gives a…", "service", ["good", "gift"], "Washing a car is work done for someone.", true],
+  ["You buy milk. Who is the producer?", "the dairy farmer", ["you", "the cat"], "The farmer's cows give the milk.", true],
+  ["Which pair is a good and then a service?", "a shoe, a shoe repair", ["a ball, a doll", "a bike ride, a haircut"], "A good is a thing. A service is a job.", true],
+  ["Who pays for the roads we all drive on?", "the government, with taxes", ["one store", "a single family"], "Roads are paid for with money from everyone.", true],
+  ["Which one is something we buy from a private store?", "a new toy", ["a library book", "a park slide"], "Private stores sell things to buyers.", true],
+  ["Where do the apples in your lunch come from?", "a farm", ["a library", "a bank"], "Apples grow on trees on farms.", true],
+  ["A producer is someone who…", "makes or grows things", ["only buys things", "sleeps all day"], "Producers make goods or give services.", true],
+  ["A consumer is someone who…", "buys and uses things", ["builds all houses", "grows all food"], "We are all consumers.", true],
+];
+
+const WEATHER: Q[] = [
+  ["It is raining. What should you wear?", "a raincoat", ["a swimsuit", "sandals"], "A raincoat keeps you dry."],
+  ["It is very hot and sunny. What helps?", "a sun hat", ["a winter coat", "mittens"], "A hat keeps the sun off your face."],
+  ["It is snowing. What can you play?", "build a snowman", ["swim in a lake", "pick apples"], "Snow is for snow play."],
+  ["Which one is water?", "a lake", ["a hill", "a rock"], "Lakes are full of water."],
+  ["Which one is land?", "a mountain", ["a river", "the sea"], "A mountain is high land."],
+  ["Wind is moving…", "air", ["water", "rocks"], "Wind is air on the move."],
+  ["Which one is a natural feature?", "a river", ["a school", "a road"], "Nature made rivers. People made roads."],
+  ["Which one did people make?", "a bridge", ["a lake", "a hill"], "People build bridges."],
+  ["It is stormy outside. Where is it safe to play?", "inside", ["on the beach", "up a tree"], "Storms can be unsafe. Play inside."],
+  ["It is a cold day. Recess is outside. What do you take?", "a warm jacket", ["a fan", "a beach ball"], "Warm clothes help on cold days."],
+  ["A sunny day is good for…", "playing outside", ["wearing boots inside", "a snowball fight"], "Sun is good for outdoor play."],
+  ["Where does rain fall from?", "clouds", ["trees", "the ground"], "Rain falls from clouds in the sky."],
+  ["Puddles on the ground mean it…", "rained", ["was hot and dry", "was windy only"], "Rain makes puddles."],
+  ["Many places in Washington get lots of…", "rain", ["sand storms", "hot sun all year"], "Western Washington is rainy, especially in fall and winter."],
+  ["Which one is a tall mountain?", "Mount Rainier", ["a pond", "a sandbox"], "Mount Rainier is a tall mountain in Washington."],
+  ["What is a big body of salt water called?", "an ocean", ["a puddle", "a hill"], "Oceans are big and salty."],
+  ["Your classroom is inside. The playground is…", "outside", ["under the desk", "in your bag"], "Playgrounds are outdoor places."],
+  ["In the classroom, we use…", "inside voices", ["outside shouting", "no voices ever"], "Each place has its own ways."],
+  ["On the playground, we can…", "run and climb", ["take a nap", "do a puzzle at a desk"], "Playgrounds are for moving."],
+  ["Bananas grow where it is warm. How do we get them?", "trucks and ships bring them", ["they grow in snow", "they fall from clouds"], "Some things come from far away."],
+  ["Where does the milk at the store come from?", "a farm", ["the ocean", "the sky"], "Milk comes from cows on farms."],
+  ["Which one comes from far away, across the ocean?", "a toy made in another country", ["rain on your roof", "your backyard grass"], "Ships carry goods across oceans."],
+  ["Wind can make a kite…", "fly", ["melt", "sink"], "Wind pushes the kite up."],
+  ["It is foggy. It is hard to…", "see far", ["hear your name", "eat lunch"], "Fog is a low cloud that hides things.", true],
+  ["Which helps people in a very rainy place?", "roofs that keep rain out", ["no windows at all", "sand floors"], "Homes keep people dry.", true],
+  ["Which place is near you right now?", "your classroom", ["the moon", "a far city"], "Near is close by. Far is a long way.", true],
+  ["Your home is close to school. Your home is…", "near", ["far", "on the moon"], "Near means close.", true],
+  ["Grandma lives across the ocean. She lives…", "far away", ["next door", "in your room"], "Far means a long way off.", true],
+  ["Weather changes what we wear and…", "what we do", ["our names", "our birthdays"], "We play differently on rainy and sunny days.", true],
+  ["Which is a natural event?", "a rainstorm", ["a birthday party", "a school bus ride"], "Nature makes storms.", true],
+  ["Which one did people make, not nature?", "a playground", ["a river", "the wind"], "People build playgrounds.", true],
+];
+
+export const OWN_SOCIAL_K: Unit[] = [
+  bankUnit({
+    id: "wa-k-goods-services",
+    title: "Goods & Services",
+    emoji: "🧺",
+    blurb: "Things we buy, jobs people do, and who makes them.",
+    parentNote:
+      "Practises telling goods (things) from services (jobs done for us), producers from consumers, and public helpers from private stores, with goods grown near home such as Washington apples.",
+    standards: ["E2.K.1; E2.K.2; E3.K.1; E4.K.1", "identifying consumers and producers, goods and services, public and private providers and goods made nearby"],
+    items: GOODS,
+  }),
+  bankUnit({
+    id: "wa-k-weather-and-me",
+    title: "Weather, Land & Me",
+    emoji: "🌦️",
+    blurb: "How weather and places change what we do.",
+    parentNote:
+      "Practises naming natural features (air, water, land, wind), how weather changes what we wear and do, places near and far, and that the things we use come from different places.",
+    standards: ["G1.K.1; G2.K.1; G2.K.2; G2.K.3; G3.K.1", "how weather and the environment affect our lives, natural features, and where things come from"],
+    items: WEATHER,
+  }),
+];
