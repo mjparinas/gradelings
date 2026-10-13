@@ -8,6 +8,7 @@ import { ONTARIO } from "./ontario/framework";
 import { PRINCE_EDWARD_ISLAND } from "./prince-edward-island/framework";
 import { SASKATCHEWAN } from "./saskatchewan/framework";
 import { OREGON } from "./oregon/framework";
+import { CALIFORNIA } from "./california/framework";
 import { WASHINGTON } from "./washington/framework";
 import type { FrameworkId, GradeId, SubjectId } from "./types";
 
@@ -289,9 +290,9 @@ export const FRAMEWORKS: Framework[] = [
 /**
  * Frameworks being built but not offered yet. They have content and tests, but no public pages, no place in the
  * province pickers and no sitemap entries until they move into FRAMEWORKS. getFramework still finds them.
- * Empty since Oregon launched (October 2026); the next state goes here while it is built.
+ * California, the third US state, is here while its courses and guides are built (October 2026).
  */
-export const UPCOMING_FRAMEWORKS: Framework[] = [];
+export const UPCOMING_FRAMEWORKS: Framework[] = [CALIFORNIA];
 
 export const DEFAULT_FRAMEWORK: FrameworkId = "ca-bc";
 
