@@ -10,8 +10,10 @@ import { getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects
 import { APP_NAME } from "@/lib/brand";
 import { TRIAL_DAYS } from "@/lib/plan";
 import { Disclosure } from "@/components/Disclosure";
+import { gradeUpdated, guidesUpdated, latest } from "@/content/updated";
 import { JsonLd, absolute } from "@/lib/site";
 import { PinLink, ShareButton } from "@/components/site/ShareButton";
+import { pageMeta } from "@/lib/pageMeta";
 
 export const dynamicParams = false;
 
@@ -31,11 +33,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const r = resolve(await params);
   if (!r) return {};
   const { framework: f, grade } = r;
-  return {
+  return pageMeta({
     title: `What your child learns in ${gradeLabel(f, grade)} in ${f.shortName}: a parent's guide`,
     description: `${gradeLabel(f, grade)} in ${f.name}: what is taught in ${listOf(coursesFor(f, grade).map((c) => subjectSeoTitle(c.subject)))}, what to look for on the report card, and how to help at home. Matched to the ${f.curriculumName}.`,
-    alternates: { canonical: guidePath.grade(f, grade) },
-  };
+    path: guidePath.grade(f, grade),
+    framework: f,
+    type: "article",
+  });
 }
 
 export default async function GradeGuide({ params }: Props) {
@@ -82,7 +86,7 @@ export default async function GradeGuide({ params }: Props) {
         data={[
           breadcrumbJsonLd(crumbs),
           faqJsonLd(faqs),
-          articleJsonLd({ headline: title, description: note.overview, path: guidePath.grade(f, grade) }),
+          articleJsonLd({ headline: title, description: note.overview, path: guidePath.grade(f, grade), framework: f, updated: latest(guidesUpdated(f.id), gradeUpdated(f.id, grade)) }),
         ]}
       />
       <Crumbs items={crumbs} />

@@ -12,6 +12,7 @@ import { FRAMEWORKS } from "@/content/frameworks";
 import { APP_NAME } from "@/lib/brand";
 import { JsonLd } from "@/lib/site";
 import { ShareButton } from "@/components/site/ShareButton";
+import { pageMeta } from "@/lib/pageMeta";
 
 export const dynamicParams = false;
 
@@ -23,11 +24,13 @@ export async function generateMetadata({ params }: PageProps<"/report-cards/[fra
   const f = frameworkBySlug((await params).framework);
   if (!f) return {};
   const levels = f.scoringFor("3").levels.map((l) => l.label);
-  return {
+  return pageMeta({
     title: `${f.shortName} report cards explained: ${levels.join(", ")}`,
     description: `What ${levels.join(", ")} mean on a ${f.name} report card, in plain words, with what each level looks like at home and how to help your child move up.`,
-    alternates: { canonical: `/report-cards/${f.slug}/` },
-  };
+    path: `/report-cards/${f.slug}/`,
+    framework: f,
+    type: "article",
+  });
 }
 
 export default async function ReportCardsPage({ params }: PageProps<"/report-cards/[framework]">) {

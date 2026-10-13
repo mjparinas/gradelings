@@ -3,7 +3,8 @@ import type { Framework } from "@/content/frameworks";
 import { GUIDE_FRAMEWORKS, guidesFor } from "@/content/guides";
 import { gradeSlug } from "@/content/subjects";
 import type { GradeId, SubjectId } from "@/content/types";
-import { coursesFor, gradesWithContent } from "./curriculum";
+import { courseUpdated, curriculumUpdated, gradeUpdated, guidesUpdated, latest } from "@/content/updated";
+import { coursesFor, gradesWithContent, type SitemapPath } from "./curriculum";
 
 // URLs for the parent guides. The competencies and assessment pages take their slug from the
 // province's guide copy (BC: core-competencies, fsa; Ontario: learning-skills, eqao; Alberta: competencies, pat).
@@ -24,19 +25,20 @@ export const guidePath = {
   compare: (slug: string) => `/compare/${slug}/`,
 };
 
-export function allGuidePaths(): { path: string; priority: number }[] {
-  const out: { path: string; priority: number }[] = [{ path: guidePath.compareIndex(), priority: 0.6 }];
-  for (const c of COMPETITORS) out.push({ path: guidePath.compare(c.slug), priority: 0.6 });
+export function allGuidePaths(): SitemapPath[] {
+  const out: SitemapPath[] = [{ path: guidePath.compareIndex() }];
+  for (const c of COMPETITORS) out.push({ path: guidePath.compare(c.slug) });
   for (const f of GUIDE_FRAMEWORKS) {
-    out.push({ path: guidePath.hub(f), priority: 0.8 });
-    out.push({ path: guidePath.competencies(f), priority: 0.8 });
-    out.push({ path: guidePath.assessment(f), priority: 0.8 });
-    if (guidesFor(f.id).french) out.push({ path: guidePath.french(f), priority: 0.8 });
+    const guides = guidesUpdated(f.id);
+    out.push({ path: guidePath.hub(f), updated: latest(guides, curriculumUpdated(f.id)) });
+    out.push({ path: guidePath.competencies(f), updated: guides });
+    out.push({ path: guidePath.assessment(f), updated: guides });
+    if (guidesFor(f.id).french) out.push({ path: guidePath.french(f), updated: guides });
     for (const g of gradesWithContent(f)) {
-      out.push({ path: guidePath.grade(f, g), priority: 0.8 });
+      out.push({ path: guidePath.grade(f, g), updated: latest(guides, gradeUpdated(f.id, g)) });
       for (const c of coursesFor(f, g)) {
-        out.push({ path: guidePath.subject(f, g, c.subject), priority: 0.7 });
-        out.push({ path: guidePath.worksheet(f, g, c.subject), priority: 0.6 });
+        out.push({ path: guidePath.subject(f, g, c.subject), updated: latest(guides, courseUpdated(f.id, g, c.subject)) });
+        out.push({ path: guidePath.worksheet(f, g, c.subject), updated: courseUpdated(f.id, g, c.subject) });
       }
     }
   }

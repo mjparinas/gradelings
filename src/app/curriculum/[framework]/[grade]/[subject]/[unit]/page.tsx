@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { breadcrumbJsonLd } from "@/components/site/jsonld";
+import { breadcrumbJsonLd, typicalAgeRange } from "@/components/site/jsonld";
 import { SampleQuestion } from "@/components/site/SampleQuestion";
 import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
-import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, unitKey, gradeLabel, say } from "@/components/site/curriculum";
+import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, unitKey, gradeLabel, sampleSeed, say } from "@/components/site/curriculum";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { hashSeed, withSeed } from "@/content/random";
 import { getSubjectMeta, gradeSlug } from "@/content/subjects";
-import { APP_NAME } from "@/lib/brand";
-import { JsonLd, absolute } from "@/lib/site";
+import { unitUpdated } from "@/content/updated";
+import { pageLocale } from "@/lib/pageMeta";
+import { JsonLd, ORG_REF, absolute } from "@/lib/site";
 import { ShareButton } from "@/components/site/ShareButton";
+import { guidePath } from "@/components/site/guides";
+import { APP_NAME } from "@/lib/brand";
+import { pageMeta } from "@/lib/pageMeta";
 
 export const dynamicParams = false;
 
@@ -30,11 +34,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const r = resolve(await params);
   if (!r?.course || !r.unit) return {};
   const { framework: f, grade, course, unit } = r;
-  return {
+  return pageMeta({
     title: `${unit.title}: ${gradeLabel(f, grade)} ${subjectSeoTitle(course.subject)} practice (${f.shortName})`,
     description: `${unit.parentNote} Free ${gradeLabel(f, grade)} sample questions with answers, matched to the ${f.curriculumName}.`,
-    alternates: { canonical: curriculumPath.unit(f, grade, course.subject, unit.id) },
-  };
+    path: curriculumPath.unit(f, grade, course.subject, unit.id),
+    framework: f,
+  });
 }
 
 export default async function UnitPage({ params }: Props) {
@@ -44,12 +49,17 @@ export default async function UnitPage({ params }: Props) {
   const key = unitKey(grade, course.subject, unit.id);
   const meta = getSubjectMeta(course.subject);
   const name = subjectSeoTitle(course.subject);
-  // Seeded, so the page is the same on every build (good for caching and search engines).
-  const questions = withSeed(hashSeed(key), () => unit.generate({ difficulty: 2 })).slice(0, 6);
+  // Seeded, so the page is the same on every build, and by framework, so a shared unit's pages differ by region.
+  const seed = sampleSeed(f, key);
+  const questions = withSeed(hashSeed(seed), () => unit.generate({ difficulty: 2 })).slice(0, 6);
   const index = course.units.indexOf(unit);
   const prev = course.units[index - 1];
   const next = course.units[index + 1];
   const path = curriculumPath.unit(f, grade, course.subject, unit.id);
+  const updated = unitUpdated(f.id, grade, course.subject, unit.id);
+  const scheme = f.scoringFor(grade);
+  const labels = scheme.levels.map((l) => l.label);
+  const levels = `${labels.slice(0, -1).join(", ")} or ${labels[labels.length - 1]}`;
   const crumbs = [
     { label: "Home", href: "/" },
     { label: "Curriculum", href: curriculumPath.index() },
@@ -70,13 +80,15 @@ export default async function UnitPage({ params }: Props) {
             name: `${unit.title} (${gradeLabel(f, grade)} ${name})`,
             description: unit.parentNote,
             url: absolute(path),
-            inLanguage: "en-CA",
+            inLanguage: pageLocale(f),
             learningResourceType: "Practice problems",
             interactivityType: "active",
             isAccessibleForFree: true,
             educationalLevel: gradeLabel(f, grade),
+            typicalAgeRange: typicalAgeRange(grade),
             about: name,
-            provider: { "@type": "Organization", name: APP_NAME },
+            ...(updated ? { dateModified: updated } : {}),
+            provider: ORG_REF,
             educationalAlignment: unit.standards[f.id]
               ? [
                   {
@@ -139,6 +151,40 @@ export default async function UnitPage({ params }: Props) {
         </aside>
       </div>
 
+      <section aria-labelledby="in-region" className="card mt-8 p-5">
+        <h2 id="in-region" className="text-2xl font-bold">
+          {unit.title} in {f.region}
+        </h2>
+        <p className="mt-2 font-read text-lg">
+          In the {f.curriculumName}, this is unit {index + 1} of {course.units.length} in {gradeLabel(f, grade)} {name}
+          {prev && next ? `, after ${prev.title} and before ${next.title}` : prev ? `, after ${prev.title}` : next ? `, before ${next.title}` : ""}.
+        </p>
+        <p className="mt-2 font-read text-lg">
+          {APP_NAME} describes a child&apos;s practice on this unit as {levels} ({scheme.name}). That reflects practice, not a report-card mark: the teacher decides
+          the mark.
+        </p>
+        <ul className="mt-3 flex flex-wrap gap-2">
+          <li>
+            <Link href={guidePath.grade(f, grade)} className="inline-flex min-h-11 items-center rounded-full bg-white px-3 py-1.5 font-semibold hover:bg-[#e6f0ff]">
+              {gradeLabel(f, grade)} guide for {f.shortName} parents
+            </Link>
+          </li>
+          <li>
+            <Link href={guidePath.worksheet(f, grade, course.subject)} className="inline-flex min-h-11 items-center rounded-full bg-white px-3 py-1.5 font-semibold hover:bg-[#e6f0ff]">
+              Printable {gradeLabel(f, grade)} {name} sheet
+            </Link>
+          </li>
+          <li>
+            <Link href={`/report-cards/${f.slug}/`} className="inline-flex min-h-11 items-center rounded-full bg-white px-3 py-1.5 font-semibold hover:bg-[#e6f0ff]">
+              {f.shortName} report cards explained
+            </Link>
+          </li>
+        </ul>
+        <p className="mt-3 font-read text-ink-soft">
+          Source: <a href={f.sourceUrl} className="underline">{f.sourceName}</a>
+        </p>
+      </section>
+
       <section aria-labelledby="samples" className="mt-8">
         <h2 id="samples" className="mb-1 text-2xl font-bold">
           Sample questions
@@ -146,7 +192,7 @@ export default async function UnitPage({ params }: Props) {
         <p className="mb-4 font-read text-ink-soft">A taste of this unit. In the app, questions change every time and get easier or harder to match your child.</p>
         <ol className="grid items-start gap-4 md:grid-cols-2">
           {questions.map((q, i) => (
-            <SampleQuestion key={i} q={q} n={i + 1} seedText={`${key}#${i}`} />
+            <SampleQuestion key={i} q={q} n={i + 1} seedText={`${seed}#${i}`} />
           ))}
         </ol>
       </section>

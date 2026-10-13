@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { breadcrumbJsonLd } from "@/components/site/jsonld";
+import { breadcrumbJsonLd, itemListJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, subjectTitle, gradeLabel } from "@/components/site/curriculum";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
-import { JsonLd, absolute } from "@/lib/site";
+import { JsonLd } from "@/lib/site";
 import { ShareButton } from "@/components/site/ShareButton";
+import { pageMeta } from "@/lib/pageMeta";
 
 export const dynamicParams = false;
 
@@ -22,14 +23,15 @@ export async function generateMetadata({ params }: PageProps<"/curriculum/[frame
   if (!r?.course) return {};
   const { framework: f, grade, course } = r;
   const name = subjectSeoTitle(course.subject);
-  return {
+  return pageMeta({
     title: `${gradeLabel(f, grade)} ${name}: ${f.shortName} curriculum practice`,
     description: `${gradeLabel(f, grade)} ${subjectInSentence(name)} in ${f.name}: ${course.units
       .slice(0, 5)
       .map((u) => u.title)
       .join(", ")} and more. ${f.overviewLabel}, ${f.standardLabel.toLowerCase()}s and free sample questions.`,
-    alternates: { canonical: curriculumPath.subject(f, grade, course.subject) },
-  };
+    path: curriculumPath.subject(f, grade, course.subject),
+    framework: f,
+  });
 }
 
 export default async function SubjectPage({ params }: PageProps<"/curriculum/[framework]/[grade]/[subject]">) {
@@ -52,12 +54,10 @@ export default async function SubjectPage({ params }: PageProps<"/curriculum/[fr
       <JsonLd
         data={[
           breadcrumbJsonLd(crumbs),
-          {
-            "@context": "https://schema.org",
-            "@type": "ItemList",
-            name: `${gradeLabel(f, grade)} ${name} units`,
-            itemListElement: course.units.map((u, i) => ({ "@type": "ListItem", position: i + 1, name: u.title, url: absolute(curriculumPath.unit(f, grade, course.subject, u.id)) })),
-          },
+          itemListJsonLd(
+            `${gradeLabel(f, grade)} ${name} units`,
+            course.units.map((u) => ({ name: u.title, path: curriculumPath.unit(f, grade, course.subject, u.id) })),
+          ),
         ]}
       />
       <Crumbs items={crumbs} />

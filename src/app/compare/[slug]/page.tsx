@@ -8,6 +8,7 @@ import { APP_NAME } from "@/lib/brand";
 import { FREE_UNITS_PER_COURSE, TRIAL_DAYS, pricesFor } from "@/lib/plan";
 import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
+import { pageMeta } from "@/lib/pageMeta";
 
 export const dynamicParams = false;
 
@@ -20,11 +21,12 @@ type Props = PageProps<"/compare/[slug]">;
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const c = competitorBySlug((await params).slug);
   if (!c) return {};
-  return {
+  return pageMeta({
     title: `${APP_NAME} vs ${c.name} for ${familiesWord()}`,
     description: `${APP_NAME} compared with ${c.name}: price, curriculum match, how progress is shown and what kids see. A fair look at who each is best for.`,
-    alternates: { canonical: guidePath.compare(c.slug) },
-  };
+    path: guidePath.compare(c.slug),
+    type: "article",
+  });
 }
 
 export default async function ComparePage({ params }: Props) {

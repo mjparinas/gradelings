@@ -6,12 +6,13 @@ import { APP_NAME, CONTACT_EMAIL } from "@/lib/brand";
 import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
 import { ALL_FAQS, HELP } from "./faqs";
+import { pageMeta } from "@/lib/pageMeta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Help and questions",
   description: `Answers about getting started, accounts and syncing, how ${APP_NAME} scores practice, calm and focus options, plans and billing.`,
-  alternates: { canonical: "/help/" },
-};
+  path: "/help/",
+});
 
 export default function HelpPage() {
   const crumbs = [{ label: "Home", href: "/" }, { label: "Help" }];

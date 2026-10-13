@@ -2,9 +2,10 @@ import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { gzipSync } from "node:zlib";
-import { describe, expect, it } from "vitest";
+import { afterAll, describe, expect, it } from "vitest";
 import { COURSES } from "./all";
 import { FRAMEWORKS } from "./frameworks";
+import { GUIDES } from "./guides";
 import { coursesInFramework, EXTRA_DEPENDS } from "./index";
 import { withSeed } from "./random";
 import { GRADE_ORDER } from "./subjects";
@@ -15,6 +16,8 @@ import type { Course, FrameworkId, GradeId, Unit } from "./types";
 // change to one unit can change several frameworks at once: the lock files make that visible in the pull request. When a
 // change is intended, run `npm run curriculum:lock` and commit the new locks. The same run records each grade's download
 // size per framework (locks/sizes.json); a download that grows by more than SIZE_SLACK fails until the sizes are re-recorded.
+// It also keeps locks/dates.json: the day each unit, course and set of guides last changed, which the sitemap and the
+// public pages' structured data give search engines. A date moves only when that part's lock entry changes.
 
 const UPDATE = process.env.UPDATE_LOCKS === "1";
 const LOCKS = join(__dirname, "locks");
@@ -51,6 +54,50 @@ function lockOf(framework: FrameworkId): Record<string, { overview: string; unit
 }
 
 const pretty = (value: unknown) => `${JSON.stringify(value, null, 2)}\n`;
+
+// Last-changed dates (locks/dates.json).
+
+type Lock = Record<string, { overview: string; units: string[] }>;
+interface Dates {
+  /** Guide copy and report-card page, as "YYYY-MM-DD hash". */
+  guides?: string;
+  /** "grade/subject": the day the course's overview or unit list last changed. */
+  courses: Record<string, string>;
+  /** "grade/subject/unit": the day the unit's text, standard or questions last changed. */
+  units: Record<string, string>;
+}
+
+const DATES_FILE = join(LOCKS, "dates.json");
+const TODAY = process.env.LOCK_DATE ?? new Date().toISOString().slice(0, 10);
+const recordedDates = (existsSync(DATES_FILE) ? JSON.parse(readFileSync(DATES_FILE, "utf8")) : {}) as Partial<Record<FrameworkId, Dates>>;
+const newDates: Partial<Record<FrameworkId, Dates>> = {};
+
+const guidesHash = (framework: (typeof FRAMEWORKS)[number]) => (GUIDES[framework.id] ? hash({ guides: GUIDES[framework.id], reportCard: framework.reportCard }) : undefined);
+
+/** Dates for a framework's new lock: kept where its entry is unchanged since the recorded lock, today where it changed. */
+function datesFor(framework: (typeof FRAMEWORKS)[number], lock: Lock, before: Lock | undefined): Dates {
+  const old = recordedDates[framework.id];
+  const out: Dates = { courses: {}, units: {} };
+  const g = guidesHash(framework);
+  if (g) out.guides = old?.guides?.endsWith(` ${g}`) ? old.guides : `${TODAY} ${g}`;
+  for (const [course, entry] of Object.entries(lock)) {
+    const was = before?.[course];
+    const same = was && JSON.stringify(was) === JSON.stringify(entry);
+    out.courses[course] = (same && old?.courses[course]) || TODAY;
+    for (const line of entry.units) {
+      const key = `${course}/${line.split(" ")[0]}`;
+      out.units[key] = (was?.units.includes(line) && old?.units[key]) || TODAY;
+    }
+  }
+  return out;
+}
+
+/** The keys a framework's dates must have, with the guide hash: checked so the dates never fall behind the locks. */
+const dateShape = (framework: (typeof FRAMEWORKS)[number], lock: Lock) => ({
+  guides: guidesHash(framework),
+  courses: Object.keys(lock),
+  units: Object.entries(lock).flatMap(([course, entry]) => entry.units.map((line) => `${course}/${line.split(" ")[0]}`)),
+});
 
 function compare(file: string, actual: unknown, hint: string) {
   const path = join(LOCKS, file);
@@ -113,9 +160,21 @@ function sizes(): Record<string, Record<string, number>> {
 }
 
 describe("curriculum locks", () => {
+  afterAll(() => {
+    if (UPDATE && Object.keys(newDates).length === FRAMEWORKS.length) writeFileSync(DATES_FILE, pretty(Object.fromEntries(FRAMEWORKS.map((f) => [f.id, newDates[f.id]]))));
+  });
+
   for (const f of FRAMEWORKS) {
     it(`${f.name} matches locks/${f.id}.json`, () => {
-      compare(`${f.id}.json`, lockOf(f.id), `${f.name}'s courses changed. If that was intended, run \`npm run curriculum:lock\` and commit the lock files; the diff shows every framework the change reached.`);
+      const lock = lockOf(f.id);
+      if (UPDATE) {
+        const path = join(LOCKS, `${f.id}.json`);
+        newDates[f.id] = datesFor(f, lock, existsSync(path) ? (JSON.parse(readFileSync(path, "utf8")) as Lock) : undefined);
+      } else {
+        const d = recordedDates[f.id];
+        expect(d && { guides: d.guides?.split(" ")[1], courses: Object.keys(d.courses), units: Object.keys(d.units) }, `locks/dates.json is out of date for ${f.name}: run \`npm run curriculum:lock\``).toEqual(dateShape(f, lock));
+      }
+      compare(`${f.id}.json`, lock, `${f.name}'s courses changed. If that was intended, run \`npm run curriculum:lock\` and commit the lock files; the diff shows every framework the change reached.`);
     });
   }
 

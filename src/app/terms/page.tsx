@@ -3,12 +3,13 @@ import Link from "next/link";
 import { LegalPage, Section } from "@/components/site/Legal";
 import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS } from "@/lib/brand";
 import { CURRENCY_NAME, FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, TRIAL_DAYS } from "@/lib/plan";
+import { pageMeta } from "@/lib/pageMeta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Terms of use",
   description: `The terms for using ${APP_NAME}: your account, the family plan, free trial, cancelling, and the rules for using the service.`,
-  alternates: { canonical: "/terms/" },
-};
+  path: "/terms/",
+});
 
 export default function TermsPage() {
   return (

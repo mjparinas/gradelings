@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { breadcrumbJsonLd } from "@/components/site/jsonld";
+import { breadcrumbJsonLd, itemListJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, subjectTitle, gradeLabel, say } from "@/components/site/curriculum";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { JsonLd } from "@/lib/site";
+import { pageMeta } from "@/lib/pageMeta";
 
 export const dynamicParams = false;
 
@@ -20,11 +21,12 @@ export async function generateMetadata({ params }: PageProps<"/curriculum/[frame
   if (!r) return {};
   const { framework: f, grade } = r;
   const subjects = coursesFor(f, grade).map((c) => subjectInSentence(subjectSeoTitle(c.subject)));
-  return {
+  return pageMeta({
     title: `${gradeLabel(f, grade)} ${f.shortName} curriculum practice`,
     description: `What kids learn in ${gradeLabel(f, grade)} in ${f.name}: ${subjects.join(", ")}. Every unit explained for parents, with free sample questions matched to the ${f.curriculumName}.`,
-    alternates: { canonical: curriculumPath.grade(f, grade) },
-  };
+    path: curriculumPath.grade(f, grade),
+    framework: f,
+  });
 }
 
 export default async function GradePage({ params }: PageProps<"/curriculum/[framework]/[grade]">) {
@@ -43,7 +45,7 @@ export default async function GradePage({ params }: PageProps<"/curriculum/[fram
 
   return (
     <SitePage cta>
-      <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <JsonLd data={[breadcrumbJsonLd(crumbs), itemListJsonLd(`${gradeLabel(f, grade)} subjects in the ${f.curriculumName}`, courses.map((c) => ({ name: subjectSeoTitle(c.subject), path: curriculumPath.subject(f, grade, c.subject) })))]} />
       <Crumbs items={crumbs} />
       <h1 className="text-4xl font-bold">
         {gradeLabel(f, grade)} {f.shortName} curriculum
