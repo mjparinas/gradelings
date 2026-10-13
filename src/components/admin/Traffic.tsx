@@ -104,8 +104,8 @@ function Visits({ r, days }: { r: VisitsReport; days: number }) {
   return (
     <>
       <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-4">
-        <Tile label="Visitors" value={num(r.visitors)} sub={r.previous ? changeText(r.visitors, r.previous.visitors, days) : undefined} />
-        <Tile label="Page views" value={num(r.pageviews)} sub={r.previous ? changeText(r.pageviews, r.previous.pageviews, days) : undefined} />
+        <Tile label="Visitors" value={num(r.visitors)} sub={r.keptDays ? undefined : changeText(r.visitors, r.previous.visitors, days)} />
+        <Tile label="Page views" value={num(r.pageviews)} sub={r.keptDays ? undefined : changeText(r.pageviews, r.previous.pageviews, days)} />
         <Tile label="Pages per visitor" value={r.visitors ? (r.pageviews / r.visitors).toFixed(1) : "—"} />
         <Tile label="Top source" value={r.referrers[0]?.key ?? "—"} sub={r.referrers[0] ? `${num(r.referrers[0].visitors)} visitors` : "No other site has sent visitors yet"} />
       </div>

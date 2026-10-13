@@ -66,7 +66,7 @@ describe("Traffic", () => {
   });
 
   it("says when the plan keeps fewer days, and skips the comparison", async () => {
-    mocks.call.mockResolvedValue({ days: 90, search: { state: "setup", setup: "Set it." }, visits: { state: "ok", report: { ...visits, start: "2026-09-12", keptDays: 31, previous: null } } });
+    mocks.call.mockResolvedValue({ days: 90, search: { state: "setup", setup: "Set it." }, visits: { state: "ok", report: { ...visits, start: "2026-09-12", keptDays: 31, previous: { visitors: 0, pageviews: 0 } } } });
     render(<Traffic />);
     expect(await screen.findByText(/Vercel keeps 31 days on this plan/)).toBeInTheDocument();
     expect(screen.queryByText(/days before/)).not.toBeInTheDocument();
