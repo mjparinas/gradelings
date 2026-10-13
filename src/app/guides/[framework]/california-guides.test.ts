@@ -3,18 +3,17 @@ import { allGuidePaths, guidePath } from "@/components/site/guides";
 import { FRAMEWORKS, getFramework, UPCOMING_FRAMEWORKS } from "@/content/frameworks";
 import { GUIDE_FRAMEWORKS, guidesFor } from "@/content/guides";
 
-// California's guides are written while the state is still upcoming: the hub, grade notes, CDE's social and emotional
-// learning competencies and the CAASPP state tests. Guide pages are built only for FRAMEWORKS, so until launch these
-// checks read the guide data directly, and confirm no California page is published early.
+// California's guides: the hub, grade notes, CDE's social and emotional learning competencies and the CAASPP state tests.
 describe("California parent guides", () => {
   const ca = getFramework("us-ca");
   const g = guidesFor("us-ca");
 
-  it("is still upcoming, so no California guide page is built yet", () => {
-    expect(UPCOMING_FRAMEWORKS).toContain(ca);
-    expect(FRAMEWORKS).not.toContain(ca);
-    expect(GUIDE_FRAMEWORKS).not.toContain(ca);
-    expect(allGuidePaths().some((p) => p.path.startsWith("/guides/california/"))).toBe(false);
+  it("is offered, so every California guide page is built", () => {
+    expect(FRAMEWORKS).toContain(ca);
+    expect(UPCOMING_FRAMEWORKS).not.toContain(ca);
+    expect(GUIDE_FRAMEWORKS).toContain(ca);
+    const paths = allGuidePaths().map((p) => p.path);
+    for (const p of [guidePath.hub(ca), guidePath.grade(ca, "4"), "/guides/california/sel-standards/", "/guides/california/state-tests/"]) expect(paths, p).toContain(p);
   });
 
   it("has a note for every grade and no French guide", () => {
