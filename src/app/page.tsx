@@ -3,7 +3,7 @@ import { PricingCards } from "@/components/site/Pricing";
 import { ParentQuotes } from "@/components/site/ParentQuotes";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Critter } from "@/components/Critter";
+import { QuestionGallery } from "@/components/site/QuestionGallery";
 import { SitePage } from "@/components/site/SiteChrome";
 import { appJsonLd } from "@/components/site/jsonld";
 import { curriculumPath } from "@/components/site/curriculum";
@@ -84,7 +84,7 @@ const FAQS = [
   },
 ];
 
-/** A drawn preview of the app for the hero: a question with its hint, and a few rows of the parent report. */
+/** A drawn preview of the app for the hero: a gallery of questions with their hints, and a few rows of the parent report. */
 function AppPreview() {
   const levels = FRAMEWORKS[0].scoringFor("3").levels;
   const rows = [
@@ -94,20 +94,7 @@ function AppPreview() {
   ];
   return (
     <figure className="relative mx-auto flex w-full max-w-md flex-col gap-3">
-      <div className="card p-4" aria-hidden="true">
-        <div className="flex items-center gap-3">
-          <Critter id="hoot" mood="think" size={56} />
-          <p className="font-read text-xl font-semibold">What is 3 × 4?</p>
-        </div>
-        <ul className="mt-3 grid grid-cols-4 gap-2 font-read text-lg">
-          {["7", "10", "12", "14"].map((c) => (
-            <li key={c} className={`rounded-xl border-2 py-2 text-center ${c === "7" ? "border-line text-ink-soft line-through" : "border-line bg-white"}`}>
-              {c}
-            </li>
-          ))}
-        </ul>
-        <p className="mt-3 rounded-xl bg-[#fff4cc] px-3 py-2 font-read text-[#5c4300]">💡 So close! Think of 3 groups of 4. Try again.</p>
-      </div>
+      <QuestionGallery />
       <div className="card p-4" aria-hidden="true">
         <p className="text-sm font-bold text-ink-soft">Parent report · Math</p>
         <ul className="mt-2 flex flex-col gap-2">
@@ -121,7 +108,7 @@ function AppPreview() {
           ))}
         </ul>
       </div>
-      <figcaption className="text-center text-sm text-ink-soft">A question with a hint, and the parent report it feeds.</figcaption>
+      <figcaption className="text-center text-sm text-ink-soft">Kids get a gentle hint when they miss, and parents see the progress in their report.</figcaption>
     </figure>
   );
 }
@@ -153,7 +140,7 @@ export default function Home() {
             Practice that feels like play. <span className="text-[#4f8ef7]">Progress you can read.</span>
           </h1>
           <p className="mt-4 max-w-xl font-read text-lg text-ink-soft sm:text-xl">
-            About {DEFAULT_GOAL_MINUTES.other} minutes a day of practice matched to your child&apos;s grade and {regionWord(FRAMEWORKS)}, in math, reading, science, social studies and French{offersUsd(FRAMEWORKS) ? " (French in Canada)" : ""}. Your child earns game time by learning. You see their progress in the same words as their report card.
+            About {DEFAULT_GOAL_MINUTES.other} minutes a day of practice matched to your child&apos;s grade and {regionWord(FRAMEWORKS)}, in math, reading, science, social studies and French{offersUsd(FRAMEWORKS) ? " (in Canada)" : ""}. Your child earns game time by learning. You see their progress in the same words as their report card.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link prefetch={false} href="/play/" className="btn btn-good min-h-14 px-8 text-xl">
