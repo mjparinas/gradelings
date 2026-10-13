@@ -39,8 +39,10 @@ export interface OgCardText {
   critter?: string;
   /** A sample question, for "Can your Grade 4 solve this?" cards. */
   question?: OgQuestion;
-  /** The tall card's list, such as a worksheet's units. */
+  /** The tall card's list (up to 6), such as a worksheet's units. */
   items?: string[];
+  /** A border colour per item, such as each subject's colour; the accent when unset. */
+  itemColours?: string[];
 }
 
 /** Long titles shrink so they never spill off the card. */
@@ -143,11 +145,11 @@ function Wide({ kicker, title, line, colour = "#4f8ef7", critter = "ollie", ques
   );
 }
 
-function Tall({ kicker, title, line, colour = "#4f8ef7", critter = "ollie", items = [] }: OgCardText) {
+function Tall({ kicker, title, line, colour = "#4f8ef7", critter = "ollie", items = [], itemColours = [] }: OgCardText) {
   return (
     <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-between", padding: "72px 64px", background: "#fffaf1", color: INK, fontFamily: "Fredoka", textAlign: "center" }}>
       <Brand size={46} />
-      <Guide critter={critter} colour={colour} size={420} />
+      <Guide critter={critter} colour={colour} size={items.length > 4 ? 320 : 420} />
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div style={{ display: "flex", fontSize: 36, fontWeight: 600, color: SOFT }}>{clip(kicker, 44)}</div>
         <div style={{ display: "flex", width: 180, height: 14, borderRadius: 7, background: colour, marginTop: 18, marginBottom: 18 }} />
@@ -155,8 +157,8 @@ function Tall({ kicker, title, line, colour = "#4f8ef7", critter = "ollie", item
         {line && <div style={{ display: "flex", fontSize: 34, fontWeight: 600, color: SOFT, marginTop: 18 }}>{clip(line, 50)}</div>}
       </div>
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 12 }}>
-        {items.slice(0, 4).map((it) => (
-          <div key={it} style={{ display: "flex", padding: "10px 28px", borderRadius: 999, background: "#ffffff", border: `4px solid ${colour}`, fontSize: 32, fontWeight: 600 }}>
+        {items.slice(0, 6).map((it, i) => (
+          <div key={it} style={{ display: "flex", padding: "10px 28px", borderRadius: 999, background: "#ffffff", border: `4px solid ${itemColours[i] ?? colour}`, fontSize: 32, fontWeight: 600 }}>
             {clip(it, 34)}
           </div>
         ))}

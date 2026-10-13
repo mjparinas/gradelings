@@ -15,6 +15,8 @@ export const guidePath = {
   grade: (f: Framework, g: GradeId) => `/guides/${f.slug}/${gradeSlug(g)}/`,
   subject: (f: Framework, g: GradeId, s: SubjectId) => `/guides/${f.slug}/${gradeSlug(g)}/${s}/`,
   worksheet: (f: Framework, g: GradeId, s: SubjectId) => `/guides/${f.slug}/${gradeSlug(g)}/${s}/worksheet/`,
+  /** The tall Pinterest image for a grade's printable sheets. */
+  sheetsPin: (f: Framework, g: GradeId) => `/guides/${f.slug}/${gradeSlug(g)}/pin.png`,
   competencies: (f: Framework) => `/guides/${f.slug}/${guidesFor(f.id).competencies.slug}/`,
   assessment: (f: Framework) => `/guides/${f.slug}/${guidesFor(f.id).assessment.slug}/`,
   french: (f: Framework) => `/guides/${f.slug}/french/`,

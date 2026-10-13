@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { gradeSlug } from "@/content/subjects";
 import { coursesFor, gradesWithContent } from "./curriculum";
-import { cardQuestion, countMilestoneCard, curriculumCard, guideCard, reportCardCard, unitCard, unitMilestoneCard, worksheetCard } from "./ogText";
+import { cardQuestion, countMilestoneCard, curriculumCard, guideCard, gradeSheetsCard, reportCardCard, unitCard, unitMilestoneCard, worksheetCard } from "./ogText";
 import type { Question } from "@/content/types";
 import { GUIDE_FRAMEWORKS } from "@/content/guides";
 
@@ -88,6 +88,23 @@ describe("share cards", () => {
         }
       }
     }
+  });
+
+  it("lists every subject on a grade's printable sheets pin, and only for real grades", () => {
+    expect(gradeSheetsCard({ framework: "bc", grade: "grade-6" })).toMatchObject({
+      kicker: "British Columbia · Grade 6",
+      title: "Grade 6 printable worksheets",
+      items: ["Math", "English Language Arts", "Science", "Social Studies", "French Immersion", "Core French"],
+    });
+    for (const f of GUIDE_FRAMEWORKS) {
+      for (const g of gradesWithContent(f)) {
+        const card = gradeSheetsCard({ framework: f.slug, grade: gradeSlug(g) });
+        expect(card?.items).toHaveLength(coursesFor(f, g).length);
+        expect(card?.line).toBe(`${coursesFor(f, g).length} free sheets with answer keys`);
+      }
+    }
+    expect(gradeSheetsCard({ framework: "bc", grade: "grade-13" })).toBeUndefined();
+    expect(gradeSheetsCard({ framework: "quebec", grade: "grade-4" })).toBeUndefined();
   });
 
   it("words shared milestones from the link's fields only, and refuses anything else", () => {

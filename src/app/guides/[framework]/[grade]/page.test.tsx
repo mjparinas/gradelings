@@ -56,6 +56,20 @@ describe("grade guide page", () => {
     expect(screen.getByRole("link", { name: "Try it free" })).toHaveAttribute("href", "/play/");
   });
 
+  it("shows every subject's printable sheet in a gallery, with one Pinterest pin for the grade", async () => {
+    const bc = getFramework("ca-bc");
+    render(await GradeGuide(props("bc", "grade-4")));
+    const gallery = screen.getByRole("region", { name: "Printable Grade 4 sheets" });
+    expect(gallery).toHaveAttribute("id", "sheets");
+    const sheets = within(gallery).getAllByRole("link", { name: /Open the sheet/ });
+    expect(sheets.map((a) => a.getAttribute("href"))).toEqual(coursesFor(bc, "4").map((c) => guidePath.worksheet(bc, "4", c.subject)));
+    expect(sheets[0]).toHaveTextContent("Grade 4 Math");
+    const pin = new URL(within(gallery).getByRole("link", { name: /Save to Pinterest/ }).getAttribute("href")!);
+    expect(new URL(pin.searchParams.get("url")!).pathname + new URL(pin.searchParams.get("url")!).hash).toBe("/guides/bc/grade-4/#sheets");
+    expect(pin.searchParams.get("media")).toMatch(/\/guides\/bc\/grade-4\/pin\.png$/);
+    expect(pin.searchParams.get("description")).toContain("Free printable Grade 4 worksheets");
+  });
+
   it("mentions the provincial assessment only in the grades that write it", async () => {
     const bc = getFramework("ca-bc");
     const fsa = guidesFor("ca-bc").assessment;

@@ -10,8 +10,8 @@ import { GRADE_LABEL, getSubjectMeta, gradeSlug, subjectInSentence } from "@/con
 import { APP_NAME } from "@/lib/brand";
 import { TRIAL_DAYS } from "@/lib/plan";
 import { Disclosure } from "@/components/Disclosure";
-import { JsonLd } from "@/lib/site";
-import { ShareButton } from "@/components/site/ShareButton";
+import { JsonLd, absolute } from "@/lib/site";
+import { PinLink, ShareButton } from "@/components/site/ShareButton";
 
 export const dynamicParams = false;
 
@@ -137,6 +137,43 @@ export default async function GradeGuide({ params }: Props) {
               </section>
             );
           })}
+        </div>
+      </section>
+
+      <section id="sheets" aria-labelledby="sheets-heading" className="mt-10">
+        <h2 id="sheets-heading" className="text-2xl font-bold">
+          Printable {label} sheets
+        </h2>
+        <p className="mt-2 max-w-3xl font-read text-lg">One free practice sheet for each subject, with an answer key. Print them, or work through them on screen.</p>
+        <ul className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+          {courses.map((c) => {
+            const meta = getSubjectMeta(c.subject);
+            return (
+              <li key={c.subject}>
+                <Link
+                  href={guidePath.worksheet(f, grade, c.subject)}
+                  className="flex h-full min-h-48 flex-col gap-2 rounded-3xl border-4 p-4 hover:shadow-md"
+                  style={{ borderColor: meta.colour, background: meta.colourSoft }}
+                >
+                  <span className="text-4xl" aria-hidden="true">
+                    {meta.emoji}
+                  </span>
+                  <span className="text-lg font-bold leading-tight">
+                    {label} {subjectSeoTitle(c.subject)}
+                  </span>
+                  <span className="font-read text-sm text-ink-soft">{c.units.slice(0, 2).map((u) => u.title).join(", ")}</span>
+                  <span className="mt-auto font-semibold underline">Open the sheet →</span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+        <div className="mt-4">
+          <PinLink
+            path={`${guidePath.grade(f, grade)}#sheets`}
+            media={absolute(guidePath.sheetsPin(f, grade))}
+            description={`Free printable ${label} worksheets with answer keys, one for each subject (${f.shortName} curriculum)`}
+          />
         </div>
       </section>
 

@@ -111,6 +111,22 @@ export function worksheetCard(params: Params): OgCardText | undefined {
   };
 }
 
+/** The tall Pinterest card for a grade's printable sheets, one item per subject. Leads to the grade guide's gallery. */
+export function gradeSheetsCard(params: { framework: string; grade: string }): OgCardText | undefined {
+  const r = resolve(params);
+  if (!r || r.course) return undefined;
+  const { framework: f, grade } = r;
+  const courses = coursesFor(f, grade);
+  if (!courses.length) return undefined;
+  return {
+    kicker: `${f.name} · ${GRADE_LABEL[grade]}`,
+    title: `${GRADE_LABEL[grade]} printable worksheets`,
+    line: `${courses.length} free sheets with answer keys`,
+    items: courses.map((c) => subjectSeoTitle(c.subject)),
+    itemColours: courses.map((c) => getSubjectMeta(c.subject).colour),
+  };
+}
+
 export interface MilestoneCard extends OgCardText {
   /** Where the page's second link goes: the unit's curriculum page, or the curriculum index. */
   more?: { href: string; label: string };
