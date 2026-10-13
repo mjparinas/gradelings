@@ -47,7 +47,7 @@ const linesOf = (u: (typeof california)[number]["u"]) =>
     .split("\n");
 
 describe("California", () => {
-  it("is a US framework in US English, not offered to families yet", () => {
+  it("is a US framework in US English, offered to families", () => {
     const ca = getFramework("california");
     expect(ca.id).toBe("us-ca");
     expect(ca.country).toBe("US");
@@ -59,8 +59,8 @@ describe("California", () => {
       "Meeting",
       "Exceeding",
     ]);
-    expect(UPCOMING_FRAMEWORKS).toContain(ca);
-    expect(FRAMEWORKS).not.toContain(ca);
+    expect(FRAMEWORKS).toContain(ca);
+    expect(UPCOMING_FRAMEWORKS).not.toContain(ca);
   });
 
   it("has a focus list for every course", () => {

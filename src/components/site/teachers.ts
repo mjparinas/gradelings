@@ -10,9 +10,9 @@ import { gradesWithContent } from "./curriculum";
 /**
  * Frameworks the classroom area can assign units from. Classes follow BC, Ontario, Alberta, Saskatchewan, Manitoba,
  * Yukon, the Northwest Territories, Nova Scotia, New Brunswick, Newfoundland and Labrador, Prince Edward Island,
- * Nunavut, Washington or Oregon (see TeacherApp). Filtered by FRAMEWORKS, so a framework still upcoming gets no teacher pages.
+ * Nunavut, Washington, Oregon or California (see TeacherApp). Filtered by FRAMEWORKS, so a framework still upcoming gets no teacher pages.
  */
-export const TEACHER_FRAMEWORK_IDS = ["ca-bc", "ca-on", "ca-ab", "ca-sk", "ca-mb", "ca-yt", "ca-nt", "ca-ns", "ca-nb", "ca-nl", "ca-pe", "ca-nu", "us-wa", "us-or"];
+export const TEACHER_FRAMEWORK_IDS = ["ca-bc", "ca-on", "ca-ab", "ca-sk", "ca-mb", "ca-yt", "ca-nt", "ca-ns", "ca-nb", "ca-nl", "ca-pe", "ca-nu", "us-wa", "us-or", "us-ca"];
 
 export const TEACHER_FRAMEWORKS: Framework[] = FRAMEWORKS.filter((f) => TEACHER_FRAMEWORK_IDS.includes(f.id));
 

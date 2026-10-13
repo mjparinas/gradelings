@@ -285,14 +285,15 @@ export const FRAMEWORKS: Framework[] = [
   NUNAVUT,
   WASHINGTON,
   OREGON,
+  CALIFORNIA,
 ];
 
 /**
  * Frameworks being built but not offered yet. They have content and tests, but no public pages, no place in the
  * province pickers and no sitemap entries until they move into FRAMEWORKS. getFramework still finds them.
- * California, the third US state, is here while its courses and guides are built (October 2026).
+ * Empty since California launched (October 2026); the next state goes here while it is built.
  */
-export const UPCOMING_FRAMEWORKS: Framework[] = [CALIFORNIA];
+export const UPCOMING_FRAMEWORKS: Framework[] = [];
 
 export const DEFAULT_FRAMEWORK: FrameworkId = "ca-bc";
 
