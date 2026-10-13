@@ -1,3 +1,4 @@
+import { countryOf } from "@/lib/country";
 import { pick, randInt, sample } from "@/content/random";
 import type { GradeId } from "@/content/types";
 import type { Country } from "./types";
@@ -157,7 +158,7 @@ function from(seq: Sequence, count: number): OrderSet {
 /** Canadian spacing for big numbers (12 345), or US commas (12,345); none for four digits. */
 export function spaced(n: number, country: Country = "CA"): string {
   const s = String(Math.abs(n));
-  const body = s.length <= 4 ? s : s.replace(/\B(?=(\d{3})+(?!\d))/g, country === "US" ? "," : " ");
+  const body = s.length <= 4 ? s : s.replace(/\B(?=(\d{3})+(?!\d))/g, countryOf(country).thousandsSeparator);
   return n < 0 ? `−${body}` : body;
 }
 
@@ -226,14 +227,18 @@ function valued(list: [string, number][], count: number, title: string, speak: s
   return { title, speak, items: items.map(([label]) => it(label)) };
 }
 
+/** Each country's history cards: how the country grew, then modern history. */
+const HISTORY: Record<Country, { grows: Sequence; modern: Sequence }> = {
+  CA: { grows: CANADA_GROWS, modern: CANADA_HISTORY },
+  US: { grows: US_GROWS, modern: US_1900S },
+};
+
 /** One set of cards for the grade. Little kids get 4 cards; everyone else 5 (when the set has them). */
 export function orderSet(grade: GradeId, country: Country = "CA"): OrderSet {
   const g = G[grade];
   const n = g <= 1 ? 4 : 5;
-  const us = country === "US";
   // A child on a US curriculum puts US history in order instead of Canada's.
-  const grows = us ? US_GROWS : CANADA_GROWS;
-  const modern = us ? US_1900S : CANADA_HISTORY;
+  const { grows, modern } = HISTORY[country];
   const options: (() => OrderSet)[] =
     g === 0
       ? [() => from(ROUTINE, n), () => from(PLANT, n), () => from(BUTTERFLY, n), () => from(SIZES, n), () => wholeNumbers(10, n)]

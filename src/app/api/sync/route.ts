@@ -1,3 +1,4 @@
+import { countryOf, toCountryCode } from "@/lib/country";
 import type { InValue } from "@libsql/client";
 import type { AppEvent, ChildSettings, Profile } from "@/lib/model";
 import { MAX_CHILDREN } from "@/lib/plan";
@@ -71,14 +72,14 @@ export async function POST(req: Request) {
   let famRow = await getFamilyRow(family);
   if (famRow && !session.student && !existing.some((r) => r.family_id === family)) {
     const country = familyCountry(incomingProfiles.filter((p) => p && typeof p === "object" && isId(p.id)));
-    if (country !== (famRow.country === "US" ? "US" : "CA")) {
+    if (country !== toCountryCode(famRow.country)) {
       await run("UPDATE families SET country = ?, updated_at = ? WHERE id = ?", [country, Date.now(), family]);
       famRow = await getFamilyRow(family);
     }
   }
   // A US family's children stay on the device until a parent gives consent: nothing about them is stored here,
   // and their events aren't acknowledged, so the device sends them again once consent is recorded.
-  if (famRow && !session.student && famRow.country === "US" && !famRow.consent_at) {
+  if (famRow && !session.student && countryOf(toCountryCode(famRow.country)).parentalConsent && !famRow.consent_at) {
     incomingEvents = [];
     incomingProfiles = [];
     incomingSettings = [];

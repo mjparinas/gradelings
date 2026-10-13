@@ -1,4 +1,5 @@
 import "server-only";
+import { toCountryCode } from "@/lib/country";
 import { randomInt } from "node:crypto";
 import { APP_NAME } from "@/lib/brand";
 import { REFERRAL_ALPHABET, REFERRAL_BONUS_DAYS, REFERRAL_CODE_LENGTH, REFERRAL_MAX_REWARDS, pricesFor } from "@/lib/plan";
@@ -104,7 +105,7 @@ export async function rewardReferrer(familyId: string, now = Date.now()): Promis
   if (paying && referrer.stripe_customer && stripeCancellationConfigured()) {
     // A real subscriber: take one month's price off their next invoice, in the currency they pay in.
     try {
-      const month = pricesFor(referrer.country === "US" ? "US" : "CA").month;
+      const month = pricesFor(toCountryCode(referrer.country)).month;
       await creditCustomer(referrer.stripe_customer, Math.round(month.amount * 100), month.currency, `${APP_NAME} referral: one free month`);
       await run("UPDATE families SET updated_at = ? WHERE id = ?", [now, referrerId]);
       return true;

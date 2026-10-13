@@ -10,6 +10,7 @@ import { SASKATCHEWAN } from "./saskatchewan/framework";
 import { OREGON } from "./oregon/framework";
 import { CALIFORNIA } from "./california/framework";
 import { WASHINGTON } from "./washington/framework";
+import type { CountryCode } from "@/lib/country";
 import type { FrameworkId, GradeId, SubjectId } from "./types";
 
 // Everything that differs between provinces/states lives here: names, which
@@ -51,7 +52,9 @@ export interface Framework {
   slug: string;
   name: string;
   shortName: string;
-  country: "CA" | "US";
+  country: CountryCode;
+  /** What the region is called in sentences, when not the country's usual word (the territories). */
+  regionKind?: "territory";
   curriculumName: string;
   /** The place name used in sentences, e.g. "Ontario". */
   region: string;
@@ -189,6 +192,7 @@ const BRITISH_COLUMBIA: Framework = {
 const YUKON: Framework = {
   ...BRITISH_COLUMBIA,
   id: "ca-yt",
+  regionKind: "territory",
   slug: "yukon",
   name: "Yukon",
   shortName: "Yukon",
@@ -233,6 +237,7 @@ const YUKON: Framework = {
 const NORTHWEST_TERRITORIES: Framework = {
   ...BRITISH_COLUMBIA,
   id: "ca-nt",
+  regionKind: "territory",
   slug: "northwest-territories",
   name: "Northwest Territories",
   shortName: "NWT",

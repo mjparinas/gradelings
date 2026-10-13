@@ -1,7 +1,8 @@
-import type { Framework } from "@/content/frameworks";
 import type { AgeBand, GradeId, SubjectId } from "@/content/types";
 
-export type Country = Framework["country"];
+import type { CountryCode } from "@/lib/country";
+
+export type Country = CountryCode;
 
 export interface GameProps {
   grade: GradeId;

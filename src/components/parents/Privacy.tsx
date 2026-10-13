@@ -1,5 +1,6 @@
 "use client";
 
+import { countryOf } from "@/lib/country";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { withdrawConsent } from "@/lib/account";
@@ -15,7 +16,7 @@ export function PrivacyPanels() {
   const [withdrawError, setWithdrawError] = useState<string | null>(null);
   const wipe = useStore((s) => s.wipeDevice);
   const family = useStore((s) => s.family);
-  const usConsent = family.country === "US" && Boolean(family.consentAt) && Boolean(family.account) && !family.account?.student;
+  const usConsent = countryOf(family).parentalConsent && Boolean(family.consentAt) && Boolean(family.account) && !family.account?.student;
   const router = useRouter();
 
   const exportData = () => {

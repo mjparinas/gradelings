@@ -47,7 +47,8 @@ describe("locales", () => {
       expect(localeOf(f)).toBe(f.country === "US" ? "en-US" : "en-CA");
       expect(regionKind(f)).toBe(f.country === "US" ? "state" : ["ca-yt", "ca-nt", "ca-nu"].includes(f.id) ? "territory" : "province");
     }
-    expect(regionKind({ country: "US", id: "ca-bc" })).toBe("state");
+    expect(regionKind({ country: "US" })).toBe("state");
+    expect(regionKind({ country: "CA" })).toBe("province");
   });
 
   it("names grades the way each country does", () => {

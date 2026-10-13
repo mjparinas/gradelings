@@ -1,3 +1,4 @@
+import { countryOf } from "./country";
 import { FRAMEWORKS, UPCOMING_FRAMEWORKS } from "@/content/frameworks";
 import type { FamilyInfo, Profile } from "./model";
 import type { Country } from "./plan";
@@ -30,11 +31,11 @@ export function familyCountry(profiles: Pick<Profile, "framework" | "createdAt" 
   const first = profiles.filter((p) => p && !p.deleted).sort((a, b) => (Number(a.createdAt) || 0) - (Number(b.createdAt) || 0))[0];
   if (!first) return "CA";
   const fw = [...FRAMEWORKS, ...UPCOMING_FRAMEWORKS].find((f) => f.id === first.framework);
-  return fw?.country === "US" ? "US" : "CA";
+  return fw?.country ?? "CA";
 }
 
 /** Whether this family must give US parental consent before its children's information is synced. */
 export function consentNeeded(family: Pick<FamilyInfo, "country" | "consentAt" | "account">): boolean {
   if (!family.account || family.account.student) return false;
-  return family.country === "US" && !family.consentAt;
+  return countryOf(family).parentalConsent && !family.consentAt;
 }

@@ -1,3 +1,4 @@
+import { countryOf, toCountryCode } from "./country";
 import { PRICES_BY_CURRENCY } from "./plan";
 
 // Business numbers for the admin dashboard, worked out from plain rows so they can be tested without a
@@ -184,7 +185,7 @@ export function computeMetrics(input: MetricsInput): Metrics {
       paying++;
       if (f.subscriptionInterval === "year") yearly++;
       else if (f.subscriptionInterval === "month") monthly++;
-      if (f.country === "US") {
+      if (countryOf(toCountryCode(f.country)).currency === "USD") {
         usPaying++;
         if (f.subscriptionInterval === "year") usYearly++;
         else if (f.subscriptionInterval === "month") usMonthly++;

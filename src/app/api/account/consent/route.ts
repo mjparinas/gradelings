@@ -1,3 +1,4 @@
+import { countryOf, toCountryCode } from "@/lib/country";
 import { appOrigin, error, getSession, json, sameOrigin } from "@/server/auth";
 import { recordConsent, revokeConsent } from "@/server/consent";
 import { getFamilyRow, toFamilyInfo } from "@/server/family";
@@ -11,7 +12,7 @@ export async function POST(req: Request) {
   const session = await getSession(req);
   if (!session) return error(401, "Please sign in first.");
   const row = await getFamilyRow(session.familyId);
-  if (!row || row.country !== "US") return error(400, "Only families in the United States are asked for this permission.");
+  if (!row || !countryOf(toCountryCode(row.country)).parentalConsent) return error(400, "Only families in the United States are asked for this permission.");
   const body = (await req.json().catch(() => null)) as { agree?: unknown; withdraw?: unknown } | null;
   if (body?.withdraw === true) await revokeConsent(session.familyId);
   else if (body?.agree === true) await recordConsent(session.familyId, "email-plus", session.email, appOrigin(req));

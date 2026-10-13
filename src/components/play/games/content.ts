@@ -504,6 +504,9 @@ const STATE_CAPITALS: Pair[] = [
   { a: "Alaska", b: "Juneau" },
 ];
 
+/** Capitals to match, per country. */
+const CAPITALS: Record<Country, Pair[]> = { CA: PROVINCE_CAPITALS, US: STATE_CAPITALS };
+
 export function memoryPairs(grade: GradeId, count: number, country: Country = "CA"): Pair[] {
   const g = G[grade];
   const sets: Pair[][] =
@@ -545,7 +548,7 @@ export function memoryPairs(grade: GradeId, count: number, country: Country = "C
           ]
         : g <= 5
           ? [
-              country === "US" ? STATE_CAPITALS : PROVINCE_CAPITALS,
+              CAPITALS[country],
               [
                 { a: "7 × 8", b: "56" },
                 { a: "6 × 9", b: "54" },
@@ -557,7 +560,7 @@ export function memoryPairs(grade: GradeId, count: number, country: Country = "C
                 { a: "9 × 9", b: "81" },
               ],
             ]
-          : olderMemorySets(g, country === "US" ? US_GOVERNMENT : GOVERNMENT);
+          : olderMemorySets(g, GOVERNMENTS[country]);
   return sample(pick(sets), count);
 }
 
@@ -611,6 +614,9 @@ const US_GOVERNMENT: Pair[] = [
   { a: "Supreme Court", b: "the nation's highest court" },
   { a: "Bill of Rights", b: "the first ten amendments" },
 ];
+
+/** Government words to match, per country. */
+const GOVERNMENTS: Record<Country, Pair[]> = { CA: GOVERNMENT, US: US_GOVERNMENT };
 const INTEGERS: Pair[] = [
   { a: "−3 + 5", b: "2" },
   { a: "−4 × 3", b: "−12" },

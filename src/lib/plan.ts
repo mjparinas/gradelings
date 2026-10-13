@@ -1,3 +1,5 @@
+import type { Currency } from "@/content/money";
+import { countryOf, type CountryCode } from "./country";
 import type { FamilyInfo } from "./model";
 
 // Subscription plans and what each one unlocks. Tune these numbers freely:
@@ -25,8 +27,8 @@ export function normalizeReferralCode(raw: unknown): string | null {
 }
 
 /** Where a family lives, for prices and US children's-privacy consent. Canada unless the first child added follows a US curriculum. */
-export type Country = "CA" | "US";
-export type Currency = "CAD" | "USD";
+export type Country = CountryCode;
+export type { Currency };
 
 export interface Price {
   amount: number;
@@ -54,7 +56,7 @@ export const PRICES_BY_CURRENCY: Record<Currency, { month: Price; year: Price & 
 export const PRICES = PRICES_BY_CURRENCY.CAD;
 
 /** The currency a family pays in: US dollars for a US family, Canadian dollars for everyone else. */
-export const currencyFor = (country: Country | null | undefined): Currency => (country === "US" ? "USD" : "CAD");
+export const currencyFor = (country: Country | null | undefined): Currency => countryOf(country).currency;
 
 /** The family plan's prices for a family or visitor in this country. */
 export const pricesFor = (country: Country | null | undefined) => PRICES_BY_CURRENCY[currencyFor(country)];
