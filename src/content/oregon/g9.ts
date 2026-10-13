@@ -7,6 +7,7 @@ import { courses as ontario } from "../ontario/g9";
 import { courses as saskatchewan } from "../saskatchewan/g9";
 import { courses as washington } from "../washington/g9";
 import { oregonGrade } from "./kit";
+import { OWN } from "./units/own-g9";
 
 // Oregon Grade 9.
-export const courses: Course[] = oregonGrade("9", [washington, ontario, alberta, manitoba, saskatchewan, novaScotia, newBrunswick]);
+export const courses: Course[] = oregonGrade("9", [washington, ontario, alberta, manitoba, saskatchewan, novaScotia, newBrunswick], OWN);
