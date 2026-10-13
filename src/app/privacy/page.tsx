@@ -56,6 +56,9 @@ export default function PrivacyPage() {
           <strong>If you report a problem with a question:</strong> we keep the question, the reason you picked from a fixed list and the date, linked to your family so we can follow up.
         </p>
         <p>
+          <strong>If you write to us through the contact page:</strong> your name if you give it, your email address, the topic you pick and your message. They are emailed to our inbox through Resend so we can reply; we don’t copy them into our database.
+        </p>
+        <p>
           <strong>On your device:</strong> the app saves progress on the device first, so it works offline, using the browser’s local storage and IndexedDB. Your Parent area PIN is stored there too, salted and hashed, and your read-aloud voice choice is kept per device. If you never sign in, this information stays on that device and is not sent to us.
         </p>
         <p>

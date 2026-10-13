@@ -10,13 +10,13 @@ delete process.env.RESEND_API_KEY;
 delete process.env.NEXT_PUBLIC_SITE_URL;
 
 type Mod = Record<string, (req: Request) => Promise<Response>>;
-let signup: Mod, verify: Mod, login: Mod, sync: Mod, share: Mod, prefs: Mod, unsub: Mod, cron: Mod, feedback: Mod, classes: Mod, students: Mod;
+let signup: Mod, verify: Mod, login: Mod, sync: Mod, share: Mod, prefs: Mod, unsub: Mod, cron: Mod, feedback: Mod, classes: Mod, students: Mod, contact: Mod;
 let dbm: typeof import("@/server/db");
 let email: typeof import("@/server/email");
 let reportData: typeof import("@/server/reportData");
 
 beforeAll(async () => {
-  [signup, verify, login, sync, share, prefs, unsub, cron, feedback, classes, students] = (await Promise.all([
+  [signup, verify, login, sync, share, prefs, unsub, cron, feedback, classes, students, contact] = (await Promise.all([
     import("@/app/api/auth/signup/route"),
     import("@/app/api/auth/verify/route"),
     import("@/app/api/auth/login/route"),
@@ -28,6 +28,7 @@ beforeAll(async () => {
     import("@/app/api/feedback/route"),
     import("@/app/api/classes/route"),
     import("@/app/api/classes/students/route"),
+    import("@/app/api/contact/route"),
   ])) as unknown as Mod[];
   dbm = await import("@/server/db");
   email = await import("@/server/email");
@@ -360,6 +361,44 @@ describe("report a problem", () => {
     let last = 200;
     for (let i = 0; i < 22; i++) last = (await feedback.POST(r.clone())).status;
     expect(last).toBe(429);
+  });
+});
+
+describe("contact form", () => {
+  const body = { name: "Sam", email: "sam@example.com", topic: "billing", message: "How do I switch to the yearly plan?", website: "" };
+
+  it("emails our inbox with the parent as Reply-To, and nothing to the parent", async () => {
+    const before = email.outbox().length;
+    expect((await contact.POST(req("/api/contact/", "POST", body))).status).toBe(200);
+    const sent = email.outbox().slice(before);
+    expect(sent).toHaveLength(1);
+    expect(sent[0]).toMatchObject({ to: "hello@gradelings.com", replyTo: "sam@example.com", subject: "Contact form: Subscription or billing from Sam" });
+    expect(sent[0].text).toContain("How do I switch to the yearly plan?");
+  });
+
+  it("escapes what people type in the HTML version", async () => {
+    const before = email.outbox().length;
+    await contact.POST(req("/api/contact/", "POST", { ...body, message: "<script>alert(1)</script> please" }));
+    const html = email.outbox().slice(before)[0].html;
+    expect(html).not.toContain("<script>alert");
+    expect(html).toContain("&lt;script&gt;");
+  });
+
+  it("drops bot sends quietly and rejects bad ones", async () => {
+    const before = email.outbox().length;
+    expect((await contact.POST(req("/api/contact/", "POST", { ...body, website: "http://spam.example" }))).status).toBe(200);
+    expect(email.outbox().length).toBe(before);
+    expect((await contact.POST(req("/api/contact/", "POST", { ...body, email: "nope" }))).status).toBe(400);
+    expect((await contact.POST(req("/api/contact/", "POST", { ...body, topic: "anything" }))).status).toBe(400);
+    const cross = new Request("http://localhost/api/contact/", { method: "POST", headers: { "content-type": "application/json", origin: "https://evil.example" }, body: JSON.stringify(body) });
+    expect((await contact.POST(cross)).status).toBe(403);
+  });
+
+  it("limits how often one address can send", async () => {
+    const r = new Request("http://localhost/api/contact/", { method: "POST", headers: { "content-type": "application/json", "x-forwarded-for": "9.9.9.10" }, body: JSON.stringify(body) });
+    const codes: number[] = [];
+    for (let i = 0; i < 6; i++) codes.push((await contact.POST(r.clone())).status);
+    expect(codes).toEqual([200, 200, 200, 200, 200, 429]);
   });
 });
 
