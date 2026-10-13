@@ -4,10 +4,12 @@ import { useEffect, useState, useSyncExternalStore } from "react";
 import { APP_NAME } from "@/lib/brand";
 import { devBilling, loadReferral, openBillingPortal, redeemCode, refreshAccount, resendVerification, startCheckout, type BillingInfo, type ReferralInfo } from "@/lib/account";
 import { firstChargeAt, FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, CURRENCY_NAME, pricesFor, trialDaysLeft, upgradeOffer } from "@/lib/plan";
+import { savedPromoCode } from "@/lib/promoCode";
 import { inviteLink, rememberMyInvite } from "@/lib/referral";
 import { useRoute } from "@/lib/router";
 import { useStore } from "@/lib/store";
 import { isIosApp, isStoreApp } from "@/lib/twa";
+import { PromoBanner } from "@/components/site/PromoBanner";
 import { PageTitle, Panel } from "./common";
 
 const noSubscribe = () => () => {};
@@ -74,6 +76,7 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
               : "The free trial is optional. Subscribe whenever you're ready, including before you've tried the app."
         }
       />
+      {!inStoreApp && !paid && <PromoBanner showLink={false} className="mb-5 rounded-2xl" />}
       {checkout === "success" && <Panel className="mb-5 border-good bg-good-soft">🎉 Thank you! Your membership is active.</Panel>}
       <div className="grid gap-5 lg:grid-cols-2">
         <Panel title="Your plan">
@@ -256,7 +259,8 @@ function ReferralPanel() {
 
 /** A box for a code from a school, a partner or a gift: free access for a while, or a discount. */
 function RedeemPanel() {
-  const [code, setCode] = useState("");
+  // A code from the sale banner is filled in, ready to redeem.
+  const [code, setCode] = useState(() => savedPromoCode());
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<{ ok: boolean; text: string } | null>(null);
   const submit = async () => {

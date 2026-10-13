@@ -46,6 +46,8 @@ curl -X DELETE "$SITE/api/admin/codes/" -H "$AUTH" -H "content-type: application
 
 ## How it works
 
+- **FOUNDER** (33% off every payment, for founding families) is made automatically when the database is set up (`src/server/db.ts`). Disable it or give it a use limit like any other code; that sticks. Advertise it, or any discount code, with a sale on the admin panel's Sales tab (`docs/ADMIN.md`).
+
 - **Access codes** set `families.access_until`. A second code adds to the end of the access already there; lifetime is `LIFETIME_ACCESS` in `src/lib/plan.ts`. It is separate from the Stripe plan, so cancelling a subscription doesn't take code access away. The family sees "Premium from your code" with the end date, and gets no upgrade prompts or trial emails while it lasts.
 - **Discount codes** are saved on the family (`families.discount_code`) and applied at the next checkout as a Stripe coupon, made the first time the code is used and then reused. Stripe's own promotion-code box is hidden for that checkout, because Stripe allows one or the other. The discount is cleared when the checkout is paid. A family that already has a membership can't redeem a discount.
 - **Disabling** a code stops new redemptions and drops a discount that is still waiting, but access already granted stays.

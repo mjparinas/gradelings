@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, SUBSCRIBE_HREF, TRIAL_DAYS } from "@/lib/plan";
+import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, perChildMonthly, PRICES, PRICES_BY_CURRENCY, SUBSCRIBE_HREF, TRIAL_DAYS } from "@/lib/plan";
 import { PricingCards } from "./Pricing";
 
 // next.config.ts sets trailingSlash, which next/link reads from this variable.
@@ -41,5 +41,19 @@ describe("PricingCards", () => {
     expect(card("Family · yearly")).toHaveTextContent(`US$${PRICES_BY_CURRENCY.USD.year.amount} / year`);
     expect(card("Family · yearly")).toHaveTextContent(`about US$${Math.round(PRICES_BY_CURRENCY.USD.year.amount / 12)} a month`);
     expect(card("Family · monthly")).not.toHaveTextContent("CAD");
+  });
+
+  it("leads with the cost per child, worked out from the prices", () => {
+    expect(perChildMonthly("CAD", "year")).toBe(3.33);
+    expect(perChildMonthly("CAD", "month")).toBe(5);
+    render(<PricingCards />);
+    expect(screen.getByText(/^From \$3\.33 a month per child\./)).toBeInTheDocument();
+    expect(card("Family · yearly")).toHaveTextContent(`$3.33 a month per childwith ${MAX_CHILDREN} children`);
+    expect(card("Family · monthly")).toHaveTextContent("$5.00 a month per child");
+  });
+
+  it("says the cost per child in US dollars on the US cards", () => {
+    render(<PricingCards currency="USD" />);
+    expect(card("Family · yearly")).toHaveTextContent("US$3.33 a month per child");
   });
 });

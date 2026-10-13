@@ -6,13 +6,13 @@ import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { SUBSCRIBE_HREF, TRIAL_DAYS } from "@/lib/plan";
 import { teacherPath, TEACHER_SIGNUP } from "./teachers";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
+import { PromoBanner } from "./PromoBanner";
 import { RefCapture } from "./ShareButton";
 import { byCountry, regionList } from "./provinces";
 
 export function SiteHeader() {
   return (
     <header className="print:hidden sticky top-0 z-30 border-b border-line bg-paper/90 backdrop-blur">
-      <SkipLink />
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
         <Link href="/" className="text-2xl font-bold tracking-tight" aria-label={APP_NAME}>
           {APP_NAME.split("").map((ch, i) => (
@@ -201,6 +201,9 @@ export function SitePage({ children, cta = false }: { children: ReactNode; /** E
   return (
     <>
       <RefCapture />
+      {/* First, so it is the first thing a keyboard reaches; outside the header, whose blur would anchor it. */}
+      <SkipLink />
+      <PromoBanner />
       <SiteHeader />
       <main id={MAIN_ID} tabIndex={-1} className="mx-auto max-w-6xl px-4 py-8">
         {children}

@@ -153,6 +153,16 @@ describe("SubscriptionPage", () => {
     await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("That code isn't valid."));
   });
 
+  it("fills in the code from a sale banner the parent saw", async () => {
+    state.android = false;
+    state.ios = false;
+    localStorage.setItem("grademap.promo.code", JSON.stringify({ code: "FOUNDER", until: Date.now() + 86_400_000 }));
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account: { email: "parent@example.com", familyId: "fam", verified: true } };
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    await waitFor(() => expect(screen.getByLabelText("Code")).toHaveValue("FOUNDER"));
+    localStorage.clear();
+  });
+
   it("shows code access, a waiting discount, and hides the code box for lifetime access", () => {
     state.android = false;
     state.ios = false;
