@@ -108,7 +108,7 @@ export const SETTINGS: { names: string[]; label: string; need: "required" | "rec
   { names: ["STRIPE_WEBHOOK_SECRET"], label: "Stripe webhook secret", need: "required", what: "Subscriptions and payments reaching the app." },
   { names: ["RESEND_WEBHOOK_SECRET"], label: "Email delivery reports", need: "recommended", what: "Bounces and spam reports in the email log." },
   { names: ["SENTRY_DSN", "NEXT_PUBLIC_SENTRY_DSN"], label: "Error reports", need: "recommended", what: "Crashes reported to Sentry." },
-  { names: ["SENTRY_AUTH_TOKEN"], label: "Sentry read token", need: "optional", what: "Open errors on this page." },
+  { names: ["SENTRY_READ_TOKEN", "SENTRY_AUTH_TOKEN"], label: "Sentry read token", need: "optional", what: "Open errors on this page." },
   { names: ["VERCEL_TOKEN"], label: "Vercel read token", need: "optional", what: "Deploys on this page and visits on the Traffic tab." },
   { names: ["GOOGLE_SERVICE_ACCOUNT_KEY"], label: "Search Console key", need: "optional", what: "Google search clicks on the Traffic tab (with SEARCH_CONSOLE_SITE)." },
   { names: ["GITHUB_TOKEN"], label: "GitHub read token", need: "optional", what: "Uptime and builds on this page." },

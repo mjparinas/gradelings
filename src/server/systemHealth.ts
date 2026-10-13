@@ -268,7 +268,9 @@ interface SentryIssue {
 }
 
 export async function errorsCheck(now = Date.now()): Promise<HealthCheck> {
-  const token = env("SENTRY_AUTH_TOKEN");
+  // The Sentry Vercel integration sets SENTRY_AUTH_TOKEN to an upload-only token that can't read issues,
+  // so a separate read token wins when it's set.
+  const token = env("SENTRY_READ_TOKEN") || env("SENTRY_AUTH_TOKEN");
   const org = env("SENTRY_ORG");
   const project = env("SENTRY_PROJECT");
   const dsn = env("SENTRY_DSN") || env("NEXT_PUBLIC_SENTRY_DSN");
@@ -279,14 +281,28 @@ export async function errorsCheck(now = Date.now()): Promise<HealthCheck> {
       state: "off",
       summary: dsn ? "Errors are reported to Sentry, but this page can't read them yet." : "Error reports are off.",
       rows: [],
-      setup: `${dsn ? "" : "Set SENTRY_DSN to turn on error reports. "}Set SENTRY_AUTH_TOKEN (an internal integration token with read access to Issues & Events), SENTRY_ORG and SENTRY_PROJECT (their slugs). Add SENTRY_API_BASE=https://de.sentry.io for an EU organization.`,
+      setup: `${dsn ? "" : "Set SENTRY_DSN to turn on error reports. "}Set SENTRY_READ_TOKEN (an internal integration token with read access to Issues & Events), SENTRY_ORG and SENTRY_PROJECT (their slugs). Add SENTRY_API_BASE=https://de.sentry.io for an EU organization.`,
     };
   const base = (env("SENTRY_API_BASE") || "https://sentry.io").replace(/\/$/, "");
-  const issues = await getJson<SentryIssue[]>(
-    "Sentry",
-    `${base}/api/0/projects/${encodeURIComponent(org)}/${encodeURIComponent(project)}/issues/?query=${encodeURIComponent("is:unresolved")}&statsPeriod=14d&sort=date`,
-    { authorization: `Bearer ${token}` },
-  );
+  let issues: SentryIssue[];
+  try {
+    issues = await getJson<SentryIssue[]>(
+      "Sentry",
+      `${base}/api/0/projects/${encodeURIComponent(org)}/${encodeURIComponent(project)}/issues/?query=${encodeURIComponent("is:unresolved")}&statsPeriod=14d&sort=date`,
+      { authorization: `Bearer ${token}` },
+    );
+  } catch (e) {
+    if (!(e instanceof HttpError && (e.status === 401 || e.status === 403))) throw e;
+    return {
+      id: "errors",
+      title: "Errors (Sentry)",
+      state: "down",
+      summary: `${e.message} The token can't read issues.`,
+      rows: [],
+      setup:
+        "Create an internal integration in Sentry (Settings > Developer Settings > Custom Integrations) with Read access to Issue & Event, and set its token as SENTRY_READ_TOKEN. The SENTRY_AUTH_TOKEN the Sentry Vercel integration adds can only upload builds.",
+    };
+  }
   const lastDay = issues.filter((i) => Date.parse(i.lastSeen) >= now - DAY);
   const rows: CheckRow[] = issues.slice(0, 15).map((i) => ({
     label: i.title.slice(0, 120),
@@ -367,6 +383,17 @@ export async function emailCheck(now = Date.now()): Promise<HealthCheck> {
     domains = (await getJson<{ data: { name: string; status: string }[] }>("Resend", "https://api.resend.com/domains", { authorization: `Bearer ${key}` })).data;
   } catch (e) {
     if (e instanceof HttpError && (e.status === 401 || e.status === 403)) note = "The key can only send, so domains can't be checked here.";
+    // Resend answers 400 "API key is invalid" for a key it doesn't know, so sending fails too.
+    else if (e instanceof HttpError && e.status === 400)
+      return {
+        id: "email",
+        title: "Email (Resend)",
+        state: "down",
+        summary: "Resend says RESEND_API_KEY isn't a valid key, so no email is sent.",
+        rows,
+        setup: "Create a full-access key in Resend (API Keys), paste it into RESEND_API_KEY for Production, then redeploy.",
+        link: { label: "Resend API keys", href: "https://resend.com/api-keys" },
+      };
     else throw e;
   }
   const unverified = (domains ?? []).filter((d) => d.status !== "verified");

@@ -60,7 +60,7 @@ The list lives in the environment, never the database, so nothing a request writ
   - **Uptime:** the `uptime.yml` workflow's pings over 24 hours and 7 days, the last failure, and how long the site has been down while its "uptime" issue is open. Needs `GITHUB_TOKEN` and `GITHUB_REPOSITORY`.
   - **Deploys (Vercel):** what's live in production, a failed latest production deploy, failed deploys in 7 days, deploys in 24 hours against the Hobby limit of 100, and the commit this server runs. Needs `VERCEL_TOKEN` and `VERCEL_PROJECT_ID` (plus `VERCEL_TEAM_ID` for a team project).
   - **Builds (GitHub Actions):** the latest CI runs on main, and any running now.
-  - **Errors (Sentry):** unresolved issues seen in 14 days, with events, how long each has been open and when last seen. Needs `SENTRY_AUTH_TOKEN`, `SENTRY_ORG` and `SENTRY_PROJECT` (`SENTRY_API_BASE=https://de.sentry.io` for an EU organization).
+  - **Errors (Sentry):** unresolved issues seen in 14 days, with events, how long each has been open and when last seen. Needs `SENTRY_READ_TOKEN` (or a `SENTRY_AUTH_TOKEN` that can read issues), `SENTRY_ORG` and `SENTRY_PROJECT` (`SENTRY_API_BASE=https://de.sentry.io` for an EU organization).
   - **Payments (Stripe):** whether the key works and its mode, events Stripe couldn't deliver in 7 days, and the app's own webhook record (received, failed, and why).
   - **Email (Resend):** sending domains and whether they're verified, emails in 30 days with bounce and spam rates (warns at Resend's limits, 4% and 0.08%, from 20 emails), and the last delivery report.
   - **Daily email job:** each run of `/api/cron/weekly/` (`job_runs`, `src/server/monitor.ts`), what it sent, and a warning when it hasn't run for 26 hours.

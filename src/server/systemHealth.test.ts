@@ -22,6 +22,7 @@ const KEYS = [
   "VERCEL_GIT_COMMIT_SHA",
   "VERCEL_ENV",
   "SENTRY_AUTH_TOKEN",
+  "SENTRY_READ_TOKEN",
   "SENTRY_ORG",
   "SENTRY_PROJECT",
   "SENTRY_DSN",
@@ -284,6 +285,30 @@ describe("payments (Stripe)", () => {
   });
 });
 
+describe("errors (Sentry) tokens", () => {
+  beforeEach(() => {
+    process.env.SENTRY_ORG = "org";
+    process.env.SENTRY_PROJECT = "app";
+  });
+
+  it("prefers SENTRY_READ_TOKEN over the integration's upload token", async () => {
+    process.env.SENTRY_AUTH_TOKEN = "upload";
+    process.env.SENTRY_READ_TOKEN = "read";
+    const calls = stubFetch({ "https://sentry.io/api/0/projects/org/app/issues/": [] });
+    expect((await health.errorsCheck(NOW)).state).toBe("ok");
+    expect(calls[0].auth).toBe("Bearer read");
+  });
+
+  it("explains a refused token instead of only the status", async () => {
+    process.env.SENTRY_AUTH_TOKEN = "upload";
+    stubFetch({ "https://sentry.io/api/0/projects/org/app/issues/": new Response("no", { status: 403 }) });
+    const c = await health.errorsCheck(NOW);
+    expect(c.state).toBe("down");
+    expect(c.summary).toMatch(/403.*can't read issues/);
+    expect(c.setup).toMatch(/SENTRY_READ_TOKEN/);
+  });
+});
+
 describe("email (Resend)", () => {
   beforeEach(() => {
     process.env.RESEND_API_KEY = "re_x";
@@ -295,6 +320,14 @@ describe("email (Resend)", () => {
     const c = await health.emailCheck(NOW);
     expect(c.state).toBe("down");
     expect(c.rows[0]).toMatchObject({ label: "Domain example.com", value: "pending" });
+  });
+
+  it("says when Resend doesn't know the key", async () => {
+    stubFetch({ "https://api.resend.com/domains": new Response('{"name":"validation_error"}', { status: 400 }) });
+    const c = await health.emailCheck(NOW);
+    expect(c.state).toBe("down");
+    expect(c.summary).toMatch(/isn't a valid key/);
+    expect(c.setup).toMatch(/redeploy/);
   });
 
   it("works with a sending-only key, and warns on a high bounce rate", async () => {
