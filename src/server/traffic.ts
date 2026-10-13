@@ -182,10 +182,11 @@ export async function visitsReport(days: TrafficPeriod, now = Date.now()): Promi
     return {
       start,
       end: d.end,
-      ...(start !== d.start ? { keptDays: keep ?? undefined } : {}),
+      ...(keep && (start !== d.start || !comparable) ? { keptDays: keep } : {}),
       visitors: t.visitors,
       pageviews: t.pageviews,
-      previous: previous ? total(previous) : null,
+      // Always an object: an admin tab still running older code reads previous.visitors.
+      previous: total(previous ?? []),
       daily: daily.map((r) => ({ date: String(r.timestamp ?? "").slice(0, 10), visitors: n(r.visitors), pageviews: n(r.pageviews) })),
       pages: list(pages, "requestPath"),
       referrers: list(referrers, "referrerHostname"),

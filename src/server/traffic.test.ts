@@ -202,10 +202,14 @@ describe("Vercel Web Analytics", () => {
     });
     const r = await traffic.visitsReport(90, NOW);
     if (r.state !== "ok") throw new Error(JSON.stringify(r));
-    expect(r.report).toMatchObject({ start: "2026-09-12", end: "2026-10-12", keptDays: 31, visitors: 80, previous: null });
+    expect(r.report).toMatchObject({ start: "2026-09-12", end: "2026-10-12", keptDays: 31, visitors: 80, previous: { visitors: 0, pageviews: 0 } });
     // Every retried question stays inside the 31 days.
     const retried = calls.filter((c) => c.url.includes("since=2026-09-12"));
     expect(retried.length).toBe(5);
+    // The default 28 days fit, but the 28 before don't: the period stays whole and the comparison goes.
+    const r28 = await traffic.visitsReport(28, NOW);
+    if (r28.state !== "ok") throw new Error(JSON.stringify(r28));
+    expect(r28.report).toMatchObject({ start: "2026-09-15", keptDays: 31, previous: { visitors: 0, pageviews: 0 } });
   });
 
   it("asks for the settings it needs", async () => {
