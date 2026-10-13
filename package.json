@@ -10,7 +10,8 @@
     "lint": "eslint",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage && node scripts/coverage-summary.mjs",
-    "test:mutation": "stryker run"
+    "test:mutation": "stryker run",
+    "test:mutation:server": "stryker run stryker.server.config.mjs"
   },
   "dependencies": {
     "@libsql/client": "^0.18.0",
