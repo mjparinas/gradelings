@@ -56,9 +56,12 @@ export interface SearchReport {
 export interface VisitsReport {
   start: string;
   end: string;
+  /** Set when the plan keeps fewer days than the period, so the report starts later than asked. */
+  keptDays?: number;
   visitors: number;
   pageviews: number;
-  previous: { visitors: number; pageviews: number };
+  /** Null when the period before is older than the plan keeps. */
+  previous: { visitors: number; pageviews: number } | null;
   daily: { date: string; visitors: number; pageviews: number }[];
   pages: { key: string; visitors: number; pageviews: number }[];
   referrers: { key: string; visitors: number; pageviews: number }[];
