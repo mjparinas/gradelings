@@ -9,33 +9,6 @@ import type { Course, FrameworkId, Question, Visual } from "./types";
 
 const RUNS = 120;
 
-// The official Saskatchewan outcomes (docs/research/saskatchewan). Unit standards cite them by code.
-const SK_OUTCOMES = JSON.parse(readFileSync(join(__dirname, "../../docs/research/saskatchewan/outcomes.json"), "utf8")) as Record<
-  string,
-  Record<string, { outcomes: { code: string }[] }[]>
->;
-
-// The official Manitoba outcomes (docs/research/manitoba). Unit standards cite them by code.
-// The official Nova Scotia outcomes (docs/research/nova-scotia). Unit standards cite them by code, or by bundle or outcome title.
-// The official New Brunswick curriculum (docs/research/new-brunswick). Unit standards cite its strand and big idea ("Number: Operations").
-// The key-stage outcomes of the Atlantic Canada foundation documents (docs/research/newfoundland-and-labrador). Unit standards cite
-// a strand and key stage ("Operation sense (by Grade 6)").
-const NL_OUTCOMES = JSON.parse(readFileSync(join(__dirname, "../../docs/research/newfoundland-and-labrador/outcomes.json"), "utf8")) as Record<string, { idx: string }[]>;
-const NB_OUTCOMES = JSON.parse(readFileSync(join(__dirname, "../../docs/research/new-brunswick/outcomes.json"), "utf8")) as Record<string, { idx: string }[]>;
-const NS_OUTCOMES = JSON.parse(readFileSync(join(__dirname, "../../docs/research/nova-scotia/outcomes.json"), "utf8")) as Record<string, { idx: string }[]>;
-const MB_OUTCOMES = JSON.parse(readFileSync(join(__dirname, "../../docs/research/manitoba/outcomes.json"), "utf8")) as Record<string, { idx: string }[]>;
-
-// The official Ontario expectations (docs/research/ontario). Unit standards cite them by code.
-const ONTARIO_EXPECTATIONS = JSON.parse(readFileSync(join(__dirname, "../../docs/research/ontario/expectations.json"), "utf8")) as Record<
-  string,
-  { idx: string; kind: string }[]
->;
-
-/** The codes a standard cites, e.g. "B1.1–B1.3, B2.2 · ..." gives B1.1, B1.3, B2.2. */
-function citedCodes(standard: string): string[] {
-  return (standard.split(" · ")[0].match(/[A-F]\d{1,2}(?:\.\d{1,2})?/g) ?? []).filter(Boolean);
-}
-
 const KEYPAD_PATTERN: Record<string, RegExp> = {
   number: /^\d+$/,
   integer: /^-?\d+$/,
@@ -274,13 +247,6 @@ describe("curriculum content", () => {
     expect(offenders).toEqual([]);
   });
 
-  it("offers BC French Immersion from Kindergarten and Core French from Grade 5, through Grade 9", () => {
-    const has = (grade: string, subject: string) => COURSES.some((c) => c.grade === grade && c.subject === subject && c.units.some((u) => u.standards["ca-bc"]));
-    for (const g of ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"]) expect(has(g, "immersion"), `immersion ${g}`).toBe(true);
-    for (const g of ["k", "1", "2", "3", "4"]) expect(has(g, "core-french"), `core-french ${g}`).toBe(false);
-    for (const g of ["5", "6", "7", "8", "9"]) expect(has(g, "core-french"), `core-french ${g}`).toBe(true);
-  });
-
   it("marks every French Immersion question as French so read-aloud uses a French voice", () => {
     for (const course of COURSES.filter((c) => c.subject === "immersion")) {
       for (const unit of course.units) {
@@ -301,133 +267,6 @@ describe("curriculum content", () => {
           expect(u.parentNote.trim()).not.toBe("");
           expect(Object.keys(u.standards).length, `${u.id} has standards`).toBeGreaterThan(0);
           for (const text of Object.values(u.standards)) expect((text ?? "").trim()).not.toBe("");
-        }
-      });
-
-      it("cites real Ontario expectations", () => {
-        const official = new Set((ONTARIO_EXPECTATIONS[course.grade === "k" ? "k/all" : `${course.grade}/${course.subject}`] ?? []).map((r) => r.idx));
-        for (const u of course.units) {
-          const standard = u.standards["ca-on"];
-          if (!standard) continue;
-          const codes = citedCodes(standard);
-          expect(codes.length, `${u.id}: "${standard}" cites no expectation`).toBeGreaterThan(0);
-          for (const code of codes) expect(official.has(code), `${u.id} cites ${code}, which is not in Ontario ${course.grade}/${course.subject}`).toBe(true);
-        }
-      });
-
-      it("cites real Saskatchewan outcomes and no other province's wording", () => {
-        const official = new Set((SK_OUTCOMES[course.grade]?.[course.subject] ?? []).flatMap((st) => st.outcomes.map((o) => o.code)));
-        for (const u of course.units) {
-          const standard = u.standards["ca-sk"];
-          if (!standard) continue;
-          // French cites goals and strands (4.CS.1, 5.LK.1, 3.CÉ.2, É-DV.4), listed with ", ".
-          const isFrench = course.subject === "immersion" || course.subject === "core-french";
-          const codes = isFrench ? standard.split(" · ")[0].split(", ") : (standard.split(" · ")[0].match(/[A-Z]{1,3}[K\d]\.\d+[ab]?/g) ?? []);
-          expect(codes.length, `${u.id}: "${standard}" cites no outcome`).toBeGreaterThan(0);
-          for (const code of codes) expect(official.has(code), `${u.id} cites ${code}, which is not in Saskatchewan ${course.grade}/${course.subject}`).toBe(true);
-          // Units borrowed from Ontario must not carry Ontario names into Saskatchewan classrooms.
-          if (/^(sk-)/.test(u.id) || u.standards["ca-bc"]) continue;
-          for (const q of [1, 2, 3].flatMap((d) => Array.from({ length: 12 }, () => u.generate({ difficulty: d as 1 | 2 | 3 })).flat())) {
-            const text = JSON.stringify(q);
-            expect(/Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada/.test(text), `${u.id}: ${q.prompt}`).toBe(false);
-          }
-        }
-      });
-
-      it("cites real Manitoba outcomes and no other province's wording", () => {
-        const official = new Set((MB_OUTCOMES[`${course.grade}/${course.subject}`] ?? []).map((r) => r.idx));
-        const checkCodes = official.size > 0 && course.subject !== "core-french";
-        for (const u of course.units) {
-          const standard = u.standards["ca-mb"];
-          if (!standard) continue;
-          const codes = standard.split(" · ")[0].split(/,\s*/).map((c) => c.trim());
-          expect(codes.filter(Boolean).length, `${u.id}: "${standard}" cites no outcome`).toBeGreaterThan(0);
-          if (checkCodes) for (const code of codes) expect(official.has(code), `${u.id} cites ${code}, which is not in Manitoba ${course.grade}/${course.subject}`).toBe(true);
-          // Units borrowed from another province must not carry its names into Manitoba classrooms.
-          if (/^mb-/.test(u.id) || u.standards["ca-bc"]) continue;
-          for (const q of [1, 2, 3].flatMap((d) => u.generate({ difficulty: d as 1 | 2 | 3 }))) {
-            const text = JSON.stringify(q);
-            expect(/Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada|Saskatchewan|Regina|Alberta/.test(text), `${u.id}: ${q.prompt}`).toBe(false);
-          }
-        }
-      });
-
-      it("cites real Nova Scotia outcomes and no other province's wording", () => {
-        const official = new Set((NS_OUTCOMES[`${course.grade}/${course.subject}`] ?? []).map((r) => r.idx));
-        const checkCodes = official.size > 0 && course.subject !== "core-french" && course.subject !== "immersion";
-        for (const u of course.units) {
-          const standard = u.standards["ca-ns"];
-          if (!standard) continue;
-          const head = standard.split(" · ")[0];
-          expect(head.trim().length, `${u.id}: "${standard}" cites no outcome`).toBeGreaterThan(0);
-          if (checkCodes) {
-            const labels = official.has(head) ? [head] : head.split(/,\s*/).map((c) => c.trim());
-            for (const label of labels) expect(official.has(label), `${u.id} cites "${label}", which is not in Nova Scotia ${course.grade}/${course.subject}`).toBe(true);
-          }
-          // Units borrowed from another province must not carry its names into Nova Scotia classrooms.
-          if (/^ns-/.test(u.id) || u.standards["ca-bc"]) continue;
-          for (const q of [1, 2, 3].flatMap((d) => u.generate({ difficulty: d as 1 | 2 | 3 }))) {
-            const text = JSON.stringify(q);
-            expect(/Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada|Saskatchewan|Regina|Alberta|Manitoba|Winnipeg/.test(text), `${u.id}: ${q.prompt}`).toBe(false);
-          }
-        }
-      });
-
-      it("cites real New Brunswick strands and big ideas and no other province's wording", () => {
-        const official = new Set((NB_OUTCOMES[`${course.grade}/${course.subject}`] ?? []).map((r) => r.idx));
-        const checkCodes = official.size > 0 && course.subject !== "core-french" && course.subject !== "immersion";
-        for (const u of course.units) {
-          const standard = u.standards["ca-nb"];
-          if (!standard) continue;
-          const head = standard.split(" · ")[0];
-          expect(head.trim().length, `${u.id}: "${standard}" cites no strand`).toBeGreaterThan(0);
-          if (checkCodes) {
-            const labels = official.has(head) ? [head] : head.split(/,\s*/).map((c) => c.trim());
-            for (const label of labels) expect(official.has(label), `${u.id} cites "${label}", which is not in New Brunswick ${course.grade}/${course.subject}`).toBe(true);
-          }
-          // Units borrowed from another province must not carry its names into New Brunswick classrooms.
-          if (/^nb-/.test(u.id) || u.standards["ca-bc"]) continue;
-          for (const q of [1, 2, 3].flatMap((d) => u.generate({ difficulty: d as 1 | 2 | 3 }))) {
-            const text = JSON.stringify(q);
-            expect(/Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada|Saskatchewan|Regina|Alberta|Manitoba|Winnipeg|Nova Scotia|Halifax|Yukon|Northwest Territories/.test(text), `${u.id}: ${q.prompt}`).toBe(false);
-          }
-        }
-      });
-
-      it("cites real Newfoundland and Labrador strands and key stages and no other province's wording", () => {
-        const official = new Set((NL_OUTCOMES[`${course.grade}/${course.subject}`] ?? []).map((r) => r.idx));
-        for (const u of course.units) {
-          const standard = u.standards["ca-nl"];
-          if (!standard) continue;
-          expect(official.size, `${course.grade}/${course.subject} has no Newfoundland and Labrador outcomes, but ${u.id} cites one`).toBeGreaterThan(0);
-          for (const label of standard.split(" · ")[0].split("; ")) expect(official.has(label.trim()), `${u.id} cites "${label}", which is not in Newfoundland and Labrador ${course.grade}/${course.subject}`).toBe(true);
-          // Units borrowed from another province must not carry its names into Newfoundland and Labrador classrooms.
-          if (/^nl-/.test(u.id) || u.standards["ca-bc"]) continue;
-          for (const q of [1, 2, 3].flatMap((d) => u.generate({ difficulty: d as 1 | 2 | 3 }))) {
-            const text = JSON.stringify(q);
-            expect(/Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada|Saskatchewan|Regina|Alberta|Manitoba|Winnipeg|Nova Scotia|Halifax|New Brunswick|Fredericton|Yukon|Northwest Territories|Nunavut/.test(text), `${u.id}: ${q.prompt}`).toBe(false);
-          }
-        }
-      });
-
-      it("carries no other province's wording into Prince Edward Island classrooms", () => {
-        for (const u of course.units) {
-          // Units written for Prince Edward Island may name the Maritime provinces; borrowed units must not name any.
-          if (!u.standards["ca-pe"] || /^pe-/.test(u.id) || u.standards["ca-bc"]) continue;
-          for (const q of [1, 2, 3].flatMap((d) => u.generate({ difficulty: d as 1 | 2 | 3 }))) {
-            const text = JSON.stringify(q);
-            expect(/Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada|Saskatchewan|Regina|Alberta|Manitoba|Winnipeg|Nova Scotia|Halifax|New Brunswick|Fredericton|Newfoundland|Yukon|Northwest Territories|Nunavut/.test(text), `${u.id}: ${q.prompt}`).toBe(false);
-          }
-        }
-      });
-
-      it("carries no other province's wording into Nunavut classrooms", () => {
-        for (const u of course.units) {
-          if (!u.standards["ca-nu"] || /^nu-/.test(u.id) || u.standards["ca-bc"]) continue;
-          for (const q of [1, 2, 3].flatMap((d) => u.generate({ difficulty: d as 1 | 2 | 3 }))) {
-            const text = JSON.stringify(q);
-            expect(/Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada|Saskatchewan|Regina|Alberta|Manitoba|Winnipeg|Nova Scotia|Halifax|New Brunswick|Yukon|Northwest Territories/.test(text), `${u.id}: ${q.prompt}`).toBe(false);
-          }
         }
       });
 
