@@ -1,23 +1,26 @@
 import type { Course } from "../types";
-import { courses as alberta } from "../alberta/g1";
-import { courses as manitoba } from "../manitoba/g1";
-import { courses as newBrunswick } from "../new-brunswick/g1";
-import { courses as novaScotia } from "../nova-scotia/g1";
-import { courses as ontario } from "../ontario/g1";
-import { courses as oregon } from "../oregon/g1";
-import { courses as saskatchewan } from "../saskatchewan/g1";
-import { courses as washington } from "../washington/g1";
+import type { Pool } from "../placement";
+import { countingUnit as albertaG1MathCountingUnit } from "../alberta/g1-math";
+import { halvesUnit as albertaG1MathHalvesUnit } from "../alberta/g1-math";
+import { numbersTo100Unit as albertaG1MathNumbersTo100Unit } from "../alberta/g1-math";
+import { units as ontarioG1Language } from "../ontario/g1-language";
+import { units as ontarioG1Math } from "../ontario/g1-math";
+import { units as ontarioG1Social } from "../ontario/g1-social";
+import { STORY_OR_FACTS as oregonLanguageReadingSTORY_OR_FACTS } from "../oregon/units/language-reading";
+import { RML_1 as washingtonLanguageRmlEarlyRML_1 } from "../washington/units/language-rml-early";
+import { G1_UNITS as washingtonMathEarlyG1_UNITS } from "../washington/units/math-early";
+import { SCIENCE_1 as washingtonScienceK2SCIENCE_1 } from "../washington/units/science-k2";
+import { OWN_SOCIAL_1 as washingtonSocialK4G1OWN_SOCIAL_1 } from "../washington/units/social-k4-g1";
 import { californiaGrade } from "./kit";
 import { OWN } from "./units/own-g1";
 
-// California Grade 1.
-export const courses: Course[] = californiaGrade("1", [
-  washington,
-  oregon,
-  ontario,
-  alberta,
-  manitoba,
-  saskatchewan,
-  novaScotia,
-  newBrunswick,
-], OWN);
+// California Grade 1. POOL holds the files of the units this grade copies from other frameworks (see ./plan), so
+// the download carries those files and not the other frameworks' whole grades.
+const POOL: Pool = {
+  math: [...ontarioG1Math, albertaG1MathNumbersTo100Unit, albertaG1MathCountingUnit, albertaG1MathHalvesUnit, ...washingtonMathEarlyG1_UNITS],
+  language: [...ontarioG1Language, washingtonLanguageRmlEarlyRML_1, oregonLanguageReadingSTORY_OR_FACTS],
+  science: [...washingtonScienceK2SCIENCE_1],
+  social: [...ontarioG1Social, ...washingtonSocialK4G1OWN_SOCIAL_1],
+};
+
+export const courses: Course[] = californiaGrade("1", POOL, OWN);

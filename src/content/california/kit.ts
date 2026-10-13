@@ -1,5 +1,5 @@
 import type { Course, GradeId, SubjectId } from "../types";
-import { planGrade, type OwnUnits, type PlanOptions } from "../placement";
+import { planGrade, type OwnUnits, type PlanOptions, type Pool } from "../placement";
 import { PLAN } from "./plan";
 import { FOCUS } from "./focus";
 import { cal } from "./cite";
@@ -25,13 +25,13 @@ export type Entry = readonly [
 ];
 
 /**
- * One California grade. `pool` is the courses whose units California may copy: Washington's grade first, then
- * Oregon's, then the provinces'. Oregon's courses already hold the units it lifts from other grades (California's
- * integrated middle school science places a few topics a grade earlier or later than Washington). A copy keeps the
- * original's id and questions, so progress carries over. `own` is the grade's own units (./units/own-<grade>.ts), so a
+ * One California grade. `pool` is, per subject, the unit files California copies from in this grade (listed in each
+ * grade file, so its download carries only those files): Washington's and Oregon's units and the provinces', plus
+ * units from another grade where California's integrated middle school science places a topic a grade earlier or
+ * later than Washington. A copy keeps the original's id and questions, so progress carries over. `own` is the grade's own units (./units/own-<grade>.ts), so a
  * grade's download carries only its own grade's units.
  */
-export function californiaGrade(grade: GradeId, pool: Course[][], own: Partial<Record<SubjectId, OwnUnits>>): Course[] {
+export function californiaGrade(grade: GradeId, pool: Pool, own: Partial<Record<SubjectId, OwnUnits>>): Course[] {
   return planGrade(OPTIONS, grade, pool, own);
 }
 
