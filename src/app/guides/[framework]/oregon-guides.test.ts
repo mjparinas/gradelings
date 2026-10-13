@@ -3,18 +3,17 @@ import { allGuidePaths, guidePath } from "@/components/site/guides";
 import { FRAMEWORKS, getFramework, UPCOMING_FRAMEWORKS } from "@/content/frameworks";
 import { GUIDE_FRAMEWORKS, guidesFor } from "@/content/guides";
 
-// Oregon's guides are written while the state is still upcoming: the hub, grade notes, ODE's Transformative SEL
-// standards and the OSAS state tests. Guide pages are built only for FRAMEWORKS, so until launch these checks read the
-// guide data directly, and confirm no Oregon page is published early.
+// Oregon's guides: the hub, grade notes, ODE's Transformative SEL standards and the OSAS state tests.
 describe("Oregon parent guides", () => {
   const or = getFramework("us-or");
   const g = guidesFor("us-or");
 
-  it("is still upcoming, so no Oregon guide page is built yet", () => {
-    expect(UPCOMING_FRAMEWORKS).toContain(or);
-    expect(FRAMEWORKS).not.toContain(or);
-    expect(GUIDE_FRAMEWORKS).not.toContain(or);
-    expect(allGuidePaths().some((p) => p.path.startsWith("/guides/oregon/"))).toBe(false);
+  it("is offered, so every Oregon guide page is built", () => {
+    expect(FRAMEWORKS).toContain(or);
+    expect(UPCOMING_FRAMEWORKS).not.toContain(or);
+    expect(GUIDE_FRAMEWORKS).toContain(or);
+    const paths = allGuidePaths().map((p) => p.path);
+    for (const p of [guidePath.hub(or), guidePath.grade(or, "4"), "/guides/oregon/sel-standards/", "/guides/oregon/state-tests/"]) expect(paths, p).toContain(p);
   });
 
   it("has a note for every grade and no French guide", () => {

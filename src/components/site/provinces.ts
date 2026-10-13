@@ -148,12 +148,17 @@ export function regionWord(frameworks: readonly Pick<Framework, "country">[]): s
 
 /**
  * Where the curriculum is offered, for marketing copy: "12 provinces and territories", or
- * "12 Canadian provinces and territories and Washington State" once a state is offered.
+ * "12 Canadian provinces and territories and Washington State" once a state is offered, "..., plus Washington and Oregon"
+ * with two or three, and "... and 4 US states" after that.
  */
 export function regionSummary(frameworks: readonly Framework[]): string {
   const ca = frameworks.filter((f) => f.country === "CA").length;
   const us = frameworks.filter((f) => f.country === "US");
   if (!us.length) return `${ca} provinces and territories`;
+  if (us.length > 1 && us.length <= 3) {
+    const states = joinAnd(us.map((f) => f.region));
+    return ca ? `${ca} Canadian provinces and territories, plus ${states}` : states;
+  }
   const states = us.length === 1 ? `${us[0].region} State` : `${us.length} US states`;
   return ca ? `${ca} Canadian provinces and territories and ${states}` : states;
 }

@@ -283,14 +283,15 @@ export const FRAMEWORKS: Framework[] = [
   PRINCE_EDWARD_ISLAND,
   NUNAVUT,
   WASHINGTON,
+  OREGON,
 ];
 
 /**
  * Frameworks being built but not offered yet. They have content and tests, but no public pages, no place in the
  * province pickers and no sitemap entries until they move into FRAMEWORKS. getFramework still finds them.
- * Empty since Washington launched (October 2026); the next state goes here while it is built.
+ * Empty since Oregon launched (October 2026); the next state goes here while it is built.
  */
-export const UPCOMING_FRAMEWORKS: Framework[] = [OREGON];
+export const UPCOMING_FRAMEWORKS: Framework[] = [];
 
 export const DEFAULT_FRAMEWORK: FrameworkId = "ca-bc";
 

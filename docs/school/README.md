@@ -21,14 +21,15 @@ Public pages that go with this: `/privacy/` (with a "Schools and classes" sectio
 - The teacher sees first name, grade, avatar and results on the units they assigned, plus a "what to look at next" list.
 - Removing a student, closing a class and deleting a teacher account each delete the students' data at once.
 
-## Schools in the United States (Washington)
+## Schools in the United States (Washington and Oregon)
 
-Washington is built as content but not offered yet (`UPCOMING_FRAMEWORKS` in `src/content/frameworks.ts`), and classes can only follow a Canadian province today (`isFramework` in `src/server/classroom.ts`), so no US class can exist yet. When Washington classes are switched on:
+Classes can follow Washington or Oregon (`TEACHER_FRAMEWORK_IDS` in `src/components/site/teachers.ts`).
 
-- **Consent.** Under COPPA a school can consent on parents' behalf for educational use. Student accounts a teacher adds are never asked for parental consent (only family accounts are; `src/lib/coppa.ts`), so the teacher's add-students screen for a US class should carry one line saying the school is consenting on parents' behalf for educational use only. That line isn't built yet, because there is no US class to show it on.
+- **Consent.** Under COPPA a school can consent on parents' behalf for educational use. Student accounts a teacher adds are never asked for parental consent (only family accounts are; `src/lib/coppa.ts`), and the teacher's screens for a US class carry one line saying the school consents on parents' behalf for educational use only (`US_CLASS_CONSENT` in `src/lib/classroom.ts`).
 - **FERPA.** For a school, the Provider acts as a "school official" with a legitimate educational interest: it works under the school's direct control, uses education records only for the purpose they were shared for, and doesn't re-disclose them. Section 12 of `school-data-agreement.md` says so.
-- **Data agreement.** Washington districts mostly sign the Student Data Privacy Consortium's National Data Privacy Agreement (NDPA), with the Washington state exhibit, through the Washington Student Privacy Alliance. Offer to sign that rather than our own template; `school-data-agreement.md` section 12 lists what we can commit to.
+- **Data agreement.** Washington and Oregon districts mostly sign the Student Data Privacy Consortium's National Data Privacy Agreement (NDPA) with their state's exhibit (in Washington through the Washington Student Privacy Alliance, in Oregon through the Oregon Student Privacy Alliance). Offer to sign that rather than our own template; `school-data-agreement.md` section 12 lists what we can commit to.
 - **Washington law.** `/privacy/` ("Families in the United States") states our SUPER Act commitments (no targeted advertising, no sale, no profiling beyond the school's purpose, deletion on request, a security program, notice before material changes) and that we collect no consumer health data under the My Health My Data Act.
+- **Oregon law.** `/privacy/` states the matching commitments under the Oregon Student Information Protection Act (ORS 336.184): no targeted advertising, no sale, no profiling beyond the school's purpose, sharing only as the law allows, a security program and deletion when the school asks.
 
 ## Still to do before a district can say yes
 
