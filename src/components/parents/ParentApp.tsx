@@ -22,6 +22,7 @@ import { ReportsPage } from "./Reports";
 import { SettingsPage } from "./Settings";
 import { SubscriptionPage } from "./Subscription";
 import { UpgradeBanner } from "./UpgradeBanner";
+import { UsConsent } from "./UsConsent";
 import { ReportTabs } from "./common";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
 
@@ -113,6 +114,7 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
         </nav>
       </header>
       <main id={MAIN_ID} tabIndex={-1} className="mx-auto max-w-6xl px-4 py-6" style={{ paddingBottom: "max(2rem, env(safe-area-inset-bottom))" }}>
+        <UsConsent />
         <UpgradeBanner />
         {children}
       </main>

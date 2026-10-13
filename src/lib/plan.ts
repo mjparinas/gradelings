@@ -24,10 +24,43 @@ export function normalizeReferralCode(raw: unknown): string | null {
   return code;
 }
 
-export const PRICES = {
-  month: { amount: 14.99, currency: "CAD", label: "$14.99/month" },
-  year: { amount: 119.99, currency: "CAD", label: "$119.99/year", note: "Save 33%" },
+/** Where a family lives, for prices and US children's-privacy consent. Canada unless the first child added follows a US curriculum. */
+export type Country = "CA" | "US";
+export type Currency = "CAD" | "USD";
+
+export interface Price {
+  amount: number;
+  currency: Currency;
+  label: string;
+  note?: string;
+}
+
+/**
+ * The family plan in each currency. Canadian labels keep a plain "$"; US labels say "US$", so the two are
+ * never confused where both appear. One site serves both countries.
+ */
+export const PRICES_BY_CURRENCY: Record<Currency, { month: Price; year: Price & { note: string } }> = {
+  CAD: {
+    month: { amount: 14.99, currency: "CAD", label: "$14.99/month" },
+    year: { amount: 119.99, currency: "CAD", label: "$119.99/year", note: "Save 33%" },
+  },
+  USD: {
+    month: { amount: 14.99, currency: "USD", label: "US$14.99/month" },
+    year: { amount: 119.99, currency: "USD", label: "US$119.99/year", note: "Save 33%" },
+  },
 };
+
+/** Canadian prices: what public pages and Canadian families see. */
+export const PRICES = PRICES_BY_CURRENCY.CAD;
+
+/** The currency a family pays in: US dollars for a US family, Canadian dollars for everyone else. */
+export const currencyFor = (country: Country | null | undefined): Currency => (country === "US" ? "USD" : "CAD");
+
+/** The family plan's prices for a family or visitor in this country. */
+export const pricesFor = (country: Country | null | undefined) => PRICES_BY_CURRENCY[currencyFor(country)];
+
+/** How a currency is named in a sentence ("Prices in Canadian dollars"). */
+export const CURRENCY_NAME: Record<Currency, string> = { CAD: "Canadian dollars", USD: "US dollars" };
 
 export type Feature = "allUnits" | "adventure" | "review" | "speed" | "challenge" | "arcade" | "fullReports";
 

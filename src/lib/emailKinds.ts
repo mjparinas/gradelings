@@ -11,6 +11,7 @@ export const EMAIL_KINDS = {
   reminder: "Practice reminder",
   "class-inactive": "Class inactivity warning",
   "class-invite": "Co-teacher invitation",
+  consent: "US parental consent",
   admin: "Sent from the admin panel",
   billing: "Payment problem notice",
   alert: "Alert or digest to an admin",

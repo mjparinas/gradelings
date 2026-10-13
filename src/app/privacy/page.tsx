@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalPage, Section } from "@/components/site/Legal";
 import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS } from "@/lib/brand";
+import { CONSENT_NOTICE } from "@/lib/coppa";
 
 export const metadata: Metadata = {
   title: "Privacy policy",
@@ -124,6 +125,40 @@ export default function PrivacyPage() {
         </ul>
         <p>
           We may also disclose information if the law requires it, or to protect the safety of a child or our service. If {APP_NAME} is ever sold or merged, your information would stay protected by this policy unless you agree to a change.
+        </p>
+      </Section>
+
+      <Section title="Families in the United States" id="united-states">
+        <p>
+          This section is our notice to parents in the United States under the Children’s Online Privacy Protection Act (COPPA). A family is treated as a US family when the first child added follows a US state’s curriculum. Everything else in this policy applies too.
+        </p>
+        <p>
+          <strong>What we collect from children, and why.</strong> {CONSENT_NOTICE.collect} {CONSENT_NOTICE.why} We collect no more than the app needs, and a child can use every part of it without giving more.
+        </p>
+        <p>
+          <strong>What we don’t do.</strong> {CONSENT_NOTICE.never} Children can’t make their information public or send it to anyone.
+        </p>
+        <p>
+          <strong>How you give consent.</strong> Before your children’s information is synced to our servers, the Parent area shows you this notice and asks you to tick that you agree. Until you do, their progress stays on your device only. When you agree, we email you a confirmation, and we email you again a day or more later, each time with a link to withdraw (the “email plus” method). If you subscribe to a paid plan, the payment also counts as your consent.
+        </p>
+        <p>
+          <strong>How long we keep it.</strong> We keep a child’s information while your account is open and it is needed to run the app for your family. When you delete a child, delete your account or withdraw consent, we delete the children’s information from our live systems straight away. Read-only report links you create expire after 30 days. Classes with no sign-in for 12 months are deleted, as described under “Schools and classes”. Backups expire on our database provider’s schedule.
+        </p>
+        <p>
+          <strong>Your rights as a parent.</strong> You can review your children’s information (download it as a file from the Parent area under Account), have it deleted (delete a child, or your account), and refuse further collection or use at any time by withdrawing consent in the Parent area or with the link in our confirmation emails. Withdrawing deletes the children’s information from our servers and stops syncing; the app keeps working on your device. You can also email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+        </p>
+        <p>
+          <strong>Where it is stored.</strong> Our servers and database are in Montréal, Canada. The service providers listed under “Who we share it with” may process limited information in the United States or elsewhere.
+        </p>
+        <p>
+          <strong>Operator.</strong> {LEGAL_NAME} operates {APP_NAME} and is the only operator collecting children’s information through it. Contact us at <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+          {MAILING_ADDRESS ? `, ${MAILING_ADDRESS}` : ""}. If you believe we haven’t followed COPPA, you can also complain to the US Federal Trade Commission at reportfraud.ftc.gov.
+        </p>
+        <p>
+          <strong>Schools in Washington State.</strong> When a school or teacher uses {APP_NAME} with students, the school gives consent for educational use on parents’ behalf, and we act for the school. In line with Washington’s Student User Privacy in Education Rights Act (SUPER Act) we: never use students’ information for targeted advertising; never sell it, and never build a profile of a student except for the school’s educational purposes; delete it when the school asks (and as described under “Schools and classes”); keep a security program in place to protect it, as described under “Security”; and give notice before we make a material change to how we handle it.
+        </p>
+        <p>
+          <strong>Health data.</strong> We don’t collect consumer health data as defined in Washington’s My Health My Data Act, or any other health information. The calm and focus options in Settings (calmer motion, quieter sounds, hidden timers) are presentation preferences a parent chooses; we never ask why, and they say nothing about a child’s health.
         </p>
       </Section>
 

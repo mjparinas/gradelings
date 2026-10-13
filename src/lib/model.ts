@@ -87,6 +87,10 @@ export interface FamilyInfo {
   accessUntil?: number | null;
   /** A redeemed discount code waiting for the next checkout. */
   discount?: { code: string; percentOff: number } | null;
+  /** "US" when the first child added follows a US curriculum (set on the server); Canada otherwise. Decides the currency and US consent. */
+  country?: "CA" | "US";
+  /** When a US parent gave consent to collect their children's information (COPPA). Null until then, or after they withdraw it. */
+  consentAt?: number | null;
   updatedAt: number;
 }
 

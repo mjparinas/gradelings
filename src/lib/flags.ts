@@ -28,6 +28,7 @@ export const FLAGS: readonly FlagDef[] = [
   { key: "save-progress-card", label: "Save progress card", description: "Asks a grown-up to make a free account at the end of a lesson on a device with no account (after the first lesson, then daily in the trial's last week).", scope: "app", defaultOn: true },
   { key: "signups", label: "New sign-ups", description: "Creating new parent and teacher accounts. Turn off to pause sign-ups.", scope: "server", defaultOn: true },
   { key: "redeem-codes", label: "Redeeming codes", description: "Parents entering access or discount codes under Subscription.", scope: "server", defaultOn: true },
+  { key: "us-launch", label: "United States launch", description: "Shows US prices (US$, with a CAD/USD switch) on the public pricing page. Washington stays hidden from families until it moves out of UPCOMING_FRAMEWORKS.", scope: "app", defaultOn: false },
   { key: "new-classes", label: "New classes", description: "Teachers creating new classes. Existing classes keep working.", scope: "server", defaultOn: true },
 ];
 

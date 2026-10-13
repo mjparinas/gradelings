@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, SUBSCRIBE_HREF, TRIAL_DAYS } from "@/lib/plan";
+import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, SUBSCRIBE_HREF, TRIAL_DAYS } from "@/lib/plan";
 import { PricingCards } from "./Pricing";
 
 // next.config.ts sets trailingSlash, which next/link reads from this variable.
@@ -33,5 +33,13 @@ describe("PricingCards", () => {
     expect(screen.getByRole("link", { name: "Start free" })).toHaveAttribute("href", "/play/");
     expect(screen.getByRole("link", { name: "Subscribe monthly" })).toHaveAttribute("href", SUBSCRIBE_HREF);
     expect(screen.getByRole("link", { name: "Subscribe yearly" })).toHaveAttribute("href", SUBSCRIBE_HREF);
+  });
+
+  it("shows US dollars when asked, labelled so they can't be taken for Canadian prices", () => {
+    render(<PricingCards currency="USD" />);
+    expect(card("Family · monthly")).toHaveTextContent(`US$${PRICES_BY_CURRENCY.USD.month.amount} / month`);
+    expect(card("Family · yearly")).toHaveTextContent(`US$${PRICES_BY_CURRENCY.USD.year.amount} / year`);
+    expect(card("Family · yearly")).toHaveTextContent(`about US$${Math.round(PRICES_BY_CURRENCY.USD.year.amount / 12)} a month`);
+    expect(card("Family · monthly")).not.toHaveTextContent("CAD");
   });
 });

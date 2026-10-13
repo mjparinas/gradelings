@@ -1,8 +1,9 @@
-import { PRICES } from "./plan";
+import { PRICES_BY_CURRENCY } from "./plan";
 
 // Business numbers for the admin dashboard, worked out from plain rows so they can be tested without a
 // database. Everything is a count or a sum: nothing here names or describes any one family or child.
-// Days and months are UTC. Money is in cents (CAD).
+// Days and months are UTC. Money is in cents (CAD). US families pay in USD: their money is never added to the
+// CAD numbers (nothing is converted), and is reported on its own in `revenue.usd`.
 
 const DAY = 86_400_000;
 const WEEK = 7 * DAY;
@@ -11,8 +12,10 @@ export const STRIPE_FEE_RATE = 0.029;
 export const STRIPE_FEE_FIXED = 30;
 /** Access that runs past this many years from now counts as lifetime. */
 export const LIFETIME_YEARS = 50;
-export const MONTHLY_CENTS = Math.round(PRICES.month.amount * 100);
-export const YEARLY_CENTS = Math.round(PRICES.year.amount * 100);
+export const MONTHLY_CENTS = Math.round(PRICES_BY_CURRENCY.CAD.month.amount * 100);
+export const YEARLY_CENTS = Math.round(PRICES_BY_CURRENCY.CAD.year.amount * 100);
+export const MONTHLY_CENTS_USD = Math.round(PRICES_BY_CURRENCY.USD.month.amount * 100);
+export const YEARLY_CENTS_USD = Math.round(PRICES_BY_CURRENCY.USD.year.amount * 100);
 
 export interface FamilyFacts {
   createdAt: number;
@@ -27,6 +30,8 @@ export interface FamilyFacts {
   verified: boolean;
   /** Any practice synced from this family, ever. */
   practised: boolean;
+  /** "US" for a US family, which pays in USD. Canada when left out. */
+  country?: string;
 }
 
 export interface PaymentFacts {
@@ -36,6 +41,8 @@ export interface PaymentFacts {
   refunded: number;
   interval: string | null;
   paidAt: number;
+  /** ISO code as Stripe reports it ("cad", "usd"). CAD when left out. */
+  currency?: string;
 }
 
 export interface DayActivity {
@@ -119,6 +126,8 @@ export interface Metrics {
     /** Families that have ever paid. */
     customersEver: number;
     months: MonthMoney[];
+    /** US families' money, in USD cents, kept apart from everything above. Null until there is any. */
+    usd: { mrr: number; arr: number; paying: number; thisMonth: number; lastMonth: number; yearToDate: number } | null;
   };
   other: { redemptions: number; reports: number };
 }
@@ -146,8 +155,13 @@ export function familyGroup(f: Pick<FamilyFacts, "plan" | "accessUntil" | "trial
   return "free";
 }
 
+const isUsd = (p: PaymentFacts) => (p.currency ?? "cad").toLowerCase() === "usd";
+
 export function computeMetrics(input: MetricsInput): Metrics {
-  const { now, families, payments } = input;
+  const { now, families } = input;
+  // Every money sum below is in CAD; USD payments are summed separately at the end.
+  const payments = input.payments.filter((p) => !isUsd(p));
+  const usdPayments = input.payments.filter(isUsd);
   const lifetimeFrom = now + LIFETIME_YEARS * 365 * DAY;
 
   // Who is what right now. A family is counted once, in the first group that fits.
@@ -159,7 +173,10 @@ export function computeMetrics(input: MetricsInput): Metrics {
     codeAccess = 0,
     lifetime = 0,
     free = 0,
-    cancelled30 = 0;
+    cancelled30 = 0,
+    usPaying = 0,
+    usMonthly = 0,
+    usYearly = 0;
   for (const f of families) {
     if (f.subscriptionStatus === "canceled" && f.billingEventAt > now - 30 * DAY) cancelled30++;
     const group = familyGroup(f, now);
@@ -167,6 +184,11 @@ export function computeMetrics(input: MetricsInput): Metrics {
       paying++;
       if (f.subscriptionInterval === "year") yearly++;
       else if (f.subscriptionInterval === "month") monthly++;
+      if (f.country === "US") {
+        usPaying++;
+        if (f.subscriptionInterval === "year") usYearly++;
+        else if (f.subscriptionInterval === "month") usMonthly++;
+      }
       if (f.subscriptionStatus === "past_due") pastDue++;
     } else if (group === "code") {
       codeAccess++;
@@ -188,7 +210,7 @@ export function computeMetrics(input: MetricsInput): Metrics {
   for (let i = -11; i <= 0; i++) monthly12.push({ label: monthLabel(monthStart(now, i)), value: inRange(monthStart(now, i), monthStart(now, i + 1)) });
   const recent = families.filter((f) => f.createdAt > now - 90 * DAY);
   const trialsEnded = families.filter((f) => f.trialEndsAt <= now && f.trialEndsAt > now - 90 * DAY);
-  const payers = new Set(payments.filter((p) => p.familyId && p.amount > p.refunded).map((p) => p.familyId));
+  const payers = new Set(input.payments.filter((p) => p.familyId && p.amount > p.refunded).map((p) => p.familyId));
   // A family whose trial ended in the last 90 days counts as converted if it pays now.
   const trialsConverted = trialsEnded.filter((f) => f.plan === "premium").length;
 
@@ -211,13 +233,17 @@ export function computeMetrics(input: MetricsInput): Metrics {
   const yearToDate = sumBetween(yearStart, now + 1);
   // Monthly recurring revenue at list price: yearly plans count as a twelfth a month. Discounts aren't known
   // until a payment arrives, so this is an upper bound when discount codes are in use.
-  const otherPaying = paying - monthly - yearly;
-  const mrr = Math.round((monthly + otherPaying) * MONTHLY_CENTS + (yearly * YEARLY_CENTS) / 12);
+  // Canadian families only; US families' MRR is in USD below.
+  const caMonthly = monthly - usMonthly;
+  const caYearly = yearly - usYearly;
+  const caPaying = paying - usPaying;
+  const otherPaying = caPaying - caMonthly - caYearly;
+  const mrr = Math.round((caMonthly + otherPaying) * MONTHLY_CENTS + (caYearly * YEARLY_CENTS) / 12);
   const monthsLeft = (yearEnd - now) / ((365.25 / 12) * DAY);
   const projectedRest = Math.round(mrr * monthsLeft);
   const projectedYear = yearToDate + projectedRest;
   // Fees on the projected rest: the percentage, plus the fixed part once per monthly payment and once a year per yearly plan.
-  const projectedRestFees = Math.round(projectedRest * STRIPE_FEE_RATE + STRIPE_FEE_FIXED * ((monthly + otherPaying) * monthsLeft + (yearly * monthsLeft) / 12));
+  const projectedRestFees = Math.round(projectedRest * STRIPE_FEE_RATE + STRIPE_FEE_FIXED * ((caMonthly + otherPaying) * monthsLeft + (caYearly * monthsLeft) / 12));
   const elapsedMonths = (now - yearStart) / ((365.25 / 12) * DAY);
   const costsYearToDate = Math.round(input.monthlyCosts * elapsedMonths);
   const feesYearToDate = feesBetween(yearStart, now + 1);
@@ -230,7 +256,7 @@ export function computeMetrics(input: MetricsInput): Metrics {
     const fees = feesBetween(from, to);
     // A family counts as paying in a month if a monthly payment landed in it, or a yearly one in the 12 months up to it.
     const payingIn = new Set(
-      payments
+      input.payments
         .filter((p) => net(p) > 0 && (p.interval === "year" ? p.paidAt >= monthStart(from, -11) && p.paidAt < to : p.paidAt >= from && p.paidAt < to))
         .map((p, k) => p.familyId ?? `deleted-${k}`),
     ).size;
@@ -240,7 +266,14 @@ export function computeMetrics(input: MetricsInput): Metrics {
   }
   const current = months[months.length - 1];
   const churnRate = rate(cancelled30, paying + cancelled30);
-  const arppu = paying ? mrr / paying : null;
+  const arppu = caPaying ? mrr / caPaying : null;
+  const usdNet = (from: number, to: number) => usdPayments.filter((p) => p.paidAt >= from && p.paidAt < to).reduce((s, p) => s + Math.max(0, p.amount - p.refunded), 0);
+  const usOther = usPaying - usMonthly - usYearly;
+  const usdMrr = Math.round((usMonthly + usOther) * MONTHLY_CENTS_USD + (usYearly * YEARLY_CENTS_USD) / 12);
+  const usd =
+    usPaying || usdPayments.length
+      ? { mrr: usdMrr, arr: usdMrr * 12, paying: usPaying, thisMonth: usdNet(thisMonthStart, now + 1), lastMonth: usdNet(lastMonthStart, thisMonthStart), yearToDate: usdNet(yearStart, now + 1) }
+      : null;
 
   return {
     generatedAt: now,
@@ -296,6 +329,7 @@ export function computeMetrics(input: MetricsInput): Metrics {
       lifetimeValue: arppu !== null && churnRate ? Math.round(arppu / churnRate) : null,
       customersEver: payers.size,
       months,
+      usd,
     },
     other: { redemptions: input.redemptions, reports: input.reports },
   };

@@ -14,6 +14,8 @@ interface FamilyRow {
   discount_code: string | null;
   /** From the discount code, when it is still enabled. */
   discount_percent: number | null;
+  country: string | null;
+  consent_at: number | null;
   updated_at: number;
 }
 
@@ -43,6 +45,8 @@ export function toFamilyInfo(row: FamilyRow, email: string, verified = true, stu
     // Null rather than missing, so a device drops access that was taken away.
     accessUntil: row.access_until ? Number(row.access_until) : null,
     discount: row.discount_code && row.discount_percent ? { code: row.discount_code, percentOff: Number(row.discount_percent) } : null,
+    country: row.country === "US" ? "US" : "CA",
+    consentAt: row.consent_at ? Number(row.consent_at) : null,
     updatedAt: Number(row.updated_at),
   };
 }

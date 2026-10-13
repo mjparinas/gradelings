@@ -15,6 +15,8 @@ Gradelings is a standard Next.js 16 app (Node runtime, no custom server). This g
 | `STRIPE_SECRET_KEY` | For billing | Live secret key (`sk_live_…`). |
 | `STRIPE_PRICE_MONTHLY` | For billing | Recurring Price id for C$14.99/month. |
 | `STRIPE_PRICE_YEARLY` | For billing | Recurring Price id for C$119.99/year. |
+| `STRIPE_PRICE_MONTHLY_USD` | For US billing | Recurring Price id for US$14.99/month, for US families. |
+| `STRIPE_PRICE_YEARLY_USD` | For US billing | Recurring Price id for US$119.99/year. Without both USD prices, a US family's checkout answers that US payments aren't available yet; Canadian checkout and simulated billing are unaffected. |
 | `STRIPE_WEBHOOK_SECRET` | For billing | Signing secret of the webhook endpoint (`whsec_…`). |
 | `RESEND_API_KEY` | For email | Resend API key. Without it no email is sent (password reset and confirmation links won't arrive), so treat it as required in production. |
 | `RESEND_WEBHOOK_SECRET` | Optional | Signing secret (`whsec_…`) of a Resend webhook pointed at `/api/email/webhook/` for the delivered, delayed, bounced and complained events. Turns on delivery reports in the admin panel's email log, and stops panel email to addresses that bounce or report spam (`docs/ADMIN.md`). |
@@ -31,7 +33,7 @@ Gradelings is a standard Next.js 16 app (Node runtime, no custom server). This g
 | `ALLOW_DEV_BILLING` | Staging only | `1` lets a deployment without Stripe keys use the simulated billing. **Never set in production.** |
 | `TRUSTED_PROXY_HOPS` | Off Vercel | How many proxies in front of the app add an `X-Forwarded-For` entry (default 1). Rate limits use the entry that many places from the right, never the first one, which a client can forge. On Vercel the platform header is used and this is not needed. Simulated billing is also refused on the Vercel production environment, whatever `ALLOW_DEV_BILLING` says. |
 
-Billing is live only when `STRIPE_SECRET_KEY`, `STRIPE_PRICE_MONTHLY` and `STRIPE_PRICE_YEARLY` are all set (`src/server/stripe.ts`). In production without them, the simulated billing is off unless `ALLOW_DEV_BILLING=1`.
+Billing is live only when `STRIPE_SECRET_KEY`, `STRIPE_PRICE_MONTHLY` and `STRIPE_PRICE_YEARLY` are all set (`src/server/stripe.ts`). In production without them, the simulated billing is off unless `ALLOW_DEV_BILLING=1`. US families (country `US`, set when the first child added follows a US curriculum) also need `STRIPE_PRICE_MONTHLY_USD` and `STRIPE_PRICE_YEARLY_USD`.
 
 ## 2. Database (Turso)
 
@@ -63,7 +65,8 @@ Turso offers Canadian locations only on its Fly provider (its AWS list has none)
    Events: `checkout.session.completed`, `customer.subscription.created`, `customer.subscription.updated`, `customer.subscription.deleted`, plus `invoice.paid` and `charge.refunded` for the admin dashboard's revenue numbers, and `invoice.payment_failed` and `charge.dispute.created` for the admin alerts.
 3. Copy the endpoint's signing secret to `STRIPE_WEBHOOK_SECRET`.
 4. In Stripe's Billing Portal settings, enable cancel, update payment method and plan switching between the two prices. Turn on **Cancellation reasons** (all eight options), so the admin dashboard can show why families cancel, and set **trial update behaviour** to *continue trial*, so a parent who switches plan during the free trial isn't charged early. (Both are already set in the sandbox.)
-5. Test the whole flow in Stripe test mode first (card `4242 4242 4242 4242`). The 30-day free trial is handled by the app, not by Stripe, so no card is needed to start.
+5. **US families** (only once Washington is offered): add two recurring prices in USD to the same product, **US$14.99 / month** and **US$119.99 / year**, and copy their ids to `STRIPE_PRICE_MONTHLY_USD` and `STRIPE_PRICE_YEARLY_USD`. A US checkout turns on Stripe Tax (`automatic_tax[enabled]`) and asks for the billing address; Canadian checkout doesn't change. In the dashboard, turn on **Stripe Tax** (Settings > Tax), set the business's origin address and the product's tax code (software as a service / digital education), and let Stripe monitor thresholds. A sale only becomes taxable in a state once we register there: Washington's economic-nexus threshold is US$100,000 of sales a year, so registering in Washington (and adding the registration in Stripe Tax) is needed only past that. Stripe's threshold monitoring says when a state gets close. Add the USD prices to the Billing Portal's plan switching too. Percentage discount codes work in both currencies, and referral credits are given in the family's own currency.
+6. Test the whole flow in Stripe test mode first (card `4242 4242 4242 4242`). The 30-day free trial is handled by the app, not by Stripe, so no card is needed to start.
 
 ## 5. Email (Resend) and error reports (Sentry)
 
