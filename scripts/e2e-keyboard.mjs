@@ -206,6 +206,37 @@ for (const path of ["/", "/pricing/", "/curriculum/bc/grade-3/math/"]) {
   check(new URL(page.url()).hash === "", `${path}: skipping leaves the address alone`);
 }
 
+console.log("Sale banner across nav-bar links");
+{
+  // The skip link is the top of every page for Next.js's scroll-on-navigation check; when it sat above the
+  // viewport, each nav-bar link scrolled the page down to the header, hiding the sale banner.
+  const sale = await ctx.newPage();
+  const promo = { id: "e2e", emoji: "🌱", headline: "Test sale", body: "", code: "FOUNDER", link: "/pricing/", linkLabel: "See pricing", endsAt: Date.now() + 86_400_000 };
+  await sale.route("**/api/promo/", (r) => r.fulfill({ json: { promo } }));
+  await sale.goto(BASE + "/", { waitUntil: "networkidle" });
+  await sale.waitForSelector('aside[aria-label="Sale"]');
+  for (const name of ["Curriculum", "Report cards", "Teachers"]) {
+    const link = sale.getByRole("navigation", { name: "Main" }).getByRole("link", { name, exact: true });
+    const href = await link.getAttribute("href");
+    await link.click();
+    await sale.waitForURL((u) => u.pathname === href);
+    await sale.waitForLoadState("networkidle");
+    await sale.waitForTimeout(300);
+    const { y, top } = await sale.evaluate(() => ({ y: scrollY, top: document.querySelector('aside[aria-label="Sale"]')?.getBoundingClientRect().top }));
+    check(y === 0 && top === 0, `${name}: the sale banner is still at the top after a nav-bar link (scrollY ${y}, banner top ${top})`);
+  }
+  // A link from further down the page still starts the next page at the top.
+  await sale.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  const footerLink = sale.locator("footer a[href^='/']").first();
+  const footerHref = await footerLink.getAttribute("href");
+  await footerLink.click();
+  await sale.waitForURL((u) => u.pathname === footerHref);
+  await sale.waitForLoadState("networkidle");
+  await sale.waitForTimeout(300);
+  check((await sale.evaluate(() => scrollY)) === 0, "a footer link opens the next page at the top");
+  await sale.close();
+}
+
 console.log("Public pages");
 for (const path of ["/", "/pricing/", "/guides/bc/grade-4/", "/report-cards/bc/"]) {
   await page.goto(BASE + path);

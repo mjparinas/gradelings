@@ -12,6 +12,20 @@ import { isStoreApp } from "@/lib/twa";
 
 const HIDDEN = "grademap.promo.hidden";
 
+// The sale fetched on this page load. Each page renders its own banner, so without this a click in the nav
+// bar would drop the banner and add it back a moment later, shifting the page.
+let fetched: LivePromo | null | undefined;
+
+/** For tests. */
+export function forgetPromo() {
+  fetched = undefined;
+}
+
+/** The store apps sell nothing, and the account pages stay free of selling. */
+function offHere(): boolean {
+  return isStoreApp() || window.location.pathname.startsWith("/account/");
+}
+
 function hiddenId(): string | null {
   try {
     return window.localStorage.getItem(HIDDEN);
@@ -27,13 +41,15 @@ export function PromoBanner({
   /** False where the visitor is already subscribing. */ showLink?: boolean;
   className?: string;
 }) {
-  const [promo, setPromo] = useState<LivePromo | null>(null);
+  // Only set on a client-side navigation: a full page load starts empty, matching the static HTML.
+  const [promo, setPromo] = useState<LivePromo | null>(() =>
+    fetched && !offHere() && hiddenId() !== fetched.id ? fetched : null,
+  );
   const [now, setNow] = useState(() => Date.now());
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    if (isStoreApp() || window.location.pathname.startsWith("/account/"))
-      return;
+    if (offHere() || fetched !== undefined) return;
     let live = true;
     fetch("/api/promo/")
       .then((r) =>
@@ -41,6 +57,7 @@ export function PromoBanner({
       )
       .then((r) => {
         const p = r?.promo;
+        if (r) fetched = p ?? null;
         if (!live || !p || hiddenId() === p.id) return;
         rememberPromoCode(p.code, p.endsAt);
         setPromo(p);
