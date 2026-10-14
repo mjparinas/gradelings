@@ -11,6 +11,7 @@ import { sounds } from "@/lib/sound";
 import { stopSpeaking } from "@/lib/speech";
 import { useActiveProfile, useChildSettings, useDerived, useStore } from "@/lib/store";
 import { useBand } from "../band";
+import { SayButton } from "./BuddySays";
 import { SpeechBubble } from "../Critter";
 import { Companion } from "./Companion";
 import { Page, ProgressBar } from "../ui";
@@ -265,8 +266,9 @@ function GamePlay({ id }: { id: string }) {
             <p className="text-lg text-ink-soft">Best: {best}</p>
           </>
         ) : (
-          <SpeechBubble className="max-w-md text-left">
-            <p className="font-read text-xl font-bold">{info.desc}</p>
+          <SpeechBubble className="flex max-w-md items-center gap-3 text-left">
+            <p className="flex-1 font-read text-xl font-bold">{info.desc}</p>
+            <SayButton text={info.desc} />
           </SpeechBubble>
         )}
         <div className="flex w-full max-w-sm flex-col gap-3">

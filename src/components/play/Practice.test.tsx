@@ -30,6 +30,7 @@ const h = vi.hoisted(() => {
     assigned: [] as string[],
     dailyDone: [] as string[],
     off: new Set<string>(),
+    speak: vi.fn(),
   };
 });
 
@@ -60,6 +61,7 @@ vi.mock("../Critter", () => ({
   SpeechBubble: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
 }));
 vi.mock("./Companion", () => ({ Companion: () => null }));
+vi.mock("@/lib/speech", () => ({ speak: h.speak, stopSpeaking: () => {} }));
 
 import { SpeedPicker, SubjectPicker, UnitList } from "./Practice";
 
@@ -128,6 +130,22 @@ describe("UnitList", () => {
     expect(screen.getByText("Pick a lesson! I think “Subtracting” would be fun.")).toBeInTheDocument();
     expect(within(tile("Subtracting")).getByText("Up next!")).toBeInTheDocument();
     expect(within(tile("Telling time")).getByText("New")).toBeInTheDocument();
+  });
+
+  it("reads the buddy's suggestion aloud when read-aloud is on, and has a button to hear it again", () => {
+    h.units = { "2/math/add": stat(3, 3) };
+    h.settings = { ...h.settings, autoRead: true };
+    inBand("middle", <UnitList subject="math" />);
+    expect(h.speak).toHaveBeenCalledWith("Pick a lesson! I think “Subtracting” would be fun.");
+    h.speak.mockClear();
+    click("Read it to me");
+    expect(h.speak).toHaveBeenCalledWith("Pick a lesson! I think “Subtracting” would be fun.");
+  });
+
+  it("keeps the suggestion quiet when read-aloud is off", () => {
+    inBand("middle", <UnitList subject="math" />);
+    expect(h.speak).not.toHaveBeenCalled();
+    expect(screen.getByRole("button", { name: "Read it to me" })).toBeInTheDocument();
   });
 
   it("cheers when every unit has been tried", () => {
