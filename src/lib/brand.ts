@@ -11,7 +11,7 @@ export const CONTACT_EMAIL = "hello@gradelings.com";
  * The brand's own social profiles (full https URLs), listed as `sameAs` in the site's Organization structured data so
  * search engines tie them to the site. Add each one once the account exists; never list a profile we don't own.
  */
-export const SOCIAL_PROFILES: string[] = [];
+export const SOCIAL_PROFILES: string[] = ["https://www.instagram.com/gradelings_com/"];
 /**
  * The social accounts the brand will have (owner's decision, October 2026). Until each one's URL is in
  * `SOCIAL_PROFILES`, the admin panel's to-do list asks for it (`missingSocialPlatforms`).

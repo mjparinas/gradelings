@@ -22,3 +22,10 @@ describe("social accounts", () => {
     expect(missingSocialPlatforms(["instagram", ""])).toHaveLength(4);
   });
 });
+
+describe("listed profiles", () => {
+  it("include the Instagram account, so the to-do asks only for the rest", () => {
+    expect(SOCIAL_PROFILES).toContain("https://www.instagram.com/gradelings_com/");
+    expect(missingSocialPlatforms()).not.toContain("Instagram");
+  });
+});
