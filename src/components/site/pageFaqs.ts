@@ -6,7 +6,7 @@ import { CORE_SUBJECTS, getSubjectMeta, subjectInSentence, subjectsIn } from "@/
 import type { GradeId, SubjectId } from "@/content/types";
 import { APP_NAME } from "@/lib/brand";
 import { DEFAULT_GOAL_MINUTES } from "@/lib/model";
-import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES_BY_CURRENCY, REFUND_DAYS, TRIAL_DAYS, money, perChildMonthly } from "@/lib/plan";
+import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES_BY_CURRENCY, REFUND_DAYS, TAX_NOTE, TRIAL_DAYS, money, perChildMonthly } from "@/lib/plan";
 
 // The questions parents ask on the busiest public pages, answered from content and plan data so every province and
 // state gets its own true answers. Each page shows them and gives them to search engines as FAQ structured data.
@@ -195,7 +195,7 @@ export function guideHubFaqs(f: Framework): Faq[] {
 export function pricingFaqs(usd: boolean): Faq[] {
   const cad = PRICES_BY_CURRENCY.CAD;
   const us = PRICES_BY_CURRENCY.USD;
-  const perChild = `${money(perChildMonthly("CAD", "year"), "CAD")} a month per child${usd ? ` (${money(perChildMonthly("USD", "year"), "USD")} in the US)` : ""}`;
+  const perChild = `${money(perChildMonthly("CAD", "year"), "CAD")} a month per child, ${TAX_NOTE.CAD.short}${usd ? ` (${money(perChildMonthly("USD", "year"), "USD")} in the US)` : ""}`;
   return [
     {
       q: "How much does it cost per child?",
@@ -203,7 +203,7 @@ export function pricingFaqs(usd: boolean): Faq[] {
     },
     {
       q: "What is the difference between monthly and yearly?",
-      a: `The same plan, billed differently: ${cad.month.label} a month or ${cad.year.label} a year in Canada${usd ? `, and ${us.month.label} or ${us.year.label} in the US` : ""}. Yearly saves about a third.`,
+      a: `The same plan, billed differently: ${cad.month.label} a month or ${cad.year.label} a year in Canada, ${TAX_NOTE.CAD.long}${usd ? `, and ${us.month.label} or ${us.year.label} in the US, ${TAX_NOTE.USD.long}` : ""}. Yearly saves about a third.`,
     },
     {
       q: "Do I need a card for the free trial?",

@@ -23,7 +23,7 @@ describe("PricingWithCurrency", () => {
     expect(screen.getByRole("button", { name: "Canada (CAD)" })).toHaveAttribute("aria-pressed", "true");
     await userEvent.click(usd);
     expect(usd).toHaveAttribute("aria-pressed", "true");
-    expect(screen.getByText(/Prices are in US dollars; sales tax is added where it applies/)).toBeInTheDocument();
+    expect(screen.getByText(/Prices are in US dollars, plus sales tax where it applies/)).toBeInTheDocument();
     expect(screen.getAllByText(/US\$/).length).toBeGreaterThan(0);
   });
 

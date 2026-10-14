@@ -77,6 +77,8 @@ export function appJsonLd(currencies: Currency[] = ["CAD"]) {
     name: both ? `${name}, ${p.currency}` : name,
     price: p.amount,
     priceCurrency: p.currency,
+    // Prices are before tax (GST and PST or HST in Canada, sales tax in the US), as the pricing page says.
+    priceSpecification: { "@type": "PriceSpecification", price: p.amount, priceCurrency: p.currency, valueAddedTaxIncluded: false },
     ...(both ? { eligibleRegion: p.currency === "USD" ? "US" : "CA" } : {}),
     availability: "https://schema.org/InStock",
     url: absolute("/pricing/"),

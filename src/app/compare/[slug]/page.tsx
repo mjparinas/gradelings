@@ -5,7 +5,7 @@ import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome
 import { guidePath } from "@/components/site/guides";
 import { COMPETITORS, OFFERED_COUNTRIES, PRICE_CHECKED, competitorBySlug, familiesWord, forCountries } from "@/content/compare";
 import { APP_NAME } from "@/lib/brand";
-import { FREE_UNITS_PER_COURSE, TRIAL_DAYS, pricesFor } from "@/lib/plan";
+import { FREE_UNITS_PER_COURSE, TAX_NOTE, TRIAL_DAYS, pricesFor } from "@/lib/plan";
 import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
 import { pageMeta } from "@/lib/pageMeta";
@@ -33,11 +33,11 @@ export default async function ComparePage({ params }: Props) {
   const found = competitorBySlug((await params).slug);
   if (!found) notFound();
   const c = forCountries(found);
-  // "$14.99/month or $119.99/year in Canada, US$14.99/month or US$119.99/year in the US".
+  // "$14.99/month or $119.99/year plus tax in Canada, US$14.99/month or US$119.99/year plus sales tax in the US".
   const planPrices = OFFERED_COUNTRIES.map((country) => {
     const p = pricesFor(country);
     const where = OFFERED_COUNTRIES.length > 1 ? (country === "US" ? " in the US" : " in Canada") : "";
-    return `${p.month.label} or ${p.year.label}${where}`;
+    return `${p.month.label} or ${p.year.label} ${TAX_NOTE[p.month.currency].short}${where}`;
   }).join(", ");
   const crumbs = [{ label: "Home", href: "/" }, { label: "Compare", href: guidePath.compareIndex() }, { label: `${APP_NAME} vs ${c.name}` }];
   const title = `${APP_NAME} vs ${c.name} for ${familiesWord()}`;

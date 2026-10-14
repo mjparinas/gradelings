@@ -4,7 +4,7 @@ import { countryOf } from "@/lib/country";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { APP_NAME } from "@/lib/brand";
 import { devBilling, loadReferral, openBillingPortal, redeemCode, refreshAccount, resendVerification, startCheckout, type BillingInfo, type ReferralInfo } from "@/lib/account";
-import { firstChargeAt, FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, CURRENCY_NAME, pricesFor, trialDaysLeft, upgradeOffer } from "@/lib/plan";
+import { firstChargeAt, FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, CURRENCY_NAME, pricesFor, TAX_NOTE, trialDaysLeft, upgradeOffer } from "@/lib/plan";
 import { savedPromoCode } from "@/lib/promoCode";
 import { inviteLink, rememberMyInvite } from "@/lib/referral";
 import { useRoute } from "@/lib/router";
@@ -351,7 +351,7 @@ function PlanChoices({ disabled, onPick }: { disabled?: boolean; onPick?: (inter
           </button>
         );
       })}
-      <p className="text-sm text-ink-soft">Prices in {CURRENCY_NAME[prices.month.currency]}{prices.month.currency === "USD" ? ", plus sales tax where it applies" : ""}. Payments are handled securely by Stripe; we never see your card details.</p>
+      <p className="text-sm text-ink-soft">Prices in {CURRENCY_NAME[prices.month.currency]}, {TAX_NOTE[prices.month.currency].long}. Payments are handled securely by Stripe; we never see your card details.</p>
     </div>
   );
 }

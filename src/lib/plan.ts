@@ -76,6 +76,15 @@ export function perChildMonthly(currency: Currency, interval: "month" | "year"):
 /** "$3.33" or "US$3.33". */
 export const money = (amount: number, currency: Currency) => `${currency === "USD" ? "US$" : "$"}${amount.toFixed(2)}`;
 
+/**
+ * Prices are before tax: Canadian checkouts add GST and PST (or HST) and US checkouts add sales tax where it applies,
+ * so every price a parent reads says so. "plus tax" next to a price; the longer form in a sentence about prices.
+ */
+export const TAX_NOTE: Record<Currency, { short: string; long: string }> = {
+  CAD: { short: "plus tax", long: "plus GST and PST, or HST, where they apply" },
+  USD: { short: "plus sales tax", long: "plus sales tax where it applies" },
+};
+
 /** How a currency is named in a sentence ("Prices in Canadian dollars"). */
 export const CURRENCY_NAME: Record<Currency, string> = { CAD: "Canadian dollars", USD: "US dollars" };
 

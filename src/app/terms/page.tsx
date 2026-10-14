@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalPage, Section } from "@/components/site/Legal";
 import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS } from "@/lib/brand";
-import { CURRENCY_NAME, FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, REFUND_DAYS, TRIAL_DAYS } from "@/lib/plan";
+import { CURRENCY_NAME, FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, REFUND_DAYS, TAX_NOTE, TRIAL_DAYS } from "@/lib/plan";
 import { pageMeta } from "@/lib/pageMeta";
 
 export const metadata: Metadata = pageMeta({
@@ -36,7 +36,7 @@ export default function TermsPage() {
           <li>New accounts get a {TRIAL_DAYS}-day free trial with everything switched on. No card is needed to start.</li>
           <li>After the trial, the first {FREE_UNITS_PER_COURSE} units of every course stay free.</li>
           <li>
-            The family plan unlocks everything for up to {MAX_CHILDREN} children and costs {PRICES.month.label} or {PRICES.year.label} ({PRICES.month.currency}). Taxes may be added where required.
+            The family plan unlocks everything for up to {MAX_CHILDREN} children and costs {PRICES.month.label} or {PRICES.year.label} ({PRICES.month.currency}), {TAX_NOTE.CAD.long}. Tax is shown at checkout before you pay.
           </li>
           <li>When the trial ends we don’t charge you. You keep the free units unless you choose to subscribe.</li>
           <li>You can subscribe at any time, including during the trial, and you don’t have to start the trial first. If you subscribe during the trial, your card is saved at checkout and your first payment is taken when the trial ends, so you keep the days left. If you cancel before then, you pay nothing. If fewer than about two days of the trial are left, or you had a paid plan before, you’re charged at checkout and the paid plan starts that day.</li>
