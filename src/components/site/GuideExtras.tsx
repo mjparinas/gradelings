@@ -11,6 +11,7 @@ import { Disclosure } from "@/components/Disclosure";
 import { guidesUpdated } from "@/content/updated";
 import { JsonLd } from "@/lib/site";
 import { pageMeta } from "@/lib/pageMeta";
+import { playHref } from "@/lib/playLink";
 
 // The two province-specific guide pages (competencies/learning skills and the provincial
 // assessment). Each province serves them at its own slug, taken from its guide copy (see guidePath):
@@ -56,7 +57,7 @@ export async function CompetenciesView({ params }: { params: Params }) {
   const crumbs = [{ label: "Home", href: "/" }, { label: `${f.shortName} parent guides`, href: guidePath.hub(f) }, { label: g.label }];
 
   return (
-    <SitePage cta>
+    <SitePage cta play={playHref({ framework: f.id })}>
       <JsonLd data={[breadcrumbJsonLd(crumbs), faqJsonLd(g.faqs), articleJsonLd({ headline: g.title, description: g.intro, path: guidePath.competencies(f), framework: f, updated: guidesUpdated(f.id) })]} />
       <Crumbs items={crumbs} />
       <h1 className="text-4xl font-bold">{g.title}</h1>
@@ -143,7 +144,7 @@ export async function AssessmentView({ params }: { params: Params }) {
   const title = `The ${a.short} explained for ${f.shortName} parents`;
 
   return (
-    <SitePage cta>
+    <SitePage cta play={playHref({ framework: f.id })}>
       <JsonLd data={[breadcrumbJsonLd(crumbs), faqJsonLd(a.faqs), articleJsonLd({ headline: title, description: a.intro, path: guidePath.assessment(f), framework: f, updated: guidesUpdated(f.id) })]} />
       <Crumbs items={crumbs} />
       <h1 className="text-4xl font-bold">{title}</h1>

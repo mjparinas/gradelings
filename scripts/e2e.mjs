@@ -435,6 +435,46 @@ async function eventsWaiting(page) {
     }
   }
 
+  if (MODES) {
+    // A "Play free" link on a unit page opens the app on that unit: the first child starts with the page's
+    // province and grade picked, the grown-ups step offers the emails, and the unit is open after "Not now".
+    const fresh = await browser.newContext({ viewport: { width: 1180, height: 820 }, hasTouch: true, reducedMotion: "reduce" });
+    const p3 = await fresh.newPage();
+    watch(p3, "deep-link");
+    await p3.goto(`${BASE}/curriculum/ontario/grade-2/math/adding-to-100/`);
+    await p3.getByRole("complementary").getByRole("link", { name: "Play free" }).click();
+    await p3.getByRole("button", { name: /Let's go/ }).click({ force: true });
+    if ((await p3.getByRole("button", { name: "Grade 2", exact: true }).getAttribute("aria-pressed")) !== "true") errors.push("deep link: Grade 2 isn't picked");
+    if (!(await p3.getByText(/Grade 2 · .*Ontario/).isVisible())) errors.push("deep link: Ontario isn't picked");
+    await p3.getByLabel("Name").fill("Noor");
+    await p3.getByRole("button", { name: "Start!" }).click({ force: true });
+    await p3.getByRole("heading", { name: /For grown-ups/ }).waitFor();
+    await shot(p3, "40-email-reports-step");
+    await p3.getByRole("button", { name: /Not now, let's play/ }).click({ force: true });
+    await p3.getByRole("dialog").waitFor({ timeout: 15000 });
+    if (!(await p3.evaluate(() => location.hash)).startsWith("#/practice/math")) errors.push("deep link: didn't open the math lessons");
+    await shot(p3, "41-deep-link-unit");
+    log("deep link: opened", await p3.getByRole("dialog").getByRole("heading").first().textContent());
+    // "Email me the reports" keeps the child and opens the parent area's account page behind the PIN.
+    await fresh.close();
+    const fresh2 = await browser.newContext({ viewport: { width: 1180, height: 820 }, hasTouch: true, reducedMotion: "reduce" });
+    const p4 = await fresh2.newPage();
+    watch(p4, "email-step");
+    await p4.goto(`${BASE}/play/`);
+    await p4.getByRole("button", { name: /Let's go/ }).click({ force: true });
+    await p4.getByLabel("Name").fill("Ivy");
+    await p4.getByRole("button", { name: "Grade 4", exact: true }).click();
+    await p4.getByRole("button", { name: "Start!" }).click({ force: true });
+    await p4.getByRole("link", { name: "Email me the reports" }).click();
+    await p4.waitForURL(/\/parents\/#\/account/);
+    await enterPin(p4, true);
+    await p4.getByLabel("Email").first().waitFor();
+    await p4.goto(`${BASE}/play/`);
+    await p4.getByRole("button", { name: /Adventure/ }).waitFor();
+    log("email step: the child was kept and the account page opened");
+    await fresh2.close();
+  }
+
   await browser.close();
   log(errors.length ? `ERRORS:\n${errors.join("\n")}` : "no errors");
   process.exit(errors.length ? 1 : 0);

@@ -18,6 +18,7 @@ import { pageLocale } from "@/lib/pageMeta";
 import { JsonLd, ORG_REF, absolute } from "@/lib/site";
 import { PinLink, ShareButton } from "@/components/site/ShareButton";
 import { pageMeta } from "@/lib/pageMeta";
+import { playHref } from "@/lib/playLink";
 
 export const dynamicParams = false;
 
@@ -80,7 +81,7 @@ export default async function WorksheetPage({ params }: Props) {
   ];
 
   return (
-    <SitePage>
+    <SitePage play={playHref({ framework: f.id, grade, subject: course.subject })}>
       <JsonLd
         data={[
           breadcrumbJsonLd(crumbs),
@@ -159,7 +160,7 @@ export default async function WorksheetPage({ params }: Props) {
             .
           </p>
         </div>
-        <SubscribeActions size="md" />
+        <SubscribeActions size="md" play={playHref({ framework: f.id, grade, subject: course.subject })} />
       </section>
     </SitePage>
   );

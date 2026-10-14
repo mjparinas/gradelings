@@ -15,6 +15,7 @@ import { ShareButton } from "@/components/site/ShareButton";
 import { guidePath } from "@/components/site/guides";
 import { APP_NAME } from "@/lib/brand";
 import { pageMeta } from "@/lib/pageMeta";
+import { playHref } from "@/lib/playLink";
 
 export const dynamicParams = false;
 
@@ -58,6 +59,7 @@ export default async function UnitPage({ params }: Props) {
   const path = curriculumPath.unit(f, grade, course.subject, unit.id);
   const updated = unitUpdated(f.id, grade, course.subject, unit.id);
   const scheme = f.scoringFor(grade);
+  const play = playHref({ framework: f.id, grade, subject: course.subject, unit: unit.id });
   const labels = scheme.levels.map((l) => l.label);
   const levels = `${labels.slice(0, -1).join(", ")} or ${labels[labels.length - 1]}`;
   const crumbs = [
@@ -70,7 +72,7 @@ export default async function UnitPage({ params }: Props) {
   ];
 
   return (
-    <SitePage>
+    <SitePage play={play}>
       <JsonLd
         data={[
           breadcrumbJsonLd(crumbs),
@@ -146,7 +148,7 @@ export default async function UnitPage({ params }: Props) {
         <aside className="card flex flex-col gap-3 p-5">
           <p className="text-lg font-bold">{say(f, "Practise this unit")}</p>
           <p className="font-read text-ink-soft">New questions every time, with hints, read-aloud and rewards. Works offline.</p>
-          <SubscribeActions trialLabel="Play free" className="w-full" />
+          <SubscribeActions trialLabel="Play free" className="w-full" play={play} />
           <ShareButton path={path} title={`${unit.title}: ${gradeLabel(f, grade)} ${name}`} text={`Can your ${gradeLabel(f, grade)} child solve these? Free ${unit.title} practice:`} label="Share these questions" />
         </aside>
       </div>

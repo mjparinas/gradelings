@@ -1,0 +1,43 @@
+import { describe, expect, it } from "vitest";
+import { playHref, readPlayStart } from "./playLink";
+
+const known = (id: string) => ["ca-bc", "ca-on", "us-wa"].includes(id);
+const read = (href: string) => readPlayStart(new URLSearchParams(href.split("?")[1] ?? ""), known);
+
+describe("playHref", () => {
+  it("opens the app on a province or state, grade, subject and unit, keeping only the parts given", () => {
+    expect(playHref({ framework: "ca-on", grade: "2", subject: "math", unit: "adding-to-100" })).toBe("/play/#/start?framework=ca-on&grade=2&subject=math&unit=adding-to-100");
+    expect(playHref({ framework: "us-wa" })).toBe("/play/#/start?framework=us-wa");
+    // A unit or subject means nothing without the grade around it.
+    expect(playHref({ framework: "ca-bc", subject: "math", unit: "x" })).toBe("/play/#/start?framework=ca-bc");
+  });
+
+  it("reads back what it wrote", () => {
+    const s = { framework: "ca-on", grade: "k", subject: "science", unit: "seasons" } as const;
+    expect(read(playHref(s))).toEqual(s);
+  });
+});
+
+describe("readPlayStart", () => {
+  it("is null for an unknown or missing framework", () => {
+    expect(read("?framework=ca-qc&grade=2")).toBeNull();
+    expect(read("?grade=2")).toBeNull();
+  });
+
+  it("drops the parts that don't read", () => {
+    expect(read("?framework=ca-bc&grade=13&subject=math")).toEqual({ framework: "ca-bc" });
+    expect(read("?framework=ca-bc&grade=4&subject=Math<script>")).toEqual({ framework: "ca-bc", grade: "4" });
+    expect(read("?framework=ca-bc&grade=4&subject=math&unit=../x")).toEqual({ framework: "ca-bc", grade: "4", subject: "math" });
+  });
+});
+
+describe("every unit", () => {
+  it("can be named in a link", async () => {
+    const { COURSES } = await import("@/content/all");
+    const bad = COURSES.flatMap((c) => [c.subject, ...c.units.map((u) => u.id)]).filter((id) => {
+      const s = read(playHref({ framework: "ca-bc", grade: "4", subject: "math", unit: id }));
+      return s?.unit !== id;
+    });
+    expect(bad).toEqual([]);
+  });
+});

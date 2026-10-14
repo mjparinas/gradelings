@@ -11,6 +11,7 @@ import { Disclosure } from "@/components/Disclosure";
 import { guidesUpdated } from "@/content/updated";
 import { JsonLd } from "@/lib/site";
 import { pageMeta } from "@/lib/pageMeta";
+import { playHref } from "@/lib/playLink";
 
 export const dynamicParams = false;
 
@@ -43,7 +44,7 @@ export default async function FrenchGuidePage({ params }: Props) {
   const crumbs = [{ label: "Home", href: "/" }, { label: `${f.shortName} parent guides`, href: guidePath.hub(f) }, { label: "Core French and French Immersion" }];
 
   return (
-    <SitePage cta>
+    <SitePage cta play={playHref({ framework: f.id })}>
       <JsonLd data={[breadcrumbJsonLd(crumbs), faqJsonLd(g.faqs), articleJsonLd({ headline: g.title, description: g.intro, path: guidePath.french(f), framework: f, updated: guidesUpdated(f.id) })]} />
       <Crumbs items={crumbs} />
       <h1 className="text-4xl font-bold">{g.title}</h1>

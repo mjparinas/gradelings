@@ -21,6 +21,7 @@ import { JsonLd } from "@/lib/site";
 import { pageMeta } from "@/lib/pageMeta";
 import { FaqSection } from "@/components/site/FaqSection";
 import { guideHubFaqs } from "@/components/site/pageFaqs";
+import { playHref } from "@/lib/playLink";
 
 export const dynamicParams = false;
 
@@ -60,7 +61,7 @@ export default async function GuidesHub({
   const description = `Plain-language guides for parents following the ${f.curriculumName}, plus free printable practice sheets.`;
 
   return (
-    <SitePage cta>
+    <SitePage cta play={playHref({ framework: f.id })}>
       <JsonLd
         data={[
           breadcrumbJsonLd(crumbs),
