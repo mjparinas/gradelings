@@ -81,7 +81,7 @@ describe.each(US.map((m) => [m.framework.name, m] as const))("%s keeps the US co
 
   it("never shows a unit about Canada, or Canadian money", () => {
     for (const { u, key } of units) {
-      const qs = sampleOf(u.generate);
+      const qs = sampleOf(localizeUnit(u, "en-US").generate);
       const words = usOwn.some((p) => u.id.startsWith(p)) ? [] : [...new Set(qs.flatMap((q) => canadianWords(questionText(q))))];
       expect(words, `${key} mentions Canada`).toEqual([]);
       for (const q of qs) {

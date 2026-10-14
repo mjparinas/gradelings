@@ -13,6 +13,8 @@ import type { Course, GradeId } from "./types";
 export interface GradeModule {
   courses: Course[];
   lessons?: GradeLessons;
+  /** Lessons for the grade's other subjects, a second download fetched once the grade is in (see ./index). */
+  moreLessons?: () => Promise<GradeLessons>;
 }
 
 /** Each grade's download, as a dynamic import so the apps only fetch the grades a child needs. */

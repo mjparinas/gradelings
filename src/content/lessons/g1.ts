@@ -1,6 +1,6 @@
 import { lesson, type GradeLessons } from "./index";
 
-export const lessons: GradeLessons = {
+const math: GradeLessons = {
   "math/make-ten": lesson(
     ["Some pairs make 10: 6 and 4, 7 and 3, 8 and 2.", "Start at one number and count up to 10.", "The steps you counted are the other number."],
     "7 + ? = 10",
@@ -208,3 +208,7 @@ export const lessons: GradeLessons = {
     "14 beads",
   ),
 };
+
+// Math lessons ship with the grade. The other subjects' lessons are a second download, fetched once the grade is in.
+export const lessons: GradeLessons = math;
+export const moreLessons = () => import("./g1-subjects").then((m) => m.lessons);

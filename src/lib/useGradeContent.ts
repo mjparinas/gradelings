@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useSyncExternalStore } from "react";
-import { AVAILABLE_GRADES, gradeLoadFailed, isGradeLoaded, loadGrade, loadGrades, subscribeToContent, type ContentTarget } from "@/content";
+import { AVAILABLE_GRADES, gradeLoadFailed, isGradeLoaded, lessonsSettled, loadGrade, loadGrades, subscribeToContent, type ContentTarget } from "@/content";
 import type { FrameworkId, GradeId } from "@/content/types";
 import { cacheLoadedScripts } from "./offline";
 
@@ -56,8 +56,14 @@ export function prefetchGrades(targets: ContentTarget[]) {
     }
   }
   const run = () => {
-    void Promise.allSettled([...wanted.values()].map((t) => loadGrade(t.grade, t.framework))).then(cacheLoadedScripts);
+    void Promise.allSettled([...wanted.values()].map((t) => loadGrade(t.grade, t.framework))).then(cacheContent);
   };
   if ("requestIdleCallback" in window) window.requestIdleCallback(run, { timeout: 10_000 });
   else setTimeout(run, 3000);
+}
+
+/** Asks the service worker to keep the grade files loaded so far, and again once their lessons for every subject arrive. */
+export function cacheContent() {
+  cacheLoadedScripts();
+  void lessonsSettled().then(cacheLoadedScripts);
 }

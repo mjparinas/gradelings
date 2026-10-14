@@ -1,6 +1,6 @@
 import { lesson, type GradeLessons } from "./index";
 
-export const lessons: GradeLessons = {
+const math: GradeLessons = {
   "math/fraction-operations": lesson(
     ["To add or subtract, use a common denominator.", "To multiply, multiply the tops and multiply the bottoms.", "To divide, flip the second fraction and multiply."],
     "2/3 ÷ 4/5 = ?",
@@ -258,3 +258,7 @@ export const lessons: GradeLessons = {
     "16 cm",
   ),
 };
+
+// Math lessons ship with the grade. The other subjects' lessons are a second download, fetched once the grade is in.
+export const lessons: GradeLessons = math;
+export const moreLessons = () => import("./g8-subjects").then((m) => m.lessons);

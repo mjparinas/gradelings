@@ -709,7 +709,7 @@ const ENERGY: Item[] = [
 function jouleQ(): Question {
   const w = pick([20, 40, 60, 75, 100, 150]);
   const s = pick([5, 10, 20, 30, 60]);
-  return typeIn(`A ${w} W bulb is on for ${s} s. How much electrical energy does it use, in joules? (E = P × t)`, w * s, `E = P × t = ${w} × ${s} = ${w * s} J.`, undefined, { suffix: "J" });
+  return typeIn(`A bulb rated ${w} W is on for ${s} s. How much electrical energy does it use, in joules? (E = P × t)`, w * s, `E = P × t = ${w} × ${s} = ${w * s} J.`, undefined, { suffix: "J" });
 }
 
 function kwhQ(): Question {

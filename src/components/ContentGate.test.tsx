@@ -5,8 +5,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 import type { GradeStatus } from "@/lib/useGradeContent";
 
 const mocks = vi.hoisted(() => ({ status: "loading" as GradeStatus, retry: vi.fn(), cacheLoadedScripts: vi.fn(), useGradeContent: vi.fn() }));
-vi.mock("@/lib/useGradeContent", () => ({ useGradeContent: mocks.useGradeContent }));
-vi.mock("@/lib/offline", () => ({ cacheLoadedScripts: mocks.cacheLoadedScripts }));
+vi.mock("@/lib/useGradeContent", () => ({ useGradeContent: mocks.useGradeContent, cacheContent: mocks.cacheLoadedScripts }));
 
 import { ContentGate } from "./ContentGate";
 

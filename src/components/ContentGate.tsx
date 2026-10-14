@@ -3,8 +3,7 @@
 import { useEffect, type ReactNode } from "react";
 import { GRADE_LABEL } from "@/content/subjects";
 import type { ContentTarget } from "@/content";
-import { cacheLoadedScripts } from "@/lib/offline";
-import { useGradeContent } from "@/lib/useGradeContent";
+import { cacheContent, useGradeContent } from "@/lib/useGradeContent";
 import { Critter } from "./Critter";
 import { LoadingScreen } from "./ui";
 
@@ -28,7 +27,7 @@ export function ContentGate({
   const { status, retry } = useGradeContent(targets);
 
   useEffect(() => {
-    if (status === "ready") cacheLoadedScripts();
+    if (status === "ready") cacheContent();
   }, [status]);
 
   if (status === "ready") return children;

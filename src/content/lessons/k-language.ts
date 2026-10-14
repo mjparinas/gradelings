@@ -1,0 +1,148 @@
+import { lesson, type GradeLessons } from "./index";
+
+export const lessons: GradeLessons = {
+  "language/letter-partners": lesson(
+    ["Every letter has a big letter and a small letter.", "Some partners look alike, like O and o.", "Some look different, like E and e. Look closely!"],
+    "Which small letter matches B?",
+    ["B is the big letter.", "Its small partner is b."],
+    "b",
+  ),
+  "language/first-sounds": lesson(
+    ["Say the word out loud.", "Listen to the very first sound.", "Find the letter that makes that sound."],
+    "Which letter does “ball” start with?",
+    ["Say “ball”: b-b-ball.", "The first sound is /b/."],
+    "b",
+  ),
+  "language/rhyme-time": lesson(
+    ["Rhyming words end with the same sound.", "Cat and hat rhyme. They both end in “at”.", "Say both words. Do the ends sound the same?"],
+    "Which one rhymes with “cake”? snake or sun?",
+    ["Cake ends with “ake”.", "Snake ends with “ake” too."],
+    "snake",
+  ),
+  "language/clap-the-beat": lesson(
+    ["Words have beats. Each beat is a clap.", "Say the word slowly and clap each part.", "Count your claps."],
+    "Clap “pizza”. How many claps?",
+    ["piz – za.", "Two claps."],
+    "2",
+  ),
+  "language/sight-words": lesson(
+    ["Sight words are words we see a lot, like “the”, “is” and “red”.", "Look at the first letter, then the whole word.", "Say the word each time you see it."],
+    "Find the word “is”: it, is or in?",
+    ["“is” starts with i and ends with s.", "Only one word ends with s."],
+    "is",
+  ),
+  "language/story-order": lesson(
+    ["Stories happen in order: first, next, last.", "Ask: what happens first?", "Then what? How does it end?"],
+    "Put in order: a chick, an egg, it hatches.",
+    ["First there is an egg.", "Next, it hatches.", "Last, a little chick."],
+    "An egg → It hatches → A little chick",
+  ),
+  "language/book-detectives": lesson(
+    ["A letter is one mark, like N.", "A word is a group of letters. Spaces go between words.", "We read a book from the front, top to bottom, left to right."],
+    "How many words are in “I see a cat”?",
+    ["Count the words: I, see, a, cat.", "Four words."],
+    "4",
+  ),
+  "language/picture-clues": lesson(
+    ["Look at the picture first.", "Read the words you know.", "Use the picture to help with a new word."],
+    "The picture is a pig. Which fits? “I see the pig.” or “I see the cup.”",
+    ["The picture is a pig.", "Find the sentence that says pig."],
+    "I see the pig.",
+  ),
+  "language/blend-a-word": lesson(
+    ["Each word is made of sounds.", "Say each sound, then push them together fast.", "d – o – g makes dog!"],
+    "Blend the sounds: b – e – d. Which word is it?",
+    ["Say b, e, d.", "Say them fast: bed."],
+    "bed",
+  ),
+  "language/talk-and-listen-ab": lesson(
+    ["A sentence tells a whole idea, like “The dog runs fast.”", "A question asks something. It ends with a question mark.", "To talk in class, raise your hand and wait your turn."],
+    "Which one is a question? “Can I play?” or “I can play.”",
+    ["A question asks something.", "It ends with a question mark."],
+    "Can I play?",
+  ),
+  "language/real-or-imaginary-ab": lesson(
+    ["Real things can really happen.", "Imaginary things are make-believe, like a talking rabbit.", "Ask: could this happen in real life?"],
+    "A story says a pig can fly. This part is…",
+    ["Can pigs really fly? No.", "So it is make-believe."],
+    "imaginary",
+  ),
+  "language/mb-k-listening-and-talking": lesson(
+    ["Good listeners look at the speaker and stay calm.", "Ask nicely: “May I have a turn, please?”", "Use a quiet voice inside and a louder voice far away."],
+    "How do you ask for a turn nicely?",
+    ["Use kind words like “please”.", "Ask, don’t grab."],
+    "May I have a turn, please?",
+  ),
+  "language/mb-k-word-parts-and-meanings": lesson(
+    ["Add -s to mean more than one: dog, dogs.", "Add -ing for something happening now: play, playing.", "Words can go in groups, like doctor, teacher, farmer."],
+    "Add -s to “cat”. What word do you get?",
+    ["cat + s.", "cats means more than one cat."],
+    "cats",
+  ),
+  "language/mb-k-before-during-after-reading": lesson(
+    ["Before reading, guess what might happen.", "While reading, think: “This is like my life!” That is a connection.", "After reading, share what you liked or learned."],
+    "“I have a dog like that!” is a…",
+    ["The book reminds you of your own dog.", "That is a connection."],
+    "connection",
+  ),
+  "language/mb-k-make-a-text": lesson(
+    ["A sentence starts with a capital letter.", "A sentence ends with a period.", "Plan what you will say before you write."],
+    "Which is written correctly? “i like jam” or “I like jam.”",
+    ["Check for a capital I at the start.", "Check for a period at the end."],
+    "I like jam.",
+  ),
+  "language/mb-k-i-can-learn": lesson(
+    ["Notice what you can do well.", "When something is hard, say: “I can try again.”", "A progress chart shows how far you have come."],
+    "It is hard to read a word. What can you say?",
+    ["Kind words help us keep going.", "Try again!"],
+    "I can try again",
+  ),
+  "language/wa-gk-ask-and-find-out": lesson(
+    ["Question words ask different things: who, what, where, when.", "“When” asks about time. “Where” asks about a place.", "Books and pictures can help us find answers."],
+    "Which question asks where? “Where do bees live?” or “What do bees eat?”",
+    ["“Where” asks about a place.", "The first one starts with “Where”."],
+    "Where do bees live?",
+  ),
+  "language/ca-gk-story-questions": lesson(
+    ["Listen to the story carefully.", "Ask: who? what? where?", "Look back at the words or pictures to find the answer."],
+    "Sam has a red kite. What colour is Sam’s kite?",
+    ["Find Sam’s kite in the story.", "It says red."],
+    "red",
+  ),
+  "language/ca-gk-fact-questions": lesson(
+    ["A fact book tells true things.", "The author writes the words. The illustrator draws the pictures.", "Find the fact in the book to answer."],
+    "In a fact book, what does the illustrator do?",
+    ["“Illustrate” means to make pictures.", "The illustrator draws."],
+    "draws the pictures",
+  ),
+  "language/ca-gk-sentence-starters": lesson(
+    ["An action word tells what someone does, like hop or run.", "Add -s or -es for more than one: cat, cats; box, boxes.", "Small words like in and on tell where."],
+    "Which word is an action word? hop or hat?",
+    ["Can you do it? You can hop!", "Hop is an action."],
+    "hop",
+  ),
+  "language/ny-gk-feelings-and-reasons": lesson(
+    ["Our five senses: see, hear, smell, taste, touch.", "Feeling words: happy, sad, tired, scared.", "“Because” tells a reason: I like cats because they purr."],
+    "“The puppy is soft.” Which sense tells you that?",
+    ["You feel soft with your hands.", "That is touch."],
+    "touch",
+  ),
+  "language/ny-gk-stories-and-facts": lesson(
+    ["Make-believe stories have things that can’t happen.", "Fact books teach true things, like how plants grow.", "Words under a picture tell about the picture."],
+    "Which one is make-believe? a bus that can fly or a bus on a road?",
+    ["Can a bus really fly? No.", "So that one is make-believe."],
+    "a bus that can fly",
+  ),
+  "language/tx-k-change-a-letter": lesson(
+    ["Words are made of letters.", "Change one letter to make a new word.", "Say the new word: pig → big."],
+    "Change the m in “map” to c. What word is it now?",
+    ["Take away m. Put in c.", "c-a-p: cap."],
+    "cap",
+  ),
+  "language/tx-k-story-friends": lesson(
+    ["Characters are who the story is about.", "The setting is where and when the story happens.", "Fables teach a lesson, like “slow and steady wins.”"],
+    "Ben the bear looks for honey in the woods. Who is the character?",
+    ["Who is the story about?", "Ben the bear."],
+    "Ben the bear",
+  ),
+};

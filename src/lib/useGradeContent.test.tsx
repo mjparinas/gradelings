@@ -18,6 +18,7 @@ vi.mock("@/content", () => ({
   },
   loadGrades: vi.fn(async () => undefined),
   loadGrade: vi.fn(async () => undefined),
+  lessonsSettled: vi.fn(async () => undefined),
 }));
 vi.mock("./offline", () => ({ cacheLoadedScripts: vi.fn() }));
 
@@ -100,7 +101,9 @@ describe("prefetchGrades", () => {
     expect(loadGrade.mock.calls.map(([g, f]) => `${f}:${g}`).sort()).toEqual(
       ["ca-bc:k", "ca-bc:1", "ca-bc:3", "ca-bc:4", "ca-bc:5", "ca-bc:6", "ca-on:8", "ca-on:9"].sort(),
     );
-    await vi.waitFor(() => expect(cacheLoadedScripts).toHaveBeenCalledOnce());
+    // Once for the grades, and again once their lessons for the other subjects have arrived.
+    await vi.waitFor(() => expect(cacheLoadedScripts).toHaveBeenCalledTimes(2));
+    expect(registry.lessonsSettled).toHaveBeenCalledOnce();
   });
 
   it("caches what did arrive even when some grades fail", async () => {
@@ -112,6 +115,6 @@ describe("prefetchGrades", () => {
     await vi.advanceTimersByTimeAsync(1);
     expect(loadGrade).toHaveBeenCalledTimes(3);
     await vi.advanceTimersByTimeAsync(0);
-    expect(cacheLoadedScripts).toHaveBeenCalledOnce();
+    expect(cacheLoadedScripts).toHaveBeenCalledTimes(2);
   });
 });

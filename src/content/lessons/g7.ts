@@ -1,6 +1,6 @@
 import { lesson, type GradeLessons } from "./index";
 
-export const lessons: GradeLessons = {
+const math: GradeLessons = {
   "math/integer-add-subtract": lesson(
     ["On a number line, adding moves right and subtracting moves left.", "A positive and a negative of the same size cancel out: +1 and −1 make 0.", "Subtracting a negative is the same as adding a positive."],
     "−3 + 5 = ?",
@@ -282,3 +282,7 @@ export const lessons: GradeLessons = {
     "No",
   ),
 };
+
+// Math lessons ship with the grade. The other subjects' lessons are a second download, fetched once the grade is in.
+export const lessons: GradeLessons = math;
+export const moreLessons = () => import("./g7-subjects").then((m) => m.lessons);
