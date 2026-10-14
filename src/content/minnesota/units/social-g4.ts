@@ -1,0 +1,163 @@
+import type { Unit } from "../../types";
+import { worldMaps6 } from "../../oregon/units/social-copies";
+import { G6 as WASHINGTON_6 } from "../../washington/units/social-59-g6";
+import { bankUnit, type Q } from "../own";
+import { copyOf, from } from "./kit";
+
+// Minnesota's own Grade 4 social studies units (`mn-` ids) for the Contemporary World theme, and a Minnesota copy of
+// another state's unit. Each keeps the original's questions, leaves out the ones that name another
+// state or are about Tribes, and adds Minnesota items where they fit. Their own `mn-` ids keep Minnesota progress apart
+// from the originals.
+const RESOURCES: Q[] = [
+  ["A natural resource is something from nature that people…", "use", ["throw away", "make in factories", "never need"], "Water, soil, trees."],
+  ["Which is a renewable resource?", "Wind", ["Coal", "Oil", "Iron ore"], "It won't run out."],
+  ["Which is a nonrenewable resource?", "Oil", ["Sunlight", "Wind", "Trees"], "It takes millions of years to form."],
+  ["Because resources are limited, people have to…", "make choices about how to use them", ["use them all at once", "ignore them", "stop using everything"], "Scarcity means choices."],
+  ["A farming region needs good soil, enough rain or water, and…", "a long enough growing season", ["mountains everywhere", "no sunlight", "deep snow all year"], "Crops need time to grow."],
+  ["Southern Minnesota and Iowa grow lots of corn and soybeans because they have…", "rich soil and summer rain", ["deserts", "glaciers", "rainforests"], "Prairie soil."],
+  ["Rice grows best in places that are…", "warm and wet", ["cold and dry", "icy all year", "rocky deserts"], "Flooded fields."],
+  ["Coffee and cocoa grow in…", "warm places near the equator", ["Antarctica", "the Arctic", "high, icy mountains"], "Tropical crops."],
+  ["Wind farms are built in places that are…", "open and windy", ["deep forests", "underground", "under the ocean floor"], "Wind turns turbines."],
+  ["Solar farms work best where there is lots of…", "sunshine", ["fog", "snow", "darkness"], "Sunlight to electricity."],
+  ["A country with lots of oil might sell oil and buy…", "goods it can't make itself", ["more oil", "nothing", "its own land"], "Trade fills the gaps."],
+  ["Being productive means…", "making more with the same resources", ["making less", "wasting materials", "working without tools"], "Getting more done."],
+  ["Which helps a farm become more productive?", "Better tools and machines", ["Fewer seeds", "Less water", "Breaking the tractor"], "Technology helps."],
+  ["An incentive is something that…", "encourages people to make a choice", ["stops all choices", "is always money taken away", "is a kind of map"], "A reason to act."],
+  ["A town pays families to recycle more. This is an example of…", "an incentive", ["a tax on recycling", "scarcity", "a natural resource"], "A reward for a choice."],
+  ["Iron ore is mined in northeastern Minnesota and used to make…", "steel", ["paper", "glass", "cloth"], "Strong metal."],
+  ["Fishing communities are usually found…", "near lakes, rivers and oceans", ["in deserts", "on mountaintops", "far from water"], "Where the fish are."],
+  ["People in different places make different goods because…", "they have different resources", ["everyone has the same land", "trade is not allowed", "they don't need anything"], "Resources shape work."],
+  ["Which choice saves a limited resource like water?", "Fixing a leaky faucet", ["Leaving the hose running", "Washing a clean car", "Watering the sidewalk"], "Use less.", true],
+  ["A country with a lot of sunshine but little oil might choose to build…", "solar power plants", ["oil wells", "coal mines it doesn't have", "ski hills"], "Use what you have.", true],
+  ["Growing the same crop in a field every year can wear out the soil. Farmers often…", "rotate crops", ["stop watering", "pave the field", "burn the soil"], "Change crops each year.", true],
+  ["Why might a country trade wheat for bananas?", "It grows wheat well but can't grow bananas", ["It has too many bananas", "Wheat is not food", "Trade is a game"], "Each makes what suits it.", true],
+  ["When a resource becomes scarce, its price usually…", "goes up", ["goes down to zero", "never changes", "disappears"], "Less of it, more demand.", true],
+  ["Dams are built in river regions to make electricity from…", "moving water", ["wind", "coal", "sunlight"], "Hydropower.", true],
+  ["Which is a human resource?", "A skilled worker", ["A river", "A forest", "A coal seam"], "People and their skills."],
+  ["Training workers to use new machines usually makes a factory…", "more productive", ["less productive", "close", "use more land"], "Skills raise output."],
+  ["A drought makes wheat scarce. Bakers will most likely pay…", "more for flour", ["less for flour", "nothing for flour", "the same forever"], "Scarce means pricier.", true],
+  ["A capital resource is…", "a tool or machine used to make goods", ["a city that is a capital", "money in a piggy bank only", "a natural lake"], "Tractors, computers, ovens."],
+  ["Ethanol made from corn is a fuel that is…", "renewable", ["nonrenewable", "a metal", "a fossil"], "New corn grows each year.", true],
+];
+
+const MOVING: Q[] = [
+  ["Migration means…", "moving from one place to live in another", ["staying in one house forever", "a kind of weather", "building a road"], "People on the move."],
+  ["An immigrant is a person who…", "moves to a new country to live", ["never leaves home", "is visiting for a day", "works in a mine"], "Coming in to a country."],
+  ["A refugee is a person who…", "had to leave their country to be safe", ["moves for a vacation", "is a tourist", "travels for fun"], "Fleeing danger."],
+  ["A push factor is a reason people…", "leave a place", ["stay forever", "visit a museum", "buy groceries"], "Pushed away."],
+  ["A pull factor is a reason people…", "move to a new place", ["leave because of war", "lose their home", "stay home"], "Pulled toward."],
+  ["Which is a push factor?", "War", ["Good jobs", "Safe schools", "Family nearby"], "A reason to leave."],
+  ["Which is a pull factor?", "Good jobs", ["Drought", "War", "Danger"], "A reason to come."],
+  ["The government decides who may immigrate to the United States through…", "immigration laws", ["weather reports", "sports rules", "school lunches"], "Rules made by Congress."],
+  ["A person born in another country can become a US citizen through…", "naturalization", ["a passport photo", "a library card", "turning 10"], "A legal process."],
+  ["Minnesota has large communities of people whose families came from places like…", "Somalia, Laos and Mexico", ["the moon", "Antarctica", "Atlantis"], "Hmong, Somali and Latino communities."],
+  ["Many Hmong families came to Minnesota as refugees after…", "the Vietnam War", ["the Revolutionary War", "World War I", "the Civil War"], "From Laos, starting in the 1970s.", true],
+  ["When people move, they often bring their own…", "foods, languages and traditions", ["houses", "rivers", "weather"], "Culture travels with people."],
+  ["A stereotype is…", "an unfair idea that all people in a group are the same", ["a fact about one person", "a kind of map", "a type of music"], "Not true for everyone."],
+  ["Why should we be careful about stereotypes?", "They can hurt people and aren't true", ["They are always true", "They help everyone", "They are laws"], "People are different."],
+  ["A community can welcome newcomers by…", "helping them learn the language and find jobs", ["ignoring them", "closing schools", "not talking to them"], "Kind and helpful."],
+  ["Many people today move from farms and towns to…", "cities", ["deserts", "the ocean", "glaciers"], "For jobs and schools."],
+  ["Which is a reason people move within their own country?", "A new job", ["A passport", "A new language", "A border crossing"], "Same country, new place."],
+  ["Climate change can push people to move when…", "droughts or floods make it hard to farm", ["it snows once", "a rainbow appears", "it is a sunny day"], "Hard times for farms.", true],
+  ["Colonization is when…", "one country takes control of another people's land", ["friends share a meal", "a city builds a park", "a river floods"], "Taking control.", true],
+  ["Many Indigenous peoples around the world lost land through…", "colonization", ["recycling", "tourism", "farming contests"], "Taken by other countries.", true],
+  ["Discrimination means…", "treating people unfairly because of who they are", ["treating everyone fairly", "choosing a lunch", "studying maps"], "Unfair treatment.", true],
+  ["A local government might help new arrivals by offering…", "English classes", ["no services", "more traffic", "longer winters"], "Learning the language.", true],
+  ["A family moving from a warm country to Minnesota will need…", "warm winter clothes", ["only sandals", "a sun umbrella in January", "nothing new"], "Cold winters!"],
+  ["Ellis Island in New York Harbor was where many immigrants…", "first arrived in the United States long ago", ["voted for president", "mined iron", "farmed corn"], "1892 to 1954.", true],
+  ["A city that offers interpreters at clinics and schools is helping people who…", "are still learning English", ["speak every language", "never go to school", "live on the moon"], "Help with language."],
+  ["Which is a way newcomers keep their culture in a new country?", "Speaking their language at home", ["Forgetting family recipes", "Never meeting others", "Throwing away photos"], "Passing it on."],
+  ["People who move away from a dangerous place to another part of their own country are…", "internally displaced", ["tourists", "astronauts", "citizens of two countries"], "Still in their country.", true],
+];
+
+const WORLD_ISSUES: Q[] = [
+  ["Climate is…", "the usual weather in a place over many years", ["the weather today", "a kind of cloud", "a map key"], "Long-term pattern."],
+  ["Climate change means Earth's climate is…", "getting warmer over many years", ["the same as always", "getting colder every day", "only changing on the moon"], "A long-term change."],
+  ["Burning fossil fuels adds ___ to the air, which traps heat.", "carbon dioxide", ["oxygen only", "water only", "nothing"], "A greenhouse gas."],
+  ["Which choice helps reduce pollution?", "Walking or biking short trips", ["Leaving the car running", "Burning trash", "Wasting electricity"], "Less fuel burned."],
+  ["Planting trees helps because trees…", "take in carbon dioxide", ["make smoke", "use up oxygen", "melt ice"], "Plants clean the air."],
+  ["A global issue is a problem that…", "affects many countries", ["affects one house", "only happened long ago", "has no causes"], "World-wide."],
+  ["Which is a global issue today?", "Clean water for everyone", ["Choosing a lunch", "A broken pencil", "A school bell"], "Many countries face it."],
+  ["Countries work together on world problems through groups like the…", "United Nations", ["Girl Scouts", "a sports league", "a book club"], "Many countries meet."],
+  ["To investigate a world issue, a good first step is to…", "ask a question and find sources", ["guess the answer", "ignore it", "only ask one friend"], "Start with a question."],
+  ["A timeline helps us understand an issue by showing…", "the order of events", ["only the weather", "a map of streets", "a recipe"], "First, next, last."],
+  ["Comparing two sources about an issue helps you…", "see different points of view", ["skip reading", "always agree", "find a single answer fast"], "More than one view."],
+  ["Melting glaciers can cause sea levels to…", "rise", ["fall", "stay the same", "freeze"], "More water in the ocean."],
+  ["People who live on low islands worry most about…", "rising seas", ["volcanoes erupting on the moon", "too much snow", "dry deserts"], "Water getting higher."],
+  ["Which helps protect wildlife habitats?", "Creating parks and protected areas", ["Draining every wetland", "Cutting all forests", "Polluting rivers"], "Safe places for animals."],
+  ["Recycling paper helps save…", "trees", ["oil wells", "sand", "salt"], "Paper comes from wood."],
+  ["Communities can prepare for floods by…", "building levees and planning ahead", ["ignoring rain", "building in riverbeds", "removing all plants"], "Get ready early."],
+  ["When a drought hits, farmers may…", "grow less food", ["grow more food easily", "have too much water", "plant rice"], "Not enough water."],
+  ["A consensus is when a group…", "agrees on a decision together", ["argues forever", "lets one person decide", "flips a coin"], "Everyone can accept it.", true],
+  ["Which democratic value means everyone follows the same laws?", "Rule of law", ["Monarchy", "Scarcity", "Migration"], "No one is above the law.", true],
+  ["Many cities are adding electric buses to…", "cut air pollution", ["make more smoke", "use more gasoline", "slow down traffic"], "Cleaner air.", true],
+  ["Why do people disagree about solutions to world issues?", "They have different needs and points of view", ["Everyone thinks the same", "Problems have no solutions", "Facts never matter"], "Different perspectives.", true],
+  ["Leaders who are elected work for the people by…", "making decisions and laws for their community", ["ignoring voters", "only playing sports", "running businesses for themselves"], "Serving the public.", true],
+  ["An elected leader of a city is the…", "mayor", ["president", "principal", "chief justice"], "City government."],
+  ["The leader of a state's government is the…", "governor", ["mayor", "king", "president"], "Like Minnesota's governor.", true],
+  ["Which is a reliable source about a world issue?", "A report from a scientific agency", ["A rumor from a stranger", "A made-up story", "An ad selling a product"], "Check who wrote it."],
+  ["Plastic in the ocean is a global issue because…", "ocean currents carry it around the world", ["it stays in one bay", "it is only in lakes", "it disappears overnight"], "Oceans connect."],
+];
+
+export const UNITS: Unit[] = [
+  copyOf(
+    from(WASHINGTON_6, "wa-g6-world-regions"),
+    {
+      id: "mn-g4-world-regions",
+      title: "World Regions",
+      emoji: "🌍",
+      blurb: "Climates, cultures and people on the move",
+      parentNote: "Practices using maps to find continents, countries and regions of the world, how climate and resources shape how people live, and why people move between regions today.",
+      standards: ["4.3.14.1; 4.3.13.1; 4.3.16.1", "continents, countries and regions of the world on maps, and how climate shapes places"],
+    },
+    [
+      ["Minnesota is in which region of the United States?", "The Midwest", ["New England", "The Southwest", "The Pacific Northwest"], "In the middle of the country, near the Great Lakes."],
+      ["Minnesota and parts of southern Canada share a cold, snowy…", "winter climate", ["desert climate", "rainforest climate", "tropical climate"], "Long winters."],
+    ]
+  ),
+  copyOf(
+    worldMaps6,
+    {
+      id: "mn-g4-world-maps",
+      title: "World Maps & Globes",
+      emoji: "🧭",
+      blurb: "Latitude, longitude and the parts of a map",
+      parentNote: "Practices reading world maps and globes: the parts of a map, latitude and longitude, hemispheres, map projections and asking spatial questions, with places in Minnesota and around the world.",
+      standards: ["4.3.13.1; 4.3.13.2", "reading maps and globes using their parts, and asking spatial questions"],
+    },
+    [
+      ["Minneapolis is at about 45° N. That means it is about halfway between…", "the equator and the North Pole", ["the South Pole and the equator", "two oceans", "Africa and Asia"], "90° N is the pole."],
+      ["Minnesota is in which two hemispheres?", "Northern and Western", ["Southern and Eastern", "Northern and Eastern", "Southern and Western"], "North of the equator, west of the prime meridian."],
+      ["On a map, the compass rose shows…", "directions", ["distance only", "the weather", "population"], "North, south, east, west."],
+      ["A map's scale helps you find…", "real distances", ["the map's colors", "the date", "the author's name"], "Miles or kilometers."],
+      ["Lines of latitude run…", "east and west, measuring north and south", ["north and south, measuring east and west", "only through Minnesota", "in circles around the poles only"], "Parallel to the equator.", true],
+    ],
+  ),
+  bankUnit({
+    id: "mn-g4-resources",
+    title: "Resources & Regions",
+    emoji: "🌾",
+    blurb: "Farms, energy and the choices limited resources bring",
+    parentNote: "Practices how limited natural resources make people choose how to use them, what farming and energy regions need, how incentives and productivity work, and why different places make different goods and trade.",
+    standards: ["4.2.7.1; 4.2.8.1; 4.2.10.1; 4.3.14.2; 4.2.11.1", "limited resources and choices, incentives, productivity, farming and energy regions, and why people trade"],
+    items: RESOURCES,
+  }),
+  bankUnit({
+    id: "mn-g4-moving",
+    title: "People on the Move",
+    emoji: "🧳",
+    blurb: "Migration, immigration and fair treatment",
+    parentNote: "Practices why people migrate (push and pull factors), immigrants and refugees, how governments respond to immigration, the harm done by stereotypes, colonization and discrimination, and how communities welcome newcomers.",
+    standards: ["4.5.23.1; 4.5.23.2; 4.5.25.1", "migration and immigration and government responses, stereotypes, and the processes and impacts of colonization"],
+    items: MOVING,
+  }),
+  bankUnit({
+    id: "mn-g4-world-issues",
+    title: "Issues in Our World",
+    emoji: "🌎",
+    blurb: "Climate, choices and working together",
+    parentNote: "Practices how climate change and human choices affect places from local to global, how to investigate a world issue with questions, sources and timelines, and how groups build consensus and elected leaders respond.",
+    standards: ["4.3.16.1; 4.4.18.1; 4.4.21.1; 4.1.1.1; 4.1.4.1", "how climate and human choices affect places, investigating a contemporary issue, and consensus and elected leaders"],
+    items: WORLD_ISSUES,
+  }),
+];
