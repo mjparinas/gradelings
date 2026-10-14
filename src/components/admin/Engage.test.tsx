@@ -167,8 +167,10 @@ describe("Inbox", () => {
     });
     const user = userEvent.setup();
     const onOpen = vi.fn();
-    render(<Inbox onOpenFamily={onOpen} />);
+    const onWaiting = vi.fn();
+    render(<Inbox onOpenFamily={onOpen} onWaiting={onWaiting} />);
     expect(await screen.findByText("Waiting")).toBeInTheDocument();
+    expect(onWaiting).toHaveBeenLastCalledWith(1);
     await user.click(screen.getByRole("button", { name: /Help with fractions/ }));
     // Shown as text, never as HTML.
     expect(await screen.findByText("<b>Hi</b> there")).toBeInTheDocument();
