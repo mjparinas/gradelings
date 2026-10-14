@@ -1,6 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { GET as pinImage } from "@/app/guides/[framework]/[grade]/[subject]/worksheet/pin.png/route";
 import { GET as gradePinImage } from "@/app/guides/[framework]/[grade]/pin.png/route";
+import { GET as countCardImage } from "@/app/milestone/count/[kind]/[n]/card.png/route";
+import { GET as unitCardImage } from "@/app/milestone/unit/[framework]/[grade]/[subject]/[unit]/[level]/card.png/route";
+import WorksheetImage from "@/app/guides/[framework]/[grade]/[subject]/worksheet/opengraph-image";
+import CurriculumGradeImage from "@/app/curriculum/[framework]/[grade]/opengraph-image";
 import { ogCard, pinCard, titleSize } from "./ogCard";
 import { countMilestoneCard, unitCard, worksheetCard } from "./ogText";
 
@@ -31,6 +35,19 @@ describe("share images", () => {
     for (const p of [{ framework: "quebec", grade: "grade-6" }, { framework: "bc", grade: "grade-42" }]) {
       expect((await gradePinImage(new Request("https://x.test/"), { params: Promise.resolve(p) })).status).toBe(404);
     }
+  }, 30_000);
+
+  it("draws a shared milestone's card at its own .png address, and only for milestones we make", async () => {
+    const req = new Request("https://x.test/");
+    expect(await pngSize(await countCardImage(req, { params: Promise.resolve({ kind: "days", n: "100" }) }))).toEqual({ width: 1200, height: 630 });
+    expect(await pngSize(await unitCardImage(req, { params: Promise.resolve({ framework: "bc", grade: "grade-4", subject: "math", unit: "fractions", level: "2" }) }))).toEqual({ width: 1200, height: 630 });
+    expect((await countCardImage(req, { params: Promise.resolve({ kind: "days", n: "101" }) })).status).toBe(404);
+    expect((await unitCardImage(req, { params: Promise.resolve({ framework: "bc", grade: "grade-4", subject: "math", unit: "nope", level: "2" }) })).status).toBe(404);
+  }, 30_000);
+
+  it("draws link-preview images for worksheets and grade pages", async () => {
+    expect(await pngSize(await WorksheetImage({ params: Promise.resolve({ framework: "bc", grade: "grade-2", subject: "language" }) }))).toEqual({ width: 1200, height: 630 });
+    expect(await pngSize(await CurriculumGradeImage({ params: Promise.resolve({ framework: "ontario", grade: "grade-4" }) }))).toEqual({ width: 1200, height: 630 });
   }, 30_000);
 
   it("shrinks long titles", () => {

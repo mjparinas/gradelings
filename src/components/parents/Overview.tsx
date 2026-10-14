@@ -11,6 +11,7 @@ import { useNow } from "@/lib/useNow";
 import { FamilyGoal } from "./FamilyGoal";
 import { InstallNudge } from "./InstallNudge";
 import { Milestones } from "./Milestones";
+import { ShareGradelings } from "./ShareGradelings";
 import { Avatar, NoChildren, PageTitle, Panel } from "./common";
 
 function ChildCard({ p }: { p: Profile }) {
@@ -100,6 +101,7 @@ export function Overview() {
           {profiles.map((p) => (
             <Milestones key={p.id} p={p} limit={3} />
           ))}
+          <ShareGradelings />
         <div className="grid gap-5 lg:grid-cols-2">
           {profiles.map((p) => (
             <div key={p.id}>
