@@ -1,0 +1,2440 @@
+2010
+Saskatchewan Curriculum
+
+
+
+
+English
+Language
+Arts
+
+
+
+                 5
+English Language Arts 5
+ISBN 978-1-926841-10-6
+1. Language arts (Elementary school) - Saskatchewan - Curricula. 2. Competency-
+based education - Saskatchewan.
+Saskatchewan. Ministry of Education. Curriculum and E-Learning. Humanities Unit.
+All rights are reserved by the original copyright owners.
+Table of Contents
+Acknowledgements. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  v
+Introduction. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  1
+Core Curriculum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  2
+Broad Areas of Learning. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
+        Lifelong Learners. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
+        Sense of Self, Community, and Place. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
+        Engaged Citizens. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
+Cross-curricular Competencies. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
+        Developing Thinking. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  3
+        Developing Identity and Interdependence. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  4
+        Developing Literacies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  4
+        Developing Social Responsibility . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  4
+K-12 Aim and Goals of English Language Arts. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  5
+An Effective English Language Arts Program. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  6
+        Provides Meaningful Contexts and Questions for Deeper Understanding. . . . . . . . . . . . . . . . . . . . . . . . .  8
+        Focuses on Grade-specific Outcomes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+        Focuses on Language . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+        Uses Critical and Powerful Learning Strategies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+        Includes a Range of Texts. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+        Encourages Inquiry, Social Responsibility, and Self-reflection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+Outcomes and Indicators. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+Assessment and Evaluation of Student Learning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+Connections with Other Areas of Study. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+Glossary. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+References. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 49
+Feedback Form . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 51
+
+
+
+
+English Language Arts 5                                                                                                                                                                       iii
+Acknowledgements
+The Ministry of Education wishes to acknowledge the professional contributions and advice given by Elementary
+Level teachers and consultants in the following First Nations tribal council and Saskatchewan school divisions:
+  • Holy Trinity Roman Catholic School Division
+  • Battleford Tribal Council
+  • Prairie South School Division
+  • Saskatchewan Rivers School Division
+  • South East Cornerstone School Division
+  • Sun West School Division.
+
+The Ministry of Education also wishes to thank many others who contributed to the development of this
+curriculum including:
+  • University faculty members
+  • Other educators and reviewers.
+
+The curriculum is based on the Western and Northern Canadian Protocol (WNCP) The Common Curriculum
+Framework for English Language Arts (Kindergarten to Grade 12) (1998).
+
+
+
+
+English Language Arts 5                                                                                       v
+Introduction
+English language arts (ELA) is a Required Area of Study in
+Saskatchewan’s Core Curriculum. The purpose of this curriculum is to
+outline the provincial requirements for Grade 5 English Language Arts.
+Time Allotment
+The Saskatchewan Ministry of Education has established a provincial
+policy for the amount of time that must be allocated to language
+arts instruction at each grade level. The required minutes for English
+language arts allotted to Grade 5 is 560 minutes per week.
+Curriculum Content
+This curriculum provides the intended learning outcomes that Grade 5
+students are expected to achieve in English language arts by the end
+of the year. Indicators are included to provide the breadth and depth
+of what students should know, understand, and be able to do in order
+to achieve the outcomes.
+The learning experiences planned for students will support student
+achievement of the provincial Goals of Education through attending to
+the Broad Areas of Learning for Saskatchewan and the Cross-curricular
+Competencies described on the following pages.
+The English language arts curriculum provides:
+  • direction for supporting student achievement of the Broad Areas
+    of Learning and the Cross-curricular Competencies
+  • the K-12 aim and goals for English language arts in Saskatchewan
+  • the characteristics of an effective English language arts program
+  • Grade 5 English Language Arts outcomes and indicators
+  • sample assessment and evaluation criteria for determining student
+    growth and achievement in relation to the outcomes in English
+    language arts
+  • connections with other areas of study.
+
+Additional support resources will appear online.
+
+
+
+
+English Language Arts 5                                                  1
+    Core Curriculum
+    Core Curriculum is intended to provide all Saskatchewan students
+    with an education that will serve them well regardless of their choices
+    after leaving school. Through its components and initiatives, Core
+    Curriculum supports student achievement of the Goals of Education
+    for Saskatchewan. For current information regarding Core Curriculum,
+    please refer to Core Curriculum: Principles, Time Allocations, and
+    Credit Policy on the Saskatchewan Ministry of Education website.
+    For additional information related to the various components and
+    initiatives of Core Curriculum, please refer to the Ministry website at
+    www.education.gov.sk.ca/policy for policy and foundation documents
+    including the following:
+      • Understanding the Common Essential Learnings: A Handbook for
+        Teachers (1988)
+      • Objectives for the Common Essential Learnings (CELs) (1998)
+      • Renewed Objectives for the Common Essential Learnings of Critical
+        and Creative Thinking (CCT) and Personal and Social Development
+        (PSD) (2008)
+      • The Adaptive Dimension in Core Curriculum (1992)
+      • Policy and Procedures for Locally-developed Courses of Study (2004)
+      • Connections: Policy and Guidelines for School Libraries in
+        Saskatchewan (2008)
+      • Diverse Voices: Selecting Equitable Resources for Indian and Métis
+        Education (2005)
+      • Gender Equity: Policies and Guidelines for Implementation (1991)
+      • Instructional Approaches: A Framework for Professional Practice
+        (1991)
+      • Multicultural Education and Heritage Language Education Policies
+        (1994)
+      • Classroom Curriculum Connections: A Teacher’s Handbook for
+        Personal-Professional Growth (2001).
+
+
+
+
+2                                                       English Language Arts 5
+Broad Areas of Learning
+There are three Broad Areas of Learning that reflect Saskatchewan’s
+Goals of Education. K-12 English language arts contributes to the Goals
+of Education through helping students achieve knowledge, skills, and
+attitudes related to the following:
+
+Lifelong Learners                                                         Related to the following Goals of
+                                                                          Education:
+Students who are engaged in constructing and applying English
+                                                                           • Basic Skills
+language arts knowledge naturally build a positive disposition towards
+                                                                           • Lifelong Learning
+learning. Throughout their study of English language arts, students
+                                                                           • Positive Lifestyle
+gain understandings, skills, and strategies to become more competent
+and confident language users.
+
+Sense of Self, Community, and Place                                       Related to the following Goals of
+                                                                          Education:
+To learn English language arts, students need not only to use the
+English language but also to interact with each other. Through the         • Understanding and Relating to
+English language arts, students learn about themselves, others, and          Others
+the world around them. They use language to define who they are and        • Self-concept Development
+                                                                           • Spiritual Development
+to explore who they might become. They use language to interact and
+to respond effectively with others and to build community.
+
+Engaged Citizens
+                                                                          Related to the following Goals of
+In the English language arts, students learn how language can             Education:
+empower them to make a difference in their personal, peer, family,
+                                                                           • Career and Consumer Decisions
+and community lives. Language gives them a sense of agency and an
+                                                                           • Membership in Society
+ability to make a difference in their community and the world in which
+                                                                           • Growing with Change
+they live.
+
+
+Cross-curricular Competencies
+The Cross-curricular Competencies are four interrelated areas
+containing understandings, values, skills, and processes which
+are considered important for learning in all areas of study. These
+competencies reflect the Common Essential Learnings and are
+intended to be addressed in each area of study at each grade level.
+
+Developing Thinking
+Learners construct knowledge to make sense of the world around            K-12 Goals for Developing Thinking:
+them. They develop understanding by building on what is already            • thinking and learning
+known. This key competency concerns the ability to make sense of             contextually
+information, experiences, and ideas through thinking contextually,         • thinking and learning creatively
+critically, and creatively. English language arts is inquiry-based, and    • thinking and learning critically
+students use their language and thinking skills to explore a range of
+topics, issues, and themes.
+
+English Language Arts 5                                                                                         3
+                                         Developing Identity and Interdependence
+K-12 Goals for Developing Identity       The ability to act autonomously in an interdependent world requires
+and Interdependence:                     an awareness of the natural environment, of social and cultural
+    • understanding, valuing, and
+                                         expectations, and of the possibilities for individual and group
+      caring for oneself                 accomplishments. It assumes the possession of a positive self-
+    • understanding, valuing, and        concept and the ability to live in harmony with others and with the
+      caring for others                  natural and constructed worlds. Achieving this competency requires
+    • understanding and valuing          understanding, valuing, and caring for oneself and for others, and
+      social, economic, and              understanding and valuing social and environmental interdependence
+      environmental interdependence      and sustainability. English language arts requires students to explore
+      and sustainability                 ideas and issues of identity, community, social responsibility, diversity,
+                                         and sustainability. Students study texts and ideas about personal and
+                                         philosophical; social, historical, and cultural; imaginative and literary;
+                                         communicative; and environmental and technological topics.
+
+                                         Developing Literacies
+K-12 Goals for Developing Literacies:    Literacies provide many ways, including the use of various language
+    • constructing knowledge related     systems and media, to interpret the world and express understanding
+      to various literacies              of it. Literacies involve the evolution of interrelated skills, strategies,
+    • exploring and interpreting the     and knowledge that facilitate an individual’s ability to participate fully
+      world through various literacies   and equitably in a variety of roles and contexts – school, home, and
+    • expressing understanding and       local and global communities. To achieve this competency requires
+      communicating meaning using        developing skills, strategies, and knowledge related to various
+      various literacies                 literacies in order to explore and interpret the world and communicate
+                                         meaning. English language arts requires students to use different
+                                         literacies, including language literacy, effectively and contextually to
+                                         represent ideas and understanding in multiple, flexible ways.
+
+                                         Developing Social Responsibility
+K-12 Goals for Developing Social         Social responsibility is how people positively contribute to their
+Responsibility:                          physical, social, and cultural environments. It requires the ability to
+    • using moral reasoning              participate with others in accomplishing goals. This competency
+    • engaging in communitarian          is achieved through using moral reasoning processes, engaging in
+      thinking and dialogue              communitarian thinking and dialogue, and taking action. Socially
+    • taking action                      responsible learners contribute to their physical, social, and cultural
+                                         environments. In English language arts, students explore their social
+                                         responsibility and work toward common goals to improve the lives of
+                                         others and the natural and constructed worlds.
+
+
+
+
+4                                                                                            English Language Arts 5
+K-12 Aim and Goals of English Language
+Arts
+The K-12 aim of the Saskatchewan English language arts curricula is
+to help students understand and appreciate language, and to use it
+confidently and competently in a variety of situations for learning,
+communication, work, life, and personal satisfaction.
+The K-12 goals are broad statements identifying what students are
+expected to know and be able to do upon completion of study in a
+particular subject (e.g., English language arts). The K-12 goals of the
+Saskatchewan English language arts curricula are to:
+Comprehend and Respond (CR) – Students will develop their abilities
+to view, listen to, read, comprehend, and respond to a variety of
+contemporary and traditional grade-level-appropriate texts in a variety
+of forms (oral, print, and other media) from First Nations, Métis, and
+other cultures for a variety of purposes including for learning, interest,
+and enjoyment.
+Compose and Create (CC) – Students will develop their abilities to
+speak, write, and use other forms of representation to explore and
+present thoughts, feelings, and experiences in a variety of forms for a
+variety of purposes and audiences.
+Assess and Reflect (AR) – Students will develop their abilities to assess
+and reflect on their own language skills, discuss the skills of effective
+viewers, listeners, readers, representers, speakers, and writers, and set
+goals for future improvement.
+Figure 1. K-12 Aim and Goals of English Language Arts
+
+
+                                                           Social Studies
+
+                                Physical                                                       Health
+                               Education                                 Identity and
+                                                                                              Education
+                                             Thinking
+                                                                       Interdependence
+      Comprehend
+      and Respond                                          Sense of Self,
+                                                        Community, and Place
+
+    Compose           Language                                                                              Arts
+                        Arts                    Lifelong                    Engaged
+   and Create
+                                                Learners                    Citizens                      Education
+
+       Assess and
+        Reflect
+                                                   Social                      Literacies
+                                               Responsibility
+
+
+                                       Mathematics                                  Science
+
+
+
+English Language Arts 5                                                                                               5
+    An Effective English Language Arts
+    Program
+    An English language arts program is effective when it is purposeful,
+    dynamic, fulfilling, and authentic. This curriculum invites and
+    challenges educators to think about education, schooling, and
+    English language arts as it might be rather than the way educators
+    might know it to be. How can schooling and English language arts be
+    more purposeful, dynamic, fulfilling, and authentic? How can it help
+    students become competent, confident users of the English language
+    and, at the same time, become knowledgeable about themselves, their
+    community, and the world as a whole in a deep and meaningful way?
+    How can it help them find fulfillment, be socially responsible, and act
+    in ways that will make their community and world better places? How
+    can it help students become effective self-directed, self-regulated,
+    strategic, and collaborative learners to meet the demands of personal,
+    social, work, and global life in the 21st century?
+    “When a learner makes connections and learning takes place, it is
+    because of focused teaching ....” (Fullan, Hill, & Crévola, 2006, p. 34).
+    Focused teaching requires:
+      • a detailed map of what is expected that students will know and be
+         able to do, clearly stated in outcomes and associated indicators
+      • a set of powerful and aligned assessment and evaluation tools tied
+         to the outcomes
+      • a detailed knowledge of how best to teach to these learning
+         outcomes in the classroom, including explicit teaching strategies
+         and methods and classroom routines.
+                                        (Fullan, Hill, & Crévola, 2006, pp. 36-37)
+    This curriculum is designed to be the starting point for instructional
+    planning. It includes the philosophical underpinnings of the area
+    of study and provides the knowledge (i.e., factual, conceptual,
+    procedural, metacognitive, or a combination of these) that students
+    are expected to know, understand, and be able to do at the end of
+    Grade 5. A careful analysis of the outcomes supports teachers in
+    determining the types of evidence that they might look for to assess
+    whether students have achieved these outcomes. This knowledge
+    supports teachers in designing and/or choosing assessment and
+    evaluation tools to monitor and report on student learning in English
+    language arts. It is the starting point that will allow English language
+    arts teachers “to develop and deepen students’ understanding of
+    important ideas and processes in the disciplines equipping them
+    to transfer their learning in meaningful and effective ways, and
+    cultivating lifelong habits of mind” (Wiggins & McTighe, 2007, p. 13).
+    An effective English language arts program is rooted in research-based
+    practice that specifies what is and is not effective in teaching English
+    language arts (see next page).
+
+6                                                        English Language Arts 5
+Table 1. What ELA Is Versus What ELA Is Not
+
+
+                      What ELA Is                                              What ELA Is Not
+
+ Appreciating children as active learners and accepting     Seeing children as passive vessels to be filled and
+ them as competent co-learners who can socially and         believing that learning is received from outside
+ culturally construct knowledge with adults                 sources and is to be recapitulated
+ Helping children actively seek to understand the           Telling children what knowledge they need to know
+ world around them and to learn about life and              but not having them use it or apply it
+ language
+ Using visual, multimedia, oral, and written                Using only print resources with a fictional emphasis
+ communication competently, appropriately, and              for a limited range of purposes (usually isolated to a
+ effectively for a range of purposes                        school task)
+ Recognizing the central role of language in                Letting printed books, isolated activities, and
+ communicating, thinking, and learning                      worksheets drive the program
+
+ Setting meaningful and relevant contexts for teaching      Giving isolated language activities and using
+ and learning including connections to students’            unrelated texts
+ experiences, knowledge, and personal and cultural
+ identity
+ Helping students know what and why they are                Having only teacher awareness of the outcomes and
+ learning and doing something (i.e., outcomes,              not sharing them with students
+ indicators, and exemplars)
+ Teaching and learning for “deep understanding”             Asking and answering solely teacher-directed
+ (including using questions for deeper understanding        questions
+ as a focus)
+ Making meaning of ideas or information received            Answering knowledge/comprehension questions,
+ (when viewing, listening, and reading)                     individually, after reading print texts
+
+ Creating meaning for themselves and others                 Using only limited forms of communicating, usually
+ (when speaking, writing, and using other forms of          writing
+ representing)
+ Using a variety of strategies (e.g., Before, During, and   Following only teacher-directed skills and strategies
+ After) depending upon the task                             and spending time on isolated skill and drill
+
+ Engaging in inquiry learning                               Doing a project or, if time permits, a series of activities
+                                                            to bring closure
+
+ Reflecting on own learning and literacy                    Assuming that the responsibility for learning and
+                                                            literacy lies with the teacher
+
+
+
+Through a “deep” understanding of this curriculum (Fullan, Hill, & Crévola, 2006) and knowing when to use
+effective instructional, assessment, and classroom-management strategies based on sound research (Marzano,
+2007), English language arts teachers can help all students become competent and confident language users.
+
+
+
+English Language Arts 5                                                                                                   7
+        An Effective English Language Arts Program:
+          • provides meaningful contexts that address “big ideas” and
+            questions for deeper understanding
+          • focuses on grade-specific outcomes to achieve the K-12
+            aim and goals of the program
+          • focuses on language and helps students understand how
+            it works
+          • teaches students through powerful cognitive and
+            communication strategies
+          • includes a range of texts (oral, print, and other media)
+          • encourages student inquiry, social responsibility, and self-
+            reflection
+
+
+    Provides Meaningful Contexts and Questions for
+    Deeper Understanding
+    An effective ELA program provides meaningful contexts for students
+    to learn about language. The English language arts program is
+    designed for students to develop their language skills and strategies
+    and become competent and confident users of all six language arts
+    strands through many opportunities to view, listen, read, represent,
+    speak, and write in meaningful contexts.
+    If students are to become lifelong learners, develop a sense of self and
+    connection to others, and become engaged citizens and achieve the
+    Cross-curricular Competencies and the outcomes for English language
+    arts, students require meaningful, authentic contexts for learning.
+    Students need many opportunities to explore questions and concerns
+    about themselves and the world.
+    The following contexts provide a focus for language learning and
+    give students an opportunity to explore “big ideas” (i.e., overarching
+    understandings) that have enduring values beyond the classroom:
+      • A personal and philosophical context gives students
+        opportunities to explore their identity and their self-concept.
+        Fostering the learning spirit inside each student comes from the
+        heart and mind connection that is revealed through each student’s
+        reflection on personal feelings, self-image, influential life forces,
+        ideas, belief systems, values, and ways of knowing. Who am I, what
+        is my place, and where am I going? What does the future hold for
+        me?
+
+
+
+
+8                                                     English Language Arts 5
+  • A social, cultural, and historical context gives students
+    opportunities to explore relationships with others, community,
+    culture, customs, multiple ways of knowing, national and
+    international events and issues, and the history of humanity.
+    What are my rights and responsibilities in communities, cultures,
+    and economies? How and who am I in relation to communities,
+    cultures, and economies? How am I defined by these relationships?
+  • An imaginative and literary context gives students opportunities
+    to use their intuition and imagination to explore alternative worlds
+    and possibilities; different types of classical and contemporary
+    genres including fantasy, science fiction, and humour; and
+    particular authors. How do I use my imagination and intuition
+    and that of others to understand and relate to people, the
+    community, the world, and society in a positive way? How do I
+    foster imaginative ideas of self and others? How do I use intuitive
+    hunches to support creative problem solving or inquiry?
+  • A communicative context gives students opportunities to
+    explore different methods, forms, and issues related to language,
+    communication, and the mass media. How do I make sense of and
+    communicate with the world? How do I support communication
+    with differing audiences? How do I know if communication is
+    effective?
+  • An environmental and technological context gives students
+    opportunities to explore the natural and constructed worlds
+    including the land, the sky, animals, the sea, space, technologies,
+    and environmental and technological issues. How do I describe,
+    analyze, and shape the world around me? How does that natural
+    and technological world affect and shape me?
+Each English language arts unit of study can be related to and             How we envision literacy makes a
+developed under one or more of these broader contexts. Each context        difference. If we see it as meaning
+is to be explored at each grade. Each context provides opportunities       making and not meaning making
+for integration with topics of study in other subject areas.               plus inquiry, we fail to envision
+                                                                           all that literacy might be. If we
+Teachers in Grade 5 should plan a minimum of five units for the year,      see literacy as language and not
+basing at least one unit on each of the five contexts. Table 4 gives an    language plus other sign systems, we
+overview of possible unit themes and topics, and questions for deeper      also fail to envision all that literacy
+understanding for each context.                                            might be.
+In addition to considering the five contexts, Elementary Level English     (Harste, 2000, p.1)
+language arts teachers need to think about the types of units to plan.
+Language arts units, designed around the themes and topics within
+each context, can ensure that the outcomes for the language strands
+are achieved in meaningful ways. Minimal guidelines are provided for
+each type of unit.
+
+
+
+
+English Language Arts 5                                                                                          9
+                                          Table 2. Types of Units
+                                           Type of Unit                                    Number of Units per Year
+                                           Multi-genre Thematic                            3 (minimum)
+                                           Multi-genre Inquiry and/or Interdisciplinary    1 (minimum)
+                                           Author or Genre Study                           1 (maximum)
+                                          A multi-genre thematic unit is built around a theme or topic from
+                                          one of the contexts and includes a range of prose fiction and non-
+                                          fiction, poetry, plays, and other texts. This is the most common type of
+                                          English language arts unit because it allows teachers to vary activities
+                                          within a broad theme or topic to suit the differing ability levels of
+                                          students while supporting their achievement of outcomes for their
+                                          respective grade. A minimum of three multi-genre thematic units is
+                                          recommended.
+
+Through the inquiry or research           A multi-genre inquiry and/or interdisciplinary unit is usually built
+process, students satisfy their natural   around a theme or topic that is related to an important question(s) for
+curiosity and develop skills and          inquiry and research. The emphasis in an inquiry unit is on “finding out”
+strategies for lifelong learning.         the answers to a question or questions that the students have about
+                                          the theme or topic and then using the inquiry process to guide their
+(Western Canadian Protocol for            activities in the unit. When the unit is interdisciplinary, it considers
+Collaboration in Basic Education,         and addresses outcomes from English language arts and other area(s)
+1998, p. 33)                              of study. A minimum of one inquiry/interdisciplinary unit per year is
+                                          recommended. Any multi-genre thematic or author/genre study unit
+                                          can become an inquiry unit.
+                                          An author or genre study unit focuses on the works of a specific
+                                          author or illustrator or on a specific genre (e.g., poetry). Because of the
+                                          limited texts used in an author or genre study, a maximum of one per
+                                          year is recommended.
+                                          Planning Units of Study in an Effective English
+                                          Language Arts Program
+                                          Table 3. Essential Aspects of Units
+                                                  Units of Study                          Essential Aspects
+                                           Units provide meaningful          • Questions for deeper understanding that
+                                           contexts and foci for students      address the ideas and issues students
+                                           to explore the topics and           need to think about throughout the unit.
+                                           texts that are important to       • Strategies to explore and express
+                                           young people everywhere.            students’ thoughts, ideas, feelings, and
+                                           Units in English language arts      experiences as well as to inquire and to
+                                           allow students not only to          learn to use the English language and
+                                           learn how language works in         its conventions. Oral, written, and other
+                                           meaningful situations but also      texts explore the issues and provide
+                                           to develop the disposition          opportunities to apply viewing, listening,
+                                           for learning for life, a sense of   reading, representing, speaking, and
+                                           self and connection to others,      writing knowledge and skills.
+                                           and, as engaged citizens, a       • Individual as well as co-operative projects
+                                           capacity to make a difference       invite inquiry and bring closure and
+                                           in the community.                   personal agency to student explorations.
+
+
+10                                                                                               English Language Arts 5
+An effective English language arts program also provides
+opportunities to explore “big ideas” (e.g., extinction versus the topic of
+dinosaurs) and to consider questions for deeper understanding.
+Questions for deeper understanding are used to initiate and guide a
+unit and give students direction for developing deep understandings
+about a topic or issue under study. It is essential to develop questions
+that are evoked by student interests and have potential for rich
+and deep learning. The process of constructing questions can help
+students to grasp the important disciplinary or transdisciplinary ideas
+that are situated at the core of a particular curricular focus or context.
+These broad questions will lead to more specific questions that can
+provide a framework, purpose, and direction for the learning activities
+in a lesson, or series of lessons, and help students connect what they
+are learning to their experiences and life beyond school.
+Effective questions for deeper understanding in English language
+arts are the key to initiating and guiding students’ investigations and
+critical thinking, problem solving, and reflection on students’ own
+learning. Questions such as the following are examples of questions
+that will move Grade 5 students toward deeper understanding:
+  • What are the short- and long-term effects of our energy use on the
+    environment? What impact does human use of energy and natural
+    resources have on Canadian society and the environment?                  Effective Questions for Deeper
+  • What are the advantages and disadvantages of using renewable             Understanding:
+    energy sources as opposed to non-renewable sources? How can               • Cause genuine and relevant
+    we contribute to a cleaner, healthier environment?                          inquiry into the key ideas and
+  • What impact does weather have on a society and its people?                  core content
+                                                                              • Provide for thoughtful, lively
+    What weather-related technological innovations and products
+                                                                                discussion, sustained inquiry, and
+    have been developed by various cultures in response to Canadian
+                                                                                new understanding as well as
+    weather conditions?                                                         more questions
+  • How do buildings reflect our environment, culture, and                    • Require students to consider
+    communities? What are the forces that structures built by either            alternatives, weigh evidence,
+    people or creatures in nature have to withstand and how do they             support their ideas, and justify
+    do this?                                                                    their answers
+                                                                              • Stimulate vital, ongoing
+  • How can our choices affect our overall health? What are the                 rethinking of ideas, assumptions,
+    beneficial and harmful effects of technological innovations on              or prior lessons
+    human organ systems?                                                      • Spark meaningful connections
+Effective questioning is essential for teaching and student learning            with prior learning, personal
+                                                                                experiences, and ways of knowing
+and should be an integral part of planning in English language arts.
+                                                                              • Naturally recur, creating
+Questioning should also be used to encourage students to reflect on
+                                                                                opportunities for transfer to other
+their own learning. The following chart identifies the five contexts            situations and subjects.
+for English language arts and suggests some possible questions for
+deeper understanding and some possible unit topics or themes for             (Adapted from Wiggins & McTighe,
+                                                                             2005, p. 110)
+each context.
+
+
+
+English Language Arts 5                                                                                         11
+Table 4. Questions for Deeper Understanding and Some Supporting Resources: Grade Five
+
+     English Language Arts            Sample Questions for Deeper Understanding                Possible Unit Topics and
+            Contexts                                                                                   Themes
+Personal and Philosophical         What are our personal strengths? How can we use          World Wide Kids (Cornerstones
+                                   these strengths to make the world a better place?        5, a-i)
+Children need to believe in
+                                   What are our personal goals and how will we reach        Teamwork (Cornerstones 5, b-i)
+their own self-worth and to
+                                   these goals? Who do we admire most and why? What         What Should I Do? (Nelson
+feel that they have control
+                                   are the traits of admirable people? What are the         Language Arts 5, i)
+over the things that happen
+                                   rewards and challenges of working together?              Together is Better (Collections
+to them. Children need to look
+                                                                                            5, i)
+inward and focus on self-image     Where do our beliefs come from? Are they fair, just,
+and self-esteem. They need to      moral?
+                                                                                            Other:
+reflect on self and life, and on   What are prejudices and racism? What happens to          Accomplishments
+their beliefs and values and       “team” work, community, and equality when we have        Heroes and Heroines
+those of their society.            biases and prejudices? In what ways can these ways
+                                   of thinking hurt everyone in our communities? What
+                                   have we (or could we have) done about it? What is
+                                   worth fighting for?
+                                   What are the marks of a true hero? What causes people
+                                   to act heroically? How do heroes sacrifice themselves
+                                   for others? Could we be heroes?
+
+
+Social, Cultural, and Historical   What does “fair” mean? Can “fair” be different for       Heroes Old and New
+                                   different people?                                        (Cornerstones 5, a-iii)
+Children need to look outward
+                                                                                            What is Fair? (Cornerstones 5,
+and examine their relationships    What are our rights and freedoms? What are our
+                                                                                            b-iii)
+with others, their community,      responsibilities? How do our responsibilities go hand-
+                                                                                            Making a Difference (Nelson
+and the world. Children also       in-hand with our rights and freedoms?
+                                                                                            Language Arts 5, b-i)
+need to consider the social and    What does being “Canadian” mean? What makes              In This Place (Nelson Language
+historical context. They need      us proud to be Canadian? How does Canada work?           Arts 5, vi)
+to explore their connections       Why do we have government and laws? How has our          Exploring Heritage (Collections
+in families, schools, groups,      heritage shaped the people that we have become?          5, v)
+and communities and to
+understand the diverse needs       Why is it important for a country to have a symbol or
+                                   symbols that people around the world recognize?          Other:
+and wants of others. Children
+                                                                                            “Because” is Not an Answer
+need to show concern for other     How does Canada work (structure and components of        Stepping Back in Time
+people in their relationships,     government)? Why have government?
+groups, and communities.
+                                   How has our heritage shaped the people that we have
+                                   become?
+                                   How can we honour Canada’s history, people, and
+                                   natural resources?
+                                   What do artefacts tell us about early civilizations?
+                                   How can we and others contribute to our country and
+                                   make a difference in the lives of others? How can we
+                                   contribute to our community?
+                                   What types of issues or problems might communities
+                                   and people face? What issues or problems might
+                                   people in Canada face? How can we work to make
+                                   Canada a better country for all its citizens?
+
+
+
+12                                                                                                   English Language Arts 5
+Table 4. (Continued) Questions for Deeper Understanding and Some Supporting Resources: Grade Five
+     English Language Arts               Sample Questions for Deeper Understanding                       Possible Unit Topics and
+            Contexts                                                                                             Themes
+ Imaginative and Literary             How are different cultures reflected through their              Mystery Stories (Genre Study)
+                                      stories? What are the important stories of Canada?              (Cornerstones 5, a-iv)
+ Children need to consider
+                                      How do these stories reflect our heritage?                      Tales – Clever, Foolish, and
+ imaginary worlds and
+                                                                                                      Brave (Collections 5, ii)
+ possibilities as well as a range     What are the characteristics of a good story? What
+ of literary genres and authors.      are the characteristics of historical fiction? How does
+                                                                                                      Other:
+                                      historical fiction help us learn about life and people in
+                                                                                                      Glimpses of Other Worlds
+                                      Canada’s past?
+                                                                                                      The People and Stories of This
+                                      What is mystery? What are the characteristics of a              Land
+                                      mystery? Can mysteries be solved? What are the
+                                      unsolved mysteries from history? Some mysteries in
+                                      nature? Why do stories of mystery in history and in
+                                      nature challenge and intrigue us? What mysterious
+                                      phenomena would we like to explore?
+                                      How do stories help us understand ourselves and
+                                      others? What stories still have not been told?
+
+
+ Communicative                        What messages do images and words communicate                   Send a Message (Cornerstones
+                                      in texts such as flyers, promotional mail, magazines            5, b-ii)
+ Children need to consider the
+                                      advertisements, product packaging, DVDs, television,            Make a Magazine (Genre Study)
+ role of communication in their
+                                      and websites? Who created and produced these                    (Cornerstones 5, a-iv)
+ lives and the technologies
+                                      messages? Why? Who is the intended audience? How                Media Moments (Nelson
+ and strategies that help
+                                      could the message be delivered in a fair way?                   Language Arts 5, iii)
+ people become effective
+                                                                                                      On with the Show (Collections
+ communicators. Children need         How do resources such as calendars, flyers, coupons,
+                                                                                                      5, iv)
+ the skills to interact effectively   promotional mail, magazines, menus, ads, product
+ with others.                         packaging, and websites inform, entertain, and
+                                                                                                      Other:
+                                      influence audiences? Who is included? Who is left out?
+                                                                                                      Ad Smart
+                                      Whose story and values are included? Whose story
+                                      and values are left out? How might these messages
+                                      be used to manipulate people? What is effective
+                                      advertising?
+                                      What characteristics and techniques are used in
+                                      humourous stories (character, setting, dialogue,
+                                      problem …)?
+                                      What are the characteristics of historical fiction? How
+                                      does historical fiction help us learn about life and
+                                      characters in early Canada? If it is “fiction,” what “truths”
+                                      are in it?
+
+
+
+
+English Language Arts 5                                                                                                                13
+Table 4. (Continued) Questions for Deeper Understanding and Some Supporting Resources: Grade Five
+     English Language Arts           Sample Questions for Deeper Understanding                 Possible Unit Topics and
+            Contexts                                                                                   Themes
+Environmental and                 What are the short- and long-term effects of our          This is Our Planet (Cornerstones
+Technological                     energy use on the environment? What impact does           5, a-ii)
+                                  human use of energy and natural resources have on         Our Natural World (Nelson
+Children need to explore the
+                                  Canadian society and the environment? What are the        Language Arts 5, ii)
+elements of the natural and
+                                  advantages and disadvantages of using renewable           All About Structures (Nelson
+constructed worlds and the
+                                  energy sources as opposed to non-renewable                Language Arts 5, v)
+role of technology and related
+                                  sources? How can we contribute to a cleaner, healthier    Weather, Wings, and Kite
+developments in their society.
+                                  environment?                                              Strings (Collections 5, iii)
+Children need to explore the
+needs and characteristics of      What impact does weather have on a society and
+                                                                                            Other:
+living things; properties of      its people? What weather-related technological
+                                                                                            Forces and Simple Machines
+objects and materials; the five   innovations and products have been developed by
+                                                                                            Healthy Bodies
+senses; and daily seasonal        various cultures in response to Canadian weather
+                                                                                            Forces Causing Movement
+changes.                          conditions?
+                                                                                            Weather
+                                  How do buildings reflect our environment, culture,
+                                  and communities? What are the forces that structures
+                                  built by either people or creatures in nature have to
+                                  withstand, and how do they do this?
+                                  How can our choices affect our overall health? What
+                                  are the beneficial and harmful effects of technological
+                                  innovations on human organ systems?
+
+
+
+
+14                                                                                                   English Language Arts 5
+Focuses on Grade-specific Outcomes
+An effective English language arts program focuses on grade-specific
+curriculum outcomes. Student learning outcomes describe what
+students will learn in a particular discipline over a specific time frame
+(e.g., Grade 5). Outcomes specify the skills, knowledge, and attitudes
+that students are expected to know, understand, and be able to
+demonstrate.
+Critical Characteristics of Outcomes and Indicators
+Outcomes:
+  • focus on what students will learn rather than what teachers will
+    teach
+  • specify the skills, strategies, abilities, understandings, and
+    knowledge students are expected to be able to demonstrate
+  • are observable, assessable, and attainable
+  • are grade and subject specific
+  • are supported by indicators which provide the breadth and depth
+    of expectations
+  • are written using action-based verbs
+  • identify the most important understandings and abilities to be
+    developed in the specific grade level
+  • guide course, unit, and lesson planning.
+
+Indicators:
+  • are a representative list of what students need to know and/or be
+    able to do in order to achieve an outcome
+  • represent the breadth and depth of the outcomes.
+Note: Additional and/or alternative indicators may be developed, but
+they must be reflective of and consistent with the breadth and depth
+that is defined by the given indicators.
+
+
+
+
+English Language Arts 5                                                     15
+English Language Arts Goals and Outcomes Overview
+Each of the three goals for English language arts has a set of outcomes for the specific grade level. The following
+are the outcomes for Grade 5 ELA.
+
+ Comprehend and Respond (CR). Students will develop their abilities to view, listen to, read, comprehend,
+ and respond to a variety of contemporary and traditional grade-level-appropriate texts in a variety of
+ forms (oral, print, and other media) from First Nations, Métis, and other cultures for a variety of purposes
+ including for learning, interest, and enjoyment.
+CR5.1 Analyze and respond to a variety of grade-level texts (including contemporary and traditional visual, oral,
+written, and multimedia texts) that address:
+ • identity (e.g., Exploring Heritage)
+ • community (e.g., Teamwork)
+ • social responsibility (e.g., What is Fair?).
+CR5.2 View and evaluate, critically, visual and multimedia texts identifying the persuasive techniques including
+promises, flattery, and comparisons used to influence or persuade an audience.
+CR5.3 Listen purposefully to a range of texts from a variety of cultural traditions (including oral traditions shared
+by First Nations and Métis Elders and Knowledge Keepers) to understand ideas and instructions, to evaluate the
+message heard and the required follow-up action, and to draw conclusions about speaker’s verbal and non-
+verbal message(s), purpose, point of view, and techniques used in presentation.
+CR5.4 Read and demonstrate comprehension of a range of contemporary and classical grade-appropriate
+fiction, script, poetry, and non-fiction (including magazines, reports, instructions, and procedures) from various
+cultures including First Nations, Métis, and Inuit and countries (including Canada).
+
+ Compose and Create (CC). Students will develop their abilities to speak, write, and use other forms of
+ representation to explore and present thoughts, feelings, and experiences in a variety of forms for a
+ variety of purposes and audiences.
+
+CC5.1 Compose and create a range of visual, multimedia, oral, and written texts that explore:
+ • identity (e.g., What Should I Do)
+ • community (e.g., This is Our Planet)
+ • social responsibility (e.g., Teamwork) and express personal thoughts shaped through inquiry.
+CC5.2 Demonstrate a variety of ways to communicate understanding and response including illustrated reports,
+dramatizations, posters, timelines, multimedia presentations, and summary charts.
+CC5.3 Speak to express and support a range of ideas and information in formal and informal speaking situations
+(e.g., giving oral presentations and reports, retelling a narrative, explaining a display to others, working in groups)
+for particular audiences and purposes.
+CC5.4 Use a writing process to experiment with and produce multi-paragraph narrative (including stories that
+contain dialogue), expository (including reports, explanations, letters, and requests), and persuasive (including
+letters) compositions that clearly develop topic and provide transitions for the reader.
+
+
+
+
+16                                                                                             English Language Arts 5
+ Assess and Reflect (AR). Students will develop their abilities to assess and reflect on their own language
+ skills, discuss the skills of effective viewers, listeners, readers, representers, speakers, and writers, and set
+ goals for future improvement.
+
+AR5.1 Identify strengths in viewing, listening, reading, speaking, writing, and other forms of representing.
+AR5.2 Set goals to enhance the development and improvement of the skills and strategies in viewing, listening,
+reading, speaking, writing, and other forms of representing and take steps to achieve goals.
+
+
+
+
+English Language Arts 5                                                                                              17
+                                        Focuses on Language
+Good language and literacy skills lay   Language and language study are at the centre of the Elementary
+the foundation for social, academic,    Level English language arts program. The study of the English
+economic, personal, and national        language arts (viewing, listening, reading, representing, speaking,
+success.                                and writing) and of the elements and conventions associated with
+(Jamieson & Tremblay, 2005, p. 1)       each language cueing system (i.e., pragmatic, textual, syntactic,
+                                        semantic/lexical/morphological, graphophonic, and other) enables
+                                        students to understand and appreciate language and to use it in a
+                                        variety of situations for communication, for learning, and for personal
+                                        satisfaction.
+                                        An effective English language arts program that develops students’
+                                        facility with language provides students with opportunities to:
+                                          • learn to use language in a variety of meaningful ways, considering
+                                            and determining their audience, purpose, and situation
+                                          • learn about language as a necessary tool for thinking and
+                                            communicating effectively, considering the cues and conventions
+                                            of language
+                                          • learn through language by applying their knowledge of language
+                                            in their viewing, listening, reading, representing, speaking, and
+                                            writing experiences.
+                                        Language study is an integral part of an English language arts
+                                        program. Students in each grade are expected to understand the
+                                        concepts related to the language cues and conventions. As students
+                                        view, listen, read, represent, speak, and write, they are expected
+                                        to apply the concepts as students construct and communicate
+                                        meaning in their English language arts program and in their daily
+                                        communication.
+
+
+
+
+18                                                                                        English Language Arts 5
+Table 5. Key Language Cues and Conventions for Grade 5
+
+
+     Language Cue or Convention                   Comprehend and Respond                          Compose and Create
+                                             When viewing, listening, or reading,          When speaking, writing, or using
+                                                     Grade 5 students:                   other forms of representing, Grade 5
+                                                                                                      students:
+ Pragmatic                                  Identify intended audience and               Demonstrate an awareness of audience
+ Pragmatics is the study of how people purpose for a text; recognize and                 and use level of language (register)
+ choose what and how to communicate interpret various uses of language in                appropriate to purpose and intended
+ from a range of possibilities available in social, cultural, and regional situations.   audience; adjust tone to situation.
+ the language and how the receiver will
+ be affected by these choices.
+ Textual                                   Identify various forms of texts, their        Use knowledge of forms,
+ Ideas and information are organized in characteristics (such as headings,               characteristics, and organizational
+ oral, written, and other formats. Textual paragraphs), and the ways they are            patterns of texts to communicate
+ cues and conventions include the form organized and the patterns within                 ideas in a clear and logical manner; use
+                                           (such as comparison and contrast);            paragraphs proficiently.
+ or structure and elements of a text.
+                                           recognize differences in text types
+                                           used in other subject areas.
+
+
+ Syntactic                               Use knowledge of sentence elements              Use simple, compound, and complex
+                                         and patterns (simple, compound, and             sentences; vary sentence length and
+ Syntax is the predictable structure of
+                                         complex) and their related punctuation          structure for effect (average length
+ a sentence and the ways words are
+ combined to form phrases, clauses, and to understand what is listened to or             in speech, 9 words; average length
+                                         read.                                           in writing 8.7 words); use subject-
+ sentences. Syntax includes classes of
+                                                                                         verb and noun-pronoun agreement
+ words (e.g., verbs) and their functions
+                                                                                         correctly.
+ (e.g., subjects).
+
+ Semantic/Lexical/Morphological             Use a word attack strategy (e.g.,            Select and use words to create
+                                            context, structure, sound, and               specific effects; use precise and
+ The lexicon of a language includes
+                                            reference) as well as knowledge of           descriptive words; use new words
+ all the words or vocabulary of that
+                                            root words, prefixes, and suffixes to        from viewing, listening, and reading
+ language that are used or understood
+                                            determine the pronunciation (e.g.,           in speaking, writing, and other forms
+ by a particular person or groups.
+                                            n-ation) and meaning of unfamiliar           of representing; use, appropriately,
+ Words can also be studied for their
+                                            words.                                       specialized terms in different subject
+ meaningful parts or morphemes.
+                                                                                         areas; use a variety of resources to
+                                                                                         confirm spelling; use a thesaurus; spell
+                                                                                         correctly the provinces and capitals,
+                                                                                         and words such as catch, matches,
+                                                                                         strength, scratch, length, ….
+
+
+
+
+English Language Arts 5                                                                                                         19
+Table 5. (Continued) Key Language Cues and Conventions for Grade 5
+     Language Cue or Convention               Comprehend and Respond                             Compose and Create
+                                        When viewing, listening, or reading,              When speaking, writing, or using
+                                                Grade 5 students:                       other forms of representing, Grade 5
+                                                                                                     students:
+Phonological/Graphophonic               Use phonics to decode and say words             Use clear and correct pronunciation
+                                        correctly; recognize features of words          and enunciation to communicate and
+Graphophonics is the study of the
+                                        including vowel patterns in multi-              to figure out spelling of words; select
+relationship between the symbols and
+                                        syllabic words, double consonants,              and use a variety of spelling strategies
+sounds of a language and includes
+                                        word endings, prefixes (e.g., dis-,             including sound.
+letter or sound relationships and
+                                        in-, un-, ir-, il-, non-, anti-, pro-, pre-),
+patterns.
+                                        suffixes (e.g., -ish, -en,-ance), and plural
+                                        possessives.
+Other Cues and Conventions              Recognize and use the characteristics           Use appropriate gestures, eye contact,
+                                        of different media (e.g., photograph,           and facial expressions; use, accurately,
+Other cues and conventions are also
+                                        television, digital) and recognize the          graphs, diagrams, and captions; write
+found in communication acts and
+                                        key elements in visual and multimedia           legibly using correct letter formation
+include such elements as graphics,
+                                        texts (e.g., sections in magazine).             and joining in cursive writing.
+layout, colour, sound, movement, font
+choices, and handwriting.
+
+
+
+
+20                                                                                                       English Language Arts 5
+Uses Critical and Powerful Learning Strategies
+An effective ELA program teaches students how to use critical and powerful learning strategies. In order to
+achieve the English language arts outcomes, students need to learn and use a range of language skills and
+strategies. Effective language arts teachers employ a range of instructional approaches to help students move
+from teacher-supported and guided lessons to independent learning that requires varied instructional methods
+and strategies to help students learn these language skills and strategies. Teachers model and discuss key
+procedural and metacognitive strategies for language learning and thinking. Students need to learn how to
+select and to use strategies before, during, and after viewing, listening, reading, representing, speaking, and
+writing.
+If students are to be successful in English language arts, they need to learn and use thinking and learning skills
+and strategies on their own. In order to help students gain control over a repertoire of key skills and strategies,
+the skills and strategies need to be explicitly taught and practised using a model such as the following:
+  • Introduce and explain the purpose of the skill or strategy.
+  • Demonstrate and model its use.
+  • Provide guided practice for students to apply the skill or strategy with feedback.
+  • Allow students to apply the skill or strategy independently and in teams.
+  • Reflect regularly on the appropriate uses of the skills or strategies and their effectiveness.
+  • Assess the students’ ability to transfer the repertoire of skills or strategies with less and less teacher
+    prompting over time.
+                                                                                   (Wiggins & McTighe, 2007, pp. 97-98)
+
+Table 6. Important Cognitive Strategies for Comprehending and Responding (CR) Goal
+
+       Phase                                                           Strategy
+       Before         Activating and building upon prior knowledge and experience
+                      Previewing text
+                      Setting a purpose
+                      Anticipating the author’s or creator’s intention
+       During         Making connections to personal knowledge and experience
+                      Using the cueing systems to construct meaning from the text
+                      Making, confirming, and adjusting predictions and inferences
+                      Constructing mental images
+                      Interpreting visuals (e.g., illustrations, graphics, tables)
+                      Identifying key ideas and supporting ideas
+                      Self-questioning, self-monitoring, and self-correcting
+                      Drawing conclusions
+                      Adjusting rate or strategy to purpose or difficulty of text
+        After         Recalling, paraphrasing, summarizing, and synthesizing
+                      Interpreting (identifying new knowledge and insights)
+                      Evaluating author’s/creator’s message(s)
+                      Evaluating author’s/creator’s craft and technique
+                      Responding personally, giving support from text
+                      View, listen, read again, speak, write, and use other forms of representing to deepen understanding
+                      and pleasure
+English Language Arts 5                                                                                                 21
+Table 6. (Continued) Important Cognitive Strategies for Comprehending and Responding (CR) Goal
+
+       Additional      Viewing:
+      Strategies for   • Think Aloud (Davey, 1983)
+     Comprehending     • View, Pause, Predict, and Think Aloud
+     and Responding
+                       • Collaborative Viewing Guide (Wood, 1994)
+                       • Directed Viewing-Thinking Activity (DVTA)
+                       • Picture Walk (Richards & Anderson, 2003)
+                       • Viewing Guides
+
+                       Listening:
+                       • TQLR (Tune In, Questions, Listen, and Review) (SRA, 2000)
+                       • ACTION (Attention, Concentrate, Think, Interpret, Organize, and Note) (Sebranek & Kemper, 1995)
+                       • Listen-Think-Pair-Share (McTighe & Lyman, 1992)
+                       • Listen-Draw-Pair-Share (McConnell, 1992)
+                       • DLTA (Directed Listening-Thinking Activity) (Stauffer, 1975)
+                       • LAPS (Listen, Ask, Picture, and Summarize) Strategy (Matchullis & Mueller, 1996)
+                       • Listening Guides
+
+                       Reading:
+                       • Modelled Reading
+                       • Shared Reading
+                       • Guided Reading
+                       • Paired Reading
+                       • KWL, K-W-L Plus (Carr & Ogle, 1987)
+                       • Preview/Connect/Predict (Robb, 2006)
+                       • List/Group/Categorize (Robb, 2006)
+                       • B-D-A (Before, During, and After) Strategy (Laverick, 2002)
+                       • Directed Reading-Thinking Activity (DRTA) (Stauffer, 1975)
+                       • Reciprocal Reading (Palincsar & Brown, 1986)
+                       • ReQuest (Manzo, 1969; Vacca & Vacca, 1999)
+                       • QtA (Question the Author) (Beck, McKeown, Hamilton, & Kucan, 1997)
+                       • QARs (Question Answer Relationships) (Raphael, 1986)
+                       • Mapping It Out (Hoyt, 2000)
+                       • Justifying My Opinions (Hoyt, 2000)
+                       • Open-mind Portraits (Tompkins, 2004)
+                       • Coding the Text (Harvey & Goudvis, 2000)
+                       • Think Alouds (Davey, 1983)
+                       • Reading Guides
+                       • Discussion Circles
+                       • Grand Conversations (Eeds & Wells, 1989)
+                       • Literature Circles (Daniels, 1994)
+                       • Reader’s Workshop
+
+
+
+
+22                                                                                                English Language Arts 5
+Table 7. Important Cognitive Strategies for Composing and Creating (CC) Goal
+
+           Phase                                                         Strategy
+           Before             Considering the task or prompt or finding a topic
+                              Activating prior knowledge and considering experiences
+                              Considering purpose and audience
+                              Considering and generating specific ideas and information that might be included
+                              Collecting and focusing ideas and information
+                              Planning and organizing ideas for drafting
+           During             Creating draft(s) and experimenting with possible product(s)
+                              Using language and its conventions to construct message
+                              Experimenting with communication features and techniques
+                              Conferring with others
+                              Reflecting, clarifying, self-monitoring, self-correcting, and using “fix-up” strategies
+            After             Revising for content and meaning (adding, deleting, substituting, and rethinking)
+                              Revising for organization (reordering)
+                              Revising for sentence structure and flow
+                              Revising for word choice, spelling, and usage
+                              Proofreading for mechanics and appearance (including punctuation and capitalization)
+                              Conferring with peers, teacher, and others
+                              Polishing, practising, and deciding how work will be shared
+                              Sharing, reflecting, and considering feedback
+  Additional Strategies for   Speaking:
+  Composing and Creating      • Talking Circles
+                              • Think, Pair, Share/Square (McTighe & Lyman, 1992)
+                              • Instructional Conversations (Goldenberg, 1993)
+                              • TAPS (Total Group, Alone, Partner, and Small Group) (Gregory & Chapman, 2002)
+                              • Grouptalk (Whipple, 1975; Moffett & Wagner, 1992)
+                              Writing:
+                              • Modelled Writing
+                              • Shared Writing/Language Experience (Van Allen, 1976)
+                              • Interactive Writing
+                              • Guided Writing
+                              • Pattern Writing
+                              • Discuss/Brainstorm/Web
+                              • KWL
+                              • Think-Pair-Share-Write (Robb, 2006)
+                              • Asking the 5Ws and H (who, what, where, when, why, and how)
+                              • Writing Frames
+                              Other Forms of Representing:
+                              • Discuss/Brainstorm/Web
+                              • Asking the 5Ws + H
+                              • Representing Task Sheet
+                              • Talking Drawings (Wood, 1994)
+                              • Sketch to Stretch (Harste, Short, & Burke, 1988)
+                              • Read/View/Listen, Talk, Act, Draw, Write (Cox, 1999)
+
+English Language Arts 5                                                                                                 23
+                                       Includes a Range of Texts
+                                       In order for students to achieve the outcomes stated in this curriculum,
+                                       students need to have access to a wide range of high-quality learning
+                                       resources in visual, oral, print, multimedia, and electronic formats. The
+                                       lists of learning resources that support this curriculum identify core
+                                       and additional learning resources to support the English language
+                                       arts program and student achievement of the learning outcomes
+                                       designated for this grade level. Resources that have been evaluated
+                                       for curriculum fit are listed on the Ministry of Education website. An
+                                       effective English language arts program:
+                                         • provides learning resources that help students achieve the
+                                           curriculum outcomes
+                                         • balances a variety of texts including print, non-print, human,
+                                           electronic, and virtual resources
+                                         • offers resources that are current, relevant, credible, and
+                                           representative of many viewpoints that reflect the perspectives,
+                                           cultures, and ways of knowing of First Nations, Métis, and other
+                                           cultures
+                                         • presents the cultural, literary, and artistic heritages of societies,
+                                           past and present
+                                         • responds to students’ interests and supports independent reading
+                                           and inquiry
+                                         • fosters opportunities for inquiry learning.
+                                       Grade 5 students should have access to picture books, pattern books,
+                                       chapter books, non-fiction, children’s classics, poetry, folk tales, and
+                                       traditional narratives. Refer to the ministry website for a listing of
+                                       various grade-appropriate texts that Grade 5 students might explore.
+
+                                       Encourages Inquiry, Social Responsibility, and
+                                       Self-reflection
+                                       An effective English language arts program provides opportunities
+                                       for student inquiry, encourages social responsibility, and invites self-
+                                       reflection.
+Inquiry is a philosophical stance      Inquiry learning provides students with opportunities to build
+rather than a set of strategies,       knowledge, abilities, and inquiring habits of mind that lead to deeper
+activities, or a particular teaching   understanding of their world and human experience. The inquiry
+method. As such, inquiry promotes      process focuses on the development of compelling questions,
+intentional and thoughtful learning    formulated by teachers and students, to motivate and guide inquiries
+for teachers and children.             into topics, problems, and issues related to curriculum content and
+(Mills & Donnelly, 2001, p. xviii)     outcomes.
+                                       Inquiry is more than a simple instructional strategy. It is a philosophical
+                                       approach to teaching and learning, grounded in constructivist
+
+
+24                                                                                          English Language Arts 5
+research and methods, which engages students in investigations
+that lead to disciplinary and transdisciplinary understanding. Inquiry
+builds on students’ inherent sense of curiosity and wonder, drawing
+on their diverse backgrounds, interests, and experiences. The process
+provides opportunities for students to become active participants in
+a collaborative search for meaning and understanding. Students who
+are engaged in inquiry:
+  • construct deep knowledge and deep understanding rather than
+    passively receiving information
+  • are directly involved and engaged in the discovery of new
+    knowledge
+  • encounter alternative perspectives and differing ideas
+    that transform prior knowledge and experience into deep
+    understandings
+  • transfer new knowledge and skills to new circumstances
+  • take ownership and responsibility for their ongoing learning and
+    mastery of curriculum content and skills.
+                       (Adapted from Kuhlthau, Maniotes, & Caspari, 2007)
+
+Inquiry learning is not a step-by-step process but rather a cyclical
+process, with parts of the process being revisited and rethought as a
+result of students’ discoveries, insights, and co-construction of new
+knowledge. Figure 2 represents this cyclical inquiry process.
+Figure 2. Constructing Understanding Through Inquiry
+
+
+Curriculum Outcomes                 What are the things we wonder
+                                  about and want to know more about?
+
+                                   What questions do we have about
+                                 the deeper mysteries or aspects of life?
+
+
+                                                 Interpret
+                                 Collaborate                       Conclude
+                                                 Analyze
+                        Plan                                            Investigate
+        Reflect and                                                                       Reflect and
+          Revise                     How are we going to proceed?                           Revise
+                      Explore                                                    Create
+
+                                  Observe                           Synthesize
+                            Acknowledge Sources              Document Processes                         Resources
+
+
+                               What have we discovered and how
+                            will we show our deeper understanding?
+                                How are we going to use what we have
+                                     discovered (e.g., apply, act,
+                                            implement)?
+
+
+
+
+English Language Arts 5                                                                                             25
+     Inquiry prompts and motivates students to investigate topics within
+     meaningful contexts. The inquiry process is not linear or lock-step
+     but is flexible and recursive. As they become more comfortable with
+     the process, experienced inquirers will move back and forth among
+     various phases as new questions arise.
+     Well-formulated inquiry questions are broad in scope and rich in
+     possibilities. Such questions encourage students to explore, observe,
+     gather information, plan, analyze, interpret, synthesize, problem solve,
+     take risks, create, conclude, document, reflect on learning, and develop
+     new questions for further inquiry.
+     Teachers and students can begin their inquiry at one or more
+     curriculum entry points; however, the process may evolve into
+     transdisciplinary integrated learning opportunities, as reflective of the
+     holistic nature of our lives and interdependent global environment.
+     An important part of any inquiry process is students’ reflection on
+     their learning and the documentation needed to assess the learning
+     and make it visible to students. Student documentation of the inquiry
+     process in English language arts may take the form of reflective
+     journals, notes, drafts, three-dimensional models, works of art,
+     photographs, and video footage.
+     Social responsibility encourages students to extend their learning
+     beyond the classroom into the local, national, and international
+     community. It invites students to consider how individuals or groups
+     can shape the future in a positive way or address an issue, question,
+     challenge, or problem that is important. Each unit at each grade level
+     in English language arts offers opportunities to challenge students
+     to consider what particular local, national, or global issues, questions,
+     challenges, or problems are important and to consider what students
+     might do to make their community or the world a better place.
+     Social responsibility challenges students to address the important or
+     compelling questions for deeper understanding posed in a unit. In any
+     English language arts unit, teachers and students can plan and create a
+     project to support efficacy.
+     Social responsibility can help students:
+       • Become complex thinkers by encouraging them to synthesize
+         their learning and apply it to their community, country, and/or
+         international world.
+       • Become more aware of the interconnectedness of all things and
+         the reciprocal relationships between themselves and their local
+         and international community.
+       • Become more independent by using the language skills and
+         strategies that students are learning in ELA beyond the classroom.
+
+
+
+
+26                                                      English Language Arts 5
+  • Become more motivated by choosing individual or group projects
+    related to each unit.
+  • Become contributors to their community and the world beyond
+    that community.
+  • Become more collaborative and respectful as they work with
+    others to address the questions, issues, and problems considered
+    in the unit.
+  • Become agents of change.
+  • Become socially responsible.
+Student self-reflection helps students take ownership of their own
+learning and become more self-directed and self-confident. The
+Assess and Reflect K-12 goal in English language arts expects students
+to consider what they know and have learned, the progress and
+achievements made, and the goals they need to set to improve. Using
+tools such as learning logs and diaries, discussion, questionnaires,
+reflective writing, and portfolios, students can reflect on their learning
+both as a team and as individuals. Through self-reflection, students
+can determine their current and future learning needs and set goals
+for growth. Using Bloom’s taxonomy of questioning, teachers can help
+students become self-reflective and self-directed:
+  • What did I do? (Remember/Knowledge)
+  • What knowledge, skills, and strategies did I use to complete the
+    task? (Understand/Comprehension)
+  • What steps did I take to achieve this? (Application)
+  • What challenges or problems did I encounter, and how did I
+    address these? (Analysis)
+  • What are my strengths, and what would I like to learn more about,
+    or what skills and strategies do I want to develop? (Evaluation)
+  • How can I use this new knowledge and these new skills and
+    strategies? (Create)
+
+
+
+
+English Language Arts 5                                                      27
+Outcomes and Indicators
+Focus: Communicating with Precision
+
+  Comprehend and Respond (CR). Students will develop their abilities to view, listen to, read, comprehend
+  and respond to a range of contemporary and traditional grade-level-appropriate texts in a variety of
+  forms (oral, print, and other media) from First Nations, Métis, and other cultures for a variety of purposes
+  including for learning, interest, and enjoyment.
+
+
+Outcomes                                 Indicators
+CR5.1 Analyze and respond to             a. View, listen to, read and respond to a variety of visual, multimedia,
+a variety of grade-level texts              oral, and print texts that examine the diverse range of personal
+(including contemporary and                 identities, perspectives, and backgrounds (e.g., appearance,
+traditional visual, oral, written,          culture, socio-economic status, abilities, age, gender, sexual
+and multimedia texts) that                  orientation, language, career path) including First Nations and
+address:                                    Métis texts.
+ • identity (e.g., Exploring             b. View, listen to, and read a variety of texts related to the theme or
+   Heritage)                                topic of study and show comprehension by:
+ • community (e.g., Teamwork)
+                                                • understanding, retelling, and explaining the ideas and
+ • social responsibility (e.g.,
+                                                  information presented in the texts
+   What is Fair?).
+                                                • analyzing the text structures and features
+                                                • analyzing the texts and developing responses with evidence
+                                                  from the texts, personal experience, and research.
+                                         c. Describe and build upon connections between previous
+                                            experiences, prior knowledge, and a variety of texts.
+                                         d. Compare the challenges and situations encountered in daily life
+                                            with those experienced by people in other times, places, and
+                                            cultures as portrayed in a variety of texts including First Nations
+                                            and Métis texts.
+                                         e. Compare individuals and situations portrayed in various texts
+                                            (including First Nations and Métis resources) to those encountered
+                                            in real life.
+                                         f.   Draw on oral, print, and other media texts including First Nations
+                                              and Métis texts to explain personal perspectives on cultural
+                                              representations.
+
+
+
+
+28                                                                                          English Language Arts 5
+Outcomes                            Indicators
+CR5.2 View and evaluate,            a. Gather information from a variety of media (e.g., photographs,
+critically, visual and multimedia      web sites, maps, diagrams, posters, videos, advertising, double bar
+texts identifying the persuasive       graphs, maps, videos).
+techniques including promises,
+                                    b. Select and flexibly use appropriate strategies (before, during, and
+flattery, and comparisons used
+                                       after) to construct meaning when viewing.
+to influence or persuade an
+audience.                           c. Understand and apply relevant pragmatic, textual, syntactical,
+                                       semantic/lexical/morphological, graphophonic, and other cues
+                                       and conventions of communication to construct and confirm
+                                       meaning when viewing.
+                                    d. Discuss purpose, perspectives, and biases and how visual texts
+                                       including First Nations and Métis resources can be used to
+                                       persuade others.
+                                    e. Recognize point of view and distinguish between fact and opinion.
+                                    f.   Identify the values underlying visual messages and recognize
+                                         persuasive techniques and purposes in oral presentations and
+                                         various media (e.g., promises, dares, flattery, comparisons).
+                                    g. Analyze visual texts (including First Nations and Métis art and
+                                       other texts) as sources for information, entertainment, persuasion,
+                                       interpretation of events, and transmission of culture.
+                                    h. Identify how the language, explicit and implicit messages, and
+                                       visual and multimedia features (e.g., sound, colour, movement) are
+                                       used to influence the intended audience.
+
+CR5.3 Listen purposefully           a. Listen purposefully to a range of texts from a variety of cultural
+to a range of texts from a             traditions including First Nations and Métis and identify and
+variety of cultural traditions         summarize main ideas, supporting details, and opinions heard.
+(including oral traditions          b. Select and flexibly use appropriate strategies (before, during, and
+shared by First Nations and            after) to construct meaning when listening.
+Métis Elders and Knowledge
+Keepers) to understand ideas        c. Understand and apply relevant pragmatic, textual, syntactical,
+and instructions, to evaluate          semantic/lexical/morphological, graphophonic, and other cues
+the message heard and the              and conventions of communication to construct and confirm
+required follow-up action, and         meaning when listening.
+to draw conclusions about           d. Evaluate the content of a variety of oral communications and ask
+speaker’s verbal and non-              questions to seek information not already discussed.
+verbal message(s), purpose,
+                                    e. Interpret a speaker’s verbal and non-verbal messages, purposes,
+point of view, and techniques
+                                       and perspectives including First Nations and Métis Elders and
+used in presentation.
+                                       Knowledge Keepers.
+                                    f.   Listen to differentiate between fact and opinion, to analyze the
+                                         message and presentation, and to draw conclusions about the
+                                         ideas presented and strategies used.
+
+
+
+English Language Arts 5                                                                                     29
+Outcomes                          Indicators
+CR5.3 continued                   g. Listen purposefully to instructions and procedures and decide the
+                                     best way to carry them out.
+                                  h. Draw conclusions about speaker’s verbal and non-verbal
+                                     message(s), purpose, point of view, and techniques used in
+                                     presentation (including First Nations and Métis Elders and
+                                     Knowledge Keepers).
+
+CR5.4 Read and demonstrate        a. Determine the essential purpose, key ideas, arguments, and
+comprehension of a range of          perspectives of texts including First Nations and Métis texts.
+contemporary and classical        b. Select and flexibly use appropriate strategies (before, during, and
+grade-appropriate fiction,           after) to construct meaning when reading.
+script, poetry, and non-fiction
+(including magazines, reports,    c. Understand and apply relevant pragmatic, textual, syntactical,
+instructions, and procedures)        semantic/lexical/morphological, graphophonic, and other cues
+from various cultures including      and conventions of communication to construct and confirm
+First Nations, Métis, and Inuit      meaning when reading.
+and countries (including          d. Understand how text features (e.g., format, graphics, sequence,
+Canada).                             diagrams, illustrations, charts, maps) make information and ideas
+                                     accessible and usable.
+                                  e. Distinguish among facts, supported inferences, and opinions in
+                                     informational texts.
+                                  f.   Read and use grade-five appropriate informational and reference
+                                       texts (e.g., dictionary, encyclopedia, how-to, explanations,
+                                       biography) to identify main ideas, details, opinions, and reasons.
+                                  g. Identify the characteristics of poetry, plays, fiction, and non-fiction
+                                     including First Nations and Métis texts.
+                                  h. Identify, in narrative texts (including First Nations and Métis
+                                     texts), the main problem or conflict of the plot and the resolution;
+                                     compare and contrast the actions, motives, and appearances of
+                                     characters; evaluate the meaning of symbols; and understand that
+                                     theme refers to the meaning or moral of a work and recognize
+                                     themes (whether implied or stated directly).
+                                  i.   Evaluate the author’s use of various techniques (e.g., appeal
+                                       of characters, logic and credibility of plots and settings, use of
+                                       figurative language and imagery, strength of argument based on
+                                       evidence) to influence readers’ perspectives.
+                                  j.   Read grade-appropriate texts silently (150-200 wcpm) for
+                                       extended periods of time; read orally to increase fluency, accuracy,
+                                       pacing, intonation, and expression (110-150 wcpm); adjust reading
+                                       rate to purpose and text demands.
+
+
+
+
+30                                                                                   English Language Arts 5
+  Compose and Create (CC). Students will develop their abilities to speak, write, and use other forms of
+  representation to explore and present thoughts, feelings, and experiences in a variety of forms for a
+  variety of purposes and audiences.
+
+Outcomes                                 Indicators
+CC5.1 Compose and create a               a. Create spoken, written, and other representations that include:
+range of visual, multimedia,
+                                               • a clear and specific message
+oral, and written texts that
+explore:                                       • a logical and coherent organization of ideas
+
+ • identity (e.g., What Should                 • a competent use of language and conventions.
+   I Do)                                 b. Express and explain findings on a topic, question, problem, or issue
+ • community (e.g., This is Our             in an appropriate visual, multimedia, oral, and written format using
+   Planet)                                  inquiry.
+ • social responsibility (e.g.,
+                                         c. Use inquiry to explore a problem, question, or issue related to a
+   Teamwork) and express
+                                            topic being studied in English language arts or a topic of personal
+   personal thoughts shaped
+                                            interest including:
+   through inquiry.
+                                               • summarizing personal knowledge and understanding
+                                                 of a selected topic to help formulate relevant questions
+                                                 appropriate to a specific audience and purpose for group or
+                                                 individual inquiry or research
+                                               • gathering and recording ideas and information using a plan
+                                               • answering inquiry or research questions using a variety of
+                                                 sources such as newspapers, diaries, Elders, interviews, and
+                                                 field trips
+                                               • determining the usefulness of ideas and information for
+                                                 inquiry or research purpose and focus using pre-established
+                                                 criteria
+                                               • using a variety of tools to access ideas and information
+                                               • organizing ideas and information into categories (e.g., what,
+                                                 where, when, how, so what)
+                                               • making notes using own words and providing publication
+                                                 dates and authorship of sources
+                                               • assessing knowledge gained through inquiry or research
+                                               • forming personal conclusions and generating new questions
+                                                 for further inquiry or research
+                                               • explaining findings from inquiry or research on a topic,
+                                                 question, problem, or issue in an appropriate visual, oral, and
+                                                 written format.
+
+
+
+
+English Language Arts 5                                                                                          31
+Outcomes                           Indicators
+CC5.2 Demonstrate a variety        a. Consider which form (e.g., drama, drawings, dance, diagrams,
+of ways to communicate                music, three-dimensional objects, posters, cartoons, maps, graphs,
+understanding and response            photographs, pictures, charts, and videos) is most appropriate for
+including illustrated reports,        various tasks and identified purposes.
+dramatizations, posters,
+                                   b. Select and flexibly use appropriate strategies (before, during,
+timelines, multimedia
+                                      and after) to communicate meaning when using other forms of
+presentations, and summary
+                                      representing.
+charts.
+                                   c. Understand and apply relevant pragmatic, textual, syntactical,
+                                      semantic/lexical/morphological, graphophonic, and other cues
+                                      and conventions to communicate meaning when using other
+                                      forms of representing.
+                                   d. Use graphic organizers to clarify and shape understanding.
+                                   e. Prepare a clearly organized multimedia presentation using pre-
+                                      established organizers and criteria.
+                                   f.   Integrate a variety of representations including illustrations,
+                                        graphs, maps, and graphics into written and oral presentations.
+                                   g. Present information clearly and appropriately for each medium
+                                      and recognize that the conventions of language and the medium
+                                      are designed to help the audience understand what is said or
+                                      presented.
+                                   h. Use computers and authoring software to compose texts and
+                                      graphic representations.
+                                   i.   Include charts, graphs, tables, maps, graphics, and illustrations in
+                                        researched inquiry presentations.
+
+
+CC5.3 Speak to express and         a. Deliver focused and coherent presentations that engage the
+support a range of ideas and          audience with appropriate verbal cues, facial expressions,
+information in formal and             and gestures; that convey ideas clearly; and that relate to the
+informal speaking situations          background and interests of the audiences.
+(e.g., giving oral presentations   b. Select and flexibly use appropriate strategies (before, during, and
+and reports, retelling a              after) to communicate meaning when speaking.
+narrative, explaining a display
+                                   c. Understand and apply relevant pragmatic, textual, syntactical,
+to others, working in groups)
+                                      semantic/lexical/morphological, graphophonic, and other cues
+for particular audiences and
+                                      and conventions to communicate meaning when speaking.
+purposes.
+                                   d. Select a focus, organizational structure, and point of view for an
+                                      oral presentation; decide what to say and how to say it; clarify and
+                                      support spoken ideas with evidence and examples.
+                                   e. Deliver narrative presentations that establish a situation, plot,
+                                      point of view, and setting with descriptive words and phrases and
+                                      show the listeners, through the explanations and narration, what
+                                      happens.
+
+32                                                                                     English Language Arts 5
+Outcomes                           Indicators
+CC5.3 continued                    f.   Deliver informative presentations about an important idea, issue,
+                                        or event by framing questions to guide listeners, establishing a
+                                        central idea or topic, and developing the topic with simple facts,
+                                        details, examples, and explanations.
+                                   g. Deliver a narrative from a First Nations and Métis tradition that
+                                      follows the teaching of the oral tradition.
+                                   h. Deliver oral responses to literary and other texts (including First
+                                      Nations and Métis texts) or presentations that include both
+                                      personal responses and textual evidence or examples from the
+                                      work to support insights and conclusions.
+                                   i.   Participate in a variety of oral presentations including
+                                        dramatization (role play), discussion circles, introducing a visitor to
+                                        the class or school, and giving directions.
+                                   j.   Fulfill role as group member and respect and respond sensitively
+                                        to the ideas, opinions, and interpretations of others.
+
+
+CC5.4 Use a writing process        a. Write clear multi-paragraph compositions (e.g., three to five
+to experiment with and                paragraph report or essay of at least 300 words) that focus on a
+produce multi-paragraph               central idea, reflect awareness of the audience(s) and purpose(s),
+narrative (including stories          contain clear introductions and conclusions, and include
+that contain dialogue),               paragraphs in a logical sequence.
+expository (including reports,     b. Select and flexibly use appropriate strategies (before, during, and
+explanations, letters, and            after) to communicate meaning when writing.
+requests), and persuasive
+                                   c. Understand and apply relevant pragmatic, textual, syntactical,
+(including letters) compositions
+                                      semantic/lexical/morphological, graphophonic, and other cues
+that clearly develop topic and
+                                      and conventions to communicate meaning when writing.
+provide transitions for the
+reader.                            d. Write narrative compositions that develop a situation or plot and
+                                      point of view, describe the setting, and present an ending.
+                                   e. Write expository compositions that establish a topic, include
+                                      important ideas or events in a logical order, provide details and
+                                      transitional expressions that clearly link one paragraph to another,
+                                      and offer a concluding paragraph that summarizes important
+                                      ideas.
+                                   f.   Write expository reports that explore key ideas, issues, or events
+                                        in response to questions that direct an investigation, establish
+                                        a controlling idea or topic sentence, and develop the topic with
+                                        simple facts, details, examples, and explanations.
+                                   g. Use various note-making strategies (paraphrasing, summarizing,
+                                      highlighting, graphic organizers, outlining) to glean information
+                                      and ideas for expository or informational writing.
+
+
+
+
+English Language Arts 5                                                                                      33
+Outcomes                                   Indicators
+CC5.4 continued                            h. Create documents by using electronic media and employing
+                                              computer features (e.g., topic searches, thesaurus, spell checks).
+                                           i.   Write persuasive letters or compositions that state a clear position,
+                                                support that position with relevant evidence, follow a simple
+                                                organizational pattern, and address the reader’s need for clarity.
+                                           j.   Experiment with different forms including poems, short
+                                                scripts, and journal entries to communicate and demonstrate
+                                                understanding.
+
+  Assess and Reflect (AR). Students will develop their abilities to assess and reflect on their own language
+  skills, discuss the skills of effective viewers, listeners, readers, representers, speakers, and writers, and set
+  goals for future improvement.
+
+Outcomes                                   Indicators
+AR5.1 Identify strengths in                a. Consider the types of strategies to utilize and whether or not they
+viewing, listening, reading,                  will or do work for the task at hand.
+speaking, writing, and other
+                                           b. Determine what strategies are best for the task and what strategies
+forms of representing.
+                                              will work best for self.
+AR5.2 Set goals to enhance
+                                           c. Identify strengths in viewing, listening, reading, representing,
+the development and
+                                              speaking, and writing and set goals to enhance the development
+improvement of the skills and
+                                              and improvement of the skills and strategies in each.
+strategies in viewing, listening,
+reading, speaking, writing, and            d. Ask “What strategies did I use? What goals do I need to set for what
+other forms of representing                   I am trying to accomplish? How will I know if I have met my goals?
+and take steps to achieve goals.              What else could I do?” and develop a plan for improvement.
+
+
+
+
+34                                                                                            English Language Arts 5
+Assessment and Evaluation of Student
+Learning
+Assessment and evaluation require thoughtful planning and                Assessment involves the systematic
+implementation to support the learning process and to inform             collection of information about
+teaching. All assessment and evaluation of student achievement must      student learning with respect to:
+be based on the outcomes in the provincial curriculum.                    • achievement of provincial
+There are three interrelated purposes of assessment. Each type of           curricula outcomes
+                                                                          • effectiveness of teaching
+assessment, systematically implemented, contributes to an overall
+                                                                            strategies employed
+picture of an individual student’s achievement.
+                                                                          • student self-reflection on
+Assessment for learning involves the use of information about               learning.
+student progress to support and improve student learning, inform
+instructional practices, and:
+  • is teacher-driven for student, teacher, and parent use
+  • occurs throughout the teaching and learning process, using a
+    variety of tools
+  • engages teachers in providing differentiated instruction, feedback
+    to students to enhance their learning, and information to parents
+    in support of learning.
+Assessment as learning actively involves student reflection on
+learning, monitoring of her/his own progress, and:
+  • supports students in critically analyzing learning related to
+    curricular outcomes
+  • is student-driven with teacher guidance
+  • occurs throughout the learning process.
+Assessment of learning involves teachers’ use of evidence of student
+learning to make judgements about student achievement and:
+  • provides opportunity to report evidence of achievement related to
+    curricular outcomes
+  • occurs at the end of a learning cycle using a variety of tools
+  • provides the foundation for discussions on placement or
+    promotion.
+Evaluation compares assessment information against criteria based on
+curriculum outcomes for the purpose of communicating to students,
+teachers, parents/caregivers, and others about student progress and to
+make informed decisions about the teaching and learning process.
+The following pages show a sample holistic rubric for assessment and
+evaluation of the Comprehending and Responding and Composing
+and Creating Goals for English language arts with the Assessing and
+Reflecting Goal embedded.
+
+
+
+
+English Language Arts 5                                                                                       35
+Table 8. Grade Five Rubric - Comprehend and Respond
+
+                    Comprehend and Respond (Viewing, Listening, Reading): Grade 5
+                                     Exceeding Expectations
+     (Overall, comprehension and responses are accurate, include details, often insightful, and
+              supported. Student checks understanding and uses effective strategies.)
+          Comprehension                             Use of Strategies                     Cues and Conventions
+Demonstrates a thorough and               Employs, independently, task-            Uses confidently and consistently
+accurate understanding of the text        relevant strategies before, during,      the cues and conventions of
+and offers insightful responses with      and after viewing, listening, or         communication and language to
+evidence to support responses.            reading.                                 construct meaning.
+Identifies and summarizes, thoroughly     Uses prior knowledge and previews        Knows reasons for viewing, listening,
+and accurately, main ideas and            text features to make prediction; sets   and reading; identifies intended
+supporting details; describes             purpose; monitors comprehension          audience and purpose for a text.
+characters, events, and setting;          and uses/adjusts strategies; draws,      Identifies and uses readily various text
+recounts events and ideas in correct      independently, on prior knowledge to     structures, their elements, and their
+sequence, and explains cause-effect       make predictions and solve problems;     organizational patterns to understand.
+relationships in texts viewed, listened   makes inferences (often uses “between
+to, and read.                             the lines” information); demonstrates    Uses knowledge of sentence structure,
+                                          a thorough understanding of              elements, and related punctuation to
+Shows insight in responses.
+                                          text; reviews, recalls, paraphrases,     understand what is listened to or read.
+Makes and explains personal               summarizes, synthesizes, and offers      Uses context and word structure
+connections that show insight; makes      insightful personal responses and        (including roots, prefixes, and suffixes)
+connections to other texts and to         critical judgements; re-views, re-       to determine the meaning of words.
+world; gives evidence to explain the      listens, and rereads and skims to find
+connections.                                                                       Uses phonics to say words correctly;
+                                          information and ideas efficiently.
+                                                                                   recognizes features of words including
+Offers responses and opinions             Demonstrates consistent attention        sound patterns to decode multi-
+with logical supporting reasons or        to the speaker or task and ignores       syllabic words.
+examples.                                 distractions when listening, viewing, or
+                                                                                   Recognizes the characteristics of
+                                          reading.
+                                                                                   different media and the key features
+                                          Follows, independently, instructions     and elements in visual and multimedia
+                                          and multi-step oral directions.          texts.
+                                          Reads orally with appropriate fluency,
+                                          accuracy, and expression.
+                                          Reflects and sets goals for viewing,
+                                          listening, and reading.
+
+
+
+
+36                                                                                                  English Language Arts 5
+Table 8. (Continued) Grade Five Rubric - Comprehend and Respond
+
+                     Comprehend and Respond (Viewing, Listening, Reading): Grade 5
+                                       Meeting Expectations
+ (Overall, comprehension and responses are generally accurate and logical and include details and
+  reasoning to support responses. Student checks understanding and uses appropriate strategies.)
+           Comprehension                             Use of Strategies                     Cues and Conventions
+ Demonstrates a good understanding         Uses, with practice and teacher          Uses the cues and conventions of
+ of text and offers appropriate and        support, the important before,           communication and language to
+ thoughtful responses with reasonable      during, and after strategies relevant    construct meaning.
+ evidence to support responses.            to the task.
+ Describes accurately the main topics      Uses an expanding range of familiar      Recognizes that a text was created for
+ or ideas in texts viewed, listened to,    before, during, and after strategies     an intended purpose.
+ and read (including prose fiction, non-   to derive meaning from visual,           Identifies and explains different
+ fiction, script, and poetry).             multimedia, oral, and written texts      forms of texts; uses knowledge of the
+ Identifies and describes specific details including tapping prior knowledge and    elements and organization of different
+                                           experience; predicting what text will
+ and feelings in texts.                                                             texts; identifies conventions of texts.
+                                           be about, setting purpose, identifying
+ Retells and sequences ideas and events main ideas, making connections and          Uses knowledge of word order to
+ from texts viewed, listened to, and       inferences, and constructing mental      determine meaning of sentences;
+ read.                                     images; asking questions to self-        uses the relationships of words in
+                                           monitor; adjusting rate and strategy;    sentences to help construct meaning;
+ Offers responses to and opinions on
+                                                                                    uses punctuation to help understand
+ viewing, listening, reading experiences noting key ideas and supports;
+                                           recalling, paraphrasing, summarizing,    meaning.
+ supported by examples, details, and
+ reasons.                                  and responding personally to             Uses a variety of strategies to
+                                           text; offering and supporting an         determine the meaning of unfamiliar
+ Responds to questions or tasks
+                                           interpretation of text; evaluating       words including context and breaking
+ accurately, clearly, and completely.
+                                           author’s craft and techniques; re-       into syllables; recognizes common
+ Makes direct and concrete connections viewing, re-listening, and rereading.        word families, using sound, using
+ to self, other texts, and world.                                                   common prefixes and suffixes, and
+                                           Demonstrates attention to the speaker
+                                           or task and ignores most distractions.   using a dictionary; understands
+                                                                                    frequently used specialized terms in
+                                           Follows instruction and multiple-step    subject areas; recognizes word play.
+                                           oral directions.
+                                                                                    Recognizes features of words including
+                                           Reads orally with appropriate fluency,   R-vowel patterns, silent consonants,
+                                           accuracy, and expression.                digraphs, compound words,
+                                                                                    contractions, and easy multi-syllablic
+                                                                                    words.
+                                                                                    Recognizes and uses key features in
+                                                                                    text including colour, bold typeface,
+                                                                                    music, and sound effects.
+
+
+
+
+English Language Arts 5                                                                                                      37
+Table 8. (Continued) Grade Five Rubric - Comprehend and Respond
+
+                     Comprehend and Respond (Viewing, Listening, Reading): Grade 5
+                                  Beginning to Meet Expectations
+ (Overall, comprehension and responses are generally accurate and logical but include little detail
+  and may be confusing or incomplete. Student may need occasional help or prompting. Student
+                  checks understanding and uses some appropriate strategies.)
+           Comprehension                              Use of Strategies                    Cues and Conventions
+Demonstrates some understanding             Uses, with prompting and support,       Uses some of the cues and
+of the text and offers generalized          a few key before, during, and after     conventions of communication and
+responses with some evidence to             viewing, listening, and reading         language to construct meaning.
+support responses.                          strategies. Does not always know
+                                            when to apply them to a new task.
+Focuses on literal meaning of texts     Uses before, during, and after              Uses, with support and prompting,
+viewed, listened to, and read; identifies
+                                        strategies, with support and                basic cues and conventions of
+accurately main ideas and characters    prompting, that have been explicitly        communication to help comprehend
+and recalls most key events; has        taught including using prior                text including:
+difficulty, often, sequencing events;   knowledge to make predictions and           Identifies the purpose of familiar
+may omit some events; may have          support understanding; predicting           text forms and possible intended
+difficulty making inferences; uses some what text might be about; setting or        audiences.
+relevant details to support responses;  using a prompted purpose; noting key
+makes concrete connections to own       ideas and some supports; constructing       Uses knowledge of text structure to
+experiences; offers simple opinions or  mental images; making, and trying           make simple, obvious predictions.
+judgements.                             to confirm, predictions; making             Notices word order and how sentence
+                                        some basic inferences; recalling most       punctuation clarifies meaning.
+Responds somewhat accurately but
+does not provide complete or sufficient ideas and events; demonstrating an          Recognizes accurately most high-
+                                        adequate understanding of text; giving
+detail; experiences difficulty giving                                               frequency words and uses, with
+                                        a simple personal response to text;
+reasons or examples.                                                                support, context clues.
+                                        noticing some elements of author’s
+                                        craft and technique; re-viewing, re-        Uses phonics and, if prompted, word
+                                        listening, rereading to find specific       structure to help figure out words.
+                                        information (but is often inefficient).     Identifies some key elements and
+                                            Demonstrates attention to the speaker   details, and the medium used in visual
+                                            or task usually but inconsistently      and multimedia texts.
+                                            ignores distractions.
+                                            Follows, with support and prompting,
+                                            instructions and multiple-step oral
+                                            directions.
+                                            Reads orally with some fluency,
+                                            accuracy, and expression.
+
+
+
+
+38                                                                                                  English Language Arts 5
+Table 8. (Continued) Grade Five Rubric - Comprehend and Respond
+
+                     Comprehend and Respond (Viewing, Listening, Reading): Grade 5
+                                    Not Yet Meeting Expectations
+ (Comprehension and responses are inaccurate or incomplete. Student needs one-to-one support
+     and coaching. Student unable to check understanding or use appropriate strategies.)
+           Comprehension                              Use of Strategies                       Cues and Conventions
+ Demonstrates a limited or inadequate       Requires repeated modelling of             Has an uncertain grasp of the
+ understanding of the text and offers       before, during, and after viewing,         basic cues and conventions of
+ simplistic or irrelevant responses         listening, and reading strategies and      communication and language used to
+ with little or no evidence to support      requires continuous coaching on            construct meaning.
+ responses.                                 when and how to use them.
+ Unable to view, listen to, or read short   Attempts to use, with support and          Demonstrates limited or inadequate
+ texts independently (requires one-to-      prompting, a limited number of before,     ability to recognize or use basic cues
+ one support); identifies single topic      during, and after strategies including     and conventions of communication to
+ or idea, main characters, and some         setting a possible purpose; thinking       help comprehend text including:
+ events; recalls a few details; responds    about what is known about topic            Recognizes, with teacher guidance,
+ to questions by guessing; may              or event; predicting (but often just       a purpose for viewing, listening, and
+ have difficulty with literal meaning;      guesses); sequencing (but has difficulty   reading and a possible intended
+ responds incompletely, vaguely,            sequencing events or explaining ideas      audience.
+ or inaccurately; unable to make            and relationships such as cause-effect);
+ connections, without direct support,       basic inferring (but often unable to       Recognizes, with teacher guidance,
+ to self, other texts, or world; offers     make inferences); recalling some           some basic features, structures, and
+ responses and opinions that tend to be     ideas and events but demonstrating a       elements of a text.
+ vague, inaccurate, or unsupported.         limited or inadequate understanding        Recognizes, with teacher guidance,
+                                            of text; offering a simplistic or          basic sentence structures, word
+                                            unrelated personal response to text;       order, and how punctuation clarifies
+                                            does not usually revisit a text.           meaning.
+                                            Needs reminders to focus attention         Uses, with teacher guidance, context
+                                            on the speaker or task; distracted         clues and word structure (prefixes,
+                                            frequently.                                roots, and suffixes) to determine word
+                                            Follows, with reminders, some              meanings.
+                                            instructions and multiple-step oral        Uses, consistently, accurate sounding-
+                                            directions but skips or ignores some       out to figure out words.
+                                            part(s).
+                                                                                       Recognizes, with teacher guidance, the
+                                            Does not read fluently.                    medium and elements of visual and
+                                                                                       multimedia texts.
+
+
+
+
+English Language Arts 5                                                                                                         39
+Table 9. Grade Five Rubric - Compose and Create
+
+         Compose and Create (Speaking, Writing, and Other Forms of Representing): Grade 5
+                                    Exceeding Expectations
+(Overall, visual, multimedia, oral, and written compositions are original, thoughtful, and insightful.
+            They are complete, well-planned, and well crafted for purpose and audience.)
+               Message                               Use of Strategies                     Cues and Conventions
+Compositions and presentations are         Uses, confidently, task-relevant         Demonstrates confident control
+original and insightful.                   strategies before, during, and after     of the elements of communication
+                                           a speaking, writing, or other form of    and language. Language is rich and
+                                           representing task.                       varied.
+The visual, multimedia, oral, or written   Demonstrates understanding of and        The language is consciously well
+message is original and insightful.        effectively controls the appropriate     chosen and well used. The language
+The message has a clear focus,             before, during, and after strategies     register is appropriate to audience and
+shows awareness of audience, and           required to communicate meaning          purpose. Tone and voice consistently
+demonstrates a logical understanding       when creating visual, multimedia,        maintain interest. A definite point
+of subject matter (e.g., underlying        oral, and print texts including          of view is evident. Syntax is varied
+theme or message from unit of              exploring prior knowledge; identifying   and polished. Word choices show
+study); supporting details are relevant    possible approaches with ease and        style and efficiency. Exceptions to
+and appropriate for the intended           interest; considering a number of        standard usage are used for stylistic
+message. The text shows thoughtful         ways to proceed and find ideas and       effect. The text adheres to accepted
+and coherent organization and              information; creating well-crafted       standards of spelling, punctuation, and
+development.                               drafts and often experimenting with      capitalization. Cursive writing is used
+                                           end product; revising and polishing      confidently. Any errors are a result of
+Ideas are richly developed with details
+                                           thoughtfully; sharing, confidently and   risk taking.
+and examples.
+                                           enthusiastically, final product with
+The text is engaging, original, clear,     audience.
+and focused.
+                                         Revises and polishes compositions and
+Organization and form enhance            presentations independently.
+the main idea; ideas are presented
+coherently to move the viewer, listener,
+reader through the text.
+Effective sentence structure and
+precise word choices (e.g., vivid verbs,
+descriptive words) are employed.
+
+
+
+
+40                                                                                                  English Language Arts 5
+Table 9. (Continued) Grade Five Rubric - Compose and Create
+
+          Compose and Create (Speaking, Writing, and Other Forms of Representing): Grade 5
+                                      Meeting Expectations
+ (Overall, visual, multimedia, oral, and written compositions are clear and straightforward. They are
+  adequately developed and appropriate to audience and purpose. They clearly present the main
+                                                 ideas.)
+                Message                               Use of Strategies                     Cues and Conventions
+ Compositions and presentations are         Uses, with practice and teacher           Demonstrates control over the
+ clear and thoughtful.                      support, the important before,            elements of communication and
+                                            during, and after speaking, writing,      language. Few errors. Errors do not
+                                            and other forms of representing           interfere with communication.
+                                            tasks.
+ The visual, multimedia, oral, or written   Demonstrates understanding of and         The language is straightforward, clear,
+ message is clear and straightforward.      uses, with relative ease, an expanding    and appropriate. Appropriate language
+ It has a recognizable focus and an         range of before, during, and after        register is used. Tone and voice are
+ awareness of audience. It demonstrates     strategies to communicate meaning         evident.
+ a clear understanding of the subject       when creating visual, multimedia, oral,   A purpose and a focus are established.
+ matter. Most ideas are correct and         and print texts including considering     The composition sticks to the topic and
+ supporting details are appropriate         purpose, role, audiences, forms, and      makes sense. Awareness of intended
+ for the intended message. The text         topic; generating and developing, with    audience is revealed. Composition
+ shows predictable and straightforward      some direction, ideas; using a variety    flows but has a few problems in
+ organization and development.              of strategies such as brainstorming,      organization. Details are specific and
+                                            visuals, formulating questions, etc.;
+ Ideas and content are adequately                                                     make ideas clear.
+                                            using organizers while planning;
+ developed through details and
+                                            creating drafts and experimenting         Some variety in sentence structures
+ examples.
+                                            with end product, self-monitoring and     and length is used. Common sentence
+ The text is reasonably clear, focused,     conferring with others; practising and    constructions are correct. Most
+ and well supported.                        sharing final product with audience.      words and expressions fit the type
+                                                                                      of composition. Usage, spelling,
+ Organization and form are appropriate      Revises and polishes compositions.        punctuation, and capitalization are
+ and ideas are generally presented
+                                                                                      generally correct. Cursive writing is
+ coherently.
+                                                                                      used with some support. Ideas are
+ Appropriate and varied sentence                                                      clear despite any mechanical errors.
+ structure and word choices are evident.
+
+
+
+
+English Language Arts 5                                                                                                     41
+Table 9. (Continued) Grade Five Rubric - Compose and Create
+
+           Compose and Create (Speaking, Writing, and Other Forms of Representing): Grade 5
+                                  Beginning to Meet Expectations
+      (Overall, visual, multimedia, oral, and written compositions are straightforward/acceptable yet
+     unrefined. They demonstrate limited awareness of purpose and audience and some control over
+            language elements. Mechanical errors interfere occasionally with communication.)
+               Message                             Use of Strategies                      Cues and Conventions
+Compositions and presentations are       Uses, with prompting and support,         Demonstrates some control over
+straightforward and unrefined.           only a few before, during, and after      the elements of communication
+                                         speaking, writing, and other forms of     and language and a basic use of
+                                         representing strategies but does not      the conventions. Errors interfere
+                                         always know when to employ them.          somewhat with communication.
+The visual, multimedia, oral, or         Demonstrates some knowledge of            The language is acceptable but
+written message is apparent but          and uses the basic strategies needed      unsophisticated. Language register
+unrefined. It has a limited focus        to communicate meaning (before,           may not be appropriate for audience or
+and some awareness of audience.          during, and after) when creating          purpose.
+It demonstrates a basic or uneven        visual, multimedia, oral, and print       Purpose is established. Composition
+understanding of the subject matter.     texts including considering purpose,      attempts to stick to the topic and
+Some of the ideas are correct and        role, audiences, forms, and topic         makes sense but is not fully clear.
+supporting details are adequate for      occasionally; making limited use of       Limited awareness of audience and/or
+the intended message. The text shows     organizers while planning; creating       task is demonstrated.
+acceptable but unrefined organization    simple drafts (may experiment with
+and development.                         end product if encouraged); beginning     Parts that do not fit disrupt the flow.
+                                         to self-monitor; conferring with others   The composition lacks a smooth flow
+Ideas and content may be developed
+                                         sometimes; completing rudimentary         from beginning to middle to end.
+with limited details and examples.
+                                         revisions; practising, with guidance,     Details are not specific enough to add
+Text has some focus and support.         and sharing, with prompting, the final    to the clarity of ideas. They may simply
+                                         product.                                  be listed or repeated.
+The text may be somewhat
+disorganized or unclearly structured.                                              Common and simple sentence
+                                                                                   constructions/patterns are used but
+Basic sentence structure and limited
+                                                                                   vary little in length and structure.
+vocabulary are used to convey a simple
+message.                                                                           Words and expressions sometimes
+                                                                                   do not fit or enhance the type of
+                                                                                   composition.
+                                                                                   Words are sometimes vague. Errors
+                                                                                   are made in paragraphing, layout,
+                                                                                   usage, spelling, capitalization, and
+                                                                                   punctuation. Cursive writing is not
+                                                                                   always used and writer needs support
+                                                                                   and instruction. Errors interfere
+                                                                                   somewhat with communication.
+
+
+
+
+42                                                                                                 English Language Arts 5
+Table 9. (Continued) Grade Five Rubric - Compose and Create
+
+          Compose and Create (Speaking, Writing, and Other Forms of Representing): Grade 5
+                                  Not Yet Meeting Expectations
+ (Overall, visual, multimedia, oral, and written compositions are limited, unfocused, and/or unclear.
+  They demonstrate uneven/uncertain control over the language elements. Frequent mechanical
+                                 errors often impede understanding.)
+                Message                             Use of Strategies                       Cues and Conventions
+ Compositions and presentations are       Requires repeated modelling of             Demonstrates an uncertain and
+ basic. They are limited, unfocused       before, during, and after speaking,        simplistic grasp of the basic elements
+ and/or unclear.                          writing, and other forms of                of communication and language.
+                                          representing strategies and requires       Errors interfere with communication.
+                                          continuous coaching on when and
+                                          how to use them.
+ The message is limited, over-            Demonstrates limited or inadequate         The language is unclear, inappropriate,
+ generalized, or unclear. It has an       knowledge of and uses only some of         or immature.
+ unclear focus and shows little or        the before, during, and after strategies   Language register may not be
+ no awareness of audience. Ideas          needed to communicate meaning              appropriate for audience or purpose.
+ are poorly developed, elementary,        when creating visual, multimedia, oral,    A minimal grasp of the conventions of
+ or unclear. Few supporting details       and print texts including showing          language is demonstrated.
+ are included; some are vague or          little awareness of purpose, role,
+ inappropriate to the intended            audiences, forms, and topic; using, with   Purpose or focus is not clear.
+ message. The text shows limited,         support, teacher-selected organizers       Composition does not stick to the topic
+ unclear, or unfocused organization and   while planning; creating drafts rarely;    or make sense. Little or no awareness
+ development.                             conferring, with prompting, with           of the audience and/or task is evident.
+                                          adults; revising, with direction, in a     The parts of the composition do not
+ Ideas and content are supported by
+                                          limited way; refusing or rarely sharing    fit together well. Details are lacking,
+ few, if any, details and examples.
+                                          final product.                             inappropriate, or random.
+ There is little discernible shape or
+ direction.                                                                          Sentences are incomplete, run-on, or
+                                                                                     simple in structure.
+ Awkward sentence structure and
+ inadequate vocabulary which interfere                                               Word choice is often immature,
+ with understanding are used.                                                        overused, or incorrect. Words and
+                                                                                     expressions may not fit the type of
+                                                                                     composition.
+                                                                                     The profusion of structural and
+                                                                                     mechanical errors, including
+                                                                                     handwriting, makes the message
+                                                                                     difficult to understand. Errors seriously
+                                                                                     interfere with communication.
+
+
+
+
+English Language Arts 5                                                                                                        43
+Progress Reporting
+Effective language arts programs employ appropriate assessment, evaluation, and reporting processes. In English
+language arts, assessment and evaluation should:
+  • reflect the three K-12 goals of English language arts and the grade-level learning outcomes associated with
+    each goal
+  • focus on what students have learned and can do
+  • be congruent with instruction and based on meaningful tasks
+  • be based on appropriate criteria that students know and understand
+  • inform students and parents in a clear, accurate, and practical way.
+In addition to newsletters, folders, and portfolios, report cards and parent-student-teacher interviews are part of
+school communication with parents. Although report card formats vary, there should be space for feedback on
+the language arts K-12 goals and strands (see sample form below).
+Table 10. Sample Feedback Form
+
+     English Language Arts                Outcomes        Achievement                   Comments
+           K-12 Goals                                        Level             (Strengths, Needs, Next Steps)
+ Comprehends and               Views.
+ responds competently and
+ confidently to a range of     Listens.
+ texts.
+                               Reads.
+
+ Composes and creates          Speaks.
+ competently and
+ confidently in a variety of   Writes.
+ forms.
+                               Uses other forms of
+                               representing.
+ Assesses and reflects on      Assesses strengths and
+ learning.                     needs.
+                               Sets goals.
+
+
+How teachers determine grades, marks, or comments should be based on the grade-level outcomes and reflect
+the knowledge, process, and product evaluations used throughout the reporting period.
+
+
+Connections with Other Areas of Study
+There are many possibilities for connecting Grade 5 English Language Arts learning with the learning occurring
+in other subject areas. When making such connections, however, teachers must be cautious not to lose the
+integrity of the learning in any of the subjects. Making connections between subject areas gives students
+experience with transferring knowledge, skills, and strategies and provides rich contexts in which students
+are able to initiate, make sense of, and extend their learnings. When students and teachers make connections
+between subject areas, the possibilities for transdisciplinary inquiries and deeper understanding arise.
+
+
+
+
+44                                                                                           English Language Arts 5
+All areas of study share a common interest in students developing
+their abilities to communicate their learning through speaking,
+writing, and other forms of representing (Compose and Create Goal).
+All areas of study require students to apply their skills and strategies
+for viewing, listening, and reading (Comprehend and Respond Goal).
+All areas of study require students to develop their abilities to reflect
+upon their knowledge, skills, and strategies (Assess and Reflect Goal).
+Students should have many opportunities in each area of study to
+apply authentically what they are learning in English language arts.
+English language arts also provides many opportunities for students
+to apply learning from other subject areas. The contexts, units,
+questions for deeper understanding, and oral, print, and other texts
+in the English language arts program provide many opportunities for
+meaningful connections and possible integration with other areas of
+study. Some examples are shown in Table 11.
+Table 11. Connections to Other Areas of Study
+
+           Context            Opportunities to Make Connections With ...
+ Personal and Philosophical Health Education, Physical Education, Arts
+                            Education
+ Social, Cultural, and       Social Studies, Arts Education, Physical
+ Historical                  Education, Health Education
+ Imaginative and Literary    Arts Education
+ Communicative               Arts Education, Social Studies, Science, Health
+                             Education, Physical Education, Mathematics
+ Environmental and           Science, Health Education, Physical Education
+ Technological
+By using a particular context and identifying a common theme to use
+as an organizer, teachers can ensure that the outcomes from more than
+one subject area can be achieved and students can make connections.
+Integrated, interdisciplinary instruction in a thematic, inquiry, author/
+genre, or interdisciplinary unit, however, must be more than just
+a series of activities. An integrated unit must facilitate students’
+learning of the related disciplines and students’ understanding of
+the conceptual connections. The unit must support understanding
+of ways of knowing the world. In addition, it is necessary to address
+each subject area’s outcomes. If deep understanding is to occur, the
+unit cannot be based on superficial or arbitrarily connected activities
+(Brophy & Alleman, 1991). The outcomes and activities of one area of
+study must not be obscured by the outcomes or activities of another
+area of study (Education Review Office, 1996, p. 13).
+
+
+
+
+English Language Arts 5                                                        45
+Glossary
+Contexts are broad organizers for balancing an English language arts program by ensuring different perspectives
+and ways of knowing are included at each grade level. All instructional units should be related to one or
+more of the five contexts identified in the English language arts curriculum. The five contexts are (i) personal
+and philosophical, (ii) social, cultural, and historical, (iii) imaginative and literary, (iv) communicative, and (v)
+environmental and technological. These contexts also allow for interdisciplinary integration.
+Convention is an accepted practice or agreed-upon rule in representational, spoken, or written language.
+Cueing Systems are sets of cues or clues built into the structure or patterns of communication texts.
+Discourse is a continuous stretch of communication longer than a sentence.
+Efficacy is producing or ensuring the desired effect; power or capacity to produce desired effect; effectiveness in
+operation; effective as a means of addressing an issue, question, challenge, or problem.
+Genre is an identifiable category used to classify texts, usually by form, technique, or content (e.g., novel).
+Grade-appropriate Texts are oral, visual, multimedia (including electronic), and print texts designated as being
+appropriate for shared, guided, and independent viewing, listening, and reading at a specific grade level. These
+texts are intended to reflect curriculum outcomes at different levels of difficulty, in different genres, and from
+different cultural and social perspectives.
+Gradual Release of Responsibility (Scaffolding) is instructional support that moves students in stages from a
+high level of teacher support to independent practice.
+Graphic Organizer is a visual means by which the relationships between and among ideas are portrayed (e.g., a
+Venn diagram).
+Graphophonic Cues and Conventions refer to the sounds of speech (phonology) and how these sounds are
+organized in patterns, pronounced, and graphically represented (spelled).
+Guided Reading is when the teacher uses a before, during, and after structure to guide students as they read a
+selected text and the teacher models key reading strategies.
+Guided Writing is writing in which the teacher teaches a procedure, strategy, or skill and the students then use
+what they have learned to do their own writing.
+Indicators are representative of what students need to know and/or be able to do in order to achieve an
+outcome. Indicators represent the breadth and the depth of the outcome. The list provided in the curriculum
+is not an exhaustive list. Teachers may develop additional and/or alternative indicators but those teacher-
+developed indicators must be reflective of and consistent with the breadth and depth that is defined by the
+given indicators.
+Inquiry involves students in some type of “research” on a specific topic, problem, or issue for learning and action.
+Inquiry is a way of opening up spaces for students’ interests and involving them in as many different aspects of a
+topic, problem, or issue as students can find.
+Interactive Writing is when the teacher and students create the text and share the pen to do the writing and talk
+about the conventions.
+Language Literacy, in a contemporary view, is broader and more demanding than the traditional definitions that
+were limited to the ability to read and write. Literacy now includes the capacity to accomplish a wide range of
+viewing, listening, reading, representing, speaking, writing, and other language tasks associated with everyday
+life. It is multimodal in that meaning can be represented and communicated through multiple channels –
+linguistic (including print), visual, audio, and multimedia (including digital media).
+
+46                                                                                              English Language Arts 5
+Listening is attending to and getting meaning from what is heard using cognitive processing including
+associating ideas, organizing, imagining, and appreciating what is heard – the receptive form of oral language.
+Metacognition is the ability to think about and reflect on one’s own thinking and learning processes.
+Modelled Reading is when the teacher or other fluent reader reads aloud to the students.
+Modelled Writing is when the teacher demonstrates in front of students, creating the text and thinking aloud
+about the writing strategies and skills being used.
+Multimedia Texts are texts that use a combination of two or more media (i.e., audio, images, video, animation,
+graphics, print text, digital applications). Multimedia texts can encompass interactive texts and complex
+interactive simulations.
+Onsets are part of the single-syllable word that precedes the vowel.
+Other Cues and Conventions associated with effective communication include handwriting, font choices,
+graphics, illustrations, layout, and additional enhancements such as colour, sound, and movement.
+Outcome is a statement of what students are expected to know and be able to do by the end of a course in a
+particular area of study at a particular grade level.
+Phoneme is the smallest unit of sound in the language.
+Phonemic awareness is to consciously attend to the sounds in the language.
+Portfolio Assessment is a compilation of evidence collected over time of a student’s learning. It demonstrates
+the student’s efforts, progress, and achievement. A portfolio can be cumulative, working/developmental, or
+showcase in nature.
+Pragmatic Cues and Conventions refer to the style of language that is used in a given context and take into
+consideration the communication purpose, situation, and audience. The pragmatic cueing system is often
+considered to be the social aspect of language.
+Questions for Deeper Understanding are questions that are thought provoking, probe a matter of considerable
+importance, and require movement beyond present understanding and studying. They often lead to other
+questions posed by students.
+Reading is an interactive-constructive process in which readers comprehend, interpret, and respond to print text
+using the cues and conventions of that text.
+Register (language) is a socially defined variety of language such as conversational, informal, formal, frozen, or
+slang.
+Representing is conveying information or expressing oneself using verbal or written means as well as non-verbal
+means such as drawings, models, graphics, photography, dramatization, video, or physical performance.
+Rimes are part of the single syllable word that includes the vowel and all succeeding consonants.
+Rubrics offer criteria that describe student performance at various levels of proficiency. They provide guidelines
+for judging quality and make expectations explicit. Holistic (yield a single score or rating) and analytic (yield
+feedback on specific dimensions or features) rubrics can be used to judge the degree, understanding, or
+proficiency revealed through students’ products or presentations.
+Semantic, Lexical, and Morphological Cues and Conventions refer to the meaning and structure of words.
+Shared Reading is reading aloud by the teacher while the students follow along using individual copies, a class
+chart, or a big book.
+
+
+
+English Language Arts 5                                                                                              47
+Shared Writing/Language Experience is when the teacher and students create the text together; the teacher
+does the actual writing, and the students assist with spelling.
+Skill is an acquired ability to perform well and proficiently.
+Speaking is the act of communicating through oral language. It is the act of transmitting and exchanging
+information, ideas, and experiences using oral language in formal and informal situations. Speech is the
+expressive form of oral language.
+Strand is one of the core elements of an integrated English language arts program. The six language strands
+identified in this curriculum are viewing, listening, reading, representing, speaking, and writing.
+Strategy is a systematic plan for solving a problem or executing a task.
+Syntactical Cues and Conventions refer to the structure (word order) and parts of sentences, and the rules that
+govern the sentences (e.g., subject-verb agreement).
+Text is any form of communication, whether visual, oral, written, or multimedia (including digital media), that
+constitutes a coherent, identifiable unit or artefact (e.g., poem, poster, conversation, model) with a definable
+communicative function. It refers to visual communications such as illustrations, video, and computer displays;
+oral communications, including conversations, speeches, dramatizations; and printed communications in their
+varied forms.
+Textual Cues and Conventions refer to the type or kind of text and the features that are associated with its
+organization.
+Theme is an overarching idea, question, or topic that is developed in a unit and provides a focus and frame for
+the unit. The theme acts as a unifying concept through which all the content, skills, strategies, materials, and
+actions for both teachers and students can be organized.
+Unit (an instructional unit) is a focused and organized block of time that helps students through a variety of
+experiences, lessons, and texts. It is planned to help students achieve a set of curriculum outcomes. A multi-
+genre thematic or topical unit is built around a theme or topic and includes a range of visual, oral, print, and
+multimedia (including electronic) texts. A multi-genre inquiry unit is built around important questions or issues
+that students want to learn more about through research. A genre unit is focused on a specific genre of text (e.g.,
+narrative) and an author unit is focused on the work of a particular author or illustrator.
+Viewing is attending to and getting meaning from visual representation including pictures, signs, videos, charts,
+drawings, diagrams, sculptures, mime, tableaux, drama/dance, and other performances.
+WCPM stands for Words Correct per Minute.
+Writing is a recursive process of recording language graphically by hand or other means to explore and
+communicate ideas, information, and experiences; the writing process consists of many aspects including
+planning, drafting, revising, and publishing.
+
+
+
+
+48                                                                                           English Language Arts 5
+References
+Beck, I. L., McKeown, M. G., Hamilton, R. L., & Kucan, L. (1997). Questioning the author: An approach for enhancing
+         student engagement with text. Newark, DE: International Reading Association.
+Brophy, J. & Alleman, J. (1991). A caveat: Curriculum integration isn’t always a good idea. Educational Leadership,
+       49, 66.
+Carr, E. M. & Ogle, D. (1987). K-W-L plus: A strategy for comprehension and summarization. Journal of Reading, 30,
+         626-631.
+Cox, C. (1999). Teaching language arts: A student- and response-centered classroom. Boston, MA: Allyn & Bacon.
+Daniels, H. (1994). Literature circles: Voice and choice in the student-centered classroom. York, ME: Stenhouse.
+Davey, B. (1983). Think aloud – modelling the cognitive process of reading comprehension. Journal of Reading,
+       27, 44-47.
+Education Review Office. (1996). Science in schools – Implementing the 1995 science curriculum (5). Wellington:
+       Crown Copyright.
+Eeds, M. & Wells, D. (1989). Grand conversations: An exploration of meaning construction in literary study groups.
+       Research in the Teaching of English, 23, 4-29.
+Fullan, M., Hill, P., & Crévola, C. (2006). Breakthrough. Thousand Oaks, CA: Corwin Press.
+Goldenberg, C. (1993). Instructional conversations: Promoting comprehension through discussion. The Reading
+      Teacher, 46, 316-326.
+Gregory, G. H. & Chapman, C. (2002). Differentiated instructional strategies: One size doesn’t fit all. Thousand Oaks,
+       CA: Corwin Press, Inc.
+Harste, J. C. (2000). Six points of departure. In Berghoff, B., Egawa, K. A., Harste, J. C., & Hoonan, B. T. (Eds.). Beyond
+        reading and writing: Inquiry, curriculum, and multiple ways of knowing. Urbana, IL: National Council of
+        Teachers of English.
+Harste, J. C., Short, K. B., & Burke, C. L. (1988). Creating classrooms for authors: The reading-writing connection.
+        Portsmouth, NH: Heinemann.
+Harvey, S. & Goudvis, A. (2000). Strategies that work: Teaching comprehension to enhance understanding. York, ME:
+       Stenhouse.
+Hoyt, L. (2000). Snapshots: Literacy minilessons up close. Portsmouth, NH: Heinemann.
+Jamieson, D. G. & Tremblay, R.E. (2005). Newsletter. Ottawa, ON: Canadian Language and Literacy Research
+       Network.
+Kuhlthau, C. C., Maniotes, L.K., & Caspari, A.K. (2007). Guided inquiry: A framework for learning through school
+       libraries in 21st century schools. Westport, CN: Libraries Unlimited.
+Laverick, C. (2002). B-D-A strategy: Reinventing the wheel can be a good thing. Journal of Adolescent and Adult
+        Literacy, 46, 144-149.
+Manzo, A. V. (1969). The reQuest procedure. Journal of Reading, 11, 123-126.
+Marzano, R. J. (2007). The art and science of teaching: A comprehensive framework for effective instruction.
+      Alexandria, VA: Association for Supervision and Curriculum Development.
+
+English Language Arts 5                                                                                                  49
+Matchullis, L. & Mueller, B. (1996). Success for all learners: A handbook on differentiating instruction, a resource for
+      kindergarten to senior 4. Winnipeg, MB: Manitoba Education and Training.
+McConnell, S. (1992). Talking drawings: A strategy for assisting learners. Journal of Reading, 36, 260-269.
+McTighe, J. & Lyman, F. T. (1992). Mind tools for matters of the mind. In A. Costa, J. Bellanca, & R. Fogarty (Eds.). If
+      minds matter: A foreword to the future, 2, 71-90. Palantine, IL: IRI/Skylight Pub.
+Mills, H. & Donnelly, A. (2001). From the ground up: Creating a culture of inquiry. Portsmouth, NH: Heinemann
+         Educational Books, Ltd.
+Moffett, J. & Wagner, B. (1992). Student-centered language arts and reading, K-12: A handbook for teachers. Boston,
+       MA: Houghton Mifflin Co.
+Palincsar, A. S. & Brown, A. L. (1986). Interactive teaching to promote independent learning from text. The Reading
+        Teacher, 39, 771-777.
+Raphael, T. (1986). Teaching question answer relationships, revisited. The Reading Teacher, 39, 516-522.
+Richards, J. C. & Anderson, N. A. (2003). What do I see? What do I think? What do I wonder? (STW): A visual literacy
+       strategy to help emergent readers focus on storybook illustrations. The Reading Teacher, 56, 442-444.
+Robb, L. (2006). Teaching reading. New York, NY: Scholastic Inc.
+Saskatchewan Ministry of Education. (2009). Core Curriculum: Principles, time allocations, and credit policy. Regina,
+       SK: Government of Saskatchewan.
+Science Research Associates. (2000). “TQLR”, SRA reading laboratory, level 3. Chicago, IL: Science Research
+       Associates, Inc.
+Sebranek, P. & Kemper, D. (1995). Sourcebook 8000. Burlington, WI: Write Source Education Publishing House.
+Stauffer, R. (1975). Directing the reading-thinking process. New York, NY: Harper & Row.
+Tompkins, G. E. (2004). 50 literacy strategies step by step (2nd ed.). Upper Saddle River, NJ: Pearson Education.
+Vacca, R. T. & Vacca, J. L. (1999). Content area reading: Literacy and learning across the curriculum. New York, NY:
+        Addison-Wesley Education Publishers Inc.
+Van Allen, R. (1976). Language experience activities. Boston, MA: Houghton Mifflin.
+Western Canadian Protocol for Collaboration in Basic Education. (1998). The common curriculum framework for
+       English language arts, kindergarten to grade 12. Winnipeg, MB: The Crown in right of Governments of
+       Alberta, British Columbia, Manitoba, Northwest Territories, Saskatchewan, and Yukon Territory.
+Whipple, B. (1975). Dynamics of discussion: Grouptalk. Belmont, MA: Porthole Press.
+Wiggins, G. & McTighe, J. (2005). Understanding by design (2nd ed.). Alexandria, VA: Association for Supervision
+       and Curriculum Development.
+Wiggins, G. & McTighe, J. (2007). Schooling by design: Mission, action, and achievement. Alexandria, VA: Association
+       for Supervision and Curriculum Development.
+Wood, K. D. (1994). Practical strategies for improving instruction. Columbus, OH: National Middle School
+       Association.
+
+
+
+
+50                                                                                                 English Language Arts 5
+Feedback Form
+The Ministry of Education welcomes your response to this curriculum and invites you to complete and return this
+feedback form.
+Grade 5 English Language Arts Curriculum
+1. Please indicate your role in the learning community:
+
+       parent                          teacher                 resource teacher
+
+       guidance counsellor             school administrator    school board trustee
+
+       teacher librarian               school community council member
+
+       other ___________________________________________________
+
+    What was your purpose for looking at or using this curriculum?
+
+
+
+
+2. a) Please indicate which format(s) of the curriculum you used:
+
+       print
+
+       online
+
+    b) Please indicate which format(s) of the curriculum you prefer:
+
+       print
+
+       online
+
+4. Please respond to each of the following statements by circling the applicable number.
+
+The curriculum content is:                  Strongly Agree       Agree                Disagree     Strongly
+                                                                                                   Disagree
+appropriate for its intended purpose              1                    2                 3             4
+suitable for your use                             1                    2                 3             4
+clear and well organized                          1                    2                 3             4
+visually appealing                                1                    2                 3             4
+informative                                       1                    2                 3             4
+5. Explain which aspects you found to be:
+
+    Most useful:
+
+
+
+
+    Least useful:
+
+
+
+
+English Language Arts 5                                                                                       51
+6. Additional comments:
+
+
+
+
+7. Optional:
+
+     Name: ______________________________________
+
+     School: ______________________________________
+
+     Phone: ____________________ Fax: ____________________
+
+
+Thank you for taking the time to provide this valuable feedback.
+
+
+Please return the completed feedback form to:
+
+
+          Executive Director
+          Curriculum and E-Learning Branch
+          Ministry of Education
+          2220 College Avenue
+          Regina SK S4P 4V9
+          Fax: 306-787-2223
+
+
+
+
+52                                                                 English Language Arts 5
+

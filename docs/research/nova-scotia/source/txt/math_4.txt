@@ -1,0 +1,374 @@
+Mathematics 4
+Outcomes
+
+
+
+
+                2022
+Website References
+Website references contained within this document are provided solely as a convenience and do not constitute
+an endorsement by the Department of Education of the content, policies, or products of the referenced website.
+The department does not control the referenced websites and subsequent links, and is not responsible for the
+accuracy, legality, or content of those websites. Referenced website content may change without notice.
+Regional Education Centres and educators are required under the Department’s Public School Programs
+Network Access and Use Policy to preview and evaluate sites before recommending them for student use. If an
+outdated or inappropriate site is found, please report it to <curriculum@novascotia.ca>.
+
+
+
+
+Mathematics Grade 4
+© Crown copyright, Province of Nova Scotia, 2022
+Prepared by the Department of Education and Early Childhood Development
+This is the most recent version of the current curriculum materials as used by teachers in Nova Scotia.
+The contents of this publication may be reproduced in part provided the intended use is for noncommercial
+purposes and full acknowledgment is given to the Nova Scotia Department of Education
+Mathematics Grade 4 Outcomes
+     N01 Students will be expected to represent and partition whole numbers to 10 000.
+     Performance Indicators:
+     N01.01     Read a given four-digit numeral without using the word “and.”
+     N01.02     Record numerals for numbers expressed orally, concretely, pictorially, and/or symbolically
+                as expressions, using proper spacing without commas.
+     N01.03     Write a given numeral, 0 to 10 000, in words.
+     N01.04     Represent a given numeral using a place-value chart or diagrams.
+     N01.05     Express a given numeral in expanded notation (e.g., 4321 = 4000 + 300 + 20 + 1).
+     N01.06     Write the numeral represented by a given expanded notation.
+     N01.07     Explain the meaning of each digit in a given four-digit numeral.
+     N01.08     Represent a given number in a variety of ways and explain how they are equivalent.
+     N01.09     Read a given number word, 0 to 10 000.
+     N01.10     Represent a given number using expressions.
+
+     N02 Students will be expected to compare and order numbers to 10 000.
+     Performance Indicators:
+     N02.01 Order a given set of numbers in ascending or descending order, and explain the order by
+     making references to place value.
+     N02.02 Create and order three different four-digit numerals.
+     N02.03 Identify the missing numbers in an ordered sequence and on a number line.
+     N02.04 Identify incorrectly placed numbers in an ordered sequence and on a number line.
+     N02.05 Place numbers in relative order on an open number line.
+     N02.06 Place numbers on a number line containing benchmark numbers for the purpose of
+     comparison.
+     N02.07 Compare numbers based on a variety of methods.
+
+     N03 Students will be expected to demonstrate an understanding of addition and subtraction of
+     numbers with answers to 10 000 (limited to three- and four-digit numerals) by:
+        ● using personal strategies for adding and subtracting
+        ● estimating sums and differences
+        ● solving problems involving addition and subtraction
+     Performance Indicators:
+     N03.01     Represent concretely, pictorially, and symbolically the addition and subtraction of whole
+                numbers, limited to three- and four-digit numerals.
+     N03.02     Determine the sum of two given numbers, limited to three- and four-digit numerals, using a
+                personal strategy, and record the process symbolically.
+     N03.03     Determine the difference of two given numbers, limited to three- and four-digit numerals,
+                using a personal strategy, and record the process symbolically.
+     N03.04     Describe a situation in which an estimate rather than an exact answer is sufficient.
+     N03.05     Estimate sums and differences using different strategies.
+
+Mathematics 4: Outcomes (2022)                                                                               1
+    N03.06    Create and solve problems that involve addition and subtraction of two or more numbers,
+              limited to three- and four-digit numerals.
+    N03.07    Explain mental mathematics strategies that could be used to determine a sum or difference.
+    N03.08    Determine a sum or difference of one-, two-, and three-digit numerals efficiently, using
+              mental mathematics strategies.
+
+    N04 Students will be expected to apply and explain the properties of 0 and 1 for multiplication and the
+    property of 1 for division.
+    Performance Indicators:
+    N04.01    Determine the answer to a given question involving the multiplication of a number by 1, and
+              explain the answer using the property of 1 in multiplication.
+    N04.02    Determine the answer to a given question involving the multiplication of a number by 0, and
+              explain the answer using the property of 0 in multiplication.
+    N04.03    Determine the answer to a given question involving the division of a number by 1, and
+              explain the answer using the property of 1 in division.
+
+    N05 Students will be expected to describe and apply mental mathematics strategies, to recall basic
+    multiplication facts to 9 × 9, and to determine related division facts.
+    Performance Indicators:
+    N05.01    Describe the mental mathematics strategy used to determine basic multiplication or division
+              facts.
+    N05.02    Use and describe a personal strategy for determining the multiplication facts.
+    N05.03    Use and describe a personal strategy for determining the division facts.
+    N05.04    Quickly recall basic multiplication facts up to 9 × 9.
+
+    N06 Students will be expected to demonstrate an understanding of multiplication (one-, two-, or three-
+    digit by one-digit numerals) to solve problems:
+       ● using personal strategies for multiplication, with and without concrete materials
+       ● using arrays to represent multiplication
+       ● connecting concrete representations to symbolic representations
+       ● estimating products
+       ● applying the distributive property
+    Performance Indicators:
+    N06.01    Model a given multiplication problem, using the distributive property
+              (e.g., 8 × 365 = (8 × 300) + (8 × 60) + (8 × 5)).
+    N06.02    Model the multiplication of two given numbers, limited to one-, two-, or three-digit by one-
+              digit numerals, using concrete or visual representations, and record the process
+              symbolically.
+    N06.03    Create and solve multiplication story problems, limited to one-, two-, or three-digit by one-
+              digit numerals, and record the process symbolically.
+    N06.04    Estimate a product using a personal strategy (e.g., 2 × 243 is close to or a little more than 2 ×
+              200, or close to or a little less than 2 × 250).
+    N06.05    Model and solve a given multiplication problem using an array, and record the process.
+    N06.06    Determine the product of two given numbers using a personal strategy, and record the
+              process symbolically.
+
+
+2                                                                                      Mathematics 4: Outcomes (2022)
+     N07 Students will be expected to demonstrate an understanding of division (one-digit divisor and up to
+     two-digit dividend) to solve problems by:
+        ● using personal strategies for dividing, with and without concrete materials
+        ● estimating quotients
+        ● relating division to multiplication
+     Performance Indicators:
+     N07.01     Model the division of two given numbers without a remainder, limited to a one-digit divisor
+                and up to a two-digit dividend, using concrete or visual representations, and record the
+                process pictorially and symbolically.
+     N07.02     Model the division of two given numbers with a remainder, limited to a one-digit divisor and
+                up to a two-digit dividend, using concrete or visual representations, and record the process
+                pictorially and symbolically. (It is not intended that remainders be expressed as decimals or
+                fractions.)
+     N07.03     Solve a given division problem, using a personal strategy, and record the process
+                symbolically.
+     N07.04     Create and solve division word problems involving a one- or two-digit dividend, and record
+                the process pictorially and symbolically.
+     N07.05     Estimate a quotient using a personal strategy
+                (e.g., 86 ÷ 4 is close to 80 ÷ 4 or close to 80 ÷ 5).
+     N07.06     Solve a given division problem by relating division to multiplication
+                (e.g., for 80 ÷ 4, we know that 4 × 20 = 80, so 80 ÷ 4 = 20).
+
+     N08 Students will be expected to demonstrate an understanding of fractions less than or equal to 1 by
+     using concrete, pictorial, and symbolic representations to:
+         ●  name and record fractions for the parts of one whole or a set
+         ●  compare and order fractions
+         ●  model and explain that for different wholes, two identical fractions may not represent the same
+            quantity
+        ● provide examples of where fractions are used
+     Performance Indicators:
+     N08.01     Represent a given fraction of one whole object, region, or a set using concrete materials.
+     N08.02     Identify a fraction from its given concrete representation.
+     N08.03     Name and record the shaded and non-shaded parts of a given whole object, region, or set.
+     N08.04     Represent a given fraction pictorially by shading parts of a given whole object, region, or set.
+     N08.05     Explain how denominators can be used to compare two given unit fractions with a
+                numerator of 1.
+     N08.06     Order a given set of fractions that have the same numerator, and explain the ordering.
+     N08.07     Order a given set of fractions that have the same denominator, and explain the ordering.
+                                                      1
+     N08.08     Identify which of the benchmarks 0, , or 1 is closer to a given fraction.
+                                                     2
+     N08.09     Name fractions between two given benchmarks on a number line.
+     N08.10     Order a given set of fractions by placing them on a number line with given benchmarks.
+     N08.11     Provide examples of instances when two identical fractions may not represent the same
+                quantity.
+     N08.12     Provide, from everyday contexts, an example of a fraction that represents part of a set and
+                an example of a fraction that represents part of one whole
+
+Mathematics 4: Outcomes (2022)                                                                                     3
+    N09 Students will be expected to describe and represent decimals (tenths and hundredths) concretely,
+    pictorially, and symbolically.
+    Performance Indicators:
+    N09.01    Write the decimal for a given concrete or pictorial representation of part of a set, part of a
+              region, or part of a unit of measure.
+    N09.02    Represent a given decimal using concrete materials or a pictorial representation.
+    N09.03    Explain the meaning of each digit in a given decimal.
+    N09.04    Represent a given decimal using money values (dimes and pennies).
+    N09.05    Record a given money value using decimals.
+    N09.06    Provide examples of everyday contexts in which tenths and hundredths are used.
+    N09.07    Model, using manipulatives or pictures, that a given tenth can be expressed as a hundredth
+              (e.g., 0.9 is equivalent to 0.90, or 9 dimes is equivalent to 90 pennies).
+    N09.08    Read decimal numbers correctly.
+
+    N10 Students will be expected to relate decimals to fractions and fractions to decimals (to
+    hundredths).
+    Performance Indicators:
+    N10.01    Express, orally and symbolically, a given fraction with a denominator of 10 or 100 as a
+              decimal.
+    N10.02    Read decimals as fractions (e.g., 0.5 is zero and five tenths).
+    N10.03    Express, orally and symbolically, a given decimal in fraction form.
+    N10.04    Express a given pictorial or concrete representation as a fraction or decimal
+                                                                                         15
+              (e.g., 15 shaded squares on a hundredth grid can be expressed as 0.15 or      ).
+                                                                                          100
+    N10.05    Express, orally and symbolically, the decimal equivalent for a given fraction
+                    50
+              (e.g., can be expressed as 0.50).
+                  100
+
+
+
+
+    N11 Students will be expected to demonstrate an understanding of addition and subtraction of
+    decimals (limited to hundredths) by
+       ● estimating sums and differences
+       ● using mental mathematics strategies to solve problems
+       ● using personal strategies to determine sums and differences
+    Performance Indicators:
+    N11.01    Predict sums and differences of decimals, using estimation strategies.
+    N11.02    Solve problems, including money problems, that involve addition and subtraction of
+              decimals (limited to hundredths), using personal strategies.
+    N11.03    Ask students to determine which problems do not require an exact solution.
+    N11.04    Determine the approximate solution of a given problem not requiring an exact answer.
+    N11.05    Count back change for a given purchase.
+    N11.06    Determine an exact solution using mental computation strategies.
+
+
+
+
+4                                                                                     Mathematics 4: Outcomes (2022)
+     PR01 Students will be expected to identify and describe patterns found in tables and charts, including
+     a multiplication chart.
+     Performance Indicators:
+     PR01.01 Identify and describe a variety of patterns in a multiplication chart.
+     PR01.02 Determine the missing element(s) in a given table or chart.
+     PR01.03 Identify the error(s) in a given table or chart.
+     PR01.04 Describe the pattern found in a given table or chart.
+
+     PR02 Students will be expected to translate among different representations of a pattern (a table, a
+     chart, or concrete materials).
+     Performance Indicators:
+     PR02.01 Create a table or chart from a given concrete representation of a pattern.
+     PR02.02 Create a concrete representation of a given pattern displayed in a table or chart.
+     PR02.03 Translate between pictorial, contextual, and concrete representations of a pattern.
+     PR02.04 Explain why the same relationship exists between the pattern in a table and its concrete
+             representation.
+
+     PR03 Students will be expected to represent, describe, and extend patterns and relationships, using
+     charts and tables, to solve problems.
+     Performance Indicators:
+     PR03.01 Translate the information in a given problem into a table or chart.
+     PR03.02 Identify, describe, and extend the patterns in a table or chart to solve a given problem.
+
+     PR04 Students will be expected to identify and explain mathematical relationships, using charts and
+     diagrams, to solve problems.
+     Performance Indicators:
+     PR04.04 Identify a sorting rule for a given Venn diagram.
+     PR04.05 Describe the relationship shown in a given Venn diagram when the circles overlap, when one
+             circle is contained in the other, and when the circles are separate.
+     PR04.06 Determine where new elements belong in a given Venn diagram.
+     PR04.07 Solve a given problem by using a chart or diagram to identify mathematical relationships.
+
+     PR05 Students will be expected to express a given problem as an equation in which a symbol is used
+     to represent an unknown number.
+     Performance Indicators:
+     PR 05.01 Explain the purpose of the symbol in a given addition, subtraction, multiplication, or division
+              equation with one unknown (e.g., 36 ÷ � = 6).
+     PR 05.02 Express a given pictorial or concrete representation of an equation in symbolic form.
+     PR 05.03 Identify the unknown in a problem; represent the problem with an equation; and solve the
+              problem concretely, pictorially, and/or symbolically.
+     PR 05.04 Create a problem in context for a given equation with one unknown.
+
+
+
+
+Mathematics 4: Outcomes (2022)                                                                                  5
+    PR06 Students will be expected to solve one-step equations involving a symbol to represent an
+    unknown number.
+    Performance Indicators:
+    PR06.01 Represent and solve a given one-step equation concretely, pictorially, or symbolically.
+    PR06.02 Solve a given one-step equation using guess and test.
+    PR06.03 Describe, orally, the meaning of a given one-step equation with one unknown.
+    PR06.04 Solve a given equation when the unknown is on the left or right side of the equation.
+    PR06.05 Represent and solve a given addition or subtraction problem involving a “part-part-whole” or
+            comparison context using a symbol to represent the unknown.
+    PR06.06 Represent and solve a given multiplication or division problem involving equal grouping or
+            partitioning (equal sharing) using symbols to represent the unknown.
+    PR06.07 Solve equations using a symbol to represent the unknown.
+
+    M01 Students will be expected to read and record time using digital and analog clocks, including 24-
+    hour clocks.
+    Performance Indicators:
+    M01.01    State the number of hours in a day.
+    M01.02    Express the time orally and numerically from a 12-hour analog clock.
+    M01.03    Express the time orally and numerically from a 24-hour analog clock.
+    M01.04    Express the time orally and numerically from a 12-hour digital clock.
+    M01.05    Express the time orally and numerically from a 24-hour digital clock.
+    M01.06    Describe time orally as “minutes to” or “minutes after” the hour.
+    M01.07    Explain the meaning of a.m. and p.m., and provide an example of an activity that occurs
+              during the a.m., and another that occurs during the p.m.
+
+    M03 Students will be expected to demonstrate an understanding of area of regular and irregular 2-D
+    shapes by:
+       ●   recognizing that area is measured in square units
+       ●   selecting and justifying referents for the units square centimetre (cm2 ) or square metre (m2)
+       ●   estimating area using referents for cm2 or m2
+       ●   determining and recording area (cm2 or m2)
+       ●   constructing different rectangles for a given area (cm2 or m2) in order to demonstrate that
+           many different rectangles may have the same area
+    Performance Indicators:
+    M03.01    Describe area as the measure of surface recorded in square units.
+    M03.02    Identify and explain why the square is the most efficient unit for measuring area.
+    M03.03    Provide a referent for a square centimetre, and explain the choice.
+    M03.04    Provide a referent for a square metre, and explain the choice.
+    M03.05    Determine which standard square unit is represented by a given referent.
+    M03.06    Estimate the area of a given 2-D shape using personal referents.
+    M03.07    Determine the area of a regular 2-D shape, and explain the strategy.
+    M03.08    Determine the area of an irregular 2-D shape, and explain the strategy.
+    M03.09    Construct a rectangle for a given area.
+    M03.10    Demonstrate that many rectangles are possible for a given area by drawing at least two
+              different rectangles for the same given area.
+
+
+6                                                                                   Mathematics 4: Outcomes (2022)
+     G01 Students will be expected to describe and construct rectangular and triangular prisms.
+     Performance Indicators:
+     G01.01     Identify and name common attributes of rectangular prisms from given sets of rectangular
+                prisms.
+     G01.02     Identify and name common attributes of triangular prisms from given sets of triangular
+                prisms.
+     G01.03     Sort a given set of right rectangular and triangular prisms, using the shape of the base.
+     G01.04     Construct and describe a model of a rectangular and a triangular prism, using materials
+                such as pattern blocks or modelling clay.
+     G01.05     Construct rectangular prisms from their nets.
+     G01.06     Construct triangular prisms from their nets.
+     G01.07     Identify examples of rectangular and triangular prisms found in the environment.
+
+     G03 Students will be expected to demonstrate an understanding of line symmetry by:
+        ● identifying symmetrical 2-D shapes
+        ● creating symmetrical 2-D shapes
+        ● drawing one or more lines of symmetry in a 2-D shape
+     Performance Indicators:
+     G03.01     Identify the characteristics of given symmetrical and non-symmetrical 2-D shapes.
+     G03.02     Sort a given set of 2-D shapes as symmetrical and non-symmetrical.
+     G03.03     Complete a symmetrical 2-D shape, given one-half the shape and its line of symmetry, and
+                explain the process.
+     G03.04     Identify lines of symmetry of a given set of 2-D shapes, and explain why each shape is
+                symmetrical.
+     G03.05     Determine whether or not a given 2-D shape is symmetrical by using an image reflector or by
+                folding and superimposing.
+     G03.06     Create a symmetrical shape with and without manipulatives and explain the process.
+     G03.07     Provide examples of symmetrical shapes found in the environment, and identify the line(s)
+                of symmetry.
+     G03.08     Sort a given set of 2-D shapes as those that have no lines of symmetry, one line of
+                symmetry, or more than one line of symmetry.
+     G03.09     Explain connections between congruence and symmetry using 2-D shapes.
+
+     SP01 Students will be expected to demonstrate an understanding of many-to-one correspondence.
+     Performance Indicators:
+     SP01.01 Compare graphs in which the same data has been displayed using one-to-one and many-to-
+             one correspondences, and explain how they are the same and different.
+     SP01.02 Explain why many-to-one correspondence is sometimes used rather than one-to-one
+             correspondence.
+     SP01.03 Find examples of graphs in print and electronic media, such as newspapers, magazines, and
+             the Internet, in which many-to-one correspondence is used; and describe the
+             correspondence used.
+
+
+
+
+Mathematics 4: Outcomes (2022)                                                                                7
+    SP02 Students will be expected to construct and interpret pictographs and bar graphs involving many-
+    to-one correspondence to draw conclusions.
+    Performance Indicators:
+    SP02.01 Identify an interval and correspondence for displaying a given set of data in a graph, and
+            justify the choice.
+    SP02.02 Create and label (with categories, title, and legend) a pictograph to display a given set of
+            data, using many-to-one correspondence, and justify the choice of correspondence used.
+    SP02.03 Create and label (with axes and title) a bar graph to display a given set of data, using many-
+            to-one correspondence, and justify the choice of interval used.
+    SP02.04 Answer a given question, using a given graph in which data is displayed using many-to-one
+            correspondence.
+
+
+
+
+8                                                                                   Mathematics 4: Outcomes (2022)
+

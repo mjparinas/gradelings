@@ -1,0 +1,2054 @@
+                 Grade 7 Mathematics
+                 Curriculum
+
+
+
+
+                         2007
+Recycled Paper
+Grade 7 Mathematics
+Curriculum
+
+
+
+
+     Saskatchewan Learning
+     2007
+     ISBN: 978-1-897211-33-5
+Table of Contents
+
+Acknowledgements ......................................................................................................................... ii
+Purpose............................................................................................................................................ 1
+Aim and Goals of K-12 Mathematics ............................................................................................. 2
+Connections to the Broad Areas of Learning.................................................................................. 4
+Connections to Cross-curricular Competencies .............................................................................. 6
+Curriculum Integration.................................................................................................................... 9
+Critical Characteristics of Mathematics Education....................................................................... 11
+Teaching for Deep Understanding ................................................................................................ 15
+Grade 7 Mathematics Outcomes and Indicators ........................................................................... 16
+Appendix A: Terminology ........................................................................................................... 31
+Appendix B: Three Grades at a Glance ....................................................................................... 33
+References ..................................................................................................................................... 43
+Feedback Form.............................................................................................................................. 44
+
+
+
+
+                                                                          i
+Acknowledgements
+Saskatchewan Learning gratefully acknowledges the professional contributions and advice given
+by the following members of the Mathematics Reference Committee:
+
+ Daryl Bangsund                                    George McHenry
+ Good Spirit School Division                       Saskatchewan School Boards Association
+ LEADS
+ Dr. Murray Bremner                                Dr. Shaun Murphy
+ Department of Mathematics and Statistics          College of Education
+ University of Saskatchewan                        University of Saskatchewan
+
+ Linda Goulet                                      Dr. Kathy Nolan
+ First Nations University of Canada                Faculty of Education
+                                                   University of Regina
+
+ Angie Harding                                     Kathi Sandbeck
+ Regina Roman Catholic School Division             Sun West School Division
+ Saskatchewan Teachers’ Federation                 Saskatchewan Teachers’ Federation
+ Susan Jeske                                       Doug Sthamann
+ Prairie Spirit School Division                    Prairie Valley School Division
+ Saskatchewan Teachers’ Federation                 Saskatchewan Teachers’ Federation
+ Wendy Lang                                        Rodney White
+ Greater Saskatoon Catholic School Division        North East School Division
+ Saskatchewan Teachers’ Federation                 Saskatchewan Teachers’ Federation
+
+Saskatchewan Learning wishes to thank many others who contributed to the development of this
+curriculum:
+
+•   in-house consultants
+•   field test teachers
+•   other field personnel.
+
+This curriculum in based on the Western and Northern Canadian Protocol (WNCP) Common
+Curriculum Framework (CCF) (2006) for Kindergarten to Grade 9 Mathematics.
+
+This document was completed under the direction of the Science and Technology Unit,
+Curriculum and E-Learning Branch, and the French Education Branch of Saskatchewan
+Learning. A feedback form is included at the end of this document to provide Saskatchewan
+Learning with your ideas and comments related to this curriculum.
+
+
+
+
+                                              ii
+Grade 7 Mathematics
+Purpose
+The Grade 7 Mathematics Curriculum defines the outcomes to be              Outcomes are
+attained by grade seven students during the 200 minutes of instruction     statements
+and learning time allocated per week for the entire school year. It is     identifying what
+designed to support teachers in providing students with learning           students are
+opportunities to develop appropriate mathematics knowledge and             expected to know,
+abilities within a learning environment that supports students’            and be able to do
+development of positive attitudes and beliefs towards mathematics.         by the end of a
+Indicators are included for each of the outcomes in order to clarify the   particular grade
+breadth and depth of learning intended by the outcome. These               level.
+indicators are a representative list of the kinds of things a student
+needs to know and/or be able to do in order to achieve the learnings
+intended by the outcome.
+
+This curriculum also provides information for teachers to understand
+how the outcomes of the Grade 7 Mathematics Curriculum connect to
+the K-12 Goals for Mathematics, the Cross-curricular Competencies          Indicators are a
+of all areas of study, and the Broad Areas of Learning that define the     representative list
+purpose of education for Saskatchewan students.                            of things students
+                                                                           could be asked to
+Appendix A provides explanations of some of the mathematical               know or do in
+terminology you will find in this curriculum. Appendix B: Three            order to show their
+Grades at a Glance has been included to help teachers see how the          attainment of the
+Grade 7 outcomes are related to the Grade 6 and 8 outcomes.                outcome. The
+                                                                           indicators are
+This curriculum also provides an introduction to pedagogical               intended to clarify
+understandings necessary for the effective teaching of Grade 7             the breadth and
+mathematics. Additional support resources that explore and                 the depth of the
+demonstrate these pedagogical understandings are also available.           outcome.
+
+This curriculum has been designed to address current research in
+mathematics education as well as the needs of students. The
+Mathematics 7 Curriculum outcomes have been influenced by
+changes to the outcomes in K-6 mathematics, and will also impact the
+content of 8-12 mathematics. Changes throughout all of the grades
+have been made for a number of reasons including:
+• decreasing content in each grade to allow for more depth of
+   understanding
+• rearranging concepts to allow for greater depth of learning in one
+   year and to align related mathematical concepts
+• increasing the focus on numeracy (understanding numbers)
+   beginning in Kindergarten
+• introducing algebraic thinking earlier.
+
+
+                                   1
+                         Aim and Goals of K-12 Mathematics
+                         The aim of the mathematics program is to prepare individuals who
+                         value mathematics and appreciate its role in society. The K-12
+                         mathematics curricula are designed to prepare students to cope
+                         confidently and competently with everyday situations that demand the
+                         use of mathematical concepts including interpreting quantitative
+                         information, estimating, performing calculations mentally, measuring,
+                         understanding spatial relationships, and problem solving. The
+When we ask good         mathematics program is intended to stimulate the spirit of inquiry
+questions in math        within the context of mathematical thinking and reasoning.
+class, we invite our
+students to think, to    The four goals for K-12 mathematics are broad statements that
+understand, and to       identify the knowledge, skills, and attitudes in mathematics that
+share a                  students are expected to develop and demonstrate by the end of grade
+mathematical             twelve. Within each grade level, outcomes are directly related to the
+journey with their       development of one or more of these goals. The goals for K-12
+classmates and           mathematics are:
+teachers alike.
+Students are no          Logical Thinking: Develop and be able to apply mathematical
+longer passive           reasoning processes, skills, and strategies to new situations and
+receivers of             problems.
+information when
+asked questions that     This goal encompasses all of the processes and strategies that are
+challenge their          foundational to understanding mathematics as a discipline. These
+understandings and       processes and strategies include:
+convictions about
+                         • inductive and deductive thinking
+mathematics.
+                         • abstracting and generalizing
+(Sullivan, 2002, p. 1)
+                         • exploring, identifying, and describing patterns
+                         • verifying and proofing
+                         • exploring, identifying, and describing relationships
+                         • modeling and representing (concretely, visually, physically, and
+                            symbolically)
+                         • hypothesizing and asking “what if” (mathematical play).
+
+                         Number Sense: Develop an understanding of the meaning of,
+                         relationships between, properties of, roles of, and representations
+                         (including symbolic) of numbers and apply this understanding to new
+                         situations and problems.
+
+                         Key to developing number sense is students having ongoing
+                         experience with:
+                         • decomposing and composing of numbers
+                         • relating different operations to each other
+                         • modeling and representing numbers and operations (concretely,
+                            visually, physically, and symbolically)
+
+
+                                                            2
+•   understanding the origins and need for different types of numbers
+•   recognizing operations on different number types as being the
+    same operations
+•   understanding equality and inequality
+•   recognizing the variety of roles for numbers
+•   understanding algebraic representations and manipulations in
+    terms of extending numbers
+•   looking for patterns and ways to describe those patterns
+    numerically and algebraically.
+
+Spatial Sense: Develop an understanding of 2-D shapes and 3-D            To teach [adding
+objects, and the relationships between geometrical shapes and objects    fractions] as if it were
+and numbers, and apply this understanding to new situations and          A Rule, or (even more
+problems.                                                                intimidating), The
+                                                                         Law, is to pretend that
+Development of a strong spatial sense requires students to experience:   what took years of
+• construction and deconstruction of 2-D shapes and 3-D objects          experiment and
+• investigations into relationships between 2-D shapes and 3-D           ingenuity is as obvious
+   objects                                                               as your nose. And
+• explorations of how numbers (and algebra) can be used to               then, because you
+   describe 2-D shapes and 3-D objects                                   never really had a
+• exploration of the movement of 2-D shapes and 3-D objects              chance to understand
+• exploration of the dimensions of 2-D shapes and 3-D objects            what was going on …,
+• exploration of different forms of measurement and their meaning.       [a rule] whenever you
+                                                                         need this rule again it
+Mathematical Attitude: Develop a positive attitude towards their         will come as just that
+ability to understand mathematics and to use it to solve problems.       …, enforced by Them.
+                                                                         And so the whole
+Mathematical ability and confidence is built through playing with        integrity of
+numbers and related concepts in a supportive environment. Students       mathematics is
+can persevere when challenged if provided with opportunities to learn    compromised.
+mathematics within an environment that:                                  (Kaplan & Kaplan,
+• supports risk taking (mathematically and personally)                   2007, p. 9)
+• honours students’ ideas
+• provides engaging and responsive learning experiences.
+
+Students who have a positive attitude towards mathematics
+demonstrate:
+• confidence in their mathematical insights and abilities
+• enjoyment, curiousity, and perseverance when encountering new
+   problems
+• appreciation of the structure and value of mathematics.
+
+
+
+
+                                  3
+                              Although there are many “real-world” applications of the
+                              mathematics within the K-12 mathematics program, this content first
+                              and foremost serves as the vehicle through which the students can
+                              achieve the four goals of K-12 mathematics in Saskatchewan.
+                              Attainment of these four goals will result in students with
+                              mathematical confidence and the tools necessary to succeed in any
+                              future mathematical endeavours.
+
+                              Connections to the Broad Areas of Learning
+                              There are three Broad Areas of Learning that reflect Saskatchewan’s
+                              Goals of Education. K-12 mathematics contributes to the Goals of
+Students who are              Education through helping students achieve knowledge, skills, and
+provided with a variety       attitudes related to these Broad Areas of Learning.
+of ways to seek, use,
+evaluate and create           Building a Disposition for Learning
+information are able to
+approach learning with        Students who are engaged in constructing and applying mathematical
+curiosity, flexibility, and   knowledge naturally build a positive disposition towards learning.
+perseverance.                 Throughout their study of mathematics, students should be learning
+                              the skills (including reasoning strategies) and developing the attitudes
+                              that will enable the successful use of mathematics in daily life.
+                              Moreover, students should be developing understandings of
+                              mathematics that will enable the learning of new mathematical
+                              concepts and applications that are encountered within both career and
+                              personal interest choices. Students who successfully complete their
+                              study of K-12 mathematics should feel confident about their
+                              mathematical abilities and have developed the understandings
+                              necessary to make future use and/or studies of mathematics
+                              meaningful and attainable. In order for mathematics to contribute to
+                              this Broad Area of Learning, students must actively learn the
+                              mathematical content in the outcomes through using and developing
+                              mathematical reasoning, number sense, spatial sense, and
+                              mathematical attitude (the four goals of K-12 mathematics). It is
+                              crucial that the students uncover the mathematics outlined in the
+                              curriculum rather than the teacher covering it.
+
+                              Building a Sense of Self and Community
+
+                              To learn mathematics for deep understanding, students need to not
+                              only interact with the mathematical content but with each other as
+                              well. Mathematics needs to be taught in a dynamic environment
+                              where students work together to share and evaluate strategies and
+                              understandings. Students who are involved in a supportive
+                              mathematics environment that is rich in dialogue are exposed to a
+                              wide variety of perspectives and strategies from which to construct a
+
+
+                                                                 4
+sense of the mathematical content. In such an environment, students
+also learn and come to value how they as individuals and as members
+of a group or community can contribute to understanding and social
+well-being through a sense of accomplishment, confidence, and
+relevance. When encouraged to present ideas that represent different
+perspectives and ways of knowing, students in mathematics
+classrooms develop a deeper understanding of the mathematics while
+learning to respect and value the contributions of others. Mathematics
+also provides many opportunities for students to enter into
+communities beyond the classroom walls by engaging with people in
+the neighbourhood or around the world. By working towards
+developing a deeper understanding of mathematics and its role in the
+world, students will necessarily develop their personal and social
+identity, and learn healthy and positive ways of interacting and
+working together with others.
+
+Building Engaged Citizens
+
+Mathematics brings a unique perspective and way of knowing to the
+analysis of social impact and interdependence. Doing mathematics
+requires students to “leave their emotions at the door” and to engage     Students will
+in different situations for the purpose of understanding what is really   contribute to the
+happening and what can be done. Mathematical analysis of topics           environmental,
+that interest students such as trends in global warming, homelessness,    economic, and social
+technological health issues (oil spills, hearing loss, carpal tunnel      sustainability of
+syndrome), and discrimination can be used to engage the students in       their community
+interacting and contributing positively to their classroom, school,       through positive life,
+community, and world. With the understandings that students can           career, and
+derive through mathematical analysis, they become better informed         consumer choices.
+and have a greater respect for and understanding of the different
+opinions and options. With these understandings, students can then
+make better informed and more personalized decisions regarding roles
+and contributions to the various communities in which students are
+members.
+
+
+
+
+                                  5
+                                                              Social Studies
+
+                                                                                                  Health
+                                          Language                                               Education
+                                            Arts                Identity and
+                                                                Interdependence
+
+                                             Constructing              Self and
+                                             Knowledge                Community                   Developing
+                                                                                                   Literacy
+                                                       Disposition                    Engaged
+                                                          For
+                                 Physical                                             Citizens
+                                                        Learning                                             Arts
+                                Education                                                                  Education
+
+
+                                                                        Social
+                                          Mathematics                Responsibility
+                                                                                                 Science
+                            Reasoning
+
+                                              Spatial Sense
+                           Number Sense                              Mathematical
+                                                                       Attitude
+
+
+
+                       Connections to Cross-curricular Competencies
+                       There are four cross-curricular competencies that together contribute
+                       to an individual student’s development within the four Broad Areas of
+Constructing           Learning. These competencies are synthesized from the Common
+knowledge is how       Essential Learnings. It is important, therefore, that the learning of
+people make sense of   mathematics also supports the students in their attainment of these
+the world around       competencies.
+them.
+                       Constructing Knowledge
+
+                       It is important that within their study of mathematics, students are
+                       engaged in personal construction and understanding of mathematical
+                       knowledge. This most effectively occurs through student engagement
+                       in inquiry and problem solving where they are challenged to think
+                       critically and creatively. Moreover, students need to experience
+                       mathematics in a variety of contexts in which students are asked to
+                       consider questions such as “what would happen if …”, “could we find
+                       …”, and “what does this tell us?” Students need to be engaged in a
+                       social construction of mathematics to develop an understanding and
+                       appreciation of mathematics as a tool which can be used to consider
+                       different perspectives, connections, and relationships. Mathematics is
+                       a subject that depends upon the effective incorporation of independent
+
+
+
+
+                                                                6
+work and reflection with interactive contemplation, discussion, and
+resolution.
+
+Identity and Interdependence
+
+Given an appropriate learning environment in mathematics, students       Students need to
+can develop both their self-confidence and self-worth. An interactive    develop a positive
+mathematics classroom in which the ideas, strategies, and abilities of   self-concept and the
+individual students are valued develops personal and mathematical        ability to live in
+confidence. It can also help students realize their role in the          harmony with others,
+classroom environment and accept responsibility for choices,             and with the natural
+decisions, and actions. A positive learning environment combined         and constructed
+with strong pedagogical choices that engage students in learning         world.
+support them in behaving respectfully towards themselves and others.
+
+Developing Literacy
+
+Through their mathematics learning experiences, students should be
+engaged in developing their understandings of the language of
+mathematics and their ability to use mathematics as a language.
+Students should be regularly engaged in exploring a variety of           Mathematics enables
+representations for mathematical concepts and should be expected to      individuals to
+communicate in a variety of ways about the mathematics being             understand,
+learned. An important part of learning mathematical language is to       represent, and
+communicate one’s own understandings and to develop strategies to        explore their world
+explore what and how others know about mathematics. The study of         and communicate
+mathematics should also encourage the appropriate use of technology.     and participate in a
+Moreover, students should be aware of and able to communicate            variety of roles and
+about the appropriate use of technology in mathematics and               settings in their
+mathematics learning. It is important to encourage students to use a     home, school and
+variety of forms of representation (concrete manipulatives, physical     community.
+movement, visual, and symbolic) when exploring mathematical ideas,
+solving problems, and communicating understandings. All too often,
+it is assumed that symbolic representation is the only way to
+communicate mathematically. The more flexible students are in using
+a variety of representations to explain and work with the mathematics
+being learned, the deeper students’ understanding becomes.               By encouraging
+                                                                         students to explore
+Social Responsibility                                                    mathematics in social
+                                                                         contexts, students can
+As students progress in their mathematical learning, they need to        be engaged in
+experience opportunities to share and consider ideas, and resolve        understanding the
+conflicts between themselves and others. This requires that the          situation, concern, or
+learning environment be co-constructed by the teacher and students to    issue and then in
+support respectful, independent, and interdependent behaviours.          planning for
+Every student should feel empowered to help others in developing         responsible reactions
+                                                                         or responses.
+
+                                  7
+their understanding, while finding respectful ways to seek help from
+others. By encouraging students to explore mathematics in social
+contexts, students can be engaged in understanding the situation,
+concern, or issue and then in planning for responsible reactions or
+responses. Mathematics is a subject dependent upon social
+interaction and, as a result, social construction of ideas. Through the
+study of mathematics, students learn to become reflective and
+positively contributing members of their communities. Mathematics
+allows for different perspectives and approaches to be considered,
+assessed for situational validity, and used to strengthen solutions.
+
+
+
+
+                                   8
+Curriculum Integration
+There are many possibilities for the integration of mathematics and
+other subject areas. In doing this integration, however, teachers must      When students
+be cautious to not lose the integrity of any of the subjects. Integration   experience
+gives students experiences with transfer of knowledge and provides          mathematics as a lens
+rich contexts in which the students are able to make sense of their         through which they
+learnings. Below are just a few of the ways in which mathematics can        can view other
+be integrated into other subject areas (and other subject areas into        subjects, and other
+mathematics) at grade seven.                                                subjects as lenses
+                                                                            through which to view
+Arts Education – In Grade 7 arts education, three concepts in the           mathematics, students’
+Dance strand that students are exploring are patterns, relationships,       learning and
+and transitional movements. These concepts can be related to the            confidence in all of the
+mathematics that the students are learning through integrated learning      subjects benefits
+activities in which the students describe, replicate and create patterns,   greatly.
+relationships, and transitional movement using a wide variety of
+representations. Drama contexts can be used to explore mathematical
+relationships and the students’ relationship to mathematics.
+Improvisation in music requires students to establish, recognize, and
+interpret patterns and relationships, thus paralleling much of the
+mathematics that the students are learning. Mathematical
+relationships and patterns can be represented in a variety of ways,
+including musical. In Visual Art, students can be asked to explore
+and create works of visual art that relate their understandings and
+attitudes towards mathematics.
+
+English Language Arts – The variety of texts in English language
+arts can engage students in topics that inspire students to pose
+questions that can be researched and explored through mathematical
+inquiry and reasoning. For example, students need to experience
+mathematical consequences and nuances that can be applied to
+different texts. This application expands students’ understanding of
+the influence and relevance of mathematics.
+
+Health Education – Grade seven mathematics has many direct
+connections to the students’ learnings in health education. When
+students “Reflect on and analyze food choices by applying the               “When my teacher
+nutrient content labels on packaged foods”, students are required to        shows me how to use the
+use their understanding of percent. The students can also reflect upon      math we are learning in
+percent with respect to the amount of time in a day that they are           other classes, then it
+physically active, and measures of central tendency can be determined       makes math class seem
+for individual students or for the class as a whole. From there,            more worthwhile.”
+students can be engaged in developing and implementing health               Saskatchewan Student
+action plans in response to those measures of central tendencies
+and/or percents.
+
+
+                                    9
+Physical Education – To connect the students’ physical activity to the
+students’ study of the Cartesian plane, activities in physical education
+can include student reflection on quadrants of activity and movement
+transformations (translations, reflections, and rotations) required to
+move from one location to another. When studying percents, students
+can be asked to find examples that come from or enhance their study
+of the effects of exercise and inactivity, nutrition and nutritional
+habits, and developing and carrying out an action plan in which
+students could solve problems involving percents between 1% and
+100%. As well, the students can apply their learnings of central
+tendency and probabilities to analyze and make decisions regarding
+data collected for planning an activity and the feedback data collected
+at the end of the planned activity. Students can also be engaged in
+solving problems involving percents and decimals in the context of
+personal fitness.
+
+Career Guidance – While students are investigating their different
+work and life roles, students can represent the percent of time spent in
+each role on a daily or weekly basis on a circle graph. Similarly, the
+students could carry out data analysis, such as the determination of
+measures of central tendency or the number of people within a
+particular economic sector, by using researched information regarding
+percents.
+
+Science – In exploring biodiversity and the interconnectedness of the
+natural environment, there are numerous opportunities for students to
+solve mathematical problems related to percents and to create circle
+graphs to represent situational values and statistics. The students’
+study of heat also has direct connections to the students’
+understanding and development of integers by solving problems
+involving temperature change and the determination of measures of
+central tendencies within and between different heat problems. In
+addition, students can also be engaged in circle graph representations
+of the composition of the Earth’s crust as well as solving problems
+involving percents related to the composition of the Earth’s crust.
+
+Social Studies – Grade seven social studies’ in-depth investigation of
+the Pacific Rim countries can provide a variety of contexts in which
+students can solve problems and create mathematical representations.
+Measures of central tendency can be used to analyze populations
+within these countries and circle graphs can be used to represent and
+analyze different aspects of life in the Pacific Rim.
+
+
+
+
+                                  10
+Critical Characteristics of Mathematics Education
+The content of K-12 Mathematics can be organized in a variety of
+ways. In this document, the outcomes and indicators are grouped
+according to four strands: Number, Patterns and Relations, Shape
+and Space, and Statistics and Probability. Although this
+organization implies a relation between the outcomes identified in
+each of the strands, it should be noted the mathematical concepts are
+interrelated between strands as well as within strands.
+                                                                        When mathematics is
+The mathematics curriculum also recognizes seven processes inherent     taught without a rich
+in the teaching, learning, and doing of mathematics. These processes    integration of these
+focus on: communicating, making connections, mental mathematics         processes, it
+and estimating, problem solving, reasoning, and visualizing along       becomes a stagnant
+with using technology to integrate these processes into the             set of facts and
+mathematics classroom to help students learn mathematics with           procedures devoid of
+deeper understanding.                                                   meaning rather than
+                                                                        the dynamic and rich
+The outcomes in K-12 mathematics should be addressed through the        discipline that it is.
+appropriate mathematical processes lenses. Teachers should consider
+carefully in their planning those processes indicated as being
+important to the various outcomes.
+
+Communication [C]
+
+Students need opportunities to read about, represent, view, write
+about, listen to, and discuss mathematical ideas. These opportunities    Students must be
+allow students to create links between students’ own language and        able to communicate
+ideas, and the formal language and symbols of mathematics.               mathematical ideas
+                                                                         in a variety of ways
+Communication is important in clarifying, reinforcing, and modifying     and contexts.
+ideas, attitudes, and beliefs about mathematics. Students should be
+encouraged to use a variety of forms of communication while learning
+mathematics. Students also need to communicate their learning using
+mathematical terminology.
+
+Communication can help students make connections among concrete,
+pictorial, symbolic, verbal, written, and mental representations of
+mathematical ideas.
+
+Connections [CN]
+
+Contextualization and making connections to the experiences of
+learners are powerful processes in developing mathematical
+understanding. When mathematical ideas are connected to each other
+
+
+
+
+                                  11
+Through connections,          or to real world phenomena, students can begin to view mathematics
+students should begin         as useful, relevant, and integrated.
+to view mathematics
+as useful and relevant.       Learning mathematics within contexts and making connections
+                              relevant to learners can validate past experiences, and increase
+                              students’ willingness to participate and be actively engaged.
+
+                              The brain is constantly looking for and making connections.
+                              “Because the learner is constantly searching for connections on many
+                              levels, educators need to orchestrate the experiences from which
+                              learners extract understanding …. Brain research establishes and
+                              confirms that multiple complex and concrete experiences are essential
+                              for meaningful learning and teaching” (Caine and Caine, 1991, p.5).
+Mental mathematics
+and estimation are            Mental Mathematics and Estimation [ME]
+fundamental
+components of                 Mental mathematics is a combination of cognitive strategies that
+number sense.                 enhance flexible thinking and number sense. It is calculating
+                              mentally without the use of external memory aids.
+Estimation strategies
+are used to determine         Mental mathematics enables students to determine answers without
+approximate values for        paper and pencil. It improves computational fluency by developing
+qualities.                    efficiency, accuracy, and flexibility.
+
+Students proficient with      Estimation is a strategy for determining approximate values of
+mental mathematics            quantities, usually by referring to benchmarks or using referents, or
+“become liberated from        for determining the reasonableness of calculated values. Students
+calculator dependence,        need to know how, when, and what strategy to use when estimating.
+build confidence in doing
+mathematics, become           Estimation is used to make mathematical judgements and develop
+more flexible thinkers and    useful, efficient strategies for dealing with situations in daily life.
+are more able to use
+multiple approaches to        Problem Solving [PS]
+problem solving”
+(Rubenstein, 2001, p. 442)    Learning through problem solving should be the focus of mathematics
+                              at all grade levels. When students encounter new situations and
+                              respond to questions of the type, “How would you …?” or “How
+                              could you …?”, the problem-solving approach is being modelled.
+                              Students develop their own problem-solving strategies by being open
+Learning through problem      to listening, discussing, and trying different strategies.
+solving should be the focus
+of mathematics at all grade   In order for an activity to be problem-solving based, it must ask
+levels.                       students to determine a way to get from what is known to what is
+                              sought. If students have already been given ways to solve the
+                              problem, it is not problem solving, but rote practice. A true problem
+                              requires students to use prior learnings in new ways and contexts.
+
+
+
+                                                                  12
+Problem solving requires and builds depth of conceptual
+understanding and student engagement.
+
+Problem solving is a powerful teaching tool that fosters multiple and
+creative solutions. Creating an environment where students openly
+look for and engage in finding a variety of strategies for solving
+problems empowers students to explore alternatives and develops
+confidence, reasoning, and mathematical creativity.
+
+Reasoning [R]
+
+Mathematical reasoning helps students think logically and make sense       Mathematical
+of mathematics. Students need to develop confidence in their abilities     reasoning helps
+to reason and justify their mathematical thinking. High-order              students think logically
+questions challenge students to think and develop a sense of wonder        and make sense of
+about mathematics.                                                         mathematics.
+Mathematical experiences in and out of the classroom provide
+opportunities for inductive and deductive reasoning. Inductive
+reasoning occurs when students explore and record results, analyze
+observations, make generalizations from patterns, and test these
+generalizations. Deductive reasoning occurs when students reach new
+conclusions based upon what is already known or assumed to be true.
+
+Visualization [V]
+
+Visualization “involves thinking in pictures and images, and the
+ability to perceive, transform and recreate different aspects of the        Visualization is
+visual-spatial world” (Armstrong, 1993, p. 10). The use of                  fostered through the
+visualization in the study of mathematics provides students with            use of concrete
+opportunities to understand mathematical concepts and make                  materials,
+connections among them.                                                     technology, and a
+                                                                            variety of visual
+Visual images and visual reasoning are important components of              representations.
+number, spatial, and measurement sense. Number visualization
+occurs when students create mental representations of numbers.
+
+Being able to create, interpret, and describe a visual representation is
+part of spatial sense and spatial reasoning. Spatial visualization and
+reasoning enable students to describe the relationships among and
+between 3-D objects and 2-D shapes.
+
+Visualization is fostered through the use of concrete materials,
+technology, and a variety of visual representations.
+
+
+
+
+                                   13
+                            Technology [T]
+
+                            Technology contributes to the learning of a wide range of
+                            mathematical outcomes, and enables students to explore and create
+                            patterns, examine relationships, test conjectures, and solve problems.
+
+Technology contributes      Calculators and computers can be used to:
+to the learning of a wide   • explore and demonstrate mathematical relationships and patterns
+range of mathematical       • organize and display data
+outcomes, and enables       • extrapolate and interpolate
+students to explore and     • assist with calculation procedures as part of solving problems
+create patterns, examine    • decrease the time spent on computations when other mathematical
+relationships, test            learning is the focus
+conjectures, and solve      • reinforce the learning of basic facts and test properties
+problems.                   • develop personal procedures for mathematical operations
+                            • create geometric displays
+                            • simulate situations
+                            • develop number sense.
+
+                            Technology contributes to a learning environment in which the
+                            growing curiosity of students can lead to rich mathematical
+                            discoveries at all grade levels. It is important for students to
+                            understand and appreciate the appropriate use of technology in a
+                            mathematics classroom.
+
+
+
+
+                                                              14
+Teaching for Deep Understanding
+For deep understanding, it is vital that mathematics be taught through
+the students uncovering and co-constructing their knowledge, with        In grade 7, students are
+very few ideas being covered or relayed directly by the teacher. As      learning about the
+an example, the Cartesian plane is something which the teacher must      addition and subtraction
+cover. It is the sign we use to show that we want to combine or add      of fractions. Learning
+two quantities. The process of adding, and the development of            for deep understanding
+addition and subtraction facts should not be “covered”, but rather       requires the students to
+“discovered” through the students’ investigation of patterns,            explore patterns and
+relationships, abstractions, and generalizations. Teachers need to       relationships, often in
+“unpack” outcomes to identify those things that students need to         concrete and visual
+know (behold) and those that they need to be able to apply, explain,     representations and to
+and transfer to new situations.                                          hypothesize, test their
+                                                                         own personal rules and
+It is important that a mathematics learning environment include          strategies for adding
+effective interplay of reflection, exploration of patterns and           and subtracting
+relationships, sharing of ideas and problems, consideration of           fractions, and then to
+different perspectives, decision making, generalizing, verifying and     generalize these
+proving, and modeling and representing. Mathematics is truly learned     learnings into abstract
+when students are engaged in strategic “play” with mathematical          symbolic processes that
+concepts and differing perspectives. When students learn                 reflect their individual
+mathematics by being told what to do, how to do it, and when to do it,   and class
+they cannot make the strong learning connections necessary for           understandings.
+learning to be meaningful, easily accessible, and transferable.
+
+The mathematics learning environment must necessarily be one which
+is respectful of individuals and groups. It needs to foster discussion
+and self-reflection, the asking of questions, the seeking of multiple
+answers, and the co-construction of understanding.
+
+
+
+
+                                  15
+                                                               [C]     Communication        [PS]   Problem Solving
+                                                               [CN]    Connections          [R]    Reasoning
+                                                               [ME]    Mental Mathematics   [V]    Visualization
+                                                                       and Estimation       [T]    Technology
+
+Grade 7 Mathematics Outcomes and Indicators
+
+                                        Number Strand
+Goals          Outcomes               Indicators
+                                      (The following indicators may be used to determine whether students
+               Students will:         have met the corresponding outcome.)
+
+  Number     N7.1 Demonstrate         a. Investigate division by 2, 3, 4, 5, 6, 8, 9, or 10 and
+   Sense     an understanding of         generalize strategies for determining divisibility by
+             division through the        those numbers.
+  Logical    development and          b. Apply strategies for determining divisibility to sort a
+ Thinking    application of
+                                         set of numbers in Venn or Carroll diagrams.
+             divisibility
+Mathematical strategies for 2, 3,     c. Determine or validate the factors of a number by
+  Attitude   4, 5, 6, 8, 9, and 10,      applying strategies for divisibility.
+             and through an           d. Explain the result of dividing a quantity of zero by a
+             analysis of division        non-zero quantity.
+             involving zero.
+                                      e. Explain (by generalizing patterns, analogies, and
+               [C, CN, ME, R]            mathematical reasoning) why division of non-zero
+                                         quantities by zero is not defined.
+
+  Number     N7.2 Expand and       a. Provide a justification for the placement of a decimal in
+   Sense     demonstrate              a sum or difference of decimals up to thousandths (e.g.,
+             understanding of         for 4.5 + 0.73 + 256.458, think 4 + 256 so the sum is
+  Logical    the addition,            greater than 260; thus, the decimal will be placed so
+ Thinking    subtraction,             that the sum is in the hundreds).
+             multiplication, and b. Provide a justification for the placement of a decimal in
+Mathematical division of              a product (e.g., for $12.33 × 2.4, think $12 × 2, so the
+  Attitude   decimals to greater
+                                      product is greater than $24; thus, the decimal in the
+             numbers of decimal       final product would be placed so that the answer is in
+             places, and the          the tens).
+             order of operations.
+                                   c. Provide a justification for the placement of a decimal in
+             [C, CN, ME, PS, R, T]    a quotient (e.g., for 51.50 m ÷ 2.1, think 50 m ÷ 2 so
+                                      the quotient is approximately 25 m; thus, the final
+                                      answer will be in the tens). (Note: If the divisor has
+                                      more than one digit, students should be allowed to use
+                                      technology to determine the final answer.)
+                                      d. Solve a problem involving the addition, or subtraction,
+                                         of two or more decimal numbers.
+
+
+
+
+                                                16
+                                                          [C]     Communication        [PS]   Problem Solving
+                                                          [CN]    Connections          [R]    Reasoning
+                                                          [ME]    Mental Mathematics   [V]    Visualization
+                                                                  and Estimation       [T]    Technology
+
+
+
+                                      Number Strand
+Goals         Outcomes              Indicators
+                                    (The following indicators may be used to determine whether students
+              Students will:        have met the corresponding outcome.)
+
+              N7.2 continued        e. Solve a problem involving the multiplication or
+                                       division of decimal numbers with 2-digit multipliers or
+                                       1-digit divisors (whole numbers or decimals) without
+                                       the use of technology.
+                                    f. Solve a problem involving the multiplication or
+                                       division of decimal numbers with more than a 2-digit
+                                       multiplier or 1-digit divisor (whole number or decimal),
+                                       with the use of technology.
+                                    g. Check the reasonableness of solutions using estimation.
+                                    h. Solve a problem that involves operations on decimals
+                                       (limited to thousandths) taking into consideration the
+                                       order of operations.
+                                    i. Explain by using examples why it is important to
+                                       follow a specific order of operations when calculating
+                                       with decimals and/or whole numbers.
+
+  Number     N7.3 Demonstrate       a. Predict the decimal representation of a fraction based
+   Sense     an understanding of       upon patterns and justify the reasoning (e.g., knowing
+             the relationships         the decimal equivalent of 1/8 and 2/8, predict and
+  Logical    between positive          verify the decimal representation of 7/8).
+ Thinking    decimals, positive     b. Match a set of fractions to their decimal
+             fractions (including      representations.
+Mathematical mixed numbers,
+  Attitude   proper fractions and   c. Sort a set of fractions into repeating or terminating
+             improper fractions),      decimals.
+             and whole numbers.     d. Explain and demonstrate how any terminating decimal
+                                       can also be written as a repeating decimal.
+              [C, CN, ME, R, T]
+                                    e. Express a fraction as a terminating or repeating
+                                       decimal.
+                                    f. Express a repeating decimal as a fraction.
+                                    g. Express a terminating decimal as a fraction.
+                                                       [C]    Communication    [PS] Problem Solving
+                                    h. Explain the relationship
+                                                       [CN]
+                                                                between fractions,
+                                                              Connections      [R]
+                                                                                   decimals,
+                                                                                     Reasoning
+                                       and division. [ME] Mental Mathematics [V] Visualization
+                                                                  and Estimation       [T]    Technology
+
+
+
+
+                                              17
+                                     Number Strand
+Goals         Outcomes             Indicators
+                                   (The following indicators may be used to determine whether students
+              Students will:       have met the corresponding outcome.)
+
+                                   i. Provide an example where the decimal representation
+              N7.3 continued          of a fraction is an approximation of its exact value.
+                                   j. Order a set of numbers containing decimals, fractions,
+                                      and/or whole numbers in ascending or descending
+                                      orders and justify the order determined.
+                                   k. Identify, with justification, a number that would be
+                                      between two given numbers (decimal, fraction, and/or
+                                      whole numbers) in an ordered sequence or shown on a
+                                      number line.
+                                   l. Identify incorrectly placed numbers within an ordered
+                                      sequence or shown on a number line.
+
+                                   m. Order the numbers in a set of numbers by using
+                                      benchmarks on a number line such as 0, ½ , and 1.
+
+
+  Number     N7.4 Expand and       a. Create a representation (concrete, pictorial, physical or
+   Sense     demonstrate an           oral) of a fractional percent between 1% and 100%.
+             understanding of
+                                   b. Express a percent as a decimal or fraction.
+  Logical    percent to include
+ Thinking    fractional percents   c. Solve a problem that involves finding a percent.
+             between 1% and        d. Solve a problem that involves finding percents of a
+Mathematical 100%.                    value.
+  Attitude
+              [C, PS, R]           e. Determine the answer to a percent problem where the
+                                      answer requires rounding and explain why an
+                                      approximate answer is needed, e.g., total cost including
+                                      taxes.
+                                   f. Explain the meaning of a percent given in a particular
+                                      context.
+                                   g. Make and justify decisions, or suggest courses of
+                                      action based upon known percents for the situation.
+
+
+
+
+                                             18
+                                                                [C]      Communication        [PS]   Problem Solving
+                                                                [CN]     Connections          [R]    Reasoning
+                                                                [ME]     Mental Mathematics   [V]    Visualization
+                                                                         and Estimation       [T]    Technology
+
+
+                                        Number Strand
+Goals          Outcomes                Indicators
+                                       (The following indicators may be used to determine whether students
+               Students will:          have met the corresponding outcome.)
+
+  Number      N7.5 Develop and         a. Estimate the sum or difference of positive fractions
+   Sense      demonstrate an              and/or mixed numbers and explain the reasoning.
+              understanding of         b. Model addition and subtraction of positive fractions
+  Logical     adding and                  and/or mixed numbers using concrete or visual
+  Thinking    subtracting positive        representations, and record the process used
+              fractions and mixed         symbolically.
+Mathematical numbers, with like
+  Attitude    and unlike               c. Determine the sum or difference of two positive
+              denominators,               fractions or mixed numbers with like denominators
+Spatial Sense concretely,                 and explain the strategy used.
+              pictorially, and         d. Explain how common denominators for fractions
+              symbolically                and/or mixed numbers and factors are related.
+              (limited to positive
+              sums and                 e. Explain how a common denominator can help when
+              differences).               adding fractions and/or mixed numbers.
+                                       f. Determine the sum or difference of two positive
+               [C, CN, ME, PS, R, V]      fractions or mixed numbers with unlike denominators
+                                          and explain the strategy used.
+                                       g. Simplify a positive fraction or mixed number by
+                                          identifying and dividing off the common factor
+                                          between the numerator and denominator.
+                                       h. Generalize and explain personal strategies for
+                                          determining the sum or difference of positive fractions
+                                          and/or mixed numbers.
+                                       i. Solve a problem involving the addition or subtraction
+                                          of positive fractions or mixed numbers.
+                                       j. Explain how the sum or difference of positive
+                                          fractions and/or mixed numbers can be represented
+                                          symbolically in different ways.
+
+
+
+
+                                                19
+                                                                [C]      Communication        [PS]   Problem Solving
+                                                                [CN]     Connections          [R]    Reasoning
+                                                                [ME]     Mental Mathematics   [V]    Visualization
+                                                                         and Estimation       [T]    Technology
+
+
+                                      Number Strand
+Goals           Outcomes             Indicators
+                                     (The following indicators may be used to determine whether students
+                Students will:       have met the corresponding outcome.)
+
+  Number     N7.6 Demonstrate        a. Represent opposite integers concretely, pictorially,
+   Sense     an understanding of        and symbolically and explain why they are called
+             addition and               opposite integers.
+  Logical    subtraction of          b. Explain, using concrete materials such as integer tiles
+ Thinking    integers, concretely,      and diagrams, that the sum of opposite integers is zero
+             pictorially, and           (e.g., a move in one direction followed by an
+Mathematical symbolically.              equivalent move in the opposite direction results in no
+  Attitude                              net change in position).
+                [C, CN, PS, R, V]
+Spatial Sense                        c. Illustrate, using a number line, the results of adding or
+                                        subtracting negative and positive integers.
+                                     d. Add two integers using concrete materials or pictorial
+                                        representations and record the process symbolically.
+                                     e. Subtract two integers using concrete materials or
+                                        pictorial representations and record the process
+                                        symbolically.
+                                     f. Investigate patterns in adding and subtracting integers
+                                        to generalize personal strategies for adding and
+                                        subtracting integers.
+                                     g. Solve problems involving the addition and subtraction
+                                        of integers.
+
+
+
+
+                                              20
+                                                               [C]      Communication        [PS]   Problem Solving
+                                                               [CN]     Connections          [R]    Reasoning
+                                                               [ME]     Mental Mathematics   [V]    Visualization
+                                                                        and Estimation       [T]    Technology
+
+
+                                 Patterns and Relations Strand
+Goals           Outcomes               Indicators
+                                       (The following indicators may be used to determine whether students
+                Students will:         have met the corresponding outcome.)
+
+  Logical       P7.1 Demonstrate an    a. Represent a relationship found within an oral or
+  Thinking      understanding of the      written pattern using a linear relation.
+                relationships          b. Analyse whether an oral or written pattern is linear in
+                between oral and          nature.
+  Number        written patterns,
+   Sense        graphs and linear      c. Provide a context for a linear relation.
+                relations.             d. Identify a pattern from the environment that is linear
+Spatial Sense                             in nature and write a linear relation to describe the
+                [C, CN, R]
+                                          pattern.
+Mathematical
+  Attitude                             e. Identify assumptions made when writing a linear
+                                          relation for a pattern.
+                                       f. Create a table of values for a linear relation by
+                                          evaluating the relation for different variable values.
+                                       g. Create a table of values using a linear relation and
+                                          graph the table of values (limited to discrete points).
+                                       h. Sketch the graph from a table of values created for a
+                                          linear relation and describe the patterns found in the
+                                          graph.
+                                       i. Describe the relationship shown on a graph using
+                                          everyday language in spoken or written form.
+                                       j. Analyze a graph in order to draw a conclusion or
+                                          solve a problem.
+                                       k. Match a set of linear relations to a set of graphs and
+                                          explain the strategies used.
+                                       l. Match a set of graphs to a set of linear relations and
+                                          justify the selections made.
+                                       m. Describe a situation which could result in a graph
+                                          similar to one that is shown.
+
+
+
+
+                                               21
+                                                                 [C]      Communication        [PS]   Problem Solving
+                                                                 [CN]     Connections          [R]    Reasoning
+                                                                 [ME]     Mental Mathematics   [V]    Visualization
+                                                                          and Estimation       [T]    Technology
+
+
+                                   Patterns and Relations Strand
+Goals          Outcomes                   Indicators
+                                         (The following indicators may be used to determine whether students
+               Students will:            have met the corresponding outcome.)
+
+  Logical     P7.2 Demonstrate an        a. Explain what a variable is and how it is used in an
+  Thinking    understanding of              expression.
+              equations and
+  Number      expressions by:            b. Provide an example of an expression and an equation,
+   Sense      • distinguishing              and explain how they are similar and different.
+                between equations        c. Explain how to evaluate an expression and how that
+Spatial Sense   and expressions             result is different from a solution to an equation.
+              • evaluating
+Mathematical    expressions              d. Verify a possible solution to a linear equation using
+  Attitude    • verifying solutions         substitution and explain the result.
+                to equations.
+
+               [C, CN, ME]
+
+
+
+  Logical     P7.3 Demonstrate an        a. Model the preservation of equality for each of the
+  Thinking    understanding of one-         four operations using concrete materials or using
+              and two-step linear           pictorial representations, explain the process orally
+Mathematical equations of the form          and record it symbolically.
+  Attitude     ax
+                  + c = d (where a,      b. Generalize strategies for carrying out operations that
+               b                            involve the use of the preservation of equality.
+  Number      b, c, and d are whole
+   Sense      numbers, c < d and         c. Solve an equation by applying the preservation of
+              b ≠ 0 ) by modeling           equality.
+Spatial Sense the solution of the        d. Identify and provide an example of a constant term, a
+              equations concretely,         numerical coefficient, and a variable in an expression
+              pictorially,                  and an equation.
+              physically, and
+                                         e. Represent a problem with a linear equation and solve
+              symbolically and
+                                            the equation using concrete models, (e.g., counters,
+              explaining the
+                                            integer tiles) and record the process symbolically.
+              solution in terms of
+              the preservation of        f. Draw a representation of the steps used to solve a
+              equality.                     linear equation.
+                                         g. Verify the solution to a linear equation using concrete
+               [C, CN, PS, R, V]
+                                            materials or diagrams.
+
+
+
+
+                                                 22
+                                                                 [C]      Communication        [PS]   Problem Solving
+                                                                 [CN]     Connections          [R]    Reasoning
+                                                                 [ME]     Mental Mathematics   [V]    Visualization
+                                                                          and Estimation       [T]    Technology
+
+
+                                   Patterns and Relations Strand
+Goals          Outcomes                   Indicators
+                                         (The following indicators may be used to determine whether students
+               Students will:            have met the corresponding outcome.)
+
+                                         h. Explain what the solution for a linear equation
+               P7.3 continued               means.
+                                         i. Represent a problem situation using a linear equation.
+                                         j. Solve a problem using a linear equation.
+
+
+  Logical     P7.4 Demonstrate an a. Represent a problem with a linear equation of the
+  Thinking    understanding of
+                                       form x + a = b where a and b are integers and solve
+              linear equations of
+                                       the equation using concrete models (e.g., counters,
+Mathematical the form x + a = b
+                                       integer tiles) and record the process symbolically.
+  Attitude    (where a and b are
+              integers) by modeling b. Verify a solution to a problem involving a linear
+  Number      problems as a linear     equation of the form x + a = b where a and b are
+   Sense      equation and solving     integers.
+              the problems
+Spatial Sense concretely,
+              pictorially, and
+              symbolically.
+
+               [C, CN, PS, R, V]
+
+
+
+
+                                                 23
+                                                           [C]     Communication        [PS]   Problem Solving
+                                                           [CN]    Connections          [R]    Reasoning
+                                                           [ME]    Mental Mathematics   [V]    Visualization
+                                                                   and Estimation       [T]    Technology
+
+
+                                 Shape and Space Strand
+Goals          Outcomes              Indicators
+                                     (The following indicators may be used to determine whether
+               Students will:        students have met the corresponding outcome.)
+
+  Logical    SS7.1 Demonstrate       a. Identify the characteristics of a circle.
+  Thinking   an understanding of     b. Define and illustrate the relationship between the
+             circles including
+                                        diameter and radius of a circle.
+Mathematical circumference and
+  Attitude   central angles.         c. Answer the question “how many radii does a circle
+                                        have and why?”
+Spatial Sense [C, CN, R, V]          d. Answer the question “how many diameters does a
+                                        circle have and why?”
+  Number
+   Sense                             e. Explain (with illustrations) why a specified point
+                                        and radius length (or diameter length) describes
+                                        exactly one circle.
+                                     f. Illustrate and explain the relationship between a
+                                        radius and a diameter of a circle.
+                                     g. Generalize, from investigations, the relationship
+                                        between the circumference and the diameter of a
+                                        circle.
+                                     h. Define pi ( π ) and explain how it is related to circles.
+                                     i. Sort a set of angles as central angles of a circle or
+                                        not.
+                                     j. Demonstrate that the sum of the central angles of a
+                                        circle is 360°.
+                                     k. Draw a circle with a specific radius or diameter with
+                                        and without a compass.
+                                     l. Solve problems involving circles.
+
+  Logical     SS7.2 Develop and      a. Illustrate and explain how the area of a rectangle can
+  Thinking    apply formulas for        be used to determine the area of a triangle.
+              determining the area   b. Generalize, using examples, a formula for
+Mathematical of:                        determining the area of triangles.
+  Attitude    • triangles
+              • parallelograms       c. Illustrate and explain how the area of a rectangle can
+Spatial Sense • circles.                be used to determine the area of a parallelogram.
+
+  Number       [CN, PS, R, V]
+   Sense
+
+
+
+
+                                             24
+                                                            [C]     Communication        [PS]    Problem Solving
+                                                            [CN]    Connections          [R]     Reasoning
+                                                            [ME]    Mental Mathematics   [V]     Visualization
+                                                                    and Estimation       [T]     Technology
+
+
+                                Shape and Space Strand
+Goals         Outcomes              Indicators
+                                    (The following indicators may be used to determine whether
+              Students will:        students have met the corresponding outcome.)
+
+              SS7.2 continued       d. Generalize, using examples, a formula for
+                                       determining the area of parallelograms.
+                                    e. Illustrate and explain how to estimate the area of a
+                                       circle without the use of a formula.
+                                    f. Illustrate and explain how the area of a circle can be
+                                       approximated by the circumference of the circle
+                                       times its radius.
+                                    g. Generalize a formula for finding the area of a circle.
+                                    h. Solve problems involving the area of triangles,
+                                       parallelograms, or circles.
+
+Spatial Sense SS7.3 Demonstrate     a. Identify and describe examples of parallel line
+              an understanding of      segments, perpendicular line segments,
+  Logical     2-D relationships        perpendicular bisectors, and angle bisectors in the
+  Thinking    involving lines and      environment.
+              angles.               b. Identify, with justification, line segments on a
+Mathematical                           diagram that are parallel or perpendicular.
+  Attitude    [CN, R, V, T]
+                                    c. Investigate and explain how paper, pencil, compass,
+  Number                               and rulers can be used to construct parallel lines,
+   Sense                               perpendicular lines, angle bisectors, and
+                                       perpendicular bisectors.
+                                    d. Investigate how paper folding can be used to
+                                       construct parallel lines, perpendicular lines, angle
+                                       bisectors, and perpendicular bisectors.
+                                    e. Use technology to construct parallel lines,
+                                       perpendicular lines, angle bisectors, and
+                                       perpendicular bisectors.
+                                    f. Draw a line segment perpendicular to another line
+                                       segment and explain why they are perpendicular.
+                                    g. Draw a line segment parallel to another line segment
+                                       and explain why they are parallel.
+                                    h. Draw the bisector of a given angle using more than
+                                       one method and verify that the resulting angles are
+                                       equal.
+
+
+
+
+                                            25
+                                                              [C]     Communication        [PS]   Problem Solving
+                                                              [CN]    Connections          [R]    Reasoning
+                                                              [ME]    Mental Mathematics   [V]    Visualization
+                                                                      and Estimation       [T]    Technology
+
+
+                                    Shape and Space Strand
+Goals          Outcomes                 Indicators
+                                        (The following indicators may be used to determine whether
+               Students will:           students have met the corresponding outcome.)
+
+               SS7.3 continued          i. Draw the perpendicular bisector of a line segment
+                                           using more than one method and verify the
+                                           construction.
+                                        j. Use geometric constructions to create a design or
+                                           picture, and identify the constructions present in the
+                                           design.
+
+Spatial Sense SS7.4 Demonstrate         a. Label the axes of a four quadrant Cartesian plane
+              an understanding of          and identify the origin.
+  Logical     the Cartesian plane
+                                        b. Explain how orientation (the direction in a situation)
+  Thinking    and ordered pairs
+                                           can influence the labelling of the axes on a Cartesian
+              with integral
+                                           plane.
+Mathematical coordinates.
+  Attitude                              c. Identify the location of a point in any quadrant of a
+               [C, CN, V]                  Cartesian plane using an ordered pair with integral
+  Number                                   coordinates.
+   Sense                                d. Plot the point corresponding to an ordered pair with
+                                           integral coordinates on a Cartesian plane with a scale
+                                           of 1, 2, 5, or 10 on its axes.
+                                        e. Draw shapes and designs, using integral ordered
+                                           pairs, in a Cartesian plane.
+                                        f. Create shapes and designs, and identify the points
+                                           used to produce the shapes and designs in any
+                                           quadrant of a Cartesian plane.
+
+  Logical     SS7.5 Expand and          (It is intended that the original shape and its image have
+  Thinking    demonstrate an            vertices with integral coordinates.)
+              understanding of          a. Identify the coordinates of the vertices of a 2-D
+Mathematical transformations
+                                           shape shown on a Cartesian plane.
+  Attitude    (translations,
+              rotations, and            b. Describe the horizontal and vertical movement
+Spatial Sense reflections) of 2-D          required to move from one point to another point on
+              shapes in all four           a Cartesian plane.
+  Number      quadrants of the
+   Sense      Cartesian plane.
+               [CN, PS, T, V]
+
+
+
+
+                                                26
+                                                      [C]     Communication        [PS]    Problem Solving
+                                                      [CN]    Connections          [R]     Reasoning
+                                                      [ME]    Mental Mathematics   [V]     Visualization
+                                                              and Estimation       [T]     Technology
+
+
+                          Shape and Space Strand
+Goals   Outcomes              Indicators
+                              (The following indicators may be used to determine whether
+        Students will:        students have met the corresponding outcome.)
+
+        SS7.5 continued       c. Describe the positional change of the vertices of a 2-
+                                 D shape to the corresponding vertices of its image as
+                                 a result of a transformation or successive
+                                 transformations on a Cartesian plane.
+                              d. Determine the distance between points along
+                                 horizontal and vertical lines in a Cartesian plane.
+                              e. Perform a transformation or consecutive
+                                 transformations on a 2-D shape and identify
+                                 coordinates of the vertices of the image.
+                              f. Describe the positional change of the vertices of a 2-
+                                 D shape to the corresponding vertices of its image as
+                                 a result of a transformation or a combination of
+                                 successive transformations.
+                              g. Describe the image resulting from the transformation
+                                 of a 2-D shape on a Cartesian plane by identifying
+                                 the coordinates of the vertices of the image.
+
+
+
+
+                                      27
+                                                                [C]     Communication        [PS]    Problem Solving
+                                                                [CN]    Connections          [R]     Reasoning
+                                                                [ME]    Mental Mathematics   [V]     Visualization
+                                                                        and Estimation       [T]     Technology
+
+
+                                Statistics and Probability Strand
+Goals          Outcomes                   Indicators
+                                        (The following indicators may be used to determine whether
+               Students will:           students have met the corresponding outcome.)
+
+  Number      SP7.1 Demonstrate         a. Concretely represent mean, median, and mode and
+   Sense      an understanding of          explain the similarities and differences among them.
+              the measures of
+Spatial Sense central tendency and      b. Determine mean, median, and mode for a set of data,
+              range for sets of data.      and explain why these values may be the same or
+  Logical                                  different.
+  Thinking    [C, CN, PS, R, T]
+                                        c. Determine the range of a set of data.
+Mathematical                            d. Provide a context in which the mean, median, or
+  Attitude                                 mode is the most appropriate measure of central
+                                           tendency to use when reporting findings and explain
+                                           the choice.
+                                        e. Solve a problem involving the measures of central
+                                           tendency.
+                                        f. Analyze a set of data to identify any outliers.
+                                        g. Explain the effect of outliers on the measures of
+                                           central tendency for a data set.
+                                        h. Identify outliers in a set of data and justify whether
+                                           or not they should be included in the reporting of the
+                                           measures of central tendency.
+                                        i. Provide examples of situations in which outliers
+                                           would and would not be used in reporting the
+                                           measures of central tendency.
+                                        j. Explain why qualitative data, such as colour or
+                                           favourite activity, cannot be analyzed for all three
+                                           measures of central tendency.
+
+
+
+
+                                                28
+                                                             [C]      Communication        [PS]   Problem Solving
+                                                             [CN]     Connections          [R]    Reasoning
+                                                             [ME]     Mental Mathematics   [V]    Visualization
+                                                                      and Estimation       [T]    Technology
+
+
+                                  Statistics and Probability Strand
+Goals          Outcomes                     Indicators
+                                          (The following indicators may be used to determine whether
+               Students will:             students have met the corresponding outcome.)
+
+Spatial Sense SP7.2 Demonstrate           a. Identify common attributes of circle graphs, such as:
+              an understanding of             title, label, or legend
+  Number      circle graphs.
+   Sense                                      the sum of the central angles is 360°
+               [C, CN, PS, R, T, V]
+                                              the data is reported as a percent of the total and
+  Logical                                      the sum of the percents is equal to 100%.
+  Thinking
+                                          b. Create and label a circle graph, with and without
+Mathematical                                 technology, to display a set of data.
+  Attitude                                c. Find, describe, and compare circle graphs in a
+                                             variety of print and electronic media such as
+                                             newspapers, magazines, and the Internet.
+                                          d. Translate percents displayed in a circle graph into
+                                             quantities to solve a problem.
+                                          e. Interpret a circle graph to answer questions.
+                                          f. Identify the characteristics of a set of data that make
+                                             it possible to create a circle graph.
+
+
+
+  Number     SP7.3 Demonstrate            a. Explain what a probability tells about the situation to
+   Sense     an understanding of             which it refers.
+             theoretical and              b. Provide an example of two independent events, such
+  Logical    experimental                    as:
+ Thinking    probabilities for two
+             independent events                 spinning a four section spinner and an eight-
+Mathematical where the combined                  sided die
+  Attitude   sample space has 36                tossing a coin and rolling a twelve-sided die
+             or fewer elements.
+                                                tossing two coins
+               [C, ME, PS R, T]                 rolling two dice
+                                               and explain why they are independent.
+
+
+
+
+                                                  29
+                                                         [C]     Communication        [PS]    Problem Solving
+                                                         [CN]    Connections          [R]     Reasoning
+                                                         [ME]    Mental Mathematics   [V]     Visualization
+                                                                 and Estimation       [T]     Technology
+
+
+                         Statistics and Probability Strand
+Goals   Outcomes                   Indicators
+                                 (The following indicators may be used to determine whether
+        Students will:           students have met the corresponding outcome.)
+
+        SP7.3 continued          c. Identify the sample space (all possible outcomes) for
+                                    each of two independent events using a tree diagram,
+                                    table, or another graphic organizer.
+                                 d. Determine the theoretical probability of an outcome
+                                    involving two independent events.
+                                 e. Conduct a probability experiment for an outcome
+                                    involving two independent events, with and without
+                                    technology, to compare the experimental probability
+                                    to the theoretical probability.
+                                 f. Solve a probability problem involving two
+                                    independent events.
+                                 g. Explain how theoretical and experimental
+                                    probabilities are related and why they cannot be
+                                    assumed to be equal.
+                                 h. Represent a probability stated as a percent as a
+                                    fraction or a decimal.
+                                 i. Represent a probability stated as a fraction or
+                                    decimal as a percent.
+
+
+
+
+                                         30
+Appendix A: Terminology
+Benchmarks: Numeric quantities used to compare and order other numeric quantities. For
+example, multiples of powers of 10 might be used as benchmarks for whole numbers, or 0, 1,
+and ½ might be used as benchmarks for fractions between 0 and 1.
+
+Carroll Diagram: A table used for organizing and highlighting relationships between
+characteristics of elements in a data set. Each characteristic is broken into yes/no descriptors or
+into independent categories. The Carroll diagram shows all possible ways to match the different
+categories between the characteristics. For example, the following Carroll diagram represents
+information about a classroom in terms of girls and boys with shoes or sandals:
+
+          Factor of 4     Factor of 6
+ 36       Yes             Yes
+ 42       No              Yes
+
+These diagrams can be used to analyze a situation according to one characteristic, one category,
+or a combination of both.
+
+Front-end Estimation: A process of finding approximate values for computations by
+considering rounded or sometimes truncated values (e.g., 34 + 72 is approximately equal to 30 +
+70 = 100 by front-end estimation).
+
+Graphic Organizer: Any pictorial representation used to show relationships between data,
+information, and/or understandings. Some examples are Venn diagrams, tree diagrams, concept
+webs, and Carroll diagrams.
+
+Independent Events: Two or more occurrences of an event that do not influence each other.
+
+Number Line: Because grade seven students have had very little experience with scale or ratio
+and proportion, number lines should reflect relative positioning rather than scaled points. In
+some resources, the use of a number line that indicates the relationship between numbers but not
+the ratio of quantity is called an Empty Number Line.
+
+Outlier: A piece of data that lies outside of the normal dispersion of the data in the set.
+
+Personal Strategies: Personal strategies are strategies that the students have constructed and
+understand. Outcomes and indicators that specify the use of personal strategies convey the
+message that there is not a single procedure or algorithm that is correct. Students should be
+encouraged to explore, share, and make decisions about what strategies to use in different
+contexts. Development of personal strategies is an indicator of the attainment of a deeper
+understanding.
+
+
+
+
+                                                 31
+Preservation of Equality: A mathematical concept that allows for manipulation and alternate
+representations by ensuring that the new expression and/or equation meaning is maintained. In
+expressions, preservation of equality involves the application of an operation and its inverse to
+the expression (e.g., adding 3 and subtracting 3, or multiplying by 2 and dividing by 2 preserves
+equality). In equations, equality can be preserved by applying an operation and its inverse to one
+side of the equation (each of which is an expression) or by applying the same operation to both
+sides of the equation.
+
+Record the Process Symbolically: It is important that as students explore and represent
+mathematical concepts concretely, physically, and pictorially that, at each stage, students be
+required to reflect upon what it would look like symbolically. For example, if the student shows
+adding ten blocks to both sides of a balance, students should also be writing the corresponding
+equation (after a few experiences with just working with the blocks) in symbolic form (e.g.,
+students might write x – 10 + 10 = 3 + 10). By writing their process symbolically, the students
+are engaged in making sense of the processes of abstraction which are foundational to
+mathematical theory and its development.
+
+Representation: Mathematical ideas can be represented and manipulated in a variety of formats
+including: concrete manipulatives, pictorial designs, physical movements, oral or written
+description, and symbolic notation. Students need to have experiences in working with many
+different types of representations, and in transferring and translating knowledge between the
+different forms of representations.
+
+
+
+
+                                               32
+Appendix B: Three Grades at a Glance
+The chart below shows the outcomes for mathematics in grades 6, 7, and 8 in each of the four
+strands with the outcomes being lined up to show the flow of content development.
+
+                                        Number Strand
+        Grade 6 (Draft)                     Grade 7                          Grade 8 (Draft)
+                                Whole and Decimal Numbers
+ Demonstrate an                 N7.1 Demonstrate an
+ understanding of place value   understanding of division
+ for numbers:                   through the development and
+ • greater than one million     application of divisibility
+ • less than one thousandth.    strategies for 2, 3, 4, 5, 6, 8, 9,
+ [C, CN, R, T]                  and 10, and through an
+                                analysis of division involving
+ Solve problems involving       zero.
+ large numbers, using           [C, CN, ME, R]
+ technology.
+ [ME, PS, T]                    N7.2 Expand and
+                                demonstrate understanding of
+ Demonstrate an                 the addition, subtraction,
+ understanding of factors and   multiplication, and division of
+ multiples by:                  decimals to greater numbers
+ • determining multiples and    of decimal places, and the
+   factors of numbers less      order of operations.
+   than 100                     [C, CN, ME, PS, R, T]
+ • identifying prime and
+   composite numbers
+ • solving problems
+   involving multiples.
+ [PS, R, V]
+                                         Square Roots
+                                                                      Demonstrate an understanding
+                                                                      of perfect squares and square
+                                                                      roots, concretely, pictorially,
+                                                                      and symbolically (limited to
+                                                                      whole numbers).
+                                                                      [C, CN, R, V]
+
+                                                                      Determine the approximate
+                                                                      square root of numbers that
+                                                                      are not perfect squares
+                                                                      (limited to whole numbers).
+                                                                      [C, CN, ME, R, T]
+
+
+
+
+                                                 33
+                                                        [C]     Communication        [PS]   Problem Solving
+                                                        [CN]    Connections          [R]    Reasoning
+                                                        [ME]    Mental Mathematics   [V]    Visualization
+                                                                and Estimation       [T]    Technology
+
+
+                                     Number Strand
+       Grade 6 (Draft)                   Grade 7               Grade 8 (Draft)
+                   Relating Whole Numbers, Fractions, and Decimals
+                             N7.3 Demonstrate an
+                             understanding of the
+                             relationships between positive
+                             decimals, positive fractions
+                             (including mixed numbers,
+                             proper fractions, and improper
+                             fractions), and whole
+                             numbers.
+                               [C, CN, R, T]
+                                           Percent
+Demonstrate an                 N7.4 Expand and                 Demonstrate an understanding
+understanding of percent       demonstrate an understanding    of percents greater than or
+(limited to whole numbers),    of percent to include           equal to 0%.
+concretely, pictorially, and   fractional percents between     [CN, PS, R, V]
+symbolically.                  1% and 100%.
+[C, CN, PS, R, V]              [C, PS, R]
+
+                            Integers and Operations on Integers
+Demonstrate an                 N7.6 Demonstrate an           Demonstrate an understanding
+understanding of integers,     understanding of addition and of multiplication and division
+concretely, pictorially and    subtraction of integers,      of integers, concretely,
+symbolically.                  concretely, pictorially, and  pictorially, and symbolically.
+[C, CN, R, V]                  symbolically.                 [C, CN, PS, R,]
+                               [C, CN, PS, R, V]
+                                           Fractions
+Relate improper fractions to N7.5 Develop and                Demonstrate an understanding
+mixed numbers.                 demonstrate an understanding of multiplying and dividing
+[CN, ME, R, V]                 of adding and subtracting     positive fractions and mixed
+                               positive fractions and mixed  numbers, concretely,
+                               numbers, with like and unlike pictorially, and symbolically.
+                               denominators, concretely,     [C, CN, ME, PS]
+                               pictorially and symbolically
+                               (limited to positive sums and
+                               differences).
+                               [C, CN, ME, PS, R, V]
+
+
+
+
+                                               34
+                                                         [C]    Communication         [PS]   Problem Solving
+                                                         [CN]   Connections           [R]    Reasoning
+                                                         [ME]   Mental Mathematics    [V]    Visualization
+                                                                and Estimation        [T]    Technology
+
+
+                                        Number Strand
+       Grade 6 (Draft)                     Grade 7                    Grade 8 (Draft)
+                            Ratio, Rate and Proportional Reasoning
+Demonstrate an                                                Demonstrate an understanding
+understanding of ratio,                                       of ratio and rate.
+concretely, pictorially, and                                  [C, CN, V]
+symbolically.
+[C, CN, PS, R, V]                                             Solve problems that involve
+                                                              rates, ratios, and proportional
+                                                              reasoning.
+                                                              [C, CN, PS, R]
+
+
+                                Patterns and Relations Strand
+       Grade 6 (Draft)                       Grade 7                   Grade 8 (Draft)
+                              Relationships in Tables and Graphs
+Demonstrate an                   P7.1 Demonstrate an
+understanding of the             understanding of the
+relationship within tables of    relationships between oral and
+values to solve problems.        written patterns, graphs and
+[C, CN, PS, R]                   linear relations.
+
+Represent and describe
+patterns and relationships
+using graphs and tables.
+[C, CN, ME, PS, R, V]
+                                     Linear Relations
+                                                                Graph and analyze two
+                                                                variable linear relations.
+                                                                [C, ME, PS, R, T,V]
+
+                                Expressions and Equations
+                               P7.2 Demonstrate an
+                               understanding of equations
+                               and expressions by:
+                               • distinguishing between
+                                  equations and expressions
+                               • evaluating expressions
+                               • verifying solutions to
+                                  equations.
+
+
+
+
+                                             35
+                                                           [C]     Communication        [PS]   Problem Solving
+                                                           [CN]    Connections          [R]    Reasoning
+                                                           [ME]    Mental Mathematics   [V]    Visualization
+                                                                   and Estimation       [T]    Technology
+
+
+                                 Patterns and Relations Strand
+       Grade 6 (Draft)                     Grade 7                        Grade 8 (Draft)
+                                           Equality
+Demonstrate and explain the
+meaning of preservation of
+equality concretely,
+pictorially, and symbolically.
+[C, CN, PS, R, V]
+
+                                        Linear Equations
+Represent generalizations        P7.3 Demonstrate an               Model and solve problems
+arising from number              understanding of one- and         using linear equations of the
+relationships using equations    two-step linear equations of      form:
+with letter variables.                     ax                      • ax = b
+[C, CN, PS, R, V]                the form      + c = d (where a,
+                                            b                          x
+                                                                   •     = b, a ≠ 0
+                                 b, c, and d are whole numbers,       a
+                                 c < d and b ≠ 0 ) by modeling     • ax + b = c
+                                 the solution of the equations         x
+                                 concretely, pictorially,          •     + b = c, a ≠ 0
+                                                                      a
+                                 physically, and symbolically
+                                                                   • a ( x + b) = c
+                                 and explaining the solution in
+                                 terms of the preservation of      concretely, pictorially and
+                                 equality.                         symbolically, where a, b, and
+                                                                   c are integers.
+                                                                   [C, CN, PS, V]
+                                 P7.4 Demonstrate an
+                                 understanding of linear
+                                 equations of the form
+                                  x + a = b (where a and b are
+                                 integers) by modeling
+                                 problems as a linear equation
+                                 and solving the problems
+                                 concretely, pictorially, and
+                                 symbolically.
+
+
+
+
+                                               36
+                                                     [C]     Communication        [PS]   Problem Solving
+                                                     [CN]    Connections          [R]    Reasoning
+                                                     [ME]    Mental Mathematics   [V]    Visualization
+                                                             and Estimation       [T]    Technology
+
+
+                                 Shape and Space Strand
+         Grade 6 (Draft)                Grade 7                       Grade 8 (Draft)
+                                         Angles
+Demonstrate an
+understanding of angles by:
+• identifying examples of
+  angles in the environment
+• classifying angles
+  according to their measure
+• estimating the measure of
+  angles using 45°, 90°, and
+  180° as reference angles
+• determining angle
+  measures in degrees
+• drawing and labelling
+  angles when the measure is
+  specified.
+[C, CN, ME, V]
+
+Demonstrate that the sum of
+interior angles is:
+• 180° in a triangle
+• 360° in a quadrilateral.
+[C, R]
+                                           Circles
+                               SS7.1 Demonstrate an
+                               understanding of circles
+                               including circumference and
+                               central angles.
+                               [C, CN, R, V]
+
+
+
+
+                                               37
+                                                      [C]    Communication        [PS]   Problem Solving
+                                                      [CN]   Connections          [R]    Reasoning
+                                                      [ME]   Mental Mathematics   [V]    Visualization
+                                                             and Estimation       [T]    Technology
+
+
+                                 Shape and Space Strand
+       Grade 6 (Draft)                     Grade 7                 Grade 8 (Draft)
+                   Perimeter, Area, Surface Area and Volume Formulas
+Develop and apply a formula SS7.2 Develop and apply         Determine the surface area
+for determining the:           formulas for determining the of:
+• perimeter of polygons        area of:                     • right rectangular prisms
+• area of rectangles           • triangles                  • right triangular prisms
+• volume of right rectangular  •  parallelograms            • right cylinders
+   prisms.                     • circles.                   to solve problems.
+[C, CN, PS, R, V]             [CN, PS, R, V]                 [C, CN, PS, R, V]
+
+                                                             Develop and apply formulas
+                                                             for determining the volume
+                                                             of right prisms and right
+                                                             cylinders.
+                                                             [C, CN, PS, R, V]
+                                 Pythagorean Theorem
+                                                             Develop and apply the
+                                                             Pythagorean theorem to
+                                                             solve problems.
+                                                             [CN, PS, R, V, T]
+                                       3-D Objects
+                                                             Draw and construct nets for
+                                                             3-D objects.
+                                                             [C, CN, PS, V]
+
+                                                             Draw and interpret top,
+                                                             front, and side views of 3-D
+                                                             objects composed of right
+                                                             rectangular prisms.
+                                                             [C, CN, R, T, V]
+
+
+
+
+                                               38
+                                                            [C]    Communication        [PS]   Problem Solving
+                                                            [CN]   Connections          [R]    Reasoning
+                                                            [ME]   Mental Mathematics   [V]    Visualization
+                                                                   and Estimation       [T]    Technology
+
+
+                                    Shape and Space Strand
+       Grade 6 (Draft)                        Grade 7                     Grade 8 (Draft)
+                                           2-D Shapes
+Construct and compare             SS7.3 Demonstrate an
+triangles, including:             understanding of 2-D
+• scalene                         relationships involving lines
+• isosceles                       and angles.
+• equilateral                     [CN, R, V, T]
+• right
+• obtuse
+• acute
+in different orientations.
+[C, PS, R, V]
+
+Describe and compare the
+sides and angles of regular
+and irregular polygons.
+[C, PS, R, V]
+                                         Cartesian Plane
+Identify and plot points in the   SS7.4 Demonstrate an
+first quadrant of a Cartesian     understanding of the Cartesian
+plane using whole number          plane and ordered pairs with
+ordered pairs.                    integral coordinates.
+[C, CN, V]                        [C, CN, V]
+
+
+
+
+                                                  39
+                                                         [C]    Communication        [PS]   Problem Solving
+                                                         [CN]   Connections          [R]    Reasoning
+                                                         [ME]   Mental Mathematics   [V]    Visualization
+                                                                and Estimation       [T]    Technology
+
+
+                                   Shape and Space Strand
+        Grade 6 (Draft)                      Grade 7                  Grade 8 (Draft)
+                              Transformations and Tessellations
+Perform a combination of        SS7.5 Expand and               Demonstrate an
+translation(s), rotation(s),    demonstrate an understanding understanding of
+and/or reflection(s) on a       of transformations             tessellations by:
+single 2-D shape, with and      (translations, rotations, and  • explaining the properties
+without technology, and draw reflections) of 2-D shapes in        of shapes that make
+and describe the image.         all four quadrants of the         tessellating possible
+[C, CN, PS, T, V]               Cartesian plane.               • creating tessellations
+                                [CN, PS, T, V]                 • identifying tessellations in
+Perform a combination of                                          the environment.
+successive transformations of                                  [C, CN, PS, T, V]
+2-D shapes to create a design,
+and identify and describe the
+transformations.
+[C, CN, T, V]
+
+Perform and describe single
+transformations of a 2-D
+shape in the first quadrant of
+a Cartesian plane (limited to
+whole number vertices).
+[C, CN, PS, T, V]
+
+
+
+
+                                             40
+                                                          [C]      Communication        [PS]   Problem Solving
+                                                          [CN]     Connections          [R]    Reasoning
+                                                          [ME]     Mental Mathematics   [V]    Visualization
+                                                                   and Estimation       [T]    Technology
+
+
+                               Statistics and Probability Strand
+       Grade 6 (Draft)                       Grade 7                     Grade 8 (Draft)
+                                       Central Tendency
+                                 SP7.1 Demonstrate an
+                                 understanding of the measure
+                                 of central tendency and range
+                                 for sets of data.
+                                [C, CN, PS, R, T]
+                                       Graphing Data
+Create, label, and interpret    SP7.2 Demonstrate an            Critique ways in which data
+line graphs to draw             understanding of circle graphs. are presented. [C, R, T, V]
+conclusions.                    [C, CN, PS, R, T, V]
+[C, CN, PS, R, V]
+
+Graph collected data and
+analyze the graph to solve
+problems.
+[C, CN, PS]
+                                        Data Collection
+Select, justify, and use
+appropriate methods of
+collecting data, including:
+• questionnaires
+• experiments
+• databases
+• electronic media.
+[C, PS, T]
+
+
+
+
+                                                41
+                                                           [C]       Communication        [PS]   Problem Solving
+                                                           [CN]      Connections          [R]    Reasoning
+                                                           [ME]      Mental Mathematics   [V]    Visualization
+                                                                     and Estimation       [T]    Technology
+
+
+                                 Statistics and Probability Strand
+       Grade 6 (Draft)                        Grade 7                      Grade 8 (Draft)
+                                             Probability
+Demonstrate an
+understanding of probability
+by:
+• identifying all possible
+  outcomes of a probability
+  experiment
+• differentiating between
+  experimental and
+  theoretical probability
+• determining the theoretical
+  probability of outcomes in
+  a probability experiment
+• determining the
+  experimental probability of
+  outcomes in a probability
+  experiment
+• comparing experimental
+  results with the theoretical
+  probability for an
+  experiment.
+[C, ME, PS, T]
+                             Probability of Independent Events
+                               SP7.3 Demonstrate an           Solve problems involving the
+                               understanding of theoretical   probability of independent
+                               and experimental probabilities events.
+                               for two independent events     [C, CN, PS, T]
+                               where the combined sample
+                               space has 36 or fewer
+                               elements.
+                                  [C, ME, PS R, T]
+
+
+
+
+                                                 42
+References
+Armstrong, T. (1993). Seven kinds of smart: Identifying and developing your many
+intelligences. New York, NY: NAL-Dutton.
+
+Caine, R. N. and Caine G. (1991). Making connections: Teaching and the human brain. Menlo
+Park, CA: Addison-Wesley Publishing Company.
+
+Kaplan, R. and Kaplan, E. (2007). Out of the labyrinth: Setting mathematics free. New York,
+NY: Oxford University Press.
+
+Rubenstein, R. N. (2001). Mental mathematics beyond the middle school: Why? What? How?
+Mathematics Teacher, Vol. 94, Issue 6, p. 442.
+
+Sullivan, P. (2002). Good questions for math teaching: Why ask them and what to ask, K-6.
+Sausalito, CA: Math Solutions Publications.
+
+Western and Northern Canadian Protocol. (2006). The common curriculum framework K-9
+mathematics. Edmonton, AB: Alberta Education.
+
+
+
+
+                                             43
+Feedback Form
+Saskatchewan Learning welcomes your response to this curriculum and invites you to complete
+and return this feedback form.
+
+Document Title: _____Grade 7 Mathematics Curriculum____________________
+
+1. Please indicate your role in the learning community
+
+       ___ parent                   ___ teacher                   ___ resource teacher
+
+       ___ guidance counsellor      ___ school administrator      ___ school board trustee
+
+       ___ teacher librarian        ___ school community council member
+
+       ___ student                  ___ other _______________
+
+   What was your purpose for looking at or using this document?
+
+
+
+
+2. a) Please indicate which form(s) of the document you used (i.e., print, online, CD-ROM).
+
+
+
+
+   b) Please indicate which form(s) of the document you prefer (i.e., print, online, CD-ROM).
+
+
+
+
+3. How does this document address the needs of your learning community or organization?
+   Please explain.
+
+
+
+
+                                              44
+4. Please respond to each of the following statements by circling the applicable number.
+
+                                                   Strongly     Agree     Disagree    Strongly
+    The document content is                         Agree                             Disagree
+    a. appropriate for its intended purpose            1           2         3            4
+    b. suitable for your learning style                1           2         3            4
+    (e.g., visuals, graphics, text)
+    c. clear and well organized                        1           2         3             4
+    d. visually appealing                              1           2         3             4
+    e. informative                                     1           2         3             4
+    f. helpful                                         1           2         3             4
+
+5. Explain which aspects you found to be:
+
+   Most useful:
+
+
+
+
+   Least useful:
+
+
+
+
+6. Additional comments:
+
+
+
+
+                                              45
+7. Optional:
+
+       Name: ___________________________________________________________
+
+       School:        ___________________________________________________________
+
+       Phone:         ____________________           Fax:   _______________________
+
+
+Thank you for taking the time to provide this valuable feedback.
+
+
+Please return the completed feedback form to:
+
+       Executive Director
+       Curriculum and E-Learning Branch
+       Saskatchewan Learning
+       2220 College Avenue
+       Regina SK S4P 4V9
+       Fax: 306-787-2223
+
+
+
+
+                                                46
+

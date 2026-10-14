@@ -1,9 +1,9 @@
 #!/bin/sh
 # Downloads the five Atlantic Canada foundation documents from the Newfoundland and Labrador Department of Education
 # (gov.nl.ca/education/k12/curriculum/documents/foundation/ and .../corefrench/) and rebuilds outcomes.json.
-# Needs curl and pdftotext. Usage: sh fetch.sh <work-dir>
+# Needs curl and pdftotext. Usage: sh fetch.sh [dir]   (dir defaults to source/ in this folder, which is committed)
 set -e
-W=${1:?usage: fetch.sh <work-dir>}
+W=${1:-$(cd "$(dirname "$0")" && pwd)/source}
 mkdir -p "$W"
 B=https://www.gov.nl.ca/education/files
 get() { # name url

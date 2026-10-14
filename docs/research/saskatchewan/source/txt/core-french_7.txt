@@ -1,0 +1,1797 @@
+2012
+Saskatchewan Curriculum
+
+
+
+
+Core French
+
+
+
+
+                 7
+Core French Level 7
+ISBN 978-1-77107-010-2
+1. Core French (Level seven) – Saskatchewan – Curricula. 2. Saskatchewan Ministry of Education.
+All rights are reserved by the original copyright owners.
+Table of Contents
+Acknowledgements. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . v
+Introduction. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+Core Curriculum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+Broad Areas of Learning. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+        Lifelong Learners. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+        Sense of Self, Community, and Place. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .3
+        Engaged Citizens. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+Cross Curricular Competencies. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+        Developing Thinking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+        Developing Identity and Interdependence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+        Developing Literacies. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+        Developing Social Responsibility. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+Aim and Goals of the Core French Curriculum. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+        Comprehension Strategies for Oral Language. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+        Comprehension Strategies for Listening, Viewing, and Reading. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+        Comprehension Strategies for Representing and Writing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+An Effective Core French Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+        Critical Characteristics of a Core French Program. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+Degrees of Learner Support in the Core French Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+The Multidimensional Nature of Core French. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+        The Common European Framework of Reference for Languages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+Assessment and Evaluation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+Teaching for Deep Understanding. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+        Inquiry Learning. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+        An Inquiry Model. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+Overview of Learning Outcomes, Levels 6 -9. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+Overview of Fields of Experience and Themes with Cross-Curricular Integration. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+Learning Outcomes and Indicators Legend . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+Learning Outcomes and Indicators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+Connection to Other Subject Areas. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+Technology Integration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+Glossary. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36
+Bibliography. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+
+
+Core French Curriculum Level 7                                                                                                                                                                                  iii
+Acknowledgements
+The Ministry of Education wishes to acknowledge the professional
+contributions and advice given by the following members of the Core
+French Reference Committee in the development of Core French: A
+Curriculum Guide for the Middle Level (Levels 6-9):
+
+
+Lynn Anderson, Chinook S.D. #211
+
+
+Lisa Avram-McLean, Regina Public S.D. #4
+
+
+Selina Bedi, Saskatoon S.D. #13
+
+
+Jocelyn Drozda Daunheimer, Regina Public S.D. #4
+
+
+Alexandra Duran, Regina Public S.D. #4
+
+
+Michelle Krueger, Regina Public S.D. #4
+
+
+Jana Scott Lindsay, Saskatoon S.D. #13
+
+
+Lisa Powell, Regina Public S.D. #4
+
+
+Melanie Reid, Prairie Valley S.D. #208
+
+
+Roxanna Smycniuk, St. Paul’s R.C.S.D. #20
+
+
+
+
+Core French Curriculum Level 7                                        v
+Introduction
+Time Allotment
+The Saskatchewan Ministry of Education has established provincial
+guidelines for the amount of time that should be allocated to Core
+French instruction at each grade level. Because language learning is
+dependent on the amount of time and the intensity of the exposure
+(Anderson, B., Netten, J. & Germain, C., 2005), the recommended time
+allotted for Core French in Levels 6 to 9 is as follows:
+•   120 – 200 minutes per week.
+Curriculum Contents
+The Core French curriculum is defined by language levels and not by
+the students’ grade levels. Consequently, levels may not coincide with
+the actual grade of students. This document provides the learning
+outcomes that Level 7 students are expected to achieve in Core French
+with one year of study, but as with any program, differentiations will
+have to be made based on ability levels, age of students, and amount
+of instructional time devoted to the program. Indicators are included
+to demonstrate achievement of the outcomes.
+The learning experiences recommended for students will support
+student achievement of the provincial Goals of Education through
+attending to the Broad Areas of Learning for Saskatchewan and the
+Cross-Curricular Competencies described on the following pages.
+The Core French curriculum provides:
+• direction for supporting student achievement of the Broad Areas of
+   Learning and the Cross-Curricular Competencies;
+• the aim and goals for Core French in Saskatchewan;
+• characteristics of an effective Core French program;
+• outcomes and indicators;
+• connections to other areas of study.
+
+
+
+
+Core French Curriculum Level 7                                           1
+    Core Curriculum
+    Core Curriculum is intended to provide all Saskatchewan students
+    with an education that will serve them well regardless of their choices
+    after leaving school. Through its various components and initiatives,
+    Core Curriculum supports the achievement of the Goals of Education
+    for Saskatchewan. For current information regarding Core Curriculum,
+    please refer to Core Curriculum: Principles, Time Allocations, and Credit
+    Policy (2009).
+
+
+    Broad Areas of Learning
+    There are three Broad Areas of Learning that reflect Saskatchewan’s
+    Goals of Education. Levels 6-9 Core French contribute to the Goals of
+    Education through helping students achieve knowledge, skills and
+    attitudes related to these broad areas of learning.
+
+
+
+
+                                Self and
+                               Community
+
+          Lifelong                                      Engaged
+          Learners                                      Citizens
+
+
+
+
+2                                            Core French Curriculum Level 7
+Lifelong Learners
+Students are curious, observant, and reflective as they imagine,            Related to the following Goals of
+explore, and construct knowledge. They demonstrate the                      Education:
+understandings, abilities, and dispositions necessary to learn from         • Basic Skills
+subject discipline studies, cultural experiences, and other ways
+                                                                            • Lifelong Learning
+of knowing the world. Such ways of knowing support students’
+appreciation of First Nations worldviews and learning about, with, and      • Positive Lifestyle
+from others. Students are able to engage in inquiry and collaborate in
+learning experiences that address the needs and interests of self and
+others. Through this engagement, students demonstrate a passion for
+lifelong learning.
+
+Sense of Self, Community, and Place
+Students possess a positive sense of identity and understand how            Related to the following Goals of
+it is shaped through interactions within natural and constructed            Education:
+environments. They are able to nurture meaningful relationships and
+                                                                            • Understanding and Relating to
+appreciate diverse beliefs, languages, and practices from the First
+                                                                              Others
+Peoples of Saskatchewan and from the diversity of cultures in our
+province. Through these relationships, students demonstrate empathy         • Self Concept Development
+and a deep understanding of self, others, and the influence of place on     • Spiritual Development
+identity. In striving to balance their intellectual, emotional, physical,
+and spiritual dimensions, students’ sense of self, community, and place
+is strengthened.
+
+Engaged Citizens
+Students demonstrate confidence, courage, and commitment in                 Related to the following Goals of
+shaping positive change for the benefit of all. They contribute to the      Education:
+environmental, social, and economic sustainability of local and global      • Career and Consumer Decisions
+communities. Their informed life, career, and consumer decisions
+                                                                            • Membership in Society
+support positive actions that recognize a broader relationship with,
+and responsibility for, natural and constructed environments. Along         • Growing with Change
+with this responsibility, students recognize and respect the mutual
+benefits of Charter, Treaty, and other constitutional rights and
+relationships. Through this recognition, students advocate for self and
+others, and act for the common good as engaged citizens.
+
+
+
+
+Core French Curriculum Level 7                                                                                  3
+                                          Cross Curricular Competencies
+                                          The Cross-curricular Competencies are four interrelated areas contain-
+                                          ing understandings, values, skills, and processes which are considered
+                                          important for learning in all areas of study. These competencies reflect
+                                          the Common Essential Learnings and are intended to be addressed in
+                                          each area of study at each grade level. The Core French program sup-
+                                          ports students in their attainment of these competencies.
+
+
+
+
+                                                                                             Identity and
+                                                                                           Interdependence
+                                                   Thinking                Self and
+                                                                          Community
+
+                                                              Lifelong                   Engaged
+                                                              Learners                   Citizens
+
+
+
+                                                          Social                                 Literacies
+                                                      Responsibility
+
+
+
+
+                                          Developing Thinking
+K-12 Goals for Developing Thinking:       Constructing knowledge (i.e., factual, conceptual, procedural, and
+• Thinking and learning contextually
+                                          metacognitive) is how people come to know and understand the world
+                                          around them. Deep understanding develops through thinking and
+• Thinking and learning creatively        learning contextually, creatively, and critically in a variety of situations,
+• Thinking and learning critically        both independently and with others.
+
+                                          Developing Identity and Interdependence
+K-12 Goals for Developing Identity        Identity develops as an individual interacts with others and
+and Interdependence:                      the environment, and learns from various life experiences. The
+• Understanding, valuing, and             development of a positive self-concept, the ability to live in harmony
+  caring for oneself (intellectually,     with others, and the capacity and aptitude to make responsible
+  emotionally, physically, spiritually)   decisions about the natural and constructed world supports the
+• Understanding, valuing and caring       concept of interdependence. The focus within this competency is to
+  for others                              foster personal reflection and growth, care for others, and the ability to
+                                          contribute to a sustainable future.
+• Understanding and valuing social,
+  economic, and environmental
+  interdependence and sustainability
+
+
+4                                                                                   Core French Curriculum Level 7
+Developing Literacies
+Literacies provide many ways to interpret the world and express               K-12 Goals for Developing Literacies:
+understanding of it. Being literate involves applying interrelated            • Constructing knowledge related to
+knowledge, skills, and strategies to learn and communicate with                 various literacies
+others. Communication in a globalized world is increasingly                   • Exploring and interpreting the
+multimodal. Communication and meaning making, therefore, require                world through various literacies
+the use and understanding of multiple modes of representation. Each
+                                                                              • Expressing understanding and
+area of study develops disciplinary literacies (e.g., scientific, economic,
+                                                                                communicating meaning using
+physical, health, linguistic, numeric, aesthetic, technological, cultural)      various literacies
+and requires the understanding and application of multiple literacies
+(i.e., the ability to understand, critically evaluate, and communicate in
+multiple meaning making systems) in order for students to participate
+fully in a constantly changing world.
+
+Developing Social Responsibility
+                                                                              K-12 Goals for Developing Social
+Social responsibility is the ability of people to contribute positively
+                                                                              Responsibility:
+to their physical, social, and cultural environments. It requires an
+awareness of unique gifts and challenges among individuals and                • Using moral reasoning processes
+communities and the resulting opportunities that can arise. It also           • Engaging in communitarian
+requires participation with others in creating an ethical space to              thinking and dialogue
+engage in dialogue, address mutual concerns, and accomplish shared            • Taking social action
+goals.
+
+
+
+
+Core French Curriculum Level 7                                                                                     5
+    Aim and Goals of the Core French
+    Curriculum
+    The aim of the Saskatchewan Core French curriculum is to help
+    students understand, use, and appreciate the French language.
+    Students will use the language confidently and correctly in familiar
+    contexts and authentic situations, develop the strategies that will
+    help them acquire the language, and develop an appreciation of
+    Francophone cultures.
+    In Levels 6 to 9 of the Core French curriculum, students begin by
+    developing a level of comfort by first becoming familiar with the
+    oral aspects of the French language in experiential contexts before
+    proceeding to using it in its written forms. Basic competence in
+    learning French may lead to students’ desire to further their French
+    language studies.
+    The renewed Core French Curriculum uses a literacy based approach.
+    In order to achieve the learning outcomes, students will learn a wide
+    variety of language skills and strategies. Effective language teachers
+    use a large range of instructional approaches to help students move
+    from teacher-supported and guided lessons to independent learning.
+    Teachers model and discuss key procedural and metacognitive
+    strategies for language learning and thinking. Students need to learn
+    how to select and use strategies before, during and after viewing,
+    listening, reading, representing, speaking, and writing.
+    In order to be successful, students need to learn and use thinking and
+    learning skills and strategies on their own. In order to help students
+    gain control over a repertoire of key skills and strategies, the skills and
+    strategies need to be explicitly taught and practiced using a model
+    such as the following:
+    • Introduce and explain the purpose of the skill or strategy.
+    • Demonstrate and model its use.
+    • Provide guided practice for students to apply the skill or strategy
+       with feedback.
+    • Allow students to apply the skill or strategy independently and with
+       others.
+    • Reflect regularly on the appropriate uses of the skills or strategies
+       and their effectiveness.
+    • Assess the students’ ability to transfer the repertoire of skills and
+       strategies with less and less teacher prompting over time. (Taken
+       from Saskatchewan English Language Arts, 2010).
+
+
+
+
+6                                              Core French Curriculum Level 7
+Comprehension Strategies for Oral Language
+In effective second language instruction, teachers initially provide a
+lot of support to help students grow in their knowledge and use of the
+French language, but as their proficiency increases they are able to
+withdraw some support. Known as scaffolding, this approach allows
+teachers to gradually release responsibility to students through the
+use of modeling, shared practice, guided practice and independent
+practice.
+The following are the steps a Core French teacher would use with an
+oral activity:
+1. The teacher models the language authentically while students
+   observe and try to understand.
+2. The teacher and students work together. The teacher models the
+   language and helps students complete the activity.
+3. Students are invited to complete the activity while the teacher
+   observes them.
+4. Students work independently by adapting the teacher’s model as
+   the teacher observes.
+Copyright Pearson Education Canada “Effective Literacy Practices in FSL: Making
+Connections” used with permission.
+
+
+Comprehension Strategies for Listening,
+Viewing, and Reading
+Exploring aural, visual, and written text in Core French should be about
+understanding the text. Effective text users call upon a number of
+strategies that help them understand. Applying these strategies allows
+them to become independent text users. The strategies that follow
+are used before, during, and after exploring a text. They should be
+introduced in a progressive manner and they are effective with all of
+the Core French learning outcomes.
+1. Ask Questions – the teacher models this strategy by asking
+   questions that verify student comprehension, activate prior
+   knowledge, and develop their language use.
+2. Make Predictions – After using questioning to identify the context
+   and personalize the topic by linking it to prior experience, students
+   can begin to make predictions about the meaning of the text.
+   They will be based on exploration of the title, visuals, and familiar
+   vocabulary.
+
+
+
+
+Core French Curriculum Level 7                                                    7
+    3. Monitor and Repair Comprehension – When a teacher explores
+       a text in Core French it is important to pause and ask students to
+       gauge comprehension. If the responses are not accurate they must
+       repair comprehension by revisiting the text, defining certain words,
+       or emphasizing graphics or other visual clues. Students need these
+       strategies to check and correct their understanding.
+    4. Make Connections – As students explore text, they develop the
+       ability to link a new text to what they already know. They may
+       also make connections between a text in French and their first
+       language. When they connect prior knowledge to a new text they
+       are more likely to remember new content.
+    5. Visualize – Visualizing means creating a mental image of a
+       message to bring a text to life and make it more vivid. This allows
+       them to become engaged and motivated as well as enhancing the
+       enjoyment of the experience.
+    6. Summarize – When students summarize the text they may start
+       by searching for and copying key phrases from a text. The use of
+       graphic organizers, such as charts, webs, and timelines is helpful
+       to extract key information. Even though their vocabulary is limited
+       they can feel a sense of accomplishment.
+    7. Synthesize – When students synthesize a text they go beyond
+       retelling facts or storylines. They re-organize and transform the
+       information into a new form that demonstrates what they have
+       learned.
+    8. Analyze and Evaluate – After exploring a text students need
+       to think about it in terms of what it means to them. They could
+       consider how the author presented the content, organized the
+       text or emphasized certain elements and not others. The challenge
+       is to engage in a deeper consideration that is meaningful and
+       linguistically feasible.
+    Copyright Pearson Education Canada “Effective Literacy Practices in FSL: Making
+    Connections” used with permission.
+
+
+
+
+8                                                Core French Curriculum Level 7
+Comprehension Strategies for Representing and
+Writing
+Effective writers use a number of strategies to help them create a
+quality product. The strategies that follow can be used in the Core
+French classroom before, during, and after creating a text or visual
+representation.
+Before
+• Make a web or use another graphic organizer to find ideas.
+• Talk to someone to find ideas.
+• Identify key words to plan writing.
+• Do some research.
+• Make an outline.
+• Follow a model.
+During
+• Write a draft copy.
+• Use a dictionary to verify spelling.
+• Follow a model.
+• Put the draft away and come back to it later.
+After
+• Look at a checklist.
+• Make revisions by either changing removing or adding words,
+   sentences or paragraphs.
+• Look at a rubric and check the quality of product.
+• Look at some anchor papers and compare writing to them.
+• Write or type the final draft.
+
+
+
+
+Core French Curriculum Level 7                                         9
+     An Effective Core French Program
+     The renewed Core French Curriculum for Levels 6-9 focuses on level-
+     specific learning outcomes on which students must be evaluated.
+     Because students enter the Core French program at different grade
+     levels in Saskatchewan school divisions, Level One of the new
+     curriculum may be used in any grade where students are beginning to
+     study Core French.
+
+     Critical Characteristics of a Core French Program
+     • Research has demonstrated that language learning is dependent on
+        a number of factors: the amount of time of exposure to a language,
+        the intensity of the exposure, and the quality and types of learning
+        activities that students are exposed to. This means that learning
+        French should not be limited to the classroom. Any language
+        learning opportunity such as visits to other classrooms, French
+        activities and day camps, student exchanges, and technological
+        connections with other French speakers should be encouraged and
+        welcomed (Anderson, Netten & Germain, 2005).
+     • Successful language learning requires exposure to oral language
+        before the introduction of formalized reading or writing. Even where
+        literacy activities are introduced at lower levels, oral language always
+        precedes written language, with varying degrees of support.
+     • Teaching and learning strategies for literacy focus on scaffolding
+        language learning activities so that there is a gradual release of
+        responsibility that begins with teacher modeling, to shared practice
+        in structured and semi-structured situations, to guided and semi-
+        guided practice, and finally to independent practice (see page 9,
+        Pearson & Gallagher, 1983).
+     • French is learned in meaningful communicative-experiential
+        contexts in which the student develops communicative skills by
+        being actively engaged in activities for specific purposes rather than
+        by simply examining the lexical and grammatical components of the
+        language.
+     • Fields of experience in the Core French Program draw on broad
+        themes that encompass the learners’ life experiences, intellectual
+        development, and interests which draw from the following domains:
+        physical, social, civic, intellectual, and leisure (H.H. Stern, 1982).
+        Experiential goals lead to performances or products where students
+        demonstrate their learning within a field of experience.
+     • The language knowledge component (orthography, grammar and
+        syntax, vocabulary and semantics) is never pre-taught in isolation
+        from its context. Rather, students develop language learning skills
+        and strategies as they engage in authentic activities.
+
+
+
+10                                             Core French Curriculum Level 7
+• The study of other cultures leads students to better understand and
+   appreciate the filter by which other linguistic groups interpret their
+   world. By participating in cultural activities, listening to and speaking
+   with Francophones, reading authentic French texts, and examining
+   Canadian history, students will develop an appreciation of what it
+   means to be a Canadian in a bilingual country and a member of a
+   multilingual world.
+
+
+
+                        Physical
+                       Education                     Social Studies
+
+
+     Language                                                                Health
+                                                          Identity and      Education
+       Arts                                             Interdependence
+                  Thinking                Self and
+                                         Community
+
+                             Lifelong                  Engaged
+                             Learners                  Citizens                       Arts
+Mathematics                                                                         Education
+
+
+                        Social                               Literacies
+          Career Responsibility
+        Education1                                                        Science
+
+
+                                         Core
+                                        French   2
+
+
+
+
+                                                          ol
+                                              ic ation To
+                                 Comm un
+                                                          ns
+                                              c Situatio
+                                 Authenti
+                                                         dge
+                                               f Knowle
+                                Transfer o                           tion
+                                                          gy Integra
+                                    la r a n d Technolo
+                                icu
+                     Cross-Curr
+
+                                                         Communication Skills
+
+
+                                                                   Speaking
+
+
+                             Listening                                                          Reading
+     Language
+     Strategies
+                                                          Core French                 2                              Language
+                                                                                                                     Knowledge
+
+                              Viewing                                                           Writing
+
+
+                                                                  Representing
+
+
+                                                                      Culture
+                                                                                                          1
+                                                                                                              Begins in Grade 6
+                                                                                                          2
+                                                                                                              Locally Determined Option
+
+
+
+
+Core French Curriculum Level 7                                                                                                            11
+     Degrees of Learner Support in the Core French
+     Program
+     Students are given much scaffolded support during their initial
+     exposure to language learning. This gradual release of responsibility
+     from teacher to student allows students to experience early success
+     with using the French language. Modeling is used to provide initial
+     input, and teacher support is used to enable students to function with
+     varying degrees of support or scaffolding as they acquire the language
+     knowledge, skills, and strategies needed to participate in language
+     learning experiences.
+     •   Modeled situations refer to the language provided by the teacher
+         which is closely observed and copied by the students.
+     •   Highly-structured situations provide specific learning supports
+         which allow no choice in language models used by the students in
+         a large group sharing situation.
+     •   Structured situations provide specific learning supports which
+         allow limited choice in language models used by the students in a
+         large group sharing situation.
+     •   Semi-structured situations provide learning supports in open-
+         ended learning situations. Students are able to make choices from
+         the language models provided as they learn to express themselves
+         in a large group sharing situation.
+     •   Guided situations still provide teacher support to the students,
+         however, students are given more responsibility in functioning on
+         their own for very short periods in pairs or in small groups.
+     •   Semi-guided situations provide less teacher support, but the
+         teacher is still available to provide support when required. Students
+         are beginning to rely less on scaffolding provided by the teacher as
+         they use language in pairs or in small groups.
+     •   Independent situations require that students function on their
+         own to make choices based on familiar material, and to select
+         appropriate language to communicate their own original
+         messages.
+
+     The Multidimensional Nature of Core French
+     A multidimensional curriculum approach for teaching second
+     languages was first proposed by H. H. Stern (1982) and was researched
+     and expanded by the National Core French Study. This approach
+     means that the Core French program does not focus on language
+     alone. Instead, elements from four learning dimensions are used:
+     Communicative/Experiential, Language, Culture and General Language
+     Education. The renewed Saskatchewan Core French curriculum
+     is similar to the previous versions in that it combines all of these
+
+
+
+
+12                                            Core French Curriculum Level 7
+dimensions to provide a study of the second language in all its
+aspects, taking into account the context in which language is used for
+communication.
+A multidimensional curriculum approach is used because:
+• This approach better responds to the complexity of language. The
+   code system is part of a very complex communicative ensemble
+   which should be studied from many perspectives.
+• Motivation suffers if communicating in real situations is delayed until
+   the basic code system has been mastered.
+• Second language learning can contribute to the general education
+   of the student by having the student learn new concepts in many
+   domains.
+• This approach facilitates incorporation of the cross-curricular
+   competencies to a much greater degree.
+• It provides flexibility to correspond to the diversity of situations
+     in which Core French is taught in Saskatchewan and helps to
+     accommodate the differences in language ability and learning
+     styles within each classroom.
+• It encourages many new instructional strategies and methods.
+
+The Common European Framework of Reference
+for Languages
+The Core French Curriculum for Levels 6-9 draws upon the Common
+European of Reference for Languages. The CEFR is a document which
+describes in a comprehensive manner:
+• competences necessary for communication in a second or additional
+   language,
+• the knowledge and skills required to understand and communicate
+   in a second or additional language, and
+• various situations and domains of communication.
+The CEFR language learning continuum and “can-do” statements
+were developed through a process of scientific research and wide
+consultation, and provide a practical tool for setting clear standards
+to be attained at successive stages of learning. It also establishes
+benchmarks for evaluating outcomes in an internationally comparable
+manner. In Saskatchewan, students who attain competence in
+learning outcomes at levels 6-9 will demonstrate many of the can-do
+statements in the Threshold or Basic level of the CEFR continuum.
+Language learning outcomes may be tracked over a year, or over
+several years, in a language portfolio and with the creation of a student
+profile.
+
+
+
+Core French Curriculum Level 7                                              13
+                                        Assessment and Evaluation
+                                        Assessment and evaluation require thoughtful planning and imple-
+                                        mentation to support the learning process and to inform teaching. All
+                                        assessment and evaluation of student achievement must be based on
+                                        the outcomes in the provincial curriculum.
+                                        Assessment involves the systematic collection of information about
+                                        student learning with respect to:
+                                        •     achievement of provincial curricular outcomes;
+                                        •     effectiveness of teaching strategies employed;
+                                        •     student self-reflection on learning.
+                                        Evaluation compares assessment information against criteria based on
+                                        curriculum outcomes for the purpose of communicating to students,
+                                        teachers, parents or caregivers, and others about student progress and
+                                        to make informed decisions about the teaching and learning process.
+                                        Reporting of student achievement must be based on the achieve-
+                                        ment of curriculum outcomes. There are three interrelated purposes of
+                                        student achievement. Each type of assessment, systematically imple-
+                                        mented, contributes to an overall picture of an individual student’s
+                                        achievement.
+
+
+                                Assessment                                                  Evaluation
+     Assessment for Learning                 Assessment as Learning                  Assessment of Learning
+
+ Assessment for Learning involves    Assessment as Learning actively          Assessment of Learning involves
+ the use of information about        involves student reflection on           teachers’ use of evidence of
+ student progress to support and     learning and monitoring of his or        student learning to make
+ improve student learning, inform    her own progress and;                    judgments about student
+ instructional practices, and;                                                achievements and;
+
+ • is teacher-driven for student,    • is student-driven with teacher         • is teacher-driven for student and
+     teacher, and parent use;            guidance;                                parent use;
+ • occurs throughout the teaching    • supports students in critically        • provides opportunities to report
+    and learning process, using a       analyzing learning related to            evidence of achievement
+    variety of tools;                   curricular outcomes;                     related to curricular outcomes;
+ • engages teachers in providing     • involves goal setting by students      • occurs at the end of a learning
+    differentiated instruction,         for further learning, both short-        cycle, using a variety of tools;
+    feedback to students to             term and long-term;                   • provides the foundation for
+    enhance their learning, and      • occurs throughout the learning            discussion on placement or
+    information to parents in           process;                                 promotion;
+    support of learning;
+                                     • is formative in nature.                • is summative in nature.
+ • is formative in nature.
+
+
+
+14                                                                                   Core French Curriculum Level 7
+Teaching for Deep Understanding
+Inquiry Learning
+Inquiry learning is a philosophical teaching and learning approach
+which encourages deep understanding. It is based on research and
+constructivist models, allowing the teacher to broach new concepts
+and content via student experience, interest, and their natural curiosity
+about the world that surrounds them. Inquiry learning facilitates
+active student engagement in a personal, collaborative and collective
+process, while simultaneously developing personal responsibility and
+independence. It provides opportunities for students to:
+•   develop lifelong learning competencies;
+•   tackle complex problems without predetermined solutions;
+•   question their understandings; and
+•   deepen their exploration of the world around them.
+In inquiry learning, students experience a recursive process between
+their perceptions and the construction of new understandings. They
+take the time to reflect on what they did, how they did it, and how
+their new understandings will be useful to them in other learning
+situations as well as for practical real-world applications.
+
+An Inquiry Model
+Inquiry is a research process that structures the organization of
+teaching and learning. This process has many non-linear phases with
+varying beginning and ending points: planning, information gathering,
+data analysis, product creation, communication of understandings,
+and evaluation. Compelling questions for various topics, problems,
+or challenges relating to concepts and content launch the inquiry
+process.
+A compelling question:
+•   is inspired by students’ lived experiences, interests and curiosity;
+•   launches a pertinent investigation of important ideas and main
+    themes;
+•   gives rise to animated and reflective discussions, sustained
+    engagement, new understandings, and the emergence of new
+    questions;
+•   leads to the consideration of new perspectives, critical examination
+    of the facts, support of ideas, and justification of answers;
+
+
+
+
+Core French Curriculum Level 7                                              15
+     •   results in the constant and essential re-examination of key ideas,
+         hypotheses, and prior knowledge; and
+     •   promotes the establishment of links between new understandings,
+         personal experiences, retrieval of memorized information, and
+         transfers to other contexts and subjects.
+     During the inquiry process, students participate actively in the
+     generation of compelling questions. Using various formats, they track
+     their questioning, reflections, answers, and different perspectives. This
+     information can serve as a means of evaluating both the students’
+     learning and the learning process. Documentation such as this enables
+     a deeper understanding of what the student knows, understands, and
+     is able to do.
+
+
+
+
+16                                            Core French Curriculum Level 7
+Overview of Learning Outcomes, Levels 6-9
+Dimentions                 Level 6                  Level 7                  Level 8                Level 9
+CS.1 (listening,   Demonstrate              Demonstrate              Demonstrate            Demonstrate
+viewing,           understanding of the     understanding            understanding of       understanding of
+speaking,          main idea of French      of the main idea         the main idea and      the main idea and
+writing,           multi-sentence           of oral French           general details        specific details
+representing)      presentations on a       multi-sentence           in oral French         related to the main
+Communication      variety of familiar      presentations on a       multi-sentence         idea in oral French
+Skills             topics in structured     variety of familiar      presentations on a     multi-sentence
+                   situations.              topics in semi-          variety of familiar    presentations on a
+                                            structured situations.   topics in guided       variety of familiar
+                                                                     situations.            topics in semi-
+                                                                                            guided situations.
+
+CS.2 (speaking)    Discuss a variety        Discuss a variety        Discuss a variety      Discuss a variety
+Communication      of information           of information           of information         of information
+Skills             on familiar topics       on familiar topics       on familiar topics     on familiar topics
+                   through modeled          through modeled          through oral           through oral
+                   oral expression in       oral expression in       expression in guided   expression in semi-
+                   highly structured        structured situations.   situations.            guided situations.
+                   situations.
+
+CS.3 (reading)     Demonstrate              Demonstrate              Demonstrate            Demonstrate
+Communication      understanding of         understanding            understanding of the   understanding of
+Skills             the main idea and        of the main idea         main idea and many     the main idea and
+                   general details in       and supporting           supporting details     specific details in a
+                   illustrated 70 - 100     details in illustrated   in a variety of 130    variety of adapted
+                   word expository,         100 - 120 word,          - 140 word multi-      or authentic 140
+                   procedural,              two - paragraph          paragraph adapted      - 160 word multi-
+                   persuasive and           expository,              texts.                 paragraph texts.
+                   narrative texts or       procedural,
+                   scripts.                 persuasive and
+                                            narrative texts.
+
+CS.4 (writing)     Produce 50 - 60 word     Produce 60 - 80 word     Produce 80 - 100       Produce original
+Communication      expository, narrative,   expository, narrative,   word expository,       student-generated
+Skills             or procedural            or procedural            narrative, or          100 - 120 word
+                   paragraphs or            two- paragraph           procedural multi-      expository, narrative,
+                   short scripts in         texts or scripts in      paragraph French       procedural or
+                   French based on          French based on          texts or scripts       persuasive multi-
+                   a combination of         a combination of         composed of a          paragraph texts or
+                   models.                  models.                  combination of         scripts.
+                                                                     models and original
+                                                                     student-generated
+                                                                     texts.
+
+
+
+
+Core French Curriculum Level 7                                                                                      17
+Dimensions               Level 6                    Level 7                   Level 8                 Level 9
+LK.1 (speaking, Demonstrate                  Demonstrate               Demonstrate             Demonstrate
+reading, writing) acquisition of French      acquisition of French     acquisition of French   acquisition of French
+                  language concepts          language concepts         language concepts       language concepts
+Language
+                  related to themes.         related to themes.        related to themes.      related to themes.
+Knowledge
+
+C.1 (reading,       Relate the influence     Relate the influence      Compare                 Determine the
+listening,          and contributions of     and contributions of      contributions of        effects of past and
+writing, viewing,   French, First Nations,   French, First Nations,    current and past        present French,
+representing,       and Métis languages      and Métis languages       French, French          French Canadian,
+speaking)           and cultures to place    and cultures to           Canadian, First         First Nations and
+                    names and lifestyles.    Canadian legends          Nations, Métis, and     Métis cultures on
+Culture
+                                             and stories.              Inuit individuals to    contemporary and
+                                                                       Canadian society.       future Canadian
+                                                                                               society.
+
+GL.1 (listening-    Use listening or         Select listening or       Select listening or    Select listening or
+viewing,            viewing strategies       viewing strategies        viewing strategies in viewing strategies
+speaking,           in semi-guided           in highly structured      structured situations. in semi-structured
+representing)       situations.              situations.                                      situations.
+General
+Language
+
+GL.2 (speaking,     Use speaking             Select speaking        Select speaking        Select speaking
+representing,       strategies in semi-      strategies in highly   strategies in          strategies in semi-
+reading)            guided situations.       structured situations. structured situations. structured situations.
+General
+Language
+
+GL.3 (reading,      Use reading              Use reading               Select reading         Select reading
+representing,       strategies in guided     strategies in semi-       strategies in          strategies in semi-
+writing,            situations.              guided situations.        structured situations. structured situations.
+speaking)
+General
+Language
+GL.4 (writing,      Implement stages of      Implement stages of       Implement stages of     Implement stages of
+speaking,           the writing process      the writing process       the writing process     the writing process
+reading,            in guided situations:    in semi-guided            in semi-guided          in guided situations:
+representing)       generate ideas, draft,   situations: generate      situations: generate    generate ideas, draft,
+                    edit, and publish.       ideas, draft, edit, and   ideas, draft, revise,   edit, revise, and
+General
+                                             publish.                  edit, and publish.      publish.
+Language
+
+
+
+
+18                                                                                   Core French Curriculum Level 7
+Overview of Fields of Experience and Themes
+with Cross-Curricular Integration
+The following table indicates thematic units of study within a field of experience as well as possible cross-
+disciplinary applications. Students complete 4 units of study at each level. When students complete a unit,
+they are required to demonstrate language competence by working towards an experiential goal or final task.
+Language competence for that field of experience must be demonstrated with a performance or a product.
+
+
+      Field of                   6                      7                     8                       9
+    Experience
+
+ Travel                Travel to Québec       Travel to a            Survival: Outdoor      Daily Living in
+                       (Social Studies:       Francophone            Excursions in          a Francophone
+                       Culture and place      Country                Canada                 Country
+                       influence beliefs      (Social Studies:       (Physical Education:   (Social Studies:
+                       and values.)           Globalization          Influences of          Worldview is
+                                              affects the lives of   past and present       expressed in the
+                                              people.)               social, cultural and   daily life of a society
+                                                                     environmental          in a variety of ways.)
+                                                                     perspectives for
+                                                                     physical movement
+                                                                     initiatives; English
+                                                                     Language Arts:
+                                                                     Survival.)
+
+
+ Myself &              Photo Album            Friends
+ Friends               About Myself           (Health Education:
+                       (Arts Education:       Interpersonal skills
+                       Express ideas about    and personality
+                       identity and how it    types.)
+                       works.)
+
+
+
+
+Core French Curriculum Level 7                                                                                    19
+       Field of          6                      7                      8                   9
+     Experience
+
+ Food             Recipe             My Own Restaurant        Top Chef Challenge
+                  Challenge Video    (Career Education:       (English Language
+                  (Health            Entrepreneurship         Arts: Procedural
+                  Education:         and non-traditional      writing; Career
+                  Healthy decision   work scenarios; Visual   Education; Health
+                  making.)           Art: Use art forms,      Education; Visual
+                                     images & processes       Arts; Drama.)
+                                     to express a sense of
+                                     place; Mathematics:
+                                     Common operations
+                                     with decimals)
+
+ Consumerism                         Consumer Evaluation
+                                     of a Product
+                                     (Mathematics:
+                                     Relationships between
+                                     oral and written
+                                     patterns, graphs and
+                                     linear relationships.)
+
+ Sports           My Favourite                                Interview Celebrity
+                  Sport                                       Athletes
+                  (Physical                                   (Physical Education:
+                  Education:                                  Influence of other
+                  Complex                                     perspectives
+                  movement skills                             on the need for
+                  in sports.)                                 physical movement
+                                                              initiatives.)
+
+ Volunteerism                                                 Volunteerism:
+                                                              I CAN Make a
+                                                              Difference! (English
+                                                              Language
+                                                              Arts: Building a
+                                                              better world; Health
+                                                              Education.)
+
+ School                                                                              School of the
+                                                                                     Future
+                                                                                      (English
+                                                                                     Language Arts:
+                                                                                     Imagining new
+                                                                                     worlds and the
+                                                                                     future.)
+
+
+
+20                                                                      Core French Curriculum Level 7
+      Field of                   6                    7                      8                      9
+    Experience
+
+ Culture                                                            Canada Quiz Show
+                                                                    (Social Studies:
+                                                                    History, Geography
+                                                                    and cultural
+                                                                    diversity in
+                                                                    Canadian society.)
+
+ The Arts                                   School Idol             Rock Band              Film Festival
+                                            (Music: Vocal           (English Language      (English Language
+                                            and instrumental        Arts: Telling one’s    Arts: Adventures
+                                            improvisational         life stories; Music:   and Adventurers.)
+                                            skills and abilities;   Make choices about
+                                            Dance: Express          musical structures
+                                            ideas about the         in compositions.)
+                                            importance of
+                                            place.)
+
+ Personal                                                                                  My Room, Myself:
+ Spaces                                                                                    (Visual Arts: Solve
+                                                                                           visual art problems
+                                                                                           in new and
+                                                                                           unfamiliar ways.)
+
+ World of Work        Conflict Resolution                                                  Finding a Job
+                      (English Language                                                    (Career Education:
+                      Arts; Health                                                         Seek, obtain, and/or
+                      Education: Peace                                                     create work.)
+                      and conflict.)
+
+ Language Arts        Solving a Mystery     Canadian                                       Urban Legends
+ Focus                (English Language     Mysteries                                      (Drama: Manipulate
+                      Arts: Suspense.)      (English Language                              elements for
+                                            Arts: Uncanny                                  dramatic purposes;
+                                            incidents                                      English Language
+                                            and unusual                                    Arts: In Touch.)
+                                            happenings.)
+
+
+
+
+Core French Curriculum Level 7                                                                                   21
+Learning Outcomes and Indicators Legend
+
+ Learning Outcome and indicator Codes                         Abreviation of Processes
+ 7.CS.1(a)                                                     [R]   Reading
+
+       7       Level                                          [W]    Writing
+
+       CS      Goal                                            [L]   Listening
+
+       1       Learning Outcome                                [S]   Speaking
+
+       (a)     Indicator                                       [V]   Viewing
+                                                              [RP]   Representing
+
+
+Specific Terms used in the Learning Outcomes and Indicators
+including                           Delimits the content, the context, or the strategy to be evaluated,
+                                    without excluding other possible learning
+
+such as                             Presents a suggestion of content without excluding other possibilities
+
+e.g.                                Presents a list of precise examples concerning a concept or a strategy,
+                                    without excluding other possibilities
+
+ Goals
+
+ (CS) Communication Skills          Students will understand and create different kinds of messages in
+                                    French in various experiential situations for a variety of purposes.
+
+ (GL) General Language Strategies   Students will apply language learning skills and strategies as a vehicle
+                                    for personal, cognitive and social development.
+
+ (LK) Language Knowledge            Students will apply knowledge of linguistic elements of the French
+                                    language accurately for specific communication needs.
+
+ (C) Culture                        Students will recognize the value of French language acquisition and
+                                    Francophone cultures through participation in a variety of activities.
+
+
+
+
+22                                                                             Core French Curriculum Level 7
+Learning Outcomes and Indicators
+
+                                    Goal: Communication Skills (CS)
+
+      Learning Outcomes                                            Indicators
+  Compulsory: What students                     Examples of possible student demonstrations.
+ should know, understand and
+         be able to do.
+
+The student will be able to:     The student:
+7.CS.1 Demonstrate               7.CS.1 (a) Selects the main idea and key information of a listening or viewing
+understanding of the main idea              presentation such as by choosing from three or more one-
+of oral French multi-sentence               sentence options.
+presentations on a variety       7.CS.1 (b) Compares and contrasts three to five items based on the
+of familiar topics in semi-                 information given in an oral presentation (e.g., weather forecasts
+structured situations.                      for different days of the week, restaurants, performances).
+[L] [V] [S] [W] [RP]             7.CS.1 (c) Retrieves details from a video or live conversation among three
+                                            people (e.g., with note-taking or advance organizers).
+                                 7.CS.1 (d) Represents understanding of a presentation (e.g., by
+                                            demonstrations, charts, graphs, or concept maps).
+                                 7.CS.1 (e) Responds to questions beginning with est-ce que, qu’est-ce
+                                            que, qui, où or quand with a sentence starter (e.g., Où sont
+                                            ces personnes? Elles sont…Qui est le personnage principal? Le
+                                            personnage principal est…).
+                                 7.CS.1 (f ) Completes a 6 - 8 item supported cloze activity while listening to a
+                                             French song.
+                                 7.CS.1 (g) Selects key details from an audio or video interview in French.
+
+
+
+
+Core French Curriculum Level 7                                                                                   23
+                        Goal: General Language Strategies (GL) Communication Skills (CS)
+
+       Learning Outcomes                                                Indicators
+  Compulsory: What students                          Examples of possible student demonstrations.
+ should know, understand and
+         be able to do.
+
+The student will be able to:         The student:
+7.GL.1 Select listening or           Before listening or viewing:
+viewing strategies in highly         7.GL.1 (a)	Identifies the listening intention from a number of options
+structured situations, such as:                   presented in class.
+                                     7.GL.1 (b)	Anticipates the information a presentation might contain, with
+• asking and answering                           the selection of limited choices from an anticipation checklist.
+   questions
+                                     7.GL.1 (c)	Activates prior knowledge about a topic from a limited list of
+• making predictions                              possible prior experiences.
+• verifying comprehension            7.GL.1 (d)	Establishes connections to own experiences from a limited list of
+                                                  possible situations.
+• making connections                 7.GL.1 (e)	Establishes connections to a previous conversation, presentation,
+• visualizing                                     audio, or video clip from a list of possible related features (e.g.,
+                                                  title, topic, or details).
+• summarizing                        7.GL.1 (f)	Selects a pre-listening or pre-viewing strategy previously used in
+• synthesizing                                    ELA.
+                                     During listening or viewing:
+• analyzing and evaluating
+                                     7.GL.1 (g)	Uses comprehension aids (e.g., word walls, posters, personal
+[L] [V] [S] [RP]                                  vocabulary lists, or dictionaries).
+                                     7.GL.1 (h)	Develops own understanding of the message with the
+                                                  identification of cognates, familiar words, key thematic words, and
+                                                  previously learned expressions.
+                                     7.GL.1 (i)	Interprets spoken language with auditory and visual context
+                                                  clues.
+                                     7.GL. 1 (j)	Seeks assistance from other students, such as with questioning.
+                                     After listening or viewing:
+                                     7.GL.1 (k) Asks the speaker to repeat part of the presentation.
+                                     7.GL.1 (l) Asks questions about unclear words or expressions.
+                                     7.GL.1 (m)	Identifies with a French sentence several strategies used to
+                                                  facilitate comprehension of the listening or viewing experience.
+                                     7.GL.1 (n)	Verifies anticipatory statements concerning the content of the
+                                                  viewing or listening experience with a French sentence (e.g., Oui,
+                                                  on parle des différents pays. Non, on ne parle pas des restaurants.).
+                                     7.GL.1 (o)	Represents the main idea of a listening experience with graphic
+                                                  representations (e.g., with a story map, illustrations, or photos).
+                                     7.GL.1 (p)	Summarizes a listening experience with a familiar French
+                                                  sentence.
+                                     7.GL.1 (q)	Answers questions about a listening or viewing experience, with a
+                                                  French sentence.
+                                     7.GL.1 (r)	Self-evaluates own understanding of the main idea of listening or
+                                                  viewing experience, such as with a rubric or a rating scale.
+
+24                                                                                   Core French Curriculum Level 7
+                                    Goal: Communication Skills (CS)
+
+      Learning Outcomes                                             Indicators
+  Compulsory: What students                      Examples of possible student demonstrations.
+ should know, understand and
+         be able to do.
+
+The student will be able to:     The student:
+7.CS.2 Discuss a variety         7.CS.2 (a) Interviews another student with familiar questions and phrases,
+                                            either face-to-face or with technology such as webcams or
+of information on familiar                  videophones.
+topics through modeled
+                                 7.CS.2 (b) Answers questions posed by another student during an interview
+oral expression in structured               or conversation.
+situations.
+                                 7.CS.2 (c) Answers familiar questions with several modeled phrases (e.g.,
+[S]                                         regarding relationships, another country, a consumer product, or a
+                                            performance).
+                                 7.CS.2 (d) Engages in conversations with a small group of 3- 4 people with the
+                                            use of modeled phrases or sentence stems such as:
+                                            A: Bonjour Denis!
+                                            B: Bonjour Éric.
+                                            C: Salut Denis et Éric! Pouvez-vous m’aider?
+                                            A & B: Oui, bien sur!
+                                            C: J’ai perdu mon sac à dos.
+                                            B: Qu’est-ce qu’il y a dans ton sac à dos?
+                                            C: Mon baladeur est dans mon sac à dos! C’est urgent!
+                                            A: On va t’aider!
+                                            B: Voici un sac à dos avec un baladeur. C’est de la marque ___.
+                                            C: Ce n’est pas mon sac à dos!
+                                            A: Voici un autre sac à dos avec un baladeur. C’est de la marque ___.
+                                            C: Fiou! C’est mon sac à dos! Merci!
+                                 7.CS.2 (e) Presents information with modeled sentences (e.g., describing
+                                            a restaurant floor plan, a restaurant design or menu, a musical
+                                            performance, or a consumer product), such as:
+                                            Q. Quels produits compares-tu?
+                                            A. Je compare des souliers de sport.
+                                            Q. Vous préférez la marque A ou la marque B?
+                                            A. Hmmm. Les souliers de la marque A sont plus confortables que la
+                                            marque B. Les lacets de la marque B sont plus solides que la marque
+                                            A. Et la marque B est plus attrayante que la marque A. Mais le prix de
+                                            la marque A est moins cher que la marque B. Donc, je vais acheter la
+                                            marque A.
+                                            Q. Pourquoi?
+                                            A. Je vais acheter les souliers de la marque A parce qu’ils sont moins
+                                            chers et plus confortables. La marque A est mon soulier préféré. Je vais
+                                            au magasin aujourd’hui!
+                                 7.CS.2 (f) Reports on the incidents in a legend or story with the use of
+                                            modeled phrases and questions, such as:
+                                            Q. Qu’est-ce qui se passe dans l’histoire?
+                                            A. Marc voit quelque chose dans le lac. La ‘chose’ a un long cou et elle
+                                            nage lentement. Soudainement, elle n’est plus là!
+                                            Q. Qu’est-ce que c’est?
+                                            A. C’est le monstre Ogopogo du lac Okanagan!
+                                 7.CS.2 (g) Presents a reader’s theatre presentation based on a script. (see e.g.
+                                            7CS.4, page 30)
+
+Core French Curriculum Level 7                                                                                    25
+                        Goal: General Language Strategies (GL) Communication Skills (CS)
+
+       Learning Outcomes                                                Indicators
+  Compulsory: What students                          Examples of possible student demonstrations.
+ should know, understand and
+         be able to do.
+
+
+The student will be able to:         The student:
+7.GL.2 Select speaking               Before speaking:
+strategies in highly structured      7.GL.2 (a) Identifies the speaking intention with teacher support.
+situations, such as:
+                                     7.GL.2 (b) Finds different ways of conveying a message (e.g., with synonyms,
+• modeled language                              familiar expressions, or visuals).
+• shared practice                    7.GL.2 (c) Develops own dialogue scripts from a combination of models.
+• guided practice                    7.GL.2 (d) Chooses own presentation or speaking guidelines from a list (e.g.,
+• independent practice                          Parle fort! Utilise des gestes! Regarde l’auditoire! Regarde ton
+[S] [RP] [R]                                    partenaire! Prends des pauses!).
+                                     7.GL.2 (e) Acquires new vocabulary (e.g., maintenance and use of a personal
+                                                dictionary, repetition of new words or phrases).
+                                     During speaking:
+                                     7.GL.2 (f ) Participates in oral activities with partners or small groups of
+                                                 students with support.
+                                     7.GL.2 (g) Chooses memory aids to deliver a presentation (e.g., posters,
+                                                index cards, or notes).
+                                     7.GL.2 (h) Portrays meaning and emotion when representing a character
+                                                in a skit (e.g., facial expressions, voice change, body language, or
+                                                intonations).
+                                     7.GL.2 (i) Integrates corrective feedback from the teacher or other students
+                                                through correct use of a word, sentence, or phrase.
+                                     7.GL.2 (j) Practices new words and phrases as they are encountered.
+                                     After speaking:
+                                     7.GL.2 (k) Self-evaluates group or partner exchanges, prepared dialogues, or
+                                                presentations using a checklist or rubric.
+                                     7.GL.2 (l) Sets goals for the next speaking experience by selecting an item
+                                                from presentation guidelines in a checklist or rubric.
+
+
+
+
+26                                                                                   Core French Curriculum Level 7
+                                    Goal: Communication Skills (CS)
+
+      Learning Outcomes                                              Indicators
+  Compulsory: What students                      Examples of possible student demonstrations.
+ should know, understand and
+         be able to do.
+
+
+The student will be able to:     The student:
+7.CS.3 Demonstrate               7.CS.3 (a) Identifies the main idea of an illustrated 100 - 120 word, two-
+understanding of the main                   paragraph text, such as:
+idea and supporting details                                      Mon amie Mariko
+in illustrated 100 - 120 word,             Mariko est japonaise et il y a cinq personnes dans sa famille. J’aime
+two-paragraph expository,                  beaucoup son père, sa mère, son frère et sa sœur. Le repas préféré de
+procedural, persuasive and                 Mariko est les hamburgers, mais le reste de sa famille préfère les mets
+narrative text.                            traditionnels du Japon, tels que le sushi, les nouilles udon, et le teriaki.
+                                           Ils mangent souvent ensemble à la maison, mais ils aiment manger
+[R]                                        au restaurant japonais aussi.
+                                           Quand nous sommes ensemble, Mariko et moi écoutons nos
+                                           baladeurs. Nous allons souvent au restaurant aussi. Nous sommes
+                                           dans la même classe à l’école, donc on fait les devoirs ensemble. Des
+                                           fois, nous faisons des projets de français. J’aime beaucoup mon amie
+                                           Mariko.
+                                           Idée principale : C’est la description de la famille de Mariko et les
+                                           activités que Mariko fait avec son amie.
+                                 7.CS.3 (b) Selects key supporting details in a 100 -120 word, illustrated, two-
+                                            paragraph text, such as:
+                                                       Un Saskapogo en Saskatchewan?
+                                           Beaucoup de personnes voient un monstre dans le lac Turtle en
+                                           Saskatchewan. Le lac Turtle est à 120 kilomètres au nord-ouest de
+                                           North Battleford. Tout le monde dit que le monstre est gros! Il a un
+                                           long cou, et un corps vert ou peut-être brun. Sa tête ressemble à un
+                                           cheval. Le monstre mesure environ 30 mètres de longueur et il nage
+                                           vite!
+                                           Il y a aussi des légendes des Premières nations qui parlent de ce
+                                           monstre. Toutes les personnes qui voient le monstre ont peur! Mais il y
+                                           a d’autres personnes qui disent que le monstre est un poisson géant.
+                                           D’autres disent que c’est un plésiosaure. Est-ce que la Saskatchewan
+                                           a vraiment un monstre comme Ogopogo en Colombie-Britannique?
+                                           Est-ce que nous avons un Saskapogo ici en Saskatchewan?
+                                           Détailsw un monstre, gros, brun/vert, un long cou, 30 mètres, un
+                                           cheval, peur, un poisson géant, un plésiosaure, Ogopogo, Saskapogo,
+                                           les légendes.
+                                 7.CS.3 (c) Determines the total cost of food items chosen from a menu.
+                                 7.CS.3 (d) Identifies the main idea of another student’s writing (e.g., in a
+                                            French blog or webpage, or written document posted in the
+                                            classroom).
+
+
+Core French Curriculum Level 7                                                                                       27
+                       Goal: General Language Strategies (GL) Communication Skills (CS)
+
+      Learning Outcomes                                                Indicators
+  Compulsory: What students                           Examples of possible student demonstrations.
+ should know, understand and
+         be able to do.
+
+The student will be able to:        The student:
+7.GL.3 Use reading strategies       Before reading:
+in semi-guided situations.
+                                    7.GL.3 (a) Predicts the content of the text using a sentence stem (e.g., Je
+(see page 24, 7.GL.1 for                       pense que c’est une histoire de…Je pense que le texte va parler de…).
+strategies)
+                                    7.GL.3 (b) Anticipates specific aspects of content of the text (e.g., selection of
+[R] [RP] [W] [S]                               oui/non or vrai/faux labels of possible content sentences).
+                                    7.GL.3 (c) Makes connections to preferences and own experiences using a
+                                               sentence stem (e.g., C’est comme moi. Je préfère le….aussi. Je fais un
+                                               lien entre le… et moi.).
+                                    7.GL.3 (d) Makes connections to a similar text previously shared in class
+                                               using a French sentence such as Cette histoire ressemble à l’histoire
+                                               de … .
+                                    7.GL.3 (e) Asks questions about the text and possible context clues (e.g.,
+                                               Quel est le titre? Quel est le thème? Quels sont les mots-amis
+                                               (congénères)? Quels sont les mots importants?).
+                                    During reading:
+                                    7.GL.3 (f ) Identifies context clues to aid comprehension (e.g., key words
+                                                or cognates contained in other sentences of the paragraph,
+                                                information sidebars, titles and subtitles, photographs, drawings,
+                                                graphs, and tables).
+                                    7.GL.3 (g) Groups parts of a sentence into manageable parts with teacher
+                                               support.
+                                    7.GL.3 (h) Monitors comprehension of a text with a questioning checklist
+                                               on understanding of content groupings, such as Est-ce que je
+                                               comprends cette partie, oui ou non?
+                                    7.GL.3 (i) Repairs own comprehension when the sense of a text is lost (e.g.,
+                                               re-reading a sentence or a paragraph, re-examination of context
+                                               clues, skipping unknown words).
+                                    7.GL.3 (j) Pauses reading periodically for verification of initial predictions.
+                                    7.GL.3 (k) Explains visualization with a French sentence, such as Il y a un
+                                               monstre brun et il a un long cou.
+                                    7.GL.3 (l) Copies or highlights unknown words or phrases for verification.
+                                    Continued . . .
+
+
+
+28                                                                                  Core French Curriculum Level 7
+                   Goal: General Language Strategies (GL) Communication Skills (CS)
+
+     Learning Outcomes                                             Indicators
+  Compulsory: What students                     Examples of possible student demonstrations.
+ should know, understand and
+         be able to do.
+
+                                 The student:
+                                 After reading:
+                                 7.GL.3 (m) Responds personally to the text with a complete French sentence.
+                                 7.GL.3 (n)	Summarizes the main idea of the text with a complete French
+                                             sentence, such as L’ídée principale est une description de la
+                                             performance de Julie.
+                                 7.CS.3 (o)	Represents understanding of the text with visuals (e.g., a
+                                             storyboard, a story map, or a pictorial web).
+                                 7.GL.2 (p) Organizes a list of new vocabulary words discovered in reading.
+                                 7.GL.3 (q)	Reinforces vocabulary gained from reading by grouping them in
+                                             different ways (e.g., concept maps, word walls, or word sorts).
+                                 7.GL.3 (r)	Practices new vocabulary in limited speaking or writing
+                                             situations.
+                                 7.GL.3 (s) Verifies sentences from anticipation exercises.
+                                 7.GL.3 (t) Answers several familiar questions using modeled phrases.
+
+
+
+
+Core French Curriculum Level 7                                                                                29
+                                     Goal: Communication Skills (CS)
+
+      Learning Outcomes                                                  Indicators
+  Compulsory: What students                         Examples of possible student demonstrations.
+ should know, understand and
+         be able to do.
+
+The student will be able to:      The student:
+7.CS.4 Produce 60 - 80 word       7.CS.4 (a) Writes a modeled 60 - 80 word, two-paragraph description,
+expository, narrative, or                    journal entry, procedure, or story, such as:
+procedural two- paragraph texts              Alain et moi faisons de la planche à neige au fameux Mont Whistler,
+or scripts in French based on a              site des Jeux Olympiques de Vancouver 2010. Nous allons utiliser
+combination of models.                       une planche à neige, des lunettes de protection et des gants. C’est
+[W]                                          important de garder l’équilibre sur la planche à neige. Si on tombe,
+                                             c’est dangereux. On va peut être rencontrer des obstacles comme des
+                                             arbres, des autres planchistes, et de la glace. On ne sait jamais! Nous
+                                             aimons beaucoup faire de la planche à neige.
+                                  7.CS.4 (b) Writes a 60 – 80 word script with sound effects, based on and
+                                             modeled from a text previously read in class:
+                                                                Le monstre du Lac Turtle
+                                  Narrateur :C’est le 12 juillet 1990. Il est neuf heures du soir au Lac Turtle.
+                                              Un père et ses deux enfants sont à la pêche. Soudainement, le père
+                                              voit quelque chose de bizarre dans le lac.
+                                  Père : Aïe, les enfants, je vois quelque chose de bizarre là-bas!
+                                  Enfant 1 : Qu’est-ce que c’est?
+                                  Enfant 2 : Il a un long cou et il est vert…ou brun!
+                                  Père : Il ressemble à un hippocampe!
+                                  Enfant 1 : Il nage vite. [floush!] C’est un serpent de mer? Il plonge! [plouf!]
+                                  Enfant 2 : J’ai peur! Papa!!!!!!!!!!!!!!!!! Aaaaaah!
+                                  Père: Nous allons retourner à la plage tout de suite! Courage, les enfants!
+                                         [broumbroumbroum]
+                                  Narrateur : Quelques personnes ont de différentes explications.
+                                  Personne 1 : C’est un poisson géant!
+                                  Personne 2 : C’est un plésiosaure!
+                                  Personne 3 : C’est un monstre!
+                                  Narrateur : Est-ce que la Saskatchewan a un Saskapogo?
+                                  7.CS.4 (c) Writes a French menu for a particular type of restaurant (e.g., la
+                                             pizzeria, le restaurant français, le restaurant japonais, le restaurant
+                                             grec, le restaurant québécois, le restaurant chinois).
+
+
+
+30                                                                                       Core French Curriculum Level 7
+                        Goal: General Language Strategies (GL) Communication Skills (CS)
+
+      Learning Outcomes                                                 Indicators
+  Compulsory: What students                           Examples of possible student demonstrations.
+ should know, understand and
+         be able to do.
+
+
+The student will be able to:         The student:
+7.GL.4 Implement stages of the       Before writing:
+writing process in semi-guided       7.GL.4 (a) Generates writing ideas in French using pre-writing strategies
+situations, including: idea                     (e.g., with a web, a graphic organizer, or a list).
+generation, drafting, editing,
+and publishing.                      7.GL.4 (b) Selects, with support, a graphic organizer for planning, based on
+                                                the text type.
+[W] [S] [R] [RP]
+                                     7.GL.4 (c) Selects the audiences for which a text is intended from a list of
+                                                possibilities (e.g., students in the class, or other students in the
+                                                school).
+                                     During writing:
+                                     7.GL.4 (d) Selects, with support, reference material to help locate an
+                                                equivalent word or expression (e.g., an English-French dictionary,
+                                                a word wall, a personal vocabulary list, or an illustrated dictionary).
+                                     7.GL.4 (e) Relies on several models, with support, to write a 10 -12 sentence,
+                                                two-paragraph expository, narrative or procedural text.
+                                     After writing:
+                                     7.GL.4 (f ) Proofreads the text with support for accuracy and meaning.
+                                     7.GL.4 (g) Implements changes to the text based on a conference with the
+                                                teacher leading to a final copy.
+                                     7.GL.4 (h) Connects stages of the writing process to visual models, such as
+                                                un diagramme en toile d’araignée (a web), un brouillon (draft), une
+                                                correction (edits), une copie finale (final copy).
+                                     7.GL.4 (i) Evaluates own or another student’s written work based on the
+                                                descriptors in a French rubric, or from a French checklist.
+                                     7.GL.4 (j) Sets goals, with support, for the next writing experience.
+                                     7.GL.4 (k) Selects written texts for inclusion in an assessment portfolio.
+
+
+
+
+Core French Curriculum Level 7                                                                                         31
+                                        Goal: Language Knowledge (LK)
+
+      Learning Outcomes                                                   Indicators
+  Compulsory: What students                           Examples of possible student demonstrations.
+ should know, understand and
+         be able to do.
+
+
+The student will be able to:          The student:
+7.LK.1 Demonstrate acquisition        7.LK.1 (a) Identifies individual numbers to 10 000 in French.
+of French language concepts           7.LK.1 (b) Reads numbers orally from a table, chart, graph, or text (e.g.,
+and vocabulary related to             population figures, sales in dollars, or distances).
+themes, including:                    7.LK.1 (c) Meets thematic unit needs with regular –ir verbs, singular and
+                                      plural forms in the present tense.
+• numbers to 10 000
+                                      7.LK.1 (d) Meets thematic unit needs with irregular–ir verbs, singular and
+• theme-related present tense        plural forms in the present tense.
+   regular –ir verbs, (singular and   7.LK.1 (e) Indicates immediate future actions with the use of the verb aller
+   plural forms)                      (e.g., Je vais aller chez ma grand-mère en fin de semaine. Nous allons jouer une
+• theme-related present tense        partie de soccer ce soir. Ils vont aller en ville demain.).
+   irregular –ir verbs, (singular     7.LK.1 (f ) Expresses residence in or travel to cities, Canadian provinces/
+   and plural forms)                  territories or selected countries with the use of the prepositions en, au, and
+                                      aux (e.g., Je vais en Alberta. Il va au Manitoba. Elle habite en Saskatchewan. Je
+• immediate future tense verbs,      vais à Ottawa. Ils habitent aux Territoires du Nord-Ouest).
+   (singular and plural forms)        7.LK.1 (g) Describes movement using common adverbs in sentences (e.g.,
+• prepositions relating to prov-     Il marche vite. Nous nageons maintenant. Vous allez tout de suite?).
+   inces and selected countries       7.LK.1 (h) Illustrates script sounds, character reactions, animal noises,
+                                      machine noises, actions, and sounds in nature with French onomatopoeic
+• common adverbs                      expressions (e.g., Clac! Badaboum! Cuicui! Vroumvroum, Paf! Toc Toc, Bang,
+                                      Clic, Tut Tut, Tic Tac, Aïe).
+• onomatopoeic expressions
+                                      7.LK.1 (i) Communicates obligation or ability with verbs devoir and pouvoir
+• verb devoir and pouvoir with       + infinitive (e.g., Je dois aller. Je peux travailler. Il doit arrêter. Nous pouvons
+   infinitive verbs                   chanter.).
+• commands and instructions          7.LK.1 (j) Relays instructions and commands with the second person plural
+   in the second person plural        form (e.g., Allez! Chantez!).
+                                      7.LK.1 (k) Asks questions using inversion (e.g., Aimes-tu la musique rock?
+• question transformations            Allons-nous maintenant?).
+• conjunctions                        7.LK.1 (l) Uses the conjunctions “et”, “ou”, or “mais” in compound
+• comparative qualifiers              sentences.
+                                      7.LK.1 (m) Uses comparative qualifiers (e.g., plus, moins, meilleur, pire).
+• French monetary
+   representations.                   7.LK.1 (n) Represents monetary amounts with the correct notation, such as
+                                      43,98 $.
+[S] [R] [W]                           7.LK.1 (o) Uses key words and phrases related to 4 of the following themes:
+                                                   • Travel to a Francophone Country – Voyager dans un pays
+                                                     francophone
+                                                   • Friends – Les amis
+                                                   • My Restaurant – Mon restaurant
+                                                   • Consumer Evaluation of a Product – Consommateur averti
+                                                   • School Talent Search – À la recherche de talent
+                                                   • Canadian Mysteries and Legends – Mystères et légendes du
+                                                      Canada
+
+32                                                                                     Core French Curriculum Level 7
+                                  Goal: Culture (C) Communication Skills (CS)
+
+      Learning Outcomes                                                      Indicators
+  Compulsory: What students                             Examples of possible student demonstrations.
+ should know, understand and
+         be able to do.
+
+The student will be able to:         The student:
+7.C.1 Relate the influence and       7.C.1 (a)    Discusses authentic French, First Nations, or Métis legends, stories, or
+contributions of Francophone,                     mysteries shared in class, such as:
+First Nations, and Métis lan-
+                                                  • Memphré, the lake creature reported to live in Lac Memphrémagog in
+guages and cultures to Canadian                      Québec;
+legends and stories.                              • Champ, the lake creature said to live in Lac Champlain, Québec;
+[R] [L] [W] [V] [RP] [S]                          • Ponik, the lake creature said to live in Lac Pohénégamook, Québec;
+                                                  • Ogopogo or Naitaka (Salish: n’ha-a-itk, “lake demon”) is the name given
+                                                     to a lake creature reported to live in Okanagan Lake in British Columbia;
+                                                  • Sasquatch or Bigfoot (Chiha-tanka in Dakota), large ape-man said to
+                                                     inhabit the forest; revered in some First Nations cultures;
+                                                  • Flaming ships said to be seen off the coast of  Prince Edward Island and
+                                                     New Brunswick (le feu du mauvais temps);
+                                                  • Manipogo, the lake creature said to live in Lake Manitoba, Manitoba;
+                                                  • Unnamed lake creature said to live in Turtle Lake, Saskatchewan;
+                                                  • Thabeeszus and the Wolverine Legend (Métis); and  
+                                                  • Thunderbird legends on the Great Plains of North America.
+                                     7.C.1 (b)    Identifies cultural beliefs and values (e.g., fear of the unknown, fear of
+                                                  some animals, belief in the supernatural, respect for various animals) in
+                                                  traditional Francophone, First Nations or Métis legends and mysteries
+                                                  (e.g., la chasse-gallerie or flying canoe legend of Québécois folklore; the
+                                                  “Who Calls” legend of Saskatchewan Cree folklore (as portrayed in the My
+                                                  Town – Fort Qu’Appelle booklet); the loup-garou or Rugaru (also spelled
+                                                  Rougarou) is a Michif pronunciation of the French phrase “loup garou,”
+                                                  or werewolf.). (Note: Some stories about Rugaru come from French
+                                                  werewolf legends, some are adaptations of Algonquian Wendigo/Witiko
+                                                  legends about man-eating ice monsters, and others are combinations of
+                                                  the two. In most Rugaru stories, a Métis person is turned into a Rugaru by
+                                                  catching sight of another Rugaru, not being bitten by one as in French
+                                                  werewolf legends, or by committing acts of cannibalism or greed, as
+                                                  described in Algonquian Windigo legends.)
+                                     7.C.1 (c)    Shares information about a Canadian legend or story with a single French
+                                                  sentence such as Memphré est un monstre dans une légende québécoise et
+                                                  il habite dans le lac Memphrémagog au Québec.
+                                     7.C.1 (d)    Integrates elements of Francophone culture for the production of
+                                                  cultural activities in French (e.g., games, songs, shadow plays, skits,
+                                                  readers’ theatre, storytelling, French or Québécois cuisine, clothing from
+                                                  French catalogues or websites).
+                                     7.C.1 (e)    Self-evaluates participation in cultural activities on a rating scale or
+                                                  rubric.
+                                     7.C.1 (f )   Sets goals for future participation in cultural activities.
+
+
+Core French Curriculum Level 7                                                                                                 33
+     Connection to Other Subject Areas
+     Students arrive at school with a natural curiosity. An engaging learning
+     environment provides opportunities to satisfy and nourish this
+     curiosity or thirst for knowledge. When exploring French in such an
+     environment, students make connections between languages, with
+     other curricular areas, and with the world around them. Experiencing
+     language learning concepts in rich contexts allows students to transfer
+     knowledge and understanding to new situations. The Core French
+     curriculum was organized so as to complement the experiences
+     students will have in other subject areas at various grade levels. Some
+     examples of integrating Core French with other areas of study are:
+     English Language Arts – language processing strategies in reading,
+     writing, speaking, listening and viewing that are similar in both
+     languages; French root words and cognates that are found in the
+     English language; poetry, stories, and legends; narrative, procedural,
+     expository, and persuasive texts; readers’ theatre
+     Arts Education – representations, dance, drama and role play, music,
+     clothing, interior design, regalia, identity and expression
+     Health Education – interpersonal skills; personality types; conflict
+     resolution; healthy decision making
+     Physical Education – movement, dancing and games
+     Career Education – entrepreneurism; finding a job; volunteerism
+     Social Studies – Francophone, First Nations, Métis, Inuit cultures;
+     schools; transportation; travel to other regions of Canada and the
+     world; globalization; future trends, cause and effect; Canadian history;
+     cultural diversity
+     Mathematics – integers, money, consumer evaluation of a product
+
+
+                                              Social Studies
+                   Physical                                                   Health
+                  Education                                                  Education
+                                                                  Identity and
+                                                                Interdependence
+                        Thinking                 Self and
+                                                Community
+       Language                                                                                 Arts
+         Arts                                                                                 Education
+                                   Lifelong                    Engaged
+                                   Learners                    Citizens
+
+
+
+
+          Mathematics         Social                                 Literacies            Science
+                          Responsibility
+
+
+
+                                Career                              Core
+                              Education1                           French2
+
+                                                                             1
+                                                                                 Begins in Grade 6
+                                                                             2
+                                                                                 Locally Determined Option
+
+
+34                                                          Core French Curriculum Level 7
+Technology Integration
+Technology contributes to the learning of a wide range of literacy
+and learning outcomes, and enables students to explore and create
+a variety of messages for multiple audiences. The use of multiple
+technologies in the Core French classroom:
+•   encourages student engagement with novelty and challenge;
+•   facilitates more collaboration and interaction with other students,
+    not just in the classroom, but elsewhere;
+•   increases the use of outside resources;
+•   improves audience awareness of other students’ products and
+    presentations;
+•   responds to student diversity; and
+•   improves technical skills.
+
+
+
+
+Core French Curriculum Level 7                                            35
+Glossary
+Anticipation guide – a series of statements related to the topic of a text which help activate prior knowledge or
+predictions about the topic.
+
+Cognates (congénères) – words that are the same or very similar in two languages, such as telephone and
+téléphone.
+
+Comprehension repair – a comprehension strategy whereby understanding of text is monitored and
+adjustments are made when the meaning breaks down.
+
+Context clues – hints, such as pictures, or other words in the sentence or paragraph that enable students to
+make intelligent guesses about the meaning of an unknown word in a text.
+
+Onomatopoeic expressions – words that imitate noises.
+
+Semantic – refers to the meaning of words.
+
+Syntax – refers to the structure (word order) and parts of sentences and the rules that govern the sentences (e.g.
+subject-verb agreement).
+
+Text chunking – grouping words into short, understandable, meaningful phrases in order to better understand a
+text.
+
+
+
+
+36                                                                                Core French Curriculum Level 7
+Bibliography
+Anderson, B., Carr, W., Lewis, C., Salvatori, M. and M. Turnbull (2008). Making connections: Effective literacy pratices
+in FSL. Toronto, ON: Pearson Education Canada.
+
+Arpin, L., and L. Capra (2001). L’apprentissage par projets. Montréal, QC: Chenelière/McGraw-Hill.
+
+Bernard, I. et al (2005). Communi-Quête 2. Don Mills, ON: Oxford University Press Canada.
+
+Bouchard, D. (2002). Qu’Appelle. Vancouver, B.C.: Raincoast Books.
+
+Canadian Parents for French (2008). The state of French language education in Canada. Ottawa, ON: Canadian
+Parents for French.
+
+CASLT (1994). National Core French study: A model for implementation. Ottawa, ON: Canadian Association of
+Second Language Teachers.
+
+Cogswell, F., and P. Kristmanson (2007). French is a life skill: A summary of research, theories and practices. Toronto,
+ON: Nelson-Thomson Canada.
+
+Council of Europe (2001). Common european framework of references for languages: Learning, teaching and
+assessment. Cambridge, United Kingdom: Cambridge University Press.
+
+Crone, G.B. et al (2006). Ça marche 2. Toronto, ON: Pearson Education Canada.
+
+Cummins, J., Brown K., and Sayers, D. (2007). Literacy, technology and diversity: Teaching for success in changing
+times. Boston, MA: Allyn and Bacon.
+
+Douglas, R. (1922). Meaning of Canadian city names. Ottawa: F.A. Acland, Québec Geographical Board.
+
+Faulds, M. et al (2010). Strategies for success: Tools for the second-language classroom.
+Toronto, ON: Nelson Education.
+
+Gardner, H. (1993). Multiple intelligences: The theory in practice. New York: Basic Books.
+
+Germain, C. (1993). Le point sur l’approche communicative. Montréal, QC: Centre éducatif et culturel.
+
+Krashen, S. (1982). Principles and practice in second language acquisition. Oxford, UK: Pergamon.
+
+Lapkin, S., Hart, D., and B. Harley (1998). Case study of compact Core French models: Attitudes and achievement.
+In S. Lapkin (Ed.), French language education in Canada: Empirical studies (pp. 3-30). Toronto, ON: University of
+Toronto Press.
+
+Léonard, C.J. (2010). Mémoire des noms de lieux d’origine et d’influence française en Saskatchewan. Québec, QC:
+Les Éditions GID.
+
+
+
+
+Core French Curriculum Level 7                                                                                         37
+Loiselle, André (2010). “Popular genres in Quebec cinema: The strange case of horror in film and television,” in
+How Canadians Communicate III: Contexts of Canadian Popular Culture, eds. Bart Beaty, Derek Britton, Gloria Filax
+and Rebecca Sullivan. Edmonton: Athabasca University Press, (pp. 141-159).
+
+Lombana, C. (2008). “On communicative competence: A conversation with Sandra J. Sauvignon.” Mosaic,
+10, 2:3-13.
+
+Mady, Callie. (2008). The relative effectiveness of different Core French delivery models. Ottawa, ON: CASLT.
+
+Netten, J. and Germain, C. (2004). Intensive French: Introduction. The Canadian Modern Language Review,
+60:3 (pp. 263 – 275).
+
+Netten, J. and Germain, C. (2004). Theoretical and research foundations of Intensive French. The Canadian
+Modern Language Review, 60:3 (pp. 295 - 308).
+
+Pearson, P., and Gallagher, M. (1983). “The instruction of reading comprehension.” Contemporary Educational
+Pyschology, 8.
+
+Quebec Geographical Board (1926). Geographical names of the province of Quebec. Quebec: Department of
+Lands and Forests.
+
+Stiggins, R. (2002). “Assessment crisis: The absence of assessment FOR learning.” Phi Delta Kappan,
+83:10 (pp. 758-765).
+
+Swain, M. (2000). “The output hypothesis and beyond: Mediating acquisition through collaborative dialogue.”
+In J. Lantold (Ed.), Sociocultural theory and second language learning (pp. 97-114). Oxford, UK: Oxford University
+Press.
+
+Tomlinson, C. (2003). Differentiation in practice: A resource guide for differentiating curriculum, grades 5-9.
+Alexandria, VA: Association for Supervision and Curriculum Development.
+
+Turnbull, M. (2001). “There is a role for the L1 in second and foreign language teaching.” Canadian Modern
+Language Review, 57 (pp. 531-540).
+
+Vygotsky, L.S. (1978). Mind in society. Cambridge, MA: Harvard University Press.
+
+Vygotsky, L.S. (1962). Thought and language. In E. Hanfman and G. Vakar (Eds. And Trans.). Cambridge,
+MA: MIT Press.
+
+White, James (1910). Ninth report of the geographic board of Canada, part II: Place names in Quebec. Quebec:
+Quebec Geographical Board.
+
+
+
+
+38                                                                                     Core French Curriculum Level 7
+Feedback Form
+The Ministry of Education welcomes your response to this curriculum and invites you to complete and return this
+feedback form.
+1. Please indicate your role in the learning community:
+       parent                          teacher                 resource teacher
+       guidance counsellor             school administrator    school board trustee
+       teacher librarian               school community council member
+       other ___________________________________________________
+    What was your purpose for looking at or using this curriculum?
+
+
+
+
+2. a) Please indicate which format(s) of the curriculum you used:
+       print
+       online
+    b) Please indicate which format(s) of the curriculum you prefer:
+       print
+       online
+3. Please respond to each of the following statements by circling the applicable number.
+
+The curriculum content is:                  Strongly Agree       Agree                Disagree     Strongly
+                                                                                                   Disagree
+appropriate for its intended purpose              1                    2                 3             4
+suitable for your use                             1                    2                 3             4
+clear and well organized                          1                    2                 3             4
+visually appealing                                1                    2                 3             4
+informative                                       1                    2                 3             4
+4. Explain which aspects you found to be:
+    Most useful:
+
+
+
+
+    Least useful:
+
+
+
+
+Core French Curriculum Level 7                                                                                39
+5. Additional comments:
+
+
+
+
+6. Optional:
+     Name: ______________________________________
+     School: ______________________________________
+     Phone: ____________________ Fax: ____________________
+
+
+Thank you for taking the time to provide this valuable feedback.
+
+Please return the completed feedback form to:
+
+          Executive Director
+          Curriculum Branch
+          Ministry of Education
+          2220 College Avenue
+          Regina SK S4P 4V9
+          Fax: 306-787-3164
+
+
+
+
+40                                                                 Core French Curriculum Level 7
+

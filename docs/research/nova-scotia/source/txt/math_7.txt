@@ -1,0 +1,328 @@
+Mathematics 7
+Outcomes
+
+
+
+
+                2022
+Website References
+Website references contained within this document are provided solely as a convenience and do not constitute
+an endorsement by the Department of Education of the content, policies, or products of the referenced website.
+The department does not control the referenced websites and subsequent links, and is not responsible for the
+accuracy, legality, or content of those websites. Referenced website content may change without notice.
+Regional Education Centres and educators are required under the Department’s Public School Programs
+Network Access and Use Policy to preview and evaluate sites before recommending them for student use. If an
+outdated or inappropriate site is found, please report it to <curriculum@novascotia.ca>.
+
+
+
+
+Mathematics Grade 7
+© Crown copyright, Province of Nova Scotia, 2022
+Prepared by the Department of Education and Early Childhood Development
+This is the most recent version of the current curriculum materials as used by teachers in Nova Scotia.
+The contents of this publication may be reproduced in part provided the intended use is for noncommercial
+purposes and full acknowledgment is given to the Nova Scotia Department of Education
+Mathematics Grade 7 Outcomes
+     N01 Students will be expected to determine and explain why a number is divisible by 2, 3, 4, 5, 6, 8, 9,
+     or 10, and why a number cannot be divided by 0.
+     Performance Indicators:
+     N01.01 Determine if a given number is divisible by 2, 3, 4, 5, 6, 8, 9, or 10, and explain why.
+     N01.03 Determine the factors of a given number using the divisibility rules.
+     N01.04 Explain, using an example, why numbers cannot be divided by 0.
+
+
+     N02 Students will be expected to demonstrate an understanding of the addition, subtraction,
+     multiplication, and division of decimals to solve problems (for more than one-digit divisors or more
+     than two-digit multipliers, the use of technology is expected).
+     Performance Indicators:
+     N02.01 Use estimation to determine the appropriate place value when calculating the sum or
+             difference.
+     N02.02 Use estimation to determine the appropriate place value when calculating the product.
+     N02.03 Use estimation to determine the appropriate place value when calculating the quotient.
+     N02.04 Represent concretely, pictorially, and symbolically the multiplication and division of decimal
+             numbers.
+     N02.05 Create and solve a given problem involving the addition of two or more decimal numbers.
+     N02.06 Create and solve a given problem involving the subtraction of decimal numbers.
+     N02.07 Create and solve a given problem involving the multiplication of decimal numbers.
+     N02.08 Create and solve a given problem involving the division of decimal numbers.
+     N02.09 Solve a given problem involving the multiplication or division of decimal numbers with two-
+             digit multipliers or one-digit divisors (whole numbers or decimals) without the use of
+             technology.
+     N02.10 Solve a given problem involving the multiplication or division of decimal numbers with more
+             than two-digit multipliers or more than one-digit divisors (whole numbers or decimals) with
+             the use of technology.
+     N02.11 Check the reasonableness of solutions using estimation.
+     N02.12 Solve a given problem that involves operations on decimals (limited to thousandths), taking
+             into consideration the order of operations.
+
+
+
+
+Mathematics 7: Outcomes (2022)                                                                                  1
+    N03 Students will be expected to solve problems involving percents from 1% to 100% (limited to whole
+    numbers).
+    Performance Indicators:
+    N03.01 Express a given percent as a decimal or fraction.
+    N03.02 Use mental mathematics to solve percent problems, when appropriate.
+    N03.03 Use estimation to determine an approximate answer or the reasonableness of an answer.
+    N03.04 Solve a given problem that involves finding a percent.
+    N03.05 Determine the answer to a given percent problem where the answer requires rounding, and
+            explain why an approximate answer is needed (e.g., total cost including taxes).
+
+    N04 Students will be expected to demonstrate an understanding of the relationship between positive
+    terminating decimals and positive fractions and between positive repeating decimals (with one or two
+    repeating digits) and positive fractions.
+    Performance Indicators:
+    N04.01 Predict the decimal representation of a given fraction using patterns.
+    N04.02 Match a given set of fractions to their decimal representations.
+    N04.03 Sort a given set of fractions as repeating or terminating decimals.
+    N04.04 Express a given fraction as a terminating or repeating decimal.
+    N04.05 Express a given repeating decimal as a fraction.
+    N04.06 Express a given terminating decimal as a fraction.
+
+    N05 Students will be expected to demonstrate an understanding of adding and subtracting positive
+    fractions and mixed numbers, with like and unlike denominators, concretely, pictorially, and
+    symbolically (limited to positive sums and differences).
+    Performance Indicators:
+    N05.01 Use benchmarks to estimate the sum or difference of positive fractions or mixed numbers.
+    N05.02 Model addition and subtraction of given positive fractions or given mixed numbers, using
+            concrete and pictorial representations, and record symbolically.
+    N05.03 Determine the sum or difference of fractions mentally, when appropriate.
+    N05.04 Determine the sum of two given positive fractions or mixed numbers with like denominators.
+    N05.05 Determine the difference of two given positive fractions or mixed numbers with like
+            denominators.
+    N05.06 Determine a common denominator for a given set of positive fractions or mixed numbers.
+    N05.07 Determine the sum of two given positive fractions or mixed numbers with unlike
+            denominators.
+    N05.08 Determine the difference of two given positive fractions or mixed numbers with unlike
+            denominators.
+    N05.09 Simplify a given positive fraction or mixed number by identifying the common factor
+            between the numerator and denominator.
+    N05.10 Simplify the solution to a given problem involving the sum or difference of two positive
+            fractions or mixed numbers.
+    N05.11 Solve a given problem involving the addition or subtraction of positive fractions or mixed
+            numbers, and determine if the solution is reasonable.
+
+
+
+
+2                                                                                   Mathematics 7: Outcomes (2022)
+     N06 Students will be expected to demonstrate an understanding of addition and subtraction of
+     integers, concretely, pictorially, and symbolically.
+     Performance Indicators:
+     N06.01 Explain, using concrete materials such as integer tiles and diagrams, that the sum of
+                opposite integers is zero.
+     N06.02 Illustrate, using a number line, the results of adding or subtracting negative and positive
+                integers.
+     N06.03 Add two given integers, using concrete materials and/or pictorial representations, and
+                record the process symbolically.
+     N06.04 Subtract two given integers, using concrete materials and/or pictorial representations, and
+                record the process symbolically.
+     N06.05 Illustrate the relationship between adding integers and subtracting integers.
+     N06.06 Solve a given problem involving the addition and subtraction of integers.
+
+     N07 Students will be expected to compare, order, and position positive fractions, positive decimals (to
+     thousandths), and whole numbers by using benchmarks, place value, and equivalent fractions and/or
+     decimals.
+     Performance Indicators:
+     N07.01 Position proper fractions with like and unlike denominators from a given set on a number
+             line, and explain strategies used to determine order.
+     N07.02 Position a given set of positive fractions, including mixed numbers and improper fractions,
+             on a number line; and explain strategies used to determine order.
+     N07.03 Position a given set of positive decimals on a number line and explain strategies used to
+             determine order.
+     N07.04 Compare and order the numbers of a given set that includes positive fractions, positive
+             decimals, and/or whole numbers in ascending or descending order and verify the result
+             using a variety of strategies.
+     N07.05 Identify a number that would be between two given numbers in an ordered sequence or on a
+             number line.
+     N07.06 Identify incorrectly placed numbers in an ordered sequence or on a number line.
+     N07.07 Position the numbers of a given set by placing them on a number line that contains
+             benchmarks, such as 0 and 1 or 0 and 5.
+     N07.08 Position a given set that includes positive fractions, positive decimals, and/or whole
+             numbers on a number line and explain strategies used to determine order.
+
+     PR01 Students will be expected to demonstrate an understanding of oral and written patterns and
+     their equivalent linear relations.
+     Performance Indicators:
+     PR01.01 Formulate a linear relation to represent the relationship in a given oral or written pattern.
+     PR01.02 Provide a context for a given linear relation that represents a pattern.
+     PR01.03 Represent a pattern in the environment using a linear relation.
+
+
+
+
+Mathematics 7: Outcomes (2022)                                                                                 3
+    PR02 Students will be expected to create a table of values from a linear relation, graph the table of
+    values, and analyze the graph to draw conclusions and solve problems.
+    Performance Indicators:
+    PR02.01 Create a table of values for a given linear relation by substituting values for the variable.
+    PR02.02 Create a table of values, using a linear relation, and graph the table of values (limited to
+            discrete elements).
+    PR02.03 Sketch the graph from a table of values created for a given linear relation, and describe the
+            patterns found in the graph to draw conclusions (e.g., graph the relationship between n and
+            2n + 3).
+    PR02.04 Describe, using everyday language, in spoken or written form, the relationship shown on a
+            graph to solve problems.
+    PR02.05 Match a given set of linear relations to a set of graphs.
+    PR02.06 Match a given set of graphs to a given set of linear relations.
+
+    PR03 Students will be expected to demonstrate an understanding of preservation of equality by
+    modelling preservation of equality, concretely, pictorially, and symbolically
+    applying preservation of equality to solve equations.
+    Performance Indicators:
+    PR03.01 Model the preservation of equality for each of the four operations, using concrete materials
+            and/or pictorial representations; explain the process orally; and record the process
+            symbolically.
+    PR03.02 Write equivalent forms of a given equation by applying the preservation of equality, and
+            verify using concrete materials (e.g., 3b = 12 is equivalent to 3b + 5 = 12 + 5 or 2r = 7 is
+            equivalent to 3(2r) = 3(7).
+    PR03.03 Solve a given problem by applying preservation of equality.
+
+    PR04 Students will be expected to explain the difference between an expression and an equation.
+    Performance Indicators:
+    PR04.01 Identify and provide an example of a constant term, numerical coefficient, and variable in an
+            expression and an equation.
+    PR04.02 Explain what a variable is and how it is used in a given expression.
+    PR04.03 Provide an example of an expression and an equation and explain how they are similar and
+            different.
+
+    PR05 Students will be expected to evaluate an expression given the value of the variable(s).
+    Performance Indicator:
+    PR05.01 Substitute a value for an unknown in a given expression and evaluate the expression.
+
+
+
+
+4                                                                                     Mathematics 7: Outcomes (2022)
+     PR06 Students will be expected to model and solve, concretely, pictorially, and symbolically, problems
+     that can be represented by one-step linear equations of the form x + a = b, where a and b are integers.
+     Performance Indicators:
+     PR06.01 Represent a given problem with a linear equation, and solve the equation using concrete
+             models.
+     PR06.02 Draw a visual representation of the steps required to solve a given linear equation.
+     PR06.03 Solve a given problem using a linear equation and record the process.
+     PR06.04 Verify the solution to a given linear equation using concrete materials and diagrams.
+     PR06.05 Substitute a possible solution for the variable in a given linear equation into the original
+             linear equation to verify the equality.
+
+     PR07 Students will be expected to model and solve, concretely, pictorially, and symbolically, where a,
+     b, and c are whole numbers, problems that can be represented by linear equations of the form
+     ax + b = c; ax = b; x ÷ a = b, a ≠ 0
+     Performance Indicators:
+     PR07.01 Represent a given problem with a linear equation, and solve the equation using concrete
+             models.
+     PR07.02 Draw a visual representation of the steps used to solve a given linear equation.
+     PR07.03 Solve a given problem using a linear equation and record the process.
+     PR07.04 Verify the solution to a given linear equation using concrete materials and diagrams.
+     PR07.05 Substitute a possible solution for the variable in a given linear equation into the original
+             linear equation to verify the equality.
+
+     M01 Students will be expected to demonstrate an understanding of circles by:
+     describing the relationships among radius, diameter, and circumference
+     ▪ relating circumference to pi
+     ▪ determining the sum of the central angles
+     ▪ constructing circles with a given radius or diameter
+     ▪ solving problems involving the radii, diameters, and circumferences of circles.
+     Performance Indicators:
+     M01.01 Illustrate and explain that the diameter is twice the radius in a given circle.
+     M01.02 Illustrate and explain that the circumference is approximately three times the diameter in a
+             given circle.
+
+
+     M01.03 Explain that, for all circles, pi is the ratio of the circumference to the diameter     and its
+            value is approximately 3.14.
+     M01.04 Explain, using an illustration, that the sum of the central angles of a circle is 360°.
+     M01.05 Draw a circle with a given radius or diameter, with and without a compass.
+     M01.06 Solve a given contextual problem involving circles.
+
+
+
+
+Mathematics 7: Outcomes (2022)                                                                                 5
+    M02 Students will be expected to develop and apply a formula for determining the area of triangles,
+    parallelograms, and circles.
+    Performance Indicators:
+    M02.01 Illustrate and explain how the area of a rectangle can be used to determine the area of a
+            triangle.
+    M02.02 Generalize a rule to create a formula for determining the area of triangles.
+    M02.03 Illustrate and explain how the area of a rectangle can be used to determine the area of a
+            parallelogram.
+    M02.04 Generalize a rule to create a formula for determining the area of parallelograms.
+    M02.05 Illustrate and explain how to estimate the area of a circle without the use of a formula.
+    M02.06 Generalize a rule to create a formula for determining the area of a given circle.
+    M02.07 Solve a given problem involving the area of triangles, parallelograms, and/or circles.
+
+
+    G02 Students will be expected to identify and plot points in the four quadrants of a Cartesian plane,
+    using integral ordered pairs.
+    Performance Indicators:
+    G02.01 Label the axes of a four quadrant Cartesian plane and identify the origin.
+    G02.02 Identify the location of a given point in any quadrant of a Cartesian plane using an integral
+            ordered pair.
+    G02.03 Plot the point corresponding to a given integral ordered pair on a Cartesian plane with units
+            of 1, 2, 5, or 10 on its axes.
+
+    SP01 Students will be expected to demonstrate an understanding of central tendency and range by
+    determining the measures of central tendency (mean, median, mode) and range
+    determining the most appropriate measures of central tendency to report findings.
+    Performance Indicators:
+    SP01.01 Determine mean, median, and mode for a given set of data, and explain why these values
+             may be the same or different.
+    SP01.02 Determine the range for a given set of data.
+    SP01.03 Provide a context in which the mean, median, or mode is the most appropriate measure of
+             central tendency to use when reporting findings.
+    SP01.04 Solve a given problem involving the measures of central tendency.
+
+
+    SP02 Students will be expected to determine the effect on the mean, median, and mode when an
+    outlier is included in a data set.
+    Performance Indicators:
+    SP02.01 Analyze a given set of data to identify any outliers.
+    SP02.02 Explain the effect of outliers on the measures of central tendency for a given data set.
+    SP02.03 Identify outliers in a given set of data, and justify whether or not they are to be included in
+            reporting the measures of central tendency.
+    SP02.04 Provide examples of situations in which outliers would and would not be used in reporting
+            the measures of central tendency.
+
+
+
+
+6                                                                                     Mathematics 7: Outcomes (2022)
+     SP03 Students will be expected to construct, label, and interpret circle graphs to solve problems
+     Performance Indicators:
+     SP03.01 Identify common attributes of circle graphs, such as
+              o title, label, or legend
+                 othe sum of the central angles is 360०
+                 othe data is reported as a percent of the total, and the sum of the percents is equal to
+                  100%
+     SP03.02 Create and label a circle graph, with technology, to display a given set of data.
+     SP03.03 Find and compare circle graphs in a variety of print and electronic media, such as
+             newspapers, magazines, and the Internet.
+     SP03.04 Translate percentages displayed in a circle graph into quantities to solve a given problem.
+     SP03.05 Interpret a given or constructed circle graph to answer questions.
+
+
+     SP04 Students will be expected to express probabilities as ratios, fractions, and percents.
+     Performance Indicators:
+     SP04.01 Determine the probability of a given outcome occurring for a given probability experiment,
+             and express it as a ratio, fraction, and percent.
+     SP04.02 Provide an example of an event with a probability of 0 or 0% (impossible) and an example of
+             an event with a probability of 1 or 100% (certain).
+
+     SP06 Students will be expected to conduct a probability experiment to compare the theoretical
+     probability (determined using a tree diagram, table, or other graphic organizer) and experimental
+     probability of two independent events.
+     Performance Indicators:
+     SP06.01 Determine the theoretical probability of a given outcome involving two independent events.
+     SP06.02 Conduct a probability experiment for an outcome involving two independent events, with
+             and without technology, to compare the experimental probability with the theoretical
+             probability.
+     SP06.03 Solve a given probability problem involving two independent events.
+
+
+
+
+Mathematics 7: Outcomes (2022)                                                                              7
+

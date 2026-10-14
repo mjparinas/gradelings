@@ -1,0 +1,2630 @@
+2009
+Saskatchewan Curriculum
+
+
+
+
+Science
+
+
+
+
+                 8
+Science 8
+ISBN 978-1-926631-09-7
+1. Study and teaching (Middle school) - Saskatchewan - Curricula. 2. Competency-based education
+- Saskatchewan.
+Saskatchewan. Ministry of Education. Curriculum and E-Learning. Science and Technology Unit.
+All rights are reserved by the original copyright owners.
+       Table of Contents
+       Acknowledgements.......................................................................................................................................................... v
+       Introduction ......................................................................................................................................................................... 1
+       Using this Curriculum ....................................................................................................................................................... 2
+       Core Curriculum ................................................................................................................................................................. 3
+       Broad Areas of Learning .................................................................................................................................................. 3
+                 Developing Lifelong Learners............................................................................................................................. 4
+                 Developing a Sense of Self and Community ................................................................................................. 4
+                 Developing Engaged Citizens ............................................................................................................................ 4
+       Cross-curricular Competencies ..................................................................................................................................... 4
+                 Developing Thinking.............................................................................................................................................. 4
+                 Developing Identity and Interdependence ................................................................................................... 5
+                 Developing Literacies ............................................................................................................................................ 5
+                 Developing Social Responsibility ...................................................................................................................... 5
+       Aim and Goals ..................................................................................................................................................................... 5
+       Inquiry .................................................................................................................................................................................... 7
+                 Creating Questions for Inquiry in Science ...................................................................................................... 9
+                 Scientific Literacy Framework .......................................................................................................................... 11
+                 Foundations of Scientific Literacy .................................................................................................................. 12
+                 Learning Contexts ................................................................................................................................................ 18
+                 Explanations, Evidence, and Models in Science ........................................................................................ 21
+                 Laboratory Work ................................................................................................................................................... 22
+                 Safety ........................................................................................................................................................................ 24
+                 Technology in Science........................................................................................................................................ 26
+                 Science Challenges .............................................................................................................................................. 27
+       Outcomes and Indicators............................................................................................................................................. 29
+                 Assessment and Evaluation of Student Learning ..................................................................................... 42
+                 Connections with Other Areas of Study....................................................................................................... 43
+       Glossary .............................................................................................................................................................................. 47
+       References ......................................................................................................................................................................... 51
+       Feedback Form ................................................................................................................................................................ 55
+
+
+Science 8                                                                                                                                                                                               iii
+       Acknowledgements
+       The Ministry of Education wishes to acknowledge the professional contributions and advice of the
+       provincial curriculum reference committee members:
+       Glen Aikenhead, Professor Emeritus              Janet McVittie, Assistant Professor
+       College of Education                            College of Education
+       University of Saskatchewan                      University of Saskatchewan
+
+       Wayne Clark, Teacher                            Herman Michell, Assistant Professor
+       Good Spirit School Division                     Department of Science
+       Saskatchewan Teachers’ Federation               First Nations University of Canada
+
+       Laura Connors, Teacher                          Devona Putland, Teacher
+       Prairie South School Division                   South East Cornerstone School Division
+       Saskatchewan Teachers’ Federation               Saskatchewan Teachers’ Federation
+
+       Aimee Corriveau                                 Josée Roberge-Dyck, Teacher
+       Meath Park School                               Christ the Teacher School Division
+       Student                                         Saskatchewan Teachers’ Federation
+
+       Michala Hegi, Teacher                           Patty Serwotki, Teacher
+       Regina Roman Catholic School Division           Living Sky School Division
+       Saskatchewan Teachers’ Federation               Saskatchewan Teachers’ Federation
+
+       Ji Xia, Assistant Professor                     Sheryl Siemens, Teacher
+       Faculty of Education                            Chinook School Division
+       University of Regina                            Saskatchewan Teachers’ Federation
+
+       Duane Johnson, Principal                        Lori Slater, Program Manager
+       Prairie Valley School Division                  Education and Training Secretariat
+       Saskatchewan Teachers’ Federation               Federation of Saskatchewan Indian Nations
+
+       Pattie Lysyk, Teacher                           Warren Wessel, Associate Professor
+       Saskatchewan Rivers School Division             Faculty of Education
+       Saskatchewan Teachers’ Federation               University of Regina
+
+       Brien Maguire, Professor                        Ruth Wilson, Teacher
+       Computer Science Department                     Sun West School Division
+       University of Regina                            Saskatchewan Teachers’ Federation
+
+       Larry McCallum, Consultant                      Matthew Zelenski
+       Greater Saskatoon Catholic School Division      Meath Park School
+       Saskatchewan Teachers’ Federation               Student
+
+
+
+
+Science 8                                                                                                 v
+     The Ministry of Education also wishes to thank many others who contributed to the development
+     of this curriculum:
+       • former Science Reference Committee members
+       • First Nations Elders and teachers
+       • university faculty members
+       • other educators and reviewers.
+
+
+
+
+vi                                                                                               Science 8
+   Introduction
+   Science is a Required Area of Study in Saskatchewan’s Core
+   Curriculum. The provincial requirement for Grade 8 Science is 150
+   minutes of instruction per week (Saskatchewan Learning, 2007).
+   The purpose of this curriculum is to outline the provincial
+   requirements for Grade 8 Science. This curriculum provides the
+   intended learning outcomes that Grade 8 students are expected
+   to achieve in science by the end of the year. Indicators are included
+   to provide the breadth and depth of what students should know
+   and be able to do in order to achieve the learning outcomes.
+   This renewed curriculum reflects current science education              Inquiry into authentic student
+   research, updated technology, and recently developed                    questions generated from
+   resources, and is responsive to changing demographics within            student experiences is the
+   the province. This curriculum is based on the Pan-Canadian              central strategy for teaching
+                                                                           science.
+   Protocol for Collaboration on School Curriculum Common                       (National Research Council
+   Framework of Science Learning Outcomes K to 12 (Council of                            [NRC], 1996, p. 31)
+   Ministers of Education, Canada [CMEC], 1997).
+   The philosophy and spirit of science education in Saskatchewan
+   is reflected in this curriculum, in the resources developed to
+   support the new curriculum, and in materials designed and
+   utilized to support curriculum implementation. In addition, the
+   philosophy for science education builds on and supports the
+   concept of Core Curriculum in Saskatchewan.
+   This curriculum includes the following information to support
+   science instruction in Saskatchewan schools:
+     • connections to Core Curriculum, including the Broad Areas
+       of Learning and Cross-curricular Competencies
+     • the K-12 aim and goals for science education
+     • characteristics of an effective science program
+     • Grade 8 Science outcomes and indicators
+     • sample assessment and evaluation criteria related to
+       outcomes in science
+     • connections with other areas of study
+     • a glossary.
+
+
+
+
+Science 8                                                                                                      1
+                                      Using this Curriculum
+                                      Outcomes are statements of what students are expected to
+                                      know and be able to do by the end of a grade in a particular
+                                      area of study. The outcomes provide direction for assessment
+                                      and evaluation, and for program, unit, and lesson planning.
+                                      Critical characteristics of an outcome include the following:
+    Outcomes describe the
+    knowledge, skills, and              • focus on what students will learn rather than what teachers
+    understandings that students           will teach
+    are expected to attain by the       • specify the skills and abilities, understandings and
+    end of a particular grade.             knowledge, and/or attitudes students are expected to
+                                           demonstrate
+                                        • are observable, assessable, and attainable
+                                        • are written using action-based verbs and clear professional
+                                           language (educational and subject-related)
+                                        • are developed to be achieved in context so that learning is
+                                           purposeful and interconnected
+                                        • are grade and subject specific
+                                        • are supported by indicators which provide the breadth and
+                                           depth of expectations
+                                        • have a developmental flow and connection to other grades
+                                           where applicable.
+                                      Indicators are representative of what students need to know
+    Indicators are a representative   and/or be able to do in order to achieve an outcome. Indicators
+    list of the types of things a     represent the breadth and the depth of learning related to
+    student should know or be able    a particular outcome. The list of indicators provided in the
+    to do if they have attained the   curriculum is not an exhaustive list. Teachers may develop
+    outcome.                          additional and/or alternative indicators but those teacher-
+                                      developed indicators must be reflective of and consistent with
+                                      the breadth and depth that is defined by the given indicators.
+                                      Within the outcomes and indicators in this curriculum, the terms
+                                      “including”, “such as”, and “e.g.,” commonly occur. Each term
+                                      serves a specific purpose:
+                                       • The term “including” prescribes content, contexts, or
+                                         strategies that students must experience in their learning,
+                                         without excluding other possibilities. For example, an
+                                         indicator might say that students should construct visual
+                                         representations of the world distribution of water, and
+                                         the distribution of water in Saskatchewan, including
+                                         watersheds, lakes, rivers, streams, river systems, wetlands,
+                                         ground water, saline lakes, and riparian areas. This means
+                                         that, although other types of water could be considered, it is
+                                         mandatory to represent the nine types listed.
+
+
+
+
+2                                                                                                Science 8
+     • The term “such as” provides examples of possible broad
+       categories of content, contexts, or strategies that teachers or
+       students may choose, without excluding other possibilities.
+       For example, an indicator might include the phrase “such
+       as pin-hole cameras, single lens reflex cameras, telescopes,
+       microscopes, and periscopes” as examples of different
+       optical devices that can be illustrated using geometric ray
+       diagrams. This statement provides teachers and students
+       with possible methods to consider, while not excluding
+       other methods.
+     • Finally, the term “e.g.,” offers specific examples of what a
+       term, concept, or strategy might look like. For example,
+       an indicator might include the phrase “e.g., nutrition,
+       exercise, smoking, drugs, and alcohol” to refer to the types
+       of personal lifestyle choices that students might analyze
+       with respect to the functions and efficiency of the human
+       respiratory, circulatory, digestive, excretory, and nervous
+       systems.
+   Although the outcomes and indicators in the science curriculum
+   are organized by units, teachers may organize their instruction
+   using interdisciplinary or transdisciplinary themes. There is
+   no requirement for teachers to structure instruction into four
+   distinct science units.
+
+   Core Curriculum
+   Core Curriculum is intended to provide all Saskatchewan
+   students with an education that will serve them well regardless
+   of their choices after leaving school. Through its various
+   components and initiatives, Core Curriculum supports the
+   achievement of the Goals of Education for Saskatchewan. For
+   current information regarding Core Curriculum, please refer
+   to Core Curriculum: Principles, Time Allocations, and Credit Policy
+   (Saskatchewan Learning, 2007).
+   The Broad Areas of Learning and Cross-curricular Competencies
+   connect the specificity of the areas of study and the day-to-
+   day work of teachers with the broader philosophy of Core
+   Curriculum and the Goals of Education for Saskatchewan.
+
+   Broad Areas of Learning
+   There are three Broad Areas of Learning that reflect
+   Saskatchewan’s Goals of Education. Science education
+   contributes to student achievement of the Goals of Education
+   through helping students achieve knowledge, skills, and
+   attitudes related to these Broad Areas of Learning.
+
+
+
+
+Science 8                                                                3
+                                      Developing Lifelong Learners
+                                      Students engaged in constructing and applying science
+    Developing lifelong learners is
+    related to the following Goals
+                                      knowledge naturally build a positive disposition towards
+    of Education:                     learning. Throughout their study of science, students bring a
+      º Basic Skills                  natural curiosity about the natural and constructed world which
+      º Lifelong Learning             provides the motivation to discover and explore their personal
+      º Self Concept Development      interests more deeply. By sharing their learning experiences
+      º Positive Lifestyle.           with others, in a variety of contexts, students develop skills that
+                                      support them as lifelong learners.
+
+                                      Developing a Sense of Self and Community
+                                      Students develop and strengthen their personal identity as
+                                      they explore connections between their own understanding of
+    Developing a sense of self and
+                                      the natural and constructed world and perspectives of others,
+    community is related to the
+    following Goals of Education:     including scientific and Indigenous perspectives. Students
+      º Understanding & Relating      develop and strengthen their understanding of community as
+         to Others                    they explore ways in which science can inform individual and
+      º Self Concept Development      community decision making on issues related to the natural and
+      º Positive Lifestyle            constructed world.
+      º Spiritual Development.
+                                      Developing Engaged Citizens
+                                      As students explore connections between science, technology,
+    Developing engaged citizens is
+    related to the following Goals    society, and the environment, they experience opportunities to
+    of Education:                     contribute positively to the environmental, economic, and social
+      º Understanding & Relating      sustainability of local and global communities. Students reflect
+         to Others                    and act on their personal responsibility to understand and
+      º Positive Lifestyle            respect their place in the natural and constructed world, and
+      º Career and Consumer
+         Decisions
+                                      make personal decisions that contribute to living in harmony
+      º Membership in Society         with others and the natural world.
+      º Growing with Change.
+                                      Cross-curricular Competencies
+                                      The Cross-curricular Competencies are four interrelated areas
+                                      containing understandings, values, skills, and processes which
+                                      are considered important for learning in all areas of study. These
+                                      competencies reflect the Common Essential Learnings and are
+                                      intended to be addressed in each area of study at each grade
+                                      level.
+
+                                      Developing Thinking
+    K-12 Goals for Developing
+    Thinking:                         Learners construct knowledge to make sense of the world
+     º thinking and learning          around them. In science, students develop understanding
+        contextually                  by building and reflecting on their observations and what
+     º thinking and learning          is already known by themselves and others. By thinking
+        creatively
+     º thinking and learning          contextually, creatively, and critically, students develop deeper
+        critically.
+
+
+
+
+4                                                                                                  Science 8
+   understanding of various phenomena in the natural and
+   constructed world.
+
+   Developing Identity and Interdependence
+   This competency addresses the ability to act autonomously in              K-12 Goals for Developing
+   an interdependent world. It requires the learner to be aware of           Identity and Interdependence:
+   the natural environment, of social and cultural expectations, and           º understanding, valuing,
+                                                                                  and caring for oneself
+   of the possibilities for individual and group accomplishments.
+                                                                               º understanding, valuing,
+   Interdependence assumes the possession of a positive self-                     and caring for others
+   concept and the ability to live in harmony with others and with             º understanding and
+   the natural and constructed world. In science, students examine                valuing social, economic,
+   the interdependence among living things within local, national,                and environmental
+   and global environments and consider the impact of individual                  interdependence and
+                                                                                  sustainability.
+   decisions on those environments.
+
+   Developing Literacies
+   Literacies are multi-faceted and provide a variety of ways,               K-12 Goals for Developing
+   including the use of various language systems and media, to               Literacies:
+   interpret the world and express understanding of it. Literacies             º developing knowledge
+   involve the evolution of interrelated knowledge, skills, and                   related to various literacies
+   strategies that facilitate an individual’s ability to participate fully     º exploring and interpreting
+   and equitably in a variety of roles and contexts – school, home,               the world through various
+                                                                                  literacies
+   and local and global communities. In science, students collect,             º expressing understanding
+   analyze, and represent ideas and understanding of the natural                  and communicating
+   and constructed world in multiple forms.                                       meaning using various
+                                                                                  literacies.
+   Developing Social Responsibility
+   Social responsibility is how people positively contribute to
+   their physical, social, cultural, and educational environments. It
+                                                                             K-12 Goals for Developing
+   requires the ability to participate with others in accomplishing          Social Responsibility:
+   shared or common goals. This competency is achieved by                     º using moral reasoning
+   using moral reasoning processes, engaging in communitarian                    processes
+   thinking and dialogue, and taking social action. Students in               º engaging in
+   science examine the impact of scientific understanding and                    communitarian thinking
+                                                                                 and dialogue
+   technological innovations on society.                                      º taking social action.
+
+   Aim and Goals
+   The aim of K-12 science education is to enable all Saskatchewan
+   students to develop scientific literacy. Scientific literacy today
+   embraces Euro-Canadian and Indigenous heritages, both of
+   which have developed an empirical and rational knowledge
+   of nature. A Euro-Canadian way of knowing about the natural
+   and constructed world is called science, while First Nations and
+   Métis ways of knowing nature are found within the broader
+   category of Indigenous knowledge.
+
+
+
+
+Science 8                                                                                                         5
+    Diverse learning experiences based on the outcomes in
+    this curriculum provide students with many opportunities
+    to explore, analyze, evaluate, synthesize, appreciate, and
+    understand the interrelationships among science, technology,
+    society, and the environment (STSE) that will affect their
+    personal lives, their careers, and their future.
+
+
+      Goals are broad statements identifying what students are
+      expected to know and be able to do upon completion of the
+      learning in a particular area of study by the end of Grade
+      12. The four goals of K-12 science education are to:
+        • Understand the Nature of Science and STSE
+          Interrelationships – Students will develop an
+          understanding of the nature of science and
+          technology, their interrelationships, and their social
+          and environmental contexts, including
+          interrelationships between the natural and constructed
+          world.
+        • Construct Scientific Knowledge – Students will
+          construct an understanding of concepts, principles,
+          laws, and theories in life science, in physical science, in
+          earth and space science, and in Indigenous Knowledge
+          of nature; and then apply these understandings to
+          interpret, integrate, and extend their knowledge.
+        • Develop Scientific and Technological Skills –
+          Students will develop the skills required for
+          scientific and technological inquiry, problem
+          solving, and communicating; for working
+          collaboratively; and for making informed decisions.
+        • Develop Attitudes that Support Scientific Habits of
+          Mind – Students will develop attitudes that support
+          the responsible acquisition and application of scientific,
+          technological, and Indigenous knowledge to the mutual
+          benefit of self, society, and the environment.
+
+
+
+
+6                                                                 Science 8
+                                                                Physical Education
+
+                                            Language                                                 Health
+                   STSE                        Arts                                                 Education
+            Interrelationships                                                      Identity and
+                                                         Thinking                 Interdependence
+                                                                       Self and
+                                                                      Community
+       Scientific
+      Knowledge
+                                                         Lifelong                   Engaged                       Arts
+                                 Science                 Learners                   Citizens                    Education
+      Scientific and
+      Technological
+          Skills
+                                                              Social                 Literacies
+               Scientific                                 Responsibility
+             Habits of Mind                                                                           Social
+                                           Mathematics                                               Studies
+                                                                      Career
+                                                                     Education
+
+
+   Inquiry
+   Inquiry learning provides students with opportunities to build
+   knowledge, abilities, and inquiring habits of mind that lead to
+   deeper understanding of their world and human experience.
+   Inquiry is more than a simple instructional method. It is a
+   philosophical approach to teaching and learning, grounded in
+   constructivist research and methods, which engages students
+   in investigations that lead to disciplinary, interdisciplinary, and
+   transdisciplinary understanding.
+   Inquiry builds on students’ inherent sense of curiosity and
+   wonder, drawing on their diverse backgrounds, interests, and
+   experiences. The process provides opportunities for students
+   to become active participants in a collaborative search for
+   meaning and understanding.
+   Middle years students who are engaged in inquiry in science
+   should be able to:
+                                                                                                    Inquiry is intimately connected
+     • Identify questions that can be answered through scientific                                   to scientific questions –
+       investigations.                                                                              students must inquire using
+                                                                                                    what they already know and
+     • Design and conduct a scientific investigation.
+                                                                                                    the inquiry process must add to
+     • Use appropriate tools and techniques to gather, analyze,                                     their knowledge.
+       and interpret data.                                                                                          (NRC, 2000, p. 13)
+     • Develop descriptions, explanations, predictions, and models
+
+
+
+
+Science 8                                                                                                                                7
+                                                             using evidence.
+                                                           • Think critically and logically to make the relationships
+                                                             between evidence and explanations.
+                                                           • Recognize and analyze alternative explanations and
+                                                             predictions.
+                                                           • Communicate scientific procedures and explanations.
+                                                           • Use mathematics in all aspects of scientific inquiry.
+                                                                                                                 (NRC, 1996, pp. 145, 148)
+
+    Students do not come to                             An important part of any inquiry process is student reflection
+    understand inquiry simply                           on their learning and the documentation needed to assess
+    by learning words such as                           the learning and make it visible. Student documentation of
+    “hypothesis” and “inference” or                     the inquiry process in science may take the form of works-in-
+    by memorizing procedures such                       progress, reflective writing, journals, reports, notes, models, arts
+    as “the steps of the scientific
+    method”.                                            expressions, photographs, video footage, or action plans.
+                   (NRC, 2000, p. 14)                   Inquiry learning is not a step-by-step process, but rather a
+                                                        cyclical process, with various phases of the process being
+                                                        revisited and rethought as a result of students’ discoveries,
+                                                        insights, and construction of new knowledge. Experienced
+                                                        inquirers will move back and forth among various phases as
+                                                        new questions arise and as students become more comfortable
+                                                        with the process. The following graphic shows various phases of
+                                                        the cyclical inquiry process.
+                                        Constructing Understanding Through Inquiry
+
+
+
+             Curriculum Outcomes                         What are the things we wonder
+                                                       about and want to know more about?
+                                                        What questions do we have about
+                                                      the deeper mysteries or aspects of life?
+
+
+                                                                     Interpret
+                                                     Collaborate                       Conclude
+                                                                     Analyze
+                                             Plan                                            Investigate
+                          Reflect and                                                                          Reflect and
+                            Revise                        How are we going to get there?                         Revise
+                                           Explore                                                    Create
+
+                                                      Observe                           Synthesize
+                                                                                                                               Resources
+                                                 Acknowledge Sources             Document Processes
+
+                                                        What have we discovered and how
+                                                     will we show our deeper understanding?
+                                                      How are we going to use what we have
+                                                            discovered (e.g., apply, act,
+                                                                   implement)?
+
+
+
+
+8                                                                                                                                   Science 8
+   Inquiry focuses on the development of questions to initiate
+   and guide the learning process. These questions are formulated
+   by teachers and students to motivate inquiries into topics,
+   problems, and issues related to curriculum content and
+   outcomes.
+   Well-formulated inquiry questions are broad in scope and rich
+   in possibilities. Such questions encourage students to explore,
+   observe, gather information, plan, analyze, interpret, synthesize,
+   problem solve, take risks, create, conclude, document, reflect on
+   learning, and develop new questions for further inquiry.
+
+
+   Creating Questions for Inquiry in Science
+   In science, teachers and students can use the four learning
+   contexts as curriculum entry points to begin their inquiry;            Good science inquiry provides
+   however, the process may evolve into transdisciplinary learning        many entry points – ways in
+                                                                          which students can approach a
+   opportunities, as reflective of the holistic nature of our lives and
+                                                                          new topic – and a wide variety
+   interdependent global environment.                                     of activities during student
+                                                                          work.
+   It is essential to develop questions that are evoked by student                 (Kluger-Bell, 2000, p. 48)
+   interests and have potential for rich and deep learning. These
+   questions are used to initiate and guide the inquiry and give
+   students direction for investigating topics, problems, ideas,
+   challenges, or issues under study.
+   The process of constructing questions for deep understanding
+   can help students grasp the important disciplinary or
+   transdisciplinary ideas that are situated at the core of a             Essential questions that lead
+   particular curricular focus or context. These broad questions          to deeper understanding in
+                                                                          science should:
+   lead to more specific questions that can provide a framework,            º center on objects,
+   purpose, and direction for the learning activities in a lesson,             organisms, and events in
+   or series of lessons, and help students connect what they are               the natural world
+   learning to their experiences and life beyond school.                    º connect to science concepts
+                                                                               outlined in the curricular
+   Questions give students some initial direction for uncovering               outcomes
+   the understandings associated with a unit of study. Questions            º lend themselves to
+   can help students grasp the big disciplinary ideas surrounding              empirical investigation
+                                                                            º lead to gathering and
+   a focus or context and related themes or topics. They provide a             using data to develop
+   framework, purpose, and direction for the learning activities in            explanations for natural
+   each unit and help students connect what they are learning to               phenomena.
+   their experiences and life beyond the classroom. They also invite                      (NRC, 2000, p. 24)
+   and encourage students to pose their own questions for deeper
+   understanding.
+   Students should recognize that science is often unable to
+   answer “why” questions; in these instances, scientists rephrase
+   their inquiries into “how” questions.
+
+
+
+
+Science 8                                                                                                       9
+     An Effective Science Education
+     Program
+     An effective science education program supports student
+     achievement of learning outcomes through:
+       • foundations of scientific literacy
+       • learning contexts
+       • nature of scientific discourse
+       • modelling in science
+       • laboratory work
+       • safety
+       • technology in science
+       • science challenges.
+     All science outcomes and indicators emphasize one or more
+     foundations of scientific literacy; these represent the “what”
+     of the curriculum. The learning contexts represent different
+     processes for engaging students in achieving curricular
+     outcomes; they are the “how” of the curriculum. The four units
+     of study at each grade serve as an organizing structure for the
+     curriculum.
+     Scientists construct models to support their explanations
+     based on empirical evidence. Students need to engage in
+     similar processes through authentic laboratory work. During
+     their investigations, students must follow safe practices in the
+     laboratory, as well as in regard to living things.
+     Technology serves to extending our powers of observation
+     and to support the sharing of information. Students should use
+     a variety of technology tools for data collection and analysis,
+     for visualization and imaging, and for communication and
+     collaboration, throughout the science curriculum.
+     To achieve the vision of scientific literacy outlined in this
+     curriculum, students must increasingly become engaged
+     in the planning, development, and evaluation of their own
+     learning activities. In the process, students should have the
+     opportunity to work collaboratively with others, to initiate
+     investigations, to communicate findings, and to complete
+     projects that demonstrate learning. Teachers and students may
+     also choose to engage in science challenge activities as a means
+     of achieving learning outcomes.
+
+
+
+
+10                                                                Science 8
+                              Scientific Literacy Framework
+
+
+                                             ATTITUDES
+                          Stewardship Collaboration     Safety Inquiry in Science
+                              Appreciation of Science     Interest in Science
+
+
+
+                                                           TECHNOLOGICAL
+            STSE              SCIENTIFIC                      PROBLEM                  SKILLS
+                               INQUIRY                        SOLVING
+   Nature of Science and                                                             Initiating and
+       Technology                                                                      Planning
+
+   Relationship between
+                                           Scientifically
+                                                                                    Performing and
+       Science and                           Literate                                 Recording
+       Technology                            Student
+                                                                                    Analyzing and
+       Social and                                                                    Interpreting
+     Environmental               STSE
+    Contexts of Science                                      CULTURAL           Communication and
+                               DECISION
+     and Technology                                         PERSPECTIVES           Teamwork
+                               MAKING
+
+
+                                            KNOWLEDGE
+                      Life Science     Physical Science   Earth and Space Science
+                                        Indigenous Knowledge
+                                      FUNDAMENTAL CONCEPTS
+                   Constancy and Change Matter and Energy Similarity and Diversity
+                      Sustainability and Stewardship   Systems and Interactions
+
+
+
+
+Science 8                                                                                             11
+     Foundations of Scientific Literacy
+     The K-12 goals of science education parallel the foundation
+     statements for scientific literacy described in the Common
+     Framework of Science Learning Outcomes K to 12 (CMEC, 1997).
+     These four foundation statements delineate the critical aspects
+     of students’ scientific literacy. They reflect the wholeness and
+     interconnectedness of learning and should be considered
+     interrelated and mutually supportive.
+
+     Foundation 1: Science, Technology, Society,
+     and the Environment (STSE) Interrelationships
+     This foundation is concerned with understanding the scope
+     and character of science, its connections to technology, and
+     the social context in which it is developed. This foundation
+     statement should be considered the driving force of scientific
+     literacy. Three major dimensions address this foundation.
+
+     Nature of Science and Technology
+     Science is a social and cultural activity anchored in a particular
+     intellectual tradition. It is one way of knowing nature, based
+     on curiosity, imagination, intuition, exploration, observation,
+     replication, interpretation of evidence, and consensus making
+     over this evidence and its interpretation. More than most other
+     ways of knowing nature, science excels at predicting what will
+     happen next, based on its descriptions and explanations of
+     natural and technological phenomena. Science-based ideas
+     are continually being tested, modified, and improved as new
+     ideas supersede existing ideas. Technology, like science, is a
+     creative human activity, but is concerned with solving practical
+     problems that arise from human/social needs, particularly
+     the need to adapt to the environment and to fuel a nation’s
+     economy. New products and processes are produced by
+     research and development through the processes of inquiry and
+     design.
+
+     Relationships between Science and Technology
+     Historically, the development of technology has been
+     strongly linked to the development of science, with each
+     making contributions to the other. While there are important
+     relationships and interdependencies, there are also important
+     differences. Where the focus of science is on the development
+     and verification of knowledge; in technology, the focus is on the
+     development of solutions, involving devices and systems that
+     meet a given need within the constraints of the problem. The
+     test of science knowledge is that it helps us explain, interpret,
+
+
+
+
+12                                                               Science 8
+   and predict; the test of technology is that it works – it enables us
+   to achieve a given purpose.
+
+   Social and Environmental Contexts of Science and
+   Technology
+   The history of science shows that scientific development takes
+   place within a social context that includes economic, political,
+   social, and cultural forces along with personal biases and the
+   need for peer acceptance and recognition. Many examples
+   can be used to show that cultural and intellectual traditions
+   have influenced the focus and methodologies of science, and
+   that science, in turn, has influenced the wider world of ideas.
+   Today, societal and environmental needs and issues often drive
+   research agendas. As technological solutions have emerged
+   from previous research, many of the new technologies have
+   given rise to complex social and environmental issues which
+   are increasingly becoming part of the political agenda. The
+   potential of science, technology, and Indigenous knowledge
+   to inform and empower decision making by individuals,
+   communities, and society is central to scientific literacy in a
+   democratic society.
+
+   Foundation 2: Scientific Knowledge
+   This foundation focuses on the subject matter of science
+   including the theories, models, concepts, and principles that are
+   essential to an understanding of the natural and constructed
+   world. For organizational purposes, this foundation is framed
+   using widely accepted science disciplines.
+
+   Life Science
+   Life science deals with the growth and interactions of life forms
+   within their environments in ways that reflect the uniqueness,
+   diversity, genetic continuity, and changing nature of these
+   life forms. Life science includes the study of topics such as
+   ecosystems, biological diversity, organisms, cell biology,
+   biochemistry, diseases, genetic engineering, and biotechnology.
+
+   Physical Science
+   Physical science, which encompasses chemistry and physics,
+   deals with matter, energy, and forces. Matter has structure, and
+   its components interact. Energy links matter to gravitational,
+   electromagnetic, and nuclear forces in the universe. The
+   conservation laws of mass and energy, momentum, and charge
+   are addressed in physical science.
+
+
+
+
+Science 8                                                                 13
+     Earth and Space Science
+     Earth and space science brings local, global, and universal
+     perspectives to student knowledge. Earth, our home planet,
+     exhibits form, structure, and patterns of change as do our
+     surrounding solar system and the physical universe beyond.
+     Earth and space science includes such fields of study as geology,
+     hydrology, meteorology, and astronomy.
+
+     Traditional and Local Knowledge
+     A strong science program recognizes that modern science is
+     not the only form of empirical knowledge about nature and
+     aims to broaden student understanding of traditional and
+     local knowledge systems. The dialogue between scientists
+     and traditional knowledge holders has an extensive history
+     and continues to grow as researchers and practitioners seek
+     to better understand our complex world. The terms
+     “traditional knowledge”, “Indigenous Knowledge”, and
+     “Traditional Ecological Knowledge” are used by practitioners
+     worldwide when referencing local knowledge systems which
+     are embedded within particular worldviews. This curriculum
+     uses the term “Indigenous Knowledge” and provides the
+     following definitions to show parallels and distinctions
+     between Indigenous knowledge and scientific knowledge.
+
+     Indigenous Knowledge
+     “Traditional [Indigenous] knowledge is a cumulative body
+     of knowledge, know-how, practices and representations
+     maintained and developed by peoples with extended
+     histories of interaction with the natural environment. These
+     sophisticated sets of understandings, interpretations and
+     meanings are part and parcel of a cultural complex that
+     encompasses language, naming and classification systems,
+     resource use practices, ritual, spirituality and worldview”
+     (International Council for Science, 2002).
+
+     Scientific Knowledge
+     Similar to Indigenous knowledge, scientific knowledge is a
+     cumulative body of knowledge, know-how, practices, and
+     representations maintained and developed by people
+     (scientists) with extended histories of interaction with
+     the natural environment. These sophisticated sets of
+     understandings, interpretations, and meanings are part
+     and parcel of cultural complexes that encompass
+     language, naming and classification systems, resource use
+     practices, ritual, and worldview.
+
+
+
+
+14                                                              Science 8
+   Fundamental Ideas – Linking Scientific Disciplines
+   A useful way to create linkages among science disciplines is
+   through fundamental ideas that underlie and integrate different
+   scientific disciplines. Fundamental ideas provide a context for
+   explaining, organizing, and connecting knowledge. Students
+   deepen their understanding of these fundamental ideas and
+   apply their understanding with increasing sophistication as they
+   progress through the curriculum from Kindergarten to Grade 12.
+   These fundamental ideas are identified in the following chart.
+
+    Constancy and        The ideas of constancy and change underlie understanding of the natural
+    Change               and constructed world. Through observations, students learn that some
+                         characteristics of materials and systems remain constant over time whereas
+                         other characteristics change. These changes vary in rate, scale, and pattern,
+                         including trends and cycles, and may be quantified using mathematics,
+                         particularly measurement.
+    Matter and           Objects in the physical world are comprised of matter. Students examine
+    Energy               materials to understand their properties and structures. The idea of energy
+                         provides a conceptual tool that brings together many understandings
+                         about natural phenomena, materials, and the process of change. Energy,
+                         whether transmitted or transformed, is the driving force of both movement
+                         and change.
+    Similarity and       The ideas of similarity and diversity provide tools for organizing our
+    Diversity            experiences with the natural and constructed world. Beginning with
+                         informal experiences, students learn to recognize attributes of materials
+                         that help to make useful distinctions between one type of material and
+                         another, and between one event and another. Over time, students adopt
+                         accepted procedures and protocols for describing and classifying objects
+                         encountered, thus enabling students to share ideas with others and to
+                         reflect on their own experiences.
+    Systems and        An important way to understand and interpret the world is to think about
+    Interactions       the whole in terms of its parts and alternately about its parts in terms of
+                       how they relate to one another and to the whole. A system is an organized
+                       group of related objects or components that interact with one another so
+                       that the overall effect is much greater than that of the individual parts, even
+                       when these are considered together.
+    Sustainability and Sustainability refers to the ability to meet our present needs without
+    Stewardship        compromising the ability of future generations to meet their needs.
+                       Stewardship refers to the personal responsibility to take action in order
+                       to participate in the responsible management of natural resources. By
+                       developing their understanding of ideas related to sustainability, students
+                       are able to take increasing responsibility for making choices that reflect
+                       those ideas.
+
+
+
+
+Science 8                                                                                                15
+     Foundation 3: Scientific and Technological
+     Skills and Processes
+     This foundation identifies the skills and processes students
+     develop in answering questions, solving problems, and making
+     decisions. While these skills and processes are not unique
+     to science, they play an important role in the development
+     of scientific and technological understanding and in the
+     application of acquired knowledge to new situations. Four
+     broad skill areas are outlined in this foundation. Each area is
+     developed further at each grade level with increasing scope and
+     complexity of application.
+
+     Initiating and Planning
+     These are the processes of questioning, identifying problems,
+     and developing preliminary ideas and plans.
+
+     Performing and Recording
+     These are the skills and processes of carrying out a plan of
+     action, which involves gathering evidence by observation and,
+     in most cases, manipulating materials and equipment. Gathered
+     evidence can be documented and recorded in a variety of
+     formats.
+
+     Analyzing and Interpreting
+     These are the skills and processes of examining information and
+     evidence, organizing and presenting data so that they can be
+     interpreted, interpreting those data, evaluating the evidence,
+     and applying the results of that evaluation.
+
+     Communication and Teamwork
+     In science and technology, as in other areas, communication
+     skills are essential whenever ideas are being developed, tested,
+     interpreted, debated, and accepted or rejected. Teamwork skills
+     are also important because the development and application
+     of ideas rely on collaborative processes both in science-related
+     occupations and in learning.
+
+
+
+
+16                                                              Science 8
+   Foundation 4: Attitudes
+   This foundation focuses on encouraging students to develop
+   attitudes, values, and ethics that inform a responsible use of
+   science and technology for the mutual benefit of self, society,
+   and the environment. This foundation identifies six categories in    Both scientific and Indigenous
+   which science education can contribute to the development of         knowledge systems place value
+   scientific literacy.                                                 on attitudes, values, and ethics.
+                                                                        These are more likely to be
+                                                                        presented in a holistic manner
+   Appreciation of Science                                              in Indigenous knowledge
+   Students will be encouraged to critically and contextually           systems.
+   appreciate the role and contributions of science and technology
+   in their lives and to their community’s culture; and to be aware
+   of the limits of science and technology as well as their impact on
+   economic, political, environmental, cultural, and ethical events.
+
+   Interest in Science
+   Students will be encouraged to develop curiosity and
+   continuing interest in the study of science at home, in school,
+   and in the community.
+
+   Inquiry in Science
+   Students will be encouraged to develop critical beliefs
+   concerning the need for evidence and reasoned argument in
+   the development of scientific knowledge.
+
+   Collaboration
+   Students will be encouraged to nurture competence in
+   collaborative activity with classmates and others, inside and
+   outside of the school.
+
+   Stewardship
+   Students will be encouraged to develop responsibility in the
+   application of science and technology in relation to society and
+   the natural environment.
+
+   Safety
+   Students engaged in science and technology activities will be
+   expected to demonstrate a concern for safety and doing no
+   harm to themselves or others, including plants and animals.
+
+
+
+
+Science 8                                                                                                   17
+                                       Learning Contexts
+                                       Learning contexts provide entry points into the curriculum
+                                       that engage students in inquiry-based learning to achieve
+                                       scientific literacy. Each learning context reflects a different, but
+                                       overlapping, philosophical rationale for including science as a
+                                       Required Area of Study:
+                                         • The scientific inquiry learning context reflects an emphasis
+                                           on understanding the natural and constructed world using
+                                           systematic empirical processes that lead to the formation
+                                           of theories that explain observed events and that facilitate
+                                           prediction.
+                                         • The technological problem solving learning context
+                                           reflects an emphasis on designing and building to solve
+                                           practical human problems similar to the way an engineer
+                                           would.
+                                         • The STSE decision making learning context reflects the
+                                           need to engage citizens in thinking about human and
+                                           world issues through a scientific lens in order to inform and
+                                           empower decision making by individuals, communities, and
+                                           society.
+                                         • The cultural perspectives learning context reflects a
+                                           humanistic perspective that views teaching and learning as
+                                           cultural transmission and acquisition (Aikenhead, 2006).
+                                       These learning contexts are not mutually exclusive; thus, well-
+     Each learning context is          designed instruction may incorporate more than one learning
+     identified using a two or three   context. Students need to experience learning through each
+     letter code. One or more of       learning context at each grade; it is not necessary, nor advisable,
+     these codes are listed under
+                                       for each student to attempt to engage in learning through
+     each outcome as a suggestion
+     regarding which learning          each learning context in each unit. Learning within a classroom
+     context or contexts most          may be structured to enable individuals or groups of students
+     strongly support the intent of    to achieve the same curricular outcomes through different
+     the outcome.                      learning contexts.
+                                       A choice of learning approaches can also be informed by recent
+                                       well-established ideas on how and why students learn:
+                                         • Learning occurs when students are treated as a community
+                                           of practitioners of scientific literacy.
+                                         • Learning is both a social and an individual event for
+                                           constructing and refining ideas and competences.
+                                         • Learning involves the development of new self-identities for
+                                           many students.
+                                         • Learning is inhibited when students feel a culture clash
+                                           between their home culture and the culture of school
+                                           science.
+
+
+
+
+18                                                                                                     Science 8
+   Scientific Inquiry [SI]
+   Inquiry is a defining feature of the scientific way of knowing
+   nature. Inquiry requires identification of assumptions, use of      Scientific inquiry refers to the
+   critical and logical thinking, and consideration of alternative     diverse ways in which scientists
+                                                                       study the natural world and
+   explanations. Inquiry is a multifaceted activity that involves:     propose explanations based on
+                                                                       the evidence derived from their
+     • making observations, including watching or listening to
+                                                                       work.
+       knowledgeable sources                                               (National Research Council,
+     • posing questions or becoming curious about the questions                               1996, p. 23)
+       of others
+     • examining books and other sources of information to see
+       what is already known
+     • reviewing what is already known in light of experimental
+       evidence and rational arguments
+     • planning investigations, including field studies and
+       experiments
+     • acquiring the resources (financial or material) to carry out
+       investigations
+     • using tools to gather, analyze, and interpret data
+     • proposing critical answers, explanations, and predictions
+     • communicating the results to various audiences.
+   By participating in a variety of inquiry experiences that vary
+   in the amount of student self-direction, students develop
+   competencies necessary to conduct inquiries of their own – a
+   key element to scientific literacy.
+
+   Technological Problem Solving [TPS]
+   The essence of the technological problem solving learning
+   context is that students seek answers to practical problems. This   Technological design
+                                                                       is a distinctive process
+   process is based on addressing human and social needs and is        with a number of defined
+   typically addressed through an iterative design-action process      characteristics; it is purposeful;
+   that involves steps such as:                                        it is based on certain
+                                                                       requirements; it is systematic;
+     • identifying a problem                                           it is iterative; it is creative;
+     • identifying constraints and sources of support                  and there are many possible
+     • identifying alternative possible solutions and selecting one    solutions.
+       on which to work                                                        (International Technology
+                                                                            Education Association, 2000,
+     • planning and building a prototype or a plan of action to                                         p. 91)
+       resolve the problem
+     • testing and evaluating the prototype or plan.
+   By participating in a variety of technological and environmental
+   problem-solving activities, students develop capacities to
+   analyze and resolve authentic problems in the natural and
+   constructed world.
+
+
+
+
+Science 8                                                                                                        19
+                                            STSE Decision Making [DM]
+                                            Scientific knowledge can be related to understanding the
+     To engage with science and             relationships among science, technology, society, and the
+     technology toward practical            environment. Students must also consider values or ethics,
+     ends, people must be able to
+     critically assess the information
+                                            however, when addressing a question or issue. STSE decision
+     they come across and critically        making involves steps such as:
+     evaluate the trustworthiness of
+     the information source.                  • clarifying an issue
+                (Aikenhead, 2006, p. 2)       • evaluating available research and different viewpoints on
+                                                the issue
+                                              • generating possible courses of action or solutions
+                                              • evaluating the pros and cons for each action or solution
+                                              • identifying a fundamental value associated with each action
+                                                or solution
+                                              • making a thoughtful decision
+                                              • examining the impact of the decision
+                                              • reflecting back on the process of decision making.
+                                            Students may engage with STSE issues through research
+                                            projects, student-designed laboratory investigations, case
+                                            studies, role playing, debates, deliberative dialogues, and action
+                                            projects.
+
+                                            Cultural Perspectives [CP]
+                                            Students should recognize and respect that all cultures develop
+     For First Nations people, the          knowledge systems to describe and explain nature. Two
+     purpose of learning is to              knowledge systems which are emphasized in this curriculum
+     develop the skills, knowledge,         are First Nations and Métis cultures (Indigenous knowledge)
+     values and wisdom needed to
+     honour and protect the natural
+                                            and Euro-Canadian cultures (science). In their own way, both
+     world and ensure the long-term         of these knowledge systems convey an understanding of the
+     sustainability of life.                natural and constructed worlds, and they create or borrow
+     (Canadian Council on Learning,         from other cultures technologies to resolve practical problems.
+                             2007, p. 18)   Both knowledge systems are systematic, rational, empirical,
+                                            dynamically changeable, and culturally specific.
+                                            Cultural features of science are, in part, conveyed through the
+     For the Métis people, learning         other three learning contexts, and when addressing the nature
+     is understood as a process
+     of discovering the skills,             of science. Cultural perspectives on science can also be taught
+     knowledge and wisdom                   in activities that explicitly explore Indigenous knowledge or
+     needed to live in harmony with         knowledge from other cultures.
+     the Creator and creation, a way
+     of being that is expressed as          Addressing cultural perspectives in science involves:
+     the ‘Sacred Act of Living a Good
+     Life’.                                   • recognizing and respecting knowledge systems that
+     (Canadian Council on Learning,             various cultures have developed to understand the natural
+                           2007, p. 22)         world and technologies they have created to solve human
+                                                problems
+
+
+
+
+20                                                                                                      Science 8
+     • recognizing that science, as one of those knowledge
+       systems, evolved within Euro-Canadian cultures
+     • valuing place-based knowledge to solve practical problems
+     • honouring protocols for obtaining knowledge from a
+       knowledge keeper, and taking responsibility for knowing it.
+   By engaging in explorations of cultural perspectives,
+   scientifically literate students begin to appreciate the
+   worldviews and belief systems fundamental to science and to
+   Indigenous knowledge.
+
+   Explanations, Evidence, and Models in
+   Science
+   Science is a way of understanding the natural world using
+   internally consistent methods and principles that are well-
+   described and understood by the scientific community. The
+   principles and theories of science have been established
+   through repeated experimentation and observation and have
+   been refereed through peer review before general acceptance
+   by the scientific community. Acceptance of a theory does not
+   imply unchanging belief in a theory, or denote dogma. Instead,
+   as new data become available, previous scientific explanations
+   are revised and improved, or rejected and replaced. There is
+   a progression from a hypothesis to a theory using testable,
+   scientific laws. Many hypotheses are tested to generate a theory.
+   Only a few scientific facts are considered natural laws (e.g., the
+   Law of Conservation of Mass).
+   Scientists use the terms laws, theories, and hypotheses to
+   describe various types of scientific explanations about
+   phenomena in the natural and constructed world. These
+   meanings differ from common usage of the same terms:
+     • Law – A law is a generalized description, usually expressed
+       in mathematical terms, that describes some aspect of the
+       natural world under certain conditions.
+     • Theory – A theory is an explanation for a set of related
+       observations or events that may consist of statements,
+                                                                        The terms “law”, “theory”, and
+       equations, models, or a combination of these. Theories also      “hypothesis” have special
+       predict the results of future observations. A theory becomes     meaning in science.
+       a theory once the explanation is verified multiple times
+       by different groups of researchers. The procedures and
+       processes for testing a theory are well-defined within each
+       scientific discipline, but they vary between disciplines. No
+       amount of evidence proves that a theory is correct. Rather,
+       scientists accept theories until the emergence of new
+
+
+
+
+Science 8                                                                                                21
+         evidence that the theory is unable to adequately explain.
+         At this point, the theory is discarded or modified to explain
+         the new evidence. Note that theories never become laws;
+         theories explain laws.
+       • Hypothesis – A hypothesis is a tentative, testable
+         generalization that may be used to explain a relatively
+         large number of events in the natural world. It is subject to
+         immediate or eventual testing by experiments. Hypotheses
+         must be worded in such a way that they can be falsified.
+         Hypotheses are never proven correct, but are supported by
+         empirical evidence.
+     Scientific models are constructed to represent and explain
+     certain aspects of physical phenomenon. Models are never
+     exact replicas of real phenomena; rather, models are simplified
+     versions of reality, generally constructed in order to facilitate
+     study of complex systems such as the atom, climate change,
+     and biogeochemical cycles. Models may be physical, mental,
+     or mathematical or contain a combination of these elements.
+     Models are complex constructions that consist of conceptual
+     objects and processes in which the objects participate or
+     interact. Scientists spend considerable time and effort building
+     and testing models to further understanding of the natural
+     world.
+     When engaging in the processes of science, students
+     are constantly building and testing their own models of
+     understanding of the natural world. Students may need help
+     in learning how to identify and articulate their own models
+     of natural phenomena. Activities that involve reflection and
+     metacognition are particularly useful in this regard. Students
+     should be able to identify the features of the physical
+     phenomena their models represent or explain. Just as
+     importantly, students should identify which features are not
+     represented or explained by their models. Students should
+     determine the usefulness of their model by judging whether
+     the model helps in understanding the underlying concepts or
+     processes. Ultimately, students realize that different models of
+     the same phenomena may be needed in order to investigate or
+     understand different aspects of the phenomena.
+
+     Laboratory Work
+     Laboratory work is often at the centre of scientific research; as
+     such, it should also be an integral component of school science.
+     The National Research Council (2006, p. 3) defines a school
+     laboratory investigation as an experience in the laboratory, the
+     classroom, or the field that provides students with opportunities
+
+
+
+
+22                                                                Science 8
+   to interact directly with natural phenomena or with data
+   collected by others using tools, materials, data collection
+   techniques, and models. Laboratory experiences should
+   be designed so that all students – including students with
+   academic and physical challenges – are able to authentically
+   participate in and benefit from those experiences.
+   Laboratory activities help students develop scientific and
+   technological skills and processes including:
+     • initiating and planning
+     • performing and recording
+     • analyzing and interpreting
+     • communication and teamwork.
+   Laboratory investigations also help students understand the
+   nature of science, specifically that theories and laws must           Ideally, laboratory work should
+   be consistent with observations. Similarly, student-centered          help students to understand
+   laboratory investigations help to emphasize the need for              the relationship between
+                                                                         evidence and theory, develop
+   curiosity and inquisitiveness as part of the scientific endeavour.    critical thinking and problem-
+   The National Science Teachers Association [NSTA] position             solving skills, as well as develop
+   statement The Integral Role of Laboratory Investigations in Science   acceptable scientific attitudes.
+   Instruction (2007) provides further information about laboratory              (Di Giuseppe, 2007, p. 54)
+   investigations.
+   A strong science program includes a variety of individual, small,
+   and large group laboratory experiences for students. Most
+   importantly, the laboratory experience needs to go beyond
+   conducting confirmatory “cook-book” experiments. Similarly,
+   computer simulations and teacher demonstrations are valuable
+   but should not serve as substitutions for hands-on student
+   laboratory activities.
+   Assessment and evaluation of student performance must
+   reflect the nature of the laboratory experience by addressing
+   scientific and technological skills. As such, the results of
+   student investigations and experiments do not always need to
+   be written up using formal laboratory reports. Teachers may
+   consider alternative formats such as narrative lab reports for
+   some experiments. The narrative lab report enables students to
+   tell the story of their process and findings in a less structured
+   format than a typical lab report.
+   In a narrative lab report, students answer four questions:
+     • What was I looking for?
+     • How did I look for it?
+     • What did I find?
+     • What do these findings mean?
+
+
+
+
+Science 8                                                                                                     23
+                                     The answers are written in an essay format rather than using the
+                                     structured headings of Purpose, Procedure, Hypothesis, Data,
+                                     Analysis, and Conclusion that are typically associated with a
+                                     formal lab report. For some investigations, teachers may decide
+                                     it is sufficient for students to write a paragraph describing the
+                                     significance of their findings.
+
+                                     Safety
+                                     Safety in the classroom is of paramount importance. Other
+                                     components of education (resources, teaching strategies,
+                                     facilities) attain their maximum utility only in a safe classroom.
+                                     To create a safe classroom requires that a teacher be informed,
+                                     aware, and proactive and that the students listen, think, and
+                                     respond appropriately.
+                                     Safe practice in the laboratory is the joint responsibility of the
+     Safety cannot be mandated       teacher and students. The teacher’s responsibility is to provide a
+     soley by rule of law, teacher   safe environment and to ensure the students are aware of safe
+     command, or school
+                                     practice. The students’ responsibility is to act intelligently based
+     regulation. Safety and safe
+     practice are an attitude.       on the advice which is given and which is available in various
+                                     resources.
+                                     Kwan and Texley (2003) suggest that teachers, as professionals,
+                                     consider four Ps of safety: prepare, plan, prevent, and protect.
+                                     The following points are adapted from those guidelines and
+                                     provide a starting point for thinking about safety in the science
+                                     classroom:
+                                       • Prepare
+                                         º Keep up to date with your personal safety knowledge and
+                                            certifications.
+                                         º Be aware of national, provincial, division, and school level
+                                            safety policies and guidelines.
+                                         º Create a safety contract with students.
+
+                                       • Plan
+                                         º Develop learning plans that ensure all students learn
+                                           effectively and safely.
+                                         º Choose activities that are best suited to the learning
+                                           styles, maturity, and behaviour of all students and that
+                                           include all students.
+                                         º Create safety checklists for in-class activities and field
+                                           studies.
+
+                                       • Prevent
+                                         º Assess and mitigate hazards.
+                                         º Review procedures for accident prevention with students.
+
+
+
+
+24                                                                                                 Science 8
+        º Teach and review safety procedures with students,
+           including the need for appropriate clothing.
+        º Do not use defective or unsafe equipment or procedures.
+        º Do not allow students to eat or drink in science areas.
+
+     • Protect
+       º Ensure students have sufficient protective devices, such
+          as safety glasses.
+       º Demonstrate and instruct students on the proper use of
+          safety equipment and protective gear.
+       º Model safe practice by insisting that all students, visitors,
+          and yourself use appropriate protective devices.
+
+   The definition of safety includes consideration of the well-being
+   of all components of the biosphere, such as plants, animals,
+   earth, air, and water. From knowing what wild flowers can
+   be picked to considering the disposal of toxic wastes from
+   chemistry laboratories, the safety of our world and our future
+   depends on our actions and teaching in science classes. It is
+   important that students practise ethical, responsible behaviours
+   when caring for and experimenting with live animals. For further
+   information, refer to the NSTA position statement Responsible
+   Use of Live Animals and Dissection in the Science Classroom (2008).
+   Safety in the science classroom includes the storage, use, and        WHMIS regulations govern
+   disposal of chemicals. The Workplace Hazardous Materials              storage and handling practices
+   Information System (WHMIS) regulations under the Hazardous            of chemicals in schools.
+   Products Act and Hazardous Product Regulations govern
+   storage and handling practices of chemicals in schools. All
+   school divisions must comply with the provisions of the Act.
+   Chemicals should be stored in a safe location according to
+   chemical class, not just alphabetically.                              The Chemical Hazard
+   Appropriate cautionary labels must be placed on all chemical          Information Table in Safety in
+   containers and all school division employees using hazardous          the Science Classroom (Alberta
+   substances should have access to appropriate Safety Data              Education, 2005) provides
+                                                                         detailed information including
+   Sheets (SDSs). Under provincial WHMIS regulations, all                appropriateness for school use,
+   employees involved in handling hazardous substances must              hazard ratings, WHMIS class,
+   receive training by their employer. Teachers who have not been        storage class, and disposal
+   informed about or trained in this program should contact their        methods for hundreds of
+   Director of Education. Further information related to WHMIS           chemicals.
+   is available through WorkSafe Saskatchewan.
+
+
+
+
+Science 8                                                                                                  25
+                                            Technology in Science
+                                            Technology-based resources are essential for instruction in
+     Technology should be used
+     to support learning in science
+                                            the science classroom. Technology is intended to extend our
+     when:                                  capabilities and, therefore, is one part of the teaching toolkit.
+       º it is pedagogically                Individual, small group, or class reflection and discussions
+          appropriate                       are required to connect the work with technology to the
+       º it makes scientific views          conceptual development, understandings, and activities of
+          more accessible                   the students. Choices to use technology, and choices of which
+       º it helps students to engage
+          in learning that otherwise        technologies to use, should be based on sound pedagogical
+          would not be possible.            practices, especially those which support student inquiry. These
+                     (Flick & Bell, 2000)   technologies include computer technologies as described
+                                            below and non-computer based technologies.
+                                            Some recommended examples of using computer technologies
+                                            to support teaching and learning in science include:
+
+                                              • Data Collection and Analysis
+                                                º Data loggers permit students to collect and analyze data,
+                                                  often in real-time, and to collect observations over very
+                                                  short or long periods of time, enabling investigations that
+                                                  otherwise would be impractical.
+                                                º Databases and spreadsheets can facilitate the analysis
+                                                  and display of student-collected data or data obtained
+                                                  from scientists.
+
+                                              • Visualization and Imaging
+                                                º Simulation and modeling software provide opportunities
+                                                   to explore concepts and models which are not readily
+                                                   accessible in the classroom, such as those that require
+                                                   expensive or unavailable materials or equipment,
+                                                   hazardous materials or procedures, levels of skills not yet
+                                                   achieved by the students, or more time than is possible or
+                                                   appropriate in a classroom.
+                                                º Students may collect their own digital images and video
+                                                   recordings as part of their data collection and analysis or
+                                                   they may access digital images and video online to help
+                                                   enhance understanding of scientific concepts.
+
+                                              • Communication and Collaboration
+                                                º The Internet can be a means of networking with
+                                                   scientists, teachers, and other students by gathering
+                                                   information and data, posting data and findings, and
+                                                   comparing results with students in different locations.
+                                                º Students can participate in authentic science projects by
+                                                   contributing local data to large-scale web-based science
+                                                   inquiry projects such as Journey North (www.learner.org/
+                                                   north) or GLOBE (www.globe.gov).
+
+
+
+
+26                                                                                                      Science 8
+   Science Challenges
+   Science challenges, which may include science fairs, science
+   leagues, Science Olympics, Olympiads, or talent searches,
+   should be considered as instructional methods suitable for
+   students to undertake in any unit, across units, or in conjunction
+   with other subject areas. Teachers may incorporate science
+   challenge activities as an integral component of the science
+   program or treat them similar to other extracurricular activities
+   such as school sports and clubs. If science challenges are
+   undertaken as a classroom activity, teachers should consider
+   these guidelines, adapted from the NSTA position statement
+   Science Competitions (1999):
+     • Student and staff participation should be voluntary and
+       open to all students.
+     • Emphasis should be placed on the learning experience
+       rather than the competition.
+     • Science competitions should supplement and enhance
+       other learning and support student achievement of
+       curriculum outcomes.
+     • Projects and presentations should be the work of the
+       student, with proper credit given to others for their
+       contributions.
+     • Science competitions should foster partnerships among
+       students, the school, and the science community.
+   Science challenge activities may be conducted solely at the
+   school level, or with the intent of preparing students for
+   competition in one of the regional science fairs, perhaps as a
+   step towards the Canada Wide Science Fair. Although students
+   may be motivated by prizes, awards, and the possibility of
+   scholarships, teachers should emphasize that the importance of
+   doing a science fair project includes attaining new experiences
+   and skills that go beyond science, technology, or engineering.
+   Students learn to present their ideas to an authentic public
+   that may consist of parents, teachers, and the top scientists in a
+   given field.
+   Science fair projects typically consist of:
+     • An experiment, which is an original scientific experiment
+       with a specific, original hypothesis. Students should control
+       all important variables and demonstrate appropriate data
+       collection and analysis techniques.
+     • A study, which involves the collection of data to reveal a
+       pattern or correlation. Studies can include cause and effect
+
+
+
+
+Science 8                                                               27
+        relationships and theoretical investigations of the data.
+        Studies are often carried out using surveys given to human
+        subjects.
+      • An innovation, which deals with the creation and
+        development of a new device, model, or technique in a
+        technological field. These innovations may have commercial
+        applications or be of benefit to humans.
+     Youth Science Foundation Canada (www.ysf.ca) provides further
+     information regarding science fairs in Canada.
+
+
+
+
+28                                                           Science 8
+       Outcomes and Indicators
+        Life Science – Cells, Tissues, Organs, and Systems (CS)
+        CS8.1 Analyze the characteristics of cells, and compare structural and functional characteristics
+        of plant and animal cells.
+        CS8.2 Demonstrate proficiency in the use of a compound light microscope to observe plant and
+        animal cells.
+        CS8.3 Distinguish structural and functional relationships among cells, tissues, organs, and organ
+        systems in humans and how this knowledge is important to various careers.
+        CS8.4 Analyze how the interdependence of organ systems contributes to the healthy
+        functioning of the human body.
+
+
+        Physical Science – Optics and Vision (OP)
+        OP8.1 Identify and describe, through experimentation, sources and properties of visible light
+        including:
+          • rectilinear propagation
+          • reflection
+          • refraction.
+        OP8.2 Explore properties and applications of optics-related technologies, including concave and
+        convex mirrors and lenses.
+        OP8.3 Compare the nature and properties of human vision with optical devices and vision in
+        other living organisms.
+        OP8.4 Evaluate the impact of electromagnetic radiation-based technologies on self and community.
+
+
+        Physical Science – Forces, Fluids, and Density (FD)
+        FD8.1 Investigate and represent the density of solids, liquids, and gases based on the particle
+        theory of matter.
+        FD8.2 Examine the effects of forces in and on objects in fluids, including the buoyant force.
+        FD8.3 Investigate and describe physical properties of fluids (liquids and gases), including
+        viscosity and compressibility.
+        FD8.4 Identify and interpret the scientific principles underlying the functioning of natural and
+        constructed fluid systems.
+
+
+        Earth and Space Science – Water Systems on Earth (WS)
+        WS8.1 Analyze the impact of natural and human-induced changes to the characteristics and
+        distribution of water in local, regional, and national ecosystems.
+        WS8.2 Examine how wind, water, and ice have shaped and continue to shape the Canadian
+        landscape.
+        WS8.3 Analyze natural factors and human practices that affect productivity and species
+        distribution in marine and fresh water environments.
+
+
+
+
+Science 8                                                                                                   29
+                          Life Science: Cells, Tissues, Organs, and Systems (CS)
+
+            All outcomes in this unit contribute to the development of all K-12 science
+            goals.
+     Outcomes                         Indicators
+     CS8.1 Analyze the                a. Explain that the cell is a living system that exhibits all the
+     characteristics of cells, and       characteristics of life including growth, movement, reaction
+     compare structural and              to stimulus, and reproduction.
+     functional characteristics of    b. Categorize organisms as single-celled and multi-cellular.
+     plant and animal cells.
+                                      c. Observe and describe how single-celled organisms take in
+     [SI]                                food and move.
+                                      d. Explain how growth and reproduction of living organisms
+                                         depends on cell division.
+                                      e. Design and carry out an experiment to demonstrate the
+                                         function of selectively permeable membranes in cells.
+                                      f. Model the processes of diffusion and osmosis to demonstrate
+                                         how gases and water move into and out of plant and animal
+                                         cells.
+                                      g. Observe and identify cell structures (e.g., cell wall, cell
+                                         membrane, vacuole, nucleus, cytoplasm, mitochondria, and
+                                         chloroplast) and identify which are found in plant cells and
+                                         which are found in animal cells.
+                                      h. Explain the function of cell structures (e.g., cell wall, cell
+                                         membrane, vacuole, nucleus, cytoplasm, mitochondria, and
+                                         chloroplast), including how each structure contributes to the
+                                         health of plant and animal cells.
+                                      i. Use appropriate scientific terminology to communicate plans,
+                                         ideas, and results related to the study of plant and animal
+                                         cells.
+                                      j. Work cooperatively with team members to develop and carry
+                                         out a plan to construct a representation (e.g., model, drawing,
+                                         sculpture, or dance) of the structures and functions of plant
+                                         and animal cells.
+                                      k. Analyze the strengths and weaknesses of various
+                                         representations of the structure and function of plant and
+                                         animal cells.
+     CS8.2 Demonstrate                a. Identify the parts of a compound light microscope, describe
+     proficiency in the use of a         their functions, and describe how to use a compound light
+     compound light microscope           microscope correctly and safely.
+     to observe plant and animal
+                                      b. Prepare samples of plant and animal cells for viewing by wet
+     cells.
+                                         mounting and staining when necessary.
+     [SI]
+                                      c. Calculate the magnification of a microscope, and estimate
+                                         and determine the size of objects viewed through a
+                                         microscope.
+30                                                                                                      Science 8
+       Outcomes                        Indicators
+
+       CS8.2 continued                 d. Use a microscope effectively and accurately to observe
+                                          differences in structure between plant and animal cells and
+                                          draw labelled diagrams of what is seen.
+                                       e. Show concern for self and others by safely planning and
+                                          carrying out activities involving microscopes, slides, and
+                                          biological material.
+
+       CS8.3 Distinguish structural    a. Pose questions about the composition of the human body
+       and functional relationships       such as “What are humans made of?”.
+       among cells, tissues, organs,   b. Research various ideas and theories, past and present, used
+       and organ systems in humans
+                                          to explain the composition of the human body (e.g., living
+       and how this knowledge is
+                                          organisms were made of air, fire, and water; and body is
+       important to various careers.
+                                          animated by spirit).
+       [CP, SI]
+                                       c. Analyze why cells and tissues are specialized in multi-cellular
+                                          organisms.
+                                       d. Describe the function and provide examples of the four major
+                                          types of tissue found in humans (i.e., muscle, nerve, epithelial,
+                                          and connective tissue).
+                                       e. Construct a representation of the relationships among cells,
+                                          tissues, organs, and organ systems in humans using examples
+                                          from the respiratory, circulatory, digestive, excretory, and
+                                          nervous systems.
+                                       f. Relate the needs and functions of various cells and organs to
+                                          the needs and functions of the human organism as a whole.
+                                       g. Summarize the main points of modern cell theory and
+                                          identify the contributions of men and women, past and
+                                          present, to the development of the theory.
+                                       h. Describe examples of science- and technology-based careers
+                                          in Saskatchewan that require an understanding of cells and
+                                          human body systems (e.g., lab and X-ray technicians, doctors,
+                                          physiotherapists, nutritionists, and public health nurses).
+
+       CS8.4 Analyze how the           a. Examine First Nations and Métis perspectives on the
+       interdependence of organ           interdependence and connectedness of human body systems
+       systems contributes to the         and the sacredness of life.
+       healthy functioning of the
+                                       b. Show interest in science-related questions and issues by
+       human body.
+                                          posing questions and defining practical problems related to
+       [CP, DM, SI]                       the healthy functioning of the human body.
+                                       c. Describe how various body systems work together to
+                                          accomplish tasks such as eating, running, and sleeping.
+                                       d. Provide examples of how the body reacts to internal and
+                                          external stimuli such as viruses, bacteria, alcohol, drugs, dust,
+                                          and temperature changes.
+
+Science 8                                                                                                     31
+     Outcomes                       Indicators
+
+     CS8.4 continued                 e. Analyze how organ systems work together to obtain and
+                                        transport nutrients and oxygen, and to remove wastes from
+                                        the body.
+                                     f. Analyze the impact of personal lifestyle choices (e.g.,
+                                        nutrition, exercise, smoking, drugs, and alcohol) on the
+                                        functions and efficiency of the human respiratory, circulatory,
+                                        digestive, excretory, and nervous systems.
+                                     g. Predict the impact of the failure or removal of one or more
+                                        organs on the healthy functioning of the human body.
+                                     h. Discuss personal and societal ethical issues related to the
+                                        use of various technologies (e.g., pacemaker, artificial hip,
+                                        prosthetic limbs, and artificial heart) that support or replace
+                                        ailing body systems.
+                                     i. Select and synthesize information from various sources to
+                                        illustrate examples of conflicting evidence regarding the ways
+                                        in which we should maintain our body (e.g., energy drinks,
+                                        dairy products, vaccinations, and vitamin supplements).
+                                     j. Design and carry out an experiment, including identifying
+                                        and controlling major variables, to compare and contrast
+                                        the heart rate, breathing rate, and/or blood pressure of an
+                                        individual during various levels of activity.
+                                     k. Suggest explanations for discrepancies in data related to
+                                        variations in the heart rate, breathing rate, and/or blood
+                                        pressure of the same individual during various levels of
+                                        activity when an experiment is repeated.
+
+
+                               Physical Science: Optics and Vision (OP)
+
+        All outcomes in this unit contribute to the development of all K-12 science
+        goals.
+     Outcomes                       Indicators
+
+     OP8.1 Identify and describe,    a. Classify natural and artificial sources of light as
+     through experimentation,           incandescence or fluorescence (including phosphorescent,
+     sources and properties of          chemiluminescent, and bioluminescent).
+     visible light including:
+      • rectilinear propagation      b. Demonstrate that light is a form of energy, that light can be
+      • reflection                      separated into a visible spectrum, and that light travels in
+      • refraction.                     straight lines in a uniform transparent medium.
+
+     [SI]                            c. Investigate the properties of shadows, including umbra and
+                                        penumbra formation, and demonstrate how the existence of
+                                        shadows provides evidence that light travels in straight lines.
+
+32                                                                                                        Science 8
+       Outcomes                         Indicators
+
+       OP8.1 continued                  d. Select appropriate methods and tools and use them
+                                           safely when collecting data and information to investigate
+                                           properties of visible light.
+                                        e. Estimate and measure angles of incidence and angles of
+                                           reflection of visible light and determine the quantitative
+                                           relationship between the angle of incidence and the angle of
+                                           reflection.
+                                        f. Investigate characteristics and applications of specular and
+                                           diffuse reflection, including the absorption of light by surfaces
+                                           of different colour and made of different materials (e.g.,
+                                           coloured paper, white paper, aluminium foil, mirror, and water).
+                                        g. Describe applications of the laws of reflection in everyday
+                                           life (e.g., sun dogs, rear view mirror, magician’s tricks, and the
+                                           ability to see the Moon and other non-luminous bodies).
+                                        h. Describe qualitatively how visible light is refracted when
+                                           passing from one substance to a substance of a different
+                                           refractive index.
+                                        i. Predict how light will refract when passing into transparent
+                                           media with different refractive indices (e.g., water, salt water,
+                                           plastic, glass, and oil) and conduct an experiment to confirm
+                                           or refute that prediction.
+                                        j. State a conclusion that explains how evidence gathered
+                                           supports or refutes a prediction related to the refraction of
+                                           light through media with different refractive indices.
+
+       OP8.2 Explore properties and     a. Investigate to determine how light interacts with transparent,
+       applications of optics-related      translucent, and opaque materials.
+       technologies, including          b. Investigate to determine how light interacts with concave
+       concave and convex mirrors          and convex mirrors and lenses, including the formation of
+       and lenses.
+                                           real and virtual images.
+       [SI, TPS]                        c. Predict and verify the effects of changes in lens position on
+                                           the size and location of images produced by a convex lens
+                                           and/or mirror.
+                                        d. Receive, understand, and act on the ideas of others when
+                                           trying other lenses or mirror combinations to obtain various
+                                           light patterns.
+                                        e. Draw geometric ray diagrams to illustrate how light travels
+                                           within optical devices such as pin-hole cameras, single lens
+                                           reflex cameras, telescopes, microscopes, and periscopes.
+                                        f. Use a technological problem-solving process to design
+                                           and construct a prototype of an optical device to address
+                                           a student-defined problem based on findings related to an
+                                           understanding of geometric optics.
+
+Science 8                                                                                                       33
+     Outcomes                       Indicators
+
+     OP8.2 continued                g. Work collaboratively and safely with others to identify and
+                                       correct practical problems in the way a prototype of an
+                                       optical device functions.
+                                    h. Provide examples of optics-related technologies that have
+                                       enabled scientific research (e.g., lasers have enabled research
+                                       in the fields of medicine and electronics; microscopes have
+                                       enabled research in medicine, forensics, and microbiology;
+                                       and fibre optics and the endoscope has facilitated medical
+                                       research).
+
+     OP8.3 Compare the nature       a. Identify questions to investigate arising from practical
+     and properties of human           problems and issues related to human vision (e.g., “How are
+     vision with optical devices       contact lenses crafted?”, “Do humans see colour the same
+     and vision in other living        way?”, and “What are some problems associated with human
+     organisms.                        vision?”).
+     [CP, SI]                       b. Illustrate, using a geometrical ray diagram, how the human
+                                       eye sees objects.
+                                    c. Compare the functional operation of the human eye to
+                                       that of a camera or other optical instruments in focusing an
+                                       image.
+                                    d. Compare human vision with that of other vertebrates and
+                                       invertebrates, including the function and design of the eye.
+                                    e. Explain how the human eye detects colour, and demonstrate
+                                       that the ability to perceive colour may vary from person to
+                                       person.
+                                    f. Explain how colours are produced, using both the additive
+                                       and subtractive models of colour, and identify applications
+                                       of the additive and subtractive models of colour in daily life,
+                                       including the use of traditional dyes.
+                                    g. Describe the operation of optical technologies that enhance
+                                       human vision (e.g., contact lenses, glasses, night vision
+                                       scopes, and snow goggles).
+
+     OP8.4 Evaluate the impact of   a. Describe the characteristics (i.e., wavelength, frequency,
+     electromagnetic radiation-        energy transferred, and typical sources) of different types of
+     based technologies on self        electromagnetic radiation, including infrared, visible light,
+     and community.                    ultraviolet, X-rays, microwaves, and radio waves.
+     [CP, DM, SI]                   b. Compare properties of visible light (e.g., relative energy,
+                                       frequency, wavelength, and human perception) to the
+                                       properties of other types of electromagnetic radiation,
+                                       including infrared, ultraviolet, X-rays, microwaves, and radio
+                                       waves.
+
+
+
+34                                                                                                       Science 8
+       Outcomes                           Indicators
+
+       OP8.4 continued                    c. Provide examples of uses of instruments that emit or detect
+                                             different types of electromagnetic radiation (e.g., cordless
+                                             phone, cell phone, GPS, wireless computer network, black
+                                             light, X-ray photographic film, radio, and thermal imaging
+                                             camera).
+                                          d. Analyze the design and function of a technology that
+                                             incorporates electromagnetic radiation (e.g., microwave oven,
+                                             solar cooker, sun tanning lamp, infrared heat lamp, radio,
+                                             medical imaging X-ray, blacklight, UV fire detector, night
+                                             vision goggles, infrared thermography, and radar) on the
+                                             basis of student-identified criteria such as cost, usefulness,
+                                             and impact on self, society, and the environment.
+                                          e. Defend a position on an issue or problem, identified through
+                                             personal research, related to the impact of electromagnetic
+                                             radiation-based technologies on self and community.
+                                          f. Identify new questions and problems that arise from what
+                                             was learned about electromagnetic radiation (e.g., identify
+                                             issues such as how and why to protect oneself against various
+                                             forms of electromagnetic radiation).
+
+
+
+                             Physical Science: Forces, Fluids, and Density (FD)
+
+            All outcomes in this unit contribute to the development of all K-12 science
+            goals.
+       Outcomes                           Indicators
+
+       FD8.1 Investigate and              a. Illustrate the relationship between mass, volume, and density
+       represent the density of solids,      of solids, liquids, and gases using the particle theory of
+       liquids, and gases based on           matter.
+       the particle theory of matter.
+                                          b. Design and carry out processes, including the water
+       [SI, TPS]                             displacement method, to determine the density of various
+                                             regularly shaped and irregularly shaped materials.
+                                          c. Use instruments safely, effectively, and accurately for
+                                             collecting data about the density of solids, liquids, and gases.
+                                          d. Measure the mass and volume of a variety of objects, record
+                                             the data in tabular form, and display the data graphically.
+                                          e. Value accuracy, precision, and honesty when gathering data
+                                             about the density of objects.
+                                          f. Interpolate or extrapolate from student-constructed graphs
+                                             of density to determine the mass or volume of a substance.
+
+
+Science 8                                                                                                       35
+     Outcomes                        Indicators
+
+     FD8.1 continued                 g. Calculate the density of various regularly shaped materials
+                                        using the formula d=m/v and using units of g/mL or g/cm³.
+                                     h. Compare the densities of common substances to the density
+                                        of water and discuss practical applications that are based on
+                                        differing densities.
+                                     i. Identify the effects of changes in temperature on the density
+                                        of solids, liquids, and gases and explain the results using the
+                                        particle theory of matter.
+                                     j. Describe situations in daily life where we see evidence that
+                                        the density of substances changes naturally (e.g., molten
+                                        lava as it cools, water ‘turning over’ at 4°C in the fall, air when
+                                        mirages form) or is intentionally altered (e.g., air in a hot-air
+                                        balloon, cream when it is churned and cooled).
+
+     FD8.2 Examine the effects of    a. Identify questions to investigate arising from practical
+     forces in and on objects in        problems and issues involving floating, sinking, and
+     fluids, including the buoyant      buoyancy (e.g., “What factors affect the amount of cargo
+     force.                             a barge can hold?”, “Why do some objects float and some
+                                        objects sink?”, and “How can a ship made of steel float in the
+                                        ocean?”).
+                                     b. Examine contributions of people from various cultures
+                                        to understanding the principles of buoyancy, including
+                                        Archimedes Principle, and the development of watercraft
+                                        such as canoes and kayaks.
+                                     c. Explain the concept of force and provide examples of
+                                        different types of contact and non-contact forces.
+                                     d. Illustrate, using force diagrams, the movement of objects in
+                                        fluids in terms of balanced and unbalanced forces acting on
+                                        the objects.
+                                     e. Use a spring scale to determine the relationship between
+                                        mass and weight for various substances.
+                                     f. Express the quantitative relationship between pressure, force,
+                                        and area in fluids.
+                                     g. Conduct a fair test to identify which factors determine
+                                        whether a given object will float or sink, and discuss reasons
+                                        why scientists control some variables when conducting a fair
+                                        test.
+                                     h. Use a technological problem-solving process to design,
+                                        construct, and evaluate a prototype of an object that floats
+                                        and can carry the greatest amount of cargo.
+                                     i. Explain how buoyancy is controlled in nature (e.g., fish,
+                                        humans, and sharks) and in constructed devices (e.g.,
+                                        submarines, airplanes, airships, scuba gear, and hot air
+                                        balloons).
+36                                                                                                            Science 8
+       Outcomes                         Indicators
+
+       FD8.2 continued                  j. Compare different fluids to determine how they alter the
+                                           buoyant force on a given object.
+                                        k. Explain the operation of technologies whose development is
+                                           based on scientific understanding of the properties of fluids
+                                           (e.g., personal flotation devices, float planes, surfboards,
+                                           gliders, anti-freeze tester, and heart pumps).
+                                        l. Analyze designs of traditional and contemporary watercraft
+                                           (e.g., canoe, kayak, lake boat, catamaran, and jet-ski) with
+                                           respect to the principles of buoyancy.
+
+       FD8.3 Investigate and            a. Design and conduct an experiment to compare the viscosity
+       describe physical properties        of various fluids (e.g., water, syrup, oil, shampoo, glycerine,
+       of fluids (liquids and gases),      honey, ketchup, hand cream, and detergent) and identify
+       including viscosity and             variables relevant to the investigation.
+       compressibility.                 b. Use appropriate vocabulary related to the study of fluids,
+       [SI]                                including fluid, viscosity, buoyancy, pressure, compressibility,
+                                           hydraulic, pneumatic, and density.
+                                        c. Demonstrate knowledge of Workplace Hazardous Materials
+                                           Information System (WHMIS) standards by using proper
+                                           techniques for handling and disposing of lab materials and
+                                           by explaining the WHMIS labelling system.
+                                        d. Investigate the relationship between the temperature and
+                                           viscosity of a liquid, controlling the major variables.
+                                        e. Use a temperature measuring technology, such as a
+                                           temperature probe, effectively and accurately for collecting
+                                           data to investigate the relationship between temperature and
+                                           viscosity of a liquid.
+                                        f. Identify products in which viscosity is an important property
+                                           (e.g., paint, hand lotion, motor oil, salad dressing, and
+                                           condiments) and evaluate different brands of those products
+                                           using student-developed criteria.
+                                        g. Predict and investigate the effect of applying external
+                                           pressure to the behaviour of liquids and gases (e.g.,
+                                           squeezing a balloon, depressing a plunger in a syringe).
+                                        h. Describe situations in which pressure can be increased or
+                                           decreased by altering surface area (e.g., snowshoes vs. boots,
+                                           flat-heeled vs. high-heeled shoes, adaptive hoof shape of the
+                                           woodland caribou, dual or triple tires on a tractor, and placing
+                                           a thumb over the end of a garden hose).
+                                        i. Use the particle theory of matter to explain the differences in
+                                           compressibility between liquids and gases.
+                                        j. Explore and explain qualitatively the relationship between
+                                           pressure, volume, and temperature when liquids and gases
+                                           are compressed or heated.
+
+Science 8                                                                                                     37
+     Outcomes                        Indicators
+
+     FD8.3 continued                 k. Show concern for safety of self and others when planning,
+                                        carrying out, and reviewing procedures involving heating and
+                                        compressing liquids and gases.
+
+     FD8.4 Identify and interpret    a. Describe how hydraulic or pneumatic pressure can be used to
+     the scientific principles          create a mechanical advantage in a simple mechanical device
+     underlying the functioning of      (e.g., hydraulic jack, air powered tools, hairstylist’s chair, and
+     natural and constructed fluid      water spraying toy)
+     systems.
+                                     b. Compare natural (e.g., circulatory and respiratory system)
+     [CP, SI]                           and constructed (e.g., hydraulic and air brakes, oil and
+                                        gas pipelines, swimming pool circulation system, bicycle
+                                        and other pumps, Archimedes screw, and automobile
+                                        lifts) hydraulic and pneumatic fluid systems and identify
+                                        advantages and disadvantages of each, using student-
+                                        identified criteria such as cost and impact on society and the
+                                        environment.
+                                     c. Use a technological problem-solving process to design,
+                                        construct, and evaluate a prototype of a device that models
+                                        the operation of a natural or constructed fluid system.
+                                     d. Work collaboratively to identify and correct problems in the
+                                        way a prototype of a natural or constructed fluid system
+                                        functions.
+                                     e. Apply given criteria for evaluating evidence and sources of
+                                        information by testing a prototype of a natural or constructed
+                                        fluid system in a variety of situations to ensure that the results
+                                        were not due to chance.
+                                     f. Describe and explain the role of collecting evidence, finding
+                                        relationships, proposing explanations, and imagination in the
+                                        development of scientific knowledge related to fluids and
+                                        fluid systems (e.g., finding relationships between density or
+                                        pressure and change in temperature provides insights into
+                                        practical uses for fluids).
+                                     g. Provide examples of Canadian contributions to the science
+                                        and technology of fluids (e.g., submersibles, oil rigs and
+                                        platforms, diving equipment, pumps, tires, and vacuum
+                                        cleaners).
+
+
+
+
+38                                                                                                      Science 8
+                         Earth and Space Science: Water Systems on Earth (WS)
+
+            All outcomes in this unit contribute to the development of all K-12 science
+            goals.
+       Outcomes                         Indicators
+
+       WS8.1 Analyze the impact of      a. Construct visual representations of the world distribution
+       natural and human-induced           of water, and the distribution of water in Saskatchewan,
+       changes to the characteristics      including watersheds, lakes, rivers, streams, river systems,
+       and distribution of water in        wetlands, ground water, saline lakes, and riparian areas.
+       local, regional, and national
+       ecosystems.                      b. Compare physical characteristics of surface water features,
+                                           such as lakes, rivers, streams, wetlands, and riparian areas.
+                                        c. Examine the significance of water to First Nations and Métis
+                                           people of Saskatchewan, including water as an essential
+                                           element of life, transportation, water quality, fishing practices,
+                                           and treaty rights regarding fishing.
+                                        d. Apply the concept of systems as a tool for interpreting the
+                                           structure and interactions of water systems by constructing
+                                           representations of systems such as the water cycle,
+                                           watersheds, and continental drainage basins and showing
+                                           interrelationships between parts of the system.
+                                        e. Construct a written, visual, or dramatic representation of the
+                                           water cycle, including showing or explaining how a single
+                                           particle of water can travel through the cycle over extended
+                                           periods of time.
+                                        f. Identify possible personal, societal, economic, and
+                                           environmental consequences of natural changes and human
+                                           practices and technologies that pose threats to surface and/
+                                           or ground water systems in Saskatchewan (e.g., vegetation
+                                           removal, water and sewage treatment plants, timber
+                                           harvesting, over-application of fertilizers, agricultural and
+                                           urban irrigation, impervious ground cover, land alterations,
+                                           mining, introduction of invasive species, shoreline erosion,
+                                           fluctuating lake levels, flooding, draining and/or channelling
+                                           of surface water features, and damming of rivers).
+                                        g. Research a specific human practice or technology that may
+                                           pose a threat to surface and/or groundwater systems in
+                                           Saskatchewan and explain how different groups in society
+                                           (e.g., landowner, consumer, business owner, recreational
+                                           user, fisherman, government official, and farmer) may have
+                                           conflicting needs and desires in relation to the practice or
+                                           technology and how those decisions or actions of different
+                                           stakeholders may or may not be addressed by scientific or
+                                           technological knowledge.
+
+Science 8                                                                                                       39
+     Outcomes                       Indicators
+
+     WS8.1 continued                h. Evaluate individual and group processes used in planning,
+                                       problem solving, decision making, and completing a
+                                       task related to studying threats to water systems, such as
+                                       accepting various roles in a group, sharing responsibility for
+                                       carrying out decisions, and seeking consensus before making
+                                       decisions.
+
+     WS8.2 Examine how wind,        a. Explain how the processes of weathering, erosion, and
+     water, and ice have shaped and    deposition result from water movement and wave action,
+     continue to shape the Canadian    including how waves and tides are generated and how they
+     landscape.                        interact with shorelines.
+     [DM, SI]                       b. Plan and conduct a simulation to demonstrate how
+                                       temperature differences cause water currents.
+                                    c. Explain the meaning and significance of the forces that shape
+                                       the landscape to First Nations and Métis people.
+                                    d. Describe how the interactions of ocean currents, winds, and
+                                       regional climates shape local, regional, national, and global
+                                       environments.
+                                    e. Critique the design and function of technologies designed
+                                       to minimize damage due to waves and tides (e.g., piers,
+                                       breakwaters, dune vegetation, and coastline reconfiguration)
+                                       in oceans and in-land water bodies.
+                                    f. Create a written, visual, physical, or dramatic representation
+                                       of the processes that lead to the development of rivers, lakes,
+                                       continental drainage systems, and ocean basins, including
+                                       glaciation, continental drift, erosion, and volcanic action.
+                                    g. Relate factors that affect glacier formation and reduction and
+                                       their effects on the environment to the formation of glacial
+                                       landforms in Saskatchewan (e.g., drumlins, moraines, eskers,
+                                       and kettle lakes).
+                                    h. Identify factors that affect polar icecap formation and
+                                       reduction and their effects on the environment, including
+                                       possible changes to ocean currents and climate patterns.
+                                    i. Propose new questions and problems for future study that
+                                       arise from the study of the effects of wind, water, and ice on
+                                       the landscape (e.g., “How might changes in glaciers affect
+                                       Saskatchewan water supplies?”“How might icecap melting
+                                       change Canadian coastlines?”).
+
+
+
+
+40                                                                                                      Science 8
+       Outcomes                         Indicators
+
+       WS8.3 Analyze natural factors a. Examine the ways in which First Nations and Métis people
+       and human practices that            traditionally valued, depended upon, and cared for aquatic
+       affect productivity and species     wildlife and plants in Saskatchewan and Canada.
+       distribution in marine and fresh
+       water environments.              b. Identify diverse examples of organisms in a variety of marine
+                                           and freshwater ecosystems (e.g., wetlands, lakes, rivers, salt
+       [CP, DM, SI]                        marsh, estuary, ocean, and intertidal zone) and explain how
+                                           biodiversity is an indicator of ecosystem health.
+                                         c. Identify factors that affect productivity and species
+                                            distribution in aquatic environments (e.g., temperature,
+                                            turbidity, sunlight, nutrients, salinity, water depth, currents,
+                                            overfishing, upwelling, and pollutants).
+                                         d. Research a student-selected aquatic species, describe the
+                                            characteristics of its environment, identify factors that could
+                                            affect its productivity, and suggest methods of ensuring long-
+                                            term viability of the species.
+                                         e. Measure factors that provide indicators of water quality, such
+                                            as temperature, turbidity, dissolved oxygen content, presence
+                                            of nitrates or phosphates, and macroinvertebrates, from a
+                                            variety of samples of water.
+                                         f. Interpret patterns and trends in water quality data, and infer
+                                            and explain relationships among the variables.
+                                         g. Identify strengths and weaknesses of different methods of
+                                            collecting and displaying data about water quality.
+                                         h. Describe examples of technologies used to assess water
+                                            quality and how those technologies have changed over time.
+                                         i. Provide examples of how individuals and public and
+                                            private Canadian institutions contribute to the sustainable
+                                            stewardship of water through traditional knowledge and
+                                            scientific and technological research and endeavours related
+                                            to aquatic environments (e.g., marine research institutes,
+                                            universities, federal and provincial government departments,
+                                            and ecological groups) and identify possible careers related
+                                            to the study and stewardship of water.
+
+
+
+
+Science 8                                                                                                      41
+     Assessment and Evaluation of Student
+     Learning
+     Assessment and evaluation require thoughtful planning and
+     implementation to support the learning process and to inform
+     teaching. All assessment and evaluation of student achievement
+     must be based on the outcomes in the provincial curriculum.
+     Assessment involves the systematic collection of information
+     about student learning with respect to:
+       • achievement of provincial curriculum outcomes
+       • effectiveness of teaching strategies employed
+       • student self-reflection on learning.
+     Evaluation compares assessment information against criteria
+     based on curriculum outcomes for the purpose of communicating
+     to students, teachers, parents/caregivers, and others about
+     student progress and to make informed decisions about the
+     teaching and learning process. Reporting of student achievement
+     must be in relation to curriculum outcomes.
+     There are three interrelated purposes of assessment. Each type
+     of assessment, systematically implemented, contributes to an
+     overall picture of an individual student’s achievement.
+     Assessment for learning involves the use of information about
+     student progress to support and improve student learning,
+     inform instructional practices, and:
+       • is teacher-driven for student, teacher, and parent use
+       • occurs throughout the teaching and learning process, using
+         a variety of tools
+       • engages teachers in providing differentiated instruction,
+         feedback to students to enhance their learning, and
+         information to parents in support of learning.
+     Assessment as learning actively involves student reflection on
+     learning, monitoring of her/his own progress, and:
+       • supports students in critically analyzing learning related to
+         curricular outcomes
+       • is student-driven with teacher guidance
+       • occurs throughout the learning process.
+     Assessment of learning involves teachers’ use of evidence
+     of student learning to make judgements about student
+     achievement and:
+       • provides opportunity to report evidence of achievement
+          related to curricular outcomes
+       • occurs at the end of a learning cycle, using a variety of tools
+       • provides the foundation for discussions on placement or
+          promotion.
+
+
+
+
+42                                                                 Science 8
+   Connections with Other Areas of Study
+   Although some learning outcomes or subject area knowledge
+   may be better achieved through discipline-specific instruction,
+   deeper understanding may be attained through the integration
+   of the disciplines. Some outcomes for each area of study
+   complement each other and offer opportunities for subject-
+   area integration. Integrating science with another area of study
+   can help students develop in a holistic manner by addressing
+   physical, emotional, mental, and spiritual dimensions.
+   By identifying a particular context to use as an organizer, the
+   outcomes from more than one subject area can be achieved
+   and students can make connections across areas of study.
+   Integrated, interdisciplinary instruction, however, must be
+   more than just a series of activities. An integrated approach
+   must facilitate students’ learning of the related disciplines and
+   understanding of the conceptual connections. The learning
+   situations must achieve each individual subject area’s outcomes
+   and ensure that in-depth learning occurs. If deep understanding
+   is to occur, the experiences cannot be based on superficial or
+   arbitrarily connected activities (Brophy & Alleman, 1991, p. 66).
+   The outcomes and activities of one area of study must not be
+   obscured by the outcomes or activities of another area of study
+   (Education Review Office, 1996, p. 13).
+   There are many possibilities for the integration of science
+   and other subject areas. In doing this integration, however,
+   teachers must be cautious to not lose the integrity of any of the
+   subjects. Integration gives students experiences with transfer of
+   knowledge and provides rich contexts in which the students are
+   able to make sense of their learning. Following are just a few of
+   the ways in which science can be integrated into other subject
+   areas (and other subject areas into science) at grade eight.
+
+   Arts Education
+   The conceptual focus for Grade 8 Arts Education is “Social
+   Issues”. This focus involves students in expressing ideas and
+   perspectives on social issues through the arts. Connections
+   between arts education and science may include:
+     • Create visual art works inspired by social issues related
+       to cells, tissues, organs, or organ systems (e.g., genetic
+       engineering of plants, organ transplants).
+     • Create a dance composition demonstrating the
+       interdependence of organ systems and the need to
+       maintain a healthy body.
+
+
+
+
+Science 8                                                              43
+       • Create a drama involving issues related to the impact of
+         electromagnetic radiation-base technologies on self and
+         community.
+       • Create a dance inspired by the effects of forces in and on
+         fluids, and the physical properties of fluids (liquids and
+         gases).
+       • Create visual art works and dances that examine how wind,
+         water, and ice have shaped and continue to shape the
+         Canadian landscape.
+       • Create lyrics for music compositions that comment on the
+         impact of natural and human factors on the earth’s water
+         systems.
+
+     Career Education
+     Areas of study such as science can provide the context for
+     student exploration of transferability of present knowledge and
+     skills to career pathways and their connections to community.
+     Two specific examples of these connections between science
+     and career education at grade eight include:
+       • Investigate science and technology-related occupations
+          and workplaces that require an understanding of human
+          physiology, the physics of light, the density of materials, and
+          the importance of water for all life.
+       • Use the results of their investigations into science to support
+          the initial construction of a personal life and work plan in
+          career education.
+
+     English Language Arts (ELA)
+     As students gather and evaluate information, construct and
+     refine knowledge, and share what they know with a variety
+     of audiences, they use and develop their language skills. The
+     environment/technology context in English language arts can
+     provide students an opportunity to learn and apply science
+     knowledge. Some specific examples of connections between
+     ELA and science at grade eight include:
+       • Throughout the science curriculum, students should view,
+         listen to, read, comprehend, and respond to a variety of
+         texts, including fiction, non-fiction, videos, websites, and
+         summarize the main ideas and supporting details of those
+         texts.
+       • Students should understand that the structure of science
+         textbooks differs from the structure of other types of texts.
+         By gaining an understanding of that structure, students
+         will be able to read those texts efficiently and effectively
+         for a variety of purposes, including gathering information,
+         following directions, understanding information, and for
+         enjoyment.
+
+
+
+
+44                                                                 Science 8
+     • Students should present the results of their science
+       inquiries using a variety of text forms, including expository,
+       informational, and procedural texts (e.g., construct a written,
+       visual, or dramatic representation of the water cycle);
+       descriptive texts (e.g., write a description of the effects of
+       weathering and erosion that are evident in the surrounding
+       environment); and persuasive texts (e.g., support the use
+       of various technologies that support or replace ailing body
+       systems).
+     • Students should reflect on and critique their choices of
+       grade-appropriate strategies for communicating their
+       science learning.
+
+   Health Education
+   Connections can often be found between the topics in health
+   education and science, although students may conduct their
+   inquiries into these topics from different disciplinary “worlds”.
+   Some specific examples of the connection between these areas
+   of study at grade eight are:
+     • Analyzing how the interdependence of organ systems
+        contribute to the healthy functioning of the human body
+        and how these contributions relate to the importance of
+        healthy behaviours (like eating, exercising, sleeping) on a
+        person’s health and well-being.
+     • Analyzing the impact of natural and human changes to the
+        distribution and characteristics of water in local and regional
+        ecosystems will include the examination of human practices
+        and activities that pose a threat to the environment and to
+        the health of people.
+
+   Mathematics
+   A key connection between mathematics and science is the
+   search for patterns and relationships in the natural and
+   constructed world. Inquiries in science require students to
+   collect, analyze, and display data, which require the application
+   of a variety of mathematical skills and processes, including
+   measuring, counting, and data analysis skills. When students
+   construct mathematical and physical models in science
+   to represent and explain natural phenomena, they apply
+   mathematical skills related to number. Some specific examples
+   of these connections in grade eight include:
+     • Analyze the effectiveness of data representations related to
+       the healthy functioning of the human body.
+     • Apply and strengthen their understanding of independent
+       events as they examine the effects of different mediums on
+       optics and vision.
+
+
+
+
+Science 8                                                                 45
+       • Develop and apply their proportional reasoning when
+         exploring density, viscosity, and compressibility of fluids.
+       • Apply their understandings of percents to analyze the
+         impacts of natural and human-induced changes to water
+         systems on Earth.
+
+     Physical Education
+     Both science and physical education involve understanding of
+     the human body, albeit within different disciplinary “worlds”.
+     Understanding scientific principles related to movement can
+     serve to enhance the students’ ability to engage in movement
+     that will support their well-being; by contrast, the analysis of
+     human movement can contribute to a deeper understanding
+     of the underlying scientific principles. Two specific examples
+     of connections between these areas of study at grade eight
+     include:
+       • Students will be describing the function of muscle tissues
+         in science and this understanding will support them as they
+         focus on how to positively affect major muscle groups in
+         physical education.
+       • Students design and carry out an experiment, to compare
+         and contrast the heart rate, breathing rate, and/or blood
+         pressure of an individual during various levels of activity
+         in science. In physical education, students are to monitor
+         heart rate to draw conclusions about personal achievement
+         of maintaining a level of participation at their target heart
+         zone. They also develop and test, physically, a hypothesis
+         on the effects of various movement activities on the heart
+         rate. Students can strengthen their understanding in both
+         subject areas by integrating these learnings.
+
+     Social Studies
+     The content of social studies and science can often be used
+     to connect the two areas of study, particularly with respect to
+     connections between the environment and all living things,
+     including humans. This connection is emphasized through the
+     STSE (Science-Technology-Society-Environment) foundation
+     of scientific literacy and the STSE Decision Making learning
+     context. A specific example of this connection in grade eight is:
+       • Students investigate the use of water as a resource for
+         human and industrial use and the impact the availability
+         of water has on distribution of human population and the
+         development of industry.
+
+
+
+
+46                                                                 Science 8
+       Glossary
+       The additive model of colour describes the adding together of coloured light sources to produce
+       colours.
+       The angle of incidence is the angle between an incident ray of light and the normal.
+       The angle of reflection is the angle between the normal and a reflected ray of light.
+       Archimedes principle states that the buoyant force acting on an object equals the weight of the
+       fluid displaced by the object.
+       Balanced forces are equal in strength and opposite in direction and thus do not cause an object
+       to move.
+       A cell is the basic unit of a living organism that exhibits all of the characteristics associated with
+       life.
+       Cell division is the process by which a cell divides into two or more cells.
+       A compound light microscope is a microscope that has two or more lenses and uses a lamp or
+       mirror to provide light for viewing the object.
+       Compressibility is the relative volume change of a fluid or solid due to pressure change.
+       A concave lens is a transparent material that is thinner in the middle than at the edges.
+       A concave mirror is a reflective surface that is curved inward.
+       A convex lens is a transparent material that is thicker in the middle than at the edges.
+       A convex mirror is a reflective surface that is curved outward.
+       Cultural perspectives is the learning context that reflects a humanistic perspective which views
+       teaching and learning as cultural transmission and acquisition.
+       Density is the amount of mass of a material per unit volume and is measured in kg/m³, g/cm³, or
+       g/mL.
+       A dependent variable is something that can be measured and whose value may change as a
+       result of an experiment.
+       Deposition is the geological process by which eroded sediments and other materials are dropped
+       or left by water or ice, creating built-up landforms such as deltas and eskers.
+       Diffuse reflection is the reflection of light from an uneven or granular surface in a broad range of
+       directions.
+       Diffusion is the movement of particles from an area of higher concentration to an area of lower
+       concentration.
+       An ecosystem consists of all the biotic factors such as plants, animals, and micro-organisms,
+       functioning together with abiotic factors of a particular environment.
+
+
+
+
+Science 8                                                                                                       47
+     Electromagnetic radiation includes all forms of radiated energy (e.g., radio waves, microwaves,
+     infrared, visible light, ultraviolet, X-rays, and gamma rays).
+     Erosion is the transport of sediments from one place to another by wind, water, glaciers, or gravity.
+     Extrapolation means to construct new data points outside the range of a set of data points.
+     A fair test is an experiment that has been planned and controlled so that only one variable is
+     changed at a time.
+     A fluid is a form of matter than can flow, such as gases or liquids.
+     Fluorescence is the emission of light from a cold body due to the release of long wavelength
+     energy, such as the coating inside a fluorescent lamp.
+     A force is a push or pull that causes an object to move; forces may be contact (e.g., physical push)
+     or non-contact (e.g., force of gravity).
+     Frequency is the number of times a wave source or medium vibrates in a given unit of time.
+     A geometric ray diagram uses rays with arrows to represent how light travels.
+     Glaciers are large moving masses of compressed ice and snow.
+     Groundwater is water that has seeped into the ground from the surface of Earth.
+     A hydraulic system uses relatively incompressible liquids, such as oil, to transmit force.
+     Incandescence is the emission of light from a hot body due to its temperature, such as a hot
+     filament within an incandescent lamp.
+     An independent variable is something that can be changed by an experimenter to cause an
+     effect.
+     Interpolation means to construct new data points within the range of a set of data points.
+     Magnification is the ratio between the apparent size of an object as seen through a microscope
+     and the real size of an object.
+     Mechanical advantage is the factor by which a mechanism multiplies the force put into it.
+     Opaque materials prevent light from passing through them.
+     An organ is a group of different types of tissues that work together to perform a function.
+     An organ system is comprised of a group of related organs that perform specific functions.
+     Osmosis is the diffusion of water through a selectively permeable membrane.
+     The particle theory of matter explains the behaviour of solids, liquids, and gases based on the
+     assumption that all matter is made up of tiny moving particles that attract each other and have
+     spaces between them.
+
+
+
+
+48                                                                                                      Science 8
+       A penumbra is the region in which only part of a body is in shadow.
+       A pneumatic system uses easily compressible gases, such as air, to transmit force.
+       Pressure is the amount of force applied over a given area of an object and is measured in Pa, bar,
+       or pounds per square inch (psi).
+       Productivity is the ability of a water body to support living things.
+       A real image is an image of a source object that can be projected onto a screen.
+       Rectilinear propagation is the property that light travels in straight lines.
+       Reflection of light is the change in direction of light when it strikes a surface, such as from air onto
+       a mirror and back into the air.
+       Refraction of light is the change in direction of light when it passes from one medium into
+       another, such as from air into water.
+       The refractive index of a medium is a measure of how much the speed of light is reduced inside
+       the medium, which causes the light ray to change direction.
+       Riparian areas are land areas directly influenced by bodies of water such as stream banks, lake
+       borders, and marshes.
+       Scientific inquiry is the learning context that reflects an emphasis on understanding the natural
+       and constructed world using systematic empirical processes that lead to the formation of theories
+       that explain observed events and that facilitate prediction.
+       Scientific literacy is an evolving combination of the knowledge of nature, skills, processes, and
+       attitudes students need to develop inquiry, problem-solving, and decision-making abilities, to
+       become lifelong learners, and to maintain a sense of wonder about and responsibility towards the
+       natural and constructed world.
+       A selectively permeable membrane allows some substances, but not others, to pass through.
+       Specular reflection is the reflection of light from a smooth surface.
+       STSE decision making is the learning context that reflects the need to engage citizens in thinking
+       about human and world issues through a scientific lens in order to inform and empower decision
+       making by individuals, communities, and society.
+       STSE, which stands for Science-Technology-Society and the Environment, is the foundation of
+       scientific literacy that is concerned with understanding the scope and character of science, its
+       connections to technology, and the social context in which it is developed.
+       The subtractive model of colour describes the mixing of paints, dyes, and inks to create colours.
+       Surface water is water that is on Earth’s surface, such as in a stream, lake, river, or reservoir.
+       Technological problem solving is the learning context that reflects an emphasis on designing
+       and building to solve practical human problems.
+       Tissue is a group of the same type of cells that work together to perform a function.
+
+
+
+
+Science 8                                                                                                         49
+     Translucent materials allow light to pass through them diffusely.
+     Transparent materials allow light to pass through freely.
+     An umbra is the darkest part of a shadow.
+     A virtual image is an image of a source object that appears to be behind a lens or mirror and can
+     not be projected onto a screen.
+     Viscosity is the resistance of a fluid (gas or liquid) to flow.
+     The visible spectrum is the portion of the electromagnetic spectrum which can be detected by
+     the human eye and is seen by humans as colours.
+     A watershed, or drainage basin, is an area of land that drains water into a particular stream, river,
+     or lake.
+     Water quality consists of the physical, chemical, and biological characteristics of water
+     which can be measured using indicators such as temperature, turbidity, pH, colour, dissolved
+     oxygen, hardness, nitrates, biochemical oxygen demand, total suspended solids, and benthic
+     macroinvertebrates.
+     Wavelength is the distance from one point on a wave to the same point on the next wave (e.g.,
+     from crest to crest or from trough to trough).
+     Weathering is the breaking down of rocks and minerals through mechanical, chemical, and
+     biological processes.
+     Wetlands are areas with saturated soils and water tolerant plants such as marshes, fens, and peat
+     lands, which serve as transitions between dry land and water bodies.
+     A wet mount is a microscope slide that is made by placing a specimen in a drop of water and
+     covering with a small piece of glass or plastic.
+     WHMIS is an acronym that stands for Workplace Hazardous Materials Information Systems.
+
+
+
+
+50                                                                                                           Science 8
+       References
+       Aikenhead, G. S. (2006). Science education for everyday life: Evidence-based practice. New York, NY:
+              Teachers College Press.
+       Alberta Education. (2005). Safety in the science classroom. AB: Author.
+       Brophy, J. & Alleman, J. (1991). A caveat: Curriculum integration isn’t always a good idea.
+              Educational Leadership, 49, 66.
+
+       Canadian Council on Learning. (2007). Redefining how success is measured in First Nations, Inuit and
+              Métis learning, Report on learning in Canada 2007. Ottawa: Author.
+       Council of Ministers of Education, Canada. (1997). Common framework of science learning outcomes
+              K to 12. Toronto, ON: Author.
+       Di Giuseppe, M. (Ed). (2007). Science education: A summary of research, theories, and practice: A
+              Canadian perspective. Toronto, ON: Thomson Nelson.
+       Education Review Office. (1996). Science in schools – Implementing the 1995 science curriculum (5).
+              Wellington: Crown Copyright.
+       Flick, L. & Bell, R. (2000). Preparing tomorrow’s science teachers to use technology: Guidelines for
+                 science educators. Contemporary Issues in Technology and Teacher Education, 1, 39-60.
+       International Council for Science. (2002). ICSU series on science for sustainable development No 4:
+               Science, traditional knowledge and sustainable development.
+       International Technology Education Association. (2000). Standards for technological literacy:
+               Content for the study of technology. Reston, VA: National Science Foundation.
+       Kluger-Bell, B. (2000). Recognizing inquiry: Comparing three hands-on teaching techniques. In Inquiry
+              – Thoughts, Views, and Strategies for the K-5 Classroom (Foundations - A monograph for
+              professionals in science, mathematics and technology education. Vol. 2). Washington, DC:
+              National Science Foundation.
+       Kwan, T. & Texley, J. (2003). Inquiring safely: A guide for middle school teachers. Arlington, VA: NSTA
+              Press.
+       National Research Council. (1996). National science education standards. Washington, DC: National
+              Academy Press.
+       National Research Council. (2000). Inquiry and the national science education standards: A guide for
+              teaching and learning. Washington, DC: National Academy Press
+       National Research Council. (2006). America’s lab report: Investigations in high school science.
+              Washington, DC: National Academy Press.
+       National Science Teachers Association (NSTA). 1999. NSTA position statement: Science competitions.
+              Available online at http://www.nsta.org/about/positions/competitions.aspx.
+
+
+
+
+Science 8                                                                                                        51
+     National Science Teachers Association (NSTA). 2007. NSTA position statement: The integral role of
+            laboratory investigations in science instruction. Available online at http://www.nsta.org/
+            about/positions/laboratory.aspx.
+     National Science Teachers Association (NSTA). 2008. NSTA position statement: Responsible use of live
+            animals and dissection in the science classroom. Available online at http://www.nsta.org/
+            about/positions/animals.aspx.
+     Saskatchewan Learning. (2007). Core curriculum: Principles, time allocations, and credit policy. SK:
+            Author.
+
+     Suggested Reading
+     Aikenhead, G.S. & Ogawa, M. (2007). Indigenous knowledge and science revisited. Cultural Studies
+           of Science Education, 2(3), 539-591.
+     Allen, R. (2007). The essentials of science, grades 7-12: Effective curriculum, instruction, and
+             assessment. Alexandria, VA: ASCD.
+     American Association for the Advancement of Science, Project 2061. (1994). Benchmarks for
+           scientific literacy. Washington, DC: Author.
+     American Association for the Advancement of Science, Project 2061. (2001). Atlas of scientific
+           literacy, Volume 1. Washington, DC: Author.
+     American Association for the Advancement of Science, Project 2061. (2007). Atlas of scientific
+           literacy, Volume 2. Washington, DC: Author.
+     Atkin, J.M. & Coffey, J.E. (Eds.). (2003). Everyday assessment in the science classroom. Arlington, VA:
+              NSTA Press.
+     Bell, R.L., Gess-Newsome, J., & Luft, J. (Eds.). (2008). Technology in the secondary science classroom.
+              Arlington, VA: NSTA Press.
+
+     British Columbia Ministry of Education. (2003). Science safety resource manual. BC: Author.
+     Cajete, G.A. (1999). Igniting the sparkle: An indigenous science education model. Skyland, NC: Kivaki
+             Press.
+     Douglas, R., Klentschy, M.P., Worth, K., & Binder, W. (Eds.). (2006). Linking science and literacy in the
+           K-8 classroom. Arlington, VA: NSTA Press.
+     Gilbert, S. & Watt Iron, S. (2003). Understanding models in earth and space science. Arlington, VA:
+              NSTA Press.
+     Hammerman, E. & Musial, D. (2008). Integrating science with mathematics & literacy: New visions for
+          learning and assessment (2nd ed). Thousand Oaks, CA: Corwin Press.
+     Kwan, T. & Texley, J. (2002). Exploring safely: A guide for elementary teachers. Arlington, VA: NSTA
+            Press.
+     Kwan, T. ,Texley, J., & Summers, J. (2004). Investigating safely: A guide for high school teachers.
+            Arlington, VA: NSTA Press.
+
+
+
+52                                                                                                               Science 8
+       LaMoine, L.M., Biehle, J.T., & West, S.S. (2007). NSTA guide to planning school science facilities (2nd
+             ed). Arlington, VA: NSTA Press.
+       Michell, H., Vizina, Y., Augusta, C., & Sawyer. J. (2008). Learning Indigenous science from place.
+               Aboriginal Education Research Centre, University of Saskatchewan.
+
+       National Research Council. (2007). Taking science to school: Learning and teaching science in
+              grades K-8. Committee on Science Learning, Kindergarten through Eighth Grade. Richard
+              A. Duschl, Heidi A. Schweingruber, and Andrew A. Shouse, Editors. Board on Science
+              Education, Center for Education. Division of Behavioral and Social Sciences and Education.
+              Washington, DC: The National Academies Press.
+       Saul, W.E. (Ed.). (2004). Crossing borders in literacy and science instruction: Perspectives on theory and
+               practice. Arlington, VA: NSTA Press.
+
+
+
+
+Science 8                                                                                                           53
+Feedback Form
+The Ministry of Education welcomes your response to this curriculum and invites you to complete and return this
+feedback form.
+Grade 8 Science Curriculum
+1. Please indicate your role in the learning community:
+       parent                          teacher                 resource teacher
+       guidance counsellor             school administrator    school board trustee
+       teacher librarian               school community council member
+
+       other
+    What was your purpose for looking at or using this curriculum?
+
+
+
+
+2. a) Please indicate which format(s) of the curriculum you used:
+       print
+
+       online
+    b) Please indicate which format(s) of the curriculum you prefer:
+       print
+       online
+3. How does this curriculum address the needs of your learning community or organization? Please explain.
+
+
+
+
+4. Please respond to each of the following statements by circling the applicable number.
+
+The curriculum content is:                  Strongly Agree       Agree                Disagree     Strongly
+                                                                                                   Disagree
+appropriate for its intended purpose              1                  2                   3             4
+suitable for your use                             1                  2                   3             4
+clear and well organized                          1                  2                   3             4
+visually appealing                                1                  2                   3             4
+informative                                       1                  2                   3             4
+
+
+
+
+Science 7                                                                                                     55
+5. Explain which aspects you found to be:
+     Most useful:
+
+
+
+
+     Least useful:
+
+
+
+
+6    Additional comments:
+
+
+
+
+7. Optional:
+     Name:
+     School:
+     Phone:                              Fax:
+     E-mail:
+
+
+Thank you for taking the time to provide this valuable feedback.
+
+
+Please return the completed feedback form to:
+
+
+             Executive Director
+             Student Achievement and Supports Branch/
+             Réussite et soutien des élèves
+             Ministry of Education
+             2220 College Avenue
+             Regina SK S4P 4V9
+             Fax: 306-787-2223
+
+
+56                                                                 Science 8
+

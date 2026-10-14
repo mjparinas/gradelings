@@ -1,0 +1,1655 @@
+                 Grade 1 Mathematics
+                 Curriculum
+
+
+
+
+                         2007
+Recycled Paper
+Grade 1 Mathematics
+Curriculum
+
+
+
+
+     Saskatchewan Learning
+     2007
+     ISBN: 978-1-897211-31-1
+Table of Contents
+
+Acknowledgements ......................................................................................................................... ii
+Purpose............................................................................................................................................ 1
+Aim and Goals of K-12 Mathematics ............................................................................................. 2
+Connections to Broad Areas of Learning........................................................................................ 4
+Connections to Cross-curricular Competencies .............................................................................. 5
+Curriculum Integration.................................................................................................................... 7
+Critical Characteristics of Mathematics Education....................................................................... 10
+Teaching for Deep Understanding ................................................................................................ 14
+Grade 1 Mathematics Outcomes and Indicators ........................................................................... 15
+Appendix A: Terminology ........................................................................................................... 23
+Appendix B: Three Grades at a Glance ....................................................................................... 25
+References ..................................................................................................................................... 34
+Feedback Form.............................................................................................................................. 35
+
+
+
+
+                                                                          i
+Acknowledgements
+Saskatchewan Learning gratefully acknowledges the professional contributions and advice given
+by the following members of the Mathematics Reference Committee:
+
+ Daryl Bangsund                                    George McHenry
+ Good Spirit School Division                       Saskatchewan School Boards Association
+ LEADS
+ Dr. Murray Bremner                                Dr. Shaun Murphy
+ Department of Mathematics and Statistics          College of Education
+ University of Saskatchewan                        University of Saskatchewan
+
+ Linda Goulet                                      Dr. Kathy Nolan
+ First Nations University of Canada                Faculty of Education
+                                                   University of Regina
+
+ Angie Harding                                     Kathi Sandbeck
+ Regina Roman Catholic School Division             Sun West School Division
+ Saskatchewan Teachers’ Federation                 Saskatchewan Teachers’ Federation
+ Susan Jeske                                       Doug Sthamann
+ Prairie Spirit School Division                    Prairie Valley School Division
+ Saskatchewan Teachers’ Federation                 Saskatchewan Teachers’ Federation
+ Wendy Lang                                        Rodney White
+ Greater Saskatoon Catholic School Division        North East School Division
+ Saskatchewan Teachers’ Federation                 Saskatchewan Teachers’ Federation
+
+Saskatchewan Learning wishes to thank many others who contributed to the development of this
+curriculum:
+
+•   in-house consultants
+•   field test teachers
+•   other field personnel.
+
+This curriculum in based on the Western and Northern Canadian Protocol (WNCP) Common
+Curriculum Framework (CCF) (2006) for Kindergarten to Grade 9 Mathematics.
+
+This document was completed under the direction of the Science and Technology Unit,
+Curriculum and E-Learning Branch, and the French Education Branch of Saskatchewan
+Learning. A feedback form is included at the end of this document to provide Saskatchewan
+Learning with your ideas and comments related to this curriculum.
+
+
+
+
+                                              ii
+Grade One Mathematics
+Purpose
+The Grade 1 Mathematics Curriculum defines the outcomes to be
+attained by grade one students during the 210 minutes of instruction     Outcomes are
+and learning time allocated per week for the entire school year. It is   statements
+designed to support teachers in providing students with learning         identifying what
+opportunities to develop appropriate mathematics knowledge,              students are
+understandings, and abilities within a learning environment that         expected to know,
+supports the students’ development of positive attitudes and beliefs     understand, and be
+towards mathematics. Indicators are included for each outcome to         able to do by the
+clarify the breadth and depth of learning intended by the outcome.       end of a particular
+These indicators are a representative list of the kinds of things a      grade level.
+student needs to know, and/or be able to do in order to achieve the
+learnings intended by the outcome.
+
+This curriculum also provides information for teachers to understand     Indicators are a
+how the outcomes of the Kindergarten Mathematics Curriculum              representative list
+connect to the K-12 Goals for mathematics, the Cross-curricular          of things students
+Competencies to be addressed in all areas of study, and the Broad        could be asked to
+Areas of Learning that summarize the Goals of Education for              know or do in
+Saskatchewan students.                                                   order to show their
+                                                                         attainment of the
+Appendix A provides explanations of some of the mathematical             outcome. The
+terminology you will find in this curriculum. Appendix B: Three          indicators are
+Grades at a Glance has been included to help teachers see how            intended to clarify
+Grade 1 outcomes are related to Kindergarten and Grade 2 outcomes.       the breadth and
+                                                                         depth of the
+An introduction to pedagogical understandings necessary for the
+effective teaching of mathematics is included. Additional support
+resources that explore and demonstrate these pedagogical
+understandings will be provided online.
+
+This curriculum has been designed to address current research in
+mathematics education as well as to address the learning needs of
+young children. Changes to the outcomes in all the grades of
+mathematics K to 12 have been made for a number of reasons
+including:
+• decreasing content in each grade to allow for more depth of
+    understanding
+• rearranging concepts to allow for greater depth of learning in one
+    year and to align related mathematical concepts
+• increasing the focus on numeracy (understanding numbers)
+    beginning in Kindergarten
+• introducing algebraic thinking earlier.
+
+
+                                   1
+                            Aim and Goals of K-12 Mathematics
+                            The aim of the mathematics program is to prepare individuals who
+                            value mathematics and appreciate its role in society. The K-12
+                            mathematics curricula are designed to prepare students to cope
+                            confidently and competently with everyday situations that demand the
+                            use of mathematical concepts including interpreting quantitative
+                            information, estimating, performing calculations mentally, measuring,
+                            understanding spatial relationships, and problem solving. The
+When we ask good            mathematics program is intended to stimulate the spirit of inquiry
+questions in math class,    within the context of mathematical thinking and reasoning.
+we invite our students to
+think, to understand, and   The four goals for K-12 mathematics are broad statements that
+to share a mathematical     identify the knowledge, understandings, skills, and attitudes in
+journey with their          mathematics that students are expected to develop and demonstrate by
+classmates and teachers     the end of grade twelve. Within each grade level, outcomes are
+alike. Students are no      directly related to the development of one or more of these goals. The
+longer passive receivers    goals for K-12 mathematics are:
+of information when
+asked questions that        Logical Thinking: Develop and be able to apply mathematical
+challenge their             reasoning processes, skills, and strategies to new situations and
+understandings and          problems.
+convictions about
+mathematics. ( Sullivan,    This goal encompasses the processes and strategies that are
+2002, p. 1)                 foundational to understanding mathematics as a discipline. These
+                            processes and strategies include:
+                            • inductive and deductive thinking
+                            • abstracting and generalizing
+                            • exploring, identifying, and describing patterns
+                            • verifying and proving
+                            • exploring, identifying, and describing relationships
+                            • modeling and representing (concretely, visually, physically, and
+                               symbolically)
+                            • hypothesizing and asking “what if” (mathematical play).
+
+                            Number Sense: Develop an understanding of the meaning of,
+                            relationships between, properties of, roles of, and representations
+                            (including symbolic) of numbers and apply this understanding to new
+                            situations and problems.
+
+                            Key to developing number sense is students having ongoing
+                            experience with:
+                            • decomposing and composing of numbers
+                            • relating different operations to each other
+                            • modeling and representing numbers and operations (concretely,
+                               visually, physically, and symbolically)
+
+
+                                                               2
+•   understanding the origins and need for different types of numbers
+•   recognizing operations on different number types as being the
+    same operations
+•   understanding equality and inequality
+•   recognizing the variety of roles for numbers
+•   understanding algebraic representations and manipulations in
+    terms of extending numbers
+•   looking for patterns and ways to describe those patterns
+    numerically and algebraically.
+
+Spatial Sense: Develop an understanding of 2-D shapes and 3-D
+objects and the relationships between geometrical shapes and objects,
+and numbers and apply this understanding to new situations and
+problems.                                                                Math makes sense!
+                                                                         This is the most
+Development of a strong spatial sense requires students to experience:   fundamental idea that
+• construction and deconstruction of 2-D shapes and 3-D objects          an elementary teacher
+• investigations into relationships between 2-D shapes and 3-D           of mathematics needs
+   objects                                                               to believe and act on.
+• explorations of how number (and algebra) can be used to describe       It is through the
+   2-D shapes and 3-D objects                                            teacher’s actions that
+• exploration of the movement of 2-D shapes and 3-D objects              every child in his or
+• exploration of the dimensions of 2-D shapes and 3-D objects            her own way can come
+• exploration of different forms of measurement and their meaning.       to believe this simple
+                                                                         truth and, more
+Mathematical Attitude: Develop a positive attitude towards the           importantly, believe
+ability to understand mathematics and to use it to solve problems.       that he or she is
+                                                                         capable of making
+Mathematical ability and confidence is built through playing with        sense of mathematics.
+numbers and related concepts in a supportive environment. Students       (Van de Walle &
+can persevere when challenged if provided with opportunities to learn    Lovin, 2006, p. ix)
+mathematics within an environment that:
+• supports risk taking (mathematically and personally)
+• honours students’ ideas
+• provides engaging and responsive learning experiences.
+
+Students who have a positive attitude towards mathematics
+demonstrate:
+• confidence in their mathematical insights and abilities
+• enjoyment, curiousity, and perseverance when encountering new
+   problems
+• appreciation of the structure and value of mathematics.
+
+There are many “real-world” applications of the mathematics within
+the K-12 Mathematics curricula. The curriculum content first and
+
+
+
+                                  3
+                        foremost serves as the vehicle through which students can achieve the
+                        four goals of K-12 mathematics in Saskatchewan. Mathematically
+                        confident students apply mathematical knowledge to new situations
+                        and to solve problems.
+
+                        Connections to Broad Areas of Learning
+                        There are three Broad Areas of Learning that reflect Saskatchewan’s
+                        Goals of Education.
+
+                        Building a Disposition for Learning
+
+                        Students engaged in constructing and applying mathematical
+                        knowledge in an authentic learning environment, which includes a
+                        variety of experiences and contexts, build a positive disposition for
+Mathematics             learning. In mathematics, an environment that supports risk taking
+enables individuals     allows students to learn from errors and to appreciate the value of
+to understand and       errors in learning. In such an environment, students manipulate
+explore the world,      objects and ideas, value multiple ways of arriving at a solution, build
+and communicate         confidence, and develop perseverance. When actively exploring
+and participate in a    mathematical content through inquiry in an appropriate environment,
+variety of roles and    students develop mathematical reasoning, number sense, spatial
+settings in the home,   sense, and a positive attitude towards mathematics.
+school, and
+community.              Building a Sense of Self and Community
+
+                        Exploring mathematics in a collaborative learning environment, rich
+                        in dialogue, provides opportunities for students to strengthen
+                        connections with others. When students work together to explore,
+                        negotiate, reflect, and construct personal strategies, students achieve a
+                        deeper understanding of mathematics. As well, students experience
+                        different points of view and learn to value diversity of perspectives
+                        and ways of knowing. In such an environment, students learn and
+                        come to value personal understandings, accomplishments, and
+                        contributions. As a member of a group, each student contributes to
+                        the learning community and social climate of the classroom.
+
+                        Building Engaged Citizens
+
+                        Co-planning the learning environment empowers students to
+                        communicate and make decisions about learning. It also enables
+                        students to contribute to the social harmony of the learning
+                        community. Mathematical exploration and analysis brings a unique
+                        perspective and way of learning to view and construct one’s
+                        understanding of the world through a mathematical lens. Such
+                        processes also help students develop a greater respect for and
+
+
+                                                            4
+understanding of how different points of views and options can
+strengthen thinking and potential options. Students become engaged
+citizens, who solve problems and make personal decisions regarding
+their roles and contributions to the world.
+
+
+
+                                       Social Studies
+
+                                                                           Health
+                   Language                                               Education
+                     Arts                Identity and
+                                         Interdependence
+
+                      Constructing              Self and
+                      Knowledge                Community                   Developing
+                                                                            Literacy
+                                Disposition                    Engaged
+                                   For
+          Physical                                             Citizens
+                                 Learning                                             Arts
+         Education                                                                  Education
+
+
+                                                 Social
+                   Mathematics                Responsibility
+                                                                          Science
+     Reasoning
+
+                       Spatial Sense
+    Number Sense
+                                              Mathematical
+                                                Attitude
+
+
+
+
+Connections to Cross-curricular Competencies
+There are four cross-curricular competencies that together contribute
+to an individual student’s development within the four Broad Areas of
+Learning. These competencies are synthesized from the Common
+Essential Learnings. It is important, therefore, that the learning of
+mathematics also supports the students in their attainment of these
+competencies.
+
+Constructing Knowledge
+                                                                                                Constructing
+Students construct meaning of mathematical language and concepts                                knowledge is how
+when engaged in an inquiry-based and problem-solving environment                                people make sense of
+that provides opportunities to think critically and creatively.                                 the world around
+Moreover, students gain a deeper understanding of mathematics when                              them.
+actively exploring and applying mathematics in relevant and varied
+
+
+
+
+                                         5
+                           contexts. Mathematics enables students to consider different
+                           perspectives, connections, and relationships in the world.
+
+                           Identity and Interdependence
+
+We want students to        Students become confident in mathematics when supported in taking
+develop a positive self-   risks in an accepting and respectful environment that promotes self-
+concept and to have        reflection. When interacting with others to explore and solve
+the ability to live in     problems, students discuss and negotiate strategies and solutions.
+harmony with others,       Students learn to contribute, to respect each other’s ideas, and to act
+and with the natural       responsibly. A purposeful approach to learning mathematics allows
+and constructed world.     students to appreciate their role in the planning, organizing, and
+                           management of the learning environment.
+
+                           Developing Literacy
+
+                           Students develop mathematical literacy by representing their
+                           environment through words, numbers, music, and drama. Students
+                           explore and use a variety of representations for mathematical
+                           concepts. Using auditory, visual, and symbolic representations as
+                           well as concrete manipulatives and physical movement, deepens
+                           students’ understanding of mathematics and allows them to
+                           communicate understandings.
+
+                           Social Responsibility
+
+                           When engaged in the co-construction of mathematical knowledge,
+                           students are respectful when understanding and considering others’
+                           ideas, perspectives, suggestions, and contributions. Students become
+                           aware of the possibility of more than one solution to a problem or
+                           situation, and they learn to work with others to negotiate solutions to
+                           problems in the school, the community, and the world. When
+                           working in a group exploring mathematical problems, students learn
+                           to negotiate to resolve conflicts.
+
+
+
+
+                                                              6
+Curriculum Integration
+Young students arrive at school with a natural curiosity. An engaging
+learning environment provides opportunities to satisfy and nourish        When students
+this curiosity or thirst for knowledge. When exploring mathamatics in     experience mathematics
+such an environment, students make connections within mathematics,        as a lens through which
+with other curricular areas, and with the world. Experiencing             they can view other
+mathematical concepts in rich contexts allows students to transfer        subjects, and other
+knowledge and understanding to new situations. Some examples of           subjects as lens through
+integrating mathematics with other areas of study are described           which they can view
+below.                                                                    mathematics, they learn
+                                                                          that mathematics is
+Arts Education – Patterning is a very important concept in                much more than a set of
+mathematics. Students use patterns for problem solving, reasoning,        facts and procedures to
+and algebraic thinking. Dance movement and music are excellent            memorize for the exam.
+contexts for exploring and deepening understanding of patterns.
+Viewing, discussing, and creating visual patterns in traditional arts
+expressions allows students to appreciate the diversity of patterns
+used by different cultures. At this age, students often use colour for
+patterning. Students are also very creative when representing number
+and shape with their bodies. All four of the Arts Education strands
+can be used as contexts to help students represent, interpret, and make
+sense of mathematical ideas.
+
+English Language Arts – Students use language to explore and build
+                                                                           Language is as
+mathematical concepts. Students must understand the language of
+                                                                           important to learning
+instruction and the language that is specific to mathematics. Students
+                                                                           mathematics as it is to
+need the opportunity to use and experience mathematical language. It
+                                                                           learning to read.
+is important for teachers to model mathematical language and
+                                                                           (National Council of
+appropriate mathematical terms. Well-developed language ability is
+                                                                           Teachers of
+needed to express learning and understanding of mathematical ideas.
+                                                                           Mathematics, 2000,
+In mathematics, students use many symbols to understand and
+                                                                           p. 128)
+communicate. Instructional strategies for teaching language work
+well for teaching mathematics. These strategies need to focus on
+listening, speaking, reading, writing, viewing, and representing.
+
+In grade one, students are beginning to explore the concepts of
+addition and subtraction. Number stories add context and are
+meaningful for students. For most young students 2 + 5 =  has no
+meaning; however, many students will be able to make sense of the
+symbols when used in a number story. Retelling number stories helps
+students deepen understanding of numbers. Counting and pattern
+books also help students make connections to prior knowledge and
+deepen understanding of numbers and their interrelationships.
+Referring to the English language arts outcomes is very important
+when planning the learning environment for Grade 1 mathematics.
+
+
+                                   7
+                        Health Education – In Grade 1 health education, students explore
+                        healthy behaviours. When exploring food choices, students can sort
+                        and describe sorting rules for different sets of food. Extending these
+When mathematics is     activities to including the shape of the foods being grouped will help
+taught without a rich   students connect mathematical ideas to the environment. Using
+context, it becomes a   simple recipes to make healthy snacks also provides meaningful
+static discipline.      counting experiences. Interactive, hands-on activities in mathematics
+                        provide meaningful opportunities to explore healthy relationships in
+                        health as well by providing an authentic environment in which
+                        students can express feelings, wants, and needs through collaborating
+                        and negotiating.
+
+                        Physical Education – There are many possibilities to make
+                        connections with mathematics in Grade 1 physical education. An
+                        exercise circuit is an effective context for viewing numbers and
+                        counting. Students move from one station to the other in different
+                        ways. When students arrive at the station, they “read” visuals that
+                        provide instructions for that station. These visuals show the number
+                        and kind of movement to be done by the students such as jumping,
+                        moving objects, or holding one’s balance while counting. The
+                        children can also represent numbers up to 20 by following
+                        instructions such as “Make groups of 3 people”. Mathematics can
+                        also be included in directions such as: “Find a partner, now add two
+                        more people to your group, and walk as far as you can counting
+                        twelve steps. Now count backwards as you walk back four steps”.
+                        Making groups, in an engaging environment, deepens students’
+                        understanding that sometimes it is not possible to make equal
+                        groupings. This is a foundational understanding related to place value
+                        and division. In addition, involving the students in the distribution of
+                        equipment such as scarves and skipping ropes provides an opportunity
+                        for students to explore one-to-one correspondence. Gym equipment,
+                        such as balls, can be used to provide meaningful opportunities for
+                        students to explore shapes, sort objects, and compare sizes.
+
+                        Science – In the science units Properties of Objects, and Needs and
+                        Characteristics of Living Things, students observe and compare
+                        objects and organisms. These activities can include measurement as a
+                        process of comparing. Students can also replicate 3-D objects and
+                        identify 2-D shapes found on the objects. In addition, students can
+                        order the objects or characteristics of living organisms and develop
+                        the language of comparison through discussions. To develop a good
+                        understanding of the concept of measurement as a comparison,
+                        students must experience measurement and comparison through the
+                        five senses. By doing so, students develop an understanding of the
+                        attributes that can be measured and develop the language that is
+                        appropriate for comparing. The students can feel the mass and see the
+
+
+
+                                                           8
+size. These two science units also provide interesting contexts for
+sorting activities.
+
+In the Daily and Seasonal Changes unit, students measure and record
+temperatures. At this age, students can calculate differences in
+temperature when the temperatures are above zero or positive
+numbers. When investigating seasonal cycles, students can explore
+repeating patterns and represent these in a variety of ways.
+
+Social Studies – Students make sense of number when it is in context
+and when the context is relevant. Self, family, and community
+provide such contexts for number stories. Students can identify
+numbers and begin to understand the role of number in our society as
+students walk through their communities. Numbers can be used to
+name objects such as house numbers. Sometimes numbers can imply
+an order (i.e., on mailboxes or in community sports events where
+ordinal numbers such as first, second, and third are used). Social
+Studies also provides many contexts that allow students to investigate
+and develop an understanding of quantity.
+
+
+
+
+                                   9
+                          Critical Characteristics of Mathematics Education
+                          The content of K-12 Mathematics can be organized in a variety of
+                          ways. In this document, the outcomes and indicators are grouped
+                          according to four strands: Number, Patterns and Relations, Shape
+                          and Space, and Statistics and Probability. Although this
+                          organization implies a relation between the outcomes identified in
+                          each of the strands, it should be noted the mathematical concepts are
+                          interrelated between strands as well as within strands.
+When mathematics is
+taught without a rich     The mathematics curriculum also recognizes seven processes inherent
+integration of these      in the teaching, learning, and doing of mathematics. These processes
+processes, it becomes     focus on: communicating, making connections, mental mathematics
+a stagnant set of facts   and estimating, problem solving, reasoning, and visualizing along
+and procedures devoid     with using technology to integrate these processes into the
+of meaning rather than    mathematics classroom to help students learn mathematics with
+the dynamic and rich      deeper understanding.
+discipline that it is.
+                          The outcomes in K-12 mathematics should be addressed through the
+                          appropriate mathematical processes lenses. Teachers should consider
+                          carefully in their planning those processes indicated as being
+                          important to the various outcomes.
+
+                          Communication [C]
+
+Students must be able     Students need opportunities to view, read about, represent, write
+to communicate            about, listen to, and discuss mathematical ideas. These opportunities
+mathematical ideas in     allow students to create links between their own language and ideas,
+a variety of ways and     and the formal language and symbols of mathematics.
+contexts.
+                          Communication is important in clarifying, reinforcing, and modifying
+                          ideas, attitudes, and beliefs about mathematics. Students should be
+                          encouraged to use a variety of forms of communication while learning
+                          mathematics. Students also need to communicate learning using
+                          mathematical terminology.
+
+                          Communication can help students make connections among concrete,
+                          pictorial, symbolic, verbal, written, and mental representations of
+Through connections       mathematical ideas.
+to their prior
+knowledge and daily       Connections [CN]
+life, students begin to
+view mathematics as       Contextualization and making connections to the experiences of
+useful and relevant.      learners are powerful processes in developing mathematical
+                          understanding. When mathematical ideas are connected to each other
+
+
+
+
+                                                            10
+or to real-world phenomena, students begin to view mathematics as
+useful, relevant, and integrated.
+
+Learning mathematics within contexts and making connections
+relevant to learners can validate past experiences, and increase student
+willingness to participate and be actively engaged.
+
+The brain is constantly looking for and making connections.
+“Because the learner is constantly searching for connections on many
+levels, educators need to orchestrate the experiences from which
+learners extract understanding …. Brain research establishes and
+confirms that multiple complex and concrete experiences are essential
+for meaningful learning and teaching” (Caine and Caine, 1991, p.5).
+                                                                           Mental mathematics
+Mental Mathematics and Estimation [ME]                                     and estimation are
+                                                                           fundamental
+Mental mathematics is a combination of cognitive strategies that           components of
+enhance flexible thinking and number sense. It is calculating              number sense.
+mentally without the use of external memory aids.
+
+Mental mathematics enables students to determine answers without           Students proficient
+paper and pencil. It improves computational fluency by developing          with mental
+efficiency, accuracy, and flexibility.                                     mathematics “become
+                                                                           liberated from
+Estimation is a strategy for determining approximate values of             calculator
+quantities, usually by referring to benchmarks or using referents, or      dependence, build
+for determining the reasonableness of calculated values. Students          confidence in doing
+need to know how, when, and what strategy to use when estimating.          mathematics, become
+                                                                           more flexible thinkers
+Estimation is used to make mathematical judgements and develop             and are more able to
+useful, efficient strategies for dealing with situations in daily life.    use multiple
+                                                                           approaches to problem
+Problem Solving [PS]                                                       solving” (Rubenstein,
+                                                                           2001, p. 442).
+Learning through problem solving should be the focus of mathematics
+at all grade levels. When students encounter new situations and
+respond to questions of the type, “How would you …?” or “How
+could you …?”, the problem-solving approach is being modelled.
+                                                                           Learning through
+Students develop their own problem-solving strategies by being open
+                                                                           problem solving
+to listening, discussing, and trying different strategies.
+                                                                           should be the focus of
+                                                                           mathematics at all
+In order for an activity to be problem-solving based, it must ask
+                                                                           grade levels.
+students to determine a way to get from what is known to what is
+sought. If students have already been given ways to solve the
+problem, it is not problem solving, but rote practice. A true problem
+requires students to use prior learnings in new ways and contexts.
+
+
+
+                                    11
+                           Problem solving requires and builds depth of conceptual
+                           understanding and student engagement.
+
+                           Problem solving is a powerful teaching tool that fosters multiple and
+                           creative solutions. Creating an environment where students openly
+                           look for and engage in finding a variety of strategies for solving
+                           problems empowers students to explore alternatives and develops
+                           confidence, reasoning, and mathematical creativity.
+
+                           Reasoning [R]
+
+                           Mathematical reasoning helps students think logically and make sense
+                           of mathematics. Students need to develop confidence in their abilities
+Mathematical               to reason and explain their mathematical thinking. High-order
+reasoning helps            questions challenge students to think and develop a sense of wonder
+students think logically   about mathematics.
+and make sense of
+mathematics.               Mathematical experiences in and out of the classroom provide
+                           opportunities for inductive and deductive reasoning. Inductive
+                           reasoning occurs when students explore and record results, analyze
+                           observations, make generalizations from patterns, and test these
+                           generalizations. Deductive reasoning occurs when students reach new
+                           conclusions based upon what is already known or assumed to be true.
+
+                           Visualization (V)
+
+Visualization is           Visualization “involves thinking in pictures and images, and the
+fostered through the       ability to perceive, transform and recreate different aspects of the
+use of concrete            visual-spatial world” (Armstrong, 1993, p.10). The use of
+materials, technology,     visualization in the study of mathematics provides students with
+and a variety of visual    opportunities to understand mathematical concepts and make
+representations.           connections among them.
+
+                           Visual images and visual reasoning are important components of
+                           number, spatial, and measurement sense. Number visualization
+                           occurs when students create mental representations of numbers.
+
+                           Being able to create, interpret, and describe a visual representation is
+                           part of spatial sense and spatial reasoning. Spatial visualization and
+                           reasoning enable students to describe the relationships among and
+                           between 3-D objects and 2-D shapes.
+
+                           Visualization is fostered through the use of concrete materials,
+                           technology, and a variety of visual representations.
+
+
+
+
+                                                              12
+Technology [T]
+                                                                         Technology
+Technology contributes to the learning of a wide range of
+                                                                         contributes to the
+mathematical outcomes, and enables students to explore and create
+                                                                         learning of a wide
+patterns, examine relationships, test conjectures, and solve problems.
+                                                                         range of
+                                                                         mathematical
+Calculators and computers can be used to:
+                                                                         outcomes, and
+• explore and demonstrate mathematical relationships and patterns
+                                                                         enables students to
+• organize and display data                                              explore and create
+• extrapolate and interpolate                                            patterns, examine
+• assist with calculation procedures as part of solving problems         relationships, test
+• decrease the time spent on computations when other mathematical        conjectures, and
+   learning is the focus                                                 solve problems.
+• reinforce the learning of basic facts and test properties
+• develop personal procedures for mathematical operations
+• create geometric displays
+• simulate situations
+• develop number sense.
+
+Technology contributes to a learning environment in which the
+growing curiosity of students can lead to rich mathematical
+discoveries at all grade levels. It is important for students to
+understand and appreciate the appropriate use of technology in a
+mathematics classroom.
+
+
+
+
+                                  13
+                               Teaching for Deep Understanding
+In Grade 1 mathematics,
+students explore and           For deep understanding, it is vital that students learn by uncovering
+uncover the meaning of         and co-constructing knowledge, with very few ideas being covered or
+addition and subtraction.      relayed directly by the teacher. As an example, the addition sign (+)
+Time needs to be allowed       is something which the teacher must cover and teach. It is the symbol
+for students to explore and    used to show the combination or addition of two quantities. The
+manipulate concrete            process of adding, however, and the development of addition and
+objects, pictures, language,   subtraction facts should not be covered, but rather discovered through
+physical movement, and         the students’ investigation of patterns, relationships, abstractions, and
+symbols. Students should       generalizations. It is important for teachers to reflect upon outcomes
+be encouraged to ask           to identify what students need to know, understand, and be able to do.
+questions and wonder           Opportunities must be provided for students to explain, apply and
+about the mathematical         transfer understanding to new situations. This reflection supports
+ideas of adding and            professional decision making and planning effective strategies to
+subtracting. Expressing        promote deeper understanding of mathematical ideas.
+these ideas deepens
+understanding.                 It is important that a mathematics learning environment include
+                               effective interplay of:
+                                 • reflection
+                                 • exploration of patterns and relationships
+                                 • sharing of ideas and problems
+Students relate numbers to
+                                 • consideration of different perspectives
+story problems that they
+                                 • decision making
+create by making
+                                 • generalizing
+connections to what they
+                                 • verifying and proving
+already know and have
+                                 • modeling and representing.
+experienced. Representing
+2 + 3 = 5 using objects on
+a balance scale helps          Mathematics is learned when students are engaged in strategic play
+students make connections      with mathematical concepts and differing perspectives. When
+with the language of           students learn mathematics by being told what to do, how to do it, and
+“equal”. Students may          when to do it, they cannot make the strong learning connections
+express 2 + 3 = 5 as “5 is     necessary for learning to be meaningful, easily accessible, and
+the same as 2 + 3”. By         transferable.
+doing this, they are using
+prior knowledge of “the        The mathematics learning environment must be respectful of
+same as” to interpret          individuals and groups, fostering discussion and self-reflection, the
+“equals”.                      asking of questions, the seeking of multiple answers, and the co-
+                               construction of meaning.
+
+
+
+
+                                                                  14
+                                                                   [C]      Communication        [PS]   Problem Solving
+                                                                   [CN]     Connections          [R]    Reasoning
+                                                                   [ME]     Mental Mathematics   [V]    Visualization
+                                                                            and Estimation       [T]    Technology
+
+
+
+Grade 1 Mathematics Outcomes and Indicators
+                                                 Number Strand
+   Goals                   Outcomes                                  Achievement Indicators
+                 It is expected that students will:   The following set of indicators may be used to determine
+                                                      whether students have met the corresponding specific
+                                                      outcome.
+ Number Sense    N1.1 Say the number                  a) Recite forward by 1s the number sequence
+                 sequence, 0 to 100, by:                 between two whole numbers (0 to 100).
+   Logical        • 1s forward and
+   Thinking
+                                                      b) Recite backward by 1s the number sequence
+                    backward between any                 between two whole numbers.
+ Mathematical       two given numbers                 c) Record a numeral (0 to 100) symbolically
+   Attitude       • 2s to 20, forward
+                                                         when it is presented orally.
+                    starting at 0
+                  • 5s and 10s to 100,                d) Read a numeral (0 to 100) when it is
+                    forward starting at 0.               presented symbolically.
+                 [C, CN, V, ME]                       e) Skip count by 2s to 20 starting at 0.
+                                                      f) Skip count by 5s to 100 starting at 0.
+                                                      g) Skip count forward by 10s to 100 starting at 0.
+                                                      h) Identify and correct errors and omissions in a
+                                                         number sequence.
+
+ Number Sense    N1.2 Recognize, at a                 a) Look briefly at a familiar arrangement of
+                 glance, and name familiar               objects or dots and identify the number
+ Spatial Sense   arrangements of 1 to 10                 represented without counting.
+                 objects, dots, and pictures.         b) Look briefly at a familiar arrangement and
+ Mathematical    [C, CN, ME, V]                          identify how many objects there are without
+   Attitude
+                                                         counting.
+                                                      c) Identify the number represented by an
+                                                         arrangement of objects or dots on a ten frame.
+
+ Number Sense    N1.3 Demonstrate an                  a) Answer the question, “How many are in the
+                 understanding of counting               set?” using the last number counted in a set.
+   Logical       by:
+   Thinking
+                                                      b) Identify and correct counting errors in a
+                 • indicating that the last              counting sequence.
+ Mathematical       number said identifies            c) Show that the count of the number of objects in
+   Attitude         “how many”                           a set does not change regardless of the order in
+                 • showing that any set has              which the objects are counted.
+                    only one count using              d) Count the number of objects in a set,
+                 (continued on next page)                rearrange the objects, predict the new count,
+                                                         and recount to verify the prediction.
+
+
+
+                                                       15
+                                                             [C]     Communication        [PS]   Problem Solving
+                                                             [CN]    Connections          [R]    Reasoning
+                                                             [ME]    Mental Mathematics   [V]    Visualization
+                                                                     and Estimation       [T]    Technology
+
+
+                                         Number Strand
+                 N1.3 (continued)          e) Determine the total number of objects in a
+                   the counting on            given set, starting from a known quantity and
+                   strategy                   counting on.
+                 • using parts or equal    f) Determine the total number of objects in a set
+                    groups to count sets.     using groups of 2s, 5s, or 10s and counting on.
+                 [C, CN, ME, R, V]
+
+
+ Number Sense    N1.4 Represent and         a) Represent a whole number using a variety of
+                 describe whole                manipulatives, including ten frames and base ten
+Logical Thinking numbers to 20                 materials.
+                 concretely, pictorially,   b) Read whole number words to 20.
+ Mathematical
+    Attitude     and symbolically.          c) Partition any quantity into 2 parts and identify the
+                 [C, CN, V]                    number of objects in each part.
+                                            d) Model a whole number using two different
+                                               objects (e.g., 10 desks represents the same
+                                               number as 10 pencils).
+                                            e) Place whole numbers on a number line by using
+                                               benchmarks 0, 5, 10, and 20.
+
+ Number Sense    N1.5 Compare sets          a) Build a set equal to a given set that contains up to
+                 containing up to 20           20 elements.
+Logical Thinking elements to solve
+                                            b) Build a set that has more, fewer, or as many
+ Mathematical
+                 problems using:               elements as a given set.
+    Attitude     • referents (known         c) Build several sets of different objects that have
+                    quantity)                  the same number of elements in the set.
+                 • one-to-one
+                                            d) Compare two sets using one-to-one
+                    correspondence.
+                                               correspondence and describe them using
+                 [C, CN, ME, PS, R, V]         comparative words, such as more, fewer, or as
+                                               many.
+                                            e) Compare a set to a referent using comparative
+                                               language.
+                                            f) Solve a story problem (pictures and words)
+                                               that involves the comparison of two quantities.
+
+ Number Sense    N1.6 Estimate              a) Estimate a quantity by comparing it to a referent.
+                 quantities to 20 by        b) Select an estimate for a given quantity by
+Logical Thinking using referents.
+                                               choosing between at least two possible options
+ Mathematical    [C, ME, PS, R, V]             and explain the choice.
+   Attitude
+
+
+
+
+                                               16
+                                                            [C]     Communication        [PS]   Problem Solving
+                                                            [CN]    Connections          [R]    Reasoning
+                                                            [ME]    Mental Mathematics   [V]    Visualization
+                                                                    and Estimation       [T]    Technology
+
+
+
+                                         Number Strand
+Number Sense    N1.7 Demonstrate,          a) Represent a whole number in a variety of equal
+                concretely, physically,       groupings with and without singles (e.g., 17 can
+  Logical       and pictorially, how          be represented by 8 groups of 2 and one single, 5
+  Thinking
+                whole numbers can be          groups of 3 and two singles, 4 groups of 4 and
+Mathematical    represented by a variety      one single, and 3 groups of 5 and two singles).
+  Attitude      of equal groupings with    b) Recognize that for a number of counters, no
+                and without singles.          matter how they are grouped, the total number of
+Spatial Sense   [C, R, V]                     counters does not change.
+                                           c) Group a set of counters into equal groups in
+                                              more than one way.
+
+Number Sense    N1.8 Identify the            a) Name the whole number that is one more, two
+                number, up to 20, that is       more, one less or two less than a given whole
+Mathematical
+  Attitude
+                one more, two more, one         number.
+                less, and two less than a    b) Represent the number on a ten frame that is one
+                given number.                   more, two more, one less, or two less than a
+                [C, CN, ME, R, V]               whole number.
+
+
+Number Sense    N1.9 Demonstrate an          a) Act out a story problem presented orally or
+                understanding of addition       through shared reading.
+  Logical       of numbers with answers      b) Indicate if the scenario in a story problem
+  Thinking      to 20 and the                   represents additive or subtractive action.
+                corresponding
+Mathematical                                 c) Represent the numbers and actions presented in a
+                subtraction facts,
+  Attitude                                      story problem by using manipulatives, and
+                concretely, pictorially,        record them using sketches and/or number
+                physically, and
+Spatial Sense                                   sentences.
+                symbolically by:
+                                             d) Create a story problem involving addition that
+                • using familiar and
+                                                connects to personal experience and simulate the
+                   mathematical language        action with counters.
+                   to describe additive
+                   and subtractive actions   e) Create a story problem involving subtraction that
+                   from their experience        connects to personal experience and simulate the
+                                                action with counters.
+                • creating and solving
+                   problems in context       f) Create a word problem for a whole number
+                   that involve addition        addition or subtraction sentence.
+                   and subtraction           g) Represent a story problem pictorially or
+                (continued on next page)        symbolically to show the additive or subtractive
+                                                action and solve the problem.
+
+
+
+
+                                                17
+                                                              [C]     Communication        [PS]   Problem Solving
+                                                              [CN]    Connections          [R]    Reasoning
+                                                              [ME]    Mental Mathematics   [V]    Visualization
+                                                                      and Estimation       [T]    Technology
+
+
+
+
+                                            Number Strand
+               N1.9 (continued)
+               • modelling addition and
+                 subtraction using a
+                 variety of concrete and
+                 visual representations,
+                 and recording the
+                 process symbolically.
+               [C, CN, ME, PS, R, V]
+
+
+Number Sense   N1.10 Describe and use          (It is not intended that students recall the basic facts
+               mental mathematics                 but become familiar with strategies to mentally
+  Logical      strategies (memorization                    determine sums and differences.)
+  Thinking     not intended), such as:
+                                              a) Use and describe a personal strategy for
+               • counting on and
+Mathematical                                       determining a sum.
+  Attitude        counting back
+               • making 10                    b) Use and describe a personal strategy for
+               • doubles                           determining a difference.
+               • using addition to            c) Write the related subtraction fact for a given
+                  subtract                         addition fact.
+               to determine basic             d) Write the related addition fact for a given
+               addition facts to 18 and            subtraction fact.
+               related subtraction facts.
+               [C, CN, ME, PS, R, V]
+
+
+
+
+                                                 18
+                                                               [C]    Communication        [PS]   Problem Solving
+                                                               [CN]   Connections          [R]    Reasoning
+                                                               [ME]   Mental Mathematics   [V]    Visualization
+                                                                      and Estimation       [T]    Technology
+
+
+
+
+                                   Patterns and Relations Strand
+  Logical       P1.1 Demonstrate an          a) Describe a repeating pattern containing two to four
+  Thinking
+                understanding of repeating      elements in its core.
+Mathematical    patterns (two to four        b) Identify errors made in a repeating pattern.
+  Attitude      elements) by:                c) Identify the missing element(s) in a repeating
+                • describing
+Spatial Sense                                   pattern.
+                • reproducing
+                • extending                  d) Create and describe a repeating pattern using a
+                • creating patterns using       variety of manipulatives, diagrams, musical
+                   manipulatives,               instruments, and actions.
+                   diagrams, sounds, and     e) Reproduce and extend a repeating pattern
+                   actions.                     using manipulatives, diagrams, sounds, and
+                [C, PS, R, V]                   actions.
+                                             f) Identify and describe a repeating pattern found in
+                                                the environment (e.g., classroom, outdoors) using
+                                                everyday language.
+                                             g) Identify repeating events (e.g., days of the week,
+                                                birthdays, seasons).
+
+  Logical       P1.2 Translate repeating     a) Represent a repeating pattern using another
+  Thinking
+                patterns from one form of       mode (e.g., action to sound, colour to shape,
+Mathematical    representation to another.      ABC ABC to blue yellow green blue yellow
+  Attitude      [C, R, V]                       green).
+                                             b) Describe a repeating pattern using a letter
+Spatial Sense
+                                                code (e.g., ABC ABC…).
+Number Sense    P1.3 Describe equality as a) Construct two equal sets using the same objects
+  Logical       a balance and inequality as    (same shape and mass) and demonstrate their
+  Thinking      an imbalance, concretely,      equality of number using a balance scale.
+                physically, and pictorially b) Construct two unequal sets using the same objects
+Mathematical    (0 to 20).                     (same shape and mass) and demonstrate their
+  Attitude
+                [C, CN, R, V]                  inequality of number using a balance scale.
+Spatial Sense                               c) Create two groups of students and explain if the
+                                               groups are equal or not in quantity.
+                                            d) Draw pictures to demonstrate inequality or
+                                               equality and explain.
+                                            e) Determine if two given concrete sets are equal or
+                                               unequal, and explain the process used.
+
+
+
+
+                                                19
+                                                             [C]    Communication        [PS]   Problem Solving
+                                                             [CN]   Connections          [R]    Reasoning
+                                                             [ME]   Mental Mathematics   [V]    Visualization
+Patterns and Relations Strand                                       and Estimation       [T]    Technology
+
+
+
+                                Patterns and Relations Strand
+  Number       P1.4 Record equalities    a) Represent a given equality using manipulatives or
+   Sense       using the equal symbol.      pictures.
+               [C, CN, PS, V]            b) Represent a given pictorial or concrete equality in
+  Logical
+  Thinking
+                                            symbolic form.
+                                         c) Provide examples of equalities where the given
+Mathematical                                sum or difference is on either the left or right side
+  Attitude                                  of the equal symbol (=).
+                                         d) Record different representations of the same
+                                            quantity (0 to 20) as equalities.
+
+
+
+
+                                             20
+                                                                 [C]      Communication        [PS]   Problem Solving
+                                                                 [CN]     Connections          [R]    Reasoning
+                                                                 [ME]     Mental Mathematics   [V]    Visualization
+                                                                          and Estimation       [T]    Technology
+
+
+                                         Shape and Space Strand
+                         Outcomes                               Achievement Indicators
+                It is expected that students   The following set of indicators may be used to determine whether
+                will:                          students have met the corresponding specific outcome.
+Spatial Sense   SS1.1 Demonstrate an           a) Identify common attributes, including length,
+                understanding of                  height, mass, volume, capacity, and area that
+  Logical       measurement as a                  could be used to compare two objects.
+  Thinking
+                process of comparing           b) Compare two objects and identify the
+                by:                               attribute(s) used to compare.
+Mathematical
+  Attitude      • identifying attributes
+                                               c) Determine which of two or more objects is
+                  that can be compared            longest or shortest by matching and explain the
+                • ordering objects
+                                                  reasoning.
+                • making statements of
+                  comparison                   d) Determine which of two or more objects is
+                • filling, covering, or           heaviest or lightest by comparing and explain the
+                  matching.                       reasoning.
+                [C, CN, PS, R, V]              e) Determine which of two or more given objects
+                                                  holds the most or least by filling and explain the
+                                                  reasoning.
+                                               f) Determine which of two or more given objects has
+                                                  the greatest/least area by covering and explain the
+                                                  reasoning.
+Spatial Sense   SS1.2 Sort 3-D objects         a) Sort a set of familiar 3-D objects or 2-D shapes
+                and 2-D shapes using              using a given sorting rule.
+  Logical       one attribute, and             b) Sort a set of familiar 3-D objects using a single
+  Thinking      explain the sorting rule.         attribute determined by the student and explain
+                [C, CN, R, V]                     how the objects were sorted.
+Mathematical
+  Attitude                                     c) Sort a set of 2-D shapes using a single attribute
+                                                  determined by the student and explain how the
+                                                  shapes were sorted.
+                                               d) Determine the difference between two given pre-
+                                                  sorted sets of familiar 3-D objects or 2-D shapes
+                                                  and explain a possible sorting rule used to sort
+                                                  them.
+
+
+
+
+                                                   21
+                                                           [C]    Communication        [PS]   Problem Solving
+                                                           [CN]   Connections          [R]    Reasoning
+                                                           [ME]   Mental Mathematics   [V]    Visualization
+                                                                  and Estimation       [T]    Technology
+
+
+                                   Shape and Space Strand
+Spatial Sense   SS1.3 Replicate          a) Select 2-D shapes from a set of 2-D shapes to
+                composite 2-D shapes        reproduce a composite 2-D shape.
+  Logical       and 3-D objects.         b) Select 3-D objects from a set of 3-D objects to
+  Thinking
+                [CN, PS, V]                 reproduce a composite 3-D object.
+Mathematical                             c) Predict and select the 2-D shapes used to produce
+  Attitude                                  a composite 2-D shape, and verify by
+                                            deconstructing the composite shape.
+                                         d) Predict and select the 3-D objects used to produce
+                                            a composite 3-D object, and verify by
+                                            deconstructing the composite object.
+
+Spatial Sense   SS1.4 Compare 2-D         a) Identify 3-D objects in the environment that have
+                shapes to parts of 3-D       parts similar to a given 2-D shape.
+Mathematical
+  Attitude
+                objects in the
+                environment.
+                [C, CN, V]
+
+
+
+
+                                              22
+Appendix A: Terminology
+Attributes: Characteristics of 2-D shapes and 3-D objects that can be used to compare and sort
+sets of 2-D shapes and 3-D objects (e.g., colour, relative size, number of corners, number of lines
+of symmetry).
+
+Benchmarks: Numeric quantities used to compare and order other numeric quantities. For
+example, 0, 5, 10, and 20 are often used as benchmarks when placing whole numbers on a
+number line.
+
+Familiar Arrangements: Arrangements of objects or pictures that do not need to be counted to
+determine the quantity such as on dice, cards, and bowling pins. Some documents refer to this as
+subitizing (instantly seeing how many). This is a visual process in which the quantity is known
+instantly rather than moving eyes from one object to the other.
+
+Correspondence (one-to-one): A correspondence is a description of how one set of numbers (or
+objects) is mapped to a second set of objects. For example, a correspondence might describe
+how individual students can sit in a given number of chairs. One-to-one correspondence can also
+be used to determine if there are enough, too many or just the right number of apples in order for
+each child to have exactly one apple.
+
+Equality as a Balance and Inequality as Imbalance: The equal sign represents the idea of
+equivalence. For many students it means do the question. For some students, the equal sign in
+an expression such as 2 + 5 = means to add. When exploring equality and inequality by using
+objects on a balance scale, students discover the relationships between and among the mass of
+the objects. The equal sign in an equation is like a scale: both sides, left and right, must be the
+same in order for the scale to stay in balance and the equation to be true. When the scale is
+imbalanced, the equation is not true. Using 2 + 5 = , rather than simply 2 + 5 = helps students
+understand that the equal sign (=) represents equality rather than “do the work” or “do the
+question”.
+
+Number, Numeral, Digit: A number is the name that we give to quantities. For example, there
+are 7 days in a week, or I have three brothers – both seven and three are numbers in these
+situations because they are defining a quantity. The symbolic representation of a number, such
+as 287, is called the numeral. If 287 is not being used to define a quantity, we call it a numeral.
+
+Numerals, as the symbolic representation of numbers, are made up of a series of digits. The
+Hindu-Arabic number system that we use has ten digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9. (Note:
+sometimes students are confused between these digits and their finger digits – this is because
+they count their fingers starting at one and get to ten rather than zero to nine). These digits are
+also numerals and can be numbers (representing a quantity), but all numbers and all numerals are
+combinations of digits. The placement of a digit in a number or numeral affects the place value
+of the digit, and hence how much of the quantity that it represents. For example, in 326, the 2 is
+contributing 20 to the total, while in 236 the 2 contributes 200 to the total quantity.
+
+
+
+
+                                                 23
+Personal Strategies: Personal strategies are strategies that the students have constructed and
+understand. Outcomes and indicators that specify the use of personal strategies convey the
+message that there is not a single procedure that is correct. Students should be encouraged to
+explore, share, and make decisions about what strategies they will use in different contexts.
+Development of personal strategies is an indicator of the attainment of deeper understanding.
+
+Referents: A concrete representation of a quantity. For example, seeing what 25 beans in a
+container looks like makes it possible to estimate the number of beans the same container will
+hold when it is full of the same kind of beans. Compensation must be made if the container is
+filled with smaller or larger beans than the referent or if the size or shape of the container is
+changed.
+
+Representations: Mathematical ideas can be represented and manipulated in a variety of forms
+including concrete manipulatives, visual designs, sounds, physical movements, and symbolic
+notations. Students need to have experiences in working with many different types of
+representations, and in transferring and translating knowledge between the different forms of
+representations.
+
+
+
+
+                                                 24
+Appendix B: Three Grades at a Glance
+The chart below shows the outcomes of mathematics in grades K, 1, and 2 in each of the four
+strands with the outcomes being lined up to show the flow of content development.
+                                         Number Strand
+        Kindergarten                         Grade 1                     Grade 2 (Draft)
+                                         Whole Numbers
+NK.1 Say the number               N1.1 Say the number             N2.1 Say the number
+sequence by 1s starting           sequence, 0 to 100, by:         sequence from 0 to 100 by:
+anywhere from 0 to 10 and         • 1s forward and backward       • 2s, 5s, and 10s, forward
+from 10 to 0.                       between any two given           and backward, using
+[C, CN, V]                          whole numbers                   starting points that are
+                                  • 2s to 20, forward starting      multiples of 2, 5, and 10
+                                    at 0                            respectively
+                                  • 5s and 10s to 100, forward    • 10s using starting points
+                                    starting at 0.                  from 1 to 9
+                                  [C, CN, ME, V]                  • 2s starting from 1.
+                                                                  [C, CN, ME, R]
+NK.2 Recognize, at a glance,      N1.2 Recognize, at a glance,
+and name familiar                 and name familiar
+arrangements of 1 to 5            arrangements of 1 to 10
+objects, dots, and pictures.      objects, dots, and pictures.
+[C, CN, ME, V]                    [C, CN, ME, V]
+NK.3 Relate a numeral, 0 to       N1.3 Demonstrate an
+10, to its respective quantity.   understanding of counting
+[CN, R, V]                        by:
+                                  • indicating that the last
+                                    number said identifies
+                                    “how many”
+                                  • showing that any set has
+                                    only one count using the
+                                    counting on strategy
+                                  • using parts or equal groups
+                                    to count sets.
+                                  [C, CN, ME, R, V]
+                                  N1.6 Estimate quantities to     N2.6 Estimate quantities to
+                                  20 by using referents.          100 using referents.
+                                  [C, ME, PS, R, V]               [C, ME, PS, R, V]
+                                                                  N2.2 Demonstrate if a
+                                                                  number (up to 100) is even or
+                                                                  odd.
+                                                                  [C, CN, PS, R]
+
+
+
+
+                                                   25
+                                                        [C]     Communication        [PS]   Problem Solving
+                                                        [CN]    Connections          [R]    Reasoning
+                                                        [ME]    Mental Mathematics   [V]    Visualization
+                                                                and Estimation       [T]    Technology
+
+
+
+                                    Number Strand
+        Kindergarten                     Grade 1                      Grade 2 (Draft)
+                                     Representation
+NK.4 Represent and describe   N1.4 Represent and describe      N2.4 Represent and describe
+numbers 2 to 10, concretely   whole numbers to 20              numbers to 100 concretely,
+and pictorially.              concretely, pictorially and      pictorially, and symbolically.
+[C, CN, ME, R, V]             symbolically.                    [C, CN, ME, R, V]
+                              [C, CN, ME, R, V]
+                                       Comparison
+NK.5 Compare quantities, 1    N1.5 Compare sets                N2.5 Compare and order
+to 10, using one-to-one       containing up to 20 elements     numbers up to 100.
+correspondence.               to solve problems using:         [C, CN, ME, PS, R, V]
+[C, CN, V]                    • referents (known quantity)
+                              • one-to-one correspondence.
+                              [C, CN, ME, PS, R, V]
+                                    Ordinal Numbers
+                                                               N2.3 Describe order or
+                                                               relative position using ordinal
+                                                               numbers (up to tenth).
+                                                               [C, CN, R]
+                                        Place Value
+                              N1.7 Demonstrate,                N2.7 Illustrate, concretely
+                              concretely, physically, and      and pictorially, the meaning
+                              pictorially, how whole           of place value for numerals to
+                              numbers can be represented       100.
+                              by a variety of equal            [C, CN, R, V]
+                              groupings with and without
+                              singles.
+                              [C, R, V]
+
+
+
+
+                                             26
+                                                  [C]     Communication        [PS]   Problem Solving
+                                                  [CN]    Connections          [R]    Reasoning
+                                                  [ME]    Mental Mathematics   [V]    Visualization
+                                                          and Estimation       [T]    Technology
+
+
+                            Number Strand
+Kindergarten                    Grade 1                 Grade 2 (Draft)
+               Adding and Subtracting Whole Numbers
+                    N1.8 Identify the number, up N2.8 Demonstrate and
+                    to 20, that is one more, two explain the effect of adding
+                    more, one less, and two less zero to or subtracting zero
+                    than a given number.         from any number. [C, R]
+                     [C, CN, ME, R, V]
+
+
+                     N1.9 Demonstrate an               N2.9 Demonstrate an
+                     understanding of addition of      understanding of addition
+                     numbers with answers to 20        (limited to 1 and 2-digit
+                     and corresponding subtraction     numerals) with answers to
+                     facts, concretely, pictorially,   100 and the corresponding
+                     physically, and symbolically      subtraction by:
+                     by:                               • using personal strategies for
+                     • using familiar and                 adding and subtracting with
+                        mathematical language to          and without the support of
+                        describe additive and             manipulatives
+                        subtractive actions from       • creating and solving
+                        experience                        problems that involve
+                     • creating and solving               addition and subtraction
+                        problems in context that       • explaining that the order in
+                        involve addition and              which numbers are added
+                        subtraction                       does not affect the sum
+                     • modelling addition and          • explaining that the order in
+                        subtraction using a variety       which numbers are
+                        of concrete and visual            subtracted may affect the
+                        representations, and              difference.
+                        recording the process          [C, CN, ME, PS, R, V]
+                        symbolically.
+                     [C, CN, ME, PS, R, V]
+
+
+
+
+                                    27
+                                               [C]    Communication        [PS]   Problem Solving
+                                               [CN]   Connections          [R]    Reasoning
+                                               [ME]   Mental Mathematics   [V]    Visualization
+                                                      and Estimation       [T]    Technology
+
+
+
+                           Number Strand
+Kindergarten                   Grade 1                    Grade 2 (Draft)
+               Adding and Subtracting Whole Numbers
+                    N1.10 Describe and use        N2.10 Apply mental
+                    mental mathematics strategies mathematics strategies, such
+                    (memorization not intended), as:
+                    such as:                      • using doubles
+                    • counting on and counting    • making 10
+                      back                        • one more, one less
+                    • making 10                   • two more, two less
+                    • doubles                     • addition for subtraction
+                    • using addition to subtract  • to determine basic addition
+                    • to determine basic addition    facts to18 and related
+                      facts to18 and related         subtraction facts.
+                      subtraction facts.          [C, CN, ME, PS, R, V]
+                     [C, CN, ME, PS, R, V]
+
+
+
+
+                                    28
+                                                            [C]     Communication        [PS]   Problem Solving
+                                                            [CN]    Connections          [R]    Reasoning
+                                                            [ME]    Mental Mathematics   [V]    Visualization
+                                                                    and Estimation       [T]    Technology
+
+
+
+                               Patterns and Relations Strand
+        Kindergarten                        Grade 1                 Grade 2 (Draft)
+                                     Repeating Patterns
+PK.1 Demonstrate an             P1.1 Demonstrate an          P2.1 Demonstrate an
+understanding of repeating      understanding of repeating   understanding of repeating
+patterns (two or three          patterns (two to four        patterns (three to five
+elements) by:                   elements) by:                elements) by:
+• identifying                   • describing                 • describing
+• reproducing                   • reproducing                • extending
+• extending                     • extending                  • comparing
+• creating patterns using       • creating patterns using    • creating patterns using
+   manipulatives, sounds and       manipulatives, diagrams,     manipulatives, diagrams,
+   actions.                        sounds, and actions.         sounds, and actions.
+[C, CN, PS, V]                 [C, PS, R, V]                       [C, CN, PS, R, V]
+                               P1.2 Translate repeating
+                               patterns from one form of
+                               representation to another.
+                               [C, R, V]
+                                    Increasing Patterns
+                                                                   P2.2 Demonstrate an
+                                                                   understanding of increasing
+                                                                   patterns by:
+                                                                   • describing
+                                                                   • reproducing
+                                                                   • extending
+                                                                   • creating patterns using
+                                                                     manipulatives, diagrams,
+                                                                     sounds, and actions
+                                                                     (numbers to 100).
+                                                                   [C, CN, PS, R, V]
+
+
+
+
+                                               29
+                                         [C]     Communication        [PS]   Problem Solving
+                                         [CN]    Connections          [R]    Reasoning
+                                         [ME]    Mental Mathematics   [V]    Visualization
+                                                 and Estimation       [T]    Technology
+
+
+
+               Patterns and Relations Strand
+Kindergarten               Grade 1                    Grade 2 (Draft)
+                   Equality and Inequality
+                P1.3 Describe equality as a    P2.3 Demonstrate and
+                balance and inequality as an   explain the meaning of
+                imbalance, concretely,         equality and inequality by
+                physically, and pictorially (0 using manipulatives and
+                to 20).                        diagrams (0 to 100).
+               [C, CN, R, V]                    [C, CN, R, V]
+
+
+               P1.4 Record equalities using     P2.4 Record equalities and
+               the equal symbol.                inequalities symbolically
+               [C, CN, PS, V]                   using the equal symbol or the
+                                                not equal symbol.
+                                                [C, CN, R, V]
+
+
+
+
+                                30
+                                                            [C]     Communication        [PS]   Problem Solving
+                                                            [CN]    Connections          [R]    Reasoning
+                                                            [ME]    Mental Mathematics   [V]    Visualization
+                                                                    and Estimation       [T]    Technology
+
+
+                                  Shape and Space Strand
+       Kindergarten                  Grade 1                     Grade 2 (Draft)
+                                          Time
+                                                        SS2.1 Relate the number of days
+                                                        to a week and the number of
+                                                        months to a year in a problem-
+                                                        solving context.
+                                                            [C, CN, PS, R]
+                                     Direct Comparison
+SSK.1 Use direct            SS1.1 Demonstrate an
+comparison to compare       understanding of
+two objects based on a      measurement as a process of
+single attribute, such as   comparing by:
+length including height,    • identifying attributes that
+mass, volume, and             can be compared
+capacity.                   • ordering objects
+[C, CN, PS, R, V]           • making statements of
+                              comparison
+                            • filling, covering, or
+                              matching.
+                            [C, CN, PS, R, V]
+                                    Indirect Comparison
+                                                            SS2.2 Relate the size of a unit of
+                                                            measure to the number of units
+                                                            (limited to non-standard units)
+                                                            used to measure length and mass.
+                                                            [C, CN, ME, R, V]
+                                                            SS2.3 Compare and order objects
+                                                            by length, height, distance around,
+                                                            and mass using non-standard units,
+                                                            and make statements of
+                                                            comparison. [C, CN, ME, R, V]
+                                                            SS2.4 Measure length to the
+                                                            nearest non-standard unit by:
+                                                            • using multiple copies of a unit
+                                                            • using a single copy of a unit
+                                                              (iteration process).
+                                                            [C, ME, R, V]
+                                                            SS2.5 Demonstrate that changing
+                                                            the orientation of an object does
+                                                            not alter the measurement of its
+                                                            attributes.[C,R,V]
+
+
+
+                                                31
+                                                                [C]    Communication        [PS]   Problem Solving
+                                                                [CN]   Connections          [R]    Reasoning
+                                                                [ME]   Mental Mathematics   [V]    Visualization
+                                                                       and Estimation       [T]    Technology
+
+
+
+                                 Shape and Space Strand
+         Kindergarten                   Grade 1                            Grade 2 (Draft)
+                                      3-D Objects
+SSK.2 Sort 3-D objects using                                       SS2.7 Describe, compare and
+a single attribute.                                                construct 3-D objects,
+[C, CN, PS, R, V]                                                  including:
+                                                                   • cubes
+                                                                   • spheres
+                                                                   • cones
+                                                                   • cylinders
+                                                                   • pyramids.
+                                                                   [C, CN, R, V]
+SSK.3 Build and describe 3-
+D objects.
+[CN, PS, V]
+                                            2-D Shapes
+                                                                   SS2.6 Describe, compare,
+                                                                   and construct 2-D shapes,
+                                                                   including:
+                                                                   • triangles
+                                                                   • squares
+                                                                   • rectangles
+                                                                   • circles.
+                                                                   [C, CN, R, V]
+                               3-D Objects and 2-D Shapes
+                               SS1.2 Sort 3-D objects and 2- SS2.8 Sort 2-D shapes and 3-
+                               D shapes using one attribute, D objects using two attributes,
+                               and explain the sorting rule. and explain the sorting rule.
+                               [C, CN, R, V]                       [C, CN, R, V]
+                               SS1.3 Replicate composite 2-
+                               D shapes and 3-D objects.
+                               [CN, PS, V]
+
+
+                               SS1.4 Compare 2-D shapes            SS2.9 Identify 2-D shapes as
+                               to parts of 3-D objects in the      parts of 3-D objects in the
+                               environment.                        environment.
+                               [C, CN, V]                          [C, CN, R, V]
+
+
+
+
+                                                32
+                                          [C]       Communication        [PS]   Problem Solving
+                                          [CN]      Connections          [R]    Reasoning
+                                          [ME]      Mental Mathematics   [V]    Visualization
+                                                    and Estimation       [T]    Technology
+
+
+
+               Statistics and Probability Strand
+Kindergarten                Grade 1                       Grade 2 (Draft)
+                         Collecting Data
+                                                   SP2.1 Gather and record data
+                                                   about self and others to
+                                                   answer questions.
+                                                   [C, CN, PS, V]
+                      Representing Data
+                                                   SP2.2 Construct and interpret
+                                                   concrete graphs and
+                                                   pictographs to solve
+                                                   problems.
+                                                   [C, CN, PS, R, V]
+
+
+
+
+                              33
+References
+Armstrong, T. (1993). Seven kinds of smart: Identifying and developing your many
+intelligences. New York, NY: NAL-Dutton.
+
+Caine, R. N. and Caine, G. (1991). Making connections: Teaching and the human brain.
+Menlo Park, CA: Addison-Wesley Publishing Company.
+
+National Council of Teachers of Mathematics. (2000). Principles and standards.
+
+Rubenstein, R. N. (2001). Mental mathematics beyond the middle school: Why? What? How?
+Mathematics Teacher, Vol. 94, Issue 6, p. 442.
+
+Sullivan, P. (2002). Good questions for math teaching: Why ask them and what to ask, K-6.
+Sausalito, CA: Math Solutions Publications.
+
+Western and Northern Canadian Protocol. (2006). The common curriculum framework K-9
+mathematics. Edmonton, AB: Alberta Education.
+
+Van de Walle, J. A. and Lovin, L. H. (2006). Teaching student-centered mathematics grades 3-
+5. Boston, MA: Allyn and Bacon.
+
+
+
+
+                                             34
+Feedback Form
+Saskatchewan Learning welcomes your response to this curriculum and invites you to complete
+and return this feedback form.
+
+Document Title: _____Grade 1 Mathematics Curriculum_______
+
+1. Please indicate your role in the learning community
+
+       ___ parent                   ___ teacher                   ___ resource teacher
+
+       ___ guidance counsellor      ___ school administrator      ___ school board trustee
+
+       ___ teacher librarian        ___ school community council member
+
+       ___ student                  ___ other _______________
+
+   What was your purpose for looking at or using this document?
+
+
+
+
+2. a) Please indicate which form(s) of the document you used (i.e., print, online, CD-ROM).
+
+
+
+
+   b) Please indicate which format(s) of the document you prefer (i.e., print, online, CD-ROM).
+
+
+
+
+3. How does this document address the needs of your learning community or organization?
+   Please explain.
+
+
+
+
+                                              35
+4. Please respond to each of the following statements by circling the applicable number.
+
+                                                   Strongly    Agree      Disagree    Strongly
+    The document content is                         Agree                             Disagree
+    a. appropriate for its intended purpose            1          2          3            4
+    b. suitable for your learning style                1          2          3            4
+    (e.g., visuals, graphics, text)
+    c. clear and well organized                       1           2          3             4
+    d. visually appealing                             1           2          3             4
+    e. informative                                    1           2          3             4
+    f. helpful                                        1           2          3             4
+
+5. Explain which aspects you found to be:
+
+   Most useful:
+
+
+
+
+   Least useful:
+
+
+
+
+6. Additional comments:
+
+
+
+
+                                              36
+7. Optional:
+
+       Name: ___________________________________________________________
+
+       School:        ___________________________________________________________
+
+       Phone:         ____________________           Fax:   _______________________
+
+Thank you for taking the time to provide this valuable feedback.
+
+
+Please return the completed feedback form to:
+
+       Executive Director
+       Curriculum and E-Learning Branch
+       Saskatchewan Learning
+       2220 College Avenue
+       Regina SK S4P 4V9
+       Fax: 306-787-2223
+
+
+
+
+                                                37
+
