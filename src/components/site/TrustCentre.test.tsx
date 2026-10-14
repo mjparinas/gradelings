@@ -1,36 +1,43 @@
 // @vitest-environment jsdom
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { absolute } from "@/lib/site";
 import { sectionSitemap } from "./sitemaps";
-import { IN_PROGRESS, TRUST_UPDATED, TrustCentre } from "./TrustCentre";
+import { TRUST_GROUPS, TRUST_UPDATED, TrustCentre } from "./TrustCentre";
 
 // next.config.ts sets trailingSlash, which next/link reads from this variable.
 vi.stubEnv("__NEXT_TRAILING_SLASH", "1");
 
+const controls = TRUST_GROUPS.flatMap((g) => g.controls);
+
 describe("TrustCentre", () => {
-  it("dates the page and lists the controls by area", () => {
+  it("lists every control as one short line under its group", () => {
     render(<TrustCentre />);
     expect(screen.getByRole("heading", { level: 1, name: "Trust centre" })).toBeInTheDocument();
     expect(screen.getByRole("article")).toHaveTextContent(`Last checked ${TRUST_UPDATED}`);
-    for (const name of ["Your family’s information", "Signing in", "Payments", "Email", "AI", "In progress", "Report a security problem"]) {
-      expect(screen.getByRole("heading", { level: 2, name })).toBeInTheDocument();
+    for (const group of TRUST_GROUPS) {
+      const section = screen.getByRole("heading", { level: 2, name: group.title }).closest("section")!;
+      expect(within(section).getAllByRole("listitem")).toHaveLength(group.controls.length);
     }
-    expect(screen.getByRole("link", { name: "/.well-known/security.txt" })).toHaveAttribute("href", "/.well-known/security.txt");
+    for (const c of controls) {
+      expect(c.title.length).toBeLessThanOrEqual(40);
+      expect(c.note.length).toBeLessThanOrEqual(60);
+    }
+    expect(screen.getByRole("link", { name: "security.txt" })).toHaveAttribute("href", "/.well-known/security.txt");
     expect(screen.getByRole("link", { name: "privacy policy" })).toHaveAttribute("href", "/privacy/");
+  });
+
+  it("marks work still in review as in progress", () => {
+    render(<TrustCentre />);
+    const pending = controls.filter((c) => c.status === "progress");
+    expect(screen.queryAllByText("In progress")).toHaveLength(pending.length);
   });
 
   it("says where data is stored as the privacy policy does, never that it stays in Canada", () => {
     render(<TrustCentre />);
     const text = screen.getByRole("article").textContent ?? "";
-    expect(text).toContain("Our servers are in Montréal, Canada, and our database is in Virginia, United States.");
+    expect(text).toContain("Servers in Montréal, Canada; database in Virginia, US.");
     expect(text).not.toMatch(/stored in Canada|stays in Canada|Canadian data centre/i);
-  });
-
-  it("shows work still in review under In progress", () => {
-    render(<TrustCentre />);
-    const list = screen.getByRole("heading", { level: 2, name: "In progress" }).nextElementSibling!;
-    for (const item of IN_PROGRESS) expect(list).toHaveTextContent(item.title);
   });
 
   it("is in the sitemap", () => {
