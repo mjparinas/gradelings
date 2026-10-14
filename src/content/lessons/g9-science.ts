@@ -523,4 +523,10 @@ export const lessons: GradeLessons = {
     ["Natural gas formed over millions of years and runs out.", "Wind keeps blowing as the sun heats Earth."],
     "wind",
   ),
+  "science/ar-g9-ecosystems": lesson(
+    ["Relationships: predation, parasitism, commensalism, mutualism and competition.", "Density-dependent factors depend on crowding; density-independent ones, like floods, don’t.", "Invasive species and disturbances can upset stability; stable ecosystems recover from small ones."],
+    "A barnacle rides on a whale, which is not harmed. Which relationship is this?",
+    ["The barnacle benefits.", "The whale is neither helped nor harmed: commensalism."],
+    "commensalism",
+  ),
 };

@@ -1,0 +1,1558 @@
+                     Physical Science - Integrated
+
+
+
+
+                                           2016
+Re-aligned Fall 2024 to the Arkansas Mathematics Standards, Arkansas English Language Arts Standards,
+and Arkansas Disciplinary Literacy Standards
+                                                                         2016
+                                                                  Table of Contents
+Arkansas K-12 Science Standards Overview..................................................................................................... 3
+How to Read...................................................................................................................................................... 6
+Physical Science - Integrated Course Learning Progression Chart .................................................................... 7
+Physical Science - Integrated Course Overview ................................................................................................ 8
+Physical Science - Integrated Topics Overview ............................................................................................... 10
+Topic 1: Elements, Matter, and Interactions ................................................................................................... 12
+Topic 2: Matter in Organisms .......................................................................................................................... 16
+
+Topic 3: Forces and Motion ............................................................................................................................ 19
+
+Topic 4: Energy .............................................................................................................................................. 23
+
+Topic 5: Waves ............................................................................................................................................... 27
+
+Topic 6: Interactions of Humans and the Environment .................................................................................... 29
+
+Contributors .................................................................................................................................................... 33
+
+
+
+
+Notes:
+     1. Student Performance Expectations (PEs) may be taught in any sequence or grouping within a grade
+        level. Several PEs are described as being “partially addressed in this course” because the same PE is
+        revisited in a subsequent course during which that PE is fully addressed.
+     2. An asterisk (*) indicates an engineering connection to a practice, core idea, or crosscutting concept.
+     3. The Clarification Statements are examples and additional guidance for the instructor. AR indicates
+        Arkansas-specific Clarification Statements.
+     4. The Assessment Boundaries delineate content that may be taught but not assessed in large-scale
+        assessments. AR indicates Arkansas-specific Assessment Boundaries.
+     5. The section entitled “foundation boxes” is reproduced verbatim from A Framework for K-12 Science
+        Education: Practices, Crosscutting Concepts, and Core Ideas. Integrated and reprinted with permission
+        from the National Academy of Sciences.
+     6. The examples given (e.g.,) are suggestions for the instructor.
+     7. Throughout this document, connections are provided to the nature of science as defined by A
+        Framework for K-12 Science Education (NRC 2012).
+     8. Throughout this document, connections are provided to Engineering, Technology, and Applications of
+        Science as defined by A Framework for K-12 Science Education (NRC 2012).
+
+
+
+2
+                                                                  Physical Science - Integrated
+                                                               Arkansas K-12 Science Standards
+                                                               Arkansas Department of Education
+                                                                              2016
+    9. Each set of PEs lists connections to other disciplinary core ideas (DCIs) within the Arkansas K-12
+       Science Standards and to the Arkansas English Language Arts Standards, Arkansas Disciplinary
+       Literacy Standards, and the Arkansas Mathematics Standards.
+
+
+                               Arkansas K-12 Science Standards Overview
+
+The Arkansas K-12 Science Standards are based on A Framework for K-12 Science Education (NRC 2012)
+and are meant to reflect a new vision for science education. The following conceptual shifts reflect what is new
+about these science standards. The Arkansas K-12 Science Standards
+
+    •   reflect science as it is practiced and experienced in the real world,
+    •   build logically from Kindergarten through Grade 12,
+    •   focus on deeper understanding as well as application of content,
+    •   integrate practices, crosscutting concepts, and core ideas, and
+    •   make explicit connections to literacy and math.
+
+
+As part of teaching the Arkansas K-12 Science Standards, it will be important to instruct and guide students in
+adopting appropriate safety precautions for their student-directed science investigations. Reducing risk and
+preventing accidents in science classrooms begin with planning. The following four steps are recommended in
+carrying out a hazard and risk assessment for any planned lab investigation:
+    1. Identify all hazards. Hazards may be physical, chemical, health, or environmental.
+    2. Evaluate the type of risk associated with each hazard.
+    3. Write the procedure and all necessary safety precautions in such a way as to eliminate or reduce the
+       risk associated with each hazard.
+    4. Prepare for any emergency that might arise in spite of all of the required safety precautions.
+
+According to Arkansas Code Annotated § 6-10-113 (2012) for eye protection, every student and teacher in
+public schools participating in any chemical or combined chemical-physical laboratories involving caustic or
+explosive chemicals or hot liquids or solids is required to wear industrial-quality eye protective devices (eye
+goggles) at all times while participating in science investigations.
+
+The Arkansas K-12 Science Standards outline the knowledge and science and engineering practices that all
+students should learn by the end of high school. The standards are three-dimensional because each student
+performance expectation engages students at the nexus of the following three dimensions:
+
+    •   Dimension 1 describes scientific and engineering practices.
+    •   Dimension 2 describes crosscutting concepts, overarching science concepts that apply across science
+        disciplines.
+    •   Dimension 3 describes core ideas in the science disciplines.
+
+                                        Science and Engineering Practices
+
+The eight practices describe what scientists use to investigate and build models and theories of the world
+around them or that engineers use as they build and design systems. The practices are essential for all
+students to learn and are as follows:
+           1. Asking questions (for science) and defining problems (for engineering)
+           2. Developing and using models
+           3. Planning and carrying out investigations
+3
+                                                Physical Science - Integrated
+                                             Arkansas K-12 Science Standards
+                                             Arkansas Department of Education
+                                                            2016
+           4.   Analyzing and interpreting data
+           5.   Using mathematics and computational thinking
+           6.   Constructing explanations (for science) and designing solutions (for engineering)
+           7.   Engaging in argument from evidence
+           8.   Obtaining, evaluating, and communicating information
+                                             Crosscutting Concepts
+
+The seven crosscutting concepts bridge disciplinary boundaries and unit core ideas throughout the fields of
+science and engineering. Their purpose is to help students deepen their understanding of the disciplinary core
+ideas, and develop a coherent, and scientifically based view of the world. The seven crosscutting concepts are
+as follows:
+        1. Patterns- Observed patterns of forms and events guide organization and classification, and prompt
+        questions about relationships and the factors that influence them.
+        2. Cause and effect- Mechanism and explanation. Events have causes, sometimes simple, sometimes
+        multifaceted. A major activity of science is investigating and explaining causal relationships and the
+        mechanisms by which they are mediated. Such mechanisms can then be tested across given contexts
+        and used to predict and explain events in new contexts.
+        3. Scale, proportion, and quantity- In considering phenomena, it is critical to recognize what is relevant
+        at different measures of size, time, and energy and to recognize how changes in scale, proportion, or
+        quantity affect a system’s structure or performance.
+        4. Systems and system models- Defining the system under study—specifying its boundaries and
+        making explicit a model of that system—provides tools for understanding and testing ideas that are
+        applicable throughout science and engineering.
+        5. Energy and matter: Flows, cycles, and conservation- Tracking fluxes of energy and matter into, out
+        of, and within systems helps one understand the systems’ possibilities and limitations.
+        6. Structure and function- The way in which an object or living thing is shaped and its substructure
+        determines many of its properties and functions.
+        7. Stability and change- For natural and built systems alike, conditions of stability and determinants of
+        rates of change or evolution of a system are critical elements of study.
+
+
+                                             Disciplinary Core Ideas
+
+The disciplinary core ideas describe the content that occurs at each grade or course. The Arkansas K-12
+Science Standards focus on a limited number of core ideas in science and engineering both within and across
+the disciplines and are built on the notion of learning as a developmental progression. The Disciplinary Core
+Ideas are grouped into the following domains:
+
+    •   Physical Science (PS)
+    •   Life Science (LS)
+    •   Earth and Space Science (ESS)
+    •   Engineering, Technology and Applications of Science (ETS)
+
+
+                         Connections to the Arkansas English Language Arts Standards
+
+Evidence-based reasoning is the foundation of good scientific practice. The Arkansas K-12 Science Standards
+incorporate reasoning skills used in language arts to help students improve mastery and understanding in all
+three disciplines. The Arkansas K-8 Science Committee made every effort to align grade-by-grade with the
+English language arts (ELA) standards so concepts support what students are learning in their entire
+
+4
+                                               Physical Science - Integrated
+                                            Arkansas K-12 Science Standards
+                                            Arkansas Department of Education
+                                                           2016
+curriculum. Connections to specific ELA standards are listed for each student performance expectation, giving
+teachers a blueprint for building comprehensive cross-disciplinary lessons.
+The intersections between Arkansas K-12 Science Standards and Arkansas ELA Standards teach students to
+analyze data, model concepts, and strategically use tools through productive talk and shared activity. Reading
+in science requires an appreciation of the norms and conventions of the discipline of science, including
+understanding the nature of evidence used, an attention to precision and detail, and the capacity to make and
+assess intricate arguments, synthesize complex information, and follow detailed procedures and accounts of
+events and concepts. These practice-based standards help teachers foster a classroom culture where students
+think and reason together, connecting around the subject matter and core ideas.
+
+
+                         Connections to the Arkansas Disciplinary Literacy Standards
+
+Reading is critical to building knowledge in science. College and career ready reading in science requires an
+appreciation of the norms and conventions of each discipline, such as the kinds of evidence used in science;
+an understanding of domain-specific words and phrases; an attention to precise details; and the capacity to
+evaluate intricate arguments, synthesize complex information, and follow detailed descriptions of events and
+concepts. When reading scientific and technical texts, students need to be able to gain knowledge from
+challenging texts that often make extensive use of elaborate diagrams and data to convey information and
+illustrate concepts. Students must be able to read complex informational texts in science with independence
+and confidence because the vast majority of reading in college and workforce training programs will be
+sophisticated nonfiction.
+
+For students, writing is a key means of asserting and defending claims, showing what they know about
+science, and conveying what they have experienced, imagined, thought, and felt. To be college and career
+ready writers, students must take task, purpose, and audience into careful consideration, choosing words,
+information, structures, and formats deliberately. They need to be able to use technology strategically when
+creating, refining, and collaborating on writing. They have to become adept at gathering information, evaluating
+sources, and citing material accurately, reporting finds from their research and analysis of sources in a clear
+and cogent manner. They must have the flexibility, concentration, and fluency to produce high-quality first-draft
+text under a tight deadline and the capacity to revisit and make improvements to a piece of writing over
+multiple drafts when circumstances encourage or require it.
+
+                             Connections to the Arkansas Mathematics Standards
+
+Science is a quantitative discipline, so it is important for educators to ensure that students’ science learning
+coheres well with their understanding of mathematics. To achieve this alignment, the Arkansas K-12 Science
+Committee made every effort to ensure that the mathematics standards do not outpace or misalign to the
+grade-by-grade science standards. Connections to specific math standards are listed for each student
+performance expectation, giving teachers a blueprint for building comprehensive cross-disciplinary lessons.
+
+
+
+
+5
+                                               Physical Science - Integrated
+                                            Arkansas K-12 Science Standards
+                                            Arkansas Department of Education
+                                                           2016
+6
+       Physical Science - Integrated
+    Arkansas K-12 Science Standards
+    Arkansas Department of Education
+                   2016
+                    Physical Science - Integrated Course Learning Progression Chart
+
+       Topic 1:          Topic 2:                                                                     Topic 6:
+      Elements,                         Topic 3: Forces                                           Interactions of
+                         Matter in                           Topic 4: Energy    Topic 5: Waves
+      Matter, and                         and Motion                                             Humans and the
+     Interactions       Organisms                                                                  Environment
+
+    AR PSI-PS1-1        PSI-LS1-5        AR PSI-PS2-1          AR PSI-PS3-1      AR PSI-PS4-1     AR PSI-LS2-7
+
+    AR PSI-PS1-2       AR PSI-LS1-7        PSI-PS2-3           AR PSI-PS3-2       PSI-PS4-2       AR PSI-LS4-5
+
+    AR PSI-PS1-3       AR PSI-LS2-4        PSI-PS2-5             PSI-PS3-3      AR PSI5-ETS1-2   AR PSI-ESS2-1
+
+      PSI-PS1-4      AR PSI2-ETS1-2        PSI-PS2-6             PSI-PS3-4                       AR PSI-ESS3-1
+
+    AR PSI-PS1-7                         AR PSI-ESS1-5       AR PSI4-ETS1-3                      AR PSI-ESS3-2
+
+    AR PSI-ESS2-7                       AR PSI3-ETS1-1                                           AR PSI6-ETS1-1
+
+                                                                                                 AR PSI6-ETS1-2
+
+                                                                                                 AR PSI6-ETS1-3
+
+                                                                                                 AR PSI6-ETS1-4
+
+    Arkansas Clarification Statement/Assessment Boundary (AR)
+
+
+
+
+7
+                                                Physical Science - Integrated
+                                             Arkansas K-12 Science Standards
+                                             Arkansas Department of Education
+                                                            2016
+                             Physical Science - Integrated Course Overview
+                                              (Course code 423000)
+
+The Arkansas K-12 Science Standards for physical science - integrated is an integrated science course that
+focuses on conceptual understanding of foundational core ideas, science and engineering practices, and
+crosscutting concepts, and is composed of physical science, Earth and space science, life science, and
+engineering design standards. Students will earn 1 unit of Smart Core/physical science credit for graduation. It
+is recommended that students be enrolled in Algebra I concurrently with this course. Teachers with chemistry,
+physics, physical science, physical/Earth, and physics/math licenses are qualified to teach this course.
+
+Students in physical science - integrated continue to develop their understanding of the core ideas in the
+physical, life, and earth and space sciences learned in middle school. These ideas include the most
+fundamental concepts from chemistry, physics, biology, and Earth and space science but are intended to leave
+room for expanded study in upper-level high school courses. The performance expectations in physical
+science - integrated build on the middle school ideas and skills and allow high school students to explain more
+in-depth phenomena central not only to the physical sciences, but to life and earth and space sciences as well.
+There are six topics in physical science - integrated: (1) Elements, Matter, and Interactions, (2) Matter in
+Organisms, (3) Forces and Motion, (4) Energy, (5) Waves, and (6) Interactions of Humans and the
+Environment.
+
+The performance expectations (standards) for physical science - integrated blend physical science, life
+science, and Earth and space science core ideas with scientific and engineering practices and crosscutting
+concepts to support students in developing useable knowledge to explain ideas across the science disciplines.
+Students are also expected to demonstrate understanding of several engineering practices, including design
+and evaluation. Connections with other science disciplines help high school students develop these capabilities
+in various contexts. For example, in the life sciences students are expected to design, evaluate, and refine a
+solution for reducing human impact on the environment (PSI-LS2-7). In the physical sciences students solve
+problems by applying their engineering capabilities along with their knowledge of conditions for forces during
+collisions (PS-PS2-3) and conversion of energy from one form to another (PSI-PS3-3). In the Earth and space
+sciences students apply their engineering capabilities to reduce human impacts on Earth systems, and
+improve social and environmental cost-benefit ratios (PSI-ESS3-2).
+Additionally, it should be noted the physical science - integrated standards are not intended to be used as
+curriculum. Instead, the standards are the minimum that students should know and be able to do. Therefore,
+teachers should continue to differentiate for the needs of their students by adding depth and additional rigor.
+Students in physical science - Integrated also continue their ability to develop possible solutions for major
+global problems with engineering design challenges. At the high school level, students are expected to engage
+with major global issues at the interface of science, technology, society and the environment, and to bring to
+light the kinds of analytical and strategic thinking that prior training and increased maturity make possible. As in
+prior levels, these capabilities can be thought of in three stages:
+           ● Defining the problem at the high school level requires both qualitative and quantitative
+       analysis. For example, the need to provide food and fresh water for future generations comes into
+       sharp focus when considering the speed at which the world population is growing and conditions in
+       countries that have experienced famine. While high school students are not expected to solve these
+       challenges, they are expected to begin thinking about them as problems that can be addressed, at least
+       in part, through engineering.
+           ● Developing possible solutions for major global problems begins by breaking them down into
+       smaller problems that can be tackled with engineering methods. To evaluate potential solutions,
+       students are expected to not only consider a wide range of criteria but to also recognize that criteria
+8
+                                               Physical Science - Integrated
+                                            Arkansas K-12 Science Standards
+                                            Arkansas Department of Education
+                                                           2016
+    needs to be prioritized. For example, public safety or environmental protection may be more important
+    than cost or even functionality. Decisions on priorities can then guide tradeoff choices.
+        ● Improving designs at the high school level may involve sophisticated methods, such as using
+    computer simulations to model proposed solutions. Students are expected to use such methods to take
+    into account a range of criteria and constraints, anticipate possible societal and environmental impacts,
+    and test the validity of their simulations by comparison to the real world.
+
+
+
+
+9
+                                           Physical Science - Integrated
+                                        Arkansas K-12 Science Standards
+                                        Arkansas Department of Education
+                                                       2016
+                               Physical Science - Integrated Topics Overview
+                                                (Course code 423000)
+
+
+The performance expectations in Topic 1: Elements, Matter, and Interactions help students formulate an answer
+to these questions:
+
+     •   How can one explain the structure and properties of matter?
+     •   How do substances combine or change (react) to make new substances?
+     •   How does one characterize and explain these reactions and make predictions about them?
+
+Students develop an understanding of the substructure of atoms and provide more mechanistic explanations of the
+properties of substances. Students use the periodic table as a tool to explain and predict the properties of elements.
+Phenomena involving nuclei are also important to understand, as they explain the formation and abundance of the
+elements. The crosscutting concepts of patterns, and energy and matter are called out as organizing concepts for
+these disciplinary core ideas. Chemical reactions, including rates of reactions and energy changes, can be
+understood by students at this level in terms of the collisions of molecules and the rearrangements of atoms. Using
+this expanded knowledge of chemical reactions, students explain important biological and geophysical phenomena.
+In these performance expectations, students demonstrate proficiency in developing and using models, planning and
+conducting investigations, and communicating scientific and technical information, and to use these practices to
+demonstrate understanding of the core ideas.
+
+The performance expectations in Topic 2: Matter in Organisms help students answer these questions:
+
+     •   How do organisms obtain and use energy they need to live and grow?
+     •   How do matter and energy move through ecosystems?
+
+High school students can construct explanations for the role of energy in the cycling of matter in organisms and
+ecosystems. Students apply mathematical concepts to develop evidence to support explanations of the interactions
+of photosynthesis and cellular respiration and develop models to communicate these explanations. Students relate
+the nature of science to how explanations may change in light of new evidence and the implications for our
+understanding of the tentative nature of science. Students understand organisms’ interactions with each other and
+their physical environment, how organisms obtain resources, change the environment, and how these changes affect
+both organisms and ecosystems. In addition, students utilize the crosscutting concepts of matter and energy to make
+sense of ecosystem dynamics.
+
+
+The performance expectations in Topic 3: Forces and Motion help students answer the question:
+
+     •   How can one explain and predict interactions between objects and within systems of objects?
+
+The topic is organized into two ideas: forces and motion and types of interactions. Students build an understanding
+of forces and interactions and Newton’s Second Law. Students also develop understanding that the total momentum
+of a system of objects is conserved when there is no net force on the system. Students are able to use Newton’s
+Law of Gravitation and Coulomb’s Law to describe and predict the gravitational and electrostatic forces between
+objects. Students are able to apply scientific and engineering ideas to design, evaluate, and refine a device that
+minimizes the force on a macroscopic object during a collision. Students demonstrate proficiency in planning and
+conducting investigations, analyzing data and using math to support claims, and applying scientific ideas to solve
+design problems, and to use these practices to demonstrate understanding of the core ideas. The crosscutting
+concepts of cause and effect and structure and function are called out as organizing concepts for these disciplinary
+core ideas.
+
+10
+                                                 Physical Science - Integrated
+                                              Arkansas K-12 Science Standards
+                                              Arkansas Department of Education
+                                                             2016
+The performance expectations in Topic 4: Energy help students answer the question:
+
+     •   How do forces and energy affect matter?
+
+Students develop a computational model to calculate the change in energy within components of a system. Students
+are able to use models to illustrate energy at a macroscopic scale. In the PS3 performance expectations, students
+demonstrate proficiency in developing and using models, planning and conducting investigations, using math to
+support claims, applying scientific ideas to solve design problems, and to use these practices to demonstrate
+understanding of the core ideas. The crosscutting concepts of systems and system models and energy and matter
+are called out as organizing concepts for these disciplinary core ideas.
+The performance expectations in Topic 5: Waves help students understand how many new technologies work and
+answer the question:
+.
+    • How are waves used to transfer energy and send and store information?
+
+Students apply understanding of how wave properties and the interactions of electromagnetic radiation with matter
+can transfer information across long distances, store information, and investigate nature on many scales. Students
+understand that combining waves of different frequencies can make a wide variety of patterns and thereby encode
+and transmit information. Students also demonstrate their understanding of engineering ideas by presenting
+information about how technological devices use the principles of wave behavior and wave interactions with matter
+to transmit and capture information and energy. Students demonstrate proficiency in asking questions and using
+mathematical thinking to demonstrate understanding of the core ideas. The crosscutting concepts of cause and
+effect and stability and change are highlighted as organizing concepts for these disciplinary core ideas.
+
+The performance expectations in Topic 6: Interactions of Humans and the Environment help students answer
+these questions:
+
+     •   How do humans depend on Earth’s resources?
+     •   How do people model and predict the effects of human activities on Earth’s climate?
+
+There are strong connections to mathematical practices of analyzing and interpreting data. The performance
+expectations strongly reflect the many societally relevant aspects of Earth and space science (resources, hazards,
+and environmental impacts) with an emphasis on using engineering and technology concepts to design solutions to
+challenges facing human society. Students understand the complex and significant interdependencies between
+humans and the rest of Earth’s systems through the impacts of natural hazards, our dependencies on natural
+resources, and the environmental impacts of human activities. In the life science performance expectations, students
+are expected to demonstrate proficiency in the use of computer simulation models and engaging in argument from
+evidence; and to use these practices to demonstrate understanding of the core ideas. The crosscutting concepts of
+stability and change; cause and effect; and systems and system models are called out as organizing concepts for
+these disciplinary core ideas. While the performance expectations couple particular practices with specific
+disciplinary core ideas, instructional decisions should include use of many practices that lead to the performance
+expectations.
+
+.
+
+
+
+
+11
+                                                 Physical Science - Integrated
+                                              Arkansas K-12 Science Standards
+                                              Arkansas Department of Education
+                                                             2016
+                                   Physical Science - Integrated
+Topic 1: Elements, Matter, and Interactions
+Students who demonstrate understanding can:
+ PSI-PS1-1 Use the periodic table as a model to predict the relative properties of elements based on the
+           patterns of electrons in the outermost energy level of atoms. [AR Clarification Statement: This PE
+           is partially addressed in this course. Examples of properties that could be predicted from patterns
+           could include types of bonds (ionic and covalent) formed, numbers of bonds formed, and hydrogen
+           bonds in water.] [Assessment Boundary: Assessment is limited to main group elements.]
+PSI-PS1-2 Construct and revise an explanation for the outcome of a simple chemical reaction based on
+           the outermost electron states of atoms, trends in the periodic table, and knowledge of the
+           patterns of chemical properties. [AR Clarification Statement: This PE is partially addressed in this
+           course. Examples could include recognizing patterns to identify types of chemical reactions, such as,
+           combustion, single replacement, double replacement, decomposition and synthesis. ] [Assessment
+           Boundary: Assessment does not include predicting chemical products.]
+PSI-PS1-3 Plan and conduct an investigation to gather evidence to compare the structure of substances
+           at the bulk scale to infer the strength of electrical forces between particles. [AR Clarification
+           Statement: This PE is partially addressed in this course. Emphasis is on understanding of the
+           strengths of forces between particles including hydrogen bonding in water. Examples of particles could
+           include ions, atoms, molecules, and networked materials (such as graphite). Examples of bulk
+           properties of substances could include the melting point and boiling point, vapor pressure, and surface
+           tension.] [AR Assessment Boundary: Assessment limited to materials of same states of matter.]
+PSI-PS1-4 Develop a model to illustrate that the release or absorption of energy from a chemical
+           reaction system depends upon the changes in total bond energy. [Clarification Statement: This
+           PE is partially addressed in this course. Emphasis is on the idea that a chemical reaction is a system
+           that affects the energy change. Examples of models could include molecular-level drawings and
+           diagrams of reactions, graphs showing the relative energies of reactants and products, and
+           representations showing energy is conserved.] [Assessment Boundary: Assessment does not include
+           calculating the total bond energy changes during a chemical reaction from the bond energies of
+           reactants and products.]
+PSI-PS1-7 Use mathematical representations to support the claim that atoms, and therefore mass, are
+           conserved during a chemical reaction. [AR Clarification Statement: This PE is partially addressed
+           in this course. Emphasis is on demonstrating conservation of atoms through balancing chemical
+           equations and assessing students’ use of mathematical thinking, not on memorization and rote
+           application of problem-solving techniques.] [Assessment Boundary: Assessment does not include the
+           mole concept or complex chemical reactions.]
+PSI-ESS2-7 Construct an argument based on evidence about the simultaneous coevolution of Earth’s
+            systems and life on Earth. [AR Clarification Statement: This PE is partially addressed in this
+            course. Emphasis in this course is on identifying and describing the evidence for simultaneous co-
+            evolution and the causes, effects, and feedbacks between the biosphere and Earth’s other systems.
+            Geoscience factors control the evolution of life, which in turn continuously alters Earth’s surface.
+            Examples could include how photosynthetic life altered the atmosphere through the production of
+            oxygen, which in turn increased weathering rates and allowed for the evolution of animal life; how
+            microbial life on land increased the formation of soil which in turn allowed for the evolution of land
+            plants; or how the evolution of corals created reefs that altered patterns of erosion and deposition
+            along coastlines and provided habitats for the evolution of life forms.] [Assessment Boundary:
+            Assessment does not include a comprehensive understanding of the mechanisms of how the
+            biosphere interacts with all of Earth’s other systems.]
+
+
+
+
+12
+                                 Physical Science – Integrated: Elements, Matter, and Interactions
+                                                Arkansas K-12 Science Standards
+                                               Arkansas Department of Education
+                                                               2016
+The performance expectations above were developed using the following elements from the NRC document A
+Framework for K-12 Science Education:
+
+     Science and Engineering Practices                    Disciplinary Core Ideas                         Crosscutting Concepts
+Developing and Using Models                     PS1.A: Structure and Properties of                     Patterns
+Modeling in 9–12 builds on K–8 and              Matter                                                  Different patterns may be
+progresses to using, synthesizing, and           Each atom has a charged                                observed at each of the
+developing models to predict and show             substructure consisting of a                           scales at which a system is
+relationships among variables between             nucleus, which is made of protons                      studied and can provide
+systems and their components in the               and neutrons, surrounded by                            evidence for causality in
+natural and designed worlds.                      electrons. (PSI-PS1-1)                                 explanations of
+  Develop a model based on evidence to          The periodic table orders elements                     phenomena.
+    illustrate the relationships between          horizontally by the number of                          (PSI-PS1-1,PSI-PS1-2,
+    systems or between components of a            protons in the atom’s nucleus and                      PSI -PS1-3)
+    system. (PSI-PS1-4)                           places those with similar chemical                   Energy and Matter
+  Use a model to predict the                     properties in columns. The                            The total amount of energy
+    relationships between systems or              repeating patterns of this table                       and matter in closed
+    between components of a system.               reflect patterns of outer electron                     systems is conserved.
+    (PSI-PS1-1)                                   states. (PSI-PS1-1,PS-PS1-2)                           (PSI-PS1-7)
+Planning and Carrying Out                        The structure and interactions of                     Changes of energy and
+Investigations                                    matter at the bulk scale are                           matter in a system can be
+Planning and carrying out investigations          determined by electrical forces                        described in terms of
+in 9-12 builds on K-8 experiences and             within and between atoms.                              energy and matter flows
+progresses to include investigations that         (PSI-PS1-3,PSI-PS2-6)                                  into, out of, and within that
+provide evidence for and test conceptual,        A stable molecule has less energy                      system. (PSI-PS1-4)
+mathematical, physical, and empirical             than the same set of atoms
+models.                                           separated; one must provide at                       -----------------------------------------
+  Plan and conduct an investigation              least this energy in order to take                     Connections to Nature of
+    individually and collaboratively to           the molecule apart.                                                Science
+    produce data to serve as the basis for        (PSI-PS1-4)
+    evidence, and in the design: decide on      PS1.B: Chemical Reactions                              Scientific Knowledge
+    types, how much, and accuracy of data        Chemical processes, their rates,                     Assumes an Order and
+    needed to produce reliable                    and whether or not energy is stored                  Consistency in Natural
+    measurements and consider limitations         or released can be understood in                     Systems
+    on the precision of the data (e.g.,           terms of the collisions of molecules                  Science assumes the
+    number of trials, cost, risk, time), and      and the rearrangements of atoms                        universe is a vast single
+    refine the design accordingly.                into new molecules, with                               system in which basic laws
+    (PSI-PS1-3)                                   consequent changes in the sum of                       are consistent. (PSI-PS1-7)
+Using Mathematics and Computational               all bond energies in the set of
+Thinking                                          molecules that are matched by
+Mathematical and computational thinking           changes in kinetic energy.
+at the 9–12 level builds on K–8 and               (PSI-PS1-4)
+progresses to using algebraic thinking           The fact that atoms are conserved,
+and analysis, a range of linear and               together with knowledge of the
+nonlinear functions including                     chemical properties of the elements
+trigonometric functions, exponentials and         involved, can be used to describe
+logarithms, and computational tools for           and predict chemical reactions.
+statistical analysis to analyze, represent,       (PSI-PS1-2, PSI-PS1-7)
+and model data. Simple computational            PS2.B: Types of Interactions
+simulations are created and used based           Attraction and repulsion between
+on mathematical models of basic                   electric charges at the atomic scale
+assumptions.                                      explain the structure, properties,
+  Use mathematical representations of            and transformations of matter, as
+    phenomena to support claims.
+13
+                                   Physical Science – Integrated: Elements, Matter, and Interactions
+                                                  Arkansas K-12 Science Standards
+                                                 Arkansas Department of Education
+                                                                 2016
+   (PSI-PS1-7)                                     well as the contact forces between
+Constructing Explanations and                      material objects.
+Designing Solutions                                (PSI-PS1-1, PSI-PS1-3)
+Constructing explanations and designing          ESS2.D: Weather and Climate
+solutions in 9–12 builds on K–8                      Gradual atmospheric changes
+experiences and progresses to                           were due to plants and other
+explanations and designs that are                       organisms that captured
+supported by multiple and independent                   carbon dioxide and released
+student-generated sources of evidence                   oxygen. (PSI-ESS2-7)
+consistent with scientific ideas,                ESS2.E: Biogeology
+principles, and theories.                            The many dynamic and
+  Construct and revise an explanation                  delicate feedbacks between
+   based on valid and reliable evidence                 the biosphere and other Earth
+   obtained from a variety of sources                   systems cause a continual co-
+   (including students’ own investigations,             evolution of Earth’s surface
+   models, theories, simulations, peer                  and the life that exists on it.
+   review) and the assumption that                      (PSI-ESS2-7)
+   theories and laws that describe the
+   natural world operate today as they did
+   in the past and will continue to do so in
+   the future. (PSI-PS1-2)
+
+
+Connections to other DCIs in this course: PSI.PS3.A (PSI-PS1-4,PSI-PS1-8); PSI.PS3.B (PSI-PS1-4,PSI-PS1-7);
+PSI.PS3.D (PSI-PS1-4); PSI.LS1.C (PSI-PS1-1,PSI-PS1-2,PSI-PS1-4,PSI-PS1-7); PSI.LS2.B (PSI-PS1-7)
+Connections to DCIs across grade-bands: 7.PS1.A (PSI-PS1-1,PSI-PS1-2,PSI-PS1-3,PSI-PS1-4,PSI-PS1-7);
+7.PS1.B (PSI-PS1-1,PSI-PS1-2,PSI-PS1-4,PSI-PS1-7); 8.PS2.B (PSI-PS1-3,PSI-PS1-4); 8.PS3.C (PSI-PS1-4);
+7.LS1.C (PSI-PS1-4,PSI-PS1-7); 7.LS2.B (PSI-PS1-7); 7.ESS2.A (PSI-PS1-7)
+Connections to the Arkansas Disciplinary Literacy Standards:
+RST.9-10.7      Translate quantitative or technical information expressed in words in a text into visual form (e.g., a
+                table or chart) and translate information expressed visually or mathematically (e.g., in an equation)
+                into words. (PSI-PS1-1)
+RST.11-12.1     Cite specific textual evidence to support analysis of science and technical texts, attending to
+                important distinctions the author makes and to any gaps or inconsistencies in the account.
+                (PSI-PS1-3)
+WHST.9-12.2 Write informative/explanatory texts, including the narration of historical events, scientific
+                procedures/ experiments, or technical processes. (PSI-PS1-2)
+WHST.9-12.5 Develop and strengthen writing as needed by planning, revising, editing, rewriting, or trying a new
+                approach, focusing on addressing what is most significant for a specific purpose and audience.
+                (PSI-PS1-2)
+WHST.9-12.7 Conduct short as well as more sustained research projects to answer a question (including a self-
+                generated question) or solve a problem; narrow or broaden the inquiry when appropriate;
+                synthesize multiple sources on the subject, demonstrating understanding of the subject under
+                investigation. (PSI-PS1-3)
+WHST.11-12.8 Gather relevant information from multiple authoritative print and digital sources, using advanced
+                searches effectively; assess the strengths and limitations of each source in terms of the specific
+                task, purpose, and audience; integrate information into the text selectively to maintain the flow of
+                ideas, avoiding plagiarism and overreliance on any one source and following a standard format for
+                citation. (PSI-PS1-3)
+WHST.9-12.9 Draw evidence from informational texts to support analysis, reflection, and research. (PSI-PS1-3)
+
+
+
+
+14
+                                    Physical Science – Integrated: Elements, Matter, and Interactions
+                                                   Arkansas K-12 Science Standards
+                                                  Arkansas Department of Education
+                                                                  2016
+Connections to the Arkansas English Language Arts Standards:
+9-12.CC.9.P Include relevant multimedia to enhance understanding of findings, reasoning, and/or evidence.
+            (PSI-PS1-4)
+
+Connections to the Arkansas Mathematics Standards:
+A1.SP.3      Summarize data from two categorical variables in a frequency table; interpret relative frequencies
+             in the context of the data, recognizing data trends and associations. (PSI-PS1-2, PSI-PS1-3,
+             PSI-PS1-4, PSI-PS1-7)
+AR.M.2       Applying reasoning about quantities and relationships. (PSI-PS1-7)
+AR.M.4       Select and use relationships and tools. (PSI-PS1-4)
+
+
+
+
+15
+                                  Physical Science – Integrated: Elements, Matter, and Interactions
+                                                 Arkansas K-12 Science Standards
+                                                Arkansas Department of Education
+                                                                2016
+                                            Physical Science - Integrated
+     Topic 2: Matter in Organisms
+     Students who demonstrate understanding can:
+     PSI-LS1-5    Use a model to illustrate how photosynthesis transforms light energy into stored chemical
+                  energy. [AR Clarification Statement: This PE is partially addressed in this course. Emphasis is on
+                  using photosynthesis as an example of a chemical reaction including energy transfer. Examples of
+                  models could include diagrams, chemical equations, and conceptual models.] [Assessment
+                  Boundary: Assessment does not include specific biochemical steps.]
+     PSI-LS1-7    Use a model to illustrate that cellular respiration is a chemical process whereby the bonds of
+                  food molecules and oxygen molecules are broken and the bonds in new compounds are
+                  formed resulting in a net transfer of energy. [AR Clarification Statement: This PE is partially
+                  addressed in this course. Emphasis is on using physical systems as examples of chemical
+                  reactions such as cellular respiration and photosynthesis. Examples of models could include
+                  diagrams, chemical equations, and conceptual models.] [Assessment Boundary: Assessment
+                  should not include specific biochemical steps.]
+     PSI-LS2-4    Use mathematical representations to support claims for the cycling of matter and flow of
+                  energy among organisms in an ecosystem. [AR Clarification Statement: This PE is partially
+                  addressed in this course. Emphasis is on atoms and molecules such as carbon, oxygen, hydrogen
+                  and nitrogen being conserved as they move through an ecosystem.] [Assessment Boundary:
+                  Assessment is limited to proportional reasoning to describe the cycling of matter and flow of
+                  energy.]
+     PSI2-ETS1-2 Design a solution to a complex real-world problem by breaking it down into smaller, more
+                  manageable problems that can be solved through engineering. [AR Clarification Statement:
+                  Examples could focus on researching then designing one aspect at a time (e.g., health advantages
+                  and disadvantages of using polystyrene vs. polyethylene for constructing a water bottle.)]
+     The performance expectations above were developed using the following elements from the NRC document A
+     Framework for K-12 Science Education:
+
+       Science and Engineering Practices                      Disciplinary Core Ideas            Crosscutting Concepts
+     Developing and Using Models                    LS1.C: Organization for Matter and          Energy and Matter
+     Modeling in 9–12 builds on K–8                 Energy Flow in Organisms                     Changes of energy and
+     experiences and progresses to using,             The process of photosynthesis              matter in a system can
+     synthesizing, and developing models to            converts light energy to stored            be described in terms of
+     predict and show relationships among              chemical energy by converting              energy and matter flows
+     variables between systems and their               carbon dioxide plus water into             into, out of, and within
+     components in the natural and designed            sugars plus released oxygen.               that system. (PSI-LS1-5)
+     worlds.                                           (PSI-LS1-5)                               Energy cannot be
+       Use a model based on evidence to              As matter and energy flow through          created or destroyed—it
+         illustrate the relationships between          different organizational levels of         only moves between one
+         systems or between components of a            living systems, chemical elements          place and another place,
+         system. (PSI-LS1-5,PSI-LS1-7)                 are recombined in different ways to        between objects and/or
+     Using Mathematics and Computational               form different products. (PSI-LS1-7)       fields, or between
+     Thinking                                         As a result of these chemical              systems. (PSI-LS1-7)
+     Mathematical and computational thinking           reactions, energy is transferred from    Energy and Matter
+     in 9-12 builds on K-8 experiences and             one system of interacting molecules       Energy cannot be
+     progresses to using algebraic thinking            to another. Cellular respiration is a      created or destroyed—it
+     and analysis, a range of linear and               chemical process in which the              only moves between one
+     nonlinear functions including                     bonds of food molecules and                place and another place,
+     trigonometric functions, exponentials and         oxygen molecules are broken and            between objects and/or
+     logarithms, and computational tools for           new compounds are formed that can          fields, or between
+     statistical analysis to analyze, represent,       transport energy to muscles.               systems. (PSI-LS2-4)
+     and model data. Simple computational              Cellular respiration also releases the
+     simulations are created and used based            energy needed to maintain body
+16
+                                           Physical Science - Integrated: Matter in Organisms
+                                                   Arkansas K-12 Science Standards
+                                                  Arkansas Department of Education
+                                                                  2016
+     on mathematical models of basic               temperature despite ongoing energy
+     assumptions.                                  transfer to the surrounding
+       Use mathematical representations of        environment. (PSI-LS1-7)
+        phenomena or design solutions to        LS2.B: Cycles of Matter and Energy
+        support claims. (PSI-LS2-4)             Transfer in Ecosystems
+     Constructing Explanations and                Plants or algae form the lowest level
+     Designing Solutions                           of the food web. At each link upward
+     Constructing explanations and designing       in a food web, only a small fraction
+     solutions in 9–12 builds on K–8               of the matter consumed at the lower
+     experiences and progresses to                 level is transferred upward, to
+     explanations and designs that are             produce growth and release energy
+     supported by multiple and independent         in cellular respiration at the higher
+     student-generated sources of evidence         level. Given this inefficiency, there
+     consistent with scientific ideas, principles  are generally fewer organisms at
+     and theories.                                 higher levels of a food web. Some
+       Design a solution to a complex real-       matter reacts to release energy for
+        world problem, based on scientific         life functions, some matter is stored
+        knowledge, student-generated sources       in newly made structures, and much
+        of evidence, prioritized criteria, and     is discarded. The chemical elements
+        tradeoff considerations.                   that make up the molecules of
+        (PSI2-ETS1-2)                              organisms pass through food webs
+                                                   and into and out of the atmosphere
+                                                   and soil, and they are combined and
+                                                   recombined in different ways. At
+                                                   each link in an ecosystem, matter
+                                                   and energy are conserved.
+                                                   (PSI-LS2-4)
+                                                ETS1.C: Optimizing the Design
+                                                Solution
+                                                  Criteria may need to be broken
+                                                   down into simpler ones that can be
+                                                   approached systematically, and
+                                                   decisions about the priority of
+                                                   certain criteria over others (trade-
+                                                   offs) may be needed. (PSI2-ETS1-2)
+     Connections to other DCIs in this course: PSI.PS1.B (PSI-LS1-5,PSI-LS1-7); PSI.PS2.B (PSI-LS1-7);
+     PSI.PS3.B (PSI-LS1-5,PSI-LS1-7,PSI-LS2-4)
+     Connections to DCIs across grade-bands: 7.PS1.B (PSI-LS1-5,PSI-LS1-7); 6.PS3.C (PSI-LS1-5,PSI-LS1-7,
+     PSI-LS2-4); 7.LS1.C (PSI-LS1-5,PSI-LS1-7,PSI-LS2-4); 7.LS2.B (PSI-LS1-5,PSI-LS1-7,PSI-LS2-4); 6-8.ETS1.A
+     (PSI2-ETS1-2); 6-8.ETS1.B (PSI2-ETS1-2); 6-8.ETS1.C (PSI2-ETS1-2)
+     Connections to the Arkansas Disciplinary Literacy Standards--N/A
+     Connections to the Arkansas English Language Arts Standards:
+     9-12.CC.9.P Include relevant multimedia to enhance understanding of findings, reasoning, and/or evidence.
+                  (PSI-LS1-5, PSI-LS1-7)
+     Connections to the Arkansas Mathematics Standards:
+     A1.SP.3       Summarize data from two categorical variables in a frequency table; interpret relative
+                   frequencies in the context of the data, recognizing data trends and associations. (PSI-LS2-4)
+     AR.M.4        Applying reasoning about quantities and relationships. (PSI-LS2-4)
+     AR.M.2        Select and use relationships and tools. (PSI-LS2-4, PS2-ETS1-2)
+
+
+
+
+17
+                                            Physical Science - Integrated: Matter in Organisms
+                                                    Arkansas K-12 Science Standards
+                                                   Arkansas Department of Education
+                                                                   2016
+                                            Physical Science - Integrated
+ Topic 3: Forces and Motion
+ Students who demonstrate understanding can:
+ PSI-PS2-1    Analyze data to support the claim that Newton’s second law of motion describes the
+               mathematical relationship among the net force on a macroscopic object, its mass, and its
+               acceleration. [AR Clarification Statement: This PE is partially addressed in this course. Emphasis on
+               qualitative analysis of data. Examples of data could include tables or graphs of position or velocity as
+               a function of time for objects subject to a net unbalanced force, such as a falling object, an object
+               rolling down a ramp, or a moving object being pulled by a constant force.] [AR Assessment Boundary:
+               Assessment is limited to qualitative analysis of one-dimensional motion and to macroscopic objects
+               moving at non-relativistic speeds.]
+ PSI-PS2-3 Apply scientific and engineering ideas to design, evaluate, and refine a device that minimizes
+             the force on a macroscopic object during a collision.* [Clarification Statement: Examples of
+             evaluation and refinement could include determining the success of the device in protecting an object
+             from damage and modifying the design to improve it. Examples of a device could include a football
+             helmet or a parachute.] [Assessment Boundary: Assessment is limited to qualitative evaluations
+             and/or algebraic manipulations.]
+ PSI-PS2-5 Plan and conduct an investigation to provide evidence that an electric current can produce a
+             magnetic field and that a changing magnetic field can produce an electric current. [Assessment
+             Boundary: Assessment is limited to designing and conducting investigations with provided materials
+             and tools.]
+ PSI-PS2-6 Communicate scientific and technical information about why the molecular-level structure is
+             important in the functioning of designed materials.* [Clarification Statement: Emphasis is on the
+             attractive and repulsive forces that determine the functioning of the material. Examples could include
+             why electrically conductive materials are often made of metal, flexible but durable materials are made
+             up of long chained molecules, and pharmaceuticals are designed to interact with specific receptors.]
+             [Assessment Boundary: Assessment is limited to provided molecular structures of specific designed
+             materials.]
+ PSI-ESS1-5 Evaluate evidence of the past and current movements of continental and oceanic crust and
+              the theory of plate tectonics to explain the ages of crustal rocks. [AR Clarification Statement:
+             Emphasis is on the ability of plate tectonics to explain the ages of crustal (continental and oceanic)
+             rocks. Examples could include evidence of the ages of oceanic crust (lithosphere that includes crust
+             and upper mantle and the asthenosphere) increasing with distance from mid-ocean ridges (a result of
+             divergent boundaries/plate spreading) and the ages of North American continental crust increasing
+             with distance away from a central ancient core (a result of past plate interactions).]
+ PSI3-ETS1-1 Analyze a major global challenge to specify qualitative and quantitative criteria and constraints
+             for solutions that account for societal needs and wants. [AR Clarification Statement: Examples of
+             global challenges could include energy distribution, protective sports equipment, and transportation
+             safety designs (automobile safety and shipping/packing materials).]
+ The performance expectations above were developed using the following elements from the NRC document A
+ Framework for K-12 Science Education:
+
+     Science and Engineering Practices                     Disciplinary Core Ideas           Crosscutting Concepts
+ Planning and Carrying Out                     PS1.A: Structure and Properties of            Cause and Effect
+ Investigations                                Matter                                         Empirical evidence is
+ Planning and carrying out investigations       The structure and interactions of matter      required to
+ to answer questions or test solutions to        at the bulk scale are determined by           differentiate between
+ problems in 9–12 builds on K–8                  electrical forces within and between          cause and correlation
+ experiences and progresses to include           atoms. (PSI-PS2-6)                            and make claims
+ investigations that provide evidence for      PS2.A: Forces and Motion                        about specific causes
+ and test conceptual, mathematical,             Newton’s second law accurately predicts       and effects.
+ physical and empirical models.                  changes in the motion of macroscopic          (PSI-PS2-1,
+                                                 objects. (PSI-PS2-1)                          PSI-PS2-5)
+18
+                                        Physical Science - Integrated: Forces and Motion
+                                               Arkansas K-12 Science Standards
+                                              Arkansas Department of Education
+                                                              2016
+   Plan and conduct an investigation              If a system interacts with objects outside      Systems can be
+    individually and collaboratively to             itself, the total momentum of the system         designed to cause a
+    produce data to serve as the basis for          can change; however, any such change             desired effect.
+    evidence, and in the design: decide on          is balanced by changes in the                    (PSI-PS2-3)
+    types, how much, and accuracy of data           momentum of objects outside the               Structure and Function
+    needed to produce reliable                      system. (PSI-PS2-3)                             Investigating or
+    measurements and consider limitations        PS2.B: Types of Interactions                        designing new
+    on the precision of the data (e.g.,            Forces at a distance are explained by            systems or structures
+    number of trials, cost, risk, time), and        fields (gravitational, electric, and             requires a detailed
+    refine the design accordingly.                  magnetic) permeating space that can              examination of the
+    (PSI-PS2-5)                                     transfer energy through space. Magnets           properties of different
+ Analyzing and Interpreting Data                    or electric currents cause magnetic              materials, the
+ Analyzing data in 9–12 builds on K–8 and           fields; electric charges or changing             structures of different
+ progresses to introducing more detailed            magnetic fields cause electric fields.           components, and
+ statistical analysis, the comparison of data       (PSI-PS2-5)                                      connections of
+ sets for consistency, and the use of              Attraction and repulsion between electric        components to reveal
+ models to generate and analyze data.               charges at the atomic scale explain the          its function and/or
+   Analyze data using tools, technologies,         structure, properties, and transformations       solve a problem.
+    and/or models (e.g., computational,             of matter, as well as the contact forces         (PSI-PS2-6)
+    mathematical) in order to make valid            between material objects.                     Patterns
+    and reliable scientific claims or               (PSI-PS2-6)                                     Empirical evidence is
+    determine an optimal design solution.        PS3.A: Definitions of Energy                         needed to identify
+    (PSI-PS2-1)                                    “Electrical energy” may mean energy               patterns.
+ Constructing Explanations and                      stored in a battery or energy transmitted         (PSI-ESS1-5)
+ Designing Solutions                                by electric currents. (PSI-PS2-5)             -----------------------------------
+ Constructing explanations and designing         ESS1.C: The History of Planet Earth                     Connections to
+ solutions in 9–12 builds on K–8                 Continental rocks, which can be older than               Engineering,
+ experiences and progresses to                   4 billion years, are generally much older                 Technology,
+ explanations and designs that are               than the rocks of the ocean floor, which are         and Applications of
+ supported by multiple and independent           less than 200 million years old.                             Science
+ student-generated sources of evidence           (PSI-ESS1-5)
+ consistent with scientific ideas, principles,   ESS2.B: Plate Tectonics and Large-               Influence of Science,
+ and theories.                                   Scale System Interactions                        Engineering, and
+   Apply scientific ideas to solve a design       Plate tectonics is the unifying theory that   Technology on Society
+    problem, taking into account possible           explains the past and current movements       and the Natural World
+    unanticipated effects. (PSI-PS2-3)              of the rocks at Earth’s surface and            New technologies can
+ Obtaining, Evaluating, and                         provides a framework for understanding         have deep impacts on
+ Communicating Information                          its geologic history. (PSI-ESS1-5)             society and the
+ Obtaining, evaluating, and communicating        ETS1.A: Defining and Delimiting                   environment, including
+ information in 9–12 builds on K–8 and           Engineering Problems                              some that were not
+ progresses to evaluating the validity and         Criteria and constraints also include          anticipated. Analysis of
+ reliability of the claims, methods, and            satisfying any requirements set by             costs and benefits is a
+ designs.                                           society, such as taking issues of risk         critical aspect of
+   Communicate scientific and technical            mitigation into account, and they should       decisions about
+    information (e.g. about the process of          be quantified to the extent possible and       technology.
+    development and the design and                  stated in such a way that one can tell if a    (PSI3-ETS1-1)
+    performance of a proposed process or            given design meets them. (PSI-PS2-3)
+    system) in multiple formats (including       ETS1.C: Optimizing the Design Solution
+    orally, graphically, textually, and            Criteria may need to be broken down into
+    mathematically). (PSI-PS2-6)                    simpler ones that can be approached
+ Engaging in Argument from Evidence                 systematically, and decisions about the
+ Engaging in argument from evidence in              priority of certain criteria over others
+ 9–12 builds on K–8 experiences and                 (trade-offs) may be needed. (PSI-PS2-3)
+ progresses to using appropriate and
+19
+                                          Physical Science - Integrated: Forces and Motion
+                                                 Arkansas K-12 Science Standards
+                                                Arkansas Department of Education
+                                                                2016
+ sufficient evidence and scientific         ETS1.A: Defining and Delimiting
+ reasoning to defend and critique claims    Engineering Problems
+ and explanations about the natural and      Criteria and constraints also include
+ designed world(s). Arguments may             satisfying any requirements set by
+ also come from current scientific or         society, such as taking issues of risk
+ historical episodes in science.              mitigation into account, and they should
+   Evaluate evidence behind currently        be quantified to the extent possible and
+    accepted explanations or solutions to     stated in such a way that one can tell if a
+    determine the merits of arguments.        given design meets them. (PSI3-ETS1-1)
+    (PSI-ESS1-5)                             Humanity faces major global challenges
+
+ Asking Questions and Defining                today, such as the need for supplies of
+ Problems                                     clean water and food or for energy
+ Asking questions and defining problems in    sources that minimize pollution, which
+ 9–12 builds on K–8 experiences and           can be addressed through engineering.
+ progresses to formulating, refining, and     These global challenges also may have
+ evaluating empirically testable questions    manifestations in local communities.
+ and design problems using models and         (PSI3-ETS1-1)
+ simulations.
+   Analyze complex real-world problems
+    by specifying criteria and constraints
+    for successful solutions. (PSI3-ETS1-1)
+
+     -----------------------------------------------------
+       Connections to Nature of Science
+
+ Science Models, Laws, Mechanisms,
+ and Theories Explain Natural
+ Phenomena
+   Theories and laws provide explanations
+    in science. (PSI-PS2-1)
+   Laws are statements or descriptions of
+    the relationships among observable
+    phenomena. (PSI-PS2-1)
+ Connections to other DCIs in this course: PSI.PS3.A (PSI-PS2-5); PSI.ESS2.A (PSI-PS2-5); PSI.ESS3.A
+  (PSI-PS2-5); PSI.ESS2.A (PSI-ESS1-5); PSI.PS3.B (PSI-ESS1-5)
+ Connections to DCIs across grade-bands: 7.PS1.A (PSI-PS2-6); 8.PS2.A (PSI-PS2-1,PS-PS2-3);
+ 8.PS2.B (PSI-PS2-5,PSI-PS2-6); 8.PS3.C (PSI-PS2-1,PSI-PS2-3); 8.ESS1.B (PSI-PS2-5); 6-8.ETS1.A
+ (PSI3-ETS1-1); 7.ESS2.A (PSI-ESS1-5); 8.ESS1.C (PSI-ESS1-5)
+ Connections to the Arkansas Disciplinary Literacy Standards:
+ RST.11-12.1       Cite specific textual evidence to support analysis of science and technical texts, attending to
+                   important distinctions the author makes and to any gaps or inconsistencies in the account.
+                    (PSI-PS2-1,PSI-PS2-6)
+ RST.11-12.7       Integrate and evaluate multiple sources of information presented in diverse formats and media (e.g.,
+                   quantitative data, video, multimedia) in order to address a question or solve a problem.
+                     (PSI-PS2-1),(PSI3-ETS1-1)
+ RST.11-12.8       Evaluate the hypotheses, data, analysis, and conclusions in a science or technical text, verifying
+                   the data when possible and corroborating or challenging conclusions with other sources of
+                   information. (PSI-ESS1-5, PSI3-ETS1-1)
+ RST.11-12.9       Synthesize information from a range of sources (e.g., texts, experiments, simulations) into a
+                   coherent understanding of a process, phenomenon, or concept, resolving conflicting information
+                   when possible. (PSI3-ETS1-1)
+ WHST.9-12.2 Write informative/explanatory texts, including the narration of historical events, scientific
+                   procedures/ experiments, or technical processes. (PS-ESS1-5, PS-PS2-6)
+
+20
+                                                       Physical Science - Integrated: Forces and Motion
+                                                              Arkansas K-12 Science Standards
+                                                             Arkansas Department of Education
+                                                                             2016
+ WHST.9-12.7     Conduct short as well as more sustained research projects to answer a question (including a self-
+                 generated question) or solve a problem; narrow or broaden the inquiry when appropriate;
+                 synthesize multiple sources on the subject, demonstrating understanding of the subject under
+                 investigation. (PSI-PS2-3,PSI-PS2-5)
+ WHST.11-12.8 Gather relevant information from multiple authoritative print and digital sources, using advanced
+                 searches effectively; assess the strengths and limitations of each source in terms of the specific
+                 task, purpose, and audience; integrate information into the text selectively to maintain the flow of
+                 ideas, avoiding plagiarism and overreliance on any one source and following a standard format for
+                 citation. (PSI-PS2-5)
+ WHST.9-12.9 Draw evidence from informational texts to support analysis, reflection, and research.
+                 (PSI-PS2-1,PSI-PS2-5)
+ Connections to the Arkansas English Language Arts Standards: N/A
+
+ Connections to the Arkansas Mathematics Standards:
+ A1.EFE.1        Represent and solve real-world problems using exponential equations in one variable.
+                 (PSI-PS2-1)
+ A1.EFE.9         Graph exponential functions that model real-world problems (growth, decay, and compound
+                 interest), showing key attributes. (PSI-PS2-1)
+ A1.EX.4         Interpret the parts of expressions such as terms, factors, and coefficients in terms of a real-world
+                 context. (PSI-PS2-1)
+ A1.LFE.1        Represent and solve real-world problems using linear expressions, equations, and inequalities in
+                 one variable. (PSI-PS2-1)
+ A1.LFE.3        Solve linear formulas for a specified variable. (PSI-PS2-1)
+ A1.LFE.16       Graph linear functions expressed as an equation and show intercepts of the graph without
+                 technology. (PSI-PS2-1)
+ A1.LFE.17       Graph absolute value functions expressed as an equation with and without technology, showing
+                 intercepts and end behavior. (PSI-PS2-1)
+ A1.QFE.1        Represent and solve real-world problems using quadratic expressions and equations in one
+                 variable. (PSI-PS2-1)
+ A1.QFE.2        Write quadratic equations with real number solutions that model the relationship between two
+                 quantities and produce a graph of the equation. (PSI-PS2-1)
+ A1.QFE.8        Explain how each form of a quadratic expression (standard, factored, and vertex form) identifies
+                 different key attributes, using the different forms to interpret quantities in context. (PSI-PS2-1)
+ A1.QFE.9        Use factoring and completing the square to create equivalent forms of quadratic functions to reveal
+                 key attributes. (PSI-PS2-1)
+ A1.QFE.10       Graph quadratic functions given as an equation or in function notation, labeling key attributes,
+                 without technology. (PSI-PS2-1)
+ A1.SP.1          Use box plots and histograms to determine the statistics appropriate to the shape of the data
+                 distribution; compare the center and spread of two or more data sets. (PSI-PS2-1)
+ A1.SP.3         Summarize data from two categorical variables in a frequency table; interpret relative frequencies
+                 in the context of the data, recognizing data trends and associations. (PSI-PS2-1, PSI-PS2-5
+                 PSI-PS2-6)
+ AR.M.2          Applying reasoning about quantities and relationships. (PSI-PS2-1, PSI3-ETS1-1)
+ AR.M.4          Select and use relationships and tools. (PSI-PS2-1, PSI3-ETS1-1)
+
+
+
+
+21
+                                        Physical Science - Integrated: Forces and Motion
+                                               Arkansas K-12 Science Standards
+                                              Arkansas Department of Education
+                                                              2016
+                                         Physical Science - Integrated
+Topic 4: Energy
+Students who demonstrate understanding can:
+PSI-PS3-1      Create a computational model to calculate the change in the energy of one component in a
+              system when the change in energy of the other component(s) and energy flows in and out of
+              the system are known. [AR Clarification Statement: This PE is partially addressed in this course.
+              Emphasis is on explaining the meaning of mathematical expressions used in the model. Models could
+              include spreadsheet analysis or other computer interfaces] [AR Assessment Boundary: Assessment
+              is limited to basic algebraic expressions or computations.
+ PSI-PS3-2     Develop and use models to illustrate that energy at the macroscopic scale can be accounted
+               for as a combination of energy associated with the motions of particles (objects) and energy
+              associated with the relative position of particles (objects). [Clarification Statement: Examples of
+              phenomena at the macroscopic scale could include the conversion of kinetic energy to thermal
+              energy, the energy stored due to position of an object above the earth, and the energy stored
+              between two electrically-charged plates. Examples of models could include diagrams, drawings,
+              descriptions, and computer simulations.] [AR Assessment Boundary: Assessment is limited to
+              mechanical energy.]
+ PSI-PS3-3    Design, build, and refine a device that works within given constraints to convert one form of
+              energy into another form of energy.* [Clarification Statement: Emphasis is on both qualitative and
+              quantitative evaluations of devices. Examples of devices could include Rube Goldberg devices, wind
+              turbines, solar cells, solar ovens, and generators. Examples of constraints could include use of
+              renewable energy forms and efficiency.] [Assessment Boundary: Assessment for quantitative
+              evaluations is limited to total output for a given input. Assessment is limited to devices constructed
+              with materials provided to students.]
+ PSI-PS3-4    Plan and conduct an investigation to provide evidence that the transfer of thermal energy
+              when two components of different temperature are combined within a closed system results in
+              a more uniform energy distribution among the components in the system (second law of
+              thermodynamics). [Clarification Statement: Emphasis is on analyzing data from student
+              investigations and using mathematical thinking to describe the energy changes both quantitatively
+              and conceptually. Examples of investigations could include mixing liquids at different initial
+              temperatures or adding objects at different temperatures to water.] [Assessment Boundary:
+              Assessment is limited to investigations based on materials and tools provided to students.]
+PSI4-ETS1-3 Evaluate a solution to a complex real-world problem based on prioritized criteria and tradeoffs
+              that account for a range of constraints, including cost, safety, reliability, and aesthetics, as
+              well as possible social, cultural, and environmental impacts. [AR Clarification Statement:
+              Examples could include building and evaluating wind turbines, solar cells, solar ovens, and
+              generators.]
+The performance expectations above were developed using the following elements from the NRC document A
+Framework for K-12 Science Education:
+
+ Science and Engineering Practices                 Disciplinary Core Ideas               Crosscutting Concepts
+Developing and Using Models              PS3.A: Definitions of Energy                 Systems and System Models
+Modeling in 9–12 builds on K–8 and        Energy is a quantitative property of a
+                                                                                       When investigating or
+progresses to using, synthesizing, and     system that depends on the motion            describing a system, the
+developing models to predict and show      and interactions of matter and               boundaries and initial
+relationships among variables between      radiation within that system. That there     conditions of the system
+systems and their components in the        is a single quantity called energy is        need to be defined and their
+natural and designed worlds.               due to the fact that a system’s total        inputs and outputs analyzed
+  Develop and use a model based on        energy is conserved, even as, within         and described using models.
+   evidence to illustrate the              the system, energy is continually            (PSI-PS3-4)
+   relationships between systems or        transferred from one object to another      Models can be used to
+   between components of a system.         and between its various possible             predict the behavior of a
+   (PS-PS3-2)                              forms. (PSI-PS3-1,PS-PS3-2)                  system, but these
+                                                                                        predictions have limited
+22
+                                            Physical Science - Integrated: Energy
+                                             Arkansas K-12 Science Standards
+                                             Arkansas Department of Education
+                                                           2016
+Planning and Carrying Out                   At the macroscopic scale, energy              precision and reliability due
+Investigations                               manifests itself in multiple ways, such       to the assumptions and
+Planning and carrying out                    as in motion, sound, light, and thermal       approximations inherent in
+investigations to answer questions or        energy.                                       models. (PSI-PS3-1)
+test solutions to problems in 9–12           (PSI-PS3-2, PSI-PS3-3)                      Energy and Matter
+builds on K–8 experiences and               These relationships are better               Changes of energy and
+progresses to include investigations         understood at the microscopic scale,          matter in a system can be
+that provide evidence for and test           at which all of the different                 described in terms of energy
+conceptual, mathematical, physical,          manifestations of energy can be               and matter flows into, out of,
+and empirical models.                        modeled as a combination of energy            and within that system.
+  Plan and conduct an investigation         associated with the motion of particles       (PSI-PS3-3)
+    individually and collaboratively to      and energy associated with the               Energy cannot be created or
+    produce data to serve as the basis       configuration (relative position of the       destroyed—only moves
+    for evidence, and in the design:         particles). In some cases the relative        between one place and
+    decide on types, how much, and           position energy can be thought of as          another place, between
+    accuracy of data needed to produce       stored in fields (which mediate               objects and/or fields, or
+    reliable measurements and consider       interactions between particles). This         between systems.
+    limitations on the precision of the      last concept includes radiation, a            (PSI-PS3-2)
+    data (e.g., number of trials, cost,      phenomenon in which energy stored in
+    risk, time), and refine the design       fields moves across space.                  -----------------------------------------
+    accordingly. (PSI-PS3-4)                 (PSI-PS3-2)                                  Connections to Engineering,
+Using Mathematics and                      PS3.B: Conservation of Energy and             Technology, and Applications
+Computational Thinking                     Energy Transfer                                             of Science
+Mathematical and computational              Conservation of energy means that the
+thinking at the 9–12 level builds on K–8     total change of energy in any system        Influence of Science,
+and progresses to using algebraic            is always equal to the total energy         Engineering, and
+thinking and analysis, a range of linear     transferred into or out of the system.      Technology on Society and
+and nonlinear functions including            (PSI-PS3-1)                                 the Natural World
+trigonometric functions, exponentials       Energy cannot be created or                   Modern civilization depends
+and logarithms, and computational            destroyed, but it can be transported           on major technological
+tools for statistical analysis to analyze,   from one place to another and                  systems. Engineers
+represent, and model data. Simple            transferred between systems.                   continuously modify these
+computational simulations are created        (PSI-PS3-1,PSI-PS3-4)                          technological systems by
+and used based on mathematical              Mathematical expressions, which                applying scientific
+models of basic assumptions.                 quantify how the stored energy in a            knowledge and engineering
+  Create a computational model or           system depends on its configuration            design practices to increase
+    simulation of a phenomenon,              (e.g. relative positions of charged            benefits while decreasing
+    designed device, process, or             particles, compression of a spring) and        costs and risks. (PSI-PS3-3)
+    system. (PSI-PS3-1)                      how kinetic energy depends on mass            New technologies can have
+Constructing Explanations and                and speed, allow the concept of                deep impacts on society and
+Designing Solutions                          conservation of energy to be used to           the environment, including
+Constructing explanations and                predict and describe system behavior.          some that were not
+designing solutions in 9–12 builds on        (PSI-PS3-1)                                    anticipated. Analysis of
+K–8 experiences and progresses to           The availability of energy limits what         costs and benefits is a
+explanations and designs that are            can occur in any system. (PSI-PS3-1)           critical aspect of decisions
+supported by multiple and independent  Uncontrolled systems always evolve                  about technology.
+student-generated sources of evidence        toward more stable states—that is,             (PSI4-ETS1-3)
+consistent with scientific ideas,            toward more uniform energy
+principles, and theories.                    distribution (e.g., water flows downhill,
+  Design, evaluate, and/or refine a         objects hotter than their surrounding       -------------------------------------------
+    solution to a complex real-world         environment cool down).                        Connections to Nature of
+    problem, based on scientific             (PSI-PS3-4)                                                Science
+    knowledge, student-generated
+    sources of evidence, prioritized
+23
+                                              Physical Science - Integrated: Energy
+                                               Arkansas K-12 Science Standards
+                                               Arkansas Department of Education
+                                                             2016
+   criteria, and tradeoff considerations.  PS3.D: Energy in Chemical Processes Scientific Knowledge
+   (PSI-PS3-3)                              Although energy cannot be destroyed,      Assumes an Order and
+  Evaluate a solution to a complex          it can be converted to less useful        Consistency in Natural
+   real-world problem, based on              forms—for example, to thermal energy Systems
+   scientific knowledge, student-            in the surrounding environment.             Science assumes the
+   generated sources of evidence,            (PSI-PS3-3,PSI-PS3-4)                        universe is a vast single
+   prioritized criteria, and tradeoff      ETS1.A: Defining and Delimiting                system in which basic laws
+   considerations. (PSI4-ETS1-3)           Engineering Problems                           are consistent.
+                                            Criteria and constraints also include        (PSI-PS3-1)
+                                             satisfying any requirements set by
+                                             society, such as taking issues of risk
+                                             mitigation into account, and they
+                                             should be quantified to the extent
+                                             possible and stated in such a way that
+                                             one can tell if a given design meets
+                                             them. (PSI-PS3-3)
+                                           ETS1.B: Developing Possible
+                                           Solutions
+                                            When evaluating solutions, it is
+                                             important to take into account a range
+                                             of constraints, including cost, safety,
+                                             reliability, and aesthetics, and to
+                                             consider social, cultural, and
+                                             environmental impacts. (PSI4-ETS1-3)
+Connections to other DCIs in this course: PSI.PS1.A (PSI-PS3-2); PSI.PS1.B (PSI-PS3-1,PSI-PS3-2); PSI.PS2.B
+(PSI-PS3-2); PSI.LS2.B (PSI-PS3-1); PSI.ESS2.D (PSI-PS3-4); PSI.ESS3.A (PSI-PS3-3)
+Connections to DCIs across grade-bands: 7.PS1.A (PSI-PS3-2); 8.PS2.B (PSI-PS3-2);
+8.PS3.A (PSI-PS3-1,PSI-PS3-2,PSI-PS3-3); 6.PS3.B (PSI-PS3-1,PSI-PS3-3,PSI-PS3-4); 6.PS3.C (PSI-PS3-2);
+7.ESS2.A (PSI-PS3-1,PSI-PS3-3); 6-8.ETS1.A (PSI4-ETS1-3); 6-8.ETS1.B (PSI4-ETS1-3)
+Connections to the Arkansas Disciplinary Literacy Standards:
+RST.11-12.1     Cite specific textual evidence to support analysis of science and technical texts, attending to
+                important distinctions the author makes and to any gaps or inconsistencies in the account.
+                (PSI-PS3-4)
+RST.11-12.7     Integrate and evaluate multiple sources of information presented in diverse formats and media (e.g.,
+                quantitative data, video, multimedia) in order to address a question or solve a problem.
+                 (PSI4-ETS1-3)
+RST.11-12.8     Evaluate the hypotheses, data, analysis, and conclusions in a science or technical text, verifying the
+                data when possible and corroborating or challenging conclusions with other sources of information.
+                (PSI4-ETS1-3)
+RST.11-12.9     Synthesize information from a range of sources (e.g., texts, experiments, simulations) into a
+                coherent understanding of a process, phenomenon, or concept, resolving conflicting information
+                when possible.
+                 (PSI-ETS1-3)
+WHST.9-12.7 Conduct short as well as more sustained research projects to answer a question (including a self-
+                generated question) or solve a problem; narrow or broaden the inquiry when appropriate; synthesize
+                multiple sources on the subject, demonstrating understanding of the subject under investigation.
+                (PSI-PS3-3, PSI-PS3-4)
+WHST.11-12.8 Gather relevant information from multiple authoritative print and digital sources, using advanced
+                searches effectively; assess the strengths and limitations of each source in terms of the specific
+                task, purpose, and audience; integrate information into the text selectively to maintain the flow of
+                ideas, avoiding plagiarism and overreliance on any one source and following a standard format for
+                citation. (PSI-PS3-4)
+WHST.9-12.9 Draw evidence from informational texts to support analysis, reflection, and research. (PSI-PS3-4)
+
+24
+                                            Physical Science - Integrated: Energy
+                                             Arkansas K-12 Science Standards
+                                             Arkansas Department of Education
+                                                           2016
+Connections to the Arkansas English Language Arts Standards:
+9-12.CC.9.P Include relevant multimedia to enhance understanding of findings, reasoning, and/or evidence.
+              (PSI-PS3-1. PSI-PS3-2)
+
+Connections to the Arkansas Mathematics Standards:
+A1.SP.3         Summarize data from two categorical variables in a frequency table; interpret relative frequencies in
+                the context of the data, recognizing data trends and associations. (PSI-PS3-1, PSI-PS3-3)
+AR.M.2          Applying reasoning about quantities and relationships. (PSI-PS3-1, PSI-PS3-2, PSI-PS3-3
+                PSI-PS3-4, PSI4-ETS1-3)
+AR.M.4          Select and use relationships and tools. (PSI-PS3-1, PSI-PS3-2, PSI-PS3-3, PSI-PS3-4,
+                 PSI4-ETS1-3)
+
+
+
+
+25
+                                            Physical Science - Integrated: Energy
+                                             Arkansas K-12 Science Standards
+                                             Arkansas Department of Education
+                                                           2016
+                                              Physical Science - Integrated
+Topic 5: Waves
+Students who demonstrate understanding can:
+ PSI-PS4-1 Use mathematical representations to support a claim regarding relationships among the
+              frequency, wavelength, and speed of waves traveling in various media. [AR Clarification
+              Statement: This PE is partially addressed in this course. Examples of data could include seismic
+              waves and sound waves traveling through air and water.] [AR Assessment Boundary: Assessment is
+              limited to describing relationships qualitatively.]
+ PSI-PS4-2 Evaluate questions about the advantages of using a digital transmission and storage of
+              information. [Clarification Statement: Examples of advantages could include that digital information
+              is stable because it can be stored reliably in computer memory, transferred easily, and copied and
+              shared rapidly. Disadvantages could include issues of easy deletion, security, and theft.]
+PSI-5-ETS1-2 Design a solution to a complex real-world problem by breaking it down into smaller, more
+               manageable problems that can be solved through engineering. [AR Clarification Statement:
+              Examples of possible problems could include cell phone reception, emergency radio transmission,
+              and earthquake notification.]
+The performance expectations above were developed using the following elements from the NRC document A
+Framework for K-12 Science Education:
+
+     Science and Engineering Practices                           Disciplinary Core Ideas            Crosscutting Concepts
+Asking Questions and Defining Problems                  PS4.A: Wave Properties                     Cause and Effect
+Asking questions and defining problems in                The wavelength and frequency of a         Empirical evidence is
+grades 9–12 builds from grades K–8                        wave are related to one another by         required to differentiate
+experiences and progresses to formulating,                the speed of travel of the wave,           between cause and
+refining, and evaluating empirically testable             which depends on the type of wave          correlation and make
+questions and design problems using models                and the medium through which it is         claims about specific
+and simulations.                                          passing. (PSI-PS4-1)                       causes and effects.
+  Evaluate questions that challenge the                 Information can be digitized (e.g., a      (PSI-PS4-1)
+    premise(s) of an argument, the                        picture stored as the values of an       Stability and Change
+    interpretation of a data set, or the suitability      array of pixels); in this form, it can    Systems can be
+    of a design.                                          be stored reliably in computer             designed for greater or
+    (PSI-PS4-2)                                           memory and sent over long                  lesser stability.
+Using Mathematics and Computational                       distances as a series of wave              (PSI-PS4-2)
+Thinking                                                  pulses. (PSI-PS4-2)
+Mathematical and computational thinking at              ETS1.C: Optimizing the Design              ------------------------------------
+the 9-12 level builds on K-8 and progresses to          Solution                                           Connections to
+using algebraic thinking and analysis, a range           Criteria may need to be broken           Engineering, Technology,
+of linear and nonlinear functions including               down into simpler ones that can be            and Applications of
+trigonometric functions, exponentials and                 approached systematically, and                        Science
+logarithms, and computational tools for                   decisions about the priority of
+statistical analysis to analyze, represent, and           certain criteria over others (trade-     Influence of Engineering,
+model data. Simple computational simulations              offs) may be needed.                     Technology, and Science
+are created and used based on mathematical                (PSI5-ETS1-2)                            on Society and the
+models of basic assumptions.                                                                       Natural World
+  Use mathematical representations of                                                               Modern civilization
+    phenomena or design solutions to describe                                                         depends on major
+    and/or support claims and/or explanations.                                                        technological systems.
+    (PSI-PS4-1)                                                                                       (PSI-PS4-2)
+Constructing Explanations and Designing                                                              Engineers continuously
+Solutions                                                                                             modify these
+Constructing explanations and designing                                                               technological systems
+solutions in 9–12 builds on K–8 experiences                                                           by applying scientific
+and progresses to explanations and designs                                                            knowledge and
+26
+                                                  Physical Science - Integrated: Waves
+                                                   Arkansas K-12 Science Standards
+                                                   Arkansas Department of Education
+                                                                 2016
+that are supported by multiple and                                                               engineering design
+independent student-generated sources of                                                         practices to increase
+evidence consistent with scientific ideas,                                                       benefits while
+principles and theories.                                                                         decreasing costs and
+  Design a solution to a complex real-world                                                     risks.(PSI-PS4-2)
+   problem, based on scientific knowledge,
+   student-generated sources of evidence,
+   prioritized criteria, and tradeoff
+   considerations. (PSI5-ETS1-2)
+Connections to other DCIs in this course: N/A
+Connections to DCIs across grade-bands: 8.PS4.A (PSI-PS4-1,PSII-PS4-2); 8.PS4.B (PS-PS4-1,PSI-PS4-2);
+8.PS4.C (PSI-PS4-2); 6-8.ETS1.A (PSI5-ETS1-2); 6-8.ETS1.B (PSI5-ETS1-2); 6-8.ETS1.C (PSI5-ETS1-2);
+Connections to the Arkansas Disciplinary Literacy Standards:
+RST.9-10.8         Assess the extent to which the reasoning and evidence in a text support the author’s claim or a
+                   recommendation for solving a scientific or technical problem. (PSI-PS4-2)
+RST.11-12.1        Cite specific textual evidence to support analysis of science and technical texts, attending to
+                   important distinctions the author makes and to any gaps or inconsistencies in the account.
+                   (PSI-PS4-2)
+RST.11-12.7        Integrate and evaluate multiple sources of information presented in diverse formats and media (e.g.,
+                   quantitative data, video, multimedia) in order to address a question or solve a problem. (PS-PS4-1)
+RST.11-12.8        Evaluate the hypotheses, data, analysis, and conclusions in a science or technical text, verifying the
+                   data when possible and corroborating or challenging conclusions with other sources of information.
+                   (PSI-PS4-2)
+Connections to the Arkansas English Language Arts Standards: N/A
+
+Connections to the Arkansas Mathematics Standards:
+A1.EX.4         Interpret the parts of expressions such as terms, factors, and coefficients in terms of a real-world
+                 context. (PSI-PS4-1)
+A1.LFE.3        Solve linear formulas for a specified variable. (PSI-PS4-1)
+A1.LFE.10       Translate among equivalent forms of equations for linear functions, including standard, point-slope,
+                 and slope-intercept forms; recognize that each form reveals key features in a given context.
+                 (PSI-PS4-1)
+A1.QFE.8         Explain how each form of a quadratic expression (standard, factored, and vertex form) identifies
+                 different key attributes, using the different forms to interpret quantities in context. (PSI-PS4-1)
+A1.QFE.9         Use factoring and completing the square to create equivalent forms of quadratic functions to reveal
+                 key attributes. (PSI-PS4-1)
+AR.M.2          Applying reasoning about quantities and relationships. (PSI-PS4-1)
+AR.M.4          Select and use relationships and tools. (PSI-PS4-1, PSI5-ETS1-2)
+
+
+
+
+27
+                                             Physical Science – Integrated: Waves
+                                              Arkansas K-12 Science Standards
+                                              Arkansas Department of Education
+                                                            2016
+                                  Physical Science - Integrated
+ Topic 6: Interactions of Humans and the Environment
+ Students who demonstrate understanding can:
+ PSI-LS2-7    Design, evaluate, and refine a solution for reducing the impacts of human activities on the
+              environment and biodiversity.* [AR Clarification Statement: This PE is partially addressed in this
+              course. Examples of human activities could include urbanization, fracking, greenhouse gases and
+              dams. [AR Assessment Boundary: Assessment is to include student choice from multiple scenarios.]
+ PSI-LS4-5    Evaluate the evidence supporting claims that changes in environmental conditions may result
+              in: (1) increases in the number of individuals of some species, (2) the emergence of new
+              species over time, and (3) the extinction of other species. [AR Clarification Statement: This PE
+              is partially addressed in this course. Emphasis is on physical changes to the environment
+              (temperature change and acidification).]
+ PSI-ESS2-1 Develop a model to illustrate how Earth’s internal and surface processes operate at different
+              spatial and temporal scales to form continental and ocean-floor features. [AR Clarification
+              Statement: Emphasis is on how the appearance of land features (mountains, valleys, and plateaus)
+              and sea floor features (trenches, ridges, and seamounts) are a result of both constructive forces
+              (volcanism, tectonic uplift, and orogeny) and destructive mechanisms (weathering, mass wasting, and
+              coastal erosion).
+ PSI-ESS3-1 Construct an explanation based on evidence for how the availability of natural resources,
+               occurrence of natural hazards, and changes in climate have influenced human activity. [AR
+              Clarification Statement: This PE is partially addressed in this course. Emphasis in this course is on
+              key natural resources. Examples could include access to fresh water (rivers, lakes, and
+              groundwater), regions of fertile soils (river deltas) and high concentrations of minerals and fossil fuels.
+              Examples of natural hazards could include from interior processes (volcanic eruptions), surface
+              processes (tsunamis, mass wasting, and soil erosion), and severe weather (hurricanes, floods, and
+              droughts). Examples of the results of changes in climate that could affect populations or drive mass
+              migrations could include changes to sea level and regional patterns of temperature and precipitation.]
+ PSI-ESS3-2 Evaluate competing design solutions for developing, managing, and utilizing energy and
+               mineral resources based on cost-benefit ratios.* [AR Clarification Statement: This PE is partially
+              addressed in this course. Emphasis is on identifying possible problems to be solved (conservation,
+              recycling, and minimizing impacts).]
+ PSI6-ETS1-1 Analyze a major global challenge to specify qualitative and quantitative criteria and
+               constraints for solutions that account for societal needs and wants. [AR Clarification Statement:
+              Examples could include research and analysis of the spread of zebra mussels, decline of chestnut
+              trees, and the impact of fracking.]
+ PSI6-ETS1-2 Design a solution to a complex real-world problem by breaking it down into smaller, more
+              manageable problems that can be solved through engineering. [AR Clarification Statement:
+              Examples of design challenges could include solving man-made erosion problems, reducing
+              thermal/light pollution, and safe disposal of fracking waste fluids.]
+ PSI6-ETS1-3 Evaluate a solution to a complex real-world problem based on prioritized criteria and tradeoffs
+              that account for a range of constraints, including cost, safety, reliability, and aesthetics, as
+              well as possible social, cultural, and environmental impacts. [AR Clarification Statement:
+              Examples could include the environmental effects of certain plastics (cost, safety, biodegradability,
+              and recyclability) and evaluating the tradeoffs for each source of energy production.]
+ PSI6-ETS1-4 Use a computer simulation to model the impact of proposed solutions to a complex real-world
+              problem with numerous criteria and constraints on interactions within and between systems
+              relevant to the problem. [AR Clarification Statement: Examples of possible simulations could
+              include spreadsheet analysis or other computer interfaces. Examples of possible computer simulation
+              resources could include PhET, ArcGIS, and InTeGrate-SERC.]
+
+
+
+
+28
+                               Physical Science - Integrated: Interactions of Humans and the Environment
+                                                    Arkansas K-12 Science Standards
+                                                   Arkansas Department of Education
+                                                                   2016
+ The performance expectations above were developed using the following elements from the NRC document A
+ Framework for K-12 Science Education:
+
+     Science and Engineering Practices                       Disciplinary Core Ideas                         Crosscutting Concepts
+ Engaging in Argument from                      LS2.C: Ecosystem Dynamics,                                  Stability and Change
+ Evidence                                       Functioning, and Resilience                                   Much of science deals
+ Engaging in argument from evidence in            Moreover, anthropogenic changes                             with constructing
+ 9-12 builds on K-8 experiences and                (induced by human activity) in the                          explanations of how
+ progresses to using appropriate and               environment—including habitat                               things change and how
+ sufficient evidence and scientific                destruction, pollution, introduction of                     they remain stable.
+ reasoning to defend and critique claims           invasive species, overexploitation, and                     (PSI-LS2-7)
+ and explanations about the natural and            climate change—can disrupt an                            Cause and Effect
+ designed world(s). Arguments may also             ecosystem and threaten the survival of                     Empirical evidence is
+ come from current or historical episodes          some species. (PSI-LS2-7)                                   required to differentiate
+ in science.                                    LS4.C: Adaptation                                              between cause and
+   Evaluate the evidence behind                  Changes in the physical environment,                        correlation and make
+     currently accepted explanations or            whether naturally occurring or human                        claims about specific
+     solutions to determine the merits of          induced, have thus contributed to the                       causes and effects.
+     arguments. (PSI-LS4-5)                        expansion of some species, the                              (PSI-LS4-5,
+    Evaluate competing design solutions           emergence of new distinct species as                         PSI-ESS3-1)
+     to a real-world problem based on              populations diverge under different                      Systems and System
+     scientific ideas and principles,              conditions, and the decline–and                          Models
+     empirical evidence, and logical               sometimes the extinction–of some                           Models (e.g., physical,
+     arguments regarding relevant factors          species. (PSI-LS4-5)                                        mathematical, computer
+     (e.g. economic, societal,                    Species become extinct because they                         models) can be used to
+     environmental, ethical                        can no longer survive and reproduce in                      simulate systems and
+     considerations). (PSI-ESS3-2)                 their altered environment. If members                       interactions—including
+ Asking Questions and Defining                     cannot adjust to change that is too fast or                 energy, matter, and
+ Problems                                          drastic, the opportunity for the species’                   information flows—
+ Asking questions and defining problems            evolution is lost. (PSI-LS4-5)                              within and between
+ in 9–12 builds on K–8 experiences and          LS4.D: Biodiversity and Humans                                 systems at different
+ progresses to formulating, refining, and         Biodiversity is increased by the formation                  scales.
+ evaluating empirically testable                   of new species (speciation) and                             (PSI6-ETS1-4)
+ questions and design problems using               decreased by the loss of species                         -------------------------------------
+ models and simulations.                           (extinction). (PSI-LS2-7)                                        Connections to
+   Analyze complex real-world problems           Humans depend on the living world for                    Engineering, Technology,
+     by specifying criteria and constraints        the resources and other benefits                              and Applications of
+     for successful solutions.                     provided by biodiversity. But human                                   Science
+     (PSI6-ETS1-1)                                 activity is also having adverse impacts on
+ Using Mathematics and                             biodiversity through overpopulation,                     Influence of Science,
+ Computational Thinking                            overexploitation, habitat destruction,                   Engineering, and
+ Mathematical and computational                    pollution, introduction of invasive                      Technology on Society
+ thinking in 9-12 builds on K-8                    species, and climate change. Thus                        and the Natural World
+ experiences and progresses to using               sustaining biodiversity so that ecosystem                  Engineers continuously
+ algebraic thinking and analysis, a range          functioning and productivity are                            modify these
+ of linear and nonlinear functions                 maintained is essential to supporting and                   technological systems
+ including trigonometric functions,                enhancing life on Earth. Sustaining                         by applying scientific
+ exponentials and logarithms, and                  biodiversity also aids humanity by                          knowledge and
+ computational tools for statistical               preserving landscapes of recreational or                    engineering design
+ analysis to analyze, represent, and               inspirational value. (PSI-LS2-7)                            practices to increase
+ model data. Simple computational               ESS2.A: Earth Materials and Systems                            benefits while
+ simulations are created and used based               Earth’s systems, being dynamic and                      decreasing costs and
+ on mathematical models of basic                         interacting, cause feedback effects                   risks. (PSI-ESS3-2)
+29
+                                Physical Science - Integrated: Interactions of Humans and the Environment
+                                                     Arkansas K-12 Science Standards
+                                                    Arkansas Department of Education
+                                                                    2016
+ assumptions.                                           that can increase or decrease the                   Analysis of costs and
+   Use mathematical models and/or                      original changes. (PSI-ESS2-1)                        benefits is a critical
+    computer simulations to predict the        ESS3.A: Natural Resources                                      aspect of decisions
+    effects of a design solution on              Resource availability has guided the                        about technology.
+    systems and/or the interactions               development of human society.                               (PSI-ESS3-2)
+    between systems. (PSI6-ETS1-4)                (PSI-ESS3-1)                                              New technologies can
+ Constructing Explanations and                   All forms of energy production and other                    have deep impacts on
+ Designing Solutions                              resource extraction have associated                         society and the
+ Constructing explanations and                    economic, social, environmental, and                        environment, including
+ designing solutions in 9–12 builds on            geopolitical costs and risks as well as                     some that were not
+ K–8 experiences and progresses to                benefits. New technologies and social                       anticipated. Analysis of
+ explanations and designs that are                regulations can change the balance of                       costs and benefits is a
+ supported by multiple and independent            these factors. (PSI-ESS3-2)                                 critical aspect of
+ student-generated sources of evidence         ESS3.B: Natural Hazards                                        decisions about
+ consistent with scientific ideas,               Natural hazards and other geologic                          technology.
+ principles and theories.                         events have shaped the course of                            (PSI6-ETS1-1,
+   Construct an explanation based on             human history; [they] have significantly                    PSI6-ETS1-3)
+    valid and reliable evidence obtained          altered the sizes of human populations                   -----------------------------------
+    from a variety of sources (including          and have driven human migrations.                         Connections to Nature
+    students’ own investigations, models,         (PSI-ESS3-1)                                                       of Science
+    theories, simulations, peer review)        ETS1.A: Defining and Delimiting
+    and the assumption that theories and       Engineering Problems                                        Science Addresses
+    laws that describe the natural world        Criteria and constraints also include                     Questions About the
+    operate today as they did in the past         satisfying any requirements set by                       Natural and Material
+    and will continue to do so in the             society, such as taking issues of risk                   World
+    future. (PSI-ESS3-1)                          mitigation into account, and they should                   Science and technology
+   Design, evaluate, and refine a                be quantified to the extent possible and                    may raise ethical issues
+    solution to a complex real-world              stated in such a way that one can tell if a                 for which science, by
+    problem, based on scientific                  given design meets them. (PSI6-ETS1-1)                      itself, does not provide
+    knowledge, student-generated                Humanity faces major global challenges                       answers and solutions.
+    sources of evidence, prioritized              today, such as the need for supplies of                     (PSI-ESS3-2)
+    criteria, and tradeoff considerations.        clean water and food or for energy                         Science knowledge
+    (PSI-LS2-7)                                   sources that minimize pollution, which                      indicates what can
+   Design a solution to a complex real-          can be addressed through engineering.                       happen in natural
+    world problem, based on scientific            These global challenges also may have                       systems—not what
+    knowledge, student-generated                  manifestations in local communities.                        should happen. The
+    sources of evidence, prioritized               (PSI6-ETS1-1)                                              latter involves ethics,
+    criteria, and tradeoff considerations.     ETS1.B: Developing Possible Solutions                          values, and human
+    (PSI6-ETS1-2)                               When evaluating solutions, it is important                   decisions about the use
+   Evaluate a solution to a complex              to take into account a range of                             of knowledge.
+    real-world problem, based on                  constraints, including cost, safety,                        (PSI-ESS3-2)
+    scientific knowledge, student-                reliability, and aesthetics, and to consider                Many decisions are not
+    generated sources of evidence,                social, cultural, and environmental                         made using science
+    prioritized criteria, and tradeoff            impacts.                                                    alone, but rely on social
+    considerations. (PSI6-ETS1-3)                 (PSI-LS2-7, PSI-ESS3-2, PSI6-ETS1-3)                        and cultural contexts to
+                                                Both physical models and computers can                       resolve issues.
+                                                  be used in various ways to aid in the                       (PSI-ESS3-2)
+                                                  engineering design process. Computers
+                                                  are useful for a variety of purposes, such
+                                                  as running simulations to test different
+                                                  ways of solving a problem or to see
+                                                  which one is most efficient or
+                                                  economical; and in making a persuasive
+                                                  presentation to a client about how a
+30
+                               Physical Science - Integrated: Interactions of Humans and the Environment
+                                                    Arkansas K-12 Science Standards
+                                                   Arkansas Department of Education
+                                                                   2016
+                                              given design will meet his or her needs.
+                                              (PSI6-ETS1-4)
+                                           ETS1.C: Optimizing the Design Solution
+                                             Criteria may need to be broken down into
+                                              simpler ones that can be approached
+                                              systematically, and decisions about the
+                                              priority of certain criteria over others
+                                              (trade-offs) may be needed.
+                                              (PSI6-ETS1-2)
+ Connections to other DCIs in this course: PSI.PS3.B (PSI-ESS3-2); PSI.PS3.D (PSI-ESS3-2); PSI.LS2.B
+ (PS-ESS3-2); PSI.LS3.B (PSI-LS4-5); PSI.ESS2.D (PSI-LS2-7); PSI.ESS2.E (PSI-LS2-7, PSI-LS4-5); PSI.ESS3.A
+ (PSI-LS2-7, PSI-LS4-5)
+ Connections to DCIs across grade-bands: 6.PS3.D (PSI-ESS3-2); 7.LS2.A (PSI-LS4-5, PSI-ESS3-1, PSII-ESS3-2);
+ 7.LS2.B (PS-ESS3-2); 7.LS2.C (PSI-LS2-7, PSI-LS4-5); 8.LS4.C (PSI-LS4-5); 7.LS4.D (PSI-ESS3-1, PSI-ESS3-2);
+ 7.ESS2.A (PSI-ESS3-1); 7.ESS3.A (PSI-ESS3-1, PSI-ESS3-2); 7.ESS3.B (PSI-ESS3-1); 6.ESS3.C (PS-LS2-7,
+ PSI-LS4-5, PSI-ESS3-2); 6.ESS3.D (PSI-LS2-7); 6-8.ETS1.A (PSI-ETS1-1, PSI6-ETS1-2, PSI6-ETS1-3,
+ PSI6-ETS1-4);
+ 6-8.ETS1.B (PSI6-ETS1-2, PSI6-ETS1-3, PSI6-ETS1-4); 6-8.ETS1.C (PSI6-ETS1-2, PSI6-ETS1-4)
+ Connections to the Arkansas Disciplinary Literacy Standards:
+ RST.9-10.8      Assess the extent to which the reasoning and evidence in a text support the author’s claim or a
+                 recommendation for solving a scientific or technical problem. (PSI-LS2-7)
+ RST.11-12.1     Cite specific textual evidence to support analysis of science and technical texts, attending to
+                 important distinctions the author makes and to any gaps or inconsistencies in the account.
+                  (PSI-ESS3-1,PSI-ESS3-2)
+ RST.11-12.7     Integrate and evaluate multiple sources of information presented in diverse formats and media
+                 (e.g., quantitative data, video, multimedia) in order to address a question or solve a problem.
+                 (PSI-LS2-7, PSI6-ETS1-1, PSI6-ETS1-3)
+ RST.11-12.8     Evaluate the hypotheses, data, analysis, and conclusions in a science or technical text, verifying
+                 the data when possible and corroborating or challenging conclusions with other sources of
+                 information. (PSI-LS2-7, PSI-LS4-5, PSI-ESS3-2, PSI6-ETS1-1, PSI6-ETS1-3)
+ RST.11-12.9     Synthesize information from a range of sources (e.g., texts, experiments, simulations) into a
+                 coherent understanding of a process, phenomenon, or concept, resolving conflicting information
+                 when possible. (PSI6-ETS1-1, PSI6-ETS1-3)
+ WHST.9-12.2 Write informative/explanatory texts, including the narration of historical events, scientific
+                 procedures/ experiments, or technical processes. (PSI-ESS3-1)
+ WHST.9-12.9 Draw evidence from informational texts to support analysis, reflection, and research. (PSI-LS4-5)
+
+ Connections to the Arkansas English Language Arts Standards: N/A
+
+ Connections to the Arkansas Mathematics Standards:
+ A1.SP.3        Summarize data from two categorical variables in a frequency table; interpret relative frequencies in
+                 the context of the data, recognizing data trends and associations. (PSI-LS2-7, PSI-ESS3-1)
+ AR.M.2          Applying reasoning about quantities and relationships. (PSI-LS2-7, PSI-LS4-5, PSI-ESS3-1,
+                 PSI-ESS3-2, PSI6-ETS1-1, PSI6-ETS1-3, PSI6-ETS1-4)
+ AR.M.4          Select and use relationships and tools. (PSI6-ETS1-1, PSI6-ETS1-2, PSI6-ETS1-3, PSI6-ETS1-4)
+
+
+
+
+31
+                              Physical Science - Integrated: Interactions of Humans and the Environment
+                                                   Arkansas K-12 Science Standards
+                                                  Arkansas Department of Education
+                                                                  2016
+                                                       Contributors
+
+The following educators contributed to the development of this course:
+
+ Susan Allison – Benton School District                              Steven Long – Rogers School District
+
+ Angela Bassham – Salem School District                              Brandon Lucius – Osceola School District
+
+ Allison Belcher – Little Rock School District                       Matt Martin – Centerpoint School District
+
+ Debbie Bilyeu – Arkansas AIMS                                       Patti Meeks – Hamburg School District
+
+ Tami Blair – Texarkana School District                              Melissa Miller – Farmington School District
+
+ Stephen Brodie – University of Arkansas at Fort Smith               Jim Musser – Arkansas Tech University
+ STEM Center
+ Stephanie Brown – Quitman School District                           Nanette Nichols – Wilbur D. Mills AR Education
+                                                                     Cooperative
+
+ Sarah Croswell – Virtual Arkansas                                   John Nilz – North Little Rock School District
+
+ Tami Eggensperger – Cabot School District                           Dennis Pevey – eSTEM Public Charter School
+
+ Jenna Gill – Siloam Springs School District                         Tami Philyaw – Smackover – Norphlet School District
+
+ Douglas Hammon – Little Rock School District                        Kathy Prophet – Springdale School District
+
+ Keith Harris – University of Arkansas at Little Rock                Carrie Shell – Highland School District
+ Partnership for STEM Education
+ Lynne Hehr – University of Arkansas at Fayetteville                 Will Squires – Caddo Hills School District
+ STEM Center for Math and Science Education –
+ Leonda Holthoff – Star City School District                         Eddie Tucker – Hamburg School District
+
+ Courtney Jones – Lincoln Consolidated School District               Jon White – Harding University
+
+ Rebecca Koelling – Highland School District                         Andrew Williams – University of Arkansas at
+                                                                     Monticello
+
+ Karen Ladd – Nettleton School District                              Wendi J.W. Williams – Northwest Arkansas
+                                                                     Community College
+
+ John Levy – North Arkansas College                                  Cathy Wissehr – University of Arkansas at Fayetteville
+
+
+
+
+32
+                                            Physical Science - Integrated: Contributors
+                                               Arkansas K-12 Science Standards
+                                               Arkansas Department of Education
+                                                               2016
+

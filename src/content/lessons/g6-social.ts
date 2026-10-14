@@ -733,4 +733,16 @@ export const lessons: GradeLessons = {
     ["The Black Death came in 1347.", "The printing press came about 1450."],
     "the Black Death reaches Europe",
   ),
+  "social/ny-g9-crusades-plague": lesson(
+    ["The Crusades were wars over the Holy Land; Venice and Genoa grew rich shipping crusaders and trading.", "The Reconquista was Christian kingdoms taking back Iberia from Muslim rulers.", "The Black Death reached Europe in 1347 by trade routes, carried by fleas on rats. Cities used quarantine (40 days apart) to slow it."],
+    "What was the Reconquista?",
+    ["Muslim rulers had held much of Spain and Portugal.", "Christian kingdoms fought to take it back."],
+    "the effort by Christian kingdoms to take back the Iberian Peninsula",
+  ),
+  "social/ca-g7-aztec-inca": lesson(
+    ["The Maya built cities like Tikal in the rainforests of Central America, with skill in math and astronomy.", "The Aztec farmed on floating gardens called chinampas. The Inca cut terraces into mountains and used the mit’a labour tax.", "Spain defeated the Aztec and Inca empires. Maya, Nahua and Quechua peoples are living communities today."],
+    "What were chinampas?",
+    ["The Aztec capital stood in a lake.", "They built floating gardens on the water to grow crops."],
+    "floating gardens the Aztec used to grow crops",
+  ),
 };

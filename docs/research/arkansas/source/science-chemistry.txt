@@ -1,0 +1,1604 @@
+                      Chemistry - Integrated
+
+
+
+
+                                         2016
+Re-aligned Fall 2024 to the Arkansas Mathematics Standards, Arkansas English Language Arts Standards,
+and Arkansas Disciplinary Literacy Standards
+                                       Table of Contents
+Arkansas K-12 Science Standards Overview ..................................................................................... 3
+
+How to Read................................................................................................................................... 6
+
+Chemistry - Integrated Course Learning Progression Chart ................................................................. 7
+
+Chemistry - Integrated Course Overview ........................................................................................... 8
+
+Chemistry - Integrated Course Topics Overview................................................................................. 9
+
+Topic 1: Matter and Chemical Reactions .................................................................................................11
+
+Topic 2: Nuclear Reactions .....................................................................................................................15
+
+Topic 3: Energy Flow ...............................................................................................................................20
+
+Topic 4: Waves .......................................................................................................................................26
+
+Topic 5: Forces........................................................................................................................................30
+
+Contributors ............................................................................................................................................34
+
+
+
+
+Notes:
+   1. Student Performance Expectations (PEs) may be taught in any sequence or grouping within a
+       grade level. Several PEs are described as being “partially addressed in this course” because the
+       same PE is revisited in a subsequent course during which that PE is fully addressed.
+   2. An asterisk (*) indicates an engineering connection to a practice, core idea, or crosscutting
+       concept.
+   3. The Clarification Statements are examples and additional guidance for the instructor. AR indicates
+       Arkansas-specific Clarification Statements.
+   4. The Assessment Boundaries delineate content that may be taught but not assessed in large-scale
+       assessments. AR indicates Arkansas-specific Assessment Boundaries.
+   5. The section entitled “foundation boxes” is reproduced verbatim from A Framework for K-12
+       Science Education: Practices, Crosscutting Concepts, and Core Ideas. Integrated and reprinted
+       with permission from the National Academy of Sciences.
+   6. The examples given (e.g.,) are suggestions for the instructor.
+   7. Throughout this document, connections are provided to the nature of science as defined by A
+       Framework for K-12 Science Education (NRC 2012).
+   8. Throughout this document, connections are provided to Engineering, Technology, and
+       Applications of Science as defined by A Framework for K-12 Science Education (NRC 2012).
+   9. Each set of PEs lists connections to other disciplinary core ideas (DCIs) within the Arkansas K-12
+       Science Standards and to the Arkansas English Language Arts Standards, Arkansas Disciplinary
+       Literacy Standards, and the Arkansas Mathematics Standards.
+
+
+2
+                                                               Chemistry - Integrated
+                                                          Arkansas K-12 Science Standards
+                                                          Arkansas Department of Education
+                                                                       2016
+                            Arkansas K-12 Science Standards Overview
+
+The Arkansas K-12 Science Standards are based on A Framework for K-12 Science Education (NRC
+2012) and are meant to reflect a new vision for science education. The following conceptual shifts reflect
+what is new about these science standards. The Arkansas K-12 Science Standards
+   • reflect science as it is practiced and experienced in the real world,
+   • build logically from Kindergarten through Grade 12,
+   • focus on deeper understanding as well as application of content,
+   • integrate practices, crosscutting concepts, and core ideas, and
+   • make explicit connections to literacy and math.
+
+As part of teaching the Arkansas K-12 Science Standards, it will be important to instruct and guide
+students in adopting appropriate safety precautions for their student-directed science investigations.
+Reducing risk and preventing accidents in science classrooms begin with planning. The following four
+steps are recommended in carrying out a hazard and risk assessment for any planned lab investigation:
+    1) Identify all hazards. Hazards may be physical, chemical, health, or environmental.
+    2) Evaluate the type of risk associated with each hazard.
+    3) Write the procedure and all necessary safety precautions in such a way as to eliminate or reduce
+       the risk associated with each hazard.
+    4) Prepare for any emergency that might arise in spite of all of the required safety precautions.
+
+According to Arkansas Code Annotated § 6-10-113 (2012) for eye protection, every student and teacher
+in public schools participating in any chemical or combined chemical-physical laboratories involving
+caustic or explosive chemicals or hot liquids or solids is required to wear industrial-quality eye protective
+devices (eye goggles) at all times while participating in science investigations.
+
+The Arkansas K-12 Science Standards outline the knowledge and science and engineering practices that
+all students should learn by the end of high school. The standards are three-dimensional because each
+student performance expectation engages students at the nexus of the following three dimensions:
+
+    •   Dimension 1 describes scientific and engineering practices.
+    •   Dimension 2 describes crosscutting concepts, overarching science concepts that apply across
+        science disciplines.
+    •   Dimension 3 describes core ideas in the science disciplines.
+
+                                    Science and Engineering Practices
+
+The eight practices describe what scientists use to investigate and build models and theories of the world
+around them or that engineers use as they build and design systems. The practices are essential for all
+students to learn and are as follows:
+           1. Asking questions (for science) and defining problems (for engineering)
+           2. Developing and using models
+           3. Planning and carrying out investigations
+           4. Analyzing and interpreting data
+           5. Using mathematics and computational thinking
+           6. Constructing explanations (for science) and designing solutions (for engineering)
+           7. Engaging in argument from evidence
+           8. Obtaining, evaluating, and communicating information
+
+
+
+3
+                                              Chemistry - Integrated
+                                         Arkansas K-12 Science Standards
+                                         Arkansas Department of Education
+                                                      2016
+                                          Crosscutting Concepts
+
+The seven crosscutting concepts bridge disciplinary boundaries and unit core ideas throughout the fields
+of science and engineering. Their purpose is to help students deepen their understanding of the
+disciplinary core ideas, and develop a coherent, and scientifically based view of the world. The seven
+crosscutting concepts are as follows:
+         1. Patterns- Observed patterns of forms and events guide organization and classification, and
+         prompt questions about relationships and the factors that influence them.
+         2. Cause and effect- Mechanism and explanation. Events have causes, sometimes simple,
+         sometimes multifaceted. A major activity of science is investigating and explaining causal
+         relationships and the mechanisms by which they are mediated. Such mechanisms can then be
+         tested across given contexts and used to predict and explain events in new contexts.
+         3. Scale, proportion, and quantity- In considering phenomena, it is critical to recognize what is
+         relevant at different measures of size, time, and energy and to recognize how changes in scale,
+         proportion, or quantity affect a system’s structure or performance.
+         4. Systems and system models- Defining the system under study—specifying its boundaries and
+         making explicit a model of that system—provides tools for understanding and testing ideas that
+         are applicable throughout science and engineering.
+         5. Energy and matter: Flows, cycles, and conservation- Tracking fluxes of energy and matter into,
+         out of, and within systems helps one understand the systems’ possibilities and limitations.
+         6. Structure and function- The way in which an object or living thing is shaped and its substructure
+         determines many of its properties and functions.
+         7. Stability and change- For natural and built systems alike, conditions of stability and
+         determinants of rates of change or evolution of a system are critical elements of study.
+
+
+                                          Disciplinary Core Ideas
+
+The disciplinary core ideas describe the content that occurs at each grade or course. The Arkansas K-12
+Science Standards focus on a limited number of core ideas in science and engineering both within and
+across the disciplines and are built on the notion of learning as a developmental progression. The
+Disciplinary Core Ideas are grouped into the following domains:
+
+    •   Physical Science (PS)
+    •   Life Science (LS)
+    •   Earth and Space Science (ESS)
+    •   Engineering, Technology and Applications of Science (ETS)
+
+
+                     Connections to the Arkansas English Language Arts Standards
+
+Evidence-based reasoning is the foundation of good scientific practice. The Arkansas K-12 Science
+Standards incorporate reasoning skills used in language arts to help students improve mastery and
+understanding in all three disciplines. The Arkansas K-8 Science Committee made every effort to align
+grade-by-grade with the English language arts (ELA) standards so concepts support what students are
+learning in their entire curriculum. Connections to specific ELA standards are listed for each student
+performance expectation, giving teachers a blueprint for building comprehensive cross-disciplinary
+lessons.
+The intersections between Arkansas K-12 Science Standards and Arkansas ELA Standards teach
+students to analyze data, model concepts, and strategically use tools through productive talk and shared
+activity. Reading in science requires an appreciation of the norms and conventions of the discipline of
+4
+                                              Chemistry - Integrated
+                                         Arkansas K-12 Science Standards
+                                         Arkansas Department of Education
+                                                      2016
+science, including understanding the nature of evidence used, an attention to precision and detail, and
+the capacity to make and assess intricate arguments, synthesize complex information, and follow detailed
+procedures and accounts of events and concepts. These practice-based standards help teachers foster a
+classroom culture where students think and reason together, connecting around the subject matter and
+core ideas.
+
+                      Connections to the Arkansas Disciplinary Literacy Standards
+
+Reading is critical to building knowledge in science. College and career ready reading in science requires
+an appreciation of the norms and conventions of each discipline, such as the kinds of evidence used in
+science; an understanding of domain-specific words and phrases; an attention to precise details; and the
+capacity to evaluate intricate arguments, synthesize complex information, and follow detailed descriptions
+of events and concepts. When reading scientific and technical texts, students need to be able to gain
+knowledge from challenging texts that often make extensive use of elaborate diagrams and data to
+convey information and illustrate concepts. Students must be able to read complex informational texts in
+science with independence and confidence because the vast majority of reading in college and workforce
+training programs will be sophisticated nonfiction.
+
+For students, writing is a key means of asserting and defending claims, showing what they know about
+science, and conveying what they have experienced, imagined, thought, and felt. To be college and
+career ready writers, students must take task, purpose, and audience into careful consideration, choosing
+words, information, structures, and formats deliberately. They need to be able to use technology
+strategically when creating, refining, and collaborating on writing. They have to become adept at
+gathering information, evaluating sources, and citing material accurately, reporting finds from their
+research and analysis of sources in a clear and cogent manner. They must have the flexibility,
+concentration, and fluency to produce high-quality first-draft text under a tight deadline and the capacity
+to revisit and make improvements to a piece of writing over multiple drafts when circumstances
+encourage or require it.
+
+                          Connections to the Arkansas Mathematics Standards
+
+Science is a quantitative discipline, so it is important for educators to ensure that students’ science
+learning coheres well with their understanding of mathematics. To achieve this alignment, the Arkansas
+K-12 Science Committee made every effort to ensure that the mathematics standards do not outpace or
+misalign to the grade-by-grade science standards. Connections to specific math standards are listed for
+each student performance expectation, giving teachers a blueprint for building comprehensive cross-
+disciplinary lessons.
+
+
+
+
+5
+                                             Chemistry - Integrated
+                                        Arkansas K-12 Science Standards
+                                        Arkansas Department of Education
+                                                     2016
+6
+         Chemistry - Integrated
+    Arkansas K-12 Science Standards
+    Arkansas Department of Education
+                 2016
+                      Chemistry - Integrated Learning Progression Chart
+
+    Topic 1: Matter        Topic 2:
+                                            Topic 3: Energy
+     and Chemical          Nuclear                                   Topic 4: Waves   Topic 5: Forces
+                                                 Flow
+      Reactions           Reactions
+
+    AR CI-PS1-1       CI-PS1-8             CI-PS1-4                AR CI-PS4-1        AR CI-PS2-1
+
+    AR CI-PS1-2       CI-ESS1-1            CI-PS1-5                CI-PS4-3           CI-PS2-2
+
+    AR CI-PS1-3       CI-ESS1-3            AR CI-PS3-1             CI-PS4-4           CI-PS2-4
+
+    CI-PS1-6          CI-ESS1-6            CI-ESS1-2               CI-PS4-5           CI-PS3-5
+
+    AR CI-PS1-7       AR CI2-ETS1-1        CI-ESS2-3               AR CI4-ETS1-4      CI-ESS1-4
+
+    CI-ESS2-5         AR CI2-ETS1-2        AR CI-ESS3-4                               AR CI5-ETS1-2
+
+    AR CI1-ETS1-2     AR CI2-ETS1-3        AR CI3-ETS1-1
+
+                         AR CI2-ETS1-4
+    Arkansas Clarification Statement/Assessment Boundary (AR)
+
+
+
+
+7
+                                            Chemistry - Integrated
+                                       Arkansas K-12 Science Standards
+                                       Arkansas Department of Education
+                                                    2016
+                              Chemistry - Integrated Course Overview
+                                          (Course code 421000)
+
+The Arkansas K-12 Science Standards for chemistry - integrated is an integrated science course that
+focuses on conceptual understanding of the foundational chemistry and physics core ideas, science and
+engineering practices, and crosscutting concepts and is composed of chemistry, physics, Earth and
+space science, and engineering design standards. It is recommended that students be enrolled in
+algebra II concurrently with this course. Teachers with chemistry, physics, physical Science,
+physical/Earth, or physics/math licenses are qualified to teach this course. Students will earn a 1 unit of
+Smart Core/chemistry credit for graduation.
+
+Students in chemistry - integrated fully develop their understanding of the core ideas in the physical and
+Earth and space sciences. These ideas include the more complex concepts from chemistry, physics, and
+Earth science but are intended to leave room for expanded study in career-focus high school courses.
+The performance expectations (standards) build on the physical science ideas and skills and allow high
+school students to explain more in-depth phenomena foundational to chemistry, physics, and Earth and
+space sciences as well. These performance expectations blend the core ideas with scientific and
+engineering practices and crosscutting concepts to support students in developing usable knowledge to
+explain ideas across these science disciplines. In the physical science performance expectations at the
+high school level, there is a focus on several scientific practices.
+
+Connections with other science disciplines help high school students develop these capabilities in various
+contexts. For example, in the environmental science course students re-apply their engineering
+capabilities to reduce human impacts on Earth systems and improve social and environmental cost-
+benefit ratios (ENV-ESS3-3, ENV-ESS3-4).
+
+Additionally, it should be noted that the chemistry - integrated standards are not intended to be used as
+curriculum. Instead, the standards are the minimum that students should know and be able to do.
+Therefore, teachers should continue to differentiate for the needs of their students by adding depth and
+additional rigor.
+
+Students in Chemistry - Integrated also continue their ability to develop possible solutions for major global
+problems with engineering design challenges. At the high school level, students are expected to engage
+with major global issues at the interface of science, technology, society and the environment, and to bring
+to light the kinds of analytical and strategic thinking that prior training and increased maturity make
+possible. As in prior levels, these capabilities can be thought of in three stages:
+             ● Defining the problem at the high school level requires both qualitative and quantitative
+         analysis. For example, the need to provide food and fresh water for future generations comes into
+         sharp focus when considering the speed at which the world population is growing and conditions
+         in countries that have experienced famine. While high school students are not expected to solve
+         these challenges, they are expected to begin thinking about them as problems that can be
+         addressed, at least in part, through engineering.
+             ● Developing possible solutions for major global problems begins by breaking them down
+         into smaller problems that can be tackled with engineering methods. To evaluate potential
+         solutions, students are expected to not only consider a wide range of criteria but to also recognize
+         that criteria needs to be prioritized. For example, public safety or environmental protection may be
+         more important than cost or even functionality. Decisions on priorities can then guide tradeoff
+         choices.
+             ● Improving designs at the high school level may involve sophisticated methods, such as
+         using computer simulations to model proposed solutions. Students are expected to use such
+         methods to take into account a range of criteria and constraints, anticipate possible societal and
+         environmental impacts, and test the validity of their simulations by comparison to the real world.
+8
+                                              Chemistry - Integrated
+                                         Arkansas K-12 Science Standards
+                                         Arkansas Department of Education
+                                                      2016
+                              Chemistry - Integrated Topics Overview
+
+The performance expectations in Topic 1: Matter and Chemical Reactions help students answer
+these questions:
+
+    •   How can the structure and properties of matter be explained?
+    •   How do substances combine or change (react) to make new substances?
+    •   How can patterns be used to characterize and predict chemical reactions?
+
+Students develop an understanding of the substructure of atoms and provide more mechanistic
+explanations of the properties of substances. Students learn how to use the periodic table as a tool to
+explain and predict the properties of elements. Chemical reactions, including rates of reactions and
+energy changes, can be understood by students at this level in terms of the collisions of molecules and
+the rearrangements of atoms. Using this expanded knowledge of chemical reactions, students are able to
+explain important biological and geophysical phenomena. Students apply an understanding of the
+process of optimization in engineering design to chemical reaction systems.
+
+The performance expectations in Topic 2: Nuclear Reactions help students answer these questions:
+
+    •   How do nuclear reactions differ from chemical reactions?
+    •   What nuclear processes are associated with stars?
+    •   How are elements transformed through nuclear processes?
+
+Students develop an understanding of the formation and abundance of elements, radioactivity, the
+release of energy from the sun and other stars, and the generation of nuclear power.
+
+The performance expectations in Topic 3: Energy Flow help students answer these questions:
+
+    •   How does energy flow in a system?
+    •   How is energy transferred?
+    •   How is energy conserved?
+
+This topic is organized into four ideas: definitions of energy, conservation of energy and energy transfer,
+the relationship between energy and forces, and energy in chemical process and everyday life. Students
+develop an understanding of energy as a quantitative property of a system that depends on the motion
+and interactions of matter and radiation within that system. The total change of energy in any system is
+always equal to the total energy transferred into or out of the system. Students develop an understanding
+that energy at both the macroscopic and the atomic scale can be accounted for as either motions of
+particles or energy associated with the configuration (relative positions) of particles. In some cases, the
+energy associated with the configuration of particles can be thought of as stored in fields. Additionally,
+students explore energy interactions associated with geologic processes such as plate tectonics, seismic
+waves, and convection. Students demonstrate understanding of engineering principles by designing,
+building, and refining devices associated with the conversion of energy.
+
+
+
+
+The performance expectations in Topic 4: Waves help students answer these questions:
+
+9
+                                             Chemistry - Integrated
+                                        Arkansas K-12 Science Standards
+                                        Arkansas Department of Education
+                                                     2016
+     •   How do the properties of waves affect their function?
+     •   How are waves used to transfer energy?
+     •   How are waves used to send and store information?
+     •   How do electromagnetic radiation and matter interact?
+
+This topic is organized into three ideas: wave properties, electromagnetic radiation, and information
+technologies/instrumentation. Students develop an understanding of how wave properties and the
+interactions of electromagnetic radiation with matter can transfer information across long distances, store
+information, and be used to investigate nature on many scales. Models of electromagnetic radiation as
+either a wave of changing electric/magnetic fields and/or as particles are developed and used. Students
+understand that combining waves of different frequencies can make a wide variety of patterns and
+thereby encode and transmit information. Students demonstrate understanding of engineering ideas by
+presenting information about how technological devices use the principles of wave behavior and wave
+interactions with matter to transmit and capture information and energy.
+
+The performance expectations in Topic 5: Forces help students answer these questions:
+
+     •   How do forces cause microscopic to macroscopic changes?
+     •   How can one explain and predict interactions between objects and within systems of objects?
+     •   How do intermolecular forces determine properties such as melting point, boiling point, vapor
+         pressure, and surface tension?
+     •   How does the net momentum of particles on the microscale relate to Kinetic Molecular Theory?
+     •   How can forces and momentum be modeled mathematically?
+
+This topic is organized into two ideas: forces and motion as well as types of interactions. Students are
+expected to develop an understanding of forces and interactions as they are described by Newton’s laws.
+Students develop an understanding that the total momentum of a system of objects is conserved when
+there is no net force on the system. Students use Newton’s law of gravitation and Coulomb’s law to
+describe and predict the gravitational and electrostatic forces between objects. Students apply scientific
+and engineering ideas to design, evaluate, and refine a device that minimizes the force on a macroscopic
+object during a collision.
+
+
+
+
+10
+                                             Chemistry - Integrated
+                                        Arkansas K-12 Science Standards
+                                        Arkansas Department of Education
+                                                     2016
+                                Chemistry - Integrated
+Topic 1: Matter and Chemical Reactions
+Students who demonstrate understanding can:
+CI-PS1-1 Use the periodic table as a model to predict the relative properties of elements based on the
+            patterns of electrons in the outermost energy level of atoms. [AR Clarification Statement: This
+            PE is fully addressed in this course. Examples of properties that could be predicted from patterns
+            could include reactivity of metals, types of bonds formed, numbers of bonds formed, and reactions
+            with oxygen.] [AR Assessment Boundary: Assessment is limited to main group elements. Assessment
+            does not include exceptions to periodic trends.]
+CI-PS1-2 Construct and revise an explanation for the outcome of a simple chemical reaction based on
+            the outermost electron states of atoms, trends in the periodic table, and knowledge of the
+            patterns of chemical properties. [AR Clarification Statement: This PE is fully addressed in this
+            course. Examples of chemical reactions could include the reaction of sodium and chlorine, carbon and
+            oxygen, and carbon and hydrogen.] [Assessment Boundary: Assessment is limited to chemical
+            reactions involving main group elements and combustion reactions.]
+CI-PS1-3    Plan and conduct an investigation to gather evidence to compare the structure of substances
+           at the bulk scale to infer the strength of electrical forces between particles. [AR Clarification
+           Statement: This PE is fully addressed in this course. Emphasis is on understanding the strengths of
+           forces between particles, including identifying and naming specific intermolecular forces (dipole-
+           dipole). Examples of particles could include ions, atoms, molecules, and networked materials
+            (graphite). Examples of bulk properties of substances could include the melting point and boiling point,
+            vapor pressure, and surface tension.] [Assessment Boundary: Assessment does not include Raoult’s
+            law calculations of vapor pressure.]
+ CI-PS1-6 Refine the design of a chemical system by specifying a change in conditions that would
+            produce increased amounts of products at equilibrium.* [Clarification Statement: Emphasis is on
+            the application of Le Chatelier’s Principle and on refining designs of chemical reaction systems,
+            including descriptions of the connection between changes made at the macroscopic level and what
+            happens at the molecular level. Examples of designs could include different ways to increase product
+            formation including adding reactants or removing products.] [Assessment Boundary: Assessment is
+            limited to specifying the change in only one variable at a time. Assessment does not include
+            calculating equilibrium constants and concentrations.]
+CI-PS1-7 Use mathematical representations to support the claim that atoms, and therefore mass, are
+            conserved during a chemical reaction. [AR Clarification Statement: This PE is fully addressed in
+            this course. Emphasis is on demonstrating conservation of mass through the mole concept and
+            stoichiometry. Emphasis is on assessing students’ use of mathematical thinking, not on memorization
+            and rote application of problem-solving techniques.] [Assessment Boundary: Assessment does not
+            include complex chemical reactions.]
+CI-ESS2-5 Plan and conduct an investigation of the properties of water and its effects on Earth materials
+           and surface processes. [Clarification Statement: Emphasis is on mechanical and chemical
+           investigations with water and a variety of solid materials to provide the evidence for connections
+           between the hydrologic cycle and system interactions commonly known as the rock cycle. Examples of
+           mechanical investigations include stream transportation and deposition using a stream table, erosion
+           using variations in soil moisture content, or frost wedging by the expansion of water as it freezes.
+           Examples of chemical investigations include chemical weathering and recrystallization (by testing the
+           solubility of different materials) or melt generation (by examining how water lowers the melting
+           temperature of most solids).]
+CI1-ETS1-2 Design a solution to a complex real-world problem by breaking it down into smaller, more
+            manageable problems that can be solved through engineering. . [AR Clarification Statement:
+            Examples of real-world problems could include wastewater treatment, production of biofuels, and the
+            impact of heavy metals or phosphate pollutants on the environment.]
+
+
+11
+                                Chemistry - Integrated: Matter and Chemical Reactions
+                                         Arkansas K-12 Science Standards
+                                         Arkansas Department of Education
+                                                         2016
+The performance expectations above were developed using the following elements from the NRC document A
+Framework for K-12 Science Education:
+
+     Science and Engineering Practices                   Disciplinary Core Ideas             Crosscutting Concepts
+Developing and Using Models                      PS1.A: Structure and Properties of       Patterns
+Modeling in 9–12 builds on K–8 and               Matter                                    Different patterns may be
+progresses to using, synthesizing, and             Each atom has a charged                 observed at each of the
+developing models to predict and show               substructure consisting of a            scales at which a system is
+relationships among variables between               nucleus, which is made of protons       studied and can provide
+systems and their components in the                 and neutrons, surrounded by             evidence for causality in
+natural and designed worlds.                        electrons. (CI-PS1-1)                   explanations of
+  Use a model to predict the                      The periodic table orders elements      phenomena.
+   relationships between systems or                 horizontally by the number of           (CI-PS1-1, CI-PS1-2,
+   between components of a system.                  protons in the atom’s nucleus and       CI-PS1-3)
+    (CI-PS1-1)                                      places those with similar chemical    Energy and Matter
+Planning and Carrying Out                           properties in columns. The             The total amount of energy
+Investigations                                      repeating patterns of this table        and matter in closed
+Planning and carrying out investigations            reflect patterns of outer electron      systems is conserved.
+in 9-12 builds on K-8 experiences and               states. (CI-PS1-1, CI-PS1-2)            (CI-PS1-7)
+progresses to include investigations that          The structure and interactions of     Stability and Change
+provide evidence for and test conceptual,           matter at the bulk scale are           Much of science deals with
+mathematical, physical, and empirical               determined by electrical forces         constructing explanations
+models.                                             within and between atoms.               of how things change and
+  Plan and conduct an investigation                                                        how they remain stable.
+    individually and collaboratively to            (CI-PS1-3)                               (CI-PS1-6)
+    produce data to serve as the basis for       PS1.B: Chemical Reactions
+                                                  In many situations, a dynamic and      Structure and Function
+    evidence, and in the design: decide on                                                 The functions and
+    types, how much, and accuracy of data          condition-dependent balance
+                                                   between a reaction and the reverse       properties of natural and
+    needed to produce reliable                                                              designed objects and
+    measurements and consider limitations          reaction determines the numbers of
+                                                   all types of molecules present.          systems can be inferred
+    on the precision of the data (e.g.,                                                     from their overall structure,
+    number of trials, cost, risk, time), and       (CI-PS1-6)
+                                                  The fact that atoms are conserved,       the way their components
+    refine the design accordingly.                                                          are shaped and used, and
+    (CI-PS1-3, CI-ESS2-5)                          together with knowledge of the
+                                                   chemical properties of the elements      the molecular
+Using Mathematics and Computational                                                         substructures of its various
+Thinking                                           involved, can be used to describe
+                                                   and predict chemical reactions.          materials. (CI-ESS2-5)
+Mathematical and computational thinking
+at the 9–12 level builds on K–8 and                (CI-PS1-2, CI-PS1-7)
+                                                 PS2.B: Types of Interactions             -----------------------------------------
+progresses to using algebraic thinking                                                      Connections to Nature of
+and analysis, a range of linear and               Attraction and repulsion between
+                                                   electric charges at the atomic scale                 Science
+nonlinear functions including
+trigonometric functions, exponentials and          explain the structure, properties,
+                                                   and transformations of matter, as      Scientific Knowledge
+logarithms, and computational tools for                                                   Assumes an Order and
+statistical analysis to analyze, represent,        well as the contact forces between
+                                                   material objects.                      Consistency in Natural
+and model data. Simple computational                                                      Systems
+simulations are created and used based             (CI-PS1-1, CI-PS1-3)
+                                                                                           Science assumes the
+on mathematical models of basic                                                             universe is a vast single
+assumptions.                                                                                system in which basic laws
+                                                                                            are consistent. (CI-PS1-7)
+
+
+12
+                                 Chemistry - Integrated: Matter and Chemical Reactions
+                                          Arkansas K-12 Science Standards
+                                          Arkansas Department of Education
+                                                          2016
+  Use mathematical representations of            PS2.B: Types of Interactions
+   phenomena to support claims.                    Attraction and repulsion between
+   (CI-PS1-7)                                       electric charges at the atomic scale
+Constructing Explanations and                       explain the structure, properties,
+Designing Solutions                                 and transformations of matter, as
+Constructing explanations and designing             well as the contact forces between
+solutions in 9–12 builds on K–8                     material objects.
+experiences and progresses to                       (CI-PS1-1,CI-PS1-3)
+explanations and designs that are                 ESS2.C: The Roles of Water in
+supported by multiple and independent             Earth’s Surface Processes
+student-generated sources of evidence
+consistent with scientific ideas,                  The abundance of liquid water on
+principles, and theories.                           Earth’s surface and its unique
+                                                    combination of physical and
+  Construct and revise an explanation              chemical properties are central to
+   based on valid and reliable evidence             the planet’s dynamics. These
+   obtained from a variety of sources               properties include water’s
+   (including students’ own investigations,         exceptional capacity to absorb,
+   models, theories, simulations, peer              store, and release large amounts of
+   review) and the assumption that                  energy, transmit sunlight, expand
+   theories and laws that describe the              upon freezing, dissolve and
+   natural world operate today as they did          transport materials, and lower the
+   in the past and will continue to do so in        viscosities and melting points of
+   the future. (CI-PS1-2)                           rocks. (CI-ESS2-5)
+  Refine a solution to a complex real-           ETS1.C: Optimizing the Design
+   world problem, based on scientific             Solution
+   knowledge, student-generated sources            Criteria may need to be broken
+   of evidence, prioritized criteria, and           down into simpler ones that can be
+   tradeoff considerations. (CI-PS1-6)              approached systematically, and
+  Design a solution to a complex real-             decisions about the priority of
+     world problem, based on scientific             certain criteria over others (trade-
+     knowledge, student-generated sources           offs) may be needed. (CI-PS1-6)
+     of evidence, prioritized criteria, and       ETS1.C: Optimizing the Design
+     tradeoff considerations. (CI1-ETS1-2)        Solution
+                                                    Criteria may need to be broken
+                                              down into simpler ones that can be
+                                              approached systematically, and
+                                              decisions about the priority of
+                                              certain criteria over others (trade-
+                                              offs) may be needed. (CI1-ETS1-2)
+Connections to other DCIs in this course: CI.ESS2.C (CI-PS1-2, CI-PS1-3); CI.PS1.A (CI-ESS2-5); CI.PS1.B
+(CI-ESS2-5); CI.PS3.B (CI-ESS2-5)
+Connections to DCIs across grade-bands: 7.PS1.A (CI-PS1-1, CI-PS1-2, CI-PS1-3, CI-PS1-7, CI-ESS2-5);
+7.PS1.B, (CI-PS1-1, CI-PS1-2, CI-PS1-6, CI-PS1-7); 8.PS2.B (CI-PS1-3); 7.ESS2.A (CI-PS1-7); 8.PS4.B
+(CI-ESS2-5); 7.ESS2.A (CI-ESS2-5); 7.ESS2.C (CI-ESS2-5); 6.ESS2.D (CI-ESS2-5); 6-8.ETS1.A (CI1-ETS1-2); 6-
+8.ETS1.B (CI1-ETS1-2); 6-8.ETS1.C (CI1-ETS1-2)
+Connections to the Arkansas Disciplinary Literacy Standards:
+RST.9-10.7        Translate quantitative or technical information expressed in words in a text into visual form (e.g., a
+                  table or chart) and translate information expressed visually or mathematically (e.g., in an equation)
+                  into words. (CI-PS1-1)
+
+13
+                                  Chemistry - Integrated: Matter and Chemical Reactions
+                                           Arkansas K-12 Science Standards
+                                           Arkansas Department of Education
+                                                           2016
+RST.11-12.1  Cite specific textual evidence to support analysis of science and technical texts, attending to
+             important distinctions the author makes and to any gaps or inconsistencies in the account.
+             (CI-PS1-3)
+WHST.9-12.2 Write informative/explanatory texts, including the narration of historical events, scientific
+             procedures/ experiments, or technical processes. (CI-PS1-2)
+WHST.9-12.5 Develop and strengthen writing as needed by planning, revising, editing, rewriting, or trying a new
+             approach, focusing on addressing what is most significant for a specific purpose and audience.
+             (CI-PS1-2)
+WHST.9-12.7 Conduct short as well as more sustained research projects to answer a question (including a self-
+             generated question) or solve a problem; narrow or broaden the inquiry when appropriate;
+             synthesize multiple sources on the subject, demonstrating understanding of the subject under
+             investigation. (CI-PS1-3, CI-PS1-6, CI-ESS2-5)
+WHST.11-12.8 Gather relevant information from multiple authoritative print and digital sources, using advanced
+             searches effectively; assess the strengths and limitations of each source in terms of the specific
+             task, purpose, and audience; integrate information into the text selectively to maintain the flow of
+             ideas, avoiding plagiarism and overreliance on any one source and following a standard format for
+             citation. (CI-PS1-3)
+WHST.9-12.9 Draw evidence from informational texts to support analysis, reflection, and research. (CI-PS1-3)
+Connections to the Arkansas Language Arts Standards--N/A
+Connections to the Arkansas Mathematics Standards:
+A1.SP.3         Summarize data from two categorical variables in a frequency table; interpret relative frequencies
+                in the context of the data, recognizing data trends and associations. (CI-PS1-2, CI-PS1-3,
+                CI-PS1-7, CI-ESS2-5)
+AR.M.2          Applying reasoning about quantities and relationships. (CI-PS1-7)
+AR.M.4          Select and use relationships and tools. (CI1-ETS1-2)
+
+
+
+
+14
+                               Chemistry - Integrated: Matter and Chemical Reactions
+                                        Arkansas K-12 Science Standards
+                                        Arkansas Department of Education
+                                                        2016
+                                        Chemistry - Integrated
+ Topic 2: Nuclear Reactions
+ Students who demonstrate understanding can:
+ CI-PS1-8    Develop models to illustrate the changes in the composition of the nucleus of the atom and
+             the energy released during the processes of fission, fusion, and radioactive decay.
+             [Clarification Statement: Emphasis is on simple qualitative models, such as pictures or diagrams, and
+             on the scale of energy released in nuclear processes relative to other kinds of transformations.]
+             [Assessment Boundary: Assessment does not include quantitative calculation of energy released.
+             Assessment is limited to alpha, beta, and gamma radioactive decays.]
+ CI-ESS1-1 Develop a model based on evidence to illustrate the life span of the sun and the role of
+             nuclear fusion in the sun’s core to release energy that eventually reaches Earth in the form of
+             radiation. [Clarification Statement: Emphasis is on the energy transfer mechanisms that allow
+             energy from nuclear fusion in the sun’s core to reach Earth. Examples of evidence for the model
+             include observations of the masses and lifetimes of other stars, as well as the ways that the sun’s
+             radiation varies due to sudden solar flares (“space weather”), the 11-year sunspot cycle, and non-
+             cyclic variations over centuries.] [Assessment Boundary: Assessment does not include details of the
+             atomic and sub-atomic processes involved with the sun’s nuclear fusion.]
+ CI-ESS1-3 Communicate scientific ideas about the way stars, over their life cycle, produce elements.
+             [Clarification Statement: Emphasis is on the way nucleosynthesis, and therefore the different
+             elements created, varies as a function of the mass of a star and the stage of its lifetime.]
+             [Assessment Boundary: Details of the many different nucleosynthesis pathways for stars of differing
+             masses are not assessed.]
+ CI-ESS1-6 Apply scientific reasoning and evidence from ancient Earth materials, meteorites, and other
+             planetary surfaces to construct an account of Earth’s formation and early history.
+             [Clarification Statement: Emphasis is on using available evidence within the solar system to
+             reconstruct the early history of Earth, which formed along with the rest of the solar system 4.6 billion
+             years ago. Examples of evidence include the absolute ages of ancient materials (obtained by
+             radiometric dating of meteorites, moon rocks, and Earth’s oldest minerals), the sizes and
+             compositions of solar system objects, and the impact cratering record of planetary surfaces.]
+ CI2-ETS1-1 Analyze a major global challenge to specify qualitative and quantitative criteria and
+             constraints for solutions that account for societal needs and wants. [AR Clarification
+             Statement: Emphasis is on the specific needs and constraints involved with power generation.]
+ CI2-ETS1-2 Design a solution to a complex real-world problem by breaking it down into smaller, more
+             manageable problems that can be solved through engineering. [AR Clarification Statement:
+             Emphasis is on nuclear power management.]
+ CI2-ETS1-3 Evaluate a solution to a complex real-world problem based on prioritized criteria and trade-
+             offs that account for a range of constraints, including cost, safety, reliability, and aesthetics,
+             as well as possible social, cultural, and environmental impacts. [AR Clarification Statement:
+             Emphasis is on the relationship between nuclear fission and fusion.]
+ CI2-ETS1-4 Use a computer simulation to model the impact of proposed solutions to a complex real-world
+             problem with numerous criteria and constraints on interactions within and between systems
+             relevant to the problem. [AR Clarification Statement: Examples could include nuclear weapons and
+             nuclear medicine (radioisotopes or radiation therapy).]
+ The performance expectations above were developed using the following elements from the NRC document A
+ Framework for K-12 Science Education:
+
+     Science and Engineering Practices             Disciplinary Core Ideas             Crosscutting Concepts
+ Developing and Using Models                ESS1.A: The Universe and Its          Scale, Proportion, and Quantity
+ Modeling in 9–12 builds on K–8             Stars                                   The significance of a
+ experiences and progresses to using,                                                phenomenon is dependent on
+15
+                                     Chemistry - Integrated: Nuclear Reactions
+                                        Arkansas K-12 Science Standards
+                                       Arkansas Department of Education
+                                                       2016
+ synthesizing, and developing models           The star called the sun is               the scale, proportion, and
+ to predict and show relationships              changing and will burn out over a        quantity at which it occurs.
+ among variables between systems                lifespan of approximately 10             (CI-ESS1-1)
+ and their components in the natural            billion years. (CI-ESS1-1)            Energy and Matter
+ and designed world(s).                        The study of stars’ light spectra      In nuclear processes, atoms are
+   Develop a model based on                    and brightness is used to identify       not conserved, but the total
+    evidence to illustrate the                  compositional elements of stars,         number of protons plus
+    relationships between systems or            their movements, and their               neutrons is conserved.
+    between components of a system.             distances from Earth.                    (CI-PS1-8, CI-ESS1-3)
+    (CI-ESS1-1, CI-PS1-8)                         (CI-ESS1-3)                         Stability and Change
+ Constructing Explanations and                 Other than the hydrogen and             Much of science deals with
+ Designing Solutions                            helium formed at the time of the         constructing explanations of
+ Constructing explanations and                  Big Bang, nuclear fusion within          how things change and how
+ designing solutions in 9–12 builds on          stars produces all atomic nuclei         they remain stable.
+ K–8 experiences and progresses to              lighter than and including iron,         (CI-ESS1-6)
+ explanations and designs that are              and the process releases              Systems and System Models
+ supported by multiple and independent          electromagnetic energy. Heavier         Models (e.g., physical,
+ student-generated sources of evidence          elements are produced when               mathematical, computer
+ consistent with scientific ideas,              certain massive stars achieve a          models) can be used to
+ principles, and theories.                      supernova stage and explode.             simulate systems and
+   Apply scientific reasoning to link          (CI-ESS1-3)                              interactions—including energy,
+    evidence to the claims to assess the     ESS1.C: The History of Planet               matter, and information flows—
+    extent to which the reasoning and        Earth                                       within and between systems at
+    data support the explanation or           Although active geologic                  different scales. (CI2-ETS1-4)
+    conclusion. (CI-ESS1-6)                     processes, such as plate
+   Design a solution to a complex real-        tectonics and erosion, have            ---------------------------------------------
+    world problem, based on scientific          destroyed or altered most of the         Connections to Engineering,
+    knowledge, student-generated                very early rock record on Earth,                     Technology,
+    sources of evidence, prioritized            other objects in the solar system,       and Applications of Science
+    criteria, and tradeoff considerations.      such as lunar rocks, asteroids,
+    (CI2-ETS1-2)                                and meteorites, have changed          Influence of Science,
+   Evaluate a solution to a complex            little over billions of years.        Engineering, and Technology
+    real-world problem, based on                Studying these objects can            on Society and the Natural
+    scientific knowledge, student-              provide information about Earth’s     World
+    generated sources of evidence,              formation and early history.            New technologies can have
+    prioritized criteria, and tradeoff          (CI-ESS1-6)                              deep impacts on society and
+    considerations. (CI2-ETS1-3)             PS1.C: Nuclear Processes                    the environment, including
+ Obtaining, Evaluating, and                    Spontaneous radioactive decays           some that were not anticipated.
+ Communicating Information                      follow a characteristic exponential      Analysis of costs and benefits
+ Obtaining, evaluating, and                     decay law. Nuclear lifetimes allow       is a critical aspect of decisions
+ communicating information in 9–12              radiometric dating to be used to         about technology.
+ builds on K–8 experiences and                  determine the ages of rocks and          (CI2-ETS1-1, CI2-ETS1-3)
+ progresses to evaluating the validity          other materials. (CI-ESS1-6)
+ and reliability of the claims, methods,     PS3.D: Energy in Chemical
+ and designs.                                Processes and Everyday Life
+   Communicate scientific ideas (e.g.         Nuclear Fusion processes in the
+    about phenomena and/or the                  center of the sun release the
+    process of development and the              energy that ultimately reaches
+    design and performance of a                 Earth as radiation. (CI-ESS1-1)
+    proposed process or system) in           PS1.C: Nuclear Processes
+    multiple formats (including orally,
+16
+                                      Chemistry - Integrated: Nuclear Reactions
+                                         Arkansas K-12 Science Standards
+                                        Arkansas Department of Education
+                                                        2016
+     graphically, textually, and                  Nuclear processes, including
+     mathematically). (CI-ESS1-3)                  fusion, fission, and radioactive
+ Asking Questions and Defining                     decays of unstable nuclei, involve
+ Problems                                          release or absorption of energy.
+ Asking questions and defining                     The total number of neutrons plus
+ problems in 9–12 builds on K–8                    protons does not change in any
+ experiences and progresses to                     nuclear process. (CI-PS1-8)
+ formulating, refining, and evaluating             ETS1.A: Defining and Delimiting
+ empirically testable questions and                Engineering Problems
+ design problems using models and                    Criteria and constraints also
+ simulations.                                         include satisfying any
+   Analyze complex real-world                        requirements set by society, such
+    problems by specifying criteria and               as taking issues of risk mitigation
+    constraints for successful solutions.             into account, and they should be
+    (CI2-ETS1-1)                                      quantified to the extent possible
+ Using Mathematics and                                and stated in such a way that one
+ Computational Thinking                               can tell if a given design meets
+ Mathematical and computational                       them. (CI2-ETS1-1)
+ thinking in 9-12 builds on K-8                      Humanity faces major global
+ experiences and progresses to using                  challenges today, such as the
+ algebraic thinking and analysis, a                   need for supplies of clean water
+ range of linear and nonlinear functions              and food or for energy sources
+ including trigonometric functions,                   that minimize pollution, which can
+ exponentials and logarithms, and                     be addressed through
+ computational tools for statistical                  engineering. These global
+ analysis to analyze, represent, and                  challenges also may have
+ model data. Simple computational                     manifestations in local
+ simulations are created and used                     communities. (CI2-ETS1-1)
+ based on mathematical models of                   ETS1.B: Developing Possible
+ basic assumptions.                                Solutions
+   Use mathematical models and/or                   When evaluating solutions, it is
+    computer simulations to predict the               important to take into account a
+    effects of a design solution on                   range of constraints, including
+    systems and/or the interactions                   cost, safety, reliability, and
+    between systems. (CI2-ETS1-4)                     aesthetics, and to consider
+                                                      social, cultural, and
+   -----------------------------------------------    environmental impacts. (CI2-
+   Connections to Nature of Science                   ETS1-3)
+                                                     Both physical models and
+ Science Models, Laws, Mechanisms,                    computers can be used in various
+ and Theories Explain Natural                         ways to aid in the engineering
+ Phenomena                                            design process. Computers are
+   A scientific theory is a substantiated            useful for a variety of purposes,
+    explanation of some aspect of the                 such as running simulations to
+    natural world, based on a body of                 test different ways of solving a
+    facts that have been repeatedly                   problem or to see which one is
+    confirmed through observation and                 most efficient or economical; and
+    experiment and the science                        in making a persuasive
+    community validates each theory                   presentation to a client about how
+    before it is accepted. If new                     a given design will meet his or
+    evidence is discovered that the                   her needs. (CI2-ETS1-4)
+17
+                                         Chemistry - Integrated: Nuclear Reactions
+                                            Arkansas K-12 Science Standards
+                                           Arkansas Department of Education
+                                                           2016
+       theory does not accommodate, the          ETS1.C: Optimizing the Design
+       theory is generally modified in light     Solution
+       of this new evidence. (CI-ESS1-6)           Criteria may need to be broken
+      Models, mechanisms, and                      down into simpler ones that can
+       explanations collectively serve as           be approached systematically,
+       tools in the development of a                and decisions about the priority of
+       scientific theory. (CI-ESS1-6)               certain criteria over others (trade-
+                                                    offs) may be needed.
+                                                    (CI2-ETS1-2)
+
+ Connections to other DCIs in this course: CI.PS1.A (CI-ESS1-3); CI.PS1.C (CI-ESS1-1, CI-ESS1-3); CI.PS2.A
+ (CI-ESS1-6); CI.PS2.B (CI-ESS1-6); CI.PS3.A (CI-ESS1-1, CI-PS1-8); CI.PS3.D (CI-PS1-8); CI.ESS1.A
+ (CI-PS1-8); CI.ESS1.C (CI-PS1-8)
+ Connections of DCIs across grade-bands: 7.PS1.A (CI-ESS1-1, CI-ESS1-3, CI-PS1-8); CI.PS1.B (CI-PS1-8);
+ 8.PS2.B (CI-ESS1-6); 8.PS4.B (CI-ESS1-1); 8.ESS1.A (CI-ESS1-1, CI-ESS1-3); 8.ESS1.B (CI-ESS1-6);
+ 8.ESS1.C (CI-ESS1-6); 7.ESS2.A (CI-ESS1-1, CI-ESS1-6, CI-PS1-8); 7.ESS2.B (CI-ESS1-6); 6.ESS2.D
+ (CI-ESS1-1); 6-8.ETS1.A (CI2-ETS1-1, CI2-ETS1-2, CI2-ETS1-3, CI2-ETS1-4); 6-8.ETS1.B (CI2-ETS1-2,
+ CI2-ETS1-3, CI2-ETS1-4); 6-8.ETS1.C (CI2-ETS1-2, CI2-ETS1-4)
+ Connections to the Arkansas Disciplinary Literacy Standards:
+ RST.11-12.1         Cite specific textual evidence to support analysis of science and technical texts, attending to
+                     important distinctions the author makes and to any gaps or inconsistencies in the account.
+                     (CI-ESS1-1, CI-ESS1-6)
+ RST.11-12.7         Integrate and evaluate multiple sources of information presented in diverse formats and media
+                     (e.g., quantitative data, video, multimedia) in order to address a question or solve a problem.
+                      (CI2-ETS1-1, CI2-ETS1-3)
+ RST.11-12.8         Evaluate the hypotheses, data, analysis, and conclusions in a science or technical text, verifying
+                     the data when possible and corroborating or challenging conclusions with other sources of
+                     information. (CI-ESS1-6, CI2-ETS1-1, CI2-ETS1-3)
+ RST.11-12.9         Synthesize information from a range of sources (e.g., texts, experiments, simulations) into a
+                     coherent understanding of a process, phenomenon, or concept, resolving conflicting information
+                     when possible. (CI2-ETS1-1, CI2-ETS1-3)
+ WHST.9-12.1         Write arguments focused on discipline-specific content. (CI-ESS1-6)
+ WHST.9-12.2         Write informative/explanatory texts, including the narration of historical events, scientific
+                     procedures/ experiments, or technical processes. (CI-ESS1-3)
+
+ Connections to the Arkansas Language Arts Standards:
+ 9.CC.7.P      Present claims and supporting evidence concisely and logically appropriate to purpose,
+               audience, and task. (CI-ESS1-3)
+ 10-12.CC.7.P        Present claims, findings, and supporting evidence concisely, logically, and appropriately to
+                     purpose, audience, and task. (CI-ESS1-3)
+
+ Connections to the Arkansas Mathematics Standards:
+ A1.EFE.5            Determine reasonable domain and range values of exponential functions representing real-world
+                     situations, both continuous and discrete; interpret the solution as reasonable or unreasonable in
+                     context. (CI-ESS1-6)
+ A1.EFE.10           Write exponential functions that provide a reasonable fit to data and use them to make predictions
+                     with technology. (CI-ESS1.6)
+ A1.EX.4             Interpret the parts of expressions such as terms, factors, and coefficients in terms of a real-world
+                     context. (CI-ESS1-1)
+ A1.LFE.3            Solve linear formulas for a specified variable. (CI-ESS1-1)
+18
+                                          Chemistry - Integrated: Nuclear Reactions
+                                             Arkansas K-12 Science Standards
+                                            Arkansas Department of Education
+                                                            2016
+ A1.LFE.6    Determine reasonable domain and range values of linear functions representing real-world
+             situations, both continuous and discrete; interpret the solution as reasonable or unreasonable in
+             context. (CI-ESS1-6)
+ A1.LFE.10   Translate among equivalent forms of equations for linear functions, including standard, point-
+             slope, and slope-intercept forms; recognize that each form reveals key features in a given context.
+             (CI-ESS1-1)
+ A1.LFE.20   Write linear functions that provide a reasonable fit to data and use them to make predictions, with
+             and without technology; interpret the slope and y-intercept in context. (CI-ESS1-6)
+ A1.QFE.2    Write quadratic equations with real number solutions that model the relationship between two
+             quantities and produce a graph of the equation. (CI-ESS1-1)
+ A1.QFE.5    Determine reasonable domain and range values of quadratic functions representing real-world
+             situations, both continuous and discrete; interpret the solution as reasonable or unreasonable in
+             context. (CI-ESS1-6)
+ A1.QFE.13   Write quadratic functions that provide a reasonable fit to data and use them to make predictions
+             with technology. (CI-ESS1.6)
+ A1.SP.3     Summarize data from two categorical variables in a frequency table; interpret relative frequencies
+             in the context of the data, recognizing data trends and associations. (CI-ESS1-1, CI-ESS1-6,
+             CI-PS1-8)
+ AR.M.2      Applying reasoning about quantities and relationships. (CI-ESS1-1, CI-ESS1-3, CI-ESS1-6,
+             CI2-ETS1-1, CI2-ETS1-3, CI2-ETS1-4)
+ AR.M.4      Select and use relationships and tools. (CI-ESS1-1, CI-PS1-8, CI2-ETS1-1, CI2-ETS1-2,
+             CI2-ETS1-3, CI2-ETS1-4)
+
+
+
+
+19
+                                 Chemistry - Integrated: Nuclear Reactions
+                                    Arkansas K-12 Science Standards
+                                   Arkansas Department of Education
+                                                   2016
+                                        Chemistry - Integrated
+Topic 3: Energy Flow
+Students who demonstrate understanding can:
+CI-PS1-4     Develop a model to illustrate that the release or absorption of energy from a chemical
+             reaction system depends upon the changes in total bond energy. [Clarification Statement:
+             Emphasis is on the idea that a chemical reaction is a system that affects the energy change.
+             Examples of models could include molecular-level drawings and diagrams of reactions, graphs
+             showing the relative energies of reactants and products, and representations showing energy is
+             conserved.] [Assessment Boundary: Assessment does not include calculating the total bond energy
+             changes during a chemical reaction from the bond energies of reactants and products.]
+CI-PS1-5     Apply scientific principles and evidence to provide an explanation about the effects of
+             changing the temperature or concentration of the reacting particles on the rate at which a
+             reaction occurs. [Clarification Statement: Emphasis is on student reasoning that focuses on the
+             number and energy of collisions between molecules.] [Assessment Boundary: Assessment is limited
+             to simple reactions in which there are only two reactants; evidence from temperature, concentration,
+             and rate data; and qualitative relationships between rate and temperature.]
+CI-PS3-1     Create a computational model to calculate the change in the energy of one component in a
+             system when the change in energy of the other component(s) and energy flows in and out of
+             the system are known. [AR Clarification Statement: This PE is fully addressed in this
+             course. Emphasis is on explaining the meaning of mathematical expressions used in the model.] [AR
+             Assessment Boundary: Assessment is limited to systems of two or three components and to thermal
+             energy, kinetic energy, and the energies in gravitational, magnetic, or electric fields.]
+CI-ESS1-2    Construct an explanation of the Big Bang theory based on astronomical evidence of light
+             spectra, motion of distant galaxies, and composition of matter in the universe. [Clarification
+             Statement: Emphasis is on the astronomical evidence of the red shift of light from galaxies as an
+             indication that the universe is currently expanding, the cosmic microwave background as the
+             remnant radiation from the Big Bang, and the observed composition of ordinary matter of the
+             universe, primarily found in stars and interstellar gases (from the spectra of electromagnetic radiation
+             from stars), which matches that predicted by the Big Bang theory (3/4 hydrogen and 1/4 helium).]
+CI-ESS2-3    Develop a model based on evidence of Earth’s interior to describe the cycling of matter by
+             thermal convection. [Clarification Statement: Emphasis is on both a one dimensional model of
+             Earth, with radial layers determined by density, and a three-dimensional model, which is controlled
+             by mantle convection and the resulting plate tectonics. Examples of evidence include maps of
+             Earth’s three-dimensional structure obtained from seismic waves, records of the rate of change of
+             Earth’s magnetic field (as constraints on convection in the outer core), and identification of the
+             composition of Earth’s layers from high-pressure laboratory experiments.]
+CI-ESS3-4    Evaluate or refine a technological solution that reduces impacts of human activities on
+             natural systems.* [AR Clarification Statement: This PE is fully addressed in this course. Emphasis
+             is on the impacts of human activities on physical systems. Examples of data on the impacts of
+             human activities could include the quantities and types of pollutants released (fertilizer, surface
+             mining, and nuclear byproducts). Examples for limiting future impacts could range from local efforts
+             (reducing, reusing, and recycling resources) to large-scale engineering design solutions (nuclear
+             power, photovoltaic cells, wind power, and water power).]
+CI3-ETS1-1 Analyze a major global challenge to specify qualitative and quantitative criteria and
+             constraints for solutions that account for societal needs and wants. [AR Clarification
+             Statement: Examples of the applications could include renewable energy resources (solar cells and
+             wind farms), the Haber process for the production of fertilizers, and increased fuel efficiency of
+             combustion engines.]
+The performance expectations above were developed using the following elements from the NRC document A
+Framework for K-12 Science Education:
+
+20
+                                       Chemistry - Integrated: Energy Flow
+                                        Arkansas K-12 Science Standards
+                                       Arkansas Department of Education
+                                                       2016
+     Science and Engineering Practices                 Disciplinary Core Ideas               Crosscutting Concepts
+Developing and Using Models                   PS1.A: Structure and Properties of          Patterns
+Modeling in 9–12 builds on K–8 and            Matter                                        Different patterns may be
+progresses to using, synthesizing, and          A stable molecule has less energy           observed at each of the
+developing models to predict and show            than the same set of atoms                  scales at which a system is
+relationships among variables between            separated; one must provide at              studied and can provide
+systems and their components in the              least this energy in order to take          evidence for causality in
+natural and designed worlds.                     the molecule apart. (CI-PS1-4)              explanations of
+  Develop a model based on evidence to       PS1.B: Chemical Reactions                      phenomena. (CI-PS1-5)
+   illustrate the relationships between         Chemical processes, their rates,         Energy and Matter
+   systems or between components of a            and whether or not energy is stored        Changes of energy and
+   system. (CI-PS1-4, CI-ESS2-3)                 or released can be understood in            matter in a system can be
+Constructing Explanations and                    terms of the collisions of molecules        described in terms of
+Designing Solutions                              and the rearrangements of atoms             energy and matter flows
+Constructing explanations and designing          into new molecules, with                    into, out of, and within that
+solutions in 9–12 builds on K–8                  consequent changes in the sum of            system. (CI-PS1-4)
+experiences and progresses to                    all bond energies in the set of            Energy cannot be created
+explanations and designs that are                molecules that are matched by               or destroyed–only moved
+supported by multiple and independent            changes in kinetic energy.                  between one place and
+student-generated sources of evidence            (CI-PS1-4, CI-PS1-5)                        another place, between
+consistent with scientific ideas,             PS3.A: Definitions of Energy                   objects and/or fields, or
+principles, and theories.                       Energy is a quantitative property of        between systems.
+  Apply scientific principles and evidence      a system that depends on the                (CI-ESS1-2)
+   to provide an explanation of                  motion and interactions of matter          Energy drives the cycling
+   phenomena and solve design                    and radiation within that system.           of matter within and
+   problems, taking into account possible        That there is a single quantity             between systems.
+   unanticipated effects. (CI-PS1-5)             called energy is due to the fact that       (CI-ESS2-3)
+  Construct an explanation based on             a system’s total energy is               Systems and System
+   valid and reliable evidence obtained          conserved, even as, within the           Models
+   from a variety of sources (including          system, energy is continually              Models can be used to
+   students’ own investigations, theories,       transferred from one object to              predict the behavior of a
+   simulations, peer review) and the             another and between its various             system, but these
+   assumption that theories and laws that        possible forms. (CI-PS3-1)                  predictions have limited
+   describe the natural world operate         PS3.B: Conservation of Energy                  precision and reliability due
+   today as they did in the past and will     and Energy Transfer                            to the assumptions and
+   continue to do so in the future.             Conservation of energy means that           approximations inherent in
+   (CI-ESS1-2)                                   the total change of energy in any           models. (CI-PS3-1)
+  Design or refine a solution to a              system is always equal to the total      Stability and Change
+   complex real-world problem, based on          energy transferred into or out of the      Feedback (negative or
+   scientific knowledge, student-                system. (CI-PS3-1)                          positive) can stabilize or
+   generated sources of evidence,               Energy cannot be created or                 destabilize a system.
+   prioritized criteria, and tradeoff            destroyed, but it can be transported        (CI-ESS3-4)
+   considerations. (CI-ESS3-4)                   from one place to another and
+Using Mathematics and Computational              transferred between systems.
+Thinking                                         (CI-PS3-1)                               -----------------------------------------
+Mathematical and computational thinking         Mathematical expressions, which            Connections to Nature of
+at the 9–12 level builds on K–8 and              quantify how the stored energy in a                    Science
+progresses to using algebraic thinking           system depends on its
+and analysis, a range of linear and              configuration (e.g. relative positions   Scientific Knowledge
+nonlinear functions including                    of charged particles, compression        Assumes an Order and
+21
+                                        Chemistry - Integrated: Energy Flow
+                                         Arkansas K-12 Science Standards
+                                        Arkansas Department of Education
+                                                        2016
+trigonometric functions, exponentials and        of a spring) and how kinetic energy     Consistency in Natural
+logarithms, and computational tools for          depends on mass and speed, allow        Systems
+statistical analysis to analyze, represent,      the concept of conservation of            Science assumes the
+and model data. Simple computational             energy to be used to predict and           universe is a vast single
+simulations are created and used based           describe system behavior.                  system in which basic laws
+on mathematical models of basic                  (CI-PS3-1)                                 are consistent.
+assumptions.                                    The availability of energy limits          (CI-PS3-1, CI-ESS1-2)
+  Create a computational model or               what can occur in any system.             Scientific knowledge is
+    simulation of a phenomenon, designed         (CI-PS3-1)                                 based on the assumption
+    device, process, or system.               PS4.B Electromagnetic Radiation               that natural laws operate
+    (CI-PS3-1)                                  Atoms of each element emit and             today as they did in the
+Asking Questions and Defining                    absorb characteristic frequencies of       past and they will continue
+Problems                                         light. These characteristics allow         to do so in the future.
+Asking questions and defining problems           identification of the presence of an       (CI-ESS1-2)
+in 9–12 builds on K–8 experiences and            element, even in microscopic
+progresses to formulating, refining, and         quantities. (CI-ESS1-2)                 -----------------------------------------
+evaluating empirically testable questions     ESS1.A: The Universe and Its Stars         Connections to Engineering,
+and design problems using models and            The study of stars’ light spectra and               Technology,
+simulations.                                     brightness is used to identify          and Applications of Science
+  Analyze complex real-world problems           compositional elements of stars,
+    by specifying criteria and constraints       their movements, and their              Interdependence of
+    for successful solutions. (CI3-ETS1-1)       distances from Earth. (CI-ESS1-2)       Science, Engineering, and
+                                                The Big Bang theory is supported        Technology
+                                                 by observations of distant galaxies       Science and engineering
+                                                 receding from our own, of the              complement each other in
+                                                 measured composition of stars and          the cycle known as
+                                                 non-stellar gases, and of the maps         research and development
+                                                 of spectra of the primordial               (R&D). Many R&D projects
+                                                 radiation (cosmic microwave                may involve scientists,
+                                                 background) that still fills the           engineers, and others with
+                                                 universe. (CI-ESS1-2)                      wide ranges of expertise.
+                                                Other than the hydrogen and                (CI-ESS1-2, CI-ESS2-3)
+                                                 helium formed at the time of the Big
+                                                 Bang, nuclear fusion within stars       Influence of Engineering,
+                                                 produces all atomic nuclei lighter      Technology, and Science
+                                                 than and including iron, and the        on Society and the Natural
+                                                 process releases electromagnetic        World
+                                                 energy. Heavier elements are              Engineers continuously
+                                                 produced when certain massive              modify these technological
+                                                 stars achieve a supernova stage            systems by applying
+                                                 and explode. (CI-ESS1-2)                   scientific knowledge and
+                                              ESS2.A: Earth Materials and                   engineering design
+                                              Systems                                       practices to increase
+                                               Evidence from deep probes and               benefits while decreasing
+                                                 seismic waves, reconstructions of          costs and risks.
+                                                 historical changes in Earth’s               (CI-ESS3-4)
+                                                 surface and its magnetic field, and       New technologies can
+                                                 an understanding of physical and           have deep impacts on
+                                                 chemical processes lead to a               society and the
+                                                 model of Earth with a hot but solid        environment, including
+                                                 inner core, a liquid outer core, a         some that were not
+22
+                                        Chemistry - Integrated: Energy Flow
+                                         Arkansas K-12 Science Standards
+                                        Arkansas Department of Education
+                                                        2016
+              solid mantle and crust. Motions of     anticipated. Analysis of
+              the mantle and its plates occur        costs and benefits is a
+              primarily through thermal              critical aspect of decisions
+              convection, which involves the         about technology.
+              cycling of matter due to the outward   (CI3-ETS1-1)
+              flow of energy from Earth’s interior
+              and gravitational movement of
+              denser materials toward the
+              interior. (CI-ESS2-3)
+           ESS2.B: Plate Tectonics and
+           Large-Scale System Interactions
+             The radioactive decay of unstable
+              isotopes continually generates new
+              energy within Earth’s crust and
+              mantle, providing the primary
+              source of the heat that drives
+              mantle convection. Plate tectonics
+              can be viewed as the surface
+              expression of mantle convection.
+              (CI-ESS2-3)
+           ESS3.C: Human Impacts on Earth
+           Systems
+             Scientists and engineers can make
+              major contributions by developing
+              technologies that produce less
+              pollution and waste and that
+              preclude ecosystem degradation.
+              (CI-ESS3-4)
+           ETS1.A: Defining and Delimiting
+           Engineering Problems
+             Criteria and constraints also
+              include satisfying any requirements
+              set by society, such as taking
+              issues of risk mitigation into
+              account, and they should be
+              quantified to the extent possible
+              and stated in such a way that one
+              can tell if a given design meets
+              them. (CI3-ETS1-1)
+             Humanity faces major global
+              challenges today, such as the need
+              for supplies of clean water and food
+              or for energy sources that minimize
+              pollution, which can be addressed
+              through engineering. These global
+              challenges also may have
+              manifestations in local
+              communities. (CI3-ETS1-1)
+
+
+
+23
+     Chemistry - Integrated: Energy Flow
+      Arkansas K-12 Science Standards
+     Arkansas Department of Education
+                     2016
+                                            ETS1.B: Developing Possible
+                                            Solutions
+                                              When evaluating solutions, it is
+                                               important to take into account a
+                                               range of constraints, including cost,
+                                               safety, reliability, and aesthetics,
+                                               and to consider social, cultural, and
+                                               environmental impacts.
+                                               (CI-ESS3-4)
+Connections to other DCIs in this course: CI.PS1.A (CI-ESS1-2); CI.PS1.B (CI-PS3-1); CI.PS1.C (CI-ESS1-2);
+CI.PS2.B (CI-ESS2-3); CI.PS3.A (CI-PS1-4, CI-PS1-5, CI-ESS1-2); CI.PS4.A (CI-ESS1-2); CI.ESS1.A
+(CI-PS1-8, CI-PS3-1)
+Connections to DCIs across grade-bands: 7.PS1.A (CI-PS1-4, CI-ESS1-2, CI-ESS2-3); 7.PS1.B (CI-PS1-4,
+CI-PS1-5, CI-ESS2-3); 8.PS2.B (CI-PS1-4, CI-PS1-5,CI-ESS2-3); 8.PS3.A (CI-PS1-5, CI-ESS2-3, CI-ESS2-3);
+8.PS3.B (CI-PS1-5),(CI-PS3-1),(CI-ESS2-3); 6.PS3.D (CI-PS1-4); 8.PS4.B (CI-ESS1-2); 8.ESS1.A (CI-ESS1-2);
+7.ESS2.A (CI-PS3-1, CI-ESS2-3, CI-ESS3-4); 7.ESS2.B (CI-ESS2-3); 7.ESS3.B (CI-ESS3-4); 6.ESS3.C
+(CI-ESS3-4); 6.ESS3.D (CI-ESS3-4); 6-8.ETS1.A (CI3-ETS1-1)
+Connections to the Arkansas Disciplinary Literacy Standards:
+RST.11-12.1    Cite specific textual evidence to support analysis of science and technical texts, attending to
+               important distinctions the author makes and to any gaps or inconsistencies in the account.
+               (CI-PS1-5, CI-ESS1-2, CI-ESS2-3, CI-ESS3-4)
+RST.11-12.7    Integrate and evaluate multiple sources of information presented in diverse formats and media
+               (e.g., quantitative data, video, multimedia) in order to address a question or solve a problem.
+                (CI3-ETS1-1)
+RST.11-12.8    Evaluate the hypotheses, data, analysis, and conclusions in a science or technical text, verifying
+               the data when possible and corroborating or challenging conclusions with other sources of
+               information. (CI-ESS3-4, CI3-ETS1-1)
+RST.11-12.9    Synthesize information from a range of sources (e.g., texts, experiments, simulations) into a
+               coherent understanding of a process, phenomenon, or concept, resolving conflicting information
+               when possible. (CI3-ETS1-1)
+WHST.9-12.2    Write informative/explanatory texts, including the narration of historical events, scientific
+               procedures/ experiments, or technical processes. (CI-PS1-5, CI-ESS1-2)
+
+Connections to the Arkansas English Language Arts Standards:
+9-12.CC.9.P    Include relevant multimedia to enhance understanding of findings, reasoning, and/or evidence.
+              (CI-PS1-4, CI-PS3-1, CI-ESS2-3)
+
+Connections to the Arkansas Mathematics Standards:
+A1.EX.4        Interpret the parts of expressions such as terms, factors, and coefficients in terms of a real-world
+               context. (CI-ESS1-2)
+A1.LFE.3       Solve linear formulas for a specified variable. (CI-ESS1-2)
+A1.LFE.10      Translate among equivalent forms of equations for linear functions, including standard, point-
+               slope, and slope-intercept forms; recognize that each form reveals key features in a given context.
+               (CI-ESS1-2)
+A1.QFE.2       Write quadratic equations with real number solutions that model the relationship between two
+               quantities and produce a graph of the equation. (CI-ESS1-2)
+A1.SP.3        Summarize data from two categorical variables in a frequency table; interpret relative frequencies
+                in the context of the data, recognizing data trends and associations. (CI-PS1-4, CI-PS1-5,
+                CI-PS3-1, CI-ESS1-2, CI-ESS2-3, CI-ESS3-4)
+AR.M.2         Applying reasoning about quantities and relationships. (CI-PS1-5, CI-PS3-1, CI-ESS1-2,
+24
+                                      Chemistry - Integrated: Energy Flow
+                                       Arkansas K-12 Science Standards
+                                      Arkansas Department of Education
+                                                      2016
+         CI-ESS2-3. CI-ESS3-4, CI3-ETS1-1)
+AR.M.4   Select and use relationships and tools. (CI-PS1-4, CI-PS3-1, CI-ESS2-3, CI3-ETS1-1)
+
+
+
+
+25
+                              Chemistry - Integrated: Energy Flow
+                               Arkansas K-12 Science Standards
+                              Arkansas Department of Education
+                                              2016
+                                        Chemistry - Integrated
+Topic 4: Waves
+Students who demonstrate understanding can:
+CI-PS4-1     Use mathematical representations to support a claim regarding relationships among the
+             frequency, wavelength, and speed of waves traveling in various media. [AR Clarification
+             Statement: This PE is fully addressed in this course. Examples of data could include electromagnetic
+             radiation traveling in a vacuum and glass as well as seismic waves traveling through the Earth.]
+             [Assessment Boundary: Assessment is limited to algebraic relationships and describing those
+             relationships qualitatively.]
+CI-PS4-3     Evaluate the claims, evidence, and reasoning behind the idea that electromagnetic radiation
+             can be described either by a wave model or a particle model, and that for some situations one
+             model is more useful than the other. [Clarification Statement: Emphasis is on how the
+             experimental evidence supports the claim and how a theory is generally modified in light of new
+             evidence. Examples of a phenomenon could include resonance, interference, diffraction, and
+             photoelectric effect.] [Assessment Boundary: Assessment does not include using quantum theory.]
+CI-PS4-4     Evaluate the validity and reliability of claims in published materials of the effects that different
+             frequencies of electromagnetic radiation have when absorbed by matter. [Clarification
+             Statement: Emphasis is on the idea that photons associated with different frequencies of light have
+             different energies, and the damage to living tissue from electromagnetic radiation depends on the
+             energy of the radiation. Examples of published materials could include trade books, magazines, web
+             resources, videos, and other passages that may reflect bias.] [Assessment Boundary: Assessment is
+             limited to qualitative descriptions.]
+CI-PS4-5     Communicate technical information about how some technological devices use the principles
+             of wave behavior and wave interactions with matter to transmit and capture information and
+             energy.* [Clarification Statement: Examples could include solar cells capturing light and converting
+             it to electricity; medical imaging; and communications technology.] [Assessment Boundary:
+             Assessments are limited to qualitative information. Assessments do not include band theory.]
+CI4-ETS1-4 Use a computer simulation to model the impact of proposed solutions to a complex real-world
+             problem with numerous criteria and constraints on interactions within and between systems
+             relevant to the problem. [AR Clarification Statement: Examples could include information transfer
+             using fiber optics, radio waves, and medical imaging.]
+The performance expectations above were developed using the following elements from the NRC document A
+Framework for K-12 Science Education:
+
+   Science and Engineering Practices                    Disciplinary Core Ideas         Crosscutting Concepts
+Using Mathematics and Computational            PS3.D: Energy in Chemical               Cause and Effect
+Thinking                                       Processes                                 Empirical evidence is
+Mathematical and computational thinking          Solar cells are human-made devices      required to differentiate
+at the 9-12 level builds on K-8 and               that likewise capture the sun’s         between cause and
+progresses to using algebraic thinking and        energy and produce electrical           correlation and make
+analysis, a range of linear and nonlinear         energy.                                 claims about specific
+functions including trigonometric functions,      (CI-PS4-5)                              causes and effects.
+exponentials and logarithms, and               PS4.A: Wave Properties                     (CI-PS4-1)
+computational tools for statistical analysis    The wavelength and frequency of a       Cause and effect
+to analyze, represent, and model data.            wave are related to one another by      relationships can be
+Simple computational simulations are              the speed of travel of the wave,        suggested and predicted
+created and used based on mathematical            which depends on the type of wave       for complex natural and
+models of basic assumptions.                      and the medium through which it is      human designed
+  Use mathematical representations of            passing. (CI-PS4-1)                     systems by examining
+   phenomena or design solutions to                                                       what is known about
+26
+                                          Chemistry - Integrated: Waves
+                                        Arkansas K-12 Science Standards
+                                        Arkansas Department of Education
+                                                       2016
+    describe and/or support claims and/or                 Information can be digitized (e.g., a          smaller scale
+    explanations. (CI-PS4-1)                               picture stored as the values of an             mechanisms within the
+  Use mathematical models and/or                          array of pixels); in this form, it can be      system. (CI-PS4-4)
+    computer simulations to predict the                    stored reliably in computer memory            Systems can be
+    effects of a design solution on systems                and sent over long distances as a              designed to cause a
+    and/or the interactions between                        series of wave pulses. (CI-PS4-5)              desired effect.
+    systems. (CI4-ETS1-4)                                 [From the 3–5 grade band endpoints]            (CI-PS4-5)
+Engaging in Argument from Evidence                         Waves can add or cancel one                 Systems and System
+Engaging in argument from evidence in 9–                   another as they cross, depending on         Models
+12 builds on K–8 experiences and                           their relative phase (i.e., relative          Models (e.g., physical,
+progresses to using appropriate and                        position of peaks and troughs of the           mathematical, computer
+sufficient evidence and scientific reasoning               waves), but they emerge unaffected             models) can be used to
+to defend and critique claims and                          by each other. (Boundary: The                  simulate systems and
+explanations about natural and designed                    discussion at this grade level is              interactions—including
+worlds. Arguments may also come from                       qualitative only; it can be based on           energy, matter, and
+current scientific or historical episodes in               the fact that two different sounds can         information flows—within
+science.                                                   pass a location in different directions        and between systems at
+  Evaluate the claims, evidence, and                      without getting mixed up.)                     different scales.
+    reasoning behind currently accepted                    (CI-PS4-3)                                     (CI-PS4-3, CI4-ETS1-4)
+    explanations or solutions to determine              PS4.B: Electromagnetic Radiation
+    the merits of arguments. (CI-PS4-3)                   Electromagnetic radiation (e.g.,            -------------------------------------
+Obtaining, Evaluating, and                                 radio, microwaves, light) can be                    Connections to
+Communicating Information                                  modeled as a wave of changing                Engineering, Technology,
+Obtaining, evaluating, and communicating                   electric and magnetic fields or as               and Applications of
+information in 9–12 builds on K–8 and                      particles called photons. The wave                        Science
+progresses to evaluating the validity and                  model is useful for explaining many
+reliability of the claims, methods, and                    features of electromagnetic radiation,      Interdependence of
+designs.                                                   and the particle model explains other       Science, Engineering, and
+  Evaluate the validity and reliability of                features. (CI-PS4-3)                        Technology
+    multiple claims that appear in scientific             When light or longer wavelength               Science and engineering
+    and technical texts or media reports,                  electromagnetic radiation is                   complement each other
+    verifying the data when possible.                      absorbed in matter, it is generally            in the cycle known as
+    (CI-PS4-4)                                             converted into thermal energy (heat).          research and
+  Communicate technical information or                    Shorter wavelength electromagnetic             development (R&D).
+    ideas (e.g. about phenomena and/or                     radiation (ultraviolet, X-rays, gamma          (CI-PS4-5)
+    the process of development and the                     rays) can ionize atoms and cause            Influence of Engineering,
+    design and performance of a proposed                   damage to living cells. (CI-PS4-4)          Technology, and Science
+    process or system) in multiple formats                Photoelectric materials emit                on Society and the
+    (including orally, graphically, textually,             electrons when they absorb light of a       Natural World
+    and mathematically). (CI-PS4-5)                        high-enough frequency. (CI-PS4-5)             Modern civilization
+  ----------------------------------------------------- PS4.C: Information Technologies                   depends on major
+     Connections to Nature of Science                   and Instrumentation                               technological systems.
+                                                          Multiple technologies based on the             (CI-PS4-5)
+Science Models, Laws, Mechanisms,                          understanding of waves and their
+and Theories Explain Natural                               interactions with matter are part of
+Phenomena                                                  everyday experiences in the modern
+  A scientific theory is a substantiated                  world (e.g., medical imaging,
+    explanation of some aspect of the                      communications, and scanners) and
+    natural world, based on a body of facts                in scientific research. They are
+    that have been repeatedly confirmed                    essential tools for producing,
+    through observation and experiment                     transmitting, and capturing signals
+27
+                                                Chemistry - Integrated: Waves
+                                              Arkansas K-12 Science Standards
+                                              Arkansas Department of Education
+                                                             2016
+   and the science community validates         and for storing and interpreting the
+   each theory before it is accepted. If new   information contained in them.
+   evidence is discovered that the theory      (CI-PS4-5)
+   does not accommodate, the theory is      ETS1.B: Developing Possible
+   generally modified in light of this new  Solutions
+   evidence. (CI-PS4-3)                       Both physical models and computers
+                                               can be used in various ways to aid in
+                                               the engineering design process.
+                                               Computers are useful for a variety of
+                                               purposes, such as running
+                                               simulations to test different ways of
+                                               solving a problem or to see which
+                                               one is most efficient or economical;
+                                               and in making a persuasive
+                                               presentation to a client about how a
+                                               given design will meet his or her
+                                               needs. (CI4-ETS1-4)
+Connections to other DCIs in this course: CI.PS1.C (CI-PS4-4); CI.PS3.A (CI-PS4-4, CI-PS4-5); CI.PS3.D
+(CI-PS4-3, CI-PS4-4); CI.ESS1.A (CI-PS4-3); CI.ESS2.A (CI-PS4-1); CI.ESS2.D (CI-PS4-3)
+Connections to DCIs across grade-bands: 6.PS3.D (CI-PS4-4); 8.PS4.A (CI-PS4-1, CI-PS4-5); 8.PS4.B
+(CI-PS4-1, CI-PS4-3, CI-PS4-4, CI-PS4-5); 8.PS4.C,(CI-PS4-5); 6.ESS2.D (CI-PS4-4); 6-8.ETS1.A (CI4-ETS1-4);
+6-8.ETS1.B (CI4-ETS1-4); 6-8.ETS1.C (CI4-ETS1-4)
+Connections to the Arkansas Disciplinary Literacy Standards:
+RST.9-10.8   Assess the extent to which the reasoning and evidence in a text support the author’s claim or a
+             recommendation for solving a scientific or technical problem. (CI-PS4-3, CI-PS4-4)
+RST.11-12.1  Cite specific textual evidence to support analysis of science and technical texts, attending to
+             important distinctions the author makes and to any gaps or inconsistencies in the account.
+              (CI-PS4-3, CI-PS4-4)
+RST.11-12.7  Integrate and evaluate multiple sources of information presented in diverse formats and media
+             (e.g., quantitative data, video, multimedia) in order to address a question or solve a problem.
+              (CI-PS4-1, CI-PS4-4)
+RST.11-12.8  Evaluate the hypotheses, data, analysis, and conclusions in a science or technical text, verifying
+             the data when possible and corroborating or challenging conclusions with other sources of
+             information. (CI-PS4-3, CI-PS4-4)
+WHST.9-12.2 Write informative/explanatory texts, including the narration of historical events, scientific
+             procedures/ experiments, or technical processes. (CI-PS4-5)
+WHST.11-12.8 Gather relevant information from multiple authoritative print and digital sources, using advanced
+             searches effectively; assess the strengths and limitations of each source in terms of the specific
+             task, purpose, and audience; integrate information into the text selectively to maintain the flow of
+             ideas, avoiding plagiarism and overreliance on any one source and following a standard format for
+             citation. (CI-PS4-4)
+Connections to the Arkansas Language Arts Standards--N/A
+Connections to the Arkansas Mathematics Standards:
+                 Interpret the parts of expressions such as terms, factors, and coefficients in terms of a real-world
+A1.EX.4         context. (CI-PS4-1, CI-PS4-3)
+                 Solve linear formulas for a specified variable. (CI-PS4-1, CI-PS4-3)
+A1.LFE.3
+                 Translate among equivalent forms of equations for linear functions, including standard, point-
+A1.LFE.10       slope, and slope-intercept forms; recognize that each form reveals key features in a given context.
+                (CI-PS4-1, CI-PS4-3)
+A1.QFE.8        Explain how each form of a quadratic expression (standard, factored, and vertex form) identifies
+28
+                different key attributes, using the different forms to interpret quantities in context. (CI-PS4-1,
+                                           Chemistry - Integrated: Waves
+                                         Arkansas K-12 Science Standards
+                                         Arkansas Department of Education
+                                                        2016
+           CI-PS4-3)
+A1.QFE.9   Use factoring and completing the square to create equivalent forms of quadratic functions to reveal
+           key attributes. (CI-PS4-1, CI-PS4-3)
+AR.M.2     Applying reasoning about quantities and relationships. (CI-PS4-1, CI-PS4-3, CI4-ETS1-4)
+AR.M.4     Select and use relationships and tools. (CI-PS4-1, CI-ETS1-4)
+
+
+
+
+29
+                                    Chemistry - Integrated: Waves
+                                  Arkansas K-12 Science Standards
+                                  Arkansas Department of Education
+                                                 2016
+                                       Chemistry - Integrated
+ Topic 5: Forces
+ Students who demonstrate understanding can:
+ CI-PS2-1      Analyze data to support the claim that Newton’s second law of motion describes the
+              mathematical relationship among the net force on a macroscopic object, its mass, and its
+              acceleration. [AR Clarification Statement: This PE is fully addressed in this course. Examples of
+              data could include tables or graphs of position or velocity as a function of time for objects subject
+              to a net unbalanced force (a falling object, an object rolling down a ramp, or a moving object being
+              pulled by a constant force).] [Assessment Boundary: Assessment is limited to one-dimensional
+              motion and to macroscopic objects moving at non-relativistic speeds.]
+ CI-PS2-2      Use mathematical representations to support the claim that the total momentum of a
+               system of objects is conserved when there is no net force on the system. [Clarification
+              Statement: Emphasis is on the quantitative conservation of momentum in interactions and the
+              qualitative meaning of this principle.] [Assessment Boundary: Assessment is limited to systems of
+              two macroscopic bodies moving in one dimension.]
+ CI-PS2-4     Use mathematical representations of Newton’s Law of Gravitation and Coulomb’s Law to
+              describe and predict the gravitational and electrostatic forces between objects. [Clarification
+              Statement: Emphasis is on both quantitative and conceptual descriptions of gravitational and
+              electric fields.] [Assessment Boundary: Assessment is limited to systems with two objects.]
+ CI-PS3-5     Develop and use a model of two objects interacting through electric or magnetic fields to
+              illustrate the forces between objects and the changes in energy of the objects due to the
+              interaction. [Clarification Statement: Examples of models could include drawings, diagrams, and
+              texts, such as drawings of what happens when two charges of opposite polarity are near each
+              other.] [Assessment Boundary: Assessment is limited to systems containing two objects.]
+ CI-ESS1-4    Use mathematical or computational representations to predict the motion of orbiting
+              objects in the solar system. [Clarification Statement: Emphasis is on Newtonian gravitational
+              laws governing orbital motions, which apply to human-made satellites as well as planets and
+              moons.] [Assessment Boundary: Mathematical representations for the gravitational attraction of
+              bodies and Kepler’s laws of orbital motions should not deal with more than two bodies, nor involve
+              calculus.]
+ CI5-ETS1-2 Design a solution to a complex real-world problem by breaking it down into smaller, more
+              manageable problems that can be solved through engineering. [AR Clarification Statement:
+              Examples of solutions could include satellite deployment, airbag design, gravity assist, sports
+              safety, and elevators.]
+ The performance expectations above were developed using the following elements from the NRC document A
+ Framework for K-12 Science Education:
+
+  Science and Engineering Practices                  Disciplinary Core Ideas            Crosscutting Concepts
+ Analyzing and Interpreting Data             PS2.A: Forces and Motion                 Patterns
+ Analyzing data in 9–12 builds on K–8         Newton’s second law accurately          Different patterns may be
+ and progresses to introducing more            predicts changes in the motion of        observed at each of the
+ detailed statistical analysis, the            macroscopic objects. (CI-PS2-1)          scales at which a system is
+ comparison of data sets for                  Momentum is defined for a                studied and can provide
+ consistency, and the use of models to         particular frame of reference; it is     evidence for causality in
+ generate and analyze data.                    the mass times the velocity of the       explanations of phenomena.
+   Analyze data using tools,                  object. (CI-PS2-2)                       (CI-PS2-4)
+    technologies, and/or models (e.g.,        If a system interacts with objects     Cause and Effect
+    computational, mathematical) in            outside itself, the total momentum      Empirical evidence is
+    order to make valid and reliable           of the system can change;                required to differentiate
+    scientific claims or determine an          however, any such change is              between cause and
+    optimal design solution. (CI-PS2-1)
+30
+                                            Chemistry - Integrated: Forces
+                                          Arkansas K-12 Science Standards
+                                          Arkansas Department of Education
+                                                         2016
+ Using Mathematics and                           balanced by changes in the                   correlation and make claims
+ Computational Thinking                          momentum of objects outside the              about specific causes and
+ Mathematical and computational                  system. (CI-PS2-2)                           effects. (CI-PS2-1)
+ thinking at the 9–12 level builds on K–8     PS2.B: Types of Interactions                  Cause and effect
+ and progresses to using algebraic             Newton’s law of universal                     relationships can be
+ thinking and analysis, a range of linear        gravitation and Coulomb’s law                suggested and predicted for
+ and nonlinear functions including               provide the mathematical models to           complex natural and human
+ trigonometric functions, exponentials           describe and predict the effects of          designed systems by
+ and logarithms, and computational               gravitational and electrostatic              examining what is known
+ tools for statistical analysis to analyze,      forces between distant objects.              about smaller scale
+ represent, and model data. Simple               (CI-PS2-4)                                   mechanisms within the
+ computational simulations are created         Forces at a distance are explained            system. (CI-PS3-5)
+ and used based on mathematical                  by fields (gravitational, electric, and   Systems and System Models
+ models of basic assumptions.                    magnetic) permeating space that            When investigating or
+   Use mathematical representations             can transfer energy through space.           describing a system, the
+     of phenomena to describe                    Magnets or electric currents cause           boundaries and initial
+     explanations.                               magnetic fields; electric charges or         conditions of the system
+     (CI-PS2-2, CI-PS2-4, CI-ESS1-4)             changing magnetic fields cause               need to be defined.
+ Developing and Using Models                     electric fields. (CI-PS2-4)                  (CI-PS2-2)
+ Modeling in 9–12 builds on K–8 and           PS3.C: Relationship Between                  Scale, Proportion, and
+ progresses to using, synthesizing, and       Energy and Forces                            Quantity
+ developing models to predict and show         When two objects interacting                 Algebraic thinking is used to
+ relationships among variables between           through a field change relative              examine scientific data and
+ systems and their components in the             position, the energy stored in the           predict the effect of a
+ natural and designed worlds.                    field is changed. (CI-PS3-5)                 change in one variable on
+   Develop and use a model based on          ESS1.B: Earth and the Solar                     another (e.g., linear growth
+     evidence to illustrate the               System                                          vs. exponential growth).
+     relationships between systems or           Kepler’s laws describe common                (CI-ESS1-4)
+     between components of a system.             features of the motions of orbiting
+     (CI-PS3-2, CI-PS3-5)                        objects, including their elliptical        ------------------------------------
+ Constructing Explanations and                   paths around the sun. Orbits may          Connections to Engineering,
+ Designing Solutions                             change due to the gravitational                     Technology,
+ Constructing explanations and                   effects from, or collisions with,         and Applications of Science
+ designing solutions in 9–12 builds on           other objects in the solar system.
+ K–8 experiences and progresses to               (CI-ESS1-4)                               Interdependence of Science,
+ explanations and designs that are            ETS1.C: Optimizing the Design                Engineering, and
+ supported by multiple and independent        Solution                                     Technology
+ student-generated sources of evidence         Criteria may need to be broken               Science and engineering
+ consistent with scientific ideas,               down into simpler ones that can be           complement each other in
+ principles and theories.                        approached systematically, and               the cycle known as
+   Design a solution to a complex real-         decisions about the priority of              research and development
+     world problem, based on scientific          certain criteria over others (trade-         (R&D). Many R&D projects
+     knowledge, student-generated                offs) may be needed. (CI5-ETS1-2)            may involve scientists,
+     sources of evidence, prioritized                                                         engineers, and others with
+     criteria, and tradeoff considerations.                                                   wide ranges of expertise.
+     (CI5-ETS1-2)                                                                             (CI-ESS1-4)
+
+
+
+
+31
+                                            Chemistry - Integrated: Forces
+                                          Arkansas K-12 Science Standards
+                                          Arkansas Department of Education
+                                                         2016
+ ----------------------------------------------------
+   Connections to Nature of Science
+
+ Science Models, Laws, Mechanisms,
+ and Theories Explain Natural
+ Phenomena
+   Theories and laws provide
+    explanations in science.
+    (CI-PS2-1, CI-PS2-4)
+   Laws are statements or descriptions
+    of the relationships among
+    observable phenomena.
+    (CI-PS2-1, CI-PS2-4)
+ Connections to other DCIs in this course: CI.PS3.A (HS-PS2-4); CI.PS2.B (CI-PS3-5, CI-ESS1-4); CI.PS3.C
+ (CI-PS2-1); CI.ESS1.A (CI-PS2-1, CI-PS2-2, CI-PS2-4); CI.ESS1.B (CI-PS2-4); CI.ESS1.C (CI-PS2-1,
+ CI-PS2-2, CI-PS2-4); CI.ESS2.C (CI-PS2-1, CI-PS2-4)
+ Connections to DCIs across grade-bands: 8.PS2.A (CI-PS2-1, CI-PS2-2, CI-ESS1-4); 8.PS2.B (CI-PS2-4,
+ CI-PS3-5, CI-ESS1-4); 6.PS3.C (CI-PS2-1, CI-PS2-2, CI-PS3-5); 8.ESS1.A (CI-ESS1-4); 8.ESS1.B
+ (CI-PS2-4, CI-ESS1-4); 7.ESS2.B (CI-ESS1-5); 6-8.ETS1.A (CI5-ETS1-2); 6-8.ETS1.B (CI5-ETS1-2);
+ 6-8.ETS1.C (CI5-ETS1-2)
+ Connections to the Arkansas Disciplinary Literacy Standards:
+ RST.11-12.1  Cite specific textual evidence to support analysis of science and technical texts, attending to
+              important distinctions the author makes and to any gaps or inconsistencies in the account.
+              (CI-PS2-1)
+ RST.11-12.7  Integrate and evaluate multiple sources of information presented in diverse formats and media
+              (e.g., quantitative data, video, multimedia) in order to address a question or solve a problem.
+               (CI-PS2-1)
+ WHST.9-12.7 Conduct short as well as more sustained research projects to answer a question (including a
+              self-generated question) or solve a problem; narrow or broaden the inquiry when appropriate;
+              synthesize multiple sources on the subject, demonstrating understanding of the subject under
+              investigation.(CI-PS3-5)
+ WHST.11-12.8 Gather relevant information from multiple authoritative print and digital sources, using advanced
+              searches effectively; assess the strengths and limitations of each source in terms of the specific
+              task, purpose, and audience; integrate information into the text selectively to maintain the flow of
+              ideas, avoiding plagiarism and overreliance on any one source and following a standard format
+              for citation. (CI-PS3-5)
+ WHST.9-12.9 Draw evidence from informational texts to support analysis, reflection, and research.
+              (CI-PS2-1, CI-PS3-5)
+
+ Connections to the Arkansas English Language Arts Standards
+ 9-12.CC.9.P          Include relevant multimedia to enhance understanding of findings, reasoning, and/or evidence.
+                      (CI-PS3-5)
+
+ Connections to the Arkansas Mathematics Standards:
+ A1.EFE.1             Represent and solve real-world problems using exponential equations in one variable.
+                       (CI-PS2-1, CI-PS2-2)
+ A1.EFE.9             Graph exponential functions that model real-world problems (growth, decay, and compound
+                      interest), showing key attributes. (CI-PS2-1)
+ A1.EX.4               Interpret the parts of expressions such as terms, factors, and coefficients in terms of a real-
+                      world context. (CI-PS2-1, CI-PS2-4, CI-ESS1-4)
+
+32
+                                                      Chemistry - Integrated: Forces
+                                                    Arkansas K-12 Science Standards
+                                                    Arkansas Department of Education
+                                                                   2016
+ A1.LFE.1    Represent and solve real-world problems, using linear expressions, equations, and inequalities
+             in one variable. (CI-PS2-1, CI-PS2-2)
+ A1.LFE.3    Solve linear formulas for a specified variable. (CI-PS2-1, CI-PS2-2, CI-ESS1-4)
+ A1.LFE.10   Translate among equivalent forms of equations for linear functions, including standard, point-
+             slope, and slope-intercept forms; recognize that each form reveals key features in a given
+             context. (CI-PS2-1, CI-PS2-2, CI-ESS1-4)
+ A1.LFE.16   Graph linear functions expressed as an equation and show intercepts of the graph without
+             technology. (CI-PS2-1)
+ A1.LFE.17   Graph absolute value functions expressed as an equation with and without technology, showing
+             intercepts and end behavior. (CI-PS2-1)
+ A1.QFE.1     Represent and solve real-world problems using quadratic expressions and equations in one
+             variable. (CI-PS2-1, CI-PS2-2)
+ A1.QFE.2     Write quadratic equations with real number solutions that model the relationship between two
+             quantities and produce a graph of the equation. (CI-PS2-1, CI-PS2-2, CI-ESS1-4)
+ A1.QFE.8     Explain how each form of a quadratic expression (standard, factored, and vertex form) identifies
+             different key attributes, using the different forms to interpret quantities in context. (CI-PS2-1,
+              CI-PS2-4)
+ A1.QFE.9    Use factoring and completing the square to create equivalent forms of quadratic functions to
+             reveal key attributes. (CI-PS2-1, CI-PS2-4)
+ A1.QFE.10   Graph quadratic functions given as an equation or in function notation, labeling key attributes,
+             without technology. (CI-PS2-1)
+ A1.SP.1     Use box plots and histograms to determine the statistics appropriate to the shape of the data
+             distribution; compare the center and spread of two or more data sets. (CI-PS2-1)
+ A1.SP.3     Summarize data from two categorical variables in a frequency table; interpret relative
+             frequencies in the context of the data, recognizing data trends and associations. (CI-PS2-1,
+             CI-PS2-2, CI-PS2-4, CI-ESS1-4, CI-ESS1-5)
+ AR.M.2      Applying reasoning about quantities and relationships. (CI-PS2-1, CI-PS2-2, CI-PS2-4, CI-
+             PS3-5, CI-ESS1-4, CI-ESS1-5)
+ AR.M.4       Select and use relationships and tools. (CI-PS2-1, CI-PS2-2, CI-PS2-4, CI-PS3-5, CI-ESS1-
+             4, CI5-ETS1-2)
+
+
+
+
+33
+                                     Chemistry - Integrated: Forces
+                                   Arkansas K-12 Science Standards
+                                   Arkansas Department of Education
+                                                  2016
+                                                  Contributors
+
+The following educators contributed to the development of this course:
+
+  Susan Allison – Benton School District                              Steven Long – Rogers School District
+
+  Angela Bassham – Salem School District                              Brandon Lucius – Osceola School District
+
+  Allison Belcher – Little Rock School District                       Matt Martin – Centerpoint School District
+
+  Debbie Bilyeu – Arkansas AIMS                                       Patti Meeks – Hamburg School District
+
+  Tami Blair – Texarkana School District                              Melissa Miller – Farmington School District
+
+  Stephen Brodie – University of Arkansas at Fort Smith               Jim Musser – Arkansas Tech University
+  STEM Center
+  Stephanie Brown – Quitman School District                           Nanette Nichols – Wilbur D. Mills AR Education
+                                                                      Cooperative
+
+  Sarah Croswell – Virtual Arkansas                                   John Nilz – North Little Rock School District
+
+  Tami Eggensperger – Cabot School District                           Dennis Pevey – eSTEM Public Charter School
+
+  Jenna Gill – Siloam Springs School District                         Tami Philyaw – Smackover – Norphlet School District
+
+  Douglas Hammon – Little Rock School District                        Kathy Prophet – Springdale School District
+
+  Keith Harris – University of Arkansas at Little Rock                Carrie Shell – Highland School District
+  Partnership for STEM Education
+  Lynne Hehr – University of Arkansas at Fayetteville                 Will Squires – Caddo Hills School District
+  STEM Center for Math and Science Education –
+  Leonda Holthoff – Star City School District                         Eddie Tucker – Hamburg School District
+
+  Courtney Jones – Lincoln Consolidated School District               Jon White – Harding University
+
+  Rebecca Koelling – Highland School District                         Andrew Williams – University of Arkansas at Monticello
+
+  Karen Ladd – Nettleton School District                              Wendi J.W. Williams – Northwest Arkansas Community
+                                                                      College
+
+  John Levy – North Arkansas College                                  Cathy Wissehr – University of Arkansas at Fayetteville
+
+
+
+
+ 34
+                                           Chemistry - Integrated: Contributors
+                                           Arkansas K-12 Science Standards
+                                           Arkansas Department of Education
+                                                           2016
+

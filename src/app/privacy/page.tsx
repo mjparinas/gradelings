@@ -187,6 +187,9 @@ export default function PrivacyPage() {
           <strong>Schools in Arizona.</strong> The same applies when an Arizona school or teacher uses {APP_NAME} with students. In line with Arizona Revised Statutes section 15-1046 (student data privacy) we: never use students’ information for targeted advertising; never sell or rent it, and never build a profile of a student except for the school’s educational purposes; share it only as the law allows (with the school, and with the service providers listed under “Who we share it with”, who are bound not to use or pass it on for anything else and to keep it secure); keep a security program in place to protect it, as described under “Security”; and delete it within a reasonable time when the school asks.
         </p>
         <p>
+          <strong>Schools in Arkansas.</strong> The same applies when an Arkansas school or teacher uses {APP_NAME} with students. In line with Arkansas’s Student Online Personal Information Protection Act (Arkansas Code 6-18-109) we: never use students’ information for targeted advertising; never sell it, and never build a profile of a student except for the school’s educational purposes; share it only as the law allows (with the school, and with the service providers listed under “Who we share it with”, who are bound not to use or pass it on for anything else and to keep it secure); keep a security program in place to protect it, as described under “Security”; and delete it when the school asks.
+        </p>
+        <p>
           <strong>Health data.</strong> We don’t collect consumer health data as defined in Washington’s My Health My Data Act, or any other health information. The calm and focus options in Settings (calmer motion, quieter sounds, hidden timers) are presentation preferences a parent chooses; we never ask why, and they say nothing about a child’s health.
         </p>
       </Section>

@@ -481,4 +481,28 @@ export const lessons: GradeLessons = {
     ["Minerals collect through processes like volcanoes and ancient seas.", "Those happened in some places, not all."],
     "past geologic processes concentrated them there",
   ),
+  "science/tx-g6-seasons-tides": lesson(
+    ["Earth's axis is tilted about 23.5°. Without the tilt there would be almost no seasons.", "When a hemisphere tilts toward the Sun, sunlight hits more directly and it has summer.", "Earth orbits the Sun about every 365 days.", "The Moon's and Sun's gravity pull on the oceans to make tides."],
+    "When the Northern Hemisphere tilts toward the Sun, what season does it have?",
+    ["Tilted toward the Sun means more direct sunlight.", "More direct sunlight means summer."],
+    "summer",
+  ),
+  "science/tx-g7-solar-system": lesson(
+    ["Gravity keeps the planets in orbit around the Sun. Planets closer to the Sun orbit faster.", "Asteroids are rocky; comets are icy. A meteorite is a space rock that reaches Earth's surface.", "The Kuiper belt and the far-off Oort cloud hold icy objects.", "Earth's atmosphere gives oxygen and blocks harmful radiation."],
+    "Which orbits the Sun faster: Venus or Jupiter?",
+    ["Venus is much closer to the Sun.", "Closer planets orbit faster."],
+    "Venus",
+  ),
+  "science/ar-g8-earth-history": lesson(
+    ["Rock layers and fossils order Earth’s 4.6-billion-year history; lower layers are older.", "Most of that history is the Precambrian. We live in the Cenozoic Era.", "Homologous structures show that living things share ancestors."],
+    "In which era do we live today?",
+    ["The eras go Paleozoic, Mesozoic, Cenozoic.", "The latest is the Cenozoic."],
+    "the Cenozoic Era",
+  ),
+  "science/ar-g8-seasons-tides": lesson(
+    ["Earth's axis is tilted about 23.5°. Without the tilt there would be almost no seasons.", "When a hemisphere tilts toward the Sun, sunlight hits more directly and it has summer.", "Earth orbits the Sun about every 365 days.", "The Moon's and Sun's gravity pull on the oceans to make tides."],
+    "When the Northern Hemisphere tilts toward the Sun, what season does it have?",
+    ["Tilted toward the Sun means more direct sunlight.", "More direct sunlight means summer."],
+    "summer",
+  ),
 };

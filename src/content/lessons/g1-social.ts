@@ -331,4 +331,16 @@ export const lessons: GradeLessons = {
     ["Mobile has a big festival with parades.", "It is called Mardi Gras."],
     "Mardi Gras parades",
   ),
+  "social/ar-g1-symbols": lesson(
+    ["Arkansas symbols: the white-tailed deer, milk, the square dance, the diamond.", "Treat the flag with respect. It should never touch the ground.", "Holidays honor people and events, like July 4, our country's birthday."],
+    "What does Memorial Day honor?",
+    ["We remember people in May.", "They died serving our country."],
+    "soldiers who died serving our country",
+  ),
+  "social/ar-g1-goods-trade": lesson(
+    ["Arkansas grows rice, soybeans and cotton, and raises chickens.", "An export is sold to another country. An import is bought from one.", "We trade to get things we can't make or grow at home."],
+    "Arkansas rice sold to another country is an…",
+    ["It goes out of our country.", "Going out is an export."],
+    "export",
+  ),
 };

@@ -1,0 +1,1010 @@
+                                               Grade 5
+
+
+
+
+                                                        2015
+
+Re-aligned Fall 2024 to the Arkansas Mathematics Standards, Arkansas English Language Arts Standards, and Arkansas Disciplinary
+                                                       Literacy Standards
+                                                                              Table of Contents
+
+
+How to Read the Standards…………………………………………………………………………………………………….......…3
+Arkansas K-12 Science Standards Overview........................................................................................................................4
+Grades 5-8 Science Core Ideas and Topics…………………………………………………………………………………………7
+
+
+Grade Five
+Earth’s Systems ...................................................................................................................................................................... 12
+Space Systems: Stars and the Solar System ......................................................................................................................... 14
+Structure and Properties of Matter ......................................................................................................................................... 16
+Matter and Energy in Organisms and Ecosystems ................................................................................................................ 18
+Engineering, Technology, and Applications of Science ......................................................................................................... 20
+
+Contributors ........................................................................................................................................................................... 21
+
+
+
+
+2
+                                                                                 Grade Five
+                                                                       Arkansas K-12 Science Standards
+                                                                       Arkansas Department of Education
+                                                                                    2015
+                    How to Read
+           Arkansas K-12 Science Standards
+
+
+
+
+    Grades 5-8 Science Core Ideas and Topics Overview
+
+
+
+3
+                   Grade Five: How to Read
+               Arkansas K-12 Science Standards
+               Arkansas Department of Education
+                            2015
+                                       Arkansas K-12 Science Standards Overview
+
+The Arkansas K-12 Science Standards are based on A Framework for K-12 Science Education (NRC 2012) and are
+meant to reflect a new vision for science education. The following conceptual shifts reflect what is new about these
+science standards. The Arkansas K-12 Science Standards
+    • reflect science as it is practiced and experienced in the real world,
+    • build logically from Kindergarten through Grade 12,
+    • focus on deeper understanding as well as application of content,
+    • integrate practices, crosscutting concepts, and core ideas, and
+    • make explicit connections to literacy and math.
+
+As part of teaching the Arkansas K-12 Science Standards, it will be important to instruct and guide students in adopting
+appropriate safety precautions for their student-directed science investigations. Reducing risk and preventing accidents in
+science classrooms begin with planning. The following four steps are recommended in carrying out a hazard and risk
+assessment for any planned lab investigation:
+    1) Identify all hazards. Hazards may be physical, chemical, health, or environmental.
+    2) Evaluate the type of risk associated with each hazard.
+    3) Write the procedure and all necessary safety precautions in such a way as to eliminate or reduce the risk
+        associated with each hazard.
+    4) Prepare for any emergency that might arise in spite of all of the required safety precautions.
+
+According to Arkansas Code Annotated § 6-10-113 (2012) for eye protection, every student and teacher in public schools
+participating in any chemical or combined chemical-physical laboratories involving caustic or explosive chemicals or hot
+liquids or solids is required to wear industrial-quality eye protective devices (eye goggles) at all times while participating in
+science investigations.
+
+The Arkansas K-12 Science Standards outline the knowledge and science and engineering practices that all students
+should learn by the end of high school. The standards are three-dimensional because each student performance
+expectation engages students at the nexus of the following three dimensions:
+
+    •   Dimension 1 describes scientific and engineering practices.
+    •   Dimension 2 describes crosscutting concepts, overarching science concepts that apply across science
+        disciplines.
+    •   Dimension 3 describes core ideas in the science disciplines.
+
+                                              Science and Engineering Practices
+
+The eight practices describe what scientists use to investigate and build models and theories of the world around them or
+that engineers use as they build and design systems. The practices are essential for all students to learn and are as
+follows:
+            1. Asking questions (for science) and defining problems (for engineering)
+            2. Developing and using models
+            3. Planning and carrying out investigations
+            4. Analyzing and interpreting data
+            5. Using mathematics and computational thinking
+            6. Constructing explanations (for science) and designing solutions (for engineering)
+            7. Engaging in argument from evidence
+            8. Obtaining, evaluating, and communicating information
+
+                                                    Crosscutting Concepts
+
+The seven crosscutting concepts bridge disciplinary boundaries and unit core ideas throughout the fields of science and
+engineering. Their purpose is to help students deepen their understanding of the disciplinary core ideas, and develop a
+coherent, and scientifically based view of the world. The seven crosscutting concepts are as follows:
+       1. Patterns- Observed patterns of forms and events guide organization and classification, and prompt questions
+       about relationships and the factors that influence them.
+4
+                                                   Grade Five: Science Standards
+                                                             Overview
+                                                  Arkansas K-12 Science Standards
+                                                  Arkansas Department of Education
+                                                                2015
+        2. Cause and effect- Mechanism and explanation. Events have causes, sometimes simple, sometimes
+        multifaceted. A major activity of science is investigating and explaining causal relationships and the mechanisms
+        by which they are mediated. Such mechanisms can then be tested across given contexts and used to predict and
+        explain events in new contexts.
+        3. Scale, proportion, and quantity- In considering phenomena, it is critical to recognize what is relevant at different
+        measures of size, time, and energy and to recognize how changes in scale, proportion, or quantity affect a
+        system’s structure or performance.
+        4. Systems and system models- Defining the system under study—specifying its boundaries and making explicit a
+        model of that system—provides tools for understanding and testing ideas that are applicable throughout science
+        and engineering.
+        5. Energy and matter: Flows, cycles, and conservation- Tracking fluxes of energy and matter into, out of, and
+        within systems helps one understand the systems’ possibilities and limitations.
+        6. Structure and function- The way in which an object or living thing is shaped and its substructure determines
+        many of its properties and functions.
+        7. Stability and change- For natural and built systems alike, conditions of stability and determinants of rates of
+        change or evolution of a system are critical elements of study.
+
+
+                                                   Disciplinary Core Ideas
+
+The disciplinary core ideas describe the content that occurs at each grade or course. The Arkansas K-12 Science
+Standards focus on a limited number of core ideas in science and engineering both within and across the disciplines and
+are built on the notion of learning as a developmental progression. The Disciplinary Core Ideas are grouped into the
+following domains:
+
+    •   Physical Science (PS)
+    •   Life Science (LS)
+    •   Earth and Space Science (ESS)
+    •   Engineering, Technology and Applications of Science (ETS)
+
+
+                              Connections to the Arkansas English Language Arts Standards
+
+Evidence-based reasoning is the foundation of good scientific practice. The Arkansas K-12 Science Standards
+incorporate reasoning skills used in language arts to help students improve mastery and understanding in all three
+disciplines. The Arkansas K-8 Science Committee made every effort to align grade-by-grade with the English language
+arts (ELA) standards so concepts support what students are learning in their entire curriculum. Connections to specific
+ELA standards are listed for each student performance expectation, giving teachers a blueprint for building
+comprehensive cross-disciplinary lessons.
+The intersections between Arkansas K-12 Science Standards and Arkansas ELA Standards teach students to analyze
+data, model concepts, and strategically use tools through productive talk and shared activity. Reading in science requires
+an appreciation of the norms and conventions of the discipline of science, including understanding the nature of evidence
+used, an attention to precision and detail, and the capacity to make and assess intricate arguments, synthesize complex
+information, and follow detailed procedures and accounts of events and concepts. These practice-based standards help
+teachers foster a classroom culture where students think and reason together, connecting around the subject matter and
+core ideas.
+
+                               Connections to the Arkansas Disciplinary Literacy Standards
+
+Reading is critical to building knowledge in science. College and career ready reading in science requires an appreciation
+of the norms and conventions of each discipline, such as the kinds of evidence used in science; an understanding of
+domain-specific words and phrases; an attention to precise details; and the capacity to evaluate intricate arguments,
+synthesize complex information, and follow detailed descriptions of events and concepts. When reading scientific and
+technical texts, students need to be able to gain knowledge from challenging texts that often make extensive use of
+elaborate diagrams and data to convey information and illustrate concepts. Students must be able to read complex
+informational texts in science with independence and confidence because the vast majority of reading in college and
+workforce training programs will be sophisticated nonfiction.
+
+                                                 Grades Five: Science Standards
+                                                           Overview
+5                                               Arkansas K-12 Science Standards
+                                                Arkansas Department of Education
+                                                              2015
+For students, writing is a key means of asserting and defending claims, showing what they know about science, and
+conveying what they have experienced, imagined, thought, and felt. To be college and career ready writers, students must
+take task, purpose, and audience into careful consideration, choosing words, information, structures, and formats
+deliberately. They need to be able to use technology strategically when creating, refining, and collaborating on writing.
+They have to become adept at gathering information, evaluating sources, and citing material accurately, reporting finds
+from their research and analysis of sources in a clear and cogent manner. They must have the flexibility, concentration,
+and fluency to produce high-quality first-draft text under a tight deadline and the capacity to revisit and make
+improvements to a piece of writing over multiple drafts when circumstances encourage or require it.
+
+                                      Connections to the Arkansas Mathematics Standards
+
+Science is a quantitative discipline, so it is important for educators to ensure that students’ science learning coheres well
+with their understanding of mathematics. To achieve this alignment, the Arkansas K-12 Science Committee made every
+effort to ensure that the mathematics standards do not outpace or misalign to the grade-by-grade science standards.
+Connections to specific math standards are listed for each student performance expectation, giving teachers a blueprint
+for building comprehensive cross-disciplinary lessons.
+
+Table below lists key topics relevant to science and the grades at which topics are first expected in the Arkansas
+Mathematics Standards.
+
+                     Number and Operations                                            Grade First Expected
+
+    The coordinate plane                                                                       5
+
+    Ratios, rates (e.g. speed), proportional relationships                                     6
+
+    Simple percent problems                                                                    6
+
+    Rational number system/signed numbers-concepts                                             6
+
+    Rational number system/signed numbers-arithmetic                                           7
+
+                           Measurement                                                Grade First Expected
+
+    Convert units within a given measurement system                                            5
+
+    Volume                                                                                     5
+
+    Convert units across measurement systems (e.g. inches                                      6
+    to cm)
+
+                    Statistics and Probability                                        Grade First Expected
+
+    Statistical distributions (including center, variation,                                   6-8
+    clumping, outliers, mean, median, mode, range,
+    quartiles), and statistical association or trends (including
+    two-way tables, bivariate measurement data, scatter
+    plots, trend line, line of best fit, correlation)
+    Probability, including chance, likely outcomes, probability                                7
+                                models
+
+
+
+
+6
+                                                             Grades 5-8
+                                                   Arkansas K-12 Science Standards
+                                                   Arkansas Department of Education
+                                                                2015
+                           Grades 5-8 Science Core Ideas and Topics Overview
+
+
+
+
+             PHYSICAL SCIENCES                          LIFE SCIENCES                        EARTH and SPACE
+                                                                                                SCIENCES
+Grade 5
+                5. Structure and           5. Matter and Energy in Organisms and
+                                                                                           5. Earth’s     5. Space
+              Properties of Matter                       Ecosystems
+                                                                                           Systems        Systems
+                      ENGINEERING, TECHNOLOGY, and APPLICATIONS of SCIENCE
+                                       5. Engineering Design
+
+
+            PHYSICAL SCIENCES                    LIFE SCIENCES                   EARTH and SPACE SCIENCES
+
+Grade 6                                 6. Structure,         6. Growth,
+                                        Function, and      Development, and 6. Earth’s     6. Human     6. Weather
+                   6. Energy             Information        Reproduction of Systems         Impacts     and Climate
+                                         Processing           Organisms
+
+
+            PHYSICAL SCIENCES                    LIFE SCIENCES                  EARTH and SPACES SCIENCES
+
+Grade 7
+                                                              7. Matter and
+          7. Structure and             7. Interdependent                      7. Earth’s
+                           7. Chemical                          Energy in                  7. History    7. Human
+            Properties of               Relationships in                      Systems
+                            Reactions                        Organisms and                  of Earth      Impacts
+               Matter                     Ecosystems
+                                                              Ecosystems
+
+
+            PHYSICAL SCIENCES                    LIFE SCIENCES                  EARTH and SPACES SCIENCES
+
+Grade 8
+                                          8. Growth,          8. Natural
+           8. Waves and    8. Forces
+                                         Development,       Selection and 8. Energy 8. Space            8. History of
+          Electromagnetic     and
+                                       and Reproduction      Adaptations            Systems                Earth
+             Radiation    Interactions
+                                         of Organisms
+                      ENGINEERING, TECHNOLOGY, and APPLICATIONS of SCIENCE
+                                           6-8. Engineering Design
+
+
+
+
+7
+                                                   Grades 5-8
+                                         Arkansas K-12 Science Standards
+                                         Arkansas Department of Education
+                                                      2015
+                                               Science Grades 5-8 Overview
+
+The Arkansas K-12 Science Standards for Grades 5-8 is a curriculum framework of grade level student performance
+expectations based on the core ideas of the physical sciences (PS), life sciences (LS), earth and space sciences (ESS),
+and engineering (ETS) from A Framework for K-12 Science Education (NRC 2012). The performance expectations build
+logically from Grades K-4 to Grades 5-8. The performance expectations clarify what students need to know and be able to
+do at the end of each grade. Student performance expectations consist of three dimensions: science and engineering
+practices, disciplinary core ideas, and crosscutting concepts. Engineering performance expectations are meant to be
+integrated into science instruction to support the learning of science phenomena at all levels from Kindergarten to Grade
+12.
+
+As part of teaching the Arkansas K-12 Science Standards, it will be important to instruct and guide students in adopting
+appropriate safety precautions for their student-directed science investigations. Reducing risk and preventing accidents in
+science classrooms begin with planning. There are four recommended steps in carrying out a hazard and risk assessment
+for any planned lab investigation.
+     1) Identify all hazards. Hazards may be physical, chemical, health, or environmental.
+     2) Evaluate the type of risk associated with each hazard.
+     3) Write the procedure and all necessary safety precautions in such a way as to eliminate or reduce the risk
+         associated with each hazard.
+     4) Prepare for any emergency that might arise in spite of all of the required safety precautions.
+According to Arkansas Code Annotated § 6-10-113 (2012) for eye protection, every student and teacher in public schools
+participating in any chemical or combined chemical-physical laboratories involving caustic or explosive chemicals or hot
+liquids or solids is required to wear industrial-quality eye protective devices (eye goggles) at all times while participating in
+science investigations.
+
+
+
+
+Notes:
+   1. Student Performance Expectations (PEs) may be taught in any sequence or grouping within a grade level.
+   2. An asterisk (*) indicates an engineering connection to a practice, core idea, or crosscutting concept.
+   3. The Clarification Statements are examples and additional guidance for the instructor. AR indicates Arkansas-
+       specific Clarification Statements.
+   4. The Assessment Boundaries delineate content that may be taught but not assessed in large-scale assessments.
+       AR indicates Arkansas-specific Assessment Boundaries.
+   5. The examples given (e.g.,) are suggestions for the instructor.
+   6. Throughout this document, connections are provided to the nature of science as defined by A Framework for K-12
+       Science Education (NRC 2012).
+   7. Throughout this document, connections are provided to Engineering, Technology, and Applications of Science as
+       defined by A Framework for K-12 Science Education (NRC 2012).
+   8. Each set of PEs lists connections to other disciplinary core ideas (DCIs) within the Arkansas K-12 Science
+       Standards and to the Arkansas Mathematics Standards, Arkansas English Language Arts Standards, and
+       Arkansas Disciplinary Literacy Standards.
+
+
+
+
+8
+                                                 Grades Five: Standards Overview
+                                                 Arkansas K-12 Science Standards
+                                                 Arkansas Department of Education
+                                                               2015
+                                      Grade 5 Learning Progression by Topic
+
+                                                       Grade 5
+
+EARTH and SPACE SCIENCES                       PHYSICAL SCIENCES                                    LIFE SCIENCES
+
+                                                                                             Matter and Energy
+       Earth’s               Space           Structure and Properties
+                                                                                                     in
+      Systems               Systems                  of Matter
+                                                                                         Organisms and Ecosystems
+      5-ESS2-1          5-PS2-1                   5-PS1-1                                         5-PS3-1
+      5-ESS2-2          5-ESS1-1                  5-PS 1-2AR                                      5-LS1-1
+      5-ESS3-1          5-ESS1-2                  5-PS1-3                                         5-LS2-1
+                                                  5-PS1-4AR
+                           ENGINEERING, TECHNOLOGY, and APPLICATIONS of SCIENCE
+                                                Engineering Design
+                                          5-ETS1-1, 5-ETS1-2, 5-ETS1-3
+Arkansas Clarification Statement/Assessment Boundary (AR)
+
+
+
+
+                             Grade 5 Learning Progression by Disciplinary Core Idea
+
+                                                       Grade 5
+
+       EARTH and SPACE SCIENCES                     PHYSICAL SCIENCES                              LIFE SCIENCES
+
+                                                                                               From        Ecosystems:
+Earth’s Place                                Matter    Motion and                          Molecules to    Interactions,
+                  Earth’s         Earth
+      in                                      and        Stability:             Energy     Organisms:         Energy,
+                 Systems       and Human
+     the                                       its     Forces and                           Structures          and
+                                 Activity
+  Universe                                Interactions Interactions                             and         Dynamics
+                                                                                            Processes
+    5-ESS1-1     5-ESS2-1       5-ESS3-1     5-PS1-1       5-PS2-1   5-PS3-1                 5-LS1-1         5-LS2-1
+    5-ESS1-2     5-ESS2-2                    5-PS1-2AR
+                                             5-PS1-3
+                                             5-PS1-4AR
+                           ENGINEERING, TECHNOLOGY, and APPLICATIONS of SCIENCE
+                                                Engineering Design
+                                          5-ETS1-1, 5-ETS1-2, 5-ETS1-3
+Arkansas Clarification Statement/Assessment Boundary (AR)
+
+
+
+
+9                                           Grades Five: Learning Progression
+                                            Arkansas K-12 Science Standards
+                                            Arkansas Department of Education
+                                                          2015
+                                            Grade Five Standards Overview
+
+The Arkansas K-12 Science Standards are based on A Framework for K-12 Science Education (NRC 2012) and are
+meant to reflect a new vision for science education. The following conceptual shifts reflect what is new about these
+science standards. The Arkansas K-12 Science Standards
+    • reflect science as it is practiced and experienced in the real world,
+    • build logically from Kindergarten through Grade 12,
+    • focus on deeper understanding as well as application of content,
+    • integrate practices, crosscutting concepts, and core ideas, and
+    • make explicit connections to literacy and math.
+
+
+                                         Science and Engineering Practices
+Students are expected to demonstrate grade-appropriate proficiency in
+    • developing and using models,
+    • planning and carrying out investigations,
+    • analyzing and interpreting data,
+    • using mathematics and computational thinking,
+    • engaging in argument from evidence, and
+    • obtaining, evaluating, and communicating information.
+Students are expected to use these science and engineering practices to demonstrate understanding of the disciplinary
+core ideas.
+
+                                                Crosscutting Concepts
+Students are expected to demonstrate grade-appropriate understanding of
+    • patterns,
+    • cause and effect,
+    • scale, proportion, and quantity,
+    • energy and matter,
+    • systems and systems models, and
+    • the influence of engineering, technology, and science on society and the natural world as organizing concepts for
+       the disciplinary core ideas.
+.
+                                                Disciplinary Core Ideas
+Students are expected to continually build on and revise their knowledge of
+    • PS1 - Matter and Its Interactions,
+    • PS2 - Motion and Stability: Forces and Interactions,
+    • PS3 - Energy,
+    • LS1 - Molecules to Organisms: Structures and Processes,
+    • LS2 - Ecosystems: Interactions, Energy, and Dynamics,
+    • ESS1 - Earth’s Place in the Universe,
+    • ESS2 - Earth’s Systems,
+    • ESS3 - Earth and Human Activity, and
+    • ETS1- Engineering Design in a 3-5 developmental learning progression.
+
+
+
+
+10                                              Grade Five: Standards Overview
+                                               Arkansas K-12 Science Standards
+                                               Arkansas Department of Education
+                                                             2015
+                                                  Physical Sciences (PS)
+The (PS) performance expectations in fifth grade help students formulate answers to the questions, “Can new substances
+be created by combining other substances?” and “When matter changes, does its weight change?” Fifth grade students
+are expected to be able to describe that matter is made of particles too small to be seen through the development of a
+model. Students determine whether the mixing of two or more substances results in new substances. Students develop
+an understanding of the idea that regardless of the type of change that matter undergoes, the total weight of matter is
+conserved.
+
+                                                   Life Sciences (LS)
+The (LS) performance expectations in fifth grade help students explore the questions, “Where does the energy in food
+come from?” and “What is it used for?” Students develop an understanding of the idea that plants get the materials they
+need for growth chiefly from air and water. Using models, students can describe the movement of matter among plants,
+animals, decomposers, and the environment and that energy in animals’ food was once energy from the sun.
+
+                                            Earth and Space Sciences (ESS)
+The (ESS) performance expectations in fifth grade help students investigate the questions, “How much water can be
+found in different places on Earth?”, “How does matter cycle through ecosystems?”, and “How do lengths and directions
+of shadows or relative lengths of day and night change from day to day, and how does the appearance of some stars
+change in different seasons?” Students are expected to develop an understanding of patterns of daily changes in length
+and direction of shadows, day and night, and the seasonal appearance of some stars in the night sky. Through the
+development of a model, fifth grade students describe ways the geosphere, biosphere, hydrosphere, and/or atmosphere
+interact. Students describe and graph data to provide evidence about the distribution of water on Earth.
+
+                                Engineering, Technology, and Applications of Science (ETS)
+Engineering design performance expectations in the earliest grades introduce students to problems as situations that
+people want to change. With increased maturity students in third through fifth grade are able to develop these capabilities
+in various scientific contexts. The engineering design process involves three stages:
+     • Defining and delimiting engineering problems involves stating the problem to be solved as clearly as possible
+         in terms of criteria for success, and constraints or limits. In this grade range the additional step of specifying
+         criteria and constraints.
+     • Designing solutions to engineering problems begins with generating a number of different possible solutions,
+         and then evaluating potential solutions to see which ones best meet the criteria and constraints of the problem. In
+         this grade range students generate several alternative solutions and compare them systematically to see which
+         best meet the criteria and constraints of the problem.
+     • Optimizing the engineering design involves a process in which solutions are systematically tested and refined
+         and the final design is improved by trading off less important features for those that are more important. In this
+         grade range students build and test models or prototypes using controlled experiments in which only one variable
+         is changed from trial to trial while all other variables are kept the same.
+By the end of fifth grade students should be able to achieve all three performance expectations (5-ETS1-1, 5-ETS1-2, 5-
+ETS1-3) related to a single problem in order to understand the interrelated processes of engineering design. Students can
+use tools and materials to solve simple problems, use visual or physical representations to convey solutions, and compare
+different solutions to a problem, test them, and determine which is best. These component ideas do not always follow in
+order. At any stage, a problem-solver can redefine the problem or generate new solutions to replace an idea that is not
+working.
+
+
+
+
+11                                               Grade Five: Standards Overview
+                                                Arkansas K-12 Science Standards
+                                                Arkansas Department of Education
+                                                             2015
+                                                              GRADE FIVE
+
+Earth’s Systems
+Students who demonstrate understanding can:
+5-ESS2-1 Develop a model using an example to describe ways the geosphere, biosphere, hydrosphere, and/or
+           atmosphere interact. [Clarification Statement: Examples could include the influence of the ocean on ecosystems,
+           landform shape, and climate; the influence of the atmosphere on landforms and ecosystems through weather and
+           climate; or the influence of mountain ranges on winds and clouds in the atmosphere. The geosphere, hydrosphere,
+           atmosphere, and biosphere are each a system.] [Assessment Boundary: Assessment is limited to the interactions
+           of two systems at a time.]
+5-ESS2-2 Describe and graph the amounts of salt water and fresh water in various reservoirs to provide evidence
+           about the distribution of water on Earth. [Assessment Boundary: Assessment is limited to oceans, lakes, rivers,
+           glaciers, ground water, and polar ice caps, and does not include the atmosphere.]
+5-ESS3-1 Obtain and combine information about ways individual communities use science ideas to protect the
+           Earth’s resources and environment.
+The performance expectations above were developed using the following elements from the NRC document A Framework for
+K-12 Science Education:
+
+  Science and Engineering Practices                        Disciplinary Core Ideas                        Crosscutting Concepts
+Developing and Using Models                 ESS2.A: Earth Materials and Systems             Scale, Proportion, and Quantity
+Modeling in 3–5 builds on K–2                  Earth’s major systems are the geosphere       Standard units are used to
+experiences and progresses to building          (solid and molten rock, soil, and               measure and describe physical
+and revising simple models and using            sediments), the hydrosphere (water and          quantities such as weight, and
+models to represent events and design           ice), the atmosphere (air), and the             volume. (5-ESS2-2)
+solutions.                                      biosphere (living things, including         Systems and System Models
+  Develop a model using an example to          humans). These systems interact in            A system can be described in
+   describe a scientific principle.             multiple ways to affect Earth’s surface         terms of its components and
+   (5-ESS2-1)                                   materials and processes. The ocean              their interactions.
+Using Mathematics and Computational             supports a variety of ecosystems and            (5-ESS2-1, 5-ESS3-1)
+Thinking                                        organisms, shapes landforms, and              ----------------------------------------------
+Mathematical and computational thinking         influences climate. Winds and clouds in     Connections to Nature of Science
+in 3–5 builds on K–2 experiences and            the atmosphere interact with the
+progresses to extending quantitative            landforms to determine patterns of          Science Addresses Questions
+measurements to a variety of physical           weather. (5-ESS2-1)                         About the Natural and Material
+properties and using computation and        ESS2.C: The Roles of Water in Earth’s           World
+mathematics to analyze data and             Surface Processes                                 Science findings are limited to
+compare alternative design solutions.          Nearly all of Earth’s available water is in     questions that can be answered
+  Describe and graph quantities such as        the ocean. Most fresh water is in glaciers      with empirical evidence.
+   area and volume to address scientific        or underground; only a tiny fraction is in      (5-ESS3-1)
+   questions. (5-ESS2-2)                        streams, lakes, wetlands, and the
+Obtaining, Evaluating, and                      atmosphere. (5-ESS2-2)
+Communicating Information                   ESS3.C: Human Impacts on Earth
+Obtaining, evaluating, and communicating Systems
+information in 3–5 builds on K–2               Human activities in agriculture, industry,
+experiences and progresses to evaluating        and everyday life have had major effects
+the merit and accuracy of ideas and             on the land, vegetation, streams, ocean,
+methods.                                        air, and even outer space. But individuals
+  Obtain and combine information from          and communities are doing things to help
+   books and/or other reliable media to         protect Earth’s resources and
+   explain phenomena or solutions to a          environments. (5-ESS3-1)
+   design problem. (5-ESS3-1)
+Connections to other Disciplinary Core Ideas (DCIs) in fifth grade: N/A
+Connections to other DCIs across grade levels: 2.ESS2.A (5-ESS2-1); 2.ESS2.C (5-ESS2-2); 3.ESS2.D (5-ESS2-1);
+4.ESS2.A (5-ESS2-1); 7.ESS2.A (5-ESS2-1); 7.ESS2.C (5-ESS2-1, 5-ESS2-2); 6.ESS2.D (5-ESS2-1);
+7.ESS3.A (5-ESS2-2, 5-ESS3-1); 6.ESS3.C (5-ESS3-1); 6.ESS3.D (5-ESS3-1)
+
+
+
+
+   12
+                                                          Grade 5: Earth’s Systems
+                                                      Arkansas K-12 Science Standards
+                                                      Arkansas Department of Education
+                                                                    2015
+Connections to the Arkansas English Language Arts Standards –
+5.RC.2.RF Answer explicit and inferential questions, using details from a text. (5-ESS3-1)
+5.RC.15.RI Integrate information from several texts on the same topic when writing or speaking about the topic. (5-ESS2-1,
+           5-ESS2-2, 5-ESS3-1)
+5.W.10.P   Take notes, sort evidence into categories, and include a list of sources. (5-ESS2-2, 5-ESS3-1)
+5.W.2.S    Write informative or explanatory pieces, using multiple sources to examine a topic. (5-ESS31)
+5.CC.4.P   Use visual displays and/or audio appropriately to emphasize or enhance certain facts or details when presenting.
+           (5-ESS2-1, 5-ESS2-2)
+
+
+Connections to the Arkansas Mathematics Standards–
+AR.M.2     Applying reasoning about quantities and relationships. (5-ESS2-1, 5-ESS2-2, 5-ESS3-1)
+AR.M.4     Select and use relationships and tools (5-ESS2-1, 5-ESS2-2, 5-ESS3-1)
+5.GM.8     Represent real-world and mathematical problems by graphing points in the first quadrant on a coordinate
+           plane, interpreting coordinate values of points in the context of the situation. (5-ESS2-1)
+
+
+
+
+   13
+                                                      Grade 5: Earth’s Systems
+                                                  Arkansas K-12 Science Standards
+                                                  Arkansas Department of Education
+                                                                2015
+                                                           GRADE FIVE
+
+Space Systems
+Students who demonstrate understanding can:
+5-PS2-1    Support an argument that the gravitational force exerted by Earth on objects is directed down. [Clarification
+           Statement: “Down” is a local description of the direction that points toward the center of the spherical Earth.]
+           [Assessment Boundary: Assessment does not include mathematical representation of gravitational force.]
+5-ESS1-1 Support an argument that differences in the apparent brightness of the sun compared to other stars is due to
+           their relative distances from Earth. [Assessment Boundary: Assessment is limited to relative distances rather
+           than sizes of stars. Assessment does not include other factors that affect apparent brightness (such as stellar
+           masses, age, or stage).]
+5-ESS1-2 Represent data in graphical displays to reveal patterns of daily changes in length and direction of shadows,
+           day and night, and the seasonal appearance of some stars in the night sky. [Clarification Statement: Examples
+           of patterns could include the position and motion of Earth with respect to the sun and select stars that are visible
+           only in particular months.] [Assessment Boundary: Assessment does not include causes of seasons.]
+The performance expectations above were developed using the following elements from the NRC document A Framework for
+K-12 Science Education:
+
+    Science and Engineering Practices                        Disciplinary Core Ideas                   Crosscutting Concepts
+Analyzing and Interpreting Data                  PS2.B: Types of Interactions                       Patterns
+Analyzing data in 3–5 builds on K–2                The gravitational force of Earth acting on an     Similarities and differences
+experiences and progresses to introducing           object near Earth’s surface pulls that object      in patterns can be used to
+quantitative approaches to collecting data and      toward the planet’s center. (5-PS2-1)              sort, classify, communicate
+conducting multiple trials of qualitative        ESS1.A: The Universe and its Stars                    and analyze simple rates
+observations. When possible and feasible,          The sun is a star that appears larger and          of change for natural
+digital tools should be used.                       brighter than other stars because it is closer.    phenomena. (5-ESS1-2)
+  Represent data in graphical displays (bar        Stars range greatly in their distance from      Cause and Effect
+    graphs, pictographs and/or pie charts) to       Earth. (5-ESS1-1)                                 Cause and effect
+    reveal patterns that indicate relationships. ESS1.B: Earth and the Solar System                    relationships are routinely
+    (5-ESS1-2)                                     The orbits of Earth around the sun and of the      identified and used to
+Engaging in Argument from Evidence                  moon around Earth, together with the rotation      explain change. (5-PS2-1)
+Engaging in argument from evidence in 3–5           of Earth about an axis between its North and    Scale, Proportion, and
+builds on K–2 experiences and progresses to         South poles, cause observable patterns.         Quantity
+critiquing the scientific explanations or           These include day and night; daily changes        Natural objects exist from
+solutions proposed by peers by citing relevant      in the length and direction of shadows; and        the very small to the
+evidence about the natural and designed             different positions of the sun, moon, and          immensely large.
+world(s).                                           stars at different times of the day, month, and    (5-ESS1-1)
+  Support an argument with evidence, data,         year. (5-ESS1-2)
+    or a model. (5-PS2-1, 5-ESS1-1)
+Connections to other DCIs in fifth grade: N/A
+Connections to other DCIs across grade levels: 1.ESS1.A (5-ESS1-2); 1.ESS1.B (5-ESS1-2); 3.PS2.A (5-PS2-1, 5-ESS1-2);
+3.PS2.B (5-PS2-1); 8.PS2.B (5-PS2-1); 8.ESS1.A (5-ESS1-1, 5-ESS1-2); 8.ESS1.B (5-PS2-1, 5-ESS1-1, 5-ESS1-2);
+7.ESS2.C (5-PS2-1)
+
+
+
+
+    14
+                                                       Grade 5: Space Systems
+                                                   Arkansas K-12 Science Standards
+                                                   Arkansas Department of Education
+                                                                2015
+Connections to the Arkansas English Language Arts Standards –
+ 5.RC.2.RF Answer explicit and inferential questions, using details from a text. (5-PS2-1, 5-ESS1-1)
+ 5.RC.15.RI Integrate information from several texts on the same topic when writing or speaking about the topic. (5-PS2-1,
+             5-ESS1-1)
+ 5.RC.14.RI Identify which reasons and evidence an author uses to support which points. (5-ESS1-1)
+ 5.W.1.S     Write an argument to persuade the reader to take an action or adopt a position, stating a claim and supporting the
+             claim with relevant evidence from sources. (5-PS2-1, 5-ESS1-1)
+ 5.CC.4.P    Use visual displays and/or audio appropriately to emphasize or enhance certain facts or details when presenting.
+             (5-ESS1-2)
+
+
+
+
+Connections to the Arkansas Mathematics Standards –
+AR.M.2     Applying reasoning about quantities and relationships. (5-ESS1-1, 5-ESS1-2)
+AR.M.4     Select and use relationships and tools. (5-ESS1-1, 5-ESS1-2)
+5.GM.8     Represent real-world and mathematical problems by graphing points in the first quadrant on a coordinate plane,
+           interpreting coordinate values of points in the context of the situation. (5-ESS1-2)
+5.NPV.2    Explain patterns in the number of zeros and/or the decimal point when multiplying a number by a power of 10,
+           using whole-number exponents to denote powers of 10. (5-ESS1-2)
+
+
+
+
+   15
+                                                       Grade 5: Space Systems
+                                                   Arkansas K-12 Science Standards
+                                                   Arkansas Department of Education
+                                                                2015
+                                                           GRADE FIVE
+
+Structure and Properties of Matter
+Students who demonstrate understanding can:
+5-PS1-1    Develop a model to describe that matter is made of particles too small to be seen. [Clarification Statement:
+           Examples of evidence supporting a model could include adding air to expand a basketball, compressing air in a
+           syringe, dissolving sugar in water, and evaporating salt water.] [Assessment Boundary: Assessment does not
+           include the atomic-scale mechanism of evaporation and condensation or defining the unseen particles.]
+5-PS1-2    Measure and graph quantities to provide evidence that regardless of the type of change that occurs when
+           heating, cooling, or mixing substances, the total weight of matter is conserved. [AR Clarification Statement:
+           Examples could include chemical reactions that form new substances or physical changes including phase
+           changes, dissolving, and mixing.] [AR Assessment Boundary: Assessment does not include distinguishing mass
+           from weight or reactions that involve gases.]
+5-PS1-3    Make observations and measurements to identify materials based on their properties. [Clarification
+           Statement: Examples of materials to be identified could include baking soda and other powders, metals, minerals,
+           and liquids. Examples of properties could include color, hardness, reflectivity, electrical conductivity, thermal
+           conductivity, response to magnetic forces, and solubility; density is not intended as an identifiable property.]
+           [Assessment Boundary: Assessment does not include density or distinguishing mass from weight.]
+5-PS1-4    Conduct an investigation to determine whether the mixing of two or more substances results in new
+           substances. [AR Clarification Statement: Examples of qualitative evidence could include temperature change,
+           color change, odor change, and the formation of a gas to determine if a new substance has formed.]
+The performance expectations above were developed using the following elements from the NRC document A Framework for
+K-12 Science Education:
+
+
+Science and Engineering Practices                      Disciplinary Core Ideas                       Crosscutting Concepts
+Developing and Using Models                PS1.A: Structure and Properties of Matter          Cause and Effect
+Modeling in 3–5 builds on K–2                Matter of any type can be subdivided into         Cause and effect relationships
+experiences and progresses to building        particles that are too small to see, but even      are routinely identified, tested,
+and revising simple models and using          then the matter still exists and can be            and used to explain change.
+models to represent events and design         detected by other means. A model showing           (5-PS1-4)
+solutions.                                    that gases are made from matter particles       Scale, Proportion, and Quantity
+  Develop a model to describe                that are too small to see and are moving          Natural objects exist from the
+   phenomena. (5-PS1-1)                       freely around in space can explain many            very small to the immensely
+Planning and Carrying Out                     observations, including the inflation and          large. (5-PS1-1)
+Investigations                                shape of a balloon and the effects of air on      Standard units are used to
+Planning and carrying out                     larger particles or objects. (5-PS1-1)             measure and describe physical
+investigations to answer questions or        The amount (weight) of matter is conserved         quantities such as weight, time,
+test solutions to problems in 3–5 builds      when it changes form, even in transitions in       temperature, and volume.
+on K–2 experiences and progresses to          which it seems to vanish. (5-PS1-2)                (5-PS1-2, 5-PS1-3)
+include investigations that control          Measurements of a variety of properties can
+variables and provide evidence to             be used to identify materials. (Boundary: At    ------------------------------------------------
+support explanations or design                this grade level, mass and weight are not             Connections to Nature of
+solutions.                                    distinguished, and no attempt is made to                          Science
+  Conduct an investigation                   define the unseen particles or explain the
+   collaboratively to produce data to         atomic-scale mechanism of evaporation and       Scientific Knowledge Assumes
+   serve as the basis for evidence,           condensation.) (5-PS1-3)                        an Order and Consistency in
+   using fair tests in which variables     PS1.B: Chemical Reactions                          Natural Systems
+   are controlled and the number of          When two or more different substances are         Science assumes consistent
+   trials considered. (5-PS1-4)               mixed, a new substance with different              patterns in natural systems.
+  Make observations and                      properties may be formed. (5-PS1-4)                (5-PS1-2)
+   measurements to produce data to           No matter what reaction or change in
+   serve as the basis for evidence for        properties occurs, the total weight of the
+   an explanation of a phenomenon.            substances does not change. (Boundary:
+   (5-PS1-3)                                  Mass and weight are not distinguished at
+                                              this grade level.) (5-PS1-2)
+
+
+
+
+                                               Grade 5: Structure and Properties of Matter
+                                                   Arkansas K-12 Science Standards
+ 16                                               Arkansas Department of Education
+                                                                  2015
+Using Mathematics and
+Computational Thinking
+Mathematical and computational
+thinking in 3–5 builds on K–2
+experiences and progresses to
+extending quantitative measurements
+to a variety of physical properties and
+using computation and mathematics to
+analyze data and compare alternative
+design solutions.
+  Measure and graph quantities such
+   as weight to address scientific and
+   engineering questions and
+   problems. (5-PS1-2)
+Connections to other DCIs in fifth grade: N/A
+Connections to other DCIs across grade levels: 2.PS1.A (5-PS1-1, 5-PS1-2, 5-PS1-3); 2.PS1.B (5-PS1-2, 5-PS1-4);
+7.PS1.A (5-PS1-1, 5-PS1-2, 5-PS1-3, 5-PS1-4); 7.PS1.B (5-PS1-2, 5-PS1-4)
+Connections to the Arkansas English Language Arts Standards –
+5.RC.15.RI Integrate information from several texts on the same topic when writing or speaking about the topic. (5-PS1-1)
+5.W.9.P     Conduct short research, using quotations and summaries from relevant sources or experiences to produce a
+            written product. (5-PS1.2, 5-PS1-3, 5-PS1-4)
+5.W.10.P    Take notes, sort evidence into categories, and include a list of sources. (5-PS1.2, 5-PS1-3, 5-PS1-4)
+5.W.2.S     Write informative or explanatory pieces, using multiple sources to examine a topic. (5-PS1.2, 5-PS1-3, 5-PS1-4)
+
+
+
+Connections to the Arkansas Mathematics Standards –
+AR.M.2   Applying reasoning about quantities and relationships (5-PS1-1, 5-PS1-2, 5-PS1-3)
+AR.M.4   Select and use relationships and tools. (5-PS1-1, 5-PS1-2, 5-PS1-3)
+AR.M.5   Identify relationships using structure and patterns. (5-PS1-2, 5-PS1-3)
+5.CAR.8  Apply previous understanding of division to divide unit fractions by whole numbers and whole
+         numbers by unit fractions. (5-PS1-1)
+5.CAR.11 Solve real-world problems involving the division of unit fractions by whole numbers and whole
+         numbers by unit fractions, using visual fraction models and equations. (5-PS1-1)
+5.GM.3   Measure volumes by counting unit cubes using cubic cm (cm3), cubic in (in3), cubic ft (ft3), and
+         improvised units (u3). (5-PS1-1)
+5.GM.6   Convert among different-sized standard measurement units within the same system, including both
+         the metric and customary systems, and solve multi-step, real-world problems using conversions.
+         (5-PS1-2)
+5.NPV.1 Recognize that in a multi-digit number, a digit in a given place represents 10 times as much as it
+         represents in the place to its right and 1/10 of what it represents in the place to its left. (5-PS1-1)
+
+
+
+
+  17
+                                               Grade 5: Structure and Properties of Matter
+                                                   Arkansas K-12 Science Standards
+                                                  Arkansas Department of Education
+                                                                  2015
+                                                                       GRADE FIVE
+
+Matter and Energy in Organisms and Ecosystems
+Students who demonstrate understanding can:
+5-PS3-1 Use models to describe that energy in animals’ food (used for body repair, growth, motion, and to maintain
+            body warmth) was once energy from the sun. [Clarification Statement: Examples of models could include
+            diagrams and flow charts.]
+5-LS1-1 Support an argument that plants get the materials they need for growth chiefly from air and water.
+           [Clarification Statement: Emphasis is on the idea that plant matter comes mostly from air and water, not from the
+           soil.]
+5-LS2-1 Develop a model to describe the movement of matter among plants, animals, decomposers, and the
+           environment. [Clarification Statement: Emphasis is on the idea that matter that is not food (air, water,
+           decomposed materials in soil) is changed by plants into matter that is food. Examples of systems could include
+           organisms, ecosystems, and the Earth.] [Assessment Boundary: Assessment does not include molecular
+           explanations.]
+ The performance expectations above were developed using the following elements from the NRC document A Framework for
+ K-12 Science Education:
+
+
+ Science and Engineering Practices                                  Disciplinary Core Ideas                      Crosscutting Concepts
+Developing and Using Models                           PS3.D: Energy in Chemical Processes and                Systems and System Models
+Modeling in 3–5 builds on K–2                         Everyday Life                                            A system can be described in
+experiences and progresses to building                  The energy released [from] food was once               terms of its components and
+and revising simple models and using                     energy from the sun that was captured by               their interactions. (5-LS2-1)
+models to represent events and design                    plants in the chemical process that forms plant     Energy and Matter
+solutions.                                               matter (from air and water). (5-PS3-1)                Matter is transported into, out
+  Use models to describe phenomena.                  LS1.C: Organization for Matter and Energy                 of, and within systems.
+   (5-PS3-1)                                          Flow in Organisms                                         (5-LS1-1)
+  Develop a model to describe                          Food provides animals with the materials they         Energy can be transferred in
+   phenomena. (5-LS2-1)                                  need for body repair and growth and the                various ways and between
+Engaging in Argument from                                energy they need to maintain body warmth               objects. (5-PS3-1)
+Evidence                                                 and for motion. (secondary to 5-PS3-1)
+Engaging in argument from evidence in                   Plants acquire their material for growth chiefly
+3–5 builds on K–2 experiences and                        from air and water. (5-LS1-1)
+progresses to critiquing the scientific               LS2.A: Interdependent Relationships in
+explanations or solutions proposed by                 Ecosystems
+peers by citing relevant evidence about                 The food of almost any kind of animal can be
+the natural and designed world(s).                       traced back to plants. Organisms are related
+  Support an argument with evidence,                    in food webs in which some animals eat plants
+   data, or a model. (5-LS1-1)                           for food and other animals eat the animals
+                                                         that eat plants. Some organisms, such as
+  -----------------------------------------------        fungi and bacteria, break down dead
+  Connections to Nature of Science                       organisms (both plants or plants parts and
+                                                         animals) and therefore operate as
+Science Models, Laws, Mechanisms,                        “decomposers.” Decomposition eventually
+and Theories Explain Natural                             restores (recycles) some materials back to the
+Phenomena                                                soil. Organisms can survive only in
+  Science explanations describe the                     environments in which their particular needs
+   mechanisms for natural events.                        are met. A healthy ecosystem is one in which
+   (5-LS2-1)                                             multiple species of different types are each
+                                                         able to meet their needs in a relatively stable
+                                                         web of life. Newly introduced species can
+                                                         damage the balance of an ecosystem.
+                                                         (5-LS2-1)
+
+
+
+
+                                                    Grade 5: Matter and Energy in Organisms and Ecosystems
+                                                               Arkansas K-12 Science Standards
+                                                               Arkansas Department of Education
+                                                                             2015
+18
+                                            LS2.B: Cycles of Matter and Energy Transfer
+                                            in Ecosystems
+                                              Matter cycles between the air and soil and
+                                               among plants, animals, and microbes as
+                                               these organisms live and die. Organisms
+                                               obtain gases, and water, from the
+                                               environment, and release waste matter (gas,
+                                               liquid, or solid) back into the environment.
+                                               (5-LS2-1)
+Connections to other DCIs in fifth grade: 5.PS1.A (5-LS1-1, 5-LS2-1); 5.ESS2.A (5-LS2-1)
+Connections to other DCIs across grade levels: K.LS1.C (5-PS3-1, 5-LS1-1); 2.PS1.A (5-LS2-1); 2.LS2.A (5-PS3-1, 5-LS1-1);
+2.LS4.D (5-LS2-1); 4.PS3.A (5-PS3-1); 4.PS3.B (5-PS3-1); 4.PS3.D (5-PS3-1); 4.ESS2.E (5-LS2-1); 6.PS3.D (5-PS3-1,
+5-LS2-1); 8.PS4.B (5-PS3-1); 6.LS1.C (5-PS3-1, 5-LS1-1, 5-LS2-1); 7.LS2.A (5-LS2-1); 7.LS2.B (5-PS3-1, 5-LS2-1)
+Connections to the Arkansas English Language Arts Standards –
+5.RC.2.RF Answer explicit and inferential questions, using details from a text. (5-LS1-1)
+5.RC.15.RI Integrate information from several texts on the same topic when writing or speaking about the topic. (5-PS3-1,
+              5-LS2-1, 5-LS1-1)
+5.W.1.S       Write an argument to persuade the reader to take an action or adopt a position, stating a claim and supporting
+              the claim with relevant evidence from sources. (5-LS1-1)
+5.CC.4.P    Use visual displays and/or audio appropriately to emphasize or enhance certain facts or details when presenting.
+             (5-PS3-1, 5-LS2-1)
+
+
+
+Connections to the Arkansas Mathematics Standards –
+AR.M.2 Applying reasoning and quantities and relationships. (5-LS1-1, 5-LS2-1)
+AR.M.4 Select and use relationships and tools. (5-LS1-1, 5-LS2-1)
+AR.M.5 Identify relationships using structure and patterns. (5-LS1-1)
+5.GM.6 Convert among different-sized standard measurement units withing the same system, including both the metric
+         customary y stems, and solve multi step, real-world problems using conversions. (5-LS1-2)
+
+
+
+
+   19
+                                       Grade 5: Matter and Energy in Organisms and Ecosystems
+                                                  Arkansas K-12 Science Standards
+                                                  Arkansas Department of Education
+                                                                2015
+                                                              GRADE FIVE
+
+Engineering, Technology, and Applications of Science
+Students who demonstrate understanding can:
+5-ETS1-1 Define a simple design problem reflecting a need or a want that includes specified criteria for success and
+            constraints on materials, time, or cost.
+
+5-ETS1-2     Generate and compare multiple possible solutions to a problem based on how well each is likely to meet
+             the criteria and constraints of the problem.
+
+5-ETS1-3   Plan and carry out fair tests in which variables are controlled and failure points are considered to identify
+           aspects of a model or prototype that can be improved.
+The performance expectations above were developed using the following elements from the NRC document A Framework for
+K-12 Science Education:
+
+   Science and Engineering Practices                            Disciplinary Core Ideas                   Crosscutting Concepts
+Asking Questions and Defining                    ETS1.A: Defining and Delimiting Engineering            Influence of Science,
+Problems                                         Problems                                               Engineering, and
+Asking questions and defining problems in          Possible solutions to a problem are limited by      Technology on Society
+3–5 builds on grades K–2 experiences and            available materials and resources (constraints).    and the Natural World
+progresses to specifying qualitative                The success of a designed solution is                 People’s needs and wants
+relationships.                                      determined by considering the desired features         change over time, as do
+  Define a simple design problem that can          of a solution (criteria). Different proposals for      their demands for new
+   be solved through the development of an          solutions can be compared on the basis of how          and improved
+   object, tool, process, or system and             well each one meets the specified criteria for         technologies. (5-ETS1-1)
+   includes several criteria for success and        success or how well each takes the constraints        Engineers improve
+   constraints on materials, time, or cost.         into account. (5-ETS1-1)                               existing technologies or
+   (5-ETS1-1)                                    ETS1.B: Developing Possible Solutions                     develop new ones to
+Planning and Carrying Out                          Research on a problem should be carried out            increase their benefits,
+Investigations                                      before beginning to design a solution. Testing         decrease known risks,
+Planning and carrying out investigations to         a solution involves investigating how well it          and meet societal
+answer questions or test solutions to               performs under a range of likely conditions.           demands. (5-ETS1-2)
+problems in 3–5 builds on K–2 experiences           (5-ETS1-2)
+and progresses to include investigations           At whatever stage, communicating with peers
+that control variables and provide evidence         about proposed solutions is an important part
+to support explanations or design solutions.        of the design process, and shared ideas can
+  Plan and conduct an investigation                lead to improved designs. (5-ETS1-2)
+   collaboratively to produce data to serve        Tests are often designed to identify failure
+   as the basis for evidence, using fair tests      points or difficulties, which suggest the
+   in which variables are controlled and the        elements of the design that need to be
+   number of trials considered. (5-ETS1-3)          improved. (5-ETS1-3)
+Constructing Explanations and                    ETS1.C: Optimizing the Design Solution
+Designing Solutions                                Different solutions need to be tested in order to
+Constructing explanations and designing             determine which of them best solves the
+solutions in 3–5 builds on K–2 experiences          problem, given the criteria and the constraints.
+and progresses to the use of evidence in            (5-ETS1-3)
+constructing explanations that specify
+variables that describe and predict
+phenomena and in designing multiple
+solutions to design problems.
+  Generate and compare multiple solutions
+   to a problem based on how well they
+   meet the criteria and constraints of the
+   design problem. (5-ETS1-2)
+
+
+
+
+   20
+                                        Grade 5: Engineering, Technology, and Applications of Science
+                                                     Arkansas K-12 Science Standards
+                                                     Arkansas Department of Education
+                                                                   2015
+Connections to 3-5.ETS1.A: Defining and Delimiting Engineering Problems include: Fourth Grade: (4-PS3-4)
+Connections to 3-5.ETS1.B: Designing Solutions to Engineering Problems include: Fourth Grade: (4-ESS3-2)
+Connections to K-2.ETS1.C: Optimizing the Design Solution include: Fourth Grade: (4-PS4-3)
+Connections to other DCIs across grade levels: K-2.ETS1.A (5-ETS1-1, 5-ETS1-2, 5-ETS1-3); K-2.ETS1.B (5-ETS1-2);
+K-2.ETS1.C (5-ETS1-2, 5-ETS1-3); 6-8.ETS1.A (5-ETS1-1); 6-8.ETS1.B (5-ETS1-1, 5-ETS1-2, 5-ETS1-3);
+6-8.ETS1.C (5-ETS1-2, 5-ETS1-3)
+Connections to the Arkansas English Language Arts Standards –
+5.RC.2.RF Answer explicit and inferential questions, using details from a text. (5-ETS1-2)
+5.RC.15.RI Integrate information from several texts on the same topic when writing or speaking about the topic. (5-ETS1-2)
+5.W.9.P    Conduct short research, using quotations and summaries from relevant sources or experiences to produce a written
+           product. (5-ETS1-1, 5-ETS1-3)
+5.W.10.P   Take notes, sort evidence into categories, and include a list of sources. (5-ETS1-1, 5-ETS1-3)
+5.W.2.S    Write informative or explanatory pieces, using multiple sources to examine a topic. (5-ETS1-1, 5-ETS1-3)
+
+
+Connections to the Arkansas Mathematics Standards--
+AR.M.2        Applying reasoning about quantities and relationships. (5-ETS1-1, 5-ETS1-2, 5-ETS1-3)
+AR.M.4        Select and use relationships and tools. (5-ETS1-1, 5-ETS1-2, 5-ETS1-3)
+AR.M.5         Identify relationships using structure and patterns. (5-ETS1-1, 5-ETS1-2, 5-ETS1-3)
+5.CAR.1-8     Computation and Algebraic Reasoning: Operations & Properties (5-ETS1-1, 5-ETS1-2)
+
+
+
+
+   21
+                                    Grade 5: Engineering, Technology, and Applications of Science
+                                                 Arkansas K-12 Science Standards
+                                                 Arkansas Department of Education
+                                                               2015
+                                                        Contributors
+
+The following educators contributed to the development of this document:
+Becky Adams – Hamburg School District                             Chris Lynch – Black River Technical College
+W. Chance Bankhead – eSTEM Public Charter                         Tammy McCloy – El Dorado School District
+Leslie Brodie – Fort Smith School District                        Laura Mewborn – Pulaski County Special School District
+Stephen Brodie – UA Fort Smith STEM Center                        Melissa Miller – Farmington School District
+Cindy Cardwell – Bentonville School District                      Reggie Nalls – Dollarway School District
+Pam Carpenter – Bald Knob School District                         Yolanda Prim – Dollarway School District
+Debbie Daily – University of Central Arkansas                     Kathy Prophet – Springdale School District
+Rosa Dumond – Arkadelphia School District                         Virginia Rhame – Northwest Arkansas Education Cooperative
+Tami Eggensperger – Cabot School District                         Brian Schuller – DeQueen Mena Education Cooperative
+Alana Eifert – Malvern School District                            Carolyn Smith – El Dorado School District
+Linda Flynn – Farmington School District                          Mary Smith – Nettleton School District
+Jenny Gammill – Fayetteville School District                      Melinda Smith – Jonesboro School District
+A. Wade Geery – Norfork School District                           Pam Vaughan – Camden School District
+Kyla Gentry – Searcy School District                              Deborah Walker – Magnolia School District
+Josh Jenkins – Springdale School District                         Greg Wertenberger – Henderson University STEM Center
+Marilyn Johnson – Little Rock School District                     Rebecca Wilbern – Fayetteville School District
+Christina Johnson – North Little Rock School District             Andrew Williams – University of Arkansas at Monticello
+Debbie Jones – Sheridan School District                           Gene Williams – Little Rock School District
+Tifanie King – West Memphis School District                       Shawna Williams – Farmington School District
+Sandra Leiterman – Little Rock School District                    Cathy Wissehr – University of Arkansas at Fayetteville
+Steven Long – Rogers School District
+
+
+
+
+  22                                                    Contributors
+                                                Arkansas K-12 Science Standards
+                                                Arkansas Department of Education
+                                                             2015
+

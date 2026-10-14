@@ -667,4 +667,40 @@ export const lessons: GradeLessons = {
     ["The Five Cs are copper, cattle, cotton, citrus and climate.", "Corn is not on the list."],
     "corn",
   ),
+  "social/ar-g3-land-regions": lesson(
+    ["Highlands in the northwest: the Ozark Plateau, the Ouachita Mountains and the Arkansas River Valley.", "Lowlands in the southeast: the Delta, Crowley's Ridge and the West Gulf Coastal Plain.", "Flat, rich Delta land is good for farms. Mountains draw hikers and visitors."],
+    "Which region is best for growing rice: the Delta or the Ozarks?",
+    ["Rice needs flat land and lots of water.", "The Delta is flat and wet."],
+    "the Delta",
+  ),
+  "social/ar-g3-rivers-resources": lesson(
+    ["The Arkansas River crosses the state. The Mississippi forms most of the eastern border.", "Resources: bauxite (for aluminum), diamonds, quartz, oil, natural gas and timber.", "A raw material becomes a finished product, like cotton into a shirt."],
+    "Bauxite is mined to make which metal?",
+    ["Soda cans are made of it.", "The metal is aluminum."],
+    "aluminum",
+  ),
+  "social/ar-g3-government": lesson(
+    ["Legislative branch: makes laws. Executive: carries them out. Judicial: decides what they mean.", "In Arkansas: the General Assembly, the Governor and the Arkansas Supreme Court.", "Cities have a mayor and a city council, which passes ordinances."],
+    "Which branch of Arkansas government does the Governor lead?",
+    ["The Governor carries out the laws.", "That is the executive branch."],
+    "the executive branch",
+  ),
+  "social/ar-g3-founding-symbols": lesson(
+    ["Thomas Jefferson wrote most of the Declaration of Independence, approved July 4, 1776.", "The Constitution begins “We the People.” The Bill of Rights protects freedoms.", "In 1957 the Little Rock Nine integrated Central High School, with help from Daisy Bates."],
+    "Who was the main writer of the Declaration of Independence?",
+    ["He later became the third President.", "He was Thomas Jefferson."],
+    "Thomas Jefferson",
+  ),
+  "social/ar-g3-timeline": lesson(
+    ["A timeline puts events in order, earliest on the left.", "Find each event's year, then order from smallest to largest.", "Key years: 1776 independence, 1803 Louisiana Purchase, 1836 Arkansas statehood, 1861 Civil War."],
+    "Which came first: Arkansas statehood or the Louisiana Purchase?",
+    ["The Louisiana Purchase was in 1803.", "Statehood was in 1836, later."],
+    "the Louisiana Purchase",
+  ),
+  "social/ar-g3-money-choices": lesson(
+    ["Every choice has costs and benefits. Scarcity means we can't have everything.", "Supply is how much there is. Demand is how much people want.", "High demand and low supply usually make prices go up."],
+    "Lots of people want a toy, but stores have only a few. What happens to its price?",
+    ["Demand is high and supply is low.", "The price usually goes up."],
+    "it goes up",
+  ),
 };

@@ -493,4 +493,22 @@ export const lessons: GradeLessons = {
     ["They don't give up.", "That is being determined."],
     "determined",
   ),
+  "social/ar-g2-symbols-landmarks": lesson(
+    ["The Declaration of Independence (1776), the Constitution and the Bill of Rights founded our nation.", "The national motto is In God We Trust. Arkansas's motto, Regnat Populus, means “the people rule.”", "Landmarks: Hot Springs National Park, Crater of Diamonds State Park, the Buffalo National River."],
+    "What does Regnat Populus mean?",
+    ["It is the Arkansas motto, in Latin.", "It means the people rule."],
+    "the people rule",
+  ),
+  "social/ar-g2-arkansas-maps": lesson(
+    ["Little Rock, the capital, is near the middle of Arkansas.", "Missouri is north, Louisiana south, Oklahoma west, and the Mississippi River east.", "Use the key for symbols and the scale for real distances."],
+    "On a map, 1 inch stands for 10 miles. Two towns are 4 inches apart. How far apart are they?",
+    ["Each inch is 10 miles.", "4 × 10 = 40."],
+    "40 miles",
+  ),
+  "social/ar-g2-making-trading": lesson(
+    ["Goods are grown or made, moved, then sold.", "Trucks, trains and barges carry goods from farms to stores.", "Money makes trading easier than bartering, swapping goods for goods."],
+    "Trading two eggs for a loaf of bread, with no money, is called…",
+    ["No money changes hands.", "Swapping goods is bartering."],
+    "bartering",
+  ),
 };

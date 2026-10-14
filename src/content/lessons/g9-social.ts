@@ -931,4 +931,34 @@ export const lessons: GradeLessons = {
     ["Everyone must obey laws and pay taxes.", "Only citizens can be called to serve on a jury."],
     "serving on a jury",
   ),
+  "social/ar-g9-arkansas-government": lesson(
+    ["Arkansas's Constitution of 1874 sets up three branches: the General Assembly, the governor and the courts.", "The General Assembly has a 35-member Senate and a 100-member House. The governor serves four-year terms.", "Arkansas has 75 counties, each led by a county judge and a quorum court. Citizens can make laws by initiative."],
+    "Who is the chief executive of an Arkansas county?",
+    ["A county's lawmaking body is the quorum court.", "Its executive has a title with the word judge in it."],
+    "the county judge",
+  ),
+  "social/ar-g9-three-branches": lesson(
+    ["Congress (Article I) makes laws, the president (Article II) carries them out and the courts (Article III) interpret them.", "Each state has 2 senators; House seats follow population, counted in the census every 10 years.", "Checks and balances: the president can veto, Congress can override with two-thirds, and courts can strike down laws."],
+    "Arkansas has 2 senators and 4 representatives. How many electoral votes does it have?",
+    ["Electoral votes = senators + representatives.", "2 + 4 = 6."],
+    "6",
+  ),
+  "social/ar-g9-elections": lesson(
+    ["Primary elections narrow the candidates; the general election in November decides the winner.", "Parties write platforms and run candidates. The Electoral College chooses the president; 270 votes wins.", "In Arkansas you must register 30 days before an election and show photo ID to vote in person."],
+    "How many electoral votes are needed to win the presidency?",
+    ["There are 538 electoral votes in all.", "A majority is more than half: 270."],
+    "270",
+  ),
+  "social/ar-g9-lawmaking": lesson(
+    ["A bill is a proposed law. It goes to a committee, then must pass both houses in the same form.", "The president or governor can sign or veto it. Congress needs two-thirds to override; Arkansas needs only a majority.", "Arkansas citizens can also make laws by initiative petition, and approve or reject laws by referendum."],
+    "Where does a new bill usually go first after it is introduced?",
+    ["Small groups of lawmakers study bills before the full vote.", "These groups are called committees."],
+    "a committee",
+  ),
+  "social/ar-g9-supreme-court": lesson(
+    ["Judicial review, from Marbury v. Madison (1803), lets courts strike down laws that break the Constitution.", "Brown v. Board of Education (1954) ended legal school segregation; Cooper v. Aaron (1958) said states must obey it.", "Epperson v. Arkansas (1968) struck down a state ban on teaching evolution under the First Amendment."],
+    "Which case gave the Supreme Court the power of judicial review?",
+    ["It was decided in 1803.", "Chief Justice John Marshall wrote the decision."],
+    "Marbury v. Madison",
+  ),
 };

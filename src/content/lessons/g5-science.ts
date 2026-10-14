@@ -391,4 +391,22 @@ export const lessons: GradeLessons = {
     ["The plant did not get enough water.", "That came from where it grew, not from its parents."],
     "its environment",
   ),
+  "science/ar-g5-ecosystems": lesson(
+    ["Producers (plants) make food. Consumers eat plants or other animals.", "Decomposers, like mushrooms, worms and bacteria, break down dead things.", "They return matter to the soil so plants can use it again.", "Without decomposers, dead things would pile up."],
+    "Which is a decomposer: a hawk, a mushroom or a fern?",
+    ["A hawk is a consumer and a fern is a producer.", "A mushroom breaks down dead matter."],
+    "a mushroom",
+  ),
+  "science/ar-g5-gravity": lesson(
+    ["Gravity pulls things toward Earth's centre, everywhere on Earth.", "Gravity makes water drop over waterfalls like Cedar Falls and rivers flow downhill.", "Gravity keeps the oceans on Earth and the moon in orbit around it."],
+    "Which way does gravity pull on a person standing anywhere on Earth?",
+    ["Gravity pulls toward the centre of Earth.", "So it always points down, toward Earth's centre."],
+    "toward Earth's centre",
+  ),
+  "science/ar-g5-day-night": lesson(
+    ["Earth spins once about every 24 hours, giving day and night.", "Earth orbits the sun about once a year.", "The sun seems to rise in the east and set in the west. Shadows are shortest around noon.", "Some stars are bigger than the sun but look tiny because they are very far away."],
+    "How long does Earth take to spin once?",
+    ["One spin gives one day and one night."],
+    "about 24 hours",
+  ),
 };

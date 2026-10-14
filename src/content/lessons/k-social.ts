@@ -277,4 +277,10 @@ export const lessons: GradeLessons = {
     ["She was a nurse who helped hurt people.", "Her group is the Red Cross."],
     "Red Cross",
   ),
+  "social/ar-k-symbols": lesson(
+    ["A symbol stands for something. Our flag stands for our country.", "The Arkansas flag has a white diamond in the middle.", "The mockingbird, apple blossom, honeybee and pine tree stand for Arkansas."],
+    "Which bird is the Arkansas state bird?",
+    ["It copies other birds' songs.", "It is the mockingbird."],
+    "the mockingbird",
+  ),
 };
