@@ -173,4 +173,17 @@ export const lessons: GradeLessons = {
     ["5 − 3 = 2."],
     "2",
   ),
+  // Texas
+  "math/tx-g1-coins": lesson(
+    ["A penny is 1¢, a nickel 5¢, a dime 10¢ and a quarter 25¢.", "Count dimes by 10s, nickels by 5s and pennies by 1s.", "Start with the coin worth the most, then count on."],
+    "How much are 2 dimes and 3 pennies?",
+    ["Dimes: 10, 20.", "Pennies: 21, 22, 23."],
+    "23¢",
+  ),
+  "math/tx-g1-spend-save-give": lesson(
+    ["Income is money you earn by working.", "Spending is using money to buy things. Saving is keeping it for later.", "Giving is sharing money to help others."],
+    "Max keeps $1 in his piggy bank for a ball. Is he spending or saving?",
+    ["He is keeping the money for later."],
+    "saving",
+  ),
 };

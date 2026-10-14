@@ -218,4 +218,17 @@ export const lessons: GradeLessons = {
     ["15 ÷ 20 = 0.75.", "0.75 = 75%."],
     "75%",
   ),
+  // Texas
+  "math/tx-g8-both-sides": lesson(
+    ["Get the variable on one side: subtract the smaller x term from both sides.", "Then undo adding or subtracting, and divide by the number in front of x.", "Check by putting the answer back into both sides."],
+    "Solve 5x + 2 = 3x + 10.",
+    ["Subtract 3x from both sides: 2x + 2 = 10.", "Subtract 2: 2x = 8.", "Divide by 2: x = 4."],
+    "x = 4",
+  ),
+  "math/tx-g8-credit-and-saving": lesson(
+    ["A higher interest rate or a longer loan makes credit cost more.", "Simple interest: I = Prt. Compound interest adds each year's interest to the balance.", "To plan for college, find the cost, subtract what you have, and divide by the time left."],
+    "You borrow $2,000 at 5% simple interest for 3 years. What do you repay in all?",
+    ["Interest: 2,000 × 0.05 × 3 = 300.", "Total: 2,000 + 300 = 2,300."],
+    "$2,300",
+  ),
 };

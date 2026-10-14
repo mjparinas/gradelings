@@ -107,4 +107,17 @@ export const lessons: GradeLessons = {
     ["Count: 3 apples, 5 bananas.", "5 is more than 3."],
     "🍌",
   ),
+  // Texas
+  "math/tx-k-coins": lesson(
+    ["A penny is brown. A nickel, dime and quarter are silver.", "The dime is the smallest coin. The quarter is the biggest.", "Look at the size and the picture to name a coin."],
+    "A coin is silver and the smallest of all. What is it?",
+    ["It is silver, so it is not a penny.", "The smallest silver coin is the dime."],
+    "dime",
+  ),
+  "math/tx-k-earn-and-need": lesson(
+    ["People earn money, called income, by working at jobs.", "Money you get without working, like on a birthday, is a gift.", "Needs are things we must have. Wants are nice to have."],
+    "Is food a need or a want?",
+    ["We must eat to live and grow."],
+    "a need",
+  ),
 };
