@@ -101,7 +101,7 @@ export function CheckBox({ checked, onChange, children }: { checked: boolean; on
     <button type="button" role="checkbox" aria-checked={checked} onClick={onChange} className="flex min-h-11 w-full items-center gap-2 rounded-xl bg-paper px-3 py-2 text-left font-semibold">
       <span aria-hidden="true" className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-md border-2 ${checked ? "border-good-dark bg-good text-[#0f172a]" : "border-line bg-white"}`}>
         {checked ? (
-          <svg width="14" height="14" viewBox="0 0 24 24">
+          <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24">
             <path d="M5 12.5l4.2 4.2L19 7.5" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         ) : null}

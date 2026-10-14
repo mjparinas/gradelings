@@ -19,6 +19,7 @@ export function Stars({ count, max = 3, size = 22, animate = false }: { count: n
       {Array.from({ length: max }, (_, i) => (
         <svg
           key={i}
+          aria-hidden="true"
           width={size}
           height={size}
           viewBox="0 0 24 24"
@@ -105,6 +106,7 @@ export function BackgroundDecor() {
       {shapes.map((s, i) => (
         <svg
           key={i}
+          aria-hidden="true"
           className="absolute animate-drift opacity-[0.16]"
           style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: `${s.delay}s` }}
           viewBox="0 0 24 24"

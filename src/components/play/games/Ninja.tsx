@@ -185,7 +185,7 @@ export function Ninja({ grade, band, onScore, onLevel, onOver }: GameProps) {
             {f.text}
           </div>
         ))}
-        <svg className="pointer-events-none absolute inset-0 h-full w-full">
+        <svg aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full">
           {trail.length > 1 && <polyline points={trail.map((p) => `${p.x},${p.y}`).join(" ")} fill="none" stroke="#fff" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" opacity="0.85" />}
         </svg>
       </div>

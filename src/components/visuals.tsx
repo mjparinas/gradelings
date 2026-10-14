@@ -474,7 +474,7 @@ export function FractionModel({ numerator, denominator, shape = "bar" }: { numer
         const shaded = Math.max(0, Math.min(denominator, numerator - w * denominator));
         if (shape === "circle") {
           return (
-            <svg key={w} width="140" height="140" viewBox="0 0 100 100">
+            <svg key={w} aria-hidden="true" width="140" height="140" viewBox="0 0 100 100">
               {denominator === 1 ? (
                 <circle cx="50" cy="50" r="46" fill={shaded ? "#e9559a" : "#fff"} stroke={INK} strokeWidth="2.5" />
               ) : (
