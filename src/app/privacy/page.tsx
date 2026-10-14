@@ -168,6 +168,9 @@ export default function PrivacyPage() {
           <strong>Schools in California.</strong> The same applies when a California school or teacher uses {APP_NAME} with students. In line with California’s Student Online Personal Information Protection Act (SOPIPA, Business and Professions Code section 22584) we: never use students’ information for targeted advertising; never sell it, and never build a profile of a student except for the school’s educational purposes; share it only as the law allows (with the school, and with the service providers listed under “Who we share it with”); keep a security program in place to protect it, as described under “Security”; and delete it when the school asks. A school’s contract with us can include the terms Education Code section 49073.1 requires, and parents can review their child’s information through the school.
         </p>
         <p>
+          <strong>Schools in Texas.</strong> The same applies when a Texas school or teacher uses {APP_NAME} with students. In line with Texas Education Code chapter 32, subchapter D (sections 32.151 to 32.157) we: never use students’ information for targeted advertising; never sell or rent it, and never build a profile of a student except for the school’s educational purposes; share it only as the law allows (with the school, and with the service providers listed under “Who we share it with”); keep a security program in place to protect it, as described under “Security”; and delete it when the school asks.
+        </p>
+        <p>
           <strong>Health data.</strong> We don’t collect consumer health data as defined in Washington’s My Health My Data Act, or any other health information. The calm and focus options in Settings (calmer motion, quieter sounds, hidden timers) are presentation preferences a parent chooses; we never ask why, and they say nothing about a child’s health.
         </p>
       </Section>

@@ -73,7 +73,7 @@ export const TEXAS: Framework = {
   overviewLabel: "Focus areas",
   standardLabel: "TEKS student expectation",
   sourceName: "Texas Education Agency (TEA)",
-  sourceUrl: "https://tea.texas.gov/academics/curriculum-standards/teks-review/texas-essential-knowledge-and-skills",
+  sourceUrl: "https://tea.texas.gov/curriculum-and-instruction/texas-essential-knowledge-and-skills-teks",
   grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
   scoringFor: () => SCHEME,
