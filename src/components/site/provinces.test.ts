@@ -104,6 +104,6 @@ describe("provinces and states in marketing copy", () => {
 
   it("offers Washington, Oregon, California and New York on the public site", () => {
     expect(FRAMEWORKS.map((f) => f.id)).toEqual(expect.arrayContaining(["us-wa", "us-or", "us-ca", "us-ny"]));
-    expect(regionSummary(FRAMEWORKS)).toContain("plus Washington, Oregon, California and New York State");
+    expect(regionSummary(FRAMEWORKS)).toContain("plus Washington, Oregon, California and New York");
   });
 });

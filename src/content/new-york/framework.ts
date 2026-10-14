@@ -69,7 +69,7 @@ export const NEW_YORK: Framework = {
   shortName: "New York",
   country: "US",
   curriculumName: "New York State Learning Standards",
-  region: "New York State",
+  region: "New York",
   overviewLabel: "Focus areas",
   standardLabel: "Learning standard",
   sourceName: "New York State Education Department (NYSED)",

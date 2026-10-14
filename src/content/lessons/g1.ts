@@ -173,4 +173,12 @@ export const lessons: GradeLessons = {
     ["5 − 3 = 2."],
     "2",
   ),
+  // New York
+  "math/ny-g1-coins": lesson(
+    ["A penny is 1¢, a nickel 5¢, a dime 10¢ and a quarter 25¢.", "Count dimes by tens: 10, 20, 30.", "Then count on 1 for each penny."],
+    "How much are 3 dimes and 4 pennies?",
+    ["Dimes: 10, 20, 30.", "Pennies: 31, 32, 33, 34."],
+    "34¢",
+    { type: "coins", coins: [10, 10, 10, 1, 1, 1, 1], currency: "USD" },
+  ),
 };
