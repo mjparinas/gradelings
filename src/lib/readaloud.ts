@@ -40,6 +40,8 @@ export function readAloudSegments(q: Question): Segment[] {
       labels.forEach((text, i) => parts.push({ text, lang: q.choicesLang ?? prompt, pause: i === 0 ? PAUSE_BEFORE_OPTIONS : PAUSE_BETWEEN_OPTIONS }));
     }
   }
+  // A sort question starts with its first item picked; name it, as each later item is named once the one before is sorted.
+  if (q.kind === "sort" && q.items[0]) parts.push({ text: q.items[0].label, lang: q.choicesLang ?? prompt, pause: PAUSE_BEFORE_OPTIONS });
   // Join neighbours that share a language so the voice doesn't stop and start mid-sentence (but never across a pause).
   const merged: Segment[] = [];
   for (const p of parts) {

@@ -8,6 +8,7 @@ import { onColour } from "@/lib/contrast";
 import { countEarned, momentStickers, unitStickers, type Sticker } from "@/lib/stickers";
 import { useActiveProfile, useChildSettings, useDerived } from "@/lib/store";
 import { useBand } from "../band";
+import { SayButton } from "./BuddySays";
 import { Critter, SpeechBubble } from "../Critter";
 import { Page, ProgressBar, subjectVars } from "../ui";
 import { TreasureBack } from "./Treasures";
@@ -36,6 +37,7 @@ export function StickerBook() {
   const current = pages.find((p) => p.id === page) ?? pages[0];
   const all = pages.flatMap((p) => p.stickers);
   const got = countEarned(all);
+  const say = got === 0 ? "Finish a lesson to stick your first sticker!" : `You have ${got} of ${all.length} stickers.`;
   const meta = current.id === "moments" ? undefined : getSubjectMeta(current.id);
 
   return (
@@ -48,7 +50,10 @@ export function StickerBook() {
       <div className="flex items-center gap-3">
         <Critter id={profile.companion} mood={got === all.length ? "cheer" : "happy"} size={84} className="short:hidden" />
         <SpeechBubble className="flex-1">
-          <p className="font-read text-lg font-bold sm:text-xl">{got === 0 ? "Finish a lesson to stick your first sticker!" : `You have ${got} of ${all.length} stickers.`}</p>
+          <div className="flex items-center gap-3">
+            <p className="flex-1 font-read text-lg font-bold sm:text-xl">{say}</p>
+            <SayButton text={say} />
+          </div>
           <ProgressBar value={got} max={all.length} className="mt-2" label="Stickers collected" />
         </SpeechBubble>
       </div>

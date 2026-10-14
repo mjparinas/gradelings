@@ -33,8 +33,8 @@ import { stripePrices, testCheckout } from "./stripe";
 
 const DAY = 86_400_000;
 const TIMEOUT = 8_000;
-/** Vercel's Hobby plan allows 100 deployments a day. */
-export const VERCEL_DAILY_DEPLOYS = 100;
+/** Deployments a day each Vercel plan allows (vercel.com/docs/limits); Enterprise is custom, so it has none. */
+export const VERCEL_DAILY_DEPLOYS = { hobby: 100, pro: 6000 } as const;
 
 const env = (name: string) => process.env[name]?.trim() || "";
 const plural = (n: number, w: string) => `${n} ${w}${n === 1 ? "" : "s"}`;
@@ -209,6 +209,20 @@ interface VercelDeployment {
   meta?: { githubCommitMessage?: string };
 }
 
+type VercelPlan = "hobby" | "pro" | "enterprise";
+
+/** The plan the project's team (or personal account) is on. Pro if Vercel doesn't say: it's what the site runs on. */
+async function vercelPlan(team: string, headers: Record<string, string>): Promise<VercelPlan> {
+  try {
+    const url = team ? `https://api.vercel.com/v2/teams/${encodeURIComponent(team)}` : "https://api.vercel.com/v2/user";
+    const r = await getJson<{ billing?: { plan?: string }; user?: { billing?: { plan?: string } } }>("Vercel", url, headers);
+    const plan = (r.billing ?? r.user?.billing)?.plan?.toLowerCase();
+    return plan === "hobby" || plan === "enterprise" ? plan : "pro";
+  } catch {
+    return "pro";
+  }
+}
+
 export async function deploysCheck(now = Date.now()): Promise<HealthCheck> {
   const token = env("VERCEL_TOKEN");
   const project = env("VERCEL_PROJECT_ID");
@@ -226,9 +240,10 @@ export async function deploysCheck(now = Date.now()): Promise<HealthCheck> {
   if (team) q.set("teamId", team);
   const recent = new URLSearchParams({ projectId: project, limit: "20", ...(team ? { teamId: team } : {}) });
   const headers = { authorization: `Bearer ${token}` };
-  const [today, list] = await Promise.all([
+  const [today, list, plan] = await Promise.all([
     getJson<{ deployments: VercelDeployment[] }>("Vercel", `https://api.vercel.com/v6/deployments?${q}`, headers),
     getJson<{ deployments: VercelDeployment[] }>("Vercel", `https://api.vercel.com/v6/deployments?${recent}`, headers),
+    vercelPlan(team, headers),
   ]);
   const state = (d: VercelDeployment) => (d.state ?? d.readyState ?? "").toUpperCase();
   const prod = list.deployments.filter((d) => d.target === "production");
@@ -236,7 +251,9 @@ export async function deploysCheck(now = Date.now()): Promise<HealthCheck> {
   const latestProd = prod[0];
   const failedWeek = list.deployments.filter((d) => state(d) === "ERROR" && d.created >= now - 7 * DAY);
   const used = today.deployments.length;
-  const nearLimit = used >= VERCEL_DAILY_DEPLOYS * 0.8;
+  const limit = plan === "enterprise" ? null : VERCEL_DAILY_DEPLOYS[plan];
+  const planName = plan[0].toUpperCase() + plan.slice(1);
+  const nearLimit = limit !== null && used >= limit * 0.8;
   const prodFailed = latestProd && state(latestProd) === "ERROR";
   const label = (d: VercelDeployment) => d.meta?.githubCommitMessage?.split("\n")[0].slice(0, 100) || d.url || d.uid;
   const sha = env("VERCEL_GIT_COMMIT_SHA");
@@ -248,7 +265,7 @@ export async function deploysCheck(now = Date.now()): Promise<HealthCheck> {
     summary: prodFailed
       ? "The latest production deploy failed; the one before it is still live."
       : nearLimit
-        ? `${used} of ${VERCEL_DAILY_DEPLOYS} deploys used in the last 24 hours.`
+        ? `${used} of ${limit?.toLocaleString("en-US")} deploys used in the last 24 hours.`
         : live
           ? "Production is live."
           : "No live production deploy found.",
@@ -256,7 +273,7 @@ export async function deploysCheck(now = Date.now()): Promise<HealthCheck> {
       ...(live ? [{ label: "Live in production", value: label(live), at: live.created, state: "ok" as CheckState, href: live.url ? `https://${live.url}` : undefined }] : []),
       ...(latestProd && latestProd !== live ? [{ label: "Latest production deploy", value: `${state(latestProd).toLowerCase()}: ${label(latestProd)}`, at: latestProd.created, state: (prodFailed ? "down" : "warn") as CheckState }] : []),
       ...(sha ? [{ label: "This server runs", value: `${sha.slice(0, 7)} (${env("VERCEL_ENV") || "unknown"})` }] : []),
-      { label: "Deploys in 24 hours", value: `${used} of ${VERCEL_DAILY_DEPLOYS} (Hobby limit)`, state: nearLimit ? "warn" : "ok" },
+      { label: "Deploys in 24 hours", value: limit === null ? `${used} (${planName}: no set limit)` : `${used} of ${limit.toLocaleString("en-US")} (${planName} limit)`, state: nearLimit ? "warn" : "ok" },
       { label: "Failed deploys in 7 days", value: String(failedWeek.length), state: failedWeek.length ? "warn" : "ok" },
     ],
     link: { label: "Vercel deployments", href: "https://vercel.com/dashboard" },

@@ -9,6 +9,7 @@ import { levelInfo, unitLevel } from "@/lib/proficiency";
 import { go } from "@/lib/router";
 import { useActiveProfile, useChildSettings, useDerived } from "@/lib/store";
 import { useBand } from "../band";
+import { SayButton } from "./BuddySays";
 import { Critter, CritterSvg, SpeechBubble } from "../Critter";
 import { Page, ProgressBar, subjectVars } from "../ui";
 import { MembershipLock } from "./MembershipLock";
@@ -51,6 +52,7 @@ export function TrailMap() {
   const grown = levels.filter((l) => l >= 2).length;
   const nextIndex = levels.findIndex((l) => l < 2);
   const finished = nextIndex === -1;
+  const say = finished ? "You've grown a tree in every lesson here. Amazing!" : `Next stop: “${course.units[nextIndex].title}”`;
   const little = band === "little";
 
   const open = (key: string) => {
@@ -91,9 +93,10 @@ export function TrailMap() {
       <div className="flex items-center gap-3">
         <Critter id={meta.mascot} mood={finished ? "cheer" : "happy"} size={84} className="short:hidden" />
         <SpeechBubble className="flex-1">
-          <p className="font-read text-lg font-bold sm:text-xl">
-            {finished ? "You've grown a tree in every lesson here. Amazing!" : `Next stop: “${course.units[nextIndex].title}”`}
-          </p>
+          <div className="flex items-center gap-3">
+            <p className="flex-1 font-read text-lg font-bold sm:text-xl">{say}</p>
+            <SayButton text={say} />
+          </div>
           <div className="mt-2 flex items-center gap-2">
             <ProgressBar value={grown} max={course.units.length} className="flex-1" label={`${meta.title[band]} lessons grown to a tree`} />
             <span className="text-sm font-semibold whitespace-nowrap text-ink-soft">

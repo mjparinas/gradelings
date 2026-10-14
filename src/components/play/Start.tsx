@@ -12,6 +12,7 @@ import { MAX_CHILDREN } from "@/lib/plan";
 import { sounds } from "@/lib/sound";
 import { useDerived, useProfiles, useStore } from "@/lib/store";
 import type { Profile } from "@/lib/model";
+import { SayButton } from "./BuddySays";
 import { AVATARS, Critter, CritterSvg, SpeechBubble } from "../Critter";
 import { signInStudent } from "@/lib/account";
 import { Page } from "../ui";
@@ -40,6 +41,8 @@ function GrownUpsLink() {
 }
 
 /** First visit: meet the cast, then set up the first child. */
+const HELLO = "Hi! I'm Ollie the Otter. My friends and I can't wait to learn and play with you!";
+
 export function FirstRun() {
   const [step, setStep] = useState(0);
   if (step === 0) {
@@ -53,8 +56,9 @@ export function FirstRun() {
             </div>
           ))}
         </div>
-        <SpeechBubble className="max-w-md animate-pop-in text-left">
-          <p className="font-read text-2xl font-bold leading-snug short:text-lg">Hi! I&apos;m Ollie the Otter. My friends and I can&apos;t wait to learn and play with you!</p>
+        <SpeechBubble className="flex max-w-md animate-pop-in items-center gap-3 text-left">
+          <p className="flex-1 font-read text-2xl font-bold leading-snug short:text-lg">{HELLO}</p>
+          <SayButton text={HELLO} />
         </SpeechBubble>
         <button type="button" className="btn btn-good min-h-20 w-full max-w-sm animate-pulse-soft text-3xl short:min-h-14 short:text-2xl" onClick={() => setStep(1)}>
           Let&apos;s go! →
@@ -134,8 +138,9 @@ export function NewChild({ onDone, onCancel, first = false }: { onDone: (id: str
     <Page className="items-center justify-center gap-6 text-center">
       <div className="flex items-center gap-3">
         <Critter id="ollie" mood="happy" size={100} />
-        <SpeechBubble>
+        <SpeechBubble className="flex items-center gap-3">
           <p className="font-read text-2xl font-bold">{first ? "What's your name?" : "Who's joining us?"}</p>
+          <SayButton text={first ? "What's your name?" : "Who's joining us?"} />
         </SpeechBubble>
       </div>
 
@@ -239,8 +244,9 @@ export function Picker() {
       <Logo />
       <div className="flex items-center gap-3">
         <Critter id="ollie" mood="wave" size={110} />
-        <SpeechBubble>
+        <SpeechBubble className="flex items-center gap-3">
           <p className="font-read text-2xl font-bold">Who&apos;s learning today?</p>
+          <SayButton text="Who's learning today?" />
         </SpeechBubble>
       </div>
       <div className="grid w-full max-w-3xl grid-cols-2 gap-4 sm:grid-cols-4">

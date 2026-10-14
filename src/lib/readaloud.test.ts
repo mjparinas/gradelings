@@ -54,3 +54,25 @@ describe("read-aloud languages", () => {
     expect(readAloudSegments(q).some((s) => s.text.includes("happy"))).toBe(false);
   });
 });
+
+describe("read-aloud for sort questions", () => {
+  const sort: Question = {
+    kind: "sort",
+    prompt: "Fur or feathers? Tap an animal, then its basket.",
+    hint: "h",
+    bins: [
+      { id: "fur", label: "fur", emoji: "🧸" },
+      { id: "feathers", label: "feathers", emoji: "🪶" },
+    ],
+    items: [
+      { id: "owl", label: "owl", emoji: "🦉", bin: "feathers" },
+      { id: "dog", label: "dog", emoji: "🐶", bin: "fur" },
+    ],
+  };
+
+  it("names the first item after the prompt, since it starts out picked", () => {
+    const segs = readAloudSegments(sort);
+    expect(segs.map((s) => s.text)).toEqual(["Fur or feathers? Tap an animal, then its basket.", "owl"]);
+    expect(segs[1].pause).toBe(PAUSE_BEFORE_OPTIONS);
+  });
+});

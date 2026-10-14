@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { call } from "@/lib/classroom";
 import { CHECKS, STATE_LABEL, STATUS_PAGES, worst, type CheckResult, type CheckState, type HealthCheck, type StatusPage } from "@/lib/systemHealth";
 
@@ -17,6 +17,36 @@ const TONE: Record<CheckState, string> = {
   off: "bg-[#eef2f7] text-[#334155]",
 };
 const ICON: Record<CheckState, string> = { ok: "✓", warn: "!", down: "✕", off: "–" };
+
+/**
+ * How often "Auto refresh" looks again. Five minutes keeps every provider far under its rate limit (15 small
+ * requests a round, and the server's minute-long cache answers repeats), and the Stripe checkout test keeps its
+ * own six-hour cache, so auto refresh never asks for `refresh=1`.
+ */
+export const AUTO_REFRESH_MS = 5 * 60_000;
+/** Remembered per browser, so the choice survives a reload. */
+export const AUTO_REFRESH_KEY = "grademap.admin.systemAutoRefresh";
+
+const autoListeners = new Set<() => void>();
+function readAuto() {
+  try {
+    return localStorage.getItem(AUTO_REFRESH_KEY) === "on";
+  } catch {
+    return false;
+  }
+}
+function writeAuto(on: boolean) {
+  try {
+    localStorage.setItem(AUTO_REFRESH_KEY, on ? "on" : "off");
+  } catch {
+    // Private windows can refuse storage; then the switch can't stay on.
+  }
+  for (const l of autoListeners) l();
+}
+function subscribeAuto(l: () => void) {
+  autoListeners.add(l);
+  return () => void autoListeners.delete(l);
+}
 
 /** "5 min ago", "3 h ago", "2 days ago". */
 export function sinceText(t: number, now = Date.now()) {
@@ -131,8 +161,12 @@ export function System() {
   const [err, setErr] = useState("");
   // Answers from an earlier round arriving after "Check again" are dropped.
   const round = useRef(0);
+  // When the last round started, so a tab coming back into view knows whether it is due.
+  const lastLoad = useRef(0);
+  const auto = useSyncExternalStore(subscribeAuto, readAuto, () => false);
   const load = useCallback((refresh: boolean) => {
     const mine = ++round.current;
+    lastLoad.current = Date.now();
     const q = refresh ? "&refresh=1" : "";
     const fail = (title: string) => (e: Error) => mine === round.current && setErr(`Couldn't check ${title}: ${e.message}`);
     for (const c of CHECKS) {
@@ -155,6 +189,37 @@ export function System() {
     }
   }, []);
   useEffect(() => load(false), [load]);
+
+  // Auto refresh: a quiet round every AUTO_REFRESH_MS while the tab is in view. Cards keep their last answer
+  // until the new one arrives, so nothing flickers. A hidden tab asks for nothing, and catches up when it is
+  // looked at again if a round is due.
+  useEffect(() => {
+    if (!auto) return;
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const visible = () => document.visibilityState !== "hidden";
+    const again = () => {
+      setErr("");
+      load(false);
+    };
+    const schedule = () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        if (visible()) again();
+        schedule();
+      }, Math.max(0, lastLoad.current + AUTO_REFRESH_MS - Date.now()));
+    };
+    const onVisible = () => {
+      if (!visible()) return;
+      if (Date.now() - lastLoad.current >= AUTO_REFRESH_MS) again();
+      schedule();
+    };
+    schedule();
+    document.addEventListener("visibilitychange", onVisible);
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener("visibilitychange", onVisible);
+    };
+  }, [auto, load]);
 
   const doneChecks = CHECKS.flatMap((c) => checks[c.id] ?? []);
   const donePages = STATUS_PAGES.flatMap((p) => pages[p.name] ?? []);
@@ -179,14 +244,21 @@ export function System() {
         <h2 id="system-h" className="text-2xl font-bold">
           System
         </h2>
-        <button type="button" className="min-h-11 font-semibold text-[#2a5bd7] underline disabled:opacity-50" onClick={() => {
-            setChecks({});
-            setPages({});
-            setErr("");
-            load(true);
-          }} disabled={busy}>
-          {busy ? "Checking…" : "Check again"}
-        </button>
+        <div className="flex flex-wrap items-center gap-4">
+          <label className="flex min-h-11 items-center gap-2 font-semibold">
+            <input type="checkbox" role="switch" className="h-6 w-6" checked={auto} onChange={(e) => writeAuto(e.target.checked)} />
+            Auto refresh
+            <span className="text-sm font-normal text-ink-soft">{auto ? `every ${AUTO_REFRESH_MS / 60_000} min` : "off"}</span>
+          </label>
+          <button type="button" className="min-h-11 font-semibold text-[#2a5bd7] underline disabled:opacity-50" onClick={() => {
+              setChecks({});
+              setPages({});
+              setErr("");
+              load(true);
+            }} disabled={busy}>
+            {busy ? "Checking…" : "Check again"}
+          </button>
+        </div>
       </div>
       {err && (
         <p role="alert" className="text-nudge-dark">

@@ -16,6 +16,7 @@ import { useBand } from "../band";
 import { Critter, SpeechBubble } from "../Critter";
 import { Dialog, Page, ProgressBar, subjectVars } from "../ui";
 import { MembershipLock } from "./MembershipLock";
+import { SayButton, useBuddySays } from "./BuddySays";
 import { useAllowed } from "./useAllowed";
 import { useClasswork } from "./useClasswork";
 
@@ -162,6 +163,7 @@ export function UnitDialog({ unitKey: key, onClose, onLocked }: { unitKey: strin
 
 export function UnitList({ subject }: { subject: SubjectId }) {
   const profile = useActiveProfile()!;
+  const settings = useChildSettings();
   const d = useDerived();
   const band = useBand();
   const allowed = useAllowed();
@@ -170,8 +172,10 @@ export function UnitList({ subject }: { subject: SubjectId }) {
   const assigned = new Set(useClasswork().map((a) => a.ref.key));
   const [selected, setSelected] = useState<string | null>(null);
   const [locked, setLocked] = useState(false);
+  const nextUp = course?.units.find((u) => !d.units[unitKey(course.grade, subject, u.id)]);
+  const say = nextUp ? `Pick a lesson! I think “${nextUp.title}” would be fun.` : "You've tried them all! Keep growing every one.";
+  useBuddySays(course ? say : "", Boolean(settings?.autoRead));
   if (!course) return null;
-  const nextUp = course.units.find((u) => !d.units[unitKey(course.grade, subject, u.id)]);
 
   const start = (id: string) => {
     const key = unitKey(course.grade, subject, id);
@@ -193,8 +197,9 @@ export function UnitList({ subject }: { subject: SubjectId }) {
       </header>
       <div className="flex items-center gap-3">
         <Critter id={meta.mascot} mood="happy" size={92} />
-        <SpeechBubble className="flex-1">
-          <p className="font-read text-xl font-bold sm:text-2xl">{nextUp ? `Pick a lesson! I think “${nextUp.title}” would be fun.` : "You've tried them all! Keep growing every one."}</p>
+        <SpeechBubble className="flex flex-1 items-center gap-3">
+          <p className="flex-1 font-read text-xl font-bold sm:text-2xl">{say}</p>
+          <SayButton text={say} />
         </SpeechBubble>
       </div>
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">

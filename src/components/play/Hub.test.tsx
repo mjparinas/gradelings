@@ -20,6 +20,7 @@ const h = vi.hoisted(() => ({
   off: new Set<string>(),
   classwork: [] as unknown[],
   signOutStudent: vi.fn(),
+  speak: vi.fn(),
   now: 0,
 }));
 
@@ -40,6 +41,7 @@ vi.mock("../Critter", () => ({
   SpeechBubble: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
 }));
 vi.mock("./Companion", () => ({ Companion: () => null }));
+vi.mock("@/lib/speech", () => ({ speak: h.speak, stopSpeaking: () => {} }));
 vi.mock("./Hud", () => ({ Hud: () => null }));
 vi.mock("./InstallChip", () => ({ InstallChip: () => null }));
 vi.mock("./Secrets", () => ({ BuddyButton: ({ children }: { children: React.ReactNode }) => <div>{children}</div>, MooseVisitor: () => null }));
@@ -105,6 +107,7 @@ beforeEach(() => {
   h.off = new Set();
   h.classwork = [];
   h.signOutStudent.mockClear();
+  h.speak.mockClear();
   set({});
   window.location.hash = "";
 });
@@ -256,6 +259,18 @@ describe("Hub for little kids", () => {
     h.settings = { ...h.settings, dailyGoalMinutes: 10 };
     show("little");
     expect(message()).toHaveTextContent(/^You did it, Ava! 🎉$/);
+  });
+
+  it("reads their line aloud when read-aloud is on, and anyone can tap 🔊 to hear the line", () => {
+    h.settings = { ...h.settings, autoRead: true };
+    const { unmount } = show("little");
+    expect(h.speak).toHaveBeenCalledWith("Good morning, Ava! Let's play!");
+    unmount();
+    h.speak.mockClear();
+    show("middle");
+    expect(h.speak).not.toHaveBeenCalled();
+    fireEvent.click(screen.getByRole("button", { name: "Read it to me" }));
+    expect(h.speak).toHaveBeenCalledWith("Good morning, Ava! Tap the big button to start your first adventure!");
   });
 
   it("shows one quest at a time with dots, and no weekly goals", () => {
