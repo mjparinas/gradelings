@@ -1,0 +1,93 @@
+import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
+
+// Texas Grade 8 language units: the Greek and Latin roots the Grade 8 ELAR TEKS name (ast, qui, path, mand/mend and
+// duc, 8.2(C)), and the rhetorical devices and fallacies they name (analogy, juxtaposition, bandwagon appeals and
+// circular reasoning, 8.9(G)).
+
+const ROOTS: Q[] = [
+  ["The root ast/astr means “star.” An “astronaut” travels…", "among the stars, into space", ["under the sea", "across a desert", "through a forest"], "Astr means star; naut means sailor."],
+  ["The root qui means “quiet” or “rest.” Something “tranquil” is…", "calm and peaceful", ["loud and busy", "bright and starry", "led by others"], "Qui means quiet."],
+  ["The root path means “feeling” or “suffering.” “Sympathy” is…", "feeling sorry for someone's trouble", ["a fear of stars", "an order to obey", "a quiet room"], "Sym means together; path means feeling."],
+  ["The root mand/mend means “order.” A “command” is…", "an order", ["a feeling", "a star", "a rest"], "Mand means order."],
+  ["The root duc means “lead.” To “conduct” an orchestra is to…", "lead it", ["quiet it", "order it to leave", "feel sorry for it"], "Duc means lead."],
+  ["Which word has a root meaning “star”?", "asterisk", ["acquit", "empathy", "deduce"], "An asterisk is a little star: *."],
+  ["Which word has a root meaning “lead”?", "educate", ["astronomy", "pathetic", "demand"], "Look for duc."],
+  ["Which word has a root meaning “feeling”?", "empathy", ["mandate", "conduct", "disaster"], "Look for path."],
+  ["Which word has a root meaning “order”?", "mandatory", ["quiet", "aqueduct", "apathy"], "Look for mand."],
+  ["Which word has a root meaning “quiet” or “rest”?", "acquiesce", ["astrology", "induct", "recommend"], "Look for qui."],
+  ["Something “mandatory” is…", "required, as if ordered", ["optional", "starry", "peaceful"], "Mand means order."],
+  ["“Empathy” means…", "understanding and sharing another person's feelings", ["ordering others around", "studying the stars", "leading a group"], "Em means in; path means feeling."],
+  ["“Apathy” means…", "a lack of feeling or interest", ["a strong order", "a bright star", "a quiet leader"], "A- means without; path means feeling."],
+  ["“Astronomy” is the study of…", "stars and space", ["feelings", "leaders", "laws"], "Astr means star."],
+  ["To “induct” someone into a club is to…", "lead them in as a member", ["order them out", "feel sorry for them", "keep them quiet"], "In means in; duc means lead."],
+  ["To “recommend” something is to…", "suggest or put it forward as good", ["lead it away", "quiet it down", "feel pain about it"], "Mend comes from mand, order or entrust."],
+  ["A “disaster” was once thought to be caused by…", "unlucky stars", ["quiet rooms", "strong leaders", "kind feelings"], "Dis means bad; aster means star."],
+  ["An “aqueduct” is a structure that…", "leads water from one place to another", ["holds stars", "stores feelings", "gives orders"], "Aqua means water; duc means lead."],
+  ["A “pathetic” scene makes people feel…", "pity or sadness", ["calm", "proud", "starry-eyed"], "Path means feeling or suffering."],
+  ["To be “acquitted” is to be…", "freed from a charge, allowed to rest", ["ordered to court", "led to space", "made to feel pain"], "Qui means rest or quiet."],
+  ["A “mandate” is…", "an official order or instruction", ["a quiet place", "a starry night", "a sad feeling"], "Mand means order."],
+  ["To “deduce” an answer is to…", "lead your reasoning to a conclusion", ["order it to change", "feel it deeply", "keep it quiet"], "De means from; duc means lead."],
+  ["A “telepath” in a story can…", "feel or sense others' thoughts from far away", ["lead armies", "count stars", "give orders"], "Tele means far; path means feeling."],
+  ["To “demand” something is to…", "ask for it firmly, as an order", ["lead it gently", "feel sorry for it", "keep it quiet"], "Mand means order."],
+  ["“Quietude” means…", "a state of calm and rest", ["a loud crowd", "a strict order", "a bright star"], "Qui means quiet."],
+  ["“Asteroid” means…", "star-like", ["star-leader", "star-feeling", "star-order"], "-oid means like."],
+  ["“Antipathy” means…", "a strong feeling against something", ["a quiet rest", "a leader's order", "a love of stars"], "Anti means against; path means feeling.", true],
+  ["Which word shares a root with “production”?", "reduce", ["mandate", "empathy", "astral"], "Both have duc, lead.", true],
+  ["Which word does not share a root with the others: command, mandate, demand, conduct?", "conduct", ["command", "mandate", "demand"], "Three have mand, order.", true],
+  ["A “pathologist” studies…", "diseases and suffering in the body", ["the stars", "how to lead", "rules and orders"], "Path means suffering; logy means study.", true],
+];
+
+const RHETORIC: Q[] = [
+  ["What is an analogy?", "a comparison that explains one thing by showing how it is like another", ["a list of facts", "a fallacy about popularity", "a question with no answer"], "Analogies explain the unfamiliar with the familiar."],
+  ["“A cell is like a factory: each part has a job.” This is…", "an analogy", ["juxtaposition", "a bandwagon appeal", "circular reasoning"], "It compares a cell to a factory."],
+  ["Why do writers use analogies?", "to make a hard idea easier to understand", ["to prove a claim with data", "to attack an opponent", "to repeat the claim"], "A familiar comparison helps."],
+  ["What is juxtaposition?", "placing two very different things side by side to show contrast", ["comparing two similar things", "repeating a word", "asking a question"], "Side by side for contrast."],
+  ["A photo shows a gleaming mansion next to a crumbling shack. What device is this?", "juxtaposition", ["analogy", "bandwagon", "circular reasoning"], "Two contrasting images together."],
+  ["What is a bandwagon appeal?", "urging people to do something because everyone else is", ["comparing two ideas", "placing opposites together", "giving expert data"], "Jump on the wagon."],
+  ["“Join the millions who already switched!” This is…", "a bandwagon appeal", ["an analogy", "juxtaposition", "a fair statistic"], "It relies on what others do."],
+  ["Why is a bandwagon appeal a fallacy?", "Something isn't right just because many people do it.", ["It uses too many facts.", "It compares two things.", "It contrasts opposites."], "Popularity is not proof."],
+  ["What is circular reasoning?", "using the claim itself as the reason for the claim", ["comparing two things", "listing many sources", "placing opposites together"], "The argument goes in a circle."],
+  ["“This book is the best because it's better than all other books.” What fallacy is this?", "circular reasoning", ["bandwagon", "analogy", "juxtaposition"], "The reason just restates the claim."],
+  ["“You should trust me because I'm trustworthy.” What is wrong?", "The reason repeats the claim.", ["It uses an analogy.", "It contrasts two ideas.", "It cites data."], "Trust me because I'm trustworthy says the same thing twice."],
+  ["Which sentence is an analogy?", "“Learning a language is like building a house, one brick at a time.”", ["“Everyone is learning Spanish.”", "“Spanish is spoken in many countries.”", "“Spanish is popular because people like it.”"], "Look for a comparison that explains."],
+  ["Which sentence uses a bandwagon appeal?", "“Every kid in school has these shoes. Don't be left out!”", ["“These shoes have padded soles.”", "“The shoes cost forty dollars.”", "“The shoes come in four colors.”"], "Which one says everyone has them?"],
+  ["Which sentence uses circular reasoning?", "“Our rule is fair because it is a fair rule.”", ["“Our rule gives every class equal time.”", "“Many schools have similar rules.”", "“The rule was voted on by students.”"], "Which reason just repeats the claim?"],
+  ["A story opens with a joyful wedding, then cuts to a lonely funeral. Why?", "to sharpen the contrast between joy and grief", ["to explain with a comparison", "to show what everyone is doing", "to restate the theme"], "Opposites side by side."],
+  ["Which is a rhetorical device rather than a fallacy?", "an analogy that explains a process", ["“Everyone's doing it, so you should too.”", "“It's true because it's true.”", "“Only fools disagree.”"], "Devices can help explain fairly."],
+  ["“The heart is a pump that pushes blood through pipes.” What is being compared?", "the heart and a pump", ["blood and water only", "pipes and veins only", "the heart and the lungs"], "Find the two things."],
+  ["What makes an analogy weak?", "the two things are not really alike in the important ways", ["it uses a comparison", "it is easy to understand", "it is short"], "A good analogy must fit."],
+  ["“Ninety percent of teens use this app, so it must be safe.” What is the flaw?", "Popularity doesn't prove safety.", ["It uses an analogy.", "It uses juxtaposition.", "It has no claim."], "Many users is not evidence of safety."],
+  ["A writer places a quote from a happy child beside a report of rising hunger. The effect is…", "a powerful contrast that stirs concern", ["a circular claim", "a bandwagon appeal", "a neutral summary"], "Juxtaposition can stir feelings."],
+  ["Which best fixes circular reasoning in “Exercise is healthy because it is good for you”?", "“Exercise is healthy because it strengthens the heart and muscles.”", ["“Exercise is healthy because it's healthy.”", "“Everyone exercises.”", "“Exercise is good because it is good.”"], "Give a real reason."],
+  ["Which word signals a possible bandwagon appeal?", "everyone", ["because", "however", "although"], "Watch for claims about what all people do."],
+  ["“Debate is a tennis match: ideas go back and forth.” What does the analogy suggest?", "Debaters respond to each other's points in turn.", ["Debate is a sport with balls.", "Only one person speaks.", "Debate has no rules."], "Think of how tennis works."],
+  ["Which pair is correct?", "analogy = device; bandwagon = fallacy", ["analogy = fallacy; juxtaposition = fallacy", "circular reasoning = device", "bandwagon = device"], "Which is a flaw in reasoning?"],
+  ["Why might an ad juxtapose a dirty kitchen with a sparkling one?", "to make the product's result seem dramatic", ["to give a statistic", "to repeat the claim", "to show what everyone buys"], "Before and after, side by side."],
+  ["“We know the team is the best because it's number one.” This is…", "circular reasoning", ["an analogy", "juxtaposition", "a fair statistic"], "Best and number one mean the same."],
+  ["An essay compares a computer virus to a cold spreading through a classroom. Is this fair?", "Yes, it is an analogy that explains how something spreads.", ["No, it is a bandwagon appeal.", "No, it is circular reasoning.", "Yes, it is a statistic."], "Does it explain a process by comparison?", true],
+  ["Which response best answers a bandwagon appeal?", "“Lots of people doing it doesn't show it's a good idea; what's the evidence?”", ["“Then I'll do it too.”", "“That's an analogy.”", "“Everyone agrees, so it's true.”"], "Ask for evidence.", true],
+  ["How is juxtaposition different from analogy?", "Juxtaposition shows contrast; analogy shows likeness.", ["They are the same.", "Juxtaposition is a fallacy.", "Analogy always shows contrast."], "Opposites versus similarities.", true],
+  ["“Reading is important because books matter.” Why is this weak?", "The reason only rephrases the claim instead of supporting it.", ["It uses data.", "It quotes an expert.", "It uses a fair analogy."], "Does the reason add anything new?", true],
+];
+
+export const LANGUAGE_8: Unit[] = [
+  bankUnit({
+    id: "tx-g8-roots",
+    title: "Roots: ast, qui, path, mand, duc",
+    emoji: "🌠",
+    blurb: "Greek and Latin roots for star, quiet, feeling, order and lead.",
+    parentNote: "Your child uses the roots ast (star), qui (quiet or rest), path (feeling), mand/mend (order) and duc (lead) to work out word meanings.",
+    standards: ["8.2(C)", "academic words built on the roots ast, qui, path, mand/mend and duc"],
+    items: ROOTS,
+  }),
+  bankUnit({
+    id: "tx-g8-rhetoric",
+    title: "Analogy, Contrast & Fallacies",
+    emoji: "⚖️",
+    blurb: "Analogy and juxtaposition, bandwagon appeals and circular reasoning.",
+    parentNote: "Your child explains how analogy and juxtaposition work and spots bandwagon appeals and circular reasoning in arguments and ads.",
+    standards: ["8.9(G)", "analogy, juxtaposition, bandwagon appeals and circular reasoning"],
+    items: RHETORIC,
+  }),
+];

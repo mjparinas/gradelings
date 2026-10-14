@@ -1,0 +1,93 @@
+import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
+
+// Texas Grade 1 language units: the phonics the Grade 1 ELAR TEKS name that the shared units don't reach. Long vowels
+// with silent e, vowel teams and r-controlled vowels (1.2(B), 1.2(C)), and compound words, contractions and the endings
+// -s, -es, -ed and -ing (1.2(B), 1.3(C)). Prompts stay under 80 characters and four choices for read-aloud.
+
+const VOWELS: Q[] = [
+  ["Add e to the end of “cap”. What word is it now?", "cape", ["cup", "cop", "cake"], "The e makes the a say its name."],
+  ["Add e to the end of “kit”. What word is it now?", "kite", ["kitten", "cut", "kits"], "The e makes the i say its name."],
+  ["Add e to the end of “hop”. What word is it now?", "hope", ["hoop", "hip", "hops"], "The e makes the o say its name."],
+  ["Add e to the end of “cub”. What word is it now?", "cube", ["cab", "club", "cubs"], "The e makes the u say its name."],
+  ["Add e to the end of “pin”. What word is it now?", "pine", ["pen", "pain", "pins"], "The e makes the i say its name."],
+  ["Which word has a long a sound?", "rain", ["ran", "red", "rug"], "Long a says its name, like in “day”."],
+  ["Which word has a long e sound?", "feet", ["fed", "fat", "fit"], "Long e says its name, like in “me”."],
+  ["Which word has a long o sound?", "boat", ["bat", "bit", "but"], "Long o says its name, like in “go”."],
+  ["Which word has a long i sound?", "bike", ["big", "bag", "bug"], "Long i says its name, like in “hi”."],
+  ["Which word has a long u sound?", "mule", ["mud", "mug", "map"], "Long u says its name, like in “cute”."],
+  ["Which letters finish “tr__n” to name a ride on tracks?", "ai", ["ee", "oa", "oo"], "The long a in “rain” is spelled ai."],
+  ["Which word has the same vowel sound as “boat”?", "road", ["rod", "bad", "bed"], "Listen for the long o: oa."],
+  ["Which word has the same vowel sound as “see”?", "tree", ["ten", "top", "tub"], "Listen for the long e: ee."],
+  ["Which word has the “ar” sound you hear in “car”?", "star", ["stay", "sat", "stop"], "Listen for ar."],
+  ["Which word has the “or” sound you hear in “fork”?", "corn", ["cone", "can", "coin"], "Listen for or."],
+  ["Which word has the “er” sound you hear in “her”?", "bird", ["bed", "bid", "bead"], "The letters ir can say er."],
+  ["Which word has the “oi” sound you hear in “coin”?", "boil", ["bowl", "bail", "bell"], "Listen for oi."],
+  ["Which word has the “ow” sound you hear in “cow”?", "town", ["ton", "tone", "ten"], "Listen for ow, like “ouch”."],
+  ["Which word has the “oo” sound you hear in “moon”?", "spoon", ["spin", "spun", "span"], "Listen for oo."],
+  ["Which word rhymes with “cake” and ends with a silent e?", "lake", ["lack", "luck", "lick"], "Long a, then k, then a quiet e."],
+  ["In “home,” which letter is silent?", "e", ["h", "o", "m"], "You can't hear the last letter."],
+  ["In “bike,” which letter is silent?", "e", ["b", "i", "k"], "You can't hear the last letter."],
+  ["Which spelling of the water that falls from clouds is right?", "rain", ["rane", "rayn", "rian"], "Long a is often spelled ai in the middle."],
+  ["Which spelling of the thing you sail in is right?", "boat", ["bote", "bowt", "baot"], "Long o is spelled oa here."],
+  ["Which word has a vowel team: two vowels together?", "seed", ["set", "sad", "sit"], "Look for two vowels side by side."],
+  ["Which word has a vowel with an r after it?", "shirt", ["ship", "shot", "shut"], "Look for ir, ar, or, er or ur."],
+  ["Which word has the long a sound spelled ay?", "play", ["plan", "plum", "plot"], "Look for ay at the end.", true],
+  ["Which word has the long o sound spelled ow?", "snow", ["snap", "sniff", "snug"], "Look for ow at the end.", true],
+  ["Which word ends in a vowel that says its name?", "go", ["got", "gum", "gas"], "Nothing comes after the o.", true],
+  ["Which word has the “ur” sound you hear in “fur”?", "turn", ["tan", "ten", "tune"], "The letters ur say er.", true],
+];
+
+const ENDINGS: Q[] = [
+  ["The word “jumped” tells about…", "the past", ["right now", "tomorrow", "a place"], "The -ed ending means it already happened."],
+  ["Kim is jumping. The -ing tells you it is…", "happening now", ["over", "not real", "far away"], "Is jumping happens right now."],
+  ["What does the -s in “cats” mean?", "more than one", ["in the past", "right now", "very small"], "One cat, two cats."],
+  ["Which word means more than one box?", "boxes", ["boxs", "boxed", "boxing"], "Words ending in x add -es."],
+  ["Which word means more than one dish?", "dishes", ["dishs", "dished", "dishing"], "Words ending in sh add -es."],
+  ["Put “sun” and “flower” together. What word is it?", "sunflower", ["flowersun", "sunny", "flowers"], "Say sun, then flower."],
+  ["Put “rain” and “bow” together. What word is it?", "rainbow", ["bowrain", "rainy", "rains"], "Say rain, then bow."],
+  ["Put “cup” and “cake” together. What word is it?", "cupcake", ["cakecup", "cups", "caked"], "Say cup, then cake."],
+  ["Which two words make “bedroom”?", "bed and room", ["bee and drum", "bed and broom", "red and room"], "Break it into two small words."],
+  ["Which two words make “football”?", "foot and ball", ["food and ball", "foot and bell", "for and tall"], "Break it into two small words."],
+  ["“can't” is a short way to say…", "can not", ["can it", "cat not", "can too"], "The ' takes the place of missing letters."],
+  ["“I'm” is a short way to say…", "I am", ["I will", "I can", "I made"], "The ' takes the place of the a."],
+  ["“it's” is a short way to say…", "it is", ["it was", "its own", "I sit"], "The ' takes the place of the i."],
+  ["“don't” is a short way to say…", "do not", ["did not", "done", "doing"], "The ' takes the place of the o."],
+  ["What is the short way to say “we are”?", "we're", ["were", "wear", "we'd"], "Look for the '."],
+  ["What is the short way to say “is not”?", "isn't", ["it's", "aren't", "wasn't"], "Is + not."],
+  ["Which word tells about the past?", "played", ["plays", "playing", "play"], "Look for -ed."],
+  ["Add -ing to “read”. What word is it?", "reading", ["readed", "reads", "readng"], "read + ing."],
+  ["Add -ed to “help”. What word is it?", "helped", ["helpt", "helping", "helps"], "help + ed."],
+  ["Yesterday I ___ my dog.", "walked", ["walk", "walking", "walks"], "Yesterday is in the past."],
+  ["Right now the bird is ___.", "singing", ["sang", "sings", "sing"], "Is … right now: use -ing."],
+  ["Which word has the base word “jump”?", "jumping", ["bumping", "pumping", "dumping"], "Find jump inside."],
+  ["What is the base word in “painted”?", "paint", ["pain", "ted", "pant"], "Take off the -ed."],
+  ["What is the base word in “wishes”?", "wish", ["wise", "she", "wash"], "Take off the -es."],
+  ["Which word is a compound word?", "bedtime", ["bedding", "tiny", "timer"], "It is two words put together."],
+  ["Which word is a compound word?", "backpack", ["backing", "packed", "baker"], "It is two words put together."],
+  ["“they'll” is a short way to say…", "they will", ["they all", "they tell", "the well"], "They + will.", true],
+  ["Add -ed to “hug”. Which spelling is right?", "hugged", ["huged", "hugd", "huggd"], "Double the g, then add -ed.", true],
+  ["Which word means more than one bus?", "buses", ["buss", "busy", "bused"], "Words ending in s add -es.", true],
+  ["Which word is a compound word?", "mailbox", ["mailing", "boxes", "mallet"], "Mail + box.", true],
+];
+
+export const LANGUAGE_1: Unit[] = [
+  bankUnit({
+    id: "tx-g1-long-vowels",
+    title: "Long Vowels & Vowel Teams",
+    emoji: "🚂",
+    blurb: "Silent e, vowel teams like ai and oa, and ar, or and ir.",
+    parentNote: "Your child reads and spells words where vowels say their names (cape, rain, boat) and words with r-controlled vowels (star, bird).",
+    standards: ["1.2(B); 1.2(C)", "long vowels with silent e, vowel teams and r-controlled vowels"],
+    items: VOWELS,
+  }),
+  bankUnit({
+    id: "tx-g1-word-endings",
+    title: "Word Endings & Short Forms",
+    emoji: "🧩",
+    blurb: "Compound words, contractions, and the endings -s, -es, -ed and -ing.",
+    parentNote: "Your child puts words together (rainbow), reads contractions (can't, I'm) and works out what -s, -ed and -ing add to a word.",
+    standards: ["1.2(B); 1.3(C)", "compound words, contractions, and the endings -s, -es, -ed and -ing"],
+    items: ENDINGS,
+  }),
+];
