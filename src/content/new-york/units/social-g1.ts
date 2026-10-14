@@ -1,0 +1,141 @@
+import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
+
+// New York's own Grade 1 social units (`ny-` ids), from the NYS K-12 Social Studies Framework ("My Family and Other
+// Families, Now and Long Ago"). Prompts are 80 characters or fewer with at most 4 choices. Family questions respect
+// every kind of family.
+
+const AMERICAN_SYMBOLS: Q[] = [
+  ["What do we say to promise to be loyal to the United States?", "the Pledge of Allegiance", ["a nursery rhyme", "a weather report", "a shopping list"], "We say it facing the flag."],
+  ["What is the national anthem of the United States?", "The Star-Spangled Banner", ["Yankee Doodle", "Row, Row, Row Your Boat", "Old MacDonald"], "It is about a flag that was still there."],
+  ["The 13 stripes on the flag stand for the first 13…", "colonies", ["presidents", "rivers", "holidays"], "They became the first states."],
+  ["Which bird was chosen as the national bird?", "the bald eagle", ["the blue jay", "the turkey", "the owl"], "It is a strong bird with a white head."],
+  ["The Statue of Liberty was a gift from which country?", "France", ["Mexico", "Japan", "Brazil"], "It came across the ocean in pieces."],
+  ["Where does the Statue of Liberty stand?", "New York Harbor", ["the Grand Canyon", "a desert", "a mountaintop"], "Ships pass by it."],
+  ["What does liberty mean?", "freedom", ["money", "a long trip", "a big storm"], "The Statue of Liberty is named for it."],
+  ["Which song is a patriotic song?", "America the Beautiful", ["The Itsy Bitsy Spider", "Happy Birthday", "Baa, Baa, Black Sheep"], "It sings about purple mountains."],
+  ["Independence Day celebrates the…", "Declaration of Independence", ["first day of school", "first snow", "end of summer"], "It was signed in 1776."],
+  ["In what year was the Declaration of Independence signed?", "1776", ["1492", "1900", "2000"], "It was a long, long time ago."],
+  ["Abraham Lincoln was a president who helped end…", "slavery", ["recess", "winter", "farming"], "He was the 16th president."],
+  ["Which president is on the penny?", "Abraham Lincoln", ["George Washington", "Thomas Jefferson", "John Adams"], "He was the 16th president."],
+  ["Who was the first president of the United States?", "George Washington", ["Abraham Lincoln", "John Adams", "Benjamin Franklin"], "Presidents' Day honors him."],
+  ["Martin Luther King Jr. worked so all people would be treated…", "fairly", ["badly", "the same as kings", "like strangers"], "He gave a speech about a dream."],
+  ["Harriet Tubman helped people escape from…", "slavery", ["school", "the circus", "a storm"], "She led people north to freedom."],
+  ["Rosa Parks is remembered for refusing to give up her seat on a…", "bus", ["boat", "train to the moon", "bike"], "It helped change unfair laws."],
+  ["Veterans Day honors people who…", "served in the military", ["teach school", "sell food", "build roads"], "It is in November."],
+  ["Memorial Day remembers people who…", "died serving our country", ["won a race", "planted trees", "wrote books"], "It is at the end of May."],
+  ["Thanksgiving is a holiday for giving…", "thanks", ["homework", "tickets", "speeches"], "It is in the name."],
+  ["Why do people from many backgrounds share the same flag?", "they are all part of one country", ["they all live on one street", "they all like the same food", "they all have the same name"], "We are different but share a country."],
+  ["Which building is the home of the president?", "the White House", ["the Statue of Liberty", "the Liberty Bell", "the Empire State Building"], "It is in Washington, D.C."],
+  ["What is the capital of the United States?", "Washington, D.C.", ["New York City", "Albany", "Philadelphia"], "The president works there."],
+  ["Folktales and stories about our past help us…", "share a common history", ["tell the weather", "count money", "grow food"], "They are passed down over time."],
+  ["The motto E pluribus unum means…", "out of many, one", ["the bigger, the better", "first come, first served", "home sweet home"], "Many people make one nation."],
+  ["Flag Day celebrates the…", "flag of the United States", ["first robin of spring", "end of school", "longest day"], "It is on June 14.", true],
+  ["Lady Liberty is another name for the…", "Statue of Liberty", ["Liberty Bell", "White House", "bald eagle"], "She stands in New York Harbor.", true],
+  ["The Liberty Bell is in which city?", "Philadelphia", ["New York City", "Chicago", "Miami"], "It is in Pennsylvania.", true],
+  ["Why do we stand for the national anthem?", "to show respect for our country", ["to stretch our legs", "to see better", "because it is short"], "It is a way to honor the flag.", true],
+];
+
+const RULES_GOVERNMENT: Q[] = [
+  ["Why do we have rules and laws?", "to keep people safe and treated fairly", ["to make people sad", "to stop all fun", "so no one talks"], "Think about what rules protect."],
+  ["Which is a law in a community?", "stop at a red light", ["eat your carrots", "brush your hair", "read a book a day"], "Drivers must follow it."],
+  ["Which is a rule at school?", "walk in the halls", ["run across the road", "shout in the library", "take turns never"], "It keeps everyone safe."],
+  ["Who leads a city or town?", "the mayor", ["the governor", "the president", "the principal"], "This leader works at city hall."],
+  ["Who leads New York State?", "the governor", ["the mayor", "the principal", "the coach"], "This leader works in Albany."],
+  ["Who leads the whole United States?", "the president", ["the mayor", "the governor", "the librarian"], "This leader lives in the White House."],
+  ["What is the capital of New York State?", "Albany", ["New York City", "Buffalo", "Rochester"], "The governor works there."],
+  ["Governments make laws for a town, a state and…", "the nation", ["one family", "one classroom", "one team"], "There are three levels."],
+  ["Who helps make sure people follow laws?", "police officers", ["bakers", "painters", "farmers"], "They help keep us safe."],
+  ["Who decides if a law was broken?", "a judge", ["a pilot", "a dentist", "a chef"], "This person works in a court."],
+  ["A speed limit sign near a school helps…", "keep children safe", ["cars go faster", "buses get lost", "stores sell more"], "Cars must slow down."],
+  ["Two friends want the same swing. What is a fair way to solve it?", "take turns", ["push each other", "yell louder", "break the swing"], "Each friend gets a chance."],
+  ["Your class must pick a game. A fair way to decide is to…", "vote", ["let one person choose every time", "argue", "skip recess"], "Everyone gets a say."],
+  ["A right is something…", "every person should have", ["only adults can buy", "you earn with points", "only for kings"], "Going to school is one."],
+  ["Which is a right children have?", "to be safe", ["to drive a car", "to stay up all night", "to skip school"], "Everyone should be protected."],
+  ["Which is a responsibility?", "taking care of your things", ["eating all the snacks", "taking a toy", "forgetting your homework"], "It is a job you are trusted with."],
+  ["A good citizen…", "follows rules and helps others", ["breaks rules", "takes things", "laughs at others"], "Citizens help their community."],
+  ["Being honest means you…", "tell the truth", ["hide things", "copy others", "make up stories"], "You say what really happened."],
+  ["What can you do if you see trash at the park?", "throw it in a bin", ["kick it", "leave it", "add more"], "Help keep the park clean."],
+  ["Who makes the rules in your home?", "the grown-ups who care for you", ["the pet", "the mail carrier", "a neighbor's child"], "They keep the family safe."],
+  ["Who helps make rules at school?", "the principal and teachers", ["the bus", "the lunch tray", "the playground"], "They are in charge of the school."],
+  ["You and a friend disagree. A good first step is to…", "listen to each other", ["walk away angry", "shout", "tell everyone"], "Hear both sides."],
+  ["Why do people vote?", "to choose leaders and make choices", ["to win prizes", "to get homework", "to buy toys"], "Each vote is a voice."],
+  ["Laws protect our rights. Which law keeps people safe in cars?", "wearing a seat belt", ["eating in the car", "singing in the car", "napping in the car"], "Buckle up!"],
+  ["A city council makes laws for a…", "city or town", ["whole country", "family", "single school"], "It works with the mayor.", true],
+  ["The people in a state government work in the state…", "capital", ["zoo", "farm", "harbor"], "For New York, that is Albany.", true],
+  ["Who makes laws for the whole country?", "Congress", ["the city council", "the school board", "the principal"], "It meets in Washington, D.C.", true],
+  ["If a rule is unfair, people can…", "ask leaders to change it", ["ignore every rule", "break things", "hide"], "Rules can be changed in fair ways.", true],
+];
+
+const FAMILY_HISTORY: Q[] = [
+  ["Families can be big or small. Which is true?", "every family is different", ["all families are the same", "families have 4 people", "families must have pets"], "Families come in many kinds."],
+  ["Which is a family tradition?", "baking bread together every holiday", ["a bus stop", "a rainy day", "a broken toy"], "It is something a family does again and again."],
+  ["Grandma tells you about when she was a child. This is…", "an oral history", ["a weather report", "a map", "a recipe card"], "It is history told out loud."],
+  ["Which is a source about your family's past?", "an old family photo", ["a new toy", "today's lunch", "a cloud"], "It shows people long ago."],
+  ["A family timeline shows…", "family events in order", ["the weather today", "a bus route", "a menu"], "It goes from first to last."],
+  ["On a timeline, which comes first?", "you were born", ["you started 1st grade", "you lost a tooth", "you learned to read"], "Think about your very first day."],
+  ["An artifact is…", "an object from the past", ["a song on the radio", "a new phone", "a cloud shape"], "Museums show many of them."],
+  ["Which tells about life long ago?", "a letter written by a great-grandparent", ["a cereal box from today", "a new pencil", "a video game"], "It was written many years ago."],
+  ["Long ago, many families lit their homes with…", "candles and oil lamps", ["light bulbs", "phones", "TVs"], "There was no electricity in homes."],
+  ["Long ago, many families washed clothes…", "by hand", ["in a washing machine", "with a robot", "at a car wash"], "They used tubs and boards."],
+  ["Long ago, before cars, people often traveled by…", "horse and wagon", ["subway", "school bus", "jet"], "Animals pulled them."],
+  ["What is the same for families long ago and today?", "families care for each other", ["they all use phones", "they all drive cars", "they all watch TV"], "Love and care do not change."],
+  ["A biography is a true story about…", "a person's life", ["a dragon", "a talking dog", "a made-up land"], "It tells about a real person."],
+  ["Which word means many years ago?", "long ago", ["tomorrow", "today", "next week"], "It is the past."],
+  ["Which goes from the shortest time to the longest?", "day, week, month, year", ["year, day, week, month", "month, day, year, week", "week, year, day, month"], "Go from shortest to longest."],
+  ["How many months are in one year?", "12", ["7", "10", "30"], "January to December."],
+  ["How many days are in one week?", "7", ["5", "10", "12"], "Monday to Sunday."],
+  ["Families change. A new baby is born. The family…", "grows", ["shrinks", "moves to the moon", "stops"], "There is one more person."],
+  ["Some families speak more than one language. This is…", "something to be proud of", ["a problem", "against the rules", "silly"], "Many families share their languages."],
+  ["Which do families from many cultures share?", "food, songs and celebrations", ["the same name", "the same house", "the same birthday"], "Each culture has these in its own way."],
+  ["New York is home to families from…", "all over the world", ["only one country", "only one town", "only one street"], "Many languages are spoken there."],
+  ["A newspaper from long ago can tell us…", "what happened back then", ["what will happen next year", "today's lunch", "your height"], "It reported news at the time."],
+  ["A family photo from long ago is…", "a primary source", ["a cartoon", "a made-up story", "a map key"], "It was made at the time."],
+  ["Which question could you ask in a family interview?", "What games did you play as a child?", ["What is 2 + 2?", "How tall is a giraffe?", "What color is the sky?"], "Ask about their life long ago."],
+  ["Some traditions are passed down from…", "grandparents to grandchildren", ["stores to customers", "dogs to cats", "cars to bikes"], "They go from one generation to the next.", true],
+  ["Your great-grandparents lived…", "before your grandparents were born", ["after you were born", "next year", "tomorrow"], "They are an older generation.", true],
+  ["A family timeline goes from your birth to…", "now", ["before you were born", "the moon", "next century"], "It ends with today.", true],
+  ["Why do families keep old letters and photos?", "to remember their history", ["to throw away", "to use as napkins", "to make paper airplanes"], "They hold memories.", true],
+];
+
+export const UNITS: Unit[] = [
+  bankUnit({
+    id: "ny-g1-american-symbols",
+    title: "American Symbols & Heroes",
+    emoji: "🦅",
+    blurb: "The Pledge, songs, holidays and heroes",
+    parentNote:
+      "The Pledge of Allegiance and patriotic songs, American symbols such as the flag and the Statue of Liberty, national holidays, and people from history all Americans can feel connected to.",
+    standards: [
+      "1.2a; 1.2b",
+      "historical figures, events, symbols, the Pledge of Allegiance and patriotic songs that connect Americans to a common heritage",
+    ],
+    items: AMERICAN_SYMBOLS,
+  }),
+  bankUnit({
+    id: "ny-g1-rules-and-government",
+    title: "Rules, Laws & Leaders",
+    emoji: "🏛️",
+    blurb: "Why we have rules, and who leads",
+    parentNote:
+      "Why rules and laws protect rights and keep people safe, local, state and national leaders (the mayor, the governor in Albany and the president), and solving problems fairly.",
+    standards: [
+      "1.4a; 1.4b; 1.4c",
+      "rules and laws that protect rights, local, state and national government, and solving problems fairly",
+    ],
+    items: RULES_GOVERNMENT,
+  }),
+  bankUnit({
+    id: "ny-g1-family-history",
+    title: "Family History",
+    emoji: "📸",
+    blurb: "Family stories, timelines and long ago",
+    parentNote:
+      "Families of every kind and their traditions, family timelines, sources such as photos, letters and oral histories, and how families long ago compare with families today.",
+    standards: [
+      "1.1a; 1.1b; 1.7a; 1.8a; 1.8b",
+      "families and their traditions, family timelines, and the photos, letters and stories that tell family history",
+    ],
+    items: FAMILY_HISTORY,
+  }),
+];
