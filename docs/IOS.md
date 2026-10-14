@@ -46,7 +46,7 @@ The App Store requires digital subscriptions sold in an app to use Apple's In-Ap
 
 ## Kids Category
 
-The app can go in the **Education** category with a 4+ age rating, or in the **Kids Category** (ages 5 and under, 6 to 8, 9 to 11). Kids Category rules (guideline 1.3): no third-party analytics or ads (there are none in `/play/` or `/parents/`; Vercel and Cloudflare analytics are on public pages only, which the app never opens in its web view), and links out of the app and any purchase must be behind a parental gate (the parent area's PIN gate does this; help and legal pages open only from the parent area). Apple doesn't let an app leave the Kids Category once it's approved there. Default: Education, 4+.
+The app can go in the **Education** category with a 4+ age rating, or in the **Kids Category** (ages 5 and under, 6 to 8, 9 to 11). Kids Category rules (guideline 1.3): no third-party analytics or ads (there are none in `/play/` or `/parents/`; Vercel analytics is on public pages only, which the app never opens in its web view), and links out of the app and any purchase must be behind a parental gate (the parent area's PIN gate does this; help and legal pages open only from the parent area). Apple doesn't let an app leave the Kids Category once it's approved there. Default: Education, 4+.
 
 ## What you need to do yourself
 

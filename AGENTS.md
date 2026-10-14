@@ -420,7 +420,7 @@ Tests are duplicated across screen sizes only where layout can break:
   - practice results.
 - **No free text, photos or voice recordings from kids.**
 - **Parents can export everything or delete everything** at any time.
-- **Analytics in use, all disclosed on `/privacy/`:** Vercel Web Analytics and Speed Insights (cookieless, public pages only, `SiteAnalytics.tsx`), Cloudflare Web Analytics (cookieless, set up at Cloudflare, not in code) and Resend's open and click tracking on emails. There is no analytics in the kids' app or parent area. We no longer promise "no tracking" (owner, October 2026), so never write that promise into copy; keep `/privacy/` and `docs/school/` true whenever a provider or setting changes.
+- **Analytics in use, all disclosed on `/privacy/`:** Vercel Web Analytics and Speed Insights (cookieless, public pages only, `SiteAnalytics.tsx`) and Resend's open and click tracking on emails. There is no analytics in the kids' app or parent area. We no longer promise "no tracking" (owner, October 2026), so never write that promise into copy; keep `/privacy/` and `docs/school/` true whenever a provider or setting changes.
 
 ## Design decisions
 
@@ -506,6 +506,7 @@ Tests are duplicated across screen sizes only where layout can break:
 - **The kids' app and parent area are single-page apps with hash routes** (`src/lib/router.ts`), so every screen works offline from one cached page.
 - **Server:** libsql, a local SQLite file in dev and Turso in production.
   - Auth hashes passwords with scrypt. Sessions are random tokens stored hashed, in an HttpOnly cookie, with a same-origin check.
+- **Cloudflare is DNS only** (grey cloud on `gradelings.com` and `www`, October 2026). Vercel is the only CDN; don't turn Cloudflare's proxy, caching or HTML rewriting (Rocket Loader, email obfuscation) back on: they add a hop and break the hashed CSP.
 - **`trailingSlash: true` means every API URL ends in `/`.** Call `/api/sync/`, not `/api/sync`. Stripe's webhook endpoint must be `/api/billing/webhook/`, because Stripe doesn't follow redirects.
 - **Content Security Policy has no `'unsafe-inline'` in production, and pages stay static** (`src/lib/csp.mjs`). Nonces would need dynamic rendering for every page, and Next's experimental SRI doesn't cover inline scripts.
   - `npm run build` is `next build && node scripts/csp-postbuild.mjs`. The script hashes every inline script, `<style>` and `style=""` value in each prerendered page and writes that page's policy into a `<meta http-equiv>` tag right after the charset. Run `next build` alone and the pages have no script policy, so don't change the `build` script.

@@ -13,7 +13,8 @@ describe("privacy page", () => {
     render(<PrivacyPage />);
     const page = screen.getByRole("article");
     expect(page).toHaveTextContent("Vercel Web Analytics and Speed Insights");
-    expect(page).toHaveTextContent("Cloudflare Web Analytics");
+    // Cloudflare only answers DNS for the domain (proxy off since October 2026), so it counts no visits.
+    expect(page).not.toHaveTextContent("Cloudflare");
     expect(page).toHaveTextContent("It also records when an email is opened and which links are clicked");
     expect(page).not.toHaveTextContent(/don’t track|no tracking|tracking pixels/i);
   });
