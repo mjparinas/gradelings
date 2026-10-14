@@ -16,7 +16,7 @@ describe("comparison page", () => {
 
   it.each(COMPETITORS.map((c) => [c.slug] as const))("%s: speaks to families in Canada and the US, with both countries' prices", async (slug) => {
     const meta = await generateMetadata(props(slug));
-    expect(meta.title).toContain("for families in Canada and the US");
+    expect(JSON.stringify(meta.title)).toContain("for families in Canada and the US");
     render(await ComparePage(props(slug)));
     const main = screen.getByRole("main");
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("for families in Canada and the US");

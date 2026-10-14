@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const g = guidesFor(r.framework.id).french;
   if (!g) return {};
   return pageMeta({
-    title: g.title,
+    title: [g.title, g.title.split(": ")[0], `French programs in ${r.framework.shortName}: a guide for parents`, `French in ${r.framework.shortName} schools`],
     description: `${g.intro.split(". ")[0]}. ${g.metaTail} How to help at home, even if you don't speak French.`,
     path: guidePath.french(r.framework),
     framework: r.framework,

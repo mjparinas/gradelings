@@ -50,7 +50,7 @@ describe("French guide page", () => {
   it("builds metadata from the guide's own intro", async () => {
     const g = guidesFor("ca-on").french!;
     const meta = await generateMetadata(props("ontario"));
-    expect(meta.title).toBe(g.title);
+    expect(meta.title).toEqual({ absolute: g.title });
     expect(meta.alternates?.canonical).toBe("/guides/ontario/french/");
     expect(meta.description).toContain(g.intro.split(". ")[0]);
     expect(meta.description).toMatch(/even if you don't speak French\.$/);

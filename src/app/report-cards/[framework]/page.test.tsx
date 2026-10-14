@@ -44,8 +44,7 @@ describe("report card guide page", () => {
   it("puts the level names in the title", async () => {
     const f = getFramework("ca-bc");
     const meta = await generateMetadata(props("bc"));
-    expect(meta.title).toBe(`BC report cards explained: ${f.scoringFor("3").levels.map((l) => l.label).join(", ")}`);
-    expect(meta.title).toContain("Proficient");
+    expect(meta.title).toEqual({ absolute: `BC report cards explained: ${f.scoringFor("3").levels.map((l) => l.label).join(", ")}` });
     expect(meta.alternates?.canonical).toBe("/report-cards/bc/");
   });
 

@@ -127,7 +127,7 @@ describe("grade guide page", () => {
 
   it("lists the subjects in the metadata and points the canonical at the guide", async () => {
     const meta = await generateMetadata(props("manitoba", "grade-2"));
-    expect(meta.title).toBe("What your child learns in Grade 2 in Manitoba: a parent's guide");
+    expect(meta.title).toEqual({ absolute: "What your child learns in Grade 2 in Manitoba: a parent's guide" });
     expect(meta.alternates?.canonical).toBe("/guides/manitoba/grade-2/");
     expect(meta.description).toMatch(/^Grade 2 in Manitoba: what is taught in math, English language arts, science, social studies and French Immersion, what to look for/);
     expect(meta.description).toContain("Matched to the Manitoba Curriculum.");

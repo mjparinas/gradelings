@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const f = await find(params);
   if (!f) return {};
   return pageMeta({
-    title: `${f.region} classroom practice for teachers, ${gradeSpan(f, true)}`,
+    title: [`${f.region} classroom practice for teachers, ${gradeSpan(f, true)}`, `${f.region} classroom practice for teachers`, `${f.shortName} classroom practice for teachers`],
     description: `Assign ${f.curriculumName} units to your class in ${APP_NAME}: math, English language arts, science and social studies for every grade, with a free sample question for each unit.`,
     path: teacherPath.framework(f),
     framework: f,

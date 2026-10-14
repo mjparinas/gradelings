@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!r) return {};
   const { framework: f, grade } = r;
   return pageMeta({
-    title: `What your child learns in ${gradeLabel(f, grade)} in ${f.shortName}: a parent's guide`,
+    title: [`What your child learns in ${gradeLabel(f, grade)} in ${f.shortName}: a parent's guide`, `What your child learns in ${gradeLabel(f, grade)} in ${f.shortName}`, `${gradeLabel(f, grade)} in ${f.shortName}: a parent's guide`],
     description: `${gradeLabel(f, grade)} in ${f.name}: what is taught in ${listOf(coursesFor(f, grade).map((c) => subjectSeoTitle(c.subject)))}, what to look for on the report card, and how to help at home. Matched to the ${f.curriculumName}.`,
     path: guidePath.grade(f, grade),
     framework: f,

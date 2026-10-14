@@ -35,8 +35,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const r = resolve(await params);
   if (!r?.course || !r.unit) return {};
   const { framework: f, grade, course, unit } = r;
+  const g = gradeLabel(f, grade);
+  // A course can hold two units with one title; the later ones are told apart by part.
+  const twins = course.units.filter((u) => u.title === unit.title);
+  const name = twins.length > 1 && twins[0] !== unit ? `${unit.title}, part ${twins.indexOf(unit) + 1}` : unit.title;
   return pageMeta({
-    title: `${unit.title}: ${gradeLabel(f, grade)} ${subjectSeoTitle(course.subject)} practice (${f.shortName})`,
+    title: [`${name}: ${g} ${subjectSeoTitle(course.subject)} practice (${f.shortName})`, `${name}: ${g} ${subjectSeoTitle(course.subject)} (${f.shortName})`, `${name}: ${g} (${f.shortName})`, `${name} (${f.shortName})`, `${name}: ${g}`],
     description: `${unit.parentNote} Free ${gradeLabel(f, grade)} sample questions with answers, matched to the ${f.curriculumName}.`,
     path: curriculumPath.unit(f, grade, course.subject, unit.id),
     framework: f,

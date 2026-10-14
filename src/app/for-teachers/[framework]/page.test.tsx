@@ -32,7 +32,7 @@ describe("teacher framework page", () => {
 
   it("builds metadata, and 404s a province classes can't follow", async () => {
     const meta = await generateMetadata(props("saskatchewan"));
-    expect(meta.title).toBe("Saskatchewan classroom practice for teachers, Kindergarten to Grade 9");
+    expect(meta.title).toEqual({ absolute: "Saskatchewan classroom practice for teachers, Kindergarten to Grade 9" });
     expect(meta.alternates?.canonical).toBe("/for-teachers/saskatchewan/");
     expect(meta.description).toContain("Saskatchewan Curriculum");
     expect(await generateMetadata(props("quebec"))).toEqual({});

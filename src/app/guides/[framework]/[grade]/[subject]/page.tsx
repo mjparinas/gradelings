@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { framework: f, grade, course } = r;
   const name = subjectSeoTitle(course.subject);
   return pageMeta({
-    title: `${gradeLabel(f, grade)} ${name} help at home (${f.shortName} curriculum)`,
+    title: [`${gradeLabel(f, grade)} ${name} help at home (${f.shortName} curriculum)`, `${gradeLabel(f, grade)} ${name} help at home (${f.shortName})`, `${gradeLabel(f, grade)} ${name}: help at home`],
     description: `How to help your ${gradeLabel(f, grade)} child with ${subjectInSentence(name)} at home in ${f.name}: what they learn this year, simple activities, and what the report card levels mean.`,
     path: guidePath.subject(f, grade, course.subject),
     framework: f,

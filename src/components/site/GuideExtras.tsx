@@ -40,7 +40,7 @@ export async function competenciesMetadata(params: Params): Promise<Metadata> {
   if (!r) return {};
   const g = guidesFor(r.framework.id).competencies;
   return pageMeta({
-    title: `${r.framework.shortName} ${g.label} explained for parents`,
+    title: [`${r.framework.shortName} ${g.label} explained for parents`, `${r.framework.shortName} ${g.label} explained`, `${g.label} (${r.framework.shortName})`],
     description: g.description,
     path: guidePath.competencies(r.framework),
     framework: r.framework,
@@ -125,8 +125,14 @@ export async function assessmentMetadata(params: Params): Promise<Metadata> {
     // Some provinces and territories list no fixed assessment grades.
     title:
       r.framework.country === "US"
-        ? `${a.name}, explained for ${r.framework.shortName} parents`
-        : `The ${a.short} explained: ${a.name} for ${a.grades.length ? `Grade ${a.grades.join(" and Grade ")}` : r.framework.shortName} parents`,
+        ? [`${a.name}, explained for ${r.framework.shortName} parents`, `The ${a.short}, explained for ${r.framework.shortName} parents`, `The ${a.short} in ${r.framework.shortName}`]
+        : /^[A-Z]+$/.test(a.short)
+          ? [
+              `The ${a.short} explained: ${a.name} for ${a.grades.length ? `Grade ${a.grades.join(" and Grade ")}` : r.framework.shortName} parents`,
+              `The ${a.short} explained for ${r.framework.shortName} parents`,
+              `The ${a.short} in ${r.framework.shortName}`,
+            ]
+          : [`${a.name}, explained for parents`, `${a.name} explained`, `${r.framework.shortName} ${a.short.toLowerCase()} explained`],
     description: `What the ${a.name} is, who takes it, what it covers, how results are described, and how to help your child feel ready. A plain-language guide for ${r.framework.shortName} parents.`,
     path: guidePath.assessment(r.framework),
     framework: r.framework,

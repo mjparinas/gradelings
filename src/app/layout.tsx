@@ -5,6 +5,7 @@ import { PageLang } from "@/components/PageLang";
 import { SiteAnalytics } from "@/components/SiteAnalytics";
 import { APP_NAME } from "@/lib/brand";
 import { DEFAULT_LANG } from "@/lib/pageLang.mjs";
+import { TITLE_SUFFIX } from "@/lib/pageMeta";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: `${APP_NAME} · Curriculum practice and games for Kindergarten to Grade 9`,
-    template: `%s · ${APP_NAME}`,
+    template: `%s${TITLE_SUFFIX}`,
   },
   description:
     "Friendly, ad-free practice for Kindergarten to Grade 9, matched to the curriculum: math, reading and writing, science and social studies. Learning games, trophies, offline play and clear progress reports for parents.",
