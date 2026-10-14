@@ -1,0 +1,366 @@
+Arizona Mathematics Standards
+Fourth Grade
+ARIZONA DEPARTMENT OF EDUCATION
+Adopted December 2016
+
+Arizona Mathematics Standards 4th Grade
+Fourth Grade: Overview
+1. Extend understanding of place value to multi-digit numbers and fluently add and subtract multi-digit numbers.
+a. Students generalize their understanding of place value through 1,000,000, and the relative size of numbers in each place.
+They use their understanding of properties of operations to perform multi-digit arithmetic with multi-digit whole number less
+than or equal to 1,000,000. They round multi-digit numbers and fluently add and subtract multi-digit whole numbers within
+1,000,000.
+2. Develop competency with multi-digit multiplication, and develop understanding of dividing to find quotients involving
+multi-digit dividends.
+a. Students apply their understanding of models for multiplication, place value, and properties of operations, in particular the
+distributive property, to compute products of multi-digit whole numbers. They develop fluency with efficient strategies for
+multiplying multi- digit whole numbers through 1,000,000; understand and explain why the strategies work; and use them to
+solve problems (Table 2). Students apply their understanding of models for division, place value, properties of operations,
+and the relationship of division to multiplication to find quotients involving multi-digit dividends.
+3. Develop understanding of fraction equivalence, addition, and subtraction of fractions with like denominators, and
+multiplication of fractions
+by whole numbers.
+a. Students develop understanding of fraction equivalence and operations with fractions. They recognize that two different
+fractions can be equal (e.g., 15/9 = 5/3), and they develop methods for generating and recognizing equivalent fractions.
+Students extend previous understandings about how fractions are built from unit fractions, composing fractions from unit
+fractions, decomposing fractions into unit fractions, and using the meaning of fractions and the meaning of multiplication to
+multiply a fraction by a whole number.
+The Standards for Mathematical Practice complement the content standards so that students increasingly engage with the
+subject matter as they grow in mathematical maturity and expertise throughout the elementary, middle, and high school
+years.
+Updated 1-29-2025 2
+
+Arizona Mathematics Standards 4th Grade
+Content Emphasis of Arizona Mathematics Standards:
+The content emphasis provides planning guidance regarding the major and supporting clusters found within the standards. The
+major and supporting clusters align with the Blueprint for AASA. Please consider the following designations when planning an
+instructional scope for the academic year.
+Arizona considers Major Clusters as groups of related standards that require greater emphasis than some of the other
+standards due to the depth of the ideas and the time it takes to master these groups of related standards.
+Arizona considers Supporting Clusters as groups of related standards that support standards within the major cluster in and
+across grade levels. Supporting Clusters also encompass pre-requisite and extension of grade level content.
+Arizona is suggesting instructional time encompass a range of at least 65%-75% for Major Clusters and a range of 25%-35%
+for Supporting Cluster instruction. See introduction, page 12 for more information.
+Updated 1-29-2025 3
+
+Arizona Mathematics Standards 4th Grade
+Operations and Algebraic Thinking (OA) Measurement and Data (MD)
+Use the four operations with whole numbers to solve Solve problems involving measurement and conversion
+problems. of measurements from a larger unit to a small unit.
+Gain familiarity with factors and multiples. Represent and interpret data.
+Generate and analyze patterns. Geometric measurement: understand concepts of
+angle and measure angles.
+Number and Operations in Base Ten (NBT)
+Geometry (G)
+Note: Grade 4 expectations in this domain are limited to whole
+numbers less than or equal to 1,000,000. Draw and identify lines and angles, and classify shapes by
+properties of their lines and angles.
+Generalize place value understanding for multi-digit
+whole numbers.
+Use place value understanding and properties of Standards for Mathematical Practices (MP)
+operations to perform multi-digit arithmetic.
+1. Make sense of problems and persevere in solving them.
+2. Reason abstractly and quantitatively.
+Number and Operations—Fractions (NF) 3. Construct viable arguments and critique the reasoning of
+Note: Grade 4 expectations in this domain are limited to fractions others.
+with denominators 2, 3, 4, 5, 6, 8, 10, 12, and 100. 4. Model with mathematics.
+5. Use appropriate tools strategically.
+Extend understanding of fraction equivalence and
+6. Attend to precision.
+ordering.
+7. Look for and make use of structure.
+Apply and extend previous understanding of
+8. Look for and express regularity in repeated reasoning.
+multiplication to multiply a whole number by a fraction.
+Understand decimal notation for fractions, and compare
+decimal fractions.
+Updated 1-29-2025 4
+
+Arizona Mathematics Standards 4th Grade
+ESSENTIAL STANDARDS
+Essential Standards are individual standards selected to receive a greater proportion of questions on the AASA exams. The AASA
+exams, administered in grades three through eight, are developed based on a standards blueprint approved by the State Board of
+Education that includes individual standards grouped into clusters and identifies an allocation of questions for each cluster. The
+identified Essential Standards will receive the maximum number of questions allowed by the standards blueprint. Note that ALL
+standards will continue to be included in the test design of the annual state exams.
+ALL STANDARDS WILL BE ASSESSED
+The identified Essential Standards are targeted for emphasis, indicating that these standards will have a higher proportion on the AASA
+when possible. The state assessment will retain the same length and duration. ALL STANDARDS remain valid and subject to inclusion
+in each year’s AASA.
+Updated 1-29-2025 5
+
+Arizona Mathematics Standards 4th Grade
+REPORTING
+The AASA exam results will include a new report in which Essential Standards will be represented. Beginning with the 2025-2026
+school year identified Essential Standards, from the existing State Board of Education-approved standards for ELA, in grades three
+through eight will have a higher proportion of items on the statewide assessment, keeping within the current blueprint adopted by the
+State Board of Education. Each given year an Essential Standard Cluster, identified on the table, may or may not be reported,
+depending upon the final form.
+REPORTING CLUSTER GRADE 4
+*Reported Cluster
+Operations, Algebraic Thinking, and Numbers and Operations – Fractions Measurement, Data, and Geometry
+Numbers in Base Ten
+Use the four operations with whole Extend understanding of fraction equivalence Solve problems involving measurement
+numbers to solve problems.* and ordering.* and conversion of measurements from a
+larger unit to a smaller unit.
+Gain familiarity with factors and multiples. Build fractions from unit fractions by applying Represent and interpret data.
+and extending previous understanding of
+operations on whole numbers.*
+Generate and analyze patterns. Understand decimal notation for fractions, Geometric measurement: Understand
+and compare decimal fractions concepts of angle and measure angles.
+Generalize place value understanding for Draw and identify lines and angles, and
+multi-digit whole numbers. classify shapes by properties of their
+lines and angles.
+Use place value understanding and
+properties of operations to perform multi-
+digit arithmetic.*
+Updated 1-29-2025 6
+
+Arizona Mathematics Standards 4th Grade
+Operations and Algebraic Thinking (OA)
+Use the four operations with whole numbers to solve problems.
+Represent verbal statements of multiplicative comparisons as multiplication equations. Interpret a multiplication equation
+4.OA.A.1 as a comparison (e.g., 35 is the number of objects in 5 groups, each containing 7 objects, and is also the number of
+objects in 7 groups, each containing 5 objects).
+Multiply or divide within 1000 to solve word problems involving multiplicative comparison (e.g., by using drawings and
+4.OA.A.2 equations with a symbol for the unknown number to represent the problem, distinguishing multiplicative comparison from
+additive comparison). See Table 2.
+Solve multistep word problems using the four operations, including problems in which remainders must be interpreted.
+4.OA.A.3 Understand how the remainder is a fraction of the divisor. Represent these problems using equations with a letter
+standing for the unknown quantity.
+Gain familiarity with factors and multiples.
+Find all factor pairs for a whole number in the range 1 to 100 and understand that a whole number is a multiple of each of
+4.OA.B.4
+its factors.
+Generate and analyze patterns.
+Generate a number pattern that follows a given rule. Identify apparent features of the pattern that were not explicit in the
+4.OA.C.5 rule itself and explain the pattern informally (e.g., given the rule “add 3” and the starting number 1, generate terms in the
+resulting sequence and observe that the terms appear to alternate between odd and even numbers).
+When solving problems, assess the reasonableness of answers using mental computation and estimation strategies
+4.OA.C.6
+including rounding.
+Updated 1-29-2025 7
+
+Arizona Mathematics Standards 4th Grade
+Numbers and Operations in Base Ten (NBT)
+Note: Grade 4 expectations in this domain are limited to whole numbers less than or equal to 1,000,000.
+Generalize place value understanding for multi-digit whole numbers.
+Apply concepts of place value, multiplication, and division to understand that in a multi-digit whole number, a digit in one
+4.NBT.A.1
+place represents ten times what it represents in the place to its right.
+Read and write multi-digit whole numbers using base-ten numerals, number names, and expanded form. Compare two
+4.NBT.A.2 multi-digit numbers based on meanings of the digits in each place, using >, =, and < symbols to record the results of
+comparisons.
+4.NBT.A.3 Use place value understanding to round multi-digit whole numbers to any place.
+Use place value understanding and properties of operations to perform multi-digit arithmetic.
+4.NBT.B.4 Fluently add and subtract multi-digit whole numbers using a standard algorithm.
+Multiply a whole number of up to four digits by a one-digit whole number, and multiply two two-digit numbers, using
+4.NBT.B.5 strategies based on place value and the properties of operations. Illustrate and explain the calculation by using equations,
+rectangular arrays, and/or area models.
+Demonstrate understanding of division by finding whole-number quotients and remainders with up to four-digit dividends
+4.NBT.B.6
+and one-digit divisors.
+Updated 1-29-2025 8
+
+Arizona Mathematics Standards 4th Grade
+Number and Operations – Fractions (NF)
+Note: Grade 4 expectations in this domain are limited to fractions with denominators 2, 3, 4, 5, 6, 8, 10, 12, and 100.
+Extend understanding of fraction equivalence and ordering.
+Explain why a fraction a/b is equivalent to a fraction (n x a)/(n x b) by using visual fraction models, with attention to how
+4.NF.A.1 the number and size of the parts differ even though the two fractions themselves are the same size. Use this principle to
+understand and generate equivalent fractions.
+Compare two fractions with different numerators and different denominators (e.g., by creating common denominators or
+numerators and by comparing to a benchmark fraction).
+4.NF.A.2
+a. Understand that comparisons are valid only when the two fractions refer to the same size whole.
+b. Record the results of comparisons with symbols >, =, or <, and justify the conclusions.
+Build fractions from unit fractions by applying and extending previous understanding of operations on whole numbers.
+Understand a fraction a/b with a > 1 as a sum of unit fractions (1/b).
+a. Understand addition and subtraction of fractions as joining and separating parts referring to the same whole.
+b. Decompose a fraction into a sum of fractions with the same denominator in more than one way (e.g., 3/8 = 1/8 +
+1/8+1/8; 3/8 = 2/8 + 1/8; 2 1/8 = 1 + 1 + 1/8 + or 2 1/8 = 8/8 + 8/8 + 1/8).
+4.NF.B.3 c. Add and subtract mixed numbers with like denominators (e.g., by using properties of operations and the
+relationship between addition and subtraction and/or by replacing each mixed number with an equivalent
+fraction).
+d. Solve word problems involving addition and subtraction of fractions referring to the same whole and having like
+denominators.
+Build fractions from unit fractions.
+a. Understand a fraction as a multiple of a unit fraction . In general, = a x .
+𝑎𝑎 1 𝑎𝑎 1
+b. Understand a multiple of as a multiple of a unit fraction , and use this understanding to multiply a whole
+𝑏𝑏 𝑏𝑏 𝑏𝑏 𝑏𝑏
+4.NF.B.4 𝑎𝑎 1
+number by a fraction. In general, n x = .
+𝑏𝑏 𝑏𝑏
+𝑎𝑎 𝑛𝑛 𝑥𝑥 𝑎𝑎
+c. Solve word problems involving multiplication of a whole number by a fraction. For example, if each person at a
+𝑏𝑏 𝑏𝑏
+party will eat 3/8 of a pound of roast beef, and there will be 5 people at the party, how many pounds of roast
+beef will be needed? Between what two whole numbers does your answer lie?
+Updated 1-29-2025 9
+
+Arizona Mathematics Standards 4th Grade
+Understand decimal notation for fractions, and compare decimal fractions.
+Express a fraction with denominator 10 as an equivalent fraction with denominator 100, and use this technique to add two
+fractions with respective denominators 10 (tenths) and 100 (hundredths). For example, express 3/10 as 30/100, and and
+4.NF.C.5 3/10 + 4/100 = 34/100. (Note: Students who can generate equivalent fractions can develop strategies for adding fractions
+with unlike denominators in general. But addition and subtraction with unlike denominators, in general, is not a
+requirement at this grade.)
+Use decimal notation for fractions with denominators 10 (tenths) or 100 (hundredths), and locate these decimals on a
+4.NF.C.6
+number line.
+Compare two decimals to hundredths by reasoning about their size. Understand that comparisons are valid only when the
+4.NF.C.7
+two decimals refer to the same whole. Record the results of comparisons with the symbols >, =, or <.
+Measurement and Data (MD)
+Solve problems involving measurement and conversion of measurements from a larger unit to a smaller unit.
+Know relative sizes of measurement units within one system of units which could include km, m, cm; kg, g; lb, oz.; l, ml;
+hr, min, sec. Within a single system of measurement, express measurements in a larger unit in terms of a smaller unit and
+4.MD.A.1
+in a smaller unit in terms of a larger unit. For example, know that 1 ft is 12 times as long as 1 in. Express the length of a 4
+ft snake as 48 in. Generate a conversion table for feet and inches listing the number pairs (1,12), 2,24), (3,36).
+Use the four operations to solve word problems and problems in real-world context involving distances, intervals of time
+(hr, min, sec), liquid volumes, masses of objects, and money, including decimals and problems involving fractions with like
+4.MD.A.2 denominators, and problems that require expressing measurements given in a larger unit in terms of a smaller unit.
+Represent measurement quantities using a variety of representations, including number lines that feature a measurement
+scale.
+Apply the area and perimeter formulas for rectangles in mathematical problems and problems in real-world contexts
+4.MD.A.3
+including problems with unknown side lengths. See Table 2.
+Represent and interpret data.
+Make a line plot to display a data set of measurements in fractions of a unit (1/2, 1/4, 1/8). Solve problems involving
+4.MD.B.4
+addition and subtraction of fractions by using information presented in line plots.
+Updated 1-29-2025 10
+
+Arizona Mathematics Standards 4th Grade
+Geometric measurement: Understand concepts of angle and measure angles.
+Recognize angles as geometric shapes that are formed wherever two rays share a common endpoint, and understand
+concepts of angle measurement:
+a. An angle is measured with reference to a circle with its center at the common endpoint of the rays, by considering
+4.MD.C.5
+the fraction of the circular arc between the points where the two rays intersect the circle. An angle that turns
+through 1/360 of a circle is called a “one-degree angle,” and can be used to measure angles.
+b. An angle that turns through n one-degree angles is said to have an angle measure of n degrees.
+4.MD.C.6 Measure angles in whole-number degrees using a protractor. Sketch angles of specified measure.
+Understand angle measures as additive. (When an angle is decomposed into non-overlapping parts, the angle measure of
+4.MD.C.7 the whole is the sum of the angle measures of the parts.) Solve addition and subtraction problems to find unknown angles
+on a diagram within mathematical problems as well as problems in real-world contexts.
+Geometry (G)
+Draw and identify lines and angles, and classify shapes by properties of their lines and angles.
+Draw points, lines, line segments, rays, angles (right, acute, obtuse), and perpendicular and parallel lines. Identify these in
+4.G.A.1
+two-dimensional figures.
+Classify two-dimensional figures based on the presence or absence of parallel or perpendicular lines, or the presence or
+4.G.A.2
+absence of angles of a specified size (e.g., understand right triangles as a category, and identify right triangles).
+Recognize a line of symmetry for a two-dimensional figure as a line across the figure such that the figure can be folded
+4.G.A.3
+along the line into matching parts. Identify line-symmetric figures and draw lines of symmetry.
+Updated 1-29-2025 11
+
+Arizona Mathematics Standards 4th Grade
+Standards for Mathematical Practice
+4.MP.1 Make sense of problems and persevere in solving them.
+Mathematically proficient students explain to themselves the meaning of a problem, look for entry points to begin work on
+the problem, and plan and choose a solution pathway. While engaging in productive struggle to solve a problem, they
+continually ask themselves, “Does this make sense?" to monitor and evaluate their progress and change course if
+necessary. Once they have a solution, they look back at the problem to determine if the solution is reasonable and
+accurate. Mathematically proficient students check their solutions to problems using different methods, approaches, or
+representations. They also compare and understand different representations of problems and different solution pathways,
+both their own and those of others.
+4.MP.2 Reason abstractly and quantitatively.
+Mathematically proficient students make sense of quantities and their relationships in problem situations. Students can
+contextualize and decontextualize problems involving quantitative relationships. They contextualize quantities, operations,
+and expressions by describing a corresponding situation. They decontextualize a situation by representing it symbolically.
+As they manipulate the symbols, they can pause as needed to access the meaning of the numbers, the units, and the
+operations that the symbols represent. Mathematically proficient students know and flexibly use different properties of
+operations, numbers, and geometric objects and when appropriate they interpret their solution in terms of the context.
+4.MP.3 Construct viable arguments and critique the reasoning of others.
+Mathematically proficient students construct mathematical arguments (explain the reasoning underlying a strategy, solution,
+or conjecture) using concrete, pictorial, or symbolic referents. Arguments may also rely on definitions, assumptions,
+previously established results, properties, or structures. Mathematically proficient students make conjectures and build a
+logical progression of statements to explore the truth of their conjectures. They are able to analyze situations by breaking
+them into cases, and can recognize and use counterexamples. Mathematically proficient students present their arguments in
+the form of representations, actions on those representations, and explanations in words (oral or written). Students critique
+others by affirming or questioning the reasoning of others. They can listen to or read the reasoning of others, decide
+whether it makes sense, ask questions to clarify or improve the reasoning, and validate or build on it. Mathematically
+proficient students can communicate their arguments, compare them to others, and reconsider their own arguments in
+response to the critiques of others.
+4.MP.4 Model with mathematics.
+Mathematically proficient students apply the mathematics they know to solve problems arising in everyday life, society, and
+the workplace. When given a problem in a contextual situation, they identify the mathematical elements of a situation and
+create a mathematical model that represents those mathematical elements and the relationships among them.
+Mathematically proficient students use their model to analyze the relationships and draw conclusions. They interpret their
+mathematical results in the context of the situation and reflect on whether the results make sense, possibly improving the
+model if it has not served its purpose.
+Updated 1-29-2025 12
+
+Arizona Mathematics Standards 4th Grade
+4.MP.5 Use appropriate tools strategically.
+Mathematically proficient students consider available tools when solving a mathematical problem. They choose tools that
+are relevant and useful to the problem at hand. Proficient students are sufficiently familiar with tools appropriate for their
+grade or course to make sound decisions about when each of these tools might be helpful; recognizing both the insight to
+be gained and their limitations. Students deepen their understanding of mathematical concepts when using tools to
+visualize, explore, compare, communicate, make and test predictions, and understand the thinking of others.
+4.MP.6 Attend to precision.
+Mathematically proficient students clearly communicate to others using appropriate mathematical terminology, and craft
+explanations that convey their reasoning. When making mathematical arguments about a solution, strategy, or conjecture,
+they describe mathematical relationships and connect their words clearly to their representations. Mathematically proficient
+students understand meanings of symbols used in mathematics, calculate accurately and efficiently, label quantities
+appropriately, and record their work clearly and concisely.
+4.MP.7 Look for and make use of structure.
+Mathematically proficient students use structure and patterns to assist in making connections among mathematical ideas or
+concepts when making sense of mathematics. Students recognize and apply general mathematical rules to complex
+situations. They are able to compose and decompose mathematical ideas and notations into familiar relationships.
+Mathematically proficient students manage their own progress, stepping back for an overview and shifting perspective when
+needed.
+4.MP.8 Look for and express regularity in repeated reasoning.
+Mathematically proficient students look for and describe regularities as they solve multiple related problems. They formulate
+conjectures about what they notice and communicate observations with precision. While solving problems, students
+maintain oversight of the process and continually evaluate the reasonableness of their results. This informs and strengthens
+their understanding of the structure of mathematics which leads to fluency.
+Updated 1-29-2025 13
+
+Arizona Mathematics Standards 4th Grade
+Table 2. Common Multiplication and Division Problem Types/Situations.1
+Problem Unknown Product Group Size Unknown Number of Groups Unknown
+Type/Situation (“How many in each group?” (“How many groups?” Division)
+3×6=? Division) ?×6=18 and 18÷6=?
+3×? =18 and 18÷3=?
+Equal Groups There are 3 bags with 6 plums in If 18 plums are shared equally into 3 If 18 plums are to be packed 6 to a
+each bag. How many plums are bags, then how many plums will be in bag, then how many bags are
+there in all? each bag? needed?
+Measurement example. Measurement example. Measurement example.
+You need 3 lengths of string, each You have 18 inches of string, which You have 18 inches of string, which
+6 inches long. How much string you will cut into 3 equal pieces. How you will cut into pieces that are 6
+will you need altogether? long will each piece of string be? inches long. How many pieces of
+string will you have?
+Arrays,2 There are 3 rows of apples with 6 If 18 apples are arranged into 3 equal If 18 apples are arranged into equal
+Area3 apples in each row. How many rows, how many apples will be in rows of 6 apples, how many rows will
+apples are there? each row? there be?
+Area example. Area example. Area example.
+What is the area of a 3 cm by 6 A rectangle has area 18 square A rectangle has area 18 square
+cm rectangle? centimeters. If one side is 3 cm long, centimeters. If one side is 6 cm long,
+how long is a side next to it? how long is a side next to it?
+Compare A straw hat costs $6. A baseball A baseball hat costs $18 and that is 3 A baseball hat costs $18 and a straw
+hat costs 3 times as much as the times as much as a straw hat costs. hat costs $6. How many times as
+straw hat. How much does the How much does a blue straw cost? much does the baseball hat cost as
+baseball hat cost? the straw hat?
+Measurement example.
+Measurement example. Measurement example.
+A rubber band is stretched to be 18
+A rubber band is 6 cm long. How cm long and that is 3 times as long A rubber band was 6 cm long at first.
+long will the rubber band be when as it was at first. How long was the Now it is stretched to be 18 cm long.
+it is stretched to be 3 times as rubber band at first? How many times as long is the rubber
+long? band now as it was at first?
+General a×b=? a×?=p and p÷a=? ?×b=p, and p÷b=?
+1The first examples in each cell are examples of discrete things. These are easier for students and should be given before the measurement examples.
+Updated 1-29-2025 14
+
+Arizona Mathematics Standards 4th Grade
+2The language in the array examples shows the easiest form of array problems. A harder form is to use the terms rows and columns: The apples in the grocery window are in 3 rows
+and 6 columns. How many apples are in there? Both forms are valuable.
+3Area involves arrays of squares that have been pushed together so that there are no gaps or overlaps, so array problems include these especially important measurement
+situations.
+Updated 1-29-2025 15

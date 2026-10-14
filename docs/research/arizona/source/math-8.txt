@@ -1,0 +1,340 @@
+Arizona Mathematics Standards
+Eighth Grade
+ARIZONA DEPARTMENT OF EDUCATION
+Adopted December 2016
+
+Arizona Mathematics Standards 8th Grade
+The Arizona Department of Education (ADE) requests input and feedback from educators and the public regarding the identification of
+Essential Standards. These Essential Standards will receive heightened emphasis and reporting within their standards groups, or
+“clusters” through the annual Arizona Academic Standards Assessment (AASA) exam, beginning in the 2025-2026 school year.
+BACKGROUND
+Beginning in November 2024, ADE organized an effort to identify Essential Standards for the annual AASA exams for grades three
+through eight. ADE took this action in response to feedback from district leaders that additional focus, direction and feedback were
+needed to optimize student performance and the annual state exams. This document conveys the results of that effort for public input.
+WHAT ARE ESSENTIAL STANDARDS?
+Essential Standards are individual standards selected to receive a greater proportion of questions on the AASA exams. The AASA
+exams, administered for grades three through eight, are developed based on a Standards Blueprint that groups individual standards
+into clusters and identifies an allocation of questions for each cluster. The identified Essential Standards will receive the maximum
+allowable number of questions allowed by the standards blueprint. Note that ALL standards will continue to be included in the test
+design of the annual state exams.
+THE PROCESS
+ADE issued a call to educators in October 2024 to assemble teams of ELA and Math reviewers for each grade. Reviewers
+collaboratively identified standards most essential for student progress based on foundational knowledge and progression. Twelve
+reports were generated: six for Math and six for English Language Arts.
+REPORTING
+The AASA exam results will be reported in a new format in which essential standards will be represented. Beginning with the 2025-
+2026 school year identified essential standards, from the existing State Board of Education-approved standards for math, in grades
+three through eight will have a higher proportion of items on the statewide assessment, keeping within the current blueprint adopted by
+the State Board of Education.
+Updated 1-29-2025 2
+
+Arizona Mathematics Standards 8th Grade
+ALL STANDARDS WILL BE ASSESSED
+The identified Essential Standards are targeted for emphasis, indicating that there could be a higher proportion of questions on those
+standards in the AASA. The state assessment will retain the same length and duration. ALL STANDARDS remain valid and subject to
+inclusion in each year’s AASA.
+Eighth Grade: Overview
+1. Develop understanding of irrational numbers.
+2. Develop understanding of expressions and equations, including solving linear equations, linear inequalities, and systems
+of linear equations.
+3. Develop understanding of the concept of a function and use functions to describe quantitative relationships, including
+modeling an association in bivariate data with a linear equation.
+(1) Students use their understanding of multiplication and apply properties to develop understanding of radicals and integer
+exponents. They use their knowledge of rational numbers to develop understanding of irrational numbers.
+(2) Students recognize equations for proportions (y/x =m or y = mx) as special linear equations (y = mx + b) understanding that the
+constant of proportionality (m) is the slope, and the graphs are lines through the origin. They understand that the slope (m) of a
+line is a constant rate of change, so that if the input or x-coordinate changes by an amount A, the output or y-coordinate changes
+by the amount m – A.Students fluently solve linear equations and linear inequalities in one variable. They solve systems of two
+linear equations in two variables to analyze situations and solve problems. Students understand when they use properties of
+equality and logical equivalence, they maintain the solutions of the original equation.
+(3) Students grasp the concept of a function as a rule that assigns to each input exactly one output. They can translate among
+representations and partial representations of functions (noting that tabular and graphical representations may be partial
+representations), and they describe how aspects of the function are reflected in the different representations. Students use the
+equation of a linear model to solve problems in the context of bivariate measurement data, interpreting the slope and intercept. For
+scatter plots that suggest linear association, students informally fit a straight line and assess the model fit by judging the closeness
+of the data points to the line.
+The Standards for Mathematical Practice complement the content standards so that students increasingly engage with the
+subject matter as they grow in mathematical maturity and expertise throughout the elementary, middle, and high school
+years.
+Updated 1-29-2025 3
+
+Arizona Mathematics Standards 8th Grade
+Content Emphasis of Arizona Mathematics Standards:
+The content emphasis provides planning guidance regarding the major and supporting clusters found within the standards. The Major
+and Supporting Clusters align with the Blueprint for AASA. Please consider the following designations when planning an instructional
+scope for the academic year.
+Arizona considers Major Clusters as groups of related standards that require greater emphasis than some of the other standards
+due to the depth of the ideas and the time it takes to master these groups of related standards.
+Arizona considers Supporting Clusters as groups of related standards that support standards within the major cluster in and across
+grade levels. Supporting clusters also encompass pre-requisite and extension of grade level content.
+Arizona is suggesting instructional time encompass a range of at least 65%-75% for Major Clusters and a range of 25%-35%
+for Supporting Cluster instruction. See introduction, page 12 for more information.
+Updated 1-29-2025 4
+
+Arizona Mathematics Standards 8th Grade
+The Number System (NS) Statistics and Probability (SP)
+Understand that there are irrational numbers, and
+approximate them using rational numbers.
+Investigate patterns of association in bivariate data.
+Investigate chance processes and develop, use, and
+evaluate probability models.
+Expressions and Equations (EE)
+Work with radicals and integer exponents.
+Standards for Mathematical Practices (MP)
+Understand the connections between proportional
+relationships, lines, and linear equations. 1. Make sense of problems and persevere in solving them.
+2. Reason abstractly and quantitatively.
+Analyze and solve linear equations, inequalities, and pairs
+3. Construct viable arguments and critique the reasoning of
+of simultaneous linear equations.
+others.
+4. Model with mathematics.
+5. Use appropriate tools strategically.
+Functions (F) 6. Attend to precision.
+Define, evaluate, and compare functions. 7. Look for and make use of structure.
+8. Look for and express regularity in repeated reasoning.
+Use functions to model relationships between quantities.
+Geometry (G)
+Understand congruence and similarity.
+Understand and apply the Pythagorean Theorem.
+Solve real-world and mathematical problems involving
+volume of cylinders, cones, and spheres.
+Updated 1-29-2025 5
+
+Arizona Mathematics Standards 8th Grade
+ESSENTIAL STANDARDS
+Essential Standards are individual standards selected to receive a greater proportion of questions on the AASA exams. The AASA
+exams, administered in grades three through eight, are developed based on a standards blueprint approved by the State Board of
+Education that includes individual standards grouped into clusters and identifies an allocation of questions for each cluster. The
+identified Essential Standards will receive the maximum number of questions allowed by the standards blueprint. Note that ALL
+standards will continue to be included in the test design of the annual state exams.
+ALL STANDARDS WILL BE ASSESSED
+The identified Essential Standards are targeted for emphasis, indicating that these standards will have a higher proportion on the AASA
+when possible. The state assessment will retain the same length and duration. ALL STANDARDS remain valid and subject to inclusion
+in each year’s AASA.
+Updated 1-29-2025 6
+
+Arizona Mathematics Standards 8th Grade
+REPORTING
+The AASA exam results will include a new report in which Essential Standards will be represented. Beginning with the 2025-2026
+school year identified Essential Standards, from the existing State Board of Education-approved standards for math, in grades three
+through eight will have a higher proportion of items on the statewide assessment, keeping within the current blueprint adopted by the
+State Board of Education. Each given year an Essential Standard Cluster, identified on the table, may or may not be reported,
+depending upon the final form.
+Reporting Cluster Table
+Grade 8
+Expressions and Equations Functions Geometry Statistics and Probability and
+The Number System
+Work with radicals and integer Define, evaluate, and compare Understand congruence Investigate patterns of association
+exponents.* functions.* and similarity. in bivariate data.
+Understand the connections Use functions to model Understand and apply the Investigate chance processes and
+between proportional relationships between Pythagorean Theorem. develop, use, and evaluate
+relationships, lines, and linear quantities.* probability models.
+equations.*
+Analyze and solve linear Solve real-world and
+equations, inequalities, and mathematical problems
+pairs of simultaneous linear involving volume of
+equations.* cylinders, cones, and
+spheres.
+*Reported cluster
+Updated 1-29-2025 7
+
+Arizona Mathematics Standards 8th Grade
+The Number System (NS)
+Understand That There are Irrational Numbers and Approximate Them Using Rational Numbers
+Know that numbers that are not rational are called irrational. Understand informally that every number has a decimal
+8.NS.A.1 expansion. Know that numbers whose decimal expansions do not terminate in zeros or in a repeating sequence of fixed
+digits are called irrational.
+Use rational approximations of irrational numbers to compare the size of irrational numbers. Locate them approximately on
+8.NS.A.2
+a number line diagram, and estimate their values.
+Understand that given any two distinct rational numbers, a < b, there exist a rational number c and an irrational number d
+8.NS.A.3 such that a < c < b and a < d < b. Given any two distinct irrational numbers, a < b, there exist a rational number c and an
+irrational number d such that a < c < b and a < d < b.
+Expressions and Equations (EE)
+Work with Radicals and Integer Exponents
+*8.EE.A.1 Understand and apply the properties of integer exponents to generate equivalent numerical expressions.
+Use square root and cube root symbols to represent solutions to equations of the form x2 = p and x3= p, where p is a
+positive rational number. Know that is irrational.
+8.EE.A.2
+a. Evaluate square roots of perfect squares less than or equal to 225.
+√2
+b. Evaluate cube roots of perfect cubes less than or equal to 1000.
+Use numbers expressed in the form of a single digit times an integer power of 10 to estimate very large or very small
+8.EE.A.3
+quantities, and express how many times larger or smaller one is than the other.
+Perform operations with numbers expressed in scientific notation including problems where both decimal and scientific
+8.EE.A.4 notation are used. Use scientific notation and choose units of appropriate size for measurements of very large or very
+small quantities.
+Updated 1-29-2025 8
+
+Arizona Mathematics Standards 8th Grade
+Understand the Connections Between Proportional Relationships, Lines, and Linear Equations
+Graph proportional relationships interpreting the unit rate as the slope of the graph. Compare two different proportional
+8.EE.B.5 relationships represented in different ways. For example, compare a distance-time graph to a distance-time equation to
+determine which of two moving objects has greater speed.
+Use similar triangles to explain why the slope m is the same between any two distinct points on a non-vertical line in the
+*8.EE.B.6 coordinate plane. Derive the equation y = mx for a line through the origin and the equation y = mx + b for a line
+intercepting the vertical axis at (0, b).
+Analyze and Solve Linear Equations, Inequalities, and Pairs of Simultaneous Linear Equations
+Fluently solve linear equations and inequalities in one variable.
+a. Give examples of linear equations in one variable with one solution, infinitely many solutions, or no solution. Show
+which of these possibilities is the case by successively transforming the given equation into simpler forms, until an
+*8.EE.C.7
+equivalent equation of the form x = a, a = a, or a = b results (where a and b are different numbers).
+b. Solve linear equations and inequalities with rational number coefficients, including solutions that require expanding
+expressions using the distributive property and collecting like terms.
+Analyze and solve pairs of simultaneous linear equations.
+a. Understand that solutions to a system of two linear equations in two variables correspond to points of intersection of
+their graphs, because points of intersection satisfy both equations simultaneously.
+*8.EE.C.8
+b. Solve systems of two linear equations in two variables algebraically, and estimate solutions by graphing the
+equations including cases of no solution and infinite number of solutions. Solve simple cases by inspection.
+c. Solve mathematical problems and problems in real-world context leading to two linear equations in two variables.
+Updated 1-29-2025 9
+
+Arizona Mathematics Standards 8th Grade
+Function (F)
+Define, Evaluate, and Compare Functions
+Understand that a function is a rule that assigns to each input exactly one output. The graph of a function is the set of
+*8.F.A.1
+ordered pairs consisting of an input and the corresponding output. (Function notation is not required in Grade 8.)
+Compare properties of two functions each represented in a different way (algebraically, graphically, numerically in tables,
+8.F.A.2 or by verbal descriptions). For example, given a linear function represented by a table of values and a linear function
+represented by an algebraic expression, determine which function has the greater rate of change.
+Interpret the equation y = mx + b as defining a linear function whose graph is a straight line; give examples of functions
+*8.F.A.3 that are not linear. For example, the function A = s2 giving the area of a square as a function of its side length in not linear
+because its graph contains the points (1,1), (2,4), and (3,9) which are not on a straight line.
+Use Functions to Model Relationships Between Quantities
+Given a description of a situation, generate a function to model a linear relationship between two quantities. Determine the
+rate of change and initial value of the function from a description of a relationship or from two
+*8.F.B.4 (x, y) values, including reading these from a table or a graph. Track how the values of the two quantities change together.
+Interpret the rate of change and initial value of a linear function in terms of the situation it models, its graph, or its table of
+values.
+Describe qualitatively the functional relationship between two quantities by analyzing a graph (e.g., where the function is
+*8.F.B.5 increasing or decreasing, linear or nonlinear). Sketch a graph that exhibits the qualitative features of a function that has
+been described verbally.
+Updated 1-29-2025 10
+
+Arizona Mathematics Standards 8th Grade
+Geometry (G)
+Understand Congruence and Similarity
+Verify experimentally the properties of rotations, reflections, and translations. Properties include: lines are taken to lines,
+8.G.A.1 line segments are taken to line segments of the same length, angles are taken to angles of the same measure, parallel
+lines are taken to parallel lines.
+Understand that a two-dimensional figure is congruent to another if one can be obtained from the other by a sequence of
+*8.G.A.2
+rotations, reflections, and translations; given two congruent figures, describe a sequence that demonstrates congruence.
+*8.G.A.3 Describe the effect of dilations, translations, rotations, and reflections on two-dimensional figures using coordinates.
+Understand that a two-dimensional figure is similar to another if, and only if, one can be obtained from the other by a
+*8.G.A.4 sequence of rotations, reflections, translations, and dilations; given two similar two-dimensional figures, describe a
+sequence that demonstrates similarity.
+Use informal arguments to establish facts about the angle sum and exterior angle of triangles, about the angles created
+when parallel lines are cut by a transversal, and the angle-angle criterion for similarity of triangles. For example, arrange
+8.G.A.5
+three copies of the same triangle so that the sum of the three angles appears to form a line, and give an argument in
+terms of transversals why this is so.
+Understand and Apply the Pythagorean Theorem
+8.G.B.6 Understand the Pythagorean Theorem and its converse.
+Apply the Pythagorean Theorem to determine unknown side lengths in right triangles in real-world context and
+8.G.B.7
+mathematical problems in two and three dimensions.
+8.G.B.8 Apply the Pythagorean Theorem to find the distance between two points in a coordinate system.
+Solve Real-World and Mathematical Problems Involving Volume of Cylinders, Cones, and Spheres
+Understand and use formulas for volumes of cones, cylinders and spheres and use them to solve real-world context and
+8.G.C.9
+mathematical problems.
+Updated 1-29-2025 11
+
+Arizona Mathematics Standards 8th Grade
+Statistics and Probability (SP)
+Investigate Patterns of Association in Bivariate Data
+Construct and interpret scatter plots for bivariate measurement data to investigate and describe patterns such as
+8.SP.A.1
+clustering, outliers, positive or negative association, linear association, and nonlinear association.
+Know that straight lines are widely used to model relationships between two quantitative variables. For scatter plots that
+8.SP.A.2 suggest a linear association, informally fit a straight line, and informally assess the model fit by judging the closeness of
+the data points to the line.
+Use the equation of a linear model to solve problems in the context of bivariate measurement data, interpreting the slope
+8.SP.A.3
+and intercept.
+Understand that patterns of association can also be seen in bivariate categorical data by displaying frequencies and
+relative frequencies in a two-way table. Construct and interpret a two-way table summarizing data on two categorical
+8.SP.A.4
+variables collected from the same subjects. Use relative frequencies calculated for rows or columns to describe possible
+association between the two variables.
+Investigate Chance Processes and Develop, Use, and Evaluate Probability Models.
+Find probabilities of compound events using organized lists, tables, tree diagrams, and simulation.
+a. Understand that the probability of a compound event is the fraction of outcomes in the sample space for which the
+compound event occurs.
+*8.SP.B.5 b. Represent sample spaces for compound events using organized lists, tables, tree diagrams and other methods.
+Identify the outcomes in the sample space which compose the event.
+c. Design and use a simulation to generate frequencies for compound events.
+Updated 1-29-2025 12
+
+Arizona Mathematics Standards 8th Grade
+Standards for Mathematical Practice
+Make sense of problems and persevere in solving them
+Mathematically proficient students explain to themselves the meaning of a problem, look for entry points to begin work on the
+problem, and plan and choose a solution pathway. While engaging in productive struggle to solve a problem, they continually
+ask themselves, “Does this make sense?" to monitor and evaluate their progress and change course if necessary. Once
+8.MP.1
+they have a solution, they look back at the problem to determine if the solution is reasonable and accurate. Mathematically
+proficient students check their solutions to problems using different methods, approaches, or representations. They also
+compare and understand different representations of problems and different solution pathways, both their own and those of
+others.
+Reason abstractly and quantitatively
+Mathematically proficient students make sense of quantities and their relationships in problem situations. Students can
+contextualize and decontextualize problems involving quantitative relationships. They contextualize quantities, operations,
+8.MP.2 and expressions by describing a corresponding situation. They decontextualize a situation by representing it symbolically. As
+they manipulate the symbols, they can pause as needed to access the meaning of the numbers, the units, and the
+operations that the symbols represent. Mathematically proficient students know and flexibly use different properties of
+operations, numbers, and geometric objects and when appropriate they interpret their solution in terms of the context.
+Construct viable arguments and critique the reasoning of others
+Mathematically proficient students construct mathematical arguments (explain the reasoning underlying a strategy, solution,
+or conjecture) using concrete, pictorial, or symbolic referents. Arguments may also rely on definitions, assumptions,
+previously established results, properties, or structures. Mathematically proficient students make conjectures and build a
+logical progression of statements to explore the truth of their conjectures. They are able to analyze situations by breaking
+8.MP.3 them into cases, and can recognize and use counterexamples. Mathematically proficient students present their arguments in
+the form of representations, actions on those representations, and explanations in words (oral or written). Students critique
+others by affirming or questioning the reasoning of others. They can listen to or read the reasoning of others, decide whether
+it makes sense, ask questions to clarify or improve the reasoning, and validate or build on it. Mathematically proficient
+students can communicate their arguments, compare them to others, and reconsider their own arguments in response to the
+critiques of others.
+Model with mathematics
+Mathematically proficient students apply the mathematics they know to solve problems arising in everyday life, society, and
+the workplace. When given a problem in a contextual situation, they identify the mathematical elements of a situation and
+8.MP.4 create a mathematical model that represents those mathematical elements and the relationships among them.
+Mathematically proficient students use their model to analyze the relationships and draw conclusions. They interpret their
+mathematical results in the context of the situation and reflect on whether the results make sense, possibly improving the
+model if it has not served its purpose.
+Updated 1-29-2025 13
+
+Arizona Mathematics Standards 8th Grade
+Use appropriate tools strategically
+Mathematically proficient students consider available tools when solving a mathematical problem. They choose tools that are
+relevant and useful to the problem at hand. Proficient students are sufficiently familiar with tools appropriate for their grade or
+8.MP.5
+course to make sound decisions about when each of these tools might be helpful; recognizing both the insight to be gained
+and their limitations. Students deepen their understanding of mathematical concepts when using tools to visualize, explore,
+compare, communicate, make and test predictions, and understand the thinking of others.
+Attend to precision
+Mathematically proficient students clearly communicate to others using appropriate mathematical terminology, and craft
+explanations that convey their reasoning. When making mathematical arguments about a solution, strategy, or conjecture,
+8.MP.6
+they describe mathematical relationships and connect their words clearly to their representations. Mathematically proficient
+students understand meanings of symbols used in mathematics, calculate accurately and efficiently, label quantities
+appropriately, and record their work clearly and concisely.
+Look for and make use of structure
+Mathematically proficient students use structure and patterns to assist in making connections among mathematical ideas or
+concepts when making sense of mathematics. Students recognize and apply general mathematical rules to complex
+8.MP.7
+situations. They are able to compose and decompose mathematical ideas and notations into familiar relationships.
+Mathematically proficient students manage their own progress, stepping back for an overview and shifting perspective when
+needed.
+Look for and express regularity in repeated reasoning
+Mathematically proficient students look for and describe regularities as they solve multiple related problems. They formulate
+8.MP.8 conjectures about what they notice and communicate observations with precision. While solving problems, students maintain
+oversight of the process and continually evaluate the reasonableness of their results. This informs and strengthens their
+understanding of the structure of mathematics which leads to fluency.
+Updated 1-29-2025 14
