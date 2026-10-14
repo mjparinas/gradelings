@@ -221,4 +221,17 @@ export const lessons: GradeLessons = {
     ["38 is about 40. 41 is about 40.", "40 + 40 = 80."],
     "about 80",
   ),
+  // Texas
+  "math/tx-g2-fair-parts": lesson(
+    ["Equal parts are the same size. 2 equal parts are halves, 4 are fourths, 8 are eighths.", "The more equal parts a whole has, the smaller each part is.", "One eighth is smaller than one fourth, and one fourth is smaller than one half."],
+    "A pizza is cut into 8 equal slices. What is one slice called?",
+    ["There are 8 equal parts.", "Each part is one eighth."],
+    "one eighth",
+  ),
+  "math/tx-g2-save-and-borrow": lesson(
+    ["Saving a little each week adds up to a larger amount over time.", "A deposit puts money into a bank account. A withdrawal takes money out.", "Responsible borrowers pay back what they borrow, on time."],
+    "Ava saves $3 every week. How much has she saved after 5 weeks?",
+    ["Add $3 five times: 3, 6, 9, 12, 15."],
+    "$15",
+  ),
 };

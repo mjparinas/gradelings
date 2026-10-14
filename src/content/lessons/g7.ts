@@ -224,4 +224,23 @@ export const lessons: GradeLessons = {
     ["7 × 5 = 35."],
     "35 m",
   ),
+  // Texas
+  "math/wa-g6-nets": lesson(
+    ["A net is a solid unfolded flat.", "Find the area of every face in the net.", "Add them all for the total surface area. Leave out the bases for the lateral surface area."],
+    "A box is 2 cm by 3 cm by 4 cm. What is its surface area?",
+    ["Two 2 × 3 faces: 12.", "Two 2 × 4 faces: 16.", "Two 3 × 4 faces: 24.", "12 + 16 + 24 = 52."],
+    "52 cm²",
+  ),
+  "math/tx-g7-tips-and-discounts": lesson(
+    ["To find a percent of an amount, change the percent to a decimal and multiply.", "A tip is added to a bill; a discount is taken off the price.", "Simple interest = principal × rate × time."],
+    "A $40 sweater is 25% off. What is the sale price?",
+    ["25% of 40 = 0.25 × 40 = 10.", "40 − 10 = 30."],
+    "$30",
+  ),
+  "math/tx-g7-budget-and-interest": lesson(
+    ["Sales tax is a percent added to a price; income tax is a percent taken from wages.", "Net worth = assets (what you own) − liabilities (what you owe).", "Compound interest earns interest on past interest, so it grows faster than simple interest."],
+    "Assets are $9,000 and liabilities are $3,500. What is the net worth?",
+    ["Net worth = assets − liabilities.", "9,000 − 3,500 = 5,500."],
+    "$5,500",
+  ),
 };
