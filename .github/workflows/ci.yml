@@ -51,7 +51,7 @@ jobs:
       # Same tests as `npm test`, plus line coverage written to the run's summary page. It has no
       # threshold yet; e2e scripts are not counted.
       - run: npm run test:coverage
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v7
         with:
           name: unit-coverage
           path: coverage/summary.md
@@ -65,7 +65,7 @@ jobs:
     permissions:
       pull-requests: write
     steps:
-      - uses: actions/download-artifact@v7
+      - uses: actions/download-artifact@v8
         with:
           name: unit-coverage
           path: coverage
@@ -116,7 +116,7 @@ jobs:
       - run: npm run build
       # One tar file keeps the folder layout exactly as built. The Piper files go too, for the offline test.
       - run: tar -cf next-build.tar --exclude=.next/cache .next public/piper
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v7
         with:
           name: next-build
           path: next-build.tar
@@ -148,13 +148,13 @@ jobs:
       - uses: ./.github/actions/setup
         with:
           flavor: playwright
-      - uses: actions/download-artifact@v7
+      - uses: actions/download-artifact@v8
         with:
           name: next-build
       - run: tar -xf next-build.tar
       - name: Run
         run: scripts/ci-with-server.sh node scripts/e2e-devices.mjs http://localhost:3000 e2e-shots/devices --shard ${{ matrix.shard }}
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: screenshots-devices-${{ strategy.job-index }}
@@ -186,7 +186,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: ./.github/actions/setup
-      - uses: actions/download-artifact@v7
+      - uses: actions/download-artifact@v8
         with:
           name: next-build
       - run: tar -xf next-build.tar
@@ -200,7 +200,7 @@ jobs:
           else
             ${{ matrix.run }}
           fi
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: screenshots-${{ strategy.job-index }}
