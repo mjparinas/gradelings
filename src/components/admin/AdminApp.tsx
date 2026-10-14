@@ -998,6 +998,18 @@ function linkTarget(): { tab: Tab; family: string | null } {
   return { tab: family ? "Users" : (tab ?? "Overview"), family };
 }
 
+/** The address for a tab (or a family's page), so Back and Forward move between tabs and a reload stays put. */
+function tabHref(tab: Tab, family: string | null = null): string {
+  const q = family ? `family=${encodeURIComponent(family)}` : tab === "Overview" ? "" : `tab=${encodeURIComponent(tab)}`;
+  return `${window.location.pathname}${q ? `?${q}` : ""}`;
+}
+
+/** Adds a history entry for a tab, unless the address already shows it. */
+function pushTab(tab: Tab, family: string | null = null) {
+  const href = tabHref(tab, family);
+  if (href !== `${window.location.pathname}${window.location.search}`) window.history.pushState(null, "", href);
+}
+
 /** The count on a tab ("To Do 3 waiting"), left out when nothing waits. */
 function TabCount({ n }: { n: number | null }) {
   if (!n) return null;
@@ -1046,19 +1058,35 @@ function Panel() {
     call<{ flags: FlagRow[] }>("/api/admin/flags/").then((r) => setFlags(r.flags), () => setFlags([]));
   }, []);
   useEffect(loadFlags, [loadFlags]);
+  // Back and Forward: show the tab (or family) the address names.
+  useEffect(() => {
+    const onPop = () => {
+      const target = linkTarget();
+      setInboxId(null);
+      setFamily(target.family);
+      setTab(target.tab);
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
+  /** Switches tab and records it in the browser history. */
+  const go = (t: Tab, id: string | null = null) => {
+    pushTab(t, id);
+    setTab(t);
+  };
   const openFamily = (id: string) => {
     setFamily(id);
-    setTab("Users");
+    go("Users", id);
   };
   const body: Record<Tab, ReactNode> = {
     Overview: <Overview onOpenFamily={openFamily} />,
     "To Do": (
       <Queue
         onOpenFamily={openFamily}
-        onReports={() => setTab("Reports")}
+        onReports={() => go("Reports")}
         onInbox={(id) => {
           setInboxId(id);
-          setTab("Inbox");
+          go("Inbox");
         }}
         onCount={setTodo}
       />
@@ -1068,7 +1096,7 @@ function Panel() {
       <Funnel
         onEmailGroup={(g) => {
           setSegment(g);
-          setTab("Emails");
+          go("Emails");
         }}
       />
     ),
@@ -1101,7 +1129,7 @@ function Panel() {
             onClick={() => {
               setFamily(null);
               setInboxId(null);
-              setTab(t);
+              go(t);
             }}
             className={`${btn} ${tab === t ? "bg-[#0f172a] text-white" : "border border-line bg-white"}`}
           >

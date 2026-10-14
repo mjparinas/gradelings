@@ -69,6 +69,8 @@ const sent = (url: string, method: string) => mocks.call.mock.calls.find(([u, m]
 
 beforeEach(() => {
   mocks.call.mockReset();
+  // Tab clicks add history entries, so each test starts on the panel's own address.
+  window.history.replaceState(null, "", "/admin/");
 });
 
 describe("AdminApp", () => {

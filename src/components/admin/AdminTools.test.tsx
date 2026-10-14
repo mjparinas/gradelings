@@ -29,6 +29,8 @@ const DAY = 86_400_000;
 
 beforeEach(() => {
   mocks.call.mockReset();
+  // Tab clicks add history entries, so each test starts on the panel's own address.
+  window.history.replaceState(null, "", "/admin/");
 });
 
 describe("FamilyBilling", () => {
