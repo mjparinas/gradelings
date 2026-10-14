@@ -234,4 +234,18 @@ export const lessons: GradeLessons = {
     ["Add $3 five times: 3, 6, 9, 12, 15."],
     "$15",
   ),
+  // California
+  "math/ca-g2-add-four": lesson(
+    ["Add all the tens.", "Add all the ones.", "Put the tens and ones together. This works because each number is its tens plus its ones."],
+    "What is 23 + 14 + 31 + 12?",
+    ["Tens: 20 + 10 + 30 + 10 = 70.", "Ones: 3 + 4 + 1 + 2 = 10.", "70 + 10 = 80."],
+    "80",
+  ),
+  "math/ca-g2-length-lines": lesson(
+    ["The same length gives a bigger number in a smaller unit: 2 feet is 24 inches.", "On a number line, adding is a jump to the right and subtracting is a jump to the left.", "A line plot puts one X above the number for each measurement."],
+    "Start at 0. Jump 25, then jump 13 more. Where do you land?",
+    ["0 + 25 = 25.", "25 + 13 = 38."],
+    "38",
+    { type: "numberLine", min: 0, max: 50, step: 5, labelEvery: 10, jumps: [{ from: 0, to: 25 }, { from: 25, to: 38 }] },
+  ),
 };

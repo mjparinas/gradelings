@@ -1,8 +1,10 @@
 // Writes each prerendered page's Content-Security-Policy <meta> tag. Shared by the post-build
-// script and the build adapter (scripts/csp-adapter.mjs). See src/lib/csp.mjs.
+// script and the build adapter (scripts/csp-adapter.mjs). See src/lib/csp.mjs. It also sets each
+// page's <html lang> from its Open Graph locale (src/lib/pageLang.mjs), so US pages say en-US.
 import fs from "node:fs";
 import path from "node:path";
 import { addPolicyMeta } from "../src/lib/csp.mjs";
+import { setPageLang } from "../src/lib/pageLang.mjs";
 
 function* htmlFiles(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -21,7 +23,7 @@ export function writePolicyTags(distDir = ".next") {
   if (!fs.existsSync(server)) return 0;
   let count = 0;
   for (const file of htmlFiles(server)) {
-    fs.writeFileSync(file, addPolicyMeta(fs.readFileSync(file, "utf8")));
+    fs.writeFileSync(file, addPolicyMeta(setPageLang(fs.readFileSync(file, "utf8"))));
     count++;
   }
   return count;
