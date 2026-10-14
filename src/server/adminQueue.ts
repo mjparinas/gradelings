@@ -1,6 +1,6 @@
 import "server-only";
 import { query, run } from "./db";
-import { inboxConfigured, listInbox } from "./inbox";
+import { inboxConfigured, isWaiting, listInbox } from "./inbox";
 import { CONTACT_EMAIL, missingSocialPlatforms } from "@/lib/brand";
 
 // The admin panel's to-do list: families worth acting on now, each with the action that fits. It is worked out
@@ -111,12 +111,12 @@ export async function queueItems(now = Date.now()): Promise<QueueItem[]> {
       action: { type: "task" },
     });
 
-  // Mail people sent us in the last 2 weeks that nobody has answered or set aside. Resend being unreachable
+  // Mail people sent us in the last 2 weeks that nobody has answered, set aside or archived. Resend being unreachable
   // never stops the rest of the list.
   if (inboxConfigured()) {
     const inbox = await listInbox({ limit: 50 }).catch(() => ({ items: [] }));
     for (const m of inbox.items) {
-      if (m.handledAt || m.repliedAt || m.receivedAt < now - 14 * DAY) continue;
+      if (!isWaiting(m) || m.receivedAt < now - 14 * DAY) continue;
       items.unshift({ key: `inbox:${m.id}`, kind: "inbox", title: QUEUE_KINDS.inbox, detail: `“${m.subject}” from ${m.from}`, familyId: m.familyId ?? undefined, email: m.fromEmail, at: m.receivedAt, action: { type: "inbox", id: m.id } });
     }
   }

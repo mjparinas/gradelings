@@ -488,6 +488,7 @@ interface InboxItem {
   familyId: string | null;
   handledAt: number | null;
   repliedAt: number | null;
+  archivedAt?: number | null;
 }
 interface InboxMessage extends InboxItem {
   text: string;
@@ -495,14 +496,17 @@ interface InboxMessage extends InboxItem {
   attachmentNames: string[];
 }
 
-/** Not yet answered or marked as done. The server counts the same way (`isWaiting` in `src/server/inbox.ts`). */
-const waiting = (m: InboxItem) => !m.handledAt && !m.repliedAt;
+/** Not yet answered, marked as done or archived. The server counts the same way (`isWaiting` in `src/server/inbox.ts`). */
+const waiting = (m: InboxItem) => !m.handledAt && !m.repliedAt && !m.archivedAt;
 
 /** `onWaiting` gets how many listed messages are waiting each time the list loads, so the tab's count stays current. */
 export function Inbox({ initialId = null, onOpenFamily, onWaiting }: { initialId?: string | null; onOpenFamily: (id: string) => void; onWaiting?: (n: number) => void }) {
   const [list, setList] = useState<{ configured: boolean; items: InboxItem[]; hasMore: boolean } | null>(null);
   const [err, setErr] = useState("");
   const [openId, setOpenId] = useState<string | null>(initialId);
+  // Archived mail leaves the Inbox list and shows under Archived, where it can be moved back.
+  const [archived, setArchived] = useState(false);
+  const [busy, setBusy] = useState<string | null>(null);
   const load = useCallback(() => {
     call<NonNullable<typeof list>>("/api/admin/inbox/").then(
       (r) => {
@@ -513,7 +517,21 @@ export function Inbox({ initialId = null, onOpenFamily, onWaiting }: { initialId
     );
   }, [onWaiting]);
   useEffect(load, [load]);
+  const archive = async (id: string, value: boolean) => {
+    setBusy(id);
+    setErr("");
+    try {
+      await call("/api/admin/inbox/", "POST", { id, action: "archive", archived: value });
+      load();
+    } catch (e) {
+      setErr((e as Error).message);
+    } finally {
+      setBusy(null);
+    }
+  };
   if (openId) return <InboxRead id={openId} onBack={() => (setOpenId(null), load())} onOpenFamily={onOpenFamily} />;
+  const shown = list?.items.filter((m) => Boolean(m.archivedAt) === archived) ?? [];
+  const archivedCount = list?.items.filter((m) => m.archivedAt).length ?? 0;
   return (
     <section aria-labelledby="inbox-h" className="flex flex-col gap-3">
       <h2 id="inbox-h" className="text-2xl font-bold">
@@ -522,19 +540,29 @@ export function Inbox({ initialId = null, onOpenFamily, onWaiting }: { initialId
       <p className="max-w-3xl text-sm text-ink-soft">Mail people send to your Resend receiving address. Messages stay in Resend; they&apos;re shown here as plain text.</p>
       <Notice err={err} />
       <SavedRepliesEditor />
+      {list?.configured && (
+        <div className="flex flex-wrap gap-2" role="group" aria-label="Show">
+          <button type="button" aria-pressed={!archived} className={`${btn} ${!archived ? "bg-[#0f172a] text-white" : "border border-line bg-white"}`} onClick={() => setArchived(false)}>
+            Inbox
+          </button>
+          <button type="button" aria-pressed={archived} className={`${btn} ${archived ? "bg-[#0f172a] text-white" : "border border-line bg-white"}`} onClick={() => setArchived(true)}>
+            Archived{archivedCount ? ` (${archivedCount})` : ""}
+          </button>
+        </div>
+      )}
       {!list ? (
         !err && <LoadingRows rows={6} className="" />
       ) : !list.configured ? (
         <p className={`${card} font-read`}>Email isn&apos;t set up yet (RESEND_API_KEY and EMAIL_FROM).</p>
-      ) : list.items.length === 0 ? (
-        <p className={`${card} font-read`}>No mail yet.</p>
+      ) : shown.length === 0 ? (
+        <p className={`${card} font-read`}>{archived ? "Nothing archived." : list.items.length ? "Nothing waiting here. Archived mail is under Archived." : "No mail yet."}</p>
       ) : (
         <ul className="divide-y divide-line rounded-2xl border border-line bg-white">
-          {list.items.map((m) => (
-            <li key={m.id}>
-              <button type="button" className="flex min-h-11 w-full flex-wrap items-baseline justify-between gap-2 px-4 py-3 text-left" onClick={() => setOpenId(m.id)}>
+          {shown.map((m) => (
+            <li key={m.id} className="flex items-center gap-2 pr-3">
+              <button type="button" className="flex min-h-11 min-w-0 flex-1 flex-wrap items-baseline justify-between gap-2 px-4 py-3 text-left" onClick={() => setOpenId(m.id)}>
                 <span className="min-w-0">
-                  <span className={`block break-words ${m.handledAt || m.repliedAt ? "font-normal" : "font-bold"}`}>{m.subject}</span>
+                  <span className={`block break-words ${waiting(m) ? "font-bold" : "font-normal"}`}>{m.subject}</span>
                   <span className="block text-sm break-all text-ink-soft">
                     {m.from}
                     {m.familyId ? " · has an account" : ""}
@@ -542,9 +570,12 @@ export function Inbox({ initialId = null, onOpenFamily, onWaiting }: { initialId
                   </span>
                 </span>
                 <span className="flex items-center gap-2 text-sm">
-                  {m.repliedAt ? <Badge tone="good">Answered</Badge> : m.handledAt ? <Badge>Done</Badge> : <Badge tone="bad">Waiting</Badge>}
+                  {m.repliedAt ? <Badge tone="good">Answered</Badge> : m.handledAt ? <Badge>Done</Badge> : m.archivedAt ? null : <Badge tone="bad">Waiting</Badge>}
                   {when(m.receivedAt)}
                 </span>
+              </button>
+              <button type="button" className={`${quiet} shrink-0 text-sm`} disabled={busy === m.id} aria-label={`${archived ? "Move to Inbox" : "Archive"}: ${m.subject}`} onClick={() => void archive(m.id, !archived)}>
+                {archived ? "Move to Inbox" : "Archive"}
               </button>
             </li>
           ))}
@@ -664,6 +695,17 @@ function InboxRead({ id, onBack, onOpenFamily }: { id: string; onBack: () => voi
               )}
               <button type="button" className={quiet} disabled={busy} onClick={() => void post({ action: "handled", handled: !m.handledAt }, m.handledAt ? "Moved back to waiting." : "Marked as done.")}>
                 {m.handledAt ? "Mark as Waiting" : "Mark as Done"}
+              </button>
+              <button
+                type="button"
+                className={quiet}
+                disabled={busy}
+                onClick={async () => {
+                  const wasArchived = Boolean(m.archivedAt);
+                  if ((await post({ action: "archive", archived: !wasArchived }, wasArchived ? "Moved back to the Inbox." : "Archived.")) && !wasArchived) onBack();
+                }}
+              >
+                {m.archivedAt ? "Move to Inbox" : "Archive"}
               </button>
             </div>
             <Notice {...msg} />
