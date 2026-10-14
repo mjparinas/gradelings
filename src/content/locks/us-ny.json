@@ -13,7 +13,11 @@
       "blend-a-word text=cbd1fec9bd std=2f38ad1325 q=16d2ff7d7d",
       "talk-and-listen-ab text=10b5504ce6 std=115bc4e35e q=e684468815",
       "mb-k-word-parts-and-meanings text=c5c68fc4aa std=41ad861435 q=a2785c140f",
-      "wa-gk-ask-and-find-out text=e54fbf05c6 std=5a03edc786 q=15f5ec6b8a"
+      "wa-gk-ask-and-find-out text=e54fbf05c6 std=5a03edc786 q=15f5ec6b8a",
+      "mb-k-before-during-after-reading text=deba8d2afc std=b96a0d253c q=6fe892e903",
+      "mb-k-make-a-text text=d0384bd302 std=421fee4f13 q=405701db67",
+      "ny-gk-feelings-and-reasons text=faf70053d4 std=da548dae36 q=78d763fc1d",
+      "ny-gk-stories-and-facts text=6791aa4265 std=a33205e92f q=2e0a750746"
     ]
   },
   "k/math": {
@@ -30,7 +34,8 @@
       "mb-k-build-3d text=14abe64ae2 std=7bc0398ea9 q=f61c619fb3",
       "wa-k-count-to-100 text=b022222207 std=b4d6e7eea7 q=1e585c0398",
       "wa-k-sort-and-count text=110fe72592 std=cb74008356 q=086bb1c433",
-      "ny-k-coins text=eaa8b25d9b std=7f0560bc4b q=3c59df6338"
+      "ny-k-coins text=eaa8b25d9b std=7f0560bc4b q=3c59df6338",
+      "ny-k-build-shapes text=b015e573bc std=2951a49b76 q=458b49a85d"
     ]
   },
   "k/science": {
@@ -79,7 +84,13 @@
       "sentence-types text=7da1ec5863 std=6ad5e02738 q=f64d6d4696",
       "think-it-through text=4439427b10 std=1379778a9b q=9269d025f9",
       "wa-g1-messages-all-around text=6cc00c5702 std=47d51de8b8 q=014d6a633a",
-      "or-g1-story-or-facts text=d94a45fcaa std=6c9f8e5f16 q=0d877f59c4"
+      "or-g1-story-or-facts text=d94a45fcaa std=6c9f8e5f16 q=0d877f59c4",
+      "mb-g1-reading-smart text=df593de226 std=4f2184bb78 q=e1df14d5f1",
+      "mb-g1-true-and-viewpoints text=8e60e77b8f std=0226957297 q=d45033636a",
+      "mb-g1-writing-plan text=e2891ab623 std=7f47760570 q=661ae6a75e",
+      "ny-g1-feelings-and-reasons text=c835711d75 std=e49bd67d07 q=629d7e6176",
+      "ny-g1-word-clues text=60cde4a075 std=1a563b0095 q=93c27c7de5",
+      "ny-g1-respond-and-find-out text=8b6e13b51a std=50faadd8f2 q=7d7b7d2de0"
     ]
   },
   "1/math": {
@@ -99,11 +110,12 @@
       "wa-g1-clock text=b96fa08a4f std=930dab266e q=c6011dac8c",
       "wa-g1-tens-jumps text=d04b41b7ad std=d253bce371 q=96f4200b3c",
       "wa-g1-data text=279a79a140 std=d92cafe798 q=d6f3c42600",
+      "ny-g1-add-three text=f812a668c6 std=911127abb9 q=4410e65f81",
       "ny-g1-coins text=cbecfc2018 std=b80ccc6cb6 q=8041cca50b"
     ]
   },
   "1/science": {
-    "overview": "9f6b935369",
+    "overview": "73ef243561",
     "units": [
       "animal-survival text=5297bb7bd8 std=684da11bdd q=c33e9d03b4",
       "light-and-sound text=ebe73e722d std=0e83b23698 q=b8d50b2c1c",
@@ -111,7 +123,8 @@
       "wa-g1-parents-young text=80ac39ee22 std=a128a2d8fd q=0aefe1449b",
       "wa-g1-nature-ideas text=56327727ec std=7244c5115a q=7c42e833eb",
       "wa-g1-signals text=d6fcf93ded std=392c512396 q=63d260c263",
-      "wa-g1-plant-parts text=8344d02ebf std=540334bcbb q=147fc0ae0b"
+      "wa-g1-plant-parts text=8344d02ebf std=540334bcbb q=147fc0ae0b",
+      "ny-g1-test-designs text=d41af73c75 std=4500b718dd q=a4fec1f510"
     ]
   },
   "1/social": {
@@ -146,7 +159,12 @@
       "reading-detectives text=72bd001367 std=c7d2c66335 q=decd73a013",
       "text-features text=34a456267d std=6a3b218886 q=0e6e3d2f57",
       "mb-finding-information text=97e6f78b10 std=27826a70d7 q=95d8977d6e",
-      "wa-g2-media-detectives text=920a413391 std=97c9d65ff3 q=7844f5c974"
+      "wa-g2-media-detectives text=920a413391 std=97c9d65ff3 q=7844f5c974",
+      "mb-sight-words-and-phrasing text=22a982194f std=9cbf8f3090 q=a255bd6280",
+      "mb-planning-and-improving text=edd976f4fb std=fbb90c89a1 q=f27a511ba7",
+      "mb-listening-and-asking text=4449606fc1 std=9a1317364b q=d010e7e406",
+      "ny-g2-main-topic-and-reasons text=55dfb5d52a std=a56c4e705d q=0f318e9330",
+      "ny-g2-writing-craft text=2a603bbb77 std=bcd9b91ba9 q=f311ae77ff"
     ]
   },
   "2/math": {
@@ -167,7 +185,9 @@
       "wa-g2-inches-feet text=7b4c0db007 std=abbd0e1b30 q=a1644f171a",
       "wa-g2-arrays text=b868f221c0 std=ce3f19c5fc q=70d6e124dc",
       "wa-g2-add-1000 text=842b8739c0 std=e2867d24d4 q=629b08d48f",
-      "wa-g2-data text=b3e74dbcdd std=3e5705a36b q=26bb73cac0"
+      "wa-g2-data text=b3e74dbcdd std=3e5705a36b q=26bb73cac0",
+      "ny-g2-add-four text=b7756028a0 std=01fcd86ead q=8ce44557de",
+      "ny-g2-lengths text=9db02f7d19 std=b45fd70641 q=f88ef72206"
     ]
   },
   "2/science": {
@@ -219,15 +239,22 @@
       "text-patterns text=6134260e2c std=5d4c147164 q=2d33abb1d7",
       "mb-wonder-and-find-out text=7b711d9402 std=c1e7e30ccf q=aeacd646ab",
       "wa-g3-media-messages text=086c65205f std=3b55bb5195 q=feb4e64c34",
-      "ny-g3-genres text=69b0adf0a2 std=07ac0dae82 q=1cf415818c"
+      "devices-3 text=d2971e916a std=38f525b67b q=510abb9c40",
+      "mb-plan-your-writing text=c3afd30411 std=5bef00fe7e q=9114b5e749",
+      "mb-make-writing-better text=cb4ab3eb36 std=8ee536d8ec q=6a4c9b0c53",
+      "mb-listening-talking text=4647ad1e48 std=ad05571506 q=e6bc31ef1f",
+      "mb-media-and-design text=588f6a69b8 std=819c8f97dc q=501e9d40ff",
+      "ny-g3-genres text=69b0adf0a2 std=07ac0dae82 q=1cf415818c",
+      "ny-g3-pictures-and-perspectives text=c73acb1e0e std=fa9ab62c96 q=93c2564b7b",
+      "ny-g3-writing-craft text=627fe62a3a std=e6c07b00d7 q=5e1b54e61d"
     ]
   },
   "3/math": {
     "overview": "7b2c9dd1bd",
     "units": [
       "add-subtract-1000 text=abcc5b81ab std=89a57e2de2 q=ebf0b5c179",
-      "multiplication text=7016aa3933 std=2ecd9f2b56 q=5ae1f5ddc7",
-      "division text=bbe2ad47e7 std=a6602b49f4 q=aa74a94c19",
+      "multiplication text=7016aa3933 std=813741c5d0 q=5ae1f5ddc7",
+      "division text=bbe2ad47e7 std=48ea2c4a2d q=aa74a94c19",
       "fractions text=f6af4c5918 std=139afc0cd4 q=bec90a04e3",
       "patterns-and-equations text=38e948b1ed std=42031baafb q=32db6b6541",
       "measuring text=46348de0e3 std=2fd60a2b6f q=62d407b771",
@@ -239,7 +266,8 @@
       "wa-g3-times-tens text=07c0951092 std=8ca480800e q=062d38da85",
       "wa-g3-two-step text=7b9287746b std=7b6e500895 q=2025f14040",
       "wa-g3-inch-ruler text=12e87ec55f std=5bb2574147 q=7480c4fd90",
-      "wa-g3-scaled-graphs text=1d69d1621c std=52ccebc6f7 q=01f5ae2e8a"
+      "wa-g3-scaled-graphs text=1d69d1621c std=52ccebc6f7 q=01f5ae2e8a",
+      "ny-g3-equal-areas text=2742813c41 std=d2e48c3d13 q=7098c7f49e"
     ]
   },
   "3/science": {
@@ -251,7 +279,7 @@
       "mb-speed-and-motion text=7eacd13f39 std=898cddc8b4 q=44a70ab3dc",
       "wa-g3-traits text=0904620b41 std=307ed71aef q=7f51ce104b",
       "wa-g3-survival text=b5f469263d std=23285f6805 q=b593b45148",
-      "wa-g3-hazards text=4c436a3589 std=a39e680011 q=b58e997d4c",
+      "wa-g3-hazards text=4c436a3589 std=9451ce2079 q=b58e997d4c",
       "or-g3-magnet-design text=f300affad7 std=540bf4a56d q=b0eac72564",
       "ny-g3-fossils text=e2966af7ad std=d7890df2f1 q=b78a4fddb1",
       "ny-g3-weather-climate text=999fb27c84 std=aa8c088b23 q=736ad793e5"
@@ -272,9 +300,9 @@
   "4/language": {
     "overview": "d58acc53a4",
     "units": [
-      "reading-detectives text=22249540bd std=bd71370204 q=5788d5ba88",
+      "reading-detectives text=22249540bd std=92852fc78a q=5788d5ba88",
       "text-features text=b3419e5a9c std=bbd2530961 q=a6e3f6bea6",
-      "figurative-language text=ef351cb27a std=e97552bbab q=43c2a4606f",
+      "figurative-language text=ef351cb27a std=e36754d572 q=43c2a4606f",
       "point-of-view text=bd4222f409 std=dc6a8f7734 q=c401cf50e0",
       "parts-of-speech text=2f7eb2016b std=901e9c8e51 q=aef8a9a24b",
       "super-sentences text=d85fafbe40 std=670501d16e q=cee1adb645",
@@ -285,7 +313,13 @@
       "wa-g4-media-and-sources text=e676651c47 std=afd6bb9a9b q=934ad941b1",
       "wa-g4-spelling-rules text=1c52843d89 std=36db99918f q=aa8d1f716c",
       "or-g4-firsthand-secondhand text=0f6ba3377c std=d1bc1a57c9 q=e6ba54d512",
-      "ny-g4-poems-and-plays text=49230f2eb5 std=13637b3bd5 q=280ca5b616"
+      "text-features-4 text=991da8ee9e std=b94d2e6473 q=0ae1d5b2a7",
+      "listening-speaking-ab text=1fb4adf927 std=d38076ca9f q=3d975738f2",
+      "mb-talk-together text=b95b15bb99 std=bdd033d785 q=6e3dad325f",
+      "mb-revise-writing text=d619ebcf1f std=f237a15a50 q=3b5901d9fd",
+      "ny-g4-poems-and-plays text=49230f2eb5 std=13637b3bd5 q=280ca5b616",
+      "ny-g4-argument-and-evidence text=30bf88bc64 std=32bee059fc q=afd17b392a",
+      "ny-g4-genres-and-connections text=771a1d32b5 std=bae32a46a3 q=4d20589c10"
     ]
   },
   "4/math": {
@@ -305,11 +339,13 @@
       "primes-composites-ab text=b4e1b26250 std=cd55dac4cf q=e52f588c0f",
       "wa-g4-customary text=634a43f8dd std=5c57bc102d q=41050250e3",
       "wa-g4-line-plots text=ec0f6b9a41 std=62f8b84272 q=87786a4f46",
-      "wa-g4-times-as-many text=417e0833be std=84e1ad07a8 q=42781d57e4"
+      "wa-g4-times-as-many text=417e0833be std=84e1ad07a8 q=42781d57e4",
+      "ny-g4-angle-measure text=cc8815a046 std=9b759485a1 q=44245632ec",
+      "ny-g4-tenths-hundredths text=1d1ec0adee std=ab13c0c2f9 q=4f1734e8d7"
     ]
   },
   "4/science": {
-    "overview": "014460505e",
+    "overview": "fe382e6a9d",
     "units": [
       "sense-and-respond text=53970d4675 std=4a571560fb q=3ae7716502",
       "light-4 text=8f9de3a627 std=bbeafcc592 q=d397d48c7f",
@@ -320,7 +356,8 @@
       "wa-g4-waves-info text=c9131254d2 std=adabe41cf5 q=50d5b6604f",
       "ny-g4-rocks-erosion text=ec9a37a118 std=a8b6764ecd q=1fa4725bab",
       "ny-g4-earth-hazards text=8989897196 std=dd73fd2072 q=3b016b05c3",
-      "ny-g4-energy-resources text=ccb513849d std=66ea9f37b9 q=4c4cdd1d56"
+      "ny-g4-energy-resources text=ccb513849d std=66ea9f37b9 q=4c4cdd1d56",
+      "ny-g4-engineering-design text=6d13870de5 std=58122d8652 q=44324f9a6b"
     ]
   },
   "4/social": {
@@ -342,16 +379,22 @@
     "overview": "708bc44c6e",
     "units": [
       "plot-and-conflict text=410eb2d942 std=67a6ec454e q=08f95375b8",
-      "figurative-language text=aee2d96357 std=c5acdbd29e q=5d50f18ae7",
+      "figurative-language text=aee2d96357 std=6de837495e q=5d50f18ae7",
       "purpose-and-structure text=82e3846b69 std=c41c9ba6a2 q=b07dca097e",
-      "context-clues text=d9f4558094 std=e77eec3746 q=2eb1ac232b",
+      "context-clues text=d9f4558094 std=dac7dafee7 q=2eb1ac232b",
       "word-roots text=c66b130324 std=bb4c7ad474 q=09a2072023",
       "complex-sentences text=2b622b0d65 std=169196a61a q=541e2d5520",
       "punctuation-power text=b3262fa8f1 std=c9bf3520ba q=c61867de33",
       "media-smarts text=4e1731c9e6 std=663756806b q=943a38fda8",
       "mb-multimodal-texts-5 text=a49371fedc std=bc9dbb897f q=b3c7f7225b",
       "wa-g5-research-ready text=ffa4f33193 std=0b431bed24 q=e9eb98ac26",
-      "wa-g5-spelling-smarts text=770d4a65f9 std=1a9b155d04 q=2666501efd"
+      "wa-g5-spelling-smarts text=770d4a65f9 std=1a9b155d04 q=2666501efd",
+      "writing-audience-ab text=db64e79aa9 std=5d86f89c5c q=6ba1091dbc",
+      "group-talk-ab text=113332a581 std=383865d7b2 q=623518f5ee",
+      "mb-read-with-purpose-5 text=bd048d2f7e std=256a9988d1 q=cce728613f",
+      "mb-talk-and-listen-5 text=f2bccb3901 std=9b786ccd33 q=e5f59e78a6",
+      "ny-g5-read-closely text=565f437629 std=f7cb7d4d2a q=1404443733",
+      "ny-g5-writing-craft text=9bb35d4f29 std=79ece98ce9 q=796b75da7c"
     ]
   },
   "5/math": {
@@ -368,9 +411,10 @@
       "wa-g5-conversions text=88f9478a3b std=f4ac00c08a q=93c01b2ebc",
       "wa-g5-expressions text=f8c1c787f7 std=aea791c165 q=c5649c8235",
       "wa-g5-coordinates text=1aa95047d3 std=efc73b942b q=d163d8de21",
-      "wa-g5-fraction-multiply text=abe32d522c std=7e94e4f7fc q=6bb8746fbb",
+      "wa-g5-fraction-multiply text=abe32d522c std=6cada15f2a q=6bb8746fbb",
       "wa-g5-add-unlike text=d91aaa636d std=dee58da487 q=0e37f49389",
-      "wa-g5-volume text=499dc41e93 std=b411324ca1 q=f26aa622a4"
+      "wa-g5-volume text=499dc41e93 std=b411324ca1 q=f26aa622a4",
+      "ny-g5-fraction-line-plots text=c937d14929 std=d4274da508 q=83591b2415"
     ]
   },
   "5/science": {
@@ -411,18 +455,22 @@
     "overview": "3486138c22",
     "units": [
       "point-of-view text=bed21670b4 std=24e5347836 q=e32473aa03",
-      "connotation-tone text=559c5aad17 std=d273e7c583 q=220849e9fa",
+      "connotation-tone text=559c5aad17 std=41d4b10838 q=220849e9fa",
       "persuasive-writing text=534432838f std=e6a0825708 q=247878bf5e",
       "agreement text=acd934799a std=8d0cd0e04d q=fcb9f1ba72",
       "sentence-repair text=589622054d std=e916f6623b q=2784e88c73",
       "commas-clauses text=133770eba0 std=ab07dbcb64 q=afd3a46d44",
-      "roots-analogies text=4dd74c075c std=d60551c7a5 q=01e03fc8c3",
+      "roots-analogies text=4dd74c075c std=286e50674c q=01e03fc8c3",
       "punctuation-6 text=342647500c std=41688900a2 q=e4acd9743f",
       "text-forms-6 text=191611b7cb std=01203563e5 q=68961ed57a",
       "wa-g6-check-the-source text=e7549c1af0 std=d916b20fda q=bc0ee29eac",
       "wa-g6-media-techniques text=f9b9abae8d std=a78565c45e q=a71e484983",
       "wa-g6-spelling-endings text=5856360bee std=582af45c98 q=e8e136285e",
-      "ny-g6-compare-texts text=9d65eabbc4 std=cc71010b5a q=2ae31be0df"
+      "mb-planning-and-organizing text=89ef3a194c std=85e957336b q=80c4684b34",
+      "mb-media-and-bias text=dab5b2e211 std=962198ea4f q=991b3e813e",
+      "ny-g6-compare-texts text=9d65eabbc4 std=cc71010b5a q=2ae31be0df",
+      "ny-g6-read-closely text=7e369fa3cc std=1e27de0307 q=f177811116",
+      "ny-g6-writing-craft text=82285c2412 std=7fb43672d5 q=f27f83b8b4"
     ]
   },
   "6/math": {
@@ -433,19 +481,22 @@
       "decimal-multiply-divide text=fc458a18fb std=ce583e3eac q=bd81c6eb6d",
       "percents-and-budgets text=136c6c6ae5 std=7cfb7fa56b q=75b13cdb47",
       "patterns-and-graphs text=dab33ccdd4 std=e066810fab q=dfa60e317e",
-      "equations text=5c61d003c6 std=a048cab831 q=0e4e24070f",
+      "equations text=5c61d003c6 std=fec613ba69 q=0e4e24070f",
       "perimeter-and-area text=44afdbe788 std=d4a8cc7299 q=a0bb87355d",
       "volume-and-capacity text=5ad359431d std=52d93e422f q=fa063e47a1",
       "probability text=fcd0522d2d std=a9eb0ab1a2 q=b39d76b364",
       "numbers-6 text=54d144b67b std=56fa40c140 q=e4fdd9f708",
-      "algebra-6 text=b1dfde1d22 std=39760e7595 q=abb19f6abc",
+      "algebra-6 text=b1dfde1d22 std=907d4ec008 q=abb19f6abc",
       "data-6 text=169dca7ba6 std=fb4bffbb69 q=a070ba02d3",
       "exponents-ab text=27e31918da std=4735521f3b q=61c7c82586",
       "wa-g6-fraction-division text=000030a9c8 std=50c3107570 q=f29cd90cb8",
       "wa-g6-coordinate-plane text=6658bd067b std=c96d039d47 q=05cf05b0ca",
       "wa-g6-unit-rates text=eea140f4d3 std=13b07d50b0 q=29c0e209cc",
       "wa-g6-nets text=5dc42bacee std=08e3c6cb50 q=1ee1097036",
-      "wa-g7-sampling text=194eb9c3c2 std=fb0b2c1a56 q=d8e6ffaf2a"
+      "wa-g7-sampling text=194eb9c3c2 std=fb0b2c1a56 q=d8e6ffaf2a",
+      "ny-g6-long-division text=01eba94ee7 std=45305f6fbf q=f95e787f16",
+      "ny-g6-squares-cubes text=c06ff8dd8a std=4715e081b5 q=deabc3a255",
+      "ny-g6-data-distributions text=16b09c36e1 std=bdf528cabf q=fb0605546a"
     ]
   },
   "6/science": {
@@ -488,17 +539,24 @@
     "units": [
       "literary-devices text=e0287ee244 std=ff24bf86b6 q=ca1f4ae5d6",
       "tone-mood text=56547e2fb4 std=b7c3d5ab1f q=104d70a39d",
-      "persuasion text=e9c5ebcac4 std=50f04e3ba9 q=5e50a03d63",
+      "persuasion text=e9c5ebcac4 std=0fb1d5316e q=5e50a03d63",
       "clauses-sentences text=bb8c617aa5 std=3d4f437f2f q=a49f421344",
       "modifiers-parallelism text=439ddf4756 std=b74207308f q=64a9bf0a96",
       "word-mix-ups text=7ab31aa5fc std=0eedd2e945 q=d64ff1637c",
       "poetry-lab text=a279bea790 std=1a7209282d q=a8dd8516cd",
       "punctuation-7 text=0866cf5fd0 std=0fe432762a q=4fd2e17eaa",
       "point-of-view-7 text=0e97fe1bd9 std=fde415e205 q=ee7ee4f5b5",
-      "mb-word-roots text=e79aa63b2b std=7b95d80f78 q=a13fe4ad77",
+      "mb-word-roots text=e79aa63b2b std=cd407321f3 q=a13fe4ad77",
       "wa-g7-research-skills text=28a4ae9507 std=7673762885 q=4901d7cfd4",
       "wa-g7-media-framing text=14fe8a7b1d std=ad729bd71f q=1f917ebc68",
-      "wa-g7-spelling-rules text=98b06eb72d std=b0fc93993f q=a7dae53aa2"
+      "wa-g7-spelling-rules text=98b06eb72d std=b0fc93993f q=a7dae53aa2",
+      "mb-7-reading-strategies text=70f9f4e8ea std=a8adef64d5 q=5603e9a4fb",
+      "mb-7-writing-forms text=1d1817dc8a std=f3df5a2f56 q=94debed558",
+      "mb-7-word-choice-voice text=df4132da44 std=302c1f22d0 q=e831d937a7",
+      "mb-7-presenting-design text=e4464cea9b std=856b677d62 q=f0b6dca1be",
+      "mb-7-discussion-skills text=59a1d0e758 std=70f2f1d29a q=84ac8587c2",
+      "ny-g7-text-and-versions text=c2ed93b688 std=9f30f8f717 q=50aa3eb440",
+      "ny-g7-writing-craft text=c3fee2e42b std=c3592b2a2a q=232b421b2f"
     ]
   },
   "7/math": {
@@ -519,11 +577,15 @@
       "wa-g7-signed-multiply text=61c895d791 std=876265c779 q=d7c2440ec8",
       "wa-g7-proportional text=c11cf565b3 std=1c21fc00b8 q=f13197f7aa",
       "wa-g7-angles text=73a7a5215c std=45674723ab q=b384ae13b6",
-      "wa-g7-scale-drawings text=44f1660d4b std=cd1ee42a11 q=480f217aff"
+      "wa-g7-scale-drawings text=44f1660d4b std=cd1ee42a11 q=480f217aff",
+      "ny-g7-rewrite-expressions text=53542b83ec std=c9a45ec57e q=1eec8c5845",
+      "ny-g7-triangles text=799eae18ff std=e0c2fe69a2 q=bbafbb717a",
+      "ny-g7-slices text=c038ec1cf4 std=532294c749 q=eb1a57ef1b",
+      "ny-g7-composite-area text=3308264c70 std=140481c402 q=245f8af021"
     ]
   },
   "7/science": {
-    "overview": "cb81400e28",
+    "overview": "a9bda4097a",
     "units": [
       "atoms-and-elements text=724e49d7a4 std=0e67da3a21 q=7e2eecbebf",
       "circuits-and-static text=9f89b8e01c std=28ce7d090c q=b84f825935",
@@ -536,7 +598,9 @@
       "wa-g7-reactions text=18e488b2ac std=3be349fc29 q=cfd3d54d6f",
       "ny-g7-earth-surface text=7e364ea8f7 std=7e0f3c0c56 q=e2c0e5571f",
       "ny-g7-resources text=0c0b36ff02 std=5044e7867f q=bca9c3cd80",
-      "ny-g7-biodiversity text=362c927aba std=e9778c6957 q=8ec9ae5f65"
+      "ny-g7-biodiversity text=362c927aba std=e9778c6957 q=8ec9ae5f65",
+      "ny-g7-synthetic-materials text=b1d91d405f std=d79584a9fd q=eeb11870a8",
+      "ny-g7-people-resources text=40f8ee532f std=dfe18c5ce3 q=ed7d3da14a"
     ]
   },
   "7/social": {
@@ -576,7 +640,11 @@
       "writing-8 text=a3e1d9de30 std=27faf05937 q=42e0b48505",
       "mb-word-power-8 text=396588e142 std=4887595b35 q=434b58489d",
       "wa-g8-media-influence text=c71aa007ba std=5ff961b4e8 q=d957e11aea",
-      "or-g8-weigh-the-evidence text=f7ddc7e23e std=c79a65c0ff q=a6a4434e5b"
+      "or-g8-weigh-the-evidence text=f7ddc7e23e std=c79a65c0ff q=a6a4434e5b",
+      "respectful-talk-ab text=e0594472c7 std=39aed7e3c7 q=7ac971910e",
+      "mb-planning-forms-8 text=8048c6f088 std=a9aa3457e6 q=6379a3a276",
+      "ny-g8-dialogue-and-criteria text=23c5c5cc4a std=93094a7000 q=a6272fd267",
+      "ny-g8-writing-craft text=1f0b049034 std=dde8e6873c q=43eaf53d1e"
     ]
   },
   "8/math": {
@@ -598,11 +666,13 @@
       "wa-g8-systems text=b290721dd7 std=2a5809ca86 q=b5967231f6",
       "wa-g8-functions text=906e422768 std=bad028ebe7 q=b704358710",
       "wa-g8-round-volume text=46d3a6210c std=8ac68dd3d7 q=7c06cc35b6",
-      "wa-g8-slope text=5956a66b16 std=33b1aea448 q=c9e5f2a915"
+      "wa-g8-slope text=5956a66b16 std=33b1aea448 q=c9e5f2a915",
+      "ny-g8-distance text=d33fa2b1ad std=702f2f0530 q=3b69673b8b",
+      "ny-g8-linear-models text=4f18096644 std=7edeacf8f3 q=6afafd3320"
     ]
   },
   "8/science": {
-    "overview": "5ed063837f",
+    "overview": "14263fd463",
     "units": [
       "light-and-radiation text=2ec65a00a2 std=f59ff3ec52 q=9cc1a70761",
       "cells-and-life text=a4f9795daa std=954422c048 q=fcae7914fa",
@@ -612,7 +682,9 @@
       "wa-g8-heredity text=136c5512bf std=69440a404c q=0889381c05",
       "wa-g8-selection text=478104a932 std=94b06cbe36 q=a225d53251",
       "ny-g8-earth-history text=ce60abc6b7 std=76b660873b q=9b68391067",
-      "ny-g8-space text=e8591e488e std=f11706d175 q=e2bf61e7cf"
+      "ny-g8-space text=e8591e488e std=f11706d175 q=e2bf61e7cf",
+      "ny-g8-digital-signals text=cd0b241721 std=4c52cd0b63 q=d522e6aa86",
+      "ny-g8-embryos text=8a7adc2f68 std=3848cab0db q=30ddb22ea1"
     ]
   },
   "8/social": {
@@ -638,18 +710,20 @@
   "9/language": {
     "overview": "c3b90d8e50",
     "units": [
-      "close-reading text=e3f7dce3c1 std=ad4516fe54 q=f9de480cb6",
+      "close-reading text=e3f7dce3c1 std=5f1735f284 q=f9de480cb6",
       "literary-elements text=49f7d764bf std=2ce46a9c9a q=93113ee225",
       "grammar-and-style text=50e594af71 std=95481683a5 q=37d6dcd28c",
-      "word-parts-9 text=de549b7faf std=c38af6eebc q=584e86af3f",
+      "word-parts-9 text=de549b7faf std=1dd00a61ff q=584e86af3f",
       "devices-9 text=04cb0dd957 std=c887cae263 q=2531ff43de",
       "digital-9 text=f6e1ded111 std=48b8619c00 q=228113e1a5",
       "forms-features-9 text=3ccfd9f8db std=89b63d1ebf q=322e0e55fc",
       "mb-summarizing text=afe8d58bde std=7cbaf9128f q=1544e41082",
       "mb-choose-form-and-compose text=edf73d249d std=bcc76efc8e q=515bb10e15",
-      "wa-g9-research-and-credibility text=5ca2d4e9e0 std=f36576d128 q=447c001fd3",
+      "wa-g9-research-and-credibility text=5ca2d4e9e0 std=4a86b03451 q=447c001fd3",
       "wa-g9-proofreading text=52d5fe5b6a std=2aa14c6001 q=06b9dd8ced",
-      "or-g9-media-analysis text=1cef470fe5 std=17ccd76c70 q=e34931ec0d"
+      "or-g9-media-analysis text=1cef470fe5 std=17ccd76c70 q=e34931ec0d",
+      "ny-g9-evaluate-arguments text=81c0e58f51 std=8e1c2d5f78 q=99372db497",
+      "ny-g9-writing-craft text=542d07233f std=0e79b2db19 q=e76529424e"
     ]
   },
   "9/math": {
@@ -671,23 +745,45 @@
       "wa-g9-quadratics text=9f8fc6709d std=8161631a4e q=d3022a54a4",
       "wa-g9-formulas text=eef04c92bf std=9cbea3b71c q=56c094d4f8",
       "wa-g9-two-way-tables text=08e8a9ad61 std=3130d6312b q=1d2a6401be",
-      "wa-g9-sequences text=38d5f69f77 std=8885a65077 q=d2a4642ec5"
+      "wa-g9-sequences text=38d5f69f77 std=8885a65077 q=d2a4642ec5",
+      "ny-g9-two-variable-inequalities text=374c32bce6 std=f972eb9f9a q=3453eb01e9",
+      "ny-g9-comparing-functions text=3b7e059962 std=31bf85e1a4 q=6637ee2925",
+      "ny-g9-parabolas text=0894266f87 std=c3f19d3851 q=d6e4c70cfc",
+      "ny-g9-units-accuracy text=cb4357b7eb std=77288adaef q=96a1176ace",
+      "ny-g9-correlation text=879231929f std=253d2c9640 q=fc76a0de67"
     ]
   },
   "9/science": {
-    "overview": "82f5cf15ec",
+    "overview": "0757406dbf",
     "units": [
       "cells-from-cells text=26c04b4c59 std=3a95627006 q=9c20dd0a12",
       "reproduction text=fff2436821 std=4a9708d73c q=89792aacac",
-      "photosynthesis-respiration-9 text=d64f58333d std=2d468886b6 q=a8703c2a22",
+      "photosynthesis-respiration-9 text=d64f58333d std=b5f00e6123 q=a8703c2a22",
       "mb-human-reproductive-system text=6a74a0fe3c std=71d04fb975 q=7b49c20f90",
-      "mb-evolution-and-selection text=75af38918f std=ffcbdefc53 q=2382318afc",
+      "mb-evolution-and-selection text=75af38918f std=edcdad8408 q=2382318afc",
+      "atoms-and-electrons text=c656588baf std=6f89baf79a q=77c28ee671",
+      "bonding-and-reactions text=322084b1f5 std=be28d3bf2f q=a326d57dc9",
+      "chemical-change-ab text=831293e38e std=aa9d9b578f q=df576cbbfb",
+      "wa-g9-motion text=8ef9a00dd5 std=ee41d25df7 q=47e7cd3e9b",
+      "mb-energy-and-magnetism text=a05c4c16f6 std=56e65de643 q=bb013f51ee",
+      "circuits-9 text=36a83605b7 std=30515082ea q=1788d5792b",
+      "mb-science-and-society text=f7c2ef49ce std=8c86bf95c7 q=83c99bc41a",
       "ny-g9-ecosystems text=3403837768 std=fe2118a95a q=99947178f4",
+      "ny-g9-body-systems text=0cdee69561 std=393f534e69 q=81e333f3d6",
+      "ny-g9-dna-traits text=369bc5b2b8 std=c9b1128aae q=e25ba43420",
+      "ny-g9-populations-evolution text=d63a9f4b2c std=386225b13e q=473d7b5c2f",
       "ny-g9-plate-tectonics text=a6a6ebd786 std=71f556268b q=648980bfe8",
+      "ny-g9-early-earth text=a737d22ebb std=33a11fcc66 q=049fcdb530",
+      "ny-g9-air-masses text=fbe6893d87 std=97b068d3ff q=568139f891",
+      "ny-g9-sustainable-design text=1fe710b82e std=6b4ecd93a4 q=dfce04dfe6",
       "ny-g9-moon-tides-seasons text=df511021f7 std=a4db92d4b7 q=4ae76e491c",
       "ny-g9-stars-universe text=788319f4e1 std=b75adbf88d q=4056461a05",
       "ny-g9-climate-systems text=10ada38f90 std=a1ea262fb1 q=97b77129ea",
-      "ny-g9-water-landscapes text=9cae1f3d68 std=ad8b54a3e5 q=06d7a7889c"
+      "ny-g9-water-landscapes text=9cae1f3d68 std=ad8b54a3e5 q=06d7a7889c",
+      "ny-g9-waves-radiation text=a531b57031 std=2fe29359ef q=e602a15ae9",
+      "ny-g9-gases-solutions text=020dcf21e9 std=aa8d62ca32 q=330b9c216b",
+      "ny-g9-nuclear-bonds text=cafcc86d37 std=7db3eca3c1 q=105c7329d4",
+      "ny-g9-fields-heat text=d8fc2afc23 std=3459ecfc4c q=eef9cb2212"
     ]
   },
   "9/social": {
