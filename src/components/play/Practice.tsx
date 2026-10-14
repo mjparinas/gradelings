@@ -10,6 +10,7 @@ import { canUse } from "@/lib/plan";
 import { levelInfo, nextStep, unitLevel } from "@/lib/proficiency";
 import { useIsOn } from "@/lib/remoteFlags";
 import { go, href, useRoute } from "@/lib/router";
+import { useChildSay } from "@/lib/say";
 import { useActiveProfile, useChildSettings, useDerived, useStore } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 import { useBand } from "../band";
@@ -120,6 +121,7 @@ export function UnitDialog({ unitKey: key, onClose, onLocked }: { unitKey: strin
   const d = useDerived();
   const family = useStore((s) => s.family);
   const framework = useActiveProfile()?.framework;
+  const say = useChildSay();
   const ref = key ? getUnitRef(key, framework) : undefined;
   const stat = key ? d.units[key] : undefined;
   return (
@@ -129,7 +131,7 @@ export function UnitDialog({ unitKey: key, onClose, onLocked }: { unitKey: strin
           <div className="flex justify-center">
             <LevelChip level={unitLevel(stat)} />
           </div>
-          <p className="font-read text-lg text-ink-soft">{nextStep(stat)}</p>
+          <p className="font-read text-lg text-ink-soft">{say(nextStep(stat))}</p>
           {stat && (
             <p className="text-sm text-ink-soft">
               {stat.firstTry} of {stat.attempts} right on the first try

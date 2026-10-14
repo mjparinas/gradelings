@@ -5,6 +5,7 @@ import { GROWTH_STAGES, growthStage, nextGrowthStage } from "@/lib/buddy";
 import { celebrate, prefersReducedMotion } from "@/lib/juice";
 import { celebrationOf, isUnlocked, SHOP, type ItemKind, type ShopItem } from "@/lib/shop";
 import { sounds } from "@/lib/sound";
+import { useChildSay } from "@/lib/say";
 import { useActiveProfile, useDerived, useStore } from "@/lib/store";
 import { Critter, CritterSvg } from "../Critter";
 import { Dialog, Page, ProgressBar } from "../ui";
@@ -18,6 +19,7 @@ const TABS: { kind: ItemKind; label: string; icon: string }[] = [
 
 export function Shop() {
   const profile = useActiveProfile()!;
+  const say = useChildSay();
   const d = useDerived();
   const buy = useStore((s) => s.buy);
   const [tab, setTab] = useState<ItemKind>("companion");
@@ -97,12 +99,12 @@ export function Shop() {
                 type="button"
                 onClick={() => choose(item)}
                 className={`btn h-full w-full flex-col gap-2 p-3 ${isOn ? "btn-good" : ""}`}
-                aria-label={`${item.name}${isOn ? ", equipped" : isOwned ? ", owned" : locked ? `, locked: ${item.unlock?.label}` : `, ${item.cost} coins`}`}
+                aria-label={`${say(item.name)}${isOn ? ", equipped" : isOwned ? ", owned" : locked ? `, locked: ${item.unlock?.label}` : `, ${item.cost} coins`}`}
               >
                 <span className="flex h-24 w-24 items-center justify-center">
                   {item.critter ? <CritterSvg id={item.critter} mood={isOn ? "cheer" : "happy"} /> : <span className="text-6xl">{item.icon}</span>}
                 </span>
-                <span className="text-lg leading-tight font-bold">{item.name}</span>
+                <span className="text-lg leading-tight font-bold">{say(item.name)}</span>
                 <span className={`rounded-full px-3 py-0.5 text-sm font-bold ${isOn ? "bg-white/30" : isOwned ? "bg-good-soft text-good-dark" : locked ? "bg-black/5 text-ink-soft" : affordable ? "bg-[#fff4cc] text-[#7a5700]" : "bg-black/5 text-ink-soft"}`}>
                   {isOn ? "Using ✓" : isOwned ? "Owned · Use" : locked ? `🔒 ${item.unlock?.label} · 🪙 ${item.cost}` : `🪙 ${item.cost}`}
                 </span>
@@ -112,7 +114,7 @@ export function Shop() {
         })}
       </div>
 
-      <Dialog open={!!confirm} title={confirm ? `Get ${confirm.name}?` : ""} onClose={() => setConfirm(null)}>
+      <Dialog open={!!confirm} title={confirm ? say(`Get ${confirm.name}?`) : ""} onClose={() => setConfirm(null)}>
         {confirm && (
           <div className="flex flex-col items-center gap-4">
             {confirm.critter ? <Critter id={confirm.critter} mood="wave" size={130} /> : <span className="text-7xl">{confirm.icon}</span>}

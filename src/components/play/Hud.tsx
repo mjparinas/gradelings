@@ -3,6 +3,7 @@
 import { getItem } from "@/lib/shop";
 import { useFlag } from "@/lib/remoteFlags";
 import { go } from "@/lib/router";
+import { useChildSay } from "@/lib/say";
 import { useActiveProfile, useDerived, useStore } from "@/lib/store";
 import { useBand } from "../band";
 import { CritterSvg } from "../Critter";
@@ -42,6 +43,7 @@ export function LevelBadge({ level, progress, size = 56 }: { level: number; prog
 export function Hud() {
   const profile = useActiveProfile()!;
   const d = useDerived();
+  const say = useChildSay();
   const setActive = useStore((s) => s.setActive);
   // Little kids just see the level ring: "35/80 XP" means nothing to a pre-reader.
   const little = useBand() === "little";
@@ -49,11 +51,11 @@ export function Hud() {
   const trophies = Object.keys(d.trophies).length;
   // A broken streak is never shown as 0: the flame sleeps and the total days practised stays, so progress is never lost.
   const resting = d.streak.current === 0 && d.activeDays > 0;
-  const streakLabel = resting
+  const streakLabel = say(resting
     ? `${d.activeDays} ${d.activeDays === 1 ? "day" : "days"} practised. Ready for a new streak?`
     : d.streak.current > 0
       ? `${d.streak.current} day streak. ${d.activeDays} days practised in total.${d.streak.shields ? ` ${d.streak.shields} rest-day ${d.streak.shields === 1 ? "shield" : "shields"}.` : ""}`
-      : "Practise today to start a streak";
+      : "Practise today to start a streak");
   // The coins open the shop, unless the admin panel has switched the shop off.
   const shopOn = useFlag("shop");
   const coins = (
@@ -77,7 +79,7 @@ export function Hud() {
           <span className="block text-xl font-bold">{profile.name}</span>
           {title && (
             <span className="block text-xs font-semibold text-ink-soft">
-              {title.icon} {title.name}
+              {title.icon} {say(title.name)}
             </span>
           )}
         </span>

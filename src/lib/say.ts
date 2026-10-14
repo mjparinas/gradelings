@@ -1,8 +1,9 @@
 import { useMemo } from "react";
+import { getFramework } from "@/content/frameworks";
 import { localizeCopy } from "@/content/locale";
 import { familyCountry } from "./coppa";
 import { countryOf, type CountryCode } from "./country";
-import { useStore } from "./store";
+import { useActiveProfile, useStore } from "./store";
 
 // The parent area is written once, in Canadian English. A US family reads it in US English: "practiced", "color",
 // "4th grade". Wrap copy a parent reads in `say(...)`; Canadian families see it exactly as written.
@@ -29,4 +30,10 @@ export function useSay(): Say {
 /** The family's locale, for dates and times ("2:05 p.m." in Canada, "2:05 PM" in the US). */
 export function useLocale(): "en-CA" | "en-US" {
   return countryOf(useFamilyCountry()).locale;
+}
+
+/** `say` in the active child's English, for the kids' app: "practice", "cozy" and "4th grade" for a US child. */
+export function useChildSay(): Say {
+  const framework = useActiveProfile()?.framework;
+  return useMemo(() => sayFor(getFramework(framework)), [framework]);
 }

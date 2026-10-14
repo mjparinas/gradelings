@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { useRoute } from "@/lib/router";
 import { sounds } from "@/lib/sound";
+import { getFramework } from "@/content/frameworks";
+import { sayFor } from "@/lib/say";
 import { useStore, type Toast } from "@/lib/store";
 import { TIER_STYLE } from "@/lib/trophies";
 
@@ -28,6 +30,9 @@ function TrophyGlyph({ toast }: { toast: Toast }) {
 
 export function Toasts() {
   const toasts = useStore((s) => s.toasts);
+  // The active child's English (US spelling for a US child). Read from the store, as the toasts sit outside any screen.
+  const framework = useStore((s) => s.profiles?.find((p) => p.id === s.activeId)?.framework);
+  const say = sayFor(getFramework(framework));
   const quiet = useStore((s) => Boolean(s.activeId && s.settings[s.activeId]?.quietToasts));
   const area = useRoute().path[0];
   // In quiet mode, pop-ups wait until the child is out of a lesson or game.
@@ -68,8 +73,8 @@ export function Toasts() {
         <TrophyGlyph toast={current} />
         <span className="min-w-0 flex-1">
           <span className="block text-xs font-semibold tracking-wide text-white/60 uppercase">{label}</span>
-          <span className="block truncate text-lg font-bold">{current.title}</span>
-          <span className="block truncate text-sm text-white/75">{current.subtitle}</span>
+          <span className="block truncate text-lg font-bold">{say(current.title)}</span>
+          <span className="block truncate text-sm text-white/75">{say(current.subtitle)}</span>
         </span>
         {current.tier && (
           <span className="rounded-full px-2 py-0.5 text-xs font-bold" style={{ background: TIER_STYLE[current.tier].colour, color: "#1d2233" }}>
