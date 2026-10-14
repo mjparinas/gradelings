@@ -164,13 +164,13 @@ function notify() {
   for (const l of listeners) l();
 }
 
-function loadPart(id: string, grade: GradeId, loader: Loader, store: () => void, register: (c: Course[], lessons?: GradeLessons) => void): Promise<void> {
+function loadPart(id: string, grade: GradeId, loader: Loader, store: () => void, register: (m: GradeModule) => void): Promise<void> {
   let p = pending.get(id);
   if (!p) {
     failed.delete(id);
     p = loader()
       .then((m) => {
-        register(m.courses, m.lessons);
+        register(m);
         store();
       })
       .catch((err: unknown) => {
@@ -188,22 +188,56 @@ function loadPart(id: string, grade: GradeId, loader: Loader, store: () => void,
   return p;
 }
 
+const moreLoaders = new Map<GradeId, () => Promise<GradeLessons>>();
+const moreLessons = new Map<GradeId, Promise<void>>();
+
+/**
+ * Fetches the lessons for a grade's other subjects (math's ship with the grade). Nothing waits for them: a lesson that
+ * hasn't arrived is skipped, as for a unit with none. A failed download (usually offline) is tried again next time.
+ */
+function loadMoreLessons(grade: GradeId): Promise<void> {
+  const loader = moreLoaders.get(grade);
+  if (!loader) return Promise.resolve();
+  let p = moreLessons.get(grade);
+  if (!p) {
+    p = loader()
+      .then((more) => {
+        baseLessons.set(grade, { ...more, ...baseLessons.get(grade) });
+        rebuild(grade);
+        notify();
+      })
+      .catch(() => {
+        moreLessons.delete(grade);
+      });
+    moreLessons.set(grade, p);
+  }
+  return p;
+}
+
+/** Resolves once every grade loaded so far has its lessons for every subject (or failed to get them). */
+export function lessonsSettled(): Promise<void> {
+  return Promise.all(moreLessons.values()).then(() => undefined);
+}
+
 /** Downloads a grade's content once; later calls return the same promise. */
 export function loadGrade(grade: GradeId, framework: FrameworkId = DEFAULT_FRAMEWORK): Promise<void> {
   const parts: Promise<void>[] = [];
   if (!base.has(grade)) {
     parts.push(
-      loadPart(`base:${grade}`, grade, LOADERS[grade], () => rebuild(grade), (c, l) => {
-          base.set(grade, c);
-          if (l) baseLessons.set(grade, l);
+      loadPart(`base:${grade}`, grade, LOADERS[grade], () => rebuild(grade), (m) => {
+          base.set(grade, m.courses);
+          if (m.lessons) baseLessons.set(grade, m.lessons);
+          if (m.moreLessons) moreLoaders.set(grade, m.moreLessons);
+        }).then(() => {
+          void loadMoreLessons(grade);
         }),
     );
-  }
+  } else void loadMoreLessons(grade);
   for (const f of withDepends(framework)) {
     const extra = EXTRA_LOADERS[f]?.[grade];
     const id = targetId(grade, f);
     if (extra && !extras.has(id)) {
-      parts.push(loadPart(id, grade, extra, () => rebuild(grade), (c) => extras.set(id, c)));
+      parts.push(loadPart(id, grade, extra, () => rebuild(grade), (m) => extras.set(id, m.courses)));
     }
   }
   return Promise.all(parts).then(() => undefined);

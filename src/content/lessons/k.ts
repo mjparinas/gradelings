@@ -1,6 +1,6 @@
 import { lesson, type GradeLessons } from "./index";
 
-export const lessons: GradeLessons = {
+const math: GradeLessons = {
   "math/make-5-and-10": lesson(
     ["A ten frame has 10 boxes.", "Fill boxes to show a number.", "The empty boxes show what is missing."],
     "Show 7 on a ten frame. How many more make 10?",
@@ -149,3 +149,7 @@ export const lessons: GradeLessons = {
     { type: "shape", shape: "triangle" },
   ),
 };
+
+// Math lessons ship with the grade. The other subjects' lessons are a second download, fetched once the grade is in.
+export const lessons: GradeLessons = math;
+export const moreLessons = () => import("./k-subjects").then((m) => m.lessons);

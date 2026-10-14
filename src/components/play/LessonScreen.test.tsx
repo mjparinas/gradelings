@@ -16,7 +16,7 @@ const h = vi.hoisted(() => ({
 }));
 
 vi.mock("@/lib/router", () => ({ go: h.go }));
-vi.mock("@/lib/speech", () => ({ speak: h.speak, stopSpeaking: h.stopSpeaking }));
+vi.mock("@/lib/speech", () => ({ speakSegments: h.speak, stopSpeaking: h.stopSpeaking }));
 vi.mock("@/lib/store", () => ({ useChildSettings: () => h.settings, useActiveProfile: () => ({ framework: "ca-bc" }) }));
 vi.mock("@/content", () => ({
   getUnitRef: (key: string) => (key === "1/math/count-on" ? { key, course: { subject: "math" }, unit: { title: "Counting on", emoji: "➕", lesson: h.lesson } } : undefined),
@@ -61,12 +61,27 @@ describe("LessonScreen", () => {
     const { unmount } = show("middle");
     expect(h.speak).not.toHaveBeenCalled();
     fireEvent.click(screen.getByRole("button", { name: /Read to me/ }));
-    expect(h.speak).toHaveBeenCalledWith(SPOKEN);
+    expect(h.speak).toHaveBeenCalledWith([{ text: SPOKEN, lang: "en" }]);
     unmount();
     expect(h.stopSpeaking).toHaveBeenCalled();
     h.speak.mockClear();
     show("little");
-    expect(h.speak).toHaveBeenCalledWith(SPOKEN);
+    expect(h.speak).toHaveBeenCalledWith([{ text: SPOKEN, lang: "en" }]);
+  });
+
+  it("reads « French » in a French voice", () => {
+    const english = h.lesson;
+    h.lesson = { steps: ["Say « bonjour » to say hello."], example: { question: "How do you say hello?", work: ["Use « bonjour »."], answer: "« bonjour »" } };
+    show("little");
+    expect(h.speak).toHaveBeenCalledWith([
+      { text: "Say ", lang: "en" },
+      { text: " bonjour ", lang: "fr" },
+      { text: " to say hello. Let's try one. How do you say hello? Use ", lang: "en" },
+      { text: " bonjour ", lang: "fr" },
+      { text: ". The answer is ", lang: "en" },
+      { text: " bonjour ", lang: "fr" },
+    ]);
+    h.lesson = english;
   });
 
   it("reads itself aloud when the parent turned on read-aloud", () => {

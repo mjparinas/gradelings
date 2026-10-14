@@ -1,6 +1,6 @@
 import { lesson, type GradeLessons } from "./index";
 
-export const lessons: GradeLessons = {
+const math: GradeLessons = {
   "math/decimal-multiply-divide": lesson(
     ["Multiply as if there were no decimal points.", "Count the decimal places in the numbers you started with.", "Give your answer that many decimal places."],
     "0.6 × 4 = ?",
@@ -246,3 +246,7 @@ export const lessons: GradeLessons = {
     "Range 7, tail to the right",
   ),
 };
+
+// Math lessons ship with the grade. The other subjects' lessons are a second download, fetched once the grade is in.
+export const lessons: GradeLessons = math;
+export const moreLessons = () => import("./g6-subjects").then((m) => m.lessons);

@@ -12,7 +12,8 @@ import type { Course, GradeId, SubjectId } from "./types";
 const loaded = await Promise.all(REGISTRY.map((m) => Promise.all(GRADE_ORDER.map((g) => m.grades[g]()))));
 
 // Each grade's lessons live in the shared grade files and apply to every framework's units with the same id (as in ./index).
-const lessons = Object.fromEntries(GRADE_ORDER.map((g, i) => [g, loaded[0][i].lessons ?? {}])) as Record<GradeId, NonNullable<(typeof loaded)[0][0]["lessons"]>>;
+const more = await Promise.all(loaded[0].map((m) => m.moreLessons?.() ?? {}));
+const lessons = Object.fromEntries(GRADE_ORDER.map((g, i) => [g, { ...more[i], ...loaded[0][i].lessons }])) as Record<GradeId, NonNullable<(typeof loaded)[0][0]["lessons"]>>;
 
 /** Every course with at least one unit. */
 export const COURSES: Course[] = mergeCourses(loaded.flat().map((m) => m.courses))

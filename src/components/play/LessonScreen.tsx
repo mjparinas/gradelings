@@ -4,7 +4,8 @@ import { useEffect } from "react";
 import { getUnitRef } from "@/content";
 import { getSubjectMeta } from "@/content/subjects";
 import { go } from "@/lib/router";
-import { speak, stopSpeaking } from "@/lib/speech";
+import { speakMixed } from "@/lib/readaloud";
+import { stopSpeaking } from "@/lib/speech";
 import { useActiveProfile, useChildSettings } from "@/lib/store";
 import { useBand } from "../band";
 import { Critter, SpeechBubble } from "../Critter";
@@ -28,7 +29,7 @@ export function LessonScreen({ unitKey }: { unitKey: string }) {
   const auto = Boolean(settings?.autoRead) || band === "little";
   useEffect(() => {
     if (!lesson) go("/session", { mode: "practice", scope: unitKey }, true);
-    else if (auto) speak(lessonSpeech(lesson));
+    else if (auto) speakMixed(lessonSpeech(lesson));
     return stopSpeaking;
     // Read once when the lesson opens.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -79,7 +80,7 @@ export function LessonScreen({ unitKey }: { unitKey: string }) {
         <button type="button" className="btn btn-good min-h-16 flex-1 text-2xl" onClick={practise}>
           Let&apos;s practise! ▶
         </button>
-        <button type="button" className="btn min-h-16 text-xl" onClick={() => speak(lessonSpeech(lesson))}>
+        <button type="button" className="btn min-h-16 text-xl" onClick={() => speakMixed(lessonSpeech(lesson))}>
           🔊 Read to me
         </button>
       </div>

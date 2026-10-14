@@ -275,7 +275,7 @@ function electricity(opts?: GenerateOptions): Question[] {
   const watts = pick([2, 3, 4, 5, 6]) * pick([10, 20, 30]);
   const hrs = pick([2, 3, 4, 5]);
   qs.push(
-    typed(`A ${watts} W device runs for ${hrs} hours. How many watt-hours of energy does it use? (E = P × t)`, String(watts * hrs), `Energy = power × time = ${watts} × ${hrs} = ${watts * hrs} Wh.`, "number", { suffix: "Wh" }),
+    typed(`A device rated ${watts} W runs for ${hrs} hours. How many watt-hours of energy does it use? (E = P × t)`, String(watts * hrs), `Energy = power × time = ${watts} × ${hrs} = ${watts * hrs} Wh.`, "number", { suffix: "Wh" }),
   );
   return shuffle(qs).slice(0, 9);
 }

@@ -2,6 +2,12 @@ import { describe, expect, it } from "vitest";
 import { COURSES } from "../all";
 import { ageBandFor } from "../subjects";
 import { FRAMEWORKS } from "../frameworks";
+import { canadianWords } from "../locale";
+import type { FrameworkContract } from "../contract";
+import type { FrameworkManifest } from "../manifest";
+
+const manifests = import.meta.glob<{ manifest: FrameworkManifest }>("../*/manifest.ts", { eager: true });
+const contracts = import.meta.glob<{ contract: FrameworkContract }>("../*/contract.ts", { eager: true });
 
 // Lessons are attached per grade by unit id. These checks keep them honest: every lesson belongs to a
 // real unit and is short enough to read. Units two provinces share carry the same lesson in both.
@@ -29,8 +35,8 @@ describe("unit lessons", () => {
       expect(l.example.work.length, name).toBeGreaterThanOrEqual(1);
       expect(l.example.work.length, name).toBeLessThanOrEqual(4);
       expect(l.example.answer.length, name).toBeGreaterThan(0);
-      // Canadian spelling.
-      expect(JSON.stringify(l), name).not.toMatch(/\b(color|center|meter|liter|favorite|practice[sd]?\b(?= (a|the|it)))/i);
+      // Canadian spelling (whole words, so Colorado and literary are fine).
+      expect(JSON.stringify(l), name).not.toMatch(/\b(colors?|colored|colorful|centers?|centered|meters?|liters?|favorites?|practice[sd]?(?= (a|the|it)))\b/i);
     }
   });
 
@@ -50,5 +56,23 @@ describe("unit lessons", () => {
     const missing = COURSES.filter((c) => c.subject === "math" && ["k", "1", "2", "3", "4"].includes(c.grade))
       .flatMap((c) => c.units.filter((u) => !u.lesson).map((u) => `${c.grade}/${u.id}`));
     expect([...new Set(missing)]).toEqual([]);
+  });
+
+  it("covers every unit in every subject, in every framework", () => {
+    const missing = COURSES.flatMap((c) => c.units.filter((u) => !u.lesson).map((u) => `${c.grade}/${c.subject}/${u.id}`));
+    expect([...new Set(missing)]).toEqual([]);
+  });
+
+  it("never mentions Canada in a lesson a US family sees", () => {
+    const us = new Set<string>(FRAMEWORKS.filter((f) => f.country === "US").map((f) => f.id));
+    // Units written for a US state may use words that are also Canadian (treaty, Great Lakes).
+    const usOwn = Object.entries(manifests)
+      .filter(([, m]) => us.has(m.manifest.id))
+      .map(([path]) => contracts[path.replace(/manifest\.ts$/, "contract.ts")]?.contract.ownPrefix)
+      .filter(Boolean) as string[];
+    const hits = withLesson
+      .filter(({ u }) => Object.keys(u.standards).some((f) => us.has(f)) && !usOwn.some((p) => u.id.startsWith(p)))
+      .flatMap(({ c, u }) => canadianWords(JSON.stringify(u.lesson)).map((w) => `${c.grade}/${c.subject}/${u.id}: ${w}`));
+    expect([...new Set(hits)]).toEqual([]);
   });
 });

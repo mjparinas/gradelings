@@ -1,6 +1,6 @@
 import { lesson, type GradeLessons } from "./index";
 
-export const lessons: GradeLessons = {
+const math: GradeLessons = {
   "math/rational-numbers": lesson(
     ["A rational number can be written as a fraction.", "To add or subtract, use a common denominator.", "A negative times a negative is positive."],
     "−1/2 + 3/4 = ?",
@@ -289,3 +289,7 @@ export const lessons: GradeLessons = {
     "A strong negative linear relationship",
   ),
 };
+
+// Math lessons ship with the grade. The other subjects' lessons are a second download, fetched once the grade is in.
+export const lessons: GradeLessons = math;
+export const moreLessons = () => import("./g9-subjects").then((m) => m.lessons);

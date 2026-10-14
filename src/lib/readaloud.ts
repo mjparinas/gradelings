@@ -10,8 +10,8 @@ export type Segment = SpeechPiece;
 export const PAUSE_BEFORE_OPTIONS = 600;
 export const PAUSE_BETWEEN_OPTIONS = 500;
 
-/** Splits a prompt on « French » quotations, which Core French uses to mark French inside English text. */
-function promptSegments(text: string): Segment[] {
+/** Splits text on « French » quotations, which Core French and lessons use to mark French inside English text. */
+export function promptSegments(text: string): Segment[] {
   const out: Segment[] = [];
   const re = /«([^»]*)»/g;
   let last = 0;
@@ -59,4 +59,9 @@ export function readAloudText(q: Question): string {
 
 export function speakQuestion(q: Question) {
   speakSegments(readAloudSegments(q));
+}
+
+/** Reads English text with « French » quotations, each part in its own voice (lessons). */
+export function speakMixed(text: string) {
+  speakSegments(promptSegments(text));
 }

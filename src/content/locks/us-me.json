@@ -2,18 +2,18 @@
   "k/language": {
     "overview": "bd80c24a54",
     "units": [
-      "letter-partners text=89286d7ce7 std=4b906e1418 q=b88f284367",
-      "first-sounds text=aa590e704c std=dad571e161 q=1e9600b156",
-      "rhyme-time text=35afbfaf2c std=7dfa3f1ccb q=7ff630edf6",
-      "clap-the-beat text=0ff81c4c14 std=8693620a66 q=d798eaba52",
-      "sight-words text=68f8db13c5 std=ea7ad5a30b q=50140fdbd6",
-      "story-order text=3cfcd1abdd std=f0f9129227 q=9e24988535",
-      "book-detectives text=708cb948ae std=223f3f089a q=adc3ae2dbb",
-      "picture-clues text=ecbc521bcd std=ecc8bf36c9 q=3ade8d2d47",
-      "blend-a-word text=cbd1fec9bd std=fa979354fd q=16d2ff7d7d",
-      "talk-and-listen-ab text=10b5504ce6 std=bac68ea052 q=e684468815",
-      "mb-k-word-parts-and-meanings text=c5c68fc4aa std=cb59e9b644 q=a2785c140f",
-      "wa-gk-ask-and-find-out text=e54fbf05c6 std=3bee530d1d q=15f5ec6b8a"
+      "letter-partners text=c48f27422d std=4b906e1418 q=b88f284367",
+      "first-sounds text=cc4fb336eb std=dad571e161 q=1e9600b156",
+      "rhyme-time text=280911bb80 std=7dfa3f1ccb q=7ff630edf6",
+      "clap-the-beat text=13b130a737 std=8693620a66 q=d798eaba52",
+      "sight-words text=550b9e49a9 std=ea7ad5a30b q=50140fdbd6",
+      "story-order text=f874c5f317 std=f0f9129227 q=9e24988535",
+      "book-detectives text=1f5750b2af std=223f3f089a q=adc3ae2dbb",
+      "picture-clues text=c447e46412 std=ecc8bf36c9 q=3ade8d2d47",
+      "blend-a-word text=3d99132c91 std=fa979354fd q=16d2ff7d7d",
+      "talk-and-listen-ab text=6b71ddbc74 std=bac68ea052 q=e684468815",
+      "mb-k-word-parts-and-meanings text=e15eb53b01 std=cb59e9b644 q=a2785c140f",
+      "wa-gk-ask-and-find-out text=3232fd3739 std=3bee530d1d q=15f5ec6b8a"
     ]
   },
   "k/math": {
@@ -34,46 +34,46 @@
   "k/science": {
     "overview": "84db532019",
     "units": [
-      "living-things-need text=59ff292950 std=2827cfd633 q=6636422724",
-      "push-and-pull text=c1712dccd8 std=690397ee03 q=24d14f9735",
-      "weather-and-seasons text=587fb7eda3 std=89de55c0d2 q=9e856a1ef8",
-      "care-for-earth-ab text=325d23c52a std=f9beff4758 q=26266c5897",
-      "wa-gk-sunlight text=79da087047 std=d177353e26 q=9804cc3754",
-      "wa-gk-weather-safety text=620ecec330 std=76a5ef5aa2 q=bd1dab6057",
-      "wa-gk-homes-habitats text=c1d905d73e std=7e01a4fe5e q=f6e20beb11",
-      "or-gk-design text=bcf9b4110f std=24208e9785 q=e0b6b7f031"
+      "living-things-need text=dd1fbc6640 std=2827cfd633 q=6636422724",
+      "push-and-pull text=3f9b5b7287 std=690397ee03 q=24d14f9735",
+      "weather-and-seasons text=347adb4f03 std=89de55c0d2 q=9e856a1ef8",
+      "care-for-earth-ab text=d785cef0ea std=f9beff4758 q=26266c5897",
+      "wa-gk-sunlight text=89c9f05266 std=d177353e26 q=9804cc3754",
+      "wa-gk-weather-safety text=d51a97a4e6 std=76a5ef5aa2 q=bd1dab6057",
+      "wa-gk-homes-habitats text=ee2b119013 std=7e01a4fe5e q=f6e20beb11",
+      "or-gk-design text=e8ac5c72b6 std=24208e9785 q=e0b6b7f031"
     ]
   },
   "k/social": {
     "overview": "c3aa1e18b0",
     "units": [
-      "all-about-me text=039e35b681 std=583c669761 q=e554646d88",
-      "families text=219c8528b1 std=06920b7680 q=843d50e41d",
-      "needs-and-wants text=7a3f8faea7 std=c3e678c020 q=4c0cd8ade8",
-      "places-near-me text=0cf4750f1f std=08e0394ade q=36dace6804",
-      "fair-and-kind text=e6d1994e49 std=9df9e4f7bf q=abb3784cb4",
-      "mb-k-jobs-and-rules text=62e8a73afd std=914e68049d q=d98352f7c4",
-      "or-k-money-and-work text=558ef831ac std=49f11fc354 q=62e27d59bb",
-      "ca-k-calendar text=91b21c3b7f std=759cb07160 q=82ad20cecd",
-      "ca-k-good-citizens text=adf8e4e23b std=a6ba68f029 q=ba47e020d0"
+      "all-about-me text=297e17b367 std=583c669761 q=e554646d88",
+      "families text=2e5f849268 std=06920b7680 q=843d50e41d",
+      "needs-and-wants text=1e0a92c2a9 std=c3e678c020 q=4c0cd8ade8",
+      "places-near-me text=76b31e159b std=08e0394ade q=36dace6804",
+      "fair-and-kind text=eddef586f9 std=9df9e4f7bf q=abb3784cb4",
+      "mb-k-jobs-and-rules text=bde5eb779e std=914e68049d q=d98352f7c4",
+      "or-k-money-and-work text=779c3d6e1e std=49f11fc354 q=62e27d59bb",
+      "ca-k-calendar text=21e33a54d0 std=759cb07160 q=82ad20cecd",
+      "ca-k-good-citizens text=d7b0dbd711 std=a6ba68f029 q=ba47e020d0"
     ]
   },
   "1/language": {
     "overview": "4bf525065b",
     "units": [
-      "blend-it text=de1f760ffb std=dbf7891f43 q=711a61ce87",
-      "short-vowels text=4d2d2e1cb8 std=679a4fa7d6 q=6e80d0c71e",
-      "word-families text=7173d15d6d std=44769b2dd7 q=e1c00b110b",
-      "sh-ch-th text=395bbf9e12 std=ce6d32ed4f q=53b8ec49fb",
-      "sight-words text=9a070fa78c std=ea7ad5a30b q=4aba5945bd",
-      "sentences text=e2aaf6e52a std=1f6fe77266 q=3a12a2876f",
-      "story-time text=c6f97dca46 std=0b0d552a70 q=d7468c08d2",
-      "describing-words text=ed3055e4cd std=e4866232bc q=5343edd9c8",
-      "more-than-one text=acbe3abf05 std=a8c2b4df40 q=4bb1ec800f",
-      "sentence-types text=7da1ec5863 std=642b715ddc q=f64d6d4696",
-      "think-it-through text=4439427b10 std=26565b0727 q=9269d025f9",
-      "wa-g1-messages-all-around text=6cc00c5702 std=7d7afe83cd q=014d6a633a",
-      "or-g1-story-or-facts text=d94a45fcaa std=e65e1622a6 q=0d877f59c4"
+      "blend-it text=9a1273c4bc std=dbf7891f43 q=711a61ce87",
+      "short-vowels text=c3991944bf std=679a4fa7d6 q=6e80d0c71e",
+      "word-families text=47cdbc2e26 std=44769b2dd7 q=e1c00b110b",
+      "sh-ch-th text=8867585eda std=ce6d32ed4f q=53b8ec49fb",
+      "sight-words text=0bac05a422 std=ea7ad5a30b q=4aba5945bd",
+      "sentences text=dc477bff6b std=1f6fe77266 q=3a12a2876f",
+      "story-time text=c84d60a0d9 std=0b0d552a70 q=d7468c08d2",
+      "describing-words text=666b9e7bde std=e4866232bc q=5343edd9c8",
+      "more-than-one text=10c2382c04 std=a8c2b4df40 q=4bb1ec800f",
+      "sentence-types text=56ad0db855 std=642b715ddc q=f64d6d4696",
+      "think-it-through text=58296e2f16 std=26565b0727 q=9269d025f9",
+      "wa-g1-messages-all-around text=11b823e3cc std=7d7afe83cd q=014d6a633a",
+      "or-g1-story-or-facts text=293793ce6b std=e65e1622a6 q=0d877f59c4"
     ]
   },
   "1/math": {
@@ -98,45 +98,45 @@
   "1/science": {
     "overview": "9f6b935369",
     "units": [
-      "animal-survival text=5297bb7bd8 std=684da11bdd q=c33e9d03b4",
-      "light-and-sound text=ebe73e722d std=0e83b23698 q=b8d50b2c1c",
-      "sky-and-seasons text=49f90eeea7 std=4bccb49d15 q=4d6e7dc068",
-      "wa-g1-parents-young text=80ac39ee22 std=a128a2d8fd q=0aefe1449b",
-      "wa-g1-nature-ideas text=56327727ec std=eb69035929 q=7c42e833eb",
-      "wa-g1-signals text=d6fcf93ded std=8042ed7490 q=63d260c263",
-      "wa-g1-plant-parts text=8344d02ebf std=540334bcbb q=147fc0ae0b"
+      "animal-survival text=266130f08c std=684da11bdd q=c33e9d03b4",
+      "light-and-sound text=5ddfefa12c std=0e83b23698 q=b8d50b2c1c",
+      "sky-and-seasons text=7285051a41 std=4bccb49d15 q=4d6e7dc068",
+      "wa-g1-parents-young text=548fc56ec2 std=a128a2d8fd q=0aefe1449b",
+      "wa-g1-nature-ideas text=64c8e8787d std=eb69035929 q=7c42e833eb",
+      "wa-g1-signals text=34105da354 std=8042ed7490 q=63d260c263",
+      "wa-g1-plant-parts text=b103175bb0 std=540334bcbb q=147fc0ae0b"
     ]
   },
   "1/social": {
     "overview": "f53c6bcf86",
     "units": [
-      "maps text=a20ebbb707 std=448907027d q=671d944151",
-      "our-land text=71f1e2c0f5 std=514fa3e511 q=c1704cb4f1",
-      "my-community text=a080a51ea7 std=c882636e7e q=e0548ab0f6",
-      "changes-in-my-life text=e1fd30ded8 std=151888dfe2 q=d9a4ad3785",
-      "respect-and-inclusion text=7c80013e03 std=18db47c41c q=2bd238d5a9",
-      "community-services text=0a2bd9ff33 std=8ce8e4f245 q=22cd5a9649",
-      "wa-g1-earn-save-share text=dffe950a60 std=a05170263b q=2bb7ea855e",
-      "ca-g1-long-ago text=836d2e29de std=d055a584b2 q=71a2f5957a",
-      "me-g1-maine-symbols text=6440d10dcf std=5506166573 q=c61187f7b9",
-      "me-g1-wabanaki-traditions text=297406f51b std=d851d1ad21 q=5b3324bfe5"
+      "maps text=0393b6b3b0 std=448907027d q=671d944151",
+      "our-land text=9250f303b3 std=514fa3e511 q=c1704cb4f1",
+      "my-community text=f4b6495f7a std=c882636e7e q=e0548ab0f6",
+      "changes-in-my-life text=d5ee1318f1 std=151888dfe2 q=d9a4ad3785",
+      "respect-and-inclusion text=2f7448bf67 std=18db47c41c q=2bd238d5a9",
+      "community-services text=26d27aa27c std=8ce8e4f245 q=22cd5a9649",
+      "wa-g1-earn-save-share text=ff3274fdf3 std=a05170263b q=2bb7ea855e",
+      "ca-g1-long-ago text=1bee06737a std=d055a584b2 q=71a2f5957a",
+      "me-g1-maine-symbols text=805a4e7744 std=5506166573 q=c61187f7b9",
+      "me-g1-wabanaki-traditions text=acdd06df60 std=d851d1ad21 q=5b3324bfe5"
     ]
   },
   "2/language": {
     "overview": "af13be393b",
     "units": [
-      "rhyme-time text=63734a00af std=280f0d9add q=c228f52fe5",
-      "sound-detectives text=b51c7061f6 std=ba71264c83 q=7ad4b9eb0a",
-      "story-builders text=03b27e312d std=cac358089d q=fd192040b1",
-      "word-power text=66d07a8135 std=84d849cae4 q=0308400322",
-      "book-explorers text=2f933217e5 std=dfc3dce5ba q=3e2df22dfc",
-      "joining-sentences text=00b19a3fc3 std=b0394ff504 q=a45f18007f",
-      "grammar-2 text=1000d2a1aa std=ae06d7d019 q=1435b2cc3b",
-      "word-pictures text=6d7ffa98f7 std=2b12a6ad82 q=870ecab164",
-      "reading-detectives text=72bd001367 std=8d88d72674 q=decd73a013",
-      "text-features text=34a456267d std=61c0f7dd30 q=0e6e3d2f57",
-      "mb-finding-information text=97e6f78b10 std=e71d6d92bd q=95d8977d6e",
-      "wa-g2-media-detectives text=920a413391 std=bc85ce6e5f q=7844f5c974"
+      "rhyme-time text=ae896f4b4a std=280f0d9add q=c228f52fe5",
+      "sound-detectives text=46fe6d54db std=ba71264c83 q=7ad4b9eb0a",
+      "story-builders text=a75b636655 std=cac358089d q=fd192040b1",
+      "word-power text=b1c58ec0fb std=84d849cae4 q=0308400322",
+      "book-explorers text=efe0a342be std=dfc3dce5ba q=3e2df22dfc",
+      "joining-sentences text=bc83af99c6 std=b0394ff504 q=a45f18007f",
+      "grammar-2 text=8c16265264 std=ae06d7d019 q=1435b2cc3b",
+      "word-pictures text=44e4dfbdc5 std=2b12a6ad82 q=870ecab164",
+      "reading-detectives text=06d742f348 std=8d88d72674 q=decd73a013",
+      "text-features text=15cb2dc162 std=61c0f7dd30 q=0e6e3d2f57",
+      "mb-finding-information text=b6b5ad0955 std=e71d6d92bd q=95d8977d6e",
+      "wa-g2-media-detectives text=be66a838b4 std=bc85ce6e5f q=7844f5c974"
     ]
   },
   "2/math": {
@@ -163,45 +163,45 @@
   "2/science": {
     "overview": "2e5d949dc1",
     "units": [
-      "solids-and-liquids text=3bac5c024f std=3290effeed q=c036cf49b1",
-      "water-world text=06d1e8c3bf std=5392297551 q=4d72b823d5",
-      "changing-materials text=bd1c6967e6 std=a72950c204 q=fcb18017bd",
-      "mixtures-and-materials text=bfd3f6a79d std=e114a36621 q=2ec80e8289",
-      "wa-g2-plant-needs text=1793f8c40d std=be2bd162fa q=978c430a04",
-      "wa-g2-earth-changes text=08d14f51d7 std=270ad245b1 q=cea39261d9",
-      "or-g2-design text=27e32a14bc std=bfbbc25bfd q=ca2b370907"
+      "solids-and-liquids text=4a5edc47f5 std=3290effeed q=c036cf49b1",
+      "water-world text=480292c15d std=5392297551 q=4d72b823d5",
+      "changing-materials text=f0d800dd59 std=a72950c204 q=fcb18017bd",
+      "mixtures-and-materials text=4690be4cd3 std=e114a36621 q=2ec80e8289",
+      "wa-g2-plant-needs text=2ddd1248e3 std=be2bd162fa q=978c430a04",
+      "wa-g2-earth-changes text=a5c89b5d78 std=270ad245b1 q=cea39261d9",
+      "or-g2-design text=8668c19a3e std=bfbbc25bfd q=ca2b370907"
     ]
   },
   "2/social": {
     "overview": "f38194c50a",
     "units": [
-      "needs-and-wants text=4df2ca3c1f std=39e1002331 q=2c4dbe4de2",
-      "then-and-now text=64f03fa05d std=014e9c0458 q=db6aba9849",
-      "communities-compared text=7a2f83c092 std=827f5c3f60 q=20e81812b4",
-      "ns-community-change-2 text=0bd11f7306 std=f9cb5e0881 q=4a8dbf6467",
-      "mb-working-together text=990c54c307 std=9495f2bace q=17c9064822",
-      "ca-g2-citizens-and-leaders text=c45be6172c std=e9fcb4adc4 q=deb671fc39",
-      "ca-g2-reading-maps text=304b946d07 std=3f7795b8fa q=94e825dc3c",
-      "ca-g2-work-and-money text=db447a8993 std=03ef3737f0 q=3daba19f0f",
-      "or-g2-world-maps text=81db0fcd2d std=4ff90befd9 q=f54db7af64"
+      "needs-and-wants text=8192b43423 std=39e1002331 q=2c4dbe4de2",
+      "then-and-now text=adcb461d8f std=014e9c0458 q=db6aba9849",
+      "communities-compared text=38aa387c10 std=827f5c3f60 q=20e81812b4",
+      "ns-community-change-2 text=153e1a1ea0 std=f9cb5e0881 q=4a8dbf6467",
+      "mb-working-together text=2915a53ce4 std=9495f2bace q=17c9064822",
+      "ca-g2-citizens-and-leaders text=c362a6e3f6 std=e9fcb4adc4 q=deb671fc39",
+      "ca-g2-reading-maps text=4eb3eae1ec std=3f7795b8fa q=94e825dc3c",
+      "ca-g2-work-and-money text=29d8f69f16 std=03ef3737f0 q=3daba19f0f",
+      "or-g2-world-maps text=5be3d98572 std=4ff90befd9 q=f54db7af64"
     ]
   },
   "3/language": {
     "overview": "9a75f602bc",
     "units": [
-      "read-and-think text=69a6b4b19d std=614c69c6e5 q=1e8f8e94c9",
-      "story-elements text=14cd68c2d4 std=2334cf7188 q=78ac3fb273",
-      "word-jobs text=48c1c8bc03 std=462b5412ee q=fe0d330ceb",
-      "punctuation-power text=46dfaa493c std=5d03ed7f7c q=ac19eee914",
-      "spelling-patterns text=200353ae35 std=4bbc669d08 q=cfca6a919b",
-      "prefixes-suffixes text=c4e59ab6d6 std=93e2f62aa1 q=41860cdfd6",
-      "word-pairs text=959d891c6f std=7bff77b6b8 q=2558b1d793",
-      "sentence-smarts text=7c313986b2 std=b477cdc4ae q=8336139ed3",
-      "abc-dictionary text=344a8ea0f9 std=e32838615c q=8cac6b9b16",
-      "grammar-3 text=74f50e1121 std=3a40c6c9af q=4cef04ee6f",
-      "text-patterns text=6134260e2c std=e680b48283 q=2d33abb1d7",
-      "mb-wonder-and-find-out text=7b711d9402 std=e0d061ede5 q=aeacd646ab",
-      "wa-g3-media-messages text=086c65205f std=5f364a33ae q=feb4e64c34"
+      "read-and-think text=7444ce52ca std=614c69c6e5 q=1e8f8e94c9",
+      "story-elements text=4bc5317466 std=2334cf7188 q=78ac3fb273",
+      "word-jobs text=828a9a1b85 std=462b5412ee q=fe0d330ceb",
+      "punctuation-power text=4ba2179323 std=5d03ed7f7c q=ac19eee914",
+      "spelling-patterns text=7009096615 std=4bbc669d08 q=cfca6a919b",
+      "prefixes-suffixes text=c0cf5dc731 std=93e2f62aa1 q=41860cdfd6",
+      "word-pairs text=17c5d8704a std=7bff77b6b8 q=2558b1d793",
+      "sentence-smarts text=440a0ed7a6 std=b477cdc4ae q=8336139ed3",
+      "abc-dictionary text=0dded2dd30 std=e32838615c q=8cac6b9b16",
+      "grammar-3 text=a9deaa03d1 std=3a40c6c9af q=4cef04ee6f",
+      "text-patterns text=66f9e7deb8 std=e680b48283 q=2d33abb1d7",
+      "mb-wonder-and-find-out text=63150b7959 std=e0d061ede5 q=aeacd646ab",
+      "wa-g3-media-messages text=fb774641d1 std=5f364a33ae q=feb4e64c34"
     ]
   },
   "3/math": {
@@ -226,43 +226,43 @@
   "3/science": {
     "overview": "536592934f",
     "units": [
-      "plant-life text=5709e3b211 std=b76a9889b7 q=b12ce974d5",
-      "forces-3 text=a13388a84e std=0546be0129 q=85a9f000a8",
-      "mb-needs-life-cycles text=d4a3a9d2d1 std=807b9c403c q=983b44d8ad",
-      "mb-speed-and-motion text=7eacd13f39 std=898cddc8b4 q=44a70ab3dc",
-      "wa-g3-traits text=0904620b41 std=307ed71aef q=7f51ce104b",
-      "wa-g3-survival text=b5f469263d std=23285f6805 q=b593b45148",
-      "wa-g3-hazards text=4c436a3589 std=a39e680011 q=b58e997d4c",
-      "or-g3-magnet-design text=f300affad7 std=540bf4a56d q=b0eac72564"
+      "plant-life text=1e6447e773 std=b76a9889b7 q=b12ce974d5",
+      "forces-3 text=8669d537c0 std=0546be0129 q=85a9f000a8",
+      "mb-needs-life-cycles text=c8126be206 std=807b9c403c q=983b44d8ad",
+      "mb-speed-and-motion text=24296717e3 std=898cddc8b4 q=44a70ab3dc",
+      "wa-g3-traits text=00299df0b3 std=307ed71aef q=7f51ce104b",
+      "wa-g3-survival text=8148e373a0 std=23285f6805 q=b593b45148",
+      "wa-g3-hazards text=06e07390fc std=a39e680011 q=b58e997d4c",
+      "or-g3-magnet-design text=6e359c124e std=540bf4a56d q=b0eac72564"
     ]
   },
   "3/social": {
     "overview": "e8ad6e7cc9",
     "units": [
-      "meeting-needs text=7948193daa std=12f1c40b30 q=3ac35931e2",
-      "mb-global-communities text=1a842cb871 std=dd9f1b0d66 q=a05e20d345",
-      "mb-working-together text=1fac619eb7 std=a023ec01fc q=2cd3b963a8",
-      "me-g3-maine-land text=fa54e8c87c std=0fcce8afa0 q=9e870dfe77",
-      "me-g3-town-and-state text=2003b4c915 std=031c89a0d0 q=30b9d39f4d",
-      "me-g3-many-communities text=8d3cc2a019 std=87b666e9e4 q=3388f0142c"
+      "meeting-needs text=40a76a9522 std=12f1c40b30 q=3ac35931e2",
+      "mb-global-communities text=fdc10e0b47 std=dd9f1b0d66 q=a05e20d345",
+      "mb-working-together text=37a3eb9cfb std=a023ec01fc q=2cd3b963a8",
+      "me-g3-maine-land text=ad1bc4a8fa std=0fcce8afa0 q=9e870dfe77",
+      "me-g3-town-and-state text=56d28bbe92 std=031c89a0d0 q=30b9d39f4d",
+      "me-g3-many-communities text=6f34fa2293 std=87b666e9e4 q=3388f0142c"
     ]
   },
   "4/language": {
     "overview": "285bed1e3b",
     "units": [
-      "reading-detectives text=22249540bd std=62c78791c1 q=5788d5ba88",
-      "text-features text=b3419e5a9c std=2e631de31f q=a6e3f6bea6",
-      "figurative-language text=ef351cb27a std=00d4638ade q=43c2a4606f",
-      "point-of-view text=bd4222f409 std=c52252b4f7 q=c401cf50e0",
-      "parts-of-speech text=2f7eb2016b std=f13ad81f8e q=aef8a9a24b",
-      "super-sentences text=d85fafbe40 std=1f82b4de61 q=cee1adb645",
-      "word-builders text=3632555f99 std=e6603d7ed9 q=ca7b8000df",
-      "sound-alikes text=c71bfdc0bf std=c69cc49668 q=f98b14b28a",
-      "paragraph-power text=1f982f943b std=6d3bf9b8ad q=885b2d81f3",
-      "grammar-4 text=6fe51d129d std=5db350301d q=5f70cefe50",
-      "wa-g4-media-and-sources text=e676651c47 std=15b9e2b815 q=934ad941b1",
-      "wa-g4-spelling-rules text=1c52843d89 std=180e2fcefd q=aa8d1f716c",
-      "or-g4-firsthand-secondhand text=0f6ba3377c std=9ee1f68955 q=e6ba54d512"
+      "reading-detectives text=03648abb93 std=62c78791c1 q=5788d5ba88",
+      "text-features text=374a334dcb std=2e631de31f q=a6e3f6bea6",
+      "figurative-language text=cc806294d3 std=00d4638ade q=43c2a4606f",
+      "point-of-view text=317d5169eb std=c52252b4f7 q=c401cf50e0",
+      "parts-of-speech text=a8c86f7934 std=f13ad81f8e q=aef8a9a24b",
+      "super-sentences text=127a9846e3 std=1f82b4de61 q=cee1adb645",
+      "word-builders text=31c0e4d41e std=e6603d7ed9 q=ca7b8000df",
+      "sound-alikes text=810d4b50da std=c69cc49668 q=f98b14b28a",
+      "paragraph-power text=63c57da3d3 std=6d3bf9b8ad q=885b2d81f3",
+      "grammar-4 text=fde06ce4d5 std=5db350301d q=5f70cefe50",
+      "wa-g4-media-and-sources text=2a7358cba8 std=15b9e2b815 q=934ad941b1",
+      "wa-g4-spelling-rules text=5e5052b56c std=180e2fcefd q=aa8d1f716c",
+      "or-g4-firsthand-secondhand text=04414803f7 std=9ee1f68955 q=e6ba54d512"
     ]
   },
   "4/math": {
@@ -288,43 +288,43 @@
   "4/science": {
     "overview": "db9a9fbd4c",
     "units": [
-      "sense-and-respond text=53970d4675 std=4a571560fb q=3ae7716502",
-      "light-4 text=8f9de3a627 std=bbeafcc592 q=d397d48c7f",
-      "sound-4 text=c362226dab std=fd61158d7d q=c739a07614",
-      "mb-adaptations text=bab86eec7a std=394621d313 q=817498c8a7",
-      "mb-energy-senses text=443129c096 std=1c45f39988 q=57e3d027d5",
-      "wa-g4-energy-motion text=42ec895ce8 std=8deea809b0 q=1c3f0bf823",
-      "wa-g4-waves-info text=c9131254d2 std=adabe41cf5 q=50d5b6604f",
-      "or-g4-rocks-erosion text=f7c28841c2 std=a8b6764ecd q=89bdf27407"
+      "sense-and-respond text=242c1a356d std=4a571560fb q=3ae7716502",
+      "light-4 text=0325e91432 std=bbeafcc592 q=d397d48c7f",
+      "sound-4 text=24283223b2 std=fd61158d7d q=c739a07614",
+      "mb-adaptations text=cbf3ba863e std=394621d313 q=817498c8a7",
+      "mb-energy-senses text=148b39e511 std=1c45f39988 q=57e3d027d5",
+      "wa-g4-energy-motion text=b3e9a355c7 std=8deea809b0 q=1c3f0bf823",
+      "wa-g4-waves-info text=47dfa456ce std=adabe41cf5 q=50d5b6604f",
+      "or-g4-rocks-erosion text=332d3c7067 std=a8b6764ecd q=89bdf27407"
     ]
   },
   "4/social": {
     "overview": "ff948ca961",
     "units": [
-      "or-g6-world-maps text=b64c24a026 std=2817edd085 q=467da00966",
-      "or-g5-history-detective text=f96010930c std=4c86fd77d4 q=0a67d0e45b",
-      "me-g4-maine-land text=db9dfa5d97 std=5505f00443 q=9b8af95598",
-      "me-g4-maine-history text=a6644e4039 std=88513df362 q=5210937cfd",
-      "me-g4-maine-timeline text=9cb29378ee std=c46196d5f0 q=73275fb01e",
-      "me-g4-governing-maine text=bbf068c363 std=24e953e566 q=569cfd57e5",
-      "me-g4-maine-economy text=dee8d65554 std=d230e2c5c9 q=648f165274",
-      "me-g4-wabanaki-nations text=8d5e0c93fd std=cbb662452f q=6d86e07c1d"
+      "or-g6-world-maps text=aa3de56aed std=2817edd085 q=467da00966",
+      "or-g5-history-detective text=919878e133 std=4c86fd77d4 q=0a67d0e45b",
+      "me-g4-maine-land text=d608f1650f std=5505f00443 q=9b8af95598",
+      "me-g4-maine-history text=f1b3f70699 std=88513df362 q=5210937cfd",
+      "me-g4-maine-timeline text=dcfbfa4e40 std=c46196d5f0 q=73275fb01e",
+      "me-g4-governing-maine text=053d9097bb std=24e953e566 q=569cfd57e5",
+      "me-g4-maine-economy text=ac82297641 std=d230e2c5c9 q=648f165274",
+      "me-g4-wabanaki-nations text=ba73686821 std=cbb662452f q=6d86e07c1d"
     ]
   },
   "5/language": {
     "overview": "708c47293a",
     "units": [
-      "plot-and-conflict text=410eb2d942 std=940dd8e6ea q=08f95375b8",
-      "figurative-language text=aee2d96357 std=9ffc9f9f06 q=5d50f18ae7",
-      "purpose-and-structure text=82e3846b69 std=c967f05cd9 q=b07dca097e",
-      "context-clues text=d9f4558094 std=37041fdb79 q=2eb1ac232b",
-      "word-roots text=c66b130324 std=e27726e55d q=09a2072023",
-      "complex-sentences text=2b622b0d65 std=b492da4fc4 q=541e2d5520",
-      "punctuation-power text=b3262fa8f1 std=fd9fd13345 q=c61867de33",
-      "media-smarts text=4e1731c9e6 std=0298a72a3f q=943a38fda8",
-      "mb-multimodal-texts-5 text=a49371fedc std=e067992b67 q=b3c7f7225b",
-      "wa-g5-research-ready text=ffa4f33193 std=4ffda9ceb5 q=e9eb98ac26",
-      "wa-g5-spelling-smarts text=770d4a65f9 std=367e046630 q=2666501efd"
+      "plot-and-conflict text=b917a8e0aa std=940dd8e6ea q=08f95375b8",
+      "figurative-language text=dca8bec883 std=9ffc9f9f06 q=5d50f18ae7",
+      "purpose-and-structure text=d1e9ccc6e8 std=c967f05cd9 q=b07dca097e",
+      "context-clues text=022a00b494 std=37041fdb79 q=2eb1ac232b",
+      "word-roots text=2558284043 std=e27726e55d q=09a2072023",
+      "complex-sentences text=ac4c5531ea std=b492da4fc4 q=541e2d5520",
+      "punctuation-power text=fb7f3d7d02 std=fd9fd13345 q=c61867de33",
+      "media-smarts text=e34e2d845a std=0298a72a3f q=943a38fda8",
+      "mb-multimodal-texts-5 text=adf27e7e3d std=e067992b67 q=b3c7f7225b",
+      "wa-g5-research-ready text=a1d4419e2b std=4ffda9ceb5 q=e9eb98ac26",
+      "wa-g5-spelling-smarts text=27bf16b09c std=367e046630 q=2666501efd"
     ]
   },
   "5/math": {
@@ -349,44 +349,44 @@
   "5/science": {
     "overview": "2d908aeaf3",
     "units": [
-      "solutions-and-mixtures text=7f28a8dc6d std=8f65ee6495 q=60a439f812",
-      "states-of-matter-5 text=0334c3ce04 std=032c42898b q=1eaa095eb2",
-      "changes-of-state-5 text=b62e8e49b9 std=6df74d0ae1 q=efad7b203d",
-      "matter-changes-5 text=3f2b230679 std=99da441ef3 q=d36ded63b1",
-      "measuring-matter-ab text=1acb36332f std=3577a40c7d q=df13ae57a0",
-      "mb-weather-5 text=3a9e56f829 std=2518b01a09 q=9936aa0e30",
-      "wa-g5-energy-food text=c726d5d1ae std=5c71a02c62 q=2c5e9d47f6",
-      "wa-g5-ecosystems text=0f236375dd std=e7415eb716 q=23dd6d4d3d",
-      "or-g5-design text=aa6e877b6b std=2012268e59 q=5e2f08597c"
+      "solutions-and-mixtures text=969de1f980 std=8f65ee6495 q=60a439f812",
+      "states-of-matter-5 text=ef747f9d6e std=032c42898b q=1eaa095eb2",
+      "changes-of-state-5 text=6362dca38a std=6df74d0ae1 q=efad7b203d",
+      "matter-changes-5 text=3b4d86e7a6 std=99da441ef3 q=d36ded63b1",
+      "measuring-matter-ab text=46925fbe69 std=3577a40c7d q=df13ae57a0",
+      "mb-weather-5 text=db26ca3367 std=2518b01a09 q=9936aa0e30",
+      "wa-g5-energy-food text=7248a5bf2e std=5c71a02c62 q=2c5e9d47f6",
+      "wa-g5-ecosystems text=633496097d std=e7415eb716 q=23dd6d4d3d",
+      "or-g5-design text=6302707f88 std=2012268e59 q=5e2f08597c"
     ]
   },
   "5/social": {
     "overview": "0095c5a431",
     "units": [
-      "wa-g5-thirteen-colonies text=9a2b2e67ee std=59832904dd q=dd5f1aba73",
-      "ca-g5-colonial-economy text=a2c5df0b45 std=aca5aa2118 q=964b882147",
-      "ca-g5-road-to-revolution text=3b1e711e86 std=e122787f2d q=8ff3e277fb",
-      "ca-g5-revolution text=e30d9f6104 std=c0ad585edd q=8de8201d9a",
-      "wa-g5-constitution text=2c059056ba std=351edae7e2 q=2d1d2c254b",
-      "or-g5-timeline text=f1750ad685 std=542d12e8e4 q=750a99801f",
-      "or-g5-earn-and-save text=32cb8f2ab9 std=a1ca13b1ac q=9f54445f7e"
+      "wa-g5-thirteen-colonies text=b218e8efce std=59832904dd q=dd5f1aba73",
+      "ca-g5-colonial-economy text=469755cd16 std=aca5aa2118 q=964b882147",
+      "ca-g5-road-to-revolution text=f43acaa35e std=e122787f2d q=8ff3e277fb",
+      "ca-g5-revolution text=9f9c895b95 std=c0ad585edd q=8de8201d9a",
+      "wa-g5-constitution text=4fce7c7602 std=351edae7e2 q=2d1d2c254b",
+      "or-g5-timeline text=d6feb485b6 std=542d12e8e4 q=750a99801f",
+      "or-g5-earn-and-save text=c264e57498 std=a1ca13b1ac q=9f54445f7e"
     ]
   },
   "6/language": {
     "overview": "eb3d3246ff",
     "units": [
-      "point-of-view text=bed21670b4 std=0369178865 q=e32473aa03",
-      "connotation-tone text=559c5aad17 std=b3f33a0c3d q=220849e9fa",
-      "persuasive-writing text=534432838f std=f875d2b8bd q=247878bf5e",
-      "agreement text=acd934799a std=1b85e96f73 q=fcb9f1ba72",
-      "sentence-repair text=589622054d std=b476d31d8e q=2784e88c73",
-      "commas-clauses text=133770eba0 std=af01b81801 q=afd3a46d44",
-      "roots-analogies text=4dd74c075c std=346f73ecc8 q=01e03fc8c3",
-      "punctuation-6 text=342647500c std=3f04763aa9 q=e4acd9743f",
-      "text-forms-6 text=191611b7cb std=619a9299ac q=68961ed57a",
-      "wa-g6-check-the-source text=e7549c1af0 std=9265204be1 q=bc0ee29eac",
-      "wa-g6-media-techniques text=f9b9abae8d std=e91bdaaa25 q=a71e484983",
-      "wa-g6-spelling-endings text=5856360bee std=59785f6203 q=e8e136285e"
+      "point-of-view text=181ec2a506 std=0369178865 q=e32473aa03",
+      "connotation-tone text=9c068d912c std=b3f33a0c3d q=220849e9fa",
+      "persuasive-writing text=143cf3561b std=f875d2b8bd q=247878bf5e",
+      "agreement text=5714f96d51 std=1b85e96f73 q=fcb9f1ba72",
+      "sentence-repair text=404e6c9477 std=b476d31d8e q=2784e88c73",
+      "commas-clauses text=78c6d03749 std=af01b81801 q=afd3a46d44",
+      "roots-analogies text=34da7ba9e2 std=346f73ecc8 q=01e03fc8c3",
+      "punctuation-6 text=f3d82b8594 std=3f04763aa9 q=e4acd9743f",
+      "text-forms-6 text=bdd4c3fd20 std=619a9299ac q=68961ed57a",
+      "wa-g6-check-the-source text=d8574e7c7e std=9265204be1 q=bc0ee29eac",
+      "wa-g6-media-techniques text=0c6532807f std=e91bdaaa25 q=a71e484983",
+      "wa-g6-spelling-endings text=2d2c30828c std=59785f6203 q=e8e136285e"
     ]
   },
   "6/math": {
@@ -414,44 +414,44 @@
   "6/science": {
     "overview": "fe16ec5c8a",
     "units": [
-      "body-systems text=78ae9d090b std=228346455d q=aa5f3b59c6",
-      "nb-senses-6 text=267b97d9ca std=2578a13681 q=7e37816267",
-      "wa-g6-cells text=8ce5f82013 std=a6fac6f51f q=23e69bce93",
-      "wa-g6-thermal text=2bbb79571b std=9261176860 q=369cdfaaee",
-      "wa-g6-design text=eea7a362c8 std=98b2d7be6a q=822fc53939",
-      "work-energy-8 text=25d700743a std=b0e16c24c1 q=db86881bac"
+      "body-systems text=c3cee90dd9 std=228346455d q=aa5f3b59c6",
+      "nb-senses-6 text=d61db8792b std=2578a13681 q=7e37816267",
+      "wa-g6-cells text=dda472f3bf std=a6fac6f51f q=23e69bce93",
+      "wa-g6-thermal text=fa4c935e2b std=9261176860 q=369cdfaaee",
+      "wa-g6-design text=d0b4389208 std=98b2d7be6a q=822fc53939",
+      "work-energy-8 text=6af421d21c std=b0e16c24c1 q=db86881bac"
     ]
   },
   "6/social": {
     "overview": "a4e8639507",
     "units": [
-      "wa-g6-world-regions text=522da5bd6a std=3625166f95 q=f2cd9b3952",
-      "wa-g6-time-sources text=9de429d5bb std=8bff8fd67f q=4c68824bdd",
-      "first-farmers text=026e16c017 std=875bf2d3d5 q=b3720d7bbf",
-      "where-civilizations-grew text=2fec2e8af2 std=f700e6044c q=227eb500ef",
-      "wa-g6-mesopotamia-egypt text=8be83a3edd std=17bbd84367 q=232c3963ae",
-      "wa-g6-india-china text=d2446fdfae std=600e1c23e4 q=13133eb41e",
-      "wa-g6-greece-rome text=a116f2a80a std=76657adc6e q=c581214fd3",
-      "world-beliefs text=a21c9d9ed4 std=1c73e8a4cb q=eaa6186bca",
-      "trade-networks text=a40c85ef8e std=57804ae6b6 q=bfbd39ee46"
+      "wa-g6-world-regions text=4bba08603a std=3625166f95 q=f2cd9b3952",
+      "wa-g6-time-sources text=73bc1bdf96 std=8bff8fd67f q=4c68824bdd",
+      "first-farmers text=eb96dfbdd9 std=875bf2d3d5 q=b3720d7bbf",
+      "where-civilizations-grew text=b2013edff8 std=f700e6044c q=227eb500ef",
+      "wa-g6-mesopotamia-egypt text=074c2d63a6 std=17bbd84367 q=232c3963ae",
+      "wa-g6-india-china text=cc9a696797 std=600e1c23e4 q=13133eb41e",
+      "wa-g6-greece-rome text=07d03c3210 std=76657adc6e q=c581214fd3",
+      "world-beliefs text=cc74370028 std=1c73e8a4cb q=eaa6186bca",
+      "trade-networks text=37074f947d std=57804ae6b6 q=bfbd39ee46"
     ]
   },
   "7/language": {
     "overview": "3030c0e329",
     "units": [
-      "literary-devices text=e0287ee244 std=241397bde0 q=ca1f4ae5d6",
-      "tone-mood text=56547e2fb4 std=771d5244fd q=104d70a39d",
-      "persuasion text=e9c5ebcac4 std=41587cb1d5 q=5e50a03d63",
-      "clauses-sentences text=bb8c617aa5 std=abeb6c686f q=a49f421344",
-      "modifiers-parallelism text=439ddf4756 std=1169de5934 q=64a9bf0a96",
-      "word-mix-ups text=7ab31aa5fc std=650e4f977e q=d64ff1637c",
-      "poetry-lab text=a279bea790 std=0edc2b01d6 q=a8dd8516cd",
-      "punctuation-7 text=0866cf5fd0 std=31d378375e q=4fd2e17eaa",
-      "point-of-view-7 text=0e97fe1bd9 std=58c33a9484 q=ee7ee4f5b5",
-      "mb-word-roots text=e79aa63b2b std=daba392069 q=a13fe4ad77",
-      "wa-g7-research-skills text=28a4ae9507 std=cbb307a9b2 q=4901d7cfd4",
-      "wa-g7-media-framing text=14fe8a7b1d std=56f69454ad q=1f917ebc68",
-      "wa-g7-spelling-rules text=98b06eb72d std=031faad9dc q=a7dae53aa2"
+      "literary-devices text=75012dadfd std=241397bde0 q=ca1f4ae5d6",
+      "tone-mood text=1a78ad0bc3 std=771d5244fd q=104d70a39d",
+      "persuasion text=002e89452f std=41587cb1d5 q=5e50a03d63",
+      "clauses-sentences text=5017dd13d0 std=abeb6c686f q=a49f421344",
+      "modifiers-parallelism text=a0c6970207 std=1169de5934 q=64a9bf0a96",
+      "word-mix-ups text=7bb5032b8a std=650e4f977e q=d64ff1637c",
+      "poetry-lab text=e3769835d8 std=0edc2b01d6 q=a8dd8516cd",
+      "punctuation-7 text=9342af658b std=31d378375e q=4fd2e17eaa",
+      "point-of-view-7 text=9446c4e22a std=58c33a9484 q=ee7ee4f5b5",
+      "mb-word-roots text=f8f825870e std=daba392069 q=a13fe4ad77",
+      "wa-g7-research-skills text=a0906b3c59 std=cbb307a9b2 q=4901d7cfd4",
+      "wa-g7-media-framing text=dfd5377178 std=56f69454ad q=1f917ebc68",
+      "wa-g7-spelling-rules text=2551a36a70 std=031faad9dc q=a7dae53aa2"
     ]
   },
   "7/math": {
@@ -479,47 +479,47 @@
   "7/science": {
     "overview": "49d346e156",
     "units": [
-      "atoms-and-elements text=724e49d7a4 std=0e67da3a21 q=7e2eecbebf",
-      "ecosystems-7 text=727483da7e std=5b34a7034f q=2aeec5ed64",
-      "food-chains-7 text=34ca116262 std=29137fe6ea q=777910f336",
-      "cycles-succession-7 text=c2d73b2d0c std=ff6026d16b q=c45e49da11",
-      "particles-mixtures-7 text=7482682226 std=dbf3f902f4 q=f719092f87",
-      "plant-parts-ab text=e853151077 std=31e0228aa6 q=8526f00423",
-      "wa-g7-reactions text=18e488b2ac std=3be349fc29 q=cfd3d54d6f",
-      "wa-g7-earth-surface text=5074398ff8 std=7e0f3c0c56 q=2bc5d91a30",
-      "mixtures text=8906734a76 std=537442871f q=36dfdadbba",
-      "particles-heat-ab text=1f4ef3da05 std=3d3827fc71 q=26cfcc3a0f"
+      "atoms-and-elements text=7c83b3e634 std=0e67da3a21 q=7e2eecbebf",
+      "ecosystems-7 text=7f94e0036b std=5b34a7034f q=2aeec5ed64",
+      "food-chains-7 text=fef8ede051 std=29137fe6ea q=777910f336",
+      "cycles-succession-7 text=966cbdbe7e std=ff6026d16b q=c45e49da11",
+      "particles-mixtures-7 text=03fc7e2a6b std=dbf3f902f4 q=f719092f87",
+      "plant-parts-ab text=394b7ee530 std=31e0228aa6 q=8526f00423",
+      "wa-g7-reactions text=ab228d4e77 std=3be349fc29 q=cfd3d54d6f",
+      "wa-g7-earth-surface text=a27bfec669 std=7e0f3c0c56 q=2bc5d91a30",
+      "mixtures text=a0c891d276 std=537442871f q=36dfdadbba",
+      "particles-heat-ab text=6901bc2124 std=3d3827fc71 q=26cfcc3a0f"
     ]
   },
   "7/social": {
     "overview": "1ffe996295",
     "units": [
-      "medieval-europe text=72f1f4a614 std=12fd8fa6a7 q=e0e0a48023",
-      "islamic-world text=b1e4e231fb std=9f766cc7f0 q=d3b20da097",
-      "or-g7-asian-empires text=6f03dc45fd std=6b7c1406fd q=529fe22420",
-      "or-g7-african-kingdoms text=fb6930c950 std=e6ea1190cf q=5a669c38d2",
-      "japan-land-values-ab text=2e293beb34 std=959094cb99 q=23e145a94c",
-      "ca-g7-aztec-inca text=6dd70fceec std=18a9b42300 q=98dd6df2a5",
-      "renaissance-and-reformation text=ec32fa01da std=f2183983cf q=6c1b369fe8",
-      "or-g7-age-of-revolutions text=c7c9b1088f std=854806b04b q=53220de395",
-      "or-g7-world-timeline text=dd6fa3addc std=08e7e1f0b0 q=5316365f7d"
+      "medieval-europe text=e168f1071c std=12fd8fa6a7 q=e0e0a48023",
+      "islamic-world text=1f09d059f3 std=9f766cc7f0 q=d3b20da097",
+      "or-g7-asian-empires text=25d4ce3fe4 std=6b7c1406fd q=529fe22420",
+      "or-g7-african-kingdoms text=3ee3cfac21 std=e6ea1190cf q=5a669c38d2",
+      "japan-land-values-ab text=490a5fc02e std=959094cb99 q=23e145a94c",
+      "ca-g7-aztec-inca text=d2c994043b std=18a9b42300 q=98dd6df2a5",
+      "renaissance-and-reformation text=e5d4fca376 std=f2183983cf q=6c1b369fe8",
+      "or-g7-age-of-revolutions text=bb22392eb0 std=854806b04b q=53220de395",
+      "or-g7-world-timeline text=a66fed5e6f std=08e7e1f0b0 q=5316365f7d"
     ]
   },
   "8/language": {
     "overview": "db2cf9b24a",
     "units": [
-      "close-reading text=9ba3b53c31 std=34566093f7 q=9a7ad6cfde",
-      "literary-devices text=099655023b std=865cb17238 q=dbc870fffd",
-      "word-study text=4302bab9b2 std=8a6b5ed02d q=816e78a8ea",
-      "irony-satire-8 text=f4b671df8c std=b47028a5cc q=bd88cc209f",
-      "narrator-8 text=495342f9ea std=d43b1afa92 q=6c18973e7e",
-      "forms-features-8 text=7c3b6eff34 std=86df3b2359 q=1d74ce249f",
-      "strategies-8 text=e09f8a52d9 std=1ebd99eaa5 q=ee43aae812",
-      "digital-8 text=dd1810da0f std=845e456217 q=a2bbd968e9",
-      "writing-8 text=a3e1d9de30 std=450d0d0291 q=42e0b48505",
-      "mb-word-power-8 text=396588e142 std=24cb14ad1a q=434b58489d",
-      "wa-g8-media-influence text=c71aa007ba std=ff5531be44 q=d957e11aea",
-      "or-g8-weigh-the-evidence text=f7ddc7e23e std=fb23f130c2 q=a6a4434e5b"
+      "close-reading text=b5e48e1704 std=34566093f7 q=9a7ad6cfde",
+      "literary-devices text=807aa8d25d std=865cb17238 q=dbc870fffd",
+      "word-study text=e9a31820f1 std=8a6b5ed02d q=816e78a8ea",
+      "irony-satire-8 text=4b6cba0527 std=b47028a5cc q=bd88cc209f",
+      "narrator-8 text=b609477509 std=d43b1afa92 q=6c18973e7e",
+      "forms-features-8 text=612838fad2 std=86df3b2359 q=1d74ce249f",
+      "strategies-8 text=14cb61c3b0 std=1ebd99eaa5 q=ee43aae812",
+      "digital-8 text=742bfe22d6 std=845e456217 q=a2bbd968e9",
+      "writing-8 text=d9bb3a4cad std=450d0d0291 q=42e0b48505",
+      "mb-word-power-8 text=3f40ceb555 std=24cb14ad1a q=434b58489d",
+      "wa-g8-media-influence text=17e98c9229 std=ff5531be44 q=d957e11aea",
+      "or-g8-weigh-the-evidence text=d58b9eae3f std=fb23f130c2 q=a6a4434e5b"
     ]
   },
   "8/math": {
@@ -547,43 +547,43 @@
   "8/science": {
     "overview": "568a4dd3d4",
     "units": [
-      "light-and-radiation text=2ec65a00a2 std=f59ff3ec52 q=9cc1a70761",
-      "nb-motion-forces-8 text=e80fe26ff5 std=2a4e39429c q=4f1a481301",
-      "wa-g8-energy text=963641acc6 std=d29c89bfd9 q=cdf3dadeb8",
-      "wa-g8-fields text=a594b27b8a std=e6ba17a642 q=603f693f54",
-      "wa-g8-heredity text=136c5512bf std=69440a404c q=0889381c05",
-      "wa-g8-selection text=478104a932 std=94b06cbe36 q=a225d53251",
-      "or-g8-earth-history text=046fe519c5 std=76b660873b q=58aa50e91c"
+      "light-and-radiation text=9e640798cf std=f59ff3ec52 q=9cc1a70761",
+      "nb-motion-forces-8 text=a3e4ee29f0 std=2a4e39429c q=4f1a481301",
+      "wa-g8-energy text=b848db1d45 std=d29c89bfd9 q=cdf3dadeb8",
+      "wa-g8-fields text=8fbd720783 std=e6ba17a642 q=603f693f54",
+      "wa-g8-heredity text=023de89543 std=69440a404c q=0889381c05",
+      "wa-g8-selection text=9af384fbd6 std=94b06cbe36 q=a225d53251",
+      "or-g8-earth-history text=c69bcd1250 std=76b660873b q=58aa50e91c"
     ]
   },
   "8/social": {
     "overview": "b675fed0a2",
     "units": [
-      "or-g8-founding-ideas text=dd8a0eb468 std=2cfcb8db12 q=83494b4253",
-      "wa-g8-bill-of-rights text=05752c5add std=edcc76d5c5 q=6898ac27d5",
-      "ca-g8-industry-reform text=8926a02836 std=f70074c8a7 q=7b6a2b6d3d",
-      "or-g8-reconstruction text=6266aea8a7 std=e4c0f20d10 q=4c87f1ca5f",
-      "maps-graphs-8 text=fbf36e9cab std=81ab1c6164 q=db3f6f1744",
-      "mb-evidence-8 text=83f7518f0c std=84bdaa1eab q=d69f09c163",
-      "me-g8-maine-and-nation text=7c80a6296e std=da858283fd q=19a9224efa",
-      "me-g8-us-timeline text=1cfaf75334 std=4aa8852e5f q=e84da8f0a3"
+      "or-g8-founding-ideas text=6fa3d530b3 std=2cfcb8db12 q=83494b4253",
+      "wa-g8-bill-of-rights text=edcc86640b std=edcc76d5c5 q=6898ac27d5",
+      "ca-g8-industry-reform text=8cfcde45ec std=f70074c8a7 q=7b6a2b6d3d",
+      "or-g8-reconstruction text=693a3316b8 std=e4c0f20d10 q=4c87f1ca5f",
+      "maps-graphs-8 text=78520d151d std=81ab1c6164 q=db3f6f1744",
+      "mb-evidence-8 text=29b0073788 std=84bdaa1eab q=d69f09c163",
+      "me-g8-maine-and-nation text=5c79d44698 std=da858283fd q=19a9224efa",
+      "me-g8-us-timeline text=e248e451f7 std=4aa8852e5f q=e84da8f0a3"
     ]
   },
   "9/language": {
     "overview": "11aa4334d3",
     "units": [
-      "close-reading text=e3f7dce3c1 std=6da53dfabe q=f9de480cb6",
-      "literary-elements text=49f7d764bf std=7f2bc726d5 q=93113ee225",
-      "grammar-and-style text=50e594af71 std=44c6403694 q=37d6dcd28c",
-      "word-parts-9 text=de549b7faf std=41fdd64036 q=584e86af3f",
-      "devices-9 text=04cb0dd957 std=90cd775b5f q=2531ff43de",
-      "digital-9 text=f6e1ded111 std=a8001396a9 q=228113e1a5",
-      "forms-features-9 text=3ccfd9f8db std=b200ec5e0a q=322e0e55fc",
-      "mb-summarizing text=afe8d58bde std=f010c71a04 q=1544e41082",
-      "mb-choose-form-and-compose text=edf73d249d std=78bb5910ba q=515bb10e15",
-      "wa-g9-research-and-credibility text=5ca2d4e9e0 std=5ead19c3e8 q=447c001fd3",
-      "wa-g9-proofreading text=52d5fe5b6a std=cde1ddebea q=06b9dd8ced",
-      "or-g9-media-analysis text=1cef470fe5 std=a8d3d01f4c q=e34931ec0d"
+      "close-reading text=1934195db9 std=6da53dfabe q=f9de480cb6",
+      "literary-elements text=c987189fb1 std=7f2bc726d5 q=93113ee225",
+      "grammar-and-style text=8039e9ed51 std=44c6403694 q=37d6dcd28c",
+      "word-parts-9 text=2f90f3f2bb std=41fdd64036 q=584e86af3f",
+      "devices-9 text=320de0c79d std=90cd775b5f q=2531ff43de",
+      "digital-9 text=a08ac85319 std=a8001396a9 q=228113e1a5",
+      "forms-features-9 text=4d4a0e13b8 std=b200ec5e0a q=322e0e55fc",
+      "mb-summarizing text=a1c214cb62 std=f010c71a04 q=1544e41082",
+      "mb-choose-form-and-compose text=b0b438e003 std=78bb5910ba q=515bb10e15",
+      "wa-g9-research-and-credibility text=255a2e9598 std=5ead19c3e8 q=447c001fd3",
+      "wa-g9-proofreading text=91e8cd490d std=cde1ddebea q=06b9dd8ced",
+      "or-g9-media-analysis text=72d67adead std=a8d3d01f4c q=e34931ec0d"
     ]
   },
   "9/math": {
@@ -611,28 +611,28 @@
   "9/science": {
     "overview": "16983219a7",
     "units": [
-      "cells-from-cells text=26c04b4c59 std=3a95627006 q=9c20dd0a12",
-      "reproduction text=fff2436821 std=4a9708d73c q=89792aacac",
-      "atoms-and-electrons text=c656588baf std=526836febb q=77c28ee671",
-      "bonding-and-reactions text=322084b1f5 std=25c7bedf9e q=a326d57dc9",
-      "photosynthesis-respiration-9 text=d64f58333d std=2d468886b6 q=a8703c2a22",
-      "periodic-table-9 text=653833a0fb std=64f4fbd309 q=0f98494808",
-      "chemical-change-ab text=831293e38e std=355f770542 q=df576cbbfb",
-      "mb-evolution-and-selection text=75af38918f std=ffcbdefc53 q=2382318afc",
-      "mb-energy-and-magnetism text=a05c4c16f6 std=9bd856c560 q=bb013f51ee",
-      "wa-g9-motion text=8ef9a00dd5 std=ee41d25df7 q=47e7cd3e9b"
+      "cells-from-cells text=bf9b3d6d2e std=3a95627006 q=9c20dd0a12",
+      "reproduction text=d702789bd4 std=4a9708d73c q=89792aacac",
+      "atoms-and-electrons text=5dc2e26422 std=526836febb q=77c28ee671",
+      "bonding-and-reactions text=8a0ea04bc7 std=25c7bedf9e q=a326d57dc9",
+      "photosynthesis-respiration-9 text=aa7d1dc3bb std=2d468886b6 q=a8703c2a22",
+      "periodic-table-9 text=d006b85cec std=64f4fbd309 q=0f98494808",
+      "chemical-change-ab text=89d7e56152 std=355f770542 q=16a95d55f4",
+      "mb-evolution-and-selection text=ad74bb913c std=ffcbdefc53 q=2382318afc",
+      "mb-energy-and-magnetism text=bf9645c400 std=9bd856c560 q=bb013f51ee",
+      "wa-g9-motion text=322c25c859 std=ee41d25df7 q=47e7cd3e9b"
     ]
   },
   "9/social": {
     "overview": "608c032c66",
     "units": [
-      "ca-g9-foundations text=ae53836a26 std=af35df3cba q=366cc13a3d",
-      "ca-g9-civic-action text=17f0512a3b std=b4a9fe4376 q=c1c8ac6d15",
-      "ca-g9-media text=9b84854268 std=34e90b28e7 q=d8967e0b75",
-      "me-g9-governing-maine text=7f344f2feb std=1442ad37c5 q=b8b168b4fb",
-      "me-g9-us-government text=c0359ad133 std=8fb806f568 q=70fdf0e3c3",
-      "me-g9-personal-finance text=39fcf416f0 std=599a08d61f q=16138475e0",
-      "me-g9-economics text=fe78035430 std=c683dbbe9d q=b7fe3bf3cc"
+      "ca-g9-foundations text=7e73500361 std=af35df3cba q=366cc13a3d",
+      "ca-g9-civic-action text=7ff067ec0c std=b4a9fe4376 q=c1c8ac6d15",
+      "ca-g9-media text=67bc186bc5 std=34e90b28e7 q=d8967e0b75",
+      "me-g9-governing-maine text=85ddefd753 std=1442ad37c5 q=b8b168b4fb",
+      "me-g9-us-government text=b2b1785d0f std=8fb806f568 q=70fdf0e3c3",
+      "me-g9-personal-finance text=f88dcf17a6 std=599a08d61f q=16138475e0",
+      "me-g9-economics text=bbbee0ce00 std=c683dbbe9d q=b7fe3bf3cc"
     ]
   }
 }

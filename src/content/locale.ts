@@ -140,7 +140,12 @@ function matchCase(word: string, us: string): string {
 }
 
 // Everyday Canadian words with a different US word, matched as whole phrases.
-const US_PHRASES: [RegExp, string][] = [[/\bfire hall(s?)\b/gi, "fire station$1"]];
+const US_PHRASES: [RegExp, string][] = [
+  [/\bfire hall(s?)\b/gi, "fire station$1"],
+  // Canada's hazard labels are WHMIS; US labels follow OSHA's Hazard Communication Standard, which uses the GHS.
+  [/\bWHMIS \(Workplace Hazardous Materials Information System\)/g, "GHS (Globally Harmonized System)"],
+  [/\bWHMIS\b/g, "GHS"],
+];
 
 /** Changes Canadian spellings in a piece of text to US ones. Words the map doesn't know are kept as they are. */
 export function usSpelling(text: string): string {
@@ -290,7 +295,7 @@ const CANADA = [
   "Montreal", "Halifax", "Fredericton", "Charlottetown", "St. John's", "Whitehorse", "Yellowknife", "Iqaluit",
   "Fraser", "Rocky Mountains", "Canadian Shield", "Hudson Bay", "Great Lakes", "St. Lawrence", "maple leaf",
   "Remembrance Day", "Victoria Day", "Canada Day", "Hockey Night", "CN Tower", "Tim Hortons",
-  "GST", "HST", "PST", "BEDMAS",
+  "GST", "HST", "PST", "BEDMAS", "WHMIS",
 ];
 const CANADA_RE = new RegExp(`(?<![\\p{L}])(${CANADA.map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})(?![\\p{L}])`, "giu");
 
