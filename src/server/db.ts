@@ -375,6 +375,8 @@ const FAMILY_COLUMNS: [string, string][] = [
   ["consent_token", "TEXT"],
   ["consent_followup_at", "INTEGER"],
   ["consent_revoked_at", "INTEGER"],
+  // When a subscription the parent cancelled stops (ms), from Stripe's cancel_at or cancel_at_period_end. Null while it renews.
+  ["cancel_at", "INTEGER"],
 ];
 
 async function addColumns(c: Client, table: string, columns: [string, string][]) {

@@ -11,6 +11,7 @@ interface FamilyRow {
   subscription_status: string | null;
   subscription_interval: string | null;
   current_period_end: number | null;
+  cancel_at: number | null;
   access_until: number | null;
   discount_code: string | null;
   /** From the discount code, when it is still enabled. */
@@ -41,6 +42,7 @@ export function toFamilyInfo(row: FamilyRow, email: string, verified = true, stu
           status: row.subscription_status,
           interval: (row.subscription_interval as "month" | "year" | null) ?? undefined,
           currentPeriodEnd: row.current_period_end ? Number(row.current_period_end) : undefined,
+          ...(row.cancel_at ? { cancelAt: Number(row.cancel_at) } : {}),
         }
       : undefined,
     // Null rather than missing, so a device drops access that was taken away.
