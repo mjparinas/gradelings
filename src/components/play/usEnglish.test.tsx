@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { act, cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { act, cleanup, render } from "@testing-library/react";
 import type { ReactElement } from "react";
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import { allUnitRefs, loadGrade } from "@/content";
@@ -120,6 +120,3 @@ describe("the kids' app for a Canadian child", () => {
     expect(document.body.textContent).toContain("You levelled up!");
   });
 });
-
-void fireEvent;
-void screen;
