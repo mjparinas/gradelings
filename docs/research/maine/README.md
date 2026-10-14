@@ -1,10 +1,12 @@
 # Maine Learning Results: sources and checking record
 
-Maine (`us-me`, slug `maine`) follows the **Maine Learning Results**, the standards the Maine Department of Education (DOE) sets for every public school. Files read on 14 October 2026 from maine.gov/doe. `fetch.sh` downloads them into a cache folder and `build_outcomes.py` turns them into `outcomes.json`, which `src/content/maine/contract.ts` uses to check every citation.
+Maine (`us-me`, slug `maine`) follows the **Maine Learning Results**, the standards the Maine Department of Education (DOE) sets for every public school. Files read on 14 October 2026 from maine.gov/doe. `fetch.sh` downloads them and `build_outcomes.py` turns them into `outcomes.json`, which `src/content/maine/contract.ts` uses to check every citation.
+
+The source documents are committed in `source/` (read 14 October 2026, checksums in `source/SHA256SUMS`), so the record can be rebuilt even if the DOE moves or replaces a file. To rebuild from them, or to refresh them from the DOE:
 
 ```bash
-./fetch.sh /tmp/maine-src
-python3 -I build_outcomes.py /tmp/maine-src   # needs pdfplumber and python-docx
+python3 -I build_outcomes.py source                      # needs pdfplumber and python-docx
+./fetch.sh /tmp/maine-src && python3 -I build_outcomes.py /tmp/maine-src   # fresh copies; replace source/ if they changed
 ```
 
 ## Sources
