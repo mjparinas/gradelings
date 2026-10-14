@@ -170,9 +170,9 @@ function Money({ m, show, onDetail, reload }: { m: NonNullable<Parts["money"]>; 
         />
       </ul>
       <div className={charts}>
-        <ColumnChart title="Revenue by month" subtitle="Collected by Stripe, less refunds" data={r.months.map((m) => ({ label: m.label, value: m.revenue, detail: `${money(m.fees)} fees (est.)` }))} format={moneyShort} unit="revenue" xLabel="Month" floor={10_000} />
+        <ColumnChart title="Revenue by Month" subtitle="Collected by Stripe, less refunds" data={r.months.map((m) => ({ label: m.label, value: m.revenue, detail: `${money(m.fees)} fees (est.)` }))} format={moneyShort} unit="revenue" xLabel="Month" floor={10_000} />
         <ColumnChart
-          title="Profit by month"
+          title="Profit by Month"
           subtitle="Revenue less estimated fees and monthly costs"
           data={r.months.map((m) => ({ label: m.label, value: m.profit, detail: `${money(m.revenue)} revenue, ${money(m.fees)} fees, ${money(m.costs)} costs` }))}
           format={moneyShort}
@@ -181,7 +181,7 @@ function Money({ m, show, onDetail, reload }: { m: NonNullable<Parts["money"]>; 
           xLabel="Month"
         />
         <LineChart
-          title="Paying families by month"
+          title="Paying Families by Month"
           subtitle="Families with a payment covering the month"
           data={r.months.map((m) => ({ label: m.label, value: m.paying }))}
           format={(v) => num(Math.round(v))}
@@ -214,7 +214,7 @@ function Customers({ c: d, show }: { c: NonNullable<Parts["customers"]>; show: (
         <Tile onOpen={show("codes")} label="Codes redeemed" value={num(d.other.redemptions)} sub={`${num(d.other.reports)} question reports waiting`} />
       </ul>
       <div className={charts}>
-        <RowBars title="Where families are" subtitle="Every family is in exactly one group" rows={groups} headers={["Group", "Families", "Share"]} empty="No families yet." />
+        <RowBars title="Where Families Are" subtitle="Every family is in exactly one group" rows={groups} headers={["Group", "Families", "Share"]} empty="No families yet." />
       </div>
     </>
   );
@@ -234,10 +234,10 @@ function Growth({ g, show }: { g: NonNullable<Parts["growth"]>; show: (view: Det
         <Tile onOpen={show("customers-ever")} label="Families who have paid" value={num(g.customersEver)} sub="in the last two years" />
       </ul>
       <div className={charts}>
-        <ColumnChart title="Sign-ups per week" subtitle="Last 26 weeks" data={a.weekly} unit="sign-ups" xLabel="Week of" />
-        <ColumnChart title="Sign-ups per month" subtitle="Last 12 months" data={a.monthly} unit="sign-ups" xLabel="Month" />
+        <ColumnChart title="Sign-Ups per Week" subtitle="Last 26 weeks" data={a.weekly} unit="sign-ups" xLabel="Week of" />
+        <ColumnChart title="Sign-Ups per Month" subtitle="Last 12 months" data={a.monthly} unit="sign-ups" xLabel="Month" />
         <RowBars
-          title="Why families cancel"
+          title="Why Families Cancel"
           subtitle="The reason picked in Stripe's billing portal, last 12 months"
           rows={cancelReasonRows(g.cancelReasons ?? [])}
           headers={["Reason", "Cancellations", "Share"]}
@@ -257,8 +257,8 @@ function Practice({ e, show }: { e: NonNullable<Parts["practice"]>["engagement"]
         <Tile onOpen={show("practising")} label="Questions answered, 30 days" value={num(e.answers30)} sub={`${num(e.minutes30)} minutes`} />
       </ul>
       <div className={charts}>
-        <ColumnChart title="Families practising per day" subtitle="Last 30 days" data={e.daily.map((d) => ({ label: d.label, value: d.families }))} unit="families" />
-        <ColumnChart title="Questions answered per day" subtitle="Last 30 days" data={e.daily.map((d) => ({ label: d.label, value: d.answers, detail: `${num(d.minutes)} minutes` }))} unit="questions" />
+        <ColumnChart title="Families Practising per Day" subtitle="Last 30 days" data={e.daily.map((d) => ({ label: d.label, value: d.families }))} unit="families" />
+        <ColumnChart title="Questions Answered per Day" subtitle="Last 30 days" data={e.daily.map((d) => ({ label: d.label, value: d.answers, detail: `${num(d.minutes)} minutes` }))} unit="questions" />
       </div>
     </>
   );
@@ -322,7 +322,7 @@ export function Dashboard({ onOpenFamily }: { onOpenFamily?: (id: string) => voi
         </button>
       </p>
 
-      <Section id="money-h" title="Revenue and profit" intro="Money is in Canadian dollars; US families' payments in US dollars are shown on their own tile. Revenue is what Stripe collected, less refunds. Fees are estimated at 2.9% + 30¢ a payment. Monthly recurring revenue uses list prices, with yearly plans counted as a twelfth a month. Profit takes off fees and the monthly costs you enter below.">
+      <Section id="money-h" title="Revenue and Profit" intro="Money is in Canadian dollars; US families' payments in US dollars are shown on their own tile. Revenue is what Stripe collected, less refunds. Fees are estimated at 2.9% + 30¢ a payment. Monthly recurring revenue uses list prices, with yearly plans counted as a twelfth a month. Profit takes off fees and the monthly costs you enter below.">
         {failed("money") ?? (!parts.money ? <SectionLoading tiles={8} charts={3} /> : <Money m={parts.money} show={show} onDetail={(detail) => setOpen({ detail })} reload={load} />)}
       </Section>
 
@@ -385,12 +385,12 @@ function MoneyTools({ data, reload }: { data: { revenue: SectionMetrics["money"]
           />
         </label>
         <button disabled={busy} className={primary}>
-          Save costs
+          Save Costs
         </button>
       </form>
       {data.stripe && (
         <button type="button" disabled={busy} className={quiet} onClick={() => run({ action: "import" }, (res) => `Checked ${num(res.seen ?? 0)} paid invoices; ${num(res.stored ?? 0)} belong to families here.`)}>
-          Import payments from Stripe
+          Import Payments From Stripe
         </button>
       )}
       <p id="costs-help" className="text-sm text-ink-soft sm:basis-full">

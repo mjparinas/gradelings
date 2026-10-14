@@ -42,7 +42,7 @@ export function MaintenanceBanner({ state, onChange }: { state: MaintenanceState
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h2 id="maintenance-banner-h" className="text-lg font-bold">
-            🛠️ Maintenance mode is on
+            🛠️ Maintenance Mode Is On
           </h2>
           <p className="font-read">
             Visitors only see the home page{state.since ? ` (on since ${when(state.since)})` : ""}.
@@ -58,7 +58,7 @@ export function MaintenanceBanner({ state, onChange }: { state: MaintenanceState
             setBusy(false);
           }}
         >
-          Turn off maintenance mode
+          Turn Off Maintenance Mode
         </button>
       </div>
       <Notice err={err} />
@@ -88,7 +88,7 @@ export function MaintenanceCard({ state, onChange }: { state: MaintenanceState |
   return (
     <section aria-labelledby="maintenance-h" className={`${card} mb-5`}>
       <h2 id="maintenance-h" className="text-xl font-bold">
-        Maintenance mode
+        Maintenance Mode
       </h2>
       <p className="mt-1 max-w-3xl font-read">{WHAT}</p>
       <p className="mt-2 font-semibold">{state === null ? "Checking…" : on ? "On now." : "Off."}</p>
@@ -104,11 +104,11 @@ export function MaintenanceCard({ state, onChange }: { state: MaintenanceState |
               setBusy(false);
             }}
           >
-            Turn off maintenance mode
+            Turn Off Maintenance Mode
           </button>
         ) : (
           <button type="button" className={quiet} aria-expanded={asking} disabled={state === null} onClick={() => setAsking(!asking)}>
-            Turn on maintenance mode…
+            Turn On Maintenance Mode…
           </button>
         )}
       </div>
@@ -119,7 +119,7 @@ export function MaintenanceCard({ state, onChange }: { state: MaintenanceState |
             <input className={`${field} w-40 font-mono`} value={confirm} onChange={(e) => setConfirm(e.target.value)} autoComplete="off" />
           </label>
           <button type="button" className={primary} disabled={busy || confirm !== TURN_ON} onClick={() => void turnOn()}>
-            Start maintenance
+            Start Maintenance
           </button>
         </div>
       )}

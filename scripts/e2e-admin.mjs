@@ -64,32 +64,32 @@ async function scan(name) {
   if (!violations.length) console.log(`ok   ${name} has no automated accessibility problems`);
 }
 const tab = async (name) => {
-  // "To do" carries a count after its name.
-  await page.getByRole("navigation", { name: "Admin sections" }).getByRole("button", name === "To do" ? { name: /^To do/ } : { name, exact: true }).click();
+  // "To Do" carries a count after its name.
+  await page.getByRole("navigation", { name: "Admin sections" }).getByRole("button", name === "To Do" ? { name: /^To Do/ } : { name, exact: true }).click();
   await page.waitForTimeout(400);
 };
 async function signIn(email) {
   await page.getByLabel("Email").fill(email);
   await page.getByLabel("Password").fill(PASSWORD);
-  await page.getByRole("button", { name: "Sign in" }).click();
+  await page.getByRole("button", { name: "Sign In" }).click();
 }
 
 // A parent is not an admin.
 await page.goto(`${BASE}/admin/`);
-await page.getByRole("heading", { name: "Admin sign in" }).waitFor();
+await page.getByRole("heading", { name: "Admin Sign In" }).waitFor();
 await scan("admin sign-in");
 await signIn(parentEmail);
-check(await page.getByRole("heading", { name: "Not an admin account" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "a parent account is turned away");
-await page.getByRole("button", { name: "Sign out" }).click();
+check(await page.getByRole("heading", { name: "Not an Admin Account" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "a parent account is turned away");
+await page.getByRole("button", { name: "Sign Out" }).click();
 
 // The admin gets in.
-await page.getByRole("heading", { name: "Admin sign in" }).waitFor();
+await page.getByRole("heading", { name: "Admin Sign In" }).waitFor();
 await signIn(ADMIN);
 check(await page.getByText("Families", { exact: true }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the admin sees the overview");
-check(await vis(page.getByRole("img", { name: "Revenue by month" })), "the overview charts revenue by month");
-check(await vis(page.getByRole("img", { name: "Sign-ups per week" })), "the overview charts sign-ups");
+check(await vis(page.getByRole("img", { name: "Revenue by Month" })), "the overview charts revenue by month");
+check(await vis(page.getByRole("img", { name: "Sign-Ups per Week" })), "the overview charts sign-ups");
 await page.getByLabel("Monthly running costs (CAD)").fill("120");
-await page.getByRole("button", { name: "Save costs" }).click();
+await page.getByRole("button", { name: "Save Costs" }).click();
 check(await page.getByText("Monthly costs saved.").waitFor({ timeout: 8000 }).then(() => true, () => false), "the admin saves monthly costs for profit");
 check(await page.getByText("with costs of $120.00 a month").waitFor({ timeout: 8000 }).then(() => true, () => false), "the projected profit uses the costs");
 await shot("overview");
@@ -109,11 +109,11 @@ await scan("families list");
 await page.keyboard.press("Escape");
 check(!(await vis(list)), "Escape closes the list");
 await page.getByRole("button", { name: /^Profit this month / }).click();
-check(await vis(page.getByRole("dialog", { name: "Profit by month" })), "the profit tile breaks profit down by month");
+check(await vis(page.getByRole("dialog", { name: "Profit by Month" })), "the profit tile breaks profit down by month");
 await page.getByRole("button", { name: "Close" }).click();
 await page.getByRole("button", { name: /^Families \d/ }).click();
 await list.getByRole("button", { name: parentEmail }).click();
-check(await page.getByRole("button", { name: "Give lifetime access" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "an email in the list opens the family in Users");
+check(await page.getByRole("button", { name: "Give Lifetime Access" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "an email in the list opens the family in Users");
 await tab("Overview");
 
 // Switch the Shop off, and the kids' app hides it. The switch shows the saved state, so it changes
@@ -148,16 +148,16 @@ check(await vis(kid.getByRole("button", { name: /Shop.*to spend/ })), "the Shop 
 await tab("Codes");
 await page.getByLabel("Use limit (optional)").fill("10");
 await page.getByLabel("Note (who it's for, optional)").fill("e2e");
-await page.getByRole("button", { name: "Make code" }).click();
+await page.getByRole("button", { name: "Make Code" }).click();
 check(await page.getByText(/New code:/).waitFor({ timeout: 8000 }).then(() => true, () => false), "the admin makes an access code");
 await shot("codes");
 await scan("codes");
 
 // Save an A/B test and start it.
-await tab("A/B tests");
+await tab("A/B Tests");
 const key = `e2e-${Date.now()}`;
 await page.getByLabel(/^Key/).fill(key);
-await page.getByRole("button", { name: "Save draft" }).click();
+await page.getByRole("button", { name: "Save Draft" }).click();
 await page.getByRole("heading", { name: key }).waitFor();
 await page.getByRole("listitem").filter({ has: page.getByRole("heading", { name: key }) }).getByRole("button", { name: "Start" }).click();
 check(await page.getByText(/Running since/).first().waitFor({ timeout: 8000 }).then(() => true, () => false), "the admin starts an A/B test");
@@ -165,10 +165,10 @@ await shot("experiments");
 await scan("experiments");
 
 // The to-do list suggests a "getting started" email to the parent who never practised.
-await tab("To do");
+await tab("To Do");
 const item = page.getByRole("listitem").filter({ hasText: parentEmail });
 check(await item.getByText("Signed up, never practised").waitFor({ timeout: 8000 }).then(() => true, () => false), "the to-do list shows a family that never practised");
-await item.getByRole("button", { name: "Write email" }).click();
+await item.getByRole("button", { name: "Write Email" }).click();
 check(await vis(item.getByLabel("Preview").getByText(/Getting started with/)), "the to-do item opens a getting-started email");
 await shot("todo");
 await scan("to do");
@@ -189,13 +189,13 @@ await tab("Users");
 await page.getByLabel("Search by email or family id").fill(parentEmail);
 await page.getByRole("button", { name: "Search", exact: true }).click();
 await page.getByRole("button", { name: parentEmail }).click();
-await page.getByRole("button", { name: "Give lifetime access" }).click();
+await page.getByRole("button", { name: "Give Lifetime Access" }).click();
 check(await page.getByText("Lifetime access given.").waitFor({ timeout: 8000 }).then(() => true, () => false), "the admin gives a family lifetime access");
 check(await vis(page.getByText("Lifetime", { exact: true })), "the family shows lifetime access");
-check(await vis(page.getByRole("heading", { name: "Email this family" })), "a family's page offers to email them");
+check(await vis(page.getByRole("heading", { name: "Email This Family" })), "a family's page offers to email them");
 check(await vis(page.getByText(/Last sign-in:/)), "a family's page shows the last sign-in");
 // With no email keys on the server, sending is refused and nothing goes out.
-await page.getByRole("button", { name: "Send email" }).click();
+await page.getByRole("button", { name: "Send Email" }).click();
 check(await page.getByText("The email couldn't be sent. Check the email settings.").waitFor({ timeout: 8000 }).then(() => true, () => false), "sending without email keys says so");
 check(await vis(page.getByRole("heading", { name: "Billing" })), "a family's page shows its billing");
 check(await vis(page.getByText(/Stripe isn.t set up/)), "billing says when Stripe isn't set up");
@@ -210,10 +210,10 @@ check(/^attachment; filename="payments-\d{4}-\d{2}-\d{2}\.csv"$/.test(payCsv ?? 
 
 // The funnel shows how far families got and links each stuck group to the Emails tab.
 await tab("Funnel");
-check(await page.getByRole("heading", { name: "1. Signed up" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the Funnel tab shows the steps");
+check(await page.getByRole("heading", { name: "1. Signed Up" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the Funnel tab shows the steps");
 await shot("funnel");
 await scan("funnel");
-const stuck = page.getByRole("button", { name: /^Email the families/ }).first();
+const stuck = page.getByRole("button", { name: /^Email the Families/ }).first();
 if (await vis(stuck)) {
   await stuck.click();
   check(await page.getByText(/This send reaches|Nobody in this group/).waitFor({ timeout: 8000 }).then(() => true, () => false), "a funnel link opens the Emails tab on that group");
@@ -222,26 +222,26 @@ if (await vis(stuck)) {
 // Traffic: without Google or Vercel keys, each part says which settings to add.
 await tab("Traffic");
 check(await page.getByText(/GOOGLE_SERVICE_ACCOUNT_KEY/).waitFor({ timeout: 15000 }).then(() => true, () => false), "the Traffic tab says how to set up Search Console");
-check(await vis(page.getByRole("heading", { name: "Visits to the public pages" })), "the Traffic tab has a visits section");
+check(await vis(page.getByRole("heading", { name: "Visits to the Public Pages" })), "the Traffic tab has a visits section");
 check(await page.locator('[aria-busy="true"]').first().waitFor({ state: "detached", timeout: 15000 }).then(() => true, () => false), "both Traffic parts finish loading");
 await shot("traffic");
 await scan("traffic");
 
 // Automations: every nudge starts off, and nothing is switched on here.
 await tab("Automations");
-check(await page.getByRole("heading", { name: "Alerts to you" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the Automations tab shows the alerts");
-const nudges = page.getByRole("listitem").filter({ has: page.getByRole("button", { name: "Edit the email" }) });
+check(await page.getByRole("heading", { name: "Alerts to You" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the Automations tab shows the alerts");
+const nudges = page.getByRole("listitem").filter({ has: page.getByRole("button", { name: "Edit the Email" }) });
 await nudges.first().waitFor({ timeout: 8000 });
 check((await nudges.count()) >= 4 && (await nudges.getByText("On", { exact: true }).count()) === 0, "every automatic nudge starts off");
-await nudges.first().getByRole("button", { name: "Turn on" }).click();
-check(await nudges.first().getByRole("button", { name: "Start sending" }).isDisabled(), "turning a nudge on waits for TURN ON to be typed");
+await nudges.first().getByRole("button", { name: "Turn On" }).click();
+check(await nudges.first().getByRole("button", { name: "Start Sending" }).isDisabled(), "turning a nudge on waits for TURN ON to be typed");
 await shot("automations");
 await scan("automations");
 
 // Saved replies in the inbox.
 await tab("Inbox");
 await page.getByRole("button", { name: /^Edit \(\d+\)$/ }).click();
-check(await vis(page.getByRole("button", { name: "Add a reply" })), "the inbox offers saved replies to edit");
+check(await vis(page.getByRole("button", { name: "Add a Reply" })), "the inbox offers saved replies to edit");
 await scan("saved replies");
 
 // The System page checks every service from the server; tokens never reach the browser. The status pages are
@@ -252,17 +252,17 @@ check(await page.getByRole("heading", { name: "Database", exact: true }).waitFor
 const database = page.locator("li").filter({ has: page.getByRole("heading", { name: "Database", exact: true }) });
 check(await database.getByText(/answered in \d+ ms/).waitFor({ timeout: 30000 }).then(() => true, () => false), "the database card fills in when its check is done");
 check(await page.locator('[aria-busy="true"]').first().waitFor({ state: "detached", timeout: 30000 }).then(() => true, () => false), "every card finishes loading");
-check(await vis(page.getByRole("heading", { name: "Provider status pages" })), "the System tab shows the providers' status pages");
+check(await vis(page.getByRole("heading", { name: "Provider Status Pages" })), "the System tab shows the providers' status pages");
 check(await vis(page.getByText(/Set VERCEL_TOKEN/)), "a check that isn't set up says which settings to add");
 await shot("system");
 await scan("system");
 
 // Maintenance mode: only the home page and this panel keep working, and every tab shows a banner.
-const maintenance = page.getByRole("region", { name: "Maintenance mode" });
-await maintenance.getByRole("button", { name: "Turn on maintenance mode…" }).click();
+const maintenance = page.getByRole("region", { name: "Maintenance Mode" });
+await maintenance.getByRole("button", { name: "Turn On Maintenance Mode…" }).click();
 await maintenance.getByLabel("Type TURN ON to confirm").fill("TURN ON");
-await maintenance.getByRole("button", { name: "Start maintenance" }).click();
-const banner = page.getByRole("region", { name: /Maintenance mode is on/ });
+await maintenance.getByRole("button", { name: "Start Maintenance" }).click();
+const banner = page.getByRole("region", { name: /Maintenance Mode Is On/ });
 check(await banner.waitFor({ timeout: 8000 }).then(() => true, () => false), "turning on maintenance mode shows a banner");
 await scan("maintenance");
 const home = await page.request.get(`${BASE}/`);
@@ -273,7 +273,7 @@ check(play.status() === 503 && (await play.text()).includes("is under maintenanc
 check(sync.status() === 503 && sync.headers()["x-maintenance"] === "on", "sync waits during maintenance");
 await tab("Codes");
 check(await vis(banner), "the banner shows on every admin tab");
-await banner.getByRole("button", { name: "Turn off maintenance mode" }).click();
+await banner.getByRole("button", { name: "Turn Off Maintenance Mode" }).click();
 check(await banner.waitFor({ state: "detached", timeout: 8000 }).then(() => true, () => false), "turning maintenance mode off hides the banner");
 check((await page.request.get(`${BASE}/play/`)).status() === 200, "pages work again once maintenance mode is off");
 

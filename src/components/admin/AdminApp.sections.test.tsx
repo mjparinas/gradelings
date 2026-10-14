@@ -83,7 +83,7 @@ describe("AdminApp sign-in", () => {
     render(<AdminApp />);
     await user.type(await screen.findByLabelText("Email"), "owner@example.com");
     await user.type(screen.getByLabelText("Password"), "secret-password");
-    await user.click(screen.getByRole("button", { name: "Sign in" }));
+    await user.click(screen.getByRole("button", { name: "Sign In" }));
     expect(mocks.call).toHaveBeenCalledWith("/api/auth/login/", "POST", { email: "owner@example.com", password: "secret-password" });
     expect(await screen.findByRole("heading", { name: "Overview" })).toBeInTheDocument();
     expect(screen.getByText("owner@example.com")).toBeInTheDocument();
@@ -99,17 +99,17 @@ describe("AdminApp sign-in", () => {
     render(<AdminApp />);
     await user.type(await screen.findByLabelText("Email"), "owner@example.com");
     await user.type(screen.getByLabelText("Password"), "wrong");
-    await user.click(screen.getByRole("button", { name: "Sign in" }));
+    await user.click(screen.getByRole("button", { name: "Sign In" }));
     expect(await screen.findByRole("alert")).toHaveTextContent("Email or password is incorrect.");
-    expect(screen.getByRole("button", { name: "Sign in" })).toBeEnabled();
+    expect(screen.getByRole("button", { name: "Sign In" })).toBeEnabled();
   });
 
   it("signs out back to the sign-in form", async () => {
     asAdmin();
     const user = userEvent.setup();
     render(<AdminApp />);
-    await user.click(await screen.findByRole("button", { name: "Sign out" }));
-    expect(await screen.findByRole("heading", { name: "Admin sign in" })).toBeInTheDocument();
+    await user.click(await screen.findByRole("button", { name: "Sign Out" }));
+    expect(await screen.findByRole("heading", { name: "Admin Sign In" })).toBeInTheDocument();
     expect(mocks.call).toHaveBeenCalledWith("/api/auth/logout/", "POST");
   });
 });
@@ -172,22 +172,22 @@ describe("AdminApp users", () => {
 
     await user.clear(screen.getByLabelText("Extend trial by (days)"));
     await user.type(screen.getByLabelText("Extend trial by (days)"), "7");
-    await user.click(screen.getByRole("button", { name: "Extend trial" }));
+    await user.click(screen.getByRole("button", { name: "Extend Trial" }));
     expect(sent("/api/admin/users/", "POST")).toEqual({ familyId: "fam-1", action: "extend-trial", days: 7 });
     expect(await screen.findByText("Trial extended.")).toBeInTheDocument();
 
-    await user.click(screen.getByRole("button", { name: "Add days" }));
+    await user.click(screen.getByRole("button", { name: "Add Days" }));
     expect(sent("/api/admin/users/", "POST")).toEqual({ familyId: "fam-1", action: "grant-access", days: 365 });
 
-    await user.click(screen.getByRole("button", { name: "Remove access" }));
+    await user.click(screen.getByRole("button", { name: "Remove Access" }));
     expect(sent("/api/admin/users/", "POST")).toEqual({ familyId: "fam-1", action: "remove-access" });
 
     // Only the unconfirmed parent can be confirmed by hand.
-    expect(screen.getAllByRole("button", { name: "Mark email confirmed" })).toHaveLength(1);
-    await user.click(screen.getByRole("button", { name: "Mark email confirmed" }));
+    expect(screen.getAllByRole("button", { name: "Mark Email Confirmed" })).toHaveLength(1);
+    await user.click(screen.getByRole("button", { name: "Mark Email Confirmed" }));
     expect(sent("/api/admin/users/", "POST")).toEqual({ familyId: "fam-1", action: "verify-email", parentId: "p-2" });
 
-    await user.click(screen.getByRole("button", { name: "Sign out everywhere" }));
+    await user.click(screen.getByRole("button", { name: "Sign Out Everywhere" }));
     expect(sent("/api/admin/users/", "POST")).toEqual({ familyId: "fam-1", action: "sign-out" });
     expect(await screen.findByText("Signed out on every device.")).toBeInTheDocument();
   });
@@ -221,14 +221,14 @@ describe("AdminApp users", () => {
     const user = await openTab("Users");
     await user.click(await screen.findByRole("button", { name: "pat@example.com" }));
     expect(await screen.findByText("None yet.")).toBeInTheDocument();
-    expect(screen.queryByRole("button", { name: "Remove access" })).not.toBeInTheDocument();
-    const del = screen.getByRole("button", { name: "Delete account" });
+    expect(screen.queryByRole("button", { name: "Remove Access" })).not.toBeInTheDocument();
+    const del = screen.getByRole("button", { name: "Delete Account" });
     expect(del).toBeDisabled();
     await user.type(screen.getByLabelText("Type the account's email to confirm"), "pat@example.com");
     await user.click(del);
     expect(sent("/api/admin/users/", "POST")).toEqual({ familyId: "fam-1", action: "delete", confirm: "pat@example.com" });
     expect(await screen.findByText("The account and all its data were deleted.")).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Back to users" }));
+    await user.click(screen.getByRole("button", { name: "Back to Users" }));
     expect(await screen.findByRole("heading", { name: "Users" })).toBeInTheDocument();
   });
 
@@ -241,7 +241,7 @@ describe("AdminApp users", () => {
     const user = await openTab("Users");
     await user.click(await screen.findByRole("button", { name: "pat@example.com" }));
     await user.type(await screen.findByLabelText("Type the account's email to confirm"), "wrong@example.com");
-    await user.click(screen.getByRole("button", { name: "Delete account" }));
+    await user.click(screen.getByRole("button", { name: "Delete Account" }));
     expect(await screen.findByRole("alert")).toHaveTextContent("The email doesn't match.");
     expect(screen.queryByText("The account and all its data were deleted.")).not.toBeInTheDocument();
   });
@@ -298,7 +298,7 @@ describe("AdminApp codes", () => {
     await user.type(screen.getByLabelText("Note (who it's for, optional)"), "Pilot school");
     await user.click(screen.getByRole("button", { name: "Expires (optional)" }));
     await user.click(within(screen.getByRole("dialog", { name: "Expires (optional)" })).getByRole("button", { name: /^28 / }));
-    await user.click(screen.getByRole("button", { name: "Make code" }));
+    await user.click(screen.getByRole("button", { name: "Make Code" }));
     expect(await screen.findByText("LIFE-TIME-CODE")).toBeInTheDocument();
     const body = sent("/api/admin/codes/", "POST") as Record<string, unknown>;
     expect(body).toMatchObject({ kind: "access", note: "Pilot school", code: undefined });
@@ -321,7 +321,7 @@ describe("AdminApp codes", () => {
     await user.click(await screen.findByRole("option", { name: "A number of months" }));
     await user.clear(screen.getByLabelText("Months"));
     await user.type(screen.getByLabelText("Months"), "6");
-    await user.click(screen.getByRole("button", { name: "Make code" }));
+    await user.click(screen.getByRole("button", { name: "Make Code" }));
     expect(sent("/api/admin/codes/", "POST")).toMatchObject({ kind: "discount", percentOff: 25, duration: "repeating", months: 6 });
     expect(await screen.findByRole("alert")).toHaveTextContent("That code is taken.");
   });
@@ -340,7 +340,7 @@ describe("AdminApp flags", () => {
     expect(within(items[1]).queryByLabelText("Rollout (% of families)")).not.toBeInTheDocument();
     expect(within(items[1]).getByRole("switch")).not.toBeChecked();
 
-    const save = within(items[0]).getByRole("button", { name: "Save rollout" });
+    const save = within(items[0]).getByRole("button", { name: "Save Rollout" });
     expect(save).toBeDisabled();
     await user.clear(within(items[0]).getByLabelText("Rollout (% of families)"));
     await user.type(within(items[0]).getByLabelText("Rollout (% of families)"), "25");
@@ -377,7 +377,7 @@ describe("AdminApp A/B tests", () => {
     asAdmin((url, method) => {
       if (url === "/api/admin/experiments/" && method === "GET") return { experiments: [exp({})] };
     });
-    const user = await openTab("A/B tests");
+    const user = await openTab("A/B Tests");
     const card = (await screen.findByRole("heading", { name: "home-colours" })).closest("li")!;
     expect(card).toHaveTextContent("Running since");
     expect(card).toHaveTextContent("Variants: control 25% (control), warm 75%");
@@ -387,7 +387,7 @@ describe("AdminApp A/B tests", () => {
 
     await user.click(within(card).getByRole("combobox", { name: "Everyone sees" }));
     await user.click(screen.getByRole("option", { name: "warm" }));
-    await user.click(within(card).getByRole("button", { name: "Stop test" }));
+    await user.click(within(card).getByRole("button", { name: "Stop Test" }));
     expect(sent("/api/admin/experiments/", "PATCH")).toEqual({ key: "home-colours", action: "stop", winner: "warm" });
     expect(await screen.findByText("Stopped.")).toBeInTheDocument();
   });
@@ -396,10 +396,10 @@ describe("AdminApp A/B tests", () => {
     asAdmin((url, method) => {
       if (url === "/api/admin/experiments/" && method === "GET") return { experiments: [exp({})] };
     });
-    const user = await openTab("A/B tests");
+    const user = await openTab("A/B Tests");
     const card = (await screen.findByRole("heading", { name: "home-colours" })).closest("li")!;
     expect(within(card).getByRole("status")).toHaveTextContent(/warm is ahead: 25% of families paying against 10%/);
-    await user.click(within(card).getByRole("button", { name: "Use warm for everyone" }));
+    await user.click(within(card).getByRole("button", { name: "Use warm for Everyone" }));
     expect(sent("/api/admin/experiments/", "PATCH")).toEqual({ key: "home-colours", action: "stop", winner: "warm" });
     expect(await within(card).findByText("Stopped. Everyone now sees warm.")).toBeInTheDocument();
   });
@@ -408,7 +408,7 @@ describe("AdminApp A/B tests", () => {
     asAdmin((url, method) => {
       if (url === "/api/admin/experiments/" && method === "GET") return { experiments: [exp({ results: [{ variant: "control", families: 5, paid: 0, active: 0, paidP: null, activeP: null }, { variant: "warm", families: 6, paid: 3, active: 3, paidP: 0.1, activeP: 0.1 }] })] };
     });
-    await openTab("A/B tests");
+    await openTab("A/B Tests");
     const card = (await screen.findByRole("heading", { name: "home-colours" })).closest("li")!;
     expect(within(card).getByRole("status")).toHaveTextContent(/Too early to call/);
     expect(within(card).queryByRole("button", { name: /for everyone/ })).not.toBeInTheDocument();
@@ -418,7 +418,7 @@ describe("AdminApp A/B tests", () => {
     asAdmin((url, method) => {
       if (url === "/api/admin/experiments/" && method === "GET") return { experiments: [exp({ status: "draft", startedAt: null, results: [], description: "" })] };
     });
-    const user = await openTab("A/B tests");
+    const user = await openTab("A/B Tests");
     const card = (await screen.findByRole("heading", { name: "home-colours" })).closest("li")!;
     expect(card).toHaveTextContent("Draft");
     expect(within(card).queryByRole("table")).not.toBeInTheDocument();
@@ -426,7 +426,7 @@ describe("AdminApp A/B tests", () => {
     expect(sent("/api/admin/experiments/", "PATCH")).toEqual({ key: "home-colours", action: "start" });
 
     await user.click(within(card).getByRole("button", { name: "Delete" }));
-    await user.click(within(card).getByRole("button", { name: "Yes, delete home-colours" }));
+    await user.click(within(card).getByRole("button", { name: "Yes, Delete home-colours" }));
     expect(mocks.call).toHaveBeenCalledWith("/api/admin/experiments/?key=home-colours", "DELETE", undefined);
   });
 
@@ -436,20 +436,20 @@ describe("AdminApp A/B tests", () => {
         return { experiments: [exp({ status: "stopped", stoppedAt: Date.now(), winner: "warm" }), exp({ key: "old-test", status: "stopped", stoppedAt: Date.now(), winner: null, results: [{ variant: "control", families: 0, paid: 0, active: 0, paidP: 0.03, activeP: null }] })] };
       }
     });
-    const user = await openTab("A/B tests");
+    const user = await openTab("A/B Tests");
     const card = (await screen.findByRole("heading", { name: "home-colours" })).closest("li")!;
     expect(card).toHaveTextContent(/Stopped .*, everyone sees warm/);
     const old = screen.getByRole("heading", { name: "old-test" }).closest("li")!;
     expect(old).toHaveTextContent("everyone sees the control");
     // No families yet: no percentage to show.
     expect(within(old).getAllByRole("row")[1]).toHaveTextContent("0 · — (p = 0.030, significant)");
-    await user.click(within(card).getByRole("button", { name: "Change winner" }));
+    await user.click(within(card).getByRole("button", { name: "Change Winner" }));
     expect(await within(card).findByText("Saved.")).toBeInTheDocument();
   });
 
   it("says when there are no tests yet", async () => {
     asAdmin();
-    await openTab("A/B tests");
+    await openTab("A/B Tests");
     expect(await screen.findByText("No tests yet.")).toBeInTheDocument();
   });
 });
@@ -502,20 +502,20 @@ describe("AdminApp engagement", () => {
         return {
           items: [
             { key: "inbox:m1", kind: "inbox", title: "Email waiting for an answer", detail: "“Help” from Lee", at: 1, action: { type: "inbox", id: "m1" } },
-            { key: "reports", kind: "reports", title: "Question reports", detail: "2 waiting.", at: 1, action: { type: "reports" } },
+            { key: "reports", kind: "reports", title: "Question Reports", detail: "2 waiting.", at: 1, action: { type: "reports" } },
           ],
         };
       if (url === "/api/admin/inbox/?id=m1") return { message: { id: "m1", from: "lee@example.com", fromEmail: "lee@example.com", subject: "Help", receivedAt: 1, attachments: 0, familyId: null, handledAt: null, repliedAt: null, text: "Hi", replyTo: "lee@example.com", attachmentNames: [] } };
     });
     const user = userEvent.setup();
     render(<AdminApp />);
-    const todo = await screen.findByRole("button", { name: /^To do\s*2\s*waiting$/ });
+    const todo = await screen.findByRole("button", { name: /^To Do\s*2\s*waiting$/ });
     await user.click(todo);
-    await user.click(await screen.findByRole("button", { name: "Read and reply" }));
+    await user.click(await screen.findByRole("button", { name: "Read and Reply" }));
     expect(screen.getByRole("button", { name: "Inbox" })).toHaveAttribute("aria-current", "page");
     expect(await screen.findByRole("heading", { name: "Help" })).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: /^To do/ }));
-    await user.click(await screen.findByRole("button", { name: "Open reports" }));
+    await user.click(screen.getByRole("button", { name: /^To Do/ }));
+    await user.click(await screen.findByRole("button", { name: "Open Reports" }));
     expect(screen.getByRole("button", { name: "Reports" })).toHaveAttribute("aria-current", "page");
   });
 
@@ -554,10 +554,10 @@ describe("AdminApp engagement", () => {
     const row = within(await screen.findByRole("table")).getAllByRole("row")[1];
     expect([...row.children].slice(4).map((c) => c.textContent)).toEqual(["2 days ago", "Never"]);
     await user.click(screen.getByRole("button", { name: "pat@example.com" }));
-    expect(await screen.findByRole("heading", { name: "Email this family" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "Email This Family" })).toBeInTheDocument();
     expect(screen.getByText(/Last emailed from here 3 days ago/)).toBeInTheDocument();
     expect(screen.getByText(/news and tips on/)).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Send email" }));
+    await user.click(screen.getByRole("button", { name: "Send Email" }));
     expect(sent("/api/admin/email/", "POST")).toMatchObject({ action: "send", familyId: "fam-1" });
   });
   it("emails the group stuck at a funnel step from the Emails tab", async () => {
@@ -566,7 +566,7 @@ describe("AdminApp engagement", () => {
       if (url === "/api/admin/email/?segment=no-child") return { total: 3, ready: 3, batch: 3, skipped: { unconfirmed: 0, unsubscribed: 0, bounced: 0, recent: 0 }, sample: [] };
     });
     const user = await openTab("Funnel");
-    await user.click(await screen.findByRole("button", { name: "Email the families who haven't added a child" }));
+    await user.click(await screen.findByRole("button", { name: "Email the Families Who Haven't Added a Child" }));
     expect(screen.getByRole("button", { name: "Emails" })).toHaveAttribute("aria-current", "page");
     expect(await screen.findByRole("combobox", { name: "Group" })).toHaveTextContent("No child added");
     expect(mocks.call).toHaveBeenCalledWith("/api/admin/email/?segment=no-child");
@@ -582,6 +582,17 @@ describe("AdminApp engagement", () => {
       expect(await screen.findByRole("heading", { name: "Billing" })).toBeInTheDocument();
       expect(screen.getByRole("button", { name: "Users" })).toHaveAttribute("aria-current", "page");
       expect(screen.getByText("Their last payment failed.")).toBeInTheDocument();
+    } finally {
+      window.history.replaceState(null, "", "/");
+    }
+  });
+
+  it("opens a tab from a link written before the tab names were capitalized", async () => {
+    window.history.replaceState(null, "", "/admin/?tab=a%2Fb%20tests");
+    try {
+      asAdmin();
+      render(<AdminApp />);
+      expect(await screen.findByRole("button", { name: "A/B Tests" })).toHaveAttribute("aria-current", "page");
     } finally {
       window.history.replaceState(null, "", "/");
     }

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { call } from "@/lib/classroom";
 import type { Cell, CellKind, Detail, DetailView } from "@/lib/adminDetail";
 import { LoadingRows } from "./Skeleton";
+import { titleCase } from "@/lib/titleCase";
 
 // The window a dashboard tile opens: a few headline numbers, then the list behind the tile. Lists come from
 // /api/admin/stats/detail/ (or are built in the panel, for the money breakdowns). Emails open the family in Users.
@@ -107,7 +108,7 @@ export function DetailModal({
       <div ref={panel} role="dialog" aria-modal="true" aria-labelledby="detail-h" onKeyDown={onKey} className="my-auto w-full max-w-4xl rounded-2xl bg-white p-4 shadow-xl sm:p-6">
         <div className="flex items-start justify-between gap-3">
           <h2 id="detail-h" className="text-xl font-bold sm:text-2xl">
-            {title}
+            {titleCase(title)}
           </h2>
           <button ref={close} type="button" onClick={onClose} className="min-h-11 shrink-0 rounded-xl border border-line bg-white px-4 font-bold">
             Close
@@ -134,7 +135,7 @@ export function DetailModal({
             )}
             {detail.tables.map((t, i) => (
               <section key={i} className="mt-5" aria-label={t.title ?? detail.title}>
-                {t.title && <h3 className="text-lg font-bold">{t.title}</h3>}
+                {t.title && <h3 className="text-lg font-bold">{titleCase(t.title)}</h3>}
                 {t.rows.length === 0 ? (
                   <p className="mt-2 text-sm text-ink-soft">Nothing here yet.</p>
                 ) : (
