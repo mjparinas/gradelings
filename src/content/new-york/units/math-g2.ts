@@ -5,7 +5,7 @@ import type { Q } from "../own";
 import { bank, mathUnit } from "./math-kit";
 
 // New York's own Grade 2 math units (`ny-` ids): adding up to four two-digit numbers and explaining why addition and
-// subtraction strategies work (NY-2.NBT.6, 2.NBT.9), and lengths: measuring with two units, number lines and line plots
+// subtraction strategies work (NY-2.NBT.6, 2.NBT.9), with two-step word problems (2.OA.1b) and even numbers as doubles (2.OA.3b), and lengths: measuring with two units, number lines and line plots
 // (NY-2.MD.2, 2.MD.6, 2.MD.9).
 
 // ---------- Adding up to four two-digit numbers (NY-2.NBT.6, 2.NBT.9) ----------
@@ -94,6 +94,42 @@ const compensate: Maker = () => {
     [`Take away ${extra} more: ${a - round - extra}`, `Nothing: ${a - round} is the answer`, `Add ${round}: ${a}`],
     `${round} is ${extra} more than ${b}. Taking away ${round} took away ${extra} too many, so give ${extra} back.`,
   );
+};
+
+/** A two-step word problem within 100 (NY-2.OA.1b). */
+const twoStep: Maker = (d) => {
+  const who = pick(names);
+  const kind = pick(["addTake", "takeAdd", "compare"] as const);
+  if (kind === "addTake") {
+    const a = randInt(20, 50);
+    const b = randInt(10, 40);
+    const c = randInt(5, a + b - 10);
+    const prompt = `${who} has ${a} stickers, gets ${b} more, then gives away ${c}. How many stickers now?`;
+    const hint = `Step 1: ${a} + ${b} = ${a + b}. Step 2: ${a + b} − ${c}.`;
+    if (d === 3) return typed(prompt, a + b - c, hint);
+    return num(prompt, a + b - c, hint, { min: 0, max: 100, extra: [a + b, a + b + c, a - c + 10].filter((x) => x >= 0) });
+  }
+  if (kind === "takeAdd") {
+    const a = randInt(40, 80);
+    const b = randInt(10, a - 10);
+    const c = randInt(5, 100 - (a - b));
+    const prompt = `A bus has ${a} people. ${b} get off, then ${c} get on. How many people are on the bus now?`;
+    return num(prompt, a - b + c, `Step 1: ${a} − ${b} = ${a - b}. Step 2: ${a - b} + ${c}.`, { min: 0, max: 100, extra: [a - b, a + b + c, a - b - c].filter((x) => x >= 0) });
+  }
+  const a = randInt(15, 35);
+  const more = randInt(5, 25);
+  const prompt = `${who} picks ${a} apples. A friend picks ${more} more than ${who}. How many apples do they pick in all?`;
+  return num(prompt, 2 * a + more, `Step 1: the friend picks ${a} + ${more} = ${a + more}. Step 2: ${a} + ${a + more}.`, { min: 0, extra: [a + more, 2 * a, a + 2 * more] });
+};
+
+/** An even number as the sum of two equal addends (NY-2.OA.3b). */
+const evenDoubles: Maker = () => {
+  const half = randInt(2, 10);
+  const n = 2 * half;
+  if (pick([true, false])) {
+    return pickOne(`Which equation shows ${n} as two equal addends?`, `${half} + ${half} = ${n}`, [`${half + 1} + ${half - 1} = ${n}`, `${n} + ${n} = ${2 * n}`, `${half} + ${half + 1} = ${n + 1}`], `Split ${n} into two equal groups: each has ${half}.`);
+  }
+  return num(`${n} is even. ${n} = ? + ? with the same number twice. What is the number?`, half, `Share ${n} into two equal groups.`, { min: 1, max: 20, extra: [n, half + 1, half - 1] });
 };
 
 const WHY: Q[] = [
@@ -210,10 +246,10 @@ export const UNITS: Unit[] = [
     title: "Add Up to Four Numbers",
     emoji: "🧮",
     blurb: "Tens with tens, ones with ones",
-    parentNote: "Adding three or four two-digit numbers by adding tens and ones and looking for numbers that make a ten, and explaining in words why these strategies work.",
-    codes: "NY-2.NBT.6; NY-2.NBT.9",
-    text: "adding up to four two-digit numbers using place value, and explaining why addition and subtraction strategies work",
-    makers: [addMany, addMany, addStory, friendlyPair, whyTens, splitWork, compensate, bank(WHY)],
+    parentNote: "Adding three or four two-digit numbers by adding tens and ones and looking for numbers that make a ten, explaining in words why these strategies work, solving two-step word problems within 100, and writing an even number as a double (8 = 4 + 4).",
+    codes: "NY-2.NBT.6; NY-2.NBT.9; NY-2.OA.1b; NY-2.OA.3b",
+    text: "adding up to four two-digit numbers using place value, explaining why addition and subtraction strategies work, solving two-step word problems within 100, and writing an even number as a sum of two equal addends",
+    makers: [addMany, addMany, addStory, twoStep, twoStep, friendlyPair, whyTens, splitWork, compensate, evenDoubles, bank(WHY)],
   }),
   mathUnit({
     id: "ny-g2-lengths",

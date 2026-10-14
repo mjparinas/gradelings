@@ -6,7 +6,7 @@ import { bank, mathUnit } from "./math-kit";
 
 // New York's own Grade 6 math units (`ny-` ids): dividing multi-digit numbers with the standard algorithm (NY-6.NS.2),
 // area and volume models of perfect squares and cubes (NY-6.G.5), and describing a data distribution by its center,
-// spread and shape (NY-6.SP.2, 6.SP.3).
+// spread and shape, starting from statistical questions (NY-6.SP.1a, 6.SP.2, 6.SP.3).
 
 // ---------- Long division (NY-6.NS.2) ----------
 
@@ -176,6 +176,25 @@ const compare: Maker = () => {
   );
 };
 
+/** Which question is statistical: one that expects answers to vary (NY-6.SP.1a). */
+const STAT_QUESTIONS: [statistical: string, not: string][] = [
+  ["How many hours do students in our class sleep on school nights?", "How many hours did Leo sleep last night?"],
+  ["How tall are the sixth graders at our school?", "How tall is the school's front door?"],
+  ["How many books did each student in our grade read this summer?", "How many books are on the top shelf of the library?"],
+  ["How long does it take students in our class to get to school?", "What time does school start?"],
+  ["How many pets do families on our street have?", "How many legs does a dog have?"],
+  ["What were the daily high temperatures in our town last month?", "What was the high temperature in our town yesterday?"],
+  ["How many minutes do players on our team practice each week?", "How many players are on a soccer team on the field?"],
+];
+
+const statQuestion: Maker = () => {
+  const i = randInt(0, STAT_QUESTIONS.length - 1);
+  const [yes, no] = STAT_QUESTIONS[i];
+  const others = sample(STAT_QUESTIONS.filter((_, j) => j !== i), 2).map(([, n]) => n);
+  if (pick([true, false])) return pickOne("Which is a statistical question?", yes, [no, ...others], "A statistical question expects many different answers, so the data varies.");
+  return pickOne(`Why is “${yes}” a statistical question?`, "the answers are expected to vary", ["it has one exact answer", "it asks about one person or thing", "it uses a number"], "A statistical question anticipates variability in the data and accounts for it.");
+};
+
 const SHAPE: Q[] = [
   ["What three things describe a distribution of data?", "its center, its spread and its overall shape", ["its first value, last value and title", "only its greatest value", "the number of questions asked"], "A distribution is described by where it is centered, how spread out it is, and its shape."],
   ["A dot plot has most dots between 3 and 6 and one dot at 15. How would you describe it?", "clustered from 3 to 6, with an outlier at 15", ["evenly spread from 3 to 15", "centered at 15", "no pattern at all"], "Look for clusters, gaps and values far from the rest."],
@@ -213,10 +232,10 @@ export const UNITS: Unit[] = [
     title: "Center, Spread & Shape",
     emoji: "📈",
     blurb: "Describe a set of data",
-    parentNote: "Describing data by its center (mean, median), its spread (range, IQR) and its shape (clusters, outliers, symmetric or skewed), and knowing that each measure sums up the data in one number.",
-    codes: "NY-6.SP.2; NY-6.SP.3",
-    text: "describing a data distribution by its center, spread and overall shape, and telling measures of center from measures of variation",
-    makers: [measure, measure, whichKind, compare, bank(SHAPE), bank(SHAPE)],
+    parentNote: "Telling statistical questions (answers that vary) from questions with one answer, and describing data by its center (mean, median), its spread (range, IQR) and its shape (clusters, outliers, symmetric or skewed), and knowing that each measure sums up the data in one number.",
+    codes: "NY-6.SP.1a; NY-6.SP.2; NY-6.SP.3",
+    text: "recognizing statistical questions, describing a data distribution by its center, spread and overall shape, and telling measures of center from measures of variation",
+    makers: [measure, measure, whichKind, compare, statQuestion, bank(SHAPE), bank(SHAPE)],
   }),
 ];
 
