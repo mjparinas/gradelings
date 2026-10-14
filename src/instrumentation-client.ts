@@ -7,9 +7,11 @@ const dsn = process.env.NEXT_PUBLIC_SENTRY_DSN;
 if (dsn && typeof window !== "undefined") {
   const pending: unknown[] = [];
   let loading = false;
-  // "Script error." is a cross-origin error with no details, which Sentry would drop anyway.
+  // "Script error." is a cross-origin error with no details, which Sentry would drop anyway. A
+  // promise rejected with nothing (null or undefined, usually from a browser extension or another
+  // script on the page) has no message or stack either, so it would only arrive as "null".
   const onError = (e: ErrorEvent) => e.error != null && report(e.error);
-  const onRejection = (e: PromiseRejectionEvent) => report(e.reason);
+  const onRejection = (e: PromiseRejectionEvent) => e.reason != null && report(e.reason);
   function report(error: unknown) {
     pending.push(error);
     if (loading) return;
