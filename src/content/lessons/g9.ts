@@ -220,4 +220,35 @@ export const lessons: GradeLessons = {
     ["x − 3 = 5, so x = 8.", "x − 3 = −5, so x = −2."],
     "x = −2 or x = 8",
   ),
+  // New York
+  "math/ny-g9-two-variable-inequalities": lesson(
+    ["The graph of an equation in x and y is every point that makes it true.", "To graph y > mx + b, draw the line y = mx + b dashed (solid for ≥ or ≤) and shade the side that works.", "The solutions of a system of inequalities are where the shaded half-planes overlap."],
+    "Is (2, 5) a solution of y > 2x − 1?",
+    ["Put in x = 2: 2(2) − 1 = 3.", "Is 5 > 3? Yes."],
+    "Yes, it is in the shaded half-plane",
+  ),
+  "math/ny-g9-comparing-functions": lesson(
+    ["Key features: intercepts, where a function rises or falls, and its greatest or least value.", "To compare two functions shown in different ways, find the same feature in each, such as the rate of change.", "Exponential growth, like 2ˣ, eventually passes any linear or quadratic growth."],
+    "f(x) = 3x + 1. g has values 2, 7, 12 at x = 0, 1, 2. Which grows faster?",
+    ["f grows by 3 for each 1 in x.", "g grows by 5 for each 1 in x."],
+    "g",
+  ),
+  "math/ny-g9-parabolas": lesson(
+    ["Factored form y = (x − r)(x − s) shows the zeros r and s.", "Vertex form y = (x − h)² + k shows the vertex (h, k).", "To solve a line and a parabola together, set the two expressions for y equal and solve the quadratic."],
+    "Where do y = x² and y = x + 2 meet?",
+    ["x² = x + 2, so x² − x − 2 = 0.", "(x − 2)(x + 1) = 0, so x = 2 or x = −1.", "y = 4 or y = 1."],
+    "(2, 4) and (−1, 1)",
+  ),
+  "math/ny-g9-units-accuracy": lesson(
+    ["Write the units with every number; they show which numbers to multiply or divide.", "Units cancel like factors: (gallons/minute) × minutes = gallons.", "Report an answer only as accurately as the measurements allow, and money to the nearest cent."],
+    "A hose sprays 4 gallons per minute. How many gallons in 2 hours?",
+    ["2 hours × 60 minutes per hour = 120 minutes.", "120 minutes × 4 gallons per minute = 480 gallons."],
+    "480 gallons",
+  ),
+  "math/ny-g9-correlation": lesson(
+    ["The correlation coefficient r, found with technology, is between −1 and 1.", "Its sign gives the direction; closeness to 1 or −1 gives the strength of the linear pattern.", "r near 0 means little linear relationship. A strong r never proves cause."],
+    "r = −0.91 for a car's age and its value. What does it mean?",
+    ["The sign is negative: value tends to fall as age rises.", "0.91 is close to 1: the points lie close to a line."],
+    "A strong negative correlation",
+  ),
 };

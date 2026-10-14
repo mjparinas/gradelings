@@ -238,7 +238,7 @@ const factoredForm: Maker = () => {
     `Which form of y = ${expanded} shows its zeros?`,
     `y = ${factor(r)}${factor(s)}`,
     [`y = ${factor(-r)}${factor(-s)}`, `y = ${factor(r)}${factor(-s)}`, `y = ${factor(-r)}${factor(s)}`],
-    `Look for two numbers that multiply to ${r * s} and add to ${-(r + s)}... then check by multiplying out.`,
+    `Find two numbers that multiply to ${r * s} and add to ${-(r + s)}. Check by multiplying the factors out.`,
   );
 };
 
@@ -314,10 +314,10 @@ const PARABOLA_IDEAS: Q[] = [
 /** A rate with its units. */
 const rateUnits: Maker = () => {
   const [what, a, b, ua, ub] = pick([
-    ["A car drives", randInt(2, 6) * 60, randInt(2, 5), "miles", "hours"],
-    ["A printer prints", randInt(3, 9) * 40, randInt(2, 8), "pages", "minutes"],
-    ["A pump moves", randInt(2, 9) * 120, randInt(3, 8), "gallons", "minutes"],
-    ["A cyclist rides", randInt(4, 9) * 30, randInt(2, 6), "kilometers", "hours"],
+    ["A car drives", randInt(9, 14) * 5, randInt(2, 5), "miles", "hours"],
+    ["A printer prints", randInt(4, 12) * 5, randInt(2, 8), "pages", "minutes"],
+    ["A pump moves", randInt(3, 12) * 10, randInt(3, 8), "gallons", "minutes"],
+    ["A cyclist rides", randInt(12, 24), randInt(2, 6), "kilometers", "hours"],
   ] as const);
   const total = a * b;
   return pickOne(
@@ -368,7 +368,7 @@ const accuracy: Maker = () => {
     return pickOne(
       `A scale measures to the nearest 0.1 kg. A calculation from its readings gives ${kg.toFixed(1)}${String(extra).padStart(3, "0")} kg. Which report is sensible?`,
       `${kg.toFixed(1)} kg`,
-      [`${kg.toFixed(1)}${String(extra).padStart(3, "0")} kg`, `${Math.round(kg / 10) * 10} kg`, `${kg.toFixed(1)}0 kg`].filter((x, i, all) => all.indexOf(x) === i),
+      [`${kg.toFixed(1)}${String(extra).padStart(3, "0")} kg`, `${Math.round(kg / 10) * 10} kg`, `${(kg + 1).toFixed(1)} kg`],
       "Don't report more accuracy than the tool measured: the scale reads to tenths.",
     );
   }
@@ -431,27 +431,28 @@ const strongest: Maker = () => {
   );
 };
 
-/** Interpret r in context. */
+/** Interpret r in context; each pair has the direction it really tends to have. */
 const CONTEXTS = [
-  ["hours of practice", "free throws made"],
-  ["outdoor temperature", "heating bill"],
-  ["age of a car", "its value"],
-  ["shoe size", "test score"],
-  ["minutes of exercise", "resting heart rate"],
-  ["hours of sunlight", "plant growth"],
+  ["hours of practice", "free throws made", 1],
+  ["outdoor temperature", "heating bill", -1],
+  ["age of a car", "its value", -1],
+  ["minutes of exercise a week", "resting heart rate", -1],
+  ["hours of sunlight", "plant growth", 1],
+  ["hours of study", "test score", 1],
 ] as const;
 
 const interpretR: Maker = () => {
-  const [x, y] = pick(CONTEXTS);
-  const band = pick(BANDS);
+  const [x, y, sign] = pick(CONTEXTS);
+  const band: Band = pick(sign > 0 ? (["strong positive", "weak positive", "almost no linear"] as const) : (["strong negative", "weak negative", "almost no linear"] as const));
   const r = rIn(band);
+  const dir = (up: boolean) => (up ? "higher" : "lower");
   const right =
     band === "almost no linear"
       ? `${y} has almost no linear relationship with ${x}`
-      : `${y} tends to ${band.endsWith("positive") ? "rise" : "fall"} as ${x} rises, ${band.startsWith("strong") ? "and the points lie close to a line" : "but the points are widely scattered"}`;
+      : `higher ${x} tends to go with ${dir(sign > 0)} ${y}, ${band.startsWith("strong") ? "and the points lie close to a line" : "but the points are widely scattered"}`;
   const wrong = [
-    `${x} causes ${y} to change`,
-    band.endsWith("positive") ? `${y} tends to fall as ${x} rises` : `${y} tends to rise as ${x} rises, and the points lie close to a line`,
+    `${x} causes the change in ${y}`,
+    band === "almost no linear" ? `higher ${x} tends to go with ${dir(sign > 0)} ${y}, and the points lie close to a line` : `higher ${x} tends to go with ${dir(sign < 0)} ${y}`,
     `${Math.round(Math.abs(r) * 100)}% of the points are on the line`,
   ];
   return pickOne(`For ${x} (x) and ${y} (y), r = ${rText(r)}. What does this tell you?`, right, wrong, "r tells the direction and strength of a linear pattern. It never shows cause on its own.");

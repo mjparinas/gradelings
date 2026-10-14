@@ -95,11 +95,11 @@ const DISTANCE_IDEAS: Q[] = [
 // ---------- Linear models of data (NY-8.SP.3) ----------
 
 const MODELS = [
-  { x: "hours of study", y: "test score", one: "hour", xu: "hours", yu: "points", m: [3, 8], b: [45, 65], per: "point", start: "score with no study" },
-  { x: "temperature in °F", y: "drinks sold", one: "degree", xu: "degrees", yu: "drinks", m: [2, 6], b: [5, 30], per: "drink", start: "drinks sold at 0°F" },
-  { x: "age of a tree in years", y: "height in feet", one: "year", xu: "years", yu: "feet", m: [2, 3], b: [2, 6], per: "foot", start: "height when planted" },
-  { x: "weeks of training", y: "push-ups done", one: "week", xu: "weeks", yu: "push-ups", m: [2, 5], b: [8, 20], per: "push-up", start: "push-ups before training" },
-  { x: "days since planting", y: "plant height in cm", one: "day", xu: "days", yu: "cm", m: [2, 4], b: [1, 4], per: "cm", start: "height on the day it was planted" },
+  { x: "hours of study", y: "test score", one: "hour", xu: "hours", yu: "points", m: [3, 8], b: [45, 65], xs: [1, 6], per: "point", start: "score with no study" },
+  { x: "temperature in °F", y: "drinks sold", one: "degree", xu: "degrees", yu: "drinks", m: [2, 6], b: [5, 30], xs: [55, 95], per: "drink", start: "drinks sold at 0°F" },
+  { x: "age of a tree in years", y: "height in feet", one: "year", xu: "years", yu: "feet", m: [2, 3], b: [2, 6], xs: [2, 15], per: "foot", start: "height when planted" },
+  { x: "weeks of training", y: "push-ups done", one: "week", xu: "weeks", yu: "push-ups", m: [2, 5], b: [8, 20], xs: [2, 12], per: "push-up", start: "push-ups before training" },
+  { x: "days since planting", y: "plant height in cm", one: "day", xu: "days", yu: "cm", m: [2, 4], b: [1, 4], xs: [3, 20], per: "cm", start: "height on the day it was planted" },
 ] as const;
 
 function model() {
@@ -110,7 +110,7 @@ function model() {
 /** Predict y from x with the model. */
 const predict: Maker = (d) => {
   const { c, m, b } = model();
-  const x = randInt(2, 12);
+  const x = randInt(c.xs[0], c.xs[1]);
   const prompt = `A line of best fit for ${c.x} (x) and ${c.y} (y) is y = ${linear(m, b)}. What does it predict for x = ${x}?`;
   const hint = `Put ${x} in for x: ${m} × ${x} + ${b}.`;
   if (d === 3) return typed(prompt, m * x + b, hint);
@@ -120,7 +120,7 @@ const predict: Maker = (d) => {
 /** Work backward: which x gives this y? */
 const solveFor: Maker = () => {
   const { c, m, b } = model();
-  const x = randInt(2, 12);
+  const x = randInt(c.xs[0], c.xs[1]);
   return num(`The model y = ${linear(m, b)} links ${c.x} (x) and ${c.y} (y). For what x does it predict y = ${m * x + b}?`, x, `Solve ${m}x + ${b} = ${m * x + b}: subtract ${b}, then divide by ${m}.`, { min: 0, extra: [(m * x + b) / m, x + 1, m * x].map((v) => Math.round(v)) });
 };
 
@@ -149,7 +149,7 @@ const interceptMeaning: Maker = () => {
 /** Find the slope of a model from two points on it. */
 const slopeFromPoints: Maker = () => {
   const { c, m, b } = model();
-  const x1 = randInt(1, 5);
+  const x1 = randInt(c.xs[0], c.xs[0] + 4);
   const x2 = x1 + randInt(2, 6);
   return num(
     `A line of best fit for ${c.x} and ${c.y} passes through (${x1}, ${m * x1 + b}) and (${x2}, ${m * x2 + b}). What is its slope?`,

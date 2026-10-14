@@ -17,6 +17,9 @@ const DATA = [
 /** A value in eighths, written in lowest terms ("1/2", "3/8", "1 1/4"). */
 const show = (eighths: number): string => mixed(eighths, 8);
 
+/** An amount with its unit: "1/2 inch", "1 inch", "1 1/4 inches". */
+const amount = (d: (typeof DATA)[number], n: number, over: number): string => `${mixed(n, over)} ${n <= over ? d.one : d.unit}`;
+
 interface Plot {
   d: (typeof DATA)[number];
   values: number[];
@@ -53,11 +56,11 @@ const totalAtValue: Maker = (level) => {
   const v = p.values[i];
   const n = p.counts[i];
   return fracChoice(
-    `What is the total ${p.d.total} of the ${p.d.what} at ${show(v)} ${p.d.one}?`,
+    `What is the total ${p.d.total} of the ${p.d.what} at ${amount(p.d, v, 8)}?`,
     [n * v, 8],
     [[v, 8], [n + v, 8], [n * v, 64], [n * v + 8, 8]],
     `There are ${n} X marks at ${show(v)}. Multiply: ${n} × ${show(v)}.`,
-    (a, b) => `${mixed(a, b)} ${p.d.unit}`,
+    (a, b) => amount(p.d, a, b),
     p.visual,
   );
 };
@@ -72,7 +75,7 @@ const spread: Maker = (level) => {
     [hi - lo, 8],
     [[hi + lo, 8], [hi, 8], [hi - lo, 16], [p.values.length, 8]],
     `The greatest is ${show(hi)} and the least is ${show(lo)}. Subtract.`,
-    (a, b) => `${mixed(a, b)} ${p.d.unit}`,
+    (a, b) => amount(p.d, a, b),
     p.visual,
   );
 };
@@ -87,7 +90,7 @@ const grandTotal: Maker = (level) => {
     [sum, 8],
     [[plain, 8], [sum + 8, 8], [sum - 4, 8], [sum, 16]],
     "Multiply each value by its number of X marks, then add all the results.",
-    (a, b) => `${mixed(a, b)} ${p.d.unit}`,
+    (a, b) => amount(p.d, a, b),
     p.visual,
   );
 };

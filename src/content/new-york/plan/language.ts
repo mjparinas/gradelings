@@ -360,7 +360,7 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
       "reading-detectives",
       "share",
       "4R1; 4R2; 4R3; 4R4",
-      "main idea, details and summaries",
+      "main idea, details, inferences, word meanings and summaries",
     ],
     [
       "text-features",

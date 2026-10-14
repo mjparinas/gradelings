@@ -4,10 +4,10 @@ import { type Maker, pickOne } from "../../washington/units/math-kit";
 import { nys } from "../cite";
 import type { Q } from "../own";
 
-// New York's own math units (`ny-` ids), for the New York standards no other framework's unit practises: exploring
-// coins in Kindergarten (NY-K.MD.4) and naming coins and counting dimes and pennies in Grade 1 (NY-1.MD.3b, 3c). Every
-// other New York math unit is shared or adopted (../plan/math.ts). A set of 8 questions cycles through the unit's
-// question makers in a shuffled order, so every set mixes the kinds of question.
+// New York's own math units (`ny-` ids), for the New York standards no other framework's unit practises (coins in
+// Kindergarten and Grade 1, and the topics listed at the top of each math-<grade>.ts). Every other New York math unit is
+// shared or adopted (../plan/math.ts). A set of 8 questions cycles through the unit's question makers in a shuffled
+// order, so every set mixes the kinds of question.
 
 export interface Spec {
   id: string;
