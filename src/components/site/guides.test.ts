@@ -15,7 +15,7 @@ describe("guide pages", () => {
   });
 
   it("does not collide with curriculum pages", () => {
-    const curriculum = new Set(allCurriculumPaths());
+    const curriculum = new Set(allCurriculumPaths().map((p) => p.path));
     for (const p of paths) expect(curriculum.has(p)).toBe(false);
   });
 

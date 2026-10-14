@@ -1,4 +1,4 @@
-import { coursesFor, curriculumPath, frameworkBySlug, gradeLabel, gradeSpan, resolve, subjectSeoTitle, unitKey } from "@/components/site/curriculum";
+import { coursesFor, curriculumPath, frameworkBySlug, gradeLabel, gradeSpan, resolve, sampleSeed, subjectSeoTitle, unitKey } from "@/components/site/curriculum";
 import type { Framework } from "@/content/frameworks";
 import { localeOf } from "@/content/locale";
 import { APP_NAME } from "@/lib/brand";
@@ -93,7 +93,7 @@ export function unitCard(params: Params): OgCardText | undefined {
   };
   const key = unitKey(grade, course.subject, unit.id);
   for (const difficulty of [1, 2, 3] as const) {
-    const qs = withSeed(hashSeed(`${key}:card:${difficulty}`), () => unit.generate({ difficulty }));
+    const qs = withSeed(hashSeed(`${sampleSeed(f, key)}:card:${difficulty}`), () => unit.generate({ difficulty }));
     for (const q of qs) {
       const question = cardQuestion(q);
       if (question) return { ...base, title: `Can your ${gradeChild(f, grade)} solve this?`, question };

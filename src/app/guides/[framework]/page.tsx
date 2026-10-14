@@ -16,7 +16,9 @@ import { guidePath } from "@/components/site/guides";
 import { GUIDE_FRAMEWORKS, guidesFor } from "@/content/guides";
 import { getSubjectMeta } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
+import { curriculumUpdated, guidesUpdated, latest } from "@/content/updated";
 import { JsonLd } from "@/lib/site";
+import { pageMeta } from "@/lib/pageMeta";
 
 export const dynamicParams = false;
 
@@ -30,11 +32,12 @@ export async function generateMetadata({
   const r = resolve(await params);
   if (!r) return {};
   const f = r.framework;
-  return {
+  return pageMeta({
     title: `${f.name} parent guides and free printable practice sheets`,
     description: `Free guides for ${f.shortName} parents: what each grade learns in the ${f.curriculumName}, how to help at home, ${guidesFor(f.id).competencies.label}, the ${guidesFor(f.id).assessment.short} and printable practice sheets for ${gradeSpan(f)}.`,
-    alternates: { canonical: guidePath.hub(r.framework) },
-  };
+    path: guidePath.hub(r.framework),
+    framework: f,
+  });
 }
 
 export default async function GuidesHub({
@@ -63,6 +66,8 @@ export default async function GuidesHub({
             headline: title,
             description,
             path: guidePath.hub(f),
+            framework: f,
+            updated: latest(guidesUpdated(f.id), curriculumUpdated(f.id)),
           }),
         ]}
       />

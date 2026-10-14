@@ -3,12 +3,13 @@ import Link from "next/link";
 import { LegalPage, Section } from "@/components/site/Legal";
 import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS } from "@/lib/brand";
 import { CONSENT_NOTICE } from "@/lib/coppa";
+import { pageMeta } from "@/lib/pageMeta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Privacy policy",
   description: `How ${APP_NAME} handles your family’s information: what we collect, why, who sees it, and how to export or delete everything.`,
-  alternates: { canonical: "/privacy/" },
-};
+  path: "/privacy/",
+});
 
 export default function PrivacyPage() {
   return (

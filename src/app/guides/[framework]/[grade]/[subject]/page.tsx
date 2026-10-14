@@ -9,8 +9,10 @@ import { HOME_TIPS, GUIDE_FRAMEWORKS } from "@/content/guides";
 import { ageBandFor, getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { Disclosure } from "@/components/Disclosure";
+import { courseUpdated, guidesUpdated, latest } from "@/content/updated";
 import { JsonLd } from "@/lib/site";
 import { ShareButton } from "@/components/site/ShareButton";
+import { pageMeta } from "@/lib/pageMeta";
 
 export const dynamicParams = false;
 
@@ -27,11 +29,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!r?.course) return {};
   const { framework: f, grade, course } = r;
   const name = subjectSeoTitle(course.subject);
-  return {
+  return pageMeta({
     title: `${gradeLabel(f, grade)} ${name} help at home (${f.shortName} curriculum)`,
     description: `How to help your ${gradeLabel(f, grade)} child with ${subjectInSentence(name)} at home in ${f.name}: what they learn this year, simple activities, and what the report card levels mean.`,
-    alternates: { canonical: guidePath.subject(f, grade, course.subject) },
-  };
+    path: guidePath.subject(f, grade, course.subject),
+    framework: f,
+    type: "article",
+  });
 }
 
 export default async function SubjectGuide({ params }: Props) {
@@ -74,6 +78,8 @@ export default async function SubjectGuide({ params }: Props) {
             headline: `${label} ${name} help at home (${f.shortName})`,
             description: `How to help a ${label} child with ${subjectInSentence(name)} at home in ${f.name}.`,
             path: guidePath.subject(f, grade, course.subject),
+            framework: f,
+            updated: latest(guidesUpdated(f.id), courseUpdated(f.id, grade, course.subject)),
           }),
         ]}
       />

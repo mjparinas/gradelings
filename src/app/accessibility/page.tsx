@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { Section } from "@/components/site/Legal";
 import { APP_NAME, CONTACT_EMAIL } from "@/lib/brand";
+import { pageMeta } from "@/lib/pageMeta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Accessibility",
   description: `What ${APP_NAME} does to be usable by every child, what we have tested, and what we haven’t yet.`,
-  alternates: { canonical: "/accessibility/" },
-};
+  path: "/accessibility/",
+});
 
 export default function AccessibilityPage() {
   return (

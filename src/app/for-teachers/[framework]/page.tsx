@@ -9,6 +9,7 @@ import { TEACHER_FRAMEWORKS, teacherPath } from "@/components/site/teachers";
 import { SUBJECTS, isCoreSubject } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { JsonLd } from "@/lib/site";
+import { pageMeta } from "@/lib/pageMeta";
 
 export const dynamicParams = false;
 
@@ -26,11 +27,12 @@ async function find(params: Props["params"]) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const f = await find(params);
   if (!f) return {};
-  return {
+  return pageMeta({
     title: `${f.region} classroom practice for teachers, ${gradeSpan(f, true)}`,
     description: `Assign ${f.curriculumName} units to your class in ${APP_NAME}: math, English language arts, science and social studies for every grade, with a free sample question for each unit.`,
-    alternates: { canonical: teacherPath.framework(f) },
-  };
+    path: teacherPath.framework(f),
+    framework: f,
+  });
 }
 
 export default async function TeacherFrameworkPage({ params }: Props) {

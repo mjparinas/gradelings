@@ -1,6 +1,9 @@
 import { APP_NAME } from "@/lib/brand";
 import { PRICES_BY_CURRENCY, type Currency } from "@/lib/plan";
-import { absolute } from "@/lib/site";
+import type { Framework } from "@/content/frameworks";
+import type { GradeId } from "@/content/types";
+import { pageLocale } from "@/lib/pageMeta";
+import { ORG_REF, absolute } from "@/lib/site";
 
 export function breadcrumbJsonLd(items: { label: string; href?: string }[]) {
   return {
@@ -23,8 +26,11 @@ export function faqJsonLd(faqs: { q: string; a: string }[]) {
   };
 }
 
-/** A guide article published by the site. No dates: they'd go stale or be made up. */
-export function articleJsonLd(a: { headline: string; description: string; path: string }) {
+/**
+ * A guide article published by the site. `updated` is the day its content last changed as recorded by the curriculum
+ * lock (src/content/updated.ts); with no recorded day there is no date, never a made-up one.
+ */
+export function articleJsonLd(a: { headline: string; description: string; path: string; framework?: Pick<Framework, "country">; updated?: string }) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -32,11 +38,29 @@ export function articleJsonLd(a: { headline: string; description: string; path: 
     description: a.description,
     url: absolute(a.path),
     mainEntityOfPage: absolute(a.path),
-    inLanguage: "en-CA",
+    inLanguage: pageLocale(a.framework),
     isAccessibleForFree: true,
-    author: { "@type": "Organization", name: APP_NAME },
-    publisher: { "@type": "Organization", name: APP_NAME, url: absolute("/") },
+    ...(a.updated ? { dateModified: a.updated } : {}),
+    author: ORG_REF,
+    publisher: ORG_REF,
   };
+}
+
+/** The units (or other pages) a page lists, in order. */
+export function itemListJsonLd(name: string, items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    numberOfItems: items.length,
+    itemListElement: items.map((item, i) => ({ "@type": "ListItem", position: i + 1, name: item.name, url: absolute(item.path) })),
+  };
+}
+
+/** Usual ages for a grade: Kindergarten 5–6, Grade 1 6–7 and so on. */
+export function typicalAgeRange(grade: GradeId): string {
+  const n = grade === "k" ? 0 : Number(grade);
+  return `${n + 5}-${n + 6}`;
 }
 
 /**

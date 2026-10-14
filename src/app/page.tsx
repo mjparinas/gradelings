@@ -18,12 +18,13 @@ import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, TRIAL_
 import { TEACHER_SIGNUP, teacherPath } from "@/components/site/teachers";
 import { Disclosure } from "@/components/Disclosure";
 import { JsonLd, ORG_JSON_LD, SITE_URL } from "@/lib/site";
+import { pageMeta } from "@/lib/pageMeta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: { absolute: `${APP_NAME} · Curriculum practice and learning games for Kindergarten to Grade 9` },
   description: `Ad-free practice for Kindergarten to Grade 9 that follows the curriculum. An adaptive Adventure mode, learning games earned with focused practice, trophies, offline play, and progress reports in the same language as the report card. Free for ${TRIAL_DAYS} days.`,
-  alternates: { canonical: "/" },
-};
+  path: "/",
+});
 
 const FEATURES = [
   { icon: "💛", title: "Kind when they get it wrong", body: "A wrong answer gets a hint and another try. Feedback is gentle and encouraging, never a buzzer and never shaming." },

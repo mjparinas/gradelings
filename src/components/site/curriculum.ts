@@ -4,6 +4,7 @@ import { FRAMEWORKS, getFramework, type Framework } from "@/content/frameworks";
 import { ageBandFor, getSubjectMeta, gradeFromSlug, gradeSlug } from "@/content/subjects";
 import { gradeName, localeOf, localizeText } from "@/content/locale";
 import type { Course, GradeId, SubjectId, Unit } from "@/content/types";
+import { courseUpdated, curriculumUpdated, gradeUpdated, latest, unitUpdated } from "@/content/updated";
 
 // Shared lookups for the public curriculum pages. URLs look like
 // /curriculum/bc/grade-3/math/multiplication/ and never change with content.
@@ -64,15 +65,21 @@ export function resolve(params: { framework: string; grade?: string; subject?: s
   return { framework, grade, course, unit };
 }
 
-export function allCurriculumPaths(): string[] {
-  const paths: string[] = [curriculumPath.index()];
+/** A public page for the sitemap, with the day its content last changed when that is known. */
+export interface SitemapPath {
+  path: string;
+  updated?: string;
+}
+
+export function allCurriculumPaths(): SitemapPath[] {
+  const paths: SitemapPath[] = [{ path: curriculumPath.index(), updated: latest(...FRAMEWORKS.map((f) => curriculumUpdated(f.id))) }];
   for (const f of FRAMEWORKS) {
-    paths.push(curriculumPath.framework(f));
+    paths.push({ path: curriculumPath.framework(f), updated: curriculumUpdated(f.id) });
     for (const g of gradesWithContent(f)) {
-      paths.push(curriculumPath.grade(f, g));
+      paths.push({ path: curriculumPath.grade(f, g), updated: gradeUpdated(f.id, g) });
       for (const c of coursesFor(f, g)) {
-        paths.push(curriculumPath.subject(f, g, c.subject));
-        for (const u of c.units) if (u.standards[f.id]) paths.push(curriculumPath.unit(f, g, c.subject, u.id));
+        paths.push({ path: curriculumPath.subject(f, g, c.subject), updated: courseUpdated(f.id, g, c.subject) });
+        for (const u of c.units) if (u.standards[f.id]) paths.push({ path: curriculumPath.unit(f, g, c.subject, u.id), updated: unitUpdated(f.id, g, c.subject, u.id) });
       }
     }
   }
@@ -106,3 +113,11 @@ export function gradeHeading(framework: Framework, grade: GradeId): string {
 }
 
 export { getFramework, unitKey };
+
+/**
+ * Seed text for a unit's public sample questions. It includes the framework, so a unit that several provinces and
+ * states share shows a different set on each one's page: search engines drop pages that repeat another page.
+ */
+export function sampleSeed(framework: Pick<Framework, "id">, key: string): string {
+  return `${framework.id}:${key}`;
+}

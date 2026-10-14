@@ -3,17 +3,21 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PrintButton } from "@/components/site/PrintButton";
 import { SampleQuestion, answerText } from "@/components/site/SampleQuestion";
-import { breadcrumbJsonLd } from "@/components/site/jsonld";
+import { breadcrumbJsonLd, typicalAgeRange } from "@/components/site/jsonld";
 import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
-import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, unitKey, gradeLabel } from "@/components/site/curriculum";
+import { coursesFor, curriculumPath, gradesWithContent, resolve, sampleSeed, subjectSeoTitle, unitKey, gradeLabel } from "@/components/site/curriculum";
 import { guidePath } from "@/components/site/guides";
 import { hashSeed, withSeed } from "@/content/random";
+import type { Framework } from "@/content/frameworks";
 import { GUIDE_FRAMEWORKS } from "@/content/guides";
 import { getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
 import type { Course, Question } from "@/content/types";
 import { APP_NAME } from "@/lib/brand";
-import { JsonLd, absolute } from "@/lib/site";
+import { courseUpdated } from "@/content/updated";
+import { pageLocale } from "@/lib/pageMeta";
+import { JsonLd, ORG_REF, absolute } from "@/lib/site";
 import { PinLink, ShareButton } from "@/components/site/ShareButton";
+import { pageMeta } from "@/lib/pageMeta";
 
 export const dynamicParams = false;
 
@@ -32,25 +36,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!r?.course) return {};
   const { framework: f, grade, course } = r;
   const name = subjectSeoTitle(course.subject);
-  return {
+  return pageMeta({
     title: `Free printable ${gradeLabel(f, grade)} ${name} practice sheet (${f.shortName})`,
     description: `A free ${gradeLabel(f, grade)} ${subjectInSentence(name)} practice sheet with an answer key, matched to the ${f.curriculumName}. Print it or work through it on screen.`,
-    alternates: { canonical: guidePath.worksheet(f, grade, course.subject) },
-  };
+    path: guidePath.worksheet(f, grade, course.subject),
+    framework: f,
+  });
 }
 
-/** One question per unit, round-robin, seeded so the sheet is identical on every build. */
-function sheetQuestions(course: Course): { q: Question; unit: string; seed: string }[] {
-  const picked: { q: Question; unit: string; seed: string }[] = [];
+/** One question per unit, round-robin, seeded so the sheet is identical on every build and differs by region. */
+function sheetQuestions(f: Framework, course: Course): { q: Question; unit: string; unitId: string; seed: string }[] {
+  const picked: { q: Question; unit: string; unitId: string; seed: string }[] = [];
   const pools = course.units.map((u) => {
-    const key = unitKey(course.grade, course.subject, u.id);
+    const key = sampleSeed(f, unitKey(course.grade, course.subject, u.id));
     return { u, key, qs: withSeed(hashSeed(`sheet:${key}`), () => u.generate({ difficulty: 2 })) };
   });
   for (let round = 0; picked.length < SHEET_QUESTIONS && round < 3; round++) {
     for (const p of pools) {
       if (picked.length >= SHEET_QUESTIONS) break;
       const q = p.qs[round];
-      if (q) picked.push({ q, unit: p.u.title, seed: `${p.key}#sheet${round}` });
+      if (q) picked.push({ q, unit: p.u.title, unitId: p.u.id, seed: `${p.key}#sheet${round}` });
     }
   }
   return picked;
@@ -63,7 +68,8 @@ export default async function WorksheetPage({ params }: Props) {
   const label = gradeLabel(f, grade);
   const name = subjectSeoTitle(course.subject);
   const meta = getSubjectMeta(course.subject);
-  const items = sheetQuestions(course);
+  const items = sheetQuestions(f, course);
+  const updated = courseUpdated(f.id, grade, course.subject);
   const path = guidePath.worksheet(f, grade, course.subject);
   const crumbs = [
     { label: "Home", href: "/" },
@@ -84,13 +90,20 @@ export default async function WorksheetPage({ params }: Props) {
             name: `${label} ${name} practice sheet (${f.shortName})`,
             description: `Free ${label} ${subjectInSentence(name)} practice questions with an answer key, matched to the ${f.curriculumName}.`,
             url: absolute(path),
-            inLanguage: "en-CA",
+            inLanguage: pageLocale(f),
             learningResourceType: "Worksheet",
             educationalUse: "practice",
             isAccessibleForFree: true,
             educationalLevel: label,
+            typicalAgeRange: typicalAgeRange(grade),
             about: name,
-            provider: { "@type": "Organization", name: APP_NAME },
+            ...(updated ? { dateModified: updated } : {}),
+            provider: ORG_REF,
+            // The standards the sheet's questions practise: one question per unit, round-robin.
+            educationalAlignment: [...new Set(items.map((i) => i.unitId))].flatMap((id) => {
+              const standard = course.units.find((u) => u.id === id)?.standards[f.id];
+              return standard ? [{ "@type": "AlignmentObject", alignmentType: "teaches", educationalFramework: f.curriculumName, targetName: standard }] : [];
+            }),
           },
         ]}
       />

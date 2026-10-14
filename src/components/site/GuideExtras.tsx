@@ -8,7 +8,9 @@ import { guidePath } from "@/components/site/guides";
 import { GUIDE_FRAMEWORKS, guidesFor } from "@/content/guides";
 import { APP_NAME } from "@/lib/brand";
 import { Disclosure } from "@/components/Disclosure";
+import { guidesUpdated } from "@/content/updated";
 import { JsonLd } from "@/lib/site";
+import { pageMeta } from "@/lib/pageMeta";
 
 // The two province-specific guide pages (competencies/learning skills and the provincial
 // assessment). Each province serves them at its own slug, taken from its guide copy (see guidePath):
@@ -36,12 +38,14 @@ export async function competenciesMetadata(params: Params): Promise<Metadata> {
   const r = resolve({ framework: (await params).framework });
   if (!r) return {};
   const g = guidesFor(r.framework.id).competencies;
-  return {
+  return pageMeta({
     title: `${r.framework.shortName} ${g.label} explained for parents`,
     description: g.description,
-    alternates: { canonical: guidePath.competencies(r.framework) },
-    openGraph: { title: g.title },
-  };
+    path: guidePath.competencies(r.framework),
+    framework: r.framework,
+    type: "article",
+    shareTitle: g.title,
+  });
 }
 
 export async function CompetenciesView({ params }: { params: Params }) {
@@ -53,7 +57,7 @@ export async function CompetenciesView({ params }: { params: Params }) {
 
   return (
     <SitePage cta>
-      <JsonLd data={[breadcrumbJsonLd(crumbs), faqJsonLd(g.faqs), articleJsonLd({ headline: g.title, description: g.intro, path: guidePath.competencies(f) })]} />
+      <JsonLd data={[breadcrumbJsonLd(crumbs), faqJsonLd(g.faqs), articleJsonLd({ headline: g.title, description: g.intro, path: guidePath.competencies(f), framework: f, updated: guidesUpdated(f.id) })]} />
       <Crumbs items={crumbs} />
       <h1 className="text-4xl font-bold">{g.title}</h1>
       <p className="mt-2 max-w-3xl font-read text-lg text-ink-soft">{g.intro}</p>
@@ -116,15 +120,17 @@ export async function assessmentMetadata(params: Params): Promise<Metadata> {
   const r = resolve({ framework: (await params).framework });
   if (!r) return {};
   const a = guidesFor(r.framework.id).assessment;
-  return {
+  return pageMeta({
     // Some provinces and territories list no fixed assessment grades.
     title:
       r.framework.country === "US"
         ? `${a.name}, explained for ${r.framework.shortName} parents`
         : `The ${a.short} explained: ${a.name} for ${a.grades.length ? `Grade ${a.grades.join(" and Grade ")}` : r.framework.shortName} parents`,
     description: `What the ${a.name} is, who takes it, what it covers, how results are described, and how to help your child feel ready. A plain-language guide for ${r.framework.shortName} parents.`,
-    alternates: { canonical: guidePath.assessment(r.framework) },
-  };
+    path: guidePath.assessment(r.framework),
+    framework: r.framework,
+    type: "article",
+  });
 }
 
 export async function AssessmentView({ params }: { params: Params }) {
@@ -138,7 +144,7 @@ export async function AssessmentView({ params }: { params: Params }) {
 
   return (
     <SitePage cta>
-      <JsonLd data={[breadcrumbJsonLd(crumbs), faqJsonLd(a.faqs), articleJsonLd({ headline: title, description: a.intro, path: guidePath.assessment(f) })]} />
+      <JsonLd data={[breadcrumbJsonLd(crumbs), faqJsonLd(a.faqs), articleJsonLd({ headline: title, description: a.intro, path: guidePath.assessment(f), framework: f, updated: guidesUpdated(f.id) })]} />
       <Crumbs items={crumbs} />
       <h1 className="text-4xl font-bold">{title}</h1>
       <p className="mt-2 max-w-3xl font-read text-lg text-ink-soft">{a.intro}</p>
