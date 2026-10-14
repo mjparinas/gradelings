@@ -1,5 +1,5 @@
 import type { Course, GradeId, SubjectId } from "../types";
-import { planGrade, type OwnUnits, type PlanOptions } from "../placement";
+import { planGrade, type OwnUnits, type PlanOptions, type Pool } from "../placement";
 import { PLAN } from "./plan";
 import { FOCUS } from "./focus";
 import { ore } from "./cite";
@@ -18,11 +18,12 @@ export { ore };
 export type Entry = readonly [id: string, kind: "share" | "adopt", codes: string, text: string];
 
 /**
- * One Oregon grade. `pool` is the courses whose units Oregon may copy: Washington's grade first, then the provinces',
- * plus any other grade a plan entry lifts from (Oregon places a few topics a grade earlier or later than Washington).
- * A copy keeps the original's id and questions, so progress carries over.
+ * One Oregon grade. `pool` is, per subject, the unit files Oregon copies from in this grade (listed in each grade file,
+ * so its download carries only those files): Washington's units and the provinces', plus units from another grade
+ * where Oregon places a topic a grade earlier or later than Washington. A copy keeps the original's id and questions,
+ * so progress carries over.
  */
-export function oregonGrade(grade: GradeId, pool: Course[][], own: Partial<Record<SubjectId, OwnUnits>>): Course[] {
+export function oregonGrade(grade: GradeId, pool: Pool, own: Partial<Record<SubjectId, OwnUnits>>): Course[] {
   return planGrade(OPTIONS, grade, pool, own);
 }
 

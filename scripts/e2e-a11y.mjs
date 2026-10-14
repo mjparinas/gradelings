@@ -34,7 +34,7 @@ const ctx = await browser.newContext({ ...devices["iPad (gen 7)"], reducedMotion
 const page = await ctx.newPage();
 
 console.log("Public pages");
-for (const path of ["/", "/pricing/", "/help/", "/contact/", "/privacy/", "/terms/", "/accessibility/", "/curriculum/", "/curriculum/bc/", "/curriculum/bc/grade-3/math/", "/curriculum/bc/grade-4/math/fractions/", "/milestone/unit/bc/grade-4/math/fractions/2/", "/report-cards/bc/", "/guides/bc/", "/guides/bc/grade-4/", "/guides/bc/grade-4/math/", "/guides/bc/grade-4/math/worksheet/", "/guides/bc/kindergarten/language/worksheet/", "/guides/bc/core-competencies/", "/guides/bc/fsa/", "/compare/", "/compare/ixl/", "/account/reset/?token=x", "/account/verify/?token=x", "/account/unsubscribe/?token=x"]) {
+for (const path of ["/", "/pricing/", "/help/", "/about/", "/contact/", "/privacy/", "/terms/", "/accessibility/", "/curriculum/", "/curriculum/bc/", "/curriculum/bc/grade-3/math/", "/curriculum/bc/grade-4/math/fractions/", "/milestone/unit/bc/grade-4/math/fractions/2/", "/report-cards/bc/", "/guides/bc/", "/guides/bc/grade-4/", "/guides/bc/grade-4/math/", "/guides/bc/grade-4/math/worksheet/", "/guides/bc/kindergarten/language/worksheet/", "/guides/bc/core-competencies/", "/guides/bc/fsa/", "/compare/", "/compare/ixl/", "/account/reset/?token=x", "/account/verify/?token=x", "/account/unsubscribe/?token=x"]) {
   await page.goto(BASE + path);
   await scan(page, path);
 }

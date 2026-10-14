@@ -38,6 +38,12 @@ export interface OwnUnits {
   first?: boolean;
 }
 
+/**
+ * The units a framework's grade may copy, per subject: the exact unit files it adopts from, so a grade's download carries
+ * only those files and not every other framework's whole grade.
+ */
+export type Pool = Partial<Record<SubjectId, readonly Unit[]>>;
+
 /** The units one subject's courses hold across several lists of courses (for example a grade's Ontario and Manitoba courses). */
 export function poolOf(subject: SubjectId, ...lists: Course[][]): Unit[] {
   return lists.flatMap((courses) => courses.filter((c) => c.subject === subject).flatMap((c) => c.units));
@@ -103,17 +109,17 @@ export interface PlanOptions {
 }
 
 /**
- * One grade of a framework that is built from a plan. `pool` is the courses whose units it may adopt, in the order to
- * search them; `lift` is courses from other grades, for "lift" entries.
+ * One grade of a framework that is built from a plan. `pool` is the units it may adopt per subject (or the courses that
+ * hold them, in the order to search them); `lift` is courses from other grades, for "lift" entries.
  */
-export function planGrade(opts: PlanOptions, grade: GradeId, pool: Course[][], own: Partial<Record<SubjectId, OwnUnits>> = {}, lift: Course[][] = []): Course[] {
+export function planGrade(opts: PlanOptions, grade: GradeId, pool: Course[][] | Pool, own: Partial<Record<SubjectId, OwnUnits>> = {}, lift: Course[][] = []): Course[] {
   const { framework, name, cite, plan } = opts;
   const subjects =
     opts.subjects ??
     [...new Set<string>([...Object.keys(plan).filter((k) => k.startsWith(`${grade}/`)).map((k) => k.split("/")[1]), ...Object.keys(own)])].map((s) => s as SubjectId);
   return subjects.map((subject) => {
     const entries = plan[`${grade}/${subject}`] ?? [];
-    const available = poolOf(subject, ...pool);
+    const available = Array.isArray(pool) ? poolOf(subject, ...pool) : (pool[subject] ?? []);
     const lifted = poolOf(subject, ...lift);
     const shares: NonNullable<Course["shares"]> = {};
     const units: Unit[] = [];

@@ -24,6 +24,7 @@ function otherPages(): SitemapPath[] {
     { path: "/" },
     { path: "/pricing/" },
     { path: "/help/" },
+    { path: "/about/" },
     { path: "/contact/" },
     { path: "/accessibility/" },
     { path: "/privacy/", updated: legal },

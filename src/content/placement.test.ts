@@ -49,6 +49,14 @@ describe("placement", () => {
     expect(planGrade(OPTIONS, "4", pool, { math: { ...own, order: ["x"] } }, lift)[0].order).toEqual({ "us-wa": ["x"] });
   });
 
+  it("adopts from a pool of unit files per subject", () => {
+    const lift = [[course("math", [unit("g3-time")], "3")]];
+    const [math] = planGrade(OPTIONS, "4", { math: [unit("on-frac")], science: [unit("other")] }, {}, lift);
+    expect(math.units.map((u) => u.id)).toEqual(["on-frac", "g3-time"]);
+    // A unit in another subject's list is not found.
+    expect(() => planGrade(OPTIONS, "4", { science: [unit("on-frac")] }, {}, lift)).toThrow('no unit "on-frac" to adopt in 4/math');
+  });
+
   it("names the framework and unit when a planned unit is missing", () => {
     expect(() => planGrade(OPTIONS, "4", [], {}, [])).toThrow('Testland: no unit "on-frac" to adopt in 4/math');
     expect(() => adoptUnits("Testland", cite, [], { gone: ["A", "b"] })).toThrow('Testland: no unit "gone" to adopt');

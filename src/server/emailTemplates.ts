@@ -242,6 +242,22 @@ export function questionReportEmail(to: string, p: { unitKey: string; prompt: st
   });
 }
 
+/** A message from the contact form, to our own inbox. Replying answers the sender. */
+export function contactMessageEmail(to: string, p: { name: string; email: string; topic: string; message: string }, origin: string): Email {
+  const who = p.name ? `${p.name} <${p.email}>` : p.email;
+  return {
+    ...layout({
+      to,
+      origin,
+      subject: `Contact form: ${p.topic} from ${p.name || p.email}`,
+      heading: `Contact form: ${p.topic}`,
+      body: [`From: ${who}`, ...p.message.split(/\n{2,}/)],
+      footnote: "Sent from the contact page. Reply to this email to answer them.",
+    }),
+    replyTo: p.email,
+  };
+}
+
 export function newSignInEmail(to: string, origin: string, device: string): Email {
   return layout({
     kind: "new-sign-in",
