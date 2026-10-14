@@ -71,6 +71,18 @@ describe("Traffic", () => {
     expect(mocks.call).toHaveBeenLastCalledWith("/api/admin/traffic/?days=90&part=visits&refresh=1");
   });
 
+  it("shows which pages lead to the app only when Vercel gave the click counts", async () => {
+    serve({ days: 28, search: { state: "ok", report: search }, visits: { state: "ok", report: { ...visits, clicks: [{ key: "/curriculum/ontario/", trial: 7, subscribe: 2 }] } } });
+    const { unmount } = render(<Traffic />);
+    expect(await screen.findByText("Pages that lead to the app")).toBeInTheDocument();
+    expect(screen.getAllByText("/curriculum/ontario/").length).toBeGreaterThan(0);
+    unmount();
+    serve({ days: 28, search: { state: "ok", report: search }, visits: { state: "ok", report: visits } });
+    render(<Traffic />);
+    expect(await screen.findByText("Top pages")).toBeInTheDocument();
+    expect(screen.queryByText("Pages that lead to the app")).not.toBeInTheDocument();
+  });
+
   it("shows each part as soon as it arrives, with placeholders until then", async () => {
     const held = serve({ search: { state: "ok", report: search }, visits: { state: "ok", report: visits } }, ["visits"]);
     render(<Traffic />);

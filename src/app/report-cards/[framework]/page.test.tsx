@@ -36,7 +36,7 @@ describe("report card guide page", () => {
     for (const q of f.reportCard.faqs) expect(screen.getByRole("button", { name: q.q })).toBeInTheDocument();
 
     const aside = screen.getByRole("complementary");
-    expect(within(aside).getByRole("link", { name: "Try it free" })).toHaveAttribute("href", "/play/");
+    expect(within(aside).getByRole("link", { name: "Try it free" })).toHaveAttribute("href", expect.stringMatching(/^\/play\/#\/start\?framework=[a-z-]+/));
     expect(within(aside).getByRole("link", { name: `Browse the ${f.curriculumName}` })).toHaveAttribute("href", `/curriculum/${f.slug}/`);
     expect(within(aside).getByRole("link", { name: `${guidesFor(id).competencies.label} explained` })).toHaveAttribute("href", `/guides/${f.slug}/${guidesFor(id).competencies.slug}/`);
   });

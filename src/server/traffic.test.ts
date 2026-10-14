@@ -82,6 +82,11 @@ function fakeServices() {
         if (by === "referrerHostname") return ok({ data: [{ referrerHostname: "www.google.com", visitors: 20, pageviews: 40 }] });
         return ok({ data: [{ country: "CA", visitors: 70, pageviews: 260 }] });
       }
+      if (url.startsWith("https://api.vercel.com/v1/query/web-analytics/events/aggregate")) {
+        const filter = new URL(url).searchParams.get("filter");
+        if (filter === "eventName eq 'Start trial'") return ok({ data: [{ requestPath: "/", count: 9, visitors: 8 }, { requestPath: "/pricing/", count: 2, visitors: 2 }, { requestPath: "Others", count: 1 }] });
+        if (filter === "eventName eq 'Subscribe'") return ok({ data: [{ requestPath: "/pricing/", count: 3, visitors: 3 }] });
+      }
       return new Response("{}", { status: 404 });
     }),
   );
@@ -207,12 +212,36 @@ describe("Vercel Web Analytics", () => {
     if (r.state !== "ok") throw new Error(JSON.stringify(r));
     expect(r.report).toMatchObject({ start: "2026-09-12", end: "2026-10-12", keptDays: 31, visitors: 80, previous: { visitors: 0, pageviews: 0 } });
     // Every retried question stays inside the 31 days.
-    const retried = calls.filter((c) => c.url.includes("since=2026-09-12"));
+    const retried = calls.filter((c) => c.url.includes("/visits/") && c.url.includes("since=2026-09-12"));
     expect(retried.length).toBe(5);
     // The default 28 days fit, but the 28 before don't: the period stays whole and the comparison goes.
     const r28 = await traffic.visitsReport(28, NOW);
     if (r28.state !== "ok") throw new Error(JSON.stringify(r28));
     expect(r28.report).toMatchObject({ start: "2026-09-15", keptDays: 31, previous: { visitors: 0, pageviews: 0 } });
+  });
+
+  it("counts trial and Subscribe clicks by page, and leaves them out when Vercel won't give events", async () => {
+    process.env.VERCEL_TOKEN = "vercel-secret";
+    process.env.VERCEL_PROJECT_ID = "prj_1";
+    const calls = fakeServices();
+    const r = await traffic.visitsReport(28, NOW);
+    if (r.state !== "ok") throw new Error(JSON.stringify(r));
+    expect(r.report.clicks).toEqual([
+      { key: "/", trial: 9, subscribe: 0 },
+      { key: "/pricing/", trial: 2, subscribe: 3 },
+    ]);
+    const ev = new URL(calls.find((c) => c.url.includes("/events/aggregate"))!.url).searchParams;
+    expect(ev.get("by")).toBe("requestPath");
+    expect(ev.get("since")).toBe("2026-09-15T00:00:00.000Z");
+
+    const vercel = vi.mocked(fetch).getMockImplementation()!;
+    vi.mocked(fetch).mockImplementation(async (input, init) =>
+      String(input).includes("/events/") ? new Response(JSON.stringify({ error: { message: "Custom events need Pro." } }), { status: 403 }) : vercel(input, init),
+    );
+    const without = await traffic.visitsReport(28, NOW);
+    if (without.state !== "ok") throw new Error(JSON.stringify(without));
+    expect(without.report.clicks).toBeUndefined();
+    expect(without.report.visitors).toBe(80);
   });
 
   it("asks for the settings it needs", async () => {

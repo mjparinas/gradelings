@@ -121,7 +121,7 @@ export default function PrivacyPage() {
             <strong>Sentry</strong>, to tell us when the app crashes. Error reports are stripped of names, email addresses, cookies and what was typed or tapped before they leave your device or our server, and are not used for anything else.
           </li>
           <li>
-            <strong>Vercel Web Analytics and Speed Insights</strong>, to count anonymous page views and measure how fast our public website loads, such as which pages are visited, from which country and how quickly they appear. It sets no cookies. It is switched off in the kids’ app, the parent area, shared reports, shared milestones and account pages.
+            <strong>Vercel Web Analytics and Speed Insights</strong>, to count anonymous page views and measure how fast our public website loads, such as which pages are visited, from which country, how quickly they appear and how often their buttons to try or subscribe are pressed. It sets no cookies. It is switched off in the kids’ app, the parent area, shared reports, shared milestones and account pages.
           </li>
           <li>
             <strong>Our hosting and database providers</strong>, which store the account and progress data described above on our behalf. Our servers are in Montréal, Canada, and our database is in Virginia, United States. Some other service providers above, such as Stripe, Resend, Anthropic and Sentry, may also process limited information outside Canada.

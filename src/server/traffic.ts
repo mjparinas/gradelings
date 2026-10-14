@@ -1,4 +1,5 @@
 import { createSign } from "node:crypto";
+import { CTA_EVENTS } from "@/lib/ctaEvents";
 import { periodDates, SEARCH_LAG_DAYS, type Part, type SearchReport, type SearchRow, type SitemapInfo, type TrafficData, type TrafficPeriod, type VisitsReport } from "@/lib/traffic";
 
 // The admin panel's Traffic tab, read on the server so no credential reaches the browser:
@@ -159,6 +160,28 @@ export async function visitsReport(days: TrafficPeriod, now = Date.now()): Promi
     });
     return r.data ?? r.result?.data ?? [];
   };
+  // Clicks on "Try it free" and Subscribe links (CTA_EVENTS in SiteAnalytics), counted per page. Custom events need
+  // a paid Vercel plan, so a failed read leaves them out instead of failing the visits.
+  const askEvents = async (name: string, from: string, to: string) => {
+    const q = new URLSearchParams({ projectId: project, since: `${from}T00:00:00.000Z`, until: `${to}T23:59:59.999Z`, by: "requestPath", filter: `eventName eq '${name}'`, limit: "20", ...(team ? { teamId: team } : {}) });
+    const r = await fetchJson<{ data?: VisitRow[] }>("Vercel Analytics", `https://api.vercel.com/v1/query/web-analytics/events/aggregate?${q}`, {
+      headers: { authorization: `Bearer ${bearer}`, accept: "application/json" },
+    });
+    return r.data ?? [];
+  };
+  const clicksFor = async (from: string, to: string): Promise<VisitsReport["clicks"]> => {
+    try {
+      const [trial, subscribe] = await Promise.all([askEvents(CTA_EVENTS.trial, from, to), askEvents(CTA_EVENTS.subscribe, from, to)]);
+      const count = (r: VisitRow) => (typeof r.count === "number" ? r.count : 0);
+      const pages = new Map<string, { key: string; trial: number; subscribe: number }>();
+      const row = (key: string) => pages.get(key) ?? pages.set(key, { key, trial: 0, subscribe: 0 }).get(key)!;
+      for (const r of trial) if (r.requestPath && r.requestPath !== "Others") row(String(r.requestPath)).trial += count(r);
+      for (const r of subscribe) if (r.requestPath && r.requestPath !== "Others") row(String(r.requestPath)).subscribe += count(r);
+      return [...pages.values()].sort((a, b) => b.trial + b.subscribe - (a.trial + a.subscribe));
+    } catch {
+      return undefined;
+    }
+  };
   /** `keep` is how many days back the plan lets us read (Hobby: 31), or null for no limit. */
   const read = async (keep: number | null): Promise<VisitsReport> => {
     const oldest = keep ? periodDates(keep, now).start : "";
@@ -167,13 +190,14 @@ export async function visitsReport(days: TrafficPeriod, now = Date.now()): Promi
     const comparable = !oldest || d.prevStart >= oldest;
     // Totals by year so a visitor counts once (daily rows would count them once a day); only a period across
     // New Year counts them twice.
-    const [totals, previous, daily, pages, referrers, countries] = await Promise.all([
+    const [totals, previous, daily, pages, referrers, countries, clicks] = await Promise.all([
       ask("year", start, d.end),
       comparable ? ask("year", d.prevStart, d.prevEnd) : Promise.resolve(null),
       ask("day", start, d.end, 100),
       ask("requestPath", start, d.end),
       ask("referrerHostname", start, d.end),
       ask("country", start, d.end),
+      clicksFor(start, d.end),
     ]);
     const n = (v: unknown) => (typeof v === "number" ? v : 0);
     const total = (rows: VisitRow[]) => ({ visitors: rows.reduce((s, r) => s + n(r.visitors), 0), pageviews: rows.reduce((s, r) => s + n(r.pageviews), 0) });
@@ -191,6 +215,7 @@ export async function visitsReport(days: TrafficPeriod, now = Date.now()): Promi
       pages: list(pages, "requestPath"),
       referrers: list(referrers, "referrerHostname"),
       countries: list(countries, "country"),
+      ...(clicks ? { clicks } : {}),
     };
   };
   try {

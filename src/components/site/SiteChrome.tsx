@@ -9,7 +9,8 @@ import { PromoBanner } from "./PromoBanner";
 import { RefCapture } from "./ShareButton";
 import { byCountry, regionList } from "./provinces";
 
-export function SiteHeader() {
+/** `play` is the "Try it free" link for this page (`playHref`), so the app opens on what the visitor was reading. */
+export function SiteHeader({ play = "/play/" }: { play?: string }) {
   return (
     <header className="print:hidden sticky top-0 z-30 border-b border-line bg-paper/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
@@ -40,7 +41,7 @@ export function SiteHeader() {
             Subscribe
           </a>
           {/* The apps are big single-page bundles: fetch them on tap, not on every public page view. */}
-          <Link prefetch={false} href="/play/" className="btn btn-good h-11 px-4 text-base">
+          <Link prefetch={false} href={play} className="btn btn-good h-11 px-4 text-base">
             Play free
           </Link>
         </nav>
@@ -126,7 +127,7 @@ export function SiteFooter() {
  * explains the curriculum or a guide ends with it (`<SitePage cta>`), so a parent who has read
  * enough always has a button to start practising.
  */
-export function PageCta() {
+export function PageCta({ play }: { play?: string }) {
   // Every region by name, Canadian provinces and territories first, then US states.
   const provinces = byCountry(FRAMEWORKS)
     .map((g) => regionList(g.frameworks))
@@ -140,7 +141,7 @@ export function PageCta() {
         Curriculum-matched practice for Kindergarten to Grade 9 in {provinces}, with kind hints, learning games and no ads. Subscribe now, or try everything free for {TRIAL_DAYS} days with no card.
       </p>
       <div className="flex flex-wrap gap-3">
-        <SubscribeActions />
+        <SubscribeActions play={play} />
         <Link href="/pricing/" className="btn min-h-14 px-6 text-lg">
           See pricing
         </Link>
@@ -150,31 +151,41 @@ export function PageCta() {
 }
 
 /** Subscribe is the main action. The free trial stays one tap away for parents who want to try first. */
-export function SubscribeActions({ size = "lg", trialLabel = "Try it free", className = "" }: { size?: "md" | "lg"; trialLabel?: string; className?: string }) {
+export function SubscribeActions({ size = "lg", trialLabel = "Try it free", className = "", play = "/play/" }: { size?: "md" | "lg"; trialLabel?: string; className?: string; /** The trial link (`playHref`). */ play?: string }) {
   const cls = size === "lg" ? "min-h-14 px-8 text-xl" : "min-h-12 px-6 text-lg";
   return (
     <>
       <a href={SUBSCRIBE_HREF} className={`btn btn-good ${cls} ${className}`}>
         Subscribe
       </a>
-      <Link prefetch={false} href="/play/" className={`btn ${cls} ${className}`}>
+      <Link prefetch={false} href={play} className={`btn ${cls} ${className}`}>
         {trialLabel}
       </Link>
     </>
   );
 }
 
-export function SitePage({ children, cta = false }: { children: ReactNode; /** Ends the page with the call to action. */ cta?: boolean }) {
+export function SitePage({
+  children,
+  cta = false,
+  play,
+}: {
+  children: ReactNode;
+  /** Ends the page with the call to action. */
+  cta?: boolean;
+  /** Where this page's "Try it free" buttons open the app (`playHref`): the page's province or state, grade and unit. */
+  play?: string;
+}) {
   return (
     <>
       <RefCapture />
       {/* First, so it is the first thing a keyboard reaches; outside the header, whose blur would anchor it. */}
       <SkipLink />
       <PromoBanner />
-      <SiteHeader />
+      <SiteHeader play={play} />
       <main id={MAIN_ID} tabIndex={-1} className="mx-auto max-w-6xl px-4 py-8">
         {children}
-        {cta && <PageCta />}
+        {cta && <PageCta play={play} />}
       </main>
       <SiteFooter />
     </>

@@ -17,6 +17,7 @@ import { JsonLd, absolute } from "@/lib/site";
 import { PinLink, ShareButton } from "@/components/site/ShareButton";
 import { pageMeta } from "@/lib/pageMeta";
 import { scaleReach } from "@/components/site/pageFaqs";
+import { playHref } from "@/lib/playLink";
 
 export const dynamicParams = false;
 
@@ -119,7 +120,7 @@ export default async function GradeGuide({ params }: Props) {
   const title = `What your child learns in ${label} in ${f.shortName}`;
 
   return (
-    <SitePage>
+    <SitePage play={playHref({ framework: f.id, grade })}>
       <JsonLd
         data={[
           breadcrumbJsonLd(crumbs),
@@ -304,7 +305,7 @@ export default async function GradeGuide({ params }: Props) {
         <p className="text-xl font-bold">{say(f, "Practise")} {label} skills with {APP_NAME}</p>
         <p className="font-read text-ink-soft">Kind hints, no ads, and reports in the language of the {f.shortName} report card. Subscribe now, or try it free for {TRIAL_DAYS} days with no card.</p>
         <div className="flex flex-wrap gap-3">
-          <SubscribeActions />
+          <SubscribeActions play={playHref({ framework: f.id, grade })} />
         </div>
       </section>
 

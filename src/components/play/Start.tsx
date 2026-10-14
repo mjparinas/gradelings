@@ -17,6 +17,17 @@ import { AVATARS, Critter, CritterSvg, SpeechBubble } from "../Critter";
 import { signInStudent } from "@/lib/account";
 import { Page } from "../ui";
 import { ProvinceMenu } from "./ProvinceMenu";
+import { useFlag } from "@/lib/remoteFlags";
+import { readPlayStart, START_ROUTE, type PlayStart } from "@/lib/playLink";
+import { useRoute } from "@/lib/router";
+import { getKV } from "@/lib/localdb";
+
+/** The province or state and grade a "Try it free" link from a public page asked for (`playHref`), if any. */
+export function usePlayStart(): PlayStart | null {
+  const { path, query } = useRoute();
+  if (`/${path[0] ?? ""}` !== START_ROUTE) return null;
+  return readPlayStart(query, (id) => FRAMEWORKS.some((f) => f.id === id));
+}
 
 export const AVATAR_COLOURS = ["#ff9636", "#4f8ef7", "#25b47e", "#e9559a", "#8b5cf6", "#06b6d4", "#f5b301", "#ef4444"];
 
@@ -45,6 +56,7 @@ const HELLO = "Hi! I'm Ollie the Otter. My friends and I can't wait to learn and
 
 export function FirstRun() {
   const [step, setStep] = useState(0);
+  const preset = usePlayStart();
   if (step === 0) {
     return (
       <Page className="items-center justify-center gap-6 text-center short:gap-3">
@@ -71,7 +83,7 @@ export function FirstRun() {
     );
   }
   if (step === -1) return <ClassSignIn onBack={() => setStep(0)} />;
-  return <NewChild onDone={() => {}} first />;
+  return <NewChild onDone={() => {}} first preset={preset} />;
 }
 
 /** A student signs in with the class code and their own code from the teacher. */
@@ -125,14 +137,28 @@ export function ClassSignIn({ onBack }: { onBack: () => void }) {
 }
 
 /** Name, grade and avatar. Used on first run, from the picker, and in the parent area. */
-export function NewChild({ onDone, onCancel, first = false }: { onDone: (id: string) => void; onCancel?: () => void; first?: boolean }) {
+export function NewChild({ onDone, onCancel, first = false, preset = null }: { onDone: (id: string) => void; onCancel?: () => void; first?: boolean; preset?: PlayStart | null }) {
   const [name, setName] = useState("");
-  const [grade, setGrade] = useState<GradeId | null>(null);
+  const [grade, setGrade] = useState<GradeId | null>(preset?.grade && AVAILABLE_GRADES.includes(preset.grade) ? preset.grade : null);
   const [avatar, setAvatar] = useState(AVATARS[0].id);
   const addProfile = useStore((s) => s.addProfile);
+  const signedIn = useStore((s) => Boolean(s.family.account));
+  const askEmail = useFlag("email-at-start") && first && !signedIn;
+  const [asking, setAsking] = useState(false);
   const ready = name.trim().length > 0 && grade !== null;
-  const [frameworkId, setFrameworkId] = useState<FrameworkId>(DEFAULT_FRAMEWORK);
+  const [frameworkId, setFrameworkId] = useState<FrameworkId>(preset?.framework ?? DEFAULT_FRAMEWORK);
   const framework = getFramework(frameworkId);
+
+  const add = () => {
+    if (!grade) return "";
+    const idx = AVATARS.findIndex((c) => c.id === avatar);
+    const id = addProfile({ name, avatar, colour: AVATAR_COLOURS[idx % AVATAR_COLOURS.length], grade, framework: frameworkId });
+    sounds.complete();
+    onDone(id);
+    return id;
+  };
+
+  if (asking) return <EmailReports name={name.trim()} onPlay={add} />;
 
   return (
     <Page className="items-center justify-center gap-6 text-center">
@@ -201,10 +227,8 @@ export function NewChild({ onDone, onCancel, first = false }: { onDone: (id: str
           className={`btn btn-good min-h-20 text-3xl ${ready ? "" : "opacity-50"}`}
           onClick={() => {
             if (!grade) return;
-            const idx = AVATARS.findIndex((c) => c.id === avatar);
-            const id = addProfile({ name, avatar, colour: AVATAR_COLOURS[idx % AVATAR_COLOURS.length], grade, framework: frameworkId });
-            sounds.complete();
-            onDone(id);
+            if (askEmail) setAsking(true);
+            else add();
           }}
         >
           Start!
@@ -215,6 +239,45 @@ export function NewChild({ onDone, onCancel, first = false }: { onDone: (id: str
           </button>
         )}
       </div>
+    </Page>
+  );
+}
+
+/**
+ * First run on a device with no account: before the child starts, one screen for the grown-up offers the progress
+ * emails, which need a free account. "Let's play" is the big button, so a child who is setting up alone just
+ * carries on; the account link goes through the parent PIN gate, like the save-progress card.
+ */
+function EmailReports({ name, onPlay }: { name: string; onPlay: () => void }) {
+  return (
+    <Page className="items-center justify-center gap-6 text-center">
+      <Critter id="ollie" mood="happy" size={100} />
+      <section className="w-full max-w-md rounded-2xl border-2 border-dashed border-line bg-white/80 p-5 text-left" aria-labelledby="grown-ups">
+        <h2 id="grown-ups" className="text-2xl font-bold">
+          🔒 For grown-ups
+        </h2>
+        <p className="mt-2 font-read text-lg">
+          Get {name ? `${name}'s` : "your child's"} progress by email: a weekly summary in report-card words, and a note before the free trial ends. It takes a free account, which also backs up progress.
+        </p>
+        <a
+          href="/parents/#/account"
+          className="btn mt-4 min-h-14 w-full text-lg"
+          onClick={async (e) => {
+            // Add the child first, and wait until the device has saved them, so nothing typed here is lost on the
+            // way to the parent area (a read queues behind the writes before it).
+            e.preventDefault();
+            const target = e.currentTarget.href;
+            onPlay();
+            await getKV("profiles").catch(() => undefined);
+            window.location.assign(target);
+          }}
+        >
+          Email me the reports
+        </a>
+      </section>
+      <button type="button" className="btn btn-good min-h-20 w-full max-w-md text-3xl short:min-h-14 short:text-2xl" onClick={onPlay}>
+        Not now, let&apos;s play! →
+      </button>
     </Page>
   );
 }

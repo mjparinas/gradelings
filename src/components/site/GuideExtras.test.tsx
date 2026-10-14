@@ -29,7 +29,7 @@ describe("competencies guide", () => {
     expect(crumbs.getByRole("link", { name: `${f.shortName} parent guides` })).toHaveAttribute("href", `/guides/${f.slug}/`);
     expect(screen.getByRole("link", { name: `understand the ${f.shortName} report card levels` })).toHaveAttribute("href", `/report-cards/${f.slug}/`);
     expect(screen.getByRole("main")).toHaveTextContent(g.closing);
-    expect(within(screen.getByRole("region", { name: /Ready to try/ })).getByRole("link", { name: "Try it free" })).toHaveAttribute("href", "/play/");
+    expect(within(screen.getByRole("region", { name: /Ready to try/ })).getByRole("link", { name: "Try it free" })).toHaveAttribute("href", expect.stringMatching(/^\/play\/#\/start\?framework=[a-z-]+/));
   });
 
   it("titles the page with the province's own name for its competencies", async () => {

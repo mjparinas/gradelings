@@ -146,6 +146,15 @@ function Visits({ r, days }: { r: VisitsReport; days: number }) {
         <RowBars title="Top pages" subtitle="Public pages, most visitors first" rows={list(r.pages)} headers={["Page", "Visitors", "Page views"]} empty="No visits yet." />
         <RowBars title="Where visitors came from" subtitle="Other sites that linked here" rows={list(r.referrers)} headers={["Site", "Visitors", "Page views"]} empty="No visitors from other sites yet." />
         <RowBars title="Countries" rows={list(r.countries)} headers={["Country", "Visitors", "Page views"]} empty="No visits yet." />
+        {r.clicks && (
+          <RowBars
+            title="Pages that lead to the app"
+            subtitle="Clicks on Try it free or Play free, and on Subscribe, by the page they were on"
+            rows={r.clicks.map((c) => ({ label: c.key, value: c.trial, note: `${num(c.subscribe)} Subscribe` }))}
+            headers={["Page", "Trial clicks", "Subscribe clicks"]}
+            empty="No clicks counted yet."
+          />
+        )}
       </div>
     </>
   );

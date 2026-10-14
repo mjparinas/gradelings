@@ -61,7 +61,7 @@ describe("grade guide page", () => {
     for (const l of scheme.levels) expect(levelList).toHaveTextContent(l.description);
 
     // Subscribe, or try the app free.
-    expect(screen.getByRole("link", { name: "Try it free" })).toHaveAttribute("href", "/play/");
+    expect(screen.getByRole("link", { name: "Try it free" })).toHaveAttribute("href", expect.stringMatching(/^\/play\/#\/start\?framework=[a-z-]+/));
   });
 
   it("shows every subject's printable sheet in a gallery, with one Pinterest pin for the grade", async () => {

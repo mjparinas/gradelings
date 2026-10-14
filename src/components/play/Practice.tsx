@@ -1,7 +1,7 @@
 "use client";
 
 import { onColour } from "@/lib/contrast";
-import { useState, type CSSProperties } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { coursesForGrade, getUnitRef, unitKey } from "@/content";
 import { getSubjectMeta } from "@/content/subjects";
 import type { SubjectId } from "@/content/types";
@@ -9,7 +9,7 @@ import { dayKey } from "@/lib/model";
 import { canUse } from "@/lib/plan";
 import { levelInfo, nextStep, unitLevel } from "@/lib/proficiency";
 import { useIsOn } from "@/lib/remoteFlags";
-import { go, href } from "@/lib/router";
+import { go, href, useRoute } from "@/lib/router";
 import { useActiveProfile, useChildSettings, useDerived, useStore } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 import { useBand } from "../band";
@@ -175,9 +175,9 @@ export function UnitList({ subject }: { subject: SubjectId }) {
   const nextUp = course?.units.find((u) => !d.units[unitKey(course.grade, subject, u.id)]);
   const say = nextUp ? `Pick a lesson! I think “${nextUp.title}” would be fun.` : "You've tried them all! Keep growing every one.";
   useBuddySays(course ? say : "", Boolean(settings?.autoRead));
-  if (!course) return null;
 
   const start = (id: string) => {
+    if (!course) return;
     const key = unitKey(course.grade, subject, id);
     const ref = { key, course, unit: course.units.find((u) => u.id === id)! };
     if (!allowed(ref) && !assigned.has(key)) return setLocked(true);
@@ -186,6 +186,17 @@ export function UnitList({ subject }: { subject: SubjectId }) {
     if (band === "little") go(ref.unit.lesson && !d.units[key] ? "/lesson" : "/session", ref.unit.lesson && !d.units[key] ? { scope: key } : { mode: "practice", scope: key });
     else setSelected(key);
   };
+
+  // A link from the unit's public page (`playHref`) opens that unit once, as if it had been tapped.
+  const wanted = useRoute().query.get("unit");
+  const opened = useRef(false);
+  useEffect(() => {
+    if (opened.current || !wanted || !course?.units.some((u) => u.id === wanted)) return;
+    opened.current = true;
+    start(wanted);
+  });
+
+  if (!course) return null;
 
   return (
     <Page style={subjectVars(meta)} className="gap-6">

@@ -88,6 +88,8 @@ Tests are duplicated across screen sizes only where layout can break:
   - The plan includes a 30-day free trial with everything on and no card needed.
   - Subscribing during the trial keeps the days left: checkout saves the card and starts a Stripe trial that ends with ours (`firstChargeAt` in `plan.ts`), unless fewer than 49 hours are left or the family had a paid plan before.
   - A device with no account gets a quiet "For grown-ups" card at the end of a lesson (after the first lesson, then daily in the trial's last week; `src/lib/saveNudge.ts`, flag `save-progress-card`), because trial emails need an account.
+  - Before that, the first child added on a device with no account gets one "For grown-ups" screen offering the progress emails (`EmailReports` in `src/components/play/Start.tsx`, flag `email-at-start`). "Not now, let's play" is the big button; the account link goes through the parent PIN gate.
+  - Public pages' "Try it free" and "Play free" buttons open the app on what the page is about (`playHref` in `src/lib/playLink.ts`, passed as `play` to `SitePage` and `SubscribeActions`): a new child starts with that province or state and grade picked, and lands on that subject's lessons with the unit open.
   - After the trial, the first 2 units of every course stay free forever.
   - All of this lives in `src/lib/plan.ts`; read the numbers from there.
 - **Refunds** (owner, October 2026): any payment, renewals included, is refunded in full when the parent asks within 14 days (`REFUND_DAYS` in `plan.ts`), no reason needed; the plan then ends. The owner refunds and cancels from the admin panel. No renewal reminder emails (owner's decision).
@@ -420,7 +422,7 @@ Tests are duplicated across screen sizes only where layout can break:
   - practice results.
 - **No free text, photos or voice recordings from kids.**
 - **Parents can export everything or delete everything** at any time.
-- **Analytics in use, all disclosed on `/privacy/`:** Vercel Web Analytics and Speed Insights (cookieless, public pages only, `SiteAnalytics.tsx`) and Resend's open and click tracking on emails. There is no analytics in the kids' app or parent area. We no longer promise "no tracking" (owner, October 2026), so never write that promise into copy; keep `/privacy/` and `docs/school/` true whenever a provider or setting changes.
+- **Analytics in use, all disclosed on `/privacy/`:** Vercel Web Analytics and Speed Insights (cookieless, public pages only, `SiteAnalytics.tsx`; two custom events count clicks on trial and Subscribe links with the page's path, `src/lib/ctaEvents.ts`, shown in the admin Traffic tab) and Resend's open and click tracking on emails. There is no analytics in the kids' app or parent area. We no longer promise "no tracking" (owner, October 2026), so never write that promise into copy; keep `/privacy/` and `docs/school/` true whenever a provider or setting changes.
 
 ## Design decisions
 

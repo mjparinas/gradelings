@@ -10,6 +10,7 @@ import { APP_NAME } from "@/lib/brand";
 import { pageMeta } from "@/lib/pageMeta";
 import { FaqSection } from "@/components/site/FaqSection";
 import { bandLine, curriculumFaqs, reportingBands } from "@/components/site/pageFaqs";
+import { playHref } from "@/lib/playLink";
 
 export const dynamicParams = false;
 
@@ -34,7 +35,7 @@ export default async function FrameworkPage({ params }: PageProps<"/curriculum/[
   if (!r) notFound();
   const f = r.framework;
   return (
-    <SitePage cta>
+    <SitePage cta play={playHref({ framework: f.id })}>
       <Crumbs items={[{ label: "Home", href: "/" }, { label: "Curriculum", href: curriculumPath.index() }, { label: f.curriculumName }]} />
       <h1 className="text-4xl font-bold">{f.curriculumName}: {gradeSpan(f, true)}</h1>
       <p className="mt-2 max-w-3xl font-read text-lg text-ink-soft">
