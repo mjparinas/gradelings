@@ -194,4 +194,17 @@ export const lessons: GradeLessons = {
     ["Two 2 × 3 faces: 12.", "Two 2 × 4 faces: 16.", "Two 3 × 4 faces: 24.", "12 + 16 + 24 = 52."],
     "52 cm²",
   ),
+  // Texas
+  "math/tx-g6-integer-moves": lesson(
+    ["A number and its opposite make zero: 5 + (−5) = 0.", "Adding a negative number is like moving left on the number line.", "Subtracting a number is the same as adding its opposite: 3 − (−4) = 3 + 4."],
+    "What is −6 + 9?",
+    ["Start at −6 and move 9 to the right.", "−6 + 6 = 0, then 3 more."],
+    "3",
+  ),
+  "math/tx-g6-banking-and-credit": lesson(
+    ["A debit card spends money already in your checking account; a credit card borrows money you must repay.", "In a check register, add deposits and subtract withdrawals, checks and transfers out.", "Paying bills on time builds a good credit history, which lenders check in a credit report."],
+    "Balance $200. Deposit $50. Check written for $35. What is the new balance?",
+    ["200 + 50 = 250.", "250 − 35 = 215."],
+    "$215",
+  ),
 };

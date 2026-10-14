@@ -186,4 +186,17 @@ export const lessons: GradeLessons = {
     ["4 × 5 = 20."],
     "20",
   ),
+  // Texas
+  "math/tx-g3-coins-and-bills": lesson(
+    ["Count the bills first, starting with the one worth the most.", "Then count on with the coins: quarters, dimes, nickels, then pennies.", "Write the total with a dollar sign and a decimal point, like $6.35."],
+    "How much are a $5 bill, a $1 bill, 1 quarter and 1 dime?",
+    ["Bills: $5 + $1 = $6.", "Count on 25¢ and 10¢: $6.25, $6.35."],
+    "$6.35",
+  ),
+  "math/tx-g3-money-choices": lesson(
+    ["Skills and training help people earn income.", "When something is scarce, it usually costs more.", "Credit is borrowed money that the borrower must pay back. A savings plan puts money away regularly for a goal."],
+    "Kim wants a $24 game. She saves $4 a week. How many weeks will it take?",
+    ["Divide the cost by the amount saved each week: 24 ÷ 4 = 6."],
+    "6 weeks",
+  ),
 };

@@ -1,0 +1,181 @@
+import type { Unit } from "../../types";
+import { SCIENCE_COPIES as OR_COPIES } from "../../oregon/units/science-copies";
+import { SCIENCE_4 as WA_4, SCIENCE_5 as WA_5 } from "../../washington/units/science-35";
+import { bankUnit } from "../own";
+import { copyOf, from } from "./kit";
+
+// Texas Grade 4 science units: plant structures (4.13(A)), seasons and Moon phases (4.9), weather and climate (4.10(C)),
+// and Texas copies of other
+// states' units with their Pacific Northwest questions left out: energy resources with Texas wind, oil and natural gas
+// and the rocks that hold them (4.11), weathering and erosion with Texas fossils (4.10(B), 4.12(C)), and food webs
+// (4.12(B)).
+
+export const SCIENCE_4: Unit[] = [
+  bankUnit({
+    id: "tx-g4-plant-structures",
+    title: "Built to Survive: Plants",
+    emoji: "🌵",
+    blurb: "Waxy leaves, deep roots, spines and other plant structures that help plants survive.",
+    parentNote:
+      "Practices how the structures and functions of plants help them survive in their environment: waxy leaves and spines that save water, deep or wide roots, thick stems that store water, and leaves shaped for sun or shade, with Texas plants such as prickly pear, mesquite, live oak and bald cypress.",
+    standards: ["4.13(A)", "plant structures and functions that help plants survive in their environment"],
+    items: [
+      ["A waxy coating on leaves helps a plant…", "keep water from escaping", ["catch insects", "make seeds", "grow faster in snow"], "Wax seals in water."],
+      ["Deep roots help a mesquite tree…", "reach water far underground", ["fly away", "make flowers", "catch insects"], "Water can be deep in dry places."],
+      ["A prickly pear cactus stores water in its…", "thick pads (stems)", ["thin roots", "flowers", "spines"], "Fat, fleshy pads."],
+      ["Spines on a cactus help protect it from…", "animals that want to eat it", ["sunlight", "rain", "wind"], "Ouch!"],
+      ["Cactus spines are a kind of…", "leaf", ["root", "flower", "seed"], "Narrow leaves lose little water."],
+      ["Why do many desert plants have small or no leaves?", "To lose less water", ["To catch more rain", "To grow taller", "To attract birds"], "Less surface, less water lost."],
+      ["Wide, shallow roots help a cactus…", "soak up rain quickly before it dries", ["reach deep caves", "hold onto rocks in rivers", "make food"], "Desert rain is brief."],
+      ["Bald cypress trees grow in swamps. Their knobby 'knees' may help them…", "stay steady in wet, soft soil", ["make fruit", "catch insects", "store snow"], "Soft, flooded ground."],
+      ["Water lilies have air-filled stems and wide floating leaves to…", "float and reach sunlight", ["sink to the bottom", "store sand", "keep away bees"], "Leaves on top of the water."],
+      ["Plants on a shady forest floor often have…", "large, broad leaves to catch dim light", ["no leaves", "thick spines", "waxy needles only"], "More leaf, more light."],
+      ["Why do sunflowers have bright yellow petals?", "To attract pollinators", ["To scare animals", "To store water", "To make shade"], "Bees and butterflies."],
+      ["Thorns on a rose stem help it…", "keep animals from eating it", ["catch rain", "grow roots", "make pollen"], "Protection."],
+      ["Roots help a plant by…", "holding it in place and taking in water", ["making seeds", "catching sunlight", "making flowers"], "Underground anchors."],
+      ["Leaves help a plant by…", "making food from sunlight", ["holding the plant in soil", "storing rocks", "making soil"], "Photosynthesis."],
+      ["Stems help a plant by…", "carrying water and holding up leaves", ["making pollen", "eating insects", "making seeds only"], "Pipes and support."],
+      ["A Venus flytrap catches insects because it grows in soil that…", "has few nutrients", ["has too many nutrients", "is always dry", "is frozen"], "Insects add nutrients."],
+      ["A live oak keeps its leaves most of the year. Its tough, leathery leaves help it…", "survive dry spells", ["float on water", "catch insects", "grow under snow"], "Tough leaves lose less water."],
+      ["Seeds with fluffy parachutes, like dandelion seeds, are spread by…", "wind", ["water only", "rocks", "fire"], "They drift."],
+      ["Burrs that stick to fur help a plant…", "spread its seeds", ["drink water", "make food", "stand up"], "Animals carry them."],
+      ["Which structure helps a plant in a dry place?", "A waxy leaf", ["A huge, thin leaf", "Floating leaves", "Very short roots only"], "Saves water.", true],
+      ["Which structure helps a plant in a pond?", "Air-filled stems", ["Spines", "Waxy cactus pads", "Very deep desert roots"], "Helps it float.", true],
+      ["Pine needles are thin and waxy. This helps pines…", "lose less water in cold or dry weather", ["catch more insects", "grow fruit", "float"], "Small, coated leaves.", true],
+      ["A plant moved from a desert to a rainforest might struggle because its structures are suited to…", "dry conditions", ["wet conditions", "underwater life", "cold snow"], "Structures fit the home.", true],
+      ["How are a cactus's spines and a rose's thorns alike?", "Both help protect the plant", ["Both make food", "Both are flowers", "Both hold water"], "Same job.", true],
+      ["Some plants close tiny openings in their leaves on hot days. This helps them…", "save water", ["catch insects", "grow roots", "make seeds"], "Less water escapes.", true],
+    ],
+  }),
+  bankUnit({
+    id: "tx-g4-seasons-moon",
+    title: "Seasons & Moon Phases",
+    emoji: "🌓",
+    blurb: "Patterns in temperature, daylight and the Moon's shape.",
+    parentNote:
+      "Practices reading data to find and predict patterns in the seasons (temperature and hours of daylight through the year) and in the Moon's appearance as it goes through its phases about every month.",
+    standards: ["4.9(A); 4.9(B)", "patterns of change in the seasons and in the Moon's appearance"],
+    items: [
+      ["In Texas, the days with the most hours of daylight come in…", "June", ["December", "March", "October"], "Early summer."],
+      ["In Texas, the days with the fewest hours of daylight come in…", "December", ["June", "July", "August"], "Early winter."],
+      ["As summer turns to fall, the hours of daylight…", "get shorter", ["get longer", "stay the same", "stop changing forever"], "Sunset comes earlier."],
+      ["As winter turns to spring, the hours of daylight…", "get longer", ["get shorter", "stay the same", "drop to zero"], "Sunset comes later."],
+      ["A chart shows 10 hours of daylight in January and 14 hours in June. What happens by December?", "Daylight gets shorter again", ["Daylight keeps growing", "Daylight stays at 14 hours", "There is no daylight"], "Seasons repeat each year."],
+      ["Which season is usually hottest in Texas?", "Summer", ["Winter", "Fall", "Spring"], "Long, sunny days."],
+      ["Average temperatures usually rise from…", "winter to summer", ["summer to winter", "fall to winter", "day to night only"], "More daylight warms the land."],
+      ["The order of the seasons is…", "spring, summer, fall, winter", ["summer, spring, winter, fall", "winter, fall, summer, spring", "fall, spring, summer, winter"], "The cycle repeats."],
+      ["Seasons repeat about every…", "year", ["day", "week", "month"], "One trip around the Sun."],
+      ["The Moon seems to change shape because we see…", "different amounts of its sunlit side", ["Earth's shadow every night", "clouds covering it", "the Moon shrinking"], "Half the Moon is always lit."],
+      ["When we can't see the Moon at all, it is a…", "new moon", ["full moon", "first quarter moon", "waxing gibbous moon"], "The dark side faces us."],
+      ["When the whole face of the Moon is lit, it is a…", "full moon", ["new moon", "crescent moon", "quarter moon"], "A bright circle."],
+      ["The Moon goes from new moon to full moon in about…", "two weeks", ["one day", "one year", "two months"], "Half of its cycle."],
+      ["The Moon's full cycle of phases takes about…", "one month", ["one day", "one week", "one year"], "About 29 and a half days."],
+      ["When the lit part of the Moon is growing night after night, the Moon is…", "waxing", ["waning", "eclipsed", "new"], "Wax = grow."],
+      ["When the lit part of the Moon is shrinking night after night, the Moon is…", "waning", ["waxing", "full", "new"], "Wane = shrink."],
+      ["After a full moon, the next main phase is the…", "third quarter moon", ["new moon", "first quarter moon", "full moon again"], "It starts to wane."],
+      ["After a new moon, the next main phase is the…", "first quarter moon", ["third quarter moon", "full moon", "new moon again"], "It starts to wax."],
+      ["A thin sliver of a lit Moon is a…", "crescent", ["full moon", "gibbous moon", "quarter moon"], "Like a fingernail clipping."],
+      ["Tonight is a full moon. About when will the next full moon be?", "In about a month", ["Tomorrow", "In a year", "Never"], "Phases repeat.", true],
+      ["A first quarter moon looks like…", "a half circle", ["a full circle", "nothing at all", "a thin sliver"], "Half of the face is lit.", true],
+      ["Tonight is a first quarter moon. In about a week it will be…", "full", ["new", "a thin crescent", "third quarter"], "Waxing toward full.", true],
+      ["Which data would help predict when sunset comes in May?", "Sunset times recorded in past years", ["The phase of the Moon", "Rainfall in a pond", "The color of the sky at noon"], "Seasonal patterns repeat.", true],
+      ["Gibbous means the Moon is…", "more than half lit", ["less than half lit", "not lit", "eclipsed"], "Almost full.", true],
+      ["Why are the seasons a pattern we can predict?", "They repeat in the same order every year", ["They happen at random", "They change every week", "They depend on the Moon's phase"], "Cycles repeat.", true],
+    ],
+  }),
+  bankUnit({
+    id: "tx-g4-weather-climate",
+    title: "Weather or Climate?",
+    emoji: "🌦️",
+    blurb: "Weather is today; climate is the pattern over many years.",
+    parentNote:
+      "Practices telling weather (conditions on one day) from climate (the usual pattern over many years), using Texas examples: the dry, sunny climate of far West Texas and the humid climate of the Gulf Coast.",
+    standards: ["4.10(C)", "telling weather from climate"],
+    items: [
+      ["Weather is…", "the conditions outside on a day", ["the pattern over 30 years", "a kind of rock", "the shape of the land"], "Today's sky."],
+      ["Climate is…", "the usual weather of a place over many years", ["today's temperature", "one storm", "this afternoon's wind"], "A long-term pattern."],
+      ["\"It is raining in Houston right now.\" This describes…", "weather", ["climate", "a landform", "a resource"], "Right now."],
+      ["\"El Paso gets little rain most years.\" This describes…", "climate", ["weather", "erosion", "a fossil"], "Most years."],
+      ["\"Tomorrow will be windy and cool.\" This is a…", "weather forecast", ["climate record", "rock type", "life cycle"], "One day."],
+      ["\"Summers in Texas are usually hot.\" This describes…", "climate", ["weather", "a tornado", "an earthquake"], "Usually = a pattern."],
+      ["Which changes from hour to hour?", "Weather", ["Climate", "The order of planets", "The layers of rock"], "Clouds come and go."],
+      ["Scientists study climate by looking at weather records from…", "many years", ["one morning", "one hour", "one minute"], "About 30 years."],
+      ["A desert has a climate that is…", "dry", ["very wet", "icy all year", "always stormy"], "Little rain."],
+      ["The Gulf Coast has a climate that is…", "warm and humid", ["freezing all year", "dry like a desert", "snowy"], "Ocean air is moist."],
+      ["A cold front brings a sudden chilly day in May. This is…", "weather", ["climate", "a fossil", "a landform"], "One event."],
+      ["Which is a climate statement?", "Austin averages more than 30 inches of rain a year", ["It hailed in Austin today", "It is 70 °F right now", "A storm is coming tonight"], "Averages over years."],
+      ["Which is a weather statement?", "A thunderstorm hit Dallas this afternoon", ["Dallas has hot summers", "Dallas usually gets mild winters", "Dallas gets thunderstorms most springs"], "One afternoon."],
+      ["Why do people in a dry climate plant cactus and other desert plants?", "They need little water", ["They need lots of rain", "They grow only in snow", "They float"], "Plants fit the climate."],
+      ["A town has one cold day in a usually warm month. Did its climate change?", "No, that was weather", ["Yes, forever", "Yes, it is now polar", "Only at night"], "One day is not a pattern."],
+      ["What would you check to pack for a trip tomorrow?", "The weather forecast", ["The climate of 100 years ago", "A rock chart", "A food web"], "Tomorrow's conditions."],
+      ["What would you check to choose crops to grow for years?", "The climate", ["Tomorrow's forecast", "This hour's wind", "One rainy day"], "Long-term pattern."],
+      ["A graph of average monthly temperature for 30 years shows…", "climate", ["today's weather", "one storm", "a single day"], "Averages over many years."],
+      ["Which tool shows what the weather is right now?", "A thermometer", ["A fossil", "A map of rock layers", "A calendar"], "It reads the air.", true],
+      ["Far West Texas gets less rain than East Texas most years. This is a difference in…", "climate", ["weather only", "soil color", "time zones"], "Most years = climate.", true],
+      ["Which describes climate?", "Winters are usually mild on the coast", ["It snowed on Tuesday", "It's foggy this morning", "The wind is gusting now"], "Usually = pattern.", true],
+      ["\"There is a 60% chance of rain today.\" This is about…", "weather", ["climate", "erosion", "fossils"], "Today.", true],
+      ["Hurricane season is June to November most years. This describes…", "climate", ["one day's weather", "a rock layer", "a moon phase"], "A yearly pattern.", true],
+      ["A rain gauge filled after one storm measures…", "weather", ["climate", "a landform", "gravity"], "One storm.", true],
+    ],
+  }),
+  copyOf(
+    from(WA_4, "wa-g4-energy-resources"),
+    {
+      id: "tx-g4-energy-resources",
+      title: "Texas Energy Resources",
+      emoji: "⚡",
+      blurb: "Wind, sun, oil and natural gas: where our energy comes from and the rocks that hold it.",
+      parentNote:
+        "Practices renewable and nonrenewable resources and their advantages and disadvantages, why energy matters to modern life, how conservation and recycling help, and the properties of rocks (pores and spaces) that let oil, gas and groundwater be stored underground. Uses Texas examples such as West Texas wind farms and oil and gas fields.",
+      standards: [
+        "4.11(A); 4.11(B); 4.11(C)",
+        "renewable and nonrenewable resources, why energy matters, and the rocks that store oil, gas and water",
+      ],
+    },
+    [
+      ["Rows of wind turbines on the plains of West Texas turn wind into…", "electricity", ["oil", "rain", "soil"], "Texas makes more wind power than any other state."],
+      ["Oil and natural gas pumped in West Texas are…", "nonrenewable", ["renewable", "made from wind", "made from sunlight"], "They took millions of years to form."],
+      ["Oil and natural gas are stored in rocks that have…", "tiny spaces called pores", ["no spaces at all", "magnets inside", "glass inside"], "Like a sponge.", true],
+      ["Water can be stored underground in rock layers called…", "aquifers", ["volcanoes", "dunes", "glaciers"], "Many Texas cities use them.", true],
+      ["One disadvantage of wind power is that…", "it stops when the wind is calm", ["it pollutes the air", "it runs out forever", "it is made of oil"], "No wind, no power.", true],
+      ["Recycling aluminum cans helps because it…", "uses less energy than making new cans", ["makes more trash", "uses more oil", "harms the soil"], "Old cans become new cans."],
+    ],
+  ),
+  copyOf(
+    from(OR_COPIES["4"] ?? [], "or-g4-rocks-erosion"),
+    {
+      id: "tx-g4-rocks-erosion",
+      title: "Weathering, Erosion & Fossils",
+      emoji: "🪨",
+      blurb: "Water, wind and ice wear rock away, move it and drop it; fossils show past environments.",
+      parentNote:
+        "Practices slow changes to Earth's surface from weathering, erosion and deposition by water, wind and ice, and what rock layers and fossils (including common Texas fossils such as sea shells in limestone) say about past environments.",
+      standards: ["4.10(B); 4.12(C)", "weathering, erosion and deposition, and past environments shown by fossils"],
+    },
+    [
+      ["Sea shell fossils in the limestone of the Texas Hill Country show the area was once…", "under a shallow sea", ["a glacier", "a volcano", "always a desert"], "Shells come from sea animals."],
+      ["Over millions of years, the Rio Grande cut deep canyons in Big Bend by…", "erosion", ["deposition", "freezing", "an earthquake"], "Water carries rock away."],
+      ["A river drops sand and mud where it slows down. This is…", "deposition", ["erosion", "weathering", "melting"], "Dropping sediment."],
+      ["Wind wears away soft rock in dry West Texas and leaves odd shapes. This is…", "wind erosion", ["deposition by ice", "a fossil", "a volcano"], "Blowing sand scrapes rock.", true],
+      ["Petrified wood found in Texas tells us that long ago there were…", "forests", ["glaciers", "oceans of lava", "no plants"], "Wood turned to stone.", true],
+    ],
+  ),
+  copyOf(
+    from(WA_5, "wa-g5-ecosystems"),
+    {
+      id: "tx-g4-food-webs",
+      title: "Food Webs & Decomposers",
+      emoji: "🍂",
+      blurb: "How matter and energy move from the Sun through producers, consumers and decomposers.",
+      parentNote:
+        "Practices how matter cycles and energy flows through food webs, including the roles of the Sun, producers, consumers and decomposers, with Texas examples such as prairie grasses, jackrabbits and coyotes.",
+      standards: ["4.12(B)", "matter cycling and energy flow through food webs, including producers, consumers and decomposers"],
+    },
+    [
+      ["In a Texas prairie food chain, grass → jackrabbit → coyote, the producer is…", "grass", ["the jackrabbit", "the coyote", "the Sun"], "It makes its own food."],
+      ["The energy in almost every food web starts with…", "the Sun", ["decomposers", "the soil", "top predators"], "Producers capture sunlight."],
+      ["Mushrooms on a fallen oak log are…", "decomposers", ["producers", "predators", "herbivores"], "They break down dead matter."],
+      ["A red-tailed hawk eats snakes and mice. In a food web it is a…", "consumer", ["producer", "decomposer", "nonliving part"], "It eats other animals.", true],
+    ],
+  ),
+];

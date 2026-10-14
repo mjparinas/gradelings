@@ -1,0 +1,190 @@
+import type { Unit } from "../../types";
+import { OWN_SOCIAL_K as WASHINGTON_K } from "../../washington/units/social-k4-k";
+import { bankUnit, type Q } from "../own";
+import { copyOf, from } from "./kit";
+
+// Texas social studies, Kindergarten (19 TAC §113.11): the Texas and United States flags and pledges, holidays and
+// the people they honor, location words and maps, weather and the land, and technology at home and school. Prompts
+// stay short (80 characters or less) with at most four choices.
+
+const FLAGS: Q[] = [
+  ["How many stars are on the Texas flag?", "one", ["two", "five", "fifty"], "Texas is the Lone Star State."],
+  ["Which flag has one big white star?", "the Texas flag", ["the United States flag", "a pirate flag", "a school flag"], "Texas is the Lone Star State."],
+  ["How many stars are on the United States flag?", "50", ["13", "1", "10"], "One star for each state."],
+  ["The stars on the US flag stand for the…", "50 states", ["50 cities", "50 presidents", "50 rivers"], "One star for each state."],
+  ["The stripes on the US flag stand for the first…", "13 colonies", ["13 presidents", "13 cities", "13 rivers"], "There are 13 stripes."],
+  ["What colors are on the United States flag?", "red, white and blue", ["green and yellow", "orange and black", "pink and purple"], "Think of the stars and stripes."],
+  ["What colors are on the Texas flag?", "red, white and blue", ["green and white", "black and gold", "orange and purple"], "The same colors as the US flag."],
+  ["Texas is called the…", "Lone Star State", ["Sunshine State", "Big Apple", "Snow State"], "Look at the star on its flag."],
+  ["Which pledge do we say to the United States flag?", "the Pledge of Allegiance", ["a birthday song", "a nursery rhyme", "a lunch menu"], "We say it each morning at school."],
+  ["The Pledge to the Texas Flag begins, “Honor the…”", "Texas flag", ["school bus", "playground", "lunchroom"], "It is a pledge to our state's flag."],
+  ["When we say the Pledge of Allegiance, we stand and put a hand…", "over our heart", ["on our head", "in our pocket", "on a friend"], "It shows respect."],
+  ["When we say a pledge, we face the…", "flag", ["door", "clock", "window"], "We look at the flag we honor."],
+  ["A flag is a symbol. A symbol stands for…", "something bigger, like a place", ["a snack", "a toy", "a game"], "A flag stands for a state or a country."],
+  ["Which flag stands for our whole country?", "the United States flag", ["the Texas flag", "a team flag", "a school flag"], "Our country is the United States."],
+  ["Which flag stands for our state?", "the Texas flag", ["the United States flag", "a race flag", "a beach flag"], "We live in Texas."],
+  ["We say the pledges to show…", "respect for our country and state", ["we are hungry", "it is recess", "we are sleepy"], "A pledge is a promise."],
+  ["A pledge is a kind of…", "promise", ["song about food", "game", "snack"], "When you pledge, you promise."],
+  ["The Texas flag has one blue stripe and…", "one white and one red stripe", ["many green stripes", "no stripes", "spots"], "It has three stripes in all."],
+  ["How can we choose a class pet name fairly?", "vote", ["the loudest kid picks", "nobody picks", "the teacher's pet picks"], "Everyone gets a say."],
+  ["When we vote, each person gets…", "one vote", ["ten votes", "no votes", "all the votes"], "Every vote is fair and equal."],
+  ["9 kids vote for fish. 4 vote for frog. Which wins?", "fish", ["frog", "both", "neither"], "The one with more votes wins."],
+  ["Why do we vote in class?", "to choose together fairly", ["to be noisy", "to skip lunch", "to end the day"], "A vote lets everyone choose."],
+  ["Which flag flies over the state capitol in Austin?", "the Texas flag", ["a race flag", "a pirate flag", "a beach flag"], "Austin is the capital of Texas.", true],
+  ["On the Texas flag, the white star is on the…", "blue stripe", ["red stripe", "white stripe", "flagpole"], "Look at the left side of the flag.", true],
+  ["We say the US pledge first, then the pledge to the…", "Texas flag", ["school flag", "team flag", "class pet"], "Our country first, then our state.", true],
+  ["The Pledge of Allegiance says our country is…", "one nation", ["a big city", "a small town", "a park"], "“One nation under God…”", true],
+  ["The Texas pledge calls Texas “one state under God, one and…”", "indivisible", ["invisible", "inside", "in a hurry"], "Indivisible means it can't be split up.", true],
+  ["Your class votes 6 to 6. What is a fair next step?", "vote again or talk it over", ["the teacher's pet wins", "give up", "nobody plays"], "A tie needs another try.", true],
+];
+
+const HOLIDAYS: Q[] = [
+  ["On Independence Day we celebrate our country's…", "birthday", ["first snow", "first school", "first bus"], "The United States began in 1776."],
+  ["Independence Day is on…", "July 4", ["January 1", "October 31", "February 14"], "It is in summer."],
+  ["Which custom goes with Independence Day?", "fireworks", ["pumpkins", "valentines", "snowmen"], "Bright lights in the night sky!"],
+  ["On Independence Day many towns have a…", "parade", ["snowball fight", "spelling test", "nap time"], "People march and wave flags."],
+  ["Veterans Day honors people who…", "served in the military", ["drive buses", "bake bread", "sell toys"], "Veterans served our country."],
+  ["Presidents' Day honors…", "presidents of our country", ["firefighters", "bakers", "farmers"], "Look at the name of the day."],
+  ["Constitution Day remembers when the Constitution was…", "signed", ["painted", "lost", "eaten"], "The Constitution is our plan of government."],
+  ["Which is a national patriotic holiday?", "Independence Day", ["your birthday", "a pizza party", "a snow day"], "It is a day for the whole country."],
+  ["Many people fly a flag on…", "Veterans Day", ["a rainy Tuesday", "bath night", "pajama day"], "It shows thanks to people who served."],
+  ["Who was the first president of the United States?", "George Washington", ["Stephen F. Austin", "Christopher Columbus", "José Antonio Navarro"], "Presidents' Day honors him."],
+  ["George Washington led the army and became our first…", "president", ["teacher", "astronaut", "chef"], "He led the new country."],
+  ["Stephen F. Austin is called the…", "Father of Texas", ["King of Texas", "first astronaut", "inventor of cars"], "He helped many families settle in Texas."],
+  ["Stephen F. Austin brought many families to…", "settle in Texas", ["live on the moon", "sail to Asia", "build a zoo"], "He helped Texas grow."],
+  ["Which Texas city is named for Stephen F. Austin?", "Austin", ["Dallas", "El Paso", "Houston"], "It is our state capital."],
+  ["Christopher Columbus sailed across the…", "Atlantic Ocean", ["Red Sea", "Pacific Ocean", "Rio Grande"], "He sailed from Spain in 1492."],
+  ["Christopher Columbus was a…", "sailor and explorer", ["president", "astronaut", "baker"], "He crossed the ocean in ships."],
+  ["José Antonio Navarro was a Tejano leader who helped Texas…", "become independent", ["build the first car", "fly to the moon", "invent the phone"], "He signed the Texas Declaration of Independence."],
+  ["José Antonio Navarro signed the Texas…", "Declaration of Independence", ["phone book", "lunch menu", "birthday card"], "It said Texas was free from Mexico."],
+  ["A hero is someone who…", "helps others and is brave", ["is always first in line", "has the most toys", "never shares"], "Heroes help."],
+  ["Why do we have holidays that honor people?", "to remember what they did", ["to buy candy", "to skip baths", "to stay up late"], "We remember people who helped."],
+  ["Texas Independence Day is in…", "March", ["July", "December", "October"], "Texas declared independence on March 2, 1836.", true],
+  ["Which holiday has parades, flags and fireworks in summer?", "Independence Day", ["Thanksgiving", "Veterans Day", "Presidents' Day"], "It is on July 4.", true],
+  ["Veterans Day is in…", "November", ["July", "May", "February"], "It comes in the fall.", true],
+  ["Presidents' Day is in…", "February", ["July", "November", "September"], "It is in winter.", true],
+  ["Who lived first, long ago?", "Christopher Columbus", ["George Washington", "Stephen F. Austin", "José Antonio Navarro"], "He sailed in 1492.", true],
+  ["Stephen F. Austin and José Antonio Navarro helped shape our…", "state", ["school bus", "playground", "lunch box"], "They helped make Texas.", true],
+];
+
+const WHERE: Q[] = [
+  ["The bird sits on top of the tree. The bird is…", "over the tree", ["under the tree", "inside the tree", "behind you"], "Over means above."],
+  ["The cat hides below the table. The cat is…", "under the table", ["over the table", "on the roof", "far away"], "Under means below."],
+  ["Your desk is close to you. Your desk is…", "near", ["far", "over the sea", "on the moon"], "Near means close."],
+  ["The moon is very far from us. The moon is…", "far", ["near", "under the bed", "in your hand"], "Far means a long way off."],
+  ["You eat with your right hand. The other hand is your…", "left hand", ["top hand", "far hand", "under hand"], "Left and right are the two sides."],
+  ["Which word tells where something is?", "near", ["happy", "loud", "yummy"], "Near, far, left and right tell where."],
+  ["Which tool shows a place from above?", "a map", ["a spoon", "a drum", "a ball"], "A map is a drawing of a place."],
+  ["A globe is shaped like a…", "ball", ["box", "book", "pencil"], "A globe is a model of Earth."],
+  ["A globe is a model of…", "Earth", ["the sun", "a school", "a car"], "It is round like Earth."],
+  ["On a globe, blue shows…", "water", ["land", "roads", "houses"], "Oceans, lakes and rivers are blue."],
+  ["A map of your school can help you find the…", "library", ["moon", "ocean floor", "North Pole"], "A school map shows rooms."],
+  ["Where do you go to eat lunch at school?", "the cafeteria", ["the bus stop", "the nurse's cot", "the flagpole"], "Many schools eat lunch there."],
+  ["Where do you go to borrow books at school?", "the library", ["the gym", "the parking lot", "the office"], "Books live there."],
+  ["Where do you play at recess?", "the playground", ["the office", "the library", "the bus"], "There are swings and slides."],
+  ["Where do you go at school if you feel sick?", "the nurse's office", ["the playground", "the gym", "the bus stop"], "The nurse helps sick kids."],
+  ["The gym is next to the library. They are…", "near each other", ["far apart", "on the moon", "under the sea"], "Next to means near."],
+  ["A map of your classroom shows your…", "desk", ["grandma's house", "the ocean", "the moon"], "A classroom map shows things in the room."],
+  ["Which helps you find a city far away?", "a map", ["a hat", "a cup", "a broom"], "Maps show places near and far."],
+  ["The ball is between two chairs. One chair is on each…", "side", ["roof", "cloud", "page"], "Between means in the middle."],
+  ["Which one is a map tool?", "a globe", ["a fork", "a crayon box", "a pillow"], "It shows all of Earth."],
+  ["Your teacher sits at the front. You sit far from her. You sit in the…", "back", ["front", "sky", "hall"], "Far from the front is the back.", true],
+  ["On a globe, which color often shows land?", "green or brown", ["blue", "pink", "black"], "Water is blue, land is another color.", true],
+  ["The office is left of the door. Walk out and turn…", "left", ["right", "up", "down"], "Go the way the map shows.", true],
+  ["A map has little pictures that stand for real things. They are…", "symbols", ["stickers", "words only", "games"], "A tree picture can stand for a park.", true],
+  ["Which is bigger, a map of your school or of Texas?", "a map of Texas", ["a map of your school", "they are the same", "neither"], "Texas has many schools.", true],
+  ["Which tells you the most about where Texas is?", "a globe or map", ["a song", "a lunch box", "a coat"], "Maps and globes show places.", true],
+];
+
+const TECH: Q[] = [
+  ["Which is technology used at home?", "a refrigerator", ["a rock", "a leaf", "a stick"], "People made it to help."],
+  ["Which is technology used at school?", "a computer", ["a puddle", "a pinecone", "a shell"], "People made it to help us learn."],
+  ["A refrigerator helps by…", "keeping food cold", ["washing dogs", "drying hair", "mowing grass"], "Cold food stays fresh."],
+  ["A washing machine helps by…", "cleaning clothes", ["cooking soup", "making music", "watering plants"], "Clothes go in dirty and come out clean."],
+  ["A telephone helps people…", "talk from far away", ["swim faster", "grow taller", "sleep longer"], "You can hear a voice far away."],
+  ["A light bulb helps us…", "see at night", ["hear better", "smell flowers", "run faster"], "It makes light."],
+  ["A school bus helps kids…", "get to school", ["cook food", "read books", "grow plants"], "It carries many children."],
+  ["Which helps you see a story on a screen?", "a tablet", ["a pillow", "a crayon", "a sock"], "It has a screen."],
+  ["Long ago, before electric lights, people used…", "candles", ["tablets", "flashlights", "TV"], "Fire makes light."],
+  ["Long ago, before cars, people rode…", "horses", ["airplanes", "rockets", "scooters"], "Animals helped people travel."],
+  ["Long ago, before washing machines, people washed clothes…", "by hand", ["with a computer", "with a phone", "with a TV"], "It took a long time."],
+  ["Long ago, people kept food cold with…", "ice", ["a microwave", "an oven", "a heater"], "Ice is cold."],
+  ["Without a stove, how could people cook?", "over a fire", ["in a bathtub", "in a mailbox", "under a desk"], "Fire is hot."],
+  ["Which is the newest way to send a message?", "a text on a phone", ["a letter on horseback", "a smoke signal", "a drum"], "Phones are modern."],
+  ["A pencil sharpener helps us…", "sharpen pencils", ["clean floors", "open doors", "cook rice"], "Look at its name."],
+  ["Technology is a tool that helps people…", "do jobs", ["get lost", "feel sad", "break things"], "Tools make work easier."],
+  ["A teacher shows a picture on a big screen with a…", "projector", ["broom", "bucket", "rake"], "It shines a picture on the wall."],
+  ["Which helps keep a house cool in summer?", "an air conditioner", ["a heater", "a candle", "a blanket"], "Texas summers are hot."],
+  ["A microwave helps by…", "heating food fast", ["washing dishes", "making beds", "reading books"], "It warms food."],
+  ["Which one is not technology?", "a flower", ["a computer", "a phone", "a car"], "Nature made it."],
+  ["How would your day change without a car or bus?", "you would walk farther", ["you would fly", "you would not move", "nothing would change"], "We would need another way to travel.", true],
+  ["How would life change without refrigerators?", "food would spoil faster", ["food would last forever", "food would be colder", "nothing would change"], "Cold keeps food fresh.", true],
+  ["A doctor uses a stethoscope to…", "listen to your heart", ["cut your hair", "fix a car", "read a map"], "It helps a doctor hear.", true],
+  ["Which helps people talk face to face from far away?", "a video call", ["a letter", "a drum", "a bell"], "You see and hear each other.", true],
+  ["Before computers, children wrote at school on…", "slates and paper", ["smartboards", "laptops", "phones"], "A slate is a small board.", true],
+  ["Which came first, long ago?", "the candle", ["the light bulb", "the computer", "the phone"], "People used fire before electricity.", true],
+];
+
+const WEATHER_TEXAS: Q[] = [
+  ["Summers in much of Texas are very…", "hot", ["snowy", "icy", "freezing"], "Think of summer in Texas."],
+  ["On a hot Texas day, what helps you stay cool?", "a hat and water", ["a heavy coat", "mittens", "a scarf"], "Shade and water help."],
+  ["A thunderstorm comes. Where is it safe?", "inside a building", ["under a tall tree", "in a pool", "on a hill"], "Go inside during lightning."],
+  ["Many people in Texas swim in summer because it is…", "hot", ["dark", "snowy", "icy"], "Water cools you off."],
+  ["Which is a landform?", "a hill", ["a house", "a road", "a school"], "Nature made it."],
+];
+
+export const SOCIAL_K: Unit[] = [
+  bankUnit({
+    id: "tx-k-flags",
+    title: "Flags & Pledges",
+    emoji: "🇺🇸",
+    blurb: "Our flags, our pledges and voting",
+    parentNote:
+      "The United States flag and the Texas Lone Star flag, the Pledge of Allegiance and the Pledge to the Texas Flag, and voting as a fair way for a group to decide.",
+    standards: ["K.9(A); K.9(B); K.9(C)", "the United States and Texas flags, the two pledges, and voting to decide as a group"],
+    items: FLAGS,
+  }),
+  bankUnit({
+    id: "tx-k-holidays-heroes",
+    title: "Holidays & Heroes",
+    emoji: "🎆",
+    blurb: "Special days and the people we remember",
+    parentNote:
+      "National holidays (Independence Day, Veterans Day, Presidents' Day, Constitution Day) and their customs, and the people the Texas standards name for Kindergarten: Stephen F. Austin, George Washington, Christopher Columbus and José Antonio Navarro.",
+    standards: ["K.1(A); K.1(B); K.2", "national patriotic holidays and their customs, and people who helped shape Texas and the nation"],
+    items: HOLIDAYS,
+  }),
+  bankUnit({
+    id: "tx-k-where-is-it",
+    title: "Near, Far & Maps",
+    emoji: "🧭",
+    blurb: "Over, under, left, right, maps and globes",
+    parentNote:
+      "Location words (over, under, near, far, left, right), places on the school campus, and what maps and globes show.",
+    standards: ["K.3(A); K.3(B); K.3(C)", "location words, places on the school campus, and maps and globes"],
+    items: WHERE,
+  }),
+  bankUnit({
+    id: "tx-k-technology",
+    title: "Tools & Technology",
+    emoji: "💡",
+    blurb: "Helpful tools at home and school",
+    parentNote:
+      "Technology at home and school, the jobs it helps with, and how life was different before modern tools such as electric lights, cars and refrigerators.",
+    standards: ["K.12(A); K.12(B); K.12(C)", "technology at home and school, how it helps, and life without modern technology"],
+    items: TECH,
+  }),
+  copyOf(
+    from(WASHINGTON_K, "wa-k-weather-and-me"),
+    {
+      id: "tx-k-weather-and-me",
+      title: "Weather, Land & Me",
+      emoji: "🌦️",
+      blurb: "How weather and place change how we live",
+      parentNote:
+        "Weather, land and water, natural and human-made things, and how where we live changes what we wear, eat and do, with a few Texas examples.",
+      standards: ["K.4(A); K.4(B)", "landforms, water, resources and weather, and how place shapes clothing, food, shelter and activities"],
+    },
+    WEATHER_TEXAS,
+  ),
+];

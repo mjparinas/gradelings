@@ -1,0 +1,12 @@
+import type { Unit } from "../../types";
+import { SOCIAL_2 as californiaSocialG2 } from "../../california/units/social-g2";
+import { communityChange as novaScotiaG2SocialCommunityChange } from "../../nova-scotia/units/g2-social";
+import { units as ontarioG2Social } from "../../ontario/g2-social";
+import { OWN_SOCIAL_2 as oregonSocialK3OWN_SOCIAL_2 } from "../../oregon/units/social-k3";
+import { SOCIAL_2 } from "../units/social-g2";
+
+// Texas Grade 2 social. POOL is the units this course may copy from other frameworks (see ../plan/social.ts), as the
+// exact unit files, so the grade's download carries only those files. OWN is the units written for Texas.
+export const POOL: readonly Unit[] = [...ontarioG2Social, novaScotiaG2SocialCommunityChange, ...oregonSocialK3OWN_SOCIAL_2, ...californiaSocialG2];
+
+export const OWN: readonly Unit[] = SOCIAL_2;

@@ -176,4 +176,11 @@ export const lessons: GradeLessons = {
     ["3 times as many as 4 is 3 × 4."],
     "12",
   ),
+  // Texas
+  "math/tx-g4-money-smarts": lesson(
+    ["A fixed expense costs the same each month; a variable expense changes.", "Profit is the money earned minus the costs.", "Banks keep money safe, pay interest on savings and lend money to borrowers."],
+    "A bake sale earns $60. Supplies cost $22. What is the profit?",
+    ["Profit = money earned − costs.", "60 − 22 = 38."],
+    "$38",
+  ),
 };
