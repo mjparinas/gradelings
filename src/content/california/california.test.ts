@@ -87,11 +87,11 @@ describe("California", () => {
   it("has a unit for every standard a child can practise in the app", () => {
     const outcomes = research<Record<string, { idx: string; courses?: string[] }[]>>("california/outcomes.json");
     // Left out on purpose: writing, speaking and listening, reading fluency and "read a range of texts" need free text or
-    // voice from the child, which the app never takes; high school science outside Living Earth (the Grade 9 course).
-    const practisable = (key: string, o: { idx: string; courses?: string[] }) =>
-      key.endsWith("/language")
-        ? !/^(W|SL)\./.test(o.idx) && !/^RF\.\w+\.4$/.test(o.idx) && !/^R[LI]\.[\w-]+\.10$/.test(o.idx)
-        : key !== "9/science" || !o.idx.startsWith("HS-") || (o.courses ?? []).includes("Living Earth");
+    // voice from the child, which the app never takes. Grade 9 science covers every high school expectation, Living
+    // Earth's and those taught in Chemistry in the Earth System and Physics of the Universe.
+    const practisable = (key: string, o: { idx: string }) =>
+      !key.endsWith("/language") ||
+      (!/^(W|SL)\./.test(o.idx) && !/^RF\.\w+\.4$/.test(o.idx) && !/^R[LI]\.[\w-]+\.10$/.test(o.idx));
     const cited = new Map<string, Set<string>>();
     for (const { c, u } of california) {
       const key = `${c.grade}/${c.subject}`;
