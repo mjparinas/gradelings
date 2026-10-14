@@ -11,6 +11,7 @@ export const FOCUS_SCIENCE: Record<string, string[]> = {
     "Light and sound",
     "How plants and animals survive and grow",
     "Patterns of the sun, moon and stars",
+    "Testing two designs to see which works better",
   ],
   "2/science": [
     "Properties of materials",
@@ -26,6 +27,7 @@ export const FOCUS_SCIENCE: Record<string, string[]> = {
     "Energy and waves",
     "How plant and animal structures work",
     "Rocks, erosion, natural hazards and energy resources",
+    "Engineering design: criteria, constraints and fair tests",
   ],
   "5/science": [
     "Matter and its changes",
@@ -38,19 +40,20 @@ export const FOCUS_SCIENCE: Record<string, string[]> = {
     "Weather, climate and engineering design",
   ],
   "7/science": [
-    "Atoms, density, mixtures and chemical reactions",
+    "Atoms, mixtures, chemical reactions and synthetic materials",
     "Ecosystems, food webs and biodiversity",
     "Electric circuits, and Earth's surface and resources",
+    "How a growing population and resource use affect Earth",
   ],
   "8/science": [
-    "Forces, motion, energy and waves",
-    "Cells, heredity and natural selection",
+    "Forces, motion, energy, waves and digital signals",
+    "Cells, heredity, natural selection and clues from embryos",
     "Space systems and Earth's history",
   ],
   "9/science": [
-    "Life science: cells, reproduction, ecosystems and evolution",
-    "Earth science: plate tectonics, water, glaciers and landscapes",
+    "Life science: cells, body systems, DNA, ecosystems and evolution",
+    "Earth science: early Earth, plate tectonics, weather, climate and landscapes",
     "Space science: the moon, tides, seasons, stars and the universe",
-    "Climate and Earth's systems",
+    "Physical science: atoms, reactions, motion, energy and circuits",
   ],
 };

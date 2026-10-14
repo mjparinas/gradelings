@@ -1,4 +1,340 @@
 import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
 
-// New York's own Grade 2 language units (`ny-` ids).
-export const UNITS: Unit[] = [];
+// New York's own Grade 2 language units (`ny-` ids). No shared unit practises 2R2 (main topic, retelling and summing up),
+// 2R8 (how an author supports a point with reasons), 2R9 (connecting a text to self, other texts and the world), 2W1
+// (an opinion with reasons), 2W3 (a narrative with order words, details and an ending) or 2W4 (a creative response), so
+// these banks do. Every passage is original.
+
+const MAIN_TOPIC_AND_REASONS: Q[] = [
+  [
+    "“Squirrels get ready for winter. They bury nuts in the fall. They grow thick fur.” What is the main topic?",
+    "how squirrels get ready for winter",
+    ["what squirrels look like in summer", "how to grow nuts", "why fur is soft"],
+    "What are all the sentences about?",
+  ],
+  [
+    "“Our town has a new library. It has big windows, a reading nook and a fish tank.” What is it mostly about?",
+    "the new library",
+    ["fish tanks", "big windows", "the whole town"],
+    "The main topic is what the whole text tells about.",
+  ],
+  [
+    "“First, Kai planted a seed. Next, he watered it each day. At last, a sprout came up.” Which is the best retelling?",
+    "Kai planted a seed, watered it and it sprouted.",
+    ["Kai likes water.", "A sprout is green.", "Kai has a garden hose."],
+    "A retelling tells the key events in order.",
+  ],
+  [
+    "“Penguins are birds, but they cannot fly. They use their wings to swim fast.” Which detail is key?",
+    "Penguins use their wings to swim.",
+    ["Penguins live in zoos.", "Birds sing songs.", "Wings are soft."],
+    "A key detail comes from the text and helps the main topic.",
+  ],
+  [
+    "“Rosa lost her kite in a tree. Her brother got a ladder. Together they got it down.” Which sentence sums it up?",
+    "Rosa and her brother got her kite out of a tree.",
+    ["Rosa has a brother.", "Ladders are tall.", "Kites fly on windy days."],
+    "A summary tells the most important part in a few words.",
+  ],
+  [
+    "“Bees help flowers. They carry pollen from flower to flower so new seeds can grow.” What point does the author make?",
+    "Bees help flowers.",
+    ["Bees are scary.", "Flowers are pretty.", "Seeds are small."],
+    "Look at the first sentence. The rest explains it.",
+  ],
+  [
+    "“Walking to school is good for you. It makes your heart strong, and you get fresh air.” Which reason supports the point?",
+    "It makes your heart strong.",
+    ["School starts at eight.", "Some kids ride the bus.", "Shoes come in many colors."],
+    "A reason tells why the point is true.",
+  ],
+  [
+    "“Cats make good pets. They are quiet, and they clean themselves.” How many reasons does the author give?",
+    "two",
+    ["one", "three", "none"],
+    "Quiet is one reason. Clean is another.",
+  ],
+  [
+    "“Recycling helps the Earth. Old cans become new cans, so we use less metal.” Which part is a reason?",
+    "Old cans become new cans.",
+    ["Recycling helps the Earth.", "Cans are shiny.", "Metal is heavy."],
+    "The reason explains why recycling helps.",
+  ],
+  [
+    "In a book, a girl is nervous on her first day at camp. Which connection is text-to-self?",
+    "I felt nervous on my first day of school.",
+    ["Another book has a camp in it.", "Many kids go to camps in summer.", "The book has 30 pages."],
+    "Text-to-self links the book to your own life.",
+  ],
+  [
+    "You read two books where a small animal helps a big one. What kind of connection is this?",
+    "text-to-text",
+    ["text-to-self", "text-to-world", "no connection"],
+    "You are linking one book to another book.",
+  ],
+  [
+    "A story is about a town cleaning up a park. You think of a news report about a beach cleanup. What connection is this?",
+    "text-to-world",
+    ["text-to-self", "text-to-text", "no connection"],
+    "You linked the book to something happening in the world.",
+  ],
+  [
+    "Why do readers make connections?",
+    "to understand and remember what they read",
+    ["to finish faster", "to skip the hard parts", "to read only the pictures"],
+    "Connections link new ideas to what you already know.",
+  ],
+  [
+    "“Gus the goat ate the farmer's hat, then his shoe, then his lunch!” Which retelling keeps the order?",
+    "Gus ate the hat, the shoe and then the lunch.",
+    ["Gus ate the lunch, the shoe and then the hat.", "Gus ate only the lunch.", "The farmer ate a hat."],
+    "Keep the events in the order they happened.",
+  ],
+  [
+    "“Rain forests are full of life. Monkeys swing in the trees. Frogs hide on leaves. Birds call all day.” What is the central idea?",
+    "Rain forests are full of life.",
+    ["Frogs hide on leaves.", "Birds call all day.", "Monkeys like bananas."],
+    "The central idea is the big idea the details support.",
+  ],
+  [
+    "“Leo's grandpa taught him to fish. They sat by the lake and waited. Leo caught his first fish!” What happened at the end?",
+    "Leo caught his first fish.",
+    ["They sat by the lake.", "Grandpa taught Leo.", "They went home hungry."],
+    "Look at the last sentence.",
+  ],
+  [
+    "An author says, “Kids should drink water.” Which reason best supports the point?",
+    "Water helps your body stay healthy.",
+    ["Water is wet.", "Cups can be blue.", "Some kids like juice."],
+    "The best reason explains why the point is true.",
+    true,
+  ],
+  [
+    "“Sea turtles are in danger. Plastic in the ocean can hurt them, and their beaches are getting crowded.” What is the author's point?",
+    "Sea turtles are in danger.",
+    ["Beaches are crowded.", "Plastic is light.", "Turtles are green."],
+    "The point is the big idea the reasons support.",
+    true,
+  ],
+  [
+    "“Hana practiced her song every day. She was scared on stage, but she sang every note.” Which summary is best?",
+    "Hana practiced hard and sang her song even though she was scared.",
+    ["Hana was scared.", "Hana likes stages.", "Hana sang a song about practice."],
+    "A good summary includes the most important parts.",
+    true,
+  ],
+  [
+    "Which detail does NOT support this point? “Dogs are helpful.”",
+    "Dogs come in many sizes.",
+    ["Dogs can guide people who are blind.", "Dogs can find lost hikers.", "Dogs can warn people about danger."],
+    "Which detail is not about dogs helping?",
+    true,
+  ],
+  [
+    "A book shows a family from another country cooking a holiday meal. Your family cooks for holidays too. What can you say?",
+    "Families in many places share food on special days.",
+    ["Only my family cooks.", "The book is wrong.", "Holidays have no food."],
+    "Connections can show how people are alike and different.",
+    true,
+  ],
+  [
+    "Which question helps you find the main topic of a text?",
+    "What is this mostly about?",
+    ["How many pages are there?", "What color is the cover?", "Who is my best friend?"],
+    "The main topic is what most of the text tells about.",
+    true,
+  ],
+  [
+    "“Our class should have a garden. We could grow food, learn about plants and make the yard pretty.” Which is NOT a reason given?",
+    "Gardens are expensive.",
+    ["We could grow food.", "We could learn about plants.", "We could make the yard pretty."],
+    "Find the one the author did not say.",
+    true,
+  ],
+  [
+    "You read a story about a boy who moves to a new city and a poem about missing home. What do they share?",
+    "a feeling of missing home",
+    ["the same author", "the same main character", "the same length"],
+    "Texts can share a feeling or idea even if they are different kinds.",
+    true,
+  ],
+];
+
+const WRITING_CRAFT: Q[] = [
+  [
+    "Which sentence states an opinion?",
+    "Summer is the best season.",
+    ["Summer comes after spring.", "In summer, days are long.", "Summer has three months."],
+    "An opinion tells what someone thinks.",
+  ],
+  [
+    "Max writes, “Soccer is the best sport.” Which is the best reason to add?",
+    "Everyone on the team gets to run and kick.",
+    ["The ball is round.", "My shoes are red.", "There is a park by my house."],
+    "A good reason explains why soccer is the best.",
+  ],
+  [
+    "Which word helps you add a second reason?",
+    "Also",
+    ["Once", "Never", "Maybe"],
+    "This word adds one more idea.",
+  ],
+  [
+    "Which is the best ending for an opinion piece about reading at bedtime?",
+    "That is why reading at bedtime is a great habit.",
+    ["Once upon a time.", "The end of the day.", "I have a bed."],
+    "An ending sums up the opinion.",
+  ],
+  [
+    "Which word shows the first thing that happened in a story?",
+    "First",
+    ["Finally", "Then", "Last"],
+    "Time words tell the order of events.",
+  ],
+  [
+    "Which time word fits? “We packed our bags. ___, we got on the bus.”",
+    "Next",
+    ["First", "Before", "Once upon a time"],
+    "This word tells what came after.",
+  ],
+  [
+    "Which sentence would make a good ending for a story about a lost puppy?",
+    "At last, the puppy was home, safe and warm.",
+    ["One day, a puppy got lost.", "First, we heard a bark.", "Puppies have four legs."],
+    "An ending wraps up the story.",
+  ],
+  [
+    "Which sentence shows what a character is thinking?",
+    "Maya wondered if the door was locked.",
+    ["Maya walked to the door.", "The door was brown.", "There was a door."],
+    "Look for a word like wondered or thought.",
+  ],
+  [
+    "Which sentence describes an action with detail?",
+    "Ben raced up the hill and leaped over a log.",
+    ["Ben went.", "Ben was there.", "There was a hill."],
+    "Strong action words help readers picture it.",
+  ],
+  [
+    "Which sentence tells a character's feeling?",
+    "Ella felt proud when she finished the puzzle.",
+    ["Ella has a puzzle.", "The puzzle has 50 pieces.", "Puzzles are on the shelf."],
+    "Feelings tell how the character felt inside.",
+  ],
+  [
+    "Which is the best first sentence for a story?",
+    "On a windy morning, Jin found a strange map in his mailbox.",
+    ["The end.", "Maps are made of paper.", "I like maps."],
+    "A strong start tells who, where and what.",
+  ],
+  [
+    "Put the story in order. Which comes in the middle?",
+    "Then we set up the tent.",
+    ["First, we drove to the woods.", "Finally, we fell asleep under the stars.", "Once upon a time."],
+    "The middle comes after the start and before the end.",
+  ],
+  [
+    "After reading a story about a dragon, which is a creative response?",
+    "writing a poem about the dragon",
+    ["copying the title", "counting the pages", "closing the book"],
+    "A creative response makes something new.",
+  ],
+  [
+    "Your class read a poem about the moon. What could you create as a response?",
+    "a painting of the moon with a line from the poem",
+    ["a list of shoes", "a phone number", "a grocery receipt"],
+    "Your response should connect to the poem.",
+  ],
+  [
+    "Which is a play you could write about a story?",
+    "characters' lines to act out the story",
+    ["a list of facts about the author", "a math problem", "a weather report"],
+    "A play has lines for characters to say.",
+  ],
+  [
+    "Which sentence gives an opinion about a book?",
+    "I think the ending was funny because the frog wore a crown.",
+    ["The book has a frog.", "The book is on the shelf.", "The book has 20 pages."],
+    "Look for “I think” and a reason.",
+  ],
+  [
+    "Lena writes, “Cats are better than dogs.” What should she add next?",
+    "reasons that tell why",
+    ["a list of dog names", "a story about a fish", "the date"],
+    "An opinion needs reasons.",
+    true,
+  ],
+  [
+    "Which sentence uses a time word to show order?",
+    "After lunch, we went to the zoo.",
+    ["We went to the zoo.", "The zoo was big.", "Zoos have animals."],
+    "Look for a word that tells when.",
+    true,
+  ],
+  [
+    "Which detail best describes how the snow felt?",
+    "The snow crunched and squeaked under my boots.",
+    ["It snowed.", "There was snow.", "Snow is white."],
+    "Pick the detail that helps you hear and feel it.",
+    true,
+  ],
+  [
+    "Which is the best closing for a story about a lost tooth?",
+    "That night, I put my tooth under my pillow and smiled.",
+    ["One day my tooth was loose.", "Teeth are white.", "First, I wiggled it."],
+    "A closing tells how things ended.",
+    true,
+  ],
+  [
+    "Which reason uses a fact to support “Our school needs more bike racks”?",
+    "The bike rack is full every morning.",
+    ["Bikes are fun.", "I like blue bikes.", "Bike racks are metal."],
+    "Evidence is a true detail that backs up the opinion.",
+    true,
+  ],
+  [
+    "A story ends with the hero sad. You write a new, happy ending. What kind of response is this?",
+    "changing the story in your own way",
+    ["a fact list", "a book review score", "a dictionary entry"],
+    "A response can retell a story with your own ideas.",
+    true,
+  ],
+  [
+    "Which sentence would NOT belong in a story about building a sandcastle?",
+    "My cousin has a new bike.",
+    ["We filled the bucket with wet sand.", "A wave knocked down the tower.", "We built it again, even bigger."],
+    "Every sentence should be about the same story.",
+    true,
+  ],
+  [
+    "Which order words best tell a story's beginning, middle and end?",
+    "First, Then, Finally",
+    ["Finally, First, Then", "Then, Finally, First", "Last, Next, First"],
+    "Start with the word for the beginning.",
+    true,
+  ],
+];
+
+export const UNITS: Unit[] = [
+  bankUnit({
+    id: "ny-g2-main-topic-and-reasons",
+    title: "Main Topic and Reasons",
+    emoji: "🎯",
+    blurb: "Find the main topic, retell and sum up, and see how authors give reasons.",
+    parentNote:
+      "Your child finds the main topic or central idea of a short text, picks the best retelling or summary, spots the reasons an author gives for a point and makes text-to-self, text-to-text and text-to-world connections.",
+    standards: ["2R2; 2R8; 2R9", "main topic, retelling and summarizing, how reasons support an author's point, and making connections"],
+    items: MAIN_TOPIC_AND_REASONS,
+  }),
+  bankUnit({
+    id: "ny-g2-writing-craft",
+    title: "Opinions, Stories and Responses",
+    emoji: "✏️",
+    blurb: "Give reasons, tell stories in order and respond in creative ways.",
+    parentNote:
+      "Your child chooses opinions and the reasons that support them, time-order words, details about actions, thoughts and feelings, story openings and endings, and creative ways to respond to a text such as a poem or a play.",
+    standards: ["2W1; 2W3; 2W4", "opinions with reasons, stories with order words, details and endings, and creative responses to texts"],
+    items: WRITING_CRAFT,
+  }),
+];

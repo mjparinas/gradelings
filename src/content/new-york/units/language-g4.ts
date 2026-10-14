@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { CRAFT_UNITS } from "./language-g4-craft";
 
 // New York's own Grade 4 language units (`ny-` ids). New York's 4R5 names the parts of poems and plays children should
 // use when they talk about literary texts (verse, rhythm, meter, characters, settings, dialogue, stage directions); no
@@ -189,4 +190,5 @@ export const UNITS: Unit[] = [
     standards: ["4R5", "the parts of poems and plays: verse, rhythm, meter, characters, setting, dialogue and stage directions"],
     items: POEMS_AND_PLAYS,
   }),
+  ...CRAFT_UNITS,
 ];

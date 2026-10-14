@@ -231,6 +231,19 @@ export const lessons: GradeLessons = {
     ["Interest: 2,000 × 0.05 × 3 = 300.", "Total: 2,000 + 300 = 2,300."],
     "$2,300",
   ),
+  // New York
+  "math/ny-g8-distance": lesson(
+    ["Draw a right triangle between the two points: one leg across, one leg up or down.", "The legs are the differences of the x-coordinates and of the y-coordinates.", "Use a² + b² = c². The distance is c."],
+    "What is the distance between (1, 2) and (4, 6)?",
+    ["Across: 4 − 1 = 3. Up: 6 − 2 = 4.", "3² + 4² = 9 + 16 = 25.", "c = √25 = 5."],
+    "5 units",
+  ),
+  "math/ny-g8-linear-models": lesson(
+    ["A line of best fit y = mx + b models two-variable data.", "Put a value in for x to predict y.", "The slope m is the change in y for each 1 more in x. The intercept b is the predicted y when x is 0."],
+    "Test score y and hours of study x fit y = 5x + 60. Predict the score for 4 hours.",
+    ["y = 5 × 4 + 60.", "y = 20 + 60 = 80."],
+    "80 points",
+  ),
   // California
   "math/ca-g8-similar-distance": lesson(
     ["Rotations, reflections and translations keep size and shape; a dilation changes size only.", "Figures are similar if one can be turned into the other with these moves.", "To find the distance between two points, draw a right triangle and use a² + b² = c²."],

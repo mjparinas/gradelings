@@ -227,6 +227,13 @@ export const lessons: GradeLessons = {
     ["Net = gross − deductions.", "900 − 135 = 765."],
     "$765",
   ),
+  // New York
+  "math/ny-g5-fraction-line-plots": lesson(
+    ["A line plot puts an X above the value of each measurement.", "To total the X marks at one value, multiply: 3 marks at 1/4 is 3 × 1/4 = 3/4.", "Add the totals for every value to get the total of all the measurements."],
+    "A line plot shows 2 X marks at 1/2 inch and 3 X marks at 3/4 inch. What is the total length?",
+    ["2 × 1/2 = 1.", "3 × 3/4 = 9/4 = 2 1/4.", "1 + 2 1/4 = 3 1/4."],
+    "3 1/4 inches",
+  ),
   "math/ca-g5-line-plots": lesson(
     ["Put one X above the mark for each measurement.", "To find a total, multiply each mark by its number of X's and add.", "To share the total equally, divide it by the number of measurements."],
     "Beakers hold 1/4, 1/4, 1/2 and 1 L of water. If it were shared equally, how much would each hold?",

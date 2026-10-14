@@ -87,6 +87,15 @@ export async function listInbox(opts: { limit?: number; after?: string } = {}): 
   return { items: await enrich(page.data ?? []), hasMore: Boolean(page.has_more) };
 }
 
+/** Mail nobody has answered or marked as done yet: the "Waiting" badge in the Inbox list. */
+const isWaiting = (m: Pick<InboxItem, "handledAt" | "repliedAt">) => !m.handledAt && !m.repliedAt;
+
+/** How many of the newest messages (the Inbox's first page) are waiting, for the count on the Inbox tab. */
+export async function countWaiting(): Promise<number> {
+  const { items } = await listInbox();
+  return items.filter(isWaiting).length;
+}
+
 /** Turns an HTML-only email into plain text, so the panel never renders mail it received. */
 export function htmlToText(html: string): string {
   return html

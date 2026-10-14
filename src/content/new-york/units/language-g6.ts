@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { CRAFT_UNITS } from "./language-g6-craft";
 
 // New York's own Grade 6 language units (`ny-` ids). New York's 6R9 asks students to judge texts against criteria and
 // connect them to other texts, cultural perspectives and eras, and 6R6 asks how an author's place or culture shapes their
@@ -182,4 +183,5 @@ export const UNITS: Unit[] = [
     standards: ["6R9; 6R6", "judging texts with criteria and comparing them across genres, cultures, eras and perspectives"],
     items: COMPARE,
   }),
+  ...CRAFT_UNITS,
 ];
