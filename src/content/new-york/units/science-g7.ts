@@ -1,6 +1,7 @@
 import type { Unit } from "../../types";
 import { SCIENCE_7 } from "../../washington/units/science-68";
 import { copyOf, from } from "./kit";
+import { MORE } from "./science-g7-materials";
 
 // New York copies of Washington science units built around Pacific Northwest places. Each keeps the original's
 // questions, leaves out the ones about Washington, Oregon or California, and adds New York items: the Finger Lakes,
@@ -69,4 +70,5 @@ export const UNITS: Unit[] = [
       ["Bald eagles returned to New York after…", "the pesticide DDT was banned and nests were protected", ["more forests were cut down", "DDT was used more", "their nests were removed"], "Their eggs became strong again.", true],
     ],
   ),
+  ...MORE,
 ];

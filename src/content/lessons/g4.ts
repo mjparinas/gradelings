@@ -183,4 +183,17 @@ export const lessons: GradeLessons = {
     ["Profit = money earned − costs.", "60 − 22 = 38."],
     "$38",
   ),
+  // New York
+  "math/ny-g4-angle-measure": lesson(
+    ["Put the protractor's middle point on the vertex and line up 0° with one ray.", "Read the number the other ray passes, on the scale that starts at 0.", "An angle split into parts is the sum of the parts. A square corner is 90°, a straight angle 180°."],
+    "A square corner is split into two angles. One is 35°. How big is the other?",
+    ["The two parts add up to 90°.", "90 − 35 = 55."],
+    "55°",
+  ),
+  "math/ny-g4-tenths-hundredths": lesson(
+    ["One tenth is the same as ten hundredths: 1/10 = 10/100.", "To change tenths to hundredths, multiply the top and bottom by 10.", "To add tenths and hundredths, change the tenths to hundredths first."],
+    "3/10 + 25/100 = ?",
+    ["3/10 = 30/100.", "30/100 + 25/100 = 55/100."],
+    "55/100",
+  ),
 };

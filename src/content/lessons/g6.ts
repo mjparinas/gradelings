@@ -207,4 +207,23 @@ export const lessons: GradeLessons = {
     ["200 + 50 = 250.", "250 − 35 = 215."],
     "$215",
   ),
+  // New York
+  "math/ny-g6-long-division": lesson(
+    ["Divide, multiply, subtract, bring down: repeat until every digit is used.", "Start with the fewest digits on the left that the divisor fits into.", "Check by multiplying the answer by the divisor."],
+    "1176 ÷ 24 = ?",
+    ["24 goes into 117 four times: 4 × 24 = 96, and 117 − 96 = 21.", "Bring down the 6: 216. 24 goes into 216 nine times exactly.", "Check: 49 × 24 = 1176."],
+    "49",
+  ),
+  "math/ny-g6-squares-cubes": lesson(
+    ["A perfect square is a number of unit squares that fills a square: 5 × 5 = 5² = 25.", "A perfect cube is a number of unit cubes that fills a cube: 3 × 3 × 3 = 3³ = 27.", "That is why the exponent 2 is read “squared” and 3 is read “cubed”."],
+    "How many unit cubes build a cube with 4 on each edge?",
+    ["Each layer is 4 × 4 = 16 cubes.", "There are 4 layers: 16 × 4 = 64."],
+    "64 = 4³",
+  ),
+  "math/ny-g6-data-distributions": lesson(
+    ["Describe data by its typical value, its spread and its shape.", "The mean and the median sum up all the values in one typical number.", "The range and the IQR sum up in one number how much the values vary."],
+    "Find the median and the range of 3, 5, 6, 8, 13.",
+    ["The middle value is 6, so the median is 6.", "13 − 3 = 10, so the range is 10."],
+    "Median 6, range 10",
+  ),
 };

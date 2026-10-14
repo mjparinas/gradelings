@@ -1,7 +1,8 @@
-import { shuffle } from "../../random";
+import { pick, sample, shuffle } from "../../random";
 import type { ChoiceQuestion, GenerateOptions, Question, Unit } from "../../types";
-import type { Maker } from "../../washington/units/math-kit";
+import { type Maker, pickOne } from "../../washington/units/math-kit";
 import { nys } from "../cite";
+import type { Q } from "../own";
 
 // New York's own math units (`ny-` ids), for the New York standards no other framework's unit practises: exploring
 // coins in Kindergarten (NY-K.MD.4) and naming coins and counting dimes and pennies in Grade 1 (NY-1.MD.3b, 3c). Every
@@ -57,3 +58,17 @@ export const COIN_LOOK: Record<number, string> = {
 
 /** Marks a question as US money, so coin pictures show US coins. */
 export const usd = <Q extends ChoiceQuestion>(q: Q): Q => ({ ...q, currency: "USD" });
+
+// ---------- Hand-written items ----------
+
+/**
+ * A maker that asks one hand-written item (prompt, right answer, wrong answers, hint, `true` for a stretch item). The
+ * easy level uses only the core items; each question shows up to three wrong answers.
+ */
+export function bank(items: readonly Q[]): Maker {
+  const core = items.filter((q) => !q[4]);
+  return (d) => {
+    const [prompt, right, wrong, hint] = pick(d === 1 && core.length ? core : items);
+    return pickOne(prompt, right, sample(wrong, Math.min(3, wrong.length)), hint);
+  };
+}

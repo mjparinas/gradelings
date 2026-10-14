@@ -243,4 +243,29 @@ export const lessons: GradeLessons = {
     ["Net worth = assets − liabilities.", "9,000 − 3,500 = 5,500."],
     "$5,500",
   ),
+  // New York
+  "math/ny-g7-rewrite-expressions": lesson(
+    ["Equivalent expressions have the same value, but each form can show something different.", "p + 0.06p = 1.06p shows a 6% increase in one step.", "4t + 4s = 4(t + s) shows 4 groups of t + s."],
+    "A price p is 20% off. Write the sale price as one term.",
+    ["The discount is 0.2p, so the sale price is p − 0.2p.", "1p − 0.2p = 0.8p: you pay 80% of the price."],
+    "0.8p",
+  ),
+  "math/ny-g7-triangles": lesson(
+    ["Three sides make a triangle only if the two shorter sides add to more than the longest.", "The three angles of a triangle always add to 180°.", "Three sides fix exactly one triangle. Three angles fix the shape but not the size, so many triangles fit."],
+    "Can sides of 4 cm, 5 cm and 10 cm make a triangle?",
+    ["The two shorter sides add to 4 + 5 = 9.", "9 is less than 10, so the short sides cannot meet."],
+    "No triangle",
+  ),
+  "math/ny-g7-slices": lesson(
+    ["A slice parallel to the base of a prism or cylinder is the same shape and size as the base.", "Slices of a pyramid or cone parallel to the base keep the base's shape but get smaller toward the top.", "A slice straight down through a cylinder is a rectangle; through the tip of a cone or pyramid, a triangle."],
+    "A cylinder is sliced parallel to its base. What shape is the slice?",
+    ["The base of a cylinder is a circle.", "A slice parallel to the base matches it."],
+    "A circle the size of the base",
+  ),
+  "math/ny-g7-composite-area": lesson(
+    ["Split the shape into rectangles, triangles and trapezoids.", "Rectangle: length × width. Triangle: ½ × base × height. Trapezoid: ½ × (sum of parallel sides) × height.", "Add the parts, or subtract a part that is cut out."],
+    "A wall is a 10 ft by 8 ft rectangle with a triangle on top, base 10 ft and height 4 ft. What is its area?",
+    ["Rectangle: 10 × 8 = 80 ft².", "Triangle: ½ × 10 × 4 = 20 ft².", "80 + 20 = 100."],
+    "100 ft²",
+  ),
 };

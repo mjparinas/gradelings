@@ -234,4 +234,17 @@ export const lessons: GradeLessons = {
     ["Add $3 five times: 3, 6, 9, 12, 15."],
     "$15",
   ),
+  // New York
+  "math/ny-g2-add-four": lesson(
+    ["Add the tens together, then the ones together.", "Look for ones that make 10, like 8 and 2.", "Put the tens and ones back together for the total."],
+    "23 + 18 + 32 + 14 = ?",
+    ["Tens: 20 + 10 + 30 + 10 = 70.", "Ones: 3 + 8 + 2 + 4 = 17.", "70 + 17 = 87."],
+    "87",
+  ),
+  "math/ny-g2-lengths": lesson(
+    ["A shorter unit fits more times: 1 foot is 12 inches.", "On a number line, a number is its distance from 0. Jumps right add; jumps left take away.", "A line plot puts an X above each length you measured."],
+    "A rug is 2 feet long. Is it more or less than 2 inches long?",
+    ["An inch is much shorter than a foot.", "It takes 24 inches to make 2 feet."],
+    "More: 24 inches",
+  ),
 };

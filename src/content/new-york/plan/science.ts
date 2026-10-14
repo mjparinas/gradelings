@@ -7,8 +7,10 @@ import type { Entry } from "../kit";
 // and 8 mixes life, physical and Earth and space science: Grade 6 cells, the body, heat, weather and climate; Grade 7
 // matter, reactions, ecosystems, electricity and Earth's surface; Grade 8 forces, energy, heredity, space and Earth's
 // history. Grade 9 follows the high school courses most New York students take that year, Life Science: Biology and
-// Earth and Space Sciences, so it cites high school codes and its Earth and space units are New York's own. Units built
-// around Washington, Oregon or California places have New York versions in ../units/science-*.ts.
+// Earth and Space Sciences, so it cites high school codes and its Earth and space units are New York's own; it adds the
+// physical science units other states use in Grade 9 (atoms, bonding, reactions, motion, energy, circuits), citing only
+// the HS-PS codes they practise. Units built around Washington, Oregon or California places have New York versions in
+// ../units/science-*.ts.
 export const PLAN_SCIENCE: Record<string, Entry[]> = {
   "k/science": [
     ["living-things-need", "share", "K-LS1-1", "patterns in what plants and animals, including people, need to survive"],
@@ -112,8 +114,8 @@ export const PLAN_SCIENCE: Record<string, Entry[]> = {
     [
       "wa-g3-hazards",
       "adopt",
-      "3-ESS3-1; 3-LS4-4",
-      "comparing solutions that reduce the impacts of weather hazards and environmental change",
+      "3-ESS3-1; 3-LS4-4; 3-5-ETS1-2",
+      "comparing several solutions that reduce the impacts of weather hazards and environmental change",
     ],
     [
       "or-g3-magnet-design",
@@ -277,7 +279,12 @@ export const PLAN_SCIENCE: Record<string, Entry[]> = {
   "9/science": [
     ["cells-from-cells", "share", "HS-LS1-4", "cell division and growth"],
     ["reproduction", "share", "HS-LS3-2", "how sexual reproduction creates genetic variation"],
-    ["photosynthesis-respiration-9", "adopt", "HS-LS1-5; HS-LS1-7", "photosynthesis and cellular respiration"],
+    [
+      "photosynthesis-respiration-9",
+      "adopt",
+      "HS-LS1-5; HS-LS1-7; HS-LS2-3; HS-LS2-5",
+      "photosynthesis and cellular respiration, and how they cycle carbon and energy through ecosystems and the air",
+    ],
     [
       "mb-human-reproductive-system",
       "adopt",
@@ -287,8 +294,41 @@ export const PLAN_SCIENCE: Record<string, Entry[]> = {
     [
       "mb-evolution-and-selection",
       "adopt",
-      "HS-LS4-2; HS-LS4-4",
-      "natural selection and adaptation in populations",
+      "HS-LS4-1; HS-LS4-2; HS-LS4-4; HS-LS4-5",
+      "natural selection and adaptation, evidence for evolution from fossils and body structures, and how changing environments lead to new species",
+    ],
+    // Physical science, for the students who take it in Grade 9 or meet it in the Earth science and biology courses.
+    ["atoms-and-electrons", "share", "HS-PS1-1", "atomic structure, electron shells and patterns in the periodic table"],
+    ["bonding-and-reactions", "share", "HS-PS1-1; HS-PS1-2", "how outer electrons explain bonding and the outcome of simple reactions"],
+    [
+      "chemical-change-ab",
+      "adopt",
+      "HS-PS1-2; HS-PS1-5; HS-PS1-7",
+      "chemical reactions, what changes reaction rates, and conservation of atoms and mass",
+    ],
+    [
+      "wa-g9-motion",
+      "adopt",
+      "HS-PS2-1; HS-PS2-2; HS-PS2-3",
+      "Newton's second law, conservation of momentum, and designs that reduce collision forces",
+    ],
+    [
+      "mb-energy-and-magnetism",
+      "adopt",
+      "HS-PS3-1; HS-PS2-5",
+      "conservation of energy and efficiency, and magnetic fields from electric currents",
+    ],
+    [
+      "circuits-9",
+      "adopt",
+      "HS-PS3-6",
+      "Ohm's law: how voltage, current and resistance are related in a circuit",
+    ],
+    [
+      "mb-science-and-society",
+      "adopt",
+      "HS-ETS1-3; HS-ESS3-2",
+      "weighing the costs, benefits and trade-offs of technologies and energy solutions",
     ],
   ],
 };

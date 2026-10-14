@@ -1,6 +1,7 @@
 import type { Unit } from "../../types";
 import { SCIENCE_4 } from "../../washington/units/science-35";
 import { copyOf, from } from "./kit";
+import { DESIGN } from "./science-g4-design";
 
 // New York copies of Washington science units built around Pacific Northwest places. Each keeps the original's
 // questions, leaves out the ones about Washington, Oregon or California, and adds New York items: the Finger Lakes,
@@ -70,4 +71,5 @@ export const UNITS: Unit[] = [
       ["Which is a renewable resource used in New York?", "Moving water at dams", ["Coal", "Oil", "Natural gas"], "It will not run out.", true],
     ],
   ),
+  DESIGN,
 ];
