@@ -1,0 +1,824 @@
+                   BC – NWT EDUCATION SHARING AGREEMENT
+
+
+                                  05
+THIS AGREEMENT made effective the ______          09 2025 (the “Effective Date”)
+                                         day of _____,
+
+BETWEEN:
+
+       HIS MAJESTY THE KING IN RIGHT OF THE PROVINCE OF BRITISH
+       COLUMBIA, as represented by the Minister of Education and Child Care
+       and the Minister of Citizens’ Services ("BC")
+
+AND:
+
+       THE GOVERNMENT OF NORTHWEST TERRITORIES, as represented by the
+       Minister of Education, Culture and Employment (“NWT”)
+
+       (each a “Party,” and collectively the “Parties”)
+
+RECITALS:
+
+A.     BC is responsible for overseeing all aspects of British Columbia’s K-12 public education
+       system, including making orders and setting policies and guidelines for boards of
+       education, allocating funding, establishing curriculum and administering the School Act
+       (British Columbia);
+B.     NWT is responsible for overseeing all aspects of the Northwest Territories’ K-12 public
+       education system, including setting the standards for the education program, establishing
+       curriculum, allocating funding, and administering the Education Act (Northwest
+       Territories);
+C.     Under s. 71 of the Legislative Assembly and Executive Council Act (Northwest Territories),
+       the Northwest Territories' Minister of Education, Culture and Employment may enter into
+       an agreement for or on behalf of the Government of Northwest Territories or a department
+       over which such minister has authority;
+D.     Under s. 168(3) of the School Act (British Columbia), the British Columbia Minister of
+       Education and Child Care may enter into an agreement with a school authority outside
+       British Columbia for the education of children for whose education that school authority is
+       responsible;
+E.     The Parties have a shared interest in ensuring students in their respective education systems
+       are provided with high quality educational experiences;
+F.     NWT wishes to obtain a license from BC to use BC’s curriculum and assessment materials,
+       on the terms and conditions contained in this Agreement;
+G.     BC wishes to obtain a license from NWT to use NWT’s curriculum materials and related
+       educational materials, on the terms and conditions contained in this Agreement; and
+H.     By signing the October 2023 British Columbia–Northwest Territories Memorandum of
+       Understanding, the Parties confirmed their intention to cooperate, collaborate and
+
+                                                 1
+       exchange information on matters of mutual interest relevant to the education systems in
+       both jurisdictions, including with respect to sharing of curriculum, assessments and
+       educational materials, and including by exercising their discretion to enter into subsequent
+       legally binding agreements.
+
+IN CONSIDERATION of the mutual promises below and other good and valuable consideration,
+the receipt and sufficiency of which is acknowledged by each Party, the Parties agree as follows:
+
+1. DEFINITIONS
+
+1.01   Capitalized terms will have the meanings given to those terms below. In addition to the
+       definitions below, any capitalized terms defined elsewhere in this Agreement will have the
+       meanings given to them.
+
+       (a)    “Agreement” means this BC – NWT Education Sharing Agreement;
+       (b)    “BC Curriculum” means the kindergarten to grade 12 curriculum guides and
+              documents developed by or for the Government of British Columbia as listed in
+              sections 2 and 3 of Ministerial Order M231/19, Educational Program Guide, made
+              under s. 168(2) of the School Act, and as updated by BC from time to time;
+       (c)    “BC Provincial Assessments” means the educational assessments contemplated
+              by the Provincial Graduation Assessments Order and the Student Learning
+              Assessment Order, developed by BC for the purpose of evaluating students’ literacy
+              and numeracy skills and core learning competencies, and which, as of the Effective
+              Date, include the following: grade 4 and grade 7 Foundation Skills Assessments;
+              grade 10 literacy and numeracy assessments; and grade 12 literacy assessment;
+       (d)    “Electronic Assessment Materials” means the electronic assessment components
+              of the BC Provincial Assessments developed and owned by BC;
+       (e)    “Embedded Materials” means any content not owned by a Party that is embedded
+              or incorporated into the NWT Curriculum, the Modifications, the Modified
+              Curriculum or the Supplementary Materials by or for NWT;
+       (f)    “Excluded Content” means the BC Provincial Assessments, all photographs
+              within the Materials, and all third-party owned content within the Materials;
+       (g)    “Foundation Skills Assessments” means the assessments for grade 4 and grade 7
+              students developed by BC for the purpose of evaluating students’ literacy and
+              numeracy skills and core learning competencies;
+       (h)    “Materials” means the BC Curriculum and all course, teaching, promotional, or
+              other related materials or resource guides in any format whatsoever that are used in
+              association with the development, promotion or delivery of the BC Curriculum,
+              including the materials outlined and accessible at https://curriculum.gov.bc.ca/ or
+              such other Internet address as BC may advise NWT in writing, and excluding the
+              Excluded Content unless any Excluded Content is specifically included by BC in
+              writing;
+
+
+                                                2
+       (i)    “Modifications” means any changes, revisions, additions, deletions, translations,
+              updates, versions and content derived from or based upon any or all components of
+              the Materials that are, in accordance with this Agreement, made by or for NWT in
+              the development of the Modified Curriculum, in any format or method of delivery
+              whatsoever and whether created through technology in existence on the Effective
+              Date or which may be developed in the future;
+       (j)    “Modified Curriculum” means the curriculum modified from the BC Curriculum
+              by the Modifications, but excludes the BC Curriculum;
+       (k)    “NWT Curriculum” means the curriculum approved for use in the NWT by the
+              Minister of Education, Culture and Employment;
+       (l)    “Paper Assessment Materials” means the paper-based assessment components of
+              the BC Provincial Assessments developed and owned by BC;
+       (m)    “Provincial Graduation Assessments Order” means Ministerial Order M410/04,
+              Provincial Graduation Assessments, made under s. 168(2) of the School Act;
+       (n)    “Provincial Online Learning School” means an online learning school established
+              under an online learning agreement with the British Columbia Minister of
+              Education and Child Care, which is administrated by a British Columbia board of
+              education that has approval from the British Columbia Minister of Education and
+              Child Care to enrol students not resident in the board’s school district;
+       (o)    “Student Learning Assessment Order” means Ministerial Order M60/94, Student
+              Learning Assessment, made under sections 81 and 168(2) of the School Act;
+       (p)    “Supplementary Materials” means any supplementary course, teaching,
+              promotional, assessment or other materials developed by or for NWT which are
+              related to the Modified Curriculum and for use in connection with the development,
+              promotion or delivery of the Modified Curriculum, including without limitation
+              handouts, worksheets, trainer guides, member workbooks, educational media,
+              examinations, online components, brochures, information sheets, web pages and
+              reports; and
+       (q)    “Term” means the period set out in paragraph 12.01.
+
+
+2. LICENSES
+
+Materials
+
+2.01   BC grants to NWT for the Term, on the terms and subject to the conditions contained in
+       this Agreement, a royalty-free, non-exclusive and non-assignable license to use, reproduce,
+       distribute, publish and make Modifications to the Materials for the purpose of developing,
+       promoting and delivering the Modified Curriculum to students in the Northwest Territories
+       either as a stand-alone course or as a part of a broader curriculum.
+
+
+
+                                                3
+2.02   NWT acknowledges and agrees that it may reproduce and distribute the Materials only in
+       such quantities as are necessary for the purposes outlined in paragraph 2.01.
+
+2.03   NWT will ensure that the Materials are only used and administered: (i) in compliance with
+       this Agreement; and (ii) in compliance with all of BC’s directions provided to NWT in
+       writing with respect to the use of the Materials.
+
+2.04   Any failure by NWT to ensure compliance with paragraph 2.03 constitutes a material
+       breach of this Agreement.
+
+2.05   The parties acknowledge and agree that BC may, but is under no obligation to, provide to
+       NWT updates, amendments or other changes made to the Materials following the Effective
+       Date.
+
+2.06   The parties acknowledge and agree that NWT shall, on receiving written notice from BC,
+       cease to use the Materials or any portion of the Materials indicated by BC, and may use
+       any updates, amendments or other changes provided by BC for the purposes of replacing
+       those portions of the Materials.
+
+BC Provincial Assessments
+
+2.07   BC grants to NWT for the Term, on the terms and subject to the conditions contained in
+       this Agreement, a royalty-free, non-exclusive and non-assignable license to use and
+       distribute the Paper Assessment Materials for the purpose of evaluating the literacy and
+       numeracy skills and core learning competencies of students in the Northwest Territories.
+
+2.08   BC grants to NWT for the Term, on the terms and subject to the conditions contained in
+       this Agreement, a royalty-free, non-exclusive and non-assignable license to use the
+       Electronic Assessment Materials for the purpose of evaluating the literacy and numeracy
+       skills and core learning competencies of students in the Northwest Territories.
+
+NWT Curriculum
+
+2.09   NWT grants to BC for the Term, on the terms and subject to the conditions contained in
+       this Agreement, a royalty-free and non-exclusive license to use, reproduce, distribute,
+       publish and make modifications to the NWT Curriculum, the Modifications, the Modified
+       Curriculum and the Supplementary Materials for the purpose of developing, promoting and
+       delivering the BC Curriculum, provided always that the rights to the NWT Curriculum
+       granted under this paragraph may not be exercised for a commercial purpose.
+
+
+
+
+                                               4
+No Administrative or Support Services
+
+2.10   The rights granted by BC to NWT are being provided without support of any kind,
+       administrative or otherwise, from staff or employees of BC.
+
+
+3. COLLABORATION
+
+Areas of Collaboration
+
+3.01   The Parties will use best efforts to cooperate, collaborate and exchange information on
+       matters and areas of mutual interest relevant to the education systems in British Columbia
+       and the Northwest Territories, including, without limitation:
+       (a)    kindergarten - grade 12 curriculum;
+       (b)    large scale educational assessment materials;
+       (c)    curriculum implementation supports;
+       (d)    educational resource materials; and
+       (e)    other areas of mutual interest, including:
+              o     approaches to literacy, numeracy, competency-based learning, classroom
+                    assessment, and instructional practices;
+              o     First Peoples Principles of Learning, Dene Kede, and Innuqatigitt;
+              o     Indigenous world views, perspectives, culture and context;
+              o     Indigenization of education;
+              o     kindergarten - grade 12 student learning updates and reporting;
+              o     British Columbia Core Competencies and Northwest Territories Key
+                    Competencies;
+              o     early learning resources and initiatives;
+              o     inclusive education; and
+              o     online learning.
+Development of BC Curriculum
+
+3.02   BC may provide opportunities for NWT to participate in the development of the BC
+       Curriculum and related materials through BC-led activities such as curriculum
+       development teams, advisories, public feedback initiatives, and reviews.
+3.03   If development of the BC Curriculum involves consultation with individuals, BC may
+       collect, use, and disclose personal information about those individuals in the course of
+       carrying out the activities in paragraph 3.02.
+
+
+
+                                                5
+3.04   BC exclusively owns all intellectual property rights, including copyright, in all materials
+       created during or arising out of these BC-led activities to develop the BC Curriculum and
+       related materials. Upon BC’s request, NWT must deliver to BC, or ensure delivery to BC,
+       documents satisfactory to BC that irrevocably waive in BC’s favour any moral rights which
+       NWT, employees of NWT, or third parties may have in such materials and that confirm the
+       vesting in BC of the copyright in such materials.
+
+Development of NWT Curriculum
+
+3.05   NWT may provide opportunities for BC to participate in the development of the NWT
+       Curriculum and related materials through NWT-led activities such as curriculum
+       development teams, advisories, public feedback initiatives, and reviews.
+3.06   If development of the NWT Curriculum involves consultation with individuals, NWT may
+       collect, use, and disclose personal information about those individuals in the course of
+       carrying out the activities in paragraph 3.05.
+3.07   NWT exclusively owns all intellectual property rights, including copyright, in all materials
+       created during or arising out of these NWT-led activities to develop the NWT Curriculum
+       and related materials.
+3.08   NWT may request that the British Columbia Minister of Education and Child Care approve
+       certain British Columbia boards of education to provide online learning to NWT
+       students through Provincial Online Learning Schools.
+3.09   If a British Columbia board of education operating a Provincial Online Learning School
+       provides online learning to NWT students, NWT will pay student tuition fees to that board
+       of education in respect of the online learning.
+
+4. BC PROVINCIAL ASSESSMENTS
+
+4.01   NWT will ensure that the BC Provincial Assessments are only used and administered: (i)
+       in compliance with this Agreement; and (ii) in compliance with all of BC’s directions with
+       respect to the use of the BC Provincial Assessments, including any directions provided in
+       the form of assessment administration manuals prepared by BC.
+4.02   Any failure by NWT to ensure compliance with paragraph 4.01 constitutes a material
+       breach of this Agreement.
+4.03   BC may provide opportunities, through BC-led activities, for educators identified by NWT
+       to participate in the development and the scoring of the BC Provincial Assessments.
+4.04   If development and scoring of BC Provincial Assessments involves individuals, BC may
+       collect, use, and disclose personal information about those individuals in the course of
+       carrying out the activities in paragraph 4.03.
+4.05   BC exclusively owns all intellectual property rights, including copyright, in all materials
+       created during or arising out of these BC-led activities to develop the BC Provincial
+       Assessments. Upon BC’s request, NWT must deliver to BC, or ensure delivery to BC,
+       documents satisfactory to BC that irrevocably waive in BC’s favour any moral rights which
+
+
+                                                6
+       NWT, employees of NWT, or third parties may have in such materials and that confirm
+       the vesting in BC of the copyright in such materials.
+
+4.06   NWT will ensure that the BC Provincial Assessments are treated as Confidential
+       Information, and any failure on the part of NWT to treat them as such constitutes a
+       material breach of this Agreement.
+
+
+5. PAPER ASSESSMENT MATERIALS
+
+5.01   Upon request by NWT, BC will provide NWT with then-current copies of the Paper
+       Assessment Materials in use in British Columbia.
+5.02   Unless otherwise directed in writing by BC, with respect to Foundation Skills
+       Assessments, NWT will be responsible for scoring NWT student output arising from
+       NWT’s use of the Paper Assessment Materials.
+5.03   Unless otherwise directed in writing by BC, with respect to grade 10 literacy and
+       numeracy assessments and grade 12 literacy assessments, BC will be responsible for
+       scoring NWT student output arising from NWT’s use of the Paper Assessment Materials.
+
+
+6. ELECTRONIC ASSESSMENT MATERIALS
+
+6.01   Upon request by NWT, BC will arrange for NWT student access to the then-current
+       Electronic Assessment Materials in use in British Columbia, and for the machine scoring
+       of NWT student responses arising from NWT’s use of the Electronic Assessment
+       Materials. NWT will be solely responsible for all costs relating to NWT’s access to and
+       use of the Electronic Assessment Materials.
+6.02   Unless otherwise decided by BC, BC will be responsible for any human scoring that is
+       required in the process of scoring NWT student responses arising from NWT’s use of the
+       Electronic Assessment Materials.
+6.03   BC will arrange for data analysis and validation of NWT student assessment results using
+       the Electronic Assessment Materials and will report the validated data analysis back to
+       NWT.
+6.04   BC may collect, use, and disclose personal information about NWT students, if provided
+       by NWT, in the course of carrying out the activities in paragraphs 6.02 and 6.03. NWT
+       will to the extent possible provide any student personal information in anonymized or de-
+       identified form.
+6.05   Unless otherwise directed or agreed to in writing by BC, NWT student access to the
+       Electronic Assessment Materials will take place through an independent agreement
+       between NWT and a third-party electronic assessment technology service provider that is
+       selected or approved by BC.
+
+
+
+                                               7
+7. REPRODUCTION
+
+7.01   Except as authorized under this Agreement, NWT will not use the name or trademarks of
+       BC in any manner, in connection with the Modified Curriculum or otherwise, without the
+       prior written consent of BC.
+
+7.02   NWT will include on all copies of the Modified Curriculum an attribution notice indicating
+       that the Modified Curriculum was developed solely by NWT from the BC Curriculum
+       under license from, but without the review or endorsement of, BC, in form and content
+       satisfactory to BC.
+
+7.03   Where BC uses the NWT Curriculum, the Modified Curriculum, the Modifications, or the
+       Supplementary Materials for the purposes of developing, promoting and delivering the BC
+       Curriculum under paragraph 2.09, BC shall include on any newly created materials an
+       attribution notice indicating that the materials were developed by BC from the NWT
+       Curriculum, the Modified Curriculum, the Modifications, or the Supplementary Materials,
+       as the case may be, under license from, but without the review or endorsement of NWT, in
+       form and content satisfactory to NWT.
+
+7.04   NWT acknowledges that some components of the Materials include a statement that the
+       Government of British Columbia is the copyright owner of the Materials, and NWT agrees
+       to remove any such statement or similar statement from the Modified Curriculum.
+
+7.05   NWT will be solely responsible for all costs of performing its obligations and exercising
+       its rights under this Agreement, including but not limited to using, reproducing and making
+       Modifications to the Materials, and developing, promoting and delivering the Modified
+       Curriculum.
+
+
+8. OWNERSHIP
+
+8.01   NWT acknowledges and agrees that:
+
+       (a)    BC is and will be the owner of all proprietary rights including, without limitation,
+              copyright and other intellectual property rights, in the Materials and the BC
+              Provincial Assessments; and
+
+       (b)    any rights not specifically granted by BC in this Agreement remain with BC,
+              including without limitation copyright and trademark protection.
+
+8.02   BC acknowledges and agrees that:
+
+
+                                                8
+       (a)    NWT is and will be the owner of all proprietary rights including, without limitation,
+              copyright and other intellectual property rights, in the NWT Curriculum, the
+              Modifications, the Modified Curriculum and the Supplementary Materials,
+              excluding the Embedded Materials; and
+
+       (b)    any rights not specifically granted by NWT in this Agreement remain with NWT,
+              including without limitation copyright and trademark protection.
+
+8.03   NWT will not include in the NWT Curriculum, the Modified Curriculum, the
+       Modifications or the Supplementary Materials licensed to BC herein, any Embedded
+       Materials unless NWT first obtains in writing for the benefit of BC a perpetual, irrevocable,
+       royalty-free, assignable, sublicensable, non-exclusive license to exercise in respect of the
+       Embedded Materials, for so long as they remain embedded or incorporated in the NWT
+       Curriculum, the Modified Curriculum, the Modifications or the Supplementary Materials,
+       those rights set out in the Copyright Act (Canada), including the right to use, reproduce,
+       publish, distribute, and modify the Embedded Materials.
+
+8.04   NWT will provide to BC, at the request of BC, all applicable documentation with respect
+       to the license or licenses described in paragraph 8.03.
+
+8.05   In the event that NWT is not able, for any reason, to provide BC with the license or licenses
+       described in paragraph 8.03 for any Embedded Materials, NWT will remove, at NWT’s
+       cost, any such Embedded Materials from the NWT Curriculum, the Modified Curriculum,
+       the Modifications or the Supplementary Materials.
+
+8.06   BC may at any time request a copy of any portion of the NWT Curriculum, the Modified
+       Curriculum, the Modifications or the Supplementary Materials, and NWT will comply with
+       any such request in a timely manner.
+
+
+9. FINANCIAL MATTERS
+
+9.01   NWT will pay to BC $50.00 for each instance of a NWT student taking a BC Provincial
+       Assessment, unless a different fee structure is set out in an order of the British Columbia
+       Minister of Education and Child Care signed after the Effective Date, in which case NWT
+       will make payments to BC relating to the BC Provincial Assessments in accordance with
+       that order.
+9.02   Where BC intends to establish a different fee structure under paragraph 9.01, BC shall
+       provide not less than 90 days notice to NWT prior to the new fee structure taking effect.
+9.03   BC may, in its discretion, undertake any cost recovery from NWT for any amounts, costs,
+       charges, fees or liabilities charged to BC associated with this Agreement.
+
+
+
+                                                 9
+9.04   Subject to applicable laws, including applicable information management legislation, and
+       to any restrictions under the terms of this Agreement, NWT may request, and BC will
+       provide, from time to time during the Term of this Agreement, and for a period of one year
+       thereafter, copies of relevant financial records of BC affecting any costs, charges, fees,
+       allocations or other amounts that BC seeks to recover under paragraph 9.03.
+
+
+10. PERSONAL INFORMATION
+
+10.01 In the course of carrying out this agreement, BC may, in compliance with applicable
+      privacy legislation, collect, use, and disclose personal information about NWT students
+      and educators.
+
+10.02 Each Party will make best efforts to minimize the sharing of personal information about
+      NWT students and educators, including by deidentifying personal information to the extent
+      practicable.
+
+10.03 The Parties will share personal information as necessary to carry out this Agreement
+      pursuant to the terms set out in the “Information Sharing Schedule” that is attached as
+      Schedule “A”.
+
+
+
+11. CONFIDENTIALITY, INFORMATION AND RECORDS
+
+11.01 For the purposes of this Agreement, “Confidential Information” means any and all
+      confidential or non-public information disclosed to one Party by the other under this
+      Agreement, whether in verbal, written, electronic, paper or other form. It includes but is
+      not limited to personal information about identifiable individuals and the BC Provincial
+      Assessments.
+11.02 For the purposes of this Agreement, Confidential Information does not include information
+      one Party discloses to the other, where:
+       (a)    at the time of disclosure the information was in, or thereafter enters, the public
+              domain, other than as a result of the disclosing Party’s actions;
+       (b)    the Party receiving the information possessed the information prior to the time of
+              disclosure without a duty of confidentiality with respect to the information;
+       (c)    the Party receiving the information received the same information on an
+              unrestricted basis from a source unrelated to either Party and not under a duty of
+              confidentiality with respect to the information; or
+       (d)    the Party receiving the information developed the information independently of the
+              other.
+
+
+                                               10
+11.03 Each Party will maintain in confidence all Confidential Information provided by the other
+      Party under this Agreement, exercising at least the same degree of care as it exercises with
+      regard to its own Confidential Information, but in no event less than a reasonable degree
+      of care.
+11.04 A Party receiving Confidential Information under this Agreement may not, without the
+      prior written approval of the other Party, use or disclose Confidential Information provided
+      by the other Party except in accordance with this Agreement or to the extent necessary to
+      fulfill its obligations in connection with this Agreement.
+11.05 For the purposes of access to information legislation and privacy legislation that is
+      applicable to each Party, Confidential Information received by one Party from the other
+      under this Agreement is understood by the Parties to be information received or obtained
+      in confidence from a provincial or territorial government.
+11.06 To the extent that any provision in this Agreement conflicts with applicable access to
+      information legislation, the legislation prevails.
+11.07 The Parties’ retention of records received or created in connection with this Agreement
+      will be governed by applicable information management legislation that may impose
+      obligations upon the Parties with respect to the retention of its government records.
+
+
+12. TERM & TERMINATION
+
+12.01 The term of this Agreement begins on the Effective Date and continues in effect until
+      termination of this Agreement pursuant to this paragraph.
+
+12.02 Either Party will have the right to terminate this Agreement for its convenience and will
+      make best efforts to provide as much advance notice to the other Party as possible, but not
+      less than 180 days written notice to the other Party, to terminate the Agreement.
+
+12.03 If either Party materially breaches this Agreement, the other Party may give written notice
+      of such breach to the breaching Party. If the breaching Party fails to cure the breach within
+      30 days after receipt of such notice, then the other Party may, at its option, elect to terminate
+      this Agreement.
+
+12.04 On or before the first June 30 that follows the termination of this Agreement by BC, NWT
+      will:
+       (a)     cease using, reproducing, distributing, publishing and making Modifications to the
+               Materials for any purpose, including the purpose of developing, promoting and
+               delivering the Modified Curriculum;
+
+       (b)     cease using, reproducing and distributing the BC Provincial Assessments for any
+               purpose, including the purpose of evaluating the literacy and numeracy skills and
+               core learning competencies of students in the Northwest Territories; and
+
+                                                  11
+       (c)     at its cost, if requested by BC, permanently delete or destroy all copies of the
+               Materials and BC Provincial Assessments in NWT’s possession or under its control.
+
+12.05 On or before the first June 30 that follows the termination of this Agreement by NWT, BC
+      will cease using, reproducing, distributing, publishing and making modifications to the
+      NWT Curriculum, the Modifications, the Modified Curriculum and the Supplementary
+      Materials for the purpose of developing, promoting and delivering the BC Curriculum or
+      for any other purpose.
+
+
+13. DISCLAIMER/LIMITATION OF LIABILITY
+
+13.01 The Parties acknowledge that all information exchanged under this agreement is being
+      provided “as is,” without warranties or representations, express or implied, and that the
+      Parties expressly disclaim any implied warranties, including but not limited to those
+      regarding merchantability, non-infringement and fitness for a particular purpose.
+
+13.02 Neither Party is liable for any errors or omissions in any information exchanged under this
+      Agreement and, except for NWT’s indemnity obligations under paragraph 14.01, neither
+      Party will under any circumstances be liable to the other Party or any third party for any
+      direct, indirect, special, incidental, consequential or other loss, injury or damage of any
+      kind caused by the other Party’s use, reproduction, distribution, publication or modification
+      of or any reliance upon the exchanged information or otherwise arising in connection with
+      this Agreement.
+
+
+14. INDEMNITY
+
+14.01 NWT will indemnify and save harmless and forever releases and discharges BC, and all of
+      BC’s respective servants, employees and agents from and against any and all claims,
+      demands, losses, damages, causes of action, costs, expenses and liability of any kind and
+      every nature that BC or any of BC’s servants, employees or agents may sustain, incur,
+      suffer or be put to at any time, either before or after this Agreement ends, including any
+      claim of infringement of third-party intellectual property rights, where the same or any of
+      them are based upon, arise out of or occur, directly or indirectly, by reason of any act or
+      omission by NWT or any of NWT’s agents, employees, officers, directors, contractors or
+      subcontractors in connection with the use, reproduction, distribution, publication or
+      modification of the Materials or the BC Provincial Assessments, or otherwise in connection
+      with this Agreement.
+
+
+
+
+                                                12
+15. NOTICES
+
+15.01 Any notice, approval, consent, waiver, statement, report, demand, other document or
+      payment or any materials that either Party may desire or be required to give or deliver to
+      the other Party will be in writing and conclusively deemed validly given or delivered to
+      and received by the addressee on the date of delivery if delivered personally, or, if emailed,
+      on the date the communication is sent by email to the email address indicated below, or, if
+      mailed, on the seventh business day after the mailing of the same in Canada by prepaid
+      post to the mail address indicted below:
+
+
+       For BC:
+       Ministry of Education and Child Care
+
+       Address:        395 Waterfront Crescent, 5th Floor, Victoria, BC V8T 5K3
+       Email:          Meghan.McRae@gov.bc.ca
+       Attention:      Meghan McRae, Executive Director,
+                       System Engagement and Intergovernmental Relations
+
+       For NWT:
+       Department of Education, Culture and Employment
+       Address:        P.O. Box 1320, 4501 50th Avenue, Yellowknife, NT X1A 2L9
+       Email:          Jennifer_Rae@gov.nt.ca
+       Attention:      Jennifer Rae, Director,
+                       JK-12 Education System Services
+
+
+
+15.02 Either Party may, from time to time, advise the other Party by notice in writing of any
+      change of designated contact person, mail address or email address of the Party giving such
+      notice and from and after the giving of such notice the information therein specified will,
+      for purposes of the preceding paragraph, be deemed to be the designated contact person,
+      mail address or email address of the Party giving such notice.
+
+16. GENERAL PROVISIONS
+
+Authority to enter into agreement
+
+16.01 Each Party represents and warrants, with the intent and understanding that this
+      representation and warranty will be relied on by the other Party, that it has the authority to
+      enter into this Agreement and that this Agreement is a valid and binding obligation of the
+      Party.
+
+
+
+                                                13
+Interpretation
+
+16.02 In this Agreement, unless otherwise set out:
+       (a)     headings do not form part of this Agreement;
+       (b)     a reference to a Schedule is to a Schedule of this Agreement and includes all its
+               attachments, if any, and all such Schedules and attachments form an integral part
+               of this Agreement;
+       (c)     use of the singular includes the plural and vice versa;
+       (d)     "for example", "includes", "including", "such as" or other expression denoting
+               inclusiveness is not limiting;
+       (e)     “rights” includes benefits and remedies of any kind;
+       (f)     any reference to an enactment refers to it as may be amended or substituted and in
+               force at the applicable time, and includes any subordinate enactments made under
+               it; and
+       (g)     any discretion exercisable by a Party may be conditional and in that Party’s sole
+               and absolute discretion.
+16.03 Nothing in this Agreement is to be interpreted as:
+       (a)     restricting any Party from continuing or entering into similar agreements with other
+               parties;
+       (b)     requiring any Party to act in a manner contrary to, or interfering with the exercise
+               of any prerogative, executive, legislative or statutory power or duty a Party might
+               have, or otherwise fetter its discretion; or
+       (c)     requiring any Party to act in a manner contrary to or inconsistent with any
+               applicable laws or other laws binding on, or constating documents of, such Party.
+
+
+Prevailing order
+
+16.04 To the extent of any conflict between provisions of this Agreement, the order of precedence
+      will be the body of this Agreement and then any Schedules, with the body of a Schedule
+      prevailing over any attachments to it.
+
+
+Assignment
+
+16.05 Unless the Parties otherwise agree, this Agreement may not be assigned by either Party,
+      either in whole or in part. For clarity, a change in responsibility for this Agreement within
+      the government of either Party does not require an assignment or transfer of this
+      Agreement.
+
+                                                14
+Amendments
+
+16.06 Any amendments to this Agreement or the Schedules will be dated, signed by both Parties
+      and attached to this Agreement, at which time they become part of this Agreement.
+
+
+No third-party beneficiaries
+
+16.07 Nothing in this Agreement, express or implied, is intended to confer upon any entity (other
+      than the Parties, their successors and permitted assigns) any rights, benefits or remedies of
+      any kind or character whatsoever and no entity will otherwise be deemed to be a third-party
+      beneficiary under or by reason of this Agreement.
+
+
+Partial waiver and invalidity
+
+16.08 A waiver of any term or breach of this Agreement is effective only if it is in writing and
+      signed by, or on behalf of, the waiving Party and is not a waiver of any other term or breach.
+16.09 If any provision of this Agreement or the application of it to any person or circumstance is
+      invalid or unenforceable to any extent, the remainder of this Agreement and the application
+      of such provision to any other person or circumstance will not be affected or impaired and
+      will be valid and enforceable to the extent permitted by law.
+
+
+Further assurances
+
+16.10 Each Party at the request of the other will execute and deliver all such further documents
+      and instruments and do all such further acts and things as may reasonably be necessary to
+      carry out or better evidence the full intent and meaning of this Agreement.
+
+Governing law
+
+16.11 This Agreement to be governed by, interpreted and construed in accordance with the laws
+      of British Columbia and the federal laws of Canada as they apply in the province, without
+      regard to conflict of laws principles.
+
+Arbitration
+
+16.12 The Parties are committed to working together and avoiding disputes through government-
+      to-government information exchange, advance notice, early engagement, and discussion,
+      clarification, and resolution of issues, as they arise. All disputes arising out of or in
+      connection with this Agreement that the Parties are unable to resolve on their own, will be
+      referred to and finally resolved by arbitration administered under the Arbitration Act
+      (British Columbia). The place of arbitration will be Victoria, British Columbia.
+
+                                                15
+Counterparts
+
+16.13 This Agreement may be executed by the Parties in separate counterparts each of which
+      when so executed and delivered shall be an original, and all such executed counterparts
+      may be delivered by email in portable document format (PDF) to such email address as
+      may be provided by each Party for such purpose and each such transmission shall be
+      considered an original.
+
+
+
+
+                                             16
+IN WITNESS WHEREOF the Parties have executed this Agreement to be made effective as of
+the Effective Date.
+
+SIGNED on behalf of His Majesty             )
+the King in Right of the Province of        )
+British Columbia by a duly authorized       )
+representative of the Minister of           )
+Education and Child Care                    )
+in the presence of:                         )
+                                            )
+                                            )
+                                            )
+(Witness)                                            For the Minister of Education and Child Care
+
+
+SIGNED on behalf of His Majesty             )
+the King in Right of the Province of        )
+British Columbia by a duly authorized       )
+representative of the Minister of           )
+Citizens’ Services                          )
+in the presence of:                         )
+                                            )
+                                            )
+                                            )
+(Witness)                                            For the Minister of Citizens’ Services
+
+
+SIGNED on behalf of The Government          )
+of Northwest Territories by a duly          )
+authorized representative of the Minister   )
+of Education, Culture and Employment        )
+in the presence of:                         )
+                                            )
+                                            )
+                                            )
+ (Witness)                                            For the Minister of Education, Culture and
+                                                      Employment
+
+
+
+
+                                                17
+                                      SCHEDULE A
+                       INFORMATION SHARING SCHEDULE
+1.   Overview
+
+     This schedule documents the terms and conditions agreed upon by the Parties applicable
+     to the exchange of certain personal information by the Parties, in compliance with the
+     Freedom of Information and Protection of Privacy Act (FIPPA) in British Columbia,
+     Access to Information and Protection of Privacy (ATIPP) in the Northwest Territories, and
+     other applicable legislation.
+
+2.   Summary of Information Sharing
+
+       The Parties may share personal information as necessary to carry out the terms
+       of the BC-NWT Education Sharing Agreement (the “Agreement”), including
+       with respect to curriculum development and the development and scoring of
+       student educational assessments.
+
+3.   Purpose of the Information Sharing
+
+       Parties may share personal information to as necessary to carry out the terms of
+       the Agreement, including with respect to curriculum development and the
+       development and scoring of student educational assessments, and for other
+       purposes consistent with the terms of the Agreement.
+
+       When sharing personal information relating to students, the Parties will to the
+       extent possible share information in anonymized or de-identified form.
+
+4.   Personal Information
+
+     In this Agreement, "Personal Information" means:
+       recorded information about an identifiable individual, other than contact
+       information, collected or created as a result of the Education Sharing
+       Agreement, including following categories of information:
+           (i)    Personal identity information of educators (e.g. full name, birthdate,
+                  gender, unique identifiers);
+           (ii)   Personal contact information of educators (e.g. email, phone
+                  number, mailing address);
+           (iii) Employment information of educators (organization, position);
+
+
+
+                                             18
+            (iv)   Personal/professional statement, opinion, feedback,
+                   recommendation; and
+            (v)    NWT students’ assessment information, which will be, to the extent
+                   possible, shared between the Parties in anonymized or de-identified
+                   form.
+
+
+
+5. Collection and Disclosure of Personal Information
+
+        Personal information is collected by the Province under this Agreement,
+        pursuant to FIPPA section 26(c) as the information relates directly to and is
+        necessary for a program or activity of a public body and section 26(e) as the
+        information is necessary for the purposes of planning and evaluating a program
+        or activity of a public body. The authority to indirectly collect information
+        comes from section 27(1)(a)(iii), (c.1) and (c.2), together with s. 168(3) of the
+        School Act.
+
+        Personal information is disclosed by the Northwest Territory to the Province,
+        pursuant to ATIPP section 48(a) for the purpose for which the information was
+        collected or compiled or for a use consistent with that purpose.
+
+        Personal information is disclosed by the Province, pursuant to FIPPA section
+        33(2)(d) for the purpose for which the information was obtained or compiled, or
+        for a use consistent with that purpose.
+
+6. Use of Personal Information
+
+        Personal information is to be used by the Province, pursuant to FIPPA section
+        32(a) for the purpose for which the information was obtained or compiled, or
+        for a use consistent with that purpose. Personal information is to be used by the
+        Northwest Territories, pursuant to ATIIP section 43(a) for the purpose for
+        which the information was collected or compiled, or for a use consistent with
+        that purpose.
+
+7. Accuracy
+
+      Each Party will make every reasonable effort to ensure the Personal Information in its
+      custody is accurate, complete and up-to-date.
+
+
+
+
+                                              19
+8. Security
+
+      8.1     Each Party will make reasonable arrangements to maintain the security of the
+              Personal Information in its custody, by protecting it against such risks as
+              unauthorized access, collection, use, disclosure or disposal.
+
+      8.2     Each Party will advise the other Party immediately of any circumstances, incidents
+              or events which to its knowledge have jeopardized or may in future jeopardize:
+                  • the privacy of individuals whose personal information is shared under this
+                  Agreement;
+                  • the security of any computer system in its custody that is used to access the
+                     Personal Information.
+
+
+
+
+                                               20
+

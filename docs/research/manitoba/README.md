@@ -2,7 +2,7 @@
 
 **Source:** Manitoba Education and Early Childhood Learning (edu.gov.mb.ca/k12): the math, science and social studies curriculum frameworks (Kindergarten to Grade 9), the English language arts framework (PDFs for Kindergarten to Grade 8, a web page for Grade 9), the Core French framework (Grades 4 to 9) and the Provincial Report Card Policy.
 
-`fetch.sh` downloads the pages and `build_outcomes.py` parses them into `outcomes.json` (`{"<grade>/<subject>": [{idx, kind, content}]}`) and `src/content/manitoba/overall.ts` (the learning focus shown as the course overview). Rebuild by running `./fetch.sh <cache>` and then `build_outcomes.py` on the cache. `content.test.ts` checks every `ca-mb` standard against `outcomes.json`. Core French cites strands (Oral Communication, Reading, Writing, Culture) because the framework has no numbered outcomes; French Immersion units cite no codes.
+`fetch.sh` downloads the pages and `build_outcomes.py` parses them into `outcomes.json` (`{"<grade>/<subject>": [{idx, kind, content}]}`) and `src/content/manitoba/overall.ts` (the learning focus shown as the course overview). The downloaded files are committed in `source/` (2026-10-14). Rebuild by running `./fetch.sh` (it refreshes `source/`) and then `python3 -I build_outcomes.py source`. `content.test.ts` checks every `ca-mb` standard against `outcomes.json`. Core French cites strands (Oral Communication, Reading, Writing, Culture) because the framework has no numbered outcomes; French Immersion units cite no codes.
 
 ## Mapping
 - BC units that fit are shared with `course(..., { share })`, Ontario units are copied with `adopt(...)` and Manitoba outcome text (`src/content/manitoba/kit.ts`).

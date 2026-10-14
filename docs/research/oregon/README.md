@@ -15,8 +15,8 @@ Oregon's world language standards are not used. Oregon families get no French su
 
 ## Files
 
-- `fetch.sh <cache>` downloads the official files into a cache folder. They are public and download without a login, so they are not committed. The files are the math workbook and PDF, the K–12 ELA PDF, the K–12 science PDF (standards only), the science crosswalk from 2014 to 2022, and the social science PDF. oregon.gov serves an error page to some clients that send no browser user agent, so the script sends one.
-- `build_outcomes.py <cache>` parses them into `outcomes.json`: `{"<grade>/<subject>": [{idx, kind, content}]}` for Kindergarten (`k`) to Grade 9 and the subjects `math`, `language`, `science` and `social`. Run it with `python3 -I`. It needs `openpyxl`, `pypdf` and `pdfplumber`. Band standards are listed under every grade of the band:
+- `fetch.sh` downloads the official files into `source/`, which is committed (downloaded 2026-10-14). The files are the math workbook and PDF, the K–12 ELA PDF, the K–12 science PDF (standards only), the science crosswalk from 2014 to 2022, and the social science PDF. oregon.gov serves an error page to some clients that send no browser user agent, so the script sends one.
+- `build_outcomes.py source` parses them into `outcomes.json`: `{"<grade>/<subject>": [{idx, kind, content}]}` for Kindergarten (`k`) to Grade 9 and the subjects `math`, `language`, `science` and `social`. Run it with `python3 -I`. It needs `openpyxl`, `pypdf` and `pdfplumber`. Band standards are listed under every grade of the band:
   - social science `6/7` under Grades 6 and 7;
   - `MS.ETS1` under Grades 6 to 8;
   - high school math, science and social science, and ELA 9–10, under Grade 9.

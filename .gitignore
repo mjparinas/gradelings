@@ -66,3 +66,6 @@ next-env.d.ts
 *.p8
 *.p12
 *.mobileprovision
+
+# python
+__pycache__/

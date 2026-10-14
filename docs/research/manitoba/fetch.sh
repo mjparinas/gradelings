@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Downloads the official Manitoba curriculum pages used by build-outcomes.py into a cache folder.
-# Usage: ./fetch.sh /path/to/cache   (needs curl and pdftotext)
+# Usage: ./fetch.sh [dir]   (dir defaults to source/ in this folder, which is committed)   (needs curl and pdftotext)
 set -euo pipefail
-OUT="${1:?cache folder}"
+OUT="${1:-$(dirname "$0")/source}"
 mkdir -p "$OUT/html" "$OUT/ela" "$OUT/report-card"
 B=https://www.edu.gov.mb.ca/k12
 for g in k 1 2 3 4 5 6 7 8 9; do

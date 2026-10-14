@@ -2,6 +2,9 @@
 
 **Sources:** Yukon Education, "Learn about the Yukon's school curriculum" (yukon.ca/en/school-curriculum); the Council of Ministers of Education, Canada (CMEC) Student Transfer Guide for Yukon (2023, cmec.ca/docs/transferguide/2024/Yukon-2023_Student-Transfer-Guide_EN.pdf); Yukon Education's "How Are We Doing" reports (the Foundation Skills Assessment is written in Yukon).
 
+## Sources in this folder
+`fetch.sh [dir]` downloads the documents above into `source/` (PDFs in `source/pdf/`, their `pdftotext -layout` text in `source/txt/`): the CMEC Student Transfer Guide for Yukon (`cmec-transfer-guide_2023`, downloaded 14 October 2026). yukon.ca answers automated downloads with 403, so the Yukon Education curriculum page and the "How Are We Doing" reports are not stored; the script tries the curriculum page and only warns when it is refused, so save it from a browser into `source/html/` if needed. The BC curriculum Yukon follows is stored in `../bc/source/` (`../bc/fetch.sh`).
+
 ## What the sources say
 - Yukon **implements the BC curriculum**, adapted to the Yukon context, and integrates Yukon First Nations languages, history, culture and ways of knowing, doing and being into all areas of learning (CMEC guide, section 1.6).
 - Kindergarten to Grade 9 report on the **four-point Provincial Proficiency Scale**: Emerging, Developing, Proficient, Extending. Letter grades with percentages start in Grade 10 (section 1.8).

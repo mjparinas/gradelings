@@ -1,0 +1,200 @@
+        New K-6 curriculum
+        Mathematics
+
+        Overview
+        Mathematics is a powerful tool used every day to solve real-life problems. A focus on numeracy skills provides students with a
+        solid foundation of mathematical knowledge. Numeracy skills support real-life pursuits, including telling time, using and
+        managing money, following instructions, finding an address, and reading a schedule. Through mathematics, students develop
+        logical thinking skills that support effective decision making in a variety of situations. Experiences with mathematics help
+        students develop appreciation for the patterns and relationships that describe multiple aspects of the world and its future
+        possibilities.
+
+        Studying and mastering mathematics can lead to jobs in computer science, construction, artificial intelligence, teaching,
+        engineering, and many other fields.
+
+
+        From draft to new curriculum – content update summary
+
+        What we heard
+        We listened to all feedback from classroom piloting and engagement activities and heard these common concerns across all
+        draft K-6 subjects:
+
+        • Load
+
+          ­ some content is too heavy within a subject, grade, or learning outcome
+
+        • Age-inappropriateness
+
+          ­ some knowledge, understandings, and skill/procedures need to be better aligned with students’ developmental level in a
+            specific grade
+          ­ more pre-requisite learning is needed in some grades to support the knowledge, understandings, and skills/procedures
+
+        • Wording clarity
+
+          ­ clearer expectations and verb choice are needed in some content for students to achieve learning outcomes
+          ­ clearer descriptions are needed for some knowledge, understandings, or skills/procedures
+
+        • First Nations, Métis, and Inuit content
+
+          ­ additional content is needed to support First Nations, Métis, and Inuit perspectives
+          ­ some content needs to represent First Nations, Métis, and Inuit perspectives and contributions more authentically
+
+        The feedback on draft K-6 mathematics indicated that some content on fractions, operations, measurement, prime
+        factorization, percentages, place value and inequality needed to be updated and strengthened.
+
+        What we updated
+        In April 2022, we finalized new K-6 mathematics curriculum by updating the draft curriculum from March 2021. In addition to
+        making changes that reflect engagement and piloting feedback, we also aligned the new curriculum with top-performing
+        jurisdictions, both within Canada and internationally, as well as those with knowledge-rich curriculums.
+
+
+
+
+        Find out more at alberta.ca/curriculum
+        ©2022 Government of Alberta | April 2022 | Page 1 of 4 | Alberta Education
+Classification: Public
+        We made the following content updates:
+
+        • Load: Refined examples and redistributed content across multiple grades while considering age-appropriateness.
+        • Age-appropriateness: Shifted content between K-6 grades or into grades 7-12.
+        • Wording clarity: Analyzed and aligned verbs in learning outcomes to Bloom’s Taxonomy to ensure the higher-level verbs
+          are used in all K-6 grades, and/or edited for clear and correct language use.
+        • First Nations, Métis, and Inuit content: Made updates based on feedback from stakeholder groups and jurisdictional
+          scans.
+        • Fractions: Shifted content to either earlier or later within K-6 grades to provide an age-appropriate knowledge sequence
+          with time for mastering foundational understandings. Learning outcomes, knowledge, understandings, skills and procedures
+          were added to support foundational understanding of fractions in grades 5 and 6.
+        • Fraction operations: Shifted addition/subtraction from grade 3 and 4 to grade 5 and grade 6, as well as shifting
+          multiplication/division out of K-6 to provide an age-appropriate knowledge sequence with time for mastering foundational
+          understandings.
+        • Negative operations: Shifted most operations with negative numbers out of K-6, reducing load and providing more time for
+          mastering age-appropriate knowledge and skills.
+        • Addition, subtraction, multiplication, and division operations: Included multiple interpretations of each operation and
+          added the knowledge, understanding, skills and procedures for number composition, early algebraic thinking, and strategies
+          to develop number sense and build a stronger learning sequence from grade to grade.
+        • Measurement with Canadian units: Revised knowledge, understanding, skills and procedures that were not connected to
+          learning outcomes and measurement was also enhanced by introducing angles in grade 3 rather than grade 4 to better align
+          with the geometric properties in grade 3.
+        • Factorization: Shifted most content from grade 4 to grade 6 and added factors, multiples, divisibility into new learning
+          outcomes in grades 4 to 6 to provide a clear learning progression with assessable learning outcomes.
+        • Percentages, ratio, and rates: Shifted percentages from grade 5 to grade 4 to align with hundredths in decimals and
+          fractions, and shifted ratios from grade 6 to grade 5 to create a learning sequence with percentages and rates, which are
+          introduced in grade 6.
+        • Place value: Added knowledge, understanding, skills and procedures in grade 2.
+        • Inequality: Included inequality throughout K-6.
+
+
+        Current and new curriculum comparison
+        The following list shows how elements in the current K-6 mathematics curriculum, updated in 2016, compare to the new
+        curriculum. The comparisons provide examples and do not represent all the changes that were made.
+
+                                                            Current curriculum (2016)                New curriculum (April 2022)
+                                                            Examples                                 Examples
+
+         Spatial reasoning                                  • A limited focus on spatial reasoning   • More focus on spatial reasoning is
+                                                              is provided in earlier grades.           provided at earlier grades to help
+                                                                                                       students understand measurement
+                                                                                                       and geometry concepts at a younger
+                                                                                                       age.
+
+
+         Fractions                                          • Students start learning fractions in   • Students learn fractions in Grade 1 to
+                                                              Grade 3.                                 build a strong foundation for
+                                                                                                       understanding proportions.
+
+
+         Number facts                                       • Students are expected to recall        • Students are expected to learn,
+                                                              number facts.                            recall, and apply number facts so
+                                                                                                       they can add, subtract, multiply, and
+                                                                                                       divide more efficiently in various
+                                                                                                       situations.
+
+
+
+
+        Find out more at alberta.ca/curriculum
+        ©2022 Government of Alberta | April 2022 | Page 2 of 4 | Alberta Education
+Classification: Public
+         Operations                                         • Students do not have to use a         • There are clear expectations for
+                                                              particular method to add, subtract,     students to use standard algorithms
+                                                              multiply, or divide.                    to add, subtract, multiply, or divide so
+                                                            • Students are expected to add,           there are consistent, reliable
+                                                              subtract, multiply, and divide with     processes to find answers.
+                                                              numbers and decimals.                 • Students are expected to add,
+                                                                                                      subtract, multiply, and divide with
+                                                                                                      numbers and decimals, and to add
+                                                                                                      and subtract fractions.
+
+
+         Financial literacy                                 • Students are not required to learn    • Students work with money concepts
+                                                              about money and financial concepts.     in mathematics to support financial
+                                                                                                      literacy skills learned in physical
+                                                                                                      education and wellness.
+
+
+
+        Snapshot by grade
+        In new K-6 mathematics curriculum, students will learn about numbers and operations, measurement, geometry, algebra, and
+        statistics.
+
+        Kindergarten
+        • Count and represent quantities within 10.
+        • Recognize 2-D and 3-D shapes in the environment.
+        • Compare objects by length, area, weight, and capacity.
+        • Order a sequence of events according to time.
+
+        Grade 1
+        • Recall addition number facts to a sum of 20 and related subtraction facts.
+        • Identify and sort 2-D and 3-D shapes.
+        • Order objects according to length, area, and capacity.
+        • Identify cycles of time from nature and calendars.
+
+        Grade 2
+        • Add and subtract numbers within 100.
+        • Sort shapes and describe the sorting rule.
+        • Measure length in centimetres.
+        • Describe durations of time in days, weeks, months, or years.
+        • Collect and graph data.
+
+        Grade 3
+        • Add and subtract numbers within 1,000 using standard procedures (algorithms).
+        • Recall multiplication number facts to 10 x 10 and related division facts.
+        • Recognize parallel, perpendicular, and equal sides in 2-D shapes.
+        • Measure length using metric units.
+        • Tell time using analog and digital clocks.
+
+
+
+
+        Find out more at alberta.ca/curriculum
+        ©2022 Government of Alberta | April 2022 | Page 3 of 4 | Alberta Education
+Classification: Public
+        Grade 4
+        • Add and subtract numbers within 10,000 including decimal numbers, using standard procedures (algorithms).
+        • Multiply and divide three-digit natural numbers by one-digit natural numbers, using standard procedures (algorithms).
+        • Classify quadrilaterals and triangles using angle and side measurements.
+        • Measure and calculate the area of rectangles.
+        • Represent and interpret data in various graphs.
+
+        Grade 5
+        • Add and subtract numbers within 1,000,000 including decimal numbers, using standard procedures (algorithms).
+        • Multiply three-digit natural numbers by two-digit natural numbers, using standard procedures (algorithms).
+        • Add and subtract fractions with common denominators.
+        • Write and evaluate algebraic expressions.
+        • Classify shapes using symmetry.
+        • Calculate the area and perimeter of rectangles.
+
+        Grade 6
+        • Add, subtract, multiply, and divide using standard procedures (algorithms) to solve problems.
+        • Multiply fractions by natural numbers.
+        • Calculate area and volume.
+        • Solve algebraic equations.
+        • Collect, graph, and interpret data.
+
+
+
+
+        Find out more at alberta.ca/curriculum
+        ©2022 Government of Alberta | April 2022 | Page 4 of 4 | Alberta Education
+Classification: Public
+

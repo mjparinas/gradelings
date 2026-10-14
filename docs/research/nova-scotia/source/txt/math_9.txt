@@ -1,0 +1,262 @@
+Mathematics 9
+Outcomes
+
+
+
+
+                2022
+Website References
+Website references contained within this document are provided solely as a convenience and do not constitute
+an endorsement by the Department of Education of the content, policies, or products of the referenced website.
+The department does not control the referenced websites and subsequent links, and is not responsible for the
+accuracy, legality, or content of those websites. Referenced website content may change without notice.
+Regional Education Centres and educators are required under the Department’s Public School Programs
+Network Access and Use Policy to preview and evaluate sites before recommending them for student use. If an
+outdated or inappropriate site is found, please report it to <curriculum@novascotia.ca>.
+
+
+
+
+Mathematics Grade 9
+© Crown copyright, Province of Nova Scotia, 2022
+Prepared by the Department of Education and Early Childhood Development
+This is the most recent version of the current curriculum materials as used by teachers in Nova Scotia.
+The contents of this publication may be reproduced in part provided the intended use is for noncommercial
+purposes and full acknowledgment is given to the Nova Scotia Department of Education
+Mathematics Grade 9 Outcomes
+     N01 Students will be expected to demonstrate an understanding of powers with integral bases
+     (excluding base 0) and whole number exponents by
+     ▪ representing repeated multiplication using powers,
+     ▪ using patterns to show that a power with an exponent of zero is equal to one, and
+     ▪ solving problems involving powers.
+     Performance Indicators:
+     N01.01 Demonstrate the differences between the exponent and the base by building models of a
+             given power, such as 23 and 32.
+     N01.02 Explain, using repeated multiplication, the difference between two given powers in which the
+             exponent and base are interchanged.
+     N01.03 Express a given power as a repeated multiplication.
+     N01.04 Express a given repeated multiplication as a power.
+     N01.05 Explain the role of parentheses in powers by evaluating a given set of powers.
+     N01.06 Demonstrate, using patterns, that a0 is equal to 1 for a given value of a (a ≠ 0).
+     N01.07 Evaluate powers with integral bases (excluding base 0) and whole number exponents.
+
+     N02 Students will be expected to demonstrate an understanding of operations on powers with integral
+     bases (excluding base 0) and whole number exponents.
+
+
+
+
+     Performance Indicators:
+     N02.01 Explain, using examples, the exponent laws of powers with integral bases (excluding base 0)
+             and whole number exponents.
+     N02.02 Evaluate a given expression by applying the exponent laws.
+     N02.03 Determine the sum of two given powers and record the process.
+     N02.04 Determine the difference of two given powers and record the process.
+     N02.05 Identify the error(s) in a given simplification of an expression involving powers.
+
+     N03 Students will be expected to demonstrate an understanding of rational numbers by comparing
+     and ordering rational numbers and solving problems that involve arithmetic operations on rational
+     numbers.
+     Performance Indicators:
+     N03.01 Order a given set of rational numbers in fraction and decimal form by placing them on a
+             number line.
+     N03.02 Identify a rational number that is between two given rational numbers.
+     N03.03 Solve a given problem involving operations on rational numbers in fraction or decimal form.
+
+
+
+
+Mathematics 9: Outcomes (2022)                                                                             1
+    N04 Students will be expected to explain and apply the order of operations, including exponents, with
+    and without technology.
+
+    Performance Indicators:
+    N04.01 Solve a given problem by applying the order of operations without the use of technology.
+    N04.02 Solve a given problem by applying the order of operations with the use of technology.
+    N04.03 Identify the error in applying the order of operations in a given incorrect solution.
+
+    N05 Students will be expected to determine the exact square root of positive rational numbers.
+    Performance Indicators:
+    N05.01 Determine whether or not a given rational number is a square number and explain the
+            reasoning.
+    N05.02 Determine the square root of a given positive rational number that is a perfect square.
+    N05.03 Identify the error made in a given calculation of a square root (e.g., is 3.2 the square root of
+            6.4)?
+    N05.04 Determine a positive rational number, given the square root of that positive rational number.
+
+    N06 Students will be expected to determine an approximate square root of positive rational numbers.
+    Performance Indicators:
+    N06.01 Estimate the square root of a given rational number that is not a perfect square, using the
+            roots of perfect squares as benchmarks.
+    N06.02 Determine an approximate square root of a given rational number that is not a perfect
+            square, using technology (e.g., a calculator, a computer).
+    N06.03 Explain why the square root of a given rational number as shown on a calculator may be an
+            approximation.
+    N06.04 Identify a number with a square root that is between two given numbers.
+
+    PR01 Students will be expected to generalize a pattern arising from a problem-solving context using a
+    linear equation and verify by substitution.
+    Performance Indicators:
+    PR01.01 Write an expression representing a given concrete, pictorial, oral, and/or written pattern.
+    PR01.02 Write a linear equation to represent a given context.
+    PR01.03 Describe a context for a given linear equation.
+    PR01.04 Solve, using a linear equation, a given problem that involves concrete, pictorial, oral, and/or
+            written linear patterns.
+    PR01.05 Write a linear equation representing the pattern in a given table of values, and verify the
+            equation by substituting values from the table.
+
+
+
+
+2                                                                                    Mathematics 9: Outcomes (2022)
+     PR02 Students will be expected to graph a linear relation, analyze the graph, and interpolate or
+     extrapolate to solve problems.
+     Performance Indicators:
+     PR02.01 Describe the pattern found in a given graph.
+     PR02.02 Graph a given linear relation, including horizontal and vertical lines.
+     PR02.03 Match given equations of linear relations with their corresponding graphs.
+     PR02.04 Extend a given graph (extrapolate) to determine the value of an unknown element.
+     PR02.05 Interpolate the approximate value of one variable on a given graph, given the value of the
+             other variable.
+     PR02.06 Extrapolate the approximate value of one variable from a given graph, given the value of the
+             other variable.
+     PR02.07 Solve a given problem by graphing a linear relation and analyzing the graph.
+
+     PR03 Students will be expected to model and solve problems, where a, b, c, d, e, and f are rational
+     numbers, using linear equations of the form.
+             ax = b
+                   ,a≠0
+             ax + b = c
+
+                      ,a≠0
+             ax = b + cx
+             a(x + b) = c
+             ax + b = cx + d
+             a(bx + c) = d(ex + f)
+                      ,x≠0
+     Performance Indicators:
+     PR03.01 Solve the given linear equation, using concrete and pictorial representations, and record this
+             process symbolically.
+     PR03.02 Verify by substitution whether a given rational number is a solution to a given linear
+             equation.
+     PR03.03 Solve a given linear equation symbolically.
+     PR03.04 Identify and correct an error in a given incorrect solution of a linear equation.
+     PR03.05 Represent a given problem, using a linear equation.
+     PR03.06 Solve a given problem, using a linear equation, and record the process.
+
+
+
+
+Mathematics 9: Outcomes (2022)                                                                                3
+    PR04 Students will be expected to explain and illustrate strategies to solve single variable linear
+    inequalities with rational coefficients within a problem-solving context.
+    Performance Indicators:
+    PR04.01 Translate a given problem into a single variable linear inequality, using the symbols ≥, >, <,
+            or ≤.
+    PR04.02 Determine if a given rational number is a possible solution of a given linear inequality.
+    PR04.03 Generalize and apply a rule for adding or subtracting a positive or negative number to
+            determine the solution of a given inequality.
+    PR04.04 Generalize and apply a rule for multiplying or dividing by a positive or negative number to
+            determine the solution of a given inequality.
+    PR04.05 Solve a given linear inequality algebraically, and explain the process orally or in written form.
+    PR04.06 Compare and explain the process for solving a given linear equation to the process for
+            solving a given linear inequality.
+    PR04.07 Graph the solution of a given linear inequality on a number line.
+    PR04.08 Compare and explain the solution of a given linear equation to the solution of a given linear
+            inequality.
+    PR04.09 Verify the solution of a given linear inequality, using substitution for multiple elements in the
+            solution.
+    PR04.10 Solve a given problem involving a single variable linear inequality, and graph the solution.
+
+    PR05 Students will be expected to demonstrate an understanding of polynomials (limited to
+    polynomials of degree less than or equal to 2).
+    Performance Indicators:
+    PR05.01 Create a concrete model and/or a pictorial representation for a given polynomial expression.
+    PR05.02 Write the expression for a given model of a polynomial.
+    PR05.03 Identify the variables, degree, and number of terms and coefficients, including the constant
+            term, of a given simplified polynomial expression.
+    PR05.04 Describe a situation for a given first-degree polynomial expression.
+    PR05.05 Match equivalent polynomial expressions given in simplified form.
+
+    PR06 Students will be expected to model, record, and explain the operations of addition and
+    subtraction of polynomial expressions, concretely, pictorially, and symbolically (limited to polynomials
+    of degree less than or equal to 2).
+    Performance Indicators:
+    PR06.01 Model addition of two given polynomial expressions, concretely and/or pictorially, and
+            record the process symbolically.
+    PR06.02 Model subtraction of two given polynomial expressions, concretely and/or pictorially, and
+            record the process symbolically.
+    PR06.03 Identify like terms in a given polynomial expression.
+    PR06.04 Apply a personal strategy for addition or subtraction of two given polynomial expressions,
+            and record the process symbolically.
+    PR06.05 Identify equivalent polynomial expressions from a given set of polynomial expressions,
+            including pictorial and symbolic representations.
+    PR06.06 Identify the error(s) in a given simplification of a given polynomial expression.
+
+
+
+4                                                                                     Mathematics 9: Outcomes (2022)
+     PR07 Students will be expected to model, record, and explain the operations of multiplication and
+     division of polynomial expressions (limited to polynomials of degree less than or equal to 2) by
+     monomials, concretely, pictorially, and symbolically.
+     Performance Indicators:
+     PR07.01 Model multiplication of a given polynomial expression by a given monomial, concretely or
+             pictorially, and record the process symbolically.
+     PR07.02 Model division of a given polynomial expression by a given monomial, concretely or
+             pictorially, and record the process symbolically.
+     PR07.03 Apply a personal strategy for multiplication and division of a given polynomial expression by
+             a given monomial.
+     PR07.04 Provide examples of equivalent polynomial expressions.
+     PR07.05 Identify the error(s) in a given simplification of a given polynomial expression.
+
+     G01 Students will be expected to determine the surface area of composite 3-D objects to solve
+     problems.
+     Performance Indicators:
+     G01.01     Determine the area of overlap in a given composite 3-D object, and explain the effect on
+                determining the surface area (limited to right cylinders, right rectangular prisms, and right
+                triangular prisms).
+     G01.02     Determine the surface area of a given composite 3-D object (limited to right cylinders, right
+                rectangular prisms, and right triangular prisms).
+     G01.03     Solve a given problem involving surface area.
+
+     SP01 Students will be expected to describe the effect on the collection of data of bias, use of
+     language, ethics, cost, time and timing, privacy, and cultural sensitivity.
+     Performance Indicators:
+     SP01.01 Analyze a given case study of data collection; and identify potential problems related to bias,
+             use of language, ethics, cost, time and timing, privacy, or cultural sensitivity.
+     SP01.02 Provide examples to illustrate how bias, use of language, ethics, cost, time and timing,
+             privacy, or cultural sensitivity may influence data.
+
+
+
+
+Mathematics 9: Outcomes (2022)                                                                                  5
+    SP03 Students will be expected to develop and implement a project plan for the collection, display, and
+    analysis of data by:
+       o formulating a question for investigation
+       o choosing a data collection method that includes social considerations
+       o selecting a population or a sample
+       o collecting the data
+       o displaying the collected data in an appropriate manner
+       o drawing conclusions to answer the question
+    Performance Indicators:
+    SP03.01 Create a rubric to assess a project that includes the assessment of
+            ▪ a question for investigation
+            ▪ the choice of a data collection method that includes social considerations
+            ▪ the selection of a population or a sample and the justification for the selection
+            ▪ the display of collected data
+            ▪ the conclusions to answer the question
+    SP03.02 Develop a project plan that describes
+            ▪ a question for investigation
+            ▪ the method of data collection that includes social considerations
+            ▪ the method for selecting a population or a sample
+            ▪ the methods for display and analysis of data
+    SP03.03 Complete the project according to the plan, draw conclusions, and communicate findings to
+            an audience.
+    SP03.04 Self-assess the completed project by applying the rubric.
+
+
+
+
+6                                                                                   Mathematics 9: Outcomes (2022)
+

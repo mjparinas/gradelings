@@ -6,7 +6,9 @@ Sources (Ministry of Education):
   Francais en immersion 3 to 9:  https://progetudes.gov.sk.ca/CurriculumOutcomeContent?id=268..274
   Programme d'etudes interdisciplinaire (immersion Kindergarten, 1, 2): ids 407, 408, 409 (same site)
 
-Run: python3 build_french_outcomes.py   (needs network access; writes outcomes.json next to this file)
+Run: python3 -I build_french_outcomes.py [dir]   reads the pages fetch.sh saved in dir (default ./source)
+     python3 -I build_french_outcomes.py --live    downloads the pages from the Ministry instead
+Either way it rewrites the French entries of outcomes.json next to this file and src/content/saskatchewan/french-outcomes.ts.
 
 Core French outcomes go in subject "core-french" for the grade whose number equals the Core French level.
 Immersion outcomes go in subject "immersion". The Ministry's pages contain a few typos in outcome codes
@@ -16,6 +18,7 @@ import html
 import json
 import os
 import re
+import sys
 import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -26,6 +29,14 @@ FR = "https://progetudes.gov.sk.ca/CurriculumOutcomeContent?id="
 def fetch(url):
     with urllib.request.urlopen(url, timeout=90) as r:
         return r.read().decode("utf-8")
+
+
+def page(src, base, cid, name):
+    """The saved page html/<name>.html from fetch.sh, or the live page with --live (src is None)."""
+    if src is None:
+        return fetch(base + str(cid))
+    with open(os.path.join(src, "html", name + ".html"), encoding="utf-8") as f:
+        return f.read()
 
 
 def lines(h):
@@ -146,12 +157,14 @@ def write_ts(data):
 
 
 def main():
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    src = None if "--live" in sys.argv else (args[0] if args else os.path.join(HERE, "source"))
     path = os.path.join(HERE, "outcomes.json")
     data = json.load(open(path, encoding="utf-8"))
     for level, cid in zip("123456789", range(395, 404)):
-        data[level]["core-french"] = parse(fetch(EN + str(cid)), "Outcomes:", CORE_CODE, core_goal)
+        data[level]["core-french"] = parse(page(src, EN, cid, f"core-french_{level}"), "Outcomes:", CORE_CODE, core_goal)
     for g, cid in [("3", 268), ("4", 269), ("5", 270), ("6", 271), ("7", 272), ("8", 273), ("9", 274), ("k", 407), ("1", 408), ("2", 409)]:
-        groups = parse(fetch(FR + str(cid)), "Résultats d’apprentissage", FR_CODE, fr_goal, with_themes=True)
+        groups = parse(page(src, FR, cid, f"immersion_{g}"), "Résultats d’apprentissage", FR_CODE, fr_goal, with_themes=True)
         for grp in groups:
             for o in grp["outcomes"]:
                 o["code"] = norm_code(o["code"])
