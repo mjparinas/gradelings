@@ -100,7 +100,7 @@ function RefundRow({ p, familyId, onDone }: { p: Payment; familyId: string; onDo
             <input className={`${field} w-40 font-mono`} value={confirm} onChange={(e) => setConfirm(e.target.value)} autoComplete="off" />
           </label>
           <button type="button" className={danger} disabled={busy || confirm !== REFUND_CONFIRM || !cents || cents > left} onClick={() => void refund()}>
-            {busy ? "Refunding…" : "Refund now"}
+            {busy ? "Refunding…" : "Refund Now"}
           </button>
           <p className="w-full text-sm text-ink-soft">The money goes back to their card through Stripe. A refund can&apos;t be undone. Up to {money(left, p.currency)} is left to refund.</p>
         </div>
@@ -137,15 +137,15 @@ function SubscriptionRow({ s, familyId, onDone }: { s: Subscription; familyId: s
       <div className="mt-2 flex flex-wrap gap-2">
         {s.cancelAtPeriodEnd ? (
           <button type="button" className={quiet} disabled={busy} onClick={() => void act("resume", "The subscription will renew again.")}>
-            Undo the cancellation
+            Undo the Cancellation
           </button>
         ) : (
           <button type="button" className={quiet} disabled={busy} onClick={() => void act("cancel-at-end", "It will end at the end of the paid period.")}>
-            Cancel at the end of the period
+            Cancel at the End of the Period
           </button>
         )}
         <button type="button" className={danger} aria-expanded={askNow} onClick={() => setAskNow(!askNow)}>
-          Cancel now
+          Cancel Now
         </button>
       </div>
       {askNow && (
@@ -155,7 +155,7 @@ function SubscriptionRow({ s, familyId, onDone }: { s: Subscription; familyId: s
             <input className={`${field} w-40 font-mono`} value={confirm} onChange={(e) => setConfirm(e.target.value)} autoComplete="off" />
           </label>
           <button type="button" className={danger} disabled={busy || confirm !== CANCEL_CONFIRM} onClick={() => void act("cancel-now", "Cancelled now.", { confirm })}>
-            End it now
+            End It Now
           </button>
           <p className="w-full text-sm text-ink-soft">Ends the plan today with no refund for the rest of the period (refund a payment above if you want to).</p>
         </div>
@@ -195,7 +195,7 @@ export function FamilyBilling({ familyId, pastDue }: { familyId: string; pastDue
           <p className="font-semibold text-[#8a3b00]">Their last payment failed.</p>
           <p className="text-sm">Send them a short email with a link to update their card. It&apos;s a billing notice, so it goes even if they turned off news and tips.</p>
           <button type="button" className={`${primary} mt-2`} disabled={busy} onClick={() => void cardEmail()}>
-            Email them to update their card
+            Email Them to Update Their Card
           </button>
           <Notice {...msg} />
         </div>

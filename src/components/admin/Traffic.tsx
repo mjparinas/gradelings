@@ -94,17 +94,17 @@ function Search({ r, days }: { r: SearchReport; days: number }) {
         <Tile label="Average position" value={t.impressions ? t.position.toFixed(1) : "—"} sub={r.previous.impressions ? `${r.previous.position.toFixed(1)} the ${days} days before (lower is better)` : "1 is the top of the page"} />
       </div>
       <div className="grid gap-3 lg:grid-cols-2">
-        <ColumnChart title="Clicks from Google by day" subtitle={`${shortDate(r.start)} to ${shortDate(r.end)}`} data={r.daily.map((d) => ({ label: shortDate(d.date), value: d.clicks, detail: `${num(d.impressions)} times shown` }))} unit="clicks" />
-        <ColumnChart title="Times shown in Google by day" subtitle={`${shortDate(r.start)} to ${shortDate(r.end)}`} data={r.daily.map((d) => ({ label: shortDate(d.date), value: d.impressions }))} unit="times shown" />
+        <ColumnChart title="Clicks From Google by Day" subtitle={`${shortDate(r.start)} to ${shortDate(r.end)}`} data={r.daily.map((d) => ({ label: shortDate(d.date), value: d.clicks, detail: `${num(d.impressions)} times shown` }))} unit="clicks" />
+        <ColumnChart title="Times Shown in Google by Day" subtitle={`${shortDate(r.start)} to ${shortDate(r.end)}`} data={r.daily.map((d) => ({ label: shortDate(d.date), value: d.impressions }))} unit="times shown" />
         <RowBars
-          title="Top searches"
+          title="Top Searches"
           subtitle="What people typed before clicking through, most clicks first"
           rows={r.queries.map((q) => ({ label: q.key, value: q.clicks, note: `${num(q.impressions)} shown · ${pct(q.ctr)} · position ${q.position.toFixed(1)}` }))}
           headers={["Search", "Clicks", "Shown, click rate, position"]}
           empty="No searches with clicks yet."
         />
         <RowBars
-          title="Top pages from Google"
+          title="Top Pages From Google"
           subtitle="Pages people reached from Google, most clicks first"
           rows={r.pages.map((p) => ({ label: pathOf(p.key), value: p.clicks, note: `${num(p.impressions)} shown · ${pct(p.ctr)} · position ${p.position.toFixed(1)}` }))}
           headers={["Page", "Clicks", "Shown, click rate, position"]}
@@ -142,13 +142,13 @@ function Visits({ r, days }: { r: VisitsReport; days: number }) {
         <Tile label="Top source" value={r.referrers[0]?.key ?? "—"} sub={r.referrers[0] ? `${num(r.referrers[0].visitors)} visitors` : "No other site has sent visitors yet"} />
       </div>
       <div className="grid gap-3 lg:grid-cols-2">
-        <ColumnChart title="Visitors by day" subtitle={`${shortDate(r.start)} to ${shortDate(r.end)}${r.keptDays ? ` (Vercel keeps ${r.keptDays} days on this plan)` : ""}`} data={r.daily.map((d) => ({ label: shortDate(d.date), value: d.visitors, detail: `${num(d.pageviews)} page views` }))} unit="visitors" />
-        <RowBars title="Top pages" subtitle="Public pages, most visitors first" rows={list(r.pages)} headers={["Page", "Visitors", "Page views"]} empty="No visits yet." />
-        <RowBars title="Where visitors came from" subtitle="Other sites that linked here" rows={list(r.referrers)} headers={["Site", "Visitors", "Page views"]} empty="No visitors from other sites yet." />
+        <ColumnChart title="Visitors by Day" subtitle={`${shortDate(r.start)} to ${shortDate(r.end)}${r.keptDays ? ` (Vercel keeps ${r.keptDays} days on this plan)` : ""}`} data={r.daily.map((d) => ({ label: shortDate(d.date), value: d.visitors, detail: `${num(d.pageviews)} page views` }))} unit="visitors" />
+        <RowBars title="Top Pages" subtitle="Public pages, most visitors first" rows={list(r.pages)} headers={["Page", "Visitors", "Page views"]} empty="No visits yet." />
+        <RowBars title="Where Visitors Came From" subtitle="Other sites that linked here" rows={list(r.referrers)} headers={["Site", "Visitors", "Page views"]} empty="No visitors from other sites yet." />
         <RowBars title="Countries" rows={list(r.countries)} headers={["Country", "Visitors", "Page views"]} empty="No visits yet." />
         {r.clicks && (
           <RowBars
-            title="Pages that lead to the app"
+            title="Pages That Lead to the App"
             subtitle="Clicks on Try it free or Play free, and on Subscribe, by the page they were on"
             rows={r.clicks.map((c) => ({ label: c.key, value: c.trial, note: `${num(c.subscribe)} Subscribe` }))}
             headers={["Page", "Trial clicks", "Subscribe clicks"]}
@@ -209,16 +209,16 @@ export function Traffic() {
               load(true);
             }}
           >
-            {busy ? "Checking…" : "Check again"}
+            {busy ? "Checking…" : "Check Again"}
           </button>
         </div>
       </div>
-      <Section id="search-h" title="Google search" intro="From Google Search Console. Google's numbers settle a few days late, so the period ends three days ago.">
+      <Section id="search-h" title="Google Search" intro="From Google Search Console. Google's numbers settle a few days late, so the period ends three days ago.">
         <div aria-busy={!parts.search} className="flex flex-col gap-3">
           {!parts.search ? <Placeholder /> : parts.search.state === "ok" ? <Search r={parts.search.report} days={d} /> : <Unavailable part={parts.search} />}
         </div>
       </Section>
-      <Section id="visits-h" title="Visits to the public pages" intro="From Vercel Web Analytics, which sets no cookies and is switched off in the kids' app, the parent area and account pages, so nothing a child does is counted.">
+      <Section id="visits-h" title="Visits to the Public Pages" intro="From Vercel Web Analytics, which sets no cookies and is switched off in the kids' app, the parent area and account pages, so nothing a child does is counted.">
         <div aria-busy={!parts.visits} className="flex flex-col gap-3">
           {!parts.visits ? <Placeholder /> : parts.visits.state === "ok" ? <Visits r={parts.visits.report} days={d} /> : <Unavailable part={parts.visits} />}
         </div>

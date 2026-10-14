@@ -29,8 +29,8 @@ describe("Sales tab", () => {
   it("starts from the founding-family preset with the FOUNDER code, and previews the banner's words", async () => {
     render(<Sales />);
     expect(await screen.findByText("Founding family price: 33% off for life")).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /Founding families/ })).toHaveAttribute("aria-pressed", "true");
-    expect(screen.getByRole("button", { name: "Start sale" })).toBeEnabled();
+    expect(screen.getByRole("button", { name: /Founding Families/ })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByRole("button", { name: "Start Sale" })).toBeEnabled();
     expect(await screen.findByText("Live")).toBeInTheDocument();
   });
 
@@ -39,7 +39,7 @@ describe("Sales tab", () => {
     await screen.findByText("Live");
     await userEvent.click(screen.getByRole("button", { name: /Black Friday/ }));
     expect(screen.getByLabelText("Headline")).toHaveValue("Black Friday: {percent} off {for}");
-    await userEvent.click(screen.getByRole("button", { name: /Schedule sale|Start sale/ }));
+    await userEvent.click(screen.getByRole("button", { name: /Schedule Sale|Start Sale/ }));
     await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/admin/promos/", "POST", expect.objectContaining({ preset: "black-friday", code: "FOUNDER", link: "/pricing/" })));
     const body = mocks.call.mock.calls.find((c) => c[1] === "POST")![2];
     expect(body.endsAt).toBeGreaterThan(body.startsAt);
@@ -53,7 +53,7 @@ describe("Sales tab", () => {
 
   it("stops a live sale", async () => {
     render(<Sales />);
-    await userEvent.click(await screen.findByRole("button", { name: "Stop now" }));
+    await userEvent.click(await screen.findByRole("button", { name: "Stop Now" }));
     await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/admin/promos/", "PATCH", { id: "p1" }));
   });
 

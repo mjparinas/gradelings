@@ -36,7 +36,7 @@ describe("Composer", () => {
     await user.clear(screen.getByLabelText("Subject"));
     await user.type(screen.getByLabelText("Subject"), "Hello from {{app}");
     expect(within(preview).getByText(`Hello from ${APP_NAME}`)).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Send email" }));
+    await user.click(screen.getByRole("button", { name: "Send Email" }));
     expect(sent("/api/admin/email/")).toMatchObject({ action: "send", familyId: "fam-1", message: { subject: "Hello from {app}", button: { path: "/play/" } } });
     expect(await screen.findByText("Email sent.")).toBeInTheDocument();
     expect(onSent).toHaveBeenCalled();
@@ -48,7 +48,7 @@ describe("Composer", () => {
     render(<Composer familyId="fam-1" />);
     await user.click(screen.getByLabelText("Add a button"));
     expect(screen.queryByLabelText("Button text")).not.toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Send email" }));
+    await user.click(screen.getByRole("button", { name: "Send Email" }));
     expect(sent("/api/admin/email/")).toMatchObject({ message: { button: null } });
   });
 
@@ -64,7 +64,7 @@ describe("Composer", () => {
     render(<Composer segment="quiet-7" />);
     expect(await screen.findByText(/This send reaches 100 families \(140 in all; up to 100 at a time\)/)).toBeInTheDocument();
     expect(screen.getByText(/4 unconfirmed, 3 unsubscribed, 1 bouncing/)).toBeInTheDocument();
-    const send = screen.getByRole("button", { name: "Send to the group" });
+    const send = screen.getByRole("button", { name: "Send to the Group" });
     expect(send).toBeDisabled();
     await user.type(screen.getByLabelText("Type SEND 100 to confirm"), "SEND 10");
     expect(send).toBeDisabled();
@@ -79,7 +79,7 @@ describe("Composer", () => {
     render(<Composer segment="cancelled" />);
     expect(await screen.findByText(/Nobody in this group can be emailed right now/)).toBeInTheDocument();
     expect(screen.queryByLabelText(/to confirm/)).not.toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "Send to the group" })).toBeDisabled();
+    expect(screen.getByRole("button", { name: "Send to the Group" })).toBeDisabled();
   });
 });
 
@@ -108,7 +108,7 @@ describe("Queue", () => {
     { key: "trial-ending:fam-1", kind: "trial-ending", title: "Trial ending, child practised", detail: "Trial ends in 2 days.", familyId: "fam-1", email: "pat@example.com", at: 1, action: { type: "email", preset: "trial-ending" } },
     { key: "unconfirmed:fam-2", kind: "unconfirmed", title: "Email not confirmed", detail: "Signed up 3 days ago.", familyId: "fam-2", email: "sam@example.com", at: 1, action: { type: "verify" } },
     { key: "inbox:m1", kind: "inbox", title: "Email waiting for an answer", detail: "“Help” from Lee", email: "lee@example.com", at: 1, action: { type: "inbox", id: "m1" } },
-    { key: "reports", kind: "reports", title: "Question reports", detail: "2 question reports waiting.", at: 1, action: { type: "reports" } },
+    { key: "reports", kind: "reports", title: "Question Reports", detail: "2 question reports waiting.", at: 1, action: { type: "reports" } },
   ];
 
   it("offers the fitting action for each item", async () => {
@@ -121,17 +121,17 @@ describe("Queue", () => {
     expect(await screen.findByText("Trial ending, child practised")).toBeInTheDocument();
     expect(onCount).toHaveBeenCalledWith(4);
 
-    await user.click(screen.getByRole("button", { name: "Write email" }));
-    expect(screen.getByRole("button", { name: "Write email" })).toHaveAttribute("aria-expanded", "true");
+    await user.click(screen.getByRole("button", { name: "Write Email" }));
+    expect(screen.getByRole("button", { name: "Write Email" })).toHaveAttribute("aria-expanded", "true");
     expect(screen.getByLabelText("Subject")).toHaveValue("Your {app} free trial ends soon");
 
-    await user.click(screen.getByRole("button", { name: "Resend confirmation" }));
+    await user.click(screen.getByRole("button", { name: "Resend Confirmation" }));
     expect(sent("/api/admin/email/")).toEqual({ action: "verify", familyId: "fam-2" });
     expect(await screen.findByText("Confirmation email sent.")).toBeInTheDocument();
 
-    await user.click(screen.getByRole("button", { name: "Read and reply" }));
+    await user.click(screen.getByRole("button", { name: "Read and Reply" }));
     expect(onInbox).toHaveBeenCalledWith("m1");
-    await user.click(screen.getByRole("button", { name: "Open reports" }));
+    await user.click(screen.getByRole("button", { name: "Open Reports" }));
     expect(onReports).toHaveBeenCalled();
   });
 
@@ -140,8 +140,8 @@ describe("Queue", () => {
     const user = userEvent.setup();
     const onCount = vi.fn();
     render(<Queue onOpenFamily={vi.fn()} onReports={vi.fn()} onInbox={vi.fn()} onCount={onCount} />);
-    await screen.findByText("Question reports");
-    await user.click(screen.getAllByRole("button", { name: "Snooze a week" })[0]);
+    await screen.findByText("Question Reports");
+    await user.click(screen.getAllByRole("button", { name: "Snooze a Week" })[0]);
     expect(sent("/api/admin/queue/")).toEqual({ key: "trial-ending:fam-1", days: 7 });
     await waitFor(() => expect(screen.queryByText("Trial ending, child practised")).not.toBeInTheDocument());
     await user.click(screen.getAllByRole("button", { name: "Dismiss" })[0]);
@@ -173,14 +173,14 @@ describe("Inbox", () => {
     // Shown as text, never as HTML.
     expect(await screen.findByText("<b>Hi</b> there")).toBeInTheDocument();
     expect(screen.getByText(/sheet\.pdf/)).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Open their account" }));
+    await user.click(screen.getByRole("button", { name: "Open Their Account" }));
     expect(onOpen).toHaveBeenCalledWith("fam-9");
-    expect(screen.getByRole("button", { name: "Send reply" })).toBeDisabled();
+    expect(screen.getByRole("button", { name: "Send Reply" })).toBeDisabled();
     await user.type(screen.getByLabelText("Your reply"), "Happy to help.");
-    await user.click(screen.getByRole("button", { name: "Send reply" }));
+    await user.click(screen.getByRole("button", { name: "Send Reply" }));
     expect(sent("/api/admin/inbox/")).toEqual({ id: "m1", action: "reply", text: "Happy to help." });
     expect(await screen.findByText("Reply sent.")).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Mark as done" }));
+    await user.click(screen.getByRole("button", { name: "Mark as Done" }));
     expect(sent("/api/admin/inbox/")).toEqual({ id: "m1", action: "handled", handled: true });
   });
 
@@ -192,7 +192,7 @@ describe("Inbox", () => {
     });
     const user = userEvent.setup();
     render(<Inbox initialId="m1" onOpenFamily={vi.fn()} />);
-    await user.click(await screen.findByRole("button", { name: "Draft with AI" }));
+    await user.click(await screen.findByRole("button", { name: "Draft With AI" }));
     expect(sent("/api/admin/inbox/")).toEqual({ id: "m1", action: "draft" });
     expect(await screen.findByText(/Draft added/)).toBeInTheDocument();
     expect(screen.getByLabelText("Your reply")).toHaveValue("Hi Lee,\n\nOpen Children.");
@@ -201,8 +201,8 @@ describe("Inbox", () => {
   it("hides Draft with AI without a key", async () => {
     respond((url) => (url === "/api/admin/inbox/?id=m1" ? { message: { ...item, text: "Hello", replyTo: "lee@example.com", attachmentNames: [] } } : undefined));
     render(<Inbox initialId="m1" onOpenFamily={vi.fn()} />);
-    expect(await screen.findByRole("button", { name: "Send reply" })).toBeInTheDocument();
-    expect(screen.queryByRole("button", { name: "Draft with AI" })).not.toBeInTheDocument();
+    expect(await screen.findByRole("button", { name: "Send Reply" })).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Draft With AI" })).not.toBeInTheDocument();
   });
 
   it("opens straight to a message, and explains when email isn't set up", async () => {
@@ -221,7 +221,7 @@ describe("FamilyEmail", () => {
   it("offers the composer and lists what was sent", () => {
     respond(() => undefined);
     render(<FamilyEmail familyId="fam-1" parent={parent} emails={[{ id: "1", familyId: "fam-1", email: "pat@example.com", kind: "weekly", label: null, status: "delivered", sentAt: Date.now(), sentBy: null }]} />);
-    expect(screen.getByRole("button", { name: "Send email" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Send Email" })).toBeInTheDocument();
     expect(screen.getByText("Delivered")).toBeInTheDocument();
   });
 
@@ -229,8 +229,8 @@ describe("FamilyEmail", () => {
     respond(() => undefined);
     const user = userEvent.setup();
     render(<FamilyEmail familyId="fam-1" parent={{ ...parent, verified: false }} emails={[]} />);
-    expect(screen.queryByRole("button", { name: "Send email" })).not.toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Resend confirmation email" }));
+    expect(screen.queryByRole("button", { name: "Send Email" })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Resend Confirmation Email" }));
     expect(sent("/api/admin/email/")).toEqual({ action: "verify", familyId: "fam-1" });
     expect(await screen.findByText("Confirmation email sent.")).toBeInTheDocument();
   });
@@ -240,6 +240,6 @@ describe("FamilyEmail", () => {
     expect(screen.getByText(/bounced or was marked as spam/)).toBeInTheDocument();
     rerender(<FamilyEmail familyId="fam-1" parent={{ ...parent, newsAndTips: false }} emails={[]} />);
     expect(screen.getByText(/turned off news and tips/)).toBeInTheDocument();
-    expect(screen.queryByRole("button", { name: "Send email" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Send Email" })).not.toBeInTheDocument();
   });
 });

@@ -111,7 +111,7 @@ function SignIn({ onDone }: { onDone: () => void }) {
   };
   return (
     <form onSubmit={submit} className={`mx-auto mt-8 flex max-w-sm flex-col gap-3 ${card}`}>
-      <h1 className="text-2xl font-bold">Admin sign in</h1>
+      <h1 className="text-2xl font-bold">Admin Sign In</h1>
       <label className="flex flex-col text-sm font-semibold">
         Email
         <input className={field} type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
@@ -122,7 +122,7 @@ function SignIn({ onDone }: { onDone: () => void }) {
       </label>
       <Notice err={err} />
       <button disabled={busy} className={primary}>
-        Sign in
+        Sign In
       </button>
     </form>
   );
@@ -299,7 +299,7 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
     return (
       <section className={card}>
         <p role="status">The account and all its data were deleted.</p>
-        <button type="button" className={`${quiet} mt-3`} onClick={onBack}>Back to users</button>
+        <button type="button" className={`${quiet} mt-3`} onClick={onBack}>Back to Users</button>
       </section>
     );
   if (!d)
@@ -308,7 +308,7 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
     ) : (
       <section className="flex flex-col gap-4">
         <button type="button" className="self-start font-semibold underline" onClick={onBack}>
-          ← All users
+          ← All Users
         </button>
         <LoadingCards count={4} className="" />
       </section>
@@ -317,7 +317,7 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
   return (
     <section aria-labelledby="user-h" className="flex flex-col gap-4">
       <button type="button" className="self-start font-semibold underline" onClick={onBack}>
-        ← All users
+        ← All Users
       </button>
       <div className={card}>
         <h2 id="user-h" className="break-all text-2xl font-bold">{d.parents.map((p) => p.email).join(", ")}</h2>
@@ -341,7 +341,7 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
         <p className="text-sm text-ink-soft">Names and results stay private to the family.</p>
         {d.redemptions.length > 0 && (
           <>
-            <h3 className="mt-4 font-bold">Codes used</h3>
+            <h3 className="mt-4 font-bold">Codes Used</h3>
             <ul className="font-read">
               {d.redemptions.map((r) => (
                 <li key={r.code}>
@@ -353,7 +353,7 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
         )}
         {Object.keys(d.experiments).length > 0 && (
           <>
-            <h3 className="mt-4 font-bold">A/B tests</h3>
+            <h3 className="mt-4 font-bold">A/B Tests</h3>
             <p className="font-read">{Object.entries(d.experiments).map(([k, v]) => `${k}: ${v}`).join(", ")}</p>
           </>
         )}
@@ -367,7 +367,7 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
             <input className={`${field} w-28`} type="number" min={1} max={365} value={trialDays} onChange={(e) => setTrialDays(e.target.value)} />
           </label>
           <button type="button" disabled={busy} className={quiet} onClick={() => void run("extend-trial", { days: Number(trialDays) }, "Trial extended.")}>
-            Extend trial
+            Extend Trial
           </button>
         </div>
         <div className="mt-3 flex flex-wrap items-end gap-2">
@@ -376,14 +376,14 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
             <input className={`${field} w-28`} type="number" min={1} max={3650} value={accessDays} onChange={(e) => setAccessDays(e.target.value)} />
           </label>
           <button type="button" disabled={busy} className={quiet} onClick={() => void run("grant-access", { days: Number(accessDays) }, "Access added.")}>
-            Add days
+            Add Days
           </button>
           <button type="button" disabled={busy} className={quiet} onClick={() => void run("grant-access", { days: null }, "Lifetime access given.")}>
-            Give lifetime access
+            Give Lifetime Access
           </button>
           {f.accessUntil && (
             <button type="button" disabled={busy} className={danger} onClick={() => void run("remove-access", {}, "Code and admin access removed.")}>
-              Remove access
+              Remove Access
             </button>
           )}
         </div>
@@ -403,14 +403,14 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
               </span>
               {!p.verified && (
                 <button type="button" disabled={busy} className={quiet} onClick={() => void run("verify-email", { parentId: p.id }, "Email marked as confirmed.")}>
-                  Mark email confirmed
+                  Mark Email Confirmed
                 </button>
               )}
             </li>
           ))}
         </ul>
         <button type="button" disabled={busy} className={`${quiet} mt-3`} onClick={() => void run("sign-out", {}, "Signed out on every device.")}>
-          Sign out everywhere
+          Sign Out Everywhere
         </button>
       </div>
 
@@ -419,7 +419,7 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
       <FamilyEmail familyId={id} parent={d.parents[0]} emails={d.emails} />
 
       <div className={card}>
-        <h3 className="text-xl font-bold">Feature flags for this family</h3>
+        <h3 className="text-xl font-bold">Feature Flags for This Family</h3>
         <p className="text-sm text-ink-soft">An override wins over the site-wide setting and the rollout.</p>
         <ul className="mt-2 divide-y divide-line">
           {flags.map((fl) => {
@@ -447,7 +447,7 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
       </div>
 
       <div className={card}>
-        <h3 className="text-xl font-bold">Delete this account</h3>
+        <h3 className="text-xl font-bold">Delete This Account</h3>
         <p className="mt-1 font-read text-ink-soft">Cancels any subscription, then deletes the family, its children and all practice data. This can&apos;t be undone.</p>
         <div className="mt-2 flex flex-wrap items-end gap-2">
           <label className="flex min-w-60 flex-1 flex-col text-sm font-semibold">
@@ -462,7 +462,7 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
               if (await act("/api/admin/users/", "POST", { familyId: id, action: "delete", confirm }, "Deleted.")) setDeleted(true);
             }}
           >
-            Delete account
+            Delete Account
           </button>
         </div>
       </div>
@@ -546,7 +546,7 @@ function Codes() {
     <section aria-labelledby="codes-h" className="flex flex-col gap-4">
       <h2 id="codes-h" className="text-2xl font-bold">Codes</h2>
       <form onSubmit={create} className={`${card} flex flex-col gap-3`}>
-        <h3 className="text-xl font-bold">Make a code</h3>
+        <h3 className="text-xl font-bold">Make a Code</h3>
         <div className="flex flex-wrap gap-3">
           <SelectMenu
             label="Kind"
@@ -613,7 +613,7 @@ function Codes() {
           <input className={field} value={note} onChange={(e) => setNote(e.target.value)} maxLength={200} />
         </label>
         <p className="text-sm text-ink-soft">Leave the code empty for a random 12-character one. Short custom codes are easy to guess, so use them for discounts, not access.</p>
-        <button disabled={busy} className={`${primary} self-start`}>Make code</button>
+        <button disabled={busy} className={`${primary} self-start`}>Make Code</button>
         {made && (
           <p role="status" className="text-lg">
             New code: <b className="font-mono tracking-wider">{made}</b>
@@ -709,7 +709,7 @@ function FlagItem({ flag, onSaved }: { flag: FlagRow; onSaved: () => void }) {
             <input className={`${field} w-28`} type="number" min={0} max={100} value={rollout} onChange={(e) => setRollout(e.target.value)} />
           </label>
           <button type="button" disabled={busy || Number(rollout) === flag.rollout} className={quiet} onClick={() => void save(true)}>
-            Save rollout
+            Save Rollout
           </button>
         </div>
       )}
@@ -721,7 +721,7 @@ function FlagItem({ flag, onSaved }: { flag: FlagRow; onSaved: () => void }) {
 function Flags({ flags, reload }: { flags: FlagRow[] | null; reload: () => void }) {
   return (
     <section aria-labelledby="flags-h">
-      <h2 id="flags-h" className="text-2xl font-bold">Feature flags</h2>
+      <h2 id="flags-h" className="text-2xl font-bold">Feature Flags</h2>
       <p className="mt-1 font-read text-ink-soft">
         Switch a feature off for everyone, or roll it out to a share of families (the same families each time). Devices pick up a change the next time the app opens or comes back into view. To force a flag for one family, open them under Users.
       </p>
@@ -762,7 +762,7 @@ function Verdict({ e, busy, onPick }: { e: ExperimentRow; busy: boolean; onPick:
       <p className="font-semibold">{v.message}</p>
       {v.leader && (
         <button type="button" className={`${v.ready ? primary : quiet} mt-2`} disabled={busy} onClick={() => onPick(v.leader!)}>
-          Use {v.leader} for everyone
+          Use {v.leader} for Everyone
         </button>
       )}
     </div>
@@ -822,13 +822,13 @@ function ExperimentCard({ e, reload }: { e: ExperimentRow; reload: () => void })
           <>
             <SelectMenu label="Everyone sees" block={false} value={winner} onChange={setWinner} options={e.variants.map((v) => ({ value: v.name, label: v.name }))} />
             <button type="button" disabled={busy} className={quiet} onClick={() => void act("/api/admin/experiments/", "PATCH", { key: e.key, action: "stop", winner }, e.status === "running" ? "Stopped." : "Saved.")}>
-              {e.status === "running" ? "Stop test" : "Change winner"}
+              {e.status === "running" ? "Stop Test" : "Change Winner"}
             </button>
           </>
         )}
         {confirmDelete ? (
           <button type="button" disabled={busy} className={danger} onClick={() => void act(`/api/admin/experiments/?key=${encodeURIComponent(e.key)}`, "DELETE", undefined, "Deleted.")}>
-            Yes, delete {e.key}
+            Yes, Delete {e.key}
           </button>
         ) : (
           <button type="button" className={quiet} onClick={() => setConfirmDelete(true)}>
@@ -860,12 +860,12 @@ function Experiments() {
   };
   return (
     <section aria-labelledby="exp-h" className="flex flex-col gap-4">
-      <h2 id="exp-h" className="text-2xl font-bold">A/B tests</h2>
+      <h2 id="exp-h" className="text-2xl font-bold">A/B Tests</h2>
       <p className="font-read text-ink-soft">
         Each family is put in one variant and stays there. A test changes something only where the code asks for it: in the kids&apos; app with <code className="font-mono">useVariant(&quot;key&quot;)</code>, on the server with <code className="font-mono">variantsFor</code>. Anyone not in a running test sees the first variant (the control).
       </p>
       <form onSubmit={create} className={`${card} flex flex-col gap-3`}>
-        <h3 className="text-xl font-bold">New test</h3>
+        <h3 className="text-xl font-bold">New Test</h3>
         <label className="flex flex-col text-sm font-semibold">
           Key (lower-case letters, digits and dashes)
           <input className={`${field} font-mono`} value={key} onChange={(e) => setKey(e.target.value)} required maxLength={40} />
@@ -878,7 +878,7 @@ function Experiments() {
           Variants, one per line with a weight (the first is the control)
           <textarea className={`${field} min-h-24 py-2 font-mono`} value={variants} onChange={(e) => setVariants(e.target.value)} />
         </label>
-        <button disabled={busy} className={`${primary} self-start`}>Save draft</button>
+        <button disabled={busy} className={`${primary} self-start`}>Save Draft</button>
         <Notice err={err} ok={ok} />
       </form>
       {!list && <LoadingCards count={2} className="" />}
@@ -909,7 +909,7 @@ function Reports() {
   const { act, err, ok, busy } = useAction(load);
   return (
     <section aria-labelledby="reports-h">
-      <h2 id="reports-h" className="text-2xl font-bold">Question reports</h2>
+      <h2 id="reports-h" className="text-2xl font-bold">Question Reports</h2>
       <p className="mt-1 font-read text-ink-soft">What children and parents flagged with &quot;Report a problem&quot;, most reported first. Clear a question once it is fixed or checked.</p>
       <Notice err={err} ok={ok} />
       {!reports && <LoadingCards count={3} />}
@@ -950,7 +950,7 @@ function AuditLog() {
   }, []);
   return (
     <section aria-labelledby="log-h">
-      <h2 id="log-h" className="text-2xl font-bold">Change log</h2>
+      <h2 id="log-h" className="text-2xl font-bold">Change Log</h2>
       <p className="mt-1 font-read text-ink-soft">Every change made here, newest first.</p>
       {!rows && <LoadingRows rows={8} />}
       {rows?.length === 0 && <p className="mt-3 font-read">No changes yet.</p>}
@@ -1139,7 +1139,7 @@ export function AdminApp() {
             <Link href="/" className="font-semibold underline">Home</Link>
             {(state.kind === "admin" || state.kind === "not-admin") && (
               <button type="button" className="font-semibold underline" onClick={signOut}>
-                Sign out
+                Sign Out
               </button>
             )}
           </div>
@@ -1150,7 +1150,7 @@ export function AdminApp() {
         {state.kind === "signed-out" && <SignIn onDone={check} />}
         {state.kind === "not-admin" && (
           <div className={`mx-auto mt-8 max-w-md ${card}`}>
-            <h1 className="text-2xl font-bold">Not an admin account</h1>
+            <h1 className="text-2xl font-bold">Not an Admin Account</h1>
             <p className="mt-2 font-read">This account can&apos;t open the admin panel. An admin account has a confirmed email that is listed in ADMIN_EMAILS on the server.</p>
           </div>
         )}

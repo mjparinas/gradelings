@@ -94,7 +94,7 @@ describe("System", () => {
     expect(screen.getByText("Checking… so far worth a look: Errors (Sentry).")).toBeInTheDocument();
     await act(async () => held.Vercel());
     expect(screen.getByText("Worth a look: Errors (Sentry).")).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "Check again" })).toBeEnabled();
+    expect(screen.getByRole("button", { name: "Check Again" })).toBeEnabled();
   });
 
   it("says when everything works, and checks again on request", async () => {
@@ -102,7 +102,7 @@ describe("System", () => {
     const user = userEvent.setup();
     render(<System />);
     expect(await screen.findByText("Everything is working.")).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Check again" }));
+    await user.click(screen.getByRole("button", { name: "Check Again" }));
     expect(mocks.call).toHaveBeenLastCalledWith("/api/admin/system/?page=Turso&refresh=1");
     expect(mocks.call).toHaveBeenCalledWith("/api/admin/system/?check=database&refresh=1");
   });

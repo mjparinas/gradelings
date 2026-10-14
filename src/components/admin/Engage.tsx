@@ -187,7 +187,7 @@ export function Composer({ familyId, segment, preset = "miss-you", onSent }: { f
       )}
       <div>
         <button type="button" className={primary} disabled={busy || (segment ? !audience?.batch || confirm !== need : false)} onClick={() => void send()}>
-          {busy ? "Sending…" : segment ? "Send to the group" : "Send email"}
+          {busy ? "Sending…" : segment ? "Send to the Group" : "Send Email"}
         </button>
       </div>
       <Notice {...msg} />
@@ -272,7 +272,7 @@ export function Emails({ onOpenFamily, initialSegment = "quiet-7" }: { onOpenFam
         Emails
       </h2>
       <div className={card}>
-        <h3 className="text-xl font-bold">Last 30 days</h3>
+        <h3 className="text-xl font-bold">Last 30 Days</h3>
         <dl className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-4">
           {[
             ["Sent", total],
@@ -295,7 +295,7 @@ export function Emails({ onOpenFamily, initialSegment = "quiet-7" }: { onOpenFam
       </div>
 
       <div className={card}>
-        <h3 className="text-xl font-bold">Email a group</h3>
+        <h3 className="text-xl font-bold">Email a Group</h3>
         <p className="text-sm text-ink-soft">
           Goes only to confirmed accounts that haven&apos;t turned off news and tips. Anyone emailed from here in the last few days is skipped, so sending again continues with the rest.
         </p>
@@ -314,7 +314,7 @@ export function Emails({ onOpenFamily, initialSegment = "quiet-7" }: { onOpenFam
 
       <div className={card}>
         <div className="flex flex-wrap items-baseline justify-between gap-2">
-          <h3 className="text-xl font-bold">Sent emails</h3>
+          <h3 className="text-xl font-bold">Sent Emails</h3>
           <a className="min-h-11 font-semibold text-[#2a5bd7] underline" href="/api/admin/export/?type=emails" download>
             Download CSV
           </a>
@@ -394,7 +394,7 @@ export function Queue({ onOpenFamily, onReports, onInbox, onCount }: { onOpenFam
     <section aria-labelledby="queue-h" className="flex flex-col gap-3">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h2 id="queue-h" className="text-2xl font-bold">
-          To do
+          To Do
         </h2>
         <button type="button" className="font-semibold text-[#2a5bd7] underline" onClick={load}>
           Refresh
@@ -431,31 +431,31 @@ export function Queue({ onOpenFamily, onReports, onInbox, onCount }: { onOpenFam
                 <div className="flex flex-wrap gap-2">
                   {it.action.type === "email" && (
                     <button type="button" className={primary} aria-expanded={open === it.key} onClick={() => setOpen(open === it.key ? null : it.key)}>
-                      Write email
+                      Write Email
                     </button>
                   )}
                   {it.action.type === "verify" && (
                     <button type="button" className={primary} onClick={() => void verify(it)}>
-                      Resend confirmation
+                      Resend Confirmation
                     </button>
                   )}
                   {it.action.type === "open" && it.familyId && (
                     <button type="button" className={primary} onClick={() => onOpenFamily(it.familyId!)}>
-                      Open family
+                      Open Family
                     </button>
                   )}
                   {it.action.type === "reports" && (
                     <button type="button" className={primary} onClick={onReports}>
-                      Open reports
+                      Open Reports
                     </button>
                   )}
                   {it.action.type === "inbox" && (
                     <button type="button" className={primary} onClick={() => onInbox((it.action as { id: string }).id)}>
-                      Read and reply
+                      Read and Reply
                     </button>
                   )}
                   <button type="button" className={quiet} onClick={() => void hide(it.key, 7)}>
-                    Snooze a week
+                    Snooze a Week
                   </button>
                   <button type="button" className={quiet} onClick={() => void hide(it.key, null)}>
                     Dismiss
@@ -607,7 +607,7 @@ function InboxRead({ id, onBack, onOpenFamily }: { id: string; onBack: () => voi
             </p>
             {m.familyId && (
               <button type="button" className="min-h-11 font-semibold text-[#2a5bd7] underline" onClick={() => onOpenFamily(m.familyId!)}>
-                Open their account
+                Open Their Account
               </button>
             )}
             <div className="mt-3 max-h-[28rem] overflow-auto rounded-xl bg-[#f7f5f0] p-3 font-read whitespace-pre-wrap" tabIndex={0} role="region" aria-label="Message">
@@ -645,15 +645,15 @@ function InboxRead({ id, onBack, onOpenFamily }: { id: string; onBack: () => voi
                   if (await post({ action: "reply", text: reply }, "Reply sent.")) setReply("");
                 }}
               >
-                Send reply
+                Send Reply
               </button>
               {canDraft && (
                 <button type="button" className={quiet} disabled={busy} onClick={() => void draft()}>
-                  Draft with AI
+                  Draft With AI
                 </button>
               )}
               <button type="button" className={quiet} disabled={busy} onClick={() => void post({ action: "handled", handled: !m.handledAt }, m.handledAt ? "Moved back to waiting." : "Marked as done.")}>
-                {m.handledAt ? "Mark as waiting" : "Mark as done"}
+                {m.handledAt ? "Mark as Waiting" : "Mark as Done"}
               </button>
             </div>
             <Notice {...msg} />
@@ -702,7 +702,7 @@ function SavedRepliesEditor() {
   return (
     <div className={card}>
       <div className="flex flex-wrap items-baseline justify-between gap-2">
-        <h3 className="text-xl font-bold">Saved replies</h3>
+        <h3 className="text-xl font-bold">Saved Replies</h3>
         <button type="button" className="min-h-11 font-semibold text-[#2a5bd7] underline" aria-expanded={open} onClick={() => setOpen(!open)}>
           {open ? "Close" : `Edit (${list?.length ?? 0})`}
         </button>
@@ -733,10 +733,10 @@ function SavedRepliesEditor() {
               disabled={items.length >= REPLY_LIMITS.count}
               onClick={() => setDraft([...items, { id: `reply-${Date.now().toString(36)}`, title: "New reply", body: "" }])}
             >
-              Add a reply
+              Add a Reply
             </button>
             <button type="button" className={primary} disabled={busy || !draft} onClick={() => void save()}>
-              Save replies
+              Save Replies
             </button>
           </div>
           <Notice {...msg} />
@@ -764,7 +764,7 @@ export function FamilyEmail({ familyId, parent, emails }: { familyId: string; pa
   return (
     <div className="flex flex-col gap-4">
       <div className={card}>
-        <h3 className="text-xl font-bold">Email this family</h3>
+        <h3 className="text-xl font-bold">Email This Family</h3>
         {lastPanel && <p className="text-sm text-ink-soft">Last emailed from here {ago(lastPanel.sentAt)}.</p>}
         {parent && !parent.verified ? (
           <>
@@ -786,7 +786,7 @@ export function FamilyEmail({ familyId, parent, emails }: { familyId: string; pa
                 }
               }}
             >
-              Resend confirmation email
+              Resend Confirmation Email
             </button>
             <Notice {...msg} />
           </>
@@ -799,7 +799,7 @@ export function FamilyEmail({ familyId, parent, emails }: { familyId: string; pa
         )}
       </div>
       <div className={card}>
-        <h3 className="text-xl font-bold">Emails sent</h3>
+        <h3 className="text-xl font-bold">Emails Sent</h3>
         <EmailTable emails={emails} showAccount={false} />
       </div>
     </div>
