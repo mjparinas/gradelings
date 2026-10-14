@@ -17,7 +17,7 @@ const regions = regionList(TEACHER_FRAMEWORKS);
 const region = regionWord(TEACHER_FRAMEWORKS);
 
 export const metadata: Metadata = pageMeta({
-  title: `${APP_NAME} for teachers: classroom practice matched to the ${curricula}`,
+  title: "Classroom practice for teachers, Kindergarten to Grade 9",
   description: `Create a class, assign curriculum-matched units and see how each student is practising. Free for teachers for now, ad-free, and families stay in control of what is shared.`,
   path: teacherPath.hub(),
 });

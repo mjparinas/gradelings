@@ -36,7 +36,7 @@ export async function generateMetadata({
   if (!r) return {};
   const f = r.framework;
   return pageMeta({
-    title: `${f.name} parent guides and free printable practice sheets`,
+    title: [`${f.name} parent guides and free printable practice sheets`, `${f.name} parent guides and printable sheets`, `${f.shortName} parent guides and printable sheets`, `${f.shortName} parent guides`],
     description: `Free guides for ${f.shortName} parents: what each grade learns in the ${f.curriculumName}, how to help at home, ${guidesFor(f.id).competencies.label}, the ${guidesFor(f.id).assessment.short} and printable practice sheets for ${gradeSpan(f)}.`,
     path: guidePath.hub(r.framework),
     framework: f,

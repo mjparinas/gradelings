@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: PageProps<"/curriculum/[frame
   const { framework: f, grade } = r;
   const subjects = coursesFor(f, grade).map((c) => subjectInSentence(subjectSeoTitle(c.subject)));
   return pageMeta({
-    title: `${gradeLabel(f, grade)} ${f.shortName} curriculum practice`,
+    title: [`${gradeLabel(f, grade)} ${f.shortName} curriculum practice`, `${gradeLabel(f, grade)} ${f.shortName} practice`],
     description: `What kids learn in ${gradeLabel(f, grade)} in ${f.name}: ${subjects.join(", ")}. Every unit explained for parents, with free sample questions matched to the ${f.curriculumName}.`,
     path: curriculumPath.grade(f, grade),
     framework: f,

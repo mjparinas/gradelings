@@ -58,7 +58,7 @@ describe("curriculum subject page", () => {
   it("builds metadata with the framework's own labels, and 404s an unknown subject", async () => {
     const f = getFramework("ca-ns");
     const meta = await generateMetadata(props("nova-scotia", "grade-3", "language"));
-    expect(meta.title).toBe("Grade 3 English Language Arts: Nova Scotia curriculum practice");
+    expect(meta.title).toEqual({ absolute: "Grade 3 English Language Arts: Nova Scotia curriculum practice" });
     expect(meta.alternates?.canonical).toBe("/curriculum/nova-scotia/grade-3/language/");
     expect(meta.description).toContain(`${f.overviewLabel}, ${f.standardLabel.toLowerCase()}s and free sample questions.`);
     expect(await generateMetadata(props("nova-scotia", "grade-3", "music"))).toEqual({});

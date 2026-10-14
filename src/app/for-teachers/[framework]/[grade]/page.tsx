@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { framework: f, grade } = r;
   const subjects = coursesFor(f, grade).map((c) => subjectInSentence(subjectSeoTitle(c.subject)));
   return pageMeta({
-    title: `${gradeLabel(f, grade)} ${f.shortName} units to assign to your class`,
+    title: [`${gradeLabel(f, grade)} ${f.shortName} units to assign to your class`, `${gradeLabel(f, grade)} ${f.shortName} units to assign`],
     description: `${gradeLabel(f, grade)} ${f.curriculumName} units for teachers: ${subjects.join(", ")}. Assign them to your class in ${APP_NAME} and see each student's practice.`,
     path: teacherPath.grade(f, grade),
     framework: f,

@@ -21,7 +21,7 @@ import { JsonLd, ORG_JSON_LD, SITE_URL } from "@/lib/site";
 import { pageMeta } from "@/lib/pageMeta";
 
 export const metadata: Metadata = pageMeta({
-  title: { absolute: `${APP_NAME} · Curriculum practice and learning games for Kindergarten to Grade 9` },
+  title: { absolute: `${APP_NAME} · Curriculum practice and games for Kindergarten to Grade 9` },
   description: `Ad-free practice for Kindergarten to Grade 9 that follows the curriculum. An adaptive Adventure mode, learning games earned with focused practice, trophies, offline play, and progress reports in the same language as the report card. Free for ${TRIAL_DAYS} days.`,
   path: "/",
 });

@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { framework: f, grade, course } = r;
   const name = subjectSeoTitle(course.subject);
   return pageMeta({
-    title: `Free printable ${gradeLabel(f, grade)} ${name} practice sheet (${f.shortName})`,
+    title: [`Free printable ${gradeLabel(f, grade)} ${name} practice sheet (${f.shortName})`, `Printable ${gradeLabel(f, grade)} ${name} practice sheet (${f.shortName})`, `${gradeLabel(f, grade)} ${name} worksheet (${f.shortName})`, `${gradeLabel(f, grade)} ${name} sheets (${f.shortName})`],
     description: `A free ${gradeLabel(f, grade)} ${subjectInSentence(name)} practice sheet with an answer key, matched to the ${f.curriculumName}. Print it or work through it on screen.`,
     path: guidePath.worksheet(f, grade, course.subject),
     framework: f,

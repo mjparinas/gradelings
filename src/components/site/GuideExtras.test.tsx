@@ -34,7 +34,7 @@ describe("competencies guide", () => {
 
   it("titles the page with the province's own name for its competencies", async () => {
     const meta = await competenciesMetadata(params("ontario"));
-    expect(meta.title).toBe(`Ontario ${guidesFor("ca-on").competencies.label} explained for parents`);
+    expect(meta.title).toEqual({ absolute: `Ontario ${guidesFor("ca-on").competencies.label} explained for parents` });
     expect(meta.alternates?.canonical).toBe(`/guides/ontario/${guidesFor("ca-on").competencies.slug}/`);
     expect(meta.openGraph?.title).toBe(guidesFor("ca-on").competencies.title);
   });
@@ -63,9 +63,10 @@ describe("provincial assessment guide", () => {
     expect(screen.getByRole("link", { name: guidesFor(id).competencies.label })).toHaveAttribute("href", `/guides/${f.slug}/${guidesFor(id).competencies.slug}/`);
   });
 
-  it("names the grades that write it in the title", async () => {
+  it("names the grades that write it in shared links, with a shorter title for search", async () => {
     const meta = await assessmentMetadata(params("bc"));
-    expect(meta.title).toBe(`The FSA explained: ${guidesFor("ca-bc").assessment.name} for Grade 4 and Grade 7 parents`);
+    expect(meta.openGraph?.title).toBe(`The FSA explained: ${guidesFor("ca-bc").assessment.name} for Grade 4 and Grade 7 parents`);
+    expect(meta.title).toBe("The FSA explained for BC parents");
     expect(meta.alternates?.canonical).toBe("/guides/bc/fsa/");
     expect(meta.description).toContain("BC parents");
   });
@@ -73,7 +74,7 @@ describe("provincial assessment guide", () => {
   it("names the territory instead of a grade where no grades are fixed", async () => {
     expect(guidesFor("ca-nu").assessment.grades).toEqual([]);
     const meta = await assessmentMetadata(params("nunavut"));
-    expect(meta.title).toBe(`The ${guidesFor("ca-nu").assessment.short} explained: ${guidesFor("ca-nu").assessment.name} for Nunavut parents`);
+    expect(meta.title).toBe(`${guidesFor("ca-nu").assessment.name}, explained for parents`);
     expect(meta.title).not.toMatch(/Grade\s+parents/);
   });
 

@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const c = competitorBySlug((await params).slug);
   if (!c) return {};
   return pageMeta({
-    title: `${APP_NAME} vs ${c.name} for ${familiesWord()}`,
+    title: [`${APP_NAME} vs ${c.name} for ${familiesWord()}`, `${APP_NAME} vs ${c.name}`],
     description: `${APP_NAME} compared with ${c.name}: price, curriculum match, how progress is shown and what kids see. A fair look at who each is best for.`,
     path: guidePath.compare(c.slug),
     type: "article",
