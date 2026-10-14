@@ -47,7 +47,7 @@ describe("Texas", () => {
     for (const { c, u, key } of texas.filter(({ u }) => !ALL_STATES.has(u.id))) {
       const usHistory = c.subject === "social" && ["5", "8", "9"].includes(c.grade);
       const hit = linesOf(u).find((line) => {
-        const text = line.replace(/(George|Martha) Washington/g, "");
+        const text = line.replace(/(George|Martha) Washington|Washington-on-the-Brazos/g, "");
         return other.test(text) || (!usHistory && california.test(text));
       });
       expect(hit ?? "", `${key} mentions another state`).toBe("");
