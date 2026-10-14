@@ -244,4 +244,17 @@ export const lessons: GradeLessons = {
     ["y = 5 × 4 + 60.", "y = 20 + 60 = 80."],
     "80 points",
   ),
+  // California
+  "math/ca-g8-similar-distance": lesson(
+    ["Rotations, reflections and translations keep size and shape; a dilation changes size only.", "Figures are similar if one can be turned into the other with these moves.", "To find the distance between two points, draw a right triangle and use a² + b² = c²."],
+    "What is the distance between (1, 2) and (4, 6)?",
+    ["Horizontal leg: 4 − 1 = 3. Vertical leg: 6 − 2 = 4.", "3² + 4² = 9 + 16 = 25.", "√25 = 5."],
+    "5",
+  ),
+  "math/ca-g8-linear-models": lesson(
+    ["A line of best fit y = mx + b models data.", "The slope m is the change in y for each 1 more x.", "The y-intercept b is the model's value of y when x is 0."],
+    "A plant's height is modelled by y = 2x + 6 (cm, x in weeks). Predict the height at 5 weeks.",
+    ["y = 2 × 5 + 6.", "y = 16."],
+    "16 cm",
+  ),
 };

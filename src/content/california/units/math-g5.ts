@@ -1,5 +1,6 @@
 import { pick, randInt, shuffle } from "../../random";
-import { eq, num, pickOne, typed, type Maker } from "../../washington/units/math-kit";
+import { eq, fracChoice, mixed, num, pickOne, someone, typed, type Maker } from "../../washington/units/math-kit";
+import type { Visual } from "../../types";
 import { mathUnit } from "./math";
 
 // Grade 5: prime factorization (5.OA.2.1), a California addition to the Common Core. The shared helpers are in ./math.ts.
@@ -141,3 +142,147 @@ export const PRIME_FACTORS_5 = mathUnit({
     factorTree,
   ],
 });
+
+// ---------- Line plots with fractions of a unit (5.MD.2) ----------
+
+const PLOTS = [
+  { what: "beakers", of: "water", unit: "liter" },
+  { what: "bean sprouts", of: "growth", unit: "inch" },
+  { what: "bags", of: "trail mix", unit: "pound" },
+  { what: "ribbons", of: "ribbon", unit: "yard" },
+];
+
+/** A line plot in eighths: values (numerators over 8) from a few marks, at least two of each mark used. */
+function plotData(d: number) {
+  const p = pick(PLOTS);
+  const marks = d === 1 ? [2, 4, 6] : d === 2 ? [1, 2, 4, 6] : [1, 2, 3, 4, 5, 6];
+  const used = shuffle(marks).slice(0, d === 1 ? 3 : 4).sort((a, b) => a - b);
+  const counts = used.map(() => randInt(1, 4));
+  const values = used.flatMap((m, i) => Array.from({ length: counts[i] }, () => m));
+  return { p, used, counts, values };
+}
+
+const eighth = (n: number) => mixed(n, 8);
+
+function plotVisual(p: (typeof PLOTS)[number], used: number[], counts: number[]): Visual {
+  return {
+    type: "table",
+    title: `${p.of[0].toUpperCase() + p.of.slice(1)} in each of the ${p.what} (${p.unit})`,
+    headers: [`Amount (${p.unit})`, "X's"],
+    rows: used.map((m, i) => [eighth(m), "✕".repeat(counts[i])]),
+  };
+}
+
+const plotHowMany: Maker = (d) => {
+  const { p, used, counts } = plotData(d);
+  const i = randInt(0, used.length - 1);
+  return num(`The line plot shows the ${p.of} in some ${p.what}. How many ${p.what} have ${eighth(used[i])} ${p.unit}?`, counts[i], "Count the X's above that mark.", {
+    min: 1,
+    max: 8,
+    visual: plotVisual(p, used, counts),
+  });
+};
+
+const plotMarkTotal: Maker = (d) => {
+  const { p, used, counts } = plotData(d);
+  const i = counts.findIndex((c) => c > 1) >= 0 ? counts.findIndex((c) => c > 1) : 0;
+  const n = counts[i] * used[i];
+  return fracChoice(
+    `All the ${p.what} with ${eighth(used[i])} ${p.unit} are put together. How much ${p.of} is that?`,
+    [n, 8],
+    [
+      [used[i], 8],
+      [n + used[i], 8],
+      [counts[i] + used[i], 8],
+      [n, 16],
+    ],
+    `${counts[i]} × ${eighth(used[i])} = ${eighth(n)} ${p.unit}.`,
+    mixed,
+    plotVisual(p, used, counts),
+  );
+};
+
+const plotTotal: Maker = (d) => {
+  const { p, used, counts, values } = plotData(d);
+  const sum = values.reduce((a, b) => a + b, 0);
+  return fracChoice(
+    `What is the total ${p.of} in all the ${p.what}?`,
+    [sum, 8],
+    [
+      [sum + 2, 8],
+      [sum - 2, 8],
+      [used.reduce((a, b) => a + b, 0), 8],
+      [sum, 4],
+    ],
+    `Add each mark times its number of X's: ${used.map((m, i) => `${counts[i]} × ${eighth(m)}`).join(" + ")} = ${eighth(sum)}.`,
+    mixed,
+    plotVisual(p, used, counts),
+  );
+};
+
+const plotShare: Maker = (d) => {
+  for (;;) {
+    const { p, used, counts, values } = plotData(d);
+    const sum = values.reduce((a, b) => a + b, 0);
+    const n = values.length;
+    if (n < 2) continue;
+    return fracChoice(
+      `If the ${p.of} in all the ${p.what} were shared out equally, how much would each of the ${n} ${p.what} have?`,
+      [sum, 8 * n],
+      [
+        [sum, 8],
+        [sum, 8 * (n + 1)],
+        [sum + n, 8 * n],
+        [n, sum],
+      ],
+      `The total is ${eighth(sum)} ${p.unit}. Share it among ${n}: ${eighth(sum)} ÷ ${n} = ${mixed(sum, 8 * n)}.`,
+      mixed,
+      plotVisual(p, used, counts),
+    );
+  }
+};
+
+const plotRange: Maker = (d) => {
+  const { p, used, counts } = plotData(d);
+  const diff = used[used.length - 1] - used[0];
+  return fracChoice(
+    `How much more ${p.of} is in the fullest of the ${p.what} than in the least full?`,
+    [diff, 8],
+    [
+      [used[used.length - 1], 8],
+      [diff + 1, 8],
+      [used[used.length - 1] + used[0], 8],
+      [diff, 16],
+    ],
+    `Greatest ${eighth(used[used.length - 1])}, least ${eighth(used[0])}. The difference is ${eighth(diff)} ${p.unit}.`,
+    mixed,
+    plotVisual(p, used, counts),
+  );
+};
+
+const plotMake: Maker = () => {
+  const p = pick(PLOTS);
+  const vals = shuffle([1, 2, 2, 4, 4, 4, 6, 3].slice(0, randInt(6, 8)));
+  const target = pick([...new Set(vals)]);
+  const count = vals.filter((v) => v === target).length;
+  return num(
+    `${someone()} measured the ${p.of} in some ${p.what}: ${vals.map(eighth).join(", ")} ${p.unit}. To make a line plot, how many X's go above ${eighth(target)}?`,
+    count,
+    `Count every measurement equal to ${eighth(target)}. Remember ${eighth(2)} = 2/8 and ${eighth(4)} = 4/8.`,
+    { min: 1, max: 8 },
+  );
+};
+
+export const LINE_PLOTS_5 = mathUnit({
+  id: "ca-g5-line-plots",
+  title: "Fraction Line Plots",
+  emoji: "📊",
+  blurb: "Plot fractions and share them out",
+  parentNote:
+    "Making and reading line plots of measurements in halves, fourths and eighths, then adding, comparing and sharing the amounts equally, for example how much water each beaker would hold if the total were shared out.",
+  codes: "5.MD.2",
+  text: "making line plots of measurements in fractions of a unit and solving problems with the data",
+  makers: [plotHowMany, plotMarkTotal, plotTotal, plotShare, plotRange, plotMake],
+});
+
+export const MATH_5 = [PRIME_FACTORS_5, LINE_PLOTS_5];

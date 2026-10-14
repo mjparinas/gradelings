@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Andika, Fredoka } from "next/font/google";
 import { AppEffects } from "@/components/AppEffects";
+import { PageLang } from "@/components/PageLang";
 import { SiteAnalytics } from "@/components/SiteAnalytics";
 import { APP_NAME } from "@/lib/brand";
+import { DEFAULT_LANG } from "@/lib/pageLang.mjs";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -45,9 +47,12 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-CA" className={`${fredoka.variable} ${andika.variable} antialiased`}>
+    // A US state's pages are en-US: the build writes each page's own lang (src/lib/pageLang.mjs), so React
+    // must keep it rather than flag the difference while hydrating.
+    <html lang={DEFAULT_LANG} className={`${fredoka.variable} ${andika.variable} antialiased`} suppressHydrationWarning>
       <body>
         <AppEffects />
+        <PageLang />
         {children}
         <SiteAnalytics />
       </body>

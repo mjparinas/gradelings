@@ -134,4 +134,18 @@ export const lessons: GradeLessons = {
     ["We must eat to live and grow."],
     "a need",
   ),
+  // California
+  "math/ca-gk-what-to-measure": lesson(
+    ["Some things can be measured: how long, how tall, how heavy.", "You can also measure how much a cup or pot holds.", "One thing can have many measures."],
+    "What can you measure about a pumpkin?",
+    ["Put it on a scale to see how heavy it is.", "Stand it next to cubes to see how tall it is."],
+    "how heavy it is and how tall it is",
+  ),
+  "math/ca-gk-build-shapes": lesson(
+    ["A stick can be one side of a shape.", "A clay ball can be one corner.", "Small shapes can join to make a bigger shape."],
+    "How many sticks make a triangle?",
+    ["A triangle has 3 sides.", "Use 1 stick for each side."],
+    "3 sticks",
+    { type: "shape", shape: "triangle" },
+  ),
 };

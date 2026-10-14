@@ -268,4 +268,17 @@ export const lessons: GradeLessons = {
     ["Rectangle: 10 × 8 = 80 ft².", "Triangle: ½ × 10 × 4 = 20 ft².", "80 + 20 = 100."],
     "100 ft²",
   ),
+  // California
+  "math/ca-g7-rewrite-expressions": lesson(
+    ["The same quantity can be written in different forms.", "a + 0.05a = 1.05a, so adding 5% is the same as multiplying by 1.05.", "p − 0.2p = 0.8p, so 20% off means you pay 80% of the price."],
+    "A price p goes up by 15%. Write the new price as one term.",
+    ["p + 0.15p = (1 + 0.15)p.", "1 + 0.15 = 1.15."],
+    "1.15p",
+  ),
+  "math/ca-g7-triangles-slices": lesson(
+    ["Any two sides of a triangle must add to more than the third side.", "Three sides, or two angles and the side between them, fix exactly one triangle. Three angles alone fix only the shape.", "Slicing a solid makes a flat shape: a cylinder cut parallel to its base gives a circle."],
+    "Can sides of 3 cm, 4 cm and 9 cm make a triangle?",
+    ["3 + 4 = 7.", "7 is less than 9, so the short sides can't meet."],
+    "No",
+  ),
 };

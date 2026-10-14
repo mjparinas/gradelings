@@ -200,4 +200,11 @@ export const lessons: GradeLessons = {
     ["He is keeping the money for later."],
     "saving",
   ),
+  // California
+  "math/ca-g1-three-addends": lesson(
+    ["Some stories have three numbers to add.", "Look for two numbers that make 10, and add them first.", "Then add the last number."],
+    "Mia has 7 red, 4 blue and 3 green beads. How many beads?",
+    ["7 + 3 = 10.", "10 + 4 = 14."],
+    "14 beads",
+  ),
 };
