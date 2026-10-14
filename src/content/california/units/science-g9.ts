@@ -69,7 +69,8 @@ export const SCIENCE_COPIES: Unit[] = [
 
 // California-written high school science units for the Grade 9 pool. They follow the Living Earth course of the
 // Science Framework's three-course model (biology with Earth science), which the record prefers when a unit needs one
-// course; expectations taught only in Chemistry in the Earth System or Physics of the Universe have no unit here yet.
+// course; the expectations taught only in Chemistry in the Earth System or Physics of the Universe are in
+// ./science-g9-physical.
 export const OWN_SCIENCE: Unit[] = [
   bankUnit({
     id: "ca-g9-dna-proteins",

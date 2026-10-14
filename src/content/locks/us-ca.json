@@ -732,6 +732,7 @@
       "mb-evolution-and-selection text=ad74bb913c std=ffcbdefc53 q=2382318afc",
       "mb-energy-and-magnetism text=bf9645c400 std=9bd856c560 q=bb013f51ee",
       "wa-g9-motion text=322c25c859 std=ee41d25df7 q=47e7cd3e9b",
+      "electrical-energy-9 text=eecdad56b2 std=6ab996b44c q=b633b5b99b",
       "ca-g9-ecosystems text=d49d5778b6 std=fe2118a95a q=babb9e8e9f",
       "ca-g9-dna-proteins text=84bb9cac1c std=ab09c6671f q=4575b20e9f",
       "ca-g9-body-systems text=8ec013e18e std=6243f0767a q=380a6cd41f",
@@ -740,7 +741,17 @@
       "ca-g9-evolution-evidence text=9228985495 std=396c76bbdd q=f70430bd71",
       "ca-g9-earth-and-life text=4fdc28b68c std=bd21458547 q=6b7bd2236d",
       "ca-g9-humans-and-earth text=c5991ada04 std=1dd1c71965 q=fe6ec3db9f",
-      "ca-g9-engineering text=03915e184e std=b81c88b225 q=68bda9aa76"
+      "ca-g9-engineering text=03915e184e std=b81c88b225 q=68bda9aa76",
+      "ca-g9-structure-materials text=8bf27446b7 std=ab086eb2b7 q=e5eeea39f0",
+      "ca-g9-reaction-energy text=9d579008b2 std=8ffd0c5b89 q=07d3161e51",
+      "ca-g9-nuclear text=ee6db6429d std=7b1ed0f6e9 q=2b8539412b",
+      "ca-g9-gravity-charge text=9891d40bf9 std=9f3a96eda1 q=991ef8ed8d",
+      "ca-g9-energy-systems text=fc350795a3 std=e4e37244af q=89f3453fe5",
+      "ca-g9-waves text=a90a3b2cdf std=05847198f7 q=5707fc5952",
+      "ca-g9-stars-universe text=752b7b69fd std=d284779e72 q=7a758e364a",
+      "ca-g9-earth-interior text=5353771af0 std=197d3d87a4 q=ce35f414aa",
+      "ca-g9-climate-feedbacks text=294b68d3fa std=37abc57bb4 q=1c06419890",
+      "ca-g9-resources text=8c64d966db std=55e8f59000 q=4e2c013ca5"
     ]
   },
   "9/social": {
