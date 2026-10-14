@@ -16,6 +16,14 @@ async function fill() {
 }
 
 describe("ContactForm", () => {
+  it("keeps “(optional)” on the same line as “Your name”", () => {
+    render(<ContactForm />);
+    const line = screen.getByText("(optional)").parentElement!;
+    expect(line.tagName).toBe("SPAN");
+    expect(line).toHaveTextContent("Your name (optional)");
+    expect(screen.getByLabelText(/Your name/)).toHaveAttribute("name", "name");
+  });
+
   it("posts the message and thanks the parent", async () => {
     const fetch = vi.fn(async () => new Response(JSON.stringify({ ok: true }), { status: 200 }));
     vi.stubGlobal("fetch", fetch);

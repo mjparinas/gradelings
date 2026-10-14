@@ -61,7 +61,10 @@ export function ContactForm() {
       </h2>
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="flex flex-col gap-1 font-semibold">
-          Your name <span className="text-sm font-normal text-ink-soft">(optional)</span>
+          {/* One line, so the box lines up with the email box beside it. */}
+          <span>
+            Your name <span className="text-sm font-normal text-ink-soft">(optional)</span>
+          </span>
           <input className={field} name="name" autoComplete="name" maxLength={CONTACT_LIMITS.name} value={form.name} onChange={set("name")} />
         </label>
         <label className="flex flex-col gap-1 font-semibold">
