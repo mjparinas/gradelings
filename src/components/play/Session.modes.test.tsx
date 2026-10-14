@@ -239,11 +239,12 @@ describe("Speed Run", () => {
 
 describe("Session extras", () => {
   it("shows a running clock when the parent chose to show all timers", () => {
-    // Fake timers, so a slow machine can't tick the clock to 0:01 before the check.
-    vi.useFakeTimers();
+    vi.useFakeTimers(); // a slow runner can tick past 0:00 before the assertion
     h.settings = { showTimer: true };
     start();
     expect(screen.getByLabelText("time")).toHaveTextContent("⏱ 0:00");
+    act(() => void vi.advanceTimersByTime(1_000));
+    expect(screen.getByLabelText("time")).toHaveTextContent("⏱ 0:01");
   });
 
   it("reads questions and the feedback bar aloud when read-aloud is on", () => {
