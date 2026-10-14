@@ -1,7 +1,11 @@
+import { APP_NAME } from "@/lib/brand";
+
 // Quotes from parents for the home page. Only real quotes, given with permission, may be marked
-// `sample: false`. The sample quotes below are made up to show the layout: they appear in development
+// `sample: false`. A made-up quote must be marked `sample: true`: it then appears only in development
 // and on preview deploys, never on the live site (`visibleQuotes`), because a made-up review shown as a
-// real parent breaks Canada's Competition Act rules on testimonials. Replace them with real ones.
+// real parent breaks Canada's Competition Act rules on testimonials. A parent with a tie to the company
+// (staff, founder, family) is marked `connected` and says so in `about`, as the Competition Act and the
+// FTC's endorsement rules require.
 
 export interface ParentQuote {
   quote: string;
@@ -10,32 +14,24 @@ export interface ParentQuote {
   /** Such as "Parent of a Grade 3 child, Ontario". */
   about: string;
   sample: boolean;
+  /** The parent works for or is family of the company; `about` must say so. */
+  connected?: boolean;
 }
 
 export const PARENT_QUOTES: ParentQuote[] = [
   {
-    quote: "The report card finally makes sense. I can see which units she's still growing in and what to practise before the next conference.",
-    name: "Priya S.",
-    about: "Parent of a Grade 3 child, Ontario",
-    sample: true,
+    quote: "My son has ADHD, and this keeps his attention. It plays like a game, so he has fun while he learns. I think it's great.",
+    name: "Melvin P.",
+    about: `${APP_NAME} founder, parent of a Grade 2 child`,
+    sample: false,
+    connected: true,
   },
   {
-    quote: "He asks to do his fifteen minutes so he can earn game time. The wrong-answer hints are gentle, so there are no tears.",
-    name: "Daniel M.",
-    about: "Parent of a Grade 1 child, British Columbia",
-    sample: true,
-  },
-  {
-    quote: "Two kids in two grades on one plan, and it works offline in the car. That sold me.",
-    name: "Aisha K.",
-    about: "Parent of children in Grades 2 and 5, Alberta",
-    sample: true,
-  },
-  {
-    quote: "The calm mode turned off the timers and the noise. My son can just focus on the math.",
-    name: "Marie-Claire T.",
-    about: "Parent of a Grade 4 child, Nova Scotia",
-    sample: true,
+    quote: "My son is in Kindergarten, and I'm impressed by how quickly he's picking things up and how well he's doing.",
+    name: "Marufa",
+    about: `Parent of a Kindergarten child, family of the ${APP_NAME} founder`,
+    sample: false,
+    connected: true,
   },
 ];
 
