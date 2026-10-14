@@ -31,7 +31,7 @@ export function subjectTitle(subject: SubjectId, grade: GradeId): string {
 
 /** Subject name as parents search for it, whatever the kids see. */
 export function subjectSeoTitle(subject: SubjectId): string {
-  return { math: "Math", language: "English Language Arts", science: "Science", social: "Social Studies", immersion: "French Immersion", "core-french": "Core French" }[subject];
+  return getSubjectMeta(subject).seoTitle;
 }
 
 export const curriculumPath = {

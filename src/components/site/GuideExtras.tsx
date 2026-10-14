@@ -5,7 +5,7 @@ import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/components/site/js
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { curriculumPath, resolve, gradeLabel, say } from "@/components/site/curriculum";
 import { guidePath } from "@/components/site/guides";
-import { guidesFor } from "@/content/guides";
+import { GUIDE_FRAMEWORKS, guidesFor } from "@/content/guides";
 import { APP_NAME } from "@/lib/brand";
 import { Disclosure } from "@/components/Disclosure";
 import { guidesUpdated } from "@/content/updated";
@@ -13,13 +13,29 @@ import { JsonLd } from "@/lib/site";
 import { pageMeta } from "@/lib/pageMeta";
 
 // The two province-specific guide pages (competencies/learning skills and the provincial
-// assessment). Each province serves them at its own URL (see guidePath), so the route files
-// are thin wrappers around these.
+// assessment). Each province serves them at its own slug, taken from its guide copy (see guidePath):
+// /guides/bc/fsa/, /guides/ontario/eqao/. Next.js allows one dynamic segment per level, so they share
+// the [grade] route, which hands these slugs to the views below. A new slug needs no route folder.
 
 type Params = Promise<{ framework: string }>;
 
+export type GuidePageKind = "competencies" | "assessment";
+
+/** Which of the two pages a framework serves at this slug, or undefined when the slug is something else (a grade). */
+export function guidePageKind(frameworkSlug: string, slug: string): GuidePageKind | undefined {
+  const f = GUIDE_FRAMEWORKS.find((x) => x.slug === frameworkSlug);
+  if (!f) return undefined;
+  const g = guidesFor(f.id);
+  return g.competencies.slug === slug ? "competencies" : g.assessment.slug === slug ? "assessment" : undefined;
+}
+
+/** Every framework's competencies and assessment slug, as [grade] route params. */
+export function guidePageParams(): { framework: string; grade: string }[] {
+  return GUIDE_FRAMEWORKS.flatMap((f) => [guidesFor(f.id).competencies.slug, guidesFor(f.id).assessment.slug].map((grade) => ({ framework: f.slug, grade })));
+}
+
 export async function competenciesMetadata(params: Params): Promise<Metadata> {
-  const r = resolve(await params);
+  const r = resolve({ framework: (await params).framework });
   if (!r) return {};
   const g = guidesFor(r.framework.id).competencies;
   return pageMeta({
@@ -33,7 +49,7 @@ export async function competenciesMetadata(params: Params): Promise<Metadata> {
 }
 
 export async function CompetenciesView({ params }: { params: Params }) {
-  const r = resolve(await params);
+  const r = resolve({ framework: (await params).framework });
   if (!r) notFound();
   const f = r.framework;
   const g = guidesFor(f.id).competencies;
@@ -101,7 +117,7 @@ export async function CompetenciesView({ params }: { params: Params }) {
 }
 
 export async function assessmentMetadata(params: Params): Promise<Metadata> {
-  const r = resolve(await params);
+  const r = resolve({ framework: (await params).framework });
   if (!r) return {};
   const a = guidesFor(r.framework.id).assessment;
   return pageMeta({
@@ -118,7 +134,7 @@ export async function assessmentMetadata(params: Params): Promise<Metadata> {
 }
 
 export async function AssessmentView({ params }: { params: Params }) {
-  const r = resolve(await params);
+  const r = resolve({ framework: (await params).framework });
   if (!r) notFound();
   const f = r.framework;
   const guides = guidesFor(f.id);

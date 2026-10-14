@@ -1,4 +1,4 @@
-import { getSubjectMeta, isCoreSubject } from "@/content/subjects";
+import { getSubjectMeta, isCoreSubject, subjectsIn } from "@/content/subjects";
 import { allUnitRefs } from "@/content";
 import type { FrameworkId, GradeId, SubjectId } from "@/content/types";
 import type { Derived } from "./derive";
@@ -134,12 +134,13 @@ const LEGACY_TIERS: Record<string, Tier> = {
 };
 
 // French (opt-in subjects). Kept in their own list so they are easy to maintain separately.
-const frenchAnswers = (d: Derived) => (d.subjects.immersion?.answers ?? 0) + (d.subjects["core-french"]?.answers ?? 0);
-const frenchCorrect = (d: Derived) => (d.subjects.immersion?.correct ?? 0) + (d.subjects["core-french"]?.correct ?? 0);
-const frenchUnits = (d: Derived, grade: GradeId, framework: FrameworkId, min: number) =>
-  unitsAtLevel(d, grade, framework, min, "immersion") + unitsAtLevel(d, grade, framework, min, "core-french");
+const FRENCH = subjectsIn("fr");
+const sum = (f: (s: SubjectId) => number) => FRENCH.reduce((n, s) => n + f(s), 0);
+const frenchAnswers = (d: Derived) => sum((s) => d.subjects[s]?.answers ?? 0);
+const frenchCorrect = (d: Derived) => sum((s) => d.subjects[s]?.correct ?? 0);
+const frenchUnits = (d: Derived, grade: GradeId, framework: FrameworkId, min: number) => sum((s) => unitsAtLevel(d, grade, framework, min, s));
 
-const hasFrench = (ctx: TrophyContext) => unitsInGrade(ctx.grade, ctx.framework, "immersion") + unitsInGrade(ctx.grade, ctx.framework, "core-french") > 0;
+const hasFrench = (ctx: TrophyContext) => sum((s) => unitsInGrade(ctx.grade, ctx.framework, s)) > 0;
 
 const FRENCH_TROPHIES: Trophy[] = ([
   { id: "bridge-300", name: "Bridge Builder", description: "Score 300 in Word Bridge.", tier: "silver", icon: "🌉", category: "French", progress: count(300, (d) => d.gameBest.bridge ?? 0) },

@@ -1,51 +1,55 @@
-import type { Metadata } from "next";
 import { describe, expect, it } from "vitest";
-import { AssessmentView, CompetenciesView } from "@/components/site/GuideExtras";
+import { AssessmentView, CompetenciesView, guidePageKind } from "@/components/site/GuideExtras";
+import { gradesWithContent } from "@/components/site/curriculum";
 import { GUIDE_FRAMEWORKS, guidesFor } from "@/content/guides";
+import { gradeSlug } from "@/content/subjects";
+import Image from "./[grade]/opengraph-image";
+import GradeGuide, { generateMetadata, generateStaticParams } from "./[grade]/page";
 
 // Each province serves its competencies and assessment guides at its own slug (core-competencies, learning-skills,
-// fsa, eqao, pat, ...). Every slug is a thin route folder here; these checks keep the folders and the guide copy in step.
+// fsa, eqao, pat, ...), taken from its guide copy. They share the [grade] route, so a new slug needs no route folder;
+// these checks keep the route and the guide copy in step.
 
-interface GuideRoute {
-  generateStaticParams: () => { framework: string }[];
-  generateMetadata: (p: { params: Promise<{ framework: string }> }) => Promise<Metadata>;
-  default: (p: { params: Promise<{ framework: string }> }) => { type: unknown; props: { params: Promise<{ framework: string }> } };
-}
+const params = (framework: string, grade: string) => Promise.resolve({ framework, grade });
 
-const routes = Object.fromEntries(
-  Object.entries(import.meta.glob<GuideRoute>("./*/page.tsx", { eager: true }))
-    .map(([path, mod]) => [path.split("/")[1], mod] as const)
-    .filter(([slug]) => slug !== "french" && !slug.startsWith("[")),
-);
+describe("competencies and assessment guide pages", () => {
+  const built = generateStaticParams();
 
-const kindOf = (id: (typeof GUIDE_FRAMEWORKS)[number]["id"], slug: string) =>
-  guidesFor(id).competencies.slug === slug ? "competencies" : guidesFor(id).assessment.slug === slug ? "assessment" : undefined;
+  it.each(GUIDE_FRAMEWORKS.map((f) => [f.slug, f] as const))("%s: builds both pages, at slugs no grade uses", (_, f) => {
+    const g = guidesFor(f.id);
+    const grades = gradesWithContent(f).map(gradeSlug);
+    for (const slug of [g.competencies.slug, g.assessment.slug]) {
+      expect(grades, `${f.id} ${slug}`).not.toContain(slug);
+      expect(built).toContainEqual({ framework: f.slug, grade: slug });
+    }
+    expect(g.competencies.slug).not.toBe(g.assessment.slug);
+  });
 
-describe("competencies and assessment guide routes", () => {
-  it("has a route folder for every slug a province's guides use", () => {
-    for (const f of GUIDE_FRAMEWORKS) {
-      const g = guidesFor(f.id);
-      expect(routes[g.competencies.slug], `${f.id} competencies`).toBeDefined();
-      expect(routes[g.assessment.slug], `${f.id} assessment`).toBeDefined();
+  it("builds a slug only for the frameworks whose guides use it", () => {
+    for (const p of built) {
+      const f = GUIDE_FRAMEWORKS.find((x) => x.slug === p.framework)!;
+      const isGrade = gradesWithContent(f).map(gradeSlug).includes(p.grade);
+      expect(isGrade || guidePageKind(p.framework, p.grade) !== undefined, `${p.framework}/${p.grade}`).toBe(true);
+    }
+    expect(guidePageKind("bc", "eqao")).toBeUndefined();
+    expect(guidePageKind("ontario", "eqao")).toBe("assessment");
+    expect(guidePageKind("nowhere", "eqao")).toBeUndefined();
+  });
+
+  it.each(GUIDE_FRAMEWORKS.map((f) => [f.slug, f] as const))("%s: renders the right guide with a canonical at its own URL", async (slug, f) => {
+    const g = guidesFor(f.id);
+    for (const [page, view] of [
+      [g.competencies.slug, CompetenciesView],
+      [g.assessment.slug, AssessmentView],
+    ] as const) {
+      const el = (await GradeGuide({ params: params(slug, page) } as never)) as { type: unknown };
+      expect(el.type).toBe(view);
+      expect((await generateMetadata({ params: params(slug, page) } as never)).alternates?.canonical).toBe(`/guides/${slug}/${page}/`);
     }
   });
 
-  it.each(Object.keys(routes))("/guides/[framework]/%s/ is built only for the provinces that use that slug", (slug) => {
-    const route = routes[slug];
-    const expected = GUIDE_FRAMEWORKS.filter((f) => kindOf(f.id, slug)).map((f) => ({ framework: f.slug }));
-    expect(expected.length, "no province uses this folder").toBeGreaterThan(0);
-    expect(route.generateStaticParams()).toEqual(expected);
-  });
-
-  it.each(Object.keys(routes))("/guides/[framework]/%s/ renders the right guide with a canonical at its own URL", async (slug) => {
-    const route = routes[slug];
-    for (const { framework } of route.generateStaticParams()) {
-      const f = GUIDE_FRAMEWORKS.find((x) => x.slug === framework)!;
-      const params = Promise.resolve({ framework });
-      const page = route.default({ params });
-      expect(page.type).toBe(kindOf(f.id, slug) === "competencies" ? CompetenciesView : AssessmentView);
-      expect(await page.props.params).toEqual({ framework });
-      expect((await route.generateMetadata({ params })).alternates?.canonical).toBe(`/guides/${framework}/${slug}/`);
-    }
+  it("gives the two pages the framework's share card", async () => {
+    const f = GUIDE_FRAMEWORKS[0];
+    await expect(Image({ params: params(f.slug, guidesFor(f.id).assessment.slug) })).resolves.toBeInstanceOf(Response);
   });
 });

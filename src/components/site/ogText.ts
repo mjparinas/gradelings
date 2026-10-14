@@ -3,7 +3,7 @@ import type { Framework } from "@/content/frameworks";
 import { localeOf } from "@/content/locale";
 import { APP_NAME } from "@/lib/brand";
 import { LEVEL_WORDS, countTitle } from "@/lib/milestoneShare";
-import { getSubjectMeta } from "@/content/subjects";
+import { getSubjectMeta, LANGUAGE_NAME, languagesOf } from "@/content/subjects";
 import type { GradeId } from "@/content/types";
 import { hashSeed, withSeed } from "@/content/random";
 import type { Question } from "@/content/types";
@@ -29,7 +29,7 @@ export function curriculumCard(params: Params): OgCardText | undefined {
   const r = resolve(params);
   if (!r) return undefined;
   const { framework: f } = r;
-  if (!params.grade) return { kicker: `${f.name} curriculum`, title: `${gradeSpan(f, true)} practice`, line: `Math · Language Arts · Science · Social Studies${f.subjects.some((s) => s === "immersion" || s === "core-french") ? " · French" : ""}` };
+  if (!params.grade) return { kicker: `${f.name} curriculum`, title: `${gradeSpan(f, true)} practice`, line: ["Math · Language Arts · Science · Social Studies", ...languagesOf(f.subjects).map((l) => LANGUAGE_NAME[l])].join(" · ") };
   const grade = r.grade;
   if (!r.course) {
     return { kicker: `${f.name} curriculum`, title: `${gradeLabel(f, grade)} practice`, line: subjectsLine(coursesFor(f, grade).map((c) => c.subject)) };

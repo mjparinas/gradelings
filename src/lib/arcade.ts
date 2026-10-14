@@ -1,4 +1,5 @@
 import { getFramework } from "@/content/frameworks";
+import { languagesOf } from "@/content/subjects";
 import type { GradeId, SubjectId } from "@/content/types";
 
 // The arcade's games: what each one is, which grades it fits and the level that unlocks it.
@@ -49,7 +50,7 @@ export interface ArcadeContext {
   framework?: string;
 }
 
-export const hasFrenchOn = (subjects: readonly SubjectId[] = []) => subjects.includes("immersion") || subjects.includes("core-french");
+export const hasFrenchOn = (subjects: readonly SubjectId[] = []) => languagesOf(subjects).includes("fr");
 
 /** Whether a game has content for this child (grade, and French turned on for French games). */
 export function gameFits(game: GameInfo, ctx: ArcadeContext): boolean {
