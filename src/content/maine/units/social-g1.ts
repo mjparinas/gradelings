@@ -1,0 +1,91 @@
+import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
+
+// Maine Grade 1 social studies: the state's symbols, leaders and celebrations (Civics & Government 1), and the
+// traditions of the Wabanaki Nations and other families in Maine (Civics & Government 3, History 3). Short prompts and
+// at most four choices, for little readers. Wabanaki content is light, in the present tense, about living communities,
+// with nothing sacred or ceremonial.
+
+const SYMBOLS: Q[] = [
+  ["What is the capital city of Maine?", "Augusta", ["Portland", "Bangor"], "Maine's leaders meet in Augusta."],
+  ["Who leads the state of Maine?", "the Governor", ["the mayor", "the principal"], "The Governor is Maine's leader."],
+  ["Maine's nickname is the… State.", "Pine Tree", ["Sunshine", "Lone Star"], "Tall pine trees grow all over Maine."],
+  ["What is Maine's state tree?", "the white pine", ["the palm tree", "the cactus"], "It is a tall pine tree."],
+  ["What is Maine's state bird?", "the chickadee", ["the flamingo", "the parrot"], "It is a small black and white bird."],
+  ["Which big animal is Maine's state animal?", "the moose", ["the lion", "the camel"], "It has big antlers and long legs."],
+  ["Which berry is Maine's state berry?", "the wild blueberry", ["the banana", "the coconut"], "It is small, round and blue."],
+  ["Maine's state cat is the Maine…", "coon cat", ["tiger", "lion"], "It is a big, fluffy pet cat."],
+  ["Which insect is Maine's state insect?", "the honeybee", ["the ant", "the mosquito"], "It makes honey."],
+  ["Maine's motto is Dirigo. It means…", "I lead", ["I sleep", "I eat"], "Dirigo is a Latin word."],
+  ["Maine's state flower is the white pine…", "cone and tassel", ["rose", "tulip"], "It grows on the state tree."],
+  ["Where do Maine's lawmakers meet?", "the State House", ["the post office", "the library"], "The State House is in Augusta."],
+  ["Maine's lawmakers make…", "laws for the state", ["school lunches", "the weather"], "They decide on rules for all of Maine."],
+  ["How do people in Maine choose the Governor?", "they vote", ["they draw names", "they race"], "Grown-ups vote in an election."],
+  ["Maine became a state in…", "1820", ["1492", "2020"], "That is more than 200 years ago."],
+  ["Which ocean is next to Maine?", "the Atlantic Ocean", ["the Pacific Ocean", "the Indian Ocean"], "Maine's coast is on the east side of the country."],
+  ["What is the tallest mountain in Maine?", "Katahdin", ["Mount Everest", "Pikes Peak"], "Katahdin is in northern Maine."],
+  ["What stands on rocky points to guide ships?", "a lighthouse", ["a barn", "a bridge"], "Maine has many lighthouses on its coast."],
+  ["Which sea animal is caught in traps off Maine?", "lobster", ["whale", "shark"], "Lobster boats set traps in the ocean."],
+  ["The map of Maine shows our…", "state", ["school", "house"], "Maine is one of the 50 states."],
+  ["Maine is part of which country?", "the United States", ["Mexico", "Brazil"], "Maine is one of 50 states."],
+  ["A symbol is…", "a picture or thing that stands for an idea", ["a kind of food", "a song you hum"], "The moose stands for Maine."],
+  ["Every March 15, Maine remembers…", "the day it became a state", ["the first snow", "the last day of school"], "Maine became a state on March 15, 1820."],
+  ["What does the Governor sign to make a law?", "a bill", ["a birthday card", "a menu"], "A bill becomes a law."],
+  ["Which of these is a Maine state symbol?", "the moose", ["the bald eagle", "the dollar"], "The bald eagle is a symbol of the whole country."],
+  ["Which of these is a symbol of the whole country?", "the American flag", ["the chickadee", "the white pine"], "The chickadee and white pine stand for Maine."],
+  ["Who works for the town and helps make local rules?", "the select board", ["the lunch crew", "the bus driver"], "Many Maine towns have a select board.", true],
+  ["Lots of Maine towns have a town meeting. What is it?", "a meeting where people vote on town plans", ["a party for birthdays", "a race"], "Neighbors meet and vote on what the town needs.", true],
+  ["The State House in Augusta has a big…", "dome", ["slide", "pool"], "Its round top can be seen from far away.", true],
+  ["Why do we have state laws?", "to keep people safe and treat them fairly", ["so nobody can play", "to make rain"], "Laws help everyone get along.", true],
+];
+
+const WABANAKI: Q[] = [
+  ["The Wabanaki are Native nations who live in…", "Maine", ["Hawaii", "Texas"], "Wabanaki communities are in Maine today."],
+  ["Wabanaki means People of the…", "Dawnland", ["Desert", "Jungle"], "The sun rises first in the east, the dawn land."],
+  ["How long have Wabanaki people lived in Maine?", "for thousands of years", ["for one year", "for ten days"], "Their families have lived here a very long time."],
+  ["Which of these is a Wabanaki Nation in Maine?", "the Penobscot Nation", ["the Navy", "the Red Cross"], "The Penobscot Nation has a home on Indian Island."],
+  ["Which of these is a Wabanaki Nation in Maine?", "the Passamaquoddy Tribe", ["the Boy Scouts", "the city council"], "Passamaquoddy communities are near the coast."],
+  ["Which of these is a Wabanaki Nation in Maine?", "the Mi'kmaq Nation", ["the town library", "the fire department"], "The Mi'kmaq Nation is in northern Maine."],
+  ["Which of these is a Wabanaki Nation in Maine?", "the Houlton Band of Maliseet Indians", ["the school band", "the city band"], "The Maliseet community is near Houlton."],
+  ["Many Wabanaki artists make baskets from…", "brown ash and sweetgrass", ["plastic and glass", "steel and stone"], "They use wood strips and a sweet-smelling grass."],
+  ["Sweetgrass smells…", "sweet", ["like smoke", "like fish"], "That is how it got its name."],
+  ["Wabanaki people made canoes from…", "birch bark", ["metal", "ice"], "Birch trees have white, papery bark."],
+  ["The Penobscot River is named for…", "the Penobscot Nation", ["a king", "a ship"], "Many Maine places have Wabanaki names."],
+  ["Wabanaki families pass down stories by…", "telling them to children", ["mailing them away", "hiding them"], "Grown-ups share stories with young people."],
+  ["Wabanaki Nations today have their own…", "leaders", ["planets", "oceans"], "Each nation chooses its own leaders."],
+  ["Many Wabanaki children learn their own…", "language", ["planet", "ocean"], "Some families speak Passamaquoddy or Penobscot."],
+  ["A tradition is…", "something a family or group does again and again", ["a kind of car", "a new toy"], "Like a special meal on a holiday."],
+  ["People sell Wabanaki baskets at…", "markets and festivals", ["gas stations", "car washes"], "Basket makers share their work with visitors."],
+  ["Which food grows wild in Maine and is picked in summer?", "blueberries", ["bananas", "pineapples"], "Wabanaki families have picked them for a long time."],
+  ["Which tree's sap is boiled to make maple syrup?", "the maple tree", ["the pine tree", "the palm tree"], "People tap maple trees in late winter."],
+  ["Many families in Maine have traditions from…", "places all over the world", ["only one town", "the moon"], "People in Maine come from many places."],
+  ["Some Maine families speak French at home. Their families are…", "Franco-American", ["from Mars", "from the sea"], "Many Franco-American families live in Maine."],
+  ["Every family has its own…", "traditions", ["ocean", "planet"], "Traditions can be foods, songs or games."],
+  ["How can we learn about a friend's traditions?", "ask them and listen", ["laugh at them", "ignore them"], "Asking kindly shows respect."],
+  ["Which is a good way to share your tradition?", "tell a story about it", ["keep it a secret forever", "shout over others"], "Sharing helps friends learn."],
+  ["Traditions can be the same or different from family to family.", "both are true", ["they are always the same", "they are always different"], "Some things we share, some are just ours."],
+  ["Wabanaki Nations hold gatherings with music, dancing and food. These are…", "celebrations", ["tests", "chores"], "Families and visitors come together.", true],
+  ["Wabanaki people are part of Maine…", "today and long ago", ["only long ago", "only in stories"], "Wabanaki communities are living communities.", true],
+  ["Indian Island in the Penobscot River is home to the…", "Penobscot Nation", ["Maine Governor", "Navy"], "It is near the city of Old Town.", true],
+];
+
+export const SOCIAL_1: Unit[] = [
+  bankUnit({
+    id: "me-g1-maine-symbols",
+    title: "Maine's Symbols & Leaders",
+    emoji: "🦌",
+    blurb: "The moose, the chickadee and our capital",
+    parentNote: "Maine's state symbols (the white pine, the chickadee, the moose, the motto Dirigo), its capital Augusta, the Governor and the State House, and how people choose leaders and make laws.",
+    standards: ["Civics & Government 1; Civics & Government 2", "the symbols, celebrations and leaders of Maine's state government, and why the state has laws"],
+    items: SYMBOLS,
+  }),
+  bankUnit({
+    id: "me-g1-wabanaki-traditions",
+    title: "Wabanaki & Family Traditions",
+    emoji: "🧺",
+    blurb: "The People of the Dawnland and traditions we share",
+    parentNote: "The Wabanaki Nations of Maine today (Penobscot, Passamaquoddy, Maliseet and Mi'kmaq), traditions such as basket making and canoes, and how families in Maine share common and different traditions. Light, in the present tense, with nothing sacred or ceremonial.",
+    standards: ["Civics & Government 3; History 3", "the traditions and customs of Maine Native Americans, and traditions shared by families from many places"],
+    items: WABANAKI,
+  }),
+];
