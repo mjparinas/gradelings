@@ -10,7 +10,7 @@ vi.mock("@/lib/classroom", async (importOriginal) => {
   return { ...actual, call: mocks.call };
 });
 
-import { sinceText, System } from "./System";
+import { AUTO_REFRESH_KEY, AUTO_REFRESH_MS, sinceText, System } from "./System";
 
 const now = Date.now();
 const report = (over: Partial<SystemReport> = {}): SystemReport => ({
@@ -33,7 +33,13 @@ const report = (over: Partial<SystemReport> = {}): SystemReport => ({
 
 beforeEach(() => {
   mocks.call.mockReset();
+  localStorage.clear();
 });
+
+function setHidden(hidden: boolean) {
+  Object.defineProperty(document, "visibilityState", { configurable: true, get: () => (hidden ? "hidden" : "visible") });
+  document.dispatchEvent(new Event("visibilitychange"));
+}
 
 /** Answers each card's request from a report; checks the report leaves out come back "off". */
 function serve(r: SystemReport, opts: { hold?: string[] } = {}) {
@@ -112,6 +118,61 @@ describe("System", () => {
     expect(await screen.findByRole("alert")).toHaveTextContent("Not found");
     const db = screen.getByRole("heading", { name: "Database" }).closest("li")!;
     expect(within(db).getByText("Couldn't load this check: Not found")).toBeInTheDocument();
+  });
+
+  it("auto refreshes every few minutes once switched on, quietly and without skipping the server cache", async () => {
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+    try {
+      serve(report());
+      const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
+      render(<System />);
+      expect(await screen.findByText("Worth a look: Errors (Sentry).")).toBeInTheDocument();
+      const round = CHECKS.length + STATUS_PAGES.length;
+      expect(mocks.call).toHaveBeenCalledTimes(round);
+      // Off by default: nothing more is asked for.
+      await act(async () => vi.advanceTimersByTime(AUTO_REFRESH_MS * 2));
+      expect(mocks.call).toHaveBeenCalledTimes(round);
+
+      const toggle = screen.getByRole("switch", { name: /Auto refresh/ });
+      expect(toggle).not.toBeChecked();
+      await user.click(toggle);
+      expect(toggle).toBeChecked();
+      expect(localStorage.getItem(AUTO_REFRESH_KEY)).toBe("on");
+      // The first page load was long enough ago, so a round is due straight away.
+      await act(async () => vi.advanceTimersByTime(0));
+      expect(mocks.call).toHaveBeenCalledTimes(round * 2);
+      // Cards keep their answers while a round runs.
+      expect(screen.getByText("Turso answered in 40 ms.")).toBeInTheDocument();
+      expect(mocks.call.mock.calls.every(([u]) => !String(u).includes("refresh=1"))).toBe(true);
+
+      await act(async () => vi.advanceTimersByTime(AUTO_REFRESH_MS - 1000));
+      expect(mocks.call).toHaveBeenCalledTimes(round * 2);
+      await act(async () => vi.advanceTimersByTime(1000));
+      expect(mocks.call).toHaveBeenCalledTimes(round * 3);
+
+      // A hidden tab asks for nothing, then catches up when it comes back.
+      act(() => setHidden(true));
+      await act(async () => vi.advanceTimersByTime(AUTO_REFRESH_MS * 3));
+      expect(mocks.call).toHaveBeenCalledTimes(round * 3);
+      act(() => setHidden(false));
+      expect(mocks.call).toHaveBeenCalledTimes(round * 4);
+
+      await user.click(toggle);
+      expect(localStorage.getItem(AUTO_REFRESH_KEY)).toBe("off");
+      await act(async () => vi.advanceTimersByTime(AUTO_REFRESH_MS * 2));
+      expect(mocks.call).toHaveBeenCalledTimes(round * 4);
+    } finally {
+      setHidden(false);
+      vi.useRealTimers();
+    }
+  });
+
+  it("remembers auto refresh in this browser", async () => {
+    localStorage.setItem(AUTO_REFRESH_KEY, "on");
+    serve(report());
+    render(<System />);
+    expect(await screen.findByRole("switch", { name: /Auto refresh/ })).toBeChecked();
+    expect(screen.getByText("every 5 min")).toBeInTheDocument();
   });
 
   it("writes times plainly", () => {
