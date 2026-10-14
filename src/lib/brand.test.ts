@@ -24,8 +24,9 @@ describe("social accounts", () => {
 });
 
 describe("listed profiles", () => {
-  it("include the Instagram account, so the to-do asks only for the rest", () => {
+  it("include the Instagram and Pinterest accounts, so the to-do asks only for the rest", () => {
     expect(SOCIAL_PROFILES).toContain("https://www.instagram.com/gradelings_com/");
-    expect(missingSocialPlatforms()).not.toContain("Instagram");
+    expect(SOCIAL_PROFILES).toContain("https://www.pinterest.com/gradelings");
+    expect(missingSocialPlatforms()).toEqual(["YouTube", "Facebook"]);
   });
 });
