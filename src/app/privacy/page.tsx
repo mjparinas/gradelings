@@ -57,7 +57,7 @@ export default function PrivacyPage() {
           <strong>If you report a problem with a question:</strong> we keep the question, the reason you picked from a fixed list and the date, linked to your family so we can follow up.
         </p>
         <p>
-          <strong>If you write to us through the contact page:</strong> your name if you give it, your email address, the topic you pick and your message. They are emailed to our inbox through Resend so we can reply; we don’t copy them into our database.
+          <strong>If you write to us through the contact page:</strong> your name if you give it, your email address, the topic you pick and your message. They are emailed to our inbox through Resend so we can reply; we don’t copy them into our database. The same goes for anything you email us directly. To answer faster, we may send your message to Anthropic so its AI model, Claude, can suggest a first draft of our reply; a person reads and edits every reply before it is sent, and nothing is answered automatically.
         </p>
         <p>
           <strong>On your device:</strong> the app saves progress on the device first, so it works offline, using the browser’s local storage and IndexedDB. Your Parent area PIN is stored there too, salted and hashed, and your read-aloud voice choice is kept per device. If you never sign in, this information stays on that device and is not sent to us.
@@ -115,6 +115,9 @@ export default function PrivacyPage() {
             <strong>Resend</strong>, to deliver the emails we send you (such as email confirmation, password resets and the weekly report). It receives your email address and the message, which can include a child’s first name and practice totals. It also records when an email is opened and which links are clicked, along with the time, the device’s IP address and the email app or browser used.
           </li>
           <li>
+            <strong>Anthropic</strong>, to suggest a first draft when we answer a message you sent us. It receives that message, your name and email address as written in it, and nothing else about your account or your children. Under Anthropic’s commercial terms it doesn’t use it to train its models.
+          </li>
+          <li>
             <strong>Sentry</strong>, to tell us when the app crashes. Error reports are stripped of names, email addresses, cookies and what was typed or tapped before they leave your device or our server, and are not used for anything else.
           </li>
           <li>
@@ -124,7 +127,7 @@ export default function PrivacyPage() {
             <strong>Cloudflare Web Analytics</strong>, which runs our domain and counts visits to our website, such as which pages are visited, from which country and which site sent the visitor. It sets no cookies.
           </li>
           <li>
-            <strong>Our hosting and database providers</strong>, which store the account and progress data described above on our behalf. Our servers are in Montréal, Canada, and our database is in Virginia, United States. Some other service providers above, such as Stripe, Resend, Sentry and Cloudflare, may also process limited information outside Canada.
+            <strong>Our hosting and database providers</strong>, which store the account and progress data described above on our behalf. Our servers are in Montréal, Canada, and our database is in Virginia, United States. Some other service providers above, such as Stripe, Resend, Anthropic, Sentry and Cloudflare, may also process limited information outside Canada.
           </li>
         </ul>
         <p>

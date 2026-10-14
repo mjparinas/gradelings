@@ -184,6 +184,27 @@ describe("Inbox", () => {
     expect(sent("/api/admin/inbox/")).toEqual({ id: "m1", action: "handled", handled: true });
   });
 
+  it("offers Draft with AI only when it's set up, and puts the draft in the reply box", async () => {
+    respond((url, method) => {
+      if (url === "/api/admin/inbox/?id=m1") return { message: { ...item, text: "How do I add a child?", replyTo: "lee@example.com", attachmentNames: [] }, canDraft: true };
+      if (url === "/api/admin/inbox/" && method === "POST") return { draft: "Hi Lee,\n\nOpen Children." };
+      return undefined;
+    });
+    const user = userEvent.setup();
+    render(<Inbox initialId="m1" onOpenFamily={vi.fn()} />);
+    await user.click(await screen.findByRole("button", { name: "Draft with AI" }));
+    expect(sent("/api/admin/inbox/")).toEqual({ id: "m1", action: "draft" });
+    expect(await screen.findByText(/Draft added/)).toBeInTheDocument();
+    expect(screen.getByLabelText("Your reply")).toHaveValue("Hi Lee,\n\nOpen Children.");
+  });
+
+  it("hides Draft with AI without a key", async () => {
+    respond((url) => (url === "/api/admin/inbox/?id=m1" ? { message: { ...item, text: "Hello", replyTo: "lee@example.com", attachmentNames: [] } } : undefined));
+    render(<Inbox initialId="m1" onOpenFamily={vi.fn()} />);
+    expect(await screen.findByRole("button", { name: "Send reply" })).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Draft with AI" })).not.toBeInTheDocument();
+  });
+
   it("opens straight to a message, and explains when email isn't set up", async () => {
     respond((url) => (url === "/api/admin/inbox/?id=m1" ? { message: { ...item, text: "Hello", replyTo: "lee@example.com", attachmentNames: [] } } : { configured: false, items: [], hasMore: false }));
     const user = userEvent.setup();

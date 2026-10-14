@@ -142,6 +142,7 @@ export const SETTINGS: { names: string[]; label: string; need: "required" | "rec
   { names: ["SENTRY_READ_TOKEN", "SENTRY_AUTH_TOKEN"], label: "Sentry read token", need: "optional", what: "Open errors on this page." },
   { names: ["VERCEL_TOKEN"], label: "Vercel read token", need: "optional", what: "Deploys on this page and visits on the Traffic tab." },
   { names: ["GOOGLE_SERVICE_ACCOUNT_KEY"], label: "Search Console key", need: "optional", what: "Google search clicks on the Traffic tab (with SEARCH_CONSOLE_SITE)." },
+  { names: ["ANTHROPIC_API_KEY"], label: "AI drafts key", need: "optional", what: "Draft with AI in the Inbox." },
   { names: ["GITHUB_TOKEN"], label: "GitHub read token", need: "optional", what: "Uptime and builds on this page." },
 ];
 

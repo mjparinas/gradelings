@@ -547,13 +547,31 @@ export function Inbox({ initialId = null, onOpenFamily }: { initialId?: string |
 function InboxRead({ id, onBack, onOpenFamily }: { id: string; onBack: () => void; onOpenFamily: (id: string) => void }) {
   const [replies] = useSavedReplies();
   const [m, setM] = useState<InboxMessage | null>(null);
+  const [canDraft, setCanDraft] = useState(false);
   const [err, setErr] = useState("");
   const [reply, setReply] = useState("");
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<{ err?: string; ok?: string }>({});
   const load = useCallback(() => {
-    call<{ message: InboxMessage }>(`/api/admin/inbox/?id=${encodeURIComponent(id)}`).then((r) => setM(r.message), (e: Error) => setErr(e.message));
+    call<{ message: InboxMessage; canDraft?: boolean }>(`/api/admin/inbox/?id=${encodeURIComponent(id)}`).then(
+      (r) => (setM(r.message), setCanDraft(Boolean(r.canDraft))),
+      (e: Error) => setErr(e.message),
+    );
   }, [id]);
+  // Claude writes a first draft into the reply box; nothing is sent until the admin presses Send reply.
+  const draft = async () => {
+    setBusy(true);
+    setMsg({});
+    try {
+      const r = await call<{ draft: string }>("/api/admin/inbox/", "POST", { id, action: "draft" });
+      setReply((cur) => (cur.trim() ? `${cur.trimEnd()}\n\n${r.draft}` : r.draft));
+      setMsg({ ok: "Draft added. Read it and change anything before sending." });
+    } catch (e) {
+      setMsg({ err: (e as Error).message });
+    } finally {
+      setBusy(false);
+    }
+  };
   useEffect(load, [load]);
   const post = async (body: Record<string, unknown>, ok: string) => {
     setBusy(true);
@@ -629,6 +647,11 @@ function InboxRead({ id, onBack, onOpenFamily }: { id: string; onBack: () => voi
               >
                 Send reply
               </button>
+              {canDraft && (
+                <button type="button" className={quiet} disabled={busy} onClick={() => void draft()}>
+                  Draft with AI
+                </button>
+              )}
               <button type="button" className={quiet} disabled={busy} onClick={() => void post({ action: "handled", handled: !m.handledAt }, m.handledAt ? "Moved back to waiting." : "Marked as done.")}>
                 {m.handledAt ? "Mark as waiting" : "Mark as done"}
               </button>
