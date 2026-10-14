@@ -239,6 +239,8 @@ describe("Speed Run", () => {
 
 describe("Session extras", () => {
   it("shows a running clock when the parent chose to show all timers", () => {
+    // Fake timers, so a slow machine can't tick the clock to 0:01 before the check.
+    vi.useFakeTimers();
     h.settings = { showTimer: true };
     start();
     expect(screen.getByLabelText("time")).toHaveTextContent("⏱ 0:00");
