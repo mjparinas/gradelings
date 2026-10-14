@@ -394,10 +394,10 @@ function Runner({ plan }: { plan: Plan }) {
         </button>
       </header>
 
-      <section ref={stage} key={index} className={`flex flex-1 flex-col gap-5 py-5 ${run === 11 ? "animate-flip" : ""}`}>
+      <section ref={stage} key={index} className={`flex flex-1 flex-col gap-5 py-5 short:gap-3 short:py-3 ${run === 11 ? "animate-flip" : ""}`}>
         <div className="flex animate-rise-in items-start gap-2 sm:gap-4">
-          <Critter id={guide && band !== "little" ? subjectGuide(guide, companion) : companion} mood={mood} size={band === "little" ? 110 : 88} className="sm:hidden" />
-          <Critter id={guide && band !== "little" ? subjectGuide(guide, companion) : companion} mood={mood} size={band === "little" ? 140 : 116} className="hidden sm:block" />
+          <Critter id={guide && band !== "little" ? subjectGuide(guide, companion) : companion} mood={mood} size={band === "little" ? 110 : 88} className="sm:hidden short:hidden" />
+          <Critter id={guide && band !== "little" ? subjectGuide(guide, companion) : companion} mood={mood} size={band === "little" ? 140 : 116} className="hidden sm:block short:hidden" />
           <SpeechBubble className="mt-2 flex-1">
             <p lang={q.lang} className={`font-read font-bold leading-snug ${band === "little" ? "text-3xl sm:text-4xl" : band === "big" ? "text-xl sm:text-2xl" : "text-2xl sm:text-3xl"}`}>
               {q.prompt}
