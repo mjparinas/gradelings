@@ -8,6 +8,8 @@ import type { FamilyInfo } from "./model";
 export const TRIAL_DAYS = 30;
 export const FREE_UNITS_PER_COURSE = 2;
 export const MAX_CHILDREN = 3;
+/** Any payment is refunded in full when the parent asks within this many days of it. */
+export const REFUND_DAYS = 14;
 
 /** Referrals: when a friend signs up with your code and confirms their email, you get a free month of this length. */
 export const REFERRAL_BONUS_DAYS = 30;

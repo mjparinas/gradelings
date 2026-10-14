@@ -58,7 +58,7 @@ describe("public pages", () => {
     });
   const appDir = join(__dirname, "../app");
   /** Pages that serve people who already have an account, or legal text. */
-  const NO_CTA = ["/contact/", "/help/", "/account/"];
+  const NO_CTA = ["/contact/", "/help/", "/account/", "/status/"];
 
   it("end with a call to action to try the app", () => {
     // Shared page bodies (the guide extras) render inside thin page.tsx wrappers.

@@ -34,3 +34,22 @@ describe("About and Contact links", () => {
     expect(screen.getByRole("link", { name: "Contact" })).toHaveAttribute("href", "/contact/");
   });
 });
+
+describe("SiteFooter", () => {
+  it("links each section's hub once instead of every region, plus status and the legal pages", () => {
+    render(<SiteFooter />);
+    for (const [name, href] of [
+      ["Curriculum", "/curriculum/"],
+      ["Report cards explained", "/report-cards/"],
+      ["Parent guides", "/guides/"],
+      ["Status", "/status/"],
+      ["Privacy policy", "/privacy/"],
+      ["Terms of use", "/terms/"],
+    ]) {
+      expect(screen.getByRole("link", { name })).toHaveAttribute("href", href);
+    }
+    const footer = screen.getByRole("contentinfo");
+    expect(footer.querySelectorAll("a").length).toBeLessThan(25);
+    expect(footer.querySelector('a[href^="/curriculum/bc"]')).toBeNull();
+  });
+});

@@ -1,7 +1,7 @@
 import { FRAMEWORKS } from "@/content/frameworks";
 import { listRegions } from "@/content/regions";
 import { APP_NAME } from "@/lib/brand";
-import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, TRIAL_DAYS } from "@/lib/plan";
+import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, REFUND_DAYS, TRIAL_DAYS } from "@/lib/plan";
 
 const US_STATES = FRAMEWORKS.filter((f) => f.country === "US");
 /** "Washington", or "Washington and Oregon": the US states offered, for answers that need a US sentence. */
@@ -157,7 +157,7 @@ export const HELP: HelpSection[] = [
       },
       {
         q: "Can I get a refund?",
-        a: "Payments already made are generally not refundable, except where the law says otherwise. If something went wrong with a charge, contact us and we’ll make it right where we reasonably can. The full wording is in the terms.",
+        a: `Yes. Ask within ${REFUND_DAYS} days of any payment, including a renewal, and we refund it in full, no reason needed. Your plan then ends and you go back to the free plan, with all progress kept. After ${REFUND_DAYS} days, if something went wrong with a charge, contact us and we’ll make it right where we reasonably can. The full wording is in the terms.`,
       },
       {
         q: "Does the plan cover all my children?",

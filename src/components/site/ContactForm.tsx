@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CONTACT_EMAIL } from "@/lib/brand";
+import { CONTACT_EMAIL, REPLY_TIME } from "@/lib/brand";
 import { CONTACT_LIMITS, CONTACT_TOPICS } from "@/lib/contact";
 
 const field = "min-h-12 w-full rounded-xl border-2 border-line bg-white px-3 py-2 font-read text-lg";
@@ -38,7 +38,7 @@ export function ContactForm() {
       <div className="card flex flex-col gap-3 p-6" role="status">
         <h2 className="text-2xl font-bold">Thanks, we’ve got your message</h2>
         <p className="font-read text-lg">
-          A person reads every message, and we’ll reply to <strong>{form.email}</strong> as soon as we can.
+          A person reads every message, and we’ll reply to <strong>{form.email}</strong> within {REPLY_TIME}.
         </p>
         <button
           type="button"

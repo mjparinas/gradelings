@@ -6,7 +6,7 @@ import { offersUsd, siteCurrencies } from "@/components/site/provinces";
 import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { APP_NAME } from "@/lib/brand";
-import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, TRIAL_DAYS } from "@/lib/plan";
+import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, REFUND_DAYS, TRIAL_DAYS } from "@/lib/plan";
 import { JsonLd } from "@/lib/site";
 import { pageMeta } from "@/lib/pageMeta";
 
@@ -39,6 +39,7 @@ export default function PricingPage() {
         <li>✓ No ads, and we never sell information.</li>
         <li>✓ Children can’t buy anything. Coins are earned only by learning.</li>
         <li>✓ Cancel any time in the Parent area. You keep access until the end of the period you’ve paid for.</li>
+        <li>✓ Changed your mind? Full refund if you ask within {REFUND_DAYS} days of any payment.</li>
         <li>✓ After the trial, the first {FREE_UNITS_PER_COURSE} units of every course stay free forever.</li>
       </ul>
       <section className="mt-12 max-w-2xl" aria-labelledby="how-it-works">
@@ -65,7 +66,7 @@ export default function PricingPage() {
             <b>If a payment fails,</b> your access continues while Stripe retries the card. If the payment still can’t be taken, the plan ends and you go back to the free plan. You can subscribe again at any time.
           </li>
           <li>
-            <b>Refunds.</b> Payments already made are generally not refundable, except where the law says otherwise. If something went wrong with a charge, <Link href="/contact/">contact us</Link>. Read the full <Link href="/terms/">terms</Link>.
+            <b>{REFUND_DAYS}-day refunds.</b> Changed your mind? <Link href="/contact/">Ask us</Link> within {REFUND_DAYS} days of any payment, including a renewal, and we refund it in full, no reason needed. Read the full <Link href="/terms/">terms</Link>.
           </li>
         </ol>
       </section>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ContactForm } from "@/components/site/ContactForm";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { teacherPath } from "@/components/site/teachers";
-import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS } from "@/lib/brand";
+import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS, REPLY_TIME } from "@/lib/brand";
 import { pageMeta } from "@/lib/pageMeta";
 
 export const metadata: Metadata = pageMeta({
@@ -23,7 +23,7 @@ export default function ContactPage() {
           <a className="font-semibold text-[#2f6fd6] underline" href={`mailto:${CONTACT_EMAIL}`}>
             {CONTACT_EMAIL}
           </a>
-          . A person reads every message. Many answers are already on the{" "}
+          . A person reads every message and replies within {REPLY_TIME}. Many answers are already on the{" "}
           <Link className="font-semibold underline" href="/help/">
             help page
           </Link>
