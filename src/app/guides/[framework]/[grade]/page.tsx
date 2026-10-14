@@ -6,8 +6,9 @@ import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome
 import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, gradeLabel, say } from "@/components/site/curriculum";
 import { guidePath } from "@/components/site/guides";
 import { assessmentMetadata, AssessmentView, competenciesMetadata, CompetenciesView, guidePageKind, guidePageParams } from "@/components/site/GuideExtras";
-import { guidesFor, GUIDE_FRAMEWORKS } from "@/content/guides";
-import { getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
+import { guidesFor, GUIDE_FRAMEWORKS, HOME_TIPS } from "@/content/guides";
+import { ageBandFor, getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
+import { DEFAULT_GOAL_MINUTES } from "@/lib/model";
 import { APP_NAME } from "@/lib/brand";
 import { TRIAL_DAYS } from "@/lib/plan";
 import { Disclosure } from "@/components/Disclosure";
@@ -66,7 +67,19 @@ export default async function GradeGuide({ params }: Props) {
   const prevCourses = prev ? coursesFor(f, prev) : [];
   const assessment = guidesFor(f.id).assessment;
   const hasAssessment = assessment.grades.includes(grade);
-  const level = f.scoringFor(grade).levels;
+  const scheme = f.scoringFor(grade);
+  const level = scheme.levels;
+  const levelNames = level.map((l) => l.label).join(", ");
+  // Where the report card has no named levels, say so rather than claiming it uses our practice steps.
+  const reportLine = scheme.practiceSteps
+    ? `${f.shortName} has no single set of named levels on the ${label} report card, so ${APP_NAME} describes practice in four steps: ${levelNames}.`
+    : `${f.shortName} report cards describe learning with ${levelNames}.`;
+
+  const band = ageBandFor(grade);
+  const minutes = band === "little" ? DEFAULT_GOAL_MINUTES.little : DEFAULT_GOAL_MINUTES.other;
+  const tips = [HOME_TIPS.math[band][0], HOME_TIPS.language[band][0]].map((t) => say(f, t));
+  // The level most parents ask about: the one that means "meeting the grade" (the third of four).
+  const meeting = level[Math.min(2, level.length - 1)];
 
   const faqs = [
     {
@@ -75,11 +88,26 @@ export default async function GradeGuide({ params }: Props) {
     },
     {
       q: `How is ${label} reported in ${f.shortName}?`,
-      a: `${f.shortName} report cards describe learning with ${level.map((l) => l.label).join(", ")}.${hasAssessment ? ` Students in ${label} also write the ${assessment.name}, which is separate from the report card.` : ""}`,
+      a: `${reportLine}${hasAssessment ? ` Students in ${label} also write the ${assessment.name}, which is separate from the report card.` : ""}`,
     },
     {
+      q: scheme.practiceSteps ? `What does “${meeting.label}” mean in ${label}?` : `What does “${meeting.label}” mean on a ${label} report card?`,
+      a: `${meeting.description}${meeting.marks ? ` On the report card it shows as ${meeting.marks}.` : ""} At home: ${meeting.atHome}`,
+    },
+    ...(prev
+      ? [
+          {
+            q: `What should my child know before starting ${label}?`,
+            a: `${label} builds on ${gradeLabel(f, prev)}. ${prevCourses
+              .slice(0, 2)
+              .map((c) => `In ${subjectInSentence(subjectSeoTitle(c.subject))}, that means ${c.units.slice(0, 3).map((u) => u.title).join(", ")}.`)
+              .join(" ")}`,
+          },
+        ]
+      : []),
+    {
       q: `How can I help my ${label} child at home?`,
-      a: "Short, regular practice works better than long sessions: 10 to 15 minutes a few times a week, on the skills your child's teacher flags. Read together, use math in real life, and praise effort.",
+      a: `About ${minutes} minutes a day of short practice works better than long sessions, on the skills your child's teacher flags. ${tips.join(" ")} Praise effort, and stop on a success.`,
     },
   ];
   const crumbs = [
@@ -196,7 +224,7 @@ export default async function GradeGuide({ params }: Props) {
         </h2>
         <p className="mt-2 font-read text-lg">{note.lookFor}</p>
         <p className="mt-2 font-read text-lg">
-          {f.shortName} report cards describe learning with {level.map((l) => l.label).join(", ")}.{" "}
+          {reportLine}{" "}
           <Link href={`/report-cards/${f.slug}/`} className="font-semibold text-[#2f6fd6] underline">
             See what each level means
           </Link>
@@ -218,6 +246,26 @@ export default async function GradeGuide({ params }: Props) {
           </Link>
           .
         </p>
+      </section>
+
+      <section aria-labelledby="levels" className="mt-10 max-w-3xl">
+        <h2 id="levels" className="text-2xl font-bold">
+          {scheme.practiceSteps ? `The four practice steps in ${label}` : `What each level means in ${label}`}
+        </h2>
+        <dl className="mt-3 flex flex-col gap-3">
+          {level.map((l) => (
+            <div key={l.id} className="rounded-2xl border border-line bg-white p-4">
+              <dt className="text-lg font-bold">
+                {l.label}
+                {l.marks && <span className="font-normal text-ink-soft"> · {l.marks}</span>}
+              </dt>
+              <dd className="mt-1 font-read">{l.description}</dd>
+              <dd className="mt-1 font-read text-ink-soft">
+                <b>At home:</b> {l.atHome}
+              </dd>
+            </div>
+          ))}
+        </dl>
       </section>
 
       {prev && (

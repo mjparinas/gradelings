@@ -58,6 +58,7 @@ const LEVELS: ProficiencyLevel[] = [
 const SCHEME: ScoringScheme = {
   id: "ca-practice-steps",
   name: "Four practice steps",
+  practiceSteps: true,
   source:
     "California has no statewide report card. Districts choose their own, and many elementary schools use a 4-point standards-based scale like this one.",
   levels: LEVELS,
