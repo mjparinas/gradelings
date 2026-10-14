@@ -1,6 +1,6 @@
 """Build docs/research/new-york/outcomes.json from NYSED's standards PDFs.
 
-Usage: python3 -I build_outcomes.py <cache>   (the folder fetch.sh saved the PDFs in)
+Usage: python3 -I build_outcomes.py source   (the committed official files, or a folder fetch.sh saved them in)
 
 Output: {"<grade>/<subject>": [{"idx", "kind", "content"}]} for Kindergarten ("k") to Grade 9 and the subjects math,
 language, science and social. Needs pypdf. Stops with an error when a check fails (see README.md).

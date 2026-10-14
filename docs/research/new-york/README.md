@@ -13,8 +13,9 @@ New York's world language standards are not used. New York families get no Frenc
 
 ## Files
 
-- `fetch.sh <cache>` downloads the official files into a cache folder. They are public, so they are not committed. www.nysed.gov leaves its intermediate certificate (GlobalSign RSA OV SSL CA 2018) out of the TLS chain, so curl may need a CA bundle that includes it (`CURL_CA_BUNDLE`).
-- `build_outcomes.py <cache>` parses them into `outcomes.json`: `{"<grade>/<subject>": [{idx, kind, content}]}` for Kindergarten (`k`) to Grade 9. Run it with `python3 -I`. It needs `pypdf` (6.17 was used) and takes a few seconds. `contract.ts` in `src/content/new-york/` checks every `us-ny` citation against it.
+- `source/` holds the official files as downloaded on 14 October 2026, so the record can be rebuilt and checked even if NYSED moves or changes them: `math.pdf` (www.nysed.gov/sites/default/files/programs/standards-instruction/nys-next-generation-mathematics-p-12-standards.pdf), `ela.pdf` (…/nys-next-generation-ela-standards.pdf), `science-p-2.pdf`, `science-3-5.pdf`, `science-ms.pdf`, `science-hs.pdf` (…/p-2-, 3-5-, ms- and hs-science-learning-standards.pdf), `social-k-8.pdf` (…/ss-framework-k-8a2.pdf), `social-9-12.pdf` (…/framework-9-12-with-2017-updates.pdf) and `social-intro.pdf` (…/ss-framework-k-12-intro.pdf), about 10 MB in all.
+- `fetch.sh <folder>` downloads the same files again from NYSED, to refresh `source/` or check for a new edition. www.nysed.gov leaves its intermediate certificate (GlobalSign RSA OV SSL CA 2018) out of the TLS chain, so curl may need a CA bundle that includes it (`CURL_CA_BUNDLE`).
+- `build_outcomes.py source` parses them into `outcomes.json`: `{"<grade>/<subject>": [{idx, kind, content}]}` for Kindergarten (`k`) to Grade 9. Run it with `python3 -I`. It needs `pypdf` (6.17 was used) and takes a few seconds. `contract.ts` in `src/content/new-york/` checks every `us-ny` citation against it.
 - `outcomes.json` holds 1 573 entries:
 
   | Subject | Entries | Distinct codes | Kinds |
