@@ -1,0 +1,130 @@
+import type { Unit } from "../../types";
+import { OWN_SOCIAL_9 as OREGON_9 } from "../../oregon/units/social-g9";
+import { bankUnit, type Q } from "../own";
+import { copyOf, from } from "./kit";
+
+// Minnesota's own Grade 8 social studies units (`mn-` ids) for the Global Studies theme, and a Minnesota copy of
+// another state's unit. Each keeps the original's questions, leaves out the ones that name another
+// state or are about Tribes, and adds Minnesota items where they fit. Their own `mn-` ids keep Minnesota progress apart
+// from the originals.
+const ECONOMIES: Q[] = [
+  ["In a traditional economy, what people make and do is decided mostly by…", "custom and tradition", ["the government alone", "prices in a market", "a computer"], "The way it has always been done."],
+  ["In a command economy, the main decisions about production are made by…", "the government", ["buyers and sellers", "custom", "each family alone"], "Central planning."],
+  ["In a market economy, prices are set mostly by…", "supply and demand", ["the government", "tradition", "a lottery"], "Buyers and sellers."],
+  ["Most countries today, including the United States, have…", "mixed economies", ["pure command economies", "pure traditional economies", "no economy"], "Markets plus government."],
+  ["Gross domestic product (GDP) measures…", "the value of all final goods and services a country produces in a year", ["the number of people in a country", "how much land a country has", "a country's debt only"], "Total output."],
+  ["Economic growth means real GDP is…", "rising", ["falling", "unchanged forever", "measured in land"], "More goods and services."],
+  ["Which helps an economy grow?", "Better education and technology", ["Closing all schools", "Destroying roads", "Banning trade"], "Human capital and tools."],
+  ["Countries trade so they can get goods they…", "can't make, or can't make as cheaply", ["already have too much of", "don't want", "make better than anyone"], "Gains from trade."],
+  ["A country that sells goods to other countries is…", "exporting", ["importing", "taxing", "saving"], "Goods going out."],
+  ["A country that buys goods from other countries is…", "importing", ["exporting", "mining", "voting"], "Goods coming in."],
+  ["A tariff is…", "a tax on imported goods", ["a free gift", "a kind of ship", "a trade map"], "It makes imports cost more."],
+  ["Globalization means…", "countries are more connected through trade, travel and ideas", ["countries stop trading", "everyone lives in one city", "the internet disappears"], "A connected world."],
+  ["One benefit of global trade is…", "more choices and lower prices for consumers", ["fewer goods in stores", "higher prices everywhere", "no new jobs"], "More to choose from."],
+  ["One worry about global trade is that…", "some workers lose jobs when factories move abroad", ["nothing ever changes", "prices always double", "trade stops"], "Winners and losers."],
+  ["When many consumers decide to buy electric cars, it can…", "change what companies produce", ["have no effect", "stop all driving", "lower demand for batteries"], "Consumer choices matter."],
+  ["A developing country usually has…", "lower average incomes and is building its industries", ["the highest incomes in the world", "no people", "no farms"], "Still growing its economy."],
+  ["Minnesota exports goods like medical devices, farm products and machinery to…", "countries around the world", ["only Wisconsin", "no one", "only the moon"], "Global markets."],
+  ["When the government spends money to build roads, it is making a…", "public investment", ["private profit", "tariff", "barter"], "Shared infrastructure.", true],
+  ["Comparative advantage means a country should make what it can produce at the…", "lowest opportunity cost", ["highest price", "slowest speed", "largest size"], "Give up the least.", true],
+  ["Why might two countries with different economic systems develop at different speeds?", "Their choices about resources, education and trade differ", ["One has no people", "Weather never matters", "All economies grow equally"], "Systems shape growth.", true],
+  ["Inflation means prices in general are…", "rising over time", ["falling every day", "fixed by law", "the same everywhere"], "Money buys less.", true],
+  ["Unemployment counts people who…", "want a job and are looking but don't have one", ["have two jobs", "are retired", "are in school"], "Looking for work.", true],
+  ["Fair trade labels try to make sure farmers in poorer countries…", "get a fair price for crops", ["pay higher taxes", "stop farming", "sell only at home"], "A better deal for growers.", true],
+  ["A company moves a factory to another country where wages are lower. This is called…", "outsourcing", ["importing", "recycling", "voting"], "Production moves abroad.", true],
+];
+
+const POPULATION: Q[] = [
+  ["Demography is the study of…", "human populations", ["rocks", "the weather", "stars"], "Births, deaths and moves."],
+  ["A country's population grows when…", "births and people moving in are more than deaths and people moving out", ["everyone moves away", "no babies are born", "cities close"], "More in than out."],
+  ["Urbanization means…", "more people living in cities", ["cities shrinking", "people moving to farms", "building more forests"], "Cities grow."],
+  ["Many people move from rural areas to cities to find…", "jobs and schools", ["more farmland", "less traffic", "fewer neighbors"], "Opportunity."],
+  ["A megacity has more than…", "10 million people", ["1,000 people", "10,000 people", "100 people"], "Huge cities like Tokyo.", true],
+  ["Cultural diffusion is…", "the spread of ideas, foods and customs from place to place", ["a kind of weather", "a population count", "a city law"], "Culture travels."],
+  ["The spread of a popular music style from one country to many others is an example of…", "cultural diffusion", ["urbanization", "scarcity", "a tariff"], "Ideas on the move."],
+  ["A diaspora is…", "a community of people living away from their homeland", ["a type of map", "a capital city", "a farming method"], "Spread around the world."],
+  ["Since the 1990s, Minnesota has become home to the largest ___ community in the United States.", "Somali", ["Swedish", "Italian", "Japanese"], "From East Africa."],
+  ["Many Hmong families first came to Minnesota as refugees after the war in…", "Laos and Vietnam", ["Ireland", "Brazil", "Norway"], "Southeast Asia."],
+  ["Many Karen refugees who settled in Minnesota came from…", "Myanmar (Burma)", ["Canada", "Peru", "Iceland"], "Southeast Asia.", true],
+  ["A refugee is different from other immigrants because a refugee…", "had to flee war or persecution", ["moved for a vacation", "never left home", "is always a tourist"], "Forced to leave."],
+  ["An economic push factor might be…", "no jobs at home", ["a new hospital nearby", "safe streets", "good schools"], "A reason to leave."],
+  ["An economic pull factor might be…", "higher wages in a new place", ["war at home", "drought", "floods"], "A reason to come."],
+  ["Immigrants to the United States have contributed to…", "science, farming, the arts and government", ["nothing at all", "only sports", "only cooking"], "Many fields."],
+  ["As a country's population gets older, it may need more…", "health care and fewer new schools", ["playgrounds only", "baby food only", "nothing new"], "An aging population."],
+  ["A population pyramid shows a country's population by…", "age and sex", ["city and street", "color and size", "weather and climate"], "A bar chart turned sideways."],
+  ["Cities often grow along rivers and coasts because they offer…", "water and trade routes", ["no resources", "deserts", "fewer jobs"], "Water and transport."],
+  ["Some groups keep their traditional culture alive in a new country by…", "teaching their language and holding festivals", ["forgetting their history", "never meeting", "closing schools"], "Passing it on.", true],
+  ["Rapid urbanization can lead to…", "crowded housing and traffic", ["fewer people in cities", "more forests in cities", "less demand for water"], "Growing pains.", true],
+  ["Why might a country's birth rate fall as it becomes wealthier?", "More education and health care, and families choose to have fewer children", ["People stop living in cities", "Farms need more workers", "Nothing changes"], "Demographic change.", true],
+  ["Remittances are…", "money migrants send home to their families", ["a kind of passport", "a city tax", "a population map"], "Support across borders.", true],
+  ["The Twin Cities area has grown partly because people moved there from…", "small towns and other countries", ["only Canada", "only the moon", "nowhere"], "Rural and global migration.", true],
+  ["Which question helps study why a city grew?", "Where did the people come from and why?", ["What color is the city flag?", "How tall is the tallest tree?", "What is the mayor's favorite food?"], "Ask about movement."],
+];
+
+const WORLD_SINCE_1945: Q[] = [
+  ["The United Nations was founded in…", "1945", ["1776", "1918", "2001"], "After World War II."],
+  ["The Universal Declaration of Human Rights was adopted by the United Nations in…", "1948", ["1776", "1865", "2010"], "Soon after the war."],
+  ["After World War II, many colonies in Africa and Asia…", "became independent countries", ["became new empires", "joined Europe as provinces", "disappeared"], "Decolonization."],
+  ["India became independent from Britain in…", "1947", ["1776", "1900", "1990"], "Led by people like Gandhi."],
+  ["Mahatma Gandhi led India's independence movement using…", "nonviolent protest", ["a large navy", "a royal army", "secret weapons"], "Peaceful resistance."],
+  ["Ghana was the first country south of the Sahara to win independence from colonial rule, in…", "1957", ["1776", "1914", "2000"], "Led by Kwame Nkrumah.", true],
+  ["Nelson Mandela became South Africa's first Black president after the end of…", "apartheid", ["the Cold War", "World War I", "the Gold Rush"], "Legal segregation."],
+  ["Apartheid in South Africa was a system of…", "legal racial segregation", ["free elections for all", "shared farming", "space exploration"], "Separation by race."],
+  ["The Cold War was a rivalry between the United States and the…", "Soviet Union", ["United Kingdom", "Canada", "Mexico"], "Two superpowers."],
+  ["The Berlin Wall fell in…", "1989", ["1945", "1961", "2001"], "Germany reunited soon after."],
+  ["Newly independent countries often faced challenges such as…", "building governments and economies", ["having too much money", "no borders", "no people"], "Starting fresh is hard."],
+  ["A non-governmental organization (NGO) is…", "a group that works on issues but is not part of a government", ["a type of army", "a national bank", "a political party"], "Like the Red Cross."],
+  ["NATO is an alliance of countries that agree to…", "defend each other", ["share one president", "use one money", "stop trading"], "Collective defense."],
+  ["The European Union lets many of its member countries…", "trade freely and share a currency, the euro", ["have one king", "close all borders", "stop voting"], "Economic union."],
+  ["The internet and smartphones have changed cultures by…", "spreading ideas and news around the world quickly", ["stopping communication", "ending all travel", "making maps useless"], "Instant connection."],
+  ["Women in many countries gained the right to vote during the…", "20th century", ["1st century", "15th century", "Stone Age"], "1900s.", true],
+  ["China's economy grew rapidly after the 1980s when it…", "allowed more market trade", ["closed all factories", "ended trade", "banned technology"], "Economic reforms.", true],
+  ["When a country writes a new constitution after independence, it is setting up its…", "system of government", ["sports teams", "weather service", "museums only"], "Rules for governing.", true],
+  ["A human right that the Universal Declaration names is…", "freedom of thought and expression", ["owning a car", "free video games", "a pet for everyone"], "Basic freedoms."],
+  ["To predict a future global issue, historians look for…", "patterns in past events", ["random guesses", "lottery numbers", "the weather tomorrow"], "History helps us think ahead.", true],
+  ["Many people around the world practice religions such as Christianity, Islam, Hinduism, Buddhism and…", "Judaism", ["the Cold War", "the UN", "NATO"], "World religions."],
+  ["The Soviet Union broke apart in…", "1991", ["1945", "1776", "2010"], "Into 15 countries.", true],
+  ["Independence movements in many countries were led by people seeking…", "self-government", ["a new king from abroad", "more colonies", "less freedom"], "Ruling themselves."],
+  ["Comparing accounts of a revolution from different groups helps you…", "understand several perspectives", ["find one right story only", "skip the evidence", "ignore the past"], "Many points of view."],
+];
+
+export const UNITS: Unit[] = [
+  copyOf(
+    from(OREGON_9, "or-g9-forms-of-government"),
+    {
+      id: "mn-g8-forms-of-government",
+      title: "Forms of Government",
+      emoji: "🏛️",
+      blurb: "Republics, monarchies and more",
+      parentNote: "Practices the main forms of government around the world (democracies and republics, monarchies, dictatorships and others), what a constitution does, and how the US system compares with other countries' systems.",
+      standards: ["8.1.2.1; 8.1.4.1", "different systems of government around the world, and how the US compares"],
+    },
+  ),
+  bankUnit({
+    id: "mn-g8-economies",
+    title: "Economies & Global Trade",
+    emoji: "🚢",
+    blurb: "Economic systems, growth and trade between countries",
+    parentNote: "Practices traditional, command, market and mixed economies, what GDP and economic growth measure, why countries trade, and how consumer, producer and government choices affect society.",
+    standards: ["8.2.8.1; 8.2.7.1; 8.2.11.1; 8.2.12.1; 8.2.10.1", "economic systems and development, economic growth, global trade, and how economic decisions affect society"],
+    items: ECONOMIES,
+  }),
+  bankUnit({
+    id: "mn-g8-population",
+    title: "Population & Migration",
+    emoji: "🏙️",
+    blurb: "Growing cities, cultures on the move and new Minnesotans",
+    parentNote: "Practices how populations change, urbanization, cultural diffusion and diasporas, push and pull factors in migration, and the immigrant and refugee communities who have made Minnesota home since the 1950s.",
+    standards: ["8.3.15.1; 8.3.15.4; 8.4.21.1; 8.5.23.1; 8.5.23.3; 8.5.24.1", "population change, urbanization, diasporas, migration to Minnesota and immigrants' contributions"],
+    items: POPULATION,
+  }),
+  bankUnit({
+    id: "mn-g8-world-since-1945",
+    title: "The World Since 1945",
+    emoji: "🕊️",
+    blurb: "Independence, human rights and a connected world",
+    parentNote: "Practices the world since World War II: the United Nations and human rights, independence movements and the challenges of new nations, the end of apartheid, the Cold War and its end, alliances, and how media and technology connect cultures.",
+    standards: ["8.4.18.1; 8.4.18.3; 8.1.3.1; 8.1.5.1; 8.4.19.1; 8.4.22.1", "newly independent countries, revolutions and independence movements, human rights, alliances, and media and culture"],
+    items: WORLD_SINCE_1945,
+  }),
+];
