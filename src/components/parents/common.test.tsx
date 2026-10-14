@@ -4,7 +4,7 @@ import { describe, expect, it, vi } from "vitest";
 import type { Profile } from "@/lib/model";
 
 const profiles = vi.hoisted(() => ({ list: [] as unknown[] }));
-vi.mock("@/lib/store", () => ({ useProfiles: () => profiles.list }));
+vi.mock("@/lib/store", () => ({ useProfiles: () => profiles.list, useStore: (sel: (s: object) => unknown) => sel({ family: {}, profiles: profiles.list }) }));
 vi.mock("../Critter", () => ({ CritterSvg: () => <svg data-testid="critter" /> }));
 
 import { CheckBox, ChildTabs, Choice, NoChildren, PageTitle, Slider, Switch } from "./common";

@@ -5,6 +5,7 @@ import { derive } from "@/lib/derive";
 import { milestones } from "@/lib/milestones";
 import { countMilestonePath, countTitle } from "@/lib/milestoneShare";
 import type { Profile } from "@/lib/model";
+import { useSay } from "@/lib/say";
 import { eventsFor, useDerived, useStore } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 import { Panel } from "./common";
@@ -15,6 +16,7 @@ export function Milestones({ p, limit }: { p: Profile; limit?: number }) {
   const d = useDerived(p.id);
   const events = useStore((s) => s.events);
   const now = useNow();
+  const say = useSay();
   const list = useMemo(() => {
     const cutoff = now - 182 * 86_400_000;
     const past = eventsFor(events, p).filter((e) => e.t < cutoff);
@@ -29,8 +31,8 @@ export function Milestones({ p, limit }: { p: Profile; limit?: number }) {
           <li key={m.id} className="flex items-start gap-3 rounded-xl bg-paper p-3">
             <span className="text-3xl" aria-hidden="true">{m.icon}</span>
             <span className="flex-1">
-              <span className="block font-bold">{m.title}</span>
-              <span className="block text-sm text-ink-soft">{m.detail}</span>
+              <span className="block font-bold">{say(m.title)}</span>
+              <span className="block text-sm text-ink-soft">{say(m.detail)}</span>
             </span>
             {m.share && countTitle(m.share.kind, m.share.n) && <ShareMilestone path={countMilestonePath(m.share.kind, m.share.n)} what={countTitle(m.share.kind, m.share.n)!} />}
           </li>

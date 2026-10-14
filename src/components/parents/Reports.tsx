@@ -7,6 +7,7 @@ import { getFramework } from "@/content/frameworks";
 import { getSubjectMeta, SUBJECTS } from "@/content/subjects";
 import { gradeLabel } from "@/lib/gradeLabel";
 import { buildReport } from "@/lib/reports";
+import { useSay } from "@/lib/say";
 import { eventsFor, useChildSettings, useDerived, useStore } from "@/lib/store";
 import { getTrophy, TIER_STYLE } from "@/lib/trophies";
 import { ColumnChart, LevelStacks, LineChart, RowBars, StatTile } from "./charts";
@@ -22,6 +23,7 @@ export function ReportsPage({ childId }: { childId?: string }) {
   const d = useDerived(child?.id ?? null);
   const settings = useChildSettings(child?.id);
   const [period, setPeriod] = useState(14);
+  const say = useSay();
   const report = useMemo(
     () => (child ? buildReport(eventsFor(events, child), d, child.grade, child.framework, period) : null),
     [child, events, d, period],
@@ -176,7 +178,7 @@ export function ReportsPage({ childId }: { childId?: string }) {
                       <th className="py-1 pr-3">Learning standard</th>
                       <th className="py-1 pr-3">Level</th>
                       <th className="py-1 pr-3">Recent</th>
-                      <th className="py-1">Last practised</th>
+                      <th className="py-1">{say("Last practised")}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -210,7 +212,7 @@ export function ReportsPage({ childId }: { childId?: string }) {
               if (!trophy) return null;
               return (
                 <li key={tr.id} className="flex items-center gap-2 rounded-xl bg-paper px-3 py-2 text-sm">
-                  <span aria-hidden="true">{trophy.icon}</span> <b>{trophy.name}</b>
+                  <span aria-hidden="true">{trophy.icon}</span> <b>{say(trophy.name)}</b>
                   <span className="text-ink-soft">{TIER_STYLE[trophy.tier].label}</span>
                 </li>
               );

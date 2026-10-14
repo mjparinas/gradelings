@@ -8,6 +8,7 @@ import { getSubjectMeta } from "@/content/subjects";
 import { gradeLabel } from "@/lib/gradeLabel";
 import type { GradeId, SubjectId } from "@/content/types";
 import { compareToGrade, latestPlacements, PLACEMENT_SUBJECTS, placementSentence, STAGE_SIZE, type PlacementEvent } from "@/lib/placement";
+import { useLocale, useSay } from "@/lib/say";
 import { eventsFor, useStore } from "@/lib/store";
 import { useGradeContent } from "@/lib/useGradeContent";
 import type { Profile } from "@/lib/model";
@@ -23,6 +24,8 @@ function unitTitle(key: string, framework?: string): string {
 function SubjectResult({ child, subject, result }: { child: Profile; subject: SubjectId; result?: PlacementEvent }) {
   const meta = getSubjectMeta(subject);
   const updateProfile = useStore((s) => s.updateProfile);
+  const say = useSay();
+  const locale = useLocale();
   const where = result ? compareToGrade(result.placedGrade, child.grade) : "at";
   return (
     <Panel>
@@ -43,7 +46,7 @@ function SubjectResult({ child, subject, result }: { child: Profile; subject: Su
         <>
           <p className="mt-3 text-lg font-bold">{placementSentence(result, child.name, child.grade, child.framework)}</p>
           <p className="font-read text-sm text-ink-soft">
-            Taken {new Date(result.t).toLocaleDateString("en-CA", { dateStyle: "medium" })}
+            Taken {new Date(result.t).toLocaleDateString(locale, { dateStyle: "medium" })}
             {result.confidence === "low" && " · A close call: answers were mixed, so treat this as a starting point."}
           </p>
           <ul className="mt-4 flex flex-col gap-2" aria-label="Results by grade">
@@ -82,10 +85,10 @@ function SubjectResult({ child, subject, result }: { child: Profile; subject: Su
           {where !== "at" && (
             <div className="mt-4 flex flex-wrap items-center gap-3 rounded-xl border border-[#4f8ef7]/40 bg-[#eef4ff] p-4">
               <p className="min-w-0 flex-1 font-read">
-                Lessons follow {child.name}&apos;s grade ({gradeLabel(child.grade, child.framework)}). To practise {gradeLabel(result.placedGrade, child.framework)} lessons instead, switch the grade. Their progress is kept.
+                {say(`Lessons follow ${child.name}'s grade (${gradeLabel(child.grade, child.framework)}). To practise ${gradeLabel(result.placedGrade, child.framework)} lessons instead, switch the grade. Their progress is kept.`)}
               </p>
               <button type="button" onClick={() => updateProfile(child.id, { grade: result.placedGrade })} className="rounded-xl bg-[#253047] px-3 py-2 text-sm font-bold text-white">
-                Practise {gradeLabel(result.placedGrade, child.framework)}
+                {say(`Practise ${gradeLabel(result.placedGrade, child.framework)}`)}
               </button>
             </div>
           )}

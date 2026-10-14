@@ -8,6 +8,7 @@ import { firstChargeAt, FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLif
 import { savedPromoCode } from "@/lib/promoCode";
 import { inviteLink, rememberMyInvite } from "@/lib/referral";
 import { useRoute } from "@/lib/router";
+import { useSay } from "@/lib/say";
 import { useStore } from "@/lib/store";
 import { isIosApp, isStoreApp } from "@/lib/twa";
 import { PromoBanner } from "@/components/site/PromoBanner";
@@ -36,6 +37,7 @@ export const includedFor = (country?: "CA" | "US") => [
 
 export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo | null; onBilling: (b: BillingInfo | null) => void }) {
   const family = useStore((s) => s.family);
+  const say = useSay();
   const { query } = useRoute();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
@@ -128,8 +130,8 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
           {subscribed && family.subscription?.cancelAt ? (
             <p className="text-ink-soft">
               {family.subscription.status === "trialing"
-                ? `Cancelled. Your free trial runs until ${longDate(family.subscription.cancelAt)}, then the plan ends and you won't be charged.`
-                : `Cancelled. Premium stays on until ${longDate(family.subscription.cancelAt)}, then the plan ends and you won't be charged again.`}
+                ? say(`Cancelled. Your free trial runs until ${longDate(family.subscription.cancelAt)}, then the plan ends and you won't be charged.`)
+                : say(`Cancelled. Premium stays on until ${longDate(family.subscription.cancelAt)}, then the plan ends and you won't be charged again.`)}
             </p>
           ) : (
             subscribed &&
