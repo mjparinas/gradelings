@@ -59,6 +59,14 @@ describe("browser error reporting", () => {
     expect(init).not.toHaveBeenCalled();
   });
 
+  it("ignores promises rejected with nothing", async () => {
+    await import("./instrumentation-client");
+    window.dispatchEvent(Object.assign(new Event("unhandledrejection"), { reason: null }));
+    window.dispatchEvent(Object.assign(new Event("unhandledrejection"), { reason: undefined }));
+    await settle();
+    expect(init).not.toHaveBeenCalled();
+  });
+
   it("stays off without a DSN", async () => {
     vi.stubEnv("NEXT_PUBLIC_SENTRY_DSN", "");
     await import("./instrumentation-client");
