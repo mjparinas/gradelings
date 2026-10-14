@@ -95,11 +95,11 @@ const DISTANCE_IDEAS: Q[] = [
 // ---------- Linear models of data (NY-8.SP.3) ----------
 
 const MODELS = [
-  { x: "hours of study", y: "test score", xu: "hours", yu: "points", m: [3, 8], b: [45, 65], per: "point", start: "score with no study" },
-  { x: "temperature in °F", y: "drinks sold", xu: "degrees", yu: "drinks", m: [2, 6], b: [5, 30], per: "drink", start: "drinks sold at 0°F (outside the data, so not meaningful)" },
-  { x: "age of a tree in years", y: "height in feet", xu: "years", yu: "feet", m: [1, 3], b: [2, 6], per: "foot", start: "height when planted" },
-  { x: "weeks of training", y: "push-ups done", xu: "weeks", yu: "push-ups", m: [2, 5], b: [8, 20], per: "push-up", start: "push-ups before training" },
-  { x: "days since planting", y: "plant height in cm", xu: "days", yu: "cm", m: [1, 2], b: [1, 4], per: "cm", start: "height on the day it was planted" },
+  { x: "hours of study", y: "test score", one: "hour", xu: "hours", yu: "points", m: [3, 8], b: [45, 65], per: "point", start: "score with no study" },
+  { x: "temperature in °F", y: "drinks sold", one: "degree", xu: "degrees", yu: "drinks", m: [2, 6], b: [5, 30], per: "drink", start: "drinks sold at 0°F" },
+  { x: "age of a tree in years", y: "height in feet", one: "year", xu: "years", yu: "feet", m: [2, 3], b: [2, 6], per: "foot", start: "height when planted" },
+  { x: "weeks of training", y: "push-ups done", one: "week", xu: "weeks", yu: "push-ups", m: [2, 5], b: [8, 20], per: "push-up", start: "push-ups before training" },
+  { x: "days since planting", y: "plant height in cm", one: "day", xu: "days", yu: "cm", m: [2, 4], b: [1, 4], per: "cm", start: "height on the day it was planted" },
 ] as const;
 
 function model() {
@@ -129,7 +129,7 @@ const slopeMeaning: Maker = () => {
   const { c, m, b } = model();
   return pickOne(
     `The model y = ${linear(m, b)} links ${c.x} (x) and ${c.y} (y). What does the slope ${m} mean?`,
-    `each extra one of the ${c.xu} goes with about ${m} more ${c.yu}`,
+    `each extra ${c.one} goes with about ${m} more ${c.yu}`,
     [`the ${c.y} starts at ${m}`, `the ${c.y} is always ${m}`, `each extra ${m} ${c.xu} goes with 1 more ${c.per}`],
     "The slope is the change in y for each increase of 1 in x.",
   );

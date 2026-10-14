@@ -4,6 +4,7 @@ import { bankUnit } from "../own";
 import { copyOf, from } from "./kit";
 import { BIOLOGY } from "./science-g9-biology";
 import { EARTH } from "./science-g9-earth";
+import { PHYSICAL } from "./science-g9-physical";
 
 // New York's own Grade 9 science units. Most New York 9th graders take a high school course, often Earth and Space
 // Sciences or Life Science: Biology, so Grade 9 mixes the biology units New York shares with other frameworks and the
@@ -238,4 +239,4 @@ const LANDSCAPES = bankUnit({
   ],
 });
 
-export const UNITS: Unit[] = [ECOSYSTEMS, ...BIOLOGY, TECTONICS, ...EARTH, SKY, STARS, CLIMATE, LANDSCAPES];
+export const UNITS: Unit[] = [ECOSYSTEMS, ...BIOLOGY, TECTONICS, ...EARTH, SKY, STARS, CLIMATE, LANDSCAPES, ...PHYSICAL];

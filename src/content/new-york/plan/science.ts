@@ -9,8 +9,8 @@ import type { Entry } from "../kit";
 // history. Grade 9 follows the high school courses most New York students take that year, Life Science: Biology and
 // Earth and Space Sciences, so it cites high school codes and its Earth and space units are New York's own; it adds the
 // physical science units other states use in Grade 9 (atoms, bonding, reactions, motion, energy, circuits), citing only
-// the HS-PS codes they practise. Units built around Washington, Oregon or California places have New York versions in
-// ../units/science-*.ts.
+// the HS-PS codes they practise, and New York's own units for waves, gases and solutions, nuclear processes and heat.
+// Units built around Washington, Oregon or California places have New York versions in ../units/science-*.ts.
 export const PLAN_SCIENCE: Record<string, Entry[]> = {
   "k/science": [
     ["living-things-need", "share", "K-LS1-1", "patterns in what plants and animals, including people, need to survive"],
