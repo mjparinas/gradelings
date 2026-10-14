@@ -8,6 +8,8 @@ import { GUIDES } from "@/content/guides";
 import { getSubjectMeta, subjectInSentence } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { pageMeta } from "@/lib/pageMeta";
+import { FaqSection } from "@/components/site/FaqSection";
+import { bandLine, curriculumFaqs, reportingBands } from "@/components/site/pageFaqs";
 
 export const dynamicParams = false;
 
@@ -60,23 +62,33 @@ export default async function FrameworkPage({ params }: PageProps<"/curriculum/[
           </section>
         ))}
       </div>
-      <p className="mt-8 font-read text-ink-soft">
-        Wondering what “{f.country === "US" ? f.scoringFor("3").levels[2]?.label : "Proficient"}” means on a report card?{" "}
-        <Link href={`/report-cards/${f.slug}/`} className="font-semibold text-[#2f6fd6] underline">
-          Read our {f.shortName} report card guide
-        </Link>
-        .
-        {GUIDES[f.id] && (
-          <>
-            {" "}
-            New to the {f.shortName} curriculum? Start with our{" "}
-            <Link href={`/guides/${f.slug}/`} className="font-semibold text-[#2f6fd6] underline">
-              parent guides and free practice sheets
-            </Link>
-            .
-          </>
-        )}
-      </p>
+      <section aria-labelledby="reporting" className="mt-10 max-w-3xl">
+        <h2 id="reporting" className="text-2xl font-bold">
+          How {f.shortName} report cards describe progress
+        </h2>
+        <ul className="mt-3 flex list-disc flex-col gap-1 pl-5 font-read text-lg">
+          {reportingBands(f).map((b) => (
+            <li key={b.from}>{bandLine(f, b)}</li>
+          ))}
+        </ul>
+        <p className="mt-3 font-read text-ink-soft">
+          <Link href={`/report-cards/${f.slug}/`} className="font-semibold text-[#2f6fd6] underline">
+            Read our {f.shortName} report card guide
+          </Link>{" "}
+          for what each level means and how to help at home.
+          {GUIDES[f.id] && (
+            <>
+              {" "}
+              New to the {f.shortName} curriculum? Start with our{" "}
+              <Link href={`/guides/${f.slug}/`} className="font-semibold text-[#2f6fd6] underline">
+                parent guides and free practice sheets
+              </Link>
+              .
+            </>
+          )}
+        </p>
+      </section>
+      <FaqSection faqs={curriculumFaqs(f)} />
     </SitePage>
   );
 }

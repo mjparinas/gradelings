@@ -9,6 +9,8 @@ import { APP_NAME } from "@/lib/brand";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, REFUND_DAYS, TRIAL_DAYS } from "@/lib/plan";
 import { JsonLd } from "@/lib/site";
 import { pageMeta } from "@/lib/pageMeta";
+import { FaqSection } from "@/components/site/FaqSection";
+import { pricingFaqs } from "@/components/site/pageFaqs";
 
 export const metadata: Metadata = pageMeta({
   title: "Pricing",
@@ -70,6 +72,7 @@ export default function PricingPage() {
           </li>
         </ol>
       </section>
+      <FaqSection title="Pricing questions" id="pricing-faq" faqs={pricingFaqs(offersUsd(FRAMEWORKS))} />
       <div className="mt-8 flex flex-wrap gap-3">
         <SubscribeActions trialLabel="Start the free trial" />
         <Link href="/help/#billing" className="btn min-h-14 px-6 text-lg">
