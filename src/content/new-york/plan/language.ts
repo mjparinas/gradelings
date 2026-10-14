@@ -77,6 +77,18 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
       "KW6; KW7; KSL3",
       "asking questions and finding answers in books, pictures and from people",
     ],
+    [
+      "mb-k-before-during-after-reading",
+      "adopt",
+      "KR1; KR9; KRF4",
+      "predicting, asking questions and making connections before, during and after reading",
+    ],
+    [
+      "mb-k-make-a-text",
+      "adopt",
+      "KW2; KW3",
+      "planning simple texts: labels, lists, stories and facts",
+    ],
   ],
   "1/language": [
     [
@@ -147,6 +159,24 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
       "1R5; 1R6",
       "telling stories from information books and what pictures and words each tell",
     ],
+    [
+      "mb-g1-reading-smart",
+      "adopt",
+      "1R7; 1R9",
+      "predicting from covers and pictures, making connections and telling kinds of texts apart",
+    ],
+    [
+      "mb-g1-true-and-viewpoints",
+      "adopt",
+      "1W1",
+      "telling real from make-believe, and giving an opinion with a reason",
+    ],
+    [
+      "mb-g1-writing-plan",
+      "adopt",
+      "1W2; 1W3",
+      "planning writing, putting events in order and adding details",
+    ],
   ],
   "2/language": [
     ["rhyme-time", "share", "2RF3", "rhymes and word families"],
@@ -205,6 +235,24 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
       "adopt",
       "2W7; 2R6; 2SL2",
       "gathering information to answer questions and naming what a text or message is for",
+    ],
+    [
+      "mb-sight-words-and-phrasing",
+      "adopt",
+      "2RF4",
+      "reading common words quickly and using punctuation to read smoothly and with expression",
+    ],
+    [
+      "mb-planning-and-improving",
+      "adopt",
+      "2W2; 2L3",
+      "planning, choosing a kind of writing for the purpose and reader, and fixing unclear parts",
+    ],
+    [
+      "mb-listening-and-asking",
+      "adopt",
+      "2SL1; 2SL3; 2SL6",
+      "listening, asking questions to learn more and choosing polite or casual words",
     ],
   ],
   "3/language": [
@@ -276,13 +324,43 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
       "3R8; 3W7",
       "facts and opinions, what a message is for and choosing sources",
     ],
+    [
+      "devices-3",
+      "adopt",
+      "3R4",
+      "what metaphors, sound patterns and strong word choices mean",
+    ],
+    [
+      "mb-plan-your-writing",
+      "adopt",
+      "3W2; 3W3",
+      "choosing a topic, purpose and audience, and the kinds of writing",
+    ],
+    [
+      "mb-make-writing-better",
+      "adopt",
+      "3L6",
+      "strong, precise words, joining and time words, and revising",
+    ],
+    [
+      "mb-listening-talking",
+      "adopt",
+      "3SL1; 3SL2; 3SL3",
+      "listening for key ideas, taking turns and asking questions",
+    ],
+    [
+      "mb-media-and-design",
+      "adopt",
+      "3SL5",
+      "choosing words, pictures and layout for posters and talks",
+    ],
   ],
   "4/language": [
     [
       "reading-detectives",
       "share",
-      "4R2",
-      "main idea, details and summaries",
+      "4R1; 4R2; 4R3; 4R4",
+      "main idea, details, inferences, word meanings and summaries",
     ],
     [
       "text-features",
@@ -290,7 +368,7 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
       "4R5; 4R7",
       "headings, glossaries, maps and indexes",
     ],
-    ["figurative-language", "share", "4L5", "similes, metaphors and idioms"],
+    ["figurative-language", "share", "4L5; 4R4", "similes, metaphors and idioms"],
     ["point-of-view", "share", "4R6", "first- and third-person narration"],
     [
       "parts-of-speech",
@@ -331,13 +409,37 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
       "4R6",
       "comparing a primary and a secondary source on the same event",
     ],
+    [
+      "text-features-4",
+      "adopt",
+      "4R3",
+      "cause and effect, order and features that explain what happens and why",
+    ],
+    [
+      "listening-speaking-ab",
+      "adopt",
+      "4SL1; 4SL4; 4RF4",
+      "listening well, speaking clearly and reading aloud with expression",
+    ],
+    [
+      "mb-talk-together",
+      "adopt",
+      "4SL1; 4SL3",
+      "taking turns, asking good questions and giving reasons in a discussion",
+    ],
+    [
+      "mb-revise-writing",
+      "adopt",
+      "4W3; 4L3; 4L6",
+      "vivid details, precise words and revising unclear writing",
+    ],
   ],
   "5/language": [
     ["plot-and-conflict", "share", "5R5", "plot structure and conflict"],
     [
       "figurative-language",
       "share",
-      "5L5",
+      "5L5; 5R4",
       "similes, metaphors, idioms and more",
     ],
     [
@@ -349,7 +451,7 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     [
       "context-clues",
       "share",
-      "5L4",
+      "5L4; 5R4",
       "using context to work out word meanings",
     ],
     ["word-roots", "share", "5RF3; 5L4", "Greek and Latin roots"],
@@ -384,10 +486,34 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
       "5L2",
       "spelling words correctly using suffix rules and spelling patterns",
     ],
+    [
+      "writing-audience-ab",
+      "adopt",
+      "5W1; 5W2",
+      "writing for a purpose and reader: persuasive openings and closings, informative details and formal or informal words",
+    ],
+    [
+      "group-talk-ab",
+      "adopt",
+      "5SL1",
+      "sharing ideas, building on others and disagreeing respectfully in a group",
+    ],
+    [
+      "mb-read-with-purpose-5",
+      "adopt",
+      "5RF4",
+      "reading at the right pace, checking understanding and using context while reading",
+    ],
+    [
+      "mb-talk-and-listen-5",
+      "adopt",
+      "5SL1; 5SL2; 5L6",
+      "open-ended questions, retelling what you hear and words that connect ideas",
+    ],
   ],
   "6/language": [
     ["point-of-view", "share", "6R6", "point of view and narration"],
-    ["connotation-tone", "share", "6R4; 6L5", "connotation and tone"],
+    ["connotation-tone", "share", "6R4; 6L5; 6L3", "connotation and tone"],
     [
       "persuasive-writing",
       "share",
@@ -405,7 +531,7 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     [
       "roots-analogies",
       "share",
-      "6L4; 6L5",
+      "6L4; 6L5; 6L6",
       "Greek and Latin roots and analogies",
     ],
     ["punctuation-6", "adopt", "6L2", "colons, scripts and transitions"],
@@ -433,6 +559,18 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
       "6L2",
       "spelling correctly with suffix rules, tricky patterns and commonly confused words",
     ],
+    [
+      "mb-planning-and-organizing",
+      "adopt",
+      "6W2",
+      "planning informational writing and organizing it in paragraphs and text patterns",
+    ],
+    [
+      "mb-media-and-bias",
+      "adopt",
+      "6SL5",
+      "how words, pictures and sound work together in media and presentations",
+    ],
   ],
   "7/language": [
     [
@@ -445,7 +583,7 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     [
       "persuasion",
       "share",
-      "7R8; 7SL3",
+      "7R8; 7SL3; 7W1",
       "persuasive appeals and logical fallacies",
     ],
     [
@@ -472,7 +610,7 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     [
       "mb-word-roots",
       "adopt",
-      "7L4",
+      "7L4; 7L6",
       "Greek and Latin roots, prefixes and suffixes",
     ],
     [
@@ -492,6 +630,36 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
       "adopt",
       "7L2",
       "spelling correctly with prefix, suffix and plural rules",
+    ],
+    [
+      "mb-7-reading-strategies",
+      "adopt",
+      "7R1; 7R2",
+      "predicting from evidence in the text, making connections and summarizing",
+    ],
+    [
+      "mb-7-writing-forms",
+      "adopt",
+      "7W2",
+      "planning tools, text forms and patterns for organizing writing",
+    ],
+    [
+      "mb-7-word-choice-voice",
+      "adopt",
+      "7L6; 7SL6",
+      "precise and subject-specific words, voice and formal or informal tone",
+    ],
+    [
+      "mb-7-presenting-design",
+      "adopt",
+      "7SL4; 7SL5",
+      "organizing a talk and designing slides and posters",
+    ],
+    [
+      "mb-7-discussion-skills",
+      "adopt",
+      "7SL1",
+      "listening, paraphrasing and disagreeing respectfully in discussions",
     ],
   ],
   "8/language": [
@@ -547,12 +715,24 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
       "8W7; 8R8",
       "judging sources and whether evidence is relevant, sufficient and logical",
     ],
+    [
+      "respectful-talk-ab",
+      "adopt",
+      "8SL1",
+      "listening actively, sharing ideas and giving helpful feedback in groups",
+    ],
+    [
+      "mb-planning-forms-8",
+      "adopt",
+      "8W2",
+      "choosing a text form and organizing pattern for the audience, purpose and tone",
+    ],
   ],
   "9/language": [
     [
       "close-reading",
       "share",
-      "9-10R1; 9-10R2",
+      "9-10R1; 9-10R2; 9-10R3",
       "inference, theme and the author's craft",
     ],
     [
@@ -570,7 +750,7 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     [
       "word-parts-9",
       "adopt",
-      "9-10L4",
+      "9-10L4; 9-10L6",
       "roots, prefixes and meaning in context",
     ],
     [
@@ -606,7 +786,7 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     [
       "wa-g9-research-and-credibility",
       "adopt",
-      "9-10W6; 9-10W7",
+      "9-10W6; 9-10W7; 9-10R8",
       "research questions, conflicting sources, credibility and citing",
     ],
     [

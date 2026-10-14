@@ -220,4 +220,72 @@ export const lessons: GradeLessons = {
     ["x − 3 = 5, so x = 8.", "x − 3 = −5, so x = −2."],
     "x = −2 or x = 8",
   ),
+  // New York
+  "math/ny-g9-two-variable-inequalities": lesson(
+    ["The graph of an equation in x and y is every point that makes it true.", "To graph y > mx + b, draw the line y = mx + b dashed (solid for ≥ or ≤) and shade the side that works.", "The solutions of a system of inequalities are where the shaded half-planes overlap."],
+    "Is (2, 5) a solution of y > 2x − 1?",
+    ["Put in x = 2: 2(2) − 1 = 3.", "Is 5 > 3? Yes."],
+    "Yes, it is in the shaded half-plane",
+  ),
+  "math/ny-g9-comparing-functions": lesson(
+    ["Key features: intercepts, where a function rises or falls, and its greatest or least value.", "To compare two functions shown in different ways, find the same feature in each, such as the rate of change.", "Exponential growth, like 2ˣ, eventually passes any linear or quadratic growth."],
+    "f(x) = 3x + 1. g has values 2, 7, 12 at x = 0, 1, 2. Which grows faster?",
+    ["f grows by 3 for each 1 in x.", "g grows by 5 for each 1 in x."],
+    "g",
+  ),
+  "math/ny-g9-parabolas": lesson(
+    ["Factored form y = (x − r)(x − s) shows the zeros r and s.", "Vertex form y = (x − h)² + k shows the vertex (h, k).", "To solve a line and a parabola together, set the two expressions for y equal and solve the quadratic."],
+    "Where do y = x² and y = x + 2 meet?",
+    ["x² = x + 2, so x² − x − 2 = 0.", "(x − 2)(x + 1) = 0, so x = 2 or x = −1.", "y = 4 or y = 1."],
+    "(2, 4) and (−1, 1)",
+  ),
+  "math/ny-g9-units-accuracy": lesson(
+    ["Write the units with every number; they show which numbers to multiply or divide.", "Units cancel like factors: (gallons/minute) × minutes = gallons.", "Report an answer only as accurately as the measurements allow, and money to the nearest cent."],
+    "A hose sprays 4 gallons per minute. How many gallons in 2 hours?",
+    ["2 hours × 60 minutes per hour = 120 minutes.", "120 minutes × 4 gallons per minute = 480 gallons."],
+    "480 gallons",
+  ),
+  "math/ny-g9-correlation": lesson(
+    ["The correlation coefficient r, found with technology, is between −1 and 1.", "Its sign gives the direction; closeness to 1 or −1 gives the strength of the linear pattern.", "r near 0 means little linear relationship. A strong r never proves cause."],
+    "r = −0.91 for a car's age and its value. What does it mean?",
+    ["The sign is negative: value tends to fall as age rises.", "0.91 is close to 1: the points lie close to a line."],
+    "A strong negative correlation",
+  ),
+  // California
+  "math/ca-g9-radicals": lesson(
+    ["(8^(1/3))³ = 8, so 8^(1/3) is the cube root of 8.", "x^(m/n) means the nth root of x, raised to the power m.", "To simplify a square root, take out a perfect square factor: √50 = √25 × √2 = 5√2."],
+    "What is 16^(3/4)?",
+    ["The fourth root of 16 is 2.", "2³ = 8."],
+    "8",
+  ),
+  "math/ca-g9-quantities": lesson(
+    ["Write the units with every number and treat them like factors.", "Choose a quantity that fits the question, often a rate like price per ounce.", "Report an answer only as precisely as the measurements allow."],
+    "A snail moves 3 feet per minute. How many inches per minute is that?",
+    ["3 feet/minute × 12 inches/foot.", "The feet cancel: 36 inches/minute."],
+    "36 inches per minute",
+  ),
+  "math/ca-g9-graphs-in-context": lesson(
+    ["Key features of a graph tell a story: intercepts, the highest or lowest point, and where it rises or falls.", "To compare two functions, find the same feature in each form: a rate of change or a starting value.", "To write an equation, find the starting amount and the rate."],
+    "A gym charges $25 to join plus $10 per class. Write the cost C for n classes.",
+    ["The starting amount is 25.", "The rate is 10 per class."],
+    "C = 10n + 25",
+  ),
+  "math/ca-g9-quadratic-models": lesson(
+    ["Factored form y = (x − a)(x − b) shows the zeros a and b.", "Vertex form y = (x − h)² + k shows the turning point (h, k).", "A thrown object's height is often h = −16t² + vt + h₀ in feet."],
+    "When does a ball with height h = −16t² + 48t land?",
+    ["−16t² + 48t = −16t(t − 3).", "h = 0 when t = 0 or t = 3."],
+    "After 3 seconds",
+  ),
+  "math/ca-g9-inverse-growth": lesson(
+    ["An inverse function undoes a function: it swaps inputs and outputs.", "To find it, write y = f(x), swap x and y, and solve for y.", "An exponential function with base above 1 eventually passes any linear or quadratic one."],
+    "Find the inverse of f(x) = 2x + 3.",
+    ["x = 2y + 3.", "x − 3 = 2y, so y = (x − 3) ÷ 2."],
+    "f⁻¹(x) = (x − 3) ÷ 2",
+  ),
+  "math/ca-g9-correlation": lesson(
+    ["The correlation coefficient r is always between −1 and 1.", "Its sign gives the direction; the closer to 1 or −1, the stronger the linear relationship.", "A strong correlation does not prove that one thing causes the other."],
+    "What does r = −0.9 tell you?",
+    ["The sign is negative: y tends to fall as x rises.", "0.9 is close to 1: the points hug a line."],
+    "A strong negative linear relationship",
+  ),
 };

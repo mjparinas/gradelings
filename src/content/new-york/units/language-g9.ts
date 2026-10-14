@@ -1,4 +1,341 @@
 import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
 
-// New York's own Grade 9 language units (`ny-` ids).
-export const UNITS: Unit[] = [];
+// New York's own Grade 9 language units (`ny-` ids), citing the 9–10 band. No shared unit New York can use practises
+// 9-10R8 (evaluating an argument's reasoning and evidence), 9-10R9 (criteria for quality and connections across texts),
+// 9-10W1 (arguments with valid reasoning and sufficient evidence), 9-10W3 (narrative technique), 9-10W4 (a creative
+// response that shows technique and explains its changes) or 9-10W5 (evidence for analysis, reflection and research),
+// so these banks do. Every passage is original.
+
+const EVALUATE_ARGUMENTS: Q[] = [
+  [
+    "An editorial claims a new highway will help the town, citing only one business owner's opinion. What is the main weakness?",
+    "The evidence is not sufficient to support the claim.",
+    ["The claim is too clearly stated.", "It uses too many statistics.", "It has a title."],
+    "One opinion is rarely enough evidence.",
+  ],
+  [
+    "“Since our team won after we got new jerseys, the jerseys must have caused the win.” What is the flaw?",
+    "It assumes that one event caused another just because it came first.",
+    ["It uses too much evidence.", "It cites an expert.", "It gives a counterclaim."],
+    "Coming first does not prove causing.",
+  ],
+  [
+    "“Either we ban phones in school, or students will never learn anything.” Which fallacy is this?",
+    "false dilemma",
+    ["appeal to expert", "valid comparison", "sufficient evidence"],
+    "It pretends there are only two choices.",
+  ],
+  [
+    "“My opponent is a bad speaker, so his plan for the park is wrong.” Which fallacy is this?",
+    "attacking the person instead of the argument",
+    ["appeal to data", "reasoning from evidence", "counterclaim"],
+    "The attack is on the speaker, not the plan.",
+  ],
+  [
+    "Which evidence is most relevant to the claim “Four-day school weeks improve attendance”?",
+    "A district's records show attendance rose after it switched to four days.",
+    ["Students like long weekends.", "Many families travel in summer.", "Some schools have pools."],
+    "Relevant evidence speaks directly to the claim.",
+  ],
+  [
+    "An article supports its claim with data from a company that sells the product it praises. What should a careful reader do?",
+    "Question the evidence's objectivity and look for independent sources.",
+    ["Accept it because data is always true.", "Ignore the claim entirely without reading.", "Assume all companies lie."],
+    "Consider who produced the evidence and why.",
+  ],
+  [
+    "What does it mean to delineate an argument?",
+    "to trace the claim and the reasons and evidence that support it",
+    ["to summarize only the conclusion", "to retell the story's plot", "to list the vocabulary words"],
+    "Delineating means mapping out how the argument works.",
+  ],
+  [
+    "“Everyone is signing up for the new app, so it must be safe.” What is wrong with this reasoning?",
+    "Popularity does not prove safety.",
+    ["It uses too many facts.", "It is a valid conclusion.", "It cites a credible study."],
+    "This is a bandwagon appeal.",
+  ],
+  [
+    "Which statement is a valid conclusion from this evidence? “In three studies, students who slept 9 hours scored higher than those who slept 6.”",
+    "More sleep may be linked to better scores.",
+    ["Sleep is the only factor in scores.", "Everyone should sleep 12 hours.", "Scores have nothing to do with health."],
+    "A valid conclusion doesn't overreach the evidence.",
+  ],
+  [
+    "Which criterion is most useful for judging the quality of a novel?",
+    "how well its characters, structure and language develop its themes",
+    ["how many copies it sold in a week", "how heavy the book is", "the color of the cover"],
+    "Choose criteria about craft and meaning.",
+  ],
+  [
+    "You develop criteria to judge speeches. Which set is strongest?",
+    "clear claim, sound reasoning, credible evidence and effective delivery",
+    ["length, volume and the speaker's clothing", "number of jokes and slides", "the speaker's fame"],
+    "Criteria should match what makes a speech effective.",
+  ],
+  [
+    "A modern novel retells an ancient myth. What connection is most useful to explore?",
+    "how the modern author reshapes the myth's themes for today",
+    ["which book has more pages", "whether the covers match", "who printed each book"],
+    "Look at how ideas are transformed across eras.",
+  ],
+  [
+    "Two essays on the same topic come from writers in different countries. What can comparing them reveal?",
+    "how cultural perspectives shape views of the same issue",
+    ["that one essay must be false", "that both writers are the same person", "nothing worth noting"],
+    "Perspectives differ across cultures.",
+  ],
+  [
+    "Which question best evaluates whether evidence is sufficient?",
+    "Is there enough evidence, from enough sources, to support the claim?",
+    ["Is the evidence printed in bold?", "Is the evidence the longest paragraph?", "Does the evidence rhyme?"],
+    "Sufficient means there is enough to be convincing.",
+  ],
+  [
+    "A speech claims, “Studies show this plan works,” but names no studies. What is the problem?",
+    "The evidence cannot be checked.",
+    ["The claim is too specific.", "It gives too many sources.", "It is a counterclaim."],
+    "Unnamed evidence is hard to verify.",
+  ],
+  [
+    "A poem from the 1800s and a song from today both protest unfair work conditions. Which connection is strongest?",
+    "Concerns about fairness at work continue across centuries.",
+    ["The poem and song have the same author.", "Work was always fair in the 1800s.", "Songs and poems can't be compared."],
+    "Connect the shared idea across eras.",
+  ],
+  [
+    "An author argues that a park should close because “some people have seen litter there.” How strong is this argument?",
+    "Weak: the evidence is vague and does not justify closing the park.",
+    ["Strong: litter proves the park is dangerous.", "Strong: it cites many studies.", "Weak: it has too much data."],
+    "Ask whether the evidence matches the size of the claim.",
+    true,
+  ],
+  [
+    "“If we let students choose one elective, soon they'll want to choose all their classes, and then there will be no rules.” Which fallacy is this?",
+    "slippery slope",
+    ["valid cause and effect", "appeal to evidence", "sound reasoning"],
+    "It claims one step leads to an extreme chain of events.",
+    true,
+  ],
+  [
+    "Which revision makes a claim more defensible?",
+    "Many teens would benefit from later school start times.",
+    ["All teens hate mornings.", "Every school must start at noon.", "Nobody learns before 9 a.m."],
+    "Avoid absolute words that evidence can't support.",
+    true,
+  ],
+  [
+    "You compare two documentaries on the same event. Which evaluation is most balanced?",
+    "The first uses more primary sources, while the second explains causes more clearly.",
+    ["The first is better because it's longer.", "Documentaries are all biased, so neither matters.", "The second is better because the music is louder."],
+    "Use specific criteria for each strength.",
+    true,
+  ],
+  [
+    "Which statement best evaluates the reasoning in this argument? “Cities with more libraries have higher literacy, so libraries alone raise literacy.”",
+    "The conclusion ignores other factors that could explain the link.",
+    ["The reasoning is flawless.", "Libraries lower literacy.", "The argument has no claim."],
+    "Correlation is not the same as cause.",
+    true,
+  ],
+  [
+    "A historical speech and a modern essay both argue for voting rights. What should a reader examine to connect them?",
+    "how each uses evidence and appeals for its own audience and era",
+    ["which one is shorter", "which uses more commas", "which was printed first"],
+    "Compare how the arguments work in their contexts.",
+    true,
+  ],
+  [
+    "Which piece of evidence is irrelevant to the claim “Public transit reduces traffic”?",
+    "Some buses are painted bright colors.",
+    ["Each full bus can replace dozens of cars.", "Cities that added rail lines saw fewer cars downtown.", "Ridership grew as traffic delays fell."],
+    "Find the detail that doesn't address traffic.",
+    true,
+  ],
+  [
+    "Which judgment uses a clear, developed criterion?",
+    "The story's ending is unconvincing because the hero's sudden change is not set up by earlier events.",
+    ["The ending is bad.", "I didn't like the ending.", "The ending was too short."],
+    "Explain why, using a criterion like believability.",
+    true,
+  ],
+];
+
+const WRITING_CRAFT: Q[] = [
+  [
+    "Which claim is precise and arguable for an essay about a novel?",
+    "The novel suggests that loyalty to family can conflict with personal freedom.",
+    ["The novel is about a family.", "The novel has twenty chapters.", "The novel was published last year."],
+    "A strong claim takes a position others could debate.",
+  ],
+  [
+    "Which counterclaim would a fair argument for later school start times address?",
+    "A later start could conflict with after-school jobs and sports.",
+    ["Teens need sleep.", "Mornings are early.", "School buses exist."],
+    "A counterclaim is a real objection to the claim.",
+  ],
+  [
+    "Which sentence best shows valid reasoning that links evidence to a claim?",
+    "Because the town's flooding increased after wetlands were paved, restoring wetlands could reduce flood damage.",
+    ["Flooding is bad, so we should do something.", "Wetlands are pretty.", "Everyone knows wetlands help."],
+    "Valid reasoning explains how the evidence supports the claim.",
+  ],
+  [
+    "Which conclusion best strengthens an argument?",
+    "By funding the program now, the city prevents larger costs later, a choice that benefits every resident.",
+    ["That is my essay.", "In conclusion, I said a lot.", "Thank you for reading my essay."],
+    "Conclusions restate the claim and its significance.",
+  ],
+  [
+    "Which narrative opening establishes multiple points of view?",
+    "From the window, Mara watched the storm with dread; below, her brother ran into the rain laughing.",
+    ["There was a storm.", "This story is about weather.", "Storms are dangerous."],
+    "Show how different characters see the same moment.",
+  ],
+  [
+    "Which technique gives a story a well-structured sequence even when it jumps in time?",
+    "clear time signals and a consistent return to the present-day frame",
+    ["random jumps with no signals", "removing all transitions", "putting events in alphabetical order"],
+    "Readers need signposts for time shifts.",
+  ],
+  [
+    "Which detail is well-chosen to reveal character?",
+    "Even in the rush, Sami stopped to straighten the crooked picture frame.",
+    ["Sami had dark hair.", "Sami was in the hallway.", "It was 3:15."],
+    "Choose details that show who a character is.",
+  ],
+  [
+    "Which ending reflects on the experience and resolves the narrative?",
+    "The bridge was gone, but as we rebuilt it plank by plank, I understood that some things are stronger for being broken.",
+    ["The bridge broke.", "We went home after that.", "It was a long day."],
+    "A strong ending resolves the conflict and reflects on it.",
+  ],
+  [
+    "Which technique creates tension by controlling what readers know?",
+    "delaying a key reveal until late in the story",
+    ["explaining everything in the first line", "listing all events in a table", "repeating the title"],
+    "Withholding information builds suspense.",
+  ],
+  [
+    "You rewrite a famous tragedy as a modern short story. What shows strong understanding of technique and genre?",
+    "keeping the tragic structure while explaining how the new setting changes the meaning",
+    ["changing only the character names", "copying the original exactly", "removing the conflict"],
+    "Explain how and why your version diverges.",
+  ],
+  [
+    "Which creative response best demonstrates knowledge of a poem's techniques?",
+    "a new poem that uses the same extended metaphor to explore a different subject",
+    ["a list of the poem's line numbers", "the poem copied in a new font", "a summary of the poet's birthplace"],
+    "Use the original's techniques in a new way.",
+  ],
+  [
+    "Which sentence best introduces and analyzes a quotation?",
+    "When the narrator calls the city “a machine that forgot its makers,” the metaphor exposes the cost of progress.",
+    ["Here is a quote about a city.", "“A machine that forgot its makers.” That's the quote.", "The city is mentioned in the book."],
+    "Integrate the quote and explain its significance.",
+  ],
+  [
+    "For a research paper on microplastics, which evidence is most credible?",
+    "a peer-reviewed study measuring microplastics in drinking water",
+    ["a viral video with no source", "a blog post from an unknown author", "a friend's guess"],
+    "Peer-reviewed research is reviewed by experts.",
+  ],
+  [
+    "Which reflection uses evidence well?",
+    "The line “we were never strangers, only unintroduced” made me rethink how I treat new classmates.",
+    ["I liked the book a lot.", "The book was long.", "The book has a nice cover."],
+    "Tie a specific detail to your own thinking.",
+  ],
+  [
+    "Which analysis uses evidence from both literary and informational texts?",
+    "The memoir's description of hunger matches the article's data on food shortages in that decade.",
+    ["The memoir is sad.", "The article has charts.", "I read two texts."],
+    "Combine evidence from each type of text.",
+  ],
+  [
+    "Which technique slows pacing to emphasize a key moment?",
+    "describing a single second in sensory detail",
+    ["summarizing a year in one sentence", "skipping the moment", "adding an index"],
+    "Expanding time highlights importance.",
+  ],
+  [
+    "Which revision makes an argument's evidence sufficient?",
+    "Add a second study and national data that support the first source.",
+    ["Repeat the same source twice.", "Add a personal opinion.", "Remove the evidence."],
+    "Sufficient evidence comes from more than one source.",
+    true,
+  ],
+  [
+    "Which sentence acknowledges a counterclaim fairly?",
+    "Critics are right that the program is costly; however, its long-term savings outweigh the upfront price.",
+    ["Critics are foolish.", "No one disagrees.", "Anyone who disagrees hasn't thought about it."],
+    "Fairly acknowledge the strength of the other side, then respond.",
+    true,
+  ],
+  [
+    "Which narrative choice best develops a theme of isolation?",
+    "repeating images of closed doors and empty chairs throughout the story",
+    ["adding a cheerful party scene with no purpose", "describing the weather once", "listing the characters' ages"],
+    "Motifs can build a theme.",
+    true,
+  ],
+  [
+    "A response changes the original story's ending from tragic to hopeful. What makes the change effective?",
+    "explaining how the new ending reframes the original's theme",
+    ["not mentioning the original at all", "keeping the change secret", "changing the title only"],
+    "Explain divergences from the original.",
+    true,
+  ],
+  [
+    "Which evidence best supports analysis of a character's internal conflict?",
+    "Her letters say she wants to stay, but every night she packs and unpacks her suitcase.",
+    ["She has a suitcase.", "She writes letters.", "She lives in a city."],
+    "Look for evidence showing opposing desires.",
+    true,
+  ],
+  [
+    "Which argument uses valid reasoning rather than an emotional appeal alone?",
+    "Data from five cities shows bike lanes cut accidents by a third, so our city should build them.",
+    ["Bike lanes are wonderful, and only heartless people oppose them.", "Everyone loves biking.", "Bikes are cool."],
+    "Valid reasoning relies on evidence and logic.",
+    true,
+  ],
+  [
+    "Which narrative technique could show an event from two characters' perspectives?",
+    "alternating chapters narrated by each character",
+    ["a single footnote", "an alphabetical index", "a table of contents"],
+    "Alternating narrators show multiple views.",
+    true,
+  ],
+  [
+    "Which is the strongest research question for an argument essay?",
+    "How effective are community gardens at reducing food insecurity in cities?",
+    ["Do you like gardens?", "What is a garden?", "Are gardens green?"],
+    "A strong research question invites evidence-based argument.",
+    true,
+  ],
+];
+
+export const UNITS: Unit[] = [
+  bankUnit({
+    id: "ny-g9-evaluate-arguments",
+    title: "Evaluating Arguments and Texts",
+    emoji: "⚖️",
+    blurb: "Judge reasoning and evidence, spot fallacies, and judge and connect texts with criteria.",
+    parentNote:
+      "Your child traces an argument's claim, reasons and evidence, judges whether the evidence is relevant and sufficient, spots fallacies such as false dilemmas and slippery slopes, and chooses criteria to judge texts and connect them across eras and cultures.",
+    standards: ["9-10R8; 9-10R9", "evaluating an argument's reasoning and evidence, and judging and connecting texts with criteria"],
+    items: EVALUATE_ARGUMENTS,
+  }),
+  bankUnit({
+    id: "ny-g9-writing-craft",
+    title: "Arguments, Stories and Evidence",
+    emoji: "✏️",
+    blurb: "Claims and counterclaims, narrative technique, creative responses and text evidence.",
+    parentNote:
+      "Your child chooses precise claims, fair counterclaims, valid reasoning and sufficient evidence; narrative techniques such as multiple perspectives, time shifts and reflective endings; creative responses that use an original's techniques; and evidence for analysis and research.",
+    standards: ["9-10W1; 9-10W3; 9-10W4; 9-10W5", "arguments with valid reasoning and sufficient evidence, narrative technique, creative responses and drawing evidence from texts"],
+    items: WRITING_CRAFT,
+  }),
+];

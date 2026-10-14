@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { CRAFT_UNITS } from "./language-g3-craft";
 
 // New York's own Grade 3 language units (`ny-` ids). New York's 3R9 asks children to recognize genres and connect texts
 // to other texts, ideas and cultures; no shared unit practises it, so this bank does. Every passage is original.
@@ -195,4 +196,5 @@ export const UNITS: Unit[] = [
     standards: ["3R9; 3R5", "recognizing genres and connecting texts to other texts, cultures and their own lives"],
     items: GENRES,
   }),
+  ...CRAFT_UNITS,
 ];

@@ -115,6 +115,12 @@ export const lessons: GradeLessons = {
     "5",
     { type: "coins", coins: [1, 1, 1], currency: "USD" },
   ),
+  "math/ny-k-build-shapes": lesson(
+    ["Look at a thing. Which shape is it like? A door is a rectangle.", "Small shapes fit together to make big shapes.", "Two squares side by side make a rectangle."],
+    "Which 2 shapes make a house: walls and a roof?",
+    ["The walls are a square.", "The roof is a triangle."],
+    "A square and a triangle",
+  ),
   // Texas
   "math/tx-k-coins": lesson(
     ["A penny is brown. A nickel, dime and quarter are silver.", "The dime is the smallest coin. The quarter is the biggest.", "Look at the size and the picture to name a coin."],
@@ -127,5 +133,19 @@ export const lessons: GradeLessons = {
     "Is food a need or a want?",
     ["We must eat to live and grow."],
     "a need",
+  ),
+  // California
+  "math/ca-gk-what-to-measure": lesson(
+    ["Some things can be measured: how long, how tall, how heavy.", "You can also measure how much a cup or pot holds.", "One thing can have many measures."],
+    "What can you measure about a pumpkin?",
+    ["Put it on a scale to see how heavy it is.", "Stand it next to cubes to see how tall it is."],
+    "how heavy it is and how tall it is",
+  ),
+  "math/ca-gk-build-shapes": lesson(
+    ["A stick can be one side of a shape.", "A clay ball can be one corner.", "Small shapes can join to make a bigger shape."],
+    "How many sticks make a triangle?",
+    ["A triangle has 3 sides.", "Use 1 stick for each side."],
+    "3 sticks",
+    { type: "shape", shape: "triangle" },
   ),
 };

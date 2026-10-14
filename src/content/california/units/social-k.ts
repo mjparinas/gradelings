@@ -503,6 +503,68 @@ const CITIZENS_K: Q[] = [
   ],
 ];
 
+// Kindergarten: signs, map symbols and the school (K.4.3; K.4.5), and stories of Americans' triumphs (K.6.2).
+
+const SIGNS_SCHOOL_K: Q[] = [
+  ["A red sign with eight sides tells cars to…", "stop", ["go fast", "turn around", "park"], "It is a stop sign."],
+  ["A traffic light is green. Cars can…", "go", ["stop", "honk", "park"], "Green means go."],
+  ["A traffic light is red. Cars must…", "stop", ["go", "speed up", "turn on music"], "Red means stop."],
+  ["A traffic light is yellow. Cars should…", "slow down", ["speed up", "honk", "back up"], "Yellow means get ready to stop."],
+  ["Where should you cross the street?", "at the crosswalk", ["in the middle of the road", "behind a bus", "anywhere"], "Look for the white stripes."],
+  ["A sign shows a person walking. It means…", "people may cross here", ["no walking", "a park is near", "a store is open"], "It is a walk sign."],
+  ["A sign with a bike on it means…", "a place for bikes", ["no people", "a school", "a train"], "The picture tells you."],
+  ["On a map, blue usually shows…", "water", ["roads", "houses", "mountains"], "Lakes and oceans are blue."],
+  ["On a map, a line can show a…", "road", ["cloud", "song", "smell"], "Roads go from place to place."],
+  ["On a map, a dot or star can show a…", "city", ["cloud", "dog", "tree"], "Big places get a mark."],
+  ["On a map, green often shows…", "land or a park", ["water", "the sky", "a road"], "Grass and trees are green."],
+  ["The box that tells what map symbols mean is the…", "map key", ["map lock", "map hat", "map door"], "A key unlocks the map."],
+  ["A tiny tree on a map stands for a…", "park or forest", ["school", "lake", "store"], "A symbol is a little picture."],
+  ["Who leads the whole school?", "the principal", ["the bus driver", "a student", "the cook"], "The principal helps teachers and children."],
+  ["Where can you borrow books at school?", "the library", ["the gym", "the parking lot", "the playground"], "The librarian helps you find books."],
+  ["Who helps you if you feel sick at school?", "the school nurse", ["the coach", "the librarian", "a classmate"], "The nurse has a quiet room."],
+  ["Where do many children eat lunch at school?", "the cafeteria", ["the office", "the library", "the bus"], "Lunch workers serve food there."],
+  ["Who keeps the school clean and fixed?", "the custodian", ["the principal", "the nurse", "the bus driver"], "They sweep and fix things."],
+  ["Who drives children to school on a big yellow bus?", "the bus driver", ["the cook", "the librarian", "the nurse"], "They keep riders safe."],
+  ["Where do grown-ups sign in when they visit school?", "the front office", ["the playground", "the gym", "the garden"], "Visitors check in first."],
+  ["Where do you run and play at recess?", "the playground", ["the office", "the library", "the nurse's room"], "It has slides and swings."],
+  ["Who teaches your class?", "your teacher", ["the bus driver", "the custodian", "the cook"], "Your teacher helps you learn."],
+  ["Where do you play games in PE?", "the gym", ["the library", "the office", "the cafeteria"], "The coach leads games there.", true],
+  ["A sign shows a fire extinguisher. It helps if there is a…", "fire", ["party", "test", "lunch"], "It puts out small fires.", true],
+  ["A school zone sign tells drivers to…", "drive slowly near the school", ["drive fast", "park on the grass", "honk"], "Children are near.", true],
+  ["A map of your classroom shows the room from…", "above", ["inside a box", "under the floor", "far away in space"], "Like a bird looking down.", true],
+  ["A map of your school can help you find the…", "library and the office", ["moon", "ocean floor", "zoo animals"], "Maps show where rooms are.", true],
+];
+
+const STORIES_K: Q[] = [
+  ["Who was the first president of the United States?", "George Washington", ["Abraham Lincoln", "Daniel Boone", "Paul Bunyan"], "His face is on the dollar bill."],
+  ["George Washington led the army that won…", "freedom from Britain", ["a race", "a cooking contest", "a spelling bee"], "That was the American Revolution."],
+  ["George Washington is called the Father of His…", "Country", ["Town", "School", "Farm"], "He helped start our country."],
+  ["Abraham Lincoln grew up in a small home made of…", "logs", ["glass", "ice", "bricks of gold"], "It was a log cabin."],
+  ["Abraham Lincoln loved to learn. He read books by…", "firelight", ["a TV", "a phone", "a computer"], "There were no electric lights."],
+  ["President Lincoln helped end…", "slavery", ["school", "farming", "music"], "He wanted all people to be free."],
+  ["Harriet Tubman was brave. She helped people escape…", "slavery", ["a zoo", "a storm", "a game"], "She led many people to freedom."],
+  ["Daniel Boone was a famous…", "explorer", ["singer", "baker", "pilot"], "He explored the woods of Kentucky."],
+  ["Daniel Boone made a trail so families could move…", "west into Kentucky", ["to the Moon", "under the sea", "to the North Pole"], "It was called the Wilderness Road."],
+  ["Pocahontas was a girl of the Powhatan people in…", "Virginia", ["California", "Alaska", "Hawaii"], "The Powhatan still live in Virginia."],
+  ["Pocahontas is remembered for building friendship between…", "her people and English settlers", ["two schools", "two dogs", "two kings of Rome"], "She met the people at Jamestown."],
+  ["Johnny Appleseed is remembered for planting…", "apple trees", ["rose bushes", "corn mazes", "cactus"], "His real name was John Chapman."],
+  ["Paul Bunyan is a tall tale about a giant…", "lumberjack", ["astronaut", "doctor", "baker"], "His friend was Babe the Blue Ox."],
+  ["A tall tale is a story that…", "stretches the truth for fun", ["is always true", "has no people", "is a song"], "No one is really that big!"],
+  ["Sacagawea helped explorers Lewis and Clark by…", "guiding and talking with people", ["flying a plane", "driving a car", "building a mall"], "She knew the land and languages."],
+  ["Benjamin Franklin flew a kite to learn about…", "lightning", ["birds", "snow", "the Moon"], "He was a great inventor."],
+  ["George Washington Carver found many uses for…", "peanuts", ["rocks", "ice", "glass"], "He was a plant scientist."],
+  ["Rosa Parks bravely would not give up her seat on a…", "bus", ["boat", "plane", "bike"], "She helped change unfair rules."],
+  ["Ruby Bridges was brave when she was six. She…", "went to a new school", ["flew to the Moon", "climbed a mountain", "sailed a ship"], "She helped open schools to all."],
+  ["The Wright brothers flew the first…", "airplane", ["bike", "train", "boat"], "They flew in 1903."],
+  ["Amelia Earhart was a brave…", "pilot", ["chef", "farmer", "painter"], "She flew across the ocean alone."],
+  ["Neil Armstrong was the first person to walk on the…", "Moon", ["Sun", "ocean floor", "North Pole"], "He was an astronaut."],
+  ["Clara Barton was a nurse who started the American…", "Red Cross", ["Post Office", "Zoo", "Bakery"], "It helps people in disasters."],
+  ["Sally Ride was the first American woman to…", "go to space", ["drive a car", "be a teacher", "bake bread"], "She was an astronaut."],
+  ["A story says young George Washington said, I cannot tell a…", "lie", ["joke", "song", "riddle"], "This story teaches honesty.", true],
+  ["Stories of brave people from long ago teach us to…", "keep trying and be brave", ["give up", "be unkind", "break rules"], "Their triumphs show courage.", true],
+  ["A triumph is a…", "big success", ["bad day", "lost toy", "rainy day"], "Winning after hard work.", true],
+];
+
 // Copies of Washington's Kindergarten units, with California items. They come from that state's own grade
 // file, which this grade's download already carries.
 const K = (id: string) => from([...WASHINGTON], id);
@@ -616,5 +678,31 @@ export const SOCIAL_K: Unit[] = [
       "examples of honesty, courage and responsibility, lessons from stories of times past, and the people honored on holidays",
     ],
     items: CITIZENS_K,
+  }),
+  bankUnit({
+    id: "ca-k-signs-and-school",
+    title: "Signs, Maps & My School",
+    emoji: "🛑",
+    blurb: "Traffic signs, map symbols and school helpers",
+    parentNote:
+      "Traffic signs and lights, simple map symbols for water, land, roads and cities, and the places and helpers in a school.",
+    standards: [
+      "K.4.3; K.4.5",
+      "traffic and map symbols, and the school's layout and the jobs people do there",
+    ],
+    items: SIGNS_SCHOOL_K,
+  }),
+  bankUnit({
+    id: "ca-k-american-stories",
+    title: "American Stories",
+    emoji: "📖",
+    blurb: "Brave people and tall tales",
+    parentNote:
+      "The triumphs of people from American history and legend, such as George Washington, Abraham Lincoln, Pocahontas, Daniel Boone and Harriet Tubman, and tall tales such as Paul Bunyan.",
+    standards: [
+      "K.6.2",
+      "the triumphs in American legends and historical accounts, through the stories of people such as Pocahontas, George Washington and Daniel Boone",
+    ],
+    items: STORIES_K,
   }),
 ];

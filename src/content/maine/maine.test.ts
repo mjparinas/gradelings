@@ -62,7 +62,9 @@ describe("Maine", () => {
     const ids = own.map(({ u }) => u.id);
     expect(ids).toEqual(expect.arrayContaining(["me-g1-wabanaki-traditions", "me-g4-wabanaki-nations", "me-g4-governing-maine"]));
     for (const { u, key } of own) {
-      expect(Object.keys(u.standards), `${key} carries only Maine standards`).toEqual(["us-me"]);
+      // Alaska adopts a few of Maine's general units, so a Maine unit may also carry another US state's standards.
+      expect(Object.keys(u.standards), `${key} carries Maine standards`).toContain("us-me");
+      expect(Object.keys(u.standards).filter((f) => !f.startsWith("us-")), `${key} carries only US standards`).toEqual([]);
       expect(key.split("/")[1], `${key} is a social studies unit`).toBe("social");
     }
   });

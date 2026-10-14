@@ -753,6 +753,74 @@ const MEDIA_9: Q[] = [
   ],
 ];
 
+// Grade 9 (Principles of American Democracy), California's own units: citizens and civil society (12.2.2; 12.2.6;
+// 12.3.3; 12.3.4; 12.4.3) and dictatorship and democracy in the world (12.9.4 to 12.9.8). Officeholders change, so
+// 12.4.3 practises how to find one's own representatives and what each office is, never who holds it now. Religion
+// is described historically and neutrally.
+
+const CITIZENS_SOCIETY_9: Q[] = [
+  ["Economic rights include the right to…", "own, use, sell and give away property", ["never pay taxes", "take others' property", "set every price in the economy"], "Property rights are central to a market economy."],
+  ["The Fifth Amendment says private property can't be taken for public use without…", "just compensation", ["a royal order", "a lottery", "the owner's neighbors agreeing"], "This is the takings clause."],
+  ["The right to choose your own job and to join, or not join, a labor union is an example of…", "an economic right", ["a criminal right", "a duty to the king", "a military power"], "Workers choose how to earn a living."],
+  ["Patents and copyrights, which the Constitution lets Congress create, protect…", "inventors' and authors' rights to their work", ["the right to vote", "freedom of religion", "the right to a jury"], "Article I, Section 8."],
+  ["Why are secure property rights important to society?", "people are more willing to work, save and invest when they keep what they earn", ["they let the government take anything", "they stop all trade", "they end competition"], "Incentives matter."],
+  ["The process by which an immigrant becomes a US citizen is called…", "naturalization", ["deportation", "ratification", "nullification"], "It ends with an oath."],
+  ["Most applicants for naturalization must first be lawful permanent residents for at least…", "five years", ["five days", "fifty years", "one month"], "It is three years for many spouses of citizens."],
+  ["To be naturalized, most applicants must show they can…", "read, write and speak basic English and pass a civics test", ["run a business", "play a sport", "speak five languages"], "The civics test covers US history and government."],
+  ["New citizens finish naturalization by taking the…", "Oath of Allegiance", ["Hippocratic Oath", "Pledge of the Senate", "Oath of the Bar"], "They promise to support the Constitution."],
+  ["Under the Fourteenth Amendment, a person born in the United States is…", "a citizen", ["never a citizen", "a citizen only after age 21", "a citizen of another country only"], "This is birthright citizenship."],
+  ["The federal agency that handles naturalization is…", "US Citizenship and Immigration Services (USCIS)", ["the Federal Reserve", "NASA", "the Postal Service"], "It runs the interview and the tests."],
+  ["Many early colonies were founded by religious groups seeking…", "freedom to worship in their own way", ["gold only", "a new king", "to end all religion"], "Puritans, Quakers and Catholics among them."],
+  ["Article VI of the Constitution says there shall be no…", "religious test for public office", ["tax on churches", "freedom of religion", "elections"], "Officials of any faith or none may serve."],
+  ["Churches and religious leaders played a major role in…", "the abolition and civil rights movements", ["writing the Articles of Confederation alone", "the Gold Rush", "the Bank War"], "Many civil rights leaders were ministers."],
+  ["Which is true of religion in the United States today?", "people practice many religions, or none", ["only one religion is allowed", "the government chooses everyone's religion", "religion is illegal"], "Christians, Jews, Muslims, Hindus, Buddhists, Sikhs and others."],
+  ["The First Amendment protects religious diversity by…", "barring an official religion and protecting free exercise", ["requiring one church", "banning worship", "taxing only some faiths"], "Two religion clauses."],
+  ["Civil society is made up of…", "voluntary groups such as charities, clubs, unions and religious groups", ["only government agencies", "only the military", "only political parties in power"], "These groups are separate from government."],
+  ["In a constitutional democracy, groups in civil society can…", "organize freely and try to influence government", ["exist only with the ruler's permission", "never criticize leaders", "be banned for disagreeing"], "Freedom of association."],
+  ["In a totalitarian state, independent groups are usually…", "banned or controlled by the ruling party", ["free to criticize the government", "funded to oppose the government", "the real rulers"], "The state controls nearly all of life."],
+  ["Which would you most likely find in a democracy but not a totalitarian state?", "independent newspapers and opposition parties", ["one official party", "secret police watching critics", "state control of every group"], "Pluralism means many voices."],
+  ["Each state has how many US senators?", "two", ["one", "depends on population", "ten"], "Senators represent the whole state."],
+  ["Your member of the US House of Representatives represents…", "your congressional district", ["the whole country", "only your city council", "another state"], "Districts are drawn by population."],
+  ["A good way to find out who your US representative is would be to…", "enter your address on the House of Representatives' website", ["ask a stranger", "guess from the news", "check a map of another state"], "Districts depend on where you live."],
+  ["After the 2020 census, California has how many members in the US House?", "52", ["2", "100", "435"], "California has the largest delegation."],
+  ["Which is the best way to contact your members of Congress about an issue?", "call, email or write to their offices", ["post on a random website", "write to the Supreme Court", "tell the governor"], "Offices keep track of constituents' views."],
+  ["The officials who represent you in the legislative branch of the national government are…", "your two US senators and your US representative", ["the president and vice president", "your mayor and city council", "Supreme Court justices"], "Congress has two houses.", true],
+  ["Why should you look up your representatives again after an election or redistricting?", "officeholders and district lines can change", ["they never change", "representatives serve for life", "districts are random each day"], "Check a current official source.", true],
+  ["How does a market economy depend on economic rights?", "people must be free to own property, make contracts and choose work", ["the government must own all property", "contracts must be banned", "no one may change jobs"], "Rights create incentives.", true],
+];
+
+const DICTATORSHIP_DEMOCRACY_9: Q[] = [
+  ["After World War I, Italy's economic troubles and fear of communism helped bring to power…", "Benito Mussolini and the Fascists", ["Nelson Mandela", "Simón Bolívar", "Lech Wałęsa"], "He took power in 1922."],
+  ["In Germany, hyperinflation, the Great Depression and anger at the Treaty of Versailles helped…", "Adolf Hitler and the Nazis rise to power", ["restore the monarchy peacefully", "create a strong democracy", "end all political parties fairly"], "Hitler became chancellor in 1933."],
+  ["One consequence of Nazi tyranny in Germany was…", "the Holocaust, the murder of six million Jews and millions of others", ["the fall of the Berlin Wall", "the end of World War I", "the Mexican Revolution"], "It was genocide."],
+  ["In 1930s Japan, economic crisis helped…", "military leaders gain control of the government", ["Japan become a democracy", "the emperor give up power", "Japan join the Allies"], "Military rule led to war in Asia."],
+  ["The tyrannies of Germany, Italy and Japan led to…", "World War II", ["the Cold War's end", "the American Revolution", "the War of 1812"], "The Axis powers were defeated in 1945."],
+  ["Which condition often helps a dictator rise to power?", "economic crisis and fear", ["peace and prosperity", "strong courts and free press", "high trust in elections"], "People may trade freedom for promises of order."],
+  ["A coup is…", "the sudden, illegal seizure of power, often by the military", ["a fair election", "a court ruling", "a peaceful protest"], "Many 20th-century dictators took power this way."],
+  ["Which is a form of illegitimate power dictators use to hold office?", "rigging elections and jailing opponents", ["holding free and fair elections", "obeying term limits", "protecting a free press"], "Illegitimate means not by lawful, fair means."],
+  ["Augusto Pinochet took power in Chile in 1973 through…", "a military coup", ["a free election", "a royal inheritance", "a popular vote"], "His rule saw thousands of opponents killed or jailed."],
+  ["Idi Amin of Uganda is an example of a dictator who…", "seized power in a coup and ruled through terror", ["was elected and stepped down", "ended apartheid", "wrote a constitution guaranteeing rights"], "He took power in 1971."],
+  ["Dictators often use propaganda, which is…", "information spread to promote one side and silence others", ["neutral news", "a fair election", "a court case"], "Posters, broadcasts and rallies."],
+  ["A cult of personality is when a leader…", "is praised as a hero beyond question by state media", ["shares power equally", "is unknown to the public", "obeys the courts"], "Statues and portraits are everywhere."],
+  ["The Mexican Revolution, which began in 1910, was against the long rule of…", "Porfirio Díaz", ["Benito Juárez", "Fidel Castro", "Hernán Cortés"], "Díaz had ruled for over 30 years."],
+  ["Emiliano Zapata, a leader of the Mexican Revolution, fought for…", "land for poor farmers", ["a return to Spanish rule", "communist rule from Moscow", "a king"], "His slogan was \"Land and Liberty.\""],
+  ["The Mexican Constitution of 1917 included…", "land reform and workers' rights", ["a return to Spanish rule", "an official monarchy", "a ban on all schools"], "It is still in force."],
+  ["In the early 1800s, Simón Bolívar led revolutions that won independence from…", "Spain", ["Portugal", "Britain", "France"], "Venezuela, Colombia, Ecuador, Peru and Bolivia."],
+  ["The Cuban Revolution of 1959, led by Fidel Castro, created a…", "communist state", ["constitutional monarchy", "multiparty democracy", "Spanish colony"], "It overthrew the dictator Fulgencio Batista."],
+  ["Communism, as Karl Marx described it, aims at…", "a classless society with property owned in common", ["rule by a king", "free markets with private businesses", "rule by religious leaders"], "Marx and Engels wrote The Communist Manifesto in 1848."],
+  ["Communist governments in the 20th century usually kept control through…", "one-party rule, secret police and censorship", ["free elections", "a free press", "independent courts"], "Opposition was not allowed."],
+  ["In 1956, Hungarians rose up against communist rule, but the uprising was…", "crushed by Soviet tanks", ["successful at once", "supported by Soviet troops", "ignored by the Soviet Union"], "Thousands were killed."],
+  ["The Prague Spring of 1968 was an attempt to reform communism in…", "Czechoslovakia", ["Poland", "Cuba", "China"], "Warsaw Pact troops ended it."],
+  ["In Poland, the independent trade union Solidarity, led by Lech Wałęsa…", "helped end communist rule peacefully", ["supported the Soviet army", "was a communist party", "ruled Hungary"], "It was founded in 1980."],
+  ["Czechoslovakia's peaceful 1989 revolution that ended communist rule is called the…", "Velvet Revolution", ["Glorious Revolution", "Cultural Revolution", "Industrial Revolution"], "Václav Havel became president."],
+  ["South Africa became a full democracy in 1994 when…", "apartheid ended and Nelson Mandela was elected president", ["Britain retook it", "a king was crowned", "elections were abolished"], "All races could vote for the first time."],
+  ["In 1986, the People Power movement in the Philippines…", "peacefully forced out the dictator Ferdinand Marcos", ["made Marcos king", "ended all elections", "joined the Soviet Union"], "Corazon Aquino became president."],
+  ["Which conditions help new democracies succeed?", "the rule of law, a free press, education and an active civil society", ["one-party rule", "secret police", "censorship"], "Institutions protect freedom."],
+  ["India, independent since 1947, is often called the world's…", "largest democracy", ["oldest monarchy", "smallest republic", "first communist state"], "Hundreds of millions vote in its elections.", true],
+  ["Why did many movements against communist rule in Eastern Europe succeed in 1989 but fail in 1956 and 1968?", "the Soviet Union no longer sent tanks to stop them", ["the movements were violent in 1989", "communism became popular", "the US invaded"], "Soviet leader Gorbachev chose not to intervene.", true],
+  ["Chile returned to democracy in 1990 after voters in a 1988 plebiscite…", "voted against keeping Pinochet in power", ["voted for a king", "chose communism", "abolished elections"], "A plebiscite is a direct vote of the people.", true],
+];
+
 // Copies of Washington's and Oregon's Grade 9 units, with California items. They come from that state's own grade
 // file, which this grade's download already carries.
 const K = (id: string) => from([...WASHINGTON, ...OREGON], id);
@@ -987,5 +1055,31 @@ export const SOCIAL_9: Unit[] = [
       "a free and responsible press, the roles of broadcast, print and electronic media, and how officials use media to shape public opinion",
     ],
     items: MEDIA_9,
+  }),
+  bankUnit({
+    id: "ca-g9-citizens-and-society",
+    title: "Citizens & Civil Society",
+    emoji: "🗳️",
+    blurb: "Economic rights, naturalization and your representatives",
+    parentNote:
+      "How economic rights are secured, how a person becomes a citizen through naturalization, the historical role of religion and religious diversity, civil society in democracies and in authoritarian states, and how to find and contact your own members of Congress (no current officeholders are named, since they change).",
+    standards: [
+      "12.2.2; 12.2.6; 12.3.3; 12.3.4; 12.4.3",
+      "economic rights, becoming a citizen through naturalization, the role of religion and religious diversity, civil society in democracies and authoritarian states, and identifying one's representatives in Congress",
+    ],
+    items: CITIZENS_SOCIETY_9,
+  }),
+  bankUnit({
+    id: "ca-g9-dictatorship-democracy",
+    title: "Dictatorship & Democracy",
+    emoji: "🌍",
+    blurb: "Tyrannies, revolutions and new democracies",
+    parentNote:
+      "The conditions that led to tyranny in Italy, Germany and Japan, the illegitimate power 20th-century dictators used, the Mexican and Latin American revolutions, communism and the movements that overthrew it, and the successes of new democracies in Africa, Asia and Latin America.",
+    standards: [
+      "12.9.4; 12.9.5; 12.9.6; 12.9.7; 12.9.8",
+      "how tyrannies arose, the illegitimate power of dictators, Latin American revolutions, communism and the movements against it, and new democracies",
+    ],
+    items: DICTATORSHIP_DEMOCRACY_9,
   }),
 ];

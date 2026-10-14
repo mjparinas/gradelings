@@ -199,4 +199,11 @@ export const lessons: GradeLessons = {
     ["Divide the cost by the amount saved each week: 24 ÷ 4 = 6."],
     "6 weeks",
   ),
+  // New York
+  "math/ny-g3-equal-areas": lesson(
+    ["Split a shape into parts that have equal areas. The parts do not have to look the same.", "If there are 4 equal parts, each part is 1/4 of the whole area.", "To find the area of each part, divide the whole area by the number of parts."],
+    "A rectangle of 12 square units is split into 3 equal parts. What is the area of each part, and what fraction is it?",
+    ["12 ÷ 3 = 4 square units.", "There are 3 equal parts, so each is 1/3."],
+    "4 square units, 1/3 of the whole",
+  ),
 };

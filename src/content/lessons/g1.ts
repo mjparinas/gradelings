@@ -174,6 +174,12 @@ export const lessons: GradeLessons = {
     "2",
   ),
   // New York
+  "math/ny-g1-add-three": lesson(
+    ["To add three numbers, add two of them first.", "Look for two that make 10. They are easy to add.", "Then add the third number."],
+    "Mia has 6 red, 3 blue and 4 green beads. How many beads?",
+    ["6 + 4 = 10.", "10 + 3 = 13."],
+    "13 beads",
+  ),
   "math/ny-g1-coins": lesson(
     ["A penny is 1¢, a nickel 5¢, a dime 10¢ and a quarter 25¢.", "Count dimes by tens: 10, 20, 30.", "Then count on 1 for each penny."],
     "How much are 3 dimes and 4 pennies?",
@@ -193,5 +199,12 @@ export const lessons: GradeLessons = {
     "Max keeps $1 in his piggy bank for a ball. Is he spending or saving?",
     ["He is keeping the money for later."],
     "saving",
+  ),
+  // California
+  "math/ca-g1-three-addends": lesson(
+    ["Some stories have three numbers to add.", "Look for two numbers that make 10, and add them first.", "Then add the last number."],
+    "Mia has 7 red, 4 blue and 3 green beads. How many beads?",
+    ["7 + 3 = 10.", "10 + 4 = 14."],
+    "14 beads",
   ),
 };
