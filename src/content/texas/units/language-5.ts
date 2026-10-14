@@ -1,0 +1,93 @@
+import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
+
+// Texas Grade 5 language units: adages and puns (5.3(D)) with the purposes of hyperbole, stereotyping and anecdote
+// (5.10(G)); and consonant changes (select, selection; music, musician) with the affixes and roots the Grade 5 ELAR
+// TEKS name (trans-, super-, -ive, -logy, geo, photo; 5.2(A), 5.2(B), 5.3(C)).
+
+const ADAGES: Q[] = [
+  ["What is an adage?", "a short, well-known saying that shares a truth", ["a joke built on a word with two meanings", "a long story", "a list of facts"], "Adages are old, wise sayings."],
+  ["What is a pun?", "a joke that plays on a word's different meanings or sounds", ["a wise old saying", "a type of poem", "a true story"], "Puns are wordplay."],
+  ["“The early bird catches the worm” means…", "people who start early often succeed", ["birds only eat in the morning", "worms wake up late", "you should eat breakfast early"], "Adages are not about the literal birds."],
+  ["“Don't count your chickens before they hatch” means…", "don't plan on something before it happens", ["count your chickens carefully", "eggs hatch quickly", "farms need many chickens"], "The eggs might not hatch."],
+  ["“Actions speak louder than words” means…", "what you do matters more than what you say", ["loud people are right", "actions make noise", "talking is rude"], "Think of promises that are not kept."],
+  ["“Practice makes perfect” means…", "doing something often helps you get better", ["you must be perfect to practice", "practice is boring", "nobody is perfect"], "Think of learning an instrument."],
+  ["Which is a pun?", "I used to be a banker, but I lost interest.", ["A penny saved is a penny earned.", "The bank opens at nine.", "Money does not grow on trees."], "Interest means curiosity and money a bank pays."],
+  ["Which is a pun?", "The bicycle couldn't stand up because it was two tired.", ["Look before you leap.", "The bike has two wheels.", "Bicycles need air in the tires."], "Two tired sounds like too tired."],
+  ["“The math book was sad because it had too many problems.” Why is this a pun?", "“problems” means math questions and troubles", ["it rhymes", "it is a fact", "it uses a simile"], "One word, two meanings."],
+  ["Which is an adage?", "Better safe than sorry.", ["I went to the store.", "That joke was so funny.", "The sky is blue today."], "Which one is a well-known saying with advice?"],
+  ["“Two heads are better than one” means…", "working together helps solve problems", ["some people have two heads", "you need two hats", "one person is always wrong"], "Think of teamwork."],
+  ["What is a stereotype?", "an unfair idea that everyone in a group is the same", ["a true fact about one person", "a word that sounds like another", "a short true story"], "Stereotypes lump people together."],
+  ["Which sentence uses a stereotype?", "All teenagers are lazy.", ["Some students like science.", "Lena studies every night.", "Many people enjoy music."], "Which one judges a whole group?"],
+  ["Why is a stereotype a weak way to persuade?", "It judges a whole group unfairly instead of using evidence.", ["It uses too many facts.", "It is always true.", "It is too short."], "Good arguments rely on evidence."],
+  ["Which sentence is hyperbole?", "This homework will take a million years!", ["This homework will take an hour.", "I have homework in math.", "Homework helps me practice."], "Which one is a wild exaggeration?"],
+  ["An author uses hyperbole to…", "exaggerate for emphasis or humor", ["state exact facts", "give a source", "define a word"], "Hyperbole is overstatement on purpose."],
+  ["What is an anecdote?", "a short personal story used to make a point", ["a list of statistics", "a wise old saying", "a joke with two meanings"], "It tells about one time something happened."],
+  ["Why might an article about bike safety include an anecdote?", "to show a real example that makes the point memorable", ["to list the bike's parts", "to give only statistics", "to make the lines rhyme"], "A true story makes readers care."],
+  ["“Where there's a will, there's a way” means…", "if you want something enough, you can find a way", ["you need a written will", "every road has a way out", "wishes always come true"], "Will here means determination."],
+  ["“Don't judge a book by its cover” means…", "don't judge something only by how it looks", ["never buy books", "covers are not important to books", "read the last page first"], "It is about people and things, not just books."],
+  ["Which is a pun about a clock?", "The clock was hungry, so it went back four seconds.", ["A watched pot never boils.", "The clock ticks loudly.", "The clock is on the wall."], "Four seconds sounds like for seconds."],
+  ["“A friend in need is a friend indeed” means…", "a friend who helps when you need it is a true friend", ["friends always need things", "you need many friends", "friends should not ask for help"], "Indeed means truly."],
+  ["“I'm reading a book on gravity. I can't put it down.” Why is it funny?", "“put down” means stop reading and also set down", ["the book is heavy", "gravity is not real", "it rhymes"], "Gravity holds things down."],
+  ["Which is an adage about saving?", "A penny saved is a penny earned.", ["The store is closed today.", "I found a coin outside.", "Pennies are made of metal."], "It gives advice about money."],
+  ["“Haste makes waste” means…", "rushing leads to mistakes", ["trash must be thrown out fast", "waste is always bad", "slow people waste time"], "Haste means hurrying."],
+  ["An ad says, “This is the best snack in the whole universe!” What is it using?", "hyperbole", ["an anecdote", "a pun", "an adage"], "It is a huge exaggeration."],
+  ["“Last summer my little brother almost got lost at sea, so we took swim lessons.” What is this?", "an anecdote", ["a pun", "a stereotype", "an adage"], "It is a short real story used to make a point.", true],
+  ["“Every cloud has a silver lining” means…", "something good can come from a bad situation", ["clouds are made of silver", "it will rain soon", "bad times last forever"], "Look for the hopeful meaning.", true],
+  ["Why do newspaper headlines sometimes use puns?", "to make readers smile and remember them", ["to state the facts plainly", "to cite sources", "to hide the topic"], "Wordplay catches the eye.", true],
+  ["Why might an author show a stereotype on purpose in a story?", "to reveal a character's unfair thinking", ["to prove the stereotype is true", "to list facts", "to make the story shorter"], "Authors can show a character's flaws.", true],
+];
+
+const CHANGES: Q[] = [
+  ["Add -ion to “select”. Which word do you make?", "selection", ["selecsion", "selectshun", "selektion"], "Keep select and add -ion."],
+  ["In “selection,” what sound does the t make?", "/sh/", ["/t/", "/s/", "/k/"], "Say se-lec-shun."],
+  ["Add -ian to “music” to name the person. Which is right?", "musician", ["musican", "musicion", "musishan"], "Keep music and add -ian."],
+  ["In “musician,” the second c sounds like…", "/sh/", ["/k/", "/s/", "/ch/"], "Say mu-si-shun."],
+  ["Which word names a person who works with electricity?", "electrician", ["electrition", "electricion", "electrishan"], "Electric + ian."],
+  ["Add -ion to “act”. Which spelling is right?", "action", ["acsion", "actshun", "aktion"], "Act + ion."],
+  ["Which pair shows a /k/ sound changing to /sh/?", "magic, magician", ["cat, cats", "kick, kicked", "pick, picked"], "Say both words in each pair."],
+  ["Which pair shows a /t/ sound changing to /sh/?", "protect, protection", ["rest, rested", "tap, taps", "want, wanted"], "Say both words in each pair."],
+  ["What does trans- mean in “transport”?", "across", ["under", "before", "without"], "Trans- means across or through."],
+  ["What does super- mean in “superstar”?", "above or beyond", ["under", "again", "not"], "Super- means over or more than."],
+  ["What does -logy mean in “biology”?", "the study of", ["full of", "without", "able to"], "Biology is the study of life."],
+  ["What does -ive mean in “active”?", "having the quality of", ["the study of", "across", "not"], "Active means having the quality of acting."],
+  ["What does the root geo mean?", "earth", ["light", "write", "life"], "Think of geography."],
+  ["What does the root photo mean?", "light", ["earth", "sound", "far"], "A camera uses light."],
+  ["Which word means “the study of the earth”?", "geology", ["biology", "zoology", "photograph"], "geo + logy."],
+  ["What does “photograph” most likely mean?", "a picture made with light", ["a map of the earth", "the study of life", "a loud sound"], "photo + graph (write or draw)."],
+  ["Which word means “to send across”?", "transmit", ["submit", "permit", "admit"], "Trans- means across."],
+  ["A “supermarket” is a market that is…", "very large", ["underground", "very old", "made of glass"], "Super- means above or beyond."],
+  ["Someone “creative” has the quality of…", "creating new things", ["studying rocks", "traveling far", "sleeping late"], "-ive means having the quality of."],
+  ["Which word uses the root geo?", "geography", ["photograph", "telephone", "autograph"], "Look for geo."],
+  ["Which word uses the root photo?", "photosynthesis", ["geology", "biology", "telegraph"], "Look for photo."],
+  ["Which spelling is right?", "decision", ["decition", "desision", "decishun"], "Decide changes to decision."],
+  ["Add -ion to “invent”. Which word is it?", "invention", ["invension", "inventshun", "invencion"], "Invent + ion."],
+  ["What does “zoology” mean?", "the study of animals", ["the study of rocks", "the study of stars", "the study of words"], "-logy means the study of."],
+  ["Which word means “meant to protect”?", "protective", ["protection", "protector", "unprotected"], "-ive describes a quality."],
+  ["What is a “transatlantic” flight?", "a flight across the Atlantic Ocean", ["a flight above the clouds only", "a short flight in one city", "a flight that never lands"], "Trans- means across."],
+  ["Which word shows a /k/ sound changing to /sh/?", "politician", ["cracker", "clinic", "picnic"], "Politics becomes politician.", true],
+  ["What does “superhuman” mean?", "beyond what a normal person can do", ["less than human", "a human again", "not human at all"], "Super- means beyond.", true],
+  ["Which spelling is right?", "mathematician", ["mathematition", "mathematicion", "mathamatician"], "Mathematic + ian.", true],
+  ["What does “photographer” mean?", "a person who makes pictures with light", ["the study of light", "a map of the earth", "a person who studies rocks"], "photo + graph + er.", true],
+];
+
+export const LANGUAGE_5: Unit[] = [
+  bankUnit({
+    id: "tx-g5-adages-and-puns",
+    title: "Adages, Puns & Persuasion",
+    emoji: "😄",
+    blurb: "Old sayings, wordplay, and why writers use hyperbole, stereotypes and anecdotes.",
+    parentNote: "Your child explains common adages and puns, and the purpose of hyperbole, stereotyping and anecdote in what they read.",
+    standards: ["5.3(D); 5.10(G)", "adages and puns, and the purpose of hyperbole, stereotyping and anecdote"],
+    items: ADAGES,
+  }),
+  bankUnit({
+    id: "tx-g5-word-changes",
+    title: "Sound Changes & Word Parts",
+    emoji: "🔬",
+    blurb: "select → selection, music → musician, plus trans-, super-, -ive, -logy, geo and photo.",
+    parentNote: "Your child reads and spells words whose sounds change when a suffix is added (music, musician) and uses the affixes and roots trans-, super-, -ive, -logy, geo and photo.",
+    standards: ["5.2(A); 5.2(B); 5.3(C)", "consonant sound changes and the affixes and roots trans-, super-, -ive, -logy, geo and photo"],
+    items: CHANGES,
+  }),
+];

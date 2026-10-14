@@ -1,0 +1,92 @@
+import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
+
+// Texas Kindergarten language units: what the shared units leave out of the Kindergarten ELAR TEKS. Changing one letter
+// to make a new word and spelling simple words (K.2(B), K.2(C)), and the characters, settings and kinds of stories in
+// well-known children's literature and nursery rhymes (K.7, K.8). Prompts stay under 80 characters for read-aloud.
+
+const CHANGE: Q[] = [
+  ["Change the c in “cat” to h. What word is it now?", "hat", ["hot", "hit", "cap"], "Say h, then the rest: h-at."],
+  ["Change the p in “pig” to b. What word is it now?", "big", ["bag", "pin", "dig"], "Say b, then the rest: b-ig."],
+  ["Change the s in “sun” to r. What word is it now?", "run", ["ran", "sit", "bun"], "Say r, then the rest: r-un."],
+  ["Change the m in “map” to c. What word is it now?", "cap", ["cup", "mop", "can"], "Say c, then the rest: c-ap."],
+  ["Change the d in “dog” to l. What word is it now?", "log", ["leg", "dig", "lot"], "Say l, then the rest: l-og."],
+  ["Change the t in “ten” to h. What word is it now?", "hen", ["hat", "tan", "pen"], "Say h, then the rest: h-en."],
+  ["Change the first letter of “rug” to b. What word is it?", "bug", ["bag", "rag", "bun"], "Say b, then the rest: b-ug."],
+  ["Change the first letter of “wet” to n. What word is it?", "net", ["nut", "wed", "not"], "Say n, then the rest: n-et."],
+  ["Change the last letter of “cat” to n. What word is it?", "can", ["cap", "cot", "man"], "Keep c-a and add n."],
+  ["Change the last letter of “bed” to g. What word is it?", "beg", ["bag", "bud", "leg"], "Keep b-e and add g."],
+  ["Change the last letter of “hop” to t. What word is it?", "hot", ["hat", "top", "pot"], "Keep h-o and add t."],
+  ["Change the last letter of “bus” to g. What word is it?", "bug", ["big", "rug", "but"], "Keep b-u and add g."],
+  ["Change the middle letter of “pit” to a. What word is it?", "pat", ["pot", "pet", "tap"], "Keep p and t, put a in the middle."],
+  ["Change the middle letter of “hot” to a. What word is it?", "hat", ["hit", "hut", "cat"], "Keep h and t, put a in the middle."],
+  ["Change the middle letter of “bug” to a. What word is it?", "bag", ["big", "beg", "rag"], "Keep b and g, put a in the middle."],
+  ["Change the middle letter of “pen” to i. What word is it?", "pin", ["pan", "pun", "tin"], "Keep p and n, put i in the middle."],
+  ["Put s in front of “top”. What word is it?", "stop", ["spot", "tops", "pots"], "Say s, then top: s-top."],
+  ["Put s in front of “nap”. What word is it?", "snap", ["naps", "span", "pans"], "Say s, then nap: s-nap."],
+  ["Take the s off “spin”. What word is left?", "pin", ["pen", "spun", "tin"], "Cover the s. What is left?"],
+  ["Take the t off “trip”. What word is left?", "rip", ["tip", "trap", "lip"], "Cover the t. What is left?"],
+  ["“it” turned into “pit”. Which letter was added?", "p", ["t", "i", "b"], "Look at the new first letter."],
+  ["Which word is spelled m-a-p?", "map", ["mop", "nap", "mat"], "Find m, then a, then p."],
+  ["Which word is spelled s-i-t?", "sit", ["sat", "set", "tis"], "Find s, then i, then t."],
+  ["Which word is spelled f-r-o-g?", "frog", ["fog", "from", "flag"], "Find f, r, o, then g."],
+  ["Which word is spelled s-t-o-p?", "stop", ["spot", "step", "top"], "Find s, t, o, then p."],
+  ["Which word is spelled c-r-a-b?", "crab", ["cab", "crib", "grab"], "Find c, r, a, then b."],
+  ["Change the last letter of “cut” to p. What word is it?", "cup", ["cap", "pup", "cub"], "Keep c-u and add p.", true],
+  ["Change the m in “mask” to t. What word is it now?", "task", ["tusk", "mast", "desk"], "Say t, then the rest: t-ask.", true],
+  ["“ban” turned into “band”. Which letter was added?", "d", ["t", "n", "b"], "Look at the new last letter.", true],
+  ["Change the first letter of “pond” to b. What word is it?", "bond", ["band", "pony", "bend"], "Say b, then the rest: b-ond.", true],
+];
+
+const STORIES: Q[] = [
+  ["A character is…", "a person or animal in a story", ["the place a story happens", "the name on the cover", "the last page"], "Characters do things in the story."],
+  ["The setting is…", "where and when a story happens", ["who is in the story", "the person who drew it", "the title"], "Think of where the story takes place."],
+  ["“Once upon a time…” starts which kind of story?", "a fairy tale", ["a recipe", "a map", "a shopping list"], "Many fairy tales start this way."],
+  ["A fable often ends with…", "a lesson", ["a recipe", "a phone number", "a map"], "Fables teach something."],
+  ["Who are the main characters in “The Three Little Pigs”?", "the pigs and the wolf", ["a farmer and a cow", "a king and a queen", "a duck and a frog"], "Who builds houses, and who blows?"],
+  ["In the rhyme, where did Jack and Jill go?", "up the hill", ["to the shop", "to the sea", "to bed"], "Jack and Jill went up the…"],
+  ["“Hickory dickory dock, the mouse ran up the…”", "clock", ["rock", "sock", "tree"], "It says tick-tock."],
+  ["Nursery rhymes often have words that…", "rhyme", ["are very long", "are numbers", "are in a list"], "Cat, hat, sat."],
+  ["Which one is most likely a setting?", "a dark forest", ["a brave girl", "a happy dog", "a big smile"], "A setting is a place."],
+  ["Which one is a character?", "a brave girl", ["a dark forest", "a sunny beach", "a tall castle"], "A character is someone in the story."],
+  ["Mia the cat naps in the kitchen. What is the setting?", "the kitchen", ["Mia", "the cat", "a nap"], "Where does Mia nap?"],
+  ["Ben the bear looks for honey in the woods. Who is the character?", "Ben the bear", ["the woods", "honey", "a tree"], "Who is looking?"],
+  ["Which kind of story has talking animals and a lesson?", "a fable", ["a phone book", "a weather report", "a calendar"], "Think of the tortoise and the hare."],
+  ["In “Goldilocks and the Three Bears,” who ate the porridge?", "Goldilocks", ["Papa Bear", "a wolf", "a pig"], "She tasted every bowl."],
+  ["In fairy tales, things often come in…", "threes", ["tens", "hundreds", "twenties"], "Three pigs, three bears, three wishes."],
+  ["A story's problem is…", "what goes wrong", ["the title", "the cover", "the setting"], "The characters try to fix it."],
+  ["Which place could be a fairy tale setting?", "a castle", ["a gas station", "a parking lot", "a car wash"], "Kings and queens live there."],
+  ["What do we call the most important person in a story?", "the main character", ["the setting", "the title", "the cover"], "The story is mostly about them."],
+  ["A girl rides a bus to the zoo. What is the setting?", "a bus and the zoo", ["a girl", "a ticket", "the driver"], "Where does it happen?"],
+  ["“Twinkle, twinkle, little star.” Which word rhymes with star?", "are", ["moon", "sky", "light"], "How I wonder what you…"],
+  ["Who wins the race in “The Tortoise and the Hare”?", "the tortoise", ["the hare", "the fox", "nobody"], "Slow and steady…"],
+  ["What is the lesson of “The Tortoise and the Hare”?", "slow and steady wins", ["always run fast", "never race", "sleep a lot"], "The hare took a nap."],
+  ["In a play, the characters…", "act out the story", ["draw the pictures", "count the pages", "sell the books"], "People pretend to be the characters."],
+  ["The Little Red Hen asked for help. Who helped her?", "nobody", ["the dog", "the cat", "the duck"], "She did it all herself."],
+  ["Which clue shows a story happens at night?", "the moon is out", ["the sun is high", "kids eat lunch", "birds wake up"], "What do you see at night?"],
+  ["Which words tell a setting?", "in the snowy park", ["a tall man", "ran very fast", "a red hat"], "A setting tells where."],
+  ["Sam cried when his kite broke. How did Sam feel?", "sad", ["happy", "silly", "sleepy"], "Crying shows a feeling.", true],
+  ["Why didn't the brick house fall down?", "bricks are strong", ["the wolf slept", "it rained", "the pigs left"], "Straw and sticks fell. Bricks did not.", true],
+  ["A story about a real day at your school is…", "a true story", ["a fairy tale", "a fable", "a nursery rhyme"], "It really happened.", true],
+];
+
+export const LANGUAGE_K: Unit[] = [
+  bankUnit({
+    id: "tx-k-change-a-letter",
+    title: "Change a Letter",
+    emoji: "🔤",
+    blurb: "Swap one letter to make a new word, and spell short words.",
+    parentNote: "Your child changes, adds or takes away one letter (it, pit, tip) to make new words and picks how short words are spelled.",
+    standards: ["K.2(B); K.2(C)", "making new words by changing a letter, and spelling short words"],
+    items: CHANGE,
+  }),
+  bankUnit({
+    id: "tx-k-story-friends",
+    title: "Story Friends",
+    emoji: "🏰",
+    blurb: "Characters, settings, fairy tales, fables and nursery rhymes.",
+    parentNote: "Your child names characters and settings and recognizes fairy tales, fables and nursery rhymes they may know from read-alouds.",
+    standards: ["K.7(B); K.7(D); K.8(A); K.8(B)", "characters, settings, fairy tales, fables and nursery rhymes"],
+    items: STORIES,
+  }),
+];

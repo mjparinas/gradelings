@@ -1,4 +1,5 @@
 import type { Unit } from "../../types";
+import { LANGUAGE_7 } from "../units/language-7";
 import { wordRoots as manitobaG7LanguageWordRoots } from "../../manitoba/units/g7-language";
 import { units as ontarioG7Language } from "../../ontario/g7-language";
 import { RML_7 as washingtonLanguageRmlUpperRML_7 } from "../../washington/units/language-rml-upper";
@@ -8,4 +9,4 @@ import { SPELLING_7 as washingtonLanguageSpellingSPELLING_7 } from "../../washin
 // exact unit files, so the grade's download carries only those files. OWN is the units written for Texas.
 export const POOL: readonly Unit[] = [...ontarioG7Language, manitobaG7LanguageWordRoots, ...washingtonLanguageRmlUpperRML_7, washingtonLanguageSpellingSPELLING_7];
 
-export const OWN: readonly Unit[] = [];
+export const OWN: readonly Unit[] = LANGUAGE_7;

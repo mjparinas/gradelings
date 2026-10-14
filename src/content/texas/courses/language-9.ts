@@ -1,4 +1,5 @@
 import type { Unit } from "../../types";
+import { LANGUAGE_9 } from "../units/language-9";
 import { units as manitobaG9MoreLanguage } from "../../manitoba/units/g9-more-language";
 import { units as ontarioG9Language } from "../../ontario/g9-language";
 import { MEDIA_ANALYSIS as oregonLanguageMEDIA_ANALYSIS } from "../../oregon/units/language";
@@ -9,4 +10,4 @@ import { SPELLING_9 as washingtonLanguageSpellingSPELLING_9 } from "../../washin
 // exact unit files, so the grade's download carries only those files. OWN is the units written for Texas.
 export const POOL: readonly Unit[] = [...ontarioG9Language, ...manitobaG9MoreLanguage, ...washingtonLanguageRmlUpperRML_9, washingtonLanguageSpellingSPELLING_9, oregonLanguageMEDIA_ANALYSIS];
 
-export const OWN: readonly Unit[] = [];
+export const OWN: readonly Unit[] = LANGUAGE_9;
