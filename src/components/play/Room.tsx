@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { isRoomOwned, ROOM_ITEMS, ROOM_SLOTS, roomLayout, type RoomItem, type RoomSlot } from "@/lib/room";
 import { sounds } from "@/lib/sound";
+import { useChildSay } from "@/lib/say";
 import { useActiveProfile, useDerived, useStore } from "@/lib/store";
 import { CritterSvg } from "../Critter";
 import { Page } from "../ui";
@@ -38,6 +39,7 @@ export function RoomScene({ layout, companion }: { layout: Partial<Record<RoomSl
 
 export function Room() {
   const profile = useActiveProfile()!;
+  const say = useChildSay();
   const d = useDerived();
   const place = useStore((s) => s.placeRoomItem);
   const updateProfile = useStore((s) => s.updateProfile);
@@ -70,11 +72,11 @@ export function Room() {
             type="button"
             role="tab"
             aria-selected={slot === s.slot}
-            aria-label={s.label}
+            aria-label={say(s.label)}
             onClick={() => setSlot(s.slot)}
             className={`btn h-14 gap-2 px-4 text-lg narrow:min-w-12 narrow:flex-1 narrow:px-1 ${slot === s.slot ? "btn-soft" : ""}`}
           >
-            <span aria-hidden="true">{s.icon}</span> <span className="narrow:hidden">{s.label}</span>
+            <span aria-hidden="true">{s.icon}</span> <span className="narrow:hidden">{say(s.label)}</span>
           </button>
         ))}
       </div>
@@ -106,10 +108,10 @@ export function Room() {
                 if (place(item.id)) sounds.pop(3);
               }}
               className={`btn h-full min-h-32 w-full flex-col gap-1 p-3 ${on ? "btn-good" : ""}`}
-              aria-label={`${item.name}${on ? ", in your room" : owned ? ", owned" : locked ? `, locked: ${item.unlock?.label}` : `, ${item.cost} coins`}`}
+              aria-label={`${say(item.name)}${on ? ", in your room" : owned ? ", owned" : locked ? `, locked: ${item.unlock?.label}` : `, ${item.cost} coins`}`}
             >
               <span aria-hidden="true" className="text-5xl">{item.icon}</span>
-              <span className="text-lg leading-tight font-bold">{item.name}</span>
+              <span className="text-lg leading-tight font-bold">{say(item.name)}</span>
               <span className={`rounded-full px-3 py-0.5 text-sm font-bold ${on ? "bg-white/30" : owned ? "bg-good-soft text-good-dark" : cannotAfford || locked ? "bg-black/5 text-ink-soft" : "bg-[#fff4cc] text-[#7a5700]"}`}>
                 {on ? "In your room ✓" : owned ? "Owned · Use" : locked ? `🔒 ${item.unlock?.label}` : `🪙 ${item.cost}`}
               </span>

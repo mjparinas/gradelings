@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import { TIER_STYLE, visibleTrophies, type Tier, type Trophy, type TrophyCategory } from "@/lib/trophies";
+import { getFramework } from "@/content/frameworks";
+import { localeOf } from "@/content/locale";
+import { useChildSay } from "@/lib/say";
 import { useActiveProfile, useDerived } from "@/lib/store";
 import { CRITTERS, CritterSvg } from "../Critter";
 import { Page, ProgressBar } from "../ui";
@@ -34,6 +37,8 @@ export function TrophyRoom() {
   const profile = useActiveProfile()!;
   const d = useDerived();
   const [filter, setFilter] = useState<"all" | "earned" | "todo">("all");
+  const say = useChildSay();
+  const locale = localeOf(getFramework(profile.framework));
   const ctx = { grade: profile.grade, framework: profile.framework };
   const all = visibleTrophies(d, ctx);
   const earned = all.filter((t) => d.trophies[t.id]);
@@ -112,18 +117,18 @@ export function TrophyRoom() {
                     <TrophyIcon trophy={t} earned={!!got} />
                     <div className="min-w-0 flex-1">
                       <p className="flex items-center gap-2 text-lg font-bold">
-                        {t.hidden && !got ? "Secret trophy" : t.name}
+                        {t.hidden && !got ? "Secret trophy" : say(t.name)}
                         <span className="rounded-full px-2 py-0.5 text-xs font-bold" style={{ background: `${TIER_STYLE[t.tier].colour}33`, color: TIER_STYLE[t.tier].text }}>
                           {TIER_STYLE[t.tier].label}
                         </span>
                       </p>
-                      <p className="font-read text-sm text-ink-soft">{t.hidden && !got ? "Keep playing to discover it!" : t.description}</p>
+                      <p className="font-read text-sm text-ink-soft">{t.hidden && !got ? "Keep playing to discover it!" : say(t.description)}</p>
                       {got ? (
-                        <p className="text-xs font-semibold text-good-dark">Earned {new Date(got).toLocaleDateString("en-CA", { month: "short", day: "numeric", year: "numeric" })}</p>
+                        <p className="text-xs font-semibold text-good-dark">Earned {new Date(got).toLocaleDateString(locale, { month: "short", day: "numeric", year: "numeric" })}</p>
                       ) : (
                         !t.hidden && (
                           <div className="mt-1 flex items-center gap-2">
-                            <ProgressBar value={p.value} max={p.target} height={10} className="flex-1" label={`Progress towards ${t.name}`} />
+                            <ProgressBar value={p.value} max={p.target} height={10} className="flex-1" label={say(`Progress towards ${t.name}`)} />
                             <span className="text-xs font-semibold text-ink-soft">
                               {p.value}/{p.target}
                             </span>

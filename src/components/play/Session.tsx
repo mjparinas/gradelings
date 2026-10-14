@@ -15,6 +15,7 @@ import { celebrationOf } from "@/lib/shop";
 import { sounds } from "@/lib/sound";
 import { speakQuestion } from "@/lib/readaloud";
 import { speak, speakSegments, stopSpeaking } from "@/lib/speech";
+import { useChildSay } from "@/lib/say";
 import { derivedFor, useActiveProfile, useChildSettings, useDerived, useStore } from "@/lib/store";
 import { useBand } from "../band";
 import { Critter, SpeechBubble, type Mood } from "../Critter";
@@ -103,6 +104,7 @@ export function Session({ mode, scope }: { mode: Mode; scope: string }) {
 
 function Runner({ plan }: { plan: Plan }) {
   const profile = useActiveProfile()!;
+  const say = useChildSay();
   const settings = useChildSettings();
   const band = useBand();
   const log = useStore((s) => s.log);
@@ -343,7 +345,7 @@ function Runner({ plan }: { plan: Plan }) {
     return (
       <Page className="items-center justify-center gap-4 text-center">
         <Companion mood="think" size={130} />
-        <p className="text-2xl font-bold">Nothing to practise here yet. Try a lesson first!</p>
+        <p className="text-2xl font-bold">{say("Nothing to practise here yet. Try a lesson first!")}</p>
         <button type="button" className="btn btn-good min-h-14 px-6 text-xl" onClick={() => go("/")}>
           Go home
         </button>
@@ -540,6 +542,7 @@ function comingUp(d: ReturnType<typeof derivedFor>, plan: Plan, goal: number, no
 
 function Summary({ plan, results, startDerived }: { plan: Plan; results: Result[]; startDerived: ReturnType<typeof derivedFor> }) {
   const profile = useActiveProfile()!;
+  const say = useChildSay();
   const d = useDerived();
   const now = useNow();
   const goal = effectiveGoal(useChildSettings(), d, dayKey(now)).minutes;
@@ -629,7 +632,7 @@ function Summary({ plan, results, startDerived }: { plan: Plan; results: Result[
               <p className="text-2xl font-bold" style={{ color: info.colour }}>
                 {info.label} <span className="text-base font-semibold text-ink-soft">({info.kidLabel})</span>
               </p>
-              <p className="font-read text-base text-ink-soft">{nextStep(d.units[unit.key])}</p>
+              <p className="font-read text-base text-ink-soft">{say(nextStep(d.units[unit.key]))}</p>
             </div>
           </div>
         )}

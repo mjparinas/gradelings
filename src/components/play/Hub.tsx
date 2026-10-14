@@ -17,6 +17,7 @@ import type { FlagKey } from "@/lib/flags";
 import { useIsOn } from "@/lib/remoteFlags";
 import { signOutStudent } from "@/lib/account";
 import { go } from "@/lib/router";
+import { useChildSay } from "@/lib/say";
 import { useActiveProfile, useChildSettings, useDerived, useStore } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 import { useBand } from "../band";
@@ -58,6 +59,7 @@ function greeting(name: string, hour: number): string {
 
 export function Hub() {
   const profile = useActiveProfile()!;
+  const say = useChildSay();
   const settings = useChildSettings();
   const d = useDerived();
   const band = useBand();
@@ -98,7 +100,7 @@ export function Hub() {
   const returning = d.totals.answers > 0 && d.streak.current === 0 && d.activeDays > 0 && !d.streak.activeToday;
   const hello = greeting(profile.name, new Date(now).getHours());
   // Little kids get one short line: most can't read yet, and it is read aloud.
-  const message = little
+  const raw = little
     ? minutes >= goal
       ? `You did it, ${profile.name}! 🎉`
       : `${hello} Let's play!`
@@ -113,6 +115,7 @@ export function Hub() {
             ? `A rest-day shield kept your ${d.streak.current}-day streak safe. 🛡️ Play today to keep it going!`
             : `Day ${d.streak.current + 1} of your streak is waiting for you! 🔥`
           : `${hello} ${goal - minutes} more minutes to reach today's goal.`;
+  const message = say(raw);
   useBuddySays(message, little && Boolean(settings?.autoRead));
   const mood = minutes >= goal ? "cheer" : returning ? "sleepy" : "wave";
 
@@ -250,7 +253,7 @@ export function Hub() {
                 </span>
                 <span>
                   <span className="block text-2xl leading-tight font-bold">{t.title}</span>
-                  <span className="block text-sm font-semibold">{t.desc}</span>
+                  <span className="block text-sm font-semibold">{say(t.desc)}</span>
                 </span>
               </button>
             </div>
@@ -310,8 +313,8 @@ export function Hub() {
                 <li key={q.id} className={`flex items-center gap-3 rounded-2xl p-2.5 ${got ? "bg-good-soft" : "bg-paper"}`}>
                   <span className="text-3xl">{got ? "✅" : q.icon}</span>
                   <div className="flex-1">
-                    <p className="font-read text-lg font-bold">{q.title}</p>
-                    <ProgressBar value={value} max={q.target} height={12} label={q.title} />
+                    <p className="font-read text-lg font-bold">{say(q.title)}</p>
+                    <ProgressBar value={value} max={q.target} height={12} label={say(q.title)} />
                   </div>
                   <span className="rounded-full bg-[#fff4cc] px-3 py-1 text-sm font-bold text-[#7a5700]">🪙 {q.reward}</span>
                 </li>
@@ -333,8 +336,8 @@ export function Hub() {
                 <li key={q.id} className={`flex items-center gap-3 rounded-2xl p-2.5 ${got ? "bg-good-soft" : "bg-paper"}`}>
                   <span className="text-3xl">{got ? "✅" : q.icon}</span>
                   <div className="flex-1">
-                    <p className="font-read text-lg font-bold">{q.title}</p>
-                    <ProgressBar value={value} max={q.target} height={12} label={q.title} />
+                    <p className="font-read text-lg font-bold">{say(q.title)}</p>
+                    <ProgressBar value={value} max={q.target} height={12} label={say(q.title)} />
                   </div>
                   <span className="rounded-full bg-[#fff4cc] px-3 py-1 text-sm font-bold text-[#7a5700]">🪙 {q.reward}</span>
                 </li>
@@ -423,6 +426,7 @@ export function goHome() {
 
 /** Little kids' single quest: a big picture, a short title and dots (or a bar for long quests) instead of a list. */
 function LittleQuest({ quest, progress }: { quest?: Quest; progress: number }) {
+  const say = useChildSay();
   if (!quest) {
     return (
       <section className="card flex items-center gap-3 bg-good-soft p-4" aria-label="Today's quest">
@@ -437,15 +441,15 @@ function LittleQuest({ quest, progress }: { quest?: Quest; progress: number }) {
         {quest.icon}
       </span>
       <div className="flex flex-1 flex-col gap-2">
-        <p className="font-read text-xl font-bold sm:text-2xl">{quest.title}</p>
+        <p className="font-read text-xl font-bold sm:text-2xl">{say(quest.title)}</p>
         {quest.target <= 10 ? (
-          <span className="flex flex-wrap gap-1.5" role="progressbar" aria-label={quest.title} aria-valuemin={0} aria-valuemax={quest.target} aria-valuenow={progress}>
+          <span className="flex flex-wrap gap-1.5" role="progressbar" aria-label={say(quest.title)} aria-valuemin={0} aria-valuemax={quest.target} aria-valuenow={progress}>
             {Array.from({ length: quest.target }, (_, i) => (
               <span key={i} className={`h-5 w-5 rounded-full border-2 ${i < progress ? "border-good bg-good" : "border-ink-soft/50 bg-white"}`} />
             ))}
           </span>
         ) : (
-          <ProgressBar value={progress} max={quest.target} height={16} label={quest.title} />
+          <ProgressBar value={progress} max={quest.target} height={16} label={say(quest.title)} />
         )}
       </div>
       <span className="rounded-full bg-[#fff4cc] px-3 py-1 text-lg font-bold text-[#7a5700]">🪙 {quest.reward}</span>
