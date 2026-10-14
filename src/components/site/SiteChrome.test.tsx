@@ -43,6 +43,7 @@ describe("SiteFooter", () => {
       ["Report cards explained", "/report-cards/"],
       ["Parent guides", "/guides/"],
       ["Status", "/status/"],
+      ["Trust centre", "/trust/"],
       ["Privacy policy", "/privacy/"],
       ["Terms of use", "/terms/"],
     ]) {
