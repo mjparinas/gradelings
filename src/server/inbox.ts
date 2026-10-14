@@ -39,6 +39,8 @@ export interface InboxItem {
   familyId: string | null;
   handledAt: number | null;
   repliedAt: number | null;
+  /** Archived by the admin: listed under Archived instead of the Inbox. */
+  archivedAt: number | null;
 }
 
 /** "Pat <pat@example.com>" → "pat@example.com". */
@@ -56,7 +58,7 @@ async function enrich(items: ResendReceived[]): Promise<InboxItem[]> {
   const marks = ids.length ? "?, ".repeat(ids.length).slice(0, -2) : "''";
   const amarks = "?, ".repeat(addrs.length).slice(0, -2);
   const [states, owners] = await Promise.all([
-    query<{ email_id: string; handled_at: number | null; replied_at: number | null }>(`SELECT email_id, handled_at, replied_at FROM inbox_state WHERE email_id IN (${marks})`, ids),
+    query<{ email_id: string; handled_at: number | null; replied_at: number | null; archived_at: number | null }>(`SELECT email_id, handled_at, replied_at, archived_at FROM inbox_state WHERE email_id IN (${marks})`, ids),
     query<{ email: string; family_id: string }>(`SELECT email, family_id FROM parents WHERE role != 'student' AND email IN (${amarks})`, addrs),
   ]);
   const state = new Map(states.map((s) => [String(s.email_id), s]));
@@ -75,6 +77,7 @@ async function enrich(items: ResendReceived[]): Promise<InboxItem[]> {
       familyId: owner.get(fromEmail) ?? null,
       handledAt: s?.handled_at == null ? null : Number(s.handled_at),
       repliedAt: s?.replied_at == null ? null : Number(s.replied_at),
+      archivedAt: s?.archived_at == null ? null : Number(s.archived_at),
     };
   });
 }
@@ -87,8 +90,8 @@ export async function listInbox(opts: { limit?: number; after?: string } = {}): 
   return { items: await enrich(page.data ?? []), hasMore: Boolean(page.has_more) };
 }
 
-/** Mail nobody has answered or marked as done yet: the "Waiting" badge in the Inbox list. */
-const isWaiting = (m: Pick<InboxItem, "handledAt" | "repliedAt">) => !m.handledAt && !m.repliedAt;
+/** Mail nobody has answered, marked as done or archived yet: the "Waiting" badge in the Inbox list. */
+export const isWaiting = (m: Pick<InboxItem, "handledAt" | "repliedAt" | "archivedAt">) => !m.handledAt && !m.repliedAt && !m.archivedAt;
 
 /** How many of the newest messages (the Inbox's first page) are waiting, for the count on the Inbox tab. */
 export async function countWaiting(): Promise<number> {
@@ -134,6 +137,11 @@ export async function getInboxMessage(id: string): Promise<InboxMessage> {
 
 export async function markHandled(id: string, handled: boolean): Promise<void> {
   await run("INSERT INTO inbox_state (email_id, handled_at) VALUES (?, ?) ON CONFLICT (email_id) DO UPDATE SET handled_at = excluded.handled_at", [id, handled ? Date.now() : null]);
+}
+
+/** Archiving moves a message out of the Inbox list into Archived; it stays in Resend either way. */
+export async function markArchived(id: string, archived: boolean): Promise<void> {
+  await run("INSERT INTO inbox_state (email_id, archived_at) VALUES (?, ?) ON CONFLICT (email_id) DO UPDATE SET archived_at = excluded.archived_at", [id, archived ? Date.now() : null]);
 }
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);

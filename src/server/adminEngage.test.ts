@@ -374,6 +374,22 @@ describe("the inbox", () => {
     expect(await count()).toBe(0);
   });
 
+  it("archives and restores a message, which then leaves the count and the to-do list", async () => {
+    const count = async () => ((await (await get(inbox, "/api/admin/inbox/?count=1")).json()) as { waiting: number }).waiting;
+    const listed = async () => ((await (await get(inbox, "/api/admin/inbox/")).json()) as { items: { archivedAt: number | null }[] }).items[0];
+    const todo = async () => ((await (await get(queue, "/api/admin/queue/")).json()) as { items: { key: string }[] }).items.some((i) => i.key === "inbox:rcv-1");
+    await dbm.run("UPDATE inbox_state SET handled_at = NULL, replied_at = NULL WHERE email_id = 'rcv-1'");
+    expect(await count()).toBe(1);
+    expect(await todo()).toBe(true);
+    expect((await post(inbox, "/api/admin/inbox/", { action: "archive", id: "rcv-1" })).status).toBe(200);
+    expect((await listed()).archivedAt).not.toBeNull();
+    expect(await count()).toBe(0);
+    expect(await todo()).toBe(false);
+    await post(inbox, "/api/admin/inbox/", { action: "archive", id: "rcv-1", archived: false });
+    expect((await listed()).archivedAt).toBeNull();
+    expect(await count()).toBe(1);
+  });
+
   it("drafts a reply with Claude only when asked, without sending anything", async () => {
     const one = async () => (await (await get(inbox, "/api/admin/inbox/?id=rcv-1")).json()) as { canDraft: boolean };
     expect((await one()).canDraft).toBe(false);

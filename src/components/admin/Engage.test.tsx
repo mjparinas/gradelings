@@ -171,7 +171,7 @@ describe("Inbox", () => {
     render(<Inbox onOpenFamily={onOpen} onWaiting={onWaiting} />);
     expect(await screen.findByText("Waiting")).toBeInTheDocument();
     expect(onWaiting).toHaveBeenLastCalledWith(1);
-    await user.click(screen.getByRole("button", { name: /Help with fractions/ }));
+    await user.click(screen.getByRole("button", { name: /^Help with fractions/ }));
     // Shown as text, never as HTML.
     expect(await screen.findByText("<b>Hi</b> there")).toBeInTheDocument();
     expect(screen.getByText(/sheet\.pdf/)).toBeInTheDocument();
@@ -184,6 +184,47 @@ describe("Inbox", () => {
     expect(await screen.findByText("Reply sent.")).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Mark as Done" }));
     expect(sent("/api/admin/inbox/")).toEqual({ id: "m1", action: "handled", handled: true });
+  });
+
+  it("archives mail from the list, shows it under Archived and moves it back", async () => {
+    let archivedAt: number | null = null;
+    respond((url, method, body) => {
+      if (url === "/api/admin/inbox/" && method === "POST") {
+        archivedAt = (body as { archived: boolean }).archived ? 5 : null;
+        return { ok: true };
+      }
+      if (url === "/api/admin/inbox/" && method === "GET") return { configured: true, items: [{ ...item, archivedAt }], hasMore: false };
+      return undefined;
+    });
+    const user = userEvent.setup();
+    const onWaiting = vi.fn();
+    render(<Inbox onOpenFamily={vi.fn()} onWaiting={onWaiting} />);
+    await user.click(await screen.findByRole("button", { name: "Archive: Help with fractions" }));
+    expect(sent("/api/admin/inbox/")).toEqual({ id: "m1", action: "archive", archived: true });
+    expect(await screen.findByText(/Archived mail is under Archived/)).toBeInTheDocument();
+    expect(onWaiting).toHaveBeenLastCalledWith(0);
+    await user.click(screen.getByRole("button", { name: "Archived (1)" }));
+    expect(screen.getByRole("button", { name: "Archived (1)" })).toHaveAttribute("aria-pressed", "true");
+    await user.click(screen.getByRole("button", { name: "Move to Inbox: Help with fractions" }));
+    expect(sent("/api/admin/inbox/")).toEqual({ id: "m1", action: "archive", archived: false });
+    expect(await screen.findByText("Nothing archived.")).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Inbox" }));
+    expect(await screen.findByText("Waiting")).toBeInTheDocument();
+    expect(onWaiting).toHaveBeenLastCalledWith(1);
+  });
+
+  it("archives an open message and goes back to the list", async () => {
+    respond((url, method) => {
+      if (url === "/api/admin/inbox/?id=m1") return { message: { ...item, text: "Hello", replyTo: "lee@example.com", attachmentNames: [] } };
+      if (url === "/api/admin/inbox/" && method === "POST") return { ok: true };
+      if (url === "/api/admin/inbox/" && method === "GET") return { configured: true, items: [{ ...item, archivedAt: 5 }], hasMore: false };
+      return undefined;
+    });
+    const user = userEvent.setup();
+    render(<Inbox initialId="m1" onOpenFamily={vi.fn()} />);
+    await user.click(await screen.findByRole("button", { name: "Archive" }));
+    expect(sent("/api/admin/inbox/")).toEqual({ id: "m1", action: "archive", archived: true });
+    expect(await screen.findByRole("button", { name: "Archived (1)" })).toBeInTheDocument();
   });
 
   it("offers Draft with AI only when it's set up, and puts the draft in the reply box", async () => {
