@@ -77,3 +77,22 @@ describe("US parental consent emails", () => {
     expect(t.consentEmail("a@example.com", O, "x").subject).not.toMatch(/^Reminder/);
   });
 });
+
+describe("emails to a US family", () => {
+  const kids = [{ name: "Maya", answers: 40, activeDays: 3, minutes: 30, strength: "Colours and shapes" }];
+  it("are in US English, and the same emails stay Canadian for a Canadian family", () => {
+    const us = [
+      t.trialRecapEmail("a@example.com", O, 5, kids, "US"),
+      t.trialEndingEmail("a@example.com", O, 2, kids, "US"),
+      t.weeklyEmail("a@example.com", O, [{ name: "Maya", minutes: 0, answers: 0, accuracy: null, month: { minutes: 30, answers: 40, previousAnswers: 0, activeDays: 3 } }], "u", "US"),
+      t.reminderEmail("a@example.com", O, [{ name: "Maya", daysQuiet: 5 }], "u", "US"),
+    ];
+    const text = us.map((e) => `${e.subject}\n${e.text}\n${e.html}`).join("\n");
+    expect(text).not.toMatch(/practis|favourite|[Cc]olour(?!:)/);
+    expect(text).toContain("Maya has practiced on 3 days");
+    expect(text).toContain("didn't practice this week");
+    expect(text).toContain("Their favorite lessons");
+    expect(t.reminderEmail("a@example.com", O, [{ name: "Maya", daysQuiet: 5 }], "u").text).toContain("Their favourite lessons");
+    expect(t.trialRecapEmail("a@example.com", O, 5, kids, "CA").text).toContain("Maya has practised on 3 days");
+  });
+});

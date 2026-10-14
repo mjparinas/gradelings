@@ -7,6 +7,7 @@ import { refreshAccount, type BillingInfo } from "@/lib/account";
 import { takeBillingPass } from "@/lib/billingReturn";
 import { hasPaidPlan, isPremium, trialDaysLeft } from "@/lib/plan";
 import { useRoute } from "@/lib/router";
+import { useLocale } from "@/lib/say";
 import { useProfiles, useReady, useStore } from "@/lib/store";
 import { VoicePreload } from "@/components/VoicePreload";
 import { startBackgroundSync, syncNow } from "@/lib/sync";
@@ -44,6 +45,7 @@ const noSubscribe = () => () => {};
 function SyncBadge() {
   const sync = useStore((s) => s.sync);
   const account = useStore((s) => s.family.account);
+  const locale = useLocale();
   const text = !account
     ? "Saved on this device"
     : sync.status === "syncing"
@@ -53,7 +55,7 @@ function SyncBadge() {
         : sync.status === "error"
           ? "Sync problem · retrying"
           : sync.lastSyncAt
-            ? `Synced ${new Date(sync.lastSyncAt).toLocaleTimeString("en-CA", { hour: "numeric", minute: "2-digit" })}`
+            ? `Synced ${new Date(sync.lastSyncAt).toLocaleTimeString(locale, { hour: "numeric", minute: "2-digit" })}`
             : "Ready to sync";
   return (
     <button type="button" onClick={() => void syncNow()} className="rounded-full bg-black/5 px-3 py-1 text-sm font-semibold text-ink-soft" title="Sync now">

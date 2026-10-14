@@ -9,6 +9,7 @@ import { frameworkMenu } from "@/lib/frameworkGroups";
 import { gradeLabel } from "@/lib/gradeLabel";
 import type { Profile } from "@/lib/model";
 import { MAX_CHILDREN } from "@/lib/plan";
+import { sayFor } from "@/lib/say";
 import { useProfiles, useStore } from "@/lib/store";
 import { AVATARS, CritterSvg } from "../Critter";
 import { AVATAR_COLOURS } from "../play/Start";
@@ -37,6 +38,7 @@ function ChildForm({ draft, onChange, isNew }: { draft: Draft; onChange: (d: Dra
   // A new child's grade follows the birth year until the parent picks a grade themselves.
   const [gradePicked, setGradePicked] = useState(false);
   const chosen = getFramework(draft.framework);
+  const us = chosen.country === "US";
   const age = draft.birthYear ? thisYear - draft.birthYear : undefined;
   return (
     <div className="flex flex-col gap-4 text-left">
@@ -75,15 +77,16 @@ function ChildForm({ draft, onChange, isNew }: { draft: Draft; onChange: (d: Dra
       </div>
       <div className="flex flex-col gap-1">
         <SelectMenu
-          label="Province or state"
+          label={us ? "State or province" : "Province or state"}
           size="lg"
           value={draft.framework}
           onChange={(next) => onChange({ ...draft, framework: next as FrameworkId })}
           {...frameworkMenu((f) => `${f.name} (${f.curriculumName})`)}
         />
         <span className="text-sm text-ink-soft">
-          Lessons and reports follow the {chosen.curriculumName}
-          {chosen.subjects.length < 4 ? `, which has ${listSubjects(chosen)} so far` : ""}. Progress in the other curriculum is kept if you switch back. More provinces and states are coming.
+          {sayFor(chosen)(
+            `Lessons and reports follow the ${chosen.curriculumName}${chosen.subjects.length < 4 ? `, which has ${listSubjects(chosen)} so far` : ""}. Progress in the other curriculum is kept if you switch back. ${us ? "More states and provinces are coming." : "More provinces and states are coming."}`,
+          )}
         </span>
       </div>
       <div>

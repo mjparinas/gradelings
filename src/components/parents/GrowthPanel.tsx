@@ -7,6 +7,7 @@ import { growthSince } from "@/lib/progressSince";
 import { LEVEL_WORDS, unitMilestonePath } from "@/lib/milestoneShare";
 import { gradeSlug } from "@/content/subjects";
 import type { Profile } from "@/lib/model";
+import { useSay } from "@/lib/say";
 import { eventsFor, useDerived, useStore } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 import { Panel } from "./common";
@@ -19,6 +20,7 @@ export function GrowthPanel({ p }: { p: Profile }) {
   const events = useStore((s) => s.events);
   const d = useDerived(p.id);
   const now = useNow();
+  const say = useSay();
   const [days, setDays] = useState<number>(90);
   const g = useMemo(() => growthSince(eventsFor(events, p), now, days, d), [events, p, now, days, d]);
   const framework = getFramework(p.framework);
@@ -46,7 +48,7 @@ export function GrowthPanel({ p }: { p: Profile }) {
           <dd className="text-2xl font-bold">{g.proficientThen} → {g.proficientNow}</dd>
         </div>
         <div className="rounded-xl bg-paper p-3">
-          <dt className="text-xs font-semibold text-ink-soft">Days practised</dt>
+          <dt className="text-xs font-semibold text-ink-soft">{say("Days practised")}</dt>
           <dd className="text-2xl font-bold">{g.daysPractisedSince}</dd>
         </div>
       </dl>

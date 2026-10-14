@@ -4,6 +4,7 @@ import { useState } from "react";
 import { SelectMenu } from "../SelectMenu";
 import { GOAL_CHOICES, NUDGE_PRESETS, activeNudge, weekProgress } from "@/lib/familyGoal";
 import { defaultChildSettings, newId, type Profile } from "@/lib/model";
+import { useSay } from "@/lib/say";
 import { useDerived, useStore } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 
@@ -18,6 +19,7 @@ export function FamilyGoal({ p }: { p: Profile }) {
   const progress = goal ? weekProgress(d, goal, now) : undefined;
   const sent = activeNudge(s.nudge, now);
   const [pick, setPick] = useState<string>(NUDGE_PRESETS[0].id);
+  const say = useSay();
   return (
     <div className="mt-4 rounded-xl bg-paper p-3">
       <div className="flex flex-wrap items-center justify-between gap-2">
@@ -33,7 +35,7 @@ export function FamilyGoal({ p }: { p: Profile }) {
       </div>
       {progress && (
         <div className="mt-2">
-          <ol className="flex gap-1.5" aria-label={`${progress.days} of ${progress.goal} days practised this week`}>
+          <ol className="flex gap-1.5" aria-label={say(`${progress.days} of ${progress.goal} days practised this week`)}>
             {progress.dots.map((x, i) => (
               <li key={x.day} className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold ${x.practised ? "bg-[#2a78d6] text-white" : "bg-white text-ink-soft ring-1 ring-line"}`}>
                 {"MTWTFSS"[i]}
@@ -46,7 +48,7 @@ export function FamilyGoal({ p }: { p: Profile }) {
       <p className="mt-3 text-sm font-semibold">💌 Send {p.name} a note</p>
       <div className="mt-1 flex flex-wrap items-center gap-2">
         <div className="min-w-0 flex-1 basis-56">
-          <SelectMenu label={`Note for ${p.name}`} hideLabel value={pick} onChange={setPick} options={NUDGE_PRESETS.map((n) => ({ value: n.id, label: n.text }))} />
+          <SelectMenu label={`Note for ${p.name}`} hideLabel value={pick} onChange={setPick} options={NUDGE_PRESETS.map((n) => ({ value: n.id, label: say(n.text) }))} />
         </div>
         <button
           type="button"
@@ -57,7 +59,7 @@ export function FamilyGoal({ p }: { p: Profile }) {
         </button>
       </div>
       <p className="mt-1 text-xs text-ink-soft" role="status">
-        {sent ? `Sent: "${sent.text}" It shows on ${p.name}'s home screen the next time they open the app.` : "The note appears once on their home screen. We never send a push to children."}
+        {sent ? `Sent: "${say(sent.text)}" It shows on ${p.name}'s home screen the next time they open the app.` : "The note appears once on their home screen. We never send a push to children."}
       </p>
     </div>
   );
