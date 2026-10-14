@@ -5,6 +5,7 @@ import { useEffect, useState, useSyncExternalStore } from "react";
 import { changePassword, deleteAccount, forgotPassword, listDevices, signOutDevices, type DeviceSession, refreshAccount, resendVerification, signIn, signOut, signUp, type BillingInfo } from "@/lib/account";
 import * as localdb from "@/lib/localdb";
 import { go, useRoute } from "@/lib/router";
+import { useLocale } from "@/lib/say";
 import { useStore } from "@/lib/store";
 import { savedReferralCode } from "@/lib/referral";
 import { syncNow } from "@/lib/sync";
@@ -170,6 +171,7 @@ function EmailChoicePanel({ verified }: { verified: boolean }) {
 }
 
 function SecurityPanel() {
+  const locale = useLocale();
   const [devices, setDevices] = useState<DeviceSession[] | null>(null);
   const [current, setCurrent] = useState("");
   const [next, setNext] = useState("");
@@ -215,7 +217,7 @@ function SecurityPanel() {
             <li key={d.id} className="flex items-center justify-between gap-3 rounded-xl bg-paper px-3 py-2">
               <span>
                 {d.device}
-                {d.current && <b> (this device)</b>} · since {new Date(d.createdAt).toLocaleDateString("en-CA")}
+                {d.current && <b> (this device)</b>} · since {new Date(d.createdAt).toLocaleDateString(locale)}
               </span>
               {!d.current && (
                 <button type="button" className="font-semibold underline" onClick={() => void run(() => signOutDevices(d.id), "Signed out.")}>
@@ -269,6 +271,7 @@ function VerifyNotice() {
 export function AccountPage({ onBilling }: { onBilling: (b: BillingInfo | null) => void }) {
   const account = useStore((s) => s.family.account);
   const sync = useStore((s) => s.sync);
+  const locale = useLocale();
   const { query } = useRoute();
   const [pending, setPending] = useState<number | null>(null);
   const [confirmDelete, setConfirmDelete] = useState(false);
@@ -291,7 +294,7 @@ export function AccountPage({ onBilling }: { onBilling: (b: BillingInfo | null) 
               <p className="text-lg">
                 <b>{account.email}</b>
               </p>
-              <p className="mt-1 text-sm text-ink-soft">{sync.lastSyncAt ? `Synced ${new Date(sync.lastSyncAt).toLocaleString("en-CA")}` : "Not synced yet"}</p>
+              <p className="mt-1 text-sm text-ink-soft">{sync.lastSyncAt ? `Synced ${new Date(sync.lastSyncAt).toLocaleString(locale)}` : "Not synced yet"}</p>
               {account.verified === false && <VerifyNotice />}
               <EmailChoicePanel verified={account.verified !== false} />
               {sync.error && <p className="mt-2 text-sm text-nudge-dark">{sync.error}</p>}

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { COURSES } from "./all";
-import { canadianWords, gradeName, localeOf, localizeQuestion, localizeText, localizeUnit, questionText, regionKind, US_SPELLING, usNumbers, usSpelling } from "./locale";
+import { canadianWords, gradeName, localeOf, localizeCopy, localizeQuestion, localizeText, localizeUnit, questionText, regionKind, US_SPELLING, usNumbers, usSpelling } from "./locale";
 import { FRAMEWORKS, getFramework } from "./frameworks";
 import { withSeed } from "./random";
 import type { Question, Unit } from "./types";
@@ -164,5 +164,13 @@ describe("Canada words", () => {
     const flagged = g4.units.filter((u) => u.standards["ca-bc"] && withSeed(1, () => u.generate()).some((q) => canadianWords(questionText(q)).length));
     expect(flagged.length).toBeGreaterThan(0);
     expect(getFramework("ca-bc").country).toBe("CA");
+  });
+});
+
+describe("family copy", () => {
+  it("is US English with US grade names for a US family, and unchanged for a Canadian one", () => {
+    const text = "Kindergarten and Grade 1 have it on. Last practised in Grade 4, a favourite.";
+    expect(localizeCopy(text, "en-US")).toBe("Kindergarten and 1st grade have it on. Last practiced in 4th grade, a favorite.");
+    expect(localizeCopy(text, "en-CA")).toBe(text);
   });
 });

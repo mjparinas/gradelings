@@ -3,15 +3,17 @@
 import { useId, type ReactNode } from "react";
 import { gradeLabel } from "@/lib/gradeLabel";
 import type { Profile } from "@/lib/model";
+import { useSay } from "@/lib/say";
 import { useProfiles } from "@/lib/store";
 import { CritterSvg } from "../Critter";
 
 export function PageTitle({ title, sub, action }: { title: string; sub?: string; action?: ReactNode }) {
+  const say = useSay();
   return (
     <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
       <div>
-        <h1 className="text-3xl font-bold">{title}</h1>
-        {sub && <p className="font-read text-ink-soft">{sub}</p>}
+        <h1 className="text-3xl font-bold">{say(title)}</h1>
+        {sub && <p className="font-read text-ink-soft">{say(sub)}</p>}
       </div>
       {action}
     </div>
@@ -19,20 +21,22 @@ export function PageTitle({ title, sub, action }: { title: string; sub?: string;
 }
 
 export function Panel({ title, children, className = "" }: { title?: string; children: ReactNode; className?: string }) {
+  const say = useSay();
   return (
     <section className={`rounded-2xl border border-line bg-white p-5 ${className}`}>
-      {title && <h2 className="mb-3 text-xl font-bold">{title}</h2>}
+      {title && <h2 className="mb-3 text-xl font-bold">{say(title)}</h2>}
       {children}
     </section>
   );
 }
 
 export function Switch({ label, help, value, onChange }: { label: string; help?: string; value: boolean; onChange: (v: boolean) => void }) {
+  const say = useSay();
   return (
     <button type="button" role="switch" aria-checked={value} onClick={() => onChange(!value)} className="flex w-full items-center justify-between gap-4 rounded-xl bg-paper px-4 py-3 text-left">
       <span>
-        <span className="block font-semibold">{label}</span>
-        {help && <span className="block text-sm text-ink-soft">{help}</span>}
+        <span className="block font-semibold">{say(label)}</span>
+        {help && <span className="block text-sm text-ink-soft">{say(help)}</span>}
       </span>
       <span className={`switch-track relative h-8 w-14 shrink-0 rounded-full transition-colors ${value ? "bg-good" : "bg-ink/20"}`} aria-hidden="true">
         <span className={`switch-knob absolute top-1 h-6 w-6 rounded-full bg-white shadow transition-all ${value ? "left-7" : "left-1"}`} />
@@ -43,12 +47,13 @@ export function Switch({ label, help, value, onChange }: { label: string; help?:
 
 export function Choice<T extends string>({ label, help, value, options, onChange }: { label: string; help?: string; value: T | null; options: { value: T; label: string }[]; onChange: (v: T) => void }) {
   const id = useId();
+  const say = useSay();
   return (
     <div className="rounded-xl bg-paper px-4 py-3">
       <span id={id} className="block font-semibold">
-        {label}
+        {say(label)}
       </span>
-      {help && <span className="block text-sm text-ink-soft">{help}</span>}
+      {help && <span className="block text-sm text-ink-soft">{say(help)}</span>}
       <div role="radiogroup" aria-labelledby={id} className="mt-2 grid grid-cols-3 gap-2 narrow:grid-cols-1">
         {options.map((o) => (
           <button
@@ -59,7 +64,7 @@ export function Choice<T extends string>({ label, help, value, options, onChange
             onClick={() => onChange(o.value)}
             className={`min-h-11 rounded-lg border-2 px-2 py-1 text-sm font-semibold ${value === o.value ? "border-good-dark bg-good text-[#0f172a]" : "border-line bg-white"}`}
           >
-            {o.label}
+            {say(o.label)}
           </button>
         ))}
       </div>

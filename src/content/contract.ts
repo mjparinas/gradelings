@@ -24,7 +24,7 @@ export interface FrameworkContract {
   cite: ((c: Citation) => string[]) | null;
   /** Units written for this framework have ids starting with this ("wa-"). */
   ownPrefix?: string;
-  /** Other frameworks allowed to use this framework's own units (Oregon, California, New York and Texas adopt Washington's). */
+  /** Other frameworks allowed to use this framework's own units (Oregon, California, New York, Texas, Maine and Minnesota adopt Washington's). */
   ownSharedWith?: FrameworkId[];
   /** Places a unit borrowed from another framework must not name, so no other province's names reach this one's classrooms. */
   foreign?: RegExp;
