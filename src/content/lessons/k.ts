@@ -115,6 +115,12 @@ export const lessons: GradeLessons = {
     "5",
     { type: "coins", coins: [1, 1, 1], currency: "USD" },
   ),
+  "math/ny-k-build-shapes": lesson(
+    ["Look at a thing. Which shape is it like? A door is a rectangle.", "Small shapes fit together to make big shapes.", "Two squares side by side make a rectangle."],
+    "Which 2 shapes make a house: walls and a roof?",
+    ["The walls are a square.", "The roof is a triangle."],
+    "A square and a triangle",
+  ),
   // Texas
   "math/tx-k-coins": lesson(
     ["A penny is brown. A nickel, dime and quarter are silver.", "The dime is the smallest coin. The quarter is the biggest.", "Look at the size and the picture to name a coin."],

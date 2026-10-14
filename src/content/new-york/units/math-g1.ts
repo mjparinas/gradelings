@@ -1,9 +1,9 @@
-import { pick, randInt, sample } from "../../random";
+import { pick, randInt, sample, shuffle } from "../../random";
 import type { Unit } from "../../types";
-import { type Maker, num, pickOne, someone, typed } from "../../washington/units/math-kit";
+import { type Maker, eq, num, pickOne, someone, typed } from "../../washington/units/math-kit";
 import { COIN, COINS, COIN_LOOK, cents, mathUnit, usd } from "./math-kit";
 
-// New York's own Grade 1 math unit: coins (NY-1.MD.3b, 3c). Children name the penny, nickel, dime and quarter, know what
+// New York's own Grade 1 math units: adding three numbers in word problems (NY-1.OA.2), and coins (NY-1.MD.3b, 3c). Children name the penny, nickel, dime and quarter, know what
 // each is worth and write it with the ¢ sign, and count a mix of dimes and pennies up to 100¢.
 
 const ALL = [1, 5, 10, 25];
@@ -82,7 +82,72 @@ const centSign: Maker = (d) => {
   return pickOne(`Which shows ${say} cents?`, `${n}¢`, [`$${n}`, n < 10 ? `${n}0¢` : swap], "Write the number of cents, then the cent sign ¢.");
 };
 
+// ---------- Adding three numbers (NY-1.OA.2) ----------
+
+/** Three numbers from 1 to 9 with a sum of at most `max`. */
+function three(max: number): [number, number, number] {
+  const a = randInt(1, Math.min(9, max - 2));
+  const b = randInt(1, Math.min(9, max - a - 1));
+  const c = randInt(1, Math.min(9, max - a - b));
+  return [a, b, c];
+}
+
+const STORIES: ((who: string, a: number, b: number, c: number) => string)[] = [
+  (who, a, b, c) => `${who} picks ${a} apples, then ${b}, then ${c} more. How many apples?`,
+  (who, a, b, c) => `${who} has ${a} red, ${b} blue and ${c} green beads. How many beads?`,
+  (_, a, b, c) => `${a} birds sit on a fence. ${b} come, then ${c} more. How many birds?`,
+  (who, a, b, c) => `${who} reads ${a} pages, then ${b}, then ${c}. How many pages?`,
+  (_, a, b, c) => `A box has ${a} big, ${b} small and ${c} tiny shells. How many shells?`,
+  (who, a, b, c) => `${who} gets ${a} stickers, then ${b}, then ${c}. How many stickers?`,
+  (_, a, b, c) => `There are ${a} cats, ${b} dogs and ${c} fish in a pet shop. How many pets?`,
+];
+
+/** A word problem with three numbers; typed on the hard level. */
+const threeStory: Maker = (d) => {
+  const [a, b, c] = three(d === 1 ? 12 : 20);
+  const prompt = pick(STORIES)(someone(), a, b, c);
+  const hint = `Add two numbers first: ${a} + ${b} = ${a + b}. Then add ${c} more.`;
+  if (d === 3) return typed(prompt, a + b + c, hint);
+  return num(prompt, a + b + c, hint, { min: 1, max: 20, extra: [a + b, b + c, a + b + c + 1] });
+};
+
+/** Add three numbers, shown as a number sentence. */
+const threeEquation: Maker = (d) => {
+  const [a, b, c] = three(d === 1 ? 12 : 20);
+  return num("Add all three numbers.", a + b + c, `Add two first: ${a} + ${b} = ${a + b}. Then add ${c}.`, { min: 1, max: 20, extra: [a + b, a + c], visual: eq(`${a} + ${b} + ${c} = ?`) });
+};
+
+/** Find the two numbers that make 10 first. */
+const makeTenFirst: Maker = () => {
+  const a = randInt(1, 9);
+  const b = 10 - a;
+  let c = randInt(1, 9);
+  while (c === b || c === a || a + c === 10 || b + c === 10) c = randInt(1, 9);
+  const [x, y, z] = shuffle([a, b, c]);
+  const pair = (p: number, q: number) => `${p} + ${q}`;
+  const right = [x, y, z].filter((n) => n === a || n === b);
+  const others = [pair(x, y), pair(x, z), pair(y, z)].filter((t) => t !== pair(right[0], right[1]));
+  return pickOne(`${x} + ${y} + ${z}. Which two make 10?`, pair(right[0], right[1]), others, "Look for two numbers that make 10, like 6 and 4. Add them first.");
+};
+
+/** Which number is missing from a story with three parts. */
+const missingPart: Maker = () => {
+  const [a, b, c] = three(18);
+  const who = someone();
+  return num(`${who} has ${a + b + c} toys: ${a} cars, ${b} balls and some blocks. How many blocks?`, c, `${a} + ${b} = ${a + b}. Count on from ${a + b} to ${a + b + c}.`, { min: 0, max: 20, extra: [a + b, a + b + c] });
+};
+
 export const UNITS: Unit[] = [
+  mathUnit({
+    id: "ny-g1-add-three",
+    title: "Add Three Numbers",
+    emoji: "➕",
+    blurb: "Three numbers, one total",
+    parentNote: "Word problems that add three numbers with a total up to 20. Children add two numbers first, often two that make 10, then add the third.",
+    codes: "NY-1.OA.2",
+    text: "solving word problems that add three whole numbers with a sum up to 20",
+    makers: [threeStory, threeStory, threeEquation, makeTenFirst, missingPart],
+  }),
   mathUnit({
     id: "ny-g1-coins",
     title: "Coins & Cents",

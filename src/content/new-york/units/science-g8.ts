@@ -1,6 +1,7 @@
 import type { Unit } from "../../types";
 import { SCIENCE_8 } from "../../washington/units/science-68";
 import { copyOf, from } from "./kit";
+import { MORE } from "./science-g8-signals";
 
 // New York copies of Washington science units built around Pacific Northwest places. Each keeps the original's
 // questions, leaves out the ones about Washington, Oregon or California, and adds New York items: the rock layers of its
@@ -46,4 +47,5 @@ export const UNITS: Unit[] = [
       ["In December, the noon sun over New York is…", "lower in the sky than in June", ["straight overhead", "higher than in June", "below the horizon"], "Tilt away from the sun.", true],
     ],
   ),
+  ...MORE,
 ];

@@ -1,4 +1,341 @@
 import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
 
-// New York's own Grade 7 language units (`ny-` ids).
-export const UNITS: Unit[] = [];
+// New York's own Grade 7 language units (`ny-` ids). No shared unit New York can use practises 7R7 (comparing a written
+// text with its audio, filmed, staged or digital version), 7R9 (judging quality with criteria and connecting texts),
+// 7W3 (narrative technique), 7W4 (a creative response) or 7W5 (evidence for analysis, reflection and research), so
+// these banks do. Every passage is original.
+
+const TEXT_AND_VERSIONS: Q[] = [
+  [
+    "A novel describes a character's thoughts for pages. In the film, the actor shows them with a long silent look. What does the film rely on?",
+    "the actor's expression and the camera",
+    ["a narrator reading every thought", "footnotes on the screen", "a glossary"],
+    "Film shows thoughts through acting and camera work.",
+  ],
+  [
+    "Which technique is unique to an audiobook version of a story?",
+    "the reader's voice, tone and pacing",
+    ["camera angles", "stage lighting", "page layout"],
+    "Audio can only use sound.",
+  ],
+  [
+    "A play version of a story adds a spotlight on the hero during her speech. What is the effect?",
+    "It draws the audience's attention to her words and feelings.",
+    ["It hides the hero from view.", "It explains the setting in words.", "It makes the play silent."],
+    "Stage lighting guides where the audience looks.",
+  ],
+  [
+    "In the book, a storm is described in three paragraphs. The film shows it in ten seconds with loud music. What does the film gain?",
+    "immediate drama through sound and images",
+    ["more detail about each character's thoughts", "a written description", "a glossary of weather terms"],
+    "Film can create mood quickly with sound and images.",
+  ],
+  [
+    "What can a written text often do better than a film?",
+    "share a character's private thoughts in detail",
+    ["show bright colors", "play a soundtrack", "show actors' faces"],
+    "Words can go inside a character's mind.",
+  ],
+  [
+    "A digital version of a poem adds a background animation of falling leaves. How might it change the reader's experience?",
+    "It adds a visual mood that the words alone only suggest.",
+    ["It changes the poem's words.", "It removes the poem's theme.", "It makes the poem a news report."],
+    "Digital media can add images and motion.",
+  ],
+  [
+    "A documentary and a magazine article both cover the same volcano. Which is a fair comparison?",
+    "The documentary shows the eruption; the article gives more statistics and explanation.",
+    ["They must be identical.", "Only the article is about the volcano.", "Neither gives information."],
+    "Each format portrays the subject in its own way.",
+  ],
+  [
+    "A film adaptation leaves out a minor character from the novel. What should a careful viewer ask?",
+    "How does leaving the character out change the story's meaning?",
+    ["What color was the movie poster?", "How long were the credits?", "Who sold the tickets?"],
+    "Think about the effect of the director's choice.",
+  ],
+  [
+    "Which criterion is most useful for evaluating the quality of a short story?",
+    "Do the characters and conflict feel believable and meaningful?",
+    ["Is the font large?", "Is it the newest story?", "Does it have a shiny cover?"],
+    "Good criteria focus on the craft of the text.",
+  ],
+  [
+    "Which criterion best fits judging an informational article?",
+    "accuracy, clear organization and reliable sources",
+    ["number of pictures of animals", "length of the title", "the author's favorite color"],
+    "Judge informational texts on accuracy and clarity.",
+  ],
+  [
+    "Two poems are about the sea. One uses fresh images; the other repeats common phrases like “blue as the sky.” Which is a fair judgment?",
+    "The first poem uses more original imagery.",
+    ["They are equally original.", "The second is stronger because it is familiar.", "Poems cannot be judged."],
+    "Original imagery is a sign of strong craft.",
+  ],
+  [
+    "A novel written in 1910 and one written today both explore loneliness. Which connection is strongest?",
+    "People in very different eras share similar feelings.",
+    ["Loneliness only existed in 1910.", "The novels have the same characters.", "Nothing connects them."],
+    "Look for shared ideas across time.",
+  ],
+  [
+    "A story shows a holiday from one family's cultural perspective. How can a reader connect it to their own life?",
+    "by comparing the family's traditions with their own",
+    ["by ignoring the culture shown", "by skipping to the end", "by counting the pages"],
+    "Connections can bridge cultural perspectives.",
+  ],
+  [
+    "Which question helps you connect a text to other ideas?",
+    "What other stories, events or ideas does this remind me of?",
+    ["How heavy is the book?", "What is the price?", "How many commas are there?"],
+    "Connections link the text to the wider world.",
+  ],
+  [
+    "You read a novel and then watch a stage version where actors break into song. What has the stage version added?",
+    "music that expresses characters' feelings",
+    ["footnotes", "a table of contents", "an index"],
+    "Musical theater uses songs to show emotion.",
+  ],
+  [
+    "A graphic novel version of a story uses red panels during an angry scene. What effect does this have?",
+    "Color emphasizes the anger in the scene.",
+    ["It shows the scene is happy.", "It explains the setting in words.", "It changes the plot."],
+    "Color choices can carry emotion.",
+  ],
+  [
+    "In a book, readers learn the twist at the end. The movie reveals it in the first scene. How does this change the experience?",
+    "Viewers watch for how events lead to the twist instead of being surprised.",
+    ["Nothing changes at all.", "The story loses its characters.", "The movie becomes a book."],
+    "Order of information changes suspense.",
+    true,
+  ],
+  [
+    "A podcast reading of a ghost story adds creaking sounds and whispers. What technique is the podcast using?",
+    "sound effects to build suspense",
+    ["camera close-ups", "illustrations", "stage blocking"],
+    "Audio uses sound to set mood.",
+    true,
+  ],
+  [
+    "Which is the most balanced evaluation of a film adaptation?",
+    "It captures the friendship well, but it cuts the main character's inner struggle.",
+    ["The book is always better.", "The movie is always better.", "Adaptations should never change anything."],
+    "A fair evaluation notes strengths and weaknesses.",
+    true,
+  ],
+  [
+    "You set your own criteria to judge persuasive speeches. Which set fits best?",
+    "clear claim, strong evidence and respectful tone",
+    ["long length, loud voice and fancy clothes", "number of jokes and slides", "the speaker's height"],
+    "Criteria should match what makes a speech persuasive.",
+    true,
+  ],
+  [
+    "A memoir about immigrating and a news article about immigration statistics are read together. What does this pairing offer?",
+    "a personal view alongside a big-picture view",
+    ["two identical views", "only made-up information", "no connection at all"],
+    "Different texts can add depth to each other.",
+    true,
+  ],
+  [
+    "A staged version of a novel uses a narrator who speaks directly to the audience. Why might the director choose this?",
+    "to share background and inner thoughts that are hard to act out",
+    ["to make the play shorter than one minute", "to replace all the actors", "to hide the plot"],
+    "Narrators can bring a book's narration to the stage.",
+    true,
+  ],
+  [
+    "Which statement about two versions of a story is supported by evidence?",
+    "The film adds a chase scene that is not in the book, which speeds up the middle.",
+    ["The film is bad.", "I liked the book.", "The book is old."],
+    "Evidence names a specific difference and its effect.",
+    true,
+  ],
+  [
+    "A myth from ancient Greece and a modern superhero comic both show a hero with one weakness. What connection can you make?",
+    "Stories across eras use similar hero patterns.",
+    ["The comic was written in ancient Greece.", "Myths and comics are unrelated.", "Heroes never have weaknesses."],
+    "Look for patterns that repeat through time.",
+    true,
+  ],
+];
+
+const WRITING_CRAFT: Q[] = [
+  [
+    "Which opening establishes point of view and context?",
+    "The day my brother vanished, the whole town was busy getting ready for the fall fair.",
+    ["This story has a brother in it.", "Fairs happen in the fall.", "Once upon a time there was a fair."],
+    "A strong opening introduces the narrator and the situation.",
+  ],
+  [
+    "Which dialogue reveals conflict between characters?",
+    "“You promised you'd be there,” Mira said, crossing her arms. “I waited an hour.”",
+    ["“Good morning,” said Mira.", "“The sky is blue,” said Mira.", "“Pass the salt,” said Mira."],
+    "Dialogue can reveal tension and feelings.",
+  ],
+  [
+    "Which technique lets a writer show two events happening at the same time in different places?",
+    "parallel scenes linked with a transition like “Meanwhile”",
+    ["a glossary", "a bibliography", "bold headings"],
+    "Transitions can jump between settings.",
+  ],
+  [
+    "Which sentence uses relevant descriptive detail?",
+    "The gym echoed with squeaking sneakers and the thump of a ball hitting the rim.",
+    ["The gym was big.", "We were in a gym.", "Gyms are for sports."],
+    "Relevant details help the reader experience the scene.",
+  ],
+  [
+    "Which conclusion reflects on the narrated experience?",
+    "I still keep the cracked medal on my shelf, not because I won, but because I finished.",
+    ["The race was over.", "I went home.", "There were many runners at the race."],
+    "A reflective ending explains what the experience meant.",
+  ],
+  [
+    "Which is the best way to show a flashback clearly?",
+    "Shift tense or add a clue like “Three summers ago,” then return to the present.",
+    ["Start the flashback with no signal at all.", "Put the flashback in the glossary.", "Use a chart."],
+    "Readers need signals when the time changes.",
+  ],
+  [
+    "Which revision gives a character a more distinct voice?",
+    "“Nah, I'm good,” Jayden mumbled, not looking up from his sketchbook.",
+    ["Jayden said no.", "Jayden did not want to.", "Jayden answered the question."],
+    "Voice comes from word choice and actions.",
+  ],
+  [
+    "After reading a novel about a girl who finds her grandmother's old letters, which is a creative response?",
+    "writing one of the letters the grandmother might have sent",
+    ["listing the chapter titles", "copying the back cover", "writing the publisher's address"],
+    "A creative response imagines new material that fits the text.",
+  ],
+  [
+    "Your class reads a poem about a city waking up. Which response best extends the poem?",
+    "a photo essay of your neighborhood at dawn with lines from the poem",
+    ["a list of spelling words", "a math worksheet", "a weather chart"],
+    "Extend the poem's images and ideas.",
+  ],
+  [
+    "You write a monologue for a minor character in a story. What should it show?",
+    "the character's thoughts about the story's events",
+    ["the price of the book", "a list of unrelated facts", "the author's address"],
+    "A monologue reveals a character's inner voice.",
+  ],
+  [
+    "A prompt asks how the author builds suspense. Which response uses evidence best?",
+    "The author ends chapters with unanswered questions, like when the lights go out in chapter 3.",
+    ["The story is scary.", "I like suspense.", "Suspense is exciting."],
+    "Name a technique and give a specific example.",
+  ],
+  [
+    "Which sentence best connects a quotation to an analysis of theme?",
+    "When Kai says “home isn't a place,” it reveals the theme that belonging comes from people.",
+    ["Kai says many things.", "Here is a quote from Kai.", "Kai lives in a house."],
+    "Explain how the quote supports the theme.",
+  ],
+  [
+    "For a research report on ocean plastic, which evidence is strongest?",
+    "data from a marine science study on plastic in the Pacific Ocean",
+    ["a social media post with no source", "a cartoon about a sad fish", "a friend's guess"],
+    "Strong evidence comes from reliable sources.",
+  ],
+  [
+    "Which shows reflection on a text?",
+    "This novel made me rethink how quickly I judge new classmates.",
+    ["The novel has 200 pages.", "The novel is about a school.", "The novel's cover is green."],
+    "Reflection explains how a text affected your thinking.",
+  ],
+  [
+    "Which detail would best help readers understand a character's motivation?",
+    "Ever since her father lost his job, Nadia had saved every dollar she earned.",
+    ["Nadia had brown hair.", "Nadia lived on Elm Street.", "Nadia liked pizza."],
+    "Motivation explains why a character acts.",
+  ],
+  [
+    "A writer wants to slow down the most important moment. Which approach works?",
+    "Describe sights, sounds and thoughts second by second.",
+    ["Summarize it in three words.", "Skip it entirely.", "Move it to the glossary."],
+    "Expanding a key moment builds impact.",
+    true,
+  ],
+  [
+    "You rewrite a scene from a novel as a news report. What should you explain if you change details?",
+    "how the news format changes what is included and why",
+    ["nothing; changes need no reason", "the price of the newspaper", "the length of the novel"],
+    "When a response changes the original, explain the choice.",
+    true,
+  ],
+  [
+    "Which evidence best supports analysis of a character's change?",
+    "In chapter 1 she refuses to help; in chapter 10 she volunteers first.",
+    ["She has a dog.", "She is in seventh grade.", "She lives near the sea."],
+    "Compare evidence from different points in the story.",
+    true,
+  ],
+  [
+    "Which sentence uses foreshadowing?",
+    "Nobody noticed the small crack in the dam that morning.",
+    ["The dam was gray.", "We had pancakes for breakfast.", "The town was quiet."],
+    "Foreshadowing hints at what will happen later.",
+    true,
+  ],
+  [
+    "Two sources on the same topic disagree. How should you use them in your research?",
+    "Compare their evidence and explain which is more reliable and why.",
+    ["Use only the one you like.", "Ignore both sources.", "Copy one without credit."],
+    "Weigh conflicting evidence carefully.",
+    true,
+  ],
+  [
+    "Which revision improves pacing in an action scene?",
+    "She ran. The gate slammed. Too late.",
+    ["She ran very, very fast toward the gate which then slammed shut and it was too late for her.", "She went to the gate.", "There was a gate she ran to."],
+    "Short sentences speed up action.",
+    true,
+  ],
+  [
+    "You turn a short story into a short film script. Which element must you add that the story might not have?",
+    "camera directions and scene descriptions",
+    ["a table of contents", "page numbers", "an index"],
+    "Scripts tell how scenes look on screen.",
+    true,
+  ],
+  [
+    "Which sentence best combines evidence from two texts in an analysis?",
+    "The article gives the drought's statistics, while the poem shows how it felt to watch the fields dry.",
+    ["I read two texts.", "Both are good.", "The poem is shorter."],
+    "Show what each text contributes.",
+    true,
+  ],
+  [
+    "Which ending would best resolve the conflict of a story about two friends competing for the same role in a play?",
+    "When one friend gets the part, the other helps her learn her lines, and their friendship grows stronger.",
+    ["The play was in May.", "They both had blue costumes.", "The theater had red seats."],
+    "A resolution settles the main conflict.",
+    true,
+  ],
+];
+
+export const UNITS: Unit[] = [
+  bankUnit({
+    id: "ny-g7-text-and-versions",
+    title: "Texts, Versions and Judging Quality",
+    emoji: "🎬",
+    blurb: "Compare a text with its film, audio or stage version, and judge texts with criteria.",
+    parentNote:
+      "Your child compares a written text with its film, audio, staged or digital version and the techniques each uses, chooses fair criteria to judge the quality of stories, poems and articles, and connects texts across eras and cultures.",
+    standards: ["7R7; 7R9", "comparing a written text with its audio, filmed, staged or digital versions, judging quality with criteria and connecting texts"],
+    items: TEXT_AND_VERSIONS,
+  }),
+  bankUnit({
+    id: "ny-g7-writing-craft",
+    title: "Stories, Responses and Evidence",
+    emoji: "✏️",
+    blurb: "Narrative technique, creative responses and evidence for analysis and research.",
+    parentNote:
+      "Your child chooses narrative techniques (openings, dialogue, pacing, flashback, foreshadowing, reflective endings), creative responses such as monologues and scripts, and evidence that supports analysis, reflection and research.",
+    standards: ["7W3; 7W4; 7W5", "narrative technique, creative responses to texts, and drawing evidence for analysis, reflection and research"],
+    items: WRITING_CRAFT,
+  }),
+];

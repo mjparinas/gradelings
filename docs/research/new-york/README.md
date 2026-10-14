@@ -44,3 +44,7 @@ New York's world language standards are not used. New York families get no Frenc
 
 - The Next Generation ELA standards place Language Standards 1 and 2 in grade bands, so `4L1` and `4L2` are this record's own labels for "the grade 3-5 banded L1/L2 skills, practised in Grade 4".
 - New York's Social-Emotional Learning Benchmarks (2018) are voluntary guidance and are not in the record; the parent guide describes them.
+- **Standards with no unit** (checked October 2026 against `outcomes.json`; every other standard is cited by at least one `us-ny` unit):
+  - Grade 9 physical science: `HS-PS1-3`, `HS-PS1-6`, `HS-PS2-6`, `HS-PS3-2`, `HS-PS3-3`, `HS-PS3-5` and `HS-PS4-6`. These are design projects, investigations and models that don't fit multiple-choice practice.
+  - English language arts: reading aloud fluently and speaking and presenting, which can't be practised as quiz questions: `KSL2`, `KSL4`, `KSL5`, `1RF4`, `1SL1`, `1SL3` to `1SL6`, `2SL4`, `2SL5`, `3RF4`, `3SL4`, `3SL6`, `4SL2`, `4SL5`, `4SL6`, `5SL3`, `5SL4`, `5SL6`, `6SL1`, `6SL3`, `6SL4`, `6SL6`, `8SL3` to `8SL6` and `9-10SL1`, `9-10SL3` to `9-10SL6`. A few (formal and informal English, judging a speaker's argument) could become quiz units later.
+  - Writing standards (`W1` to `W5`) are practised as choices about craft (which opening, detail or order works best), not as free writing, because children never type free text.
