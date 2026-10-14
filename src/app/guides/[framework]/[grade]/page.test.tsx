@@ -50,9 +50,15 @@ describe("grade guide page", () => {
     expect(within(nav).getByRole("link", { name: `← ${gradeLabel(f, "3")}` })).toHaveAttribute("href", guidePath.grade(f, "3"));
     expect(within(nav).getByRole("link", { name: `${gradeLabel(f, "5")} →` })).toHaveAttribute("href", guidePath.grade(f, "5"));
 
-    // The report card answer uses this province's own level names.
-    const levels = f.scoringFor("4").levels.map((l) => l.label).join(", ");
-    expect(faqAnswers(container)[1]).toContain(`${f.shortName} report cards describe learning with ${levels}.`);
+    // The report card answer uses this province's own level names, and never claims a report card uses our practice steps.
+    const scheme = f.scoringFor("4");
+    const levels = scheme.levels.map((l) => l.label).join(", ");
+    expect(faqAnswers(container)[1]).toContain(
+      scheme.practiceSteps ? `has no single set of named levels on the ${gradeLabel(f, "4")} report card` : `${f.shortName} report cards describe learning with ${levels}.`,
+    );
+    // Each level is explained, with what it means at home.
+    const levelList = screen.getByRole("heading", { name: scheme.practiceSteps ? `The four practice steps in ${gradeLabel(f, "4")}` : `What each level means in ${gradeLabel(f, "4")}` }).parentElement!;
+    for (const l of scheme.levels) expect(levelList).toHaveTextContent(l.description);
 
     // Subscribe, or try the app free.
     expect(screen.getByRole("link", { name: "Try it free" })).toHaveAttribute("href", "/play/");
@@ -82,6 +88,29 @@ describe("grade guide page", () => {
       expect(faqAnswers(container)[1].includes(fsa.name), g).toBe(writes);
       unmount();
     }
+  });
+
+  it("answers the questions parents search for with this grade's own facts", async () => {
+    const bc = getFramework("ca-bc");
+    const { container } = render(await GradeGuide(props("bc", "grade-4")));
+    const answers = faqAnswers(container);
+    expect(answers.some((a) => a.startsWith(bc.scoringFor("4").levels[2].description))).toBe(true);
+    // What to know first comes from Grade 3's own units.
+    const g3 = coursesFor(bc, "3")[0];
+    expect(answers.some((a) => a.includes(g3.units[0].title))).toBe(true);
+    // Help at home matches the age: 15 minutes and older kids' tips in Grade 4, 10 minutes in Kindergarten.
+    expect(answers.at(-1)).toContain("About 15 minutes a day");
+    const k = faqAnswers(render(await GradeGuide(props("bc", "kindergarten"))).container);
+    expect(k.at(-1)).toContain("About 10 minutes a day");
+    expect(k.some((a) => a.includes("before starting"))).toBe(false);
+  });
+
+  it("says a US state's report card has no named levels, in US spelling", async () => {
+    const { container } = render(await GradeGuide(props("washington", "grade-4")));
+    const answers = faqAnswers(container);
+    expect(answers[1]).toContain("Washington has no single set of named levels on the 4th grade report card");
+    expect(container.textContent).not.toMatch(/Washington report cards describe/);
+    expect(answers.at(-1)).not.toMatch(/practise/);
   });
 
   it("has no previous grade in Kindergarten and no next grade in Grade 9", async () => {

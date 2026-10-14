@@ -49,6 +49,7 @@ const LEVELS: ProficiencyLevel[] = [
 const SCHEME: ScoringScheme = {
   id: "ab-practice-steps",
   name: "Four practice steps",
+  practiceSteps: true,
   source: "Alberta has no provincial report-card scale. School authorities choose their own, and many use four levels like these.",
   levels: LEVELS,
 };

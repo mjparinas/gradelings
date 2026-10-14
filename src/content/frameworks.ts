@@ -26,6 +26,11 @@ export interface ScoringScheme {
   /** Lowest to highest. */
   levels: ProficiencyLevel[];
   source: string;
+  /**
+   * True when the region's report card has no named levels for these grades, so the levels are our own practice steps.
+   * Pages then never say the report card uses them.
+   */
+  practiceSteps?: boolean;
 }
 
 export interface ReportCardGuide {

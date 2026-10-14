@@ -25,11 +25,12 @@ const STEPS: LevelText[] = [
 
 type Wording = [label: string, description: string, marks?: string];
 
-function scheme(id: string, name: string, source: string, wording: [Wording, Wording, Wording, Wording]): ScoringScheme {
+function scheme(id: string, name: string, source: string, wording: [Wording, Wording, Wording, Wording], practiceSteps?: boolean): ScoringScheme {
   return {
     id,
     name,
     source,
+    ...(practiceSteps && { practiceSteps }),
     levels: STEPS.map(
       (step, i): ProficiencyLevel => ({ ...step, label: wording[i][0], description: wording[i][1], marks: wording[i][2] }),
     ),
@@ -52,7 +53,7 @@ const JUNIOR_HIGH = scheme("nl-79", "Course marks", "Newfoundland and Labrador E
   ["Approaching", "Is moving towards the outcomes so far and applies learning with support."],
   ["Meeting", "Meets the outcomes so far and applies the key concepts and skills to familiar situations."],
   ["Exceeding", "Has a thorough understanding of the outcomes so far and applies learning in new situations."],
-]);
+], true);
 
 export const NEWFOUNDLAND_AND_LABRADOR: Framework = {
   id: "ca-nl",

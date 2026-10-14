@@ -48,6 +48,7 @@ const LEVELS: ProficiencyLevel[] = [
 const SCHEME: ScoringScheme = {
   id: "pe-practice-steps",
   name: "Four practice steps",
+  practiceSteps: true,
   source: "These four steps are a plain practice scale, not a Prince Edward Island Department of Education scale. Ask your child's school how it reports.",
   levels: LEVELS,
 };

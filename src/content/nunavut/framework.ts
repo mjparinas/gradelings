@@ -49,6 +49,7 @@ const LEVELS: ProficiencyLevel[] = [
 const SCHEME: ScoringScheme = {
   id: "nu-practice-steps",
   name: "Four practice steps",
+  practiceSteps: true,
   source: "These four steps are a plain practice scale, not a Nunavut Department of Education scale. Ask your child's school how it reports.",
   levels: LEVELS,
 };
