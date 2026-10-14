@@ -10,6 +10,8 @@ export function ReportCardGuide({ framework, grade = "2", headingLevel = 2 }: { 
   const scheme = framework.scoringFor(grade);
   const guide = framework.reportCard;
   const H = headingLevel === 1 ? "h1" : "h2";
+  // One level below the title, so headings never skip a level.
+  const Sub = headingLevel === 1 ? "h2" : "h3";
   return (
     <div className="flex flex-col gap-6">
       <section>
@@ -18,9 +20,9 @@ export function ReportCardGuide({ framework, grade = "2", headingLevel = 2 }: { 
       </section>
 
       <section aria-labelledby="levels">
-        <h3 id="levels" className="mb-3 text-2xl font-bold">
+        <Sub id="levels" className="mb-3 text-2xl font-bold">
           The four levels
-        </h3>
+        </Sub>
         <div className="grid gap-3 sm:grid-cols-2">
           {scheme.levels.map((l, i) => (
             <div key={l.id} className="rounded-2xl border border-line bg-white p-4" style={{ borderLeft: `8px solid ${l.colour}` }}>
@@ -41,9 +43,9 @@ export function ReportCardGuide({ framework, grade = "2", headingLevel = 2 }: { 
       </section>
 
       <section aria-labelledby="facts">
-        <h3 id="facts" className="mb-3 text-2xl font-bold">
+        <Sub id="facts" className="mb-3 text-2xl font-bold">
           What else is on the report card
-        </h3>
+        </Sub>
         <ul className="grid gap-3 sm:grid-cols-2">
           {guide.facts.map((f) => (
             <li key={f.title} className="rounded-2xl border border-line bg-white p-4">
@@ -55,9 +57,9 @@ export function ReportCardGuide({ framework, grade = "2", headingLevel = 2 }: { 
       </section>
 
       <section aria-labelledby="faq">
-        <h3 id="faq" className="mb-3 text-2xl font-bold">
+        <Sub id="faq" className="mb-3 text-2xl font-bold">
           Common questions
-        </h3>
+        </Sub>
         <div className="flex flex-col gap-2">
           {guide.faqs.map((f) => (
             <Disclosure key={f.q} className="rounded-2xl border border-line bg-white p-4" titleClassName="text-lg font-semibold" title={f.q}>

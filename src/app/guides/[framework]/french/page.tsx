@@ -8,7 +8,9 @@ import { guidePath } from "@/components/site/guides";
 import { guidesFor, GUIDE_FRAMEWORKS } from "@/content/guides";
 import { GRADE_LABEL } from "@/content/subjects";
 import { Disclosure } from "@/components/Disclosure";
+import { guidesUpdated } from "@/content/updated";
 import { JsonLd } from "@/lib/site";
+import { pageMeta } from "@/lib/pageMeta";
 
 export const dynamicParams = false;
 
@@ -23,11 +25,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!r) return {};
   const g = guidesFor(r.framework.id).french;
   if (!g) return {};
-  return {
+  return pageMeta({
     title: g.title,
     description: `${g.intro.split(". ")[0]}. ${g.metaTail} How to help at home, even if you don't speak French.`,
-    alternates: { canonical: guidePath.french(r.framework) },
-  };
+    path: guidePath.french(r.framework),
+    framework: r.framework,
+    type: "article",
+  });
 }
 
 export default async function FrenchGuidePage({ params }: Props) {
@@ -40,7 +44,7 @@ export default async function FrenchGuidePage({ params }: Props) {
 
   return (
     <SitePage cta>
-      <JsonLd data={[breadcrumbJsonLd(crumbs), faqJsonLd(g.faqs), articleJsonLd({ headline: g.title, description: g.intro, path: guidePath.french(f) })]} />
+      <JsonLd data={[breadcrumbJsonLd(crumbs), faqJsonLd(g.faqs), articleJsonLd({ headline: g.title, description: g.intro, path: guidePath.french(f), framework: f, updated: guidesUpdated(f.id) })]} />
       <Crumbs items={crumbs} />
       <h1 className="text-4xl font-bold">{g.title}</h1>
       <p className="mt-2 max-w-3xl font-read text-lg text-ink-soft">{g.intro}</p>

@@ -7,6 +7,11 @@ export const MASCOT_NAME = "Ollie";
 // Used by the privacy policy and terms. Replace both before launch (see docs/DEPLOY.md).
 export const LEGAL_NAME = "Gradelings";
 export const CONTACT_EMAIL = "hello@gradelings.com";
+/**
+ * The brand's own social profiles (full https URLs), listed as `sameAs` in the site's Organization structured data so
+ * search engines tie them to the site. Add each one once the account exists; never list a profile we don't own.
+ */
+export const SOCIAL_PROFILES: string[] = [];
 /** Hostname a parent types into a browser. The Android app names this site because it can't take payment. */
 export const SITE_HOST = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://gradelings.com").hostname.replace(/^www\./, "");
 /** Postal address shown in the legal pages and every email's footer (CASL requires it in commercial email). Nothing is shown while it is empty. */

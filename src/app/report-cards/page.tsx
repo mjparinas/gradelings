@@ -3,12 +3,13 @@ import Link from "next/link";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { byCountry } from "@/components/site/provinces";
 import { FRAMEWORKS } from "@/content/frameworks";
+import { pageMeta } from "@/lib/pageMeta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Report cards explained",
   description: "Plain-language guides to elementary report cards: what each proficiency level means and how to help at home.",
-  alternates: { canonical: "/report-cards/" },
-};
+  path: "/report-cards/",
+});
 
 export default function ReportCardsIndex() {
   return (

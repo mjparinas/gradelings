@@ -9,6 +9,7 @@ import { TEACHER_FRAMEWORKS, teacherPath } from "@/components/site/teachers";
 import { getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { JsonLd } from "@/lib/site";
+import { pageMeta } from "@/lib/pageMeta";
 
 export const dynamicParams = false;
 
@@ -28,11 +29,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!r) return {};
   const { framework: f, grade } = r;
   const subjects = coursesFor(f, grade).map((c) => subjectInSentence(subjectSeoTitle(c.subject)));
-  return {
+  return pageMeta({
     title: `${gradeLabel(f, grade)} ${f.shortName} units to assign to your class`,
     description: `${gradeLabel(f, grade)} ${f.curriculumName} units for teachers: ${subjects.join(", ")}. Assign them to your class in ${APP_NAME} and see each student's practice.`,
-    alternates: { canonical: teacherPath.grade(f, grade) },
-  };
+    path: teacherPath.grade(f, grade),
+    framework: f,
+  });
 }
 
 export default async function TeacherGradePage({ params }: Props) {

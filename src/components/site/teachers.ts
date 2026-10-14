@@ -2,7 +2,8 @@ import type { Framework } from "@/content/frameworks";
 import { gradeSlug } from "@/content/subjects";
 import type { GradeId } from "@/content/types";
 import { FRAMEWORKS } from "@/content/frameworks";
-import { gradesWithContent } from "./curriculum";
+import { curriculumUpdated, gradeUpdated, latest } from "@/content/updated";
+import { gradesWithContent, type SitemapPath } from "./curriculum";
 
 // Public pages for teachers. The classroom area itself (/teachers/) is a private app and stays
 // noindex; these pages are what search visitors land on before they create a teacher account.
@@ -24,11 +25,11 @@ export const teacherPath = {
   grade: (f: Framework, g: GradeId) => `/for-teachers/${f.slug}/${gradeSlug(g)}/`,
 };
 
-export function allTeacherPaths(): { path: string; priority: number }[] {
-  const out = [{ path: teacherPath.hub(), priority: 0.8 }];
+export function allTeacherPaths(): SitemapPath[] {
+  const out: SitemapPath[] = [{ path: teacherPath.hub(), updated: latest(...TEACHER_FRAMEWORKS.map((f) => curriculumUpdated(f.id))) }];
   for (const f of TEACHER_FRAMEWORKS) {
-    out.push({ path: teacherPath.framework(f), priority: 0.8 });
-    for (const g of gradesWithContent(f)) out.push({ path: teacherPath.grade(f, g), priority: 0.7 });
+    out.push({ path: teacherPath.framework(f), updated: curriculumUpdated(f.id) });
+    for (const g of gradesWithContent(f)) out.push({ path: teacherPath.grade(f, g), updated: gradeUpdated(f.id, g) });
   }
   return out;
 }

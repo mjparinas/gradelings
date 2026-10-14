@@ -8,17 +8,18 @@ import { TEACHER_FRAMEWORKS, TEACHER_SIGNUP, teacherPath } from "@/components/si
 import { APP_NAME } from "@/lib/brand";
 import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
+import { pageMeta } from "@/lib/pageMeta";
 
 const curricula = TEACHER_FRAMEWORKS.map((f) => f.curriculumName).join(" or ");
 const regions = regionList(TEACHER_FRAMEWORKS);
 /** "province", or "province or state" once a US state can have classes. */
 const region = regionWord(TEACHER_FRAMEWORKS);
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: `${APP_NAME} for teachers: classroom practice matched to the ${curricula}`,
   description: `Create a class, assign curriculum-matched units and see how each student is practising. Free for teachers for now, ad-free, and families stay in control of what is shared.`,
-  alternates: { canonical: teacherPath.hub() },
-};
+  path: teacherPath.hub(),
+});
 
 const STEPS = [
   { title: "Create a class", body: "Sign up as a teacher, name your class and choose its grade. You get a short join code." },

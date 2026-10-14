@@ -4,12 +4,13 @@ import { ContactForm } from "@/components/site/ContactForm";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { teacherPath } from "@/components/site/teachers";
 import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS } from "@/lib/brand";
+import { pageMeta } from "@/lib/pageMeta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Contact us",
   description: `Questions, feedback, a school enquiry or a privacy request? Send the ${APP_NAME} team a message or email us.`,
-  alternates: { canonical: "/contact/" },
-};
+  path: "/contact/",
+});
 
 export default function ContactPage() {
   return (

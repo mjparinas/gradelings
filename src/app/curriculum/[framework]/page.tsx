@@ -7,6 +7,7 @@ import { FRAMEWORKS } from "@/content/frameworks";
 import { GUIDES } from "@/content/guides";
 import { getSubjectMeta, subjectInSentence } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
+import { pageMeta } from "@/lib/pageMeta";
 
 export const dynamicParams = false;
 
@@ -18,11 +19,12 @@ export async function generateMetadata({ params }: PageProps<"/curriculum/[frame
   const r = resolve(await params);
   if (!r) return {};
   const f = r.framework;
-  return {
+  return pageMeta({
     title: `${f.curriculumName} practice, ${gradeSpan(f, true)}`,
     description: `Kid-friendly practice for the ${f.curriculumName} (${f.name}): ${f.subjects.map((s) => subjectInSentence(subjectSeoTitle(s))).join(", ")} from ${gradeSpan(f)}, with sample questions for every unit.`,
-    alternates: { canonical: curriculumPath.framework(f) },
-  };
+    path: curriculumPath.framework(f),
+    framework: f,
+  });
 }
 
 export default async function FrameworkPage({ params }: PageProps<"/curriculum/[framework]">) {

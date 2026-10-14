@@ -86,4 +86,36 @@ describe("curriculum unit page", () => {
     expect(await generateMetadata(props("prince-edward-island", "grade-1", "math", "no-such-unit"))).toEqual({});
     await expect(UnitPage(props("prince-edward-island", "grade-1", "math", "no-such-unit"))).rejects.toMatchObject({ digest: expect.stringContaining("404") });
   });
+
+  it("shows a different set of sample questions for each province that shares a unit", async () => {
+    const yukon = getFramework("ca-yt");
+    const unit = coursesFor(yukon, "4").find((c) => c.subject === "math")!.units.find((u) => u.standards["ca-bc"])!;
+    const bc = render(await UnitPage(props("bc", "grade-4", "math", unit.id)));
+    const bcText = screen.getByRole("region", { name: "Sample questions" }).textContent;
+    bc.unmount();
+    render(await UnitPage(props("yukon", "grade-4", "math", unit.id)));
+    expect(screen.getByRole("region", { name: "Sample questions" }).textContent).not.toBe(bcText);
+  });
+
+  it("says where the unit sits in this region's course, links its guides and source, and dates the structured data", async () => {
+    const f = getFramework("us-wa");
+    const course = coursesFor(f, "4").find((c) => c.subject === "math")!;
+    const unit = course.units[1];
+    const { container } = render(await UnitPage(props("washington", "grade-4", "math", unit.id)));
+    const region = screen.getByRole("region", { name: `${unit.title} in Washington` });
+    expect(region).toHaveTextContent(`unit 2 of ${course.units.length} in 4th grade Math, after ${course.units[0].title}`);
+    expect(region).toHaveTextContent("practice, not a report-card mark");
+    const links = within(region).getAllByRole("link").map((a) => a.getAttribute("href"));
+    expect(links).toEqual(["/guides/washington/grade-4/", "/guides/washington/grade-4/math/worksheet/", "/report-cards/washington/", f.sourceUrl]);
+    const data = JSON.parse(container.querySelector('script[type="application/ld+json"]')!.textContent!) as Record<string, unknown>[];
+    const resource = data.find((d) => d["@type"] === "LearningResource")!;
+    expect(resource).toEqual(expect.objectContaining({ inLanguage: "en-US", typicalAgeRange: "9-10", dateModified: expect.stringMatching(/^\d{4}-\d{2}-\d{2}$/) }));
+  });
+
+  it("gives the page its own Open Graph tags", async () => {
+    const f = getFramework("us-ca");
+    const unit = coursesFor(f, "3").find((c) => c.subject === "math")!.units[0];
+    const meta = await generateMetadata(props("california", "grade-3", "math", unit.id));
+    expect(meta.openGraph).toEqual(expect.objectContaining({ title: meta.title, description: meta.description, url: curriculumPath.unit(f, "3", "math", unit.id), locale: "en_US" }));
+  });
 });

@@ -5,12 +5,13 @@ import { coursesFor, curriculumPath, gradesWithContent, gradeLabel } from "@/com
 import { byCountry } from "@/components/site/provinces";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { APP_NAME } from "@/lib/brand";
+import { pageMeta } from "@/lib/pageMeta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Curriculum: what kids practise in each grade",
   description: `Browse every unit ${APP_NAME} covers from Kindergarten to Grade 9, by curriculum, grade and subject, with sample questions and the learning standards each one matches.`,
-  alternates: { canonical: curriculumPath.index() },
-};
+  path: curriculumPath.index(),
+});
 
 export default function CurriculumIndex() {
   return (

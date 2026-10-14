@@ -53,4 +53,10 @@ describe("report card guide page", () => {
     expect(await generateMetadata(props("quebec"))).toEqual({});
     await expect(ReportCardsPage(props("quebec"))).rejects.toMatchObject({ digest: expect.stringContaining("404") });
   });
+
+  it("never skips a heading level", async () => {
+    const { container } = render(await ReportCardsPage(props("bc")));
+    const levels = [...container.querySelectorAll("h1, h2, h3, h4, h5, h6")].map((h) => Number(h.tagName[1]));
+    for (let i = 1; i < levels.length; i++) expect(levels[i] - levels[i - 1], `heading ${i + 1}`).toBeLessThanOrEqual(1);
+  });
 });

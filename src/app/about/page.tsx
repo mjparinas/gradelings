@@ -6,12 +6,13 @@ import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { APP_NAME } from "@/lib/brand";
 import { TRIAL_DAYS } from "@/lib/plan";
+import { pageMeta } from "@/lib/pageMeta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "About us",
   description: `Why ${APP_NAME} exists, who makes it and what we believe: curriculum-matched practice for Kindergarten to Grade 9 that kids enjoy and parents understand.`,
-  alternates: { canonical: "/about/" },
-};
+  path: "/about/",
+});
 
 /** What the product stands for, taken from the decisions that shape it. */
 const BELIEFS: { title: string; body: string }[] = [
