@@ -7,6 +7,7 @@ import { call } from "@/lib/classroom";
 import { biggestDrop, FUNNEL_PERIODS, FUNNEL_STEPS, type FunnelStep } from "@/lib/funnel";
 import { Notice } from "./Engage";
 import { Bars } from "./Skeleton";
+import { titleCase } from "@/lib/titleCase";
 
 // The sign-up funnel: how far families who signed up in a period got, where most stop, and a way to email the
 // families stuck at each step. Bars use the reports' single blue, with the numbers written beside them.
@@ -27,7 +28,7 @@ export function Funnel({ onEmailGroup }: { onEmailGroup: (segment: Segment) => v
     <section aria-labelledby="funnel-h" className="flex flex-col gap-4">
       <div className="flex flex-wrap items-end justify-between gap-2">
         <h2 id="funnel-h" className="text-2xl font-bold">
-          Sign-up funnel
+          Sign-Up Funnel
         </h2>
         <SelectMenu label="Families who signed up in the last" block={false} value={days} onChange={setDays} options={FUNNEL_PERIODS.map((d) => ({ value: String(d), label: `${d} days` }))} />
       </div>
@@ -40,7 +41,7 @@ export function Funnel({ onEmailGroup }: { onEmailGroup: (segment: Segment) => v
               <li key={s.id} className={card}>
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <h3 className="font-bold">
-                    {i + 1}. {s.label}
+                    {i + 1}. {titleCase(s.label)}
                   </h3>
                   <span className="sr-only">Loading…</span>
                   <Bars widths={["w-40"]} />
@@ -67,7 +68,7 @@ export function Funnel({ onEmailGroup }: { onEmailGroup: (segment: Segment) => v
                 <li key={s.id} className={card}>
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
                     <h3 className="font-bold">
-                      {i + 1}. {s.label}
+                      {i + 1}. {titleCase(s.label)}
                     </h3>
                     <p className="tabular-nums">
                       <span className="text-xl font-bold">{s.count.toLocaleString("en-CA")}</span> · {pct(s.ofStart)} of sign-ups
@@ -82,10 +83,10 @@ export function Funnel({ onEmailGroup }: { onEmailGroup: (segment: Segment) => v
                       <p className="text-ink-soft">{lost.toLocaleString("en-CA")} stopped before this step.</p>
                       {def.segment ? (
                         <button type="button" className="min-h-11 font-semibold text-[#2a5bd7] underline" onClick={() => onEmailGroup(def.segment!)}>
-                          {def.stuck}
+                          {titleCase(def.stuck)}
                         </button>
                       ) : (
-                        <p className="text-ink-soft">{def.stuck}</p>
+                        <p className="text-ink-soft">{titleCase(def.stuck)}</p>
                       )}
                     </div>
                   )}

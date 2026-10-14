@@ -133,7 +133,7 @@ export async function sendDigest(origin: string, now = Date.now()): Promise<numb
   if (!to.length) return 0;
   const d = await digestLines(now);
   let sent = 0;
-  for (const t of to) if ((await sendEmail(alertEmail(t, origin, { subject: `Today: ${d.subject}`, heading: "Your morning digest", lines: d.lines, path: "/admin/?tab=To%20do" }))).ok) sent++;
+  for (const t of to) if ((await sendEmail(alertEmail(t, origin, { subject: `Today: ${d.subject}`, heading: "Your morning digest", lines: d.lines, path: "/admin/?tab=To%20Do" }))).ok) sent++;
   return sent;
 }
 

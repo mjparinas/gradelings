@@ -66,7 +66,7 @@ describe("Traffic", () => {
     await user.click(screen.getByRole("option", { name: "Last 90 days" }));
     await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/admin/traffic/?days=90&part=search"));
     expect(mocks.call).toHaveBeenCalledWith("/api/admin/traffic/?days=90&part=visits");
-    await user.click(await screen.findByRole("button", { name: "Check again" }));
+    await user.click(await screen.findByRole("button", { name: "Check Again" }));
     expect(mocks.call).toHaveBeenCalledWith("/api/admin/traffic/?days=90&part=search&refresh=1");
     expect(mocks.call).toHaveBeenLastCalledWith("/api/admin/traffic/?days=90&part=visits&refresh=1");
   });
@@ -74,27 +74,27 @@ describe("Traffic", () => {
   it("shows which pages lead to the app only when Vercel gave the click counts", async () => {
     serve({ days: 28, search: { state: "ok", report: search }, visits: { state: "ok", report: { ...visits, clicks: [{ key: "/curriculum/ontario/", trial: 7, subscribe: 2 }] } } });
     const { unmount } = render(<Traffic />);
-    expect(await screen.findByText("Pages that lead to the app")).toBeInTheDocument();
+    expect(await screen.findByText("Pages That Lead to the App")).toBeInTheDocument();
     expect(screen.getAllByText("/curriculum/ontario/").length).toBeGreaterThan(0);
     unmount();
     serve({ days: 28, search: { state: "ok", report: search }, visits: { state: "ok", report: visits } });
     render(<Traffic />);
-    expect(await screen.findByText("Top pages")).toBeInTheDocument();
-    expect(screen.queryByText("Pages that lead to the app")).not.toBeInTheDocument();
+    expect(await screen.findByText("Top Pages")).toBeInTheDocument();
+    expect(screen.queryByText("Pages That Lead to the App")).not.toBeInTheDocument();
   });
 
   it("shows each part as soon as it arrives, with placeholders until then", async () => {
     const held = serve({ search: { state: "ok", report: search }, visits: { state: "ok", report: visits } }, ["visits"]);
     render(<Traffic />);
-    expect(screen.getByRole("heading", { name: "Visits to the public pages" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Visits to the Public Pages" })).toBeInTheDocument();
     expect(await screen.findByText("Clicks from Google")).toBeInTheDocument();
-    const visitsSection = screen.getByRole("heading", { name: "Visits to the public pages" }).closest("section")!;
+    const visitsSection = screen.getByRole("heading", { name: "Visits to the Public Pages" }).closest("section")!;
     expect(visitsSection.querySelector('[aria-busy="true"]')).not.toBeNull();
     expect(screen.getByRole("button", { name: "Checking…" })).toBeDisabled();
     await act(async () => held.visits());
     expect(screen.getByText("up 60% on the 28 days before")).toBeInTheDocument();
     expect(visitsSection.querySelector('[aria-busy="true"]')).toBeNull();
-    expect(screen.getByRole("button", { name: "Check again" })).toBeEnabled();
+    expect(screen.getByRole("button", { name: "Check Again" })).toBeEnabled();
   });
 
   it("shows a part that couldn't load without holding up the other", async () => {

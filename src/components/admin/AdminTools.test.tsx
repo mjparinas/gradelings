@@ -54,7 +54,7 @@ describe("FamilyBilling", () => {
     const user = userEvent.setup();
     render(<FamilyBilling familyId="fam-1" pastDue={false} />);
     await user.click(await screen.findByRole("button", { name: "Refund" }));
-    const go = screen.getByRole("button", { name: "Refund now" });
+    const go = screen.getByRole("button", { name: "Refund Now" });
     expect(go).toBeDisabled();
     await user.type(screen.getByLabelText("Type REFUND to confirm"), "REFUND");
     expect(go).toBeEnabled();
@@ -74,10 +74,10 @@ describe("FamilyBilling", () => {
     respond((url) => (url.startsWith("/api/admin/billing/?") ? data : undefined));
     const user = userEvent.setup();
     render(<FamilyBilling familyId="fam-1" pastDue={false} />);
-    await user.click(await screen.findByRole("button", { name: "Cancel at the end of the period" }));
+    await user.click(await screen.findByRole("button", { name: "Cancel at the End of the Period" }));
     expect(sent("/api/admin/billing/")).toEqual({ familyId: "fam-1", action: "cancel-at-end", subscriptionId: "sub_1" });
-    await user.click(screen.getByRole("button", { name: "Cancel now" }));
-    const end = screen.getByRole("button", { name: "End it now" });
+    await user.click(screen.getByRole("button", { name: "Cancel Now" }));
+    const end = screen.getByRole("button", { name: "End It Now" });
     expect(end).toBeDisabled();
     await user.type(screen.getByLabelText("Type CANCEL to confirm"), "CANCEL");
     await user.click(end);
@@ -89,7 +89,7 @@ describe("FamilyBilling", () => {
     const user = userEvent.setup();
     render(<FamilyBilling familyId="fam-1" pastDue={false} />);
     expect(await screen.findByText(/Cancels on/)).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Undo the cancellation" }));
+    await user.click(screen.getByRole("button", { name: "Undo the Cancellation" }));
     expect(sent("/api/admin/billing/")).toEqual({ familyId: "fam-1", action: "resume", subscriptionId: "sub_1" });
   });
 
@@ -97,7 +97,7 @@ describe("FamilyBilling", () => {
     respond((url) => (url.startsWith("/api/admin/billing/?") ? data : undefined));
     const user = userEvent.setup();
     render(<FamilyBilling familyId="fam-1" pastDue />);
-    await user.click(screen.getByRole("button", { name: "Email them to update their card" }));
+    await user.click(screen.getByRole("button", { name: "Email Them to Update Their Card" }));
     expect(sent("/api/admin/billing/")).toEqual({ familyId: "fam-1", action: "card-email" });
     expect(await screen.findByText("Email sent with a link to update their card.")).toBeInTheDocument();
   });
@@ -114,7 +114,7 @@ describe("Funnel", () => {
   it("shows every step under its name while the numbers load", () => {
     mocks.call.mockImplementation(() => new Promise(() => {}));
     render(<Funnel onEmailGroup={() => {}} />);
-    for (const name of ["1. Signed up", "2. Confirmed their email", "3. Added a child"]) expect(screen.getByRole("heading", { name })).toBeInTheDocument();
+    for (const name of ["1. Signed Up", "2. Confirmed Their Email", "3. Added a Child"]) expect(screen.getByRole("heading", { name })).toBeInTheDocument();
     expect(screen.getByRole("list")).toHaveAttribute("aria-busy", "true");
   });
 
@@ -129,7 +129,7 @@ describe("Funnel", () => {
     const items = screen.getAllByRole("listitem");
     expect(items).toHaveLength(6);
     expect(items[2]).toHaveTextContent("40 · 40% of sign-ups · 50% of the step before");
-    await user.click(screen.getByRole("button", { name: "Email the families practising often but not paying" }));
+    await user.click(screen.getByRole("button", { name: "Email the Families Practising Often but Not Paying" }));
     expect(onEmail).toHaveBeenCalledWith("engaged-not-paying");
     await user.click(screen.getByRole("combobox", { name: "Families who signed up in the last" }));
     await user.click(screen.getByRole("option", { name: "30 days" }));
@@ -158,8 +158,8 @@ describe("Automations", () => {
   it("shows every card under its name while the settings load", async () => {
     mocks.call.mockImplementation(() => new Promise(() => {}));
     render(<Automations />);
-    expect(screen.getByRole("heading", { name: "Alerts to you" })).toBeInTheDocument();
-    for (const name of ["Ollie misses you", "Add your child", "Come back after a try", "Free lessons are waiting"]) expect(screen.getByRole("heading", { name })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Alerts to You" })).toBeInTheDocument();
+    for (const name of ["Ollie Misses You", "Add Your Child", "Come Back After a Try", "Free Lessons Are Waiting"]) expect(screen.getByRole("heading", { name })).toBeInTheDocument();
     expect(screen.getByText("Loading…").closest('[aria-busy="true"]')).not.toBeNull();
   });
 
@@ -167,11 +167,11 @@ describe("Automations", () => {
     respond((url, method) => (url === "/api/admin/automations/" && method === "GET" ? data() : undefined));
     const user = userEvent.setup();
     render(<Automations />);
-    const card = (await screen.findByRole("heading", { name: "Ollie misses you", level: 3 })).closest("li")!;
+    const card = (await screen.findByRole("heading", { name: "Ollie Misses You", level: 3 })).closest("li")!;
     expect(card).toHaveTextContent("Off");
     expect(card).toHaveTextContent("If it were on, the next daily run would email 12 of the 12 families waiting (limit 20 a day).");
-    await user.click(within(card).getByRole("button", { name: "Turn on" }));
-    const start = within(card).getByRole("button", { name: "Start sending" });
+    await user.click(within(card).getByRole("button", { name: "Turn On" }));
+    const start = within(card).getByRole("button", { name: "Start Sending" });
     expect(start).toBeDisabled();
     await user.type(within(card).getByLabelText("Type TURN ON to confirm"), "TURN ON");
     await user.click(start);
@@ -183,11 +183,11 @@ describe("Automations", () => {
     respond((url, method) => (url === "/api/admin/automations/" && method === "GET" ? data(on) : undefined));
     const user = userEvent.setup();
     render(<Automations />);
-    const card = (await screen.findByRole("heading", { name: "Ollie misses you", level: 3 })).closest("li")!;
+    const card = (await screen.findByRole("heading", { name: "Ollie Misses You", level: 3 })).closest("li")!;
     expect(card).toHaveTextContent("(owner@example.com)");
-    await user.click(within(card).getByRole("button", { name: "Turn off" }));
+    await user.click(within(card).getByRole("button", { name: "Turn Off" }));
     expect(sent("/api/admin/automations/")).toEqual({ id: "quiet-7", action: "switch", on: false });
-    await user.click(within(card).getByRole("button", { name: "Edit the email" }));
+    await user.click(within(card).getByRole("button", { name: "Edit the Email" }));
     const subject = within(card).getByLabelText("Subject");
     await user.clear(subject);
     await user.type(subject, "We miss you");
@@ -207,7 +207,7 @@ describe("Automations", () => {
   });
 });
 
-describe("Saved replies", () => {
+describe("Saved Replies", () => {
   const item = { id: "m1", from: "lee@example.com", fromEmail: "lee@example.com", subject: "Help", receivedAt: Date.now(), attachments: 0, familyId: null, handledAt: null, repliedAt: null };
   const handler: Handler = (url, method) => {
     if (url === "/api/admin/replies/" && method === "GET") return { replies: DEFAULT_REPLIES };
@@ -234,15 +234,15 @@ describe("Saved replies", () => {
     const user = userEvent.setup();
     render(<Inbox onOpenFamily={vi.fn()} />);
     await user.click(await screen.findByRole("button", { name: `Edit (${DEFAULT_REPLIES.length})` }));
-    expect(screen.getByRole("button", { name: "Save replies" })).toBeDisabled();
+    expect(screen.getByRole("button", { name: "Save Replies" })).toBeDisabled();
     await user.click(screen.getAllByRole("button", { name: "Remove" })[0]);
-    await user.click(screen.getByRole("button", { name: "Add a reply" }));
+    await user.click(screen.getByRole("button", { name: "Add a Reply" }));
     const titles = screen.getAllByLabelText("Title");
     await user.clear(titles[titles.length - 1]);
     await user.type(titles[titles.length - 1], "Hours");
     const bodies = screen.getAllByLabelText("Reply");
     await user.type(bodies[bodies.length - 1], "We answer within a day.");
-    await user.click(screen.getByRole("button", { name: "Save replies" }));
+    await user.click(screen.getByRole("button", { name: "Save Replies" }));
     const body = sent("/api/admin/replies/", "PUT") as { replies: { id: string; title: string; body: string }[] };
     expect(body.replies.map((r) => r.title)).toEqual([...DEFAULT_REPLIES.slice(1).map((r) => r.title), "Hours"]);
     expect(body.replies.at(-1)!.body).toBe("We answer within a day.");

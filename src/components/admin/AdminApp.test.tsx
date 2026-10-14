@@ -75,13 +75,13 @@ describe("AdminApp", () => {
   it("asks a signed-out visitor to sign in", async () => {
     mocks.call.mockImplementation(() => Promise.reject(new Error("Not found")));
     render(<AdminApp />);
-    expect(await screen.findByRole("heading", { name: "Admin sign in" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "Admin Sign In" })).toBeInTheDocument();
   });
 
   it("tells a signed-in account that isn't an admin", async () => {
     mocks.call.mockImplementation((url: string) => (url === "/api/admin/me/" ? Promise.reject(new Error("Not found")) : Promise.resolve({ family: {} })));
     render(<AdminApp />);
-    expect(await screen.findByRole("heading", { name: "Not an admin account" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "Not an Admin Account" })).toBeInTheDocument();
   });
 
   it("shows the overview and switches a flag off", async () => {
@@ -112,7 +112,7 @@ describe("AdminApp", () => {
     await user.type(screen.getByLabelText("Percent off"), "40");
     await user.type(screen.getByLabelText("Use limit (optional)"), "100");
     await user.type(screen.getByLabelText("Custom code (optional)"), "FALL40");
-    await user.click(screen.getByRole("button", { name: "Make code" }));
+    await user.click(screen.getByRole("button", { name: "Make Code" }));
     expect(await screen.findByText("ABCD-EFGH-JKMN")).toBeInTheDocument();
     expect(sent("/api/admin/codes/", "POST")).toEqual({ kind: "discount", percentOff: 40, duration: "once", maxUses: 100, code: "FALL40", note: undefined });
   });
@@ -121,9 +121,9 @@ describe("AdminApp", () => {
     asAdmin();
     const user = userEvent.setup();
     render(<AdminApp />);
-    await user.click(await screen.findByRole("button", { name: "A/B tests" }));
+    await user.click(await screen.findByRole("button", { name: "A/B Tests" }));
     await user.type(screen.getByLabelText(/^Key/), "home-colours");
-    await user.click(screen.getByRole("button", { name: "Save draft" }));
+    await user.click(screen.getByRole("button", { name: "Save Draft" }));
     await waitFor(() => expect(sent("/api/admin/experiments/", "POST")).toEqual({ key: "home-colours", description: "", variants: [{ name: "control", weight: 50 }, { name: "variant", weight: 50 }] }));
   });
 
@@ -135,7 +135,7 @@ describe("AdminApp", () => {
     await user.click(await screen.findByRole("button", { name: "pat@example.com" }));
     // An unknown province is shown as saved, not as the default; no province means the default.
     expect(await screen.findByText("Grade 3 (Ontario), Grade 5 (zz-unknown), Grade 1 (British Columbia)")).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Give lifetime access" }));
+    await user.click(screen.getByRole("button", { name: "Give Lifetime Access" }));
     expect(sent("/api/admin/users/", "POST")).toEqual({ familyId: "fam-1", action: "grant-access", days: null });
     expect(await screen.findByText("Lifetime access given.")).toBeInTheDocument();
   });
@@ -165,13 +165,13 @@ describe("AdminApp", () => {
     });
     const user = userEvent.setup();
     render(<AdminApp />);
-    const banner = await screen.findByRole("region", { name: /Maintenance mode is on/ });
+    const banner = await screen.findByRole("region", { name: /Maintenance Mode Is On/ });
     expect(banner).toHaveTextContent("Visitors only see the home page (on since");
     await user.click(screen.getByRole("button", { name: "Codes" }));
-    expect(screen.getByRole("region", { name: /Maintenance mode is on/ })).toBeInTheDocument();
-    await user.click(within(banner).getByRole("button", { name: "Turn off maintenance mode" }));
+    expect(screen.getByRole("region", { name: /Maintenance Mode Is On/ })).toBeInTheDocument();
+    await user.click(within(banner).getByRole("button", { name: "Turn Off Maintenance Mode" }));
     expect(sent("/api/admin/maintenance/", "PUT")).toEqual({ on: false });
-    await waitFor(() => expect(screen.queryByRole("region", { name: /Maintenance mode is on/ })).not.toBeInTheDocument());
+    await waitFor(() => expect(screen.queryByRole("region", { name: /Maintenance Mode Is On/ })).not.toBeInTheDocument());
   });
 
   it("turns maintenance mode on from the System tab only after TURN ON is typed", async () => {
@@ -186,17 +186,17 @@ describe("AdminApp", () => {
     const user = userEvent.setup();
     render(<AdminApp />);
     await screen.findByText("Families");
-    expect(screen.queryByRole("region", { name: /Maintenance mode is on/ })).not.toBeInTheDocument();
+    expect(screen.queryByRole("region", { name: /Maintenance Mode Is On/ })).not.toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "System" }));
-    const card = await screen.findByRole("region", { name: "Maintenance mode" });
+    const card = await screen.findByRole("region", { name: "Maintenance Mode" });
     expect(within(card).getByText("Off.")).toBeInTheDocument();
-    await user.click(within(card).getByRole("button", { name: "Turn on maintenance mode…" }));
-    const start = within(card).getByRole("button", { name: "Start maintenance" });
+    await user.click(within(card).getByRole("button", { name: "Turn On Maintenance Mode…" }));
+    const start = within(card).getByRole("button", { name: "Start Maintenance" });
     expect(start).toBeDisabled();
     await user.type(within(card).getByLabelText("Type TURN ON to confirm"), "TURN ON");
     await user.click(start);
     expect(sent("/api/admin/maintenance/", "PUT")).toEqual({ on: true, confirm: "TURN ON" });
-    expect(await screen.findByRole("region", { name: /Maintenance mode is on/ })).toBeInTheDocument();
+    expect(await screen.findByRole("region", { name: /Maintenance Mode Is On/ })).toBeInTheDocument();
     expect(within(card).getByText("On now.")).toBeInTheDocument();
   });
 });

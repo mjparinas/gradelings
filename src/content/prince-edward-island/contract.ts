@@ -15,7 +15,7 @@ export const contract: FrameworkContract = {
   },
   ownPrefix: "pe-",
   // Nunavut may copy a unit that names no province (src/content/nunavut/plan.ts).
-  ownSharedWith: ["ca-nu", "us-ny", "us-mn"],
+  ownSharedWith: ["ca-nu", "us-ny", "us-mn", "us-al"],
   // Units written for Prince Edward Island may name the Maritime provinces; borrowed units must not name any.
   foreign: /Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada|Saskatchewan|Regina|Alberta|Manitoba|Winnipeg|Nova Scotia|Halifax|New Brunswick|Fredericton|Newfoundland|Yukon|Northwest Territories|Nunavut/,
   plan: PLAN,

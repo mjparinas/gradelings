@@ -49,7 +49,7 @@ describe("admin dashboard", () => {
   it("shows customers, growth, practice and money with charts", async () => {
     mocks.call.mockResolvedValue(data());
     render(<Dashboard />);
-    expect(await screen.findByRole("heading", { name: "Revenue and profit" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "Revenue and Profit" })).toBeInTheDocument();
     expect(within(tile("Monthly recurring revenue")).getByText("$14.99")).toBeInTheDocument();
     expect(within(tile("Revenue this month")).getByText("$14.99")).toBeInTheDocument();
     // $500 of costs a month means June is losing money so far.
@@ -59,12 +59,12 @@ describe("admin dashboard", () => {
     expect(within(tile("Sign-ups this month")).getByText("2")).toBeInTheDocument();
     expect(within(tile("From a referral")).getByText("50% of families")).toBeInTheDocument();
     expect(within(tile("Questions answered, 30 days")).getByText("30")).toBeInTheDocument();
-    for (const name of ["Revenue by month", "Profit by month", "Paying families by month", "Sign-ups per week", "Sign-ups per month", "Families practising per day", "Questions answered per day"]) {
+    for (const name of ["Revenue by Month", "Profit by Month", "Paying Families by Month", "Sign-Ups per Week", "Sign-Ups per Month", "Families Practising per Day", "Questions Answered per Day"]) {
       expect(screen.getByRole("img", { name })).toBeInTheDocument();
     }
-    expect(screen.getByText("Where families are")).toBeInTheDocument();
+    expect(screen.getByText("Where Families Are")).toBeInTheDocument();
     // Without Stripe there is nothing to import.
-    expect(screen.queryByRole("button", { name: "Import payments from Stripe" })).toBeNull();
+    expect(screen.queryByRole("button", { name: "Import Payments From Stripe" })).toBeNull();
   });
 
   it("draws every section at once and fills each in as its numbers arrive", async () => {
@@ -76,7 +76,7 @@ describe("admin dashboard", () => {
     });
     render(<Dashboard />);
     for (const s of ["money", "customers", "growth", "practice"]) expect(mocks.call).toHaveBeenCalledWith(`/api/admin/stats/?section=${s}`);
-    for (const name of ["Revenue and profit", "Customers", "Growth", "Practice"]) expect(screen.getByRole("heading", { name })).toBeInTheDocument();
+    for (const name of ["Revenue and Profit", "Customers", "Growth", "Practice"]) expect(screen.getByRole("heading", { name })).toBeInTheDocument();
     expect(await screen.findByText("Monthly recurring revenue")).toBeInTheDocument();
     const practice = screen.getByRole("heading", { name: "Practice" }).closest("section")!;
     expect(practice.querySelector('[aria-busy="true"]')).not.toBeNull();
@@ -97,10 +97,10 @@ describe("admin dashboard", () => {
     expect(costs).toHaveValue(500);
     await user.clear(costs);
     await user.type(costs, "120");
-    await user.click(screen.getByRole("button", { name: "Save costs" }));
+    await user.click(screen.getByRole("button", { name: "Save Costs" }));
     expect(mocks.call).toHaveBeenCalledWith("/api/admin/stats/", "POST", { action: "costs", monthlyCosts: 120 });
     expect(await screen.findByText("Monthly costs saved.")).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Import payments from Stripe" }));
+    await user.click(screen.getByRole("button", { name: "Import Payments From Stripe" }));
     expect(await screen.findByText("Checked 7 paid invoices; 3 belong to families here.")).toBeInTheDocument();
   });
 
@@ -125,10 +125,10 @@ describe("admin dashboard", () => {
     const onOpenFamily = vi.fn();
     const user = userEvent.setup();
     render(<Dashboard onOpenFamily={onOpenFamily} />);
-    await screen.findByRole("heading", { name: "Revenue and profit" });
+    await screen.findByRole("heading", { name: "Revenue and Profit" });
     const opener = within(tile("Paying")).getByRole("button");
     await user.click(opener);
-    const dialog = await screen.findByRole("dialog", { name: "Paying families" });
+    const dialog = await screen.findByRole("dialog", { name: "Paying Families" });
     expect(mocks.call).toHaveBeenCalledWith("/api/admin/stats/detail/?view=paying");
     expect(within(dialog).getByRole("button", { name: "Close" })).toHaveFocus();
     expect(within(dialog).getByText("$14.99")).toBeInTheDocument();
@@ -150,10 +150,10 @@ describe("admin dashboard", () => {
     mocks.call.mockResolvedValue(data());
     const user = userEvent.setup();
     render(<Dashboard />);
-    await screen.findByRole("heading", { name: "Revenue and profit" });
+    await screen.findByRole("heading", { name: "Revenue and Profit" });
     mocks.call.mockClear();
     await user.click(within(tile("Profit this month")).getByRole("button"));
-    const dialog = screen.getByRole("dialog", { name: "Profit by month" });
+    const dialog = screen.getByRole("dialog", { name: "Profit by Month" });
     expect(within(dialog).getAllByRole("row")).toHaveLength(13);
     expect(within(dialog).getByText("Projected profit")).toBeInTheDocument();
     expect(mocks.call).not.toHaveBeenCalled();
@@ -165,7 +165,7 @@ describe("admin dashboard", () => {
     mocks.call.mockImplementation((url: string) => (url.startsWith("/api/admin/stats/detail/") ? Promise.reject(new Error("Not allowed")) : Promise.resolve(data())));
     const user = userEvent.setup();
     render(<Dashboard />);
-    await screen.findByRole("heading", { name: "Revenue and profit" });
+    await screen.findByRole("heading", { name: "Revenue and Profit" });
     await user.click(within(tile("Children")).getByRole("button"));
     expect(await within(screen.getByRole("dialog")).findByRole("alert")).toHaveTextContent("Not allowed");
   });
