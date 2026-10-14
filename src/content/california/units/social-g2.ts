@@ -186,6 +186,38 @@ const DIFFERENCE_2: Q[] = [
   ],
 ];
 
+// Grade 2: family journeys on a map (2.2.3).
+
+const JOURNEYS_2: Q[] = [
+  ["Ancestors are…", "family members who lived before us", ["new neighbors", "classmates", "people in a movie"], "Grandparents' parents are ancestors."],
+  ["An immigrant is a person who…", "moves to a new country to live", ["never leaves home", "visits for one day", "lives on a boat forever"], "Many families have immigrant stories."],
+  ["Lin's grandparents came from Vietnam. On a world map, look in…", "Asia", ["South America", "Europe", "Australia"], "Vietnam is in Southeast Asia."],
+  ["Mateo's great-grandma lived in Mexico. Mexico is…", "south of the United States", ["north of Canada", "in Europe", "in Africa"], "They share a border."],
+  ["Amara's family came from Nigeria. Nigeria is on the continent of…", "Africa", ["Asia", "Europe", "North America"], "Nigeria is in West Africa."],
+  ["Sofia's ancestors came from Italy. Italy is in…", "Europe", ["Africa", "Asia", "South America"], "It is shaped like a boot."],
+  ["Raj's family moved from India. To come here, they crossed an…", "ocean", ["street", "small pond", "backyard"], "India is across the sea."],
+  ["Which is a reason a family might move?", "a parent got a new job", ["it was Tuesday", "they liked a song", "a cat sneezed"], "Jobs are a common reason."],
+  ["Which is another reason families move?", "to be close to relatives", ["to lose their things", "to stop eating", "to never go to school"], "Families like to be together."],
+  ["Some families move to a new country to be…", "safe from war or danger", ["closer to the Moon", "in a cartoon", "away from all people"], "Safety matters to families."],
+  ["Long ago, families crossing the ocean usually traveled by…", "ship", ["airplane", "car", "bike"], "The trip took weeks."],
+  ["Today, a family crossing the ocean usually travels by…", "airplane", ["wagon", "horse", "canoe"], "Planes take hours, not weeks."],
+  ["Long ago, families moving west across the US often rode in…", "covered wagons", ["jets", "subways", "electric cars"], "Oxen pulled the wagons."],
+  ["Ana's family moved here in 2015. It is 2025 now. How many years ago was that?", "10", ["5", "15", "20"], "Count from 2015 to 2025."],
+  ["Grandpa moved here in 1980. Mom was born in 1990. Which came first?", "Grandpa moving here", ["Mom being born", "they were the same year", "neither"], "1980 is earlier than 1990."],
+  ["To find where your family came from on a world map, first find the…", "country's name", ["map's price", "color of the ink", "page number only"], "Look for the label."],
+  ["A line drawn on a map from one country to another can show a family's…", "journey", ["favorite food", "birthday", "pet's name"], "Lines show routes."],
+  ["Which helps you learn your family's moving story?", "asking a grandparent", ["guessing", "a weather report", "a cereal box"], "Family members remember."],
+  ["A family tree shows…", "parents, grandparents and other relatives", ["types of trees", "a map of a forest", "a list of stores"], "It is like a chart of a family."],
+  ["Kai's great-grandparents came from Japan to Hawaii. They crossed the…", "Pacific Ocean", ["Atlantic Ocean", "Arctic Ocean", "Indian Ocean"], "Japan and Hawaii are in the Pacific."],
+  ["Leah's ancestors came from Ireland to New York. They crossed the…", "Atlantic Ocean", ["Pacific Ocean", "Indian Ocean", "Arctic Ocean"], "The Atlantic is east of the US."],
+  ["Ji-woo's family moved from Korea. Korea is in…", "Asia", ["Africa", "Europe", "South America"], "Korea is near Japan and China."],
+  ["Maria's family came from Brazil. Brazil is in…", "South America", ["North America", "Asia", "Europe"], "It is the biggest country there."],
+  ["A family moved from a farm to a city to find work. The city had more…", "jobs", ["cows", "fields", "tractors"], "Cities have many workplaces."],
+  ["Which is a primary source about a family's move?", "an old ticket from the trip", ["a cartoon", "a made-up story", "a toy"], "It comes from the time of the trip.", true],
+  ["On a map, the compass rose helps you tell if a family traveled…", "north, south, east or west", ["fast or slow", "happy or sad", "day or night"], "It shows directions.", true],
+  ["Many families in your community came from…", "many different places", ["only one country", "nowhere", "the Moon"], "Communities are full of stories.", true],
+];
+
 // Copies of Washington's and Oregon's Grade 2 units, with California items. They come from that state's own grade
 // file, which this grade's download already carries.
 const K = (id: string) => from([...WASHINGTON, ...OREGON], id);
@@ -384,5 +416,18 @@ export const SOCIAL_2: Unit[] = [
       "how heroes from long ago and the recent past have made a difference in others' lives",
     ],
     items: DIFFERENCE_2,
+  }),
+  bankUnit({
+    id: "ca-g2-family-journeys",
+    title: "Family Journeys",
+    emoji: "🧳",
+    blurb: "Where families came from, and why",
+    parentNote:
+      "Finding on a world map where a family's ancestors lived, how families traveled long ago and today, when they moved, and the reasons people move.",
+    standards: [
+      "2.2.3",
+      "locating on a map where ancestors lived, and telling when and why a family moved and how it made the trip",
+    ],
+    items: JOURNEYS_2,
   }),
 ];

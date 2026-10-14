@@ -207,4 +207,23 @@ export const lessons: GradeLessons = {
     ["200 + 50 = 250.", "250 − 35 = 215."],
     "$215",
   ),
+  // California
+  "math/ca-g6-long-division": lesson(
+    ["Divide: how many times does the divisor go into the first digits?", "Multiply and subtract, then bring down the next digit.", "Repeat until no digits are left. Check by multiplying the quotient by the divisor."],
+    "What is 7488 ÷ 24?",
+    ["74 ÷ 24 = 3, 74 − 72 = 2. Bring down 8: 28.", "28 ÷ 24 = 1, 28 − 24 = 4. Bring down 8: 48.", "48 ÷ 24 = 2.", "Check: 312 × 24 = 7488."],
+    "312",
+  ),
+  "math/ca-g6-expressions": lesson(
+    ["A letter stands for a number you don't know.", "The distributive property: 3(2 + x) = 6 + 3x.", "Two expressions are equivalent if they are equal for every value of the letter."],
+    "Write an expression equivalent to 4(x + 5).",
+    ["Multiply each term by 4.", "4 × x = 4x and 4 × 5 = 20."],
+    "4x + 20",
+  ),
+  "math/ca-g6-data-shape": lesson(
+    ["The centre of the data is a typical value, like the median.", "The spread tells how far apart the values are, like the range.", "The shape tells where values pile up (a peak) and whether a tail stretches to one side."],
+    "Data: 2, 3, 3, 3, 4, 4, 9. Describe the spread and shape.",
+    ["Range = 9 − 2 = 7.", "Most values are low, with one value far to the right: a tail to the right."],
+    "Range 7, tail to the right",
+  ),
 };
