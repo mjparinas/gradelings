@@ -2,9 +2,11 @@ import { DEFAULT_FRAMEWORK, getFramework } from "./frameworks";
 import { localeOf, localizeUnit } from "./locale";
 import { GRADE_ORDER } from "./subjects";
 import { withLessons, type GradeLessons } from "./lessons";
+import type { GradeModule } from "./manifest";
+import { manifestOf, REGISTRY } from "./registry";
 import type { Course, FrameworkId, GradeId, SubjectId, Unit } from "./types";
 
-// The content registry for the apps. Each grade's content is its own download,
+// The content store for the apps. Each grade's content is its own download,
 // loaded on demand with `loadGrade`, so a Grade 2 child never downloads Grade 7.
 // A grade's shared lessons (BC) are one download, and each other framework adds
 // its own download on top, so a BC child never downloads Ontario lessons.
@@ -13,199 +15,22 @@ import type { Course, FrameworkId, GradeId, SubjectId, Unit } from "./types";
 
 // A grade module may also export its lessons ("subject/unit-id"). They are applied to every framework's
 // units with that id, so a unit only one province teaches still gets its lesson.
-type Loader = () => Promise<{ courses: Course[]; lessons?: GradeLessons }>;
+type Loader = () => Promise<GradeModule>;
 
-const LOADERS: Record<GradeId, Loader> = {
-  k: () => import("./grades/k"),
-  "1": () => import("./grades/g1"),
-  "2": () => import("./grades/g2"),
-  "3": () => import("./grades/g3"),
-  "4": () => import("./grades/g4"),
-  "5": () => import("./grades/g5"),
-  "6": () => import("./grades/g6"),
-  "7": () => import("./grades/g7"),
-  "8": () => import("./grades/g8"),
-  "9": () => import("./grades/g9"),
-};
+/** The shared grade files (British Columbia's), loaded for every child. */
+const LOADERS: Record<GradeId, Loader> = manifestOf(DEFAULT_FRAMEWORK).grades;
 
-/** Extra lessons for frameworks other than the default. Each is its own download per grade. */
-const EXTRA_LOADERS: Partial<Record<FrameworkId, Partial<Record<GradeId, Loader>>>> = {
-  "ca-on": {
-    k: () => import("./ontario/k"),
-    "1": () => import("./ontario/g1"),
-    "2": () => import("./ontario/g2"),
-    "3": () => import("./ontario/g3"),
-    "4": () => import("./ontario/g4"),
-    "5": () => import("./ontario/g5"),
-    "6": () => import("./ontario/g6"),
-    "7": () => import("./ontario/g7"),
-    "8": () => import("./ontario/g8"),
-    "9": () => import("./ontario/g9"),
-  },
-  "ca-ab": {
-    k: () => import("./alberta/k"),
-    "1": () => import("./alberta/g1"),
-    "2": () => import("./alberta/g2"),
-    "3": () => import("./alberta/g3"),
-    "4": () => import("./alberta/g4"),
-    "5": () => import("./alberta/g5"),
-    "6": () => import("./alberta/g6"),
-    "7": () => import("./alberta/g7"),
-    "8": () => import("./alberta/g8"),
-    "9": () => import("./alberta/g9"),
-  },
-  "ca-mb": {
-    k: () => import("./manitoba/k"),
-    "1": () => import("./manitoba/g1"),
-    "2": () => import("./manitoba/g2"),
-    "3": () => import("./manitoba/g3"),
-    "4": () => import("./manitoba/g4"),
-    "5": () => import("./manitoba/g5"),
-    "6": () => import("./manitoba/g6"),
-    "7": () => import("./manitoba/g7"),
-    "8": () => import("./manitoba/g8"),
-    "9": () => import("./manitoba/g9"),
-  },
-  "ca-yt": {
-    k: () => import("./yukon/k"),
-    "1": () => import("./yukon/g1"),
-    "2": () => import("./yukon/g2"),
-    "3": () => import("./yukon/g3"),
-    "4": () => import("./yukon/g4"),
-    "5": () => import("./yukon/g5"),
-    "6": () => import("./yukon/g6"),
-    "7": () => import("./yukon/g7"),
-    "8": () => import("./yukon/g8"),
-    "9": () => import("./yukon/g9"),
-  },
-  "ca-nt": {
-    k: () => import("./nwt/k"),
-    "1": () => import("./nwt/g1"),
-    "2": () => import("./nwt/g2"),
-    "3": () => import("./nwt/g3"),
-    "4": () => import("./nwt/g4"),
-    "5": () => import("./nwt/g5"),
-    "6": () => import("./nwt/g6"),
-    "7": () => import("./nwt/g7"),
-    "8": () => import("./nwt/g8"),
-    "9": () => import("./nwt/g9"),
-  },
-  "ca-sk": {
-    k: () => import("./saskatchewan/k"),
-    "1": () => import("./saskatchewan/g1"),
-    "2": () => import("./saskatchewan/g2"),
-    "3": () => import("./saskatchewan/g3"),
-    "4": () => import("./saskatchewan/g4"),
-    "5": () => import("./saskatchewan/g5"),
-    "6": () => import("./saskatchewan/g6"),
-    "7": () => import("./saskatchewan/g7"),
-    "8": () => import("./saskatchewan/g8"),
-    "9": () => import("./saskatchewan/g9"),
-  },
-  "ca-ns": {
-    k: () => import("./nova-scotia/k"),
-    "1": () => import("./nova-scotia/g1"),
-    "2": () => import("./nova-scotia/g2"),
-    "3": () => import("./nova-scotia/g3"),
-    "4": () => import("./nova-scotia/g4"),
-    "5": () => import("./nova-scotia/g5"),
-    "6": () => import("./nova-scotia/g6"),
-    "7": () => import("./nova-scotia/g7"),
-    "8": () => import("./nova-scotia/g8"),
-    "9": () => import("./nova-scotia/g9"),
-  },
-  "ca-nl": {
-    k: () => import("./newfoundland-and-labrador/k"),
-    "1": () => import("./newfoundland-and-labrador/g1"),
-    "2": () => import("./newfoundland-and-labrador/g2"),
-    "3": () => import("./newfoundland-and-labrador/g3"),
-    "4": () => import("./newfoundland-and-labrador/g4"),
-    "5": () => import("./newfoundland-and-labrador/g5"),
-    "6": () => import("./newfoundland-and-labrador/g6"),
-    "7": () => import("./newfoundland-and-labrador/g7"),
-    "8": () => import("./newfoundland-and-labrador/g8"),
-    "9": () => import("./newfoundland-and-labrador/g9"),
-  },
-  "ca-pe": {
-    k: () => import("./prince-edward-island/k"),
-    "1": () => import("./prince-edward-island/g1"),
-    "2": () => import("./prince-edward-island/g2"),
-    "3": () => import("./prince-edward-island/g3"),
-    "4": () => import("./prince-edward-island/g4"),
-    "5": () => import("./prince-edward-island/g5"),
-    "6": () => import("./prince-edward-island/g6"),
-    "7": () => import("./prince-edward-island/g7"),
-    "8": () => import("./prince-edward-island/g8"),
-    "9": () => import("./prince-edward-island/g9"),
-  },
-  "ca-nu": {
-    k: () => import("./nunavut/k"),
-    "1": () => import("./nunavut/g1"),
-    "2": () => import("./nunavut/g2"),
-    "3": () => import("./nunavut/g3"),
-    "4": () => import("./nunavut/g4"),
-    "5": () => import("./nunavut/g5"),
-    "6": () => import("./nunavut/g6"),
-    "7": () => import("./nunavut/g7"),
-    "8": () => import("./nunavut/g8"),
-    "9": () => import("./nunavut/g9"),
-  },
-  "us-wa": {
-    k: () => import("./washington/k"),
-    "1": () => import("./washington/g1"),
-    "2": () => import("./washington/g2"),
-    "3": () => import("./washington/g3"),
-    "4": () => import("./washington/g4"),
-    "5": () => import("./washington/g5"),
-    "6": () => import("./washington/g6"),
-    "7": () => import("./washington/g7"),
-    "8": () => import("./washington/g8"),
-    "9": () => import("./washington/g9"),
-  },
-  "us-ca": {
-    k: () => import("./california/k"),
-    "1": () => import("./california/g1"),
-    "2": () => import("./california/g2"),
-    "3": () => import("./california/g3"),
-    "4": () => import("./california/g4"),
-    "5": () => import("./california/g5"),
-    "6": () => import("./california/g6"),
-    "7": () => import("./california/g7"),
-    "8": () => import("./california/g8"),
-    "9": () => import("./california/g9"),
-  },
-  "us-or": {
-    k: () => import("./oregon/k"),
-    "1": () => import("./oregon/g1"),
-    "2": () => import("./oregon/g2"),
-    "3": () => import("./oregon/g3"),
-    "4": () => import("./oregon/g4"),
-    "5": () => import("./oregon/g5"),
-    "6": () => import("./oregon/g6"),
-    "7": () => import("./oregon/g7"),
-    "8": () => import("./oregon/g8"),
-    "9": () => import("./oregon/g9"),
-  },
-  "ca-nb": {
-    k: () => import("./new-brunswick/k"),
-    "1": () => import("./new-brunswick/g1"),
-    "2": () => import("./new-brunswick/g2"),
-    "3": () => import("./new-brunswick/g3"),
-    "4": () => import("./new-brunswick/g4"),
-    "5": () => import("./new-brunswick/g5"),
-    "6": () => import("./new-brunswick/g6"),
-    "7": () => import("./new-brunswick/g7"),
-    "8": () => import("./new-brunswick/g8"),
-    "9": () => import("./new-brunswick/g9"),
-  },
-};
+/** Each other framework's own grade files. Each is its own download per grade, on top of the shared one. */
+const EXTRA_LOADERS: Partial<Record<FrameworkId, Partial<Record<GradeId, Loader>>>> = Object.fromEntries(
+  REGISTRY.filter((m) => m.id !== DEFAULT_FRAMEWORK).map((m) => [m.id, m.grades]),
+);
 
 /**
- * Frameworks whose extra content another framework reuses. Alberta lists some Ontario-written units under
- * `shares`, so an Alberta child downloads Ontario's file for the grade too (those units stay hidden unless
+ * Frameworks whose grade files another framework reuses (`depends` in its manifest). Alberta lists some Ontario-written
+ * units under `shares`, so an Alberta child downloads Ontario's file for the grade too (those units stay hidden unless
  * they carry Alberta standards).
  */
-export const EXTRA_DEPENDS: Partial<Record<FrameworkId, FrameworkId[]>> = { "ca-ab": ["ca-on"] };
+export const EXTRA_DEPENDS: Partial<Record<FrameworkId, FrameworkId[]>> = Object.fromEntries(REGISTRY.flatMap((m) => ("depends" in m && m.depends ? [[m.id, m.depends]] : [])));
 
 const withDepends = (framework: FrameworkId): FrameworkId[] => [framework, ...(EXTRA_DEPENDS[framework] ?? [])];
 

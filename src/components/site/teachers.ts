@@ -9,13 +9,12 @@ import { gradesWithContent, type SitemapPath } from "./curriculum";
 // noindex; these pages are what search visitors land on before they create a teacher account.
 
 /**
- * Frameworks the classroom area can assign units from. Classes follow BC, Ontario, Alberta, Saskatchewan, Manitoba,
- * Yukon, the Northwest Territories, Nova Scotia, New Brunswick, Newfoundland and Labrador, Prince Edward Island,
- * Nunavut, Washington, Oregon or California (see TeacherApp). Filtered by FRAMEWORKS, so a framework still upcoming gets no teacher pages.
+ * Frameworks the classroom area can assign units from: every offered framework, as the server accepts for a class
+ * (isFramework in src/server/classroom.ts). A framework still upcoming gets no teacher pages.
  */
-export const TEACHER_FRAMEWORK_IDS = ["ca-bc", "ca-on", "ca-ab", "ca-sk", "ca-mb", "ca-yt", "ca-nt", "ca-ns", "ca-nb", "ca-nl", "ca-pe", "ca-nu", "us-wa", "us-or", "us-ca"];
+export const TEACHER_FRAMEWORK_IDS: string[] = FRAMEWORKS.map((f) => f.id);
 
-export const TEACHER_FRAMEWORKS: Framework[] = FRAMEWORKS.filter((f) => TEACHER_FRAMEWORK_IDS.includes(f.id));
+export const TEACHER_FRAMEWORKS: Framework[] = FRAMEWORKS;
 
 /** Where a teacher creates an account and signs in. */
 export const TEACHER_SIGNUP = "/teachers/";

@@ -1,10 +1,10 @@
 import { createHash } from "node:crypto";
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { gzipSync } from "node:zlib";
 import { afterAll, describe, expect, it } from "vitest";
 import { COURSES } from "./all";
-import { FRAMEWORKS } from "./frameworks";
+import { DEFAULT_FRAMEWORK, FRAMEWORKS } from "./frameworks";
 import { GUIDES } from "./guides";
 import { coursesInFramework, EXTRA_DEPENDS } from "./index";
 import { withSeed } from "./random";
@@ -114,14 +114,17 @@ function compare(file: string, actual: unknown, hint: string) {
 // it depends on; see loadGrade in ./index). These are measured here as the gzipped size of every source file each entry
 // reaches through static imports: not the exact bytes Next.js ships, but it moves the same way.
 
-/** The grade files the apps load, read from the dynamic imports in ./index. */
-function entries(): { base: Record<string, string>; extra: Partial<Record<FrameworkId, Record<string, string>>> } {
-  const text = readFileSync(join(__dirname, "index.ts"), "utf8");
-  const files = (block: string) => Object.fromEntries([...block.matchAll(/"?(\w)"?: \(\) => import\("\.\/([^"]+)"\)/g)].map((m) => [m[1], m[2]]));
-  const base = files(text.slice(text.indexOf("const LOADERS"), text.indexOf("const EXTRA_LOADERS")));
-  const extraText = text.slice(text.indexOf("const EXTRA_LOADERS"), text.indexOf("export const EXTRA_DEPENDS"));
-  const extra = Object.fromEntries([...extraText.matchAll(/"((?:ca|us)-[a-z]{2})": \{([^}]*)\}/g)].map((m) => [m[1], files(m[2])]));
-  return { base, extra };
+/** The grade files the apps load, read from the dynamic imports in each framework's manifest (see ./registry). */
+function entries(): Record<string, Record<string, string>> {
+  const out: Record<string, Record<string, string>> = {};
+  for (const dir of readdirSync(__dirname)) {
+    const file = join(__dirname, dir, "manifest.ts");
+    if (!existsSync(file)) continue;
+    const text = readFileSync(file, "utf8");
+    const id = /\bid: "([a-z]{2}-[a-z]{2})"/.exec(text)?.[1];
+    if (id) out[id] = Object.fromEntries([...text.matchAll(/"?(\w)"?: \(\) => import\("\.\/([^"]+)"\)/g)].map((m) => [m[1], `${dir}/${m[2]}`]));
+  }
+  return out;
 }
 
 function resolveImport(from: string, spec: string): string | undefined {
@@ -144,13 +147,14 @@ function reach(entry: string, seen = new Set<string>()): Set<string> {
 }
 
 function sizes(): Record<string, Record<string, number>> {
-  const { base, extra } = entries();
+  const files = entries();
+  for (const f of FRAMEWORKS) if (!files[f.id]) throw new Error(`No grade files found in ${f.id}'s manifest`);
   const out: Record<string, Record<string, number>> = {};
   for (const f of FRAMEWORKS) {
     out[f.id] = {};
     for (const grade of GRADE_ORDER as GradeId[]) {
       const seen = new Set<string>();
-      const parts = [base[grade], ...[f.id, ...(EXTRA_DEPENDS[f.id] ?? [])].map((id) => extra[id]?.[grade])].filter(Boolean) as string[];
+      const parts = [...new Set([DEFAULT_FRAMEWORK, f.id, ...(EXTRA_DEPENDS[f.id] ?? [])])].map((id) => files[id]?.[grade]).filter(Boolean) as string[];
       for (const p of parts) reach(resolveImport(join(__dirname, "index.ts"), `./${p}`)!, seen);
       const source = [...seen].sort().map((file) => readFileSync(file, "utf8")).join("\n");
       out[f.id][grade] = Math.round(gzipSync(source).length / 1024);
