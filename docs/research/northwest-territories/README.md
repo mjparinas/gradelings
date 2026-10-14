@@ -2,6 +2,9 @@
 
 **Sources:** NWT Education, Culture and Employment, "JK-12 Curriculum Renewal" (ece.gov.nt.ca/en/curriculumrenewal) and the "Curriculum Renewal Implementation Plan" fact sheet (October 2022). Read October 2026.
 
+## Sources in this folder
+`fetch.sh [dir]` downloads ECE's documents into `source/` (PDFs in `source/pdf/` with their `pdftotext -layout` text in `source/txt/`, HTML pages in `source/html/` with a text copy when pandoc is installed), downloaded 14 October 2026: the Curriculum Renewal page (`curriculum-renewal`), the Implementation Plan fact sheet (October 2022), the May 2025 implementation timeline and the timeline fact sheet, the FAQ on adopting BC's curriculum (November 2021), the report-cards education bulletin, the Indigenous perspectives fact sheet, the BC-NWT education sharing agreement, and the Dene Kede and Inuuqatigiit, student assessment tools and key competencies pages. ece.gov.nt.ca is slow and sometimes times out, so the script retries; rerun it if one download fails. The BC curriculum the NWT adapts is stored in `../bc/source/` (`../bc/fetch.sh`).
+
 ## What the sources say
 - The NWT is replacing the **Alberta** curriculum with the **BC curriculum adapted for the NWT**, in divisions: Grades 4 to 6 (trial 2023-24, final 2025-26), Grade 9 (trial 2023-24, final 2024-25), Grades 7 to 9 (trial 2024-25, final 2026-27), Grades 1 to 3 (trial 2025-26, draft in all subjects 2026-27, final 2027-28) and JK/Kindergarten (draft 2026-27, final 2027-28). Grades 10 to 12 follow separately.
 - In 2026-27, Grades 1 to 9 therefore use the adapted BC curriculum and Kindergarten is on the draft, so no Alberta content is used for the NWT. Official dates have moved before; recheck the page before launch.

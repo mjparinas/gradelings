@@ -2,9 +2,9 @@
 # Downloads the official New Brunswick anglophone curriculum (curriculum.nbed.ca, Department of Education and Early
 # Childhood Development) used by build_outcomes.py. Each learning-area page has a "Course Comparison" button; the data behind it
 # is a JSON document that the site serves from admin-ajax.php with a per-page security token.
-# Usage: ./fetch.sh /path/to/cache   (needs curl and python3)
+# Usage: ./fetch.sh [dir]   (dir defaults to source/ in this folder, which is committed)   (needs curl and python3)
 set -euo pipefail
-OUT="${1:?cache folder}"
+OUT="${1:-$(dirname "$0")/source}"
 mkdir -p "$OUT/json"
 B=https://curriculum.nbed.ca
 TOKEN=$(curl -fsSL "$B/course-comparison/?cid=8238&ctitle=English+Language+Arts&clang=en" | grep -o '"security":"[^"]*"' | head -1 | cut -d'"' -f4)

@@ -13,8 +13,8 @@ World languages (2015, proficiency-based) are not used: Washington families get 
 
 ## Files
 
-- `fetch.sh <cache>` downloads the official files (the math workbook, the ELA PDF, the NGSS DCI arrangement PDF and the 2019 social studies strand PDFs, plus the scope and sequence) into a cache folder. The files are public and download without a login, so they are not committed.
-- `build_outcomes.py <cache>` parses them into `outcomes.json`: `{"<grade>/<subject>": [{idx, kind, content}]}` for Kindergarten (`k`) to Grade 9 and the subjects `math`, `language`, `science` and `social`. It needs `openpyxl` and `pypdf`. Band standards are listed under every grade of the band.
+- `fetch.sh` downloads the official files (the math workbook, the ELA PDF, the NGSS DCI arrangement PDF and the 2019 social studies strand PDFs, plus the scope and sequence) into `source/`, which is committed (downloaded 2026-10-14).
+- `build_outcomes.py source` parses them into `outcomes.json`: `{"<grade>/<subject>": [{idx, kind, content}]}` for Kindergarten (`k`) to Grade 9 and the subjects `math`, `language`, `science` and `social`. It needs `openpyxl` and `pypdf`. Band standards are listed under every grade of the band.
 - `outcomes.json` holds 1 509 standards. A Washington test will check every `us-wa` citation against it, as Manitoba's does.
 
 ## Grade themes (OSPI social studies scope and sequence, 2020)

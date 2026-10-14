@@ -1,0 +1,378 @@
+Mathematics 5
+Outcomes
+
+
+
+
+                2022
+Website References
+Website references contained within this document are provided solely as a convenience and do not constitute
+an endorsement by the Department of Education of the content, policies, or products of the referenced website.
+The department does not control the referenced websites and subsequent links, and is not responsible for the
+accuracy, legality, or content of those websites. Referenced website content may change without notice.
+Regional Education Centres and educators are required under the Department’s Public School Programs
+Network Access and Use Policy to preview and evaluate sites before recommending them for student use. If an
+outdated or inappropriate site is found, please report it to <curriculum@novascotia.ca>.
+
+
+
+
+Mathematics Grade 5
+© Crown copyright, Province of Nova Scotia, 2022
+Prepared by the Department of Education and Early Childhood Development
+This is the most recent version of the current curriculum materials as used by teachers in Nova Scotia.
+The contents of this publication may be reproduced in part provided the intended use is for noncommercial
+purposes and full acknowledgment is given to the Nova Scotia Department of Education
+Mathematics Grade 5 Outcomes
+     N01 Students will be expected to represent and partition whole numbers to 1 000 000.
+     Performance Indicators:
+     N01.01 Read a given numeral without using the word “and.”
+     N01.02 Record numerals for numbers expressed orally, concretely, pictorially, or symbolically as
+             expressions, using proper spacing without commas.
+     N01.03 Describe the pattern of adjacent place positions moving from right to left.
+     N01.04 Explain the meaning of each digit in a given numeral.
+     N01.05 Provide examples of large numbers used in print or electronic media.
+     N01.06 Express a given numeral in expanded notation.
+     N01.07 Write the numeral represented by a given expanded notation.
+     N01.08 Compare and order numbers to 1 000 000 in a variety of ways.
+     N01.09 Represent a given numeral, 0 to 1 000 000, using a place-value chart.
+     N01.10 Represent a given number, 0 to 1 000 000, in a variety of ways, and explain how they are
+              equivalent.
+     N01.11 Represent a given number, 0 to 1 000 000, using expressions.
+     N01.12 Read and write given numerals, 0 to 1 000 000, in words.
+
+     N02 Students will be expected to use estimation strategies, including front-end, front-end adjusted,
+     rounding, and compatible numbers in problem-solving contexts.
+     Performance Indicators:
+     N02.01 Provide a context for when estimation is used to make predictions, check the
+             reasonableness of an answer, and determine approximate answers.
+     N02.02 Describe contexts in which overestimating is important.
+     N02.03 Determine the approximate solution to a given problem not requiring an exact answer.
+     N02.04 Estimate a sum, a difference, a product, or a quotient using an appropriate strategy.
+     N02.05 Select and explain an estimation strategy for a given problem.
+
+     N03 Students will be expected to describe and apply mental mathematics strategies and number
+     properties to recall, with fluency, answers for basic multiplication facts to 81 and related division facts.
+     Performance Indicators:
+     N03.01 Describe the mental mathematics strategy used to determine basic multiplication or division
+             facts.
+     N03.02 Explain why multiplying by 0 produces a product of 0 (zero property of multiplication).
+     N03.03 Explain why division by 0 is not possible or is undefined (e.g., 8 ÷ 0).
+     N03.04 Quickly recall multiplication facts up to 9 × 9 and related division facts.
+
+
+
+
+Mathematics 5: Outcomes (2022)                                                                                      1
+    N04 Students will be expected to apply mental mathematics strategies for multiplication, including
+    ▪ multiplying by multiples of 10, 100, and 1000
+    ▪ halving and doubling
+    ▪ using the distributive property
+    Performance Indicators:
+    N04.01 Determine the products when one factor is a multiple of 10, 100, or 1000.
+    N04.02 Apply halving and doubling when determining a given product
+            (e.g., 32 × 5 is the same as 16 × 10).
+    N04.03 Apply the distributive property to determine a given product that involves multiplying factors
+            that are close to multiples of 10 (e.g., 98 × 7 = (100 × 7) – (2 × 7)).
+
+    N05 Students will be expected to demonstrate, with and without concrete materials, an understanding
+    of multiplication (two-digit by two-digit) to solve problems.
+    Performance Indicators:
+    N05.01 Model the multiplication of two two-digit factors, using concrete and visual representations
+            of the area model, and record the process symbolically.
+    N05.02 Illustrate partial products in expanded notation for both factors (e.g., For 36 × 42, determine
+            the partial products for (30 + 6) × (40 + 2).).
+    N05.03 Represent both two-digit factors in expanded notation to illustrate the distributive property;
+            for example, to determine the partial products of 36 × 42, record
+            (30 + 6) × (40 + 2) = 30 × 40 + 30 × 2 + 6 × 40 + 6 × 2 = 1200 + 60 + 240 + 12 = 1512
+    N05.04 Describe a solution procedure for determining the product of two given two-digit factors,
+            using a pictorial representation such as an area model.
+    N05.05 Solve a given multiplication problem in context, using personal strategies, and record the
+            process.
+    N05.06 Create and solve multiplication story problems, and record the process symbolically.
+    N05.07 Determine the product of two given numbers using a personal strategy and record the
+            process symbolically.
+
+    N06 Students will be expected to demonstrate, with and without concrete materials, an understanding
+    of division (three-digit by one-digit), and interpret remainders to solve problems.
+    Performance Indicators:
+    N06.01 Model the division of two given numbers, using concrete or visual representations, and
+            record the process symbolically.
+    N06.02 Explain that the interpretation of a remainder depends on the context.
+             o Ignore the remainder (e.g., making teams of four from 22 people [five teams, but two
+                  people are left over]).
+             o Round the quotient up (e.g., the number of five-passenger cars required to transport 13
+                  people).
+             o Express remainders as fractions (e.g., five apples shared by two people).
+             o Express remainders as decimals (e.g., measurement and money).
+    N06.03    Solve a given division problem in context, using personal strategies, and record the process.
+    N06.04    Create and solve division story problems, and record the process symbolically.
+    N06.05    Determine the quotient of two given numbers using a personal strategy and record the
+              process symbolically.
+
+
+2                                                                                   Mathematics 5: Outcomes (2022)
+     N07 Students will be expected to demonstrate an understanding of fractions by using concrete,
+     pictorial, and symbolic representations to
+     ▪ create sets of equivalent fractions
+     ▪ compare and order fractions with like and unlike denominators
+     Performance Indicators:
+     N07.01 Represent a given fraction of one whole, set, linear model, or region using concrete
+             materials.
+     N07.02 Create a set of equivalent fractions, and explain, using concrete materials, why there are
+             many equivalent fractions for any given fraction.
+     N07.03 Model and explain that equivalent fractions represent the same quantity.
+     N07.04 Determine if two given fractions are equivalent, using concrete materials or pictorial
+             representations.
+     N07.05 Identify equivalent fractions for a given fraction.
+     N07.06 Compare and order two given fractions with unlike denominators by creating equivalent
+             fractions.
+     N07.07 Position a given set of fractions with like and unlike denominators on a number line, and
+             explain strategies used to determine the order.
+     N07.08 Formulate and verify a personal strategy for developing a set of equivalent fractions.
+
+     N08 Students will be expected to describe and represent decimals (tenths, hundredths, and
+     thousandths) concretely, pictorially, and symbolically.
+     Performance Indicators:
+     N08.01 Write the decimal for a given concrete or pictorial representation of part of a set, part of a
+             region, or of a unit of measure.
+     N08.02 Represent a given decimal using concrete materials or a pictorial representation.
+     N08.03 Represent an equivalent tenth, hundredth, or thousandth for a given decimal, using concrete
+             or visual representations.
+     N08.04 Express a given tenth as an equivalent hundredth and thousandth.
+     N08.05 Express a given hundredth as an equivalent thousandth.
+     N08.06 Explain the value of each digit in a given decimal.
+
+     N09 Students will be expected to relate decimals to fractions and fractions to decimals (to
+     thousandths).
+     Performance Indicators:
+     N09.01 Express, orally and symbolically, a given fraction with a denominator of 10, 100, or 1000 as a
+             decimal.
+     N09.02 Read decimals as fractions (e.g., 0.45 is read as zero and forty-five hundredths).
+     N09.03 Express, orally and symbolically, a given decimal in fraction form.
+                                   11 3
+     N09.04 Represent the fractions , , and as decimals using base-ten blocks, grids, and number
+                                        24 4
+                lines.
+     N09.05     Express a given pictorial or concrete representation as a fraction or decimal
+                                                                                              250
+                (e.g., 250 shaded squares on a thousandth grid can be expressed as 0.250 or       ).
+                                                                                              1000
+
+
+
+
+Mathematics 5: Outcomes (2022)                                                                               3
+    N10 Students will be expected to compare and order decimals (to thousandths) by using benchmarks,
+    place value, and equivalent decimals.
+    Performance Indicators:
+    N10.01 Compare and order a given set of decimals by placing them on a number line that contains
+            the benchmarks 0.0, 0.5, and 1.0.
+    N10.02 Compare and order a given set of decimals including only tenths using place value.
+    N10.03 Compare and order a given set of decimals including only hundredths using place value.
+    N10.04 Compare and order a given set of decimals including only thousandths using place value.
+    N10.05 Explain what is the same and what is different about 0.2, 0.20, and 0.200.
+    N10.06 Compare and order a given set of decimals, including tenths, hundredths, and thousandths,
+            using equivalent decimals.
+
+    N11 Students will be expected to demonstrate an understanding of addition and subtraction of
+    decimals (limited to thousandths).
+    Performance Indicators:
+    N11.01 Predict sums and differences of decimals using estimation strategies.
+    N11.02 Use estimation to correct errors of decimal point placements in sums and differences
+            without using paper and pencil.
+    N11.03 Explain why keeping track of place-value positions is important when adding and
+            subtracting decimals.
+    N11.04 Solve problems that involve addition and subtraction of decimals, limited to thousandths,
+            using personal strategies.
+
+    PR01 Students will be expected to determine the pattern rule to make predictions about subsequent
+    terms.
+    Performance Indicators:
+    PR01.01 Extend a given increasing or decreasing pattern, with and without concrete materials, and
+            explain how each term differs from the preceding one.
+    PR01.02 Describe, orally or in written form, a given pattern using mathematical language such as one
+            more, one less, or five more.
+    PR01.03 Write a mathematical expression to represent a given pattern, such as r + 1, r – 1, r + 5.
+    PR01.04 Describe the relationship in a given table or chart using a mathematical expression.
+    PR01.05 Determine and explain why a given number is or is not the next term in a pattern.
+    PR01.06 Predict subsequent terms in a given pattern.
+    PR01.07 Solve a given problem by using a pattern rule to determine subsequent terms.
+    PR01.08 Represent a given pattern visually to verify predictions.
+
+    PR02 Students will be expected to solve problems involving single-variable, one-step equations with
+    whole number coefficients and whole number solutions.
+    Performance Indicators:
+    PR02.01 Explain the purpose of the letter variable in a given addition, subtraction, multiplication, or
+            division equation with one unknown (e.g., 36 ÷ n = 6).
+    PR02.02 Express a given pictorial or concrete representation of an equation in symbolic form.
+    PR02.03 Express a given problem as an equation where the unknown is represented by a letter
+            variable.
+    PR02.04 Create a problem for a given equation with one unknown.
+
+
+4                                                                                     Mathematics 5: Outcomes (2022)
+     PR02.05 Solve a given single-variable equation with the unknown in any of the terms
+             (e.g., n + 2 = 5, 4 + a = 7, 6 = r – 2, 10 = 2c, 15 ÷ r = 3).
+     PR02.06 Identify the unknown in a problem; represent the problem with an equation; and solve the
+             problem concretely, pictorially, or symbolically.
+
+     M01 Students will be expected to design and construct different rectangles, given a perimeter or an
+     area or both (whole numbers), and make generalizations.
+     Performance Indicators:
+     M01.01 Draw two or more rectangles for a given perimeter in a problem-solving context.
+     M01.02 Draw two or more rectangles for a given area in a problem-solving context.
+     M01.03 Determine the shape that will result in the greatest area for any given perimeter.
+     M01.04 Determine the shape that will result in the least area for any given perimeter.
+     M01.05 Provide a real-life context for when it is important to consider the relationship between area
+             and perimeter.
+
+     M02 Students will be expected to demonstrate an understanding of measuring length (mm) by
+     ▪ selecting and justifying referents for the unit millimetre (mm)
+     ▪ modelling and describing the relationship between millimetre (mm) and centimetre (cm) units, and
+       between millimetre (mm) and metre (m) units
+     Performance Indicators:
+     M02.01 Provide a referent for one millimetre, and explain the choice.
+     M02.02 Provide a referent for one centimetre, and explain the choice.
+     M02.03 Provide a referent for one metre, and explain the choice.
+     M02.04 Show that 10 millimetres is equivalent to one centimetre, using concrete materials.
+     M02.05 Show that 1000 millimetres is equivalent to one metre, using concrete materials.
+     M02.06 Provide examples of instances where millimetres are used as the unit of measure.
+     M02.07 Estimate and measure length in millimetres, centimetres, and metres.
+
+     M03 Students will be expected to demonstrate an understanding of volume by
+     ▪ selecting and justifying referents for cubic centimetre (cm3) or cubic metre (m3) units
+     ▪ estimating volume using referents for cubic centimetre (cm3) or cubic metre (m3)
+     ▪ measuring and recording volume (cm3 or m3)
+     ▪ constructing rectangular prisms for a given volume
+     Performance Indicators:
+     M03.01 Identify and explain why the cube is the most efficient unit for measuring volume.
+     M03.02 Provide a referent for a cubic centimetre, and explain the choice.
+     M03.03 Provide a referent for a cubic metre, and explain the choice.
+     M03.04 Determine which standard cubic unit is represented by a given referent.
+     M03.05 Estimate the volume of a given 3-D object using personal referents.
+     M03.06 Determine the volume of a given 3-D object using manipulatives, and explain the strategy.
+     M03.07 Construct a rectangular prism for a given volume.
+     M03.08 Construct more than one rectangular prism for a given volume.
+
+
+
+
+Mathematics 5: Outcomes (2022)                                                                               5
+    M04 Students will be expected to demonstrate an understanding of capacity by
+    ▪ describing the relationship between millilitre (mL) and litre (L) units
+    ▪ selecting and justifying referents for millilitre (mL) and litre (L) units
+    ▪ estimating capacity using referents for millilitre (mL) and litre (L)
+    ▪ measuring and recording capacity (mL or L)
+    Performance Indicators:
+    M04.01 Demonstrate that 1000 millilitres is equivalent to one litre by filling a one-litre container
+            using a combination of smaller containers.
+    M04.02 Provide a referent for one litre, and explain the choice.
+    M04.03 Provide a referent for one millilitre, and explain the choice.
+    M04.04 Determine the capacity unit of a given referent.
+    M04.05 Estimate the capacity of a given container using personal referents.
+    M04.06 Determine the capacity of a given container using materials that take the shape of the inside
+            of the container (e.g., a liquid, rice, sand, beads), and explain the strategy.
+
+    G01 Students will be expected to describe and provide examples of edges and faces of 3-D objects,
+    and sides of 2-D shapes that are parallel, intersecting, perpendicular, vertical, and horizontal.
+    Performance Indicators:
+    G01.01 Identify parallel, intersecting, perpendicular, vertical, and horizontal edges and faces on 3-D
+            objects.
+    G01.02 Identify parallel, intersecting, perpendicular, vertical, and horizontal sides on 2-D shapes.
+    G01.03 Provide examples from the environment that show parallel, intersecting, perpendicular,
+            vertical, and horizontal line segments.
+    G01.04 Find examples of edges, faces, and sides that are parallel, intersecting, perpendicular,
+            vertical, and horizontal in print and electronic media, such as newspapers, magazines, and
+            the Internet.
+    G01.05 Draw 2-D shapes that have sides that are parallel, intersecting, perpendicular, vertical, or
+            horizontal.
+    G01.06 Build 3-D objects that have edges and faces that are parallel, intersecting, perpendicular,
+            vertical, or horizontal.
+    G01.07 Describe the faces and edges of a given 3-D object using terms such as parallel, intersecting,
+            perpendicular, vertical, or horizontal.
+    G01.08 Describe the sides of a given 2-D shape using terms such as parallel, intersecting,
+            perpendicular, vertical, or horizontal.
+
+
+
+
+6                                                                                  Mathematics 5: Outcomes (2022)
+     G03 Students will be expected to perform a single transformation (translation, rotation, or reflection) of
+     a 2-D shape (with and without technology) and draw and describe the image.
+     Performance Indicators:
+     G03.01 Translate a given 2-D shape horizontally, vertically, or diagonally, draw the image, and
+             describe the position and orientation of the image.
+     G03.02 Rotate a given 2-D shape about a vertex, draw the image, and describe the position and
+             orientation of the image.
+     G03.03 Reflect a given 2-D shape in a line of reflection, draw the image, and describe the position
+             and orientation of the image.
+     G03.04 Perform a transformation of a given 2-D shape by following instructions.
+     G03.05 Draw a 2-D shape, translate the shape, and record the translation by describing the direction
+             and magnitude of the movement.
+     G03.06 Draw a 2-D shape, rotate the shape about a vertex, and describe the direction of the turn
+                                                                                       1 1 3
+             (clockwise or counter-clockwise) and the fraction of the turn (limited to , , , or full turn).
+                                                                                          4 2 4
+     G03.07     Draw a 2-D shape, reflect the shape, and identify the line of reflection and the distance of the
+                image from the line of reflection.
+     G03.08     Predict the result of a single transformation of a 2-D shape and verify the prediction.
+
+     G05 Students will be expected to identify right angles.
+     Performance Indicators:
+     G05.01 Provide examples of right angles in the environment.
+     G05.02 Sketch right angles without the use of a protractor.
+     G05.03 Label a right angle, using a symbol.
+     G05.04 Identify angles greater than or less than a right angle.
+
+     SP01 Students will be expected to differentiate between first-hand and second-hand data.
+     Performance Indicators:
+     SP01.01 Explain the difference between first-hand and second-hand data.
+     SP01.02 Formulate a question that can best be answered using first-hand data and explain why.
+     SP01.03 Formulate a question that can best be answered using second-hand data and explain why.
+     SP01.04 Find examples of second-hand data in print and electronic media, such as newspapers,
+             magazines, and the Internet.
+
+     SP02 Students will be expected to construct and interpret double bar graphs to draw conclusions.
+     Performance Indicators:
+     SP02.01 Determine the attributes (title, axes, intervals, and legend) of double bar graphs by
+             comparing a given set of double bar graphs.
+     SP02.02 Represent a given set of data by creating a double bar graph, label the title and axes, and
+             create a legend without the use of technology.
+     SP02.03 Draw conclusions from a given double bar graph to answer questions.
+     SP02.04 Identify examples of double bar graphs used in a variety of print and electronic media, such
+             as newspapers, magazines, and the Internet.
+     SP02.05 Solve a given problem by constructing and interpreting a double bar graph.
+
+
+
+
+Mathematics 5: Outcomes (2022)                                                                                     7
+    SP03 Students will be expected to describe the likelihood of a single outcome occurring, using words
+    such as impossible, possible, and certain.
+    Performance Indicators:
+    SP03.01 Identify examples of events from personal contexts that are impossible, possible, or certain.
+    SP03.02 Classify the likelihood of a single outcome occurring in a probability experiment as
+            impossible, possible, or certain.
+    SP03.03 Design and conduct a probability experiment in which the likelihood of a single outcome
+            occurring is impossible, possible, or certain.
+    SP03.04 Conduct a given probability experiment a number of times, record the outcomes, and explain
+            the results.
+
+    SP04 Students will be expected to compare the likelihood of two possible outcomes occurring, using
+    words such as less likely, equally likely, or more likely.
+    Performance Indicators:
+    SP04.01 Identify outcomes from a given probability experiment that are less likely, equally likely, or
+            more likely to occur than other outcomes.
+    SP04.02 Design and conduct a probability experiment in which one outcome is less likely to occur
+            than the other outcome.
+    SP04.03 Design and conduct a probability experiment in which one outcome is equally likely to occur
+            as the other outcome.
+    SP04.04 Design and conduct a probability experiment in which one outcome is more likely to occur
+            than the other outcome.
+
+
+
+
+8                                                                                   Mathematics 5: Outcomes (2022)
+

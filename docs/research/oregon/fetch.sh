@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 # Downloads Oregon's K-12 content standards from the Oregon Department of Education (ODE) into a cache folder.
-# Usage: ./fetch.sh <cache-dir>   then   python3 -I build_outcomes.py <cache-dir>
-# The files are public and download without a login, so they are not committed.
+# Usage: ./fetch.sh [dir]   then   python3 -I build_outcomes.py source   (dir defaults to source/ in this folder, which is committed)
 set -euo pipefail
-out="${1:?usage: fetch.sh <cache-dir>}"
+out="${1:-$(dirname "$0")/source}"
 mkdir -p "$out"
 base="https://www.oregon.gov/ode/educator-resources/standards"
 # oregon.gov answers some clients without a browser user agent with an error page.
