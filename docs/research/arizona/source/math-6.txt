@@ -1,0 +1,347 @@
+Arizona Mathematics Standards
+Sixth Grade
+ARIZONA DEPARTMENT OF EDUCATION
+Adopted December 2016
+Arizona Department of Education
+
+Arizona Mathematics Standards 6th Grade
+Sixth Grade: Overview
+1. Develop competency of division of whole numbers and fractions and extend the notion of number to the system of
+rational numbers.
+2. Develop understanding of ratio and rate and use multiplicative reasoning to solve ratio and rate problems.
+3. Develop understanding of expressions, equations and inequalities.
+(1) Students develop fluency with division of whole numbers and extend their understanding to division of fractions. Students extend
+their previous understandings of number and the ordering of numbers to the system of rational numbers, which includes integers
+and negative fractions with denominators of 2, 3, 4, 5, 10. They reason about the order and absolute value of rational numbers
+and about the location of points in all four quadrants of the coordinate plane.
+(2) Students use multiplicative reasoning to solve ratio and rate problems. This extends their knowledge of multiplication, division,
+and fractions as the foundation for proportional reasoning that begins in 7th grade. Students utilize multiple types of
+representations to demonstrate their understanding of the relationship between two quantities represented in a ratio or rate.
+(3) Students understand the use of variables in mathematical expressions. They write expressions and equations that correspond to
+given situations, evaluate expressions, and use expressions and formulas to solve problems. Students understand that
+expressions in different forms can be equivalent, and they use the properties of operations to rewrite expressions in equivalent
+forms. Students know that the solutions of an equation are the values of the variables that make the equation true. Students use
+properties of operations and the idea of maintaining the equality of both sides of an equation to solve simple one-step equations.
+Students construct and analyze tables, such as tables of quantities that are in equivalent ratios, and they use equations (such as
+3x = y) to describe relationships between quantities.
+The Standards for Mathematical Practice complement the content standards so that students increasingly engage with the
+subject matter as they grow in mathematical maturity and expertise throughout the elementary, middle, and high school
+years.
+Updated 1-29-2025 2
+Arizona Department of Education
+
+Arizona Mathematics Standards 6th Grade
+Content Emphasis of Arizona Mathematics Standards:
+The content emphasis provides planning guidance regarding the major and supporting clusters found within the standards. The
+Major and Supporting Clusters align with the blueprint for AASA. Please consider the following designations when planning an
+instructional scope for the academic year.
+Arizona considers Major Clusters as groups of related standards that require greater emphasis than some of the other standards
+due to the depth of the ideas and the time it takes to master these groups of related standards.
+Arizona considers Supporting Clusters as groups of related standards that support standards within the Major Cluster in and across
+grade levels. Supporting Clusters also encompass pre-requisite and extension of grade level content.
+Arizona is suggesting instructional time encompass a range of at least 65%-75% for Major Clusters and a range of 25%-35%
+for Supporting Cluster instruction. See introduction, page 12 for more information.
+Updated 1-29-2025 3
+Arizona Department of Education
+
+Arizona Mathematics Standards 6th Grade
+Sixth Grade: Standards Overview
+Ratio and Proportion (RP) Geometry (G)
+Understand ratio concepts and use ratio reasoning to solve Solve mathematical problems and problems in real-world
+problems. context involving area, surface area, and volume.
+The Number System (NS)
+Statistics and Probability (SP)
+Apply and extend previous understanding of multiplication
+and division to divide fractions by fractions. Develop understanding of statistical variability
+Compute fluently with multi-digit numbers and find common Summarize and describe distributions.
+factors and multiples..
+Apply and extend previous understanding of numbers to
+Standards for Mathematical Practices (MP)
+the system of rational numbers. (Note: Limit negative
+rational numbers to integers and fractions with
+1. Make sense of problems and persevere in solving them.
+denominators of 2,3,4,5,10.)
+2. Reason abstractly and quantitatively.
+Solve problems involving the four operations, and identify
+3. Construct viable arguments and critique the reasoning of
+and explain patterns in arithmetic.
+others.
+Expressions and Equations (EE) 4. Model with mathematics.
+5. Use appropriate tools strategically.
+Apply and extend previous understanding of arithmetic to
+6. Attend to precision.
+algebraic expressions.
+7. Look for and make use of structure.
+Reason about and solve one-variable equations and
+8. Look for and express regularity in repeated reasoning.
+inequalities.
+Represent and analyze quantitative relationships between
+dependent and independent variables.
+Updated 1-29-2025 4
+Arizona Department of Education
+
+Arizona Mathematics Standards 6th Grade
+ESSENTIAL STANDARDS
+Essential Standards are individual standards selected to receive a greater proportion of questions on the AASA exams. The AASA
+exams, administered in grades three through eight, are developed based on a standards blueprint approved by the State Board of
+Education that includes individual standards grouped into clusters and identifies an allocation of questions for each cluster. The
+identified Essential Standards will receive the maximum number of questions allowed by the standards blueprint. Note that ALL
+standards will continue to be included in the test design of the annual state exams.
+ALL STANDARDS WILL BE ASSESSED
+The identified Essential Standards are targeted for emphasis, indicating that these standards will have a higher proportion on the AASA
+when possible. The state assessment will retain the same length and duration. ALL STANDARDS remain valid and subject to inclusion
+in each year’s AASA.
+Updated 1-29-2025 5
+Arizona Department of Education
+
+Arizona Mathematics Standards 6th Grade
+REPORTING
+The AASA exam results will include a new report in which Essential Standards will be represented. Beginning with the 2025-2026
+school year identified Essential Standards, from the existing State Board of Education-approved standards for math, in grades three
+through eight will have a higher proportion of items on the statewide assessment, keeping within the current blueprint adopted by the
+State Board of Education. Each given year an Essential Standard Cluster, identified on the table, may or may not be reported,
+depending upon the final form.
+REPORTING CLUSTERS GRADE 6
+Ratio and Proportional The Number System Expressions and Equations Geometry, Statistics and
+Relationships Probability
+Understand ratio concepts and Apply and extend previous Apply and extend previous Solve mathematical problems
+use ratio reasoning to solve understanding of multiplication understanding of arithmetic to and problems in real-world
+problems.* and division to divide fractions algebraic expressions.* context involving area, surface
+by fractions.* area, and volume.
+Compute fluently with multi- Reason about and solve one- Develop understanding of
+digit numbers and find common variable equations and statistical variability.
+factors and multiples. inequalities.*
+Apply and extend previous Represent and analyze Summarize and describe
+understanding of numbers to quantitative relationships distributions.
+the system of rational between dependent and
+numbers.* independent events.
+*Reported cluster
+Updated 1-29-2025 6
+Arizona Department of Education
+
+Arizona Mathematics Standards 6th Grade
+Ratio and Proportion (RP)
+Understand Ratio Concepts and Use Ratio Reasoning to Solve Problems
+Understand the concept of a ratio as comparing two quantities multiplicatively or joining/composing the two quantities in a
+*6.RP.A.1 way that preserves a multiplicative relationship. Use ratio language to describe a ratio relationship between two quantities.
+For example, "There were 2/3 as many men as women at the concert.”
+Understand the concept of a unit rate a/b associated with a ratio a : b with b ≠ 0, and use rate language (e.g., for every, for
+*6.RP.A.2 each, for each 1, per) in the context of a ratio relationship. (Complex fraction notation is not an expectation for unit rates in
+this grade level.)
+Use ratio and rate reasoning to solve mathematical problems and problems in real-world context (e.g., by reasoning about
+data collected from measurements, tables of equivalent ratios, tape diagrams, double number line diagrams, or equations).
+a. Make tables of equivalent ratios relating quantities with whole-number measurements, find missing values in the
+tables, and plot the pairs of values on the coordinate plane. Use tables to compare ratios.
+b. Solve unit rate problems including those involving unit pricing and constant speed.
+*6.RP.A.3
+c. Find a percent of a quantity as a rate per 100 (e.g., 30% of a quantity means 30/100 times the quantity). Solve
+percent problems with the unknown in all positions of the equation.
+d. Use ratio reasoning to convert measurement units; manipulate and transform units appropriately when multiplying or
+dividing quantities.
+Updated 1-29-2025 7
+Arizona Department of Education
+
+Arizona Mathematics Standards 6th Grade
+The Number System
+Apply and Extend Previous Understanding of Multiplication and Division to Divide Fractions by Fractions
+Interpret and compute quotients of fractions to solve mathematical problems and problems in real-world context involving
+division of fractions by fractions using visual fraction models and equations to represent the problem. For example, create
+*6.NS.A.1
+a story context for 2/3 ÷ 3/4 and use a visual fraction model to show the quotient; use the relationship between
+multiplication and division to explain that 2/3 ÷ 3/4 = 8/9 because 3/4 of 8/9 is 2/3. In general, a/b ÷ c/d = ad/bc.
+Compute Fluently With Multi-Digit Numbers and Find Common Factors and Multiples
+6.NS.B.2 Fluently divide multi-digit numbers using a standard algorithm.
+6.NS.B.3 Fluently add, subtract, multiply, and divide multi-digit decimals using a standard algorithm for each operation.
+Use previous understanding of factors to find the greatest common factor and the least common multiple.
+a. Find the greatest common factor of two whole numbers less than or equal to 100.
+6.NS.B.4 b. Find the least common multiple of two whole numbers less than or equal to 12.
+c. Use the distributive property to express a sum of two whole numbers 1 to 100 with a common factor as a multiple of
+a sum of two whole numbers with no common factor. For example, express 36 + 8 as 4(9+2).
+Updated 1-29-2025 8
+Arizona Department of Education
+
+Arizona Mathematics Standards 6th Grade
+Apply and Extend Previous Understanding of Numbers to the System of Rational Numbers
+Note: Limit negative rational numbers to integers and fractions with denominators of 2, 3, 4, 5, 10.
+Understand that positive and negative numbers are used together to describe quantities having opposite directions or
+*6.NS.C.5 values. Use positive and negative numbers to represent quantities in real-world context, explaining the meaning of 0 in
+each situation.
+Understand a rational number can be represented as a point on the number line. Extend number line diagrams and
+coordinate axes familiar from previous grades to represent points on the line and in the plane with negative number
+coordinates.
+a. Recognize opposite signs of numbers as indicating locations on opposite sides of 0 on the number line; recognize
+that the opposite of the opposite of a number is the number itself and that 0 is its own opposite.
+*6.NS.C.6
+b. Understand signs of numbers in ordered pairs as indicating locations in quadrants of the coordinate plane;
+recognize that when two ordered pairs differ only by signs, the locations of the points are related by reflections
+across one or both axes.
+c. Find and position integers and other rational numbers on a horizontal or vertical number line diagram; find and
+position pairs of integers and other rational numbers on a coordinate plane.
+Understand ordering and absolute value of rational numbers.
+a. Interpret statements of inequality as statements about the relative position of two numbers on a number line.
+b. Write, interpret, and explain statements of order for rational numbers in real-world context.
+6.NS.C.7 c. Understand the absolute value of a rational number as its distance from 0 on the number line; interpret absolute
+value as magnitude for a positive or negative quantity in real-world context.
+d. Distinguish comparisons of absolute value from statements about order in mathematical problems and problems in
+real-world context.
+Solve mathematical problems and problems in real-world context by graphing points in all four quadrants of the coordinate
+*6.NS.C.8 plane. Include use of coordinates and absolute value to find distances between points with the same first coordinate or the
+same second coordinate.
+Updated 1-29-2025 9
+Arizona Department of Education
+
+Arizona Mathematics Standards 6th Grade
+Expressions and Equations (EE)
+Apply and Extend Previous Understanding of Arithmetic to Algebraic Expressions
+6.EE.A.1 Write and evaluate numerical expressions involving whole-number exponents.
+Write, read, and evaluate algebraic expressions.
+a. Write expressions that record operations with numbers and variables.
+b. Identify parts of an expression using mathematical terms (sum, term, product, factor, quotient, and coefficient); view
+one or more parts of an expression as a single entity.
+*6.EE.A.2
+c. Evaluate expressions given specific values of their variables. Include expressions that arise from formulas used to
+solve mathematical problems and problems in real-world context. Perform arithmetic operations, including those
+involving whole-number exponents, in the conventional order when there are no parentheses to specify a particular
+order (Order of Operations).
+Apply the properties of operations to generate equivalent expressions. For example, apply the distributive property to the
+*6.EE.A.3
+expression 3 (2 + x) to produce the equivalent expression 6 + 3x.
+Identify when two expressions are equivalent. For example, the expressions y + y + y and 3y are equivalent because they
+*6.EE.A.4
+name the same number regardless of which number y stands for.
+Reason About and Solve One-Variable Equations and Inequalities
+Understand solving an equation or inequality as a process of reasoning to find the value(s) of the variables that make that
+*6.EE.B.5 equation or inequality true. Use substitution to determine whether a given number in a specified set makes an equation or
+inequality true.
+Use variables to represent numbers and write expressions when solving mathematical problems and problems in real-
+*6.EE.B.6
+world context; understand that a variable can represent an unknown number or any number in a specified set.
+Solve mathematical problems and problems in real-world context by writing and solving equations of the form
+*6.EE.B.7
+x + p = q, x - p = q, px = q, and x/p = q for cases in which p, q and x are all non-negative rational numbers.
+Write an inequality of the form x > c, x < c, x ≥ c, or x ≤ c to represent a constraint or condition to solve mathematical
+*6.EE.B.8 problems and problems in real-world context. Recognize that inequalities have infinitely many solutions; represent
+solutions of such inequalities on number lines.
+Updated 1-29-2025 10
+Arizona Department of Education
+
+Arizona Mathematics Standards 6th Grade
+Represent and Analyze Quantitative Relationships Between Dependent and Independent Variables
+Use variables to represent two quantities that change in relationship to one another to solve mathematical problems and
+problems in real-world context. Write an equation to express one quantity (the dependent variable) in terms of the other
+6.EE.C.9
+quantity (the independent variable). Analyze the relationship between the dependent and independent variables using
+graphs and tables, and relate these to the equation.
+Geometry (G)
+Solve Mathematical Problems and Problems in Real-World Context Involving Area, Surface Area, and Volume
+Find the area of right triangles, other triangles, special quadrilaterals, and polygons by composing into rectangles or
+6.G.A.1 decomposing into triangles and other shapes; apply these techniques to solve mathematical problems and problems in
+real-world context.
+Find the volume of a right rectangular prism with fractional edge lengths by packing it with unit cubes of the appropriate
+unit fraction edge lengths, and show that the volume is the same as would be found by multiplying the edge lengths of the
+*6.G.A.2
+prism. Understand and use the formula V = B · h, where in this case, B is the area of the base (B = l x w) to find volumes of
+right rectangular prisms with fractional edge lengths in mathematical problems and problems in real-world context.
+Draw polygons in the coordinate plane given coordinates for the vertices; use coordinates to find the length of a side
+*6.G.A.3 joining points with the same first coordinate or the same second coordinate. Apply these techniques to solve mathematical
+problems and problems in a real-world context.
+Represent three-dimensional figures using nets made up of rectangles and triangles, and use the nets to find the surface
+6.G.A.4
+area of these figures. Apply these techniques to solve mathematical problems and problems in real-world context.
+Updated 1-29-2025 11
+Arizona Department of Education
+
+Arizona Mathematics Standards 6th Grade
+Statistics and Probability (SP)
+Develop Understanding of Statistical Variability
+Recognize a statistical question as one that anticipates variability in the data related to the question and accounts for
+6.SP.A.1 variability in the answers. For example, "How old am I?" is not a statistical question, but "How old are the students in my
+school?" is a statistical question because one anticipates variability in students' ages.
+Understand that a set of data collected to answer a statistical question has a distribution whose general characteristics can
+6.SP.A.2
+be described by its center, spread, and overall shape.
+Recognize that a measure of center for a numerical data set summarizes all of its values with a single number, while a
+6.SP.A.3
+measure of variation uses a single number to describe the spread of the data set.
+Summarize and Describe Distributions
+6.SP.B.4 Display and interpret numerical data by creating plots on a number line including histograms, dot plots, and box plots.
+Summarize numerical data sets in relation to their context by:
+a. Reporting the number of observations.
+b. Describing the nature of the attribute under investigation including how it was measured and its units of
+measurement.
+*6.SP.B.5 c. Giving quantitative measures of center (median and/or mean) and variability (interquartile range and/or mean
+absolute deviation), as well as describing any overall pattern and any striking deviations from the overall pattern
+with reference to the context in which the data were gathered.
+d. Relating the choice of measures of center and variability to the shape of the data distribution and the context in
+which the data were gathered.
+Updated 1-29-2025 12
+Arizona Department of Education
+
+Arizona Mathematics Standards 6th Grade
+Standards for Mathematical Practice
+Make sense of problems and persevere in solving them
+Mathematically proficient students explain to themselves the meaning of a problem, look for entry points to begin work on
+the problem, and plan and choose a solution pathway. While engaging in productive struggle to solve a problem, they
+continually ask themselves, “Does this make sense?" to monitor and evaluate their progress and change course if
+6.MP.1
+necessary. Once they have a solution, they look back at the problem to determine if the solution is reasonable and
+accurate. Mathematically proficient students check their solutions to problems using different methods, approaches, or
+representations. They also compare and understand different representations of problems and different solution pathways,
+both their own and those of others.
+Reason abstractly and quantitatively
+Mathematically proficient students make sense of quantities and their relationships in problem situations. Students can
+contextualize and decontextualize problems involving quantitative relationships. They contextualize quantities, operations,
+6.MP.2 and expressions by describing a corresponding situation. They decontextualize a situation by representing it symbolically.
+As they manipulate the symbols, they can pause as needed to access the meaning of the numbers, the units, and the
+operations that the symbols represent. Mathematically proficient students know and flexibly use different properties of
+operations, numbers, and geometric objects and when appropriate they interpret their solution in terms of the context.
+Construct viable arguments and critique the reasoning of others
+Mathematically proficient students construct mathematical arguments (explain the reasoning underlying a strategy, solution,
+or conjecture) using concrete, pictorial, or symbolic referents. Arguments may also rely on definitions, assumptions,
+previously established results, properties, or structures. Mathematically proficient students make conjectures and build a
+logical progression of statements to explore the truth of their conjectures. They are able to analyze situations by breaking
+6.MP.3 them into cases, and can recognize and use counterexamples. Mathematically proficient students present their arguments
+in the form of representations, actions on those representations, and explanations in words (oral or written). Students
+critique others by affirming or questioning the reasoning of others. They can listen to or read the reasoning of others,
+decide whether it makes sense, ask questions to clarify or improve the reasoning, and validate or build on it.
+Mathematically proficient students can communicate their arguments, compare them to others, and reconsider their own
+arguments in response to the critiques of others.
+Model with mathematics
+Mathematically proficient students apply the mathematics they know to solve problems arising in everyday life, society, and
+the workplace. When given a problem in a contextual situation, they identify the mathematical elements of a situation and
+6.MP.4 create a mathematical model that represents those mathematical elements and the relationships among them.
+Mathematically proficient students use their model to analyze the relationships and draw conclusions. They interpret their
+mathematical results in the context of the situation and reflect on whether the results make sense, possibly improving the
+model if it has not served its purpose.
+Updated 1-29-2025 13
+Arizona Department of Education
+
+Arizona Mathematics Standards 6th Grade
+Use appropriate tools strategically
+Mathematically proficient students consider available tools when solving a mathematical problem. They choose tools that
+are relevant and useful to the problem at hand. Proficient students are sufficiently familiar with tools appropriate for their
+6.MP.5
+grade or course to make sound decisions about when each of these tools might be helpful; recognizing both the insight to
+be gained and their limitations. Students deepen their understanding of mathematical concepts when using tools to
+visualize, explore, compare, communicate, make and test predictions, and understand the thinking of others.
+Attend to precision
+Mathematically proficient students clearly communicate to others using appropriate mathematical terminology, and craft
+explanations that convey their reasoning. When making mathematical arguments about a solution, strategy, or conjecture,
+6.MP.6
+they describe mathematical relationships and connect their words clearly to their representations. Mathematically proficient
+students understand meanings of symbols used in mathematics, calculate accurately and efficiently, label quantities
+appropriately, and record their work clearly and concisely.
+Look for and make use of structure
+Mathematically proficient students use structure and patterns to assist in making connections among mathematical ideas or
+concepts when making sense of mathematics. Students recognize and apply general mathematical rules to complex
+6.MP.7
+situations. They are able to compose and decompose mathematical ideas and notations into familiar relationships.
+Mathematically proficient students manage their own progress, stepping back for an overview and shifting perspective
+when needed.
+Look for and express regularity in repeated reasoning
+Mathematically proficient students look for and describe regularities as they solve multiple related problems. They formulate
+6.MP.8 conjectures about what they notice and communicate observations with precision. While solving problems, students
+maintain oversight of the process and continually evaluate the reasonableness of their results. This informs and
+strengthens their understanding of the structure of mathematics which leads to fluency.
+Updated 1-29-2025 14
+Arizona Department of Education

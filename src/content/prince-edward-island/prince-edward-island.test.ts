@@ -19,9 +19,9 @@ describe("Prince Edward Island", () => {
   it("adds the Prince Edward Island-only units for Prince Edward Island alone", () => {
     const own = COURSES.flatMap((c) => c.units.filter((u) => u.id.startsWith("pe-")).map((u) => ({ g: c.grade, u })));
     expect(own.length).toBeGreaterThan(10);
-    // Nunavut and New York may copy a unit that names no province (src/content/nunavut/plan.ts,
+    // Nunavut, New York, Minnesota and Arizona may copy a unit that names no province (src/content/nunavut/plan.ts,
     // src/content/new-york/plan/); a copy in the same grade merges into one unit carrying both sets of standards.
-    for (const { g, u } of own) for (const f of Object.keys(u.standards)) expect(["ca-pe", "ca-nu", "us-ny", "us-mn"], `${g}/${u.id}`).toContain(f);
+    for (const { g, u } of own) for (const f of Object.keys(u.standards)) expect(["ca-pe", "ca-nu", "us-ny", "us-mn", "us-az"], `${g}/${u.id}`).toContain(f);
     expect(own.filter(({ u }) => u.standards["ca-pe"]).length).toBeGreaterThan(10);
   });
 

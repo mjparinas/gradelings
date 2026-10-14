@@ -72,7 +72,7 @@ export const FRAMEWORKS: Framework[] = REGISTRY.filter((m) => !m.upcoming).map((
 /**
  * Frameworks being built but not offered yet (`upcoming` in their manifest). They have content and tests, but no
  * public pages, no place in the province pickers and no sitemap entries until they launch. getFramework still finds them.
- * Empty since Alaska launched (October 2026).
+ * Empty since Arizona launched (October 2026).
  */
 export const UPCOMING_FRAMEWORKS: Framework[] = REGISTRY.filter((m) => m.upcoming).map((m) => m.framework);
 
