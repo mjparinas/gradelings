@@ -20,6 +20,7 @@ import { go } from "@/lib/router";
 import { useActiveProfile, useChildSettings, useDerived, useStore } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 import { useBand } from "../band";
+import { SayButton, useBuddySays } from "./BuddySays";
 import { Critter, SpeechBubble, getCritter } from "../Critter";
 import { Companion } from "./Companion";
 import { MembershipLock } from "./MembershipLock";
@@ -112,6 +113,7 @@ export function Hub() {
             ? `A rest-day shield kept your ${d.streak.current}-day streak safe. 🛡️ Play today to keep it going!`
             : `Day ${d.streak.current + 1} of your streak is waiting for you! 🔥`
           : `${hello} ${goal - minutes} more minutes to reach today's goal.`;
+  useBuddySays(message, little && Boolean(settings?.autoRead));
   const mood = minutes >= goal ? "cheer" : returning ? "sleepy" : "wave";
 
   const gameDesc = !games.enabled
@@ -180,7 +182,10 @@ export function Hub() {
           <Companion mood={mood} size={72} className="hidden narrow:block short:hidden" />
         </BuddyButton>
         <SpeechBubble className="flex-1">
-          <p className={`font-read font-bold leading-snug ${little ? "text-2xl sm:text-3xl narrow:text-xl" : "text-xl sm:text-2xl"} short:text-lg`}>{message}</p>
+          <div className="flex items-center gap-3">
+            <p className={`flex-1 font-read font-bold leading-snug ${little ? "text-2xl sm:text-3xl narrow:text-xl" : "text-xl sm:text-2xl"} short:text-lg`}>{message}</p>
+            <SayButton text={message} />
+          </div>
           <div className="mt-2 flex items-center gap-2">
             <ProgressBar value={minutes} max={goal} className="flex-1" label="Minutes learned today" />
             <GoalChip minutes={minutes} goal={goal} />
