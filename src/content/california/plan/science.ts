@@ -492,5 +492,11 @@ export const PLAN_SCIENCE: Record<string, Entry[]> = {
       "HS-PS2-1; HS-PS2-2; HS-PS2-3",
       "Newton's second law, conservation of momentum, and designs that reduce collision forces",
     ],
+    [
+      "electrical-energy-9",
+      "adopt",
+      "HS-PS3-3; HS-ESS3-2",
+      "devices that convert energy and their efficiency, and weighing the costs and benefits of energy sources",
+    ],
   ],
 };
