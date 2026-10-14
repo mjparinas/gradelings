@@ -27,6 +27,7 @@ function otherPages(): SitemapPath[] {
     { path: "/about/" },
     { path: "/contact/" },
     { path: "/status/" },
+    { path: "/trust/" },
     { path: "/accessibility/" },
     { path: "/privacy/", updated: legal },
     { path: "/terms/", updated: legal },

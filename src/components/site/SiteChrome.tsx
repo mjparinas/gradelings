@@ -108,6 +108,7 @@ export function SiteFooter() {
             { label: "Help", href: "/help/" },
             { label: "Contact", href: "/contact/" },
             { label: "Status", href: "/status/" },
+            { label: "Trust centre", href: "/trust/" },
             { label: "Privacy policy", href: "/privacy/" },
             { label: "Terms of use", href: "/terms/" },
             { label: "Accessibility", href: "/accessibility/" },
