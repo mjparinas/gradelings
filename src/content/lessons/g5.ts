@@ -227,4 +227,10 @@ export const lessons: GradeLessons = {
     ["Net = gross − deductions.", "900 − 135 = 765."],
     "$765",
   ),
+  "math/ca-g5-line-plots": lesson(
+    ["Put one X above the mark for each measurement.", "To find a total, multiply each mark by its number of X's and add.", "To share the total equally, divide it by the number of measurements."],
+    "Beakers hold 1/4, 1/4, 1/2 and 1 L of water. If it were shared equally, how much would each hold?",
+    ["Total: 1/4 + 1/4 + 1/2 + 1 = 2.", "2 ÷ 4 = 1/2."],
+    "1/2 L each",
+  ),
 };

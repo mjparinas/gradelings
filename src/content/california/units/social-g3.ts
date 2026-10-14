@@ -360,6 +360,44 @@ const FIRST_PEOPLES_3: Q[] = [
     "Oral history comes from people who know it.",
     true,
   ],
+  [
+    "Each California Indian nation has its own name, history and…",
+    "identity as a people",
+    ["flag of Spain", "single shared language", "city hall"],
+    "The Pomo and the Chumash are different nations.",
+  ],
+  [
+    "Big Time gatherings, held by many California nations today, bring people together to…",
+    "share food, games, crafts and news",
+    ["vote for president", "buy cars", "close schools"],
+    "Many are open to visitors.",
+  ],
+  [
+    "Many nations keep their customs alive by passing skills like basket weaving…",
+    "from elders to young people",
+    ["only to museums", "to no one", "through video games only"],
+    "Elders teach the next generation.",
+  ],
+  [
+    "Stories told by a nation's elders are part of its…",
+    "traditions",
+    ["tax laws", "weather report", "road map"],
+    "Traditions are passed down.",
+  ],
+  [
+    "Many California nations hold a traditional game in which players guess where a marked bone is hidden. It is called…",
+    "the hand game",
+    ["baseball", "chess", "hopscotch"],
+    "It is played with songs and teams.",
+    true,
+  ],
+  [
+    "Who is best able to tell us about a nation's beliefs and customs?",
+    "people of that nation",
+    ["a cartoon", "a stranger's guess", "a travel ad"],
+    "Each nation speaks for itself.",
+    true,
+  ],
 ];
 
 const LOCAL_HISTORY_3: Q[] = [
@@ -728,8 +766,8 @@ export const SOCIAL_3: Unit[] = [
       parentNote:
         "Natural, human and capital resources, what is made locally and elsewhere, trade-offs and opportunity cost, how taxes pay for services, and how citizens vote and take part.",
       standards: [
-        "3.5.1; 3.5.2; 3.5.3; 3.4.2",
-        "how local producers use resources, goods made near and far, trade-offs, and how citizens take part in government",
+        "3.5.1; 3.5.2; 3.5.3; 3.5.4; 3.4.2",
+        "how local producers use resources, goods made near and far, trade-offs, how work in school builds human capital, and how citizens take part in government",
       ],
     },
     [
@@ -750,6 +788,25 @@ export const SOCIAL_3: Unit[] = [
         "a job you want",
         ["fewer choices", "less pay", "no skills"],
         "Learning builds skills.",
+      ],
+      [
+        "The skills and knowledge you build in school are part of your…",
+        "human capital",
+        ["natural resources", "capital goods", "taxes"],
+        "Human capital is what a person knows and can do.",
+      ],
+      [
+        "Maya practices reading every day. She is adding to her…",
+        "human capital",
+        ["natural resources", "savings account", "capital goods"],
+        "Learning is an investment in yourself.",
+      ],
+      [
+        "Learning math in school can help a future builder…",
+        "measure and plan safely",
+        ["grow taller", "pay no taxes", "never work"],
+        "School skills are used at work.",
+        true,
       ],
     ],
   ),
@@ -838,8 +895,8 @@ export const SOCIAL_3: Unit[] = [
     parentNote:
       "California Indian nations such as the Chumash, Pomo, Cahuilla, Ohlone and Yurok: how the land shaped how they lived, trade, tribal governments and constitutions, what settlers' arrival meant for them, and nations today. Light, in the present tense, and with nothing sacred or ceremonial.",
     standards: [
-      "3.2.2; 3.2.3; 3.2.4",
-      "how geography shaped how local Indian nations lived, their economies and governments, and their interaction with settlers",
+      "3.2.1; 3.2.2; 3.2.3; 3.2.4",
+      "the identities, customs and traditions of local Indian nations, how geography shaped how they lived, their economies and governments, and their interaction with settlers",
     ],
     items: FIRST_PEOPLES_3,
   }),

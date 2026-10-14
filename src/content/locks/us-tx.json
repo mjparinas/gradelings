@@ -299,7 +299,7 @@
       "tx-g3-maps text=09f6b63885 std=d22ad83a2b q=a698c18485",
       "tx-g3-land-and-people text=7477af97d7 std=fa2ab7e840 q=155098f0b8",
       "tx-g3-government text=a4b472d3ec std=724d194ac7 q=d701d74af5",
-      "tx-g3-money-and-voting text=6e8f64b13d std=c7d45ccc70 q=204040f4aa",
+      "tx-g3-money-and-voting text=6e8f64b13d std=c7d45ccc70 q=010ee7b55a",
       "tx-g3-culture text=07b97616d2 std=693fc41193 q=29d09fd7cb",
       "tx-g3-changemakers text=26c5cec9a4 std=475e829697 q=464e0094d2"
     ]
@@ -447,9 +447,9 @@
   "5/social": {
     "overview": "ba6a4281ee",
     "units": [
-      "ca-g5-thirteen-colonies text=7072d30e87 std=30c4c59470 q=0821e93a2d",
+      "ca-g5-thirteen-colonies text=63c0acd08f std=30c4c59470 q=9a9a2e4720",
       "ca-g5-colonial-economy text=a2c5df0b45 std=f1ba827aa3 q=964b882147",
-      "ca-g5-road-to-revolution text=3b1e711e86 std=1474302890 q=6380bd96e5",
+      "ca-g5-road-to-revolution text=3b1e711e86 std=1474302890 q=8ff3e277fb",
       "ca-g5-revolution text=e30d9f6104 std=39de75c0b7 q=8de8201d9a",
       "ca-g5-constitution text=2c059056ba std=d9ec14f534 q=f053d97871",
       "or-g5-states-capitals text=8a869d0cba std=40edc4adef q=6b5387c192",

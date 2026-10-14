@@ -86,7 +86,7 @@ export const PLAN_SCIENCE: Record<string, Entry[]> = {
     [
       "wa-g1-nature-ideas",
       "adopt",
-      "1-LS1-1",
+      "1-LS1-1; K-2-ETS1-2",
       "designing solutions by copying how the shapes of plant and animal parts help them work",
     ],
     [
@@ -181,8 +181,8 @@ export const PLAN_SCIENCE: Record<string, Entry[]> = {
     [
       "wa-g3-hazards",
       "adopt",
-      "3-ESS3-1; 3-LS4-4",
-      "comparing solutions that reduce the impacts of weather hazards and environmental change",
+      "3-ESS3-1; 3-LS4-4; 3-5-ETS1-2",
+      "comparing solutions that reduce the impacts of weather hazards and environmental change, by how well each meets the criteria and constraints",
     ],
     [
       "or-g3-magnet-design",

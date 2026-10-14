@@ -349,6 +349,36 @@ const LONG_AGO_1: Q[] = [
   ],
 ];
 
+// Grade 1: models, pictures and maps (1.2.2).
+
+const MODELS_1: Q[] = [
+  ["A model of a house is small, but you can see its…", "front, back and sides", ["smell", "sounds", "people inside talking"], "You can turn a model around."],
+  ["A photo of your school shows…", "only the side facing the camera", ["every side at once", "the inside of every room", "the whole town"], "A picture is flat."],
+  ["A globe is a model of…", "the Earth", ["a ball game", "the Moon", "a school"], "It is round like Earth."],
+  ["Which can you turn around to see the back of a building?", "a model", ["a photo", "a drawing", "a postcard"], "Models have three dimensions."],
+  ["Which shows how tall the hills are by its shape?", "a clay model of the land", ["a flat map", "a list of names", "a word card"], "You can feel the bumps."],
+  ["Which shows real colors and details like windows?", "a photo", ["a map key", "a compass rose", "a list"], "Photos show what eyes see."],
+  ["A map shows a place as if you look from…", "above", ["below", "inside a box", "the side"], "Like a bird looking down."],
+  ["A model is…", "a small copy of a real thing", ["a giant building", "a kind of song", "a map key"], "Toy cars are models."],
+  ["Which is flat?", "a picture of a park", ["a model of a park", "a globe", "a block tower"], "Pictures are on paper."],
+  ["Which is three-dimensional (3D)?", "a model of a bridge", ["a photo of a bridge", "a drawing of a bridge", "a map of a bridge"], "3D things have height."],
+  ["You want to know how far apart two towns are. Use a…", "map", ["photo of a cat", "song", "storybook"], "Maps show where places are."],
+  ["You want to see what the inside of a fire truck looks like. Use a…", "photo of its inside", ["map of the town", "globe", "calendar"], "A photo shows details."],
+  ["A model of your classroom can show where…", "the desks and door are", ["your friends' names", "the weather", "the lunch menu"], "It shows where things sit."],
+  ["A globe shows Earth's shape better than a flat map because it is…", "round", ["flat", "small", "blue"], "Earth is round too."],
+  ["On a model of a town, the tiny blocks stand for…", "buildings", ["clouds", "people's names", "songs"], "Small things stand for big ones."],
+  ["A picture shows one moment. A model shows…", "a shape you can see from all sides", ["sounds", "the future", "only one side"], "Walk around a model."],
+  ["Which would help you build a real birdhouse?", "a model of the birdhouse", ["a picture of a bird", "a map of the state", "a song about birds"], "You can see each side."],
+  ["A map key tells what the map's…", "symbols mean", ["people think", "colors smell like", "pages weigh"], "Symbols are small pictures."],
+  ["A model mountain made of clay shows the…", "height and slopes", ["name of the mountain", "animals' sounds", "weather today"], "Shape shows height."],
+  ["A photo from an airplane looking down is a lot like a…", "map", ["song", "calendar", "clock"], "Both look from above."],
+  ["Which is easier to carry in your pocket?", "a folded map", ["a big model of a city", "a globe", "a sand table"], "Maps are flat.", true],
+  ["Why might a picture not show a back door?", "the camera saw only the front", ["doors are invisible", "pictures show everything", "backs are secret"], "A photo has one view.", true],
+  ["Which tells you more about the shape of a statue?", "a small model of it", ["a photo of its front", "a map of the park", "its name tag"], "Models show all sides.", true],
+  ["A globe and a world map both show…", "land and water on Earth", ["only one city", "today's weather", "your house inside"], "Both show the whole world.", true],
+  ["Which shows the most of a big city at once?", "a map", ["a model of one house", "a photo of one door", "a toy car"], "Maps can show large places.", true],
+];
+
 // Copies of Washington's Grade 1 units, with California items. They come from that state's own grade
 // file, which this grade's download already carries.
 const K = (id: string) => from([...WASHINGTON], id);
@@ -465,5 +495,18 @@ export const SOCIAL_1: Unit[] = [
       "the structure of schools and communities in the past and transportation methods of earlier days",
     ],
     items: LONG_AGO_1,
+  }),
+  bankUnit({
+    id: "ca-g1-models-and-maps",
+    title: "Models, Pictures & Maps",
+    emoji: "🏠",
+    blurb: "What a model shows that a picture can't",
+    parentNote:
+      "Comparing a three-dimensional model (and a globe) with a picture or a map of the same place: what each one shows and when to use it.",
+    standards: [
+      "1.2.2",
+      "comparing what a three-dimensional model shows with what a picture of the same place shows",
+    ],
+    items: MODELS_1,
   }),
 ];

@@ -109,8 +109,8 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     [
       "sentences",
       "share",
-      "L.1.1; L.1.2",
-      "writing complete sentences with capitals and end marks",
+      "L.1.1; L.1.2; RF.1.1",
+      "the features of a sentence: complete sentences with capitals and end marks",
     ],
     [
       "story-time",
@@ -120,6 +120,12 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     ],
     ["describing-words", "share", "L.1.5", "describing words and opposites"],
     ["more-than-one", "share", "L.1.1", "adding -s to name more than one"],
+    [
+      "word-jobs",
+      "adopt",
+      "L.1.1; L.1.6",
+      "verb tenses, describing words, and joining words such as because",
+    ],
     [
       "sentence-types",
       "adopt",
@@ -156,8 +162,8 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     [
       "story-builders",
       "share",
-      "RL.2.3; RL.2.5",
-      "characters, settings and the order of events",
+      "RL.2.1; RL.2.3; RL.2.5",
+      "who, what, where, why and how questions about characters, settings and the order of events",
     ],
     ["word-power", "share", "L.2.4; L.2.5", "compound words and opposites"],
     [
@@ -177,8 +183,8 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     [
       "reading-detectives",
       "adopt",
-      "RL.2.6",
-      "comparing characters and noticing who tells the story",
+      "RL.2.6; RI.2.3",
+      "comparing characters, noticing who tells the story and following the steps in a how-to text",
     ],
     [
       "text-features",
@@ -203,8 +209,8 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     [
       "read-and-think",
       "share",
-      "RL.3.1; RI.3.2",
-      "understanding stories and finding the main idea of true texts",
+      "RL.3.1; RL.3.2; RL.3.4; RI.3.1; RI.3.2; RI.3.3; RI.3.4; SL.3.2",
+      "answering questions about stories and true texts, their lessons and main ideas, word meanings, and the order and causes of events",
     ],
     [
       "story-elements",
@@ -245,6 +251,12 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
       "alphabetical order and using a dictionary",
     ],
     [
+      "devices-3",
+      "adopt",
+      "L.3.3; L.3.5",
+      "choosing strong words for effect, and metaphors and other nonliteral language",
+    ],
+    [
       "grammar-3",
       "adopt",
       "L.3.1; L.3.2",
@@ -253,8 +265,8 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     [
       "text-patterns",
       "adopt",
-      "RI.3.5",
-      "cause and effect, order and other text structures",
+      "RI.3.5; RI.3.8",
+      "cause and effect, order and other text structures, and how sentences and paragraphs connect",
     ],
     [
       "mb-wonder-and-find-out",
@@ -273,8 +285,8 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     [
       "reading-detectives",
       "share",
-      "RI.4.2",
-      "main idea, details and summaries",
+      "RL.4.1; RL.4.2; RL.4.3; RL.4.4; RI.4.1; RI.4.2; RI.4.3; RI.4.4; SL.4.2",
+      "details and inferences, themes, characters and word meanings in stories, and main ideas, explanations, word meanings and summaries in true texts",
     ],
     [
       "text-features",
@@ -490,8 +502,8 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     [
       "close-reading",
       "share",
-      "RL.8.1; RL.8.2",
-      "theme, tone and textual evidence",
+      "RL.8.1; RL.8.2; RL.8.3",
+      "theme, tone, textual evidence and how incidents and details reveal and change characters",
     ],
     [
       "literary-devices",
@@ -544,8 +556,8 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     [
       "close-reading",
       "share",
-      "RL.9-10.1; RL.9-10.2",
-      "inference, theme and the author's craft",
+      "RL.9-10.1; RL.9-10.2; RL.9-10.3; RI.9-10.1; RI.9-10.4; RI.9-10.6",
+      "inference, theme, character development and the author's craft in stories, and evidence, word meaning and an author's position in arguments",
     ],
     [
       "literary-elements",

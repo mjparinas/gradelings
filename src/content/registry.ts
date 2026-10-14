@@ -16,6 +16,7 @@ import { manifest as california } from "./california/manifest";
 import { manifest as newYork } from "./new-york/manifest";
 import { manifest as texas } from "./texas/manifest";
 import { manifest as maine } from "./maine/manifest";
+import { manifest as minnesota } from "./minnesota/manifest";
 import { manifest as alaska } from "./alaska/manifest";
 import type { FrameworkManifest } from "./manifest";
 
@@ -43,6 +44,7 @@ export const REGISTRY = [
   newYork,
   texas,
   maine,
+  minnesota,
   alaska,
 ] as const satisfies readonly FrameworkManifest[];
 
