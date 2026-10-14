@@ -21,9 +21,9 @@ Public pages that go with this: `/privacy/` (with a "Schools and classes" sectio
 - The teacher sees first name, grade, avatar and results on the units they assigned, plus a "what to look at next" list.
 - Removing a student, closing a class and deleting a teacher account each delete the students' data at once.
 
-## Schools in the United States (Washington, Oregon, California and Maine)
+## Schools in the United States (Washington, Oregon, California, New York and Maine)
 
-Classes can follow Washington, Oregon, California or Maine (`TEACHER_FRAMEWORK_IDS` in `src/components/site/teachers.ts`).
+Classes can follow Washington, Oregon, California, New York or Maine (`TEACHER_FRAMEWORK_IDS` in `src/components/site/teachers.ts`).
 
 - **Consent.** Under COPPA a school can consent on parents' behalf for educational use. Student accounts a teacher adds are never asked for parental consent (only family accounts are; `src/lib/coppa.ts`), and the teacher's screens for a US class carry one line saying the school consents on parents' behalf for educational use only (`US_CLASS_CONSENT` in `src/lib/classroom.ts`).
 - **FERPA.** For a school, the Provider acts as a "school official" with a legitimate educational interest: it works under the school's direct control, uses education records only for the purpose they were shared for, and doesn't re-disclose them. Section 12 of `school-data-agreement.md` says so.
@@ -31,6 +31,7 @@ Classes can follow Washington, Oregon, California or Maine (`TEACHER_FRAMEWORK_I
 - **Washington law.** `/privacy/` ("Families in the United States") states our SUPER Act commitments (no targeted advertising, no sale, no profiling beyond the school's purpose, deletion on request, a security program, notice before material changes) and that we collect no consumer health data under the My Health My Data Act.
 - **Oregon law.** `/privacy/` states the matching commitments under the Oregon Student Information Protection Act (ORS 336.184): no targeted advertising, no sale, no profiling beyond the school's purpose, sharing only as the law allows, a security program and deletion when the school asks.
 - **California law.** `/privacy/` states the matching commitments under SOPIPA (Business and Professions Code 22584): no targeted advertising, no sale, no profiling beyond the school's purpose, sharing only as the law allows, a security program and deletion when the school asks. A California district's contract must carry the terms in Education Code 49073.1 (AB 1584); `school-data-agreement.md` and the NDPA's California exhibit cover them.
+- **New York law.** `/privacy/` states our commitments under Education Law 2-d and Part 121 of the Commissioner's regulations: no sale, no use or release for marketing or commercial purposes, use only for the school's educational purposes, sharing only with the listed service providers, a security program, deletion when the school asks and telling the school about a breach affecting its students. Every New York district contract must carry the district's Parents' Bill of Rights for Data Privacy and Security and supplemental information about the product, and Part 121 asks a contractor for a data security and privacy plan, encryption in transit and at rest, security practices aligned with the NIST Cybersecurity Framework and breach notice to the district within 7 calendar days of discovery. Encryption at rest (Turso) is still a **(confirm)** item, and the breach window in `school-data-agreement.md` section 7 is blank; settle both before signing with a New York district.
 - **Maine law.** `/privacy/` states the matching commitments under Maine's Student Information Privacy Act (20-A M.R.S. sections 951 to 953): no targeted advertising, no sale, no profiling beyond the school's purpose, sharing only as the law allows, a security program and deletion when the school asks.
 
 ## Still to do before a district can say yes

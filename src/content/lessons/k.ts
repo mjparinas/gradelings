@@ -107,4 +107,12 @@ export const lessons: GradeLessons = {
     ["Count: 3 apples, 5 bananas.", "5 is more than 3."],
     "🍌",
   ),
+  // New York
+  "math/ny-k-coins": lesson(
+    ["A penny is the one coin that is not silver. It is 1 cent.", "A dime is the smallest coin. It is 10 cents.", "Count pennies one at a time."],
+    "You have 3 pennies. You find 2 more. How many now?",
+    ["Start at 3.", "Count on 2: 4, 5."],
+    "5",
+    { type: "coins", coins: [1, 1, 1], currency: "USD" },
+  ),
 };

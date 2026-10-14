@@ -7,6 +7,7 @@ const OUTCOMES = research<Record<string, { idx: string }[]>>("california/outcome
 export const contract: FrameworkContract = {
   cite: codeCite(OUTCOMES, "California"),
   ownPrefix: "ca-",
-  ownSharedWith: ["us-me"],
+  // New York and Maine may adopt the ones that name no California place; no Canadian framework ever gets them.
+  ownSharedWith: ["us-ny", "us-me"],
   plan: PLAN,
 };

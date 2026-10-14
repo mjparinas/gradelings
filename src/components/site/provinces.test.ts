@@ -47,7 +47,7 @@ describe("homepage province coverage", () => {
 
   it("names every province, with 'the' before the Northwest Territories", () => {
     expect(regionList(FRAMEWORKS)).toBe(
-      "British Columbia, Ontario, Alberta, Saskatchewan, Manitoba, Yukon, the Northwest Territories, Nova Scotia, New Brunswick, Newfoundland and Labrador, Prince Edward Island, Nunavut, Washington, Oregon, California and Maine",
+      "British Columbia, Ontario, Alberta, Saskatchewan, Manitoba, Yukon, the Northwest Territories, Nova Scotia, New Brunswick, Newfoundland and Labrador, Prince Edward Island, Nunavut, Washington, Oregon, California, New York and Maine",
     );
   });
 
@@ -95,16 +95,16 @@ describe("provinces and states in marketing copy", () => {
     const or = getFramework("us-or");
     expect(regionSummary([...ca, wa, or])).toBe(`${ca.length} Canadian provinces and territories, plus Washington and Oregon`);
     expect(regionSummary([wa, or])).toBe("Washington and Oregon");
-    expect(regionSummary([...ca, wa, or, wa, or])).toBe(`${ca.length} Canadian provinces and territories and 4 US states`);
+    expect(regionSummary([...ca, wa, or, wa, or, wa])).toBe(`${ca.length} Canadian provinces and territories and 5 US states`);
     expect(regionWord(ca)).toBe("province");
     expect(regionWord([...ca, wa])).toBe("province or state");
     expect(offersUsd(ca)).toBe(false);
     expect(offersUsd([...ca, wa])).toBe(true);
   });
 
-  it("offers Washington, Oregon, California and Maine on the public site", () => {
-    expect(FRAMEWORKS.map((f) => f.id)).toEqual(expect.arrayContaining(["us-wa", "us-or", "us-ca", "us-me"]));
+  it("offers Washington, Oregon, California, New York and Maine on the public site", () => {
+    expect(FRAMEWORKS.map((f) => f.id)).toEqual(expect.arrayContaining(["us-wa", "us-or", "us-ca", "us-ny", "us-me"]));
     // With four or more states, the summary counts them; the pickers and the home page's coverage list name each one.
-    expect(regionSummary(FRAMEWORKS)).toContain("Canadian provinces and territories and 4 US states");
+    expect(regionSummary(FRAMEWORKS)).toContain("Canadian provinces and territories and 5 US states");
   });
 });

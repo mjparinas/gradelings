@@ -13,6 +13,7 @@ import { manifest as nunavut } from "./nunavut/manifest";
 import { manifest as washington } from "./washington/manifest";
 import { manifest as oregon } from "./oregon/manifest";
 import { manifest as california } from "./california/manifest";
+import { manifest as newYork } from "./new-york/manifest";
 import { manifest as maine } from "./maine/manifest";
 import type { FrameworkManifest } from "./manifest";
 
@@ -37,6 +38,7 @@ export const REGISTRY = [
   washington,
   oregon,
   california,
+  newYork,
   maine,
 ] as const satisfies readonly FrameworkManifest[];
 
