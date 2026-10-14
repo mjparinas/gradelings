@@ -1,0 +1,262 @@
+Mathematics 8
+Outcomes
+
+
+
+
+                2022
+Website References
+Website references contained within this document are provided solely as a convenience and do not constitute
+an endorsement by the Department of Education of the content, policies, or products of the referenced website.
+The department does not control the referenced websites and subsequent links, and is not responsible for the
+accuracy, legality, or content of those websites. Referenced website content may change without notice.
+Regional Education Centres and educators are required under the Department’s Public School Programs
+Network Access and Use Policy to preview and evaluate sites before recommending them for student use. If an
+outdated or inappropriate site is found, please report it to <curriculum@novascotia.ca>.
+
+
+
+
+Mathematics Grade 8
+© Crown copyright, Province of Nova Scotia, 2022
+Prepared by the Department of Education and Early Childhood Development
+This is the most recent version of the current curriculum materials as used by teachers in Nova Scotia.
+The contents of this publication may be reproduced in part provided the intended use is for noncommercial
+purposes and full acknowledgment is given to the Nova Scotia Department of Education
+Mathematics Grade 8 Outcomes
+     N01 Students will be expected to demonstrate an understanding of perfect squares and square
+     roots, concretely, pictorially, and symbolically (limited to whole numbers).
+     Performance Indicators:
+     N01.01 Represent a given perfect square as a square region, using materials such as grid paper or
+             square shapes.
+     N01.02 Determine the factors of a given perfect square, and explain why one of the factors is the
+             square root and the others are not.
+     N01.03 Determine whether or not a given number is a perfect square, using materials and strategies
+             such as square shapes, grid paper or prime factorization, and explain the reasoning.
+     N01.04 Determine the square root of a given perfect square, and record it symbolically.
+     N01.05 Determine the square of a given number.
+
+     N02 Students will be expected to determine the approximate square root of numbers that are not
+     perfect squares (limited to whole numbers).
+     Performance Indicators:
+     N02.01 Estimate the square root of a given number that is not a perfect square, using materials
+             such as square shapes and graph paper and strategies such as using the roots of perfect
+             squares as benchmarks.
+     N02.02 Approximate the square root of a given number that is not a perfect square using
+             technology (e.g., a calculator or a computer).
+     N02.03 Explain why the square root of a number shown on a calculator may be an approximation.
+     N02.04 Identify a number with a square root that is between two given numbers.
+
+
+     N03 Students will be expected to demonstrate an understanding of and solve problems involving
+     percents greater than or equal to 0%.
+     Performance Indicators:
+     N03.01 Provide contexts where a percent may be between 0% and 1%, between 1% and 100%, and
+             more than 100%.
+     N03.02 Represent a given fractional percent using concrete materials and pictorial representations.
+     N03.03 Represent a given percent greater than 100% using concrete materials and pictorial
+             representations.
+     N03.04 Determine the percent represented by a given shaded region on a grid, and record it in
+             decimal, fraction, and percent form.
+     N03.05 Express a given percent in decimal or fraction form.
+     N03.06 Express a given decimal in percent or fraction form.
+     N03.07 Express a given fraction in decimal or percent form.
+     N03.08 Solve a given problem involving percents mentally, with pencil and paper, or with technology,
+             as appropriate.
+     N03.09 Solve a given problem that involves finding the percent of a percent.
+
+
+
+
+Mathematics 8: Outcomes (2022)                                                                              1
+    N04 Students will be expected to demonstrate an understanding of ratio and rate.
+    Performance Indicators:
+    N04.01 Explain the multiplicative relationship found within a ratio.
+    N04.02 Represent a two-term ratio from a given context concretely and pictorially and record using
+            the forms 3:5 or 3 to 5.
+    N04.03 Express a three-term ratio from a given context in the forms 4:7:3 or 4 to 7 to 3.
+    N04.04 Express a part-to-part ratio as a part-to-whole fraction.
+    N04.05 Identify and describe ratios and rates (including unit rates) from real-life examples and
+            record them symbolically.
+    N04.06 Express a given rate using words or symbols.
+    N04.07 Express a given ratio as a percent, and explain why a rate cannot be represented as a
+            percent.
+
+    N05 Students will be expected to solve problems that involve rates, ratios, and proportional reasoning.
+    Performance Indicators:
+
+    N05.01    Explain the meaning of     within a given context.
+
+    N05.02    Provide a context in which     represents a fraction, a rate, a ratio, a quotient, and a
+              probability.
+    N05.03    Use pictures, models, or manipulatives to make sense of a proportional situation.
+    N05.04    Differentiate between proportional and non-proportional contexts.
+    N05.05    Use multiplicative relationships to compare quantities and to predict the value of one
+              quantity based on the values of another.
+    N05.06    Use multiple methods to solve proportional tasks and understand that these methods are
+              related to each other.
+    N05.07    Use estimation to determine the reasonableness of an answer.
+    N05.08    Solve a proportion using mental mathematics, pencil and paper, or technology, as
+              appropriate.
+    N05.09    Solve a given problem involving rate, ratio, or percent using mental mathematics, pencil and
+              paper, or technology, as appropriate.
+    N05.10    Create problems that are examples of proportional reasoning.
+
+
+
+
+2                                                                                   Mathematics 8: Outcomes (2022)
+     N06 Students will be expected to demonstrate an understanding of multiplying and dividing positive
+     fractions and mixed numbers, concretely, pictorially, and symbolically.
+     Performance Indicators:
+     N06.01 Identify the operation required to solve a given problem involving positive fractions.
+     N06.02 Provide a context that requires the multiplying of two given positive fractions.
+     N06.03 Provide a context that requires the dividing of two given positive fractions.
+     N06.04 Estimate the product of two given positive proper fractions to determine if the product will
+
+                be closer to 0,   , or 1.
+     N06.05     Estimate the quotient of two given positive fractions, and compare the estimate to whole
+                number benchmarks.
+     N06.06     Express a given positive mixed number as an improper fraction and a given positive
+                improper fraction as a mixed number.
+     N06.07     Model multiplication of a positive fraction by a whole number concretely and/or pictorially
+                and record the process.
+     N06.08     Model multiplication of a positive fraction by a positive fraction concretely and/or pictorially,
+                using an area model, and record the process.
+     N06.09     Model division of a positive proper fraction by a whole number concretely and/or pictorially
+                and record the process.
+     N06.10     Model division of a whole number by a positive proper fraction concretely and/or pictorially,
+                using an area model, and record the process.
+     N06.11     Model division of a positive proper fraction by a positive proper fraction pictorially and
+                record the process.
+     N06.12     Generalize and apply rules for multiplying and dividing positive fractions, including mixed
+                numbers.
+     N06.13     Symbolically solve a given problem involving positive fractions, taking into consideration
+                order of operations (limited to problems with positive solutions and that exclude exponents).
+
+     N07 Students will be expected to demonstrate an understanding of multiplication and division of
+     integers, concretely, pictorially, and symbolically.
+     Performance Indicators:
+     N07.01 Identify the operation required to solve a given problem involving integers.
+     N07.02 Provide a context that requires multiplying two integers.
+     N07.03 Provide a context that requires dividing two integers.
+     N07.04 Model the process of multiplying two integers, using concrete materials or pictorial
+             representations, and record the process.
+     N07.05 Model the process of dividing an integer by an integer, using concrete materials and/or
+             pictorial representations, and record the process.
+     N07.06 Generalize and apply a rule for determining the sign of the product and quotient of integers.
+     N07.07 Solve a given problem involving the division of integers (two-digit by one-digit) without the
+             use of technology.
+     N07.08 Solve a given problem involving the division of integers (two-digit by two-digit) mentally or
+             with the use of technology, where appropriate.
+     N07.09 Symbolically solve a given problem involving integers, taking into consideration order of
+             operations when necessary.
+
+
+
+Mathematics 8: Outcomes (2022)                                                                                      3
+    PR01 Students will be expected to graph and analyze two-variable linear relations.
+    Performance Indicators:
+    PR01.01 Determine the missing value in an ordered pair for a given equation.
+    PR01.02 Create a table of values by substituting values for a variable in the equation of a given linear
+            relation.
+    PR01.03 Construct a graph from the equation of a given linear relation (limited to discrete data).
+    PR01.04 Describe the relationship between the variables of a given graph.
+
+    PR02 Students will be expected to model and solve problems, concretely, pictorially, and symbolically,
+    where a, b, and c are integers, using linear equations of the form ax = b; x/a = b, a ≠ 0; ax + b = c;
+    x/a + b = c, a ≠ 0; a(x + b) = c
+    Performance Indicators:
+    PR02.01 Model a given problem with a linear equation, and solve the equation using concrete models.
+    PR02.02 Verify the solution to a given linear equation, using a variety of methods, including concrete
+            materials, diagrams, and substitution.
+    PR02.03 Draw a visual representation of the steps used to solve a given linear equation, and record
+            each step symbolically.
+    PR02.04 Solve a given linear equation symbolically.
+    PR02.05 Identify and correct an error in a given incorrect solution of a linear equation.
+    PR02.06 Apply the distributive property to solve a given linear equation.
+    PR02.07 Solve a given problem, using a linear equation, and record the process.
+
+    M01 Students will be expected to develop and apply the Pythagorean theorem to solve problems.
+    Performance Indicators:
+    M01.01 Model and explain the Pythagorean theorem concretely, pictorially, or using technology.
+    M01.02 Explain, using examples, that the Pythagorean theorem applies only to right triangles.
+    M01.03 Determine whether or not a given triangle is a right triangle by applying the Pythagorean
+            theorem.
+    M01.04 Determine the measure of the third side of a right triangle, given the measures of the other
+            two sides, to solve a given problem.
+    M01.05 Solve a given problem that involves Pythagorean triples.
+
+    M02 Students will be expected to draw and construct nets for 3-D objects.
+    Performance Indicators:
+    M02.01 Match a given net to the 3-D object it represents.
+    M02.02 Construct a 3-D object from a given net.
+    M02.03 Draw nets for a given right cylinder, right rectangular prism, and right triangular prism, and
+            verify by constructing the 3-D objects from the nets.
+    M02.04 Predict 3-D objects that can be created from a given net, and verify the prediction.
+
+
+
+
+4                                                                                    Mathematics 8: Outcomes (2022)
+     M03 Students will be expected to determine the surface area of right rectangular prisms, right
+     triangular prisms, and right cylinders to solve problems.
+     Performance Indicators:
+     M03.01 Explain, using examples, the relationship between the area of 2-D shapes and the surface
+             area of a given 3-D object.
+     M03.02 Identify all the faces of a given prism, including right rectangular and right triangular prisms.
+     M03.03 Identify all the faces of a given right cylinder.
+     M03.04 Describe and apply strategies for determining the surface area of a given right rectangular or
+             right triangular prism.
+     M03.05 Describe and apply strategies for determining the surface area of a given right cylinder.
+     M03.06 Solve a given problem involving surface area.
+
+     M04 Students will be expected to develop and apply formulas for determining the volume of right
+     rectangular prisms, right triangular prisms, and right cylinders.
+     Performance Indicators:
+     M04.01 Determine the volume of a given right prism, given the area of the base.
+     M04.02 Generalize and apply a rule for determining the volume of right cylinders.
+     M04.03 Explain the connection between the area of the base of a given right 3-D object and the
+             formula for the volume of the object.
+     M04.04 Demonstrate that the orientation of a given 3-D object does not affect its volume.
+     M04.05 Apply a formula to solve a given problem involving the volume of a right cylinder or a right
+             prism.
+
+     G01 Students will be expected to draw and interpret top, front, and side views of 3-D objects
+     composed of right rectangular prisms.
+     Performance Indicators:
+     G01.01 Draw and label the top, front, and side views for a given 3-D object on isometric dot paper.
+     G01.02 Compare different views of a given 3-D object to the object.
+     G01.03 Predict the top, front, and side views that will result from a described rotation (limited to
+             multiples of 90°), and verify predictions.
+     G01.04 Draw and label the top, front, and side views that result from a given rotation (limited to
+             multiples of 90°).
+     G01.05 Build a 3-D block object given the top, front, and side views, with or without the use of
+             technology.
+     G01.06 Sketch and label the top, front, and side views of a 3-D object in the environment, with or
+             without the use of technology.
+
+
+
+
+Mathematics 8: Outcomes (2022)                                                                                  5
+    SP01 Students will be expected to critique ways in which data is presented.
+    Performance Indicators:
+    SP01.01 Compare information provided for the same data set by a given set of graphs, including
+            circle graphs, line graphs, bar graphs, and pictographs, to determine the strengths and
+            limitations of each graph.
+    SP01.02 Identify the advantages and disadvantages of different graphs, including circle graphs, line
+            graphs, bar graphs, and pictographs, in representing a given set of data.
+    SP01.03 Justify the choice of a graphical representation for a given situation and its corresponding
+            data set.
+    SP01.04 Explain how the format of a given graph, such as the size of the intervals, the width of the
+            bars, and the visual representation, may lead to misinterpretation of the data.
+    SP01.05 Explain how a given formatting choice could misrepresent the data.
+    SP01.06 Identify conclusions that are inconsistent with a given data set or graph, and explain the
+            misinterpretation.
+
+
+
+
+6                                                                                  Mathematics 8: Outcomes (2022)
+

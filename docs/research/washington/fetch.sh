@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Downloads Washington's K-12 learning standards from OSPI into a cache folder.
-# Usage: ./fetch.sh <cache-dir>   then   python3 build_outcomes.py <cache-dir>
+# Usage: ./fetch.sh [dir]   then   python3 -I build_outcomes.py source   (dir defaults to source/ in this folder, which is committed)
 set -euo pipefail
-out="${1:?usage: fetch.sh <cache-dir>}"
+out="${1:-$(dirname "$0")/source}"
 mkdir -p "$out"
 base="https://ospi.k12.wa.us/sites/default/files"
 get() { curl -fsSL --retry 3 -o "$out/$1" "$base/$2"; }

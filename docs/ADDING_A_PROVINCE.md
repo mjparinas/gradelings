@@ -3,7 +3,11 @@
 Everything that differs by jurisdiction lives in its own folder, `src/content/<name>/`, described by a manifest (`manifest.ts`) and listed with one line in `src/content/registry.ts`. No screen changes are needed.
 
 1. **Framework.** Create `src/content/<name>/framework.ts` exporting a `Framework` (the type is in `src/content/frameworks.ts`): id, slug, `curriculumName`, grades, subjects offered, report-card scale and guide, and the scoring scheme.
-2. **Official standards.** Save the official expectations under `docs/research/<name>/` with their source and date, and write a README like `docs/research/ontario/README.md`.
+2. **Official standards.** Everything the research used goes in `docs/research/<name>/`, committed, so it can be checked again after the website changes or the document is taken down:
+   - `source/`: the official documents as downloaded (PDF, HTML, spreadsheet or JSON), plus a `pdftotext -layout` `.txt` beside each PDF, so a diff shows what changed in a new edition. Commit them even when the site allows automated downloads. If a site blocks downloads, ask the owner for the files and commit those. Keep each file under 50 MB; for a bigger document, commit the parts the research reads and say so in the README.
+   - `fetch.sh`: downloads every file in `source/` again from its official URL (default folder `source/`), with a comment naming each document and its edition.
+   - `build_outcomes.py` (run with `python3 -I`): turns `source/` into `outcomes.json`, the codes and text the framework's `contract.ts` checks citations against. Running it on the committed `source/` must reproduce the committed `outcomes.json` exactly. Don't edit `outcomes.json` by hand; fix the script.
+   - `README.md`, like `docs/research/washington/README.md`: each source with its URL, edition and download date, how to rebuild, how citations are checked, and known gaps.
 3. **Courses.** For each grade add `src/content/<name>/g<N>.ts` exporting `courses`. A course lists:
    - `units`: units written for this jurisdiction. Give them ids that do not clash with BC ids.
    - `shares`: BC (or other) unit ids to reuse. A framework can also share another framework's own units (Alberta shares some Ontario units); list that dependency in `depends` in its manifest so the other framework's file is downloaded too. Each gives the new standards text for that unit. Share only after sampling the unit's questions and confirming they fit the new curriculum.

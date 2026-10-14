@@ -103,7 +103,7 @@ for g in GRADES[:-1]:
 s = page_text(cache / "html/ela_9.html")
 parts = re.split(r"\n(ELA\.9\.[A-Z]\d+(?:\.\d+)?)\n", s)
 for i in range(1, len(parts), 2):
-    idx, body = parts[i], parts[i + 1].split("\n Strand")[0].split("\nListen and")[0].split("\nInteracting")[0]
+    idx, body = parts[i], parts[i + 1].split("\n Strand")[0].split("\nListen and")[0].split("\nInteracting")[0].split("\nCurriculum Implementation Resources")[0]
     if re.fullmatch(r"ELA\.9\.[A-D]\d", idx):
         code = idx.split(".")[-1]
         head("9/language", f"{code} {clean(body.split(chr(10))[0])}")

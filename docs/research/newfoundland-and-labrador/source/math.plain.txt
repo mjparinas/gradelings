@@ -1,0 +1,3221 @@
+Acknowledgments
+The Departments of Education of New Brunswick, Newfoundland and Labrador, Nova Scotia and Prince
+Edward Island gratefully acknowledge the contributions of the following groups and individuals toward the
+development of this document:
+• The regional mathematics common curriculum committee, which has overseen the common curriculum
+development and provided direction with respect to the completion of this foundation document. Current
+and past members include the following:
+
+PROVINCE OF NEW BRUNSWICK
+
+PROVINCE OF NOVA SCOTIA
+
+John Hildebrand, Mathematics Consultant,
+Department of Education
+
+Beth Calabrese, Mathematics Teacher,
+Queen Elizabeth High School
+
+Carolyn Jones, Mathematics Teacher,
+Fredericton High School
+
+Ken MacInnis, Elementary Teacher,
+Sir Charles Tupper Elementary School
+
+Joan Manuel, Mathematics/Science Supervisor,
+School District 10
+
+Richard MacKinnon, Mathematics Consultant,
+Department of Education and Culture
+
+Jack Powers, Vice-Principal,
+MacNaughton Science and Technology Centre
+
+Linda Wheadon, Mathematics Teacher,
+Horton District High School
+
+PROVINCE OF NEWFOUNDLAND AND
+LABRADOR
+
+PROVINCE OF PRINCE EDWARD
+ISLAND
+
+Patricia Maxwell, Program Development Specialist,
+Department of Education
+
+Jerry Coady, Mathematics Teacher,
+Bluefield High School
+
+Sadie May, Mathematics Teacher,
+Deer Lake-St. Barbe South Integrated School Board
+
+Byron Cutcliffe, Senior High Mathematics/Science
+Consultant, Department of Education
+
+Ed Somerton, Mathematics Consultant,
+Department of Education
+
+Wayne Denman, Mathematics Consultant,
+Department of Education
+
+Donald Squibb, Mathematics Teacher,
+St. James Regional High School
+
+Bill MacIntyre, Elementary Mathematics/Science
+Consultant, Department of Education
+
+• The mathematics foundation document working group, comprising teachers and other educators in the
+province of New Brunswick, which served as lead province in drafting and revising the document.
+• The provincial working groups, comprising teachers and other educators in New Brunswick, Newfoundland
+and Labrador, Nova Scotia and Prince Edward Island, who provided feedback and input to the document
+during the development and revision process.
+• The educators, parents and other stakeholders, who contributed many hours to the validation process
+which led to the finalization of the Foundation for the Atlantic Canada Mathematics Curriculum.
+
+Acknowledgments
+Outcomes
+
+i
+
+Table of Contents
+Vision ................................................................................................................................................. v
+Introduction
+Purpose of Document .......................................................................................................................... 1
+Curriculum Focus ................................................................................................................................ 1
+A Common Approach ......................................................................................................................... 2
+
+Outcomes
+Essential Graduation Learnings ............................................................................................................ 3
+Introduction to Curriculum Outcomes ................................................................................................. 7
+• Vision ........................................................................................................................................ 7
+• Unifying Ideas ........................................................................................................................... 7
+Curriculum Outcomes ....................................................................................................................... 10
+• Strands and General Curriculum Outcomes ............................................................................. 10
+• Key-Stage Curriculum Outcomes ............................................................................................. 12
+
+Contexts for Learning and Teaching
+Learning and Teaching Mathematics ................................................................................................. 27
+• Principles of Learning and Teaching Mathematics .................................................................... 27
+• Resource-Based Learning ......................................................................................................... 28
+• Balancing Procedural and Conceptual Knowledge ................................................................... 28
+• Estimation and Mental Computation ....................................................................................... 29
+• Homework .............................................................................................................................. 30
+The Learning Environment ................................................................................................................ 31
+Equity and Diversity ........................................................................................................................... 32
+• Diversity in Student Needs ...................................................................................................... 32
+• Cognitive Development ........................................................................................................... 32
+• Gender and Cultural Equity ..................................................................................................... 34
+Assessing and Evaluating Student Learning ........................................................................................ 35
+• Assessment .............................................................................................................................. 35
+• Evaluation ............................................................................................................................... 35
+• Reporting ................................................................................................................................ 36
+• Guiding Principles ................................................................................................................... 36
+• Assessing Student Learning in the Mathematics Classroom ...................................................... 36
+• External Assessment ................................................................................................................ 37
+• Program and System Evaluation .............................................................................................. 37
+Resources .......................................................................................................................................... 38
+• Professional Resources ............................................................................................................. 38
+• Manipulative Materials ............................................................................................................ 38
+• Technology ............................................................................................................................. 39
+
+References .................................................................................................................................... 40
+
+Table ofOutcomes
+Contents
+
+iii
+
+Vision
+The Atlantic Canada mathematics curriculum
+is shaped by a vision which fosters the development
+of mathematically literate students who can extend
+and apply their learning and who are effective participants
+in an increasingly technological society.
+
+Vision
+Outcomes
+
+v
+
+Introduction
+PURPOSE OF
+DOCUMENT
+
+T
+
+he development of this
+foundation document
+has been motivated by
+the Atlantic Canada common
+curriculum project in mathematics. Within this context the
+document is intended to
+• provide both educators and
+members of the general public
+with an outline of the philosophy, scope and outcomes of
+mathematics education in
+Atlantic Canada
+• provide a foundation upon
+which educators and others
+will make decisions concerning
+learning experiences
+• serve as a guide to inform the
+subsequent development of
+detailed curriculum guides at
+all grade levels from school
+entry through grade 12
+• articulate a progression and
+continuity in the development
+of mathematical skills and
+concepts from school entry
+through grade 12, and encourage discussion among
+mathematics educators at
+various grade levels regarding
+this development
+
+CURRICULUM FOCUS
+
+T
+
+he philosophy and outcomes of the Atlantic
+Canada mathematics
+curriculum are based firmly on
+those articulated by the National
+Council of Teachers of Mathematics (NCTM) in its Curriculum and
+Evaluation Standards for School
+Mathematics (1989).
+
+The Atlantic Canada mathematics
+curriculum is shaped by a vision
+which fosters the development of
+mathematically literate students
+who can extend and apply their
+learning and who are effective
+participants in an increasingly
+technological society.
+The mathematically literate
+student will
+• appreciate the utility and value
+of mathematics
+• demonstrate mathematical
+power, i.e., display confidence
+and competence in his/her
+ability to do mathematics
+
+Further, a mathematics curriculum should reflect the following
+realities about the nature of
+mathematics itself:
+• To learn and understand
+mathematics is to “do”
+mathematics, i.e., students
+must take an active role in
+their study of mathematics.
+• Mathematics is a means by
+which we interpret the world
+and must be regularly connected to meaningful applications.
+• Mathematics instruction, and
+mathematics itself, have been
+greatly affected by changes in
+technology.
+An appreciation of the importance of mathematical literacy
+and of the nature of mathematics
+itself needs to permeate the
+breadth and depth of the mathematics curriculum at all instructional levels.
+
+• be a mathematical problem
+solver
+• communicate mathematically
+• reason mathematically
+
+Introduction
+Outcomes
+
+1
+
+A COMMON APPROACH
+
+I
+
+n 1993 work began on the
+development of common
+curricula in specific core
+programs. The Atlantic ministers’
+primary purposes for collaborating in curriculum development
+are to
+• improve the quality of education for all students through
+shared expertise and resources
+• ensure that the education
+students receive across the
+region is equitable
+• meet the needs of both
+students and society
+Under the auspices of the Atlantic Provinces Education Foundation, development of Atlantic
+common core curricula for
+mathematics, science, English
+language arts and social studies
+follows a consistent process. Each
+project requires consensus by a
+regional committee at designated decision points; all prov-
+
+2
+
+inces have equal weight in
+decision making. Each province
+has procedures and mechanisms
+for communicating and consulting with education partners, and
+it is the responsibility of the
+provinces to ensure that
+stakeholders have input into
+regional curriculum development.
+Each foundation document
+includes statements of essential
+graduation learnings, general
+curriculum outcomes for that core
+program, and corresponding
+outcomes at the end of key stages
+(entry-grade 3, grades 4-6,
+grades 7-9, grades 10-12).
+Essential graduation learnings and
+general curriculum outcomes
+provide a consistent vision for the
+development of a rigorous and
+relevant core curriculum. In
+addition to this foundation
+document, teachers will receive
+supporting curriculum guides for
+the grade levels at which they
+teach.
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+General curriculum
+outcomes
+are statements which identify
+what students are expected
+to know and be able to do
+upon completion of study in
+a curriculum area.
+
+Key-stage curriculum
+outcomes
+are statements which identify
+what students are expected to
+know and be able to do by the
+end of grades 3, 6, 9 and 12,
+as a result of their cumulative
+learning experience in a
+curriculum area.
+
+Outcomes
+ESSENTIAL GRADUATION LEARNINGS
+
+articulate what students are expected to know and be able to do in
+particular subject areas. These outcome statements also describe the
+knowledge, skills and attitudes which students are expected to
+demonstrate at the end of certain key stages in their education as a
+result of their cumulative learning experiences at each grade level in
+the entry-graduation continuum. Through the achievement of
+curriculum outcomes, students demonstrate the essential graduation
+learnings.
+
+FIGURE 1 – Relationship among Essential Graduation
+Learnings, Curriculum Outcomes & Levels of Schooling
+
+Other Curricula – Provincial
+
+Levels of Schooling
+
+Mathematics Curriculum – Atlantic
+
+Science Curriculum – Atlantic
+
+Aesthetic Expression
+Citizenship
+Communication
+Personal Development
+Problem Solving
+Technological Competence
+
+G G G
+G G G G G G ra ra ra
+G Gr Gr ra ra ra ra rad rad de de de
+P/ rade ade ade de 4 de 5 de 6 de 7 e 8 e 9 10 11 12
+K
+1 2 3
+
+Essential
+Graduation
+Learnings
+
+Language Arts Curriculum – Atlantic
+
+are statements describing the
+knowledge, skills and attitudes
+expected of all students who
+graduate from high school.
+Achievement of the essential
+graduation learnings will
+prepare students to continue to
+learn throughout their lives.
+These learnings describe
+expectations not in terms of
+individual school subjects but
+in terms of knowledge, skills
+and attitudes developed
+throughout the curriculum.
+They confirm that students
+need to make connections and
+develop abilities across subject
+boundaries if they are to be
+ready to meet the shifting and
+ongoing demands of life, work
+and study today and in the
+future. Essential graduation
+learnings are cross-curricular,
+and curriculum in all subject
+areas is focussed to enable
+students to achieve these
+learnings. Essential graduation
+learnings serve as a framework
+for the curriculum
+development process.
+
+Curriculum outcome statements
+
+Social Studies Curriculum – Atlantic
+
+Essential graduation
+learnings (EGLs)
+
+Curriculum Outcomes
+
+Outcomes
+
+3
+
+G
+
+raduates from the public schools of Atlantic Canada will be able to
+demonstrate knowledge, skills and attitudes in the following
+essential graduation learnings. Provinces may add
+additional essential graduation learnings as appropriate.
+Aesthetic Expression
+
+Citizenship
+
+raduates will be able to respond
+with critical awareness to various
+forms of the arts and be able to
+express themselves through the arts.
+
+raduates will be able to assess
+social, cultural, economic and
+environmental interdependence in
+a local and global context.
+
+Graduates will be able, for example, to
+
+Graduates will be able, for example, to
+
+• use various art forms as a means of formulating
+and expressing ideas, perceptions and feelings
+
+• demonstrate understanding of sustainable
+development and its implications for the
+environment
+
+G
+
+• demonstrate understanding of the contribution
+of the arts to daily life, cultural identity and
+diversity, and the economy
+• demonstrate understanding of the ideas,
+perceptions and feelings of others as expressed
+in various art forms
+• demonstrate understanding of the significance
+of cultural resources such as theatres, museums
+and galleries
+The mathematics curriculum contributes to the
+development of aesthetic expression in at least two
+ways. First, measurement and geometry play a
+significant role in terms of shape and perspective in
+the visual arts, architecture and other media.
+Second, the elegance, power and efficiency of
+mathematical symbolism and representations are
+aesthetically satisfying to many.
+
+G
+
+• demonstrate understanding of Canada’s political, social and economic systems in a global
+context
+• explain the significance of the global economy
+on economic renewal and the development of
+society
+• demonstrate understanding of the social,
+political and economic forces that have shaped
+the past and present and apply those
+understandings in planning for the future
+• examine human rights issues and recognize
+forms of discrimination
+• determine the principles and actions of just,
+pluralistic and democratic societies
+• demonstrate understanding of their own and
+others’ cultural heritage, cultural identity and
+the contribution of multiculturalism to society
+The citizenship EGL is a major focus of the mathematics curriculum in terms of applications of
+mathematics. Mathematical applications are of
+considerable significance in relation to key
+understandings with respect to government,
+society and environment. Examples of these
+applications would range from measurement and
+geometry in geography to exponential relations in
+population dynamics and economics and statistical
+issues in election polling.
+
+4
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+Communication
+raduates will be able to use the
+listening, viewing, speaking,
+reading and writing modes of
+language(s) and mathematical and scientific
+concepts and symbols to think, learn and communicate effectively.
+
+G
+
+Graduates will be able, for example, to
+• explore, reflect on and express their own ideas,
+learnings, perceptions and feelings
+• demonstrate understanding of facts and relationships presented through words, numbers,
+symbols, graphs and charts
+• present information and instructions clearly,
+logically, concisely and accurately for a variety
+of audiences
+
+Personal Development
+
+G
+
+raduates will be able to continue to
+learn and to pursue an active,
+healthy lifestyle.
+
+Graduates will be able, for example, to
+• demonstrate preparedness for the transition to
+work and further learning
+• make appropriate decisions and take responsibility for those decisions
+• work and study purposefully both independently and in groups
+• demonstrate understanding of the relationship
+between health and lifestyle
+• discriminate among a wide variety of career
+opportunities
+
+• demonstrate a knowledge of the second official
+language
+
+• demonstrate coping, management and interpersonal skills
+
+• access, process, evaluate and share information
+
+• demonstrate intellectual curiosity, an entrepreneurial spirit and initiative
+
+• interpret, evaluate and express data in everyday
+language
+• critically reflect on and interpret ideas presented
+through a variety of media
+Communication is one of the unifying ideas within
+the mathematics curriculum. Not only does
+mathematics represent a major means of communication in the sciences and related disciplines, but
+the mathematics curriculum provides students with
+a wide variety of communication tools, including
+diagrams, graphs and tables, as well as a broad
+range of mathematical symbolism. Through the
+study of mathematics students will reflect upon
+and clarify ideas and relationships; express mathematical ideas orally and in writing; and use the
+skills of reading, listening and viewing to interpret
+and evaluate mathematical ideas.
+
+• reflect critically on ethical issues
+The mathematics curriculum contributes to personal development in a number of ways. First, it
+demonstrates the central role of mathematics in a
+wide variety of career options. Second, it provides
+a vehicle by which students can learn to work on
+problems both cooperatively and independently.
+Finally, the study of mathematics will help develop
+the intellectual curiosity, persistence and habits of
+mind which will serve individuals as lifelong
+learners.
+
+Outcomes
+
+5
+
+Problem Solving
+
+Technological Competence
+
+raduates will be able to use the
+strategies and processes needed to
+solve a wide variety of problems,
+including those requiring language, and mathematical and scientific concepts.
+
+raduates will be able to use a
+variety of technologies, demonstrate an understanding of technological applications and apply appropriate
+technologies for solving problems.
+
+Graduates will be able, for example, to
+
+Graduates will be able, for example, to
+
+• acquire, process and interpret information
+critically to make informed decisions
+
+• locate, evaluate, adapt, create and share
+information, using a variety of sources and
+technologies
+
+G
+
+• use a variety of strategies and perspectives with
+flexibility and creativity for solving problems
+• formulate tentative ideas and question their own
+assumptions and those of others
+• solve problems individually and collaboratively
+• identify, describe, formulate and reformulate
+problems
+• frame and test hypotheses
+• ask questions, observe relationships, make
+inferences and draw conclusions
+• identify, describe and interpret different points
+of view and distinguish fact from opinion
+Problem solving is a unifying idea within the
+mathematics curriculum. Through the study of
+mathematics, students will learn and apply a large
+variety of information processing and interpretation
+skills, problem-solving strategies and critical and
+creative thinking skills. Ultimately, problem solving
+is the primary reason for doing mathematics.
+
+6
+
+G
+
+• demonstrate understanding of and use existing
+and developing technologies
+• demonstrate understanding of the impact of
+technology on society
+• demonstrate understanding of ethical issues
+related to the use of technology in a local and
+global context
+The mathematics curriculum will contribute to the
+development of technological competence in
+several ways. Students should not only regularly
+use calculators, graphics calculators and computer
+software, but they should also learn when it is
+appropriate to use such technologies. As well,
+students will be open to the use of new technology
+and develop an appreciation of the impact of
+technology on the study of and nature of doing
+mathematics.
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+INTRODUCTION TO CURRICULUM OUTCOMES
+
+VISION
+The Atlantic Canada mathematics
+curriculum is shaped by a vision
+which fosters the development of
+mathematically literate students
+who can extend and apply their
+learning and who are effective
+participants in an increasingly
+technological society.
+
+UNIFYING IDEAS
+To help accomplish this vision and
+to contribute significantly to
+aiding students in meeting the
+essential graduation learnings for
+Atlantic Canada, the mathematics
+curriculum is focussed around
+four unifying ideas. These unifying ideas permeate the mathematics curriculum across topics
+and grades and reiterate the key
+curriculum standards identified by
+the National Council of Teachers
+of Mathematics.
+Upon graduation from high
+school, all students will
+• demonstrate confidence and
+competence in their ability to
+use problem-solving approaches to investigate and
+understand mathematical
+content, to use mathematics
+to solve both routine and nonroutine problems from within
+and outside mathematics, to
+recognize multiple solutions to
+problems and to apply mathematical modelling to realworld problem situations
+
+• be able to communicate
+mathematically: students must
+reflect on and clarify their
+mathematical thinking,
+formulate definitions and
+express generalizations,
+recognize multiple representations of concepts, express
+ideas orally and in writing,
+read mathematics with understanding, ask clarifying and
+extending questions, and
+appreciate the economy,
+power and elegance of mathematical notation
+• be able to reason mathematically: students must be able to
+demonstrate logical reasoning
+skills that include making and
+testing conjectures, formulating counterexamples, judging
+the validity of arguments and
+constructing simple, valid
+arguments
+• value mathematics: students
+will understand how mathematics and historical situations have interacted and how
+this has influenced their lives;
+they will be able to identify
+and use connections both
+within mathematics and
+between mathematics and
+other disciplines and see how
+these connections impact on
+their world
+These unifying ideas influence all
+the key-stage curriculum outcomes which follow (see pp. 1225) and which are further elaborated in detailed curriculum
+guides. The vision of mathematics
+
+education is that all students will
+work toward the same curricular
+outcomes. The key-stage curriculum outcomes are arranged by
+content strands (see pp. 10-11)
+which organize the skills and
+concepts of an appropriate body
+of mathematical knowledge for
+school students.
+
+Problem Solving
+
+“To solve a problem is to find a
+way where no way is known offhand, to find a way out of a
+difficulty, to find a way around
+an obstacle, to attain a desired
+end, that is not immediately
+attainable, by appropriate
+means.”
+(G. Polya quoted by Krulik and Reys in the NCTM
+Curriculum and Evaluation Standards, p. 75)
+
+Problem solving should be a
+major focus of all mathematics,
+given that the purpose of mathematics is to make sense of the
+world. As people encounter the
+world throughout their lives, they
+are faced with “problems” which
+require solutions if they are to
+meet their goals. Mathematical
+problem solving serves not only to
+answer questions raised in everyday life, but also to deal with
+issues from professions such as
+business and engineering, in other
+disciplines such as the physical
+and social sciences, and which
+extend and connect mathematics
+theory itself.
+
+Outcomes
+
+7
+
+Problem-solving activities need to
+include an appropriate combination of situations from the relatively clearcut to the more complex and/or abstract. Students
+need to experience sufficient
+success in solving problems to
+gain confidence in doing mathematics, persevere in tasks that
+require extended effort and
+become encouraged to take
+intellectual risks when faced with
+novel situations. Problem solving
+must provide opportunities for
+students to explore alternate lines
+of approach and to appreciate
+that there may well be more than
+one possible outcome.
+Ultimately, problem solving needs
+to be seen as not a distinct topic
+but rather as a process that must
+permeate the entire mathematics
+program. It will serve as a means
+to introduce new mathematical
+content, develop the understanding of concepts and facility with
+procedures and apply that which
+is already known. Problem-solving
+strategies, including the application of technological resources,
+should be regularly modelled by
+teachers and peers so that they
+become increasingly integrated by
+students as a basis for “doing
+mathematics.”
+
+“The curriculum must give
+students opportunities to solve
+problems that require them to
+work cooperatively, to use
+technology, to address relevant
+and interesting mathematical
+ideas, and to experience the
+power and usefulness of
+mathematics.”
+(NCTM Curriculum and Evaluation Standards, p. 7576)
+
+8
+
+Communication
+
+“Mathematics can be thought of
+as a language that must be
+meaningful if students are to
+communicate mathematically
+and apply mathematics
+productively.”
+(NCTM Curriculum and Evaluation Standards, p.6)
+
+Communication plays a major role
+in the development of mathematical understanding. While talking
+often precedes writing, both
+verbal and written communication
+are of great value with respect to
+children constructing knowledge,
+learning alternative ways to think
+about ideas and clarifying their
+own thinking. Communication
+allows students to construct links
+between their informal notions
+and the abstract language and
+symbolism of mathematics;
+recognize the importance of
+common definitions; achieve
+deeper understandings of concepts and principles; and clarify,
+refine and consolidate their
+thinking.
+
+There is a vast difference between reading a work of fiction
+and reading a piece of mathematical writing, yet doing the
+latter well is necessary if print
+mathematical materials are to be
+valuable resources. Reading for
+mathematical understanding
+does not readily lend itself to
+skimming. Rather each part of
+mathematical statements must
+be carefully considered for
+meaning and readers must take
+full advantage of accompanying
+illustrative material.
+
+“The ability to read, write,
+listen, think creatively, and
+communicate about problems
+will develop and deepen
+students’ understanding of
+mathematics.”
+(NCTM Curriculum and Evaluation Standards, p.78)
+
+Reasoning
+
+“Mathematics is reasoning.
+One cannot do mathematics
+without reasoning.”
+(NCTM Curriculum and Evaluation Standards, p.29)
+
+Students need to be daily encouraged to discuss and write about
+mathematical ideas. They must
+engage in such activities as
+describing mathematical processes, explaining and differentiating among mathematical concepts, explaining their reasoning
+and evaluating the responses of
+others. Through the process of
+regular communication the use of
+the language and symbols of
+mathematics becomes natural.
+As well as communicating to
+others mathematically, it is increasingly necessary that students
+read mathematics effectively.
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+Because reasoning is fundamental to the knowing and doing of
+mathematics, it is important that
+reasoning be a regular focus of
+mathematical activity. Teachers
+should consistently model the
+use of mathematical reasoning
+and engage students in discussions and tasks designed to
+develop their capacities to reason
+mathematically.
+The development of logical
+reasoning is tied to the intellectual and verbal development of a
+student. The development of the
+student’s ability to reason is a
+
+process that grows out of many
+experiences with such activities as
+analyzing problems, making
+conjectures, gathering evidence
+and building arguments to
+support ideas. Students need to
+focus in numeric, spatial and
+algebraic contexts on such
+questions as: Are we sure? How
+can we be sure? What conditions
+could make you sure? What
+obstacles are there to being sure?
+In the early grades, the development of mathematical reasoning
+ability can be fostered by often
+involving students in the kind of
+informal thinking, conjecturing
+and validating that helps students
+to see that mathematics makes
+sense. In later grades, as the
+depth and complexity of mathematical content is increased,
+these informal reasoning activities
+should be expanded to include
+more formal recognition of the
+interplay between conjecturing
+and inductive reasoning and the
+importance of deductive verification.
+Reasoning is an integral part of
+the study of mathematics and
+demonstrations of reasoning
+should be openly valued. Students at all levels should be
+encouraged to justify their
+solutions, thinking processes and
+conjectures in a variety of ways.
+
+“Conjecturing and
+demonstrating the logical
+validity of conjectures are the
+essence of the creative act of
+doing mathematics. To give
+more students access to
+mathematics as a powerful way
+of making sense of the world, it
+
+is essential that an emphasis on
+reasoning pervade all
+mathematical activity.”
+
+• a strengthening of students’
+understanding of mathematics
+concepts and principles
+
+(NCTM Curriculum and Evaluation Standards, p.81)
+
+• an understanding of the
+interdependent nature of the
+world
+
+Connections
+
+“We can no longer afford to let
+mathematics remain an isolated
+discipline nor to permit
+continued fragmentation within
+the mathematics curriculum
+itself into isolated courses,
+separate topics, and
+disconnected bits of knowledge.”
+(Steen, Lynn Arthur, “Teaching Mathematics for
+Tomorrow’s World,” Educational Leadership, Sept.
+1989, p. 18)
+
+Teachers of mathematics should
+strive to make natural connections
+among mathematical concepts
+and representations, and to
+emphasize the natural connections that exist across curricula.
+Inherent in this integrative focus is
+the potential for important
+educational benefits for both
+teachers and students which have
+strong foundations in recognized
+principles of learning and cognitive development. These benefits
+include, but are not limited to,
+
+• the development of critical
+problem-solving skills
+As well as highlighting connections among mathematical ideas
+and with other areas of the school
+curriculum, the mathematics
+program should also address
+connections with career areas and
+other aspects of the everyday
+world.
+
+“It is important that children
+connect ideas both among and
+within areas of mathematics.…
+When mathematical ideas are
+also connected to everyday
+experiences, both in and out of
+school, children become aware
+of the usefulness of
+mathematics.”
+(NCTM Curriculum and Evaluation Standards, p. 32)
+
+• the use of active, experiential
+learning
+• an increase in student motivation and interest
+• the teaching of mathematics in
+context and with relevance
+• the development of higher
+order thinking skills
+• the development of cooperative and collaborative interpersonal skills
+
+Outcomes
+
+9
+
+CURRICULUM OUTCOMES
+
+STRANDS AND GENERAL
+CURRICULUM
+OUTCOMES
+
+Number Concepts/Number
+and Relationship
+Operations
+
+The outcomes for the mathematics curriculum are organized in
+terms of four content strands:
+
+• Students will demonstrate
+number sense and apply
+number theory concepts.
+
+• number concepts/number and
+relationship operations
+
+• shape and space
+
+• Students will demonstrate
+operation sense and apply
+operation principles and
+procedures in both numeric
+and algebraic situations.
+
+• data management and probability
+
+Patterns and Relations
+
+• patterns and relations
+
+One or two general curriculum
+outcomes (i.e., statements which
+identify what students are expected to know and be able to do
+upon completion of study in a
+curriculum area) are identified for
+each of these strands. The general
+curriculum outcomes (GCOs) are
+then further elaborated (pp. 1225) in terms of key-stage curriculum outcomes (i.e., outcomes at
+the end of each of grades 3, 6, 9
+and 12).
+The content strands and general
+curriculum outcomes are detailed
+as follows:
+
+10
+
+• Students will explore, recognize, represent and apply
+patterns and relationships,
+both informally and formally.
+
+Shape and Space
+• Students will demonstrate an
+understanding of and apply
+concepts and skills associated
+with measurement.
+• Students will demonstrate
+spatial sense and apply geometric concepts, properties
+and relationships.
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+Data Management and
+Probability
+• Students will solve problems
+involving the collection,
+display and analysis of data.
+• Students will represent and
+solve problems involving
+uncertainty.
+It is critical that the unifying ideas
+outlined in the previous section
+(i.e., problem solving, communication, reasoning and connections) strongly influence, in fact
+permeate, the outcomes articulated for the content strands. As
+indicated in the diagram following, this integration of the strands
+and the unifying ideas takes place
+in the development of the keystage curriculum outcomes.
+It must be noted that, while the
+key-stage curriculum outcomes
+are intended as targets for all
+students, all students will not be
+expected to achieve them at a
+single level of performance. As
+well, there will be an additional
+small percentage of students who
+will see their outcomes significantly altered in individual
+educational programs.
+
+FIGURE 2 – Integrating Strands and Unifying Ideas
+
+The key-stage curriculum
+outcomes reflect the
+infusion of the unifying
+ideas into the content
+strands.
+
+Unifying Ideas
+Problem Solving,
+Communication,
+Reasoning,
+Connections
+
+Strands
+Number Concepts/
+Number &
+Relationship Operations,
+Patterns & Relations,
+Shape & Space,
+Data Management
+& Probability
+
+Key-Stage
+Curriculum
+Outcomes
+
+Outcomes
+
+11
+
+KEY-STAGE CURRICULUM OUTCOMES
+
+GCO: Students will demonstrate number sense and
+apply number theory concepts.
+Elaboration: Number sense includes understanding of number meanings, developing
+multiple relationships among numbers, recognizing the relative magnitudes of numbers,
+knowing the relative effect of operating on numbers and developing referents for
+measurement. Number theory concepts include such number principles as laws (e.g.,
+commutative and distributive), factors and primes, number system characteristics (e.g.,
+density), etc.
+By the end of grade 3, students will be expected to
+
+By the end of grade 6, students will have achieved the
+outcomes for entry-grade 3 and will also be expected to
+
+construct and communicate number meanings,
+and explore and apply estimation strategies, with
+respect to whole numbers
+
+demonstrate an understanding of number meanings with respect to whole numbers, fractions and
+decimals
+
+concretely explore common fractions and decimals in meaningful situations
+
+explore integers, ratios and percents in common,
+meaningful situations
+
+read and write whole numbers and demonstrate
+an understanding of place value (to four places)
+
+read and write whole numbers and decimals and
+demonstrate an understanding of place value (to
+millions and to thousandths)
+
+order whole numbers and represent them in
+multiple ways
+
+order whole numbers, fractions and decimals and
+represent them in multiple ways
+
+apply number theory concepts (e.g., place value
+pattern) in meaningful contexts with respect to
+whole numbers and commonly used fractions and
+decimals
+
+apply number theory concepts (e.g., prime numbers, factors) in relevant situations with respect to
+whole numbers, fractions and decimals
+
+12
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+GCO: Students will demonstrate number sense and
+apply number theory concepts.
+Elaboration: Number sense includes understanding of number meanings, developing
+multiple relationships among numbers, recognizing the relative magnitudes of numbers,
+knowing the relative effect of operating on numbers and developing referents for
+measurement. Number theory concepts include such number principles as laws (e.g.,
+commutative and distributive), factors and primes, number system characteristics (e.g.,
+density), etc.
+By the end of grade 9, students will have achieved the
+outcomes for entry-grade 6 and will also be expected to
+
+By the end of grade 12, students will have achieved the
+outcomes for entry-grade 9 and will also be expected to
+
+demonstrate an understanding of number meanings with respect to integers and rational and
+irrational numbers, and explore their use in meaningful situations
+
+demonstrate an understanding of number meanings with respect to the real numbers
+
+read, write and order integers, rational numbers
+and common irrational numbers
+
+order real numbers, represent them in multiple
+ways (including scientific notation) and apply
+appropriate representations to solve problems
+
+represent numbers in multiple ways (including via
+exponents, ratios, percents and proportions) and
+apply appropriate representations to solve problems
+apply number theory concepts in relevant situations and explain the interrelated structure of
+whole numbers, integers and rational numbers
+
+demonstrate an understanding of the real number
+system and its subsystems by applying a variety of
+number theory concepts in relevant situations
+Some post-secondary intending students will be expected to
+
+explain and apply relationships among real and
+complex numbers
+
+Outcomes
+
+13
+
+GCO: Students will demonstrate operation sense and
+apply operation principles and procedures in both
+numeric and algebraic situations.
+Elaboration: Operation sense consists of recognizing situations in which a given
+operation would be useful, building awareness of models and the properties of an
+operation, seeing relationships among operations and acquiring insights into the effects
+of an operation on a pair of numbers. Operation principles and procedures would
+include such items as the effect of identity elements, computational strategies and
+mental mathematics.
+By the end of grade 3, students will be expected to
+
+By the end of grade 6, students will have achieved the
+outcomes for entry-grade 3 and will also be expected to
+
+demonstrate an understanding of the connection
+between relevant, concrete experiences and the
+mathematical language and symbolism of the four
+basic operations
+
+model problem situations involving whole numbers and decimals by selecting appropriate operations and procedures
+
+recognize and explain the relationships among the
+four basic operations
+
+model problem situations involving the addition
+and subtraction of simple fractions
+
+create and model problem situations involving
+whole numbers, using one or more of the four
+basic operations
+
+explore algebraic situations informally
+
+demonstrate proficiency with addition and subtraction facts
+
+apply computational facts and procedures (algorithms) in a wide variety of problem situations
+involving whole numbers and decimals
+
+apply computational facts and strategies with
+respect to the four basic operations and model
+addition and subtraction in situations involving
+whole numbers
+apply estimation techniques to predict, and justify
+the reasonableness of, results in relevant problem
+situations involving whole numbers
+
+apply estimation techniques to predict, and justify
+the reasonableness of, results in relevant problem
+situations involving whole numbers and decimals
+
+select and use appropriate computational techniques (including mental, paper-and-pencil and
+technological) in given situations
+
+select and use appropriate computational techniques (including mental, paper-and-pencil and
+technological) in given situations
+
+14
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+GCO: Students will demonstrate operation sense and
+apply operation principles and procedures in both
+numeric and algebraic situations.
+Elaboration: Operation sense consists of recognizing situations in which a given
+operation would be useful, building awareness of models and the properties of an
+operation, seeing relationships among operations and acquiring insights into the effects
+of an operation on a pair of numbers. Operation principles and procedures would
+include such items as the effect of identity elements, computational strategies and
+mental mathematics.
+By the end of grade 9, students will have achieved the
+outcomes for entry-grade 6 and will also be expected to
+
+By the end of grade 12, students will have achieved the
+outcomes for entry-grade 9 and will also be expected to
+
+explore and explain, using physical models, the
+connections between arithmetic and algebraic
+operations
+
+explain how algebraic and arithmetic operations
+are related, use them in problem-solving situations,
+and explain and demonstrate the power of mathematical symbolism
+
+model problem situations involving rational
+numbers and integers
+
+apply computational procedures (algorithms) in a
+wide variety of problem situations involving
+fractions, ratios, percents, proportions, integers
+and exponents
+
+derive, analyze and apply computational procedures (algorithms) in situations involving all representations of real numbers
+
+apply operations to algebraic expressions to
+represent and solve relevant problems
+
+derive, analyze and apply algebraic procedures
+(including those involving algebraic expressions
+and matrices) in problem situations
+
+apply estimation techniques to predict, and justify
+the reasonableness of, results in relevant problem
+situations involving rational numbers and integers
+
+apply estimation techniques to predict, and justify
+the reasonableness of, results in relevant problem
+situations involving real numbers
+
+select and use appropriate computational techniques in given situations and justify the choice
+Some post-secondary intending students will be expected to
+
+apply operations on complex numbers to solve
+problems
+
+Outcomes
+
+15
+
+GCO: Students will explore, recognize, represent and
+apply patterns and relationships, both informally and
+formally.
+Elaboration: Patterns and relationships run the gamut from number patterns and those
+made from concrete materials to polynomial and exponential functions. The
+representation of patterns and relationships will take on multiple forms, including
+sequences, tables, graphs and equations, and these representations will be applied as
+appropriate in a wide variety of relevant situations.
+By the end of grade 3, students will be expected to
+
+By the end of grade 6, students will have achieved the
+outcomes for entry-grade 3 and will also be expected to
+
+recognize, describe, extend and create patterns
+and sequences in a variety of mathematical and
+real-world contexts (e.g., geometric, numeric and
+measurement)
+
+describe, extend and create a wide variety of
+patterns and relationships to model and solve
+problems involving real-world situations and
+mathematical concepts
+
+use patterns to solve problems
+
+explore how a change in one quantity in a relationship affects another
+
+represent mathematical patterns and relationships
+in informal ways, including via open sentences
+(i.e., statements with missing addends)
+
+represent mathematical patterns and relationships
+in a variety of ways (including rules, tables and
+one- and two-dimensional graphs)
+
+solve linear equations using informal, non-algebraic methods
+
+16
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+GCO: Students will explore, recognize, represent and
+apply patterns and relationships, both informally and
+formally.
+Elaboration: Patterns and relationships run the gamut from number patterns and those
+made from concrete materials to polynomial and exponential functions. The
+representation of patterns and relationships will take on multiple forms, including
+sequences, tables, graphs and equations, and these representations will be applied as
+appropriate in a wide variety of relevant situations.
+By the end of grade 9, students will have achieved the
+outcomes for entry-grade 6 and will also be expected to
+
+By the end of grade 12, students will have achieved the
+outcomes for entry-grade 9 and will also be expected to
+
+analyze, generalize and create patterns and
+relationships to model and solve real-world and
+mathematical problem situations
+
+model real-world problems using functions, equations, inequalities and discrete structures
+
+analyze functional relationships to explain how the
+change in one quantity results in a change in
+another
+represent patterns and relationships in multiple
+ways (including the use of algebraic expressions,
+equations, inequalities and exponents)
+
+represent functional relationships in multiple ways
+(e.g., written descriptions, tables, equations and
+graphs) and describe connections among these
+representations
+
+explain the connections among algebraic and
+non-algebraic representations of patterns and
+relationships
+
+interpret algebraic equations and inequalities
+geometrically and geometric relationships algebraically
+
+apply algebraic methods to solve linear equations
+and inequalities and investigate non-linear equations
+
+solve problems involving relationships, using
+graphing technology as well as paper-and-pencil
+techniques
+analyze and explain the behaviours, transformations and general properties of types of equations
+and relations
+perform operations on and between functions
+Some post-secondary intending students will be expected to
+
+describe and explore the concept of continuity of a
+function
+investigate limiting processes by examining infinite
+sequences and series
+make connections among trigonometric functions,
+polar coordinates, complex numbers and series
+
+Outcomes
+
+17
+
+GCO: Students will demonstrate an understanding of
+and apply concepts and skills associated with
+measurement.
+Elaboration: Concepts and skills associated with measurement include making direct
+measurements, using appropriate measurement units and using formulas (e.g., surface
+area, Pythagorean Theorem) a/o procedures (e.g., proportions) to determine
+measurements indirectly.
+By the end of grade 3, students will be expected to
+
+By the end of grade 6, students will have achieved the
+outcomes for entry-grade 3 and will also be expected to
+
+measure and understand basic concepts and
+attributes of length, capacity, mass, area and time
+
+extend understanding of measurement concepts
+and attributes to include volume, temperature,
+perimeter and angle
+
+identify and use non-standard and standard units
+of measurement and appreciate their role in
+communication
+
+communicate using standard units, understand the
+relationship among commonly used SI units (e.g.,
+mm, cm, m, km) and select appropriate units in
+given situations
+
+estimate and determine measurements in everyday problem situations and develop a sense of the
+relative size of units
+
+estimate and apply measurement concepts and
+skills in relevant problem situations and select and
+use appropriate tools and units
+develop and apply rules and procedures for determining measures (using concrete and graphing
+models)
+
+18
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+GCO: Students will demonstrate an understanding of
+and apply concepts and skills associated with
+measurement.
+Elaboration: Concepts and skills associated with measurement include making direct
+measurements, using appropriate measurement units and using formulas (e.g., surface
+area, Pythagorean Theorem) a/o procedures (e.g., proportions) to determine
+measurements indirectly.
+By the end of grade 9, students will have achieved the
+outcomes for entry-grade 6 and will also be expected to
+
+By the end of grade 12, students will have achieved the
+outcomes for entry-grade 9 and will also be expected to
+
+demonstrate an understanding of the concept of
+rates; use direct and indirect measurements to
+describe and make comparisons and read and
+interpret scales; and describe how a change in one
+measurement affects other, indirect measurements
+
+measure quantities indirectly, using techniques of
+algebra, geometry and trigonometry
+
+communicate using a full range of SI units (e.g.,
+mm, cm, dm, m, hm, Dm, km) and select appropriate units in given situations
+estimate and apply measurement concepts in
+relevant problem situations and use tools and units
+which reflect an appropriate degree of accuracy
+
+determine measurements in a wide variety of
+problem situations and determine specified degrees
+of precision, accuracy and error of measurements
+
+develop and apply a wide range of measurement
+formulas and procedures (including indirect
+measures)
+
+apply measurement formulas and procedures in a
+wide variety of contexts
+Some post-secondary intending students will be expected to
+
+demonstrate an understanding of the meaning of
+area under a curve
+
+Outcomes
+
+19
+
+GCO: Students will demonstrate spatial sense and
+apply geometric concepts, properties and
+relationships.
+Elaboration: Spatial sense is an intuitive feel for one’s surroundings and the objects in
+them and is characterized by such geometric relationships as i) the direction,
+orientation and perspectives of objects in space, ii) the relative shapes and sizes of
+figures and objects and iii) how a change in shape relates to a change in size.
+Geometric concepts, properties and relationships are illustrated by such examples as the
+concept of area, the property that a square maximizes area for rectangles of a given
+perimeter, and the relationships among angles formed by a transversal intersecting
+parallel lines.
+By the end of grade 3, students will be expected to
+
+By the end of grade 6, students will have achieved the
+outcomes for entry-grade 3 and will also be expected to
+
+explore and experiment with geometric shapes
+and relationships (including the orientation and
+perspectives of objects)
+
+identify, draw and build physical models of geometric figures
+
+describe, model, draw and classify 2- and 3-D
+figures and shapes
+
+describe, model and compare 2- and 3-D figures
+and shapes, explore their properties and classify
+them in alternative ways
+
+investigate and predict the results of combining,
+subdividing and transforming shapes
+
+investigate and predict the results of transformations and begin to use them to compare shapes
+and explain geometric concepts (e.g., symmetry
+and similarity)
+
+relate geometric ideas to number and measurement ideas and recognize and apply geometric
+principles in real-world situations
+
+solve problems using geometric relationships and
+spatial reasoning
+
+20
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+GCO: Students will demonstrate spatial sense and
+apply geometric concepts, properties and
+relationships.
+Elaboration: Spatial sense is an intuitive feel for one’s surroundings and the objects in
+them and is characterized by such geometric relationships as i) the direction,
+orientation and perspectives of objects in space, ii) the relative shapes and sizes of
+figures and objects and iii) how a change in shape relates to a change in size.
+Geometric concepts, properties and relationships are illustrated by such examples as the
+concept of area, the property that a square maximizes area for rectangles of a given
+perimeter, and the relationships among angles formed by a transversal intersecting
+parallel lines.
+By the end of grade 9, students will have achieved the
+outcomes for entry-grade 6 and will also be expected to
+
+By the end of grade 12, students will have achieved the
+outcomes for entry-grade 9 and will also be expected to
+
+construct and analyze 2- and 3-D models, using a
+variety of materials and tools
+
+extend spatial sense in a variety of mathematical
+contexts
+
+compare and classify geometric figures, understand and apply geometric properties and relationships, and represent geometric figures via
+coordinates
+
+interpret and classify geometric figures, translate
+between synthetic (Euclidean) and coordinate
+representations, and apply geometric properties and
+relationships
+
+develop and analyze the properties of transformations and use them to identify relationships
+involving geometric figures
+
+analyze and apply Euclidean transformations,
+including representing and applying translations as
+vectors
+
+represent and solve abstract and real-world
+problems in terms of 2- and 3-D geometric
+models
+
+represent problem situations with geometric models
+(including the use of trigonometric ratios and
+coordinate geometry) and apply properties of
+figures
+
+draw inferences, deduce properties and make
+logical deductions in synthetic (Euclidean) and
+transformational geometric situations
+
+make and test conjectures about, and deduce
+properties of and relationships between, 2- and 3-D
+figures in multiple contexts
+demonstrate an understanding of the operation of
+axiomatic systems and the connections among
+reasoning, justification and proof
+Some post-secondary intending students will be expected to
+
+represent and apply vectors in three dimensions
+algebraically and geometrically
+explore and apply, using multiple representations,
+circles, ellipses and parabolas and, in 3-D, spheres
+and ellipsoids
+
+Outcomes
+
+21
+
+GCO: Students will solve problems involving the
+collection, display and analysis of data.
+Elaboration: The collection, display and analysis of data involves i) attention to sampling
+procedures and issues, ii) recording and organizing collected data, iii) choosing and
+creating appropriate data displays, iv) analyzing data displays in terms of broad
+principles (e.g., display bias) and via statistical measures (e.g., mean) and v) formulating
+and evaluating statistical arguments.
+By the end of grade 3, students will be expected to
+
+By the end of grade 6, students will have achieved the
+outcomes for entry-grade 3 and will also be expected to
+
+collect, record, organize and describe relevant
+data
+
+collect, organize and describe relevant data in
+multiple ways
+
+construct concrete and pictorial displays of relevant data
+
+construct a variety of data displays (including
+tables, charts and graphs) and consider their
+relative appropriateness
+
+read and interpret displays of relevant data
+
+read, interpret, and make and modify predictions
+from displays of relevant data
+develop and apply measures of central tendency
+(mean, median and mode)
+
+generate questions, develop and modify predictions and implement plans with respect to data
+analysis
+
+22
+
+formulate and solve simple problems (both realworld and from other academic disciplines) that
+involve the collection, display and analysis of data
+and explain conclusions which may be drawn
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+GCO: Students will solve problems involving the
+collection, display and analysis of data.
+Elaboration: The collection, display and analysis of data involves i) attention to sampling
+procedures and issues, ii) recording and organizing collected data, iii) choosing and
+creating appropriate data displays, iv) analyzing data displays in terms of broad
+principles (e.g., display bias) and via statistical measures (e.g., mean) and v) formulating
+and evaluating statistical arguments.
+By the end of grade 9, students will have achieved the
+outcomes for entry-grade 6 and will also be expected to
+
+By the end of grade 12, students will have achieved the
+outcomes for entry-grade 9 and will also be expected to
+
+be aware of sampling issues and understand
+procedures with respect to collecting data
+
+understand sampling issues and their role with
+respect to statistical claims
+
+construct various data displays (both manually and
+via technology) and decide which is/are most
+appropriate
+
+extend construction (both manually and via appropriate technology) of a wide variety of data displays
+
+draw inferences and make predictions from a
+variety of displays of real-world data (including via
+curve-fitting with respect to scatterplots)
+
+use curve fitting to determine the relationship
+between, and make predictions from, sets of data
+and be aware of bias in the interpretation of results
+
+determine, and apply as appropriate, measures of
+central tendency and dispersion (e.g., range)
+
+determine, interpret and apply as appropriate a
+wide variety of statistical measures and distributions
+
+demonstrate an appreciation of statistics as a
+decision-making tool by formulating and solving
+relevant problems (e.g., projects with respect to
+current issues a/o other academic disciplines)
+
+design and conduct relevant statistical experiments
+(e.g., projects with respect to current issues, career
+applications, a/o other disciplines) and analyze and
+communicate the results using a range of statistical
+arguments
+
+make convincing statistical arguments and evaluate those of others
+Some post-secondary intending students will be expected to
+
+test hypotheses using appropriate statistics
+
+Outcomes
+
+23
+
+GCO: Students will represent and solve problems
+involving uncertainty.
+Elaboration: Representing and solving problems involving uncertainty entails
+i) determining probabilities by conducting experiments a/o making theoretical
+calculations, ii) designing simulations to determine probabilities in situations which do
+not lend themselves to direct experiment and iii) analyzing problem situations so as to
+decide how best to determine probabilities.
+By the end of grade 3, students will be expected to
+
+By the end of grade 6, students will have achieved the
+outcomes for entry-grade 3 and will also be expected to
+
+conduct informal investigations of chance and
+estimate probabilities with respect to games and
+other simple, everyday situations
+
+explore, interpret and make conjectures about
+everyday probability situations by estimating
+probabilities, conducting experiments, beginning
+to construct and conduct simulations, and
+analyzing claims which they see and hear
+determine theoretical probabilities using simple
+counting techniques
+
+demonstrate an understanding of the relationship
+between the numerical expression describing a
+probability and the events which give rise to the
+numbers
+
+24
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+GCO: Students will represent and solve problems
+involving uncertainty.
+Elaboration: Representing and solving problems involving uncertainty entails i)
+determining probabilities by conducting experiments a/o making theoretical
+calculations, ii) designing simulations to determine probabilities in situations which do
+not lend themselves to direct experiment and iii) analyzing problem situations so as to
+decide how best to determine probabilities.
+By the end of grade 9, students will have achieved the
+outcomes for entry-grade 6 and will also be expected to
+
+By the end of grade 12, students will have achieved the
+outcomes for entry-grade 9 and will also be expected to
+
+make predictions regarding and design and carry
+out probability experiments and simulations, in
+relation to a variety of real-world situations
+
+design and conduct experiments a/o simulations to
+model and solve a wide variety of relevant probability problems, and interpret and judge the
+probabilistic arguments of others
+
+derive theoretical probabilities, using a range of
+formal and informal techniques
+
+build and apply formal concepts and techniques of
+theoretical probability (including the use of permutations and combinations as counting techniques)
+
+determine and compare experimental and theoretical results
+
+understand the differences among, and relative
+merits of, theoretical, experimental and simulation
+techniques
+
+relate a variety of numerical expressions (ratios,
+fractions, decimals, percents) to the corresponding
+experimental or simulation situation
+
+relate probability and statistical situations
+
+Some post-secondary intending students will be expected to
+
+create and interpret discrete and continuous
+probability distributions and apply them in realworld situations
+
+Outcomes
+
+25
+
+26
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+Contexts for Learning
+and Teaching
+LEARNING AND TEACHING MATHEMATICS
+PRINCIPLES OF
+LEARNING AND
+TEACHING
+MATHEMATICS
+The following principles of
+learning and teaching mathematics are based on current research
+and best practice. They are
+intended to guide and support
+decisions relating to the teaching
+and learning process, including
+curriculum and classroom organization, assessment and reporting.
+• Students should be viewed as
+individuals who develop and
+learn via different styles and at
+different rates.
+Students’ strengths, needs and
+backgrounds must be recognized and addressed through a
+variety of teaching methods.
+All students should be consistently and appropriately
+challenged. They must be
+provided the time, resources
+and feedback necessary to
+reach their potential.
+• Students benefit, both socially
+and intellectually, from a
+variety of learning experiences,
+both independent and in
+collaboration with others.
+
+Instructional settings should
+include varied learning configurations—whole class, small
+group, pairs and individual—
+as well as varied activities,
+including investigations,
+discussions, oral presentations
+and projects.
+• Students learn best in an
+environment which supports
+exploration, investigation,
+critical and creative thinking,
+risk taking, reflection and
+other higher order thinking
+skills.
+Learning mathematics is a
+constructive rather than a
+passive activity. Students need
+to learn mathematics in a
+climate in which they feel free
+to explore, knowing that their
+efforts, ideas and approaches
+will be valued by both their
+teacher and their classmates.
+Students should be encouraged to raise questions and
+investigate answers, thereby
+influencing the direction of
+their learning.
+
+• Students learn best when ideas
+are approached in a variety of
+ways.
+Multiple representations of
+mathematical ideas enhance
+student understanding. (For
+example, relations may be
+readily represented both
+graphically and via equations
+or inequations.) As well,
+students should be encouraged to represent their own
+understandings in various
+ways.
+• Students learn best in an
+environment that nurtures
+positive attitudes, sustained
+effort, self-discipline and the
+development of an appropriate degree of autonomy.
+Students should be praised for
+effort, original thought and
+perseverance. If these are
+qualities which the students
+are to perceive as important,
+they must be reflected as well
+in assessment practices.
+
+Contexts for Learning andOutcomes
+Teaching
+
+27
+
+• Students’ learning is most
+effective when standards of
+expectation are made clear
+and explicit.
+Clearly stated expectations
+enhance academic achievement and feelings of selfesteem. Well-articulated
+outcomes allow students to
+monitor their daily work and
+improve their learning.
+
+RESOURCE-BASED
+LEARNING
+As students and schools enter the
+21st century, they find themselves
+in an era of rapid change and
+rapidly expanding knowledge. It is
+no longer adequate or realistic for
+students to acquire a select body
+of knowledge and expect it to
+meet their needs as citizens of the
+next century. The need for lifelong
+learning is shifting the emphasis
+from a dependence on the ‘what’
+of learning to the ‘how’ of learning—today’s students must ‘learn
+how to learn.’
+Resource-based learning is a
+philosophy which stresses a shift
+from the use of a single resource
+in the classroom to the use of a
+wide variety of print and nonprint resources. Resources include
+multi-media, telecommunication
+and human, as well as a wide
+variety of print resources, both in
+the classroom and in libraries/
+resource centres. This philosophy
+of learning complements the
+approach to mathematical
+instruction identified in this
+document and is characterized by
+
+• teachers acting as facilitators of
+learning, continuously guiding,
+monitoring and evaluating
+student progress
+
+BALANCING
+PROCEDURAL AND
+CONCEPTUAL
+KNOWLEDGE
+
+• varying locations for learning
+
+Many view mathematics as a set
+of rules and procedures. Fundamentally, however, mathematics
+is a set of ideas. The intent of this
+curriculum is to ensure that
+students understand these ideas,
+not just master the rules and
+procedures. The re-creation,
+transfer and application of ideas is
+enhanced when students assimilate them into a conceptual
+framework. At the same time, it is
+essential that students accomplish
+a certain level of skill proficiency
+so that they have the tools to
+solve interesting and relevant
+problems.
+
+• learning experiences based on
+curriculum outcomes
+• learning strategies and skills
+identified and taught within
+the context of relevant and
+meaningful units of study
+• teachers working together to
+facilitate resource-based
+learning across grade levels
+and subject areas
+Resource-based learning has many
+advantages. With students at the
+centre of the instructional process,
+they will
+• acquire skills and attitudes
+necessary for independent,
+lifelong learning; they learn
+how to learn, one of the
+fundamental aims of education
+• interact in group work, sharing
+and participating in a variety of
+situations
+• think critically and creatively,
+experimenting and taking risks
+as they become independent
+and collaborative problemsolvers and decision-makers
+• make choices and accept
+responsibility for these choices,
+thereby making learning more
+relevant and personal
+
+• students actively participating
+in their learning
+
+28
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+Students should be encouraged
+to invent and examine various
+strategies that might help them
+develop skills. This suggests that
+the teacher encourage diverse
+approaches rather than requiring
+a single “best” approach for all
+students to use. For example,
+some students may solve the
+equation 6x+36=90 by first
+subtracting 36 from each side
+and then dividing by 6. Others
+might initially divide both sides of
+the equation by 6 and then
+subtract 6 from each side. Generally, those who are most successful in mathematics are those who
+use different strategies in different
+situations.
+Practice of skills is usually more
+effective if the practice arises in
+meaningful contexts. For example, rather than requiring students to complete a series of
+unrelated exercises, teachers
+
+could structure game formats in
+which the fast pace encourages
+proficiency with skills, as well as
+providing situations involving
+related questions so that patterns
+and underlying ideas become
+clearer.
+More importantly, skills must be
+embedded in, and arise from,
+conceptual situations as much as
+possible. It is of little value to a
+student to be able to use a tree
+diagram if he or she does not
+understand that the tree diagram
+is valuable in certain types of
+counting situations. Thus, as
+much attention must be paid to
+when such diagrams are useful as
+to how to create them.
+Mathematics is much more than
+procedures, with a bit of conceptual learning thrown in. Curricula
+and instructional practice for the
+future must adjust this balance to
+place greater emphasis on
+conceptual understanding.
+
+ESTIMATION AND
+MENTAL COMPUTATION
+The NCTM Curriculum and
+Evaluation Standards’ view of
+computation extends far beyond
+the traditional paper-and-pencil
+algorithms. When faced with a
+numerical problem, a decision
+about calculation procedures has
+to be made. As illustrated in
+figure 3 (NCTM Curriculum and
+Evaluation Standards, p. 9),
+students should have a repertoire
+of computational techniques
+available and must learn to select
+an appropriate technique in each
+given situation.
+
+Both estimation and mental
+computation (more often referred to as “mental math”) are
+done “in one’s head” and have
+been deemed important skills by
+the NCTM. Computing mentally
+to find approximate or exact
+answers is frequently the most
+appropriate and useful of all
+methods. There are specific
+strategies and algorithms for
+mental computation that must
+be taught and practised regularly.
+Estimation and mental math are
+not topics that can be isolated as
+a unit of instruction; they must
+be integrated throughout the
+study of mathematics. It is
+important to remember that
+
+• mental computation is best
+developed in context
+• a variety of strategies for one
+computation should be
+encouraged and shared
+• students need to understand
+why particular procedures
+work; they should not be
+taught computational tricks
+without understanding what
+they are doing
+• a thorough understanding of,
+and facility with, computation
+is a valuable prerequisite for
+eventual use in algebra
+
+• skill in mental computation
+takes time to develop
+• mental computation must be
+practised regularly
+
+FIGURE 3
+Problem
+Situations
+
+Calculation
+Needed
+Approximate
+Answer
+Appropriate
+
+Exact Answer
+Needed
+
+Use Mental
+Calculation
+
+Use a
+Paper-and-Pencil
+Calculation
+
+Use a
+Calculator
+
+Use a
+Computer
+
+Estimate
+
+Contexts for Learning andOutcomes
+Teaching 29
+
+HOMEWORK
+Homework is an essential component of the mathematics program, as it extends the opportunity for students to think mathematically and to reflect on ideas
+explored during class time. The
+provision of this additional time
+for reflection and practice plays a
+valuable role in helping students
+to consolidate their learning.
+Traditionally, homework has
+meant completing ten to twenty
+drill and practice questions
+relating to the procedure taught
+in a given day. With the increased
+emphasis on problem solving,
+conceptual understanding and
+mathematical reasoning, however, it is important that homework assignments change accordingly. More assignments involving
+problem solving, mathematical
+investigations, written explanations and reflections, and data
+collection should reduce some of
+the basic practice exercises given
+in isolation. In fact, a good
+problem can sometimes accomplish more than many drilloriented exercises on a topic. For
+
+30
+
+example, instead of a number of
+separate questions, problems
+such as the following might be
+considered:
+• Write as many addition and
+subtraction sentences as you
+can that produce the answer
+of 10.
+• Predict how often you will get
+“tails” if you flip a penny fifty
+times. Try it. Would it differ if
+you used a loonie? Check to
+see and write about your
+findings.
+• A bike lock has four different
+numbers in the combination.
+The sum of the last two
+numbers is the first number.
+The sum of all the numbers is
+15. What might the combination be?
+• Why does trying to obtain the
+tangent of 270° from a
+calculator produce an error
+message?
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+As is the case in designing all
+types of homework, the needs of
+the students and the purpose of
+the assignment will dictate the
+nature of the questions included.
+Homework need not be limited
+to reinforcing learning; it provides an excellent opportunity to
+revisit topics explored previously
+and to introduce new topics.
+Homework provides an effective
+way to communicate with
+parents and provides parents an
+opportunity to be actively
+involved in their child’s learning.
+By ensuring that assignments
+model classroom instruction and
+sometimes require parental
+input, a parent will have a clearer
+understanding of the mathematics curriculum and the progress
+of his or her child in relationship
+to it. As Van de Walle (1994, p.
+454) suggests, homework can
+serve as a parent’s window to the
+classroom.
+
+THE LEARNING ENVIRONMENT
+
+T
+
+he call for change in
+mathematics instruction
+is characterized by not
+only what mathematics is taught
+but also the manner in which it is
+taught. What students learn is
+fundamentally connected to how
+they learn it. A classroom environment in which optimal learning
+can take place must be established and maintained; it forms
+the learning foundation upon
+which skills and attitudes are
+constructed.
+There are four unifying ideas that
+are central to the overall view of
+mathematics, as outlined in the
+NCTM Curriculum and Evaluation
+Standards (1989). They address
+problem solving, reasoning,
+communication and connections,
+and are common across all grade
+levels (entry-grade 12). In order
+to meet the requirements of these
+ideas, classrooms must look very
+different from those of the past.
+
+The NCTM Professional Standards
+(p.3) lists five major shifts in the
+environment of mathematics
+classrooms (as shown in the table
+below).
+Structurally the classroom environment will need to provide the
+flexibility to accommodate
+varying student needs and
+learning styles and to facilitate
+the active involvement of students in the development of
+mathematical concepts and skills.
+Movement among whole class,
+small group and independent
+experiences will be essential to
+provide all important contexts for
+learning.
+As well, for students to develop a
+belief in themselves as mathematical thinkers, they must learn
+in a climate in which there is
+• a genuine respect for others’
+ideas
+
+• a valuing of reason and sensemaking
+• pacing and timing that allow
+students to puzzle and to think
+• the forging of a social and
+intellectual community
+Students, teachers and parents
+each play a significant role in
+creating this learning environment. Students have a responsibility with regard to participation,
+behaviour and work ethic. Teachers convey their attitude toward,
+and their value of, mathematics
+through their classroom presentation, responses to students’ ideas
+and solutions and in their assessment practices. Positive attitudes
+of parents encourage students to
+pursue and persist at studies of
+mathematics. The entire climate
+or environment must be conducive to the fostering of mathematically-thinking students.
+
+Summary of Shifts in Instructional Practices
+Moving away from:
+classrooms as collections of individuals
+
+Toward:
+classrooms as mathematical communities
+
+the teacher as the sole authority for
+right answers
+
+logic and mathematical evidence as
+verification
+
+primarily memorizing procedures
+
+mathematical reasoning
+
+an emphasis on mechanistic answer
+finding
+
+conjecturing, inventing and problem
+solving
+
+treating mathematics as a body of
+isolated concepts and procedures
+
+connecting mathematics, its ideas
+and its applications
+
+Contexts for Learning andOutcomes
+Teaching
+
+31
+
+EQUITY AND DIVERSITY
+
+DIVERSITY IN
+STUDENT NEEDS
+Every classroom comprises
+students at many different
+cognitive levels. Rather than
+choosing a certain level at which
+to teach, a teacher is responsible
+for tailoring instruction to reach
+as many of these students as
+possible. In general, this may be
+accomplished by assigning
+different tasks to different students or assigning the same
+open-ended task to most students.
+Sometimes it is appropriate for a
+teacher to group students by
+interest or ability, assigning them
+different tasks in order to best
+meet their needs. These groupings may last anywhere from
+minutes to semesters but should
+be designed to help all students,
+whether strong, weak or average,
+to reach their highest potential.
+There are other times when an
+appropriately open-ended task
+can be valuable to a broad
+spectrum of students. For example, asking students to make up
+an equation for which the answer
+is 5 allows some students to make
+up very simple equations while
+others can design more complex
+ones. The different equations
+constructed can become the basis
+for a very rich lesson, from which
+all students come away with a
+better understanding of what the
+solution to an equation really
+means.
+
+32
+
+Entry - grade 12 mathematics
+teachers must be provided with
+resource materials that include
+many open-ended tasks from
+which to choose. In addition,
+they need access to a broad
+spectrum of resources which
+focus on the needs of particular
+segments of the student population.
+
+COGNITIVE
+DEVELOPMENT
+To match instruction to the
+student’s level of intellectual
+maturity, teachers need to be
+familiar with the stages of cognitive development, the student’s
+ability to think mathematically
+and the student’s preferred
+learning style. While there are
+general patterns of development
+as students move through a
+number of age spans, it must be
+emphasized that these stages are
+simply reference points for
+teachers. Not all students move
+through these stages at the same
+rate, nor is any given student
+necessarily at the same stage in all
+areas within the mathematics
+program (e.g., number concepts
+vs. spatial sense). It is therefore
+important for teachers at all levels
+to build flexibility into their
+programs to help address individual developmental variations.
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+Primary/Elementary (Ages
+Five to Ten)
+Students initially learn most
+effectively through first-hand
+experience. In school they need
+time and space for active exploration. As their language fluency
+grows, so does their ability to
+represent their thoughts symbolically through writing, drawing,
+graphing and making models.
+Teachers should ensure that
+students experiment with a
+variety of ways to represent their
+knowledge and understanding.
+Students use direct experience,
+objects and visual aids to help
+understanding. First-hand experiences are necessary, since students better understand symbolism if they have had adequate,
+meaningful experiences in the
+concrete and pictorial modes.
+Students will begin to think about
+their own thinking and to develop
+more sophisticated strategies for
+learning and for remembering
+what they have learned.
+
+“[At this stage] a
+developmentally-appropriate
+curriculum encourages the
+exploration of a wide variety of
+mathematical ideas in such a
+way that children retain their
+enjoyment of, and curiosity
+about, mathematics. It
+incorporates real-world
+contexts, children’s experiences,
+and children’s language in
+developing ideas. It recognizes
+
+that children need considerable
+time to construct sound
+understandings and develop the
+ability to reason and
+communicate mathematically. It
+looks beyond what children
+appear to know to determine
+how they think about ideas. It
+provides repeated contact with
+important ideas in varying
+contexts throughout the year
+and from year to year.”
+(NCTM Curriculum and Evaluation
+Standards, p.16)
+
+Middle Level/Junior High
+(Ages Ten to Fourteen)
+During these years many students
+begin to think in abstractions.
+They are better able to understand the symbolic nature of
+mathematics and to use symbols
+to represent number relations and
+other mathematical abstractions.
+It should be noted that, although
+they are beginning to develop the
+ability to “manipulate” thoughts
+and ideas, they still need handson experiences. The way in which
+students process information
+leads to a greater success in
+solving abstract problems.
+Accumulated knowledge, combined with logical conceptual
+connections, allows solutions to
+multi-stage problems.
+Another trend at this time is the
+development of hypothetical
+thinking and appreciation of the
+multiple possibilities that are
+presented by given circumstances. It is important to respect
+different ways of presenting ideas.
+Positive encouragement in a lowrisk environment is required in
+
+order for students at this age to
+develop their talents.
+
+“As vast changes occur in their
+intellectual, psychological,
+social, and physical
+development, students [in this
+stage] begin to develop their
+abilities to think and reason
+more abstractly. Throughout this
+period, however, concrete
+experiences should continue to
+provide the means by which they
+construct knowledge. From these
+experiences they abstract more
+complex meanings and ideas.
+The use of language, both
+written and oral, helps students
+clarify their thinking and report
+their observations as they form
+and verify their mathematical
+ideas.”
+(NCTM Curriculum and Evaluation
+Standards, p.68)
+
+High School (Ages Fourteen
+to Nineteen)
+During these years, thought
+processes become more precise
+and analytical, while interests
+become more specific and
+specialized.
+Students may use abstract rules to
+solve problems but will need
+assistance and experience in
+recognizing contexts for the
+application of such rules. It is
+important to note that the ability
+to apply formal operational skills
+varies according to the degree of
+experience in an area; therefore,
+students need active involvement
+in constructing and applying
+mathematical ideas in meaningful
+contexts. Also, during these years
+
+students often prefer to do an indepth investigation of an area of
+interest and choice.
+As students continue to refine
+their thinking abilities, they
+demonstrate greater awareness
+of the complexity of issues and
+may reject simplistic explanations. Increased life experience
+provides more and new opportunities for refinement of previously-learned reasoning and
+thinking skills. Students develop
+the ability to move freely between the concrete and the
+abstract, yet still need instructional strategies providing both.
+
+“The role of students in the
+learning process…should shift
+in preparation for their
+entrance into the work force or
+higher education. Experiences
+designed to foster continued
+intellectual curiosity and
+increasing independence should
+encourage students to become
+self-directed learners who
+routinely engage in
+constructing, symbolizing,
+applying, and generalizing
+mathematical ideas…
+[Further,] teachers and students
+[should] become natural
+partners in developing
+mathematical ideas and solving
+mathematical problems.”
+(NCTM Curriculum and Evaluation
+Standards, p.128)
+
+Contexts for Learning andOutcomes
+Teaching
+
+33
+
+GENDER AND
+CULTURAL EQUITY
+The mathematics curriculum and
+mathematics instruction must be
+designed to equally empower
+both male and female students,
+as well as members of all cultural
+backgrounds. Ultimately, this
+should mean that not only should
+enrolments of students of both
+genders and various cultural
+backgrounds in public school
+mathematics courses reflect
+numbers in society, but also that
+representative numbers of both
+genders and the various cultural
+backgrounds should move on to
+successful post-secondary studies
+and careers in mathematics and
+mathematics-related areas.
+
+Two obvious goals for mathematics curriculum and mathematics
+instruction which will help
+facilitate gender and cultural
+equity are i) to portray the
+historical development of mathematics as involving both men
+and women of a wide variety of
+cultures and ii) to ensure that the
+instructional environment is
+uniformly supportive of members
+of both genders and all cultural
+groups.
+The first of these goals might be
+achieved by employing such
+instructional strategies as
+• examining the lives of associated mathematicians (including men and women of
+various backgrounds) when
+introducing new mathematical
+topics in the classroom
+• including the study of the lives
+of mathematicians such as
+Sophie Germain and
+Subrahmanyan Chandrasekhar
+as potential topics for individual research
+
+34
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+Strategies designed to assist in
+the accomplishment of the
+second goal include
+• using curriculum materials
+which present a positive image
+of mathematics and mathematicians
+• employing an appropriate
+instructional balance between
+individual and group work
+• ensuring equitable sharing of
+classroom resources (including
+teacher attention and support)
+• monitoring classroom instruction for teacher bias
+• facilitating contact between
+students and those working in
+mathematical professions
+• reinforcing the belief that “all
+students can do mathematics”
+
+ASSESSING AND EVALUATING STUDENT LEARNING
+
+Assessment
+is the systematic process of
+gathering information on
+student learning
+
+about what is really valued—what
+is worth learning, how it should
+be learned, what elements of
+quality are considered most
+important and how well students
+are expected to perform.
+Teacher-developed assessments
+and evaluations have a wide
+variety of uses, such as
+
+demonstrate their knowledge,
+skills and attitudes. Many types of
+assessment strategies can be
+used to gather such information,
+including, but not limited to,
+• formal and informal observations
+• work samples
+• anecdotal records
+
+Evaluation
+is the process of analyzing,
+reflecting upon and
+summarizing assessment
+information and making
+judgments or decisions based
+upon the information gathered.
+
+A
+
+ssessment and
+evaluation are
+essential components of teaching and learning in
+mathematics. Without effective
+assessment and evaluation it is
+impossible to know whether
+students have learned, whether
+teaching has been effective or
+how best to address student
+learning needs. The quality of the
+assessment and evaluation in the
+educational process has a profound and well-established link to
+student performance. Research
+consistently shows that regular
+monitoring and feedback are
+essential to improving student
+learning. What is assessed and
+evaluated, how it is assessed and
+evaluated and how results are
+communicated send clear messages to students and others
+
+• providing feedback to improve
+student learning
+• determining if curriculum
+outcomes have been achieved
+• certifying that students have
+achieved certain levels of
+performance
+• setting goals for future student
+learning
+• communicating with parents
+about their children’s learning
+• providing information to
+teachers on the effectiveness
+of their teaching, the program
+and the learning environment
+• meeting the needs of guidance and administration
+
+• conferences
+• teacher-made and other tests
+• portfolios
+• learning journals
+• questioning
+• performance assessment
+• peer- and self-assessment
+
+EVALUATION
+Evaluation involves teachers and
+others in analyzing and reflecting
+upon information about student
+learning gathered in a variety of
+ways. This process requires
+• developing clear criteria and
+guidelines for assigning marks
+or grades to student work
+
+ASSESSMENT
+To determine how well students
+are learning, assessment strategies
+have to be designed to systematically gather information on the
+achievement of the curriculum
+outcomes. In planning assessments, teachers should use a
+broad range of strategies in an
+appropriate balance to give
+students multiple opportunities to
+
+• synthesizing information from
+multiple sources
+• weighing and balancing all
+available information
+• using a high level of professional judgment in making
+decisions based upon that
+information
+
+Contexts for Learning andOutcomes
+Teaching
+
+35
+
+REPORTING
+
+GUIDING PRINCIPLES
+
+Reporting on student learning
+should focus on the extent to
+which students have achieved the
+curriculum outcomes. Reporting
+involves communicating the
+summary and interpretation of
+information about student
+learning to various audiences who
+require it. Teachers have a special
+responsibility to explain accurately what progress students
+have made in their learning and
+to respond to parent and student
+inquiries about learning.
+
+In order to provide accurate,
+useful information about the
+achievement and instructional
+needs of students, certain guiding
+principles for the development,
+administration and use of assessments must be followed. Principles
+for Fair Student Assessment Practices for Education in Canada
+(1993) articulates five fundamental assessment principles as
+follows:
+
+Narrative reports on progress and
+achievement can provide information on student learning which
+letter or number grades alone
+cannot. Such reports might, for
+example, suggest ways in which
+students can improve their
+learning and identify ways in
+which teachers and parents can
+best provide support.
+Effective communication with
+parents regarding their children’s
+progress is essential in fostering
+successful home-school partnerships. The report card is one
+means of reporting individual
+student progress. Other means
+include the use of conferences,
+notes and phone calls.
+
+• Assessment methods should
+be appropriate for and compatible with the purpose and
+context of the assessment.
+• Students should be provided
+with sufficient opportunity to
+demonstrate the knowledge,
+skills, attitudes or behaviours
+being assessed.
+• Procedures for judging or
+scoring student performance
+should be appropriate for the
+assessment method used and
+be consistently applied and
+monitored.
+• Procedures for summarizing
+and interpreting assessment
+results should yield accurate
+and informative representations of a student’s performance in relation to the curriculum outcomes for the reporting period.
+• Assessment reports should be
+clear, accurate and of practical
+value to the audience for
+whom they are intended.
+
+36
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+These principles highlight the
+need for assessment which
+ensures that
+• the best interests of the
+student are paramount
+• assessment informs teaching
+and promotes learning
+• assessment is an integral and
+ongoing part of the learning
+process and is clearly related
+to the curriculum outcomes
+• assessment is fair and equitable to all students and involves
+multiple sources of information
+While assessments may be used
+for different purposes and audiences, all assessments must give
+each student optimal opportunity
+to demonstrate what he/she
+knows and can do.
+
+ASSESSING STUDENT
+LEARNING IN THE
+MATHEMATICS
+CLASSROOM
+Student Assessment
+
+“Testing to assign grades is one
+of the most common forms of
+evaluation. But assessment is a
+much broader and basic task,
+one designed to determine what
+students know and how they
+think about mathematics.”
+(NCTM Curriculum and Evaluation
+Standards, p. 203)
+
+Effective assessment of student
+learning in mathematics provides
+educators with important information about the instructional
+needs of students and about
+student achievement of the
+
+curriculum outcomes. NCTM has
+published Assessment Standards
+for School Mathematics which may
+be used as a guide to enable
+teachers to match assessment
+practice with the Atlantic Canada
+vision for mathematics. These
+principles provide a basis for best
+practice and are consistent with
+the Principles for Fair Student
+Assessment Practices for Education
+in Canada.
+
+Alignment with Curriculum
+Tasks and methods for assessing
+students’ learning must be
+aligned with the curriculum
+outcomes and instructional
+practice. An assessment program
+that mirrors instruction and is
+interwoven with it is vital for a
+clear, reliable and valid picture of
+how students are progressing and
+of how well instruction meets a
+student’s needs.
+Assessment instruments chosen
+need to reflect the relative
+emphases given in instruction to
+topics and to processes. For
+example, an effective program
+assesses the student’s progress
+with the skills and concepts that
+are stressed in a particular instructional unit, and it includes ongoing assessment of the process
+components—problem solving,
+communication, mathematical
+reasoning and making mathematical connections—to the
+extent that these processes are
+part of the instructional unit.
+For assessment to be aligned with
+instruction, it is necessary that
+assessment tasks involve the use
+of the same materials and tech-
+
+nologies used regularly in the
+classroom. The routine use of
+calculators, computers and
+manipulatives is integral to the
+success of this curriculum; therefore, assessment tasks incorporating the use of these materials and
+technologies are necessary.
+
+EXTERNAL ASSESSMENT
+Administration of externally
+prepared assessments is on a
+large scale in comparison to
+classroom assessments and often
+involves hundreds, sometimes
+thousands, of students, allowing
+for use of results at the provincial,
+district and/or school levels.
+Depending on the comprehensiveness of the assessment,
+information can be used for all of
+the same purposes as classroombased assessment, but it can also
+serve additional administrative
+and accountability purposes such
+as for admissions, placement,
+student certification, educational
+diagnosis and program evaluation. External assessments offer
+common standards for assessment and for administration,
+scoring and reporting which
+allow for comparison of results
+over time.
+As part of the regional agenda,
+development of external assessments in the core curriculum
+areas is being undertaken. Generally, external assessment includes
+assessments prepared by departments of education, national and
+international assessment groups,
+publishers and research groups.
+Each provincial department of
+education makes decisions on
+
+whether or not to administer
+external assessments.
+
+PROGRAM AND SYSTEM
+EVALUATION
+The results from both external
+and internal assessments of
+student achievement can be used
+to varying degrees for program
+and system evaluation. External
+assessment results, however, are
+more comparable across various
+groups and are therefore more
+commonly the basis for these
+types of evaluations.
+In essence, the main difference
+between student evaluation and
+program and system evaluation is
+in how the results are used. In
+program evaluation marks or
+scores for individual students are
+not the primary focus of the
+assessment—it is the effectiveness of the program that is
+evaluated, and the results are
+used to show the extent to which
+the many outcomes of the
+program are achieved.
+When results are used for system
+evaluation, the focus is on how
+the various levels and groups
+within the system, such as
+classrooms, schools, districts and
+so on, are achieving the intended
+outcomes. In many ways student
+and program evaluation are very
+much the same in that both
+emphasize obtaining student
+information concerning their
+conceptual understanding, their
+ability to use knowledge and
+reason to solve problems and
+their ability to communicate
+effectively.
+
+Contexts for Learning andOutcomes
+Teaching
+
+37
+
+RESOURCES
+
+T
+
+he challenge facing
+teachers today is implementing a mathematics program that will prepare
+students for a rapidly changing
+world. There is an increasing need
+for a variety of resources to
+support the teaching of the
+curriculum at all levels (entrygrade 12).
+Students’ learning resources and
+technologies used must support
+both the philosophy and recommended approaches of the
+mathematics curriculum and
+should be used in conjunction
+with a variety of other available
+teaching tools. These tools may
+include professional resources,
+kits, games, activity cards, manipulative materials, calculators
+and computer software. When
+purchasing commercial materials,
+it is important to be selective,
+choosing those that complement
+the curriculum focus and outcomes.
+It should also be clear, given the
+need to implement new mathematical content, new instructional techniques and instructional
+materials such as those identified
+here, that on-going professional
+development will be needed.
+
+PROFESSIONAL
+RESOURCES
+
+MANIPULATIVE
+MATERIALS
+
+Resources with which all teachers
+of mathematics should be familiar
+are publications of the National
+Council of Teachers of Mathematics (NCTM):
+
+The use of manipulative materials
+in the mathematics classroom
+supports the development of
+understanding in students of
+various ages and developmental
+levels. Manipulatives may be used
+to introduce new concepts, verify
+results and/or provide remedial
+help.
+
+• Curriculum And Evaluation
+Standards for School Mathematics (1989)—represents NCTM’s
+vision of what the mathematics
+curriculum should include in
+terms of content priority and
+emphasis
+• Professional Standards For
+Teaching Mathematics (1991)—
+provides standards regarding
+what teachers must know in
+order to teach toward the new
+curriculum standards, recommendations for professional
+development and suggestions
+for the evaluation of the
+teaching of mathematics
+• Assessment Standards For School
+Mathematics (1995)
+• Addenda to the Standards
+• Yearbooks
+Professional publications help
+teachers by providing substantive
+ideas about mathematics teaching.
+Four recommended journals from
+NCTM are
+• Teaching Children Mathematics
+(K-5)
+• Mathematics Teaching In The
+Middle School (grades 6-8)
+• Mathematics Teacher (grades 912)
+• Journal for Research in Mathematics Education
+
+38
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+Every student should have the
+opportunity to explore with
+manipulative materials.
+Manipulatives should clearly
+represent the concept being
+taught; nevertheless, a particular
+manipulative may be sufficiently
+flexible for use in teaching a
+variety of concepts.
+When possible, a variety of
+manipulatives should be used to
+develop each concept, the
+different representations helping
+students to generalize mathematical ideas. Students should as well
+express their understanding of
+the connection among the
+manipulatives, the mathematical
+concept and the mathematical
+symbols used to denote it.
+
+TECHNOLOGY
+“... New technology not only has
+made calculations and graphing
+easier, it has changed the very
+nature of the problems
+important to mathematics and
+the methods mathematicians use
+to investigate them.”
+(NCTM Curriculum and Evaluation
+Standards, p. 8)
+
+Modern computing technologies
+have changed the way everyone
+learns and works. For many years,
+they have served as a catalyst for
+reform efforts in mathematics
+education. In today’s elementary
+and secondary schools, they can
+and will continue to influence
+how mathematics is learned and
+taught, not only by making, for
+example, calculations and
+graphing easier and more manageable, but also by altering the
+very nature of what mathematics
+is important to learn. New
+problems as well as innovative
+ways of investigating them now
+become possible.
+NCTM’s Curriculum and Evaluation
+Standards for School Mathematics
+acknowledges the impact that
+technology has on mathematics
+and its many uses. The Curriculum
+Standards recommend the use of
+technology i) to enhance the
+teaching and the learning of
+mathematics and ii) to relate
+school mathematics to the world
+in which the students live through
+developing and interpreting
+mathematical models.
+
+The introduction of computers,
+graphics calculators, video
+technology and other technologies into the mathematics classroom allows students to
+• explore situations with complicated numbers which previously would have been beyond their capabilities
+• explore individual or groups of
+related computations or
+functions quickly and easily
+• create and explore numeric
+and geometric situations for
+the purpose of developing
+conjectures
+• perform simulations of situations which would otherwise
+be impossible to examine
+• easily link different representations of the same information
+• model situations mathematically
+• observe the effects of simple
+changes in parameters or
+coefficients
+• analyze, organize and display
+data
+
+All of these situations enhance
+discovery learning and problemsolving potential. At the same
+time, teachers have the opportunity to use technology to communicate with fellow mathematics
+teachers, to share lessons with
+experts and to expose their
+students to information that would
+otherwise be inaccessible.
+As more sophisticated technology
+becomes accessible in classrooms,
+its productive use in support of the
+mathematics curriculum will need
+to be considered. In making such
+decisions, the opportunity for
+improved instruction and learning
+should be the guiding principle.
+The effective use of technology in
+the mathematics classroom is not
+easy to achieve. Students will need
+to learn to make judgments as to
+when the use of technology is
+appropriate and when it is not. In
+all situations, it is imperative that it
+should be used both as a tool to
+include, rather than exclude,
+students and as a means of
+creating new teaching strategies.
+
+Contexts for Learning andOutcomes
+Teaching
+
+39
+
+References
+Centre for Research in Applied Measurement and
+Evaluation. Principles for Fair Student Assessment
+Practices for Education in Canada. Edmonton, AB:
+University of Alberta, 1993.
+National Council of Teachers of Mathematics.
+Assessment Standards for School Mathematics.
+Reston, VA: NCTM, 1995.
+National Council of Teachers of Mathematics.
+Curriculum and Evaluation Standards for School
+Mathematics. Reston, VA: NCTM, 1989.
+
+National Council of Teachers of Mathematics.
+Professional Standards for Teaching Mathematics.
+Reston, VA: NCTM, 1991.
+Steen, et al. “Teaching Mathematics for Tomorrow’s World.” Educational Leadership, (September,
+1989).
+Van De Walle, John. Elementary School Mathematics:
+Teaching Developmentally. 2nd ed. New York:
+Longman, 1994.
+
+National Council of Teachers of Mathematics.
+Estimation and Mental Computation: 1986 Yearbook.
+Reston, VA: NCTM, 1986.
+
+40
+
+Foundation for the Atlantic Canada Mathematics Curriculum
+
+

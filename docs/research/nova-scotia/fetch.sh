@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Downloads the official Nova Scotia outcomes documents (curriculum.novascotia.ca) used by build_outcomes.py.
-# Usage: ./fetch.sh /path/to/cache   (needs curl and pdftotext)
+# Usage: ./fetch.sh [dir]   (dir defaults to source/ in this folder, which is committed)   (needs curl and pdftotext)
 set -euo pipefail
-OUT="${1:?cache folder}"
+OUT="${1:-$(dirname "$0")/source}"
 mkdir -p "$OUT/pdf" "$OUT/txt"
 B=https://curriculum.novascotia.ca/sites/default/files/documents/outcomes-indicators-files
 get() { # name, file
