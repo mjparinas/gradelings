@@ -997,6 +997,20 @@ function linkTarget(): { tab: Tab; family: string | null } {
   return { tab: family ? "Users" : (TABS as readonly string[]).includes(tab ?? "") ? (tab as Tab) : "Overview", family };
 }
 
+/** The count on a tab ("To do 3 waiting"), left out when nothing waits. */
+function TabCount({ n }: { n: number | null }) {
+  if (!n) return null;
+  return (
+    <>
+      {" "}
+      <span className="ml-1 rounded-full bg-[#ff9636] px-2 text-sm text-[#0f172a]">
+        {n}
+        <span className="sr-only"> waiting</span>
+      </span>
+    </>
+  );
+}
+
 function Panel() {
   const [tab, setTab] = useState<Tab>(() => linkTarget().tab);
   // A family opened from a dashboard list: Users starts on that family's page.
@@ -1011,6 +1025,14 @@ function Panel() {
     call<{ items: unknown[] }>("/api/admin/queue/").then(
       (r) => setTodo(r.items?.length ?? null),
       () => setTodo(null),
+    );
+  }, []);
+  // How many received emails nobody has answered or marked as done, shown on the Inbox tab.
+  const [waiting, setWaiting] = useState<number | null>(null);
+  useEffect(() => {
+    call<{ waiting?: number }>("/api/admin/inbox/?count=1").then(
+      (r) => setWaiting(r.waiting ?? null),
+      () => setWaiting(null),
     );
   }, []);
   // Maintenance mode: the banner shows on every tab while it is on; the switch is on the System tab.
@@ -1052,7 +1074,7 @@ function Panel() {
     Traffic: <Traffic />,
     Emails: <Emails key={segment} initialSegment={segment} onOpenFamily={openFamily} />,
     Automations: <Automations />,
-    Inbox: <Inbox key={inboxId ?? ""} initialId={inboxId} onOpenFamily={openFamily} />,
+    Inbox: <Inbox key={inboxId ?? ""} initialId={inboxId} onOpenFamily={openFamily} onWaiting={setWaiting} />,
     Codes: <Codes />,
     Sales: <Sales />,
     Flags: <Flags flags={flags} reload={loadFlags} />,
@@ -1083,15 +1105,7 @@ function Panel() {
             className={`${btn} ${tab === t ? "bg-[#0f172a] text-white" : "border border-line bg-white"}`}
           >
             {t}
-            {t === "To do" && todo ? (
-              <>
-                {" "}
-                <span className="ml-1 rounded-full bg-[#ff9636] px-2 text-sm text-[#0f172a]">
-                  {todo}
-                  <span className="sr-only"> waiting</span>
-                </span>
-              </>
-            ) : null}
+            <TabCount n={t === "To do" ? todo : t === "Inbox" ? waiting : null} />
           </button>
         ))}
       </nav>

@@ -495,13 +495,23 @@ interface InboxMessage extends InboxItem {
   attachmentNames: string[];
 }
 
-export function Inbox({ initialId = null, onOpenFamily }: { initialId?: string | null; onOpenFamily: (id: string) => void }) {
+/** Not yet answered or marked as done. The server counts the same way (`isWaiting` in `src/server/inbox.ts`). */
+const waiting = (m: InboxItem) => !m.handledAt && !m.repliedAt;
+
+/** `onWaiting` gets how many listed messages are waiting each time the list loads, so the tab's count stays current. */
+export function Inbox({ initialId = null, onOpenFamily, onWaiting }: { initialId?: string | null; onOpenFamily: (id: string) => void; onWaiting?: (n: number) => void }) {
   const [list, setList] = useState<{ configured: boolean; items: InboxItem[]; hasMore: boolean } | null>(null);
   const [err, setErr] = useState("");
   const [openId, setOpenId] = useState<string | null>(initialId);
   const load = useCallback(() => {
-    call<NonNullable<typeof list>>("/api/admin/inbox/").then(setList, (e: Error) => setErr(e.message));
-  }, []);
+    call<NonNullable<typeof list>>("/api/admin/inbox/").then(
+      (r) => {
+        setList(r);
+        onWaiting?.(r.items.filter(waiting).length);
+      },
+      (e: Error) => setErr(e.message),
+    );
+  }, [onWaiting]);
   useEffect(load, [load]);
   if (openId) return <InboxRead id={openId} onBack={() => (setOpenId(null), load())} onOpenFamily={onOpenFamily} />;
   return (

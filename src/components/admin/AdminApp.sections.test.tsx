@@ -519,6 +519,26 @@ describe("AdminApp engagement", () => {
     expect(screen.getByRole("button", { name: "Reports" })).toHaveAttribute("aria-current", "page");
   });
 
+  it("shows how many emails wait on the Inbox tab, and updates it when the list loads", async () => {
+    const mail = (id: string, handledAt: number | null) => ({ id, from: "lee@example.com", fromEmail: "lee@example.com", subject: `Mail ${id}`, receivedAt: 1, attachments: 0, familyId: null, handledAt, repliedAt: null });
+    asAdmin((url, method) => {
+      if (url === "/api/admin/inbox/?count=1") return { waiting: 2 };
+      if (url === "/api/admin/inbox/" && method === "GET") return { configured: true, items: [mail("a", null), mail("b", 1)], hasMore: false };
+    });
+    const user = userEvent.setup();
+    render(<AdminApp />);
+    const tab = await screen.findByRole("button", { name: /^Inbox\s*2\s*waiting$/ });
+    await user.click(tab);
+    expect(await screen.findByRole("button", { name: /^Inbox\s*1\s*waiting$/ })).toHaveAttribute("aria-current", "page");
+  });
+
+  it("leaves the Inbox tab plain when nothing waits", async () => {
+    asAdmin((url) => (url === "/api/admin/inbox/?count=1" ? { waiting: 0 } : undefined));
+    render(<AdminApp />);
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/admin/inbox/?count=1"));
+    expect(await screen.findByRole("button", { name: "Inbox" })).toBeInTheDocument();
+  });
+
   it("shows last sign-in and practice in Users, and emailing on a family's page", async () => {
     const now = Date.now();
     asAdmin((url) => {

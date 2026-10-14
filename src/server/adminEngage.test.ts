@@ -336,6 +336,7 @@ describe("the inbox", () => {
   it("says when email isn't set up", async () => {
     delete process.env.RESEND_API_KEY;
     expect(await (await get(inbox, "/api/admin/inbox/")).json()).toMatchObject({ configured: false, items: [] });
+    expect(await (await get(inbox, "/api/admin/inbox/?count=1")).json()).toMatchObject({ waiting: 0 });
   });
 
   it("lists received mail, matched to the account, and shows it as plain text", async () => {
@@ -363,11 +364,14 @@ describe("the inbox", () => {
   });
 
   it("can be marked done and waiting again", async () => {
+    const count = async () => ((await (await get(inbox, "/api/admin/inbox/?count=1")).json()) as { waiting: number }).waiting;
     await post(inbox, "/api/admin/inbox/", { action: "handled", id: "rcv-1", handled: false });
     await dbm.run("UPDATE inbox_state SET replied_at = NULL WHERE email_id = 'rcv-1'");
     expect(((await (await get(inbox, "/api/admin/inbox/")).json()) as { items: { handledAt: number | null }[] }).items[0].handledAt).toBeNull();
+    expect(await count()).toBe(1);
     await post(inbox, "/api/admin/inbox/", { action: "handled", id: "rcv-1" });
     expect(((await (await get(inbox, "/api/admin/inbox/")).json()) as { items: { handledAt: number | null }[] }).items[0].handledAt).not.toBeNull();
+    expect(await count()).toBe(0);
   });
 
   it("drafts a reply with Claude only when asked, without sending anything", async () => {
