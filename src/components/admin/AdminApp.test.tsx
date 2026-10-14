@@ -121,7 +121,7 @@ describe("AdminApp", () => {
     asAdmin();
     const user = userEvent.setup();
     render(<AdminApp />);
-    await user.click(await screen.findByRole("button", { name: "A/B tests" }));
+    await user.click(await screen.findByRole("button", { name: "A/B Tests" }));
     await user.type(screen.getByLabelText(/^Key/), "home-colours");
     await user.click(screen.getByRole("button", { name: "Save draft" }));
     await waitFor(() => expect(sent("/api/admin/experiments/", "POST")).toEqual({ key: "home-colours", description: "", variants: [{ name: "control", weight: 50 }, { name: "variant", weight: 50 }] }));

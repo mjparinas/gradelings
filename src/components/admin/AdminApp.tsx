@@ -986,15 +986,16 @@ function AuditLog() {
 
 // ---------- The app ----------
 
-const TABS = ["Overview", "To do", "Users", "Funnel", "Traffic", "Emails", "Inbox", "Automations", "Codes", "Sales", "Flags", "A/B tests", "Reports", "System", "Log"] as const;
+const TABS = ["Overview", "To Do", "Users", "Funnel", "Traffic", "Emails", "Inbox", "Automations", "Codes", "Sales", "Flags", "A/B Tests", "Reports", "System", "Log"] as const;
 type Tab = (typeof TABS)[number];
 
 /** `?tab=` and `?family=` from a link in an alert email, read once when the panel opens. */
 function linkTarget(): { tab: Tab; family: string | null } {
   const q = new URLSearchParams(typeof window === "undefined" ? "" : window.location.search);
   const family = q.get("family");
-  const tab = q.get("tab");
-  return { tab: family ? "Users" : (TABS as readonly string[]).includes(tab ?? "") ? (tab as Tab) : "Overview", family };
+  // Case-insensitive, so links sent before the tab names were capitalized ("To do") still open the tab.
+  const tab = TABS.find((t) => t.toLowerCase() === q.get("tab")?.toLowerCase());
+  return { tab: family ? "Users" : (tab ?? "Overview"), family };
 }
 
 function Panel() {
@@ -1029,7 +1030,7 @@ function Panel() {
   };
   const body: Record<Tab, ReactNode> = {
     Overview: <Overview onOpenFamily={openFamily} />,
-    "To do": (
+    "To Do": (
       <Queue
         onOpenFamily={openFamily}
         onReports={() => setTab("Reports")}
@@ -1056,7 +1057,7 @@ function Panel() {
     Codes: <Codes />,
     Sales: <Sales />,
     Flags: <Flags flags={flags} reload={loadFlags} />,
-    "A/B tests": <Experiments />,
+    "A/B Tests": <Experiments />,
     Reports: <Reports />,
     System: (
       <>
@@ -1083,7 +1084,7 @@ function Panel() {
             className={`${btn} ${tab === t ? "bg-[#0f172a] text-white" : "border border-line bg-white"}`}
           >
             {t}
-            {t === "To do" && todo ? (
+            {t === "To Do" && todo ? (
               <>
                 {" "}
                 <span className="ml-1 rounded-full bg-[#ff9636] px-2 text-sm text-[#0f172a]">

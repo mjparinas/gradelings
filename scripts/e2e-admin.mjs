@@ -64,8 +64,8 @@ async function scan(name) {
   if (!violations.length) console.log(`ok   ${name} has no automated accessibility problems`);
 }
 const tab = async (name) => {
-  // "To do" carries a count after its name.
-  await page.getByRole("navigation", { name: "Admin sections" }).getByRole("button", name === "To do" ? { name: /^To do/ } : { name, exact: true }).click();
+  // "To Do" carries a count after its name.
+  await page.getByRole("navigation", { name: "Admin sections" }).getByRole("button", name === "To Do" ? { name: /^To Do/ } : { name, exact: true }).click();
   await page.waitForTimeout(400);
 };
 async function signIn(email) {
@@ -154,7 +154,7 @@ await shot("codes");
 await scan("codes");
 
 // Save an A/B test and start it.
-await tab("A/B tests");
+await tab("A/B Tests");
 const key = `e2e-${Date.now()}`;
 await page.getByLabel(/^Key/).fill(key);
 await page.getByRole("button", { name: "Save draft" }).click();
@@ -165,7 +165,7 @@ await shot("experiments");
 await scan("experiments");
 
 // The to-do list suggests a "getting started" email to the parent who never practised.
-await tab("To do");
+await tab("To Do");
 const item = page.getByRole("listitem").filter({ hasText: parentEmail });
 check(await item.getByText("Signed up, never practised").waitFor({ timeout: 8000 }).then(() => true, () => false), "the to-do list shows a family that never practised");
 await item.getByRole("button", { name: "Write email" }).click();

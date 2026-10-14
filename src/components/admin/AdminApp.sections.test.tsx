@@ -377,7 +377,7 @@ describe("AdminApp A/B tests", () => {
     asAdmin((url, method) => {
       if (url === "/api/admin/experiments/" && method === "GET") return { experiments: [exp({})] };
     });
-    const user = await openTab("A/B tests");
+    const user = await openTab("A/B Tests");
     const card = (await screen.findByRole("heading", { name: "home-colours" })).closest("li")!;
     expect(card).toHaveTextContent("Running since");
     expect(card).toHaveTextContent("Variants: control 25% (control), warm 75%");
@@ -396,7 +396,7 @@ describe("AdminApp A/B tests", () => {
     asAdmin((url, method) => {
       if (url === "/api/admin/experiments/" && method === "GET") return { experiments: [exp({})] };
     });
-    const user = await openTab("A/B tests");
+    const user = await openTab("A/B Tests");
     const card = (await screen.findByRole("heading", { name: "home-colours" })).closest("li")!;
     expect(within(card).getByRole("status")).toHaveTextContent(/warm is ahead: 25% of families paying against 10%/);
     await user.click(within(card).getByRole("button", { name: "Use warm for everyone" }));
@@ -408,7 +408,7 @@ describe("AdminApp A/B tests", () => {
     asAdmin((url, method) => {
       if (url === "/api/admin/experiments/" && method === "GET") return { experiments: [exp({ results: [{ variant: "control", families: 5, paid: 0, active: 0, paidP: null, activeP: null }, { variant: "warm", families: 6, paid: 3, active: 3, paidP: 0.1, activeP: 0.1 }] })] };
     });
-    await openTab("A/B tests");
+    await openTab("A/B Tests");
     const card = (await screen.findByRole("heading", { name: "home-colours" })).closest("li")!;
     expect(within(card).getByRole("status")).toHaveTextContent(/Too early to call/);
     expect(within(card).queryByRole("button", { name: /for everyone/ })).not.toBeInTheDocument();
@@ -418,7 +418,7 @@ describe("AdminApp A/B tests", () => {
     asAdmin((url, method) => {
       if (url === "/api/admin/experiments/" && method === "GET") return { experiments: [exp({ status: "draft", startedAt: null, results: [], description: "" })] };
     });
-    const user = await openTab("A/B tests");
+    const user = await openTab("A/B Tests");
     const card = (await screen.findByRole("heading", { name: "home-colours" })).closest("li")!;
     expect(card).toHaveTextContent("Draft");
     expect(within(card).queryByRole("table")).not.toBeInTheDocument();
@@ -436,7 +436,7 @@ describe("AdminApp A/B tests", () => {
         return { experiments: [exp({ status: "stopped", stoppedAt: Date.now(), winner: "warm" }), exp({ key: "old-test", status: "stopped", stoppedAt: Date.now(), winner: null, results: [{ variant: "control", families: 0, paid: 0, active: 0, paidP: 0.03, activeP: null }] })] };
       }
     });
-    const user = await openTab("A/B tests");
+    const user = await openTab("A/B Tests");
     const card = (await screen.findByRole("heading", { name: "home-colours" })).closest("li")!;
     expect(card).toHaveTextContent(/Stopped .*, everyone sees warm/);
     const old = screen.getByRole("heading", { name: "old-test" }).closest("li")!;
@@ -449,7 +449,7 @@ describe("AdminApp A/B tests", () => {
 
   it("says when there are no tests yet", async () => {
     asAdmin();
-    await openTab("A/B tests");
+    await openTab("A/B Tests");
     expect(await screen.findByText("No tests yet.")).toBeInTheDocument();
   });
 });
@@ -509,12 +509,12 @@ describe("AdminApp engagement", () => {
     });
     const user = userEvent.setup();
     render(<AdminApp />);
-    const todo = await screen.findByRole("button", { name: /^To do\s*2\s*waiting$/ });
+    const todo = await screen.findByRole("button", { name: /^To Do\s*2\s*waiting$/ });
     await user.click(todo);
     await user.click(await screen.findByRole("button", { name: "Read and reply" }));
     expect(screen.getByRole("button", { name: "Inbox" })).toHaveAttribute("aria-current", "page");
     expect(await screen.findByRole("heading", { name: "Help" })).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: /^To do/ }));
+    await user.click(screen.getByRole("button", { name: /^To Do/ }));
     await user.click(await screen.findByRole("button", { name: "Open reports" }));
     expect(screen.getByRole("button", { name: "Reports" })).toHaveAttribute("aria-current", "page");
   });
@@ -562,6 +562,17 @@ describe("AdminApp engagement", () => {
       expect(await screen.findByRole("heading", { name: "Billing" })).toBeInTheDocument();
       expect(screen.getByRole("button", { name: "Users" })).toHaveAttribute("aria-current", "page");
       expect(screen.getByText("Their last payment failed.")).toBeInTheDocument();
+    } finally {
+      window.history.replaceState(null, "", "/");
+    }
+  });
+
+  it("opens a tab from a link written before the tab names were capitalized", async () => {
+    window.history.replaceState(null, "", "/admin/?tab=a%2Fb%20tests");
+    try {
+      asAdmin();
+      render(<AdminApp />);
+      expect(await screen.findByRole("button", { name: "A/B Tests" })).toHaveAttribute("aria-current", "page");
     } finally {
       window.history.replaceState(null, "", "/");
     }
