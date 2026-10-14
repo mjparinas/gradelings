@@ -70,9 +70,14 @@ Texas Education Code chapter 32, subchapter D (§§32.151–32.157) governs oper
 
 ## Known gaps
 
-The unit-by-unit placement and any TEKS knowledge and skills statements with no unit yet are listed in the pull request that added Texas and in the "Known gaps" list below, kept up to date as units are added.
+TEKS knowledge and skills with no unit yet, or only partly practised (October 2026):
 
-<!-- gaps -->
+- **Every subject:** the process standards and skills that can't be asked as questions (fluency, self-sustained reading, handwriting and cursive, composing, oral language, communication and problem-solving skills in social studies) have no unit of their own.
+- **Math:** 1.6(C), 1.6(F) and 2.8 composing and decomposing shapes (light); 3.3(E)–(G) fractions on a number line and fair sharing (partly); 3.4(I), 3.5(C), 3.6(D)–(E); 4.7(A)–(D) measuring and drawing angles with a protractor; 5.3(D)–(G) multiplying and dividing decimals; 5.9 data; 7.2 sets of rational numbers, 7.4(E), 7.6(B)(C)(H) simulations and experimental probability, 7.8(A)(B), 7.12(C); 8.3 dilations (partly), 8.5(A)(E)(F) direct variation, 8.11(B)(C); Algebra I A.2(B)–(D)(H), A.3(D)(G)(H), A.6 and A.7 quadratic graphs, A.8(B), A.9(A)(D)(E), A.10(C), A.11(A).
+- **English language arts and reading:** 1.2(E) alphabetizing and dictionaries; syllable division in 2.2(B)(C); 3.13(F)(G) paraphrasing and works cited; 4.2(A) irregular plurals (partly); 5.9(B) poet and speaker; 8.7(C) non-linear plot; E1.6(B) foils and E1.7(A) comparing literatures. Grade 7 `point-of-view-7` and Grade 9 `word-parts-9` fit their citations only loosely.
+- **Science:** 2.11(A), 2.13(C), 3.6(A)(D), 3.8(A) (partly), 8.6(B) (partly), Biology B.14 classification and B.5(D) viruses (through the microbes units only).
+- **Social studies:** 2.13 (partly); 5.6(C); 6.1(B), 6.2, 6.20 and 6.22 (light or none); 8.11, 8.14 (light), 8.25 (only 8.25(C)), 8.26 art and literature; GOV.3(B), GOV.5(A), GOV.17, GOV.18(A); 4.21, 4.14(B)(C) (as questions about meaning only), 7.20(E), 7.22 and 7.23(B).
+- **Content review:** Texas-specific science items (Gulf Coast hurricanes, Padre Island, Texas fossils, invasive species, urban heat islands) and the Texas history units were written from general knowledge and should be read once by someone who knows Texas schools.
 
 ## Keeping it current
 
