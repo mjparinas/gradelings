@@ -3,7 +3,7 @@ import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { SITE_HOST } from "@/lib/brand";
 import type { FamilyInfo } from "@/lib/model";
-import { devBilling, loadReferral, openBillingPortal, redeemCode, refreshAccount, resendVerification, startCheckout } from "@/lib/account";
+import { billingPortalUrl, devBilling, goToStripe, loadReferral, openBillingPortal, redeemCode, refreshAccount, resendVerification, startCheckout } from "@/lib/account";
 import { LIFETIME_ACCESS } from "@/lib/plan";
 
 const state = vi.hoisted(() => ({
@@ -25,12 +25,14 @@ vi.mock("@/lib/account", () => ({
   startCheckout: vi.fn(),
   devBilling: vi.fn(),
   openBillingPortal: vi.fn(),
+  billingPortalUrl: vi.fn().mockResolvedValue("https://billing.stripe.com/p/session/ready"),
+  goToStripe: vi.fn(),
   resendVerification: vi.fn(),
   loadReferral: vi.fn().mockResolvedValue({ code: "ABCD2345", joined: 2, rewarded: 1, monthsEarned: 1, maxMonths: 12, bonusDays: 30 }),
   redeemCode: vi.fn(),
 }));
 
-import { includedFor, SubscriptionPage } from "./Subscription";
+import { includedFor, PORTAL_RECHECK_MS, SubscriptionPage } from "./Subscription";
 
 const billing = { stripe: true, dev: false };
 
@@ -273,8 +275,51 @@ describe("SubscriptionPage billing actions", () => {
     expect(screen.getByRole("heading", { name: "Subscription" })).toBeInTheDocument();
     expect(screen.getByText("⭐ Premium (yearly)")).toBeInTheDocument();
     expect(screen.getByText("Renews March 3, 2027")).toBeInTheDocument();
+    // The portal link is fetched as the page opens, so the button leaves straight away.
+    await waitFor(() => expect(billingPortalUrl).toHaveBeenCalled());
+    await Promise.resolve();
+    fireEvent.click(screen.getByRole("button", { name: "Manage billing, change plan or cancel" }));
+    expect(goToStripe).toHaveBeenCalledWith("https://billing.stripe.com/p/session/ready");
+    expect(screen.getByRole("button", { name: "Opening billing…" })).toBeDisabled();
+  });
+
+  it("fetches the portal link on click when it couldn't be fetched ahead", async () => {
+    vi.mocked(billingPortalUrl).mockRejectedValueOnce(new Error("offline"));
+    vi.mocked(goToStripe).mockClear();
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account, subscription: { status: "active", interval: "month", currentPeriodEnd: Date.UTC(2027, 2, 3, 12) } };
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    await waitFor(() => expect(billingPortalUrl).toHaveBeenCalled());
     fireEvent.click(screen.getByRole("button", { name: "Manage billing, change plan or cancel" }));
     await waitFor(() => expect(openBillingPortal).toHaveBeenCalled());
+    expect(goToStripe).not.toHaveBeenCalled();
+  });
+
+  it("says a cancelled trial ends without a charge, and a cancelled plan stays on until its end", () => {
+    state.family = { plan: "premium", trialEndsAt: 0, updatedAt: 1, account, subscription: { status: "trialing", interval: "month", currentPeriodEnd: Date.UTC(2026, 10, 9, 12), cancelAt: Date.UTC(2026, 10, 9, 12) } };
+    const { unmount } = render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    expect(screen.getByText("Cancelled. Your free trial runs until November 9, 2026, then the plan ends and you won't be charged.")).toBeInTheDocument();
+    expect(screen.queryByText(/Your first payment is that day/)).not.toBeInTheDocument();
+    unmount();
+    state.family = { ...state.family, subscription: { status: "active", interval: "year", currentPeriodEnd: Date.UTC(2027, 2, 3, 12), cancelAt: Date.UTC(2027, 2, 3, 12) } };
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    expect(screen.getByText("Cancelled. Premium stays on until March 3, 2027, then the plan ends and you won't be charged again.")).toBeInTheDocument();
+    expect(screen.queryByText(/Renews/)).not.toBeInTheDocument();
+  });
+
+  it("checks the plan again a few seconds after the parent comes back from the billing portal", async () => {
+    vi.useFakeTimers();
+    try {
+      state.query = new URLSearchParams("portal=done");
+      state.family = { plan: "premium", trialEndsAt: 0, updatedAt: 1, account, subscription: { status: "active", interval: "month" } };
+      vi.mocked(refreshAccount).mockClear().mockResolvedValue({ stripe: true, dev: false });
+      render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+      expect(refreshAccount).toHaveBeenCalledTimes(1);
+      await vi.advanceTimersByTimeAsync(PORTAL_RECHECK_MS);
+      expect(refreshAccount).toHaveBeenCalledTimes(2);
+    } finally {
+      vi.useRealTimers();
+      state.query = new URLSearchParams();
+    }
   });
 
   it("cancels a simulated subscription in development mode", async () => {

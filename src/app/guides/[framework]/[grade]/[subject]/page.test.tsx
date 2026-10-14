@@ -49,7 +49,7 @@ describe("subject help-at-home guide", () => {
     const f = getFramework("ca-sk");
     render(await SubjectGuide(props("saskatchewan", "grade-1", "language")));
     expect(screen.getByRole("link", { name: "Get the sheet" })).toHaveAttribute("href", guidePath.worksheet(f, "1", "language"));
-    expect(screen.getByRole("link", { name: /^Practise in / })).toHaveAttribute("href", "/play/");
+    expect(screen.getByRole("link", { name: /^Practise in / })).toHaveAttribute("href", expect.stringMatching(/^\/play\/#\/start\?framework=[a-z-]+/));
     // Grade 1 is in the little-kid band, so the tips are for little kids.
     const tips = within(screen.getByRole("region", { name: /Easy ways to practise/ })).getAllByRole("listitem");
     expect(tips.map((li) => li.textContent)).toEqual(HOME_TIPS.language.little);

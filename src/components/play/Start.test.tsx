@@ -9,14 +9,19 @@ const h = vi.hoisted(() => ({
   setActive: vi.fn(),
   signInStudent: vi.fn(),
   profiles: [] as Partial<Profile>[],
+  account: null as null | { familyId: string },
+  flagOn: true,
+  getKV: vi.fn(async () => undefined),
 }));
 
 vi.mock("@/lib/store", () => ({
-  useStore: (select: (s: unknown) => unknown) => select({ addProfile: h.addProfile, setActive: h.setActive }),
+  useStore: (select: (s: unknown) => unknown) => select({ addProfile: h.addProfile, setActive: h.setActive, family: { account: h.account } }),
   useProfiles: () => h.profiles,
   useDerived: (id: string) => ({ level: id === "a" ? 4 : 1 }),
 }));
 vi.mock("@/lib/account", () => ({ signInStudent: h.signInStudent }));
+vi.mock("@/lib/remoteFlags", () => ({ useFlag: () => h.flagOn }));
+vi.mock("@/lib/localdb", () => ({ getKV: h.getKV }));
 vi.mock("@/lib/sound", () => ({ sounds: { complete: vi.fn() } }));
 vi.mock("../Critter", async (orig) => ({
   ...(await orig<typeof import("../Critter")>()),
@@ -32,7 +37,16 @@ const click = (name: string | RegExp) => fireEvent.click(screen.getByRole("butto
 beforeEach(() => {
   vi.clearAllMocks();
   h.profiles = [];
+  h.account = null;
+  h.flagOn = true;
+  window.location.hash = "";
 });
+
+async function fillIn(name = "Sam") {
+  await userEvent.type(screen.getByLabelText("Name"), name);
+  click("Grade 3");
+  click("Start!");
+}
 
 describe("FirstRun", () => {
   it("meets Ollie, then asks the first child's name", () => {
@@ -50,6 +64,23 @@ describe("FirstRun", () => {
     expect(screen.getByRole("heading", { name: "Sign in to your class" })).toBeInTheDocument();
     click("← Back");
     expect(screen.getByText(/I'm Ollie the Otter/)).toBeInTheDocument();
+  });
+});
+
+describe("FirstRun from a public page's link", () => {
+  it("starts with the page's province or state and grade picked", () => {
+    window.location.hash = "#/start?framework=ca-on&grade=2&subject=math&unit=adding-to-100";
+    render(<FirstRun />);
+    click(/Let's go!/);
+    expect(screen.getByRole("button", { name: "Grade 2" })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByText(/Grade 2 · .*Ontario/)).toBeInTheDocument();
+  });
+
+  it("ignores a link that names no framework we know", () => {
+    window.location.hash = "#/start?framework=ca-qc&grade=2";
+    render(<FirstRun />);
+    click(/Let's go!/);
+    expect(screen.getByRole("button", { name: "Grade 2" })).toHaveAttribute("aria-pressed", "false");
   });
 });
 
@@ -117,6 +148,54 @@ describe("NewChild", () => {
     expect(screen.getByText("Who's joining us?")).toBeInTheDocument();
     click("Cancel");
     expect(onCancel).toHaveBeenCalled();
+  });
+});
+
+describe("NewChild on a device with no account", () => {
+  it("offers the progress emails before the first child plays, and Not now just starts", async () => {
+    const onDone = vi.fn();
+    render(<NewChild onDone={onDone} first />);
+    await fillIn();
+    expect(h.addProfile).not.toHaveBeenCalled();
+    expect(screen.getByRole("heading", { name: /For grown-ups/ })).toBeInTheDocument();
+    expect(screen.getByText(/Get Sam's progress by email/)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Email me the reports" })).toHaveAttribute("href", "/parents/#/account");
+    click(/Not now, let's play!/);
+    expect(h.addProfile).toHaveBeenCalledWith(expect.objectContaining({ name: "Sam", grade: "3" }));
+    expect(onDone).toHaveBeenCalledWith("new-id");
+  });
+
+  it("Email me the reports adds the child, waits for the save, then opens the parent area", async () => {
+    const assign = vi.fn();
+    const real = window.location;
+    Object.defineProperty(window, "location", { configurable: true, value: { ...real, assign, href: real.href, hash: real.hash } });
+    try {
+      render(<NewChild onDone={() => {}} first />);
+      await fillIn();
+      fireEvent.click(screen.getByRole("link", { name: "Email me the reports" }));
+      expect(h.addProfile).toHaveBeenCalled();
+      await vi.waitFor(() => expect(assign).toHaveBeenCalledWith(expect.stringContaining("/parents/#/account")));
+      expect(h.getKV).toHaveBeenCalledWith("profiles");
+    } finally {
+      Object.defineProperty(window, "location", { configurable: true, value: real });
+    }
+  });
+
+  it.each([
+    ["the family is signed in", () => (h.account = { familyId: "f" })],
+    ["the flag is off", () => (h.flagOn = false)],
+  ])("skips the step when %s", async (_, set) => {
+    set();
+    render(<NewChild onDone={() => {}} first />);
+    await fillIn();
+    expect(h.addProfile).toHaveBeenCalled();
+    expect(screen.queryByRole("heading", { name: /For grown-ups/ })).not.toBeInTheDocument();
+  });
+
+  it("never asks when adding another child", async () => {
+    render(<NewChild onDone={() => {}} onCancel={() => {}} />);
+    await fillIn();
+    expect(h.addProfile).toHaveBeenCalled();
   });
 });
 

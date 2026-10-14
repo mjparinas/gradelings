@@ -60,7 +60,7 @@ describe("printable practice sheet", () => {
     await userEvent.click(screen.getByRole("button", { name: /Print this sheet/ }));
     expect(print).toHaveBeenCalledOnce();
     expect(screen.getByRole("link", { name: "See all English language arts units" })).toHaveAttribute("href", "/curriculum/new-brunswick/grade-2/language/");
-    expect(screen.getByRole("link", { name: "Try it free" })).toHaveAttribute("href", "/play/");
+    expect(screen.getByRole("link", { name: "Try it free" })).toHaveAttribute("href", expect.stringMatching(/^\/play\/#\/start\?framework=[a-z-]+/));
   });
 
   it("can be shared, or saved to Pinterest with its tall image", async () => {

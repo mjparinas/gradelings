@@ -92,7 +92,7 @@ describe("portal, credits and coupons", () => {
     fetchMock.mockResolvedValueOnce(ok({ url: "https://billing.stripe.com/p/1" }));
     expect(await createPortal("cus_1", "https://app.test")).toBe("https://billing.stripe.com/p/1");
     expect(fetchMock.mock.calls[0][0]).toBe("https://api.stripe.com/v1/billing_portal/sessions");
-    expect(form()).toEqual({ customer: "cus_1", return_url: "https://app.test/parents/#/subscription" });
+    expect(form()).toEqual({ customer: "cus_1", return_url: "https://app.test/parents/#/subscription?portal=done" });
   });
 
   it("credits a customer as a negative balance, whatever sign is passed", async () => {

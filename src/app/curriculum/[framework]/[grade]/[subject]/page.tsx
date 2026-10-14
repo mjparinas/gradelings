@@ -9,6 +9,7 @@ import { getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects
 import { JsonLd } from "@/lib/site";
 import { ShareButton } from "@/components/site/ShareButton";
 import { pageMeta } from "@/lib/pageMeta";
+import { playHref } from "@/lib/playLink";
 
 export const dynamicParams = false;
 
@@ -50,7 +51,7 @@ export default async function SubjectPage({ params }: PageProps<"/curriculum/[fr
   ];
 
   return (
-    <SitePage cta>
+    <SitePage cta play={playHref({ framework: f.id, grade, subject: course.subject })}>
       <JsonLd
         data={[
           breadcrumbJsonLd(crumbs),

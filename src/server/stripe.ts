@@ -168,7 +168,8 @@ export async function createCoupon(opts: { percentOff: number; duration: "once" 
 export async function createPortal(customer: string, origin: string): Promise<string> {
   const session = await stripe<{ url: string }>("billing_portal/sessions", {
     customer,
-    return_url: `${origin}/parents/#/subscription`,
+    // The query tells the Subscription page to pick up a change made in the portal (src/components/parents/Subscription.tsx).
+    return_url: `${origin}/parents/#/subscription?portal=done`,
   });
   return session.url;
 }

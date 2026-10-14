@@ -67,6 +67,9 @@ export interface VisitsReport {
   pages: { key: string; visitors: number; pageviews: number }[];
   referrers: { key: string; visitors: number; pageviews: number }[];
   countries: { key: string; visitors: number; pageviews: number }[];
+  /** Clicks on "Try it free" and Subscribe links by the page they were on, most first. Missing when Vercel
+   * couldn't give custom events (they need a paid plan). */
+  clicks?: { key: string; trial: number; subscribe: number }[];
 }
 
 /** A part that isn't set up says which settings to add; one that failed says why. */

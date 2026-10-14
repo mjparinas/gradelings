@@ -36,7 +36,7 @@ describe("curriculum subject page", () => {
       // Each unit cites this framework's standard, never another framework's.
       expect(li).toHaveTextContent(`${f.standardLabel}: ${u.standards[id]}`);
     });
-    expect(within(screen.getByRole("region", { name: /Ready to try/ })).getByRole("link", { name: "Try it free" })).toHaveAttribute("href", "/play/");
+    expect(within(screen.getByRole("region", { name: /Ready to try/ })).getByRole("link", { name: "Try it free" })).toHaveAttribute("href", expect.stringMatching(/^\/play\/#\/start\?framework=[a-z-]+/));
   });
 
   it("tells parents what kids call the subject when it differs", async () => {

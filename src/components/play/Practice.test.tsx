@@ -31,10 +31,11 @@ const h = vi.hoisted(() => {
     dailyDone: [] as string[],
     off: new Set<string>(),
     speak: vi.fn(),
+    query: new URLSearchParams(),
   };
 });
 
-vi.mock("@/lib/router", () => ({ go: h.go, href: (path: string) => `#${path}` }));
+vi.mock("@/lib/router", () => ({ go: h.go, href: (path: string) => `#${path}`, useRoute: () => ({ path: [], query: h.query }) }));
 vi.mock("@/content", () => ({
   coursesForGrade: () => h.courses,
   unitKey: (grade: string, subject: string, id: string) => `${grade}/${subject}/${id}`,
@@ -78,6 +79,7 @@ beforeEach(() => {
   h.settings = { enabledSubjects: ["math", "language"] };
   h.premium = true;
   h.open = new Set(["add", "sub", "time", "rhyme"]);
+  h.query = new URLSearchParams();
   h.assigned = [];
   h.dailyDone = [];
   h.off = new Set();
@@ -209,6 +211,31 @@ describe("UnitList", () => {
     inBand("little", <UnitList subject="math" />);
     fireEvent.click(tile("Adding"));
     expect(h.go).toHaveBeenLastCalledWith("/session", { mode: "practice", scope: "2/math/add" });
+  });
+
+  it("a link from the unit's public page opens that unit once, as if it was tapped", () => {
+    h.query = new URLSearchParams("unit=sub");
+    const { rerender } = inBand("big", <UnitList subject="math" />);
+    expect(screen.getByRole("dialog", { name: /Subtracting/ })).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("dialog"));
+    rerender(
+      <BandProvider value="big">
+        <UnitList subject="math" />
+      </BandProvider>,
+    );
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+  });
+
+  it("a link sends little kids straight into the unit, and ignores a unit the course doesn't have", () => {
+    h.query = new URLSearchParams("unit=add");
+    const { unmount } = inBand("little", <UnitList subject="math" />);
+    expect(h.go).toHaveBeenCalledWith("/lesson", { scope: "2/math/add" });
+    unmount();
+    h.go.mockClear();
+    h.query = new URLSearchParams("unit=plants");
+    inBand("big", <UnitList subject="math" />);
+    expect(h.go).not.toHaveBeenCalled();
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
   });
 
   it("a unit the plan doesn't open is locked and asks for a grown-up", () => {

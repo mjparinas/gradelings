@@ -47,7 +47,7 @@ describe("guides hub page", () => {
 
     // The closing call to action sends visitors to the app.
     const cta = within(main).getByRole("region", { name: /Ready to try/ });
-    expect(within(cta).getByRole("link", { name: "Try it free" })).toHaveAttribute("href", "/play/");
+    expect(within(cta).getByRole("link", { name: "Try it free" })).toHaveAttribute("href", expect.stringMatching(/^\/play\/#\/start\?framework=[a-z-]+/));
   });
 
   it("describes the province's own report card levels, never another province's", async () => {

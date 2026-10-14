@@ -67,7 +67,7 @@ Students' devices also keep a copy of progress in the browser (IndexedDB and loc
 | Resend | Teacher emails | Teacher email address and message; whether each email was opened and which links were clicked (open and click tracking is on) | United States |
 | Sentry | Crash reports | Scrubbed errors | United States or EU |
 | Stripe | Parent payments | Parent email and payment | United States. Not used for schools while classes are free. |
-| Vercel Web Analytics | Anonymous page counts on public pages only | Page, country | Switched off in the student app and teacher area |
+| Vercel Web Analytics | Anonymous page counts, and counts of trial and subscribe button presses, on public pages only | Page, country | Switched off in the student app and teacher area |
 
 If a district requires all providers to be in Canada, the database (Turso, Virginia), Resend and Sentry are the gaps. Resend and Sentry can be switched off for a school-only deployment; the database would need a different host, since Turso has no Canadian location. Decision for the owner.
 
