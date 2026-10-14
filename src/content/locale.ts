@@ -166,6 +166,15 @@ export function localizeText(text: string, locale: Locale): string {
   return locale === "en-US" ? usNumbers(usSpelling(text)) : text;
 }
 
+/**
+ * Copy written for families (the parent area, emails) in a locale: spelling and numbers as `localizeText`, plus the
+ * grade wording ("Grade 4" → "4th grade"). Canadian copy is returned unchanged.
+ */
+export function localizeCopy(text: string, locale: Locale): string {
+  if (locale !== "en-US") return text;
+  return localizeText(text, locale).replace(/\bGrade (\d)\b/g, (_, g: string) => gradeName(g as GradeId, locale));
+}
+
 /** Read-aloud text: spelling only, so numbers are still read as words the way the unit wrote them. */
 function localizeSpeak(text: string, locale: Locale): string {
   return locale === "en-US" ? usSpelling(text) : text;

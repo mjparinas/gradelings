@@ -352,7 +352,7 @@ interface QueueItem {
   familyId?: string;
   email?: string;
   at: number;
-  action: { type: "email"; preset: string } | { type: "verify" } | { type: "open" } | { type: "reports" } | { type: "inbox"; id: string };
+  action: { type: "email"; preset: string } | { type: "verify" } | { type: "open" } | { type: "reports" } | { type: "inbox"; id: string } | { type: "task" };
 }
 
 export function Queue({ onOpenFamily, onReports, onInbox, onCount }: { onOpenFamily: (id: string) => void; onReports: () => void; onInbox: (id: string) => void; onCount?: (n: number) => void }) {
@@ -401,7 +401,7 @@ export function Queue({ onOpenFamily, onReports, onInbox, onCount }: { onOpenFam
         </button>
       </div>
       <p className="max-w-3xl text-sm text-ink-soft">
-        Families worth a nudge today, worked out fresh from the data. An item goes away once the family moves on, or for a week after you email them from here.
+        Families worth a nudge today, worked out fresh from the data, plus setup tasks still open. An item goes away once the family moves on (or for a week after you email them from here), or once the task is done.
       </p>
       <Notice err={err} />
       {!items ? (

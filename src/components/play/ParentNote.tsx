@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { getFramework } from "@/content/frameworks";
 import { activeNudge } from "@/lib/familyGoal";
+import { sayFor } from "@/lib/say";
 import { useActiveProfile, useChildSettings } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 
@@ -25,7 +27,7 @@ export function ParentNote() {
   return (
     <section className="card flex items-center gap-3 p-4" aria-label="A note from your grown-up">
       <span className="text-3xl" aria-hidden="true">💌</span>
-      <p className="flex-1 font-read text-lg font-bold">{note.text}</p>
+      <p className="flex-1 font-read text-lg font-bold">{sayFor(getFramework(profile.framework))(note.text)}</p>
       <button
         type="button"
         className="btn btn-soft min-h-12 px-4 font-bold"
