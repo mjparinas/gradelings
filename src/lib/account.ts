@@ -1,5 +1,6 @@
 "use client";
 
+import { grantBillingPass } from "./billingReturn";
 import type { FamilyInfo } from "./model";
 import { clearReferralCode, forgetMyInvite, myInviteCode, rememberMyInvite, savedReferralCode } from "./referral";
 import { useStore } from "./store";
@@ -117,12 +118,22 @@ export async function refreshAccount(): Promise<BillingInfo | null> {
 
 export async function startCheckout(interval: "month" | "year") {
   const { url } = await post<{ url: string }>("/api/billing/checkout/", { interval });
+  goToStripe(url);
+}
+
+/** Leaves for a Stripe page; the way back skips the PIN gate once (src/lib/billingReturn.ts). */
+export function goToStripe(url: string) {
+  grantBillingPass();
   window.location.href = url;
 }
 
+/** A billing portal link for this family. Stripe's links are short-lived, so it is fetched when needed. */
+export async function billingPortalUrl(): Promise<string> {
+  return (await post<{ url: string }>("/api/billing/portal/")).url;
+}
+
 export async function openBillingPortal() {
-  const { url } = await post<{ url: string }>("/api/billing/portal/");
-  window.location.href = url;
+  goToStripe(await billingPortalUrl());
 }
 
 export async function devBilling(action: "subscribe" | "cancel", interval: "month" | "year" = "month") {

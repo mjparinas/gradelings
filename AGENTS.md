@@ -338,7 +338,7 @@ Tests are duplicated across screen sizes only where layout can break:
 
 ### Parent area (`/parents/`)
 - **A PIN gate protects it.** The PIN is salted and hashed with SHA-256 on the device. "Forgot PIN" asks a multiplication question young kids can't answer.
-  - The gate relocks on every full page load.
+  - The gate relocks on every full page load, except once on the way back from Stripe checkout or the billing portal, in the same tab within 30 minutes (`src/lib/billingReturn.ts`; owner, October 2026).
 - **Sections:**
   - Overview.
   - Reports: 7/14/30/90 days, with charts, strengths, next steps, a table of every unit and a print view.

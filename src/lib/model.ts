@@ -82,7 +82,8 @@ export interface FamilyInfo {
   };
   plan: "trial" | "free" | "premium";
   trialEndsAt: number;
-  subscription?: { status: string; interval?: "month" | "year"; currentPeriodEnd?: number };
+  /** `cancelAt`: the parent cancelled, and the plan (or its free trial) stops then instead of renewing. */
+  subscription?: { status: string; interval?: "month" | "year"; currentPeriodEnd?: number; cancelAt?: number };
   /** Free access from a redeemed code ends at this time (ms); `LIFETIME_ACCESS` never ends. Null when there is none. */
   accessUntil?: number | null;
   /** A redeemed discount code waiting for the next checkout. */

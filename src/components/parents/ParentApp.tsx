@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState, useSyncExternalStore, type ReactNode } from "react";
 import { APP_NAME } from "@/lib/brand";
 import { refreshAccount, type BillingInfo } from "@/lib/account";
+import { takeBillingPass } from "@/lib/billingReturn";
 import { hasPaidPlan, isPremium, trialDaysLeft } from "@/lib/plan";
 import { useRoute } from "@/lib/router";
 import { useProfiles, useReady, useStore } from "@/lib/store";
@@ -139,7 +140,8 @@ function ClassAccountNotice() {
 
 export function ParentApp() {
   const ready = useReady();
-  const [unlocked, setUnlocked] = useState(false);
+  // Back from Stripe straight after typing the PIN: don't ask for it again (src/lib/billingReturn.ts).
+  const [unlocked, setUnlocked] = useState(() => typeof window !== "undefined" && takeBillingPass(window.location.hash));
   const [billing, setBilling] = useState<BillingInfo | null>(null);
   const { path } = useRoute();
   const profiles = useProfiles();
