@@ -263,6 +263,8 @@ describe("the to-do list", () => {
     expect(find(unconfirmed.familyId)).toMatchObject({ kind: "unconfirmed", action: { type: "verify" } });
     expect(find(pastDue.familyId)).toMatchObject({ kind: "past-due", action: { type: "open" } });
     expect(list.find((i) => i.kind === "reports")).toBeTruthy();
+    // The social accounts task waits until every chosen platform's URL is in SOCIAL_PROFILES.
+    expect(list.find((i) => i.key === "setup:social")).toMatchObject({ kind: "setup", action: { type: "task" } });
     // The admin's own new account isn't in it, and nothing is about a student account.
     expect(find(admin.familyId)).toBeUndefined();
   });

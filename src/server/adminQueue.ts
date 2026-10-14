@@ -1,6 +1,7 @@
 import "server-only";
 import { query, run } from "./db";
 import { inboxConfigured, listInbox } from "./inbox";
+import { CONTACT_EMAIL, missingSocialPlatforms } from "@/lib/brand";
 
 // The admin panel's to-do list: families worth acting on now, each with the action that fits. It is worked out
 // fresh each time from the data, so an item goes away once the family moves on (pays, practises, confirms).
@@ -15,7 +16,7 @@ const RECENT_PANEL_MAIL = "EXISTS (SELECT 1 FROM email_log l WHERE l.family_id =
 /** Items of one kind shown at most. */
 const PER_KIND = 50;
 
-export type QueueAction = { type: "email"; preset: string } | { type: "verify" } | { type: "open" } | { type: "reports" } | { type: "inbox"; id: string };
+export type QueueAction = { type: "email"; preset: string } | { type: "verify" } | { type: "open" } | { type: "reports" } | { type: "inbox"; id: string } | { type: "task" };
 
 export interface QueueItem {
   key: string;
@@ -39,11 +40,15 @@ export const QUEUE_KINDS = {
   unconfirmed: "Email not confirmed",
   bounced: "Email bouncing",
   reports: "Question reports",
+  setup: "Set up the social accounts",
 } as const;
 export type QueueKind = keyof typeof QUEUE_KINDS;
 
 const days = (ms: number) => Math.max(0, Math.round(ms / DAY));
 const plural = (n: number, w: string) => `${n} ${w}${n === 1 ? "" : "s"}`;
+const listOf = (xs: string[]) => (xs.length < 2 ? xs.join("") : `${xs.slice(0, -1).join(", ")} and ${xs[xs.length - 1]}`);
+/** When the owner picked the social platforms. */
+const SOCIAL_DECIDED = Date.UTC(2026, 9, 14);
 type Row = Record<string, unknown>;
 
 export async function queueItems(now = Date.now()): Promise<QueueItem[]> {
@@ -92,6 +97,19 @@ export async function queueItems(now = Date.now()): Promise<QueueItem[]> {
   ];
   const n = Number(reports[0]?.n ?? 0);
   if (n) items.push({ key: "reports", kind: "reports", title: QUEUE_KINDS.reports, detail: `${plural(n, "question report")} waiting to be looked at.`, at: Number(reports[0]?.first ?? now), action: { type: "reports" } });
+
+  // Owner tasks that live in code, not the data. The social accounts item stays until every chosen platform's URL is
+  // in SOCIAL_PROFILES (src/lib/brand.ts).
+  const social = missingSocialPlatforms();
+  if (social.length)
+    items.push({
+      key: "setup:social",
+      kind: "setup",
+      title: QUEUE_KINDS.setup,
+      detail: `Create the ${listOf(social)} accounts with ${CONTACT_EMAIL}, then send their links so they go in SOCIAL_PROFILES (src/lib/brand.ts) and search engines tie them to the site.`,
+      at: SOCIAL_DECIDED,
+      action: { type: "task" },
+    });
 
   // Mail people sent us in the last 2 weeks that nobody has answered or set aside. Resend being unreachable
   // never stops the rest of the list.
