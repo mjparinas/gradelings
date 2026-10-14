@@ -6,6 +6,8 @@ import { byCountry } from "@/components/site/provinces";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { APP_NAME } from "@/lib/brand";
 import { pageMeta } from "@/lib/pageMeta";
+import { FaqSection } from "@/components/site/FaqSection";
+import { curriculumIndexFaqs } from "@/components/site/pageFaqs";
 
 export const metadata: Metadata = pageMeta({
   title: "Curriculum: what kids practise in each grade",
@@ -18,7 +20,11 @@ export default function CurriculumIndex() {
     <SitePage cta>
       <Crumbs items={[{ label: "Home", href: "/" }, { label: "Curriculum" }]} />
       <h1 className="text-4xl font-bold">Curriculum</h1>
-      <p className="mt-2 max-w-2xl font-read text-lg text-ink-soft">Pick a curriculum to see the units for each grade and subject, with sample questions.</p>
+      <p className="mt-2 max-w-2xl font-read text-lg text-ink-soft">
+        {APP_NAME} follows {FRAMEWORKS.length} curricula from Kindergarten to Grade 9, with{" "}
+        {FRAMEWORKS.reduce((n, f) => n + gradesWithContent(f).reduce((m, g) => m + coursesFor(f, g).reduce((k, c) => k + c.units.length, 0), 0), 0).toLocaleString("en-CA")} units
+        between them. Pick a curriculum to see the units for each grade and subject, with sample questions and the learning standard each one practises.
+      </p>
       {byCountry(FRAMEWORKS).map((group, i, groups) => (
         <section key={group.country} aria-label={groups.length > 1 ? group.heading : undefined} className={i > 0 ? "mt-10" : ""}>
           {groups.length > 1 && <h2 className="mt-6 text-3xl font-bold">{group.heading}</h2>}
@@ -58,6 +64,7 @@ export default function CurriculumIndex() {
         <h2 className="text-2xl font-bold">More coming</h2>
         <p className="font-read text-ink-soft">Other provinces and US states are on the way. The same lessons, matched to your local curriculum and report card.</p>
       </section>
+      <FaqSection faqs={curriculumIndexFaqs(FRAMEWORKS)} />
     </SitePage>
   );
 }

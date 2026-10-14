@@ -9,6 +9,7 @@ import { APP_NAME } from "@/lib/brand";
 import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
 import { pageMeta } from "@/lib/pageMeta";
+import { US_CLASS_CONSENT } from "@/lib/classroom";
 
 const curricula = TEACHER_FRAMEWORKS.map((f) => f.curriculumName).join(" or ");
 const regions = regionList(TEACHER_FRAMEWORKS);
@@ -22,16 +23,39 @@ export const metadata: Metadata = pageMeta({
 });
 
 const STEPS = [
-  { title: "Create a class", body: "Sign up as a teacher, name your class and choose its grade. You get a short join code." },
-  { title: "Families join", body: "A parent enters the code under Children → Join a class. Nothing about a child is shared until they do, and they can leave at any time." },
-  { title: "Assign units", body: `Choose your ${region} when you create the class, then pick units from its curriculum. Assigned units appear as “From your teacher” on each child's home screen, even offline.` },
-  { title: "See practice results", body: "See each linked student's level, accuracy and attempts on the units you assigned. It shows practice, not a report-card mark." },
+  { title: "Create a class", body: `Sign up as a teacher, name your class, and choose its grade and ${region}. You get a short join code.` },
+  {
+    title: "Add students",
+    body: "Type first names or nicknames and print login cards: each student signs in with the class code and their own code, with no email or password. Or families link their own child with the join code.",
+  },
+  { title: "Assign units", body: "Pick units from the class's curriculum, with an optional date to aim for. They appear as “From your teacher” on each child's home screen, even offline." },
+  {
+    title: "See practice results",
+    body: "See each student's level, accuracy and attempts on the units you assigned, plus which units to reteach and who to check in with. It shows practice, not a report-card mark.",
+  },
 ];
+
+const usClasses = TEACHER_FRAMEWORKS.some((f) => f.country === "US");
 
 const FAQS = [
   { q: "Does it cost anything for teachers?", a: `Classes are free for now. Students whose family has no plan can still open the units you assign.` },
-  { q: "What can I see about my students?", a: "Only what a parent has chosen to share by linking their child to your class: first name, avatar, grade, and level, accuracy and attempts on the units you assigned. Nothing else." },
-  { q: "Do I have to enter students myself?", a: "No. Parents link their own child with your join code, so you never type in student details, and there are no student passwords to manage." },
+  {
+    q: "Do I have to enter students myself?",
+    a: "You choose. You can type first names or nicknames and print login cards, with no email, password or birth year. Or parents link their own child with your join code, and can leave at any time.",
+  },
+  {
+    q: "What can I see about my students?",
+    a: "First name, avatar, grade, and level, accuracy and attempts on the units you assigned, with suggestions for what to look at next. Nothing else.",
+  },
+  {
+    q: "Can I share a class with another teacher?",
+    a: "Yes. Invite up to 5 co-teachers by email. They can see the class, assign units, add students and print login cards. Only the class owner can close the class or delete a student.",
+  },
+  {
+    q: "What happens to student data?",
+    a: "Deleting a student or closing the class deletes the student accounts you added straight away. A class nobody has signed in to for 12 months is deleted, after a warning email at 11 months. Children linked by a parent keep their family's progress.",
+  },
+  ...(usClasses ? [{ q: "Do US schools need parent consent?", a: US_CLASS_CONSENT }] : []),
   { q: "Is this a report-card mark?", a: `No. ${APP_NAME} shows how a student is practising. The teacher decides proficiency, as on the report card.` },
   { q: "Which curriculum does it follow?", a: `Each class follows one ${region}: ${regions}. Units are matched to the ${curricula}, from Kindergarten to Grade 9. Other provinces and states are on the way.` },
   { q: "Are there ads?", a: "No ads and no selling of data. Kids cannot buy anything." },

@@ -54,7 +54,7 @@ describe("grade guide page", () => {
     const scheme = f.scoringFor("4");
     const levels = scheme.levels.map((l) => l.label).join(", ");
     expect(faqAnswers(container)[1]).toContain(
-      scheme.practiceSteps ? `has no single set of named levels on the ${gradeLabel(f, "4")} report card` : `${f.shortName} report cards describe learning with ${levels}.`,
+      scheme.practiceSteps ? `report-card scale in ${gradeLabel(f, "4")}, so` : `${f.shortName} report cards describe learning with ${levels}.`,
     );
     // Each level is explained, with what it means at home.
     const levelList = screen.getByRole("heading", { name: scheme.practiceSteps ? `The four practice steps in ${gradeLabel(f, "4")}` : `What each level means in ${gradeLabel(f, "4")}` }).parentElement!;
@@ -108,7 +108,7 @@ describe("grade guide page", () => {
   it("says a US state's report card has no named levels, in US spelling", async () => {
     const { container } = render(await GradeGuide(props("washington", "grade-4")));
     const answers = faqAnswers(container);
-    expect(answers[1]).toContain("Washington has no single set of named levels on the 4th grade report card");
+    expect(answers[1]).toContain("Washington has no statewide report-card scale in 4th grade");
     expect(container.textContent).not.toMatch(/Washington report cards describe/);
     expect(answers.at(-1)).not.toMatch(/practise/);
   });

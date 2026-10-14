@@ -16,6 +16,7 @@ import { gradeUpdated, guidesUpdated, latest } from "@/content/updated";
 import { JsonLd, absolute } from "@/lib/site";
 import { PinLink, ShareButton } from "@/components/site/ShareButton";
 import { pageMeta } from "@/lib/pageMeta";
+import { scaleReach } from "@/components/site/pageFaqs";
 
 export const dynamicParams = false;
 
@@ -72,7 +73,7 @@ export default async function GradeGuide({ params }: Props) {
   const levelNames = level.map((l) => l.label).join(", ");
   // Where the report card has no named levels, say so rather than claiming it uses our practice steps.
   const reportLine = scheme.practiceSteps
-    ? `${f.shortName} has no single set of named levels on the ${label} report card, so ${APP_NAME} describes practice in four steps: ${levelNames}.`
+    ? `${f.shortName} has no ${scaleReach(f)} report-card scale in ${label}, so ${APP_NAME} describes practice in four steps: ${levelNames}.`
     : `${f.shortName} report cards describe learning with ${levelNames}.`;
 
   const band = ageBandFor(grade);

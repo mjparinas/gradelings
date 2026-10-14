@@ -19,6 +19,8 @@ import { APP_NAME } from "@/lib/brand";
 import { curriculumUpdated, guidesUpdated, latest } from "@/content/updated";
 import { JsonLd } from "@/lib/site";
 import { pageMeta } from "@/lib/pageMeta";
+import { FaqSection } from "@/components/site/FaqSection";
+import { guideHubFaqs } from "@/components/site/pageFaqs";
 
 export const dynamicParams = false;
 
@@ -173,6 +175,8 @@ export default async function GuidesHub({
           ))}
         </div>
       </section>
+
+      <FaqSection faqs={guideHubFaqs(f)} />
 
       <p className="mt-10 font-read text-ink-soft">
         Want the full unit list with learning standards? See the{" "}
