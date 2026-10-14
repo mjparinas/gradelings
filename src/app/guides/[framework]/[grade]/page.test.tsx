@@ -2,6 +2,7 @@
 import { render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { coursesFor, curriculumPath, gradesWithContent, gradeLabel } from "@/components/site/curriculum";
+import { guidePageKind } from "@/components/site/GuideExtras";
 import { guidePath } from "@/components/site/guides";
 import { getFramework } from "@/content/frameworks";
 import { GUIDE_FRAMEWORKS, guidesFor } from "@/content/guides";
@@ -23,7 +24,8 @@ function faqAnswers(container: HTMLElement): string[] {
 
 describe("grade guide page", () => {
   it("has a page for every grade of every framework with guides", () => {
-    const params = generateStaticParams();
+    // The rest are the competencies and assessment pages (guide-routes.test.ts).
+    const params = generateStaticParams().filter((p) => !guidePageKind(p.framework, p.grade));
     for (const f of GUIDE_FRAMEWORKS) {
       expect(params.filter((p) => p.framework === f.slug).map((p) => p.grade)).toEqual(gradesWithContent(f).map(gradeSlug));
     }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { languagesOf } from "@/content/subjects";
 import { preloadPiperVoices } from "@/lib/piper";
 import { useStore } from "@/lib/store";
 
@@ -15,7 +16,7 @@ export function VoicePreload() {
   const wanted = useStore((s): Wanted => {
     const reading = Object.values(s.settings ?? {}).filter((c) => c.autoRead);
     if (reading.length === 0) return "";
-    return reading.some((c) => c.enabledSubjects?.some((id) => id === "immersion" || id === "core-french")) ? "en,fr" : "en";
+    return reading.some((c) => languagesOf(c.enabledSubjects ?? []).includes("fr")) ? "en,fr" : "en";
   });
   useEffect(() => {
     if (!wanted) return;

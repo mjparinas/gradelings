@@ -1,7 +1,23 @@
 import type { AgeBand, GradeId, SubjectId } from "./types";
 
+/** A language a second-language subject is taught in. Read-aloud picks its voice by this. */
+export type SubjectLanguage = "fr";
+
+/** A language's name in English, for parent-facing copy ("Math · Science · French"). */
+export const LANGUAGE_NAME: Record<SubjectLanguage, string> = { fr: "French" };
+
+// The subject registry: every subject the app knows, and what sets it apart. A new second-language subject (Spanish,
+// say) is its id in SubjectId plus one entry here with `language` set; the rest of the app reads the lists below
+// rather than naming subjects. Which grades a framework teaches it in is set in that framework's manifest.
 export interface SubjectMeta {
   id: SubjectId;
+  /** Subject name as parents search for it, whatever the kids see: "English Language Arts". */
+  seoTitle: string;
+  /**
+   * For a second-language subject, the language it teaches. Such subjects are opt-in (a parent turns them on per child)
+   * and never count toward "every unit in your grade" goals; every other subject is a core subject.
+   */
+  language?: SubjectLanguage;
   /** Names change with age: "Letters & Words" for little kids, "Language Arts" for older ones. */
   title: Record<AgeBand, string>;
   emoji: string;
@@ -16,6 +32,7 @@ export interface SubjectMeta {
 export const SUBJECTS: SubjectMeta[] = [
   {
     id: "math",
+    seoTitle: "Math",
     title: { little: "Numbers", middle: "Math", big: "Math" },
     emoji: "🔢",
     colour: "#4f8ef7",
@@ -26,6 +43,7 @@ export const SUBJECTS: SubjectMeta[] = [
   },
   {
     id: "language",
+    seoTitle: "English Language Arts",
     title: { little: "Letters & Words", middle: "Reading & Writing", big: "Language Arts" },
     emoji: "📚",
     colour: "#e9559a",
@@ -36,6 +54,7 @@ export const SUBJECTS: SubjectMeta[] = [
   },
   {
     id: "science",
+    seoTitle: "Science",
     title: { little: "Science", middle: "Science", big: "Science" },
     emoji: "🔬",
     colour: "#25b47e",
@@ -46,6 +65,7 @@ export const SUBJECTS: SubjectMeta[] = [
   },
   {
     id: "social",
+    seoTitle: "Social Studies",
     title: { little: "My World", middle: "Our World", big: "Social Studies" },
     emoji: "🌎",
     colour: "#ff9636",
@@ -56,6 +76,8 @@ export const SUBJECTS: SubjectMeta[] = [
   },
   {
     id: "immersion",
+    seoTitle: "French Immersion",
+    language: "fr",
     title: { little: "En français", middle: "Français", big: "French Immersion" },
     emoji: "🥐",
     colour: "#ef6b6b",
@@ -66,6 +88,8 @@ export const SUBJECTS: SubjectMeta[] = [
   },
   {
     id: "core-french",
+    seoTitle: "Core French",
+    language: "fr",
     title: { little: "Core French", middle: "Core French", big: "Core French" },
     emoji: "🍁",
     colour: "#1fb5c5",
@@ -76,8 +100,18 @@ export const SUBJECTS: SubjectMeta[] = [
   },
 ];
 
-/** The four subjects every child studies. French is opt-in (Settings), so it never counts toward "every unit" goals. */
-export const CORE_SUBJECTS: SubjectId[] = ["math", "language", "science", "social"];
+/** The subjects every child studies. Second languages are opt-in (Settings), so they never count toward "every unit" goals. */
+export const CORE_SUBJECTS: SubjectId[] = SUBJECTS.filter((s) => !s.language).map((s) => s.id);
+
+/** The opt-in second-language subjects taught in a language: subjectsIn("fr") is Immersion and Core French. */
+export function subjectsIn(language: SubjectLanguage): SubjectId[] {
+  return SUBJECTS.filter((s) => s.language === language).map((s) => s.id);
+}
+
+/** The second languages among some subjects, each once: ["fr"]. */
+export function languagesOf(subjects: readonly (SubjectId | string)[]): SubjectLanguage[] {
+  return [...new Set(subjects.map((id) => SUBJECTS.find((s) => s.id === id)?.language).filter((l): l is SubjectLanguage => !!l))];
+}
 
 // Language names and French program names stay capitalized mid-sentence.
 const PROPER_SUBJECT_WORDS = new Set(["English", "French", "Français", "Core", "Immersion"]);

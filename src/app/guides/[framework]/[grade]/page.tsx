@@ -5,6 +5,7 @@ import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/components/site/js
 import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
 import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, gradeLabel, say } from "@/components/site/curriculum";
 import { guidePath } from "@/components/site/guides";
+import { assessmentMetadata, AssessmentView, competenciesMetadata, CompetenciesView, guidePageKind, guidePageParams } from "@/components/site/GuideExtras";
 import { guidesFor, GUIDE_FRAMEWORKS } from "@/content/guides";
 import { getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
@@ -15,8 +16,10 @@ import { PinLink, ShareButton } from "@/components/site/ShareButton";
 
 export const dynamicParams = false;
 
+// Each grade's guide, plus the framework's competencies and assessment pages, whose slugs come from its guide copy
+// (see guidePageKind).
 export function generateStaticParams() {
-  return GUIDE_FRAMEWORKS.flatMap((f) => gradesWithContent(f).map((g) => ({ framework: f.slug, grade: gradeSlug(g) })));
+  return [...GUIDE_FRAMEWORKS.flatMap((f) => gradesWithContent(f).map((g) => ({ framework: f.slug, grade: gradeSlug(g) }))), ...guidePageParams()];
 }
 
 type Props = PageProps<"/guides/[framework]/[grade]">;
@@ -28,7 +31,10 @@ function listOf(names: string[]): string {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const r = resolve(await params);
+  const p = await params;
+  const kind = guidePageKind(p.framework, p.grade);
+  if (kind) return kind === "competencies" ? competenciesMetadata(params) : assessmentMetadata(params);
+  const r = resolve(p);
   if (!r) return {};
   const { framework: f, grade } = r;
   return {
@@ -39,7 +45,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function GradeGuide({ params }: Props) {
-  const r = resolve(await params);
+  const p = await params;
+  const kind = guidePageKind(p.framework, p.grade);
+  if (kind) return kind === "competencies" ? <CompetenciesView params={params} /> : <AssessmentView params={params} />;
+  const r = resolve(p);
   if (!r) notFound();
   const { framework: f, grade } = r;
   const label = gradeLabel(f, grade);
