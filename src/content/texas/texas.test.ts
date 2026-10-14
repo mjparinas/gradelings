@@ -15,9 +15,12 @@ const texas = COURSES.flatMap((c) => c.units.filter((u) => u.standards["us-tx"])
 const sampleOf = (generate: (o: { difficulty: 1 | 2 | 3 }) => Question[]) =>
   [1, 2, 3].flatMap((seed) => ([1, 2, 3] as const).flatMap((difficulty) => withSeed(seed * 101 + difficulty, () => generate({ difficulty }))));
 
-/** Every line a unit shows: title, blurb, parent note and a spread of its questions. */
+/**
+ * Every line a unit shows: title, blurb, parent note and a spread of its questions. A shared unit here carries the
+ * first framework's parent note (California's, for a unit California also uses), so only Texas's own notes are checked.
+ */
 const linesOf = (u: (typeof texas)[number]["u"]) =>
-  [u.title, u.blurb, u.parentNote ?? "", ...sampleOf((o) => u.generate(o)).map(questionText)].join("\n").split("\n");
+  [u.title, u.blurb, u.id.startsWith("tx-") ? (u.parentNote ?? "") : "", ...sampleOf((o) => u.generate(o)).map(questionText)].join("\n").split("\n");
 
 describe("Texas", () => {
   it("is a US framework in US English, offered to families", () => {
@@ -55,7 +58,8 @@ describe("Texas", () => {
   });
 
   it("never borrows another state's Tribal units", () => {
-    const words = /\b(Tribes?|Tribal|treaty|treaties)\b|\bNative\b|California Indian/;
+    // Treaties alone aren't a sign: adopted civics units ask about the Treaty of Paris and foreign treaties.
+    const words = /\b(Tribes?|Tribal)\b|\bNative\b|California Indian/;
     for (const { u, key } of texas.filter(({ u }) => /^(wa|or|ca)-/.test(u.id))) {
       const text = sampleOf((o) => u.generate(o)).map(questionText).join("\n");
       expect(words.test(text) ? key : "", `${key} is another state's unit about Tribes`).toBe("");
