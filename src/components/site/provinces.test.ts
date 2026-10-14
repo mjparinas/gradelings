@@ -47,7 +47,7 @@ describe("homepage province coverage", () => {
 
   it("names every province, with 'the' before the Northwest Territories", () => {
     expect(regionList(FRAMEWORKS)).toBe(
-      "British Columbia, Ontario, Alberta, Saskatchewan, Manitoba, Yukon, the Northwest Territories, Nova Scotia, New Brunswick, Newfoundland and Labrador, Prince Edward Island, Nunavut, Washington, Oregon and California",
+      "British Columbia, Ontario, Alberta, Saskatchewan, Manitoba, Yukon, the Northwest Territories, Nova Scotia, New Brunswick, Newfoundland and Labrador, Prince Edward Island, Nunavut, Washington, Oregon, California and Maine",
     );
   });
 
@@ -102,8 +102,9 @@ describe("provinces and states in marketing copy", () => {
     expect(offersUsd([...ca, wa])).toBe(true);
   });
 
-  it("offers Washington, Oregon and California on the public site", () => {
-    expect(FRAMEWORKS.map((f) => f.id)).toEqual(expect.arrayContaining(["us-wa", "us-or", "us-ca"]));
-    expect(regionSummary(FRAMEWORKS)).toContain("plus Washington, Oregon and California");
+  it("offers Washington, Oregon, California and Maine on the public site", () => {
+    expect(FRAMEWORKS.map((f) => f.id)).toEqual(expect.arrayContaining(["us-wa", "us-or", "us-ca", "us-me"]));
+    // With four or more states, the summary counts them; the pickers and the home page's coverage list name each one.
+    expect(regionSummary(FRAMEWORKS)).toContain("Canadian provinces and territories and 4 US states");
   });
 });
