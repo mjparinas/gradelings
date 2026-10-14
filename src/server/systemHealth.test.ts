@@ -268,13 +268,43 @@ describe("deploys (Vercel)", () => {
   it("shows what's live, the daily limit and failures", async () => {
     const calls = stubFetch({
       "https://api.vercel.com/v6/deployments": (url: string) => (url.includes("since=") ? { deployments: Array.from({ length: 85 }, (_, i) => dep(i * 1000, "READY", null)) } : { deployments: [dep(1000, "READY"), dep(DAY, "ERROR", null)] }),
+      "https://api.vercel.com/v2/teams/team_1": { id: "team_1", billing: { plan: "hobby" } },
     });
     const c = await health.deploysCheck(NOW);
     expect(c.state).toBe("warn");
     expect(c.summary).toBe("85 of 100 deploys used in the last 24 hours.");
+    expect(c.rows.find((r) => r.label === "Deploys in 24 hours")?.value).toBe("85 of 100 (Hobby limit)");
     expect(c.rows[0]).toMatchObject({ label: "Live in production", value: "Ship it", href: "https://app.vercel.app" });
     expect(c.rows.find((r) => r.label === "Failed deploys in 7 days")?.value).toBe("1");
-    expect(calls.every((x) => x.url.includes("teamId=team_1"))).toBe(true);
+    expect(calls.every((x) => x.url.includes("teamId=team_1") || x.url.endsWith("/v2/teams/team_1"))).toBe(true);
+    expect(calls.every((x) => x.auth === "Bearer v")).toBe(true);
+  });
+
+  const deploys = (n: number) => ({
+    "https://api.vercel.com/v6/deployments": (url: string) => ({ deployments: url.includes("since=") ? Array.from({ length: n }, (_, i) => dep(i * 1000, "READY", null)) : [dep(1000, "READY")] }),
+  });
+  const deployRow = (c: Awaited<ReturnType<typeof health.deploysCheck>>) => c.rows.find((r) => r.label === "Deploys in 24 hours");
+
+  it("counts against the plan the team is on", async () => {
+    stubFetch({ ...deploys(85), "https://api.vercel.com/v2/teams/team_1": { billing: { plan: "pro" } } });
+    const c = await health.deploysCheck(NOW);
+    expect(c.state).toBe("ok");
+    expect(deployRow(c)).toMatchObject({ value: "85 of 6,000 (Pro limit)", state: "ok" });
+
+    stubFetch({ ...deploys(4900), "https://api.vercel.com/v2/teams/team_1": { billing: { plan: "pro" } } });
+    expect((await health.deploysCheck(NOW)).summary).toBe("4900 of 6,000 deploys used in the last 24 hours.");
+
+    stubFetch({ ...deploys(85), "https://api.vercel.com/v2/teams/team_1": { billing: { plan: "enterprise" } } });
+    expect(deployRow(await health.deploysCheck(NOW))).toMatchObject({ value: "85 (Enterprise: no set limit)", state: "ok" });
+  });
+
+  it("reads a personal account's plan, and assumes Pro when Vercel doesn't say", async () => {
+    delete process.env.VERCEL_TEAM_ID;
+    stubFetch({ ...deploys(3), "https://api.vercel.com/v2/user": { user: { billing: { plan: "hobby" } } } });
+    expect(deployRow(await health.deploysCheck(NOW))?.value).toBe("3 of 100 (Hobby limit)");
+
+    stubFetch(deploys(3));
+    expect(deployRow(await health.deploysCheck(NOW))?.value).toBe("3 of 6,000 (Pro limit)");
   });
 
   it("is down when the latest production deploy failed", async () => {
