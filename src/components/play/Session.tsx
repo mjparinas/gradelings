@@ -375,7 +375,7 @@ function Runner({ plan }: { plan: Plan }) {
           <ProgressBar value={Math.max(0, remaining)} max={plan.timeLimit} className="w-16 shrink-0 sm:w-28" label="Time left" />
         )}
         {run >= 2 && !hideTimers && (
-          <span className="flex h-14 min-w-14 items-center justify-center rounded-2xl bg-nudge-soft px-2 text-xl font-bold text-nudge-dark" aria-label={`${run} in a row`}>
+          <span className="flex h-14 min-w-14 items-center justify-center rounded-2xl bg-nudge-soft px-2 text-xl font-bold text-nudge-dark" role="img" aria-label={`${run} in a row`}>
             🔥{run}
           </span>
         )}
@@ -598,7 +598,7 @@ function Summary({ plan, results, startDerived }: { plan: Plan; results: Result[
         ) : (
           <div className="flex gap-3" role="img" aria-label={`${stars} of 3 stars`}>
             {[0, 1, 2].map((i) => (
-              <svg key={i} width="84" height="84" viewBox="0 0 24 24" className={i < stars ? "animate-star-land" : ""} style={{ animationDelay: `${520 + i * 380}ms` }}>
+              <svg key={i} aria-hidden="true" width="84" height="84" viewBox="0 0 24 24" className={i < stars ? "animate-star-land" : ""} style={{ animationDelay: `${520 + i * 380}ms` }}>
                 <path
                   d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.5L12 17.1l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"
                   fill={i < stars ? "var(--color-star)" : "#e5e7eb"}

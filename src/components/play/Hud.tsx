@@ -12,8 +12,8 @@ export function LevelBadge({ level, progress, size = 56 }: { level: number; prog
   const r = 22;
   const c = 2 * Math.PI * r;
   return (
-    <span className="relative inline-flex shrink-0 items-center justify-center" style={{ width: size, height: size }} aria-label={`Level ${level}`}>
-      <svg viewBox="0 0 50 50" className="absolute inset-0 -rotate-90">
+    <span className="relative inline-flex shrink-0 items-center justify-center" style={{ width: size, height: size }} role="img" aria-label={`Level ${level}`}>
+      <svg aria-hidden="true" viewBox="0 0 50 50" className="absolute inset-0 -rotate-90">
         <circle cx="25" cy="25" r={r} fill="#fff" stroke="#ece8f8" strokeWidth="5" />
         <circle
           cx="25"
@@ -98,7 +98,7 @@ export function Hud() {
             {coins}
           </button>
         ) : (
-          <span className="flex h-16 items-center gap-1 rounded-2xl bg-white px-3 text-xl font-bold shadow-[0_4px_0_var(--color-line)]" aria-label={`${d.coins} coins`}>
+          <span className="flex h-16 items-center gap-1 rounded-2xl bg-white px-3 text-xl font-bold shadow-[0_4px_0_var(--color-line)]" role="img" aria-label={`${d.coins} coins`}>
             {coins}
           </span>
         )}

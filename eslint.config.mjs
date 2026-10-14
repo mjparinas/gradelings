@@ -6,6 +6,10 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   {
+    // Every picture needs alt text, or alt="" when it is decoration (src/components/imageAlt.test.ts checks svgs too).
+    rules: { "jsx-a11y/alt-text": ["error", { elements: ["img", "object", "area", "input[type=\"image\"]"], img: ["Image"] }] },
+  },
+  {
     // The apps load each grade's lessons on demand (src/content/index.ts). Importing
     // every grade at once is only for statically generated pages and tests.
     files: ["src/**/*.{ts,tsx}"],
