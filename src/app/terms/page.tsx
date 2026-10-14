@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalPage, Section } from "@/components/site/Legal";
 import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS } from "@/lib/brand";
-import { CURRENCY_NAME, FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, TRIAL_DAYS } from "@/lib/plan";
+import { CURRENCY_NAME, FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, REFUND_DAYS, TRIAL_DAYS } from "@/lib/plan";
 import { pageMeta } from "@/lib/pageMeta";
 
 export const metadata: Metadata = pageMeta({
@@ -49,7 +49,7 @@ export default function TermsPage() {
           <li>Payments are processed by Stripe. Your subscription renews automatically each month or year at the price shown when you subscribe, and your card is charged at the start of each period, until you cancel.</li>
           <li>You can cancel at any time in the Parent area under Subscription. You keep access until the end of the period you’ve paid for, and you won’t be charged again. Cancelling is as easy as subscribing: no call or email is needed.</li>
           <li>Deleting your account does not cancel a paid subscription, so cancel under Subscription first.</li>
-          <li>Except where the law says otherwise, payments already made are not refundable. If something went wrong with a charge, email us at <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> and we’ll make it right where we reasonably can. Consumer protection laws, including British Columbia’s Business Practices and Consumer Protection Act, may give you cancellation or refund rights that these terms don’t take away.</li>
+          <li>If you ask within {REFUND_DAYS} days of any payment, including a renewal, we refund that payment in full. Email us at <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> or use the <Link href="/contact/">contact form</Link>; you don’t need to give a reason. The plan then ends and your family goes back to the free plan, with all progress kept. After {REFUND_DAYS} days, payments aren’t refunded, except where the law says otherwise, but if something went wrong with a charge, tell us and we’ll make it right where we reasonably can. Consumer protection laws, including British Columbia’s Business Practices and Consumer Protection Act, may give you cancellation or refund rights that these terms don’t take away.</li>
           <li>Children can’t buy anything. Coins and rewards are earned only by learning and have no cash value.</li>
         </ul>
       </Section>

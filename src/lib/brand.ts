@@ -14,6 +14,8 @@ export const CONTACT_EMAIL = "hello@gradelings.com";
 export const SOCIAL_PROFILES: string[] = [];
 /** Hostname a parent types into a browser. The Android app names this site because it can't take payment. */
 export const SITE_HOST = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://gradelings.com").hostname.replace(/^www\./, "");
+/** How soon a person answers mail, shown on Contact and Help. Keep it true. */
+export const REPLY_TIME = "one business day";
 /** Postal address shown in the legal pages and every email's footer (CASL requires it in commercial email). Nothing is shown while it is empty. */
 export const MAILING_ADDRESS = "603 Front Street #810, Lynden, WA 98264";
 /** Bump when the privacy policy or terms change. */

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
-import { APP_NAME, CONTACT_EMAIL } from "@/lib/brand";
+import { APP_NAME, CONTACT_EMAIL, REPLY_TIME } from "@/lib/brand";
 import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
 import { ALL_FAQS, HELP } from "./faqs";
@@ -22,7 +22,7 @@ export default function HelpPage() {
       <Crumbs items={crumbs} />
       <h1 className="text-4xl font-bold">Help and questions</h1>
       <p className="mt-2 max-w-2xl font-read text-lg text-ink-soft">
-        Can’t find what you need? Email <a className="underline" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> and a person will reply.
+        Can’t find what you need? Email <a className="underline" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> and a person will reply within {REPLY_TIME}.
       </p>
       <nav aria-label="Help topics" className="mt-4 flex flex-wrap gap-2">
         {HELP.map((s) => (

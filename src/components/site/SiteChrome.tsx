@@ -1,8 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { FRAMEWORKS } from "@/content/frameworks";
-import { GUIDE_FRAMEWORKS } from "@/content/guides";
-import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
+import { APP_NAME, LEGAL_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { SUBSCRIBE_HREF, TRIAL_DAYS } from "@/lib/plan";
 import { teacherPath, TEACHER_SIGNUP } from "./teachers";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
@@ -55,108 +54,68 @@ export function SiteHeader() {
   );
 }
 
+/** One footer column: a heading and its links. `app` links open a big single-page app, so they are fetched on tap. */
+function FooterColumn({ title, links }: { title: string; links: { label: string; href: string; app?: boolean }[] }) {
+  return (
+    <nav aria-label={title}>
+      <p className="font-bold">{title}</p>
+      <ul className="mt-2 space-y-1 text-sm">
+        {links.map((l) => (
+          <li key={l.href}>
+            <Link prefetch={l.app ? false : undefined} className="text-ink-soft hover:underline" href={l.href}>
+              {l.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
+// One link per section: each region's curriculum, report-card and guide pages are reached from these hubs, so the
+// footer stays the same short list as provinces and states are added.
 export function SiteFooter() {
   return (
     <footer className="print:hidden mt-16 border-t border-line bg-white">
-      <div className="mx-auto grid max-w-6xl gap-6 px-4 py-10 sm:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl gap-6 px-4 py-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <p className="text-xl font-bold">{APP_NAME}</p>
           <p className="mt-1 font-read text-sm text-ink-soft">Curriculum-matched practice, games and progress reports for Kindergarten to Grade 9.</p>
         </div>
-        <div>
-          <p className="font-bold">Curriculum</p>
-          <ul className="mt-2 space-y-1 text-sm">
-            {FRAMEWORKS.map((f) => (
-              <li key={f.id}>
-                <Link className="text-ink-soft hover:underline" href={`/curriculum/${f.slug}/`}>
-                  {f.curriculumName}
-                </Link>
-              </li>
-            ))}
-            {FRAMEWORKS.map((f) => (
-              <li key={`rc-${f.id}`}>
-                <Link className="text-ink-soft hover:underline" href={`/report-cards/${f.slug}/`}>
-                  {f.region} report card guide
-                </Link>
-              </li>
-            ))}
-            {GUIDE_FRAMEWORKS.map((f) => (
-              <li key={`pg-${f.id}`}>
-                <Link className="text-ink-soft hover:underline" href={`/guides/${f.slug}/`}>
-                  {f.region} parent guides
-                </Link>
-              </li>
-            ))}
-            <li>
-              <Link className="text-ink-soft hover:underline" href="/compare/">
-                Compare apps
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p className="font-bold">For families</p>
-          <ul className="mt-2 space-y-1 text-sm">
-            <li>
-              <Link prefetch={false} className="text-ink-soft hover:underline" href="/play/">
-                Start learning
-              </Link>
-            </li>
-            <li>
-              <Link prefetch={false} className="text-ink-soft hover:underline" href="/parents/">
-                Parent area
-              </Link>
-            </li>
-            <li>
-              <Link className="text-ink-soft hover:underline" href={teacherPath.hub()}>
-                For teachers
-              </Link>
-            </li>
-            <li>
-              <Link prefetch={false} className="text-ink-soft hover:underline" href={TEACHER_SIGNUP}>
-                Teacher sign in
-              </Link>
-            </li>
-            <li>
-              <Link className="text-ink-soft hover:underline" href="/pricing/">
-                Pricing
-              </Link>
-            </li>
-            <li>
-              <Link className="text-ink-soft hover:underline" href="/help/">
-                Help
-              </Link>
-            </li>
-            <li>
-              <Link className="text-ink-soft hover:underline" href="/about/">
-                About us
-              </Link>
-            </li>
-            <li>
-              <Link className="text-ink-soft hover:underline" href="/contact/">
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link className="text-ink-soft hover:underline" href="/privacy/">
-                Privacy policy
-              </Link>
-            </li>
-            <li>
-              <Link className="text-ink-soft hover:underline" href="/terms/">
-                Terms of use
-              </Link>
-            </li>
-            <li>
-              <Link className="text-ink-soft hover:underline" href="/accessibility/">
-                Accessibility
-              </Link>
-            </li>
-          </ul>
-        </div>
+        <FooterColumn
+          title="Explore"
+          links={[
+            { label: "Curriculum", href: "/curriculum/" },
+            { label: "Report cards explained", href: "/report-cards/" },
+            { label: "Parent guides", href: "/guides/" },
+            { label: "Compare apps", href: "/compare/" },
+            { label: "Pricing", href: "/pricing/" },
+          ]}
+        />
+        <FooterColumn
+          title="Use it"
+          links={[
+            { label: "Start learning", href: "/play/", app: true },
+            { label: "Parent area", href: "/parents/", app: true },
+            { label: "For teachers", href: teacherPath.hub() },
+            { label: "Teacher sign in", href: TEACHER_SIGNUP, app: true },
+          ]}
+        />
+        <FooterColumn
+          title="Company"
+          links={[
+            { label: "About us", href: "/about/" },
+            { label: "Help", href: "/help/" },
+            { label: "Contact", href: "/contact/" },
+            { label: "Status", href: "/status/" },
+            { label: "Privacy policy", href: "/privacy/" },
+            { label: "Terms of use", href: "/terms/" },
+            { label: "Accessibility", href: "/accessibility/" },
+          ]}
+        />
       </div>
       <p className="pb-8 text-center text-xs text-ink-soft">
-        © {new Date().getFullYear()} {APP_NAME}. Not affiliated with any ministry of education.
+        © {new Date().getFullYear()} {LEGAL_NAME}. Not affiliated with any ministry of education.
       </p>
     </footer>
   );

@@ -26,9 +26,11 @@ function otherPages(): SitemapPath[] {
     { path: "/help/" },
     { path: "/about/" },
     { path: "/contact/" },
+    { path: "/status/" },
     { path: "/accessibility/" },
     { path: "/privacy/", updated: legal },
     { path: "/terms/", updated: legal },
+    { path: "/guides/", updated: latest(...FRAMEWORKS.map((f) => guidesUpdated(f.id))) },
     { path: "/report-cards/", updated: latest(...FRAMEWORKS.map((f) => guidesUpdated(f.id))) },
     ...FRAMEWORKS.map((f) => ({ path: `/report-cards/${f.slug}/`, updated: guidesUpdated(f.id) })),
   ];
