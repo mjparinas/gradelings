@@ -1,5 +1,6 @@
 import { loadChildReport, familyProfileIds } from "@/server/reportData";
 import { secretsMatch, unsubscribeToken } from "@/server/auth";
+import { toCountryCode } from "@/lib/country";
 import { query, run } from "@/server/db";
 import { sendEmail } from "@/server/email";
 import { inactiveClassEmail, reminderEmail, trialEndingEmail, trialRecapEmail, weeklyEmail, type ReminderChild, type TrialChild, type WeeklyChild } from "@/server/emailTemplates";
@@ -98,8 +99,8 @@ async function daily(req: Request): Promise<Response> {
   };
 
   // Mid-trial recap, once, 4 to 10 days before the trial ends, only when a child has practised.
-  const recaps = await query<{ id: string; email: string; family_id: string; trial_ends_at: number }>(
-    `SELECT p.id, p.email, p.family_id, f.trial_ends_at FROM parents p JOIN families f ON f.id = p.family_id
+  const recaps = await query<{ id: string; email: string; family_id: string; trial_ends_at: number; country: string | null }>(
+    `SELECT p.id, p.email, p.family_id, f.trial_ends_at, f.country FROM parents p JOIN families f ON f.id = p.family_id
      WHERE p.email_verified_at IS NOT NULL AND p.trial_recap_at IS NULL AND p.trial_notice_at IS NULL AND f.plan = 'trial'
        AND f.subscription_status IS NULL AND COALESCE(f.access_until, 0) < f.trial_ends_at AND f.trial_ends_at > ? AND f.trial_ends_at <= ?`,
     [now + 3 * DAY, now + 10 * DAY],
@@ -109,7 +110,7 @@ async function daily(req: Request): Promise<Response> {
       const children = await trialChildren(t.family_id);
       if (!children.some((c) => c.answers > 0)) continue;
       const daysLeft = Math.max(1, Math.ceil((Number(t.trial_ends_at) - now) / DAY));
-      const sent = await sendEmail(trialRecapEmail(t.email, origin, daysLeft, children));
+      const sent = await sendEmail(trialRecapEmail(t.email, origin, daysLeft, children, toCountryCode(t.country)));
       if (sent.ok) {
         await run("UPDATE parents SET trial_recap_at = ? WHERE id = ?", [now, t.id]);
         result.trialRecaps++;
@@ -120,8 +121,8 @@ async function daily(req: Request): Promise<Response> {
   }
 
   // Trial ending within 3 days, not subscribed, not told yet.
-  const trials = await query<{ id: string; email: string; family_id: string; trial_ends_at: number }>(
-    `SELECT p.id, p.email, p.family_id, f.trial_ends_at FROM parents p JOIN families f ON f.id = p.family_id
+  const trials = await query<{ id: string; email: string; family_id: string; trial_ends_at: number; country: string | null }>(
+    `SELECT p.id, p.email, p.family_id, f.trial_ends_at, f.country FROM parents p JOIN families f ON f.id = p.family_id
      WHERE p.email_verified_at IS NOT NULL AND p.trial_notice_at IS NULL AND f.plan = 'trial'
        AND f.subscription_status IS NULL AND COALESCE(f.access_until, 0) < f.trial_ends_at AND f.trial_ends_at > ? AND f.trial_ends_at <= ?`,
     [now, now + 3 * DAY],
@@ -129,7 +130,7 @@ async function daily(req: Request): Promise<Response> {
   for (const t of trials) {
     const daysLeft = Math.max(1, Math.ceil((Number(t.trial_ends_at) - now) / DAY));
     const children = await trialChildren(t.family_id).catch(() => []);
-    const sent = await sendEmail(trialEndingEmail(t.email, origin, daysLeft, children));
+    const sent = await sendEmail(trialEndingEmail(t.email, origin, daysLeft, children, toCountryCode(t.country)));
     if (sent.ok) {
       await run("UPDATE parents SET trial_notice_at = ? WHERE id = ?", [now, t.id]);
       result.trialNotices++;
@@ -137,9 +138,9 @@ async function daily(req: Request): Promise<Response> {
   }
 
   // A child who practised in the last 30 days but not in the last 3 gets one friendly nudge to the parent.
-  const nudgeParents = await query<{ id: string; email: string; family_id: string }>(
-    `SELECT id, email, family_id FROM parents
-     WHERE practice_reminders = 1 AND email_verified_at IS NOT NULL AND (last_nudge_at IS NULL OR last_nudge_at < ?)`,
+  const nudgeParents = await query<{ id: string; email: string; family_id: string; country: string | null }>(
+    `SELECT p.id, p.email, p.family_id, f.country FROM parents p LEFT JOIN families f ON f.id = p.family_id
+     WHERE p.practice_reminders = 1 AND p.email_verified_at IS NOT NULL AND (p.last_nudge_at IS NULL OR p.last_nudge_at < ?)`,
     [now - 6 * DAY],
   );
   for (const p of nudgeParents) {
@@ -154,7 +155,7 @@ async function daily(req: Request): Promise<Response> {
         if (daysQuiet >= 3) quiet.push({ name: r.profile.name, daysQuiet });
       }
       if (!quiet.length) continue;
-      const sent = await sendEmail(reminderEmail(p.email, origin, quiet, await unsubscribeToken(p.id)));
+      const sent = await sendEmail(reminderEmail(p.email, origin, quiet, await unsubscribeToken(p.id), toCountryCode(p.country)));
       if (sent.ok) {
         await run("UPDATE parents SET last_nudge_at = ? WHERE id = ?", [now, p.id]);
         result.reminders++;
@@ -165,9 +166,9 @@ async function daily(req: Request): Promise<Response> {
   }
 
   if (new Date(now).getUTCDay() === 0) {
-    const parents = await query<{ id: string; email: string; family_id: string }>(
-      `SELECT id, email, family_id FROM parents
-       WHERE weekly_report = 1 AND email_verified_at IS NOT NULL AND (last_weekly_at IS NULL OR last_weekly_at < ?)`,
+    const parents = await query<{ id: string; email: string; family_id: string; country: string | null }>(
+      `SELECT p.id, p.email, p.family_id, f.country FROM parents p LEFT JOIN families f ON f.id = p.family_id
+       WHERE p.weekly_report = 1 AND p.email_verified_at IS NOT NULL AND (p.last_weekly_at IS NULL OR p.last_weekly_at < ?)`,
       [now - 5 * DAY],
     );
     // On the first Sunday of the month the weekly email also carries a short month summary.
@@ -192,7 +193,7 @@ async function daily(req: Request): Promise<Response> {
           });
         }
         if (!children.length) continue;
-        const sent = await sendEmail(weeklyEmail(p.email, origin, children, await unsubscribeToken(p.id)));
+        const sent = await sendEmail(weeklyEmail(p.email, origin, children, await unsubscribeToken(p.id), toCountryCode(p.country)));
         if (sent.ok) {
           await run("UPDATE parents SET last_weekly_at = ? WHERE id = ?", [now, p.id]);
           result.weekly++;

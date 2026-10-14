@@ -3,6 +3,7 @@
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { downloadPiper, getPiperState, PIPER_VOICES, piperDownloadBytes, piperSupported, removePiper, setPiperEnabled, subscribePiper, type PiperState } from "@/lib/piper";
 import { previewPiper, stopSpeaking, type SpeechLanguage } from "@/lib/speech";
+import { useSay } from "@/lib/say";
 import { Switch } from "./common";
 
 const mb = (bytes: number) => `${Math.max(1, Math.round(bytes / 1e6))} MB`;
@@ -16,6 +17,7 @@ export function PiperVoice({ language }: { language: SpeechLanguage }) {
   const [size, setSize] = useState<number>();
   const [previewing, setPreviewing] = useState(false);
   const [previewFailed, setPreviewFailed] = useState(false);
+  const say = useSay();
   const voice = piper?.voices[language];
   const otherReady = piper?.voices[language === "en" ? "fr" : "en"].state === "ready";
 
@@ -74,7 +76,7 @@ export function PiperVoice({ language }: { language: SpeechLanguage }) {
             <p className="text-sm text-ink-soft">
               {french
                 ? "It downloads by itself for a child with \"Read questions out loud\" and French switched on, when this device isn't on mobile data."
-                : "It downloads by itself once a child has \"Read questions out loud\" on (Kindergarten and Grade 1 have it on) or taps 🔊, when this device isn't on mobile data. Until then, read-aloud uses the device voice below."}
+                : say("It downloads by itself once a child has \"Read questions out loud\" on (Kindergarten and Grade 1 have it on) or taps 🔊, when this device isn't on mobile data. Until then, read-aloud uses the device voice below.")}
             </p>
           )}
           <button

@@ -5,6 +5,7 @@ import { gradeLabel } from "@/lib/gradeLabel";
 import { getFramework } from "@/content/frameworks";
 import { dayKey, type Profile } from "@/lib/model";
 import { subjectSummaries } from "@/lib/proficiency";
+import { useLocale, useSay } from "@/lib/say";
 import { useDerived, useProfiles, useStore } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 import { FamilyGoal } from "./FamilyGoal";
@@ -16,6 +17,8 @@ function ChildCard({ p }: { p: Profile }) {
   const d = useDerived(p.id);
   const scheme = getFramework(p.framework).scoringFor(p.grade);
   const now = useNow();
+  const say = useSay();
+  const locale = useLocale();
   const week = Array.from({ length: 7 }, (_, i) => d.days[dayKey(now - i * 86_400_000)]);
   const minutes = Math.round(week.reduce((s, x) => s + (x?.learnSeconds ?? 0), 0) / 60);
   const answers = week.reduce((s, x) => s + (x?.answers ?? 0), 0);
@@ -71,7 +74,7 @@ function ChildCard({ p }: { p: Profile }) {
           );
         })}
       </ul>
-      <p className="mt-3 text-xs text-ink-soft">{lastActive ? `Last practised ${new Date(lastActive).toLocaleString("en-CA", { dateStyle: "medium", timeStyle: "short" })}` : "Hasn't practised yet"}</p>
+      <p className="mt-3 text-xs text-ink-soft">{say(lastActive ? `Last practised ${new Date(lastActive).toLocaleString(locale, { dateStyle: "medium", timeStyle: "short" })}` : "Hasn't practised yet")}</p>
     </Panel>
   );
 }

@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { APP_NAME } from "@/lib/brand";
 import { buildConferenceSheet } from "@/lib/conference";
 import { buildReport } from "@/lib/reports";
+import { useLocale, useSay } from "@/lib/say";
 import { eventsFor, useChildSettings, useDerived, useStore } from "@/lib/store";
 import { Panel, useChild } from "./common";
 
@@ -17,6 +18,8 @@ export function ConferenceSheet({ childId }: { childId?: string }) {
   const settings = useChildSettings(child?.id);
   // Fixed for this view, so the sheet doesn't shift while it's open.
   const [now] = useState(() => Date.now());
+  const say = useSay();
+  const locale = useLocale();
   const sheet = useMemo(() => {
     if (!child) return null;
     const report = buildReport(eventsFor(events, child), d, child.grade, child.framework, 90, now);
@@ -30,7 +33,7 @@ export function ConferenceSheet({ childId }: { childId?: string }) {
         <div>
           <h2 className="text-2xl font-bold">Report card conversation sheet</h2>
           <p className="font-read text-ink-soft">
-            {sheet.name} · {sheet.gradeLabel} · {sheet.curriculumName} · last 90 days, {new Date(now).toLocaleDateString("en-CA", { dateStyle: "long" })}
+            {sheet.name} · {sheet.gradeLabel} · {sheet.curriculumName} · last 90 days, {new Date(now).toLocaleDateString(locale, { dateStyle: "long" })}
           </p>
         </div>
         <button type="button" onClick={() => window.print()} className="rounded-xl border border-line bg-white px-3 py-2 font-semibold print:hidden">
@@ -52,7 +55,7 @@ export function ConferenceSheet({ childId }: { childId?: string }) {
                 {s.marks ? ` (${s.marks})` : ""}
               </span>
             </p>
-            <p className="font-read text-sm text-ink-soft">{s.atHome}</p>
+            <p className="font-read text-sm text-ink-soft">{say(s.atHome)}</p>
             <p className="mt-1 font-read text-sm">
               {s.started} of {s.total} units started{s.accuracy !== null ? ` · ${pct(s.accuracy)} right on the first try` : ""}
             </p>
@@ -65,7 +68,7 @@ export function ConferenceSheet({ childId }: { childId?: string }) {
       <h3 className="mt-5 text-lg font-bold">Questions to ask the teacher</h3>
       <ul className="mt-2 list-disc space-y-1 pl-5 font-read">
         {sheet.questions.map((q) => (
-          <li key={q}>{q}</li>
+          <li key={q}>{say(q)}</li>
         ))}
       </ul>
 
@@ -83,7 +86,7 @@ export function ConferenceSheet({ childId }: { childId?: string }) {
               <ul className="mt-1 space-y-1 font-read text-sm">
                 {week.map((p) => (
                   <li key={p.key}>
-                    <b>{p.title}</b> ({p.subject}). {p.goal}
+                    <b>{p.title}</b> ({p.subject}). {say(p.goal)}
                   </li>
                 ))}
               </ul>

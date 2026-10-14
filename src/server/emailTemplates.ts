@@ -3,7 +3,9 @@ import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS, WORDMARK_COLOURS 
 import { EMAIL_FONTS, EMAIL_IMAGES } from "@/lib/emailImages";
 import { CONSENT_NOTICE } from "@/lib/coppa";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, SUBSCRIBE_HREF } from "@/lib/plan";
+import { countryOf, type CountryCode } from "@/lib/country";
 import type { EmailKind } from "@/lib/emailKinds";
+import { localizeCopy } from "@/content/locale";
 import type { Email } from "./email";
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
@@ -24,6 +26,8 @@ interface Parts {
   /** Page the footer link opens. */
   unsubscribePage?: string;
   origin: string;
+  /** The family's country: a US family reads the email in US English ("practiced", "favorite"). Canada when left out. */
+  country?: CountryCode;
 }
 
 /** The name in the logo's colours, one per letter as on the site. Text, not an image, so it shows even with images off. */
@@ -52,7 +56,17 @@ function fontFaces(origin: string): string {
 }
 
 /** One simple layout for every email: the logo and Ollie from our own site. */
-function layout(p: Parts): Email {
+function layout(parts: Parts): Email {
+  const locale = countryOf(parts.country).locale;
+  const say = (t: string) => localizeCopy(t, locale);
+  const p: Parts = {
+    ...parts,
+    subject: say(parts.subject),
+    heading: say(parts.heading),
+    body: parts.body.map(say),
+    button: parts.button && { ...parts.button, label: say(parts.button.label) },
+    footnote: parts.footnote && say(parts.footnote),
+  };
   const button = p.button
     ? `<p style="margin:24px 0"><a href="${esc(p.button.url)}" style="background:#25b47e;color:#fff;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:12px;display:inline-block">${esc(p.button.label)}</a></p>`
     : "";
@@ -130,8 +144,9 @@ function recapLines(children: TrialChild[]): string[] {
 const KEEP_FREE = `After the trial, the first ${FREE_UNITS_PER_COURSE} units of every course stay free forever. The family plan keeps everything unlocked for up to ${MAX_CHILDREN} children.`;
 
 /** Mid-trial: what the trial has done so far. Sent once, to parents whose children have practised. */
-export function trialRecapEmail(to: string, origin: string, daysLeft: number, children: TrialChild[]): Email {
+export function trialRecapEmail(to: string, origin: string, daysLeft: number, children: TrialChild[], country?: CountryCode): Email {
   return layout({
+    country,
     kind: "trial-recap",
     to,
     origin,
@@ -147,9 +162,10 @@ export function trialRecapEmail(to: string, origin: string, daysLeft: number, ch
   });
 }
 
-export function trialEndingEmail(to: string, origin: string, daysLeft: number, children: TrialChild[] = []): Email {
+export function trialEndingEmail(to: string, origin: string, daysLeft: number, children: TrialChild[] = [], country?: CountryCode): Email {
   const recap = recapLines(children);
   return layout({
+    country,
     kind: "trial-ending",
     to,
     origin,
@@ -184,7 +200,7 @@ export function monthLine(name: string, m: NonNullable<WeeklyChild["month"]>): s
   return `${base}.`;
 }
 
-export function weeklyEmail(to: string, origin: string, children: WeeklyChild[], unsubToken: string): Email {
+export function weeklyEmail(to: string, origin: string, children: WeeklyChild[], unsubToken: string, country?: CountryCode): Email {
   const lines = children.flatMap((c) => [
     c.answers
       ? `${c.name}: ${c.minutes} min of practice, ${c.answers} questions${c.accuracy === null ? "" : `, ${c.accuracy}% right on the first try`}.`
@@ -194,6 +210,7 @@ export function weeklyEmail(to: string, origin: string, children: WeeklyChild[],
     ...(c.month ? [monthLine(c.name, c.month)] : []),
   ]);
   return layout({
+    country,
     kind: "weekly",
     to,
     origin,
@@ -213,12 +230,13 @@ export interface ReminderChild {
 }
 
 /** A gentle, parent-only nudge. Warm and brief, never guilt: a child's name and a day count, nothing else. */
-export function reminderEmail(to: string, origin: string, children: ReminderChild[], unsubToken: string): Email {
+export function reminderEmail(to: string, origin: string, children: ReminderChild[], unsubToken: string, country?: CountryCode): Email {
   const names = children.map((c) => c.name);
   const who = names.length === 1 ? names[0] : `${names.slice(0, -1).join(", ")} and ${names.at(-1)}`;
   const lines = children.map((c) => `${c.name} last practised ${c.daysQuiet} days ago. A short session today, even 10 minutes, picks the momentum right back up.`);
   const q = encodeURIComponent(unsubToken);
   return layout({
+    country,
     kind: "reminder",
     to,
     origin,
