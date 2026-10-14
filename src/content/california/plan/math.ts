@@ -84,14 +84,14 @@ export const PLAN_MATH: Record<string, Entry[]> = {
     [
       "adding",
       "share",
-      "1.OA.1; 1.OA.6",
-      "solving addition problems and adding within 20",
+      "1.OA.1; 1.OA.6; 1.OA.8",
+      "solving addition problems, adding within 20, and finding the unknown number in an addition equation",
     ],
     [
       "take-away",
       "share",
-      "1.OA.1; 1.OA.4; 1.OA.6",
-      "solving subtraction problems and subtracting as an unknown-addend problem",
+      "1.OA.1; 1.OA.4; 1.OA.6; 1.OA.8",
+      "solving subtraction problems, subtracting as an unknown-addend problem, and finding the unknown number in a subtraction equation",
     ],
     [
       "equal-or-not",
@@ -262,20 +262,20 @@ export const PLAN_MATH: Record<string, Entry[]> = {
     [
       "multiplication",
       "share",
-      "3.OA.1; 3.OA.5; 3.OA.7",
-      "multiplication as equal groups, properties of multiplication, and multiplying within 100",
+      "3.OA.1; 3.OA.3; 3.OA.5; 3.OA.7",
+      "multiplication as equal groups, word problems with equal groups, arrays and lengths, properties of multiplication, and multiplying within 100",
     ],
     [
       "division",
       "share",
-      "3.OA.2; 3.OA.6; 3.OA.7",
-      "division as sharing into equal groups and as an unknown factor, and dividing within 100",
+      "3.OA.2; 3.OA.3; 3.OA.6; 3.OA.7",
+      "division as sharing into equal groups and as an unknown factor, division word problems, and dividing within 100",
     ],
     [
       "fractions",
       "share",
-      "3.NF.1; 3.NF.2; 3.NF.3",
-      "unit fractions, fractions on a number line, and comparing fractions",
+      "3.NF.1; 3.NF.2; 3.NF.3; 3.G.2",
+      "unit fractions, shapes cut into equal parts, fractions on a number line, and comparing fractions",
     ],
     [
       "patterns-and-equations",
@@ -458,8 +458,8 @@ export const PLAN_MATH: Record<string, Entry[]> = {
     [
       "decimals",
       "share",
-      "5.NBT.3; 5.NBT.7",
-      "reading, writing and comparing decimals to thousandths and computing with decimals",
+      "5.NBT.3; 5.NBT.4; 5.NBT.7",
+      "reading, writing, comparing and rounding decimals to thousandths and computing with decimals",
     ],
     [
       "patterns-and-equations",
@@ -500,8 +500,8 @@ export const PLAN_MATH: Record<string, Entry[]> = {
     [
       "wa-g5-fraction-multiply",
       "adopt",
-      "5.NF.3; 5.NF.4; 5.NF.5; 5.NF.7",
-      "a fraction as division, multiplying fractions, multiplication as scaling, and dividing unit fractions and whole numbers",
+      "5.NF.3; 5.NF.4; 5.NF.5; 5.NF.6; 5.NF.7",
+      "a fraction as division, multiplying fractions, multiplication as scaling, real-world fraction problems, and dividing unit fractions and whole numbers",
     ],
     [
       "wa-g5-add-unlike",
@@ -624,13 +624,13 @@ export const PLAN_MATH: Record<string, Entry[]> = {
     [
       "integer-add-subtract",
       "share",
-      "7.NS.1",
-      "adding and subtracting rational numbers, including negative numbers",
+      "7.NS.1; 7.NS.3",
+      "adding and subtracting rational numbers, including negative numbers, in real-world problems",
     ],
     [
       "decimal-operations",
       "share",
-      "7.NS.2; 7.EE.3",
+      "7.NS.2; 7.NS.3; 7.EE.3",
       "computing with decimals and solving multi-step problems with rational numbers",
     ],
     [
@@ -655,8 +655,8 @@ export const PLAN_MATH: Record<string, Entry[]> = {
     [
       "probability",
       "share",
-      "7.SP.5; 7.SP.7; 7.SP.8",
-      "probability of chance events and compound events",
+      "7.SP.5; 7.SP.6; 7.SP.7; 7.SP.8",
+      "probability of chance events and compound events, and estimating probability from repeated trials",
     ],
     [
       "fractions-7",
@@ -830,8 +830,8 @@ export const PLAN_MATH: Record<string, Entry[]> = {
     [
       "linear-relations",
       "share",
-      "F-IF.6; F-IF.7; F-LE.2",
-      "rate of change and key features of linear functions",
+      "F-IF.6; F-IF.7; F-LE.2; A-REI.10",
+      "rate of change and key features of linear functions, and whether a point is on a line",
     ],
     [
       "statistics-in-society",
@@ -854,8 +854,8 @@ export const PLAN_MATH: Record<string, Entry[]> = {
     [
       "lines-9",
       "adopt",
-      "A-REI.11; F-BF.3",
-      "where two graphs meet, and how a graph moves when its equation changes",
+      "A-REI.11; A-REI.12; F-BF.3",
+      "where two graphs meet, which points lie in the region of a linear inequality, and how a graph moves when its equation changes",
     ],
     [
       "data-9",
@@ -908,8 +908,8 @@ export const PLAN_MATH: Record<string, Entry[]> = {
     [
       "wa-g9-sequences",
       "adopt",
-      "F-IF.3; F-BF.1",
-      "modeling arithmetic patterns and telling them apart from patterns that grow by multiplying",
+      "F-IF.3; F-BF.1; F-BF.2",
+      "modeling arithmetic patterns, writing arithmetic and geometric sequences with explicit and recursive rules, and telling them apart",
     ],
   ],
 };

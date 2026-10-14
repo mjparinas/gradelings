@@ -183,4 +183,17 @@ export const lessons: GradeLessons = {
     ["Profit = money earned − costs.", "60 − 22 = 38."],
     "$38",
   ),
+  // California
+  "math/ca-g4-tenths-hundredths": lesson(
+    ["1 tenth is the same as 10 hundredths.", "To add tenths and hundredths, change the tenths into hundredths first.", "Then add the hundredths."],
+    "What is 3/10 + 4/100?",
+    ["3/10 = 30/100.", "30/100 + 4/100 = 34/100."],
+    "34/100",
+  ),
+  "math/ca-g4-measure-angles": lesson(
+    ["Put the protractor's centre on the angle's corner, with one ray on 0.", "Read the number where the other ray crosses the same scale.", "When an angle is split into parts, the parts add up to the whole angle."],
+    "An angle is split into a 35° part and a 50° part. How big is the whole angle?",
+    ["Angle measures add.", "35 + 50 = 85."],
+    "85°",
+  ),
 };

@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { COURSES } from "../all";
+import { research } from "../contract";
 import { FRAMEWORKS, getFramework, UPCOMING_FRAMEWORKS } from "../frameworks";
 import { localeOf, questionText } from "../locale";
 import { withSeed } from "../random";
@@ -81,5 +82,30 @@ describe("California", () => {
         `${key} is a Washington or Oregon unit about Tribes`,
       ).toBe("");
     }
+  });
+
+  it("has a unit for every standard a child can practise in the app", () => {
+    const outcomes = research<Record<string, { idx: string; courses?: string[] }[]>>("california/outcomes.json");
+    // Left out on purpose: writing, speaking and listening, reading fluency and "read a range of texts" need free text or
+    // voice from the child, which the app never takes; high school science outside Living Earth (the Grade 9 course).
+    const practisable = (key: string, o: { idx: string; courses?: string[] }) =>
+      key.endsWith("/language")
+        ? !/^(W|SL)\./.test(o.idx) && !/^RF\.\w+\.4$/.test(o.idx) && !/^R[LI]\.[\w-]+\.10$/.test(o.idx)
+        : key !== "9/science" || !o.idx.startsWith("HS-") || (o.courses ?? []).includes("Living Earth");
+    const cited = new Map<string, Set<string>>();
+    for (const { c, u } of california) {
+      const key = `${c.grade}/${c.subject}`;
+      const set = cited.get(key) ?? new Set<string>();
+      for (const code of u.standards["us-ca"]!.split(" · ")[0].split("; ")) set.add(code);
+      cited.set(key, set);
+    }
+    const missing = Object.entries(outcomes).flatMap(([key, list]) => {
+      const set = [...(cited.get(key) ?? [])];
+      // A standard counts as covered when one of its numbered parts is cited (social studies "4.2" by "4.2.1").
+      return list
+        .filter((o) => practisable(key, o) && !set.some((c) => c === o.idx || c.startsWith(`${o.idx}.`)))
+        .map((o) => `${key} ${o.idx}`);
+    });
+    expect(missing).toEqual([]);
   });
 });
