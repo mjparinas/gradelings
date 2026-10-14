@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { COURSES } from "./all";
 import { FRAMEWORKS, UPCOMING_FRAMEWORKS } from "./frameworks";
+import { manifestOf } from "./registry";
 import { CORE_SUBJECTS, GRADE_ORDER } from "./subjects";
 import { withSeed } from "./random";
 import type { FrameworkId, GradeId } from "./types";
@@ -11,57 +12,16 @@ import type { FrameworkId, GradeId } from "./types";
 // content, a new grade or a new framework is added for one place and not the others. See
 // "Every framework, every grade" in AGENTS.md.
 
-const range = (from: GradeId, to: GradeId) => GRADE_ORDER.slice(GRADE_ORDER.indexOf(from), GRADE_ORDER.indexOf(to) + 1);
-
-/**
- * The grades each framework offers the two French subjects in. These follow each province's
- * French as a second language requirements (BC: second language from Grade 5; Ontario: Core French
- * from Grade 4; Alberta: French as a Second Language from Grade 4). Adding a framework means adding its row here.
- */
-const FRENCH_GRADES: Record<FrameworkId, { immersion: GradeId[]; "core-french": GradeId[] }> = {
-  "ca-bc": { immersion: range("k", "9"), "core-french": range("5", "9") },
-  "ca-on": { immersion: range("1", "9"), "core-french": range("4", "9") },
-  // Alberta: French Immersion from Kindergarten; the French as a Second Language program starts in Grade 4.
-  "ca-ab": { immersion: range("k", "9"), "core-french": range("4", "9") },
-  // Saskatchewan: French Immersion (Kindergarten to Grade 12) and Core French (curriculum Levels 1 to 9, listed under
-  // Grades 1 to 9). Source: Saskatchewan Curriculum and saskatchewan.ca "Studying French in Saskatchewan".
-  "ca-sk": { immersion: range("k", "9"), "core-french": range("1", "9") },
-  "ca-mb": { immersion: range("k", "9"), "core-french": range("4", "9") },
-  // Yukon implements the BC curriculum, including BC's French programs.
-  "ca-yt": { immersion: range("k", "9"), "core-french": range("5", "9") },
-  // The Northwest Territories adopts the BC curriculum (adapted), including its French programs.
-  "ca-nt": { immersion: range("k", "9"), "core-french": range("5", "9") },
-  // Nova Scotia: Français arts langagiers (French Immersion) from Primary; Core French from Grade 4.
-  "ca-ns": { immersion: range("k", "9"), "core-french": range("4", "9") },
-  // New Brunswick (anglophone sector): French Immersion from Grade 1; Core French (Intensive French) from Grade 4.
-  "ca-nb": { immersion: range("1", "9"), "core-french": range("4", "9") },
-  // Newfoundland and Labrador: Core French is organized from Grade 4. French Immersion (early from Kindergarten, late from Grade 7)
-  // is not built, because its curriculum guides are not public (see docs/research/newfoundland-and-labrador/README.md).
-  "ca-nl": { immersion: [], "core-french": range("4", "9") },
-  // Prince Edward Island: Core French begins no later than Grade 4 (Grades 1 to 3 are local pilots). Early (from Kindergarten), Middle
-  // (Grade 4) and Late (Grade 7) French Immersion are not built, because their curriculum guides are not public.
-  "ca-pe": { immersion: [], "core-french": range("4", "9") },
-  // Nunavut: French as an Additional Language for Nunavut, Grades 4 to 9. No immersion program is built.
-  "ca-nu": { immersion: [], "core-french": range("4", "9") },
-  // Washington: no French subject. Its world-language programs are mostly Spanish (see docs/research/washington/README.md).
-  "us-wa": { immersion: [], "core-french": [] },
-  // Oregon: no French subject (see docs/research/oregon/README.md).
-  "us-or": { immersion: [], "core-french": [] },
-  // California: no French subject (see docs/research/california/README.md).
-  "us-ca": { immersion: [], "core-french": [] },
-};
-
 const units = (framework: FrameworkId, grade: GradeId, subject: string) =>
   COURSES.find((c) => c.grade === grade && c.subject === subject)?.units.filter((u) => u.standards[framework]) ?? [];
 
 // Content checks also cover frameworks that are not offered yet, so they are complete before they launch.
 const CONTENT_FRAMEWORKS = [...FRAMEWORKS, ...UPCOMING_FRAMEWORKS];
 
-describe("every framework covers every grade and subject", () => {
-  it("has a French row for every framework", () => {
-    for (const f of CONTENT_FRAMEWORKS) expect(FRENCH_GRADES[f.id], `French grades for ${f.id}`).toBeDefined();
-  });
+/** The grades each framework offers the two French subjects in, from its manifest (`french`). */
+const frenchGrades = (id: FrameworkId) => manifestOf(id).french;
 
+describe("every framework covers every grade and subject", () => {
   it("offers each framework's grades as Kindergarten to Grade 9", () => {
     for (const f of CONTENT_FRAMEWORKS) expect(f.grades, f.id).toEqual(GRADE_ORDER);
   });
@@ -82,7 +42,7 @@ describe("every framework covers every grade and subject", () => {
     for (const f of CONTENT_FRAMEWORKS) {
       for (const grade of f.grades) {
         for (const subject of ["immersion", "core-french"] as const) {
-          const expected = FRENCH_GRADES[f.id][subject].includes(grade);
+          const expected = frenchGrades(f.id)[subject].includes(grade);
           expect(units(f.id, grade, subject).length > 0, `${f.id} ${grade}/${subject}`).toBe(expected);
         }
       }

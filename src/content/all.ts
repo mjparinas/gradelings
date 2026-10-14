@@ -1,177 +1,22 @@
-import { courses as k } from "./grades/k";
-import { courses as g1 } from "./grades/g1";
-import { courses as g2 } from "./grades/g2";
-import { courses as g3 } from "./grades/g3";
-import { courses as g4 } from "./grades/g4";
-import { courses as g5 } from "./grades/g5";
-import { courses as g6 } from "./grades/g6";
-import { courses as g7 } from "./grades/g7";
-import { courses as onK } from "./ontario/k";
-import { courses as on1 } from "./ontario/g1";
-import { courses as on2 } from "./ontario/g2";
-import { courses as on3 } from "./ontario/g3";
-import { courses as on4 } from "./ontario/g4";
-import { courses as on5 } from "./ontario/g5";
-import { courses as on6 } from "./ontario/g6";
-import { courses as on7 } from "./ontario/g7";
-import { courses as on8 } from "./ontario/g8";
-import { courses as on9 } from "./ontario/g9";
-import { courses as abK } from "./alberta/k";
-import { courses as ab1 } from "./alberta/g1";
-import { courses as ab2 } from "./alberta/g2";
-import { courses as ab3 } from "./alberta/g3";
-import { courses as ab4 } from "./alberta/g4";
-import { courses as ab5 } from "./alberta/g5";
-import { courses as ab6 } from "./alberta/g6";
-import { courses as ab7 } from "./alberta/g7";
-import { courses as ab8 } from "./alberta/g8";
-import { courses as ab9 } from "./alberta/g9";
-import { courses as mbK } from "./manitoba/k";
-import { courses as mb1 } from "./manitoba/g1";
-import { courses as mb2 } from "./manitoba/g2";
-import { courses as mb3 } from "./manitoba/g3";
-import { courses as mb4 } from "./manitoba/g4";
-import { courses as mb5 } from "./manitoba/g5";
-import { courses as mb6 } from "./manitoba/g6";
-import { courses as mb7 } from "./manitoba/g7";
-import { courses as mb8 } from "./manitoba/g8";
-import { courses as mb9 } from "./manitoba/g9";
-import { courses as nbK } from "./new-brunswick/k";
-import { courses as nb1 } from "./new-brunswick/g1";
-import { courses as nb2 } from "./new-brunswick/g2";
-import { courses as nb3 } from "./new-brunswick/g3";
-import { courses as nb4 } from "./new-brunswick/g4";
-import { courses as nb5 } from "./new-brunswick/g5";
-import { courses as nb6 } from "./new-brunswick/g6";
-import { courses as nb7 } from "./new-brunswick/g7";
-import { courses as nb8 } from "./new-brunswick/g8";
-import { courses as nb9 } from "./new-brunswick/g9";
-import { courses as nlK } from "./newfoundland-and-labrador/k";
-import { courses as nl1 } from "./newfoundland-and-labrador/g1";
-import { courses as nl2 } from "./newfoundland-and-labrador/g2";
-import { courses as nl3 } from "./newfoundland-and-labrador/g3";
-import { courses as nl4 } from "./newfoundland-and-labrador/g4";
-import { courses as nl5 } from "./newfoundland-and-labrador/g5";
-import { courses as nl6 } from "./newfoundland-and-labrador/g6";
-import { courses as nl7 } from "./newfoundland-and-labrador/g7";
-import { courses as nl8 } from "./newfoundland-and-labrador/g8";
-import { courses as nl9 } from "./newfoundland-and-labrador/g9";
-import { courses as peK } from "./prince-edward-island/k";
-import { courses as pe1 } from "./prince-edward-island/g1";
-import { courses as pe2 } from "./prince-edward-island/g2";
-import { courses as pe3 } from "./prince-edward-island/g3";
-import { courses as pe4 } from "./prince-edward-island/g4";
-import { courses as pe5 } from "./prince-edward-island/g5";
-import { courses as pe6 } from "./prince-edward-island/g6";
-import { courses as pe7 } from "./prince-edward-island/g7";
-import { courses as pe8 } from "./prince-edward-island/g8";
-import { courses as pe9 } from "./prince-edward-island/g9";
-import { courses as nsK } from "./nova-scotia/k";
-import { courses as ns1 } from "./nova-scotia/g1";
-import { courses as ns2 } from "./nova-scotia/g2";
-import { courses as ns3 } from "./nova-scotia/g3";
-import { courses as ns4 } from "./nova-scotia/g4";
-import { courses as ns5 } from "./nova-scotia/g5";
-import { courses as ns6 } from "./nova-scotia/g6";
-import { courses as ns7 } from "./nova-scotia/g7";
-import { courses as ns8 } from "./nova-scotia/g8";
-import { courses as ns9 } from "./nova-scotia/g9";
-import { courses as ytK } from "./yukon/k";
-import { courses as yt1 } from "./yukon/g1";
-import { courses as yt2 } from "./yukon/g2";
-import { courses as yt3 } from "./yukon/g3";
-import { courses as yt4 } from "./yukon/g4";
-import { courses as yt5 } from "./yukon/g5";
-import { courses as yt6 } from "./yukon/g6";
-import { courses as yt7 } from "./yukon/g7";
-import { courses as yt8 } from "./yukon/g8";
-import { courses as yt9 } from "./yukon/g9";
-import { courses as ntK } from "./nwt/k";
-import { courses as nt1 } from "./nwt/g1";
-import { courses as nt2 } from "./nwt/g2";
-import { courses as nt3 } from "./nwt/g3";
-import { courses as nt4 } from "./nwt/g4";
-import { courses as nt5 } from "./nwt/g5";
-import { courses as nt6 } from "./nwt/g6";
-import { courses as nt7 } from "./nwt/g7";
-import { courses as nt8 } from "./nwt/g8";
-import { courses as nt9 } from "./nwt/g9";
-import { courses as orK } from "./oregon/k";
-import { courses as or1 } from "./oregon/g1";
-import { courses as or2 } from "./oregon/g2";
-import { courses as or3 } from "./oregon/g3";
-import { courses as or4 } from "./oregon/g4";
-import { courses as or5 } from "./oregon/g5";
-import { courses as or6 } from "./oregon/g6";
-import { courses as or7 } from "./oregon/g7";
-import { courses as or8 } from "./oregon/g8";
-import { courses as or9 } from "./oregon/g9";
-import { courses as caK } from "./california/k";
-import { courses as ca1 } from "./california/g1";
-import { courses as ca2 } from "./california/g2";
-import { courses as ca3 } from "./california/g3";
-import { courses as ca4 } from "./california/g4";
-import { courses as ca5 } from "./california/g5";
-import { courses as ca6 } from "./california/g6";
-import { courses as ca7 } from "./california/g7";
-import { courses as ca8 } from "./california/g8";
-import { courses as ca9 } from "./california/g9";
-import { courses as waK } from "./washington/k";
-import { courses as wa1 } from "./washington/g1";
-import { courses as wa2 } from "./washington/g2";
-import { courses as wa3 } from "./washington/g3";
-import { courses as wa4 } from "./washington/g4";
-import { courses as wa5 } from "./washington/g5";
-import { courses as wa6 } from "./washington/g6";
-import { courses as wa7 } from "./washington/g7";
-import { courses as wa8 } from "./washington/g8";
-import { courses as wa9 } from "./washington/g9";
-import { courses as nuK } from "./nunavut/k";
-import { courses as nu1 } from "./nunavut/g1";
-import { courses as nu2 } from "./nunavut/g2";
-import { courses as nu3 } from "./nunavut/g3";
-import { courses as nu4 } from "./nunavut/g4";
-import { courses as nu5 } from "./nunavut/g5";
-import { courses as nu6 } from "./nunavut/g6";
-import { courses as nu7 } from "./nunavut/g7";
-import { courses as nu8 } from "./nunavut/g8";
-import { courses as nu9 } from "./nunavut/g9";
-import { courses as skK } from "./saskatchewan/k";
-import { courses as sk1 } from "./saskatchewan/g1";
-import { courses as sk2 } from "./saskatchewan/g2";
-import { courses as sk3 } from "./saskatchewan/g3";
-import { courses as sk4 } from "./saskatchewan/g4";
-import { courses as sk5 } from "./saskatchewan/g5";
-import { courses as sk6 } from "./saskatchewan/g6";
-import { courses as sk7 } from "./saskatchewan/g7";
-import { courses as sk8 } from "./saskatchewan/g8";
-import { courses as sk9 } from "./saskatchewan/g9";
 import { mergeCourses } from "./index";
-import { withLessons, type GradeLessons } from "./lessons";
-import * as gradeK from "./grades/k";
-import * as grade1 from "./grades/g1";
-import * as grade2 from "./grades/g2";
-import * as grade3 from "./grades/g3";
-import * as grade4 from "./grades/g4";
-import * as grade5 from "./grades/g5";
-import * as grade6 from "./grades/g6";
-import * as grade7 from "./grades/g7";
-import * as grade8 from "./grades/g8";
-import * as grade9 from "./grades/g9";
-import { courses as g8 } from "./grades/g8";
-import { courses as g9 } from "./grades/g9";
+import { withLessons } from "./lessons";
+import { REGISTRY } from "./registry";
+import { GRADE_ORDER } from "./subjects";
 import type { Course, GradeId, SubjectId } from "./types";
 
 // Every grade at once, for the statically generated public pages and for tests.
 // Never import this from client code (the apps): it would put all content back
 // into the first download. ESLint enforces this; the apps use ./index.
 
-// Each grade's lessons, applied to every framework's units with the same id (as the apps do in ./index).
-const GRADE_MODULES: Record<GradeId, object> = { k: gradeK, "1": grade1, "2": grade2, "3": grade3, "4": grade4, "5": grade5, "6": grade6, "7": grade7, "8": grade8, "9": grade9 };
+// Every framework's grade files, from the registry (British Columbia's first, as the apps load them).
+const loaded = await Promise.all(REGISTRY.map((m) => Promise.all(GRADE_ORDER.map((g) => m.grades[g]()))));
+
+// Each grade's lessons live in the shared grade files and apply to every framework's units with the same id (as in ./index).
+const lessons = Object.fromEntries(GRADE_ORDER.map((g, i) => [g, loaded[0][i].lessons ?? {}])) as Record<GradeId, NonNullable<(typeof loaded)[0][0]["lessons"]>>;
 
 /** Every course with at least one unit. */
-export const COURSES: Course[] = mergeCourses([k, g1, g2, g3, g4, g5, g6, g7, g8, g9, onK, on1, on2, on3, on4, on5, on6, on7, on8, on9, abK, ab1, ab2, ab3, ab4, ab5, ab6, ab7, ab8, ab9, skK, sk1, sk2, sk3, sk4, sk5, sk6, sk7, sk8, sk9, mbK, mb1, mb2, mb3, mb4, mb5, mb6, mb7, mb8, mb9, ytK, yt1, yt2, yt3, yt4, yt5, yt6, yt7, yt8, yt9, ntK, nt1, nt2, nt3, nt4, nt5, nt6, nt7, nt8, nt9, nsK, ns1, ns2, ns3, ns4, ns5, ns6, ns7, ns8, ns9, nbK, nb1, nb2, nb3, nb4, nb5, nb6, nb7, nb8, nb9, nuK, nu1, nu2, nu3, nu4, nu5, nu6, nu7, nu8, nu9, nlK, nl1, nl2, nl3, nl4, nl5, nl6, nl7, nl8, nl9, peK, pe1, pe2, pe3, pe4, pe5, pe6, pe7, pe8, pe9, waK, wa1, wa2, wa3, wa4, wa5, wa6, wa7, wa8, wa9, orK, or1, or2, or3, or4, or5, or6, or7, or8, or9, caK, ca1, ca2, ca3, ca4, ca5, ca6, ca7, ca8, ca9])
-  .map((c) => withLessons([c], (GRADE_MODULES[c.grade] as { lessons?: GradeLessons }).lessons ?? {})[0])
+export const COURSES: Course[] = mergeCourses(loaded.flat().map((m) => m.courses))
+  .map((c) => withLessons([c], lessons[c.grade])[0])
   .filter((c) => c.units.length > 0);
 
 export function getCourse(grade: GradeId, subject: SubjectId | string): Course | undefined {

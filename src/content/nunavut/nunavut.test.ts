@@ -11,12 +11,8 @@ const APPROVED = JSON.parse(readFileSync(join(__dirname, "../../../docs/research
   string,
   { guides: string[]; areas: string[] | null }
 >;
-// The outcomes of the new Nunavut curriculum, read from the Department's K–6 subject documents
-// (docs/research/nunavut/new-curriculum/README.md).
-const OUTCOMES = JSON.parse(readFileSync(join(__dirname, "../../../docs/research/nunavut/new-curriculum/outcomes.json"), "utf8")) as Record<
-  string,
-  { guide: string; grades: Record<string, { code: string }[]> }
->;
+// Citations (the approved guides and the new curriculum's codes), own units, the plan and borrowed units' wording are
+// checked by the framework contract (src/content/contract.test.ts, with ./contract.ts).
 
 describe("Nunavut", () => {
   it("is selectable and reports on four plain practice steps", () => {
@@ -24,31 +20,6 @@ describe("Nunavut", () => {
     expect(nunavut.id).toBe("ca-nu");
     expect(nunavut.scoringFor("4").levels.map((l) => l.label)).toEqual(["Beginning", "Approaching", "Meeting", "Exceeding"]);
     expect(nunavut.scoringFor("4").source).toMatch(/not a Nunavut/);
-  });
-
-  it("cites an approved guide, and a real strand where the guide has them", () => {
-    for (const c of COURSES) {
-      const approved = APPROVED[`${c.grade}/${c.subject}`];
-      for (const u of c.units) {
-        const standard = u.standards["ca-nu"];
-        if (!standard) continue;
-        expect(approved, `${c.grade}/${c.subject} has no approved guide, but ${u.id} cites one`).toBeDefined();
-        const head = standard.split(" · ")[0];
-        const guide = approved.guides.find((g) => head.startsWith(g));
-        expect(guide, `${u.id} cites "${head}", which is not an approved ${c.grade}/${c.subject} guide`).toBeDefined();
-        if (approved.areas) {
-          const area = head.slice(guide!.length + 2);
-          for (const part of area.split("; ")) expect(approved.areas, `${u.id} cites area "${part}"`).toContain(part);
-        }
-      }
-    }
-  });
-
-  it("offers French as an Additional Language in Grades 4 to 9 only, and no immersion", () => {
-    const has = (grade: string, subject: string) => COURSES.some((c) => c.grade === grade && c.subject === subject && c.units.some((u) => u.standards["ca-nu"]));
-    for (const g of ["k", "1", "2", "3"]) expect(has(g, "core-french"), `core-french ${g}`).toBe(false);
-    for (const g of ["4", "5", "6", "7", "8", "9"]) expect(has(g, "core-french"), `core-french ${g}`).toBe(true);
-    for (const g of ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"]) expect(has(g, "immersion"), `immersion ${g}`).toBe(false);
   });
 
   it("adds the Nunavut-only units for Nunavut alone", () => {
@@ -74,22 +45,6 @@ describe("Nunavut", () => {
         for (const u of c.units) {
           const standard = u.standards["ca-nu"];
           if (standard) expect(standard, `${g}/${c.subject}/${u.id}`).toMatch(/^Nunavut (Mathematics|English Language Arts|Science|Social Studies) K–6 \(2025\), /);
-        }
-      }
-    }
-  });
-
-  it("cites real outcome codes of the new Nunavut curriculum, for the unit's own grade and subject", () => {
-    for (const g of NEW_CURRICULUM_GRADES) {
-      for (const c of COURSES.filter((c) => c.grade === g && c.subject in OUTCOMES)) {
-        const { guide, grades } = OUTCOMES[c.subject];
-        const codes = new Set(grades[g].map((o) => o.code));
-        const cited = c.units.filter((u) => u.standards["ca-nu"]);
-        expect(cited.length, `${g}/${c.subject}`).toBeGreaterThan(0);
-        for (const u of cited) {
-          const head = u.standards["ca-nu"]!.split(" · ")[0];
-          expect(head.startsWith(`${guide}, `), `${g}/${c.subject}/${u.id}: ${head}`).toBe(true);
-          for (const code of head.slice(guide.length + 2).split("; ")) expect(codes, `${g}/${c.subject}/${u.id} cites ${code}`).toContain(code);
         }
       }
     }
