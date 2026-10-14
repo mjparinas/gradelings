@@ -8,6 +8,13 @@ const isDev = process.env.NODE_ENV === "development";
 // (scripts/csp-postbuild.mjs), and the header carries what a <meta> tag can't. See src/lib/csp.mjs.
 const csp = isDev ? DEV_POLICY : HEADER_POLICY;
 
+// Vercel builds through its own Next.js adapter (NEXT_ADAPTER_PATH), which copies prerendered pages
+// out during `next build`, before the post-build script can tag them. When a platform adapter is
+// set, ours wraps it and writes the tags first (scripts/csp-adapter.mjs). The original path is kept
+// in CSP_INNER_ADAPTER, which also stops a second load of this file from wrapping our own adapter.
+if (process.env.NEXT_ADAPTER_PATH && !process.env.CSP_INNER_ADAPTER) process.env.CSP_INNER_ADAPTER = process.env.NEXT_ADAPTER_PATH;
+const adapter = process.env.CSP_INNER_ADAPTER ? { adapterPath: path.join(__dirname, "scripts/csp-adapter.mjs") } : {};
+
 const securityHeaders = [
   { key: "Content-Security-Policy", value: csp },
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -20,6 +27,7 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  ...adapter,
   async headers() {
     return [
       { source: "/(.*)", headers: securityHeaders },
