@@ -6,7 +6,7 @@ import { offersUsd, siteCurrencies } from "@/components/site/provinces";
 import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { APP_NAME } from "@/lib/brand";
-import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, REFUND_DAYS, TRIAL_DAYS } from "@/lib/plan";
+import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, REFUND_DAYS, TAX_NOTE, TRIAL_DAYS } from "@/lib/plan";
 import { JsonLd } from "@/lib/site";
 import { pageMeta } from "@/lib/pageMeta";
 import { FaqSection } from "@/components/site/FaqSection";
@@ -14,7 +14,7 @@ import { pricingFaqs } from "@/components/site/pageFaqs";
 
 export const metadata: Metadata = pageMeta({
   title: "Pricing",
-  description: `${APP_NAME} is free for ${TRIAL_DAYS} days, then ${PRICES.month.label} or ${PRICES.year.label} (CAD)${offersUsd(FRAMEWORKS) ? `, or ${PRICES_BY_CURRENCY.USD.month.label} or ${PRICES_BY_CURRENCY.USD.year.label} in the US,` : ""} for up to ${MAX_CHILDREN} children. No ads, and the first ${FREE_UNITS_PER_COURSE} units of every course stay free.`,
+  description: `${APP_NAME} is free for ${TRIAL_DAYS} days, then ${PRICES.month.label} or ${PRICES.year.label} (CAD) ${TAX_NOTE.CAD.short}${offersUsd(FRAMEWORKS) ? `, or ${PRICES_BY_CURRENCY.USD.month.label} or ${PRICES_BY_CURRENCY.USD.year.label} in the US,` : ""} for up to ${MAX_CHILDREN} children. No ads, and the first ${FREE_UNITS_PER_COURSE} units of every course stay free.`,
   path: "/pricing/",
 });
 

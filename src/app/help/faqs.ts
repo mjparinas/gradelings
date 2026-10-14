@@ -1,7 +1,7 @@
 import { FRAMEWORKS } from "@/content/frameworks";
 import { listRegions } from "@/content/regions";
 import { APP_NAME } from "@/lib/brand";
-import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, REFUND_DAYS, TRIAL_DAYS } from "@/lib/plan";
+import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, REFUND_DAYS, TAX_NOTE, TRIAL_DAYS } from "@/lib/plan";
 
 const US_STATES = FRAMEWORKS.filter((f) => f.country === "US");
 /** "Washington", or "Washington and Oregon": the US states offered, for answers that need a US sentence. */
@@ -125,7 +125,7 @@ export const HELP: HelpSection[] = [
     faqs: [
       {
         q: "What does it cost?",
-        a: `You can subscribe straight away for ${PRICES.month.label} or ${PRICES.year.label} (${PRICES.year.note}), in Canadian dollars, for up to ${MAX_CHILDREN} children.${US_STATES.length ? ` Families in the US pay ${PRICES_BY_CURRENCY.USD.month.label} or ${PRICES_BY_CURRENCY.USD.year.label} in US dollars.` : ""} The free trial is optional: the first ${TRIAL_DAYS} days include everything, and no card is needed. Taxes may be added where required.`,
+        a: `You can subscribe straight away for ${PRICES.month.label} or ${PRICES.year.label} (${PRICES.year.note}), in Canadian dollars, ${TAX_NOTE.CAD.long}, for up to ${MAX_CHILDREN} children.${US_STATES.length ? ` Families in the US pay ${PRICES_BY_CURRENCY.USD.month.label} or ${PRICES_BY_CURRENCY.USD.year.label} in US dollars, ${TAX_NOTE.USD.long}.` : ""} The free trial is optional: the first ${TRIAL_DAYS} days include everything, and no card is needed.`,
       },
       {
         q: "What stays free after the trial?",

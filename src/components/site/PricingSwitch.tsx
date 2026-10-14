@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CURRENCY_NAME, type Currency } from "@/lib/plan";
+import { CURRENCY_NAME, TAX_NOTE, type Currency } from "@/lib/plan";
 import { PricingCards } from "./Pricing";
 
 /**
@@ -31,7 +31,7 @@ export function PricingWithCurrency({ usd }: { usd: boolean }) {
       )}
       <PricingCards currency={shown} />
       <p className="mt-2 font-read text-ink-soft">
-        Prices are in {CURRENCY_NAME[shown]}; {shown === "USD" ? "sales tax is added where it applies" : "taxes may be added"}.
+        Prices are in {CURRENCY_NAME[shown]}, {TAX_NOTE[shown].long}.
       </p>
     </>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import { firstChargeAt, FREE_UNITS_PER_COURSE, MAX_CHILDREN, pricesFor, trialDaysLeft, upgradeOffer } from "@/lib/plan";
+import { firstChargeAt, FREE_UNITS_PER_COURSE, MAX_CHILDREN, pricesFor, TAX_NOTE, trialDaysLeft, upgradeOffer } from "@/lib/plan";
 import { useRoute } from "@/lib/router";
 import { useStore } from "@/lib/store";
 import { isStoreApp } from "@/lib/twa";
@@ -27,11 +27,11 @@ export function UpgradeBanner() {
       <p className="mt-1 font-read">
         {offer === "trial" ? (
           <>
-            {days} {days === 1 ? "day" : "days"} of full access left. Subscribe now and every unit, mode and game stays open for up to {MAX_CHILDREN} children. {prices.year.label} ({prices.year.note}) or {prices.month.label}.
+            {days} {days === 1 ? "day" : "days"} of full access left. Subscribe now and every unit, mode and game stays open for up to {MAX_CHILDREN} children. {prices.year.label} ({prices.year.note}) or {prices.month.label}, {TAX_NOTE[prices.month.currency].short}.
           </>
         ) : (
           <>
-            The first {FREE_UNITS_PER_COURSE} units of each subject stay free. A family plan opens every unit, Adventure, Review, Speed Run, Challenge and the games for up to {MAX_CHILDREN} children. {prices.year.label} ({prices.year.note}) or {prices.month.label}.
+            The first {FREE_UNITS_PER_COURSE} units of each subject stay free. A family plan opens every unit, Adventure, Review, Speed Run, Challenge and the games for up to {MAX_CHILDREN} children. {prices.year.label} ({prices.year.note}) or {prices.month.label}, {TAX_NOTE[prices.month.currency].short}.
           </>
         )}
       </p>

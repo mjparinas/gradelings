@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, perChildMonthly, PRICES, PRICES_BY_CURRENCY, SUBSCRIBE_HREF, TRIAL_DAYS } from "@/lib/plan";
+import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, perChildMonthly, PRICES, PRICES_BY_CURRENCY, SUBSCRIBE_HREF, TAX_NOTE, TRIAL_DAYS } from "@/lib/plan";
 import { PricingCards } from "./Pricing";
 
 // next.config.ts sets trailingSlash, which next/link reads from this variable.
@@ -55,5 +55,16 @@ describe("PricingCards", () => {
   it("says the cost per child in US dollars on the US cards", () => {
     render(<PricingCards currency="USD" />);
     expect(card("Family · yearly")).toHaveTextContent("US$3.33 a month per child");
+  });
+
+  it("says every price is before tax, in each currency", () => {
+    const { unmount } = render(<PricingCards />);
+    expect(card("Family · monthly")).toHaveTextContent(`$${PRICES.month.amount} CAD / monthplus tax`);
+    expect(card("Family · yearly")).toHaveTextContent(`$${PRICES.year.amount} CAD / yearplus tax`);
+    expect(screen.getByText(/Prices are plus GST and PST, or HST, where they apply\./)).toBeInTheDocument();
+    unmount();
+    render(<PricingCards currency="USD" />);
+    expect(card("Family · monthly")).toHaveTextContent(TAX_NOTE.USD.short);
+    expect(screen.getByText(/Prices are plus sales tax where it applies\./)).toBeInTheDocument();
   });
 });

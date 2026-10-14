@@ -20,7 +20,7 @@ describe("comparison page", () => {
     render(await ComparePage(props(slug)));
     const main = screen.getByRole("main");
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("for families in Canada and the US");
-    expect(main).toHaveTextContent("$14.99/month or $119.99/year in Canada, US$14.99/month or US$119.99/year in the US");
+    expect(main).toHaveTextContent("$14.99/month or $119.99/year plus tax in Canada, US$14.99/month or US$119.99/year plus sales tax in the US");
     expect(main).toHaveTextContent("Curriculum");
     if (slug !== "khan-academy") {
       expect(main).toHaveTextContent("Price in Canada");
