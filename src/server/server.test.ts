@@ -451,6 +451,27 @@ describe("Stripe webhook", () => {
     expect(cookie).toBeTruthy();
   });
 
+  it("tells the parent when a cancelled subscription or trial stops, and forgets it when they undo it", async () => {
+    const { cookie } = await newAccount("cancel-later@example.com");
+    const familyId = (await dbm.query<{ family_id: string }>("SELECT family_id FROM parents WHERE email = ?", ["cancel-later@example.com"]))[0].family_id;
+    const created = Math.floor(Date.now() / 1000);
+    const send = async (id: string, object: Record<string, unknown>, at: number) => {
+      const payload = JSON.stringify({ id, created: at, type: "customer.subscription.updated", data: { object: { customer: "cus_cancel", metadata: { family_id: familyId }, ...object } } });
+      expect((await hook(payload, sign(payload))).status).toBe(200);
+      return (await (await me.GET(new Request("http://localhost/api/auth/me/", { headers: { cookie } }))).json()).family;
+    };
+    // Cancelled during the free trial: it still runs to its end, then stops.
+    let family = await send("evt_cancel_1", { status: "trialing", cancel_at_period_end: true, current_period_end: 2_000_000_000 }, created);
+    expect(family.plan).toBe("premium");
+    expect(family.subscription).toMatchObject({ status: "trialing", currentPeriodEnd: 2_000_000_000_000, cancelAt: 2_000_000_000_000 });
+    // Newer Stripe API versions say when with cancel_at instead.
+    family = await send("evt_cancel_2", { status: "active", cancel_at: 2_000_100_000, cancel_at_period_end: false, current_period_end: 2_000_000_000 }, created + 1);
+    expect(family.subscription.cancelAt).toBe(2_000_100_000_000);
+    // "Don't cancel" in the portal.
+    family = await send("evt_cancel_3", { status: "active", cancel_at: null, cancel_at_period_end: false, current_period_end: 2_000_000_000 }, created + 2);
+    expect(family.subscription.cancelAt).toBeUndefined();
+  });
+
   it("does not grant premium for a paid checkout that isn't a subscription", async () => {
     // A Payment Link on the same Stripe account lets the buyer set client_reference_id themselves.
     const { cookie } = await newAccount("oneoff@example.com");

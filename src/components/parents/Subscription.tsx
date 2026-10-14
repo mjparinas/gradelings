@@ -3,7 +3,7 @@
 import { countryOf } from "@/lib/country";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { APP_NAME } from "@/lib/brand";
-import { devBilling, loadReferral, openBillingPortal, redeemCode, refreshAccount, resendVerification, startCheckout, type BillingInfo, type ReferralInfo } from "@/lib/account";
+import { billingPortalUrl, devBilling, goToStripe, loadReferral, openBillingPortal, redeemCode, refreshAccount, resendVerification, startCheckout, type BillingInfo, type ReferralInfo } from "@/lib/account";
 import { firstChargeAt, FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, CURRENCY_NAME, pricesFor, TAX_NOTE, trialDaysLeft, upgradeOffer } from "@/lib/plan";
 import { savedPromoCode } from "@/lib/promoCode";
 import { inviteLink, rememberMyInvite } from "@/lib/referral";
@@ -14,6 +14,14 @@ import { PromoBanner } from "@/components/site/PromoBanner";
 import { PageTitle, Panel } from "./common";
 
 const noSubscribe = () => () => {};
+/**
+ * A billing portal link is fetched when Subscription opens, so the button can leave at once. Stripe's links are
+ * short-lived, so an older one is fetched again on click.
+ */
+export const PORTAL_LINK_FRESH_MS = 4 * 60_000;
+const isFresh = (at: number) => Date.now() - at < PORTAL_LINK_FRESH_MS;
+/** Stripe tells us about a change made in the portal by webhook, which can land just after the parent is back. */
+export const PORTAL_RECHECK_MS = 4_000;
 const longDate = (t: number) => new Date(t).toLocaleDateString("en-CA", { dateStyle: "long" });
 
 /** What the plan includes. US families read the grade range the US way. */
@@ -46,10 +54,34 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
   const lifetime = codeAccess && isLifetime(family);
   const [resent, setResent] = useState<"idle" | "sending" | "sent">("idle");
 
+  const fromPortal = query.get("portal") === "done";
   useEffect(() => {
-    // Coming back from Stripe: pull the new plan from the server.
-    if (checkout === "success") void refreshAccount().then(onBilling);
-  }, [checkout, onBilling]);
+    // Coming back from Stripe: pull the new plan from the server, and once more in case Stripe's webhook was slower than the parent.
+    if (checkout !== "success" && !fromPortal) return;
+    void refreshAccount().then(onBilling);
+    const again = setTimeout(() => void refreshAccount().then(onBilling), PORTAL_RECHECK_MS);
+    return () => clearTimeout(again);
+  }, [checkout, fromPortal, onBilling]);
+
+  const portalReady = subscribed && Boolean(billing?.stripe) && !inStoreApp;
+  const [portal, setPortal] = useState<{ url: string; at: number } | null>(null);
+  useEffect(() => {
+    if (!portalReady) return;
+    let live = true;
+    billingPortalUrl().then(
+      (url) => live && setPortal({ url, at: Date.now() }),
+      () => {}, // The click fetches it again and shows any error.
+    );
+    return () => {
+      live = false;
+    };
+  }, [portalReady]);
+  const manageBilling = () => {
+    if (portal && isFresh(portal.at)) {
+      setBusy(true);
+      goToStripe(portal.url);
+    } else void run(openBillingPortal);
+  };
 
   const run = async (fn: () => Promise<void>) => {
     setBusy(true);
@@ -93,11 +125,20 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
                 : "Free plan"}
           </p>
           {codeAccess && !lifetime && <p className="text-ink-soft">Free access until {longDate(family.accessUntil!)}</p>}
-          {subscribed && family.subscription?.currentPeriodEnd && (
+          {subscribed && family.subscription?.cancelAt ? (
             <p className="text-ink-soft">
-              {family.subscription.status === "trialing" ? "Free trial until" : "Renews"} {longDate(family.subscription.currentPeriodEnd)}
-              {family.subscription.status === "trialing" && ". Your first payment is that day."}
+              {family.subscription.status === "trialing"
+                ? `Cancelled. Your free trial runs until ${longDate(family.subscription.cancelAt)}, then the plan ends and you won't be charged.`
+                : `Cancelled. Premium stays on until ${longDate(family.subscription.cancelAt)}, then the plan ends and you won't be charged again.`}
             </p>
+          ) : (
+            subscribed &&
+            family.subscription?.currentPeriodEnd && (
+              <p className="text-ink-soft">
+                {family.subscription.status === "trialing" ? "Free trial until" : "Renews"} {longDate(family.subscription.currentPeriodEnd)}
+                {family.subscription.status === "trialing" && ". Your first payment is that day."}
+              </p>
+            )
           )}
           {!premium && (
             <p className="mt-2 font-read text-ink-soft">
@@ -141,8 +182,8 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
           ) : subscribed ? (
             <div className="flex flex-col gap-3">
               {billing?.stripe ? (
-                <button type="button" disabled={busy} className="rounded-xl bg-[#253047] px-4 py-3 font-bold text-white" onClick={() => void run(openBillingPortal)}>
-                  Manage billing, change plan or cancel
+                <button type="button" disabled={busy} aria-busy={busy} className="rounded-xl bg-[#253047] px-4 py-3 font-bold text-white disabled:opacity-80" onClick={manageBilling}>
+                  {busy ? "Opening billing…" : "Manage billing, change plan or cancel"}
                 </button>
               ) : billing?.dev ? (
                 <button type="button" disabled={busy} className="rounded-xl border border-line px-4 py-3 font-semibold" onClick={() => void run(() => devBilling("cancel"))}>

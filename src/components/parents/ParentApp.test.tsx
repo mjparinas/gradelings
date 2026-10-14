@@ -12,7 +12,9 @@ const h = vi.hoisted(() => ({
   startBackgroundSync: vi.fn(),
   android: false,
   billing: [] as unknown[],
+  billingPass: false,
 }));
+vi.mock("@/lib/billingReturn", () => ({ takeBillingPass: (hash: string) => h.billingPass && hash.startsWith("#/subscription") }));
 vi.mock("@/lib/localdb", () => ({
   getKV: vi.fn(async (key: string) => h.kv[key]),
   setKV: vi.fn().mockResolvedValue(undefined),
@@ -56,6 +58,7 @@ beforeEach(() => {
   h.startBackgroundSync.mockReset();
   h.android = false;
   h.billing = [];
+  h.billingPass = false;
   // The server returns the same family the device has.
   fetchMock.mockReset().mockImplementation(async () => json({ family: h.kv.family, billing: { stripe: true, dev: false } }));
   vi.stubGlobal("fetch", fetchMock);
@@ -92,6 +95,15 @@ describe("ParentApp", () => {
     expect(fetchMock).toHaveBeenCalledWith("/api/auth/me/", { credentials: "same-origin" });
     expect(screen.getByText("page:subscription")).toBeInTheDocument();
     expect(h.billing.at(-1)).toEqual({ stripe: true, dev: false });
+  });
+
+  it("skips the PIN on the way back from Stripe", async () => {
+    h.kv.family = trial(5, { account });
+    h.billingPass = true;
+    window.location.hash = "#/subscription?portal=done";
+    render(<ParentApp />);
+    expect(await screen.findByText("page:subscription", {}, { timeout: 15_000 })).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Unlock" })).not.toBeInTheDocument();
   });
 
   it("keeps class student accounts out of the parent area", async () => {

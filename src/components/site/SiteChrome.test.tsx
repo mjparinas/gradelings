@@ -2,7 +2,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
-import { SiteFooter, SiteHeader } from "./SiteChrome";
+import { PageCta, SiteFooter, SiteHeader, SubscribeActions } from "./SiteChrome";
 
 // next.config.ts sets trailingSlash, which next/link reads from this variable.
 vi.stubEnv("__NEXT_TRAILING_SLASH", "1");
@@ -22,6 +22,24 @@ describe("SiteHeader", () => {
     expect(letters.map((el) => el.style.color)).toEqual(
       [...APP_NAME].map((_, i) => cssColour(WORDMARK_COLOURS[i % WORDMARK_COLOURS.length])),
     );
+  });
+});
+
+describe("Try it free links", () => {
+  const deep = "/play/#/start?framework=ca-on&grade=2&subject=math&unit=adding-to-100";
+
+  it("open the plain app unless the page passes where to start", () => {
+    render(<SubscribeActions />);
+    expect(screen.getByRole("link", { name: "Try it free" })).toHaveAttribute("href", "/play/");
+  });
+
+  it("carry the page's province or state, grade and unit in the header, the page's own buttons and the closing call to action", () => {
+    render(<SiteHeader play={deep} />);
+    expect(screen.getByRole("link", { name: "Play free" })).toHaveAttribute("href", deep);
+    render(<SubscribeActions trialLabel="Practise free" play={deep} />);
+    expect(screen.getByRole("link", { name: "Practise free" })).toHaveAttribute("href", deep);
+    render(<PageCta play={deep} />);
+    expect(screen.getAllByRole("link", { name: "Try it free" }).at(-1)).toHaveAttribute("href", deep);
   });
 });
 

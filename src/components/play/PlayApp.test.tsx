@@ -15,6 +15,8 @@ const h = vi.hoisted(() => ({
   startBackgroundSync: vi.fn(),
   prefetchGrades: vi.fn(),
   gate: vi.fn(),
+  go: vi.fn(),
+  start: null as null | { framework: string; grade?: string; subject?: string; unit?: string },
 }));
 
 vi.mock("@/lib/router", () => ({
@@ -22,6 +24,10 @@ vi.mock("@/lib/router", () => ({
     const [p, q = ""] = h.route.split("?");
     return { path: p.split("/").filter(Boolean), query: new URLSearchParams(q) };
   },
+  go: h.go,
+}));
+vi.mock("@/content", () => ({
+  getCourse: (grade: string, subject: string) => (grade === "3" && subject === "math" ? { grade, subject, units: [{ id: "fractions" }] } : undefined),
 }));
 vi.mock("@/lib/remoteFlags", () => ({ refreshFlags: h.refreshFlags, useIsOn: () => (k: string) => !h.off.has(k) }));
 vi.mock("@/lib/sync", () => ({ startBackgroundSync: h.startBackgroundSync }));
@@ -66,7 +72,7 @@ vi.mock("./PlacementTest", () => ({ PlacementTest: screenStub("PlacementTest") }
 vi.mock("./Secrets", () => ({ SecretsListener: () => <p>secrets on</p> }));
 vi.mock("./Session", () => ({ Session: screenStub("Session") }));
 vi.mock("./Shop", () => ({ Shop: screenStub("Shop") }));
-vi.mock("./Start", () => ({ FirstRun: screenStub("FirstRun"), Picker: screenStub("Picker") }));
+vi.mock("./Start", () => ({ FirstRun: screenStub("FirstRun"), Picker: screenStub("Picker"), usePlayStart: () => h.start }));
 vi.mock("./Toasts", () => ({ Toasts: () => null }));
 vi.mock("./LessonScreen", () => ({ LessonScreen: screenStub("LessonScreen") }));
 vi.mock("./StickerBook", () => ({ StickerBook: screenStub("StickerBook") }));
@@ -88,6 +94,34 @@ beforeEach(() => {
   h.route = "";
   h.off = new Set();
   h.init.mockResolvedValue(undefined);
+  h.start = null;
+});
+
+describe("a link from a public page", () => {
+  it("opens the subject's lessons with the unit when the child follows that curriculum and grade", () => {
+    h.route = "/start";
+    h.start = { framework: "ca-bc", grade: "3", subject: "math", unit: "fractions" };
+    render(<PlayApp />);
+    expect(h.go).toHaveBeenCalledWith("/practice/math", { unit: "fractions" }, true);
+  });
+
+  it("drops a unit the course doesn't have but keeps the subject", () => {
+    h.route = "/start";
+    h.start = { framework: "ca-bc", grade: "3", subject: "math", unit: "nope" };
+    render(<PlayApp />);
+    expect(h.go).toHaveBeenCalledWith("/practice/math", { unit: undefined }, true);
+  });
+
+  it.each([
+    ["another grade", { framework: "ca-bc", grade: "5", subject: "math" }],
+    ["another curriculum", { framework: "ca-on", grade: "3", subject: "math" }],
+    ["no subject", { framework: "ca-bc", grade: "3" }],
+  ])("goes home for %s", (_, start) => {
+    h.route = "/start";
+    h.start = start;
+    render(<PlayApp />);
+    expect(h.go).toHaveBeenCalledWith("/", undefined, true);
+  });
 });
 
 describe("PlayApp start-up", () => {

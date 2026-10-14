@@ -28,7 +28,7 @@ describe("curriculum framework page", () => {
     }
     expect(screen.getByRole("link", { name: `Read our ${f.shortName} report card guide` })).toHaveAttribute("href", `/report-cards/${f.slug}/`);
     expect(screen.getByRole("link", { name: "parent guides and free practice sheets" })).toHaveAttribute("href", `/guides/${f.slug}/`);
-    expect(within(screen.getByRole("region", { name: /Ready to try/ })).getByRole("link", { name: "Try it free" })).toHaveAttribute("href", "/play/");
+    expect(within(screen.getByRole("region", { name: /Ready to try/ })).getByRole("link", { name: "Try it free" })).toHaveAttribute("href", expect.stringMatching(/^\/play\/#\/start\?framework=[a-z-]+/));
   });
 
   it("shows kids' subject names for young grades", async () => {

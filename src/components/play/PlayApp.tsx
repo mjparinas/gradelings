@@ -22,7 +22,9 @@ import { PlacementTest } from "./PlacementTest";
 import { SecretsListener } from "./Secrets";
 import { Session } from "./Session";
 import { Shop } from "./Shop";
-import { FirstRun, Picker } from "./Start";
+import { FirstRun, Picker, usePlayStart } from "./Start";
+import { getCourse } from "@/content";
+import { go } from "@/lib/router";
 import { Toasts } from "./Toasts";
 import { LessonScreen } from "./LessonScreen";
 import { StickerBook } from "./StickerBook";
@@ -72,6 +74,8 @@ function Screen() {
       return <TrophyRoom />;
     case "shop":
       return <Shop />;
+    case "start":
+      return <StartLink />;
     default:
       return <Hub />;
   }
@@ -121,6 +125,23 @@ export function PlayApp() {
       </BandProvider>
     </ContentGate>
   );
+}
+
+/**
+ * A "Try it free" link from a public page (`playHref`): when the child playing follows that province or state and
+ * grade, open the subject's lessons with the unit picked; otherwise the home screen. Either way the link is
+ * replaced, so Back doesn't land here again.
+ */
+function StartLink() {
+  const start = usePlayStart();
+  const active = useActiveProfile();
+  useEffect(() => {
+    const course = start?.subject && active && active.framework === start.framework && active.grade === start.grade ? getCourse(active.grade, start.subject, active.framework) : undefined;
+    const unit = course && start?.unit && course.units.some((u) => u.id === start.unit) ? start.unit : undefined;
+    if (course) go(`/practice/${course.subject}`, { unit }, true);
+    else go("/", undefined, true);
+  }, [start, active]);
+  return null;
 }
 
 /** Once the active child's lessons are in, quietly download siblings' and nearby grades for offline use. */

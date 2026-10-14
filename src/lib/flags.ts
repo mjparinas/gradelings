@@ -26,6 +26,7 @@ export const FLAGS: readonly FlagDef[] = [
   { key: "piper-auto-download", label: "Offline voice download", description: "Downloads the offline natural voice in the background when the app opens, for children with read-aloud on (not on mobile data). Off: parents can still download it in Settings.", scope: "app", defaultOn: true },
   { key: "secrets", label: "Easter eggs", description: "The hidden surprises: the Konami code, secret words and the moose on the home screen.", scope: "app", defaultOn: true },
   { key: "save-progress-card", label: "Save progress card", description: "Asks a grown-up to make a free account at the end of a lesson on a device with no account (after the first lesson, then daily in the trial's last week).", scope: "app", defaultOn: true },
+  { key: "email-at-start", label: "Email reports at first start", description: "On a device with no account, one screen for grown-ups after the first child is added offers the progress emails (a free account) before play starts. Let's play stays the big button.", scope: "app", defaultOn: true },
   { key: "signups", label: "New sign-ups", description: "Creating new parent and teacher accounts. Turn off to pause sign-ups.", scope: "server", defaultOn: true },
   { key: "redeem-codes", label: "Redeeming codes", description: "Parents entering access or discount codes under Subscription.", scope: "server", defaultOn: true },
   { key: "new-classes", label: "New classes", description: "Teachers creating new classes. Existing classes keep working.", scope: "server", defaultOn: true },

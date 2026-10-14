@@ -34,7 +34,7 @@ describe("French guide page", () => {
       expect(within(home).getByRole("link", { name: GRADE_LABEL[gr] })).toHaveAttribute("href", curriculumPath.grade(f, gr));
     }
     expect(screen.getByRole("link", { name: `${f.shortName} report cards explained` })).toHaveAttribute("href", `/report-cards/${f.slug}/`);
-    expect(within(screen.getByRole("region", { name: /Ready to try/ })).getByRole("link", { name: "Try it free" })).toHaveAttribute("href", "/play/");
+    expect(within(screen.getByRole("region", { name: /Ready to try/ })).getByRole("link", { name: "Try it free" })).toHaveAttribute("href", expect.stringMatching(/^\/play\/#\/start\?framework=[a-z-]+/));
   });
 
   it("only offers the French grades a province actually teaches", () => {
