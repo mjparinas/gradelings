@@ -77,7 +77,6 @@ TEKS knowledge and skills with no unit yet, or only partly practised (October 20
 - **English language arts and reading:** 1.2(E) alphabetizing and dictionaries; syllable division in 2.2(B)(C); 3.13(F)(G) paraphrasing and works cited; 4.2(A) irregular plurals (partly); 5.9(B) poet and speaker; 8.7(C) non-linear plot; E1.6(B) foils and E1.7(A) comparing literatures. Grade 7 `point-of-view-7` and Grade 9 `word-parts-9` fit their citations only loosely.
 - **Science:** 2.11(A), 2.13(C), 3.6(A)(D), 3.8(A) (partly), 8.6(B) (partly), Biology B.14 classification and B.5(D) viruses (through the microbes units only).
 - **Social studies:** 2.13 (partly); 5.6(C); 6.1(B), 6.2, 6.20 and 6.22 (light or none); 8.11, 8.14 (light), 8.25 (only 8.25(C)), 8.26 art and literature; GOV.3(B), GOV.5(A), GOV.17, GOV.18(A); 4.21, 4.14(B)(C) (as questions about meaning only), 7.20(E), 7.22 and 7.23(B).
-- **Content review:** Texas-specific science items (Gulf Coast hurricanes, Padre Island, Texas fossils, invasive species, urban heat islands) and the Texas history units were written from general knowledge and should be read once by someone who knows Texas schools.
 
 ## Keeping it current
 
