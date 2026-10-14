@@ -47,7 +47,7 @@ export const TRUST_GROUPS: { title: string; controls: Control[] }[] = [
       { title: "HTTPS everywhere", note: "With HSTS, so connections are always encrypted." },
       { title: "Security headers", note: "No framing, no sniffing, camera and mic off." },
       { title: "No third-party scripts in the app", note: "No ads or trackers for kids." },
-      { title: "Per-page script policy", note: "Fix written, in review.", status: "progress" },
+      { title: "Strict script policy", note: "Each page runs only the scripts it lists." },
       { title: "Scrubbed error reports", note: "Names, emails and cookies removed first." },
       { title: "Uptime monitoring", note: "Checked every 15 minutes, with alerts." },
     ],
