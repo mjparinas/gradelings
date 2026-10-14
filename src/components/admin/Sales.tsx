@@ -6,6 +6,7 @@ import { SelectMenu } from "@/components/SelectMenu";
 import { call } from "@/lib/classroom";
 import { countdown, fillPromoText, getPreset, isoDay, offerTerm, presetDates, PROMO_LIMITS, PROMO_LINKS, PROMO_PRESETS, type PromoOffer } from "@/lib/promo";
 import { Notice } from "./Engage";
+import { titleCase } from "@/lib/titleCase";
 
 // The Sales tab: site-wide sales shown as a banner on the public pages (src/lib/promo.ts). Pick a preset,
 // change the words, link an existing code and pick the dates. The banner shows from the start date to the end
@@ -169,11 +170,11 @@ export function Sales() {
 
       <form onSubmit={(e) => void create(e)} className={`${card} mb-6 flex flex-col gap-4`}>
         <fieldset>
-          <legend className="font-bold">Start from</legend>
+          <legend className="font-bold">Start From</legend>
           <div className="mt-2 flex flex-wrap gap-2">
             {PROMO_PRESETS.map((p) => (
               <button key={p.id} type="button" aria-pressed={preset === p.id} onClick={() => pickPreset(p.id)} className={`${btn} ${preset === p.id ? "bg-[#0f172a] text-white" : "border border-line bg-white"}`}>
-                <span aria-hidden="true">{p.emoji}</span> {p.name}
+                <span aria-hidden="true">{p.emoji}</span> {titleCase(p.name)}
               </button>
             ))}
           </div>
@@ -204,7 +205,7 @@ export function Sales() {
           <Preview emoji={getPreset(preset)?.emoji ?? "✨"} headline={filled.headline} body={filled.body} code={picked?.code ?? ""} startsAt={start ? startOf(start, now) : now} endsAt={end ? endOf(end) : now} />
         </div>
         <button disabled={busy || !codes.length} className={`${primary} self-start`}>
-          {start && startOf(start, now) > now ? "Schedule sale" : "Start sale"}
+          {start && startOf(start, now) > now ? "Schedule Sale" : "Start Sale"}
         </button>
         <Notice err={err} ok={ok} />
       </form>
@@ -248,7 +249,7 @@ export function Sales() {
                   <span className="flex flex-wrap gap-2">
                     {(p.status === "live" || p.status === "scheduled") && (
                       <button type="button" className={danger} onClick={() => void act("PATCH", p.id, "Sale stopped. The banner leaves every page within a minute.")}>
-                        Stop now
+                        Stop Now
                       </button>
                     )}
                     {(p.status === "ended" || p.status === "stopped" || p.status === "scheduled") && (

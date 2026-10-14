@@ -6,6 +6,7 @@ import { AUTOMATIONS, MAX_DAILY_CAP, TURN_ON, type AutomationConfig } from "@/li
 import { call } from "@/lib/classroom";
 import { Badge, formatAgo, formatDay, Notice, Preview } from "./Engage";
 import { Bars } from "./Skeleton";
+import { titleCase } from "@/lib/titleCase";
 
 // The Automations tab: the owner's alerts and morning digest, and automatic nudges. Every nudge is off until
 // the owner switches it on here (typing TURN ON); the daily job then sends it to at most its daily limit.
@@ -46,7 +47,7 @@ function Alerts({ data, reload }: { data: Data; reload: () => void }) {
   const a = data.alerts;
   return (
     <div className={card}>
-      <h3 className="text-xl font-bold">Alerts to you</h3>
+      <h3 className="text-xl font-bold">Alerts to You</h3>
       <p className="text-sm text-ink-soft">
         Sent to the {data.alertRecipients === 1 ? "admin account" : `${data.alertRecipients} admin accounts`} with a confirmed email. The same alert goes out at most once every 6 hours.
       </p>
@@ -108,7 +109,7 @@ function NudgeCard({ s, reload }: { s: Status; reload: () => void }) {
   return (
     <li className={card}>
       <div className="flex flex-wrap items-start justify-between gap-2">
-        <h3 className="text-lg font-bold">{def.name}</h3>
+        <h3 className="text-lg font-bold">{titleCase(def.name)}</h3>
         <Badge tone={on ? "good" : "plain"}>{on ? "On" : "Off"}</Badge>
       </div>
       <p className="font-read">{def.description}</p>
@@ -123,15 +124,15 @@ function NudgeCard({ s, reload }: { s: Status; reload: () => void }) {
       <div className="mt-3 flex flex-wrap gap-2">
         {on ? (
           <button type="button" className={danger} disabled={busy} onClick={() => void post({ action: "switch", on: false }, "Turned off. Nothing more goes out.")}>
-            Turn off
+            Turn Off
           </button>
         ) : (
           <button type="button" className={primary} aria-expanded={asking} onClick={() => setAsking(!asking)}>
-            Turn on
+            Turn On
           </button>
         )}
         <button type="button" className={quiet} aria-expanded={editing} onClick={() => setEditing(!editing)}>
-          Edit the email
+          Edit the Email
         </button>
       </div>
       {asking && !on && (
@@ -145,7 +146,7 @@ function NudgeCard({ s, reload }: { s: Status; reload: () => void }) {
             <input className={`${field} w-40 font-mono`} value={confirm} onChange={(e) => setConfirm(e.target.value)} autoComplete="off" />
           </label>
           <button type="button" className={primary} disabled={busy || confirm !== TURN_ON} onClick={() => void post({ action: "switch", on: true, confirm }, "Turned on. It runs with the next daily job.")}>
-            Start sending
+            Start Sending
           </button>
         </div>
       )}
@@ -207,14 +208,14 @@ export function Automations() {
           <div aria-busy="true" className="flex flex-col gap-4">
             <p className="sr-only">Loading…</p>
             <div className={card}>
-              <h3 className="text-xl font-bold">Alerts to you</h3>
+              <h3 className="text-xl font-bold">Alerts to You</h3>
               <Bars className="mt-2" />
             </div>
-            <h3 className="text-xl font-bold">Automatic nudges</h3>
+            <h3 className="text-xl font-bold">Automatic Nudges</h3>
             <ul className="grid gap-3 lg:grid-cols-2">
               {AUTOMATIONS.map((def) => (
                 <li key={def.id} className={card}>
-                  <h4 className="text-lg font-bold">{def.name}</h4>
+                  <h4 className="text-lg font-bold">{titleCase(def.name)}</h4>
                   <Bars className="mt-2" />
                 </li>
               ))}
@@ -225,7 +226,7 @@ export function Automations() {
         <>
           <Alerts data={data} reload={load} />
           <div>
-            <h3 className="text-xl font-bold">Automatic nudges</h3>
+            <h3 className="text-xl font-bold">Automatic Nudges</h3>
             <p className="max-w-3xl text-sm text-ink-soft">
               Emails the daily job sends by itself when a family reaches a point. Each is off until you turn it on. They follow the same rules as any email from the panel: confirmed accounts with news and tips on,
               never an address that bounced.

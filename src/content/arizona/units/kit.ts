@@ -52,10 +52,10 @@ export function timelineUnit(meta: Meta & { events: readonly Dated[]; items?: Q[
 
 /**
  * Other states as places: Washington, Oregon and California and the places their units are built around (Minnesota's
- * list, ../../minnesota/units/kit.ts), plus the states other units are written for (Texas, New York, Minnesota, Maine and
- * Alaska). George Washington, Washington, D.C., the Oregon Trail and the California Gold Rush are fine.
+ * list, ../../minnesota/units/kit.ts), plus the states other units are written for (Texas, New York, Minnesota, Maine,
+ * Alaska and Alabama). George Washington, Washington, D.C., the Oregon Trail and the California Gold Rush are fine.
  */
-const OTHER_STATE = new RegExp(`${MN_OTHER_STATE.source}|Texas|Texan|New York|Minnesota|Maine\\b|Alaska|Wyoming`);
+const OTHER_STATE = new RegExp(`${MN_OTHER_STATE.source}|Texas|Texan|New York|Minnesota|Maine\\b|Alaska|Alabama|Wyoming`);
 
 /** Words that mark a question about Tribes or treaties; other states' Tribal content stays theirs. */
 const TRIBAL = /\b(Tribes?|Tribal|treaty|treaties|California Indian)\b|\bNative\b/;

@@ -52,7 +52,7 @@ describe("Arizona", () => {
   it("never borrows a unit built around another state", () => {
     // A borrowed unit may name another state in passing (New York in the Revolution, a Texas coast in a tides question),
     // but not be written around one: units whose description names another state are copied as az- units without it.
-    const states = /Texas|New York|Minnesota|Maine\b|Alaska|Washington State|Oregon(?! Trail)|California(?! Gold Rush)/;
+    const states = /Texas|New York|Minnesota|Maine\b|Alaska|Alabama|Washington State|Oregon(?! Trail)|California(?! Gold Rush)/;
     const framed = arizona
       .filter(({ u }) => !u.id.startsWith("az-") && !u.standards["ca-bc"])
       .filter(({ u }) => states.test([u.title, u.blurb, u.parentNote ?? ""].join(" ")))
@@ -64,7 +64,7 @@ describe("Arizona", () => {
     // Arizona's own units about its Indian Nations are written for Arizona. Other states' units about their Tribes,
     // treaties or California Indian nations stay theirs.
     const words = /\b(Tribes?|Tribal|treaty|treaties|Indian(?! Ocean)|Native|missions?|Wabanaki)\b/i;
-    const borrowed = arizona.filter(({ u }) => /^(wa|or|ca|me|tx|ny|mn|ak)-/.test(u.id));
+    const borrowed = arizona.filter(({ u }) => /^(wa|or|ca|me|tx|ny|mn|ak|al)-/.test(u.id));
     const tribal = borrowed.filter(({ u }) => words.test([u.id, u.title, u.blurb, u.parentNote ?? ""].join(" "))).map(({ key }) => key);
     expect(tribal).toEqual([]);
   });

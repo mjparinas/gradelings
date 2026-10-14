@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { call } from "@/lib/classroom";
 import { CHECKS, STATE_LABEL, STATUS_PAGES, worst, type CheckResult, type CheckState, type HealthCheck, type StatusPage } from "@/lib/systemHealth";
+import { titleCase } from "@/lib/titleCase";
 
 // The admin panel's System page: one card per part of the stack, then the providers' status pages.
 // Every card is drawn at once as a placeholder and asks the server for its own result, so a slow service
@@ -71,7 +72,7 @@ function CheckCard({ c, now }: { c: HealthCheck; now: number }) {
   return (
     <li className={card}>
       <div className="flex flex-wrap items-start justify-between gap-2">
-        <h3 className="text-lg font-bold">{c.title}</h3>
+        <h3 className="text-lg font-bold">{titleCase(c.title)}</h3>
         <StateBadge state={c.state} />
       </div>
       <p className="mt-1 font-read">{c.summary}</p>
@@ -256,7 +257,7 @@ export function System() {
               setErr("");
               load(true);
             }} disabled={busy}>
-            {busy ? "Checking…" : "Check again"}
+            {busy ? "Checking…" : "Check Again"}
           </button>
         </div>
       </div>
@@ -277,7 +278,7 @@ export function System() {
       </ul>
       <section aria-labelledby="status-h" className="flex flex-col gap-2">
         <h3 id="status-h" className="text-xl font-bold">
-          Provider status pages
+          Provider Status Pages
         </h3>
         <ul className="grid gap-2 sm:grid-cols-2">
           {STATUS_PAGES.map((p) => {

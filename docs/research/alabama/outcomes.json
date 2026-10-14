@@ -1,0 +1,4234 @@
+{
+ "k/language": [
+  {
+   "idx": "K.R1",
+   "content": "Utilize active listening skills during discussion and conversation in pairs, small groups, or whole-class settings, following agreed-upon rules for participation."
+  },
+  {
+   "idx": "K.R2",
+   "content": "Use knowledge of phoneme-grapheme correspondences and word analysis skills to decode and encode words accurately."
+  },
+  {
+   "idx": "K.R3",
+   "content": "Expand background knowledge and build vocabulary through discussion, reading, and writing."
+  },
+  {
+   "idx": "K.R4",
+   "content": "Use digital and electronic tools appropriately, safely, and ethically for research and writing, both individually and collaboratively."
+  },
+  {
+   "idx": "K.R5",
+   "content": "Utilize the writing process to plan, draft, revise, edit, and publish writings in various genres."
+  },
+  {
+   "idx": "K.1",
+   "content": "Actively listen and speak using agreed-upon rules for discussion, with guidance and support."
+  },
+  {
+   "idx": "K.2",
+   "content": "Actively engage in teacher-led reading experiences and collaborative discussions with peers to build background knowledge needed to be successful as they learn to read and, later, read to learn."
+  },
+  {
+   "idx": "K.3",
+   "content": "Actively participate in teacher-led choral and shared reading experiences."
+  },
+  {
+   "idx": "K.4",
+   "content": "With guidance and support, ask and answer questions to seek help, get information, or clarify information presented orally, through text, or other media."
+  },
+  {
+   "idx": "K.5",
+   "content": "With guidance and support, present information orally, using complete sentences in correct word order."
+  },
+  {
+   "idx": "K.6",
+   "content": "Uses spatial and temporal concepts correctly."
+  },
+  {
+   "idx": "K.7",
+   "content": "Restate and follow one- and two-step directions."
+  },
+  {
+   "idx": "K.8",
+   "content": "Demonstrate understanding of the organization and basic features of printed materials."
+  },
+  {
+   "idx": "K.9",
+   "content": "Demonstrate early phonological awareness to basic phonemic awareness skills in spoken words."
+  },
+  {
+   "idx": "K.10",
+   "content": "Apply knowledge of phoneme-grapheme correspondences and word-analysis skills to decode and encode (spell) words accurately in both isolation and in decodable, grade-appropriate text."
+  },
+  {
+   "idx": "K.11",
+   "content": "Recognize and name all upper and lower case letters in non-sequential order with accuracy and automaticity."
+  },
+  {
+   "idx": "K.12",
+   "content": "Arrange and name letters of the alphabet in sequential order from a to z, with accuracy and automaticity."
+  },
+  {
+   "idx": "K.13",
+   "content": "With prompting and support, recognize and name digraphs ck, sh, th, ch, wh, ng, and combination qu."
+  },
+  {
+   "idx": "K.14",
+   "content": "Apply previously-taught phoneme-grapheme correspondences to decodable words with accuracy and automaticity, in and out of context."
+  },
+  {
+   "idx": "K.15",
+   "content": "Orally read and reread grade-appropriate decodable texts smoothly, accurately, and expressively, at an appropriate rate to support comprehension."
+  },
+  {
+   "idx": "K.16",
+   "content": "Recognize and read grade-appropriate high frequency words with accuracy and automaticity."
+  },
+  {
+   "idx": "K.17",
+   "content": "With guidance and support, orally utilize new academic, content-specific, grade-level vocabulary and relate new words to prior knowledge."
+  },
+  {
+   "idx": "K.18",
+   "content": "Identify new meanings for familiar words and apply them accurately."
+  },
+  {
+   "idx": "K.19",
+   "content": "Ask and answer questions about unfamiliar words in discussions and/or text."
+  },
+  {
+   "idx": "K.20",
+   "content": "Name and sort pictures of objects into categories based on common attributes while relating vocabulary to prior knowledge and building background knowledge."
+  },
+  {
+   "idx": "K.21",
+   "content": "Use new and previously-taught vocabulary to produce and expand complete sentences in shared language activities."
+  },
+  {
+   "idx": "K.22",
+   "content": "Use content knowledge built during read-alouds of informational texts by participating in content-specific discussions with peers and/or through drawing or writing."
+  },
+  {
+   "idx": "K.23",
+   "content": "With prompting and support, manipulate words and/or phrases to create simple sentences, including declarative and interrogative, to help build syntactic awareness and comprehension at the sentence level."
+  },
+  {
+   "idx": "K.24",
+   "content": "With prompting and support, identify common types of texts and their features, including literary, informational, fairy tale, and poetry."
+  },
+  {
+   "idx": "K.25",
+   "content": "With prompting and support, identify the topic of texts, using titles, headings, illustrations, and text clues."
+  },
+  {
+   "idx": "K.26",
+   "content": "With prompting and support, describe the relationship between illustrations and the text in which they appear."
+  },
+  {
+   "idx": "K.27",
+   "content": "Identify and describe the main story elements in a literary text."
+  },
+  {
+   "idx": "K.28",
+   "content": "With prompting and support, use text clues to determine main ideas and make predictions about an ending in a literary text."
+  },
+  {
+   "idx": "K.29",
+   "content": "With prompting and support, identify the main topic and key details in an informational text."
+  },
+  {
+   "idx": "K.30",
+   "content": "With prompting and support, ask and answer questions about key details in literary and informational texts."
+  },
+  {
+   "idx": "K.31",
+   "content": "With prompting and support, self-monitor comprehension of text by pausing to summarize and rereading for clarification, when comprehension is lacking."
+  },
+  {
+   "idx": "K.32",
+   "content": "With prompting and support, compare and contrast two texts."
+  },
+  {
+   "idx": "K.33",
+   "content": "Express ideas orally and connect these ideas through drawing and emergent writing."
+  },
+  {
+   "idx": "K.34",
+   "content": "Print legibly, using proper pencil grip."
+  },
+  {
+   "idx": "K.35",
+   "content": "Apply knowledge of grade-appropriate phoneme-grapheme correspondences and spelling rules (or generalizations) to encode words accurately."
+  },
+  {
+   "idx": "K.36",
+   "content": "When speaking and writing, follow the rules of standard English grammar, punctuation, capitalization, and grade-appropriate spelling."
+  },
+  {
+   "idx": "K.37",
+   "content": "Actively participate in shared and independent writing experiences, for varied purposes and audiences, across different genres."
+  },
+  {
+   "idx": "K.38",
+   "content": "Improve pictorial and written presentations, as needed, by planning, revising, editing, and using suggestions from peers and adults."
+  },
+  {
+   "idx": "K.39",
+   "content": "Participate in shared research and writing projects to answer a question or describe a topic."
+  },
+  {
+   "idx": "K.40",
+   "content": "With guidance and support, use a variety of digital tools to produce and publish writing, working both independently and collaboratively with peers."
+  }
+ ],
+ "k/math": [
+  {
+   "idx": "K.1",
+   "content": "Count forward orally from 0 to 100 by ones and by tens. Count backward orally from 10 to 0 by ones."
+  },
+  {
+   "idx": "K.2",
+   "content": "Count to 100 by ones beginning with any given number between 0 and 99. :"
+  },
+  {
+   "idx": "K.3",
+   "content": "Write numerals from 0 to 20. a. Represent 0 to 20 using concrete objects when given a written numeral from 0 to 20 (with 0 representing a count of no objects)."
+  },
+  {
+   "idx": "K.4",
+   "content": "Connect counting to cardinality using a variety of concrete objects. a. Say the number names in consecutive order when counting objects."
+  },
+  {
+   "idx": "K.5",
+   "content": "Count to answer \"how many?\" questions."
+  },
+  {
+   "idx": "K.6",
+   "content": "Orally identify whether the number of objects in one group is greater/more than, less/fewer than, or equal/the same as the number of objects in another group, in groups containing up to 10 objects, by using matching,"
+  },
+  {
+   "idx": "K.7",
+   "content": "Compare two numbers between 0 and 10 presented as written numerals (without using inequality symbols)."
+  },
+  {
+   "idx": "K.8",
+   "content": "Represent addition and subtraction up to 10 with concrete objects, fingers, pennies, mental images, drawings, claps or other sounds, acting out situations, verbal explanations, expressions, or equations."
+  },
+  {
+   "idx": "K.9",
+   "content": "Solve addition and subtraction word problems, and add and subtract within 10, by using concrete objects or drawings to represent the problem."
+  },
+  {
+   "idx": "K.10",
+   "content": "Decompose numbers less than or equal to 10 into pairs of smaller numbers in more than one way, by using concrete objects or drawings, and record each decomposition by a drawing or equation."
+  },
+  {
+   "idx": "K.11",
+   "content": "For any number from 0 to 10, find the number that makes 10 when added to the given number, by using concrete objects or drawings, and record the answer with a drawing or equation."
+  },
+  {
+   "idx": "K.12",
+   "content": "Fluently add and subtract within 5."
+  },
+  {
+   "idx": "K.13",
+   "content": "Duplicate and extend simple patterns using concrete objects."
+  },
+  {
+   "idx": "K.14",
+   "content": "Compose and decompose numbers from 11 to 19 by using concrete objects or drawings to demonstrate understanding that these numbers are composed of ten ones and one, two, three, four, five, six, seven, eight, or nine ones."
+  },
+  {
+   "idx": "K.15",
+   "content": "Classify objects into given categories of 10 or fewer; count the number of objects in each category and sort the categories by count."
+  },
+  {
+   "idx": "K.16",
+   "content": "Identify and describe measurable attributes (length, weight, height) of a single object using vocabulary such as long/short, heavy/light, or tall/short."
+  },
+  {
+   "idx": "K.17",
+   "content": "Directly compare two objects with a measurable attribute in common to see which object has \"more of\" or \"less of\" the attribute and describe the difference."
+  },
+  {
+   "idx": "K.18",
+   "content": "Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as above, below, beside, in front of, behind, and next to."
+  },
+  {
+   "idx": "K.19",
+   "content": "Correctly name shapes regardless of their orientations or overall sizes."
+  },
+  {
+   "idx": "K.20",
+   "content": "Identify shapes as two-dimensional (lying in a plane, \"flat\") or three-dimensional (\"solid\")."
+  },
+  {
+   "idx": "K.21",
+   "content": "Analyze and compare two- and three-dimensional shapes, in different sizes and orientations, using informal language to describe their similarities, differences, parts (number of sides and vertices or \"corners\"), and other attributes."
+  },
+  {
+   "idx": "K.22",
+   "content": "Model shapes in the world by building them from sticks, clay balls, or other components and by drawing them."
+  },
+  {
+   "idx": "K.23",
+   "content": "Use simple shapes to compose larger shapes."
+  }
+ ],
+ "k/science": [
+  {
+   "idx": "K.1",
+   "content": "Plan and carry out investigations to determine the effects of forces of different strengths and directions on the motion of an object, including speed, direction, and distance traveled."
+  },
+  {
+   "idx": "K.2",
+   "content": "Analyze data from investigations to determine whether a design solution provides sufficient force to change the speed or direction of an object."
+  },
+  {
+   "idx": "K.3",
+   "content": "Use data from observations to distinguish characteristics of living and nonliving things."
+  },
+  {
+   "idx": "K.4",
+   "content": "Use observations to determine patterns of what plants and animals (including humans) need to survive, including light, water, and nutrients."
+  },
+  {
+   "idx": "K.5",
+   "content": "Gather information from observations and media to explain how plants and animals can provide for their needs by changing their environment."
+  },
+  {
+   "idx": "K.6",
+   "content": "Use models of natural habitats to represent the interdependence among plants and animals native to their community."
+  },
+  {
+   "idx": "K.7",
+   "content": "Make observations and describe the effects of sunlight on Earth's surface."
+  },
+  {
+   "idx": "K.8",
+   "content": "Design, construct, and test a device to reduce the effects of sunlight."
+  },
+  {
+   "idx": "K.9",
+   "content": "Observe, record, and communicate local weather patterns over a period of time."
+  },
+  {
+   "idx": "K.10",
+   "content": "Obtain, evaluate, and communicate information about using weather forecasts to make plans and prepare for severe weather."
+  },
+  {
+   "idx": "K.11",
+   "content": "Identify a problem and design possible solutions that lessen the human impact on the local nvironment."
+  }
+ ],
+ "k/social": [
+  {
+   "idx": "K.1",
+   "content": "Describe rights and responsibilities of citizens and individuals within the home, school, and community."
+  },
+  {
+   "idx": "K.2",
+   "content": "Describe roles of community helpers and leaders."
+  },
+  {
+   "idx": "K.3",
+   "content": "Identify and explain symbols, customs, influential individuals, and celebrations associated with the home, school, community, state, and nation."
+  },
+  {
+   "idx": "K.4",
+   "content": "Explain the process of earning, saving, and spending money."
+  },
+  {
+   "idx": "K.5",
+   "content": "Describe the concept of exchange and how money is used to purchase goods and services."
+  },
+  {
+   "idx": "K.6",
+   "content": "Differentiate between needs and wants."
+  },
+  {
+   "idx": "K.7",
+   "content": "Explain the purpose and use of maps."
+  },
+  {
+   "idx": "K.8",
+   "content": "Identify landforms and bodies of water on maps, globes, and satellite and digital images."
+  },
+  {
+   "idx": "K.9",
+   "content": "Give and follow directions, using terminology that indicates position and direction."
+  },
+  {
+   "idx": "K.10",
+   "content": "Sequence events using schedules, calendars, and timelines."
+  },
+  {
+   "idx": "K.11",
+   "content": "Identify a primary source."
+  }
+ ],
+ "1/language": [
+  {
+   "idx": "1.R1",
+   "content": "Utilize active listening skills during discussion and conversation in pairs, small groups, or whole-class settings, following agreed-upon rules for participation."
+  },
+  {
+   "idx": "1.R2",
+   "content": "Use knowledge of phoneme-grapheme correspondences and word analysis skills to decode and encode words accurately."
+  },
+  {
+   "idx": "1.R3",
+   "content": "Expand background knowledge and build vocabulary through discussion, reading, and writing."
+  },
+  {
+   "idx": "1.R4",
+   "content": "Use digital and electronic tools appropriately, safely, and ethically for research and writing, both individually and collaboratively."
+  },
+  {
+   "idx": "1.R5",
+   "content": "Utilize a writing process to plan, draft, revise, edit, and publish writings in various genres."
+  },
+  {
+   "idx": "1.1",
+   "content": "Engage in collaborative discussions about topics and texts with peers and adults in small and large groups, utilizing agreed-upon rules."
+  },
+  {
+   "idx": "1.2",
+   "content": "Actively participate in shared reading experiences and collaborative discussions to build background knowledge and learn how oral reading should sound."
+  },
+  {
+   "idx": "1.3",
+   "content": "Ask and answer questions to seek help, get information, or clarify information to confirm understanding in response to information presented in audible, text, or digital format."
+  },
+  {
+   "idx": "1.4",
+   "content": "Present information orally using complete sentences and appropriate volume."
+  },
+  {
+   "idx": "1.5",
+   "content": "Locate a book's title, table of contents, glossary, and the names of author(s) and illustrator(s)."
+  },
+  {
+   "idx": "1.6",
+   "content": "Demonstrate basic to advanced phonological and phonemic awareness skills in spoken words."
+  },
+  {
+   "idx": "1.7",
+   "content": "Apply knowledge of phoneme-grapheme correspondences and word analysis skills to decode and encode words accurately both in isolation and within decodable, grade-appropriate texts."
+  },
+  {
+   "idx": "1.8",
+   "content": "Apply previously-taught phoneme-grapheme correspondences to decodable words with accuracy and automaticity, in and out of context."
+  },
+  {
+   "idx": "1.9",
+   "content": "Read grade-appropriate texts with accuracy and fluency."
+  },
+  {
+   "idx": "1.10",
+   "content": "Read high-frequency words commonly found in grade-appropriate text."
+  },
+  {
+   "idx": "1.11",
+   "content": "Utilize new academic, content-specific, grade-level vocabulary, make connections to previously learned words, and relate new words to background knowledge."
+  },
+  {
+   "idx": "1.12",
+   "content": "Ask and answer questions about unfamiliar words and phrases in discussions and/or text."
+  },
+  {
+   "idx": "1.13",
+   "content": "Use information found within the text to determine the meaning of an unfamiliar or multiple-meaning word or phrase."
+  },
+  {
+   "idx": "1.14",
+   "content": "Sort and categorize groups of words or pictures based on meaning, and label each category."
+  },
+  {
+   "idx": "1.15",
+   "content": "Identify and explain adjectives as descriptive words and phrases in all forms of texts, including poems."
+  },
+  {
+   "idx": "1.16",
+   "content": "Use grade-appropriate academic vocabulary in speaking and writing."
+  },
+  {
+   "idx": "1.17",
+   "content": "Use content knowledge built during read-alouds of informational and literary texts by participating in content-specific discussions with peers and/or through drawing and writing."
+  },
+  {
+   "idx": "1.18",
+   "content": "Manipulate words and/or phrases to create simple sentences, including declarative and interrogative, to help build syntactic awareness and comprehension at the sentence level."
+  },
+  {
+   "idx": "1.19",
+   "content": "Identify common types of texts and their features, including literary, informational, fairy tale, and poetry."
+  },
+  {
+   "idx": "1.20",
+   "content": "Use text features to locate key facts or information in printed or digital text."
+  },
+  {
+   "idx": "1.21",
+   "content": "Identify the main topic and key details of literary and informational texts."
+  },
+  {
+   "idx": "1.22",
+   "content": "Ask and answer questions about key details in literary and informational texts."
+  },
+  {
+   "idx": "1.23",
+   "content": "Identify and describe the main story elements in a literary text."
+  },
+  {
+   "idx": "1.24",
+   "content": "Identify who is telling the story, using evidence from the text."
+  },
+  {
+   "idx": "1.25",
+   "content": "Describe connections between two individuals, events, ideas, or pieces of information, including cause and effect, sequence, and problem and solution, in a literary text."
+  },
+  {
+   "idx": "1.26",
+   "content": "With prompting and support, use textual evidence to explain the central message or moral of a literary text."
+  },
+  {
+   "idx": "1.27",
+   "content": "Make predictions using information found within a literary text."
+  },
+  {
+   "idx": "1.28",
+   "content": "Self-monitor comprehension of text by pausing to summarize or rereading for clarification when comprehension is lacking."
+  },
+  {
+   "idx": "1.29",
+   "content": "Compare and contrast texts."
+  },
+  {
+   "idx": "1.30",
+   "content": "Write legibly, using proper pencil grip."
+  },
+  {
+   "idx": "1.31",
+   "content": "Apply knowledge of grade-appropriate phoneme-grapheme correspondences and spelling rules (or generalizations) to encode words accurately."
+  },
+  {
+   "idx": "1.32",
+   "content": "Follow the rules of standard English grammar, punctuation, capitalization, and spelling appropriate to grade level."
+  },
+  {
+   "idx": "1.33",
+   "content": "Actively participate in shared writing experiences to compose and develop a well-organized paragraph with a topic sentence, details to support, and a concluding sentence."
+  },
+  {
+   "idx": "1.34",
+   "content": "With prompting and support, write a narrative that recounts two or more appropriately sequenced events using transitions, incorporating relevant details, and providing a sense of closure."
+  },
+  {
+   "idx": "1.35",
+   "content": "With prompting and support, write an informative or explanatory text about a topic, using facts from a source and providing a sense of closure."
+  },
+  {
+   "idx": "1.36",
+   "content": "With prompting and support, write an opinion piece about a topic, including at least one supporting reason from a source and providing a sense of closure."
+  },
+  {
+   "idx": "1.37",
+   "content": "With prompting and support, write simple poems about a chosen subject."
+  },
+  {
+   "idx": "1.38",
+   "content": "Develop and edit first drafts using appropriate spacing between letters, words, and sentences and left-to-right and top-to-bottom progression."
+  },
+  {
+   "idx": "1.39",
+   "content": "Improve writing, as needed, by planning, revising, and editing with guidance from peer editors, responding to their questions and suggestions."
+  },
+  {
+   "idx": "1.40",
+   "content": "Describe ideas, thoughts, and feelings, using adjectives, drawings, or other visual displays to clarify."
+  },
+  {
+   "idx": "1.41",
+   "content": "Organize a list of words into alphabetical order according to the first and (when necessary) second letters of the words."
+  },
+  {
+   "idx": "1.42",
+   "content": "Participate in shared research and writing projects to answer a question or describe a topic."
+  },
+  {
+   "idx": "1.43",
+   "content": "Use a variety of digital tools to produce and publish writing with guidance and support from adults, working both individually and in collaboration with peers."
+  }
+ ],
+ "1/math": [
+  {
+   "idx": "1.1",
+   "content": "Use addition and subtraction to solve word problems within 20 by using concrete objects, drawings, and equations with a symbol for the unknown number to represent the problem. a. Add to with change unknown to solve word problems within 20."
+  },
+  {
+   "idx": "1.2",
+   "content": "Solve word problems that call for addition of three whole numbers whose sum is less than or equal to 20 by using concrete objects, drawings, or equations with a symbol for the unknown number to represent the problem."
+  },
+  {
+   "idx": "1.3",
+   "content": "Apply properties of operations as strategies to add and subtract."
+  },
+  {
+   "idx": "1.4",
+   "content": "Explain subtraction as an unknown-addend problem."
+  },
+  {
+   "idx": "1.5",
+   "content": "Relate counting to addition and subtraction. Example: counting on 2 to add 2"
+  },
+  {
+   "idx": "1.6",
+   "content": "Add and subtract within 20. a. Demonstrate fluency with addition and subtraction facts with sums or differences to 10 by counting on. b. Demonstrate fluency with addition and subtraction facts with sums or differences to 10 by making ten. c. Demonstrate fluency with addition and subtraction facts with sums or differences to 10 by decomposing a number leading to a ten."
+  },
+  {
+   "idx": "1.7",
+   "content": "Explain that the equal sign means \"the same as.\" Determine whether equations involving addition and subtraction are true or false."
+  },
+  {
+   "idx": "1.8",
+   "content": "Solve for the unknown whole number in various positions in an addition or subtraction equation, relating three"
+  },
+  {
+   "idx": "1.9",
+   "content": "Reproduce, extend, and create patterns and sequences of numbers using a variety of materials."
+  },
+  {
+   "idx": "1.10",
+   "content": "Extend the number sequence from 0 to 120. a. Count forward and backward by ones, starting at any number less than 120."
+  },
+  {
+   "idx": "1.11",
+   "content": "Explain that the two digits of a two-digit number represent amounts of tens and ones."
+  },
+  {
+   "idx": "1.12",
+   "content": "Compare pairs of two-digit numbers based on the values of the tens and ones digits, recording the results of comparisons with the symbols >, =, and < and orally with the words \"is greater than,\" \"is equal to,\" and \"is less"
+  },
+  {
+   "idx": "1.13",
+   "content": "Add within 100, using concrete models or drawings and strategies based on place value. a. Add a two-digit number and a one-digit number. b. Add a two-digit number and a multiple of 10. c. Demonstrate that in adding two-digit numbers, tens are added to tens, ones are added to ones, and sometimes it is"
+  },
+  {
+   "idx": "1.14",
+   "content": "Given a two-digit number, mentally find 10 more or 10 less than the number without having to count, and explain"
+  },
+  {
+   "idx": "1.15",
+   "content": "Subtract multiples of 10 from multiples of 10 in the range 10-90 (positive or zero differences), using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction. Relate the strategy to a written method and explain the reasoning used."
+  },
+  {
+   "idx": "1.16",
+   "content": "Organize, represent, and interpret data with up to three categories. a. Ask and answer questions about the total number of data points in organized data."
+  },
+  {
+   "idx": "1.17",
+   "content": "Order three objects by length; compare the lengths of two objects indirectly by using a third object."
+  },
+  {
+   "idx": "1.18",
+   "content": "Determine the length of an object using non-standard units with no gaps or overlaps, expressing the length of the"
+  },
+  {
+   "idx": "1.19",
+   "content": "Tell and write time to the hours and half hours using analog and digital clocks."
+  },
+  {
+   "idx": "1.20",
+   "content": "Identify pennies and dimes by name and value."
+  },
+  {
+   "idx": "1.21",
+   "content": "Build and draw shapes which have defining attributes. a. Distinguish between defining attributes and non-defining attributes."
+  },
+  {
+   "idx": "1.22",
+   "content": "Compose two-dimensional shapes (rectangles, squares, trapezoids, triangles, half-circles, and quarter-circles) or three-dimensional shapes (cubes, right rectangular prisms, right circular cones, and right circular cylinders) to create a composite shape, and compose new shapes from the composite shape."
+  },
+  {
+   "idx": "1.23",
+   "content": "Partition circles and rectangles into two and four equal shares and describe the shares using the words halves, fourths, and quarters, and use the phrases half of, fourth of, and quarter of."
+  }
+ ],
+ "1/science": [
+  {
+   "idx": "1.1",
+   "content": "Carry out investigations to provide evidence that the vibrations of matter can make sound and"
+  },
+  {
+   "idx": "1.2",
+   "content": "Use evidence from observations to explain that light is necessary in order for an object to be seen."
+  },
+  {
+   "idx": "1.3",
+   "content": "Plan and carry out investigations to determine how light is affected when it interacts with"
+  },
+  {
+   "idx": "1.4",
+   "content": "Design and construct a device that uses light or sound waves to send a communication signal ver a distance."
+  },
+  {
+   "idx": "1.5",
+   "content": "Use information from observations to explain how various external features help living things survive, grow, and meet their needs."
+  },
+  {
+   "idx": "1.6",
+   "content": "Obtain information from text and other media to provide evidence that parents and their offspring engage in patterns of behavior that help the offspring survive."
+  },
+  {
+   "idx": "1.7",
+   "content": "Make observations to identify the similarities and differences between offspring and their parents."
+  },
+  {
+   "idx": "1.8",
+   "content": "Observe, describe, and predict patterns of the sun, moon, and stars as they appear in the sky."
+  },
+  {
+   "idx": "1.9",
+   "content": "Use observations of seasonal sunrise and sunset patterns to describe the relationship between the number of hours of daylight and the time of year."
+  }
+ ],
+ "1/social": [
+  {
+   "idx": "1.1",
+   "content": "Identify rights and responsibilities of citizens and individuals within the local community and the state."
+  },
+  {
+   "idx": "1.2",
+   "content": "Identify public offices in the community and state and the duties associated with them."
+  },
+  {
+   "idx": "1.3",
+   "content": "Explain the role of commercial institutions within the local community, including banks, grocery stores, and other businesses."
+  },
+  {
+   "idx": "1.4",
+   "content": "Describe ways occupational and recreational opportunities in the local community and state are affected by the physical environment."
+  },
+  {
+   "idx": "1.5",
+   "content": "Define natural resources and identify examples in their community and state."
+  },
+  {
+   "idx": "1.6",
+   "content": "Explain how farmers produce food and manufacturers turn raw materials into products."
+  },
+  {
+   "idx": "1.7",
+   "content": "Name and locate their local community, county, state, and state capital on a political map."
+  },
+  {
+   "idx": "1.8",
+   "content": "Describe the features of political and physical maps."
+  },
+  {
+   "idx": "1.9",
+   "content": "Differentiate among landforms, bodies of water, and other physical features on maps, globes, and satellite and digital images."
+  },
+  {
+   "idx": "1.10",
+   "content": "Construct calendars, timelines, and daily schedules."
+  },
+  {
+   "idx": "1.11",
+   "content": "Differentiate between primary and secondary sources."
+  },
+  {
+   "idx": "1.12",
+   "content": "Utilize primary sources to examine the significance of individuals, cultures, celebrations, and historical events within the community and state."
+  },
+  {
+   "idx": "1.13",
+   "content": "Utilize primary sources to compare and contrast conditions in their community and state over time."
+  }
+ ],
+ "2/language": [
+  {
+   "idx": "2.R1",
+   "content": "Utilize active listening skills during discussion and conversation in pairs, small groups, or whole-class settings, following agreed-upon rules for participation."
+  },
+  {
+   "idx": "2.R2",
+   "content": "Use knowledge of phoneme-grapheme correspondences and word analysis skills to decode and encode words accurately."
+  },
+  {
+   "idx": "2.R3",
+   "content": "Expand background knowledge and build vocabulary through discussion, reading, and writing."
+  },
+  {
+   "idx": "2.R4",
+   "content": "Use digital and electronic tools appropriately, safely, and ethically for research and writing, both individually and collaboratively."
+  },
+  {
+   "idx": "2.R5",
+   "content": "Utilize a writing process to plan, draft, revise, edit, and publish writings in various genres."
+  },
+  {
+   "idx": "2.1",
+   "content": "Participate in conversations and discussions with groups and peers utilizing agreed-upon rules."
+  },
+  {
+   "idx": "2.2",
+   "content": "Present information orally using complete sentences, appropriate volume, and clear pronunciation."
+  },
+  {
+   "idx": "2.3",
+   "content": "Demonstrate oral literacy skills by participating in a variety of oral language activities."
+  },
+  {
+   "idx": "2.4",
+   "content": "Orally answer who, what, when, where, why, and how questions about a text or conversation, using complete sentences to provide key ideas and details."
+  },
+  {
+   "idx": "2.5",
+   "content": "Create recordings of stories or poems."
+  },
+  {
+   "idx": "2.6",
+   "content": "Use visual aids and technology in oral presentations to present key ideas and details about a text or conversation, and add drawings or other visual displays to stories or recounts of experiences when appropriate to clarify thoughts, feelings, and ideas."
+  },
+  {
+   "idx": "2.7",
+   "content": "Demonstrate standard English usage when speaking."
+  },
+  {
+   "idx": "2.8",
+   "content": "Apply knowledge of voiced and unvoiced sounds and manner of articulation to distinguish between commonly-confused vowel sounds and commonly-confused cognate consonant sounds."
+  },
+  {
+   "idx": "2.9",
+   "content": "Demonstrate advanced phonemic awareness skills in spoken words."
+  },
+  {
+   "idx": "2.10",
+   "content": "Apply knowledge of phoneme-grapheme correspondences, multisyllabic word construction, and syllable division principles to decode and encode (spell) words accurately in isolation and in context."
+  },
+  {
+   "idx": "2.11",
+   "content": "Apply previously-taught phoneme-grapheme correspondences to multisyllabic words with accuracy and automaticity, in and out of context."
+  },
+  {
+   "idx": "2.12",
+   "content": "Read and reread grade-appropriate text accurately, automatically, and with meaningful expression at a rate which supports comprehension."
+  },
+  {
+   "idx": "2.13",
+   "content": "Read grade-appropriate poetry, noticing phrasing, rhythm, and rhyme."
+  },
+  {
+   "idx": "2.14",
+   "content": "Read high-frequency words commonly found in grade-appropriate text."
+  },
+  {
+   "idx": "2.15",
+   "content": "Utilize new academic, content-specific, grade-level vocabulary, making connections to previously learned words and relating new words to background knowledge."
+  },
+  {
+   "idx": "2.16",
+   "content": "Describe word relationships and nuances in word meanings, including relating them to their opposites and distinguishing shades of meaning in similar or related words."
+  },
+  {
+   "idx": "2.17",
+   "content": "Analyze meaningful parts of words and phrases in discussions and/or text."
+  },
+  {
+   "idx": "2.18",
+   "content": "Use dictionary definitions and information found within the text to help determine meaning of unfamiliar or multi-meaning words."
+  },
+  {
+   "idx": "2.19",
+   "content": "Identify new vocabulary and the use of word meanings in text to establish real-life connections."
+  },
+  {
+   "idx": "2.20",
+   "content": "Use grade-level academic and domain-specific vocabulary to gain meaning from text."
+  },
+  {
+   "idx": "2.21",
+   "content": "Use grade-level academic and domain-specific vocabulary in writing."
+  },
+  {
+   "idx": "2.22",
+   "content": "Use content knowledge built during read-alouds and independent reading of informational and literary texts by participating in content-specific discussions with peers and/or through writing."
+  },
+  {
+   "idx": "2.23",
+   "content": "Identify the main story elements in a literary text."
+  },
+  {
+   "idx": "2.24",
+   "content": "Identify the main idea and supporting details of literary and informational texts."
+  },
+  {
+   "idx": "2.25",
+   "content": "Identify and use various text features to locate ideas, facts, or supporting details in both written and digital formats."
+  },
+  {
+   "idx": "2.26",
+   "content": "Compare and contrast important details presented by two texts on the same topic or theme."
+  },
+  {
+   "idx": "2.27",
+   "content": "Identify the text structures within literary and informational texts, including cause and effect, problem and solution, and sequence of events."
+  },
+  {
+   "idx": "2.28",
+   "content": "Establish a purpose before reading literary and informational texts to enhance comprehension."
+  },
+  {
+   "idx": "2.29",
+   "content": "With prompting and support, identify and interpret various cohesive devices that help link words and sentences to one another within the text as a scaffold to help build comprehension at the sentence and paragraph level."
+  },
+  {
+   "idx": "2.30",
+   "content": "Read and comprehend literary and informational texts."
+  },
+  {
+   "idx": "2.31",
+   "content": "Use information from a text to determine the author's purpose in different forms of"
+  },
+  {
+   "idx": "2.32",
+   "content": "Identify rhyme schemes in poems or songs."
+  },
+  {
+   "idx": "2.33",
+   "content": "Read and identify types of poems, including free verse, rhymed verse, haiku, and limerick."
+  },
+  {
+   "idx": "2.34",
+   "content": "Differentiate between fact and opinion in a text."
+  },
+  {
+   "idx": "2.35",
+   "content": "Demonstrate listening skills and build background knowledge by asking and answering"
+  },
+  {
+   "idx": "2.36",
+   "content": "Manipulate words and/or phrases to create simple and compound sentences, including coordinating conjunctions for, and, nor, but, or, yet, and so, to help build syntactic awareness and comprehension at the sentence level."
+  },
+  {
+   "idx": "2.37",
+   "content": "Write legibly."
+  },
+  {
+   "idx": "2.38",
+   "content": "Apply knowledge of grade-appropriate phoneme-grapheme correspondences, multisyllabic word construction, syllable division principles, and spelling rules (or generalizations) to encode words accurately."
+  },
+  {
+   "idx": "2.39",
+   "content": "Organize a list of words into alphabetical order according to first, second, and third letters. READING"
+  },
+  {
+   "idx": "2.40",
+   "content": "Write a personal or fictional narrative using a logical sequence of events, including details to describe actions, thoughts, and feelings and providing a sense of closure."
+  },
+  {
+   "idx": "2.41",
+   "content": "Write informative or explanatory texts, introducing the topic, providing facts and relevant details to develop points, and providing a conclusion."
+  },
+  {
+   "idx": "2.42",
+   "content": "Write an opinion piece about a topic or text with details to support the opinion, using transitional words and providing a sense of closure."
+  },
+  {
+   "idx": "2.43",
+   "content": "Write complete sentences demonstrating knowledge of punctuation conventions."
+  },
+  {
+   "idx": "2.44",
+   "content": "With prompting and support, compose and develop a well-organized paragraph with a topic sentence, details to support, and a concluding sentence."
+  },
+  {
+   "idx": "2.45",
+   "content": "Demonstrate understanding of standard English language conventions when writing."
+  },
+  {
+   "idx": "2.46",
+   "content": "Gather and use research to answer questions to complete a research product."
+  }
+ ],
+ "2/math": [
+  {
+   "idx": "2.1",
+   "content": "Use addition and subtraction within 100 to solve one- and two-step word problems by using drawings and equations with a symbol for the unknown number to represent the problem."
+  },
+  {
+   "idx": "2.2",
+   "content": "Fluently add and subtract within 20 using mental strategies such as counting on, making ten, decomposing a number leading to ten, using the relationship between addition and subtraction, and creating equivalent but easier or known sums. a. State automatically all sums of two one-digit numbers."
+  },
+  {
+   "idx": "2.3",
+   "content": "Use concrete objects to determine whether a group of up to 20 objects is even or odd. a. Write an equation to express an even number as a sum of two equal addends."
+  },
+  {
+   "idx": "2.4",
+   "content": "Using concrete and pictorial representations and repeated addition, determine the total number of objects in a rectangular array with up to 5 rows and up to 5 columns."
+  },
+  {
+   "idx": "2.5",
+   "content": "Reproduce, extend, create, and describe patterns and sequences using a variety of materials."
+  },
+  {
+   "idx": "2.6",
+   "content": "Explain that the three digits of a three-digit number represent amounts of hundreds, tens, and ones."
+  },
+  {
+   "idx": "2.7",
+   "content": "Count within 1000 by ones, fives, tens, and hundreds."
+  },
+  {
+   "idx": "2.8",
+   "content": "Read and write numbers to 1000 using base-ten numerals, number names, and expanded form."
+  },
+  {
+   "idx": "2.9",
+   "content": "Compare two three-digit numbers based on the value of the hundreds, tens, and ones digits, recording the results of comparisons with the symbols >, =, and < and orally with the words \"is greater than,\" \"is equal to,\" and \"is less"
+  },
+  {
+   "idx": "2.10",
+   "content": "Fluently add and subtract within 100, using strategies based on place value, properties of operations, and/or the relationship between addition and subtraction."
+  },
+  {
+   "idx": "2.11",
+   "content": "Use a variety of strategies to add up to four two-digit numbers."
+  },
+  {
+   "idx": "2.12",
+   "content": "Add and subtract within 1000 using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method."
+  },
+  {
+   "idx": "2.13",
+   "content": "Mentally add and subtract 10 or 100 to a given number between 100 and 900."
+  },
+  {
+   "idx": "2.14",
+   "content": "Explain why addition and subtraction strategies work, using place value and the properties of operations."
+  },
+  {
+   "idx": "2.15",
+   "content": "Measure lengths of several objects to the nearest whole unit. a. Create a line plot where the horizontal scale is marked off in whole-number units to show the lengths of several"
+  },
+  {
+   "idx": "2.16",
+   "content": "Create a picture graph and bar graph to represent data with up to four categories."
+  },
+  {
+   "idx": "2.17",
+   "content": "Measure the length of an object by selecting and using standard units of measurement shown on rulers, yardsticks, meter sticks, or measuring tapes."
+  },
+  {
+   "idx": "2.18",
+   "content": "Measure objects with two different units, and describe how the two measurements relate to each other and the size"
+  },
+  {
+   "idx": "2.19",
+   "content": "Estimate lengths using the following standard units of measurement: inches, feet, centimeters, and meters."
+  },
+  {
+   "idx": "2.20",
+   "content": "Measure to determine how much longer one object is than another, expressing the length difference of the two"
+  },
+  {
+   "idx": "2.21",
+   "content": "Use addition and subtraction within 100 to solve word problems involving same units of length, representing the problem with drawings (such as drawings of rulers) and/or equations with a symbol for the unknown number."
+  },
+  {
+   "idx": "2.22",
+   "content": "Create a number line diagram using whole numbers and use it to represent whole-number sums and differences"
+  },
+  {
+   "idx": "2.23",
+   "content": "Tell and write time from analog and digital clocks to the nearest five minutes, using a.m. and p.m. a. Express an understanding of common terms such as, but not limited to, quarter past, half past, and quarter to."
+  },
+  {
+   "idx": "2.24",
+   "content": "Solve problems with money."
+  },
+  {
+   "idx": "2.25",
+   "content": "Identify triangles, quadrilaterals, pentagons, hexagons, and cubes. a. Recognize and draw shapes having specified attributes."
+  },
+  {
+   "idx": "2.26",
+   "content": "Partition a rectangle into rows and columns of same-size squares, and count to find the total number of squares."
+  },
+  {
+   "idx": "2.27",
+   "content": "Partition circles and rectangles into two, three, or four equal shares. Describe the shares using such terms as halves, thirds, half of, or a third of, and describe the whole as two halves, three thirds, or four fourths."
+  }
+ ],
+ "2/science": [
+  {
+   "idx": "2.1",
+   "content": "Plan and carry out investigations to compare, contrast, and classify various solid and liquid materials according to physical properties, including color and texture. Structure"
+  },
+  {
+   "idx": "2.2",
+   "content": "Conduct investigations to determine suitable uses of natural and manufactured materials based on their observable properties, including strength, flexibility, hardness, absorbency, and texture."
+  },
+  {
+   "idx": "2.3",
+   "content": "Demonstrate and explain how structures made from a small set of pieces can be disassembled and then reassembled as new and different structures."
+  },
+  {
+   "idx": "2.4",
+   "content": "Provide evidence that some changes in matter caused by heating or cooling can be reversed and some changes are irreversible."
+  },
+  {
+   "idx": "2.5",
+   "content": "Plan and carry out an investigation, using one variable at a time, to determine how each variable affects plant growth."
+  },
+  {
+   "idx": "2.6",
+   "content": "Design and construct models to simulate how animals disperse seeds or pollinate plants."
+  },
+  {
+   "idx": "2.7",
+   "content": "Obtain information to explain that there are many different kinds of living things that exist in habitats on land and in water."
+  },
+  {
+   "idx": "2.8",
+   "content": "Use models to distinguish between the shapes and kinds of land and water on Earth."
+  },
+  {
+   "idx": "2.9",
+   "content": "Obtain information to identify where water is found on Earth and determine whether it is a solid or a liquid."
+  },
+  {
+   "idx": "2.10",
+   "content": "Use a variety of sources to provide evidence that Earth's events can occur slowly or rapidly."
+  },
+  {
+   "idx": "2.11",
+   "content": "Evaluate multiple solutions designed to slow or prevent wind or water from changing the"
+  }
+ ],
+ "2/social": [
+  {
+   "idx": "2.1",
+   "content": "Explain how rights and responsibilities for citizens are part of the American system of government."
+  },
+  {
+   "idx": "2.2",
+   "content": "Identify the three branches of government and describe their roles."
+  },
+  {
+   "idx": "2.3",
+   "content": "Explain the voting process."
+  },
+  {
+   "idx": "2.4",
+   "content": "Explain the economic processes of production and distribution, including the roles of producers, consumers, goods, and services."
+  },
+  {
+   "idx": "2.5",
+   "content": "Explain how scarcity influences supply and demand."
+  },
+  {
+   "idx": "2.6",
+   "content": "Explain how Alabama's natural resources are utilized in its economy."
+  },
+  {
+   "idx": "2.7",
+   "content": "Identify the seven continents, the five oceans, and the Equator shown on maps, globes, and satellite and digital images."
+  },
+  {
+   "idx": "2.8",
+   "content": "Differentiate between the features of a physical map and a political map, and explain how these features contribute to the map's purpose."
+  },
+  {
+   "idx": "2.9",
+   "content": "Compare the physical characteristics of regions throughout the United States, including landforms."
+  },
+  {
+   "idx": "2.10",
+   "content": "Identify cardinal and intermediate directions."
+  },
+  {
+   "idx": "2.11",
+   "content": "Describe segments of time, including year, decade, and century."
+  },
+  {
+   "idx": "2.12",
+   "content": "Describe historical events and celebrations within the state and nation using primary and secondary sources."
+  },
+  {
+   "idx": "2.13",
+   "content": "Explain how national historical figures and celebrations relate to fundamental democratic principles."
+  },
+  {
+   "idx": "2.14",
+   "content": "Explain how and why people have moved into and within the United States."
+  },
+  {
+   "idx": "2.15",
+   "content": "Identify and summarize legends, stories, and songs that contributed to the cultural fabric of the United States."
+  }
+ ],
+ "3/language": [
+  {
+   "idx": "3.R1",
+   "content": "Utilize active listening skills during discussion and conversation in pairs, small groups, or whole-class settings, following agreed-upon rules for participation."
+  },
+  {
+   "idx": "3.R2",
+   "content": "Use knowledge of phoneme-grapheme correspondences and word analysis skills to decode and encode words accurately."
+  },
+  {
+   "idx": "3.R3",
+   "content": "Expand background knowledge and build vocabulary through discussion, reading and writing."
+  },
+  {
+   "idx": "3.R4",
+   "content": "Use digital and electronic tools appropriately, safely, and ethically for research and writing, both individually and collaboratively."
+  },
+  {
+   "idx": "3.R5",
+   "content": "Utilize a writing process to plan, draft, revise, edit, and publish writings in various genres."
+  },
+  {
+   "idx": "3.1",
+   "content": "Contribute meaningful ideas to discussions with groups and peers utilizing agreed upon rules."
+  },
+  {
+   "idx": "3.2",
+   "content": "Present information orally using complex sentence structures, appropriate volume, and clear pronunciation."
+  },
+  {
+   "idx": "3.3",
+   "content": "Apply oral literacy skills by participating in a variety of oral language activities."
+  },
+  {
+   "idx": "3.4",
+   "content": "Ask and answer questions using complete sentences and grade-level vocabulary."
+  },
+  {
+   "idx": "3.5",
+   "content": "Express ideas, opinions, and feelings orally in a logical sequence clearly, accurately, and"
+  },
+  {
+   "idx": "3.6",
+   "content": "Use digital tools to enhance oral presentations, working collaboratively."
+  },
+  {
+   "idx": "3.7",
+   "content": "Demonstrate advanced phonemic awareness skills in spoken words."
+  },
+  {
+   "idx": "3.8",
+   "content": "Apply knowledge of phoneme-grapheme correspondences, multisyllabic word construction, and syllable division principles to decode and encode (spell) words accurately in isolation and in context."
+  },
+  {
+   "idx": "3.9",
+   "content": "Apply previously-taught phoneme-grapheme correspondences to multisyllabic words with accuracy and automaticity, in and out of context."
+  },
+  {
+   "idx": "3.10",
+   "content": "Read and reread grade-appropriate text accurately, automatically, and with meaningful expression at a rate which supports comprehension."
+  },
+  {
+   "idx": "3.11",
+   "content": "Read and reread grade-appropriate poetry, practicing phrasing, rhythm, rhyme, and meaningful expression."
+  },
+  {
+   "idx": "3.12",
+   "content": "Read high-frequency words commonly found in grade-appropriate text accurately and automatically."
+  },
+  {
+   "idx": "3.13",
+   "content": "Utilize new academic, content-specific, grade-level vocabulary to make connections to previously learned words and relate new words to background knowledge."
+  },
+  {
+   "idx": "3.14",
+   "content": "Describe word relationships and nuances in word meanings, including relating them to their opposites and distinguishing shades of meaning in similar or related words, including nouns, verbs, and adjectives."
+  },
+  {
+   "idx": "3.15",
+   "content": "Analyze meaningful parts (morphemes) of words and phrases in discussions and/or text."
+  },
+  {
+   "idx": "3.16",
+   "content": "Use knowledge of grade-level academic and domain-specific vocabulary to gain meaning"
+  },
+  {
+   "idx": "3.17",
+   "content": "Use grade-level academic and domain-specific vocabulary in writing."
+  },
+  {
+   "idx": "3.18",
+   "content": "Demonstrate content knowledge built during independent reading of informational and literary texts by participating in content-specific discussions with peers and/or through writing."
+  },
+  {
+   "idx": "3.19",
+   "content": "Determine the explicit or implied main idea and supporting details of a text."
+  },
+  {
+   "idx": "3.20",
+   "content": "Establish a purpose before reading literary and informational texts to enhance comprehension, including identifying background knowledge and generating questions about the topic or characters."
+  },
+  {
+   "idx": "3.21",
+   "content": "Identify and interpret various cohesive devices that link words and sentences to one another within the text."
+  },
+  {
+   "idx": "3.22",
+   "content": "Describe literary elements within a story, including setting, plot, characters, and themes."
+  },
+  {
+   "idx": "3.23",
+   "content": "Identify and use text features in informational passages to locate information."
+  },
+  {
+   "idx": "3.24",
+   "content": "Identify the text structures within literary and informational texts."
+  },
+  {
+   "idx": "3.25",
+   "content": "Identify statements in informational texts as facts or opinions."
+  },
+  {
+   "idx": "3.26",
+   "content": "Use text comparisons (text to text, text to self, and text to world) to make meaning."
+  },
+  {
+   "idx": "3.27",
+   "content": "Read prose, poetry, and dramas, identifying the literary devices used by the author to"
+  },
+  {
+   "idx": "3.28",
+   "content": "Identify the narration of a literary text as first person or third person."
+  },
+  {
+   "idx": "3.29",
+   "content": "Determine the main idea of a text read aloud or information presented in an audible format."
+  },
+  {
+   "idx": "3.30",
+   "content": "Manipulate words and/or phrases to create compound sentences, including coordinating conjunctions for, and, nor, but, or, yet, or so, and complex sentences to help build syntactic awareness and comprehension at the sentence level."
+  },
+  {
+   "idx": "3.31",
+   "content": "Write legibly in cursive with connected, correctly-formed letters and appropriate spacing between words."
+  },
+  {
+   "idx": "3.32",
+   "content": "Apply knowledge of grade-appropriate phoneme-grapheme correspondences, multisyllabic word construction, syllable division rules, and spelling rules (or generalizations) to encode words accurately."
+  },
+  {
+   "idx": "3.33",
+   "content": "Write personal or fictional narratives with a logical plot (sequence of events), characters, transitions, and a sense of closure."
+  },
+  {
+   "idx": "3.34",
+   "content": "Write informative or explanatory texts about a topic using sources, including an introduction, facts, relevant details with elaboration, and a conclusion."
+  },
+  {
+   "idx": "3.35",
+   "content": "Write an argument to convince the reader to take an action or adopt a position, using an introduction, logical reasoning supported by evidence from various sources, and a conclusion."
+  },
+  {
+   "idx": "3.36",
+   "content": "Demonstrate knowledge of the rules of standard English grammar including punctuation, capitalization, sentence formation, and spelling appropriate for third grade."
+  },
+  {
+   "idx": "3.37",
+   "content": "Compose simple, compound, and complex sentences with correct subject-verb agreement."
+  },
+  {
+   "idx": "3.38",
+   "content": "Compose and develop a well-organized paragraph with a topic sentence, details to support, and a concluding sentence."
+  },
+  {
+   "idx": "3.39",
+   "content": "Gather and evaluate information about a topic from a variety of sources, including digital sources, and utilize it to create a project, report, or presentation."
+  },
+  {
+   "idx": "3.40",
+   "content": "Use grade-level and domain-appropriate vocabulary in writing."
+  },
+  {
+   "idx": "3.41",
+   "content": "Use words and phrases in writing for effect and elaboration."
+  },
+  {
+   "idx": "3.42",
+   "content": "Write poetry or prose in response to visual images to interpret their meanings."
+  }
+ ],
+ "3/math": [
+  {
+   "idx": "3.1",
+   "content": "Illustrate the product of two whole numbers as equal groups by identifying the number of groups and the number in each group and represent as a written expression."
+  },
+  {
+   "idx": "3.2",
+   "content": "Illustrate and interpret the quotient of two whole numbers as the number of objects in each group or the number of groups when the whole is partitioned into equal shares."
+  },
+  {
+   "idx": "3.3",
+   "content": "Solve word situations using multiplication and division within 100 involving equal groups, arrays, and measurement quantities; represent the situation using models, drawings, and equations with a symbol for the"
+  },
+  {
+   "idx": "3.4",
+   "content": "Determine the unknown whole number in a multiplication or division equation relating three whole numbers."
+  },
+  {
+   "idx": "3.5",
+   "content": "Develop and apply properties of operations as strategies to multiply and divide."
+  },
+  {
+   "idx": "3.6",
+   "content": "Use the relationship between multiplication and division to represent division as an equation with an unknown factor."
+  },
+  {
+   "idx": "3.7",
+   "content": "Use strategies based on properties and patterns of multiplication to demonstrate fluency with multiplication and division within 100."
+  },
+  {
+   "idx": "3.8",
+   "content": "Determine and justify solutions for two-step word problems using the four operations and write an equation with a letter standing for the unknown quantity. Determine reasonableness of answers using number sense, context, mental computation, and estimation strategies including rounding."
+  },
+  {
+   "idx": "3.9",
+   "content": "Recognize and explain arithmetic patterns using properties of operations."
+  },
+  {
+   "idx": "3.10",
+   "content": "Identify the nearest 10 or 100 when rounding whole numbers, using place value understanding."
+  },
+  {
+   "idx": "3.11",
+   "content": "Use various strategies to add and subtract fluently within 1000."
+  },
+  {
+   "idx": "3.12",
+   "content": "Use concrete materials and pictorial models based on place value and properties of operations to find the product of a one-digit whole number by a multiple of ten (from 10 to 90)."
+  },
+  {
+   "idx": "3.13",
+   "content": "Demonstrate that a unit fraction represents one part of an area model or length model of a whole that has been equally partitioned; explain that a numerator greater than one indicates the number of unit pieces represented by"
+  },
+  {
+   "idx": "3.14",
+   "content": "Interpret a fraction as a number on the number line; locate or represent fractions on a number line diagram. 1"
+  },
+  {
+   "idx": "3.15",
+   "content": "Explain equivalence and compare fractions by reasoning about their size using visual fraction models and number"
+  },
+  {
+   "idx": "3.16",
+   "content": "For a given or collected set of data, create a scaled (one-to-many) picture graph and scaled bar graph to represent a data set with several categories."
+  },
+  {
+   "idx": "3.17",
+   "content": "Measure lengths using rulers marked with halves and fourths of an inch to generate data and create a line plot marked off in appropriate units to display the data."
+  },
+  {
+   "idx": "3.18",
+   "content": "Tell and write time to the nearest minute; measure time intervals in minutes (within 90 minutes.) a. Solve real-world problems involving addition and subtraction of time intervals in minutes by representing the problem on a number line diagram."
+  },
+  {
+   "idx": "3.19",
+   "content": "Estimate and measure liquid volumes and masses of objects using liters (l), grams (g), and kilograms (kg). a. Use the four operations to solve one-step word problems involving masses or volumes given in the same"
+  },
+  {
+   "idx": "3.20",
+   "content": "Find the area of a rectangle with whole number side lengths by tiling without gaps or overlays and counting unit squares."
+  },
+  {
+   "idx": "3.21",
+   "content": "Count unit squares (square cm, square m, square in, square ft, and improvised or non-standard units) to determine area."
+  },
+  {
+   "idx": "3.22",
+   "content": "Relate area to the operations of multiplication using real-world problems, concrete materials, mathematical"
+  },
+  {
+   "idx": "3.23",
+   "content": "Decompose rectilinear figures into smaller rectangles to find the area, using concrete materials."
+  },
+  {
+   "idx": "3.24",
+   "content": "Construct rectangles with the same perimeter and different areas or the same area and different perimeters."
+  },
+  {
+   "idx": "3.25",
+   "content": "Solve real-world problems involving perimeters of polygons, including finding the perimeter given the side lengths and finding an unknown side length of rectangles."
+  },
+  {
+   "idx": "3.26",
+   "content": "Recognize and describe polygons (up to 8 sides), triangles, and quadrilaterals (rhombuses, rectangles, and squares) based on the number of sides and the presence or absence of square corners."
+  }
+ ],
+ "3/science": [
+  {
+   "idx": "3.1",
+   "content": "Conduct investigations to explain the effects of balanced and unbalanced forces exerted on an object, varying the size, number, and direction of the forces."
+  },
+  {
+   "idx": "3.2",
+   "content": "Observe and measure an object's motion to provide evidence that a pattern of motion can be used to predict future motion."
+  },
+  {
+   "idx": "3.3",
+   "content": "Conduct investigations to determine cause and effect relationships between objects not in contact with one another, including magnetic and electrostatic forces."
+  },
+  {
+   "idx": "3.4",
+   "content": "Apply scientific ideas about magnetic interactions to solve a problem using the engineering"
+  },
+  {
+   "idx": "3.5",
+   "content": "Develop and use models to compare the diverse life cycles of organisms other than humans, including birth, growth, reproduction, and death."
+  },
+  {
+   "idx": "3.6",
+   "content": "Use data to provide evidence that plants and animals have observable traits inherited from parents and that variations of these traits exist in groups of similar organisms."
+  },
+  {
+   "idx": "3.7",
+   "content": "Use evidence to support a claim that traits can be influenced by the environment."
+  },
+  {
+   "idx": "3.8",
+   "content": "Analyze and interpret data from fossils to provide evidence of the existence of organisms and information about the environments in which they lived."
+  },
+  {
+   "idx": "3.9",
+   "content": "Construct an explanation from evidence of how variations in characteristics among individuals of the same species may provide advantages in surviving, finding mates, and reproducing."
+  },
+  {
+   "idx": "3.10",
+   "content": "Make a claim from evidence that an organism's likelihood of survival depends upon access to sufficient resources in its habitat, including sunlight, air, water, food, and shelter."
+  },
+  {
+   "idx": "3.11",
+   "content": "Construct explanations of how forming groups helps some organisms survive."
+  },
+  {
+   "idx": "3.12",
+   "content": "Obtain and communicate information regarding the impact of existing solutions on plant and animal populations when environmental changes occur."
+  },
+  {
+   "idx": "3.13",
+   "content": "Represent data in tables or graphical displays to reveal typical weather patterns during a particular season."
+  },
+  {
+   "idx": "3.14",
+   "content": "Use information from a variety of sources to describe climates in different regions of the world. and System"
+  },
+  {
+   "idx": "3.15",
+   "content": "Obtain and communicate information on the effectiveness of existing solutions designed to reduce the impact of weather-related hazards."
+  }
+ ],
+ "3/social": [
+  {
+   "idx": "3.1",
+   "content": "Locate map features, using geographic terminology to describe them."
+  },
+  {
+   "idx": "3.2",
+   "content": "Explain how geographic features, including land regions and river systems, connect Alabama to other states."
+  },
+  {
+   "idx": "3.3",
+   "content": "Research and share information on the development of the state and national park systems and the benefits parks provide."
+  },
+  {
+   "idx": "3.4",
+   "content": "Locate and describe the significance of state and national symbols, landmarks, and monuments."
+  },
+  {
+   "idx": "3.5",
+   "content": "Explain the economic, geographic, and social impact of natural disasters over time."
+  },
+  {
+   "idx": "3.6",
+   "content": "Describe how Alabama's environment has been positively and negatively affected by human activity over time."
+  },
+  {
+   "idx": "3.7",
+   "content": "Compare and contrast the roles of anthropologists, archaeologists, and paleontologists."
+  },
+  {
+   "idx": "3.8",
+   "content": "Describe Indigenous cultures, governments, and economies in the Southeast prior to European colonization."
+  },
+  {
+   "idx": "3.9",
+   "content": "Explain reasons for European expeditions and the establishment of early settlements and colonies in North America during the sixteenth and seventeenth centuries."
+  },
+  {
+   "idx": "3.10",
+   "content": "Explain why interactions and conflicts occurred between Europeans and Indigenous peoples in the Southeast from 1519 to the early 1700s, including differing beliefs regarding culture, land use and ownership, religion, and trade."
+  },
+  {
+   "idx": "3.11",
+   "content": "Describe French expeditions and colonization of Alabama, including the efforts of the LeMoyne brothers (Iberville and Bienville), establishment of forts, relationships with Indigenous peoples, and fur trade."
+  }
+ ],
+ "4/language": [
+  {
+   "idx": "4.R1",
+   "content": "Utilize active listening skills during discussion and conversation in pairs, small groups, or whole-class settings, following agreed-upon rules for participation."
+  },
+  {
+   "idx": "4.R2",
+   "content": "Use context clues to determine meanings of unfamiliar spoken or written words."
+  },
+  {
+   "idx": "4.R3",
+   "content": "Use digital and electronic tools appropriately, safely, and ethically when researching and writing, both individually and collaboratively."
+  },
+  {
+   "idx": "4.R4",
+   "content": "Utilize a writing process to plan, draft, revise, edit, and publish writings in various genres."
+  },
+  {
+   "idx": "4.R5",
+   "content": "Identify and explain literary devices in prose and poetry."
+  },
+  {
+   "idx": "4.R6",
+   "content": "Assess the formality of occasions in order to speak or write using appropriate language and tone."
+  },
+  {
+   "idx": "4.1",
+   "content": "Apply knowledge of grade-appropriate phoneme-grapheme correspondences, syllable types, and morphological structure to read unfamiliar multisyllabic words accurately, both in context and in isolation."
+  },
+  {
+   "idx": "4.2",
+   "content": "Determine and use the correct syllable type(s) to decode unfamiliar multisyllabic words, including open, closed, vowel-consonant-e, r-controlled, vowel team (including diphthongs), consonant-le, and \"leftovers\" including odd and schwa syllables."
+  },
+  {
+   "idx": "4.3",
+   "content": "Apply knowledge of roots, prefixes, and suffixes to decode unfamiliar multisyllabic"
+  },
+  {
+   "idx": "4.4",
+   "content": "Apply knowledge of roots, prefixes, and suffixes to encode unfamiliar multisyllabic"
+  },
+  {
+   "idx": "4.5",
+   "content": "Demonstrate fluency when reading grade-level text and when responding through writing or speaking."
+  },
+  {
+   "idx": "4.6",
+   "content": "Read grade-level text orally with appropriate pauses, phrasing, stress, intonation, rate, and integration to support comprehension."
+  },
+  {
+   "idx": "4.7",
+   "content": "Read words with irregular and regular spelling patterns accurately and automatically."
+  },
+  {
+   "idx": "4.8",
+   "content": "Write routinely and independently in response to text."
+  },
+  {
+   "idx": "4.9",
+   "content": "Accurately interpret general academic and domain-specific words and phrases."
+  },
+  {
+   "idx": "4.10",
+   "content": "Interpret words and phrases, including figurative language, as they are used in a text."
+  },
+  {
+   "idx": "4.11",
+   "content": "Use commonly misused words correctly in writing."
+  },
+  {
+   "idx": "4.12",
+   "content": "Consult reference materials to find the pronunciation of unknown words and phrases."
+  },
+  {
+   "idx": "4.13",
+   "content": "Use grade-appropriate general academic and domain-specific words and phrases in"
+  },
+  {
+   "idx": "4.14",
+   "content": "Demonstrate comprehension of literary and informational text by utilizing its content when discussing or writing in response to the text."
+  },
+  {
+   "idx": "4.15",
+   "content": "Analyze in depth a character, setting, or event in a story or drama, drawing on specific"
+  },
+  {
+   "idx": "4.16",
+   "content": "Describe how authors use literary devices and text features to convey meaning in"
+  },
+  {
+   "idx": "4.17",
+   "content": "Identify the narrator's point of view in a literary text and explain how it differs from a character's perspective."
+  },
+  {
+   "idx": "4.18",
+   "content": "Identify the point of view in a narrative and describe how the narrative would be different if told from the perspective of a different character or narrator."
+  },
+  {
+   "idx": "4.19",
+   "content": "Compare and contrast the treatment of similar themes in stories, myths, and traditional literature from different cultures."
+  },
+  {
+   "idx": "4.20",
+   "content": "Use details and examples from a text to indicate what the text explicitly states."
+  },
+  {
+   "idx": "4.21",
+   "content": "Explain how relevant details support the implied or explicit main idea of a text."
+  },
+  {
+   "idx": "4.22",
+   "content": "Analyze events, procedures, ideas, or concepts in informational texts, including what happened and why, based on specific information in the text."
+  },
+  {
+   "idx": "4.23",
+   "content": "Evaluate how text features and structures contribute to the meaning of an informational text."
+  },
+  {
+   "idx": "4.24",
+   "content": "Explain how an author uses reasons and evidence to support particular points and claims in an informational text or argument."
+  },
+  {
+   "idx": "4.25",
+   "content": "Explain how the form of a poem contributes to its meaning."
+  },
+  {
+   "idx": "4.26",
+   "content": "Analyze how rhythm and rhyme in poetry contribute to meaning."
+  },
+  {
+   "idx": "4.27",
+   "content": "Identify the reasons and evidence a speaker provides to support particular points."
+  },
+  {
+   "idx": "4.28",
+   "content": "Write clear and coherent responses to texts, using explicit or implicit evidence that"
+  },
+  {
+   "idx": "4.29",
+   "content": "Add audio recordings to presentations, when appropriate, to enhance the development of main ideas or themes."
+  },
+  {
+   "idx": "4.30",
+   "content": "Synthesize information on a topic in order to write or speak knowledgeably about the"
+  },
+  {
+   "idx": "4.31",
+   "content": "Orally paraphrase portions of a text or information presented in diverse media when"
+  },
+  {
+   "idx": "4.32",
+   "content": "Respond in writing to literature and informational text, including stories, dramas, poetry, and cross-curricular texts, both independently and with support, demonstrating grade-level proficiency."
+  },
+  {
+   "idx": "4.33",
+   "content": "Use research to produce clear and coherent writing in which the development and organization are appropriate to task, purpose, and audience."
+  },
+  {
+   "idx": "4.34",
+   "content": "Write fluently and legibly in cursive, using correctly formed letters with appropriate"
+  },
+  {
+   "idx": "4.35",
+   "content": "Write personal or fictional narratives using a logical plot, transitional words and phrases, sensory details, and dialogue, and providing a sense of closure."
+  },
+  {
+   "idx": "4.36",
+   "content": "Write informative or explanatory text about a topic using sources, incorporating academic vocabulary, and including an introduction, facts, details with elaboration, and a conclusion."
+  },
+  {
+   "idx": "4.37",
+   "content": "Write an argument to persuade the reader to take an action or adopt a position, using an introduction, logical reasoning supported by evidence from relevant sources, and linking words to connect their argument to the evidence."
+  },
+  {
+   "idx": "4.38",
+   "content": "Compose complete sentences with correct subject-verb agreement, punctuation, and usage."
+  },
+  {
+   "idx": "4.39",
+   "content": "Demonstrate command of the conventions of standard English grammar and usage."
+  },
+  {
+   "idx": "4.40",
+   "content": "Compose friendly and formal letters using appropriate elements, including date, greeting, body, and a signature."
+  },
+  {
+   "idx": "4.41",
+   "content": "Present an opinion orally, sequencing ideas logically and using relevant facts. a. Express appropriate and meaningful responses to questions posed by others."
+  },
+  {
+   "idx": "4.42",
+   "content": "Report on a topic or text, tell a story, or recount an experience in an organized manner, using appropriate facts and relevant, descriptive details to support main ideas or themes, and speaking clearly with adequate volume, appropriate pacing, and clear pronunciation."
+  }
+ ],
+ "4/math": [
+  {
+   "idx": "4.1",
+   "content": "Interpret and write equations for multiplicative comparisons."
+  },
+  {
+   "idx": "4.2",
+   "content": "Solve word problems involving multiplicative comparison using drawings and write equations to represent the problem, using a symbol for the unknown number."
+  },
+  {
+   "idx": "4.3",
+   "content": "Determine and justify solutions for multi-step word problems, including problems where remainders must be"
+  },
+  {
+   "idx": "4.4",
+   "content": "For whole numbers in the range 1 to 100, find all factor pairs, identifying a number as a multiple of each of its factors."
+  },
+  {
+   "idx": "4.5",
+   "content": "Generate and analyze a number or shape pattern that follows a given rule."
+  },
+  {
+   "idx": "4.6",
+   "content": "Using models and quantitative reasoning, explain that in a multi-digit whole number, a digit in any place represents ten times what it represents in the place to its right."
+  },
+  {
+   "idx": "4.7",
+   "content": "Read and write multi-digit whole numbers using standard form, word form, and expanded form."
+  },
+  {
+   "idx": "4.8",
+   "content": "Use place value understanding to compare two multi-digit numbers using >, =, and < symbols."
+  },
+  {
+   "idx": "4.9",
+   "content": "Round multi-digit whole numbers to any place using place value understanding."
+  },
+  {
+   "idx": "4.10",
+   "content": "Use place value strategies to fluently add and subtract multi-digit whole numbers and connect strategies to the standard algorithm."
+  },
+  {
+   "idx": "4.11",
+   "content": "Find the product of two factors (up to four digits by a one-digit number and two two-digit numbers), using strategies based on place value and the properties of operations. a. Illustrate and explain the product of two factors using equations, rectangular arrays, and area models."
+  },
+  {
+   "idx": "4.12",
+   "content": "Use strategies based on place value, properties of operations, and/or the relationship between multiplication and division to find whole-number quotients and remainders with one-digit divisors and up to four-digit dividends."
+  },
+  {
+   "idx": "4.13",
+   "content": "Using area and length fraction models, explain why one fraction is equivalent to another, taking into account that the number and size of the parts differ even though the two fractions themselves are the same size. a. Apply principles of fraction equivalence to recognize and generate equivalent fractions."
+  },
+  {
+   "idx": "4.14",
+   "content": "Compare two fractions with different numerators and different denominators using concrete models, benchmarks (0, ½, 1), common denominators, and/or common numerators, recording the comparisons with symbols >, =, or <,"
+  },
+  {
+   "idx": "4.15",
+   "content": "Model and justify decompositions of fractions and explain addition and subtraction of fractions as joining or separating parts referring to the same whole. a. Decompose a fraction as a sum of unit fractions and as a sum of fractions with the same denominator in more than one way using area models, length models, and equations. b. Add and subtract fractions and mixed numbers with like denominators using fraction equivalence, properties of operations, and the relationship between addition and subtraction."
+  },
+  {
+   "idx": "4.16",
+   "content": "Apply and extend previous understandings of multiplication to multiply a whole number times a fraction."
+  },
+  {
+   "idx": "4.17",
+   "content": "Express, model, and explain the equivalence between fractions with denominators of 10 and 100. a. Use fraction equivalency to add two fractions with denominators of 10 and 100."
+  },
+  {
+   "idx": "4.18",
+   "content": "Use models and decimal notation to represent fractions with denominators of 10 and 100."
+  },
+  {
+   "idx": "4.19",
+   "content": "Use visual models and reasoning to compare two decimals to hundredths (referring to the same whole), recording comparisons using symbols >, =, or <, and justifying the conclusions."
+  },
+  {
+   "idx": "4.20",
+   "content": "Interpret data in graphs (picture, bar, and line plots) to solve problems using numbers and operations."
+  },
+  {
+   "idx": "4.21",
+   "content": "Select and use an appropriate unit of measurement for a given attribute (length, mass, liquid volume, time) within one system of units: metric - km, m, cm; kg, g, l, ml; customary - lb, oz; time - hr, min, sec. a. Within one system of units, express measurements of a larger unit in terms of a smaller unit. Record measurement equivalents in a two-column table."
+  },
+  {
+   "idx": "4.22",
+   "content": "Use the four operations to solve measurement word problems with distance, intervals of time, liquid volume, mass"
+  },
+  {
+   "idx": "4.23",
+   "content": "Apply area and perimeter formulas for rectangles in real-world and mathematical situations."
+  },
+  {
+   "idx": "4.24",
+   "content": "Identify an angle as a geometric shape formed wherever two rays share a common endpoint."
+  },
+  {
+   "idx": "4.25",
+   "content": "Use a protractor to measure angles in whole-number degrees and sketch angles of specified measure."
+  },
+  {
+   "idx": "4.26",
+   "content": "Decompose an angle into non-overlapping parts to demonstrate that the angle measure of the whole is the sum of"
+  },
+  {
+   "idx": "4.27",
+   "content": "Draw points, lines, line segments, rays, angles (right, acute, obtuse), and perpendicular and parallel lines, and identify these in two-dimensional figures."
+  },
+  {
+   "idx": "4.28",
+   "content": "Identify two-dimensional figures based on the presence or absence of parallel or perpendicular lines or the presence"
+  },
+  {
+   "idx": "4.29",
+   "content": "Define a line of symmetry for a two-dimensional figure as a line across the figure such that the figure can be folded"
+  }
+ ],
+ "4/science": [
+  {
+   "idx": "4.1",
+   "content": "Use evidence to explain the relationship between the speed of an object and its energy. and Effect"
+  },
+  {
+   "idx": "4.2",
+   "content": "Plan and carry out investigations to answer questions regarding changes in energy when objects collide, and predict reasonable outcomes based on observed patterns."
+  },
+  {
+   "idx": "4.3",
+   "content": "Plan and carry out investigations to provide evidence that energy is transferred by sound, light, heat, and electric currents."
+  },
+  {
+   "idx": "4.4",
+   "content": "Design, construct, and test a device that changes energy from one form to another."
+  },
+  {
+   "idx": "4.5",
+   "content": "Develop and use models to describe amplitude and wavelength patterns and how waves can cause objects to move."
+  },
+  {
+   "idx": "4.6",
+   "content": "Construct an explanation of how light, sound, and digitized information are transferred by waves."
+  },
+  {
+   "idx": "4.7",
+   "content": "Develop a model to demonstrate that light reflecting from objects and entering the eyes allow objects to be seen."
+  },
+  {
+   "idx": "4.8",
+   "content": "Make a claim, using evidence, that the functions of both internal and external structures of plants and animals (including humans) support growth, survival, and behavior."
+  },
+  {
+   "idx": "4.9",
+   "content": "Carry out investigations to support a claim that different animals receive information through their senses, process that information, and respond in various ways."
+  },
+  {
+   "idx": "4.10",
+   "content": "Develop and use a model to describe how water moves through Earth's systems by the processes of evaporation, condensation, and precipitation."
+  },
+  {
+   "idx": "4.11",
+   "content": "Construct explanations of Earth's changes over time through slow and rapid processes, citing evidence found in rock formations and fossils in rock layers."
+  },
+  {
+   "idx": "4.12",
+   "content": "Plan and carry out investigations to provide evidence of the effects of weathering or the rate of erosion by water, ice, wind, and vegetation, investigating a single form of weathering or erosion at a time."
+  },
+  {
+   "idx": "4.13",
+   "content": "Analyze and interpret data from maps to describe patterns of Earth's features on land and in the ocean."
+  },
+  {
+   "idx": "4.14",
+   "content": "Gather information to describe how the use of energy derived from renewable and nonrenewable resources affects the environment."
+  },
+  {
+   "idx": "4.15",
+   "content": "Design, test, and evaluate a solution that will protect humans from the effects of natural and Eﬀect arth processes."
+  }
+ ],
+ "4/social": [
+  {
+   "idx": "4.1",
+   "content": "Describe cooperation and conflict between the English, French, and Spanish colonists and Indigenous people over the fur trade, slave trade, and land claims."
+  },
+  {
+   "idx": "4.2",
+   "content": "Compare and contrast the physical geography of the Northern, Middle, and Southern colonies, including geographic features and differences in climate, and explain how geography impacted settlement."
+  },
+  {
+   "idx": "4.3",
+   "content": "Explain the reasons for the establishment of the labor systems used in colonial America, including apprenticeship, indentured servitude, and slavery, and describe the differences among them."
+  },
+  {
+   "idx": "4.4",
+   "content": "Describe how the contributions of various groups living in colonial North America helped colonies develop, including artisans, farmers, large landowners, tradespeople, women, children, Indigenous peoples, enslaved people, and indentured servants."
+  },
+  {
+   "idx": "4.5",
+   "content": "Summarize the causes of the French and Indian War and describe how its outcomes increased tensions that led to the American Revolution."
+  },
+  {
+   "idx": "4.6",
+   "content": "Identify and describe key events of the American Revolution, including the Battles of Lexington and Concord, Saratoga, and Yorktown."
+  },
+  {
+   "idx": "4.7",
+   "content": "Summarize the key factors leading to the ratification of the Constitution, including the weaknesses of the Articles of Confederation, Shays' Rebellion, and the Constitutional Convention with its compromises."
+  },
+  {
+   "idx": "4.8",
+   "content": "Explain how the Louisiana Purchase and the actions of the Corps of Discovery accelerated westward expansion of the United States."
+  },
+  {
+   "idx": "4.9",
+   "content": "Outline the major causes and events of the War of 1812."
+  },
+  {
+   "idx": "4.10",
+   "content": "Explain how \"Alabama fever\" influenced Alabama's settlement, economic growth, and political development, leading to statehood and the 1819 constitution."
+  },
+  {
+   "idx": "4.11",
+   "content": "Describe events and factors that led to the United States' expansion prior to the Civil War, including conflicts, technological developments, trails, and the Gold Rush of 1849."
+  },
+  {
+   "idx": "4.12",
+   "content": "Explain how the growth of the United States from 1812 to 1860 changed economic and social life in Alabama."
+  },
+  {
+   "idx": "4.13",
+   "content": "Describe how slavery contributed to sectional disagreements, divisions over states' rights, and economic disputes resulting in the Civil War."
+  },
+  {
+   "idx": "4.14",
+   "content": "Evaluate how key figures contributed to events that shaped the United States' victory in the Civil War."
+  },
+  {
+   "idx": "4.15",
+   "content": "Identify major events of Reconstruction and evaluate the outcomes of Reconstruction policies."
+  },
+  {
+   "idx": "4.16",
+   "content": "Describe how political and social changes of the late 1870s to 1900 affected Black and white Alabamians, including the introduction of Jim Crow laws, sharecropping, voting restrictions, and violence."
+  },
+  {
+   "idx": "4.17",
+   "content": "Describe the social, political, and economic impacts of the conflicts, legislation, and treaties that led to the United States acquiring additional territory after the Civil War."
+  }
+ ],
+ "5/language": [
+  {
+   "idx": "5.R1",
+   "content": "Utilize active listening skills during discussion and conversation in pairs, small groups, or whole-class settings, following agreed-upon rules for participation."
+  },
+  {
+   "idx": "5.R2",
+   "content": "Use context clues to determine meanings of unfamiliar spoken or written words."
+  },
+  {
+   "idx": "5.R3",
+   "content": "Use digital and electronic tools appropriately, safely, and ethically when researching and writing, both individually and collaboratively."
+  },
+  {
+   "idx": "5.R4",
+   "content": "Utilize a writing process to plan, draft, revise, edit, and publish writings in various genres."
+  },
+  {
+   "idx": "5.R5",
+   "content": "Identify and explain literary devices in prose and poetry."
+  },
+  {
+   "idx": "5.R6",
+   "content": "Assess the formality of occasions in order to speak or write using appropriate language and tone."
+  },
+  {
+   "idx": "5.1",
+   "content": "Apply phonics and word analysis skills to encode and decode words in grade-level texts."
+  },
+  {
+   "idx": "5.2",
+   "content": "Use combined knowledge of letter-sound correspondences, appropriate blending, syllabication patterns, morphology, and word attack skills to read unfamiliar multisyllabic, grade-level words accurately in context and in isolation."
+  },
+  {
+   "idx": "5.3",
+   "content": "Determine or clarify the meaning of unknown and multiple-meaning words and phrases, choosing flexibly from a range of strategies."
+  },
+  {
+   "idx": "5.4",
+   "content": "Write familiar and unfamiliar multisyllabic, grade-level appropriate words accurately in"
+  },
+  {
+   "idx": "5.5",
+   "content": "Demonstrate fluency when independently reading, writing, and speaking in response to grade-level literary and informational text, including stories, dramas, poetry, and cross-curricular texts."
+  },
+  {
+   "idx": "5.6",
+   "content": "Read grade-level text orally with accuracy, automaticity, appropriate prosody or"
+  },
+  {
+   "idx": "5.7",
+   "content": "Write routinely and independently for varied amounts of time."
+  },
+  {
+   "idx": "5.8",
+   "content": "Orally present information and original ideas clearly."
+  },
+  {
+   "idx": "5.9",
+   "content": "Express ideas clearly and effectively to diverse partners or groups."
+  },
+  {
+   "idx": "5.10",
+   "content": "Respond directly to specific information shared by others in classroom discussion, using facts to support the ideas being discussed."
+  },
+  {
+   "idx": "5.11",
+   "content": "Acquire and use grade-level vocabulary, clarifying the meaning of unknown and multiple-meaning words and phrases in text, choosing flexibly from a range of strategies."
+  },
+  {
+   "idx": "5.12",
+   "content": "Interpret the meaning of words, phrases, and patterns as they are used in texts, including domain-specific and academic vocabulary and figurative language."
+  },
+  {
+   "idx": "5.13",
+   "content": "Determine or clarify the meaning of unknown and multiple-meaning words and"
+  },
+  {
+   "idx": "5.14",
+   "content": "Write using grade-appropriate general academic and domain-specific words and phrases accurately, including those that signal contrasting ideas, additional information, and other logical relationships."
+  },
+  {
+   "idx": "5.15",
+   "content": "Use grade-appropriate general academic and domain-specific words and phrases during"
+  },
+  {
+   "idx": "5.16",
+   "content": "Demonstrate comprehension of varied literary and informational texts by utilizing its content when discussing or writing in response to the text."
+  },
+  {
+   "idx": "5.17",
+   "content": "Demonstrate comprehension of text by asking and responding to questions about literary elements used in the text."
+  },
+  {
+   "idx": "5.18",
+   "content": "Explain the relationships among events, people, or concepts in informational texts,"
+  },
+  {
+   "idx": "5.19",
+   "content": "Interpret how authors use literary elements throughout a text, including character, setting, conflict, dialogue, and point of view."
+  },
+  {
+   "idx": "5.20",
+   "content": "Explain how the author's use of character types throughout a narrative helps drive its"
+  },
+  {
+   "idx": "5.21",
+   "content": "Compare and contrast characters, points of view, or events in two or more literary texts."
+  },
+  {
+   "idx": "5.22",
+   "content": "Determine the implied and/or explicit main idea in literary and informational texts."
+  },
+  {
+   "idx": "5.23",
+   "content": "Determine and analyze themes of various culturally-diverse literary texts, supporting"
+  },
+  {
+   "idx": "5.24",
+   "content": "Determine and evaluate the effectiveness of digital and print text features and structures, including comparison and contrast, problem and solution, and cause and"
+  },
+  {
+   "idx": "5.25",
+   "content": "Determine credibility and appropriateness of a research source by distinguishing between fact and the author's opinion in informational text."
+  },
+  {
+   "idx": "5.26",
+   "content": "Analyze how two or more texts address similar topics in diverse media and formats, including graphics, live and/or recorded performances, and written works."
+  },
+  {
+   "idx": "5.27",
+   "content": "Review the key ideas expressed in a text and draw conclusions, using facts to support them."
+  },
+  {
+   "idx": "5.28",
+   "content": "Use audio and/or visual sources of information to obtain the answer to a question."
+  },
+  {
+   "idx": "5.29",
+   "content": "Summarize in writing a variety of texts, stating their implied and/or explicit main ideas."
+  },
+  {
+   "idx": "5.30",
+   "content": "Quote literary and informational texts accurately to support conclusions and inferences"
+  },
+  {
+   "idx": "5.31",
+   "content": "Include multimedia components and visual displays in presentations to enhance the development of main ideas or themes when appropriate."
+  },
+  {
+   "idx": "5.32",
+   "content": "Respond in writing to literature and informational text, including stories, dramas, poetry, and cross-curricular texts, independently and with grade-level proficiency."
+  },
+  {
+   "idx": "5.33",
+   "content": "Write fluently and legibly in cursive, using correctly formed letters with appropriate spacing and placing text elements correctly on the page."
+  },
+  {
+   "idx": "5.34",
+   "content": "Write personal or fictional narratives incorporating literary elements (characters, plot, setting, conflict), dialogue, strong voice, and clear event sequences."
+  },
+  {
+   "idx": "5.35",
+   "content": "Write informative or explanatory texts using multiple sources to examine a topic, conveying ideas and information clearly and incorporating a strong organizational structure, relevant details, and elaboration."
+  },
+  {
+   "idx": "5.36",
+   "content": "Write an argument to persuade the reader to take an action or adopt a position, stating a claim, supporting the claim with relevant evidence from sources, using connectives to link ideas, and presenting a strong conclusion."
+  },
+  {
+   "idx": "5.37",
+   "content": "Write about research findings independently over short and/or extended periods of"
+  },
+  {
+   "idx": "5.38",
+   "content": "Gather information on a topic or question, and share the results through various modes of writing, including projects and presentations."
+  },
+  {
+   "idx": "5.39",
+   "content": "Demonstrate command of the conventions of standard English grammar and usage in writing."
+  },
+  {
+   "idx": "5.40",
+   "content": "Demonstrate command of the conventions of standard English capitalization, punctuation, and spelling when writing."
+  },
+  {
+   "idx": "5.41",
+   "content": "Write using grade-appropriate general academic and domain-specific words and phrases accurately, including those that signal contrasting ideas, additional information, and other logical relationships."
+  },
+  {
+   "idx": "5.42",
+   "content": "Consult print and digital reference materials to find the pronunciation and to determine or clarify the precise meaning of key words and phrases."
+  }
+ ],
+ "5/math": [
+  {
+   "idx": "5.1",
+   "content": "Write, explain, and evaluate simple numerical expressions involving the four operations to solve up to two-step problems. Include expressions involving parentheses, brackets, or braces, using commutative,"
+  },
+  {
+   "idx": "5.2",
+   "content": "Generate two numerical patterns using two given rules and complete an input/output table for the data. a. Use data from an input/output table to identify apparent relationships between corresponding terms."
+  },
+  {
+   "idx": "5.3",
+   "content": "Using models and quantitative reasoning, explain that in a multi-digit number, including decimals, a digit 1 in any place represents ten times what it represents in the place to its right and 10 of what it represents in"
+  },
+  {
+   "idx": "5.4",
+   "content": "Read, write, and compare decimals to thousandths."
+  },
+  {
+   "idx": "5.5",
+   "content": "Use place value understanding to round decimals to thousandths."
+  },
+  {
+   "idx": "5.6",
+   "content": "Fluently multiply multi-digit whole numbers using the standard algorithm."
+  },
+  {
+   "idx": "5.7",
+   "content": "Use strategies based on place value, properties of operations, and/or the relationship between multiplication and division to find whole-number quotients and remainders with up to four-digit dividends and two-digit divisors. Illustrate and explain the calculation by using equations, rectangular arrays, and/or"
+  },
+  {
+   "idx": "5.8",
+   "content": "Add, subtract, multiply, and divide decimals to hundredths using strategies based on place value, properties of operations, and/or the relationships between addition/subtraction and multiplication/division; relate the strategy to a written method, and explain the reasoning used."
+  },
+  {
+   "idx": "5.9",
+   "content": "Model and solve real-word problems involving addition and subtraction of fractions referring to the same whole, including cases of unlike denominators, using visual fraction models or equations to represent the problem. Use benchmark fractions and number sense of fractions to estimate mentally, and assess the"
+  },
+  {
+   "idx": "5.10",
+   "content": "Add and subtract fractions and mixed numbers with unlike denominators, using fraction equivalence to calculate a sum or difference of fractions or mixed numbers with like denominators."
+  },
+  {
+   "idx": "5.11",
+   "content": "Solve word problems involving division of whole numbers leading to answers in the form of fractions or mixed numbers."
+  },
+  {
+   "idx": "5.12",
+   "content": "Apply and extend previous understandings of multiplication to find the product of a fraction times a whole"
+  },
+  {
+   "idx": "5.13",
+   "content": "Interpret multiplication as scaling (resizing)."
+  },
+  {
+   "idx": "5.14",
+   "content": "Model and solve real-world problems involving multiplication of fractions and mixed numbers using visual fraction models, drawings, or equations to represent the problem."
+  },
+  {
+   "idx": "5.15",
+   "content": "Apply and extend previous understandings of division to divide unit fractions by whole numbers and"
+  },
+  {
+   "idx": "5.16",
+   "content": "Make a line plot to display a data set of measurements in fractions of a unit (2, 4, 8)."
+  },
+  {
+   "idx": "5.17",
+   "content": "Convert among different-sized standard measurement units within a given measurement system and use these conversions in solving multi-step, real-world problems."
+  },
+  {
+   "idx": "5.18",
+   "content": "Identify volume as an attribute of solid figures, and measure volumes by counting unit cubes, using cubic cm, cubic in, cubic ft, and improvised (non-standard) units. a. Pack a solid figure without gaps or overlaps using n unit cubes to demonstrate volume as n cubic units."
+  },
+  {
+   "idx": "5.19",
+   "content": "Relate volume to the operations of multiplication and addition, and solve real-world and mathematical"
+  },
+  {
+   "idx": "5.20",
+   "content": "Graph points in the first quadrant of the coordinate plane, and interpret coordinate values of points to represent real-world and mathematical problems."
+  },
+  {
+   "idx": "5.21",
+   "content": "Classify triangles according to side length (isosceles, equilateral, scalene) and angle measure (acute, obtuse, right, equiangular)."
+  },
+  {
+   "idx": "5.22",
+   "content": "Classify quadrilaterals in a hierarchy based on properties."
+  },
+  {
+   "idx": "5.23",
+   "content": "Explain that attributes belonging to a category of two-dimensional figures also belong to all subcategories"
+  }
+ ],
+ "5/science": [
+  {
+   "idx": "5.1",
+   "content": "Plan and carry out investigations to provide evidence that matter is made of particles too small to be seen."
+  },
+  {
+   "idx": "5.2",
+   "content": "Analyze data collected through observations and measurements to identify materials based on their properties, including color, hardness, and reflectivity."
+  },
+  {
+   "idx": "5.3",
+   "content": "Conduct investigations to provide evidence that the total weight of matter is conserved during phase changes when substances are heated, cooled, or mixed."
+  },
+  {
+   "idx": "5.4",
+   "content": "Analyze data from tests to determine whether a new substance is formed after two or more substances are combined."
+  },
+  {
+   "idx": "5.5",
+   "content": "Make a claim, supported by evidence, that the gravitational force exerted by Earth pulls objects towards the center of Earth. Models"
+  },
+  {
+   "idx": "5.6",
+   "content": "Design and conduct a test to modify the speed of an object falling due to gravity."
+  },
+  {
+   "idx": "5.7",
+   "content": "Support an argument from evidence that plants primarily use air and water to process matter needed for growth."
+  },
+  {
+   "idx": "5.8",
+   "content": "Use evidence to explain that energy from the sun is present in animals' food and is used for body repair, growth, motion, and maintenance of body warmth."
+  },
+  {
+   "idx": "5.9",
+   "content": "Create and use a model to explain the transfer of matter and energy between the environment and organisms within it."
+  },
+  {
+   "idx": "5.10",
+   "content": "Obtain and communicate information to explain why the sun appears to be larger and brighter than other stars. and Quantity"
+  },
+  {
+   "idx": "5.11",
+   "content": "Analyze data that reveal patterns of daily changes in length and direction of shadows, day and night, phases of the moon, and seasonal appearance of some stars in the night sky."
+  },
+  {
+   "idx": "5.12",
+   "content": "Use a model to represent how any two of Earth's systems (atmosphere, biosphere, geosphere, and hydrosphere) interact and support life."
+  },
+  {
+   "idx": "5.13",
+   "content": "Construct a model to represent the distribution of freshwater and saltwater on Earth."
+  },
+  {
+   "idx": "5.14",
+   "content": "Obtain and evaluate information to communicate how science-based solutions are being used to protect Earth's natural resources and its environment."
+  },
+  {
+   "idx": "5.15",
+   "content": "Design, test, and revise solutions to clean a polluted environment."
+  }
+ ],
+ "5/social": [
+  {
+   "idx": "5.1",
+   "content": "Explain how industry and agriculture expanded during the early twentieth century."
+  },
+  {
+   "idx": "5.2",
+   "content": "Describe Progressive Era political reforms in both the United States and Alabama."
+  },
+  {
+   "idx": "5.3",
+   "content": "Describe Progressive Era social reforms in both the United States and Alabama."
+  },
+  {
+   "idx": "5.4",
+   "content": "Analyze the reasons for increased immigration to, and migration within, the United States and Alabama in the early twentieth century."
+  },
+  {
+   "idx": "5.5",
+   "content": "Summarize the primary causes and consequences of World War I."
+  },
+  {
+   "idx": "5.6",
+   "content": "Identify the contributions of Alabamians to sports, film, and the arts during the early twentieth century, the Harlem Renaissance, and the Jazz Age."
+  },
+  {
+   "idx": "5.7",
+   "content": "Describe the economic developments in the United States during the Roaring Twenties that caused the 1929 stock market crash."
+  },
+  {
+   "idx": "5.8",
+   "content": "Analyze how the government-funded New Deal programs of President Franklin D. Roosevelt impacted American society."
+  },
+  {
+   "idx": "5.9",
+   "content": "Describe the reasons for the United States' entry into World War II and identify its contributions toward the defeat of the Axis powers."
+  },
+  {
+   "idx": "5.10",
+   "content": "Describe how Alabamians contributed to the war effort during World War II."
+  },
+  {
+   "idx": "5.11",
+   "content": "Describe how the United States' economy grew and American culture changed after World War II."
+  },
+  {
+   "idx": "5.12",
+   "content": "Outline key events and campaigns of the Civil Rights Movement and identify significant organizations and their contributions within the Movement."
+  },
+  {
+   "idx": "5.13",
+   "content": "Summarize why the United States sought to contain communism during the Cold War, and locate major communist countries from the Cold War era on a map."
+  },
+  {
+   "idx": "5.14",
+   "content": "Describe how the United States' involvement in the Cold War influenced domestic and international events."
+  },
+  {
+   "idx": "5.15",
+   "content": "Trace the United States' military involvement in international conflicts since 1980, including those following the September 11 attacks."
+  },
+  {
+   "idx": "5.16",
+   "content": "Research and report on Alabama's economic contributions and participation in global markets from the mid-twentieth through twenty-first centuries."
+  },
+  {
+   "idx": "5.17",
+   "content": "State and defend a position regarding the benefits and drawbacks of technological advancements in the late twentieth and early twenty-first centuries."
+  },
+  {
+   "idx": "5.18",
+   "content": "Identify political achievements and legislation nationally and within Alabama that have furthered the modern civil rights movement since 1970."
+  }
+ ],
+ "6/language": [
+  {
+   "idx": "6.R1",
+   "content": "Utilize active listening skills during discussion and conversation in pairs, small groups, or whole-class settings, following agreed-upon rules for participation."
+  },
+  {
+   "idx": "6.R2",
+   "content": "Use context clues to determine meanings of unfamiliar spoken or written words."
+  },
+  {
+   "idx": "6.R3",
+   "content": "Use digital and electronic tools appropriately, safely, and ethically when researching and writing, both individually and collaboratively."
+  },
+  {
+   "idx": "6.R4",
+   "content": "Utilize a writing process to plan, draft, revise, edit, and publish writings in various genres."
+  },
+  {
+   "idx": "6.R5",
+   "content": "Assess the formality of occasions in order to speak or write using appropriate language and tone."
+  },
+  {
+   "idx": "6.R6",
+   "content": "Adapt speech to a variety of contexts and tasks, demonstrating command of formal English when indicated or appropriate."
+  },
+  {
+   "idx": "6.1",
+   "content": "Identify and explain an author's rhetorical choices, including point of view, purpose, anecdotes, and figurative, connotative, and technical word meanings, to develop central"
+  },
+  {
+   "idx": "6.2",
+   "content": "Make inferences and draw logical conclusions from the content and structures of informational texts, including comparison and contrast, problem and solution, claims and evidence, cause and effect, description, and sequencing."
+  },
+  {
+   "idx": "6.3",
+   "content": "Explain how authors use setting, plot, characters, theme, conflict, dialogue, and point of view to contribute to the meaning and purpose of prose and poetry, using textual"
+  },
+  {
+   "idx": "6.4",
+   "content": "Describe the use of literary devices in prose and poetry, including simile, metaphor, personification, onomatopoeia, hyperbole, tone, imagery, irony, symbolism, and mood, and indicate how they support interpretations of the text."
+  },
+  {
+   "idx": "6.5",
+   "content": "Evaluate the development of central and supporting ideas in recorded or live presentations by examining the speaker's rhetorical choices regarding point of view, purpose, anecdotes, and figurative, connotative, and technical word meanings."
+  },
+  {
+   "idx": "6.6",
+   "content": "Support interpretations of recorded or live presentations by examining the speaker's use of hyperbole, tone, symbolism, imagery, mood, irony, and onomatopoeia."
+  },
+  {
+   "idx": "6.7",
+   "content": "Produce clear, coherent narrative, argument, and informative/explanatory writing in which the development, organization, style, and tone are relevant to task, purpose, and audience, using an appropriate command of language."
+  },
+  {
+   "idx": "6.8",
+   "content": "Participate in collaborative discussions using information from a source."
+  },
+  {
+   "idx": "6.9",
+   "content": "Participate in collaborative discussions about literary devices and elements found in prose and poetry."
+  },
+  {
+   "idx": "6.10",
+   "content": "Determine subject, occasion, audience, purpose, tone, and credibility of digital sources."
+  },
+  {
+   "idx": "6.11",
+   "content": "Utilize written, visual, digital, and interactive texts to generate and answer literal,"
+  },
+  {
+   "idx": "6.12",
+   "content": "Interpret language to determine subject, occasion, audience, purpose, and credibility of"
+  },
+  {
+   "idx": "6.13",
+   "content": "Create and edit digital products that are appropriate in subject and purpose for a particular audience or occasion."
+  },
+  {
+   "idx": "6.14",
+   "content": "Enhance oral presentations by introducing ideas in digital formats with specific attention to subject, occasion, audience, and purpose."
+  },
+  {
+   "idx": "6.15",
+   "content": "Identify the conventions of standard English grammar and usage in published texts."
+  },
+  {
+   "idx": "6.16",
+   "content": "Identify the conventions of standard English capitalization, punctuation, and spelling in published texts."
+  },
+  {
+   "idx": "6.17",
+   "content": "Assess a speaker's organizational choices to determine point of view, purpose, and"
+  },
+  {
+   "idx": "6.18",
+   "content": "Identify a speaker's correct usage of language, including subject-verb agreement and"
+  },
+  {
+   "idx": "6.19",
+   "content": "Demonstrate command of standard English grammar, usage, and mechanics when"
+  },
+  {
+   "idx": "6.20",
+   "content": "Choose language that maintains consistency in style and tone in a variety of formal"
+  },
+  {
+   "idx": "6.21",
+   "content": "Summarize ethical guidelines and explain how they govern the process of finding and recording information from primary, secondary, and digital sources, with guidance and support."
+  },
+  {
+   "idx": "6.22",
+   "content": "Assess the relevance, reliability, and validity of information from printed and/or digital"
+  },
+  {
+   "idx": "6.23",
+   "content": "Use an audio or audio-visual source of information to obtain the answer to a question."
+  },
+  {
+   "idx": "6.24",
+   "content": "Write about research findings independently over short and/or extended periods of time."
+  },
+  {
+   "idx": "6.25",
+   "content": "Quote, paraphrase, and summarize information from sources and present findings, following an appropriate citation style, with guidance and support."
+  },
+  {
+   "idx": "6.26",
+   "content": "Utilize research findings to communicate relevant details, opinions, and ideas about a topic or text in oral presentations."
+  },
+  {
+   "idx": "6.27",
+   "content": "Discover word meanings by analyzing word parts, examining connotation and"
+  },
+  {
+   "idx": "6.28",
+   "content": "Discover word meanings through active listening in various contexts."
+  },
+  {
+   "idx": "6.29",
+   "content": "Use academic vocabulary in writing to communicate effectively."
+  },
+  {
+   "idx": "6.30",
+   "content": "Use vocabulary to create specific reactions or effects when speaking in various"
+  }
+ ],
+ "6/math": [
+  {
+   "idx": "6.1",
+   "content": "Use appropriate notations [a/b, a to b, a:b] to represent a proportional relationship between quantities and use ratio language to describe the relationship between quantities."
+  },
+  {
+   "idx": "6.2",
+   "content": "Use unit rates to represent and describe ratio relationships."
+  },
+  {
+   "idx": "6.3",
+   "content": "Use ratio and rate reasoning to solve mathematical and real-world problems (including but not limited to percent, measurement conversion, and equivalent ratios) using a variety of models, including tables of equivalent ratios, tape diagrams, double number lines, and equations."
+  },
+  {
+   "idx": "6.4",
+   "content": "Interpret and compute quotients of fractions using visual models and equations to represent problems. a. Use quotients of fractions to analyze and solve problems."
+  },
+  {
+   "idx": "6.5",
+   "content": "Fluently divide multi-digit whole numbers using a standard algorithm to solve real-world and mathematical problems."
+  },
+  {
+   "idx": "6.6",
+   "content": "Add, subtract, multiply, and divide decimals using a standard algorithm."
+  },
+  {
+   "idx": "6.7",
+   "content": "Use the distributive property to express the sum of two whole numbers with a common factor as a multiple of a sum of two whole numbers with no common factor."
+  },
+  {
+   "idx": "6.8",
+   "content": "Find the greatest common factor (GCF) and least common multiple (LCM) of two or more whole numbers."
+  },
+  {
+   "idx": "6.9",
+   "content": "Use signed numbers to describe quantities that have opposite directions or values and to represent quantities in real- world contexts."
+  },
+  {
+   "idx": "6.10",
+   "content": "Locate integers and other rational numbers on a horizontal or vertical line diagram. a. Define opposites as numbers located on opposite sides of 0 and the same distance from 0 on a number line."
+  },
+  {
+   "idx": "6.11",
+   "content": "Find the position of pairs of integers and other rational numbers on the coordinate plane."
+  },
+  {
+   "idx": "6.12",
+   "content": "Explain the meaning of absolute value and determine the absolute value of rational numbers in real-world contexts."
+  },
+  {
+   "idx": "6.13",
+   "content": "Compare and order rational numbers and absolute value of rational numbers with and without a number line in order to solve real-world and mathematical problems."
+  },
+  {
+   "idx": "6.14",
+   "content": "Write, evaluate, and compare expressions involving whole number exponents."
+  },
+  {
+   "idx": "6.15",
+   "content": "Write, read, and evaluate expressions in which letters represent numbers in real-world contexts. a. Interpret a variable as an unknown value for any number in a specified set, depending on the context."
+  },
+  {
+   "idx": "6.16",
+   "content": "Generate equivalent algebraic expressions using the properties of operations, including inverse, identity, commutative, associative, and distributive."
+  },
+  {
+   "idx": "6.17",
+   "content": "Determine whether two expressions are equivalent and justify the reasoning."
+  },
+  {
+   "idx": "6.18",
+   "content": "Determine whether a value is a solution to an equation or inequality by using substitution to conclude whether a given value makes the equation or inequality true."
+  },
+  {
+   "idx": "6.19",
+   "content": "Write and solve an equation in the form of x+p=q or px=q for cases in which p, q, and x are all non-negative rational numbers to solve real-world and mathematical problems."
+  },
+  {
+   "idx": "6.20",
+   "content": "Write and solve inequalities in the form of x>c, x<c, x≥ c, or x ≤ c to represent a constraint or condition in a real-"
+  },
+  {
+   "idx": "6.21",
+   "content": "Identify, represent, and analyze two quantities that change in relationship to one another in real-world or mathematical situations. a. Use tables, graphs, and equations to represent the relationship between independent and dependent variables."
+  },
+  {
+   "idx": "6.22",
+   "content": "Write examples and non-examples of statistical questions, explaining that a statistical question anticipates variability in the data related to the question."
+  },
+  {
+   "idx": "6.23",
+   "content": "Calculate, interpret, and compare measures of center (mean, median, mode) and variability (range and interquartile range) in real-world data sets. a. Determine which measure of center best represents a real-world data set. b. Interpret the measures of center and variability in the context of a problem."
+  },
+  {
+   "idx": "6.24",
+   "content": "Represent numerical data graphically, using dot plots, line plots, histograms, stem and leaf plots, and box plots."
+  },
+  {
+   "idx": "6.25",
+   "content": "Graph polygons in the coordinate plane given coordinates of the vertices to solve real-world and mathematical problems. a. Determine missing vertices of a rectangle with the same x-coordinate or the same y-coordinate when graphed in the coordinate plane."
+  },
+  {
+   "idx": "6.26",
+   "content": "Calculate the area of triangles, special quadrilaterals, and other polygons by composing and decomposing them into known shapes. a. Apply the techniques of composing and decomposing polygons to find area in the context of solving real-world and mathematical problems."
+  },
+  {
+   "idx": "6.27",
+   "content": "Determine the surface area of three-dimensional figures by representing them with nets composed of rectangles and triangles to solve real-world and mathematical problems."
+  },
+  {
+   "idx": "6.28",
+   "content": "Apply previous understanding of volume of right rectangular prisms to those with fractional edge lengths to solve real-world and mathematical problems. a. Use models (cubes or drawings) and the volume formulas (V = lwh and V = Bh) to find and compare volumes of right rectangular prisms."
+  }
+ ],
+ "6/science": [
+  {
+   "idx": "6.1",
+   "content": "Manipulate models to demonstrate the patterns of motion of the sun, Earth, and moon."
+  },
+  {
+   "idx": "6.2",
+   "content": "Evaluate information to compare and contrast past and current views about the structure of the universe and show how these views have changed over time."
+  },
+  {
+   "idx": "6.3",
+   "content": "Construct an evidence-based explanation of the role of gravity on the movement of natural and manmade objects within galaxies and the solar system."
+  },
+  {
+   "idx": "6.4",
+   "content": "Analyze and use data to determine scale properties and characteristics of objects in the solar system including sizes, distances, orbital periods, basic composition, and ability to support"
+  },
+  {
+   "idx": "6.5",
+   "content": "Obtain, evaluate, and communicate evidence that explains how constructive and destructive processes shape Earth's surface."
+  },
+  {
+   "idx": "6.6",
+   "content": "Construct an evidence-based explanation of how tectonic plate movement impacts Earth's surface over geological time."
+  },
+  {
+   "idx": "6.7",
+   "content": "Analyze data from rock strata and the fossil record to construct a chronology of occurrences in Earth's history."
+  },
+  {
+   "idx": "6.8",
+   "content": "Construct an evidence-based explanation of how the sun's energy drives the motion and cycling of water through the hydrosphere."
+  },
+  {
+   "idx": "6.9",
+   "content": "Use data analysis to monitor and predict weather changes and the impact of weather events, including severe weather."
+  },
+  {
+   "idx": "6.10",
+   "content": "Use observations and data from investigations to demonstrate how the sun, air, land, and water affect Earth's climate."
+  },
+  {
+   "idx": "6.11",
+   "content": "Obtain, evaluate, and communicate information concerning the relationships between human activities and natural processes and how those relationships affect Earth's systems, including human population growth and its impact on the global environment over time. a. environment. and Effect"
+  }
+ ],
+ "6/social": [
+  {
+   "idx": "6.1",
+   "content": "Describe major Indigenous societies in North America prior to European contact."
+  },
+  {
+   "idx": "6.2",
+   "content": "Compare and contrast the reasons for British, French, and Spanish colonization in North America as well as why individuals migrated to the colonies, including mercantilism, religious persecution, poverty, oppression, and new opportunities."
+  },
+  {
+   "idx": "6.3",
+   "content": "Describe the effects of European expeditions and colonization on the economic, geographic, and social conditions of Indigenous peoples during the fifteenth through eighteenth centuries in North America."
+  },
+  {
+   "idx": "6.4",
+   "content": "Compare and contrast the key characteristics, including political structures, of the New England, Middle, Chesapeake, and Southern colonies."
+  },
+  {
+   "idx": "6.5",
+   "content": "Explain how the desire for religious freedom served as a motivation for establishing colonies."
+  },
+  {
+   "idx": "6.6",
+   "content": "Trace the economic and cultural interactions across continents and the colonies resulting from the triangular trade routes, including the forced migration of Africans through the transatlantic slave trade and experiences of the Middle Passage."
+  },
+  {
+   "idx": "6.7",
+   "content": "Identify causes and events leading to the War for Independence, including salutary neglect, the Stamp Act, the Boston Massacre, the Boston Tea Party, the Intolerable Acts, Virginia Convention (1775), and the Declaration of Independence, and describe how these events escalated tension between the colonies and Great Britain."
+  },
+  {
+   "idx": "6.8",
+   "content": "Differentiate among the outcomes of major events and campaigns of the War for Independence, including the northern, middle, southern, and western theaters."
+  },
+  {
+   "idx": "6.9",
+   "content": "Summarize the reasons for the colonies' victory in the War for Independence."
+  },
+  {
+   "idx": "6.10",
+   "content": "Explain how events and issues of the Critical Period (1783-1789) exposed limitations of the Articles of Confederation and contributed to calls for a stronger national government."
+  },
+  {
+   "idx": "6.11",
+   "content": "Analyze how collaboration and compromise were employed to address key issues during the Constitutional Convention, including representation in Congress (Great Compromise and bicameral legislature), balance of power between national and state governments (establishment of the system of federalism), limiting government power (establishment of the three branches), and slavery (Three-Fifths Compromise)."
+  },
+  {
+   "idx": "6.12",
+   "content": "Explain how forms of governments established prior to the founding of the United States influenced the formation of the new nation's system of government."
+  },
+  {
+   "idx": "6.13",
+   "content": "Describe major ideas, concepts, and limitations of the Constitution of the United States."
+  },
+  {
+   "idx": "6.14",
+   "content": "Outline the process of selecting political leaders of the United States as established in the Constitution and its amendments."
+  },
+  {
+   "idx": "6.15",
+   "content": "Explain how the system of federalism in the United States divides power between national and state governments as well as between state and local governments."
+  },
+  {
+   "idx": "6.16",
+   "content": "Compare duties and functions of the legislative, executive, and judicial branches at various levels of government."
+  },
+  {
+   "idx": "6.17",
+   "content": "Explain key rights included in the Bill of Rights and provide examples of how citizens exercise these rights in today's society."
+  },
+  {
+   "idx": "6.18",
+   "content": "Analyze how an individual's civic participation can influence government, politics, and society."
+  },
+  {
+   "idx": "6.19",
+   "content": "Analyze the election and presidency of George Washington for its impact on establishing the role of president in the United States, including the creation of the first Cabinet, establishment of the District of Columbia, commitment to religious freedom (Letter to the Hebrew Congregation at Newport), and the two-term precedent."
+  },
+  {
+   "idx": "6.20",
+   "content": "Trace the development of the Federalist and Democratic-Republican political parties in the 1790s, and describe the role of political parties in the American political system."
+  }
+ ],
+ "7/language": [
+  {
+   "idx": "7.R1",
+   "content": "Utilize active listening skills during discussion and conversation in pairs, small groups, or whole-class settings, following agreed-upon rules for participation."
+  },
+  {
+   "idx": "7.R2",
+   "content": "Use context clues to determine meanings of unfamiliar spoken or written words."
+  },
+  {
+   "idx": "7.R3",
+   "content": "Use digital and electronic tools appropriately, safely, and ethically when researching and writing, both individually and collaboratively."
+  },
+  {
+   "idx": "7.R4",
+   "content": "Utilize a writing process to plan, draft, revise, edit, and publish writings in various genres."
+  },
+  {
+   "idx": "7.R5",
+   "content": "Assess the formality of occasions in order to speak or write using appropriate language and tone."
+  },
+  {
+   "idx": "7.R6",
+   "content": "Adapt speech to a variety of contexts and tasks, demonstrating command of formal English when indicated or appropriate."
+  },
+  {
+   "idx": "7.1",
+   "content": "Evaluate the contributions of informational text elements, including categories, point of view, purpose, and figurative, connotative, and technical word meanings, to develop"
+  },
+  {
+   "idx": "7.2",
+   "content": "Evaluate how effectively an author uses structures of informational texts, including comparison and contrast, problem and solution, cause and effect, and substantiated or unsubstantiated claims and evidence, to achieve a purpose."
+  },
+  {
+   "idx": "7.3",
+   "content": "Explain how the author's choice of setting, plot, characters, theme, conflict, dialogue, and point of view contribute to and/or enhance the meaning and purpose of prose and poetry, using textual evidence from the writing."
+  },
+  {
+   "idx": "7.4",
+   "content": "Evaluate literary devices to support interpretations of literary texts using textual evidence, including simile, metaphor, personification, onomatopoeia, hyperbole, imagery, tone, symbolism, irony, and mood."
+  },
+  {
+   "idx": "7.5",
+   "content": "Evaluate rhetorical strategies used to develop central and supporting ideas in recorded or live presentations, including point of view, purpose, comparison, categories, and word meanings (figurative, connotative, and technical)."
+  },
+  {
+   "idx": "7.6",
+   "content": "Evaluate the speaker's use of hyperbole, tone, symbolism, imagery, mood, irony, and onomatopoeia in a live or recorded presentation."
+  },
+  {
+   "idx": "7.7",
+   "content": "Produce clear, coherent narrative, argument, and informative/explanatory writing in which the development, organization, style, and tone are relevant to task, purpose, and audience, using an appropriate command of language."
+  },
+  {
+   "idx": "7.8",
+   "content": "Participate in collaborative discussions about arguments by evaluating claims, findings, and evidence from a source."
+  },
+  {
+   "idx": "7.9",
+   "content": "Participate in collaborative discussions about prose and poetry by evaluating the use of literary devices and elements."
+  },
+  {
+   "idx": "7.10",
+   "content": "Assess subject, occasion, audience, purpose, tone, and credibility of various digital"
+  },
+  {
+   "idx": "7.11",
+   "content": "Compare and contrast the effectiveness of techniques used in a variety of digital"
+  },
+  {
+   "idx": "7.12",
+   "content": "Determine the intended purposes of techniques used for rhetorical effect in multiple"
+  },
+  {
+   "idx": "7.13",
+   "content": "Interpret language through active listening to determine subject, occasion, audience,"
+  },
+  {
+   "idx": "7.14",
+   "content": "Create and edit digital products that are appropriate in subject, occasion, audience,"
+  },
+  {
+   "idx": "7.15",
+   "content": "Utilize digital tools and/or products to enhance meaning."
+  },
+  {
+   "idx": "7.16",
+   "content": "Convey ideas in an appropriate digital format with specific attention to subject,"
+  },
+  {
+   "idx": "7.17",
+   "content": "Identify the conventions of standard English grammar and usage in writing."
+  },
+  {
+   "idx": "7.18",
+   "content": "Identify the conventions of standard English capitalization, punctuation, and spelling in"
+  },
+  {
+   "idx": "7.19",
+   "content": "Evaluate a speaker's organizational choices to determine point of view, purpose, and"
+  },
+  {
+   "idx": "7.20",
+   "content": "Identify a speaker's formality of language in order to comprehend, interpret, and"
+  },
+  {
+   "idx": "7.21",
+   "content": "Create written work using standard English grammar, usage, and mechanics."
+  },
+  {
+   "idx": "7.22",
+   "content": "Choose language that expresses ideas precisely and concisely."
+  },
+  {
+   "idx": "7.23",
+   "content": "Implement ethical guidelines while finding and recording information from a variety of"
+  },
+  {
+   "idx": "7.24",
+   "content": "Determine the relevance, reliability, and validity of information from nonfiction and"
+  },
+  {
+   "idx": "7.25",
+   "content": "Use active listening to acquire information and assess its relevance and credibility."
+  },
+  {
+   "idx": "7.26",
+   "content": "Produce research writings over extended periods with time for research, reflection, and revision and within shorter time frames, with minimal guidance."
+  },
+  {
+   "idx": "7.27",
+   "content": "Quote, paraphrase, summarize, and present findings, following an appropriate citation"
+  },
+  {
+   "idx": "7.28",
+   "content": "Incorporate research into oral presentations, summarizing and supporting opinions and"
+  },
+  {
+   "idx": "7.29",
+   "content": "Determine word meaning through the use of word parts, context clues, connotation and denotation, or print or digital reference tools."
+  },
+  {
+   "idx": "7.30",
+   "content": "Read and evaluate texts from science, social studies, and other academic disciplines to"
+  },
+  {
+   "idx": "7.31",
+   "content": "Infer word meaning through active listening in various contexts for purposeful, effective communication."
+  },
+  {
+   "idx": "7.32",
+   "content": "Apply vocabulary in writing to convey and enhance meaning."
+  },
+  {
+   "idx": "7.33",
+   "content": "Select and utilize effective words and phrases that are suitable for purpose and"
+  }
+ ],
+ "7/math": [
+  {
+   "idx": "7.1",
+   "content": "Calculate unit rates of length, area, and other quantities measured in like or different units that include ratios or fractions."
+  },
+  {
+   "idx": "7.2",
+   "content": "Represent a relationship between two quantities and determine whether the two quantities are related proportionally."
+  },
+  {
+   "idx": "7.3",
+   "content": "Solve multi-step percent problems in context using proportional reasoning, including simple interest, tax, gratuities, commissions, fees, markups and markdowns, percent increase, and percent decrease."
+  },
+  {
+   "idx": "7.4",
+   "content": "Apply and extend knowledge of operations of whole numbers, fractions, and decimals to add, subtract, multiply, and divide rational numbers including integers, signed fractions, and decimals. a. Identify and explain situations where the sum of opposite quantities is 0 and opposite quantities are defined as additive inverses. b. Interpret the sum of two or more rational numbers, by using a number line and in real-world contexts. c. Explain subtraction of rational numbers as addition of additive inverses."
+  },
+  {
+   "idx": "7.5",
+   "content": "Solve real-world and mathematical problems involving the four operations of rational numbers, including complex fractions. Apply properties of operations as strategies where applicable."
+  },
+  {
+   "idx": "7.6",
+   "content": "Apply properties of operations as strategies to add, subtract, factor, and expand linear expressions with rational coefficients."
+  },
+  {
+   "idx": "7.7",
+   "content": "Generate expressions in equivalent forms based on context and explain how the quantities are related."
+  },
+  {
+   "idx": "7.8",
+   "content": "Solve multi-step real-world and mathematical problems involving rational numbers (integers, signed fractions and decimals), converting between forms as needed. Assess the reasonableness of answers using mental computation and estimation strategies."
+  },
+  {
+   "idx": "7.9",
+   "content": "Use variables to represent quantities in real-world or mathematical problems and construct algebraic expressions, equations, and inequalities to solve problems by reasoning about the quantities."
+  },
+  {
+   "idx": "7.10",
+   "content": "Examine a sample of a population to generalize information about the population. a. Differentiate between a sample and a population. b. Compare sampling techniques to determine whether a sample is random and thus representative of a population, explaining that random sampling tends to produce representative samples and support valid"
+  },
+  {
+   "idx": "7.11",
+   "content": "Informally assess the degree of visual overlap of two numerical data distributions with similar variabilities, measuring the difference between the centers by expressing it as a multiple of a measure of variability."
+  },
+  {
+   "idx": "7.12",
+   "content": "Make informal comparative inferences about two populations using measures of center and variability and/or mean"
+  },
+  {
+   "idx": "7.13",
+   "content": "Use a number from 0 to 1 to represent the probability of a chance event occurring, explaining that larger numbers indicate greater likelihood of the event occurring, while a number near zero indicates an unlikely event."
+  },
+  {
+   "idx": "7.14",
+   "content": "Define and develop a probability model, including models that may or may not be uniform, where uniform models assign equal probability to all outcomes and non-uniform models involve events that are not equally likely."
+  },
+  {
+   "idx": "7.15",
+   "content": "Approximate the probability of an event using data generated by a simulation (experimental probability) and compare it to the theoretical probability."
+  },
+  {
+   "idx": "7.16",
+   "content": "Find probabilities of simple and compound events through experimentation or simulation and by analyzing the sample space, representing the probabilities as percents, decimals, or fractions."
+  },
+  {
+   "idx": "7.17",
+   "content": "Solve problems involving scale drawings of geometric figures, including computation of actual lengths and areas from a scale drawing and reproduction of a scale drawing at a different scale."
+  },
+  {
+   "idx": "7.18",
+   "content": "Construct geometric shapes (freehand, using a ruler and a protractor, and using technology), given a written description or measurement constraints with an emphasis on constructing triangles from three measures of angles or sides, noticing when the conditions determine a unique triangle, more than one triangle, or no triangle."
+  },
+  {
+   "idx": "7.19",
+   "content": "Describe the two-dimensional figures created by slicing three-dimensional figures into plane sections."
+  },
+  {
+   "idx": "7.20",
+   "content": "Explain the relationships among circumference, diameter, area, and radius of a circle to demonstrate understanding of formulas for the area and circumference of a circle. a. Informally derive the formula for area of a circle. b. Solve area and circumference problems in real-world and mathematical situations involving circles."
+  },
+  {
+   "idx": "7.21",
+   "content": "Use facts about supplementary, complementary, vertical, and adjacent angles in multi-step problems to write and solve simple equations for an unknown angle in a figure."
+  },
+  {
+   "idx": "7.22",
+   "content": "Solve real-world and mathematical problems involving area, volume, and surface area of two- and three- dimensional objects composed of triangles, quadrilaterals, polygons, cubes, and right rectangular prisms."
+  }
+ ],
+ "7/science": [
+  {
+   "idx": "7.1",
+   "content": "Develop and use a model to explain the functions of specific cell structures necessary for maintaining a stable environment, including the cell membrane, cell wall, chloroplasts, endoplasmic reticulum, golgi apparatus, mitochondria, nucleus, ribosomes, and vacuoles."
+  },
+  {
+   "idx": "7.2",
+   "content": "Construct an explanation of how photosynthesis and cellular respiration cycle matter and establish the flow of energy into and out of an organism."
+  },
+  {
+   "idx": "7.3",
+   "content": "Construct an explanation of how the process of mitosis maintains complex organisms and ensures new cells with identical genetic information."
+  },
+  {
+   "idx": "7.4",
+   "content": "Obtain, evaluate, and communicate information explaining how cells, tissues, and organs of various systems of the human body work together for specific functions, including the circulatory, digestive, muscular, nervous, respiratory, and skeletal systems."
+  },
+  {
+   "idx": "7.5",
+   "content": "Construct an explanation of how the cycling of matter between abiotic and biotic parts of ecosystems demonstrates the flow of energy and the conservation of matter, including the carbon, nitrogen, and water cycles."
+  },
+  {
+   "idx": "7.6",
+   "content": "Analyze and interpret data to predict how environmental conditions, genetic factors, and resource availability will impact the growth of individual organisms and populations of organisms in an ecosystem."
+  },
+  {
+   "idx": "7.7",
+   "content": "Analyze and interpret data to explain how density-independent and density-dependent limiting factors in an ecosystem can lead to shifts in populations."
+  },
+  {
+   "idx": "7.8",
+   "content": "Construct an explanation that predicts patterns of interactions between and among organisms in different ecosystems."
+  },
+  {
+   "idx": "7.9",
+   "content": "Design a solution to maintain biodiversity and ecosystem services in a given scenario."
+  },
+  {
+   "idx": "7.10",
+   "content": "Obtain, evaluate, and communicate information about characteristic animal behaviors and specialized plant structures and their effect on the probability of successful reproduction."
+  },
+  {
+   "idx": "7.11",
+   "content": "Develop and use models to demonstrate how genetic variations between parents and offspring result from differences in inherited genes located on chromosomes."
+  },
+  {
+   "idx": "7.12",
+   "content": "Develop and use models to explain how genes are expressed through the flow of genetic information from DNA to RNA to a functional protein."
+  },
+  {
+   "idx": "7.13",
+   "content": "Develop and use models to explain that meiosis results in new genetic combinations with increased variation."
+  },
+  {
+   "idx": "7.14",
+   "content": "Obtain, evaluate, and communicate information on the use of technologies that impact the inheritance and appearance of traits in organisms."
+  },
+  {
+   "idx": "7.15",
+   "content": "Analyze and interpret data from examination of fossils, relict species, and modern organisms to determine patterns of change in anatomical structures over time."
+  },
+  {
+   "idx": "7.16",
+   "content": "Obtain, evaluate, and communicate evidence comparing patterns in the embryological development of multiple species to identify relationships not evident in the fully formed adult anatomy."
+  },
+  {
+   "idx": "7.17",
+   "content": "Ask questions to clarify how natural selection over generations may lead to changes in the frequency of specific traits to enhance survival and reproduction of a population."
+  }
+ ],
+ "7/social": [
+  {
+   "idx": "7.1",
+   "content": "Describe the world in spatial terms, using maps and other geographic representations, tools, and geospatial technologies."
+  },
+  {
+   "idx": "7.2",
+   "content": "Analyze how human interaction with the environment, location, movement, place, and region affect cultural, economic, and social conditions for those living in a geographic area."
+  },
+  {
+   "idx": "7.3",
+   "content": "Analyze how historians organize human history and events, including the use of calendars."
+  },
+  {
+   "idx": "7.4",
+   "content": "Explain how artifacts and other archaeological findings provide evidence of the nature and movement of prehistoric groups of people."
+  },
+  {
+   "idx": "7.5",
+   "content": "Explain common patterns that emerged in the shift from hunter-gatherer societies to permanent settlements in different regions of the world, including types and sizes of settlements."
+  },
+  {
+   "idx": "7.6",
+   "content": "Explain how technological innovations and the geographic features of the Tigris and Euphrates Rivers contributed to the development of civilization in the Fertile Crescent."
+  },
+  {
+   "idx": "7.7",
+   "content": "Analyze the economic, political, and social structures of ancient Egypt."
+  },
+  {
+   "idx": "7.8",
+   "content": "Explain the geographic and cultural development of ancient Israel."
+  },
+  {
+   "idx": "7.9",
+   "content": "Compare and contrast the economic and cultural structures of early African societies."
+  },
+  {
+   "idx": "7.10",
+   "content": "Describe cultural and economic characteristics of early Indigenous peoples in North and South America, including civilizations in Mesoamerica, the Andes, and the Mississippi River Valley."
+  },
+  {
+   "idx": "7.11",
+   "content": "Trace the development and growth of societies in Southwest Asia, including the Assyrians, Phoenicians, and Persian Empire."
+  },
+  {
+   "idx": "7.12",
+   "content": "Analyze the development of civilization in South Asia from the settling of the Indus River Valley to the beginning of the Gupta Empire."
+  },
+  {
+   "idx": "7.13",
+   "content": "Explain the emergence and consolidation of China from the Xia Dynasty along the Huang He River"
+  },
+  {
+   "idx": "7.14",
+   "content": "Summarize cultural contributions and legacies of Classical Greece, including architecture, arts, intellectual life, literature, politics, and science."
+  },
+  {
+   "idx": "7.15",
+   "content": "Outline the key geographic, political, economic, and cultural elements of the Roman Republic."
+  },
+  {
+   "idx": "7.16",
+   "content": "Trace the development of the Roman Empire, including the actions of Julius Caesar and the reigns of Augustus Caesar and the Five Good Emperors."
+  }
+ ],
+ "8/language": [
+  {
+   "idx": "8.R1",
+   "content": "Utilize active listening skills during discussion and conversation in pairs, small groups, or whole-class settings, following agreed-upon rules for participation."
+  },
+  {
+   "idx": "8.R2",
+   "content": "Use context clues to determine meanings of unfamiliar spoken or written words."
+  },
+  {
+   "idx": "8.R3",
+   "content": "Use digital and electronic tools appropriately, safely, and ethically when researching and writing, both individually and collaboratively."
+  },
+  {
+   "idx": "8.R4",
+   "content": "Utilize a writing process to plan, draft, revise, edit, and publish writings in various genres."
+  },
+  {
+   "idx": "8.R5",
+   "content": "Assess the formality of occasions in order to speak or write using appropriate language and tone."
+  },
+  {
+   "idx": "8.R6",
+   "content": "Adapt speech to a variety of contexts and tasks, demonstrating command of formal English when indicated or appropriate."
+  },
+  {
+   "idx": "8.1",
+   "content": "Analyze how informational and graphic text elements, including allusions, point of view, purpose, comparisons, categories, and figurative, connotative, and technical word meanings, develop central and supporting ideas."
+  },
+  {
+   "idx": "8.2",
+   "content": "Make complex inferences from the structure and content of a text, including comparison and contrast, problem and solution, cause and effect, and substantiated and unsubstantiated claims and evidence, to draw logical conclusions about the author's"
+  },
+  {
+   "idx": "8.3",
+   "content": "Analyze how authors use key literary elements, including setting, plot, theme,"
+  },
+  {
+   "idx": "8.4",
+   "content": "Analyze the use of literary devices, including simile, metaphor, personification, onomatopoeia, hyperbole, imagery, tone, symbolism, irony, mood, and allusion, to support interpretations of literary texts, using textual evidence to support the analysis."
+  },
+  {
+   "idx": "8.5",
+   "content": "Compare and contrast the perspectives in a variety of fiction, nonfiction, informational, digital, and multimodal texts produced from diverse historical, cultural, and global"
+  },
+  {
+   "idx": "8.6",
+   "content": "Evaluate the development of central and supporting ideas in recorded or live presentations by examining the speaker's rhetorical strategies and choices regarding point of view, purpose, comparisons, analogies, categories, allusions, and figurative,"
+  },
+  {
+   "idx": "8.7",
+   "content": "Critique the speaker's use of hyperbole, tone, symbolism, imagery, mood, irony, and onomatopoeia in a live or recorded presentation."
+  },
+  {
+   "idx": "8.8",
+   "content": "Produce clear, coherent narrative, argument, and informative/explanatory writing in which the development, organization, style, and tone are relevant to task, purpose, and audience, using an appropriate command of language."
+  },
+  {
+   "idx": "8.9",
+   "content": "Participate in collaborative discussions about arguments by evaluating claims, findings, reasoning, relevance, and evidence from multiple sources."
+  },
+  {
+   "idx": "8.10",
+   "content": "Engage in coherent and collaborative discussions about prose and poetry by evaluating the use of literary devices and elements."
+  },
+  {
+   "idx": "8.11",
+   "content": "Analyze digital texts to determine subject, occasion, audience, purpose, tone, and"
+  },
+  {
+   "idx": "8.12",
+   "content": "Interpret and evaluate language through active listening to determine subject, occasion,"
+  },
+  {
+   "idx": "8.13",
+   "content": "Create and edit digital products that are appropriate in subject, occasion, audience,"
+  },
+  {
+   "idx": "8.14",
+   "content": "Utilize digital tools and/or products to enhance meaning."
+  },
+  {
+   "idx": "8.15",
+   "content": "Deliver ideas in an appropriate digital format with specific attention to subject,"
+  },
+  {
+   "idx": "8.16",
+   "content": "Examine the use of conventions of standard English grammar and usage in writing."
+  },
+  {
+   "idx": "8.17",
+   "content": "Examine the use of conventions of standard English capitalization, punctuation, and"
+  },
+  {
+   "idx": "8.18",
+   "content": "Analyze a speaker's formality of language in order to comprehend, interpret, and"
+  },
+  {
+   "idx": "8.19",
+   "content": "Evaluate a speaker's rhetorical and organizational choices in order to determine point"
+  },
+  {
+   "idx": "8.20",
+   "content": "Produce writing that shows a command of standard English grammar, usage, and"
+  },
+  {
+   "idx": "8.21",
+   "content": "Choose language that expresses ideas precisely and concisely, recognizing and"
+  },
+  {
+   "idx": "8.22",
+   "content": "Apply ethical guidelines while finding and recording information from a variety of"
+  },
+  {
+   "idx": "8.23",
+   "content": "Determine the relevance, reliability, and validity of information from nonfiction and"
+  },
+  {
+   "idx": "8.24",
+   "content": "Assess the relevance and credibility of orally-presented information to answer a"
+  },
+  {
+   "idx": "8.25",
+   "content": "Produce research writings independently over extended periods of time which encompass research, reflection, and revision and over shorter time frames."
+  },
+  {
+   "idx": "8.26",
+   "content": "Quote, paraphrase, summarize, and present findings, following a recognized citation style and avoiding plagiarism to demonstrate responsible and ethical research"
+  },
+  {
+   "idx": "8.27",
+   "content": "Synthesize and present information during the research process to answer follow-up questions and participate in both informal and formal discussions about research findings with grade-appropriate command of language."
+  },
+  {
+   "idx": "8.28",
+   "content": "Analyze word meanings through the use of word parts, context clues, connotation and denotation, and print or digital reference tools."
+  },
+  {
+   "idx": "8.29",
+   "content": "Read, analyze, and evaluate texts from science, social studies, and other academic disciplines to determine how those disciplines treat domain-specific vocabulary and"
+  },
+  {
+   "idx": "8.30",
+   "content": "Analyze and connect word meanings through active listening in various contexts for purposeful, effective communication."
+  },
+  {
+   "idx": "8.31",
+   "content": "Integrate effective vocabulary into writing to create specific effects and communicate"
+  },
+  {
+   "idx": "8.32",
+   "content": "Utilize appropriate vocabulary in various classroom, digital, and real-world situations to"
+  }
+ ],
+ "8/math": [
+  {
+   "idx": "8.1",
+   "content": "Define the real number system as composed of rational and irrational numbers. a. Explain that every number has a decimal expansion; for rational numbers, the decimal expansion repeats or terminates. b. Convert a decimal expansion that repeats into a rational number."
+  },
+  {
+   "idx": "8.2",
+   "content": "Locate rational approximations of irrational numbers on a number line, compare their sizes, and estimate the values"
+  },
+  {
+   "idx": "8.3",
+   "content": "Develop and apply properties of integer exponents to generate equivalent numerical and algebraic expressions."
+  },
+  {
+   "idx": "8.4",
+   "content": "Use square root and cube root symbols to represent solutions to equations."
+  },
+  {
+   "idx": "8.5",
+   "content": "Estimate and compare very large or very small numbers in scientific notation."
+  },
+  {
+   "idx": "8.6",
+   "content": "Perform operations with numbers expressed in scientific notation, including problems where both decimal and"
+  },
+  {
+   "idx": "8.7",
+   "content": "Determine whether a relationship between two variables is proportional or non-proportional."
+  },
+  {
+   "idx": "8.8",
+   "content": "Graph proportional relationships. a. Interpret the unit rate of a proportional relationship, describing the constant of proportionality as the slope of the graph which goes through the origin and has the equation y = mx where m is the slope."
+  },
+  {
+   "idx": "8.9",
+   "content": "Interpret y = mx + b as defining a linear equation whose graph is a line with m as the slope and b as the y-intercept."
+  },
+  {
+   "idx": "8.10",
+   "content": "Compare proportional and non-proportional linear relationships represented in different ways (algebraically, graphically, numerically in tables, or by verbal descriptions) to solve real-world problems."
+  },
+  {
+   "idx": "8.11",
+   "content": "Solve multi-step linear equations in one variable, including rational number coefficients, and equations that require using the distributive property and combining like terms. a. Determine whether linear equations in one variable have one solution, no solution, or infinitely many solutions of the form x = a, a = a, or a = b (where a and b are different numbers)."
+  },
+  {
+   "idx": "8.12",
+   "content": "Solve systems of two linear equations in two variables by graphing and substitution."
+  },
+  {
+   "idx": "8.13",
+   "content": "Determine whether a relation is a function, defining a function as a rule that assigns to each input (independent value) exactly one output (dependent value), and given a graph, table, mapping, or set of ordered pairs."
+  },
+  {
+   "idx": "8.14",
+   "content": "Evaluate functions defined by a rule or an equation, given values for the independent variable."
+  },
+  {
+   "idx": "8.15",
+   "content": "Compare properties of functions represented algebraically, graphically, numerically in tables, or by verbal"
+  },
+  {
+   "idx": "8.16",
+   "content": "Construct a function to model a linear relationship between two variables. a. Interpret the rate of change (slope) and initial value of the linear function from a description of a relationship or from two points in a table or graph."
+  },
+  {
+   "idx": "8.17",
+   "content": "Analyze the relationship (increasing or decreasing, linear or non-linear) between two quantities represented in a"
+  },
+  {
+   "idx": "8.18",
+   "content": "Construct and interpret scatter plots for bivariate measurement data to investigate patterns of association between two quantities, describing patterns in terms of positive, negative, or no association, linear and non-linear association, clustering, and outliers."
+  },
+  {
+   "idx": "8.19",
+   "content": "Given a scatter plot that suggests a linear association, informally draw a line to fit the data, and assess the model fit by judging the closeness of the data points to the line."
+  },
+  {
+   "idx": "8.20",
+   "content": "Use a linear model of a real-world situation to solve problems and make predictions."
+  },
+  {
+   "idx": "8.21",
+   "content": "Construct and interpret a two-way table summarizing data on two categorical variables collected from the same subjects, using relative frequencies calculated for rows or columns to describe possible associations between the two"
+  },
+  {
+   "idx": "8.22",
+   "content": "Verify experimentally the properties of rigid motions (rotations, reflections, and translations): lines are taken to lines, and line segments are taken to line segments of the same length; angles are taken to angles of the same measure; and parallel lines are taken to parallel lines. a. Given a pair of two-dimensional figures, determine if a series of rigid motions maps one figure onto the other, recognizing that if such a sequence exists the figures are congruent; describe the transformation sequence that"
+  },
+  {
+   "idx": "8.23",
+   "content": "Use coordinates to describe the effect of transformations (dilations, translations, rotations, and reflections) on two- dimensional figures."
+  },
+  {
+   "idx": "8.24",
+   "content": "Given a pair of two-dimensional figures, determine if a series of dilations and rigid motions maps one figure onto the other, recognizing that if such a sequence exists the figures are similar; describe the transformation sequence that exhibits the similarity between them."
+  },
+  {
+   "idx": "8.25",
+   "content": "Analyze and apply properties of parallel lines cut by a transversal to determine missing angle measures. a. Use informal arguments to establish that the sum of the interior angles of a triangle is 180 degrees."
+  },
+  {
+   "idx": "8.26",
+   "content": "Informally justify the Pythagorean Theorem and its converse."
+  },
+  {
+   "idx": "8.27",
+   "content": "Apply the Pythagorean Theorem to find the distance between two points in a coordinate plane."
+  },
+  {
+   "idx": "8.28",
+   "content": "Apply the Pythagorean Theorem to determine unknown side lengths of right triangles, including real-world applications"
+  },
+  {
+   "idx": "8.29",
+   "content": "Informally derive the formulas for the volume of cones and spheres by experimentally comparing the volumes of cones and spheres with the same radius and height to a cylinder with the same dimensions."
+  },
+  {
+   "idx": "8.30",
+   "content": "Use formulas to calculate the volumes of three-dimensional figures (cylinders, cones, and spheres) to solve real- world problems."
+  }
+ ],
+ "8/science": [
+  {
+   "idx": "8.1",
+   "content": "Plan and carry out investigations to support the claim that pure substances can be described and defined by their properties, including solubility, electrical conductivity, and density."
+  },
+  {
+   "idx": "8.2",
+   "content": "Develop and manipulate models to explain changes in particle motion, temperature, and state of a pure substance when thermal energy is added to or removed from a system."
+  },
+  {
+   "idx": "8.3",
+   "content": "Justify a claim, based on evidence from investigations, that pure substances differ from mixtures, including solutions."
+  },
+  {
+   "idx": "8.4",
+   "content": "Obtain and communicate information from the periodic table, including atomic number, number of electrons and neutrons, average atomic mass, groups, and periods, to illustrate the structure and composition of atoms of different elements."
+  },
+  {
+   "idx": "8.5",
+   "content": "Obtain, evaluate, and communicate information from the periodic table to make predictions about the reactivity of the main group elements."
+  },
+  {
+   "idx": "8.6",
+   "content": "Observe and analyze data regarding characteristic properties of substances before and after they are combined to determine whether a chemical reaction has occurred."
+  },
+  {
+   "idx": "8.7",
+   "content": "Analyze data from an investigation to determine whether thermal energy is released or absorbed in a chemical reaction. a. reactions."
+  },
+  {
+   "idx": "8.8",
+   "content": "Engage in an argument from evidence to support the claim that matter is conserved in a chemical reaction."
+  },
+  {
+   "idx": "8.9",
+   "content": "Use data from an investigation to identify factors that affect acceleration."
+  },
+  {
+   "idx": "8.10",
+   "content": "Develop and use models to illustrate how individual external forces affect the motion of objects."
+  },
+  {
+   "idx": "8.11",
+   "content": "Use models to demonstrate each of Newton's laws of motion and explain the effect of net force on objects."
+  },
+  {
+   "idx": "8.12",
+   "content": "Use a model to identify factors affecting the strength of noncontact forces, including magnetic, gravitational, and electrical forces, and demonstrate that fields exist even though the objects are not in contact."
+  },
+  {
+   "idx": "8.13",
+   "content": "Analyze graphical displays of data to describe the relationship of mass and velocity of an object to its kinetic energy (KE)."
+  },
+  {
+   "idx": "8.14",
+   "content": "Use models to construct an explanation of how a system of objects may contain varying amounts of potential energy, including gravitational, elastic, and chemical."
+  },
+  {
+   "idx": "8.15",
+   "content": "Use models to construct an explanation of how energy is transformed but still conserved."
+  },
+  {
+   "idx": "8.16",
+   "content": "Develop and use a model to construct an explanation of how electrical energy is transferred and and System transformed."
+  },
+  {
+   "idx": "8.17",
+   "content": "Use models of mechanical and electromagnetic waves to qualitatively describe the relationships among wave properties, including amplitude, wavelength, and frequency."
+  },
+  {
+   "idx": "8.18",
+   "content": "Construct an argument from evidence that digital and analog signals encode and transmit information differently."
+  }
+ ],
+ "8/social": [
+  {
+   "idx": "8.1",
+   "content": "Analyze the economic, political, and social consequences of the collapse of the Western Roman Empire."
+  },
+  {
+   "idx": "8.2",
+   "content": "Describe the Byzantine Empire, its institutions, and its legacy."
+  },
+  {
+   "idx": "8.3",
+   "content": "Trace and analyze the spread of Islam through the Mediterranean region under the caliphs from 632 to 1258, including the consolidation of the Qur'an."
+  },
+  {
+   "idx": "8.4",
+   "content": "Compare and contrast the cultural, economic, geographic, and political structures of the civilizations of medieval Asia, including China, India, Japan, and Korea."
+  },
+  {
+   "idx": "8.5",
+   "content": "Compare the African kingdoms of Ghana, Mali, and Songhai, including cultures, economic systems, geography, religions, and slave trade."
+  },
+  {
+   "idx": "8.6",
+   "content": "Describe key aspects and figures of Indigenous societies during the Postclassic Period in Mesoamerica and the Andean region and the Mississippian Period in North America, including the Maya, Aztec, and Inca civilizations."
+  },
+  {
+   "idx": "8.7",
+   "content": "Outline the social, cultural, economic, and religious developments of early medieval Europe."
+  },
+  {
+   "idx": "8.8",
+   "content": "Analyze the social, political, and economic changes leading up to the Renaissance and Reformation in later medieval Europe and surrounding regions."
+  },
+  {
+   "idx": "8.9",
+   "content": "Describe cultural and economic developments in Italy and Northern Europe during the Renaissance, including the influence of the Medici family."
+  },
+  {
+   "idx": "8.10",
+   "content": "Analyze the factors that contributed to the Reformation and explain how it affected the religious and political unity of Europe."
+  },
+  {
+   "idx": "8.11",
+   "content": "Explain the motivations for exploration by European nations."
+  },
+  {
+   "idx": "8.12",
+   "content": "Trace the cultural, economic, and political effects of European colonization on the populations of Africa, the Americas, and Europe."
+  },
+  {
+   "idx": "8.13",
+   "content": "Analyze the economic, political, and social effects of the transatlantic slave trade on African societies and American colonies."
+  },
+  {
+   "idx": "8.14",
+   "content": "Summarize the rise of absolutism and explain how absolute monarchy differed from governing practices in Europe before the seventeenth century."
+  },
+  {
+   "idx": "8.15",
+   "content": "Analyze the development of parliamentary and constitutional government in England."
+  },
+  {
+   "idx": "8.16",
+   "content": "Describe the governing policies in East Asia during the sixteenth, seventeenth, and eighteenth centuries, including those of China and Japan."
+  },
+  {
+   "idx": "8.17",
+   "content": "Analyze the influence of the Scientific Revolution on European religion and society, including the astronomical theories of Nicolaus Copernicus and Galileo Galilei."
+  },
+  {
+   "idx": "8.18",
+   "content": "Summarize the main ideas of the Enlightenment and describe their emergence in European society."
+  }
+ ],
+ "9/language": [
+  {
+   "idx": "9.R1",
+   "content": "Read a variety of print and nonprint documents to acquire new information and respond to the needs and demands of society and the workplace. Examples: emails, directions, diagrams, charts, other common workplace documents"
+  },
+  {
+   "idx": "9.R2",
+   "content": "Read and comprehend a variety of literary texts to develop a literal and figurative understanding as appropriate to the type of text, purpose, and situation. Examples: short and long prose texts, poetry, dramas"
+  },
+  {
+   "idx": "9.R3",
+   "content": "Utilize active listening skills in formal and informal conversations, following predetermined norms."
+  },
+  {
+   "idx": "9.R4",
+   "content": "Use digital and electronic tools appropriately, safely, and ethically."
+  },
+  {
+   "idx": "9.R5",
+   "content": "Utilize a writing process which includes planning, revising, editing/peer-editing, and rewriting to create a focused, organized, and coherent piece of writing for a specific purpose and audience."
+  },
+  {
+   "idx": "9.R6",
+   "content": "Employ conventions of grammar, mechanics, and usage in order to communicate effectively with a target audience. Examples: punctuation, capitalization, spelling, effective sentence structure, appropriate formality of language"
+  },
+  {
+   "idx": "9.R7",
+   "content": "Use context clues to determine meanings of unfamiliar spoken or written words."
+  },
+  {
+   "idx": "9.1",
+   "content": "Read, analyze, and evaluate complex literary and informational texts written from various cultural perspectives, with an emphasis on works originating outside the United States and the British Isles through 1599."
+  },
+  {
+   "idx": "9.2",
+   "content": "Analyze information from graphic texts to draw conclusions, defend claims, and make"
+  },
+  {
+   "idx": "9.3",
+   "content": "Analyze how an author's cultural perspective influences style, language, and themes."
+  },
+  {
+   "idx": "9.4",
+   "content": "Analyze how authors use characterization, connotation, denotation, figurative language, literary elements, and point of view to create and convey meaning in a"
+  },
+  {
+   "idx": "9.5",
+   "content": "Analyze the impact of context and organizational structures on theme, tone, and the"
+  },
+  {
+   "idx": "9.6",
+   "content": "Compare and/or contrast the perspectives in a variety of fiction, nonfiction, informational, digital, and multimodal texts produced from diverse historical, cultural, and global points of view, not limited to the grade-level literary focus."
+  },
+  {
+   "idx": "9.7",
+   "content": "Read, analyze, and evaluate texts from science, social studies, and other academic disciplines to determine how those disciplines treat domain-specific vocabulary and"
+  },
+  {
+   "idx": "9.8",
+   "content": "Through active listening, evaluate tone, organization, content, and non-verbal cues to"
+  },
+  {
+   "idx": "9.9",
+   "content": "Compose both short and extended narrative, informative/explanatory, and argumentative writings that are clear and coherent, use an appropriate command of language, and demonstrate development, organization, style, and tone that are relevant to task, purpose, and audience."
+  },
+  {
+   "idx": "9.10",
+   "content": "Present research findings to a peer audience, either formally or informally, conveying credible, accurate information from multiple sources, including diverse media."
+  },
+  {
+   "idx": "9.11",
+   "content": "Participate in collaborative discussions involving multiple perspectives, responding and contributing with relevant evidence and commentary."
+  },
+  {
+   "idx": "9.12",
+   "content": "Interpret digital texts to determine their subject, occasion, audience, purpose, tone, and"
+  },
+  {
+   "idx": "9.13",
+   "content": "Interpret a digital audio source to determine its subject, occasion, audience, purpose,"
+  },
+  {
+   "idx": "9.14",
+   "content": "Create and edit digital texts that are suitable in purpose and tone for their intended"
+  },
+  {
+   "idx": "9.15",
+   "content": "Create and deliver a collaborative presentation that is suitable in purpose and tone for"
+  },
+  {
+   "idx": "9.16",
+   "content": "Interpret how an author's grammar and rhetorical style contribute to the meaning in both fiction, including poetry and prose, and nonfiction, including historical, business,"
+  },
+  {
+   "idx": "9.17",
+   "content": "Classify formality of language in order to comprehend, interpret, and respond appropriately."
+  },
+  {
+   "idx": "9.18",
+   "content": "Analyze a speaker's rhetorical, aesthetic, and organizational choices in order to"
+  },
+  {
+   "idx": "9.19",
+   "content": "Apply conventions of language to communicate effectively with a target audience, including punctuation; capitalization; spelling; verb, pronoun, and modifier usage; and"
+  },
+  {
+   "idx": "9.20",
+   "content": "Adapt speech to purpose and audience in a variety of contexts and tasks,"
+  },
+  {
+   "idx": "9.21",
+   "content": "Locate and determine the usefulness of relevant and credible information to answer a question, solve a problem, or defend a position."
+  },
+  {
+   "idx": "9.22",
+   "content": "Use a variety of search tools and research strategies."
+  },
+  {
+   "idx": "9.23",
+   "content": "Use audio sources to obtain useful and credible information to answer a question,"
+  },
+  {
+   "idx": "9.24",
+   "content": "Utilize responsible and ethical research practices to write clear, coherent products with a command of language suitable for a particular target audience and purpose."
+  },
+  {
+   "idx": "9.25",
+   "content": "Integrate information from at least two sources into writing by quoting, paraphrasing, or summarizing and cite sources, following the rules of a particular style guide."
+  },
+  {
+   "idx": "9.26",
+   "content": "Compose clear, coherent writing that incorporates information from at least one scholarly source and demonstrates a clear position on a topic, answers a research question, or presents a solution to a problem."
+  },
+  {
+   "idx": "9.27",
+   "content": "Utilize responsible and ethical research practices to present clear, coherent products"
+  }
+ ],
+ "9/math": [
+  {
+   "idx": "GDA.1",
+   "content": "Extend understanding of irrational and rational numbers by rewriting expressions involving radicals, including addition, subtraction, multiplication, and division, in order to recognize geometric patterns."
+  },
+  {
+   "idx": "GDA.2",
+   "content": "Use units as a way to understand problems and to guide the solution of multi-step problems. a. b."
+  },
+  {
+   "idx": "GDA.3",
+   "content": "Find the coordinates of the vertices of a polygon determined by a set of lines, given their equations, by setting their function rules equal and solving, or by using their graphs."
+  },
+  {
+   "idx": "GDA.4",
+   "content": "Rearrange formulas to highlight a quantity of interest, using the same reasoning as in solving equations."
+  },
+  {
+   "idx": "GDA.5",
+   "content": "Verify that the graph of a linear equation in two variables is the set of all its solutions plotted in the coordinate plane, which forms a line."
+  },
+  {
+   "idx": "GDA.6",
+   "content": "Derive the equation of a circle of given center and radius using the Pythagorean Theorem."
+  },
+  {
+   "idx": "GDA.7",
+   "content": "Use mathematical and statistical reasoning with quantitative data, both univariate data (set of values) and bivariate data (set of pairs of values) that suggest a linear association, in order to draw conclusions and assess risk."
+  },
+  {
+   "idx": "GDA.8",
+   "content": "Use technology to organize data, including very large data sets, into a useful and manageable structure."
+  },
+  {
+   "idx": "GDA.9",
+   "content": "Represent the distribution of univariate quantitative data with plots on the real number line, choosing a format (dot plot, histogram, or box plot) most appropriate to the data set, and represent the distribution of bivariate quantitative data with a scatter plot. Extend from simple cases by hand to more complex cases involving large data sets using technology."
+  },
+  {
+   "idx": "GDA.10",
+   "content": "Use statistics appropriate to the shape of the data distribution to compare and contrast two or more data sets, utilizing the mean and median for center and the interquartile range and standard deviation for variability. a. Explain how standard deviation develops from mean absolute deviation. b. Calculate the standard deviation for a data set, using technology where appropriate."
+  },
+  {
+   "idx": "GDA.11",
+   "content": "Interpret differences in shape, center, and spread in the context of data sets, accounting for possible effects of extreme data points (outliers) on mean and standard deviation."
+  },
+  {
+   "idx": "GDA.12",
+   "content": "Represent data of two quantitative variables on a scatter plot, and describe how the variables are related. a. Find a linear function for a scatter plot that suggests a linear association and informally assess its fit by plotting and analyzing residuals, including the squares of the"
+  },
+  {
+   "idx": "GDA.13",
+   "content": "Compute (using technology) and interpret the correlation coefficient of a linear relationship."
+  },
+  {
+   "idx": "GDA.14",
+   "content": "Distinguish between correlation and causation."
+  },
+  {
+   "idx": "GDA.15",
+   "content": "Evaluate possible solutions to real-life problems by developing linear models of contextual situations and using them to predict unknown values. a. Use the linear model to solve problems in the context of the given data. b. Interpret the slope (rate of change) and the intercept (constant term) of a linear model in the context of the given data."
+  },
+  {
+   "idx": "GDA.16",
+   "content": "Identify the shapes of two-dimensional cross-sections of three-dimensional objects, and identify three-dimensional objects generated by rotations of two-dimensional objects."
+  },
+  {
+   "idx": "GDA.17",
+   "content": "Model and solve problems using surface area and volume of solids, including composite"
+  },
+  {
+   "idx": "GDA.18",
+   "content": "Given the coordinates of the vertices of a polygon, compute its perimeter and area using a variety of methods, including the distance formula and dynamic geometry software, and evaluate the accuracy of the results."
+  },
+  {
+   "idx": "GDA.19",
+   "content": "Derive and apply the relationships between the lengths, perimeters, areas, and volumes of similar figures in relation to their scale factor."
+  },
+  {
+   "idx": "GDA.20",
+   "content": "Derive and apply the formula for the length of an arc and the formula for the area of a sector."
+  },
+  {
+   "idx": "GDA.21",
+   "content": "Represent transformations and compositions of transformations in the plane (coordinate and otherwise) using tools such as tracing paper and geometry software. a. Describe transformations and compositions of transformations as functions that take points in the plane as inputs and give other points as outputs, using informal and formal notation. b. Compare transformations which preserve distance and angle measure to those that do"
+  },
+  {
+   "idx": "GDA.22",
+   "content": "Explore rotations, reflections, and translations using graph paper, tracing paper, and geometry"
+  },
+  {
+   "idx": "GDA.23",
+   "content": "Develop definitions of rotation, reflection, and translation in terms of angles, circles, perpendicular lines, parallel lines, and line segments."
+  },
+  {
+   "idx": "GDA.24",
+   "content": "Define congruence of two figures in terms of rigid motions (a sequence of translations, rotations, and reflections); show that two figures are congruent by finding a sequence of rigid motions that maps one figure to the other."
+  },
+  {
+   "idx": "GDA.25",
+   "content": "Verify criteria for showing triangles are congruent using a sequence of rigid motions that map"
+  },
+  {
+   "idx": "GDA.26",
+   "content": "Verify experimentally the properties of dilations given by a center and a scale factor. a. Verify that a dilation takes a line not passing through the center of the dilation to a parallel line, and leaves a line passing through the center unchanged. b. Verify that the dilation of a line segment is longer or shorter in the ratio given by the scale factor."
+  },
+  {
+   "idx": "GDA.27",
+   "content": "Given two figures, determine whether they are similar by identifying a similarity transformation (sequence of rigid motions and dilations) that maps one figure to the other."
+  },
+  {
+   "idx": "GDA.28",
+   "content": "Verify criteria for showing triangles are similar using a similarity transformation (sequence of rigid motions and dilations) that maps one triangle to another."
+  },
+  {
+   "idx": "GDA.29",
+   "content": "Find patterns and relationships in figures including lines, triangles, quadrilaterals, and circles, using technology and other tools. a. Construct figures, using technology and other tools, in order to make and test conjectures about their properties. b. Identify different sets of properties necessary to define and construct figures."
+  },
+  {
+   "idx": "GDA.30",
+   "content": "Develop and use precise definitions of figures such as angle, circle, perpendicular lines, parallel lines, and line segment, based on the undefined notions of point, line, distance along a line, and distance around a circular arc."
+  },
+  {
+   "idx": "GDA.31",
+   "content": "Justify whether conjectures are true or false in order to prove theorems and then apply those theorems in solving problems, communicating proofs in a variety of ways, including flow"
+  },
+  {
+   "idx": "GDA.32",
+   "content": "Use coordinates to prove simple geometric theorems algebraically."
+  },
+  {
+   "idx": "GDA.33",
+   "content": "Prove the slope criteria for parallel and perpendicular lines and use them to solve geometric problems."
+  },
+  {
+   "idx": "GDA.34",
+   "content": "Use congruence and similarity criteria for triangles to solve problems in real-world contexts."
+  },
+  {
+   "idx": "GDA.35",
+   "content": "Discover and apply relationships in similar right triangles. a. Derive and apply the constant ratios of the sides in special right triangles (45˚-45˚-90˚ and 30˚-60˚-90˚). b. Use similarity to explore and define basic trigonometric ratios, including sine ratio, cosine ratio, and tangent ratio. c. Explain and use the relationship between the sine and cosine of complementary angles."
+  },
+  {
+   "idx": "GDA.36",
+   "content": "Use geometric shapes, their measures, and their properties to model objects and use those"
+  },
+  {
+   "idx": "GDA.37",
+   "content": "Investigate and apply relationships among inscribed angles, radii, and chords, including but not limited to: the relationship between central, inscribed, and circumscribed angles; inscribed angles on a diameter are right angles; the radius of a circle is perpendicular to the tangent"
+  },
+  {
+   "idx": "GDA.38",
+   "content": "Use the mathematical modeling cycle involving geometric methods to solve design problems."
+  },
+  {
+   "idx": "AIP.1",
+   "content": "Explain how the meaning of rational exponents follows from extending the properties of integer exponents to those values, allowing for an additional notation for radicals using rational exponents."
+  },
+  {
+   "idx": "AIP.2",
+   "content": "Rewrite expressions involving radicals and rational exponents using the properties of"
+  },
+  {
+   "idx": "AIP.3",
+   "content": "Define the imaginary number i such that i 2 = -1."
+  },
+  {
+   "idx": "AIP.4",
+   "content": "Interpret linear, quadratic, and exponential expressions in terms of a context by viewing one or more of their parts as a single entity."
+  },
+  {
+   "idx": "AIP.5",
+   "content": "Use the structure of an expression to identify ways to rewrite it."
+  },
+  {
+   "idx": "AIP.6",
+   "content": "Choose and produce an equivalent form of an expression to reveal and explain properties of the quantity represented by the expression."
+  },
+  {
+   "idx": "AIP.7",
+   "content": "Add, subtract, and multiply polynomials, showing that polynomials form a system analogous to the integers, namely, they are closed under the operations of addition, subtraction, and"
+  },
+  {
+   "idx": "AIP.8",
+   "content": "Explain why extraneous solutions to an equation involving absolute values may arise and how to check to be sure that a candidate solution satisfies an equation."
+  },
+  {
+   "idx": "AIP.9",
+   "content": "Select an appropriate method to solve a quadratic equation in one variable. a. Use the method of completing the square to transform any quadratic equation in x into an equation of the form (x - p)2 = q that has the same solutions. Explain how the quadratic formula is derived from this form. b. Solve quadratic equations by inspection (such as x2 = 49), taking square roots, completing the square, the quadratic formula, and factoring, as appropriate to the initial form of the equation, and recognize that some solutions may not be real."
+  },
+  {
+   "idx": "AIP.10",
+   "content": "Select an appropriate method to solve a system of two linear equations in two variables."
+  },
+  {
+   "idx": "AIP.11",
+   "content": "Create equations and inequalities in one variable and use them to solve problems in context, either exactly or approximately. Extend from contexts arising from linear functions to those involving quadratic, exponential, and absolute value functions."
+  },
+  {
+   "idx": "AIP.12",
+   "content": "Create equations in two or more variables to represent relationships between quantities in context; graph equations on coordinate axes with labels and scales and use them to make predictions. Limit to contexts arising from linear, quadratic, exponential, absolute value,"
+  },
+  {
+   "idx": "AIP.13",
+   "content": "Represent constraints by equations and/or inequalities, and solve systems of equations and/or inequalities, interpreting solutions as viable or nonviable options in a modeling context. Limit to contexts arising from linear, quadratic, exponential, absolute value, and linear"
+  },
+  {
+   "idx": "AIP.14",
+   "content": "Given a relation defined by an equation in two variables, identify the graph of the relation as the set of all its solutions plotted in the coordinate plane. Note: The graph of a relation often forms a curve (which could be a line)."
+  },
+  {
+   "idx": "AIP.15",
+   "content": "Define a function as a mapping from one set (called the domain) to another set (called the range) that assigns to each element of the domain exactly one element of the range."
+  },
+  {
+   "idx": "AIP.16",
+   "content": "Compare and contrast relations and functions represented by equations, graphs, or tables that show related values; determine whether a relation is a function. Explain that a function f is a special kind of relation defined by the equation y = f(x)."
+  },
+  {
+   "idx": "AIP.17",
+   "content": "Combine different types of standard functions to write, evaluate, and interpret functions in context. Limit to linear, quadratic, exponential, and absolute value functions."
+  },
+  {
+   "idx": "AIP.18",
+   "content": "Solve systems consisting of linear and/or quadratic equations in two variables graphically, using technology where appropriate."
+  },
+  {
+   "idx": "AIP.19",
+   "content": "Explain why the x-coordinates of the points where the graphs of the equations y = f(x) and y = g(x) intersect are the solutions of the equation f(x) = g(x). a. Find the approximate solutions of an equation graphically, using tables of values, or finding successive approximations, using technology where appropriate. Note: Include cases where f(x) is a linear, quadratic, exponential, or absolute value function and g(x)"
+  },
+  {
+   "idx": "AIP.20",
+   "content": "Graph the solutions to a linear inequality in two variables as a half-plane (excluding the boundary in the case of a strict inequality), and graph the solution set to a system of linear inequalities in two variables as the intersection of the corresponding half-planes, using"
+  },
+  {
+   "idx": "AIP.21",
+   "content": "Compare properties of two functions, each represented in a different way (algebraically, graphically, numerically in tables, or by verbal descriptions). Extend from linear to quadratic, exponential, absolute value, and general piecewise."
+  },
+  {
+   "idx": "AIP.22",
+   "content": "Define sequences as functions, including recursive definitions, whose domain is a subset of the"
+  },
+  {
+   "idx": "AIP.23",
+   "content": "Identify the effect on the graph of replacing 𝑓𝑓(𝑥𝑥) by 𝑓𝑓(𝑥𝑥) + 𝑘𝑘, 𝑘𝑘 · 𝑓𝑓(𝑥𝑥), 𝑓𝑓(𝑘𝑘 · 𝑥𝑥), and 𝑓𝑓(𝑥𝑥 + 𝑘𝑘) for specific values of k (both positive and negative); find the value of k given the graphs. Experiment with cases and explain the effects on the graph, using technology as appropriate. Limit to linear, quadratic, exponential, absolute value, and linear piecewise"
+  },
+  {
+   "idx": "AIP.24",
+   "content": "Distinguish between situations that can be modeled with linear functions and those that can be"
+  },
+  {
+   "idx": "AIP.25",
+   "content": "Construct linear and exponential functions, including arithmetic and geometric sequences, given a graph, a description of a relationship, or two input-output pairs (include reading these"
+  },
+  {
+   "idx": "AIP.26",
+   "content": "Use graphs and tables to show that a quantity increasing exponentially eventually exceeds a quantity increasing linearly or quadratically."
+  },
+  {
+   "idx": "AIP.27",
+   "content": "Interpret the parameters of functions in terms of a context. Extend from linear functions, written in the form mx + b, to exponential functions, written in the form abx."
+  },
+  {
+   "idx": "AIP.28",
+   "content": "For a function that models a relationship between two quantities, interpret key features of graphs and tables in terms of the quantities, and sketch graphs showing key features given a verbal description of the relationship. Note: Key features include: intercepts; intervals where the function is increasing, decreasing, positive, or negative; maximums and minimums; symmetries; and end behavior. Extend from relationships that can be represented by linear functions to quadratic, exponential, absolute value, and linear piecewise functions."
+  },
+  {
+   "idx": "AIP.29",
+   "content": "Calculate and interpret the average rate of change of a function (presented symbolically or as a table) over a specified interval. Estimate the rate of change from a graph. Limit to linear, quadratic, exponential, and absolute value functions."
+  },
+  {
+   "idx": "AIP.30",
+   "content": "Graph functions expressed symbolically and show key features of the graph, by hand in simple cases and using technology for more complicated cases."
+  },
+  {
+   "idx": "AIP.31",
+   "content": "Use the mathematical modeling cycle to solve real-world problems involving linear, quadratic, exponential, absolute value, and linear piecewise functions."
+  },
+  {
+   "idx": "AIP.32",
+   "content": "Use mathematical and statistical reasoning with bivariate categorical data in order to draw conclusions and assess risk."
+  },
+  {
+   "idx": "AIP.33",
+   "content": "Design and carry out an investigation to determine whether there appears to be an association between two categorical variables, and write a persuasive argument based on the results of the investigation."
+  },
+  {
+   "idx": "AIP.34",
+   "content": "Distinguish between quantitative and categorical data and between the techniques that may be used for analyzing data of these two types."
+  },
+  {
+   "idx": "AIP.35",
+   "content": "Analyze the possible association between two categorical variables. a. Summarize categorical data for two categories in two-way frequency tables and represent using segmented bar graphs."
+  },
+  {
+   "idx": "AIP.36",
+   "content": "Generate a two-way categorical table in order to find and evaluate solutions to real-world problems. a. Aggregate data from several groups to find an overall association between two categorical variables. b. Recognize and explore situations where the association between two categorical variables is reversed when a third variable is considered (Simpson's Paradox)."
+  },
+  {
+   "idx": "AIP.37",
+   "content": "Describe events as subsets of a sample space (the set of outcomes) using characteristics (or categories) of the outcomes, or as unions, intersections, or complements of other events (\"or,\" \"and,\" \"not\")."
+  },
+  {
+   "idx": "AIP.38",
+   "content": "Explain whether two events, A and B, are independent, using two-way tables or tree diagrams."
+  },
+  {
+   "idx": "AIP.39",
+   "content": "Compute the conditional probability of event A given event B, using two-way tables or tree diagrams."
+  },
+  {
+   "idx": "AIP.40",
+   "content": "Recognize and describe the concepts of conditional probability and independence in everyday situations and explain them using everyday language."
+  },
+  {
+   "idx": "AIP.41",
+   "content": "Explain why the conditional probability of A given B is the fraction of B's outcomes that also belong to A, and interpret the answer in context."
+  }
+ ],
+ "9/science": [
+  {
+   "idx": "BIO.1",
+   "content": "Engage in evidence-based argument to relate a cell's function to the structure, function, and diversity of its components."
+  },
+  {
+   "idx": "BIO.2",
+   "content": "Obtain and evaluate information to explain the role of DNA and RNA in transcription and translation leading to protein synthesis and cellular function."
+  },
+  {
+   "idx": "BIO.3",
+   "content": "Develop and use models to explain how events during the cell cycle lead to the formation of new cells and repair of multicellular organisms, including cell growth, DNA replication, separation of chromosomes, and separation of cell contents."
+  },
+  {
+   "idx": "BIO.4",
+   "content": "Engage in argument from evidence to explain the regulation of cellular processes that maintain homeostasis, including active and passive transport."
+  },
+  {
+   "idx": "BIO.5",
+   "content": "Plan and carry out investigations and utilize results to explain the role and cycling of products and reactants involved in the cellular conversion of energy."
+  },
+  {
+   "idx": "BIO.6",
+   "content": "Develop and use models to illustrate interactions between ecological hierarchy levels, including"
+  },
+  {
+   "idx": "BIO.7",
+   "content": "Develop and use models to illustrate the flow of matter and energy between abiotic and biotic factors in ecosystems, including loss of heat, 10% rule, and the conservation of matter."
+  },
+  {
+   "idx": "BIO.8",
+   "content": "Construct an evidence-based explanation of how density-dependent and density-independent factors affect population growth."
+  },
+  {
+   "idx": "BIO.9",
+   "content": "Obtain, evaluate, and communicate data to explain how the biodiversity of Alabama contributes to ecosystem services in the state."
+  },
+  {
+   "idx": "BIO.10",
+   "content": "Engage in argument from evidence to support the claim that characteristics of an ecosystem contribute to its resilience and stability, including ecological succession and recovery from disturbance."
+  },
+  {
+   "idx": "BIO.11",
+   "content": "Use probability and statistical models to explain the variation of expressed traits within a population."
+  },
+  {
+   "idx": "BIO.12",
+   "content": "Develop and use an evidence-based model to illustrate the formation of reproductive cells through the process of meiosis."
+  },
+  {
+   "idx": "BIO.13",
+   "content": "Analyze and interpret data to support hypotheses of common ancestry and biological evolution illustrated by cladograms and phylogenetic trees."
+  },
+  {
+   "idx": "BIO.14",
+   "content": "Analyze and interpret data pertaining to adaptations resulting from natural and artificial selection to explain the evolution of populations."
+  },
+  {
+   "idx": "BIO.15",
+   "content": "Engage in argument from evidence to explain how populations respond to changes in the environment that can lead to speciation or extinction."
+  }
+ ],
+ "9/social": [
+  {
+   "idx": "9.1",
+   "content": "Explain how the Enlightenment influenced societies and inspired revolutions in Europe and the Americas."
+  },
+  {
+   "idx": "9.2",
+   "content": "Assess the causes and consequences of the French Revolution."
+  },
+  {
+   "idx": "9.3",
+   "content": "Explain the causes and outcomes of the revolutions of Latin America and the Caribbean."
+  },
+  {
+   "idx": "9.4",
+   "content": "Explain how changes associated with the Industrial Revolution affected the economies, societies, and politics of Europe."
+  },
+  {
+   "idx": "9.5",
+   "content": "Explain how nationalism fostered global transformation from 1848 to 1914."
+  },
+  {
+   "idx": "9.6",
+   "content": "Explain how imperialism fostered global transformation."
+  },
+  {
+   "idx": "9.7",
+   "content": "Explain causes and consequences of World War I, including imperialism, militarism, nationalism, and the alliance system."
+  },
+  {
+   "idx": "9.8",
+   "content": "Analyze the global cultural, economic, and political developments immediately following World War I."
+  },
+  {
+   "idx": "9.9",
+   "content": "Summarize the conditions of the global Great Depression and explain how they led to the rise of totalitarian states and the weakening of democratic nations."
+  },
+  {
+   "idx": "9.10",
+   "content": "Evaluate the economic, global, political, and social consequences of World War II."
+  },
+  {
+   "idx": "9.11",
+   "content": "Explain the Holocaust as the state-sponsored, systematic persecution and mass murder of Europe's Jews and other minorities by Nazi Germany between 1933 and 1945."
+  },
+  {
+   "idx": "9.12",
+   "content": "Trace the events that led to Victory in Europe (VE) Day, and explain how the use of atomic bombs ended the war in the Pacific Theater."
+  },
+  {
+   "idx": "9.13",
+   "content": "Explain the origins of the Cold War as they relate to the economic, global, political, and social consequences of World War II."
+  },
+  {
+   "idx": "9.14",
+   "content": "Explain realignment and reconstruction in Europe, Asia, Africa, and Latin America after World War II, including the decline of colonial empires."
+  },
+  {
+   "idx": "9.15",
+   "content": "Trace the progression of the Cold War from the end of World War II to the collapse of the Soviet Union."
+  },
+  {
+   "idx": "9.16",
+   "content": "Analyze the causes and effects of both regional and internal conflicts in the late twentieth and early twenty-first centuries."
+  },
+  {
+   "idx": "9.17",
+   "content": "Analyze the effects of economic interdependence and globalization on places and their populations."
+  },
+  {
+   "idx": "9.18",
+   "content": "Describe the interrelationship between people and the environment in the late twentieth and early twenty-first centuries."
+  }
+ ]
+}
