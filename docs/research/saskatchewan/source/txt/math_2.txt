@@ -1,0 +1,2408 @@
+         Saskatchewan
+         Saskatchewan
+            Curriculum
+            Curriculum
+
+
+
+
+Mathematics
+
+
+
+2008   2
+Mathematics 2
+ISBN 978-1-926631-00-4
+1. Study and teaching (Elementary) - Saskatchewan - Curricula. 2. Competency-based education -
+Saskatchewan.
+Saskatchewan. Ministry of Education. Curriculum and E-Learning. Science and Technology Unit.
+All rights are reserved by the original copyright owners.
+                                                                                            Mathematics 2
+
+
+Table of Contents
+ Acknowledgements............................................................................................. iii
+ Introduction........................................................................................................... 1
+ Core Curriculum..................................................................................................... 2
+ Broad Areas of Learning....................................................................................... 2
+      Building Lifelong Learners............................................................................ 2
+      Building a Sense of Self and Community.................................................... 3
+      Building Engaged Citizens............................................................................. 3
+ Cross-curricular Competencies........................................................................... 4
+      Developing Thinking...................................................................................... 4
+      Developing Identity and Interdependence................................................ 4
+      Developing Literacies..................................................................................... 5
+      Developing Social Responsibility................................................................. 5
+ Aim and Goals of K-12 Mathematics.................................................................. 6
+      Logical Thinking.............................................................................................. 7
+      Number Sense.................................................................................................. 7
+      Spatial Sense.................................................................................................... 8
+      Mathematics as a Human Endeavour.......................................................... 9
+ Teaching Mathematics....................................................................................... 10
+      Critical Characteristics of Mathematics Education................................. 10
+ Teaching for Deep Understanding................................................................... 20
+ Inquiry................................................................................................................... 21
+ Outcomes and Indicators................................................................................... 25
+ Assessment and Evaluation of Student Learning......................................... 34
+ Connections with Other Areas of Study.......................................................... 35
+ Glossary................................................................................................................. 42
+ References............................................................................................................ 44
+ Feedback Form..................................................................................................... 45
+
+
+                                                                                                  Mathematics • Grade 2 | i
+                                                                             Mathematics 2
+
+
+Acknowledgements
+The Ministry of Education wishes to acknowledge the professional contributions and advice of the
+provincial curriculum reference committee members:
+Daryl Bangsund                                       George McHenry
+Good Spirit School Division                          Division Board Trustee
+LEADS                                                Saskatchewan School Boards Association
+
+Dr. Murray Bremner                                   Dr. Shaun Murphy
+Department of Mathematics and Statistics             College of Education
+University of Saskatchewan                           University of Saskatchewan
+
+Linda Goulet                                         Dr. Kathy Nolan
+Associate Professor                                  Faculty of Education
+First Nations University of Canada                   University of Regina
+
+Angie Harding                                        Kathi Sandbeck
+Regina Roman Catholic Separate School Division       Sun West School Division
+Saskatchewan Teachers’ Federation                    Saskatchewan Teachers’ Federation
+
+Susan Jeske                                          Doug Sthamann
+Prairie Spirit School Division                       Regina Public School Division
+Saskatchewan Teachers’ Federation                    Saskatchewan Teachers’ Federation
+
+Wendy Lang                                           Rodney White
+St. Paul’s Roman Catholic Separate School Division   North East School Division
+Saskatchewan Teachers’ Federation                    Saskatchewan Teachers’ Federation
+
+A special thank you is extended to the Elders who reviewed and provided advice to strengthen the
+curriculum outcomes:
+  • Jonas Bird
+  • Albert Scott
+  • Darlene Spiedel
+  • Allan Adams.
+In addition, the Ministry of Education acknowledges the guidance of:
+  • program team members
+  • focus groups of teachers
+  • other educators and reviewers.
+
+
+
+
+                                                                                  Mathematics • Grade 2 | iii
+                                                                           Mathematics 2
+
+
+Introduction
+As a required area of study, Mathematics is to be allocated 210
+minutes per week for the entire school year at Grade 2. It is
+important that students receive the full amount of time allocated
+to their mathematical learning and that the learning be focused
+upon students attaining the understanding and skills as defined
+by the outcomes and indicators stated in this curriculum.
+The outcomes in Grade 2 Mathematics build upon students’
+                                                                       Outcomes describe the
+prior learnings and continue to develop their number                   knowledge, skills, and
+sense, spatial sense, logical thinking, and understanding of           understandings that students’
+mathematics as a human endeavour. These continuing learnings           are expected to attain by the
+prepare students to be confident, flexible, and capable with           end of a particular grade level.
+their mathematical knowledge in new contexts.
+Indicators are included for each of the outcomes in order to clarify
+the breadth and depth of learning intended by the outcome.
+These indicators are a representative list of the kinds of things a    Indicators are a representative
+student needs to know and/or be able to do in order to achieve         list of the types of things a
+                                                                       student should know or be able
+the learnings intended by the outcome. New and combined
+                                                                       to do if they have attained the
+indicators, which remain within the breadth and depth of the           outcome.
+outcome, can and should be created by teachers to meet the
+needs and circumstances of their students and communities.
+This curriculum’s outcomes and indicators have been designed
+to address current research in mathematics education as well as
+the needs of Saskatchewan students. The Grade 2 Mathematics
+outcomes have been influenced by the renewal of the Western
+and Northern Canadian Protocol’s (WNCP) The Common
+Curriculum Framework for K-9 Mathematics outcomes (2006).
+Changes throughout all of the grades have been made for a
+number of reasons including:
+  • decreasing content in each grade to allow for more depth of
+    understanding
+  • rearranging concepts to allow for greater depth of learning
+    in one year and to align related mathematical concepts
+  • increasing the focus on numeracy (i.e., understanding
+    numbers and their relationship to each other) beginning in
+    Kindergarten
+  • introducing algebraic thinking earlier.
+Also included in this curriculum is information regarding              In Grade 2, students learn
+how Grade 2 Mathematics connects to the K-12 goals for                 about equality and inequality,
+mathematics. These goals define the purpose of mathematics             both of which are foundations
+education for Saskatchewan students.                                   of algebraic thinking.
+
+In addition, teachers will find discussions of the critical
+characteristics of mathematics education, assessment and
+
+
+
+                                                                                Mathematics • Grade 2 | 1
+Mathematics 2
+
+
+                                    evaluation of student learning in mathematics, inquiry in
+                                    mathematics, questioning in mathematics, and connections
+                                    between Grade 2 Mathematics and other Grade 2 areas of study
+                                    within this curriculum.
+                                    Finally, the Glossary provides explanations of some of the
+                                    mathematical terminology you will find in this curriculum.
+
+
+                                    Core Curriculum
+                                    Core Curriculum is intended to provide all Saskatchewan
+                                    students with an education that will serve them well regardless
+                                    of their choices after leaving school. Through its various
+                                    components and initiatives, Core Curriculum supports the
+                                    achievement of the Goals of Education for Saskatchewan. For
+                                    current information regarding Core Curriculum, please refer
+                                    to Core Curriculum: Principles, Time Allocations, and Credit Policy
+                                    (August 2007) on the Ministry of Education website.
+
+
+                                    Broad Areas of Learning
+                                    There are three Broad Areas of Learning that reflect
+                                    Saskatchewan’s Goals of Education. K-12 Mathematics
+                                    contributes to the Goals of Education through helping students
+                                    achieve knowledge, skills, and attitudes related to these Broad
+                                    Areas of Learning.
+
+                                    Building Lifelong Learners
+                                    Students who are engaged in constructing and applying
+                                    mathematical knowledge naturally build a positive disposition
+  Related to the following Goals    towards learning. Throughout their study of mathematics,
+  of Education:                     students should be learning the skills (including reasoning
+   •• Basic Skills                  strategies) and developing the attitudes that will enable the
+   •• Lifelong Learning             successful use of mathematics in daily life. Moreover, students
+   •• Self Concept Development      should be developing understandings of mathematics that
+   •• Positive Lifestyle
+                                    will support their learning of new mathematical concepts and
+                                    applications that may be encountered within both career and
+                                    personal interest choices. Students who successfully complete
+                                    their study of K-12 Mathematics should feel confident about
+                                    their mathematical abilities and have developed the knowledge,
+  Students must learn
+  mathematics with                  understandings, and abilities necessary to make future use and/
+  understanding, actively           or studies of mathematics meaningful and attainable.
+  building new knowledge
+  from experience and prior         In order for mathematics to contribute to this Broad Area of
+  knowledge.                        Learning, students must actively learn the mathematical content
+              (NCTM, 2000, p. 20)   in the outcomes through using and developing logical thinking,
+                                    number sense, spatial sense, and understanding of mathematics
+
+
+
+2 | Mathematics • Grade 2
+                                                                           Mathematics 2
+
+
+as a human endeavour (the four goals of K-12 Mathematics). It
+is crucial that the students discover the mathematics outlined in
+the curriculum rather than the teacher covering it.
+
+Building a Sense of Self and Community                                 Related to the following Goals
+To learn mathematics with deep understanding, students                 of Education:
+not only need to interact with the mathematical content, but            •• Understanding & Relating
+                                                                           to Others
+with each other as well. Mathematics needs to be taught in
+                                                                        •• Self Concept Development
+a dynamic environment where students work together to                   •• Positive Lifestyle
+share and evaluate strategies and understandings. Students              •• Spiritual Development
+who are involved in a supportive mathematics learning
+environment that is rich in dialogue are exposed to a wide
+variety of perspectives and strategies from which to construct
+a sense of the mathematical content. In such an environment,
+students also learn and come to value how they, as individuals
+and as members of a group or community, can contribute                 Many of the topics and
+to understanding and social well-being through a sense of              problems in a mathematics
+                                                                       classroom can be initiated by
+accomplishment, confidence, and relevance. When encouraged             the children themselves. In a
+to present ideas representing different perspectives and ways of       classroom focused on working
+knowing, students in mathematics classrooms develop a deeper           mathematically, teachers and
+understanding of the mathematics. At the same time, students           children work together as a
+also learn to respect and value the contributions of others.           community of learners; they
+                                                                       explore ideas together and
+Mathematics also provides many opportunities for students to           share what they find. It is very
+enter into communities beyond the classroom by engaging with           different to the traditional
+                                                                       method of mathematics
+people in the neighbourhood or around the world. By working            teaching, which begins with
+towards developing a deeper understanding of mathematics               a demonstration by a teacher
+and its role in the world, students will develop their personal        and continues with children
+and social identity, and learn healthy and positive ways of            practicing what has been
+interacting and working together with others.                          demonstrated.
+                                                                                     (Skinner, 1999, p. 7)
+
+Building Engaged Citizens
+Mathematics brings a unique perspective and way of knowing
+to the analysis of social impact and interdependence. Doing
+mathematics requires students to “leave their emotions at the
+door” and to engage in different situations for the purpose of         Related to the following Goals
+understanding what is really happening and what can be done.           of Education:
+                                                                        •• Understanding & Relating
+Mathematical analysis of topics that interest students such as
+                                                                           to Others
+trends in global warming, homelessness, technological health            •• Positive Lifestyle
+issues (oil spills, hearing loss, carpal tunnel syndrome, diabetes),    •• Career and Consumer
+and discrimination can be used to engage the students in                   Decisions
+interacting and contributing positively to their classroom,             •• Membership in Society
+school, community, and world. With the understandings that              •• Growing with Change
+students can derive through mathematical analysis, they
+become better informed and have a greater respect for and
+understanding of differing opinions and possible options. With
+
+
+
+                                                                                Mathematics • Grade 2 | 3
+Mathematics 2
+
+
+                                      these understandings, students can make better informed
+                                      and more personalized decisions regarding roles within and
+                                      contributions to the various communities in which students are
+                                      members.
+
+                                      Cross-curricular Competencies
+  The need to understand and          The Cross-curricular Competencies are four interrelated areas
+  be able to use mathematics
+                                      containing understandings, values, skills, and processes which
+  in everyday life and in the
+  workplace has never been            are considered important for learning in all areas of study. These
+  greater.                            competencies reflect the Common Essential Learnings and are
+                 (NCTM, 2000, p. 4)   intended to be addressed in each area of study at each grade
+                                      level.
+
+                                      Developing Thinking
+                                      It is important that, within their study of mathematics, students
+                                      are engaged in personal construction and understanding of
+                                      mathematical knowledge. This most effectively occurs through
+                                      student engagement in inquiry and problem solving when
+                                      students are challenged to think critically and creatively.
+  K-12 Goals                          Moreover, students need to experience mathematics in a variety
+   •• thinking and learning           of contexts – both real world applications and mathematical
+      contextually                    contexts – in which students are asked to consider questions
+   •• thinking and learning
+      creatively                      such as “What would happen if …”, “Could we find …”, and “What
+   •• thinking and learning           does this tell us?” Students need to be engaged in the social
+      critically.                     construction of mathematics to develop an understanding
+                                      and appreciation of mathematics as a tool which can be
+                                      used to consider different perspectives, connections, and
+                                      relationships. Mathematics is a subject that depends upon the
+                                      effective incorporation of independent work and reflection with
+                                      interactive contemplation, discussion, and resolution.
+
+                                      Developing Identity and Interdependence
+                                      Given an appropriate learning environment in mathematics,
+  K-12 Goals                          students can develop both their self-confidence and self-
+   •• understanding, valuing,         worth. An interactive mathematics classroom in which the
+      and caring for oneself          ideas, strategies, and abilities of individual students are valued
+   •• understanding, valuing,
+      and respecting human            supports the development of personal and mathematical
+      diversity and human rights      confidence. It can also help students take an active role in
+      and responsibilities            defining and maintaining the classroom environment and
+   •• understanding and valuing       accept responsibility for the consequences of their choices,
+      social and environmental        decisions, and actions. A positive learning environment
+      interdependence and             combined with strong pedagogical choices that engage
+      sustainability.
+                                      students in learning serves to support students in behaving
+                                      respectfully towards themselves and others
+                                      .
+
+
+
+4 | Mathematics • Grade 2
+                                                                        Mathematics 2
+
+
+Developing Literacies                                               K-12 Goals
+Through their mathematics learning experiences, students             •• constructing knowledge
+should be engaged in developing their understandings of the             related to various literacies
+language of mathematics and their ability to use mathematics         •• exploring and interpreting
+                                                                        the world through various
+as a language and representation system. Students should be             literacies
+regularly engaged in exploring a variety of representations for      •• expressing understanding
+mathematical concepts and should be expected to                         and communicating
+communicate in a variety of ways about the mathematics being            meaning using various
+learned. An important part of learning mathematical language is         literacies.
+to make sense of mathematics, communicate one’s own
+understandings, and develop strategies to explore what and
+how others know about mathematics. The study of mathematics
+should encourage the appropriate use of technology. Moreover,
+                                                                    Ideas are the currency of the
+students should be aware of and able to make the appropriate        classroom. Ideas, expressed
+use of technology in mathematics and mathematics learning. It       by any participant, warrant
+is important to encourage students to use a variety of forms of     respect and response. Ideas
+representation (concrete manipulatives, physical movement,          deserve to be appreciated and
+oral, written, visual, and symbolic) when exploring mathematical    examined. Examining an idea
+ideas, solving problems, and communicating understandings.          thoughtfully is the surest sign of
+                                                                    respect, both for the idea and
+All too often, it is assumed that symbolic representation is the
+                                                                    its author.
+only way to communicate mathematically. The more flexible             (Hiebert, Carpenter, Fennema,
+students are in using a variety of representations to explain and    Fuson, Wearne, Murray, Olivier,
+work with the mathematics being learned, the deeper students’                     Human, 1997, p. 9)
+understanding becomes.
+
+ Students gain insights into their thinking when they present
+ their methods for solving problems, when they justify their
+ reasoning to a classmate or teacher, or when they formulate
+ a question about something that is puzzling to them.
+ Communication can support students’ learning of new
+ mathematical concepts as they act out a situation, draw, use
+ objects, give verbal accounts and explanations, use diagrams,
+ write, and use mathematical symbols. Misconceptions can
+ be identified and addressed. A side benefit is that it reminds
+ students that they share responsibility with the teacher for the
+ learning that occurs in the lesson.
+                                  (NCTM, 2000, pp. 60 – 61)
+
+                                                                    K-12 Goals
+Developing Social Responsibility                                     •• using moral reasoning
+                                                                     •• engaging in
+As students progress in their mathematical learning, they               communitarian thinking
+need to experience opportunities to share and consider ideas,           and dialogue
+and resolve conflicts between themselves and others. This            •• contributing to the well-
+                                                                        being of self, others, and the
+requires that the learning environment be co-constructed by             natural world.
+the teacher and students to support respectful, independent,
+
+
+
+                                                                             Mathematics • Grade 2 | 5
+Mathematics 2
+
+
+                                      and interdependent behaviours. Every student should feel
+                                      empowered to help others in developing their understanding,
+                                      while finding respectful ways to seek help from others. By
+                                      encouraging students to explore mathematics in social contexts,
+                                      students can be engaged in understanding the situation,
+                                      concern, or issue and then in planning for responsible reactions
+                                      or responses. Mathematics is a subject dependent upon social
+                                      interaction and, as a result, social construction of ideas. Through
+                                      the study of mathematics, students learn to become reflective
+                                      and positively contributing members of their communities.
+                                      Mathematics also allows for different perspectives and
+                                      approaches to be considered, assessed for situational validity,
+                                      and strengthened.
+
+
+                                      Aim and Goals of K-12 Mathematics
+                                      The aim of the K-12 Mathematics program is to prepare
+                                      individuals who value mathematics and appreciate its role in
+                                      society. The K-12 Mathematics curricula are designed to prepare
+                                      students to cope confidently and competently with everyday
+                                      situations that demand the use of mathematical concepts
+                                      including interpreting quantitative information, estimating,
+                                      performing calculations mentally, measuring, understanding
+                                      spatial relationships, and problem solving. The Mathematics
+                                      program is intended to stimulate the spirit of inquiry within the
+                                      context of mathematical thinking and reasoning.
+
+
+                                                             Social Studies
+
+                                  Language                                                     Health
+                                    Arts                                   Identity and       Education
+           Logical                              Thinking
+          Thinking                                                       Interdepedence
+                                                               Self and
+                                                              Community
+     Number
+      Sense
+                                                                                                            Arts
+                        Mathematics               Lifelong                    Engaged                     Education
+     Spatial
+                                                  Learners                    Citizens
+      Sense
+
+
+         Human
+        Endeavour                                    Social                    Literacies
+                                                 Responsibility
+
+                                            Physical
+                                           Education                                Science
+
+
+
+
+6 | Mathematics • Grade 2
+                                                                          Mathematics 2
+
+
+Defined below are four goals for K-12 Mathematics in
+Saskatchewan. The goals are broad statements that identify the
+characteristics of thinking and working mathematically. At every
+grade level, students’ learning should be building towards their
+attainment of these goals. Within each grade level, outcomes
+are directly related to the development of one or more of these
+goals. The instructional approaches used to promote student
+achievement of the grade level outcomes must, therefore, also
+promote student achievement with respect to the goals.
+
+Logical Thinking
+Through their learning of K-12 Mathematics, students should
+develop and be able to apply mathematical reasoning
+processes, skills, and strategies to new situations and
+problems.
+                                                                     A … feature of the social
+This goal encompasses processes and strategies that are
+                                                                     culture of [mathematics]
+foundational to understanding mathematics as a discipline.           classrooms is the recognition
+These processes and strategies include:                              that the authority of
+  • inductive and deductive thinking                                 reasonability and correctness
+  • proportional reasoning                                           lies in the logic and structure of
+  • abstracting and generalizing                                     the subject, rather than in the
+                                                                     social status of the participants.
+  • exploring, identifying, and describing patterns                  The persuasiveness of an
+  • verifying and proving                                            explanation, or the correctness
+  • exploring, identifying, and describing relationships             of a solution depends on the
+  • modeling and representing (including concrete, oral,             mathematical sense it makes,
+    physical, pictorial, and symbolical representations)             not on the popularity of the
+                                                                     presenter.
+  • conjecturing and asking “what if” (mathematical play).
+                                                                             (Hiebert et al., 1997, p. 10)
+In order to develop logical thinking, students need to be actively
+involved in constructing their mathematical knowledge using
+the above strategies and processes. Inherent in each of these
+strategies and processes is student communication and the use
+of, and connections between, multiple representations.
+
+Number Sense
+Through their learning of K-12 Mathematics, students should
+develop an understanding of the meaning of, relationships            As Grade 2 students learn
+between, properties of, roles of, and representations                about 100, what are some of
+(including symbolic) of numbers and apply this                       the key understandings that
+understanding to new situations and problems.                        students should be attaining?
+                                                                     Why? How?
+Foundational to students developing number sense is having
+ongoing experiences with:
+  • decomposing and composing of numbers
+  • relating different operations to each other
+  • modeling and representing numbers and operations
+
+
+
+                                                                               Mathematics • Grade 2 | 7
+Mathematics 2
+
+
+                                        (including concrete, oral, physical, pictorial, and symbolical
+                                        representations)
+                                      • understanding the origins and need for different types of
+                                        numbers
+  Students also develop               • recognizing operations on different number types as being
+  understanding of place value          the same operations
+  through the strategies they
+  invent to compute.                  • understanding equality and inequality
+              (NCTM, 2000, p. 82)     • recognizing the variety of roles for numbers
+                                      • developing and understanding algebraic representations
+                                        and manipulations as an extension of numbers
+                                      • looking for patterns and ways to describe those patterns
+                                        numerically and algebraically.
+                                     Number sense goes well beyond being able to carry out
+                                     calculations. In fact, in order for students to become flexible
+                                     and confident in their calculation abilities, and to transfer
+                                     those abilities to more abstract contexts, students must first
+                                     develop a strong understanding of numbers in general. A
+                                     deep understanding of the meaning, roles, comparison, and
+                                     relationship between numbers is critical to the development of
+                                     students’ number sense and their computational fluency.
+
+                                     Spatial Sense
+                                     Through their learning of K-12 Mathematics, students should
+                                     develop an understanding of 2-D shapes and 3-D objects,
+                                     and the relationships between geometrical shapes and
+  2-D shapes are abstract ideas
+  because they only really exist     objects and numbers, and apply this understanding to new
+  as parts of 3-D objects. How       situations and problems.
+  can you assess to see if your
+  students really understand this    Development of a strong spatial sense requires students to have
+  connection?                        ongoing experiences with:
+                                      • construction and deconstruction of 2-D shapes and 3-D
+                                        objects
+                                      • investigations and generalizations about relationships
+                                        between 2-D shapes and 3-D objects
+                                      • explorations and abstractions related to how numbers (and
+                                        algebra) can be used to describe 2-D shapes and 3-D objects
+                                      • explorations and generalizations about the movement of
+                                        2-D shapes and 3-D objects
+  As students sort, build, draw,
+  model, trace, measure, and          • explorations and generalizations regarding the dimensions
+  construct, their capacity             of 2-D shapes and 3-D objects
+  to visualize geometric              • explorations, generalizations, and abstractions about
+  relationships will develop.           different forms of measurement and their meaning.
+              (NCTM, 2000, p. 165)
+                                     Being able to communicate about 2-D shapes and 3-D objects
+                                     is foundational to students’ geometrical and measurement
+                                     understandings and abilities. Hands-on exploration of 3-D
+
+
+
+8 | Mathematics • Grade 2
+                                                                         Mathematics 2
+
+
+objects and the creation of conjectures based upon patterns
+that are discovered and tested should drive the students’
+development of spatial sense, with formulas and definitions
+resulting from the students’ mathematical learnings.
+
+Mathematics as a Human Endeavour
+Through their learning of K-12 Mathematics, students should
+develop an understanding of mathematics as a way of
+knowing the world that all humans are capable of with               What types of instructional
+respect to their personal experiences and needs.                    strategies support student
+                                                                    attainment of the K-12
+Developing an understanding of mathematics as a human               Mathematics goals?
+endeavour requires students to engage in experiences that:
+  • encourage and value varying perspectives and approaches         How can student attainment of
+    to mathematics                                                  these goals be assessed and the
+                                                                    results be reported?
+  • recognize and value one’s evolving strengths and
+    knowledge in learning and doing mathematics
+  • recognize and value the strengths and knowledge of others
+    in doing mathematics
+  • value and honour reflection and sharing in the construction
+    of mathematical understanding
+  • recognize errors as stepping stones towards further learning
+    in mathematics
+  • require self-assessment and goal setting for mathematical
+    learning
+  • support risk taking (mathematically and personally)
+  • build self-confidence related to mathematical insights and
+    abilities
+  • encourage enjoyment, curiosity, and perseverance when
+    encountering new problems
+  • create appreciation for the many layers, nuances,
+    perspectives, and value of mathematics
+Students should be encouraged to challenge the boundaries
+of their experiences, and to view mathematics as a set of tools
+and ways of thinking that every society develops to meet their
+particular needs. This means that mathematics is a dynamic
+discipline in which logical thinking, number sense, and spatial
+sense form the backbone of all developments and those
+                                                                    Meaning does not reside in
+developments are determined by the contexts and needs of the        tools; it is constructed by
+time, place, and people.                                            students as they use tools.
+                                                                           (Hiebert et al., 1997, p. 10)
+The content found within the grade level outcomes for the K-12
+Mathematics programs, and its applications, is first and foremost
+the vehicle through which students can achieve the four
+goals of K-12 Mathematics. Attainment of these four goals will
+result in students with the mathematical confidence and tools
+necessary to succeed in future mathematical endeavours.
+
+
+                                                                             Mathematics • Grade 2 | 9
+Mathematics 2
+
+
+                             Teaching Mathematics
+                             At the National Council of Teachers of Mathematics (NCTM)
+                             Canadian Regional Conference in Halifax (2000), Marilyn Burns
+                             said in her keynote address, “When it comes to mathematics
+                             curricula there is very little to cover, but an awful lot to uncover
+                             [discover].” This statement captures the essence of the ongoing
+                             call for change in the teaching of mathematics. Mathematics
+                             is a dynamic and logic-based language that students need to
+                             explore and make sense of for themselves. For many teachers,
+                             parents, and former students this is a marked change from the
+                             way mathematics was taught to them. Research and experience
+                             indicate there is a complex, interrelated set of characteristics
+                             that teachers need to be aware of in order to provide an
+                             effective mathematics program.
+
+                             Critical Characteristics of Mathematics
+                             Education
+                             The following sections in this curriculum highlight some of
+                             the different facets for teachers to consider in the process of
+                             changing from covering to supporting students in discovering
+                             mathematical concepts. These facets include the organization of
+                             the outcomes into strands, seven mathematical processes, the
+                             difference between covering and discovering mathematics, the
+                             development of mathematical terminology, the continuum of
+                             understanding from the concrete to the abstract, modelling and
+                             making connections, the role of homework in mathematics, and
+                             the importance of ongoing feedback and reflection.
+                             Strands
+                             The content of K-12 Mathematics can be organized in a variety
+                             of ways. In this curriculum, the outcomes and indicators are
+                             grouped according to four strands: Number, Patterns and
+                             Relations, Shape and Space, and Statistics and Probability.
+
+
+                                                           Number
+
+
+
+
+                                                           Statistics
+                                                             and
+                                        Patterns          Probability         Shape
+                                          and                                  and
+                                        Relations                             Space
+
+
+
+
+10 | Mathematics • Grade 2
+                                                                          Mathematics 2
+
+
+Although this organization implies a relatedness among the
+outcomes identified in each of the strands, it should be noted the
+mathematical concepts are interrelated across the strands as well
+as within strands. Teachers are encouraged to design learning
+activities that integrate outcomes both within a strand and
+across the strands so that students develop a comprehensive and
+connected view of mathematics rather than viewing mathematics
+as a set of compartmentalized ideas and separate strands.
+Mathematical Processes
+This Grade 2 Mathematics curriculum recognizes seven processes
+inherent in the teaching, learning, and doing of mathematics.
+These processes focus on: communicating, making connections,
+mental mathematics and estimating, problem solving, reasoning,
+and visualizing along with using technology to integrate these
+processes into the mathematics classroom to help students learn
+mathematics with deeper understanding.
+The outcomes in K-12 Mathematics should be addressed
+through the appropriate mathematical processes as indicated
+by the bracketed letters following each outcome. Teachers
+should consider carefully in their planning those processes
+indicated as being important to supporting student
+achievement of the various outcomes.
+Communication [C]
+Students need opportunities to read about, represent, view,
+write about, listen to, and discuss mathematical ideas using
+both personal and mathematical language and symbols. These
+opportunities allow students to create links between their own
+language, ideas, and prior knowledge, the formal language and
+symbols of mathematics, and new learnings.                           Communication works
+                                                                     together with reflection to
+Communication is important in clarifying, reinforcing, and           produce new relationships
+modifying ideas, attitudes, and beliefs about mathematics.           and connections. Students
+                                                                     who reflect on what they do
+Students should be encouraged to use a variety of forms of
+                                                                     and communicate with others
+communication while learning mathematics. Students also need         about it are in the best position
+to communicate their learning using mathematical terminology,        to build useful connections in
+but only when they have had sufficient experience to develop         mathematics.
+an understanding for that terminology.                                       (Hiebert et al., 1997, p. 6)
+
+Concrete, pictorial, symbolic, physical, verbal, written, and
+mental representations of mathematical ideas should be
+encouraged and used to help students make connections and
+strengthen their understandings.
+
+
+
+
+                                                                             Mathematics • Grade 2 | 11
+Mathematics 2
+
+
+                                     Connections [CN]
+  Because the learner is
+  constantly searching for           Contextualization and making connections to the experiences
+  connections on many levels,        of learners are powerful processes in developing mathematical
+  educators need to orchestrate      understanding. When mathematical ideas are connected to
+  the experiences from which
+                                     each other or to other real-world phenomena, students begin to
+  learners extract understanding
+  …. Brain research establishes      view mathematics as useful, relevant, and integrated.
+  and confirms that multiple
+  complex and concrete               The brain is constantly looking for and making connections.
+  experiences are essential for      Learning mathematics within contexts and making connections
+  meaningful learning and            relevant to learners can validate past experiences and prior
+  teaching.                          knowledge, and increase student willingness to participate and
+        (Caine & Caine, 1991, p.5)   be actively engaged.
+                                     Mental Mathematics and Estimation [ME]
+                                     Mental mathematics is a combination of cognitive strategies
+                                     that enhance flexible thinking and number sense. It is
+                                     calculating mentally and reasoning about the relative size of
+                                     quantities without the use of external memory aids. Mental
+                                     mathematics enables students to determine answers and
+                                     propose strategies without paper and pencil. It improves
+  What words would you               computational fluency and problem solving by developing
+  expect to hear your Grade 2        efficiency, accuracy, and flexibility.
+  students saying when they are
+  estimating or using mental         Estimation is a strategy for determining approximate values
+  mathematics strategies?            of quantities, usually by referring to benchmarks or using
+                                     referents, or for determining the reasonableness of calculated
+                                     values. Students need to know how, when, and what strategy to
+                                     use when estimating. Estimation is used to make mathematical
+                                     judgements and develop useful, efficient strategies for dealing
+                                     with situations in daily life.
+                                     Problem Solving [PS]
+                                     Learning through problem solving should be the focus of
+                                     mathematics at all grade levels. When students encounter
+                                     new situations and respond to questions of the type, “How
+                                     would you …?”, “Can you …?”, or “What if …?”, the problem-
+  Mathematical problem-              solving approach is being modelled. Students develop their
+  solving often involves moving
+  backwards and forwards             own problem-solving strategies by being open to listening,
+  between numerical/algebraic        discussing, and trying different strategies.
+  representations and pictorial
+  representations of the problem.    In order for an activity to be problem-solving based, it must
+    (Haylock & Cockburn, 2003, p.    ask students to determine a way to get from what is known to
+                             203)    what is sought. If students have already been given ways to
+                                     solve the problem, it is not problem solving but practice. A true
+                                     problem requires students to use prior learnings in new ways
+                                     and contexts. Problem solving requires and builds depth of
+                                     conceptual understanding and student engagement.
+
+
+
+
+12 | Mathematics • Grade 2
+                                                                            Mathematics 2
+
+
+Problem solving is a powerful teaching tool that fosters multiple
+and creative solutions. Creating an environment where students
+actively look for, and engage in finding, a variety of strategies for
+solving problems empowers students to explore alternatives and
+develops confidence, reasoning, and mathematical creativity.
+Reasoning [R]
+                                                                        A Grade 2 student might
+Mathematical reasoning helps students think logically and make          conjecture that the students
+sense of mathematics. Students need to develop confidence in            in Grade 2 have more pet cats
+their abilities to reason and explain their mathematical thinking.      than dogs. What experiences
+High-order inquiry challenges students to think and develop a           and tasks will that student need
+                                                                        to have to reach and verify such
+sense of wonder about mathematics.
+                                                                        conjectures?
+Mathematical experiences in and out of the classroom should
+provide opportunities for students to engage in inductive
+and deductive reasoning. Inductive reasoning occurs when
+                                                                        Posing conjectures and trying
+students explore and record results, analyze observations, make
+                                                                        to justify them is an expected
+generalizations from patterns, and test these generalizations.          part of students’ mathematical
+Deductive reasoning occurs when students reach new                      activity.
+conclusions based upon what is already known or assumed to                           (NCTM, 2000, p. 191)
+be true.
+Visualization [V]
+The use of visualization in the study of mathematics provides
+students with opportunities to understand mathematical
+concepts and make connections among them. Visual images
+and visual reasoning are important components of number
+sense, spatial sense, and logical thinking. Number visualization
+occurs when students create mental representations of
+numbers and visual ways to compare those numbers.
+Being able to create, interpret, and describe a visual                  [Visualization] involves
+representation is part of spatial sense and spatial reasoning.          thinking in pictures and
+                                                                        images, and the ability to
+Spatial visualization and reasoning enable students to
+                                                                        perceive, transform and
+describe the relationships among and between 3-D objects                recreate different aspects of the
+and 2-D shapes including aspects such as dimensions and                 visual-spatial world.
+measurements.                                                                    (Armstrong, 1993, p.10)
+
+Visualization is also important in the students’ development of
+abstraction and abstract thinking and reasoning. Visualization
+provides a connection between the concrete, physical, and
+pictorial to the abstract symbolic. Visualization is fostered
+through the use of concrete materials, technology, and a variety
+of visual representations as well as the use of communication to
+develop connections between different contexts, content, and
+representations.
+
+
+
+
+                                                                               Mathematics • Grade 2 | 13
+Mathematics 2
+
+
+                                     Technology [T]
+  In Grade 2, there are no
+  outcomes that explicitly require   Technology tools contribute to student achievement of a
+  student use of technology.         wide range of mathematical outcomes, and enable students
+  However, are there places          to explore and create patterns, examine relationships, test
+  where students might use
+                                     conjectures, and solve problems. Calculators, computers, and
+  technology to develop their
+  understandings in Grade 2?         other forms of technology can be used to:
+                                       • explore and demonstrate mathematical relationships and
+                                         patterns
+                                       • organize and display data
+                                       • extrapolate and interpolate
+                                       • assist with calculation procedures as part of solving problems
+                                       • decrease the time spent on computations when other
+                                         mathematical learning is the focus
+                                       • reinforce the learning of basic facts and test properties
+                                       • develop personal procedures for mathematical operations
+                                       • create geometric displays
+                                       • simulate situations
+                                       • develop number sense
+                                       • develop spatial sense
+                                       • develop and test conjectures.
+                                     Technology contributes to a learning environment in which the
+                                     growing curiosity of students can lead to rich mathematical
+  Technology should not be used      discoveries at all grade levels. It is important for students to
+  as a replacement for basic         understand and appreciate the appropriate use of technology in a
+  understandings and intuition.      mathematics classroom. It is also important that students learn to
+              (NCTM, 2000, p. 25)    distinguish between when technology is being used appropriately
+                                     and when it is being used inappropriately. Technology should
+                                     never replace understanding, but should be used to enhance it.
+                                     Discovering versus Covering
+                                     Teaching mathematics for deep understanding involves two
+                                     processes: teachers covering content and students discovering
+                                     content. Knowing what needs to be covered and what can be
+                                     discovered is crucial in planning for mathematical instruction and
+                                     learning. The content that needs to be covered (what the teacher
+  What mathematical content in
+  Grade 2 can students discover      needs to explicitly tell the students) is the social conventions
+  (through the careful planning      or customs of mathematics. This content includes things such
+  of a teacher) and what does        as what the symbol for an operation looks like, mathematical
+  a teacher need to tell the         terminology, and conventions regarding recording of symbols.
+  students?
+                                     The content that can and should be discovered by students is
+                                     the content that can be constructed by students based on their
+                                     prior mathematical knowledge. This content includes things
+                                     such as strategies and procedures, rules, and problem solving.
+                                     Any learning in mathematics that is a result of the logical
+                                     structure of mathematics can and should be constructed by students.
+
+
+
+14 | Mathematics • Grade 2
+                                                                         Mathematics 2
+
+
+For example, in Grade 2, the students encounter increasing
+patterns in outcome P2.2:
+
+  Demonstrate understanding of increasing patterns by:
+    • describing
+    • reproducing
+    • extending
+    • creating patterns using manipulatives, pictures, sounds,
+       and actions (numbers to 100).
+  [C, CN, PS, R, V]
+
+In this outcome, the term “increasing patterns” is a social
+convention of the mathematics the students are learning and,
+as such, it is something that the teacher must tell the student.
+Analysis of the pattern in order to describe, reproduce, extend,     The plus sign, for example, and
+and create increasing patterns with understanding requires           the symbols for subtraction,
+students to explore, conjecture, verify, and abstract their own      multiplication, and division
+understandings. This type of learning requires students to           are all arbitrary convention.
+                                                                     … Learning most of
+work concretely, physically, orally, pictorially, in writing, and    mathematics, however, relies
+symbolically. It also requires that students share their ideas       on understanding its logical
+with their classmates and reflect upon how the ideas and             structures. The source of logical
+understandings of others relate to, inform, and clarify what         understanding is internal,
+students individually understand. In this type of learning, the      requiring a child to process
+                                                                     information, make sense of it,
+teacher does not tell the students how to do the mathematics
+                                                                     and figure out how to apply it.
+but, rather, invites the students to explore and develop                  (Burns & Sibley, 2000, p. 19)
+an understanding of the logical structures inherent in the
+mathematics in increasing patterns. Thus, the teacher’s role is to
+create inviting and rich inquiring tasks and to use questioning
+to effectively probe and further students’ learning.
+Development of Mathematical Terminology
+Part of learning mathematics is learning how to speak
+mathematically. Teaching students mathematical terminology
+when they are learning for deep understanding requires               Teachers should model
+that the students connect the new terminology with their             appropriate conventional
+developing mathematical understanding. As a result, it is            vocabulary.
+                                                                                (NCTM, 2000, p. 131)
+important that students first linguistically engage with new
+mathematical concepts using words that students already know
+or that make sense to them.
+
+
+
+
+                                                                            Mathematics • Grade 2 | 15
+Mathematics 2
+
+
+                                     For example, in outcome P2.3:
+
+                                       Demonstrate understanding of equality and inequality
+                                       concretely and pictorially (0 to 100) by:
+                                         • relating equality and inequality to balance
+                                         • comparing sets
+                                         • recording equalities with an equal sign
+                                         • recording inequalities with a not equal sign
+                                         • solving problems involving equality and inequality.
+                                       [C, CN, R, V]
+
+                                     the terminology, at least in a mathematical sense, of “equality”
+                                     and “inequality” will likely be new to most of the students.
+                                     This does not mean, however, that students cannot use their
+                                     own vocabulary to explain the relationships of equality and
+                                     inequality (e.g., the same, not the same, fair share, or not
+                                     fair share) that they discover through their mathematical
+                                     explorations. When the students are able to describe their
+                                     understandings of these two concepts, then the actual
+                                     mathematical terminology is best introduced (equality and
+                                     inequality) because the students have other knowledge with
+                                     which to connect the new words. Upon introducing these new
+                                     terms, the teacher should also be checking if the students have
+                                     other connections to the new words in non-mathematical
+                                     settings. For example, students may be very aware of racial,
+                                     age, cultural, or gender-related inequalities. It is beneficial
+                                     that students also consider such contexts to help them better
+                                     understand and make connections to the new mathematical
+                                     context for the words.
+                                     The Concrete to Abstract Continuum
+                                     It is important that, in learning mathematics, students be
+                                     allowed to explore and develop understandings by moving
+  It is important for students to    along a concrete to abstract continuum. As understanding
+  use representations that are       develops, this movement along the continuum is not necessarily
+  meaningful to them.                linear. Students may at one point be working abstractly but
+              (NCTM, 2000, p. 140)   when a new idea or context arises, they need to return to a
+                                     concrete starting point. Therefore, the teacher must be prepared
+                                     to engage students at different points along the continuum.
+                                     In addition, what is concrete and what is abstract is not always
+                                     obvious and can vary according to the thinking processes of the
+                                     individual. For example, when considering a problem about the
+                                     total number of pencils, some students might find it more concrete
+                                     to use pictures of pencils as a means of representing the situation.
+                                     Other students might find coins more concrete because they
+                                     directly associate money with the purchasing or having of a pencil.
+
+
+
+16 | Mathematics • Grade 2
+                                                                            Mathematics 2
+
+
+As well, teachers need to be aware that different aspects of a task
+might involve different levels of concreteness or abstractness.
+Consider the following problem involving subtraction:
+
+  Roger’s mother placed 12 apples in a bowl on the centre of
+  the table. The next day, Roger counted only 8 apples in the
+  bowl. How many apples had been taken out of the bowl?
+
+Depending upon how the problem is expected to be solved
+(or if there is any specific expectation), this problem can be
+approached abstractly (using symbolic number statements),
+concretely (e.g., using manipulatives, pictures, role play), or both.
+Models and Connections
+New mathematics is continuously developed by creating new
+models as well as combining and expanding existing models.
+Although the final products of mathematics are most frequently
+represented by symbolic models, their meaning and purpose is
+often found in the concrete, physical, pictorial, and oral models
+and the connections between them.
+To develop a deep and meaningful understanding of
+mathematical concepts, students need to represent their ideas
+and strategies using a variety of models (concrete, physical,           A major responsibility of
+                                                                        teachers is to create a learning
+pictorial, oral, and symbolic). In addition, students need to           environment in which students’
+make connections between the different representations. These           use of multiple representations
+connections are made by having the students try to move from            is encouraged.
+one type of representation to another (how could you write                        (NCTM, 2000, pp. 139)
+what you’ve done here using mathematical symbols?) or by
+having students compare their representations with others
+around the class.
+In making these connections, students should also be asked to
+reflect upon the mathematical ideas and concepts that students
+already know are being used in their new models (e.g., I know that
+addition means to put things together into a group, so I’m going
+to move the two sets of blocks together to determine the sum).
+
+
+
+
+                                                                               Mathematics • Grade 2 | 17
+Mathematics 2
+
+
+                                        Making connections also involves looking for patterns. For
+                                        example, in outcome N2.2:
+
+                                          Demonstrate understanding of addition (limited to
+                                          1 and 2-digit numerals) with answers to 100 and the
+                                          corresponding subtraction by:
+                                            • representing strategies for adding and subtracting
+                                               concretely, pictorially, and symbolically.
+                                            • creating and solving problems involving addition and
+                                               subtraction
+                                            • estimating
+                                            • using personal strategies for adding and subtracting
+                                               with and without the support of manipulatives
+                                            • analyzing the effect of adding or subtracting zero
+                                            • analyzing the effect of the ordering of the quantities
+                                               (addends, minuends, and subtrahends) in addition and
+                                               subtraction statements.
+                                          [C, CN, ME, PS, R, V]
+
+                                        the students’ recognition of patterns, such as those found when
+  Characteristics of Good Math          adding using a hundred chart, can then be generalized into
+  Homework                              personal addition strategies to be applied and verified.
+   •• It is accessible to children at
+      many levels.                      Role of Homework
+   •• It is interesting both to
+      children and to any adults        The role of homework in teaching for deep understanding is
+      who may be helping.               very important and also quite different from homework that is
+   •• It is designed to provoke         traditionally given to students. Students should be given unique
+      deep thinking.                    problems and tasks that help students to consolidate new
+   •• It is able to use concepts
+                                        learnings with prior knowledge, explore possible solutions, and
+      and mechanics as means to
+      an end rather than as ends        apply learnings to new situations. Although drill and practice
+      in themselves.                    does serve a purpose in learning for deep understanding,
+   •• It has problem solving,           the amount and timing of the drill will vary among different
+      communication, number             learners. In addition, when used as homework, drill and practice
+      sense, and data collection        frequently serves to cause frustration, misconceptions, and
+      at its core.
+   •• It can be recorded in many        boredom to arise in students.
+      ways.
+                                        As an example of the type or style of homework that can be
+   •• It is open to a variety of
+      ways of thinking about the        used to help students develop deep understanding of Grade 2
+      problem although there            Mathematics, consider outcome SS2.4 :
+      may be one right answer.
+   •• It touches upon multiple            Describe, compare and construct 2-D shapes, including:
+      strands of mathematics,
+      not just number.
+                                            • triangles
+   •• It is part of a variety of            • squares
+      approaches to and types               • rectangles
+      of math homework offered              • circles.
+      to children throughout the          [C, CN, R, V]
+      year.
+                (Raphel, 2000, p. 75)
+
+
+
+18 | Mathematics • Grade 2
+                                                                        Mathematics 2
+
+
+As a homework task, students might be asked to trace the tops
+of 6 different containers they find at home and then sort their
+pictures in a way that makes sense to them. In the following
+class, the students could work in pairs or small groups to
+consider questions such as:
+  • “How did each student sort their pictures?”
+  • “What is the same about some of the pictures? What is
+    different?”
+  • “How might you sort all of your pictures together?”
+  • “I had a container at home that had a top like this:
+
+
+
+
+   Did any of your shapes have the same type of top? How do
+   you know?”
+The students’ discussions regarding their homework can then
+lead into further explorations relating to outcome SS2.4, or the
+pictures and the discussions can be used to connect learnings       Feedback can take many
+from outcome SS2.4 with those from outcome SP2.1:                   different forms. Instead of
+                                                                    saying, “This is what you
+  Demonstrate understanding of concrete graphs and                  did wrong,” or “This is what
+                                                                    you need to do,” we can ask
+  pictographs. [C, CN, PS, R, V]                                    questions: “What do you
+                                                                    think you need to do? What
+with students creating their own versions of concrete graphs        other strategy choices could
+                                                                    you make? Have you thought
+and pictographs to represent the data (pictures) collected.         about…?”
+                                                                                    (Stiff, 2001, p. 70)
+Ongoing Feedback and Reflection
+Ongoing feedback and reflection, both for students and
+teachers, are crucial in classrooms when learning for deep
+understanding. Deep understanding requires that both the
+teacher and students need to be aware of their own thinking as
+well as the thinking of others.
+Feedback from peers and the teacher helps students rethink
+and solidify their understandings. Feedback from students to        Not all feedback has to come
+the teacher gives much needed information in the teacher’s          from outside – it can come from
+planning for further and future learnings.                          within. When adults assume
+                                                                    that they must be the ones who
+Self-reflection, both shared and private, is foundational to        tell students whether their work
+students developing a deep understanding of mathematics.            is good enough, they leave
+Through reflection tasks, students and teachers come to know        them handicapped, not only
+                                                                    in testing situations (such as
+what it is that students do and do not know. It is through such     standardized tests) in which
+reflections that not only can a teacher make better informed        they must perform without
+instructional decisions, but also that a student can set personal   guidance, but in life itself.
+goals and make plans to reach those goals.                                        (NCTM, 2000, p. 72)
+
+
+
+
+                                                                            Mathematics • Grade 2 | 19
+Mathematics 2
+
+
+                                     Teaching for Deep Understanding
+                                     For deep understanding, it is vital that students learn by
+                                     constructing knowledge, with very few ideas being relayed
+  A simple model for talking         directly by the teacher. As an example, the addition sign (+) is
+  about understanding is that        something which the teacher must introduce and ensure that
+  to understand something is         students know. It is the symbol used to show the combination
+  to connect it with previous        or addition of two quantities. The process of adding, however,
+  learning or other experiences…
+  A mathematical concept can         and the development of addition and subtraction facts should
+  be thought of as a network         be discovered through the students’ investigation of patterns,
+  of connections between             relationships, abstractions, and generalizations. It is important
+  symbols, language, concrete        for teachers to reflect upon outcomes to identify what students
+  experiences, and pictures.         need to know, understand, and be able to do. Opportunities
+    (Haylock & Cockburn, 2003, p.
+                                     must be provided for students to explain, apply, and transfer
+                               18)
+                                     understanding to new situations. This reflection supports
+                                     professional decision making and planning effective strategies
+                                     to promote students’ deeper understanding of mathematical ideas.
+                                     It is important that a mathematics learning environment include
+                                     effective interplay of:
+                                        • reflection
+                                        • exploration of patterns and relationships
+                                        • sharing of ideas and problems
+                                        • consideration of different perspectives
+                                        • decision making
+                                        • generalizing
+                                        • verifying and proving
+                                        • modeling and representing.
+                                     Mathematics is learned when students are engaged in strategic
+                                     play with mathematical concepts and differing perspectives.
+  What types of things might         When students learn mathematics by being told what to do,
+  you hear or see in a Grade
+  2 classroom that would             how to do it, and when to do it, they cannot make the strong
+  indicate to you that students      connections necessary for learning to be meaningful, easily
+  were learning for deep             accessible, and transferable. The learning environment must be
+  understanding?                     respectful of individuals and groups, fostering discussion and
+                                     self-reflection, the asking of questions, the seeking of multiple
+                                     answers, and the construction of meaning.
+
+
+
+
+20 | Mathematics • Grade 2
+                                                                        Mathematics 2
+
+
+Inquiry
+Inquiry learning provides students with opportunities to build
+knowledge, abilities, and inquiring habits of mind that lead to
+deeper understanding of their world and human experience.
+The inquiry process focuses on the development of compelling
+questions, formulated by teachers and students, to motivate
+and guide inquiries into topics, problems, and issues related to
+curriculum content and outcomes.                                    Inquiry is a philosophical
+                                                                    stance rather than a set of
+Inquiry is more than a simple instructional method. It is a         strategies, activities, or a
+philosophical approach to teaching and learning, grounded in        particular teaching method.
+constructivist research and methods, which engages students         As such, inquiry promotes
+in investigations that lead to disciplinary and transdisciplinary   intentional and thoughtful
+understanding.                                                      learning for teachers and
+                                                                    children.
+Inquiry builds on students’ inherent sense of curiosity and          (Mills & Donnelly, 2001, p. xviii)
+wonder, drawing on their diverse backgrounds, interests, and
+experiences. The process provides opportunities for students to
+become active participants in a collaborative search for meaning
+and understanding. Students who are engaged in inquiry:
+  • construct deep knowledge and deep understanding rather
+    than passively receiving it
+  • are directly involved and engaged in the discovery of new
+    knowledge
+  • encounter alternative perspectives and conflicting ideas
+    that transform prior knowledge and experience into deep
+    understandings
+  • transfer new knowledge and skills to new circumstances
+  • take ownership and responsibility for their ongoing learning
+    and mastery of curriculum content and skills.
+                    (Adapted from Kuhlthau & Todd, 2008, p. 1)
+                                                                    Something is only a problem
+Inquiry learning is not a step-by-step process, but rather a
+                                                                    if you don’t know how to get
+cyclical process, with various phases of the process being          from where you are to where
+revisited and rethought as a result of students’ discoveries,       you want to be. Be sure that
+insights, and co-construction of new knowledge. The following       Grade 2 students are solving
+graphic shows various phases of this cyclical inquiry process.      such problems.
+
+
+
+
+                                                                            Mathematics • Grade 2 | 21
+Mathematics 2
+
+
+                          Constructing Understanding Through Inquiry
+
+
+
+Curriculum Outcomes                        What are the things we wonder
+                                         about and want to know more about?
+                                          What questions do we have about
+                                        the deeper mysteries or aspects of life?
+
+
+                                                       Interpret
+                                       Collaborate                       Conclude
+                                                       Analyze
+                               Plan                                           Investigate
+            Reflect and                                                                         Reflect and
+              Revise                        How are we going to get there?                        Revise
+                             Explore                                                   Create
+
+                                        Observe                           Synthesize
+                                                                                                              Resources
+                                   Acknowledge Sources             Document Processes
+
+                                          What have we discovered and how
+                                       will we show our deeper understanding?
+                                       How are we going to use what we have
+                                              discovered (e.g., apply, act,
+                                                     implement)?
+
+
+
+
+                                          Inquiry prompts and motivates students to investigate topics
+                                          within meaningful contexts. The inquiry process is not linear
+                                          or lock-step, but is flexible and recursive. Experienced inquirers
+                                          will move back and forth through the cyclical process as new
+                                          questions arise and as students become more comfortable with
+                                          the process.
+                                          Well formulated inquiry questions are broad in scope and rich
+                                          in possibilities. They encourage students to explore, gather
+                                          information, plan, analyze, interpret, synthesize, problem solve,
+                                          take risks, create, conclude, document, reflect on learning, and
+                                          develop new questions for further inquiry.
+                                          In Mathematics, inquiry encompasses problem solving. Problem
+                                          solving includes processes to get from what is known to
+                                          discover what is unknown. When teachers show students how
+                                          to solve a problem and then assign additional problems that
+                                          are similar, the students are not problem solving but practising.
+                                          Both are necessary in mathematics, but one should not be
+                                          confused with the other. If the path for getting to the end
+                                          situation has already been determined, it is no longer problem
+                                          solving. Students too must understand this difference.
+
+
+
+22 | Mathematics • Grade 2
+                                                                         Mathematics 2
+
+
+Creating Questions for Inquiry in Mathematics
+                                                                     Questions may be one of the
+Teachers and students can begin their inquiry at one or more         most powerful technologies
+curriculum entry points; however, the process may evolve into        invented by humans. Even
+                                                                     though they require no
+transdisciplinary integrated learning opportunities, as reflective   batteries and need not be
+of the holistic nature of our lives and interdependent global        plugged into the wall, they
+environment. It is essential to develop questions that are evoked    are tools which help us make
+                                                                     up our minds, solve problems,
+by students’ interests and have potential for rich and deep          and make decisions. – Jamie
+learning. Compelling questions are used to initiate and guide        McKenzie
+the inquiry and give students direction for discovering deep         (Schuster & Canavan Anderson,
+understandings about a topic or issue under study.                                         2005, p. 1)
+
+The process of constructing inquiry questions can help students
+to grasp the important disciplinary or transdisciplinary ideas
+that are situated at the core of a particular curricular focus
+or context. These broad questions will lead to more specific
+questions that can provide a framework, purpose, and direction
+for the learning activities in a lesson, or series of lessons,
+and help students connect what they are learning to their
+experiences and life beyond school.                                  Effective questions:
+                                                                      •• cause genuine and relevant
+Effective questions in Mathematics are the key to initiating and         inquiry into the important
+guiding students’ investigations and critical thinking, problem          ideas and core content.
+                                                                      •• provide for thoughtful,
+solving, and reflection on their own learning. Questions such as:        lively discussion, sustained
+  • “When would you want to add two numbers less than 100?”              inquiry, and new
+  • “How do you know you have an answer?”                                understanding as well as
+  • “Will this work with every number? Every similar situation?”         more questions.
+                                                                      •• require students to
+  • “How does your representation compare to that of your                consider alternatives,
+    partner?”                                                            weigh evidence, support
+are examples of questions that will move students’ inquiry               their ideas, and justify their
+                                                                         answers.
+towards deeper understanding. Effective questioning is                •• stimulate vital, ongoing
+essential for teaching and student learning and should be an             rethinking of key ideas,
+integral part of planning in mathematics. Questioning should             assumptions, and prior
+                                                                         lessons.
+also be used to encourage students to reflect on the inquiry          •• spark meaningful
+process and the documentation and assessment of their own                connections with prior
+learning.                                                                learning and personal
+                                                                         experiences.
+Questions should invite students to explore mathematical              •• naturally recur, creating
+                                                                         opportunities for transfer
+concepts within a variety of contexts and for a variety of               to other situations and
+purposes. When questioning students, teachers should choose              subjects.
+questions that:                                                         (Wiggins & McTighe, 2005, p.
+                                                                                                   110)
+
+
+
+
+                                                                            Mathematics • Grade 2 | 23
+Mathematics 2
+
+
+                                         • help students make sense of the mathematics.
+                                         • are open-ended, whether in answer or approach. There may
+  As teachers of mathematics,              be multiple answers or multiple approaches.
+  we want our students not only          • empower students to unravel their misconceptions.
+  to understand what they think          • not only require the application of facts and procedures
+  but also to be able to articulate        but encourage students to make connections and
+  how they arrived at those
+                                           generalizations.
+  understandings.
+  (Schuster & Canavan Anderson,          • are accessible to all students in their language and offer an
+                         2005, p. 1)       entry point for all students.
+                                         • lead students to wonder more about a topic and to perhaps
+                                           construct new questions themselves as they investigate this
+                                           newly found interest.
+                                                                (Schuster & Canavan Anderson, 2005, p. 3)
+
+                                       Reflection and Documentation of Inquiry
+                                       An important part of any inquiry process is student reflection
+                                       on their learning and the documentation needed to assess the
+  When we ask good questions
+  in math class, we invite             learning and make it visible. Student documentation of the
+  our students to think, to            inquiry process in mathematics may take the form of reflective
+  understand, and to share a           journals, notes, drafts, models, and works of art, photographs, or
+  mathematical journey with            video footage. This documentation should illustrate the students’
+  their classmates and teachers
+  alike. Students are no longer        strategies and thinking processes that led to new insights and
+  passive receivers of information     conclusions. Inquiry-based documentation can be a source of rich
+  when asked questions that            assessment materials through which teachers can gain a more in-
+  challenge their understandings
+  and convictions about                depth look into their students’ mathematical understandings.
+  mathematics. They become
+  active and engaged in the            It is important that students are required, and allowed to
+  construction of their own            engage in, the communication and representation of their
+  mathematical understanding           progress within a mathematical inquiry. A wide variety of forms
+  and knowledge.
+  (Schuster & Canavan Anderson,        of communication and representation should be encouraged
+                         2005, p. 1)   and, most importantly, have links made between them. In this
+                                       way, student inquiry into mathematical concepts and contexts
+                                       can develop and strengthen student understanding.
+
+
+
+
+24 | Mathematics • Grade 2
+                                                                             Mathematics 2
+
+
+Outcomes and Indicators
+                                                Number
+   Goals: Number Sense, Logical Thinking, Spatial Sense, Mathematics as a Human Endeavour
+Outcomes (What students are           Indicators (Students who have achieved this outcome should
+expected to know and be able          be able to:)
+to do.)
+N2.1 Demonstrate                      a. Describe the patterns related to quantity and place value of
+understanding of whole                   adjacent digit positions moving from right to left within a
+numbers to 100 (concretely,              whole number.
+pictorially, physically, orally, in   b. Describe the meaning of quantities to 100 by relating them
+writing, and symbolically) by:           to self, family, or community and explain what effect each
+   •• representing (including            successive numeral position has on the actual quantity.
+      place value)
+   •• describing                      c. Pose and solve problems that explore the quantity of whole
+   •• skip counting                      numbers to 100 (e.g., a student might wonder: “How many
+   •• differentiating between            pets would there be if everyone in the class brought their
+      odd and even numbers               pets to class”).
+   •• estimating with referents       d. Represent quantities to 100 using proportional materials (e.g.,
+   •• comparing two numbers              tallies, ten frames, and base ten blocks) and explain how the
+   •• ordering three or more             representation relates to the numeral used to represent the
+      numbers.                           quantity.
+[C, CN, ME, PS, R, V]
+                                      e. Represent quantities to 100 using non-proportional materials
+                                         (e.g., stir sticks and popsicle sticks, and coins) and explain
+                                         how the representation relates to the numeral used to
+                                         represent the quantity.
+                                      f. Identify whole numbers to 100 stated as a numeral or word
+                                         form in everyday situations and read the number out loud
+                                         (e.g., 24 on the classroom door would be read as twenty-four,
+                                         and read out loud “seventy-three” when found in a piece of
+                                         writing being read in class).
+                                      g. Create different decompositions for a given quantity using
+                                         concrete manipulatives or pictures and explain orally how the
+                                         different decompositions represent the original quantity.
+                                      h. Write numbers to twenty in words when said out loud or
+                                         given as a numeral.
+                                      i. Analyze a sequence of numbers in order to describe the
+                                         sequence in terms of a skip counting strategy (by 2s, 5s,
+                                         or 10s as well as forward and backward) and extend the
+                                         sequence using the pattern.
+
+
+
+
+                                                                                Mathematics • Grade 2 | 25
+Mathematics 2
+
+
+Outcomes                     Indicators
+N2.1 (continued)              j. Analyze an ordered number sequence (including a hundred
+                                 chart) for errors or omissions and explain the reasoning.
+                             k. Sort a set of personally relevant numbers into odd and even
+                                numbers.
+                             l. Hypothesize and verify strategies for skip counting by
+                                10s beginning at any whole number from 0 to 9 (e.g., in
+                                a hundred chart, the skip counted numbers always lie
+                                on a vertical line; using base ten blocks, skip counting
+                                by 10s always increases the number of rods by one; or
+                                using numerals, the tens place value always increases by 1
+                                (meaning 10) when skip counting by 10s forwards).
+                             m. Order a set of personally relevant numbers in ascending or
+                                descending order and verify the resulting sequence (e.g.,
+                                using a hundred chart, number line, ten frames, or place
+                                value).
+                             n. Analyze a number relevant to one’s self, family, or community
+                                to determine if it is odd or even and verify the conclusion by
+                                using concrete, pictorial, or physical representations.
+                             o. Estimate a quantity from one’s life, family, or community by
+                                using a referent (known quantity), including 10, and explain
+                                the strategies used.
+                             p. Select a referent for determining a particular quantity and
+                                explain the choice.
+                             q. Critique the statement “A referent for 10 is always a good
+                                referent to use”.
+                             r. Represent a 2-digit numeral using ten frames or other
+                                proportional base ten materials.
+                             s. Create representations of different decompositions of the
+                                same quantity and explain how the representations represent
+                                the same amount.
+                             t. Explain, using concrete or pictorial representations, the
+                                meaning of each digit within a 2-digit numeral with both
+                                digits the same (e.g., for the numeral 22, the first digit
+                                represents two tens - twenty counters - and the second digit
+                                represents two ones - two counters).
+                             u. Defend the statement “The value of a digit depends on its
+                                placement within a numeral”.
+                             v. Demonstrate how to count objects using groupings of 10s
+                                and 1s and explain how those groups help in the writing of
+                                the 2-digit number that represents the quantity of objects.
+
+
+
+26 | Mathematics • Grade 2
+                                                                            Mathematics 2
+
+
+   Goals: Number Sense, Logical Thinking, Spatial Sense, Mathematics as a Human Endeavour
+Outcomes                           Indicators
+N2.2 Demonstrate                    a. Generalize rules for adding when one addend is zero and for
+understanding of addition              subtracting zero from a quantity and use concrete, pictorial,
+(limited to 1 and 2-digit              physical, or oral models to explain the reasoning.
+numerals) with answers to
+                                    b. Verify rules generalized for addition and subtraction involving
+100 and the corresponding
+                                       a quantity of zero.
+subtraction by:
+   •• representing strategies for c. Model concretely, pictorially, or physically situations that
+      adding and subtracting           involve the addition or subtraction of 1 and 2-digit numbers
+      concretely, pictorially, and     (with answers to 100) and explain how to record the process
+      symbolically                     shown in the model symbolically.
+   •• creating and solving          d. Generalize and apply strategies for adding and subtracting 1
+      problems involving               and 2-digit numbers (with answers to 100).
+      addition and subtraction
+   •• estimating                    e. Create, model symbolically (and concretely, pictorially,
+   •• using personal strategies        or physically if desired), and solve addition and subtraction
+      for adding and subtracting       problems related to situations relevant to one’s self, family, or
+      with and without the             community.
+      support of manipulatives      f. Critique the statement “You can add or subtract numbers
+   •• analyzing the effect of          in any order and still get the same answer” and provide
+      adding or subtracting zero       examples to support the critique.
+   •• analyzing the effect of the
+      ordering of the quantities    g. Select and explain a mental mathematics strategy that
+      (addends, minuends,              can be used to determine a sum of up to 18 (or related
+      and subtrahends) in              difference):
+      addition and subtraction         • doubles (e.g., for 4 + 6, think 5 + 5)
+      statements.                      • doubles plus one (e.g., for 4 + 5, think 4 + 4 + 1)
+[C, CN, ME, PS, R, V]                  • doubles take away one (e.g., for 4 + 5, think 5 + 5 – 1)
+                                       • doubles plus two (e.g., for 4 + 6, think 4 + 4 + 2)
+                                       • doubles take away two (e.g., for 4 + 6, think 6 + 6 – 2)
+                                       • making 10 (e.g., for 7 + 5, think 7 + 3 + 2)
+                                       • building on a known double (e.g., 6 + 6 = 12, so 6 + 7 = 12
+                                          + 1 = 13).
+
+
+
+
+                                                                               Mathematics • Grade 2 | 27
+Mathematics 2
+
+
+                                  Patterns and Relations
+   Goals: Spatial Sense, Logical Thinking, Mathematics as a Human Endeavour
+Outcomes                         Indicators
+P2.1 Demonstrate                  a. Identify and describe repeating patterns found in familiar
+understanding of repeating           situations and justify why the descriptions are those of
+patterns (three to five              repeating patterns (e.g., “Every day I get up, brush my hair,
+elements) by:                        wash my face, have breakfast” - this is a repeating pattern
+   •• describing                     because I do the same pattern over and over again).
+   •• representing patterns in
+                                 b. Analyze a repeating pattern to identify the core of the
+      alternate modes
+                                    pattern.
+   •• extending
+   •• comparing                  c. Analyze a repeating pattern for its core and extend the
+   •• creating patterns using       pattern so the core appears twice more.
+      manipulatives, pictures,   d. Analyze an intended repeating pattern to identify possible
+      sounds, and actions.          errors.
+[C, CN, PS, R, V]
+                                 e. Create a repeating pattern and explain the reasoning.
+                                 f. Predict an upcoming element in a repeating pattern and
+                                    verify the prediction.
+                                 g. Analyze two repeating patterns that are represented using
+                                    different materials or modes (e.g., a diagram of a repeating
+                                    pattern with a core of red, red, blue, blue, blue and a sound
+                                    pattern with a core of buzz, buzz, snap, snap, snap) and
+                                    present ways in which the patterns are related (e.g., there are
+                                    two different elements in the core of each pattern, and the
+                                    core pattern is element 1, element 1, element 2, element 2,
+                                    element 2 in both patterns).
+
+
+   Goals: Spatial Sense, Number Sense, Logical Thinking, Mathematics as a Human Endeavour
+Outcomes                         Indicators
+P2.2 Demonstrate                  a. Identify and describe increasing patterns in familiar situations
+understanding of increasing          (e.g., hundred chart, number line, addition tables, calendar, a
+patterns by:                         tiling pattern or drawings, apartment numbers, years, or age).
+   •• describing
+                                 b. Analyze a numerical increasing pattern for its pattern rule and
+   •• reproducing
+                                    extend the pattern.
+   •• extending
+   •• creating patterns using    c. Analyze a non-numerical increasing pattern and extend the
+      manipulatives, pictures,      pattern.
+      sounds, and actions        d. Reproduce an increasing numerical pattern using an alternate
+      (numbers to 100).             form (e.g., sound, action, concrete objects, or diagrams) and
+[C, CN, PS, R, V]                   explain the reasoning.
+
+
+
+
+28 | Mathematics • Grade 2
+                                                                           Mathematics 2
+
+
+Outcomes                          Indicators
+P2.2 (continued)                   e. Reproduce a concrete or pictorial increasing pattern using
+                                      numbers and explain the reasoning.
+                                   f. Solve problems involving increasing patterns (e.g., determine
+                                      the house number for a particular house given the house
+                                      numbers for the other homes on the block, or determining
+                                      the number of cubes in the missing structure) and explain the
+                                      reasoning.
+                                   g. Create an increasing pattern, represent the pattern in
+                                      different modes (using manipulatives, diagrams, sounds,
+                                      actions, and/or physical movements), and explain the pattern
+                                      rule.
+
+
+   Goals: Number Sense, Logical Thinking, Spatial Sense, Mathematics as a Human Endeavour
+Outcomes                          Indicators
+P2.3 Demonstrate                   a. Compare two quantities of the same object (same shape and
+understanding of equality             mass) by using a balance scale to determine if the quantities
+and inequality concretely and         are equal or not.
+pictorially (0 to 100) by:
+                                   b. Construct two unequal sets using identical objects and verify
+   •• relating equality and
+                                      orally and concretely that the sets are not equal.
+      inequality to balance
+   •• comparing sets               c. Analyze the impact of changing one of two equal sets upon
+   •• recording equalities with       the equality of the two sets.
+      an equal sign                d. Analyze the impact of making changes (equal and unequal)
+   •• recording inequalities with     to both of two equal sets upon the equality of the sets.
+      a not equal sign
+   •• solving problems involving e. Analyze and sort sets according to equality and explain the
+      equality and inequality.        reasoning.
+[C, CN, R, V]                      f. Model two number expressions to determine if the
+                                      expressions are equal (=) or not equal (≠) and write a number
+                                      sentence to show the relationship (e.g., 3 + 2 and 4 + 1 are
+                                      both equal to 5, so the two expressions are = and I write 3 + 2
+                                      = 4 + 1; 7 - 5 and 3 are not the same quantity, so I write 7 – 5
+                                      ≠ 3).
+                                   g. Create statements of equality and non-equality and model
+                                      the statements to verify the relationship.
+
+
+
+
+                                                                              Mathematics • Grade 2 | 29
+Mathematics 2
+
+
+                                       Shape and Space
+   Goals: Spatial Sense, Logical Thinking, Number Sense, Mathematics as a Human Endeavour
+Outcomes                          Indicators
+SS2.1 Demonstrate                  a. Defend the choice of a non-standard unit for measuring a
+understanding of non-                 length in a situation relevant to one’s self, family, or community.
+standard units for linear
+                                   b. Estimate a personally relevant length, including the distance
+measurement by:
+                                      around a space, using one’s own choice of standard unit.
+   •• describing the choice and
+      appropriate use of non-      c. Compare estimates of the same length made by different units
+      standard units                  and provide reasons for different values being stated for the
+   •• estimating                      measurements.
+   •• measuring                    d. Critique the statement “It is possible to get an exact length
+   •• comparing and analyzing         measurement”.
+      measurements.
+[C, CN, ME, R, V]                  e. Devise and apply strategies for determining estimates for linear
+                                      and non-linear lengths using non-standard units.
+                                   f. Explain why overlapping or leaving gaps does not result in
+                                      accurate measurements.
+                                   g. Explain why the same non-standard unit should be used to
+                                      determine length measurements that are to be compared.
+                                   h. Compare and order sets of related objects, possibly including
+                                      people, according to a length measurement.
+
+
+   Goals: Number Sense, Logical Thinking, Spatial Sense, Mathematics as a Human Endeavour
+Outcomes                        Indicators
+SS2.2 Demonstrate                a. Defend the choice of a non-standard unit for measuring a
+understanding of non-standard       mass in a situation relevant to one’s self, family, or community.
+units for measurement of mass
+                                 b. Estimate the mass of a personally relevant object using one’s
+by:
+                                    own choice of standard unit.
+   •• describing the choice and
+      appropriate use of non-    c. Identify a non-standard unit for measuring mass that would
+      standard units                not be a good choice in a particular situation and explain the
+   •• estimating                    reasoning (e.g., to measure the mass of a desk, it would not
+   •• measuring                     make sense to use an eraser as the standard unit because a
+   •• comparing and analyzing       desk has so much more mass than an eraser and so it would
+      measurements.                 take too many erasers, or to measure the mass of a library
+[C, CN, ME, R, V]                   book using the standard unit of a student in the class because
+                                    the student already has a greater mass than the book).
+                                   d. Compare estimates of the mass of the same object determined
+                                      using different standard units and provide reasons for different
+                                      values being stated for the measurements.
+
+
+
+30 | Mathematics • Grade 2
+                                                                        Mathematics 2
+
+
+Outcomes                      Indicators
+SS2.2 (continued)              e. Explain why the same non-standard unit should be used to
+                                  determine mass measurements that are to be compared.
+                               f. Compare and order sets of related objects according to mass
+                                  measurements and explain the reasoning.
+
+
+   Goals: Spatial Sense, Logical Thinking, Mathematics as a Human Endeavour
+Outcomes                      Indicators
+SS2.3 Describe, compare,       a. Identify examples of cubes, spheres, cones, cylinders, and
+and construct 3-D objects,        pyramids as found in the classroom, home, and community.
+including:
+                               b. Sort a set of personally relevant 3-D objects and explain the
+   •• cubes
+                                  sorting rule used.
+   •• spheres
+   •• cones                    c. Compare the attributes of cubes, spheres, cones, cylinders,
+   •• cylinders                   and pyramids and generalize descriptions of each category of
+   •• pyramids.                   3-D objects.
+[C, CN, R, V]                  d. Compare two 3-D objects of the same type (e.g., both are
+                                  cylinders) and explain how the dimensions of the objects can
+                                  be used to compare the objects (one-to-one correspondence
+                                  or non-standard units).
+                               e. Compare two 3-D objects in different orientations (e.g., “If I
+                                  was to flip this object over, the two objects would have the
+                                  same height.”).
+                               f. Create and describe a concrete representation of a personally
+                                  relevant 3-D object.
+                               g. Sort 3-D objects according to two attributes and explain the
+                                  sorting rule used.
+
+
+
+
+                                                                          Mathematics • Grade 2 | 31
+Mathematics 2
+
+
+   Goals: Spatial Sense, Logical Thinking, Mathematics as a Human Endeavour
+Outcomes                      Indicators
+SS2.4 Describe, compare,       a. Identify examples of triangles, rectangles, squares, and circles
+and construct 2-D shapes,         as found in personal experiences.
+including:
+                               b. Compare the attributes of triangles, squares, rectangles, and
+   •• triangles
+                                  circles and generalize descriptions of each category of 2-D
+   •• squares
+                                  shapes objects.
+   •• rectangles
+   •• circles.                 c. Critique the statement “A 2-D shape can either be a rectangle
+[C, CN, R, V]                     or a square, but not both”.
+                               d. Compare two 2-D shapes of the same type (e.g., both are
+                                  circles) and explain how the dimensions of the shapes can be
+                                  used to compare the shapes (one-to-one correspondence or
+                                  non-standard units).
+                               e. Classify 2-D shapes arranged in different orientations
+                                  according to the type (triangle, rectangle, square, or circle)
+                                  and explain the impact of the orientation of shape on its
+                                  classification.
+                               f. Create a model to represent a 2-D shape.
+                               g. Sort regular and irregular 2-D shapes according to two
+                                  attributes and explain the sorting rule used.
+
+
+   Goals: Spatial Sense, Logical Thinking, Mathematics as a Human Endeavour
+Outcomes                      Indicators
+SS2.5 Demonstrate              a. Analyze the differences between two pre-sorted sets of objects
+understanding of the              and/or pictures of shapes and explain how the objects and
+relationship between 2-D          shapes were sorted.
+shapes and 3-D objects.
+                               b. Analyze a set of objects and/or pictures of shapes to identify
+[C, CN, R, V]
+                                  two common attributes of each member of the set.
+                               c. Describe the faces of a personally relevant 3-D object by
+                                  comparing the faces to 2-D shapes (such as triangles, squares,
+                                  rectangles, or circles).
+                               d. Analyze (using concrete models of 3-D objects) a set of
+                                  descriptions of the 2-D faces of a 3-D object to identify the 3-D
+                                  object (e.g., “A 3-D object has one rectangular face and four
+                                  triangular faces – what type of object is it?”“A pyramid.”).
+                               e. Analyze and correct the statement “The tissue box is a
+                                  rectangle”.
+
+
+
+
+32 | Mathematics • Grade 2
+                                                                         Mathematics 2
+
+
+                              Statistics and Probability
+   Goals: Spatial Sense, Number Sense, Logical Thinking, Mathematics as a Human Endeavour
+Outcomes                       Indicators
+SP2.1 Demonstrate               a. Formulate a question relevant to one’s self, family, or
+understanding of concrete          community that can be answered by gathering information
+graphs and pictographs.            from people.
+[C, CN, PS, R, V]
+                               b. Select an organizational structure, such as sets of concrete
+                                  objects, tallies, checkmarks, charts, or lists, for the collection
+                                  of data that are gathered.
+                               c. Pose questions related to gathered data and explain how the
+                                  data can be used to answer those questions.
+                               d. Analyze concrete graphs to identify and define the common
+                                  attributes of a concrete graph.
+                               e. Analyze pictographs to identify and define the common
+                                  attributes of a pictograph.
+                               f. Create a concrete graph to display collected data and make
+                                  and support conclusions based upon the graph.
+                               g. Create a pictograph (using one-to-one correspondence) to
+                                  display collected data and make and support conclusions
+                                  based on the graph.
+                               h. Create and solve a problem for which data can be collected
+                                  from individuals in the class, at home, in the school, or within
+                                  the community and give a presentation of how the collection,
+                                  organization, display, and analysis of data were done to attain
+                                  a solution to the problem.
+
+
+
+
+                                                                            Mathematics • Grade 2 | 33
+Mathematics 2
+
+
+                                      Assessment and Evaluation of
+                                      Student Learning
+                                      Assessment and evaluation require thoughtful planning and
+                                      implementation to support the learning process and to inform
+                                      teaching. All assessment and evaluation of student achievement
+                                      must be based on the outcomes in the provincial curriculum.
+                                      Assessment involves the systematic collection of information
+                                      about student learning with respect to:
+                                               55 Achievement of provincial curriculum outcomes
+                                               55 Effectiveness of teaching strategies employed
+                                               55 Student self-reflection on learning.
+                                      Evaluation compares assessment information against
+  Assembling evidence from a          criteria based on curriculum outcomes for the purpose of
+  variety of sources is more likely
+  to yield an accurate picture.       communicating to students, teachers, parents/caregivers, and
+               (NCTM, 2000, p. 24)    others about student progress and to make informed decisions
+                                      about the teaching and learning process.
+                                      Reporting of student achievement must be based on the
+                                      achievement of curriculum outcomes. Assessment information
+                                      which is not related to outcomes can be gathered and reported
+                                      (e.g., attendance, behaviour, general attitude, completion of
+                                      homework, effort) to complement the reported achievement
+                                      related to the outcomes of Grade 2 Mathematics. There are three
+                                      interrelated purposes of assessment. Each type of assessment,
+                                      systematically implemented, contributes to an overall picture of
+                                      an individual student’s achievement.
+                                      Assessment for learning involves the use of information about
+                                      student progress to support and improve student learning and
+                                      inform instructional practices and:
+  Assessment should not merely          • is teacher-driven for student, teacher, and parent use
+  be done to students; rather it
+  should be done for students.          • occurs throughout the teaching and learning process, using
+               (NCTM, 2000, p. 22)        a variety of tools
+                                        • engages teachers in providing differentiated instruction,
+                                          feedback to students to enhance their learning, and
+                                          information to parents in support of learning.
+                                      Assessment as learning involves student reflection on and
+  What are examples of                monitoring of her/his own progress and:
+  assessments as learning              • students self-reflect and critically analyze learning related to
+  that could be used in Grade            curricular outcomes without anxiety or censure
+  2 mathematics and what               • is student-driven with teacher guidance for personal use
+  would be the purpose of those        • occurs throughout the learning process
+  assessments?
+                                       • engages students in reflecting on learning, future learning,
+                                         and thought processes (metacognition).
+
+
+
+
+34 | Mathematics • Grade 2
+                                                                            Mathematics 2
+
+
+Assessment of learning involves teachers’ use of evidence
+of student learning to make judgements about student
+achievement and:
+  • provides opportunity to report evidence of achievement              Assessment should become
+     related to curricular outcomes                                     a routine part of the ongoing
+  • occurs at the end of a learning cycle, using a variety of tools     classroom activity rather than
+  • provides the foundation for discussion on placement or              an interruption.
+                                                                                     (NCTM, 2000, p. 23)
+     promotion.
+In mathematics, students need to be regularly engaged in
+assessment as learning. The assessments used should flow from
+the learning tasks and provide direct feedback to the students
+regarding their progress in attaining the desired learnings as
+well as opportunities for the students to set and assess personal
+learning goals related to the mathematical content for Grade 2.
+
+
+Connections with Other Areas of
+Study
+There are many possibilities for connecting Grade 2 mathematical
+learning with the learning occurring in other subject areas. When
+making such connections, however, teachers must be cautious
+not to lose the integrity of the learning in any of the subjects.
+Making connections between subject areas gives students
+experiences with transferring knowledge and provides rich
+contexts in which students are able to initiate, make sense of,
+and extend their learnings. When connections between subject
+areas are made, the possibilities for transdisciplinary inquiries and
+deeper understanding arise. Following are just a few of the ways
+in which mathematics can be connected to other subject areas
+(and other subject areas connected to mathematics) at Grade 2.
+Arts Education – One of the strongest connections that can
+be made between Arts Education and Mathematics is through
+the creation and use of multiple representations. As students
+in Grade 2 explore patterns, numbers to 100, 3-D objects and
+2-D shapes, and concrete graphs, the use of physical movement
+and sounds as well as the exploration of different concrete and
+pictorial representations of the mathematical content allows
+students to understand mathematics through processes and
+concepts the students are learning about in Arts Education. For
+example, outcome P2.1:
+
+
+
+
+                                                                               Mathematics • Grade 2 | 35
+Mathematics 2
+
+
+                                     Demonstrate understanding of repeating patterns (three to
+                                     five elements) by:
+                                        • describing
+                                        • representing patterns in alternate modes
+                                        • extending
+                                        • comparing
+                                        • creating patterns using manipulatives, pictures, sounds,
+                                          and actions.
+                                     [C, CN, PS, R, V]
+
+                                   can be explored by students when they are also learning about
+                                   how music, rhythms, or dance phrases, which can be repeated,
+                                   also have a beginning and end, just like the core of a repeating
+                                   pattern (e.g., the pattern ABBABBABB has a core that begins with
+                                   A and ends with B). Students could, therefore, use music or dance
+                                   phrases to represent patterns being explored in mathematics.
+                                   Students could also observe repeating patterns in First Nations’
+                                   beading and dance regalia, or analyse how shapes, lines, colours,
+                                   and textures are used to create repeating patterns in quilts,
+                                   clothing designs, architecture, and other works of visual art.
+                                   Alternatively, in arts education, students could describe patterns
+                                   in arts expressions using alternate modes (such as sounds, letters,
+                                   or concrete objects) as they would in their Mathematics classes.
+
+
+                                                       Social Studies
+                              Physical                                               Health
+                             Education                                              Education
+                                           Thinking
+                                                                            Identity and
+                                                         Self and         Interdependence
+                                                        Community
+
+                                                                                                  Arts
+               Mathematics
+                                            Lifelong                    Engaged                 Education
+                                            Learners                    Citizens
+
+                                                                             Social
+                                                                         Responsibility
+                                         Literacies
+
+                                                                                      Science
+                                             Language
+                                               Arts
+
+
+
+
+36 | Mathematics • Grade 2
+                                                                     Mathematics 2
+
+
+English Language Arts (ELA) – ELA and Mathematics share a
+common interest in students developing their abilities to reflect
+upon and communicate about their learnings through viewing,
+listening, reading, representing, speaking, and writing. As an
+example of how Mathematics involves these strands of
+language consider outcome N2.1:
+
+  Demonstrate understanding of whole numbers to 100
+  (concretely, pictorially, physically, orally, in writing, and
+  symbolically) by:
+    • representing (including place value)
+    • describing
+    • skip counting
+    • differentiating between odd and even numbers
+    • estimating with referents
+    • comparing two numbers
+    • ordering three or more numbers.
+  [C, CN, ME, PS, R, V]
+
+To achieve this learning outcome, students are to be explicitly
+engaged in understanding the nature and relationships of
+whole numbers to 100. In developing such understandings,
+students first need to create and relate different representations
+for whole numbers from the students’ personal experiences,
+such as numbers said at home, numbers within a text from
+another class, or numbers embedded within mathematical
+problems students read. As the students develop their ability
+to read, they will also be able to engage in solving written
+problems involving whole numbers. Students would share
+those representations with their classmates and view the
+representations created by others.
+Through the use of language, both orally and in writing,
+students should communicate with their classmates and others
+about their developing understandings of whole numbers
+and seek clarification of the ideas presented by other students.
+The students would be engaged in responding to what is
+presented to them and to questions asked of what has been
+presented. Such activity requires students to effectively speak,
+listen, and show appreciation for the ideas communicated by
+other students. By actively engaging in the use of language and
+other ways of representing their understanding, students will
+reflect deeply upon their learnings, leading to a combination
+of affirmations, changes, and extensions to each student’s
+understandings of whole numbers to 100.
+
+
+
+
+                                                                      Mathematics • Grade 2 | 37
+Mathematics 2
+
+
+                             Health Education – At Grade 2, most of the connections that
+                             can be made between Mathematics and Health Education are
+                             related to the Mathematics goal of understanding Mathematics
+                             as a Human Endeavour. In Grade 2 Health Education, students
+                             learn about everyone being special, unique, and able to succeed
+                             and how communities benefit from this diversity. This is also
+                             a major understanding within the Mathematics as a Human
+                             Endeavour goal which is related to every outcome in Grade
+                             2 Mathematics. Thus, as students engage in mathematical
+                             inquiries and share their understandings with their classmates,
+                             the understandings they are learning in Health Education with
+                             respect to the importance and value of the contributions of
+                             everyone are also to be emphasized and respected.
+                             As well, much of the learnings in Health Education can be used
+                             as contexts for the students’ understandings related to outcome
+                             SP2.1:
+
+                               Demonstrate understanding of concrete graphs and
+                               pictographs. [C, CN, PS, R, V]
+
+                             As an example, as the students explore Canada’s Food Guide
+                             and making their own snack choices, the students could
+                             regularly collect data from the class regarding the types of snack
+                             choices being made and create a series of concrete graphs
+                             or pictographs to record the data and the ongoing process.
+                             Questions such as, “What was the impact of Hallowe’en on
+                             the overall healthy snack choices?” will naturally emerge for
+                             discussion both in Mathematics and in Health Education from
+                             the data collected and represented as the students construct
+                             their understandings related to outcome SP2.1.
+                             Physical Education – There are many opportunities for teachers
+                             to create learning experiences that connect Physical Education and
+                             Mathematics. These learning experiences can provide students the
+                             opportunity to expand both their mathematical and physical skills
+                             and understandings. Whether students are learning or practising
+                             what they have learned about quantities to 100, adding and
+                             subtracting whole numbers, patterns, linear measurement using
+                             non-standard units, or concrete graphs and pictographs, students
+                             can also be engaged in working towards their skillful performance
+                             of locomotor, non-locomotor, and manipulative skills. For example,
+                             consider how these locomotor, non-locomotor, and manipulative
+                             skills can be used in Mathematics to help students develop a
+                             deeper understanding of outcome SS2.1:
+
+
+
+
+38 | Mathematics • Grade 2
+                                                                   Mathematics 2
+
+
+  Demonstrate understanding of non-standard units for linear
+  measurement by:
+    • describing the choice and appropriate use of non-
+       standard units
+    • estimating
+    • measuring
+    • comparing and analyzing measurements.
+  [C, CN, ME, R, V]
+
+The skills from Physical Education, such as skipping, sliding,
+jumping, hopping, or bouncing a ball, can be incorporated as
+forms of non-standard units. Questions like:
+  • “How many skips do you think it would take to skip down
+    the hall?”
+  • “Will it take more or less hops than skips to go across the
+    classroom and why?”
+  • “How could you adjust your locomotor movement (e.g.,
+    skips or hops) to decrease the number of movements
+    needed to measure the length of the room?”
+engage students in their development of skillful performance of
+the movements. Such questions also provide relevant contexts
+in which students can demonstrate their understandings of
+estimating and measuring linear measurements and participate
+in an inquiry and understanding of how the length of the
+unit of measure impacts the quantity of the measurement. As
+students carry out such explorations, it is important to compare
+the results to those of their classmates, providing additional
+learning opportunities for teachers to help students develop a
+sense of a need for common measurement units.
+Similarly, activities within a Physical Education class could be
+used to strengthen the students’ mathematical understandings
+of measurement. When students in Grade 2 are creating new
+target games, students can also be engaged in using their
+measuring and estimating skills in designing the target for
+the game as well as the distances over which objects are to
+be moved to the target. Students can share their strategies
+for determining the measurements during their Mathematics
+class and pictures taken of the different targets and game
+set-ups can be used to engage the students in comparing the
+measurements used and how they were determined.
+Science – Mathematics and Science have many common
+topics and features, such as the recognition and description
+of patterns, sorting and categorizing, measurement, and the
+use of multiple representations. Opportunities for connections
+occur in the Grade 2 Science topics of Animal Growth and
+Changes and Relative Position and Motion. In Relative Position
+
+
+
+                                                                    Mathematics • Grade 2 | 39
+Mathematics 2
+
+
+                             and Motion, students are engaged in measuring and describing
+                             the relative position of themselves and 3-D objects in the
+                             physical world. Thus, the students’ mathematical learnings can
+                             support their Science studies, and their Science studies can
+                             provide interesting and relevant contexts for their mathematical
+                             investigations into measurement and other topics.
+                             In Animal Growth and Changes, students of Grade 2 Science are
+                             comparing and classifying familiar animals according to specific
+                             types of characteristics or attributes. This parallels outcome
+                             SS2.3:
+
+                               Describe, compare, and construct 3-D objects, including:
+                                 • cubes
+                                 • spheres
+                                 • cones
+                                 • cylinders
+                                 • pyramids.
+                               [C, CN, R, V]
+
+                             During the students’ explorations of 3-D objects, within which
+                             animals could be considered, students need to recognize
+                             distinguishing attributes and sort the 3-D objects according
+                             to selected attributes. In Mathematics, the use of animals and
+                             animal characteristics that the students are already familiar
+                             with (wings or no wings, number of limbs, colour) allows the
+                             students the opportunity to use prior knowledge to develop an
+                             understanding of the identification of characteristics and sorting.
+                             These understandings will help students to successfully attain
+                             these aspects of their Grade 2 learnings in both Mathematics and
+                             Science and to help make connections between processes and
+                             strategies regularly used within the two disciplines.
+                             Social Studies – Social Studies and Mathematics often connect
+                             through the investigation of patterns and trends and in the
+                             representation of data. In Grade two, students in Social Studies
+                             are focusing on understanding communities. In doing so,
+                             students learn to identify critical attributes of communities and
+                             to sort and categorize communities based on those attributes.
+                             This study of attributes and categorizations can be linked to
+                             comparing, sorting, and categorizing 3-D objects and 2-D
+                             shapes. In addition, students in Grade 2 Social Studies consider
+                             different ways to represent the diverse cultural groups within
+                             different communities. Within their study of outcome SP2.1:
+
+                               Demonstrate understanding of concrete graphs and
+                               pictographs. [C, CN, PS, R, V]
+
+
+
+40 | Mathematics • Grade 2
+                                                                  Mathematics 2
+
+
+students can use the data collected regarding the cultural
+groups within different communities and choose pictures or
+concrete materials that are representative of those cultures to
+produce a concrete graph or pictograph of the community’s
+cultural diversity. It should be noted that the communities
+considered will have to be scrutinized by the teacher to ensure
+that the quantities do not exceed 100 people because of
+the students’ development of their understanding of whole
+numbers. Students will not be able to create concrete graphs
+or pictographs for larger quantities, but such displays that
+have been created using technology or found within resource
+materials can be used to ask students interpretation questions.
+
+
+
+
+                                                                   Mathematics • Grade 2 | 41
+Mathematics 2
+
+
+Glossary
+Addend: Any quantity being added to another quantity (e.g., in the expression 32 + 57, both 32
+and 57 are addends).
+Attributes: Characteristics of 2-D shapes and 3-D objects that can be used to compare and sort
+sets of 2-D shapes and 3-D objects (e.g., colour, relative size, number of corners, number of lines of
+symmetry).
+Benchmarks: Numeric quantities used to compare and order other numeric quantities. For
+example, 0, 5, 10, and 20 are often used as benchmarks when placing whole numbers on a number
+line.
+Concrete Graph: A graph which uses actual objects to show how often something occurs.
+Correspondence (one-to-one): A correspondence is a description of how one set of numbers (or
+objects) is mapped to a second set of objects. For example, a correspondence might describe how
+individual students can sit in a given number of chairs. One-to-one correspondence can also be
+used to determine if there are enough, too many, or just the right number of apples in order for
+each child to have exactly one apple.
+Equality as a Balance and Inequality as Imbalance: The equal sign represents the idea of
+equivalence. For many students, it means do the question. For some students, the equal sign in an
+expression such as 2 + 5 = means to add. When exploring equality and inequality, by using objects
+on a balance scale, students discover the relationships between and among the mass of the
+objects. The equal sign in an equation is like a scale: both sides, left and right, must be the same
+in order for the scale to stay in balance and the equation to be true. When the scale is imbalanced,
+the equation is not true. Using 2 + 5 = , rather than simply 2 + 5 = helps students understand
+that the equal sign (=) represents equality rather than “do the work” or “do the question”.
+Interdisciplinary: Disciplines connected by common concepts and skills embedded in
+disciplinary outcomes.
+Minuend: In a subtraction sentence, the quantity that is being decreased (e.g., in the subtraction
+sentence 84 – 55, 84 is the minuend).
+Multidisciplinary: Discipline outcomes organized around a theme and learned through the
+structure of the disciplines.
+Number, Numeral, Digit: A number is the name that we give to quantities. For example, there are
+7 days in a week, or I have three brothers – both seven and three are numbers in these situations
+because they are defining a quantity. The symbolic representation of a number, such as 287, is
+called the numeral. If 287 is not being used to define a quantity, we call it a numeral.
+Numerals, as the symbolic representation of numbers, are made up of a series of digits. The Hindu-
+Arabic number system that we use has ten digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9. (Note: sometimes
+students are confused between these digits and their finger digits – this is because they count
+their fingers starting at one and get to ten rather than zero to nine.) These digits are also numerals
+and can be numbers (representing a quantity), but all numbers and all numerals are combinations
+of digits. The placement of a digit in a number or numeral affects the place value of the digit and,
+hence, how much of the quantity that it represents. For example, in 326, the 2 is contributing 20 to
+the total, while in 236 the 2 contributes 200 to the total quantity.
+Object: Object is used to refer to a three-dimensional geometrical figure. To distinguish this
+meaning from that of shape, the word “object” is preceded by the descriptor “3-D”.
+
+
+42 | Mathematics • Grade 2
+                                                                              Mathematics 2
+
+
+Personal Strategies: Personal strategies are strategies that the students have constructed and
+understand. Outcomes and indicators that specify the use of personal strategies convey the
+message that there is not a single procedure that is correct. Students should be encouraged
+to explore, share, and make decisions about what strategies to use in different contexts.
+Development of personal strategies is an indicator of the attainment of deeper understanding.
+Pictograph: A graph which uses pictures or symbols to show how often something occurs.
+Referents: A concrete approximation of a quantity or unit of measurement. For example, seeing
+what 25 beans in a container looks like makes it possible to estimate the number of beans the
+same container will hold when it is full of the same kind of beans. Compensation must be made
+if the container is filled with smaller or larger beans than the referent or if the size or shape of the
+container is changed.
+Representations: Mathematical ideas can be represented and manipulated in a variety of forms
+including concrete manipulatives, visual designs, sounds and speech, physical movements, and
+symbolic notations (such as numerals and operation signs). Students need to have experiences
+in working with many different types of representations, and in transferring and translating
+knowledge between the different forms of representations.
+Shape: In this curriculum, shape is used to refer to two-dimensional geometric figures and is
+thus preceded by “2-D”. The term shape is sometimes also used in mathematics resources and
+conversations to refer to three-dimensional geometric figures. It is important that students
+learn to be clear in identifying whether their use of the term shape is in reference to a 2-D or 3-D
+geometrical figure.
+Subtrahend: In a subtraction statement, the quantity that is being subtracted (e.g., in the
+subtraction statement 90 – 26, 26 is the subtrahend).
+Transdisciplinary: All knowledge interconnected and interdependent; real-life contexts
+emphasized and investigated through student questions.
+
+
+
+
+                                                                                 Mathematics • Grade 2 | 43
+Mathematics 2
+
+
+References
+Armstrong, Thomas. (1993). Seven kinds of smart: Identifying and developing your many intelligences.
+       New York NY: NAL-Dutton.
+Burns, Marilyn & Silbey, Robyn. (2000). So you have to teach math? Sound advice for K-6 teachers.
+       Sausalito CA: Math Solutions Publications.
+Caine, Renate Numella & Caine, Geoffrey. (1991). Making connections: Teaching and the human
+        brain. Menlo Park CA: Addison-Wesley Publishing Company.
+Haylock, Derek & Cockburn, Anne. (2003). Understanding mathematics in the lower primary years: A
+       guide for teachers of children 3 -8. (Second Edition). London UK: Paul Chapman Publishing.
+Hiebert, J., Carpenter, T., Fennema, E., Fuson, K., Wearne, D., Murray, H., Olivier, A., Human, P. (1997).
+       Making sense: Teaching and learning mathematics with understanding. Portsmouth NH:
+       Heinemann.
+Kuhlthau, C.C. & Todd, R. J. (2008). Guided inquiry: A framework for learning through school libraries in
+       21st century schools. Newark NJ: Rutgers University.
+Mills, H. & Donnelly, A. (2001). From the ground up: Creating a culture of inquiry. Portsmouth NH:
+         Heinemann Educational Books, Ltd.
+NCTM (2000). Principles and standards for school mathematics. Reston VA: NCTM.
+Raphel, Annette. (2000). Math homework that counts: Grades 4 – 6. Sausalito CA: Math Solutions
+       Publications.
+Schuster, Lainie & Canavan Anderson, Nancy. (2005). Good questions for math teaching: Why ask
+       them and what to ask, Grades 5 – 8. Sausalito CA: Math Solutions Publications.
+Skinner, Penny. (1999). It all adds up! Engaging 8-to-12-year-olds in math investigations. Sausalito
+       CA: Math Solutions Publications.
+Stiff, Lee. (2001). Constructivist mathematics and unicorns (President’s Message). NCTM News
+         Bulletin. Reston VA: NCTM.
+Wiggins, G. & McTighe, J. (2005) Understanding by design. Alexandria VA: Association for
+       Supervision and Curriculum Development.
+WNCP (2006). The common curriculum framework for K-9 mathematics. Edmonton AB: WNCP.
+
+
+
+
+44 | Mathematics • Grade 2
+                                                                               Mathematics 2
+
+
+Feedback Form
+The Ministry of Education welcomes your response to this curriculum and invites you to complete
+and return this feedback form.
+Document Title: Mathematics Grade 2 Curriculum
+1. Please indicate your role in the learning community
+       parent                             teacher                    resource teacher
+       guidance counsellor                school administrator       school board trustee
+       teacher librarian                  school community council member
+       other ___________________________________________________
+   What was your purpose for looking at or using this curriculum?
+
+
+
+
+2. a) Please indicate which format(s) of the curriculum you used:
+       print
+       online
+   b) Please indicate which format(s) of the curriculum you prefer:
+       print
+       online
+3. How does this curriculum address the needs of your learning community or organization?
+   Please explain.
+
+
+
+
+4. Please respond to each of the following statements by circling the applicable number.
+
+    The curriculum content is:                      Strongly Agree   Agree       Disagree      Strongly
+                                                                                               Disagree
+    a. appropriate for its intended purpose               1            2            3              4
+    b. suitable for your learning style
+                                                          1            2            3              4
+       (e.g., visuals, graphics, texts)
+    c. clear and well organized                           1            2            3              4
+    d. visually appealing                                 1            2            3              4
+    e. informative                                        1            2            3              4
+
+
+
+
+                                                                                 Mathematics • Grade 2 | 45
+Mathematics 2
+
+
+5. Explain which aspects you found to be:
+    Most useful:
+
+
+
+
+    Least useful:
+
+
+
+
+6. Additional comments:
+
+
+
+
+7. Optional:
+    Name: _______________________________________________________________________________
+    School: ______________________________________________________________________________
+    Phone:_____________________________________       Fax: ____________________________________
+
+
+Thank you for taking the time to provide this valuable feedback.
+
+
+Please return the completed feedback form to:
+
+
+        Executive Director
+        Curriculum and E-Learning Branch
+        Ministry of Education
+        2220 College Avenue
+        Regina SK S4P 4V9
+        Fax: 306-787-2223
+
+
+
+
+46 | Mathematics • Grade 2
+
