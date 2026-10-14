@@ -365,6 +365,53 @@ describe("the inbox", () => {
     expect(((await (await get(inbox, "/api/admin/inbox/")).json()) as { items: { handledAt: number | null }[] }).items[0].handledAt).not.toBeNull();
   });
 
+  it("drafts a reply with Claude only when asked, without sending anything", async () => {
+    const one = async () => (await (await get(inbox, "/api/admin/inbox/?id=rcv-1")).json()) as { canDraft: boolean };
+    expect((await one()).canDraft).toBe(false);
+    expect((await post(inbox, "/api/admin/inbox/", { action: "draft", id: "rcv-1" })).status).toBe(400);
+    process.env.ANTHROPIC_API_KEY = "sk-ant-test";
+    process.env.ANTHROPIC_API_BASE = "https://anthropic.test";
+    try {
+      expect((await one()).canDraft).toBe(true);
+      const real = fetch;
+      const asked: Record<string, unknown>[] = [];
+      vi.stubGlobal(
+        "fetch",
+        vi.fn(async (url: string, init?: RequestInit) => {
+          if (url === "https://anthropic.test/v1/messages") {
+            asked.push(JSON.parse(String(init!.body)));
+            expect((init!.headers as Record<string, string>)["x-api-key"]).toBe("sk-ant-test");
+            return new Response(JSON.stringify({ stop_reason: "end_turn", content: [{ type: "thinking", thinking: "" }, { type: "text", text: "Hi Pat,\n\nHappy to help." }] }));
+          }
+          return real(url, init);
+        }),
+      );
+      const res = await post(inbox, "/api/admin/inbox/", { action: "draft", id: "rcv-1" });
+      expect(await res.json()).toEqual({ draft: "Hi Pat,\n\nHappy to help." });
+      // The email goes in the user turn, the help page and saved replies in the system prompt.
+      expect(asked).toHaveLength(1);
+      expect(JSON.stringify(asked[0].messages)).toContain("Hi & hello");
+      expect(JSON.stringify(asked[0].system)).toContain("How do I start?");
+      expect(JSON.stringify(asked[0].system)).toContain("Billing and cancelling");
+      // Nothing was emailed and the message isn't marked answered.
+      expect(sent).toHaveLength(0);
+      const list = (await (await get(inbox, "/api/admin/inbox/")).json()) as { items: { repliedAt: number | null }[] };
+      expect(list.items[0].repliedAt).toBeNull();
+      expect((await dbm.query<{ action: string }>("SELECT action FROM admin_audit WHERE action = 'inbox.draft'")).length).toBe(1);
+
+      vi.stubGlobal(
+        "fetch",
+        vi.fn(async (url: string, init?: RequestInit) => (url.startsWith("https://anthropic.test") ? new Response(JSON.stringify({ stop_reason: "refusal", content: [] })) : real(url, init))),
+      );
+      const refused = await post(inbox, "/api/admin/inbox/", { action: "draft", id: "rcv-1" });
+      expect(refused.status).toBe(502);
+      expect(((await refused.json()) as { error: string }).error).toMatch(/wouldn't draft/);
+    } finally {
+      delete process.env.ANTHROPIC_API_KEY;
+      delete process.env.ANTHROPIC_API_BASE;
+    }
+  });
+
   it("reports a Resend error instead of failing", async () => {
     vi.stubGlobal("fetch", vi.fn(async () => new Response("{}", { status: 403 })));
     const res = await get(inbox, "/api/admin/inbox/");

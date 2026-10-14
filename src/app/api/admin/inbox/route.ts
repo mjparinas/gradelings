@@ -1,8 +1,10 @@
 import { error, json } from "@/server/auth";
 import { audit, requireAdmin } from "@/server/admin";
 import { getInboxMessage, inboxConfigured, listInbox, markHandled, replyToInbox } from "@/server/inbox";
+import { draftConfigured, draftReply } from "@/server/replyDraft";
 
 // Mail Resend received for us. `?id=` opens one message (as plain text); otherwise a page of the newest.
+// `canDraft` says whether "Draft with AI" is set up (ANTHROPIC_API_KEY).
 
 const ID = /^[A-Za-z0-9-]{1,100}$/;
 
@@ -15,7 +17,7 @@ export async function GET(req: Request) {
   const after = url.searchParams.get("after") ?? undefined;
   if ((id && !ID.test(id)) || (after && !ID.test(after))) return error(400, "Bad request");
   try {
-    if (id) return json({ message: await getInboxMessage(id) });
+    if (id) return json({ message: await getInboxMessage(id), canDraft: draftConfigured() });
     return json({ configured: true, ...(await listInbox({ after })) });
   } catch (e) {
     return error(502, (e as Error).message);
@@ -32,6 +34,14 @@ export async function POST(req: Request) {
     if (body.action === "handled") {
       await markHandled(body.id, body.handled !== false);
       return json({ ok: true });
+    }
+    if (body.action === "draft") {
+      // Only drafts: nothing is sent, and the draft isn't stored.
+      if (!draftConfigured()) return error(400, "AI drafts need ANTHROPIC_API_KEY.");
+      const m = await getInboxMessage(body.id);
+      const draft = await draftReply({ from: m.from, subject: m.subject, text: m.text });
+      await audit(gate.admin.email, "inbox.draft", body.id);
+      return json({ draft });
     }
     if (body.action === "reply") {
       const text = typeof body.text === "string" ? body.text.trim() : "";

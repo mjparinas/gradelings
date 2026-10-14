@@ -19,6 +19,7 @@ Gradelings is a standard Next.js 16 app (Node runtime, no custom server). This g
 | `STRIPE_PRICE_YEARLY_USD` | For US billing | Recurring Price id for US$119.99/year. Without both USD prices, a US family's checkout answers that US payments aren't available yet; Canadian checkout and simulated billing are unaffected. |
 | `STRIPE_WEBHOOK_SECRET` | For billing | Signing secret of the webhook endpoint (`whsec_…`). |
 | `RESEND_API_KEY` | For email | Resend API key. Without it no email is sent (password reset and confirmation links won't arrive), so treat it as required in production. |
+| `ANTHROPIC_API_KEY` | Optional | Anthropic API key for **Draft with AI** in the admin Inbox. Without it the button is hidden. Each draft costs a few cents at most. |
 | `RESEND_WEBHOOK_SECRET` | Optional | Signing secret (`whsec_…`) of a Resend webhook pointed at `/api/email/webhook/` for the delivered, delayed, bounced and complained events. Turns on delivery reports in the admin panel's email log, and stops panel email to addresses that bounce or report spam (`docs/ADMIN.md`). |
 | `EMAIL_FROM` | For email | Sender, e.g. `Gradelings <hello@gradelings.com>`. The domain must be verified in Resend (add its SPF and DKIM DNS records). |
 | `CRON_SECRET` | For the daily job | Any long random string. Vercel sends it as `Authorization: Bearer …` to `/api/cron/weekly/`; the route refuses calls without it. The job sends inactive-class warnings and deletes eligible classes as well as handling email reminders. |
