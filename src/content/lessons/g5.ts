@@ -214,4 +214,17 @@ export const lessons: GradeLessons = {
     ["24 = 2 × 12.", "12 = 2 × 6, and 6 = 2 × 3.", "24 = 2 × 2 × 2 × 3."],
     "2 × 2 × 2 × 3",
   ),
+  // Texas
+  "math/tx-g5-fraction-times-divide": lesson(
+    ["To multiply a whole number by a fraction, multiply the whole number by the top, then divide by the bottom.", "To divide a unit fraction by a whole number, split it into that many parts: 1/3 ÷ 2 = 1/6.", "To divide a whole number by a unit fraction, count how many fit: 4 ÷ 1/3 = 12."],
+    "A recipe uses 3/4 cup of milk. How much milk for 4 batches?",
+    ["4 × 3/4 = 12/4.", "12/4 = 3."],
+    "3 cups",
+  ),
+  "math/tx-g5-taxes-and-budgets": lesson(
+    ["Income tax and payroll tax come out of pay; sales tax is added when you buy; property tax is paid on homes and land.", "Gross income is all you earn. Net income is what is left after taxes and deductions.", "A budget is balanced when expenses are not more than income."],
+    "Gross pay is $900. $135 is taken out for taxes. What is the net pay?",
+    ["Net = gross − deductions.", "900 − 135 = 765."],
+    "$765",
+  ),
 };
