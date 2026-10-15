@@ -71,7 +71,7 @@ describe("curriculum unit page", () => {
     const f = getFramework("ca-ab");
     const unit = coursesFor(f, "2").find((c) => c.subject === "math")!.units[0];
     const { container } = render(await UnitPage(props("alberta", "grade-2", "math", unit.id)));
-    const data = JSON.parse(container.querySelector('script[type="application/ld+json"]')!.textContent!) as { "@type": string; educationalAlignment?: { educationalFramework: string; targetName: string }[] }[];
+    const data = [...container.querySelectorAll('script[type="application/ld+json"]')].map((s) => JSON.parse(s.textContent!)) as { "@type": string; educationalAlignment?: { educationalFramework: string; targetName: string }[] }[];
     const resource = data.find((d) => d["@type"] === "LearningResource")!;
     expect(resource.educationalAlignment).toEqual([expect.objectContaining({ educationalFramework: f.curriculumName, targetName: unit.standards["ca-ab"] })]);
   });
@@ -107,7 +107,7 @@ describe("curriculum unit page", () => {
     expect(region).toHaveTextContent("practice, not a report-card mark");
     const links = within(region).getAllByRole("link").map((a) => a.getAttribute("href"));
     expect(links).toEqual(["/guides/washington/grade-4/", "/guides/washington/grade-4/math/worksheet/", "/report-cards/washington/", f.sourceUrl]);
-    const data = JSON.parse(container.querySelector('script[type="application/ld+json"]')!.textContent!) as Record<string, unknown>[];
+    const data = [...container.querySelectorAll('script[type="application/ld+json"]')].map((s) => JSON.parse(s.textContent!)) as Record<string, unknown>[];
     const resource = data.find((d) => d["@type"] === "LearningResource")!;
     expect(resource).toEqual(expect.objectContaining({ inLanguage: "en-US", typicalAgeRange: "9-10", dateModified: expect.stringMatching(/^\d{4}-\d{2}-\d{2}$/) }));
   });

@@ -48,7 +48,7 @@ describe("curriculum subject page", () => {
     const f = getFramework("ca-on");
     const course = coursesFor(f, "2").find((c) => c.subject === "science")!;
     const { container } = render(await SubjectPage(props("ontario", "grade-2", "science")));
-    const data = JSON.parse(container.querySelector('script[type="application/ld+json"]')!.textContent!) as { "@type": string; itemListElement: { name: string; position: number; url: string }[] }[];
+    const data = [...container.querySelectorAll('script[type="application/ld+json"]')].map((s) => JSON.parse(s.textContent!)) as { "@type": string; itemListElement: { name: string; position: number; url: string }[] }[];
     const list = data.find((d) => d["@type"] === "ItemList")!;
     expect(list.itemListElement.map((x) => x.name)).toEqual(course.units.map((u) => u.title));
     expect(list.itemListElement[0].position).toBe(1);

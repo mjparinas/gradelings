@@ -24,7 +24,18 @@ export const ORG_JSON_LD = {
 /** A reference to the organization, with its name so each block still reads on its own. */
 export const ORG_REF = { "@type": "Organization", "@id": ORG_ID, name: APP_NAME, url: SITE_URL };
 
+/**
+ * JSON-LD for search engines. A list of blocks is written as one `<script>` per block, never as a JSON array: Safari's
+ * own structured-data reader expects every block to be an object with an `@context` and throws on an array
+ * (Sentry SENTRY-CHAMPAGNE-BUCKET-4). `<` is escaped so content can't close the tag.
+ */
 export function JsonLd({ data }: { data: unknown }) {
-  // JSON-LD for search engines. `<` is escaped so content can't close the tag.
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }} />;
+  const blocks = Array.isArray(data) ? data : [data];
+  return (
+    <>
+      {blocks.map((block, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(block).replace(/</g, "\\u003c") }} />
+      ))}
+    </>
+  );
 }
