@@ -64,6 +64,8 @@ async function openTab(name: string) {
 
 beforeEach(() => {
   mocks.call.mockReset();
+  // Tab clicks add history entries, so each test starts on the panel's own address.
+  window.history.replaceState(null, "", "/admin/");
 });
 
 describe("AdminApp sign-in", () => {
@@ -585,6 +587,36 @@ describe("AdminApp engagement", () => {
     } finally {
       window.history.replaceState(null, "", "/");
     }
+  });
+
+  it("adds each tab to the browser history, so Back returns to the previous tab", async () => {
+    asAdmin();
+    const user = await openTab("Funnel");
+    expect(window.location.search).toBe("?tab=Funnel");
+    await user.click(screen.getByRole("button", { name: "A/B Tests" }));
+    expect(window.location.search).toBe("?tab=A%2FB%20Tests");
+    // Clicking the tab already open adds no entry.
+    const length = window.history.length;
+    await user.click(screen.getByRole("button", { name: "A/B Tests" }));
+    expect(window.history.length).toBe(length);
+    window.history.back();
+    await waitFor(() => expect(screen.getByRole("button", { name: "Funnel" })).toHaveAttribute("aria-current", "page"));
+    window.history.back();
+    await waitFor(() => expect(screen.getByRole("button", { name: "Overview" })).toHaveAttribute("aria-current", "page"));
+    window.history.forward();
+    await waitFor(() => expect(screen.getByRole("button", { name: "Funnel" })).toHaveAttribute("aria-current", "page"));
+  });
+
+  it("puts a family opened from a list in the history", async () => {
+    asAdmin((url) => {
+      if (url === "/api/admin/users/?id=fam-1") return family();
+    });
+    render(<AdminApp />);
+    expect(await screen.findByRole("button", { name: "Overview" })).toHaveAttribute("aria-current", "page");
+    window.history.pushState(null, "", "/admin/?family=fam-1");
+    window.dispatchEvent(new PopStateEvent("popstate"));
+    expect(await screen.findByRole("heading", { name: "Billing" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Users" })).toHaveAttribute("aria-current", "page");
   });
 
   it("opens a tab from a link written before the tab names were capitalized", async () => {

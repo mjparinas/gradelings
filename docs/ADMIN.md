@@ -17,6 +17,8 @@ The list lives in the environment, never the database, so nothing a request writ
 
 ## Sections
 
+Each tab has its own address (`/admin/?tab=Funnel`; a family's page is `/admin/?family=<id>`), and every tab you open, including one opened from a link inside another tab, is added to the browser history, so Back and Forward move between tabs and a reload or a shared link opens the same tab.
+
 - **Overview:** a business dashboard with charts and a table view for each (`src/components/admin/Dashboard.tsx`, numbers worked out in `src/lib/adminMetrics.ts`). Class student accounts are left out; days and months are UTC.
   - **Revenue and profit:** monthly recurring revenue (list prices, yearly plans as a twelfth a month) and the yearly run rate, revenue this month, last month and this year, profit this month and this year, projected revenue and profit for the year (revenue so far plus MRR for the months left), revenue per paying family, cancellations in 30 days with churn and an estimated lifetime value, and charts of revenue, profit and paying families by month.
   - Revenue comes from the `payments` table: the Stripe webhook records `invoice.paid` (only invoices for families here) and `charge.refunded`, so add those two events to the webhook in Stripe. **Import Payments From Stripe** copies older paid invoices (needs `STRIPE_SECRET_KEY`). When a family deletes its account its payments stay in the totals with the family link cleared. All money is in CAD; US families' USD payments and MRR are never added in (nothing is converted) and show on their own tile once there are any.
