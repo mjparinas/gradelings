@@ -54,7 +54,7 @@ export default function PrivacyPage() {
           <li>Settings you choose, such as daily goal, timers, game time, sound, read-aloud and calm options.</li>
         </ul>
         <p>
-          <strong>If you report a problem with a question:</strong> we keep the question, the reason you picked from a fixed list and the date, linked to your family so we can follow up.
+          <strong>If you report a problem with a question:</strong> we keep the question as it was shown (its picture, answer choices and right answer), the province or state it was set for, the reason you picked from a fixed list and the date, linked to your family so we can follow up.
         </p>
         <p>
           <strong>If you write to us through the contact page:</strong> your name if you give it, your email address, the topic you pick and your message. They are emailed to our inbox through Resend so we can reply; we don’t copy them into our database. The same goes for anything you email us directly. To answer faster, we may send your message to Anthropic so its AI model, Claude, can suggest a first draft of our reply; a person reads and edits every reply before it is sent, and nothing is answered automatically.

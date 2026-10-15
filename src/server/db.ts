@@ -355,6 +355,11 @@ const ASSIGNMENT_COLUMNS: [string, string][] = [["due_at", "INTEGER"]];
 const SESSION_COLUMNS: [string, string][] = [["user_agent", "TEXT"]];
 // Mail the admin archived: hidden from the Inbox list (shown under Archived) until moved back.
 const INBOX_COLUMNS: [string, string][] = [["archived_at", "INTEGER"]];
+// The curriculum the child follows and what was on screen (choices, answer, picture as JSON), so a report can be judged.
+const REPORT_COLUMNS: [string, string][] = [
+  ["framework", "TEXT"],
+  ["details", "TEXT"],
+];
 const FAMILY_COLUMNS: [string, string][] = [
   ["billing_event_at", "INTEGER NOT NULL DEFAULT 0"],
   // Referrals: this family's shareable code, the family that referred it, and when that family was thanked.
@@ -390,6 +395,7 @@ async function addColumns(c: Client, table: string, columns: [string, string][])
 async function migrate(c: Client) {
   await addColumns(c, "sessions", SESSION_COLUMNS);
   await addColumns(c, "inbox_state", INBOX_COLUMNS);
+  await addColumns(c, "question_reports", REPORT_COLUMNS);
   const hadRewardCount = (await c.execute("PRAGMA table_info(families)")).rows.some((r) => String(r.name) === "referral_rewards");
   await addColumns(c, "families", FAMILY_COLUMNS);
   if (!hadRewardCount) {

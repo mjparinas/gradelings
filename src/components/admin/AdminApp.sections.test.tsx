@@ -473,6 +473,35 @@ describe("AdminApp question reports and change log", () => {
     expect(await screen.findByText("Cleared.")).toBeInTheDocument();
   });
 
+  it("shows the curriculum, the picture and the choices with the right answer marked", async () => {
+    asAdmin((url, method) => {
+      if (url === "/api/admin/reports/" && method === "GET") {
+        return {
+          reports: [
+            {
+              unitKey: "3/math/multiplication",
+              prompt: "What is 2 × 4?",
+              reason: "unclear",
+              count: 1,
+              latest: Date.now(),
+              frameworks: ["ca-bc", "us-wa"],
+              details: { choices: ["8", "10", "12", "4"], answer: "8", visual: { type: "equation", text: "2 × 4 = ?" } },
+            },
+            { unitKey: "3/math/odd", prompt: "Odd picture", reason: "other", count: 1, latest: Date.now(), frameworks: [], details: { visual: { type: "no-such-picture" } } },
+          ],
+        };
+      }
+    });
+    await openTab("Reports");
+    const report = (await screen.findByText("What is 2 × 4?")).closest("li")!;
+    expect(report).toHaveTextContent("British Columbia, Washington");
+    expect(within(report).getByLabelText("Picture shown with the question")).toHaveTextContent("2 × 4 = ?");
+    const choices = within(report).getByRole("list", { name: "Choices" });
+    expect(within(choices).getAllByRole("listitem").map((li) => li.textContent)).toEqual(["8 (right answer)", "10", "12", "4"]);
+    expect(report).toHaveTextContent("Right answer: 8");
+    expect(screen.getByText("Odd picture")).toBeInTheDocument();
+  });
+
   it("says when nothing is reported", async () => {
     asAdmin();
     await openTab("Reports");

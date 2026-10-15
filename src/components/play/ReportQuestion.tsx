@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import type { ReportDetails } from "@/lib/questionReport";
 import { REPORT_REASONS, type ReportReason } from "@/lib/reportReasons";
 import { Dialog } from "../ui";
 
 /** A small flag on the feedback bar that lets a child or parent tell us a question is wrong or unclear. */
-export function ReportQuestion({ unitKey, prompt }: { unitKey: string; prompt: string }) {
+export function ReportQuestion({ unitKey, prompt, framework, details }: { unitKey: string; prompt: string; framework?: string; details?: ReportDetails }) {
   const [open, setOpen] = useState(false);
   const [state, setState] = useState<"choose" | "sending" | "sent" | "failed">("choose");
 
@@ -16,7 +17,7 @@ export function ReportQuestion({ unitKey, prompt }: { unitKey: string; prompt: s
         method: "POST",
         credentials: "same-origin",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ unitKey, prompt, reason }),
+        body: JSON.stringify({ unitKey, prompt, reason, framework, details }),
       });
       setState(res.ok ? "sent" : "failed");
     } catch {

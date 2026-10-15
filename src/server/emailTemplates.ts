@@ -6,6 +6,7 @@ import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, SUBSCRIBE_HREF } from "@/lib/plan"
 import { countryOf, type CountryCode } from "@/lib/country";
 import type { EmailKind } from "@/lib/emailKinds";
 import { localizeCopy } from "@/content/locale";
+import { detailLines, type ReportDetails } from "@/lib/questionReport";
 import type { Email } from "./email";
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
@@ -250,13 +251,17 @@ export function reminderEmail(to: string, origin: string, children: ReminderChil
   });
 }
 
-export function questionReportEmail(to: string, p: { unitKey: string; prompt: string; reason: string }, origin: string): Email {
+export function questionReportEmail(
+  to: string,
+  p: { unitKey: string; prompt: string; reason: string; curriculum?: string; details?: ReportDetails },
+  origin: string,
+): Email {
   return layout({
     to,
     origin,
     subject: `Question reported: ${p.unitKey}`,
     heading: "A question was reported",
-    body: [`Unit: ${p.unitKey}`, `Reason: ${p.reason}`, `Question: ${p.prompt}`],
+    body: [`Unit: ${p.unitKey}`, ...(p.curriculum ? [`Curriculum: ${p.curriculum}`] : []), `Reason: ${p.reason}`, `Question: ${p.prompt}`, ...detailLines(p.details)],
   });
 }
 
