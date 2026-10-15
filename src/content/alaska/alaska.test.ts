@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import outcomes from "../../../docs/research/alaska/outcomes.json";
 import { COURSES } from "../all";
 import { FRAMEWORKS, getFramework, UPCOMING_FRAMEWORKS } from "../frameworks";
 import { localeOf, questionText } from "../locale";
@@ -64,7 +65,24 @@ describe("Alaska", () => {
     );
     for (const { u, key } of own) {
       expect(Object.keys(u.standards), `${key} carries only Alaska standards`).toEqual(["us-ak"]);
-      expect(key.split("/")[1], `${key} is a social studies unit`).toBe("social");
+      expect(["social", "science"], `${key} is a social studies or science unit`).toContain(key.split("/")[1]);
     }
+  });
+
+  it("has a unit for every science standard and every ELA standard that can be practised", () => {
+    // Writing, speaking and listening, fluency (RF.n.4) and "read a range of texts" (RL/RI.n.10) need free text or a
+    // voice, and RL.n.8 is "not applicable to literature". Middle school science is one 6-8 span.
+    const skip = /^(W|SL)\.|^RF\.\w+\.4$|^R[LI]\.[\w-]+\.10$|^RL\.[\w-]+\.8$/;
+    const span = (key: string) => (/^[678]\/science$/.test(key) ? "ms/science" : key);
+    const cited = new Map<string, Set<string>>();
+    for (const { c, u } of alaska) {
+      const key = span(`${c.grade}/${c.subject}`);
+      const codes = (u.standards["us-ak"] ?? "").split(" · ")[0].split(/;\s*/);
+      for (const code of codes) (cited.get(key) ?? cited.set(key, new Set()).get(key)!).add(code.trim());
+    }
+    const missing = Object.entries(outcomes as Record<string, { idx: string }[]>)
+      .filter(([key]) => /\/(language|science)$/.test(key))
+      .flatMap(([key, list]) => list.filter((o) => !skip.test(o.idx) && !cited.get(span(key))?.has(o.idx)).map((o) => `${key} ${o.idx}`));
+    expect(missing).toEqual([]);
   });
 });

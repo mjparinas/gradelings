@@ -349,4 +349,16 @@ export const lessons: GradeLessons = {
     ["Many years is a long time.", "That is a slow change."],
     "slow",
   ),
+  "science/ak-g2-habitats": lesson(
+    ["A habitat is a place where a living thing lives.", "Caribou live on the tundra. Moose live in forests. Sea otters live in the ocean.", "Each habitat gives its animals food, water and shelter."],
+    "Which animal lives on the sea ice: a polar bear or a camel?",
+    ["A camel lives in a hot desert.", "A polar bear hunts seals on the ice."],
+    "a polar bear",
+  ),
+  "science/ak-g2-land-water": lesson(
+    ["Land can be mountains, valleys, plains, islands or peninsulas.", "Water can be rivers, lakes, oceans, bays or glaciers.", "Denali is a mountain. The Yukon is a river. Kodiak is an island."],
+    "Land with water all around it is an…?",
+    ["A peninsula has water on three sides.", "Land with water all around is an island."],
+    "island",
+  ),
 };

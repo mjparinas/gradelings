@@ -117,6 +117,9 @@ for (let i = 0; Date.now() < deadline && !done; i++) {
   sawChoice = true;
   // Start from a different choice each question, so a miss doesn't depend on where the answer sits.
   const n = await choices.count();
+  // Only a miss seen here counts: `step` above can answer wrongly while the next question loads,
+  // leaving a shaken choice whose "try again" bar this loop never saw.
+  let missedHere = false;
   for (let j = 0; j < n && !done; j++) {
     const pick = choices.nth((i + j) % n);
     if (await pick.isDisabled()) continue;
@@ -132,6 +135,7 @@ for (let i = 0; Date.now() < deadline && !done; i++) {
         await shootAll(page, cdp, SHOTS, "feedback-retry");
       }
       sawRetry = true;
+      missedHere = true;
       await bar.getByRole("button", { name: "OK", exact: true }).click({ force: true });
       // Wait for the retry bar to unmount and the remaining choices to unlock before
       // attempting the next answer. Playwright's click can resolve before React commits.
@@ -140,7 +144,7 @@ for (let i = 0; Date.now() < deadline && !done; i++) {
     } else if (text.includes("✓")) {
       // The "correct" bar carries a tick as well as turning green (that is how we got here).
       const missed = page.locator('[data-testid="choice"].animate-shake');
-      if (!(await missed.count())) break; // right first time: nothing to compare with, next question
+      if (!missedHere || !(await missed.count())) break; // right first time: nothing to compare with, next question
       await shootAll(page, cdp, SHOTS, "feedback-correct");
       check(/✓/.test(await pick.innerText()), "the right answer has a tick as well as turning green");
       const [good, bad] = await Promise.all([pick.evaluate(visibleColour), missed.first().evaluate(visibleColour)]);

@@ -97,6 +97,34 @@ const ECONOMY: Q[] = [
   ["How does a budget deficit affect Alaska's government?", "it must cut spending, find new revenue or use savings", ["nothing happens", "the federal government pays it all"], "Alaska has used savings to cover deficits.", true],
 ];
 
+const RIGHTS: Q[] = [
+  ["The Alaska Native Brotherhood, founded in Sitka in 1912, worked for…", "citizenship, voting rights and an end to discrimination", ["the sale of Alaska to Russia", "closing village schools"], "The Alaska Native Sisterhood followed in 1915."],
+  ["William Paul, a Tlingit lawyer, won a 1922 court case that defended…", "an Alaska Native man's right to vote", ["the purchase of Alaska", "a new oil pipeline"], "He was later elected to the territorial legislature."],
+  ["The Indian Citizenship Act of 1924 made Native Americans…", "US citizens", ["citizens of Russia", "owners of all federal land"], "Some states and territories still tried to limit their votes."],
+  ["In 1925 the Alaska territorial legislature passed a literacy test for voting. Who did it target?", "Alaska Native voters", ["no one", "only miners from other states"], "Rules can be written to keep some people from voting."],
+  ["Elizabeth Peratrovich, a Tlingit civil rights leader, spoke for a law that banned…", "discrimination in public places", ["fishing", "the right to vote"], "Businesses had posted signs refusing service to Native people."],
+  ["Alaska's Anti-Discrimination Act became law in…", "1945", ["1867", "1990"], "It came almost 20 years before the federal Civil Rights Act of 1964."],
+  ["Which governor signed the Anti-Discrimination Act of 1945?", "Ernest Gruening", ["William Seward", "William Egan"], "He was the territorial governor."],
+  ["Alaska celebrates Elizabeth Peratrovich Day on…", "February 16", ["July 4", "October 18"], "That is the day the act was signed."],
+  ["The Tundra Times, founded in 1962 by Howard Rock, was…", "a statewide Alaska Native newspaper", ["a fishing company", "a radio show about weather"], "It helped build support for Native land claims."],
+  ["The Alaska Federation of Natives was founded in 1966 to…", "press for a fair settlement of Native land claims", ["sell Alaska to Russia", "run the state's oil fields"], "It united Native groups across Alaska."],
+  ["The Molly Hootch case, settled in 1976, led the state to…", "build high schools in villages", ["close village schools", "end all school sports"], "Before it, many teens had to leave home for high school."],
+  ["In 2014 Alaska made how many Alaska Native languages official languages of the state?", "20", ["2", "200"], "English is also an official language."],
+  ["Tribal sovereignty means a Tribe has…", "the inherent right to govern itself", ["no government", "the power to print US money"], "It existed before the United States."],
+  ["Which document sets up a Tribe's government?", "a Tribal constitution", ["the Russian treaty of 1867", "a corporation's stock certificate"], "Many Alaska Tribes adopted constitutions in the 1930s and after."],
+  ["How is an ANCSA corporation different from a Tribal government?", "a corporation is a business owned by shareholders; a Tribe is a sovereign government", ["they are exactly the same", "a corporation can make Tribal laws"], "ANCSA created corporations, not Tribes."],
+  ["ANILCA (1980) gives rural Alaskans a priority for…", "subsistence hunting and fishing on federal lands", ["oil leases", "statehood"], "Subsistence is central to many communities."],
+  ["In 1999 the Alaska Supreme Court decided in John v. Baker that…", "Tribes can decide child custody cases for their members", ["Tribes no longer exist", "only the federal government can hear any case"], "It recognized Tribal courts' authority.", true],
+  ["In 1998 the US Supreme Court ruled in Alaska v. Native Village of Venetie that…", "most ANCSA lands are not Indian country", ["Alaska must return to Russia", "Tribes cannot exist in Alaska"], "The ruling limited Tribal power over land.", true],
+  ["In 2020 Elizabeth Peratrovich was honored on…", "a US one-dollar coin", ["the Alaska flag", "a postage stamp only in Russia"], "The Native American dollar coin features a different honoree most years.", true],
+  ["Why did Alaska Native leaders organize statewide in the 1960s?", "the state was selecting land that Native people used and claimed", ["they wanted to stop statehood after it happened", "they had no land to protect"], "Land claims became urgent after statehood.", true],
+  ["How does the federal trust relationship with Tribes come from the US Constitution?", "the Constitution gives Congress power to regulate commerce with Indian Tribes", ["the Constitution never mentions Tribes", "it comes only from state law"], "This is in the Commerce Clause.", true],
+  ["Why did the 1945 Act matter beyond Alaska?", "it was one of the first civil rights laws of its kind in the United States", ["it ended the Civil War", "it made Alaska a state"], "It came before most national civil rights laws.", true],
+  ["How did Alaska Native veterans of World War II strengthen the push for civil rights?", "they had served the country yet faced discrimination at home", ["they did not serve", "they opposed all rights"], "Service made the unfairness plain.", true],
+  ["Which is an example of informed action at the Tribal level?", "voting in a Tribal council election", ["ignoring a public meeting", "moving to another country"], "Citizens act at many levels of government.", true],
+  ["In 2022 Alaska's Legislature passed a law that formally recognized…", "the federally recognized Tribes in Alaska", ["Russia's claim to Alaska", "the end of Tribal courts"], "It affirmed the State's relationship with Tribes.", true],
+];
+
 export const SOCIAL_9: Unit[] = [
   bankUnit({
     id: "ak-g9-alaska-constitution",
@@ -124,5 +152,14 @@ export const SOCIAL_9: Unit[] = [
     parentNote: "Alaska's markets and industries (oil, seafood, tourism, health care and federal spending), the causes and effects of its boom-and-bust economy, the Permanent Fund and the dividend, and how resource revenue shapes the state's government and budget choices.",
     standards: ["SS.AKH.6.8.1; SS.AKH.6.11.2; SS.AKH.6.11.1; SS.9-12.9.7", "the Permanent Fund and dividend, Alaska's boom-and-bust economy and its industries, and the role of natural resources in the development of Alaska's government"],
     items: ECONOMY,
+  }),
+  bankUnit({
+    id: "ak-g9-native-rights",
+    title: "Alaska Native Rights & Sovereignty",
+    emoji: "✊",
+    blurb: "Civil rights, self-government and Tribal sovereignty",
+    parentNote: "How Alaska Native people have defended their rights and self-government: the Alaska Native Brotherhood and Sisterhood, William Paul and voting rights, Elizabeth Peratrovich and the Anti-Discrimination Act of 1945, the Molly Hootch case, Tribal sovereignty and constitutions, and court cases about Tribal powers. Presented factually and in the present tense.",
+    standards: ["SS.AKH.5.10.2; SS.AKH.5.6.1; SS.9-12.8.10; SS.AKH.5.6.2; SS.AKH.5.8.2", "how Alaskans have challenged the status quo to protect civil rights, how Tribal sovereignty has been defended, federal Indian policy and the relationship with Tribal governments, and court cases that shaped Alaska"],
+    items: RIGHTS,
   }),
 ];

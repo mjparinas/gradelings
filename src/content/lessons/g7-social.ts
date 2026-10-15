@@ -955,4 +955,22 @@ export const lessons: GradeLessons = {
     ["There were few roads.", "Boats could carry goods and people."],
     "Boats could carry goods and people.",
   ),
+  "social/ak-g7-landforms-biomes": lesson(
+    ["Glaciers carve U-shaped valleys and fjords; rivers carve V-shaped valleys and build deltas.", "Volcanoes form where one plate sinks under another, as along the Aleutian Islands.", "The moon's gravity causes tides, and Earth's tilt causes seasons."],
+    "A valley is U-shaped with a small stream in it. What most likely carved it?",
+    ["Rivers make V-shaped valleys.", "A U shape is the mark of a glacier."],
+    "a glacier",
+  ),
+  "social/ak-g7-circumpolar-north": lesson(
+    ["The circumpolar north is the region that circles the Arctic, across several countries.", "Arctic peoples adapt to their own lands in different ways; never treat them as one.", "Alaska trades with the world: seafood goes to Asia, and Anchorage is a cargo hub."],
+    "Why is Anchorage a busy stop for cargo planes?",
+    ["Look at a globe: the short route between Asia and North America passes near Alaska.", "Planes stop there to refuel and switch cargo."],
+    "it is on short routes between Asia and North America",
+  ),
+  "social/ak-g7-russian-america": lesson(
+    ["Russian fur hunters crossed Siberia and the Bering Sea looking for sea otter furs.", "The Russian-American Company ran trade from posts like Kodiak and Sitka; many Alaska Native people were forced to work or resisted.", "Russia sold its claim in 1867 because Alaska was far away, costly and less profitable."],
+    "Put in order: Battle of Sitka, Bering reaches Alaska, Russia sells Alaska.",
+    ["Bering reached Alaska in 1741.", "The Battle of Sitka was in 1804, and the sale in 1867."],
+    "Bering reaches Alaska → Battle of Sitka → Russia sells Alaska",
+  ),
 };

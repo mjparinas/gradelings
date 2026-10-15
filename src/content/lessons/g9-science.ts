@@ -529,4 +529,10 @@ export const lessons: GradeLessons = {
     ["The barnacle benefits.", "The whale is neither helped nor harmed: commensalism."],
     "commensalism",
   ),
+  "science/ak-g9-ecosystems": lesson(
+    ["Carrying capacity is the largest population an environment can support over time.", "Only about 10% of the energy at one trophic level passes to the next.", "Disturbances like fire start succession; people can reduce their impact with good planning."],
+    "A herd grows past what its food can support. What usually happens next?",
+    ["The food runs out faster than it regrows.", "The population falls back below carrying capacity."],
+    "the population crashes",
+  ),
 };

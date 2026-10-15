@@ -505,4 +505,10 @@ export const lessons: GradeLessons = {
     ["Tilted toward the Sun means more direct sunlight.", "More direct sunlight means summer."],
     "summer",
   ),
+  "science/ak-g8-space": lesson(
+    ["Earth's axis is tilted about 23.5°, which causes the seasons.", "North of the Arctic Circle, the sun stays up all day in summer and down all day in winter.", "Gravity holds the moon in orbit around Earth and the planets around the sun."],
+    "Why does Utqiaġvik have polar night in December?",
+    ["In December the North Pole is tilted away from the sun.", "Places far north stay in Earth's shadow all day."],
+    "the North Pole tilts away from the sun",
+  ),
 };

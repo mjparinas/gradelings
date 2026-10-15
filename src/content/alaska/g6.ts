@@ -9,6 +9,8 @@ import { RML_6 as washingtonLanguageRmlUpperRML_6 } from "../washington/units/la
 import { SPELLING_6 as washingtonLanguageSpellingSPELLING_6 } from "../washington/units/language-spelling";
 import { G6_UNITS as washingtonMathUpperG6_UNITS } from "../washington/units/math-upper";
 import { SCIENCE_6 as washingtonScience68SCIENCE_6 } from "../washington/units/science-68";
+import { LANGUAGE_6 as californiaLanguage6 } from "../california/units/language-g6";
+import { SCIENCE_COPIES as californiaScience6Science, OWN_SCIENCE as californiaScience6Own } from "../california/units/science-g6";
 import { alaskaGrade } from "./kit";
 import { G6 as washingtonSocial59G6G6 } from "../washington/units/social-59-g6";
 import { OWN } from "./units/own-g6";
@@ -17,8 +19,8 @@ import { OWN } from "./units/own-g6";
 // the download carries those files and not the other frameworks' whole grades.
 const POOL: Pool = {
   math: [...ontarioG6Math, ...albertaG6Math, ...washingtonMathUpperG6_UNITS],
-  language: [...ontarioG6Language, ...washingtonLanguageRmlUpperRML_6, washingtonLanguageSpellingSPELLING_6],
-  science: [newBrunswickG6ScienceSenses, ...washingtonScience68SCIENCE_6, ...ontarioG8Science],
+  language: [...ontarioG6Language, ...washingtonLanguageRmlUpperRML_6, washingtonLanguageSpellingSPELLING_6, ...californiaLanguage6],
+  science: [newBrunswickG6ScienceSenses, ...washingtonScience68SCIENCE_6, ...ontarioG8Science, ...californiaScience6Science, ...californiaScience6Own],
   social: [...washingtonSocial59G6G6],
 };
 

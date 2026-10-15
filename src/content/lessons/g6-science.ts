@@ -511,4 +511,22 @@ export const lessons: GradeLessons = {
     ["You give up some cleaning to save money.", "Giving up one thing for another is a trade-off."],
     "a trade-off",
   ),
+  "science/ak-g6-weather": lesson(
+    ["An air mass is a huge body of air with about the same temperature and moisture.", "Where two air masses meet is a front. Fronts bring clouds, rain, snow or a change in temperature.", "The sun's energy drives evaporation, and gravity pulls rain, snow and rivers back down."],
+    "Cold, dry arctic air pushes in under warmer air. What usually happens?",
+    ["Cold air pushing in is a cold front.", "Temperatures drop and clouds or snow can form."],
+    "the temperature drops",
+  ),
+  "science/ak-g6-climate": lesson(
+    ["Climate depends on latitude, nearness to the ocean, mountains and winds.", "Oceans keep coasts milder. Mountains can block moist air and make a dry rain shadow.", "Burning fuels adds greenhouse gases, which trap heat and warm Earth."],
+    "Why is a coastal town milder than an inland town at the same latitude?",
+    ["Water warms and cools slowly.", "The ocean keeps the coast from getting very hot or very cold."],
+    "the ocean keeps it milder",
+  ),
+  "science/ak-g6-growth": lesson(
+    ["Animals have behaviours that help them reproduce, like salmon returning to their home stream.", "Plants use flowers, nectar and fruit to attract animals that spread pollen and seeds.", "Growth depends on genes and on the environment, like light, water and food."],
+    "Fireweed spreads by underground roots. Is that sexual or asexual reproduction?",
+    ["The new plant grows from the parent's root.", "It has only one parent, so it is a copy."],
+    "asexual",
+  ),
 };

@@ -10,6 +10,7 @@ import { SCIENCE_K as oregonScienceK2SCIENCE_K } from "../oregon/units/science-k
 import { RML_K as washingtonLanguageRmlEarlyRML_K } from "../washington/units/language-rml-early";
 import { K_UNITS as washingtonMathEarlyK_UNITS } from "../washington/units/math-early";
 import { SCIENCE_K as washingtonScienceK2SCIENCE_K } from "../washington/units/science-k2";
+import { LANGUAGE_K as californiaLanguageK } from "../california/units/language-k";
 import { alaskaGrade } from "./kit";
 import { units as ontarioKSocial } from "../ontario/k-social";
 import { socialUnits as manitobaGkMoreSocial } from "../manitoba/units/gk-more-social";
@@ -20,7 +21,7 @@ import { SOCIAL_K as californiaSocialK } from "../california/units/social-k";
 // the download carries those files and not the other frameworks' whole grades.
 const POOL: Pool = {
   math: [...unitsOf(ontarioK, "math"), ...albertaKMath, ...manitobaGkMoreMath, ...washingtonMathEarlyK_UNITS],
-  language: [...unitsOf(ontarioK, "language"), ...albertaKLanguage, ...manitobaGkMoreLanguage, washingtonLanguageRmlEarlyRML_K],
+  language: [...unitsOf(ontarioK, "language"), ...albertaKLanguage, ...manitobaGkMoreLanguage, washingtonLanguageRmlEarlyRML_K, ...californiaLanguageK],
   science: [...albertaKScience, ...washingtonScienceK2SCIENCE_K, ...oregonScienceK2SCIENCE_K],
   social: [...ontarioKSocial, ...manitobaGkMoreSocial, ...oregonSocialK3OWN_SOCIAL_K, ...californiaSocialK],
 };

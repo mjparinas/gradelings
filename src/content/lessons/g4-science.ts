@@ -511,4 +511,16 @@ export const lessons: GradeLessons = {
     ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
     "the bare hillside",
   ),
+  "science/ak-g4-earth-hazards": lesson(
+    ["Maps show patterns: volcanoes and earthquakes often line up where Earth's plates meet.", "In Alaska, volcanoes curve along the Aleutian Islands, and big earthquakes strike near the southern coast.", "People reduce harm with strong buildings, warning sirens and routes to high ground."],
+    "A strong earthquake shakes a coastal town. What should people do next?",
+    ["An undersea earthquake can cause a tsunami.", "A tsunami can arrive within minutes, so people move to high ground."],
+    "move to high ground",
+  ),
+  "science/ak-g4-energy-resources": lesson(
+    ["Energy comes from natural resources: oil, gas, coal, wind, sunlight, moving water and heat inside Earth.", "Oil, gas and coal will run out. Wind, sunlight and moving water will not.", "Using energy can affect the land, water and air, so people look for cleaner ways."],
+    "A town uses a dam on a river to make electricity. What resource does it use?",
+    ["The dam turns falling water into electricity.", "That is moving water, or hydropower."],
+    "moving water (hydropower)",
+  ),
 };

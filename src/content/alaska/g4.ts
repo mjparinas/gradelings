@@ -11,6 +11,8 @@ import { RML_4 as washingtonLanguageRmlMiddleRML_4 } from "../washington/units/l
 import { SPELLING_4 as washingtonLanguageSpellingSPELLING_4 } from "../washington/units/language-spelling";
 import { G4_UNITS as washingtonMathMiddleG4_UNITS } from "../washington/units/math-middle";
 import { SCIENCE_4 as washingtonScience35SCIENCE_4 } from "../washington/units/science-35";
+import { LANGUAGE_4 as californiaLanguage4 } from "../california/units/language-g4";
+import { SCIENCE_COPIES as californiaScience4Science, OWN_SCIENCE as californiaScience4Own } from "../california/units/science-g4";
 import { alaskaGrade } from "./kit";
 import { historyDetective5 as oregonSocialCopiesHistoryDetective5, worldMaps6 as oregonSocialCopiesWorldMaps6 } from "../oregon/units/social-copies";
 import { OWN_SOCIAL_5 as oregonSocialG5OWN_SOCIAL_5 } from "../oregon/units/social-g5";
@@ -20,8 +22,8 @@ import { OWN } from "./units/own-g4";
 // the download carries those files and not the other frameworks' whole grades.
 const POOL: Pool = {
   math: [...ontarioG4Math, ...albertaG4Math, ...washingtonMathMiddleG4_UNITS],
-  language: [...ontarioG4Language, washingtonLanguageRmlMiddleRML_4, washingtonLanguageSpellingSPELLING_4, oregonLanguageReadingFIRSTHAND_SECONDHAND],
-  science: [...ontarioG4Science, ...manitobaG4MoreScience, ...washingtonScience35SCIENCE_4, ...(oregonScienceCopiesSCIENCE_COPIES["4"] ?? [])],
+  language: [...ontarioG4Language, washingtonLanguageRmlMiddleRML_4, washingtonLanguageSpellingSPELLING_4, oregonLanguageReadingFIRSTHAND_SECONDHAND, ...californiaLanguage4],
+  science: [...ontarioG4Science, ...manitobaG4MoreScience, ...washingtonScience35SCIENCE_4, ...(oregonScienceCopiesSCIENCE_COPIES["4"] ?? []), ...californiaScience4Science, ...californiaScience4Own],
   social: [oregonSocialCopiesWorldMaps6, oregonSocialCopiesHistoryDetective5, ...oregonSocialG5OWN_SOCIAL_5],
 };
 

@@ -11,6 +11,8 @@ import { SCIENCE_3 as oregonScience35SCIENCE_3 } from "../oregon/units/science-3
 import { RML_3 as washingtonLanguageRmlMiddleRML_3 } from "../washington/units/language-rml-middle";
 import { G3_UNITS as washingtonMathMiddleG3_UNITS } from "../washington/units/math-middle";
 import { SCIENCE_3 as washingtonScience35SCIENCE_3 } from "../washington/units/science-35";
+import { LANGUAGE_3 as californiaLanguage3 } from "../california/units/language-g3";
+import { SCIENCE_COPIES as californiaScience3Science } from "../california/units/science-g3";
 import { alaskaGrade } from "./kit";
 import { team as manitobaG3MoreSocialTeam } from "../manitoba/units/g3-more-social";
 import { life as manitobaG3SocialBLife } from "../manitoba/units/g3-social-b";
@@ -20,8 +22,8 @@ import { OWN } from "./units/own-g3";
 // the download carries those files and not the other frameworks' whole grades.
 const POOL: Pool = {
   math: [...ontarioG3Math, manitobaG3MathPolygons, ...washingtonMathMiddleG3_UNITS],
-  language: [...ontarioG3Language, manitobaG3MoreLanguageWonder, washingtonLanguageRmlMiddleRML_3],
-  science: [...ontarioG3Science, manitobaG3ScienceLife, manitobaG3ScienceSpeed, ...washingtonScience35SCIENCE_3, ...oregonScience35SCIENCE_3],
+  language: [...ontarioG3Language, manitobaG3MoreLanguageWonder, washingtonLanguageRmlMiddleRML_3, ...californiaLanguage3],
+  science: [...ontarioG3Science, manitobaG3ScienceLife, manitobaG3ScienceSpeed, ...washingtonScience35SCIENCE_3, ...oregonScience35SCIENCE_3, ...californiaScience3Science],
   social: [manitobaG3MoreSocialTeam, manitobaG3SocialBLife],
 };
 
