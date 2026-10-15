@@ -81,25 +81,64 @@ export function cardQuestion(q: Question): OgQuestion | undefined {
   return undefined;
 }
 
-/** "Can your Grade 4 solve this?" ("4th grader" in the US) with one of the unit's own questions, seeded like the unit page. */
-export function unitCard(params: Params): OgCardText | undefined {
-  const r = resolve(params);
-  if (!r?.course || !r.unit || !r.unit.standards[r.framework.id]) return undefined;
-  const { framework: f, grade, course, unit } = r;
-  const base = {
-    kicker: `${f.shortName} · ${gradeLabel(f, grade)} ${subjectSeoTitle(course.subject)} · ${unit.title}`,
-    colour: getSubjectMeta(course.subject).colour,
-    critter: critterFor(course.subject),
-  };
+type Found = NonNullable<ReturnType<typeof resolve>>;
+
+/** The unit's question card, seeded like the unit page, or undefined when none of its questions suits a card. */
+function questionCard(f: Framework, grade: GradeId, course: NonNullable<Found["course"]>, unit: NonNullable<Found["unit"]>): OgCardText | undefined {
   const key = unitKey(grade, course.subject, unit.id);
   for (const difficulty of [1, 2, 3] as const) {
     const qs = withSeed(hashSeed(`${sampleSeed(f, key)}:card:${difficulty}`), () => unit.generate({ difficulty }));
     for (const q of qs) {
       const question = cardQuestion(q);
-      if (question) return { ...base, title: `Can your ${gradeChild(f, grade)} solve this?`, question };
+      if (question) {
+        return {
+          kicker: `${f.shortName} · ${gradeLabel(f, grade)} ${subjectSeoTitle(course.subject)} · ${unit.title}`,
+          title: `Can your ${gradeChild(f, grade)} solve this?`,
+          colour: getSubjectMeta(course.subject).colour,
+          critter: critterFor(course.subject),
+          question,
+        };
+      }
     }
   }
-  return { ...base, kicker: `${f.name} curriculum · ${gradeLabel(f, grade)}`, title: unit.title, line: `${gradeLabel(f, grade)} ${subjectSeoTitle(course.subject)} practice` };
+  return undefined;
+}
+
+/** "Can your Grade 4 solve this?" ("4th grader" in the US) with one of the unit's own questions, seeded like the unit page. */
+export function unitCard(params: Params): OgCardText | undefined {
+  const r = resolve(params);
+  if (!r?.course || !r.unit || !r.unit.standards[r.framework.id]) return undefined;
+  const { framework: f, grade, course, unit } = r;
+  return (
+    questionCard(f, grade, course, unit) ?? {
+      kicker: `${f.name} curriculum · ${gradeLabel(f, grade)}`,
+      title: unit.title,
+      line: `${gradeLabel(f, grade)} ${subjectSeoTitle(course.subject)} practice`,
+      colour: getSubjectMeta(course.subject).colour,
+      critter: critterFor(course.subject),
+    }
+  );
+}
+
+/**
+ * The grade's "Can your Grade 4 solve this?" card, for the grade's curriculum page and parent guide: a math question
+ * first (then the other subjects), from a unit picked by a seed per framework and grade, so it is the same on every
+ * build. Undefined when no question in the grade suits a card; the page then keeps its plain card.
+ */
+export function gradeQuestionCard(params: { framework: string; grade: string }): OgCardText | undefined {
+  const r = resolve(params);
+  if (!r || r.course || !params.grade) return undefined;
+  const { framework: f, grade } = r;
+  const courses = [...coursesFor(f, grade)].sort((a, b) => Number(b.subject === "math") - Number(a.subject === "math"));
+  for (const course of courses) {
+    const units = course.units.filter((u) => u.standards[f.id]);
+    const start = units.length ? hashSeed(`${f.id}:${grade}:${course.subject}:grade-card`) % units.length : 0;
+    for (let i = 0; i < units.length; i++) {
+      const card = questionCard(f, grade, course, units[(start + i) % units.length]);
+      if (card) return card;
+    }
+  }
+  return undefined;
 }
 
 /** The tall Pinterest card for a printable worksheet. */

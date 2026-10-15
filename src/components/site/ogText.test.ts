@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { FRAMEWORKS, getFramework } from "@/content/frameworks";
 import { gradeSlug } from "@/content/subjects";
 import { coursesFor, gradesWithContent } from "./curriculum";
-import { cardQuestion, countMilestoneCard, curriculumCard, guideCard, gradeSheetsCard, reportCardCard, unitCard, unitMilestoneCard, worksheetCard } from "./ogText";
+import { cardQuestion, countMilestoneCard, curriculumCard, guideCard, gradeQuestionCard, gradeSheetsCard, reportCardCard, unitCard, unitMilestoneCard, worksheetCard } from "./ogText";
 import type { Question } from "@/content/types";
 import { GUIDE_FRAMEWORKS } from "@/content/guides";
 
@@ -77,6 +77,28 @@ describe("share cards", () => {
       }
     }
     expect(asked / total).toBeGreaterThan(0.6);
+  });
+
+  it("asks \"Can your Grade 4 solve this?\" on a grade's pages, math first, the same on every build", () => {
+    const card = gradeQuestionCard({ framework: "bc", grade: "grade-4" });
+    expect(card).toMatchObject({ title: "Can your Grade 4 solve this?", critter: "hoot", colour: "#4f8ef7" });
+    expect(card?.kicker).toMatch(/^BC · Grade 4 Math · /);
+    expect(card?.question?.prompt).toBeTruthy();
+    expect(gradeQuestionCard({ framework: "bc", grade: "grade-4" })).toEqual(card);
+    expect(gradeQuestionCard({ framework: "washington", grade: "grade-4" })?.title).toBe("Can your 4th grader solve this?");
+    expect(gradeQuestionCard({ framework: "bc", grade: "grade-42" })).toBeUndefined();
+    expect(gradeQuestionCard({ framework: "quebec", grade: "grade-4" })).toBeUndefined();
+  });
+
+  it("has a question card for every grade, with no emoji", () => {
+    for (const f of FRAMEWORKS) {
+      for (const g of gradesWithContent(f)) {
+        const card = gradeQuestionCard({ framework: f.slug, grade: gradeSlug(g) });
+        expect(card?.question, `${f.id} ${g}`).toBeDefined();
+        const text = [card?.title, card?.kicker, card?.question?.prompt, ...(card?.question?.choices ?? [])].join(" ");
+        expect(text).not.toMatch(/\p{Extended_Pictographic}/u);
+      }
+    }
   });
 
   it("only uses questions that read well without their picture", () => {
