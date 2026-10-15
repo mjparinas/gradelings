@@ -192,7 +192,7 @@ await page.getByRole("button", { name: parentEmail }).click();
 await page.getByRole("button", { name: "Give Lifetime Access" }).click();
 check(await page.getByText("Lifetime access given.").waitFor({ timeout: 8000 }).then(() => true, () => false), "the admin gives a family lifetime access");
 // The family reloads after the message, so wait for the new access line.
-check(await page.getByText("Lifetime", { exact: true }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the family shows lifetime access");
+check(await page.getByText("Lifetime", { exact: true }).first().waitFor({ timeout: 8000 }).then(() => true, () => false), "the family shows lifetime access");
 check(await vis(page.getByRole("heading", { name: "Email This Family" })), "a family's page offers to email them");
 check(await vis(page.getByText(/Last sign-in:/)), "a family's page shows the last sign-in");
 // With no email keys on the server, sending is refused and nothing goes out.
