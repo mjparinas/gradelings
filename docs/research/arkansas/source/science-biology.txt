@@ -1,0 +1,1786 @@
+                                Biology - Integrated
+
+
+
+
+                                              2016
+Re-aligned Fall 2024 to the Arkansas Mathematics Standards, Arkansas English Language Arts Standards, and
+Arkansas Disciplinary Literacy Standards
+2
+           Biology - Integrated
+    Arkansas K-12 Science Standards
+    Arkansas Department of Education
+                  2016
+                                                                       Table of Contents
+Arkansas K-12 Science Standards Overview .............................................................................................................. 3
+How to Read ...............................................................................................................................................................6
+Biology - Integrated Course Learning Progression Chart............................................................................................. 7
+Biology - Integrated Course Overview ......................................................................................................................... 8
+Biology - Integrated Topics Overview .......................................................................................................................... 9
+Topic 1: Cycling of Matter and Energy....................................................................................................................... 11
+
+Topic 2: Structure and Function ............................................................................................................................... 14
+
+Topic 3: Biodiversity and Population Dynamics ........................................................................................................ 17
+
+Topic 4: Genetic Variations in Organisms ................................................................................................................. 21
+
+Topic 5: Evolution by Natural Selection .................................................................................................................... 24
+
+Topic 6: Life and Earth’s Systems ............................................................................................................................ 28
+
+Topic Seven: Human Impacts on Earth’s Systems ................................................................................................... 32
+
+Contributors ............................................................................................................................................................. 37
+
+
+
+
+Notes:
+     1. Student Performance Expectations (PEs) may be taught in any sequence or grouping within a grade level.
+        Several PEs are described as being “partially addressed in this course” because the same PE is revisited in a
+        subsequent course during which that PE is fully addressed.
+     2. An asterisk (*) indicates an engineering connection to a practice, core idea, or crosscutting concept.
+     3. The Clarification Statements are examples and additional guidance for the instructor. AR indicates Arkansas-
+        specific Clarification Statements.
+     4. The Assessment Boundaries delineate content that may be taught but not assessed in large-scale
+        assessments. AR indicates Arkansas-specific Assessment Boundaries.
+     5. The section entitled “foundation boxes” is reproduced verbatim from A Framework for K-12 Science
+        Education: Practices, Crosscutting Concepts, and Core Ideas. Integrated and reprinted with permission from
+        the National Academy of Sciences.
+     6. The examples given (e.g.,) are suggestions for the instructor.
+     7. Throughout this document, connections are provided to the nature of science as defined by A Framework for
+        K-12 Science Education (NRC 2012).
+     8. Throughout this document, connections are provided to Engineering, Technology, and Applications of
+        Science as defined by A Framework for K-12 Science Education (NRC 2012).
+     9. Each set of PEs lists connections to other disciplinary core ideas (DCIs) within the Arkansas K-12 Science
+        Standards and to the Arkansas English Language Arts Standards, Arkansas Disciplinary Literacy Standards,
+        and the Arkansas Mathematics Standards.
+
+3
+                                                                          Biology - Integrated
+                                                                   Arkansas K-12 Science Standards
+                                                                   Arkansas Department of Education
+                                                                                 2016
+                                    Arkansas K-12 Science Standards Overview
+
+The Arkansas K-12 Science Standards are based on A Framework for K-12 Science Education (NRC 2012) and are
+meant to reflect a new vision for science education. The following conceptual shifts reflect what is new about these
+science standards. The Arkansas K-12 Science Standards
+
+    •   reflect science as it is practiced and experienced in the real world,
+    •   build logically from Kindergarten through Grade 12,
+    •   focus on deeper understanding as well as application of content,
+    •   integrate practices, crosscutting concepts, and core ideas, and
+    •   make explicit connections to literacy and math.
+
+
+As part of teaching the Arkansas K-12 Science Standards, it will be important to instruct and guide students in
+adopting appropriate safety precautions for their student-directed science investigations. Reducing risk and
+preventing accidents in science classrooms begin with planning. The following four steps are recommended in
+carrying out a hazard and risk assessment for any planned lab investigation:
+    1) Identify all hazards. Hazards may be physical, chemical, health, or environmental.
+    2) Evaluate the type of risk associated with each hazard.
+    3) Write the procedure and all necessary safety precautions in such a way as to eliminate or reduce the risk
+       associated with each hazard.
+    4) Prepare for any emergency that might arise in spite of all of the required safety precautions.
+
+According to Arkansas Code Annotated § 6-10-113 (2012) for eye protection, every student and teacher in public
+schools participating in any chemical or combined chemical-physical laboratories involving caustic or explosive
+chemicals or hot liquids or solids is required to wear industrial-quality eye protective devices (eye goggles) at all
+times while participating in science investigations.
+
+The Arkansas K-12 Science Standards outline the knowledge and science and engineering practices that all
+students should learn by the end of high school. The standards are three-dimensional because each student
+performance expectation engages students at the nexus of the following three dimensions:
+
+    •   Dimension 1 describes scientific and engineering practices.
+    •   Dimension 2 describes crosscutting concepts, overarching science concepts that apply across science
+        disciplines.
+    •   Dimension 3 describes core ideas in the science disciplines.
+
+                                           Science and Engineering Practices
+
+The eight practices describe what scientists use to investigate and build models and theories of the world around
+them or that engineers use as they build and design systems. The practices are essential for all students to learn
+and are as follows:
+           1.   Asking questions (for science) and defining problems (for engineering)
+           2.   Developing and using models
+           3.   Planning and carrying out investigations
+           4.   Analyzing and interpreting data
+           5.   Using mathematics and computational thinking
+           6.   Constructing explanations (for science) and designing solutions (for engineering)
+           7.   Engaging in argument from evidence
+           8.   Obtaining, evaluating, and communicating information
+                                                Crosscutting Concepts
+
+
+4
+                                                       Biology - Integrated
+                                                Arkansas K-12 Science Standards
+                                                Arkansas Department of Education
+                                                              2016
+The seven crosscutting concepts bridge disciplinary boundaries and unit core ideas throughout the fields of science
+and engineering. Their purpose is to help students deepen their understanding of the disciplinary core ideas, and
+develop a coherent, and scientifically based view of the world. The seven crosscutting concepts are as follows:
+        1. Patterns- Observed patterns of forms and events guide organization and classification, and prompt
+        questions about relationships and the factors that influence them.
+        2. Cause and effect- Mechanism and explanation. Events have causes, sometimes simple, sometimes
+        multifaceted. A major activity of science is investigating and explaining causal relationships and the
+        mechanisms by which they are mediated. Such mechanisms can then be tested across given contexts and
+        used to predict and explain events in new contexts.
+        3. Scale, proportion, and quantity- In considering phenomena, it is critical to recognize what is relevant at
+        different measures of size, time, and energy and to recognize how changes in scale, proportion, or quantity
+        affect a system’s structure or performance.
+        4. Systems and system models- Defining the system under study—specifying its boundaries and making
+        explicit a model of that system—provides tools for understanding and testing ideas that are applicable
+        throughout science and engineering.
+        5. Energy and matter: Flows, cycles, and conservation- Tracking fluxes of energy and matter into, out of, and
+        within systems helps one understand the systems’ possibilities and limitations.
+        6. Structure and function- The way in which an object or living thing is shaped and its substructure
+        determines many of its properties and functions.
+        7. Stability and change- For natural and built systems alike, conditions of stability and determinants of rates of
+        change or evolution of a system are critical elements of study.
+
+
+                                                 Disciplinary Core Ideas
+
+The disciplinary core ideas describe the content that occurs at each grade or course. The Arkansas K-12 Science
+Standards focus on a limited number of core ideas in science and engineering both within and across the disciplines
+and are built on the notion of learning as a developmental progression. The Disciplinary Core Ideas are grouped into
+the following domains:
+
+    •   Physical Science (PS)
+    •   Life Science (LS)
+    •   Earth and Space Science (ESS)
+    •   Engineering, Technology and Applications of Science (ETS)
+
+
+                            Connections to the Arkansas English Language Arts Standards
+
+Evidence-based reasoning is the foundation of good scientific practice. The Arkansas K-12 Science Standards
+incorporate reasoning skills used in language arts to help students improve mastery and understanding in all three
+disciplines. The Arkansas K-8 Science Committee made every effort to align grade-by-grade with the English
+language arts (ELA) standards so concepts support what students are learning in their entire curriculum.
+Connections to specific ELA standards are listed for each student performance expectation, giving teachers a
+blueprint for building comprehensive cross-disciplinary lessons.
+The intersections between Arkansas K-12 Science Standards and Arkansas ELA Standards teach students to
+analyze data, model concepts, and strategically use tools through productive talk and shared activity. Reading in
+science requires an appreciation of the norms and conventions of the discipline of science, including understanding
+the nature of evidence used, an attention to precision and detail, and the capacity to make and assess intricate
+arguments, synthesize complex information, and follow detailed procedures and accounts of events and concepts.
+These practice-based standards help teachers foster a classroom culture where students think and reason together,
+connecting around the subject matter and core ideas.
+
+5
+                                                      Biology - Integrated
+                                               Arkansas K-12 Science Standards
+                                               Arkansas Department of Education
+                                                             2016
+                             Connections to the Arkansas Disciplinary Literacy Standards
+
+Reading is critical to building knowledge in science. College and career ready reading in science requires an
+appreciation of the norms and conventions of each discipline, such as the kinds of evidence used in science; an
+understanding of domain-specific words and phrases; an attention to precise details; and the capacity to evaluate
+intricate arguments, synthesize complex information, and follow detailed descriptions of events and concepts. When
+reading scientific and technical texts, students need to be able to gain knowledge from challenging texts that often
+make extensive use of elaborate diagrams and data to convey information and illustrate concepts. Students must be
+able to read complex informational texts in science with independence and confidence because the vast majority of
+reading in college and workforce training programs will be sophisticated nonfiction.
+
+For students, writing is a key means of asserting and defending claims, showing what they know about science, and
+conveying what they have experienced, imagined, thought, and felt. To be college and career ready writers, students
+must take task, purpose, and audience into careful consideration, choosing words, information, structures, and
+formats deliberately. They need to be able to use technology strategically when creating, refining, and collaborating
+on writing. They have to become adept at gathering information, evaluating sources, and citing material accurately,
+reporting finds from their research and analysis of sources in a clear and cogent manner. They must have the
+flexibility, concentration, and fluency to produce high-quality first-draft text under a tight deadline and the capacity to
+revisit and make improvements to a piece of writing over multiple drafts when circumstances encourage or require it.
+
+                                 Connections to the Arkansas Mathematics Standards
+
+Science is a quantitative discipline, so it is important for educators to ensure that students’ science learning coheres
+well with their understanding of mathematics. To achieve this alignment, the Arkansas K-12 Science Committee
+made every effort to ensure that the mathematics standards do not outpace or misalign to the grade-by-grade
+science standards. Connections to specific math standards are listed for each student performance expectation,
+giving teachers a blueprint for building comprehensive cross-disciplinary lessons.
+
+
+
+
+6
+                                                       Biology - Integrated
+                                                Arkansas K-12 Science Standards
+                                                Arkansas Department of Education
+                                                              2016
+7
+           Biology - Integrated
+    Arkansas K-12 Science Standards
+    Arkansas Department of Education
+                  2016
+                                   Biology Course Learning Progression Chart
+                                      Topic 3:         Topic 4:
+        Topic 1:      Topic 2:                                           Topic 5:                      Topic 7: Human
+                                    Biodiversity       Genetic                         Topic 6: Life
+       Cycling of     Structure                                        Evolution by                      Impacts on
+                                        and           Variations                       and Earth’s
+       Matter and        and                                             Natural                           Earth’s
+                                    Population            in                            Systems
+        Energy        Function                                          Selection                         Systems
+                                     Dynamics         Organisms
+
+      AR BI-LS1-5    BI-LS1-1      BI-LS2-1          BI-LS1-4         BI-LS4-1        BI-ESS2-2        AR BI-ESS3-1
+
+      BI-LS1-7       AR BI-LS1-2   BI-LS2-2          BI-LS3-1         BI-LS4-2        BI-ESS2-4        AR BI-ESS3-2
+
+      BI-LS2-3       BI-LS1-3      BI-LS2-6          BI-LS3-2         BI-LS4-3        AR BI-ESS2-5     BI-ESS3-3
+
+      AR BI-LS 2-4   BI-LS1-6      AR BI-LS2-7       BI-LS3-3         BI-LS4-4        AR BI-ESS3-5     AR BI-ESS3-4
+
+      BI-LS2-5                     BI-LS2-8                           BI-LS4-5        AR BI6-ETS1-2    AR BI-ESS3-6
+
+      BI-ESS2-6                    AR BI-LS4-6                        AR BI-ESS2-7    AR BI6-ETS1-3    AR BI7-ETS1-1
+
+                                   AR BI3-ETS1-3                                                       AR BI7-ETS1-2
+
+                                   AR BI3-ETS1-4                                                       AR BI7-ETS1-4
+
+    Arkansas Clarification Statement/Assessment Boundary (AR)
+
+
+
+
+8
+                                                        Biology - Integrated
+                                                 Arkansas K-12 Science Standards
+                                                 Arkansas Department of Education
+                                                               2016
+                                     Biology - Integrated Course Overview
+                                                (Course code 420000)
+
+The Arkansas K-12 Science Standards for biology - integrated is an integrated science course that focuses on
+conceptual understanding of foundational life and Earth science core ideas, science and engineering practices, and
+crosscutting concepts, and is an integration of life science, Earth and space science, and engineering design
+standards. It is recommended that students be enrolled in geometry concurrently with this course. Teachers with
+biology, life/Earth, and life science licenses are qualified to teach this course. Students will earn 1 unit of Smart
+Core/biology credit for graduation.
+
+Students in biology - integrated develop understanding of key concepts that help them make sense of the
+interactions between life science and Earth and space science. The ideas are building upon students’ understanding
+of disciplinary ideas, science and engineering practices, and crosscutting concepts from earlier grades. There are
+seven topics in biology - integrated: (1) Cycling of Matter and Energy, (2) Structure and Function, (3) Biodiversity and
+Population Dynamics, (4) Genetic Variations in Organisms, (5) Evolution by Natural Selection, (6) Earth’s Changing
+Climate, and (7) Humans and Natural Systems. The performance expectations (standards) for biology - integrated
+blend core ideas with scientific and engineering practices and crosscutting concepts to support students in
+developing usable knowledge that can be applied across the science disciplines. While the performance
+expectations indicate particular practices to address specific disciplinary core ideas, it is recommended that teachers
+include a variety of practices and strategies in their instruction.
+
+Connections with other science disciplines help high school students develop these capabilities in various contexts.
+For example, in the life sciences students are expected to design, evaluate, and refine a solution for reducing human
+impact on the environment (BI-LS2-7) and to create or revise a simulation to test solutions for mitigating adverse
+impacts of human activity on biodiversity (BI-LS4-6). In the Earth and space sciences, students apply their
+engineering capabilities to reduce human impacts on Earth systems, and improve social and environmental cost-
+benefit ratios (BI-ESS3-2, BI-ESS3-4).
+Additionally, it should be noted the biology - integrated standards are not intended to be used as curriculum. Instead,
+the standards are the minimum that students should know and be able to do. Therefore, teachers should continue to
+differentiate for the needs of their students by adding depth and additional rigor.
+Students in biology - integrated also continue their ability to develop possible solutions for major global problems with
+engineering design challenges. At the high school level, students are expected to engage with major global issues at
+the interface of science, technology, society and the environment, and to bring to light the kinds of analytical and
+strategic thinking that prior training and increased maturity make possible. As in prior levels, these capabilities can
+be thought of in three stages:
+           ● Defining the problem at the high school level requires both qualitative and quantitative analysis. For
+       example, the need to provide food and fresh water for future generations comes into sharp focus when
+       considering the speed at which the world population is growing and conditions in countries that have
+       experienced famine. While high school students are not expected to solve these challenges, they are
+       expected to begin thinking about them as problems that can be addressed, at least in part, through
+       engineering.
+           ● Developing possible solutions for major global problems begins by breaking them down into
+       smaller problems that can be tackled with engineering methods. To evaluate potential solutions, students are
+       expected to not only consider a wide range of criteria but to also recognize that criteria needs to be
+       prioritized. For example, public safety or environmental protection may be more important than cost or even
+       functionality. Decisions on priorities can then guide tradeoff choices.
+           ● Improving designs at the high school level may involve sophisticated methods, such as using
+       computer simulations to model proposed solutions. Students are expected to use such methods to take into
+       account a range of criteria and constraints, anticipate possible societal and environmental impacts, and test
+       the validity of their simulations by comparison to the real world.
+9
+                                                      Biology - Integrated
+                                               Arkansas K-12 Science Standards
+                                               Arkansas Department of Education
+                                                             2016
+                                       Biology - Integrated Topics Overview
+
+The performance expectations in Topic 1: Cycling of Matter and Energy help students answer the question:
+
+     •   How do matter and energy move through an ecosystem?
+
+Students construct explanations, develop models, and use mathematical representations to demonstrate how the
+cycling of carbon-based molecules through photosynthesis and cellular respiration enables the flow of energy among
+organisms and within ecosystems. Students use quantitative models specifically to illustrate the role of
+photosynthesis and cellular respiration as two processes by which carbon is cycled among the biosphere,
+atmosphere, hydrosphere, and geosphere.
+The performance expectations in Topic 2: Structure and Function help students formulate an answer to the
+question:
+
+     •   How do the structures of organisms enable living organisms to function?
+
+Students investigate explanations for the structure and function of cells as the basic units of life, the hierarchical
+systems of organisms, and the role of specialized cells for maintenance and growth. Students demonstrate
+understanding of how systems of cells function together to support the life processes by reading critically, using
+models, and conducting investigations.
+The performance expectations in Topic 3: Biodiversity and Population Dynamics help students answer the
+question:
+
+     •   How do biotic and abiotic factors affect biodiversity?
+
+Students investigate the role of biodiversity in ecosystems and the role of animal behavior on survival of individuals
+and species. Students analyze how organisms interact with each other and their physical environment, how
+organisms change the environment, and how these changes affect both organisms and the environment. Students
+use evidence to explain those interactions and changes. Students explore solutions for major global problems,
+evaluate possible solutions for reducing the impact of human activities on biodiversity, and use computer simulations
+to model and test those solutions, considering a wide range of criteria including cost-benefit analysis.
+The performance expectations in Topic 4: Genetic Variations in Organisms help students in formulating answers
+to these questions:
+
+     •   How are the characteristics of one generation related to previous and future generations?
+
+     •   How does genetic variation contribute to biodiversity?
+
+Students explain the relationship of DNA and chromosomes to cellular division, protein synthesis, and mutations.
+Students analyze the mechanisms of inheritance and gene expression, as well as environmental and genetic causes
+of gene mutations. Students formulate questions and construct arguments about ethical issues related to the genetic
+modification of organisms. Students develop conceptual models for the role of DNA in the unity of life on Earth and
+use statistical models to explain the importance of variation within population for the survival and evolution of
+species.
+The performance expectations in Topic 5: Evolution by Natural Selection help students answer these questions:
+
+     •   Why do different organisms have many similarities?
+
+     •   What causes species to change over time?
+
+
+
+10
+                                                       Biology - Integrated
+                                                Arkansas K-12 Science Standards
+                                                Arkansas Department of Education
+                                                              2016
+Students investigate patterns to find relationships between environmental conditions and natural selection,
+highlighting factors that drive the evolution or extinction of species over time. Students utilize statistics and
+probability to investigate the distribution of genes and traits in a population over time, demonstrating how natural
+selection leads to the adaptation of populations. Students analyze scientific evidence, ranging from the fossil record
+to genetic relationships, to evaluate how multiple lines of evidence support the scientific theories of natural selection
+and evolution.
+The performance expectations in Topic 6: Life and Earth’s Systems help students answer these questions:
+
+     •   How does life influence Earth’s systems?
+
+     •   How do Earth’s systems influence life?
+
+Students investigate the interrelationships between biotic and abiotic factors that contribute to changes in Earth’s
+dynamic systems. Students examine how Earth’s systems may appear stable, change slowly over long periods of
+time, or change abruptly, with significant consequences for living organisms. Students develop models and analyze
+data to explain and forecast changes to Earth’s various climates. Students examine how climate change can occur
+when certain parts of Earth’s systems are altered and predict how living organisms may affect and be affected.
+Students study the relationship of blue-green algae and oxygen concentration in the atmosphere; then, investigate
+how the rate of fresh water intrusion from melting polar ice affects the growth of the blue-green algae. While this
+topic does not address biological processes specifically, instruction should highlight the connection between climate
+and living systems.
+The performance expectations in Topic 7: Human Impacts on Earth’s Systems help students formulate answers
+to these questions:
+
+     •   How have Earth’s systems affected human populations and human activities?
+
+     •   How do human activities impact Earth’s systems?
+
+Students examine the complex interdependence between humans and their environment by simulating specific
+relationships between natural resources, natural hazards, climate, biodiversity, and the sustainability of human
+populations. Students analyze geoscience models to highlight the interactions between Earth’s various systems,
+forecast future rates of global or regional climate change, and predict the resulting impacts on the environment.
+Students utilize science and engineering practices to evaluate and refine solutions that reduce human impacts on
+natural systems, manage natural resources, protect biodiversity, and maintain healthy ecosystems.
+
+
+
+
+11
+                                                      Biology - Integrated
+                                               Arkansas K-12 Science Standards
+                                               Arkansas Department of Education
+                                                             2016
+                                          Biology - Integrated
+     Topic 1: Cycling of Matter and Energy
+     Students who demonstrate understanding can:
+     BI-LS1-5 Use a model to illustrate how photosynthesis transforms light energy into stored chemical
+                energy. [AR Clarification Statement: This PE is fully addressed in this course. Emphasis is on
+                illustrating inputs and outputs of matter and the transfer and transformation of energy in
+                photosynthesis by plants and other photosynthesizing organisms. Examples of models could include
+                diagrams, chemical equations, and conceptual models.] [Assessment Boundary: Assessment does
+                not include specific biochemical steps.]
+     BI-LS1-7 Use a model to illustrate that cellular respiration is a chemical process whereby the bonds of
+                food molecules and oxygen molecules are broken and the bonds in new compounds are
+                formed resulting in a net transfer of energy. [Clarification Statement: Emphasis is on the
+                conceptual understanding of the inputs and outputs of the process of cellular respiration.]
+                [Assessment Boundary: Assessment should not include identification of the steps or specific
+                processes involved in cellular respiration.]
+     BI-LS2-3 Construct and revise an explanation based on evidence for the cycling of matter and flow of
+                energy in aerobic and anaerobic conditions. [Clarification Statement: Emphasis is on conceptual
+                understanding of the role of aerobic and anaerobic respiration in different environments.] [Assessment
+                Boundary: Assessment does not include the specific chemical processes of either aerobic or
+                anaerobic respiration.]
+     BI-LS2-4 Use mathematical representations to support claims for the cycling of matter and flow of
+                energy among organisms in an ecosystem. [AR clarification Statement: This PE is fully addressed
+                in this course. Emphasis is on the transfer of energy and matter between trophic levels and the
+                relative proportion of organisms at each trophic level.] [Assessment Boundary: Assessment is limited
+                to proportional reasoning to describe the cycling of matter and flow of energy.
+     BI-LS2-5 Develop a model to illustrate the role of photosynthesis and cellular respiration in the cycling
+                of carbon among the biosphere, atmosphere, hydrosphere, and geosphere. [Clarification
+                Statement: Examples of models could include simulations and mathematical models.] [Assessment
+                Boundary: Assessment does not include the specific chemical steps of photosynthesis and
+                respiration.]
+     BI-ESS2-6 Develop a quantitative model to describe the cycling of carbon among the hydrosphere,
+                atmosphere, geosphere, and biosphere. [Clarification Statement: Emphasis is on modeling
+                biogeochemical cycles that include the cycling of carbon through the ocean, atmosphere, soil, and
+                biosphere (including humans), providing the foundation for living organisms.]
+     The performance expectations above were developed using the following elements from the NRC document A
+     Framework for K-12 Science Education:
+
+       Science and Engineering Practices                      Disciplinary Core Ideas            Crosscutting Concepts
+     Developing and Using Models                    LS1.C: Organization for Matter and          Energy and Matter
+     Modeling in 9–12 builds on K–8                 Energy Flow in Organisms                     Changes of energy and
+     experiences and progresses to using,             The process of photosynthesis              matter in a system can
+     synthesizing, and developing models to            converts light energy to stored            be described in terms of
+     predict and show relationships among              chemical energy by converting              energy and matter flows
+     variables between systems and their               carbon dioxide plus water into             into, out of, and within
+     components in the natural and designed            sugars plus released oxygen.               that system. (BI-LS1-5)
+     worlds.                                           (BI-LS1-5)                                Energy cannot be
+      Use a model based on evidence to               As matter and energy flow through          created or destroyed—it
+         illustrate the relationships between          different organizational levels of         only moves between one
+         systems or between components of a            living systems, chemical elements          place and another place,
+         system. (BI-LS1-5, B-LS1-7)                   are recombined in different ways to        between objects and/or
+      Develop a model based on evidence               form different products. (BI-LS1-7)        fields, or between
+         to illustrate the relationships between      As a result of these chemical              systems.
+                                                       reactions, energy is transferred from      (BI-LS1-7, BI-LS2-4)
+12
+                                           Biology - Integrated: Cycling of Matter and Energy
+                                                   Arkansas K-12 Science Standards
+                                                  Arkansas Department of Education
+                                                                  2016
+          systems or between components of a             one system of interacting molecules       The total amount of
+          system. (BI-ESS2-6, BI-LS2-5)                  to another. Cellular respiration is a      energy and matter in
+     Constructing Explanations and                       chemical process in which the              closed systems is
+     Designing Solutions                                 bonds of food molecules and                conserved. (BI-ESS2-6)
+     Constructing explanations and designing             oxygen molecules are broken and           Energy drives the cycling
+     solutions in 9–12 builds on K–8                     new compounds are formed that can          of matter within and
+     experiences and progresses to                       transport energy to muscles.               between systems.
+     explanations and designs that are                   Cellular respiration also releases the     (BI-LS2-3)
+     supported by multiple and independent               energy needed to maintain body           Systems and System
+     student-generated sources of evidence               temperature despite ongoing energy       Models
+     consistent with scientific ideas, principles,       transfer to the surrounding               Models (e.g., physical,
+     and theories.                                       environment. (BI-LS1-7)                    mathematical, computer
+      Construct and revise an explanation            LS2.B: Cycles of Matter and Energy            models) can be used to
+          based on valid and reliable evidence        Transfer in Ecosystems                        simulate systems and
+          obtained from a variety of sources            Photosynthesis and cellular                interactions—including
+          (including students’ own                       respiration (including anaerobic           energy, matter, and
+          investigations, models, theories,              processes) provide most of the             information flows—within
+          simulations, peer review) and the              energy for life processes. (BI-LS2-3)      and between systems at
+          assumption that theories and laws             Plants or algae form the lowest level      different scales.
+          that describe the natural world                of the food web. At each link upward       (BI-LS2-5)
+          operate today as they did in the past          in a food web, only a small fraction
+          and will continue to do so in the              of the matter consumed at the lower
+          future. (BI-LS1-6, BI-LS2-3)                   level is transferred upward, to
+     Using Mathematics and Computational                 produce growth and release energy
+     Thinking                                            in cellular respiration at the higher
+     Mathematical and computational thinking             level. Given this inefficiency, there
+     in 9-12 builds on K-8 experiences and               are generally fewer organisms at
+     progresses to using algebraic thinking              higher levels of a food web. Some
+     and analysis, a range of linear and                 matter reacts to release energy for
+     nonlinear functions including                       life functions, some matter is stored
+     trigonometric functions, exponentials and           in newly made structures, and much
+     logarithms, and computational tools for             is discarded. The chemical elements
+     statistical analysis to analyze, represent,         that make up the molecules of
+     and model data. Simple computational                organisms pass through food webs
+     simulations are created and used based              and into and out of the atmosphere
+     on mathematical models of basic                     and soil, and they are combined and
+     assumptions.                                        recombined in different ways. At
+       Use mathematical representations of              each link in an ecosystem, matter
+         phenomena or design solutions to                and energy are conserved.
+         support claims. (BI-LS2-4)                      (BI-LS2-4)
+                                                        Photosynthesis and cellular
+                                                         respiration are important
+                                                         components of the carbon cycle, in
+                                                         which carbon is exchanged among
+                                                         the biosphere, atmosphere, oceans,
+                                                         and geosphere through chemical,
+                                                         physical, geological, and biological
+                                                         processes. (BI-LS2-5)
+                                                      PS3.D: Energy in Chemical
+                                                      Processes
+                                                        The main way that solar energy is
+                                                         captured and stored on Earth is
+                                                         through the complex chemical
+                                                         process known as photosynthesis.
+                                                         (BI-LS2-5)
+13
+                                             Biology - Integrated: Cycling of Matter and Energy
+                                                     Arkansas K-12 Science Standards
+                                                    Arkansas Department of Education
+                                                                    2016
+                                                  ESS2.D: Weather and Climate
+                                                    Gradual atmospheric changes were
+                                                     due to plants and other organisms
+                                                     that captured carbon dioxide and
+                                                     released oxygen. (BI-ESS2-6)
+                                                    Changes in the atmosphere due to
+                                                     human activity have increased
+                                                     carbon dioxide concentrations and
+                                                     thus affect climate. (BI-ESS2-6)
+     Connections to other DCIs in this course: BI.PS1.A (BI-ESS2-6); BI.PS1.B (BI-LS1-5,BI-LS1-7, BI-LS2-3,
+      BI-LS2-5, BI-ESS2-6); BI.PS2.B (BI-LS1-7); BI.PS3.B (BI-LS1-5, BI-LS1-7, BI-LS2-3, BI-LS2-4); BI.PS3.D
+     (BI-LS2-3, BI-LS2-4); BI.LS1.C (BI-ESS2-6); BI.LS2.B (BI-ESS2-6); BI.ESS2.A (BI-LS2-3); BI.ESS2.D
+     (BI-LS2-5); BI.ESS3.C(BI-ESS2-6); BI.ESS3.D (BI-ESS2-6)
+     Connections to DCIs across grade-bands: 7.PS1.A (BI-ESS2-6); 7.PS1.B (BI-LS1-5, BI-LS1-7, BI-LS2-3);
+     6.PS3.D (BI-LS1-5, BI-LS1-7, BI-LS2-3, BI-LS2-4, BI-LS2-5, BI-ESS2-6); 8.PS4.B (BI-ESS2-6);
+     7.LS1.C (BI-LS1-5, BII-LS1-7, B-LS2-3, BI-LS2-5, BI-LS2-4); 7.LS2.B (BI-LS1-5, BI-LS1-7, BI-LS2-3, BI-LS2-4,
+     BI-LS2-5, BI-ESS2-6); 7.ESS2.A (BI-LS2-5, BI-ESS2-6); 7.ESS2.B (BI-ESS2-6); 7.ESS2.C (BI-ESS2-6);
+     6.ESS3.C (BI-ESS2-6); 6.ESS3.D (BI-ESS2-6)
+     Connections to the Arkansas Disciplinary Literacy Standards:
+     RST.11-12.1     Cite specific textual evidence to support analysis of science and technical texts, attending to
+                     important distinctions the author makes and to any gaps or inconsistencies in the account.
+                      (BI-LS2-3)
+     WHST.9-12.2 Write informative/explanatory texts, including the narration of historical events, scientific
+                     procedures/ experiments, or technical processes. (BI-LS2-3)
+     WHST.9-12.5 Develop and strengthen writing as needed by planning, revising, editing, rewriting, or trying a new
+                     approach, focusing on addressing what is most significant for a specific purpose and audience.
+                      (BI-LS2-3)
+
+     Connections to the Arkansas English Language Arts Standards:
+     9-12.CC.9.P Include relevant multimedia to enhance understanding of findings, reasoning, and/or evidence.
+                   (BI-LS1-5, BI-LS1-7)
+
+     Connections to the Arkansas Mathematics Standards:
+     A1.SP.3      Summarize data from two categorical variables in a frequency table; interpret relative frequencies
+                  in the context of the data, recognizing data trends and associations. (BI-ESS2-6, BI-LS2-4)
+     AR.M.2       Applying reasoning about quantities and relationships. (BI-ESS2-6, BI-LS2-4)
+     AR.M.4       Select and use relationships and tools. (BI-ESS2-6, BI-LS2-4)
+
+
+
+
+14
+                                          Biology - Integrated: Cycling of Matter and Energy
+                                                  Arkansas K-12 Science Standards
+                                                 Arkansas Department of Education
+                                                                 2016
+                                                    Biology - Integrated
+     Topic 2: Structure and Function
+     Students who demonstrate understanding can:
+     BI-LS1-1 Construct an explanation based on evidence for how the structure of DNA determines the
+                structure of proteins which carry out the essential functions of life through systems of
+                specialized cells. [Assessment Boundary: Assessment does not include identification of specific cell
+                or tissue types, whole body systems, specific protein structures and functions, or the biochemistry of
+                protein synthesis.]
+     BI-LS1-2 Develop and use a model to illustrate the hierarchical organization of interacting systems that
+                provide specific functions within multicellular organisms. [AR Clarification Statement: Emphasis
+                is on functions at the organism system level such as nutrient uptake, water delivery, and organism
+                movement in response to neural stimuli. Examinations could include all types of multicellular
+                organisms. Examples of an interacting system could include an artery depending on the proper
+                function of elastic tissue and a smooth muscle regulating and delivering proper amounts of blood
+                within the circulatory system]. [Assessment Boundary: Assessment does not include interactions and
+                functions at the molecular or chemical reaction level.]
+     BI-LS1-3 Plan and conduct an investigation to provide evidence that feedback mechanisms maintain
+                homeostasis. [Clarification Statement: Examples of investigations could include heart rate response
+                to exercise, stomate response to moisture and temperature, and root development in response to
+                water levels.] [Assessment Boundary: Assessment does not include the cellular processes involved in
+                the feedback mechanism.]
+     BI-LS1-6 Construct and revise an explanation based on evidence for how carbon, hydrogen, and
+                oxygen from sugar molecules may combine with other elements to form amino acids and/or
+                other large carbon-based molecules. [Clarification Statement: Emphasis is on using evidence from
+                models and simulations to support explanations.] [Assessment Boundary: Assessment does not
+                include the details of the specific chemical reactions or identification of macromolecules.]
+     The performance expectations above were developed using the following elements from the NRC document A
+     Framework for K-12 Science Education:
+
+       Science and Engineering Practices                       Disciplinary Core Ideas             Crosscutting Concepts
+     Developing and Using Models                     LS1.A: Structure and Function                Systems and System
+     Modeling in 9–12 builds on K–8                    Systems of specialized cells within       Models
+     experiences and progresses to using,               organisms help them perform the            Models (e.g., physical,
+     synthesizing, and developing models to             essential functions of life. (BI-LS1-1)     mathematical, computer
+     predict and show relationships among              All cells contain genetic information       models) can be used to
+     variables between systems and their                in the form of DNA molecules.               simulate systems and
+     components in the natural and designed             Genes are regions in the DNA that           interactions—including
+     worlds.                                            contain the instructions that code for      energy, matter, and
+       Develop and use a model based on                the formation of proteins, which            information flows—within
+        evidence to illustrate the relationships        carry out most of the work of cells.        and between systems at
+        between systems or between                      (BI-LS1-1, BI-LS3-1)                        different scales.
+        components of a system. (BI-LS1-2)             Multicellular organisms have a              (BI-LS1-2)
+     Planning and Carrying Out                          hierarchical structural organization,     Structure and Function
+     Investigations                                     in which any one system is made up         Investigating or designing
+     Planning and carrying out in 9-12 builds           of numerous parts and is itself a           new systems or
+     on K-8 experiences and progresses to               component of the next level.                structures requires a
+     include investigations that provide                (BI-LS1-2)                                  detailed examination of
+     evidence for and test conceptual,                 Feedback mechanisms maintain a              the properties of different
+     mathematical, physical, and empirical              living system’s internal conditions         materials, the structures
+     models.                                            within certain limits and mediate           of different components,
+       Plan and conduct an investigation               behaviors, allowing it to remain alive      and connections of
+        individually and collaboratively to             and functional even as external             components to reveal its
+        produce data to serve as the basis for          conditions change within some
+15
+                                               Biology - Integrated: Structure and Function
+                                                    Arkansas K-12 Science Standards
+                                                   Arkansas Department of Education
+                                                                   2016
+        evidence, and in the design: decide on                     range. Feedback mechanisms can          function and/or solve a
+        types, how much, and accuracy of data                      encourage (through positive             problem.
+        needed to produce reliable                                 feedback) or discourage (negative       (BI-LS1-1)
+        measurements and consider limitations                      feedback) what is going on inside     Stability and Change
+        on the precision of the data (e.g.,                        the living system. (BI-LS1-3)          Feedback (negative or
+        number of trials, cost, risk, time), and                LS1.C: Organization for Matter and         positive) can stabilize or
+        refine the design accordingly.                          Energy Flow in Organisms                   destabilize a system.
+        (BI-LS1-3)                                                The sugar molecules thus formed         (BI-LS1-3)
+     Constructing Explanations and                                 contain carbon, hydrogen, and         Energy and Matter
+     Designing Solutions                                           oxygen: their hydrocarbon              Changes of energy and
+     Constructing explanations and designing                       backbones are used to make amino        matter in a system can
+     solutions in 9–12 builds on K–8                               acids and other carbon-based            be described in terms of
+     experiences and progresses to                                 molecules that can be assembled         energy and matter flows
+     explanations and designs that are                             into larger molecules (proteins or      into, out of, and within
+     supported by multiple and independent                         DNA), used for example to form new      that system.
+     student-generated sources of evidence                         cells. (BI-LS1-6)                       (BI-LS1-6)
+     consistent with scientific ideas, principles,                As matter and energy flow through
+     and theories.                                                 different organizational levels of
+       Construct an explanation based on                          living systems, chemical elements
+        valid and reliable evidence obtained                       are recombined in different ways to
+        from a variety of sources (including                       form different products.
+        students’ own investigations, models,                      (BI-LS1-6)
+        theories, simulations, peer review) and
+        the assumption that theories and laws
+        that describe the natural world operate
+        today as they did in the past and will
+        continue to do so in the future.
+        (BI-LS1-1)
+      Construct and revise an explanation
+          based on valid and reliable evidence
+          obtained from a variety of sources
+          (including students’ own
+          investigations, models, theories,
+          simulations, peer review) and the
+          assumption that theories and laws
+          that describe the natural world
+          operate today as they did in the past
+          and will continue to do so in the
+          future.
+          (BI-LS1-6)
+
+     --------------------------------------------------------
+         Connections to Nature of Science
+
+     Scientific Investigations Use a Variety
+     of Methods
+       Scientific inquiry is characterized by a
+        common set of values that include:
+        logical thinking, precision, open-
+        mindedness, objectivity, skepticism,
+        replicability of results, and honest and
+        ethical reporting of findings. (BI-LS1-3)
+     Connections to other DCIs in this course: BI.LS3.A (BI-LS1-1); BI.PS1.B (BI-LS1-6)
+     Connections of DCIs across grade-bands: 6.LS1.A (BI-LS1-1, BI-LS1-2, BI-LS1-3); 8.LS3.A (BI-LS1-1); 6.LS3.B
+     (BI-LS1-1) 7.PS1.A (BI-LS1-6); 7.PS1.B (BI-LS1-6,); 6.PS3.D (BI-LS1-6) 7.LS1.C (BI-LS1-6)
+16
+                                                         Biology - Integrated: Structure and Function
+                                                              Arkansas K-12 Science Standards
+                                                             Arkansas Department of Education
+                                                                             2016
+     Connections to the Arkansas Disciplinary Literacy Standards:
+     RST.11-12.1     Cite specific textual evidence to support analysis of science and technical texts, attending to
+                     important distinctions the author makes and to any gaps or inconsistencies in the account.
+                     (BI-LS1-1, BI-LS1-6)
+     WHST.9-12.2 Write informative/explanatory texts, including the narration of historical events, scientific
+                     procedures/ experiments, or technical processes. (BI-LS1-1, BI-LS1-6)
+     WHST.9-12.5 Develop and strengthen writing as needed by planning, revising, editing, rewriting, or trying a new
+                     approach, focusing on addressing what is most significant for a specific purpose and audience.
+                      (BI-LS1-6)
+     WHST.9-12.7 Conduct short as well as more sustained research projects to answer a question (including a self-
+                     generated question) or solve a problem; narrow or broaden the inquiry when appropriate;
+                     synthesize multiple sources on the subject, demonstrating understanding of the subject under
+                     investigation. (BI-LS1-3)
+     WHST.9-12.9 Draw evidence from informational texts to support analysis, reflection, and research.
+                      (BI-LS1-1, BI-LS1-6)
+     WHST.11-12.8 Gather relevant information from multiple authoritative print and digital sources, using advanced
+                     searches effectively; assess the strengths and limitations of each source in terms of the specific
+                     task, purpose, and audience; integrate information into the text selectively to maintain the flow of
+                     ideas, avoiding plagiarism and overreliance on any one source and following a standard format
+                     for citation. (BI-LS1-3)
+
+     Connections to the Arkansas English Language Arts Standards:
+     9-12.CC.9.P Include relevant multimedia to enhance understanding of findings, reasoning, and/or evidence.
+                   (BI-LS1-2)
+
+     Connections to the Arkansas Mathematics Standards: N/A
+
+
+
+
+17
+                                             Biology - Integrated: Structure and Function
+                                                  Arkansas K-12 Science Standards
+                                                 Arkansas Department of Education
+                                                                 2016
+                                       Biology - Integrated
+Topic 3: Biodiversity and Population Dynamics
+Students who demonstrate understanding can:
+BI-LS2-1 Use mathematical and/or computational representations to support explanations of factors that
+           affect carrying capacity of ecosystems at different scales. [Clarification Statement: Emphasis is on
+           quantitative analysis and comparison of the relationships among interdependent factors including
+           boundaries, resources, climate, and competition. Examples of mathematical comparisons could include
+           graphs, charts, histograms, and population changes gathered from simulations or historical data sets.]
+           [Assessment Boundary: Assessment does not include deriving mathematical equations to make
+           comparisons.]
+BI-LS2-2 Use mathematical representations to support and revise explanations based on evidence about
+           factors affecting biodiversity and populations in ecosystems of different scales. [Clarification
+           Statement: Examples of mathematical representations include finding the average, determining trends,
+           and using graphical comparisons of multiple sets of data.] [Assessment Boundary: Assessment is limited
+           to provided data.]
+BI-LS2-6 Evaluate the claims, evidence, and reasoning that the complex interactions in ecosystems
+           maintain relatively consistent numbers and types of organisms in stable conditions, but changing
+           conditions may result in a new ecosystem. [Clarification Statement: Examples of changes in
+           ecosystem conditions could include modest biological or physical changes, such as moderate hunting or
+           a seasonal flood; and extreme changes, such as volcanic eruption or sea level rise.]
+BI-LS2-7 Design, evaluate, and refine a solution for reducing the impacts of human activities on the
+           environment and biodiversity.* [AR Clarification Statement: This PE is fully addressed in this course.
+           Emphasis is on the impact of human activities on biodiversity such as dissemination of invasive species,
+           habitat degradation, and water quality.] [AR Assessment Boundary: Assessment is to include student
+           choice from multiple scenarios.]
+BI-LS2-8 Evaluate the evidence for the role of group behavior on individual and species’ chances to
+           survive and reproduce. [Clarification Statement: Emphasis is on: (1) distinguishing between group and
+           individual behavior, (2) identifying evidence supporting the outcomes of group behavior, and (3)
+           developing logical and reasonable arguments based on evidence. Examples of group behaviors could
+           include flocking, schooling, herding, and cooperative behaviors such as hunting, migrating, and
+           swarming.]
+BI-LS4-6 Create or revise a simulation to test a solution to mitigate adverse impacts of human activity on
+            biodiversity.* [AR Clarification Statement: Emphasis is on refining solutions for a proposed problem
+            related to threatened or endangered species, genetic variation of organisms for multiple species, and
+            biodiversity.]
+BI3-ETS1-3 Evaluate a solution to a complex real-world problem based on prioritized criteria and trade-offs
+            that account for a range of constraints, including cost, safety, reliability, and aesthetics, as well
+            as possible social, cultural, and environmental impacts. [AR Clarification Statement: Problems
+            could include effect of logging on animal or human populations, response to invasive species,
+            agricultural practices, creating dams, and maintaining fish populations in public lakes.]
+BI3-ETS1-4 Use a computer simulation to model the impact of proposed solutions to a complex real-world
+             problem with numerous criteria and constraints on interactions within and between systems
+            relevant to the problem. [AR Clarification Statement: Examples could include simulations of
+            population dynamics, genetic drift, evolution, and migration.]
+The performance expectations above were developed using the following elements from the NRC document A
+Framework for K-12 Science Education:
+
+
+
+
+18
+                                    Biology - Integrated: Biodiversity and Population Dynamics
+                                                 Arkansas K-12 Science Standards
+                                                 Arkansas Department of Education
+                                                                2016
+Science and Engineering Practices                     Disciplinary Core Ideas                       Crosscutting Concepts
+Using Mathematics and                    LS2.A: Interdependent Relationships in                  Cause and Effect
+Computational Thinking                   Ecosystems                                               Empirical evidence is
+Mathematical and computational             Ecosystems have carrying capacities,                   required to differentiate
+thinking in 9-12 builds on K-8              which are limits to the numbers of                     between cause and
+experiences and progresses to using         organisms and populations they can                     correlation and make
+algebraic thinking and analysis, a          support. These limits result from such                 claims about specific
+range of linear and nonlinear               factors as the availability of living and              causes and effects.
+functions including trigonometric           nonliving resources and from such                      (BI-LS2-8, BI-LS4-6)
+functions, exponentials and                 challenges such as predation, competition,           Scale, Proportion, and
+logarithms, and computational tools         and disease. Organisms would have the                Quantity
+for statistical analysis to analyze,        capacity to produce populations of great              The significance of a
+represent, and model data. Simple           size were it not for the fact that                     phenomenon is dependent
+computational simulations are               environments and resources are finite.                 on the scale, proportion,
+created and used based on                   This fundamental tension affects the                   and quantity at which it
+mathematical models of basic                abundance (number of individuals) of                   occurs. (BI-LS2-1)
+assumptions.                                species in any given ecosystem.                       Using the concept of
+  Use mathematical and/or                  (BI-LS2-1, BI-LS2-2)                                   orders of magnitude allows
+   computational representations of      LS2.C: Ecosystem Dynamics,                                one to understand how a
+   phenomena or design solutions to      Functioning, and Resilience                               model at one scale relates
+   support explanations. (BI-LS2-1)        A complex set of interactions within an                to a model at another
+  Use mathematical representations         ecosystem can keep its numbers and                     scale. (BI-LS2-2)
+   of phenomena or design solutions         types of organisms relatively constant over          Stability and Change
+   to support and revise                    long periods of time under stable                     Much of science deals with
+   explanations.                            conditions. If a modest biological or                  constructing explanations
+   (BI-LS2-2)                               physical disturbance to an ecosystem                   of how things change and
+  Create or revise a simulation of a       occurs, it may return to its more or less              how they remain stable.
+   phenomenon, designed device,             original status (i.e., the ecosystem is                (BI-LS2-6, BI-LS2-7)
+   process, or system. (BI-LS4-6)           resilient), as opposed to becoming a very            Systems and System
+  Use mathematical models and/or           different ecosystem. Extreme fluctuations            Models
+   computer simulations to predict the      in conditions or the size of any population,          Models (e.g., physical,
+   effects of a design solution on          however, can challenge the functioning of              mathematical, computer
+   systems and/or the interactions          ecosystems in terms of resources and                   models) can be used to
+   between systems. (BI3-ETS1-4)            habitat availability. (BI-LS2-2, BI-LS2-6)             simulate systems and
+Constructing Explanations and              Moreover, anthropogenic changes                        interactions—including
+Designing Solutions                         (induced by human activity) in the                     energy, matter, and
+Constructing explanations and               environment—including habitat                          information flows— within
+designing solutions in 9–12 builds on       destruction, pollution, introduction of                and between systems at
+K–8 experiences and progresses to           invasive species, overexploitation, and                different scales.
+explanations and designs that are           climate change—can disrupt an                          (BI3-ETS1-4)
+supported by multiple and                   ecosystem and threaten the survival of
+independent student-generated               some species. (BI-LS2-7)                             ----------------------------------------
+sources of evidence consistent with      LS4.C: Adaptation                                       Connections to Engineering,
+scientific ideas, principles, and          Changes in the physical environment,                            Technology,
+theories.                                   whether naturally occurring or human                 and Applications of Science
+  Design, evaluate, and refine a           induced, have thus contributed to the
+   solution to a complex real-world         expansion of some species, the                       Influence of Science,
+   problem, based on scientific             emergence of new distinct species as                 Engineering, and
+   knowledge, student-generated             populations diverge under different                  Technology on Society and
+   sources of evidence, prioritized         conditions, and the decline–and                      the Natural World
+   criteria, and tradeoff                   sometimes the extinction–of some                      New technologies can have
+   considerations. (BI-LS2-7)               species. (BI-LS4-6)                                   deep impacts on society and
+                                                                                                  the environment, including
+19
+                                    Biology - Integrated: Biodiversity and Population Dynamics
+                                                 Arkansas K-12 Science Standards
+                                                 Arkansas Department of Education
+                                                                2016
+  Evaluate a solution to a complex                LS2.D: Social Interactions and Group                some that were not
+   real-world problem, based on                    Behavior                                            anticipated. Analysis of
+   scientific knowledge, student-                    Group behavior has evolved because               costs and benefits is a
+   generated sources of evidence,                     membership can increase the chances of           critical aspect of decisions
+   prioritized criteria, and tradeoff                 survival for individuals and their genetic       about technology.
+   considerations. (BI3-ETS1-3)                       relatives. (BI-LS2-8)                            (BI3-ETS1-3)
+Engaging in Argument from                          LS4.D: Biodiversity and Humans
+Evidence                                             Biodiversity is increased by the formation
+Engaging in argument from evidence                    of new species (speciation) and
+in 9–12 builds on K–8 experiences                     decreased by the loss of species
+and progresses to using appropriate                   (extinction). (BI-LS2-7)
+and sufficient evidence and scientific               Humans depend on the living world for the
+reasoning to defend and critique                      resources and other benefits provided by
+claims and explanations about the                     biodiversity. But human activity is also
+natural and designed world(s).                        having adverse impacts on biodiversity
+Arguments may also come from                          through overpopulation, overexploitation,
+current scientific or historical                      habitat destruction, pollution, introduction
+episodes in science.                                  of invasive species, and climate change.
+  Evaluate the claims, evidence, and                 Thus sustaining biodiversity so that
+   reasoning behind currently                         ecosystem functioning and productivity are
+   accepted explanations or solutions                 maintained is essential to supporting and
+   to determine the merits of                         enhancing life on Earth. Sustaining
+   arguments. (BI-LS2-6)                              biodiversity also aids humanity by
+  Evaluate the evidence behind                       preserving landscapes of recreational or
+   currently accepted explanations to                 inspirational value. (BI-LS4-6, BI-LS2-7)
+   determine the merits of arguments.              ETS1.B: Developing Possible Solutions
+   (BI-LS2-8)                                        When evaluating solutions it is important
+                                                      to take into account a range of constraints
+                                                      including cost, safety, reliability and
+--------------------------------------------------    aesthetics and to consider social, cultural
+ Connections to Nature of Science                     and environmental impacts.
+                                                       (BI3-ETS1-3, BI-LS2-7, BI-LS4-6)
+Scientific Knowledge is Open to                      Both physical models and computers can
+Revision in Light of New Evidence                     be used in various ways to aid in the
+  Scientific argumentation is a mode                 engineering design process. Computers
+   of logical discourse used to clarify               are useful for a variety of purposes, such
+   the strength of relationships                      as running simulations to test different
+   between ideas and evidence that                    ways of solving a problem or to see which
+   may result in revision of an                       one is most efficient or economical; and in
+   explanation. (BI-LS2-6, BI-LS2-8)                  making a persuasive presentation to a
+                                                      client about how a given design will meet
+                                                      his or her needs. (BI3-ETS1-4, BI-LS4-6)
+Connections to other DCIs in this course: BI.ESS2.D (BI-LS2-7, BI-LS4-6); B.ESS3.A (BI-LS2-2, BI-LS2-7,
+BI-LS4-6); BI.ESS3.C (BI-LS2-2, BI-LS2-7, BI-LS4-6); BI.ESS3.D (BI-LS2-2, BI-LS4-6)
+Connections of DCIs across grade-bands: 6.LS1.B (BI-LS2-8); 7.LS2.A (BI-LS2-1, BI-LS2-2, BI-LS2-6);
+ 7.LS2.C (BI-LS2-1, BI-LS2-2, BI-LS2-6, BI-LS2-7, BI-LS4-6); 6.ESS2.E (BI-LS2-6); 6.ESS3.A (BI-LS2-1);
+6.ESS3.C (BI-LS2-1, BI-LS2-2, B-LS2-6, BI-LS2-7, BI-LS4-6); 6.ESS3.D (BI-LS2-7); 6-8.ETS1.A (BI3-ETS1-3,
+BI-3-ETS1-4); 6-8.ETS1.B (BI3-ETS1-3, BI3-ETS1-4); 6-8.ETS1.C (BI3-ETS1-4)
+Connections to the Arkansas Disciplinary Literacy Standards:
+RST.9-10.8      Assess the extent to which the reasoning and evidence in a text support the author’s claim or a
+                recommendation for solving a scientific or technical problem. (BI-LS2-6, BI-LS2-7, BI-LS2-8)
+RST.11-12.1     Cite specific textual evidence to support analysis of science and technical texts, attending to
+                important distinctions the author makes and to any gaps or inconsistencies in the account.
+                 (BI-LS2-1, BI-LS2-2, BI-LS2-6, BI-LS2-8)
+20
+                                          Biology - Integrated: Biodiversity and Population Dynamics
+                                                       Arkansas K-12 Science Standards
+                                                       Arkansas Department of Education
+                                                                      2016
+RST.11-12.7     Integrate and evaluate multiple sources of information presented in diverse formats and media (e.g.,
+                quantitative data, video, multimedia) in order to address a question or solve a problem.
+                 (BI-LS2-6, BI-LS2-7, BI-LS2-8, BI3-ETS1-3)
+RST.11-12.8     Evaluate the hypotheses, data, analysis, and conclusions in a science or technical text, verifying the
+                data when possible and corroborating or challenging conclusions with other sources of information.
+                (BI-LS2-6, BI-LS2-7, BI-LS2-8, BI3-ETS1-3)
+RST.11-12.9     Synthesize information from a range of sources (e.g., texts, experiments, simulations) into a
+                coherent understanding of a process, phenomenon, or concept, resolving conflicting information
+                when possible. (BI3-ETS1-3)
+WHST.9-12.2     Write informative/explanatory texts, including the narration of historical events, scientific procedures/
+                experiments, or technical processes. (BI-LS2-1, BI-LS2-2)
+WHST.9-12.5     Develop and strengthen writing as needed by planning, revising, editing, rewriting, or trying a new
+                approach, focusing on addressing what is most significant for a specific purpose and audience.
+                 (BI-LS4-6)
+WHST.9-12.7     Conduct short as well as more sustained research projects to answer a question (including a self-
+                generated question) or solve a problem; narrow or broaden the inquiry when appropriate; synthesize
+                multiple sources on the subject, demonstrating understanding of the subject under investigation.
+                (BI-LS2-7, BI-LS4-6)
+
+Connections to the Arkansas English Language Arts Standards: N/A
+
+Connections to the Arkansas Mathematics Standards:
+A1.SP.3       Summarize data from two categorical variables in a frequency table; interpret relative frequencies in
+               the context of the data, recognizing data trends and associations. (BI-LS2-1. BI-LS2-2, BI-LS2-7)
+A2.SP.1       Use data from a random sample to make inferences about a population. (BI-LS2-6)
+A2.SP.4       Read and explain, in context, the validity of data from outside reports by: identifying the variables as
+              quantitative or categorical, describing how the data was collected, indicating any potential biases or
+              flaws, and identifying inferences the author of the report made from sample data. (BI-LS2-6)
+AR.M.2        Applying reasoning about quantities and relationships. (BI-LS2-1, BI-LS2-2, BI-LS2-6, BI-LS2-7,
+              BI3-ETS1-4)
+AR.M.4        Select and use relationships and tools. (BI-LS2-1, BI-LS2-2, BI3-ETS1-4)
+
+
+
+
+21
+                                     Biology - Integrated: Biodiversity and Population Dynamics
+                                                  Arkansas K-12 Science Standards
+                                                  Arkansas Department of Education
+                                                                 2016
+                                       Biology - Integrated
+ Topic 4: Genetic Variations in Organisms
+ Students who demonstrate understanding can:
+   BI-LS1-4 Use a model to illustrate the role of cellular division (mitosis) and differentiation in producing
+            and maintaining complex organisms. [Assessment Boundary: Assessment does not include
+            specific gene control mechanisms or rote memorization of the steps of mitosis.]
+   BI-LS3-1 Ask questions to clarify relationships about the role of DNA and chromosomes in coding the
+            instructions for characteristic traits passed from parents to offspring. [Assessment Boundary:
+            Assessment does not include the phases of meiosis or the biochemical mechanism of specific steps in
+            the process.]
+   BI-LS3-2 Make and defend a claim based on evidence that inheritable genetic variations may result from:
+            (1) new genetic combinations through meiosis, (2) viable errors occurring during replication,
+            and/or (3) mutations caused by environmental factors. [Clarification Statement: Emphasis is on
+            using data to support arguments for the way variation occurs.] [Assessment Boundary: Assessment
+            does not include the phases of meiosis or the biochemical mechanism of specific steps in the process.]
+   BI-LS3-3 Apply concepts of statistics and probability to explain the variation and distribution of
+            expressed traits in a population. [Clarification Statement: Emphasis is on the use of mathematics to
+            describe the probability of traits as it relates to genetic and environmental factors in the expression of
+            traits.] [Assessment Boundary: Assessment does not include Hardy-Weinberg calculations.]
+ The performance expectations above were developed using the following elements from the NRC document A
+ Framework for K-12 Science Education:
+
+     Science and Engineering Practices                       Disciplinary Core Ideas               Crosscutting Concepts
+ Developing and Using Models                         LS1.B: Growth and Development               Systems and System
+ Modeling in 9–12 builds on K–8 experiences          of Organisms                                Models
+ and progresses to using, synthesizing, and            In multicellular organisms                Models (e.g., physical,
+ developing models to predict and show                  individual cells grow and then             mathematical, computer
+ relationships among variables between                  divide via a process called mitosis,       models) can be used to
+ systems and their components in the natural            thereby allowing the organism to           simulate systems and
+ and designed worlds.                                   grow. The organism begins as a             interactions—including
+   Use a model based on evidence to                    single cell (fertilized egg) that          energy, matter, and
+    illustrate the relationships between                divides successively to produce            information flows—within
+    systems or between components of a                  many cells, with each parent cell          and between systems at
+    system. (BI-LS1-4)                                  passing identical genetic material         different scales.
+ Asking Questions and Defining Problems                 (two variants of each chromosome           (BI-LS1-4)
+ Asking questions and defining problems in              pair) to both daughter cells.            Cause and Effect
+ 9-12 builds on K-8 experiences and                     Cellular division and differentiation     Empirical evidence is
+ progresses to formulating, refining, and               produce and maintain a complex             required to differentiate
+ evaluating empirically testable questions              organism, composed of systems              between cause and
+ and design problems using models and                   of tissues and organs that work            correlation and make
+ simulations.                                           together to meet the needs of the          claims about specific
+   Ask questions that arise from examining             whole organism. (BI-LS1-4)                 causes and effects.
+    models or a theory to clarify relationships.     LS1.A: Structure and Function                  (BI-LS3-1, BI-LS3-2)
+    (BI-LS3-1)                                         All cells contain genetic                Scale, Proportion, and
+ Analyzing and Interpreting Data                        information in the form of DNA           Quantity
+ Analyzing data in 9-12 builds on K-8                   molecules. Genes are regions in           Algebraic thinking is used
+ experiences and progresses to introducing              the DNA that contain the                   to examine scientific data
+ more detailed statistical analysis, the                instructions that code for the             and predict the effect of a
+ comparison of data sets for consistency,               formation of proteins.                     change in one variable on
+ and the use of models to generate and                  ( BI-LS3-1, BI-LS1-1)                      another (e.g., linear growth
+ analyze data.                                       LS3.A: Inheritance of Traits                  vs. exponential growth).
+   Apply concepts of statistics and                   Each chromosome consists of a              (BI-LS3-3)
+    probability (including determining function         single very long DNA molecule,
+22
+                                         Biology - Integrated: Genetic Variations in Organisms
+                                                   Arkansas K-12 Science Standards
+                                                  Arkansas Department of Education
+                                                                 2016
+    fits to data, slope, intercept, and             and each gene on the                ---------------------------------------
+    correlation coefficient for linear fits) to     chromosome is a particular            Connections to Nature of
+    scientific and engineering questions and        segment of that DNA. The                          Science
+    problems, using digital tools when              instructions for forming species’
+    feasible. (BI-LS3-3)                            characteristics are carried in DNA. Science is a Human
+ Engaging in Argument from Evidence                 All cells in an organism have the   Endeavor
+ Engaging in argument from evidence in 9-12         same genetic content, but the         Technological advances
+ builds on K-8 experiences and progresses           genes used (expressed) by the          have influenced the
+ to using appropriate and sufficient evidence       cell may be regulated in different     progress of science and
+ and scientific reasoning to defend and             ways. Not all DNA codes for a          science has influenced
+ critique claims and explanations about the         protein; some segments of DNA          advances in technology.
+ natural and designed world(s). Arguments           are involved in regulatory or          (BI-LS3-3)
+ may also come from current scientific or           structural functions, and some        Science and engineering
+ historical episodes in science.                    have no as-yet known function.         are influenced by society
+   Make and defend a claim based on                (BI-LS3-1)                             and society is influenced
+    evidence about the natural world that        LS3.B: Variation of Traits                by science and
+    reflects scientific knowledge, and student-    In sexual reproduction,                engineering. (BI-LS3-3)
+    generated evidence. (BI-LS3-2)                  chromosomes can sometimes
+                                                    swap sections during the process
+                                                    of meiosis (cell division), thereby
+                                                    creating new genetic combinations
+                                                    and thus more genetic variation.
+                                                    Although DNA replication is tightly
+                                                    regulated and remarkably
+                                                    accurate, errors do occur and
+                                                    result in mutations, which are also
+                                                    a source of genetic variation.
+                                                    Environmental factors can also
+                                                    cause mutations in genes, and
+                                                    viable mutations are inherited.
+                                                    (BI-LS3-2)
+                                                   Environmental factors also affect
+                                                    expression of traits, and hence
+                                                    affect the probability of
+                                                    occurrences of traits in a
+                                                    population. Thus the variation and
+                                                    distribution of traits observed
+                                                    depends on both genetic and
+                                                    environmental factors.
+                                                    (BI-LS3-2, BI-LS3-3)
+ Connections to other DCIs in this course: BI.LS2.A (BI-LS3-3); BI.LS4.B (BI-LS3-3); BI.LS4.C (BI-LS3-3)
+ Connections across grade-bands: 6.LS1.A (BI-LS1-4); 6.LS1.B (BI-LS1-4); 7.LS2.A (BI-LS3-3);
+ 8.LS3.A (BI-LS1-4, BI-LS3-1, BI-LS3-2); 7.LS3.B (BI-LS3-1,BI-LS3-2, BI-LS3-3); BI.LS4.C (BI-LS3-3)
+ Connections to the Arkansas Disciplinary Literacy Standards:
+ RST.11-12.1     Cite specific textual evidence to support analysis of science and technical texts, attending to
+                 important distinctions the author makes and to any gaps or inconsistencies in the account.
+                 (BI-LS3-1, BI-LS3-2)
+ RST.11-12.9     Synthesize information from a range of sources (e.g., texts, experiments, simulations) into a
+                 coherent understanding of a process, phenomenon, or concept, resolving conflicting information
+                 when possible. (BI-LS3-1)
+ WHST.9-12.1 Write arguments focused on discipline-specific content. (BI-LS3-2)
+
+
+
+23
+                                          Biology - Integrated: Genetic Variations in Organisms
+                                                    Arkansas K-12 Science Standards
+                                                   Arkansas Department of Education
+                                                                  2016
+ Connections to the Arkansas English Language Arts Standards:
+ 9-12.CC.9.P Include relevant multimedia to enhance understanding of findings, reasoning, and/or evidence.
+               (BI-LS1-4)
+
+ Connections to the Arkansas Mathematics Standards:
+ A1.EFE.2        Represent real-world problems (growth, decay, and compound interest), using exponential
+                equations. (BI-LS1-4)
+ A1.EFE.9       Graph exponential functions that model real-world problems (growth, decay, and compound
+                interest), showing key attributes. (BI-LS1-4)
+ A1.LFE.15      Write linear equations that model the relationship between two quantities and produce a graph of
+                the equation. (BI-LS1-4)
+ A1.LFE.16      Graph linear functions expressed as an equation and show intercepts of the graph without
+               Technology. (BI-LS2-4)
+ A1.LFE.17      Graph absolute value functions expressed as an equation with and without technology, showing
+               intercepts and end behavior. (BI-LS1-4)
+ A1.QFE.2      Write quadratic equations with real number solutions that model the relationship between two
+               quantities and produce a graph of the equation. (BI-LS1-4)
+ A1.QFE.10     Graph quadratic functions given as an equation or in function notation, labeling key attributes,
+               without technology. (BI-LS1-4)
+ AR.M.2         Applying reasoning about quantities and relationships. (BI-LS3-2, BI-LS3-3)
+ AR.M.4         Select and use relationships and tools. (BI-LS1-4)
+
+
+
+
+24
+                                      Biology - Integrated: Genetic Variations in Organisms
+                                                Arkansas K-12 Science Standards
+                                               Arkansas Department of Education
+                                                              2016
+                                        Biology - Integrated
+ Topic 5: Evolution by Natural Selection
+ Students who demonstrate understanding can:
+ BI-LS4-1 Communicate scientific information that common ancestry and biological evolution are
+            supported by multiple lines of empirical evidence. [Clarification Statement: Emphasis is on a
+            conceptual understanding of the role each line of evidence has relating to common ancestry and
+            biological evolution. Examples of evidence could include similarities in DNA sequences, anatomical
+            structures, and order of appearance of structures in embryological development.]
+ BI-LS4-2 Construct an explanation based on evidence that the process of evolution primarily results from
+            four factors: (1) the potential for a species to increase in number, (2) the heritable genetic
+            variation of individuals in a species due to mutation and sexual reproduction, (3) competition
+            for limited resources, and (4) the proliferation of those organisms that are better able to survive
+            and reproduce in the environment. [Clarification Statement: Emphasis is on using evidence to
+            explain the influence each of the four factors has on number of organisms, behaviors, morphology, or
+            physiology in terms of ability to compete for limited resources and subsequent survival of individuals
+            and adaptation of species. Examples of evidence could include mathematical models such as simple
+            distribution graphs and proportional reasoning.] [Assessment Boundary: Assessment does not include
+            other mechanisms of evolution, such as genetic drift, gene flow through migration, and co-evolution.]
+ BI-LS4-3 Apply concepts of statistics and probability to support explanations that organisms with an
+            advantageous heritable trait tend to increase in proportion to organisms lacking this trait.
+            [Clarification Statement: Emphasis is on analyzing shifts in numerical distribution of traits and using
+            these shifts as evidence to support explanations.] [Assessment Boundary: Assessment is limited to
+            basic statistical and graphical analysis. Assessment does not include allele frequency calculations.]
+ BI-LS4-4 Construct an explanation based on evidence for how natural selection leads to adaptation of
+            populations. [Clarification Statement: Emphasis is on using data to provide evidence for how specific
+            biotic and abiotic differences in ecosystems (such as ranges of seasonal temperature, long-term
+            climate change, acidity, light, geographic barriers, or evolution of other organisms) contribute to a
+            change in gene frequency over time, leading to adaptation of populations.]
+ BI-LS4-5 Evaluate the evidence supporting claims that changes in environmental conditions may result
+            in: (1) increases in the number of individuals of some species, (2) the emergence of new
+            species over time, and (3) the extinction of other species. [Clarification Statement: Emphasis is
+            on determining cause and effect relationships for how changes to the environment such as
+            deforestation, fishing, application of fertilizers, drought, flood, and the rate of change of the
+            environment affect distribution or disappearance of traits in species.]
+ BI-ESS2-7 Construct an argument based on evidence about the simultaneous coevolution of Earth’s
+            systems and life on Earth. [AR Clarification Statement: This PE is fully addressed in this course.
+            Emphasis in the course is on developing a claim and evaluating and critiquing the evidence for
+            simultaneous co-evolution. Emphasis is on the causes, effects, and feedback loops between the
+            biosphere and Earth’s other systems which continuously alters Earth’s surface. Examples could include
+            how photosynthetic life altered the atmosphere through the production of oxygen, which increased
+            weathering rates and allowed for the evolution of animal life; how microbial life on land increased the
+            formation of soil which allowed for the evolution of land plants; and how the evolution of corals created
+            reefs which altered patterns of erosion and deposition along coastlines and provided habitats for the
+            evolution of life forms.] [Assessment Boundary: Assessment does not include a comprehensive
+            understanding of the mechanisms of how the biosphere interacts with all of Earth’s other systems.]
+ The performance expectations above were developed using the following elements from the NRC document A
+ Framework for K-12 Science Education:
+
+     Science and Engineering Practices                       Disciplinary Core Ideas            Crosscutting Concepts
+ Analyzing and Interpreting Data                 LS4.A: Evidence of Common Ancestry             Patterns
+ Analyzing data in 9–12 builds on K–8            and Diversity                                   Different patterns may
+ experiences and progresses to                     Genetic information provides evidence         be observed at each
+ introducing more detailed statistical              of evolution. DNA sequences vary              of the scales at which
+25
+                                         Biology - Integrated: Evolution by Natural Selection
+                                                 Arkansas K-12 Science Standards
+                                                 Arkansas Department of Education
+                                                                 2016
+ analysis, the comparison of data sets for             among species, but there are many               a system is studied
+ consistency, and the use of models to                 overlaps; in fact, the ongoing branching        and can provide
+ generate and analyze data.                            that produces multiple lines of descent         evidence for causality
+   Apply concepts of statistics and                   can be inferred by comparing the DNA            in explanations of
+    probability (including determining                 sequences of different organisms. Such          phenomena.
+    function fits to data, slope, intercept,           information is also derivable from the           (BI-LS4-1, BI-LS4-3)
+    and correlation coefficient for linear fits)       similarities and differences in amino        Cause and Effect
+    to scientific and engineering questions            acid sequences and from anatomical             Empirical evidence is
+    and problems, using digital tools when             and embryological evidence. (BI-LS4-1)          required to
+    feasible. (BI-LS4-3)                            LS4.B: Natural Selection                           differentiate between
+ Constructing Explanations and                        Natural selection occurs only if there is       cause and correlation
+ Designing Solutions                                   both (1) variation in the genetic               and make claims
+ Constructing explanations and designing               information between organisms in a              about specific causes
+ solutions in 9–12 builds on K–8                       population and (2) variation in the             and effects.
+ experiences and progresses to                         expression of that genetic information—         (BI-LS4-2, BI-LS4-4,
+ explanations and designs that are                     that is, trait variation—that leads to          BI-LS4-5)
+ supported by multiple and independent                 differences in performance among             Stability and Change
+ student-generated sources of evidence                 individuals. (BI-LS4-2, BI-LS4-3)              Much of science deals
+ consistent with scientific ideas, principles,        The traits that positively affect survival      with constructing
+ and theories.                                         are more likely to be reproduced, and           explanations of how
+   Construct an explanation based on                  thus are more common in the                     things change and
+    valid and reliable evidence obtained               population. (BI-LS4-3)                          how they remain
+    from a variety of sources (including            LS4.C: Adaptation                                  stable.
+    students’ own investigations, models,             Evolution is a consequence of the               (BI-ESS2-7)
+    theories, simulations, peer review) and            interaction of four factors: (1) the         ---------------------------------
+    the assumption that theories and laws              potential for a species to increase in       Connections to Nature
+    that describe the natural world operate            number, (2) the genetic variation of                  of Science
+    today as they did in the past and will             individuals in a species due to mutation
+    continue to do so in the future.                   and sexual reproduction, (3) competition     Scientific Knowledge
+    (BI-LS4-2, BI-LS4-4)                               for an environment’s limited supply of       Assumes an Order and
+ Engaging in Argument from Evidence                    the resources that individuals need in       Consistency in Natural
+ Engaging in argument from evidence in 9-              order to survive and reproduce, and (4)      Systems
+ 12 builds on K-8 experiences and                      the ensuing proliferation of those            Scientific knowledge
+ progresses to using appropriate and                   organisms that are better able to survive      is based on the
+ sufficient evidence and scientific                    and reproduce in that environment.             assumption that
+ reasoning to defend and critique claims               (BI-LS4-2)                                     natural laws operate
+ and explanations about the natural and               Natural selection leads to adaptation,         today as they did in
+ designed world(s). Arguments may also                 that is, to a population dominated by          the past and they will
+ come from current or historical episodes              organisms that are anatomically,               continue to do so in
+ in science.                                           behaviorally, and physiologically well         the future.
+   Evaluate the evidence behind currently             suited to survive and reproduce in a           (BI-LS4-1, BI-LS4-4)
+    accepted explanations or solutions to              specific environment. That is, the
+    determine the merits of arguments.                 differential survival and reproduction of
+    (BI-LS4-5)                                         organisms in a population that have an
+   Construct an oral and written argument             advantageous heritable trait leads to an
+    or counter-arguments based on data                 increase in the proportion of individuals
+    and evidence. (BI-ESS2-7)                          in future generations that have the trait
+ Obtaining, Evaluating, and                            and to a decrease in the proportion of
+ Communicating Information                             individuals that do not.
+ Obtaining, evaluating, and communicating              (BI-LS4-3, BI-LS4-4)
+ information in 9–12 builds on K–8                    Adaptation also means that the
+ experiences and progresses to evaluating              distribution of traits in a population can
+ the validity and reliability of the claims,           change when conditions change.
+ methods, and designs.                                 (BI-LS4-3)
+26
+                                            Biology - Integrated: Evolution by Natural Selection
+                                                    Arkansas K-12 Science Standards
+                                                    Arkansas Department of Education
+                                                                    2016
+      Communicate scientific information          Changes in the physical environment,
+       (e.g., about phenomena and/or the            whether naturally occurring or human
+       process of development and the design        induced, have thus contributed to the
+       and performance of a proposed                expansion of some species, the
+       process or system) in multiple formats       emergence of new distinct species as
+       (including orally, graphically, textually,   populations diverge under different
+       and mathematically). (BI-LS4-1)              conditions, and the decline–and
+     ------------------------------------------------------
+                                                    sometimes the extinction–of some
+        Connections to Nature of Science            species. (BI-LS4-5)
+                                                   Species become extinct because they
+ Science Models, Laws, Mechanisms,                  can no longer survive and reproduce in
+ and Theories Explain Natural                       their altered environment. If members
+ Phenomena                                          cannot adjust to change that is too fast
+   A scientific theory is a substantiated          or drastic, the opportunity for the
+    explanation of some aspect of the               species’ evolution is lost. (BI-LS4-5)
+    natural world, based on a body of facts ESS2.D: Weather and Climate
+    that have been repeatedly confirmed            Gradual atmospheric changes were due
+    through observation and experiment              to plants and other organisms that
+    and the science community validates             captured carbon dioxide and released
+    each theory before it is accepted. If           oxygen. (BI-ESS2-7)
+    new evidence is discovered that the          ESS2.E: Biogeology
+    theory does not accommodate, the               The many dynamic and delicate
+    theory is generally modified in light of        feedbacks between the biosphere and
+    this new evidence.                              other Earth systems cause a continual
+    (BI-LS4-1)                                      co-evolution of Earth’s surface and the
+                                                    life that exists on it. (BI-ESS2-7)
+ Connections to other DCIs in this course: BI.LS2.A (BI-LS4-2, BI-LS4-3, BI-LS4-4, BI-LS4-5, BI-ESS2-7);
+ BI.LS2.C (BI-ESS2-7); BI.LS2.D (BI-LS4-2, BI-LS4-3, BI-LS4-4, BI-LS4-5); BI.LS3.A (BI-LS4-1); BI.LS3.B
+ (BI-LS4-1, BI-LS4-2, BI-LS4-3, BI-LS4-5); BI.LS4.A (BI-ESS2-7); BI.LS4.B (BI-ESS2-7); BI.LS4.C (BI-ESS2-7);
+ BI.LS4.D (B-ESS2-7); BI.ESS3.A (BI-LS4-2, BI-LS4-5)
+ Connections across grade-bands: 7.LS2.A (BI-LS4-2, BI-LS4-3, BI-LS4-5, BI-ESS2-7); 7.LS2.C (BI-LS4-5,
+ BI-ESS2-7);8.LS3.A (BI-LS4-1); 6.LS3.B (BI-LS4-1, BI-LS4-2, BI-LS4-3); 8.LS4.A (BI-LS4-1, BI-ESS2-7);
+ 8.LS4.B (BI-LS4-2, BI-LS4-3, BI-LS4-4, BI-ESS2-7); 8.LS4.C (BI-LS4-2, BI-LS4-3, BI-LS4-4, BI-LS4-5,
+ BI-ESS2-7); 8.ESS1.C (BI-LS4-1); 7.ESS2.A (BI-ESS2-7); 6.ESS2.C (BI-ESS2-7); 6.ESS3.C (BI-LS4-5,
+ BI-ESS2-7)
+ Connections to the Arkansas Disciplinary Literacy Standards:
+ RST.11-12.1        Cite specific textual evidence to support analysis of science and technical texts, attending to
+                    important distinctions the author makes and to any gaps or inconsistencies in the account.
+                     (BI-LS4-1, BI-LS4-2, BI-LS4-3, BI-LS4-4)
+ RST.11-12.8        Evaluate the hypotheses, data, analysis, and conclusions in a science or technical text, verifying
+                    the data when possible and corroborating or challenging conclusions with other sources of
+                    information. (BI-LS4-5)
+ WHST.9-12.1 Write arguments focused on discipline-specific content. (BI-ESS2-7)
+ WHST.9-12.2 Write informative/explanatory texts, including the narration of historical events, scientific
+                    procedures/ experiments, or technical processes. (BI-LS4-1), BI-LS4-2, BI-LS4-3, BI-LS4-4)
+ WHST.9-12.9 Draw evidence from informational texts to support analysis, reflection, and research.
+                   (BI-LS4-1, BI-LS4-2, BI-LS4-3, BI-LS4-4, BI-LS4-5)
+
+ Connections to the Arkansas English Language Arts Standards:
+ 9.CC.7.P       Present claims and supporting evidence concisely and logically appropriate to purpose, audience,
+               and task. (BI-LS4-1, BI-LS4-2)
+ 10-12.CC.7.P Present claims, findings, and supporting evidence concisely, logically, and appropriately to
+               purpose, audience, and task. (BI-LS4-1, BI-LS4-2)
+
+27
+                                                      Biology - Integrated: Evolution by Natural Selection
+                                                              Arkansas K-12 Science Standards
+                                                              Arkansas Department of Education
+                                                                              2016
+ Connections to the Arkansas Mathematics Standards:
+ A2.SP.1       Use data from a random sample to make inferences about a population. (BI-LS4-3)
+ AR.M.2         Applying reasoning about quantities and relationships. (BI-LS4-1, BI-LS4-2, BI-LS4-3, BI-LS4-4,
+                BI- LS4-5)
+ AR.M.4        Select and use relationships and tools. (BI-LS4-2)
+
+
+
+
+28
+                                       Biology - Integrated: Evolution by Natural Selection
+                                               Arkansas K-12 Science Standards
+                                               Arkansas Department of Education
+                                                               2016
+                                                Biology - Integrated
+ Topic 6: Life and Earth’s Systems
+ Students who demonstrate understanding can:
+  BI-ESS2-2 Analyze geoscience data to make the claim that one change to Earth’s surface can create
+             feedbacks that cause changes to other Earth systems. [Clarification Statement: Examples could
+             include climate feedbacks, such as how an increase in greenhouse gases causes a rise in global
+             temperatures that melts glacial ice, which reduces the amount of sunlight reflected from Earth’s
+             surface, increasing surface temperatures and further reducing the amount of ice. Examples could also
+             be taken from other system interactions, such as how the loss of ground vegetation causes an
+             increase in water runoff and soil erosion; how dammed rivers increase groundwater recharge,
+             decrease sediment transport, and increase coastal erosion; or how the loss of wetlands causes a
+             decrease in local humidity that further reduces the wetland extent.]
+  BI-ESS2-4 Use a model to describe how variations in the flow of energy into and out of Earth’s systems
+             result in changes in climate. [Clarification Statement: Examples of the causes of climate change
+             differ by timescale, over 1-10 years: large volcanic eruption, ocean circulation; 10-100s of years:
+             changes in human activity, ocean circulation, solar output; 10-100s of thousands of years: changes to
+             Earth's orbit and the orientation of its axis; and 10-100s of millions of years: long-term changes in
+             atmospheric composition.] [Assessment Boundary: Assessment of the results of changes in climate is
+             limited to changes in surface temperatures, precipitation patterns, glacial ice volumes, sea levels, and
+             biosphere distribution.]
+  BI-ESS2-5 Plan and conduct an investigation of the properties of water and its effects on Earth materials
+             and surface processes. [AR Clarification Statement: This PE is partially addressed in this course.
+             Emphasis is on the properties of water and the water cycle.]
+   BI-ESS3-5 Analyze geoscience data and the results from global climate models to make an evidence-
+             based forecast of the current rate of global or regional climate change and associated future
+             impacts to Earth systems. [AR Clarification Statement: Examples of evidence (precipitation and
+             temperature) for both data and climate models and the associated impacts (sea level changes, glacial
+             ice volumes, and atmosphere and ocean composition) could be found at National Oceanic and
+             Atmospheric Administration, National Weather Service, and United States Geological Survey.]
+             [Assessment Boundary: Assessment is limited to one example of a climate change and its associated
+             impacts.]
+  BI6-ETS1-2 Design a solution to a complex real-world problem by breaking it down into smaller, more
+             manageable problems that can be solved through engineering. [AR Clarification Statement:
+             Proposed problems could include increases in pollution, greenhouse gases, water runoff and soil
+             erosion, coastal erosion, and loss of wetlands.]
+  BI6-ETS1-3 Evaluate a solution to a complex real-world problem based on prioritized criteria and trade-
+             offs that account for a range of constraints, including cost, safety, reliability, and aesthetics, as
+             well as possible social, cultural, and environmental impacts. [AR Clarification Statement:
+             Solutions could include those designed by students or identified from scientific studies.]
+ The performance expectations above were developed using the following elements from the NRC document A
+ Framework for K-12 Science Education:
+
+ Science and Engineering Practices                   Disciplinary Core Ideas                 Crosscutting Concepts
+ Developing and Using Models            ESS1.B: Earth and the Solar System                 Cause and Effect
+ Modeling in 9–12 builds on K–8           Cyclical changes in the shape of Earth’s         Empirical evidence is
+ experiences and progresses to            orbit around the sun, together with              required to differentiate
+ using, synthesizing, and developing      changes in the tilt of the planet’s axis of      between cause and
+ models to predict and show               rotation, both occurring over hundreds of        correlation and make claims
+ relationships among variables            thousands of years, have altered the             about specific causes and
+ between systems and their                intensity and distribution of sunlight falling   effects. (BI-ESS2-4)
+ components in the natural and            on the earth. These phenomena cause a
+ designed world(s).                       cycle of ice ages and other gradual
+                                          climate changes.(BI-ESS2-4)
+29
+                                         Biology - Integrated: Life and Earth’s Systems
+                                               Arkansas K-12 Science Standards
+                                              Arkansas Department of Education
+                                                              2016
+   Use a model to provide                 ESS2.A: Earth Materials and Systems              Structure and Function
+     mechanistic accounts of                Earth’s systems, being dynamic and              The functions and
+     phenomena. (BI-ESS2-4)                   interacting, cause feedback effects that         properties of natural and
+ Planning and Carrying Out                    can increase or decrease the original            designed objects and
+ Investigations                               changes. (BI-ESS2-2)                             systems can be inferred
+ Planning and carrying out                  The geological record shows that                  from their overall structure,
+ investigations in 9-12 builds on K-8         changes to global and regional climate           the way their components
+ experiences and progresses to                can be caused by interactions among              are shaped and used, and
+ include investigations that provide          changes in the sun’s energy output or            the molecular
+ evidence for and test conceptual,            Earth’s orbit, tectonic events, ocean            substructures of its various
+ mathematical, physical, and                  circulation, volcanic activity, glaciers,        materials. (BI-ESS2-5)
+ empirical models.                            vegetation, and human activities. These       Stability and Change
+   Plan and conduct an investigation         changes can occur on a variety of time         Feedback (negative or
+     individually and collaboratively to      scales from sudden (e.g., volcanic ash           positive) can stabilize or
+     produce data to serve as the basis       clouds) to intermediate (ice ages) to very       destabilize a system.
+     for evidence, and in the design:         long-term tectonic cycles. (BI-ESS2-4)           (BI-ESS2-2)
+     decide on types, how much, and        ESS2.C: The Roles of Water in Earth’s              Change and rates of
+     accuracy of data needed to            Surface Processes                                   change can be quantified
+     produce reliable measurements          The abundance of liquid water on Earth’s          and modeled over very
+     and consider limitations on the          surface and its unique combination of            short or very long periods
+     precision of the data (e.g., number      physical and chemical properties are             of time. Some system
+     of trials, cost, risk, time), and        central to the planet’s dynamics. These          changes are irreversible.
+     refine the design accordingly.           properties include water’s exceptional           (BI-ESS3-5)
+     (BI-ESS2-5)                              capacity to absorb, store, and release        ----------------------------------------
+ Analyzing and Interpreting Data              large amounts of energy, transmit             Connections to Engineering,
+ Analyzing data in 9–12 builds on K–8         sunlight, expand upon freezing, dissolve                 Technology,
+ experiences and progresses to                and transport materials, and lower the        and Applications of Science
+ introducing more detailed statistical        viscosities and melting points of rocks.
+ analysis, the comparison of data sets        BI-ESS2-5)                                    Influence of Engineering,
+ for consistency, and the use of           ESS2.D: Weather and Climate                      Technology, and Science
+ models to generate and analyze              The foundation for Earth’s global climate     on Society and the Natural
+ data.                                        systems is the electromagnetic radiation      World
+   Analyze data using tools,                 from the sun, as well as its reflection,        New technologies can
+     technologies, and/or models (e.g.,       absorption, storage, and redistribution          have deep impacts on
+     computational, mathematical) in          among the atmosphere, ocean, and land            society and the
+     order to make valid and reliable         systems, and this energy’s re-radiation          environment, including
+     scientific claims or determine an        into space. (BI-ESS2-2, BI-ESS2-4)               some that were not
+     optimal design solution.                Changes in the atmosphere due to                 anticipated. Analysis of
+     (BI-ESS2-2)                              human activity have increased carbon             costs and benefits is a
+   Analyze data using computational          dioxide concentrations and thus affect           critical aspect of decisions
+     models in order to make valid and        climate. (BI-ESS2-4)                             about technology.
+     reliable scientific claims.           ESS3.D: Global Climate Change                       (BI-ESS2-2, BI6-ETS1-3)
+     (BI-ESS3-5)                             Though the magnitudes of human
+ Constructing Explanations and                impacts are greater than they have ever
+ Designing Solutions                          been, so too are human abilities to
+ Constructing explanations and                model, predict, and manage current and
+ designing solutions in 9–12 builds on        future impacts. (BI-ESS3-5)
+ K–8 experiences and progresses to         ETS1.B: Developing Possible Solutions
+ explanations and designs that are          When evaluating solutions, it is important
+ supported by multiple and                    to take into account a range of
+ independent student-generated                constraints, including cost, safety,
+ sources of evidence consistent with          reliability, and aesthetics, and to
+ scientific ideas, principles and             consider social, cultural, and
+ theories.                                    environmental impacts. (BI6-ETS1-3)
+30
+                                           Biology - Integrated: Life and Earth’s Systems
+                                                 Arkansas K-12 Science Standards
+                                                Arkansas Department of Education
+                                                                2016
+      Design a solution to a complex                    ETS1.C: Optimizing the Design Solution
+       real-world problem, based on                       Criteria may need to be broken down
+       scientific knowledge, student-                      into simpler ones that can be
+       generated sources of evidence,                      approached systematically, and
+       prioritized criteria, and tradeoff                  decisions about the priority of certain
+       considerations. (BI6-ETS1-2)                        criteria over others (trade-offs) may be
+      Evaluate a solution to a complex                    needed. (BI6-ETS1-2)
+       real-world problem, based on
+       scientific knowledge, student-
+       generated sources of evidence,
+       prioritized criteria, and tradeoff
+       considerations. (BI6-ETS1-3)
+     -------------------------------------------------
+     Connections to Nature of Science
+
+ Scientific Investigations Use a
+ Variety of Methods
+   Science investigations use diverse
+    methods and do not always use
+    the same set of procedures to
+    obtain data. (BI-ESS3-5)
+   New technologies advance
+    scientific knowledge. (BI-ESS3-5)
+ Scientific Knowledge is Based on
+ Empirical Evidence
+   Science knowledge is based on
+    empirical evidence. (BI-ESS3-5)
+   Science arguments are
+    strengthened by multiple lines of
+    evidence supporting a single
+    explanation.
+    (BI-ESS2-4, BI-ESS3-5)
+ Connections to other DCIs in this course: BI.LS1.C (BI-ESS3-5); BI.LS2.B (BI-ESS2-2); BI.LS2.C (BI-ESS2-2,
+  BI-ESS2-4); BI.LS4.D (BI-ESS2-2); BI.ESS3.C (BI-ESS2-2, BI-ESS2-4, BI-ESS2-5); BI.ESS3.D (BI-ESS2-2,
+  BI-ESS2-4)
+ Connections of DCIs across grade-bands: 7.PS1.A (BI-ESS2-5); 8.PS3.A (BI-ESS2-4); 8.PS3.B (BI-ESS2-4,
+ BI-ESS3-5); 6.PS3.D (BI-ESS2-2, BI-ESS2-4, BI-ESS3-5); 8.PS4.B (BI-ESS2-2, BI-ESS2-4, BI-ESS2-5); 6.LS1.C
+ (BI-ESS2-4); 7.LS2.B (BI-ESS2-2, BI-ESS2-4); 7.LS2.C (BI-ESS2-2, BI-ESS2-4); 8.LS4.C (BI-ESS2-2);
+ 7.ESS2.A (BI-ESS2-2, BI-ESS2-4, BI-ESS2-5, BI-ESS3-5); 7.ESS2.B (BI-ESS2-2, BI-ESS2-4);
+ 6.ESS2.C (BI-ESS2-2, BI-ESS2-4, BI-ESS2-5); 6.ESS2.D (BI-ESS2-2, BI-ESS2-4, BI-ESS2-5, BI-ESS3-5);
+ 7.ESS3.B (BI-ESS3-5); 6.ESS3.C (BI-ESS2-2, BI-ESS2-4, BI-ESS3-5); 6.ESS3.D (BI-ESS2-2, BI-ESS2-4,
+ BI-ESS3-5); 6-8.ETS1.A (BI6-ETS1-2, BI6-ETS1-3); 6-8.ETS1.B (BI6-ETS1-2, BI6-ETS1-3); 6-8.ETS1.C
+ (BI6-ETS1-2)
+ Connections to the Arkansas Disciplinary Literacy Standards:
+ RST.11-12.1       Cite specific textual evidence to support analysis of science and technical texts, attending to
+                   important distinctions the author makes and to any gaps or inconsistencies in the account.
+                  (BI-ESS2-2, BI-ESS3-5)
+ RST.11-12.2       Determine the central ideas or conclusions of a text; summarize complex concepts, processes, or
+                   information presented in a text by paraphrasing them in simpler but still accurate terms.
+                  (BI-ESS2-2, BI-ESS3-5)
+ RST.11-12.7       Integrate and evaluate multiple sources of information presented in diverse formats and media
+                   (e.g., quantitative data, video, multimedia) in order to address a question or solve a problem.
+                    (BI-ESS3-5, BI6-ETS1-3)
+
+31
+                                                         Biology - Integrated: Life and Earth’s Systems
+                                                               Arkansas K-12 Science Standards
+                                                              Arkansas Department of Education
+                                                                              2016
+ RST.11-12.8     Evaluate the hypotheses, data, analysis, and conclusions in a science or technical text, verifying
+                 the data when possible and corroborating or challenging conclusions with other sources of
+                 information. (BI6-ETS1-3)
+ RST.11-12.9     Synthesize information from a range of sources (e.g., texts, experiments, simulations) into a
+                 coherent understanding of a process, phenomenon, or concept, resolving conflicting information
+                 when possible. (BI6-ETS1-3)
+ WHST.9-12.7     Conduct short as well as more sustained research projects to answer a question (including a self-
+                 generated question) or solve a problem; narrow or broaden the inquiry when appropriate;
+                 synthesize multiple sources on the subject, demonstrating understanding of the subject under
+                 investigation.
+                  (BI-ESS2-5)
+
+ Connections to the Arkansas English Language Arts Standards:
+ 9-12.CC.9.P Include relevant multimedia to enhance understanding of findings, reasoning, and/or evidence.
+                (BI-ESS2-4)
+
+ Connections to the Arkansas Mathematics Standards:
+ A1.SP.3        Summarize data from two categorical variables in a frequency table; interpret relative frequencies in
+                the context of the data, recognizing data trends and associations. ( BI-ESS2-2, BI-ESS2-4,
+                BI-ESS2-5, BI-ESS3-5)
+ AR.M.2         Applying reasoning about quantities and relationships. (BI-ESS2-2, BI-ESS2-4, BI-ESS3-5,
+                BI6-ETS1-3)
+ AR.M.4        Select and use relationships and tools. (BI-ESS2-4, BI6-ETS1-2, BI6-ETS1-3)
+
+
+
+
+32
+                                         Biology - Integrated: Life and Earth’s Systems
+                                               Arkansas K-12 Science Standards
+                                              Arkansas Department of Education
+                                                              2016
+                                      Biology - Integrated
+ Topic 7: Human Impacts on Earth’s Systems
+Students who demonstrate understanding can:
+ BI-ESS3-1 Construct an explanation based on evidence for how the availability of natural resources,
+            occurrence of natural hazards, and changes in climate have influenced human activity. [AR
+            Clarification Statement: This PE is fully addressed in this course. Emphasis is on the way climate
+            change has impacted human populations and how natural resources and natural hazards impact
+            human societies. Examples of climate change results which affect populations or drive mass
+            migrations could include changes to sea level, regional patterns of temperature and precipitation, and
+            types of crops and livestock available. Examples of the dependence of human populations on
+            technology to acquire natural resources and to avoid natural hazards could include damming rivers,
+            natural gas fracking, thunderstorm sirens, and severe weather text alerts.]
+ BI-ESS3-2 Evaluate competing design solutions for developing, managing, and utilizing energy and
+            mineral resources based on cost-benefit ratios.* [AR Clarification Statement: This PE is fully
+            addressed in this course. Emphasis is on the designs of possible solutions. Emphasis is on the
+            conservation, recycling, and reuse of resources (minerals and metals), and on minimizing impacts.
+            Examples could include developing best practices for agricultural soil use, mining (coal, tar sands, and
+            oil shales), and pumping (petroleum and natural gas).]
+ BI-ESS3-3 Create a computational simulation to illustrate the relationships among management of natural
+            resources, the sustainability of human populations, and biodiversity. [Clarification Statement:
+            Examples of factors that affect the management of natural resources include costs of resource
+            extraction and waste management, per-capita consumption, and the development of new
+            technologies. Examples of factors that affect human sustainability include agricultural efficiency, levels
+            of conservation, and urban planning.] [Assessment Boundary: Assessment for computational
+            simulations is limited to using provided multi-parameter programs or constructing simplified
+            spreadsheet calculations.]
+BI-ESS3-4 Evaluate or refine a technological solution that reduces impacts of human activities on natural
+             systems.* [AR Clarification Statement: This PE is partially addressed in this course. Examples of data
+             on the impacts of human activities could include the quantities and types of pollutants released,
+             changes to biomass and species diversity, and changes in land surface (urban development,
+            agriculture or livestock, and surface mining). Examples for limiting future impacts could
+             range from local efforts (reducing, reusing, and recycling resources) to large-scale
+             bioengineering design solutions (altering global temperatures by making large changes to the
+             atmosphere or ocean).]
+BI-ESS3-6 Use a computational representation to illustrate the relationships among Earth systems and
+            how those relationships are being modified due to human activity. [AR Clarification Statement:
+            Examples of Earth systems to be considered are the hydrosphere, atmosphere, cryosphere,
+            geosphere, and biosphere. Examples of far-reaching impacts related to human activity, include how
+            increases in one or more atmospheric gasses (COx, NOx, Sox), and volatile organic compounds), and
+            particulate matter could impact other Earth systems. For example, an increase in carbon dioxide
+            results in an increase in photosynthetic biomass and ocean acidification with resulting impacts on
+            marine populations.] [Assessment Boundary: Assessment does not include running computational
+            representations but is limited to using the published results of scientific computational models.]
+BI7-ETS1-1 Analyze a major global challenge to specify qualitative and quantitative criteria and constraints
+            for solutions that account for societal needs and wants. [AR Clarification Statement: Examples
+            could include recycling, increased atmospheric carbon dioxide, ocean acidification, impacts on marine
+            populations, increased wildfire occurrence, deforestation, and overfishing.]
+BI7-ETS1-4 Use a computer simulation to model the impact of proposed solutions to a complex real-world
+             problem with numerous criteria and constraints on interactions within and between systems
+            relevant to the problem. [AR Clarification Statement: Simulations could include management of
+            natural resources for sustainable yields, agricultural efficiency to feed a growing world population, and
+            urban planning to maximize green space.]
+The performance expectations above were developed using the following elements from the NRC document A
+Framework for K-12 Science Education:
+33
+                                     Biology - Integrated: Human Impacts on Earth’s Systems
+                                                 Arkansas K-12 Science Standards
+                                                 Arkansas Department of Education
+                                                              2016
+     Science and Engineering Practices                      Disciplinary Core Ideas               Crosscutting Concepts
+ Using Mathematics and                           ESS2.D: Weather and Climate                     Cause and Effect
+ Computational Thinking                            Current models predict that, although          Empirical evidence is
+ Mathematical and computational thinking            future regional climate changes will be         required to differentiate
+ in 9-12 builds on K-8 experiences and              complex and varied, average global              between cause and
+ progresses to using algebraic thinking             temperatures will continue to rise. The         correlation and make
+ and analysis, a range of linear and                outcomes predicted by global climate            claims about specific
+ nonlinear functions including                      models strongly depend on the                   causes and effects.
+ trigonometric functions, exponentials and          amounts of human-generated                      (BI-ESS3-1)
+ logarithms, and computational tools for            greenhouse gases added to the                Systems and System
+ statistical analysis to analyze, represent,        atmosphere each year and by the              Models
+ and model data. Simple computational               ways in which these gases are                  When investigating or
+ simulations are created and used based             absorbed by the ocean and biosphere.            describing a system, the
+ on mathematical models of basic                    (BI-ESS3-6)                                     boundaries and initial
+ assumptions.                                    ESS3.A: Natural Resources                          conditions of the system
+   Create a computational model or                Resource availability has guided the            need to be defined and
+     simulation of a phenomenon,                    development of human society.                   their inputs and outputs
+     designed device, process, or system.           (BI-ESS3-1)                                     analyzed and described
+     (BI-ESS3-3)                                   All forms of energy production and              using models.
+   Use a computational representation of           other resource extraction have                  (BI-ESS3-6)
+     phenomena or design solutions to               associated economic, social,                  Models (e.g., physical,
+     describe and/or support claims and/or          environmental, and geopolitical costs           mathematical, computer
+     explanations. (BI-ESS3-6)                      and risks as well as benefits. New              models) can be used to
+   Use mathematical models and/or                  technologies and social regulations             simulate systems and
+     computer simulations to predict the            can change the balance of these                 interactions—including
+     effects of a design solution on systems        factors. (BI-ESS3-2)                            energy, matter, and
+     and/or the interactions between             ESS3.B: Natural Hazards                            information flows—
+     systems.                                      Natural hazards and other geologic              within and between
+     (BI7-ETS1-4)                                   events have shaped the course of                systems at different
+ Constructing Explanations and                      human history; [they] have significantly        scales.
+ Designing Solutions                                altered the sizes of human populations          (BI7-ETS1-4)
+ Constructing explanations and designing            and have driven human migrations.            Stability and Change
+ solutions in 9–12 builds on K–8                    (BI-ESS3-1)                                    Change and rates of
+ experiences and progresses to                   ESS3.C: Human Impacts on Earth                     change can be quantified
+ explanations and designs that are               Systems                                            and modeled over very
+ supported by multiple and independent             The sustainability of human societies           short or very long
+ student-generated sources of evidence              and the biodiversity that supports them         periods of time. Some
+ consistent with scientific knowledge,              requires responsible management of              system changes are
+ principles, and theories.                          natural resources. (B-ESS3-3)                   irreversible. (BI-ESS3-3)
+   Construct an explanation based on              Scientists and engineers can make              Feedback (negative or
+     valid and reliable evidence obtained           major contributions by developing               positive) can stabilize or
+     from a variety of sources (including           technologies that produce less                  destabilize a system.
+     students’ own investigations, models,          pollution and waste and that preclude           (BI-ESS3-4)
+     theories, simulations, peer review)            ecosystem degradation. (BI-ESS3-4)
+     and the assumption that theories and        ESS3.D: Global Climate Change                   --------------------------------------
+     laws that describe the natural world          Through computer simulations and                     Connections to
+     operate today as they did in the past          other studies, important discoveries          Engineering, Technology,
+     and will continue to do so in the future.      are still being made about how the                and Applications of
+     (BI-ESS3-1)                                    ocean, the atmosphere, and the                            Science
+   Design or refine a solution to a                biosphere interact and are modified in
+     complex real-world problem, based on           response to human activities.                Influence of Engineering,
+     scientific knowledge, student-                 (BI-ESS3-6)                                  Technology, and Science
+     generated sources of evidence,
+34
+                                        Biology - Integrated: Human Impacts on Earth’s Systems
+                                                    Arkansas K-12 Science Standards
+                                                    Arkansas Department of Education
+                                                                 2016
+     prioritized criteria, and tradeoff         ETS1.A: Defining and Delimiting                 on Society and the
+     considerations. (BI-ESS3-4)                Engineering Problems                            Natural World
+ Engaging in Argument from Evidence              Criteria and constraints also include           Modern civilization
+ Engaging in argument from evidence in             satisfying any requirements set by               depends on major
+ 9–12 builds on K–8 experiences and                society, such as taking issues of risk           technological systems.
+ progresses to using appropriate and               mitigation into account, and they                (BI-ESS3-1, BI-ESS3-3)
+ sufficient evidence and scientific                should be quantified to the extent             Engineers continuously
+ reasoning to defend and critique claims           possible and stated in such a way that           modify these
+ and explanations about natural and                one can tell if a given design meets             technological systems by
+ designed world(s). Arguments may also             them. (BI7-ETS1-1)                               applying scientific
+ come from current scientific or historical      Humanity faces major global                       knowledge and
+ episodes in science.                              challenges today, such as the need for           engineering design
+    Evaluate competing design solutions           supplies of clean water and food or for          practices to increase
+     to a real-world problem based on              energy sources that minimize pollution,          benefits while
+     scientific ideas and principles,              which can be addressed through                   decreasing costs and
+     empirical evidence, and logical               engineering. These global challenges             risks. (BI-ESS3-2,
+     arguments regarding relevant factors          also may have manifestations in local            BI-ESS3-4)
+     (e.g. economic, societal,                     communities. (BI7-ETS1-1)                      New technologies can
+     environmental, ethical considerations).    ETS1.B: Developing Possible                         have deep impacts on
+     (BI-ESS3-2)                                Solutions                                           society and the
+ Asking Questions and Defining                    When evaluating solutions, it is                 environment, including
+ Problems                                          important to take into account a range           some that were not
+ Asking questions and defining problems            of constraints, including cost, safety,          anticipated. (BI-ESS3-3)
+ in 9–12 builds on K–8 experiences and             reliability, and aesthetics, and to            Analysis of costs and
+ progresses to formulating, refining, and          consider social, cultural, and                   benefits is a critical
+ evaluating empirically testable questions         environmental impacts.                           aspect of decisions
+ and design problems using models and              (BI-ESS3-2, BI-ESS3-4)                           about technology. (BI-
+ simulations.                                    Both physical models and computers                ESS3-2)
+   Analyze complex real-world problems            can be used in various ways to aid in          New technologies can
+     by specifying criteria and constraints        the engineering design process.                  have deep impacts on
+     for successful solutions. (BI7-ETS1-1)        Computers are useful for a variety of            society and the
+                                                   purposes, such as running simulations            environment, including
+                                                   to test different ways of solving a              some that were not
+                                                   problem or to see which one is most              anticipated. Analysis of
+                                                   efficient or economical; and in making           costs and benefits is a
+                                                   a persuasive presentation to a client            critical aspect of
+                                                   about how a given design will meet his           decisions about
+                                                   or her needs. (BI7-ETS1-4)                       technology.
+                                                                                                    (BI7-ETS1-1)
+                                                                                                 ------------------------------------
+                                                                                                 Connections to Nature of
+                                                                                                             Science
+
+                                                                                                Science is a Human
+                                                                                                Endeavor
+                                                                                                  Science is a result of
+                                                                                                   human endeavors,
+                                                                                                   imagination, and
+                                                                                                   creativity. (BI-ESS3-3)
+                                                                                                Science Addresses
+                                                                                                Questions About the
+                                                                                                Natural and Material
+                                                                                                World
+
+35
+                                       Biology - Integrated: Human Impacts on Earth’s Systems
+                                                   Arkansas K-12 Science Standards
+                                                   Arkansas Department of Education
+                                                                2016
+                                                                                             Science and technology
+                                                                                              may raise ethical issues
+                                                                                              for which science, by
+                                                                                              itself, does not provide
+                                                                                              answers and solutions.
+                                                                                              (BI-ESS3-2)
+                                                                                             Science knowledge
+                                                                                              indicates what can
+                                                                                              happen in natural
+                                                                                              systems—not what
+                                                                                              should happen. The
+                                                                                              latter involves ethics,
+                                                                                              values, and human
+                                                                                              decisions about the use
+                                                                                              of knowledge.
+                                                                                              (BI-ESS3-2)
+                                                                                             Many decisions are not
+                                                                                              made using science
+                                                                                              alone, but rely on social
+                                                                                              and cultural contexts to
+                                                                                              resolve issues.
+                                                                                              (BI-ESS3-2)
+ Connections to other DCIs in this course: BI.LS2.A (BI-ESS3-2, BI-ESS3-3); BI.LS2.B (BI-ESS3-2, BI-ESS3-3,
+ BI-ESS3-6); BI.LS2.C (BI-ESS3-3, BI-ESS3-4, BI-ESS3-6); BI.LS4.D (BI-ESS3-2, BI-ESS3-3, BI-ESS3-4,
+ BI-ESS3-6); BI.ESS2.A (BI-ESS3-2, BI-ESS3-3, BI-ESS3-6); BI.ESS2.E (BI-ESS3-3)
+ Connections of DCIs across grade-bands: 7.PS1.B (BI-ESS3-3); 6.PS3.D (BI-ESS3-2); 7.LS2.A (BI-ESS3-1,
+ BI-ESS3-2, BI-ESS3-3); 8.LS2.B (BI-ESS3-2, BI-ESS3-3); 7.LS2.C (BI-ESS3-3, BI-ESS3-4, BI-ESS3-6); 8.LS4.C
+ (BI-ESS3-3); 8.LS4.D (BI-ESS3-1, BI-ESS3-2, BI-ESS3-3); 7.ESS2.A (BI-ESS3-1, BI-ESS3-3, BI-ESS3-4,
+ BI-ESS3-6); 6.ESS2.C (BI-ESS3-6); 7.ESS3.A (BI-ESS3-1, BI-ESS3-2, BI-ESS3-3); 6.ESS3.B (BI-ESS3-1,
+ BI-ESS3-4); 6.ESS3.C (B-ESS3-2 B-ESS3-3, B-ESS3-4, B-ESS3-6); 6.ESS3.D (B-ESS3-4, B-ESS3-6)
+ 6-8.ETS1.A (BI7-ETS1-1, BI7-ETS1-4); 6-8.ETS1.B (BI7-ETS1-4); 6-8.ETS1.C (BI7-ETS1-4)
+ Connections to the Arkansas Disciplinary Literacy Standards:
+ RST.11-12.1     Cite specific textual evidence to support analysis of science and technical texts, attending to
+                 important distinctions the author makes and to any gaps or inconsistencies in the account.
+                 (BI-ESS3-1, BI-ESS3-2, BI-ESS3-4)
+ RST.11-12.7     Integrate and evaluate multiple sources of information presented in diverse formats and media
+                 (e.g., quantitative data, video, multimedia) in order to address a question or solve a problem. (BI7-
+                 ETS1-1)
+ RST.11-12.8     Evaluate the hypotheses, data, analysis, and conclusions in a science or technical text, verifying
+                 the data when possible and corroborating or challenging conclusions with other sources of
+                 information. (BI-ESS3-2, BI-ESS3-4, BI7-ETS1-1)
+ RST.11-12.9     Synthesize information from a range of sources (e.g., texts, experiments, simulations) into a
+                 coherent understanding of a process, phenomenon, or concept, resolving conflicting information
+                 when possible. (BI7-ETS1-1)
+ WHST.9-12.2 Write informative/explanatory texts, including the narration of historical events, scientific
+                 procedures/ experiments, or technical processes. (BI-ESS3-1)
+
+ Connections to the Arkansas English Language Arts Standards: N/A
+
+
+ Connections to the Arkansas Mathematics Standards:
+ A1.SP.3        Summarize data from two categorical variables in a frequency table; interpret relative frequencies in
+                 the context of the data, recognizing data trends and associations. (BI-ESS3-1, BI-ESS3-4,
+                 BI-ESS3-6)
+36
+                                      Biology - Integrated: Human Impacts on Earth’s Systems
+                                                  Arkansas K-12 Science Standards
+                                                  Arkansas Department of Education
+                                                               2016
+ AR.M.2   Applying reasoning about quantities and relationships. (BI-ESS3-1, BI-ESS3-2, BI-ESS3-3.
+          BI-ESS3-4, BI-ESS3-6, BI7-ETS1-1)
+ AR.M.4   Select and use relationships and tools. (BI-ESS3-3., BI-ESS3-6, BI7-ETS1-1)
+
+
+
+
+37
+                              Biology - Integrated: Human Impacts on Earth’s Systems
+                                          Arkansas K-12 Science Standards
+                                          Arkansas Department of Education
+                                                       2016
+                                                          Contributors
+
+The following educators contributed to the development of this course:
+
+   Susan Allison – Benton School District                               Steven Long – Rogers School District
+
+   Angela Bassham – Salem School District                               Brandon Lucius – Osceola School District
+
+   Allison Belcher – Little Rock School District                        Matt Martin – Centerpoint School District
+
+   Debbie Bilyeu – Arkansas AIMS                                        Patti Meeks – Hamburg School District
+
+   Tami Blair – Texarkana School District                               Melissa Miller – Farmington School District
+
+   Stephen Brodie – University of Arkansas at Fort Smith                Jim Musser – Arkansas Tech University
+   STEM Center
+   Stephanie Brown – Quitman School District                            Nanette Nichols – Wilbur D. Mills AR Education
+                                                                        Cooperative
+
+   Sarah Croswell – Virtual Arkansas                                    John Nilz – North Little Rock School District
+
+   Tami Eggensperger – Cabot School District                            Dennis Pevey – eSTEM Public Charter School
+
+   Jenna Gill – Siloam Springs School District                          Tami Philyaw – Smackover – Norphlet School District
+
+   Douglas Hammon – Little Rock School District                         Kathy Prophet – Springdale School District
+
+   Keith Harris – University of Arkansas at Little Rock                 Carrie Shell – Highland School District
+   Partnership for STEM Education
+   Lynne Hehr – University of Arkansas at Fayetteville                  Will Squires – Caddo Hills School District
+   STEM Center for Math and Science Education –
+   Leonda Holthoff – Star City School District                          Eddie Tucker – Hamburg School District
+
+   Courtney Jones – Lincoln Consolidated School District                Jon White – Harding University
+
+   Rebecca Koelling – Highland School District                          Andrew Williams – University of Arkansas at
+                                                                        Monticello
+
+   Karen Ladd – Nettleton School District                               Wendi J.W. Williams – Northwest Arkansas
+                                                                        Community College
+
+   John Levy – North Arkansas College                                   Cathy Wissehr – University of Arkansas at Fayetteville
+
+
+
+
+  38
+                                                    Biology - Integrated: Contributors
+                                                   Arkansas K-12 Science Standards
+                                                   Arkansas Department of Education
+                                                                   2016
+

@@ -919,4 +919,40 @@ export const lessons: GradeLessons = {
     ["She refused to give up her bus seat.", "Black residents stopped riding the buses for over a year."],
     "the Montgomery Bus Boycott",
   ),
+  "social/ar-g7-arkansas-land": lesson(
+    ["Arkansas has six natural regions: the Ozark Plateau, Ouachita Mountains, Arkansas River Valley, Crowley's Ridge, the Delta and the Gulf Coastal Plain.", "Highlands lie in the north and west; flat lowlands lie in the east and south.", "The Delta's rich soil grows rice; southern pine forests give timber. Dams made many of the big lakes."],
+    "Which Arkansas region is flat farmland along the Mississippi River?",
+    ["Highlands are in the north and west.", "The flat east by the Mississippi is the Delta."],
+    "the Delta",
+  ),
+  "social/ar-g7-first-peoples": lesson(
+    ["People lived in Arkansas for thousands of years. Mississippian peoples farmed corn and built large earthen mounds.", "Later the Caddo lived in the southwest, the Osage hunted in the Ozarks and the Quapaw lived where the Arkansas meets the Mississippi.", "Nations removed on the Trail of Tears crossed Arkansas. The Caddo, Osage and Quapaw nations have their own governments today."],
+    "Which nation lived near where the Arkansas River meets the Mississippi?",
+    ["The Caddo lived in the southwest; the Osage hunted in the Ozarks.", "The nation by the river's mouth gave Arkansas its name."],
+    "the Quapaw",
+  ),
+  "social/ar-g7-explorers": lesson(
+    ["Hernando de Soto's Spanish expedition reached Arkansas in 1541, searching for gold.", "In 1673 Marquette and Jolliet met the Quapaw; in 1682 La Salle claimed Louisiana for France.", "Henri de Tonti founded Arkansas Post in 1686. Diseases brought by Europeans killed many Native people."],
+    "Which came first: Arkansas Post or de Soto's expedition?",
+    ["De Soto came in 1541.", "Arkansas Post was founded in 1686."],
+    "de Soto's expedition",
+  ),
+  "social/ar-g7-territory-statehood": lesson(
+    ["Arkansas became part of the United States with the Louisiana Purchase in 1803.", "Arkansas Territory was created in 1819; its capital moved from Arkansas Post to Little Rock in 1821.", "Arkansas became the 25th state on June 15, 1836, as a slave state."],
+    "How many years passed between the Louisiana Purchase and Arkansas statehood?",
+    ["The purchase was in 1803; statehood came in 1836.", "1836 − 1803 = 33."],
+    "33 years",
+  ),
+  "social/ar-g7-westward": lesson(
+    ["Manifest Destiny was the belief that the United States should spread across North America.", "The Indian Removal Act of 1830 forced nations west; many people died on the Trail of Tears, and many routes crossed Arkansas.", "The Mexican-American War (1846–1848) added the Southwest, and each new territory raised the question of slavery."],
+    "Which president signed the Indian Removal Act of 1830?",
+    ["He was president from 1829 to 1837.", "He was nicknamed Old Hickory."],
+    "Andrew Jackson",
+  ),
+  "social/ca-g5-thirteen-colonies": lesson(
+    ["Jamestown, Virginia (1607) was the first lasting English colony.", "New England's rocky soil and long winters led to fishing, shipbuilding and trade. Southern Colonies like Georgia grew cash crops.", "Colonies grew along rivers and harbours so boats could carry goods. Rhode Island allowed religious freedom."],
+    "Why did many colonies grow along rivers and harbours?",
+    ["There were few roads.", "Boats could carry goods and people."],
+    "Boats could carry goods and people.",
+  ),
 };

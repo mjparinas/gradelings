@@ -925,4 +925,22 @@ export const lessons: GradeLessons = {
     ["A pull factor draws people to a new place.", "Owning land made the West attractive.", "So it is a pull factor."],
     "a pull factor",
   ),
+  "social/ar-g8-civil-war": lesson(
+    ["Arkansas seceded on May 6, 1861, after Fort Sumter; many people in the Ozarks stayed loyal to the Union.", "Union armies won at Pea Ridge (1862) and Helena (1863) and took Little Rock in September 1863.", "Reconstruction brought sharecropping, the Brooks-Baxter War and the Constitution of 1874, which is still in use."],
+    "In what year did Arkansas adopt the constitution it still uses today?",
+    ["It came at the end of Reconstruction.", "The Brooks-Baxter War ended the same year."],
+    "1874",
+  ),
+  "social/ar-g8-twentieth-century": lesson(
+    ["The Flood of 1927 and the drought of 1930 hit Arkansas farms hard before and during the Great Depression.", "New Deal programs like the CCC built state parks. In World War II, Japanese Americans were held at Rohwer and Jerome.", "In 1957 the Little Rock Nine integrated Central High; President Eisenhower sent the 101st Airborne to protect them."],
+    "Which Arkansas governor tried to block the Little Rock Nine?",
+    ["He used the Arkansas National Guard in 1957.", "Eisenhower overruled him with federal troops."],
+    "Orval Faubus",
+  ),
+  "social/ar-g8-arkansas-today": lesson(
+    ["Arkansas leads the nation in rice and is a top poultry state; forests cover about half the state.", "Rivers, highways and trucks move Arkansas goods; visitors come to Hot Springs, the Buffalo River and the Ozarks.", "Under the Constitution of 1874, the General Assembly makes laws, the governor carries them out and the courts interpret them."],
+    "How many members does the Arkansas General Assembly have in all?",
+    ["The Senate has 35 members and the House has 100.", "35 + 100 = 135."],
+    "135",
+  ),
 };

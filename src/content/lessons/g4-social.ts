@@ -931,4 +931,52 @@ export const lessons: GradeLessons = {
     ["Cortés arrived in 1519.", "The canal opened in 1914."],
     "Cortés arrives in Mexico",
   ),
+  "social/ar-g4-latitude-longitude": lesson(
+    ["Latitude lines measure north or south of the Equator. Longitude lines measure east or west of the Prime Meridian.", "Absolute location uses coordinates. Relative location compares one place with another.", "More Arkansans live in valleys and cities than in steep mountains."],
+    "Little Rock is at about 35° N, 92° W. Which hemispheres is it in?",
+    ["N means north of the Equator.", "W means west of the Prime Meridian."],
+    "Northern and Western",
+  ),
+  "social/ar-g4-first-peoples": lesson(
+    ["People have lived in Arkansas for more than 12,000 years. American Indian people built the Toltec Mounds.", "The Caddo, Osage and Quapaw each have homelands in Arkansas and their own governments today.", "Removal forced nations west. The Trail of Tears crossed Arkansas."],
+    "The name “Arkansas” comes from a name for which nation?",
+    ["They lived where the Arkansas River meets the Mississippi.", "They are the Quapaw."],
+    "the Quapaw",
+  ),
+  "social/ar-g4-territory-statehood": lesson(
+    ["De Soto came in 1541. The French founded Arkansas Post in 1686.", "Thomas Jefferson's Louisiana Purchase (1803) made Arkansas part of the United States.", "Arkansas became the 25th state in 1836, joined the Confederacy in 1861, and rejoined after the war."],
+    "From which country did the United States buy the Louisiana Territory?",
+    ["Napoleon was its leader.", "The country was France."],
+    "France",
+  ),
+  "social/ar-g4-rights": lesson(
+    ["The Bill of Rights protects freedoms of religion, speech, press, assembly and petition.", "Amendments gave the vote to more people: the 15th, the 19th (women) and the 26th (age 18).", "In 1957 the Little Rock Nine integrated Central High School after Brown v. Board of Education."],
+    "Which amendment gave women the right to vote?",
+    ["It was ratified in 1920.", "It is the 19th Amendment."],
+    "the 19th Amendment",
+  ),
+  "social/ar-g4-government": lesson(
+    ["The United States and Arkansas each have a constitution and three branches.", "A city council passes ordinances. The General Assembly passes state laws.", "Taxes and fees pay for roads, schools and parks."],
+    "Who makes laws for the whole state of Arkansas?",
+    ["Cities make ordinances, not state laws.", "The General Assembly makes state laws."],
+    "the General Assembly",
+  ),
+  "social/ar-g4-economy": lesson(
+    ["Commodities like rice, soybeans and cotton are traded around the world.", "Arkansas grows more rice than any other state.", "When supply rises, prices usually fall. When demand rises, prices usually rise."],
+    "A drought means less rice to sell. What will probably happen to the price of rice?",
+    ["Supply goes down.", "Lower supply usually means a higher price."],
+    "it goes up",
+  ),
+  "social/ar-g4-timeline": lesson(
+    ["Find each event's year, then put them in order from earliest to latest.", "Key years: 1803 Louisiana Purchase, 1836 statehood, 1861 to 1865 Civil War, 1920 the 19th Amendment.", "1954 Brown v. Board of Education, then 1957 the Little Rock Nine."],
+    "Which came first: the 19th Amendment or Brown v. Board of Education?",
+    ["The 19th Amendment was in 1920.", "Brown v. Board was in 1954."],
+    "the 19th Amendment",
+  ),
+  "social/ny-g3-world-communities": lesson(
+    ["People settle where there is water, good land and work.", "They adapt to their environment, like stilt houses in flood areas or terraces on hills.", "Communities have their own languages, festivals and folktales."],
+    "Why do some farmers cut steps into hillsides?",
+    ["Crops like rice need flat land and water.", "Steps make flat strips on a slope."],
+    "to make flat land for crops",
+  ),
 };

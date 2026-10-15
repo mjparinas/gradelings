@@ -8,6 +8,6 @@ export const contract: FrameworkContract = {
   cite: codeCite(OUTCOMES, "California"),
   ownPrefix: "ca-",
   // Other states may adopt the ones that name no California place; no Canadian framework ever gets them.
-  ownSharedWith: ["us-ny", "us-tx", "us-me", "us-mn", "us-ak", "us-al", "us-az"],
+  ownSharedWith: ["us-ny", "us-tx", "us-me", "us-mn", "us-ak", "us-al", "us-az", "us-ar"],
   plan: PLAN,
 };

@@ -493,4 +493,22 @@ export const lessons: GradeLessons = {
     ["Lava is melted rock.", "Rock that forms from cooled melted rock is igneous."],
     "igneous",
   ),
+  "science/plant-parts-ab": lesson(
+    ["Roots take in water, stems hold the plant up, leaves make food, flowers make seeds.", "Xylem carries water up from the roots. Phloem carries sugar from the leaves.", "Stomata are tiny leaf openings that let carbon dioxide in and oxygen and water vapour out."],
+    "Which tubes carry water from the roots to the leaves?",
+    ["Phloem carries sugar.", "The water tubes are the other kind."],
+    "xylem",
+  ),
+  "science/tx-g7-reproduction": lesson(
+    ["Asexual reproduction uses one parent and makes identical offspring: budding, runners, cuttings, splitting.", "Sexual reproduction uses two parents, so offspring get a mix of traits.", "Variety helps a population survive diseases and changes."],
+    "A strawberry plant grows a runner that roots into a new plant. Asexual or sexual?",
+    ["Only one parent plant is involved.", "The new plant is identical."],
+    "asexual",
+  ),
+  "science/ar-g6-design": lesson(
+    ["Criteria are what a solution must do to succeed. Constraints are limits.", "A decision matrix compares designs against the criteria.", "A trade-off is giving up some of one thing to get more of another.", "After a test fails, improve the design and test again."],
+    "A cheaper filter cleans water less well. Choosing it means accepting a… what?",
+    ["You give up some cleaning to save money.", "Giving up one thing for another is a trade-off."],
+    "a trade-off",
+  ),
 };

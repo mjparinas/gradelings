@@ -673,4 +673,58 @@ export const lessons: GradeLessons = {
     ["They were passed between 1865 and 1870.", "They are the three right after the 12th."],
     "the 13th, 14th and 15th",
   ),
+  "social/ar-g5-world-maps": lesson(
+    ["Physical maps show landforms, political maps show borders and capitals, and thematic maps show one topic.", "Latitude lines measure north or south of the equator (0°); longitude lines measure east or west of the prime meridian (0°).", "A map scale turns map distance into real distance. Every flat map distorts something."],
+    "A map scale says 1 inch = 50 miles. Two towns are 4 inches apart. How far apart are they?",
+    ["Each inch stands for 50 miles.", "4 × 50 = 200."],
+    "200 miles",
+  ),
+  "social/ar-g5-population": lesson(
+    ["Population density is how many people live in an area.", "Push factors, like war or drought, drive people away; pull factors, like jobs and safety, draw them in.", "A refugee must flee war or persecution. Urbanization is people moving to cities."],
+    "Is a new factory hiring workers a push or a pull factor?",
+    ["It is something good about the new place.", "Good things that attract people are pull factors."],
+    "a pull factor",
+  ),
+  "social/ar-g5-global-trade": lesson(
+    ["Exports are goods a country sells to others; imports are goods it buys.", "A tariff is a tax on imports. Globalization means countries are more connected by trade, travel and ideas.", "Ships, barges, trains and trucks carry goods along transportation networks."],
+    "Arkansas rice is sold to a buyer in another country. Is it an import or an export?",
+    ["It leaves the United States.", "Goods sold out of a country are exports."],
+    "an export",
+  ),
+  "social/ar-g5-people-environment": lesson(
+    ["People adapt to their environment, like building homes on stilts where floods are common.", "People also change it: dams, levees, irrigation and terraces help, but cutting forests can destroy habitats.", "Sustainability means using resources so there is enough for the future."],
+    "What is it called when land turns into desert after drought and overgrazing?",
+    ["The land becomes more like a desert.", "The word is built from desert."],
+    "desertification",
+  ),
+  "social/maps-graphs-8": lesson(
+    ["Use the map scale: multiply the map distance by what 1 cm stands for.", "A choropleth map shades areas to show a rate or density, such as people per square kilometre.", "On a scatter graph, look for a trend: as one value rises, does the other rise or fall?"],
+    "On a map, 1 cm represents 25 km. Two cities are 3 cm apart. How far apart are they?",
+    ["Each centimetre is 25 km.", "3 × 25 = 75."],
+    "75 km",
+  ),
+  "social/al-g7-world-regions": lesson(
+    ["The five themes of geography: location, place, region, movement and human-environment interaction.", "Place has physical traits (climate, landforms) and cultural traits (language, religion).", "Movement is how people, goods and ideas spread. Population density is how many people live in an area."],
+    "Is the language people speak a physical or a cultural characteristic of a place?",
+    ["Physical traits come from nature, like climate.", "Language comes from people, so it is cultural."],
+    "cultural",
+  ),
+  "social/ny-g6-eastern-hemisphere": lesson(
+    ["The Eastern Hemisphere holds Africa, Asia, Europe and Australia.", "The Ural Mountains divide Europe and Asia. The Nile is Africa's longest river; the Tigris and Euphrates flow through Iraq.", "A peninsula has water on three sides."],
+    "What is a peninsula?",
+    ["“Pen” means almost and “insula” means island.", "It is almost an island."],
+    "land surrounded by water on three sides",
+  ),
+  "social/tx-g6-economies": lesson(
+    ["Factors of production: land (resources), labour (work people do) and capital (tools).", "Industries: agricultural (farming), manufacturing (factories), service.", "In free enterprise, private people own most businesses. GDP per capita is GDP divided by population."],
+    "Is a car factory part of agriculture or manufacturing?",
+    ["A factory makes goods from parts.", "Making goods is manufacturing."],
+    "manufacturing",
+  ),
+  "social/quality-of-life-8": lesson(
+    ["Indicators measure quality of life: life expectancy, literacy rate, infant mortality, and access to clean water and health care.", "High literacy and long life expectancy usually mean higher quality of life; high infant mortality usually means lower.", "To estimate doubling time, divide 70 by the yearly growth rate."],
+    "A population grows by 2% each year. About how many years will it take to double?",
+    ["Doubling time ≈ 70 ÷ growth rate.", "70 ÷ 2 = 35."],
+    "35",
+  ),
 };

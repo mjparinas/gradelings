@@ -343,4 +343,10 @@ export const lessons: GradeLessons = {
     ["Roots hold sand in place."],
     "planting beach grass",
   ),
+  "science/ar-g2-earth-changes": lesson(
+    ["Some changes are fast, like floods, landslides and earthquakes.", "Some are slow, like a river cutting rock bluffs over many years.", "Plant roots and levees help slow or stop these changes."],
+    "Water carves a canyon over many years. Fast or slow?",
+    ["Many years is a long time.", "That is a slow change."],
+    "slow",
+  ),
 };

@@ -49,7 +49,8 @@ describe("home page", () => {
     expect(within(coverage).getByRole("link", { name: "Alaska" }).getAttribute("href")).toMatch(/^\/curriculum\/alaska\/?$/);
     expect(within(coverage).getByRole("link", { name: "Alabama" }).getAttribute("href")).toMatch(/^\/curriculum\/alabama\/?$/);
     expect(within(coverage).getByRole("link", { name: "Arizona" }).getAttribute("href")).toMatch(/^\/curriculum\/arizona\/?$/);
-    expect(coverage.textContent).toContain("Canadian provinces and territories and 10 US states");
+    expect(within(coverage).getByRole("link", { name: "Arkansas" }).getAttribute("href")).toMatch(/^\/curriculum\/arkansas\/?$/);
+    expect(coverage.textContent).toContain("Canadian provinces and territories and 11 US states");
     const faq = screen.getByRole("heading", { name: "Questions from parents" }).closest("section")!;
     expect(faq.textContent).toContain(PRICES_BY_CURRENCY.USD.month.label);
     expect(faq.textContent).toContain("Washington");
