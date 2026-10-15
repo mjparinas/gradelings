@@ -493,4 +493,16 @@ export const lessons: GradeLessons = {
     ["A landslide happens in minutes.", "Mountain building takes millions of years."],
     "fast",
   ),
+  "science/ak-g7-resources": lesson(
+    ["Minerals, oil and water are spread unevenly because of past geologic processes.", "Alaska has oil at Prudhoe Bay and zinc at the Red Dog Mine.", "Scientists forecast hazards with data: seismometers on volcanoes, ocean sensors for tsunamis."],
+    "Why can scientists warn about a tsunami but not the exact day of an earthquake?",
+    ["Sensors detect an earthquake as it happens.", "The tsunami takes time to cross the ocean, so there is time to warn."],
+    "the wave takes time to travel",
+  ),
+  "science/ak-g7-biodiversity": lesson(
+    ["Biodiversity is the variety of living things in an ecosystem.", "Ecosystems give people services: clean water, food, flood control.", "Good solutions protect biodiversity and still meet people's needs."],
+    "Sea otters eat sea urchins. What happens to kelp when otters return?",
+    ["Urchins eat kelp.", "Fewer urchins means more kelp can grow."],
+    "kelp grows back",
+  ),
 };

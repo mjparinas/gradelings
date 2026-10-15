@@ -10,6 +10,8 @@ import { SCIENCE_2 as oregonScienceK2SCIENCE_2 } from "../oregon/units/science-k
 import { RML_2 as washingtonLanguageRmlEarlyRML_2 } from "../washington/units/language-rml-early";
 import { G2_UNITS as washingtonMathEarlyG2_UNITS } from "../washington/units/math-early";
 import { SCIENCE_2 as washingtonScienceK2SCIENCE_2 } from "../washington/units/science-k2";
+import { LANGUAGE_2 as californiaLanguage2 } from "../california/units/language-g2";
+import { SCIENCE_COPIES as californiaScience2Science } from "../california/units/science-g2";
 import { alaskaGrade } from "./kit";
 import { units as ontarioG2Social } from "../ontario/g2-social";
 import { communityChange as novaScotiaG2SocialCommunityChange } from "../nova-scotia/units/g2-social";
@@ -22,8 +24,8 @@ import { OWN } from "./units/own-g2";
 // the download carries those files and not the other frameworks' whole grades.
 const POOL: Pool = {
   math: [...albertaG2Math, manitobaG2MathSkipCounting, manitobaG2MathEvenOdd, ...washingtonMathEarlyG2_UNITS],
-  language: [...ontarioG2Language, ...manitobaG2MoreLanguageMoreLanguage, washingtonLanguageRmlEarlyRML_2],
-  science: [...ontarioG2Science, ...washingtonScienceK2SCIENCE_2, ...oregonScienceK2SCIENCE_2],
+  language: [...ontarioG2Language, ...manitobaG2MoreLanguageMoreLanguage, washingtonLanguageRmlEarlyRML_2, ...californiaLanguage2],
+  science: [...ontarioG2Science, ...washingtonScienceK2SCIENCE_2, ...oregonScienceK2SCIENCE_2, ...californiaScience2Science],
   social: [...ontarioG2Social, novaScotiaG2SocialCommunityChange, ...manitobaG2MoreSocialMoreSocial, ...oregonSocialK3OWN_SOCIAL_2, ...californiaSocial2],
 };
 

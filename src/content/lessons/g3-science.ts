@@ -433,4 +433,16 @@ export const lessons: GradeLessons = {
     ["Orcas can't make their own food.", "They eat other animals."],
     "consumers",
   ),
+  "science/ak-g3-fossils": lesson(
+    ["A fossil is the remains or trace of a living thing from long ago, kept in rock or ice.", "Fossils show what lived long ago and what the place was like.", "Woolly mammoths had thick fur, so they lived where it was cold."],
+    "Fossil seashells are found on a mountain. What does that tell you?",
+    ["Seashells come from animals that live in the sea.", "So that land was once under the sea."],
+    "the land was once under the sea",
+  ),
+  "science/ak-g3-weather-climate": lesson(
+    ["Weather is what the air is like today: hot, cold, wet or windy.", "Climate is the usual weather of a place over many years.", "Southeast Alaska is wet and mild. The Arctic coast is cold and dry."],
+    "A town is cold and dry almost all year. Is that its weather or its climate?",
+    ["One day's conditions are weather.", "The pattern over many years is climate."],
+    "its climate",
+  ),
 };

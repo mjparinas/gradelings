@@ -10,7 +10,10 @@ import { SCIENCE_COPIES as oregonScienceCopiesSCIENCE_COPIES } from "../oregon/u
 import { RML_8 as washingtonLanguageRmlUpperRML_8 } from "../washington/units/language-rml-upper";
 import { G8_UNITS as washingtonMathUpperG8_UNITS } from "../washington/units/math-upper";
 import { SCIENCE_8 as washingtonScience68SCIENCE_8 } from "../washington/units/science-68";
+import { LANGUAGE_8 as californiaLanguage8 } from "../california/units/language-g8";
+import { SCIENCE_COPIES as californiaScience8Science, OWN_SCIENCE as californiaScience8Own } from "../california/units/science-g8";
 import { alaskaGrade } from "./kit";
+import { OWN } from "./units/own-g8";
 import { reconstruction8 as oregonSocialCopiesReconstruction8 } from "../oregon/units/social-copies";
 import { OWN_SOCIAL_8 as oregonSocialG8OWN_SOCIAL_8 } from "../oregon/units/social-g8";
 import { G8 as washingtonSocial59G8G8 } from "../washington/units/social-59-g8";
@@ -23,9 +26,9 @@ import { SOCIAL_7 as californiaSocial7 } from "../california/units/social-g7";
 // the download carries those files and not the other frameworks' whole grades.
 const POOL: Pool = {
   math: [...ontarioG8Math, ...albertaG8Math, ...washingtonMathUpperG8_UNITS],
-  language: [...ontarioG8Language, ...manitobaG8MoreLanguage, ...washingtonLanguageRmlUpperRML_8, oregonLanguageWEIGH_THE_EVIDENCE],
-  science: [newBrunswickG8ScienceMotionForces, ...washingtonScience68SCIENCE_8, ...(oregonScienceCopiesSCIENCE_COPIES["8"] ?? [])],
+  language: [...ontarioG8Language, ...manitobaG8MoreLanguage, ...washingtonLanguageRmlUpperRML_8, oregonLanguageWEIGH_THE_EVIDENCE, ...californiaLanguage8],
+  science: [newBrunswickG8ScienceMotionForces, ...washingtonScience68SCIENCE_8, ...(oregonScienceCopiesSCIENCE_COPIES["8"] ?? []), ...californiaScience8Science, ...californiaScience8Own],
   social: [...washingtonSocial59G8G8, oregonSocialCopiesReconstruction8, ...oregonSocialG8OWN_SOCIAL_8, ...californiaSocial8, ...ontarioG8Social, ...manitobaG8MoreSocialB, ...californiaSocial7],
 };
 
-export const courses: Course[] = alaskaGrade("8", POOL, {});
+export const courses: Course[] = alaskaGrade("8", POOL, OWN);

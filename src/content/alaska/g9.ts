@@ -12,6 +12,9 @@ import { RML_9 as washingtonLanguageRmlUpperRML_9 } from "../washington/units/la
 import { SPELLING_9 as washingtonLanguageSpellingSPELLING_9 } from "../washington/units/language-spelling";
 import { G9_UNITS as washingtonMathUpperG9_UNITS } from "../washington/units/math-upper";
 import { SCIENCE_9 as washingtonScience9SCIENCE_9 } from "../washington/units/science-9";
+import { LANGUAGE_9 as californiaLanguage9 } from "../california/units/language-g9";
+import { SCIENCE_COPIES as californiaScience9Science, OWN_SCIENCE as californiaScience9Own } from "../california/units/science-g9";
+import { PHYSICAL_SCIENCE as californiaScience9Physical } from "../california/units/science-g9-physical";
 import { alaskaGrade } from "./kit";
 import { SOCIAL_9 as californiaSocial9 } from "../california/units/social-g9";
 import { SOCIAL_9 as maineSocial9 } from "../maine/units/social-g9";
@@ -22,8 +25,8 @@ import { OWN } from "./units/own-g9";
 // the download carries those files and not the other frameworks' whole grades.
 const POOL: Pool = {
   math: [...ontarioG9Math, ...washingtonMathUpperG9_UNITS],
-  language: [...ontarioG9Language, ...manitobaG9MoreLanguage, ...washingtonLanguageRmlUpperRML_9, washingtonLanguageSpellingSPELLING_9, oregonLanguageMEDIA_ANALYSIS],
-  science: [...ontarioG9Science, ...albertaG9Science, ...manitobaG9Science, ...manitobaG9MoreScience, ...washingtonScience9SCIENCE_9],
+  language: [...ontarioG9Language, ...manitobaG9MoreLanguage, ...washingtonLanguageRmlUpperRML_9, washingtonLanguageSpellingSPELLING_9, oregonLanguageMEDIA_ANALYSIS, ...californiaLanguage9],
+  science: [...ontarioG9Science, ...albertaG9Science, ...manitobaG9Science, ...manitobaG9MoreScience, ...washingtonScience9SCIENCE_9, ...californiaScience9Science, ...californiaScience9Own, ...californiaScience9Physical],
   social: [...californiaSocial9, ...maineSocial9, ...texasSocial9],
 };
 

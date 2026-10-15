@@ -409,4 +409,10 @@ export const lessons: GradeLessons = {
     ["One spin gives one day and one night."],
     "about 24 hours",
   ),
+  "science/ak-g5-sun-stars": lesson(
+    ["The sun is a star. It looks brighter than other stars because it is much closer.", "Earth's tilt makes summer days long and winter days short, most of all far north.", "Shadows point away from the sun and are longest when the sun is low."],
+    "Why can it stay light almost all night in Fairbanks in June?",
+    ["In June, the North Pole is tilted toward the sun.", "Places far north stay in sunlight almost all day."],
+    "the North Pole is tilted toward the sun",
+  ),
 };

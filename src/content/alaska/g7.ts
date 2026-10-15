@@ -12,7 +12,10 @@ import { RML_7 as washingtonLanguageRmlUpperRML_7 } from "../washington/units/la
 import { SPELLING_7 as washingtonLanguageSpellingSPELLING_7 } from "../washington/units/language-spelling";
 import { G7_UNITS as washingtonMathUpperG7_UNITS } from "../washington/units/math-upper";
 import { SCIENCE_7 as washingtonScience68SCIENCE_7 } from "../washington/units/science-68";
+import { LANGUAGE_7 as californiaLanguage7 } from "../california/units/language-g7";
+import { SCIENCE_COPIES as californiaScience7Science, OWN_SCIENCE as californiaScience7Own } from "../california/units/science-g7";
 import { alaskaGrade } from "./kit";
+import { OWN } from "./units/own-g7";
 import { G6 as washingtonSocial59G6G6 } from "../washington/units/social-59-g6";
 import { course as gradesG8Social } from "../grades/g8/social";
 import { OWN_SOCIAL_7 as oregonSocialG67OWN_SOCIAL_7 } from "../oregon/units/social-g67";
@@ -22,9 +25,9 @@ import { SOCIAL_7 as californiaSocial7 } from "../california/units/social-g7";
 // the download carries those files and not the other frameworks' whole grades.
 const POOL: Pool = {
   math: [...ontarioG7Math, ...albertaG7Math, ...washingtonMathUpperG7_UNITS],
-  language: [...ontarioG7Language, manitobaG7LanguageWordRoots, ...washingtonLanguageRmlUpperRML_7, washingtonLanguageSpellingSPELLING_7],
-  science: [...ontarioG7Science, ...albertaG7Science, ...washingtonScience68SCIENCE_7, ...gradesG6Science.units, ...albertaG6Science],
+  language: [...ontarioG7Language, manitobaG7LanguageWordRoots, ...washingtonLanguageRmlUpperRML_7, washingtonLanguageSpellingSPELLING_7, ...californiaLanguage7],
+  science: [...ontarioG7Science, ...albertaG7Science, ...washingtonScience68SCIENCE_7, ...gradesG6Science.units, ...albertaG6Science, ...californiaScience7Science, ...californiaScience7Own],
   social: [...washingtonSocial59G6G6, ...gradesG8Social.units, ...oregonSocialG67OWN_SOCIAL_7, ...californiaSocial7],
 };
 
-export const courses: Course[] = alaskaGrade("7", POOL, {});
+export const courses: Course[] = alaskaGrade("7", POOL, OWN);
