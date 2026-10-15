@@ -1,6 +1,6 @@
 import "server-only";
 import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS, WORDMARK_COLOURS } from "@/lib/brand";
-import { EMAIL_FONTS, EMAIL_IMAGES } from "@/lib/emailImages";
+import { EMAIL_FONTS, EMAIL_IMAGES, EMAIL_WORDMARK } from "@/lib/emailImages";
 import { CONSENT_NOTICE } from "@/lib/coppa";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, SUBSCRIBE_HREF } from "@/lib/plan";
 import { countryOf, type CountryCode } from "@/lib/country";
@@ -31,12 +31,13 @@ interface Parts {
   country?: CountryCode;
 }
 
-/** The name in the logo's colours, one per letter as on the site. Text, not an image, so it shows even with images off. */
-function wordmark(): string {
-  const letters = APP_NAME.split("")
-    .map((ch, i) => `<span style="color:${WORDMARK_COLOURS[i % WORDMARK_COLOURS.length]}">${esc(ch)}</span>`)
-    .join("");
-  return `<span style="font-family:${EMAIL_FONTS.wordmark.stack};font-size:30px;font-weight:700;letter-spacing:-0.75px;line-height:1">${letters}</span>`;
+/**
+ * The name drawn in Fredoka, as on the site. An image, because Gmail and Outlook for Windows ignore web fonts; with
+ * images off, the alt text shows in the logo's first colour and in Fredoka where the client has it.
+ */
+function wordmark(origin: string): string {
+  const w = EMAIL_WORDMARK;
+  return `<img src="${esc(origin)}${w.path}" width="${w.width}" height="${w.height}" alt="${esc(w.alt)}" style="display:block;border:0;font-family:${EMAIL_FONTS.wordmark.stack};font-size:${w.fontSize}px;font-weight:700;line-height:1;color:${WORDMARK_COLOURS[0]}">`;
 }
 
 /** The logo and Ollie at the top of every email, linking to the site. Tables, because Outlook ignores flexbox. */
@@ -44,7 +45,7 @@ function header(origin: string): string {
   const ollie = EMAIL_IMAGES.ollie;
   return `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 16px"><tr>
 <td style="vertical-align:middle;padding-right:10px"><a href="${esc(origin)}/" style="text-decoration:none;color:#5b6478"><img src="${esc(origin)}${ollie.path}" width="${ollie.size}" height="${ollie.size}" alt="${esc(ollie.alt)}" style="display:block;border:0;font-size:12px;color:#5b6478"></a></td>
-<td style="vertical-align:middle"><a href="${esc(origin)}/" style="text-decoration:none">${wordmark()}</a></td>
+<td style="vertical-align:middle"><a href="${esc(origin)}/" style="text-decoration:none">${wordmark(origin)}</a></td>
 </tr></table>`;
 }
 

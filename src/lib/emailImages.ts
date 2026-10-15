@@ -1,4 +1,4 @@
-import { MASCOT_NAME } from "./brand";
+import { APP_NAME, MASCOT_NAME } from "./brand";
 
 /**
  * Images in every email, drawn by `scripts/email-images.mjs` into `public/email/` and loaded from the site itself:
@@ -8,6 +8,13 @@ import { MASCOT_NAME } from "./brand";
 export const EMAIL_IMAGES = {
   ollie: { path: "/email/ollie-wave-v1.png", critter: "ollie", mood: "wave", size: 64, alt: `${MASCOT_NAME} the otter waving hello` },
 } as const;
+
+/**
+ * The name at the top of every email, drawn in Fredoka as on the site. An image, because Gmail and Outlook for Windows
+ * ignore web fonts and would show it in Arial. The alt text is styled like the name, so it still reads well with
+ * images off. Width and height are CSS pixels; the PNG is drawn at 3x.
+ */
+export const EMAIL_WORDMARK = { path: "/email/wordmark-v1.png", width: 150, height: 36, fontSize: 30, alt: APP_NAME } as const;
 
 /**
  * The site's two fonts, self-hosted in `public/email/fonts/` (SIL Open Font License, OFL-*.txt) rather than loaded from

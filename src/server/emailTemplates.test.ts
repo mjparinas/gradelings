@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
-import { EMAIL_FONTS, EMAIL_IMAGES } from "@/lib/emailImages";
+import { EMAIL_FONTS, EMAIL_IMAGES, EMAIL_WORDMARK } from "@/lib/emailImages";
 import * as t from "./emailTemplates";
 
 const O = "https://app.test";
@@ -32,15 +32,26 @@ describe("branding in every email", () => {
     const ollie = EMAIL_IMAGES.ollie;
     for (const e of every) {
       expect(e.html).toContain(`<img src="${O}${ollie.path}" width="${ollie.size}" height="${ollie.size}" alt="${ollie.alt}"`);
-      // One <img>, with no query string: nothing that could tell us who opened it.
-      expect(e.html.match(/<img /g)).toHaveLength(1);
+      // Ollie and the name, with no query string: nothing that could tell us who opened it.
+      expect(e.html.match(/<img /g)).toHaveLength(2);
       expect(ollie.path).not.toContain("?");
+      expect(EMAIL_WORDMARK.path).not.toContain("?");
     }
   });
 
-  it("spells the name in the logo's colours, one per letter", () => {
-    const letters = APP_NAME.split("").map((ch, i) => `<span style="color:${WORDMARK_COLOURS[i % WORDMARK_COLOURS.length]}">${ch}</span>`).join("");
-    for (const e of every) expect(e.html).toContain(`font-family:${EMAIL_FONTS.wordmark.stack};font-size:30px;font-weight:700;letter-spacing:-0.75px;line-height:1">${letters}`);
+  it("shows the name as a picture in the site's logo font, so Gmail and Outlook don't swap in Arial", () => {
+    const w = EMAIL_WORDMARK;
+    expect(w.alt).toBe(APP_NAME);
+    for (const e of every) {
+      expect(e.html).toContain(`<a href="${O}/" style="text-decoration:none"><img src="${O}${w.path}" width="${w.width}" height="${w.height}" alt="${APP_NAME}"`);
+      // With images off, the alt text still looks like the logo.
+      expect(e.html).toContain(`font-family:${EMAIL_FONTS.wordmark.stack};font-size:${w.fontSize}px;font-weight:700;line-height:1;color:${WORDMARK_COLOURS[0]}">`);
+    }
+  });
+
+  it("draws the name at 3x its size in the email, for sharp screens", () => {
+    const png = readFileSync(join(process.cwd(), "public", EMAIL_WORDMARK.path));
+    expect([png.readUInt32BE(16), png.readUInt32BE(20)]).toEqual([EMAIL_WORDMARK.width * 3, EMAIL_WORDMARK.height * 3]);
   });
 
   it("sets the text in Andika and the name in Fredoka, as on the site, loaded from our own site", () => {
@@ -54,7 +65,7 @@ describe("branding in every email", () => {
   });
 
   it("has the image files the emails point to, as PNGs (mail clients don't show SVG)", () => {
-    for (const img of Object.values(EMAIL_IMAGES)) {
+    for (const img of [...Object.values(EMAIL_IMAGES), EMAIL_WORDMARK]) {
       const file = join(process.cwd(), "public", img.path);
       expect(existsSync(file)).toBe(true);
       expect(readFileSync(file).subarray(1, 4).toString()).toBe("PNG");
