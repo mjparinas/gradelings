@@ -44,7 +44,8 @@ Keys are `"<grade>/<subject>"`; each entry has `idx` (the code a unit cites) and
 
 - Math, ELA and science follow California's placement (California teaches the same Common Core and NGSS content, with an integrated middle school science), so Alaska uses the same units from the same files, with every citation converted to Alaska's code and checked. Where Alaska's numbering differs, the plan cites Alaska's own code (for example `3.MD.7; 3.MD.8; 3.MD.9; 3.MD.10` for area and perimeter, `5.NF.5; 5.NF.6; 5.NF.7` for multiplying fractions).
 - Social studies follows Alaska's grade themes: Me and My World (K), My Place in the World (1), My Local Community (2), Alaska's Past, Present, and Future (3), U.S. Cultures and Regions (4), Foundations and History of the U.S. (5), Alaska Studies and Geography (6), World History and Geography (7), U.S. History and Civics (8). Grade 9 is civics, as in the other states, with the Alaska Constitution, statehood and ANCSA, and the resource economy from Alaska's high school Alaska History course.
-- Alaska-only units (`ak-` ids) are in Grades 2, 3, 4, 6 and 9 social studies.
+- Alaska-only units (`ak-` ids) are in social studies in Grades 2, 3, 4 and 6 to 9. Grade 7 has Alaska's landforms and biomes, the circumpolar north and Russian America; Grade 8 has the first peoples of the Americas, the purchase of Alaska and Tribal, state and federal governments; Grade 9 adds Alaska Native rights and sovereignty.
+- Every science standard and every ELA standard but writing, speaking and listening, fluency (`RF.n.4`), reading range (`RL/RI.n.10`) and `RL.n.8` (not applicable to literature) has a unit; `alaska.test.ts` checks it. Where a California unit fits but names California places, Alaska has an `ak-` copy without them and with Alaska examples (`copyOf` in `src/content/alaska/units/kit.ts`), in science in Grades 2 to 9.
 
 ## Cultural Standards for Students
 
@@ -57,7 +58,5 @@ The Alaska Standards for Culturally-Responsive Schools (adopted by the State Boa
 
 ## Known gaps
 
-- Alaska Native content (Grades 3, 6 and 9) is light, in the present tense and needs review with Alaska Native partners before it grows. Alaska has 229 federally recognized Tribes and 20 official Alaska Native languages; units speak of "many" peoples and never treat them as one.
-- Grade 7 world history and Grade 8 US history use borrowed units; Alaska's Grade 7 and 8 standards that ask for Alaska connections (for example the Russian period in world history) have no Alaska-written unit yet.
-- ELA foundational skills and science and engineering practices are covered only where California's placement already covers them.
+- Alaska Native content (Grades 3, 6, 8 and 9) is kept light and in the present tense, with nothing sacred or ceremonial. Alaska has 229 federally recognized Tribes and 20 official Alaska Native languages; units speak of "many" peoples and never treat them as one. It can be deepened from the official sources, such as the Alaska Standards for Culturally-Responsive Schools and the Alaska Native Knowledge Network.
 - Alaska has no student online privacy statute of its own; `/privacy/` and `docs/school/` state FERPA and COPPA commitments and breach notice under the Alaska Personal Information Protection Act (AS 45.48).

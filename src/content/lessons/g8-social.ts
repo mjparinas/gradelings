@@ -943,4 +943,22 @@ export const lessons: GradeLessons = {
     ["The Senate has 35 members and the House has 100.", "35 + 100 = 135."],
     "135",
   ),
+  "social/ak-g8-first-peoples": lesson(
+    ["During the ice age, low seas exposed Beringia, a land bridge between Asia and Alaska.", "Artifacts, dating methods and oral histories each give evidence about the first peoples.", "Indigenous place names, like Denali and Utqiaġvik, carry knowledge of the land."],
+    "An old camp has fish bones and net weights. What can you conclude?",
+    ["Artifacts are clues to how people lived.", "Fish bones and net weights point to fishing."],
+    "the people there fished",
+  ),
+  "social/ak-g8-alaska-purchase": lesson(
+    ["In 1867 the US bought Russia's claim to Alaska for $7.2 million, arranged by William Seward.", "Many Americans then saw expansion as Manifest Destiny; critics called Alaska Seward's Folly.", "No Alaska Native nation was asked, and some Tlingit leaders said Russia did not own the land."],
+    "Which came first: the Louisiana Purchase or the purchase of Alaska?",
+    ["The Louisiana Purchase was in 1803.", "Alaska was bought in 1867."],
+    "the Louisiana Purchase",
+  ),
+  "social/ak-g8-tribal-state-federal": lesson(
+    ["Federalism shares power between the national government and the states.", "Alaska's 229 Tribes are sovereign governments with a government-to-government relationship with the US.", "Alaska Native corporations are businesses owned by shareholders, not governments."],
+    "Who issues driver's licenses: the federal government or the state?",
+    ["Printing money and the military are federal powers.", "Everyday services like licences are state powers."],
+    "the state",
+  ),
 };

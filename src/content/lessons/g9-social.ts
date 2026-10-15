@@ -961,4 +961,10 @@ export const lessons: GradeLessons = {
     ["It was decided in 1803.", "Chief Justice John Marshall wrote the decision."],
     "Marbury v. Madison",
   ),
+  "social/ak-g9-native-rights": lesson(
+    ["Alaska Native leaders organized for citizenship, voting rights and equal treatment, starting with the Alaska Native Brotherhood in 1912.", "Elizabeth Peratrovich helped pass Alaska's Anti-Discrimination Act in 1945, years before national civil rights laws.", "Tribal sovereignty is a Tribe's inherent right to govern itself; courts and laws have shaped its limits."],
+    "Why was the Anti-Discrimination Act of 1945 important beyond Alaska?",
+    ["The federal Civil Rights Act came in 1964.", "Alaska's law came almost 20 years earlier."],
+    "it was one of the first civil rights laws of its kind in the US",
+  ),
 };
