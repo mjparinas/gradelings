@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useState, type FormEvent, type ReactNode } from "react";
+import { Component, useCallback, useEffect, useState, type FormEvent, type ReactNode } from "react";
 import { FRAMEWORKS, getFramework } from "@/content/frameworks";
 import { GRADE_LABEL } from "@/content/subjects";
 import type { GradeId } from "@/content/types";
@@ -23,6 +23,8 @@ import { parseVariants, type ExperimentStatus, type FlagScope, type Variant } fr
 import { verdict } from "@/lib/abVerdict";
 import type { Segment } from "@/lib/adminEmails";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
+import { QuestionVisual } from "@/components/visuals";
+import type { ReportDetails } from "@/lib/questionReport";
 
 // The site-wide admin panel. Only accounts listed in ADMIN_EMAILS (with a confirmed email) get past the
 // server; everyone else sees a sign-in form or "not an admin". It talks to /api/admin/* only, so it stays
@@ -898,6 +900,46 @@ interface ReportRow {
   reason: string;
   count: number;
   latest: number;
+  /** Curricula it was reported in (older reports have none). */
+  frameworks?: string[];
+  /** What was on screen in the latest report. */
+  details?: ReportDetails | null;
+}
+
+/** Shows a fallback instead of breaking the tab when a stored picture can't be drawn. */
+class VisualBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
+  state = { failed: false };
+  static getDerivedStateFromError() {
+    return { failed: true };
+  }
+  render() {
+    return this.state.failed ? <p className="text-sm text-ink-soft">The picture couldn&apos;t be drawn.</p> : this.props.children;
+  }
+}
+
+function ReportedScreen({ details }: { details: ReportDetails }) {
+  return (
+    <div className="mt-2 flex flex-col gap-2">
+      {details.visual && (
+        <div className="max-h-96 overflow-auto rounded-xl border border-black/10 bg-white p-3" aria-label="Picture shown with the question">
+          <VisualBoundary>
+            <QuestionVisual visual={details.visual} />
+          </VisualBoundary>
+        </div>
+      )}
+      {details.choices && (
+        <ul className="flex flex-wrap gap-2" aria-label="Choices">
+          {details.choices.map((c, i) => (
+            <li key={i} className={`rounded-lg border px-3 py-1 font-read ${c === details.answer ? "border-good-dark bg-good/15 font-bold" : "border-black/15"}`}>
+              {c}
+              {c === details.answer && <span className="sr-only"> (right answer)</span>}
+            </li>
+          ))}
+        </ul>
+      )}
+      {details.answer && <p className="text-sm">Right answer: <b>{details.answer}</b></p>}
+    </div>
+  );
 }
 
 function Reports() {
@@ -918,7 +960,9 @@ function Reports() {
         {reports?.map((r) => (
           <li key={`${r.unitKey}:${r.prompt}:${r.reason}`} className={card}>
             <p className="font-mono text-sm text-ink-soft">{r.unitKey}</p>
+            {!!r.frameworks?.length && <p className="text-sm text-ink-soft">{r.frameworks.map((f) => getFramework(f).name).join(", ")}</p>}
             <p className="font-read text-lg">{r.prompt}</p>
+            {r.details && <ReportedScreen details={r.details} />}
             <p className="text-sm">
               <b>{r.reason}</b> · {r.count} {r.count === 1 ? "report" : "reports"} · last {day(r.latest)}
             </p>

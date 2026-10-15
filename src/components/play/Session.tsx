@@ -1,6 +1,7 @@
 "use client";
 
 import { ReportQuestion } from "./ReportQuestion";
+import { reportDetails, type ReportDetails } from "@/lib/questionReport";
 import { SaveProgress } from "./SaveProgress";
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { getUnitRef } from "@/content";
@@ -438,7 +439,7 @@ function Runner({ plan }: { plan: Plan }) {
           status={status}
           message={message}
           hint={q.hint}
-          report={band === "little" || !item ? undefined : { unitKey: item.unitKey, prompt: q.prompt }}
+          report={band === "little" || !item ? undefined : { unitKey: item.unitKey, prompt: q.prompt, framework: profile.framework, details: reportDetails(q) }}
           onNext={advance}
           onDismiss={() => setStatus("answering")}
           last={plan.total !== undefined && index + 1 >= plan.total}
@@ -486,7 +487,7 @@ function FeedbackBar({
   status: Status;
   message: string;
   hint: string;
-  report?: { unitKey: string; prompt: string };
+  report?: { unitKey: string; prompt: string; framework?: string; details?: ReportDetails };
   onNext: () => void;
   onDismiss: () => void;
   last: boolean;
@@ -500,7 +501,7 @@ function FeedbackBar({
   return (
     <div role="status" aria-live="polite" className={`fixed inset-x-0 bottom-0 z-40 animate-slide-up border-t-4 ${theme.bg} ${theme.border}`} style={{ paddingBottom: "max(1rem, env(safe-area-inset-bottom))" }}>
       <div className="relative mx-auto flex max-w-5xl flex-col gap-3 px-4 pt-4 sm:flex-row sm:items-center sm:px-6">
-        {report && <ReportQuestion unitKey={report.unitKey} prompt={report.prompt} />}
+        {report && <ReportQuestion {...report} />}
         <div className="flex flex-1 items-start gap-3">
           <span className={`flex h-14 w-14 shrink-0 animate-pop-in items-center justify-center rounded-full text-3xl text-[#0f172a] ${theme.iconBg}`}>{theme.icon}</span>
           <div>

@@ -329,6 +329,25 @@ describe("codes, reports, stats and the change log", () => {
     expect((await (await as(admin.cookie).get(reports, "/api/admin/reports/")).json()).reports).toEqual([]);
   });
 
+  it("keeps the curriculum and what was on screen with a report, and drops what doesn't fit", async () => {
+    const details = { choices: ["8", "10", "12", "4"], answer: "8", visual: { type: "equation", text: "2 × 4 = ?" } };
+    const send = (framework: unknown, d: unknown) =>
+      feedback.POST(req("/api/feedback/", "POST", { unitKey: "3/math/multiplication", prompt: "What is 2 × 4?", reason: "unclear", framework, details: d }));
+    expect((await send("ca-bc", { ...details, extra: "<script>" })).status).toBe(200);
+    expect((await send("us-wa", details)).status).toBe(200);
+    expect((await send("ca-qc", "not details")).status).toBe(200);
+    const list = (await (await as(admin.cookie).get(reports, "/api/admin/reports/")).json()).reports as { unitKey: string; count: number; frameworks: string[]; details: unknown }[];
+    const row = list.find((r) => r.unitKey === "3/math/multiplication")!;
+    expect(row.count).toBe(3);
+    expect([...row.frameworks].sort()).toEqual(["ca-bc", "us-wa"]);
+    expect(row.details).toEqual(null);
+    await as(admin.cookie).send(reports, "DELETE", "/api/admin/reports/", { unitKey: "3/math/multiplication", prompt: "What is 2 × 4?" });
+    expect((await send("ca-bc", details)).status).toBe(200);
+    const again = (await (await as(admin.cookie).get(reports, "/api/admin/reports/")).json()).reports as { details: unknown }[];
+    expect(again[0].details).toEqual(details);
+    await as(admin.cookie).send(reports, "DELETE", "/api/admin/reports/", { unitKey: "3/math/multiplication", prompt: "What is 2 × 4?" });
+  });
+
   it("counts families without class student accounts", async () => {
     const s = await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json();
     const real = Number((await dbm.query<{ n: number }>("SELECT COUNT(*) AS n FROM parents WHERE role != 'student'"))[0].n);
