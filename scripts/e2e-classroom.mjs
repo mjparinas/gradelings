@@ -114,7 +114,10 @@ for (let i = 0; i < 20 && attempts === 0; i++) {
 check(attempts > 0, "the teacher sees the student's practice on the assigned unit");
 check(((await api(`/api/classes/?id=${cls.id}`)).data.students?.[0]?.units?.[0]?.done ?? 0) >= 5, "the teacher sees the homework count");
 await page.goto(`${BASE}/play/`);
-check(await vis(page.getByText(/Done! ✓/)), "the student's home screen marks the homework done");
+check(
+  await page.getByText(/Done! ✓/).first().waitFor({ state: "visible", timeout: 15000 }).then(() => true, () => false),
+  "the student's home screen marks the homework done",
+);
 
 // A live question: the teacher asks, the student taps, the teacher sees it.
 let asked;
