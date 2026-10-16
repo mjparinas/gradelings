@@ -186,7 +186,9 @@ export async function teacherFixture(base, { framework = "ca-bc", grade = "3" } 
 
 /** Signs a browser context in as the fixture's teacher. */
 export async function signInTeacher(context, base, fixture) {
-  await context.addCookies([{ name: fixture.cookie.name, value: fixture.cookie.value, url: base }]);
+  // A production build names the cookie with the __Host- prefix, which browsers accept only when it is Secure.
+  const secure = fixture.cookie.name.startsWith("__Host-");
+  await context.addCookies([{ name: fixture.cookie.name, value: fixture.cookie.value, url: base, httpOnly: true, secure }]);
 }
 
 /** The teacher area's tabs, in order, with the hash that opens each for a class. */
