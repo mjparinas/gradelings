@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { render, screen } from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import type { Question } from "@/content/types";
@@ -104,6 +104,18 @@ describe("Session answer flow", () => {
     expect(screen.getByRole("status")).toBeInTheDocument();
     await click(/next/i);
     expect(screen.getByText("Question number 2")).toBeInTheDocument();
+  });
+
+  it("keeps a short copy of the question on the answer, but not for questions that need a picture", async () => {
+    start();
+    await click("Yes");
+    expect(answers()).toEqual([expect.objectContaining({ q: "Question number 1" })]);
+    h.log.mockClear();
+    h.plan = makePlan({ next: () => ({ question: { ...question(1), visual: { type: "story", lines: ["Hi"] } }, unitKey: "math-1:u1", difficulty: 2 }) });
+    cleanup();
+    start();
+    await click("Yes");
+    expect(answers()[0]).not.toHaveProperty("q");
   });
 
   it("gives a retry after the first miss and doesn't record yet", async () => {

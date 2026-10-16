@@ -9,7 +9,7 @@ import type { FrameworkId, GradeId } from "@/content/types";
 import { DateField } from "@/components/DateField";
 import { SelectMenu } from "@/components/SelectMenu";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
-import { call, classInsights, HOMEWORK_GOALS, homeworkOverview, isHomeworkDone, isUsClass, US_CLASS_CONSENT, type ClassInvite, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
+import { call, classInsights, HOMEWORK_GOALS, homeworkOverview, isHomeworkDone, isUsClass, US_CLASS_CONSENT, type ClassInvite, type MissedQuestion, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
 import { frameworkGroups, frameworkMenu } from "@/lib/frameworkGroups";
 import { classCsv } from "@/lib/classCsv";
 import { countryOf } from "@/lib/country";
@@ -277,6 +277,8 @@ export interface ClassDetail {
   goal?: Record<string, number>;
   /** The students a unit is for, by unit key. Units for the whole class are not listed. Older servers omit it. */
   audience?: Record<string, string[]>;
+  /** Questions several students missed on the first try, by unit key (only for answers given since this was added). Older servers omit it. */
+  missed?: Record<string, MissedQuestion[]>;
   students: StudentRow[];
   roster: RosterEntry[];
   role?: "owner" | "co-teacher";
@@ -376,10 +378,12 @@ function RowAudience({ unitLabel, students, current, onSave }: { unitLabel: stri
 }
 
 /** Add students by first name, share each one's login code, and print the cards. */
-function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url: string, method: string, body?: unknown) => Promise<boolean>; onPrint: () => void }) {
+function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChange: (url: string, method: string, body?: unknown) => Promise<boolean>; onBulk: (calls: { url: string; method: string }[]) => Promise<boolean>; onPrint: (ids?: string[]) => void }) {
   const [names, setNames] = useState("");
   const [busy, setBusy] = useState(false);
   const [removing, setRemoving] = useState<RosterEntry | null>(null);
+  const [chosen, setChosen] = useState<string[]>([]);
+  const [removingMany, setRemovingMany] = useState(false);
   const { class: cls, roster, students } = data;
   // A split class asks which grade the new students are in.
   const [newGrade, setNewGrade] = useState<GradeId>(cls.grade);
@@ -393,9 +397,40 @@ function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url
       </p>
       {isUsClass(getFramework(cls.framework)) && <p className="mt-2 font-read text-ink-soft">{US_CLASS_CONSENT}</p>}
       {roster.length > 0 && (
+        <div className="mt-3 flex flex-wrap items-center gap-3">
+          <label className="flex min-h-11 items-center gap-2 text-sm font-semibold">
+            <input type="checkbox" className="h-5 w-5" checked={chosen.length === roster.length} onChange={(e) => setChosen(e.target.checked ? roster.map((r) => r.id) : [])} />
+            Select all
+          </label>
+          {chosen.length > 0 && (
+            <>
+              <span className="text-sm text-ink-soft" role="status">{chosen.length} selected</span>
+              <button type="button" className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => onPrint(chosen)}>
+                Print cards for selected
+              </button>
+              <button
+                type="button"
+                className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold"
+                onClick={async () => {
+                  if (await onBulk(chosen.map((id) => ({ url: `/api/classes/students/?classId=${cls.id}&studentId=${id}`, method: "PATCH" })))) setChosen([]);
+                }}
+              >
+                New codes for selected
+              </button>
+              {isOwner && (
+                <button type="button" className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => setRemovingMany(true)}>
+                  Remove selected
+                </button>
+              )}
+            </>
+          )}
+        </div>
+      )}
+      {roster.length > 0 && (
         <ul className="mt-3 divide-y divide-line">
           {roster.map((r) => (
             <li key={r.id} className="flex flex-wrap items-center gap-3 py-2">
+              <input type="checkbox" className="h-5 w-5" aria-label={`Select ${byProfile.get(r.profileId)?.name ?? "student"}`} checked={chosen.includes(r.id)} onChange={(e) => setChosen(e.target.checked ? [...chosen, r.id] : chosen.filter((id) => id !== r.id))} />
               <span className="min-w-32 flex-1 font-read font-bold">
                 {byProfile.get(r.profileId)?.name ?? "Student"}
                 {cls.grade2 && byProfile.get(r.profileId) && <span className="block text-sm font-normal text-ink-soft">{gradeLabel(byProfile.get(r.profileId)!.grade as GradeId, cls.framework)}</span>}
@@ -437,7 +472,7 @@ function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url
             Add students
           </button>
           {roster.length > 0 && (
-            <button type="button" className={`${btn} border border-line`} onClick={onPrint}>
+            <button type="button" className={`${btn} border border-line`} onClick={() => onPrint()}>
               Print login cards
             </button>
           )}
@@ -446,6 +481,29 @@ function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url
       <p className="mt-2 text-sm text-ink-soft">
         Students sign in at {APP_NAME} with the class code <b className="font-mono">{cls.joinCode}</b> and their own code. Keep the cards somewhere private.
       </p>
+      {removingMany && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-4" role="dialog" aria-modal="true" aria-label={`Remove ${chosen.length} students?`} onClick={() => setRemovingMany(false)}>
+          <div className="w-full max-w-md rounded-3xl border-2 border-line bg-white p-6" onClick={(e) => e.stopPropagation()}>
+            <h2 className="mb-2 text-2xl font-bold">Remove {chosen.length} {chosen.length === 1 ? "student" : "students"}?</h2>
+            <p className="mb-5 font-read text-ink-soft">Their accounts and practice history are deleted and can’t be brought back.</p>
+            <div className="flex flex-col gap-3">
+              <button
+                type="button"
+                className="min-h-12 rounded-xl bg-[#ff9f43] font-bold text-[#0f172a]"
+                onClick={async () => {
+                  setRemovingMany(false);
+                  if (await onBulk(chosen.map((id) => ({ url: `/api/classes/students/?classId=${cls.id}&studentId=${id}`, method: "DELETE" })))) setChosen([]);
+                }}
+              >
+                Yes, remove
+              </button>
+              <button type="button" className="min-h-12 rounded-xl border-2 border-line font-bold" onClick={() => setRemovingMany(false)}>
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       {removing && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-4" role="dialog" aria-modal="true" aria-label={`Remove ${byProfile.get(removing.profileId)?.name ?? "this student"}?`} onClick={() => setRemoving(null)}>
           <div className="w-full max-w-md rounded-3xl border-2 border-line bg-white p-6" onClick={(e) => e.stopPropagation()}>
@@ -589,6 +647,26 @@ function Insights({ data, label }: { data: ClassDetail; label: (key: string) => 
           </div>
         </div>
       )}
+      {Object.keys(data.missed ?? {}).length > 0 && (
+        <div className="mt-4">
+          <h3 className="font-bold">Most-missed questions</h3>
+          <ul className="mt-1 font-read">
+            {Object.entries(data.missed ?? {}).map(([key, list]) => (
+              <li key={key} className="mt-1">
+                <b>{label(key)}</b>
+                <ul className="list-disc pl-6">
+                  {list.map((m) => (
+                    <li key={m.q}>
+                      {m.q}: {m.missed} of {m.tried} missed it on the first try
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-1 text-sm text-ink-soft">Shown when at least 2 students missed the same question. Questions are only listed for answers given from now on.</p>
+        </div>
+      )}
       <p className="mt-3 text-sm text-ink-soft">A student is flagged as finding a unit tricky after at least 4 questions with under 60% right on the first try. {say("This reflects practice, not a report-card mark.")}</p>
     </section>
   );
@@ -629,7 +707,7 @@ function SendHome({ cls }: { cls: ClassDetail["class"] }) {
 }
 
 /** What prints: a login card for each student, or a one-page class summary. Hidden on screen. */
-function PrintSheet({ data, label, mode }: { data: ClassDetail; label: (key: string) => string; mode: "cards" | "summary" }) {
+function PrintSheet({ data, label, mode, only }: { data: ClassDetail; label: (key: string) => string; mode: "cards" | "summary"; only?: string[] }) {
   const { class: cls, roster, students, assignments } = data;
   const byProfile = new Map(students.map((s) => [s.profileId, s]));
   const levelLabel = (level: number) => (level < 0 ? "Not started" : levelInfo(cls.framework, cls.grade, level)?.label ?? "");
@@ -638,7 +716,7 @@ function PrintSheet({ data, label, mode }: { data: ClassDetail; label: (key: str
   if (mode === "cards") {
     return (
       <div className="hidden print:grid print:grid-cols-2 print:gap-3">
-        {roster.map((r) => (
+        {roster.filter((r) => !only || only.includes(r.id)).map((r) => (
           <div key={r.id} className="break-inside-avoid rounded-xl border-2 border-dashed border-black p-4">
             <p className="text-lg font-bold">{byProfile.get(r.profileId)?.name}</p>
             <p>
@@ -700,6 +778,108 @@ function PrintSheet({ data, label, mode }: { data: ClassDetail; label: (key: str
   );
 }
 
+type ProgressSort = "name" | "need" | "active";
+
+/** How much a student needs a look: not started first, then the lowest accuracy on what they have tried. */
+function needScore(s: StudentRow): number {
+  const tried = s.units.filter((u) => u.assigned !== false && u.attempts > 0);
+  if (!tried.length) return -1;
+  return tried.reduce((n, u) => n + u.accuracy, 0) / tried.length;
+}
+
+/** The progress table: sort, a subject filter, one student on their own, and a name column that stays put when it scrolls sideways. */
+function ProgressTable({ data, label, levelLabel, now }: { data: ClassDetail; label: (key: string) => string; levelLabel: (level: number) => string; now: number }) {
+  const { class: cls, assignments, students } = data;
+  const [sort, setSort] = useState<ProgressSort>("name");
+  const [subject, setSubject] = useState("");
+  const [only, setOnly] = useState<string | null>(null);
+  const subjects = [...new Set(assignments.map((k) => k.split("/")[1]))];
+  const shown = subject ? assignments.filter((k) => k.split("/")[1] === subject) : assignments;
+  const keep = new Set(shown);
+  const rows = students
+    .filter((s) => only === null || s.profileId === only)
+    .map((s) => ({ ...s, units: s.units.filter((u) => keep.has(u.key)) }))
+    .sort((a, b) => (sort === "need" ? needScore(a) - needScore(b) : sort === "active" ? (a.lastActive ?? 0) - (b.lastActive ?? 0) : 0) || a.name.localeCompare(b.name));
+  const onlyName = students.find((s) => s.profileId === only)?.name;
+  const choose = "min-h-11 rounded-xl border border-line bg-white px-3 font-read";
+  return (
+    <div className="mt-3">
+      <div className="flex flex-wrap items-end gap-3">
+        <label className="flex flex-col text-sm font-semibold">
+          Sort by
+          <select className={`${choose} mt-1`} value={sort} onChange={(e) => setSort(e.target.value as ProgressSort)}>
+            <option value="name">Name</option>
+            <option value="need">Needs a look first</option>
+            <option value="active">Least recently active</option>
+          </select>
+        </label>
+        {subjects.length > 1 && (
+          <label className="flex flex-col text-sm font-semibold">
+            Subject
+            <select className={`${choose} mt-1`} value={subject} onChange={(e) => setSubject(e.target.value)}>
+              <option value="">All subjects</option>
+              {subjects.map((sub) => (
+                <option key={sub} value={sub}>{getSubjectMeta(sub as never).title.big}</option>
+              ))}
+            </select>
+          </label>
+        )}
+        {only !== null && (
+          <button type="button" className={`${btn} border border-line`} onClick={() => setOnly(null)}>
+            Show everyone
+          </button>
+        )}
+      </div>
+      {onlyName && <p className="mt-2 font-read text-ink-soft">Showing {onlyName} only.</p>}
+      <div className="mt-3 overflow-x-auto">
+        <table className="w-full min-w-[32rem] text-left font-read">
+          <thead>
+            <tr className="border-b border-line">
+              <th scope="col" className="sticky left-0 bg-white py-2 pr-3">Student</th>
+              {shown.map((k) => (
+                <th key={k} scope="col" className="py-2 pr-3">{label(k)}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((s) => (
+              <tr key={s.profileId} className="border-b border-line align-top last:border-0">
+                <th scope="row" className="sticky left-0 bg-white py-2 pr-3 font-bold">
+                  {only === null ? (
+                    <button type="button" aria-label={`Show only ${s.name}`} className="text-left font-bold underline decoration-dotted" onClick={() => setOnly(s.profileId)}>
+                      {s.name}
+                    </button>
+                  ) : (
+                    s.name
+                  )}
+                  {cls.grade2 && <span className="font-normal text-ink-soft"> ({gradeLabel(s.grade as GradeId, cls.framework)})</span>}
+                  <span className="block text-sm font-normal text-ink-soft">{s.lastActive ? `Active ${new Date(s.lastActive).toLocaleDateString(countryOf(getFramework(cls.framework)).locale, { month: "short", day: "numeric" })}` : "Not active yet"}</span>
+                </th>
+        {s.units.map((u) => u.assigned === false ? (
+          <td key={u.key} className="py-2 pr-3 text-sm text-ink-soft">Not assigned</td>
+        ) : (
+          <td key={u.key} className="py-2 pr-3">
+            <b>{levelLabel(u.level)}</b>
+            {data.goal?.[u.key] && u.done !== undefined ? (
+              <span className="block text-sm">{u.done >= data.goal[u.key] ? "Homework done ✓" : `Homework: ${u.done} of ${data.goal[u.key]}`}</span>
+            ) : null}
+            {data.due[u.key] && data.due[u.key] < now && !isHomeworkDone(u, data.goal?.[u.key]) && <span className="block text-sm font-bold text-nudge-dark">Past due</span>}
+            {u.attempts > 0 && (
+              <span className="block text-sm text-ink-soft">
+                {pct(u.accuracy)} · {u.attempts} {u.attempts === 1 ? "question" : "questions"}
+              </span>
+            )}
+          </td>
+        ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
 function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; preselect?: string[]; onBack: () => void }) {
   const [data, setData] = useState<ClassDetail | null>(null);
   const [ready, setReady] = useState(false);
@@ -722,6 +902,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
     setPicked(preselected.split(","));
   }
   const [printMode, setPrintMode] = useState<"cards" | "summary" | null>(null);
+  const [printOnly, setPrintOnly] = useState<string[] | undefined>();
 
   // Print once the sheet is on the page, then go back to the normal view.
   useEffect(() => {
@@ -791,6 +972,22 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
     await load().catch(() => undefined);
     return true;
   };
+  /** Several changes in a row, then one reload. Stops at the first that fails and shows why. */
+  const bulk = async (calls: { url: string; method: string }[]): Promise<boolean> => {
+    setErr("");
+    let ok = true;
+    for (const c of calls) {
+      try {
+        await call(c.url, c.method);
+      } catch (e) {
+        setErr((e as Error).message);
+        ok = false;
+        break;
+      }
+    }
+    await load().catch(() => undefined);
+    return ok;
+  };
   /** Closing or leaving: nothing left to reload, so only go back once the server agreed. */
   const leave = async (url: string) => {
     setErr("");
@@ -810,7 +1007,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
 
   return (
     <>
-      {printMode && <PrintSheet data={data} label={label} mode={printMode} />}
+      {printMode && <PrintSheet data={data} label={label} mode={printMode} only={printOnly} />}
       <div className="print:hidden">
       <h1 className="text-3xl font-bold">{cls.name}</h1>
       <p className="font-read text-ink-soft">
@@ -826,44 +1023,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
             ) : assignments.length === 0 ? (
               <p className="mt-2 font-read text-ink-soft">Assign homework to see how each student is doing. {tabLink("homework", "Go to Homework")}</p>
             ) : (
-              <div className="mt-3 overflow-x-auto">
-                <table className="w-full min-w-[32rem] text-left font-read">
-                  <thead>
-                    <tr className="border-b border-line">
-                      <th scope="col" className="py-2 pr-3">Student</th>
-                      {assignments.map((k) => (
-                        <th key={k} scope="col" className="py-2 pr-3">{label(k)}</th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {students.map((s) => (
-                      <tr key={s.profileId} className="border-b border-line align-top last:border-0">
-                        <th scope="row" className="py-2 pr-3 font-bold">
-                          {s.name}{cls.grade2 && <span className="font-normal text-ink-soft"> ({gradeLabel(s.grade as GradeId, cls.framework)})</span>}
-                          <span className="block text-sm font-normal text-ink-soft">{s.lastActive ? `Active ${new Date(s.lastActive).toLocaleDateString(countryOf(getFramework(cls.framework)).locale, { month: "short", day: "numeric" })}` : "Not active yet"}</span>
-                        </th>
-                        {s.units.map((u) => u.assigned === false ? (
-                          <td key={u.key} className="py-2 pr-3 text-sm text-ink-soft">Not assigned</td>
-                        ) : (
-                          <td key={u.key} className="py-2 pr-3">
-                            <b>{levelLabel(u.level)}</b>
-                            {data.goal?.[u.key] && u.done !== undefined ? (
-                              <span className="block text-sm">{u.done >= data.goal[u.key] ? "Homework done ✓" : `Homework: ${u.done} of ${data.goal[u.key]}`}</span>
-                            ) : null}
-                            {data.due[u.key] && data.due[u.key] < now && !isHomeworkDone(u, data.goal?.[u.key]) && <span className="block text-sm font-bold text-nudge-dark">Past due</span>}
-                            {u.attempts > 0 && (
-                              <span className="block text-sm text-ink-soft">
-                                {pct(u.accuracy)} · {u.attempts} {u.attempts === 1 ? "question" : "questions"}
-                              </span>
-                            )}
-                          </td>
-                        ))}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+              <ProgressTable data={data} label={label} levelLabel={levelLabel} now={now} />
             )}
             <p className="mt-3 text-sm text-ink-soft">This reflects practice in {APP_NAME}, not a report-card mark. You decide proficiency.</p>
             {students.length > 0 && assignments.length > 0 && (
@@ -982,7 +1142,15 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
               </>
             )}
           </section>
-          <Roster data={data} onChange={change} onPrint={() => setPrintMode("cards")} />
+          <Roster
+            data={data}
+            onChange={change}
+            onBulk={bulk}
+            onPrint={(ids) => {
+              setPrintOnly(ids);
+              setPrintMode("cards");
+            }}
+          />
           <SendHome cls={cls} />
         </>
       )}

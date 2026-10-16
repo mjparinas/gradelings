@@ -85,6 +85,21 @@ describe("homework", () => {
   });
 });
 
+describe("most-missed questions", () => {
+  it("lists a question two students missed on the first try, for the units the teacher assigned", async () => {
+    const { teacher, parent, cls, kid } = await classWithChild("missed");
+    const kid2 = "missed-kid2";
+    await sync.POST(req("/api/sync/", "POST", { profiles: [{ id: kid2, name: "Sam", grade: "2", avatar: "ollie", colour: "#fff", updatedAt: Date.now() }] }, parent));
+    expect((await join_.POST(req("/api/classes/join/", "POST", { code: cls.joinCode, profileId: kid2 }, parent))).status).toBe(200);
+    expect((await assignments.POST(req("/api/classes/assignments/", "POST", { classId: cls.id, unitKey: UNIT }, teacher))).status).toBe(200);
+    const t = Date.now() + 10;
+    const ev = (profileId: string, i: number, q: string, correct: boolean) => ({ id: `${profileId}-m${i}`, profileId, type: "answer", t: t + i, unit: UNIT, q, correct, attempts: 1, revealed: false, ms: 5000, mode: "practice" });
+    await sync.POST(req("/api/sync/", "POST", { events: [ev(kid, 1, "34 + 8", false), ev(kid2, 2, "34 + 8", false), ev(kid, 3, "5 + 5", false), ev(kid2, 4, "5 + 5", true)] }, parent));
+    const view = await (await classes.GET(req(`/api/classes/?id=${cls.id}`, "GET", undefined, teacher))).json();
+    expect(view.missed).toEqual({ [UNIT]: [{ q: "34 + 8", missed: 2, tried: 2 }] });
+  });
+});
+
 describe("live questions", () => {
   it("asks the class a question, takes one answer per child and shows the answer when the teacher says", async () => {
     const { teacher, parent, cls, kid } = await classWithChild("live");
@@ -185,6 +200,24 @@ describe("live questions", () => {
     expect((await classes.DELETE(req(`/api/classes/?id=${cls.id}`, "DELETE", undefined, teacher))).status).toBe(200);
     expect((await dbm.query<{ n: number }>("SELECT COUNT(*) AS n FROM live_questions WHERE class_id = ?", [cls.id]))[0].n).toBe(0);
     expect((await dbm.query<{ n: number }>("SELECT COUNT(*) AS n FROM live_answers WHERE profile_id = ?", [ava.profileId]))[0].n).toBe(0);
+  });
+
+  it("recaps the day's questions with their answers, for teachers of the class only", async () => {
+    const { teacher, parent, cls, kid } = await classWithChild("recap");
+    const asked = (await (await teacherLive.POST(req("/api/classes/live/", "POST", { classId: cls.id, unitKey: UNIT }, teacher))).json()).live;
+    await childLive.POST(req("/api/live/", "POST", { questionId: asked.id, profileId: kid, choice: asked.question.answer }, parent));
+    await teacherLive.POST(req("/api/classes/live/", "POST", { classId: cls.id, unitKey: UNIT }, teacher));
+    await teacherLive.DELETE(req(`/api/classes/live/?classId=${cls.id}`, "DELETE", undefined, teacher));
+    const recap = (await (await teacherLive.GET(req(`/api/classes/live/?classId=${cls.id}&recap=1`, "GET", undefined, teacher))).json()).recap;
+    expect(recap).toHaveLength(2);
+    expect(recap[0]).toMatchObject({ id: asked.id, unitKey: UNIT });
+    expect(recap[0].answers).toEqual([{ profileId: kid, choice: asked.question.answer, correct: true }]);
+    expect(recap[1].answers).toEqual([]);
+    // Anything older than a day is already gone.
+    await dbm.run("UPDATE live_questions SET created_at = ? WHERE id = ?", [Date.now() - live.LIVE_KEEP - 5000, asked.id]);
+    expect((await (await teacherLive.GET(req(`/api/classes/live/?classId=${cls.id}&recap=1`, "GET", undefined, teacher))).json()).recap).toHaveLength(1);
+    const stranger = await account("recap-stranger@example.com");
+    expect((await teacherLive.GET(req(`/api/classes/live/?classId=${cls.id}&recap=1`, "GET", undefined, stranger))).status).toBe(404);
   });
 
   it("forgets live questions after a day", async () => {

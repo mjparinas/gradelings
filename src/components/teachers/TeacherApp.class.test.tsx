@@ -175,6 +175,37 @@ describe("TeacherApp class page", () => {
     expect(await within(section).findByText("A different one?")).toBeInTheDocument();
   });
 
+  it("lists the questions several students missed, with how many", async () => {
+    serve({ ...detail, missed: { "3/math/counting": [{ q: "34 + 8", missed: 2, tried: 3 }] } });
+    await openClass();
+    expect(screen.getByRole("heading", { name: "Most-missed questions" })).toBeInTheDocument();
+    expect(screen.getByText(/34 \+ 8: 2 of 3 missed it on the first try/)).toBeInTheDocument();
+  });
+
+  it("leaves out the most-missed list when nothing was missed", async () => {
+    serve({ ...detail, missed: {} });
+    await openClass();
+    expect(screen.queryByRole("heading", { name: "Most-missed questions" })).not.toBeInTheDocument();
+  });
+
+  it("looks back at the day's live questions and copies the recap", async () => {
+    const question = { prompt: "How many?", hint: "", choices: [{ id: "a", label: "3" }, { id: "b", label: "4" }], answer: "b" };
+    serve(detail, (url) =>
+      url === "/api/classes/live/?classId=class-1&recap=1"
+        ? { recap: [{ id: "q1", unitKey: "3/math/counting", question, revealed: true, createdAt: now, answers: [{ profileId: "p1", choice: "a", correct: false }, { profileId: "p3", choice: "b", correct: true }] }] }
+        : url.startsWith("/api/classes/live/") ? { live: null } : undefined,
+    );
+    const user = await openClass();
+    const write = vi.spyOn(navigator.clipboard, "writeText");
+    await openTab(user, "Live");
+    await user.click(screen.getByRole("button", { name: "Look back at today’s questions" }));
+    const recap = await screen.findByLabelText("Recap of today’s questions");
+    expect(recap).toHaveTextContent("1 of 2 answered right · To check in with: Maya");
+    await user.click(within(recap).getByRole("button", { name: "Copy the recap" }));
+    expect(write).toHaveBeenCalledWith(expect.stringContaining("1 of 2 answered right. To check in with: Maya."));
+    expect(write).toHaveBeenCalledWith(expect.stringContaining("not a report-card mark"));
+  });
+
   it("uses US English and US dates for a class on a US curriculum, and Canadian ones otherwise", async () => {
     const when = Date.now() - 2 * DAY;
     const one = (framework: string) => {
@@ -480,6 +511,71 @@ describe("TeacherApp class page", () => {
     window.location.hash = "#/class/class-1/nope";
     expect(await screen.findByRole("heading", { name: "Students (3)" })).toBeInTheDocument();
     expect(within(screen.getByRole("navigation", { name: "Class sections" })).getByRole("link", { name: /Progress/ })).toHaveAttribute("aria-current", "page");
+  });
+
+  it("sorts the progress table, filters it by subject, and shows one student on their own", async () => {
+    const sci = (level: number, attempts = 0, accuracy = 0) => ({ key: "3/science/plants", level, attempts, accuracy });
+    const multi = {
+      ...detail,
+      assignments: [...detail.assignments, "3/science/plants"],
+      students: detail.students.map((s, i) => ({ ...s, units: [...s.units, sci(i === 0 ? 1 : -1, i === 0 ? 4 : 0, 0.5)] })),
+    };
+    serve(multi);
+    const user = await openClass();
+    const names = () => screen.getAllByRole("rowheader").map((r) => r.textContent?.match(/^(Maya|Sam|Alex)/)?.[0]);
+    expect(names()).toEqual(["Alex", "Maya", "Sam"]);
+    await user.selectOptions(screen.getByLabelText("Sort by"), "need");
+    // Lowest accuracy on what they have tried comes first.
+    expect(names()).toEqual(["Sam", "Maya", "Alex"]);
+    await user.selectOptions(screen.getByLabelText("Sort by"), "active");
+    expect(names()).toEqual(["Sam", "Alex", "Maya"]);
+    await user.selectOptions(screen.getByLabelText("Subject"), "science");
+    expect(screen.getByRole("columnheader", { name: "3/science/plants" })).toBeInTheDocument();
+    expect(screen.queryByRole("columnheader", { name: "Counting" })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Show only Sam" }));
+    expect(names()).toEqual(["Sam"]);
+    expect(screen.getByText("Showing Sam only.")).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Show everyone" }));
+    expect(names()).toHaveLength(3);
+  });
+
+  it("picks several students to print cards for, reset codes or remove, with one reload", async () => {
+    serve({ ...detail, role: "owner", teachers: [], invites: [] });
+    const user = await openClass();
+    await openTab(user, "Students");
+    await user.click(screen.getByRole("checkbox", { name: "Select all" }));
+    expect(screen.getByRole("status", { name: "" })).toHaveTextContent("2 selected");
+    await user.click(screen.getByRole("checkbox", { name: "Select Maya" }));
+    expect(screen.getByRole("status", { name: "" })).toHaveTextContent("1 selected");
+    await user.click(screen.getByRole("checkbox", { name: "Select Maya" }));
+    const loads = () => mocks.call.mock.calls.filter(([u]) => u === "/api/classes/?id=class-1").length;
+    const before = loads();
+    await user.click(screen.getByRole("button", { name: "New codes for selected" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/?classId=class-1&studentId=r2", "PATCH"));
+    expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/?classId=class-1&studentId=r1", "PATCH");
+    await waitFor(() => expect(loads()).toBe(before + 1));
+    await user.click(screen.getByRole("checkbox", { name: "Select all" }));
+    await user.click(screen.getByRole("button", { name: "Remove selected" }));
+    expect(screen.getByRole("dialog", { name: "Remove 2 students?" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Yes, remove" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/?classId=class-1&studentId=r1", "DELETE"));
+    expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/?classId=class-1&studentId=r2", "DELETE");
+  });
+
+  it("prints cards for the chosen students only", async () => {
+    let printed = "";
+    const print = vi.fn(() => {
+      printed = document.body.textContent ?? "";
+    });
+    window.print = print;
+    serve({ ...detail, role: "owner", teachers: [], invites: [] });
+    const user = await openClass();
+    await openTab(user, "Students");
+    await user.click(screen.getByRole("checkbox", { name: "Select Sam" }));
+    await user.click(screen.getByRole("button", { name: "Print cards for selected" }));
+    await waitFor(() => expect(print).toHaveBeenCalled());
+    expect(printed).toContain("My code: MN34RT");
+    expect(printed).not.toContain("My code: ZX91PQ");
   });
 
   it("renames the class from Settings", async () => {

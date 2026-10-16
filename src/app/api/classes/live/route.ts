@@ -1,7 +1,7 @@
 import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
 import { classGrades, teachingClass, validUnit } from "@/server/classroom";
 import { isFlagOn } from "@/server/flags";
-import { endLive, liveAnswers, openLive, previewNext, revealLive, startLive, swapNextLive, type LiveRow } from "@/server/live";
+import { endLive, liveAnswers, openLive, previewNext, recentLive, revealLive, startLive, swapNextLive, type LiveRow } from "@/server/live";
 import type { ClassRow } from "@/server/classroom";
 import type { LiveForTeacher, LiveQuestionData } from "@/lib/live";
 
@@ -26,12 +26,17 @@ async function viewWithNext(row: LiveRow | undefined, cls: ClassRow): Promise<Li
   return live;
 }
 
-/** The class's open question and its answers so far (?classId=). Polled while a question is open. */
+/** The class's open question and its answers so far (?classId=), or the day's questions (?recap=1). Polled while a question is open. */
 export async function GET(req: Request) {
   const session = await getSession(req);
   if (!session) return error(401, "Not signed in");
   const found = await teachingClass(new URL(req.url).searchParams.get("classId") ?? "", session.parentId);
   if (!found) return error(404, "Class not found");
+  // ?recap=1: the day's questions with their answers, so a teacher can look back before they are deleted.
+  if (new URL(req.url).searchParams.get("recap")) {
+    const rows = await recentLive(found.cls.id);
+    return json({ recap: (await Promise.all(rows.map(view))).filter(Boolean) });
+  }
   return json({ live: await viewWithNext(await openLive(found.cls.id), found.cls) });
 }
 
