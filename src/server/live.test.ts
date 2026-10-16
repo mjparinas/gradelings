@@ -153,6 +153,31 @@ describe("live questions", () => {
     expect(await childGet(parent)).toBeNull();
   });
 
+  it("previews the next question for the teacher only, swaps it, and asks the one that was shown", async () => {
+    const { teacher, parent, cls, kid } = await classWithChild("preview");
+    const post = async () => (await (await teacherLive.POST(req("/api/classes/live/", "POST", { classId: cls.id, unitKey: UNIT }, teacher))).json()).live;
+    const swap = () => teacherLive.PATCH(req("/api/classes/live/", "PATCH", { classId: cls.id, action: "swap-next" }, teacher));
+    const asked = await post();
+    expect(asked.next.prompt).not.toBe(asked.question.prompt);
+    // Polling shows the same preview until it is swapped, and children never get it.
+    const polled = (await (await teacherLive.GET(req(`/api/classes/live/?classId=${cls.id}`, "GET", undefined, teacher))).json()).live;
+    expect(polled.next).toEqual(asked.next);
+    const seen = JSON.stringify(await (await childLive.GET(req(`/api/live/?profile=${kid}`, "GET", undefined, parent))).json());
+    expect(seen).not.toContain(asked.next.prompt);
+    // A swap shows a different question, still not a repeat of the one on screen.
+    const swapped = (await (await swap()).json()).live;
+    expect(swapped.next).not.toEqual(asked.next);
+    expect(swapped.next.prompt).not.toBe(asked.question.prompt);
+    // A stranger can't swap it, and with nothing open there's nothing to swap.
+    const stranger = await account("preview-stranger@example.com");
+    expect((await teacherLive.PATCH(req("/api/classes/live/", "PATCH", { classId: cls.id, action: "swap-next" }, stranger))).status).toBe(404);
+    // "Next question" asks what the teacher was shown.
+    const next = await post();
+    expect(next.question).toEqual(swapped.next);
+    await teacherLive.DELETE(req(`/api/classes/live/?classId=${cls.id}`, "DELETE", undefined, teacher));
+    expect((await swap()).status).toBe(409);
+  });
+
   it("works for class student accounts, stops when the flag is off and is deleted with the class", async () => {
     const teacher = await account("live2-teacher@example.com");
     const { class: cls } = await (await classes.POST(req("/api/classes/", "POST", { name: "Room 8", grade: "2" }, teacher))).json();
