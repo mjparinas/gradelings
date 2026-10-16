@@ -3,7 +3,7 @@ import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { FRAMEWORKS } from "@/content/frameworks";
-import { APP_NAME } from "@/lib/brand";
+import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { US_CLASS_CONSENT } from "@/lib/classroom";
 
 const mocks = vi.hoisted(() => ({ call: vi.fn() }));
@@ -51,6 +51,17 @@ beforeEach(() => {
 afterEach(() => vi.restoreAllMocks());
 
 describe("TeacherApp", () => {
+  it("shows the coloured wordmark linking home, like the public site", async () => {
+    render(<TeacherApp />);
+    const logo = screen.getByRole("link", { name: APP_NAME });
+    expect(logo).toHaveAttribute("href", "/");
+    const letters = Array.from(logo.querySelectorAll("span"));
+    expect(letters.map((s) => s.textContent).join("")).toBe(APP_NAME);
+    expect(letters[0].style.color).not.toBe("");
+    expect(new Set(letters.map((s) => s.style.color)).size).toBe(new Set(WORDMARK_COLOURS).size);
+    await screen.findByRole("heading", { name: "Your classes" });
+  });
+
   it("keeps student sessions out of teacher classes and offers the teacher sign-in flow", async () => {
     mocks.call.mockResolvedValueOnce({ family: { account: { student: true } } });
     const user = userEvent.setup();
