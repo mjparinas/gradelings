@@ -11,9 +11,11 @@ import { SelectMenu } from "@/components/SelectMenu";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { call, classInsights, HOMEWORK_GOALS, isUsClass, US_CLASS_CONSENT, type ClassInvite, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
 import { frameworkGroups, frameworkMenu } from "@/lib/frameworkGroups";
+import { countryOf } from "@/lib/country";
 import { gradeLabel } from "@/lib/gradeLabel";
 import { levelInfo } from "@/lib/proficiency";
 import { go, useRoute } from "@/lib/router";
+import { sayFor } from "@/lib/say";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
 import { LiveClass } from "./LiveClass";
 
@@ -41,53 +43,110 @@ const pct = (v: number) => `${Math.round(v * 100)}%`;
 const btn = "min-h-11 rounded-xl px-4 font-bold";
 
 function AuthForm({ onDone }: { onDone: () => void }) {
-  const [mode, setMode] = useState<"in" | "up">("in");
+  const [mode, setMode] = useState<"in" | "up" | "forgot">("in");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [err, setErr] = useState("");
+  const [notice, setNotice] = useState("");
   const [busy, setBusy] = useState(false);
 
   const submit = async (e: FormEvent) => {
     e.preventDefault();
     setBusy(true);
     setErr("");
+    setNotice("");
     try {
-      await call(mode === "in" ? "/api/auth/login/" : "/api/auth/signup/", "POST", { email, password });
-      onDone();
+      if (mode === "forgot") {
+        // Always answers the same way, so it never says whether an email has an account.
+        setNotice((await call<{ message: string }>("/api/auth/forgot/", "POST", { email })).message);
+      } else {
+        await call(mode === "in" ? "/api/auth/login/" : "/api/auth/signup/", "POST", { email, password });
+        onDone();
+      }
     } catch (x) {
       setErr((x as Error).message);
     } finally {
       setBusy(false);
     }
   };
+  const switchTo = (next: typeof mode) => {
+    setMode(next);
+    setErr("");
+    setNotice("");
+  };
 
   return (
     <form onSubmit={submit} className="mx-auto mt-8 flex max-w-sm flex-col gap-3 rounded-2xl border border-line bg-white p-5">
-      <h1 className="text-2xl font-bold">{mode === "in" ? "Teacher sign in" : "Create a teacher account"}</h1>
+      <h1 className="text-2xl font-bold">{mode === "in" ? "Teacher sign in" : mode === "up" ? "Create a teacher account" : "Reset your password"}</h1>
       <label className="flex flex-col text-sm font-semibold">
         Email
         <input className="mt-1 min-h-11 rounded-xl border border-line px-3" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
       </label>
-      <label className="flex flex-col text-sm font-semibold">
-        Password
-        <input className="mt-1 min-h-11 rounded-xl border border-line px-3" type="password" autoComplete={mode === "in" ? "current-password" : "new-password"} minLength={8} value={password} onChange={(e) => setPassword(e.target.value)} required />
-      </label>
+      {mode !== "forgot" && (
+        <label className="flex flex-col text-sm font-semibold">
+          Password
+          <input className="mt-1 min-h-11 rounded-xl border border-line px-3" type="password" autoComplete={mode === "in" ? "current-password" : "new-password"} minLength={8} value={password} onChange={(e) => setPassword(e.target.value)} required />
+        </label>
+      )}
       {err && (
         <p role="alert" className="text-nudge-dark">
           {err}
         </p>
       )}
+      {notice && (
+        <p role="status" className="font-read text-ink-soft">
+          {notice}
+        </p>
+      )}
       <button disabled={busy} className={`${btn} bg-[#4f8ef7] text-[#0f172a] disabled:opacity-50`}>
-        {mode === "in" ? "Sign in" : "Create account"}
+        {mode === "in" ? "Sign in" : mode === "up" ? "Create account" : "Email me a reset link"}
       </button>
-      <button type="button" className="text-sm font-semibold underline" onClick={() => setMode(mode === "in" ? "up" : "in")}>
-        {mode === "in" ? "New here? Create an account" : "Have an account? Sign in"}
+      {mode === "in" && (
+        <button type="button" className="text-sm font-semibold underline" onClick={() => switchTo("forgot")}>
+          Forgot your password?
+        </button>
+      )}
+      <button type="button" className="text-sm font-semibold underline" onClick={() => switchTo(mode === "in" ? "up" : "in")}>
+        {mode === "in" ? "New here? Create an account" : mode === "up" ? "Have an account? Sign in" : "Back to sign in"}
       </button>
     </form>
   );
 }
 
-function ClassList({ onOpen }: { onOpen: (id: string) => void }) {
+/** Classes show children's first names and results, so the account's email has to be confirmed first. */
+function ConfirmEmail({ email }: { email?: string }) {
+  const [state, setState] = useState<"idle" | "sending" | "sent">("idle");
+  const [err, setErr] = useState("");
+  const resend = async () => {
+    setState("sending");
+    setErr("");
+    try {
+      await call("/api/auth/resend-verification/", "POST");
+      setState("sent");
+    } catch (x) {
+      setErr((x as Error).message);
+      setState("idle");
+    }
+  };
+  return (
+    <section className="mt-4 rounded-2xl border border-line bg-white p-4" aria-label="Confirm your email">
+      <h2 className="text-xl font-bold">Confirm your email to create a class</h2>
+      <p className="mt-1 font-read text-ink-soft">
+        Classes show students’ first names and practice results, so we ask teachers to confirm their email first. Open the link we sent{email ? ` to ${email}` : ""} (check spam too), then reload this page.
+      </p>
+      <button type="button" disabled={state !== "idle"} className={`${btn} mt-3 border border-line disabled:opacity-50`} onClick={() => void resend()}>
+        {state === "sent" ? "Sent. Check your inbox" : "Send the link again"}
+      </button>
+      {err && (
+        <p role="alert" className="mt-2 text-nudge-dark">
+          {err}
+        </p>
+      )}
+    </section>
+  );
+}
+
+function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account: { email?: string; verified?: boolean } }) {
   const [classes, setClasses] = useState<ClassSummary[] | null>(null);
   const [name, setName] = useState("");
   const [grade, setGrade] = useState<GradeId>("3");
@@ -130,6 +189,7 @@ function ClassList({ onOpen }: { onOpen: (id: string) => void }) {
   return (
     <>
       <h1 className="text-3xl font-bold">Your classes</h1>
+      {account.verified === false && <ConfirmEmail email={account.email} />}
       {classes?.length === 0 && <p className="mt-2 font-read text-ink-soft">No classes yet. Create one below, then give families the class code.</p>}
       {invites.length > 0 && (
         <section className="mt-4 rounded-2xl border border-line bg-white p-4" aria-label="Invitations to co-teach">
@@ -170,7 +230,7 @@ function ClassList({ onOpen }: { onOpen: (id: string) => void }) {
         </label>
         <SelectMenu label="Grade" block={false} value={grade} onChange={(next) => setGrade(next as GradeId)} options={GRADE_ORDER.map((g) => ({ value: g, label: gradeLabel(g, framework) }))} />
         <SelectMenu label={REGION_LABEL} block={false} value={framework} onChange={(next) => setFramework(next as FrameworkId)} {...frameworkMenu((f) => f.region)} />
-        <button className={`${btn} bg-[#25b47e] text-[#0f172a]`}>Create class</button>
+        <button disabled={account.verified === false} className={`${btn} bg-[#25b47e] text-[#0f172a] disabled:opacity-50`}>Create class</button>
         {isUsClass(getFramework(framework)) && <p className="w-full font-read text-sm text-ink-soft">{US_CLASS_CONSENT}</p>}
       </form>
       {err && (
@@ -363,13 +423,14 @@ function Team({ data, onChange, onLeave }: { data: ClassDetail; onChange: (url: 
 function Insights({ data, label }: { data: ClassDetail; label: (key: string) => string }) {
   const [now] = useState(() => Date.now());
   const { assignments, students } = data;
+  const say = sayFor(getFramework(data.class.framework));
   const insights = classInsights(students, assignments, label, now);
   if (!students.length || !assignments.length) return null;
   return (
     <section className="mt-4 rounded-2xl border border-line bg-white p-5 print:hidden">
       <h2 className="text-xl font-bold">What to look at next</h2>
       {insights.focusUnits.length === 0 && insights.checkIn.length === 0 ? (
-        <p className="mt-2 font-read text-ink-soft">Nothing stands out. Everyone who has practised is doing fine on the assigned units.</p>
+        <p className="mt-2 font-read text-ink-soft">{say("Nothing stands out. Everyone who has practised is doing fine on the assigned units.")}</p>
       ) : (
         <div className="mt-2 grid gap-4 sm:grid-cols-2">
           <div>
@@ -389,12 +450,12 @@ function Insights({ data, label }: { data: ClassDetail; label: (key: string) => 
           <div>
             <h3 className="font-bold">Check in with</h3>
             {insights.checkIn.length === 0 ? (
-              <p className="font-read text-ink-soft">Everyone is practising and doing fine.</p>
+              <p className="font-read text-ink-soft">{say("Everyone is practising and doing fine.")}</p>
             ) : (
               <ul className="mt-1 font-read">
                 {insights.checkIn.map((s) => (
                   <li key={s.profileId}>
-                    <b>{s.name}</b>: {s.reasons.join("; ")}
+                    <b>{s.name}</b>: {say(s.reasons.join("; "))}
                   </li>
                 ))}
               </ul>
@@ -402,7 +463,7 @@ function Insights({ data, label }: { data: ClassDetail; label: (key: string) => 
           </div>
         </div>
       )}
-      <p className="mt-3 text-sm text-ink-soft">A student is flagged as finding a unit tricky after at least 4 questions with under 60% right on the first try. This reflects practice, not a report-card mark.</p>
+      <p className="mt-3 text-sm text-ink-soft">A student is flagged as finding a unit tricky after at least 4 questions with under 60% right on the first try. {say("This reflects practice, not a report-card mark.")}</p>
     </section>
   );
 }
@@ -474,7 +535,7 @@ function PrintSheet({ data, label, mode }: { data: ClassDetail; label: (key: str
         {cls.name} · {gradeLabel(cls.grade, cls.framework)} · {getFramework(cls.framework).curriculumName}
       </h1>
       <p className="text-sm">
-        Practice summary printed {new Date(now).toLocaleDateString("en-CA", { dateStyle: "long" })}. This reflects practice in {APP_NAME}, not a report-card mark.
+        Practice summary printed {new Date(now).toLocaleDateString(countryOf(getFramework(cls.framework)).locale, { dateStyle: "long" })}. This reflects practice in {APP_NAME}, not a report-card mark.
       </p>
       <table className="mt-3 w-full border-collapse text-left text-sm">
         <thead>
@@ -628,7 +689,7 @@ function ClassPage({ id, tab, onBack }: { id: string; tab: ClassTab; onBack: () 
                       <tr key={s.profileId} className="border-b border-line align-top last:border-0">
                         <th scope="row" className="py-2 pr-3 font-bold">
                           {s.name}
-                          <span className="block text-sm font-normal text-ink-soft">{s.lastActive ? `Active ${new Date(s.lastActive).toLocaleDateString("en-CA", { month: "short", day: "numeric" })}` : "Not active yet"}</span>
+                          <span className="block text-sm font-normal text-ink-soft">{s.lastActive ? `Active ${new Date(s.lastActive).toLocaleDateString(countryOf(getFramework(cls.framework)).locale, { month: "short", day: "numeric" })}` : "Not active yet"}</span>
                         </th>
                         {s.units.map((u) => (
                           <td key={u.key} className="py-2 pr-3">
@@ -780,6 +841,7 @@ function ClassPage({ id, tab, onBack }: { id: string; tab: ClassTab; onBack: () 
 
 export function TeacherApp() {
   const [signedIn, setSignedIn] = useState<boolean | null>(null);
+  const [account, setAccount] = useState<{ email?: string; verified?: boolean }>({});
   const { path } = useRoute();
   // #/class/{id}/{tab} opens a class on one tab; anything else is the class list.
   const classId = path[0] === "class" && path[1] ? path[1] : null;
@@ -787,8 +849,11 @@ export function TeacherApp() {
 
   useEffect(() => {
     // A class student's login is not a teacher's: only a real account counts.
-    call<{ family?: { account?: { student?: boolean } } }>("/api/auth/me/")
-      .then((r) => setSignedIn(!r.family?.account?.student))
+    call<{ family?: { account?: { student?: boolean; email?: string; verified?: boolean } } }>("/api/auth/me/")
+      .then((r) => {
+        setAccount({ email: r.family?.account?.email, verified: r.family?.account?.verified });
+        setSignedIn(!r.family?.account?.student);
+      })
       .catch(() => setSignedIn(false));
   }, []);
 
@@ -849,11 +914,17 @@ export function TeacherApp() {
         {signedIn === null ? (
           <p className="font-read">Loading…</p>
         ) : !signedIn ? (
-          <AuthForm onDone={() => setSignedIn(true)} />
+          <AuthForm onDone={() => {
+            // Re-read the account: whether its email is confirmed decides if a class can be created.
+            call<{ family?: { account?: { email?: string; verified?: boolean } } }>("/api/auth/me/")
+              .then((r) => setAccount({ email: r.family?.account?.email, verified: r.family?.account?.verified }))
+              .catch(() => undefined)
+              .finally(() => setSignedIn(true));
+          }} />
         ) : classId ? (
           <ClassPage key={classId} id={classId} tab={tab} onBack={() => go("/")} />
         ) : (
-          <ClassList onOpen={(id) => go(`/class/${encodeURIComponent(id)}`)} />
+          <ClassList account={account} onOpen={(id) => go(`/class/${encodeURIComponent(id)}`)} />
         )}
       </main>
     </div>

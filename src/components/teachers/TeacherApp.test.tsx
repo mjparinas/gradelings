@@ -375,4 +375,66 @@ describe("TeacherApp", () => {
     await user.click(screen.getByRole("button", { name: "Accept" }));
     await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/invites/", "POST", { classId: "class-9" }));
   });
+
+  it("lets a teacher ask for a password reset link without saying whether the email has an account", async () => {
+    mocks.call.mockImplementation((url: string) => {
+      if (url === "/api/auth/me/") return Promise.reject(new Error("Please sign in."));
+      if (url === "/api/auth/forgot/") return Promise.resolve({ ok: true, message: "If that email has an account, we've sent a link to reset the password." });
+      return Promise.resolve({});
+    });
+    const user = userEvent.setup();
+    render(<TeacherApp />);
+    await user.click(await screen.findByRole("button", { name: "Forgot your password?" }));
+    expect(screen.getByRole("heading", { name: "Reset your password" })).toBeInTheDocument();
+    expect(screen.queryByLabelText("Password")).not.toBeInTheDocument();
+    await user.type(screen.getByLabelText("Email"), "teacher@example.com");
+    await user.click(screen.getByRole("button", { name: "Email me a reset link" }));
+    expect(await screen.findByRole("status")).toHaveTextContent("If that email has an account, we've sent a link to reset the password.");
+    expect(mocks.call).toHaveBeenCalledWith("/api/auth/forgot/", "POST", { email: "teacher@example.com" });
+    await user.click(screen.getByRole("button", { name: "Back to sign in" }));
+    expect(screen.getByRole("heading", { name: "Teacher sign in" })).toBeInTheDocument();
+    expect(screen.queryByRole("status")).not.toBeInTheDocument();
+  });
+
+  it("asks a teacher with an unconfirmed email to confirm it, and offers the link again, before a class can be made", async () => {
+    const base = mocks.call.getMockImplementation()!;
+    mocks.call.mockImplementation((url: string, method = "GET") => {
+      if (url === "/api/auth/me/") return Promise.resolve({ family: { account: { student: false, email: "new@example.com", verified: false } } });
+      return base(url, method);
+    });
+    const user = userEvent.setup();
+    render(<TeacherApp />);
+    const banner = await screen.findByRole("region", { name: "Confirm your email" });
+    expect(banner).toHaveTextContent("new@example.com");
+    expect(screen.getByRole("button", { name: "Create class" })).toBeDisabled();
+    await user.click(within(banner).getByRole("button", { name: "Send the link again" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/auth/resend-verification/", "POST"));
+    expect(await within(banner).findByRole("button", { name: /^Sent/ })).toBeDisabled();
+  });
+
+  it("shows why the confirmation link couldn't be sent again", async () => {
+    const base = mocks.call.getMockImplementation()!;
+    mocks.call.mockImplementation((url: string, method = "GET") => {
+      if (url === "/api/auth/me/") return Promise.resolve({ family: { account: { student: false, verified: false } } });
+      if (url === "/api/auth/resend-verification/") return Promise.reject(new Error("We've sent a few already."));
+      return base(url, method);
+    });
+    const user = userEvent.setup();
+    render(<TeacherApp />);
+    await user.click(await screen.findByRole("button", { name: "Send the link again" }));
+    expect(await screen.findByRole("alert")).toHaveTextContent("We've sent a few already.");
+    expect(screen.getByRole("button", { name: "Send the link again" })).toBeEnabled();
+  });
+
+  it("doesn't nag a teacher whose email is confirmed", async () => {
+    const base = mocks.call.getMockImplementation()!;
+    mocks.call.mockImplementation((url: string, method = "GET") => {
+      if (url === "/api/auth/me/") return Promise.resolve({ family: { account: { student: false, verified: true } } });
+      return base(url, method);
+    });
+    render(<TeacherApp />);
+    await screen.findByRole("heading", { name: "Your classes" });
+    expect(screen.queryByRole("region", { name: "Confirm your email" })).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Create class" })).toBeEnabled();
+  });
 });
