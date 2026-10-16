@@ -217,16 +217,15 @@ export async function classProgress(classId: string): Promise<StudentProgress[]>
   const members = await query<{ profile_id: string; family_id: string }>("SELECT profile_id, family_id FROM class_members WHERE class_id = ? ORDER BY joined_at", [classId]);
   const keys = await assignmentKeys(classId);
   const since = Object.fromEntries((await query<{ unit_key: string; created_at: number }>("SELECT unit_key, created_at FROM class_assignments WHERE class_id = ?", [classId])).map((r) => [r.unit_key, Number(r.created_at)]));
-  const out: StudentProgress[] = [];
-  for (const m of members) {
+  const progress = await mapLimit(members, CLASS_LOAD_CONCURRENCY, async (m): Promise<StudentProgress | null> => {
     // One unreadable child record must not take the whole class view down with it.
     const data = await loadChildData(m.family_id, m.profile_id, 90).catch((e) => {
       console.error("[classroom] could not load a member's report", (e as Error).message);
       return null;
     });
-    if (!data) continue;
+    if (!data) return null;
     const byKey = new Map(data.report.units.map((u) => [u.ref.key, u]));
-    out.push({
+    return {
       profileId: m.profile_id,
       name: data.profile.name,
       avatar: data.profile.avatar,
@@ -236,7 +235,24 @@ export async function classProgress(classId: string): Promise<StudentProgress[]>
         const u = byKey.get(key);
         return { key, level: u ? u.level : unitLevel(undefined), attempts: u?.attempts ?? 0, accuracy: u?.accuracy ?? 0, done: homeworkDone(data.events, key, since[key] ?? 0) };
       }),
-    });
-  }
+    };
+  });
+  return progress.filter((p): p is StudentProgress => p !== null);
+}
+
+/** How many students' histories are read at once: enough to overlap the database round trips without flooding it. */
+export const CLASS_LOAD_CONCURRENCY = 6;
+
+/** `fn` over `items` with at most `limit` running at once. Results keep the order of `items`. */
+export async function mapLimit<T, R>(items: readonly T[], limit: number, fn: (item: T) => Promise<R>): Promise<R[]> {
+  const out: R[] = new Array(items.length);
+  let next = 0;
+  const worker = async () => {
+    while (next < items.length) {
+      const i = next++;
+      out[i] = await fn(items[i]);
+    }
+  };
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
   return out;
 }
