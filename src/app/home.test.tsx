@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { render, screen, within } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { FREE_UNITS_PER_COURSE, PRICES_BY_CURRENCY, TRIAL_DAYS } from "@/lib/plan";
 import Home from "./page";
 
@@ -54,5 +54,14 @@ describe("home page", () => {
     const faq = screen.getByRole("heading", { name: "Questions from parents" }).closest("section")!;
     expect(faq.textContent).toContain(PRICES_BY_CURRENCY.USD.month.label);
     expect(faq.textContent).toContain("Washington");
+  });
+});
+
+describe("home page build line", () => {
+  it("shows the commit this build was made from at the foot of the page", () => {
+    vi.stubEnv("NEXT_PUBLIC_BUILD_SHA", "3f9a1c2d4e5b6a7980716253443526170819abcd");
+    render(<Home />);
+    expect(screen.getByRole("contentinfo")).toHaveTextContent("Build 3f9a1c2");
+    vi.unstubAllEnvs();
   });
 });

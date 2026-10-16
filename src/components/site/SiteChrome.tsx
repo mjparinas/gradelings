@@ -126,7 +126,7 @@ function SocialLinks() {
 
 // One link per section: each region's curriculum, report-card and guide pages are reached from these hubs, so the
 // footer stays the same short list as provinces and states are added.
-export function SiteFooter() {
+export function SiteFooter({ build }: { /** A build line such as "Build 3f9a1c2" (`buildLabel`), shown on the home page only. */ build?: string } = {}) {
   return (
     <footer className="print:hidden mt-16 border-t border-line bg-white">
       <div className="mx-auto grid max-w-6xl gap-6 px-4 py-10 sm:grid-cols-2 lg:grid-cols-4">
@@ -171,6 +171,7 @@ export function SiteFooter() {
       <p className="pb-8 text-center text-xs text-ink-soft">
         © {new Date().getFullYear()} {LEGAL_NAME}. Not affiliated with any ministry of education.
       </p>
+      {build && <p className="-mt-6 pb-8 text-center font-mono text-xs text-ink-soft">{build}</p>}
     </footer>
   );
 }
@@ -222,12 +223,15 @@ export function SitePage({
   children,
   cta = false,
   play,
+  build,
 }: {
   children: ReactNode;
   /** Ends the page with the call to action. */
   cta?: boolean;
   /** Where this page's "Try it free" buttons open the app (`playHref`): the page's province or state, grade and unit. */
   play?: string;
+  /** A build line for the footer (`buildLabel`); the home page passes it. */
+  build?: string;
 }) {
   return (
     <>
@@ -240,7 +244,7 @@ export function SitePage({
         {children}
         {cta && <PageCta play={play} />}
       </main>
-      <SiteFooter />
+      <SiteFooter build={build} />
     </>
   );
 }
