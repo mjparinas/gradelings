@@ -340,7 +340,7 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
               <ClassBadges badge={badges[c.id]} students={c.students} now={now} />
             </button>
             <div className="px-4 pb-2">
-              <button type="button" aria-label={hidden.includes(c.id) ? `Show ${c.name} again` : `Hide ${c.name} from this list`} className="inline-flex min-h-11 items-center text-sm font-semibold text-ink-soft underline" onClick={() => hide(c.id, !hidden.includes(c.id))}>
+              <button type="button" aria-label={hidden.includes(c.id) ? `Show ${c.name} again` : `Hide ${c.name} from this list`} className="inline-flex min-h-11 min-w-11 items-center justify-center text-sm font-semibold text-ink-soft underline" onClick={() => hide(c.id, !hidden.includes(c.id))}>
                 {hidden.includes(c.id) ? "Show again" : "Hide"}
               </button>
             </div>
