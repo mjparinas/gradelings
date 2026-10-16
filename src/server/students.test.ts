@@ -244,4 +244,37 @@ describe("teacher-made student accounts", () => {
       delete process.env.ADMIN_EMAILS;
     }
   });
+
+  it("lets a teacher undo a new login code for a few minutes, once", async () => {
+    const t = await teacher("st-undo@example.com");
+    const cls = await classWith(t);
+    const { students } = await (await studentRoutes.POST(req("/api/classes/students/", "POST", { classId: cls.id, names: ["Noor", "Ravi"] }, t))).json();
+    const [noor, ravi] = students as { id: string; loginCode: string }[];
+    const url = `/api/classes/students/?classId=${cls.id}&studentId=${noor.id}`;
+    // Nothing to undo before a code was replaced.
+    expect((await studentRoutes.PATCH(req(url, "PATCH", { undo: true }, t))).status).toBe(409);
+
+    const renewed = await (await studentRoutes.PATCH(req(url, "PATCH", undefined, t))).json();
+    expect(renewed.loginCode).not.toBe(noor.loginCode);
+    const back = await studentRoutes.PATCH(req(url, "PATCH", { undo: true }, t));
+    expect(back.status).toBe(200);
+    expect((await back.json()).loginCode).toBe(noor.loginCode);
+    // The old code works again, the new one doesn't, and it can't be undone twice.
+    expect((await studentLogin.POST(req("/api/students/login/", "POST", { classCode: cls.joinCode, studentCode: noor.loginCode }))).status).toBe(200);
+    expect((await studentLogin.POST(req("/api/students/login/", "POST", { classCode: cls.joinCode, studentCode: renewed.loginCode }))).status).toBe(401);
+    expect((await studentRoutes.PATCH(req(url, "PATCH", { undo: true }, t))).status).toBe(409);
+
+    // Not for another teacher, not for another student's code, and not after the time is up.
+    const other = await teacher("st-undo-other@example.com");
+    await studentRoutes.PATCH(req(url, "PATCH", undefined, t));
+    expect((await studentRoutes.PATCH(req(url, "PATCH", { undo: true }, other))).status).toBe(404);
+    const students_ = await import("@/server/students");
+    await dbm.run("UPDATE students SET prev_code_at = ? WHERE id = ?", [Date.now() - students_.CODE_UNDO_MS - 1000, noor.id]);
+    expect((await studentRoutes.PATCH(req(url, "PATCH", { undo: true }, t))).status).toBe(409);
+    // Old codes are forgotten once their time has passed.
+    await students_.pruneOldCodes();
+    expect((await dbm.query<{ prev_login_code: string | null }>("SELECT prev_login_code FROM students WHERE id = ?", [noor.id]))[0].prev_login_code).toBeNull();
+    // Another student in the class was never affected.
+    expect((await dbm.query<{ login_code: string }>("SELECT login_code FROM students WHERE id = ?", [ravi.id]))[0].login_code).toBe(ravi.loginCode);
+  });
 });

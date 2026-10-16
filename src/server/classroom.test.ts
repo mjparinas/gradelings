@@ -345,4 +345,32 @@ describe("classroom mode", () => {
     const other = await account_("badges-other@example.com");
     expect((await (await classes.GET(req("/api/classes/?badges=1", "GET", undefined, other))).json()).badges).toEqual({});
   });
+
+  it("keeps the day a unit was first assigned when a removal is undone, and ignores a made-up one", async () => {
+    const teacher = await account_("undo-teacher@example.com");
+    const { class: cls } = await (await classes.POST(req("/api/classes/", "POST", { name: "Room 5", grade: "2" }, teacher))).json();
+    const unitKey = "2/math/tens-and-ones";
+    const view = async () => (await (await classes.GET(req(`/api/classes/?id=${cls.id}`, "GET", undefined, teacher))).json()) as { assignedAt: Record<string, number> };
+    const assign = (body: Record<string, unknown>) => assignments.POST(req("/api/classes/assignments/", "POST", { classId: cls.id, unitKey, ...body }, teacher));
+
+    const threeDaysAgo = Date.now() - 3 * 86_400_000;
+    expect((await assign({ since: threeDaysAgo })).status).toBe(200);
+    expect((await view()).assignedAt[unitKey]).toBe(threeDaysAgo);
+
+    // Remove it and put it back as an undo would.
+    expect((await assignments.DELETE(req(`/api/classes/assignments/?classId=${cls.id}&unitKey=${encodeURIComponent(unitKey)}`, "DELETE", undefined, teacher))).status).toBe(200);
+    expect((await view()).assignedAt[unitKey]).toBeUndefined();
+    expect((await assign({ since: threeDaysAgo })).status).toBe(200);
+    expect((await view()).assignedAt[unitKey]).toBe(threeDaysAgo);
+
+    // A date in the future, from long ago or not a number is ignored: the unit counts from now.
+    for (const since of [Date.now() + 86_400_000, Date.now() - 400 * 86_400_000, "yesterday", 1.5]) {
+      await assignments.DELETE(req(`/api/classes/assignments/?classId=${cls.id}&unitKey=${encodeURIComponent(unitKey)}`, "DELETE", undefined, teacher));
+      const before = Date.now();
+      expect((await assign({ since })).status).toBe(200);
+      const at = (await view()).assignedAt[unitKey];
+      expect(at).toBeGreaterThanOrEqual(before);
+      expect(at).toBeLessThanOrEqual(Date.now());
+    }
+  });
 });

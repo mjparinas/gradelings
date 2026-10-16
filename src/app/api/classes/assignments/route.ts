@@ -10,7 +10,7 @@ export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req);
   if (!session) return error(401, "Not signed in");
-  const body = (await req.json().catch(() => null)) as { classId?: unknown; unitKey?: unknown; dueAt?: unknown; goal?: unknown; students?: unknown } | null;
+  const body = (await req.json().catch(() => null)) as { classId?: unknown; unitKey?: unknown; dueAt?: unknown; goal?: unknown; students?: unknown; since?: unknown } | null;
   const cls = typeof body?.classId === "string" ? (await teachingClass(body.classId, session.parentId))?.cls : undefined;
   if (!cls) return error(404, "Class not found");
   const students = await cleanAudience(cls.id, body?.students);
@@ -21,7 +21,10 @@ export async function POST(req: Request) {
   if (Number(have[0].n) >= MAX_ASSIGNMENTS) return error(409, "That’s a lot of assigned units. Remove some first.");
   const dueAt = cleanDueAt(body?.dueAt);
   const goal = cleanGoal(body?.goal);
-  const added = await run("INSERT OR IGNORE INTO class_assignments (class_id, unit_key, created_at, due_at, goal) VALUES (?, ?, ?, ?, ?)", [cls.id, key, Date.now(), dueAt ?? null, goal ?? null]);
+  // `since`: when the unit was first assigned. Undoing a removal passes it back, so the answers already given still count as homework.
+  const now = Date.now();
+  const since = typeof body?.since === "number" && Number.isInteger(body.since) && body.since <= now && body.since > now - 120 * 86_400_000 ? body.since : now;
+  const added = await run("INSERT OR IGNORE INTO class_assignments (class_id, unit_key, created_at, due_at, goal) VALUES (?, ?, ?, ?, ?)", [cls.id, key, since, dueAt ?? null, goal ?? null]);
   if (added) await setAudience(cls.id, key, students);
   return json({ ok: true });
 }

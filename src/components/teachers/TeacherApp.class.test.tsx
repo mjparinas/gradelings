@@ -4,6 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { getFramework } from "@/content/frameworks";
 import { APP_NAME } from "@/lib/brand";
+import { dueChips } from "@/lib/classroom";
 
 const mocks = vi.hoisted(() => ({ call: vi.fn() }));
 
@@ -68,6 +69,7 @@ beforeEach(() => {
   mocks.call.mockReset();
   window.location.hash = "";
   window.scrollTo = vi.fn() as unknown as typeof window.scrollTo;
+  localStorage.clear();
 });
 
 afterEach(() => {
@@ -612,10 +614,11 @@ describe("TeacherApp keyboard and screen-reader support", () => {
     serve(detail, (url, method) => (url.startsWith("/api/classes/students/") && method === "PATCH" ? { loginCode: "KD7Q3M2P" } : undefined));
     const user = await openClass();
     await openTab(user, "Students");
-    const live = screen.getAllByRole("status").find((el) => el.getAttribute("aria-live") === "polite")!;
-    expect(live).toBeEmptyDOMElement();
+    const regions = () => screen.getAllByRole("status").filter((el) => el.getAttribute("aria-live") === "polite");
+    expect(regions().every((el) => el.childElementCount === 0)).toBe(true);
     await user.click(within(screen.getByLabelText("Login code Z X 9 1 P Q").parentElement!).getByRole("button", { name: "New code" }));
-    await waitFor(() => expect(live).toHaveTextContent("Maya has a new code: KD7Q3M2P"));
+    // A new code can be undone, so it is announced where the Undo button is.
+    await waitFor(() => expect(regions().some((el) => el.textContent?.includes("Maya has a new code: KD7Q3M2P"))).toBe(true));
   });
 
   it("says a change was saved when the server answered", async () => {
@@ -824,5 +827,124 @@ describe("TeacherApp invitations", () => {
       await user.click(screen.getByRole("button", { name: "Create class" }));
     });
     expect(await screen.findByRole("alert")).toHaveTextContent("Give the class a name.");
+  });
+});
+
+describe("homework tools", () => {
+  const withExtras = {
+    ...detail,
+    goal: { "3/math/counting": 10 },
+    assignedAt: { "3/math/counting": now - 3 * DAY, "3/math/patterns": now - DAY },
+    audience: { "3/math/counting": ["p1", "p2"] },
+  };
+
+  it("links each assigned unit, and the one being picked, to its public page to look at before assigning", async () => {
+    serve(withExtras);
+    const user = await openClass();
+    await openTab(user, "Homework");
+    const link = screen.getByRole("link", { name: "Preview Counting (opens in a new tab)" });
+    expect(link).toHaveAttribute("href", "/curriculum/ontario/grade-3/math/counting/");
+    expect(link).toHaveAttribute("target", "_blank");
+    expect(link).toHaveAttribute("rel", expect.stringContaining("noopener"));
+    expect(screen.getByRole("link", { name: "Preview Patterns (opens in a new tab)" })).toHaveAttribute("href", "/curriculum/ontario/grade-3/math/patterns/");
+  });
+
+  it("puts a removed unit back with its date, questions, students and the day it was first assigned", async () => {
+    serve(withExtras);
+    const user = await openClass();
+    await openTab(user, "Homework");
+    await user.click(screen.getByRole("button", { name: "Remove Counting" }));
+    expect(mocks.call).toHaveBeenCalledWith("/api/classes/assignments/?classId=class-1&unitKey=3%2Fmath%2Fcounting", "DELETE", undefined);
+    await screen.findByText("Counting was removed from homework.");
+    // Focus goes to Undo so a keyboard user can reach it.
+    const undo = screen.getByRole("button", { name: "Undo" });
+    await waitFor(() => expect(undo).toHaveFocus());
+    await user.click(undo);
+    await waitFor(() =>
+      expect(mocks.call).toHaveBeenCalledWith("/api/classes/assignments/", "POST", {
+        classId: "class-1",
+        unitKey: "3/math/counting",
+        dueAt: detail.due["3/math/counting"],
+        goal: 10,
+        students: ["p1", "p2"],
+        since: withExtras.assignedAt["3/math/counting"],
+      }),
+    );
+    await screen.findByText("Counting is back in homework.");
+    expect(screen.queryByRole("button", { name: "Undo" })).not.toBeInTheDocument();
+  });
+
+  it("lets a new login code be undone", async () => {
+    serve(withExtras, (url, method) => (url.startsWith("/api/classes/students/") && method === "PATCH" ? { loginCode: "KD7Q3M2P" } : undefined));
+    const user = await openClass();
+    await openTab(user, "Students");
+    await user.click(within(screen.getByLabelText("Login code Z X 9 1 P Q").parentElement!).getByRole("button", { name: "New code" }));
+    await user.click(await screen.findByRole("button", { name: "Undo" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/?classId=class-1&studentId=r1", "PATCH", { undo: true }));
+  });
+
+  it("says plainly when it is too late to undo", async () => {
+    mocks.call.mockImplementation((url: string, method = "GET", body?: unknown) => {
+      if (url.startsWith("/api/classes/students/") && method === "PATCH") return (body as { undo?: boolean } | undefined)?.undo ? Promise.reject(new Error("It’s too late to undo that code change. Get a new code instead.")) : Promise.resolve({ loginCode: "KD7Q3M2P" });
+      if (url === "/api/auth/me/") return Promise.resolve({ family: { account: { student: false } } });
+      if (url === "/api/classes/" && method === "GET") return Promise.resolve({ classes: [cls] });
+      if (url === "/api/classes/?id=class-1") return Promise.resolve(withExtras);
+      return Promise.resolve({});
+    });
+    const user = await openClass();
+    await openTab(user, "Students");
+    await user.click(within(screen.getByLabelText("Login code Z X 9 1 P Q").parentElement!).getByRole("button", { name: "New code" }));
+    await user.click(await screen.findByRole("button", { name: "Undo" }));
+    expect(await screen.findByText(/too late to undo/)).toBeInTheDocument();
+  });
+
+  it("assigns several units at once with the same date, questions and students", async () => {
+    serve({ ...detail, assignments: [], due: {}, assignedAt: {} });
+    const user = await openClass();
+    await openTab(user, "Homework");
+    await user.click(screen.getByRole("button", { name: "Pick several units at once" }));
+    const group = screen.getByText(/Math/, { selector: "summary" });
+    await user.click(group);
+    await user.click(screen.getByRole("checkbox", { name: /Counting/ }));
+    await user.click(screen.getByRole("checkbox", { name: /Patterns/ }));
+    await user.click(screen.getByRole("button", { name: "Tomorrow" }));
+    await user.click(screen.getByRole("button", { name: "Assign 2 units" }));
+    const dueAt = new Date(`${dueChips()[0].value}T23:59:00`).getTime();
+    await waitFor(() => {
+      expect(mocks.call).toHaveBeenCalledWith("/api/classes/assignments/", "POST", { classId: "class-1", unitKey: "3/math/counting", dueAt, goal: undefined });
+      expect(mocks.call).toHaveBeenCalledWith("/api/classes/assignments/", "POST", { classId: "class-1", unitKey: "3/math/patterns", dueAt, goal: undefined });
+    });
+    await screen.findByText("2 units assigned.");
+  });
+
+  it("offers due-date shortcuts that can be switched off again", async () => {
+    serve({ ...detail, assignments: [], due: {} });
+    const user = await openClass();
+    await openTab(user, "Homework");
+    const tomorrow = screen.getByRole("button", { name: "Tomorrow" });
+    expect(tomorrow).toHaveAttribute("aria-pressed", "false");
+    await user.click(tomorrow);
+    expect(tomorrow).toHaveAttribute("aria-pressed", "true");
+    await user.click(tomorrow);
+    expect(tomorrow).toHaveAttribute("aria-pressed", "false");
+  });
+
+  it("remembers the number of questions for the next assignment on this device", async () => {
+    serve({ ...detail, assignments: [], due: {}, assignedAt: {} });
+    const user = await openClass();
+    await openTab(user, "Homework");
+    await user.click(screen.getByRole("combobox", { name: "Add a unit" }));
+    await user.click(await screen.findByRole("option", { name: /Counting/ }));
+    await user.click(screen.getByRole("combobox", { name: "Questions (optional)" }));
+    await user.click(await screen.findByRole("option", { name: "10 questions" }));
+    await user.click(screen.getByRole("button", { name: "Assign" }));
+    await waitFor(() => expect(localStorage.getItem("gradelings.teacher.lastQuestions")).toBe("10"));
+    // A later visit starts with it chosen.
+    cleanup();
+    window.location.hash = "";
+    serve({ ...detail, assignments: [], due: {}, assignedAt: {} });
+    const again = await openClass();
+    await openTab(again, "Homework");
+    expect(screen.getByRole("combobox", { name: "Questions (optional)" })).toHaveTextContent("10 questions");
   });
 });

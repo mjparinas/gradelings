@@ -39,6 +39,7 @@ const detail = {
 beforeEach(() => {
   window.location.hash = "";
   window.scrollTo = vi.fn() as unknown as typeof window.scrollTo;
+  localStorage.clear();
   mocks.call.mockReset();
   mocks.call.mockImplementation((url: string, method = "GET") => {
     if (url === "/api/auth/me/") return Promise.resolve({ family: { account: { student: false } } });

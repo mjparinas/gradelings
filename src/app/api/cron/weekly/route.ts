@@ -8,7 +8,7 @@ import { sendAlert, sendDigest } from "@/server/alerts";
 import { runAutomations } from "@/server/automations";
 import { sendConsentFollowUps } from "@/server/consent";
 import { trackJob } from "@/server/monitor";
-import { deleteInactiveClass } from "@/server/students";
+import { deleteInactiveClass, pruneOldCodes } from "@/server/students";
 import { pruneLive } from "@/server/live";
 
 // Runs once a day (see vercel.json). Vercel sends `Authorization: Bearer $CRON_SECRET`.
@@ -89,6 +89,8 @@ async function daily(req: Request): Promise<Response> {
 
   // Live class questions and their answers are kept for a day at most.
   await pruneLive(now);
+  // Login codes replaced in the last few minutes can be undone; older ones are forgotten.
+  await pruneOldCodes(now);
 
   // What each child did during the trial (first name and totals only).
   const trialChildren = async (familyId: string): Promise<TrialChild[]> => {
