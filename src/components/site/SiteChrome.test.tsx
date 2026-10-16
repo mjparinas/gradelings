@@ -72,3 +72,13 @@ describe("SiteFooter", () => {
     expect(footer.querySelector('a[href^="/curriculum/bc"]')).toBeNull();
   });
 });
+
+describe("SiteFooter build line", () => {
+  it("shows the build when given one, and nothing otherwise", () => {
+    const { unmount } = render(<SiteFooter build="Build 3f9a1c2" />);
+    expect(screen.getByText("Build 3f9a1c2")).toBeInTheDocument();
+    unmount();
+    render(<SiteFooter />);
+    expect(screen.queryByText(/^Build /)).toBeNull();
+  });
+});
