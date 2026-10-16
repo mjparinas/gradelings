@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { call, classInsights, homeworkDone, mostMissed, studentQuestions, homeworkOverview, isHomeworkDone, type StudentRow } from "./classroom";
+import { addedMessage, agoText, call, checkNameList, classBadge, classInsights, dueChips, homeworkDone, mostMissed, studentQuestions, homeworkOverview, isHomeworkDone, type StudentRow } from "./classroom";
 
 const DAY = 86_400_000;
 const NOW = 100 * DAY;
@@ -138,5 +138,87 @@ describe("most-missed questions", () => {
     expect(out.u.map((m) => [m.q, m.missed, m.tried])).toEqual([["d", 4, 4], ["a", 3, 4], ["b", 2, 3]]);
     // One student missing a question isn't a pattern.
     expect(mostMissed([stu({ x: true }), stu({ x: false })])).toEqual({});
+  });
+});
+
+describe("checkNameList", () => {
+  it("reads one name per line", () => {
+    expect(checkNameList("Maya\n Sam \n\nAlex P.\r\n")).toEqual({ names: ["Maya", "Sam", "Alex P."], warnings: [] });
+  });
+
+  it("still reads a single line of names separated by commas", () => {
+    expect(checkNameList("Maya, Sam, Alex").names).toEqual(["Maya", "Sam", "Alex"]);
+  });
+
+  it("warns about Last, First lines from a spreadsheet instead of splitting them", () => {
+    const { names, warnings } = checkNameList("Smith, Maya\nOkafor, Sam\nLee, Jo");
+    expect(names).toEqual(["Smith, Maya", "Okafor, Sam", "Lee, Jo"]);
+    expect(warnings).toHaveLength(2);
+    expect(warnings[0]).toContain("“Smith, Maya” has a comma");
+  });
+
+  it("warns when two students would share a name, or match one already in the class, ignoring case", () => {
+    expect(checkNameList("Maya\nmaya\nSam").warnings[0]).toContain("“maya”");
+    expect(checkNameList("Sam\nJo", ["sam"]).warnings[0]).toContain("“Sam”");
+    expect(checkNameList("Maya P.\nMaya R.", ["Maya"]).warnings).toEqual([]);
+  });
+});
+
+describe("addedMessage", () => {
+  it("counts the students added and says why any were left out", () => {
+    expect(addedMessage(1, 0, 40)).toBe("Added 1 student.");
+    expect(addedMessage(28, 0, 40)).toBe("Added 28 students.");
+    expect(addedMessage(2, 1, 40)).toBe("Added 2 students. 1 wasn’t added because a class holds up to 40 students.");
+    expect(addedMessage(2, 3, 40)).toContain("3 weren’t added");
+  });
+});
+
+describe("class list badges", () => {
+  const now = 10 * 86_400_000;
+  const stu = (id: string, lastActive: number | null, accuracy = 0.9): StudentRow => ({ profileId: id, name: id, avatar: "otter", grade: "3", lastActive, units: [{ key: "3/math/a", level: 1, attempts: 10, accuracy, done: 0 }] });
+
+  it("counts students to check in with, units past due and the latest practice", () => {
+    const students = [stu("Ana", now - 3_600_000), stu("Ben", now - 9 * 86_400_000), stu("Cy", null)];
+    const b = classBadge(students, ["3/math/a"], { "3/math/a": now - 1000 }, {}, now);
+    expect(b).toEqual({ checkIn: 2, pastDue: 1, lastPractice: now - 3_600_000 });
+  });
+
+  it("has no last practice and nothing to check when no work is assigned", () => {
+    expect(classBadge([stu("Ana", null)], [], {}, {}, now)).toEqual({ checkIn: 0, pastDue: 0, lastPractice: null });
+  });
+});
+
+describe("agoText", () => {
+  const now = 100 * 86_400_000;
+  it("says how long ago in a few plain words", () => {
+    expect(agoText(now - 10_000, now)).toBe("just now");
+    expect(agoText(now - 60_000, now)).toBe("1 minute ago");
+    expect(agoText(now - 5 * 60_000, now)).toBe("5 minutes ago");
+    expect(agoText(now - 3 * 3_600_000, now)).toBe("3 hours ago");
+    expect(agoText(now - 86_400_000, now)).toBe("1 day ago");
+    expect(agoText(now - 40 * 86_400_000, now)).toBe("1 month ago");
+    expect(agoText(now + 5000, now)).toBe("just now");
+  });
+});
+
+describe("dueChips", () => {
+  const values = (d: Date) => dueChips(d).map((c) => `${c.label} ${c.value}`);
+
+  it("offers tomorrow, the coming Friday and the coming Monday", () => {
+    // Tuesday 13 October 2026
+    expect(values(new Date(2026, 9, 13, 10))).toEqual(["Tomorrow 2026-10-14", "Friday 2026-10-16", "Next Monday 2026-10-19"]);
+  });
+
+  it("doesn't repeat a day: on a Thursday tomorrow is Friday, on a Sunday it is Monday", () => {
+    expect(values(new Date(2026, 9, 15, 10))).toEqual(["Tomorrow 2026-10-16", "Next Monday 2026-10-19"]);
+    expect(values(new Date(2026, 9, 18, 10))).toEqual(["Tomorrow 2026-10-19", "Friday 2026-10-23"]);
+  });
+
+  it("on a Friday offers next Friday and the Monday after", () => {
+    expect(values(new Date(2026, 9, 16, 10))).toEqual(["Tomorrow 2026-10-17", "Friday 2026-10-23", "Next Monday 2026-10-19"]);
+  });
+
+  it("crosses the end of a month and year", () => {
+    expect(values(new Date(2026, 11, 31, 10))[0]).toBe("Tomorrow 2027-01-01");
   });
 });

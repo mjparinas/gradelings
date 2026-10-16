@@ -84,6 +84,42 @@ describe("FirstRun from a public page's link", () => {
   });
 });
 
+describe("a login card's QR code", () => {
+  it("opens the class sign-in with the code filled in, then takes it out of the address", async () => {
+    window.location.hash = "#/class?s=KM7PQR3XTA";
+    h.signInStudent.mockResolvedValue(undefined);
+    render(<FirstRun />);
+    expect(screen.getByRole("heading", { name: "Sign in to your class" })).toBeInTheDocument();
+    expect(screen.queryByLabelText("Class code")).toBeNull();
+    expect(screen.getByLabelText("My code")).toHaveValue("KM7PQ-R3XTA");
+    expect(window.location.hash).toBe("");
+    // Nobody is signed in until the student taps.
+    expect(h.signInStudent).not.toHaveBeenCalled();
+    await userEvent.click(screen.getByRole("button", { name: /Let's go!/ }));
+    expect(h.signInStudent).toHaveBeenCalledWith("KM7PQR3XTA", "");
+  });
+
+  it("fills in the class code too for a card printed before one-code sign-in", async () => {
+    window.location.hash = "#/class?c=AB12CD&s=ZX91PQ2M";
+    h.signInStudent.mockResolvedValue(undefined);
+    render(<FirstRun />);
+    expect(screen.getByRole("heading", { name: "Sign in to your class" })).toBeInTheDocument();
+    expect(screen.getByLabelText("Class code")).toHaveValue("AB12CD");
+    expect(screen.getByLabelText("My code")).toHaveValue("ZX91PQ2M");
+    expect(window.location.hash).toBe("");
+    // Nobody is signed in until the student taps.
+    expect(h.signInStudent).not.toHaveBeenCalled();
+    await userEvent.click(screen.getByRole("button", { name: /Let's go!/ }));
+    expect(h.signInStudent).toHaveBeenCalledWith("ZX91PQ2M", "AB12CD");
+  });
+
+  it("ignores a link whose codes aren't the right shape", () => {
+    window.location.hash = "#/class?c=nope&s=nope";
+    render(<FirstRun />);
+    expect(screen.getByText(/I'm Ollie the Otter/)).toBeInTheDocument();
+  });
+});
+
 describe("ClassSignIn", () => {
   it("takes one code, shown in two groups of five, and signs in once it is complete", async () => {
     h.signInStudent.mockResolvedValue(undefined);

@@ -5,7 +5,7 @@ import { ageBandFor } from "@/content/subjects";
 import { defaultChildSettings, type Profile } from "@/lib/model";
 import { STARTER } from "@/lib/shop";
 import { newId } from "./auth";
-import { batch, query } from "./db";
+import { batch, query, run } from "./db";
 import { MAX_STUDENTS, type ClassRow } from "./classroom";
 
 // Students a teacher adds to a class. The school is the one that knows who they are: we store a
@@ -187,16 +187,42 @@ export async function removeStudentsOfOwner(ownerParentIds: string[]): Promise<v
 }
 
 /** A student's login code, to print again, or a new one when it was lost or shared. */
-export async function resetStudentCode(classId: string, studentId: string): Promise<string | null> {
-  const rows = await query<{ id: string }>("SELECT id FROM students WHERE id = ? AND class_id = ?", [studentId, classId]);
+export async function resetStudentCode(classId: string, studentId: string, now = Date.now()): Promise<string | null> {
+  const rows = await query<{ id: string; login_code: string }>("SELECT id, login_code FROM students WHERE id = ? AND class_id = ?", [studentId, classId]);
   if (!rows[0]) return null;
   const [code] = await freshCodes(1);
   await batch([
-    { sql: "UPDATE students SET login_code = ? WHERE id = ?", args: [code, studentId] },
+    // The old code is kept for a few minutes so the teacher can undo (see restoreStudentCode).
+    { sql: "UPDATE students SET login_code = ?, prev_login_code = ?, prev_code_at = ? WHERE id = ?", args: [code, rows[0].login_code, now, studentId] },
     // Signing in again is needed on every device.
     { sql: "DELETE FROM sessions WHERE parent_id = (SELECT parent_id FROM students WHERE id = ?)", args: [studentId] },
   ]);
   return code;
+}
+
+/** How long after a new login code the teacher can still undo it. */
+export const CODE_UNDO_MS = 10 * 60_000;
+
+/**
+ * Undoes a new login code: the student's previous code works again and the new one stops. Only the code they had just
+ * before, and only for a few minutes. Null when there is nothing to restore (too late, or the code was taken since).
+ */
+export async function restoreStudentCode(classId: string, studentId: string, now = Date.now()): Promise<string | null> {
+  const row = (await query<{ prev_login_code: string | null; prev_code_at: number | null }>("SELECT prev_login_code, prev_code_at FROM students WHERE id = ? AND class_id = ?", [studentId, classId]))[0];
+  const prev = row?.prev_login_code;
+  if (!prev || row.prev_code_at == null || now - Number(row.prev_code_at) > CODE_UNDO_MS) return null;
+  const taken = await query<{ id: string }>("SELECT id FROM students WHERE class_id = ? AND login_code = ? AND id != ?", [classId, prev, studentId]);
+  if (taken[0]) return null;
+  await batch([
+    { sql: "UPDATE students SET login_code = ?, prev_login_code = NULL, prev_code_at = NULL WHERE id = ?", args: [prev, studentId] },
+    { sql: "DELETE FROM sessions WHERE parent_id = (SELECT parent_id FROM students WHERE id = ?)", args: [studentId] },
+  ]);
+  return prev;
+}
+
+/** Forgets previous login codes once their undo time has passed, so old credentials aren't kept. */
+export async function pruneOldCodes(now = Date.now()): Promise<void> {
+  await run("UPDATE students SET prev_login_code = NULL, prev_code_at = NULL WHERE prev_code_at IS NOT NULL AND prev_code_at < ?", [now - CODE_UNDO_MS]);
 }
 
 /**
@@ -225,4 +251,24 @@ export interface RosterEntry {
 export async function classRoster(classId: string): Promise<RosterEntry[]> {
   const rows = await query<{ id: string; profile_id: string; login_code: string }>("SELECT id, profile_id, login_code FROM students WHERE class_id = ? ORDER BY created_at, id", [classId]);
   return rows.map((r) => ({ id: r.id, profileId: r.profile_id, loginCode: r.login_code }));
+}
+
+/**
+ * Fixes a student's name or, in a split class, moves them to the class's other grade. Their codes and practice stay.
+ * Returns false when the student isn't in this class.
+ */
+export async function updateStudent(classId: string, studentId: string, change: { name?: string; grade?: Profile["grade"] }, now = Date.now()): Promise<boolean> {
+  const rows = await query<{ profile_id: string; family_id: string; data: string }>(
+    "SELECT s.profile_id, s.family_id, p.data FROM students s JOIN profiles p ON p.id = s.profile_id AND p.family_id = s.family_id WHERE s.id = ? AND s.class_id = ?",
+    [studentId, classId],
+  );
+  const row = rows[0];
+  if (!row) return false;
+  const profile = JSON.parse(row.data) as Profile;
+  const next: Profile = { ...profile, name: change.name ?? profile.name, grade: change.grade ?? profile.grade, updatedAt: now };
+  await batch([
+    { sql: "UPDATE profiles SET data = ?, updated_at = ? WHERE id = ? AND family_id = ?", args: [JSON.stringify(next), now, row.profile_id, row.family_id] },
+    { sql: "UPDATE class_members SET grade = ? WHERE class_id = ? AND profile_id = ?", args: [next.grade, classId, row.profile_id] },
+  ]);
+  return true;
 }

@@ -266,3 +266,95 @@ export function homeworkOverview(students: StudentRow[], assignments: string[], 
     return { key, assigned: mine.length, done: mine.length - behind.length, behind: behind.map((s) => s.name), overdue: Boolean(due[key] && due[key] < now && behind.length > 0) };
   });
 }
+
+// ---------- Typing in a class list ----------
+
+export interface NameCheck {
+  /** The names to add, in order. */
+  names: string[];
+  /** Plain-language things worth a second look before adding. Adding is still allowed. */
+  warnings: string[];
+}
+
+/**
+ * Reads the names a teacher typed or pasted: one per line. A single line with commas ("Maya, Sam, Alex") is a list of
+ * names; but when there are several lines, a comma inside one is most likely "Last, First" from a spreadsheet, which
+ * would make a student called "Smith, Maya", so it gets a warning. Two students with the same name, or the same as one
+ * already in the class, get one too, because their login cards would look alike.
+ */
+export function checkNameList(text: string, existing: readonly string[] = []): NameCheck {
+  const lines = text.split(/\r?\n/).map((n) => n.trim()).filter(Boolean);
+  const names = lines.length === 1 ? lines[0].split(",").map((n) => n.trim()).filter(Boolean) : lines;
+  const warnings: string[] = [];
+  if (lines.length > 1) {
+    for (const line of lines.filter((l) => l.includes(",")).slice(0, 2)) {
+      warnings.push(`“${line}” has a comma, so it would be added as one student. Use first names only, one per line.`);
+    }
+  }
+  const seen = new Map<string, number>();
+  for (const n of existing) seen.set(n.toLowerCase(), 1);
+  const repeated = new Set<string>();
+  for (const n of names) {
+    const key = n.toLowerCase();
+    if (seen.has(key)) repeated.add(n);
+    seen.set(key, (seen.get(key) ?? 0) + 1);
+  }
+  if (repeated.size) {
+    const list = [...repeated].slice(0, 3).map((n) => `“${n}”`).join(", ");
+    warnings.push(`More than one student would be called ${list}. Add an initial, like “Maya P.”, so their cards are easy to tell apart.`);
+  }
+  return { names, warnings };
+}
+
+/** What to say after adding students: how many were added and, if the class filled up, how many were left out. */
+export function addedMessage(added: number, skipped: number, limit: number): string {
+  const base = `Added ${added} ${added === 1 ? "student" : "students"}.`;
+  return skipped > 0 ? `${base} ${skipped} ${skipped === 1 ? "wasn’t" : "weren’t"} added because a class holds up to ${limit} students.` : base;
+}
+
+// ---------- Class list badges ----------
+
+/** What a teacher would want to know about a class before opening it. Practice only, never a mark. */
+export interface ClassBadge {
+  /** Students worth a check-in (finding a unit tricky, or no practice this week). */
+  checkIn: number;
+  /** Assigned units past their due date with students still to finish. */
+  pastDue: number;
+  /** When any student last practised, or null for no practice yet. */
+  lastPractice: number | null;
+}
+
+export function classBadge(students: StudentRow[], assignments: string[], due: Record<string, number>, goal: Record<string, number>, now = Date.now()): ClassBadge {
+  return {
+    checkIn: classInsights(students, assignments, (k) => k, now).checkIn.length,
+    pastDue: homeworkOverview(students, assignments, due, goal, now).filter((o) => o.overdue).length,
+    lastPractice: students.reduce<number | null>((t, s) => (s.lastActive !== null && (t === null || s.lastActive > t) ? s.lastActive : t), null),
+  };
+}
+
+/** "just now", "5 minutes ago", "2 hours ago", "3 days ago": how long ago something happened, in a few words. */
+export function agoText(then: number, now = Date.now()): string {
+  const s = Math.max(0, Math.round((now - then) / 1000));
+  if (s < 45) return "just now";
+  const unit = (n: number, word: string) => `${n} ${word}${n === 1 ? "" : "s"} ago`;
+  if (s < 3600) return unit(Math.max(1, Math.round(s / 60)), "minute");
+  if (s < 86_400) return unit(Math.round(s / 3600), "hour");
+  if (s < 30 * 86_400) return unit(Math.round(s / 86_400), "day");
+  return unit(Math.round(s / (30 * 86_400)), "month");
+}
+
+// ---------- Due-date shortcuts ----------
+
+const localDate = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+
+/** Quick picks for a due date: tomorrow, the coming Friday and the coming Monday, as date-input values (local time). Picks that land on the same day are shown once. */
+export function dueChips(now: Date = new Date()): { label: string; value: string }[] {
+  const ahead = (days: number) => localDate(new Date(now.getFullYear(), now.getMonth(), now.getDate() + days));
+  const until = (weekday: number) => ((weekday - now.getDay() + 7) % 7) || 7;
+  const chips = [
+    { label: "Tomorrow", value: ahead(1) },
+    { label: "Friday", value: ahead(until(5)) },
+    { label: "Next Monday", value: ahead(until(1)) },
+  ];
+  return chips.filter((c, i) => chips.findIndex((x) => x.value === c.value) === i);
+}

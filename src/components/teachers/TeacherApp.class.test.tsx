@@ -4,6 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { getFramework } from "@/content/frameworks";
 import { APP_NAME } from "@/lib/brand";
+import { dueChips } from "@/lib/classroom";
 
 const mocks = vi.hoisted(() => ({ call: vi.fn() }));
 
@@ -59,7 +60,7 @@ async function openTab(user: ReturnType<typeof userEvent.setup>, name: string) {
 async function openClass() {
   const user = userEvent.setup();
   render(<TeacherApp />);
-  await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+  await user.click(await screen.findByRole("button", { name: /^Room 3/ }));
   await screen.findByRole("heading", { name: "Room 3" });
   return user;
 }
@@ -68,6 +69,7 @@ beforeEach(() => {
   mocks.call.mockReset();
   window.location.hash = "";
   window.scrollTo = vi.fn() as unknown as typeof window.scrollTo;
+  localStorage.clear();
 });
 
 afterEach(() => {
@@ -143,7 +145,7 @@ describe("TeacherApp class page", () => {
     const section = screen.getByRole("region", { name: "Live questions" });
     // The first homework unit is picked to start.
     await user.click(within(section).getByRole("button", { name: "Ask a live question" }));
-    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/live/", "POST", { classId: "class-1", unitKey: "3/math/counting" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/live/", "POST", { classId: "class-1", unitKey: "3/math/counting", readAloud: true }));
     expect(await within(section).findByText("How many?")).toBeInTheDocument();
     expect(section).toHaveTextContent("1 of 3 answered");
     expect(section).toHaveTextContent("Answered: Maya");
@@ -323,6 +325,8 @@ describe("TeacherApp class page", () => {
         expect.stringMatching(/^Maya.*Class code: AB12CD.*My code: ZX91PQ$/),
         expect.stringMatching(/^Sam.*Class code: AB12CD.*My code: MN34RT$/),
       ]);
+      // Each card also has a QR code that opens the sign-in with the codes filled in.
+      expect([...document.querySelectorAll(".print\\:grid svg")].map((q) => q.getAttribute("aria-label"))).toEqual(["Sign-in code for Maya", "Sign-in code for Sam"]);
     });
     await user.click(screen.getByRole("button", { name: "Print login cards" }));
     await waitFor(() => expect(print).toHaveBeenCalledOnce());
@@ -484,7 +488,7 @@ describe("TeacherApp class page", () => {
     expect(within(within(table).getByRole("rowheader", { name: /^Maya/ }).parentElement!).getAllByText("Past due")).toHaveLength(1);
     expect(within(within(table).getByRole("rowheader", { name: /^Sam/ }).parentElement!).queryByText("Past due")).not.toBeInTheDocument();
     await openTab(user, "Homework");
-    expect(screen.getByRole("status")).toHaveTextContent("1 unit is past due with students still to finish.");
+    expect(screen.getByText("1 unit is past due with students still to finish.")).toBeInTheDocument();
     expect(screen.getByText("1 of 3 done · past due")).toBeInTheDocument();
     expect(screen.getByText(/Still to finish: Maya, Alex/)).toBeInTheDocument();
     // Patterns has no number of questions: done at Proficient (Maya and Alex), not yet due.
@@ -533,7 +537,7 @@ describe("TeacherApp class page", () => {
     serve(detail, (url) => (url === "/api/classes/?id=class-1" ? Promise.reject(new Error("This class was closed.")) : undefined));
     const user = userEvent.setup();
     render(<TeacherApp />);
-    await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+    await user.click(await screen.findByRole("button", { name: /^Room 3/ }));
     expect(await screen.findByText("This class was closed.")).toBeInTheDocument();
   });
 
@@ -607,9 +611,9 @@ describe("TeacherApp class page", () => {
     const user = await openClass();
     await openTab(user, "Students");
     await user.click(screen.getByRole("checkbox", { name: "Select all" }));
-    expect(screen.getByRole("status", { name: "" })).toHaveTextContent("2 selected");
+    expect(screen.getByText("2 selected")).toBeInTheDocument();
     await user.click(screen.getByRole("checkbox", { name: "Select Maya" }));
-    expect(screen.getByRole("status", { name: "" })).toHaveTextContent("1 selected");
+    expect(screen.getByText("1 selected")).toBeInTheDocument();
     await user.click(screen.getByRole("checkbox", { name: "Select Maya" }));
     const loads = () => mocks.call.mock.calls.filter(([u]) => u === "/api/classes/?id=class-1").length;
     const before = loads();
@@ -691,6 +695,190 @@ describe("TeacherApp class page", () => {
   });
 });
 
+describe("TeacherApp keyboard and screen-reader support", () => {
+  it("announces what a change did, in a status region that stays on the page", async () => {
+    serve(detail, (url, method) => (url.startsWith("/api/classes/students/") && method === "PATCH" ? { loginCode: "KD7Q3M2P" } : undefined));
+    const user = await openClass();
+    await openTab(user, "Students");
+    const regions = () => screen.getAllByRole("status").filter((el) => el.getAttribute("aria-live") === "polite");
+    expect(regions().every((el) => el.childElementCount === 0)).toBe(true);
+    await user.click(within(screen.getByLabelText("Login code Z X 9 1 P Q").parentElement!).getByRole("button", { name: "New code" }));
+    // A new code can be undone, so it is announced where the Undo button is.
+    await waitFor(() => expect(regions().some((el) => el.textContent?.includes("Maya has a new code: KD7Q3M2P"))).toBe(true));
+  });
+
+  it("says a change was saved when the server answered", async () => {
+    serve(detail);
+    const user = await openClass();
+    await openTab(user, "Homework");
+    await user.click(screen.getByRole("button", { name: "Due date for Counting" }));
+    await user.click(within(await screen.findByRole("dialog", { name: "Due date for Counting" })).getByRole("button", { name: "Clear date" }));
+    await waitFor(() => expect(screen.getByText("Due date for Counting cleared.")).toBeInTheDocument());
+  });
+
+  it("names the class and tab in the page title and moves focus to the heading on a new tab", async () => {
+    serve(detail);
+    const user = await openClass();
+    await waitFor(() => expect(document.title).toBe("Room 3 · Progress · For teachers · Gradelings"));
+    await openTab(user, "Homework");
+    expect(document.title).toBe("Room 3 · Homework · For teachers · Gradelings");
+    await waitFor(() => expect(screen.getByRole("heading", { level: 1, name: "Room 3" })).toHaveFocus());
+  });
+
+  it("titles the class list", async () => {
+    serve(detail);
+    render(<TeacherApp />);
+    await screen.findByRole("button", { name: /^Room 3/ });
+    expect(document.title).toBe("Your classes · For teachers · Gradelings");
+  });
+
+  it("closes the remove dialog with Escape and gives focus back to the button that opened it", async () => {
+    serve(detail);
+    const user = await openClass();
+    await openTab(user, "Students");
+    const remove = within(screen.getByLabelText("Login code M N 3 4 R T").parentElement!).getByRole("button", { name: "Remove" });
+    await user.click(remove);
+    const dialog = screen.getByRole("dialog", { name: "Remove Sam?" });
+    expect(within(dialog).getByRole("button", { name: "Yes, remove" })).toHaveFocus();
+    await user.keyboard("{Escape}");
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    expect(remove).toHaveFocus();
+  });
+
+  it("keeps Tab inside the remove dialog", async () => {
+    serve(detail);
+    const user = await openClass();
+    await openTab(user, "Students");
+    await user.click(within(screen.getByLabelText("Login code M N 3 4 R T").parentElement!).getByRole("button", { name: "Remove" }));
+    const dialog = screen.getByRole("dialog", { name: "Remove Sam?" });
+    await user.tab();
+    expect(within(dialog).getByRole("button", { name: "Cancel" })).toHaveFocus();
+    await user.tab();
+    expect(within(dialog).getByRole("button", { name: "Yes, remove" })).toHaveFocus();
+    await user.tab({ shift: true });
+    expect(within(dialog).getByRole("button", { name: "Cancel" })).toHaveFocus();
+  });
+
+  it("makes the small buttons at least 44 px tall", async () => {
+    serve(detail);
+    const user = await openClass();
+    await openTab(user, "Students");
+    const row = screen.getByLabelText("Login code M N 3 4 R T").parentElement!;
+    for (const name of ["New code", "Remove"]) expect(within(row).getByRole("button", { name })).toHaveClass("min-h-11");
+    await openTab(user, "Homework");
+    expect(screen.getByRole("button", { name: "Remove Counting" })).toHaveClass("min-h-11", "min-w-11");
+  });
+});
+
+describe("TeacherApp live questions: read-aloud, projector view and a lost connection", () => {
+  const question = { prompt: "How many?", hint: "Count them.", choices: [{ id: "a", label: "3" }, { id: "b", label: "4" }], answer: "b" };
+  const openState = (extra: object = {}) => ({ id: "q1", unitKey: "3/math/counting", question: { ...question, ...extra }, revealed: false, createdAt: now, answers: [{ profileId: "p1", choice: "a", correct: false }] });
+
+  it("lets the teacher turn read-aloud off before asking, and sends that choice", async () => {
+    serve(detail, (url) => (url.startsWith("/api/classes/live/") ? { live: null } : undefined));
+    const user = await openClass();
+    await openTab(user, "Live");
+    const box = screen.getByRole("checkbox", { name: "Let students hear the question read aloud" });
+    expect(box).toBeChecked();
+    await user.click(box);
+    await user.click(screen.getByRole("button", { name: "Ask a live question" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/live/", "POST", { classId: "class-1", unitKey: "3/math/counting", readAloud: false }));
+  });
+
+  it("changes read-aloud for the question that is open", async () => {
+    serve(detail, (url, method) => (url.startsWith("/api/classes/live/") ? { live: method === "PATCH" ? openState({ readAloud: false }) : openState() } : undefined));
+    const user = await openClass();
+    await openTab(user, "Live");
+    const box = await screen.findByRole("checkbox", { name: "Let students hear the question read aloud" });
+    await waitFor(() => expect(box).toBeChecked());
+    await user.click(box);
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/live/", "PATCH", { classId: "class-1", action: "read-aloud", on: false }));
+    await waitFor(() => expect(box).not.toBeChecked());
+  });
+
+  it("shows read-aloud as off for a question the teacher already muted", async () => {
+    serve(detail, (url) => (url.startsWith("/api/classes/live/") ? { live: openState({ readAloud: false }) } : undefined));
+    const user = await openClass();
+    await openTab(user, "Live");
+    await waitFor(() => expect(screen.getByRole("checkbox", { name: "Let students hear the question read aloud" })).not.toBeChecked());
+  });
+
+  it("projector view hides student names and enlarges the question", async () => {
+    serve(detail, (url) => (url.startsWith("/api/classes/live/") ? { live: openState() } : undefined));
+    const user = await openClass();
+    await openTab(user, "Live");
+    const section = screen.getByRole("region", { name: "Live questions" });
+    expect(await within(section).findByText(/Waiting for: Sam, Alex/)).toBeInTheDocument();
+    expect(within(section).getByText("How many?")).toHaveClass("text-2xl");
+    await user.click(within(section).getByRole("checkbox", { name: "Projector view (bigger text, no names)" }));
+    expect(within(section).queryByText(/Waiting for/)).not.toBeInTheDocument();
+    expect(within(section).queryByText(/Answered: Maya/)).not.toBeInTheDocument();
+    expect(within(section).getByText("How many?")).toHaveClass("text-4xl");
+    expect(section).toHaveTextContent("1 of 3 answered");
+  });
+
+  it("says so when the tally can't be refreshed, and stops saying so once it can", async () => {
+    let fail = false;
+    serve(detail, (url, method) => {
+      if (!url.startsWith("/api/classes/live/") || method !== "GET") return undefined;
+      return fail ? Promise.reject(new Error("You’re offline.")) : { live: openState() };
+    });
+    const user = await openClass();
+    await openTab(user, "Live");
+    const section = screen.getByRole("region", { name: "Live questions" });
+    await within(section).findByText("How many?");
+    expect(within(section).queryByText(/Lost the connection/)).not.toBeInTheDocument();
+    fail = true;
+    await new Promise((r) => setTimeout(r, 2700));
+    expect(await within(section).findByText(/Lost the connection/)).toBeInTheDocument();
+    fail = false;
+    await new Promise((r) => setTimeout(r, 2700));
+    await waitFor(() => expect(within(section).queryByText(/Lost the connection/)).not.toBeInTheDocument());
+  }, 15000);
+});
+
+describe("TeacherApp students", () => {
+  it("warns about Last, First lines and repeated names before adding, without blocking", async () => {
+    serve(detail);
+    const user = await openClass();
+    await openTab(user, "Students");
+    await user.type(screen.getByLabelText("First names, one per line"), "Smith, Lee{Enter}Maya");
+    expect(screen.getByText(/“Smith, Lee” has a comma/)).toBeInTheDocument();
+    expect(screen.getByText(/More than one student would be called “Maya”/)).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Add students" })).toBeEnabled();
+    await user.click(screen.getByRole("button", { name: "Add students" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/", "POST", { classId: "class-1", names: ["Smith, Lee", "Maya"] }));
+  });
+
+  it("says how many students were added and how many didn't fit", async () => {
+    serve(detail, (url, method) => (url === "/api/classes/students/" && method === "POST" ? { students: [{}, {}], skipped: 3, limit: 40 } : undefined));
+    const user = await openClass();
+    await openTab(user, "Students");
+    await user.type(screen.getByLabelText("First names, one per line"), "A{Enter}B{Enter}C{Enter}D{Enter}E");
+    await user.click(screen.getByRole("button", { name: "Add students" }));
+    expect(await screen.findByText("Added 2 students. 3 weren’t added because a class holds up to 40 students.")).toBeInTheDocument();
+  });
+
+  it("edits a student's name and, in a split class, their grade", async () => {
+    const split = { ...cls, grade2: "4" };
+    serve({ ...detail, class: split }, (url, method) => (url === "/api/classes/" && method === "GET" ? { classes: [split] } : undefined));
+    const user = await openClass();
+    await openTab(user, "Students");
+    await user.click(screen.getByRole("button", { name: "Edit Sam" }));
+    const dialog = screen.getByRole("dialog", { name: "Edit Sam" });
+    const field = within(dialog).getByLabelText("First name or nickname");
+    expect(field).toHaveFocus();
+    await user.clear(field);
+    await user.type(field, "Samuel");
+    await user.click(within(dialog).getByRole("combobox", { name: "Grade" }));
+    await user.click(screen.getByRole("option", { name: "Grade 4" }));
+    await user.click(within(dialog).getByRole("button", { name: "Save" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/?classId=class-1&studentId=r2", "PATCH", { name: "Samuel", grade: "4" }));
+    await waitFor(() => expect(screen.queryByRole("dialog")).not.toBeInTheDocument());
+    expect(screen.getByText("Samuel saved.")).toBeInTheDocument();
+  });
+});
+
 describe("TeacherApp invitations", () => {
   it("declines an invitation to co-teach", async () => {
     serve(detail, (url, method) => {
@@ -725,5 +913,124 @@ describe("TeacherApp invitations", () => {
       await user.click(screen.getByRole("button", { name: "Create class" }));
     });
     expect(await screen.findByRole("alert")).toHaveTextContent("Give the class a name.");
+  });
+});
+
+describe("homework tools", () => {
+  const withExtras = {
+    ...detail,
+    goal: { "3/math/counting": 10 },
+    assignedAt: { "3/math/counting": now - 3 * DAY, "3/math/patterns": now - DAY },
+    audience: { "3/math/counting": ["p1", "p2"] },
+  };
+
+  it("links each assigned unit, and the one being picked, to its public page to look at before assigning", async () => {
+    serve(withExtras);
+    const user = await openClass();
+    await openTab(user, "Homework");
+    const link = screen.getByRole("link", { name: "Preview Counting (opens in a new tab)" });
+    expect(link).toHaveAttribute("href", "/curriculum/ontario/grade-3/math/counting/");
+    expect(link).toHaveAttribute("target", "_blank");
+    expect(link).toHaveAttribute("rel", expect.stringContaining("noopener"));
+    expect(screen.getByRole("link", { name: "Preview Patterns (opens in a new tab)" })).toHaveAttribute("href", "/curriculum/ontario/grade-3/math/patterns/");
+  });
+
+  it("puts a removed unit back with its date, questions, students and the day it was first assigned", async () => {
+    serve(withExtras);
+    const user = await openClass();
+    await openTab(user, "Homework");
+    await user.click(screen.getByRole("button", { name: "Remove Counting" }));
+    expect(mocks.call).toHaveBeenCalledWith("/api/classes/assignments/?classId=class-1&unitKey=3%2Fmath%2Fcounting", "DELETE", undefined);
+    await screen.findByText("Counting was removed from homework.");
+    // Focus goes to Undo so a keyboard user can reach it.
+    const undo = screen.getByRole("button", { name: "Undo" });
+    await waitFor(() => expect(undo).toHaveFocus());
+    await user.click(undo);
+    await waitFor(() =>
+      expect(mocks.call).toHaveBeenCalledWith("/api/classes/assignments/", "POST", {
+        classId: "class-1",
+        unitKey: "3/math/counting",
+        dueAt: detail.due["3/math/counting"],
+        goal: 10,
+        students: ["p1", "p2"],
+        since: withExtras.assignedAt["3/math/counting"],
+      }),
+    );
+    await screen.findByText("Counting is back in homework.");
+    expect(screen.queryByRole("button", { name: "Undo" })).not.toBeInTheDocument();
+  });
+
+  it("lets a new login code be undone", async () => {
+    serve(withExtras, (url, method) => (url.startsWith("/api/classes/students/") && method === "PATCH" ? { loginCode: "KD7Q3M2P" } : undefined));
+    const user = await openClass();
+    await openTab(user, "Students");
+    await user.click(within(screen.getByLabelText("Login code Z X 9 1 P Q").parentElement!).getByRole("button", { name: "New code" }));
+    await user.click(await screen.findByRole("button", { name: "Undo" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/?classId=class-1&studentId=r1", "PATCH", { undo: true }));
+  });
+
+  it("says plainly when it is too late to undo", async () => {
+    mocks.call.mockImplementation((url: string, method = "GET", body?: unknown) => {
+      if (url.startsWith("/api/classes/students/") && method === "PATCH") return (body as { undo?: boolean } | undefined)?.undo ? Promise.reject(new Error("It’s too late to undo that code change. Get a new code instead.")) : Promise.resolve({ loginCode: "KD7Q3M2P" });
+      if (url === "/api/auth/me/") return Promise.resolve({ family: { account: { student: false } } });
+      if (url === "/api/classes/" && method === "GET") return Promise.resolve({ classes: [cls] });
+      if (url === "/api/classes/?id=class-1") return Promise.resolve(withExtras);
+      return Promise.resolve({});
+    });
+    const user = await openClass();
+    await openTab(user, "Students");
+    await user.click(within(screen.getByLabelText("Login code Z X 9 1 P Q").parentElement!).getByRole("button", { name: "New code" }));
+    await user.click(await screen.findByRole("button", { name: "Undo" }));
+    expect(await screen.findByText(/too late to undo/)).toBeInTheDocument();
+  });
+
+  it("assigns several units at once with the same date, questions and students", async () => {
+    serve({ ...detail, assignments: [], due: {}, assignedAt: {} });
+    const user = await openClass();
+    await openTab(user, "Homework");
+    await user.click(screen.getByRole("button", { name: "Pick several units at once" }));
+    const group = screen.getByText(/Math/, { selector: "summary" });
+    await user.click(group);
+    await user.click(screen.getByRole("checkbox", { name: /Counting/ }));
+    await user.click(screen.getByRole("checkbox", { name: /Patterns/ }));
+    await user.click(screen.getByRole("button", { name: "Tomorrow" }));
+    await user.click(screen.getByRole("button", { name: "Assign 2 units" }));
+    const dueAt = new Date(`${dueChips()[0].value}T23:59:00`).getTime();
+    await waitFor(() => {
+      expect(mocks.call).toHaveBeenCalledWith("/api/classes/assignments/", "POST", { classId: "class-1", unitKey: "3/math/counting", dueAt, goal: undefined });
+      expect(mocks.call).toHaveBeenCalledWith("/api/classes/assignments/", "POST", { classId: "class-1", unitKey: "3/math/patterns", dueAt, goal: undefined });
+    });
+    await screen.findByText("2 units assigned.");
+  });
+
+  it("offers due-date shortcuts that can be switched off again", async () => {
+    serve({ ...detail, assignments: [], due: {} });
+    const user = await openClass();
+    await openTab(user, "Homework");
+    const tomorrow = screen.getByRole("button", { name: "Tomorrow" });
+    expect(tomorrow).toHaveAttribute("aria-pressed", "false");
+    await user.click(tomorrow);
+    expect(tomorrow).toHaveAttribute("aria-pressed", "true");
+    await user.click(tomorrow);
+    expect(tomorrow).toHaveAttribute("aria-pressed", "false");
+  });
+
+  it("remembers the number of questions for the next assignment on this device", async () => {
+    serve({ ...detail, assignments: [], due: {}, assignedAt: {} });
+    const user = await openClass();
+    await openTab(user, "Homework");
+    await user.click(screen.getByRole("combobox", { name: "Add a unit" }));
+    await user.click(await screen.findByRole("option", { name: /Counting/ }));
+    await user.click(screen.getByRole("combobox", { name: "Questions (optional)" }));
+    await user.click(await screen.findByRole("option", { name: "10 questions" }));
+    await user.click(screen.getByRole("button", { name: "Assign" }));
+    await waitFor(() => expect(localStorage.getItem("gradelings.teacher.lastQuestions")).toBe("10"));
+    // A later visit starts with it chosen.
+    cleanup();
+    window.location.hash = "";
+    serve({ ...detail, assignments: [], due: {}, assignedAt: {} });
+    const again = await openClass();
+    await openTab(again, "Homework");
+    expect(screen.getByRole("combobox", { name: "Questions (optional)" })).toHaveTextContent("10 questions");
   });
 });

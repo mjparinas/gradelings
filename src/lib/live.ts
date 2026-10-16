@@ -16,6 +16,8 @@ export interface LiveQuestionData {
   hint: string;
   choices: Choice[];
   answer: string;
+  /** The teacher lets students hear the question read aloud. Questions asked before this existed leave it out, which means yes. */
+  readAloud?: boolean;
 }
 
 /** What a child's device gets from `/api/live/`. */

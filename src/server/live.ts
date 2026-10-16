@@ -111,13 +111,14 @@ export async function recentLive(classId: string, now = Date.now()): Promise<Liv
 }
 
 /** Ends whatever is open and asks a new question. Returns null when the unit has no tap-to-answer questions. */
-export async function startLive(cls: ClassRow, unitKey: string, teacherId: string, now = Date.now()): Promise<LiveRow | null> {
+export async function startLive(cls: ClassRow, unitKey: string, teacherId: string, now = Date.now(), options: { readAloud?: boolean } = {}): Promise<LiveRow | null> {
   const last = (await query<{ n: number }>("SELECT n FROM live_questions WHERE class_id = ? AND unit_key = ? ORDER BY created_at DESC LIMIT 1", [cls.id, unitKey]))[0];
   const n = last ? Number(last.n) + 1 : 0;
   // Asking the next question from the open one's unit asks the question the teacher was shown.
   const open = await openLive(cls.id, now);
-  const data = open && open.unit_key === unitKey ? ((await previewNext(cls, open))?.data ?? null) : await pickLiveQuestion(cls, unitKey, n);
-  if (!data) return null;
+  const picked = open && open.unit_key === unitKey ? ((await previewNext(cls, open))?.data ?? null) : await pickLiveQuestion(cls, unitKey, n);
+  if (!picked) return null;
+  const data: LiveQuestionData = { ...picked, readAloud: options.readAloud !== false };
   await pruneLive(now);
   const id = newId();
   await batch([
@@ -129,6 +130,14 @@ export async function startLive(cls: ClassRow, unitKey: string, teacherId: strin
 
 export async function revealLive(classId: string, now = Date.now()): Promise<boolean> {
   return (await run("UPDATE live_questions SET revealed_at = ? WHERE class_id = ? AND ended_at IS NULL AND revealed_at IS NULL", [now, classId])) > 0;
+}
+
+/** Lets students hear the open question read aloud, or not. Returns false when no question is open. */
+export async function setLiveReadAloud(classId: string, on: boolean, now = Date.now()): Promise<boolean> {
+  const row = await openLive(classId, now);
+  if (!row) return false;
+  const data = { ...(JSON.parse(row.data) as LiveQuestionData), readAloud: on };
+  return (await run("UPDATE live_questions SET data = ? WHERE id = ? AND ended_at IS NULL", [JSON.stringify(data), row.id])) > 0;
 }
 
 export async function endLive(classId: string, now = Date.now()): Promise<void> {

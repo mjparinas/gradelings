@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { APP_NAME } from "@/lib/brand";
 import { call } from "@/lib/classroom";
 
 const btn = "min-h-11 rounded-xl px-4 font-bold";
@@ -42,6 +43,11 @@ export function AuthForm({ onDone, initialMode = "in" }: { onDone: () => void; i
   return (
     <form onSubmit={submit} className="mx-auto mt-8 flex max-w-sm flex-col gap-3 rounded-2xl border border-line bg-white p-5">
       <h1 className="text-2xl font-bold">{mode === "in" ? "Teacher sign in" : mode === "up" ? "Create a teacher account" : "Reset your password"}</h1>
+      {mode !== "forgot" && (
+        <p className="font-read text-ink-soft">
+          {APP_NAME} for teachers is where you set up a class, assign practice by unit and see how each student is doing. Students sign in with a code you give them, with no email needed, and you only see first names and practice results.
+        </p>
+      )}
       <label className="flex flex-col text-sm font-semibold">
         Email
         <input className="mt-1 min-h-11 rounded-xl border border-line px-3" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} required />

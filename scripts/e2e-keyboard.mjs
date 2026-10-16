@@ -8,6 +8,7 @@
 //   node scripts/e2e-keyboard.mjs http://localhost:3000 [shots-dir]
 import { chromium } from "playwright";
 import { mkdirSync } from "node:fs";
+import { TEACHER_TABS, signInTeacher, teacherFixture } from "./helpers.mjs";
 
 const BASE = process.argv[2] || "http://localhost:3000";
 const SHOTS = process.argv[3] && !process.argv[3].startsWith("--") ? process.argv[3] : "e2e-shots/keyboard";
@@ -314,6 +315,49 @@ for (const tab of ["Reports", "Children", "Settings", "Account", "Subscription",
   await page.waitForTimeout(500);
   await walk(page, `parents: ${tab}`, 150);
 }
+
+console.log("Teacher area, keys only");
+const teacher = await teacherFixture(BASE);
+// Its own browser context: signing in as the teacher would otherwise replace the parent session the next section uses.
+const teacherCtx = await browser.newContext({ viewport: { width: 1366, height: 768 }, reducedMotion: "reduce" });
+const tpage = await teacherCtx.newPage();
+await signInTeacher(teacherCtx, BASE, teacher);
+await tpage.goto(`${BASE}/teachers/#/class/${teacher.classId}`);
+await tpage.getByRole("heading", { level: 1, name: "Room 3" }).waitFor();
+await tpage.keyboard.press("Tab");
+check((await tpage.evaluate(() => document.activeElement?.textContent?.trim())) === "Skip to main content", "teacher area: the first Tab stop is the skip link");
+for (const tab of TEACHER_TABS) {
+  await tpage.goto(`${BASE}/teachers/#/class/${teacher.classId}${tab}`);
+  await tpage.getByRole("heading", { level: 1, name: "Room 3" }).waitFor();
+  await tpage.waitForTimeout(300);
+  await walk(tpage, `teachers: ${tab.slice(1) || "progress"}`, 150);
+}
+await tpage.goto(`${BASE}/teachers/#/account`);
+await tpage.getByRole("heading", { level: 1, name: "Your account" }).waitFor();
+await walk(tpage, "teachers: account", 150);
+// Moving to another tab with the keyboard puts focus on the page heading.
+await tpage.goto(`${BASE}/teachers/#/class/${teacher.classId}`);
+await tpage.getByRole("heading", { level: 1, name: "Room 3" }).waitFor();
+check(await tabTo(tpage, /Homework$/), "Tab reaches the Homework tab");
+await tpage.keyboard.press("Enter");
+await tpage.waitForTimeout(300);
+check((await tpage.evaluate(() => document.activeElement?.tagName)) === "H1", "after choosing a tab, focus is on the page heading");
+check((await tpage.title()).includes("Homework"), "the page title names the tab");
+// The remove-student dialog: Escape closes it and focus returns to the button.
+await tpage.goto(`${BASE}/teachers/#/class/${teacher.classId}/students`);
+await tpage.getByRole("heading", { level: 1, name: "Room 3" }).waitFor();
+const removeButton = tpage.getByRole("button", { name: "Remove", exact: true }).first();
+await removeButton.focus();
+await tpage.keyboard.press("Enter");
+await tpage.getByRole("dialog").waitFor();
+await tpage.keyboard.press("Tab");
+await tpage.keyboard.press("Tab");
+await tpage.keyboard.press("Tab");
+check(await tpage.evaluate(() => Boolean(document.activeElement?.closest('[role="dialog"]'))), "Tab stays inside the remove-student dialog");
+await tpage.keyboard.press("Escape");
+check((await tpage.getByRole("dialog").count()) === 0, "Escape closes the remove-student dialog");
+check(await removeButton.evaluate((el) => el === document.activeElement), "focus goes back to the Remove button");
+await teacherCtx.close();
 
 console.log("Windows high contrast (forced colours)");
 await page.emulateMedia({ forcedColors: "active", reducedMotion: "reduce" });

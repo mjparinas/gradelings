@@ -87,6 +87,47 @@ describe("teacher-made student accounts", () => {
     expect(who.family.account.student).toBe(true);
   });
 
+  it("lets a teacher fix a student's name or move them between a split class's grades, keeping their code and practice", async () => {
+    const t = await teacher("st-edit@example.com");
+    const { class: cls } = await (await classes.POST(req("/api/classes/", "POST", { name: "Room 3/4", grade: "3", grade2: "4", framework: "ca-bc" }, t))).json();
+    const { students } = await (await studentRoutes.POST(req("/api/classes/students/", "POST", { classId: cls.id, names: ["Mya"], grade: "3" }, t))).json();
+    const mya = students[0] as { id: string; loginCode: string; profileId: string };
+    const patch = (body: unknown, studentId = mya.id) => studentRoutes.PATCH(req(`/api/classes/students/?classId=${cls.id}&studentId=${studentId}`, "PATCH", body, t));
+
+    expect((await patch({ name: "Maya", grade: "4" })).status).toBe(200);
+    const view = await (await classes.GET(req(`/api/classes/?id=${cls.id}`, "GET", undefined, t))).json();
+    expect(view.students[0]).toMatchObject({ name: "Maya", grade: "4" });
+    expect(view.roster[0].loginCode).toBe(mya.loginCode);
+    const member = await dbm.query<{ grade: string }>("SELECT grade FROM class_members WHERE profile_id = ?", [mya.profileId]);
+    expect(member[0].grade).toBe("4");
+
+    // The student's device gets the new name on its next sync.
+    const login = await studentLogin.POST(req("/api/students/login/", "POST", { classCode: cls.joinCode, studentCode: mya.loginCode }));
+    const cookie = (login.headers.get("set-cookie") ?? "").split(";")[0];
+    const synced = await (await sync.POST(req("/api/sync/", "POST", {}, cookie))).json();
+    expect(synced.profiles[0]).toMatchObject({ name: "Maya", grade: "4" });
+
+    // Only this class's grades and a real name are accepted, and only for this class's students.
+    expect((await patch({ grade: "7" })).status).toBe(400);
+    expect((await patch({ name: " <> " })).status).toBe(400);
+    expect((await patch({ name: "Kai" }, "nobody")).status).toBe(404);
+    const other = await teacher("st-edit-other@example.com");
+    expect((await studentRoutes.PATCH(req(`/api/classes/students/?classId=${cls.id}&studentId=${mya.id}`, "PATCH", { name: "Hacked" }, other))).status).toBe(404);
+    // A change with no name or grade is still "give a new code".
+    expect((await patch(undefined)).status).toBe(200);
+  });
+
+  it("says how many students fit when a class fills up", async () => {
+    const t = await teacher("st-limit@example.com");
+    const cls = await classWith(t);
+    const names = Array.from({ length: 40 }, (_, i) => `S${i}`);
+    const first = await (await studentRoutes.POST(req("/api/classes/students/", "POST", { classId: cls.id, names: names.slice(0, 38) }, t))).json();
+    expect(first.skipped).toBe(0);
+    const second = await (await studentRoutes.POST(req("/api/classes/students/", "POST", { classId: cls.id, names: ["A1", "A2", "A3", "A4"] }, t))).json();
+    expect(second).toMatchObject({ skipped: 2, limit: 40 });
+    expect(second.students).toHaveLength(2);
+  });
+
   it("syncs a US class student's practice without asking for a parent's consent", async () => {
     const t = await teacher("us-st-teacher@example.com");
     const cls = await classWith(t, "us-wa");
@@ -272,5 +313,38 @@ describe("teacher-made student accounts", () => {
     } finally {
       delete process.env.ADMIN_EMAILS;
     }
+  });
+
+  it("lets a teacher undo a new login code for a few minutes, once", async () => {
+    const t = await teacher("st-undo@example.com");
+    const cls = await classWith(t);
+    const { students } = await (await studentRoutes.POST(req("/api/classes/students/", "POST", { classId: cls.id, names: ["Noor", "Ravi"] }, t))).json();
+    const [noor, ravi] = students as { id: string; loginCode: string }[];
+    const url = `/api/classes/students/?classId=${cls.id}&studentId=${noor.id}`;
+    // Nothing to undo before a code was replaced.
+    expect((await studentRoutes.PATCH(req(url, "PATCH", { undo: true }, t))).status).toBe(409);
+
+    const renewed = await (await studentRoutes.PATCH(req(url, "PATCH", undefined, t))).json();
+    expect(renewed.loginCode).not.toBe(noor.loginCode);
+    const back = await studentRoutes.PATCH(req(url, "PATCH", { undo: true }, t));
+    expect(back.status).toBe(200);
+    expect((await back.json()).loginCode).toBe(noor.loginCode);
+    // The old code works again, the new one doesn't, and it can't be undone twice.
+    expect((await studentLogin.POST(req("/api/students/login/", "POST", { classCode: cls.joinCode, studentCode: noor.loginCode }))).status).toBe(200);
+    expect((await studentLogin.POST(req("/api/students/login/", "POST", { classCode: cls.joinCode, studentCode: renewed.loginCode }))).status).toBe(401);
+    expect((await studentRoutes.PATCH(req(url, "PATCH", { undo: true }, t))).status).toBe(409);
+
+    // Not for another teacher, not for another student's code, and not after the time is up.
+    const other = await teacher("st-undo-other@example.com");
+    await studentRoutes.PATCH(req(url, "PATCH", undefined, t));
+    expect((await studentRoutes.PATCH(req(url, "PATCH", { undo: true }, other))).status).toBe(404);
+    const students_ = await import("@/server/students");
+    await dbm.run("UPDATE students SET prev_code_at = ? WHERE id = ?", [Date.now() - students_.CODE_UNDO_MS - 1000, noor.id]);
+    expect((await studentRoutes.PATCH(req(url, "PATCH", { undo: true }, t))).status).toBe(409);
+    // Old codes are forgotten once their time has passed.
+    await students_.pruneOldCodes();
+    expect((await dbm.query<{ prev_login_code: string | null }>("SELECT prev_login_code FROM students WHERE id = ?", [noor.id]))[0].prev_login_code).toBeNull();
+    // Another student in the class was never affected.
+    expect((await dbm.query<{ login_code: string }>("SELECT login_code FROM students WHERE id = ?", [ravi.id]))[0].login_code).toBe(ravi.loginCode);
   });
 });
