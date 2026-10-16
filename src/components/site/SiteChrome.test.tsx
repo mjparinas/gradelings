@@ -17,7 +17,7 @@ describe("SiteHeader", () => {
   it("colours each letter of the name the same way as the play screen", () => {
     render(<SiteHeader />);
     const link = screen.getByRole("link", { name: APP_NAME });
-    const letters = [...link.querySelectorAll("span")];
+    const letters = [...link.querySelectorAll<HTMLElement>("span:not(.nav-pending)")];
     expect(letters.map((el) => el.textContent).join("")).toBe(APP_NAME);
     expect(letters.map((el) => el.style.color)).toEqual(
       [...APP_NAME].map((_, i) => cssColour(WORDMARK_COLOURS[i % WORDMARK_COLOURS.length])),
