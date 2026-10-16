@@ -414,7 +414,7 @@ function FirstRun({ students, assignments, tabLink }: { students: StudentRow[]; 
             <span aria-hidden="true">{s.done ? "✅" : "⬜"}</span>
             <span className="sr-only">{s.done ? "Done: " : "To do: "}</span>
             <span className={s.done ? "text-ink-soft line-through" : ""}>{s.text}</span>
-            {!s.done && <span className="inline-flex min-h-11 items-center">{s.link}</span>}
+            {!s.done && <span className="[&_a]:inline-flex [&_a]:min-h-11 [&_a]:items-center">{s.link}</span>}
           </li>
         ))}
       </ol>
@@ -1687,7 +1687,7 @@ export function TeacherApp() {
       <header className="sticky top-0 z-30 border-b border-line bg-white/90 backdrop-blur print:hidden" style={{ paddingTop: "env(safe-area-inset-top)" }}>
         <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-x-2 px-4 py-2">
           <span className="flex items-center gap-2">
-            <Link href="/" className="text-2xl font-bold tracking-tight" aria-label={APP_NAME}>
+            <Link href="/" className="inline-flex min-h-11 items-center text-2xl font-bold tracking-tight" aria-label={APP_NAME}>
               {APP_NAME.split("").map((ch, i) => (
                 <span key={i} aria-hidden="true" style={{ color: WORDMARK_COLOURS[i % WORDMARK_COLOURS.length] }}>
                   {ch}
