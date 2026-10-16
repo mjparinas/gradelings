@@ -377,6 +377,27 @@ describe("TeacherApp class page", () => {
     expect(screen.getByText(/Still to finish: Sam$/)).toBeInTheDocument();
   });
 
+  it("downloads the class table as a CSV named for the class", async () => {
+    serve(detail);
+    const user = await openClass();
+    let blob: Blob | undefined;
+    const create = vi.fn((b: Blob) => ((blob = b), "blob:csv"));
+    Object.defineProperty(URL, "createObjectURL", { configurable: true, value: create });
+    Object.defineProperty(URL, "revokeObjectURL", { configurable: true, value: vi.fn() });
+    let name = "";
+    const click = vi.spyOn(HTMLAnchorElement.prototype, "click").mockImplementation(function (this: HTMLAnchorElement) {
+      name = this.download;
+    });
+    await user.click(screen.getByRole("button", { name: "Download as spreadsheet (CSV)" }));
+    expect(click).toHaveBeenCalledOnce();
+    expect(name).toMatch(/^room-3-practice-\d{4}-\d{2}-\d{2}\.csv$/);
+    const text = await blob!.text();
+    expect(text).toContain(`not a report-card mark`);
+    expect(text).toContain("Student,Grade,Last active,Counting: level");
+    expect(text).toContain("Maya,3,");
+    expect(text).toContain("Sam,3,");
+  });
+
   it("cancels a pending co-teacher invitation", async () => {
     serve({ ...detail, role: "owner", teachers: [{ id: "o", email: "owner@example.com", role: "owner" }], invites: [{ email: "wait@example.com", createdAt: 1 }] });
     const user = await openClass();
