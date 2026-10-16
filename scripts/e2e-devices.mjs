@@ -398,7 +398,8 @@ for (const d of DEVICES) {
   page.on("pageerror", (e) => record(d.name, "no page errors", false, e.message));
   try {
     await everyDevice(d.name, page);
-    await teacherChecks(d.name, browser, options, teacherFx);
+    // Always in Chromium: the session cookie is Secure in a production build, which WebKit won't send over http://localhost.
+    await teacherChecks(d.name, await browserFor("chromium"), options, teacherFx);
     if (d.deep) await deepChecks(d.name, browser, options, page);
   } catch (e) {
     record(d.name, "finished without errors", false, e instanceof Error ? e.message.split("\n")[0] : String(e));
