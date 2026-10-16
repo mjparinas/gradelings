@@ -24,14 +24,14 @@ function scan(text: string, scale = 6): string | null {
 
 describe("QR code", () => {
   it("reads back as the login card link, for every shape of code a class can have", () => {
-    for (const [c, s] of [["AB12CD", "ZX91PQ2M"], ["999999", "00000000"], ["ZZZZZZ", "ZZZZZZZZ"], ["A2B3C4", "K7M8N9PQ"]]) {
+    for (const [c, s] of [["AB12CD", "ZX91PQ2M"], ["999999", "00000000"], ["ZZZZZZ", "ZZZZZZZZ"], ["A2B3C4", "K7M8N9PQ"], [undefined, "KM7PQR3XTA"], [undefined, "0000000000"], [undefined, "ZZZZZZZZZZ"]] as [string | undefined, string][]) {
       const link = classSignInHref({ classCode: c, studentCode: s }, "https://gradelings.com");
       expect(scan(link), link).toBe(link);
     }
   });
 
   it("holds a longer address too, such as a preview site", () => {
-    const link = classSignInHref({ classCode: "AB12CD", studentCode: "ZX91PQ2M" }, "https://gradelings-git-feature-team.vercel.app");
+    const link = classSignInHref({ studentCode: "KM7PQR3XTA" }, "https://gradelings-git-feature-team.vercel.app");
     expect(scan(link)).toBe(link);
   });
 

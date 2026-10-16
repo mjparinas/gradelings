@@ -94,10 +94,14 @@ export function FirstRun() {
   return <NewChild onDone={() => {}} first preset={preset} />;
 }
 
-/** A student signs in with the class code and their own code from the teacher. */
+/**
+ * A student signs in with the one code on their login card. Cards printed before one-code sign-in
+ * also carry a class code, so that field appears when the child says their card has one (or the card's QR code carried it).
+ */
 export function ClassSignIn({ onBack, codes }: { onBack: () => void; codes?: ClassCodes }) {
+  const [code, setCode] = useState(codes?.studentCode ?? "");
+  const [twoCodes, setTwoCodes] = useState(Boolean(codes?.classCode));
   const [classCode, setClassCode] = useState(codes?.classCode ?? "");
-  const [studentCode, setStudentCode] = useState(codes?.studentCode ?? "");
   // The codes came in the address; take them out of it so they aren't left in the history or a bookmark.
   useEffect(() => {
     if (codes && window.location.hash.startsWith(`#${CLASS_ROUTE}`)) window.history.replaceState(null, "", window.location.pathname + window.location.search);
@@ -105,7 +109,10 @@ export function ClassSignIn({ onBack, codes }: { onBack: () => void; codes?: Cla
   const [err, setErr] = useState("");
   const [busy, setBusy] = useState(false);
   const clean = (v: string, length: number) => v.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, length);
-  const field = "mt-1 min-h-16 w-full rounded-2xl border-2 border-line bg-white px-4 text-center font-mono text-3xl font-bold uppercase tracking-[0.3em]";
+  // One-code cards print the code as two groups of five, so the field shows it the same way.
+  const shown = !twoCodes && code.length > 5 ? `${code.slice(0, 5)}-${code.slice(5)}` : code;
+  const ready = twoCodes ? classCode.length === 6 && code.length >= 8 : code.length === 10;
+  const field = "mt-1 min-h-16 w-full rounded-2xl border-2 border-line bg-white px-3 text-center font-mono font-bold uppercase";
   return (
     <Page className="items-center justify-center gap-5 text-center">
       <Critter id="ollie" mood="wave" size={110} />
@@ -117,30 +124,52 @@ export function ClassSignIn({ onBack, codes }: { onBack: () => void; codes?: Cla
           setBusy(true);
           setErr("");
           try {
-            await signInStudent(classCode, studentCode);
+            await signInStudent(code, twoCodes ? classCode : "");
           } catch (x) {
             setErr((x as Error).message);
             setBusy(false);
           }
         }}
       >
-        <label className="block text-lg font-bold">
-          Class code
-          <input className={field} value={classCode} onChange={(e) => setClassCode(clean(e.target.value, 6))} autoComplete="off" autoCapitalize="characters" spellCheck={false} inputMode="text" maxLength={6} required />
-        </label>
+        {twoCodes && (
+          <label className="block text-lg font-bold">
+            Class code
+            <input className={`${field} text-3xl tracking-[0.3em]`} value={classCode} onChange={(e) => setClassCode(clean(e.target.value, 6))} autoComplete="off" autoCapitalize="characters" spellCheck={false} inputMode="text" maxLength={6} required />
+          </label>
+        )}
         <label className="block text-lg font-bold">
           My code
-          <input className={field} value={studentCode} onChange={(e) => setStudentCode(clean(e.target.value, 8))} autoComplete="off" autoCapitalize="characters" spellCheck={false} inputMode="text" maxLength={8} required />
+          <input
+            className={`${field} ${twoCodes ? "text-3xl tracking-[0.3em]" : "text-2xl tracking-[0.15em] narrow:text-xl narrow:tracking-[0.1em]"}`}
+            value={shown}
+            onChange={(e) => setCode(clean(e.target.value, 10))}
+            autoComplete="off"
+            autoCapitalize="characters"
+            spellCheck={false}
+            inputMode="text"
+            maxLength={twoCodes ? 10 : 11}
+            required
+          />
         </label>
         {err && (
           <p role="alert" className="rounded-2xl bg-white p-3 text-center font-read text-lg text-nudge-dark">
             {err}
           </p>
         )}
-        <button className="btn btn-good min-h-16 text-2xl" disabled={busy || classCode.length < 6 || studentCode.length < 8}>
+        <button className="btn btn-good min-h-16 text-2xl" disabled={busy || !ready}>
           {busy ? "Signing in…" : "Let's go! →"}
         </button>
       </form>
+      <button
+        type="button"
+        className="min-h-11 text-base font-semibold text-ink-soft underline"
+        onClick={() => {
+          setTwoCodes(!twoCodes);
+          setErr("");
+        }}
+      >
+        {twoCodes ? "My card has just one code" : "My card has a class code too"}
+      </button>
       <button type="button" className="text-base font-semibold text-ink-soft underline" onClick={onBack}>
         ← Back
       </button>

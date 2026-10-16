@@ -85,7 +85,21 @@ describe("FirstRun from a public page's link", () => {
 });
 
 describe("a login card's QR code", () => {
-  it("opens the class sign-in with both codes filled in, then takes them out of the address", async () => {
+  it("opens the class sign-in with the code filled in, then takes it out of the address", async () => {
+    window.location.hash = "#/class?s=KM7PQR3XTA";
+    h.signInStudent.mockResolvedValue(undefined);
+    render(<FirstRun />);
+    expect(screen.getByRole("heading", { name: "Sign in to your class" })).toBeInTheDocument();
+    expect(screen.queryByLabelText("Class code")).toBeNull();
+    expect(screen.getByLabelText("My code")).toHaveValue("KM7PQ-R3XTA");
+    expect(window.location.hash).toBe("");
+    // Nobody is signed in until the student taps.
+    expect(h.signInStudent).not.toHaveBeenCalled();
+    await userEvent.click(screen.getByRole("button", { name: /Let's go!/ }));
+    expect(h.signInStudent).toHaveBeenCalledWith("KM7PQR3XTA", "");
+  });
+
+  it("fills in the class code too for a card printed before one-code sign-in", async () => {
     window.location.hash = "#/class?c=AB12CD&s=ZX91PQ2M";
     h.signInStudent.mockResolvedValue(undefined);
     render(<FirstRun />);
@@ -96,7 +110,7 @@ describe("a login card's QR code", () => {
     // Nobody is signed in until the student taps.
     expect(h.signInStudent).not.toHaveBeenCalled();
     await userEvent.click(screen.getByRole("button", { name: /Let's go!/ }));
-    expect(h.signInStudent).toHaveBeenCalledWith("AB12CD", "ZX91PQ2M");
+    expect(h.signInStudent).toHaveBeenCalledWith("ZX91PQ2M", "AB12CD");
   });
 
   it("ignores a link whose codes aren't the right shape", () => {
@@ -107,31 +121,45 @@ describe("a login card's QR code", () => {
 });
 
 describe("ClassSignIn", () => {
-  it("tidies the codes and only allows signing in once both are complete", async () => {
+  it("takes one code, shown in two groups of five, and signs in once it is complete", async () => {
     h.signInStudent.mockResolvedValue(undefined);
     render(<ClassSignIn onBack={() => {}} />);
+    expect(screen.queryByLabelText("Class code")).toBeNull();
+    const go = screen.getByRole("button", { name: /Let's go!/ });
+    await userEvent.type(screen.getByLabelText("My code"), "km7 pq-r3x");
+    expect(screen.getByLabelText("My code")).toHaveValue("KM7PQ-R3X");
+    expect(go).toBeDisabled();
+    await userEvent.type(screen.getByLabelText("My code"), "ta");
+    expect(screen.getByLabelText("My code")).toHaveValue("KM7PQ-R3XTA");
+    expect(go).toBeEnabled();
+    await userEvent.click(go);
+    expect(h.signInStudent).toHaveBeenCalledWith("KM7PQR3XTA", "");
+  });
+
+  it("still takes a class code and an older eight-character code from a card printed before", async () => {
+    h.signInStudent.mockResolvedValue(undefined);
+    render(<ClassSignIn onBack={() => {}} />);
+    await userEvent.click(screen.getByRole("button", { name: "My card has a class code too" }));
     const go = screen.getByRole("button", { name: /Let's go!/ });
     await userEvent.type(screen.getByLabelText("Class code"), "ab-c 12");
     expect(screen.getByLabelText("Class code")).toHaveValue("ABC12");
-    expect(go).toBeDisabled();
     await userEvent.type(screen.getByLabelText("Class code"), "3x");
     expect(screen.getByLabelText("Class code")).toHaveValue("ABC123");
     await userEvent.type(screen.getByLabelText("My code"), "zz9qq7");
     expect(go).toBeDisabled();
-    await userEvent.type(screen.getByLabelText("My code"), "-k4x");
+    await userEvent.type(screen.getByLabelText("My code"), "-k4");
     expect(screen.getByLabelText("My code")).toHaveValue("ZZ9QQ7K4");
     expect(go).toBeEnabled();
     await userEvent.click(go);
-    expect(h.signInStudent).toHaveBeenCalledWith("ABC123", "ZZ9QQ7K4");
+    expect(h.signInStudent).toHaveBeenCalledWith("ZZ9QQ7K4", "ABC123");
   });
 
-  it("shows the server's message when the codes don't work, and lets the child try again", async () => {
-    h.signInStudent.mockRejectedValue(new Error("Those codes don't match. Check with your teacher."));
+  it("shows the server's message when the code doesn't work, and lets the child try again", async () => {
+    h.signInStudent.mockRejectedValue(new Error("That code doesn't match. Check it with your teacher."));
     render(<ClassSignIn onBack={() => {}} />);
-    await userEvent.type(screen.getByLabelText("Class code"), "ABC123");
-    await userEvent.type(screen.getByLabelText("My code"), "XYZ789AB");
+    await userEvent.type(screen.getByLabelText("My code"), "XYZ789ABCD");
     await userEvent.click(screen.getByRole("button", { name: /Let's go!/ }));
-    expect(await screen.findByRole("alert")).toHaveTextContent("Those codes don't match.");
+    expect(await screen.findByRole("alert")).toHaveTextContent("That code doesn't match.");
     expect(screen.getByRole("button", { name: /Let's go!/ })).toBeEnabled();
   });
 });

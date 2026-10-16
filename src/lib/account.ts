@@ -52,13 +52,14 @@ export async function signIn(email: string, password: string) {
 }
 
 /**
- * A student signs in with the class code and their own code. This device then becomes that student's:
- * anything already on it is cleared first, so nobody's practice mixes with another child's.
+ * A student signs in with their own code (plus the class code, for cards printed before one-code
+ * sign-in). This device then becomes that student's: anything already on it is cleared first, so
+ * nobody's practice mixes with another child's.
  */
-export async function signInStudent(classCode: string, studentCode: string) {
+export async function signInStudent(code: string, classCode = "") {
   const state = useStore.getState();
   if (state.family.account) throw new Error("A grown-up is signed in on this device. Sign out in the grown-ups area first.");
-  const { family } = await post<{ family: FamilyInfo }>("/api/students/login/", { classCode, studentCode });
+  const { family } = await post<{ family: FamilyInfo }>("/api/students/login/", classCode ? { classCode, studentCode: code } : { code });
   await state.wipeDevice();
   useStore.getState().setSync({ cursor: 0 });
   adopt(family);

@@ -32,7 +32,8 @@ export function playHref(s: PlayStart): string {
 export const CLASS_ROUTE = "/class";
 
 export interface ClassCodes {
-  classCode: string;
+  /** Only for a card printed before one-code sign-in, which also needs the class code. */
+  classCode?: string;
   studentCode: string;
 }
 
@@ -41,13 +42,15 @@ export interface ClassCodes {
  * they only fill in the sign-in screen, and the student still taps "Let's go".
  */
 export function classSignInHref(codes: ClassCodes, origin = ""): string {
-  return `${origin}/play/#${CLASS_ROUTE}?${new URLSearchParams({ c: codes.classCode, s: codes.studentCode })}`;
+  const q = new URLSearchParams(codes.classCode ? { c: codes.classCode, s: codes.studentCode } : { s: codes.studentCode });
+  return `${origin}/play/#${CLASS_ROUTE}?${q}`;
 }
 
-/** The codes a login-card link carried, or null when they aren't a class code (6 letters or digits) and a student code (8). */
+/** The codes a login-card link carried, or null when they aren't a one-code login (10 letters or digits) or a class code (6) with an older student code (8). */
 export function readClassSignIn(query: URLSearchParams): ClassCodes | null {
   const classCode = (query.get("c") ?? "").toUpperCase();
   const studentCode = (query.get("s") ?? "").toUpperCase();
+  if (!classCode) return /^[A-Z0-9]{10}$/.test(studentCode) ? { studentCode } : null;
   return /^[A-Z0-9]{6}$/.test(classCode) && /^[A-Z0-9]{8}$/.test(studentCode) ? { classCode, studentCode } : null;
 }
 

@@ -142,6 +142,8 @@ const SCHEMA = [
     UNIQUE (class_id, login_code)
   )`,
   `CREATE INDEX IF NOT EXISTS students_class ON students (class_id)`,
+  // Ten-character codes sign in on their own, so they are unique across every class. Older eight-character codes are unique per class only.
+  `CREATE UNIQUE INDEX IF NOT EXISTS students_one_code ON students (login_code) WHERE length(login_code) = 10`,
   // Co-teachers: other teacher accounts that share a class with its owner. The owner invites by
   // email; the invitation is kept by address only (so it never reveals whether an account exists)
   // and the invitee accepts it while signed in with that confirmed email.
@@ -172,7 +174,8 @@ const SCHEMA = [
     started_by TEXT NOT NULL,
     created_at INTEGER NOT NULL,
     revealed_at INTEGER,
-    ended_at INTEGER
+    ended_at INTEGER,
+    next_swaps INTEGER DEFAULT 0
   )`,
   `CREATE INDEX IF NOT EXISTS live_questions_class ON live_questions (class_id, created_at)`,
   `CREATE TABLE IF NOT EXISTS live_answers (
@@ -185,6 +188,16 @@ const SCHEMA = [
     PRIMARY KEY (question_id, profile_id)
   )`,
   `CREATE INDEX IF NOT EXISTS live_answers_family ON live_answers (family_id)`,
+  // A class timer a teacher starts for the whole class: one row per class, deleted when stopped or with the class.
+  // It holds a note and times only, nothing about a child.
+  `CREATE TABLE IF NOT EXISTS class_timers (
+    class_id TEXT PRIMARY KEY,
+    label TEXT NOT NULL,
+    total_ms INTEGER NOT NULL,
+    ends_at INTEGER,
+    paused_left INTEGER,
+    updated_at INTEGER NOT NULL
+  )`,
   // Weekly-report browser notifications were removed (the weekly email says the same); drop any saved push addresses.
   `DROP TABLE IF EXISTS push_subscriptions`,
   // Codes the owner hands out: free access for a number of days (or for life), or a discount at checkout.
@@ -430,6 +443,9 @@ const FAMILY_COLUMNS: [string, string][] = [
   ["cancelled_at", "INTEGER"],
 ];
 
+// How many times the teacher swapped the previewed next live question (the seed variant it was drawn from).
+const LIVE_COLUMNS: [string, string][] = [["next_swaps", "INTEGER DEFAULT 0"]];
+
 async function addColumns(c: Client, table: string, columns: [string, string][]) {
   const have = new Set((await c.execute(`PRAGMA table_info(${table})`)).rows.map((r) => String(r.name)));
   for (const [name, type] of columns) if (!have.has(name)) await c.execute(`ALTER TABLE ${table} ADD COLUMN ${name} ${type}`);
@@ -447,6 +463,7 @@ async function migrate(c: Client) {
   }
   await c.execute("CREATE UNIQUE INDEX IF NOT EXISTS families_referral_code ON families (referral_code)");
   await c.execute("CREATE INDEX IF NOT EXISTS families_referred_by ON families (referred_by)");
+  await addColumns(c, "live_questions", LIVE_COLUMNS);
   await addColumns(c, "classes", CLASS_COLUMNS);
   // Existing classes start their inactivity period from creation until a later sign-in.
   await c.execute("UPDATE classes SET last_activity_at = created_at WHERE last_activity_at = 0");

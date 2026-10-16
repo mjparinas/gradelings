@@ -1,6 +1,6 @@
 import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
 import { classGrades, MAX_STUDENTS, ownedClass, teachingClass, type ClassRow } from "@/server/classroom";
-import { addStudents, cleanStudentName, removeStudent, resetStudentCode, restoreStudentCode, updateStudent } from "@/server/students";
+import { addStudents, cleanStudentName, removeStudent, resetStudentCode, restoreStudentCode, updateStudent, upgradeClassCodes } from "@/server/students";
 
 // A teacher adds students to a class they own. Each gets a login code; there is no email or password.
 
@@ -49,11 +49,13 @@ export async function DELETE(req: Request) {
  * Changes one student (?classId=&studentId=). With `{ name }` and/or `{ grade }` (a grade of the class) it fixes their
  * name or moves them to the other grade of a split class; their codes and practice stay. With no body it gives them a
  * new login code and signs them out everywhere. `{ undo: true }` brings back the code they had just before, for a few minutes.
+ * With `all=1` instead of a student, gives every student who still needs the class code a one-code login.
  */
 export async function PATCH(req: Request) {
   const params = new URL(req.url).searchParams;
   const found = await teacherClass(req, params.get("classId") ?? "");
   if (found.fail) return found.fail;
+  if (params.get("all") === "1") return json({ changed: await upgradeClassCodes(found.cls!.id) });
   const body = (await req.json().catch(() => null)) as { name?: unknown; grade?: unknown; undo?: unknown } | null;
   if (body?.undo === true) {
     const restored = await restoreStudentCode(found.cls!.id, params.get("studentId") ?? "");
