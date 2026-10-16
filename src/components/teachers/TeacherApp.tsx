@@ -1374,7 +1374,7 @@ export function TeacherApp() {
       <header className="sticky top-0 z-30 border-b border-line bg-white/90 backdrop-blur print:hidden" style={{ paddingTop: "env(safe-area-inset-top)" }}>
         <div className="mx-auto flex max-w-4xl items-center justify-between gap-2 px-4 py-3">
           <span className="flex items-center gap-2">
-            <Link href="/" className="text-2xl font-bold tracking-tight" aria-label={APP_NAME}>
+            <Link href="/" className="inline-flex min-h-11 items-center text-2xl font-bold tracking-tight" aria-label={APP_NAME}>
               {APP_NAME.split("").map((ch, i) => (
                 <span key={i} aria-hidden="true" style={{ color: WORDMARK_COLOURS[i % WORDMARK_COLOURS.length] }}>
                   {ch}
