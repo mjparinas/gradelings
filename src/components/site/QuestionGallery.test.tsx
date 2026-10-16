@@ -1,7 +1,8 @@
 // @vitest-environment jsdom
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { QuestionGallery, SLIDES, TURN_MS } from "./QuestionGallery";
+import { QuestionGallery, SLIDES } from "./QuestionGallery";
+import { TURN_MS } from "./useCarousel";
 
 const current = () => document.querySelector("[data-current]")!;
 
