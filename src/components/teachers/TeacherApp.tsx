@@ -248,6 +248,8 @@ export interface ClassDetail {
   due: Record<string, number>;
   /** Homework question counts by unit key. Older servers omit it. */
   goal?: Record<string, number>;
+  /** The students a unit is for, by unit key. Units for the whole class are not listed. Older servers omit it. */
+  audience?: Record<string, string[]>;
   students: StudentRow[];
   roster: RosterEntry[];
   role?: "owner" | "co-teacher";
@@ -261,6 +263,76 @@ const toInput = (t: number) => {
   const d = new Date(t);
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 };
+
+/** Who an assignment is for: the whole class, or chosen students. Nothing chosen means everyone, so "chosen" asks for at least one. */
+function AudiencePicker({ students, who, picked, onWho, onPicked, name }: { students: StudentRow[]; who: "all" | "some"; picked: string[]; onWho: (w: "all" | "some") => void; onPicked: (ids: string[]) => void; name: string }) {
+  return (
+    <fieldset className="flex flex-col gap-1 text-sm font-semibold">
+      <legend className="mb-1">{name}</legend>
+      <div className="flex flex-wrap gap-4">
+        <label className="flex min-h-9 items-center gap-2">
+          <input type="radio" name={`${name}-who`} checked={who === "all"} onChange={() => onWho("all")} /> Whole class
+        </label>
+        <label className="flex min-h-9 items-center gap-2">
+          <input type="radio" name={`${name}-who`} checked={who === "some"} onChange={() => onWho("some")} /> Chosen students
+        </label>
+      </div>
+      {who === "some" && (
+        <ul className="grid gap-x-4 sm:grid-cols-2">
+          {students.map((s) => (
+            <li key={s.profileId}>
+              <label className="flex min-h-9 items-center gap-2 font-normal">
+                <input type="checkbox" checked={picked.includes(s.profileId)} onChange={(e) => onPicked(e.target.checked ? [...picked, s.profileId] : picked.filter((id) => id !== s.profileId))} /> {s.name}
+              </label>
+            </li>
+          ))}
+          {students.length === 0 && <li className="font-normal text-ink-soft">No students yet.</li>}
+        </ul>
+      )}
+    </fieldset>
+  );
+}
+
+/** Who one assigned unit is for. Shows a short summary; Change opens the picker. */
+function RowAudience({ unitLabel, students, current, onSave }: { unitLabel: string; students: StudentRow[]; current: string[]; onSave: (ids: string[]) => void }) {
+  const [open, setOpen] = useState(false);
+  const [who, setWho] = useState<"all" | "some">(current.length ? "some" : "all");
+  const [picked, setPicked] = useState(current);
+  const summary = current.length === 0 ? "Whole class" : `${current.length} ${current.length === 1 ? "student" : "students"}`;
+  return (
+    <div className="basis-full">
+      <button
+        type="button"
+        aria-expanded={open}
+        aria-label={`Who gets ${unitLabel}: ${summary}`}
+        className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold"
+        onClick={() => {
+          setWho(current.length ? "some" : "all");
+          setPicked(current);
+          setOpen(!open);
+        }}
+      >
+        For: {summary}
+      </button>
+      {open && (
+        <div className="mt-2 rounded-xl border border-line p-3">
+          <AudiencePicker students={students} who={who} picked={picked} onWho={setWho} onPicked={setPicked} name={`Students for ${unitLabel}`} />
+          <button
+            type="button"
+            disabled={who === "some" && picked.length === 0}
+            className={`${btn} mt-2 bg-[#4f8ef7] text-[#0f172a] disabled:opacity-50`}
+            onClick={() => {
+              onSave(who === "all" ? [] : picked);
+              setOpen(false);
+            }}
+          >
+            Save
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
 
 /** Add students by first name, share each one's login code, and print the cards. */
 function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url: string, method: string, body?: unknown) => Promise<boolean>; onPrint: () => void }) {
@@ -460,6 +532,11 @@ function Insights({ data, label }: { data: ClassDetail; label: (key: string) => 
                 ))}
               </ul>
             )}
+            {insights.checkIn.length > 0 && (
+              <a className="mt-2 inline-block font-semibold underline" href={`${classHref(data.class.id, "homework")}?students=${insights.checkIn.map((s) => encodeURIComponent(s.profileId)).join(",")}`}>
+                Assign extra practice to these students
+              </a>
+            )}
           </div>
         </div>
       )}
@@ -552,7 +629,7 @@ function PrintSheet({ data, label, mode }: { data: ClassDetail; label: (key: str
               <th scope="row" className="border border-black p-1">{s.name}</th>
               {s.units.map((u) => (
                 <td key={u.key} className="border border-black p-1">
-                  {levelLabel(u.level)}
+                  {u.assigned === false ? "Not assigned" : levelLabel(u.level)}
                   {u.attempts > 0 ? ` (${pct(u.accuracy)}, ${u.attempts} q)` : ""}
                 </td>
               ))}
@@ -574,7 +651,7 @@ function PrintSheet({ data, label, mode }: { data: ClassDetail; label: (key: str
   );
 }
 
-function ClassPage({ id, tab, onBack }: { id: string; tab: ClassTab; onBack: () => void }) {
+function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; preselect?: string[]; onBack: () => void }) {
   const [data, setData] = useState<ClassDetail | null>(null);
   const [ready, setReady] = useState(false);
   const [pick, setPick] = useState("");
@@ -582,6 +659,16 @@ function ClassPage({ id, tab, onBack }: { id: string; tab: ClassTab; onBack: () 
   const [confirmClose, setConfirmClose] = useState(false);
   const [due, setDue] = useState("");
   const [questions, setQuestions] = useState("");
+  const [who, setWho] = useState<"all" | "some">("all");
+  const [picked, setPicked] = useState<string[]>([]);
+  // "Assign extra practice to these students" on Progress arrives here with the students already chosen.
+  const preselected = preselect?.join(",") ?? "";
+  const [seen, setSeen] = useState("");
+  if (preselected && preselected !== seen) {
+    setSeen(preselected);
+    setWho("some");
+    setPicked(preselected.split(","));
+  }
   const [printMode, setPrintMode] = useState<"cards" | "summary" | null>(null);
 
   // Print once the sheet is on the page, then go back to the normal view.
@@ -691,7 +778,9 @@ function ClassPage({ id, tab, onBack }: { id: string; tab: ClassTab; onBack: () 
                           {s.name}
                           <span className="block text-sm font-normal text-ink-soft">{s.lastActive ? `Active ${new Date(s.lastActive).toLocaleDateString(countryOf(getFramework(cls.framework)).locale, { month: "short", day: "numeric" })}` : "Not active yet"}</span>
                         </th>
-                        {s.units.map((u) => (
+                        {s.units.map((u) => u.assigned === false ? (
+                          <td key={u.key} className="py-2 pr-3 text-sm text-ink-soft">Not assigned</td>
+                        ) : (
                           <td key={u.key} className="py-2 pr-3">
                             <b>{levelLabel(u.level)}</b>
                             {data.goal?.[u.key] && u.done !== undefined ? (
@@ -751,6 +840,13 @@ function ClassPage({ id, tab, onBack }: { id: string; tab: ClassTab; onBack: () 
                 <button type="button" aria-label={`Remove ${label(k)}`} className="min-h-9 min-w-9 rounded-full font-bold" onClick={() => change(`/api/classes/assignments/?classId=${id}&unitKey=${encodeURIComponent(k)}`, "DELETE")}>
                   ✕
                 </button>
+                <RowAudience
+                  key={`${k}:${(data.audience?.[k] ?? []).join(",")}`}
+                  unitLabel={label(k)}
+                  students={students}
+                  current={data.audience?.[k] ?? []}
+                  onSave={(ids) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, students: ids })}
+                />
               </li>
             ))}
             {assignments.length === 0 && <li className="py-2 font-read text-ink-soft">Nothing assigned yet.</li>}
@@ -765,15 +861,21 @@ function ClassPage({ id, tab, onBack }: { id: string; tab: ClassTab; onBack: () 
             />
             <DateField label="Due (optional)" value={due} onChange={setDue} />
             <SelectMenu label="Questions (optional)" block={false} value={questions} onChange={setQuestions} options={goalOptions} />
+            <div className="basis-full">
+              <AudiencePicker students={students} who={who} picked={picked} onWho={setWho} onPicked={setPicked} name="Who gets it" />
+            </div>
             <button
               type="button"
-              disabled={!pick}
+              disabled={!pick || (who === "some" && picked.length === 0)}
               className={`${btn} bg-[#4f8ef7] text-[#0f172a] disabled:opacity-50`}
               onClick={async () => {
-                await change("/api/classes/assignments/", "POST", { classId: id, unitKey: pick, dueAt: due ? endOfDay(due) : undefined, goal: questions ? Number(questions) : undefined });
+                const ok = await change("/api/classes/assignments/", "POST", { classId: id, unitKey: pick, dueAt: due ? endOfDay(due) : undefined, goal: questions ? Number(questions) : undefined, ...(who === "some" ? { students: picked } : {}) });
+                if (!ok) return;
                 setPick("");
                 setDue("");
                 setQuestions("");
+                setWho("all");
+                setPicked([]);
               }}
             >
               Assign
@@ -842,7 +944,7 @@ function ClassPage({ id, tab, onBack }: { id: string; tab: ClassTab; onBack: () 
 export function TeacherApp() {
   const [signedIn, setSignedIn] = useState<boolean | null>(null);
   const [account, setAccount] = useState<{ email?: string; verified?: boolean }>({});
-  const { path } = useRoute();
+  const { path, query } = useRoute();
   // #/class/{id}/{tab} opens a class on one tab; anything else is the class list.
   const classId = path[0] === "class" && path[1] ? path[1] : null;
   const tab = CLASS_TABS.find((t) => t.path === path[2])?.path ?? "progress";
@@ -922,7 +1024,7 @@ export function TeacherApp() {
               .finally(() => setSignedIn(true));
           }} />
         ) : classId ? (
-          <ClassPage key={classId} id={classId} tab={tab} onBack={() => go("/")} />
+          <ClassPage key={classId} id={classId} tab={tab} preselect={query.get("students")?.split(",").filter(Boolean)} onBack={() => go("/")} />
         ) : (
           <ClassList account={account} onOpen={(id) => go(`/class/${encodeURIComponent(id)}`)} />
         )}

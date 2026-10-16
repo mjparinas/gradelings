@@ -84,6 +84,56 @@ describe("classroom mode", () => {
     expect((await stateMismatch.json()).error).toBe("This class follows a different state’s curriculum than your child’s profile.");
   });
 
+  it("gives a unit to chosen students only, and only they get it and are counted on it", async () => {
+    const teacher = await account_("aud-teacher@example.com");
+    const { class: cls } = await (await classes.POST(req("/api/classes/", "POST", { name: "Room 5", grade: "2" }, teacher))).json();
+    const one = await parentWithChild("aud-p1@example.com", "aud-kid1");
+    const two = await parentWithChild("aud-p2@example.com", "aud-kid2");
+    for (const [cookie, profileId] of [[one, "aud-kid1"], [two, "aud-kid2"]] as const) {
+      expect((await join_.POST(req("/api/classes/join/", "POST", { code: cls.joinCode, profileId }, cookie))).status).toBe(200);
+    }
+    const a = "2/math/tens-and-ones";
+    const b = "2/math/bigger-or-smaller";
+    const post = (body: unknown) => assignments.POST(req("/api/classes/assignments/", "POST", { classId: cls.id, ...(body as object) }, teacher));
+    // Students from another class (or made up) are refused.
+    expect((await post({ unitKey: a, students: ["nobody"] })).status).toBe(400);
+    expect((await post({ unitKey: a, students: "aud-kid1" })).status).toBe(400);
+    expect((await post({ unitKey: a, students: ["aud-kid1"] })).status).toBe(200);
+    expect((await post({ unitKey: b })).status).toBe(200);
+
+    const view = await (await classes.GET(req(`/api/classes/?id=${cls.id}`, "GET", undefined, teacher))).json();
+    expect(view.audience).toEqual({ [a]: ["aud-kid1"] });
+    const byName = (id: string) => view.students.find((st: { profileId: string }) => st.profileId === id);
+    expect(byName("aud-kid1").units.map((u: { assigned: boolean }) => u.assigned)).toEqual([true, true]);
+    expect(byName("aud-kid2").units.map((u: { key: string; assigned: boolean }) => [u.key, u.assigned])).toEqual([[a, false], [b, true]]);
+
+    const work = async (cookie: string) => (await (await sync.POST(req("/api/sync/", "POST", {}, cookie))).json()).classwork[0].unitKeys;
+    expect(await work(one)).toEqual([a, b]);
+    expect(await work(two)).toEqual([b]);
+
+    // Changing who it is for, and back to the whole class.
+    const patch = (body: unknown) => assignments.PATCH(req("/api/classes/assignments/", "PATCH", { classId: cls.id, unitKey: a, ...(body as object) }, teacher));
+    expect((await patch({ students: ["aud-kid2"] })).status).toBe(200);
+    expect(await work(one)).toEqual([b]);
+    expect(await work(two)).toEqual([a, b]);
+    expect((await patch({ students: ["nobody"] })).status).toBe(400);
+    expect((await patch({ students: [] })).status).toBe(200);
+    expect(await work(one)).toEqual([a, b]);
+    expect((await (await classes.GET(req(`/api/classes/?id=${cls.id}`, "GET", undefined, teacher))).json()).audience).toEqual({});
+    expect((await assignments.PATCH(req("/api/classes/assignments/", "PATCH", { classId: cls.id, unitKey: "2/math/not-assigned", students: [] }, teacher))).status).toBe(404);
+
+    // Removing the unit forgets who it was for; unlinking a child forgets their picks.
+    expect((await patch({ students: ["aud-kid1", "aud-kid2"] })).status).toBe(200);
+    await assignments.DELETE(req(`/api/classes/assignments/?classId=${cls.id}&unitKey=${encodeURIComponent(a)}`, "DELETE", undefined, teacher));
+    expect(await dbm.query("SELECT * FROM class_assignment_students WHERE class_id = ?", [cls.id])).toHaveLength(0);
+    expect((await post({ unitKey: a, students: ["aud-kid1", "aud-kid2"] })).status).toBe(200);
+    await join_.DELETE(req(`/api/classes/join/?classId=${cls.id}&profileId=aud-kid2`, "DELETE", undefined, two));
+    expect((await dbm.query<{ profile_id: string }>("SELECT profile_id FROM class_assignment_students WHERE class_id = ?", [cls.id])).map((r) => r.profile_id)).toEqual(["aud-kid1"]);
+    // Closing the class clears the rest.
+    await classes.DELETE(req(`/api/classes/?id=${cls.id}`, "DELETE", undefined, teacher));
+    expect(await dbm.query("SELECT * FROM class_assignment_students WHERE class_id = ?", [cls.id])).toHaveLength(0);
+  });
+
   it("lets a teacher see a linked child's results on assigned units only, and nothing else", async () => {
     const teacher = await account_("teacher@example.com");
     const created = await (await classes.POST(req("/api/classes/", "POST", { name: "Room 12", grade: "2" }, teacher))).json();

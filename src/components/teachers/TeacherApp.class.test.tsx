@@ -282,6 +282,66 @@ describe("TeacherApp class page", () => {
     expect([due.getDate(), due.getHours(), due.getMinutes()]).toEqual([20, 23, 59]);
   });
 
+  it("assigns a unit to chosen students only, and won't assign to nobody", async () => {
+    serve(detail, (url, method) => (url === "/api/classes/?id=class-1" && method === "GET" ? { ...detail, assignments: ["3/math/counting"] } : undefined));
+    const user = await openClass();
+    await openTab(user, "Homework");
+    await user.click(screen.getByRole("combobox", { name: "Add a unit" }));
+    await user.click(screen.getByRole("option", { name: /Patterns/ }));
+    const assign = screen.getByRole("button", { name: "Assign" });
+    const who = screen.getByRole("group", { name: "Who gets it" });
+    expect(within(who).getByRole("radio", { name: "Whole class" })).toBeChecked();
+    await user.click(within(who).getByRole("radio", { name: "Chosen students" }));
+    // Chosen, but nobody picked yet.
+    expect(assign).toBeDisabled();
+    await user.click(within(who).getByRole("checkbox", { name: "Maya" }));
+    await user.click(within(who).getByRole("checkbox", { name: "Alex" }));
+    expect(assign).toBeEnabled();
+    await user.click(assign);
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/assignments/", "POST", { classId: "class-1", unitKey: "3/math/patterns", dueAt: undefined, goal: undefined, students: ["p1", "p3"] }));
+  });
+
+  it("shows and changes who a homework unit is for", async () => {
+    serve({ ...detail, audience: { "3/math/patterns": ["p1"] } });
+    const user = await openClass();
+    await openTab(user, "Homework");
+    expect(screen.getByRole("button", { name: "Who gets Counting: Whole class" })).toHaveTextContent("For: Whole class");
+    await user.click(screen.getByRole("button", { name: "Who gets Patterns: 1 student" }));
+    const group = screen.getByRole("group", { name: "Students for Patterns" });
+    expect(within(group).getByRole("checkbox", { name: "Maya" })).toBeChecked();
+    await user.click(within(group).getByRole("checkbox", { name: "Sam" }));
+    await user.click(screen.getByRole("button", { name: "Save" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/assignments/", "PATCH", { classId: "class-1", unitKey: "3/math/patterns", students: ["p1", "p2"] }));
+    // Back to the whole class.
+    await user.click(screen.getByRole("button", { name: /Who gets Patterns/ }));
+    await user.click(within(screen.getByRole("group", { name: "Students for Patterns" })).getByRole("radio", { name: "Whole class" }));
+    await user.click(screen.getByRole("button", { name: "Save" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/assignments/", "PATCH", { classId: "class-1", unitKey: "3/math/patterns", students: [] }));
+  });
+
+  it("marks a unit as not assigned for students it wasn't given to, without flagging them", async () => {
+    const skipped = detail.students.map((st) => (st.profileId === "p2" ? { ...st, lastActive: now - 30 * DAY, units: st.units.map((u) => ({ ...u, assigned: false, attempts: 0, level: -1 })) } : st));
+    serve({ ...detail, students: skipped });
+    await openClass();
+    const sam = within(screen.getAllByRole("table")[0]).getByRole("rowheader", { name: /^Sam/ }).parentElement!;
+    expect(sam.children[1]).toHaveTextContent("Not assigned");
+    expect(sam.children[2]).toHaveTextContent("Not assigned");
+    const checkIn = screen.getByRole("heading", { name: "Check in with" }).parentElement!;
+    expect(checkIn).not.toHaveTextContent("Sam");
+  });
+
+  it("offers extra practice for the students to check in with, with them already chosen", async () => {
+    serve(detail);
+    const user = await openClass();
+    await user.click(screen.getByRole("link", { name: "Assign extra practice to these students" }));
+    expect(window.location.hash).toBe("#/class/class-1/homework?students=p1,p2");
+    const who = await screen.findByRole("group", { name: "Who gets it" });
+    expect(within(who).getByRole("radio", { name: "Chosen students" })).toBeChecked();
+    expect(within(who).getByRole("checkbox", { name: "Maya" })).toBeChecked();
+    expect(within(who).getByRole("checkbox", { name: "Sam" })).toBeChecked();
+    expect(within(who).getByRole("checkbox", { name: "Alex" })).not.toBeChecked();
+  });
+
   it("cancels a pending co-teacher invitation", async () => {
     serve({ ...detail, role: "owner", teachers: [{ id: "o", email: "owner@example.com", role: "owner" }], invites: [{ email: "wait@example.com", createdAt: 1 }] });
     const user = await openClass();

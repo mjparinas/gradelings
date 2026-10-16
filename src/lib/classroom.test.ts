@@ -8,6 +8,20 @@ const student = (profileId: string, units: StudentRow["units"], lastActive: numb
 const name = (k: string) => k.split("/")[2];
 
 describe("classInsights", () => {
+  it("leaves out students a unit wasn't given to", () => {
+    const away = { ...unit("3/math/fractions", 0, 0, -1), assigned: false };
+    const students = [
+      student("a", [unit("3/math/fractions", 10, 0.4)]),
+      student("b", [away], NOW - 30 * DAY),
+      student("c", [{ ...unit("3/math/fractions", 10, 0.4), assigned: true }]),
+    ];
+    const r = classInsights(students, ["3/math/fractions"], name, NOW);
+    // B isn't counted as "not started", and isn't told to check in on a week without practice on work they don't have.
+    expect(r.units[0]).toMatchObject({ started: 2, notStarted: 0 });
+    expect(r.units[0].needHand).toEqual(["a", "c"]);
+    expect(r.checkIn.map((s) => s.name)).toEqual(["A", "C"]);
+  });
+
   it("flags a unit when a good share of those who tried it are struggling", () => {
     const students = [
       student("a", [unit("3/math/fractions", 10, 0.4), unit("3/math/time", 10, 0.9, 2)]),
