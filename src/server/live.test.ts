@@ -162,6 +162,24 @@ describe("live questions", () => {
     expect((await dbm.query<{ n: number }>("SELECT COUNT(*) AS n FROM live_answers WHERE profile_id = ?", [ava.profileId]))[0].n).toBe(0);
   });
 
+  it("recaps the day's questions with their answers, for teachers of the class only", async () => {
+    const { teacher, parent, cls, kid } = await classWithChild("recap");
+    const asked = (await (await teacherLive.POST(req("/api/classes/live/", "POST", { classId: cls.id, unitKey: UNIT }, teacher))).json()).live;
+    await childLive.POST(req("/api/live/", "POST", { questionId: asked.id, profileId: kid, choice: asked.question.answer }, parent));
+    await teacherLive.POST(req("/api/classes/live/", "POST", { classId: cls.id, unitKey: UNIT }, teacher));
+    await teacherLive.DELETE(req(`/api/classes/live/?classId=${cls.id}`, "DELETE", undefined, teacher));
+    const recap = (await (await teacherLive.GET(req(`/api/classes/live/?classId=${cls.id}&recap=1`, "GET", undefined, teacher))).json()).recap;
+    expect(recap).toHaveLength(2);
+    expect(recap[0]).toMatchObject({ id: asked.id, unitKey: UNIT });
+    expect(recap[0].answers).toEqual([{ profileId: kid, choice: asked.question.answer, correct: true }]);
+    expect(recap[1].answers).toEqual([]);
+    // Anything older than a day is already gone.
+    await dbm.run("UPDATE live_questions SET created_at = ? WHERE id = ?", [Date.now() - live.LIVE_KEEP - 5000, asked.id]);
+    expect((await (await teacherLive.GET(req(`/api/classes/live/?classId=${cls.id}&recap=1`, "GET", undefined, teacher))).json()).recap).toHaveLength(1);
+    const stranger = await account("recap-stranger@example.com");
+    expect((await teacherLive.GET(req(`/api/classes/live/?classId=${cls.id}&recap=1`, "GET", undefined, stranger))).status).toBe(404);
+  });
+
   it("forgets live questions after a day", async () => {
     const { teacher, cls } = await classWithChild("prune");
     const asked = (await (await teacherLive.POST(req("/api/classes/live/", "POST", { classId: cls.id, unitKey: UNIT }, teacher))).json()).live;

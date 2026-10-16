@@ -70,6 +70,11 @@ export async function openLive(classId: string, now = Date.now()): Promise<LiveR
   )[0];
 }
 
+/** Every question the class was asked in the last day, oldest first (before it is deleted). */
+export async function recentLive(classId: string, now = Date.now()): Promise<LiveRow[]> {
+  return query<LiveRow>("SELECT * FROM live_questions WHERE class_id = ? AND created_at > ? ORDER BY created_at", [classId, now - LIVE_KEEP]);
+}
+
 /** Ends whatever is open and asks a new question. Returns null when the unit has no tap-to-answer questions. */
 export async function startLive(cls: ClassRow, unitKey: string, teacherId: string, now = Date.now()): Promise<LiveRow | null> {
   const last = (await query<{ n: number }>("SELECT n FROM live_questions WHERE class_id = ? AND unit_key = ? ORDER BY created_at DESC LIMIT 1", [cls.id, unitKey]))[0];
