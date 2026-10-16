@@ -84,6 +84,28 @@ describe("FirstRun from a public page's link", () => {
   });
 });
 
+describe("a login card's QR code", () => {
+  it("opens the class sign-in with both codes filled in, then takes them out of the address", async () => {
+    window.location.hash = "#/class?c=AB12CD&s=ZX91PQ2M";
+    h.signInStudent.mockResolvedValue(undefined);
+    render(<FirstRun />);
+    expect(screen.getByRole("heading", { name: "Sign in to your class" })).toBeInTheDocument();
+    expect(screen.getByLabelText("Class code")).toHaveValue("AB12CD");
+    expect(screen.getByLabelText("My code")).toHaveValue("ZX91PQ2M");
+    expect(window.location.hash).toBe("");
+    // Nobody is signed in until the student taps.
+    expect(h.signInStudent).not.toHaveBeenCalled();
+    await userEvent.click(screen.getByRole("button", { name: /Let's go!/ }));
+    expect(h.signInStudent).toHaveBeenCalledWith("AB12CD", "ZX91PQ2M");
+  });
+
+  it("ignores a link whose codes aren't the right shape", () => {
+    window.location.hash = "#/class?c=nope&s=nope";
+    render(<FirstRun />);
+    expect(screen.getByText(/I'm Ollie the Otter/)).toBeInTheDocument();
+  });
+});
+
 describe("ClassSignIn", () => {
   it("tidies the codes and only allows signing in once both are complete", async () => {
     h.signInStudent.mockResolvedValue(undefined);

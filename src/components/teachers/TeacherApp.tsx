@@ -11,6 +11,7 @@ import { SelectMenu } from "@/components/SelectMenu";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { addedMessage, agoText, call, checkNameList, dueChips, type ClassBadge, classInsights, HOMEWORK_GOALS, homeworkOverview, isHomeworkDone, isUsClass, US_CLASS_CONSENT, type ClassInvite, type MissedQuestion, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
 import { frameworkGroups, frameworkMenu } from "@/lib/frameworkGroups";
+import { classSignInHref } from "@/lib/playLink";
 import { classCsv } from "@/lib/classCsv";
 import { countryOf } from "@/lib/country";
 import { gradeLabel } from "@/lib/gradeLabel";
@@ -21,6 +22,7 @@ import { MAIN_ID, SkipLink } from "@/components/SkipLink";
 import { AccountPage } from "./AccountPage";
 import { TeacherDialog } from "./Dialog";
 import { LiveClass } from "./LiveClass";
+import { QrCode } from "./QrCode";
 
 // The teacher area: create a class, share its code, assign units and see each linked student's
 // practice results. Each class follows one province, territory or state (FRAMEWORKS). It talks to the server only (no kids' store), so it stays light.
@@ -951,17 +953,20 @@ function PrintSheet({ data, label, mode, only }: { data: ClassDetail; label: (ke
     return (
       <div className="hidden print:grid print:grid-cols-2 print:gap-3">
         {roster.filter((r) => !only || only.includes(r.id)).map((r) => (
-          <div key={r.id} className="break-inside-avoid rounded-xl border-2 border-dashed border-black p-4">
-            <p className="text-lg font-bold">{byProfile.get(r.profileId)?.name}</p>
-            <p>
-              Go to <b>{typeof window === "undefined" ? "" : window.location.host}/play</b> and tap “My teacher gave me a code”.
-            </p>
-            <p className="mt-2">
-              Class code: <b className="font-mono text-xl tracking-widest">{cls.joinCode}</b>
-            </p>
-            <p>
-              My code: <b className="font-mono text-xl tracking-widest">{r.loginCode}</b>
-            </p>
+          <div key={r.id} className="flex break-inside-avoid items-start justify-between gap-3 rounded-xl border-2 border-dashed border-black p-4">
+            <div>
+              <p className="text-lg font-bold">{byProfile.get(r.profileId)?.name}</p>
+              <p>
+                Go to <b>{typeof window === "undefined" ? "" : window.location.host}/play</b> and tap “My teacher gave me a code”, or scan the square.
+              </p>
+              <p className="mt-2">
+                Class code: <b className="font-mono text-xl tracking-widest">{cls.joinCode}</b>
+              </p>
+              <p>
+                My code: <b className="font-mono text-xl tracking-widest">{r.loginCode}</b>
+              </p>
+            </div>
+            {typeof window !== "undefined" && <QrCode text={classSignInHref({ classCode: cls.joinCode, studentCode: r.loginCode }, window.location.origin)} label={`Sign-in code for ${byProfile.get(r.profileId)?.name ?? "this student"}`} className="size-28 shrink-0" />}
           </div>
         ))}
       </div>
