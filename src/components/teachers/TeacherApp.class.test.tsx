@@ -681,6 +681,48 @@ describe("TeacherApp keyboard and screen-reader support", () => {
   });
 });
 
+describe("TeacherApp students", () => {
+  it("warns about Last, First lines and repeated names before adding, without blocking", async () => {
+    serve(detail);
+    const user = await openClass();
+    await openTab(user, "Students");
+    await user.type(screen.getByLabelText("First names, one per line"), "Smith, Lee{Enter}Maya");
+    expect(screen.getByText(/“Smith, Lee” has a comma/)).toBeInTheDocument();
+    expect(screen.getByText(/More than one student would be called “Maya”/)).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Add students" })).toBeEnabled();
+    await user.click(screen.getByRole("button", { name: "Add students" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/", "POST", { classId: "class-1", names: ["Smith, Lee", "Maya"] }));
+  });
+
+  it("says how many students were added and how many didn't fit", async () => {
+    serve(detail, (url, method) => (url === "/api/classes/students/" && method === "POST" ? { students: [{}, {}], skipped: 3, limit: 40 } : undefined));
+    const user = await openClass();
+    await openTab(user, "Students");
+    await user.type(screen.getByLabelText("First names, one per line"), "A{Enter}B{Enter}C{Enter}D{Enter}E");
+    await user.click(screen.getByRole("button", { name: "Add students" }));
+    expect(await screen.findByText("Added 2 students. 3 weren’t added because a class holds up to 40 students.")).toBeInTheDocument();
+  });
+
+  it("edits a student's name and, in a split class, their grade", async () => {
+    const split = { ...cls, grade2: "4" };
+    serve({ ...detail, class: split }, (url, method) => (url === "/api/classes/" && method === "GET" ? { classes: [split] } : undefined));
+    const user = await openClass();
+    await openTab(user, "Students");
+    await user.click(screen.getByRole("button", { name: "Edit Sam" }));
+    const dialog = screen.getByRole("dialog", { name: "Edit Sam" });
+    const field = within(dialog).getByLabelText("First name or nickname");
+    expect(field).toHaveFocus();
+    await user.clear(field);
+    await user.type(field, "Samuel");
+    await user.click(within(dialog).getByRole("combobox", { name: "Grade" }));
+    await user.click(screen.getByRole("option", { name: "Grade 4" }));
+    await user.click(within(dialog).getByRole("button", { name: "Save" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/?classId=class-1&studentId=r2", "PATCH", { name: "Samuel", grade: "4" }));
+    await waitFor(() => expect(screen.queryByRole("dialog")).not.toBeInTheDocument());
+    expect(screen.getByText("Samuel saved.")).toBeInTheDocument();
+  });
+});
+
 describe("TeacherApp invitations", () => {
   it("declines an invitation to co-teach", async () => {
     serve(detail, (url, method) => {

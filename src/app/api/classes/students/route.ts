@@ -1,6 +1,6 @@
 import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
-import { classGrades, ownedClass, teachingClass } from "@/server/classroom";
-import { addStudents, cleanStudentName, removeStudent, resetStudentCode } from "@/server/students";
+import { classGrades, MAX_STUDENTS, ownedClass, teachingClass, type ClassRow } from "@/server/classroom";
+import { addStudents, cleanStudentName, removeStudent, resetStudentCode, updateStudent } from "@/server/students";
 
 // A teacher adds students to a class they own. Each gets a login code; there is no email or password.
 
@@ -33,7 +33,7 @@ export async function POST(req: Request) {
   if (!grade) return error(400, "Choose one of this class's grades.");
   const students = await addStudents(cls!, names, grade);
   if (!students.length) return error(409, "This class is full.");
-  return json({ students, skipped: names.length - students.length });
+  return json({ students, skipped: names.length - students.length, limit: MAX_STUDENTS });
 }
 
 /** Removes a student and deletes everything stored about them. */
@@ -45,11 +45,30 @@ export async function DELETE(req: Request) {
   return removed ? json({ removed: true }) : error(404, "Student not found");
 }
 
-/** Gives a student a new login code and signs them out everywhere. */
+/**
+ * Changes one student (?classId=&studentId=). With `{ name }` and/or `{ grade }` (a grade of the class) it fixes their
+ * name or moves them to the other grade of a split class; their codes and practice stay. With no body it gives them a
+ * new login code and signs them out everywhere.
+ */
 export async function PATCH(req: Request) {
   const params = new URL(req.url).searchParams;
   const found = await teacherClass(req, params.get("classId") ?? "");
   if (found.fail) return found.fail;
+  const body = (await req.json().catch(() => null)) as { name?: unknown; grade?: unknown } | null;
+  if (body && ("name" in body || "grade" in body)) {
+    const change: { name?: string; grade?: ClassRow["grade"] } = {};
+    if ("name" in body) {
+      const name = cleanStudentName(body.name);
+      if (!name) return error(400, "Type the student's first name.");
+      change.name = name;
+    }
+    if ("grade" in body) {
+      const grade = classGrades(found.cls!).find((g) => g === body.grade);
+      if (!grade) return error(400, "Choose one of this class's grades.");
+      change.grade = grade;
+    }
+    return (await updateStudent(found.cls!.id, params.get("studentId") ?? "", change)) ? json({ ok: true }) : error(404, "Student not found");
+  }
   const code = await resetStudentCode(found.cls!.id, params.get("studentId") ?? "");
   return code ? json({ loginCode: code }) : error(404, "Student not found");
 }

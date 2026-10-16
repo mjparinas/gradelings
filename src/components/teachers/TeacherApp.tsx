@@ -9,7 +9,7 @@ import type { FrameworkId, GradeId } from "@/content/types";
 import { DateField } from "@/components/DateField";
 import { SelectMenu } from "@/components/SelectMenu";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
-import { call, classInsights, HOMEWORK_GOALS, homeworkOverview, isHomeworkDone, isUsClass, US_CLASS_CONSENT, type ClassInvite, type MissedQuestion, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
+import { addedMessage, call, checkNameList, classInsights, HOMEWORK_GOALS, homeworkOverview, isHomeworkDone, isUsClass, US_CLASS_CONSENT, type ClassInvite, type MissedQuestion, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
 import { frameworkGroups, frameworkMenu } from "@/lib/frameworkGroups";
 import { classCsv } from "@/lib/classCsv";
 import { countryOf } from "@/lib/country";
@@ -386,6 +386,39 @@ function RowAudience({ unitLabel, students, current, onSave }: { unitLabel: stri
   );
 }
 
+/** Fix a student's name or, in a split class, their grade. Their codes and practice stay. */
+function EditStudent({ cls, student, onClose, onSave }: { cls: ClassDetail["class"]; student?: StudentRow; onClose: () => void; onSave: (body: { name: string; grade: GradeId }) => Promise<void> }) {
+  const [name, setName] = useState(student?.name ?? "");
+  const [grade, setGrade] = useState<GradeId>((student?.grade as GradeId | undefined) ?? cls.grade);
+  const [busy, setBusy] = useState(false);
+  return (
+    <TeacherDialog title={`Edit ${student?.name ?? "student"}`} onClose={onClose}>
+      <form
+        className="flex flex-col gap-3"
+        onSubmit={async (e) => {
+          e.preventDefault();
+          setBusy(true);
+          await onSave({ name: name.trim(), grade });
+          setBusy(false);
+        }}
+      >
+        <label className="flex flex-col text-sm font-semibold">
+          First name or nickname
+          <input className="mt-1 min-h-11 rounded-xl border border-line px-3" value={name} maxLength={20} onChange={(e) => setName(e.target.value)} required />
+        </label>
+        {cls.grade2 && <SelectMenu label="Grade" value={grade} onChange={(next) => setGrade(next as GradeId)} options={[cls.grade, cls.grade2].map((g) => ({ value: g, label: gradeLabel(g, cls.framework) }))} />}
+        <p className="font-read text-sm text-ink-soft">Their login code and practice stay as they are.</p>
+        <button disabled={busy || !name.trim()} className="min-h-12 rounded-xl bg-[#4f8ef7] font-bold text-[#0f172a] disabled:opacity-50">
+          Save
+        </button>
+        <button type="button" className="min-h-12 rounded-xl border-2 border-line font-bold" onClick={onClose}>
+          Cancel
+        </button>
+      </form>
+    </TeacherDialog>
+  );
+}
+
 /** Add students by first name, share each one's login code, and print the cards. */
 function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChange: ChangeFn; onBulk: (calls: { url: string; method: string }[], success?: string) => Promise<boolean>; onPrint: (ids?: string[]) => void }) {
   const [names, setNames] = useState("");
@@ -393,11 +426,13 @@ function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChan
   const [removing, setRemoving] = useState<RosterEntry | null>(null);
   const [chosen, setChosen] = useState<string[]>([]);
   const [removingMany, setRemovingMany] = useState(false);
+  const [editing, setEditing] = useState<RosterEntry | null>(null);
   const { class: cls, roster, students } = data;
   // A split class asks which grade the new students are in.
   const [newGrade, setNewGrade] = useState<GradeId>(cls.grade);
   const isOwner = (data.role ?? "owner") === "owner";
   const byProfile = new Map(students.map((s) => [s.profileId, s]));
+  const typed = checkNameList(names, students.map((s) => s.name));
   return (
     <section className="mt-4 rounded-2xl border border-line bg-white p-5 print:hidden">
       <h2 className="text-xl font-bold">Student logins</h2>
@@ -450,6 +485,9 @@ function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChan
               <button type="button" className="min-h-11 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => onChange(`/api/classes/students/?classId=${cls.id}&studentId=${r.id}`, "PATCH", undefined, (res) => `${byProfile.get(r.profileId)?.name ?? "The student"} has a new code: ${(res as { loginCode: string }).loginCode}`)}>
                 New code
               </button>
+              <button type="button" aria-label={`Edit ${byProfile.get(r.profileId)?.name ?? "student"}`} className="min-h-11 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => setEditing(r)}>
+                Edit
+              </button>
               {isOwner && (
                 <button type="button" className="min-h-11 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => setRemoving(r)}>
                   Remove
@@ -465,14 +503,24 @@ function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChan
           e.preventDefault();
           setBusy(true);
           // Keep the typed names when adding them failed, so nothing has to be retyped.
-          if (await onChange("/api/classes/students/", "POST", { classId: cls.id, names: names.split(/\n|,/).map((n) => n.trim()).filter(Boolean), ...(cls.grade2 ? { grade: newGrade } : {}) })) setNames("");
+          if (await onChange("/api/classes/students/", "POST", { classId: cls.id, names: typed.names, ...(cls.grade2 ? { grade: newGrade } : {}) }, (res) => {
+            const r = res as { students?: unknown[]; skipped?: number; limit?: number };
+            return addedMessage(r.students?.length ?? typed.names.length, r.skipped ?? 0, r.limit ?? 40);
+          })) setNames("");
           setBusy(false);
         }}
       >
         <label className="flex flex-col text-sm font-semibold">
           First names, one per line
-          <textarea className="mt-1 min-h-24 rounded-xl border border-line px-3 py-2 font-read" value={names} onChange={(e) => setNames(e.target.value)} placeholder={"Maya\nSam\nAlex P."} maxLength={1200} />
+          <textarea className="mt-1 min-h-24 rounded-xl border border-line px-3 py-2 font-read" value={names} onChange={(e) => setNames(e.target.value)} placeholder={"Maya\nSam\nAlex P."} maxLength={1200} aria-describedby={typed.warnings.length ? "name-warnings" : undefined} />
         </label>
+        {typed.warnings.length > 0 && (
+          <ul id="name-warnings" className="font-read text-sm text-nudge-dark">
+            {typed.warnings.map((w) => (
+              <li key={w}>{w}</li>
+            ))}
+          </ul>
+        )}
         <div className="flex flex-wrap gap-3">
           {cls.grade2 && (
             <SelectMenu label="Their grade" block={false} value={newGrade} onChange={(next) => setNewGrade(next as GradeId)} options={[cls.grade, cls.grade2].map((g) => ({ value: g, label: gradeLabel(g, cls.framework) }))} />
@@ -509,6 +557,17 @@ function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChan
             </button>
           </div>
         </TeacherDialog>
+      )}
+      {editing && (
+        <EditStudent
+          key={editing.id}
+          cls={cls}
+          student={byProfile.get(editing.profileId)}
+          onClose={() => setEditing(null)}
+          onSave={async (body) => {
+            if (await onChange(`/api/classes/students/?classId=${cls.id}&studentId=${editing.id}`, "PATCH", body, `${body.name} saved.`)) setEditing(null);
+          }}
+        />
       )}
       {removing && (
         <TeacherDialog title={`Remove ${byProfile.get(removing.profileId)?.name ?? "this student"}?`} onClose={() => setRemoving(null)}>
