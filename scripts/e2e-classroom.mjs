@@ -163,6 +163,31 @@ const stored = await page.evaluate(
 );
 check(stored === 0, "no practice is left on the device after sign-out");
 
+// A login card's QR code scanned on a device that already has a player: it asks before it replaces anyone.
+await page.getByRole("button", { name: /Let.s go/ }).click({ force: true });
+await page.getByLabel("Name").fill("Sam");
+await page.getByRole("button", { name: "Grade 3" }).click();
+await page.getByRole("button", { name: "Start!" }).click();
+// The first child on a device with no account is offered the progress emails once.
+await page.getByRole("button", { name: /Not now, let's play/ }).click({ timeout: 5000, force: true }).catch(() => undefined);
+await page.getByText("Adventure", { exact: true }).first().waitFor({ timeout: 15000 });
+const scan = async () => {
+  await page.goto(`${BASE}/play/#/class?s=${code}`);
+  await page.reload();
+};
+await scan();
+check(await page.getByRole("heading", { name: "Sign in to your class?" }).waitFor({ timeout: 10000 }).then(() => true, () => false), "a login card scanned where a player already is asks first");
+check(await vis(page.getByText(/replaces them on this device/)), "the question says the player will be replaced");
+await page.getByRole("button", { name: "Keep this device as it is" }).click();
+check(await page.getByText("Adventure", { exact: true }).first().waitFor({ timeout: 10000 }).then(() => true, () => false), "saying no keeps the player's home screen");
+await scan();
+await page.getByRole("button", { name: "Replace them and sign in" }).click();
+check((await page.getByLabel("My code").inputValue()).replace("-", "") === code, "saying yes opens the sign-in with the card's code filled in");
+await page.getByRole("button", { name: /Let.s go/ }).click();
+check(await page.getByText("From your teacher").first().waitFor({ timeout: 15000 }).then(() => true, () => false), "the student is signed in from the card");
+await page.getByRole("button", { name: /Sign out/ }).click();
+await page.getByRole("button", { name: "My teacher gave me a code" }).waitFor({ timeout: 10000 });
+
 // A co-teacher: invited by email, accepted by the invitee, sees the class and the student's work,
 // can assign units, cannot close the class or delete the student, and can leave.
 const ownerCookie = cookie;

@@ -119,7 +119,7 @@ const HIDDEN_KEY = "gradelings.teacher.hiddenClasses";
 const CHECKLIST_KEY = "gradelings.teacher.hideChecklist";
 const GOAL_KEY = "gradelings.teacher.lastQuestions";
 
-/** Per-device choices (classes hidden from the list, the checklist put away). Storage can be blocked, so it never throws. */
+/** Per-device choices (the checklist put away, and, until it is moved to the account, classes hidden from the list). Storage can be blocked, so it never throws. */
 function readStore(key: string): string {
   try {
     return localStorage.getItem(key) ?? "";
@@ -166,20 +166,35 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
   const [badges, setBadges] = useState<Record<string, ClassBadge>>({});
   const [now, setNow] = useState(() => Date.now());
   const [sort, setSort] = useState<ClassSort>("created");
-  const [hidden, setHidden] = useState<string[]>(() => readStore(HIDDEN_KEY).split(",").filter(Boolean));
+  // Saved on the account (so it follows the teacher to every device); `classes` carries it, and this keeps taps instant.
+  const [hidden, setHidden] = useState<string[]>([]);
   const [showHidden, setShowHidden] = useState(false);
   const [notice, setNotice] = useState("");
 
   const hide = (id: string, on: boolean) => {
-    const next = on ? [...new Set([...hidden, id])] : hidden.filter((h) => h !== id);
-    setHidden(next);
-    writeStore(HIDDEN_KEY, next.join(","));
-    setNotice(on ? "Class hidden from this list on this device." : "Class shown again.");
+    const before = hidden;
+    setHidden(on ? [...new Set([...hidden, id])] : hidden.filter((h) => h !== id));
+    setNotice(on ? "Class hidden from your list." : "Class shown again.");
+    call("/api/classes/hidden/", "PATCH", { classId: id, hidden: on }).catch((e: Error) => {
+      setHidden(before);
+      setNotice("");
+      setErr(e.message);
+    });
   };
   const load = useCallback(() => {
     call<{ classes: ClassSummary[] }>("/api/classes/")
       .then((r) => {
         setClasses(r.classes);
+        let now = r.classes.filter((c) => c.hidden).map((c) => c.id);
+        // Classes hidden on this device before the choice moved to the account: save them there once, then forget them here.
+        const old = readStore(HIDDEN_KEY).split(",").filter((id) => id && r.classes.some((c) => c.id === id) && !now.includes(id));
+        if (readStore(HIDDEN_KEY)) {
+          Promise.all(old.map((id) => call("/api/classes/hidden/", "PATCH", { classId: id, hidden: true })))
+            .then(() => writeStore(HIDDEN_KEY, ""))
+            .catch(() => undefined);
+          now = [...now, ...old];
+        }
+        setHidden(now);
         // The badges read every student's history, so they come after the list has shown. A failure just leaves them off.
         if (r.classes.some((c) => c.students > 0)) {
           call<{ badges?: Record<string, ClassBadge> }>("/api/classes/?badges=1")
@@ -282,7 +297,7 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
           <button type="button" aria-expanded={showHidden} className="inline-flex min-h-11 items-center font-semibold underline" onClick={() => setShowHidden((v) => !v)}>
             {showHidden ? "Hide finished classes again" : `Show ${hiddenNow.length} hidden ${hiddenNow.length === 1 ? "class" : "classes"}`}
           </button>{" "}
-          Hiding only tidies this list on this device. The class and its students aren’t changed.
+          Hiding only tidies your list, on every device you sign in on. The class and its students aren’t changed.
         </p>
       )}
       <p role="status" className="sr-only">

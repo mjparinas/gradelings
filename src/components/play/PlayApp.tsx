@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { VoicePreload } from "@/components/VoicePreload";
 import { ClassTimerChip } from "./ClassTimer";
 import type { FlagKey } from "@/lib/flags";
@@ -25,7 +25,8 @@ import { PlacementTest } from "./PlacementTest";
 import { SecretsListener } from "./Secrets";
 import { Session } from "./Session";
 import { Shop } from "./Shop";
-import { FirstRun, Picker, usePlayStart } from "./Start";
+import type { ClassCodes } from "@/lib/playLink";
+import { CardSignIn, FirstRun, Picker, useClassSignInLink, usePlayStart } from "./Start";
 import { getCourse } from "@/content";
 import { go } from "@/lib/router";
 import { Toasts } from "./Toasts";
@@ -92,6 +93,15 @@ export function PlayApp() {
   const isOn = useIsOn();
   const live = useLiveQuestion();
   const asking = Boolean(live.live);
+  // A class login card scanned on a device that already has players (a new device goes straight to FirstRun's sign-in).
+  const cardLink = useClassSignInLink();
+  const [card, setCard] = useState<ClassCodes | null>(null);
+  const cardKey = cardLink ? `${cardLink.classCode ?? ""}/${cardLink.studentCode}` : "";
+  const [seenCard, setSeenCard] = useState("");
+  if (ready && cardKey !== seenCard) {
+    setSeenCard(cardKey);
+    if (cardLink && profiles.length > 0) setCard(cardLink);
+  }
   // Games and timed sessions hold still while the question is up.
   useEffect(() => {
     setLivePaused(asking);
@@ -118,6 +128,18 @@ export function PlayApp() {
   }, [ready]);
 
   if (!ready) return <LoadingScreen />;
+  if (card) {
+    return (
+      <CardSignIn
+        codes={card}
+        onDone={() => {
+          // The codes were in the address; take them out of it so they aren't left in the history or a bookmark.
+          if (window.location.hash.startsWith("#/class")) window.history.replaceState(null, "", window.location.pathname + window.location.search);
+          setCard(null);
+        }}
+      />
+    );
+  }
   if (profiles.length === 0) return <FirstRun />;
   if (!active) return <Picker />;
 

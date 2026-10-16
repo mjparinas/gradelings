@@ -8,8 +8,9 @@ const h = vi.hoisted(() => ({
   addProfile: vi.fn(() => "new-id"),
   setActive: vi.fn(),
   signInStudent: vi.fn(),
+  signOutStudent: vi.fn(),
   profiles: [] as Partial<Profile>[],
-  account: null as null | { familyId: string },
+  account: null as null | { familyId: string; student?: boolean },
   flagOn: true,
   getKV: vi.fn(async () => undefined),
 }));
@@ -19,7 +20,7 @@ vi.mock("@/lib/store", () => ({
   useProfiles: () => h.profiles,
   useDerived: (id: string) => ({ level: id === "a" ? 4 : 1 }),
 }));
-vi.mock("@/lib/account", () => ({ signInStudent: h.signInStudent }));
+vi.mock("@/lib/account", () => ({ signInStudent: h.signInStudent, signOutStudent: h.signOutStudent }));
 vi.mock("@/lib/remoteFlags", () => ({ useFlag: () => h.flagOn }));
 vi.mock("@/lib/localdb", () => ({ getKV: h.getKV }));
 vi.mock("@/lib/sound", () => ({ sounds: { complete: vi.fn() } }));
@@ -30,7 +31,7 @@ vi.mock("../Critter", async (orig) => ({
 }));
 
 import { CRITTERS } from "../Critter";
-import { ClassSignIn, FirstRun, NewChild, Picker } from "./Start";
+import { CardSignIn, ClassSignIn, FirstRun, NewChild, Picker } from "./Start";
 
 const click = (name: string | RegExp) => fireEvent.click(screen.getByRole("button", { name }));
 
@@ -117,6 +118,62 @@ describe("a login card's QR code", () => {
     window.location.hash = "#/class?c=nope&s=nope";
     render(<FirstRun />);
     expect(screen.getByText(/I'm Ollie the Otter/)).toBeInTheDocument();
+  });
+});
+
+describe("CardSignIn (a login card scanned where players already are)", () => {
+  const codes = { studentCode: "KM7PQR3XTA" };
+
+  it("says what will be replaced, and signs in with the card's code once the child agrees", async () => {
+    h.profiles = [{ id: "a", name: "Maya" }, { id: "b", name: "Sam" }];
+    h.signInStudent.mockResolvedValue(undefined);
+    const onDone = vi.fn();
+    render(<CardSignIn codes={codes} onDone={onDone} />);
+    expect(screen.getByText(/This device has players: Maya, Sam\. Signing in to a class replaces them/)).toBeInTheDocument();
+    expect(h.signInStudent).not.toHaveBeenCalled();
+    click("Replace them and sign in");
+    expect(screen.getByLabelText("My code")).toHaveValue("KM7PQ-R3XTA");
+    await userEvent.click(screen.getByRole("button", { name: /Let's go!/ }));
+    expect(h.signInStudent).toHaveBeenCalledWith("KM7PQR3XTA", "");
+    expect(onDone).toHaveBeenCalledTimes(1);
+  });
+
+  it("keeps the device as it is when the child says no", () => {
+    h.profiles = [{ id: "a", name: "Maya" }];
+    const onDone = vi.fn();
+    render(<CardSignIn codes={codes} onDone={onDone} />);
+    expect(screen.getByText(/a player: Maya/)).toBeInTheDocument();
+    click("Keep this device as it is");
+    expect(onDone).toHaveBeenCalledTimes(1);
+    expect(h.signInStudent).not.toHaveBeenCalled();
+  });
+
+  it("asks a grown-up to sign out first when a grown-up's account is on the device", () => {
+    h.profiles = [{ id: "a", name: "Maya" }];
+    h.account = { familyId: "f1" };
+    const onDone = vi.fn();
+    render(<CardSignIn codes={codes} onDone={onDone} />);
+    expect(screen.getByRole("heading", { name: "A grown-up is signed in here" })).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Replace them and sign in" })).not.toBeInTheDocument();
+    click("OK");
+    expect(onDone).toHaveBeenCalledTimes(1);
+  });
+
+  it("signs the last student out first, then goes to the sign-in", async () => {
+    h.profiles = [{ id: "a", name: "Maya" }];
+    h.account = { familyId: "f1", student: true };
+    h.signOutStudent.mockResolvedValue(undefined);
+    render(<CardSignIn codes={codes} onDone={() => {}} />);
+    expect(screen.getByText(/signed in to a class on this device/)).toBeInTheDocument();
+    await userEvent.click(screen.getByRole("button", { name: "Sign in to my class" }));
+    expect(h.signOutStudent).toHaveBeenCalledTimes(1);
+    expect(await screen.findByLabelText("My code")).toHaveValue("KM7PQ-R3XTA");
+  });
+
+  it("goes straight to the sign-in, with both codes, on a device with no players", () => {
+    render(<CardSignIn codes={{ classCode: "AB12CD", studentCode: "ZX91PQ2M" }} onDone={() => {}} />);
+    expect(screen.getByLabelText("Class code")).toHaveValue("AB12CD");
+    expect(screen.getByLabelText("My code")).toHaveValue("ZX91PQ2M");
   });
 });
 

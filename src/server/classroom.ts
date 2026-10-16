@@ -95,6 +95,30 @@ export async function teachingClass(id: string, parentId: string): Promise<{ cls
   return rows[0] ? { cls: rows[0], role: "co-teacher" } : undefined;
 }
 
+/** The classes a teacher has hidden from their own class list (ids). */
+export async function hiddenClassIds(parentId: string): Promise<string[]> {
+  const row = (await query<{ hidden_classes: string | null }>("SELECT hidden_classes FROM parents WHERE id = ?", [parentId]))[0];
+  return (row?.hidden_classes ?? "").split(",").filter(Boolean);
+}
+
+/**
+ * Hides a class from one teacher's list, or shows it again. It is saved on the account, so it follows the
+ * teacher to every device, and it changes nothing for the class, its students or the other teachers.
+ * Ids of classes the teacher no longer teaches are dropped as it saves.
+ */
+export async function setClassHidden(parentId: string, classId: string, hidden: boolean): Promise<string[]> {
+  const mine = new Set((await query<{ id: string }>(
+    `SELECT c.id FROM classes c WHERE c.closed_at IS NULL AND (c.owner_parent_id = ? OR c.id IN (SELECT class_id FROM class_teachers WHERE parent_id = ?))`,
+    [parentId, parentId],
+  )).map((r) => r.id));
+  const next = new Set((await hiddenClassIds(parentId)).filter((id) => mine.has(id)));
+  if (hidden) next.add(classId);
+  else next.delete(classId);
+  const ids = [...next];
+  await run("UPDATE parents SET hidden_classes = ? WHERE id = ?", [ids.length ? ids.join(",") : null, parentId]);
+  return ids;
+}
+
 export interface TeacherEntry {
   /** Account id; opaque to the browser. */
   id: string;

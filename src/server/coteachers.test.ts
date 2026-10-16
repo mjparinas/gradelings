@@ -10,12 +10,12 @@ process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 delete process.env.RESEND_API_KEY;
 
 type Mod = Record<string, (req: Request) => Promise<Response>>;
-let signup: Mod, login: Mod, classes: Mod, assignments: Mod, studentRoutes: Mod, teachers: Mod, invites: Mod, account: Mod;
+let signup: Mod, login: Mod, classes: Mod, assignments: Mod, studentRoutes: Mod, teachers: Mod, invites: Mod, account: Mod, hiddenRoute: Mod;
 let dbm: typeof import("@/server/db");
 let studentsMod: typeof import("@/server/students");
 
 beforeAll(async () => {
-  [signup, login, classes, assignments, studentRoutes, teachers, invites, account] = (await Promise.all([
+  [signup, login, classes, assignments, studentRoutes, teachers, invites, account, hiddenRoute] = (await Promise.all([
     import("@/app/api/auth/signup/route"),
     import("@/app/api/auth/login/route"),
     import("@/app/api/classes/route"),
@@ -24,6 +24,7 @@ beforeAll(async () => {
     import("@/app/api/classes/teachers/route"),
     import("@/app/api/classes/invites/route"),
     import("@/app/api/account/route"),
+    import("@/app/api/classes/hidden/route"),
   ])) as unknown as Mod[];
   dbm = await import("@/server/db");
   studentsMod = await import("@/server/students");
@@ -240,5 +241,33 @@ describe("co-teachers", () => {
     expect(await dbm.query("SELECT 1 FROM class_teachers WHERE class_id = ?", [s.cls.id])).toHaveLength(0);
     expect(await dbm.query("SELECT 1 FROM class_invites WHERE class_id = ?", [s.cls.id])).toHaveLength(0);
     expect(await dbm.query("SELECT 1 FROM students WHERE id = ?", [students[0].id])).toHaveLength(0);
+  });
+
+  it("hides a class from one teacher's list only, on every device, and forgets it when they leave", async () => {
+    const s = await joined("hide");
+    const list = async (cookie: string) => (await (await classes.GET(req("/api/classes/", "GET", undefined, cookie))).json()).classes as { id: string; hidden: boolean }[];
+    const hide = (cookie: string, hidden: unknown, classId: unknown = s.cls.id) => hiddenRoute.PATCH(req("/api/classes/hidden/", "PATCH", { classId, hidden }, cookie));
+    expect((await list(s.owner))[0].hidden).toBe(false);
+    expect((await hide(s.owner, true)).status).toBe(200);
+    // A fresh sign-in on another device sees the same list; the co-teacher's list is their own.
+    const again = (await login.POST(req("/api/auth/login/", "POST", { email: "hide-owner@example.com", password: "correct horse" }))).headers.get("set-cookie")!.split(";")[0];
+    expect((await list(again))[0].hidden).toBe(true);
+    expect((await list(s.co))[0].hidden).toBe(false);
+    expect((await hide(s.owner, false)).status).toBe(200);
+    expect((await list(s.owner))[0].hidden).toBe(false);
+    // Only a teacher of the class can change it, and it needs a yes or no.
+    const stranger = await teacher("hide-stranger@example.com");
+    expect((await hide(stranger, true)).status).toBe(404);
+    expect((await hide(s.owner, "yes")).status).toBe(400);
+    expect((await hide(s.owner, true, "no-such-class")).status).toBe(404);
+    expect((await hiddenRoute.PATCH(new Request("http://localhost/api/classes/hidden/", { method: "PATCH", headers: { "content-type": "application/json" }, body: "{}" }))).status).toBe(401);
+    // The co-teacher hides it, then leaves the class: the stale id is dropped the next time they hide anything.
+    await hide(s.co, true);
+    expect(await dbm.query("SELECT hidden_classes FROM parents WHERE email = ?", ["hide-co@example.com"])).toEqual([{ hidden_classes: s.cls.id }]);
+    await dbm.run("DELETE FROM class_teachers WHERE class_id = ?", [s.cls.id]);
+    const other = (await classes.POST(req("/api/classes/", "POST", { name: "Room 5", grade: "4" }, s.co)))
+    const { class: next } = await other.json();
+    await hide(s.co, true, next.id);
+    expect(await dbm.query("SELECT hidden_classes FROM parents WHERE email = ?", ["hide-co@example.com"])).toEqual([{ hidden_classes: next.id }]);
   });
 });
