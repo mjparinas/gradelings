@@ -13,14 +13,29 @@ import { call, classInsights, HOMEWORK_GOALS, isUsClass, US_CLASS_CONSENT, type 
 import { frameworkGroups, frameworkMenu } from "@/lib/frameworkGroups";
 import { gradeLabel } from "@/lib/gradeLabel";
 import { levelInfo } from "@/lib/proficiency";
+import { go, useRoute } from "@/lib/router";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
 import { LiveClass } from "./LiveClass";
 
-// The teacher area: create a class, share its code, assign BC units and see each linked student's
+// The teacher area: create a class, share its code, assign units and see each linked student's
 // practice results. Each class follows one province, territory or state (FRAMEWORKS). It talks to the server only (no kids' store), so it stays light.
+// Like the parent area it uses hash routes: #/ lists the classes and #/class/{id}/{tab} opens one class on a tab.
 
 /** "Province" while only Canada is offered, "Province or state" once a US state is. */
 const REGION_LABEL = frameworkGroups(FRAMEWORKS).length > 1 ? "Province or state" : "Province";
+
+/** The class page's tabs, like the parent area's sections. Progress is the everyday view, so it comes first. */
+const CLASS_TABS = [
+  { path: "progress", label: "Progress", icon: "📈" },
+  { path: "homework", label: "Homework", icon: "📝" },
+  { path: "live", label: "Live", icon: "🙋" },
+  { path: "students", label: "Students", icon: "🧒" },
+  { path: "settings", label: "Settings", icon: "⚙️" },
+] as const;
+type ClassTab = (typeof CLASS_TABS)[number]["path"];
+
+/** A hash link to one tab of a class. Progress is the class's own address. */
+const classHref = (id: string, tab: ClassTab = "progress") => `#/class/${encodeURIComponent(id)}${tab === "progress" ? "" : `/${tab}`}`;
 
 const pct = (v: number) => `${Math.round(v * 100)}%`;
 const btn = "min-h-11 rounded-xl px-4 font-bold";
@@ -498,7 +513,7 @@ function PrintSheet({ data, label, mode }: { data: ClassDetail; label: (key: str
   );
 }
 
-function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
+function ClassPage({ id, tab, onBack }: { id: string; tab: ClassTab; onBack: () => void }) {
   const [data, setData] = useState<ClassDetail | null>(null);
   const [ready, setReady] = useState(false);
   const [pick, setPick] = useState("");
@@ -574,174 +589,189 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
     }
   };
 
+  const tabLink = (t: ClassTab, text: string) => (
+    <a href={classHref(id, t)} className="font-semibold underline">
+      {text}
+    </a>
+  );
+
   return (
     <>
       {printMode && <PrintSheet data={data} label={label} mode={printMode} />}
       <div className="print:hidden">
-      <button type="button" className="mb-3 font-semibold underline" onClick={onBack}>
-        ← All classes
-      </button>
       <h1 className="text-3xl font-bold">{cls.name}</h1>
       <p className="font-read text-ink-soft">
         {gradeLabel(cls.grade, cls.framework)} · {getFramework(cls.framework).curriculumName}
       </p>
 
-      <section className="mt-4 rounded-2xl border border-line bg-white p-5">
-        <h2 className="text-xl font-bold">Class code</h2>
-        <p className="mt-1 font-mono text-4xl font-bold tracking-widest" aria-label={`Class code ${cls.joinCode.split("").join(" ")}`}>
-          {cls.joinCode}
-        </p>
-        <p className="mt-1 font-read text-ink-soft">
-          Share this with families. A parent enters it under Children in the parent area, so they choose what to share. You will only see first names, grade and practice results for the units you assign.
-        </p>
-        {isOwner && (
-          <>
-            <button type="button" className="mt-3 rounded-xl border border-line px-4 py-2 font-semibold" onClick={() => change(`/api/classes/?id=${encodeURIComponent(id)}`, "PATCH")}>
-              Get a new code
-            </button>
-            <p className="mt-1 text-sm text-ink-soft">If the code was shared too widely. Families already linked stay linked; the old code stops working.</p>
-          </>
-        )}
-      </section>
-
-      <Roster data={data} onChange={change} onPrint={() => setPrintMode("cards")} />
-      <Team data={data} onChange={change} onLeave={leave} />
-
-      <section className="mt-4 rounded-2xl border border-line bg-white p-5">
-        <h2 className="text-xl font-bold">Homework</h2>
-        <p className="mt-1 font-read text-ink-soft">
-          Assign units for practice at home or in class, with a due date and a number of questions if you like. Students see them on their home screen and can do them offline: their answers reach you once their device is back online. Without a number of questions, a unit is done when it reaches {meeting}.
-        </p>
-        <ul className="mt-3 divide-y divide-line">
-          {assignments.map((k) => (
-            <li key={k} className="flex flex-wrap items-center gap-2 py-2 font-read">
-              <span className="min-w-40 flex-1">
-                {getUnitRef(k)?.unit.emoji} {label(k)}
-              </span>
-              <DateField
-                label={`Due date for ${label(k)}`}
-                hideLabel
-                size="sm"
-                value={data.due[k] ? toInput(data.due[k]) : ""}
-                onChange={(next) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, dueAt: next ? endOfDay(next) : null })}
-              />
-              <SelectMenu
-                label={`Questions for ${label(k)}`}
-                hideLabel
-                block={false}
-                value={data.goal?.[k] ? String(data.goal[k]) : ""}
-                onChange={(next) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, goal: next ? Number(next) : null })}
-                options={goalOptions}
-              />
-              <button type="button" aria-label={`Remove ${label(k)}`} className="min-h-9 min-w-9 rounded-full font-bold" onClick={() => change(`/api/classes/assignments/?classId=${id}&unitKey=${encodeURIComponent(k)}`, "DELETE")}>
-                ✕
-              </button>
-            </li>
-          ))}
-          {assignments.length === 0 && <li className="py-2 font-read text-ink-soft">Nothing assigned yet.</li>}
-        </ul>
-        <div className="mt-3 flex flex-wrap items-end gap-3">
-          <SelectMenu
-            label="Add a unit"
-            value={pick}
-            onChange={setPick}
-            options={[{ value: "", label: "Choose a unit…" }]}
-            groups={unitGroups(assignments)}
-          />
-          <DateField label="Due (optional)" value={due} onChange={setDue} />
-          <SelectMenu label="Questions (optional)" block={false} value={questions} onChange={setQuestions} options={goalOptions} />
-          <button
-            type="button"
-            disabled={!pick}
-            className={`${btn} bg-[#4f8ef7] text-[#0f172a] disabled:opacity-50`}
-            onClick={async () => {
-              await change("/api/classes/assignments/", "POST", { classId: id, unitKey: pick, dueAt: due ? endOfDay(due) : undefined, goal: questions ? Number(questions) : undefined });
-              setPick("");
-              setDue("");
-              setQuestions("");
-            }}
-          >
-            Assign
-          </button>
-        </div>
-      </section>
-
-      <LiveClass data={data} label={label} unitGroups={unitGroups([])} />
-
-      <section className="mt-4 rounded-2xl border border-line bg-white p-5">
-        <h2 className="text-xl font-bold">Students ({students.length})</h2>
-        {students.length === 0 ? (
-          <p className="mt-2 font-read text-ink-soft">No one has joined yet.</p>
-        ) : assignments.length === 0 ? (
-          <p className="mt-2 font-read text-ink-soft">Assign homework to see how each student is doing.</p>
-        ) : (
-          <div className="mt-3 overflow-x-auto">
-            <table className="w-full min-w-[32rem] text-left font-read">
-              <thead>
-                <tr className="border-b border-line">
-                  <th scope="col" className="py-2 pr-3">Student</th>
-                  {assignments.map((k) => (
-                    <th key={k} scope="col" className="py-2 pr-3">{label(k)}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {students.map((s) => (
-                  <tr key={s.profileId} className="border-b border-line align-top last:border-0">
-                    <th scope="row" className="py-2 pr-3 font-bold">
-                      {s.name}
-                      <span className="block text-sm font-normal text-ink-soft">{s.lastActive ? `Active ${new Date(s.lastActive).toLocaleDateString("en-CA", { month: "short", day: "numeric" })}` : "Not active yet"}</span>
-                    </th>
-                    {s.units.map((u) => (
-                      <td key={u.key} className="py-2 pr-3">
-                        <b>{levelLabel(u.level)}</b>
-                        {data.goal?.[u.key] && u.done !== undefined ? (
-                          <span className="block text-sm">{u.done >= data.goal[u.key] ? "Homework done ✓" : `Homework: ${u.done} of ${data.goal[u.key]}`}</span>
-                        ) : null}
-                        {u.attempts > 0 && (
-                          <span className="block text-sm text-ink-soft">
-                            {pct(u.accuracy)} · {u.attempts} {u.attempts === 1 ? "question" : "questions"}
-                          </span>
-                        )}
-                      </td>
+      {tab === "progress" && (
+        <>
+          <section className="mt-4 rounded-2xl border border-line bg-white p-5">
+            <h2 className="text-xl font-bold">Students ({students.length})</h2>
+            {students.length === 0 ? (
+              <p className="mt-2 font-read text-ink-soft">No one has joined yet. {tabLink("students", "Add students or share the class code")}</p>
+            ) : assignments.length === 0 ? (
+              <p className="mt-2 font-read text-ink-soft">Assign homework to see how each student is doing. {tabLink("homework", "Go to Homework")}</p>
+            ) : (
+              <div className="mt-3 overflow-x-auto">
+                <table className="w-full min-w-[32rem] text-left font-read">
+                  <thead>
+                    <tr className="border-b border-line">
+                      <th scope="col" className="py-2 pr-3">Student</th>
+                      {assignments.map((k) => (
+                        <th key={k} scope="col" className="py-2 pr-3">{label(k)}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {students.map((s) => (
+                      <tr key={s.profileId} className="border-b border-line align-top last:border-0">
+                        <th scope="row" className="py-2 pr-3 font-bold">
+                          {s.name}
+                          <span className="block text-sm font-normal text-ink-soft">{s.lastActive ? `Active ${new Date(s.lastActive).toLocaleDateString("en-CA", { month: "short", day: "numeric" })}` : "Not active yet"}</span>
+                        </th>
+                        {s.units.map((u) => (
+                          <td key={u.key} className="py-2 pr-3">
+                            <b>{levelLabel(u.level)}</b>
+                            {data.goal?.[u.key] && u.done !== undefined ? (
+                              <span className="block text-sm">{u.done >= data.goal[u.key] ? "Homework done ✓" : `Homework: ${u.done} of ${data.goal[u.key]}`}</span>
+                            ) : null}
+                            {u.attempts > 0 && (
+                              <span className="block text-sm text-ink-soft">
+                                {pct(u.accuracy)} · {u.attempts} {u.attempts === 1 ? "question" : "questions"}
+                              </span>
+                            )}
+                          </td>
+                        ))}
+                      </tr>
                     ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-        <p className="mt-3 text-sm text-ink-soft">This reflects practice in {APP_NAME}, not a report-card mark. You decide proficiency.</p>
-        {students.length > 0 && assignments.length > 0 && (
-          <button type="button" className={`${btn} mt-3 border border-line`} onClick={() => setPrintMode("summary")}>
-            Print class summary
-          </button>
-        )}
-      </section>
+                  </tbody>
+                </table>
+              </div>
+            )}
+            <p className="mt-3 text-sm text-ink-soft">This reflects practice in {APP_NAME}, not a report-card mark. You decide proficiency.</p>
+            {students.length > 0 && assignments.length > 0 && (
+              <button type="button" className={`${btn} mt-3 border border-line`} onClick={() => setPrintMode("summary")}>
+                Print class summary
+              </button>
+            )}
+          </section>
+          <Insights data={data} label={label} />
+        </>
+      )}
 
-      <Insights data={data} label={label} />
-      <SendHome cls={cls} />
+      {tab === "homework" && (
+        <section className="mt-4 rounded-2xl border border-line bg-white p-5">
+          <h2 className="text-xl font-bold">Homework</h2>
+          <p className="mt-1 font-read text-ink-soft">
+            Assign units for practice at home or in class, with a due date and a number of questions if you like. Students see them on their home screen and can do them offline: their answers reach you once their device is back online. Without a number of questions, a unit is done when it reaches {meeting}.
+          </p>
+          <ul className="mt-3 divide-y divide-line">
+            {assignments.map((k) => (
+              <li key={k} className="flex flex-wrap items-center gap-2 py-2 font-read">
+                <span className="min-w-40 flex-1">
+                  {getUnitRef(k)?.unit.emoji} {label(k)}
+                </span>
+                <DateField
+                  label={`Due date for ${label(k)}`}
+                  hideLabel
+                  size="sm"
+                  value={data.due[k] ? toInput(data.due[k]) : ""}
+                  onChange={(next) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, dueAt: next ? endOfDay(next) : null })}
+                />
+                <SelectMenu
+                  label={`Questions for ${label(k)}`}
+                  hideLabel
+                  block={false}
+                  value={data.goal?.[k] ? String(data.goal[k]) : ""}
+                  onChange={(next) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, goal: next ? Number(next) : null })}
+                  options={goalOptions}
+                />
+                <button type="button" aria-label={`Remove ${label(k)}`} className="min-h-9 min-w-9 rounded-full font-bold" onClick={() => change(`/api/classes/assignments/?classId=${id}&unitKey=${encodeURIComponent(k)}`, "DELETE")}>
+                  ✕
+                </button>
+              </li>
+            ))}
+            {assignments.length === 0 && <li className="py-2 font-read text-ink-soft">Nothing assigned yet.</li>}
+          </ul>
+          <div className="mt-3 flex flex-wrap items-end gap-3">
+            <SelectMenu
+              label="Add a unit"
+              value={pick}
+              onChange={setPick}
+              options={[{ value: "", label: "Choose a unit…" }]}
+              groups={unitGroups(assignments)}
+            />
+            <DateField label="Due (optional)" value={due} onChange={setDue} />
+            <SelectMenu label="Questions (optional)" block={false} value={questions} onChange={setQuestions} options={goalOptions} />
+            <button
+              type="button"
+              disabled={!pick}
+              className={`${btn} bg-[#4f8ef7] text-[#0f172a] disabled:opacity-50`}
+              onClick={async () => {
+                await change("/api/classes/assignments/", "POST", { classId: id, unitKey: pick, dueAt: due ? endOfDay(due) : undefined, goal: questions ? Number(questions) : undefined });
+                setPick("");
+                setDue("");
+                setQuestions("");
+              }}
+            >
+              Assign
+            </button>
+          </div>
+        </section>
+      )}
+
+      {tab === "live" && <LiveClass data={data} label={label} unitGroups={unitGroups([])} />}
+
+      {tab === "students" && (
+        <>
+          <section className="mt-4 rounded-2xl border border-line bg-white p-5">
+            <h2 className="text-xl font-bold">Class code</h2>
+            <p className="mt-1 font-mono text-4xl font-bold tracking-widest" aria-label={`Class code ${cls.joinCode.split("").join(" ")}`}>
+              {cls.joinCode}
+            </p>
+            <p className="mt-1 font-read text-ink-soft">
+              Share this with families. A parent enters it under Children in the parent area, so they choose what to share. You will only see first names, grade and practice results for the units you assign.
+            </p>
+            {isOwner && (
+              <>
+                <button type="button" className="mt-3 rounded-xl border border-line px-4 py-2 font-semibold" onClick={() => change(`/api/classes/?id=${encodeURIComponent(id)}`, "PATCH")}>
+                  Get a new code
+                </button>
+                <p className="mt-1 text-sm text-ink-soft">If the code was shared too widely. Families already linked stay linked; the old code stops working.</p>
+              </>
+            )}
+          </section>
+          <Roster data={data} onChange={change} onPrint={() => setPrintMode("cards")} />
+          <SendHome cls={cls} />
+        </>
+      )}
+
+      {tab === "settings" && (
+        <>
+          <Team data={data} onChange={change} onLeave={leave} />
+          {isOwner && (
+            <section className="mt-4 rounded-2xl border border-line bg-white p-5">
+              <h2 className="text-xl font-bold">Close this class</h2>
+              <p className="mt-1 font-read text-ink-soft">Closing removes every link to students and all co-teachers straight away, and deletes the student accounts you added. Families keep their own data.</p>
+              {confirmClose ? (
+                <button type="button" className={`${btn} mt-3 border border-[#e57a12] text-nudge-dark`} onClick={() => void leave(`/api/classes/?id=${id}`)}>
+                  Yes, close {cls.name}
+                </button>
+              ) : (
+                <button type="button" className={`${btn} mt-3 border border-line`} onClick={() => setConfirmClose(true)}>
+                  Close class
+                </button>
+              )}
+            </section>
+          )}
+        </>
+      )}
 
       {err && (
         <p role="alert" className="mt-3 text-nudge-dark">
           {err}
         </p>
-      )}
-
-      {isOwner && (
-      <section className="mt-4 rounded-2xl border border-line bg-white p-5">
-        <h2 className="text-xl font-bold">Close this class</h2>
-        <p className="mt-1 font-read text-ink-soft">Closing removes every link to students and all co-teachers straight away, and deletes the student accounts you added. Families keep their own data.</p>
-        {confirmClose ? (
-          <button type="button" className={`${btn} mt-3 border border-[#e57a12] text-nudge-dark`} onClick={() => void leave(`/api/classes/?id=${id}`)}>
-            Yes, close {cls.name}
-          </button>
-        ) : (
-          <button type="button" className={`${btn} mt-3 border border-line`} onClick={() => setConfirmClose(true)}>
-            Close class
-          </button>
-        )}
-      </section>
       )}
       </div>
     </>
@@ -750,7 +780,10 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
 
 export function TeacherApp() {
   const [signedIn, setSignedIn] = useState<boolean | null>(null);
-  const [classId, setClassId] = useState<string | null>(null);
+  const { path } = useRoute();
+  // #/class/{id}/{tab} opens a class on one tab; anything else is the class list.
+  const classId = path[0] === "class" && path[1] ? path[1] : null;
+  const tab = CLASS_TABS.find((t) => t.path === path[2])?.path ?? "progress";
 
   useEffect(() => {
     // A class student's login is not a teacher's: only a real account counts.
@@ -762,7 +795,7 @@ export function TeacherApp() {
   return (
     <div className="min-h-dvh bg-[#f6f5f1]">
       <SkipLink />
-      <header className="border-b border-line bg-white" style={{ paddingTop: "env(safe-area-inset-top)" }}>
+      <header className="sticky top-0 z-30 border-b border-line bg-white/90 backdrop-blur print:hidden" style={{ paddingTop: "env(safe-area-inset-top)" }}>
         <div className="mx-auto flex max-w-4xl items-center justify-between gap-2 px-4 py-3">
           <span className="flex items-center gap-2">
             <Link href="/" className="text-2xl font-bold tracking-tight" aria-label={APP_NAME}>
@@ -780,16 +813,48 @@ export function TeacherApp() {
               <button
                 type="button"
                 className="font-semibold underline"
-                onClick={() => call("/api/auth/logout/", "POST").finally(() => { setSignedIn(false); setClassId(null); })}
+                onClick={() => call("/api/auth/logout/", "POST").finally(() => { setSignedIn(false); go("/"); })}
               >
                 Sign out
               </button>
             )}
           </div>
         </div>
+        {signedIn && classId && (
+          <nav className="mx-auto max-w-4xl overflow-x-auto px-2" aria-label="Class sections">
+            <ul className="flex gap-1 pb-2">
+              <li>
+                <a href="#/" className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-semibold whitespace-nowrap text-ink-soft hover:bg-black/5">
+                  ← All classes
+                </a>
+              </li>
+              {CLASS_TABS.map((t) => (
+                <li key={t.path}>
+                  <a
+                    href={classHref(classId, t.path)}
+                    aria-current={tab === t.path ? "page" : undefined}
+                    // On a phone the tabs scroll sideways: keep the open one in view.
+                    ref={tab === t.path ? (el) => el?.scrollIntoView?.({ block: "nearest", inline: "nearest" }) : undefined}
+                    className={`flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-semibold whitespace-nowrap ${tab === t.path ? "bg-[#253047] text-white" : "text-ink-soft hover:bg-black/5"}`}
+                  >
+                    <span aria-hidden="true">{t.icon}</span> {t.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
       </header>
       <main id={MAIN_ID} tabIndex={-1} className="mx-auto max-w-4xl px-4 py-6">
-        {signedIn === null ? <p className="font-read">Loading…</p> : !signedIn ? <AuthForm onDone={() => setSignedIn(true)} /> : classId ? <ClassPage id={classId} onBack={() => setClassId(null)} /> : <ClassList onOpen={setClassId} />}
+        {signedIn === null ? (
+          <p className="font-read">Loading…</p>
+        ) : !signedIn ? (
+          <AuthForm onDone={() => setSignedIn(true)} />
+        ) : classId ? (
+          <ClassPage key={classId} id={classId} tab={tab} onBack={() => go("/")} />
+        ) : (
+          <ClassList onOpen={(id) => go(`/class/${encodeURIComponent(id)}`)} />
+        )}
       </main>
     </div>
   );
