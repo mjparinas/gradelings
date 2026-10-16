@@ -210,3 +210,23 @@ describe("live questions", () => {
     expect(await live.pickLiveQuestion(cls, "2/math/nope", 0)).toBeNull();
   });
 });
+
+describe("read-aloud on live questions", () => {
+  it("lets the teacher turn read-aloud off for a question, and tells the child's device", async () => {
+    const { teacher, parent, cls, kid } = await classWithChild("ra");
+    const ask = async (body: object) => (await (await teacherLive.POST(req("/api/classes/live/", "POST", { classId: cls.id, unitKey: UNIT, ...body }, teacher))).json()).live;
+    // On unless said otherwise.
+    expect((await ask({})).question.readAloud).toBe(true);
+    expect((await ask({ readAloud: false })).question.readAloud).toBe(false);
+    const seen = await (await childLive.GET(req(`/api/live/?profile=${kid}`, "GET", undefined, parent))).json();
+    expect(seen.live.question.readAloud).toBe(false);
+    expect(seen.live.question.answer).toBeUndefined();
+
+    // Changing it while the question is open reaches the child on the next poll.
+    const patch = (body: object) => teacherLive.PATCH(req("/api/classes/live/", "PATCH", { classId: cls.id, ...body }, teacher));
+    expect((await patch({ action: "read-aloud", on: true })).status).toBe(200);
+    expect((await (await childLive.GET(req(`/api/live/?profile=${kid}`, "GET", undefined, parent))).json()).live.question.readAloud).toBe(true);
+    expect((await patch({ action: "read-aloud", on: "yes" })).status).toBe(400);
+    expect((await patch({ action: "other" })).status).toBe(400);
+  });
+});

@@ -20,12 +20,21 @@ export function LiveClass({ data, label, unitGroups }: { data: ClassDetail; labe
   const [pick, setPick] = useState(data.assignments[0] ?? "");
   const [err, setErr] = useState("");
   const [busy, setBusy] = useState(false);
+  // Read-aloud on students' devices: chosen before asking, and changeable while a question is open.
+  const [readAloudNext, setReadAloudNext] = useState(true);
+  // Projector view: bigger text, and no student names on screen.
+  const [present, setPresent] = useState(false);
+  // The last refresh failed (offline, signed out, server trouble), so the tally on screen may be out of date.
+  const [stale, setStale] = useState(false);
 
   const refresh = useCallback(
     () =>
       call<{ live: LiveForTeacher | null }>(`/api/classes/live/?classId=${encodeURIComponent(classId)}`)
-        .then((r) => setLive(r.live))
-        .catch(() => undefined),
+        .then((r) => {
+          setLive(r.live);
+          setStale(false);
+        })
+        .catch(() => setStale(true)),
     [classId],
   );
   useEffect(() => {
@@ -51,7 +60,9 @@ export function LiveClass({ data, label, unitGroups }: { data: ClassDetail; labe
     }
     setBusy(false);
   };
-  const ask = (unitKey: string) => act("POST", { classId, unitKey });
+  const readAloud = live ? live.question.readAloud !== false : readAloudNext;
+  const ask = (unitKey: string) => act("POST", { classId, unitKey, readAloud });
+  const setReadAloud = (on: boolean) => (live ? act("PATCH", { classId, action: "read-aloud", on }) : setReadAloudNext(on));
 
   const [recap, setRecap] = useState<LiveForTeacher[] | null>(null);
   const [copied, setCopied] = useState(false);
@@ -76,6 +87,21 @@ export function LiveClass({ data, label, unitGroups }: { data: ClassDetail; labe
       <p className="mt-1 font-read text-ink-soft">
         Ask the class one question at a time and watch the answers come in. Students see it on their home screen while their device is online. Live answers don’t change anyone’s practice levels, and they are deleted after a day.
       </p>
+      {stale && (
+        <p role="status" className="mt-3 rounded-xl bg-nudge/30 px-3 py-2 font-read font-semibold">
+          Lost the connection. Trying again. The answers below may be out of date.
+        </p>
+      )}
+      <div className="mt-3 flex flex-wrap items-center gap-x-6">
+        <label className="flex min-h-11 items-center gap-2 font-semibold">
+          <input type="checkbox" className="h-5 w-5" checked={readAloud} onChange={(e) => void setReadAloud(e.target.checked)} />
+          Let students hear the question read aloud
+        </label>
+        <label className="flex min-h-11 items-center gap-2 font-semibold">
+          <input type="checkbox" className="h-5 w-5" checked={present} onChange={(e) => setPresent(e.target.checked)} />
+          Projector view (bigger text, no names)
+        </label>
+      </div>
       {!live ? (
         <div className="mt-3 flex flex-wrap items-end gap-3">
           <SelectMenu label="Ask from" value={pick} onChange={setPick} options={[{ value: "", label: "Choose a unit…" }]} groups={unitGroups} />
@@ -86,7 +112,7 @@ export function LiveClass({ data, label, unitGroups }: { data: ClassDetail; labe
       ) : (
         <div className="mt-3">
           <p className="text-sm font-semibold text-ink-soft">{label(live.unitKey)}</p>
-          <p lang={live.question.lang} className="mt-1 font-read text-2xl font-bold">
+          <p lang={live.question.lang} className={`mt-1 font-read font-bold ${present ? "text-4xl" : "text-2xl"}`}>
             {live.question.prompt}
           </p>
           {live.question.visual && (
@@ -99,7 +125,7 @@ export function LiveClass({ data, label, unitGroups }: { data: ClassDetail; labe
               const n = counts[i]?.count ?? 0;
               const right = c.id === live.question.answer;
               return (
-                <li key={c.id} className="font-read">
+                <li key={c.id} className={`font-read ${present ? "text-3xl" : ""}`}>
                   <span className="flex items-center justify-between gap-2">
                     <span lang={live.question.choicesLang ?? live.question.lang}>
                       {c.emoji} {c.label}
@@ -114,18 +140,18 @@ export function LiveClass({ data, label, unitGroups }: { data: ClassDetail; labe
               );
             })}
           </ul>
-          <p className="mt-3 font-read" role="status">
+          <p className={`mt-3 font-read ${present ? "text-2xl" : ""}`} role="status">
             <b>
               {live.answers.length} of {data.students.length}
             </b>{" "}
             answered{live.revealed ? " · answer shown to the class" : ""}
           </p>
-          {live.answers.length > 0 && (
+          {!present && live.answers.length > 0 && (
             <p className="font-read text-sm text-ink-soft">
               Answered: {live.answers.map((a) => `${names.get(a.profileId) ?? "Student"}${live.revealed ? (a.correct ? " ✓" : "") : ""}`).join(", ")}
             </p>
           )}
-          {waiting.length > 0 && !live.revealed && <p className="font-read text-sm text-ink-soft">Waiting for: {waiting.join(", ")}</p>}
+          {!present && waiting.length > 0 && !live.revealed && <p className="font-read text-sm text-ink-soft">Waiting for: {waiting.join(", ")}</p>}
           <div className="mt-3 flex flex-wrap gap-3">
             {!live.revealed && (
               <button type="button" disabled={busy} className={`${btn} bg-[#25b47e] text-[#0f172a] disabled:opacity-50`} onClick={() => void act("PATCH", { classId, action: "reveal" })}>

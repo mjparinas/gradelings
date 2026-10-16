@@ -143,7 +143,7 @@ describe("TeacherApp class page", () => {
     const section = screen.getByRole("region", { name: "Live questions" });
     // The first homework unit is picked to start.
     await user.click(within(section).getByRole("button", { name: "Ask a live question" }));
-    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/live/", "POST", { classId: "class-1", unitKey: "3/math/counting" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/live/", "POST", { classId: "class-1", unitKey: "3/math/counting", readAloud: true }));
     expect(await within(section).findByText("How many?")).toBeInTheDocument();
     expect(section).toHaveTextContent("1 of 3 answered");
     expect(section).toHaveTextContent("Answered: Maya");
@@ -679,6 +679,73 @@ describe("TeacherApp keyboard and screen-reader support", () => {
     await openTab(user, "Homework");
     expect(screen.getByRole("button", { name: "Remove Counting" })).toHaveClass("min-h-11", "min-w-11");
   });
+});
+
+describe("TeacherApp live questions: read-aloud, projector view and a lost connection", () => {
+  const question = { prompt: "How many?", hint: "Count them.", choices: [{ id: "a", label: "3" }, { id: "b", label: "4" }], answer: "b" };
+  const openState = (extra: object = {}) => ({ id: "q1", unitKey: "3/math/counting", question: { ...question, ...extra }, revealed: false, createdAt: now, answers: [{ profileId: "p1", choice: "a", correct: false }] });
+
+  it("lets the teacher turn read-aloud off before asking, and sends that choice", async () => {
+    serve(detail, (url) => (url.startsWith("/api/classes/live/") ? { live: null } : undefined));
+    const user = await openClass();
+    await openTab(user, "Live");
+    const box = screen.getByRole("checkbox", { name: "Let students hear the question read aloud" });
+    expect(box).toBeChecked();
+    await user.click(box);
+    await user.click(screen.getByRole("button", { name: "Ask a live question" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/live/", "POST", { classId: "class-1", unitKey: "3/math/counting", readAloud: false }));
+  });
+
+  it("changes read-aloud for the question that is open", async () => {
+    serve(detail, (url, method) => (url.startsWith("/api/classes/live/") ? { live: method === "PATCH" ? openState({ readAloud: false }) : openState() } : undefined));
+    const user = await openClass();
+    await openTab(user, "Live");
+    const box = await screen.findByRole("checkbox", { name: "Let students hear the question read aloud" });
+    await waitFor(() => expect(box).toBeChecked());
+    await user.click(box);
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/live/", "PATCH", { classId: "class-1", action: "read-aloud", on: false }));
+    await waitFor(() => expect(box).not.toBeChecked());
+  });
+
+  it("shows read-aloud as off for a question the teacher already muted", async () => {
+    serve(detail, (url) => (url.startsWith("/api/classes/live/") ? { live: openState({ readAloud: false }) } : undefined));
+    const user = await openClass();
+    await openTab(user, "Live");
+    await waitFor(() => expect(screen.getByRole("checkbox", { name: "Let students hear the question read aloud" })).not.toBeChecked());
+  });
+
+  it("projector view hides student names and enlarges the question", async () => {
+    serve(detail, (url) => (url.startsWith("/api/classes/live/") ? { live: openState() } : undefined));
+    const user = await openClass();
+    await openTab(user, "Live");
+    const section = screen.getByRole("region", { name: "Live questions" });
+    expect(await within(section).findByText(/Waiting for: Sam, Alex/)).toBeInTheDocument();
+    expect(within(section).getByText("How many?")).toHaveClass("text-2xl");
+    await user.click(within(section).getByRole("checkbox", { name: "Projector view (bigger text, no names)" }));
+    expect(within(section).queryByText(/Waiting for/)).not.toBeInTheDocument();
+    expect(within(section).queryByText(/Answered: Maya/)).not.toBeInTheDocument();
+    expect(within(section).getByText("How many?")).toHaveClass("text-4xl");
+    expect(section).toHaveTextContent("1 of 3 answered");
+  });
+
+  it("says so when the tally can't be refreshed, and stops saying so once it can", async () => {
+    let fail = false;
+    serve(detail, (url, method) => {
+      if (!url.startsWith("/api/classes/live/") || method !== "GET") return undefined;
+      return fail ? Promise.reject(new Error("You’re offline.")) : { live: openState() };
+    });
+    const user = await openClass();
+    await openTab(user, "Live");
+    const section = screen.getByRole("region", { name: "Live questions" });
+    await within(section).findByText("How many?");
+    expect(within(section).queryByText(/Lost the connection/)).not.toBeInTheDocument();
+    fail = true;
+    await new Promise((r) => setTimeout(r, 2700));
+    expect(await within(section).findByText(/Lost the connection/)).toBeInTheDocument();
+    fail = false;
+    await new Promise((r) => setTimeout(r, 2700));
+    await waitFor(() => expect(within(section).queryByText(/Lost the connection/)).not.toBeInTheDocument());
+  }, 15000);
 });
 
 describe("TeacherApp students", () => {
