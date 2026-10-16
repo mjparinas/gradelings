@@ -11,6 +11,7 @@ import { SelectMenu } from "@/components/SelectMenu";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { call, classInsights, HOMEWORK_GOALS, homeworkOverview, isHomeworkDone, isUsClass, US_CLASS_CONSENT, type ClassInvite, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
 import { frameworkGroups, frameworkMenu } from "@/lib/frameworkGroups";
+import { classCsv } from "@/lib/classCsv";
 import { countryOf } from "@/lib/country";
 import { gradeLabel } from "@/lib/gradeLabel";
 import { levelInfo } from "@/lib/proficiency";
@@ -744,6 +745,16 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
   const levelLabel = (level: number) => (level < 0 ? "Not started" : levelInfo(cls.framework, cls.grade, level)?.label ?? "");
   // "Proficient" in BC; each curriculum's own word for its third level elsewhere.
   const meeting = levelInfo(cls.framework, cls.grade, 2)?.label ?? "Proficient";
+  /** The class table as a CSV file, for a gradebook or spreadsheet. */
+  const downloadCsv = () => {
+    const csv = classCsv({ students, assignments, unitName: label, levelName: (l) => levelLabel(l), goal: data.goal ?? {}, due: data.due, appName: APP_NAME });
+    const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `${cls.name.replace(/[^\p{L}\p{N}]+/gu, "-").replace(/^-|-$/g, "").toLowerCase() || "class"}-practice-${new Date().toISOString().slice(0, 10)}.csv`;
+    link.click();
+    URL.revokeObjectURL(url);
+  };
   const overview = homeworkOverview(students, assignments, data.due, data.goal ?? {}, now);
   const overdue = overview.filter((o) => o.overdue).length;
   const goalOptions = [{ value: "", label: `Until ${meeting}` }, ...HOMEWORK_GOALS.map((n) => ({ value: String(n), label: `${n} questions` }))];
@@ -846,9 +857,14 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
             )}
             <p className="mt-3 text-sm text-ink-soft">This reflects practice in {APP_NAME}, not a report-card mark. You decide proficiency.</p>
             {students.length > 0 && assignments.length > 0 && (
-              <button type="button" className={`${btn} mt-3 border border-line`} onClick={() => setPrintMode("summary")}>
-                Print class summary
-              </button>
+              <div className="mt-3 flex flex-wrap gap-3">
+                <button type="button" className={`${btn} border border-line`} onClick={() => setPrintMode("summary")}>
+                  Print class summary
+                </button>
+                <button type="button" className={`${btn} border border-line`} onClick={downloadCsv}>
+                  Download as spreadsheet (CSV)
+                </button>
+              </div>
             )}
           </section>
           <Insights data={data} label={label} />
