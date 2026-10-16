@@ -18,7 +18,7 @@ import { useIsOn } from "@/lib/remoteFlags";
 import { signOutStudent } from "@/lib/account";
 import { go } from "@/lib/router";
 import { useChildSay } from "@/lib/say";
-import { useActiveProfile, useChildSettings, useDerived, useStore } from "@/lib/store";
+import { eventsFor, useActiveProfile, useChildSettings, useDerived, useStore } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 import { useBand } from "../band";
 import { SayButton, useBuddySays } from "./BuddySays";
@@ -32,6 +32,8 @@ import { BuddyButton, MooseVisitor } from "./Secrets";
 import { suggestions } from "./plans";
 import { useAllowed } from "./useAllowed";
 import { useClasswork } from "./useClasswork";
+import { LiveQuestionCard, useLiveQuestion } from "./LiveQuestion";
+import { homeworkDone } from "@/lib/classroom";
 import { ParentNote } from "./ParentNote";
 import { LevelChip } from "./Practice";
 import { InstallChip } from "./InstallChip";
@@ -91,6 +93,8 @@ export function Hub() {
   const nextInfo = next ? levelInfo(profile.framework, profile.grade, next.level) : undefined;
   const refresher = refresherUnit({ grade: profile.grade, framework: profile.framework, derived: d, subjects, allowed, now });
   const classwork = useClasswork();
+  const live = useLiveQuestion();
+  const allEvents = useStore((s) => s.events);
   // Little kids see one quest at a time, the first not yet done, and no weekly goals.
   const littleQuest = quests.find((q) => !claimed.includes(q.id));
   // ...and at most one suggestion card: "Almost there" first.
@@ -177,6 +181,8 @@ export function Hub() {
   return (
     <Page className="gap-5 short:gap-3">
       <Hud />
+      {/* Only while the child's teacher is asking the class something, and only online. */}
+      <LiveQuestionCard state={live} />
 
       <div className="flex items-center gap-3">
         {/* Smaller on the narrowest phones, hidden on phones held sideways, so the big button stays in view. */}
@@ -268,9 +274,12 @@ export function Hub() {
             <span className="text-sm font-semibold text-ink-soft">{classwork[0].className}</span>
           </h2>
           <ul className="flex flex-col gap-2.5">
-            {classwork.map(({ ref, dueAt }) => {
+            {classwork.map(({ ref, dueAt, goal: questions, since }) => {
               const meta = getSubjectMeta(ref.course.subject);
-              const done = unitLevel(d.units[ref.key]) >= 2;
+              // Homework with a question count is done once that many are answered (counted on this
+              // device, so offline too); otherwise when the unit reaches Proficient.
+              const answered = questions ? Math.min(questions, homeworkDone(eventsFor(allEvents, profile), ref.key, since ?? 0)) : 0;
+              const done = questions ? answered >= questions : unitLevel(d.units[ref.key]) >= 2;
               return (
                 <li key={ref.key}>
                   <a
@@ -283,8 +292,10 @@ export function Hub() {
                       <span className="block font-read text-lg font-bold">{ref.unit.title}</span>
                       <span className="block text-sm font-semibold text-ink-soft">
                         {meta.title[band]}
+                        {questions ? ` · ${done ? "Done! ✓" : `${answered} of ${questions} questions`}` : ""}
                         {dueAt && !done && dueAt > now ? ` · Try to finish by ${new Date(dueAt).toLocaleDateString("en-CA", { weekday: "short", month: "short", day: "numeric" })}` : ""}
                       </span>
+                      {questions && !done ? <ProgressBar value={answered} max={questions} height={8} className="mt-1" label={`${ref.unit.title}: ${answered} of ${questions} questions`} /> : null}
                     </span>
                     <LevelChip level={unitLevel(d.units[ref.key])} compact={little} />
                     <span className="text-xl">▶</span>

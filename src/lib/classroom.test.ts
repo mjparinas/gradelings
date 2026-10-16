@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { call, classInsights, type StudentRow } from "./classroom";
+import { call, classInsights, homeworkDone, type StudentRow } from "./classroom";
 
 const DAY = 86_400_000;
 const NOW = 100 * DAY;
@@ -62,5 +62,15 @@ describe("call (teacher API helper)", () => {
     await expect(call("/api/classes/")).rejects.toThrow("Something went wrong (500).");
     vi.stubGlobal("fetch", vi.fn(async () => Promise.reject(new TypeError("Failed to fetch"))));
     await expect(call("/api/classes/")).rejects.toThrow(/offline/);
+  });
+});
+
+describe("homeworkDone", () => {
+  it("counts every answer on the unit since it was assigned, right or not", () => {
+    const e = (unit: string, t: number, type = "answer") => ({ type, unit, t });
+    const events = [e("3/math/add", 5), e("3/math/add", 10), e("3/math/add", 11), e("3/math/sub", 12), e("3/math/add", 13, "session")];
+    expect(homeworkDone(events, "3/math/add", 10)).toBe(2);
+    expect(homeworkDone(events, "3/math/add", 0)).toBe(3);
+    expect(homeworkDone([], "3/math/add", 0)).toBe(0);
   });
 });

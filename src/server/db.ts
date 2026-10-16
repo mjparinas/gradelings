@@ -152,6 +152,31 @@ const SCHEMA = [
     PRIMARY KEY (class_id, email)
   )`,
   `CREATE INDEX IF NOT EXISTS class_invites_email ON class_invites (email)`,
+  // Live questions a teacher asks the class in real time. Online only and short-lived: rows older
+  // than a day are deleted whenever a teacher starts a new one. Answers are a choice id, never free text,
+  // and don't touch a child's practice events, so they never change levels, XP or reports.
+  `CREATE TABLE IF NOT EXISTS live_questions (
+    id TEXT PRIMARY KEY,
+    class_id TEXT NOT NULL,
+    unit_key TEXT NOT NULL,
+    n INTEGER NOT NULL,
+    data TEXT NOT NULL,
+    started_by TEXT NOT NULL,
+    created_at INTEGER NOT NULL,
+    revealed_at INTEGER,
+    ended_at INTEGER
+  )`,
+  `CREATE INDEX IF NOT EXISTS live_questions_class ON live_questions (class_id, created_at)`,
+  `CREATE TABLE IF NOT EXISTS live_answers (
+    question_id TEXT NOT NULL,
+    profile_id TEXT NOT NULL,
+    family_id TEXT NOT NULL,
+    choice TEXT NOT NULL,
+    correct INTEGER NOT NULL,
+    at INTEGER NOT NULL,
+    PRIMARY KEY (question_id, profile_id)
+  )`,
+  `CREATE INDEX IF NOT EXISTS live_answers_family ON live_answers (family_id)`,
   // Weekly-report browser notifications were removed (the weekly email says the same); drop any saved push addresses.
   `DROP TABLE IF EXISTS push_subscriptions`,
   // Codes the owner hands out: free access for a number of days (or for life), or a discount at checkout.
@@ -351,7 +376,8 @@ const CLASS_COLUMNS: [string, string][] = [
   ["inactive_warning_at", "INTEGER"],
 ];
 /** A due date a teacher can set on an assigned unit (ms since epoch). */
-const ASSIGNMENT_COLUMNS: [string, string][] = [["due_at", "INTEGER"]];
+// `goal`: how many questions the teacher asked for (homework); NULL means "until Proficient".
+const ASSIGNMENT_COLUMNS: [string, string][] = [["due_at", "INTEGER"], ["goal", "INTEGER"]];
 const SESSION_COLUMNS: [string, string][] = [["user_agent", "TEXT"]];
 // Mail the admin archived: hidden from the Inbox list (shown under Archived) until moved back.
 const INBOX_COLUMNS: [string, string][] = [["archived_at", "INTEGER"]];

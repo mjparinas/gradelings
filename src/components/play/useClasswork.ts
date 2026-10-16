@@ -9,6 +9,10 @@ export interface Assigned {
   className: string;
   /** When the teacher would like it done (ms since epoch), if they said. */
   dueAt?: number;
+  /** Homework: how many questions the teacher asked for, if they said. */
+  goal?: number;
+  /** When the unit was assigned, so homework counts only questions answered since. */
+  since?: number;
 }
 
 /**
@@ -27,7 +31,7 @@ export function useClasswork(): Assigned[] {
         const ref = getUnitRef(key, profile?.framework);
         if (!ref || seen.has(key)) continue;
         seen.add(key);
-        out.push({ ref, className: c.className, dueAt: c.due?.[key] });
+        out.push({ ref, className: c.className, dueAt: c.due?.[key], goal: c.goal?.[key], since: c.since?.[key] });
       }
     }
     return out;

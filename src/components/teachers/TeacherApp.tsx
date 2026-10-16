@@ -9,11 +9,12 @@ import type { FrameworkId, GradeId } from "@/content/types";
 import { DateField } from "@/components/DateField";
 import { SelectMenu } from "@/components/SelectMenu";
 import { APP_NAME } from "@/lib/brand";
-import { call, classInsights, isUsClass, US_CLASS_CONSENT, type ClassInvite, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
+import { call, classInsights, HOMEWORK_GOALS, isUsClass, US_CLASS_CONSENT, type ClassInvite, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
 import { frameworkGroups, frameworkMenu } from "@/lib/frameworkGroups";
 import { gradeLabel } from "@/lib/gradeLabel";
 import { levelInfo } from "@/lib/proficiency";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
+import { LiveClass } from "./LiveClass";
 
 // The teacher area: create a class, share its code, assign BC units and see each linked student's
 // practice results. Each class follows one province, territory or state (FRAMEWORKS). It talks to the server only (no kids' store), so it stays light.
@@ -166,10 +167,12 @@ function ClassList({ onOpen }: { onOpen: (id: string) => void }) {
   );
 }
 
-interface ClassDetail {
+export interface ClassDetail {
   class: { id: string; name: string; grade: GradeId; framework: FrameworkId; joinCode: string };
   assignments: string[];
   due: Record<string, number>;
+  /** Homework question counts by unit key. Older servers omit it. */
+  goal?: Record<string, number>;
   students: StudentRow[];
   roster: RosterEntry[];
   role?: "owner" | "co-teacher";
@@ -502,6 +505,7 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
   const [err, setErr] = useState("");
   const [confirmClose, setConfirmClose] = useState(false);
   const [due, setDue] = useState("");
+  const [questions, setQuestions] = useState("");
   const [printMode, setPrintMode] = useState<"cards" | "summary" | null>(null);
 
   // Print once the sheet is on the page, then go back to the normal view.
@@ -534,6 +538,18 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
   const isOwner = (data.role ?? "owner") === "owner";
   const label = (key: string) => getUnitRef(key)?.unit.title ?? key;
   const levelLabel = (level: number) => (level < 0 ? "Not started" : levelInfo(cls.framework, cls.grade, level)?.label ?? "");
+  // "Proficient" in BC; each curriculum's own word for its third level elsewhere.
+  const meeting = levelInfo(cls.framework, cls.grade, 2)?.label ?? "Proficient";
+  const goalOptions = [{ value: "", label: `Until ${meeting}` }, ...HOMEWORK_GOALS.map((n) => ({ value: String(n), label: `${n} questions` }))];
+  /** The class's units by subject, for a picker. Units in `taken` are shown but can't be picked. */
+  const unitGroups = (taken: string[]) =>
+    coursesForGrade(cls.grade, cls.framework).map((course) => ({
+      label: getSubjectMeta(course.subject).title.big,
+      options: course.units.map((u) => {
+        const key = `${course.grade}/${course.subject}/${u.id}`;
+        return { value: key, label: `${u.emoji} ${u.title}`, disabled: taken.includes(key) };
+      }),
+    }));
 
   /** Sends a change and reloads the class. Resolves false (with the error shown) when the change failed. */
   const change = async (url: string, method: string, body?: unknown): Promise<boolean> => {
@@ -592,11 +608,16 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
       <Team data={data} onChange={change} onLeave={leave} />
 
       <section className="mt-4 rounded-2xl border border-line bg-white p-5">
-        <h2 className="text-xl font-bold">Assigned units</h2>
-        <ul className="mt-2 flex flex-wrap gap-2">
+        <h2 className="text-xl font-bold">Homework</h2>
+        <p className="mt-1 font-read text-ink-soft">
+          Assign units for practice at home or in class, with a due date and a number of questions if you like. Students see them on their home screen and can do them offline: their answers reach you once their device is back online. Without a number of questions, a unit is done when it reaches {meeting}.
+        </p>
+        <ul className="mt-3 divide-y divide-line">
           {assignments.map((k) => (
-            <li key={k} className="flex items-center gap-2 rounded-full bg-black/5 py-1 pl-3 pr-1 font-read">
-              {getUnitRef(k)?.unit.emoji} {label(k)}
+            <li key={k} className="flex flex-wrap items-center gap-2 py-2 font-read">
+              <span className="min-w-40 flex-1">
+                {getUnitRef(k)?.unit.emoji} {label(k)}
+              </span>
               <DateField
                 label={`Due date for ${label(k)}`}
                 hideLabel
@@ -604,12 +625,20 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
                 value={data.due[k] ? toInput(data.due[k]) : ""}
                 onChange={(next) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, dueAt: next ? endOfDay(next) : null })}
               />
+              <SelectMenu
+                label={`Questions for ${label(k)}`}
+                hideLabel
+                block={false}
+                value={data.goal?.[k] ? String(data.goal[k]) : ""}
+                onChange={(next) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, goal: next ? Number(next) : null })}
+                options={goalOptions}
+              />
               <button type="button" aria-label={`Remove ${label(k)}`} className="min-h-9 min-w-9 rounded-full font-bold" onClick={() => change(`/api/classes/assignments/?classId=${id}&unitKey=${encodeURIComponent(k)}`, "DELETE")}>
                 ✕
               </button>
             </li>
           ))}
-          {assignments.length === 0 && <li className="font-read text-ink-soft">Nothing assigned yet.</li>}
+          {assignments.length === 0 && <li className="py-2 font-read text-ink-soft">Nothing assigned yet.</li>}
         </ul>
         <div className="mt-3 flex flex-wrap items-end gap-3">
           <SelectMenu
@@ -617,23 +646,19 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
             value={pick}
             onChange={setPick}
             options={[{ value: "", label: "Choose a unit…" }]}
-            groups={coursesForGrade(cls.grade, cls.framework).map((course) => ({
-              label: getSubjectMeta(course.subject).title.big,
-              options: course.units.map((u) => {
-                const key = `${course.grade}/${course.subject}/${u.id}`;
-                return { value: key, label: `${u.emoji} ${u.title}`, disabled: assignments.includes(key) };
-              }),
-            }))}
+            groups={unitGroups(assignments)}
           />
           <DateField label="Due (optional)" value={due} onChange={setDue} />
+          <SelectMenu label="Questions (optional)" block={false} value={questions} onChange={setQuestions} options={goalOptions} />
           <button
             type="button"
             disabled={!pick}
             className={`${btn} bg-[#4f8ef7] text-[#0f172a] disabled:opacity-50`}
             onClick={async () => {
-              await change("/api/classes/assignments/", "POST", { classId: id, unitKey: pick, dueAt: due ? endOfDay(due) : undefined });
+              await change("/api/classes/assignments/", "POST", { classId: id, unitKey: pick, dueAt: due ? endOfDay(due) : undefined, goal: questions ? Number(questions) : undefined });
               setPick("");
               setDue("");
+              setQuestions("");
             }}
           >
             Assign
@@ -641,12 +666,14 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
         </div>
       </section>
 
+      <LiveClass data={data} label={label} unitGroups={unitGroups([])} />
+
       <section className="mt-4 rounded-2xl border border-line bg-white p-5">
         <h2 className="text-xl font-bold">Students ({students.length})</h2>
         {students.length === 0 ? (
           <p className="mt-2 font-read text-ink-soft">No one has joined yet.</p>
         ) : assignments.length === 0 ? (
-          <p className="mt-2 font-read text-ink-soft">Assign a unit to see how each student is doing.</p>
+          <p className="mt-2 font-read text-ink-soft">Assign homework to see how each student is doing.</p>
         ) : (
           <div className="mt-3 overflow-x-auto">
             <table className="w-full min-w-[32rem] text-left font-read">
@@ -668,6 +695,9 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
                     {s.units.map((u) => (
                       <td key={u.key} className="py-2 pr-3">
                         <b>{levelLabel(u.level)}</b>
+                        {data.goal?.[u.key] && u.done !== undefined ? (
+                          <span className="block text-sm">{u.done >= data.goal[u.key] ? "Homework done ✓" : `Homework: ${u.done} of ${data.goal[u.key]}`}</span>
+                        ) : null}
                         {u.attempts > 0 && (
                           <span className="block text-sm text-ink-soft">
                             {pct(u.accuracy)} · {u.attempts} {u.attempts === 1 ? "question" : "questions"}

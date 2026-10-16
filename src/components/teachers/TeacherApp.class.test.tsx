@@ -98,6 +98,50 @@ describe("TeacherApp class page", () => {
     expect(insights).toHaveTextContent("This reflects practice, not a report-card mark.");
   });
 
+  it("sets how many questions a homework unit needs and shows each student's count", async () => {
+    const withGoal = {
+      ...detail,
+      goal: { "3/math/counting": 10 },
+      students: detail.students.map((st, i) => ({ ...st, units: st.units.map((u) => ({ ...u, done: u.key === "3/math/counting" ? [4, 10, 0][i] : 0 })) })),
+    };
+    serve(withGoal);
+    const user = await openClass();
+    const table = screen.getAllByRole("table")[0];
+    expect(within(table).getByRole("rowheader", { name: /^Maya/ }).parentElement!.children[1]).toHaveTextContent("Homework: 4 of 10");
+    expect(within(table).getByRole("rowheader", { name: /^Sam/ }).parentElement!.children[1]).toHaveTextContent("Homework done ✓");
+    // Units without a number of questions show no homework line.
+    expect(within(table).getByRole("rowheader", { name: /^Sam/ }).parentElement!.children[2]).not.toHaveTextContent("Homework");
+    expect(screen.getByRole("combobox", { name: "Questions for Counting" })).toHaveTextContent("10 questions");
+    await user.click(screen.getByRole("combobox", { name: "Questions for Patterns" }));
+    await user.click(screen.getByRole("option", { name: "15 questions" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/assignments/", "PATCH", { classId: "class-1", unitKey: "3/math/patterns", goal: 15 }));
+  });
+
+  it("asks a live question, shows answers as they come in, then shows the answer", async () => {
+    const question = { prompt: "How many?", hint: "Count them.", choices: [{ id: "a", label: "3" }, { id: "b", label: "4" }], answer: "b" };
+    let state: unknown = null;
+    serve(detail, (url, method) => {
+      if (!url.startsWith("/api/classes/live/")) return undefined;
+      if (method === "POST") state = { id: "q1", unitKey: "3/math/counting", question, revealed: false, createdAt: now, answers: [{ profileId: "p1", choice: "a", correct: false }] };
+      if (method === "PATCH") state = { ...(state as object), revealed: true };
+      if (method === "DELETE") state = null;
+      return { live: state };
+    });
+    const user = await openClass();
+    const section = screen.getByRole("region", { name: "Live questions" });
+    // The first homework unit is picked to start.
+    await user.click(within(section).getByRole("button", { name: "Ask a live question" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/live/", "POST", { classId: "class-1", unitKey: "3/math/counting" }));
+    expect(await within(section).findByText("How many?")).toBeInTheDocument();
+    expect(section).toHaveTextContent("1 of 3 answered");
+    expect(section).toHaveTextContent("Answered: Maya");
+    expect(section).toHaveTextContent("Waiting for: Sam, Alex");
+    await user.click(within(section).getByRole("button", { name: "Show the answer" }));
+    expect(await within(section).findByText(/answer shown to the class/)).toBeInTheDocument();
+    await user.click(within(section).getByRole("button", { name: "End" }));
+    expect(await within(section).findByRole("button", { name: "Ask a live question" })).toBeInTheDocument();
+  });
+
   it("says when nothing stands out", async () => {
     serve({ ...detail, students: [detail.students[2]] });
     await openClass();
@@ -108,7 +152,7 @@ describe("TeacherApp class page", () => {
     serve({ ...detail, assignments: [], due: {}, students: detail.students.map((s) => ({ ...s, units: [] })) });
     await openClass();
     expect(screen.getByText("Nothing assigned yet.")).toBeInTheDocument();
-    expect(screen.getByText("Assign a unit to see how each student is doing.")).toBeInTheDocument();
+    expect(screen.getByText("Assign homework to see how each student is doing.")).toBeInTheDocument();
     expect(screen.queryByRole("heading", { name: "What to look at next" })).not.toBeInTheDocument();
     expect(screen.queryByRole("button", { name: "Print class summary" })).not.toBeInTheDocument();
   });

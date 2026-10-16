@@ -14,7 +14,7 @@ The School decides to use the service and which students use it, and is responsi
 
 ## 3. What information
 
-For each student: a first name or nickname, the class grade and curriculum, an avatar and settings, and practice results. For each teacher: an email address. Nothing else is collected from students: no email, birth year, surname, photo, voice, location or free text.
+For each student: a first name or nickname, the class grade and curriculum, an avatar and settings, practice results, and which choice they tapped on a live class question (kept for one day). For each teacher: an email address. Nothing else is collected from students: no email, birth year, surname, photo, voice, location or free text.
 
 ## 4. What the Provider will not do
 

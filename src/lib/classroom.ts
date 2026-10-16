@@ -45,7 +45,8 @@ export interface StudentRow {
   avatar: string;
   grade: string;
   lastActive: number | null;
-  units: { key: string; level: number; attempts: number; accuracy: number }[];
+  /** `done`: questions answered on the unit since it was assigned (homework). Older servers omit it. */
+  units: { key: string; level: number; attempts: number; accuracy: number; done?: number }[];
 }
 
 export interface RosterEntry {
@@ -69,6 +70,24 @@ export interface Classwork {
   unitKeys: string[];
   /** Due dates (ms since epoch) by unit key, for the units that have one. */
   due?: Record<string, number>;
+  /** Homework: how many questions the teacher asked for, by unit key. Units without one are done at Proficient. */
+  goal?: Record<string, number>;
+  /** When each unit was assigned (ms since epoch), so homework counts only questions answered since. */
+  since?: Record<string, number>;
+}
+
+/** The question counts a teacher can ask for on a homework unit. */
+export const HOMEWORK_GOALS = [5, 10, 15, 20, 30] as const;
+
+/**
+ * Questions answered on a unit since it was assigned, in any mode, right or not: homework asks for
+ * practice, not a score. Read from events, so a child's device counts it offline and the server
+ * counts the same events once they sync.
+ */
+export function homeworkDone(events: readonly { type: string; unit?: string; t: number }[], unitKey: string, since: number): number {
+  let n = 0;
+  for (const e of events) if (e.type === "answer" && e.unit === unitKey && e.t >= since) n++;
+  return n;
 }
 
 export async function call<T>(url: string, method = "GET", body?: unknown): Promise<T> {

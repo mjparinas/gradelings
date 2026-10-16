@@ -45,7 +45,7 @@ const made = await api("/api/classes/", "POST", { name: "Room 3", grade: "3", fr
 check(made.status === 200, "teacher creates a class");
 const cls = made.data.class;
 const unit = "3/math/multiplication";
-check((await api("/api/classes/assignments/", "POST", { classId: cls.id, unitKey: unit, dueAt: Date.now() + 3 * 86_400_000 })).status === 200, "teacher assigns a unit with a due date");
+check((await api("/api/classes/assignments/", "POST", { classId: cls.id, unitKey: unit, dueAt: Date.now() + 3 * 86_400_000, goal: 5 })).status === 200, "teacher assigns homework with a due date and 5 questions");
 const added = await api("/api/classes/students/", "POST", { classId: cls.id, names: ["Maya"] });
 check(added.status === 200 && added.data.students.length === 1, "teacher adds a student");
 const code = added.data.students[0].loginCode;
@@ -78,6 +78,7 @@ await page.getByRole("button", { name: /Let.s go/ }).click();
 await page.getByText("From your teacher").first().waitFor({ timeout: 15000 });
 await shot("student-home");
 check(await vis(page.getByText(/Try to finish by/)), "the student sees the assignment and its soft due date");
+check(await vis(page.getByText(/0 of 5 questions/)), "the student sees how many homework questions are left");
 check(await vis(page.getByRole("link", { name: /Grown-ups/ })) === false, "a student has no Grown-ups link");
 check(await vis(page.getByRole("button", { name: /Sign out/ })), "a student has a sign-out button");
 
@@ -111,6 +112,36 @@ for (let i = 0; i < 20 && attempts === 0; i++) {
   attempts = view.data.students?.[0]?.units?.[0]?.attempts ?? 0;
 }
 check(attempts > 0, "the teacher sees the student's practice on the assigned unit");
+check(((await api(`/api/classes/?id=${cls.id}`)).data.students?.[0]?.units?.[0]?.done ?? 0) >= 5, "the teacher sees the homework count");
+await page.goto(`${BASE}/play/`);
+check(
+  await page.getByText(/Done! ✓/).first().waitFor({ state: "visible", timeout: 15000 }).then(() => true, () => false),
+  "the student's home screen marks the homework done",
+);
+
+// A live question: the teacher asks, the student taps, the teacher sees it.
+let asked;
+for (const key of [unit, "3/math/fractions", "3/math/place-value", "3/language/rhymes"]) {
+  const res = await api("/api/classes/live/", "POST", { classId: cls.id, unitKey: key });
+  if (res.status === 200) {
+    asked = res.data.live;
+    break;
+  }
+}
+check(Boolean(asked), "the teacher asks a live question");
+if (asked) {
+  const card = page.getByRole("region", { name: "Live question from your teacher" });
+  check(await card.waitFor({ timeout: 20000 }).then(() => true, () => false), "the live question appears on the student's home screen");
+  await shot("live-question");
+  await card.getByTestId("live-choice").first().click();
+  check(await card.getByText(/Sent!/).waitFor({ timeout: 8000 }).then(() => true, () => false), "the student's answer is sent");
+  const tally = await api(`/api/classes/live/?classId=${cls.id}`);
+  check(tally.data.live?.answers?.length === 1, "the teacher sees the answer come in");
+  await api("/api/classes/live/", "PATCH", { classId: cls.id, action: "reveal" });
+  check(await card.getByText(/You got it|The answer is/).waitFor({ timeout: 20000 }).then(() => true, () => false), "the student sees the answer once the teacher shows it");
+  await api(`/api/classes/live/?classId=${cls.id}`, "DELETE");
+  check(await card.waitFor({ state: "detached", timeout: 20000 }).then(() => true, () => false), "ending the live question clears it from the student's screen");
+}
 
 // Sign out leaves nothing on the device.
 await page.goto(`${BASE}/play/`);

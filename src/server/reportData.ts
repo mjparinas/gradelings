@@ -25,6 +25,12 @@ function wellFormed(e: AppEvent): boolean {
 }
 
 export async function loadChildReport(familyId: string, profileId: string, days: number, now = Date.now()): Promise<ChildReport | null> {
+  const data = await loadChildData(familyId, profileId, days, now);
+  return data && { profile: data.profile, report: data.report };
+}
+
+/** The report plus the events it was built from (the class view counts homework from them). */
+export async function loadChildData(familyId: string, profileId: string, days: number, now = Date.now()): Promise<(ChildReport & { events: AppEvent[] }) | null> {
   const rows = await query<{ data: string }>("SELECT data FROM profiles WHERE id = ? AND family_id = ?", [profileId, familyId]);
   if (!rows[0]) return null;
   const stored = JSON.parse(rows[0].data) as Profile;
@@ -36,7 +42,7 @@ export async function loadChildReport(familyId: string, profileId: string, days:
     .filter((e) => e.t > (profile.resetAt ?? 0) && wellFormed(e));
   await loadGrade(profile.grade, profile.framework);
   const report = buildReport(events, derive(events, now), profile.grade, profile.framework, days, now);
-  return { profile, report };
+  return { profile, report, events };
 }
 
 export async function familyProfileIds(familyId: string): Promise<string[]> {

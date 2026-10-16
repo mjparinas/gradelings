@@ -1,6 +1,7 @@
 import { error, getSession, json, newId, rateLimited, sameOrigin } from "@/server/auth";
-import { assignmentDue, assignmentKeys, classProgress, classTeachers, isFramework, MAX_CLASSES, newJoinCode, ownedClass, pendingInvites, removeClassTeachers, teachingClass } from "@/server/classroom";
-import { query, run } from "@/server/db";
+import { assignmentDue, assignmentGoals, assignmentKeys, classProgress, classTeachers, isFramework, MAX_CLASSES, newJoinCode, ownedClass, pendingInvites, removeClassTeachers, teachingClass } from "@/server/classroom";
+import { batch, query, run } from "@/server/db";
+import { liveClassStatements } from "@/server/live";
 import { isFlagOn } from "@/server/flags";
 import { classRoster, removeClassStudents } from "@/server/students";
 import { GRADE_ORDER } from "@/content/subjects";
@@ -26,6 +27,7 @@ export async function GET(req: Request) {
       invites: role === "owner" ? await pendingInvites(cls.id) : [],
       assignments: await assignmentKeys(cls.id),
       due: await assignmentDue(cls.id),
+      goal: await assignmentGoals(cls.id),
       students: await classProgress(cls.id),
       roster: await classRoster(cls.id),
     });
@@ -104,6 +106,7 @@ export async function DELETE(req: Request) {
   await removeClassStudents(id);
   await run("DELETE FROM class_members WHERE class_id = ?", [id]);
   await run("DELETE FROM class_assignments WHERE class_id = ?", [id]);
+  await batch(liveClassStatements("?", [id]));
   await removeClassTeachers(id);
   await run("UPDATE classes SET closed_at = ?, join_code = ? WHERE id = ?", [Date.now(), `X${id.slice(0, 10)}`, id]);
   return json({ closed: true });
