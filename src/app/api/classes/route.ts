@@ -1,5 +1,5 @@
 import { error, getSession, json, newId, rateLimited, sameOrigin } from "@/server/auth";
-import { assignmentAudience, cleanClassName, cleanSecondGrade, assignmentDue, assignmentGoals, assignmentKeys, classProgress, classTeachers, isFramework, MAX_CLASSES, newJoinCode, ownedClass, pendingInvites, removeClassTeachers, teachingClass } from "@/server/classroom";
+import { assignmentAudience, cleanClassName, cleanSecondGrade, assignmentDue, assignmentGoals, assignmentKeys, classProgressAndMisses, classTeachers, isFramework, MAX_CLASSES, newJoinCode, ownedClass, pendingInvites, removeClassTeachers, teachingClass } from "@/server/classroom";
 import { batch, query, run } from "@/server/db";
 import { liveClassStatements } from "@/server/live";
 import { isFlagOn } from "@/server/flags";
@@ -20,6 +20,7 @@ export async function GET(req: Request) {
     const found = await teachingClass(id, session.parentId);
     if (!found) return error(404, "Class not found");
     const { cls, role } = found;
+    const progress = await classProgressAndMisses(cls.id);
     return json({
       class: { id: cls.id, name: cls.name, grade: cls.grade, grade2: cls.grade2, framework: cls.framework, joinCode: cls.join_code },
       role,
@@ -30,7 +31,8 @@ export async function GET(req: Request) {
       due: await assignmentDue(cls.id),
       goal: await assignmentGoals(cls.id),
       audience: await assignmentAudience(cls.id),
-      students: await classProgress(cls.id),
+      students: progress.students,
+      missed: progress.missed,
       roster: await classRoster(cls.id),
     });
   }

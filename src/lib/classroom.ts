@@ -92,6 +92,54 @@ export function homeworkDone(events: readonly { type: string; unit?: string; t: 
   return n;
 }
 
+/** One question a class missed: how many students got it wrong on the first try, out of how many saw it. */
+export interface MissedQuestion {
+  q: string;
+  missed: number;
+  tried: number;
+}
+
+/** What one student did with each labelled question on the assigned units: true when they missed it on the first try at least once. */
+export function studentQuestions(
+  events: readonly { type: string; unit?: string; t: number; q?: string; correct?: boolean | number }[],
+  since: Record<string, number>,
+): Record<string, Record<string, boolean>> {
+  const out: Record<string, Record<string, boolean>> = {};
+  for (const e of events) {
+    if (e.type !== "answer" || !e.unit || typeof e.q !== "string" || !e.q || !(e.unit in since) || e.t < since[e.unit]) continue;
+    const q = e.q.slice(0, 80);
+    const unit = (out[e.unit] ??= {});
+    unit[q] = (unit[q] ?? false) || e.correct === false;
+  }
+  return out;
+}
+
+/**
+ * Per unit, the questions the most students missed on the first try (at least `minStudents` of them),
+ * worst first. Built from each student's `studentQuestions`; a question counts once per student.
+ */
+export function mostMissed(perStudent: readonly Record<string, Record<string, boolean>>[], limit = 3, minStudents = 2): Record<string, MissedQuestion[]> {
+  const tally = new Map<string, Map<string, MissedQuestion>>();
+  for (const student of perStudent) {
+    for (const [unit, qs] of Object.entries(student)) {
+      const byQ = tally.get(unit) ?? new Map<string, MissedQuestion>();
+      tally.set(unit, byQ);
+      for (const [q, missed] of Object.entries(qs)) {
+        const row = byQ.get(q) ?? { q, missed: 0, tried: 0 };
+        row.tried++;
+        if (missed) row.missed++;
+        byQ.set(q, row);
+      }
+    }
+  }
+  const out: Record<string, MissedQuestion[]> = {};
+  for (const [unit, byQ] of tally) {
+    const top = [...byQ.values()].filter((r) => r.missed >= minStudents).sort((a, b) => b.missed - a.missed || b.missed / b.tried - a.missed / a.tried || a.q.localeCompare(b.q)).slice(0, limit);
+    if (top.length) out[unit] = top;
+  }
+  return out;
+}
+
 export async function call<T>(url: string, method = "GET", body?: unknown): Promise<T> {
   let res: Response;
   try {

@@ -9,7 +9,7 @@ import type { FrameworkId, GradeId } from "@/content/types";
 import { DateField } from "@/components/DateField";
 import { SelectMenu } from "@/components/SelectMenu";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
-import { call, classInsights, HOMEWORK_GOALS, homeworkOverview, isHomeworkDone, isUsClass, US_CLASS_CONSENT, type ClassInvite, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
+import { call, classInsights, HOMEWORK_GOALS, homeworkOverview, isHomeworkDone, isUsClass, US_CLASS_CONSENT, type ClassInvite, type MissedQuestion, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
 import { frameworkGroups, frameworkMenu } from "@/lib/frameworkGroups";
 import { classCsv } from "@/lib/classCsv";
 import { countryOf } from "@/lib/country";
@@ -277,6 +277,8 @@ export interface ClassDetail {
   goal?: Record<string, number>;
   /** The students a unit is for, by unit key. Units for the whole class are not listed. Older servers omit it. */
   audience?: Record<string, string[]>;
+  /** Questions several students missed on the first try, by unit key (only for answers given since this was added). Older servers omit it. */
+  missed?: Record<string, MissedQuestion[]>;
   students: StudentRow[];
   roster: RosterEntry[];
   role?: "owner" | "co-teacher";
@@ -643,6 +645,26 @@ function Insights({ data, label }: { data: ClassDetail; label: (key: string) => 
               </a>
             )}
           </div>
+        </div>
+      )}
+      {Object.keys(data.missed ?? {}).length > 0 && (
+        <div className="mt-4">
+          <h3 className="font-bold">Most-missed questions</h3>
+          <ul className="mt-1 font-read">
+            {Object.entries(data.missed ?? {}).map(([key, list]) => (
+              <li key={key} className="mt-1">
+                <b>{label(key)}</b>
+                <ul className="list-disc pl-6">
+                  {list.map((m) => (
+                    <li key={m.q}>
+                      {m.q}: {m.missed} of {m.tried} missed it on the first try
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-1 text-sm text-ink-soft">Shown when at least 2 students missed the same question. Questions are only listed for answers given from now on.</p>
         </div>
       )}
       <p className="mt-3 text-sm text-ink-soft">A student is flagged as finding a unit tricky after at least 4 questions with under 60% right on the first try. {say("This reflects practice, not a report-card mark.")}</p>
