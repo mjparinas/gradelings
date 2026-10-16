@@ -114,6 +114,8 @@ export type AppEvent = EventBase &
         revealed: boolean;
         /** The child opened the hint before answering. */
         hinted?: boolean;
+        /** A short version of the question's text (`questionLabel`), so a teacher can see which questions a class misses. Not set for questions that need a picture. */
+        q?: string;
         ms: number;
         mode: Mode;
         difficulty?: number;

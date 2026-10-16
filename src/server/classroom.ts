@@ -6,7 +6,7 @@ import type { FrameworkId, GradeId } from "@/content/types";
 import { unitLevel } from "@/lib/proficiency";
 import { GRADE_ORDER } from "@/content/subjects";
 import { batch, query, run } from "./db";
-import { homeworkDone } from "@/lib/classroom";
+import { homeworkDone, mostMissed, studentQuestions, type MissedQuestion } from "@/lib/classroom";
 import { loadChildData } from "./reportData";
 
 // Classroom mode. A teacher owns a class and shares its join code. A parent chooses to link a
@@ -279,11 +279,17 @@ export interface StudentProgress {
 
 /** Progress for linked students on the assigned units only. Never includes an email or other family details. */
 export async function classProgress(classId: string): Promise<StudentProgress[]> {
+  return (await classProgressAndMisses(classId)).students;
+}
+
+/** `classProgress`, plus the questions several students missed on each assigned unit (only answers that carry the question's text). */
+export async function classProgressAndMisses(classId: string): Promise<{ students: StudentProgress[]; missed: Record<string, MissedQuestion[]> }> {
   const members = await query<{ profile_id: string; family_id: string; grade: string | null }>("SELECT profile_id, family_id, grade FROM class_members WHERE class_id = ? ORDER BY joined_at", [classId]);
   const cls = (await query<{ grade: GradeId; grade2: GradeId | null }>("SELECT grade, grade2 FROM classes WHERE id = ?", [classId]))[0];
   const keys = await assignmentKeys(classId);
   const audience = await assignmentAudience(classId);
   const since = Object.fromEntries((await query<{ unit_key: string; created_at: number }>("SELECT unit_key, created_at FROM class_assignments WHERE class_id = ?", [classId])).map((r) => [r.unit_key, Number(r.created_at)]));
+  const questions: Record<string, Record<string, boolean>>[] = [];
   const progress = await mapLimit(members, CLASS_LOAD_CONCURRENCY, async (m): Promise<StudentProgress | null> => {
     // One unreadable child record must not take the whole class view down with it.
     const data = await loadChildData(m.family_id, m.profile_id, 90).catch((e) => {
@@ -292,6 +298,9 @@ export async function classProgress(classId: string): Promise<StudentProgress[]>
     });
     if (!data) return null;
     const byKey = new Map(data.report.units.map((u) => [u.ref.key, u]));
+    // Only units the student was given count toward the class's missed questions.
+    const given = keys.filter((key) => (audience[key] ? audience[key].includes(m.profile_id) : !cls || unitIsForGrade(key, (m.grade ?? cls.grade) as GradeId, cls)));
+    questions.push(studentQuestions(data.events, Object.fromEntries(given.map((k) => [k, since[k] ?? 0]))));
     return {
       profileId: m.profile_id,
       name: data.profile.name,
@@ -304,7 +313,7 @@ export async function classProgress(classId: string): Promise<StudentProgress[]>
       }),
     };
   });
-  return progress.filter((p): p is StudentProgress => p !== null);
+  return { students: progress.filter((p): p is StudentProgress => p !== null), missed: mostMissed(questions) };
 }
 
 /** How many students' histories are read at once: enough to overlap the database round trips without flooding it. */

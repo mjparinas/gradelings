@@ -154,6 +154,19 @@ describe("TeacherApp class page", () => {
     expect(await within(section).findByRole("button", { name: "Ask a live question" })).toBeInTheDocument();
   });
 
+  it("lists the questions several students missed, with how many", async () => {
+    serve({ ...detail, missed: { "3/math/counting": [{ q: "34 + 8", missed: 2, tried: 3 }] } });
+    await openClass();
+    expect(screen.getByRole("heading", { name: "Most-missed questions" })).toBeInTheDocument();
+    expect(screen.getByText(/34 \+ 8: 2 of 3 missed it on the first try/)).toBeInTheDocument();
+  });
+
+  it("leaves out the most-missed list when nothing was missed", async () => {
+    serve({ ...detail, missed: {} });
+    await openClass();
+    expect(screen.queryByRole("heading", { name: "Most-missed questions" })).not.toBeInTheDocument();
+  });
+
   it("looks back at the day's live questions and copies the recap", async () => {
     const question = { prompt: "How many?", hint: "", choices: [{ id: "a", label: "3" }, { id: "b", label: "4" }], answer: "b" };
     serve(detail, (url) =>

@@ -1,5 +1,6 @@
 "use client";
 
+import { questionLabel } from "@/lib/questionLabel";
 import { ReportQuestion } from "./ReportQuestion";
 import { reportDetails, type ReportDetails } from "@/lib/questionReport";
 import { SaveProgress } from "./SaveProgress";
@@ -174,6 +175,7 @@ function Runner({ plan }: { plan: Plan }) {
         attempts,
         revealed,
         ...(hinted ? { hinted: true } : {}),
+        ...(q && !q.visual ? { q: questionLabel(q.prompt) } : {}),
         ms: Date.now() - shownAt,
         mode: plan.mode,
         difficulty: item.difficulty,
