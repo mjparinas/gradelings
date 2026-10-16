@@ -493,6 +493,71 @@ describe("codes, reports, stats and the change log", () => {
     expect(teachers.tables[0].rows).toHaveLength(1);
   });
 
+  it("shows the same number on each tile as in the list it opens", async () => {
+    const now = Date.now();
+    // A class with two students the teacher added (each also a class member), a child their parent linked and a co-teacher.
+    const { addStudents } = await import("@/server/students");
+    const cls = (await dbm.query<Record<string, unknown>>("SELECT * FROM classes WHERE closed_at IS NULL LIMIT 1"))[0];
+    await addStudents(cls as never, ["Ava", "Ben"]);
+    const child = (await dbm.query<{ id: string; family_id: string }>("SELECT id, family_id FROM profiles WHERE family_id NOT IN (SELECT family_id FROM parents WHERE role = 'student') LIMIT 1"))[0];
+    await dbm.run("INSERT INTO class_members (class_id, profile_id, family_id, joined_at) VALUES (?, ?, ?, ?)", [cls.id as string, child.id, child.family_id, now]);
+    const adminParent = (await dbm.query<{ id: string }>("SELECT id FROM parents WHERE email = ?", [ADMIN_EMAIL]))[0].id;
+    await dbm.run("INSERT INTO class_teachers (class_id, parent_id, joined_at) VALUES (?, ?, ?)", [cls.id as string, adminParent, now]);
+    // A US family paying in USD, and a family whose only payment was refunded in full.
+    const us = await account("us-payer@example.com");
+    await dbm.run("UPDATE families SET country = 'US', plan = 'premium', subscription_interval = 'month' WHERE id = ?", [us.familyId]);
+    await dbm.run("INSERT INTO payments (id, family_id, amount, refunded, currency, interval, paid_at) VALUES ('in_us', ?, 1499, 0, 'usd', 'month', ?)", [us.familyId, now - 60_000]);
+    const refunded = await account("refunded@example.com");
+    await dbm.run("INSERT INTO payments (id, family_id, amount, refunded, currency, interval, paid_at) VALUES ('in_back', ?, 1499, 1499, 'cad', 'month', ?)", [refunded.familyId, now - 60_000]);
+    // Practice now, near the start of the 30 days, and from a device clock that runs ahead.
+    for (const [i, t] of [now - 3_600_000, now - 29.5 * 86_400_000, now + 86_400_000].entries())
+      await dbm.run("INSERT INTO events (id, family_id, profile_id, t, data) VALUES (?, ?, ?, ?, ?)", [`tile-${i}`, child.family_id, child.id, t, JSON.stringify({ type: "answer", ms: 5000 })]);
+
+    const s = await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json();
+    const head = async (v: string, label: string) => {
+      const d = await (await as(admin.cookie).get(statsDetail, `/api/admin/stats/detail/?view=${v}`)).json();
+      const item = (d.summary as { label: string; value: number }[]).find((x) => x.label === label);
+      expect(item, `${v}: ${label}`).toBeTruthy();
+      return item!.value;
+    };
+    const pairs: [string, string, number][] = [
+      ["teachers", "Student accounts", s.people.students],
+      ["teachers", "Teachers", s.people.teachers],
+      ["teachers", "Open classes", s.people.classes],
+      ["families", "Families", s.people.families],
+      ["children", "Children", s.people.children],
+      ["paying", "Paying", s.customers.paying],
+      ["paying", "Cancelling", s.customers.cancelling],
+      ["paying", "Recurring a month", s.revenue.mrr],
+      ["paying", "US recurring a month", s.revenue.usd.mrr],
+      ["trialing", "In trial", s.customers.trialing],
+      ["free", "Free", s.customers.free],
+      ["code-access", "Families", s.customers.codeAccess],
+      ["code-access", "Lifetime", s.customers.lifetime],
+      ["codes", "Redeemed", s.other.redemptions],
+      ["payments-month", "Revenue", s.revenue.thisMonth],
+      ["payments-month", "US revenue", s.revenue.usd.thisMonth],
+      ["payments-last-month", "Revenue", s.revenue.lastMonth],
+      ["payments-year", "Revenue", s.revenue.yearToDate],
+      ["payments-year", "US revenue", s.revenue.usd.yearToDate],
+      ["cancelled", "Last 30 days", s.revenue.cancelled30],
+      ["customers-ever", "Families", s.revenue.customersEver],
+      ["signups", "This month", s.acquisition.thisMonth],
+      ["trial-conversion", "Trials ended", s.acquisition.trialsEnded],
+      ["trial-conversion", "Paying now", s.acquisition.trialsConverted],
+      ["referrals", "Referred", s.acquisition.referred],
+      ["practising", "Today", s.engagement.d1],
+      ["practising", "This week", s.engagement.d7],
+      ["practising", "30 days", s.engagement.d30],
+      ["practising", "Questions", s.engagement.answers30],
+    ];
+    for (const [v, label, tile] of pairs) expect(await head(v, label), `${v}: ${label}`).toBe(tile);
+    expect(s.people.students).toBe(2);
+    expect(await head("teachers", "Linked by parents")).toBe(1);
+    expect(s.revenue.usd.mrr).toBe(1499);
+    expect(s.engagement.d1).toBeGreaterThanOrEqual(1);
+  });
+
   it("records every change with who made it", async () => {
     const entries = (await (await as(admin.cookie).get(auditLog, "/api/admin/audit/")).json()).entries as { admin: string; action: string; detail: string | null }[];
     const actions = new Set(entries.map((e) => e.action));

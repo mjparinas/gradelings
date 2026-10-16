@@ -4,7 +4,7 @@ import { audit, requireAdmin } from "@/server/admin";
 import { query } from "@/server/db";
 import { getSetting, importPayments, setSetting } from "@/server/payments";
 import { stripeCancellationConfigured } from "@/server/stripe";
-import { LATEST_REFUNDED } from "@/server/adminDetail";
+import { LATEST_REFUNDED, OPEN_CLASS_STUDENTS, OPEN_CLASS_TEACHERS } from "@/server/adminDetail";
 import { computeMetrics, emptyInput, isMetricSection, SECTION_INPUTS, sectionOf, type FamilyFacts, type MetricsInput } from "@/lib/adminMetrics";
 
 const DAY = 86_400_000;
@@ -52,12 +52,8 @@ function loaders(now: number): Loaders {
       ),
     parents: () => count("SELECT COUNT(*) AS n FROM parents WHERE role != 'student'"),
     children: () => count(`SELECT COUNT(*) AS n FROM profiles pr JOIN families f ON f.id = pr.family_id WHERE ${REAL} AND COALESCE(json_extract(pr.data, '$.deleted'), 0) = 0`),
-    teachers: () =>
-      count(
-        `SELECT COUNT(*) AS n FROM (SELECT owner_parent_id AS id FROM classes WHERE closed_at IS NULL
-           UNION SELECT ct.parent_id FROM class_teachers ct JOIN classes c ON c.id = ct.class_id WHERE c.closed_at IS NULL)`,
-      ),
-    students: () => count("SELECT COUNT(*) AS n FROM students"),
+    teachers: () => count(`SELECT COUNT(*) AS n FROM (${OPEN_CLASS_TEACHERS})`),
+    students: () => count(OPEN_CLASS_STUDENTS),
     classes: () => count("SELECT COUNT(*) AS n FROM classes WHERE closed_at IS NULL"),
     payments: async () =>
       (
@@ -77,7 +73,7 @@ function loaders(now: number): Loaders {
         )
       ).map((a) => ({ day: Number(a.day), families: Number(a.families), answers: Number(a.answers ?? 0), ms: Number(a.ms ?? 0) })),
     activeFamilies: async () => {
-      const active = (ms: number) => count(`SELECT COUNT(DISTINCT family_id) AS n FROM events WHERE t > ? AND ${REAL_EVENTS}`, [now - ms]);
+      const active = (ms: number) => count(`SELECT COUNT(DISTINCT family_id) AS n FROM events WHERE t > ? AND t <= ? AND ${REAL_EVENTS}`, [now - ms, now]);
       const [d1, d7, d30] = await Promise.all([active(DAY), active(7 * DAY), active(30 * DAY)]);
       return { d1, d7, d30 };
     },
