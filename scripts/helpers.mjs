@@ -188,7 +188,8 @@ export async function teacherFixture(base, { framework = "ca-bc", grade = "3" } 
 export async function signInTeacher(context, base, fixture) {
   // A production build names the cookie with the __Host- prefix, which browsers accept only when it is Secure.
   const secure = fixture.cookie.name.startsWith("__Host-");
-  await context.addCookies([{ name: fixture.cookie.name, value: fixture.cookie.value, url: base, httpOnly: true, secure }]);
+  // The __Host- prefix also forbids a Domain, which Playwright's url form adds, so name the host and path instead.
+  await context.addCookies([{ name: fixture.cookie.name, value: fixture.cookie.value, domain: new URL(base).hostname, path: "/", httpOnly: true, secure }]);
 }
 
 /** The teacher area's tabs, in order, with the hash that opens each for a class. */
