@@ -643,7 +643,7 @@ function Insights({ data, label }: { data: ClassDetail; label: (key: string) => 
               </ul>
             )}
             {insights.checkIn.length > 0 && (
-              <a className="mt-2 inline-block font-semibold underline" href={`${classHref(data.class.id, "homework")}?students=${insights.checkIn.map((s) => encodeURIComponent(s.profileId)).join(",")}`}>
+              <a className="mt-2 inline-flex min-h-11 items-center font-semibold underline" href={`${classHref(data.class.id, "homework")}?students=${insights.checkIn.map((s) => encodeURIComponent(s.profileId)).join(",")}`}>
                 Assign extra practice to these students
               </a>
             )}
@@ -849,7 +849,7 @@ function ProgressTable({ data, label, levelLabel, now }: { data: ClassDetail; la
               <tr key={s.profileId} className="border-b border-line align-top last:border-0">
                 <th scope="row" className="sticky left-0 bg-white py-2 pr-3 font-bold">
                   {only === null ? (
-                    <button type="button" aria-label={`Show only ${s.name}`} className="text-left font-bold underline decoration-dotted" onClick={() => setOnly(s.profileId)}>
+                    <button type="button" aria-label={`Show only ${s.name}`} className="inline-flex min-h-11 items-center text-left font-bold underline decoration-dotted" onClick={() => setOnly(s.profileId)}>
                       {s.name}
                     </button>
                   ) : (
