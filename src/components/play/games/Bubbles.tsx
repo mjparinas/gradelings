@@ -7,6 +7,7 @@ import { sounds } from "@/lib/sound";
 import { speak } from "@/lib/speech";
 import { bubbleRound, type BubbleRound } from "./content";
 import type { GameProps } from "./types";
+import { isLivePaused } from "@/lib/livePause";
 
 // Bubbles float up. Pop the ones that match the sound or rule.
 
@@ -48,6 +49,7 @@ export function Bubbles({ grade, band, onScore, onLevel, onOver }: GameProps) {
 
   useEffect(() => {
     const t = setInterval(() => {
+      if (isLivePaused()) return;
       const h = arena.current?.clientHeight ?? 500;
       const good = chance(0.45);
       setBubbles((b) => [
@@ -72,6 +74,11 @@ export function Bubbles({ grade, band, onScore, onLevel, onOver }: GameProps) {
     let frame = 0;
     let last = performance.now();
     const step = (now: number) => {
+      if (isLivePaused()) {
+        last = now;
+        frame = requestAnimationFrame(step);
+        return;
+      }
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
       setBubbles((list) =>

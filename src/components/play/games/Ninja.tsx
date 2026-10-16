@@ -7,6 +7,7 @@ import { sounds } from "@/lib/sound";
 import { speak } from "@/lib/speech";
 import { ninjaRound, type NinjaRound } from "./content";
 import type { GameProps } from "./types";
+import { isLivePaused } from "@/lib/livePause";
 
 // Words fly up from the bottom. Swipe through (or tap) the right ones.
 
@@ -52,6 +53,7 @@ export function Ninja({ grade, band, onScore, onLevel, onOver }: GameProps) {
   // Spawning.
   useEffect(() => {
     const t = setInterval(() => {
+      if (isLivePaused()) return;
       const el = arena.current;
       if (!el) return;
       const w = el.clientWidth;
@@ -83,6 +85,11 @@ export function Ninja({ grade, band, onScore, onLevel, onOver }: GameProps) {
     let frame = 0;
     let last = performance.now();
     const step = (now: number) => {
+      if (isLivePaused()) {
+        last = now;
+        frame = requestAnimationFrame(step);
+        return;
+      }
       const dt = Math.min(0.05, (now - last) / 1000) * slow;
       last = now;
       const h = arena.current?.clientHeight ?? 600;
