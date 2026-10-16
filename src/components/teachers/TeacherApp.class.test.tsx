@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { act, render, screen, waitFor, within } from "@testing-library/react";
+import { act, cleanup, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { getFramework } from "@/content/frameworks";
@@ -152,6 +152,58 @@ describe("TeacherApp class page", () => {
     expect(await within(section).findByText(/answer shown to the class/)).toBeInTheDocument();
     await user.click(within(section).getByRole("button", { name: "End" }));
     expect(await within(section).findByRole("button", { name: "Ask a live question" })).toBeInTheDocument();
+  });
+
+  it("previews the next live question and lets the teacher choose a different one", async () => {
+    const q = (prompt: string, a: string, b: string) => ({ prompt, hint: "", choices: [{ id: "a", label: a }, { id: "b", label: b }], answer: "b" });
+    let state: unknown = null;
+    serve(detail, (url, method) => {
+      if (!url.startsWith("/api/classes/live/")) return undefined;
+      if (method === "POST") state = { id: "q1", unitKey: "3/math/counting", question: q("How many?", "3", "4"), revealed: false, createdAt: now, answers: [], next: q("Count again?", "5", "6") };
+      if (method === "PATCH") state = { ...(state as object), next: q("A different one?", "7", "8") };
+      return { live: state };
+    });
+    const user = await openClass();
+    await openTab(user, "Live");
+    const section = screen.getByRole("region", { name: "Live questions" });
+    await user.click(within(section).getByRole("button", { name: "Ask a live question" }));
+    const preview = await within(section).findByLabelText("Next question preview");
+    expect(preview).toHaveTextContent("Count again?");
+    expect(preview).toHaveTextContent("6 ✓");
+    await user.click(within(preview).getByRole("button", { name: "Choose a different question" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/live/", "PATCH", { classId: "class-1", action: "swap-next" }));
+    expect(await within(section).findByText("A different one?")).toBeInTheDocument();
+  });
+
+  it("lists the questions several students missed, with how many", async () => {
+    serve({ ...detail, missed: { "3/math/counting": [{ q: "34 + 8", missed: 2, tried: 3 }] } });
+    await openClass();
+    expect(screen.getByRole("heading", { name: "Most-missed questions" })).toBeInTheDocument();
+    expect(screen.getByText(/34 \+ 8: 2 of 3 missed it on the first try/)).toBeInTheDocument();
+  });
+
+  it("leaves out the most-missed list when nothing was missed", async () => {
+    serve({ ...detail, missed: {} });
+    await openClass();
+    expect(screen.queryByRole("heading", { name: "Most-missed questions" })).not.toBeInTheDocument();
+  });
+
+  it("looks back at the day's live questions and copies the recap", async () => {
+    const question = { prompt: "How many?", hint: "", choices: [{ id: "a", label: "3" }, { id: "b", label: "4" }], answer: "b" };
+    serve(detail, (url) =>
+      url === "/api/classes/live/?classId=class-1&recap=1"
+        ? { recap: [{ id: "q1", unitKey: "3/math/counting", question, revealed: true, createdAt: now, answers: [{ profileId: "p1", choice: "a", correct: false }, { profileId: "p3", choice: "b", correct: true }] }] }
+        : url.startsWith("/api/classes/live/") ? { live: null } : undefined,
+    );
+    const user = await openClass();
+    const write = vi.spyOn(navigator.clipboard, "writeText");
+    await openTab(user, "Live");
+    await user.click(screen.getByRole("button", { name: "Look back at today’s questions" }));
+    const recap = await screen.findByLabelText("Recap of today’s questions");
+    expect(recap).toHaveTextContent("1 of 2 answered right · To check in with: Maya");
+    await user.click(within(recap).getByRole("button", { name: "Copy the recap" }));
+    expect(write).toHaveBeenCalledWith(expect.stringContaining("1 of 2 answered right. To check in with: Maya."));
+    expect(write).toHaveBeenCalledWith(expect.stringContaining("not a report-card mark"));
   });
 
   it("uses US English and US dates for a class on a US curriculum, and Canadian ones otherwise", async () => {
@@ -342,6 +394,62 @@ describe("TeacherApp class page", () => {
     expect(within(who).getByRole("checkbox", { name: "Alex" })).not.toBeChecked();
   });
 
+  it("runs a split class: units from both grades, each student's grade shown, and a grade for new students", async () => {
+    const split = { ...cls, grade2: "4" };
+    const split2 = { ...detail, class: split, students: detail.students.map((st, i) => ({ ...st, grade: i === 1 ? "4" : "3" })) };
+    serve(split2, (url, method) => (url === "/api/classes/" && method === "GET" ? { classes: [split] } : undefined));
+    const user = await openClass();
+    expect(screen.getByText(/Grades 3 and 4 · Ontario Curriculum/)).toBeInTheDocument();
+    const table = screen.getAllByRole("table")[0];
+    expect(within(table).getByRole("rowheader", { name: /^Sam\s*\(Grade 4\)/ })).toBeInTheDocument();
+    expect(within(table).getByRole("rowheader", { name: /^Maya\s*\(Grade 3\)/ })).toBeInTheDocument();
+    await openTab(user, "Students");
+    await user.type(screen.getByLabelText("First names, one per line"), "Jo");
+    await user.click(screen.getByRole("combobox", { name: "Their grade" }));
+    await user.click(screen.getByRole("option", { name: "Grade 4" }));
+    await user.click(screen.getByRole("button", { name: "Add students" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/", "POST", { classId: "class-1", names: ["Jo"], grade: "4" }));
+  });
+
+  it("shows how many are done on each homework unit, who is behind, and what is past due", async () => {
+    const goal = { "3/math/counting": 10 };
+    const students = detail.students.map((st, i) => ({ ...st, units: st.units.map((u) => ({ ...u, done: u.key === "3/math/counting" ? [4, 10, 0][i] : 0 })) }));
+    serve({ ...detail, goal, due: { "3/math/counting": now - DAY, "3/math/patterns": now + 5 * DAY }, students });
+    const user = await openClass();
+    // The progress table flags the students who are past due and not done.
+    const table = screen.getAllByRole("table")[0];
+    expect(within(within(table).getByRole("rowheader", { name: /^Maya/ }).parentElement!).getAllByText("Past due")).toHaveLength(1);
+    expect(within(within(table).getByRole("rowheader", { name: /^Sam/ }).parentElement!).queryByText("Past due")).not.toBeInTheDocument();
+    await openTab(user, "Homework");
+    expect(screen.getByRole("status")).toHaveTextContent("1 unit is past due with students still to finish.");
+    expect(screen.getByText("1 of 3 done · past due")).toBeInTheDocument();
+    expect(screen.getByText(/Still to finish: Maya, Alex/)).toBeInTheDocument();
+    // Patterns has no number of questions: done at Proficient (Maya and Alex), not yet due.
+    expect(screen.getByText("2 of 3 done")).toBeInTheDocument();
+    expect(screen.getByText(/Still to finish: Sam$/)).toBeInTheDocument();
+  });
+
+  it("downloads the class table as a CSV named for the class", async () => {
+    serve(detail);
+    const user = await openClass();
+    let blob: Blob | undefined;
+    const create = vi.fn((b: Blob) => ((blob = b), "blob:csv"));
+    Object.defineProperty(URL, "createObjectURL", { configurable: true, value: create });
+    Object.defineProperty(URL, "revokeObjectURL", { configurable: true, value: vi.fn() });
+    let name = "";
+    const click = vi.spyOn(HTMLAnchorElement.prototype, "click").mockImplementation(function (this: HTMLAnchorElement) {
+      name = this.download;
+    });
+    await user.click(screen.getByRole("button", { name: "Download as spreadsheet (CSV)" }));
+    expect(click).toHaveBeenCalledOnce();
+    expect(name).toMatch(/^room-3-practice-\d{4}-\d{2}-\d{2}\.csv$/);
+    const text = await blob!.text();
+    expect(text).toContain(`not a report-card mark`);
+    expect(text).toContain("Student,Grade,Last active,Counting: level");
+    expect(text).toContain("Maya,3,");
+    expect(text).toContain("Sam,3,");
+  });
+
   it("cancels a pending co-teacher invitation", async () => {
     serve({ ...detail, role: "owner", teachers: [{ id: "o", email: "owner@example.com", role: "owner" }], invites: [{ email: "wait@example.com", createdAt: 1 }] });
     const user = await openClass();
@@ -403,6 +511,109 @@ describe("TeacherApp class page", () => {
     window.location.hash = "#/class/class-1/nope";
     expect(await screen.findByRole("heading", { name: "Students (3)" })).toBeInTheDocument();
     expect(within(screen.getByRole("navigation", { name: "Class sections" })).getByRole("link", { name: /Progress/ })).toHaveAttribute("aria-current", "page");
+  });
+
+  it("sorts the progress table, filters it by subject, and shows one student on their own", async () => {
+    const sci = (level: number, attempts = 0, accuracy = 0) => ({ key: "3/science/plants", level, attempts, accuracy });
+    const multi = {
+      ...detail,
+      assignments: [...detail.assignments, "3/science/plants"],
+      students: detail.students.map((s, i) => ({ ...s, units: [...s.units, sci(i === 0 ? 1 : -1, i === 0 ? 4 : 0, 0.5)] })),
+    };
+    serve(multi);
+    const user = await openClass();
+    const names = () => screen.getAllByRole("rowheader").map((r) => r.textContent?.match(/^(Maya|Sam|Alex)/)?.[0]);
+    expect(names()).toEqual(["Alex", "Maya", "Sam"]);
+    await user.selectOptions(screen.getByLabelText("Sort by"), "need");
+    // Lowest accuracy on what they have tried comes first.
+    expect(names()).toEqual(["Sam", "Maya", "Alex"]);
+    await user.selectOptions(screen.getByLabelText("Sort by"), "active");
+    expect(names()).toEqual(["Sam", "Alex", "Maya"]);
+    await user.selectOptions(screen.getByLabelText("Subject"), "science");
+    expect(screen.getByRole("columnheader", { name: "3/science/plants" })).toBeInTheDocument();
+    expect(screen.queryByRole("columnheader", { name: "Counting" })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Show only Sam" }));
+    expect(names()).toEqual(["Sam"]);
+    expect(screen.getByText("Showing Sam only.")).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Show everyone" }));
+    expect(names()).toHaveLength(3);
+  });
+
+  it("picks several students to print cards for, reset codes or remove, with one reload", async () => {
+    serve({ ...detail, role: "owner", teachers: [], invites: [] });
+    const user = await openClass();
+    await openTab(user, "Students");
+    await user.click(screen.getByRole("checkbox", { name: "Select all" }));
+    expect(screen.getByRole("status", { name: "" })).toHaveTextContent("2 selected");
+    await user.click(screen.getByRole("checkbox", { name: "Select Maya" }));
+    expect(screen.getByRole("status", { name: "" })).toHaveTextContent("1 selected");
+    await user.click(screen.getByRole("checkbox", { name: "Select Maya" }));
+    const loads = () => mocks.call.mock.calls.filter(([u]) => u === "/api/classes/?id=class-1").length;
+    const before = loads();
+    await user.click(screen.getByRole("button", { name: "New codes for selected" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/?classId=class-1&studentId=r2", "PATCH"));
+    expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/?classId=class-1&studentId=r1", "PATCH");
+    await waitFor(() => expect(loads()).toBe(before + 1));
+    await user.click(screen.getByRole("checkbox", { name: "Select all" }));
+    await user.click(screen.getByRole("button", { name: "Remove selected" }));
+    expect(screen.getByRole("dialog", { name: "Remove 2 students?" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Yes, remove" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/?classId=class-1&studentId=r1", "DELETE"));
+    expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/?classId=class-1&studentId=r2", "DELETE");
+  });
+
+  it("prints cards for the chosen students only", async () => {
+    let printed = "";
+    const print = vi.fn(() => {
+      printed = document.body.textContent ?? "";
+    });
+    window.print = print;
+    serve({ ...detail, role: "owner", teachers: [], invites: [] });
+    const user = await openClass();
+    await openTab(user, "Students");
+    await user.click(screen.getByRole("checkbox", { name: "Select Sam" }));
+    await user.click(screen.getByRole("button", { name: "Print cards for selected" }));
+    await waitFor(() => expect(print).toHaveBeenCalled());
+    expect(printed).toContain("My code: MN34RT");
+    expect(printed).not.toContain("My code: ZX91PQ");
+  });
+
+  it("renames the class from Settings", async () => {
+    serve({ ...detail, role: "owner", teachers: [{ id: "o", email: "owner@example.com", role: "owner" }], invites: [] });
+    const user = await openClass();
+    await openTab(user, "Settings");
+    expect(screen.getByRole("button", { name: "Save name" })).toBeDisabled();
+    const input = screen.getByLabelText("Name");
+    await user.clear(input);
+    await user.type(input, "Room 4");
+    await user.click(screen.getByRole("button", { name: "Save name" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/?id=class-1", "PATCH", { name: "Room 4" }));
+  });
+
+  it("moves the class up a grade only after a second tap, and says so at the last grade", async () => {
+    const owner = { role: "owner", teachers: [{ id: "o", email: "owner@example.com", role: "owner" }], invites: [] };
+    serve({ ...detail, ...owner });
+    const user = await openClass();
+    await openTab(user, "Settings");
+    await user.click(screen.getByRole("button", { name: /^Move up to/ }));
+    expect(mocks.call).not.toHaveBeenCalledWith("/api/classes/?id=class-1", "PATCH", { action: "next-year" });
+    await user.click(screen.getByRole("button", { name: "Yes, move Room 3 up" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/?id=class-1", "PATCH", { action: "next-year" }));
+  });
+
+  it("has no next year for a Grade 9 class, and none of this for a co-teacher", async () => {
+    serve({ ...detail, class: { ...cls, grade: "9" }, role: "owner", teachers: [{ id: "o", email: "owner@example.com", role: "owner" }], invites: [] });
+    let user = await openClass();
+    await openTab(user, "Settings");
+    expect(screen.getByText(/already in the last grade/)).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /^Move up to/ })).not.toBeInTheDocument();
+    cleanup();
+    window.location.hash = "";
+    serve({ ...detail, role: "teacher", teachers: [{ id: "o", email: "owner@example.com", role: "owner" }], invites: [] });
+    user = await openClass();
+    await openTab(user, "Settings");
+    expect(screen.queryByRole("heading", { name: "Class name" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: "Start next school year" })).not.toBeInTheDocument();
   });
 
   it("removing a student can be cancelled", async () => {

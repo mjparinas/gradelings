@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { call, classInsights, homeworkDone, type StudentRow } from "./classroom";
+import { call, classInsights, homeworkDone, mostMissed, studentQuestions, homeworkOverview, isHomeworkDone, type StudentRow } from "./classroom";
 
 const DAY = 86_400_000;
 const NOW = 100 * DAY;
@@ -86,5 +86,57 @@ describe("homeworkDone", () => {
     expect(homeworkDone(events, "3/math/add", 10)).toBe(2);
     expect(homeworkDone(events, "3/math/add", 0)).toBe(3);
     expect(homeworkDone([], "3/math/add", 0)).toBe(0);
+  });
+});
+
+describe("homework overview", () => {
+  const hw = (key: string, level: number, done: number, assigned = true) => ({ key, level, attempts: done, accuracy: 0.5, done, assigned });
+
+  it("counts a unit done by the questions asked for, or by reaching Proficient when none were", () => {
+    expect(isHomeworkDone(hw("k", 0, 10), 10)).toBe(true);
+    expect(isHomeworkDone(hw("k", 3, 4), 10)).toBe(false);
+    expect(isHomeworkDone(hw("k", 2, 0))).toBe(true);
+    expect(isHomeworkDone(hw("k", 1, 30))).toBe(false);
+    expect(isHomeworkDone({ key: "k", level: -1, attempts: 0, accuracy: 0 })).toBe(false);
+  });
+
+  it("says how many are done, who is behind, and what is past due, leaving out students a unit wasn't given to", () => {
+    const students = [
+      student("a", [hw("u1", 0, 10), hw("u2", 2, 0)]),
+      student("b", [hw("u1", 0, 3), hw("u2", 0, 0, false)]),
+      student("c", [hw("u1", 0, 0), hw("u2", 0, 0)]),
+    ];
+    const [one, two] = homeworkOverview(students, ["u1", "u2"], { u1: NOW - DAY, u2: NOW + DAY }, { u1: 10 }, NOW);
+    expect(one).toEqual({ key: "u1", assigned: 3, done: 1, behind: ["B", "C"], overdue: true });
+    // Unit 2 isn't for B, is done by A, not by C, and isn't due yet.
+    expect(two).toEqual({ key: "u2", assigned: 2, done: 1, behind: ["C"], overdue: false });
+  });
+
+  it("isn't overdue once everyone is done, or with no due date", () => {
+    const students = [student("a", [hw("u1", 0, 10)])];
+    expect(homeworkOverview(students, ["u1"], { u1: NOW - DAY }, { u1: 10 }, NOW)[0].overdue).toBe(false);
+    expect(homeworkOverview([student("a", [hw("u1", 0, 0)])], ["u1"], {}, { u1: 10 }, NOW)[0].overdue).toBe(false);
+  });
+});
+
+describe("most-missed questions", () => {
+  const ans = (unit: string, q: string | undefined, correct: boolean, t = 100) => ({ type: "answer", unit, q, correct, t });
+
+  it("reads one student's questions on the assigned units since they were assigned", () => {
+    const since = { "3/math/a": 50 };
+    const r = studentQuestions(
+      [ans("3/math/a", "7 + 5", false), ans("3/math/a", "7 + 5", true), ans("3/math/a", "2 + 2", true), ans("3/math/a", undefined, false), ans("3/math/a", "old", false, 10), ans("3/math/b", "other", false), { type: "session", t: 100 }],
+      since,
+    );
+    // A miss on any try counts for the student; questions without text, from before the assignment or off the list are left out.
+    expect(r).toEqual({ "3/math/a": { "7 + 5": true, "2 + 2": false } });
+  });
+
+  it("lists, per unit, questions at least two students missed, worst first, three at most", () => {
+    const stu = (qs: Record<string, boolean>) => ({ u: qs });
+    const out = mostMissed([stu({ a: true, b: true, c: false, d: true }), stu({ a: true, b: false, c: true, d: true }), stu({ a: true, b: true, c: true, d: true, e: true }), stu({ a: false, d: true })]);
+    expect(out.u.map((m) => [m.q, m.missed, m.tried])).toEqual([["d", 4, 4], ["a", 3, 4], ["b", 2, 3]]);
+    // One student missing a question isn't a pattern.
+    expect(mostMissed([stu({ x: true }), stu({ x: false })])).toEqual({});
   });
 });

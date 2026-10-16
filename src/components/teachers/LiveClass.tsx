@@ -4,7 +4,8 @@ import { useCallback, useEffect, useState } from "react";
 import { SelectMenu, type MenuGroup } from "@/components/SelectMenu";
 import { QuestionVisual } from "@/components/visuals";
 import { call } from "@/lib/classroom";
-import { LIVE_POLL_TEACHER_MS, liveCounts, type LiveForTeacher } from "@/lib/live";
+import { APP_NAME } from "@/lib/brand";
+import { LIVE_POLL_TEACHER_MS, liveCounts, liveRecapItem, liveRecapText, type LiveForTeacher } from "@/lib/live";
 import type { ClassDetail } from "./TeacherApp";
 
 // Live questions: the teacher asks the class one multiple-choice question from a unit and watches
@@ -51,6 +52,17 @@ export function LiveClass({ data, label, unitGroups }: { data: ClassDetail; labe
     setBusy(false);
   };
   const ask = (unitKey: string) => act("POST", { classId, unitKey });
+
+  const [recap, setRecap] = useState<LiveForTeacher[] | null>(null);
+  const [copied, setCopied] = useState(false);
+  const showRecap = async () => {
+    setErr("");
+    try {
+      setRecap((await call<{ recap: LiveForTeacher[] }>(`/api/classes/live/?classId=${encodeURIComponent(classId)}&recap=1`)).recap);
+    } catch (e) {
+      setErr((e as Error).message);
+    }
+  };
 
   const names = new Map(data.students.map((s) => [s.profileId, s.name]));
   const answered = new Set(live?.answers.map((a) => a.profileId));
@@ -114,6 +126,25 @@ export function LiveClass({ data, label, unitGroups }: { data: ClassDetail; labe
             </p>
           )}
           {waiting.length > 0 && !live.revealed && <p className="font-read text-sm text-ink-soft">Waiting for: {waiting.join(", ")}</p>}
+          {live.next && (
+            <div className="mt-4 rounded-xl border border-dashed border-line p-3" aria-label="Next question preview">
+              <p className="text-sm font-semibold text-ink-soft">Up next · only you can see this</p>
+              <p lang={live.next.lang} className="mt-1 font-read font-bold">
+                {live.next.prompt}
+              </p>
+              {live.next.visual && (
+                <div lang={live.next.visualLang ?? live.next.lang} className="mt-2 max-w-sm">
+                  <QuestionVisual visual={live.next.visual} />
+                </div>
+              )}
+              <p lang={live.next.choicesLang ?? live.next.lang} className="mt-1 font-read text-sm">
+                {live.next.choices.map((c) => `${c.emoji ? `${c.emoji} ` : ""}${c.label}${c.id === live.next?.answer ? " ✓" : ""}`).join(" · ")}
+              </p>
+              <button type="button" disabled={busy} className={`${btn} mt-2 border border-line`} onClick={() => void act("PATCH", { classId, action: "swap-next" })}>
+                Choose a different question
+              </button>
+            </div>
+          )}
           <div className="mt-3 flex flex-wrap gap-3">
             {!live.revealed && (
               <button type="button" disabled={busy} className={`${btn} bg-[#25b47e] text-[#0f172a] disabled:opacity-50`} onClick={() => void act("PATCH", { classId, action: "reveal" })}>
@@ -129,6 +160,45 @@ export function LiveClass({ data, label, unitGroups }: { data: ClassDetail; labe
           </div>
         </div>
       )}
+      <div className="mt-4 border-t border-line pt-3">
+        <button type="button" className={`${btn} border border-line`} onClick={() => void showRecap()}>
+          {recap ? "Refresh the recap" : "Look back at today’s questions"}
+        </button>
+        {recap && (
+          <div className="mt-3" aria-label="Recap of today’s questions">
+            {recap.length === 0 ? (
+              <p className="font-read text-ink-soft">No live questions in the last day.</p>
+            ) : (
+              <>
+                <ol className="flex flex-col gap-3">
+                  {recap.map((q) => {
+                    const r = liveRecapItem(q, names);
+                    return (
+                      <li key={q.id} className="font-read">
+                        <span className="block text-sm font-semibold text-ink-soft">{label(q.unitKey)}</span>
+                        <span lang={q.question.lang} className="block font-bold">{q.question.prompt}</span>
+                        <span className="block">
+                          {r.right} of {r.answered} answered right{r.missed.length > 0 && <> · To check in with: {r.missed.join(", ")}</>}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ol>
+                <button
+                  type="button"
+                  className={`${btn} mt-3 border border-line`}
+                  onClick={() => {
+                    void navigator.clipboard?.writeText(liveRecapText(recap, names, label, data.class.name, APP_NAME)).then(() => setCopied(true));
+                  }}
+                >
+                  {copied ? "Copied" : "Copy the recap"}
+                </button>
+                <p className="mt-2 text-sm text-ink-soft">Questions and answers are deleted a day after they are asked, so copy what you want to keep.</p>
+              </>
+            )}
+          </div>
+        )}
+      </div>
       {err && (
         <p role="alert" className="mt-3 text-nudge-dark">
           {err}

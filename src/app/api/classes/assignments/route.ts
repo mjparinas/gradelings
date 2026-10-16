@@ -1,5 +1,5 @@
 import { error, getSession, json, sameOrigin } from "@/server/auth";
-import { cleanAudience, cleanDueAt, cleanGoal, MAX_ASSIGNMENTS, setAudience, teachingClass, validUnit } from "@/server/classroom";
+import { classGrades, cleanAudience, cleanDueAt, cleanGoal, MAX_ASSIGNMENTS, setAudience, teachingClass, validUnit } from "@/server/classroom";
 import { query, run } from "@/server/db";
 
 /**
@@ -16,7 +16,7 @@ export async function POST(req: Request) {
   const students = await cleanAudience(cls.id, body?.students);
   if (!students) return error(400, "Choose students from this class.");
   const key = typeof body?.unitKey === "string" ? body.unitKey : "";
-  if (!(await validUnit(key, cls.grade, cls.framework))) return error(400, "That unit isn’t part of this class’s grade.");
+  if (!(await validUnit(key, classGrades(cls), cls.framework))) return error(400, "That unit isn’t part of this class’s grade.");
   const have = await query<{ n: number }>("SELECT COUNT(*) AS n FROM class_assignments WHERE class_id = ?", [cls.id]);
   if (Number(have[0].n) >= MAX_ASSIGNMENTS) return error(409, "That’s a lot of assigned units. Remove some first.");
   const dueAt = cleanDueAt(body?.dueAt);

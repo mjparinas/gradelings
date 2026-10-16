@@ -1,8 +1,9 @@
 import { error, getSession, json, newId, rateLimited, sameOrigin } from "@/server/auth";
-import { assignmentAudience, assignmentDue, assignmentGoals, assignmentKeys, classProgress, classTeachers, isFramework, MAX_CLASSES, newJoinCode, ownedClass, pendingInvites, removeClassTeachers, teachingClass } from "@/server/classroom";
+import { assignmentAudience, cleanClassName, cleanSecondGrade, assignmentDue, assignmentGoals, assignmentKeys, classProgressAndMisses, classTeachers, isFramework, MAX_CLASSES, newJoinCode, ownedClass, pendingInvites, removeClassTeachers, teachingClass } from "@/server/classroom";
 import { batch, query, run } from "@/server/db";
 import { liveClassStatements } from "@/server/live";
 import { isFlagOn } from "@/server/flags";
+import { startNextYear } from "@/server/newYear";
 import { classRoster, removeClassStudents } from "@/server/students";
 import { GRADE_ORDER } from "@/content/subjects";
 
@@ -19,8 +20,9 @@ export async function GET(req: Request) {
     const found = await teachingClass(id, session.parentId);
     if (!found) return error(404, "Class not found");
     const { cls, role } = found;
+    const progress = await classProgressAndMisses(cls.id);
     return json({
-      class: { id: cls.id, name: cls.name, grade: cls.grade, framework: cls.framework, joinCode: cls.join_code },
+      class: { id: cls.id, name: cls.name, grade: cls.grade, grade2: cls.grade2, framework: cls.framework, joinCode: cls.join_code },
       role,
       teachers: await classTeachers(cls),
       // Pending invitations are the owner's business.
@@ -29,17 +31,18 @@ export async function GET(req: Request) {
       due: await assignmentDue(cls.id),
       goal: await assignmentGoals(cls.id),
       audience: await assignmentAudience(cls.id),
-      students: await classProgress(cls.id),
+      students: progress.students,
+      missed: progress.missed,
       roster: await classRoster(cls.id),
     });
   }
-  const rows = await query<{ id: string; name: string; grade: string; framework: string; join_code: string; students: number; owner_parent_id: string }>(
-    `SELECT c.id, c.name, c.grade, c.framework, c.join_code, c.owner_parent_id, (SELECT COUNT(*) FROM class_members m WHERE m.class_id = c.id) AS students
+  const rows = await query<{ id: string; name: string; grade: string; grade2: string | null; framework: string; join_code: string; students: number; owner_parent_id: string }>(
+    `SELECT c.id, c.name, c.grade, c.grade2, c.framework, c.join_code, c.owner_parent_id, (SELECT COUNT(*) FROM class_members m WHERE m.class_id = c.id) AS students
      FROM classes c WHERE c.closed_at IS NULL AND (c.owner_parent_id = ? OR c.id IN (SELECT class_id FROM class_teachers WHERE parent_id = ?)) ORDER BY c.created_at`,
     [session.parentId, session.parentId],
   );
   return json({
-    classes: rows.map((r) => ({ id: r.id, name: r.name, grade: r.grade, framework: r.framework, joinCode: r.join_code, students: Number(r.students), role: r.owner_parent_id === session.parentId ? "owner" : "co-teacher" })),
+    classes: rows.map((r) => ({ id: r.id, name: r.name, grade: r.grade, grade2: r.grade2, framework: r.framework, joinCode: r.join_code, students: Number(r.students), role: r.owner_parent_id === session.parentId ? "owner" : "co-teacher" })),
   });
 }
 
@@ -51,14 +54,16 @@ export async function POST(req: Request) {
   if (!(await isFlagOn("new-classes", session.familyId))) return error(503, "New classes can't be created just now. Please try again later.");
   if (!session.verified) return error(403, "Please confirm your email first. Classes show children's progress, so we only allow them for confirmed accounts.");
   if (await rateLimited(`class:${session.parentId}`, 20, 60 * 60_000)) return error(429, "Too many classes created. Try again later.");
-  const body = (await req.json().catch(() => null)) as { name?: unknown; grade?: unknown; framework?: unknown } | null;
+  const body = (await req.json().catch(() => null)) as { name?: unknown; grade?: unknown; grade2?: unknown; framework?: unknown } | null;
   // One line of plain text: it appears in invitation emails and on printed cards.
-  const name = typeof body?.name === "string" ? body.name.replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim().slice(0, 60) : "";
+  const name = cleanClassName(body?.name);
   const grade = String(body?.grade ?? "");
   const framework = body?.framework === undefined ? "ca-bc" : body.framework;
   if (!isFramework(framework)) return error(400, "Choose a province or state.");
   if (!name) return error(400, "Give the class a name.");
   if (!(GRADE_ORDER as string[]).includes(grade)) return error(400, "Choose a grade.");
+  const grade2 = cleanSecondGrade(grade, body?.grade2);
+  if (grade2 === undefined) return error(400, "A split class's second grade has to be next to the first.");
   const mine = await query<{ n: number }>("SELECT COUNT(*) AS n FROM classes WHERE owner_parent_id = ? AND closed_at IS NULL", [session.parentId]);
   if (Number(mine[0].n) >= MAX_CLASSES) return error(409, "You have the maximum number of classes. Close one first.");
 
@@ -67,8 +72,8 @@ export async function POST(req: Request) {
     const code = newJoinCode();
     try {
       const now = Date.now();
-      await run("INSERT INTO classes (id, owner_parent_id, name, grade, framework, join_code, created_at, last_activity_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", [id, session.parentId, name, grade, framework, code, now, now]);
-      return json({ class: { id, name, grade, framework, joinCode: code, students: 0 } });
+      await run("INSERT INTO classes (id, owner_parent_id, name, grade, grade2, framework, join_code, created_at, last_activity_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", [id, session.parentId, name, grade, grade2, framework, code, now, now]);
+      return json({ class: { id, name, grade, grade2, framework, joinCode: code, students: 0 } });
     } catch {
       // Join code collision: try another.
     }
@@ -76,7 +81,11 @@ export async function POST(req: Request) {
   return error(500, "Couldn’t create the class. Try again.");
 }
 
-/** Replaces the class's join code (?id=), for when it has been shared more widely than intended. Linked students stay linked. */
+/**
+ * Changes a class (?id=), for its owner. With `{ name }` it renames the class; with `{ action: "next-year" }` it moves the
+ * class up a grade for a new school year. With no body it replaces the join code, for when it has been shared more widely
+ * than intended (linked students stay linked).
+ */
 export async function PATCH(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req);
@@ -84,6 +93,18 @@ export async function PATCH(req: Request) {
   const id = new URL(req.url).searchParams.get("id") ?? "";
   const cls = await ownedClass(id, session.parentId);
   if (!cls) return error(404, "Class not found");
+  const body = (await req.json().catch(() => null)) as { name?: unknown; action?: unknown } | null;
+  if (body && "name" in body) {
+    const name = cleanClassName(body.name);
+    if (!name) return error(400, "Give the class a name.");
+    await run("UPDATE classes SET name = ? WHERE id = ?", [name, id]);
+    return json({ name });
+  }
+  if (body?.action === "next-year") {
+    if (!(await startNextYear(cls))) return error(409, "This class is already in the last grade, so there is no next grade to move up to.");
+    const moved = (await ownedClass(id, session.parentId))!;
+    return json({ class: { id, name: moved.name, grade: moved.grade, grade2: moved.grade2 } });
+  }
   for (let attempt = 0; attempt < 5; attempt++) {
     const code = newJoinCode();
     try {

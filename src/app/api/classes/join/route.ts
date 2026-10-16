@@ -1,8 +1,8 @@
 import { getFramework } from "@/content/frameworks";
-import type { FrameworkId } from "@/content/types";
+import type { FrameworkId, GradeId } from "@/content/types";
 import { countryOf } from "@/lib/country";
 import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
-import { MAX_STUDENTS, normalizeCode } from "@/server/classroom";
+import { classGrades, MAX_STUDENTS, normalizeCode } from "@/server/classroom";
 import { query, run } from "@/server/db";
 
 // A parent links one of their children to a class with the teacher's join code. This is the
@@ -30,15 +30,15 @@ export async function POST(req: Request) {
   const profileId = typeof body?.profileId === "string" ? body.profileId : "";
   const owns = await query<{ data: string }>("SELECT data FROM profiles WHERE id = ? AND family_id = ?", [profileId, session.familyId]);
   if (!owns.length) return error(404, "That child isn’t synced to your account yet. Sync, then try again.");
-  const cls = (await query<{ id: string; name: string; grade: string; framework: string }>("SELECT id, name, grade, framework FROM classes WHERE join_code = ? AND closed_at IS NULL", [code]))[0];
+  const cls = (await query<{ id: string; name: string; grade: GradeId; grade2: GradeId | null; framework: string }>("SELECT id, name, grade, grade2, framework FROM classes WHERE join_code = ? AND closed_at IS NULL", [code]))[0];
   if (!cls) return error(404, "We couldn’t find a class with that code. Check it with the teacher.");
   const child = JSON.parse(owns[0].data) as { grade?: string; framework?: string };
-  if (child.grade !== cls.grade) return error(409, "This class is for a different grade than your child’s profile.");
+  if (!classGrades(cls).includes(child.grade as GradeId)) return error(409, "This class is for a different grade than your child’s profile.");
   if ((child.framework ?? "ca-bc") !== cls.framework) return error(409, `This class follows a different ${countryOf(getFramework(cls.framework as FrameworkId)).regionKind}’s curriculum than your child’s profile.`);
   const size = await query<{ n: number }>("SELECT COUNT(*) AS n FROM class_members WHERE class_id = ?", [cls.id]);
   if (Number(size[0].n) >= MAX_STUDENTS) return error(409, "This class is full.");
   const now = Date.now();
-  const joined = await run("INSERT OR IGNORE INTO class_members (class_id, profile_id, family_id, joined_at) VALUES (?, ?, ?, ?)", [cls.id, profileId, session.familyId, now]);
+  const joined = await run("INSERT OR IGNORE INTO class_members (class_id, profile_id, family_id, joined_at, grade) VALUES (?, ?, ?, ?, ?)", [cls.id, profileId, session.familyId, now, child.grade ?? cls.grade]);
   if (joined) await run("UPDATE classes SET last_activity_at = ?, inactive_warning_at = NULL WHERE id = ? AND closed_at IS NULL", [now, cls.id]);
   return json({ link: { classId: cls.id, profileId, className: cls.name, grade: cls.grade } });
 }
