@@ -413,7 +413,7 @@ function FirstRun({ students, assignments, tabLink }: { students: StudentRow[]; 
             <span aria-hidden="true">{s.done ? "✅" : "⬜"}</span>
             <span className="sr-only">{s.done ? "Done: " : "To do: "}</span>
             <span className={s.done ? "text-ink-soft line-through" : ""}>{s.text}</span>
-            {!s.done && <span className="inline-flex min-h-11 items-center">{s.link}</span>}
+            {!s.done && <span className="[&_a]:inline-flex [&_a]:min-h-11 [&_a]:items-center">{s.link}</span>}
           </li>
         ))}
       </ol>
