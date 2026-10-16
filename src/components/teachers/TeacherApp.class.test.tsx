@@ -154,6 +154,24 @@ describe("TeacherApp class page", () => {
     expect(await within(section).findByRole("button", { name: "Ask a live question" })).toBeInTheDocument();
   });
 
+  it("looks back at the day's live questions and copies the recap", async () => {
+    const question = { prompt: "How many?", hint: "", choices: [{ id: "a", label: "3" }, { id: "b", label: "4" }], answer: "b" };
+    serve(detail, (url) =>
+      url === "/api/classes/live/?classId=class-1&recap=1"
+        ? { recap: [{ id: "q1", unitKey: "3/math/counting", question, revealed: true, createdAt: now, answers: [{ profileId: "p1", choice: "a", correct: false }, { profileId: "p3", choice: "b", correct: true }] }] }
+        : url.startsWith("/api/classes/live/") ? { live: null } : undefined,
+    );
+    const user = await openClass();
+    const write = vi.spyOn(navigator.clipboard, "writeText");
+    await openTab(user, "Live");
+    await user.click(screen.getByRole("button", { name: "Look back at today’s questions" }));
+    const recap = await screen.findByLabelText("Recap of today’s questions");
+    expect(recap).toHaveTextContent("1 of 2 answered right · To check in with: Maya");
+    await user.click(within(recap).getByRole("button", { name: "Copy the recap" }));
+    expect(write).toHaveBeenCalledWith(expect.stringContaining("1 of 2 answered right. To check in with: Maya."));
+    expect(write).toHaveBeenCalledWith(expect.stringContaining("not a report-card mark"));
+  });
+
   it("uses US English and US dates for a class on a US curriculum, and Canadian ones otherwise", async () => {
     const when = Date.now() - 2 * DAY;
     const one = (framework: string) => {
