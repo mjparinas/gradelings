@@ -17,6 +17,8 @@ export interface ClassSummary {
   id: string;
   name: string;
   grade: string;
+  /** The second grade of a split class. */
+  grade2?: string | null;
   framework: string;
   joinCode: string;
   students: number;

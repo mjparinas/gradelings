@@ -152,6 +152,33 @@ describe("TeacherApp", () => {
     expect(await screen.findByText("Students (1)")).toBeInTheDocument();
   });
 
+  it("creates a split class with a second grade next to the first", async () => {
+    const user = userEvent.setup();
+    render(<TeacherApp />);
+    await user.type(await screen.findByLabelText("Class name"), "Room 3/4");
+    await user.click(screen.getByRole("combobox", { name: "Grade" }));
+    await user.click(screen.getByRole("option", { name: "Grade 3" }));
+    await user.click(screen.getByRole("combobox", { name: "Second grade (split class)" }));
+    // Only the grades either side, after None.
+    expect(screen.getAllByRole("option").map((o) => o.textContent)).toEqual(["None", "Grade 2", "Grade 4"]);
+    await user.click(screen.getByRole("option", { name: "Grade 4" }));
+    await user.click(screen.getByRole("button", { name: "Create class" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/", "POST", { name: "Room 3/4", grade: "3", grade2: "4", framework: "ca-bc" }));
+  });
+
+  it("names both grades of a split class, in Canadian and US wording", async () => {
+    const split = { ...cls, id: "class-s", name: "Room 3/4", grade: "3", grade2: "4" };
+    const wa = { ...cls, id: "class-w", name: "Room W", grade: "3", grade2: "4", framework: "us-wa" };
+    const base = mocks.call.getMockImplementation()!;
+    mocks.call.mockImplementation((url: string, method = "GET") => {
+      if (url === "/api/classes/" && method === "GET") return Promise.resolve({ classes: [split, wa] });
+      return base(url, method);
+    });
+    render(<TeacherApp />);
+    expect(await screen.findByText(/Grades 3 and 4 · British Columbia/)).toBeInTheDocument();
+    expect(screen.getByText(/3rd and 4th grade · Washington/)).toBeInTheDocument();
+  });
+
   it("tells the teacher of a Washington class that the school consents for students, and not a Canadian one", async () => {
     const user = userEvent.setup();
     const wa = { ...cls, id: "class-wa", name: "Room 4W", grade: "4", framework: "us-wa" };

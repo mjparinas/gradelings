@@ -342,6 +342,23 @@ describe("TeacherApp class page", () => {
     expect(within(who).getByRole("checkbox", { name: "Alex" })).not.toBeChecked();
   });
 
+  it("runs a split class: units from both grades, each student's grade shown, and a grade for new students", async () => {
+    const split = { ...cls, grade2: "4" };
+    const split2 = { ...detail, class: split, students: detail.students.map((st, i) => ({ ...st, grade: i === 1 ? "4" : "3" })) };
+    serve(split2, (url, method) => (url === "/api/classes/" && method === "GET" ? { classes: [split] } : undefined));
+    const user = await openClass();
+    expect(screen.getByText(/Grades 3 and 4 · Ontario Curriculum/)).toBeInTheDocument();
+    const table = screen.getAllByRole("table")[0];
+    expect(within(table).getByRole("rowheader", { name: /^Sam\s*\(Grade 4\)/ })).toBeInTheDocument();
+    expect(within(table).getByRole("rowheader", { name: /^Maya\s*\(Grade 3\)/ })).toBeInTheDocument();
+    await openTab(user, "Students");
+    await user.type(screen.getByLabelText("First names, one per line"), "Jo");
+    await user.click(screen.getByRole("combobox", { name: "Their grade" }));
+    await user.click(screen.getByRole("option", { name: "Grade 4" }));
+    await user.click(screen.getByRole("button", { name: "Add students" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/", "POST", { classId: "class-1", names: ["Jo"], grade: "4" }));
+  });
+
   it("cancels a pending co-teacher invitation", async () => {
     serve({ ...detail, role: "owner", teachers: [{ id: "o", email: "owner@example.com", role: "owner" }], invites: [{ email: "wait@example.com", createdAt: 1 }] });
     const user = await openClass();

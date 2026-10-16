@@ -39,6 +39,21 @@ type ClassTab = (typeof CLASS_TABS)[number]["path"];
 /** A hash link to one tab of a class. Progress is the class's own address. */
 const classHref = (id: string, tab: ClassTab = "progress") => `#/class/${encodeURIComponent(id)}${tab === "progress" ? "" : `/${tab}`}`;
 
+/** "Grade 3", or "Grades 3 and 4" for a split class (US: "3rd grade", "3rd and 4th grade"). */
+function classGradeText(c: { grade: string; grade2?: string | null; framework: string }): string {
+  const first = gradeLabel(c.grade as GradeId, c.framework);
+  if (!c.grade2) return first;
+  const second = gradeLabel(c.grade2 as GradeId, c.framework);
+  const plain = (g: string) => g.replace(/^Grade /, "").replace(/ grade$/, "");
+  return /^Grade /.test(first) ? `Grades ${plain(first)} and ${plain(second)}` : `${plain(first)} and ${second}`;
+}
+
+/** The grade next to `grade` a class could share (a split class), as menu options after "None". */
+function secondGradeOptions(grade: GradeId, framework: string) {
+  const i = GRADE_ORDER.indexOf(grade);
+  return [{ value: "", label: "None" }, ...[GRADE_ORDER[i - 1], GRADE_ORDER[i + 1]].filter(Boolean).map((g) => ({ value: g, label: gradeLabel(g, framework) }))];
+}
+
 const pct = (v: number) => `${Math.round(v * 100)}%`;
 const btn = "min-h-11 rounded-xl px-4 font-bold";
 
@@ -150,6 +165,7 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
   const [classes, setClasses] = useState<ClassSummary[] | null>(null);
   const [name, setName] = useState("");
   const [grade, setGrade] = useState<GradeId>("3");
+  const [grade2, setGrade2] = useState("");
   const [framework, setFramework] = useState<FrameworkId>("ca-bc");
   const [invites, setInvites] = useState<ClassInvite[]>([]);
   const [err, setErr] = useState("");
@@ -178,7 +194,8 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
     e.preventDefault();
     setErr("");
     try {
-      const { class: c } = await call<{ class: ClassSummary }>("/api/classes/", "POST", { name, grade, framework });
+      const { class: c } = await call<{ class: ClassSummary }>("/api/classes/", "POST", { name, grade, ...(grade2 ? { grade2 } : {}), framework });
+      setGrade2("");
       setName("");
       onOpen(c.id);
     } catch (x) {
@@ -217,7 +234,7 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
             <button type="button" onClick={() => onOpen(c.id)} className="w-full rounded-2xl border border-line bg-white p-4 text-left">
               <span className="block text-xl font-bold">{c.name}</span>
               <span className="block font-read text-ink-soft">
-                {gradeLabel(c.grade as GradeId, c.framework)} · {getFramework(c.framework as FrameworkId).region} · {c.students} {c.students === 1 ? "student" : "students"}{c.role === "co-teacher" ? " · you co-teach" : ""} · code <b className="font-mono tracking-widest">{c.joinCode}</b>
+                {classGradeText(c)} · {getFramework(c.framework as FrameworkId).region} · {c.students} {c.students === 1 ? "student" : "students"}{c.role === "co-teacher" ? " · you co-teach" : ""} · code <b className="font-mono tracking-widest">{c.joinCode}</b>
               </span>
             </button>
           </li>
@@ -228,7 +245,8 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
           Class name
           <input className="mt-1 min-h-11 rounded-xl border border-line px-3" value={name} maxLength={60} onChange={(e) => setName(e.target.value)} required />
         </label>
-        <SelectMenu label="Grade" block={false} value={grade} onChange={(next) => setGrade(next as GradeId)} options={GRADE_ORDER.map((g) => ({ value: g, label: gradeLabel(g, framework) }))} />
+        <SelectMenu label="Grade" block={false} value={grade} onChange={(next) => { setGrade(next as GradeId); setGrade2(""); }} options={GRADE_ORDER.map((g) => ({ value: g, label: gradeLabel(g, framework) }))} />
+        <SelectMenu label="Second grade (split class)" block={false} value={grade2} onChange={setGrade2} options={secondGradeOptions(grade, framework)} />
         <SelectMenu label={REGION_LABEL} block={false} value={framework} onChange={(next) => setFramework(next as FrameworkId)} {...frameworkMenu((f) => f.region)} />
         <button disabled={account.verified === false} className={`${btn} bg-[#25b47e] text-[#0f172a] disabled:opacity-50`}>Create class</button>
         {isUsClass(getFramework(framework)) && <p className="w-full font-read text-sm text-ink-soft">{US_CLASS_CONSENT}</p>}
@@ -243,7 +261,7 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
 }
 
 export interface ClassDetail {
-  class: { id: string; name: string; grade: GradeId; framework: FrameworkId; joinCode: string };
+  class: { id: string; name: string; grade: GradeId; grade2?: GradeId | null; framework: FrameworkId; joinCode: string };
   assignments: string[];
   due: Record<string, number>;
   /** Homework question counts by unit key. Older servers omit it. */
@@ -340,6 +358,8 @@ function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url
   const [busy, setBusy] = useState(false);
   const [removing, setRemoving] = useState<RosterEntry | null>(null);
   const { class: cls, roster, students } = data;
+  // A split class asks which grade the new students are in.
+  const [newGrade, setNewGrade] = useState<GradeId>(cls.grade);
   const isOwner = (data.role ?? "owner") === "owner";
   const byProfile = new Map(students.map((s) => [s.profileId, s]));
   return (
@@ -353,7 +373,10 @@ function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url
         <ul className="mt-3 divide-y divide-line">
           {roster.map((r) => (
             <li key={r.id} className="flex flex-wrap items-center gap-3 py-2">
-              <span className="min-w-32 flex-1 font-read font-bold">{byProfile.get(r.profileId)?.name ?? "Student"}</span>
+              <span className="min-w-32 flex-1 font-read font-bold">
+                {byProfile.get(r.profileId)?.name ?? "Student"}
+                {cls.grade2 && byProfile.get(r.profileId) && <span className="block text-sm font-normal text-ink-soft">{gradeLabel(byProfile.get(r.profileId)!.grade as GradeId, cls.framework)}</span>}
+              </span>
               <span className="font-mono text-xl font-bold tracking-widest" aria-label={`Login code ${r.loginCode.split("").join(" ")}`}>
                 {r.loginCode}
               </span>
@@ -375,7 +398,7 @@ function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url
           e.preventDefault();
           setBusy(true);
           // Keep the typed names when adding them failed, so nothing has to be retyped.
-          if (await onChange("/api/classes/students/", "POST", { classId: cls.id, names: names.split(/\n|,/).map((n) => n.trim()).filter(Boolean) })) setNames("");
+          if (await onChange("/api/classes/students/", "POST", { classId: cls.id, names: names.split(/\n|,/).map((n) => n.trim()).filter(Boolean), ...(cls.grade2 ? { grade: newGrade } : {}) })) setNames("");
           setBusy(false);
         }}
       >
@@ -384,6 +407,9 @@ function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url
           <textarea className="mt-1 min-h-24 rounded-xl border border-line px-3 py-2 font-read" value={names} onChange={(e) => setNames(e.target.value)} placeholder={"Maya\nSam\nAlex P."} maxLength={1200} />
         </label>
         <div className="flex flex-wrap gap-3">
+          {cls.grade2 && (
+            <SelectMenu label="Their grade" block={false} value={newGrade} onChange={(next) => setNewGrade(next as GradeId)} options={[cls.grade, cls.grade2].map((g) => ({ value: g, label: gradeLabel(g, cls.framework) }))} />
+          )}
           <button disabled={busy || !names.trim()} className={`${btn} bg-[#25b47e] text-[#0f172a] disabled:opacity-50`}>
             Add students
           </button>
@@ -609,7 +635,7 @@ function PrintSheet({ data, label, mode }: { data: ClassDetail; label: (key: str
   return (
     <div className="hidden print:block">
       <h1 className="text-2xl font-bold">
-        {cls.name} · {gradeLabel(cls.grade, cls.framework)} · {getFramework(cls.framework).curriculumName}
+        {cls.name} · {classGradeText(cls)} · {getFramework(cls.framework).curriculumName}
       </h1>
       <p className="text-sm">
         Practice summary printed {new Date(now).toLocaleDateString(countryOf(getFramework(cls.framework)).locale, { dateStyle: "long" })}. This reflects practice in {APP_NAME}, not a report-card mark.
@@ -684,7 +710,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
   const load = useCallback(
     () =>
       call<ClassDetail>(`/api/classes/?id=${encodeURIComponent(id)}`)
-        .then((d) => loadGrade(d.class.grade, d.class.framework).then(() => d))
+        .then((d) => Promise.all([d.class.grade, ...(d.class.grade2 ? [d.class.grade2] : [])].map((g) => loadGrade(g, d.class.framework))).then(() => d))
         .then((d) => {
           setData(d);
           setReady(true);
@@ -706,8 +732,9 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
   const goalOptions = [{ value: "", label: `Until ${meeting}` }, ...HOMEWORK_GOALS.map((n) => ({ value: String(n), label: `${n} questions` }))];
   /** The class's units by subject, for a picker. Units in `taken` are shown but can't be picked. */
   const unitGroups = (taken: string[]) =>
-    coursesForGrade(cls.grade, cls.framework).map((course) => ({
-      label: getSubjectMeta(course.subject).title.big,
+    [cls.grade, ...(cls.grade2 ? [cls.grade2] : [])].flatMap((g) => coursesForGrade(g, cls.framework)).map((course) => ({
+      // A split class's units are grouped by grade too.
+      label: getSubjectMeta(course.subject).title.big + (cls.grade2 ? ` · ${gradeLabel(course.grade, cls.framework)}` : ""),
       options: course.units.map((u) => {
         const key = `${course.grade}/${course.subject}/${u.id}`;
         return { value: key, label: `${u.emoji} ${u.title}`, disabled: taken.includes(key) };
@@ -749,7 +776,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
       <div className="print:hidden">
       <h1 className="text-3xl font-bold">{cls.name}</h1>
       <p className="font-read text-ink-soft">
-        {gradeLabel(cls.grade, cls.framework)} · {getFramework(cls.framework).curriculumName}
+        {classGradeText(cls)} · {getFramework(cls.framework).curriculumName}
       </p>
 
       {tab === "progress" && (
@@ -775,7 +802,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
                     {students.map((s) => (
                       <tr key={s.profileId} className="border-b border-line align-top last:border-0">
                         <th scope="row" className="py-2 pr-3 font-bold">
-                          {s.name}
+                          {s.name}{cls.grade2 && <span className="font-normal text-ink-soft"> ({gradeLabel(s.grade as GradeId, cls.framework)})</span>}
                           <span className="block text-sm font-normal text-ink-soft">{s.lastActive ? `Active ${new Date(s.lastActive).toLocaleDateString(countryOf(getFramework(cls.framework)).locale, { month: "short", day: "numeric" })}` : "Not active yet"}</span>
                         </th>
                         {s.units.map((u) => u.assigned === false ? (
