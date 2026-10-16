@@ -159,7 +159,7 @@ describe("Queue", () => {
 describe("Inbox", () => {
   const item = { id: "m1", from: "Lee <lee@example.com>", fromEmail: "lee@example.com", subject: "Help with fractions", receivedAt: Date.now(), attachments: 1, familyId: "fam-9", handledAt: null, repliedAt: null };
 
-  it("lists mail, opens one as text and replies", async () => {
+  it("lists mail, opens a text-only one as text and replies", async () => {
     respond((url, method) => {
       if (url === "/api/admin/inbox/" && method === "GET") return { configured: true, items: [item], hasMore: false };
       if (url === "/api/admin/inbox/?id=m1") return { message: { ...item, text: "<b>Hi</b> there", replyTo: "lee@example.com", attachmentNames: ["sheet.pdf"] } };
@@ -172,7 +172,7 @@ describe("Inbox", () => {
     expect(await screen.findByText("Waiting")).toBeInTheDocument();
     expect(onWaiting).toHaveBeenLastCalledWith(1);
     await user.click(screen.getByRole("button", { name: /^Help with fractions/ }));
-    // Shown as text, never as HTML.
+    // A mail with no HTML part is shown as text, never as HTML.
     expect(await screen.findByText("<b>Hi</b> there")).toBeInTheDocument();
     expect(screen.getByText(/sheet\.pdf/)).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Open Their Account" }));
@@ -184,6 +184,31 @@ describe("Inbox", () => {
     expect(await screen.findByText("Reply sent.")).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Mark as Done" }));
     expect(sent("/api/admin/inbox/")).toEqual({ id: "m1", action: "handled", handled: true });
+  });
+
+  it("shows HTML mail in a sandboxed frame, with images blocked until asked for and a plain-text view", async () => {
+    respond((url, method) => {
+      if (url === "/api/admin/inbox/" && method === "GET") return { configured: true, items: [item], hasMore: false };
+      if (url === "/api/admin/inbox/?id=m1") return { message: { ...item, text: "Hi there", hasHtml: true, remoteImages: true, replyTo: "lee@example.com", attachmentNames: [] } };
+      return undefined;
+    });
+    const user = userEvent.setup();
+    render(<Inbox onOpenFamily={vi.fn()} />);
+    await user.click(await screen.findByRole("button", { name: /^Help with fractions/ }));
+    const frame = await screen.findByTitle("Message");
+    expect(frame.tagName).toBe("IFRAME");
+    expect(frame).toHaveAttribute("src", "/api/admin/inbox/view/?id=m1");
+    // No scripts and no same-origin access, whatever the page asks for.
+    expect(frame.getAttribute("sandbox")).toBe("allow-popups allow-popups-to-escape-sandbox");
+    expect(frame).toHaveAttribute("referrerpolicy", "no-referrer");
+    await user.click(screen.getByRole("button", { name: "Load Images" }));
+    expect(screen.getByTitle("Message")).toHaveAttribute("src", "/api/admin/inbox/view/?id=m1&images=1");
+    expect(screen.queryByRole("button", { name: "Load Images" })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Show Plain Text" }));
+    expect(screen.getByRole("region", { name: "Message" })).toHaveTextContent("Hi there");
+    expect(screen.queryByTitle("Message")).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Show Formatted" }));
+    expect(screen.getByTitle("Message").tagName).toBe("IFRAME");
   });
 
   it("archives mail from the list, shows it under Archived and moves it back", async () => {
