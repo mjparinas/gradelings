@@ -38,6 +38,8 @@ export interface LiveForTeacher {
   revealed: boolean;
   createdAt: number;
   answers: { profileId: string; choice: string; correct: boolean }[];
+  /** What "Next question" will ask, for the teacher to look at first. Null when the unit has nothing else. */
+  next?: LiveQuestionData | null;
 }
 
 /** How often a child's device asks for a live question: quickly while one is open, slowly otherwise. */
@@ -49,4 +51,24 @@ export const LIVE_POLL_TEACHER_MS = 2_500;
 /** Answers per choice, in the question's choice order. */
 export function liveCounts(question: Pick<LiveQuestionData, "choices">, answers: { choice: string }[]): { id: string; count: number }[] {
   return question.choices.map((c) => ({ id: c.id, count: answers.filter((a) => a.choice === c.id).length }));
+}
+
+/** One question's result for a recap: how many answered, how many were right, and who missed it. */
+export function liveRecapItem(live: Pick<LiveForTeacher, "answers">, names: Map<string, string>): { answered: number; right: number; missed: string[] } {
+  return {
+    answered: live.answers.length,
+    right: live.answers.filter((a) => a.correct).length,
+    missed: live.answers.filter((a) => !a.correct).map((a) => names.get(a.profileId) ?? "Student"),
+  };
+}
+
+/** The recap as plain text a teacher can copy, oldest question first. Says it is practice, not a mark. */
+export function liveRecapText(items: LiveForTeacher[], names: Map<string, string>, unitName: (key: string) => string, className: string, appName: string): string {
+  const lines = [`${className}: live questions (${appName})`];
+  items.forEach((q, i) => {
+    const r = liveRecapItem(q, names);
+    lines.push("", `${i + 1}. ${unitName(q.unitKey)}: ${q.question.prompt}`, `   ${r.right} of ${r.answered} answered right.${r.missed.length ? ` To check in with: ${r.missed.join(", ")}.` : ""}`);
+  });
+  lines.push("", "This reflects practice, not a report-card mark.");
+  return lines.join("\n");
 }

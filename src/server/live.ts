@@ -5,7 +5,7 @@ import type { ChoiceQuestion } from "@/content/types";
 import { type LiveQuestionData } from "@/lib/live";
 import { newId } from "./auth";
 import { batch, query, run } from "./db";
-import type { ClassRow } from "./classroom";
+import { classGrades, type ClassRow } from "./classroom";
 
 // Live questions: a teacher asks the class one multiple-choice question at a time, in real time.
 // They need a connection (devices poll for the open question), so they sit beside offline practice
@@ -29,6 +29,8 @@ export interface LiveRow {
   created_at: number;
   revealed_at: number | null;
   ended_at: number | null;
+  /** The seed variant the previewed next question is drawn from; the teacher raises it to swap the preview. */
+  next_swaps?: number | null;
 }
 
 /**
@@ -36,14 +38,14 @@ export interface LiveRow {
  * class and number so it is the same on every server. Units whose questions are all typed, sorted or
  * built return null: those need the full practice screen.
  */
-export async function pickLiveQuestion(cls: Pick<ClassRow, "id" | "grade" | "framework">, unitKey: string, n: number): Promise<LiveQuestionData | null> {
+export async function pickLiveQuestion(cls: Pick<ClassRow, "id" | "grade" | "framework"> & { grade2?: ClassRow["grade2"] }, unitKey: string, n: number, variant = 0): Promise<LiveQuestionData | null> {
   const parsed = parseUnitKey(unitKey);
-  if (!parsed || parsed.grade !== cls.grade) return null;
-  await loadGrade(cls.grade, cls.framework);
-  const unit = getCourse(cls.grade, parsed.subject, cls.framework)?.units.find((u) => u.id === parsed.unitId);
+  if (!parsed || !classGrades(cls).includes(parsed.grade)) return null;
+  await loadGrade(parsed.grade, cls.framework);
+  const unit = getCourse(parsed.grade, parsed.subject, cls.framework)?.units.find((u) => u.id === parsed.unitId);
   if (!unit) return null;
   for (let t = 0; t < TRIES; t++) {
-    const set = withSeed(hashSeed(`live:${cls.id}:${unitKey}:${n}:${t}`), () => unit.generate({ difficulty: 2 }));
+    const set = withSeed(hashSeed(`live:${cls.id}:${unitKey}:${n}:${t}${variant ? `:v${variant}` : ""}`), () => unit.generate({ difficulty: 2 }));
     const choice = set.filter((q): q is ChoiceQuestion => q.kind === "choice" && q.choices.some((c) => c.id === q.answer));
     if (!choice.length) continue;
     const q = choice[n % choice.length];
@@ -70,11 +72,51 @@ export async function openLive(classId: string, now = Date.now()): Promise<LiveR
   )[0];
 }
 
+/** How many seed variants to look through for a next question that isn't a repeat. */
+const PREVIEW_TRIES = 8;
+
+/**
+ * The question "Next question" would ask now, so the teacher can look at it first: the next one from
+ * the open question's unit, skipping any that repeat the current prompt (or one in `avoid`), starting
+ * from the variant the teacher has swapped to. Null when the unit has nothing else to ask.
+ */
+export async function previewNext(cls: ClassRow, row: LiveRow, avoid: string[] = []): Promise<{ data: LiveQuestionData; variant: number } | null> {
+  const current = (JSON.parse(row.data) as LiveQuestionData).prompt;
+  let fallback: { data: LiveQuestionData; variant: number } | null = null;
+  const start = Number(row.next_swaps ?? 0);
+  for (let variant = start; variant < start + PREVIEW_TRIES; variant++) {
+    const data = await pickLiveQuestion(cls, row.unit_key, Number(row.n) + 1, variant);
+    if (!data) return fallback;
+    fallback ??= { data, variant };
+    if (data.prompt !== current && !avoid.includes(data.prompt)) return { data, variant };
+  }
+  return fallback;
+}
+
+/** Swaps the previewed next question for a different one. Returns false when nothing is open or nothing else fits. */
+export async function swapNextLive(cls: ClassRow, now = Date.now()): Promise<boolean> {
+  const row = await openLive(cls.id, now);
+  if (!row) return false;
+  const shown = await previewNext(cls, row);
+  if (!shown) return false;
+  const other = await previewNext(cls, { ...row, next_swaps: shown.variant + 1 }, [shown.data.prompt]);
+  if (!other || other.data.prompt === shown.data.prompt) return false;
+  await run("UPDATE live_questions SET next_swaps = ? WHERE id = ?", [other.variant, row.id]);
+  return true;
+}
+
+/** Every question the class was asked in the last day, oldest first (before it is deleted). */
+export async function recentLive(classId: string, now = Date.now()): Promise<LiveRow[]> {
+  return query<LiveRow>("SELECT * FROM live_questions WHERE class_id = ? AND created_at > ? ORDER BY created_at", [classId, now - LIVE_KEEP]);
+}
+
 /** Ends whatever is open and asks a new question. Returns null when the unit has no tap-to-answer questions. */
 export async function startLive(cls: ClassRow, unitKey: string, teacherId: string, now = Date.now()): Promise<LiveRow | null> {
   const last = (await query<{ n: number }>("SELECT n FROM live_questions WHERE class_id = ? AND unit_key = ? ORDER BY created_at DESC LIMIT 1", [cls.id, unitKey]))[0];
   const n = last ? Number(last.n) + 1 : 0;
-  const data = await pickLiveQuestion(cls, unitKey, n);
+  // Asking the next question from the open one's unit asks the question the teacher was shown.
+  const open = await openLive(cls.id, now);
+  const data = open && open.unit_key === unitKey ? ((await previewNext(cls, open))?.data ?? null) : await pickLiveQuestion(cls, unitKey, n);
   if (!data) return null;
   await pruneLive(now);
   const id = newId();

@@ -1,3 +1,4 @@
+import { execSync } from "node:child_process";
 import path from "node:path";
 import type { NextConfig } from "next";
 import { DEV_POLICY, HEADER_POLICY } from "./src/lib/csp.mjs";
@@ -14,6 +15,16 @@ const csp = isDev ? DEV_POLICY : HEADER_POLICY;
 // in CSP_INNER_ADAPTER, which also stops a second load of this file from wrapping our own adapter.
 if (process.env.NEXT_ADAPTER_PATH && !process.env.CSP_INNER_ADAPTER) process.env.CSP_INNER_ADAPTER = process.env.NEXT_ADAPTER_PATH;
 const adapter = process.env.CSP_INNER_ADAPTER ? { adapterPath: path.join(__dirname, "scripts/csp-adapter.mjs") } : {};
+
+// The commit this build was made from, shown at the foot of the home page (src/lib/build.ts).
+function buildSha() {
+  if (process.env.VERCEL_GIT_COMMIT_SHA) return process.env.VERCEL_GIT_COMMIT_SHA;
+  try {
+    return execSync("git rev-parse HEAD", { cwd: __dirname, stdio: ["ignore", "pipe", "ignore"] }).toString().trim();
+  } catch {
+    return "";
+  }
+}
 
 const securityHeaders = [
   { key: "Content-Security-Policy", value: csp },
@@ -51,7 +62,7 @@ const nextConfig: NextConfig = {
   images: { unoptimized: true },
   // Vercel sets VERCEL=1 at build time. Its analytics script only exists there, so elsewhere
   // (local, CI, other hosts) we don't load it and avoid failed script requests.
-  env: { NEXT_PUBLIC_ON_VERCEL: process.env.VERCEL ? "1" : "" },
+  env: { NEXT_PUBLIC_ON_VERCEL: process.env.VERCEL ? "1" : "", NEXT_PUBLIC_BUILD_SHA: buildSha() },
   serverExternalPackages: ["@libsql/client", "libsql"],
   turbopack: {
     // Pin the project root so Turbopack never picks up a lockfile from a parent folder.

@@ -2,7 +2,7 @@
 
 import { useSyncExternalStore } from "react";
 
-// A tiny hash router for the kids' app and the parent area. Hash routes keep
+// A tiny hash router for the kids' app, the parent area and the teacher area. Hash routes keep
 // everything on one cached page, so the app works fully offline and moving
 // between screens never waits on the network.
 

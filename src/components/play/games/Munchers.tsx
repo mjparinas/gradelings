@@ -8,6 +8,7 @@ import { speak } from "@/lib/speech";
 import { CritterSvg } from "../../Critter";
 import { muncherRules, type MuncherRule } from "./content";
 import type { GameProps } from "./types";
+import { isLivePaused } from "@/lib/livePause";
 
 // A grid of numbers. Move the muncher (tap a square, or use the arrow keys)
 // and munch everything that fits the rule. Grumbles wander the board.
@@ -123,6 +124,7 @@ export function Munchers({ grade, band, onScore, onLevel, onOver }: GameProps) {
   // Step toward a tapped square, then munch it.
   useEffect(() => {
     const t = setInterval(() => {
+      if (isLivePaused()) return;
       const goal = target.current;
       if (goal === null) return;
       const p = posRef.current;
@@ -150,6 +152,7 @@ export function Munchers({ grade, band, onScore, onLevel, onOver }: GameProps) {
       return () => clearTimeout(spawn);
     }
     const t = setInterval(() => {
+      if (isLivePaused()) return;
       enemiesRef.current = enemiesRef.current.map((e) => {
         const [r, c] = [Math.floor(e / COLS), e % COLS];
         const moves = [

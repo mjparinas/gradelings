@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Critter } from "../Critter";
+import { useCarousel } from "./useCarousel";
 
 // The home page's hero preview: a few drawn questions, one per subject, each caught mid-hint.
 // Every slide sits in the same grid cell, so the card is as tall as the tallest one and never
@@ -28,31 +28,8 @@ export const SLIDES: GallerySlide[] = [
   { subject: "French", colour: "#7c4fe0", critter: "ollie", prompt: "How do you say “red” in French?", choices: ["bleu", "rouge", "vert", "jaune"], wrong: "vert", hint: "Close! Vert is green. What colour is a strawberry?" },
 ];
 
-export const TURN_MS = 5000;
-
-function reducedMotion() {
-  return typeof window !== "undefined" && !!window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
-}
-
 export function QuestionGallery({ slides = SLIDES }: { slides?: GallerySlide[] }) {
-  const [current, setCurrent] = useState(0);
-  // Auto-turn stops for good once someone uses the arrows, and pauses while the card is hovered or focused.
-  const [stopped, setStopped] = useState(false);
-  const [paused, setPaused] = useState(false);
-  const playing = !stopped && !paused;
-
-  useEffect(() => {
-    if (!playing || reducedMotion()) return;
-    const id = window.setInterval(() => {
-      if (document.visibilityState === "visible") setCurrent((c) => (c + 1) % slides.length);
-    }, TURN_MS);
-    return () => window.clearInterval(id);
-  }, [playing, slides.length]);
-
-  const go = (step: number) => {
-    setStopped(true);
-    setCurrent((c) => (c + step + slides.length) % slides.length);
-  };
+  const { current, playing, go, regionProps } = useCarousel(slides.length);
 
   const arrow = "absolute top-1/2 z-10 flex size-11 -translate-y-1/2 items-center justify-center rounded-full text-ink-soft hover:text-ink";
   const chevron = "flex size-8 items-center justify-center rounded-full border-2 border-line bg-white text-lg leading-none font-bold";
@@ -63,16 +40,7 @@ export function QuestionGallery({ slides = SLIDES }: { slides?: GallerySlide[] }
       aria-roledescription="carousel"
       aria-label="Sample questions"
       className="card relative px-11 py-4"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onFocus={() => setPaused(true)}
-      onBlur={(e) => {
-        if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setPaused(false);
-      }}
-      onKeyDown={(e) => {
-        if (e.key === "ArrowLeft") go(-1);
-        if (e.key === "ArrowRight") go(1);
-      }}
+      {...regionProps}
     >
       <button type="button" className={`${arrow} left-0`} aria-label="Previous question" onClick={() => go(-1)}>
         <span className={chevron} aria-hidden="true">‹</span>

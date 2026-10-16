@@ -4,7 +4,8 @@ import { getFramework } from "@/content/frameworks";
 import { GRADE_LABEL } from "@/content/subjects";
 import type { GradeId } from "@/content/types";
 import { DETAIL_LIMIT, type Cell, type Detail, type DetailColumn, type DetailRow, type DetailTable, type DetailView } from "@/lib/adminDetail";
-import { cancelledOn, familyGroup, fee, LIFETIME_YEARS, monthStart, MONTHLY_CENTS, wontRenew, YEARLY_CENTS, type FamilyGroup } from "@/lib/adminMetrics";
+import { cancelledOn, familyGroup, fee, LIFETIME_YEARS, monthStart, MONTHLY_CENTS, MONTHLY_CENTS_USD, wontRenew, YEARLY_CENTS, YEARLY_CENTS_USD, type FamilyGroup } from "@/lib/adminMetrics";
+import { countryOf, toCountryCode } from "@/lib/country";
 
 // The lists behind the admin dashboard's tiles. Like the Users tab, they show account emails and billing,
 // and children only as counts by grade and province: never a child's name or results. Class student
@@ -14,6 +15,11 @@ const DAY = 86_400_000;
 const REAL = "NOT EXISTS (SELECT 1 FROM parents s WHERE s.family_id = f.id AND s.role = 'student')";
 const EMAIL = "(SELECT p.email FROM parents p WHERE p.family_id = f.id ORDER BY p.created_at LIMIT 1)";
 const VERIFIED = "EXISTS (SELECT 1 FROM parents p WHERE p.family_id = f.id AND p.email_verified_at IS NOT NULL)";
+/** Everyone teaching an open class, owner or co-teacher, once each: the dashboard's Teachers tile. */
+export const OPEN_CLASS_TEACHERS = `SELECT owner_parent_id AS id FROM classes WHERE closed_at IS NULL
+  UNION SELECT ct.parent_id FROM class_teachers ct JOIN classes c ON c.id = ct.class_id WHERE c.closed_at IS NULL`;
+/** Class student accounts in open classes: the dashboard's student accounts. */
+export const OPEN_CLASS_STUDENTS = "SELECT COUNT(*) AS n FROM students s JOIN classes c ON c.id = s.class_id WHERE c.closed_at IS NULL";
 const LAST_PRACTICE = "(SELECT MAX(e.t) FROM events e WHERE e.family_id = f.id)";
 /** 1 when the family's latest payment was refunded in full (a refund ends the plan, so it won't renew). */
 export const LATEST_REFUNDED =
@@ -42,37 +48,50 @@ type Row = Record<string, unknown>;
 const rowsOf = (sql: string, args: (string | number)[] = []) => query<Row>(sql, args);
 
 const intervalText = (i: unknown) => (i === "year" ? "Yearly" : i === "month" ? "Monthly" : "—");
-const perMonth = (i: unknown) => (i === "year" ? Math.round(YEARLY_CENTS / 12) : MONTHLY_CENTS);
+const perMonth = (i: unknown, usd: boolean) => (i === "year" ? Math.round((usd ? YEARLY_CENTS_USD : YEARLY_CENTS) / 12) : usd ? MONTHLY_CENTS_USD : MONTHLY_CENTS);
+/** A US family pays in USD, as the dashboard decides it. */
+const usFamily = (r: Row) => countryOf(toCountryCode(r.country)).currency === "USD";
+
+const isUsd = (r: Row) => String(r.currency ?? "cad").toLowerCase() === "usd";
+/** What a payment brought in after refunds, as the dashboard counts it. */
+const netOf = (r: Row) => Math.max(0, Number(r.amount) - Number(r.refunded));
 
 async function payments(from: number, to: number, title: string): Promise<Detail> {
-  const rows = await rowsOf(
-    `SELECT pm.family_id, pm.amount, pm.refunded, pm.interval, pm.paid_at,
+  const all = await rowsOf(
+    `SELECT pm.family_id, pm.amount, pm.refunded, pm.interval, pm.paid_at, pm.currency,
        (SELECT p.email FROM parents p WHERE p.family_id = pm.family_id ORDER BY p.created_at LIMIT 1) AS email
      FROM payments pm WHERE pm.paid_at >= ? AND pm.paid_at < ? ORDER BY pm.paid_at DESC`,
     [from, to],
   );
+  // The dashboard's revenue is CAD only, so the headline numbers are too; US payments get their own table.
+  const rows = all.filter((r) => !isUsd(r));
+  const us = all.filter(isUsd);
   const amount = rows.reduce((s, r) => s + Number(r.amount), 0);
   const refunded = rows.reduce((s, r) => s + Number(r.refunded), 0);
   const fees = rows.reduce((s, r) => s + fee(Number(r.amount)), 0);
+  const revenue = rows.reduce((s, r) => s + netOf(r), 0);
+  const list = (rs: Row[], money: "money" | "money-usd", heading?: string) =>
+    table(
+      [col("Paid", "date"), col("Account", "account"), col("Plan"), col("Amount", money), col("Refunded", money), col("Fee (est.)", money)],
+      rs.map((r) => ({
+        familyId: (r.family_id as string | null) ?? undefined,
+        cells: [Number(r.paid_at), (r.email as string | null) ?? "Deleted account", intervalText(r.interval), Number(r.amount), Number(r.refunded), fee(Number(r.amount))],
+      })),
+      heading,
+    );
   return {
     title,
-    intro: "Every payment Stripe reported in this period. Fees are estimated at 2.9% + 30¢ a payment.",
+    intro: `Every payment Stripe reported in this period. Revenue is what was collected less refunds, as on the dashboard. Fees are estimated at 2.9% + 30¢ a payment.${us.length ? " US payments are in US dollars and kept out of the totals." : ""}`,
     summary: [
       { label: "Payments", value: rows.length, kind: "number" },
+      { label: "Revenue", value: revenue, kind: "money" },
       { label: "Collected", value: amount, kind: "money" },
       { label: "Refunded", value: refunded, kind: "money" },
       { label: "Fees (est.)", value: fees, kind: "money" },
       { label: "Net", value: amount - refunded - fees, kind: "money" },
+      ...(us.length ? [{ label: "US revenue", value: us.reduce((s, r) => s + netOf(r), 0), kind: "money-usd" as const }] : []),
     ],
-    tables: [
-      table(
-        [col("Paid", "date"), col("Account", "account"), col("Plan"), col("Amount", "money"), col("Refunded", "money"), col("Fee (est.)", "money")],
-        rows.map((r) => ({
-          familyId: (r.family_id as string | null) ?? undefined,
-          cells: [Number(r.paid_at), (r.email as string | null) ?? "Deleted account", intervalText(r.interval), Number(r.amount), Number(r.refunded), fee(Number(r.amount))],
-        })),
-      ),
-    ],
+    tables: us.length ? [list(rows, "money", "Canadian payments (CAD)"), list(us, "money-usd", "US payments (USD)")] : [list(rows, "money")],
   };
 }
 
@@ -80,7 +99,7 @@ async function payments(from: number, to: number, title: string): Promise<Detail
 async function familyRows(where = "1 = 1", args: (string | number)[] = [], order = "f.created_at DESC") {
   return rowsOf(
     `SELECT f.id, ${EMAIL} AS email, f.created_at, f.plan, f.trial_ends_at, f.access_until, f.subscription_status, f.subscription_interval,
-       f.current_period_end, f.billing_event_at, f.cancel_at, f.cancelled_at, ${LATEST_REFUNDED} AS refunded, ${VERIFIED} AS verified, ${LAST_PRACTICE} AS last_practice,
+       f.current_period_end, f.billing_event_at, f.cancel_at, f.cancelled_at, f.country, ${LATEST_REFUNDED} AS refunded, ${VERIFIED} AS verified, ${LAST_PRACTICE} AS last_practice,
        (SELECT COUNT(*) FROM profiles pr WHERE pr.family_id = f.id AND COALESCE(json_extract(pr.data, '$.deleted'), 0) = 0) AS children
      FROM families f WHERE ${REAL} AND ${where} ORDER BY ${order}`,
     args,
@@ -102,12 +121,30 @@ export async function detailFor(view: DetailView, now = Date.now()): Promise<Det
       const rows = await familyRows("f.plan = 'premium'", [], "f.current_period_end");
       // A plan that won't renew (cancelled to end, or refunded) still has access, but brings in nothing more.
       const ending = (r: Row) => wontRenew({ cancelAt: n(r.cancel_at), refunded: yes(r.refunded) });
-      const monthOf = (r: Row) => (ending(r) ? 0 : perMonth(r.subscription_interval));
-      const mrr = rows.reduce((s, r) => s + monthOf(r), 0);
+      const monthOf = (r: Row) => (ending(r) ? 0 : perMonth(r.subscription_interval, usFamily(r)));
+      // Like the dashboard, recurring revenue is CAD from Canadian families; US families pay in USD, counted apart.
+      const ca = rows.filter((r) => !usFamily(r));
+      const us = rows.filter(usFamily);
+      const list = (rs: Row[], money: "money" | "money-usd", heading?: string) =>
+        table(
+          [col("Account", "account"), col("Plan"), col("Status"), col("Renews or ends", "date"), col("A month", money), col("Signed up", "date")],
+          rs.map((r) => ({
+            familyId: String(r.id),
+            cells: [
+              r.email as string,
+              intervalText(r.subscription_interval),
+              yes(r.refunded) ? "refunded" : r.cancel_at ? "cancelling" : ((r.subscription_status as string | null) ?? "active"),
+              n(r.cancel_at) ?? n(r.current_period_end),
+              monthOf(r),
+              Number(r.created_at),
+            ],
+          })),
+          heading,
+        );
       return {
         title: "Paying families",
         intro:
-          "Recurring revenue counts each plan that renews at list price, with a yearly plan as a twelfth a month. A plan cancelled to end, or refunded, keeps access until it ends but counts nothing.",
+          "Recurring revenue counts each plan that renews at list price, with a yearly plan as a twelfth a month. A plan cancelled to end, or refunded, keeps access until it ends but counts nothing. US families pay in US dollars, kept out of the CAD total.",
         summary: [
           { label: "Paying", value: rows.length, kind: "number" },
           {
@@ -126,24 +163,10 @@ export async function detailFor(view: DetailView, now = Date.now()): Promise<Det
             kind: "number",
           },
           { label: "Cancelling", value: rows.filter(ending).length, kind: "number" },
-          { label: "Recurring a month", value: mrr, kind: "money" },
+          { label: "Recurring a month", value: ca.reduce((s, r) => s + monthOf(r), 0), kind: "money" },
+          ...(us.length ? [{ label: "US recurring a month", value: us.reduce((s, r) => s + monthOf(r), 0), kind: "money-usd" as const }] : []),
         ],
-        tables: [
-          table(
-            [col("Account", "account"), col("Plan"), col("Status"), col("Renews or ends", "date"), col("A month", "money"), col("Signed up", "date")],
-            rows.map((r) => ({
-              familyId: String(r.id),
-              cells: [
-                r.email as string,
-                intervalText(r.subscription_interval),
-                yes(r.refunded) ? "refunded" : r.cancel_at ? "cancelling" : ((r.subscription_status as string | null) ?? "active"),
-                n(r.cancel_at) ?? n(r.current_period_end),
-                monthOf(r),
-                Number(r.created_at),
-              ],
-            })),
-          ),
-        ],
+        tables: us.length ? [list(ca, "money", "Canadian families (CAD)"), list(us, "money-usd", "US families (USD)")] : [list(rows, "money")],
       };
     }
     case "payments-month":
@@ -365,28 +388,34 @@ export async function detailFor(view: DetailView, now = Date.now()): Promise<Det
       };
     }
     case "teachers": {
+      // A student a teacher added has a class_members row as well as a students row, so the class's children are
+      // its class_members rows: student accounts plus children their parents linked.
       const rows = await rowsOf(
         `SELECT c.id, c.framework, c.grade, c.created_at, c.last_activity_at,
            (SELECT p.email FROM parents p WHERE p.id = c.owner_parent_id) AS email,
            (SELECT p.family_id FROM parents p WHERE p.id = c.owner_parent_id) AS family_id,
            (SELECT COUNT(*) FROM class_teachers ct WHERE ct.class_id = c.id) AS coteachers,
-           (SELECT COUNT(*) FROM students s WHERE s.class_id = c.id) + (SELECT COUNT(*) FROM class_members m WHERE m.class_id = c.id) AS students,
+           (SELECT COUNT(*) FROM students s WHERE s.class_id = c.id) AS accounts,
+           (SELECT COUNT(*) FROM class_members m WHERE m.class_id = c.id
+              AND NOT EXISTS (SELECT 1 FROM students s WHERE s.class_id = m.class_id AND s.profile_id = m.profile_id)) AS linked,
            (SELECT COUNT(*) FROM class_assignments a WHERE a.class_id = c.id) AS assignments
          FROM classes c WHERE c.closed_at IS NULL ORDER BY c.created_at DESC`,
       );
+      const teachers = Number((await rowsOf(`SELECT COUNT(*) AS n FROM (${OPEN_CLASS_TEACHERS})`))[0]?.n ?? 0);
       return {
         title: "Teachers and classes",
-        intro: "Open classes, newest first, with the teacher who owns each.",
+        intro: "Open classes, newest first, with the teacher who owns each. Teachers counts owners and co-teachers once each.",
         summary: [
           { label: "Open classes", value: rows.length, kind: "number" },
+          { label: "Teachers", value: teachers, kind: "number" },
           {
-            label: "Teachers who own one",
-            value: new Set(rows.map((r) => r.email)).size,
+            label: "Student accounts",
+            value: rows.reduce((s, r) => s + Number(r.accounts), 0),
             kind: "number",
           },
           {
-            label: "Students",
-            value: rows.reduce((s, r) => s + Number(r.students), 0),
+            label: "Linked by parents",
+            value: rows.reduce((s, r) => s + Number(r.linked), 0),
             kind: "number",
           },
         ],
@@ -396,7 +425,8 @@ export async function detailFor(view: DetailView, now = Date.now()): Promise<Det
               col("Teacher", "account"),
               col("Province"),
               col("Grade"),
-              col("Students", "number"),
+              col("Student accounts", "number"),
+              col("Linked by parents", "number"),
               col("Co-teachers", "number"),
               col("Assignments", "number"),
               col("Created", "date"),
@@ -408,7 +438,8 @@ export async function detailFor(view: DetailView, now = Date.now()): Promise<Det
                 (r.email as string | null) ?? "—",
                 getFramework(String(r.framework)).name,
                 GRADE_LABEL[String(r.grade) as GradeId] ?? String(r.grade),
-                Number(r.students),
+                Number(r.accounts),
+                Number(r.linked),
                 Number(r.coteachers),
                 Number(r.assignments),
                 Number(r.created_at),
@@ -613,16 +644,21 @@ export async function detailFor(view: DetailView, now = Date.now()): Promise<Det
       };
     }
     case "customers-ever": {
+      // As on the dashboard: a family counts once it has a payment that wasn't refunded in full.
       const rows = await rowsOf(
-        `SELECT pm.family_id, MIN(pm.paid_at) AS first, MAX(pm.paid_at) AS last, COUNT(*) AS n, SUM(pm.amount - pm.refunded) AS total,
+        `SELECT pm.family_id, MIN(pm.paid_at) AS first, MAX(pm.paid_at) AS last, COUNT(*) AS n,
+           SUM(CASE WHEN LOWER(pm.currency) = 'usd' THEN 0 ELSE MAX(pm.amount - pm.refunded, 0) END) AS total,
+           SUM(CASE WHEN LOWER(pm.currency) = 'usd' THEN MAX(pm.amount - pm.refunded, 0) ELSE 0 END) AS total_usd,
            (SELECT p.email FROM parents p WHERE p.family_id = pm.family_id ORDER BY p.created_at LIMIT 1) AS email,
            (SELECT f.plan FROM families f WHERE f.id = pm.family_id) AS plan
-         FROM payments pm WHERE pm.family_id IS NOT NULL AND pm.paid_at > ? GROUP BY pm.family_id ORDER BY total DESC`,
+         FROM payments pm WHERE pm.family_id IS NOT NULL AND pm.paid_at >= ? GROUP BY pm.family_id
+         HAVING SUM(CASE WHEN pm.amount > pm.refunded THEN 1 ELSE 0 END) > 0 ORDER BY total DESC, total_usd DESC`,
         [Date.UTC(new Date(now).getUTCFullYear() - 2, 0, 1)],
       );
+      const usd = rows.reduce((s, r) => s + Number(r.total_usd), 0);
       return {
         title: "Families who have paid",
-        intro: "Since the start of the year two years back, largest total first.",
+        intro: "Since the start of the year two years back, largest total first. Totals are after refunds; US payments are in US dollars, apart.",
         summary: [
           { label: "Families", value: rows.length, kind: "number" },
           {
@@ -635,23 +671,44 @@ export async function detailFor(view: DetailView, now = Date.now()): Promise<Det
             value: rows.reduce((s, r) => s + Number(r.total), 0),
             kind: "money",
           },
+          ...(usd ? [{ label: "US total collected", value: usd, kind: "money-usd" as const }] : []),
         ],
         tables: [
           table(
-            [col("Account", "account"), col("First payment", "date"), col("Latest payment", "date"), col("Payments", "number"), col("Total", "money"), col("Paying now", "yesno")],
+            [
+              col("Account", "account"),
+              col("First payment", "date"),
+              col("Latest payment", "date"),
+              col("Payments", "number"),
+              col("Total", "money"),
+              ...(usd ? [col("Total (US)", "money-usd")] : []),
+              col("Paying now", "yesno"),
+            ],
             rows.map((r) => ({
               familyId: String(r.family_id),
-              cells: [(r.email as string | null) ?? "—", Number(r.first), Number(r.last), Number(r.n), Number(r.total), r.plan === "premium"],
+              cells: [
+                (r.email as string | null) ?? "—",
+                Number(r.first),
+                Number(r.last),
+                Number(r.n),
+                Number(r.total),
+                ...(usd ? [Number(r.total_usd)] : []),
+                r.plan === "premium",
+              ],
             })),
           ),
         ],
       };
     }
     case "practising": {
+      // Families count over the last 30 × 24 hours, like the tiles; questions, minutes and days count over the
+      // 30 calendar days (UTC) that "Questions answered, 30 days" and its chart use, which that window holds.
+      const from = (Math.floor(now / DAY) - 29) * DAY;
+      const inWindow = `e.t >= ${from}`;
       const rows = await rowsOf(
-        `SELECT e.family_id, MAX(e.t) AS last, COUNT(DISTINCT CAST(e.t / ${DAY} AS INTEGER)) AS days,
-           SUM(CASE WHEN json_extract(e.data, '$.type') = 'answer' THEN 1 ELSE 0 END) AS answers,
-           SUM(CASE WHEN json_extract(e.data, '$.type') = 'answer' THEN MIN(MAX(COALESCE(json_extract(e.data, '$.ms'), 0), 0), 60000) ELSE 0 END) AS ms,
+        `SELECT e.family_id, MAX(e.t) AS last, COUNT(DISTINCT CASE WHEN ${inWindow} THEN CAST(e.t / ${DAY} AS INTEGER) END) AS days,
+           SUM(CASE WHEN ${inWindow} AND json_extract(e.data, '$.type') = 'answer' THEN 1 ELSE 0 END) AS answers,
+           SUM(CASE WHEN ${inWindow} AND json_extract(e.data, '$.type') = 'answer' THEN MIN(MAX(COALESCE(json_extract(e.data, '$.ms'), 0), 0), 60000) ELSE 0 END) AS ms,
            (SELECT p.email FROM parents p WHERE p.family_id = e.family_id ORDER BY p.created_at LIMIT 1) AS email
          FROM events e WHERE e.t > ? AND e.t <= ? AND e.family_id NOT IN (SELECT family_id FROM parents WHERE role = 'student')
          GROUP BY e.family_id ORDER BY last DESC`,

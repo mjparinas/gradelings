@@ -12,6 +12,7 @@ import { removeStudentsOfOwner } from "./students";
 export function childDataStatements(f: string): { sql: string; args: string[] }[] {
   return [
     { sql: "DELETE FROM report_shares WHERE family_id = ?", args: [f] },
+    { sql: "DELETE FROM class_assignment_students WHERE profile_id IN (SELECT profile_id FROM class_members WHERE family_id = ?)", args: [f] },
     { sql: "DELETE FROM class_members WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM live_answers WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM events WHERE family_id = ?", args: [f] },
@@ -42,6 +43,7 @@ export async function deleteFamilyData(f: string): Promise<void> {
     { sql: "DELETE FROM class_teachers WHERE class_id IN (SELECT id FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?))", args: [f] },
     { sql: "DELETE FROM class_invites WHERE class_id IN (SELECT id FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?))", args: [f] },
     { sql: "DELETE FROM class_assignments WHERE class_id IN (SELECT id FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?))", args: [f] },
+    { sql: "DELETE FROM class_assignment_students WHERE class_id IN (SELECT id FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?))", args: [f] },
     ...liveClassStatements("SELECT id FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?)", [f]),
     { sql: "DELETE FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?)", args: [f] },
     { sql: "DELETE FROM question_reports WHERE family_id = ?", args: [f] },

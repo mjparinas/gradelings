@@ -4,13 +4,24 @@ import { getCourse, loadGrade, parseUnitKey } from "@/content";
 import { FRAMEWORKS } from "@/content/frameworks";
 import type { FrameworkId, GradeId } from "@/content/types";
 import { unitLevel } from "@/lib/proficiency";
+import { GRADE_ORDER } from "@/content/subjects";
 import { batch, query, run } from "./db";
-import { homeworkDone } from "@/lib/classroom";
+import { homeworkDone, mostMissed, studentQuestions, type MissedQuestion } from "@/lib/classroom";
 import { loadChildData } from "./reportData";
 
 // Classroom mode. A teacher owns a class and shares its join code. A parent chooses to link a
 // child with that code (and can unlink at any time). The teacher then sees that child's first name,
 // grade and practice results for the units they assigned, and nothing else.
+
+/** One line of plain text: it appears in invitation emails and on printed cards. */
+export function cleanClassName(v: unknown): string {
+  return typeof v === "string" ? v.replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim().slice(0, 60) : "";
+}
+
+/** The grade after this one, or null after Grade 9. */
+export function nextGrade(grade: GradeId): GradeId | null {
+  return (GRADE_ORDER[GRADE_ORDER.indexOf(grade) + 1] as GradeId | undefined) ?? null;
+}
 
 export const MAX_CLASSES = 10;
 export const MAX_STUDENTS = 40;
@@ -34,10 +45,31 @@ export interface ClassRow {
   owner_parent_id: string;
   name: string;
   grade: GradeId;
+  /** The second grade of a split class, or null. */
+  grade2: GradeId | null;
   framework: FrameworkId;
   join_code: string;
   created_at: number;
   closed_at: number | null;
+}
+
+/** The grades a class teaches: one, or two next to each other for a split class. */
+export function classGrades(cls: { grade: GradeId; grade2?: GradeId | null }): GradeId[] {
+  return cls.grade2 ? [cls.grade, cls.grade2] : [cls.grade];
+}
+
+/** A second grade from the browser: next to the class's grade, or null for none. `undefined` means it isn't a valid choice. */
+export function cleanSecondGrade(grade: string, v: unknown): GradeId | null | undefined {
+  if (v === undefined || v === null || v === "") return null;
+  const order = GRADE_ORDER as readonly string[];
+  const i = order.indexOf(grade);
+  const j = typeof v === "string" ? order.indexOf(v) : -1;
+  return j >= 0 && Math.abs(i - j) === 1 ? (v as GradeId) : undefined;
+}
+
+/** Whether a unit is for a student: the grade of a split class's student decides, unless the teacher picked students. */
+export function unitIsForGrade(unitKey: string, studentGrade: GradeId, cls: { grade2?: GradeId | null }): boolean {
+  return !cls.grade2 || unitKey.split("/")[0] === studentGrade;
 }
 
 export async function ownedClass(id: string, parentId: string): Promise<ClassRow | undefined> {
@@ -128,16 +160,44 @@ export async function releaseTeacherAccounts(parentIds: string[]): Promise<void>
 export const isFramework = (v: unknown): v is FrameworkId => FRAMEWORKS.some((f) => f.id === v);
 
 /** A unit key that exists in this class's grade and province. */
-export async function validUnit(key: string, grade: GradeId, framework: FrameworkId): Promise<boolean> {
+export async function validUnit(key: string, grades: GradeId | GradeId[], framework: FrameworkId): Promise<boolean> {
   const parsed = parseUnitKey(key);
-  if (!parsed || parsed.grade !== grade) return false;
-  await loadGrade(grade, framework);
-  return !!getCourse(grade, parsed.subject, framework)?.units.some((u) => u.id === parsed.unitId);
+  if (!parsed || ![grades].flat().includes(parsed.grade)) return false;
+  await loadGrade(parsed.grade, framework);
+  return !!getCourse(parsed.grade, parsed.subject, framework)?.units.some((u) => u.id === parsed.unitId);
 }
 
 export async function assignmentKeys(classId: string): Promise<string[]> {
   const rows = await query<{ unit_key: string }>("SELECT unit_key FROM class_assignments WHERE class_id = ? ORDER BY created_at, unit_key", [classId]);
   return rows.map((r) => r.unit_key);
+}
+
+/** The students a unit is for, by unit key. Units for the whole class are not listed. */
+export async function assignmentAudience(classId: string): Promise<Record<string, string[]>> {
+  const rows = await query<{ unit_key: string; profile_id: string }>("SELECT unit_key, profile_id FROM class_assignment_students WHERE class_id = ? ORDER BY unit_key, profile_id", [classId]);
+  const out: Record<string, string[]> = {};
+  for (const r of rows) (out[r.unit_key] ??= []).push(r.profile_id);
+  return out;
+}
+
+/**
+ * Students picked from the browser, narrowed to this class's own members. `undefined` means the field was
+ * absent or not a list of ids; an empty list means the whole class.
+ */
+export async function cleanAudience(classId: string, v: unknown): Promise<string[] | undefined> {
+  if (v === undefined || v === null) return [];
+  if (!Array.isArray(v) || v.length > MAX_STUDENTS || v.some((x) => typeof x !== "string")) return undefined;
+  const members = new Set((await query<{ profile_id: string }>("SELECT profile_id FROM class_members WHERE class_id = ?", [classId])).map((r) => r.profile_id));
+  const picked = [...new Set(v as string[])];
+  return picked.every((id) => members.has(id)) ? picked : undefined;
+}
+
+/** Sets who a unit is for. An empty list makes it for the whole class. */
+export async function setAudience(classId: string, unitKey: string, profileIds: string[]): Promise<void> {
+  await batch([
+    { sql: "DELETE FROM class_assignment_students WHERE class_id = ? AND unit_key = ?", args: [classId, unitKey] },
+    ...profileIds.map((id) => ({ sql: "INSERT OR IGNORE INTO class_assignment_students (class_id, unit_key, profile_id) VALUES (?, ?, ?)", args: [classId, unitKey, id] })),
+  ]);
 }
 
 export interface Classwork {
@@ -181,10 +241,15 @@ export function cleanDueAt(v: unknown, now = Date.now()): number | null | undefi
 
 /** What each of a family's linked children has been assigned. Sent only to that family's own devices. */
 export async function familyClasswork(familyId: string): Promise<Classwork[]> {
+  // A unit reaches a student when the teacher picked them, or, if it has no picks, when it is for their whole class
+  // or (in a split class) for their grade.
   const rows = await query<{ profile_id: string; class_id: string; name: string; unit_key: string | null; due_at: number | null; goal: number | null; created_at: number | null }>(
     `SELECT m.profile_id, m.class_id, c.name, a.unit_key, a.due_at, a.goal, a.created_at FROM class_members m
      JOIN classes c ON c.id = m.class_id AND c.closed_at IS NULL
      LEFT JOIN class_assignments a ON a.class_id = m.class_id
+       AND (EXISTS (SELECT 1 FROM class_assignment_students t WHERE t.class_id = a.class_id AND t.unit_key = a.unit_key AND t.profile_id = m.profile_id)
+            OR (NOT EXISTS (SELECT 1 FROM class_assignment_students t WHERE t.class_id = a.class_id AND t.unit_key = a.unit_key)
+                AND (c.grade2 IS NULL OR substr(a.unit_key, 1, instr(a.unit_key, '/') - 1) = COALESCE(m.grade, c.grade))))
      WHERE m.family_id = ? ORDER BY m.joined_at, a.created_at, a.unit_key`,
     [familyId],
   );
@@ -208,25 +273,35 @@ export interface StudentProgress {
   grade: GradeId;
   lastActive: number | null;
   /** One entry per assigned unit, in assignment order. level -1 = not started. */
-  /** `done`: questions answered on the unit since it was assigned (homework). */
-  units: { key: string; level: number; attempts: number; accuracy: number; done: number }[];
+  /** `done`: questions answered on the unit since it was assigned (homework). `assigned`: false when the teacher gave the unit to other students only. */
+  units: { key: string; level: number; attempts: number; accuracy: number; done: number; assigned: boolean }[];
 }
 
 /** Progress for linked students on the assigned units only. Never includes an email or other family details. */
 export async function classProgress(classId: string): Promise<StudentProgress[]> {
-  const members = await query<{ profile_id: string; family_id: string }>("SELECT profile_id, family_id FROM class_members WHERE class_id = ? ORDER BY joined_at", [classId]);
+  return (await classProgressAndMisses(classId)).students;
+}
+
+/** `classProgress`, plus the questions several students missed on each assigned unit (only answers that carry the question's text). */
+export async function classProgressAndMisses(classId: string): Promise<{ students: StudentProgress[]; missed: Record<string, MissedQuestion[]> }> {
+  const members = await query<{ profile_id: string; family_id: string; grade: string | null }>("SELECT profile_id, family_id, grade FROM class_members WHERE class_id = ? ORDER BY joined_at", [classId]);
+  const cls = (await query<{ grade: GradeId; grade2: GradeId | null }>("SELECT grade, grade2 FROM classes WHERE id = ?", [classId]))[0];
   const keys = await assignmentKeys(classId);
+  const audience = await assignmentAudience(classId);
   const since = Object.fromEntries((await query<{ unit_key: string; created_at: number }>("SELECT unit_key, created_at FROM class_assignments WHERE class_id = ?", [classId])).map((r) => [r.unit_key, Number(r.created_at)]));
-  const out: StudentProgress[] = [];
-  for (const m of members) {
+  const questions: Record<string, Record<string, boolean>>[] = [];
+  const progress = await mapLimit(members, CLASS_LOAD_CONCURRENCY, async (m): Promise<StudentProgress | null> => {
     // One unreadable child record must not take the whole class view down with it.
     const data = await loadChildData(m.family_id, m.profile_id, 90).catch((e) => {
       console.error("[classroom] could not load a member's report", (e as Error).message);
       return null;
     });
-    if (!data) continue;
+    if (!data) return null;
     const byKey = new Map(data.report.units.map((u) => [u.ref.key, u]));
-    out.push({
+    // Only units the student was given count toward the class's missed questions.
+    const given = keys.filter((key) => (audience[key] ? audience[key].includes(m.profile_id) : !cls || unitIsForGrade(key, (m.grade ?? cls.grade) as GradeId, cls)));
+    questions.push(studentQuestions(data.events, Object.fromEntries(given.map((k) => [k, since[k] ?? 0]))));
+    return {
       profileId: m.profile_id,
       name: data.profile.name,
       avatar: data.profile.avatar,
@@ -234,9 +309,26 @@ export async function classProgress(classId: string): Promise<StudentProgress[]>
       lastActive: data.report.units.reduce<number | null>((t, u) => (u.lastT && (t === null || u.lastT > t) ? u.lastT : t), null),
       units: keys.map((key) => {
         const u = byKey.get(key);
-        return { key, level: u ? u.level : unitLevel(undefined), attempts: u?.attempts ?? 0, accuracy: u?.accuracy ?? 0, done: homeworkDone(data.events, key, since[key] ?? 0) };
+        return { key, level: u ? u.level : unitLevel(undefined), attempts: u?.attempts ?? 0, accuracy: u?.accuracy ?? 0, done: homeworkDone(data.events, key, since[key] ?? 0), assigned: audience[key] ? audience[key].includes(m.profile_id) : !cls || unitIsForGrade(key, (m.grade ?? cls.grade) as GradeId, cls) };
       }),
-    });
-  }
+    };
+  });
+  return { students: progress.filter((p): p is StudentProgress => p !== null), missed: mostMissed(questions) };
+}
+
+/** How many students' histories are read at once: enough to overlap the database round trips without flooding it. */
+export const CLASS_LOAD_CONCURRENCY = 6;
+
+/** `fn` over `items` with at most `limit` running at once. Results keep the order of `items`. */
+export async function mapLimit<T, R>(items: readonly T[], limit: number, fn: (item: T) => Promise<R>): Promise<R[]> {
+  const out: R[] = new Array(items.length);
+  let next = 0;
+  const worker = async () => {
+    while (next < items.length) {
+      const i = next++;
+      out[i] = await fn(items[i]);
+    }
+  };
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
   return out;
 }
