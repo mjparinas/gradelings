@@ -11,6 +11,7 @@ import { titleCase } from "@/lib/titleCase";
 
 const num = (n: number) => n.toLocaleString("en-CA");
 const money = (cents: number) => (cents / 100).toLocaleString("en-CA", { style: "currency", currency: "CAD" });
+const moneyUsd = (cents: number) => (cents / 100).toLocaleString("en-CA", { style: "currency", currency: "USD" });
 const date = (ms: number) =>
   new Date(ms).toLocaleDateString("en-CA", {
     dateStyle: "medium",
@@ -22,13 +23,14 @@ export function formatCell(value: Cell, kind: CellKind): string {
   if (kind === "yesno") return value ? "Yes" : "No";
   if (typeof value === "number") {
     if (kind === "money") return money(value);
+    if (kind === "money-usd") return moneyUsd(value);
     if (kind === "date") return value > 0 ? date(value) : "—";
     return num(value);
   }
   return String(value);
 }
 
-const numeric = (kind: CellKind) => kind === "number" || kind === "money";
+const numeric = (kind: CellKind) => kind === "number" || kind === "money" || kind === "money-usd";
 
 export function DetailModal({
   source,
