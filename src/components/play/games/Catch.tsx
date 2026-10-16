@@ -7,6 +7,7 @@ import { sounds } from "@/lib/sound";
 import { speak } from "@/lib/speech";
 import { catchRounds, type CatchRound } from "./content";
 import type { GameProps } from "./types";
+import { isLivePaused } from "@/lib/livePause";
 
 // Things fall from the sky. Slide the basket to catch the ones that fit.
 // `FallingCatch` is the engine; Critter Catch and Clock Catch give it their rounds.
@@ -84,6 +85,7 @@ export function FallingCatch({ band, onScore, onLevel, onOver, round: makeRound 
 
   useEffect(() => {
     const t = setInterval(() => {
+      if (isLivePaused()) return;
       const good = chance(0.5);
       const item = round.drop(good);
       dropsRef.current = [
@@ -116,6 +118,11 @@ export function FallingCatch({ band, onScore, onLevel, onOver, round: makeRound 
     let frame = 0;
     let last = performance.now();
     const step = (now: number) => {
+      if (isLivePaused()) {
+        last = now;
+        frame = requestAnimationFrame(step);
+        return;
+      }
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
       const el = arena.current;

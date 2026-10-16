@@ -1,5 +1,5 @@
 import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
-import { ownedClass, teachingClass } from "@/server/classroom";
+import { classGrades, ownedClass, teachingClass } from "@/server/classroom";
 import { addStudents, cleanStudentName, removeStudent, resetStudentCode, upgradeClassCodes } from "@/server/students";
 
 // A teacher adds students to a class they own. Each gets a login code; there is no email or password.
@@ -18,7 +18,7 @@ async function teacherClass(req: Request, classId: string, ownerOnly = false) {
 
 /** Adds students by first name or nickname. */
 export async function POST(req: Request) {
-  const body = (await req.json().catch(() => null)) as { classId?: unknown; names?: unknown } | null;
+  const body = (await req.json().catch(() => null)) as { classId?: unknown; names?: unknown; grade?: unknown } | null;
   const found = await teacherClass(req, typeof body?.classId === "string" ? body.classId : "");
   if (found.fail) return found.fail;
   const { session, cls } = found;
@@ -27,7 +27,11 @@ export async function POST(req: Request) {
   const raw = Array.isArray(body?.names) ? body.names : [];
   const names = raw.slice(0, MAX_BATCH).map(cleanStudentName).filter(Boolean);
   if (!names.length) return error(400, "Type at least one first name.");
-  const students = await addStudents(cls!, names);
+  // In a split class the teacher says which grade these students are in; otherwise it's the class's grade.
+  const grades = classGrades(cls!);
+  const grade = body?.grade === undefined ? cls!.grade : grades.find((g) => g === body.grade);
+  if (!grade) return error(400, "Choose one of this class's grades.");
+  const students = await addStudents(cls!, names, grade);
   if (!students.length) return error(409, "This class is full.");
   return json({ students, skipped: names.length - students.length });
 }

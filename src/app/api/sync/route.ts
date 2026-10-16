@@ -141,6 +141,7 @@ export async function POST(req: Request) {
       // Deleting a child removes their history from the server too.
       if (p.deleted) {
         writes.push({ sql: "DELETE FROM events WHERE profile_id = ? AND family_id = ?", args: [p.id, family] });
+        writes.push({ sql: "DELETE FROM class_assignment_students WHERE profile_id = ?", args: [p.id] });
         writes.push({ sql: "DELETE FROM class_members WHERE profile_id = ? AND family_id = ?", args: [p.id, family] });
         writes.push({ sql: "DELETE FROM report_shares WHERE profile_id = ? AND family_id = ?", args: [p.id, family] });
       }

@@ -3,7 +3,8 @@ import Link from "next/link";
 import { breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { TeacherCta } from "@/components/site/TeacherCta";
-import { regionList, regionWord } from "@/components/site/provinces";
+import { TeacherDemo } from "@/components/site/TeacherDemo";
+import { byCountry, kidPracticeSteps, regionSummary, regionWord } from "@/components/site/provinces";
 import { TEACHER_FRAMEWORKS, TEACHER_SIGNUP, teacherPath } from "@/components/site/teachers";
 import { APP_NAME } from "@/lib/brand";
 import { Disclosure } from "@/components/Disclosure";
@@ -11,8 +12,8 @@ import { JsonLd } from "@/lib/site";
 import { pageMeta } from "@/lib/pageMeta";
 import { US_CLASS_CONSENT } from "@/lib/classroom";
 
-const curricula = TEACHER_FRAMEWORKS.map((f) => f.curriculumName).join(" or ");
-const regions = regionList(TEACHER_FRAMEWORKS);
+/** "12 Canadian provinces and territories and 11 US states": short enough to read as more regions are added. */
+const regions = regionSummary(TEACHER_FRAMEWORKS);
 /** "province", or "province or state" once a US state can have classes. */
 const region = regionWord(TEACHER_FRAMEWORKS);
 
@@ -28,7 +29,10 @@ const STEPS = [
     title: "Add students",
     body: "Type first names or nicknames and print login cards: each student signs in with the class code and their own code, with no email or password. Or families link their own child with the join code.",
   },
-  { title: "Assign units", body: "Pick units from the class's curriculum, with an optional date to aim for. They appear as “From your teacher” on each child's home screen, even offline." },
+  {
+    title: "Assign units",
+    body: "Pick units from the class's curriculum as homework, with an optional date to aim for and number of questions to answer. They appear as “From your teacher” on each child's home screen, even offline.",
+  },
   {
     title: "See practice results",
     body: "See each student's level, accuracy and attempts on the units you assigned, plus which units to reteach and who to check in with. It shows practice, not a report-card mark.",
@@ -48,6 +52,10 @@ const FAQS = [
     a: "First name, avatar, grade, and level, accuracy and attempts on the units you assigned, with suggestions for what to look at next. Nothing else.",
   },
   {
+    q: "Can I ask the whole class a question at once?",
+    a: "Yes. Pick a unit and ask a live question: it shows at the top of each student's home screen, and you see the answers come in. Live answers never change a student's levels or results, and they are deleted after a day.",
+  },
+  {
     q: "Can I share a class with another teacher?",
     a: "Yes. Invite up to 5 co-teachers by email. They can see the class, assign units, add students and print login cards. Only the class owner can close the class or delete a student.",
   },
@@ -57,7 +65,7 @@ const FAQS = [
   },
   ...(usClasses ? [{ q: "Do US schools need parent consent?", a: US_CLASS_CONSENT }] : []),
   { q: "Is this a report-card mark?", a: `No. ${APP_NAME} shows how a student is practising. The teacher decides proficiency, as on the report card.` },
-  { q: "Which curriculum does it follow?", a: `Each class follows one ${region}: ${regions}. Units are matched to the ${curricula}, from Kindergarten to Grade 9. Other provinces and states are on the way.` },
+  { q: "Which curriculum does it follow?", a: `Each class follows one ${region}, chosen when you create it, with units matched to its own curriculum from Kindergarten to Grade 9. We cover ${regions}, listed under “Find your curriculum” above. Other provinces and states are on the way.` },
   { q: "Are there ads?", a: "No ads and no selling of data. Kids cannot buy anything." },
 ];
 
@@ -67,22 +75,23 @@ export default function TeachersHub() {
     <SitePage>
       <JsonLd data={[breadcrumbJsonLd(crumbs), faqJsonLd(FAQS)]} />
       <Crumbs items={crumbs} />
-      <section className="py-4">
-        <p className="mb-3 inline-flex rounded-full bg-[#fff4cc] px-3 py-1 text-sm font-bold text-[#8a6400]">For teachers · Kindergarten to Grade 9</p>
-        <h1 className="text-4xl leading-tight font-bold sm:text-5xl">Classroom practice your students will want to do</h1>
-        <p className="mt-4 max-w-2xl font-read text-lg text-ink-soft">
-          Assign {regions} curriculum units, see how your students are practising, and let learning games be the reward for focused work. No ads, no student passwords, and families stay in control.
-        </p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <Link prefetch={false} href={TEACHER_SIGNUP} className="btn btn-good min-h-14 px-6 text-xl">
-            Create a free teacher account
-          </Link>
-          {TEACHER_FRAMEWORKS.map((f) => (
-            <Link key={f.id} href={teacherPath.framework(f)} className="btn min-h-14 px-6 text-xl">
-              See {f.region} units
+      <section className="grid items-center gap-8 py-4 md:grid-cols-[1.1fr_1fr]">
+        <div>
+          <p className="mb-3 inline-flex rounded-full bg-[#fff4cc] px-3 py-1 text-sm font-bold text-[#8a6400]">For teachers · Kindergarten to Grade 9</p>
+          <h1 className="text-4xl leading-tight font-bold sm:text-5xl">Classroom practice your students will want to do</h1>
+          <p className="mt-4 max-w-2xl font-read text-lg text-ink-soft">
+            Assign units matched to your curriculum, see how your students are practising, and let learning games be the reward for focused work. Available in {regions}. No ads, no student passwords, and families stay in control.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link prefetch={false} href={TEACHER_SIGNUP} className="btn btn-good min-h-14 px-6 text-xl">
+              Create a free teacher account
             </Link>
-          ))}
+            <a href="#curricula" className="btn min-h-14 px-6 text-xl">
+              Find your curriculum
+            </a>
+          </div>
         </div>
+        <TeacherDemo levels={kidPracticeSteps(TEACHER_FRAMEWORKS)} />
       </section>
 
       <section aria-labelledby="how" className="py-8">
@@ -100,6 +109,27 @@ export default function TeachersHub() {
             </li>
           ))}
         </ol>
+      </section>
+
+      <section aria-labelledby="curricula" className="scroll-mt-24 py-8">
+        <h2 id="curricula" className="mb-2 text-3xl font-bold">
+          Find your curriculum
+        </h2>
+        <p className="mb-6 max-w-2xl font-read text-lg text-ink-soft">Pick your {region} to see the units you can assign in each grade and subject.</p>
+        {byCountry(TEACHER_FRAMEWORKS).map((group, i, groups) => (
+          <div key={group.country} className={i > 0 ? "mt-5" : ""}>
+            {groups.length > 1 && <h3 className="mb-2 text-xl font-bold">{group.heading}</h3>}
+            <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+              {group.frameworks.map((f) => (
+                <li key={f.id} className="flex">
+                  <Link href={teacherPath.framework(f)} className="card flex min-h-12 w-full items-center p-4 text-lg font-bold hover:border-[#4f8ef7]">
+                    {f.region}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </section>
 
       <section aria-labelledby="faq" className="py-8">

@@ -5,7 +5,7 @@ import type { ChoiceQuestion } from "@/content/types";
 import { type LiveQuestionData } from "@/lib/live";
 import { newId } from "./auth";
 import { batch, query, run } from "./db";
-import type { ClassRow } from "./classroom";
+import { classGrades, type ClassRow } from "./classroom";
 
 // Live questions: a teacher asks the class one multiple-choice question at a time, in real time.
 // They need a connection (devices poll for the open question), so they sit beside offline practice
@@ -36,11 +36,11 @@ export interface LiveRow {
  * class and number so it is the same on every server. Units whose questions are all typed, sorted or
  * built return null: those need the full practice screen.
  */
-export async function pickLiveQuestion(cls: Pick<ClassRow, "id" | "grade" | "framework">, unitKey: string, n: number): Promise<LiveQuestionData | null> {
+export async function pickLiveQuestion(cls: Pick<ClassRow, "id" | "grade" | "framework"> & { grade2?: ClassRow["grade2"] }, unitKey: string, n: number): Promise<LiveQuestionData | null> {
   const parsed = parseUnitKey(unitKey);
-  if (!parsed || parsed.grade !== cls.grade) return null;
-  await loadGrade(cls.grade, cls.framework);
-  const unit = getCourse(cls.grade, parsed.subject, cls.framework)?.units.find((u) => u.id === parsed.unitId);
+  if (!parsed || !classGrades(cls).includes(parsed.grade)) return null;
+  await loadGrade(parsed.grade, cls.framework);
+  const unit = getCourse(parsed.grade, parsed.subject, cls.framework)?.units.find((u) => u.id === parsed.unitId);
   if (!unit) return null;
   for (let t = 0; t < TRIES; t++) {
     const set = withSeed(hashSeed(`live:${cls.id}:${unitKey}:${n}:${t}`), () => unit.generate({ difficulty: 2 }));
@@ -68,6 +68,11 @@ export async function openLive(classId: string, now = Date.now()): Promise<LiveR
   return (
     await query<LiveRow>("SELECT * FROM live_questions WHERE class_id = ? AND ended_at IS NULL AND created_at > ? ORDER BY created_at DESC LIMIT 1", [classId, now - LIVE_OPEN_FOR])
   )[0];
+}
+
+/** Every question the class was asked in the last day, oldest first (before it is deleted). */
+export async function recentLive(classId: string, now = Date.now()): Promise<LiveRow[]> {
+  return query<LiveRow>("SELECT * FROM live_questions WHERE class_id = ? AND created_at > ? ORDER BY created_at", [classId, now - LIVE_KEEP]);
 }
 
 /** Ends whatever is open and asks a new question. Returns null when the unit has no tap-to-answer questions. */

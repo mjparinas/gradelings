@@ -1,5 +1,6 @@
 "use client";
 
+import { questionLabel } from "@/lib/questionLabel";
 import { ReportQuestion } from "./ReportQuestion";
 import { reportDetails, type ReportDetails } from "@/lib/questionReport";
 import { SaveProgress } from "./SaveProgress";
@@ -34,6 +35,7 @@ import { makePlan, type Item, type Plan } from "./plans";
 import { useAllowed } from "./useAllowed";
 import { useNow } from "@/lib/useNow";
 import { timerChoice } from "@/lib/timers";
+import { isLivePaused } from "@/lib/livePause";
 
 const PRAISE = ["Great job!", "You got it!", "Super!", "Awesome!", "Way to go!", "Nailed it!", "Brilliant!"];
 const NUDGE = ["Almost! Try again.", "So close! Have another go.", "Good try! Look again."];
@@ -132,7 +134,9 @@ function Runner({ plan }: { plan: Plan }) {
   const loggedUpTo = useRef(0);
 
   const q = item?.question;
-  const elapsed = (now - started) / 1000;
+  // Time the teacher's live question held the clock still.
+  const heldFor = useRef(0);
+  const elapsed = (now - started - heldFor.current) / 1000;
   const remaining = plan.timeLimit ? plan.timeLimit - elapsed : undefined;
   const answered = status === "correct" || status === "revealed";
   const firstTry = results.filter((r) => r.correct).length;
@@ -142,7 +146,13 @@ function Runner({ plan }: { plan: Plan }) {
   // Clock.
   useEffect(() => {
     if (done || checkpoint) return;
-    const t = setInterval(() => setNow(Date.now()), 250);
+    let last = Date.now();
+    const t = setInterval(() => {
+      const tick = Date.now();
+      if (isLivePaused()) heldFor.current += tick - last;
+      last = tick;
+      setNow(tick);
+    }, 250);
     return () => clearInterval(t);
   }, [done, checkpoint]);
 
@@ -174,6 +184,7 @@ function Runner({ plan }: { plan: Plan }) {
         attempts,
         revealed,
         ...(hinted ? { hinted: true } : {}),
+        ...(q && !q.visual ? { q: questionLabel(q.prompt) } : {}),
         ms: Date.now() - shownAt,
         mode: plan.mode,
         difficulty: item.difficulty,

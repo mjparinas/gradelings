@@ -17,6 +17,8 @@ export interface ClassSummary {
   id: string;
   name: string;
   grade: string;
+  /** The second grade of a split class. */
+  grade2?: string | null;
   framework: string;
   joinCode: string;
   students: number;
@@ -46,7 +48,7 @@ export interface StudentRow {
   grade: string;
   lastActive: number | null;
   /** `done`: questions answered on the unit since it was assigned (homework). Older servers omit it. */
-  units: { key: string; level: number; attempts: number; accuracy: number; done?: number }[];
+  units: { key: string; level: number; attempts: number; accuracy: number; done?: number; assigned?: boolean }[];
 }
 
 export interface RosterEntry {
@@ -94,6 +96,54 @@ export function homeworkDone(events: readonly { type: string; unit?: string; t: 
   let n = 0;
   for (const e of events) if (e.type === "answer" && e.unit === unitKey && e.t >= since) n++;
   return n;
+}
+
+/** One question a class missed: how many students got it wrong on the first try, out of how many saw it. */
+export interface MissedQuestion {
+  q: string;
+  missed: number;
+  tried: number;
+}
+
+/** What one student did with each labelled question on the assigned units: true when they missed it on the first try at least once. */
+export function studentQuestions(
+  events: readonly { type: string; unit?: string; t: number; q?: string; correct?: boolean | number }[],
+  since: Record<string, number>,
+): Record<string, Record<string, boolean>> {
+  const out: Record<string, Record<string, boolean>> = {};
+  for (const e of events) {
+    if (e.type !== "answer" || !e.unit || typeof e.q !== "string" || !e.q || !(e.unit in since) || e.t < since[e.unit]) continue;
+    const q = e.q.slice(0, 80);
+    const unit = (out[e.unit] ??= {});
+    unit[q] = (unit[q] ?? false) || e.correct === false;
+  }
+  return out;
+}
+
+/**
+ * Per unit, the questions the most students missed on the first try (at least `minStudents` of them),
+ * worst first. Built from each student's `studentQuestions`; a question counts once per student.
+ */
+export function mostMissed(perStudent: readonly Record<string, Record<string, boolean>>[], limit = 3, minStudents = 2): Record<string, MissedQuestion[]> {
+  const tally = new Map<string, Map<string, MissedQuestion>>();
+  for (const student of perStudent) {
+    for (const [unit, qs] of Object.entries(student)) {
+      const byQ = tally.get(unit) ?? new Map<string, MissedQuestion>();
+      tally.set(unit, byQ);
+      for (const [q, missed] of Object.entries(qs)) {
+        const row = byQ.get(q) ?? { q, missed: 0, tried: 0 };
+        row.tried++;
+        if (missed) row.missed++;
+        byQ.set(q, row);
+      }
+    }
+  }
+  const out: Record<string, MissedQuestion[]> = {};
+  for (const [unit, byQ] of tally) {
+    const top = [...byQ.values()].filter((r) => r.missed >= minStudents).sort((a, b) => b.missed - a.missed || b.missed / b.tried - a.missed / a.tried || a.q.localeCompare(b.q)).slice(0, limit);
+    if (top.length) out[unit] = top;
+  }
+  return out;
 }
 
 export async function call<T>(url: string, method = "GET", body?: unknown): Promise<T> {
@@ -157,6 +207,8 @@ export function classInsights(students: StudentRow[], assignments: string[], uni
     const row: UnitInsight = { key, started: 0, notStarted: 0, proficient: 0, needHand: [], accuracy: null };
     for (const s of students) {
       const u = s.units.find((x) => x.key === key);
+      // A unit the teacher gave to other students says nothing about this one.
+      if (u?.assigned === false) continue;
       if (!u || u.attempts === 0) {
         row.notStarted++;
         continue;
@@ -178,8 +230,39 @@ export function classInsights(students: StudentRow[], assignments: string[], uni
     const reasons: string[] = [];
     const tricky = units.filter((u) => u.needHand.includes(s.profileId)).map((u) => unitName(u.key));
     if (tricky.length) reasons.push(`Finding ${tricky.slice(0, 2).join(" and ")}${tricky.length > 2 ? ` and ${tricky.length - 2} more` : ""} tricky`);
-    if (assignments.length && (s.lastActive === null || now - s.lastActive > WEEK)) reasons.push(s.lastActive === null ? "Hasn’t started yet" : "No practice this week");
+    const hasWork = assignments.length > 0 && (s.units.length === 0 || s.units.some((u) => u.assigned !== false));
+    if (hasWork && (s.lastActive === null || now - s.lastActive > WEEK)) reasons.push(s.lastActive === null ? "Hasn’t started yet" : "No practice this week");
     if (reasons.length) checkIn.push({ profileId: s.profileId, name: s.name, reasons });
   }
   return { units, focusUnits, checkIn };
+}
+
+// ---------- Homework overview ----------
+
+/** A student counts as done with a unit once they've answered the number of questions asked, or, with none asked, reached Proficient (level 2). */
+export function isHomeworkDone(unit: StudentRow["units"][number], goal?: number): boolean {
+  return goal ? (unit.done ?? 0) >= goal : unit.level >= 2;
+}
+
+export interface HomeworkStatus {
+  key: string;
+  /** Students the unit is for. */
+  assigned: number;
+  done: number;
+  /** Names of students it is for who haven't finished it. */
+  behind: string[];
+  /** Past the due date with some students still to finish. */
+  overdue: boolean;
+}
+
+/** For each assigned unit: how many students are done, who isn't, and whether it is past due. Practice only, never a mark. */
+export function homeworkOverview(students: StudentRow[], assignments: string[], due: Record<string, number>, goal: Record<string, number>, now = Date.now()): HomeworkStatus[] {
+  return assignments.map((key) => {
+    const mine = students.filter((s) => s.units.find((u) => u.key === key)?.assigned !== false);
+    const behind = mine.filter((s) => {
+      const u = s.units.find((x) => x.key === key);
+      return !u || !isHomeworkDone(u, goal[key]);
+    });
+    return { key, assigned: mine.length, done: mine.length - behind.length, behind: behind.map((s) => s.name), overdue: Boolean(due[key] && due[key] < now && behind.length > 0) };
+  });
 }

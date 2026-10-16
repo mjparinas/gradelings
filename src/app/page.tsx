@@ -19,6 +19,7 @@ import { TEACHER_SIGNUP, teacherPath } from "@/components/site/teachers";
 import { Disclosure } from "@/components/Disclosure";
 import { JsonLd, ORG_JSON_LD, SITE_URL } from "@/lib/site";
 import { pageMeta } from "@/lib/pageMeta";
+import { buildLabel } from "@/lib/build";
 
 export const metadata: Metadata = pageMeta({
   title: { absolute: `${APP_NAME} · Curriculum practice and games for Kindergarten to Grade 9` },
@@ -119,7 +120,7 @@ export default function Home() {
   const kidSteps = kidPracticeSteps(FRAMEWORKS);
 
   return (
-    <SitePage>
+    <SitePage build={buildLabel()}>
       <JsonLd
         data={[
           ORG_JSON_LD,

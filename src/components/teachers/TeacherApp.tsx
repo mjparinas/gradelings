@@ -8,74 +8,173 @@ import { GRADE_ORDER, getSubjectMeta } from "@/content/subjects";
 import type { FrameworkId, GradeId } from "@/content/types";
 import { DateField } from "@/components/DateField";
 import { SelectMenu } from "@/components/SelectMenu";
-import { APP_NAME } from "@/lib/brand";
-import { call, classInsights, HOMEWORK_GOALS, isOneCode, isUsClass, showLoginCode, US_CLASS_CONSENT, type ClassInvite, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
+import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
+import { call, classInsights, HOMEWORK_GOALS, homeworkOverview, isHomeworkDone, isOneCode, isUsClass, showLoginCode, US_CLASS_CONSENT, type ClassInvite, type MissedQuestion, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
 import { frameworkGroups, frameworkMenu } from "@/lib/frameworkGroups";
+import { classCsv } from "@/lib/classCsv";
+import { countryOf } from "@/lib/country";
 import { gradeLabel } from "@/lib/gradeLabel";
 import { levelInfo } from "@/lib/proficiency";
+import { go, useRoute } from "@/lib/router";
+import { sayFor } from "@/lib/say";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
 import { LiveClass } from "./LiveClass";
 
-// The teacher area: create a class, share its code, assign BC units and see each linked student's
+// The teacher area: create a class, share its code, assign units and see each linked student's
 // practice results. Each class follows one province, territory or state (FRAMEWORKS). It talks to the server only (no kids' store), so it stays light.
+// Like the parent area it uses hash routes: #/ lists the classes and #/class/{id}/{tab} opens one class on a tab.
 
 /** "Province" while only Canada is offered, "Province or state" once a US state is. */
 const REGION_LABEL = frameworkGroups(FRAMEWORKS).length > 1 ? "Province or state" : "Province";
+
+/** The class page's tabs, like the parent area's sections. Progress is the everyday view, so it comes first. */
+const CLASS_TABS = [
+  { path: "progress", label: "Progress", icon: "📈" },
+  { path: "homework", label: "Homework", icon: "📝" },
+  { path: "live", label: "Live", icon: "🙋" },
+  { path: "students", label: "Students", icon: "🧒" },
+  { path: "settings", label: "Settings", icon: "⚙️" },
+] as const;
+type ClassTab = (typeof CLASS_TABS)[number]["path"];
+
+/** A hash link to one tab of a class. Progress is the class's own address. */
+const classHref = (id: string, tab: ClassTab = "progress") => `#/class/${encodeURIComponent(id)}${tab === "progress" ? "" : `/${tab}`}`;
+
+/** "Grade 3", or "Grades 3 and 4" for a split class (US: "3rd grade", "3rd and 4th grade"). */
+function classGradeText(c: { grade: string; grade2?: string | null; framework: string }): string {
+  const first = gradeLabel(c.grade as GradeId, c.framework);
+  if (!c.grade2) return first;
+  const second = gradeLabel(c.grade2 as GradeId, c.framework);
+  const plain = (g: string) => g.replace(/^Grade /, "").replace(/ grade$/, "");
+  return /^Grade /.test(first) ? `Grades ${plain(first)} and ${plain(second)}` : `${plain(first)} and ${second}`;
+}
+
+/** The class a year later: each grade one up, or null once a grade has no next one. */
+function nextGradeOf(c: { grade: GradeId; grade2?: GradeId | null; framework: string }) {
+  const up = (g: GradeId) => GRADE_ORDER[GRADE_ORDER.indexOf(g) + 1] as GradeId | undefined;
+  const grade = up(c.grade);
+  const grade2 = c.grade2 ? up(c.grade2) : null;
+  return grade && (!c.grade2 || grade2) ? { grade, grade2: grade2 ?? null, framework: c.framework } : null;
+}
+
+/** The grade next to `grade` a class could share (a split class), as menu options after "None". */
+function secondGradeOptions(grade: GradeId, framework: string) {
+  const i = GRADE_ORDER.indexOf(grade);
+  return [{ value: "", label: "None" }, ...[GRADE_ORDER[i - 1], GRADE_ORDER[i + 1]].filter(Boolean).map((g) => ({ value: g, label: gradeLabel(g, framework) }))];
+}
 
 const pct = (v: number) => `${Math.round(v * 100)}%`;
 const btn = "min-h-11 rounded-xl px-4 font-bold";
 
 function AuthForm({ onDone }: { onDone: () => void }) {
-  const [mode, setMode] = useState<"in" | "up">("in");
+  const [mode, setMode] = useState<"in" | "up" | "forgot">("in");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [err, setErr] = useState("");
+  const [notice, setNotice] = useState("");
   const [busy, setBusy] = useState(false);
 
   const submit = async (e: FormEvent) => {
     e.preventDefault();
     setBusy(true);
     setErr("");
+    setNotice("");
     try {
-      await call(mode === "in" ? "/api/auth/login/" : "/api/auth/signup/", "POST", { email, password });
-      onDone();
+      if (mode === "forgot") {
+        // Always answers the same way, so it never says whether an email has an account.
+        setNotice((await call<{ message: string }>("/api/auth/forgot/", "POST", { email })).message);
+      } else {
+        await call(mode === "in" ? "/api/auth/login/" : "/api/auth/signup/", "POST", { email, password });
+        onDone();
+      }
     } catch (x) {
       setErr((x as Error).message);
     } finally {
       setBusy(false);
     }
   };
+  const switchTo = (next: typeof mode) => {
+    setMode(next);
+    setErr("");
+    setNotice("");
+  };
 
   return (
     <form onSubmit={submit} className="mx-auto mt-8 flex max-w-sm flex-col gap-3 rounded-2xl border border-line bg-white p-5">
-      <h1 className="text-2xl font-bold">{mode === "in" ? "Teacher sign in" : "Create a teacher account"}</h1>
+      <h1 className="text-2xl font-bold">{mode === "in" ? "Teacher sign in" : mode === "up" ? "Create a teacher account" : "Reset your password"}</h1>
       <label className="flex flex-col text-sm font-semibold">
         Email
         <input className="mt-1 min-h-11 rounded-xl border border-line px-3" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
       </label>
-      <label className="flex flex-col text-sm font-semibold">
-        Password
-        <input className="mt-1 min-h-11 rounded-xl border border-line px-3" type="password" autoComplete={mode === "in" ? "current-password" : "new-password"} minLength={8} value={password} onChange={(e) => setPassword(e.target.value)} required />
-      </label>
+      {mode !== "forgot" && (
+        <label className="flex flex-col text-sm font-semibold">
+          Password
+          <input className="mt-1 min-h-11 rounded-xl border border-line px-3" type="password" autoComplete={mode === "in" ? "current-password" : "new-password"} minLength={8} value={password} onChange={(e) => setPassword(e.target.value)} required />
+        </label>
+      )}
       {err && (
         <p role="alert" className="text-nudge-dark">
           {err}
         </p>
       )}
+      {notice && (
+        <p role="status" className="font-read text-ink-soft">
+          {notice}
+        </p>
+      )}
       <button disabled={busy} className={`${btn} bg-[#4f8ef7] text-[#0f172a] disabled:opacity-50`}>
-        {mode === "in" ? "Sign in" : "Create account"}
+        {mode === "in" ? "Sign in" : mode === "up" ? "Create account" : "Email me a reset link"}
       </button>
-      <button type="button" className="text-sm font-semibold underline" onClick={() => setMode(mode === "in" ? "up" : "in")}>
-        {mode === "in" ? "New here? Create an account" : "Have an account? Sign in"}
+      {mode === "in" && (
+        <button type="button" className="text-sm font-semibold underline" onClick={() => switchTo("forgot")}>
+          Forgot your password?
+        </button>
+      )}
+      <button type="button" className="text-sm font-semibold underline" onClick={() => switchTo(mode === "in" ? "up" : "in")}>
+        {mode === "in" ? "New here? Create an account" : mode === "up" ? "Have an account? Sign in" : "Back to sign in"}
       </button>
     </form>
   );
 }
 
-function ClassList({ onOpen }: { onOpen: (id: string) => void }) {
+/** Classes show children's first names and results, so the account's email has to be confirmed first. */
+function ConfirmEmail({ email }: { email?: string }) {
+  const [state, setState] = useState<"idle" | "sending" | "sent">("idle");
+  const [err, setErr] = useState("");
+  const resend = async () => {
+    setState("sending");
+    setErr("");
+    try {
+      await call("/api/auth/resend-verification/", "POST");
+      setState("sent");
+    } catch (x) {
+      setErr((x as Error).message);
+      setState("idle");
+    }
+  };
+  return (
+    <section className="mt-4 rounded-2xl border border-line bg-white p-4" aria-label="Confirm your email">
+      <h2 className="text-xl font-bold">Confirm your email to create a class</h2>
+      <p className="mt-1 font-read text-ink-soft">
+        Classes show students’ first names and practice results, so we ask teachers to confirm their email first. Open the link we sent{email ? ` to ${email}` : ""} (check spam too), then reload this page.
+      </p>
+      <button type="button" disabled={state !== "idle"} className={`${btn} mt-3 border border-line disabled:opacity-50`} onClick={() => void resend()}>
+        {state === "sent" ? "Sent. Check your inbox" : "Send the link again"}
+      </button>
+      {err && (
+        <p role="alert" className="mt-2 text-nudge-dark">
+          {err}
+        </p>
+      )}
+    </section>
+  );
+}
+
+function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account: { email?: string; verified?: boolean } }) {
   const [classes, setClasses] = useState<ClassSummary[] | null>(null);
   const [name, setName] = useState("");
   const [grade, setGrade] = useState<GradeId>("3");
+  const [grade2, setGrade2] = useState("");
   const [framework, setFramework] = useState<FrameworkId>("ca-bc");
   const [invites, setInvites] = useState<ClassInvite[]>([]);
   const [err, setErr] = useState("");
@@ -104,7 +203,8 @@ function ClassList({ onOpen }: { onOpen: (id: string) => void }) {
     e.preventDefault();
     setErr("");
     try {
-      const { class: c } = await call<{ class: ClassSummary }>("/api/classes/", "POST", { name, grade, framework });
+      const { class: c } = await call<{ class: ClassSummary }>("/api/classes/", "POST", { name, grade, ...(grade2 ? { grade2 } : {}), framework });
+      setGrade2("");
       setName("");
       onOpen(c.id);
     } catch (x) {
@@ -115,6 +215,7 @@ function ClassList({ onOpen }: { onOpen: (id: string) => void }) {
   return (
     <>
       <h1 className="text-3xl font-bold">Your classes</h1>
+      {account.verified === false && <ConfirmEmail email={account.email} />}
       {classes?.length === 0 && <p className="mt-2 font-read text-ink-soft">No classes yet. Create one below, then give families the class code.</p>}
       {invites.length > 0 && (
         <section className="mt-4 rounded-2xl border border-line bg-white p-4" aria-label="Invitations to co-teach">
@@ -142,7 +243,7 @@ function ClassList({ onOpen }: { onOpen: (id: string) => void }) {
             <button type="button" onClick={() => onOpen(c.id)} className="w-full rounded-2xl border border-line bg-white p-4 text-left">
               <span className="block text-xl font-bold">{c.name}</span>
               <span className="block font-read text-ink-soft">
-                {gradeLabel(c.grade as GradeId, c.framework)} · {getFramework(c.framework as FrameworkId).region} · {c.students} {c.students === 1 ? "student" : "students"}{c.role === "co-teacher" ? " · you co-teach" : ""} · code <b className="font-mono tracking-widest">{c.joinCode}</b>
+                {classGradeText(c)} · {getFramework(c.framework as FrameworkId).region} · {c.students} {c.students === 1 ? "student" : "students"}{c.role === "co-teacher" ? " · you co-teach" : ""} · code <b className="font-mono tracking-widest">{c.joinCode}</b>
               </span>
             </button>
           </li>
@@ -153,9 +254,10 @@ function ClassList({ onOpen }: { onOpen: (id: string) => void }) {
           Class name
           <input className="mt-1 min-h-11 rounded-xl border border-line px-3" value={name} maxLength={60} onChange={(e) => setName(e.target.value)} required />
         </label>
-        <SelectMenu label="Grade" block={false} value={grade} onChange={(next) => setGrade(next as GradeId)} options={GRADE_ORDER.map((g) => ({ value: g, label: gradeLabel(g, framework) }))} />
+        <SelectMenu label="Grade" block={false} value={grade} onChange={(next) => { setGrade(next as GradeId); setGrade2(""); }} options={GRADE_ORDER.map((g) => ({ value: g, label: gradeLabel(g, framework) }))} />
+        <SelectMenu label="Second grade (split class)" block={false} value={grade2} onChange={setGrade2} options={secondGradeOptions(grade, framework)} />
         <SelectMenu label={REGION_LABEL} block={false} value={framework} onChange={(next) => setFramework(next as FrameworkId)} {...frameworkMenu((f) => f.region)} />
-        <button className={`${btn} bg-[#25b47e] text-[#0f172a]`}>Create class</button>
+        <button disabled={account.verified === false} className={`${btn} bg-[#25b47e] text-[#0f172a] disabled:opacity-50`}>Create class</button>
         {isUsClass(getFramework(framework)) && <p className="w-full font-read text-sm text-ink-soft">{US_CLASS_CONSENT}</p>}
       </form>
       {err && (
@@ -168,11 +270,15 @@ function ClassList({ onOpen }: { onOpen: (id: string) => void }) {
 }
 
 export interface ClassDetail {
-  class: { id: string; name: string; grade: GradeId; framework: FrameworkId; joinCode: string };
+  class: { id: string; name: string; grade: GradeId; grade2?: GradeId | null; framework: FrameworkId; joinCode: string };
   assignments: string[];
   due: Record<string, number>;
   /** Homework question counts by unit key. Older servers omit it. */
   goal?: Record<string, number>;
+  /** The students a unit is for, by unit key. Units for the whole class are not listed. Older servers omit it. */
+  audience?: Record<string, string[]>;
+  /** Questions several students missed on the first try, by unit key (only for answers given since this was added). Older servers omit it. */
+  missed?: Record<string, MissedQuestion[]>;
   students: StudentRow[];
   roster: RosterEntry[];
   role?: "owner" | "co-teacher";
@@ -187,14 +293,102 @@ const toInput = (t: number) => {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 };
 
+/** Who an assignment is for: the whole class, or chosen students. Nothing chosen means everyone, so "chosen" asks for at least one. */
+function AudiencePicker({ students, who, picked, onWho, onPicked, name }: { students: StudentRow[]; who: "all" | "some"; picked: string[]; onWho: (w: "all" | "some") => void; onPicked: (ids: string[]) => void; name: string }) {
+  return (
+    <fieldset className="flex flex-col gap-1 text-sm font-semibold">
+      <legend className="mb-1">{name}</legend>
+      <div className="flex flex-wrap gap-4">
+        <label className="flex min-h-9 items-center gap-2">
+          <input type="radio" name={`${name}-who`} checked={who === "all"} onChange={() => onWho("all")} /> Whole class
+        </label>
+        <label className="flex min-h-9 items-center gap-2">
+          <input type="radio" name={`${name}-who`} checked={who === "some"} onChange={() => onWho("some")} /> Chosen students
+        </label>
+      </div>
+      {who === "some" && (
+        <ul className="grid gap-x-4 sm:grid-cols-2">
+          {students.map((s) => (
+            <li key={s.profileId}>
+              <label className="flex min-h-9 items-center gap-2 font-normal">
+                <input type="checkbox" checked={picked.includes(s.profileId)} onChange={(e) => onPicked(e.target.checked ? [...picked, s.profileId] : picked.filter((id) => id !== s.profileId))} /> {s.name}
+              </label>
+            </li>
+          ))}
+          {students.length === 0 && <li className="font-normal text-ink-soft">No students yet.</li>}
+        </ul>
+      )}
+    </fieldset>
+  );
+}
+
+/** "12 of 24 done", who is behind and whether it is past due, under one assigned unit. */
+function HomeworkProgress({ status }: { status?: { assigned: number; done: number; behind: string[]; overdue: boolean } }) {
+  if (!status || status.assigned === 0) return null;
+  const names = status.behind.slice(0, 5).join(", ") + (status.behind.length > 5 ? ` and ${status.behind.length - 5} more` : "");
+  return (
+    <p className="basis-full text-sm text-ink-soft">
+      <b className={status.overdue ? "text-nudge-dark" : undefined}>
+        {status.done} of {status.assigned} done{status.overdue ? " · past due" : ""}
+      </b>
+      {status.behind.length > 0 && <> · Still to finish: {names}</>}
+    </p>
+  );
+}
+
+/** Who one assigned unit is for. Shows a short summary; Change opens the picker. */
+function RowAudience({ unitLabel, students, current, onSave }: { unitLabel: string; students: StudentRow[]; current: string[]; onSave: (ids: string[]) => void }) {
+  const [open, setOpen] = useState(false);
+  const [who, setWho] = useState<"all" | "some">(current.length ? "some" : "all");
+  const [picked, setPicked] = useState(current);
+  const summary = current.length === 0 ? "Whole class" : `${current.length} ${current.length === 1 ? "student" : "students"}`;
+  return (
+    <div className="basis-full">
+      <button
+        type="button"
+        aria-expanded={open}
+        aria-label={`Who gets ${unitLabel}: ${summary}`}
+        className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold"
+        onClick={() => {
+          setWho(current.length ? "some" : "all");
+          setPicked(current);
+          setOpen(!open);
+        }}
+      >
+        For: {summary}
+      </button>
+      {open && (
+        <div className="mt-2 rounded-xl border border-line p-3">
+          <AudiencePicker students={students} who={who} picked={picked} onWho={setWho} onPicked={setPicked} name={`Students for ${unitLabel}`} />
+          <button
+            type="button"
+            disabled={who === "some" && picked.length === 0}
+            className={`${btn} mt-2 bg-[#4f8ef7] text-[#0f172a] disabled:opacity-50`}
+            onClick={() => {
+              onSave(who === "all" ? [] : picked);
+              setOpen(false);
+            }}
+          >
+            Save
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
 /** Add students by first name, share each one's login code, and print the cards. */
-function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url: string, method: string, body?: unknown) => Promise<boolean>; onPrint: () => void }) {
+function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChange: (url: string, method: string, body?: unknown) => Promise<boolean>; onBulk: (calls: { url: string; method: string }[]) => Promise<boolean>; onPrint: (ids?: string[]) => void }) {
   const [names, setNames] = useState("");
   const [busy, setBusy] = useState(false);
   const [removing, setRemoving] = useState<RosterEntry | null>(null);
   const [upgrading, setUpgrading] = useState(false);
+  const [chosen, setChosen] = useState<string[]>([]);
+  const [removingMany, setRemovingMany] = useState(false);
   const { class: cls, roster, students } = data;
   const older = roster.filter((r) => !isOneCode(r.loginCode)).length;
+  // A split class asks which grade the new students are in.
+  const [newGrade, setNewGrade] = useState<GradeId>(cls.grade);
   const isOwner = (data.role ?? "owner") === "owner";
   const byProfile = new Map(students.map((s) => [s.profileId, s]));
   return (
@@ -205,10 +399,44 @@ function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url
       </p>
       {isUsClass(getFramework(cls.framework)) && <p className="mt-2 font-read text-ink-soft">{US_CLASS_CONSENT}</p>}
       {roster.length > 0 && (
+        <div className="mt-3 flex flex-wrap items-center gap-3">
+          <label className="flex min-h-11 items-center gap-2 text-sm font-semibold">
+            <input type="checkbox" className="h-5 w-5" checked={chosen.length === roster.length} onChange={(e) => setChosen(e.target.checked ? roster.map((r) => r.id) : [])} />
+            Select all
+          </label>
+          {chosen.length > 0 && (
+            <>
+              <span className="text-sm text-ink-soft" role="status">{chosen.length} selected</span>
+              <button type="button" className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => onPrint(chosen)}>
+                Print cards for selected
+              </button>
+              <button
+                type="button"
+                className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold"
+                onClick={async () => {
+                  if (await onBulk(chosen.map((id) => ({ url: `/api/classes/students/?classId=${cls.id}&studentId=${id}`, method: "PATCH" })))) setChosen([]);
+                }}
+              >
+                New codes for selected
+              </button>
+              {isOwner && (
+                <button type="button" className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => setRemovingMany(true)}>
+                  Remove selected
+                </button>
+              )}
+            </>
+          )}
+        </div>
+      )}
+      {roster.length > 0 && (
         <ul className="mt-3 divide-y divide-line">
           {roster.map((r) => (
             <li key={r.id} className="flex flex-wrap items-center gap-3 py-2">
-              <span className="min-w-32 flex-1 font-read font-bold">{byProfile.get(r.profileId)?.name ?? "Student"}</span>
+              <input type="checkbox" className="h-5 w-5" aria-label={`Select ${byProfile.get(r.profileId)?.name ?? "student"}`} checked={chosen.includes(r.id)} onChange={(e) => setChosen(e.target.checked ? [...chosen, r.id] : chosen.filter((id) => id !== r.id))} />
+              <span className="min-w-32 flex-1 font-read font-bold">
+                {byProfile.get(r.profileId)?.name ?? "Student"}
+                {cls.grade2 && byProfile.get(r.profileId) && <span className="block text-sm font-normal text-ink-soft">{gradeLabel(byProfile.get(r.profileId)!.grade as GradeId, cls.framework)}</span>}
+              </span>
               <span className="font-mono text-xl font-bold tracking-widest" aria-label={`Login code ${r.loginCode.split("").join(" ")}`}>
                 {showLoginCode(r.loginCode)}
               </span>
@@ -230,7 +458,7 @@ function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url
           e.preventDefault();
           setBusy(true);
           // Keep the typed names when adding them failed, so nothing has to be retyped.
-          if (await onChange("/api/classes/students/", "POST", { classId: cls.id, names: names.split(/\n|,/).map((n) => n.trim()).filter(Boolean) })) setNames("");
+          if (await onChange("/api/classes/students/", "POST", { classId: cls.id, names: names.split(/\n|,/).map((n) => n.trim()).filter(Boolean), ...(cls.grade2 ? { grade: newGrade } : {}) })) setNames("");
           setBusy(false);
         }}
       >
@@ -239,11 +467,14 @@ function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url
           <textarea className="mt-1 min-h-24 rounded-xl border border-line px-3 py-2 font-read" value={names} onChange={(e) => setNames(e.target.value)} placeholder={"Maya\nSam\nAlex P."} maxLength={1200} />
         </label>
         <div className="flex flex-wrap gap-3">
+          {cls.grade2 && (
+            <SelectMenu label="Their grade" block={false} value={newGrade} onChange={(next) => setNewGrade(next as GradeId)} options={[cls.grade, cls.grade2].map((g) => ({ value: g, label: gradeLabel(g, cls.framework) }))} />
+          )}
           <button disabled={busy || !names.trim()} className={`${btn} bg-[#25b47e] text-[#0f172a] disabled:opacity-50`}>
             Add students
           </button>
           {roster.length > 0 && (
-            <button type="button" className={`${btn} border border-line`} onClick={onPrint}>
+            <button type="button" className={`${btn} border border-line`} onClick={() => onPrint()}>
               Print login cards
             </button>
           )}
@@ -278,6 +509,29 @@ function Roster({ data, onChange, onPrint }: { data: ClassDetail; onChange: (url
               Switch to one code each
             </button>
           )}
+        </div>
+      )}
+      {removingMany && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-4" role="dialog" aria-modal="true" aria-label={`Remove ${chosen.length} students?`} onClick={() => setRemovingMany(false)}>
+          <div className="w-full max-w-md rounded-3xl border-2 border-line bg-white p-6" onClick={(e) => e.stopPropagation()}>
+            <h2 className="mb-2 text-2xl font-bold">Remove {chosen.length} {chosen.length === 1 ? "student" : "students"}?</h2>
+            <p className="mb-5 font-read text-ink-soft">Their accounts and practice history are deleted and can’t be brought back.</p>
+            <div className="flex flex-col gap-3">
+              <button
+                type="button"
+                className="min-h-12 rounded-xl bg-[#ff9f43] font-bold text-[#0f172a]"
+                onClick={async () => {
+                  setRemovingMany(false);
+                  if (await onBulk(chosen.map((id) => ({ url: `/api/classes/students/?classId=${cls.id}&studentId=${id}`, method: "DELETE" })))) setChosen([]);
+                }}
+              >
+                Yes, remove
+              </button>
+              <button type="button" className="min-h-12 rounded-xl border-2 border-line font-bold" onClick={() => setRemovingMany(false)}>
+                Cancel
+              </button>
+            </div>
+          </div>
         </div>
       )}
       {removing && (
@@ -378,13 +632,14 @@ function Team({ data, onChange, onLeave }: { data: ClassDetail; onChange: (url: 
 function Insights({ data, label }: { data: ClassDetail; label: (key: string) => string }) {
   const [now] = useState(() => Date.now());
   const { assignments, students } = data;
+  const say = sayFor(getFramework(data.class.framework));
   const insights = classInsights(students, assignments, label, now);
   if (!students.length || !assignments.length) return null;
   return (
     <section className="mt-4 rounded-2xl border border-line bg-white p-5 print:hidden">
       <h2 className="text-xl font-bold">What to look at next</h2>
       {insights.focusUnits.length === 0 && insights.checkIn.length === 0 ? (
-        <p className="mt-2 font-read text-ink-soft">Nothing stands out. Everyone who has practised is doing fine on the assigned units.</p>
+        <p className="mt-2 font-read text-ink-soft">{say("Nothing stands out. Everyone who has practised is doing fine on the assigned units.")}</p>
       ) : (
         <div className="mt-2 grid gap-4 sm:grid-cols-2">
           <div>
@@ -404,20 +659,45 @@ function Insights({ data, label }: { data: ClassDetail; label: (key: string) => 
           <div>
             <h3 className="font-bold">Check in with</h3>
             {insights.checkIn.length === 0 ? (
-              <p className="font-read text-ink-soft">Everyone is practising and doing fine.</p>
+              <p className="font-read text-ink-soft">{say("Everyone is practising and doing fine.")}</p>
             ) : (
               <ul className="mt-1 font-read">
                 {insights.checkIn.map((s) => (
                   <li key={s.profileId}>
-                    <b>{s.name}</b>: {s.reasons.join("; ")}
+                    <b>{s.name}</b>: {say(s.reasons.join("; "))}
                   </li>
                 ))}
               </ul>
             )}
+            {insights.checkIn.length > 0 && (
+              <a className="mt-2 inline-block font-semibold underline" href={`${classHref(data.class.id, "homework")}?students=${insights.checkIn.map((s) => encodeURIComponent(s.profileId)).join(",")}`}>
+                Assign extra practice to these students
+              </a>
+            )}
           </div>
         </div>
       )}
-      <p className="mt-3 text-sm text-ink-soft">A student is flagged as finding a unit tricky after at least 4 questions with under 60% right on the first try. This reflects practice, not a report-card mark.</p>
+      {Object.keys(data.missed ?? {}).length > 0 && (
+        <div className="mt-4">
+          <h3 className="font-bold">Most-missed questions</h3>
+          <ul className="mt-1 font-read">
+            {Object.entries(data.missed ?? {}).map(([key, list]) => (
+              <li key={key} className="mt-1">
+                <b>{label(key)}</b>
+                <ul className="list-disc pl-6">
+                  {list.map((m) => (
+                    <li key={m.q}>
+                      {m.q}: {m.missed} of {m.tried} missed it on the first try
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-1 text-sm text-ink-soft">Shown when at least 2 students missed the same question. Questions are only listed for answers given from now on.</p>
+        </div>
+      )}
+      <p className="mt-3 text-sm text-ink-soft">A student is flagged as finding a unit tricky after at least 4 questions with under 60% right on the first try. {say("This reflects practice, not a report-card mark.")}</p>
     </section>
   );
 }
@@ -457,7 +737,7 @@ function SendHome({ cls }: { cls: ClassDetail["class"] }) {
 }
 
 /** What prints: a login card for each student, or a one-page class summary. Hidden on screen. */
-function PrintSheet({ data, label, mode }: { data: ClassDetail; label: (key: string) => string; mode: "cards" | "summary" }) {
+function PrintSheet({ data, label, mode, only }: { data: ClassDetail; label: (key: string) => string; mode: "cards" | "summary"; only?: string[] }) {
   const { class: cls, roster, students, assignments } = data;
   const byProfile = new Map(students.map((s) => [s.profileId, s]));
   const levelLabel = (level: number) => (level < 0 ? "Not started" : levelInfo(cls.framework, cls.grade, level)?.label ?? "");
@@ -466,7 +746,7 @@ function PrintSheet({ data, label, mode }: { data: ClassDetail; label: (key: str
   if (mode === "cards") {
     return (
       <div className="hidden print:grid print:grid-cols-2 print:gap-3">
-        {roster.map((r) => (
+        {roster.filter((r) => !only || only.includes(r.id)).map((r) => (
           <div key={r.id} className="break-inside-avoid rounded-xl border-2 border-dashed border-black p-4">
             <p className="text-lg font-bold">{byProfile.get(r.profileId)?.name}</p>
             <p>
@@ -488,10 +768,10 @@ function PrintSheet({ data, label, mode }: { data: ClassDetail; label: (key: str
   return (
     <div className="hidden print:block">
       <h1 className="text-2xl font-bold">
-        {cls.name} · {gradeLabel(cls.grade, cls.framework)} · {getFramework(cls.framework).curriculumName}
+        {cls.name} · {classGradeText(cls)} · {getFramework(cls.framework).curriculumName}
       </h1>
       <p className="text-sm">
-        Practice summary printed {new Date(now).toLocaleDateString("en-CA", { dateStyle: "long" })}. This reflects practice in {APP_NAME}, not a report-card mark.
+        Practice summary printed {new Date(now).toLocaleDateString(countryOf(getFramework(cls.framework)).locale, { dateStyle: "long" })}. This reflects practice in {APP_NAME}, not a report-card mark.
       </p>
       <table className="mt-3 w-full border-collapse text-left text-sm">
         <thead>
@@ -508,7 +788,7 @@ function PrintSheet({ data, label, mode }: { data: ClassDetail; label: (key: str
               <th scope="row" className="border border-black p-1">{s.name}</th>
               {s.units.map((u) => (
                 <td key={u.key} className="border border-black p-1">
-                  {levelLabel(u.level)}
+                  {u.assigned === false ? "Not assigned" : levelLabel(u.level)}
                   {u.attempts > 0 ? ` (${pct(u.accuracy)}, ${u.attempts} q)` : ""}
                 </td>
               ))}
@@ -530,15 +810,131 @@ function PrintSheet({ data, label, mode }: { data: ClassDetail; label: (key: str
   );
 }
 
-function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
+type ProgressSort = "name" | "need" | "active";
+
+/** How much a student needs a look: not started first, then the lowest accuracy on what they have tried. */
+function needScore(s: StudentRow): number {
+  const tried = s.units.filter((u) => u.assigned !== false && u.attempts > 0);
+  if (!tried.length) return -1;
+  return tried.reduce((n, u) => n + u.accuracy, 0) / tried.length;
+}
+
+/** The progress table: sort, a subject filter, one student on their own, and a name column that stays put when it scrolls sideways. */
+function ProgressTable({ data, label, levelLabel, now }: { data: ClassDetail; label: (key: string) => string; levelLabel: (level: number) => string; now: number }) {
+  const { class: cls, assignments, students } = data;
+  const [sort, setSort] = useState<ProgressSort>("name");
+  const [subject, setSubject] = useState("");
+  const [only, setOnly] = useState<string | null>(null);
+  const subjects = [...new Set(assignments.map((k) => k.split("/")[1]))];
+  const shown = subject ? assignments.filter((k) => k.split("/")[1] === subject) : assignments;
+  const keep = new Set(shown);
+  const rows = students
+    .filter((s) => only === null || s.profileId === only)
+    .map((s) => ({ ...s, units: s.units.filter((u) => keep.has(u.key)) }))
+    .sort((a, b) => (sort === "need" ? needScore(a) - needScore(b) : sort === "active" ? (a.lastActive ?? 0) - (b.lastActive ?? 0) : 0) || a.name.localeCompare(b.name));
+  const onlyName = students.find((s) => s.profileId === only)?.name;
+  const choose = "min-h-11 rounded-xl border border-line bg-white px-3 font-read";
+  return (
+    <div className="mt-3">
+      <div className="flex flex-wrap items-end gap-3">
+        <label className="flex flex-col text-sm font-semibold">
+          Sort by
+          <select className={`${choose} mt-1`} value={sort} onChange={(e) => setSort(e.target.value as ProgressSort)}>
+            <option value="name">Name</option>
+            <option value="need">Needs a look first</option>
+            <option value="active">Least recently active</option>
+          </select>
+        </label>
+        {subjects.length > 1 && (
+          <label className="flex flex-col text-sm font-semibold">
+            Subject
+            <select className={`${choose} mt-1`} value={subject} onChange={(e) => setSubject(e.target.value)}>
+              <option value="">All subjects</option>
+              {subjects.map((sub) => (
+                <option key={sub} value={sub}>{getSubjectMeta(sub as never).title.big}</option>
+              ))}
+            </select>
+          </label>
+        )}
+        {only !== null && (
+          <button type="button" className={`${btn} border border-line`} onClick={() => setOnly(null)}>
+            Show everyone
+          </button>
+        )}
+      </div>
+      {onlyName && <p className="mt-2 font-read text-ink-soft">Showing {onlyName} only.</p>}
+      <div className="mt-3 overflow-x-auto">
+        <table className="w-full min-w-[32rem] text-left font-read">
+          <thead>
+            <tr className="border-b border-line">
+              <th scope="col" className="sticky left-0 bg-white py-2 pr-3">Student</th>
+              {shown.map((k) => (
+                <th key={k} scope="col" className="py-2 pr-3">{label(k)}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((s) => (
+              <tr key={s.profileId} className="border-b border-line align-top last:border-0">
+                <th scope="row" className="sticky left-0 bg-white py-2 pr-3 font-bold">
+                  {only === null ? (
+                    <button type="button" aria-label={`Show only ${s.name}`} className="text-left font-bold underline decoration-dotted" onClick={() => setOnly(s.profileId)}>
+                      {s.name}
+                    </button>
+                  ) : (
+                    s.name
+                  )}
+                  {cls.grade2 && <span className="font-normal text-ink-soft"> ({gradeLabel(s.grade as GradeId, cls.framework)})</span>}
+                  <span className="block text-sm font-normal text-ink-soft">{s.lastActive ? `Active ${new Date(s.lastActive).toLocaleDateString(countryOf(getFramework(cls.framework)).locale, { month: "short", day: "numeric" })}` : "Not active yet"}</span>
+                </th>
+        {s.units.map((u) => u.assigned === false ? (
+          <td key={u.key} className="py-2 pr-3 text-sm text-ink-soft">Not assigned</td>
+        ) : (
+          <td key={u.key} className="py-2 pr-3">
+            <b>{levelLabel(u.level)}</b>
+            {data.goal?.[u.key] && u.done !== undefined ? (
+              <span className="block text-sm">{u.done >= data.goal[u.key] ? "Homework done ✓" : `Homework: ${u.done} of ${data.goal[u.key]}`}</span>
+            ) : null}
+            {data.due[u.key] && data.due[u.key] < now && !isHomeworkDone(u, data.goal?.[u.key]) && <span className="block text-sm font-bold text-nudge-dark">Past due</span>}
+            {u.attempts > 0 && (
+              <span className="block text-sm text-ink-soft">
+                {pct(u.accuracy)} · {u.attempts} {u.attempts === 1 ? "question" : "questions"}
+              </span>
+            )}
+          </td>
+        ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; preselect?: string[]; onBack: () => void }) {
   const [data, setData] = useState<ClassDetail | null>(null);
   const [ready, setReady] = useState(false);
   const [pick, setPick] = useState("");
   const [err, setErr] = useState("");
   const [confirmClose, setConfirmClose] = useState(false);
+  const [confirmYear, setConfirmYear] = useState(false);
+  const [nameDraft, setNameDraft] = useState<string | null>(null);
   const [due, setDue] = useState("");
   const [questions, setQuestions] = useState("");
+  const [who, setWho] = useState<"all" | "some">("all");
+  const [picked, setPicked] = useState<string[]>([]);
+  const [now] = useState(() => Date.now());
+  // "Assign extra practice to these students" on Progress arrives here with the students already chosen.
+  const preselected = preselect?.join(",") ?? "";
+  const [seen, setSeen] = useState("");
+  if (preselected && preselected !== seen) {
+    setSeen(preselected);
+    setWho("some");
+    setPicked(preselected.split(","));
+  }
   const [printMode, setPrintMode] = useState<"cards" | "summary" | null>(null);
+  const [printOnly, setPrintOnly] = useState<string[] | undefined>();
 
   // Print once the sheet is on the page, then go back to the normal view.
   useEffect(() => {
@@ -553,7 +949,7 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
   const load = useCallback(
     () =>
       call<ClassDetail>(`/api/classes/?id=${encodeURIComponent(id)}`)
-        .then((d) => loadGrade(d.class.grade, d.class.framework).then(() => d))
+        .then((d) => Promise.all([d.class.grade, ...(d.class.grade2 ? [d.class.grade2] : [])].map((g) => loadGrade(g, d.class.framework))).then(() => d))
         .then((d) => {
           setData(d);
           setReady(true);
@@ -572,11 +968,24 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
   const levelLabel = (level: number) => (level < 0 ? "Not started" : levelInfo(cls.framework, cls.grade, level)?.label ?? "");
   // "Proficient" in BC; each curriculum's own word for its third level elsewhere.
   const meeting = levelInfo(cls.framework, cls.grade, 2)?.label ?? "Proficient";
+  /** The class table as a CSV file, for a gradebook or spreadsheet. */
+  const downloadCsv = () => {
+    const csv = classCsv({ students, assignments, unitName: label, levelName: (l) => levelLabel(l), goal: data.goal ?? {}, due: data.due, appName: APP_NAME });
+    const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `${cls.name.replace(/[^\p{L}\p{N}]+/gu, "-").replace(/^-|-$/g, "").toLowerCase() || "class"}-practice-${new Date().toISOString().slice(0, 10)}.csv`;
+    link.click();
+    URL.revokeObjectURL(url);
+  };
+  const overview = homeworkOverview(students, assignments, data.due, data.goal ?? {}, now);
+  const overdue = overview.filter((o) => o.overdue).length;
   const goalOptions = [{ value: "", label: `Until ${meeting}` }, ...HOMEWORK_GOALS.map((n) => ({ value: String(n), label: `${n} questions` }))];
   /** The class's units by subject, for a picker. Units in `taken` are shown but can't be picked. */
   const unitGroups = (taken: string[]) =>
-    coursesForGrade(cls.grade, cls.framework).map((course) => ({
-      label: getSubjectMeta(course.subject).title.big,
+    [cls.grade, ...(cls.grade2 ? [cls.grade2] : [])].flatMap((g) => coursesForGrade(g, cls.framework)).map((course) => ({
+      // A split class's units are grouped by grade too.
+      label: getSubjectMeta(course.subject).title.big + (cls.grade2 ? ` · ${gradeLabel(course.grade, cls.framework)}` : ""),
       options: course.units.map((u) => {
         const key = `${course.grade}/${course.subject}/${u.id}`;
         return { value: key, label: `${u.emoji} ${u.title}`, disabled: taken.includes(key) };
@@ -595,6 +1004,22 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
     await load().catch(() => undefined);
     return true;
   };
+  /** Several changes in a row, then one reload. Stops at the first that fails and shows why. */
+  const bulk = async (calls: { url: string; method: string }[]): Promise<boolean> => {
+    setErr("");
+    let ok = true;
+    for (const c of calls) {
+      try {
+        await call(c.url, c.method);
+      } catch (e) {
+        setErr((e as Error).message);
+        ok = false;
+        break;
+      }
+    }
+    await load().catch(() => undefined);
+    return ok;
+  };
   /** Closing or leaving: nothing left to reload, so only go back once the server agreed. */
   const leave = async (url: string) => {
     setErr("");
@@ -606,174 +1031,236 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
     }
   };
 
+  const tabLink = (t: ClassTab, text: string) => (
+    <a href={classHref(id, t)} className="font-semibold underline">
+      {text}
+    </a>
+  );
+
   return (
     <>
-      {printMode && <PrintSheet data={data} label={label} mode={printMode} />}
+      {printMode && <PrintSheet data={data} label={label} mode={printMode} only={printOnly} />}
       <div className="print:hidden">
-      <button type="button" className="mb-3 font-semibold underline" onClick={onBack}>
-        ← All classes
-      </button>
       <h1 className="text-3xl font-bold">{cls.name}</h1>
       <p className="font-read text-ink-soft">
-        {gradeLabel(cls.grade, cls.framework)} · {getFramework(cls.framework).curriculumName}
+        {classGradeText(cls)} · {getFramework(cls.framework).curriculumName}
       </p>
 
-      <section className="mt-4 rounded-2xl border border-line bg-white p-5">
-        <h2 className="text-xl font-bold">Class code</h2>
-        <p className="mt-1 font-mono text-4xl font-bold tracking-widest" aria-label={`Class code ${cls.joinCode.split("").join(" ")}`}>
-          {cls.joinCode}
-        </p>
-        <p className="mt-1 font-read text-ink-soft">
-          Share this with families. A parent enters it under Children in the parent area, so they choose what to share. You will only see first names, grade and practice results for the units you assign.
-        </p>
-        {isOwner && (
-          <>
-            <button type="button" className="mt-3 rounded-xl border border-line px-4 py-2 font-semibold" onClick={() => change(`/api/classes/?id=${encodeURIComponent(id)}`, "PATCH")}>
-              Get a new code
+      {tab === "progress" && (
+        <>
+          <section className="mt-4 rounded-2xl border border-line bg-white p-5">
+            <h2 className="text-xl font-bold">Students ({students.length})</h2>
+            {students.length === 0 ? (
+              <p className="mt-2 font-read text-ink-soft">No one has joined yet. {tabLink("students", "Add students or share the class code")}</p>
+            ) : assignments.length === 0 ? (
+              <p className="mt-2 font-read text-ink-soft">Assign homework to see how each student is doing. {tabLink("homework", "Go to Homework")}</p>
+            ) : (
+              <ProgressTable data={data} label={label} levelLabel={levelLabel} now={now} />
+            )}
+            <p className="mt-3 text-sm text-ink-soft">This reflects practice in {APP_NAME}, not a report-card mark. You decide proficiency.</p>
+            {students.length > 0 && assignments.length > 0 && (
+              <div className="mt-3 flex flex-wrap gap-3">
+                <button type="button" className={`${btn} border border-line`} onClick={() => setPrintMode("summary")}>
+                  Print class summary
+                </button>
+                <button type="button" className={`${btn} border border-line`} onClick={downloadCsv}>
+                  Download as spreadsheet (CSV)
+                </button>
+              </div>
+            )}
+          </section>
+          <Insights data={data} label={label} />
+        </>
+      )}
+
+      {tab === "homework" && (
+        <section className="mt-4 rounded-2xl border border-line bg-white p-5">
+          <h2 className="text-xl font-bold">Homework</h2>
+          <p className="mt-1 font-read text-ink-soft">
+            Assign units for practice at home or in class, with a due date and a number of questions if you like. Students see them on their home screen and can do them offline: their answers reach you once their device is back online. Without a number of questions, a unit is done when it reaches {meeting}.
+          </p>
+          {overdue > 0 && (
+            <p role="status" className="mt-2 font-read font-bold text-nudge-dark">
+              {overdue} {overdue === 1 ? "unit is" : "units are"} past due with students still to finish.
+            </p>
+          )}
+          <ul className="mt-3 divide-y divide-line">
+            {assignments.map((k) => (
+              <li key={k} className="flex flex-wrap items-center gap-2 py-2 font-read">
+                <span className="min-w-40 flex-1">
+                  {getUnitRef(k)?.unit.emoji} {label(k)}
+                </span>
+                <DateField
+                  label={`Due date for ${label(k)}`}
+                  hideLabel
+                  size="sm"
+                  value={data.due[k] ? toInput(data.due[k]) : ""}
+                  onChange={(next) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, dueAt: next ? endOfDay(next) : null })}
+                />
+                <SelectMenu
+                  label={`Questions for ${label(k)}`}
+                  hideLabel
+                  block={false}
+                  value={data.goal?.[k] ? String(data.goal[k]) : ""}
+                  onChange={(next) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, goal: next ? Number(next) : null })}
+                  options={goalOptions}
+                />
+                <button type="button" aria-label={`Remove ${label(k)}`} className="min-h-9 min-w-9 rounded-full font-bold" onClick={() => change(`/api/classes/assignments/?classId=${id}&unitKey=${encodeURIComponent(k)}`, "DELETE")}>
+                  ✕
+                </button>
+                <HomeworkProgress status={overview.find((o) => o.key === k)} />
+                <RowAudience
+                  key={`${k}:${(data.audience?.[k] ?? []).join(",")}`}
+                  unitLabel={label(k)}
+                  students={students}
+                  current={data.audience?.[k] ?? []}
+                  onSave={(ids) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, students: ids })}
+                />
+              </li>
+            ))}
+            {assignments.length === 0 && <li className="py-2 font-read text-ink-soft">Nothing assigned yet.</li>}
+          </ul>
+          <div className="mt-3 flex flex-wrap items-end gap-3">
+            <SelectMenu
+              label="Add a unit"
+              value={pick}
+              onChange={setPick}
+              options={[{ value: "", label: "Choose a unit…" }]}
+              groups={unitGroups(assignments)}
+            />
+            <DateField label="Due (optional)" value={due} onChange={setDue} />
+            <SelectMenu label="Questions (optional)" block={false} value={questions} onChange={setQuestions} options={goalOptions} />
+            <div className="basis-full">
+              <AudiencePicker students={students} who={who} picked={picked} onWho={setWho} onPicked={setPicked} name="Who gets it" />
+            </div>
+            <button
+              type="button"
+              disabled={!pick || (who === "some" && picked.length === 0)}
+              className={`${btn} bg-[#4f8ef7] text-[#0f172a] disabled:opacity-50`}
+              onClick={async () => {
+                const ok = await change("/api/classes/assignments/", "POST", { classId: id, unitKey: pick, dueAt: due ? endOfDay(due) : undefined, goal: questions ? Number(questions) : undefined, ...(who === "some" ? { students: picked } : {}) });
+                if (!ok) return;
+                setPick("");
+                setDue("");
+                setQuestions("");
+                setWho("all");
+                setPicked([]);
+              }}
+            >
+              Assign
             </button>
-            <p className="mt-1 text-sm text-ink-soft">If the code was shared too widely. Families already linked stay linked; the old code stops working.</p>
-          </>
-        )}
-      </section>
-
-      <Roster data={data} onChange={change} onPrint={() => setPrintMode("cards")} />
-      <Team data={data} onChange={change} onLeave={leave} />
-
-      <section className="mt-4 rounded-2xl border border-line bg-white p-5">
-        <h2 className="text-xl font-bold">Homework</h2>
-        <p className="mt-1 font-read text-ink-soft">
-          Assign units for practice at home or in class, with a due date and a number of questions if you like. Students see them on their home screen and can do them offline: their answers reach you once their device is back online. Without a number of questions, a unit is done when it reaches {meeting}.
-        </p>
-        <ul className="mt-3 divide-y divide-line">
-          {assignments.map((k) => (
-            <li key={k} className="flex flex-wrap items-center gap-2 py-2 font-read">
-              <span className="min-w-40 flex-1">
-                {getUnitRef(k)?.unit.emoji} {label(k)}
-              </span>
-              <DateField
-                label={`Due date for ${label(k)}`}
-                hideLabel
-                size="sm"
-                value={data.due[k] ? toInput(data.due[k]) : ""}
-                onChange={(next) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, dueAt: next ? endOfDay(next) : null })}
-              />
-              <SelectMenu
-                label={`Questions for ${label(k)}`}
-                hideLabel
-                block={false}
-                value={data.goal?.[k] ? String(data.goal[k]) : ""}
-                onChange={(next) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, goal: next ? Number(next) : null })}
-                options={goalOptions}
-              />
-              <button type="button" aria-label={`Remove ${label(k)}`} className="min-h-9 min-w-9 rounded-full font-bold" onClick={() => change(`/api/classes/assignments/?classId=${id}&unitKey=${encodeURIComponent(k)}`, "DELETE")}>
-                ✕
-              </button>
-            </li>
-          ))}
-          {assignments.length === 0 && <li className="py-2 font-read text-ink-soft">Nothing assigned yet.</li>}
-        </ul>
-        <div className="mt-3 flex flex-wrap items-end gap-3">
-          <SelectMenu
-            label="Add a unit"
-            value={pick}
-            onChange={setPick}
-            options={[{ value: "", label: "Choose a unit…" }]}
-            groups={unitGroups(assignments)}
-          />
-          <DateField label="Due (optional)" value={due} onChange={setDue} />
-          <SelectMenu label="Questions (optional)" block={false} value={questions} onChange={setQuestions} options={goalOptions} />
-          <button
-            type="button"
-            disabled={!pick}
-            className={`${btn} bg-[#4f8ef7] text-[#0f172a] disabled:opacity-50`}
-            onClick={async () => {
-              await change("/api/classes/assignments/", "POST", { classId: id, unitKey: pick, dueAt: due ? endOfDay(due) : undefined, goal: questions ? Number(questions) : undefined });
-              setPick("");
-              setDue("");
-              setQuestions("");
-            }}
-          >
-            Assign
-          </button>
-        </div>
-      </section>
-
-      <LiveClass data={data} label={label} unitGroups={unitGroups([])} />
-
-      <section className="mt-4 rounded-2xl border border-line bg-white p-5">
-        <h2 className="text-xl font-bold">Students ({students.length})</h2>
-        {students.length === 0 ? (
-          <p className="mt-2 font-read text-ink-soft">No one has joined yet.</p>
-        ) : assignments.length === 0 ? (
-          <p className="mt-2 font-read text-ink-soft">Assign homework to see how each student is doing.</p>
-        ) : (
-          <div className="mt-3 overflow-x-auto">
-            <table className="w-full min-w-[32rem] text-left font-read">
-              <thead>
-                <tr className="border-b border-line">
-                  <th scope="col" className="py-2 pr-3">Student</th>
-                  {assignments.map((k) => (
-                    <th key={k} scope="col" className="py-2 pr-3">{label(k)}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {students.map((s) => (
-                  <tr key={s.profileId} className="border-b border-line align-top last:border-0">
-                    <th scope="row" className="py-2 pr-3 font-bold">
-                      {s.name}
-                      <span className="block text-sm font-normal text-ink-soft">{s.lastActive ? `Active ${new Date(s.lastActive).toLocaleDateString("en-CA", { month: "short", day: "numeric" })}` : "Not active yet"}</span>
-                    </th>
-                    {s.units.map((u) => (
-                      <td key={u.key} className="py-2 pr-3">
-                        <b>{levelLabel(u.level)}</b>
-                        {data.goal?.[u.key] && u.done !== undefined ? (
-                          <span className="block text-sm">{u.done >= data.goal[u.key] ? "Homework done ✓" : `Homework: ${u.done} of ${data.goal[u.key]}`}</span>
-                        ) : null}
-                        {u.attempts > 0 && (
-                          <span className="block text-sm text-ink-soft">
-                            {pct(u.accuracy)} · {u.attempts} {u.attempts === 1 ? "question" : "questions"}
-                          </span>
-                        )}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
           </div>
-        )}
-        <p className="mt-3 text-sm text-ink-soft">This reflects practice in {APP_NAME}, not a report-card mark. You decide proficiency.</p>
-        {students.length > 0 && assignments.length > 0 && (
-          <button type="button" className={`${btn} mt-3 border border-line`} onClick={() => setPrintMode("summary")}>
-            Print class summary
-          </button>
-        )}
-      </section>
+        </section>
+      )}
 
-      <Insights data={data} label={label} />
-      <SendHome cls={cls} />
+      {tab === "live" && <LiveClass data={data} label={label} unitGroups={unitGroups([])} />}
+
+      {tab === "students" && (
+        <>
+          <section className="mt-4 rounded-2xl border border-line bg-white p-5">
+            <h2 className="text-xl font-bold">Class code</h2>
+            <p className="mt-1 font-mono text-4xl font-bold tracking-widest" aria-label={`Class code ${cls.joinCode.split("").join(" ")}`}>
+              {cls.joinCode}
+            </p>
+            <p className="mt-1 font-read text-ink-soft">
+              Share this with families. A parent enters it under Children in the parent area, so they choose what to share. You will only see first names, grade and practice results for the units you assign.
+            </p>
+            {isOwner && (
+              <>
+                <button type="button" className="mt-3 rounded-xl border border-line px-4 py-2 font-semibold" onClick={() => change(`/api/classes/?id=${encodeURIComponent(id)}`, "PATCH")}>
+                  Get a new code
+                </button>
+                <p className="mt-1 text-sm text-ink-soft">If the code was shared too widely. Families already linked stay linked; the old code stops working.</p>
+              </>
+            )}
+          </section>
+          <Roster
+            data={data}
+            onChange={change}
+            onBulk={bulk}
+            onPrint={(ids) => {
+              setPrintOnly(ids);
+              setPrintMode("cards");
+            }}
+          />
+          <SendHome cls={cls} />
+        </>
+      )}
+
+      {tab === "settings" && (
+        <>
+          {isOwner && (
+            <section className="mt-4 rounded-2xl border border-line bg-white p-5">
+              <h2 className="text-xl font-bold">Class name</h2>
+              <form
+                className="mt-2 flex flex-wrap items-end gap-3"
+                onSubmit={async (e) => {
+                  e.preventDefault();
+                  if (await change(`/api/classes/?id=${encodeURIComponent(id)}`, "PATCH", { name: nameDraft })) setNameDraft(null);
+                }}
+              >
+                <label className="flex flex-col text-sm font-semibold">
+                  Name
+                  <input className="mt-1 min-h-11 rounded-xl border border-line px-3" value={nameDraft ?? cls.name} maxLength={60} onChange={(e) => setNameDraft(e.target.value)} required />
+                </label>
+                <button disabled={nameDraft === null || nameDraft.trim() === cls.name} className={`${btn} bg-[#4f8ef7] text-[#0f172a] disabled:opacity-50`}>
+                  Save name
+                </button>
+              </form>
+            </section>
+          )}
+          <Team data={data} onChange={change} onLeave={leave} />
+          {isOwner && (
+            <section className="mt-4 rounded-2xl border border-line bg-white p-5">
+              <h2 className="text-xl font-bold">Start next school year</h2>
+              {nextGradeOf(cls) ? (
+                <>
+                  <p className="mt-1 font-read text-ink-soft">
+                    Moves this class up to {classGradeText(nextGradeOf(cls)!)}. The students you added keep their codes and their practice and move up a grade too. The homework assigned this year is cleared. Children their parents linked are unlinked, because a linked child keeps the grade their family chose; parents can link them again with the class code.
+                  </p>
+                  {confirmYear ? (
+                    <button
+                      type="button"
+                      className={`${btn} mt-3 border border-[#e57a12] text-nudge-dark`}
+                      onClick={async () => {
+                        if (await change(`/api/classes/?id=${encodeURIComponent(id)}`, "PATCH", { action: "next-year" })) setConfirmYear(false);
+                      }}
+                    >
+                      Yes, move {cls.name} up
+                    </button>
+                  ) : (
+                    <button type="button" className={`${btn} mt-3 border border-line`} onClick={() => setConfirmYear(true)}>
+                      Move up to {classGradeText(nextGradeOf(cls)!)}
+                    </button>
+                  )}
+                </>
+              ) : (
+                <p className="mt-1 font-read text-ink-soft">This class is already in the last grade, so there is no next grade to move up to.</p>
+              )}
+            </section>
+          )}
+          {isOwner && (
+            <section className="mt-4 rounded-2xl border border-line bg-white p-5">
+              <h2 className="text-xl font-bold">Close this class</h2>
+              <p className="mt-1 font-read text-ink-soft">Closing removes every link to students and all co-teachers straight away, and deletes the student accounts you added. Families keep their own data.</p>
+              {confirmClose ? (
+                <button type="button" className={`${btn} mt-3 border border-[#e57a12] text-nudge-dark`} onClick={() => void leave(`/api/classes/?id=${id}`)}>
+                  Yes, close {cls.name}
+                </button>
+              ) : (
+                <button type="button" className={`${btn} mt-3 border border-line`} onClick={() => setConfirmClose(true)}>
+                  Close class
+                </button>
+              )}
+            </section>
+          )}
+        </>
+      )}
 
       {err && (
         <p role="alert" className="mt-3 text-nudge-dark">
           {err}
         </p>
-      )}
-
-      {isOwner && (
-      <section className="mt-4 rounded-2xl border border-line bg-white p-5">
-        <h2 className="text-xl font-bold">Close this class</h2>
-        <p className="mt-1 font-read text-ink-soft">Closing removes every link to students and all co-teachers straight away, and deletes the student accounts you added. Families keep their own data.</p>
-        {confirmClose ? (
-          <button type="button" className={`${btn} mt-3 border border-[#e57a12] text-nudge-dark`} onClick={() => void leave(`/api/classes/?id=${id}`)}>
-            Yes, close {cls.name}
-          </button>
-        ) : (
-          <button type="button" className={`${btn} mt-3 border border-line`} onClick={() => setConfirmClose(true)}>
-            Close class
-          </button>
-        )}
-      </section>
       )}
       </div>
     </>
@@ -782,22 +1269,36 @@ function ClassPage({ id, onBack }: { id: string; onBack: () => void }) {
 
 export function TeacherApp() {
   const [signedIn, setSignedIn] = useState<boolean | null>(null);
-  const [classId, setClassId] = useState<string | null>(null);
+  const [account, setAccount] = useState<{ email?: string; verified?: boolean }>({});
+  const { path, query } = useRoute();
+  // #/class/{id}/{tab} opens a class on one tab; anything else is the class list.
+  const classId = path[0] === "class" && path[1] ? path[1] : null;
+  const tab = CLASS_TABS.find((t) => t.path === path[2])?.path ?? "progress";
 
   useEffect(() => {
     // A class student's login is not a teacher's: only a real account counts.
-    call<{ family?: { account?: { student?: boolean } } }>("/api/auth/me/")
-      .then((r) => setSignedIn(!r.family?.account?.student))
+    call<{ family?: { account?: { student?: boolean; email?: string; verified?: boolean } } }>("/api/auth/me/")
+      .then((r) => {
+        setAccount({ email: r.family?.account?.email, verified: r.family?.account?.verified });
+        setSignedIn(!r.family?.account?.student);
+      })
       .catch(() => setSignedIn(false));
   }, []);
 
   return (
     <div className="min-h-dvh bg-[#f6f5f1]">
       <SkipLink />
-      <header className="border-b border-line bg-white" style={{ paddingTop: "env(safe-area-inset-top)" }}>
+      <header className="sticky top-0 z-30 border-b border-line bg-white/90 backdrop-blur print:hidden" style={{ paddingTop: "env(safe-area-inset-top)" }}>
         <div className="mx-auto flex max-w-4xl items-center justify-between gap-2 px-4 py-3">
-          <span className="text-lg font-bold">
-            {APP_NAME} <span className="font-semibold text-ink-soft">for teachers</span>
+          <span className="flex items-center gap-2">
+            <Link href="/" className="text-2xl font-bold tracking-tight" aria-label={APP_NAME}>
+              {APP_NAME.split("").map((ch, i) => (
+                <span key={i} aria-hidden="true" style={{ color: WORDMARK_COLOURS[i % WORDMARK_COLOURS.length] }}>
+                  {ch}
+                </span>
+              ))}
+            </Link>
+            <span className="text-lg font-semibold text-ink-soft">for teachers</span>
           </span>
           <div className="flex items-center gap-3">
             <Link href="/" className="font-semibold underline">Home</Link>
@@ -805,16 +1306,54 @@ export function TeacherApp() {
               <button
                 type="button"
                 className="font-semibold underline"
-                onClick={() => call("/api/auth/logout/", "POST").finally(() => { setSignedIn(false); setClassId(null); })}
+                onClick={() => call("/api/auth/logout/", "POST").finally(() => { setSignedIn(false); go("/"); })}
               >
                 Sign out
               </button>
             )}
           </div>
         </div>
+        {signedIn && classId && (
+          <nav className="mx-auto max-w-4xl overflow-x-auto px-2" aria-label="Class sections">
+            <ul className="flex gap-1 pb-2">
+              <li>
+                <a href="#/" className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-semibold whitespace-nowrap text-ink-soft hover:bg-black/5">
+                  ← All classes
+                </a>
+              </li>
+              {CLASS_TABS.map((t) => (
+                <li key={t.path}>
+                  <a
+                    href={classHref(classId, t.path)}
+                    aria-current={tab === t.path ? "page" : undefined}
+                    // On a phone the tabs scroll sideways: keep the open one in view.
+                    ref={tab === t.path ? (el) => el?.scrollIntoView?.({ block: "nearest", inline: "nearest" }) : undefined}
+                    className={`flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-semibold whitespace-nowrap ${tab === t.path ? "bg-[#253047] text-white" : "text-ink-soft hover:bg-black/5"}`}
+                  >
+                    <span aria-hidden="true">{t.icon}</span> {t.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
       </header>
       <main id={MAIN_ID} tabIndex={-1} className="mx-auto max-w-4xl px-4 py-6">
-        {signedIn === null ? <p className="font-read">Loading…</p> : !signedIn ? <AuthForm onDone={() => setSignedIn(true)} /> : classId ? <ClassPage id={classId} onBack={() => setClassId(null)} /> : <ClassList onOpen={setClassId} />}
+        {signedIn === null ? (
+          <p className="font-read">Loading…</p>
+        ) : !signedIn ? (
+          <AuthForm onDone={() => {
+            // Re-read the account: whether its email is confirmed decides if a class can be created.
+            call<{ family?: { account?: { email?: string; verified?: boolean } } }>("/api/auth/me/")
+              .then((r) => setAccount({ email: r.family?.account?.email, verified: r.family?.account?.verified }))
+              .catch(() => undefined)
+              .finally(() => setSignedIn(true));
+          }} />
+        ) : classId ? (
+          <ClassPage key={classId} id={classId} tab={tab} preselect={query.get("students")?.split(",").filter(Boolean)} onBack={() => go("/")} />
+        ) : (
+          <ClassList account={account} onOpen={(id) => go(`/class/${encodeURIComponent(id)}`)} />
+        )}
       </main>
     </div>
   );

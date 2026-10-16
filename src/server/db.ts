@@ -121,6 +121,14 @@ const SCHEMA = [
     created_at INTEGER NOT NULL,
     PRIMARY KEY (class_id, unit_key)
   )`,
+  // Who an assigned unit is for, when the teacher picked students. No rows for a unit means the whole class.
+  `CREATE TABLE IF NOT EXISTS class_assignment_students (
+    class_id TEXT NOT NULL,
+    unit_key TEXT NOT NULL,
+    profile_id TEXT NOT NULL,
+    PRIMARY KEY (class_id, unit_key, profile_id)
+  )`,
+  `CREATE INDEX IF NOT EXISTS class_assignment_students_profile ON class_assignment_students (profile_id)`,
   // Students a teacher added to a class. Each one has their own hidden family record (a profile
   // and its events), owned by the class: it is deleted when the student is removed or the class closes.
   `CREATE TABLE IF NOT EXISTS students (
@@ -376,7 +384,11 @@ const CLASS_COLUMNS: [string, string][] = [
   ["framework", "TEXT NOT NULL DEFAULT 'ca-bc'"],
   ["last_activity_at", "INTEGER NOT NULL DEFAULT 0"],
   ["inactive_warning_at", "INTEGER"],
+  // A split class has a second grade (adjacent to `grade`). NULL for a single-grade class.
+  ["grade2", "TEXT"],
 ];
+// The grade a student is in, for a class with two grades. NULL means the class's own grade.
+const MEMBER_COLUMNS: [string, string][] = [["grade", "TEXT"]];
 /** A due date a teacher can set on an assigned unit (ms since epoch). */
 // `goal`: how many questions the teacher asked for (homework); NULL means "until Proficient".
 const ASSIGNMENT_COLUMNS: [string, string][] = [["due_at", "INTEGER"], ["goal", "INTEGER"]];
@@ -439,6 +451,7 @@ async function migrate(c: Client) {
   // Existing classes start their inactivity period from creation until a later sign-in.
   await c.execute("UPDATE classes SET last_activity_at = created_at WHERE last_activity_at = 0");
   await addColumns(c, "class_assignments", ASSIGNMENT_COLUMNS);
+  await addColumns(c, "class_members", MEMBER_COLUMNS);
   const have = new Set((await c.execute("PRAGMA table_info(parents)")).rows.map((r) => String(r.name)));
   for (const [name, type] of PARENT_COLUMNS) {
     if (!have.has(name)) await c.execute(`ALTER TABLE parents ADD COLUMN ${name} ${type}`);

@@ -62,7 +62,7 @@ export interface StudentCode {
 }
 
 /** Adds students to a class. Returns the ones created, each with the code they sign in with. */
-export async function addStudents(cls: ClassRow, names: string[]): Promise<StudentCode[]> {
+export async function addStudents(cls: ClassRow, names: string[], grade: Profile["grade"] = cls.grade): Promise<StudentCode[]> {
   const have = Number((await query<{ n: number }>("SELECT COUNT(*) AS n FROM class_members WHERE class_id = ?", [cls.id]))[0].n);
   const room = Math.max(0, MAX_STUDENTS - have);
   const take = names.slice(0, room);
@@ -81,7 +81,7 @@ export async function addStudents(cls: ClassRow, names: string[]): Promise<Stude
       name,
       avatar: AVATARS[(have + i) % AVATARS.length],
       colour: COLOURS[(have + i) % COLOURS.length],
-      grade: cls.grade,
+      grade,
       framework: cls.framework,
       companion: STARTER.companion,
       title: STARTER.title,
@@ -89,7 +89,7 @@ export async function addStudents(cls: ClassRow, names: string[]): Promise<Stude
       createdAt: now,
       updatedAt: now,
     };
-    const settings = { ...defaultChildSettings(profileId, ageBandFor(cls.grade) === "little", cls.grade), updatedAt: now };
+    const settings = { ...defaultChildSettings(profileId, ageBandFor(grade) === "little", grade), updatedAt: now };
     statements.push(
       // The school covers the plan: a student never meets a paywall.
       { sql: "INSERT INTO families (id, created_at, trial_ends_at, plan, updated_at) VALUES (?, ?, ?, 'premium', ?)", args: [familyId, now, now, now] },
@@ -97,7 +97,7 @@ export async function addStudents(cls: ClassRow, names: string[]): Promise<Stude
       { sql: "INSERT INTO parents (id, family_id, email, password_hash, created_at, role) VALUES (?, ?, ?, '!', ?, 'student')", args: [parentId, familyId, `student-${id}@students.invalid`, now] },
       { sql: "INSERT INTO profiles (id, family_id, data, updated_at) VALUES (?, ?, ?, ?)", args: [profileId, familyId, JSON.stringify(profile), now] },
       { sql: "INSERT INTO child_settings (profile_id, family_id, data, updated_at) VALUES (?, ?, ?, ?)", args: [profileId, familyId, JSON.stringify(settings), now] },
-      { sql: "INSERT INTO class_members (class_id, profile_id, family_id, joined_at) VALUES (?, ?, ?, ?)", args: [cls.id, profileId, familyId, now] },
+      { sql: "INSERT INTO class_members (class_id, profile_id, family_id, joined_at, grade) VALUES (?, ?, ?, ?, ?)", args: [cls.id, profileId, familyId, now, grade] },
       { sql: "INSERT INTO students (id, class_id, family_id, parent_id, profile_id, login_code, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)", args: [id, cls.id, familyId, parentId, profileId, code, now] },
     );
     created.push({ id, profileId, name, loginCode: code });
@@ -121,6 +121,7 @@ function eraseStatements(s: StudentRecord) {
     { sql: "DELETE FROM profiles WHERE family_id = ?", args: [s.family_id] },
     { sql: "DELETE FROM report_shares WHERE family_id = ?", args: [s.family_id] },
     { sql: "DELETE FROM class_members WHERE family_id = ?", args: [s.family_id] },
+    { sql: "DELETE FROM class_assignment_students WHERE profile_id = ?", args: [s.profile_id] },
     { sql: "DELETE FROM live_answers WHERE family_id = ?", args: [s.family_id] },
     { sql: "DELETE FROM sessions WHERE family_id = ?", args: [s.family_id] },
     { sql: "DELETE FROM parents WHERE id = ?", args: [s.parent_id] },
@@ -166,6 +167,7 @@ export async function deleteInactiveClass(classId: string, cutoff: number, warni
     { sql: "DELETE FROM students WHERE class_id = ? AND " + predicate, args: args([classId]) },
     { sql: "DELETE FROM class_members WHERE class_id = ? AND " + predicate, args: args([classId]) },
     { sql: "DELETE FROM class_assignments WHERE class_id = ? AND " + predicate, args: args([classId]) },
+    { sql: "DELETE FROM class_assignment_students WHERE class_id = ? AND " + predicate, args: args([classId]) },
     { sql: "DELETE FROM live_answers WHERE question_id IN (SELECT id FROM live_questions WHERE class_id = ?) AND " + predicate, args: args([classId]) },
     { sql: "DELETE FROM live_questions WHERE class_id = ? AND " + predicate, args: args([classId]) },
     { sql: "DELETE FROM class_teachers WHERE class_id = ? AND " + predicate, args: args([classId]) },

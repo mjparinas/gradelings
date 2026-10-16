@@ -3,6 +3,8 @@ import { render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { US_CLASS_CONSENT } from "@/lib/classroom";
+import { byCountry, regionSummary } from "@/components/site/provinces";
+import { TEACHER_FRAMEWORKS, teacherPath } from "@/components/site/teachers";
 import CurriculumIndex from "./curriculum/page";
 import CurriculumFramework from "./curriculum/[framework]/page";
 import TeachersHub from "./for-teachers/page";
@@ -62,5 +64,20 @@ describe("top landing pages", () => {
     expect(qs).toContain("Can I share a class with another teacher?");
     expect(qs).toContain("Do US schools need parent consent?");
     expect(container.textContent).toContain(US_CLASS_CONSENT);
+    expect(qs).toContain("Can I ask the whole class a question at once?");
+  });
+
+  it("teacher hub: a short region summary and curriculum links grouped by country", () => {
+    const { container } = render(<TeachersHub />);
+    const intro = container.querySelector("h1 + p")?.textContent ?? "";
+    expect(intro).toContain(regionSummary(TEACHER_FRAMEWORKS));
+    // The intro no longer names every province and state one by one.
+    expect(TEACHER_FRAMEWORKS.filter((f) => intro.includes(f.region)).length).toBeLessThan(5);
+    const section = screen.getByRole("heading", { name: "Find your curriculum" }).closest("section")!;
+    for (const g of byCountry(TEACHER_FRAMEWORKS)) {
+      const list = within(section).getByRole("heading", { name: g.heading }).nextElementSibling as HTMLElement;
+      expect(within(list).getAllByRole("link").map((a) => a.getAttribute("href"))).toEqual(g.frameworks.map((f) => teacherPath.framework(f)));
+    }
+    expect(screen.queryByText(/^See .* units$/)).toBeNull();
   });
 });
