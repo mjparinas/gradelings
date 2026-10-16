@@ -1513,6 +1513,16 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
   );
 }
 
+/** Scrolls the tab strip sideways just far enough to show the open tab. */
+function keepTabInView(el: HTMLElement | null) {
+  const strip = el?.closest("nav");
+  if (!el || !strip) return;
+  const left = el.getBoundingClientRect().left - strip.getBoundingClientRect().left;
+  const right = left + el.offsetWidth;
+  if (left < 0) strip.scrollLeft += left;
+  else if (right > strip.clientWidth) strip.scrollLeft += right - strip.clientWidth;
+}
+
 export function TeacherApp() {
   const [signedIn, setSignedIn] = useState<boolean | null>(null);
   const [account, setAccount] = useState<{ email?: string; verified?: boolean }>({});
@@ -1582,8 +1592,9 @@ export function TeacherApp() {
                   <a
                     href={classHref(classId, t.path)}
                     aria-current={tab === t.path ? "page" : undefined}
-                    // On a phone the tabs scroll sideways: keep the open one in view.
-                    ref={tab === t.path ? (el) => el?.scrollIntoView?.({ block: "nearest", inline: "nearest" }) : undefined}
+                    // On a phone the tabs scroll sideways: keep the open one in view. This moves the strip itself, because
+                    // scrollIntoView makes the next Tab press start from this link and skip the skip link.
+                    ref={tab === t.path ? keepTabInView : undefined}
                     className={`flex items-center gap-1.5 min-h-11 rounded-xl px-3 py-2 text-sm font-semibold whitespace-nowrap ${tab === t.path ? "bg-[#253047] text-white" : "text-ink-soft hover:bg-black/5"}`}
                   >
                     <span aria-hidden="true">{t.icon}</span> {t.label}
