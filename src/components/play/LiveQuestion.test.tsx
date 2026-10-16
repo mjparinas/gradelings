@@ -2,11 +2,13 @@
 import { act, fireEvent, render, renderHook, screen } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-const h = vi.hoisted(() => ({ classwork: [] as { profileId: string }[] }));
+const h = vi.hoisted(() => ({ classwork: [] as { profileId: string }[], autoRead: false, spoken: [] as string[] }));
+vi.mock("@/lib/readaloud", () => ({ speakQuestion: (q: { prompt: string }) => h.spoken.push(q.prompt) }));
 
 vi.mock("@/lib/store", () => ({
   useActiveProfile: () => ({ id: "p1" }),
   useStore: (select: (s: unknown) => unknown) => select({ classwork: h.classwork }),
+  useChildSettings: () => ({ autoRead: h.autoRead }),
 }));
 vi.mock("@/lib/say", () => ({ useChildSay: () => (t: string) => t }));
 vi.mock("../visuals", () => ({ Coin: () => null, Shape: () => null, QuestionVisual: () => null }));
@@ -98,5 +100,44 @@ describe("useLiveQuestion", () => {
     expect(card).toHaveTextContent("Good try! The answer is 30.");
     expect(card).toHaveTextContent("Count the tens.");
     expect(screen.getAllByTestId("live-choice").every((b) => (b as HTMLButtonElement).disabled)).toBe(true);
+  });
+});
+
+describe("read aloud on a live question", () => {
+  function Probe() {
+    return <LiveQuestionCard state={useLiveQuestion()} />;
+  }
+  const withFlag = (readAloud?: boolean) => ({ ...question, question: { ...question.question, ...(readAloud === undefined ? {} : { readAloud }) } });
+  beforeEach(() => {
+    h.classwork = [{ profileId: "p1" }];
+    h.spoken = [];
+    h.autoRead = false;
+  });
+
+  it("reads the question as it opens for a child with read-aloud on, once, however often the poll brings it back", async () => {
+    h.autoRead = true;
+    fetchMock.mockImplementation(() => respond({ live: withFlag() }));
+    render(<Probe />);
+    await act(() => vi.advanceTimersByTimeAsync(0));
+    await act(() => vi.advanceTimersByTimeAsync(10_000));
+    expect(h.spoken).toEqual(["What is 2 + 2?"]);
+  });
+
+  it("stays quiet unless the child asked for it, but a tap on the speaker reads it", async () => {
+    fetchMock.mockImplementation(() => respond({ live: withFlag(true) }));
+    render(<Probe />);
+    await act(() => vi.advanceTimersByTimeAsync(0));
+    expect(h.spoken).toEqual([]);
+    fireEvent.click(screen.getByRole("button", { name: "Read it to me" }));
+    expect(h.spoken).toEqual(["What is 2 + 2?"]);
+  });
+
+  it("is silent, with no speaker, when the teacher turned read-aloud off", async () => {
+    h.autoRead = true;
+    fetchMock.mockImplementation(() => respond({ live: withFlag(false) }));
+    render(<Probe />);
+    await act(() => vi.advanceTimersByTimeAsync(0));
+    expect(h.spoken).toEqual([]);
+    expect(screen.queryByRole("button", { name: "Read it to me" })).not.toBeInTheDocument();
   });
 });

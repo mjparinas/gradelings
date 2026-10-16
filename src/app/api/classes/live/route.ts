@@ -1,7 +1,7 @@
 import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
 import { classGrades, teachingClass, validUnit } from "@/server/classroom";
 import { isFlagOn } from "@/server/flags";
-import { endLive, liveAnswers, openLive, recentLive, revealLive, startLive, type LiveRow } from "@/server/live";
+import { endLive, liveAnswers, openLive, recentLive, revealLive, setLiveReadAloud, startLive, type LiveRow } from "@/server/live";
 import type { LiveForTeacher, LiveQuestionData } from "@/lib/live";
 
 // Live questions, from the teacher's side. The owner and co-teachers can all ask them.
@@ -37,26 +37,34 @@ export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req);
   if (!session) return error(401, "Not signed in");
-  const body = (await req.json().catch(() => null)) as { classId?: unknown; unitKey?: unknown } | null;
+  const body = (await req.json().catch(() => null)) as { classId?: unknown; unitKey?: unknown; readAloud?: unknown } | null;
   const found = typeof body?.classId === "string" ? await teachingClass(body.classId, session.parentId) : undefined;
   if (!found) return error(404, "Class not found");
   if (!(await isFlagOn("live-questions", session.familyId))) return error(503, "Live questions are switched off just now. Homework and practice still work.");
   if (await rateLimited(`live:${session.parentId}`, 120, 60 * 60_000)) return error(429, "That's a lot of live questions. Try again in a little while.");
   const key = typeof body?.unitKey === "string" ? body.unitKey : "";
   if (!(await validUnit(key, classGrades(found.cls), found.cls.framework))) return error(400, "That unit isn’t part of this class’s grade.");
-  const row = await startLive(found.cls, key, session.parentId);
+  const row = await startLive(found.cls, key, session.parentId, Date.now(), { readAloud: body?.readAloud !== false });
   if (!row) return error(400, "This unit’s questions are typed or built rather than tapped, so pick another unit for a live question.");
   return json({ live: await view(row) });
 }
 
-/** Shows the answer to the class (`{ classId, action: "reveal" }`). The question then takes no more answers. */
+/**
+ * `{ classId, action: "reveal" }` shows the answer to the class (the question then takes no more answers).
+ * `{ classId, action: "read-aloud", on }` lets students hear the open question read aloud, or not.
+ */
 export async function PATCH(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req);
   if (!session) return error(401, "Not signed in");
-  const body = (await req.json().catch(() => null)) as { classId?: unknown; action?: unknown } | null;
+  const body = (await req.json().catch(() => null)) as { classId?: unknown; action?: unknown; on?: unknown } | null;
   const found = typeof body?.classId === "string" ? await teachingClass(body.classId, session.parentId) : undefined;
   if (!found) return error(404, "Class not found");
+  if (body?.action === "read-aloud") {
+    if (typeof body.on !== "boolean") return error(400, "Say whether to read the question aloud.");
+    await setLiveReadAloud(found.cls.id, body.on);
+    return json({ live: await view(await openLive(found.cls.id)) });
+  }
   if (body?.action !== "reveal") return error(400, "Unknown action.");
   await revealLive(found.cls.id);
   return json({ live: await view(await openLive(found.cls.id)) });

@@ -4,7 +4,9 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { choiceIndexForKey, shortcutBlocked } from "@/lib/keys";
 import { LIVE_POLL_IDLE_MS, LIVE_POLL_OPEN_MS, type LiveForChild } from "@/lib/live";
 import { useChildSay } from "@/lib/say";
-import { useActiveProfile, useStore } from "@/lib/store";
+import { speakQuestion } from "@/lib/readaloud";
+import { useActiveProfile, useChildSettings, useStore } from "@/lib/store";
+import type { ChoiceQuestion } from "@/content/types";
 import { Coin, QuestionVisual, Shape } from "../visuals";
 
 // A question the child's teacher is asking the class right now. It needs a connection: the device
@@ -19,6 +21,11 @@ export interface LiveState {
   /** Something went wrong sending the answer. */
   note: string;
   answer: (choice: string) => void;
+}
+
+/** The live question in the shape read-aloud expects. Read-aloud never uses the answer or hint. */
+function readableQuestion(q: LiveForChild["question"]): ChoiceQuestion {
+  return { kind: "choice", hint: "", answer: "", ...q };
 }
 
 export function useLiveQuestion(): LiveState {
@@ -131,6 +138,17 @@ function Takeover({ state, live }: { state: LiveState; live: LiveForChild }) {
   const tiles = q.choices.some((c) => c.emoji || c.shape || c.coin);
   const closed = Boolean(live.mine) || revealed;
   const box = useRef<HTMLDivElement>(null);
+  // The teacher decides whether the question can be read aloud (a room of voices can be too much). When it can, a child
+  // whose own setting is "read questions out loud" hears it as it opens, and any child can tap 🔊.
+  const settings = useChildSettings();
+  const canHear = q.readAloud !== false;
+  const autoRead = Boolean(settings?.autoRead);
+  const asked = live.id;
+  useEffect(() => {
+    if (canHear && autoRead) speakQuestion(readableQuestion(q));
+    // Only when a new question opens, not each time the poll brings the same one back.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [asked, canHear, autoRead]);
   // Number keys pick a choice, like in a lesson.
   useEffect(() => {
     if (closed) return;
@@ -154,6 +172,11 @@ function Takeover({ state, live }: { state: LiveState; live: LiveForChild }) {
         <span>📣 Live question</span>
         <span className="text-sm font-semibold text-ink-soft">{live.className}</span>
       </h2>
+      {canHear && (
+        <button type="button" className="btn btn-soft mb-2 h-14 w-14 text-2xl" aria-label="Read it to me" onClick={() => speakQuestion(readableQuestion(q))}>
+          🔊
+        </button>
+      )}
       <p lang={q.lang} className="font-read text-xl font-bold sm:text-2xl">
         {q.prompt}
       </p>
