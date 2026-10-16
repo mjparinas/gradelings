@@ -293,6 +293,38 @@
   animation: float-up 0.9s cubic-bezier(0.2, 0.9, 0.3, 1) forwards;
 }
 
+/* Main-menu links (NavLink.tsx): a thin bar under the label while the page is still on its way. It waits a
+   moment, so a page that is already prefetched never flashes it; with reduced motion it simply shows. */
+.nav-pending {
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0;
+  height: 2px;
+  border-radius: 1px;
+  background: currentColor;
+  opacity: 0;
+  pointer-events: none;
+}
+.nav-pending[data-pending] {
+  opacity: 1;
+  animation: nav-pending 0.9s ease-in-out 0.12s infinite both;
+}
+@keyframes nav-pending {
+  0% {
+    opacity: 0;
+    transform: scaleX(0.2);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  100% {
+    opacity: 0.35;
+    transform: scaleX(0.6);
+  }
+}
+
 /* The same rules apply when a parent turns on calm motion for a child. */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -414,6 +446,10 @@ main[tabindex="-1"]:focus {
   }
   .switch-track {
     border: 2px solid ButtonText;
+  }
+  .nav-pending {
+    forced-color-adjust: none;
+    background: LinkText;
   }
   .switch-knob {
     forced-color-adjust: none;

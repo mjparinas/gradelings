@@ -5,6 +5,7 @@ import { APP_NAME, LEGAL_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { SUBSCRIBE_HREF, TRIAL_DAYS } from "@/lib/plan";
 import { teacherPath, TEACHER_SIGNUP } from "./teachers";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
+import { NavLink } from "./NavLink";
 import { PromoBanner } from "./PromoBanner";
 import { RefCapture } from "./ShareButton";
 import { byCountry, regionList } from "./provinces";
@@ -14,29 +15,29 @@ export function SiteHeader({ play = "/play/" }: { play?: string }) {
   return (
     <header className="print:hidden sticky top-0 z-30 border-b border-line bg-paper/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
-        <Link href="/" className="text-2xl font-bold tracking-tight" aria-label={APP_NAME}>
+        <NavLink href="/" className="text-2xl font-bold tracking-tight" label={APP_NAME}>
           {APP_NAME.split("").map((ch, i) => (
             <span key={i} aria-hidden="true" style={{ color: WORDMARK_COLOURS[i % WORDMARK_COLOURS.length] }}>
               {ch}
             </span>
           ))}
-        </Link>
+        </NavLink>
         <nav aria-label="Main" className="flex items-center gap-1 text-sm font-semibold sm:gap-3 sm:text-base">
-          <Link href="/curriculum/" className="rounded-lg px-2 py-1 hover:bg-black/5">
+          <NavLink href="/curriculum/" className="rounded-lg px-2 py-1 hover:bg-black/5">
             Curriculum
-          </Link>
-          <Link href="/report-cards/" className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
+          </NavLink>
+          <NavLink href="/report-cards/" className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
             Report cards
-          </Link>
+          </NavLink>
           <Link prefetch={false} href="/parents/" className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
             Parents
           </Link>
-          <Link href={teacherPath.hub()} className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
+          <NavLink href={teacherPath.hub()} className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
             Teachers
-          </Link>
-          <Link href="/about/" className="hidden rounded-lg px-2 py-1 hover:bg-black/5 lg:inline">
+          </NavLink>
+          <NavLink href="/about/" className="hidden rounded-lg px-2 py-1 hover:bg-black/5 lg:inline">
             About
-          </Link>
+          </NavLink>
           <a href={SUBSCRIBE_HREF} className="hidden rounded-lg px-2 py-1 font-bold hover:bg-black/5 lg:inline">
             Subscribe
           </a>

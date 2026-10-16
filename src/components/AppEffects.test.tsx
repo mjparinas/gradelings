@@ -7,7 +7,7 @@ vi.mock("@/lib/juice", () => ({ replay: mocks.replay, warmConfetti: mocks.warmCo
 vi.mock("@/lib/offline", () => ({ cacheLoadedScripts: mocks.cacheLoadedScripts }));
 vi.mock("@/lib/sound", () => ({ sounds: { tap: mocks.tap } }));
 
-import { AppEffects } from "./AppEffects";
+import { AppEffects, SW_DELAY_MS } from "./AppEffects";
 
 function page(html: string) {
   document.body.innerHTML = html;
@@ -84,14 +84,50 @@ describe("AppEffects", () => {
     unmount();
 
     vi.stubEnv("NODE_ENV", "production");
+    window.history.replaceState(null, "", "/play/");
     render(<AppEffects />);
     expect(register).toHaveBeenCalledWith("/sw.js");
     expect(addEventListener).toHaveBeenCalledWith("controllerchange", mocks.cacheLoadedScripts);
     expect(mocks.cacheLoadedScripts).toHaveBeenCalledOnce();
   });
 
+  it("waits until a public page has settled before installing the service worker", () => {
+    vi.useFakeTimers();
+    try {
+      vi.stubEnv("NODE_ENV", "production");
+      const register = vi.fn().mockResolvedValue(undefined);
+      Object.defineProperty(navigator, "serviceWorker", { configurable: true, value: { register, addEventListener: vi.fn() } });
+      window.history.replaceState(null, "", "/curriculum/");
+      render(<AppEffects />);
+      // The worker downloads both apps, so it waits while the visitor's next pages are prefetched.
+      expect(register).not.toHaveBeenCalled();
+      vi.advanceTimersByTime(SW_DELAY_MS - 1);
+      expect(register).not.toHaveBeenCalled();
+      vi.advanceTimersByTime(SW_DELAY_MS + 1);
+      expect(register).toHaveBeenCalledWith("/sw.js");
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it("doesn't install the worker from a public page that is left before it settles", () => {
+    vi.useFakeTimers();
+    try {
+      vi.stubEnv("NODE_ENV", "production");
+      const register = vi.fn().mockResolvedValue(undefined);
+      Object.defineProperty(navigator, "serviceWorker", { configurable: true, value: { register, addEventListener: vi.fn() } });
+      const { unmount } = render(<AppEffects />);
+      unmount();
+      vi.advanceTimersByTime(SW_DELAY_MS * 3);
+      expect(register).not.toHaveBeenCalled();
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
   it("carries on when the service worker can't register", async () => {
     vi.stubEnv("NODE_ENV", "production");
+    window.history.replaceState(null, "", "/play/");
     const register = vi.fn().mockRejectedValue(new Error("blocked"));
     Object.defineProperty(navigator, "serviceWorker", { configurable: true, value: { register, addEventListener: vi.fn() } });
     render(<AppEffects />);
