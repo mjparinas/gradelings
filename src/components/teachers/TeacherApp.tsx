@@ -1701,8 +1701,8 @@ export function TeacherApp() {
             </Link>
             <span className="text-lg font-semibold text-ink-soft">for teachers</span>
           </span>
-          <div className="flex items-center gap-3">
-            <Link href="/" className="inline-flex min-h-11 items-center font-semibold underline">Home</Link>
+          <div className="flex flex-wrap items-center gap-x-3">
+            <Link href="/" className="inline-flex min-h-11 min-w-11 items-center font-semibold underline">Home</Link>
             {signedIn && (
               <a href="#/account" aria-current={onAccount ? "page" : undefined} className="inline-flex min-h-11 items-center font-semibold underline">
                 Account
@@ -1711,7 +1711,7 @@ export function TeacherApp() {
             {signedIn && (
               <button
                 type="button"
-                className="min-h-11 font-semibold underline"
+                className="inline-flex min-h-11 items-center whitespace-nowrap font-semibold underline"
                 onClick={() => call("/api/auth/logout/", "POST").finally(() => { setSignedIn(false); go("/"); })}
               >
                 Sign out
