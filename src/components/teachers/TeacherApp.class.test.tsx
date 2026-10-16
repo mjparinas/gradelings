@@ -359,6 +359,24 @@ describe("TeacherApp class page", () => {
     await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/", "POST", { classId: "class-1", names: ["Jo"], grade: "4" }));
   });
 
+  it("shows how many are done on each homework unit, who is behind, and what is past due", async () => {
+    const goal = { "3/math/counting": 10 };
+    const students = detail.students.map((st, i) => ({ ...st, units: st.units.map((u) => ({ ...u, done: u.key === "3/math/counting" ? [4, 10, 0][i] : 0 })) }));
+    serve({ ...detail, goal, due: { "3/math/counting": now - DAY, "3/math/patterns": now + 5 * DAY }, students });
+    const user = await openClass();
+    // The progress table flags the students who are past due and not done.
+    const table = screen.getAllByRole("table")[0];
+    expect(within(within(table).getByRole("rowheader", { name: /^Maya/ }).parentElement!).getAllByText("Past due")).toHaveLength(1);
+    expect(within(within(table).getByRole("rowheader", { name: /^Sam/ }).parentElement!).queryByText("Past due")).not.toBeInTheDocument();
+    await openTab(user, "Homework");
+    expect(screen.getByRole("status")).toHaveTextContent("1 unit is past due with students still to finish.");
+    expect(screen.getByText("1 of 3 done · past due")).toBeInTheDocument();
+    expect(screen.getByText(/Still to finish: Maya, Alex/)).toBeInTheDocument();
+    // Patterns has no number of questions: done at Proficient (Maya and Alex), not yet due.
+    expect(screen.getByText("2 of 3 done")).toBeInTheDocument();
+    expect(screen.getByText(/Still to finish: Sam$/)).toBeInTheDocument();
+  });
+
   it("cancels a pending co-teacher invitation", async () => {
     serve({ ...detail, role: "owner", teachers: [{ id: "o", email: "owner@example.com", role: "owner" }], invites: [{ email: "wait@example.com", createdAt: 1 }] });
     const user = await openClass();

@@ -182,3 +182,33 @@ export function classInsights(students: StudentRow[], assignments: string[], uni
   }
   return { units, focusUnits, checkIn };
 }
+
+// ---------- Homework overview ----------
+
+/** A student counts as done with a unit once they've answered the number of questions asked, or, with none asked, reached Proficient (level 2). */
+export function isHomeworkDone(unit: StudentRow["units"][number], goal?: number): boolean {
+  return goal ? (unit.done ?? 0) >= goal : unit.level >= 2;
+}
+
+export interface HomeworkStatus {
+  key: string;
+  /** Students the unit is for. */
+  assigned: number;
+  done: number;
+  /** Names of students it is for who haven't finished it. */
+  behind: string[];
+  /** Past the due date with some students still to finish. */
+  overdue: boolean;
+}
+
+/** For each assigned unit: how many students are done, who isn't, and whether it is past due. Practice only, never a mark. */
+export function homeworkOverview(students: StudentRow[], assignments: string[], due: Record<string, number>, goal: Record<string, number>, now = Date.now()): HomeworkStatus[] {
+  return assignments.map((key) => {
+    const mine = students.filter((s) => s.units.find((u) => u.key === key)?.assigned !== false);
+    const behind = mine.filter((s) => {
+      const u = s.units.find((x) => x.key === key);
+      return !u || !isHomeworkDone(u, goal[key]);
+    });
+    return { key, assigned: mine.length, done: mine.length - behind.length, behind: behind.map((s) => s.name), overdue: Boolean(due[key] && due[key] < now && behind.length > 0) };
+  });
+}
