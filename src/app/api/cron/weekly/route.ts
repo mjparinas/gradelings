@@ -9,6 +9,7 @@ import { runAutomations } from "@/server/automations";
 import { sendConsentFollowUps } from "@/server/consent";
 import { trackJob } from "@/server/monitor";
 import { deleteInactiveClass } from "@/server/students";
+import { pruneLive } from "@/server/live";
 
 // Runs once a day (see vercel.json). Vercel sends `Authorization: Bearer $CRON_SECRET`.
 // Every day: a one-time trial recap 4 to 10 days before the trial ends, and a "trial ends soon" notice to confirmed parents, once. On Sundays: the weekly report
@@ -85,6 +86,9 @@ async function daily(req: Request): Promise<Response> {
       result.inactiveClassesDeleted++;
     }
   }
+
+  // Live class questions and their answers are kept for a day at most.
+  await pruneLive(now);
 
   // What each child did during the trial (first name and totals only).
   const trialChildren = async (familyId: string): Promise<TrialChild[]> => {

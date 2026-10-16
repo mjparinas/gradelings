@@ -5,7 +5,8 @@ import { FRAMEWORKS } from "@/content/frameworks";
 import type { FrameworkId, GradeId } from "@/content/types";
 import { unitLevel } from "@/lib/proficiency";
 import { batch, query, run } from "./db";
-import { loadChildReport } from "./reportData";
+import { homeworkDone } from "@/lib/classroom";
+import { loadChildData } from "./reportData";
 
 // Classroom mode. A teacher owns a class and shares its join code. A parent chooses to link a
 // child with that code (and can unlink at any time). The teacher then sees that child's first name,
@@ -146,6 +147,23 @@ export interface Classwork {
   unitKeys: string[];
   /** Due dates the teacher set (ms since epoch), by unit key. Units without one are not listed. */
   due: Record<string, number>;
+  /** Homework question counts, by unit key. Units without one are not listed. */
+  goal: Record<string, number>;
+  /** When each unit was assigned (ms since epoch), by unit key. */
+  since: Record<string, number>;
+}
+
+/** Homework question counts a teacher set on this class's assigned units. */
+export async function assignmentGoals(classId: string): Promise<Record<string, number>> {
+  const rows = await query<{ unit_key: string; goal: number | null }>("SELECT unit_key, goal FROM class_assignments WHERE class_id = ? AND goal IS NOT NULL", [classId]);
+  return Object.fromEntries(rows.map((r) => [r.unit_key, Number(r.goal)]));
+}
+
+/** A homework question count from the browser: 1 to 50, or null for none (done at Proficient). */
+export function cleanGoal(v: unknown): number | null | undefined {
+  if (v === null) return null;
+  if (typeof v !== "number" || !Number.isInteger(v)) return undefined;
+  return v >= 1 && v <= 50 ? v : undefined;
 }
 
 /** Due dates a teacher set on this class's assigned units. */
@@ -163,8 +181,8 @@ export function cleanDueAt(v: unknown, now = Date.now()): number | null | undefi
 
 /** What each of a family's linked children has been assigned. Sent only to that family's own devices. */
 export async function familyClasswork(familyId: string): Promise<Classwork[]> {
-  const rows = await query<{ profile_id: string; class_id: string; name: string; unit_key: string | null; due_at: number | null }>(
-    `SELECT m.profile_id, m.class_id, c.name, a.unit_key, a.due_at FROM class_members m
+  const rows = await query<{ profile_id: string; class_id: string; name: string; unit_key: string | null; due_at: number | null; goal: number | null; created_at: number | null }>(
+    `SELECT m.profile_id, m.class_id, c.name, a.unit_key, a.due_at, a.goal, a.created_at FROM class_members m
      JOIN classes c ON c.id = m.class_id AND c.closed_at IS NULL
      LEFT JOIN class_assignments a ON a.class_id = m.class_id
      WHERE m.family_id = ? ORDER BY m.joined_at, a.created_at, a.unit_key`,
@@ -173,9 +191,11 @@ export async function familyClasswork(familyId: string): Promise<Classwork[]> {
   const out = new Map<string, Classwork>();
   for (const r of rows) {
     const k = `${r.profile_id}/${r.class_id}`;
-    const entry = out.get(k) ?? { profileId: r.profile_id, classId: r.class_id, className: r.name, unitKeys: [], due: {} };
+    const entry = out.get(k) ?? { profileId: r.profile_id, classId: r.class_id, className: r.name, unitKeys: [], due: {}, goal: {}, since: {} };
     if (r.unit_key) entry.unitKeys.push(r.unit_key);
     if (r.unit_key && r.due_at != null) entry.due[r.unit_key] = Number(r.due_at);
+    if (r.unit_key && r.goal != null) entry.goal[r.unit_key] = Number(r.goal);
+    if (r.unit_key && r.created_at != null) entry.since[r.unit_key] = Number(r.created_at);
     out.set(k, entry);
   }
   return [...out.values()];
@@ -188,17 +208,19 @@ export interface StudentProgress {
   grade: GradeId;
   lastActive: number | null;
   /** One entry per assigned unit, in assignment order. level -1 = not started. */
-  units: { key: string; level: number; attempts: number; accuracy: number }[];
+  /** `done`: questions answered on the unit since it was assigned (homework). */
+  units: { key: string; level: number; attempts: number; accuracy: number; done: number }[];
 }
 
 /** Progress for linked students on the assigned units only. Never includes an email or other family details. */
 export async function classProgress(classId: string): Promise<StudentProgress[]> {
   const members = await query<{ profile_id: string; family_id: string }>("SELECT profile_id, family_id FROM class_members WHERE class_id = ? ORDER BY joined_at", [classId]);
   const keys = await assignmentKeys(classId);
+  const since = Object.fromEntries((await query<{ unit_key: string; created_at: number }>("SELECT unit_key, created_at FROM class_assignments WHERE class_id = ?", [classId])).map((r) => [r.unit_key, Number(r.created_at)]));
   const out: StudentProgress[] = [];
   for (const m of members) {
     // One unreadable child record must not take the whole class view down with it.
-    const data = await loadChildReport(m.family_id, m.profile_id, 90).catch((e) => {
+    const data = await loadChildData(m.family_id, m.profile_id, 90).catch((e) => {
       console.error("[classroom] could not load a member's report", (e as Error).message);
       return null;
     });
@@ -212,7 +234,7 @@ export async function classProgress(classId: string): Promise<StudentProgress[]>
       lastActive: data.report.units.reduce<number | null>((t, u) => (u.lastT && (t === null || u.lastT > t) ? u.lastT : t), null),
       units: keys.map((key) => {
         const u = byKey.get(key);
-        return { key, level: u ? u.level : unitLevel(undefined), attempts: u?.attempts ?? 0, accuracy: u?.accuracy ?? 0 };
+        return { key, level: u ? u.level : unitLevel(undefined), attempts: u?.attempts ?? 0, accuracy: u?.accuracy ?? 0, done: homeworkDone(data.events, key, since[key] ?? 0) };
       }),
     });
   }

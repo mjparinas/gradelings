@@ -24,7 +24,8 @@ Gradelings is a web app (installable, with an Android wrapper) for practice and 
 | Practice events: unit, right or wrong on the first try, time, mode, date | Student | Progress, levels, teacher view | Database | Same |
 | Login code | Student | Sign-in | Database | Replaced on request; removed with the student |
 | Email and password hash (scrypt) | Teacher | Sign-in, account messages | Database | Account deleted |
-| Class name, grade, province, class code, assigned units and due dates | Class | Running the class | Database | Class closed |
+| Class name, grade, province, class code, assigned units (homework), due dates and number of questions | Class | Running the class | Database | Class closed |
+| Live class questions (the question shown) and each student's answer to it (which choice, right or not, time) | Student | Questions the teacher asks the class in real time; never counted as practice | Database | A day after the question, or student removed, class closed or account deleted |
 | Co-teacher links (teacher account id, date joined) and open invitations (the invited email address, who invited, date) | Teacher | Sharing a class with colleagues | Database | Left, removed, class closed or deleted, invitation accepted, declined, cancelled or 14 days old, or either account deleted |
 | Sign-in sessions (hashed token, browser type, time) | Both | Staying signed in, 90 days | Database | Expiry, sign-out or deletion |
 | Request logs (IP address, browser type, time) | Both | Security and operation | Host logs | **(confirm)** host retention |

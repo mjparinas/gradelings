@@ -19,6 +19,8 @@ const h = vi.hoisted(() => ({
   settings: {} as Record<string, unknown>,
   off: new Set<string>(),
   classwork: [] as unknown[],
+  events: [] as unknown[],
+  live: null as unknown,
   signOutStudent: vi.fn(),
   speak: vi.fn(),
   now: 0,
@@ -29,12 +31,17 @@ vi.mock("@/lib/useNow", () => ({ useNow: () => h.now }));
 vi.mock("@/lib/remoteFlags", () => ({ useIsOn: () => (key: string) => !h.off.has(key) }));
 vi.mock("@/lib/account", () => ({ signOutStudent: h.signOutStudent }));
 vi.mock("@/lib/store", () => ({
-  useStore: (select: (s: unknown) => unknown) => select({ family: h.family, log: vi.fn() }),
+  useStore: (select: (s: unknown) => unknown) => select({ family: h.family, log: vi.fn(), events: h.events, classwork: [] }),
+  eventsFor: (events: { profileId: string }[], p: { id: string }) => events.filter((e) => e.profileId === p.id),
   useActiveProfile: () => ({ id: "p1", name: "Ava", grade: "2", framework: "ca-bc", companion: "ollie" }),
   useChildSettings: () => h.settings,
   useDerived: () => h.derived,
 }));
 vi.mock("./useClasswork", () => ({ useClasswork: () => h.classwork }));
+vi.mock("./LiveQuestion", async (importOriginal) => {
+  const actual = await importOriginal<typeof import("./LiveQuestion")>();
+  return { ...actual, useLiveQuestion: () => ({ live: h.live, offline: false, note: "", answer: vi.fn() }) };
+});
 vi.mock("../Critter", () => ({
   Critter: () => null,
   getCritter: (id: string) => ({ id, name: { hoot: "Hoot", ruby: "Ruby", bolt: "Bolt", juniper: "Juniper" }[id] ?? id }),
@@ -342,6 +349,32 @@ describe("Hub cards", () => {
     expect(first).toHaveTextContent("Try to finish by Thu, Oct 15");
     // A past date is simply not shown: never a warning.
     expect(second).not.toHaveTextContent("Try to finish by");
+  });
+
+  it("counts homework questions done since it was assigned, on the device", () => {
+    const [a, b] = mathRefs();
+    h.classwork = [
+      { ref: a, className: "Room 4", goal: 5, since: NOW - DAY },
+      { ref: b, className: "Room 4", goal: 2, since: NOW - DAY },
+    ];
+    const answer = (unit: string, t: number, i: number) => ({ id: `${unit}-${i}`, profileId: "p1", type: "answer", unit, t, correct: false });
+    h.events = [answer(a.key, NOW - 2 * DAY, 0), answer(a.key, NOW - 1000, 1), answer(a.key, NOW - 900, 2), answer(b.key, NOW - 800, 3), answer(b.key, NOW - 700, 4), { ...answer(b.key, NOW - 600, 5), profileId: "p2" }];
+    show();
+    const [first, second] = within(screen.getByRole("region", { name: "From your teacher" })).getAllByRole("link");
+    // The answer from before the homework was set doesn't count; right or wrong, the others do.
+    expect(first).toHaveTextContent("2 of 5 questions");
+    expect(second).toHaveTextContent("Done! ✓");
+    h.events = [];
+  });
+
+  it("shows a live question from the teacher at the top, with the answer once it is shown", () => {
+    h.live = { id: "q1", className: "Room 4", mine: "b", answer: "a", hint: "Count the tens.", question: { prompt: "What is 3 tens?", choices: [{ id: "a", label: "30" }, { id: "b", label: "3" }] } };
+    show();
+    const card = screen.getByRole("region", { name: "Live question from your teacher" });
+    expect(card).toHaveTextContent("What is 3 tens?");
+    expect(card).toHaveTextContent("Good try! The answer is 30.");
+    expect(within(card).getAllByTestId("live-choice").every((b) => (b as HTMLButtonElement).disabled)).toBe(true);
+    h.live = null;
   });
 
   it("a class student signs out instead of seeing the grown-ups link", () => {
