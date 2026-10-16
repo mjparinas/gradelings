@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useState, type FormEvent } from "react";
+import { useCallback, useEffect, useRef, useState, type FormEvent } from "react";
 import { coursesForGrade, getUnitRef, loadGrade } from "@/content";
 import { FRAMEWORKS, getFramework } from "@/content/frameworks";
 import { GRADE_ORDER, getSubjectMeta } from "@/content/subjects";
@@ -18,6 +18,7 @@ import { levelInfo } from "@/lib/proficiency";
 import { go, useRoute } from "@/lib/router";
 import { sayFor } from "@/lib/say";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
+import { TeacherDialog } from "./Dialog";
 import { LiveClass } from "./LiveClass";
 
 // The teacher area: create a class, share its code, assign units and see each linked student's
@@ -62,6 +63,11 @@ function secondGradeOptions(grade: GradeId, framework: string) {
   const i = GRADE_ORDER.indexOf(grade);
   return [{ value: "", label: "None" }, ...[GRADE_ORDER[i - 1], GRADE_ORDER[i + 1]].filter(Boolean).map((g) => ({ value: g, label: gradeLabel(g, framework) }))];
 }
+
+/** The browser tab's title, so history and screen readers say where the teacher is: "Room 3 · Homework · For teachers · Gradelings". */
+const setPageTitle = (...parts: string[]) => {
+  document.title = [...parts, "For teachers", APP_NAME].join(" · ");
+};
 
 const pct = (v: number) => `${Math.round(v * 100)}%`;
 const btn = "min-h-11 rounded-xl px-4 font-bold";
@@ -269,6 +275,9 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
   );
 }
 
+/** Sends a change to the server and reloads the class. `success` is what is said on screen afterwards (default "Saved."), or built from the server's answer. */
+export type ChangeFn = (url: string, method: string, body?: unknown, success?: string | ((response: unknown) => string)) => Promise<boolean>;
+
 export interface ClassDetail {
   class: { id: string; name: string; grade: GradeId; grade2?: GradeId | null; framework: FrameworkId; joinCode: string };
   assignments: string[];
@@ -299,10 +308,10 @@ function AudiencePicker({ students, who, picked, onWho, onPicked, name }: { stud
     <fieldset className="flex flex-col gap-1 text-sm font-semibold">
       <legend className="mb-1">{name}</legend>
       <div className="flex flex-wrap gap-4">
-        <label className="flex min-h-9 items-center gap-2">
+        <label className="flex min-h-11 items-center gap-2">
           <input type="radio" name={`${name}-who`} checked={who === "all"} onChange={() => onWho("all")} /> Whole class
         </label>
-        <label className="flex min-h-9 items-center gap-2">
+        <label className="flex min-h-11 items-center gap-2">
           <input type="radio" name={`${name}-who`} checked={who === "some"} onChange={() => onWho("some")} /> Chosen students
         </label>
       </div>
@@ -310,7 +319,7 @@ function AudiencePicker({ students, who, picked, onWho, onPicked, name }: { stud
         <ul className="grid gap-x-4 sm:grid-cols-2">
           {students.map((s) => (
             <li key={s.profileId}>
-              <label className="flex min-h-9 items-center gap-2 font-normal">
+              <label className="flex min-h-11 items-center gap-2 font-normal">
                 <input type="checkbox" checked={picked.includes(s.profileId)} onChange={(e) => onPicked(e.target.checked ? [...picked, s.profileId] : picked.filter((id) => id !== s.profileId))} /> {s.name}
               </label>
             </li>
@@ -348,7 +357,7 @@ function RowAudience({ unitLabel, students, current, onSave }: { unitLabel: stri
         type="button"
         aria-expanded={open}
         aria-label={`Who gets ${unitLabel}: ${summary}`}
-        className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold"
+        className="min-h-11 rounded-xl border border-line px-3 text-sm font-semibold"
         onClick={() => {
           setWho(current.length ? "some" : "all");
           setPicked(current);
@@ -378,7 +387,7 @@ function RowAudience({ unitLabel, students, current, onSave }: { unitLabel: stri
 }
 
 /** Add students by first name, share each one's login code, and print the cards. */
-function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChange: (url: string, method: string, body?: unknown) => Promise<boolean>; onBulk: (calls: { url: string; method: string }[]) => Promise<boolean>; onPrint: (ids?: string[]) => void }) {
+function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChange: ChangeFn; onBulk: (calls: { url: string; method: string }[], success?: string) => Promise<boolean>; onPrint: (ids?: string[]) => void }) {
   const [names, setNames] = useState("");
   const [busy, setBusy] = useState(false);
   const [removing, setRemoving] = useState<RosterEntry | null>(null);
@@ -405,20 +414,20 @@ function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChan
           {chosen.length > 0 && (
             <>
               <span className="text-sm text-ink-soft" role="status">{chosen.length} selected</span>
-              <button type="button" className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => onPrint(chosen)}>
+              <button type="button" className="min-h-11 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => onPrint(chosen)}>
                 Print cards for selected
               </button>
               <button
                 type="button"
-                className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold"
+                className="min-h-11 rounded-xl border border-line px-3 text-sm font-semibold"
                 onClick={async () => {
-                  if (await onBulk(chosen.map((id) => ({ url: `/api/classes/students/?classId=${cls.id}&studentId=${id}`, method: "PATCH" })))) setChosen([]);
+                  if (await onBulk(chosen.map((id) => ({ url: `/api/classes/students/?classId=${cls.id}&studentId=${id}`, method: "PATCH" })), `New codes made for ${chosen.length} ${chosen.length === 1 ? "student" : "students"}.`)) setChosen([]);
                 }}
               >
                 New codes for selected
               </button>
               {isOwner && (
-                <button type="button" className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => setRemovingMany(true)}>
+                <button type="button" className="min-h-11 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => setRemovingMany(true)}>
                   Remove selected
                 </button>
               )}
@@ -438,11 +447,11 @@ function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChan
               <span className="font-mono text-xl font-bold tracking-widest" aria-label={`Login code ${r.loginCode.split("").join(" ")}`}>
                 {r.loginCode}
               </span>
-              <button type="button" className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => onChange(`/api/classes/students/?classId=${cls.id}&studentId=${r.id}`, "PATCH")}>
+              <button type="button" className="min-h-11 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => onChange(`/api/classes/students/?classId=${cls.id}&studentId=${r.id}`, "PATCH", undefined, (res) => `${byProfile.get(r.profileId)?.name ?? "The student"} has a new code: ${(res as { loginCode: string }).loginCode}`)}>
                 New code
               </button>
               {isOwner && (
-                <button type="button" className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => setRemoving(r)}>
+                <button type="button" className="min-h-11 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => setRemoving(r)}>
                   Remove
                 </button>
               )}
@@ -482,58 +491,52 @@ function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChan
         Students sign in at {APP_NAME} with the class code <b className="font-mono">{cls.joinCode}</b> and their own code. Keep the cards somewhere private.
       </p>
       {removingMany && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-4" role="dialog" aria-modal="true" aria-label={`Remove ${chosen.length} students?`} onClick={() => setRemovingMany(false)}>
-          <div className="w-full max-w-md rounded-3xl border-2 border-line bg-white p-6" onClick={(e) => e.stopPropagation()}>
-            <h2 className="mb-2 text-2xl font-bold">Remove {chosen.length} {chosen.length === 1 ? "student" : "students"}?</h2>
-            <p className="mb-5 font-read text-ink-soft">Their accounts and practice history are deleted and can’t be brought back.</p>
-            <div className="flex flex-col gap-3">
-              <button
-                type="button"
-                className="min-h-12 rounded-xl bg-[#ff9f43] font-bold text-[#0f172a]"
-                onClick={async () => {
-                  setRemovingMany(false);
-                  if (await onBulk(chosen.map((id) => ({ url: `/api/classes/students/?classId=${cls.id}&studentId=${id}`, method: "DELETE" })))) setChosen([]);
-                }}
-              >
-                Yes, remove
-              </button>
-              <button type="button" className="min-h-12 rounded-xl border-2 border-line font-bold" onClick={() => setRemovingMany(false)}>
-                Cancel
-              </button>
-            </div>
+        <TeacherDialog title={`Remove ${chosen.length} ${chosen.length === 1 ? "student" : "students"}?`} onClose={() => setRemovingMany(false)}>
+          <p className="mb-5 font-read text-ink-soft">Their accounts and practice history are deleted and can’t be brought back.</p>
+          <div className="flex flex-col gap-3">
+            <button
+              type="button"
+              className="min-h-12 rounded-xl bg-[#ff9f43] font-bold text-[#0f172a]"
+              onClick={async () => {
+                setRemovingMany(false);
+                if (await onBulk(chosen.map((id) => ({ url: `/api/classes/students/?classId=${cls.id}&studentId=${id}`, method: "DELETE" })), `${chosen.length} ${chosen.length === 1 ? "student was" : "students were"} removed.`)) setChosen([]);
+              }}
+            >
+              Yes, remove
+            </button>
+            <button type="button" className="min-h-12 rounded-xl border-2 border-line font-bold" onClick={() => setRemovingMany(false)}>
+              Cancel
+            </button>
           </div>
-        </div>
+        </TeacherDialog>
       )}
       {removing && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-4" role="dialog" aria-modal="true" aria-label={`Remove ${byProfile.get(removing.profileId)?.name ?? "this student"}?`} onClick={() => setRemoving(null)}>
-          <div className="w-full max-w-md rounded-3xl border-2 border-line bg-white p-6" onClick={(e) => e.stopPropagation()}>
-            <h2 className="mb-2 text-2xl font-bold">Remove {byProfile.get(removing.profileId)?.name ?? "this student"}?</h2>
-            <p className="mb-5 font-read text-ink-soft">Their practice history is deleted and can’t be brought back.</p>
-            <div className="flex flex-col gap-3">
-              <button
-                type="button"
-                className="min-h-12 rounded-xl bg-[#ff9f43] font-bold text-[#0f172a]"
-                onClick={() => {
-                  const student = removing;
-                  setRemoving(null);
-                  void onChange(`/api/classes/students/?classId=${cls.id}&studentId=${student.id}`, "DELETE");
-                }}
-              >
-                Yes, remove
-              </button>
-              <button type="button" className="min-h-12 rounded-xl border-2 border-line font-bold" onClick={() => setRemoving(null)}>
-                Cancel
-              </button>
-            </div>
+        <TeacherDialog title={`Remove ${byProfile.get(removing.profileId)?.name ?? "this student"}?`} onClose={() => setRemoving(null)}>
+          <p className="mb-5 font-read text-ink-soft">Their practice history is deleted and can’t be brought back.</p>
+          <div className="flex flex-col gap-3">
+            <button
+              type="button"
+              className="min-h-12 rounded-xl bg-[#ff9f43] font-bold text-[#0f172a]"
+              onClick={() => {
+                const student = removing;
+                setRemoving(null);
+                void onChange(`/api/classes/students/?classId=${cls.id}&studentId=${student.id}`, "DELETE", undefined, `${byProfile.get(student.profileId)?.name ?? "The student"} was removed.`);
+              }}
+            >
+              Yes, remove
+            </button>
+            <button type="button" className="min-h-12 rounded-xl border-2 border-line font-bold" onClick={() => setRemoving(null)}>
+              Cancel
+            </button>
           </div>
-        </div>
+        </TeacherDialog>
       )}
     </section>
   );
 }
 
 /** The people who teach this class. The owner invites and removes co-teachers; a co-teacher can leave. */
-function Team({ data, onChange, onLeave }: { data: ClassDetail; onChange: (url: string, method: string, body?: unknown) => Promise<boolean>; onLeave: (url: string) => void }) {
+function Team({ data, onChange, onLeave }: { data: ClassDetail; onChange: ChangeFn; onLeave: (url: string) => void }) {
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
   const isOwner = (data.role ?? "owner") === "owner";
@@ -555,7 +558,7 @@ function Team({ data, onChange, onLeave }: { data: ClassDetail; onChange: (url: 
               {t.email} <span className="text-sm text-ink-soft">({t.role === "owner" ? "owner" : "co-teacher"})</span>
             </span>
             {isOwner && t.role === "co-teacher" && (
-              <button type="button" aria-label={`Remove ${t.email}`} className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => void onChange(`/api/classes/teachers/?classId=${id}&teacherId=${encodeURIComponent(t.id)}`, "DELETE")}>
+              <button type="button" aria-label={`Remove ${t.email}`} className="min-h-11 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => void onChange(`/api/classes/teachers/?classId=${id}&teacherId=${encodeURIComponent(t.id)}`, "DELETE", undefined, "Co-teacher removed.")}>
                 Remove
               </button>
             )}
@@ -566,7 +569,7 @@ function Team({ data, onChange, onLeave }: { data: ClassDetail; onChange: (url: 
             <span className="min-w-48 flex-1 font-read">
               {i.email} <span className="text-sm text-ink-soft">(invited, waiting to accept)</span>
             </span>
-            <button type="button" aria-label={`Cancel invitation for ${i.email}`} className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => void onChange(`/api/classes/teachers/?classId=${id}&invite=${encodeURIComponent(i.email)}`, "DELETE")}>
+            <button type="button" aria-label={`Cancel invitation for ${i.email}`} className="min-h-11 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => void onChange(`/api/classes/teachers/?classId=${id}&invite=${encodeURIComponent(i.email)}`, "DELETE", undefined, "Invitation cancelled.")}>
               Cancel
             </button>
           </li>
@@ -577,7 +580,7 @@ function Team({ data, onChange, onLeave }: { data: ClassDetail; onChange: (url: 
           className="mt-3 flex flex-wrap items-end gap-3"
           onSubmit={async (e) => {
             e.preventDefault();
-            if (!(await onChange("/api/classes/teachers/", "POST", { classId: id, email }))) return;
+            if (!(await onChange("/api/classes/teachers/", "POST", { classId: id, email }, "Invitation sent."))) return;
             setEmail("");
             setSent(true);
           }}
@@ -880,11 +883,30 @@ function ProgressTable({ data, label, levelLabel, now }: { data: ClassDetail; la
   );
 }
 
+/** A short "Saved." that fades after a few seconds. The region stays on the page so screen readers announce each new message; it never takes a tap. */
+function Notice({ text, onDone }: { text: string; onDone: () => void }) {
+  const done = useRef(onDone);
+  useEffect(() => {
+    done.current = onDone;
+  });
+  useEffect(() => {
+    if (!text) return;
+    const t = setTimeout(() => done.current(), 6000);
+    return () => clearTimeout(t);
+  }, [text]);
+  return (
+    <div role="status" aria-live="polite" className="pointer-events-none fixed inset-x-0 bottom-4 z-40 flex justify-center px-4 print:hidden">
+      {text && <p className="max-w-md rounded-2xl bg-[#253047] px-4 py-2 font-read text-white shadow-lg">{text}</p>}
+    </div>
+  );
+}
+
 function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; preselect?: string[]; onBack: () => void }) {
   const [data, setData] = useState<ClassDetail | null>(null);
   const [ready, setReady] = useState(false);
   const [pick, setPick] = useState("");
   const [err, setErr] = useState("");
+  const [notice, setNotice] = useState("");
   const [confirmClose, setConfirmClose] = useState(false);
   const [confirmYear, setConfirmYear] = useState(false);
   const [nameDraft, setNameDraft] = useState<string | null>(null);
@@ -903,6 +925,20 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
   }
   const [printMode, setPrintMode] = useState<"cards" | "summary" | null>(null);
   const [printOnly, setPrintOnly] = useState<string[] | undefined>();
+  const heading = useRef<HTMLHeadingElement>(null);
+  const openedTab = useRef(tab);
+  const className = data?.class.name;
+  const tabLabel = CLASS_TABS.find((t) => t.path === tab)?.label ?? "";
+
+  useEffect(() => {
+    setPageTitle(className ?? "Class", tabLabel);
+  }, [className, tabLabel]);
+  // Moving to another tab puts focus on the page heading, so a keyboard or screen-reader user starts at the top of it.
+  useEffect(() => {
+    if (openedTab.current === tab) return;
+    openedTab.current = tab;
+    heading.current?.focus();
+  }, [tab, data]);
 
   // Print once the sheet is on the page, then go back to the normal view.
   useEffect(() => {
@@ -961,20 +997,24 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
     }));
 
   /** Sends a change and reloads the class. Resolves false (with the error shown) when the change failed. */
-  const change = async (url: string, method: string, body?: unknown): Promise<boolean> => {
+  const change: ChangeFn = async (url, method, body, success) => {
     setErr("");
+    setNotice("");
+    let response: unknown;
     try {
-      await call(url, method, body);
+      response = await call(url, method, body);
     } catch (e) {
       setErr((e as Error).message);
       return false;
     }
     await load().catch(() => undefined);
+    setNotice(typeof success === "function" ? success(response) : (success ?? "Saved."));
     return true;
   };
   /** Several changes in a row, then one reload. Stops at the first that fails and shows why. */
-  const bulk = async (calls: { url: string; method: string }[]): Promise<boolean> => {
+  const bulk = async (calls: { url: string; method: string }[], success?: string): Promise<boolean> => {
     setErr("");
+    setNotice("");
     let ok = true;
     for (const c of calls) {
       try {
@@ -986,6 +1026,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
       }
     }
     await load().catch(() => undefined);
+    if (ok) setNotice(success ?? "Saved.");
     return ok;
   };
   /** Closing or leaving: nothing left to reload, so only go back once the server agreed. */
@@ -1009,7 +1050,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
     <>
       {printMode && <PrintSheet data={data} label={label} mode={printMode} only={printOnly} />}
       <div className="print:hidden">
-      <h1 className="text-3xl font-bold">{cls.name}</h1>
+      <h1 ref={heading} tabIndex={-1} className="text-3xl font-bold outline-none">{cls.name}</h1>
       <p className="font-read text-ink-soft">
         {classGradeText(cls)} · {getFramework(cls.framework).curriculumName}
       </p>
@@ -1063,17 +1104,17 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
                   hideLabel
                   size="sm"
                   value={data.due[k] ? toInput(data.due[k]) : ""}
-                  onChange={(next) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, dueAt: next ? endOfDay(next) : null })}
+                  onChange={(next) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, dueAt: next ? endOfDay(next) : null }, next ? `Due date for ${label(k)} saved.` : `Due date for ${label(k)} cleared.`)}
                 />
                 <SelectMenu
                   label={`Questions for ${label(k)}`}
                   hideLabel
                   block={false}
                   value={data.goal?.[k] ? String(data.goal[k]) : ""}
-                  onChange={(next) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, goal: next ? Number(next) : null })}
+                  onChange={(next) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, goal: next ? Number(next) : null }, `Questions for ${label(k)} saved.`)}
                   options={goalOptions}
                 />
-                <button type="button" aria-label={`Remove ${label(k)}`} className="min-h-9 min-w-9 rounded-full font-bold" onClick={() => change(`/api/classes/assignments/?classId=${id}&unitKey=${encodeURIComponent(k)}`, "DELETE")}>
+                <button type="button" aria-label={`Remove ${label(k)}`} className="min-h-11 min-w-11 rounded-full font-bold" onClick={() => change(`/api/classes/assignments/?classId=${id}&unitKey=${encodeURIComponent(k)}`, "DELETE", undefined, `${label(k)} was removed from homework.`)}>
                   ✕
                 </button>
                 <HomeworkProgress status={overview.find((o) => o.key === k)} />
@@ -1082,7 +1123,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
                   unitLabel={label(k)}
                   students={students}
                   current={data.audience?.[k] ?? []}
-                  onSave={(ids) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, students: ids })}
+                  onSave={(ids) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, students: ids }, `Who gets ${label(k)} saved.`)}
                 />
               </li>
             ))}
@@ -1106,7 +1147,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
               disabled={!pick || (who === "some" && picked.length === 0)}
               className={`${btn} bg-[#4f8ef7] text-[#0f172a] disabled:opacity-50`}
               onClick={async () => {
-                const ok = await change("/api/classes/assignments/", "POST", { classId: id, unitKey: pick, dueAt: due ? endOfDay(due) : undefined, goal: questions ? Number(questions) : undefined, ...(who === "some" ? { students: picked } : {}) });
+                const ok = await change("/api/classes/assignments/", "POST", { classId: id, unitKey: pick, dueAt: due ? endOfDay(due) : undefined, goal: questions ? Number(questions) : undefined, ...(who === "some" ? { students: picked } : {}) }, `${label(pick)} assigned.`);
                 if (!ok) return;
                 setPick("");
                 setDue("");
@@ -1135,7 +1176,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
             </p>
             {isOwner && (
               <>
-                <button type="button" className="mt-3 rounded-xl border border-line px-4 py-2 font-semibold" onClick={() => change(`/api/classes/?id=${encodeURIComponent(id)}`, "PATCH")}>
+                <button type="button" className="mt-3 min-h-11 rounded-xl border border-line px-4 py-2 font-semibold" onClick={() => change(`/api/classes/?id=${encodeURIComponent(id)}`, "PATCH", undefined, (res) => `New class code: ${(res as { joinCode: string }).joinCode}`)}>
                   Get a new code
                 </button>
                 <p className="mt-1 text-sm text-ink-soft">If the code was shared too widely. Families already linked stay linked; the old code stops working.</p>
@@ -1164,7 +1205,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
                 className="mt-2 flex flex-wrap items-end gap-3"
                 onSubmit={async (e) => {
                   e.preventDefault();
-                  if (await change(`/api/classes/?id=${encodeURIComponent(id)}`, "PATCH", { name: nameDraft })) setNameDraft(null);
+                  if (await change(`/api/classes/?id=${encodeURIComponent(id)}`, "PATCH", { name: nameDraft }, "Class name saved.")) setNameDraft(null);
                 }}
               >
                 <label className="flex flex-col text-sm font-semibold">
@@ -1191,7 +1232,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
                       type="button"
                       className={`${btn} mt-3 border border-[#e57a12] text-nudge-dark`}
                       onClick={async () => {
-                        if (await change(`/api/classes/?id=${encodeURIComponent(id)}`, "PATCH", { action: "next-year" })) setConfirmYear(false);
+                        if (await change(`/api/classes/?id=${encodeURIComponent(id)}`, "PATCH", { action: "next-year" }, "The class moved up a grade.")) setConfirmYear(false);
                       }}
                     >
                       Yes, move {cls.name} up
@@ -1231,6 +1272,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
         </p>
       )}
       </div>
+      <Notice text={notice} onDone={() => setNotice("")} />
     </>
   );
 }
@@ -1242,6 +1284,10 @@ export function TeacherApp() {
   // #/class/{id}/{tab} opens a class on one tab; anything else is the class list.
   const classId = path[0] === "class" && path[1] ? path[1] : null;
   const tab = CLASS_TABS.find((t) => t.path === path[2])?.path ?? "progress";
+
+  useEffect(() => {
+    if (!classId) setPageTitle(signedIn === false ? "Sign in" : "Your classes");
+  }, [classId, signedIn]);
 
   useEffect(() => {
     // A class student's login is not a teacher's: only a real account counts.
@@ -1269,11 +1315,11 @@ export function TeacherApp() {
             <span className="text-lg font-semibold text-ink-soft">for teachers</span>
           </span>
           <div className="flex items-center gap-3">
-            <Link href="/" className="font-semibold underline">Home</Link>
+            <Link href="/" className="inline-flex min-h-11 items-center font-semibold underline">Home</Link>
             {signedIn && (
               <button
                 type="button"
-                className="font-semibold underline"
+                className="min-h-11 font-semibold underline"
                 onClick={() => call("/api/auth/logout/", "POST").finally(() => { setSignedIn(false); go("/"); })}
               >
                 Sign out
@@ -1285,7 +1331,7 @@ export function TeacherApp() {
           <nav className="mx-auto max-w-4xl overflow-x-auto px-2" aria-label="Class sections">
             <ul className="flex gap-1 pb-2">
               <li>
-                <a href="#/" className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-semibold whitespace-nowrap text-ink-soft hover:bg-black/5">
+                <a href="#/" className="flex items-center gap-1.5 min-h-11 rounded-xl px-3 py-2 text-sm font-semibold whitespace-nowrap text-ink-soft hover:bg-black/5">
                   ← All classes
                 </a>
               </li>
@@ -1296,7 +1342,7 @@ export function TeacherApp() {
                     aria-current={tab === t.path ? "page" : undefined}
                     // On a phone the tabs scroll sideways: keep the open one in view.
                     ref={tab === t.path ? (el) => el?.scrollIntoView?.({ block: "nearest", inline: "nearest" }) : undefined}
-                    className={`flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-semibold whitespace-nowrap ${tab === t.path ? "bg-[#253047] text-white" : "text-ink-soft hover:bg-black/5"}`}
+                    className={`flex items-center gap-1.5 min-h-11 rounded-xl px-3 py-2 text-sm font-semibold whitespace-nowrap ${tab === t.path ? "bg-[#253047] text-white" : "text-ink-soft hover:bg-black/5"}`}
                   >
                     <span aria-hidden="true">{t.icon}</span> {t.label}
                   </a>

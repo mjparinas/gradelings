@@ -15,6 +15,7 @@
 //     - a question: Stop and read-aloud reachable, answer buttons big enough, and the
 //       feedback bar's button fully on screen;
 //     - parent reports: wide tables scroll inside the page, never the whole page.
+//     - teacher area: each tab of a class has no sideways scroll and buttons and links big enough;
 //   One per class (smallest phone, phone landscape, tablet portrait, tablet landscape):
 //     - a Kindergarten child: big prompt text and big answer buttons;
 //     - an arcade game: the play area fits on screen;
@@ -24,7 +25,7 @@
 // with the same screen size, pixel ratio, touch and user agent.
 import fs from "node:fs";
 import { chromium, devices, webkit } from "playwright";
-import { enterPin, newChild, step, vis } from "./helpers.mjs";
+import { TEACHER_TABS, enterPin, newChild, signInTeacher, step, teacherFixture, vis } from "./helpers.mjs";
 
 const BASE = (process.argv[2] || "http://localhost:3000").replace(/\/$/, "");
 const OUT = process.argv[3] && !process.argv[3].startsWith("--") ? process.argv[3] : "e2e-shots/devices";
@@ -240,6 +241,30 @@ async function everyDevice(device, page) {
   await shot(page, device, "5-parent-reports");
 }
 
+/** The teacher area, on its own browser context so the teacher's sign-in never touches the kids' app checks. */
+async function teacherChecks(device, browser, options, fixture) {
+  const ctx = await browser.newContext({ ...options, reducedMotion: "reduce" });
+  await signInTeacher(ctx, BASE, fixture);
+  const page = await ctx.newPage();
+  page.on("pageerror", (e) => record(device, "teachers: no page errors", false, e.message));
+  try {
+    await page.goto(`${BASE}/teachers/`);
+    await page.getByRole("heading", { name: "Your classes" }).waitFor();
+    await noSideScroll(device, page, "teachers: class list");
+    for (const tab of TEACHER_TABS) {
+      const where = `teachers: ${tab.slice(1) || "progress"}`;
+      await page.goto(`${BASE}/teachers/#/class/${fixture.classId}${tab}`);
+      await page.getByRole("heading", { level: 1, name: "Room 3" }).waitFor();
+      await page.waitForTimeout(300);
+      await noSideScroll(device, page, where);
+      await checkTargets(device, `${where}: buttons and links`, page.locator("main button, main a, header a, header button"), TARGET);
+    }
+    await shot(page, device, "teachers");
+  } finally {
+    await ctx.close();
+  }
+}
+
 async function deepChecks(device, browser, descriptor, page) {
   // Toasts never block taps: the first answer earns a trophy, and the toast sits on top.
   await page.goto(`${BASE}/play/`);
@@ -351,6 +376,7 @@ async function browserFor(type) {
 }
 
 // The slower "deep" devices are dealt out first so every shard gets a similar share.
+const teacherFx = await teacherFixture(BASE);
 const dealt = [...DEVICES.filter((d) => d.deep), ...DEVICES.filter((d) => !d.deep)];
 const inShard = (d) => !SHARD || dealt.indexOf(d) % SHARD.of === SHARD.n - 1;
 
@@ -372,6 +398,7 @@ for (const d of DEVICES) {
   page.on("pageerror", (e) => record(d.name, "no page errors", false, e.message));
   try {
     await everyDevice(d.name, page);
+    await teacherChecks(d.name, browser, options, teacherFx);
     if (d.deep) await deepChecks(d.name, browser, options, page);
   } catch (e) {
     record(d.name, "finished without errors", false, e instanceof Error ? e.message.split("\n")[0] : String(e));

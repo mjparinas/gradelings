@@ -400,7 +400,7 @@ describe("TeacherApp class page", () => {
     expect(within(within(table).getByRole("rowheader", { name: /^Maya/ }).parentElement!).getAllByText("Past due")).toHaveLength(1);
     expect(within(within(table).getByRole("rowheader", { name: /^Sam/ }).parentElement!).queryByText("Past due")).not.toBeInTheDocument();
     await openTab(user, "Homework");
-    expect(screen.getByRole("status")).toHaveTextContent("1 unit is past due with students still to finish.");
+    expect(screen.getByText("1 unit is past due with students still to finish.")).toBeInTheDocument();
     expect(screen.getByText("1 of 3 done · past due")).toBeInTheDocument();
     expect(screen.getByText(/Still to finish: Maya, Alex/)).toBeInTheDocument();
     // Patterns has no number of questions: done at Proficient (Maya and Alex), not yet due.
@@ -523,9 +523,9 @@ describe("TeacherApp class page", () => {
     const user = await openClass();
     await openTab(user, "Students");
     await user.click(screen.getByRole("checkbox", { name: "Select all" }));
-    expect(screen.getByRole("status", { name: "" })).toHaveTextContent("2 selected");
+    expect(screen.getByText("2 selected")).toBeInTheDocument();
     await user.click(screen.getByRole("checkbox", { name: "Select Maya" }));
-    expect(screen.getByRole("status", { name: "" })).toHaveTextContent("1 selected");
+    expect(screen.getByText("1 selected")).toBeInTheDocument();
     await user.click(screen.getByRole("checkbox", { name: "Select Maya" }));
     const loads = () => mocks.call.mock.calls.filter(([u]) => u === "/api/classes/?id=class-1").length;
     const before = loads();
@@ -604,6 +604,80 @@ describe("TeacherApp class page", () => {
     await user.click(screen.getByRole("button", { name: "Cancel" }));
     expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
     expect(mocks.call).not.toHaveBeenCalledWith(expect.stringContaining("studentId=r2"), "DELETE", undefined);
+  });
+});
+
+describe("TeacherApp keyboard and screen-reader support", () => {
+  it("announces what a change did, in a status region that stays on the page", async () => {
+    serve(detail, (url, method) => (url.startsWith("/api/classes/students/") && method === "PATCH" ? { loginCode: "KD7Q3M2P" } : undefined));
+    const user = await openClass();
+    await openTab(user, "Students");
+    const live = screen.getAllByRole("status").find((el) => el.getAttribute("aria-live") === "polite")!;
+    expect(live).toBeEmptyDOMElement();
+    await user.click(within(screen.getByLabelText("Login code Z X 9 1 P Q").parentElement!).getByRole("button", { name: "New code" }));
+    await waitFor(() => expect(live).toHaveTextContent("Maya has a new code: KD7Q3M2P"));
+  });
+
+  it("says a change was saved when the server answered", async () => {
+    serve(detail);
+    const user = await openClass();
+    await openTab(user, "Homework");
+    await user.click(screen.getByRole("button", { name: "Due date for Counting" }));
+    await user.click(within(await screen.findByRole("dialog", { name: "Due date for Counting" })).getByRole("button", { name: "Clear date" }));
+    await waitFor(() => expect(screen.getByText("Due date for Counting cleared.")).toBeInTheDocument());
+  });
+
+  it("names the class and tab in the page title and moves focus to the heading on a new tab", async () => {
+    serve(detail);
+    const user = await openClass();
+    await waitFor(() => expect(document.title).toBe("Room 3 · Progress · For teachers · Gradelings"));
+    await openTab(user, "Homework");
+    expect(document.title).toBe("Room 3 · Homework · For teachers · Gradelings");
+    await waitFor(() => expect(screen.getByRole("heading", { level: 1, name: "Room 3" })).toHaveFocus());
+  });
+
+  it("titles the class list", async () => {
+    serve(detail);
+    render(<TeacherApp />);
+    await screen.findByRole("button", { name: /Room 3/ });
+    expect(document.title).toBe("Your classes · For teachers · Gradelings");
+  });
+
+  it("closes the remove dialog with Escape and gives focus back to the button that opened it", async () => {
+    serve(detail);
+    const user = await openClass();
+    await openTab(user, "Students");
+    const remove = within(screen.getByLabelText("Login code M N 3 4 R T").parentElement!).getByRole("button", { name: "Remove" });
+    await user.click(remove);
+    const dialog = screen.getByRole("dialog", { name: "Remove Sam?" });
+    expect(within(dialog).getByRole("button", { name: "Yes, remove" })).toHaveFocus();
+    await user.keyboard("{Escape}");
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    expect(remove).toHaveFocus();
+  });
+
+  it("keeps Tab inside the remove dialog", async () => {
+    serve(detail);
+    const user = await openClass();
+    await openTab(user, "Students");
+    await user.click(within(screen.getByLabelText("Login code M N 3 4 R T").parentElement!).getByRole("button", { name: "Remove" }));
+    const dialog = screen.getByRole("dialog", { name: "Remove Sam?" });
+    await user.tab();
+    expect(within(dialog).getByRole("button", { name: "Cancel" })).toHaveFocus();
+    await user.tab();
+    expect(within(dialog).getByRole("button", { name: "Yes, remove" })).toHaveFocus();
+    await user.tab({ shift: true });
+    expect(within(dialog).getByRole("button", { name: "Cancel" })).toHaveFocus();
+  });
+
+  it("makes the small buttons at least 44 px tall", async () => {
+    serve(detail);
+    const user = await openClass();
+    await openTab(user, "Students");
+    const row = screen.getByLabelText("Login code M N 3 4 R T").parentElement!;
+    for (const name of ["New code", "Remove"]) expect(within(row).getByRole("button", { name })).toHaveClass("min-h-11");
+    await openTab(user, "Homework");
+    expect(screen.getByRole("button", { name: "Remove Counting" })).toHaveClass("min-h-11", "min-w-11");
   });
 });
 

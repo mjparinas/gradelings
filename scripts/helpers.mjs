@@ -147,3 +147,47 @@ export async function installFakeVoices(context, voices = EDGE_VOICES) {
 export function spoken(page) {
   return page.evaluate(() => window.__spoken ?? []);
 }
+
+/**
+ * A confirmed teacher with a class: three students, two assigned units (one with a due date and a question
+ * count). Made through the API; the email is marked confirmed straight in the local database file
+ * (DATABASE_URL, or ./data/grademap.db), because no email is sent in tests. Returns the session cookie and the class.
+ */
+export async function teacherFixture(base, { framework = "ca-bc", grade = "3" } = {}) {
+  const { createClient } = await import("@libsql/client");
+  const email = `teacher-${Date.now()}-${Math.floor(Math.random() * 1e6)}@example.com`;
+  let cookie = "";
+  const api = async (path, method = "GET", body) => {
+    const res = await fetch(`${base}${path}`, {
+      method,
+      headers: { "content-type": "application/json", ...(cookie ? { cookie } : {}) },
+      body: body === undefined ? undefined : JSON.stringify(body),
+    });
+    const set = res.headers.get("set-cookie");
+    if (set) cookie = set.split(";")[0];
+    return { status: res.status, data: await res.json().catch(() => ({})) };
+  };
+  const must = (res, what) => {
+    if (res.status !== 200) throw new Error(`teacher fixture: ${what} answered ${res.status} ${JSON.stringify(res.data)}`);
+    return res.data;
+  };
+  must(await api("/api/auth/signup/", "POST", { email, password: "correct horse" }), "sign up");
+  const db = createClient({ url: process.env.DATABASE_URL ?? "file:./data/grademap.db", authToken: process.env.DATABASE_AUTH_TOKEN });
+  await db.execute({ sql: "UPDATE parents SET email_verified_at = ? WHERE email = ?", args: [Date.now(), email] });
+  // The session was made before the email was confirmed, so sign in again.
+  must(await api("/api/auth/login/", "POST", { email, password: "correct horse" }), "sign in");
+  const cls = must(await api("/api/classes/", "POST", { name: "Room 3", grade, framework }), "create a class").class;
+  must(await api("/api/classes/assignments/", "POST", { classId: cls.id, unitKey: `${grade}/math/multiplication`, dueAt: Date.now() + 3 * 86_400_000, goal: 5 }), "assign a unit");
+  must(await api("/api/classes/assignments/", "POST", { classId: cls.id, unitKey: `${grade}/math/fractions` }), "assign a second unit");
+  must(await api("/api/classes/students/", "POST", { classId: cls.id, names: ["Maya", "Sam", "Alex P."] }), "add students");
+  const [name, ...value] = cookie.split("=");
+  return { cookie: { name, value: value.join("=") }, classId: cls.id, joinCode: cls.joinCode };
+}
+
+/** Signs a browser context in as the fixture's teacher. */
+export async function signInTeacher(context, base, fixture) {
+  await context.addCookies([{ name: fixture.cookie.name, value: fixture.cookie.value, url: base }]);
+}
+
+/** The teacher area's tabs, in order, with the hash that opens each for a class. */
+export const TEACHER_TABS = ["", "/homework", "/live", "/students", "/settings"];

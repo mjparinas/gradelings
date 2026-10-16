@@ -8,6 +8,7 @@
 //   node scripts/e2e-keyboard.mjs http://localhost:3000 [shots-dir]
 import { chromium } from "playwright";
 import { mkdirSync } from "node:fs";
+import { TEACHER_TABS, signInTeacher, teacherFixture } from "./helpers.mjs";
 
 const BASE = process.argv[2] || "http://localhost:3000";
 const SHOTS = process.argv[3] && !process.argv[3].startsWith("--") ? process.argv[3] : "e2e-shots/keyboard";
@@ -314,6 +315,42 @@ for (const tab of ["Reports", "Children", "Settings", "Account", "Subscription",
   await page.waitForTimeout(500);
   await walk(page, `parents: ${tab}`, 150);
 }
+
+console.log("Teacher area, keys only");
+const teacher = await teacherFixture(BASE);
+await signInTeacher(ctx, BASE, teacher);
+await page.goto(`${BASE}/teachers/#/class/${teacher.classId}`);
+await page.getByRole("heading", { level: 1, name: "Room 3" }).waitFor();
+await page.keyboard.press("Tab");
+check((await page.evaluate(() => document.activeElement?.textContent?.trim())) === "Skip to main content", "teacher area: the first Tab stop is the skip link");
+for (const tab of TEACHER_TABS) {
+  await page.goto(`${BASE}/teachers/#/class/${teacher.classId}${tab}`);
+  await page.getByRole("heading", { level: 1, name: "Room 3" }).waitFor();
+  await page.waitForTimeout(300);
+  await walk(page, `teachers: ${tab.slice(1) || "progress"}`, 150);
+}
+// Moving to another tab with the keyboard puts focus on the page heading.
+await page.goto(`${BASE}/teachers/#/class/${teacher.classId}`);
+await page.getByRole("heading", { level: 1, name: "Room 3" }).waitFor();
+check(await tabTo(page, /Homework$/), "Tab reaches the Homework tab");
+await page.keyboard.press("Enter");
+await page.waitForTimeout(300);
+check((await page.evaluate(() => document.activeElement?.tagName)) === "H1", "after choosing a tab, focus is on the page heading");
+check((await page.title()).includes("Homework"), "the page title names the tab");
+// The remove-student dialog: Escape closes it and focus returns to the button.
+await page.goto(`${BASE}/teachers/#/class/${teacher.classId}/students`);
+await page.getByRole("heading", { level: 1, name: "Room 3" }).waitFor();
+const removeButton = page.getByRole("button", { name: "Remove", exact: true }).first();
+await removeButton.focus();
+await page.keyboard.press("Enter");
+await page.getByRole("dialog").waitFor();
+await page.keyboard.press("Tab");
+await page.keyboard.press("Tab");
+await page.keyboard.press("Tab");
+check(await page.evaluate(() => Boolean(document.activeElement?.closest('[role="dialog"]'))), "Tab stays inside the remove-student dialog");
+await page.keyboard.press("Escape");
+check((await page.getByRole("dialog").count()) === 0, "Escape closes the remove-student dialog");
+check(await removeButton.evaluate((el) => el === document.activeElement), "focus goes back to the Remove button");
 
 console.log("Windows high contrast (forced colours)");
 await page.emulateMedia({ forcedColors: "active", reducedMotion: "reduce" });

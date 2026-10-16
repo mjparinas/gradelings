@@ -9,7 +9,7 @@ import AxeBuilder from "@axe-core/playwright";
 import { chromium, devices } from "playwright";
 import { mkdirSync } from "node:fs";
 import { DEFICIENCIES, contrastAs, shootAll, visibleColour } from "./colour-blind.mjs";
-import { enterPin, newChild, step, vis } from "./helpers.mjs";
+import { TEACHER_TABS, enterPin, newChild, signInTeacher, step, teacherFixture, vis } from "./helpers.mjs";
 
 const BASE = process.argv[2] || "http://localhost:3000";
 const TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"];
@@ -55,6 +55,24 @@ for (const route of ["trophies", "shop", "stickers", "room", "practice", "map", 
   await page.goto(`${BASE}/play/#/${route}`);
   await scan(page, `/play/#/${route}`);
 }
+
+console.log("Teacher area");
+const teacher = await teacherFixture(BASE);
+await signInTeacher(ctx, BASE, teacher);
+await page.goto(`${BASE}/teachers/`);
+await page.getByRole("heading", { name: "Your classes" }).waitFor();
+await scan(page, "/teachers/ class list");
+for (const tab of TEACHER_TABS) {
+  await page.goto(`${BASE}/teachers/#/class/${teacher.classId}${tab}`);
+  await page.getByRole("heading", { level: 1, name: "Room 3" }).waitFor();
+  await page.waitForTimeout(400);
+  await scan(page, `/teachers/ class ${tab.slice(1) || "progress"}`);
+}
+// The remove-student dialog.
+await page.goto(`${BASE}/teachers/#/class/${teacher.classId}/students`);
+await page.getByRole("button", { name: "Remove", exact: true }).first().click();
+await scan(page, "/teachers/ remove student dialog");
+await page.keyboard.press("Escape");
 
 // Colour-blind check. Things that mean different things must not depend on colour alone, and
 // where two states sit side by side they must still differ in lightness when seen with each
