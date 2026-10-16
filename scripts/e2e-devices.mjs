@@ -259,6 +259,11 @@ async function teacherChecks(device, browser, options, fixture) {
       await noSideScroll(device, page, where);
       await checkTargets(device, `${where}: buttons and links`, page.locator("main button, main a, header a, header button"), TARGET);
     }
+    await page.goto(`${BASE}/teachers/#/account`);
+    await page.getByRole("heading", { level: 1, name: "Your account" }).waitFor();
+    await page.waitForTimeout(300);
+    await noSideScroll(device, page, "teachers: account");
+    await checkTargets(device, "teachers: account: buttons and links", page.locator("main button, main a, header a, header button"), TARGET);
     await shot(page, device, "teachers");
   } finally {
     await ctx.close();

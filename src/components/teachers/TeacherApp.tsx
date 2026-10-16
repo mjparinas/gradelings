@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useRef, useState, type FormEvent } from "react";
+import { useCallback, useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 import { coursesForGrade, getUnitRef, loadGrade } from "@/content";
 import { FRAMEWORKS, getFramework } from "@/content/frameworks";
 import { GRADE_ORDER, getSubjectMeta } from "@/content/subjects";
@@ -9,7 +9,7 @@ import type { FrameworkId, GradeId } from "@/content/types";
 import { DateField } from "@/components/DateField";
 import { SelectMenu } from "@/components/SelectMenu";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
-import { addedMessage, call, checkNameList, classInsights, HOMEWORK_GOALS, homeworkOverview, isHomeworkDone, isUsClass, US_CLASS_CONSENT, type ClassInvite, type MissedQuestion, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
+import { addedMessage, agoText, call, checkNameList, type ClassBadge, classInsights, HOMEWORK_GOALS, homeworkOverview, isHomeworkDone, isUsClass, US_CLASS_CONSENT, type ClassInvite, type MissedQuestion, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
 import { frameworkGroups, frameworkMenu } from "@/lib/frameworkGroups";
 import { classCsv } from "@/lib/classCsv";
 import { countryOf } from "@/lib/country";
@@ -18,6 +18,7 @@ import { levelInfo } from "@/lib/proficiency";
 import { go, useRoute } from "@/lib/router";
 import { sayFor } from "@/lib/say";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
+import { AccountPage } from "./AccountPage";
 import { TeacherDialog } from "./Dialog";
 import { LiveClass } from "./LiveClass";
 
@@ -69,6 +70,9 @@ const setPageTitle = (...parts: string[]) => {
   document.title = [...parts, "For teachers", APP_NAME].join(" · ");
 };
 
+/** How often an open Progress tab asks for fresh results. */
+const PROGRESS_REFRESH_MS = 90_000;
+
 const pct = (v: number) => `${Math.round(v * 100)}%`;
 const btn = "min-h-11 rounded-xl px-4 font-bold";
 
@@ -108,6 +112,11 @@ function AuthForm({ onDone }: { onDone: () => void }) {
   return (
     <form onSubmit={submit} className="mx-auto mt-8 flex max-w-sm flex-col gap-3 rounded-2xl border border-line bg-white p-5">
       <h1 className="text-2xl font-bold">{mode === "in" ? "Teacher sign in" : mode === "up" ? "Create a teacher account" : "Reset your password"}</h1>
+      {mode !== "forgot" && (
+        <p className="font-read text-ink-soft">
+          {APP_NAME} for teachers is where you set up a class, assign practice by unit and see how each student is doing. Students sign in with a code you give them, with no email needed, and you only see first names and practice results.
+        </p>
+      )}
       <label className="flex flex-col text-sm font-semibold">
         Email
         <input className="mt-1 min-h-11 rounded-xl border border-line px-3" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
@@ -176,6 +185,45 @@ function ConfirmEmail({ email }: { email?: string }) {
   );
 }
 
+const HIDDEN_KEY = "gradelings.teacher.hiddenClasses";
+const CHECKLIST_KEY = "gradelings.teacher.hideChecklist";
+
+/** Per-device choices (classes hidden from the list, the checklist put away). Storage can be blocked, so it never throws. */
+function readStore(key: string): string {
+  try {
+    return localStorage.getItem(key) ?? "";
+  } catch {
+    return "";
+  }
+}
+function writeStore(key: string, value: string) {
+  try {
+    if (value) localStorage.setItem(key, value);
+    else localStorage.removeItem(key);
+  } catch {
+    // Not saved: the choice lasts until the page is reloaded.
+  }
+}
+
+type ClassSort = "created" | "attention" | "recent";
+const SORTS = [
+  { value: "created", label: "Order created" },
+  { value: "attention", label: "Needs attention" },
+  { value: "recent", label: "Last practice" },
+];
+
+function ClassBadges({ badge, students, now }: { badge?: ClassBadge; students: number; now: number }) {
+  if (!badge || students === 0) return null;
+  const pill = "rounded-full px-2 py-0.5 text-sm font-semibold";
+  return (
+    <span className="mt-2 flex flex-wrap gap-2">
+      {badge.checkIn > 0 && <span className={`${pill} bg-[#ffe9c7] text-[#5b3a00]`}>{badge.checkIn} to check in with</span>}
+      {badge.pastDue > 0 && <span className={`${pill} bg-[#ffd9d9] text-[#7a1212]`}>{badge.pastDue} past due</span>}
+      <span className={`${pill} bg-[#eef0f4] text-ink-soft`}>{badge.lastPractice === null ? "No practice yet" : `Last practice ${agoText(badge.lastPractice, now)}`}</span>
+    </span>
+  );
+}
+
 function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account: { email?: string; verified?: boolean } }) {
   const [classes, setClasses] = useState<ClassSummary[] | null>(null);
   const [name, setName] = useState("");
@@ -184,10 +232,33 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
   const [framework, setFramework] = useState<FrameworkId>("ca-bc");
   const [invites, setInvites] = useState<ClassInvite[]>([]);
   const [err, setErr] = useState("");
+  const [badges, setBadges] = useState<Record<string, ClassBadge>>({});
+  const [now, setNow] = useState(() => Date.now());
+  const [sort, setSort] = useState<ClassSort>("created");
+  const [hidden, setHidden] = useState<string[]>(() => readStore(HIDDEN_KEY).split(",").filter(Boolean));
+  const [showHidden, setShowHidden] = useState(false);
+  const [notice, setNotice] = useState("");
 
+  const hide = (id: string, on: boolean) => {
+    const next = on ? [...new Set([...hidden, id])] : hidden.filter((h) => h !== id);
+    setHidden(next);
+    writeStore(HIDDEN_KEY, next.join(","));
+    setNotice(on ? "Class hidden from this list on this device." : "Class shown again.");
+  };
   const load = useCallback(() => {
     call<{ classes: ClassSummary[] }>("/api/classes/")
-      .then((r) => setClasses(r.classes))
+      .then((r) => {
+        setClasses(r.classes);
+        // The badges read every student's history, so they come after the list has shown. A failure just leaves them off.
+        if (r.classes.some((c) => c.students > 0)) {
+          call<{ badges?: Record<string, ClassBadge> }>("/api/classes/?badges=1")
+            .then((b) => {
+              setBadges(b.badges ?? {});
+              setNow(Date.now());
+            })
+            .catch(() => undefined);
+        }
+      })
       .catch((e: Error) => setErr(e.message));
     call<{ invites?: ClassInvite[] }>("/api/classes/invites/")
       .then((r) => setInvites(r.invites ?? []))
@@ -218,6 +289,15 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
     }
   };
 
+  const attention = (c: ClassSummary) => (badges[c.id] ? badges[c.id].pastDue * 2 + badges[c.id].checkIn : -1);
+  const sorted = [...(classes ?? [])].sort((a, b) => {
+    if (sort === "attention") return attention(b) - attention(a);
+    if (sort === "recent") return (badges[b.id]?.lastPractice ?? -1) - (badges[a.id]?.lastPractice ?? -1);
+    return 0;
+  });
+  const hiddenNow = sorted.filter((c) => hidden.includes(c.id));
+  const visible = sorted.filter((c) => showHidden || !hidden.includes(c.id));
+
   return (
     <>
       <h1 className="text-3xl font-bold">Your classes</h1>
@@ -243,18 +323,40 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
           </ul>
         </section>
       )}
+      {(classes?.length ?? 0) > 1 && (
+        <div className="mt-4">
+          <SelectMenu label="Sort classes by" block={false} value={sort} onChange={(next) => setSort(next as ClassSort)} options={SORTS} />
+        </div>
+      )}
       <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-        {classes?.map((c) => (
-          <li key={c.id}>
-            <button type="button" onClick={() => onOpen(c.id)} className="w-full rounded-2xl border border-line bg-white p-4 text-left">
+        {visible.map((c) => (
+          <li key={c.id} className="flex flex-col rounded-2xl border border-line bg-white">
+            <button type="button" onClick={() => onOpen(c.id)} className="w-full flex-1 rounded-2xl p-4 text-left">
               <span className="block text-xl font-bold">{c.name}</span>
               <span className="block font-read text-ink-soft">
                 {classGradeText(c)} · {getFramework(c.framework as FrameworkId).region} · {c.students} {c.students === 1 ? "student" : "students"}{c.role === "co-teacher" ? " · you co-teach" : ""} · code <b className="font-mono tracking-widest">{c.joinCode}</b>
               </span>
+              <ClassBadges badge={badges[c.id]} students={c.students} now={now} />
             </button>
+            <div className="px-4 pb-2">
+              <button type="button" aria-label={hidden.includes(c.id) ? `Show ${c.name} again` : `Hide ${c.name} from this list`} className="inline-flex min-h-11 items-center text-sm font-semibold text-ink-soft underline" onClick={() => hide(c.id, !hidden.includes(c.id))}>
+                {hidden.includes(c.id) ? "Show again" : "Hide"}
+              </button>
+            </div>
           </li>
         ))}
       </ul>
+      {hiddenNow.length > 0 && (
+        <p className="mt-2 font-read text-sm text-ink-soft">
+          <button type="button" aria-expanded={showHidden} className="inline-flex min-h-11 items-center font-semibold underline" onClick={() => setShowHidden((v) => !v)}>
+            {showHidden ? "Hide finished classes again" : `Show ${hiddenNow.length} hidden ${hiddenNow.length === 1 ? "class" : "classes"}`}
+          </button>{" "}
+          Hiding only tidies this list on this device. The class and its students aren’t changed.
+        </p>
+      )}
+      <p role="status" className="sr-only">
+        {notice}
+      </p>
       <form onSubmit={create} className="mt-6 flex flex-wrap items-end gap-3 rounded-2xl border border-line bg-white p-4">
         <label className="flex flex-col text-sm font-semibold">
           Class name
@@ -272,6 +374,60 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
         </p>
       )}
     </>
+  );
+}
+
+/** Updated 2 minutes ago · Refresh. Re-renders now and then so the wording stays true. */
+function UpdatedAgo({ at, busy, onRefresh }: { at: number; busy: boolean; onRefresh: () => void }) {
+  const [now, setNow] = useState(() => Date.now());
+  useEffect(() => {
+    const t = setInterval(() => setNow(Date.now()), 30_000);
+    return () => clearInterval(t);
+  }, []);
+  return (
+    <p className="mt-1 text-sm text-ink-soft">
+      Updated {agoText(at, Math.max(now, at))} ·{" "}
+      <button type="button" disabled={busy} className="inline-flex min-h-11 items-center font-semibold underline disabled:opacity-50" onClick={onRefresh}>
+        {busy ? "Refreshing…" : "Refresh"}
+      </button>
+    </p>
+  );
+}
+
+/** Three steps for a new class, shown on Progress until they are done (or put away on this device). */
+function FirstRun({ students, assignments, tabLink }: { students: StudentRow[]; assignments: string[]; tabLink: (t: ClassTab, text: string) => ReactNode }) {
+  // Read when the class page has already loaded in the browser, so it never differs from the server's page.
+  const [hideIt, setHideIt] = useState(() => readStore(CHECKLIST_KEY) === "1");
+  const steps = [
+    { done: students.length > 0, text: "Add your students", link: tabLink("students", "Open Students") },
+    { done: assignments.length > 0, text: "Assign a unit to practise", link: tabLink("homework", "Open Homework") },
+    { done: students.some((s) => s.lastActive !== null), text: "Give students their login cards or the class code, so they can start", link: tabLink("students", "Print cards on Students") },
+  ];
+  if (hideIt || steps.every((s) => s.done)) return null;
+  return (
+    <section className="mt-4 rounded-2xl border border-line bg-white p-5" aria-label="Getting started">
+      <h2 className="text-xl font-bold">Getting started</h2>
+      <ol className="mt-2 space-y-1 font-read">
+        {steps.map((s) => (
+          <li key={s.text} className="flex flex-wrap items-center gap-x-3">
+            <span aria-hidden="true">{s.done ? "✅" : "⬜"}</span>
+            <span className="sr-only">{s.done ? "Done: " : "To do: "}</span>
+            <span className={s.done ? "text-ink-soft line-through" : ""}>{s.text}</span>
+            {!s.done && <span className="inline-flex min-h-11 items-center">{s.link}</span>}
+          </li>
+        ))}
+      </ol>
+      <button
+        type="button"
+        className="mt-1 inline-flex min-h-11 items-center text-sm font-semibold underline"
+        onClick={() => {
+          writeStore(CHECKLIST_KEY, "1");
+          setHideIt(true);
+        }}
+      >
+        Hide this checklist
+      </button>
+    </section>
   );
 }
 
@@ -973,7 +1129,9 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
   const [questions, setQuestions] = useState("");
   const [who, setWho] = useState<"all" | "some">("all");
   const [picked, setPicked] = useState<string[]>([]);
-  const [now] = useState(() => Date.now());
+  const [now, setNow] = useState(() => Date.now());
+  const [loadedAt, setLoadedAt] = useState(() => Date.now());
+  const [refreshing, setRefreshing] = useState(false);
   // "Assign extra practice to these students" on Progress arrives here with the students already chosen.
   const preselected = preselect?.join(",") ?? "";
   const [seen, setSeen] = useState("");
@@ -1016,6 +1174,8 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
         .then((d) => {
           setData(d);
           setReady(true);
+          setNow(Date.now());
+          setLoadedAt(Date.now());
         })
         .catch((e: Error) => setErr(e.message)),
     [id],
@@ -1023,6 +1183,21 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
   useEffect(() => {
     void load();
   }, [load]);
+  // Progress keeps itself fresh while it is on screen (about every 90 seconds, only while the page is visible and online).
+  useEffect(() => {
+    if (tab !== "progress") return;
+    const tick = () => {
+      if (document.visibilityState === "visible" && navigator.onLine !== false) void load();
+    };
+    const t = setInterval(tick, PROGRESS_REFRESH_MS);
+    return () => clearInterval(t);
+  }, [tab, load]);
+  const refresh = async () => {
+    setRefreshing(true);
+    setErr("");
+    await load();
+    setRefreshing(false);
+  };
 
   if (!data || !ready) return <p className="font-read">{err || "Loading…"}</p>;
   const { class: cls, assignments, students } = data;
@@ -1116,8 +1291,10 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
 
       {tab === "progress" && (
         <>
+          <FirstRun students={students} assignments={assignments} tabLink={tabLink} />
           <section className="mt-4 rounded-2xl border border-line bg-white p-5">
             <h2 className="text-xl font-bold">Students ({students.length})</h2>
+            <UpdatedAgo at={loadedAt} busy={refreshing} onRefresh={() => void refresh()} />
             {students.length === 0 ? (
               <p className="mt-2 font-read text-ink-soft">No one has joined yet. {tabLink("students", "Add students or share the class code")}</p>
             ) : assignments.length === 0 ? (
@@ -1342,11 +1519,12 @@ export function TeacherApp() {
   const { path, query } = useRoute();
   // #/class/{id}/{tab} opens a class on one tab; anything else is the class list.
   const classId = path[0] === "class" && path[1] ? path[1] : null;
+  const onAccount = path[0] === "account";
   const tab = CLASS_TABS.find((t) => t.path === path[2])?.path ?? "progress";
 
   useEffect(() => {
-    if (!classId) setPageTitle(signedIn === false ? "Sign in" : "Your classes");
-  }, [classId, signedIn]);
+    if (!classId) setPageTitle(signedIn === false ? "Sign in" : onAccount ? "Your account" : "Your classes");
+  }, [classId, signedIn, onAccount]);
 
   useEffect(() => {
     // A class student's login is not a teacher's: only a real account counts.
@@ -1362,7 +1540,7 @@ export function TeacherApp() {
     <div className="min-h-dvh bg-[#f6f5f1]">
       <SkipLink />
       <header className="sticky top-0 z-30 border-b border-line bg-white/90 backdrop-blur print:hidden" style={{ paddingTop: "env(safe-area-inset-top)" }}>
-        <div className="mx-auto flex max-w-4xl items-center justify-between gap-2 px-4 py-3">
+        <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-x-2 px-4 py-2">
           <span className="flex items-center gap-2">
             <Link href="/" className="text-2xl font-bold tracking-tight" aria-label={APP_NAME}>
               {APP_NAME.split("").map((ch, i) => (
@@ -1375,6 +1553,11 @@ export function TeacherApp() {
           </span>
           <div className="flex items-center gap-3">
             <Link href="/" className="inline-flex min-h-11 items-center font-semibold underline">Home</Link>
+            {signedIn && (
+              <a href="#/account" aria-current={onAccount ? "page" : undefined} className="inline-flex min-h-11 items-center font-semibold underline">
+                Account
+              </a>
+            )}
             {signedIn && (
               <button
                 type="button"
@@ -1422,6 +1605,8 @@ export function TeacherApp() {
               .catch(() => undefined)
               .finally(() => setSignedIn(true));
           }} />
+        ) : onAccount ? (
+          <AccountPage email={account.email} onSignedOut={() => setSignedIn(false)} />
         ) : classId ? (
           <ClassPage key={classId} id={classId} tab={tab} preselect={query.get("students")?.split(",").filter(Boolean)} onBack={() => go("/")} />
         ) : (

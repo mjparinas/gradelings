@@ -329,6 +329,9 @@ for (const tab of TEACHER_TABS) {
   await page.waitForTimeout(300);
   await walk(page, `teachers: ${tab.slice(1) || "progress"}`, 150);
 }
+await page.goto(`${BASE}/teachers/#/account`);
+await page.getByRole("heading", { level: 1, name: "Your account" }).waitFor();
+await walk(page, "teachers: account", 150);
 // Moving to another tab with the keyboard puts focus on the page heading.
 await page.goto(`${BASE}/teachers/#/class/${teacher.classId}`);
 await page.getByRole("heading", { level: 1, name: "Room 3" }).waitFor();

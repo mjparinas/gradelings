@@ -321,4 +321,28 @@ describe("classroom mode", () => {
     const parent2 = await parentWithChild("p4@example.com", "kid4");
     expect((await join_.POST(req("/api/classes/join/", "POST", { code: c.joinCode, profileId: "kid4" }, parent2))).status).toBe(404);
   });
+
+  it("gives the class list a few facts per class: students to check in with, work past due and the last practice", async () => {
+    const teacher = await account_("badges-teacher@example.com");
+    const empty = (await (await classes.POST(req("/api/classes/", "POST", { name: "Empty", grade: "2" }, teacher))).json()).class;
+    const { class: cls } = await (await classes.POST(req("/api/classes/", "POST", { name: "Room 9", grade: "2" }, teacher))).json();
+    const unitKey = "2/math/tens-and-ones";
+    // Due in the past, with no number of questions: past due while the child is below Proficient.
+    expect((await assignments.POST(req("/api/classes/assignments/", "POST", { classId: cls.id, unitKey, dueAt: Date.now() - 1000 }, teacher))).status).toBe(200);
+    const parent = await parentWithChild("badges-parent@example.com", "badge-kid");
+    expect((await join_.POST(req("/api/classes/join/", "POST", { code: cls.joinCode, profileId: "badge-kid" }, parent))).status).toBe(200);
+
+    const res = await classes.GET(req("/api/classes/?badges=1", "GET", undefined, teacher));
+    expect(res.status).toBe(200);
+    const { badges } = await res.json();
+    // A class with no students has nothing to report.
+    expect(badges[empty.id]).toBeUndefined();
+    expect(badges[cls.id].lastPractice).toBeGreaterThan(Date.now() - 2 * 3600_000);
+    expect(badges[cls.id].checkIn).toBeGreaterThanOrEqual(0);
+    expect(typeof badges[cls.id].pastDue).toBe("number");
+    // Only a signed-in teacher can ask, and only about their own classes.
+    expect((await classes.GET(req("/api/classes/?badges=1", "GET"))).status).toBe(401);
+    const other = await account_("badges-other@example.com");
+    expect((await (await classes.GET(req("/api/classes/?badges=1", "GET", undefined, other))).json()).badges).toEqual({});
+  });
 });
