@@ -26,6 +26,12 @@ export interface FamilyFacts {
   subscriptionInterval: string | null;
   /** When billing last changed (for a cancelled subscription, about when it ended). */
   billingEventAt: number;
+  /** When a subscription set to cancel stops (ms). Set while it still runs but won't renew. */
+  cancelAt?: number | null;
+  /** When the parent (or the admin) cancelled, from Stripe's `canceled_at`. Left out on older rows. */
+  cancelledAt?: number | null;
+  /** The family's latest payment was refunded in full, so the plan won't bring in money (refunds end the plan). */
+  refunded?: boolean;
   accessUntil: number | null;
   referred: boolean;
   verified: boolean;
@@ -90,7 +96,7 @@ export interface MonthMoney {
 export interface Metrics {
   generatedAt: number;
   people: { parents: number; families: number; children: number; teachers: number; students: number; classes: number; childrenPerFamily: number };
-  customers: { paying: number; monthly: number; yearly: number; pastDue: number; trialing: number; codeAccess: number; lifetime: number; free: number };
+  customers: { paying: number; monthly: number; yearly: number; pastDue: number; cancelling: number; trialing: number; codeAccess: number; lifetime: number; free: number };
   acquisition: {
     thisMonth: number;
     lastMonth: number;
@@ -111,6 +117,8 @@ export interface Metrics {
   revenue: {
     mrr: number;
     arr: number;
+    /** Paying families whose plan renews: the ones MRR counts. */
+    renewing: number;
     arppu: number | null;
     thisMonth: number;
     lastMonth: number;
@@ -128,7 +136,7 @@ export interface Metrics {
     customersEver: number;
     months: MonthMoney[];
     /** US families' money, in USD cents, kept apart from everything above. Null until there is any. */
-    usd: { mrr: number; arr: number; paying: number; thisMonth: number; lastMonth: number; yearToDate: number } | null;
+    usd: { mrr: number; arr: number; paying: number; renewing: number; thisMonth: number; lastMonth: number; yearToDate: number } | null;
   };
   other: { redemptions: number; reports: number };
 }
@@ -158,6 +166,19 @@ export function familyGroup(f: Pick<FamilyFacts, "plan" | "accessUntil" | "trial
 
 const isUsd = (p: PaymentFacts) => (p.currency ?? "cad").toLowerCase() === "usd";
 
+/** A paying family whose plan won't renew: cancelled to end at the period's end, or refunded in full. */
+export const wontRenew = (f: Pick<FamilyFacts, "cancelAt" | "refunded">) => Boolean(f.cancelAt) || Boolean(f.refunded);
+
+/**
+ * When a family cancelled, if it has: a subscription that ended, or one still running that is set to end.
+ * Older rows have no `cancelledAt`, so the last billing change stands in (for an ended plan, about when it ended).
+ */
+export function cancelledOn(f: Pick<FamilyFacts, "plan" | "subscriptionStatus" | "cancelAt" | "cancelledAt" | "billingEventAt">): number | null {
+  const ended = f.subscriptionStatus === "canceled" && f.plan !== "premium";
+  const ending = f.plan === "premium" && Boolean(f.cancelAt);
+  return ended || ending ? (f.cancelledAt ?? f.billingEventAt) : null;
+}
+
 export function computeMetrics(input: MetricsInput): Metrics {
   const { now, families } = input;
   // Every money sum below is in CAD; USD payments are summed separately at the end.
@@ -170,26 +191,46 @@ export function computeMetrics(input: MetricsInput): Metrics {
     monthly = 0,
     yearly = 0,
     pastDue = 0,
+    cancelling = 0,
+    ended30 = 0,
     trialing = 0,
     codeAccess = 0,
     lifetime = 0,
     free = 0,
     cancelled30 = 0,
     usPaying = 0,
-    usMonthly = 0,
-    usYearly = 0;
+    // Paying families whose plan renews. Only they bring in recurring revenue: a plan cancelled to end at the
+    // period's end stops counting from the day it was cancelled, though the family keeps access until then.
+    renewing = 0,
+    renewMonthly = 0,
+    renewYearly = 0,
+    usRenewing = 0,
+    usRenewMonthly = 0,
+    usRenewYearly = 0;
   for (const f of families) {
-    if (f.subscriptionStatus === "canceled" && f.billingEventAt > now - 30 * DAY) cancelled30++;
+    const cancelled = cancelledOn(f);
+    if (cancelled !== null && cancelled > now - 30 * DAY) {
+      cancelled30++;
+      if (f.plan !== "premium") ended30++;
+    }
     const group = familyGroup(f, now);
     if (group === "paying") {
+      const us = countryOf(toCountryCode(f.country)).currency === "USD";
+      const renews = !wontRenew(f);
       paying++;
       if (f.subscriptionInterval === "year") yearly++;
       else if (f.subscriptionInterval === "month") monthly++;
-      if (countryOf(toCountryCode(f.country)).currency === "USD") {
-        usPaying++;
-        if (f.subscriptionInterval === "year") usYearly++;
-        else if (f.subscriptionInterval === "month") usMonthly++;
-      }
+      if (us) usPaying++;
+      if (renews) {
+        renewing++;
+        if (f.subscriptionInterval === "year") renewYearly++;
+        else if (f.subscriptionInterval === "month") renewMonthly++;
+        if (us) {
+          usRenewing++;
+          if (f.subscriptionInterval === "year") usRenewYearly++;
+          else if (f.subscriptionInterval === "month") usRenewMonthly++;
+        }
+      } else cancelling++;
       if (f.subscriptionStatus === "past_due") pastDue++;
     } else if (group === "code") {
       codeAccess++;
@@ -234,11 +275,11 @@ export function computeMetrics(input: MetricsInput): Metrics {
   const yearToDate = sumBetween(yearStart, now + 1);
   // Monthly recurring revenue at list price: yearly plans count as a twelfth a month. Discounts aren't known
   // until a payment arrives, so this is an upper bound when discount codes are in use.
-  // Canadian families only; US families' MRR is in USD below.
-  const caMonthly = monthly - usMonthly;
-  const caYearly = yearly - usYearly;
-  const caPaying = paying - usPaying;
-  const otherPaying = caPaying - caMonthly - caYearly;
+  // Canadian families only; US families' MRR is in USD below. Plans that won't renew are left out.
+  const caMonthly = renewMonthly - usRenewMonthly;
+  const caYearly = renewYearly - usRenewYearly;
+  const caRenewing = renewing - usRenewing;
+  const otherPaying = caRenewing - caMonthly - caYearly;
   const mrr = Math.round((caMonthly + otherPaying) * MONTHLY_CENTS + (caYearly * YEARLY_CENTS) / 12);
   const monthsLeft = (yearEnd - now) / ((365.25 / 12) * DAY);
   const projectedRest = Math.round(mrr * monthsLeft);
@@ -266,14 +307,15 @@ export function computeMetrics(input: MetricsInput): Metrics {
     months.push({ label: monthLabel(from), revenue, fees, costs, profit: revenue - fees - costs, paying: payingIn });
   }
   const current = months[months.length - 1];
-  const churnRate = rate(cancelled30, paying + cancelled30);
-  const arppu = caPaying ? mrr / caPaying : null;
+  // Of the families paying 30 days ago (those paying now, plus those whose plan has since ended), the share that cancelled.
+  const churnRate = rate(cancelled30, paying + ended30);
+  const arppu = caRenewing ? mrr / caRenewing : null;
   const usdNet = (from: number, to: number) => usdPayments.filter((p) => p.paidAt >= from && p.paidAt < to).reduce((s, p) => s + Math.max(0, p.amount - p.refunded), 0);
-  const usOther = usPaying - usMonthly - usYearly;
-  const usdMrr = Math.round((usMonthly + usOther) * MONTHLY_CENTS_USD + (usYearly * YEARLY_CENTS_USD) / 12);
+  const usOther = usRenewing - usRenewMonthly - usRenewYearly;
+  const usdMrr = Math.round((usRenewMonthly + usOther) * MONTHLY_CENTS_USD + (usRenewYearly * YEARLY_CENTS_USD) / 12);
   const usd =
     usPaying || usdPayments.length
-      ? { mrr: usdMrr, arr: usdMrr * 12, paying: usPaying, thisMonth: usdNet(thisMonthStart, now + 1), lastMonth: usdNet(lastMonthStart, thisMonthStart), yearToDate: usdNet(yearStart, now + 1) }
+      ? { mrr: usdMrr, arr: usdMrr * 12, paying: usPaying, renewing: usRenewing, thisMonth: usdNet(thisMonthStart, now + 1), lastMonth: usdNet(lastMonthStart, thisMonthStart), yearToDate: usdNet(yearStart, now + 1) }
       : null;
 
   return {
@@ -287,7 +329,7 @@ export function computeMetrics(input: MetricsInput): Metrics {
       classes: input.classes,
       childrenPerFamily: families.length ? input.children / families.length : 0,
     },
-    customers: { paying, monthly, yearly, pastDue, trialing, codeAccess, lifetime, free },
+    customers: { paying, monthly, yearly, pastDue, cancelling, trialing, codeAccess, lifetime, free },
     acquisition: {
       thisMonth: inRange(thisMonthStart, now + 1),
       lastMonth: inRange(lastMonthStart, thisMonthStart),
@@ -314,6 +356,7 @@ export function computeMetrics(input: MetricsInput): Metrics {
     revenue: {
       mrr,
       arr: mrr * 12,
+      renewing: caRenewing,
       arppu,
       thisMonth,
       lastMonth: sumBetween(lastMonthStart, thisMonthStart),

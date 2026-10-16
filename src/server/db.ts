@@ -411,6 +411,9 @@ const FAMILY_COLUMNS: [string, string][] = [
   ["consent_revoked_at", "INTEGER"],
   // When a subscription the parent cancelled stops (ms), from Stripe's cancel_at or cancel_at_period_end. Null while it renews.
   ["cancel_at", "INTEGER"],
+  // When that subscription was cancelled (ms), from Stripe's canceled_at. Null while it renews. The dashboard counts
+  // a cancellation from this day, not from when the paid period runs out.
+  ["cancelled_at", "INTEGER"],
 ];
 
 async function addColumns(c: Client, table: string, columns: [string, string][]) {

@@ -148,19 +148,19 @@ function Money({ m, show, onDetail, reload }: { m: NonNullable<Parts["money"]>; 
   return (
     <>
       <ul className={tiles}>
-        <Tile onOpen={show("paying")} label="Monthly recurring revenue" value={money(r.mrr)} sub={`${money(r.arr)} a year at this rate`} />
+        <Tile onOpen={show("paying")} label="Monthly recurring revenue" value={money(r.mrr)} sub={`${money(r.arr)} a year at this rate, from ${num(r.renewing)} ${r.renewing === 1 ? "plan" : "plans"} that renew`} />
         <Tile onOpen={show("payments-month")} label="Revenue this month" value={money(r.thisMonth)} sub={`${money(r.lastMonth)} last month`} />
         <Tile onOpen={showMoney("Profit by month")} label="Profit this month" value={money(r.profitThisMonth)} sub={`after ${money(r.feesThisMonth)} fees and costs so far`} />
         <Tile onOpen={show("payments-year")} label={`Revenue in ${year} so far`} value={money(r.yearToDate)} sub={`profit ${money(r.profitYearToDate)}`} />
         <Tile onOpen={showMoney(`Projection for ${year}`)} label={`Projected revenue for ${year}`} value={money(r.projectedYear)} sub="so far, plus MRR for the rest of the year" />
         <Tile onOpen={showMoney(`Projection for ${year}`)} label={`Projected profit for ${year}`} value={money(r.projectedProfitYear)} sub={`with costs of ${money(r.monthlyCosts)} a month`} />
-        <Tile onOpen={show("paying")} label="Revenue per paying family" value={r.arppu === null ? "—" : money(Math.round(r.arppu))} sub="a month, on average" />
+        <Tile onOpen={show("paying")} label="Revenue per paying family" value={r.arppu === null ? "—" : money(Math.round(r.arppu))} sub="a month, on average, for plans that renew" />
         {r.usd && (
           <Tile
             onOpen={show("paying")}
             label="US families (USD, not in the totals above)"
             value={moneyUsd(r.usd.thisMonth)}
-            sub={`this month · ${moneyUsd(r.usd.mrr)} MRR from ${num(r.usd.paying)} paying · ${moneyUsd(r.usd.yearToDate)} in ${year}`}
+            sub={`this month · ${moneyUsd(r.usd.mrr)} MRR from ${num(r.usd.renewing)} renewing of ${num(r.usd.paying)} paying · ${moneyUsd(r.usd.yearToDate)} in ${year}`}
           />
         )}
         <Tile onOpen={show("cancelled")}
@@ -205,7 +205,7 @@ function Customers({ c: d, show }: { c: NonNullable<Parts["customers"]>; show: (
     <>
       <ul className={tiles}>
         <Tile onOpen={show("families")} label="Families" value={num(people.families)} sub={`${num(people.parents)} parent and teacher accounts`} />
-        <Tile onOpen={show("paying")} label="Paying" value={num(c.paying)} sub={`${num(c.monthly)} monthly, ${num(c.yearly)} yearly${c.pastDue ? `, ${num(c.pastDue)} past due` : ""}`} />
+        <Tile onOpen={show("paying")} label="Paying" value={num(c.paying)} sub={`${num(c.monthly)} monthly, ${num(c.yearly)} yearly${c.pastDue ? `, ${num(c.pastDue)} past due` : ""}${c.cancelling ? `, ${num(c.cancelling)} cancelling` : ""}`} />
         <Tile onOpen={show("trialing")} label="In free trial" value={num(c.trialing)} />
         <Tile onOpen={show("free")} label="Free (trial over, not paying)" value={num(c.free)} sub={`first ${FREE_UNITS_PER_COURSE} units of each course`} />
         <Tile onOpen={show("code-access")} label="Access from a code or admin" value={num(c.codeAccess)} sub={`${num(c.lifetime)} lifetime`} />

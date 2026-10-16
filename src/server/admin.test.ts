@@ -403,6 +403,28 @@ describe("codes, reports, stats and the change log", () => {
     expect(s.customers.paying).toBe(1);
     expect(s.revenue.mrr).toBe(1499);
 
+    // Cancelled in the billing portal: the month already paid still runs, but nothing more is coming.
+    const sub = { id: "sub_payer", status: "active", customer: "cus_payer", current_period_end: paidAt + 30 * 86_400, items: { data: [{ price: { recurring: { interval: "month" } } }] } };
+    await hook("customer.subscription.updated", { ...sub, cancel_at_period_end: true, canceled_at: paidAt + 10 });
+    expect((await dbm.query<{ cancelled_at: number }>("SELECT cancelled_at FROM families WHERE id = ?", [payer.familyId]))[0].cancelled_at).toBe((paidAt + 10) * 1000);
+    s = await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json();
+    expect(s.customers).toMatchObject({ paying: 1, cancelling: 1 });
+    expect(s.revenue).toMatchObject({ mrr: 0, arr: 0, renewing: 0, cancelled30: 1 });
+    const cancelled = await (await as(admin.cookie).get(statsDetail, "/api/admin/stats/detail/?view=cancelled")).json();
+    expect(cancelled.tables[0].rows).toEqual([expect.objectContaining({ familyId: payer.familyId, cells: expect.arrayContaining(["payer@example.com", (paidAt + 10) * 1000]) })]);
+    const payingList = await (await as(admin.cookie).get(statsDetail, "/api/admin/stats/detail/?view=paying")).json();
+    expect(payingList.tables[0].rows[0].cells).toEqual(expect.arrayContaining(["cancelling", 0]));
+    // "Don't cancel" puts it back.
+    await hook("customer.subscription.updated", { ...sub, cancel_at_period_end: false, canceled_at: null });
+    s = await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json();
+    expect(s.revenue).toMatchObject({ mrr: 1499, cancelled30: 0 });
+    expect(s.customers.cancelling).toBe(0);
+
+    // A full refund ends the plan, so it stops counting even before Stripe says the subscription ended.
+    await dbm.run("UPDATE payments SET refunded = amount WHERE id = 'in_1'");
+    expect((await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json()).revenue.mrr).toBe(0);
+    await dbm.run("UPDATE payments SET refunded = 0 WHERE id = 'in_1'");
+
     await hook("charge.refunded", { id: "ch_1", invoice: "in_1", amount_refunded: 500 });
     s = await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json();
     expect(s.revenue.thisMonth).toBe(999);

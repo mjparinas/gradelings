@@ -464,12 +464,14 @@ describe("Stripe webhook", () => {
     let family = await send("evt_cancel_1", { status: "trialing", cancel_at_period_end: true, current_period_end: 2_000_000_000 }, created);
     expect(family.plan).toBe("premium");
     expect(family.subscription).toMatchObject({ status: "trialing", currentPeriodEnd: 2_000_000_000_000, cancelAt: 2_000_000_000_000 });
+    expect(Number((await dbm.query<{ cancelled_at: number }>("SELECT cancelled_at FROM families WHERE id = ?", [familyId]))[0].cancelled_at)).toBe(created * 1000);
     // Newer Stripe API versions say when with cancel_at instead.
     family = await send("evt_cancel_2", { status: "active", cancel_at: 2_000_100_000, cancel_at_period_end: false, current_period_end: 2_000_000_000 }, created + 1);
     expect(family.subscription.cancelAt).toBe(2_000_100_000_000);
     // "Don't cancel" in the portal.
     family = await send("evt_cancel_3", { status: "active", cancel_at: null, cancel_at_period_end: false, current_period_end: 2_000_000_000 }, created + 2);
     expect(family.subscription.cancelAt).toBeUndefined();
+    expect((await dbm.query<{ cancelled_at: number | null }>("SELECT cancelled_at FROM families WHERE id = ?", [familyId]))[0].cancelled_at).toBeNull();
   });
 
   it("does not grant premium for a paid checkout that isn't a subscription", async () => {

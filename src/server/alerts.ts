@@ -107,7 +107,8 @@ export async function digestLines(now = Date.now()): Promise<{ subject: string; 
          (SELECT COUNT(*) FROM families f WHERE f.created_at > ? AND NOT EXISTS (SELECT 1 FROM parents s WHERE s.family_id = f.id AND s.role = 'student')) AS signups,
          (SELECT COUNT(DISTINCT family_id) FROM payments WHERE paid_at > ?) AS paid,
          (SELECT SUM(amount - refunded) FROM payments WHERE paid_at > ?) AS revenue,
-         (SELECT COUNT(*) FROM families WHERE subscription_status = 'canceled' AND billing_event_at > ?) AS cancelled`,
+         (SELECT COUNT(*) FROM families WHERE ((subscription_status = 'canceled' AND plan != 'premium') OR (plan = 'premium' AND cancel_at IS NOT NULL))
+            AND COALESCE(cancelled_at, billing_event_at) > ?) AS cancelled`,
       [since, since, since, since],
     ),
   ]);
