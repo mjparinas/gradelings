@@ -8,7 +8,7 @@ import { GRADE_ORDER, getSubjectMeta } from "@/content/subjects";
 import type { FrameworkId, GradeId } from "@/content/types";
 import { DateField } from "@/components/DateField";
 import { SelectMenu } from "@/components/SelectMenu";
-import { APP_NAME } from "@/lib/brand";
+import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { call, classInsights, HOMEWORK_GOALS, isUsClass, US_CLASS_CONSENT, type ClassInvite, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
 import { frameworkGroups, frameworkMenu } from "@/lib/frameworkGroups";
 import { gradeLabel } from "@/lib/gradeLabel";
@@ -764,8 +764,15 @@ export function TeacherApp() {
       <SkipLink />
       <header className="border-b border-line bg-white" style={{ paddingTop: "env(safe-area-inset-top)" }}>
         <div className="mx-auto flex max-w-4xl items-center justify-between gap-2 px-4 py-3">
-          <span className="text-lg font-bold">
-            {APP_NAME} <span className="font-semibold text-ink-soft">for teachers</span>
+          <span className="flex items-center gap-2">
+            <Link href="/" className="text-2xl font-bold tracking-tight" aria-label={APP_NAME}>
+              {APP_NAME.split("").map((ch, i) => (
+                <span key={i} aria-hidden="true" style={{ color: WORDMARK_COLOURS[i % WORDMARK_COLOURS.length] }}>
+                  {ch}
+                </span>
+              ))}
+            </Link>
+            <span className="text-lg font-semibold text-ink-soft">for teachers</span>
           </span>
           <div className="flex items-center gap-3">
             <Link href="/" className="font-semibold underline">Home</Link>
