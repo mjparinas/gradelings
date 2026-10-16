@@ -1,5 +1,5 @@
 import { error, getSession, json, newId, rateLimited, sameOrigin } from "@/server/auth";
-import { assignedAt, assignmentAudience, cleanClassName, cleanSecondGrade, assignmentDue, assignmentGoals, assignmentKeys, classProgressAndMisses, classTeachers, isFramework, MAX_CLASSES, newJoinCode, ownedClass, pendingInvites, removeClassTeachers, teachingClass } from "@/server/classroom";
+import { assignedAt, assignmentAudience, cleanClassName, cleanSecondGrade, assignmentDue, assignmentGoals, assignmentKeys, classProgressAndMisses, classTeachers, hiddenClassIds, isFramework, MAX_CLASSES, newJoinCode, ownedClass, pendingInvites, removeClassTeachers, teachingClass } from "@/server/classroom";
 import { batch, query, run } from "@/server/db";
 import { liveClassStatements } from "@/server/live";
 import { isFlagOn } from "@/server/flags";
@@ -60,8 +60,9 @@ export async function GET(req: Request) {
      FROM classes c WHERE c.closed_at IS NULL AND (c.owner_parent_id = ? OR c.id IN (SELECT class_id FROM class_teachers WHERE parent_id = ?)) ORDER BY c.created_at`,
     [session.parentId, session.parentId],
   );
+  const hidden = new Set(await hiddenClassIds(session.parentId));
   return json({
-    classes: rows.map((r) => ({ id: r.id, name: r.name, grade: r.grade, grade2: r.grade2, framework: r.framework, joinCode: r.join_code, students: Number(r.students), role: r.owner_parent_id === session.parentId ? "owner" : "co-teacher" })),
+    classes: rows.map((r) => ({ id: r.id, name: r.name, grade: r.grade, grade2: r.grade2, framework: r.framework, joinCode: r.join_code, students: Number(r.students), role: r.owner_parent_id === session.parentId ? "owner" : "co-teacher", hidden: hidden.has(r.id) })),
   });
 }
 

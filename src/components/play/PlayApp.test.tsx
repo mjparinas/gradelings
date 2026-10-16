@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { act, render, screen } from "@testing-library/react";
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { useBand } from "../band";
 
 const h = vi.hoisted(() => ({
@@ -17,6 +17,7 @@ const h = vi.hoisted(() => ({
   gate: vi.fn(),
   go: vi.fn(),
   start: null as null | { framework: string; grade?: string; subject?: string; unit?: string },
+  card: null as null | { classCode?: string; studentCode: string },
 }));
 
 vi.mock("@/lib/router", () => ({
@@ -73,7 +74,20 @@ vi.mock("./PlacementTest", () => ({ PlacementTest: screenStub("PlacementTest") }
 vi.mock("./Secrets", () => ({ SecretsListener: () => <p>secrets on</p> }));
 vi.mock("./Session", () => ({ Session: screenStub("Session") }));
 vi.mock("./Shop", () => ({ Shop: screenStub("Shop") }));
-vi.mock("./Start", () => ({ FirstRun: screenStub("FirstRun"), Picker: screenStub("Picker"), usePlayStart: () => h.start }));
+vi.mock("./Start", () => ({
+  FirstRun: screenStub("FirstRun"),
+  Picker: screenStub("Picker"),
+  usePlayStart: () => h.start,
+  useClassSignInLink: () => h.card,
+  CardSignIn: (props: { codes: { studentCode: string }; onDone: () => void }) => (
+    <p data-testid="screen">
+      CardSignIn {props.codes.studentCode}
+      <button type="button" onClick={props.onDone}>
+        done
+      </button>
+    </p>
+  ),
+}));
 vi.mock("./Toasts", () => ({ Toasts: () => null }));
 vi.mock("./ClassTimer", () => ({ ClassTimerChip: () => null }));
 vi.mock("./LessonScreen", () => ({ LessonScreen: screenStub("LessonScreen") }));
@@ -123,6 +137,37 @@ describe("a link from a public page", () => {
     h.start = start;
     render(<PlayApp />);
     expect(h.go).toHaveBeenCalledWith("/", undefined, true);
+  });
+});
+
+describe("a class login card scanned on a device that already has players", () => {
+  beforeEach(() => {
+    h.card = { studentCode: "KM7PQR3XTA" };
+    h.profiles = [ava];
+    h.active = ava;
+  });
+  afterEach(() => {
+    h.card = null;
+  });
+
+  it("asks before it signs in, and goes back to the player screens when the child says no", () => {
+    render(<PlayApp />);
+    expect(shown()).toContain("CardSignIn KM7PQR3XTA");
+    act(() => screen.getByRole("button", { name: "done" }).click());
+    expect(shown()).toContain("Hub");
+  });
+
+  it("does nothing on a brand-new device, where the first-run screens already handle the card", () => {
+    h.profiles = [];
+    h.active = undefined;
+    render(<PlayApp />);
+    expect(shown()).toContain("FirstRun");
+  });
+
+  it("leaves a device alone when the page has no card in its address", () => {
+    h.card = null;
+    render(<PlayApp />);
+    expect(shown()).toContain("Hub");
   });
 });
 

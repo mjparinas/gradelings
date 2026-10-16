@@ -24,6 +24,8 @@ export interface ClassSummary {
   students: number;
   /** Owner of the class, or a co-teacher the owner invited. Older responses omit it (owner). */
   role?: "owner" | "co-teacher";
+  /** Hidden from this teacher's class list (saved on their account). */
+  hidden?: boolean;
 }
 
 export interface TeacherEntry {

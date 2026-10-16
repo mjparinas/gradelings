@@ -14,7 +14,7 @@ import { useDerived, useProfiles, useStore } from "@/lib/store";
 import type { Profile } from "@/lib/model";
 import { SayButton } from "./BuddySays";
 import { AVATARS, Critter, CritterSvg, SpeechBubble } from "../Critter";
-import { signInStudent } from "@/lib/account";
+import { signInStudent, signOutStudent } from "@/lib/account";
 import { Page } from "../ui";
 import { ProvinceMenu } from "./ProvinceMenu";
 import { useFlag } from "@/lib/remoteFlags";
@@ -98,7 +98,7 @@ export function FirstRun() {
  * A student signs in with the one code on their login card. Cards printed before one-code sign-in
  * also carry a class code, so that field appears when the child says their card has one (or the card's QR code carried it).
  */
-export function ClassSignIn({ onBack, codes }: { onBack: () => void; codes?: ClassCodes }) {
+export function ClassSignIn({ onBack, codes, onSignedIn }: { onBack: () => void; codes?: ClassCodes; onSignedIn?: () => void }) {
   const [code, setCode] = useState(codes?.studentCode ?? "");
   const [twoCodes, setTwoCodes] = useState(Boolean(codes?.classCode));
   const [classCode, setClassCode] = useState(codes?.classCode ?? "");
@@ -125,6 +125,7 @@ export function ClassSignIn({ onBack, codes }: { onBack: () => void; codes?: Cla
           setErr("");
           try {
             await signInStudent(code, twoCodes ? classCode : "");
+            onSignedIn?.();
           } catch (x) {
             setErr((x as Error).message);
             setBusy(false);
@@ -172,6 +173,62 @@ export function ClassSignIn({ onBack, codes }: { onBack: () => void; codes?: Cla
       </button>
       <button type="button" className="text-base font-semibold text-ink-soft underline" onClick={onBack}>
         ← Back
+      </button>
+    </Page>
+  );
+}
+
+/**
+ * A login card's QR code opened on a device that already has players. Signing in to a class replaces everything on
+ * the device, so say so first (a grown-up's account has to be signed out in the grown-ups area, and players that were
+ * never saved to an account would be lost), then carry on to the usual sign-in with the codes filled in.
+ */
+export function CardSignIn({ codes, onDone }: { codes: ClassCodes; onDone: () => void }) {
+  const profiles = useProfiles();
+  const account = useStore((s) => s.family.account);
+  // Once the child agrees (or the device was cleared), the sign-in stays on screen while the device swaps over.
+  const [agreed, setAgreed] = useState(false);
+  const [leaving, setLeaving] = useState(false);
+  if (agreed || profiles.length === 0) return <ClassSignIn onBack={onDone} codes={codes} onSignedIn={onDone} />;
+  const names = profiles.map((p) => p.name).join(", ");
+  if (account && !account.student) {
+    return (
+      <Page className="items-center justify-center gap-5 text-center">
+        <Critter id="ollie" mood="think" size={110} />
+        <h1 className="text-3xl font-bold">A grown-up is signed in here</h1>
+        <p className="max-w-sm font-read text-lg">To sign in to a class, ask a grown-up to sign out in the grown-ups area first. Then scan the card again.</p>
+        <Link href="/parents/" className="btn h-12 px-4 text-base text-ink-soft">
+          🔒 Grown-ups
+        </Link>
+        <button type="button" className="btn btn-good min-h-16 w-full max-w-sm text-2xl" onClick={onDone}>
+          OK
+        </button>
+      </Page>
+    );
+  }
+  return (
+    <Page className="items-center justify-center gap-5 text-center">
+      <Critter id="ollie" mood="think" size={110} />
+      <h1 className="text-3xl font-bold">Sign in to your class?</h1>
+      <p className="max-w-sm font-read text-lg">
+        {account?.student
+          ? "Someone is signed in to a class on this device. I'll sign them out first."
+          : `This device has ${profiles.length === 1 ? "a player" : "players"}: ${names}. Signing in to a class replaces them on this device. Practice that was never saved to a grown-up's account is lost.`}
+      </p>
+      <button
+        type="button"
+        className="btn btn-good min-h-16 w-full max-w-sm text-2xl"
+        disabled={leaving}
+        onClick={async () => {
+          setLeaving(true);
+          if (account?.student) await signOutStudent();
+          setAgreed(true);
+        }}
+      >
+        {account?.student ? "Sign in to my class" : "Replace them and sign in"}
+      </button>
+      <button type="button" className="btn min-h-14 w-full max-w-sm text-xl" onClick={onDone}>
+        Keep this device as it is
       </button>
     </Page>
   );

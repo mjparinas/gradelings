@@ -388,6 +388,8 @@ const PARENT_COLUMNS: [string, string][] = [
   ["admin_mail", "INTEGER NOT NULL DEFAULT 1"],
   // Set when Resend reports a bounce or a spam complaint, so the panel stops emailing the address.
   ["email_bounced_at", "INTEGER"],
+  // The teacher's classes they have hidden from their own class list (comma-separated class ids).
+  ["hidden_classes", "TEXT"],
 ];
 
 /** Which province's curriculum a class assigns units from, and its inactivity-retention state. */

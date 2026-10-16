@@ -77,17 +77,47 @@ describe("class list", () => {
     await waitFor(() => expect(names()).toEqual(["Room 4", "Room 3"]));
   });
 
-  it("hides a finished class on this device and brings it back", async () => {
+  it("hides a finished class, saves that on the account, and brings it back", async () => {
     const user = userEvent.setup();
     render(<TeacherApp />);
     await screen.findByText("Room 4");
     await user.click(screen.getByRole("button", { name: "Hide Room 3 from this list" }));
     expect(screen.queryByText("Room 3")).not.toBeInTheDocument();
-    expect(localStorage.getItem("gradelings.teacher.hiddenClasses")).toBe("class-1");
+    expect(mocks.call).toHaveBeenCalledWith("/api/classes/hidden/", "PATCH", { classId: "class-1", hidden: true });
     await user.click(screen.getByRole("button", { name: "Show 1 hidden class" }));
     expect(screen.getByText("Room 3")).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Show Room 3 again" }));
-    expect(localStorage.getItem("gradelings.teacher.hiddenClasses")).toBeNull();
+    expect(mocks.call).toHaveBeenCalledWith("/api/classes/hidden/", "PATCH", { classId: "class-1", hidden: false });
+  });
+
+  it("starts with the classes the account already hides, on any device", async () => {
+    mocks.call.mockImplementation(((base) => (url: string, method?: string, body?: unknown) =>
+      url === "/api/classes/" && (method ?? "GET") === "GET" ? Promise.resolve({ classes: [{ ...room3, hidden: true }, room4] }) : base(url, method, body))(mocks.call.getMockImplementation()!));
+    render(<TeacherApp />);
+    await screen.findByText("Room 4");
+    expect(screen.queryByText("Room 3")).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Show 1 hidden class" })).toBeInTheDocument();
+  });
+
+  it("puts the classes this device had hidden on the account once, then forgets them here", async () => {
+    localStorage.setItem("gradelings.teacher.hiddenClasses", "class-1,gone-class");
+    render(<TeacherApp />);
+    await screen.findByText("Room 4");
+    expect(screen.queryByText("Room 3")).not.toBeInTheDocument();
+    await waitFor(() => expect(localStorage.getItem("gradelings.teacher.hiddenClasses")).toBeNull());
+    expect(mocks.call).toHaveBeenCalledWith("/api/classes/hidden/", "PATCH", { classId: "class-1", hidden: true });
+    expect(mocks.call).not.toHaveBeenCalledWith("/api/classes/hidden/", "PATCH", { classId: "gone-class", hidden: true });
+  });
+
+  it("shows the class again and says why when the account can't save the choice", async () => {
+    const user = userEvent.setup();
+    const base = mocks.call.getMockImplementation()!;
+    mocks.call.mockImplementation((url: string, method?: string, body?: unknown) => (url === "/api/classes/hidden/" ? Promise.reject(new Error("Offline")) : base(url, method, body)));
+    render(<TeacherApp />);
+    await screen.findByText("Room 4");
+    await user.click(screen.getByRole("button", { name: "Hide Room 3 from this list" }));
+    expect(await screen.findByText("Offline")).toBeInTheDocument();
+    expect(screen.getByText("Room 3")).toBeInTheDocument();
   });
 });
 
