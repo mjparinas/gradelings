@@ -33,6 +33,7 @@ vi.mock("@/lib/remoteFlags", () => ({ refreshFlags: h.refreshFlags, useIsOn: () 
 vi.mock("@/lib/sync", () => ({ startBackgroundSync: h.startBackgroundSync }));
 vi.mock("@/lib/useGradeContent", () => ({ prefetchGrades: h.prefetchGrades }));
 vi.mock("@/components/VoicePreload", () => ({ VoicePreload: () => null }));
+vi.mock("./LiveQuestion", () => ({ useLiveQuestion: () => ({ live: null, offline: false, note: "", answer: () => {} }), LiveQuestionCard: () => null }));
 vi.mock("@/lib/store", () => ({
   useReady: () => h.ready,
   useProfiles: () => h.profiles,
