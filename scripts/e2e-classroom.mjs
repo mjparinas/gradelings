@@ -67,11 +67,11 @@ await page.goto(`${BASE}/play/`);
 await page.getByRole("button", { name: /Let.s go/ }).waitFor();
 await page.getByRole("button", { name: "My teacher gave me a code" }).click();
 
-// A wrong code is refused kindly.
-await page.getByLabel("Class code").fill(cls.joinCode);
-await page.getByLabel("My code").fill("ZZZZZZZZ");
+// One code is all a student types, and a wrong one is refused kindly.
+check(!(await vis(page.getByLabel("Class code"))), "the sign-in screen asks for one code, not a class code too");
+await page.getByLabel("My code").fill("ZZZZZZZZZZ");
 await page.getByRole("button", { name: /Let.s go/ }).click();
-check(await page.getByRole("alert").filter({ hasText: /don.t match/ }).waitFor({ timeout: 8000 }).then(() => true, () => false), "a wrong code is refused with a kind message");
+check(await page.getByRole("alert").filter({ hasText: /doesn.t match/ }).waitFor({ timeout: 8000 }).then(() => true, () => false), "a wrong code is refused with a kind message");
 
 await page.getByLabel("My code").fill(code);
 await page.getByRole("button", { name: /Let.s go/ }).click();

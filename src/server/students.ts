@@ -14,14 +14,33 @@ import { MAX_STUDENTS, type ClassRow } from "./classroom";
 // in a hidden family record that is deleted when the student is removed or the class is closed.
 
 const CODE_CHARS = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
-/** Eight characters from 31 (about 8.5 × 10^11 codes), so guessing one even with the class code is impractical. */
-export const STUDENT_CODE_LENGTH = 8;
+/**
+ * Ten characters from 31 (about 8.2 × 10^14 codes), unique across every class, so a student signs in
+ * with this one code alone. Even with a million students and a thousand networks each guessing at the
+ * sign-in limit all day, finding any account would take years. Printed as two groups of five.
+ */
+export const STUDENT_CODE_LENGTH = 10;
+/** Codes made before one-code sign-in: eight characters, unique only within their class, so they still need the class code. */
+export const CLASS_STUDENT_CODE_LENGTH = 8;
 
 export function newStudentCode(): string {
   return Array.from({ length: STUDENT_CODE_LENGTH }, () => CODE_CHARS[randomInt(CODE_CHARS.length)]).join("");
 }
 
 export const normalizeStudentCode = (v: unknown): string => String(v ?? "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, STUDENT_CODE_LENGTH);
+
+/** `count` new codes that no student anywhere has. */
+async function freshCodes(count: number): Promise<string[]> {
+  const codes = new Set<string>();
+  while (codes.size < count) {
+    const batchOf = Array.from({ length: count - codes.size }, newStudentCode).filter((c) => !codes.has(c));
+    const taken = new Set(
+      (await query<{ login_code: string }>(`SELECT login_code FROM students WHERE login_code IN (${batchOf.map(() => "?").join(",")})`, batchOf)).map((r) => r.login_code),
+    );
+    for (const c of batchOf) if (!taken.has(c)) codes.add(c);
+  }
+  return [...codes];
+}
 
 /** A first name or nickname, with no markup and no stray spaces. */
 export function cleanStudentName(v: unknown): string {
@@ -47,14 +66,12 @@ export async function addStudents(cls: ClassRow, names: string[], grade: Profile
   const have = Number((await query<{ n: number }>("SELECT COUNT(*) AS n FROM class_members WHERE class_id = ?", [cls.id]))[0].n);
   const room = Math.max(0, MAX_STUDENTS - have);
   const take = names.slice(0, room);
-  const used = new Set((await query<{ login_code: string }>("SELECT login_code FROM students WHERE class_id = ?", [cls.id])).map((r) => r.login_code));
+  const codes = take.length ? await freshCodes(take.length) : [];
   const now = Date.now();
   const created: StudentCode[] = [];
   const statements: Parameters<typeof batch>[0] = [];
   take.forEach((name, i) => {
-    let code = newStudentCode();
-    while (used.has(code)) code = newStudentCode();
-    used.add(code);
+    const code = codes[i];
     const id = newId();
     const familyId = newId();
     const parentId = newId();
@@ -173,15 +190,30 @@ export async function removeStudentsOfOwner(ownerParentIds: string[]): Promise<v
 export async function resetStudentCode(classId: string, studentId: string): Promise<string | null> {
   const rows = await query<{ id: string }>("SELECT id FROM students WHERE id = ? AND class_id = ?", [studentId, classId]);
   if (!rows[0]) return null;
-  const used = new Set((await query<{ login_code: string }>("SELECT login_code FROM students WHERE class_id = ?", [classId])).map((r) => r.login_code));
-  let code = newStudentCode();
-  while (used.has(code)) code = newStudentCode();
+  const [code] = await freshCodes(1);
   await batch([
     { sql: "UPDATE students SET login_code = ? WHERE id = ?", args: [code, studentId] },
     // Signing in again is needed on every device.
     { sql: "DELETE FROM sessions WHERE parent_id = (SELECT parent_id FROM students WHERE id = ?)", args: [studentId] },
   ]);
   return code;
+}
+
+/**
+ * Moves every student in a class who still has a two-code login to a one-code login, and signs them
+ * out everywhere. Returns how many changed. Old cards stop working, so the teacher reprints them.
+ */
+export async function upgradeClassCodes(classId: string): Promise<number> {
+  const rows = await query<{ id: string }>("SELECT id FROM students WHERE class_id = ? AND length(login_code) <> ?", [classId, STUDENT_CODE_LENGTH]);
+  if (!rows.length) return 0;
+  const codes = await freshCodes(rows.length);
+  await batch(
+    rows.flatMap((r, i) => [
+      { sql: "UPDATE students SET login_code = ? WHERE id = ?", args: [codes[i], r.id] },
+      { sql: "DELETE FROM sessions WHERE parent_id = (SELECT parent_id FROM students WHERE id = ?)", args: [r.id] },
+    ]),
+  );
+  return rows.length;
 }
 
 export interface RosterEntry {

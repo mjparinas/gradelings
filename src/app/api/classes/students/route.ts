@@ -1,6 +1,6 @@
 import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
 import { classGrades, ownedClass, teachingClass } from "@/server/classroom";
-import { addStudents, cleanStudentName, removeStudent, resetStudentCode } from "@/server/students";
+import { addStudents, cleanStudentName, removeStudent, resetStudentCode, upgradeClassCodes } from "@/server/students";
 
 // A teacher adds students to a class they own. Each gets a login code; there is no email or password.
 
@@ -45,11 +45,15 @@ export async function DELETE(req: Request) {
   return removed ? json({ removed: true }) : error(404, "Student not found");
 }
 
-/** Gives a student a new login code and signs them out everywhere. */
+/**
+ * Gives a student a new login code and signs them out everywhere. With `all=1` instead of a student,
+ * gives every student who still needs the class code a one-code login.
+ */
 export async function PATCH(req: Request) {
   const params = new URL(req.url).searchParams;
   const found = await teacherClass(req, params.get("classId") ?? "");
   if (found.fail) return found.fail;
+  if (params.get("all") === "1") return json({ changed: await upgradeClassCodes(found.cls!.id) });
   const code = await resetStudentCode(found.cls!.id, params.get("studentId") ?? "");
   return code ? json({ loginCode: code }) : error(404, "Student not found");
 }

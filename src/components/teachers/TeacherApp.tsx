@@ -9,7 +9,7 @@ import type { FrameworkId, GradeId } from "@/content/types";
 import { DateField } from "@/components/DateField";
 import { SelectMenu } from "@/components/SelectMenu";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
-import { call, classInsights, HOMEWORK_GOALS, homeworkOverview, isHomeworkDone, isUsClass, US_CLASS_CONSENT, type ClassInvite, type MissedQuestion, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
+import { call, classInsights, HOMEWORK_GOALS, homeworkOverview, isHomeworkDone, isOneCode, isUsClass, showLoginCode, US_CLASS_CONSENT, type ClassInvite, type MissedQuestion, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
 import { frameworkGroups, frameworkMenu } from "@/lib/frameworkGroups";
 import { classCsv } from "@/lib/classCsv";
 import { countryOf } from "@/lib/country";
@@ -382,9 +382,11 @@ function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChan
   const [names, setNames] = useState("");
   const [busy, setBusy] = useState(false);
   const [removing, setRemoving] = useState<RosterEntry | null>(null);
+  const [upgrading, setUpgrading] = useState(false);
   const [chosen, setChosen] = useState<string[]>([]);
   const [removingMany, setRemovingMany] = useState(false);
   const { class: cls, roster, students } = data;
+  const older = roster.filter((r) => !isOneCode(r.loginCode)).length;
   // A split class asks which grade the new students are in.
   const [newGrade, setNewGrade] = useState<GradeId>(cls.grade);
   const isOwner = (data.role ?? "owner") === "owner";
@@ -436,7 +438,7 @@ function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChan
                 {cls.grade2 && byProfile.get(r.profileId) && <span className="block text-sm font-normal text-ink-soft">{gradeLabel(byProfile.get(r.profileId)!.grade as GradeId, cls.framework)}</span>}
               </span>
               <span className="font-mono text-xl font-bold tracking-widest" aria-label={`Login code ${r.loginCode.split("").join(" ")}`}>
-                {r.loginCode}
+                {showLoginCode(r.loginCode)}
               </span>
               <button type="button" className="min-h-9 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => onChange(`/api/classes/students/?classId=${cls.id}&studentId=${r.id}`, "PATCH")}>
                 New code
@@ -479,8 +481,36 @@ function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChan
         </div>
       </form>
       <p className="mt-2 text-sm text-ink-soft">
-        Students sign in at {APP_NAME} with the class code <b className="font-mono">{cls.joinCode}</b> and their own code. Keep the cards somewhere private.
+        Students sign in at {APP_NAME} with just their own code. Keep the cards somewhere private.
       </p>
+      {older > 0 && (
+        <div className="mt-3 rounded-xl bg-[#fff4e5] p-3">
+          <p className="font-read text-sm">
+            {older === 1 ? "1 student has" : `${older} students have`} an older code that also needs the class code <b className="font-mono">{cls.joinCode}</b>. It keeps working. Switch to one code each to make signing in simpler: their old cards stop working and they sign in again with new cards.
+          </p>
+          {upgrading ? (
+            <div className="mt-2 flex flex-wrap gap-2">
+              <button
+                type="button"
+                className={`${btn} bg-[#ff9f43] text-[#0f172a]`}
+                onClick={async () => {
+                  setUpgrading(false);
+                  await onChange(`/api/classes/students/?classId=${cls.id}&all=1`, "PATCH");
+                }}
+              >
+                Yes, make new codes
+              </button>
+              <button type="button" className={`${btn} border border-line bg-white`} onClick={() => setUpgrading(false)}>
+                Cancel
+              </button>
+            </div>
+          ) : (
+            <button type="button" className={`${btn} mt-2 border border-line bg-white`} onClick={() => setUpgrading(true)}>
+              Switch to one code each
+            </button>
+          )}
+        </div>
+      )}
       {removingMany && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-4" role="dialog" aria-modal="true" aria-label={`Remove ${chosen.length} students?`} onClick={() => setRemovingMany(false)}>
           <div className="w-full max-w-md rounded-3xl border-2 border-line bg-white p-6" onClick={(e) => e.stopPropagation()}>
@@ -722,11 +752,13 @@ function PrintSheet({ data, label, mode, only }: { data: ClassDetail; label: (ke
             <p>
               Go to <b>{typeof window === "undefined" ? "" : window.location.host}/play</b> and tap “My teacher gave me a code”.
             </p>
-            <p className="mt-2">
-              Class code: <b className="font-mono text-xl tracking-widest">{cls.joinCode}</b>
-            </p>
-            <p>
-              My code: <b className="font-mono text-xl tracking-widest">{r.loginCode}</b>
+            {!isOneCode(r.loginCode) && (
+              <p className="mt-2">
+                Class code: <b className="font-mono text-xl tracking-widest">{cls.joinCode}</b>
+              </p>
+            )}
+            <p className={isOneCode(r.loginCode) ? "mt-2" : undefined}>
+              My code: <b className="font-mono text-xl tracking-widest">{showLoginCode(r.loginCode)}</b>
             </p>
           </div>
         ))}
