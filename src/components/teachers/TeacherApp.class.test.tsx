@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { act, render, screen, waitFor, within } from "@testing-library/react";
+import { act, cleanup, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { getFramework } from "@/content/frameworks";
@@ -459,6 +459,44 @@ describe("TeacherApp class page", () => {
     window.location.hash = "#/class/class-1/nope";
     expect(await screen.findByRole("heading", { name: "Students (3)" })).toBeInTheDocument();
     expect(within(screen.getByRole("navigation", { name: "Class sections" })).getByRole("link", { name: /Progress/ })).toHaveAttribute("aria-current", "page");
+  });
+
+  it("renames the class from Settings", async () => {
+    serve({ ...detail, role: "owner", teachers: [{ id: "o", email: "owner@example.com", role: "owner" }], invites: [] });
+    const user = await openClass();
+    await openTab(user, "Settings");
+    expect(screen.getByRole("button", { name: "Save name" })).toBeDisabled();
+    const input = screen.getByLabelText("Name");
+    await user.clear(input);
+    await user.type(input, "Room 4");
+    await user.click(screen.getByRole("button", { name: "Save name" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/?id=class-1", "PATCH", { name: "Room 4" }));
+  });
+
+  it("moves the class up a grade only after a second tap, and says so at the last grade", async () => {
+    const owner = { role: "owner", teachers: [{ id: "o", email: "owner@example.com", role: "owner" }], invites: [] };
+    serve({ ...detail, ...owner });
+    const user = await openClass();
+    await openTab(user, "Settings");
+    await user.click(screen.getByRole("button", { name: /^Move up to/ }));
+    expect(mocks.call).not.toHaveBeenCalledWith("/api/classes/?id=class-1", "PATCH", { action: "next-year" });
+    await user.click(screen.getByRole("button", { name: "Yes, move Room 3 up" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/?id=class-1", "PATCH", { action: "next-year" }));
+  });
+
+  it("has no next year for a Grade 9 class, and none of this for a co-teacher", async () => {
+    serve({ ...detail, class: { ...cls, grade: "9" }, role: "owner", teachers: [{ id: "o", email: "owner@example.com", role: "owner" }], invites: [] });
+    let user = await openClass();
+    await openTab(user, "Settings");
+    expect(screen.getByText(/already in the last grade/)).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /^Move up to/ })).not.toBeInTheDocument();
+    cleanup();
+    window.location.hash = "";
+    serve({ ...detail, role: "teacher", teachers: [{ id: "o", email: "owner@example.com", role: "owner" }], invites: [] });
+    user = await openClass();
+    await openTab(user, "Settings");
+    expect(screen.queryByRole("heading", { name: "Class name" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: "Start next school year" })).not.toBeInTheDocument();
   });
 
   it("removing a student can be cancelled", async () => {

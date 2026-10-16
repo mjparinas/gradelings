@@ -13,6 +13,16 @@ import { loadChildData } from "./reportData";
 // child with that code (and can unlink at any time). The teacher then sees that child's first name,
 // grade and practice results for the units they assigned, and nothing else.
 
+/** One line of plain text: it appears in invitation emails and on printed cards. */
+export function cleanClassName(v: unknown): string {
+  return typeof v === "string" ? v.replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim().slice(0, 60) : "";
+}
+
+/** The grade after this one, or null after Grade 9. */
+export function nextGrade(grade: GradeId): GradeId | null {
+  return (GRADE_ORDER[GRADE_ORDER.indexOf(grade) + 1] as GradeId | undefined) ?? null;
+}
+
 export const MAX_CLASSES = 10;
 export const MAX_STUDENTS = 40;
 export const MAX_ASSIGNMENTS = 60;

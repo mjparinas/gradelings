@@ -49,6 +49,14 @@ function classGradeText(c: { grade: string; grade2?: string | null; framework: s
   return /^Grade /.test(first) ? `Grades ${plain(first)} and ${plain(second)}` : `${plain(first)} and ${second}`;
 }
 
+/** The class a year later: each grade one up, or null once a grade has no next one. */
+function nextGradeOf(c: { grade: GradeId; grade2?: GradeId | null; framework: string }) {
+  const up = (g: GradeId) => GRADE_ORDER[GRADE_ORDER.indexOf(g) + 1] as GradeId | undefined;
+  const grade = up(c.grade);
+  const grade2 = c.grade2 ? up(c.grade2) : null;
+  return grade && (!c.grade2 || grade2) ? { grade, grade2: grade2 ?? null, framework: c.framework } : null;
+}
+
 /** The grade next to `grade` a class could share (a split class), as menu options after "None". */
 function secondGradeOptions(grade: GradeId, framework: string) {
   const i = GRADE_ORDER.indexOf(grade);
@@ -698,6 +706,8 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
   const [pick, setPick] = useState("");
   const [err, setErr] = useState("");
   const [confirmClose, setConfirmClose] = useState(false);
+  const [confirmYear, setConfirmYear] = useState(false);
+  const [nameDraft, setNameDraft] = useState<string | null>(null);
   const [due, setDue] = useState("");
   const [questions, setQuestions] = useState("");
   const [who, setWho] = useState<"all" | "some">("all");
@@ -979,7 +989,56 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
 
       {tab === "settings" && (
         <>
+          {isOwner && (
+            <section className="mt-4 rounded-2xl border border-line bg-white p-5">
+              <h2 className="text-xl font-bold">Class name</h2>
+              <form
+                className="mt-2 flex flex-wrap items-end gap-3"
+                onSubmit={async (e) => {
+                  e.preventDefault();
+                  if (await change(`/api/classes/?id=${encodeURIComponent(id)}`, "PATCH", { name: nameDraft })) setNameDraft(null);
+                }}
+              >
+                <label className="flex flex-col text-sm font-semibold">
+                  Name
+                  <input className="mt-1 min-h-11 rounded-xl border border-line px-3" value={nameDraft ?? cls.name} maxLength={60} onChange={(e) => setNameDraft(e.target.value)} required />
+                </label>
+                <button disabled={nameDraft === null || nameDraft.trim() === cls.name} className={`${btn} bg-[#4f8ef7] text-[#0f172a] disabled:opacity-50`}>
+                  Save name
+                </button>
+              </form>
+            </section>
+          )}
           <Team data={data} onChange={change} onLeave={leave} />
+          {isOwner && (
+            <section className="mt-4 rounded-2xl border border-line bg-white p-5">
+              <h2 className="text-xl font-bold">Start next school year</h2>
+              {nextGradeOf(cls) ? (
+                <>
+                  <p className="mt-1 font-read text-ink-soft">
+                    Moves this class up to {classGradeText(nextGradeOf(cls)!)}. The students you added keep their codes and their practice and move up a grade too. The homework assigned this year is cleared. Children their parents linked are unlinked, because a linked child keeps the grade their family chose; parents can link them again with the class code.
+                  </p>
+                  {confirmYear ? (
+                    <button
+                      type="button"
+                      className={`${btn} mt-3 border border-[#e57a12] text-nudge-dark`}
+                      onClick={async () => {
+                        if (await change(`/api/classes/?id=${encodeURIComponent(id)}`, "PATCH", { action: "next-year" })) setConfirmYear(false);
+                      }}
+                    >
+                      Yes, move {cls.name} up
+                    </button>
+                  ) : (
+                    <button type="button" className={`${btn} mt-3 border border-line`} onClick={() => setConfirmYear(true)}>
+                      Move up to {classGradeText(nextGradeOf(cls)!)}
+                    </button>
+                  )}
+                </>
+              ) : (
+                <p className="mt-1 font-read text-ink-soft">This class is already in the last grade, so there is no next grade to move up to.</p>
+              )}
+            </section>
+          )}
           {isOwner && (
             <section className="mt-4 rounded-2xl border border-line bg-white p-5">
               <h2 className="text-xl font-bold">Close this class</h2>

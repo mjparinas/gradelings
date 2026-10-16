@@ -186,6 +186,59 @@ describe("classroom mode", () => {
     expect(JSON.parse((await dbm.query<{ data: string }>("SELECT data FROM profiles WHERE id = ?", [plain.students[0].profileId]))[0].data).grade).toBe("2");
   });
 
+  it("lets only the owner rename a class", async () => {
+    const teacher = await account_("rename-teacher@example.com");
+    const other = await account_("rename-other@example.com");
+    const { class: cls } = await (await classes.POST(req("/api/classes/", "POST", { name: "Room 1", grade: "2" }, teacher))).json();
+    const patch = (cookie: string, body: unknown) => classes.PATCH(req(`/api/classes/?id=${cls.id}`, "PATCH", body, cookie));
+    expect((await patch(other, { name: "Mine now" })).status).toBe(404);
+    expect((await patch(teacher, { name: "  \n " })).status).toBe(400);
+    const renamed = await patch(teacher, { name: " Room\r\n1B\u0000 " });
+    expect((await renamed.json()).name).toBe("Room 1B");
+    expect((await (await classes.GET(req(`/api/classes/?id=${cls.id}`, "GET", undefined, teacher))).json()).class.name).toBe("Room 1B");
+    // No body still means a new join code.
+    const code = (await (await patch(teacher, undefined)).json()).joinCode;
+    expect(code).toMatch(/^[A-HJKMNP-Z2-9]{6}$/);
+    expect(code).not.toBe(cls.joinCode);
+  });
+
+  it("moves a class up a grade for a new year: students come along, linked children and homework don't", async () => {
+    const teacher = await account_("year-teacher@example.com");
+    const { class: cls } = await (await classes.POST(req("/api/classes/", "POST", { name: "Room 2/3", grade: "2", grade2: "3" }, teacher))).json();
+    const year = (cookie = teacher) => classes.PATCH(req(`/api/classes/?id=${cls.id}`, "PATCH", { action: "next-year" }, cookie));
+    const linked = await parentWithChild("year-parent@example.com", "year-kid", "2");
+    expect((await join_.POST(req("/api/classes/join/", "POST", { code: cls.joinCode, profileId: "year-kid" }, linked))).status).toBe(200);
+    const added = await (await students_.POST(req("/api/classes/students/", "POST", { classId: cls.id, names: ["Ana", "Ben"], grade: "2" }, teacher))).json();
+    const ben = await (await students_.POST(req("/api/classes/students/", "POST", { classId: cls.id, names: ["Cy"], grade: "3" }, teacher))).json();
+    const keys = ["2/math/tens-and-ones", "3/math/fractions"];
+    for (const unitKey of keys) await assignments.POST(req("/api/classes/assignments/", "POST", { classId: cls.id, unitKey, students: [added.students[0].profileId] }, teacher));
+
+    // Only the owner can do it.
+    expect((await year(await account_("year-other@example.com"))).status).toBe(404);
+    const done = await year();
+    expect(done.status).toBe(200);
+    expect((await done.json()).class).toMatchObject({ grade: "3", grade2: "4", name: "Room 2/3" });
+
+    const view = await (await classes.GET(req(`/api/classes/?id=${cls.id}`, "GET", undefined, teacher))).json();
+    expect(view.assignments).toEqual([]);
+    expect(view.audience).toEqual({});
+    // The teacher's own students stay, with the same codes, a grade up; the parent-linked child is unlinked.
+    expect(view.students.map((st: { name: string; grade: string }) => [st.name, st.grade]).sort()).toEqual([["Ana", "3"], ["Ben", "3"], ["Cy", "4"]].sort());
+    expect(view.roster.map((r: { loginCode: string }) => r.loginCode).sort()).toEqual([...added.students, ...ben.students].map((x: { loginCode: string }) => x.loginCode).sort());
+    expect(await dbm.query("SELECT 1 FROM class_members WHERE profile_id = 'year-kid'")).toHaveLength(0);
+    expect((await dbm.query<{ grade: string }>("SELECT grade FROM class_members WHERE profile_id = ?", [ben.students[0].profileId]))[0].grade).toBe("4");
+    // The new grade is what a student's device receives.
+    const stored = JSON.parse((await dbm.query<{ data: string }>("SELECT data FROM profiles WHERE id = ?", [ben.students[0].profileId]))[0].data);
+    expect(stored.grade).toBe("4");
+
+    // Up to the last grade, and no further.
+    const { class: top } = await (await classes.POST(req("/api/classes/", "POST", { name: "Top", grade: "9" }, teacher))).json();
+    const refused = await classes.PATCH(req(`/api/classes/?id=${top.id}`, "PATCH", { action: "next-year" }, teacher));
+    expect(refused.status).toBe(409);
+    const { class: edge } = await (await classes.POST(req("/api/classes/", "POST", { name: "Edge", grade: "8", grade2: "9" }, teacher))).json();
+    expect((await classes.PATCH(req(`/api/classes/?id=${edge.id}`, "PATCH", { action: "next-year" }, teacher))).status).toBe(409);
+  });
+
   it("lets a teacher see a linked child's results on assigned units only, and nothing else", async () => {
     const teacher = await account_("teacher@example.com");
     const created = await (await classes.POST(req("/api/classes/", "POST", { name: "Room 12", grade: "2" }, teacher))).json();
