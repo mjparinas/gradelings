@@ -11,19 +11,24 @@ export const CONTACT_EMAIL = "hello@gradelings.com";
  * The brand's own social profiles (full https URLs), listed as `sameAs` in the site's Organization structured data so
  * search engines tie them to the site. Add each one once the account exists; never list a profile we don't own.
  */
-export const SOCIAL_PROFILES: string[] = ["https://www.instagram.com/gradelings_com/", "https://www.pinterest.com/gradelings"];
+export const SOCIAL_PROFILES: string[] = [
+  "https://www.instagram.com/gradelings_com/",
+  "https://www.pinterest.com/gradelings",
+  "https://www.facebook.com/people/Gradelings/61595170062640/",
+];
 /**
  * The social accounts the brand will have (owner's decision, October 2026). Until each one's URL is in
- * `SOCIAL_PROFILES`, the admin panel's to-do list asks for it (`missingSocialPlatforms`).
+ * `SOCIAL_PROFILES`, the admin panel's to-do list asks for it (`missingSocialPlatforms`), except a platform marked
+ * `later`, which the owner has put off (YouTube, October 2026).
  */
 export const SOCIAL_PLATFORMS = [
   { name: "Instagram", host: "instagram.com" },
-  { name: "YouTube", host: "youtube.com" },
+  { name: "YouTube", host: "youtube.com", later: true },
   { name: "Pinterest", host: "pinterest.com" },
   { name: "Facebook", host: "facebook.com" },
 ] as const;
 
-/** The chosen platforms with no profile URL listed yet. Pinterest's country sites (pinterest.ca) count as Pinterest. */
+/** The chosen platforms, not put off for later, with no profile URL listed yet. Pinterest's country sites (pinterest.ca) count as Pinterest. */
 export function missingSocialPlatforms(profiles: readonly string[] = SOCIAL_PROFILES): string[] {
   const hosts = profiles.flatMap((u) => {
     try {
@@ -33,7 +38,7 @@ export function missingSocialPlatforms(profiles: readonly string[] = SOCIAL_PROF
     }
   });
   const has = (host: string) => hosts.some((h) => h === host || h.split(".")[0] === host.split(".")[0]);
-  return SOCIAL_PLATFORMS.filter((p) => !has(p.host)).map((p) => p.name);
+  return SOCIAL_PLATFORMS.filter((p) => !("later" in p && p.later) && !has(p.host)).map((p) => p.name);
 }
 /** Hostname a parent types into a browser. The Android app names this site because it can't take payment. */
 export const SITE_HOST = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://gradelings.com").hostname.replace(/^www\./, "");
