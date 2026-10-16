@@ -18,6 +18,7 @@ import { levelInfo } from "@/lib/proficiency";
 import { go, useRoute } from "@/lib/router";
 import { sayFor } from "@/lib/say";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
+import { ClassTimerPanel } from "./ClassTimerPanel";
 import { LiveClass } from "./LiveClass";
 
 // The teacher area: create a class, share its code, assign units and see each linked student's
@@ -1153,7 +1154,12 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
         </section>
       )}
 
-      {tab === "live" && <LiveClass data={data} label={label} unitGroups={unitGroups([])} />}
+      {tab === "live" && (
+        <>
+          <ClassTimerPanel classId={data.class.id} />
+          <LiveClass data={data} label={label} unitGroups={unitGroups([])} />
+        </>
+      )}
 
       {tab === "students" && (
         <>

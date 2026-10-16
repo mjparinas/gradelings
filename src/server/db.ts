@@ -188,6 +188,16 @@ const SCHEMA = [
     PRIMARY KEY (question_id, profile_id)
   )`,
   `CREATE INDEX IF NOT EXISTS live_answers_family ON live_answers (family_id)`,
+  // A class timer a teacher starts for the whole class: one row per class, deleted when stopped or with the class.
+  // It holds a note and times only, nothing about a child.
+  `CREATE TABLE IF NOT EXISTS class_timers (
+    class_id TEXT PRIMARY KEY,
+    label TEXT NOT NULL,
+    total_ms INTEGER NOT NULL,
+    ends_at INTEGER,
+    paused_left INTEGER,
+    updated_at INTEGER NOT NULL
+  )`,
   // Weekly-report browser notifications were removed (the weekly email says the same); drop any saved push addresses.
   `DROP TABLE IF EXISTS push_subscriptions`,
   // Codes the owner hands out: free access for a number of days (or for life), or a discount at checkout.
