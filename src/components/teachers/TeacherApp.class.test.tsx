@@ -461,6 +461,32 @@ describe("TeacherApp class page", () => {
     expect(within(screen.getByRole("navigation", { name: "Class sections" })).getByRole("link", { name: /Progress/ })).toHaveAttribute("aria-current", "page");
   });
 
+  it("sorts the progress table, filters it by subject, and shows one student on their own", async () => {
+    const sci = (level: number, attempts = 0, accuracy = 0) => ({ key: "3/science/plants", level, attempts, accuracy });
+    const multi = {
+      ...detail,
+      assignments: [...detail.assignments, "3/science/plants"],
+      students: detail.students.map((s, i) => ({ ...s, units: [...s.units, sci(i === 0 ? 1 : -1, i === 0 ? 4 : 0, 0.5)] })),
+    };
+    serve(multi);
+    const user = await openClass();
+    const names = () => screen.getAllByRole("rowheader").map((r) => r.textContent?.match(/^(Maya|Sam|Alex)/)?.[0]);
+    expect(names()).toEqual(["Alex", "Maya", "Sam"]);
+    await user.selectOptions(screen.getByLabelText("Sort by"), "need");
+    // Lowest accuracy on what they have tried comes first.
+    expect(names()).toEqual(["Sam", "Maya", "Alex"]);
+    await user.selectOptions(screen.getByLabelText("Sort by"), "active");
+    expect(names()).toEqual(["Sam", "Alex", "Maya"]);
+    await user.selectOptions(screen.getByLabelText("Subject"), "science");
+    expect(screen.getByRole("columnheader", { name: "3/science/plants" })).toBeInTheDocument();
+    expect(screen.queryByRole("columnheader", { name: "Counting" })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Show only Sam" }));
+    expect(names()).toEqual(["Sam"]);
+    expect(screen.getByText("Showing Sam only.")).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Show everyone" }));
+    expect(names()).toHaveLength(3);
+  });
+
   it("renames the class from Settings", async () => {
     serve({ ...detail, role: "owner", teachers: [{ id: "o", email: "owner@example.com", role: "owner" }], invites: [] });
     const user = await openClass();

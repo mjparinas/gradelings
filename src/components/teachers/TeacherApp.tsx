@@ -700,6 +700,108 @@ function PrintSheet({ data, label, mode }: { data: ClassDetail; label: (key: str
   );
 }
 
+type ProgressSort = "name" | "need" | "active";
+
+/** How much a student needs a look: not started first, then the lowest accuracy on what they have tried. */
+function needScore(s: StudentRow): number {
+  const tried = s.units.filter((u) => u.assigned !== false && u.attempts > 0);
+  if (!tried.length) return -1;
+  return tried.reduce((n, u) => n + u.accuracy, 0) / tried.length;
+}
+
+/** The progress table: sort, a subject filter, one student on their own, and a name column that stays put when it scrolls sideways. */
+function ProgressTable({ data, label, levelLabel, now }: { data: ClassDetail; label: (key: string) => string; levelLabel: (level: number) => string; now: number }) {
+  const { class: cls, assignments, students } = data;
+  const [sort, setSort] = useState<ProgressSort>("name");
+  const [subject, setSubject] = useState("");
+  const [only, setOnly] = useState<string | null>(null);
+  const subjects = [...new Set(assignments.map((k) => k.split("/")[1]))];
+  const shown = subject ? assignments.filter((k) => k.split("/")[1] === subject) : assignments;
+  const keep = new Set(shown);
+  const rows = students
+    .filter((s) => only === null || s.profileId === only)
+    .map((s) => ({ ...s, units: s.units.filter((u) => keep.has(u.key)) }))
+    .sort((a, b) => (sort === "need" ? needScore(a) - needScore(b) : sort === "active" ? (a.lastActive ?? 0) - (b.lastActive ?? 0) : 0) || a.name.localeCompare(b.name));
+  const onlyName = students.find((s) => s.profileId === only)?.name;
+  const choose = "min-h-11 rounded-xl border border-line bg-white px-3 font-read";
+  return (
+    <div className="mt-3">
+      <div className="flex flex-wrap items-end gap-3">
+        <label className="flex flex-col text-sm font-semibold">
+          Sort by
+          <select className={`${choose} mt-1`} value={sort} onChange={(e) => setSort(e.target.value as ProgressSort)}>
+            <option value="name">Name</option>
+            <option value="need">Needs a look first</option>
+            <option value="active">Least recently active</option>
+          </select>
+        </label>
+        {subjects.length > 1 && (
+          <label className="flex flex-col text-sm font-semibold">
+            Subject
+            <select className={`${choose} mt-1`} value={subject} onChange={(e) => setSubject(e.target.value)}>
+              <option value="">All subjects</option>
+              {subjects.map((sub) => (
+                <option key={sub} value={sub}>{getSubjectMeta(sub as never).title.big}</option>
+              ))}
+            </select>
+          </label>
+        )}
+        {only !== null && (
+          <button type="button" className={`${btn} border border-line`} onClick={() => setOnly(null)}>
+            Show everyone
+          </button>
+        )}
+      </div>
+      {onlyName && <p className="mt-2 font-read text-ink-soft">Showing {onlyName} only.</p>}
+      <div className="mt-3 overflow-x-auto">
+        <table className="w-full min-w-[32rem] text-left font-read">
+          <thead>
+            <tr className="border-b border-line">
+              <th scope="col" className="sticky left-0 bg-white py-2 pr-3">Student</th>
+              {shown.map((k) => (
+                <th key={k} scope="col" className="py-2 pr-3">{label(k)}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((s) => (
+              <tr key={s.profileId} className="border-b border-line align-top last:border-0">
+                <th scope="row" className="sticky left-0 bg-white py-2 pr-3 font-bold">
+                  {only === null ? (
+                    <button type="button" aria-label={`Show only ${s.name}`} className="text-left font-bold underline decoration-dotted" onClick={() => setOnly(s.profileId)}>
+                      {s.name}
+                    </button>
+                  ) : (
+                    s.name
+                  )}
+                  {cls.grade2 && <span className="font-normal text-ink-soft"> ({gradeLabel(s.grade as GradeId, cls.framework)})</span>}
+                  <span className="block text-sm font-normal text-ink-soft">{s.lastActive ? `Active ${new Date(s.lastActive).toLocaleDateString(countryOf(getFramework(cls.framework)).locale, { month: "short", day: "numeric" })}` : "Not active yet"}</span>
+                </th>
+        {s.units.map((u) => u.assigned === false ? (
+          <td key={u.key} className="py-2 pr-3 text-sm text-ink-soft">Not assigned</td>
+        ) : (
+          <td key={u.key} className="py-2 pr-3">
+            <b>{levelLabel(u.level)}</b>
+            {data.goal?.[u.key] && u.done !== undefined ? (
+              <span className="block text-sm">{u.done >= data.goal[u.key] ? "Homework done ✓" : `Homework: ${u.done} of ${data.goal[u.key]}`}</span>
+            ) : null}
+            {data.due[u.key] && data.due[u.key] < now && !isHomeworkDone(u, data.goal?.[u.key]) && <span className="block text-sm font-bold text-nudge-dark">Past due</span>}
+            {u.attempts > 0 && (
+              <span className="block text-sm text-ink-soft">
+                {pct(u.accuracy)} · {u.attempts} {u.attempts === 1 ? "question" : "questions"}
+              </span>
+            )}
+          </td>
+        ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
 function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; preselect?: string[]; onBack: () => void }) {
   const [data, setData] = useState<ClassDetail | null>(null);
   const [ready, setReady] = useState(false);
@@ -826,44 +928,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
             ) : assignments.length === 0 ? (
               <p className="mt-2 font-read text-ink-soft">Assign homework to see how each student is doing. {tabLink("homework", "Go to Homework")}</p>
             ) : (
-              <div className="mt-3 overflow-x-auto">
-                <table className="w-full min-w-[32rem] text-left font-read">
-                  <thead>
-                    <tr className="border-b border-line">
-                      <th scope="col" className="py-2 pr-3">Student</th>
-                      {assignments.map((k) => (
-                        <th key={k} scope="col" className="py-2 pr-3">{label(k)}</th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {students.map((s) => (
-                      <tr key={s.profileId} className="border-b border-line align-top last:border-0">
-                        <th scope="row" className="py-2 pr-3 font-bold">
-                          {s.name}{cls.grade2 && <span className="font-normal text-ink-soft"> ({gradeLabel(s.grade as GradeId, cls.framework)})</span>}
-                          <span className="block text-sm font-normal text-ink-soft">{s.lastActive ? `Active ${new Date(s.lastActive).toLocaleDateString(countryOf(getFramework(cls.framework)).locale, { month: "short", day: "numeric" })}` : "Not active yet"}</span>
-                        </th>
-                        {s.units.map((u) => u.assigned === false ? (
-                          <td key={u.key} className="py-2 pr-3 text-sm text-ink-soft">Not assigned</td>
-                        ) : (
-                          <td key={u.key} className="py-2 pr-3">
-                            <b>{levelLabel(u.level)}</b>
-                            {data.goal?.[u.key] && u.done !== undefined ? (
-                              <span className="block text-sm">{u.done >= data.goal[u.key] ? "Homework done ✓" : `Homework: ${u.done} of ${data.goal[u.key]}`}</span>
-                            ) : null}
-                            {data.due[u.key] && data.due[u.key] < now && !isHomeworkDone(u, data.goal?.[u.key]) && <span className="block text-sm font-bold text-nudge-dark">Past due</span>}
-                            {u.attempts > 0 && (
-                              <span className="block text-sm text-ink-soft">
-                                {pct(u.accuracy)} · {u.attempts} {u.attempts === 1 ? "question" : "questions"}
-                              </span>
-                            )}
-                          </td>
-                        ))}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+              <ProgressTable data={data} label={label} levelLabel={levelLabel} now={now} />
             )}
             <p className="mt-3 text-sm text-ink-soft">This reflects practice in {APP_NAME}, not a report-card mark. You decide proficiency.</p>
             {students.length > 0 && assignments.length > 0 && (
