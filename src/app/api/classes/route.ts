@@ -1,8 +1,9 @@
 import { error, getSession, json, newId, rateLimited, sameOrigin } from "@/server/auth";
-import { assignmentAudience, cleanSecondGrade, assignmentDue, assignmentGoals, assignmentKeys, classProgress, classTeachers, isFramework, MAX_CLASSES, newJoinCode, ownedClass, pendingInvites, removeClassTeachers, teachingClass } from "@/server/classroom";
+import { assignmentAudience, cleanClassName, cleanSecondGrade, assignmentDue, assignmentGoals, assignmentKeys, classProgress, classTeachers, isFramework, MAX_CLASSES, newJoinCode, ownedClass, pendingInvites, removeClassTeachers, teachingClass } from "@/server/classroom";
 import { batch, query, run } from "@/server/db";
 import { liveClassStatements } from "@/server/live";
 import { isFlagOn } from "@/server/flags";
+import { startNextYear } from "@/server/newYear";
 import { classRoster, removeClassStudents } from "@/server/students";
 import { GRADE_ORDER } from "@/content/subjects";
 
@@ -53,7 +54,7 @@ export async function POST(req: Request) {
   if (await rateLimited(`class:${session.parentId}`, 20, 60 * 60_000)) return error(429, "Too many classes created. Try again later.");
   const body = (await req.json().catch(() => null)) as { name?: unknown; grade?: unknown; grade2?: unknown; framework?: unknown } | null;
   // One line of plain text: it appears in invitation emails and on printed cards.
-  const name = typeof body?.name === "string" ? body.name.replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim().slice(0, 60) : "";
+  const name = cleanClassName(body?.name);
   const grade = String(body?.grade ?? "");
   const framework = body?.framework === undefined ? "ca-bc" : body.framework;
   if (!isFramework(framework)) return error(400, "Choose a province or state.");
@@ -78,7 +79,11 @@ export async function POST(req: Request) {
   return error(500, "Couldn’t create the class. Try again.");
 }
 
-/** Replaces the class's join code (?id=), for when it has been shared more widely than intended. Linked students stay linked. */
+/**
+ * Changes a class (?id=), for its owner. With `{ name }` it renames the class; with `{ action: "next-year" }` it moves the
+ * class up a grade for a new school year. With no body it replaces the join code, for when it has been shared more widely
+ * than intended (linked students stay linked).
+ */
 export async function PATCH(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req);
@@ -86,6 +91,18 @@ export async function PATCH(req: Request) {
   const id = new URL(req.url).searchParams.get("id") ?? "";
   const cls = await ownedClass(id, session.parentId);
   if (!cls) return error(404, "Class not found");
+  const body = (await req.json().catch(() => null)) as { name?: unknown; action?: unknown } | null;
+  if (body && "name" in body) {
+    const name = cleanClassName(body.name);
+    if (!name) return error(400, "Give the class a name.");
+    await run("UPDATE classes SET name = ? WHERE id = ?", [name, id]);
+    return json({ name });
+  }
+  if (body?.action === "next-year") {
+    if (!(await startNextYear(cls))) return error(409, "This class is already in the last grade, so there is no next grade to move up to.");
+    const moved = (await ownedClass(id, session.parentId))!;
+    return json({ class: { id, name: moved.name, grade: moved.grade, grade2: moved.grade2 } });
+  }
   for (let attempt = 0; attempt < 5; attempt++) {
     const code = newJoinCode();
     try {
