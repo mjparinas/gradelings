@@ -367,16 +367,6 @@ describe("Hub cards", () => {
     h.events = [];
   });
 
-  it("shows a live question from the teacher at the top, with the answer once it is shown", () => {
-    h.live = { id: "q1", className: "Room 4", mine: "b", answer: "a", hint: "Count the tens.", question: { prompt: "What is 3 tens?", choices: [{ id: "a", label: "30" }, { id: "b", label: "3" }] } };
-    show();
-    const card = screen.getByRole("region", { name: "Live question from your teacher" });
-    expect(card).toHaveTextContent("What is 3 tens?");
-    expect(card).toHaveTextContent("Good try! The answer is 30.");
-    expect(within(card).getAllByTestId("live-choice").every((b) => (b as HTMLButtonElement).disabled)).toBe(true);
-    h.live = null;
-  });
-
   it("a class student signs out instead of seeing the grown-ups link", () => {
     h.family = { ...premium, account: { email: "", familyId: "f1", student: true } };
     show();

@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { choiceIndexForKey, shortcutBlocked } from "@/lib/keys";
 import { LIVE_POLL_IDLE_MS, LIVE_POLL_OPEN_MS, type LiveForChild } from "@/lib/live";
 import { useChildSay } from "@/lib/say";
 import { useActiveProfile, useStore } from "@/lib/store";
@@ -107,10 +108,14 @@ export function useLiveQuestion(): LiveState {
   return { live: inClass ? live : null, offline, note, answer };
 }
 
+/** The teacher's question takes over the whole screen, wherever the child is, until the teacher moves on. */
 export function LiveQuestionCard({ state }: { state: LiveState }) {
+  return state.live ? <Takeover state={state} live={state.live} /> : null;
+}
+
+function Takeover({ state, live }: { state: LiveState; live: LiveForChild }) {
   const say = useChildSay();
-  const { live, offline, note, answer } = state;
-  if (!live) return null;
+  const { offline, note, answer } = state;
   const q = live.question;
   const revealed = live.answer !== undefined;
   const right = q.choices.find((c) => c.id === live.answer);
@@ -124,8 +129,27 @@ export function LiveQuestionCard({ state }: { state: LiveState }) {
       ? "Sent! Your teacher will show the answer."
       : "Tap your answer.";
   const tiles = q.choices.some((c) => c.emoji || c.shape || c.coin);
+  const closed = Boolean(live.mine) || revealed;
+  const box = useRef<HTMLDivElement>(null);
+  // Number keys pick a choice, like in a lesson.
+  useEffect(() => {
+    if (closed) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (shortcutBlocked(e)) return;
+      const i = choiceIndexForKey(e.key, q.choices.length);
+      if (i === null) return;
+      e.preventDefault();
+      answer(q.choices[i].id);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [closed, q.choices, answer]);
+  // The question takes focus when it opens, and the page behind it is inert (see PlayApp).
+  const id = live.id;
+  useEffect(() => box.current?.focus(), [id]);
   return (
-    <section className="card border-2 border-[#4f8ef7] p-4 sm:p-5" aria-label="Live question from your teacher">
+    <div className="fixed inset-0 z-[60] flex items-center justify-center overflow-y-auto bg-slate-800/95 p-3 sm:p-6" data-testid="live-takeover">
+    <section ref={box} tabIndex={-1} role="dialog" aria-modal="true" className="card my-auto w-full max-w-3xl animate-pop-in border-2 border-[#4f8ef7] p-4 outline-none sm:p-6" aria-label="Live question from your teacher">
       <h2 className="mb-2 flex items-center justify-between gap-2 text-xl font-bold sm:text-2xl">
         <span>📣 Live question</span>
         <span className="text-sm font-semibold text-ink-soft">{live.className}</span>
@@ -176,5 +200,6 @@ export function LiveQuestionCard({ state }: { state: LiveState }) {
       )}
       {offline && <p className="mt-1 font-read text-ink-soft">{say("📶 Live questions need the internet. Your practice still works offline.")}</p>}
     </section>
+    </div>
   );
 }

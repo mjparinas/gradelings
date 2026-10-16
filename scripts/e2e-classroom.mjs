@@ -130,7 +130,7 @@ for (const key of [unit, "3/math/fractions", "3/math/place-value", "3/language/r
 }
 check(Boolean(asked), "the teacher asks a live question");
 if (asked) {
-  const card = page.getByRole("region", { name: "Live question from your teacher" });
+  const card = page.getByRole("dialog", { name: "Live question from your teacher" });
   check(await card.waitFor({ timeout: 20000 }).then(() => true, () => false), "the live question appears on the student's home screen");
   await shot("live-question");
   await card.getByTestId("live-choice").first().click();
