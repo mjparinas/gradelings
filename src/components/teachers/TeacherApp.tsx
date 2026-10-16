@@ -1372,7 +1372,7 @@ export function TeacherApp() {
     <div className="min-h-dvh bg-[#f6f5f1]">
       <SkipLink />
       <header className="sticky top-0 z-30 border-b border-line bg-white/90 backdrop-blur print:hidden" style={{ paddingTop: "env(safe-area-inset-top)" }}>
-        <div className="mx-auto flex max-w-4xl items-center justify-between gap-2 px-4 py-3">
+        <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-x-2 px-4 py-3">
           <span className="flex items-center gap-2">
             <Link href="/" className="inline-flex min-h-11 items-center text-2xl font-bold tracking-tight" aria-label={APP_NAME}>
               {APP_NAME.split("").map((ch, i) => (
@@ -1383,12 +1383,12 @@ export function TeacherApp() {
             </Link>
             <span className="text-lg font-semibold text-ink-soft">for teachers</span>
           </span>
-          <div className="flex items-center gap-3">
-            <Link href="/" className="inline-flex min-h-11 items-center font-semibold underline">Home</Link>
+          <div className="flex flex-wrap items-center gap-x-3">
+            <Link href="/" className="inline-flex min-h-11 min-w-11 items-center font-semibold underline">Home</Link>
             {signedIn && (
               <button
                 type="button"
-                className="min-h-11 font-semibold underline"
+                className="inline-flex min-h-11 items-center whitespace-nowrap font-semibold underline"
                 onClick={() => call("/api/auth/logout/", "POST").finally(() => { setSignedIn(false); go("/"); })}
               >
                 Sign out
