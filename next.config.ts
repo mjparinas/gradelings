@@ -30,7 +30,10 @@ const nextConfig: NextConfig = {
   ...adapter,
   async headers() {
     return [
-      { source: "/(.*)", headers: securityHeaders },
+      // The Inbox's email frame (/api/admin/inbox/view/) sets its own stricter policy and may be framed by the panel,
+      // so it is left out here: a second CSP header would be combined with its own and forbid the frame.
+      { source: "/((?!api/admin/inbox/view/).*)", headers: securityHeaders },
+      { source: "/api/admin/inbox/view/", headers: securityHeaders.filter((h) => h.key !== "Content-Security-Policy" && h.key !== "X-Frame-Options") },
       // Unhashed static files: a day in the browser, a week stale-while-revalidate. Not sw.js, which must stay fresh.
       {
         source: "/:file(icon-192\\.png|icon-512\\.png|icon-maskable-512\\.png|apple-touch-icon\\.png|icon\\.svg)",

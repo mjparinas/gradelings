@@ -2,6 +2,7 @@ import "server-only";
 import { APP_NAME } from "@/lib/brand";
 import { query, run } from "./db";
 import { emailConfigured, sendEmail } from "./email";
+import { hasRemoteImages } from "./emailHtml";
 
 // Mail people send to us, which Resend receives. The panel reads it live from Resend's receiving API, so message
 // bodies are never copied into our database; we only keep whether the admin has dealt with or answered each one.
@@ -99,7 +100,7 @@ export async function countWaiting(): Promise<number> {
   return items.filter(isWaiting).length;
 }
 
-/** Turns an HTML-only email into plain text, so the panel never renders mail it received. */
+/** Turns an HTML email into plain text, for the "Plain text" view and for AI drafts. */
 export function htmlToText(html: string): string {
   return html
     .replace(/<(script|style)[^>]*>[\s\S]*?<\/\1>/gi, "")
@@ -118,6 +119,10 @@ export function htmlToText(html: string): string {
 
 export interface InboxMessage extends InboxItem {
   text: string;
+  /** The mail has an HTML part, which the panel shows sanitized in a sandboxed frame (`/api/admin/inbox/view/`). */
+  hasHtml: boolean;
+  /** Its HTML would load images from the internet, which stay blocked until the admin asks. */
+  remoteImages: boolean;
   replyTo: string;
   messageId: string | null;
   attachmentNames: string[];
@@ -129,10 +134,21 @@ export async function getInboxMessage(id: string): Promise<InboxMessage> {
   return {
     ...item,
     text: (m.text?.trim() || htmlToText(m.html ?? "")).slice(0, 50_000),
+    hasHtml: Boolean(m.html?.trim()),
+    remoteImages: hasRemoteImages(m.html ?? ""),
     replyTo: addressOf(m.reply_to?.[0] ?? m.from),
     messageId: m.message_id ?? null,
     attachmentNames: (m.attachments ?? []).map((a) => a.filename ?? "attachment"),
   };
+}
+
+const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
+
+/** A received email's raw HTML, for `sanitizeEmailHtml`; its text part, escaped, when it has no HTML. */
+export async function getInboxHtml(id: string): Promise<string> {
+  const m = await resend<ResendReceived>(`/emails/receiving/${encodeURIComponent(id)}`);
+  if (m.html?.trim()) return m.html;
+  return `<pre style="white-space:pre-wrap;font-family:inherit">${esc(m.text ?? "")}</pre>`;
 }
 
 export async function markHandled(id: string, handled: boolean): Promise<void> {
@@ -143,8 +159,6 @@ export async function markHandled(id: string, handled: boolean): Promise<void> {
 export async function markArchived(id: string, archived: boolean): Promise<void> {
   await run("INSERT INTO inbox_state (email_id, archived_at) VALUES (?, ?) ON CONFLICT (email_id) DO UPDATE SET archived_at = excluded.archived_at", [id, archived ? Date.now() : null]);
 }
-
-const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
 
 /** Answers a received email as a threaded reply, and marks it answered. */
 export async function replyToInbox(id: string, text: string, admin: string): Promise<boolean> {

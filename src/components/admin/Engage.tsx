@@ -492,6 +492,8 @@ interface InboxItem {
 }
 interface InboxMessage extends InboxItem {
   text: string;
+  hasHtml?: boolean;
+  remoteImages?: boolean;
   replyTo: string;
   attachmentNames: string[];
 }
@@ -651,9 +653,7 @@ function InboxRead({ id, onBack, onOpenFamily }: { id: string; onBack: () => voi
                 Open Their Account
               </button>
             )}
-            <div className="mt-3 max-h-[28rem] overflow-auto rounded-xl bg-[#f7f5f0] p-3 font-read whitespace-pre-wrap" tabIndex={0} role="region" aria-label="Message">
-              {m.text || "(empty message)"}
-            </div>
+            <MessageBody id={id} m={m} />
             {m.attachmentNames.length > 0 && <p className="mt-2 text-sm text-ink-soft">Attachments (open them in Resend): {m.attachmentNames.join(", ")}</p>}
           </div>
           <div className={card}>
@@ -713,6 +713,50 @@ function InboxRead({ id, onBack, onOpenFamily }: { id: string; onBack: () => voi
         </>
       )}
     </section>
+  );
+}
+
+/**
+ * The message as the sender formatted it, or as plain text. HTML is sanitized on the server and shown from its own
+ * address in a sandboxed frame with no scripts and no access to the panel (`src/server/emailHtml.ts`). Images from
+ * the internet stay blocked until asked for, since loading one tells the sender the mail was opened.
+ */
+function MessageBody({ id, m }: { id: string; m: InboxMessage }) {
+  const [plain, setPlain] = useState(false);
+  const [images, setImages] = useState(false);
+  const textView = (
+    <div className="mt-3 max-h-[28rem] overflow-auto rounded-xl bg-[#f7f5f0] p-3 font-read whitespace-pre-wrap" tabIndex={0} role="region" aria-label="Message">
+      {m.text || "(empty message)"}
+    </div>
+  );
+  if (!m.hasHtml) return textView;
+  return (
+    <>
+      <div className="mt-3 flex flex-wrap items-center gap-2">
+        <button type="button" className={quiet} aria-pressed={plain} onClick={() => setPlain(!plain)}>
+          {plain ? "Show Formatted" : "Show Plain Text"}
+        </button>
+        {!plain && m.remoteImages && !images && (
+          <>
+            <button type="button" className={quiet} onClick={() => setImages(true)}>
+              Load Images
+            </button>
+            <span className="text-sm text-ink-soft">Images are blocked, because loading them can tell the sender you opened this.</span>
+          </>
+        )}
+      </div>
+      {plain ? (
+        textView
+      ) : (
+        <iframe
+          title="Message"
+          src={`/api/admin/inbox/view/?id=${encodeURIComponent(id)}${images ? "&images=1" : ""}`}
+          sandbox="allow-popups allow-popups-to-escape-sandbox"
+          referrerPolicy="no-referrer"
+          className="mt-2 h-[32rem] w-full rounded-xl border border-line bg-white"
+        />
+      )}
+    </>
   );
 }
 

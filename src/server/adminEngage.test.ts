@@ -18,12 +18,12 @@ const ADMIN_EMAIL = "owner@example.com";
 const DAY = 86_400_000;
 
 type Mod = Record<string, (req: Request) => Promise<Response>>;
-let signup: Mod, login: Mod, users: Mod, emailRoute: Mod, queue: Mod, inbox: Mod, webhook: Mod, unsub: Mod;
+let signup: Mod, login: Mod, users: Mod, emailRoute: Mod, queue: Mod, inbox: Mod, webhook: Mod, unsub: Mod, inboxView: Mod;
 let dbm: typeof import("@/server/db");
 let email: typeof import("@/server/email");
 
 beforeAll(async () => {
-  [signup, login, users, emailRoute, queue, inbox, webhook, unsub] = (await Promise.all([
+  [signup, login, users, emailRoute, queue, inbox, webhook, unsub, inboxView] = (await Promise.all([
     import("@/app/api/auth/signup/route"),
     import("@/app/api/auth/login/route"),
     import("@/app/api/admin/users/route"),
@@ -32,6 +32,7 @@ beforeAll(async () => {
     import("@/app/api/admin/inbox/route"),
     import("@/app/api/email/webhook/route"),
     import("@/app/api/email/unsubscribe/route"),
+    import("@/app/api/admin/inbox/view/route"),
   ])) as unknown as Mod[];
   dbm = await import("@/server/db");
   email = await import("@/server/email");
@@ -80,6 +81,7 @@ describe("who can use it", () => {
       [queue, "/api/admin/queue/"],
       [inbox, "/api/admin/inbox/"],
     ] as const) {
+      expect((await get(inboxView, "/api/admin/inbox/view/?id=rcv-1", other.cookie)).status).toBe(404);
       expect((await get(mod, path, other.cookie)).status).toBe(404);
       expect((await post(mod, path, {}, other.cookie)).status).toBe(404);
     }
@@ -323,7 +325,14 @@ describe("the inbox", () => {
         }
         if (url.startsWith("https://resend.test/emails/receiving?")) return new Response(JSON.stringify({ data: [received], has_more: false }));
         if (url === "https://resend.test/emails/receiving/rcv-1")
-          return new Response(JSON.stringify({ ...received, html: "<p>Hi &amp; hello</p><script>alert(1)</script><p>Line two</p>", text: null, message_id: "<abc@mail>" }));
+          return new Response(
+            JSON.stringify({
+              ...received,
+              html: '<p>Hi &amp; hello</p><script>alert(1)</script><p>Line two</p><img src="https://track.example/p.gif" alt="Logo"><a href="https://example.com" onclick="x()">Link</a>',
+              text: null,
+              message_id: "<abc@mail>",
+            }),
+          );
         return new Response("{}", { status: 404 });
       }),
     );
@@ -344,11 +353,35 @@ describe("the inbox", () => {
     expect(list.items[0]).toMatchObject({ id: "rcv-1", fromEmail: "todo-trial@example.com" });
     expect(list.items[0].familyId).toBeTruthy();
     const one = (await (await get(inbox, "/api/admin/inbox/?id=rcv-1")).json()) as { message: { text: string } };
-    expect(one.message.text).toBe("Hi & hello\nLine two");
+    expect(one.message.text).toBe("Hi & hello\nLine two\nLink");
     expect((await get(inbox, "/api/admin/inbox/?id=../x")).status).toBe(400);
     // Unanswered mail shows on the to-do list.
     const todo = ((await (await get(queue, "/api/admin/queue/")).json()) as { items: { key: string }[] }).items;
     expect(todo[0].key).toBe("inbox:rcv-1");
+  });
+
+  it("shows the HTML sanitized, in a page that is sandboxed and loads nothing until images are asked for", async () => {
+    const one = (await (await get(inbox, "/api/admin/inbox/?id=rcv-1")).json()) as { message: { hasHtml: boolean; remoteImages: boolean } };
+    expect(one.message).toMatchObject({ hasHtml: true, remoteImages: true });
+    expect((await get(inboxView, "/api/admin/inbox/view/?id=../x")).status).toBe(400);
+    const res = await get(inboxView, "/api/admin/inbox/view/?id=rcv-1");
+    expect(res.status).toBe(200);
+    expect(res.headers.get("content-type")).toContain("text/html");
+    const policy = res.headers.get("content-security-policy") ?? "";
+    expect(policy).toMatch(/^sandbox allow-popups allow-popups-to-escape-sandbox;/);
+    expect(policy).not.toContain("allow-scripts");
+    expect(policy).not.toContain("allow-same-origin");
+    expect(policy).toContain("default-src 'none'");
+    expect(policy).toContain("img-src data:;");
+    expect(policy).toContain("frame-ancestors 'self'");
+    const page = await res.text();
+    expect(page).toContain("<p>Hi &amp; hello</p>");
+    expect(page).not.toMatch(/<script|onclick|track\.example/);
+    expect(page).toContain("<span>Logo</span>");
+    expect(page).toContain('<a href="https://example.com" target="_blank" rel="noopener noreferrer nofollow">Link</a>');
+    const withImages = await get(inboxView, "/api/admin/inbox/view/?id=rcv-1&images=1");
+    expect(withImages.headers.get("content-security-policy")).toContain("img-src data: https: http:");
+    expect(await withImages.text()).toContain('<img src="https://track.example/p.gif" alt="Logo" />');
   });
 
   it("replies in the same thread and marks the message answered", async () => {
