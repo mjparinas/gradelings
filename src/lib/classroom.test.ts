@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { addedMessage, call, checkNameList, classInsights, homeworkDone, mostMissed, studentQuestions, homeworkOverview, isHomeworkDone, type StudentRow } from "./classroom";
+import { addedMessage, agoText, call, checkNameList, classBadge, classInsights, homeworkDone, mostMissed, studentQuestions, homeworkOverview, isHomeworkDone, type StudentRow } from "./classroom";
 
 const DAY = 86_400_000;
 const NOW = 100 * DAY;
@@ -170,5 +170,33 @@ describe("addedMessage", () => {
     expect(addedMessage(28, 0, 40)).toBe("Added 28 students.");
     expect(addedMessage(2, 1, 40)).toBe("Added 2 students. 1 wasn’t added because a class holds up to 40 students.");
     expect(addedMessage(2, 3, 40)).toContain("3 weren’t added");
+  });
+});
+
+describe("class list badges", () => {
+  const now = 10 * 86_400_000;
+  const stu = (id: string, lastActive: number | null, accuracy = 0.9): StudentRow => ({ profileId: id, name: id, avatar: "otter", grade: "3", lastActive, units: [{ key: "3/math/a", level: 1, attempts: 10, accuracy, done: 0 }] });
+
+  it("counts students to check in with, units past due and the latest practice", () => {
+    const students = [stu("Ana", now - 3_600_000), stu("Ben", now - 9 * 86_400_000), stu("Cy", null)];
+    const b = classBadge(students, ["3/math/a"], { "3/math/a": now - 1000 }, {}, now);
+    expect(b).toEqual({ checkIn: 2, pastDue: 1, lastPractice: now - 3_600_000 });
+  });
+
+  it("has no last practice and nothing to check when no work is assigned", () => {
+    expect(classBadge([stu("Ana", null)], [], {}, {}, now)).toEqual({ checkIn: 0, pastDue: 0, lastPractice: null });
+  });
+});
+
+describe("agoText", () => {
+  const now = 100 * 86_400_000;
+  it("says how long ago in a few plain words", () => {
+    expect(agoText(now - 10_000, now)).toBe("just now");
+    expect(agoText(now - 60_000, now)).toBe("1 minute ago");
+    expect(agoText(now - 5 * 60_000, now)).toBe("5 minutes ago");
+    expect(agoText(now - 3 * 3_600_000, now)).toBe("3 hours ago");
+    expect(agoText(now - 86_400_000, now)).toBe("1 day ago");
+    expect(agoText(now - 40 * 86_400_000, now)).toBe("1 month ago");
+    expect(agoText(now + 5000, now)).toBe("just now");
   });
 });

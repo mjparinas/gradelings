@@ -68,6 +68,14 @@ for (const tab of TEACHER_TABS) {
   await page.waitForTimeout(400);
   await scan(page, `/teachers/ class ${tab.slice(1) || "progress"}`);
 }
+// The account page and its delete dialog.
+await page.goto(`${BASE}/teachers/#/account`);
+await page.getByRole("heading", { level: 1, name: "Your account" }).waitFor();
+await scan(page, "/teachers/ account");
+await page.getByRole("button", { name: "Delete my account…" }).click();
+await page.getByRole("dialog", { name: "Delete your account?" }).waitFor();
+await scan(page, "/teachers/ delete account dialog");
+await page.keyboard.press("Escape");
 // The remove-student dialog.
 await page.goto(`${BASE}/teachers/#/class/${teacher.classId}/students`);
 await page.getByRole("button", { name: "Remove", exact: true }).first().click();

@@ -6,6 +6,7 @@ import { isFlagOn } from "@/server/flags";
 import { startNextYear } from "@/server/newYear";
 import { classRoster, removeClassStudents } from "@/server/students";
 import { GRADE_ORDER } from "@/content/subjects";
+import { classBadge, type ClassBadge } from "@/lib/classroom";
 
 // A teacher's classes. Ownership is always checked against the signed-in account.
 
@@ -35,6 +36,23 @@ export async function GET(req: Request) {
       missed: progress.missed,
       roster: await classRoster(cls.id),
     });
+  }
+  // ?badges=1: a few facts about each class for the class list (students to check in with, work past due, last practice).
+  // It reads every student's history, so the list asks for it after it has shown, and it is rate limited.
+  if (new URL(req.url).searchParams.get("badges")) {
+    if (await rateLimited(`classbadges:${session.parentId}`, 12, 10 * 60_000)) return error(429, "Too many refreshes. Try again in a minute.");
+    const owned = await query<{ id: string }>(
+      `SELECT c.id FROM classes c WHERE c.closed_at IS NULL AND (c.owner_parent_id = ? OR c.id IN (SELECT class_id FROM class_teachers WHERE parent_id = ?))
+       AND EXISTS (SELECT 1 FROM class_members m WHERE m.class_id = c.id)`,
+      [session.parentId, session.parentId],
+    );
+    const now = Date.now();
+    const badges: Record<string, ClassBadge> = {};
+    for (const { id: classId } of owned) {
+      const { students } = await classProgressAndMisses(classId);
+      badges[classId] = classBadge(students, await assignmentKeys(classId), await assignmentDue(classId), await assignmentGoals(classId), now);
+    }
+    return json({ badges });
   }
   const rows = await query<{ id: string; name: string; grade: string; grade2: string | null; framework: string; join_code: string; students: number; owner_parent_id: string }>(
     `SELECT c.id, c.name, c.grade, c.grade2, c.framework, c.join_code, c.owner_parent_id, (SELECT COUNT(*) FROM class_members m WHERE m.class_id = c.id) AS students

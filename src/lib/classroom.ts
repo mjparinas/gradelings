@@ -305,3 +305,34 @@ export function addedMessage(added: number, skipped: number, limit: number): str
   const base = `Added ${added} ${added === 1 ? "student" : "students"}.`;
   return skipped > 0 ? `${base} ${skipped} ${skipped === 1 ? "wasn’t" : "weren’t"} added because a class holds up to ${limit} students.` : base;
 }
+
+// ---------- Class list badges ----------
+
+/** What a teacher would want to know about a class before opening it. Practice only, never a mark. */
+export interface ClassBadge {
+  /** Students worth a check-in (finding a unit tricky, or no practice this week). */
+  checkIn: number;
+  /** Assigned units past their due date with students still to finish. */
+  pastDue: number;
+  /** When any student last practised, or null for no practice yet. */
+  lastPractice: number | null;
+}
+
+export function classBadge(students: StudentRow[], assignments: string[], due: Record<string, number>, goal: Record<string, number>, now = Date.now()): ClassBadge {
+  return {
+    checkIn: classInsights(students, assignments, (k) => k, now).checkIn.length,
+    pastDue: homeworkOverview(students, assignments, due, goal, now).filter((o) => o.overdue).length,
+    lastPractice: students.reduce<number | null>((t, s) => (s.lastActive !== null && (t === null || s.lastActive > t) ? s.lastActive : t), null),
+  };
+}
+
+/** "just now", "5 minutes ago", "2 hours ago", "3 days ago": how long ago something happened, in a few words. */
+export function agoText(then: number, now = Date.now()): string {
+  const s = Math.max(0, Math.round((now - then) / 1000));
+  if (s < 45) return "just now";
+  const unit = (n: number, word: string) => `${n} ${word}${n === 1 ? "" : "s"} ago`;
+  if (s < 3600) return unit(Math.max(1, Math.round(s / 60)), "minute");
+  if (s < 86_400) return unit(Math.round(s / 3600), "hour");
+  if (s < 30 * 86_400) return unit(Math.round(s / 86_400), "day");
+  return unit(Math.round(s / (30 * 86_400)), "month");
+}

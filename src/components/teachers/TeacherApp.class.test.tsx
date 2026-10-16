@@ -59,7 +59,7 @@ async function openTab(user: ReturnType<typeof userEvent.setup>, name: string) {
 async function openClass() {
   const user = userEvent.setup();
   render(<TeacherApp />);
-  await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+  await user.click(await screen.findByRole("button", { name: /^Room 3/ }));
   await screen.findByRole("heading", { name: "Room 3" });
   return user;
 }
@@ -449,7 +449,7 @@ describe("TeacherApp class page", () => {
     serve(detail, (url) => (url === "/api/classes/?id=class-1" ? Promise.reject(new Error("This class was closed.")) : undefined));
     const user = userEvent.setup();
     render(<TeacherApp />);
-    await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+    await user.click(await screen.findByRole("button", { name: /^Room 3/ }));
     expect(await screen.findByText("This class was closed.")).toBeInTheDocument();
   });
 
@@ -639,7 +639,7 @@ describe("TeacherApp keyboard and screen-reader support", () => {
   it("titles the class list", async () => {
     serve(detail);
     render(<TeacherApp />);
-    await screen.findByRole("button", { name: /Room 3/ });
+    await screen.findByRole("button", { name: /^Room 3/ });
     expect(document.title).toBe("Your classes · For teachers · Gradelings");
   });
 

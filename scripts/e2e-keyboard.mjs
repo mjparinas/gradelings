@@ -332,6 +332,9 @@ for (const tab of TEACHER_TABS) {
   await tpage.waitForTimeout(300);
   await walk(tpage, `teachers: ${tab.slice(1) || "progress"}`, 150);
 }
+await tpage.goto(`${BASE}/teachers/#/account`);
+await tpage.getByRole("heading", { level: 1, name: "Your account" }).waitFor();
+await walk(tpage, "teachers: account", 150);
 // Moving to another tab with the keyboard puts focus on the page heading.
 await tpage.goto(`${BASE}/teachers/#/class/${teacher.classId}`);
 await tpage.getByRole("heading", { level: 1, name: "Room 3" }).waitFor();

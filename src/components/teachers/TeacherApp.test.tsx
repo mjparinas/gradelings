@@ -133,7 +133,7 @@ describe("TeacherApp", () => {
   it("creates a class with the selected grade and province, then opens it", async () => {
     const user = userEvent.setup();
     render(<TeacherApp />);
-    await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+    await user.click(await screen.findByRole("button", { name: /^Room 3/ }));
     expect(await screen.findByRole("heading", { name: "Room 3" })).toBeInTheDocument();
     await user.click(screen.getByRole("link", { name: /All classes/ }));
 
@@ -191,14 +191,14 @@ describe("TeacherApp", () => {
     render(<TeacherApp />);
     // US grade names on the class list.
     expect(await screen.findByText(/4th grade · Washington/)).toBeInTheDocument();
-    await user.click(await screen.findByRole("button", { name: /Room 4W/ }));
+    await user.click(await screen.findByRole("button", { name: /^Room 4W/ }));
     await screen.findByRole("heading", { name: "Room 4W" });
     await openTab(user, "Students");
     expect(screen.getByText(US_CLASS_CONSENT)).toBeInTheDocument();
     expect(US_CLASS_CONSENT).toMatch(/FERPA/);
     expect(US_CLASS_CONSENT).toMatch(/COPPA/);
     await user.click(screen.getByRole("link", { name: /All classes/ }));
-    await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+    await user.click(await screen.findByRole("button", { name: /^Room 3/ }));
     expect(await screen.findByRole("heading", { name: "Room 3" })).toBeInTheDocument();
     await openTab(user, "Students");
     expect(screen.queryByText(US_CLASS_CONSENT)).not.toBeInTheDocument();
@@ -218,7 +218,7 @@ describe("TeacherApp", () => {
   it("shows practice as practice, sends due dates and adds students by name", async () => {
     const user = userEvent.setup();
     render(<TeacherApp />);
-    await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+    await user.click(await screen.findByRole("button", { name: /^Room 3/ }));
 
     expect(await screen.findByText(`This reflects practice in ${APP_NAME}, not a report-card mark. You decide proficiency.`)).toBeInTheDocument();
     // In the table and under "Check in with".
@@ -245,7 +245,7 @@ describe("TeacherApp", () => {
   it("lets a teacher rotate the class code and add or remove assigned units", async () => {
     const user = userEvent.setup();
     render(<TeacherApp />);
-    await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+    await user.click(await screen.findByRole("button", { name: /^Room 3/ }));
     await screen.findByRole("heading", { name: "Room 3" });
 
     await openTab(user, "Students");
@@ -267,7 +267,7 @@ describe("TeacherApp", () => {
   it("requires confirmation before deleting a student or closing a class", async () => {
     const user = userEvent.setup();
     render(<TeacherApp />);
-    await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+    await user.click(await screen.findByRole("button", { name: /^Room 3/ }));
     await screen.findByRole("heading", { name: "Room 3" });
 
     await openTab(user, "Students");
@@ -295,7 +295,7 @@ describe("TeacherApp", () => {
     });
     const user = userEvent.setup();
     render(<TeacherApp />);
-    await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+    await user.click(await screen.findByRole("button", { name: /^Room 3/ }));
     await screen.findByRole("heading", { name: "Room 3" });
     await openTab(user, "Settings");
     expect(screen.getByText("co@example.com")).toBeInTheDocument();
@@ -317,7 +317,7 @@ describe("TeacherApp", () => {
     const user = userEvent.setup();
     render(<TeacherApp />);
     expect(await screen.findByText(/you co-teach/)).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: /Room 3/ }));
+    await user.click(screen.getByRole("button", { name: /^Room 3/ }));
     await screen.findByRole("heading", { name: "Room 3" });
     await openTab(user, "Students");
     expect(screen.getByRole("button", { name: "Print login cards" })).toBeInTheDocument();
@@ -341,7 +341,7 @@ describe("TeacherApp", () => {
     mocks.call.mockImplementation(failing("owner"));
     const user = userEvent.setup();
     const { unmount } = render(<TeacherApp />);
-    await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+    await user.click(await screen.findByRole("button", { name: /^Room 3/ }));
     await screen.findByRole("heading", { name: "Room 3" });
     await openTab(user, "Settings");
     await user.click(screen.getByRole("button", { name: "Close class" }));
@@ -353,7 +353,7 @@ describe("TeacherApp", () => {
     mocks.call.mockImplementation(failing("co-teacher"));
     window.location.hash = "";
     render(<TeacherApp />);
-    await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+    await user.click(await screen.findByRole("button", { name: /^Room 3/ }));
     await screen.findByRole("heading", { name: "Room 3" });
     await openTab(user, "Settings");
     await user.click(screen.getByRole("button", { name: "Leave this class" }));
@@ -371,7 +371,7 @@ describe("TeacherApp", () => {
     });
     const user = userEvent.setup();
     render(<TeacherApp />);
-    await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+    await user.click(await screen.findByRole("button", { name: /^Room 3/ }));
     await screen.findByRole("heading", { name: "Room 3" });
     await openTab(user, "Students");
     const names = screen.getByLabelText(/First names, one per line/);
