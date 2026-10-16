@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
+import { APP_NAME, socialLinks, WORDMARK_COLOURS } from "@/lib/brand";
 import { PageCta, SiteFooter, SiteHeader, SubscribeActions } from "./SiteChrome";
 
 // next.config.ts sets trailingSlash, which next/link reads from this variable.
@@ -70,5 +70,16 @@ describe("SiteFooter", () => {
     const footer = screen.getByRole("contentinfo");
     expect(footer.querySelectorAll("a").length).toBeLessThan(25);
     expect(footer.querySelector('a[href^="/curriculum/bc"]')).toBeNull();
+  });
+
+  it("links each social profile that exists, opening in a new tab", () => {
+    render(<SiteFooter />);
+    for (const { name, href } of socialLinks()) {
+      const link = screen.getByRole("link", { name: `${APP_NAME} on ${name}` });
+      expect(link).toHaveAttribute("href", href);
+      expect(link).toHaveAttribute("target", "_blank");
+      expect(link.getAttribute("rel")).toContain("noopener");
+    }
+    expect(socialLinks().map((l) => l.name)).toEqual(["Instagram", "Pinterest", "Facebook"]);
   });
 });

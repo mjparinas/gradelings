@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { missingSocialPlatforms, SOCIAL_PLATFORMS, SOCIAL_PROFILES } from "./brand";
+import { missingSocialPlatforms, SOCIAL_PLATFORMS, SOCIAL_PROFILES, socialLinks } from "./brand";
 
 describe("social accounts", () => {
   it("are Instagram, YouTube, Pinterest and Facebook (owner, October 2026)", () => {
@@ -34,5 +34,20 @@ describe("listed profiles", () => {
     expect(SOCIAL_PROFILES).toContain("https://www.pinterest.com/gradelings");
     expect(SOCIAL_PROFILES).toContain("https://www.facebook.com/people/Gradelings/61595170062640/");
     expect(missingSocialPlatforms()).toEqual([]);
+  });
+});
+
+describe("socialLinks", () => {
+  it("names each listed profile by its platform, in platform order, and skips URLs that aren't ours", () => {
+    expect(
+      socialLinks(["https://m.facebook.com/gradelings", "not a url", "https://example.com/x", "https://www.pinterest.ca/gradelings"]),
+    ).toEqual([
+      { name: "Pinterest", href: "https://www.pinterest.ca/gradelings" },
+      { name: "Facebook", href: "https://m.facebook.com/gradelings" },
+    ]);
+  });
+
+  it("gives one link for every profile listed today", () => {
+    expect(socialLinks().map((l) => l.href).sort()).toEqual([...SOCIAL_PROFILES].sort());
   });
 });

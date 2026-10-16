@@ -28,17 +28,29 @@ export const SOCIAL_PLATFORMS = [
   { name: "Facebook", host: "facebook.com" },
 ] as const;
 
-/** The chosen platforms, not put off for later, with no profile URL listed yet. Pinterest's country sites (pinterest.ca) count as Pinterest. */
+/** The platform a profile URL belongs to, if it is one of ours. Pinterest's country sites (pinterest.ca) count as Pinterest. */
+function platformOf(url: string): (typeof SOCIAL_PLATFORMS)[number] | undefined {
+  let host: string;
+  try {
+    host = new URL(url).hostname.replace(/^(www|m)\./, "");
+  } catch {
+    return undefined;
+  }
+  return SOCIAL_PLATFORMS.find((p) => host === p.host || host.split(".")[0] === p.host.split(".")[0]);
+}
+
+/** The chosen platforms, not put off for later, with no profile URL listed yet. */
 export function missingSocialPlatforms(profiles: readonly string[] = SOCIAL_PROFILES): string[] {
-  const hosts = profiles.flatMap((u) => {
-    try {
-      return [new URL(u).hostname.replace(/^(www|m)\./, "")];
-    } catch {
-      return [];
-    }
+  const listed = new Set(profiles.map(platformOf));
+  return SOCIAL_PLATFORMS.filter((p) => !("later" in p && p.later) && !listed.has(p)).map((p) => p.name);
+}
+
+/** The listed profiles with their platform's name, in `SOCIAL_PLATFORMS` order, for the site footer. */
+export function socialLinks(profiles: readonly string[] = SOCIAL_PROFILES): { name: string; href: string }[] {
+  return SOCIAL_PLATFORMS.flatMap((p) => {
+    const href = profiles.find((u) => platformOf(u) === p);
+    return href ? [{ name: p.name, href }] : [];
   });
-  const has = (host: string) => hosts.some((h) => h === host || h.split(".")[0] === host.split(".")[0]);
-  return SOCIAL_PLATFORMS.filter((p) => !("later" in p && p.later) && !has(p.host)).map((p) => p.name);
 }
 /** Hostname a parent types into a browser. The Android app names this site because it can't take payment. */
 export const SITE_HOST = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://gradelings.com").hostname.replace(/^www\./, "");

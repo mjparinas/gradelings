@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { FRAMEWORKS } from "@/content/frameworks";
-import { APP_NAME, LEGAL_NAME, WORDMARK_COLOURS } from "@/lib/brand";
+import { APP_NAME, LEGAL_NAME, socialLinks, WORDMARK_COLOURS } from "@/lib/brand";
 import { SUBSCRIBE_HREF, TRIAL_DAYS } from "@/lib/plan";
 import { teacherPath, TEACHER_SIGNUP } from "./teachers";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
@@ -74,6 +74,56 @@ function FooterColumn({ title, links }: { title: string; links: { label: string;
   );
 }
 
+/** Plain one-colour marks for the brand's social profiles (drawn here, so no icon library or third-party script). */
+const SOCIAL_ICONS: Record<string, ReactNode> = {
+  Instagram: (
+    <>
+      <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" strokeWidth="2" />
+      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="2" />
+      <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+    </>
+  ),
+  YouTube: (
+    <>
+      <rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor" />
+      <path d="M10 9v6l5-3z" fill="white" />
+    </>
+  ),
+  Pinterest: (
+    <path
+      fill="currentColor"
+      d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.6 1.3 1.4 0 .9-.5 2.1-.8 3.3-.2 1 .5 1.8 1.5 1.8 1.8 0 3.1-1.9 3.1-4.6 0-2.4-1.7-4.1-4.2-4.1-2.9 0-4.5 2.1-4.5 4.4 0 .9.3 1.8.8 2.3l.1.4-.3 1.1c0 .2-.2.3-.4.2-1.3-.6-2.1-2.5-2.1-4 0-3.3 2.4-6.3 6.9-6.3 3.6 0 6.4 2.6 6.4 6 0 3.6-2.3 6.5-5.4 6.5-1.1 0-2.1-.6-2.4-1.2l-.7 2.5c-.2.9-.9 2.1-1.3 2.8A10 10 0 1 0 12 2z"
+    />
+  ),
+  Facebook: <path fill="currentColor" d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v2H7v4h2v9h4v-9h3l1-4h-4V9c0-.6.4-1 1-1z" />,
+};
+
+/** The brand's social profiles that exist (`SOCIAL_PROFILES`), as icon links. A platform shows up once its URL is listed. */
+function SocialLinks() {
+  const links = socialLinks();
+  if (!links.length) return null;
+  return (
+    <ul className="mt-3 flex gap-1" aria-label={`${APP_NAME} on social media`}>
+      {links.map((l) => (
+        <li key={l.name}>
+          <a
+            href={l.href}
+            target="_blank"
+            rel="me noopener noreferrer"
+            aria-label={`${APP_NAME} on ${l.name}`}
+            title={l.name}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-ink-soft hover:bg-black/5 hover:text-ink"
+          >
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+              {SOCIAL_ICONS[l.name]}
+            </svg>
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 // One link per section: each region's curriculum, report-card and guide pages are reached from these hubs, so the
 // footer stays the same short list as provinces and states are added.
 export function SiteFooter() {
@@ -83,6 +133,7 @@ export function SiteFooter() {
         <div>
           <p className="text-xl font-bold">{APP_NAME}</p>
           <p className="mt-1 font-read text-sm text-ink-soft">Curriculum-matched practice, games and progress reports for Kindergarten to Grade 9.</p>
+          <SocialLinks />
         </div>
         <FooterColumn
           title="Explore"
