@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { TeacherApp } from "@/components/teachers/TeacherApp";
+import { TeacherGate } from "@/components/teachers/TeacherGate";
 
 export const metadata: Metadata = {
   title: "For teachers",
@@ -7,5 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <TeacherApp />;
+  return <TeacherGate />;
 }
