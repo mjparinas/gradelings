@@ -11,7 +11,7 @@ Gradelings is a web app (installable, with an Android wrapper) for practice and 
 | Role | Account | What they can do |
 | --- | --- | --- |
 | Teacher | Email and password. Email must be confirmed before a class can be created. | Create classes, add students, assign units, see results on assigned units. |
-| Student, added by the teacher | A login code (class code plus a personal code). No email, no password. | Practise and play. No parent area, no billing, no other accounts, no free-text input. |
+| Student, added by the teacher | A personal login code (ten characters, unique across every class; older codes also need the class code). No email, no password. | Practise and play. No parent area, no billing, no other accounts, no free-text input. |
 | Student, linked by a parent | The child's family account. The parent enters the class code. | Same play as at home. The parent can unlink at any time. |
 
 ## 3. Data inventory
@@ -29,7 +29,7 @@ Gradelings is a web app (installable, with an Android wrapper) for practice and 
 | Co-teacher links (teacher account id, date joined) and open invitations (the invited email address, who invited, date) | Teacher | Sharing a class with colleagues | Database | Left, removed, class closed or deleted, invitation accepted, declined, cancelled or 14 days old, or either account deleted |
 | Sign-in sessions (hashed token, browser type, time) | Both | Staying signed in, 90 days | Database | Expiry, sign-out or deletion |
 | Request logs (IP address, browser type, time) | Both | Security and operation | Host logs | **(confirm)** host retention |
-| Attempt counters per IP address and class code | Both | Blocking code guessing | Database | Minutes to an hour |
+| Attempt counters per IP address and class code, and a site-wide count of wrong codes | Both | Blocking code guessing | Database | Minutes to an hour |
 
 **Not collected from students:** email address, birth year (class accounts never have one), surname, photos, voice, location, free text, device identifiers, advertising identifiers.
 

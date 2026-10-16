@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { VoicePreload } from "@/components/VoicePreload";
+import { ClassTimerChip } from "./ClassTimer";
 import type { FlagKey } from "@/lib/flags";
 import { refreshFlags, useIsOn } from "@/lib/remoteFlags";
 import { ageBandFor } from "@/content/subjects";
@@ -133,6 +134,7 @@ export function PlayApp() {
         {/* Only while the child's teacher is asking the class something, and only online. */}
         <LiveQuestionCard state={live} />
         <Toasts />
+        <ClassTimerChip />
         {isOn("secrets") && <SecretsListener />}
       </BandProvider>
     </ContentGate>

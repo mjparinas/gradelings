@@ -142,6 +142,8 @@ const SCHEMA = [
     UNIQUE (class_id, login_code)
   )`,
   `CREATE INDEX IF NOT EXISTS students_class ON students (class_id)`,
+  // Ten-character codes sign in on their own, so they are unique across every class. Older eight-character codes are unique per class only.
+  `CREATE UNIQUE INDEX IF NOT EXISTS students_one_code ON students (login_code) WHERE length(login_code) = 10`,
   // Co-teachers: other teacher accounts that share a class with its owner. The owner invites by
   // email; the invitation is kept by address only (so it never reveals whether an account exists)
   // and the invitee accepts it while signed in with that confirmed email.
@@ -186,6 +188,16 @@ const SCHEMA = [
     PRIMARY KEY (question_id, profile_id)
   )`,
   `CREATE INDEX IF NOT EXISTS live_answers_family ON live_answers (family_id)`,
+  // A class timer a teacher starts for the whole class: one row per class, deleted when stopped or with the class.
+  // It holds a note and times only, nothing about a child.
+  `CREATE TABLE IF NOT EXISTS class_timers (
+    class_id TEXT PRIMARY KEY,
+    label TEXT NOT NULL,
+    total_ms INTEGER NOT NULL,
+    ends_at INTEGER,
+    paused_left INTEGER,
+    updated_at INTEGER NOT NULL
+  )`,
   // Weekly-report browser notifications were removed (the weekly email says the same); drop any saved push addresses.
   `DROP TABLE IF EXISTS push_subscriptions`,
   // Codes the owner hands out: free access for a number of days (or for life), or a discount at checkout.

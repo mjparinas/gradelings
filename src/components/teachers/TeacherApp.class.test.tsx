@@ -38,9 +38,9 @@ const detail = {
   roster: [{ id: "r1", profileId: "p1", loginCode: "ZX91PQ" }, { id: "r2", profileId: "p2", loginCode: "MN34RT" }],
 };
 
-function serve(classDetail: unknown, extra: (url: string, method: string) => unknown = () => undefined) {
-  mocks.call.mockImplementation((url: string, method = "GET") => {
-    const custom = extra(url, method);
+function serve(classDetail: unknown, extra: (url: string, method: string, body?: unknown) => unknown = () => undefined) {
+  mocks.call.mockImplementation((url: string, method = "GET", body?: unknown) => {
+    const custom = extra(url, method, body);
     if (custom !== undefined) return custom instanceof Promise ? custom : Promise.resolve(custom);
     if (url === "/api/auth/me/") return Promise.resolve({ family: { account: { student: false } } });
     if (url === "/api/classes/" && method === "GET") return Promise.resolve({ classes: [cls] });
@@ -152,6 +152,47 @@ describe("TeacherApp class page", () => {
     expect(await within(section).findByText(/answer shown to the class/)).toBeInTheDocument();
     await user.click(within(section).getByRole("button", { name: "End" }));
     expect(await within(section).findByRole("button", { name: "Ask a live question" })).toBeInTheDocument();
+  });
+
+  it("starts, pauses, extends and stops the class timer", async () => {
+    let timer: unknown = null;
+    serve(detail, (url, method, body) => {
+      if (!url.startsWith("/api/classes/timer/")) return undefined;
+      const b = body as { action?: string; minutes?: number; label?: string } | undefined;
+      if (method === "POST") timer = { label: b?.label ?? "", totalMs: (b?.minutes ?? 0) * 60_000, left: (b?.minutes ?? 0) * 60_000, running: true };
+      if (method === "PATCH" && b?.action === "pause") timer = { ...(timer as object), running: false };
+      if (method === "PATCH" && b?.action === "resume") timer = { ...(timer as object), running: true };
+      if (method === "PATCH" && b?.action === "add") timer = { ...(timer as { left: number }), left: (timer as { left: number }).left + 60_000 };
+      if (method === "DELETE") timer = null;
+      return { timer };
+    });
+    const user = await openClass();
+    await openTab(user, "Live");
+    const section = screen.getByRole("region", { name: "Class timer" });
+    await user.click(within(section).getByRole("button", { name: "5 min" }));
+    await user.type(within(section).getByLabelText(/What for/), "Silent reading");
+    await user.click(within(section).getByRole("button", { name: "Start the timer" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/timer/", "POST", { classId: "class-1", minutes: 5, label: "Silent reading" }));
+    expect(await within(section).findByRole("timer")).toHaveTextContent("5:00");
+    await user.click(within(section).getByRole("button", { name: "Pause" }));
+    expect(await within(section).findByText(/Paused/)).toBeInTheDocument();
+    await user.click(within(section).getByRole("button", { name: "Resume" }));
+    await user.click(await within(section).findByRole("button", { name: "Add a minute" }));
+    expect(await within(section).findByRole("timer")).toHaveTextContent("6:00");
+    await user.click(within(section).getByRole("button", { name: "Stop" }));
+    expect(await within(section).findByRole("button", { name: "Start the timer" })).toBeInTheDocument();
+  });
+
+  it("only starts the timer for a whole number of minutes from 1 to 120", async () => {
+    serve(detail);
+    const user = await openClass();
+    await openTab(user, "Live");
+    const section = screen.getByRole("region", { name: "Class timer" });
+    await user.type(within(section).getByLabelText(/Other length/), "121");
+    expect(within(section).getByRole("button", { name: "Start the timer" })).toBeDisabled();
+    await user.clear(within(section).getByLabelText(/Other length/));
+    await user.type(within(section).getByLabelText(/Other length/), "45");
+    expect(within(section).getByRole("button", { name: "Start the timer" })).toBeEnabled();
   });
 
   it("previews the next live question and lets the teacher choose a different one", async () => {
@@ -286,6 +327,28 @@ describe("TeacherApp class page", () => {
     await user.click(screen.getByRole("button", { name: "Print login cards" }));
     await waitFor(() => expect(print).toHaveBeenCalledOnce());
     await waitFor(() => expect(document.querySelector(".print\\:grid")).toBeNull());
+  });
+
+  it("prints one code on a one-code card, and switches older codes to one code each when asked", async () => {
+    serve({ ...detail, roster: [{ id: "r1", profileId: "p1", loginCode: "KM7PQR3XTA" }, { id: "r2", profileId: "p2", loginCode: "MN34RT7Q" }] });
+    const user = await openClass();
+    await openTab(user, "Students");
+    // The roster shows one-code logins in two groups of five.
+    expect(screen.getByText("KM7PQ-R3XTA")).toBeInTheDocument();
+    expect(screen.getByText(/1 student has an older code that also needs the class code/)).toBeInTheDocument();
+    const print = vi.spyOn(window, "print").mockImplementation(() => {
+      const cards = [...document.querySelectorAll(".print\\:grid > div")];
+      expect(cards.map((c) => c.textContent)).toEqual([expect.stringMatching(/^Maya.*My code: KM7PQ-R3XTA$/), expect.stringMatching(/^Sam.*Class code: AB12CD.*My code: MN34RT7Q$/)]);
+      expect(cards[0].textContent).not.toContain("Class code");
+    });
+    await user.click(screen.getByRole("button", { name: "Print login cards" }));
+    await waitFor(() => expect(print).toHaveBeenCalledOnce());
+
+    // Switching asks first, since old cards stop working.
+    await user.click(screen.getByRole("button", { name: "Switch to one code each" }));
+    expect(mocks.call).not.toHaveBeenCalledWith(expect.stringContaining("all=1"), "PATCH", undefined);
+    await user.click(screen.getByRole("button", { name: "Yes, make new codes" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/?classId=class-1&all=1", "PATCH", undefined));
   });
 
   it("prints a class summary that says it is practice", async () => {

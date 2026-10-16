@@ -55,7 +55,7 @@ describe("teacher-made student accounts", () => {
     const added = await (await studentRoutes.POST(req("/api/classes/students/", "POST", { classId: cls.id, names: ["Maya", " Sam <b>", ""] }, t))).json();
     expect(added.students.map((s: { name: string }) => s.name)).toEqual(["Maya", "Sam b"]);
     const [maya] = added.students as { loginCode: string; profileId: string }[];
-    expect(maya.loginCode).toMatch(/^[A-HJKMNP-Z2-9]{8}$/);
+    expect(maya.loginCode).toMatch(/^[A-HJKMNP-Z2-9]{10}$/);
 
     // Wrong codes fail; the right pair signs in.
     expect((await studentLogin.POST(req("/api/students/login/", "POST", { classCode: cls.joinCode, studentCode: "ZZZZZZZZ" }))).status).toBe(401);
@@ -181,6 +181,76 @@ describe("teacher-made student accounts", () => {
     expect((await attempt(students[1].loginCode, "10.9.9.9")).status).toBe(429);
     // ...while the class keeps signing in.
     expect((await attempt(students[1].loginCode, school)).status).toBe(200);
+  });
+
+  it("signs a student in with their one code alone, and keeps older two-code logins working", async () => {
+    const t = await teacher("st-teacher6@example.com");
+    const cls = await classWith(t);
+    const { students } = (await (await studentRoutes.POST(req("/api/classes/students/", "POST", { classId: cls.id, names: ["Rae", "Jo"] }, t))).json()) as { students: { id: string; loginCode: string }[] };
+    const [rae, jo] = students;
+    // One code, typed any way a child might, is enough.
+    const typed = `${rae.loginCode.slice(0, 5).toLowerCase()}- ${rae.loginCode.slice(5)}`;
+    expect((await studentLogin.POST(req("/api/students/login/", "POST", { code: typed }))).status).toBe(200);
+    expect((await studentLogin.POST(req("/api/students/login/", "POST", { code: "ZZZZZZZZZZ" }))).status).toBe(401);
+    expect((await studentLogin.POST(req("/api/students/login/", "POST", { code: rae.loginCode.slice(0, 8) }))).status).toBe(400);
+    // Codes are unique across classes, enforced by the database too.
+    await expect(dbm.run("UPDATE students SET login_code = ? WHERE id = ?", [rae.loginCode, jo.id])).rejects.toThrow();
+
+    // A code from before one-code sign-in (eight characters, unique per class) still needs its class code.
+    await dbm.run("UPDATE students SET login_code = 'ABCD2345' WHERE id = ?", [jo.id]);
+    expect((await studentLogin.POST(req("/api/students/login/", "POST", { code: "ABCD2345" }))).status).toBe(400);
+    expect((await studentLogin.POST(req("/api/students/login/", "POST", { classCode: cls.joinCode, studentCode: "ABCD2345" }))).status).toBe(200);
+    // The same eight characters in another class don't clash.
+    const other = await classWith(t);
+    const { students: [kim] } = (await (await studentRoutes.POST(req("/api/classes/students/", "POST", { classId: other.id, names: ["Kim"] }, t))).json()) as { students: { id: string }[] };
+    await dbm.run("UPDATE students SET login_code = 'ABCD2345' WHERE id = ?", [kim.id]);
+
+    // A new class code doesn't change one-code logins.
+    await dbm.run("UPDATE classes SET join_code = 'NEW234' WHERE id = ?", [cls.id]);
+    expect((await studentLogin.POST(req("/api/students/login/", "POST", { code: rae.loginCode }))).status).toBe(200);
+
+    // The teacher switches the class's older codes to one code each: only those change, and old sessions end.
+    const joLogin = await studentLogin.POST(req("/api/students/login/", "POST", { classCode: "NEW234", studentCode: "ABCD2345" }));
+    const joCookie = (joLogin.headers.get("set-cookie") ?? "").split(";")[0];
+    const switched = await (await studentRoutes.PATCH(req(`/api/classes/students/?classId=${cls.id}&all=1`, "PATCH", undefined, t))).json();
+    expect(switched.changed).toBe(1);
+    expect((await sync.POST(req("/api/sync/", "POST", {}, joCookie))).status).toBe(401);
+    const view = await (await classes.GET(req(`/api/classes/?id=${cls.id}`, "GET", undefined, t))).json();
+    const codes = Object.fromEntries((view.roster as { id: string; loginCode: string }[]).map((r) => [r.id, r.loginCode]));
+    expect(codes[rae.id]).toBe(rae.loginCode);
+    expect(codes[jo.id]).toMatch(/^[A-HJKMNP-Z2-9]{10}$/);
+    expect((await studentLogin.POST(req("/api/students/login/", "POST", { code: codes[jo.id] }))).status).toBe(200);
+    // Kim's class is untouched.
+    expect((await dbm.query<{ login_code: string }>("SELECT login_code FROM students WHERE id = ?", [kim.id]))[0].login_code).toBe("ABCD2345");
+    // Nothing left to switch.
+    expect((await (await studentRoutes.PATCH(req(`/api/classes/students/?classId=${cls.id}&all=1`, "PATCH", undefined, t))).json()).changed).toBe(0);
+  });
+
+  it("limits wrong one-code tries per network and emails the admins when many come from everywhere", async () => {
+    const { outbox } = await import("@/server/email");
+    process.env.ADMIN_EMAILS = "alerts-admin2@example.com";
+    try {
+      await teacher("alerts-admin2@example.com");
+      const t = await teacher("st-teacher7@example.com");
+      const cls = await classWith(t);
+      const { students } = (await (await studentRoutes.POST(req("/api/classes/students/", "POST", { classId: cls.id, names: ["Ola"] }, t))).json()) as { students: { loginCode: string }[] };
+      const attempt = (code: string, ip: string) =>
+        studentLogin.POST(new Request("http://localhost/api/students/login/", { method: "POST", headers: { "content-type": "application/json", "x-forwarded-for": ip }, body: JSON.stringify({ code }) }));
+      // One network guessing is stopped there, and right codes from it are refused until the window passes.
+      let last = 0;
+      for (let i = 0; i < 41; i++) last = (await attempt("DDDDDDDDDD", "10.5.5.5")).status;
+      expect(last).toBe(429);
+      expect((await attempt(students[0].loginCode, "10.5.5.5")).status).toBe(429);
+      // Many networks guessing tell the admins once, and never lock the student out.
+      const before = outbox().length;
+      for (let i = 0; i < 1010; i++) await attempt("EEEEEEEEEE", `10.4.${Math.floor(i / 30)}.${i % 30}`);
+      const alerts = outbox().slice(before).filter((m) => m.to === "alerts-admin2@example.com");
+      expect(alerts).toHaveLength(1);
+      expect(alerts[0].subject).toBe("Alert: Many wrong student sign-ins");
+      expect((await attempt(students[0].loginCode, "10.3.0.1")).status).toBe(200);
+    } finally {
+      delete process.env.ADMIN_EMAILS;
+    }
   });
 
   it("emails the admins, without locking anyone out, when a class gets many wrong codes from many networks", async () => {

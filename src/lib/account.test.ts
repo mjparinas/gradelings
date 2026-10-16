@@ -120,7 +120,7 @@ describe("signing up and in", () => {
 describe("class sign-in", () => {
   it("refuses while a grown-up is signed in on the device", async () => {
     useStore.setState({ family: signedIn });
-    await expect(account.signInStudent("CLASS1", "KID123")).rejects.toThrow(/A grown-up is signed in/);
+    await expect(account.signInStudent("KID123", "CLASS1")).rejects.toThrow(/A grown-up is signed in/);
     expect(calls).toEqual([]);
   });
 
@@ -128,7 +128,7 @@ describe("class sign-in", () => {
     useStore.setState({ profiles: [kid("old")], activeId: "old", events: [{ id: "e", profileId: "old", t: 1, type: "secret", code: "x" } as AppEvent] });
     remote.profiles = [kid("gone", true), kid("student")];
     routes["POST /api/students/login/"] = () => json({ family: family({ plan: "premium", account: { email: "", familyId: "s1", student: true } }) });
-    await account.signInStudent("CLASS1", "KID123");
+    await account.signInStudent("KID123", "CLASS1");
 
     expect(calls[0].body).toEqual({ classCode: "CLASS1", studentCode: "KID123" });
     expect(local.cleared).toBe(1);
@@ -143,7 +143,7 @@ describe("class sign-in", () => {
   it("a wrong code leaves the device untouched", async () => {
     useStore.setState({ profiles: [kid("old")] });
     routes["POST /api/students/login/"] = () => json({ error: "Those codes don't match." }, 401);
-    await expect(account.signInStudent("CLASS1", "NOPE")).rejects.toThrow("Those codes don't match.");
+    await expect(account.signInStudent("NOPE")).rejects.toThrow("Those codes don't match.");
     expect(local.cleared).toBe(0);
     expect(useStore.getState().profiles).toHaveLength(1);
   });

@@ -32,6 +32,7 @@ export const FLAGS: readonly FlagDef[] = [
   { key: "redeem-codes", label: "Redeeming codes", description: "Parents entering access or discount codes under Subscription.", scope: "server", defaultOn: true },
   { key: "new-classes", label: "New classes", description: "Teachers creating new classes. Existing classes keep working.", scope: "server", defaultOn: true },
   { key: "live-questions", label: "Live class questions", description: "Teachers asking their class a question in real time from the teacher area, and students' devices showing it on the home screen. Off: no new live questions start and devices stop showing them; homework and practice are unchanged.", scope: "server", defaultOn: true },
+  { key: "class-timer", label: "Class timer", description: "A countdown a teacher starts for the whole class, shown on the teacher's screen and on students' devices. Off: no new timers start and devices stop showing them; practice is unchanged.", scope: "server", defaultOn: true },
 ];
 
 export type FlagKey = (typeof FLAGS)[number]["key"];
