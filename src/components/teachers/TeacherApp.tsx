@@ -1085,7 +1085,7 @@ function ProgressTable({ data, label, levelLabel, now }: { data: ClassDetail; la
               <tr key={s.profileId} className="border-b border-line align-top last:border-0">
                 <th scope="row" className="sticky left-0 bg-white py-2 pr-3 font-bold">
                   {only === null ? (
-                    <button type="button" aria-label={`Show only ${s.name}`} className="inline-flex min-h-11 items-center text-left font-bold underline decoration-dotted" onClick={() => setOnly(s.profileId)}>
+                    <button type="button" aria-label={`Show only ${s.name}`} className="inline-flex min-h-11 min-w-11 items-center text-left font-bold underline decoration-dotted" onClick={() => setOnly(s.profileId)}>
                       {s.name}
                     </button>
                   ) : (
