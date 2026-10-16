@@ -114,6 +114,25 @@ export function LiveClass({ data, label, unitGroups }: { data: ClassDetail; labe
             </p>
           )}
           {waiting.length > 0 && !live.revealed && <p className="font-read text-sm text-ink-soft">Waiting for: {waiting.join(", ")}</p>}
+          {live.next && (
+            <div className="mt-4 rounded-xl border border-dashed border-line p-3" aria-label="Next question preview">
+              <p className="text-sm font-semibold text-ink-soft">Up next · only you can see this</p>
+              <p lang={live.next.lang} className="mt-1 font-read font-bold">
+                {live.next.prompt}
+              </p>
+              {live.next.visual && (
+                <div lang={live.next.visualLang ?? live.next.lang} className="mt-2 max-w-sm">
+                  <QuestionVisual visual={live.next.visual} />
+                </div>
+              )}
+              <p lang={live.next.choicesLang ?? live.next.lang} className="mt-1 font-read text-sm">
+                {live.next.choices.map((c) => `${c.emoji ? `${c.emoji} ` : ""}${c.label}${c.id === live.next?.answer ? " ✓" : ""}`).join(" · ")}
+              </p>
+              <button type="button" disabled={busy} className={`${btn} mt-2 border border-line`} onClick={() => void act("PATCH", { classId, action: "swap-next" })}>
+                Choose a different question
+              </button>
+            </div>
+          )}
           <div className="mt-3 flex flex-wrap gap-3">
             {!live.revealed && (
               <button type="button" disabled={busy} className={`${btn} bg-[#25b47e] text-[#0f172a] disabled:opacity-50`} onClick={() => void act("PATCH", { classId, action: "reveal" })}>
