@@ -49,6 +49,9 @@ export async function DELETE(req: Request) {
   const session = await getSession(req);
   if (!session) return error(401, "Not signed in");
   const params = new URL(req.url).searchParams;
-  const removed = await run("DELETE FROM class_members WHERE class_id = ? AND profile_id = ? AND family_id = ?", [params.get("classId") ?? "", params.get("profileId") ?? "", session.familyId]);
+  const classId = params.get("classId") ?? "";
+  const profileId = params.get("profileId") ?? "";
+  const removed = await run("DELETE FROM class_members WHERE class_id = ? AND profile_id = ? AND family_id = ?", [classId, profileId, session.familyId]);
+  if (removed) await run("DELETE FROM class_assignment_students WHERE class_id = ? AND profile_id = ?", [classId, profileId]);
   return json({ removed });
 }

@@ -140,6 +140,34 @@ export async function assignmentKeys(classId: string): Promise<string[]> {
   return rows.map((r) => r.unit_key);
 }
 
+/** The students a unit is for, by unit key. Units for the whole class are not listed. */
+export async function assignmentAudience(classId: string): Promise<Record<string, string[]>> {
+  const rows = await query<{ unit_key: string; profile_id: string }>("SELECT unit_key, profile_id FROM class_assignment_students WHERE class_id = ? ORDER BY unit_key, profile_id", [classId]);
+  const out: Record<string, string[]> = {};
+  for (const r of rows) (out[r.unit_key] ??= []).push(r.profile_id);
+  return out;
+}
+
+/**
+ * Students picked from the browser, narrowed to this class's own members. `undefined` means the field was
+ * absent or not a list of ids; an empty list means the whole class.
+ */
+export async function cleanAudience(classId: string, v: unknown): Promise<string[] | undefined> {
+  if (v === undefined || v === null) return [];
+  if (!Array.isArray(v) || v.length > MAX_STUDENTS || v.some((x) => typeof x !== "string")) return undefined;
+  const members = new Set((await query<{ profile_id: string }>("SELECT profile_id FROM class_members WHERE class_id = ?", [classId])).map((r) => r.profile_id));
+  const picked = [...new Set(v as string[])];
+  return picked.every((id) => members.has(id)) ? picked : undefined;
+}
+
+/** Sets who a unit is for. An empty list makes it for the whole class. */
+export async function setAudience(classId: string, unitKey: string, profileIds: string[]): Promise<void> {
+  await batch([
+    { sql: "DELETE FROM class_assignment_students WHERE class_id = ? AND unit_key = ?", args: [classId, unitKey] },
+    ...profileIds.map((id) => ({ sql: "INSERT OR IGNORE INTO class_assignment_students (class_id, unit_key, profile_id) VALUES (?, ?, ?)", args: [classId, unitKey, id] })),
+  ]);
+}
+
 export interface Classwork {
   profileId: string;
   classId: string;
@@ -185,6 +213,8 @@ export async function familyClasswork(familyId: string): Promise<Classwork[]> {
     `SELECT m.profile_id, m.class_id, c.name, a.unit_key, a.due_at, a.goal, a.created_at FROM class_members m
      JOIN classes c ON c.id = m.class_id AND c.closed_at IS NULL
      LEFT JOIN class_assignments a ON a.class_id = m.class_id
+       AND (NOT EXISTS (SELECT 1 FROM class_assignment_students t WHERE t.class_id = a.class_id AND t.unit_key = a.unit_key)
+            OR EXISTS (SELECT 1 FROM class_assignment_students t WHERE t.class_id = a.class_id AND t.unit_key = a.unit_key AND t.profile_id = m.profile_id))
      WHERE m.family_id = ? ORDER BY m.joined_at, a.created_at, a.unit_key`,
     [familyId],
   );
@@ -208,14 +238,15 @@ export interface StudentProgress {
   grade: GradeId;
   lastActive: number | null;
   /** One entry per assigned unit, in assignment order. level -1 = not started. */
-  /** `done`: questions answered on the unit since it was assigned (homework). */
-  units: { key: string; level: number; attempts: number; accuracy: number; done: number }[];
+  /** `done`: questions answered on the unit since it was assigned (homework). `assigned`: false when the teacher gave the unit to other students only. */
+  units: { key: string; level: number; attempts: number; accuracy: number; done: number; assigned: boolean }[];
 }
 
 /** Progress for linked students on the assigned units only. Never includes an email or other family details. */
 export async function classProgress(classId: string): Promise<StudentProgress[]> {
   const members = await query<{ profile_id: string; family_id: string }>("SELECT profile_id, family_id FROM class_members WHERE class_id = ? ORDER BY joined_at", [classId]);
   const keys = await assignmentKeys(classId);
+  const audience = await assignmentAudience(classId);
   const since = Object.fromEntries((await query<{ unit_key: string; created_at: number }>("SELECT unit_key, created_at FROM class_assignments WHERE class_id = ?", [classId])).map((r) => [r.unit_key, Number(r.created_at)]));
   const progress = await mapLimit(members, CLASS_LOAD_CONCURRENCY, async (m): Promise<StudentProgress | null> => {
     // One unreadable child record must not take the whole class view down with it.
@@ -233,7 +264,7 @@ export async function classProgress(classId: string): Promise<StudentProgress[]>
       lastActive: data.report.units.reduce<number | null>((t, u) => (u.lastT && (t === null || u.lastT > t) ? u.lastT : t), null),
       units: keys.map((key) => {
         const u = byKey.get(key);
-        return { key, level: u ? u.level : unitLevel(undefined), attempts: u?.attempts ?? 0, accuracy: u?.accuracy ?? 0, done: homeworkDone(data.events, key, since[key] ?? 0) };
+        return { key, level: u ? u.level : unitLevel(undefined), attempts: u?.attempts ?? 0, accuracy: u?.accuracy ?? 0, done: homeworkDone(data.events, key, since[key] ?? 0), assigned: !audience[key] || audience[key].includes(m.profile_id) };
       }),
     };
   });

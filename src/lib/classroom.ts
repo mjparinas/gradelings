@@ -46,7 +46,7 @@ export interface StudentRow {
   grade: string;
   lastActive: number | null;
   /** `done`: questions answered on the unit since it was assigned (homework). Older servers omit it. */
-  units: { key: string; level: number; attempts: number; accuracy: number; done?: number }[];
+  units: { key: string; level: number; attempts: number; accuracy: number; done?: number; assigned?: boolean }[];
 }
 
 export interface RosterEntry {
@@ -151,6 +151,8 @@ export function classInsights(students: StudentRow[], assignments: string[], uni
     const row: UnitInsight = { key, started: 0, notStarted: 0, proficient: 0, needHand: [], accuracy: null };
     for (const s of students) {
       const u = s.units.find((x) => x.key === key);
+      // A unit the teacher gave to other students says nothing about this one.
+      if (u?.assigned === false) continue;
       if (!u || u.attempts === 0) {
         row.notStarted++;
         continue;
@@ -172,7 +174,8 @@ export function classInsights(students: StudentRow[], assignments: string[], uni
     const reasons: string[] = [];
     const tricky = units.filter((u) => u.needHand.includes(s.profileId)).map((u) => unitName(u.key));
     if (tricky.length) reasons.push(`Finding ${tricky.slice(0, 2).join(" and ")}${tricky.length > 2 ? ` and ${tricky.length - 2} more` : ""} tricky`);
-    if (assignments.length && (s.lastActive === null || now - s.lastActive > WEEK)) reasons.push(s.lastActive === null ? "Hasn’t started yet" : "No practice this week");
+    const hasWork = assignments.length > 0 && (s.units.length === 0 || s.units.some((u) => u.assigned !== false));
+    if (hasWork && (s.lastActive === null || now - s.lastActive > WEEK)) reasons.push(s.lastActive === null ? "Hasn’t started yet" : "No practice this week");
     if (reasons.length) checkIn.push({ profileId: s.profileId, name: s.name, reasons });
   }
   return { units, focusUnits, checkIn };
