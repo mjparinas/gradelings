@@ -336,3 +336,19 @@ export function agoText(then: number, now = Date.now()): string {
   if (s < 30 * 86_400) return unit(Math.round(s / 86_400), "day");
   return unit(Math.round(s / (30 * 86_400)), "month");
 }
+
+// ---------- Due-date shortcuts ----------
+
+const localDate = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+
+/** Quick picks for a due date: tomorrow, the coming Friday and the coming Monday, as date-input values (local time). Picks that land on the same day are shown once. */
+export function dueChips(now: Date = new Date()): { label: string; value: string }[] {
+  const ahead = (days: number) => localDate(new Date(now.getFullYear(), now.getMonth(), now.getDate() + days));
+  const until = (weekday: number) => ((weekday - now.getDay() + 7) % 7) || 7;
+  const chips = [
+    { label: "Tomorrow", value: ahead(1) },
+    { label: "Friday", value: ahead(until(5)) },
+    { label: "Next Monday", value: ahead(until(1)) },
+  ];
+  return chips.filter((c, i) => chips.findIndex((x) => x.value === c.value) === i);
+}

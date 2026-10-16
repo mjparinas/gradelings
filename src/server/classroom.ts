@@ -226,6 +226,12 @@ export function cleanGoal(v: unknown): number | null | undefined {
   return v >= 1 && v <= 50 ? v : undefined;
 }
 
+/** When each unit was assigned (ms). Sent back with an undo, so answers already given still count. */
+export async function assignedAt(classId: string): Promise<Record<string, number>> {
+  const rows = await query<{ unit_key: string; created_at: number }>("SELECT unit_key, created_at FROM class_assignments WHERE class_id = ?", [classId]);
+  return Object.fromEntries(rows.map((r) => [r.unit_key, Number(r.created_at)]));
+}
+
 /** Due dates a teacher set on this class's assigned units. */
 export async function assignmentDue(classId: string): Promise<Record<string, number>> {
   const rows = await query<{ unit_key: string; due_at: number | null }>("SELECT unit_key, due_at FROM class_assignments WHERE class_id = ? AND due_at IS NOT NULL", [classId]);

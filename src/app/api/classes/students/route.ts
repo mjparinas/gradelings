@@ -1,6 +1,6 @@
 import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
 import { classGrades, MAX_STUDENTS, ownedClass, teachingClass, type ClassRow } from "@/server/classroom";
-import { addStudents, cleanStudentName, removeStudent, resetStudentCode, updateStudent } from "@/server/students";
+import { addStudents, cleanStudentName, removeStudent, resetStudentCode, restoreStudentCode, updateStudent } from "@/server/students";
 
 // A teacher adds students to a class they own. Each gets a login code; there is no email or password.
 
@@ -48,13 +48,17 @@ export async function DELETE(req: Request) {
 /**
  * Changes one student (?classId=&studentId=). With `{ name }` and/or `{ grade }` (a grade of the class) it fixes their
  * name or moves them to the other grade of a split class; their codes and practice stay. With no body it gives them a
- * new login code and signs them out everywhere.
+ * new login code and signs them out everywhere. `{ undo: true }` brings back the code they had just before, for a few minutes.
  */
 export async function PATCH(req: Request) {
   const params = new URL(req.url).searchParams;
   const found = await teacherClass(req, params.get("classId") ?? "");
   if (found.fail) return found.fail;
-  const body = (await req.json().catch(() => null)) as { name?: unknown; grade?: unknown } | null;
+  const body = (await req.json().catch(() => null)) as { name?: unknown; grade?: unknown; undo?: unknown } | null;
+  if (body?.undo === true) {
+    const restored = await restoreStudentCode(found.cls!.id, params.get("studentId") ?? "");
+    return restored ? json({ loginCode: restored }) : error(409, "It’s too late to undo that code change. Get a new code instead.");
+  }
   if (body && ("name" in body || "grade" in body)) {
     const change: { name?: string; grade?: ClassRow["grade"] } = {};
     if ("name" in body) {

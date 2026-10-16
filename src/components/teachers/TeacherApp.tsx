@@ -4,12 +4,12 @@ import Link from "next/link";
 import { useCallback, useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 import { coursesForGrade, getUnitRef, loadGrade } from "@/content";
 import { FRAMEWORKS, getFramework } from "@/content/frameworks";
-import { GRADE_ORDER, getSubjectMeta } from "@/content/subjects";
+import { GRADE_ORDER, getSubjectMeta, gradeSlug } from "@/content/subjects";
 import type { FrameworkId, GradeId } from "@/content/types";
 import { DateField } from "@/components/DateField";
 import { SelectMenu } from "@/components/SelectMenu";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
-import { addedMessage, agoText, call, checkNameList, type ClassBadge, classInsights, HOMEWORK_GOALS, homeworkOverview, isHomeworkDone, isUsClass, US_CLASS_CONSENT, type ClassInvite, type MissedQuestion, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
+import { addedMessage, agoText, call, checkNameList, dueChips, type ClassBadge, classInsights, HOMEWORK_GOALS, homeworkOverview, isHomeworkDone, isUsClass, US_CLASS_CONSENT, type ClassInvite, type MissedQuestion, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
 import { frameworkGroups, frameworkMenu } from "@/lib/frameworkGroups";
 import { classCsv } from "@/lib/classCsv";
 import { countryOf } from "@/lib/country";
@@ -187,6 +187,7 @@ function ConfirmEmail({ email }: { email?: string }) {
 
 const HIDDEN_KEY = "gradelings.teacher.hiddenClasses";
 const CHECKLIST_KEY = "gradelings.teacher.hideChecklist";
+const GOAL_KEY = "gradelings.teacher.lastQuestions";
 
 /** Per-device choices (classes hidden from the list, the checklist put away). Storage can be blocked, so it never throws. */
 function readStore(key: string): string {
@@ -432,7 +433,13 @@ function FirstRun({ students, assignments, tabLink }: { students: StudentRow[]; 
 }
 
 /** Sends a change to the server and reloads the class. `success` is what is said on screen afterwards (default "Saved."), or built from the server's answer. */
-export type ChangeFn = (url: string, method: string, body?: unknown, success?: string | ((response: unknown) => string)) => Promise<boolean>;
+export type ChangeFn = (url: string, method: string, body?: unknown, success?: string | ((response: unknown) => string), undo?: (response: unknown) => UndoOffer) => Promise<boolean>;
+
+/** What "Undo" does after a change that can be taken back: the words shown, and the call that brings it back. */
+export interface UndoOffer {
+  text: string;
+  run: () => Promise<unknown>;
+}
 
 export interface ClassDetail {
   class: { id: string; name: string; grade: GradeId; grade2?: GradeId | null; framework: FrameworkId; joinCode: string };
@@ -440,6 +447,8 @@ export interface ClassDetail {
   due: Record<string, number>;
   /** Homework question counts by unit key. Older servers omit it. */
   goal?: Record<string, number>;
+  /** When each unit was assigned (ms). Older servers omit it. */
+  assignedAt?: Record<string, number>;
   /** The students a unit is for, by unit key. Units for the whole class are not listed. Older servers omit it. */
   audience?: Record<string, string[]>;
   /** Questions several students missed on the first try, by unit key (only for answers given since this was added). Older servers omit it. */
@@ -576,7 +585,7 @@ function EditStudent({ cls, student, onClose, onSave }: { cls: ClassDetail["clas
 }
 
 /** Add students by first name, share each one's login code, and print the cards. */
-function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChange: ChangeFn; onBulk: (calls: { url: string; method: string }[], success?: string) => Promise<boolean>; onPrint: (ids?: string[]) => void }) {
+function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChange: ChangeFn; onBulk: (calls: { url: string; method: string; body?: unknown }[], success?: string) => Promise<boolean>; onPrint: (ids?: string[]) => void }) {
   const [names, setNames] = useState("");
   const [busy, setBusy] = useState(false);
   const [removing, setRemoving] = useState<RosterEntry | null>(null);
@@ -638,7 +647,14 @@ function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChan
               <span className="font-mono text-xl font-bold tracking-widest" aria-label={`Login code ${r.loginCode.split("").join(" ")}`}>
                 {r.loginCode}
               </span>
-              <button type="button" className="min-h-11 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => onChange(`/api/classes/students/?classId=${cls.id}&studentId=${r.id}`, "PATCH", undefined, (res) => `${byProfile.get(r.profileId)?.name ?? "The student"} has a new code: ${(res as { loginCode: string }).loginCode}`)}>
+              <button type="button" className="min-h-11 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => {
+                const who = byProfile.get(r.profileId)?.name ?? "The student";
+                const url = `/api/classes/students/?classId=${cls.id}&studentId=${r.id}`;
+                void onChange(url, "PATCH", undefined, undefined, (res) => ({
+                  text: `${who} has a new code: ${(res as { loginCode: string }).loginCode}`,
+                  run: () => onChange(url, "PATCH", { undo: true }, (back) => `${who}’s old code works again: ${(back as { loginCode: string }).loginCode}`),
+                }));
+              }}>
                 New code
               </button>
               <button type="button" aria-label={`Edit ${byProfile.get(r.profileId)?.name ?? "student"}`} className="min-h-11 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => setEditing(r)}>
@@ -1099,6 +1115,44 @@ function ProgressTable({ data, label, levelLabel, now }: { data: ClassDetail; la
 }
 
 /** A short "Saved." that fades after a few seconds. The region stays on the page so screen readers announce each new message; it never takes a tap. */
+/** After a change that can be taken back: what happened and an Undo button. Focus moves to Undo so a keyboard user can reach it; it goes away by itself after a minute. */
+function UndoBar({ offer, onDone }: { offer: UndoOffer | null; onDone: () => void }) {
+  const undo = useRef<HTMLButtonElement>(null);
+  const done = useRef(onDone);
+  useEffect(() => {
+    done.current = onDone;
+  });
+  useEffect(() => {
+    if (!offer) return;
+    undo.current?.focus();
+    const t = setTimeout(() => done.current(), 60_000);
+    return () => clearTimeout(t);
+  }, [offer]);
+  return (
+    <div role="status" aria-live="polite" className="fixed inset-x-0 bottom-4 z-40 flex justify-center px-4 print:hidden">
+      {offer && (
+        <div className="flex max-w-md flex-wrap items-center gap-2 rounded-2xl bg-[#253047] px-4 py-2 font-read text-white shadow-lg">
+          <span>{offer.text}</span>
+          <button
+            ref={undo}
+            type="button"
+            className="min-h-11 rounded-xl bg-white px-4 font-bold text-[#253047]"
+            onClick={() => {
+              done.current();
+              void offer.run();
+            }}
+          >
+            Undo
+          </button>
+          <button type="button" aria-label="Dismiss" className="min-h-11 min-w-11 rounded-full font-bold" onClick={() => done.current()}>
+            ✕
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function Notice({ text, onDone }: { text: string; onDone: () => void }) {
   const done = useRef(onDone);
   useEffect(() => {
@@ -1126,7 +1180,11 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
   const [confirmYear, setConfirmYear] = useState(false);
   const [nameDraft, setNameDraft] = useState<string | null>(null);
   const [due, setDue] = useState("");
-  const [questions, setQuestions] = useState("");
+  // The number of questions last used is offered again, because a teacher usually assigns the same amount each time.
+  const [questions, setQuestions] = useState(() => (HOMEWORK_GOALS as readonly number[]).includes(Number(readStore(GOAL_KEY))) ? readStore(GOAL_KEY) : "");
+  const [undo, setUndo] = useState<UndoOffer | null>(null);
+  const [many, setMany] = useState(false);
+  const [manyPicked, setManyPicked] = useState<string[]>([]);
   const [who, setWho] = useState<"all" | "some">("all");
   const [picked, setPicked] = useState<string[]>([]);
   const [now, setNow] = useState(() => Date.now());
@@ -1230,10 +1288,18 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
       }),
     }));
 
+  const chosenKeys = many ? manyPicked : pick ? [pick] : [];
+  /** The public page for a unit (sample questions and how we explain it), to look at before assigning it. */
+  const previewHref = (key: string) => {
+    const [g, subject, unit] = key.split("/");
+    return `/curriculum/${getFramework(cls.framework).slug}/${gradeSlug(g as GradeId)}/${subject}/${unit}/`;
+  };
+
   /** Sends a change and reloads the class. Resolves false (with the error shown) when the change failed. */
-  const change: ChangeFn = async (url, method, body, success) => {
+  const change: ChangeFn = async (url, method, body, success, undoWith) => {
     setErr("");
     setNotice("");
+    setUndo(null);
     let response: unknown;
     try {
       response = await call(url, method, body);
@@ -1242,17 +1308,19 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
       return false;
     }
     await load().catch(() => undefined);
-    setNotice(typeof success === "function" ? success(response) : (success ?? "Saved."));
+    if (undoWith) setUndo(undoWith(response));
+    else setNotice(typeof success === "function" ? success(response) : (success ?? "Saved."));
     return true;
   };
   /** Several changes in a row, then one reload. Stops at the first that fails and shows why. */
-  const bulk = async (calls: { url: string; method: string }[], success?: string): Promise<boolean> => {
+  const bulk = async (calls: { url: string; method: string; body?: unknown }[], success?: string): Promise<boolean> => {
     setErr("");
     setNotice("");
+    setUndo(null);
     let ok = true;
     for (const c of calls) {
       try {
-        await call(c.url, c.method);
+        await (c.body === undefined ? call(c.url, c.method) : call(c.url, c.method, c.body));
       } catch (e) {
         setErr((e as Error).message);
         ok = false;
@@ -1350,7 +1418,17 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
                   onChange={(next) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, goal: next ? Number(next) : null }, `Questions for ${label(k)} saved.`)}
                   options={goalOptions}
                 />
-                <button type="button" aria-label={`Remove ${label(k)}`} className="min-h-11 min-w-11 rounded-full font-bold" onClick={() => change(`/api/classes/assignments/?classId=${id}&unitKey=${encodeURIComponent(k)}`, "DELETE", undefined, `${label(k)} was removed from homework.`)}>
+                <a href={previewHref(k)} target="_blank" rel="noopener" aria-label={`Preview ${label(k)} (opens in a new tab)`} className="inline-flex min-h-11 items-center text-sm font-semibold underline">
+                  Preview
+                </a>
+                <button type="button" aria-label={`Remove ${label(k)}`} className="min-h-11 min-w-11 rounded-full font-bold" onClick={() => {
+                  // What it was, so Undo can put it back the same way (including the date it was first assigned, so answers already given still count).
+                  const was = { classId: id, unitKey: k, dueAt: data.due[k] || undefined, goal: data.goal?.[k] || undefined, ...(data.audience?.[k]?.length ? { students: data.audience[k] } : {}), since: data.assignedAt?.[k] };
+                  void change(`/api/classes/assignments/?classId=${id}&unitKey=${encodeURIComponent(k)}`, "DELETE", undefined, undefined, () => ({
+                    text: `${label(k)} was removed from homework.`,
+                    run: () => change("/api/classes/assignments/", "POST", was, `${label(k)} is back in homework.`),
+                  }));
+                }}>
                   ✕
                 </button>
                 <HomeworkProgress status={overview.find((o) => o.key === k)} />
@@ -1366,33 +1444,89 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
             {assignments.length === 0 && <li className="py-2 font-read text-ink-soft">Nothing assigned yet.</li>}
           </ul>
           <div className="mt-3 flex flex-wrap items-end gap-3">
-            <SelectMenu
-              label="Add a unit"
-              value={pick}
-              onChange={setPick}
-              options={[{ value: "", label: "Choose a unit…" }]}
-              groups={unitGroups(assignments)}
-            />
+            {!many && (
+              <>
+                <SelectMenu
+                  label="Add a unit"
+                  value={pick}
+                  onChange={setPick}
+                  options={[{ value: "", label: "Choose a unit…" }]}
+                  groups={unitGroups(assignments)}
+                />
+                {pick && (
+                  <a href={previewHref(pick)} target="_blank" rel="noopener" aria-label={`Preview ${label(pick)} (opens in a new tab)`} className="inline-flex min-h-11 items-center font-semibold underline">
+                    Preview
+                  </a>
+                )}
+              </>
+            )}
+            <button
+              type="button"
+              aria-expanded={many}
+              className="inline-flex min-h-11 items-center text-sm font-semibold underline"
+              onClick={() => {
+                setMany(!many);
+                setPick("");
+                setManyPicked([]);
+              }}
+            >
+              {many ? "Pick one unit instead" : "Pick several units at once"}
+            </button>
+            {many && (
+              <div className="basis-full space-y-2">
+                {unitGroups(assignments).map((g) => (
+                  <details key={g.label} className="rounded-xl border border-line px-3">
+                    <summary className="flex min-h-11 cursor-pointer items-center font-semibold">
+                      {g.label} ({g.options.filter((o) => manyPicked.includes(o.value)).length} picked)
+                    </summary>
+                    <ul className="pb-2">
+                      {g.options.map((o) => (
+                        <li key={o.value}>
+                          <label className="flex min-h-11 items-center gap-2 font-read">
+                            <input type="checkbox" disabled={o.disabled} checked={o.disabled || manyPicked.includes(o.value)} onChange={(e) => setManyPicked(e.target.checked ? [...manyPicked, o.value] : manyPicked.filter((k) => k !== o.value))} />
+                            {o.label}
+                            {o.disabled && <span className="text-sm text-ink-soft"> (already assigned)</span>}
+                          </label>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                ))}
+              </div>
+            )}
             <DateField label="Due (optional)" value={due} onChange={setDue} />
+            <div role="group" aria-label="Due date shortcuts" className="flex flex-wrap gap-2">
+              {dueChips(new Date(now)).map((c) => (
+                <button key={c.value} type="button" aria-pressed={due === c.value} className={`min-h-11 rounded-full border px-4 text-sm font-semibold ${due === c.value ? "border-[#253047] bg-[#253047] text-white" : "border-line"}`} onClick={() => setDue(due === c.value ? "" : c.value)}>
+                  {c.label}
+                </button>
+              ))}
+            </div>
             <SelectMenu label="Questions (optional)" block={false} value={questions} onChange={setQuestions} options={goalOptions} />
             <div className="basis-full">
               <AudiencePicker students={students} who={who} picked={picked} onWho={setWho} onPicked={setPicked} name="Who gets it" />
             </div>
             <button
               type="button"
-              disabled={!pick || (who === "some" && picked.length === 0)}
+              disabled={chosenKeys.length === 0 || (who === "some" && picked.length === 0)}
               className={`${btn} bg-[#4f8ef7] text-[#0f172a] disabled:opacity-50`}
               onClick={async () => {
-                const ok = await change("/api/classes/assignments/", "POST", { classId: id, unitKey: pick, dueAt: due ? endOfDay(due) : undefined, goal: questions ? Number(questions) : undefined, ...(who === "some" ? { students: picked } : {}) }, `${label(pick)} assigned.`);
+                const bodyFor = (k: string) => ({ classId: id, unitKey: k, dueAt: due ? endOfDay(due) : undefined, goal: questions ? Number(questions) : undefined, ...(who === "some" ? { students: picked } : {}) });
+                const ok =
+                  chosenKeys.length === 1
+                    ? await change("/api/classes/assignments/", "POST", bodyFor(chosenKeys[0]), `${label(chosenKeys[0])} assigned.`)
+                    : await bulk(chosenKeys.map((k) => ({ url: "/api/classes/assignments/", method: "POST", body: bodyFor(k) })), `${chosenKeys.length} units assigned.`);
                 if (!ok) return;
+                // The number of questions stays picked (and is remembered on this device) for the next assignment.
+                writeStore(GOAL_KEY, questions);
                 setPick("");
+                setManyPicked([]);
                 setDue("");
-                setQuestions("");
                 setWho("all");
                 setPicked([]);
               }}
             >
-              Assign
+              {many ? `Assign ${chosenKeys.length} ${chosenKeys.length === 1 ? "unit" : "units"}` : "Assign"}
             </button>
           </div>
         </section>
@@ -1509,6 +1643,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
       )}
       </div>
       <Notice text={notice} onDone={() => setNotice("")} />
+      <UndoBar offer={undo} onDone={() => setUndo(null)} />
     </>
   );
 }

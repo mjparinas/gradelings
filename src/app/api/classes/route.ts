@@ -1,5 +1,5 @@
 import { error, getSession, json, newId, rateLimited, sameOrigin } from "@/server/auth";
-import { assignmentAudience, cleanClassName, cleanSecondGrade, assignmentDue, assignmentGoals, assignmentKeys, classProgressAndMisses, classTeachers, isFramework, MAX_CLASSES, newJoinCode, ownedClass, pendingInvites, removeClassTeachers, teachingClass } from "@/server/classroom";
+import { assignedAt, assignmentAudience, cleanClassName, cleanSecondGrade, assignmentDue, assignmentGoals, assignmentKeys, classProgressAndMisses, classTeachers, isFramework, MAX_CLASSES, newJoinCode, ownedClass, pendingInvites, removeClassTeachers, teachingClass } from "@/server/classroom";
 import { batch, query, run } from "@/server/db";
 import { liveClassStatements } from "@/server/live";
 import { isFlagOn } from "@/server/flags";
@@ -32,6 +32,7 @@ export async function GET(req: Request) {
       due: await assignmentDue(cls.id),
       goal: await assignmentGoals(cls.id),
       audience: await assignmentAudience(cls.id),
+      assignedAt: await assignedAt(cls.id),
       students: progress.students,
       missed: progress.missed,
       roster: await classRoster(cls.id),

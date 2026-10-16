@@ -390,6 +390,8 @@ const MEMBER_COLUMNS: [string, string][] = [["grade", "TEXT"]];
 /** A due date a teacher can set on an assigned unit (ms since epoch). */
 // `goal`: how many questions the teacher asked for (homework); NULL means "until Proficient".
 const ASSIGNMENT_COLUMNS: [string, string][] = [["due_at", "INTEGER"], ["goal", "INTEGER"]];
+// The login code a student had before a teacher gave them a new one, kept for a few minutes so "Undo" can restore it.
+const STUDENT_COLUMNS: [string, string][] = [["prev_login_code", "TEXT"], ["prev_code_at", "INTEGER"]];
 const SESSION_COLUMNS: [string, string][] = [["user_agent", "TEXT"]];
 // Mail the admin archived: hidden from the Inbox list (shown under Archived) until moved back.
 const INBOX_COLUMNS: [string, string][] = [["archived_at", "INTEGER"]];
@@ -450,6 +452,7 @@ async function migrate(c: Client) {
   await c.execute("UPDATE classes SET last_activity_at = created_at WHERE last_activity_at = 0");
   await addColumns(c, "class_assignments", ASSIGNMENT_COLUMNS);
   await addColumns(c, "class_members", MEMBER_COLUMNS);
+  await addColumns(c, "students", STUDENT_COLUMNS);
   const have = new Set((await c.execute("PRAGMA table_info(parents)")).rows.map((r) => String(r.name)));
   for (const [name, type] of PARENT_COLUMNS) {
     if (!have.has(name)) await c.execute(`ALTER TABLE parents ADD COLUMN ${name} ${type}`);

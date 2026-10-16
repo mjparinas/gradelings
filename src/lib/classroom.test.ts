@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { addedMessage, agoText, call, checkNameList, classBadge, classInsights, homeworkDone, mostMissed, studentQuestions, homeworkOverview, isHomeworkDone, type StudentRow } from "./classroom";
+import { addedMessage, agoText, call, checkNameList, classBadge, classInsights, dueChips, homeworkDone, mostMissed, studentQuestions, homeworkOverview, isHomeworkDone, type StudentRow } from "./classroom";
 
 const DAY = 86_400_000;
 const NOW = 100 * DAY;
@@ -198,5 +198,27 @@ describe("agoText", () => {
     expect(agoText(now - 86_400_000, now)).toBe("1 day ago");
     expect(agoText(now - 40 * 86_400_000, now)).toBe("1 month ago");
     expect(agoText(now + 5000, now)).toBe("just now");
+  });
+});
+
+describe("dueChips", () => {
+  const values = (d: Date) => dueChips(d).map((c) => `${c.label} ${c.value}`);
+
+  it("offers tomorrow, the coming Friday and the coming Monday", () => {
+    // Tuesday 13 October 2026
+    expect(values(new Date(2026, 9, 13, 10))).toEqual(["Tomorrow 2026-10-14", "Friday 2026-10-16", "Next Monday 2026-10-19"]);
+  });
+
+  it("doesn't repeat a day: on a Thursday tomorrow is Friday, on a Sunday it is Monday", () => {
+    expect(values(new Date(2026, 9, 15, 10))).toEqual(["Tomorrow 2026-10-16", "Next Monday 2026-10-19"]);
+    expect(values(new Date(2026, 9, 18, 10))).toEqual(["Tomorrow 2026-10-19", "Friday 2026-10-23"]);
+  });
+
+  it("on a Friday offers next Friday and the Monday after", () => {
+    expect(values(new Date(2026, 9, 16, 10))).toEqual(["Tomorrow 2026-10-17", "Friday 2026-10-23", "Next Monday 2026-10-19"]);
+  });
+
+  it("crosses the end of a month and year", () => {
+    expect(values(new Date(2026, 11, 31, 10))[0]).toBe("Tomorrow 2027-01-01");
   });
 });
