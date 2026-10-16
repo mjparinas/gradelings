@@ -260,3 +260,48 @@ export function homeworkOverview(students: StudentRow[], assignments: string[], 
     return { key, assigned: mine.length, done: mine.length - behind.length, behind: behind.map((s) => s.name), overdue: Boolean(due[key] && due[key] < now && behind.length > 0) };
   });
 }
+
+// ---------- Typing in a class list ----------
+
+export interface NameCheck {
+  /** The names to add, in order. */
+  names: string[];
+  /** Plain-language things worth a second look before adding. Adding is still allowed. */
+  warnings: string[];
+}
+
+/**
+ * Reads the names a teacher typed or pasted: one per line. A single line with commas ("Maya, Sam, Alex") is a list of
+ * names; but when there are several lines, a comma inside one is most likely "Last, First" from a spreadsheet, which
+ * would make a student called "Smith, Maya", so it gets a warning. Two students with the same name, or the same as one
+ * already in the class, get one too, because their login cards would look alike.
+ */
+export function checkNameList(text: string, existing: readonly string[] = []): NameCheck {
+  const lines = text.split(/\r?\n/).map((n) => n.trim()).filter(Boolean);
+  const names = lines.length === 1 ? lines[0].split(",").map((n) => n.trim()).filter(Boolean) : lines;
+  const warnings: string[] = [];
+  if (lines.length > 1) {
+    for (const line of lines.filter((l) => l.includes(",")).slice(0, 2)) {
+      warnings.push(`“${line}” has a comma, so it would be added as one student. Use first names only, one per line.`);
+    }
+  }
+  const seen = new Map<string, number>();
+  for (const n of existing) seen.set(n.toLowerCase(), 1);
+  const repeated = new Set<string>();
+  for (const n of names) {
+    const key = n.toLowerCase();
+    if (seen.has(key)) repeated.add(n);
+    seen.set(key, (seen.get(key) ?? 0) + 1);
+  }
+  if (repeated.size) {
+    const list = [...repeated].slice(0, 3).map((n) => `“${n}”`).join(", ");
+    warnings.push(`More than one student would be called ${list}. Add an initial, like “Maya P.”, so their cards are easy to tell apart.`);
+  }
+  return { names, warnings };
+}
+
+/** What to say after adding students: how many were added and, if the class filled up, how many were left out. */
+export function addedMessage(added: number, skipped: number, limit: number): string {
+  const base = `Added ${added} ${added === 1 ? "student" : "students"}.`;
+  return skipped > 0 ? `${base} ${skipped} ${skipped === 1 ? "wasn’t" : "weren’t"} added because a class holds up to ${limit} students.` : base;
+}

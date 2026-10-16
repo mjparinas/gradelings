@@ -87,6 +87,47 @@ describe("teacher-made student accounts", () => {
     expect(who.family.account.student).toBe(true);
   });
 
+  it("lets a teacher fix a student's name or move them between a split class's grades, keeping their code and practice", async () => {
+    const t = await teacher("st-edit@example.com");
+    const { class: cls } = await (await classes.POST(req("/api/classes/", "POST", { name: "Room 3/4", grade: "3", grade2: "4", framework: "ca-bc" }, t))).json();
+    const { students } = await (await studentRoutes.POST(req("/api/classes/students/", "POST", { classId: cls.id, names: ["Mya"], grade: "3" }, t))).json();
+    const mya = students[0] as { id: string; loginCode: string; profileId: string };
+    const patch = (body: unknown, studentId = mya.id) => studentRoutes.PATCH(req(`/api/classes/students/?classId=${cls.id}&studentId=${studentId}`, "PATCH", body, t));
+
+    expect((await patch({ name: "Maya", grade: "4" })).status).toBe(200);
+    const view = await (await classes.GET(req(`/api/classes/?id=${cls.id}`, "GET", undefined, t))).json();
+    expect(view.students[0]).toMatchObject({ name: "Maya", grade: "4" });
+    expect(view.roster[0].loginCode).toBe(mya.loginCode);
+    const member = await dbm.query<{ grade: string }>("SELECT grade FROM class_members WHERE profile_id = ?", [mya.profileId]);
+    expect(member[0].grade).toBe("4");
+
+    // The student's device gets the new name on its next sync.
+    const login = await studentLogin.POST(req("/api/students/login/", "POST", { classCode: cls.joinCode, studentCode: mya.loginCode }));
+    const cookie = (login.headers.get("set-cookie") ?? "").split(";")[0];
+    const synced = await (await sync.POST(req("/api/sync/", "POST", {}, cookie))).json();
+    expect(synced.profiles[0]).toMatchObject({ name: "Maya", grade: "4" });
+
+    // Only this class's grades and a real name are accepted, and only for this class's students.
+    expect((await patch({ grade: "7" })).status).toBe(400);
+    expect((await patch({ name: " <> " })).status).toBe(400);
+    expect((await patch({ name: "Kai" }, "nobody")).status).toBe(404);
+    const other = await teacher("st-edit-other@example.com");
+    expect((await studentRoutes.PATCH(req(`/api/classes/students/?classId=${cls.id}&studentId=${mya.id}`, "PATCH", { name: "Hacked" }, other))).status).toBe(404);
+    // A change with no name or grade is still "give a new code".
+    expect((await patch(undefined)).status).toBe(200);
+  });
+
+  it("says how many students fit when a class fills up", async () => {
+    const t = await teacher("st-limit@example.com");
+    const cls = await classWith(t);
+    const names = Array.from({ length: 40 }, (_, i) => `S${i}`);
+    const first = await (await studentRoutes.POST(req("/api/classes/students/", "POST", { classId: cls.id, names: names.slice(0, 38) }, t))).json();
+    expect(first.skipped).toBe(0);
+    const second = await (await studentRoutes.POST(req("/api/classes/students/", "POST", { classId: cls.id, names: ["A1", "A2", "A3", "A4"] }, t))).json();
+    expect(second).toMatchObject({ skipped: 2, limit: 40 });
+    expect(second.students).toHaveLength(2);
+  });
+
   it("syncs a US class student's practice without asking for a parent's consent", async () => {
     const t = await teacher("us-st-teacher@example.com");
     const cls = await classWith(t, "us-wa");

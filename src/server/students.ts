@@ -194,3 +194,23 @@ export async function classRoster(classId: string): Promise<RosterEntry[]> {
   const rows = await query<{ id: string; profile_id: string; login_code: string }>("SELECT id, profile_id, login_code FROM students WHERE class_id = ? ORDER BY created_at, id", [classId]);
   return rows.map((r) => ({ id: r.id, profileId: r.profile_id, loginCode: r.login_code }));
 }
+
+/**
+ * Fixes a student's name or, in a split class, moves them to the class's other grade. Their codes and practice stay.
+ * Returns false when the student isn't in this class.
+ */
+export async function updateStudent(classId: string, studentId: string, change: { name?: string; grade?: Profile["grade"] }, now = Date.now()): Promise<boolean> {
+  const rows = await query<{ profile_id: string; family_id: string; data: string }>(
+    "SELECT s.profile_id, s.family_id, p.data FROM students s JOIN profiles p ON p.id = s.profile_id AND p.family_id = s.family_id WHERE s.id = ? AND s.class_id = ?",
+    [studentId, classId],
+  );
+  const row = rows[0];
+  if (!row) return false;
+  const profile = JSON.parse(row.data) as Profile;
+  const next: Profile = { ...profile, name: change.name ?? profile.name, grade: change.grade ?? profile.grade, updatedAt: now };
+  await batch([
+    { sql: "UPDATE profiles SET data = ?, updated_at = ? WHERE id = ? AND family_id = ?", args: [JSON.stringify(next), now, row.profile_id, row.family_id] },
+    { sql: "UPDATE class_members SET grade = ? WHERE class_id = ? AND profile_id = ?", args: [next.grade, classId, row.profile_id] },
+  ]);
+  return true;
+}
