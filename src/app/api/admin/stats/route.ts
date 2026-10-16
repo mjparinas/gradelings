@@ -4,6 +4,7 @@ import { audit, requireAdmin } from "@/server/admin";
 import { query } from "@/server/db";
 import { getSetting, importPayments, setSetting } from "@/server/payments";
 import { stripeCancellationConfigured } from "@/server/stripe";
+import { LATEST_REFUNDED } from "@/server/adminDetail";
 import { computeMetrics, emptyInput, isMetricSection, SECTION_INPUTS, sectionOf, type FamilyFacts, type MetricsInput } from "@/lib/adminMetrics";
 
 const DAY = 86_400_000;
@@ -24,7 +25,8 @@ function loaders(now: number): Loaders {
     families: async () =>
       (
         await query<Record<string, unknown>>(
-          `SELECT f.created_at, f.plan, f.trial_ends_at, f.subscription_status, f.subscription_interval, f.billing_event_at, f.access_until, f.country,
+          `SELECT f.created_at, f.plan, f.trial_ends_at, f.subscription_status, f.subscription_interval, f.billing_event_at, f.access_until, f.country, f.cancel_at, f.cancelled_at,
+             ${LATEST_REFUNDED} AS refunded,
              f.referred_by IS NOT NULL AS referred,
              EXISTS (SELECT 1 FROM parents p WHERE p.family_id = f.id AND p.email_verified_at IS NOT NULL) AS verified,
              EXISTS (SELECT 1 FROM events e WHERE e.family_id = f.id) AS practised
@@ -38,6 +40,9 @@ function loaders(now: number): Loaders {
           subscriptionStatus: (f.subscription_status as string | null) ?? null,
           subscriptionInterval: (f.subscription_interval as string | null) ?? null,
           billingEventAt: Number(f.billing_event_at ?? 0),
+          cancelAt: f.cancel_at == null ? null : Number(f.cancel_at),
+          cancelledAt: f.cancelled_at == null ? null : Number(f.cancelled_at),
+          refunded: Boolean(Number(f.refunded)),
           accessUntil: f.access_until == null ? null : Number(f.access_until),
           referred: Boolean(Number(f.referred)),
           verified: Boolean(Number(f.verified)),

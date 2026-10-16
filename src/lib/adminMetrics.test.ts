@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { computeMetrics, emptyInput, familyGroup, fee, METRIC_SECTIONS, monthStart, SECTION_INPUTS, sectionOf, type FamilyFacts, type MetricsInput, type PaymentFacts } from "./adminMetrics";
+import { cancelledOn, computeMetrics, emptyInput, familyGroup, fee, METRIC_SECTIONS, monthStart, SECTION_INPUTS, sectionOf, type FamilyFacts, type MetricsInput, type PaymentFacts, MONTHLY_CENTS, MONTHLY_CENTS_USD, wontRenew, YEARLY_CENTS } from "./adminMetrics";
 import { LIFETIME_ACCESS } from "./plan";
 
 const DAY = 86_400_000;
@@ -63,7 +63,7 @@ describe("customer groups", () => {
         family(),
       ],
     });
-    expect(m.customers).toEqual({ paying: 3, monthly: 1, yearly: 1, pastDue: 1, trialing: 1, codeAccess: 2, lifetime: 1, free: 2 });
+    expect(m.customers).toEqual({ paying: 3, monthly: 1, yearly: 1, pastDue: 1, cancelling: 0, trialing: 1, codeAccess: 2, lifetime: 1, free: 2 });
     const c = m.customers;
     expect(c.paying + c.trialing + c.codeAccess + c.free).toBe(m.people.families);
   });
@@ -146,7 +146,7 @@ describe("money", () => {
     expect(m.revenue.thisMonth).toBe(1499);
     expect(m.revenue.yearToDate).toBe(1499);
     expect(m.revenue.months.at(-1)!.fees).toBe(fee(1499));
-    expect(m.revenue.usd).toEqual({ mrr: 1499 + Math.round(11999 / 12), arr: (1499 + Math.round(11999 / 12)) * 12, paying: 2, thisMonth: 11999, lastMonth: 1499, yearToDate: 11999 + 1499 });
+    expect(m.revenue.usd).toEqual({ mrr: 1499 + Math.round(11999 / 12), arr: (1499 + Math.round(11999 / 12)) * 12, paying: 2, renewing: 2, thisMonth: 11999, lastMonth: 1499, yearToDate: 11999 + 1499 });
     // Families are still counted once, whatever they pay in.
     expect(m.customers.paying).toBe(3);
     expect(m.revenue.customersEver).toBe(3);
@@ -211,6 +211,46 @@ describe("money", () => {
     expect(m.revenue.cancelled30).toBe(1);
     expect(m.revenue.churnRate).toBe(0.25);
     expect(m.revenue.lifetimeValue).toBe(1499 * 4);
+  });
+
+  it("stops counting a plan toward MRR from the day it is cancelled, while it still has access", () => {
+    const m = metrics({
+      families: [
+        family({ plan: "premium", subscriptionInterval: "month" }),
+        family({ plan: "premium", subscriptionInterval: "year" }),
+        // Cancelled in the billing portal 5 days ago; the paid month runs for 20 more.
+        family({ plan: "premium", subscriptionInterval: "month", cancelAt: NOW + 20 * DAY, cancelledAt: NOW - 5 * DAY, billingEventAt: NOW - 5 * DAY }),
+        // Refunded in full (the plan ends), not yet cancelled in Stripe.
+        family({ plan: "premium", subscriptionInterval: "year", refunded: true }),
+        // A US plan set to end.
+        family({ plan: "premium", subscriptionInterval: "month", country: "US", cancelAt: NOW + 10 * DAY, cancelledAt: NOW - DAY }),
+        family({ plan: "premium", subscriptionInterval: "month", country: "US" }),
+      ],
+    });
+    expect(m.customers.paying).toBe(6);
+    expect(m.customers.cancelling).toBe(3);
+    expect(m.revenue.renewing).toBe(2);
+    expect(m.revenue.mrr).toBe(MONTHLY_CENTS + Math.round(YEARLY_CENTS / 12));
+    expect(m.revenue.arr).toBe(m.revenue.mrr * 12);
+    expect(m.revenue.arppu).toBe(m.revenue.mrr / 2);
+    expect(m.revenue.usd).toMatchObject({ mrr: MONTHLY_CENTS_USD, paying: 2, renewing: 1 });
+    // The two cancellations count as churn now, not when their paid time runs out.
+    expect(m.revenue.cancelled30).toBe(2);
+    expect(m.revenue.churnRate).toBe(2 / 6);
+    // The projection only carries plans that renew.
+    const monthsLeft = (Date.UTC(2027, 0, 1) - NOW) / ((365.25 / 12) * DAY);
+    expect(m.revenue.projectedYear).toBe(Math.round(m.revenue.mrr * monthsLeft));
+  });
+
+  it("counts a cancellation once, on the day it was made, after the plan ends", () => {
+    const ended = family({ plan: "free", subscriptionStatus: "canceled", cancelAt: NOW - 2 * DAY, cancelledAt: NOW - 40 * DAY, billingEventAt: NOW - 2 * DAY });
+    expect(cancelledOn(ended)).toBe(NOW - 40 * DAY);
+    expect(metrics({ families: [ended] }).revenue.cancelled30).toBe(0);
+    // Older rows have no cancellation day, so the end stands in.
+    expect(cancelledOn({ ...ended, cancelledAt: null })).toBe(NOW - 2 * DAY);
+    // A plan that was resumed, or never cancelled, has none.
+    expect(cancelledOn(family({ plan: "premium", subscriptionStatus: "active" }))).toBeNull();
+    expect(wontRenew({ cancelAt: null, refunded: false })).toBe(false);
   });
 
   it("estimates Stripe's fee as 2.9% + 30¢", () => {

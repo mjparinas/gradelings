@@ -94,6 +94,8 @@ async function apply(req: Request, event: StripeEvent, obj: Record<string, unkno
     const premium = ["active", "trialing", "past_due"].includes(status);
     // Cancelled in the billing portal: the plan (or the free trial) runs to this time and doesn't renew.
     const cancelAt = Number(obj.cancel_at ?? 0) * 1000 || (obj.cancel_at_period_end ? periodEnd : null);
+    // When it was cancelled: Stripe's canceled_at is the time of the request, even when it ends later. Null once resumed.
+    const cancelledAt = cancelAt || status === "canceled" ? Number(obj.canceled_at ?? 0) * 1000 || at || now : null;
     const familyId = (obj.metadata as Record<string, string>)?.family_id;
     // The reason a parent picked when cancelling in the billing portal. Kept even when the event is stale.
     const reason = cancelReason((obj.cancellation_details as Record<string, unknown> | undefined)?.feedback);
@@ -105,17 +107,17 @@ async function apply(req: Request, event: StripeEvent, obj: Record<string, unkno
       );
     }
     if (await isStale(event, familyId, obj.customer as string)) return;
-    const args = [status, interval, periodEnd, cancelAt, premium ? "premium" : "free", now, at];
+    const args = [status, interval, periodEnd, cancelAt, cancelledAt, premium ? "premium" : "free", now, at];
     // A new subscription has used up any discount code, even when its checkout paid later (delayed payment methods).
     const discount = event.type === "customer.subscription.created" ? ", discount_code = NULL" : "";
     if (familyId) {
       await run(
-        `UPDATE families SET subscription_status = ?, subscription_interval = ?, current_period_end = ?, cancel_at = ?, plan = ?, updated_at = ?, billing_event_at = ?, stripe_customer = COALESCE(stripe_customer, ?)${discount} WHERE id = ?`,
+        `UPDATE families SET subscription_status = ?, subscription_interval = ?, current_period_end = ?, cancel_at = ?, cancelled_at = ?, plan = ?, updated_at = ?, billing_event_at = ?, stripe_customer = COALESCE(stripe_customer, ?)${discount} WHERE id = ?`,
         [...args, obj.customer as string, familyId],
       );
     } else {
       await run(
-        `UPDATE families SET subscription_status = ?, subscription_interval = ?, current_period_end = ?, cancel_at = ?, plan = ?, updated_at = ?, billing_event_at = ?${discount} WHERE stripe_customer = ?`,
+        `UPDATE families SET subscription_status = ?, subscription_interval = ?, current_period_end = ?, cancel_at = ?, cancelled_at = ?, plan = ?, updated_at = ?, billing_event_at = ?${discount} WHERE stripe_customer = ?`,
         [...args, obj.customer as string],
       );
     }

@@ -4,7 +4,7 @@ import { getFramework } from "@/content/frameworks";
 import { GRADE_LABEL } from "@/content/subjects";
 import type { GradeId } from "@/content/types";
 import { DETAIL_LIMIT, type Cell, type Detail, type DetailColumn, type DetailRow, type DetailTable, type DetailView } from "@/lib/adminDetail";
-import { familyGroup, fee, LIFETIME_YEARS, monthStart, MONTHLY_CENTS, YEARLY_CENTS, type FamilyGroup } from "@/lib/adminMetrics";
+import { cancelledOn, familyGroup, fee, LIFETIME_YEARS, monthStart, MONTHLY_CENTS, wontRenew, YEARLY_CENTS, type FamilyGroup } from "@/lib/adminMetrics";
 
 // The lists behind the admin dashboard's tiles. Like the Users tab, they show account emails and billing,
 // and children only as counts by grade and province: never a child's name or results. Class student
@@ -15,6 +15,9 @@ const REAL = "NOT EXISTS (SELECT 1 FROM parents s WHERE s.family_id = f.id AND s
 const EMAIL = "(SELECT p.email FROM parents p WHERE p.family_id = f.id ORDER BY p.created_at LIMIT 1)";
 const VERIFIED = "EXISTS (SELECT 1 FROM parents p WHERE p.family_id = f.id AND p.email_verified_at IS NOT NULL)";
 const LAST_PRACTICE = "(SELECT MAX(e.t) FROM events e WHERE e.family_id = f.id)";
+/** 1 when the family's latest payment was refunded in full (a refund ends the plan, so it won't renew). */
+export const LATEST_REFUNDED =
+  "COALESCE((SELECT pm.amount > 0 AND pm.refunded >= pm.amount FROM payments pm WHERE pm.family_id = f.id ORDER BY pm.paid_at DESC LIMIT 1), 0)";
 
 const GROUP_LABEL: Record<FamilyGroup, string> = {
   paying: "Paying",
@@ -77,7 +80,7 @@ async function payments(from: number, to: number, title: string): Promise<Detail
 async function familyRows(where = "1 = 1", args: (string | number)[] = [], order = "f.created_at DESC") {
   return rowsOf(
     `SELECT f.id, ${EMAIL} AS email, f.created_at, f.plan, f.trial_ends_at, f.access_until, f.subscription_status, f.subscription_interval,
-       f.current_period_end, f.billing_event_at, ${VERIFIED} AS verified, ${LAST_PRACTICE} AS last_practice,
+       f.current_period_end, f.billing_event_at, f.cancel_at, f.cancelled_at, ${LATEST_REFUNDED} AS refunded, ${VERIFIED} AS verified, ${LAST_PRACTICE} AS last_practice,
        (SELECT COUNT(*) FROM profiles pr WHERE pr.family_id = f.id AND COALESCE(json_extract(pr.data, '$.deleted'), 0) = 0) AS children
      FROM families f WHERE ${REAL} AND ${where} ORDER BY ${order}`,
     args,
@@ -97,10 +100,14 @@ export async function detailFor(view: DetailView, now = Date.now()): Promise<Det
   switch (view) {
     case "paying": {
       const rows = await familyRows("f.plan = 'premium'", [], "f.current_period_end");
-      const mrr = rows.reduce((s, r) => s + perMonth(r.subscription_interval), 0);
+      // A plan that won't renew (cancelled to end, or refunded) still has access, but brings in nothing more.
+      const ending = (r: Row) => wontRenew({ cancelAt: n(r.cancel_at), refunded: yes(r.refunded) });
+      const monthOf = (r: Row) => (ending(r) ? 0 : perMonth(r.subscription_interval));
+      const mrr = rows.reduce((s, r) => s + monthOf(r), 0);
       return {
         title: "Paying families",
-        intro: "Recurring revenue counts each plan at list price, with a yearly plan as a twelfth a month.",
+        intro:
+          "Recurring revenue counts each plan that renews at list price, with a yearly plan as a twelfth a month. A plan cancelled to end, or refunded, keeps access until it ends but counts nothing.",
         summary: [
           { label: "Paying", value: rows.length, kind: "number" },
           {
@@ -118,19 +125,20 @@ export async function detailFor(view: DetailView, now = Date.now()): Promise<Det
             value: rows.filter((r) => r.subscription_status === "past_due").length,
             kind: "number",
           },
+          { label: "Cancelling", value: rows.filter(ending).length, kind: "number" },
           { label: "Recurring a month", value: mrr, kind: "money" },
         ],
         tables: [
           table(
-            [col("Account", "account"), col("Plan"), col("Status"), col("Renews", "date"), col("A month", "money"), col("Signed up", "date")],
+            [col("Account", "account"), col("Plan"), col("Status"), col("Renews or ends", "date"), col("A month", "money"), col("Signed up", "date")],
             rows.map((r) => ({
               familyId: String(r.id),
               cells: [
                 r.email as string,
                 intervalText(r.subscription_interval),
-                (r.subscription_status as string | null) ?? "active",
-                n(r.current_period_end),
-                perMonth(r.subscription_interval),
+                yes(r.refunded) ? "refunded" : r.cancel_at ? "cancelling" : ((r.subscription_status as string | null) ?? "active"),
+                n(r.cancel_at) ?? n(r.current_period_end),
+                monthOf(r),
                 Number(r.created_at),
               ],
             })),
@@ -145,24 +153,38 @@ export async function detailFor(view: DetailView, now = Date.now()): Promise<Det
     case "payments-year":
       return payments(Date.UTC(new Date(now).getUTCFullYear(), 0, 1), now + 1, `Revenue in ${new Date(now).getUTCFullYear()}`);
     case "cancelled": {
-      const rows = await familyRows("f.subscription_status = 'canceled' AND f.billing_event_at > ?", [now - 90 * DAY], "f.billing_event_at DESC");
+      // Ended plans, and plans still running that are set to end. Each counts from the day it was cancelled.
+      const all = await familyRows(
+        "((f.subscription_status = 'canceled' AND f.plan != 'premium') OR (f.plan = 'premium' AND f.cancel_at IS NOT NULL)) AND COALESCE(f.cancelled_at, f.billing_event_at) > ?",
+        [now - 90 * DAY],
+      );
+      const on = (r: Row) =>
+        cancelledOn({
+          plan: String(r.plan),
+          subscriptionStatus: (r.subscription_status as string | null) ?? null,
+          cancelAt: n(r.cancel_at),
+          cancelledAt: n(r.cancelled_at),
+          billingEventAt: Number(r.billing_event_at ?? 0),
+        }) ?? 0;
+      const rows = all.sort((x, y) => on(y) - on(x));
       return {
         title: "Cancelled subscriptions",
-        intro: "Subscriptions that ended in the last 90 days. Churn on the dashboard counts the last 30.",
+        intro: "Subscriptions cancelled in the last 90 days, including ones still running until their paid time ends. Churn on the dashboard counts the last 30.",
         summary: [
           {
             label: "Last 30 days",
-            value: rows.filter((r) => Number(r.billing_event_at) > now - 30 * DAY).length,
+            value: rows.filter((r) => on(r) > now - 30 * DAY).length,
             kind: "number",
           },
           { label: "Last 90 days", value: rows.length, kind: "number" },
+          { label: "Still running", value: rows.filter((r) => r.plan === "premium").length, kind: "number" },
         ],
         tables: [
           table(
-            [col("Account", "account"), col("Plan"), col("Ended", "date"), col("Signed up", "date"), col("Last practice", "date")],
+            [col("Account", "account"), col("Plan"), col("Cancelled", "date"), col("Access ends", "date"), col("Signed up", "date"), col("Last practice", "date")],
             rows.map((r) => ({
               familyId: String(r.id),
-              cells: [r.email as string, intervalText(r.subscription_interval), Number(r.billing_event_at), Number(r.created_at), n(r.last_practice)],
+              cells: [r.email as string, intervalText(r.subscription_interval), on(r), r.plan === "premium" ? n(r.cancel_at) : Number(r.billing_event_at), Number(r.created_at), n(r.last_practice)],
             })),
           ),
         ],

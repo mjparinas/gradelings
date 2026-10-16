@@ -12,12 +12,12 @@ export async function POST(req: Request) {
   const body = (await req.json().catch(() => ({}))) as { action?: string; interval?: string };
   const now = Date.now();
   if (body.action === "cancel") {
-    await run("UPDATE families SET subscription_status = 'canceled', plan = 'free', updated_at = ? WHERE id = ?", [now, session.familyId]);
+    await run("UPDATE families SET subscription_status = 'canceled', plan = 'free', cancelled_at = ?, updated_at = ? WHERE id = ?", [now, now, session.familyId]);
   } else {
     const interval = body.interval === "year" ? "year" : "month";
     const end = now + (interval === "year" ? 365 : 30) * 86_400_000;
     await run(
-      "UPDATE families SET subscription_status = 'active', subscription_interval = ?, current_period_end = ?, plan = 'premium', discount_code = NULL, updated_at = ? WHERE id = ?",
+      "UPDATE families SET subscription_status = 'active', subscription_interval = ?, current_period_end = ?, plan = 'premium', discount_code = NULL, cancel_at = NULL, cancelled_at = NULL, updated_at = ? WHERE id = ?",
       [interval, end, now, session.familyId],
     );
   }
