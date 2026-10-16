@@ -4,6 +4,7 @@ import { getCourse, loadGrade, parseUnitKey } from "@/content";
 import { FRAMEWORKS } from "@/content/frameworks";
 import type { FrameworkId, GradeId } from "@/content/types";
 import { unitLevel } from "@/lib/proficiency";
+import { GRADE_ORDER } from "@/content/subjects";
 import { batch, query, run } from "./db";
 import { homeworkDone } from "@/lib/classroom";
 import { loadChildData } from "./reportData";
@@ -34,10 +35,31 @@ export interface ClassRow {
   owner_parent_id: string;
   name: string;
   grade: GradeId;
+  /** The second grade of a split class, or null. */
+  grade2: GradeId | null;
   framework: FrameworkId;
   join_code: string;
   created_at: number;
   closed_at: number | null;
+}
+
+/** The grades a class teaches: one, or two next to each other for a split class. */
+export function classGrades(cls: { grade: GradeId; grade2?: GradeId | null }): GradeId[] {
+  return cls.grade2 ? [cls.grade, cls.grade2] : [cls.grade];
+}
+
+/** A second grade from the browser: next to the class's grade, or null for none. `undefined` means it isn't a valid choice. */
+export function cleanSecondGrade(grade: string, v: unknown): GradeId | null | undefined {
+  if (v === undefined || v === null || v === "") return null;
+  const order = GRADE_ORDER as readonly string[];
+  const i = order.indexOf(grade);
+  const j = typeof v === "string" ? order.indexOf(v) : -1;
+  return j >= 0 && Math.abs(i - j) === 1 ? (v as GradeId) : undefined;
+}
+
+/** Whether a unit is for a student: the grade of a split class's student decides, unless the teacher picked students. */
+export function unitIsForGrade(unitKey: string, studentGrade: GradeId, cls: { grade2?: GradeId | null }): boolean {
+  return !cls.grade2 || unitKey.split("/")[0] === studentGrade;
 }
 
 export async function ownedClass(id: string, parentId: string): Promise<ClassRow | undefined> {
@@ -128,11 +150,11 @@ export async function releaseTeacherAccounts(parentIds: string[]): Promise<void>
 export const isFramework = (v: unknown): v is FrameworkId => FRAMEWORKS.some((f) => f.id === v);
 
 /** A unit key that exists in this class's grade and province. */
-export async function validUnit(key: string, grade: GradeId, framework: FrameworkId): Promise<boolean> {
+export async function validUnit(key: string, grades: GradeId | GradeId[], framework: FrameworkId): Promise<boolean> {
   const parsed = parseUnitKey(key);
-  if (!parsed || parsed.grade !== grade) return false;
-  await loadGrade(grade, framework);
-  return !!getCourse(grade, parsed.subject, framework)?.units.some((u) => u.id === parsed.unitId);
+  if (!parsed || ![grades].flat().includes(parsed.grade)) return false;
+  await loadGrade(parsed.grade, framework);
+  return !!getCourse(parsed.grade, parsed.subject, framework)?.units.some((u) => u.id === parsed.unitId);
 }
 
 export async function assignmentKeys(classId: string): Promise<string[]> {
@@ -209,12 +231,15 @@ export function cleanDueAt(v: unknown, now = Date.now()): number | null | undefi
 
 /** What each of a family's linked children has been assigned. Sent only to that family's own devices. */
 export async function familyClasswork(familyId: string): Promise<Classwork[]> {
+  // A unit reaches a student when the teacher picked them, or, if it has no picks, when it is for their whole class
+  // or (in a split class) for their grade.
   const rows = await query<{ profile_id: string; class_id: string; name: string; unit_key: string | null; due_at: number | null; goal: number | null; created_at: number | null }>(
     `SELECT m.profile_id, m.class_id, c.name, a.unit_key, a.due_at, a.goal, a.created_at FROM class_members m
      JOIN classes c ON c.id = m.class_id AND c.closed_at IS NULL
      LEFT JOIN class_assignments a ON a.class_id = m.class_id
-       AND (NOT EXISTS (SELECT 1 FROM class_assignment_students t WHERE t.class_id = a.class_id AND t.unit_key = a.unit_key)
-            OR EXISTS (SELECT 1 FROM class_assignment_students t WHERE t.class_id = a.class_id AND t.unit_key = a.unit_key AND t.profile_id = m.profile_id))
+       AND (EXISTS (SELECT 1 FROM class_assignment_students t WHERE t.class_id = a.class_id AND t.unit_key = a.unit_key AND t.profile_id = m.profile_id)
+            OR (NOT EXISTS (SELECT 1 FROM class_assignment_students t WHERE t.class_id = a.class_id AND t.unit_key = a.unit_key)
+                AND (c.grade2 IS NULL OR substr(a.unit_key, 1, instr(a.unit_key, '/') - 1) = COALESCE(m.grade, c.grade))))
      WHERE m.family_id = ? ORDER BY m.joined_at, a.created_at, a.unit_key`,
     [familyId],
   );
@@ -244,7 +269,8 @@ export interface StudentProgress {
 
 /** Progress for linked students on the assigned units only. Never includes an email or other family details. */
 export async function classProgress(classId: string): Promise<StudentProgress[]> {
-  const members = await query<{ profile_id: string; family_id: string }>("SELECT profile_id, family_id FROM class_members WHERE class_id = ? ORDER BY joined_at", [classId]);
+  const members = await query<{ profile_id: string; family_id: string; grade: string | null }>("SELECT profile_id, family_id, grade FROM class_members WHERE class_id = ? ORDER BY joined_at", [classId]);
+  const cls = (await query<{ grade: GradeId; grade2: GradeId | null }>("SELECT grade, grade2 FROM classes WHERE id = ?", [classId]))[0];
   const keys = await assignmentKeys(classId);
   const audience = await assignmentAudience(classId);
   const since = Object.fromEntries((await query<{ unit_key: string; created_at: number }>("SELECT unit_key, created_at FROM class_assignments WHERE class_id = ?", [classId])).map((r) => [r.unit_key, Number(r.created_at)]));
@@ -264,7 +290,7 @@ export async function classProgress(classId: string): Promise<StudentProgress[]>
       lastActive: data.report.units.reduce<number | null>((t, u) => (u.lastT && (t === null || u.lastT > t) ? u.lastT : t), null),
       units: keys.map((key) => {
         const u = byKey.get(key);
-        return { key, level: u ? u.level : unitLevel(undefined), attempts: u?.attempts ?? 0, accuracy: u?.accuracy ?? 0, done: homeworkDone(data.events, key, since[key] ?? 0), assigned: !audience[key] || audience[key].includes(m.profile_id) };
+        return { key, level: u ? u.level : unitLevel(undefined), attempts: u?.attempts ?? 0, accuracy: u?.accuracy ?? 0, done: homeworkDone(data.events, key, since[key] ?? 0), assigned: audience[key] ? audience[key].includes(m.profile_id) : !cls || unitIsForGrade(key, (m.grade ?? cls.grade) as GradeId, cls) };
       }),
     };
   });

@@ -1,5 +1,5 @@
 import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
-import { teachingClass, validUnit } from "@/server/classroom";
+import { classGrades, teachingClass, validUnit } from "@/server/classroom";
 import { isFlagOn } from "@/server/flags";
 import { endLive, liveAnswers, openLive, revealLive, startLive, type LiveRow } from "@/server/live";
 import type { LiveForTeacher, LiveQuestionData } from "@/lib/live";
@@ -38,7 +38,7 @@ export async function POST(req: Request) {
   if (!(await isFlagOn("live-questions", session.familyId))) return error(503, "Live questions are switched off just now. Homework and practice still work.");
   if (await rateLimited(`live:${session.parentId}`, 120, 60 * 60_000)) return error(429, "That's a lot of live questions. Try again in a little while.");
   const key = typeof body?.unitKey === "string" ? body.unitKey : "";
-  if (!(await validUnit(key, found.cls.grade, found.cls.framework))) return error(400, "That unit isn’t part of this class’s grade.");
+  if (!(await validUnit(key, classGrades(found.cls), found.cls.framework))) return error(400, "That unit isn’t part of this class’s grade.");
   const row = await startLive(found.cls, key, session.parentId);
   if (!row) return error(400, "This unit’s questions are typed or built rather than tapped, so pick another unit for a live question.");
   return json({ live: await view(row) });

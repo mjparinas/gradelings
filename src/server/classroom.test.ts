@@ -10,17 +10,18 @@ process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 delete process.env.RESEND_API_KEY;
 
 type Mod = Record<string, (req: Request) => Promise<Response>>;
-let signup: Mod, sync: Mod, classes: Mod, assignments: Mod, join_: Mod, account: Mod;
+let signup: Mod, sync: Mod, classes: Mod, assignments: Mod, join_: Mod, account: Mod, students_: Mod;
 let dbm: typeof import("@/server/db");
 
 beforeAll(async () => {
-  [signup, sync, classes, assignments, join_, account] = (await Promise.all([
+  [signup, sync, classes, assignments, join_, account, students_] = (await Promise.all([
     import("@/app/api/auth/signup/route"),
     import("@/app/api/sync/route"),
     import("@/app/api/classes/route"),
     import("@/app/api/classes/assignments/route"),
     import("@/app/api/classes/join/route"),
     import("@/app/api/account/route"),
+    import("@/app/api/classes/students/route"),
   ])) as unknown as Mod[];
   dbm = await import("@/server/db");
 });
@@ -132,6 +133,57 @@ describe("classroom mode", () => {
     // Closing the class clears the rest.
     await classes.DELETE(req(`/api/classes/?id=${cls.id}`, "DELETE", undefined, teacher));
     expect(await dbm.query("SELECT * FROM class_assignment_students WHERE class_id = ?", [cls.id])).toHaveLength(0);
+  });
+
+  it("runs a split class across two next-door grades: units from both, children from both, each gets their own grade's work", async () => {
+    const teacher = await account_("split-teacher@example.com");
+    const post = (body: unknown) => classes.POST(req("/api/classes/", "POST", body, teacher));
+    // The second grade has to be next door.
+    expect((await post({ name: "Room 7", grade: "2", grade2: "4" })).status).toBe(400);
+    expect((await post({ name: "Room 7", grade: "2", grade2: "x" })).status).toBe(400);
+    const { class: cls } = await (await post({ name: "Room 2/3", grade: "2", grade2: "3" })).json();
+    expect(cls.grade2).toBe("3");
+    expect((await (await classes.GET(req("/api/classes/", "GET", undefined, teacher))).json()).classes[0].grade2).toBe("3");
+    const two = "2/math/tens-and-ones";
+    const three = "3/math/fractions";
+    const assign = (unitKey: string) => assignments.POST(req("/api/classes/assignments/", "POST", { classId: cls.id, unitKey }, teacher));
+    expect((await assign(two)).status).toBe(200);
+    expect((await assign(three)).status).toBe(200);
+    expect((await assign("4/math/fractions")).status).toBe(400);
+
+    // A Grade 2 child and a Grade 3 child both join; a Grade 4 child can't.
+    const a = await parentWithChild("split-a@example.com", "split-kid2", "2");
+    const b = await parentWithChild("split-b@example.com", "split-kid3", "3");
+    const c = await parentWithChild("split-c@example.com", "split-kid4", "4");
+    const joinAs = (cookie: string, profileId: string) => join_.POST(req("/api/classes/join/", "POST", { code: cls.joinCode, profileId }, cookie));
+    expect((await joinAs(a, "split-kid2")).status).toBe(200);
+    expect((await joinAs(b, "split-kid3")).status).toBe(200);
+    expect((await joinAs(c, "split-kid4")).status).toBe(409);
+
+    const work = async (cookie: string) => (await (await sync.POST(req("/api/sync/", "POST", {}, cookie))).json()).classwork[0].unitKeys;
+    expect(await work(a)).toEqual([two]);
+    expect(await work(b)).toEqual([three]);
+
+    const view = await (await classes.GET(req(`/api/classes/?id=${cls.id}`, "GET", undefined, teacher))).json();
+    const cell = (id: string) => view.students.find((st: { profileId: string }) => st.profileId === id).units.map((u: { key: string; assigned: boolean }) => [u.key, u.assigned]);
+    expect(cell("split-kid2")).toEqual([[two, true], [three, false]]);
+    expect(cell("split-kid3")).toEqual([[two, false], [three, true]]);
+
+    // Picking students beats the grade rule: the teacher can give a Grade 3 unit to the Grade 2 child.
+    expect((await assignments.PATCH(req("/api/classes/assignments/", "PATCH", { classId: cls.id, unitKey: three, students: ["split-kid2"] }, teacher))).status).toBe(200);
+    expect(await work(a)).toEqual([two, three]);
+    expect(await work(b)).toEqual([]);
+
+    // A student the teacher adds is in the grade chosen, and only a grade of the class is allowed.
+    const add = (body: unknown) => students_.POST(req("/api/classes/students/", "POST", { classId: cls.id, names: ["Mo"], ...(body as object) }, teacher));
+    expect((await add({ grade: "4" })).status).toBe(400);
+    const added = await (await add({ grade: "3" })).json();
+    const profile = JSON.parse((await dbm.query<{ data: string }>("SELECT data FROM profiles WHERE id = ?", [added.students[0].profileId]))[0].data);
+    expect(profile.grade).toBe("3");
+    expect((await dbm.query<{ grade: string }>("SELECT grade FROM class_members WHERE profile_id = ?", [added.students[0].profileId]))[0].grade).toBe("3");
+    // Without a grade, the class's first grade.
+    const plain = await (await add({})).json();
+    expect(JSON.parse((await dbm.query<{ data: string }>("SELECT data FROM profiles WHERE id = ?", [plain.students[0].profileId]))[0].data).grade).toBe("2");
   });
 
   it("lets a teacher see a linked child's results on assigned units only, and nothing else", async () => {
