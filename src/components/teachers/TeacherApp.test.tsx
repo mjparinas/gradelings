@@ -37,6 +37,8 @@ const detail = {
 };
 
 beforeEach(() => {
+  window.location.hash = "";
+  window.scrollTo = vi.fn() as unknown as typeof window.scrollTo;
   mocks.call.mockReset();
   mocks.call.mockImplementation((url: string, method = "GET") => {
     if (url === "/api/auth/me/") return Promise.resolve({ family: { account: { student: false } } });
@@ -49,6 +51,14 @@ beforeEach(() => {
 });
 
 afterEach(() => vi.restoreAllMocks());
+
+/** Opens one of the class page's tabs from the header, and waits for it to show. */
+async function openTab(user: ReturnType<typeof userEvent.setup>, name: string) {
+  const link = within(screen.getByRole("navigation", { name: "Class sections" })).getByRole("link", { name: new RegExp(name) });
+  await user.click(link);
+  await waitFor(() => expect(link).toHaveAttribute("aria-current", "page"));
+}
+
 
 describe("TeacherApp", () => {
   it("shows the coloured wordmark linking home, like the public site", async () => {
@@ -125,7 +135,7 @@ describe("TeacherApp", () => {
     render(<TeacherApp />);
     await user.click(await screen.findByRole("button", { name: /Room 3/ }));
     expect(await screen.findByRole("heading", { name: "Room 3" })).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: /All classes/ }));
+    await user.click(screen.getByRole("link", { name: /All classes/ }));
 
     await user.type(await screen.findByLabelText("Class name"), "Ontario Room");
     await user.click(screen.getByRole("combobox", { name: "Grade" }));
@@ -155,12 +165,15 @@ describe("TeacherApp", () => {
     // US grade names on the class list.
     expect(await screen.findByText(/4th grade · Washington/)).toBeInTheDocument();
     await user.click(await screen.findByRole("button", { name: /Room 4W/ }));
-    expect(await screen.findByText(US_CLASS_CONSENT)).toBeInTheDocument();
+    await screen.findByRole("heading", { name: "Room 4W" });
+    await openTab(user, "Students");
+    expect(screen.getByText(US_CLASS_CONSENT)).toBeInTheDocument();
     expect(US_CLASS_CONSENT).toMatch(/FERPA/);
     expect(US_CLASS_CONSENT).toMatch(/COPPA/);
-    await user.click(screen.getByRole("button", { name: /All classes/ }));
+    await user.click(screen.getByRole("link", { name: /All classes/ }));
     await user.click(await screen.findByRole("button", { name: /Room 3/ }));
     expect(await screen.findByRole("heading", { name: "Room 3" })).toBeInTheDocument();
+    await openTab(user, "Students");
     expect(screen.queryByText(US_CLASS_CONSENT)).not.toBeInTheDocument();
   });
 
@@ -181,10 +194,11 @@ describe("TeacherApp", () => {
     await user.click(await screen.findByRole("button", { name: /Room 3/ }));
 
     expect(await screen.findByText(`This reflects practice in ${APP_NAME}, not a report-card mark. You decide proficiency.`)).toBeInTheDocument();
-    expect(screen.getAllByText("Maya")).toHaveLength(3);
-    expect(screen.getByLabelText("Login code Z X 9 1 P Q")).toHaveTextContent("ZX91PQ");
+    // In the table and under "Check in with".
+    expect(screen.getAllByText("Maya")).toHaveLength(2);
     expect(screen.getByText(/Hasn’t started yet/)).toBeInTheDocument();
 
+    await openTab(user, "Homework");
     await user.click(screen.getByRole("button", { name: "Due date for Counting" }));
     const calendar = await screen.findByRole("dialog", { name: "Due date for Counting" });
     await user.click(within(calendar).getByRole("button", { name: /^1 / }));
@@ -192,6 +206,8 @@ describe("TeacherApp", () => {
       classId: "class-1", unitKey: "3/math/counting", dueAt: expect.any(Number),
     })));
 
+    await openTab(user, "Students");
+    expect(screen.getByLabelText("Login code Z X 9 1 P Q")).toHaveTextContent("ZX91PQ");
     await user.type(screen.getByLabelText("First names, one per line"), "Sam, Alex P.");
     await user.click(screen.getByRole("button", { name: "Add students" }));
     await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/", "POST", {
@@ -203,9 +219,12 @@ describe("TeacherApp", () => {
     const user = userEvent.setup();
     render(<TeacherApp />);
     await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+    await screen.findByRole("heading", { name: "Room 3" });
 
-    await user.click(await screen.findByRole("button", { name: "Get a new code" }));
+    await openTab(user, "Students");
+    await user.click(screen.getByRole("button", { name: "Get a new code" }));
     expect(mocks.call).toHaveBeenCalledWith("/api/classes/?id=class-1", "PATCH", undefined);
+    await openTab(user, "Homework");
 
     await user.click(screen.getByRole("combobox", { name: "Add a unit" }));
     await user.click(screen.getByRole("option", { name: /Patterns/ }));
@@ -222,12 +241,15 @@ describe("TeacherApp", () => {
     const user = userEvent.setup();
     render(<TeacherApp />);
     await user.click(await screen.findByRole("button", { name: /Room 3/ }));
+    await screen.findByRole("heading", { name: "Room 3" });
 
-    await user.click(await screen.findByRole("button", { name: "Remove" }));
+    await openTab(user, "Students");
+    await user.click(screen.getByRole("button", { name: "Remove" }));
     expect(await screen.findByRole("dialog", { name: "Remove Maya?" })).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Yes, remove" }));
     await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/?classId=class-1&studentId=roster-1", "DELETE", undefined));
 
+    await openTab(user, "Settings");
     await user.click(screen.getByRole("button", { name: "Close class" }));
     expect(await screen.findByRole("button", { name: "Yes, close Room 3" })).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Yes, close Room 3" }));
@@ -247,7 +269,9 @@ describe("TeacherApp", () => {
     const user = userEvent.setup();
     render(<TeacherApp />);
     await user.click(await screen.findByRole("button", { name: /Room 3/ }));
-    expect(await screen.findByText("co@example.com")).toBeInTheDocument();
+    await screen.findByRole("heading", { name: "Room 3" });
+    await openTab(user, "Settings");
+    expect(screen.getByText("co@example.com")).toBeInTheDocument();
     expect(screen.getByText(/invited, waiting to accept/)).toBeInTheDocument();
     await user.type(screen.getByLabelText("Colleague’s account email"), "new@example.com");
     await user.click(screen.getByRole("button", { name: "Invite co-teacher" }));
@@ -267,9 +291,13 @@ describe("TeacherApp", () => {
     render(<TeacherApp />);
     expect(await screen.findByText(/you co-teach/)).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: /Room 3/ }));
-    await screen.findByRole("heading", { name: "Teachers" });
+    await screen.findByRole("heading", { name: "Room 3" });
+    await openTab(user, "Students");
     expect(screen.getByRole("button", { name: "Print login cards" })).toBeInTheDocument();
-    for (const name of ["Remove", "Close class", "Get a new code", "Invite co-teacher"]) expect(screen.queryByRole("button", { name })).not.toBeInTheDocument();
+    for (const name of ["Remove", "Get a new code"]) expect(screen.queryByRole("button", { name })).not.toBeInTheDocument();
+    await openTab(user, "Settings");
+    expect(screen.getByRole("heading", { name: "Teachers" })).toBeInTheDocument();
+    for (const name of ["Close class", "Invite co-teacher"]) expect(screen.queryByRole("button", { name })).not.toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Leave this class" }));
     await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/teachers/?classId=class-1&leave=1", "DELETE"));
     expect(await screen.findByRole("heading", { name: "Your classes" })).toBeInTheDocument();
@@ -287,16 +315,21 @@ describe("TeacherApp", () => {
     const user = userEvent.setup();
     const { unmount } = render(<TeacherApp />);
     await user.click(await screen.findByRole("button", { name: /Room 3/ }));
-    await user.click(await screen.findByRole("button", { name: "Close class" }));
+    await screen.findByRole("heading", { name: "Room 3" });
+    await openTab(user, "Settings");
+    await user.click(screen.getByRole("button", { name: "Close class" }));
     await user.click(await screen.findByRole("button", { name: "Yes, close Room 3" }));
     expect(await screen.findByText("You're offline. Try again when you're connected.")).toBeInTheDocument();
     expect(screen.queryByRole("heading", { name: "Your classes" })).not.toBeInTheDocument();
     unmount();
 
     mocks.call.mockImplementation(failing("co-teacher"));
+    window.location.hash = "";
     render(<TeacherApp />);
     await user.click(await screen.findByRole("button", { name: /Room 3/ }));
-    await user.click(await screen.findByRole("button", { name: "Leave this class" }));
+    await screen.findByRole("heading", { name: "Room 3" });
+    await openTab(user, "Settings");
+    await user.click(screen.getByRole("button", { name: "Leave this class" }));
     expect(await screen.findByText("You're offline. Try again when you're connected.")).toBeInTheDocument();
     expect(screen.queryByRole("heading", { name: "Your classes" })).not.toBeInTheDocument();
   });
@@ -312,12 +345,15 @@ describe("TeacherApp", () => {
     const user = userEvent.setup();
     render(<TeacherApp />);
     await user.click(await screen.findByRole("button", { name: /Room 3/ }));
-    const names = await screen.findByLabelText(/First names, one per line/);
+    await screen.findByRole("heading", { name: "Room 3" });
+    await openTab(user, "Students");
+    const names = screen.getByLabelText(/First names, one per line/);
     await user.type(names, "Sam");
     await user.click(screen.getByRole("button", { name: /Add students?/ }));
     expect(await screen.findByText("That didn't work. Try again.")).toBeInTheDocument();
     expect(names).toHaveValue("Sam");
 
+    await openTab(user, "Settings");
     const email = screen.getByLabelText("Colleague’s account email");
     await user.type(email, "new@example.com");
     await user.click(screen.getByRole("button", { name: "Invite co-teacher" }));
