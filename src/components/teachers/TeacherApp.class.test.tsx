@@ -195,6 +195,27 @@ describe("TeacherApp class page", () => {
     expect(within(section).getByRole("button", { name: "Start the timer" })).toBeEnabled();
   });
 
+  it("previews the next live question and lets the teacher choose a different one", async () => {
+    const q = (prompt: string, a: string, b: string) => ({ prompt, hint: "", choices: [{ id: "a", label: a }, { id: "b", label: b }], answer: "b" });
+    let state: unknown = null;
+    serve(detail, (url, method) => {
+      if (!url.startsWith("/api/classes/live/")) return undefined;
+      if (method === "POST") state = { id: "q1", unitKey: "3/math/counting", question: q("How many?", "3", "4"), revealed: false, createdAt: now, answers: [], next: q("Count again?", "5", "6") };
+      if (method === "PATCH") state = { ...(state as object), next: q("A different one?", "7", "8") };
+      return { live: state };
+    });
+    const user = await openClass();
+    await openTab(user, "Live");
+    const section = screen.getByRole("region", { name: "Live questions" });
+    await user.click(within(section).getByRole("button", { name: "Ask a live question" }));
+    const preview = await within(section).findByLabelText("Next question preview");
+    expect(preview).toHaveTextContent("Count again?");
+    expect(preview).toHaveTextContent("6 ✓");
+    await user.click(within(preview).getByRole("button", { name: "Choose a different question" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/live/", "PATCH", { classId: "class-1", action: "swap-next" }));
+    expect(await within(section).findByText("A different one?")).toBeInTheDocument();
+  });
+
   it("lists the questions several students missed, with how many", async () => {
     serve({ ...detail, missed: { "3/math/counting": [{ q: "34 + 8", missed: 2, tried: 3 }] } });
     await openClass();

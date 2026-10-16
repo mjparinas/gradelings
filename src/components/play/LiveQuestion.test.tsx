@@ -72,4 +72,31 @@ describe("useLiveQuestion", () => {
     expect(screen.getByRole("alert")).toHaveTextContent("That didn't send.");
     expect(screen.getByRole("button", { name: "4" })).not.toBeDisabled();
   });
+
+  it("takes over the screen with no way out, and number keys pick an answer", async () => {
+    h.classwork = [{ profileId: "p1" }];
+    fetchMock.mockImplementation((url: string, init?: RequestInit) => (init?.method === "POST" ? respond({ ok: true }) : respond({ live: question })));
+    function Probe() {
+      return <LiveQuestionCard state={useLiveQuestion()} />;
+    }
+    render(<Probe />);
+    await act(() => vi.advanceTimersByTimeAsync(0));
+    const dialog = screen.getByRole("dialog", { name: "Live question from your teacher" });
+    expect(dialog).toHaveAttribute("aria-modal", "true");
+    expect(screen.getByTestId("live-takeover")).toHaveClass("fixed", "inset-0");
+    expect(screen.queryByRole("button", { name: /close|back|skip/i })).not.toBeInTheDocument();
+    expect(dialog).toHaveFocus();
+    fireEvent.keyDown(window, { key: "2" });
+    await act(() => vi.advanceTimersByTimeAsync(0));
+    expect(fetchMock).toHaveBeenCalledWith("/api/live/", expect.objectContaining({ method: "POST", body: JSON.stringify({ questionId: "q1", profileId: "p1", choice: "b" }) }));
+  });
+
+  it("shows the answer once the teacher reveals it", () => {
+    const state = { live: { id: "q1", className: "Room 4", mine: "b", answer: "a", hint: "Count the tens.", question: { prompt: "What is 3 tens?", choices: [{ id: "a", label: "30" }, { id: "b", label: "3" }] } }, offline: false, note: "", answer: vi.fn() };
+    render(<LiveQuestionCard state={state as never} />);
+    const card = screen.getByRole("dialog", { name: "Live question from your teacher" });
+    expect(card).toHaveTextContent("Good try! The answer is 30.");
+    expect(card).toHaveTextContent("Count the tens.");
+    expect(screen.getAllByTestId("live-choice").every((b) => (b as HTMLButtonElement).disabled)).toBe(true);
+  });
 });

@@ -1,7 +1,8 @@
 import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
 import { classGrades, teachingClass, validUnit } from "@/server/classroom";
 import { isFlagOn } from "@/server/flags";
-import { endLive, liveAnswers, openLive, recentLive, revealLive, startLive, type LiveRow } from "@/server/live";
+import { endLive, liveAnswers, openLive, previewNext, recentLive, revealLive, startLive, swapNextLive, type LiveRow } from "@/server/live";
+import type { ClassRow } from "@/server/classroom";
 import type { LiveForTeacher, LiveQuestionData } from "@/lib/live";
 
 // Live questions, from the teacher's side. The owner and co-teachers can all ask them.
@@ -18,6 +19,13 @@ async function view(row: LiveRow | undefined): Promise<LiveForTeacher | null> {
   };
 }
 
+/** The open question with a preview of the next one, which only the teacher's side ever gets. */
+async function viewWithNext(row: LiveRow | undefined, cls: ClassRow): Promise<LiveForTeacher | null> {
+  const live = await view(row);
+  if (live && row) live.next = (await previewNext(cls, row))?.data ?? null;
+  return live;
+}
+
 /** The class's open question and its answers so far (?classId=), or the day's questions (?recap=1). Polled while a question is open. */
 export async function GET(req: Request) {
   const session = await getSession(req);
@@ -29,7 +37,7 @@ export async function GET(req: Request) {
     const rows = await recentLive(found.cls.id);
     return json({ recap: (await Promise.all(rows.map(view))).filter(Boolean) });
   }
-  return json({ live: await view(await openLive(found.cls.id)) });
+  return json({ live: await viewWithNext(await openLive(found.cls.id), found.cls) });
 }
 
 /** Asks a new question from a unit (ending any open one). */
@@ -46,10 +54,13 @@ export async function POST(req: Request) {
   if (!(await validUnit(key, classGrades(found.cls), found.cls.framework))) return error(400, "That unit isn’t part of this class’s grade.");
   const row = await startLive(found.cls, key, session.parentId);
   if (!row) return error(400, "This unit’s questions are typed or built rather than tapped, so pick another unit for a live question.");
-  return json({ live: await view(row) });
+  return json({ live: await viewWithNext(row, found.cls) });
 }
 
-/** Shows the answer to the class (`{ classId, action: "reveal" }`). The question then takes no more answers. */
+/**
+ * `{ classId, action: "reveal" }` shows the answer to the class (the question then takes no more answers);
+ * `{ classId, action: "swap-next" }` swaps the previewed next question for a different one.
+ */
 export async function PATCH(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req);
@@ -57,9 +68,10 @@ export async function PATCH(req: Request) {
   const body = (await req.json().catch(() => null)) as { classId?: unknown; action?: unknown } | null;
   const found = typeof body?.classId === "string" ? await teachingClass(body.classId, session.parentId) : undefined;
   if (!found) return error(404, "Class not found");
-  if (body?.action !== "reveal") return error(400, "Unknown action.");
-  await revealLive(found.cls.id);
-  return json({ live: await view(await openLive(found.cls.id)) });
+  if (body?.action !== "reveal" && body?.action !== "swap-next") return error(400, "Unknown action.");
+  if (body.action === "reveal") await revealLive(found.cls.id);
+  else if (!(await swapNextLive(found.cls))) return error(409, "There's no other question to show from this unit just now.");
+  return json({ live: await viewWithNext(await openLive(found.cls.id), found.cls) });
 }
 
 /** Ends the open question (?classId=). Students' screens stop showing it. */

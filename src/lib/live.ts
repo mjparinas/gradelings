@@ -38,6 +38,8 @@ export interface LiveForTeacher {
   revealed: boolean;
   createdAt: number;
   answers: { profileId: string; choice: string; correct: boolean }[];
+  /** What "Next question" will ask, for the teacher to look at first. Null when the unit has nothing else. */
+  next?: LiveQuestionData | null;
 }
 
 /** How often a child's device asks for a live question: quickly while one is open, slowly otherwise. */

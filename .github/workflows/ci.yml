@@ -41,16 +41,48 @@ jobs:
       - uses: ./.github/actions/setup
       - run: npm run lint
 
+  # The unit tests are the longest static check, so they run on four machines at once.
+  # scripts/test-shard.mjs deals the files out by weight (scripts/test-weights.json), so the
+  # machines finish together. Each one saves a Vitest blob report with its coverage data.
   unit:
-    name: Unit and content tests
+    name: Unit and content tests · ${{ matrix.shard }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ["1/4", "2/4", "3/4", "4/4"]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ./.github/actions/setup
+      - name: Run
+        run: >-
+          node scripts/test-shard.mjs ${{ matrix.shard }}
+          --coverage --reporter=default --reporter=blob
+          --outputFile.blob=.vitest/blob/blob-$(echo '${{ matrix.shard }}' | tr / -).json
+      - uses: actions/upload-artifact@v7
+        with:
+          name: unit-blob-${{ strategy.job-index }}
+          path: .vitest/blob
+          retention-days: 1
+
+  # Puts the four reports back together: the same line coverage as a single run, written to the
+  # run's summary page. It has no threshold yet; e2e scripts are not counted.
+  coverage:
+    name: Unit test coverage
+    needs: unit
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7
       - uses: ./.github/actions/setup
-      # Same tests as `npm test`, plus line coverage written to the run's summary page. It has no
-      # threshold yet; e2e scripts are not counted.
-      - run: npm run test:coverage
+      - uses: actions/download-artifact@v8
+        with:
+          pattern: unit-blob-*
+          path: .vitest/blob
+          merge-multiple: true
+      - run: npx vitest --mergeReports --coverage
+      - run: node scripts/coverage-summary.mjs
       - uses: actions/upload-artifact@v7
         with:
           name: unit-coverage
@@ -59,7 +91,7 @@ jobs:
 
   coverage-comment:
     name: Coverage comment
-    needs: unit
+    needs: coverage
     if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]'
     runs-on: ubuntu-latest
     permissions:
@@ -222,7 +254,7 @@ jobs:
 
   passed:
     name: CI passed
-    needs: [typecheck, lint, unit, audit, build, devices, browser]
+    needs: [typecheck, lint, unit, coverage, audit, build, devices, browser]
     if: always()
     runs-on: ubuntu-latest
     steps:

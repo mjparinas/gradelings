@@ -3,7 +3,8 @@ import Link from "next/link";
 import { breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { TeacherCta } from "@/components/site/TeacherCta";
-import { byCountry, regionSummary, regionWord } from "@/components/site/provinces";
+import { TeacherDemo } from "@/components/site/TeacherDemo";
+import { byCountry, kidPracticeSteps, regionSummary, regionWord } from "@/components/site/provinces";
 import { TEACHER_FRAMEWORKS, TEACHER_SIGNUP, teacherPath } from "@/components/site/teachers";
 import { APP_NAME } from "@/lib/brand";
 import { Disclosure } from "@/components/Disclosure";
@@ -74,20 +75,23 @@ export default function TeachersHub() {
     <SitePage>
       <JsonLd data={[breadcrumbJsonLd(crumbs), faqJsonLd(FAQS)]} />
       <Crumbs items={crumbs} />
-      <section className="py-4">
-        <p className="mb-3 inline-flex rounded-full bg-[#fff4cc] px-3 py-1 text-sm font-bold text-[#8a6400]">For teachers · Kindergarten to Grade 9</p>
-        <h1 className="text-4xl leading-tight font-bold sm:text-5xl">Classroom practice your students will want to do</h1>
-        <p className="mt-4 max-w-2xl font-read text-lg text-ink-soft">
-          Assign units matched to your curriculum, see how your students are practising, and let learning games be the reward for focused work. Available in {regions}. No ads, no student passwords, and families stay in control.
-        </p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <Link prefetch={false} href={TEACHER_SIGNUP} className="btn btn-good min-h-14 px-6 text-xl">
-            Create a free teacher account
-          </Link>
-          <a href="#curricula" className="btn min-h-14 px-6 text-xl">
-            Find your curriculum
-          </a>
+      <section className="grid items-center gap-8 py-4 md:grid-cols-[1.1fr_1fr]">
+        <div>
+          <p className="mb-3 inline-flex rounded-full bg-[#fff4cc] px-3 py-1 text-sm font-bold text-[#8a6400]">For teachers · Kindergarten to Grade 9</p>
+          <h1 className="text-4xl leading-tight font-bold sm:text-5xl">Classroom practice your students will want to do</h1>
+          <p className="mt-4 max-w-2xl font-read text-lg text-ink-soft">
+            Assign units matched to your curriculum, see how your students are practising, and let learning games be the reward for focused work. Available in {regions}. No ads, no student passwords, and families stay in control.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link prefetch={false} href={TEACHER_SIGNUP} className="btn btn-good min-h-14 px-6 text-xl">
+              Create a free teacher account
+            </Link>
+            <a href="#curricula" className="btn min-h-14 px-6 text-xl">
+              Find your curriculum
+            </a>
+          </div>
         </div>
+        <TeacherDemo levels={kidPracticeSteps(TEACHER_FRAMEWORKS)} />
       </section>
 
       <section aria-labelledby="how" className="py-8">

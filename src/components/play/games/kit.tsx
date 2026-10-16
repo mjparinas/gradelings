@@ -4,6 +4,7 @@ import { useEffect, useEffectEvent, useState } from "react";
 import { burstFrom, floatText } from "@/lib/juice";
 import { sounds } from "@/lib/sound";
 import type { GameProps } from "./types";
+import { isLivePaused } from "@/lib/livePause";
 
 // Shared pieces for the tap-to-answer games (Map Dash, Timeline Snap, Coin Shop, Equation Tower,
 // Word Bridge): score, lives and level, a per-question timer, number keys and the hearts row.
@@ -66,6 +67,7 @@ export function useCountdown(seconds: number, key: string | number, onEnd: () =>
     if (paused) return;
     const t = setInterval(() => {
       if (typeof document !== "undefined" && document.visibilityState === "hidden") return;
+      if (isLivePaused()) return;
       setLeft((l) => {
         const v = (l.key === key ? l.value : seconds) - 0.1;
         return { key, value: Math.max(0, Math.round(v * 10) / 10) };

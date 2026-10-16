@@ -26,9 +26,9 @@ export type DetailView = (typeof DETAIL_VIEWS)[number];
 
 export const isDetailView = (v: unknown): v is DetailView => typeof v === "string" && (DETAIL_VIEWS as readonly string[]).includes(v);
 
-/** How a cell is shown: dates and money are sent raw (ms, cents) and formatted in the panel. An "account" cell is an
- * email that opens its row's family in Users. */
-export type CellKind = "text" | "number" | "money" | "date" | "yesno" | "account";
+/** How a cell is shown: dates and money are sent raw (ms, cents) and formatted in the panel. "money" is CAD and
+ * "money-usd" US dollars, never added together. An "account" cell is an email that opens its row's family in Users. */
+export type CellKind = "text" | "number" | "money" | "money-usd" | "date" | "yesno" | "account";
 
 export interface DetailColumn {
   label: string;

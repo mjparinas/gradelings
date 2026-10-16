@@ -18,6 +18,8 @@ import { ContentGate } from "../ContentGate";
 import { LoadingScreen } from "../ui";
 import { Arcade, GameScreen } from "./Arcade";
 import { Hub } from "./Hub";
+import { setLivePaused } from "@/lib/livePause";
+import { LiveQuestionCard, useLiveQuestion } from "./LiveQuestion";
 import { SpeedPicker, SubjectPicker, UnitList } from "./Practice";
 import { PlacementTest } from "./PlacementTest";
 import { SecretsListener } from "./Secrets";
@@ -88,6 +90,13 @@ export function PlayApp() {
   const active = useActiveProfile();
   const familyId = useStore((s) => s.family.account?.familyId ?? "");
   const isOn = useIsOn();
+  const live = useLiveQuestion();
+  const asking = Boolean(live.live);
+  // Games and timed sessions hold still while the question is up.
+  useEffect(() => {
+    setLivePaused(asking);
+    return () => setLivePaused(false);
+  }, [asking]);
 
   // Feature flags: on open, when the signed-in family changes and whenever the app comes back into view.
   useEffect(() => {
@@ -118,9 +127,12 @@ export function PlayApp() {
       <Prefetch />
       <VoicePreload />
       <BandProvider value={band}>
-        <div data-band={band} key={active.id}>
+        {/* While the teacher's question is up, nothing behind it can be tapped, focused or read. */}
+        <div data-band={band} key={active.id} inert={asking}>
           <Screen />
         </div>
+        {/* Only while the child's teacher is asking the class something, and only online. */}
+        <LiveQuestionCard state={live} />
         <Toasts />
         <ClassTimerChip />
         {isOn("secrets") && <SecretsListener />}

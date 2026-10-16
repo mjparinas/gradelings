@@ -29,6 +29,7 @@ import { Tower } from "./games/Tower";
 import { WordBridge } from "./games/WordBridge";
 import type { GameProps } from "./games/types";
 import { BackButton } from "./Practice";
+import { isLivePaused } from "@/lib/livePause";
 
 const COMPONENTS: Record<string, (p: GameProps) => React.ReactElement> = {
   munchers: Munchers,
@@ -223,7 +224,7 @@ function GamePlay({ id }: { id: string }) {
 
   // Checked once a second by the play clock below.
   const tick = useEffectEvent(() => {
-    if (document.visibilityState !== "visible") return;
+    if (document.visibilityState !== "visible" || isLivePaused()) return;
     pending.current += 1;
     setUnflushed((u) => u + 1);
     if (available - (unflushed + 1) <= 0) end("time");
