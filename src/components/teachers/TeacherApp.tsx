@@ -8,7 +8,7 @@ import { GRADE_ORDER, getSubjectMeta, gradeSlug } from "@/content/subjects";
 import type { FrameworkId, GradeId } from "@/content/types";
 import { DateField } from "@/components/DateField";
 import { SelectMenu } from "@/components/SelectMenu";
-import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
+import { APP_NAME } from "@/lib/brand";
 import { addedMessage, agoText, call, checkNameList, dueChips, type ClassBadge, classInsights, HOMEWORK_GOALS, homeworkOverview, isHomeworkDone, isOneCode, isUsClass, showLoginCode, US_CLASS_CONSENT, type ClassInvite, type MissedQuestion, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
 import { frameworkGroups, frameworkMenu } from "@/lib/frameworkGroups";
 import { classSignInHref } from "@/lib/playLink";
@@ -20,10 +20,13 @@ import { go, useRoute } from "@/lib/router";
 import { sayFor } from "@/lib/say";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
 import { AccountPage } from "./AccountPage";
+import { rememberTeacher } from "@/lib/teacherHint";
 import { ClassTimerPanel } from "./ClassTimerPanel";
 import { TeacherDialog } from "./Dialog";
 import { LiveClass } from "./LiveClass";
 import { QrCode } from "./QrCode";
+import { AuthForm } from "./TeacherAuth";
+import { TeacherLoading, Wordmark } from "./TeacherChrome";
 
 // The teacher area: create a class, share its code, assign units and see each linked student's
 // practice results. Each class follows one province, territory or state (FRAMEWORKS). It talks to the server only (no kids' store), so it stays light.
@@ -78,82 +81,6 @@ const PROGRESS_REFRESH_MS = 90_000;
 
 const pct = (v: number) => `${Math.round(v * 100)}%`;
 const btn = "min-h-11 rounded-xl px-4 font-bold";
-
-function AuthForm({ onDone }: { onDone: () => void }) {
-  const [mode, setMode] = useState<"in" | "up" | "forgot">("in");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [err, setErr] = useState("");
-  const [notice, setNotice] = useState("");
-  const [busy, setBusy] = useState(false);
-
-  const submit = async (e: FormEvent) => {
-    e.preventDefault();
-    setBusy(true);
-    setErr("");
-    setNotice("");
-    try {
-      if (mode === "forgot") {
-        // Always answers the same way, so it never says whether an email has an account.
-        setNotice((await call<{ message: string }>("/api/auth/forgot/", "POST", { email })).message);
-      } else {
-        await call(mode === "in" ? "/api/auth/login/" : "/api/auth/signup/", "POST", { email, password });
-        onDone();
-      }
-    } catch (x) {
-      setErr((x as Error).message);
-    } finally {
-      setBusy(false);
-    }
-  };
-  const switchTo = (next: typeof mode) => {
-    setMode(next);
-    setErr("");
-    setNotice("");
-  };
-
-  return (
-    <form onSubmit={submit} className="mx-auto mt-8 flex max-w-sm flex-col gap-3 rounded-2xl border border-line bg-white p-5">
-      <h1 className="text-2xl font-bold">{mode === "in" ? "Teacher sign in" : mode === "up" ? "Create a teacher account" : "Reset your password"}</h1>
-      {mode !== "forgot" && (
-        <p className="font-read text-ink-soft">
-          {APP_NAME} for teachers is where you set up a class, assign practice by unit and see how each student is doing. Students sign in with a code you give them, with no email needed, and you only see first names and practice results.
-        </p>
-      )}
-      <label className="flex flex-col text-sm font-semibold">
-        Email
-        <input className="mt-1 min-h-11 rounded-xl border border-line px-3" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-      </label>
-      {mode !== "forgot" && (
-        <label className="flex flex-col text-sm font-semibold">
-          Password
-          <input className="mt-1 min-h-11 rounded-xl border border-line px-3" type="password" autoComplete={mode === "in" ? "current-password" : "new-password"} minLength={8} value={password} onChange={(e) => setPassword(e.target.value)} required />
-        </label>
-      )}
-      {err && (
-        <p role="alert" className="text-nudge-dark">
-          {err}
-        </p>
-      )}
-      {notice && (
-        <p role="status" className="font-read text-ink-soft">
-          {notice}
-        </p>
-      )}
-      <button disabled={busy} className={`${btn} bg-[#4f8ef7] text-[#0f172a] disabled:opacity-50`}>
-        {mode === "in" ? "Sign in" : mode === "up" ? "Create account" : "Email me a reset link"}
-      </button>
-      {mode === "in" && (
-        <button type="button" className="text-sm font-semibold underline" onClick={() => switchTo("forgot")}>
-          Forgot your password?
-        </button>
-      )}
-      <button type="button" className="text-sm font-semibold underline" onClick={() => switchTo(mode === "in" ? "up" : "in")}>
-        {mode === "in" ? "New here? Create an account" : mode === "up" ? "Have an account? Sign in" : "Back to sign in"}
-      </button>
-    </form>
-  );
-}
 
 /** Classes show children's first names and results, so the account's email has to be confirmed first. */
 function ConfirmEmail({ email }: { email?: string }) {
@@ -1726,8 +1653,12 @@ export function TeacherApp() {
       .then((r) => {
         setAccount({ email: r.family?.account?.email, verified: r.family?.account?.verified });
         setSignedIn(!r.family?.account?.student);
+        rememberTeacher(!r.family?.account?.student);
       })
-      .catch(() => setSignedIn(false));
+      .catch(() => {
+        rememberTeacher(false);
+        setSignedIn(false);
+      });
   }, []);
 
   return (
@@ -1737,11 +1668,7 @@ export function TeacherApp() {
         <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-x-2 px-4 py-2">
           <span className="flex items-center gap-2">
             <Link href="/" className="inline-flex min-h-11 items-center text-2xl font-bold tracking-tight" aria-label={APP_NAME}>
-              {APP_NAME.split("").map((ch, i) => (
-                <span key={i} aria-hidden="true" style={{ color: WORDMARK_COLOURS[i % WORDMARK_COLOURS.length] }}>
-                  {ch}
-                </span>
-              ))}
+              <Wordmark />
             </Link>
             <span className="text-lg font-semibold text-ink-soft">for teachers</span>
           </span>
@@ -1756,7 +1683,7 @@ export function TeacherApp() {
               <button
                 type="button"
                 className="inline-flex min-h-11 items-center whitespace-nowrap font-semibold underline"
-                onClick={() => call("/api/auth/logout/", "POST").finally(() => { setSignedIn(false); go("/"); })}
+                onClick={() => call("/api/auth/logout/", "POST").finally(() => { rememberTeacher(false); setSignedIn(false); go("/"); })}
               >
                 Sign out
               </button>
@@ -1791,7 +1718,7 @@ export function TeacherApp() {
       </header>
       <main id={MAIN_ID} tabIndex={-1} className="mx-auto max-w-4xl px-4 py-6">
         {signedIn === null ? (
-          <p className="font-read">Loading…</p>
+          <TeacherLoading />
         ) : !signedIn ? (
           <AuthForm onDone={() => {
             // Re-read the account: whether its email is confirmed decides if a class can be created.
