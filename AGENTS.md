@@ -38,7 +38,7 @@ Before you push, run tests, lint and typecheck. For UI or flow changes, also run
 Whenever you add a new feature, write a test for it in the same change. When extending an existing feature, add or update tests for the behavior you changed.
 
 - **Playwright** is a dev dependency, pinned. Install the browsers once with `npx playwright install chromium webkit` (on Linux add `npx playwright install-deps`).
-- **CI** (`.github/workflows/ci.yml`) runs types, lint, unit tests and the build in parallel, then the browser tests in parallel on separate machines (device layouts in three shards, accessibility, keyboard and high contrast, playthrough, offline). Require the "CI passed" job in branch protection.
+- **CI** (`.github/workflows/ci.yml`) runs types, lint, unit tests (four machines, dealt out by `scripts/test-shard.mjs` using the weights in `scripts/test-weights.json`; add a heavy new test file there) and the build in parallel, then the browser tests in parallel on separate machines (device layouts in three shards, accessibility, keyboard and high contrast, playthrough, offline). Require the "CI passed" job in branch protection.
 - **iOS** (`.github/workflows/ios.yml`): when `ios/` changes, a Mac runner builds the app and runs its Swift tests on an iPhone and an iPad simulator. Run it by hand to sign and upload to TestFlight (secrets in `docs/IOS.md`). There is no Mac here, so this workflow is the only Swift compiler check.
 - **Stale styles:** if a change to `globals.css` (`@theme`, `@custom-variant`) doesn't show up in a build, delete `.next` and rebuild.
 
