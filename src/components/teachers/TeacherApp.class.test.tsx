@@ -154,6 +154,26 @@ describe("TeacherApp class page", () => {
     expect(await within(section).findByRole("button", { name: "Ask a live question" })).toBeInTheDocument();
   });
 
+  it("uses US English and US dates for a class on a US curriculum, and Canadian ones otherwise", async () => {
+    const when = Date.now() - 2 * DAY;
+    const one = (framework: string) => {
+      const c = { ...cls, framework };
+      serve({ ...detail, class: c, students: [{ ...detail.students[2], lastActive: when }], roster: [] }, (url, method) => (url === "/api/classes/" && method === "GET" ? { classes: [c] } : undefined));
+    };
+    one("us-wa");
+    await openClass();
+    expect(screen.getByText("Nothing stands out. Everyone who has practiced is doing fine on the assigned units.")).toBeInTheDocument();
+    expect(screen.getByText(`Active ${new Date(when).toLocaleDateString("en-US", { month: "short", day: "numeric" })}`)).toBeInTheDocument();
+  });
+
+  it("keeps Canadian English and dates for a Canadian class", async () => {
+    const when = Date.now() - 2 * DAY;
+    serve({ ...detail, students: [{ ...detail.students[2], lastActive: when }], roster: [] });
+    await openClass();
+    expect(screen.getByText("Nothing stands out. Everyone who has practised is doing fine on the assigned units.")).toBeInTheDocument();
+    expect(screen.getByText(`Active ${new Date(when).toLocaleDateString("en-CA", { month: "short", day: "numeric" })}`)).toBeInTheDocument();
+  });
+
   it("says when nothing stands out", async () => {
     serve({ ...detail, students: [detail.students[2]] });
     await openClass();

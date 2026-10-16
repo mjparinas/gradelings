@@ -74,7 +74,14 @@ describe("classroom mode", () => {
     expect((await assign("2/math/tens-and-ones")).status).toBe(400);
     // A child set up for British Columbia can't be linked to an Ontario class.
     const parent = await parentWithChild("on-parent@example.com", "kid-bc");
-    expect((await join_.POST(req("/api/classes/join/", "POST", { code: cls.joinCode, profileId: "kid-bc" }, parent))).status).toBe(409);
+    const mismatch = await join_.POST(req("/api/classes/join/", "POST", { code: cls.joinCode, profileId: "kid-bc" }, parent));
+    expect(mismatch.status).toBe(409);
+    expect((await mismatch.json()).error).toBe("This class follows a different province’s curriculum than your child’s profile.");
+    // A state's class says "state", not "province".
+    const { class: wa } = await (await post({ name: "Room 3W", grade: "2", framework: "us-wa" })).json();
+    const stateMismatch = await join_.POST(req("/api/classes/join/", "POST", { code: wa.joinCode, profileId: "kid-bc" }, parent));
+    expect(stateMismatch.status).toBe(409);
+    expect((await stateMismatch.json()).error).toBe("This class follows a different state’s curriculum than your child’s profile.");
   });
 
   it("lets a teacher see a linked child's results on assigned units only, and nothing else", async () => {
