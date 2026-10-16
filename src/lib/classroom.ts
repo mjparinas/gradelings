@@ -55,6 +55,12 @@ export interface RosterEntry {
   loginCode: string;
 }
 
+/** Ten-character login codes sign in on their own; older eight-character ones need the class code too. */
+export const isOneCode = (code: string): boolean => code.length === 10;
+
+/** A one-code login as printed: two groups of five, easier for a child to copy ("KM7PQ-R3XTA"). */
+export const showLoginCode = (code: string): string => (isOneCode(code) ? `${code.slice(0, 5)}-${code.slice(5)}` : code);
+
 export interface ClassLink {
   classId: string;
   profileId: string;

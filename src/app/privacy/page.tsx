@@ -69,7 +69,7 @@ export default function PrivacyPage() {
 
       <Section title="Schools and classes">
         <p>
-          A teacher can use {APP_NAME} with a class in two ways. A parent can link their own child to a class with the class code, which is the parent’s choice and can be undone at any time. Or the teacher can add students by first name or nickname, and each student signs in with two short codes. Students added by a teacher have no email address and no password.
+          A teacher can use {APP_NAME} with a class in two ways. A parent can link their own child to a class with the class code, which is the parent’s choice and can be undone at any time. Or the teacher can add students by first name or nickname, and each student signs in with their own login code. Students added by a teacher have no email address and no password.
         </p>
         <p>
           <strong>What we keep about a student a teacher added:</strong> the first name or nickname the teacher typed, the class’s grade and curriculum, an avatar, comfort settings and practice results. Nothing else: no email, birth year, surname, photo, voice or free text. These accounts have no parent area and no billing, and a student’s sign-in works only for their own play.

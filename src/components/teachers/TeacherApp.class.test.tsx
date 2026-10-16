@@ -198,6 +198,27 @@ describe("TeacherApp class page", () => {
     await waitFor(() => expect(document.querySelector(".print\\:grid")).toBeNull());
   });
 
+  it("prints one code on a one-code card, and switches older codes to one code each when asked", async () => {
+    serve({ ...detail, roster: [{ id: "r1", profileId: "p1", loginCode: "KM7PQR3XTA" }, { id: "r2", profileId: "p2", loginCode: "MN34RT7Q" }] });
+    const user = await openClass();
+    // The roster shows one-code logins in two groups of five.
+    expect(screen.getByText("KM7PQ-R3XTA")).toBeInTheDocument();
+    expect(screen.getByText(/1 student has an older code that also needs the class code/)).toBeInTheDocument();
+    const print = vi.spyOn(window, "print").mockImplementation(() => {
+      const cards = [...document.querySelectorAll(".print\\:grid > div")];
+      expect(cards.map((c) => c.textContent)).toEqual([expect.stringMatching(/^Maya.*My code: KM7PQ-R3XTA$/), expect.stringMatching(/^Sam.*Class code: AB12CD.*My code: MN34RT7Q$/)]);
+      expect(cards[0].textContent).not.toContain("Class code");
+    });
+    await user.click(screen.getByRole("button", { name: "Print login cards" }));
+    await waitFor(() => expect(print).toHaveBeenCalledOnce());
+
+    // Switching asks first, since old cards stop working.
+    await user.click(screen.getByRole("button", { name: "Switch to one code each" }));
+    expect(mocks.call).not.toHaveBeenCalledWith(expect.stringContaining("all=1"), "PATCH", undefined);
+    await user.click(screen.getByRole("button", { name: "Yes, make new codes" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/?classId=class-1&all=1", "PATCH", undefined));
+  });
+
   it("prints a class summary that says it is practice", async () => {
     serve(detail);
     const user = await openClass();

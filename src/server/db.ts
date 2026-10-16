@@ -134,6 +134,8 @@ const SCHEMA = [
     UNIQUE (class_id, login_code)
   )`,
   `CREATE INDEX IF NOT EXISTS students_class ON students (class_id)`,
+  // Ten-character codes sign in on their own, so they are unique across every class. Older eight-character codes are unique per class only.
+  `CREATE UNIQUE INDEX IF NOT EXISTS students_one_code ON students (login_code) WHERE length(login_code) = 10`,
   // Co-teachers: other teacher accounts that share a class with its owner. The owner invites by
   // email; the invitation is kept by address only (so it never reveals whether an account exists)
   // and the invitee accepts it while signed in with that confirmed email.
