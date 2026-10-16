@@ -158,5 +158,7 @@ export function liveClassStatements(classIdSql: string, args: (string | number)[
   return [
     { sql: `DELETE FROM live_answers WHERE question_id IN (SELECT id FROM live_questions WHERE class_id IN (${classIdSql}))`, args },
     { sql: `DELETE FROM live_questions WHERE class_id IN (${classIdSql})`, args },
+    // The class timer goes the same way (a new school year, closing the class, deleting an account).
+    { sql: `DELETE FROM class_timers WHERE class_id IN (${classIdSql})`, args },
   ];
 }

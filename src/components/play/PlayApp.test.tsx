@@ -74,6 +74,7 @@ vi.mock("./Session", () => ({ Session: screenStub("Session") }));
 vi.mock("./Shop", () => ({ Shop: screenStub("Shop") }));
 vi.mock("./Start", () => ({ FirstRun: screenStub("FirstRun"), Picker: screenStub("Picker"), usePlayStart: () => h.start }));
 vi.mock("./Toasts", () => ({ Toasts: () => null }));
+vi.mock("./ClassTimer", () => ({ ClassTimerChip: () => null }));
 vi.mock("./LessonScreen", () => ({ LessonScreen: screenStub("LessonScreen") }));
 vi.mock("./StickerBook", () => ({ StickerBook: screenStub("StickerBook") }));
 vi.mock("./Room", () => ({ Room: screenStub("Room") }));

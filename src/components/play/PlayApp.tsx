@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { VoicePreload } from "@/components/VoicePreload";
+import { ClassTimerChip } from "./ClassTimer";
 import type { FlagKey } from "@/lib/flags";
 import { refreshFlags, useIsOn } from "@/lib/remoteFlags";
 import { ageBandFor } from "@/content/subjects";
@@ -121,6 +122,7 @@ export function PlayApp() {
           <Screen />
         </div>
         <Toasts />
+        <ClassTimerChip />
         {isOn("secrets") && <SecretsListener />}
       </BandProvider>
     </ContentGate>
