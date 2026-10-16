@@ -28,6 +28,29 @@ export function playHref(s: PlayStart): string {
   return `/play/#${START_ROUTE}?${q}`;
 }
 
+/** The sign-in a class login card's QR code opens: `/play/#/class?c=AB12CD&s=ZX91PQ12`. */
+export const CLASS_ROUTE = "/class";
+
+export interface ClassCodes {
+  classCode: string;
+  studentCode: string;
+}
+
+/**
+ * The link a login card's QR code holds. The codes sit after the `#`, so they are never sent to any server;
+ * they only fill in the sign-in screen, and the student still taps "Let's go".
+ */
+export function classSignInHref(codes: ClassCodes, origin = ""): string {
+  return `${origin}/play/#${CLASS_ROUTE}?${new URLSearchParams({ c: codes.classCode, s: codes.studentCode })}`;
+}
+
+/** The codes a login-card link carried, or null when they aren't a class code (6 letters or digits) and a student code (8). */
+export function readClassSignIn(query: URLSearchParams): ClassCodes | null {
+  const classCode = (query.get("c") ?? "").toUpperCase();
+  const studentCode = (query.get("s") ?? "").toUpperCase();
+  return /^[A-Z0-9]{6}$/.test(classCode) && /^[A-Z0-9]{8}$/.test(studentCode) ? { classCode, studentCode } : null;
+}
+
 const ID = /^[a-z0-9-]{1,80}$/;
 
 /** The start a link asked for, or null when it names no framework we know. Parts that don't read are dropped. */

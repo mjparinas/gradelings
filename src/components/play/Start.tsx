@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AVAILABLE_GRADES } from "@/content";
 import { DEFAULT_FRAMEWORK, FRAMEWORKS, getFramework } from "@/content/frameworks";
 import { GRADE_SHORT } from "@/content/subjects";
@@ -18,7 +18,7 @@ import { signInStudent } from "@/lib/account";
 import { Page } from "../ui";
 import { ProvinceMenu } from "./ProvinceMenu";
 import { useFlag } from "@/lib/remoteFlags";
-import { readPlayStart, START_ROUTE, type PlayStart } from "@/lib/playLink";
+import { CLASS_ROUTE, readClassSignIn, readPlayStart, START_ROUTE, type ClassCodes, type PlayStart } from "@/lib/playLink";
 import { useRoute } from "@/lib/router";
 import { getKV } from "@/lib/localdb";
 
@@ -27,6 +27,12 @@ export function usePlayStart(): PlayStart | null {
   const { path, query } = useRoute();
   if (`/${path[0] ?? ""}` !== START_ROUTE) return null;
   return readPlayStart(query, (id) => FRAMEWORKS.some((f) => f.id === id));
+}
+
+/** The class and student codes a login card's QR code carried (`classSignInHref`), if the link is one. */
+export function useClassSignInLink(): ClassCodes | null {
+  const { path, query } = useRoute();
+  return `/${path[0] ?? ""}` === CLASS_ROUTE ? readClassSignIn(query) : null;
 }
 
 export const AVATAR_COLOURS = ["#ff9636", "#4f8ef7", "#25b47e", "#e9559a", "#8b5cf6", "#06b6d4", "#f5b301", "#ef4444"];
@@ -55,7 +61,9 @@ function GrownUpsLink() {
 const HELLO = "Hi! I'm Ollie the Otter. My friends and I can't wait to learn and play with you!";
 
 export function FirstRun() {
-  const [step, setStep] = useState(0);
+  const cardLink = useClassSignInLink();
+  // A login card's QR code goes straight to the class sign-in, with the codes filled in.
+  const [step, setStep] = useState(cardLink ? -1 : 0);
   const preset = usePlayStart();
   if (step === 0) {
     return (
@@ -82,14 +90,18 @@ export function FirstRun() {
       </Page>
     );
   }
-  if (step === -1) return <ClassSignIn onBack={() => setStep(0)} />;
+  if (step === -1) return <ClassSignIn onBack={() => setStep(0)} codes={cardLink ?? undefined} />;
   return <NewChild onDone={() => {}} first preset={preset} />;
 }
 
 /** A student signs in with the class code and their own code from the teacher. */
-export function ClassSignIn({ onBack }: { onBack: () => void }) {
-  const [classCode, setClassCode] = useState("");
-  const [studentCode, setStudentCode] = useState("");
+export function ClassSignIn({ onBack, codes }: { onBack: () => void; codes?: ClassCodes }) {
+  const [classCode, setClassCode] = useState(codes?.classCode ?? "");
+  const [studentCode, setStudentCode] = useState(codes?.studentCode ?? "");
+  // The codes came in the address; take them out of it so they aren't left in the history or a bookmark.
+  useEffect(() => {
+    if (codes && window.location.hash.startsWith(`#${CLASS_ROUTE}`)) window.history.replaceState(null, "", window.location.pathname + window.location.search);
+  }, [codes]);
   const [err, setErr] = useState("");
   const [busy, setBusy] = useState(false);
   const clean = (v: string, length: number) => v.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, length);

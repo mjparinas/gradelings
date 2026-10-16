@@ -263,6 +263,8 @@ describe("TeacherApp class page", () => {
         expect.stringMatching(/^Maya.*Class code: AB12CD.*My code: ZX91PQ$/),
         expect.stringMatching(/^Sam.*Class code: AB12CD.*My code: MN34RT$/),
       ]);
+      // Each card also has a QR code that opens the sign-in with the codes filled in.
+      expect([...document.querySelectorAll(".print\\:grid svg")].map((q) => q.getAttribute("aria-label"))).toEqual(["Sign-in code for Maya", "Sign-in code for Sam"]);
     });
     await user.click(screen.getByRole("button", { name: "Print login cards" }));
     await waitFor(() => expect(print).toHaveBeenCalledOnce());

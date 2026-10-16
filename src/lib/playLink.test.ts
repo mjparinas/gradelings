@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { playHref, readPlayStart } from "./playLink";
+import { classSignInHref, readClassSignIn, playHref, readPlayStart } from "./playLink";
 
 const known = (id: string) => ["ca-bc", "ca-on", "us-wa"].includes(id);
 const read = (href: string) => readPlayStart(new URLSearchParams(href.split("?")[1] ?? ""), known);
@@ -39,5 +39,27 @@ describe("every unit", () => {
       return s?.unit !== id;
     });
     expect(bad).toEqual([]);
+  });
+});
+
+describe("login card links", () => {
+  const codes = { classCode: "AB12CD", studentCode: "ZX91PQ2M" };
+  const readCodes = (href: string) => readClassSignIn(new URLSearchParams(href.split("?")[1] ?? ""));
+
+  it("put both codes after the #, so no server ever receives them", () => {
+    const href = classSignInHref(codes, "https://example.com");
+    expect(href).toBe("https://example.com/play/#/class?c=AB12CD&s=ZX91PQ2M");
+    expect(new URL(href).search).toBe("");
+  });
+
+  it("read back what was written, and tidy lower case", () => {
+    expect(readCodes(classSignInHref(codes))).toEqual(codes);
+    expect(readCodes("?c=ab12cd&s=zx91pq2m")).toEqual(codes);
+  });
+
+  it("refuse codes that aren't the right shape", () => {
+    for (const q of ["", "?c=AB12CD", "?s=ZX91PQ2M", "?c=AB12C&s=ZX91PQ2M", "?c=AB12CD&s=ZX91PQ2", "?c=AB 2CD&s=ZX91PQ2M", "?c=AB12CD&s=ZX91PQ2M9", "?c=%3Cb%3E&s=x"]) {
+      expect(readCodes(q), q).toBeNull();
+    }
   });
 });
