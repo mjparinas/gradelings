@@ -9,7 +9,7 @@ import type { FrameworkId, GradeId } from "@/content/types";
 import { DateField } from "@/components/DateField";
 import { SelectMenu } from "@/components/SelectMenu";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
-import { call, classInsights, HOMEWORK_GOALS, isUsClass, US_CLASS_CONSENT, type ClassInvite, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
+import { call, classInsights, HOMEWORK_GOALS, homeworkOverview, isHomeworkDone, isUsClass, US_CLASS_CONSENT, type ClassInvite, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
 import { frameworkGroups, frameworkMenu } from "@/lib/frameworkGroups";
 import { countryOf } from "@/lib/country";
 import { gradeLabel } from "@/lib/gradeLabel";
@@ -308,6 +308,20 @@ function AudiencePicker({ students, who, picked, onWho, onPicked, name }: { stud
         </ul>
       )}
     </fieldset>
+  );
+}
+
+/** "12 of 24 done", who is behind and whether it is past due, under one assigned unit. */
+function HomeworkProgress({ status }: { status?: { assigned: number; done: number; behind: string[]; overdue: boolean } }) {
+  if (!status || status.assigned === 0) return null;
+  const names = status.behind.slice(0, 5).join(", ") + (status.behind.length > 5 ? ` and ${status.behind.length - 5} more` : "");
+  return (
+    <p className="basis-full text-sm text-ink-soft">
+      <b className={status.overdue ? "text-nudge-dark" : undefined}>
+        {status.done} of {status.assigned} done{status.overdue ? " · past due" : ""}
+      </b>
+      {status.behind.length > 0 && <> · Still to finish: {names}</>}
+    </p>
   );
 }
 
@@ -687,6 +701,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
   const [questions, setQuestions] = useState("");
   const [who, setWho] = useState<"all" | "some">("all");
   const [picked, setPicked] = useState<string[]>([]);
+  const [now] = useState(() => Date.now());
   // "Assign extra practice to these students" on Progress arrives here with the students already chosen.
   const preselected = preselect?.join(",") ?? "";
   const [seen, setSeen] = useState("");
@@ -729,6 +744,8 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
   const levelLabel = (level: number) => (level < 0 ? "Not started" : levelInfo(cls.framework, cls.grade, level)?.label ?? "");
   // "Proficient" in BC; each curriculum's own word for its third level elsewhere.
   const meeting = levelInfo(cls.framework, cls.grade, 2)?.label ?? "Proficient";
+  const overview = homeworkOverview(students, assignments, data.due, data.goal ?? {}, now);
+  const overdue = overview.filter((o) => o.overdue).length;
   const goalOptions = [{ value: "", label: `Until ${meeting}` }, ...HOMEWORK_GOALS.map((n) => ({ value: String(n), label: `${n} questions` }))];
   /** The class's units by subject, for a picker. Units in `taken` are shown but can't be picked. */
   const unitGroups = (taken: string[]) =>
@@ -813,6 +830,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
                             {data.goal?.[u.key] && u.done !== undefined ? (
                               <span className="block text-sm">{u.done >= data.goal[u.key] ? "Homework done ✓" : `Homework: ${u.done} of ${data.goal[u.key]}`}</span>
                             ) : null}
+                            {data.due[u.key] && data.due[u.key] < now && !isHomeworkDone(u, data.goal?.[u.key]) && <span className="block text-sm font-bold text-nudge-dark">Past due</span>}
                             {u.attempts > 0 && (
                               <span className="block text-sm text-ink-soft">
                                 {pct(u.accuracy)} · {u.attempts} {u.attempts === 1 ? "question" : "questions"}
@@ -843,6 +861,11 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
           <p className="mt-1 font-read text-ink-soft">
             Assign units for practice at home or in class, with a due date and a number of questions if you like. Students see them on their home screen and can do them offline: their answers reach you once their device is back online. Without a number of questions, a unit is done when it reaches {meeting}.
           </p>
+          {overdue > 0 && (
+            <p role="status" className="mt-2 font-read font-bold text-nudge-dark">
+              {overdue} {overdue === 1 ? "unit is" : "units are"} past due with students still to finish.
+            </p>
+          )}
           <ul className="mt-3 divide-y divide-line">
             {assignments.map((k) => (
               <li key={k} className="flex flex-wrap items-center gap-2 py-2 font-read">
@@ -867,6 +890,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
                 <button type="button" aria-label={`Remove ${label(k)}`} className="min-h-9 min-w-9 rounded-full font-bold" onClick={() => change(`/api/classes/assignments/?classId=${id}&unitKey=${encodeURIComponent(k)}`, "DELETE")}>
                   ✕
                 </button>
+                <HomeworkProgress status={overview.find((o) => o.key === k)} />
                 <RowAudience
                   key={`${k}:${(data.audience?.[k] ?? []).join(",")}`}
                   unitLabel={label(k)}

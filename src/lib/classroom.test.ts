@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { call, classInsights, homeworkDone, type StudentRow } from "./classroom";
+import { call, classInsights, homeworkDone, homeworkOverview, isHomeworkDone, type StudentRow } from "./classroom";
 
 const DAY = 86_400_000;
 const NOW = 100 * DAY;
@@ -86,5 +86,35 @@ describe("homeworkDone", () => {
     expect(homeworkDone(events, "3/math/add", 10)).toBe(2);
     expect(homeworkDone(events, "3/math/add", 0)).toBe(3);
     expect(homeworkDone([], "3/math/add", 0)).toBe(0);
+  });
+});
+
+describe("homework overview", () => {
+  const hw = (key: string, level: number, done: number, assigned = true) => ({ key, level, attempts: done, accuracy: 0.5, done, assigned });
+
+  it("counts a unit done by the questions asked for, or by reaching Proficient when none were", () => {
+    expect(isHomeworkDone(hw("k", 0, 10), 10)).toBe(true);
+    expect(isHomeworkDone(hw("k", 3, 4), 10)).toBe(false);
+    expect(isHomeworkDone(hw("k", 2, 0))).toBe(true);
+    expect(isHomeworkDone(hw("k", 1, 30))).toBe(false);
+    expect(isHomeworkDone({ key: "k", level: -1, attempts: 0, accuracy: 0 })).toBe(false);
+  });
+
+  it("says how many are done, who is behind, and what is past due, leaving out students a unit wasn't given to", () => {
+    const students = [
+      student("a", [hw("u1", 0, 10), hw("u2", 2, 0)]),
+      student("b", [hw("u1", 0, 3), hw("u2", 0, 0, false)]),
+      student("c", [hw("u1", 0, 0), hw("u2", 0, 0)]),
+    ];
+    const [one, two] = homeworkOverview(students, ["u1", "u2"], { u1: NOW - DAY, u2: NOW + DAY }, { u1: 10 }, NOW);
+    expect(one).toEqual({ key: "u1", assigned: 3, done: 1, behind: ["B", "C"], overdue: true });
+    // Unit 2 isn't for B, is done by A, not by C, and isn't due yet.
+    expect(two).toEqual({ key: "u2", assigned: 2, done: 1, behind: ["C"], overdue: false });
+  });
+
+  it("isn't overdue once everyone is done, or with no due date", () => {
+    const students = [student("a", [hw("u1", 0, 10)])];
+    expect(homeworkOverview(students, ["u1"], { u1: NOW - DAY }, { u1: 10 }, NOW)[0].overdue).toBe(false);
+    expect(homeworkOverview([student("a", [hw("u1", 0, 0)])], ["u1"], {}, { u1: 10 }, NOW)[0].overdue).toBe(false);
   });
 });
