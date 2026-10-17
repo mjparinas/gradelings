@@ -7,7 +7,7 @@ import { useEffect, useRef, type ReactNode } from "react";
 
 const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
-export function TeacherDialog({ title, onClose, children }: { title: string; onClose: () => void; children: ReactNode }) {
+export function TeacherDialog({ title, onClose, children, wide }: { title: string; onClose: () => void; children: ReactNode; wide?: boolean }) {
   const box = useRef<HTMLDivElement>(null);
   // The close handler may change on every render; the effects below must not re-run for it.
   const close = useRef(onClose);
@@ -53,7 +53,7 @@ export function TeacherDialog({ title, onClose, children }: { title: string; onC
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-4" onClick={onClose}>
-      <div ref={box} role="dialog" aria-modal="true" aria-label={title} tabIndex={-1} className="w-full max-w-md rounded-3xl border-2 border-line bg-white p-6 outline-none" onClick={(e) => e.stopPropagation()}>
+      <div ref={box} role="dialog" aria-modal="true" aria-label={title} tabIndex={-1} className={`max-h-[92vh] w-full overflow-y-auto rounded-3xl border-2 border-line bg-white p-6 outline-none ${wide ? "max-w-3xl" : "max-w-md"}`} onClick={(e) => e.stopPropagation()}>
         <h2 className="mb-2 text-2xl font-bold">{title}</h2>
         {children}
       </div>

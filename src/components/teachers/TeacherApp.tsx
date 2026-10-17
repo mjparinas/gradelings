@@ -23,6 +23,7 @@ import { AccountPage } from "./AccountPage";
 import { rememberTeacher } from "@/lib/teacherHint";
 import { ClassTimerPanel } from "./ClassTimerPanel";
 import { TeacherDialog } from "./Dialog";
+import { TryUnit } from "./TryUnit";
 import { LiveClass } from "./LiveClass";
 import { QrCode } from "./QrCode";
 import { AuthForm } from "./TeacherAuth";
@@ -1171,6 +1172,8 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
   const [undo, setUndo] = useState<UndoOffer | null>(null);
   const [many, setMany] = useState(false);
   const [manyPicked, setManyPicked] = useState<string[]>([]);
+  /** The unit a teacher is trying out as a student, if any. */
+  const [trying, setTrying] = useState<string | null>(null);
   const [who, setWho] = useState<"all" | "some">("all");
   const [picked, setPicked] = useState<string[]>([]);
   const [now, setNow] = useState(() => Date.now());
@@ -1342,6 +1345,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
       <p className="font-read text-ink-soft">
         {classGradeText(cls)} · {getFramework(cls.framework).curriculumName}
       </p>
+      {trying && <TryUnit unitKey={trying} framework={cls.framework} onClose={() => setTrying(null)} />}
 
       {tab === "progress" && (
         <>
@@ -1407,6 +1411,9 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
                 <a href={previewHref(k)} target="_blank" rel="noopener" aria-label={`Preview ${label(k)} (opens in a new tab)`} className="inline-flex min-h-11 items-center text-sm font-semibold underline">
                   Preview
                 </a>
+                <button type="button" aria-label={`Try ${label(k)} as a student`} className="inline-flex min-h-11 items-center text-sm font-semibold underline" onClick={() => setTrying(k)}>
+                  Try it
+                </button>
                 <button type="button" aria-label={`Remove ${label(k)}`} className="min-h-11 min-w-11 rounded-full font-bold" onClick={() => {
                   // What it was, so Undo can put it back the same way (including the date it was first assigned, so answers already given still count).
                   const was = { classId: id, unitKey: k, dueAt: data.due[k] || undefined, goal: data.goal?.[k] || undefined, ...(data.audience?.[k]?.length ? { students: data.audience[k] } : {}), since: data.assignedAt?.[k] };
@@ -1440,9 +1447,14 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
                   groups={unitGroups(assignments)}
                 />
                 {pick && (
-                  <a href={previewHref(pick)} target="_blank" rel="noopener" aria-label={`Preview ${label(pick)} (opens in a new tab)`} className="inline-flex min-h-11 items-center font-semibold underline">
-                    Preview
-                  </a>
+                  <>
+                    <a href={previewHref(pick)} target="_blank" rel="noopener" aria-label={`Preview ${label(pick)} (opens in a new tab)`} className="inline-flex min-h-11 items-center font-semibold underline">
+                      Preview
+                    </a>
+                    <button type="button" aria-label={`Try ${label(pick)} as a student`} className="inline-flex min-h-11 items-center font-semibold underline" onClick={() => setTrying(pick)}>
+                      Try it
+                    </button>
+                  </>
                 )}
               </>
             )}

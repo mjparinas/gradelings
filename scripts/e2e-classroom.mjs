@@ -119,6 +119,25 @@ check(
   "the student's home screen marks the homework done",
 );
 
+// The teacher tries the assigned unit as a student: it plays, and nothing is recorded.
+{
+  const teacherContext = await browser.newContext({ viewport: { width: 1100, height: 900 } });
+  const [name, value] = cookie.split("=");
+  await teacherContext.addCookies([{ name, value, url: BASE }]);
+  const teacherPage = await teacherContext.newPage();
+  const before = (await api(`/api/classes/?id=${cls.id}`)).data.students?.[0]?.units?.[0]?.attempts ?? 0;
+  await teacherPage.goto(`${BASE}/teachers/#/class/${encodeURIComponent(cls.id)}/homework`);
+  await teacherPage.getByRole("button", { name: /as a student/ }).first().click({ timeout: 60000 });
+  const tryDialog = teacherPage.getByRole("dialog", { name: /Try as a student/ });
+  check(await vis(tryDialog.getByText(/Nothing you answer here is saved/)), "the teacher can try the assigned unit as a student");
+  check(await tryDialog.getByText(/Question 1 of/).waitFor({ timeout: 20000 }).then(() => true, () => false), "the try-out shows the unit's questions");
+  await teacherPage.screenshot({ path: `${OUT}/teacher-try-unit.png` });
+  await teacherPage.keyboard.press("Escape");
+  check(await tryDialog.waitFor({ state: "hidden" }).then(() => true, () => false), "Escape closes the try-out");
+  check(((await api(`/api/classes/?id=${cls.id}`)).data.students?.[0]?.units?.[0]?.attempts ?? 0) === before, "trying a unit as a teacher records nothing for the students");
+  await teacherContext.close();
+}
+
 // A live question: the teacher asks, the student taps, the teacher sees it.
 let asked;
 for (const key of [unit, "3/math/fractions", "3/math/place-value", "3/language/rhymes"]) {
