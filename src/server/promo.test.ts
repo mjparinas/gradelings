@@ -50,6 +50,7 @@ beforeAll(async () => {
   ])) as unknown as Mod[];
   dbm = await import("@/server/db");
   process.env.ADMIN_EMAILS = ADMIN_EMAIL;
+  process.env.ADMIN_2FA = "optional"; // these tests are about the panel, not the second step (twoFactor.test.ts covers that)
   admin = await account(ADMIN_EMAIL);
   parent = await account("parent@example.com");
 });

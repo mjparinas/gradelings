@@ -15,8 +15,17 @@ export function adminEmails(): Set<string> {
   );
 }
 
-/** The signed-in admin, or null. A student session, an unconfirmed or unlisted email, or a sign-in from before the email was confirmed is never an admin. */
-export async function getAdmin(req: Request): Promise<SessionInfo | null> {
+/**
+ * Two-step sign-in for admins. "required" (the default): an admin must have an authenticator app set up and
+ * must have passed its code at sign-in. "optional" (ADMIN_2FA=optional) lets an admin who hasn't set it up in,
+ * for a first rollout or a test server; an admin who has set it up always needs the code.
+ */
+export function twoFactorMode(): "required" | "optional" {
+  return process.env.ADMIN_2FA?.trim().toLowerCase() === "optional" ? "optional" : "required";
+}
+
+/** The account if it is on the admin list with a confirmed email and a sign-in made after the confirmation; ignores two-step. */
+async function adminCandidate(req: Request): Promise<SessionInfo | null> {
   const allowed = adminEmails();
   if (!allowed.size) return null;
   const session = await getSession(req);
@@ -25,6 +34,29 @@ export async function getAdmin(req: Request): Promise<SessionInfo | null> {
   // address before its owner did would become admin the moment the owner clicked the confirmation link.
   if (session.verifiedAt == null || session.createdAt < session.verifiedAt) return null;
   return session;
+}
+
+/**
+ * The admin who may use the panel, or null. Besides the checks above, the sign-in must have passed the second
+ * step (an account that has two-step on can't get in with a password alone, even on a session made some other
+ * way, such as after a password reset), and in "required" mode the account must have it on.
+ */
+export async function getAdmin(req: Request): Promise<SessionInfo | null> {
+  const session = await adminCandidate(req);
+  if (!session) return null;
+  if (session.twoFactor) return session.mfaAt != null ? session : null;
+  return twoFactorMode() === "optional" ? session : null;
+}
+
+/**
+ * An admin account that may reach the two-step setup screens: on the admin list and signed in properly, but not
+ * necessarily past the second step yet (an admin who hasn't set it up has no code to give).
+ */
+export async function getAdminSetup(req: Request): Promise<{ admin: SessionInfo; ready: boolean } | null> {
+  const session = await adminCandidate(req);
+  if (!session) return null;
+  const ready = session.twoFactor ? session.mfaAt != null : twoFactorMode() === "optional";
+  return { admin: session, ready };
 }
 
 /**

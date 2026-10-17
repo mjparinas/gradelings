@@ -20,6 +20,10 @@ export interface SessionInfo {
   verifiedAt: number | null;
   /** A class-owned student account. Students can sync and play, and nothing else. */
   student: boolean;
+  /** When this sign-in passed two-step verification (ms; null if it didn't). */
+  mfaAt: number | null;
+  /** Whether the account has two-step sign-in turned on. */
+  twoFactor: boolean;
 }
 
 export async function hashPassword(password: string): Promise<string> {
@@ -44,17 +48,19 @@ export async function hasPassword(parentId: string): Promise<boolean> {
 
 const sha = (s: string) => createHash("sha256").update(s).digest("hex");
 
-export async function createSession(parentId: string, familyId: string, req?: Request): Promise<{ token: string; maxAge: number }> {
+/** `mfa`: the sign-in passed the second step (an authenticator or backup code), which the admin panel requires. */
+export async function createSession(parentId: string, familyId: string, req?: Request, opts: { mfa?: boolean } = {}): Promise<{ token: string; maxAge: number }> {
   const token = randomBytes(32).toString("base64url");
   const now = Date.now();
   const maxAge = SESSION_DAYS * 86_400;
-  await run("INSERT INTO sessions (token_hash, parent_id, family_id, expires_at, created_at, user_agent) VALUES (?, ?, ?, ?, ?, ?)", [
+  await run("INSERT INTO sessions (token_hash, parent_id, family_id, expires_at, created_at, user_agent, mfa_at) VALUES (?, ?, ?, ?, ?, ?, ?)", [
     sha(token),
     parentId,
     familyId,
     now + maxAge * 1000,
     now,
     (req?.headers.get("user-agent") ?? "").slice(0, 200),
+    opts.mfa ? now : null,
   ]);
   // Sessions are removed at sign-out, so the last sign-in is kept on the account for the admin panel.
   await run("UPDATE parents SET last_login_at = ? WHERE id = ?", [now, parentId]);
@@ -131,8 +137,8 @@ export function readCookieToken(req: Request): string {
 export async function getSession(req: Request, opts: { student?: boolean } = {}): Promise<SessionInfo | null> {
   const token = readCookie(req, COOKIE);
   if (!token) return null;
-  const rows = await query<{ parent_id: string; family_id: string; expires_at: number; created_at: number; email: string; email_verified_at: number | null; role: string }>(
-    `SELECT s.parent_id, s.family_id, s.expires_at, s.created_at, p.email, p.email_verified_at, p.role FROM sessions s JOIN parents p ON p.id = s.parent_id WHERE s.token_hash = ?`,
+  const rows = await query<{ parent_id: string; family_id: string; expires_at: number; created_at: number; mfa_at: number | null; email: string; email_verified_at: number | null; role: string; totp_enabled_at: number | null }>(
+    `SELECT s.parent_id, s.family_id, s.expires_at, s.created_at, s.mfa_at, p.email, p.email_verified_at, p.role, p.totp_enabled_at FROM sessions s JOIN parents p ON p.id = s.parent_id WHERE s.token_hash = ?`,
     [sha(token)],
   );
   const row = rows[0];
@@ -140,7 +146,7 @@ export async function getSession(req: Request, opts: { student?: boolean } = {})
   const student = row.role === "student";
   if (student && !opts.student) return null;
   const verifiedAt = row.email_verified_at == null ? null : Number(row.email_verified_at);
-  return { parentId: row.parent_id, familyId: row.family_id, email: row.email, verified: verifiedAt != null, student, createdAt: Number(row.created_at), verifiedAt };
+  return { parentId: row.parent_id, familyId: row.family_id, email: row.email, verified: verifiedAt != null, student, createdAt: Number(row.created_at), verifiedAt, mfaAt: row.mfa_at == null ? null : Number(row.mfa_at), twoFactor: row.totp_enabled_at != null };
 }
 
 export async function endSession(req: Request): Promise<void> {

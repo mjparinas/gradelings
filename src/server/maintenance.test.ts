@@ -28,6 +28,7 @@ beforeAll(async () => {
 });
 beforeEach(async () => {
   process.env.ADMIN_EMAILS = ADMIN_EMAIL;
+  process.env.ADMIN_2FA = "optional"; // these tests are about the panel, not the second step (twoFactor.test.ts covers that)
   await dbm.run("DELETE FROM admin_settings WHERE key = 'maintenance'");
   m.clearMaintenanceCache();
 });

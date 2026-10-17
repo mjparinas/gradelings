@@ -133,6 +133,7 @@ export const SETTINGS: { names: string[]; label: string; need: "required" | "rec
   { names: ["EMAIL_FROM"], label: "Email sender", need: "required", what: "The From address." },
   { names: ["CRON_SECRET"], label: "Daily job secret", need: "required", what: "Without it the daily email job refuses to run." },
   { names: ["ADMIN_EMAILS"], label: "Admin accounts", need: "required", what: "Who can open this panel." },
+  { names: ["TWO_FACTOR_KEY"], label: "Two-step encryption key", need: "recommended", what: "Encrypts admins' authenticator secrets in the database. Without it they are stored as they are." },
   { names: ["STRIPE_SECRET_KEY"], label: "Stripe key", need: "required", what: "Real payments." },
   { names: ["STRIPE_PRICE_MONTHLY"], label: "Monthly price", need: "required", what: "The monthly plan in Stripe." },
   { names: ["STRIPE_PRICE_YEARLY"], label: "Yearly price", need: "required", what: "The yearly plan in Stripe." },

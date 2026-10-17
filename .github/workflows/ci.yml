@@ -17,6 +17,8 @@ env:
   NEXT_TELEMETRY_DISABLED: 1
   # The admin account scripts/e2e-admin.mjs signs in with (docs/ADMIN.md).
   ADMIN_EMAILS: admin-e2e@example.com
+  # The e2e admin has no authenticator app; the unit tests cover the second step (src/server/twoFactor.test.ts).
+  ADMIN_2FA: optional
 
 # Everything below runs in parallel. The browser tests only wait for the build, not for the
 # quick static checks, so a slow lint never delays them. The last job, "CI passed", is the one
