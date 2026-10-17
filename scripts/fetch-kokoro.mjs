@@ -1,7 +1,7 @@
 // Puts the Kokoro read-aloud files in public/kokoro/{version}/ so the site serves them itself:
 // the speech engine (onnxruntime-web and the espeak-ng phonemizer) is copied from node_modules, and
-// the model, its tokenizer and the voices are downloaded from the pinned Hugging Face revision
-// named in the manifest and checked by sha256. Files already in place are kept, so it only
+// the model, its tokenizer and the voices are downloaded from our own GitHub release
+// (`kokoro-voices-{version}`, copied unchanged from onnx-community/Kokoro-82M-v1.0-ONNX) and checked by sha256. Files already in place are kept, so it only
 // downloads once. Runs before `next dev` and `next build` (see package.json).
 //
 //   node scripts/fetch-kokoro.mjs             fails if a file can't be downloaded
@@ -32,7 +32,7 @@ async function download(source, hash) {
   const dest = path.join(OUT, name);
   if (!(fs.existsSync(dest) && sha256(dest) === hash)) {
     try {
-      const res = await fetch(manifest.source + source);
+      const res = await fetch(manifest.source + name);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const bytes = Buffer.from(await res.arrayBuffer());
       const got = createHash("sha256").update(bytes).digest("hex");
