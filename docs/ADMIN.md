@@ -15,6 +15,8 @@ ADMIN_EMAILS=owner@example.com
 
 The list lives in the environment, never the database, so nothing a request writes can make someone an admin. Without `ADMIN_EMAILS` the panel and every `/api/admin/*` route answer 404 (except `/api/admin/codes/`, which still accepts `ADMIN_TOKEN` for scripts, see `docs/CODES.md`). Every change made in the panel is written to `admin_audit` with the admin's email and shown under **Log**.
 
+**Support role.** List an address in `SUPPORT_EMAILS` (comma-separated, same sign-in rules and two-step as an admin; an address on both lists is an admin) for a person who answers families but must not refund, delete or mass-email. Support staff see only the **Users** tab: search, a family's page (plan, children's grades, emails sent, **What This Family Sees**) and **Private Notes** (up to 1,000 characters; never shown to the family, no children's details; support removes their own, admins any). Every other admin route answers 404 and every other user action 403. Each family page a support account opens is written to the log as `user.view`; notes log only that one was added. Support accounts can't use Google sign-in, and notes are deleted with the family.
+
 ## Two-step sign-in
 
 The panel can refund payments, delete families and email everyone, so a password isn't enough. Admin accounts must set up an **authenticator app** (Google Authenticator, Microsoft Authenticator, 1Password, Authy; any app that does time-based codes). Code is in `src/server/totp.ts` and `src/server/twoFactor.ts`.

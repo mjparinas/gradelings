@@ -16,6 +16,26 @@ export function adminEmails(): Set<string> {
 }
 
 /**
+ * Support staff: accounts listed in SUPPORT_EMAILS (comma-separated) who can look families up and keep private
+ * notes on them, and nothing else. An address on both lists is an admin. Support staff pass the same checks
+ * as admins (confirmed email, a sign-in after the confirmation, two-step) and are never treated as admins.
+ */
+export function supportEmails(): Set<string> {
+  const admins = adminEmails();
+  return new Set(
+    (process.env.SUPPORT_EMAILS ?? "")
+      .split(",")
+      .map((e) => e.trim().toLowerCase())
+      .filter((e) => e.includes("@") && !admins.has(e)),
+  );
+}
+
+/** Every address that signs in with the staff sign-in rules (admins and support), kept out of Google sign-in. */
+export const staffEmails = (): Set<string> => new Set([...adminEmails(), ...supportEmails()]);
+
+export type StaffRole = "admin" | "support";
+
+/**
  * Two-step sign-in for admins. "required" (the default): an admin must have an authenticator app set up and
  * must have passed its code at sign-in. "optional" (ADMIN_2FA=optional) lets an admin who hasn't set it up in,
  * for a first rollout or a test server; an admin who has set it up always needs the code.
@@ -25,15 +45,36 @@ export function twoFactorMode(): "required" | "optional" {
 }
 
 /** The account if it is on the admin list with a confirmed email and a sign-in made after the confirmation; ignores two-step. */
-async function adminCandidate(req: Request): Promise<SessionInfo | null> {
-  const allowed = adminEmails();
-  if (!allowed.size) return null;
+async function staffCandidate(req: Request): Promise<{ session: SessionInfo; role: StaffRole } | null> {
+  const admins = adminEmails();
+  const support = supportEmails();
+  if (!admins.size && !support.size) return null;
   const session = await getSession(req);
-  if (!session || !session.verified || !allowed.has(session.email.toLowerCase())) return null;
+  if (!session || !session.verified) return null;
+  const email = session.email.toLowerCase();
+  const role: StaffRole | null = admins.has(email) ? "admin" : support.has(email) ? "support" : null;
+  if (!role) return null;
   // Only a sign-in made after the email was confirmed. Otherwise someone who signed up with an admin's
   // address before its owner did would become admin the moment the owner clicked the confirmation link.
   if (session.verifiedAt == null || session.createdAt < session.verifiedAt) return null;
-  return session;
+  return { session, role };
+}
+
+/** The account if it is an admin with a confirmed email and a sign-in made after the confirmation; ignores two-step. */
+async function adminCandidate(req: Request): Promise<SessionInfo | null> {
+  const found = await staffCandidate(req);
+  return found?.role === "admin" ? found.session : null;
+}
+
+function passedSecondStep(session: SessionInfo): boolean {
+  if (session.twoFactor) return session.mfaAt != null;
+  return twoFactorMode() === "optional";
+}
+
+/** An admin or support account that has passed every sign-in step, with its role, or null. */
+export async function getStaff(req: Request): Promise<{ staff: SessionInfo; role: StaffRole } | null> {
+  const found = await staffCandidate(req);
+  return found && passedSecondStep(found.session) ? { staff: found.session, role: found.role } : null;
 }
 
 /**
@@ -43,20 +84,17 @@ async function adminCandidate(req: Request): Promise<SessionInfo | null> {
  */
 export async function getAdmin(req: Request): Promise<SessionInfo | null> {
   const session = await adminCandidate(req);
-  if (!session) return null;
-  if (session.twoFactor) return session.mfaAt != null ? session : null;
-  return twoFactorMode() === "optional" ? session : null;
+  return session && passedSecondStep(session) ? session : null;
 }
 
 /**
  * An admin account that may reach the two-step setup screens: on the admin list and signed in properly, but not
  * necessarily past the second step yet (an admin who hasn't set it up has no code to give).
  */
-export async function getAdminSetup(req: Request): Promise<{ admin: SessionInfo; ready: boolean } | null> {
-  const session = await adminCandidate(req);
-  if (!session) return null;
-  const ready = session.twoFactor ? session.mfaAt != null : twoFactorMode() === "optional";
-  return { admin: session, ready };
+export async function getAdminSetup(req: Request): Promise<{ admin: SessionInfo; ready: boolean; role: StaffRole } | null> {
+  const found = await staffCandidate(req);
+  if (!found) return null;
+  return { admin: found.session, ready: passedSecondStep(found.session), role: found.role };
 }
 
 /**
@@ -68,6 +106,17 @@ export async function requireAdmin(req: Request): Promise<{ admin: SessionInfo }
   const admin = await getAdmin(req);
   if (!admin) return { response: error(404, "Not found") };
   return { admin };
+}
+
+/**
+ * Like `requireAdmin`, for the few routes support staff may use. Support gets in only where the route says so
+ * (reading, or reading and keeping notes); everywhere else it answers 404, like it does to anyone else.
+ */
+export async function requireStaff(req: Request): Promise<{ admin: SessionInfo; role: StaffRole } | { response: Response }> {
+  if (req.method !== "GET" && !sameOrigin(req)) return { response: error(403, "Bad origin") };
+  const found = await getStaff(req);
+  if (!found) return { response: error(404, "Not found") };
+  return { admin: found.staff, role: found.role };
 }
 
 /** Records a change made in the admin panel. */
