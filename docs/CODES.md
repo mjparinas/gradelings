@@ -54,3 +54,10 @@ curl -X DELETE "$SITE/api/admin/codes/" -H "$AUTH" -H "content-type: application
 - Wrong, disabled, expired and used-up codes all get the same message, and redeeming is rate limited (10 tries an hour per account, 30 per address), so codes can't be found by guessing.
 - Class student accounts can't redeem codes; they already have everything.
 - Deleting an account deletes its redemptions.
+
+## Gift plans
+
+A parent can buy a year of access for someone else at `/account/gift/` (Subscription > "Give a gift"). Stripe Checkout takes a one-time payment (`GIFT_DAYS` in `src/lib/plan.ts`); the webhook (`src/server/gifts.ts`, `fulfilGift`) then makes a single-use access code worth a year and emails it to the buyer. It is idempotent by checkout session, and a checkout counts only if its subtotal matches `giftCents`.
+
+- Off by default: turn on the `gift-plans` flag in the admin panel. Not shown in the store apps.
+- Gifts are not recorded in the `payments` table and cannot be refunded from the admin panel. Refund in the Stripe dashboard and disable the code under Codes.

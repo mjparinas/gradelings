@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { fireEvent, render, screen, within } from "@testing-library/react";
+import { act, cleanup, fireEvent, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import { allUnitRefs, loadGrade, type UnitRef } from "@/content";
@@ -51,6 +51,59 @@ describe("Overview", () => {
     useStore.setState({ family: { ...guest, account: { email: "p@example.com", familyId: "f" } } });
     render(<Overview />);
     expect(screen.queryByText(/Progress is saved on this device only\./)).not.toBeInTheDocument();
+  });
+
+  it("lets a parent pick a focus unit with a day, and clear it", async () => {
+    render(<Overview />);
+    await userEvent.click(within(card("Ava")).getByRole("button", { name: "Pick a unit" }));
+    await userEvent.click(screen.getByRole("combobox", { name: "Unit for Ava" }));
+    fireEvent.click(screen.getByRole("option", { name: new RegExp(math.unit.title) }));
+    const until = new Date(Date.now() + 3 * DAY);
+    const day = `${until.getFullYear()}-${String(until.getMonth() + 1).padStart(2, "0")}-${String(until.getDate()).padStart(2, "0")}`;
+    fireEvent.change(screen.getByLabelText("Until (optional)"), { target: { value: day } });
+    await userEvent.click(screen.getByRole("button", { name: "Set focus" }));
+    expect(useStore.getState().settings.a.focus).toMatchObject({ unit: math.key, until: day });
+    expect(card("Ava")).toHaveTextContent(`${math.unit.title} comes up more in Ava's Adventure`);
+    await userEvent.click(within(card("Ava")).getByRole("button", { name: "Clear focus" }));
+    expect(useStore.getState().settings.a.focus).toBeUndefined();
+  });
+
+  it("lets a parent set a reward for coins earned, then mark it as given", async () => {
+    render(<Overview />);
+    await userEvent.click(within(card("Ava")).getByRole("button", { name: "Set a reward" }));
+    await userEvent.click(screen.getByRole("button", { name: "Movie night" }));
+    await userEvent.click(screen.getByRole("radio", { name: "🪙 100" }));
+    await userEvent.click(screen.getByRole("button", { name: "Save reward" }));
+    expect(useStore.getState().settings.a.reward).toMatchObject({ name: "Movie night", coins: 100, startCoins: 0 });
+    expect(card("Ava")).toHaveTextContent("“Movie night”: 0 of 100 coins earned so far.");
+    act(() => useStore.setState({ events: answers("a", Date.now(), 120, 120) }));
+    expect(within(card("Ava")).getByRole("button", { name: "Mark as given" })).toBeInTheDocument();
+    await userEvent.click(within(card("Ava")).getByRole("button", { name: "Mark as given" }));
+    expect(useStore.getState().settings.a.reward).toBeUndefined();
+  });
+
+  it("shows the shared family goal only with two or more children", () => {
+    render(<Overview />);
+    expect(screen.queryByText(/Together this week/)).not.toBeInTheDocument();
+    cleanup();
+    useStore.setState({ profiles: [kid("a", "Ava"), kid("b", "Ben")] });
+    render(<Overview />);
+    expect(screen.getByText(/Together this week/)).toBeInTheDocument();
+    expect(screen.getByText(/0 of 120 questions answered/)).toBeInTheDocument();
+  });
+
+  it("lists the units a child asked a grown-up to help with", () => {
+    const help = (id: string, ago: number): AppEvent => ({ id, profileId: "a", t: Date.now() - ago * 1000, type: "help", unit: math.key });
+    useStore.setState({ events: [help("h1", 60), help("h2", 30)] });
+    render(<Overview />);
+    const asked = within(card("Ava")).getByRole("group", { name: "Ava asked for help" });
+    expect(asked).toHaveTextContent(math.unit.title);
+    expect(asked).toHaveTextContent("2 times");
+  });
+
+  it("shows no help list when nothing was asked", () => {
+    render(<Overview />);
+    expect(screen.queryByRole("group", { name: /asked for help/ })).not.toBeInTheDocument();
   });
 
   it("asks for a child when there are none", () => {

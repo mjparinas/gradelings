@@ -165,13 +165,37 @@ export interface InputQuestion extends BaseQuestion {
   suffix?: string;
 }
 
+/** Tap parts of a bar until exactly `target` of its `parts` equal parts are shaded. */
+export interface ShadeQuestion extends BaseQuestion {
+  kind: "shade";
+  parts: number;
+  target: number;
+}
+
+/**
+ * Put a marker on a number line. The line runs from `min` to `max` in steps of `step`; the marker snaps to a step.
+ * With `fractionDenominator`, the ticks are labelled as fractions (value / denominator) instead of decimals.
+ */
+export interface PlaceQuestion extends BaseQuestion {
+  kind: "place";
+  min: number;
+  max: number;
+  step: number;
+  target: number;
+  /** Label every n-th tick. Default: just the two ends. */
+  labelEvery?: number;
+  fractionDenominator?: number;
+}
+
 export type Question =
   | ChoiceQuestion
   | BuildQuestion
   | CoinsQuestion
   | OrderQuestion
   | SortQuestion
-  | InputQuestion;
+  | InputQuestion
+  | ShadeQuestion
+  | PlaceQuestion;
 
 export interface GenerateOptions {
   /** 1 = easier, 2 = on level, 3 = stretch. Units may ignore it. */

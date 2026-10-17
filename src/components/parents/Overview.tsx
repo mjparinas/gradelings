@@ -9,9 +9,13 @@ import { useLocale, useSay } from "@/lib/say";
 import { useDerived, useProfiles, useStore } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 import { FamilyGoal } from "./FamilyGoal";
+import { FocusUnit } from "./FocusUnit";
+import { HelpAsks } from "./HelpAsks";
 import { InstallNudge } from "./InstallNudge";
 import { Milestones } from "./Milestones";
+import { RewardGoal } from "./RewardGoal";
 import { ShareGradelings } from "./ShareGradelings";
+import { TogetherPanel } from "./TogetherPanel";
 import { Avatar, NoChildren, PageTitle, Panel } from "./common";
 
 function ChildCard({ p }: { p: Profile }) {
@@ -54,6 +58,9 @@ function ChildCard({ p }: { p: Profile }) {
         </div>
       </dl>
       <FamilyGoal p={p} />
+      <FocusUnit p={p} />
+      <RewardGoal p={p} />
+      <HelpAsks p={p} />
       <ul className="mt-4 flex flex-col gap-2">
         {subjectSummaries(d, p.grade, p.framework).map((s) => {
           const level = scheme.levels[s.level];
@@ -101,6 +108,7 @@ export function Overview() {
           {profiles.map((p) => (
             <Milestones key={p.id} p={p} limit={3} />
           ))}
+          <TogetherPanel />
           <ShareGradelings />
         <div className="grid gap-5 lg:grid-cols-2">
           {profiles.map((p) => (

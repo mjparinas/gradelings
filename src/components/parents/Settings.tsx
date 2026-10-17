@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import { getFramework } from "@/content/frameworks";
 import { getSubjectMeta, SUBJECTS } from "@/content/subjects";
 import type { SubjectId } from "@/content/types";
-import { defaultChildSettings, type ChildSettings } from "@/lib/model";
+import { defaultChildSettings, type ChildSettings, type ReadingTint } from "@/lib/model";
 import { calmOn, calmPatch, gamesChoice, gamesPatch, soundChoice, soundPatch, type GamesChoice, type SoundChoice } from "@/lib/settingChoices";
 import { useStore } from "@/lib/store";
 import { timerChoice, timerPatch, type TimerChoice } from "@/lib/timers";
@@ -86,6 +86,22 @@ export function SettingsPage({ childId }: { childId?: string }) {
             />
             <Switch label="Roomy text" value={Boolean(s.roomyText)} onChange={(v) => set({ roomyText: v })} help="More space between letters, words and lines. Some children find this easier to read." />
             <Switch label="High contrast" value={Boolean(s.highContrast)} onChange={(v) => set({ highContrast: v })} help="Darker text and firmer outlines, and a heavier ring around the button being tabbed to." />
+            <More summary="More reading options">
+              <Switch label="Dyslexia-friendly font" value={Boolean(s.dyslexiaFont)} onChange={(v) => set({ dyslexiaFont: v })} help="Shows everything your child reads in OpenDyslexic, a typeface some readers prefer. It loads the first time it is used, so it may take a moment on a slow connection." />
+              <Choice
+                label="Page colour"
+                value={(s.readingTint ?? "none") as ReadingTint | "none"}
+                options={[
+                  { value: "none", label: "Usual" },
+                  { value: "cream", label: "Cream" },
+                  { value: "mint", label: "Mint" },
+                  { value: "blue", label: "Blue" },
+                  { value: "rose", label: "Rose" },
+                ]}
+                onChange={(v) => set({ readingTint: v === "none" ? undefined : v })}
+                help="A soft colour behind the cards. Some readers find a tinted page easier on the eyes."
+              />
+            </More>
           </div>
         </Panel>
 

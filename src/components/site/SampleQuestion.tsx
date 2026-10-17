@@ -1,4 +1,5 @@
 import { formatMoney } from "@/content/money";
+import { placeLabel } from "@/content/placeLabel";
 import { hashSeed, shuffle, withSeed } from "@/content/random";
 import type { Question } from "@/content/types";
 import { Disclosure } from "../Disclosure";
@@ -23,6 +24,10 @@ export function answerText(q: Question): string {
       return q.bins.map((b) => `${b.emoji} ${b.label}: ${q.items.filter((i) => i.bin === b.id).map((i) => i.label).join(", ")}`).join(" · ");
     case "input":
       return `${q.answer}${q.suffix ? ` ${q.suffix}` : ""}`;
+    case "shade":
+      return `${q.target} of ${q.parts} parts shaded`;
+    case "place":
+      return placeLabel(q, q.target);
   }
 }
 
@@ -87,6 +92,10 @@ function Body({ q, seed }: { q: Question; seed: number }) {
           {q.suffix}
         </p>
       );
+    case "shade":
+      return <p className="font-read text-ink-soft">Tap the parts to shade them, in a bar or circle cut into {q.parts} equal parts.</p>;
+    case "place":
+      return <p className="font-read text-ink-soft">Slide the marker along a number line from {placeLabel(q, q.min)} to {placeLabel(q, q.max)}.</p>;
   }
 }
 

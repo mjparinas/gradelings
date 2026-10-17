@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { createCheckout, createCoupon, createPortal, creditCustomer, devBillingAllowed, listPaidInvoices, stripePrices } from "./stripe";
+import { createCheckout, createCoupon, createGiftCheckout, createPortal, creditCustomer, devBillingAllowed, listPaidInvoices, stripePrices } from "./stripe";
 
 const fetchMock = vi.fn<(url: string, init?: RequestInit) => Promise<Response>>();
 const ok = (body: unknown) => new Response(JSON.stringify(body), { status: 200 });
@@ -145,5 +145,24 @@ describe("devBillingAllowed", () => {
     expect(devBillingAllowed()).toBe(true);
     vi.stubEnv("VERCEL_ENV", "production");
     expect(devBillingAllowed()).toBe(false);
+  });
+});
+
+describe("gift checkout", () => {
+  it("is a one-off payment for the yearly price, tagged as a gift, with tax only for US dollars", async () => {
+    vi.stubEnv("STRIPE_PRICE_MONTHLY_USD", "price_usd_month");
+    vi.stubEnv("STRIPE_PRICE_YEARLY_USD", "price_usd_year");
+    fetchMock.mockImplementation(async () => ok({ url: "https://checkout.stripe.test/g" }));
+    expect(await createGiftCheckout({ currency: "CAD", origin: "https://app.test" })).toBe("https://checkout.stripe.test/g");
+    const cad = form(0);
+    expect(cad).toMatchObject({ mode: "payment", "line_items[0][price_data][currency]": "cad", "line_items[0][price_data][unit_amount]": "11999", "metadata[gift]": "1", success_url: "https://app.test/account/gift/?thanks=1" });
+    for (const key of ["automatic_tax[enabled]", "billing_address_collection", "customer", "customer_email", "client_reference_id"]) expect(cad[key]).toBeUndefined();
+    await createGiftCheckout({ currency: "USD", origin: "https://app.test" });
+    expect(form(1)).toMatchObject({ "line_items[0][price_data][currency]": "usd", "automatic_tax[enabled]": "true", billing_address_collection: "required" });
+  });
+
+  it("refuses a currency that isn't set up, without calling Stripe", async () => {
+    await expect(createGiftCheckout({ currency: "USD", origin: "o" })).rejects.toThrow("Payments in USD aren't set up yet.");
+    expect(fetchMock).not.toHaveBeenCalled();
   });
 });

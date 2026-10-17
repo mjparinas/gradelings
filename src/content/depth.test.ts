@@ -42,7 +42,7 @@ function fingerprint(q: Question): string {
       ? q.choices.find((c) => c.id === q.answer)?.label
       : q.kind === "input"
         ? q.answer
-        : q.kind === "build" || q.kind === "coins"
+        : q.kind === "build" || q.kind === "coins" || q.kind === "shade" || q.kind === "place"
           ? q.target
           : JSON.stringify(q.items);
   return `${q.prompt}|${JSON.stringify(q.visual ?? "")}|${right}`;

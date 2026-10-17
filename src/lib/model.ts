@@ -27,6 +27,9 @@ export interface Profile {
   deleted?: boolean;
 }
 
+export const READING_TINTS = ["cream", "mint", "blue", "rose"] as const;
+export type ReadingTint = (typeof READING_TINTS)[number];
+
 export interface ChildSettings {
   profileId: string;
   dailyGoalMinutes: number;
@@ -58,8 +61,16 @@ export interface ChildSettings {
   roomyText?: boolean;
   /** Stronger text colours and outlines. */
   highContrast?: boolean;
+  /** Use the OpenDyslexic typeface for everything the child reads. */
+  dyslexiaFont?: boolean;
+  /** A soft page colour some readers find easier on the eyes. Unset means the usual cream. */
+  readingTint?: ReadingTint;
   /** Days a week a parent hopes the child will practise (1 to 7). Unset means no family goal. */
   weeklyGoalDays?: number;
+  /** A unit a parent picked for the child to work on, optionally until a day (see `focus.ts`). */
+  focus?: { unit: string; until?: string; setAt: number };
+  /** A reward a parent promised for coins earned (see `familyReward.ts`). Given outside the app; coins are not spent. */
+  reward?: { id: string; name: string; coins: number; startCoins: number; setAt: number };
   /** A short kind note a parent sent from a fixed list; the child sees it once on the home screen. */
   nudge?: { id: string; preset: string; sentAt: number };
   autoRead: boolean;
@@ -129,6 +140,8 @@ export type AppEvent = EventBase &
         correct: number;
         ms: number;
       }
+    /** The child asked a grown-up to help with this unit after missing a question twice. Not practice: it never counts toward XP or proficiency. */
+    | { type: "help"; unit: string }
     | { type: "play"; game: string; seconds: number }
     | { type: "game"; game: string; score: number; level: number }
     | { type: "trophy"; trophy: string }

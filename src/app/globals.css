@@ -363,6 +363,34 @@ html.roomy i {
   font-style: normal;
 }
 
+/* Dyslexia-friendly font: OpenDyslexic for everything read, a touch more room, and no italics. */
+html.dyslexic {
+  --font-display: var(--font-dyslexic), var(--font-andika), system-ui, sans-serif;
+  --font-read: var(--font-dyslexic), var(--font-andika), system-ui, sans-serif;
+}
+html.dyslexic body {
+  word-spacing: 0.08em;
+  line-height: 1.6;
+}
+html.dyslexic em,
+html.dyslexic i {
+  font-style: normal;
+}
+
+/* Reading tint: a soft page colour behind the cards. Text contrast stays above WCAG AA. */
+html.tint-cream {
+  --color-paper: #f7edcf;
+}
+html.tint-mint {
+  --color-paper: #e4f4e6;
+}
+html.tint-blue {
+  --color-paper: #e2eefb;
+}
+html.tint-rose {
+  --color-paper: #fbe6ea;
+}
+
 /* Higher contrast: darker secondary text, firmer outlines and a heavier focus ring. */
 html.contrast {
   --color-ink: #0f172a;
