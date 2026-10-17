@@ -1,43 +1,46 @@
 "use client";
 
-import manifest from "./piper-manifest.json";
+import manifest from "./kokoro-manifest.json";
 import { isOn } from "./remoteFlags";
 import type { SpeechLanguage } from "./speech";
 
-// Piper: a natural-sounding voice that runs on the device, so it works offline and the same on
+// Kokoro: a natural-sounding voice that runs on the device, so it works offline and the same on
 // every tablet. On by default: the voices download in the background when the app opens, for
 // children with read-aloud on (src/components/VoicePreload.tsx; not on mobile data or Data Saver),
-// while the device voice reads, and Piper reads from then on. A parent
+// while the device voice reads, and Kokoro reads from then on. A parent
 // can switch it off or remove it per device under Account. The files are large (see
-// public/piper/{version}/files.json), are served by this site and are kept in their own cache,
+// public/kokoro/{version}/files.json), are served by this site and are kept in their own cache,
 // which the service worker leaves alone when the app updates.
 
-export const PIPER_BASE = `/piper/${manifest.version}/`;
-export const PIPER_CACHE = "grademap-piper";
-const LIST_URL = `${PIPER_BASE}files.json`;
-const WORKER_URL = "/piper-worker.js";
-const PREF_KEY = "grademap.piper";
+export const KOKORO_BASE = `/kokoro/${manifest.version}/`;
+export const KOKORO_CACHE = "grademap-kokoro";
+const LIST_URL = `${KOKORO_BASE}files.json`;
+const WORKER_URL = "/kokoro-worker.js";
+const PREF_KEY = "grademap.kokoro";
+// The voice this replaced (Piper) kept its on/off choice and its files under these names.
+const OLD_PREF_KEY = "grademap.piper";
+const OLD_CACHE = "grademap-piper";
 
-export type PiperVoiceState = "checking" | "missing" | "downloading" | "ready";
+export type KokoroVoiceState = "checking" | "missing" | "downloading" | "ready";
 
-export interface PiperState {
-  /** The parent wants read-aloud to use Piper on this device. */
+export interface KokoroState {
+  /** The parent wants read-aloud to use Kokoro on this device. */
   enabled: boolean;
-  voices: Record<SpeechLanguage, { state: PiperVoiceState; loaded: number; total: number; error?: string }>;
+  voices: Record<SpeechLanguage, { state: KokoroVoiceState; loaded: number; total: number; error?: string }>;
 }
 
 /** What gets downloaded: the speech engine plus one language's voice (bytes per file). */
-export interface PiperFileList {
+export interface KokoroFileList {
   version: string;
   engine: Record<string, number>;
   voices: Record<SpeechLanguage, Record<string, number>>;
 }
 
-export const PIPER_VOICES = manifest.voices as Record<SpeechLanguage, { id: string; name: string; credit: string }>;
+export const KOKORO_VOICES = manifest.voices as Record<SpeechLanguage, { id: string; espeak: string; name: string; credit: string }>;
 
 /** The files one language needs, as URLs, with their sizes. */
-export function filesFor(list: PiperFileList, language: SpeechLanguage): [url: string, bytes: number][] {
-  return [...Object.entries(list.engine), ...Object.entries(list.voices[language] ?? {})].map(([name, bytes]) => [PIPER_BASE + name, bytes]);
+export function filesFor(list: KokoroFileList, language: SpeechLanguage): [url: string, bytes: number][] {
+  return [...Object.entries(list.engine), ...Object.entries(list.voices[language] ?? {})].map(([name, bytes]) => [KOKORO_BASE + name, bytes]);
 }
 
 const MAX_CHUNK = 300;
@@ -63,11 +66,11 @@ export function splitSentences(text: string): string[] {
 
 // ---- State (per device) ----
 
-const blank = () => ({ state: "checking" as PiperVoiceState, loaded: 0, total: 0 });
-let state: PiperState = { enabled: false, voices: { en: blank(), fr: blank() } };
+const blank = () => ({ state: "checking" as KokoroVoiceState, loaded: 0, total: 0 });
+let state: KokoroState = { enabled: false, voices: { en: blank(), fr: blank() } };
 const listeners = new Set<() => void>();
 
-function update(next: Partial<PiperState>, language?: SpeechLanguage, voice?: Partial<PiperState["voices"]["en"]>) {
+function update(next: Partial<KokoroState>, language?: SpeechLanguage, voice?: Partial<KokoroState["voices"]["en"]>) {
   state = {
     ...state,
     ...next,
@@ -76,14 +79,15 @@ function update(next: Partial<PiperState>, language?: SpeechLanguage, voice?: Pa
   for (const l of listeners) l();
 }
 
-export function piperSupported(): boolean {
+export function kokoroSupported(): boolean {
   return typeof window !== "undefined" && typeof Worker !== "undefined" && typeof WebAssembly !== "undefined" && "caches" in window && typeof AudioContext !== "undefined";
 }
 
-/** Whether read-aloud should use Piper on this device: on unless a parent switched it off. */
+/** Whether read-aloud should use Kokoro on this device: on unless a parent switched it off. */
 function readEnabled(): boolean {
   try {
-    return localStorage.getItem(PREF_KEY) !== "off";
+    // A parent who switched the old voice off keeps it off.
+    return (localStorage.getItem(PREF_KEY) ?? localStorage.getItem(OLD_PREF_KEY)) !== "off";
   } catch {
     // Private mode: nothing saved, so the default.
     return true;
@@ -96,18 +100,20 @@ let checked: Promise<void> | undefined;
 function check(): Promise<void> {
   checked ??= (async () => {
     const enabled = readEnabled();
-    if (!piperSupported()) {
+    if (!kokoroSupported()) {
       update({ enabled: false }, "en", { state: "missing" });
       update({}, "fr", { state: "missing" });
       return;
     }
-    const cache = await caches.open(PIPER_CACHE);
+    // The old voice's files (about 100 MB) are no use any more.
+    void caches.delete(OLD_CACHE).catch(() => false);
+    const cache = await caches.open(KOKORO_CACHE);
     // Files from an older engine or voice version are never used again.
     for (const req of await cache.keys()) {
       const { pathname } = new URL(req.url);
-      if (pathname !== WORKER_URL && !pathname.startsWith(PIPER_BASE)) await cache.delete(req);
+      if (pathname !== WORKER_URL && !pathname.startsWith(KOKORO_BASE)) await cache.delete(req);
     }
-    const list = (await (await cache.match(LIST_URL))?.json().catch(() => undefined)) as PiperFileList | undefined;
+    const list = (await (await cache.match(LIST_URL))?.json().catch(() => undefined)) as KokoroFileList | undefined;
     for (const language of ["en", "fr"] as const) {
       let ready = false;
       if (list) {
@@ -126,18 +132,18 @@ function check(): Promise<void> {
 }
 
 /** For useSyncExternalStore. */
-export function subscribePiper(listener: () => void): () => void {
+export function subscribeKokoro(listener: () => void): () => void {
   void check();
   listeners.add(listener);
   return () => listeners.delete(listener);
 }
 
-export function getPiperState(): PiperState {
+export function getKokoroState(): KokoroState {
   void check();
   return state;
 }
 
-export function setPiperEnabled(on: boolean) {
+export function setKokoroEnabled(on: boolean) {
   try {
     localStorage.setItem(PREF_KEY, on ? "on" : "off");
   } catch {
@@ -146,43 +152,43 @@ export function setPiperEnabled(on: boolean) {
   update({ enabled: on });
 }
 
-// Languages Piper failed to read since the page loaded: read-aloud goes straight to the device
-// voice for them, so a device that can't run Piper doesn't wait on it for every question.
+// Languages Kokoro failed to read since the page loaded: read-aloud goes straight to the device
+// voice for them, so a device that can't run Kokoro doesn't wait on it for every question.
 const failed = new Set<SpeechLanguage>();
 
-/** Read-aloud calls this when Piper couldn't play, so the device voice reads from now on. */
-export function markPiperFailed(language: SpeechLanguage) {
+/** Read-aloud calls this when Kokoro couldn't play, so the device voice reads from now on. */
+export function markKokoroFailed(language: SpeechLanguage) {
   failed.add(language);
 }
 
 /**
- * False when Piper certainly won't read this language (unsupported, switched off, failed, or its
+ * False when Kokoro certainly won't read this language (unsupported, switched off, failed, or its
  * voice is missing), answered without waiting, so the device voice can start inside the tap: iOS
  * Safari ignores speechSynthesis.speak() called after an await.
  */
-export function piperMightSpeak(language: SpeechLanguage): boolean {
-  if (!piperSupported() || failed.has(language) || !readEnabled()) return false;
+export function kokoroMightSpeak(language: SpeechLanguage): boolean {
+  if (!kokoroSupported() || failed.has(language) || !readEnabled()) return false;
   const voice = state.voices[language].state;
   return voice === "checking" || voice === "ready";
 }
 
-/** True when read-aloud in this language should use Piper (waits for the first check). */
-export async function piperWanted(language: SpeechLanguage): Promise<boolean> {
+/** True when read-aloud in this language should use Kokoro (waits for the first check). */
+export async function kokoroWanted(language: SpeechLanguage): Promise<boolean> {
   await check();
   return state.enabled && !failed.has(language) && state.voices[language].state === "ready";
 }
 
-/** True when Piper is on and the English voice is here (for "can this device read aloud?"). */
-export function piperCanSpeak(): boolean {
+/** True when Kokoro is on and the English voice is here (for "can this device read aloud?"). */
+export function kokoroCanSpeak(): boolean {
   return state.enabled && state.voices.en.state === "ready";
 }
 
 /** How much downloading a language's voice would take, in bytes (undefined offline or if it isn't served). */
-export async function piperDownloadBytes(language: SpeechLanguage): Promise<number | undefined> {
+export async function kokoroDownloadBytes(language: SpeechLanguage): Promise<number | undefined> {
   try {
     const res = await fetch(LIST_URL, { cache: "no-cache" });
     if (!res.ok) return undefined;
-    const list = (await res.json()) as PiperFileList;
+    const list = (await res.json()) as KokoroFileList;
     const other: SpeechLanguage = language === "en" ? "fr" : "en";
     const engineHere = state.voices[other].state === "ready";
     const voice = Object.values(list.voices[language] ?? {}).reduce((n, b) => n + b, 0);
@@ -193,8 +199,8 @@ export async function piperDownloadBytes(language: SpeechLanguage): Promise<numb
   }
 }
 
-/** Downloads the engine and one language's voice into the Piper cache, reporting progress. */
-export function downloadPiper(language: SpeechLanguage, { quiet = false } = {}): Promise<void> {
+/** Downloads the engine and one language's voice into the Kokoro cache, reporting progress. */
+export function downloadKokoro(language: SpeechLanguage, { quiet = false } = {}): Promise<void> {
   // One download at a time: the two languages share the engine files.
   const run = downloading.then(() => (state.voices[language].state === "ready" ? undefined : fetchVoice(language, quiet)));
   downloading = run.catch(() => undefined);
@@ -210,10 +216,10 @@ async function fetchVoice(language: SpeechLanguage, quiet: boolean): Promise<voi
   try {
     const listRes = await fetch(LIST_URL, { cache: "no-cache" });
     if (!listRes.ok) throw new Error("The voice isn't available right now.");
-    const list = (await listRes.clone().json()) as PiperFileList;
+    const list = (await listRes.clone().json()) as KokoroFileList;
     const files = filesFor(list, language);
     if (files.length <= Object.keys(list.engine).length) throw new Error("The voice isn't available right now.");
-    const cache = await caches.open(PIPER_CACHE);
+    const cache = await caches.open(KOKORO_CACHE);
     const missing: typeof files = [];
     for (const f of files) if (!(await cache.match(f[0]))) missing.push(f);
     const total = missing.reduce((n, [, bytes]) => n + bytes, 0);
@@ -266,43 +272,43 @@ export function onMeteredConnection(): boolean {
 }
 
 /**
- * Starts downloading a language's voice in the background when Piper is on but the voice isn't
+ * Starts downloading a language's voice in the background when Kokoro is on but the voice isn't
  * here yet (when the app opens and a child has read-aloud on, or when a question is read aloud). Never on mobile data or Data Saver, never when the device is short
  * of space, and not in automated test browsers (each would fetch the whole voice). Read-aloud
  * carries on with the device voice meanwhile. Resolves with whether a download ran.
  */
-export async function autoDownloadPiper(language: SpeechLanguage): Promise<boolean> {
-  if (!piperSupported() || navigator.webdriver || navigator.onLine === false || onMeteredConnection()) return false;
+export async function autoDownloadKokoro(language: SpeechLanguage): Promise<boolean> {
+  if (!kokoroSupported() || navigator.webdriver || navigator.onLine === false || onMeteredConnection()) return false;
   if (Date.now() - (autoTried[language] ?? -Infinity) < AUTO_RETRY_MS) return false;
-  if (!isOn("piper-auto-download")) return false;
+  if (!isOn("kokoro-auto-download")) return false;
   await check();
   if (!state.enabled || state.voices[language].state !== "missing") return false;
   if (state.voices.en.state === "downloading" || state.voices.fr.state === "downloading") return false;
   autoTried[language] = Date.now();
   try {
     const { quota, usage } = (await navigator.storage?.estimate?.()) ?? {};
-    // Leave plenty of room for lessons and progress (the voice is about 100 MB with the engine).
+    // Leave plenty of room for lessons and progress (the voice is about 115 MB with the engine and model).
     if (quota !== undefined && quota - (usage ?? 0) < 250e6) return false;
   } catch {
     // Can't tell: try anyway; a failed download is cleaned up next time.
   }
-  await downloadPiper(language, { quiet: true });
+  await downloadKokoro(language, { quiet: true });
   return true;
 }
 
-/** Downloads each language's voice in turn, in the background (see autoDownloadPiper). */
-export async function preloadPiperVoices(languages: readonly SpeechLanguage[]): Promise<void> {
-  for (const language of languages) await autoDownloadPiper(language).catch(() => false);
+/** Downloads each language's voice in turn, in the background (see autoDownloadKokoro). */
+export async function preloadKokoroVoices(languages: readonly SpeechLanguage[]): Promise<void> {
+  for (const language of languages) await autoDownloadKokoro(language).catch(() => false);
 }
 
 /** Removes one language's voice from this device (and the engine once no voice is left). */
-export async function removePiper(language: SpeechLanguage): Promise<void> {
-  const cache = await caches.open(PIPER_CACHE);
-  const list = (await (await cache.match(LIST_URL))?.json().catch(() => undefined)) as PiperFileList | undefined;
+export async function removeKokoro(language: SpeechLanguage): Promise<void> {
+  const cache = await caches.open(KOKORO_CACHE);
+  const list = (await (await cache.match(LIST_URL))?.json().catch(() => undefined)) as KokoroFileList | undefined;
   const other: SpeechLanguage = language === "en" ? "fr" : "en";
-  if (!list || state.voices[other].state !== "ready") await caches.delete(PIPER_CACHE);
-  else for (const name of Object.keys(list.voices[language] ?? {})) await cache.delete(PIPER_BASE + name);
-  if (language === "en") setPiperEnabled(false);
+  if (!list || state.voices[other].state !== "ready") await caches.delete(KOKORO_CACHE);
+  else for (const name of Object.keys(list.voices[language] ?? {})) await cache.delete(KOKORO_BASE + name);
+  if (language === "en") setKokoroEnabled(false);
   update({}, language, { state: "missing", loaded: 0, total: 0, error: undefined });
 }
 
@@ -325,22 +331,22 @@ function getWorker(): Worker {
   return worker;
 }
 
-// If no sound has started by now, Piper is treated as failed and the device voice reads instead.
-// Generous, because the first sentence also loads the voice (several seconds on an old tablet).
-export const PIPER_FIRST_AUDIO_MS = 15_000;
+// If no sound has started by now, Kokoro is treated as failed and the device voice reads instead.
+// Generous, because the first sentence also loads the 90 MB model (many seconds on an old tablet).
+export const KOKORO_FIRST_AUDIO_MS = 30_000;
 
-/** Stops whatever Piper is saying. */
-export function stopPiper() {
+/** Stops whatever Kokoro is saying. */
+export function stopKokoro() {
   current?.stop();
   current = undefined;
 }
 
 /**
- * Says `text` with the Piper voice for `language`. Resolves when it has finished (or been
+ * Says `text` with the Kokoro voice for `language`. Resolves when it has finished (or been
  * stopped); rejects if it fails before saying anything, so the caller can use a device voice.
  */
-export function speakPiper(text: string, language: SpeechLanguage, rate = 1): Promise<void> {
-  stopPiper();
+export function speakKokoro(text: string, language: SpeechLanguage, rate = 1): Promise<void> {
+  stopKokoro();
   // Created and resumed now, while a tap may still count as the user asking for sound.
   audio ??= new AudioContext();
   if (audio.state === "suspended") void audio.resume();
@@ -349,7 +355,7 @@ export function speakPiper(text: string, language: SpeechLanguage, rate = 1): Pr
   if (sentences.length === 0) return Promise.resolve();
   const id = ++nextId;
   const w = getWorker();
-  const voice = PIPER_VOICES[language].id;
+  const { id: voice, espeak: espeakVoice } = KOKORO_VOICES[language];
 
   return new Promise<void>((resolve, reject) => {
     let started = false;
@@ -386,7 +392,7 @@ export function speakPiper(text: string, language: SpeechLanguage, rate = 1): Pr
       if (started) return;
       w.postMessage({ type: "cancel", id });
       end(new Error("The voice took too long to start."));
-    }, PIPER_FIRST_AUDIO_MS);
+    }, KOKORO_FIRST_AUDIO_MS);
     const onMessage = (e: MessageEvent) => {
       const m = e.data;
       if (m?.id !== id || finished) return;
@@ -414,6 +420,6 @@ export function speakPiper(text: string, language: SpeechLanguage, rate = 1): Pr
     };
     w.addEventListener("message", onMessage);
     w.addEventListener("error", onError);
-    w.postMessage({ type: "speak", id, base: PIPER_BASE, voice, sentences, rate });
+    w.postMessage({ type: "speak", id, base: KOKORO_BASE, voice, espeakVoice, sentences, rate });
   });
 }

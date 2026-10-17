@@ -9,11 +9,11 @@
 // - /api/ is never cached: progress is saved in IndexedDB and synced by the app.
 // - Shared report links (/shared/{token}/) and anything sent with no-store are never cached, so a
 //   report stops opening on a device once its link is revoked or expires.
-// - The Piper voice (/piper/{version}/, /piper-worker.js) lives in its own cache, which only
-//   the app's voice download fills (src/lib/piper.ts), and which is kept across updates
+// - The Kokoro voice (/kokoro/{version}/, /kokoro-worker.js) lives in its own cache, which only
+//   the app's voice download fills (src/lib/kokoro.ts), and which is kept across updates
 //   because it is about 100 MB.
 const CACHE = "grademap-v4";
-const PIPER_CACHE = "grademap-piper";
+const KOKORO_CACHE = "grademap-kokoro";
 const SHELLS = ["/play/", "/parents/", "/"];
 const EXTRAS = ["/manifest.webmanifest", "/icon.svg", "/icon-192.png", "/icon-512.png"];
 
@@ -46,7 +46,7 @@ self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches
       .keys()
-      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE && k !== PIPER_CACHE).map((k) => caches.delete(k))))
+      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE && k !== KOKORO_CACHE).map((k) => caches.delete(k))))
       .then(() => self.clients.claim()),
   );
 });
@@ -86,14 +86,14 @@ self.addEventListener("fetch", (event) => {
   if (request.headers.get("RSC") || url.searchParams.has("_rsc")) return;
 
   // Versioned voice files never change: cache first, and never copied into the app cache.
-  if (url.pathname.startsWith("/piper/")) {
-    event.respondWith(caches.open(PIPER_CACHE).then((cache) => cache.match(request).then((hit) => hit || fetch(request))));
+  if (url.pathname.startsWith("/kokoro/")) {
+    event.respondWith(caches.open(KOKORO_CACHE).then((cache) => cache.match(request).then((hit) => hit || fetch(request))));
     return;
   }
   // The worker script isn't versioned: fresh when online, and the cached copy kept up to date.
-  if (url.pathname === "/piper-worker.js") {
+  if (url.pathname === "/kokoro-worker.js") {
     event.respondWith(
-      caches.open(PIPER_CACHE).then((cache) =>
+      caches.open(KOKORO_CACHE).then((cache) =>
         fetch(request)
           .then((res) => {
             if (res.ok) {

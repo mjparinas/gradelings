@@ -11,9 +11,9 @@ const h = vi.hoisted(() => ({
   prefs: { en: null as string | null, fr: null as string | null },
   setPref: vi.fn(),
   preview: vi.fn(),
-  previewPiper: vi.fn(),
+  previewKokoro: vi.fn(),
   stop: vi.fn(),
-  piper: undefined as undefined | { enabled: boolean; voices: { en: { state: string }; fr: { state: string } } },
+  kokoro: undefined as undefined | { enabled: boolean; voices: { en: { state: string }; fr: { state: string } } },
 }));
 vi.mock("@/lib/speech", async (importOriginal) => {
   const real = await importOriginal<typeof import("@/lib/speech")>();
@@ -25,19 +25,19 @@ vi.mock("@/lib/speech", async (importOriginal) => {
     getVoicePreference: (lang: SpeechLanguage = "en") => h.prefs[lang],
     setVoicePreference: h.setPref,
     previewVoice: h.preview,
-    previewPiper: h.previewPiper,
+    previewKokoro: h.previewKokoro,
     stopSpeaking: h.stop,
   };
 });
-vi.mock("@/lib/piper", () => ({
-  subscribePiper: () => () => {},
-  getPiperState: () => h.piper,
-  PIPER_VOICES: { en: { name: "Amy", credit: "" }, fr: { name: "Siwis", credit: "" } },
-  piperSupported: () => h.piper !== undefined,
-  piperDownloadBytes: vi.fn().mockResolvedValue(undefined),
-  downloadPiper: vi.fn(),
-  removePiper: vi.fn(),
-  setPiperEnabled: vi.fn(),
+vi.mock("@/lib/kokoro", () => ({
+  subscribeKokoro: () => () => {},
+  getKokoroState: () => h.kokoro,
+  KOKORO_VOICES: { en: { name: "Heart", credit: "" }, fr: { name: "Siwis", credit: "" } },
+  kokoroSupported: () => h.kokoro !== undefined,
+  kokoroDownloadBytes: vi.fn().mockResolvedValue(undefined),
+  downloadKokoro: vi.fn(),
+  removeKokoro: vi.fn(),
+  setKokoroEnabled: vi.fn(),
 }));
 
 import { VoicePicker } from "./VoicePicker";
@@ -56,9 +56,9 @@ beforeEach(() => {
   h.prefs = { en: null, fr: null };
   h.setPref.mockReset();
   h.preview.mockReset();
-  h.previewPiper.mockReset().mockResolvedValue(undefined);
+  h.previewKokoro.mockReset().mockResolvedValue(undefined);
   h.stop.mockReset();
-  h.piper = undefined;
+  h.kokoro = undefined;
   setOnline(true);
 });
 
@@ -173,20 +173,20 @@ describe("VoicePicker", () => {
     await userEvent.click(screen.getByRole("button", { name: "▶ Hear it" }));
     expect(h.stop).toHaveBeenCalled();
     expect(h.preview).toHaveBeenCalledWith("karen");
-    expect(h.previewPiper).not.toHaveBeenCalled();
+    expect(h.previewKokoro).not.toHaveBeenCalled();
   });
 
   it("names the offline voice once it is on and here, and plays it as the sample", async () => {
-    h.piper = { enabled: true, voices: { en: { state: "ready" }, fr: { state: "missing" } } };
+    h.kokoro = { enabled: true, voices: { en: { state: "ready" }, fr: { state: "missing" } } };
     render(<VoicePicker />);
-    expect(screen.getByText(/Reading with:/).parentElement).toHaveTextContent("Reading with: Amy, the offline natural voice");
+    expect(screen.getByText(/Reading with:/).parentElement).toHaveTextContent("Reading with: Heart, the offline natural voice");
     await userEvent.click(screen.getByRole("button", { name: "▶ Hear it" }));
-    expect(h.previewPiper).toHaveBeenCalledWith("en");
+    expect(h.previewKokoro).toHaveBeenCalledWith("en");
     expect(h.preview).not.toHaveBeenCalled();
   });
 
   it("says when the offline voice downloads while it isn't here yet", () => {
-    h.piper = { enabled: true, voices: { en: { state: "missing" }, fr: { state: "missing" } } };
+    h.kokoro = { enabled: true, voices: { en: { state: "missing" }, fr: { state: "missing" } } };
     render(<VoicePicker />);
     expect(screen.getByText(/Reading with:/).parentElement).toHaveTextContent("Reading with: Aria (sounds natural)");
     expect(screen.getByText(/a natural voice that works offline, downloads by itself once a child has/)).toBeInTheDocument();

@@ -1,0 +1,36 @@
+{
+  "version": "1",
+  "source": "https://huggingface.co/onnx-community/Kokoro-82M-v1.0-ONNX/resolve/1939ad2a8e416c0acfeecc08a694d14ef25f2231/",
+  "engine": {
+    "ort.wasm.min.js": "onnxruntime-web/dist/ort.wasm.min.js",
+    "ort-wasm-simd-threaded.mjs": "onnxruntime-web/dist/ort-wasm-simd-threaded.mjs",
+    "ort-wasm-simd-threaded.wasm": "onnxruntime-web/dist/ort-wasm-simd-threaded.wasm",
+    "piper_phonemize.js": "@diffusionstudio/piper-wasm/build/piper_phonemize.js",
+    "piper_phonemize.wasm": "@diffusionstudio/piper-wasm/build/piper_phonemize.wasm",
+    "piper_phonemize.data": "@diffusionstudio/piper-wasm/build/piper_phonemize.data"
+  },
+  "model": {
+    "onnx/model_quantized.onnx": "fbae9257e1e05ffc727e951ef9b9c98418e6d79f1c9b6b13bd59f5c9028a1478",
+    "tokenizer.json": "77a02c8e164413299b4b4c403b14f8e0e1c1b727db4d46a09d6327b861060a34"
+  },
+  "voices": {
+    "en": {
+      "id": "af_heart",
+      "espeak": "en-us",
+      "name": "Heart",
+      "credit": "Heart voice from the Kokoro-82M model (Apache 2.0).",
+      "files": {
+        "voices/af_heart.bin": "d583ccff3cdca2f7fae535cb998ac07e9fcb90f09737b9a41fa2734ec44a8f0b"
+      }
+    },
+    "fr": {
+      "id": "ff_siwis",
+      "espeak": "fr",
+      "name": "Siwis",
+      "credit": "Siwis voice from the Kokoro-82M model, trained on the SIWIS French Speech Synthesis Database (University of Edinburgh, CC BY 4.0).",
+      "files": {
+        "voices/ff_siwis.bin": "a35f5675ad08948e326ae75fd0ea16ba5d0042e4f76b5f3d1df77d0a48c54861"
+      }
+    }
+  }
+}

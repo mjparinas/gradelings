@@ -56,8 +56,8 @@ next-env.d.ts
 /android/*.aab
 /android/*.apk
 
-# Piper read-aloud files, written by scripts/fetch-piper.mjs
-/public/piper/
+# Kokoro read-aloud files, written by scripts/fetch-kokoro.mjs
+/public/kokoro/
 
 # iOS build output (docs/IOS.md). The Xcode project is generated from ios/project.yml.
 /ios/Gradelings.xcodeproj/
