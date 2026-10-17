@@ -44,6 +44,8 @@ describe("ClassTimerChip", () => {
     expect(screen.getByRole("timer")).toHaveTextContent("0:10");
     // It takes no taps, so it can never sit on top of a button.
     expect(screen.getByTestId("class-timer").className).toContain("pointer-events-none");
+    // It stays above the live question's full-screen takeover (z-60).
+    expect(screen.getByTestId("class-timer").className).toContain("z-[70]");
 
     timer = { label: "Silent reading", totalMs: 60_000, left: 0, running: false, className: "Room 4" };
     await act(() => vi.advanceTimersByTimeAsync(5_000));

@@ -77,7 +77,8 @@ export function ClassTimerChip() {
   const done = left <= 0;
   const text = done ? say("Time's up!") : timer.running ? formatClock(left) : `${formatClock(left)} · ${say("paused")}`;
   return (
-    <div className="pointer-events-none fixed inset-x-0 top-2 z-40 flex justify-center px-3" data-testid="class-timer">
+    // Above the live question's full-screen takeover (z-60), below toasts (z-80), so it is always on top.
+    <div className="pointer-events-none fixed inset-x-0 z-[70] flex justify-center px-3" style={{ top: "max(0.5rem, env(safe-area-inset-top))" }} data-testid="class-timer">
       <div className="max-w-full rounded-full border-2 border-[#4f8ef7] bg-white px-4 py-1.5 font-read text-base font-bold shadow-md">
         <span aria-hidden="true">⏱️ </span>
         {timer.label && <span className="mr-2 text-ink-soft">{timer.label}</span>}
