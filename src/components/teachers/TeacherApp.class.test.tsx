@@ -150,6 +150,11 @@ describe("TeacherApp class page", () => {
     expect(section).toHaveTextContent("1 of 3 answered");
     expect(section).toHaveTextContent("Answered: Maya");
     expect(section).toHaveTextContent("Waiting for: Sam, Alex");
+    const desks = within(section).getByLabelText("Classroom desks");
+    expect(within(desks).getByLabelText("Maya: answered wrong")).toBeInTheDocument();
+    expect(within(desks).getByLabelText("Sam: not answered yet")).toBeInTheDocument();
+    expect(desks).toHaveTextContent("0% got it right (0)");
+    expect(desks).toHaveTextContent("33% got it wrong (1)");
     await user.click(within(section).getByRole("button", { name: "Show the answer" }));
     expect(await within(section).findByText(/answer shown to the class/)).toBeInTheDocument();
     await user.click(within(section).getByRole("button", { name: "End" }));
