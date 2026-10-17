@@ -27,6 +27,9 @@ export interface Profile {
   deleted?: boolean;
 }
 
+export const READING_TINTS = ["cream", "mint", "blue", "rose"] as const;
+export type ReadingTint = (typeof READING_TINTS)[number];
+
 export interface ChildSettings {
   profileId: string;
   dailyGoalMinutes: number;
@@ -58,6 +61,10 @@ export interface ChildSettings {
   roomyText?: boolean;
   /** Stronger text colours and outlines. */
   highContrast?: boolean;
+  /** Use the OpenDyslexic typeface for everything the child reads. */
+  dyslexiaFont?: boolean;
+  /** A soft page colour some readers find easier on the eyes. Unset means the usual cream. */
+  readingTint?: ReadingTint;
   /** Days a week a parent hopes the child will practise (1 to 7). Unset means no family goal. */
   weeklyGoalDays?: number;
   /** A short kind note a parent sent from a fixed list; the child sees it once on the home screen. */

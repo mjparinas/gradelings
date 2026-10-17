@@ -70,4 +70,14 @@ describe("the active child's comfort settings reach the page", () => {
     expect([root.contains("calm"), root.contains("roomy"), root.contains("contrast")]).toEqual([false, false, false]);
     expect(prefersReducedMotion()).toBe(false);
   });
+
+  it("puts the dyslexia font and one reading tint on the page, and takes them off for another child", () => {
+    const root = document.documentElement.classList;
+    act(() => useStore.getState().updateSettings("a", { dyslexiaFont: true, readingTint: "mint" }));
+    expect([root.contains("dyslexic"), root.contains("tint-mint"), root.contains("tint-rose")]).toEqual([true, true, false]);
+    act(() => useStore.getState().updateSettings("a", { readingTint: "rose" }));
+    expect([root.contains("tint-mint"), root.contains("tint-rose")]).toEqual([false, true]);
+    act(() => useStore.getState().setActive("b"));
+    expect([root.contains("dyslexic"), root.contains("tint-rose")]).toEqual([false, false]);
+  });
 });

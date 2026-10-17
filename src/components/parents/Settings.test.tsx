@@ -142,6 +142,18 @@ describe("SettingsPage", () => {
     expect(stored().autoRead).toBe(true);
   });
 
+  it("keeps the dyslexia font and page colour under More reading options", async () => {
+    render(<SettingsPage />);
+    const font = sw(/Dyslexia-friendly font/);
+    expect(font.closest("details")).toHaveTextContent("More reading options");
+    await userEvent.click(font);
+    expect(stored().dyslexiaFont).toBe(true);
+    await userEvent.click(radio("Mint"));
+    expect(stored().readingTint).toBe("mint");
+    await userEvent.click(radio("Usual"));
+    expect(stored().readingTint).toBeUndefined();
+  });
+
   it("offers games as earn, free play or off, with the ratio under Advanced options", async () => {
     render(<SettingsPage />);
     expect(radio("Earn game time")).toHaveAttribute("aria-checked", "true");

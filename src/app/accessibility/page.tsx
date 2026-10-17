@@ -29,7 +29,7 @@ export default function AccessibilityPage() {
             <ul>
               <li>Large touch targets and layouts that work from small phones to tablets, with no sideways scrolling.</li>
               <li>Read-aloud for every question, using the voices on the device, including a French voice for French questions.</li>
-              <li>Per child, a parent or teacher can turn on calm motion, quiet sounds, hidden timers, shorter sessions, roomy text and high contrast. These change how things look and sound, never the scoring.</li>
+              <li>Per child, a parent or teacher can turn on calm motion, quiet sounds, hidden timers, shorter sessions, roomy text, high contrast, a dyslexia-friendly font and a softer page colour. These change how things look and sound, never the scoring.</li>
               <li>A reading font designed for beginning readers for questions and stories.</li>
               <li>Colours that pass contrast checks and a simulated colour-blind check. Charts use a single colour family and have table views.</li>
               <li>Hints and a second try on every question. No time pressure in normal practice.</li>
