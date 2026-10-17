@@ -92,7 +92,7 @@ Production's database was created through the Vercel Marketplace in AWS us-east-
 - [ ] Share a report link, open it in a private window, then stop sharing and check it no longer works.
 - [ ] A test "Report a problem" reaches the contact address.
 - [ ] CI is green on the pull request (`.github/workflows/ci.yml` runs tests, lint, types, build, device layouts, accessibility and offline checks).
-- [ ] Turso backups: confirm point-in-time recovery is available on your plan and practise one restore.
+- [ ] Turso backups: confirm point-in-time recovery is available on your plan and practise one restore (`docs/RESTORE.md`; log it there).
 - [ ] Stripe test-mode checkout, portal and webhook round trip updates the Subscription screen.
 - [ ] Referrals: sign up with a friend's `/account/invite/?ref=CODE` link, confirm the email, and check the referrer gets a free month. For a paying referrer this adds a one-month credit to their Stripe customer balance (`creditCustomer`), so verify it in Stripe test mode.
 - [ ] Switch Stripe to live keys; run one real checkout and refund it.
