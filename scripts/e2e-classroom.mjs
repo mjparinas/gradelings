@@ -123,8 +123,8 @@ check(
 {
   const teacherContext = await browser.newContext({ viewport: { width: 1100, height: 900 } });
   const [name, value] = cookie.split("=");
-  // The production cookie carries the __Host- prefix, which browsers accept only as Secure (localhost counts as secure).
-  await teacherContext.addCookies([{ name, value, url: BASE, httpOnly: true, ...(name.startsWith("__Host-") ? { secure: true } : {}) }]);
+  // The production cookie carries the __Host- prefix: Secure, no Domain, path "/". Chromium refuses that when set from a plain http url, so give the host and path (localhost counts as secure).
+  await teacherContext.addCookies([{ name, value, domain: new URL(BASE).hostname, path: "/", httpOnly: true, ...(name.startsWith("__Host-") ? { secure: true } : {}) }]);
   const teacherPage = await teacherContext.newPage();
   const before = (await api(`/api/classes/?id=${cls.id}`)).data.students?.[0]?.units?.[0]?.attempts ?? 0;
   await teacherPage.goto(`${BASE}/teachers/#/class/${encodeURIComponent(cls.id)}/homework`);
