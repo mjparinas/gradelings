@@ -74,3 +74,18 @@ export function liveRecapText(items: LiveForTeacher[], names: Map<string, string
   lines.push("", "This reflects practice, not a report-card mark.");
   return lines.join("\n");
 }
+
+export type DeskState = "waiting" | "right" | "wrong";
+
+/** Each student's desk for the open question: white until they answer, then green or red. */
+export function liveDesks(students: { profileId: string; name: string }[], answers: { profileId: string; correct: boolean }[]): { profileId: string; name: string; state: DeskState }[] {
+  const byProfile = new Map(answers.map((a) => [a.profileId, a.correct]));
+  return students.map((s) => ({ ...s, state: !byProfile.has(s.profileId) ? "waiting" : byProfile.get(s.profileId) ? "right" : "wrong" }));
+}
+
+/** Whole-number percentages of the class (everyone counts, answered or not). Zero for an empty class. */
+export function livePercents(desks: { state: DeskState }[]): { right: number; wrong: number; waiting: number } {
+  const total = desks.length;
+  const pct = (state: DeskState) => (total ? Math.round((desks.filter((d) => d.state === state).length / total) * 100) : 0);
+  return { right: pct("right"), wrong: pct("wrong"), waiting: pct("waiting") };
+}

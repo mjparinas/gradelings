@@ -6,6 +6,7 @@ import { QuestionVisual } from "@/components/visuals";
 import { call } from "@/lib/classroom";
 import { APP_NAME } from "@/lib/brand";
 import { LIVE_POLL_TEACHER_MS, liveCounts, liveRecapItem, liveRecapText, type LiveForTeacher } from "@/lib/live";
+import { LiveDesks } from "./LiveDesks";
 import type { ClassDetail } from "./TeacherApp";
 
 // Live questions: the teacher asks the class one multiple-choice question from a unit and watches
@@ -146,6 +147,7 @@ export function LiveClass({ data, label, unitGroups }: { data: ClassDetail; labe
             </b>{" "}
             answered{live.revealed ? " · answer shown to the class" : ""}
           </p>
+          <LiveDesks students={data.students} answers={live.answers} hideNames={present} />
           {!present && live.answers.length > 0 && (
             <p className="font-read text-sm text-ink-soft">
               Answered: {live.answers.map((a) => `${names.get(a.profileId) ?? "Student"}${live.revealed ? (a.correct ? " ✓" : "") : ""}`).join(", ")}
