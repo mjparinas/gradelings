@@ -2,6 +2,7 @@
 
 import type { Classwork } from "./classroom";
 import { consentNeeded } from "./coppa";
+import { pingGuestDevice } from "./guestPing";
 import * as localdb from "./localdb";
 import { MAINTENANCE_HEADER, MAINTENANCE_SYNC_MESSAGE } from "./maintenance";
 import type { AppEvent, ChildSettings, FamilyInfo, Profile } from "./model";
@@ -37,6 +38,7 @@ async function doSync(): Promise<void> {
   if (!store.ready) return;
   if (!store.family.account) {
     store.setSync({ status: "signed-out" });
+    if (typeof navigator === "undefined" || navigator.onLine) void pingGuestDevice(store);
     return;
   }
   if (typeof navigator !== "undefined" && !navigator.onLine) {

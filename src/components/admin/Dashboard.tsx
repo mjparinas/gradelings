@@ -5,6 +5,7 @@ import { ColumnChart, LineChart, niceMax, RowBars } from "@/components/parents/c
 import { call } from "@/lib/classroom";
 import { METRIC_SECTIONS, type MetricSection, type SectionMetrics } from "@/lib/adminMetrics";
 import type { Detail, DetailView } from "@/lib/adminDetail";
+import type { Part, VisitsReport } from "@/lib/traffic";
 import { cancelReasonRows } from "@/lib/cancelReasons";
 import { FREE_UNITS_PER_COURSE } from "@/lib/plan";
 import { DetailModal } from "./DetailModal";
@@ -219,6 +220,23 @@ function Customers({ c: d, show }: { c: NonNullable<Parts["customers"]>; show: (
     </>
   );
 }
+/** Clicks on "Try it free" and "Play free" in the last 28 days, read from Vercel Analytics (the Traffic tab's source), so it loads on its own. */
+function TryItFreeTile({ show }: { show: (view: DetailView) => () => void }) {
+  const [part, setPart] = useState<Part<VisitsReport> | null>(null);
+  useEffect(() => {
+    let alive = true;
+    call<Part<VisitsReport>>("/api/admin/traffic/?days=28&part=visits").then(
+      (r) => alive && setPart(r),
+      (e: Error) => alive && setPart({ state: "error", error: e.message }),
+    );
+    return () => {
+      alive = false;
+    };
+  }, []);
+  const totals = part?.state === "ok" ? part.report.clickTotals : undefined;
+  const sub = !part ? "Loading…" : totals ? `last 28 days · ${num(totals.subscribe)} Subscribe clicks` : part.state === "setup" ? "needs Vercel Analytics" : "not available right now";
+  return <Tile onOpen={show("try-it-free")} label="Try it free clicks" value={totals ? num(totals.trial) : "—"} sub={sub} />;
+}
 function Growth({ g, show }: { g: NonNullable<Parts["growth"]>; show: (view: DetailView) => () => void }) {
   const a = g.acquisition;
   return (
@@ -232,6 +250,7 @@ function Growth({ g, show }: { g: NonNullable<Parts["growth"]>; show: (view: Det
         <Tile onOpen={show("unconfirmed")} label="Email confirmed" value={share(a.confirmedRate)} />
         <Tile onOpen={show("referrals")} label="From a referral" value={num(a.referred)} sub={`${share(a.referredRate)} of families`} />
         <Tile onOpen={show("customers-ever")} label="Families who have paid" value={num(g.customersEver)} sub="in the last two years" />
+        <TryItFreeTile show={show} />
       </ul>
       <div className={charts}>
         <ColumnChart title="Sign-Ups per Week" subtitle="Last 26 weeks" data={a.weekly} unit="sign-ups" xLabel="Week of" />
@@ -255,6 +274,7 @@ function Practice({ e, show }: { e: NonNullable<Parts["practice"]>["engagement"]
         <Tile onOpen={show("practising")} label="This week" value={num(e.d7)} sub={`${num(e.d30)} in 30 days`} />
         <Tile onOpen={show("practising")} label="Stickiness" value={share(e.stickiness)} sub="daily ÷ monthly practising families" />
         <Tile onOpen={show("practising")} label="Questions answered, 30 days" value={num(e.answers30)} sub={`${num(e.minutes30)} minutes`} />
+        <Tile onOpen={show("guests")} label="Guest players, 30 days" value={num(e.guests.d30)} sub={`no parent account · ${num(e.guests.d7)} this week, ${num(e.guests.d1)} today`} />
       </ul>
       <div className={charts}>
         <ColumnChart title="Families Practising per Day" subtitle="Last 30 days" data={e.daily.map((d) => ({ label: d.label, value: d.families }))} unit="families" />

@@ -1,4 +1,5 @@
 import { createSign } from "node:crypto";
+import { DETAIL_LIMIT, type Detail } from "@/lib/adminDetail";
 import { CTA_EVENTS } from "@/lib/ctaEvents";
 import { periodDates, SEARCH_LAG_DAYS, type Part, type SearchReport, type SearchRow, type SitemapInfo, type TrafficData, type TrafficPeriod, type VisitsReport } from "@/lib/traffic";
 
@@ -169,7 +170,7 @@ export async function visitsReport(days: TrafficPeriod, now = Date.now()): Promi
     });
     return r.data ?? [];
   };
-  const clicksFor = async (from: string, to: string): Promise<VisitsReport["clicks"]> => {
+  const clicksFor = async (from: string, to: string): Promise<{ pages: NonNullable<VisitsReport["clicks"]>; totals: NonNullable<VisitsReport["clickTotals"]> } | undefined> => {
     try {
       const [trial, subscribe] = await Promise.all([askEvents(CTA_EVENTS.trial, from, to), askEvents(CTA_EVENTS.subscribe, from, to)]);
       const count = (r: VisitRow) => (typeof r.count === "number" ? r.count : 0);
@@ -177,7 +178,9 @@ export async function visitsReport(days: TrafficPeriod, now = Date.now()): Promi
       const row = (key: string) => pages.get(key) ?? pages.set(key, { key, trial: 0, subscribe: 0 }).get(key)!;
       for (const r of trial) if (r.requestPath && r.requestPath !== "Others") row(String(r.requestPath)).trial += count(r);
       for (const r of subscribe) if (r.requestPath && r.requestPath !== "Others") row(String(r.requestPath)).subscribe += count(r);
-      return [...pages.values()].sort((a, b) => b.trial + b.subscribe - (a.trial + a.subscribe));
+      // The totals keep the pages Vercel folds into "Others", so the dashboard tile counts every click.
+      const totals = { trial: trial.reduce((s, r) => s + count(r), 0), subscribe: subscribe.reduce((s, r) => s + count(r), 0) };
+      return { pages: [...pages.values()].sort((a, b) => b.trial + b.subscribe - (a.trial + a.subscribe)), totals };
     } catch {
       return undefined;
     }
@@ -215,7 +218,7 @@ export async function visitsReport(days: TrafficPeriod, now = Date.now()): Promi
       pages: list(pages, "requestPath"),
       referrers: list(referrers, "referrerHostname"),
       countries: list(countries, "country"),
-      ...(clicks ? { clicks } : {}),
+      ...(clicks ? { clicks: clicks.pages, clickTotals: clicks.totals } : {}),
     };
   };
   try {
@@ -231,6 +234,39 @@ export async function visitsReport(days: TrafficPeriod, now = Date.now()): Promi
     }
   }
 }
+
+/** The days the dashboard's "Try it free" tile and the list it opens both count. */
+export const CLICKS_DAYS: TrafficPeriod = 28;
+
+/** The list behind the dashboard's "Try it free" tile, from the same cached read as the tile (`trafficPart`). */
+export async function clicksDetail(now = Date.now()): Promise<Detail> {
+  const title = "Try it free clicks";
+  const part = await trafficPart("visits", CLICKS_DAYS, { now }).catch((e: Error): Part<VisitsReport> => ({ state: "error", error: e.message }));
+  const columns = [
+    { label: "Page", kind: "text" as const },
+    { label: "Try it free clicks", kind: "number" as const },
+    { label: "Subscribe clicks", kind: "number" as const },
+  ];
+  const none = (intro: string): Detail => ({ title, intro, summary: [], tables: [{ columns, rows: [], total: 0 }] });
+  if (part.state === "setup") return none(`Needs Vercel Web Analytics. ${part.setup}`);
+  if (part.state === "error") return none(`Vercel Analytics didn't answer: ${part.error}`);
+  const { clicks, clickTotals } = part.report;
+  if (!clicks || !clickTotals) return none("Vercel Analytics didn't give click counts. They are custom events, which need a paid Vercel plan.");
+  const rows = clicks.map((c) => ({ cells: [c.key, c.trial, c.subscribe] }));
+  const otherTrial = clickTotals.trial - clicks.reduce((s, c) => s + c.trial, 0);
+  const otherSubscribe = clickTotals.subscribe - clicks.reduce((s, c) => s + c.subscribe, 0);
+  const all = otherTrial > 0 || otherSubscribe > 0 ? [...rows, { cells: ["All other pages", Math.max(0, otherTrial), Math.max(0, otherSubscribe)] }] : rows;
+  return {
+    title,
+    intro: `Clicks on a Try it free or Play free link on a public page, by the page they were on, for ${shortRange(part.report)}. This counts clicks, not players: someone can click twice, and a click doesn't mean they played.`,
+    summary: [
+      { label: "Try it free clicks", value: clickTotals.trial, kind: "number" },
+      { label: "Subscribe clicks", value: clickTotals.subscribe, kind: "number" },
+    ],
+    tables: [{ columns, rows: all.slice(0, DETAIL_LIMIT), total: all.length }],
+  };
+}
+const shortRange = (r: VisitsReport) => (r.keptDays ? `the last ${r.keptDays} days (all Vercel keeps on this plan)` : `${r.start} to ${r.end}`);
 
 // ---------- Both ----------
 

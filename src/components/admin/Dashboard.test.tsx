@@ -31,6 +31,7 @@ function data(over: Partial<MetricsInput> = {}, stripe = false) {
       payments: [{ familyId: "f", amount: 1499, refunded: 0, interval: "month", paidAt: now - DAY }],
       activity: [{ day: Math.floor(now / DAY), families: 2, answers: 30, ms: 300_000 }],
       activeFamilies: { d1: 2, d7: 2, d30: 2 },
+      guestDevices: { d1: 1, d7: 3, d30: 7 },
       monthlyCosts: 50_000,
       redemptions: 1,
       reports: 0,
@@ -59,6 +60,9 @@ describe("admin dashboard", () => {
     expect(within(tile("Sign-ups this month")).getByText("2")).toBeInTheDocument();
     expect(within(tile("From a referral")).getByText("50% of families")).toBeInTheDocument();
     expect(within(tile("Questions answered, 30 days")).getByText("30")).toBeInTheDocument();
+    const guests = tile("Guest players, 30 days");
+    expect(within(guests).getByText("7")).toBeInTheDocument();
+    expect(within(guests).getByText(/3 this week, 1 today/)).toBeInTheDocument();
     for (const name of ["Revenue by Month", "Profit by Month", "Paying Families by Month", "Sign-Ups per Week", "Sign-Ups per Month", "Families Practising per Day", "Questions Answered per Day"]) {
       expect(screen.getByRole("img", { name })).toBeInTheDocument();
     }
@@ -146,11 +150,34 @@ describe("admin dashboard", () => {
     expect(screen.queryByRole("dialog")).toBeNull();
   });
 
+  it("shows the Try it free clicks from Vercel and opens their list, and says why when there are none", async () => {
+    const visits = { state: "ok", report: { clickTotals: { trial: 12, subscribe: 3 } } };
+    mocks.call.mockImplementation((url: string) => {
+      if (url.startsWith("/api/admin/traffic/")) return Promise.resolve(visits);
+      if (url.startsWith("/api/admin/stats/detail/")) return Promise.resolve({ title: "Try it free clicks", summary: [{ label: "Try it free clicks", value: 12, kind: "number" }], tables: [{ columns: [{ label: "Page", kind: "text" }], rows: [], total: 0 }] });
+      return Promise.resolve(data());
+    });
+    const user = userEvent.setup();
+    const { unmount } = render(<Dashboard />);
+    const clicks = await screen.findByText("12", { selector: "span.tabular-nums" });
+    expect(within(clicks.closest("li")!).getByText("last 28 days · 3 Subscribe clicks")).toBeInTheDocument();
+    expect(mocks.call).toHaveBeenCalledWith("/api/admin/traffic/?days=28&part=visits");
+    await user.click(within(tile("Try it free clicks")).getByRole("button"));
+    expect(mocks.call).toHaveBeenCalledWith("/api/admin/stats/detail/?view=try-it-free");
+    unmount();
+
+    mocks.call.mockImplementation((url: string) => (url.startsWith("/api/admin/traffic/") ? Promise.resolve({ state: "setup", setup: "Set VERCEL_TOKEN" }) : Promise.resolve(data())));
+    render(<Dashboard />);
+    expect(await screen.findByText("needs Vercel Analytics")).toBeInTheDocument();
+  });
+
   it("breaks profit down by month without asking the server", async () => {
     mocks.call.mockResolvedValue(data());
     const user = userEvent.setup();
     render(<Dashboard />);
     await screen.findByRole("heading", { name: "Revenue and Profit" });
+    // The Try it free tile asks Vercel once the growth tiles are drawn; let that happen before counting calls.
+    await screen.findByText("Try it free clicks");
     mocks.call.mockClear();
     await user.click(within(tile("Profit this month")).getByRole("button"));
     const dialog = screen.getByRole("dialog", { name: "Profit by Month" });
