@@ -34,6 +34,7 @@ import { useAllowed } from "./useAllowed";
 import { useClasswork } from "./useClasswork";
 import { homeworkDone } from "@/lib/classroom";
 import { ParentNote } from "./ParentNote";
+import { RewardCard, TogetherCard } from "./FamilyCards";
 import { FocusCard } from "./FocusCard";
 import { LevelChip } from "./Practice";
 import { InstallChip } from "./InstallChip";
@@ -305,6 +306,13 @@ export function Hub() {
             })}
           </ul>
         </section>
+      )}
+
+      {!little && (
+        <>
+          <RewardCard />
+          <TogetherCard />
+        </>
       )}
 
       {little ? (

@@ -37,6 +37,7 @@ vi.mock("@/lib/store", () => ({
   useChildSettings: () => h.settings,
   useDerived: () => h.derived,
 }));
+vi.mock("./FamilyCards", () => ({ RewardCard: () => <div data-testid="reward-card" />, TogetherCard: () => <div data-testid="together-card" /> }));
 vi.mock("./useClasswork", () => ({ useClasswork: () => h.classwork }));
 vi.mock("./LiveQuestion", async (importOriginal) => {
   const actual = await importOriginal<typeof import("./LiveQuestion")>();
@@ -363,6 +364,16 @@ describe("Hub cards", () => {
     h.settings = { ...h.settings, focus: { unit: a.key, until: dayKey(NOW - DAY), setAt: NOW - 5 * DAY } };
     show();
     expect(screen.queryByRole("region", { name: "From your grown-up" })).not.toBeInTheDocument();
+  });
+
+  it("shows the family cards on the home screen of older children only", () => {
+    show();
+    expect(screen.getByTestId("reward-card")).toBeInTheDocument();
+    expect(screen.getByTestId("together-card")).toBeInTheDocument();
+    cleanup();
+    show("little");
+    expect(screen.queryByTestId("reward-card")).not.toBeInTheDocument();
+    expect(screen.queryByTestId("together-card")).not.toBeInTheDocument();
   });
 
   it("keeps a little child's home screen calm: a focus unit adds no card", () => {

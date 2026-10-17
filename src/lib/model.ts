@@ -69,6 +69,8 @@ export interface ChildSettings {
   weeklyGoalDays?: number;
   /** A unit a parent picked for the child to work on, optionally until a day (see `focus.ts`). */
   focus?: { unit: string; until?: string; setAt: number };
+  /** A reward a parent promised for coins earned (see `familyReward.ts`). Given outside the app; coins are not spent. */
+  reward?: { id: string; name: string; coins: number; startCoins: number; setAt: number };
   /** A short kind note a parent sent from a fixed list; the child sees it once on the home screen. */
   nudge?: { id: string; preset: string; sentAt: number };
   autoRead: boolean;
