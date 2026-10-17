@@ -161,7 +161,7 @@ export async function call<T>(url: string, method = "GET", body?: unknown): Prom
     throw new Error("You’re offline. Connect to the internet and try again.");
   }
   const data = (await res.json().catch(() => ({}))) as T & { error?: string };
-  if (!res.ok) throw new Error(data.error ?? `Something went wrong (${res.status}).`);
+  if (!res.ok) throw Object.assign(new Error(data.error ?? `Something went wrong (${res.status}).`), { data });
   return data;
 }
 

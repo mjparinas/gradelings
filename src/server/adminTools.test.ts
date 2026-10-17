@@ -44,6 +44,7 @@ beforeAll(async () => {
 });
 beforeEach(() => {
   process.env.ADMIN_EMAILS = ADMIN_EMAIL;
+  process.env.ADMIN_2FA = "optional"; // these tests are about the panel, not the second step (twoFactor.test.ts covers that)
   email.outbox().length = 0;
   health.clearSystemCache();
   // No network: every outside service looks unreachable unless a test stubs it.

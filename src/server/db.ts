@@ -369,6 +369,13 @@ const SCHEMA = [
     error TEXT
   )`,
   `CREATE INDEX IF NOT EXISTS webhook_log_source ON webhook_log (source, at)`,
+  // One-time recovery codes for two-step sign-in, kept as hashes. A used code keeps its row (used_at) so it can't be used twice.
+  `CREATE TABLE IF NOT EXISTS totp_backup_codes (
+    parent_id TEXT NOT NULL,
+    code_hash TEXT NOT NULL,
+    used_at INTEGER,
+    PRIMARY KEY (parent_id, code_hash)
+  )`,
 ];
 
 /** Columns added after the first release. SQLite has no "ADD COLUMN IF NOT EXISTS". */
@@ -390,6 +397,12 @@ const PARENT_COLUMNS: [string, string][] = [
   ["email_bounced_at", "INTEGER"],
   // The teacher's classes they have hidden from their own class list (comma-separated class ids).
   ["hidden_classes", "TEXT"],
+  // Two-step sign-in with an authenticator app (src/server/twoFactor.ts). The secret is encrypted when TWO_FACTOR_KEY is set.
+  // `totp_pending` is a secret shown during setup and not yet confirmed; `totp_last_step` stops a code being used twice.
+  ["totp_secret", "TEXT"],
+  ["totp_pending", "TEXT"],
+  ["totp_enabled_at", "INTEGER"],
+  ["totp_last_step", "INTEGER"],
 ];
 
 /** Which province's curriculum a class assigns units from, and its inactivity-retention state. */
@@ -407,7 +420,8 @@ const MEMBER_COLUMNS: [string, string][] = [["grade", "TEXT"]];
 const ASSIGNMENT_COLUMNS: [string, string][] = [["due_at", "INTEGER"], ["goal", "INTEGER"]];
 // The login code a student had before a teacher gave them a new one, kept for a few minutes so "Undo" can restore it.
 const STUDENT_COLUMNS: [string, string][] = [["prev_login_code", "TEXT"], ["prev_code_at", "INTEGER"]];
-const SESSION_COLUMNS: [string, string][] = [["user_agent", "TEXT"]];
+// `mfa_at`: when this sign-in passed the second step. Admin access needs it.
+const SESSION_COLUMNS: [string, string][] = [["user_agent", "TEXT"], ["mfa_at", "INTEGER"]];
 // Mail the admin archived: hidden from the Inbox list (shown under Archived) until moved back.
 const INBOX_COLUMNS: [string, string][] = [["archived_at", "INTEGER"]];
 // The curriculum the child follows and what was on screen (choices, answer, picture as JSON), so a report can be judged.

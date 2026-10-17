@@ -18,6 +18,7 @@ import { Traffic } from "./Traffic";
 import { LoadingCards, LoadingRows, TableRowsShape } from "./Skeleton";
 import { Sales } from "./Sales";
 import { System } from "./System";
+import { TwoFactorCard, TwoFactorSetup, type TwoFactorInfo } from "./TwoFactor";
 import { MaintenanceBanner, MaintenanceCard, type MaintenanceState } from "./Maintenance";
 import { parseVariants, type ExperimentStatus, type FlagScope, type Variant } from "@/lib/flags";
 import { verdict } from "@/lib/abVerdict";
@@ -96,6 +97,9 @@ function useAction(after?: () => void) {
 function SignIn({ onDone }: { onDone: () => void }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [code, setCode] = useState("");
+  // Set once the server says this account uses two-step sign-in (after a right password).
+  const [needCode, setNeedCode] = useState(false);
   const [err, setErr] = useState("");
   const [busy, setBusy] = useState(false);
   const submit = async (e: FormEvent) => {
@@ -103,10 +107,15 @@ function SignIn({ onDone }: { onDone: () => void }) {
     setBusy(true);
     setErr("");
     try {
-      await call("/api/auth/login/", "POST", { email, password });
+      await call("/api/auth/login/", "POST", { email, password, ...(needCode ? { code } : {}) });
       onDone();
     } catch (x) {
-      setErr((x as Error).message);
+      // The server asks for the code only after a right password; that first answer isn't shown as an error.
+      const asksForCode = (x as { data?: { mfaRequired?: boolean } }).data?.mfaRequired;
+      if (asksForCode) {
+        if (needCode) setErr((x as Error).message);
+        setNeedCode(true);
+      } else setErr((x as Error).message);
     } finally {
       setBusy(false);
     }
@@ -116,15 +125,24 @@ function SignIn({ onDone }: { onDone: () => void }) {
       <h1 className="text-2xl font-bold">Admin Sign In</h1>
       <label className="flex flex-col text-sm font-semibold">
         Email
-        <input className={field} type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        <input className={field} type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} readOnly={needCode} required />
       </label>
       <label className="flex flex-col text-sm font-semibold">
         Password
-        <input className={field} type="password" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+        <input className={field} type="password" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} readOnly={needCode} required />
       </label>
+      {needCode && (
+        <label className="flex flex-col text-sm font-semibold">
+          Authenticator code
+          <input className={field} inputMode="text" autoComplete="one-time-code" autoFocus value={code} onChange={(e) => setCode(e.target.value)} required aria-describedby="code-help" />
+          <span id="code-help" className="mt-1 font-normal text-ink-soft">
+            The 6-digit code from your authenticator app, or one of your recovery codes.
+          </span>
+        </label>
+      )}
       <Notice err={err} />
       <button disabled={busy} className={primary}>
-        Sign In
+        {needCode ? "Verify and Sign In" : "Sign In"}
       </button>
     </form>
   );
@@ -1068,7 +1086,7 @@ function TabCount({ n }: { n: number | null }) {
   );
 }
 
-function Panel() {
+function Panel({ twoFactor, onSecurityChange }: { twoFactor: TwoFactorInfo | null; onSecurityChange: () => void }) {
   const [tab, setTab] = useState<Tab>(() => linkTarget().tab);
   // A family opened from a dashboard list: Users starts on that family's page.
   const [family, setFamily] = useState<string | null>(() => linkTarget().family);
@@ -1156,6 +1174,7 @@ function Panel() {
     System: (
       <>
         <MaintenanceCard state={maintenance} onChange={setMaintenance} />
+        <TwoFactorCard info={twoFactor} onChange={onSecurityChange} />
         <System />
       </>
     ),
@@ -1187,13 +1206,23 @@ function Panel() {
   );
 }
 
-type State = { kind: "loading" } | { kind: "signed-out" } | { kind: "not-admin" } | { kind: "admin"; email: string };
+type State =
+  | { kind: "loading" }
+  | { kind: "signed-out" }
+  | { kind: "not-admin" }
+  // An admin account that has to set up two-step sign-in (or sign in again with its code) before the panel opens.
+  | { kind: "setup"; email: string; twoFactor: TwoFactorInfo }
+  | { kind: "admin"; email: string; twoFactor: TwoFactorInfo | null };
 
 export function AdminApp() {
   const [state, setState] = useState<State>({ kind: "loading" });
   const check = useCallback(() => {
-    void call<{ email: string }>("/api/admin/me/").then(
-      (r) => setState({ kind: "admin", email: r.email }),
+    void call<{ email: string; ready?: boolean; twoFactor?: TwoFactorInfo }>("/api/admin/me/").then(
+      (r) => {
+        const twoFactor = r.twoFactor ?? null;
+        if (r.ready === false && twoFactor) setState({ kind: "setup", email: r.email, twoFactor });
+        else setState({ kind: "admin", email: r.email, twoFactor });
+      },
       () =>
         // Not an admin: tell a signed-in account so, and show anyone else the sign-in form.
         call("/api/auth/me/").then(
@@ -1221,9 +1250,9 @@ export function AdminApp() {
             <span className="rounded-full bg-[#0f172a] px-3 py-1 text-sm font-bold tracking-wide text-white uppercase">Admin</span>
           </span>
           <div className="flex items-center gap-3">
-            {state.kind === "admin" && <span className="hidden text-sm text-ink-soft sm:inline">{state.email}</span>}
+            {(state.kind === "admin" || state.kind === "setup") && <span className="hidden text-sm text-ink-soft sm:inline">{state.email}</span>}
             <Link href="/" className="font-semibold underline">Home</Link>
-            {(state.kind === "admin" || state.kind === "not-admin") && (
+            {(state.kind === "admin" || state.kind === "setup" || state.kind === "not-admin") && (
               <button type="button" className="font-semibold underline" onClick={signOut}>
                 Sign Out
               </button>
@@ -1240,7 +1269,8 @@ export function AdminApp() {
             <p className="mt-2 font-read">This account can&apos;t open the admin panel. An admin account has a confirmed email that is listed in ADMIN_EMAILS on the server.</p>
           </div>
         )}
-        {state.kind === "admin" && <Panel />}
+        {state.kind === "setup" && <TwoFactorSetup email={state.email} info={state.twoFactor} onDone={check} />}
+        {state.kind === "admin" && <Panel twoFactor={state.twoFactor} onSecurityChange={check} />}
       </main>
     </div>
   );

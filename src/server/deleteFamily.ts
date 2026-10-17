@@ -37,6 +37,7 @@ export async function deleteFamilyData(f: string): Promise<void> {
   await removeStudentsOfOwner(accountIds);
   await batch([
     { sql: "DELETE FROM auth_tokens WHERE parent_id IN (SELECT id FROM parents WHERE family_id = ?)", args: [f] },
+    { sql: "DELETE FROM totp_backup_codes WHERE parent_id IN (SELECT id FROM parents WHERE family_id = ?)", args: [f] },
     ...childDataStatements(f),
     // Classroom mode: remove any classes this account's teachers owned.
     { sql: "DELETE FROM class_members WHERE class_id IN (SELECT id FROM classes WHERE owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?))", args: [f] },

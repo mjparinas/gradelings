@@ -43,6 +43,7 @@ beforeAll(async () => {
 });
 beforeEach(() => {
   process.env.ADMIN_EMAILS = ` ${ADMIN_EMAIL.toUpperCase()} , someone-else@example.com`;
+  process.env.ADMIN_2FA = "optional"; // these tests are about the panel, not the second step (twoFactor.test.ts covers that)
 });
 afterAll(() => rmSync(dir, { recursive: true, force: true }));
 

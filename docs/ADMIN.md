@@ -15,6 +15,18 @@ ADMIN_EMAILS=owner@example.com
 
 The list lives in the environment, never the database, so nothing a request writes can make someone an admin. Without `ADMIN_EMAILS` the panel and every `/api/admin/*` route answer 404 (except `/api/admin/codes/`, which still accepts `ADMIN_TOKEN` for scripts, see `docs/CODES.md`). Every change made in the panel is written to `admin_audit` with the admin's email and shown under **Log**.
 
+## Two-step sign-in
+
+The panel can refund payments, delete families and email everyone, so a password isn't enough. Admin accounts must set up an **authenticator app** (Google Authenticator, Microsoft Authenticator, 1Password, Authy; any app that does time-based codes). Code is in `src/server/totp.ts` and `src/server/twoFactor.ts`.
+
+- **Setting it up:** sign in at `/admin/` with the password as before. Until it is on, the panel shows only the setup screen: scan the QR code (or type the key), enter the 6-digit code it shows, and save the **eight recovery codes**, which are shown once. Turning it on signs the account out of every other device.
+- **Signing in:** the admin sign-in asks for the code after a right password. A code works once (a code seen over a shoulder can't be reused), and it may be one step either side of the clock. Wrong codes are limited per account (8 in 10 minutes), so guessing from many places is limited too. A password alone opens nothing, even from a session made some other way, such as after a password reset by email.
+- **Lost phone:** sign in with one of the recovery codes (each works once). Then open **System > Two-Step Sign-In**, make new recovery codes, or turn it off and set it up again on the new phone. Keep the recovery codes apart from the password, for instance in a password manager.
+- **Lost phone and recovery codes:** someone with access to the database runs `node scripts/admin-2fa-reset.mjs owner@example.com` (it reads `DATABASE_URL`/`DATABASE_AUTH_TOKEN`, or `TURSO_DATABASE_URL`/`TURSO_AUTH_TOKEN`, like the app). That clears the account's two-step sign-in and signs it out; the admin then signs in with the password and sets it up again. It deliberately has no button in the panel, so a stolen admin session can't switch off someone else's protection.
+- **Settings:** `ADMIN_2FA=optional` is for test servers only (the default is required). `TWO_FACTOR_KEY` encrypts the secrets in the database; set it before anyone turns two-step on. The System tab's settings list shows whether it is set.
+- Setting it up, making recovery codes and turning it off are written to the **Log** (`2fa.enable`, `2fa.backup-codes`, `2fa.disable`). Turning it off needs the password and a code.
+- Other accounts (parents, teachers) never see this; only an account that has it on is asked for a code, and only admin accounts can turn it on.
+
 ## Sections
 
 Each tab has its own address (`/admin/?tab=Funnel`; a family's page is `/admin/?family=<id>`), and every tab you open, including one opened from a link inside another tab, is added to the browser history, so Back and Forward move between tabs and a reload or a shared link opens the same tab.

@@ -31,6 +31,7 @@ beforeAll(async () => {
 });
 beforeEach(() => {
   process.env.ADMIN_EMAILS = ADMIN_EMAIL;
+  process.env.ADMIN_2FA = "optional"; // these tests are about the panel, not the second step (twoFactor.test.ts covers that)
   traffic.clearTrafficCache();
   vi.stubGlobal("fetch", vi.fn(async () => new Response("{}", { status: 503 })));
 });
