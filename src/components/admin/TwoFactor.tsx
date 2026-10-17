@@ -26,6 +26,15 @@ export interface TwoFactorInfo {
 /** The recovery codes, shown once. */
 function RecoveryCodes({ codes, onDone }: { codes: string[]; onDone: () => void }) {
   const [saved, setSaved] = useState(false);
+  const [copy, setCopy] = useState<"idle" | "copied" | "failed">("idle");
+  const copyCodes = async () => {
+    try {
+      await navigator.clipboard.writeText(codes.join("\n"));
+      setCopy("copied");
+    } catch {
+      setCopy("failed");
+    }
+  };
   return (
     <div>
       <h2 className="text-xl font-bold">Save Your Recovery Codes</h2>
@@ -39,10 +48,13 @@ function RecoveryCodes({ codes, onDone }: { codes: string[]; onDone: () => void 
           </li>
         ))}
       </ul>
-      <div className="mt-3 flex flex-wrap gap-2">
-        <button type="button" className={quiet} onClick={() => void navigator.clipboard?.writeText(codes.join("\n"))}>
+      <div className="mt-3 flex flex-wrap items-center gap-3">
+        <button type="button" className={quiet} onClick={() => void copyCodes()}>
           Copy Codes
         </button>
+        <p role="status" className={copy === "failed" ? "text-nudge-dark" : "font-semibold text-[#16794f]"}>
+          {copy === "copied" ? "Codes copied to your clipboard." : copy === "failed" ? "Couldn't copy. Select the codes above and copy them by hand." : ""}
+        </p>
       </div>
       <label className="mt-4 flex items-start gap-2 font-semibold">
         <input type="checkbox" className="mt-1 size-5" checked={saved} onChange={(e) => setSaved(e.target.checked)} />I have saved these codes somewhere safe.
