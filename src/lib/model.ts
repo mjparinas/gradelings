@@ -67,6 +67,8 @@ export interface ChildSettings {
   readingTint?: ReadingTint;
   /** Days a week a parent hopes the child will practise (1 to 7). Unset means no family goal. */
   weeklyGoalDays?: number;
+  /** A unit a parent picked for the child to work on, optionally until a day (see `focus.ts`). */
+  focus?: { unit: string; until?: string; setAt: number };
   /** A short kind note a parent sent from a fixed list; the child sees it once on the home screen. */
   nudge?: { id: string; preset: string; sentAt: number };
   autoRead: boolean;

@@ -50,6 +50,29 @@ describe("unitWeight", () => {
   });
 });
 
+describe("a parent's focus unit", () => {
+  const withFocus = (units: Record<string, Partial<UnitStat>>, focus?: string, key = "2/math/a") =>
+    unitWeight(opts({ focus, derived: derived(units) }), ref(key));
+  const learning = { ...stat(6, 0.5), recent: [true, false, true, false, true, false], challengePassed: false };
+  const proficient = { ...stat(12, 0.9), recent: Array(12).fill(true), challengePassed: false };
+
+  it("makes Adventure pick it about three times as often while it is not Proficient yet", () => {
+    const plain = withFocus({ "2/math/a": learning });
+    expect(withFocus({ "2/math/a": learning }, "2/math/a")).toBeCloseTo(plain * 3);
+  });
+
+  it("lifts a unit whose usual weight is tiny, and leaves other units alone", () => {
+    expect(withFocus({}, "2/math/a")).toBeGreaterThanOrEqual(0.8 * 3);
+    expect(withFocus({ "2/math/b": learning }, "2/math/a", "2/math/b")).toBeCloseTo(withFocus({ "2/math/b": learning }, undefined, "2/math/b"));
+  });
+
+  it("stops helping once the child is Proficient, and never changes Review or Speed Run", () => {
+    expect(withFocus({ "2/math/a": proficient }, "2/math/a")).toBeCloseTo(withFocus({ "2/math/a": proficient }));
+    const review = (focus?: string) => unitWeight(opts({ mode: "review", focus, derived: derived({ "2/math/a": learning }) }), ref("2/math/a"));
+    expect(review("2/math/a")).toBeCloseTo(review());
+  });
+});
+
 describe("difficultyFor", () => {
   it("steps up at 50% and 80% mastery, one step easier in Review and Speed Run", () => {
     expect([0.49, 0.5, 0.79, 0.8].map((m) => difficultyFor(m, "adventure"))).toEqual([1, 2, 2, 3]);

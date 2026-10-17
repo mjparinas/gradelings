@@ -1,6 +1,7 @@
 import { allUnitRefs, type UnitRef } from "@/content";
 import type { FrameworkId, GradeId, SubjectId } from "@/content/types";
 import type { Derived } from "./derive";
+import { FOCUS_BOOST } from "./focus";
 import { unitLevel } from "./proficiency";
 
 // Picks the next unit for Adventure and Review. Units the child finds hard,
@@ -26,6 +27,8 @@ export interface PickOptions {
   subject?: SubjectId;
   /** Allowed unit keys (e.g. the free plan's units). */
   allowed?: (ref: UnitRef) => boolean;
+  /** A unit a parent wants practised: Adventure picks it more often until the child reaches Proficient. */
+  focus?: string;
   now?: number;
   random?: () => number;
 }
@@ -49,6 +52,7 @@ export function unitWeight(opts: PickOptions, ref: UnitRef): number {
   } else {
     const novelty = attempts < 5 ? 1.2 : attempts < 12 ? 0.4 : 0;
     w = 0.15 + need * 1.6 + novelty + spaced * 0.6;
+    if (opts.focus === ref.key && unitLevel(stat) < 2) w = Math.max(w, 0.8) * FOCUS_BOOST;
   }
 
   const last = opts.recent.slice(-2);

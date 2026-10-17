@@ -53,6 +53,21 @@ describe("Overview", () => {
     expect(screen.queryByText(/Progress is saved on this device only\./)).not.toBeInTheDocument();
   });
 
+  it("lets a parent pick a focus unit with a day, and clear it", async () => {
+    render(<Overview />);
+    await userEvent.click(within(card("Ava")).getByRole("button", { name: "Pick a unit" }));
+    await userEvent.click(screen.getByRole("combobox", { name: "Unit for Ava" }));
+    fireEvent.click(screen.getByRole("option", { name: new RegExp(math.unit.title) }));
+    const until = new Date(Date.now() + 3 * DAY);
+    const day = `${until.getFullYear()}-${String(until.getMonth() + 1).padStart(2, "0")}-${String(until.getDate()).padStart(2, "0")}`;
+    fireEvent.change(screen.getByLabelText("Until (optional)"), { target: { value: day } });
+    await userEvent.click(screen.getByRole("button", { name: "Set focus" }));
+    expect(useStore.getState().settings.a.focus).toMatchObject({ unit: math.key, until: day });
+    expect(card("Ava")).toHaveTextContent(`${math.unit.title} comes up more in Ava's Adventure`);
+    await userEvent.click(within(card("Ava")).getByRole("button", { name: "Clear focus" }));
+    expect(useStore.getState().settings.a.focus).toBeUndefined();
+  });
+
   it("lists the units a child asked a grown-up to help with", () => {
     const help = (id: string, ago: number): AppEvent => ({ id, profileId: "a", t: Date.now() - ago * 1000, type: "help", unit: math.key });
     useStore.setState({ events: [help("h1", 60), help("h2", 30)] });

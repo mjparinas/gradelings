@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { fireEvent, render, screen, within } from "@testing-library/react";
+import { cleanup, fireEvent, render, screen, within } from "@testing-library/react";
 import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import { allUnitRefs, loadGrade, type UnitRef } from "@/content";
 import type { AgeBand } from "@/content/types";
@@ -349,6 +349,27 @@ describe("Hub cards", () => {
     expect(first).toHaveTextContent("Try to finish by Thu, Oct 15");
     // A past date is simply not shown: never a warning.
     expect(second).not.toHaveTextContent("Try to finish by");
+  });
+
+  it("shows the unit a grown-up picked, with the days to go, and nothing when it has passed", () => {
+    const [a] = mathRefs();
+    h.settings = { ...h.settings, focus: { unit: a.key, until: dayKey(NOW + 3 * DAY), setAt: NOW } };
+    show();
+    const section = screen.getByRole("region", { name: "From your grown-up" });
+    expect(section).toHaveTextContent(a.unit.title);
+    expect(section).toHaveTextContent("3 days to go");
+    expect(within(section).getByRole("link")).toHaveAttribute("href", `#/session?mode=practice&scope=${encodeURIComponent(a.key)}`);
+    cleanup();
+    h.settings = { ...h.settings, focus: { unit: a.key, until: dayKey(NOW - DAY), setAt: NOW - 5 * DAY } };
+    show();
+    expect(screen.queryByRole("region", { name: "From your grown-up" })).not.toBeInTheDocument();
+  });
+
+  it("keeps a little child's home screen calm: a focus unit adds no card", () => {
+    const [a] = mathRefs();
+    h.settings = { ...h.settings, focus: { unit: a.key, setAt: NOW } };
+    show("little");
+    expect(screen.queryByRole("region", { name: "From your grown-up" })).not.toBeInTheDocument();
   });
 
   it("counts homework questions done since it was assigned, on the device", () => {

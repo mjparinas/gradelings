@@ -10,6 +10,7 @@ import { getUnitRef } from "@/content";
 import type { Question } from "@/content/types";
 import { burstFrom, celebrate, floatText, replay } from "@/lib/juice";
 import { pick } from "@/content/random";
+import { activeFocus } from "@/lib/focus";
 import { effectiveGoal } from "@/lib/goal";
 import { dayKey, type Mode } from "@/lib/model";
 import { levelInfo, nextStep, unitLevel } from "@/lib/proficiency";
@@ -91,6 +92,7 @@ export function Session({ mode, scope }: { mode: Mode; scope: string }) {
       derived: derivedNow,
       allowed,
       short: settings?.shortSessions,
+      focus: activeFocus(settings, Date.now())?.unit,
     }),
   );
   if (!plan) {
