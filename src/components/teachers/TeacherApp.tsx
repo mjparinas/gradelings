@@ -1411,7 +1411,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
                 <a href={previewHref(k)} target="_blank" rel="noopener" aria-label={`Preview ${label(k)} (opens in a new tab)`} className="inline-flex min-h-11 items-center text-sm font-semibold underline">
                   Preview
                 </a>
-                <button type="button" aria-label={`Try ${label(k)} as a student`} className="inline-flex min-h-11 items-center text-sm font-semibold underline" onClick={() => setTrying(k)}>
+                <button type="button" aria-label={`Try ${label(k)} as a student`} className="inline-flex min-h-11 min-w-11 items-center justify-center text-sm font-semibold underline" onClick={() => setTrying(k)}>
                   Try it
                 </button>
                 <button type="button" aria-label={`Remove ${label(k)}`} className="min-h-11 min-w-11 rounded-full font-bold" onClick={() => {
@@ -1451,7 +1451,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
                     <a href={previewHref(pick)} target="_blank" rel="noopener" aria-label={`Preview ${label(pick)} (opens in a new tab)`} className="inline-flex min-h-11 items-center font-semibold underline">
                       Preview
                     </a>
-                    <button type="button" aria-label={`Try ${label(pick)} as a student`} className="inline-flex min-h-11 items-center font-semibold underline" onClick={() => setTrying(pick)}>
+                    <button type="button" aria-label={`Try ${label(pick)} as a student`} className="inline-flex min-h-11 min-w-11 items-center justify-center font-semibold underline" onClick={() => setTrying(pick)}>
                       Try it
                     </button>
                   </>
