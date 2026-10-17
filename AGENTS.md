@@ -590,6 +590,7 @@ Tests are duplicated across screen sizes only where layout can break:
   - `/shared/{token}/` and the shared milestone pages under `/milestone/` are rendered on every request, so `src/proxy.ts` gives them a per-request nonce instead. That policy allows no `style=""` attributes, so those pages are built from classes only. `next dev` uses a permissive policy because hot reloading needs it.
   - Inline `style` props set from client code are fine (they go through the CSSOM). `setAttribute("style", …)` and `<style>` elements added at runtime are blocked.
   - Playwright's playthrough fails on any console error, which includes CSP violations, so a regression shows up in CI.
+- **Sentry** (`src/instrumentation.ts`, `next.config.ts`, `docs/DEPLOY.md` section 5): the server sends errors and a sample of timed API requests (`src/lib/sentry-traces.ts`; `SENTRY_TRACES_SCALE=0` turns timing off); the browser sends errors only and loads the SDK when something goes wrong. Everything goes through `src/lib/sentry-scrub.ts`. With `SENTRY_AUTH_TOKEN`, `SENTRY_ORG` and `SENTRY_PROJECT` set at build time, the build uploads source maps and deletes them; without them `next.config.ts` is unchanged. Keep `/privacy/` and `docs/school/` true if what is sent changes.
 - **Public pages must stay light.** They must not import the store or the content bundle on the client.
   - For example, `sound.ts` gets the "sound on?" check injected by the store instead of importing it.
   - Check the size of the JavaScript a public page loads after changing shared client modules.

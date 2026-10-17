@@ -118,7 +118,7 @@ export default function PrivacyPage() {
             <strong>Anthropic</strong>, to suggest a first draft when we answer a message you sent us. It receives that message, your name and email address as written in it, and nothing else about your account or your children. Under Anthropic’s commercial terms it doesn’t use it to train its models.
           </li>
           <li>
-            <strong>Sentry</strong>, to tell us when the app crashes. Error reports are stripped of names, email addresses, cookies and what was typed or tapped before they leave your device or our server, and are not used for anything else.
+            <strong>Sentry</strong>, to tell us when the app crashes or runs slowly. Error reports, and timing reports (which route ran and how long it took), are stripped of names, email addresses, cookies and what was typed or tapped before they leave your device or our server, and are not used for anything else.
           </li>
           <li>
             <strong>Vercel Web Analytics and Speed Insights</strong>, to count anonymous page views and measure how fast our public website loads, such as which pages are visited, from which country, how quickly they appear and how often their buttons to try or subscribe are pressed. It sets no cookies. It is switched off in the kids’ app, the parent area, shared reports, shared milestones and account pages.

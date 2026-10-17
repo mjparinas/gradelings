@@ -53,7 +53,7 @@ Student's device (browser, saves on the device first)
 Gradelings app servers, Montreal  --->  Database (Turso, Virginia, US)
    |
    +--> Resend: teacher account emails only (confirmation, password reset)
-   +--> Sentry: crash reports, scrubbed of names, emails, cookies and what was tapped
+   +--> Sentry: crash reports and request timing, scrubbed of names, emails, cookies and what was tapped
    +--> Stripe: parents' payments only. No school or student data.
 ```
 
@@ -66,7 +66,7 @@ Students' devices also keep a copy of progress in the browser (IndexedDB and loc
 | Vercel | App hosting, functions in Montréal (`yul1`) | Requests, logs | Canada for functions **(confirm: edge and logging may be outside Canada)** |
 | Turso (on AWS) | Database | All account data above | Virginia, United States (`aws-us-east-1`) **(confirm encryption at rest)** |
 | Resend | Teacher emails | Teacher email address and message; whether each email was opened and which links were clicked (open and click tracking is on) | United States |
-| Sentry | Crash reports | Scrubbed errors | United States or EU |
+| Sentry | Crash reports and request timing | Scrubbed errors; route names and durations | United States or EU |
 | Stripe | Parent payments | Parent email and payment | United States. Not used for schools while classes are free. |
 | Vercel Web Analytics | Anonymous page counts, and counts of trial and subscribe button presses, on public pages only | Page, country | Switched off in the student app and teacher area |
 

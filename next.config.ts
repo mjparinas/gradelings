@@ -1,5 +1,6 @@
 import { execSync } from "node:child_process";
 import path from "node:path";
+import { withSentryConfig } from "@sentry/nextjs/config";
 import type { NextConfig } from "next";
 import { DEV_POLICY, HEADER_POLICY } from "./src/lib/csp.mjs";
 
@@ -76,4 +77,24 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+// Readable error reports: when the Sentry integration's variables are set at build time (on Vercel:
+// SENTRY_AUTH_TOKEN, SENTRY_ORG and SENTRY_PROJECT), the build uploads its source maps to Sentry and then
+// deletes them, so the site never serves them. Without the variables (local, CI, forks) the config is
+// returned untouched and the build is exactly what it was. Nothing else of Sentry's build wrapping is
+// used: no route manifest and no tunnel, so public pages stay light (src/instrumentation-client.ts
+// loads the SDK only when something goes wrong).
+const uploadSourceMaps = Boolean(process.env.SENTRY_AUTH_TOKEN && process.env.SENTRY_ORG && process.env.SENTRY_PROJECT);
+
+export default uploadSourceMaps
+  ? withSentryConfig(nextConfig, {
+      org: process.env.SENTRY_ORG,
+      project: process.env.SENTRY_PROJECT,
+      authToken: process.env.SENTRY_AUTH_TOKEN,
+      ...(process.env.SENTRY_API_BASE ? { sentryUrl: process.env.SENTRY_API_BASE } : {}),
+      silent: !process.env.CI,
+      telemetry: false,
+      suppressOnRouterTransitionStartWarning: true,
+      routeManifestInjection: false,
+      sourcemaps: { deleteSourcemapsAfterUpload: true },
+    })
+  : nextConfig;
