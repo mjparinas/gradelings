@@ -1,6 +1,8 @@
 "use client";
 
 import { questionLabel } from "@/lib/questionLabel";
+import { estimateReadingLevel, questionReadingLevel } from "@/lib/readingLevel";
+import { useFlag } from "@/lib/remoteFlags";
 import { ReportQuestion } from "./ReportQuestion";
 import { reportDetails, type ReportDetails } from "@/lib/questionReport";
 import { SaveProgress } from "./SaveProgress";
@@ -78,6 +80,7 @@ export function Session({ mode, scope }: { mode: Mode; scope: string }) {
   const band = useBand();
   const allowed = useAllowed();
   const derivedNow = useDerived();
+  const matchReading = useFlag("reading-level-match");
   const [plan] = useState<Plan | null>(() =>
     makePlan({
       mode,
@@ -90,6 +93,7 @@ export function Session({ mode, scope }: { mode: Mode; scope: string }) {
       derived: derivedNow,
       allowed,
       short: settings?.shortSessions,
+      readingLevel: matchReading ? estimateReadingLevel(derivedNow.reading ?? [], profile.grade) : undefined,
     }),
   );
   if (!plan) {
@@ -176,6 +180,7 @@ function Runner({ plan }: { plan: Plan }) {
 
   function record(correct: boolean, attempts: number, revealed: boolean) {
     if (!item) return;
+    const rl = q && item.unitKey.split("/")[1] === "language" ? questionReadingLevel(q) : undefined;
     log([
       {
         type: "answer",
@@ -185,6 +190,7 @@ function Runner({ plan }: { plan: Plan }) {
         revealed,
         ...(hinted ? { hinted: true } : {}),
         ...(q && !q.visual ? { q: questionLabel(q.prompt) } : {}),
+        ...(rl !== undefined ? { rl } : {}),
         ms: Date.now() - shownAt,
         mode: plan.mode,
         difficulty: item.difficulty,
