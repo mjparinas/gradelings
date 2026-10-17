@@ -76,7 +76,8 @@ describe("Arizona", () => {
       expect.arrayContaining(["az-g3-indian-nations", "az-g3-governing-arizona", "az-g9-arizona-constitution", "az-g9-civics-test"]),
     );
     for (const { u, key } of own) {
-      expect(Object.keys(u.standards), `${key} carries only Arizona standards`).toEqual(["us-az"]);
+      // Florida may copy Arizona's units, so it can carry its own standards beside Arizona's.
+      expect(Object.keys(u.standards).filter((f) => f !== "us-fl"), `${key} carries only Arizona standards`).toEqual(["us-az"]);
     }
   });
 });

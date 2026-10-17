@@ -199,4 +199,22 @@ export const lessons: GradeLessons = {
     ["Myths explain how things in the world began.", "The first story tells how horses came to be."],
     "how the god of the sea made the first horse",
   ),
+  "language/fl-g4-text-structures": lesson(
+    ["Sequence tells steps or events in order: first, next, then.", "Problem and solution names a trouble and how it was fixed.", "Description tells what something is like using details."],
+    "“The lake was drying up. The town built a pipeline to bring in water.” What is the structure?",
+    ["A trouble is named.", "Then a fix is given."],
+    "problem and solution",
+  ),
+  "language/fl-g4-claims-reasons-perspective": lesson(
+    ["A claim is what the author wants you to accept.", "A reason says why. Evidence is a fact or example that backs the reason.", "Word choice shows the author’s perspective."],
+    "Claim: Schools should have gardens. Which is a reason?  Gardens teach about plants. Plants are green.",
+    ["A reason supports the claim.", "Teaching about plants supports gardens."],
+    "Gardens teach about plants.",
+  ),
+  "language/fl-g4-theme-and-poetry": lesson(
+    ["A theme is the big message of a story.", "A stated theme is told. An implied theme is shown by what happens.", "Rhyme, short lines and stanzas change how a poem feels."],
+    "A boy shares his lunch with a friend who forgot hers. A theme is…",
+    ["Think about what the boy does.", "The lesson is about kindness."],
+    "kindness matters",
+  ),
 };

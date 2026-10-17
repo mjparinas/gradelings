@@ -199,4 +199,22 @@ export const lessons: GradeLessons = {
     ["One sentence says “some.”", "The other claims all city people are the same."],
     "“People from the city don’t know anything about nature.”",
   ),
+  "language/fl-g7-diction-and-syntax": lesson(
+    ["Diction is word choice. Syntax is how sentences are built.", "Short sentences feel fast or tense. Long ones feel calm.", "Formal words suit serious writing. Informal words suit friends."],
+    "“The rain fell. The wind rose. The door slammed.” What does the syntax create?",
+    ["The sentences are short.", "Short sentences build tension."],
+    "tension",
+  ),
+  "language/fl-g7-setting-themes-central-ideas": lesson(
+    ["Setting is when and where a story happens. It shapes character and plot.", "A text can have more than one theme or central idea.", "To compare them, track how details develop each one."],
+    "A story is set in a blizzard. How might setting affect the plot?",
+    ["Snow keeps people inside.", "Characters must work together."],
+    "characters must stay in and work together",
+  ),
+  "language/fl-g7-allusions-and-perspectives": lesson(
+    ["An allusion is a brief reference to a well-known story, person or event.", "Achilles’ heel means a weak spot. A Scrooge is stingy.", "Authors with different perspectives choose different evidence and words."],
+    "“That’s his Achilles’ heel.” What does it mean?",
+    ["Achilles had one weak spot.", "So it means a weak spot."],
+    "his weak spot",
+  ),
 };

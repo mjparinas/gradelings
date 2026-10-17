@@ -529,4 +529,34 @@ export const lessons: GradeLessons = {
     ["The new plant grows from the parent's root.", "It has only one parent, so it is a copy."],
     "asexual",
   ),
+  "science/fl-g6-speed-graphs": lesson(
+    ["Speed = distance ÷ time.", "On a distance–time graph, time goes along the bottom and distance goes up the side.", "A straight sloped line means constant speed. A steeper line means faster. A flat line means not moving."],
+    "A bike goes 30 miles in 2 hours at a constant speed. What is its speed?",
+    ["Speed = distance ÷ time.", "30 ÷ 2 = 15.", "That is 15 miles per hour."],
+    "15 miles per hour",
+  ),
+  "science/fl-g6-landforms": lesson(
+    ["Rivers, lakes and glaciers are made by water or ice. Dunes are piled up by wind.", "A delta forms where a river slows and drops mud and sand at the sea.", "Coastlines are where land meets the ocean. Mountains are high, steep landforms."],
+    "Where a river meets the sea and drops its mud, which landform can build up?",
+    ["Slow water cannot carry mud, so it drops it.", "The mud piles up in a fan shape."],
+    "a delta",
+  ),
+  "science/fl-g6-florida-hazards": lesson(
+    ["Weather is the air at one time and place. Climate is the usual weather over many years.", "Florida's hazards include hurricanes, drought, wildfire, sinkholes, lightning and heat.", "A watch means conditions are possible. A warning means they are expected.", "Stay safe: follow alerts, evacuate when told, keep a kit, and use shade, water and sunscreen."],
+    "Florida has hot, wet summers every year. Is that weather or climate?",
+    ["It repeats every year.", "A long-term pattern is climate."],
+    "climate",
+  ),
+  "science/fl-g6-atmosphere": lesson(
+    ["Air is about 78% nitrogen and 21% oxygen, with a little carbon dioxide and other gases.", "The atmosphere protects life from harmful radiation, and greenhouse gases hold heat near Earth.", "The Sun heats land, water and air unevenly. Warm air rises and cooler air moves in. That is wind.", "At the coast by day, a sea breeze blows from water to land."],
+    "On a sunny Florida afternoon, which way does the beach breeze blow?",
+    ["Land heats faster than water.", "Warm air rises over land.", "Cooler air flows in from the sea."],
+    "from the sea toward the land",
+  ),
+  "science/fl-g6-nature-of-science": lesson(
+    ["A theory is a well-tested explanation. A law describes a pattern in nature. A theory does not become a law.", "An experiment changes one variable and keeps the rest the same.", "Some science only observes, like counting manatees. That is an investigation, not an experiment.", "Anyone can be a scientist, and ideas change when new evidence arrives."],
+    "Does a scientific theory become a law with enough evidence?",
+    ["A theory explains why.", "A law describes what happens.", "They are different kinds of ideas."],
+    "no",
+  ),
 };

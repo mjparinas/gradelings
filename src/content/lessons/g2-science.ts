@@ -361,4 +361,34 @@ export const lessons: GradeLessons = {
     ["A peninsula has water on three sides.", "Land with water all around is an island."],
     "island",
   ),
+  "science/fl-g2-body-parts": lesson(
+    ["The brain is the control centre. It sends messages to the body.", "The heart pumps blood. The lungs take in air.", "The stomach breaks down food. Muscles pull on bones to move you.", "The skeleton holds you up and protects your insides."],
+    "Which body part pumps blood around the body?",
+    ["Blood must be pushed through the body.", "The heart does the pumping."],
+    "the heart",
+  ),
+  "science/fl-g2-florida-habitats": lesson(
+    ["A habitat is where a living thing finds food, water, shelter and space.", "Living things are found all over Earth, each in a habitat that meets its needs.", "Florida has wetlands, coral reefs, beaches, forests and scrub."],
+    "Why can a manatee live in Florida's warm waters but not in icy water?",
+    ["A manatee gets cold easily.", "Warm water meets its needs."],
+    "warm water meets its needs",
+  ),
+  "science/fl-g2-rocks-and-soil": lesson(
+    ["Earth is made of rocks. They come in many sizes and shapes.", "Soil is tiny pieces of rock mixed with bits of dead plants and animals.", "Soils differ in colour, texture and how much water they hold. Sand drains fast. Clay holds water."],
+    "Which soil would drain water fastest, sand or clay?",
+    ["Sand has big gaps between its grains.", "Water slips through big gaps quickly."],
+    "sand",
+  ),
+  "science/fl-g2-magnets-and-energy": lesson(
+    ["A magnet can pull some metals, like iron, without touching them.", "Gravity pulls objects toward the ground unless something holds them up.", "People use electricity and fuel to cook, to cool or warm homes and to power cars."],
+    "A pencil rolls off a desk. What pulls it to the floor?",
+    ["Something pulls objects toward the ground.", "That pull is gravity."],
+    "gravity",
+  ),
+  "science/fl-g2-florida-weather": lesson(
+    ["Weather patterns repeat from day to day and from season to season.", "The Sun's energy warms the air, land and water.", "Measure temperature at the same time each day to compare fairly.", "Get ready for severe weather: go inside when there is lightning."],
+    "You hear thunder while you swim. What should you do?",
+    ["Thunder means lightning is close.", "Lightning can strike water, so get out and go inside."],
+    "get out and go inside",
+  ),
 };

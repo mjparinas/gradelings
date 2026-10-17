@@ -343,4 +343,22 @@ export const lessons: GradeLessons = {
     ["It goes out of our country.", "Going out is an export."],
     "export",
   ),
+  "social/fl-g1-symbols-people": lesson(
+    ["The United States and Florida both have a Constitution.", "A Constitution is a plan for how a government works.", "Symbols, holidays and heroes help us remember our country."],
+    "What is a Constitution?",
+    ["It is a written plan.", "It tells how a government works."],
+    "a plan for how a government works",
+  ),
+  "social/fl-g1-florida-map": lesson(
+    ["Florida has the Atlantic Ocean on the east.", "The Gulf of America is on the west.", "A map has a compass rose and a key to help you read it."],
+    "Which ocean is on the east side of Florida?",
+    ["Look at the east side of the map.", "It is the Atlantic Ocean."],
+    "the Atlantic Ocean",
+  ),
+  "social/fl-g1-artists": lesson(
+    ["Artists make art, music and stories to share ideas.", "Aretha Franklin sang. Maya Angelou wrote poems.", "Charles White painted and James Earl Jones acted."],
+    "Who wrote poems: Maya Angelou or Aretha Franklin?",
+    ["A poem is words in lines.", "Maya Angelou was a poet."],
+    "Maya Angelou",
+  ),
 };

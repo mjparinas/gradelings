@@ -205,4 +205,22 @@ export const lessons: GradeLessons = {
     ["Bio means life.", "-logy is a suffix for a field of study."],
     "the study of",
   ),
+  "language/fl-g5-tracking-arguments": lesson(
+    ["An argument has a claim, evidence and reasoning.", "Evidence is a fact, example or data. Reasoning explains how it supports the claim.", "Strong evidence is specific, accurate and fits the claim."],
+    "“Schools with gardens saw science scores rise.” Is this the claim, the evidence or the reasoning?",
+    ["It reports a result.", "Results are evidence."],
+    "evidence",
+  ),
+  "language/fl-g5-poetic-elements": lesson(
+    ["A simile compares with like or as. A metaphor says one thing is another.", "Personification gives a human action to a thing.", "Imagery, sound and rhythm work together to build a mood."],
+    "“The sun smiled down on us.” What is this?",
+    ["The sun cannot smile.", "Giving it a human action is personification."],
+    "personification",
+  ),
+  "language/fl-g5-primary-and-secondary": lesson(
+    ["A primary source is a firsthand account, like a diary or a photo from the time.", "A secondary source is written later by someone who was not there.", "Comparing both gives a fuller picture."],
+    "A diary written by a pioneer on the trail is what kind of source?",
+    ["The writer was there.", "Firsthand means primary."],
+    "a primary source",
+  ),
 };

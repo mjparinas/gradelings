@@ -445,4 +445,22 @@ export const lessons: GradeLessons = {
     ["One day's conditions are weather.", "The pattern over many years is climate."],
     "its climate",
   ),
+  "science/fl-g3-florida-seasons": lesson(
+    ["Plants and animals respond to changing seasons.", "Some animals migrate to a warmer place. Some hibernate. Some store food.", "Many northern trees drop leaves in fall. Florida's live oaks and palms stay green.", "Florida has a wet season, May to October, and a dry season."],
+    "Why do many northern birds spend winter in Florida?",
+    ["Cold places have little food in winter.", "Florida is warm, so food is easy to find."],
+    "it is warm and food is easy to find",
+  ),
+  "science/fl-g3-stars-and-gravity": lesson(
+    ["Stars differ in size, colour and brightness.", "The Sun is the closest star, so it looks big and bright.", "Telescopes show many more stars than eyes alone.", "Gravity pulls things down, but a stronger force, like a rocket's, can overcome it."],
+    "Why does the Sun look so much bigger than other stars?",
+    ["All stars are very far away.", "The Sun is the closest star, so it looks biggest."],
+    "it is the closest star",
+  ),
+  "science/fl-g3-sun-heat-water": lesson(
+    ["Sunlight carries energy that heats objects. When the Sun is gone, heat is lost.", "Heating melts ice and makes water evaporate or boil.", "Cooling makes water vapor condense and liquid water freeze."],
+    "Drops form on the outside of a cold glass. Which change is this?",
+    ["Water vapor in the air touches the cold glass.", "Cooling turns the vapor into liquid: condensation."],
+    "condensation",
+  ),
 };

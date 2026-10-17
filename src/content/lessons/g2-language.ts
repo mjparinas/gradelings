@@ -181,4 +181,16 @@ export const lessons: GradeLessons = {
     ["The base word is happy.", "un- means not."],
     "not happy",
   ),
+  "language/fl-g2-rhyme-schemes-and-sayings": lesson(
+    ["A rhyme scheme uses letters for the line endings that rhyme.", "moon, night, spoon, light is ABAB.", "A simile uses like or as. An idiom means more than its words."],
+    "Line endings: day, sea, play, tree. What is the rhyme pattern?",
+    ["Lines 1 and 3 rhyme.", "Lines 2 and 4 rhyme."],
+    "ABAB",
+  ),
+  "language/fl-g2-authors-purpose-and-evidence": lesson(
+    ["An author writes to inform, to persuade or to entertain.", "An opinion is what the author thinks. A reason or fact backs it up.", "Two texts on one topic can share facts or tell different ones."],
+    "A book of facts about whales has the purpose to…",
+    ["Facts teach readers.", "To teach is to inform."],
+    "inform",
+  ),
 };

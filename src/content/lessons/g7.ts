@@ -281,6 +281,37 @@ const math: GradeLessons = {
     ["3 + 4 = 7.", "7 is less than 9, so the short sides can't meet."],
     "No",
   ),
+  // Florida
+  "math/fl-g7-exponent-laws": lesson(
+    ["Same base: add exponents when multiplying.", "Same base: subtract exponents when dividing.", "A power of a power: multiply the exponents."],
+    "3⁴ × 3² = 3^?",
+    ["Add the exponents: 4 + 2 = 6."],
+    "3⁶",
+  ),
+  "math/fl-g7-order-of-operations": lesson(
+    ["Work in order: grouping symbols and absolute value first.", "Then exponents.", "Then multiply and divide, then add and subtract."],
+    "Evaluate 2 + 3 × 4².",
+    ["4² = 16.", "3 × 16 = 48.", "2 + 48 = 50."],
+    "50",
+  ),
+  "math/fl-g7-one-step-inequalities": lesson(
+    ["Solve like an equation.", "Keep the inequality sign.", "If you multiply or divide by a negative, flip the sign."],
+    "Solve −2x > 6.",
+    ["Divide both sides by −2.", "The sign flips."],
+    "x < −3",
+  ),
+  "math/fl-g7-convert-systems": lesson(
+    ["Use a conversion rate to change units.", "1 mile ≈ 1.6 km. 1 kg ≈ 2.2 lb.", "Multiply to go to the smaller unit and divide to go back."],
+    "About how many km is 10 miles?",
+    ["10 × 1.6 = 16."],
+    "16 km",
+  ),
+  "math/fl-g7-sample-space": lesson(
+    ["The sample space is every possible outcome.", "List the outcomes of each step.", "Multiply the number of outcomes of each step."],
+    "A coin is flipped and a number cube is rolled. How many outcomes?",
+    ["Coin: 2.", "Cube: 6.", "2 × 6 = 12."],
+    "12",
+  ),
 };
 
 // Math lessons ship with the grade. The other subjects' lessons are a second download, fetched once the grade is in.

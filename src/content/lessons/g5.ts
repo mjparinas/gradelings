@@ -240,6 +240,43 @@ const math: GradeLessons = {
     ["Total: 1/4 + 1/4 + 1/2 + 1 = 2.", "2 ÷ 4 = 1/2."],
     "1/2 L each",
   ),
+  // Florida
+  "math/fl-g5-decimal-shifts": lesson(
+    ["Multiplying by 0.1 moves the decimal point 1 place left.", "Multiplying by 0.01 moves it 2 places left.", "Dividing by 0.1 moves it 1 place right."],
+    "4.5 ÷ 0.1 = ?",
+    ["Dividing by 0.1 makes it 10 times bigger.", "Move the point 1 place right."],
+    "45",
+  ),
+  "math/fl-g5-division-stories": lesson(
+    ["A ÷ B can be written as the fraction A/B.", "Read the story to decide what to do with a remainder.", "You may round up, drop it or share it."],
+    "3 pizzas are shared by 4 people. How much does each get?",
+    ["3 ÷ 4 = 3/4."],
+    "3/4 of a pizza",
+  ),
+  "math/fl-g5-true-or-false": lesson(
+    ["The equals sign means both sides have the same value.", "Work out each side.", "Compare the two values."],
+    "Is 6 × 4 = 30 − 5 true?",
+    ["6 × 4 = 24.", "30 − 5 = 25.", "24 and 25 are not equal."],
+    "false",
+  ),
+  "math/fl-g5-solid-figures": lesson(
+    ["A prism has two matching bases joined by rectangles.", "A pyramid has one base and faces that meet at a point.", "Count faces, edges and vertices."],
+    "How many faces does a rectangular prism have?",
+    ["Top and bottom: 2.", "Four sides: 4.", "2 + 4 = 6."],
+    "6",
+  ),
+  "math/fl-g5-fraction-decimal-rectangles": lesson(
+    ["Perimeter = 2 × (length + width).", "Area = length × width.", "Use decimals or fractions the same way as whole numbers."],
+    "A rectangle is 2.5 m by 4 m. What is its area?",
+    ["2.5 × 4 = 10."],
+    "10 square metres",
+  ),
+  "math/fl-g5-mean-median": lesson(
+    ["Mean: add the numbers and divide by how many there are.", "Median: the middle number when they are in order.", "Mode is the most common number. Range is biggest minus smallest."],
+    "Find the mean of 4, 6, 8.",
+    ["4 + 6 + 8 = 18.", "18 ÷ 3 = 6."],
+    "6",
+  ),
 };
 
 // Math lessons ship with the grade. The other subjects' lessons are a second download, fetched once the grade is in.

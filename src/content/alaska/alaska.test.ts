@@ -64,7 +64,8 @@ describe("Alaska", () => {
       expect.arrayContaining(["ak-g3-alaska-native-cultures", "ak-g6-alaska-governments", "ak-g9-alaska-constitution", "ak-g9-land-and-statehood"]),
     );
     for (const { u, key } of own) {
-      expect(Object.keys(u.standards), `${key} carries only Alaska standards`).toEqual(["us-ak"]);
+      // Florida may copy Alaska's units, so it can carry its own standards beside Alaska's.
+      expect(Object.keys(u.standards).filter((f) => f !== "us-fl"), `${key} carries only Alaska standards`).toEqual(["us-ak"]);
       expect(["social", "science"], `${key} is a social studies or science unit`).toContain(key.split("/")[1]);
     }
   });

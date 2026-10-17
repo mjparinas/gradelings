@@ -961,4 +961,58 @@ export const lessons: GradeLessons = {
     ["Printing money and the military are federal powers.", "Everyday services like licences are state powers."],
     "the state",
   ),
+  "social/fl-g8-florida-to-1821": lesson(
+    ["Britain held East and West Florida from 1763 to 1783. Spain got Florida back, then gave it up in the Adams–Onís Treaty (1819, effective 1821).", "The Seminole formed in Florida in the 1700s. Runaway slave communities and Seminole towns made Spanish Florida a refuge.", "Andrew Jackson led US troops into Florida in 1818. Tallahassee became the capital in 1824, halfway between St. Augustine and Pensacola."],
+    "Which treaty gave Florida to the United States?",
+    ["It was signed in 1819 and took effect in 1821.", "It is named for John Quincy Adams and Luis de Onís."],
+    "the Adams–Onís Treaty",
+  ),
+  "social/fl-g8-florida-war-and-statehood": lesson(
+    ["The Indian Removal Act led to the Second Seminole War (1835–1842). Some Seminole stayed in the Everglades. Their descendants live in Florida today.", "Florida became a state in 1845 as a slave state, left the Union in 1861 and rejoined in 1868.", "The 1838 constitution protected slavery and limited voting to white men. The 1868 constitution gave Black men the vote."],
+    "How did the 1868 Florida Constitution change voting?",
+    ["The 1838 constitution allowed only white men to vote.", "In 1868 Black men were given the vote."],
+    "It gave Black men the right to vote",
+  ),
+  "social/fl-g8-holocaust": lesson(
+    ["The Holocaust was the planned, state-sponsored persecution and murder of six million Jews, and other targeted groups, by Nazi Germany and its collaborators.", "It grew step by step: hateful propaganda, laws such as the Nuremberg Laws, Kristallnacht, ghettos and camps.", "Some people were upstanders who rescued or resisted. We remember so hatred does not happen again."],
+    "What does it mean to be an upstander?",
+    ["A bystander watches and does nothing.", "An upstander acts to help someone in danger."],
+    "someone who acts to help others",
+  ),
+  "social/fl-g8-freedom-struggle": lesson(
+    ["Enslaved people did skilled work and resisted in many ways. The cotton gin made slavery more profitable and it spread.", "Abolitionists such as Frederick Douglass and Harriet Tubman worked to end slavery. The Thirteenth, Fourteenth and Fifteenth Amendments followed the Civil War.", "During Reconstruction, Black leaders like Hiram Revels and Florida's Josiah Walls were elected to Congress."],
+    "Which amendment ended slavery in the United States?",
+    ["The amendments after the Civil War are 13, 14 and 15.", "The Thirteenth abolished slavery."],
+    "the Thirteenth Amendment",
+  ),
+  "social/ca-g5-explorers": lesson(
+    ["Columbus sailed for Spain in 1492. Henry Hudson explored for the Dutch and the English.", "Lewis and Clark explored the Louisiana Purchase to the Pacific; Sacagawea, a Shoshone woman, was their interpreter and guide.", "Colonists and nations sometimes cooperated through trade and alliances."],
+    "How did Sacagawea help Lewis and Clark?",
+    ["She knew the Shoshone language and the land.", "She translated and guided them."],
+    "as an interpreter and guide",
+  ),
+  "social/ca-g5-thirteen-colonies": lesson(
+    ["Jamestown, Virginia (1607) was the first lasting English colony.", "New England's rocky soil and long winters led to fishing, shipbuilding and trade. Southern Colonies like Georgia grew cash crops.", "Colonies grew along rivers and harbours so boats could carry goods. Rhode Island allowed religious freedom."],
+    "Why did many colonies grow along rivers and harbours?",
+    ["There were few roads.", "Boats could carry goods and people."],
+    "Boats could carry goods and people.",
+  ),
+  "social/ca-g5-road-to-revolution": lesson(
+    ["After the French and Indian War (1763), Britain taxed the colonies to pay its debts.", "Parliament passed the Stamp Act and Townshend Acts. Colonists protested with boycotts and the Boston Tea Party (1773).", "Patriots wanted independence; Loyalists stayed loyal to Britain."],
+    "Why did Britain start taxing the colonies after 1763?",
+    ["Britain had just fought an expensive war.", "It wanted the colonies to help pay those debts."],
+    "To pay its debts from the French and Indian War",
+  ),
+  "social/ca-g5-revolution": lesson(
+    ["Fighting began at Lexington and Concord in 1775. Thomas Jefferson was the main writer of the Declaration of Independence (1776).", "The Declaration names unalienable rights: life, liberty and the pursuit of happiness.", "France became an ally, thanks partly to Benjamin Franklin. Britain surrendered at Yorktown (1781); the Treaty of Paris (1783) ended the war."],
+    "Which agreement in 1783 officially ended the war?",
+    ["Fighting ended at Yorktown in 1781.", "The peace treaty was signed in Paris two years later."],
+    "the Treaty of Paris",
+  ),
+  "social/ca-g5-constitution": lesson(
+    ["The Articles of Confederation made a weak national government, so the Constitution replaced it in 1787. James Madison is called its father.", "Three branches: Congress makes laws (and can declare war), the president carries them out, the courts judge them.", "Checks and balances stop any one branch from becoming too powerful. The Bill of Rights came in 1791."],
+    "Which branch is the Supreme Court part of?",
+    ["Courts decide what laws mean.", "That is the judicial branch."],
+    "judicial",
+  ),
 };

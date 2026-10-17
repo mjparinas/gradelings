@@ -1,0 +1,132 @@
+import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
+
+// Florida's own Kindergarten social studies units (`fl-` ids): the symbols of the United States and Florida (SS.K.CG.2.3,
+// SS.K.CG.2.4, SS.K.CG.2.5, SS.K.A.2.5), finding Florida and the land, water and directions around us (SS.K.G.1.1,
+// SS.K.G.1.3, SS.K.G.2.2, SS.K.G.3.1, SS.K.G.3.2), and the inventors, explorers and people of good character the
+// standards name (SS.K.AA.1.1, SS.K.A.2.4).
+
+const SYMBOLS: Q[] = [
+  ["How many stars are on the American flag?", "50", ["13", "10", "100"], "One star for each state."],
+  ["How many stripes are on the American flag?", "13", ["50", "7", "100"], "One for each of the first colonies."],
+  ["What colors are the stripes on our flag?", "red and white", ["blue and yellow", "green and black", "orange and pink"], "Look at the flag at school."],
+  ["Which bird is a symbol of the United States?", "the bald eagle", ["the penguin", "the owl", "the duck"], "It has a white head."],
+  ["Which statue is a symbol of the United States?", "the Statue of Liberty", ["a pirate", "a snowman", "a giant duck"], "She holds up a torch."],
+  ["Patriotism means loving and respecting…", "your country", ["only your toys", "only your lunch", "only the weather"], "We show it when we honor our flag."],
+  ["When we say the Pledge of Allegiance, we put our hand…", "over our heart", ["on our head", "in our pocket", "on our toes"], "It shows respect."],
+  ["When we say the Pledge, we look at…", "the flag", ["the floor", "the ceiling", "our shoes"], "We show respect to the flag."],
+  ["Florida is a…", "state", ["country", "ocean", "city"], "The United States has 50 of them."],
+  ["Florida is part of which country?", "the United States", ["Mexico", "France", "Japan"], "Our flag has 50 stars."],
+  ["What is Florida's nickname?", "the Sunshine State", ["the Snow State", "the Rainy State", "the Windy State"], "Florida is warm and bright."],
+  ["Which fruit juice is Florida's state drink?", "orange juice", ["apple juice", "grape juice", "cherry juice"], "Many oranges grow in Florida."],
+  ["Florida's state flower is the…", "orange blossom", ["sunflower", "tulip", "rose"], "It grows on orange trees."],
+  ["Florida's state bird is the…", "mockingbird", ["penguin", "eagle", "parrot"], "It can copy other birds' songs."],
+  ["A mockingbird is a good…", "singer", ["swimmer", "digger", "jumper"], "It sings many songs."],
+  ["Florida's state tree is the…", "sabal palm", ["pine cone tree", "apple tree", "maple tree"], "It has big leaves like fans."],
+  ["Florida's state animal is the Florida…", "panther", ["penguin", "polar bear", "camel"], "It is a big wild cat."],
+  ["Florida's state marine mammal is the…", "manatee", ["whale shark", "walrus", "penguin"], "It is a slow, gentle sea cow."],
+  ["Florida's state reptile is the American…", "alligator", ["rattlesnake", "iguana", "turtle"], "It lives in swamps and lakes."],
+  ["Where does Florida's flag have a red X?", "on a white flag", ["on a blue flag", "on a green flag", "on a black flag"], "Think of white with a red X."],
+  ["What is in the middle of Florida's flag?", "the state seal", ["a big star", "a bald eagle", "a cow"], "A small round picture."],
+  ["The capital of Florida is…", "Tallahassee", ["Washington, D.C.", "Paris", "Orlando"], "Leaders of our state work there."],
+  ["The capital of the United States is…", "Washington, D.C.", ["Tallahassee", "Miami", "Paris"], "Our national leaders work there."],
+  ["A symbol is a picture or thing that…", "stands for something", ["is always a toy", "is a kind of food", "has no meaning"], "A flag stands for a place."],
+  ["Which one is a symbol of Florida?", "the Florida flag", ["a school bus", "a pencil", "a pizza"], "It flies at state buildings.", true],
+  ["Which is NOT a symbol of Florida?", "the polar bear", ["the manatee", "the mockingbird", "the orange blossom"], "Three of these live in Florida.", true],
+  ["Which flag has 50 stars?", "the American flag", ["the Florida flag", "a pirate flag", "a school flag"], "One for each state.", true],
+  ["Why do we have flags?", "to stand for a place or group", ["to keep warm", "to hide behind", "to play tag"], "Flags show who we are.", true],
+];
+
+const FIND_FLORIDA: Q[] = [
+  ["What state do we live in?", "Florida", ["Alaska", "Maine", "Texas"], "We learn about it in this unit."],
+  ["Your street address tells where your…", "home is", ["lunch is", "toy box is", "friend sleeps"], "It has numbers and a street name."],
+  ["Which is part of an address?", "a street name", ["a favorite color", "a pet's name", "a lunch menu"], "Mail uses it to find your home."],
+  ["A phone number is…", "a set of numbers to call someone", ["a kind of food", "a street", "a pet"], "You can say yours."],
+  ["A town or city is a…", "place where many people live", ["kind of food", "kind of weather", "kind of toy"], "Our school is in one."],
+  ["Which word tells where something is? The cat is ___ the box.", "in", ["blue", "fast", "tall"], "A place word."],
+  ["Which word is the opposite of near?", "far", ["close", "next to", "beside"], "A place a long way off."],
+  ["Which word is the opposite of up?", "down", ["over", "high", "top"], "Think of the floor."],
+  ["Which direction is the sun in the morning?", "east", ["west", "south", "north"], "The sun comes up there."],
+  ["Which direction is the sun at the end of the day?", "west", ["east", "north", "up"], "The sun goes down there."],
+  ["How many cardinal directions are there?", "4", ["2", "8", "10"], "North, south, east and west."],
+  ["Which direction is not a cardinal direction?", "up", ["north", "south", "east"], "Cardinal directions are on a compass.", true],
+  ["A beach is a place where land meets…", "the sea", ["a mountain", "a road", "a desert"], "Sand and waves."],
+  ["The ocean is made of…", "salt water", ["sand", "grass", "milk"], "It tastes salty."],
+  ["Florida has water on…", "many sides", ["no sides", "only one side", "the top only"], "Look at a map of Florida."],
+  ["Florida is a peninsula, which means it has water on…", "almost all sides", ["no sides", "one side only", "its roof"], "Land with water almost all around."],
+  ["A river is…", "water that flows in a long path", ["a hill", "a road", "a big rock"], "It moves toward the sea."],
+  ["A lake is…", "water with land all around it", ["a mountain", "a desert", "a road"], "You can swim or fish in some."],
+  ["A hill is…", "a part of land higher than the land around it", ["a pond", "a road", "a house"], "A small mountain."],
+  ["A mountain is…", "very high land", ["a body of water", "a flat road", "a kind of weather"], "Taller than a hill."],
+  ["Most of Florida is…", "flat", ["covered in tall mountains", "covered by ice", "all desert"], "There are no big mountains in Florida."],
+  ["Which is a landform?", "a hill", ["a river", "the ocean", "a lake"], "Land you can walk on."],
+  ["Which is a body of water?", "a lake", ["a hill", "a mountain", "a valley"], "Water, not land."],
+  ["What does a map show?", "where places are", ["how a meal tastes", "how loud a song is", "how a flower smells"], "It is a picture from above."],
+  ["A globe is a model of…", "the Earth", ["the moon", "a house", "the sun"], "It is round."],
+  ["On a globe, the blue parts are…", "water", ["grass", "sand", "snow"], "Like oceans."],
+  ["Where can you find the Atlantic Ocean?", "on the east side of Florida", ["in your yard", "inside a school", "on the moon"], "Many beaches are there.", true],
+  ["What can you see from a plane window over Florida?", "land and water", ["only snow", "only sand", "only cars"], "Look at the map of Florida.", true],
+];
+
+const HEROES: Q[] = [
+  ["An inventor is someone who…", "makes something new", ["sells toys", "drives a bus", "plants a seed only"], "Inventors think of new ideas."],
+  ["George Washington Carver was a…", "scientist and inventor", ["pirate", "movie star", "king"], "He found many uses for peanuts."],
+  ["George Washington Carver found many new uses for…", "peanuts", ["pizza", "snow", "rocks"], "A crop that grows in the ground."],
+  ["Mae Jemison was the first African American woman to…", "go into space", ["win a race", "sing at school", "build a ship"], "She was an astronaut."],
+  ["An astronaut is someone who…", "travels in space", ["bakes bread", "paints houses", "fixes cars"], "They fly in rockets."],
+  ["Lonnie Johnson invented the Super Soaker, a…", "water toy", ["school bus", "kind of bread", "winter coat"], "Kids use it outside in summer."],
+  ["Lonnie Johnson worked as an engineer and also worked on…", "space missions", ["bakeries", "horse farms", "snow shoes"], "He helped with NASA projects."],
+  ["Being honest means…", "telling the truth", ["telling a joke", "keeping a secret toy", "hiding"], "Honest people do not lie."],
+  ["Being brave means…", "doing something even when you feel scared", ["never feeling scared", "running away", "hiding"], "Courage is acting when you are afraid."],
+  ["Being responsible means…", "doing your job", ["leaving work for others", "forgetting", "pretending"], "Put your toys away."],
+  ["Which shows honesty? You break a cup and you…", "tell a grown-up", ["hide the pieces", "blame a friend", "say nothing"], "Honest people tell the truth."],
+  ["Which shows responsibility?", "feeding your pet every day", ["forgetting your homework", "leaving trash on the floor", "skipping chores"], "A job you do each day."],
+  ["Which shows courage?", "speaking up when someone is treated unfairly", ["laughing at someone", "walking away", "pretending not to see"], "It can feel scary."],
+  ["Why do we tell stories about people from long ago?", "to learn from them", ["to scare people", "to waste time", "to hide the past"], "Their lives teach us."],
+  ["A person who helps others is…", "kind", ["silly", "sleepy", "slow"], "Kindness is a good character trait."],
+  ["Which person shows good character?", "someone who shares and tells the truth", ["someone who takes toys", "someone who tricks friends", "someone who breaks rules"], "Think of honesty and kindness."],
+  ["An explorer is someone who…", "goes to find out about new places", ["stays home all day", "never travels", "only sleeps"], "Explorers look for new things."],
+  ["Mae Jemison traveled into…", "outer space", ["a deep cave", "a desert", "an ocean trench"], "She rode on the space shuttle."],
+  ["The space shuttle took off from Kennedy Space Center in…", "Florida", ["Alaska", "Maine", "Nevada"], "It is near Cape Canaveral."],
+  ["Which place in Florida do rockets launch from?", "Cape Canaveral", ["a school yard", "a farm", "a lake"], "Rockets blast off there."],
+  ["Which is an inventor's job?", "thinking of a new tool", ["napping all day", "hiding food", "forgetting things"], "They solve problems with new ideas."],
+  ["George Washington Carver worked in a…", "laboratory and on farms", ["circus", "pirate ship", "zoo"], "He studied plants."],
+  ["A hero is someone who…", "helps others or does the right thing", ["tricks people", "takes things", "breaks rules"], "Heroes show good character.", true],
+  ["Who was an African American inventor?", "Lonnie Johnson", ["a pirate", "a baker only", "a clown"], "He invented a famous water toy.", true],
+  ["Who was an African American astronaut?", "Mae Jemison", ["Paul Bunyan", "Cinderella", "Peter Pan"], "She went to space in 1992.", true],
+];
+
+export const UNITS: Unit[] = [
+  bankUnit({
+    id: "fl-k-symbols",
+    title: "Florida & U.S. Symbols",
+    emoji: "🇺🇸",
+    blurb: "Flags, symbols and loving our country",
+    parentNote:
+      "Symbols of the United States (the flag, the bald eagle, the Statue of Liberty, the Pledge) and of Florida (the flag, the mockingbird, the orange blossom, the sabal palm and more), and what patriotism means.",
+    standards: ["SS.K.CG.2.3; SS.K.CG.2.4; SS.K.CG.2.5; SS.K.A.2.5", "symbols of the United States and Florida, and patriotism as loving and respecting one's country"],
+    items: SYMBOLS,
+  }),
+  bankUnit({
+    id: "fl-k-find-florida",
+    title: "Finding Florida",
+    emoji: "🏖️",
+    blurb: "Addresses, directions, land and water",
+    parentNote:
+      "Positional words and the four directions, knowing your address and that Florida is the state you live in, simple maps and globes, and basic landforms and bodies of water such as hills, lakes, rivers and the ocean.",
+    standards: ["SS.K.G.1.1; SS.K.G.1.2; SS.K.G.1.3; SS.K.G.1.4; SS.K.G.2.2; SS.K.G.3.1; SS.K.G.3.2", "positional words, cardinal directions, maps and globes, one's address and state, landforms and bodies of water"],
+    items: FIND_FLORIDA,
+  }),
+  bankUnit({
+    id: "fl-k-inventors-heroes",
+    title: "Inventors & Good Character",
+    emoji: "🚀",
+    blurb: "People who made and discovered things",
+    parentNote:
+      "African American inventors and explorers named in the standards (Lonnie Johnson, Mae Jemison and George Washington Carver), and stories of people who showed honesty, courage and responsibility.",
+    standards: ["SS.K.AA.1.1; SS.K.A.2.4", "African American inventors and explorers, and people who showed honesty, courage and responsibility"],
+    items: HEROES,
+  }),
+];
+/** Put the own units before the planned ones. */
+export const FIRST = false;

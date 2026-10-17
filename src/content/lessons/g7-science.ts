@@ -505,4 +505,40 @@ export const lessons: GradeLessons = {
     ["Urchins eat kelp.", "Fewer urchins means more kelp can grow."],
     "kelp grows back",
   ),
+  "science/fl-g7-genetics-biotech": lesson(
+    ["Alleles are versions of a gene. Capital letters are dominant. Small letters are recessive.", "A Punnett square shows what each parent can give. Each box is one possible offspring.", "Bb × Bb gives BB, Bb, Bb and bb: 3 in 4 show the dominant trait.", "Cloning copies DNA. Genetic engineering edits DNA. Artificial selection means people pick which organisms breed."],
+    "Cross Bb × Bb. What fraction of the offspring are bb?",
+    ["The boxes are BB, Bb, Bb and bb.", "One box out of four is bb."],
+    "1 in 4",
+  ),
+  "science/fl-g7-fossils-and-time": lesson(
+    ["Fossils are preserved remains or traces of living things from long ago.", "Superposition: in undisturbed rock layers, the bottom layer is the oldest.", "Radioactive dating uses the steady decay of unstable atoms to find an age in years.", "Earth is about 4.5 billion years old. Fossils in Florida show life and climate were different long ago."],
+    "In undisturbed layers, which fossil is older: the upper one or the lower one?",
+    ["New layers pile on top.", "So the lower layer formed first."],
+    "the lower one",
+  ),
+  "science/fl-g7-earth-plates": lesson(
+    ["Earth's layers: crust, mantle, outer core (liquid) and inner core (solid).", "The crust is broken into plates that move slowly on the mantle.", "Plates colliding, sliding or pulling apart cause mountains, earthquakes and volcanoes.", "The rock cycle: weathering makes sediment, which becomes rock. Heat and pressure change it, and melting makes new rock."],
+    "Which layer of Earth is liquid metal?",
+    ["The inner core is solid.", "The outer core is liquid."],
+    "the outer core",
+  ),
+  "science/fl-g7-human-impact": lesson(
+    ["People change Earth by cutting forests, building cities, draining wetlands and adding pollution.", "Fertilizer runoff can cause algae blooms. Burning fuel adds carbon dioxide.", "In Florida, the Everglades, beaches and coast are changed by growth and rising seas.", "We can help by saving water and energy, recycling and restoring habitats."],
+    "Dunes and sea oats are removed from a beach. What happens to erosion?",
+    ["Dunes and plant roots hold sand in place.", "Without them, waves carry sand away faster."],
+    "it speeds up",
+  ),
+  "science/fl-g7-light-waves": lesson(
+    ["The Sun's energy arrives as radiation: infrared, visible light and ultraviolet.", "Light can be reflected (bounced), refracted (bent) or absorbed.", "Dark things absorb more light. Light things reflect more.", "Light is fastest in empty space. Sound needs matter and is faster in solids than in air."],
+    "Why do you see lightning before you hear thunder?",
+    ["Light travels much faster than sound.", "So the light arrives first."],
+    "light is faster than sound",
+  ),
+  "science/fl-g7-nature-of-science": lesson(
+    ["Different sciences use different methods, but all rely on evidence.", "A model shows how something works. It helps, but it is never perfect.", "A theory is a well-tested explanation. A law describes a pattern.", "Science changes when new evidence appears."],
+    "A model does not match new data. What do scientists do?",
+    ["Models are approximations.", "When data disagrees, they improve or replace the model."],
+    "improve or replace it",
+  ),
 };

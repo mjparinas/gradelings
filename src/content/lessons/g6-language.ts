@@ -175,4 +175,22 @@ export const lessons: GradeLessons = {
     ["“No student will ever smile again” is a wild stretch.", "It isn’t a real reason."],
     "“If we cancel recess, no student will ever smile again.”",
   ),
+  "language/fl-g6-appeals-and-reasoning": lesson(
+    ["Ethos appeals to trust, pathos to feelings and logos to logic.", "Reasoning can use cause and effect, analogy, authority or an example.", "Check that evidence is accurate and fits the claim."],
+    "“Studies show 9 of 10 students who sleep 8 hours earn better grades.” Which appeal is this?",
+    ["It uses data.", "Data appeals to logic."],
+    "logos",
+  ),
+  "language/fl-g6-poetic-forms-and-narrators": lesson(
+    ["A sonnet has 14 lines. A ballad tells a story. An ode praises something.", "An elegy mourns. Free verse has no set pattern.", "A narrator tells the story. Some stories have more than one."],
+    "Which poem form praises or honours something?",
+    ["Think about the name.", "An ode praises."],
+    "an ode",
+  ),
+  "language/fl-g6-accounts-across-time": lesson(
+    ["Two accounts of one event can differ because of the author’s purpose.", "Word choice shows what an author stresses and feels.", "Authors in different times may use different words and beliefs."],
+    "One account stresses damage. Another stresses rescue. How do they differ?",
+    ["Both are about one event.", "They stress different parts."],
+    "in what they emphasize",
+  ),
 };

@@ -229,4 +229,16 @@ export const lessons: GradeLessons = {
     ["A beak is part of the bird's body."],
     "a body part",
   ),
+  "science/fl-k-sky-and-gravity": lesson(
+    ["Gravity pulls things toward the ground.", "Something must hold a thing up, or it falls.", "Far away things look small. Near things look big."],
+    "A plane high in the sky looks small. Why?",
+    ["The plane is very, very far away.", "Far things look small."],
+    "it is far away",
+  ),
+  "science/fl-k-real-or-pretend": lesson(
+    ["Real animals and plants do real things.", "Stories can show pretend things, like a talking cat.", "Scientists draw what they really see."],
+    "A cartoon cow flies a plane. Is that real?",
+    ["Real cows cannot fly planes.", "So it is pretend."],
+    "pretend",
+  ),
 };

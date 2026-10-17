@@ -727,4 +727,34 @@ export const lessons: GradeLessons = {
     ["Doubling time ≈ 70 ÷ growth rate.", "70 ÷ 2 = 35."],
     "35",
   ),
+  "social/fl-g5-map-the-nation": lesson(
+    ["Latitude lines run east and west. Longitude lines run north and south. Together they name an exact place.", "A compass rose gives directions. A scale turns map distance into real distance.", "A key tells you what the symbols on a map mean."],
+    "Miami is at about 26° N, 80° W. Is it north or south of the Equator?",
+    ["N stands for north latitude.", "26° N is north of the Equator."],
+    "north of the Equator",
+  ),
+  "social/fl-g5-spanish-florida": lesson(
+    ["Ponce de León named La Florida in 1513. Spain founded St. Augustine in 1565, the oldest city founded by Europeans in the continental United States.", "Spain, France and Britain all wanted Florida because it guarded sea routes. Britain held it from 1763 to 1783, then Spain again until 1821.", "Florida's first peoples, such as the Timucua, Apalachee and Calusa, lived here long before. The Seminole and Miccosukee nations are living nations today."],
+    "Which country held Florida just before it became a US territory in 1821?",
+    ["Britain held Florida from 1763 to 1783.", "Spain got it back in 1783 and held it until 1821."],
+    "Spain",
+  ),
+  "social/fl-g5-fort-mose": lesson(
+    ["Spain offered freedom in Florida to people who escaped slavery in the British colonies and joined the Spanish side.", "Fort Mose, built in 1738 near St. Augustine, was the first legally sanctioned free Black settlement in what is now the United States.", "Its leader, Francisco Menéndez, commanded a Black militia that defended St. Augustine."],
+    "Why did many enslaved people travel south to Spanish Florida?",
+    ["Spain promised freedom there.", "Slavery was still legal in the British colonies they left."],
+    "Spain offered them freedom",
+  ),
+  "social/fl-g5-florida-and-nation": lesson(
+    ["Florida's government has three branches: the Legislature makes laws, the governor carries them out and the courts explain them.", "The national government and the states share power. The US Constitution is the highest law.", "Citizens have duties, such as obeying laws, and responsibilities, such as voting and volunteering."],
+    "Who leads Florida's executive branch?",
+    ["The executive branch carries out laws.", "In Florida, the governor leads it."],
+    "the governor",
+  ),
+  "social/wa-g8-bill-of-rights": lesson(
+    ["The Bill of Rights is the first ten amendments: the First protects speech, religion, press, assembly and petition; the Second is about keeping and bearing arms.", "Later amendments added rights: the 13th ended slavery, the 14th made people born in the US citizens, the 15th protected voting regardless of race.", "Match each amendment by its number and the right it protects."],
+    "Which amendment protects freedom of speech?",
+    ["Freedom of speech is in the Bill of Rights.", "It is listed with religion, press and assembly.", "That is the First Amendment."],
+    "the First Amendment",
+  ),
 };

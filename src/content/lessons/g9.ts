@@ -288,6 +288,79 @@ const math: GradeLessons = {
     ["The sign is negative: y tends to fall as x rises.", "0.9 is close to 1: the points hug a line."],
     "A strong negative linear relationship",
   ),
+  // Florida
+  "math/fl-g9-interest": lesson(
+    ["Simple interest: I = P × r × t.", "Compound interest: A = P(1 + r)ᵗ.", "Simple interest grows in a line. Compound interest grows exponentially."],
+    "What is the simple interest on $1,000 at 5% for 3 years?",
+    ["I = 1000 × 0.05 × 3.", "I = 150."],
+    "$150",
+  ),
+  "math/fl-g9-angles-triangles": lesson(
+    ["Vertical angles are equal.", "Angles on a straight line add to 180°.", "The angles of a triangle add to 180°."],
+    "Two angles of a triangle are 50° and 60°. Find the third.",
+    ["50 + 60 = 110.", "180 − 110 = 70."],
+    "70°",
+  ),
+  "math/fl-g9-congruent-similar-triangles": lesson(
+    ["SSS, SAS, ASA, AAS and HL prove triangles congruent.", "AA shows triangles are similar.", "AAA and SSA do not prove congruence."],
+    "Two triangles have 3 pairs of equal sides. Which rule?",
+    ["Side, Side, Side."],
+    "SSS",
+  ),
+  "math/fl-g9-parallelograms-trapezoids": lesson(
+    ["Opposite angles of a parallelogram are equal.", "Consecutive angles add to 180°.", "A trapezoid's midsegment is the average of its bases."],
+    "A trapezoid has bases 6 and 10. How long is the midsegment?",
+    ["(6 + 10) ÷ 2 = 8."],
+    "8",
+  ),
+  "math/fl-g9-logic-statements": lesson(
+    ["The converse swaps the if and then parts.", "The inverse negates both parts.", "The contrapositive swaps and negates, and always matches the original."],
+    "What is the converse of 'If it rains, the ground is wet'?",
+    ["Swap the parts."],
+    "If the ground is wet, it rains.",
+  ),
+  "math/fl-g9-transformations-plane": lesson(
+    ["A reflection across the x-axis changes y to −y.", "A reflection across the y-axis changes x to −x.", "A 90° counterclockwise rotation sends (x, y) to (−y, x)."],
+    "Reflect (3, 4) across the x-axis.",
+    ["Keep x, change the sign of y."],
+    "(3, −4)",
+  ),
+  "math/fl-g9-function-shifts": lesson(
+    ["f(x) + k moves the graph up k.", "f(x + k) moves the graph left k.", "In y = |x − h| + k the vertex is (h, k)."],
+    "What is the vertex of y = |x − 3| + 2?",
+    ["h = 3 and k = 2."],
+    "(3, 2)",
+  ),
+  "math/fl-g9-quadratics-from-zeros": lesson(
+    ["Write y = a(x − p)(x − q) using the x-intercepts.", "Put in the extra point.", "Solve for a."],
+    "Zeros at 1 and 3, through (0, 6). Find a.",
+    ["y = a(x − 1)(x − 3).", "6 = a(−1)(−3) = 3a.", "a = 2."],
+    "a = 2",
+  ),
+  "math/fl-g9-circles-sectors": lesson(
+    ["A circle: (x − h)² + (y − k)² = r².", "The middle is (h, k) and the radius is r.", "A sector is a fraction of the circle."],
+    "What is the middle of (x − 2)² + (y + 1)² = 16?",
+    ["h = 2.", "k = −1."],
+    "(2, −1)",
+  ),
+  "math/fl-g9-dilations-area-volume": lesson(
+    ["A scale factor k multiplies lengths by k.", "Areas are multiplied by k².", "Volumes are multiplied by k³."],
+    "A shape has area 5. It is dilated by 3. What is the new area?",
+    ["3² = 9.", "5 × 9 = 45."],
+    "45",
+  ),
+  "math/fl-g9-segment-ratio": lesson(
+    ["A point dividing a segment in ratio m:n is a weighted average.", "Start at one end and move m/(m + n) of the way.", "The midpoint is the 1:1 case."],
+    "On a number line, find the midpoint of 2 and 10.",
+    ["(2 + 10) ÷ 2 = 6."],
+    "6",
+  ),
+  "math/fl-g9-cross-sections-constructions": lesson(
+    ["A cross-section is the shape of a slice.", "Spinning a flat shape makes a solid.", "Constructions use a compass and a straightedge."],
+    "What is the cross-section of a sphere?",
+    ["Every slice of a sphere is round."],
+    "a circle",
+  ),
 };
 
 // Math lessons ship with the grade. The other subjects' lessons are a second download, fetched once the grade is in.

@@ -209,6 +209,25 @@ const math: GradeLessons = {
     ["Angle measures add.", "35 + 50 = 85."],
     "85°",
   ),
+  // Florida
+  "math/fl-g4-big-numbers": lesson(
+    ["Read big numbers in groups of three digits.", "Say the thousands part, then the rest.", "Round numbers to estimate."],
+    "Write 305,040 in words.",
+    ["305 thousand.", "Then 40."],
+    "three hundred five thousand forty",
+  ),
+  "math/fl-g4-fraction-stories": lesson(
+    ["Fractions with the same denominator add by adding numerators.", "To multiply a fraction by a whole number, multiply the numerator.", "Tenths can be written as hundredths."],
+    "3 × 2/5 = ?",
+    ["3 × 2 = 6.", "The denominator stays 5.", "6/5 = 1 1/5."],
+    "1 1/5",
+  ),
+  "math/fl-g4-money-distance-time": lesson(
+    ["Line up decimal points to add or subtract money.", "For elapsed time, add hours first, then minutes.", "Solve two-step problems one step at a time."],
+    "A hike starts at 9:15 a.m. and lasts 2 h 30 min. When does it end?",
+    ["9:15 + 2 h = 11:15.", "11:15 + 30 min = 11:45."],
+    "11:45 a.m.",
+  ),
 };
 
 // Math lessons ship with the grade. The other subjects' lessons are a second download, fetched once the grade is in.

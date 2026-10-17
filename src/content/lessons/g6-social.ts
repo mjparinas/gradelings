@@ -745,4 +745,16 @@ export const lessons: GradeLessons = {
     ["The Aztec capital stood in a lake.", "They built floating gardens on the water to grow crops."],
     "floating gardens the Aztec used to grow crops",
   ),
+  "social/fl-g6-ancient-places": lesson(
+    ["Use latitude and longitude to find places. Lines of latitude run east and west. Lines of longitude run north and south.", "Every flat map bends the round Earth. A Mercator map makes lands near the poles look too big.", "Compare ancient places with today's map: ancient Mesopotamia is in what is now Iraq."],
+    "Why do Greenland and Alaska look huge on a Mercator map?",
+    ["Mercator stretches land near the poles.", "So lands far from the Equator look larger than they are."],
+    "Mercator stretches lands near the poles",
+  ),
+  "social/fl-g6-slavery-early-americas": lesson(
+    ["Before the Atlantic slave trade, trade routes joined Africa, Europe and Asia. In the 1400s Portuguese sailors began buying enslaved people.", "Colonial farmers used indentured servants first, then turned more and more to slavery. Slave codes took away enslaved people's rights.", "Enslaved people resisted in many ways, from running away to revolts such as New York in 1712 and Stono in 1739."],
+    "How was an indentured servant different from an enslaved person?",
+    ["An indentured servant had a contract for a set number of years.", "Slavery lasted for life and passed to children."],
+    "An indentured contract ended; slavery lasted for life",
+  ),
 };

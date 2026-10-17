@@ -207,6 +207,19 @@ const math: GradeLessons = {
     ["7 + 3 = 10.", "10 + 4 = 14."],
     "14 beads",
   ),
+  // Florida
+  "math/fl-g1-coins-and-bills": lesson(
+    ["A penny is 1¢, a nickel is 5¢ and a dime is 10¢.", "Count the biggest coins first.", "A dollar bill is $1, then $5 and $10."],
+    "Count: 1 dime, 2 nickels, 3 pennies.",
+    ["Dime: 10¢.", "Nickels: 10¢ more is 20¢.", "Pennies: 23¢."],
+    "23¢",
+  ),
+  "math/fl-g1-sketch-and-find": lesson(
+    ["Shapes have sides and corners.", "A triangle has 3 sides and 3 corners.", "A rectangle has 4 square corners."],
+    "A shape has 4 square corners and 2 long sides. What is it?",
+    ["It has 4 sides.", "Two sides are long."],
+    "a rectangle",
+  ),
 };
 
 // Math lessons ship with the grade. The other subjects' lessons are a second download, fetched once the grade is in.

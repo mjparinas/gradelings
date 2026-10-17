@@ -535,4 +535,58 @@ export const lessons: GradeLessons = {
     ["The food runs out faster than it regrows.", "The population falls back below carrying capacity."],
     "the population crashes",
   ),
+  "science/fl-g9-florida-geology": lesson(
+    ["Florida sits on a thick platform of limestone, built from ancient shells and corals.", "Slightly acidic water dissolves limestone, making caves, springs and sinkholes. This is karst.", "Barrier islands are sandy islands shaped by waves, currents and wind.", "The Floridan Aquifer holds the water that feeds Florida's springs."],
+    "Why do sinkholes happen in Florida?",
+    ["Water dissolves limestone underground.", "A cavity forms, and the surface above it collapses."],
+    "limestone dissolves underground",
+  ),
+  "science/fl-g9-oceans-weather-climate": lesson(
+    ["Wind and Earth's rotation drive surface currents. The Gulf Stream carries warm water past Florida.", "Hurricanes form over warm ocean water (about 80°F or more) and weaken over land or cooler water.", "The ocean absorbs heat and carbon dioxide, which changes climate and makes the water more acidic.", "Greenhouse gases trap heat, so Earth's average temperature rises."],
+    "Why does a hurricane weaken over land?",
+    ["A hurricane gets its energy from warm ocean water.", "Over land it loses that fuel."],
+    "it loses its warm-water fuel",
+  ),
+  "science/fl-g9-space-exploration": lesson(
+    ["The Sun is powered by fusion of hydrogen into helium in its core.", "Gravity organizes matter into planets, stars and galaxies. A planet moves faster when it is closer to its star.", "Different telescopes detect radio, infrared, visible, ultraviolet and X-ray light. Some must be in space.", "Space exploration brings jobs and visitors to Florida's Space Coast."],
+    "Why must X-ray telescopes be placed in space?",
+    ["Earth's atmosphere absorbs X-rays.", "So the telescope must be above it."],
+    "the atmosphere blocks X-rays",
+  ),
+  "science/fl-g9-ecology-resources": lesson(
+    ["A population is one species in one area. It grows when births and immigration exceed deaths and emigration.", "Energy flows through food webs. Only about 10% passes to the next level.", "Renewable resources, such as sunlight and wind, do not run out. Fossil fuels do.", "Invasive species, pollution and runoff harm biodiversity. Reducing, reusing and recycling help."],
+    "About how much energy passes from one trophic level to the next?",
+    ["Most energy is lost as heat.", "Only about one tenth moves up."],
+    "about 10%",
+  ),
+  "science/fl-g9-energy-forces": lesson(
+    ["Energy changes form but is never created or destroyed.", "Work = force × distance. Power = work ÷ time.", "Heat moves by conduction, convection and radiation. Temperature tracks the average kinetic energy of particles.", "Gravity gets stronger with more mass and weaker with distance: double the distance and the pull is one fourth."],
+    "A 10 newton force moves a box 3 metres. How much work is done?",
+    ["Work = force × distance.", "10 × 3 = 30."],
+    "30 joules",
+  ),
+  "science/fl-g9-chemistry-reactions": lesson(
+    ["pH below 7 is acidic, 7 is neutral and above 7 is basic. Each pH step is a factor of 10.", "Carbon forms four bonds, so it can build chains, rings and many compounds.", "Reactions go faster with more heat, more concentration, more surface area or a catalyst.", "At dynamic equilibrium, the forward and reverse changes happen at equal rates."],
+    "A catalyst is added to a reaction. What does it do?",
+    ["It lowers the energy needed.", "It speeds the reaction and is not used up."],
+    "it speeds the reaction without being used up",
+  ),
+  "science/fl-g9-evolution-classification": lesson(
+    ["New species form when groups become isolated and can no longer interbreed.", "Living things are classified by evolutionary relationships into three domains: Bacteria, Archaea and Eukarya.", "Vertebrates have a backbone. Arthropods have jointed legs. Mollusks include snails and clams.", "DNA evidence can change how organisms are classified."],
+    "Name the three domains of life.",
+    ["Cells without a nucleus are in Bacteria and Archaea.", "Cells with a nucleus are in Eukarya."],
+    "Bacteria, Archaea and Eukarya",
+  ),
+  "science/fl-g9-biology-extras": lesson(
+    ["Light microscopes use lenses. Electron microscopes use electrons and show much finer detail.", "Total magnification = eyepiece × objective: 10 × 40 = 400×.", "A mutation is a change in DNA. Mutations that disrupt the cell cycle can lead to cancer.", "ATP is the cell's energy currency. Mitochondria make most of it."],
+    "What is the total magnification of a 10× eyepiece with a 40× objective?",
+    ["Multiply the two lenses.", "10 × 40 = 400."],
+    "400×",
+  ),
+  "science/fl-g9-nature-of-science": lesson(
+    ["Science relies on testable explanations backed by evidence, and on careful argument.", "An observation is what you sense or measure. An inference is a conclusion drawn from observations.", "A theory explains why. A law describes what happens. Neither turns into the other.", "Scientific knowledge is durable but changes when strong new evidence arrives."],
+    "Is 'The leaf is 6 centimetres long' an observation or an inference?",
+    ["You can measure it.", "A measurement is an observation."],
+    "an observation",
+  ),
 };
