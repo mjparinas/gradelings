@@ -15,6 +15,7 @@ export const EMAIL_KINDS = {
   consent: "US parental consent",
   admin: "Sent from the admin panel",
   billing: "Payment problem notice",
+  gift: "Gift code",
   alert: "Alert or digest to an admin",
   reply: "Your reply to their email",
 } as const;

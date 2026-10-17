@@ -57,6 +57,17 @@ export const PRICES_BY_CURRENCY: Record<Currency, { month: Price; year: Price & 
 /** Canadian prices: what public pages and Canadian families see. */
 export const PRICES = PRICES_BY_CURRENCY.CAD;
 
+/** A gift is one year of the family plan, paid once, and arrives as a code the buyer passes on. */
+export const GIFT_DAYS = 365;
+/** A gift code can be redeemed for this long after it is bought. */
+export const GIFT_CODE_VALID_DAYS = 730;
+
+/** What a gift costs: the yearly plan's price, once. */
+export const giftPrice = (currency: Currency): Price => PRICES_BY_CURRENCY[currency].year;
+
+/** The gift price in cents, as Stripe wants it. */
+export const giftCents = (currency: Currency): number => Math.round(giftPrice(currency).amount * 100);
+
 /** The currency a family pays in: US dollars for a US family, Canadian dollars for everyone else. */
 export const currencyFor = (country: Country | null | undefined): Currency => countryOf(country).currency;
 

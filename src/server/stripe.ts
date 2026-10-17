@@ -1,6 +1,6 @@
 import "server-only";
 import { createHmac, timingSafeEqual } from "node:crypto";
-import type { Currency } from "@/lib/plan";
+import { GIFT_DAYS, giftCents, type Currency } from "@/lib/plan";
 
 // Stripe over plain HTTPS: no SDK needed. Set these environment variables:
 //   STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET,
@@ -120,6 +120,37 @@ export function checkoutParams(opts: CheckoutOptions): Record<string, string> {
   if (opts.coupon) params["discounts[0][coupon]"] = opts.coupon;
   else params.allow_promotion_codes = "true";
   return params;
+}
+
+/**
+ * A one-off Checkout Session for a gift: one year of the family plan, paid once, with no account needed.
+ * The price is built here (not a saved Price) and the session is tagged so the webhook knows to make a
+ * gift code. Stripe collects the buyer's email; US gifts get Stripe Tax, as US subscriptions do.
+ */
+export function giftCheckoutParams(opts: { currency: Currency; origin: string }): Record<string, string> {
+  if (!stripePrices(opts.currency)) throw new Error(`Payments in ${opts.currency} aren't set up yet.`);
+  const params: Record<string, string> = {
+    mode: "payment",
+    "line_items[0][price_data][currency]": opts.currency.toLowerCase(),
+    "line_items[0][price_data][unit_amount]": String(giftCents(opts.currency)),
+    "line_items[0][price_data][product_data][name]": "Gradelings Family plan: a gift of one year",
+    "line_items[0][quantity]": "1",
+    "metadata[gift]": "1",
+    "metadata[gift_days]": String(GIFT_DAYS),
+    "payment_intent_data[metadata][gift]": "1",
+    success_url: `${opts.origin}/account/gift/?thanks=1`,
+    cancel_url: `${opts.origin}/account/gift/`,
+  };
+  if (opts.currency === "USD") {
+    params["automatic_tax[enabled]"] = "true";
+    params.billing_address_collection = "required";
+  }
+  return params;
+}
+
+export async function createGiftCheckout(opts: { currency: Currency; origin: string }): Promise<string> {
+  const session = await stripe<{ url: string }>("checkout/sessions", giftCheckoutParams(opts));
+  return session.url;
 }
 
 export async function createCheckout(opts: CheckoutOptions): Promise<string> {

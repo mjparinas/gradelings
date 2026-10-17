@@ -2,7 +2,7 @@ import "server-only";
 import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS, WORDMARK_COLOURS } from "@/lib/brand";
 import { EMAIL_FONTS, EMAIL_IMAGES, EMAIL_WORDMARK } from "@/lib/emailImages";
 import { CONSENT_NOTICE } from "@/lib/coppa";
-import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, SUBSCRIBE_HREF } from "@/lib/plan";
+import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, REFUND_DAYS, SUBSCRIBE_HREF } from "@/lib/plan";
 import { countryOf, type CountryCode } from "@/lib/country";
 import type { EmailKind } from "@/lib/emailKinds";
 import { localizeCopy } from "@/content/locale";
@@ -435,4 +435,23 @@ export function paymentProblemEmail(to: string, origin: string, sentBy: string):
     }),
     sentBy,
   };
+}
+
+/** The receipt for a gift: the code to pass on, how to use it and how to get a refund. Sent to the buyer only; we never write to the person who gets the gift. */
+export function giftEmail(to: string, origin: string, p: { code: string; days: number; expires: string }): Email {
+  return layout({
+    kind: "gift",
+    to,
+    origin,
+    subject: `Your ${APP_NAME} gift code`,
+    heading: "Thank you for your gift",
+    body: [
+      `Here is the gift code for ${p.days} days of the ${APP_NAME} family plan, with everything unlocked for up to ${MAX_CHILDREN} children:`,
+      p.code,
+      `Pass it on to the family you're giving it to. They sign in to the Parent area, open Subscription and choose “Have a code?”. One family can use it once, any time before ${p.expires}.`,
+      `Changed your mind? Reply to this email within ${REFUND_DAYS} days and we'll refund you in full.`,
+    ],
+    button: { label: "How to use the code", url: `${origin}/help/` },
+    footnote: "Keep this email: the code is the gift. We don't store who it's for.",
+  });
 }

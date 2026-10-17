@@ -84,6 +84,19 @@ describe("SubscriptionPage", () => {
     expect(document.body).not.toHaveTextContent(SITE_HOST);
     expect(screen.queryByRole("button", { name: /Subscribe yearly/ })).not.toBeInTheDocument();
     expect(screen.queryByRole("link", { name: /Subscribe/ })).not.toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: /Give a year/ })).not.toBeInTheDocument();
+  });
+
+  it("links to the gift page on the web, but sells nothing inside the store apps", () => {
+    state.android = false;
+    state.ios = false;
+    state.family = { plan: "trial", trialEndsAt: Date.now() + 5 * 86_400_000, updatedAt: 1 };
+    const { unmount } = render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    expect(screen.getByRole("link", { name: /Give a year of/ })).toHaveAttribute("href", "/account/gift/");
+    unmount();
+    state.ios = true;
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    expect(screen.queryByRole("link", { name: /Give a year/ })).not.toBeInTheDocument();
   });
 
   it("holds checkout until the email is confirmed", () => {
