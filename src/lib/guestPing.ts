@@ -27,6 +27,8 @@ export function guestPlayedToday(state: { family: Pick<FamilyInfo, "account">; p
 }
 
 export async function pingGuestDevice(state: Parameters<typeof guestPlayedToday>[0], now = Date.now()): Promise<void> {
+  // Automated browsers (test runs, crawlers) are not players, and a request cut short by a page change would be logged as a page error.
+  if (typeof navigator !== "undefined" && navigator.webdriver) return;
   const today = String(Math.floor(now / DAY));
   try {
     if (localStorage.getItem(KEY) === today) return;

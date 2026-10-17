@@ -50,6 +50,13 @@ describe("guest players", () => {
     expect(calls).toHaveLength(2);
   });
 
+  it("sends nothing from an automated browser", async () => {
+    Object.defineProperty(navigator, "webdriver", { value: true, configurable: true });
+    await pingGuestDevice(state(), NOW + 40 * DAY);
+    expect(calls).toHaveLength(0);
+    delete (navigator as { webdriver?: boolean }).webdriver;
+  });
+
   it("sends nothing when no one has played, and tries again later if the server didn't take it", async () => {
     await pingGuestDevice(state({ events: [] }), NOW);
     expect(calls).toHaveLength(0);
