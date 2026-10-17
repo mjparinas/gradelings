@@ -291,6 +291,16 @@ const SCHEMA = [
     target TEXT,
     detail TEXT
   )`,
+  // Private notes admins and support staff keep on a family ("asked about a refund by email"). Never shown to the
+  // family, never about a child; deleted with the family.
+  `CREATE TABLE IF NOT EXISTS family_notes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    family_id TEXT NOT NULL,
+    author TEXT NOT NULL,
+    body TEXT NOT NULL,
+    created_at INTEGER NOT NULL
+  )`,
+  `CREATE INDEX IF NOT EXISTS family_notes_family ON family_notes (family_id)`,
   // Money Stripe collected, one row per paid invoice, for the admin dashboard's revenue numbers. Amounts in
   // cents. family_id is cleared when a family deletes its account, so the totals stay but nobody is linked.
   `CREATE TABLE IF NOT EXISTS payments (

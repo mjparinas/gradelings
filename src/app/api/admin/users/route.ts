@@ -1,15 +1,19 @@
 import { error, json } from "@/server/auth";
-import { audit, requireAdmin } from "@/server/admin";
+import { audit, requireStaff } from "@/server/admin";
 import { extendAccess } from "@/server/codes";
 import { query, run } from "@/server/db";
 import { deleteFamilyData } from "@/server/deleteFamily";
 import { emailLog } from "@/server/emailLog";
 import { familyOverrides, setOverride } from "@/server/flags";
 import { cancelSubscriptions, stripeCancellationConfigured } from "@/server/stripe";
-import { flagDef } from "@/lib/flags";
+import { FLAGS, flagDef } from "@/lib/flags";
+import type { FamilyInfo } from "@/lib/model";
+import { hasPaidPlan, isPremium, trialDaysLeft } from "@/lib/plan";
+import { flagsFor } from "@/server/flags";
 
 // Families, for support. The panel shows account emails, plan and billing state, and each child's grade
-// and province, but never children's names or practice details. Class student accounts are left out:
+// and province, but never children's names or practice details. Support staff (SUPPORT_EMAILS) may read
+// all of it and keep private notes, and nothing else; every other action is for admins. Class student accounts are left out:
 // they belong to their teacher's class.
 
 const DAY = 86_400_000;
@@ -28,13 +32,16 @@ interface FamilyListRow {
 
 /** `?q=` searches by email (or an exact family id); with no query, the newest 50 accounts. `?id=` gives one family. */
 export async function GET(req: Request) {
-  const gate = await requireAdmin(req);
+  const gate = await requireStaff(req);
   if ("response" in gate) return gate.response;
   const url = new URL(req.url);
   const id = url.searchParams.get("id");
   if (id) {
     const detail = await familyDetail(id);
-    return detail ? json(detail) : error(404, "No such family.");
+    if (!detail) return error(404, "No such family.");
+    // Support staff can look at any family, so each look is recorded.
+    if (gate.role === "support") await audit(gate.admin.email, "user.view", id);
+    return json(detail);
   }
   const q = (url.searchParams.get("q") ?? "").trim().toLowerCase().slice(0, 200);
   const like = `%${q.replace(/[\\%_]/g, (c) => `\\${c}`)}%`;
@@ -80,7 +87,7 @@ async function familyDetail(id: string) {
     [id],
   );
   if (!parents.length || parents.some((p) => p.role === "student")) return null;
-  const [profiles, activity, sessions, redemptions, overrides, experiments, classes, emails] = await Promise.all([
+  const [profiles, activity, sessions, redemptions, overrides, experiments, classes, emails, notes, flagValues] = await Promise.all([
     query<{ data: string }>("SELECT data FROM profiles WHERE family_id = ?", [id]),
     query<{ n: number; last: number | null }>("SELECT COUNT(*) AS n, MAX(t) AS last FROM events WHERE family_id = ?", [id]),
     query<{ n: number; last: number | null }>("SELECT COUNT(*) AS n, MAX(created_at) AS last FROM sessions WHERE family_id = ? AND expires_at > ?", [id, Date.now()]),
@@ -92,6 +99,8 @@ async function familyDetail(id: string) {
     query<{ experiment: string; variant: string }>("SELECT experiment, variant FROM experiment_assignments WHERE family_id = ?", [id]),
     query<{ n: number }>("SELECT COUNT(*) AS n FROM classes WHERE closed_at IS NULL AND owner_parent_id IN (SELECT id FROM parents WHERE family_id = ?)", [id]),
     emailLog({ familyId: id, limit: 50 }),
+    query<{ id: number; author: string; body: string; created_at: number }>("SELECT id, author, body, created_at FROM family_notes WHERE family_id = ? ORDER BY id DESC", [id]),
+    flagsFor(id, null),
   ]);
   const children = profiles.flatMap((p) => {
     try {
@@ -102,7 +111,23 @@ async function familyDetail(id: string) {
     }
   });
   const n = (v: unknown) => (v == null ? null : Number(v));
+  // What the family itself sees: their plan as the Subscription page reads it, and which features are on for
+  // them. No child's name or results, so support can answer "why can't I see X?".
+  const info: FamilyInfo = {
+    plan: String(family.plan) as FamilyInfo["plan"],
+    trialEndsAt: Number(family.trial_ends_at),
+    accessUntil: n(family.access_until),
+    subscription: family.subscription_status ? { status: String(family.subscription_status) } : undefined,
+    updatedAt: 0,
+  };
   return {
+    sees: {
+      premium: isPremium(info),
+      paid: hasPaidPlan(info),
+      trialDaysLeft: trialDaysLeft(info),
+      flags: FLAGS.filter((f) => flagValues[f.key]).map((f) => f.key),
+    },
+    notes: notes.map((r) => ({ id: Number(r.id), author: String(r.author), body: String(r.body), createdAt: Number(r.created_at) })),
     family: {
       id,
       createdAt: Number(family.created_at),
@@ -145,23 +170,48 @@ interface ActionBody {
   key?: unknown;
   enabled?: unknown;
   confirm?: unknown;
+  body?: unknown;
+  noteId?: unknown;
 }
+
+const NOTE_MAX = 1000;
+/** What support staff may do besides reading. */
+const SUPPORT_ACTIONS = new Set(["add-note", "delete-note"]);
 
 const wholeDays = (v: unknown, max: number) => Number.isInteger(v) && (v as number) >= 1 && (v as number) <= max;
 
 /** Support actions on one family. Every one is recorded in the audit log. */
 export async function POST(req: Request) {
-  const gate = await requireAdmin(req);
+  const gate = await requireStaff(req);
   if ("response" in gate) return gate.response;
   const admin = gate.admin;
   const body = (await req.json().catch(() => null)) as ActionBody | null;
   const familyId = typeof body?.familyId === "string" ? body.familyId : "";
+  if (gate.role === "support" && !SUPPORT_ACTIONS.has(String(body?.action))) return error(403, "Support accounts can only read and add notes.");
   const detail = familyId ? await familyDetail(familyId) : null;
   if (!detail) return error(404, "No such family.");
   const now = Date.now();
   const log = (action: string, info?: unknown) => audit(admin.email, action, familyId, info);
 
   switch (body!.action) {
+    case "add-note": {
+      const text = typeof body!.body === "string" ? body!.body.trim() : "";
+      if (!text) return error(400, "Write the note first.");
+      if (text.length > NOTE_MAX) return error(400, `Keep a note under ${NOTE_MAX} characters.`);
+      await run("INSERT INTO family_notes (family_id, author, body, created_at) VALUES (?, ?, ?, ?)", [familyId, admin.email, text, now]);
+      // The audit record says a note was added, not what it said.
+      await log("user.add-note");
+      return json({ ok: true });
+    }
+    case "delete-note": {
+      const row = (await query<{ author: string }>("SELECT author FROM family_notes WHERE id = ? AND family_id = ?", [Number(body!.noteId), familyId]))[0];
+      if (!row) return error(404, "No such note.");
+      // Support staff can remove their own notes; admins can remove any.
+      if (gate.role === "support" && row.author !== admin.email) return error(403, "You can only remove your own notes.");
+      await run("DELETE FROM family_notes WHERE id = ? AND family_id = ?", [Number(body!.noteId), familyId]);
+      await log("user.delete-note");
+      return json({ ok: true });
+    }
     case "extend-trial": {
       if (!wholeDays(body!.days, 365)) return error(400, "Days must be a whole number from 1 to 365.");
       const until = Math.max(now, detail.family.trialEndsAt) + (body!.days as number) * DAY;

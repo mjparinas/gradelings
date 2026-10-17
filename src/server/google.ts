@@ -2,7 +2,7 @@ import "server-only";
 import { createHash, randomBytes } from "node:crypto";
 import { GOOGLE_RETURNS, type GoogleError, type GoogleFrom } from "@/lib/googleSignIn";
 import { TRIAL_DAYS, normalizeReferralCode } from "@/lib/plan";
-import { adminEmails } from "./admin";
+import { staffEmails } from "./admin";
 import { appOrigin, newId } from "./auth";
 import { batch, query, run } from "./db";
 import { isFlagOn } from "./flags";
@@ -170,7 +170,7 @@ const COLUMNS = "id, family_id, email, role, google_sub, email_verified_at";
  * the same Google person signs in again; the same email joins the existing account; a new email makes a new one.
  */
 export async function accountForGoogle(profile: GoogleProfile, opts: { trialEndsAt?: number; referral?: string } = {}, now = Date.now()): Promise<GoogleAccount> {
-  const admins = adminEmails();
+  const admins = staffEmails();
   // Admin accounts keep to their own sign-in, whichever way the email got here.
   if (admins.has(profile.email)) return { ok: false, reason: "admin" };
 

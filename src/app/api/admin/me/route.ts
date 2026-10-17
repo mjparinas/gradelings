@@ -10,5 +10,5 @@ export async function GET(req: Request) {
   const found = await getAdminSetup(req);
   if (!found) return error(404, "Not found");
   const state = await twoFactorState(found.admin.parentId);
-  return json({ email: found.admin.email, ready: found.ready, twoFactor: { enabled: state.enabled, required: twoFactorMode() === "required", backupCodesLeft: state.backupCodesLeft, enabledAt: state.enabledAt } });
+  return json({ email: found.admin.email, role: found.role, ready: found.ready, twoFactor: { enabled: state.enabled, required: twoFactorMode() === "required", backupCodesLeft: state.backupCodesLeft, enabledAt: state.enabledAt } });
 }

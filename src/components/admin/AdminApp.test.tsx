@@ -44,6 +44,8 @@ const family = {
   redemptions: [],
   overrides: {},
   experiments: {},
+  sees: { premium: true, paid: false, trialDaysLeft: 12, flags: [] },
+  notes: [],
   emails: [],
 };
 
@@ -102,6 +104,30 @@ describe("AdminApp", () => {
     await user.click(screen.getByRole("button", { name: "Flags" }));
     await user.click(await screen.findByRole("switch"));
     expect(sent("/api/admin/flags/", "PUT")).toEqual({ key: "shop", enabled: false, rollout: 100 });
+  });
+
+  it("shows a support account the Users tab and notes, with no admin actions", async () => {
+    asAdmin();
+    const base = mocks.call.getMockImplementation()!;
+    mocks.call.mockImplementation((url: string, method = "GET", body?: unknown) =>
+      url === "/api/admin/me/" ? Promise.resolve({ email: "help@example.com", role: "support" }) : base(url, method, body),
+    );
+    const user = userEvent.setup();
+    render(<AdminApp />);
+    expect(await screen.findByRole("heading", { name: "Users" })).toBeInTheDocument();
+    expect(within(screen.getByRole("banner")).getByText("Support")).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Flags" })).toBeNull();
+    expect(screen.queryByRole("link", { name: "Download accounts CSV" })).toBeNull();
+    // Support staff never ask for the admin-only lists.
+    expect(mocks.call.mock.calls.some(([u]) => u === "/api/admin/queue/" || u === "/api/admin/flags/")).toBe(false);
+    await user.click(await screen.findByRole("button", { name: "pat@example.com" }));
+    expect(await screen.findByRole("heading", { name: "What This Family Sees" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Private Notes" })).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Delete Account" })).toBeNull();
+    expect(screen.queryByRole("button", { name: "Extend Trial" })).toBeNull();
+    await user.type(screen.getByLabelText("New note"), "Called about billing");
+    await user.click(screen.getByRole("button", { name: "Save Note" }));
+    expect(sent("/api/admin/users/", "POST")).toEqual({ familyId: "fam-1", action: "add-note", body: "Called about billing" });
   });
 
   it("makes a discount code with a limit", async () => {

@@ -16,6 +16,8 @@ import { AdminApp } from "./AdminApp";
 const DAY = 86_400_000;
 const flag = (over: Record<string, unknown> = {}) => ({ key: "shop", label: "Shop", description: "The pretend coin shop.", scope: "app", defaultOn: true, enabled: true, rollout: 100, changed: false, overrides: 0, ...over });
 const family = (over: Record<string, unknown> = {}) => ({
+  sees: { premium: true, paid: true, trialDaysLeft: 0, flags: [] },
+  notes: [],
   family: { id: "fam-1", createdAt: 1, plan: "premium", trialEndsAt: 1, accessUntil: Date.now() + 30 * DAY, discountCode: "FALL40", stripeCustomer: "cus_1", subscriptionStatus: "active", subscriptionInterval: "year", currentPeriodEnd: Date.now() + 200 * DAY },
   parents: [
     { id: "p-1", email: "pat@example.com", createdAt: 1, verified: true, weeklyReport: true },
@@ -218,7 +220,7 @@ describe("AdminApp users", () => {
   it("deletes an account only after the email is typed, then goes back to the list", async () => {
     asAdmin((url) => {
       if (url === "/api/admin/users/?q=") return { users: [{ familyId: "fam-1", email: "pat@example.com", createdAt: 1, plan: "trial", trialEndsAt: 1, accessUntil: null, subscriptionStatus: null }] };
-      if (url === "/api/admin/users/?id=fam-1") return family({ family: { ...family().family, accessUntil: null, subscriptionStatus: null, discountCode: null }, children: [], redemptions: [], experiments: {} });
+      if (url === "/api/admin/users/?id=fam-1") return family({ family: { ...family().family, accessUntil: null, subscriptionStatus: null, discountCode: null }, children: [], redemptions: [], experiments: {}, sees: { premium: false, paid: false, trialDaysLeft: 0, flags: [] }, notes: [] });
     });
     const user = await openTab("Users");
     await user.click(await screen.findByRole("button", { name: "pat@example.com" }));

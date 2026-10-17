@@ -207,7 +207,11 @@ interface FamilyDetail {
   redemptions: { code: string; kind: string | null; redeemedAt: number }[];
   overrides: Record<string, boolean>;
   experiments: Record<string, string>;
+  sees: { premium: boolean; paid: boolean; trialDaysLeft: number; flags: string[] };
+  notes: { id: number; author: string; body: string; createdAt: number }[];
 }
+
+type Role = "admin" | "support";
 
 function planText(u: { plan: string; trialEndsAt: number; subscriptionStatus: string | null }) {
   if (u.plan === "premium") return `Paying${u.subscriptionStatus ? ` (${u.subscriptionStatus})` : ""}`;
@@ -215,7 +219,7 @@ function planText(u: { plan: string; trialEndsAt: number; subscriptionStatus: st
   return "Free";
 }
 
-function Users({ flags, initialOpen = null }: { flags: FlagRow[]; initialOpen?: string | null }) {
+function Users({ flags, role, email, initialOpen = null }: { flags: FlagRow[]; role: Role; email: string; initialOpen?: string | null }) {
   const [q, setQ] = useState("");
   const [users, setUsers] = useState<UserRow[] | null>(null);
   const [open, setOpen] = useState<string | null>(initialOpen);
@@ -231,19 +235,21 @@ function Users({ flags, initialOpen = null }: { flags: FlagRow[]; initialOpen?: 
   }, []);
   useEffect(() => search(""), [search]);
 
-  if (open) return <UserDetail id={open} flags={flags} onBack={() => { setOpen(null); search(q); }} />;
+  if (open) return <UserDetail id={open} flags={flags} role={role} email={email} onBack={() => { setOpen(null); search(q); }} />;
   return (
     <section aria-labelledby="users-h">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h2 id="users-h" className="text-2xl font-bold">Users</h2>
-        <p className="flex flex-wrap gap-x-4">
-          <a className="min-h-11 font-semibold text-[#2a5bd7] underline" href="/api/admin/export/?type=users" download>
-            Download accounts CSV
-          </a>
-          <a className="min-h-11 font-semibold text-[#2a5bd7] underline" href="/api/admin/export/?type=payments" download>
-            Download payments CSV
-          </a>
-        </p>
+        {role === "admin" && (
+          <p className="flex flex-wrap gap-x-4">
+            <a className="min-h-11 font-semibold text-[#2a5bd7] underline" href="/api/admin/export/?type=users" download>
+              Download accounts CSV
+            </a>
+            <a className="min-h-11 font-semibold text-[#2a5bd7] underline" href="/api/admin/export/?type=payments" download>
+              Download payments CSV
+            </a>
+          </p>
+        )}
       </div>
       <form
         className="mt-3 flex flex-wrap items-end gap-2"
@@ -301,7 +307,7 @@ function Users({ flags, initialOpen = null }: { flags: FlagRow[]; initialOpen?: 
   );
 }
 
-function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBack: () => void }) {
+function UserDetail({ id, flags, role, email, onBack }: { id: string; flags: FlagRow[]; role: Role; email: string; onBack: () => void }) {
   const [d, setD] = useState<FamilyDetail | null>(null);
   const [loadErr, setLoadErr] = useState("");
   const [trialDays, setTrialDays] = useState("14");
@@ -313,7 +319,7 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
   }, [id]);
   useEffect(load, [load]);
   const { act, err, ok, busy } = useAction(load);
-  const run = (action: string, extra: Record<string, unknown>, done: string) => act("/api/admin/users/", "POST", { familyId: id, action, ...extra }, done);
+  const run = (action: string, extra: Record<string, unknown>, done: string): Promise<boolean> => act("/api/admin/users/", "POST", { familyId: id, action, ...extra }, done);
 
   if (deleted)
     return (
@@ -379,6 +385,12 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
         )}
       </div>
 
+      <FamilySees d={d} flags={flags} />
+
+      <FamilyNotes notes={d.notes} role={role} email={email} run={run} busy={busy} />
+
+      {role === "admin" && (
+        <>
       <div className={card}>
         <h3 className="text-xl font-bold">Access</h3>
         <div className="mt-2 flex flex-wrap items-end gap-2">
@@ -486,12 +498,91 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
           </button>
         </div>
       </div>
+        </>
+      )}
       {(err || ok) && (
         <div className={`sticky bottom-4 ${card} py-3 shadow-lg`}>
           <Notice err={err} ok={ok} />
         </div>
       )}
     </section>
+  );
+}
+
+/** What the family itself sees, worked out the way their own screens do. Support staff use it to answer "why can't I see...?". */
+function FamilySees({ d, flags }: { d: FamilyDetail; flags: FlagRow[] }) {
+  const s = d.sees;
+  const on = flags.filter((f) => s.flags.includes(f.key));
+  return (
+    <div className={card}>
+      <h3 className="text-xl font-bold">What This Family Sees</h3>
+      <p className="mt-1 font-read">
+        {s.paid ? "A paid or code plan: every unit is open." : s.premium ? `Free trial, ${s.trialDaysLeft} ${s.trialDaysLeft === 1 ? "day" : "days"} left: every unit is open.` : "Free plan: the first 2 units of every course are open."}
+      </p>
+      <p className="mt-1 font-read text-ink-soft">
+        {flags.length === 0 ? `${s.flags.length} optional features are on for them.` : on.length ? `Features on for them: ${on.map((f) => f.label).join(", ")}.` : "No optional features are on for them."}
+      </p>
+      <p className="mt-1 text-sm text-ink-soft">A read-only summary. It never shows a child&apos;s name or results.</p>
+    </div>
+  );
+}
+
+/** Private notes on a family. Never shown to the family, and not for anything about a child. */
+function FamilyNotes({
+  notes,
+  role,
+  email,
+  run,
+  busy,
+}: {
+  notes: FamilyDetail["notes"];
+  role: Role;
+  email: string;
+  run: (action: string, extra: Record<string, unknown>, done: string) => Promise<boolean>;
+  busy: boolean;
+}) {
+  const [text, setText] = useState("");
+  return (
+    <div className={card}>
+      <h3 className="text-xl font-bold">Private Notes</h3>
+      <p className="text-sm text-ink-soft">Only admins and support staff see these. Don&apos;t write anything about a child.</p>
+      <form
+        className="mt-2 flex flex-wrap items-end gap-2"
+        onSubmit={async (e) => {
+          e.preventDefault();
+          if (await run("add-note", { body: text }, "Note saved.")) setText("");
+        }}
+      >
+        <label className="flex min-w-60 flex-1 flex-col text-sm font-semibold">
+          New note
+          <textarea className={field} rows={2} maxLength={1000} value={text} onChange={(e) => setText(e.target.value)} />
+        </label>
+        <button className={primary} disabled={busy || !text.trim()}>
+          Save Note
+        </button>
+      </form>
+      {notes.length === 0 ? (
+        <p className="mt-3 text-ink-soft">No notes yet.</p>
+      ) : (
+        <ul className="mt-3 divide-y divide-line">
+          {notes.map((n) => (
+            <li key={n.id} className="flex flex-wrap items-start justify-between gap-2 py-2">
+              <div>
+                <p className="font-read whitespace-pre-wrap">{n.body}</p>
+                <p className="text-sm text-ink-soft">
+                  {n.author} on {day(n.createdAt)}
+                </p>
+              </div>
+              {(role === "admin" || n.author === email) && (
+                <button type="button" disabled={busy} className={quiet} onClick={() => void run("delete-note", { noteId: n.id }, "Note removed.")}>
+                  Remove Note
+                </button>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 }
 
@@ -1086,8 +1177,10 @@ function TabCount({ n }: { n: number | null }) {
   );
 }
 
-function Panel({ twoFactor, onSecurityChange }: { twoFactor: TwoFactorInfo | null; onSecurityChange: () => void }) {
-  const [tab, setTab] = useState<Tab>(() => linkTarget().tab);
+function Panel({ twoFactor, onSecurityChange, role, email }: { twoFactor: TwoFactorInfo | null; onSecurityChange: () => void; role: Role; email: string }) {
+  // Support staff get the Users tab and nothing else.
+  const staffTabs: readonly Tab[] = role === "support" ? ["Users"] : TABS;
+  const [tab, setTab] = useState<Tab>(() => (role === "support" ? "Users" : linkTarget().tab));
   // A family opened from a dashboard list: Users starts on that family's page.
   const [family, setFamily] = useState<string | null>(() => linkTarget().family);
   // A group picked from the funnel: Emails starts on it.
@@ -1097,28 +1190,32 @@ function Panel({ twoFactor, onSecurityChange }: { twoFactor: TwoFactorInfo | nul
   // How many to-do items are waiting, shown on the tab. Loaded once here so the count shows from any tab.
   const [todo, setTodo] = useState<number | null>(null);
   useEffect(() => {
+    if (role === "support") return;
     call<{ items: unknown[] }>("/api/admin/queue/").then(
       (r) => setTodo(r.items?.length ?? null),
       () => setTodo(null),
     );
-  }, []);
+  }, [role]);
   // How many received emails nobody has answered or marked as done, shown on the Inbox tab.
   const [waiting, setWaiting] = useState<number | null>(null);
   useEffect(() => {
+    if (role === "support") return;
     call<{ waiting?: number }>("/api/admin/inbox/?count=1").then(
       (r) => setWaiting(r.waiting ?? null),
       () => setWaiting(null),
     );
-  }, []);
+  }, [role]);
   // Maintenance mode: the banner shows on every tab while it is on; the switch is on the System tab.
   const [maintenance, setMaintenance] = useState<MaintenanceState | null>(null);
   useEffect(() => {
+    if (role === "support") return;
     call<MaintenanceState>("/api/admin/maintenance/").then(setMaintenance, () => setMaintenance(null));
-  }, []);
+  }, [role]);
   const [flags, setFlags] = useState<FlagRow[] | null>(null);
   const loadFlags = useCallback(() => {
+    if (role === "support") return;
     call<{ flags: FlagRow[] }>("/api/admin/flags/").then((r) => setFlags(r.flags), () => setFlags([]));
-  }, []);
+  }, [role]);
   useEffect(loadFlags, [loadFlags]);
   // Back and Forward: show the tab (or family) the address names.
   useEffect(() => {
@@ -1153,7 +1250,7 @@ function Panel({ twoFactor, onSecurityChange }: { twoFactor: TwoFactorInfo | nul
         onCount={setTodo}
       />
     ),
-    Users: <Users key={family ?? ""} flags={flags ?? []} initialOpen={family} />,
+    Users: <Users key={family ?? ""} flags={flags ?? []} role={role} email={email} initialOpen={family} />,
     Funnel: (
       <Funnel
         onEmailGroup={(g) => {
@@ -1184,7 +1281,7 @@ function Panel({ twoFactor, onSecurityChange }: { twoFactor: TwoFactorInfo | nul
     <>
       <MaintenanceBanner state={maintenance} onChange={setMaintenance} />
       <nav aria-label="Admin sections" className="-mx-1 mb-5 flex flex-wrap gap-2">
-        {TABS.map((t) => (
+        {staffTabs.map((t) => (
           <button
             key={t}
             type="button"
@@ -1212,16 +1309,16 @@ type State =
   | { kind: "not-admin" }
   // An admin account that has to set up two-step sign-in (or sign in again with its code) before the panel opens.
   | { kind: "setup"; email: string; twoFactor: TwoFactorInfo }
-  | { kind: "admin"; email: string; twoFactor: TwoFactorInfo | null };
+  | { kind: "admin"; email: string; role: Role; twoFactor: TwoFactorInfo | null };
 
 export function AdminApp() {
   const [state, setState] = useState<State>({ kind: "loading" });
   const check = useCallback(() => {
-    void call<{ email: string; ready?: boolean; twoFactor?: TwoFactorInfo }>("/api/admin/me/").then(
+    void call<{ email: string; role?: Role; ready?: boolean; twoFactor?: TwoFactorInfo }>("/api/admin/me/").then(
       (r) => {
         const twoFactor = r.twoFactor ?? null;
         if (r.ready === false && twoFactor) setState({ kind: "setup", email: r.email, twoFactor });
-        else setState({ kind: "admin", email: r.email, twoFactor });
+        else setState({ kind: "admin", email: r.email, role: r.role ?? "admin", twoFactor });
       },
       () =>
         // Not an admin: tell a signed-in account so, and show anyone else the sign-in form.
@@ -1247,7 +1344,7 @@ export function AdminApp() {
                 </span>
               ))}
             </Link>
-            <span className="rounded-full bg-[#0f172a] px-3 py-1 text-sm font-bold tracking-wide text-white uppercase">Admin</span>
+            <span className="rounded-full bg-[#0f172a] px-3 py-1 text-sm font-bold tracking-wide text-white uppercase">{state.kind === "admin" && state.role === "support" ? "Support" : "Admin"}</span>
           </span>
           <div className="flex items-center gap-3">
             {(state.kind === "admin" || state.kind === "setup") && <span className="hidden text-sm text-ink-soft sm:inline">{state.email}</span>}
@@ -1270,7 +1367,7 @@ export function AdminApp() {
           </div>
         )}
         {state.kind === "setup" && <TwoFactorSetup email={state.email} info={state.twoFactor} onDone={check} />}
-        {state.kind === "admin" && <Panel twoFactor={state.twoFactor} onSecurityChange={check} />}
+        {state.kind === "admin" && <Panel twoFactor={state.twoFactor} onSecurityChange={check} role={state.role} email={state.email} />}
       </main>
     </div>
   );

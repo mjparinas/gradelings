@@ -581,3 +581,65 @@ describe("codes, reports, stats and the change log", () => {
     expect(entries.find((e) => e.action === "user.delete")!.detail).not.toContain("doomed");
   });
 });
+
+describe("support role", () => {
+  const SUPPORT_EMAIL = "help@example.com";
+  let support: { cookie: string; familyId: string };
+  beforeAll(async () => {
+    process.env.SUPPORT_EMAILS = ` ${SUPPORT_EMAIL.toUpperCase()} , ${ADMIN_EMAIL}`;
+    support = await account(SUPPORT_EMAIL);
+  });
+  beforeEach(() => {
+    process.env.SUPPORT_EMAILS = ` ${SUPPORT_EMAIL.toUpperCase()} , ${ADMIN_EMAIL}`;
+  });
+  const post = (cookie: string, body: Record<string, unknown>) => as(cookie).send(users, "POST", "/api/admin/users/", { familyId: parent.familyId, ...body });
+
+  it("opens the panel as support, and an address on both lists stays an admin", async () => {
+    expect((await (await as(support.cookie).get(adminMe, "/api/admin/me/")).json()).role).toBe("support");
+    expect((await (await as(admin.cookie).get(adminMe, "/api/admin/me/")).json()).role).toBe("admin");
+  });
+
+  it("reads families, and every look is recorded", async () => {
+    const list = await as(support.cookie).get(users, "/api/admin/users/?q=parent@");
+    expect(list.status).toBe(200);
+    const detail = await (await as(support.cookie).get(users, `/api/admin/users/?id=${parent.familyId}`)).json();
+    expect(detail.sees.premium).toBe(true);
+    const entries = (await (await as(admin.cookie).get(auditLog, "/api/admin/audit/")).json()).entries as { admin: string; action: string }[];
+    expect(entries.some((e) => e.admin === SUPPORT_EMAIL && e.action === "user.view")).toBe(true);
+  });
+
+  it("is kept out of everything else", async () => {
+    for (const mod of [stats, flags, experiments, reports, auditLog, codes]) expect((await as(support.cookie).get(mod, "/api/admin/x/")).status).toBe(404);
+    for (const action of ["extend-trial", "grant-access", "remove-access", "verify-email", "sign-out", "delete"]) {
+      expect((await post(support.cookie, { action, days: 5, confirm: "parent@example.com" })).status, action).toBe(403);
+    }
+    expect((await as(support.cookie).send(flags, "PUT", "/api/admin/flags/", { key: "gift-plans", enabled: true })).status).toBe(404);
+    expect((await as(parent.cookie).get(users, "/api/admin/users/")).status).toBe(404);
+  });
+
+  it("keeps private notes: support removes its own, admins remove any, the family never sees them", async () => {
+    expect((await post(support.cookie, { action: "add-note", body: "  " })).status).toBe(400);
+    expect((await post(support.cookie, { action: "add-note", body: "x".repeat(1001) })).status).toBe(400);
+    expect((await post(support.cookie, { action: "add-note", body: "Asked about a refund by email." })).status).toBe(200);
+    expect((await post(admin.cookie, { action: "add-note", body: "Called back." })).status).toBe(200);
+    const detail = await (await as(admin.cookie).get(users, `/api/admin/users/?id=${parent.familyId}`)).json();
+    expect(detail.notes.map((n: { body: string }) => n.body)).toEqual(["Called back.", "Asked about a refund by email."]);
+    const [adminNote, supportNote] = detail.notes as { id: number }[];
+    expect((await post(support.cookie, { action: "delete-note", noteId: adminNote.id })).status).toBe(403);
+    expect((await post(support.cookie, { action: "delete-note", noteId: supportNote.id })).status).toBe(200);
+    expect((await post(admin.cookie, { action: "delete-note", noteId: adminNote.id })).status).toBe(200);
+    const after = await (await as(admin.cookie).get(users, `/api/admin/users/?id=${parent.familyId}`)).json();
+    expect(after.notes).toEqual([]);
+    // The family's own account data has no trace of notes.
+    expect(JSON.stringify(await (await as(parent.cookie).get(me, "/api/auth/me/")).json())).not.toContain("refund");
+  });
+
+  it("deletes notes with the family and logs only that a note was added", async () => {
+    const gone = await account("notes-gone@example.com");
+    await as(admin.cookie).send(users, "POST", "/api/admin/users/", { familyId: gone.familyId, action: "add-note", body: "secret detail" });
+    const logged = await dbm.query<{ detail: string | null }>("SELECT detail FROM admin_audit WHERE action = 'user.add-note'");
+    expect(JSON.stringify(logged)).not.toContain("secret detail");
+    await as(admin.cookie).send(users, "POST", "/api/admin/users/", { familyId: gone.familyId, action: "delete", confirm: "notes-gone@example.com" });
+    expect((await dbm.query("SELECT 1 FROM family_notes WHERE family_id = ?", [gone.familyId])).length).toBe(0);
+  });
+});
