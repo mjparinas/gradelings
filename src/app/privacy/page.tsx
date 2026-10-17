@@ -115,6 +115,9 @@ export default function PrivacyPage() {
             <strong>Resend</strong>, to deliver the emails we send you (such as email confirmation, password resets and the weekly report). It receives your email address and the message, which can include a child’s first name and practice totals. It also records when an email is opened and which links are clicked, along with the time, the device’s IP address and the email app or browser used.
           </li>
           <li>
+            <strong>Google</strong>, only if you choose “Continue with Google” to sign in. We ask Google for your email address and its permanent ID for your Google account, and save them with your account so you can sign in the same way next time. Nothing else is read from your Google account. Google learns that you signed in to {APP_NAME}, under its own privacy policy. It is not offered for children or class student accounts, and we load nothing from Google on our pages.
+          </li>
+          <li>
             <strong>Anthropic</strong>, to suggest a first draft when we answer a message you sent us. It receives that message, your name and email address as written in it, and nothing else about your account or your children. Under Anthropic’s commercial terms it doesn’t use it to train its models.
           </li>
           <li>

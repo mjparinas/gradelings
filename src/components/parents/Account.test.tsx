@@ -358,6 +358,25 @@ describe("AccountPage signed in", () => {
     expect(useStore.getState().family.account).toBeUndefined();
   });
 
+  it("asks a Google-only account for its email to delete, and offers a link to add a password", async () => {
+    routes["GET /api/auth/sessions/"] = () => json({ sessions: [{ id: "s1", device: "iPad", createdAt: Date.UTC(2026, 0, 5), current: true }], hasPassword: false });
+    routes["DELETE /api/account/"] = () => json({});
+    routes["POST /api/auth/forgot/"] = () => json({ message: "If that address has an account, we sent a link." });
+    render(<AccountPage onBilling={vi.fn()} />);
+    expect(await screen.findByRole("button", { name: "Email me a link to add a password" })).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Change password" })).not.toBeInTheDocument();
+    await userEvent.click(screen.getByRole("button", { name: "Email me a link to add a password" }));
+    expect(await screen.findByText(/we sent a link/)).toBeInTheDocument();
+    expect(bodyOf("POST", "/api/auth/forgot/")).toEqual({ email: "parent@example.com" });
+
+    await userEvent.click(screen.getByRole("button", { name: "Delete my account…" }));
+    expect(screen.getByRole("dialog", { name: "Delete everything?" })).toHaveTextContent("Type your email address to confirm.");
+    fireEvent.change(screen.getByLabelText("Email address"), { target: { value: "parent@example.com" } });
+    await userEvent.click(screen.getByRole("button", { name: "Yes, delete my account" }));
+    await waitFor(() => expect(h.push).toHaveBeenCalledWith("/play/"));
+    expect(bodyOf("DELETE", "/api/account/")).toEqual({ email: "parent@example.com" });
+  });
+
   it("closes the delete dialog on Cancel without calling the server", async () => {
     render(<AccountPage onBilling={vi.fn()} />);
     await userEvent.click(screen.getByRole("button", { name: "Delete my account…" }));

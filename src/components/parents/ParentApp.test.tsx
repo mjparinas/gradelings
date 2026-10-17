@@ -97,6 +97,22 @@ describe("ParentApp", () => {
     expect(h.billing.at(-1)).toEqual({ stripe: true, dev: false });
   });
 
+  it("takes the account from the server when it is back from Google, and takes ?google=1 out of the address", async () => {
+    // The device has no account yet; the server signed this browser in on the way back.
+    h.kv.family = trial(5);
+    fetchMock.mockImplementation(async () => json({ family: trial(5, { account, plan: "premium" }), billing: { stripe: true, dev: false } }));
+    window.history.replaceState(null, "", "/parents/?google=1#/subscription");
+    render(<ParentApp />);
+    await userEvent.click(await screen.findByRole("button", { name: "Unlock" }));
+    expect(await screen.findByText("page:subscription", {}, { timeout: 15_000 })).toBeInTheDocument();
+    expect(fetchMock).toHaveBeenCalledWith("/api/auth/me/", { credentials: "same-origin" });
+    expect(useStore.getState().family.account?.email).toBe("p@example.com");
+    expect(h.syncNow).toHaveBeenCalled();
+    expect(window.location.search).toBe("");
+    expect(window.location.hash).toBe("#/subscription");
+    window.history.replaceState(null, "", "/");
+  });
+
   it("skips the PIN on the way back from Stripe", async () => {
     h.kv.family = trial(5, { account });
     h.billingPass = true;

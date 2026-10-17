@@ -18,6 +18,7 @@ Gradelings is a standard Next.js 16 app (Node runtime, no custom server). This g
 | `STRIPE_PRICE_MONTHLY_USD` | For US billing | Recurring Price id for US$14.99/month, for US families. |
 | `STRIPE_PRICE_YEARLY_USD` | For US billing | Recurring Price id for US$119.99/year. Without both USD prices, a US family's checkout answers that US payments aren't available yet; Canadian checkout and simulated billing are unaffected. |
 | `STRIPE_WEBHOOK_SECRET` | For billing | Signing secret of the webhook endpoint (`whsec_…`). |
+| `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET` | Optional | The OAuth client for "Continue with Google" on the parent and teacher sign-in forms. Without both, the button is hidden and nothing else changes. Setup steps are in `docs/GOOGLE_SIGN_IN.md`. The redirect URI to register is `{NEXT_PUBLIC_SITE_URL}/api/auth/google/callback/` (with the trailing slash). |
 | `RESEND_API_KEY` | For email | Resend API key. Without it no email is sent (password reset and confirmation links won't arrive), so treat it as required in production. |
 | `ANTHROPIC_API_KEY` | Optional | Anthropic API key for **Draft with AI** in the admin Inbox. Without it the button is hidden. Each draft costs a few cents at most. |
 | `RESEND_WEBHOOK_SECRET` | Optional | Signing secret (`whsec_…`) of a Resend webhook pointed at `/api/email/webhook/` for the delivered, delayed, bounced and complained events. Turns on delivery reports in the admin panel's email log, and stops panel email to addresses that bounce or report spam (`docs/ADMIN.md`). |

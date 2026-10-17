@@ -36,6 +36,12 @@ export async function verifyPassword(password: string, stored: string): Promise<
   return key.length === expected.length && timingSafeEqual(key, expected);
 }
 
+/** Whether the account has a password. One made with "Continue with Google" has none until the parent asks for a reset link. */
+export async function hasPassword(parentId: string): Promise<boolean> {
+  const rows = await query<{ password_hash: string }>("SELECT password_hash FROM parents WHERE id = ?", [parentId]);
+  return Boolean(rows[0]?.password_hash.startsWith("scrypt$"));
+}
+
 const sha = (s: string) => createHash("sha256").update(s).digest("hex");
 
 export async function createSession(parentId: string, familyId: string, req?: Request): Promise<{ token: string; maxAge: number }> {

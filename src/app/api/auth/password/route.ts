@@ -14,6 +14,9 @@ export async function POST(req: Request) {
   const password = typeof body?.password === "string" ? body.password : "";
   if (password.length < 8 || password.length > 200) return error(400, "Use a password of at least 8 characters.");
   const rows = await query<{ password_hash: string }>("SELECT password_hash FROM parents WHERE id = ?", [session.parentId]);
+  if (rows[0] && !rows[0].password_hash.startsWith("scrypt$")) {
+    return error(403, "You sign in with Google, so there's no password to change yet. Use “Email me a link to add a password” to set one.");
+  }
   if (!rows[0] || current.length > 200 || !(await verifyPassword(current, rows[0].password_hash))) return error(403, "Your current password isn't right.");
   await run("UPDATE parents SET password_hash = ? WHERE id = ?", [await hashPassword(password), session.parentId]);
   await run("DELETE FROM sessions WHERE parent_id = ? AND token_hash != ?", [session.parentId, readCookieToken(req)]);

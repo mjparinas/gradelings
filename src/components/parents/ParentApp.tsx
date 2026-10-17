@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState, useSyncExternalStore, type ReactNode } from "react";
 import { APP_NAME } from "@/lib/brand";
-import { refreshAccount, type BillingInfo } from "@/lib/account";
+import { finishGoogleSignIn, refreshAccount, type BillingInfo } from "@/lib/account";
 import { takeBillingPass } from "@/lib/billingReturn";
 import { hasPaidPlan, isPremium, trialDaysLeft } from "@/lib/plan";
 import { useRoute } from "@/lib/router";
@@ -156,7 +156,13 @@ export function ParentApp() {
       .init()
       .then(() => {
         startBackgroundSync();
-        if (useStore.getState().family.account) void refreshAccount().then(setBilling);
+        // Back from Google: the server has signed this browser in, so take the account (and its history) from it.
+        const url = new URL(window.location.href);
+        if (url.searchParams.get("google") === "1") {
+          url.searchParams.delete("google");
+          window.history.replaceState(null, "", url.pathname + url.search + url.hash);
+          void finishGoogleSignIn().then(setBilling);
+        } else if (useStore.getState().family.account) void refreshAccount().then(setBilling);
       });
   }, [ready]);
 

@@ -391,6 +391,8 @@ const PARENT_COLUMNS: [string, string][] = [
   ["last_nudge_at", "INTEGER"],
   // 'parent' for ordinary accounts, 'student' for a class-owned student account (no email, no password).
   ["role", "TEXT NOT NULL DEFAULT 'parent'"],
+  // Google's permanent id for the person who signs in with "Continue with Google" (src/server/google.ts). Null for password-only accounts.
+  ["google_sub", "TEXT"],
   ["last_login_at", "INTEGER"],
   // News and tips the owner sends from the admin panel (on unless the parent unsubscribes).
   ["admin_mail", "INTEGER NOT NULL DEFAULT 1"],
@@ -484,6 +486,7 @@ async function migrate(c: Client) {
   for (const [name, type] of PARENT_COLUMNS) {
     if (!have.has(name)) await c.execute(`ALTER TABLE parents ADD COLUMN ${name} ${type}`);
   }
+  await c.execute("CREATE UNIQUE INDEX IF NOT EXISTS parents_google_sub ON parents (google_sub) WHERE google_sub IS NOT NULL");
 }
 
 let client: Client | null = null;

@@ -1,10 +1,10 @@
-import { error, getSession, json, listSessions, revokeSessions, sameOrigin } from "@/server/auth";
+import { error, getSession, hasPassword, json, listSessions, revokeSessions, sameOrigin } from "@/server/auth";
 
-/** The devices signed in to this account. */
+/** The devices signed in to this account, and whether it has a password (a Google-only account has none). */
 export async function GET(req: Request) {
   const session = await getSession(req);
   if (!session) return error(401, "Not signed in");
-  return json({ sessions: await listSessions(req, session.parentId) });
+  return json({ sessions: await listSessions(req, session.parentId), hasPassword: await hasPassword(session.parentId) });
 }
 
 /** Signs out one device (?id=) or every device except this one. */

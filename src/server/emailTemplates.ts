@@ -294,6 +294,21 @@ export function newSignInEmail(to: string, origin: string, device: string): Emai
   });
 }
 
+export function googleLinkedEmail(to: string, origin: string): Email {
+  return layout({
+    kind: "google-linked",
+    to,
+    origin,
+    subject: `Google sign-in was added to your ${APP_NAME} account`,
+    heading: "You can now sign in with Google",
+    body: [
+      "Someone just signed in to your account with a Google account that uses this email address, so \"Continue with Google\" now works for it. Your children and progress are all there.",
+      "If that was you, there's nothing to do. If it wasn't, reset your password now; that signs every device out.",
+    ],
+    button: { label: "Open the parent area to reset it", url: `${origin}/parents/` },
+  });
+}
+
 export function passwordChangedEmail(to: string, origin: string): Email {
   return layout({
     kind: "password-changed",
