@@ -408,3 +408,109 @@ describe("weekly report notifications (removed)", () => {
   });
 });
 
+
+describe("daily job that runs out of time", () => {
+  const origin = "http://localhost";
+  const call = (query = "") => cron.GET(new Request(`http://localhost/api/cron/weekly/${query}`, { headers: { authorization: "Bearer cron-secret" } }));
+  const sunday = () => {
+    const d = new Date();
+    d.setUTCHours(12, 0, 0, 0);
+    while (d.getUTCDay() !== 0) d.setUTCDate(d.getUTCDate() + 1);
+    return d;
+  };
+  const weeklyMail = (to: string) => email.outbox().filter((m) => m.to === to && m.subject.includes("week")).length;
+  const optIn = async (address: string) => {
+    const f = await family(address);
+    await prefs.POST(req("/api/account/prefs/", "POST", { weeklyReport: true }, f.cookie));
+  };
+  /** Only these parents are due for a weekly report, so a call's work is easy to count. */
+  const onlyWeekly = (addresses: string[]) => dbm.run(`UPDATE parents SET weekly_report = 0 WHERE email NOT IN (${addresses.map(() => "?").join(",")})`, addresses);
+
+  it("stops when its time is up, and each call carries on until everything is done once", async () => {
+    const { runDaily, loadDailyState, PHASES } = await import("@/server/dailyJob");
+    const mine = ["slow-a@example.com", "slow-b@example.com", "slow-c@example.com"];
+    for (const m of mine) await optIn(m);
+    await onlyWeekly(mine);
+    vi.useFakeTimers({ toFake: ["Date"] });
+    vi.setSystemTime(sunday());
+
+    // A budget of nothing: every call still finishes a phase or handles an email, so it can't get stuck.
+    let result = await runDaily({ origin, budgetMs: 0 });
+    expect(result.complete).toBe(false);
+    expect(result.remaining.length).toBeGreaterThan(0);
+    let calls = 0;
+    while (!result.complete && calls++ < 40) result = await runDaily({ origin, resume: true, budgetMs: 0 });
+    expect(result.complete).toBe(true);
+    expect(result.remaining).toEqual([]);
+    expect((await loadDailyState())?.done).toEqual([...PHASES]);
+    for (const m of mine) expect(weeklyMail(m)).toBe(1);
+  });
+
+  it("finishes a Sunday's weekly reports on Monday, but not on Wednesday", async () => {
+    const { runDaily, loadWeeklyState } = await import("@/server/dailyJob");
+    const mine = ["late-a@example.com", "late-b@example.com", "late-c@example.com"];
+    for (const m of mine) await optIn(m);
+    await optIn("late-newcomer@example.com");
+    await onlyWeekly([...mine, "late-newcomer@example.com"]);
+    await dbm.run("UPDATE parents SET weekly_report = 0 WHERE email = 'late-newcomer@example.com'");
+    vi.useFakeTimers({ toFake: ["Date"] });
+    const start = sunday();
+    start.setUTCDate(start.getUTCDate() + 7); // a Sunday no other test used
+    vi.setSystemTime(start);
+
+    // Run on Sunday until the weekly phase has begun and sent just one.
+    let n = 0;
+    while (mine.filter((m) => weeklyMail(m) > 0).length < 1 && n++ < 40) await runDaily({ origin, resume: true, budgetMs: 0 });
+    expect(mine.filter((m) => weeklyMail(m) > 0).length).toBe(1);
+    expect((await loadWeeklyState())?.done).toBe(false);
+
+    // Monday's full run sends the rest, and nobody gets two.
+    vi.setSystemTime(start.getTime() + 86_400_000);
+    await runDaily({ origin });
+    for (const m of mine) expect(weeklyMail(m)).toBe(1);
+    expect((await loadWeeklyState())?.done).toBe(true);
+
+    // Midweek, a parent who has just opted in waits for next Sunday.
+    await dbm.run("UPDATE parents SET weekly_report = 1 WHERE email = 'late-newcomer@example.com'");
+    vi.setSystemTime(start.getTime() + 3 * 86_400_000);
+    await runDaily({ origin });
+    expect(weeklyMail("late-newcomer@example.com")).toBe(0);
+  });
+
+  it("says when it is still not finishing after several runs in a day", async () => {
+    const { runDaily, STUCK_AFTER_RUNS } = await import("@/server/dailyJob");
+    vi.useFakeTimers({ toFake: ["Date"] });
+    vi.setSystemTime(Date.now() + 30 * 86_400_000);
+    let result = await runDaily({ origin, budgetMs: 0 });
+    for (let i = 1; i < STUCK_AFTER_RUNS; i++) {
+      expect(result.stuck).toBeUndefined();
+      result = await runDaily({ origin, resume: true, budgetMs: 0 });
+    }
+    expect(result.complete).toBe(false);
+    expect(result.stuck).toBe(true);
+  });
+
+  it("answers an hourly resume call with nothing to do, and leaves no run on the System page, once the day is done", async () => {
+    vi.useFakeTimers({ toFake: ["Date"] });
+    vi.setSystemTime(Date.now() + 60 * 86_400_000);
+    const runs = async () => Number((await dbm.query<{ n: number }>("SELECT COUNT(*) AS n FROM job_runs WHERE job = 'daily'"))[0].n);
+
+    // The 15:00 call never came: the first resume call does the day's work.
+    const first = await (await call("?resume=1")).json();
+    expect(first.complete).toBe(true);
+    expect(first.skipped).toBeUndefined();
+    const after = await runs();
+
+    const again = await (await call("?resume=1")).json();
+    expect(again).toMatchObject({ complete: true, skipped: true, remaining: [] });
+    expect(await runs()).toBe(after);
+
+    // A call without resume starts the day's work over, and the next day a resume call works again.
+    expect((await (await call("")).json()).skipped).toBeUndefined();
+    expect(await runs()).toBe(after + 1);
+    vi.setSystemTime(Date.now() + 86_400_000);
+    expect((await (await call("?resume=1")).json()).skipped).toBeUndefined();
+    expect(await runs()).toBe(after + 2);
+    expect((await cron.GET(new Request("http://localhost/api/cron/weekly/?resume=1"))).status).toBe(401);
+  });
+});

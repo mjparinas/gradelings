@@ -25,7 +25,7 @@ For each student: a first name or nickname, the class grade and curriculum, an a
 
 ## 5. Where it is stored
 
-The service's servers run in Montréal, Canada, and its database is in Virginia, United States. The schedule lists each service provider and where it handles information. The Provider will tell the School before adding a provider or moving storage to another country, and the School may end the agreement if it objects.
+The service's servers and its database are in Virginia, United States. The schedule lists each service provider and where it handles information. The Provider will tell the School before adding a provider or moving storage to another country, and the School may end the agreement if it objects.
 
 ## 6. Security
 

@@ -19,7 +19,7 @@ export const TRUST_GROUPS: { title: string; controls: Control[] }[] = [
       { title: "No free text, photos or voice", note: "Children can’t share anything about themselves." },
       { title: "Export or delete anytime", note: "From the Parent area, in a few taps." },
       { title: "Parental consent (COPPA)", note: "US children sync only after a parent agrees." },
-      { title: "Where data lives", note: "Servers in Montréal, Canada; database in Virginia, US." },
+      { title: "Where data lives", note: "Servers and database in Virginia, US." },
     ],
   },
   {

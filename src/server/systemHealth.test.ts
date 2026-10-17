@@ -526,6 +526,22 @@ describe("the daily job", () => {
     expect((await monitor.recentJobRuns("daily")).length).toBe(1);
   });
 
+  it("warns when a run ran out of time, until the next run finishes the day", async () => {
+    process.env.CRON_SECRET = "c";
+    const now = Date.now() + 60_000; // after the run the test above recorded
+    await dbm.run("INSERT INTO job_runs (job, started_at, finished_at, ok, detail) VALUES ('daily', ?, ?, 1, ?)", [now - 30_000, now - 1000, JSON.stringify({ weekly: 3, complete: false, remaining: ["consent", "digest"] })]);
+    const partial = await health.jobCheck(now);
+    expect(partial.state).toBe("warn");
+    expect(partial.summary).toMatch(/ran out of time with consent, digest still to do/);
+    expect(partial.rows[0].label).toBe("Ran out of time");
+
+    await dbm.run("INSERT INTO job_runs (job, started_at, finished_at, ok, detail) VALUES ('daily', ?, ?, 1, ?)", [now, now + 1000, JSON.stringify({ weekly: 1, complete: true, remaining: [] })]);
+    const done = await health.jobCheck(now + 2000);
+    expect(done.state).toBe("ok");
+    expect(done.rows[0].label).toBe("Ran");
+    expect(done.rows[1].label).toBe("Ran out of time");
+  });
+
   it("records a failed run and passes the error on", async () => {
     await expect(monitor.trackJob("test", async () => Promise.reject(new Error("nope")), () => NOW)).rejects.toThrow("nope");
     expect((await monitor.recentJobRuns("test"))[0]).toMatchObject({ ok: false, detail: "nope", finishedAt: NOW });
