@@ -142,7 +142,7 @@ jobs:
           key: next-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('src/**', 'next.config.ts') }}
           restore-keys: |
             next-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-
-      # The Kokoro voices (about 115 MB from Hugging Face), so each run doesn't download them again.
+      # The Kokoro voices (about 115 MB from our kokoro-voices release), so each run doesn't download them again.
       - uses: actions/cache@v6
         with:
           path: public/kokoro

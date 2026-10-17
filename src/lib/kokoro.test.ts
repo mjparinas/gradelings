@@ -35,7 +35,7 @@ describe("Kokoro files", () => {
     }
     expect(Object.keys(manifest.model).sort()).toEqual(["onnx/model_quantized.onnx", "tokenizer.json"]);
     for (const hash of Object.values(manifest.model)) expect(hash).toMatch(/^[0-9a-f]{64}$/);
-    expect(manifest.source).toMatch(/^https:\/\/huggingface\.co\/onnx-community\/Kokoro-82M-v1\.0-ONNX\/resolve\/[0-9a-f]{40}\/$/);
+    expect(manifest.source).toBe(`https://github.com/mjparinas/gradelings/releases/download/kokoro-voices-${manifest.version}/`);
   });
 
   it("copies engine files that exist in node_modules", () => {
