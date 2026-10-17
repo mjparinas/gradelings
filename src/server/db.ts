@@ -111,6 +111,16 @@ const SCHEMA = [
   )`,
   `CREATE INDEX IF NOT EXISTS class_members_family ON class_members (family_id)`,
   // Stripe events already handled, so a redelivered webhook is a no-op.
+  // A roster read from Google Classroom, Clever or ClassLink while a teacher reviews it: class names, the provider's ids and
+  // students' first names, and nothing else. Deleted when the teacher imports or discards it, and after half an hour.
+  `CREATE TABLE IF NOT EXISTS roster_imports (
+    id TEXT PRIMARY KEY,
+    parent_id TEXT NOT NULL,
+    provider TEXT NOT NULL,
+    data TEXT NOT NULL,
+    created_at INTEGER NOT NULL
+  )`,
+  `CREATE INDEX IF NOT EXISTS roster_imports_parent ON roster_imports (parent_id)`,
   `CREATE TABLE IF NOT EXISTS stripe_events (
     id TEXT PRIMARY KEY,
     created_at INTEGER NOT NULL
@@ -423,6 +433,9 @@ const CLASS_COLUMNS: [string, string][] = [
   ["inactive_warning_at", "INTEGER"],
   // A split class has a second grade (adjacent to `grade`). NULL for a single-grade class.
   ["grade2", "TEXT"],
+  // A class brought in from Google Classroom, Clever or ClassLink: which one, and the provider's id for the class, so a later import joins it.
+  ["roster_provider", "TEXT"],
+  ["roster_course_id", "TEXT"],
 ];
 // The grade a student is in, for a class with two grades. NULL means the class's own grade.
 const MEMBER_COLUMNS: [string, string][] = [["grade", "TEXT"]];
@@ -430,7 +443,12 @@ const MEMBER_COLUMNS: [string, string][] = [["grade", "TEXT"]];
 // `goal`: how many questions the teacher asked for (homework); NULL means "until Proficient".
 const ASSIGNMENT_COLUMNS: [string, string][] = [["due_at", "INTEGER"], ["goal", "INTEGER"]];
 // The login code a student had before a teacher gave them a new one, kept for a few minutes so "Undo" can restore it.
-const STUDENT_COLUMNS: [string, string][] = [["prev_login_code", "TEXT"], ["prev_code_at", "INTEGER"]];
+const STUDENT_COLUMNS: [string, string][] = [
+  ["prev_login_code", "TEXT"],
+  ["prev_code_at", "INTEGER"],
+  // The provider's id for a student brought in by a roster import, so importing again doesn't add the same child twice.
+  ["external_id", "TEXT"],
+];
 // `mfa_at`: when this sign-in passed the second step. Admin access needs it.
 const SESSION_COLUMNS: [string, string][] = [["user_agent", "TEXT"], ["mfa_at", "INTEGER"]];
 // Mail the admin archived: hidden from the Inbox list (shown under Archived) until moved back.
@@ -441,6 +459,8 @@ const REPORT_COLUMNS: [string, string][] = [
   ["details", "TEXT"],
 ];
 const FAMILY_COLUMNS: [string, string][] = [
+  // The school plan (ms): a teacher account with this in the future may import rosters while the `school-plan` flag is on.
+  ["school_until", "INTEGER"],
   ["billing_event_at", "INTEGER NOT NULL DEFAULT 0"],
   // Referrals: this family's shareable code, the family that referred it, and when that family was thanked.
   ["referral_code", "TEXT"],
@@ -502,6 +522,7 @@ async function migrate(c: Client) {
   for (const [name, type] of PARENT_COLUMNS) {
     if (!have.has(name)) await c.execute(`ALTER TABLE parents ADD COLUMN ${name} ${type}`);
   }
+  await c.execute("CREATE UNIQUE INDEX IF NOT EXISTS students_external ON students (class_id, external_id) WHERE external_id IS NOT NULL");
   await c.execute("CREATE UNIQUE INDEX IF NOT EXISTS parents_google_sub ON parents (google_sub) WHERE google_sub IS NOT NULL");
 }
 

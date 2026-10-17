@@ -35,6 +35,8 @@ export const FLAGS: readonly FlagDef[] = [
   { key: "gift-plans", label: "Gift a plan", description: "Buying one year of the family plan as a gift code at /account/gift/. Off until Stripe checkout has been tried with a test gift: the page then says gifts aren't open yet.", scope: "server", defaultOn: false },
   { key: "new-classes", label: "New classes", description: "Teachers creating new classes. Existing classes keep working.", scope: "server", defaultOn: true },
   { key: "live-questions", label: "Live class questions", description: "Teachers asking their class a question in real time from the teacher area, and students' devices showing it on the home screen. Off: no new live questions start and devices stop showing them; homework and practice are unchanged.", scope: "server", defaultOn: true },
+  { key: "roster-import", label: "Roster import", description: "Teachers bringing in classes and students from Google Classroom, Clever or ClassLink (each also needs its keys set on the server). Off until the providers' keys are in and an import has been tried.", scope: "server", defaultOn: false },
+  { key: "school-plan", label: "School plan", description: "Roster import needs the school plan: a teacher account the owner has switched it on for under Users. Off: every teacher with roster import on may use it. Turn on only once the school price is decided.", scope: "server", defaultOn: false },
   { key: "class-timer", label: "Class timer", description: "A countdown a teacher starts for the whole class, shown on the teacher's screen and on students' devices. Off: no new timers start and devices stop showing them; practice is unchanged.", scope: "server", defaultOn: true },
 ];
 

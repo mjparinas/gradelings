@@ -109,6 +109,7 @@ async function familyDetail(id: string) {
       plan: String(family.plan),
       trialEndsAt: Number(family.trial_ends_at),
       accessUntil: n(family.access_until),
+      schoolUntil: n(family.school_until),
       discountCode: family.discount_code ?? null,
       stripeCustomer: family.stripe_customer ?? null,
       subscriptionStatus: family.subscription_status ?? null,
@@ -175,6 +176,19 @@ export async function POST(req: Request) {
       const until = extendAccess(detail.family.accessUntil, (body!.days as number | null) ?? null, now);
       await run("UPDATE families SET access_until = ?, updated_at = ? WHERE id = ?", [until, now, familyId]);
       await log("user.grant-access", { days: body!.days ?? "lifetime", until });
+      return json({ ok: true });
+    }
+    case "grant-school": {
+      // The school plan (roster import): days, or left out for lifetime. Separate from the family's own access.
+      if (body!.days != null && !wholeDays(body!.days, 3650)) return error(400, "Days must be a whole number from 1 to 3650, or left out for lifetime.");
+      const until = extendAccess(detail.family.schoolUntil, (body!.days as number | null) ?? null, now);
+      await run("UPDATE families SET school_until = ?, updated_at = ? WHERE id = ?", [until, now, familyId]);
+      await log("user.grant-school", { days: body!.days ?? "lifetime", until });
+      return json({ ok: true });
+    }
+    case "remove-school": {
+      await run("UPDATE families SET school_until = NULL, updated_at = ? WHERE id = ?", [now, familyId]);
+      await log("user.remove-school");
       return json({ ok: true });
     }
     case "remove-access": {

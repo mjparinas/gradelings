@@ -62,7 +62,7 @@ export interface StudentCode {
 }
 
 /** Adds students to a class. Returns the ones created, each with the code they sign in with. */
-export async function addStudents(cls: ClassRow, names: string[], grade: Profile["grade"] = cls.grade): Promise<StudentCode[]> {
+export async function addStudents(cls: ClassRow, names: string[], grade: Profile["grade"] = cls.grade, externalIds: (string | null)[] = []): Promise<StudentCode[]> {
   const have = Number((await query<{ n: number }>("SELECT COUNT(*) AS n FROM class_members WHERE class_id = ?", [cls.id]))[0].n);
   const room = Math.max(0, MAX_STUDENTS - have);
   const take = names.slice(0, room);
@@ -98,7 +98,7 @@ export async function addStudents(cls: ClassRow, names: string[], grade: Profile
       { sql: "INSERT INTO profiles (id, family_id, data, updated_at) VALUES (?, ?, ?, ?)", args: [profileId, familyId, JSON.stringify(profile), now] },
       { sql: "INSERT INTO child_settings (profile_id, family_id, data, updated_at) VALUES (?, ?, ?, ?)", args: [profileId, familyId, JSON.stringify(settings), now] },
       { sql: "INSERT INTO class_members (class_id, profile_id, family_id, joined_at, grade) VALUES (?, ?, ?, ?, ?)", args: [cls.id, profileId, familyId, now, grade] },
-      { sql: "INSERT INTO students (id, class_id, family_id, parent_id, profile_id, login_code, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)", args: [id, cls.id, familyId, parentId, profileId, code, now] },
+      { sql: "INSERT INTO students (id, class_id, family_id, parent_id, profile_id, login_code, created_at, external_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", args: [id, cls.id, familyId, parentId, profileId, code, now, externalIds[i] ?? null] },
     );
     created.push({ id, profileId, name, loginCode: code });
   });
