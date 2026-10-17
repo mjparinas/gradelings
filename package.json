@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node scripts/fetch-piper.mjs --optional && next dev",
+    "dev": "node scripts/fetch-kokoro.mjs --optional && next dev",
     "build": "next build && node scripts/csp-postbuild.mjs",
-    "prebuild": "node scripts/fetch-piper.mjs",
+    "prebuild": "node scripts/fetch-kokoro.mjs",
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",

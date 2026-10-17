@@ -1,64 +1,64 @@
 "use client";
 
 import { useEffect, useState, useSyncExternalStore } from "react";
-import { downloadPiper, getPiperState, PIPER_VOICES, piperDownloadBytes, piperSupported, removePiper, setPiperEnabled, subscribePiper, type PiperState } from "@/lib/piper";
-import { previewPiper, stopSpeaking, type SpeechLanguage } from "@/lib/speech";
+import { downloadKokoro, getKokoroState, KOKORO_VOICES, kokoroDownloadBytes, kokoroSupported, removeKokoro, setKokoroEnabled, subscribeKokoro, type KokoroState } from "@/lib/kokoro";
+import { previewKokoro, stopSpeaking, type SpeechLanguage } from "@/lib/speech";
 import { useSay } from "@/lib/say";
 import { Switch } from "./common";
 
 const mb = (bytes: number) => `${Math.max(1, Math.round(bytes / 1e6))} MB`;
 
 /**
- * The Piper voice for one language on this device. English carries the on/off switch, which is on
+ * The Kokoro voice for one language on this device. English carries the on/off switch, which is on
  * by default: the voice then downloads by itself in the background for children with read-aloud on.
  */
-export function PiperVoice({ language }: { language: SpeechLanguage }) {
-  const piper = useSyncExternalStore<PiperState | undefined>(subscribePiper, getPiperState, () => undefined);
+export function KokoroVoice({ language }: { language: SpeechLanguage }) {
+  const kokoro = useSyncExternalStore<KokoroState | undefined>(subscribeKokoro, getKokoroState, () => undefined);
   const [size, setSize] = useState<number>();
   const [previewing, setPreviewing] = useState(false);
   const [previewFailed, setPreviewFailed] = useState(false);
   const say = useSay();
-  const voice = piper?.voices[language];
-  const otherReady = piper?.voices[language === "en" ? "fr" : "en"].state === "ready";
+  const voice = kokoro?.voices[language];
+  const otherReady = kokoro?.voices[language === "en" ? "fr" : "en"].state === "ready";
 
   useEffect(() => {
-    if (voice?.state === "missing") void piperDownloadBytes(language).then(setSize);
+    if (voice?.state === "missing") void kokoroDownloadBytes(language).then(setSize);
   }, [voice?.state, language, otherReady]);
 
-  if (!piper || !voice || voice.state === "checking") return null;
-  if (!piperSupported()) return language === "en" ? <p className="text-sm text-ink-soft">This browser can&apos;t run the offline voice.</p> : null;
+  if (!kokoro || !voice || voice.state === "checking") return null;
+  if (!kokoroSupported()) return language === "en" ? <p className="text-sm text-ink-soft">This browser can&apos;t run the offline voice.</p> : null;
 
   const french = language === "fr";
   // The French voice downloads by itself for a child with read-aloud and French on, so there's no button for it.
   if (french && voice.state === "missing") return null;
   const download = () => {
     // Downloading by hand means the parent wants to hear it.
-    if (!french) setPiperEnabled(true);
-    void downloadPiper(language);
+    if (!french) setKokoroEnabled(true);
+    void downloadKokoro(language);
   };
   const toggle = (
     <Switch
       label="Use the offline voice for read-aloud"
-      value={piper.enabled}
+      value={kokoro.enabled}
       onChange={(on) => {
         stopSpeaking();
-        setPiperEnabled(on);
+        setKokoroEnabled(on);
       }}
       help="On this device only. Turn it off to use the device voice instead."
     />
   );
-  const name = PIPER_VOICES[language].name;
+  const name = KOKORO_VOICES[language].name;
   const preview = () => {
     stopSpeaking();
     setPreviewFailed(false);
     setPreviewing(true);
-    previewPiper(language)
+    previewKokoro(language)
       .catch(() => setPreviewFailed(true))
       .finally(() => setPreviewing(false));
   };
 
   return (
-    <div className="flex flex-col gap-3 rounded-xl border-2 border-line p-4" data-testid={`piper-${language}`}>
+    <div className="flex flex-col gap-3 rounded-xl border-2 border-line p-4" data-testid={`kokoro-${language}`}>
       <div>
         <h3 className="text-lg font-bold">{french ? "Offline French voice" : "Offline natural voice"}</h3>
         <p className="text-sm text-ink-soft">
@@ -72,7 +72,7 @@ export function PiperVoice({ language }: { language: SpeechLanguage }) {
 
       {voice.state === "missing" && (
         <>
-          {piper.enabled && (
+          {kokoro.enabled && (
             <p className="text-sm text-ink-soft">
               {french
                 ? "It downloads by itself for a child with \"Read questions out loud\" and French switched on, when this device isn't on mobile data."
@@ -82,17 +82,17 @@ export function PiperVoice({ language }: { language: SpeechLanguage }) {
           <button
             type="button"
             className="self-start rounded-xl bg-[#4f8ef7] px-4 py-2.5 font-bold text-[#0f172a] disabled:opacity-40"
-            disabled={piper.voices[french ? "en" : "fr"].state === "downloading"}
+            disabled={kokoro.voices[french ? "en" : "fr"].state === "downloading"}
             onClick={download}
           >
-            {`⬇ Download ${french ? "French voice" : "voice"}${piper.enabled ? " now" : ""}${size ? ` (${mb(size)})` : ""}`}
+            {`⬇ Download ${french ? "French voice" : "voice"}${kokoro.enabled ? " now" : ""}${size ? ` (${mb(size)})` : ""}`}
           </button>
           {voice.error && (
             <p role="alert" className="text-sm font-semibold text-nudge-dark">
               {voice.error}
             </p>
           )}
-          {!french && !piper.enabled && <p className="text-sm text-ink-soft">Best on Wi-Fi. Until it&apos;s downloaded and switched on, read-aloud uses the device voice below.</p>}
+          {!french && !kokoro.enabled && <p className="text-sm text-ink-soft">Best on Wi-Fi. Until it&apos;s downloaded and switched on, read-aloud uses the device voice below.</p>}
         </>
       )}
 
@@ -118,7 +118,7 @@ export function PiperVoice({ language }: { language: SpeechLanguage }) {
             <button type="button" className="rounded-xl bg-[#4f8ef7] px-4 py-2.5 font-bold text-[#0f172a]" onClick={preview} disabled={previewing}>
               {previewing ? "Speaking…" : french ? "▶ Preview French" : "▶ Preview"}
             </button>
-            <button type="button" className="rounded-xl border-2 border-line px-4 py-2.5 font-semibold" onClick={() => void removePiper(language)}>
+            <button type="button" className="rounded-xl border-2 border-line px-4 py-2.5 font-semibold" onClick={() => void removeKokoro(language)}>
               Remove from this device
             </button>
           </div>
@@ -130,7 +130,7 @@ export function PiperVoice({ language }: { language: SpeechLanguage }) {
         </>
       )}
       <p className="text-xs text-ink-soft">
-        {PIPER_VOICES[language].credit} Speech by <a className="underline" href="https://github.com/rhasspy/piper">Piper</a> and{" "}
+        {KOKORO_VOICES[language].credit} Speech by <a className="underline" href="https://github.com/hexgrad/kokoro">Kokoro</a> and{" "}
         <a className="underline" href="https://github.com/espeak-ng/espeak-ng">eSpeak NG</a> (GPL-3.0).
       </p>
     </div>
