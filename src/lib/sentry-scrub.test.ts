@@ -1,6 +1,6 @@
-import type { ErrorEvent } from "@sentry/nextjs";
+import type { ErrorEvent, Event } from "@sentry/nextjs";
 import { describe, expect, it } from "vitest";
-import { scrubEvent, scrubText } from "./sentry-scrub";
+import { scrubEvent, scrubText, scrubTransaction } from "./sentry-scrub";
 
 describe("error report scrubbing", () => {
   it("removes emails and one-time tokens from text", () => {
@@ -26,5 +26,29 @@ describe("error report scrubbing", () => {
     expect(out.message).toBe("oops [email]");
     expect(out.exception?.values?.[0].value).toBe("bad token=[removed] for [email]");
     expect(out.breadcrumbs).toEqual([{ category: "navigation", message: "to /parents/?token=[removed]", data: undefined }]);
+  });
+});
+
+describe("timing report scrubbing", () => {
+  it("keeps the route and durations but drops people, queries and headers", () => {
+    const event = {
+      type: "transaction",
+      transaction: "POST /api/sync/",
+      user: { email: "a@b.co" },
+      request: { url: "https://x.test/api/sync/?token=zzz", headers: { cookie: "s" }, data: { name: "Maya" } },
+      breadcrumbs: [{ category: "console", message: "hello Maya" }],
+      contexts: { trace: { data: { "http.route": "/api/sync/", "http.query": "?token=zzz", "user.email": "a@b.co" } } },
+      spans: [
+        { op: "http.client", description: "GET https://db.turso.io/v2/pipeline?token=zzz", data: { "url.full": "https://db.turso.io/?token=zzz", "http.request.header.cookie": "s", "http.response.status_code": 200 } },
+      ],
+    } as unknown as Event;
+    const out = scrubTransaction(event);
+    expect(out.transaction).toBe("POST /api/sync/");
+    expect(out.user).toBeUndefined();
+    expect(out.request).toEqual({ url: "https://x.test/api/sync/?token=[removed]" });
+    expect(out.breadcrumbs).toEqual([]);
+    expect(out.contexts?.trace?.data).toEqual({ "http.route": "/api/sync/" });
+    expect(out.spans?.[0].description).toBe("GET https://db.turso.io/v2/pipeline?token=[removed]");
+    expect(out.spans?.[0].data).toEqual({ "url.full": "https://db.turso.io/?token=[removed]", "http.response.status_code": 200 });
   });
 });

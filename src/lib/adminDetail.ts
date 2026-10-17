@@ -21,6 +21,8 @@ export const DETAIL_VIEWS = [
   "referrals",
   "customers-ever",
   "practising",
+  "guests",
+  "try-it-free",
 ] as const;
 export type DetailView = (typeof DETAIL_VIEWS)[number];
 

@@ -514,6 +514,10 @@ describe("codes, reports, stats and the change log", () => {
     for (const [i, t] of [now - 3_600_000, now - 29.5 * 86_400_000, now + 86_400_000].entries())
       await dbm.run("INSERT INTO events (id, family_id, profile_id, t, data) VALUES (?, ?, ?, ?, ?)", [`tile-${i}`, child.family_id, child.id, t, JSON.stringify({ type: "answer", ms: 5000 })]);
 
+    // Guest devices: today, inside the week and inside the 30 days.
+    const today = Math.floor(now / 86_400_000);
+    for (const [i, ago] of [0, 3, 20, 40].entries()) await dbm.run("INSERT INTO guest_devices (device_hash, last_day) VALUES (?, ?)", [`tile-guest-${i}`, today - ago]);
+
     const s = await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json();
     const head = async (v: string, label: string) => {
       const d = await (await as(admin.cookie).get(statsDetail, `/api/admin/stats/detail/?view=${v}`)).json();
@@ -551,12 +555,20 @@ describe("codes, reports, stats and the change log", () => {
       ["practising", "This week", s.engagement.d7],
       ["practising", "30 days", s.engagement.d30],
       ["practising", "Questions", s.engagement.answers30],
+      ["guests", "Today", s.engagement.guests.d1],
+      ["guests", "This week", s.engagement.guests.d7],
+      ["guests", "Last 30 days", s.engagement.guests.d30],
     ];
     for (const [v, label, tile] of pairs) expect(await head(v, label), `${v}: ${label}`).toBe(tile);
     expect(s.people.students).toBe(2);
     expect(await head("teachers", "Linked by parents")).toBe(1);
     expect(s.revenue.usd.mrr).toBe(1499);
     expect(s.engagement.d1).toBeGreaterThanOrEqual(1);
+    // Guest players: 3 of the 4 devices played in the last 30 days, and the list adds up to the tile.
+    expect(s.engagement.guests).toEqual({ d1: 1, d7: 2, d30: 3 });
+    const guestList = await (await as(admin.cookie).get(statsDetail, "/api/admin/stats/detail/?view=guests")).json();
+    expect(guestList.tables[0].rows.reduce((n: number, r: { cells: number[] }) => n + r.cells[1], 0)).toBe(s.engagement.guests.d30);
+    expect(JSON.stringify(guestList)).not.toContain("tile-guest");
   });
 
   it("records every change with who made it", async () => {

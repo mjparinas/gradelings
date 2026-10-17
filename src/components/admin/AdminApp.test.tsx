@@ -26,6 +26,7 @@ const stats = {
     payments: [],
     activity: [],
     activeFamilies: { d1: 1, d7: 1, d30: 1 },
+    guestDevices: { d1: 0, d7: 0, d30: 0 },
     monthlyCosts: 0,
     redemptions: 0,
     reports: 0,

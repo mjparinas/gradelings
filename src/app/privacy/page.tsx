@@ -60,7 +60,7 @@ export default function PrivacyPage() {
           <strong>If you write to us through the contact page:</strong> your name if you give it, your email address, the topic you pick and your message. They are emailed to our inbox through Resend so we can reply; we don’t copy them into our database. The same goes for anything you email us directly. To answer faster, we may send your message to Anthropic so its AI model, Claude, can suggest a first draft of our reply; a person reads and edits every reply before it is sent, and nothing is answered automatically.
         </p>
         <p>
-          <strong>On your device:</strong> the app saves progress on the device first, so it works offline, using the browser’s local storage and IndexedDB. Your Parent area PIN is stored there too, salted and hashed, and your read-aloud voice choice is kept per device. If you never sign in, this information stays on that device and is not sent to us.
+          <strong>On your device:</strong> the app saves progress on the device first, so it works offline, using the browser’s local storage and IndexedDB. Your Parent area PIN is stored there too, salted and hashed, and your read-aloud voice choice is kept per device. If you never sign in, your children’s progress stays on that device and is not sent to us. To count how many devices are being played without an account, once a day the app on such a device sends a random code it made for itself; we keep only a one-way scramble of that code and the date, for 35 days at most, and nothing about the children, their names, grade or results. This is not done in the United States, where a parent’s consent comes first, or for class student accounts.
         </p>
         <p>
           <strong>Automatically:</strong> our servers keep ordinary technical logs (such as IP address, browser type and the time of a request) for security and to keep the service running. To block repeated guessing of passwords, we also keep a short-lived counter of sign-in, sign-up and reset attempts for each IP address. We also measure visits to our website and whether our emails are opened and clicked; see “Who we share it with” below.
@@ -118,7 +118,7 @@ export default function PrivacyPage() {
             <strong>Anthropic</strong>, to suggest a first draft when we answer a message you sent us. It receives that message, your name and email address as written in it, and nothing else about your account or your children. Under Anthropic’s commercial terms it doesn’t use it to train its models.
           </li>
           <li>
-            <strong>Sentry</strong>, to tell us when the app crashes. Error reports are stripped of names, email addresses, cookies and what was typed or tapped before they leave your device or our server, and are not used for anything else.
+            <strong>Sentry</strong>, to tell us when the app crashes or runs slowly. Error reports, and timing reports (which route ran and how long it took), are stripped of names, email addresses, cookies and what was typed or tapped before they leave your device or our server, and are not used for anything else.
           </li>
           <li>
             <strong>Vercel Web Analytics and Speed Insights</strong>, to count anonymous page views and measure how fast our public website loads, such as which pages are visited, from which country, how quickly they appear and how often their buttons to try or subscribe are pressed. It sets no cookies. It is switched off in the kids’ app, the parent area, shared reports, shared milestones and account pages.

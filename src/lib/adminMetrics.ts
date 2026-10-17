@@ -72,6 +72,8 @@ export interface MetricsInput {
   /** The last 30 UTC days of practice, any order; days without practice can be left out. */
   activity: DayActivity[];
   activeFamilies: { d1: number; d7: number; d30: number };
+  /** Devices that played with no parent account (UTC days: today, the last 7 and the last 30). */
+  guestDevices: { d1: number; d7: number; d30: number };
   /** Running costs per month, in cents, entered by the admin (hosting, email, tools). */
   monthlyCosts: number;
   redemptions: number;
@@ -113,7 +115,7 @@ export interface Metrics {
     weekly: Point[];
     monthly: Point[];
   };
-  engagement: { d1: number; d7: number; d30: number; stickiness: number | null; daily: { label: string; families: number; answers: number; minutes: number }[]; answers30: number; minutes30: number };
+  engagement: { d1: number; d7: number; d30: number; guests: { d1: number; d7: number; d30: number }; stickiness: number | null; daily: { label: string; families: number; answers: number; minutes: number }[]; answers30: number; minutes30: number };
   revenue: {
     mrr: number;
     arr: number;
@@ -348,6 +350,7 @@ export function computeMetrics(input: MetricsInput): Metrics {
     },
     engagement: {
       ...input.activeFamilies,
+      guests: input.guestDevices,
       stickiness: rate(input.activeFamilies.d1, input.activeFamilies.d30),
       daily,
       answers30: daily.reduce((s, d) => s + d.answers, 0),
@@ -391,7 +394,7 @@ export const SECTION_INPUTS: Record<MetricSection, readonly (keyof Omit<MetricsI
   money: ["families", "payments", "monthlyCosts"],
   customers: ["families", "parents", "children", "teachers", "students", "classes", "redemptions", "reports"],
   growth: ["families", "payments"],
-  practice: ["activity", "activeFamilies"],
+  practice: ["activity", "activeFamilies", "guestDevices"],
 };
 
 export interface SectionMetrics {
@@ -413,6 +416,7 @@ export const emptyInput = (now: number): MetricsInput => ({
   payments: [],
   activity: [],
   activeFamilies: { d1: 0, d7: 0, d30: 0 },
+  guestDevices: { d1: 0, d7: 0, d30: 0 },
   monthlyCosts: 0,
   redemptions: 0,
   reports: 0,

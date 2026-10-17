@@ -1,5 +1,7 @@
 import "server-only";
 import { query } from "./db";
+import { guestCounts, guestLastPlayed } from "./guests";
+import { clicksDetail } from "./traffic";
 import { getFramework } from "@/content/frameworks";
 import { GRADE_LABEL } from "@/content/subjects";
 import type { GradeId } from "@/content/types";
@@ -746,5 +748,26 @@ export async function detailFor(view: DetailView, now = Date.now()): Promise<Det
         ],
       };
     }
+    case "guests": {
+      // Same counts as the tile: guestCounts is the one query for both. Devices are one-way hashes, so the list is by day.
+      const [counts, days] = await Promise.all([guestCounts(now), guestLastPlayed(now)]);
+      return {
+        title: "Guest players",
+        intro: "Devices where children played in the Play area with no parent account, by the last day each played (UTC). A device is counted once; its practice stays on the device and nothing about any child reaches us. Counted from the day this was switched on, and only for Canadian curricula.",
+        summary: [
+          { label: "Today", value: counts.d1, kind: "number" },
+          { label: "This week", value: counts.d7, kind: "number" },
+          { label: "Last 30 days", value: counts.d30, kind: "number" },
+        ],
+        tables: [
+          table(
+            [col("Last played", "date"), col("Devices", "number")],
+            days.map((d) => ({ cells: [d.day * DAY, d.devices] })),
+          ),
+        ],
+      };
+    }
+    case "try-it-free":
+      return clicksDetail(now);
   }
 }

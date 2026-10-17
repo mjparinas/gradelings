@@ -245,6 +245,42 @@ describe("Vercel Web Analytics", () => {
     expect(without.report.visitors).toBe(80);
   });
 
+  it("gives the dashboard's Try it free tile and the list it opens the same count, pages Vercel folds into Others included", async () => {
+    process.env.VERCEL_TOKEN = "vercel-secret";
+    process.env.VERCEL_PROJECT_ID = "prj_1";
+    fakeServices();
+    const part = await traffic.trafficPart("visits", traffic.CLICKS_DAYS, { now: NOW });
+    if (part.state !== "ok") throw new Error(JSON.stringify(part));
+    // 9 + 2 on named pages and 1 on "Others"; 3 Subscribe clicks.
+    expect(part.report.clickTotals).toEqual({ trial: 12, subscribe: 3 });
+    const d = await traffic.clicksDetail(NOW);
+    expect(d.summary).toEqual([
+      { label: "Try it free clicks", value: 12, kind: "number" },
+      { label: "Subscribe clicks", value: 3, kind: "number" },
+    ]);
+    expect(d.tables[0].rows.map((r) => r.cells)).toEqual([
+      ["/", 9, 0],
+      ["/pricing/", 2, 3],
+      ["All other pages", 1, 0],
+    ]);
+    const column = (i: number) => d.tables[0].rows.reduce((n, r) => n + Number(r.cells[i]), 0);
+    expect(column(1)).toBe(d.summary[0].value);
+    expect(column(2)).toBe(d.summary[1].value);
+  });
+
+  it("says why the Try it free list is empty when Vercel isn't set up or won't give events", async () => {
+    expect(await traffic.clicksDetail(NOW)).toMatchObject({ intro: expect.stringMatching(/Needs Vercel Web Analytics.*VERCEL_TOKEN/), tables: [{ rows: [], total: 0 }] });
+    traffic.clearTrafficCache();
+    process.env.VERCEL_TOKEN = "vercel-secret";
+    process.env.VERCEL_PROJECT_ID = "prj_1";
+    fakeServices();
+    const vercel = vi.mocked(fetch).getMockImplementation()!;
+    vi.mocked(fetch).mockImplementation(async (input, init) =>
+      String(input).includes("/events/") ? new Response(JSON.stringify({ error: { message: "Custom events need Pro." } }), { status: 403 }) : vercel(input, init),
+    );
+    expect(await traffic.clicksDetail(NOW)).toMatchObject({ intro: expect.stringMatching(/paid Vercel plan/), summary: [] });
+  });
+
   it("asks for the settings it needs", async () => {
     expect(await traffic.visitsReport(28, NOW)).toMatchObject({ state: "setup", setup: expect.stringMatching(/VERCEL_TOKEN/) });
   });

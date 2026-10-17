@@ -100,6 +100,15 @@ describe("syncNow", () => {
     expect(useStore.getState().sync.status).toBe("signed-out");
   });
 
+  it("tells the server a guest device was played today, and sends no practice", async () => {
+    localStorage.clear();
+    fetchMock.mockResolvedValue(new Response("{}", { status: 200 }));
+    useStore.setState({ family: { plan: "trial", trialEndsAt: 0, updatedAt: 0 }, events: [answer("today1", "kid1", Date.now() - 1000)] });
+    await syncNow();
+    expect(sent().map((c) => c.url)).toEqual(["/api/guests/seen/"]);
+    expect(Object.keys(sent()[0].body)).toEqual(["d"]);
+  });
+
   it("waits for a connection instead of trying offline", async () => {
     online = false;
     await syncNow();

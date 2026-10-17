@@ -376,6 +376,14 @@ const SCHEMA = [
     used_at INTEGER,
     PRIMARY KEY (parent_id, code_hash)
   )`,
+  // Devices that played with no parent account, for the admin dashboard's count. A one-way hash of the device's
+  // random id and the last UTC day it played (days since 1970): no family, child, grade, province or result. Rows
+  // older than 35 days are deleted by the daily job, and a device that signs in to an account is forgotten.
+  `CREATE TABLE IF NOT EXISTS guest_devices (
+    device_hash TEXT PRIMARY KEY,
+    last_day INTEGER NOT NULL
+  )`,
+  `CREATE INDEX IF NOT EXISTS guest_devices_day ON guest_devices (last_day)`,
 ];
 
 /** Columns added after the first release. SQLite has no "ADD COLUMN IF NOT EXISTS". */
