@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { formatClock, TIMER_POLL_IDLE_MS, TIMER_POLL_OPEN_MS, timeLeft, type ClassTimer } from "@/lib/classTimer";
+import { useEffect, useState } from "react";
+import { formatClock, timeLeft, type ClassTimer } from "@/lib/classTimer";
+import { subscribeLivePoll } from "@/lib/livePoll";
 import { useChildSay } from "@/lib/say";
 import { useActiveProfile, useStore } from "@/lib/store";
 
@@ -18,44 +19,12 @@ export function useClassTimer(): Received | null {
   const profileId = useActiveProfile()?.id ?? "";
   const inClass = useStore((s) => s.classwork.some((c) => c.profileId === profileId));
   const [got, setGot] = useState<Received | null>(null);
-  const showing = useRef(false);
   useEffect(() => {
     if (!inClass || !profileId) return;
-    let stopped = false;
-    let timer: ReturnType<typeof setTimeout> | undefined;
-    const schedule = () => {
-      if (!stopped) timer = setTimeout(poll, showing.current ? TIMER_POLL_OPEN_MS : TIMER_POLL_IDLE_MS);
-    };
-    const poll = async () => {
-      if (document.visibilityState !== "visible" || navigator.onLine === false) return schedule();
-      try {
-        const res = await fetch(`/api/live/?profile=${encodeURIComponent(profileId)}&timer=1`, { credentials: "same-origin", cache: "no-store" });
-        if (!res.ok) throw new Error(String(res.status));
-        const data = (await res.json()) as { timer: Received["timer"] | null };
-        if (!stopped) {
-          showing.current = Boolean(data.timer);
-          setGot(data.timer ? { timer: data.timer, at: Date.now() } : null);
-        }
-      } catch {
-        // Offline or a hiccup: the countdown on screen keeps counting from its last answer.
-      }
-      schedule();
-    };
-    void poll();
-    const onVisible = () => {
-      if (document.visibilityState === "visible") {
-        clearTimeout(timer);
-        void poll();
-      }
-    };
-    document.addEventListener("visibilitychange", onVisible);
-    window.addEventListener("online", onVisible);
-    return () => {
-      stopped = true;
-      clearTimeout(timer);
-      document.removeEventListener("visibilitychange", onVisible);
-      window.removeEventListener("online", onVisible);
-    };
+    return subscribeLivePoll(profileId, (event) => {
+      // Offline or a hiccup: the countdown on screen keeps counting from its last answer.
+      if ("data" in event) setGot(event.data.timer ? { timer: event.data.timer, at: event.data.at } : null);
+    });
   }, [inClass, profileId]);
   return inClass ? got : null;
 }

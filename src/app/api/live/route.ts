@@ -8,25 +8,26 @@ import type { LiveForChild, LiveQuestionData } from "@/lib/live";
 // as a parent's: it only reads and answers the open question in a class the child is already in, and
 // sees nothing about anyone else. Needs a connection; the kids' app hides it while offline.
 
-/** The open question for one of this device's children (?profile=), or null; with ?timer=1, the class timer instead. */
+/**
+ * What a device polls: the open question and the class timer for one of this device's children (?profile=),
+ * together so each device makes one request, not two. With ?timer=1, only the timer (older app versions).
+ */
 export async function GET(req: Request) {
   const session = await getSession(req, { student: true });
-  if (!session) return json({ live: null });
+  if (!session) return json({ live: null, timer: null });
   const params = new URL(req.url).searchParams;
   const profileId = params.get("profile") ?? "";
-  // ?timer=1: only the class timer, which shows on every kids' screen (the question is for the home screen).
-  if (params.get("timer")) {
-    if (!profileId || !(await isFlagOn("class-timer", session.familyId))) return json({ timer: null });
-    const found = await timerForChild(session.familyId, profileId);
-    return json({ timer: found ? { ...found.timer, className: found.className } : null });
-  }
-  if (!profileId || !(await isFlagOn("live-questions", session.familyId))) return json({ live: null });
-  const found = await liveForChild(session.familyId, profileId);
-  if (!found) return json({ live: null });
+  const timerOnly = Boolean(params.get("timer"));
+  if (!profileId) return json({ live: null, timer: null });
+  const [liveOn, timerOn] = await Promise.all([timerOnly ? false : isFlagOn("live-questions", session.familyId), isFlagOn("class-timer", session.familyId)]);
+  const [found, foundTimer] = await Promise.all([liveOn ? liveForChild(session.familyId, profileId) : null, timerOn ? timerForChild(session.familyId, profileId) : null]);
+  const timer = foundTimer ? { ...foundTimer.timer, className: foundTimer.className } : null;
+  if (timerOnly) return json({ timer });
+  if (!found) return json({ live: null, timer });
   const { answer, hint, ...question } = JSON.parse(found.row.data) as LiveQuestionData;
   const revealed = found.row.revealed_at != null;
   const live: LiveForChild = { id: found.row.id, className: found.className, question, mine: found.mine, ...(revealed ? { answer, hint } : {}) };
-  return json({ live });
+  return json({ live, timer });
 }
 
 /** Sends a child's answer (`{ questionId, profileId, choice }`). The first answer counts. */

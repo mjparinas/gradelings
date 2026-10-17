@@ -1,7 +1,7 @@
 import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
 import { classGrades, teachingClass, validUnit } from "@/server/classroom";
 import { isFlagOn } from "@/server/flags";
-import { endLive, liveAnswers, openLive, previewNext, recentLive, revealLive, setLiveReadAloud, startLive, swapNextLive, type LiveRow } from "@/server/live";
+import { endLive, liveAnswers, openLive, cachedPreview, recentLive, revealLive, setLiveReadAloud, startLive, swapNextLive, type LiveRow } from "@/server/live";
 import type { ClassRow } from "@/server/classroom";
 import type { LiveForTeacher, LiveQuestionData } from "@/lib/live";
 
@@ -22,7 +22,7 @@ async function view(row: LiveRow | undefined): Promise<LiveForTeacher | null> {
 /** The open question with a preview of the next one, which only the teacher's side ever gets. */
 async function viewWithNext(row: LiveRow | undefined, cls: ClassRow): Promise<LiveForTeacher | null> {
   const live = await view(row);
-  if (live && row) live.next = (await previewNext(cls, row))?.data ?? null;
+  if (live && row) live.next = (await cachedPreview(cls, row))?.data ?? null;
   return live;
 }
 

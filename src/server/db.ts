@@ -175,7 +175,8 @@ const SCHEMA = [
     created_at INTEGER NOT NULL,
     revealed_at INTEGER,
     ended_at INTEGER,
-    next_swaps INTEGER DEFAULT 0
+    next_swaps INTEGER DEFAULT 0,
+    next_data TEXT
   )`,
   `CREATE INDEX IF NOT EXISTS live_questions_class ON live_questions (class_id, created_at)`,
   `CREATE TABLE IF NOT EXISTS live_answers (
@@ -469,8 +470,9 @@ const FAMILY_COLUMNS: [string, string][] = [
   ["cancelled_at", "INTEGER"],
 ];
 
-// How many times the teacher swapped the previewed next live question (the seed variant it was drawn from).
-const LIVE_COLUMNS: [string, string][] = [["next_swaps", "INTEGER DEFAULT 0"]];
+// How many times the teacher swapped the previewed next live question (the seed variant it was drawn from), and the
+// preview itself, kept so the teacher's screen doesn't regenerate it on every refresh.
+const LIVE_COLUMNS: [string, string][] = [["next_swaps", "INTEGER DEFAULT 0"], ["next_data", "TEXT"]];
 
 async function addColumns(c: Client, table: string, columns: [string, string][]) {
   const have = new Set((await c.execute(`PRAGMA table_info(${table})`)).rows.map((r) => String(r.name)));

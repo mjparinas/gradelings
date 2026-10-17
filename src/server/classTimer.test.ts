@@ -68,6 +68,11 @@ describe("class timer", () => {
     const seen = await get(parent);
     expect(seen).toMatchObject({ label: "Silent reading", running: true, className: "Room 7" });
 
+    // The device's one poll carries the timer beside the open question; the timer-only form still answers.
+    const both = await (await childLive.GET(req(`/api/live/?profile=${kid}`, "GET", undefined, parent))).json();
+    expect(both.live).toBeNull();
+    expect(both.timer).toMatchObject({ running: true, className: "Room 7" });
+
     const paused = (await (await teacherTimer.PATCH(req("/api/classes/timer/", "PATCH", { classId: cls.id, action: "pause" }, teacher))).json()).timer;
     expect(paused.running).toBe(false);
     const frozen = paused.left;

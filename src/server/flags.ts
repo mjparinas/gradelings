@@ -5,6 +5,36 @@ import { query, run } from "./db";
 // Stored state for feature flags and A/B tests. The flag list and the rules for who gets what are in
 // src/lib/flags.ts; this file reads and writes the database.
 
+// Polling endpoints (live questions and the class timer) check flags on every request, so the stored
+// state and each family's overrides are kept in memory for a short while. Changes made on this server
+// show at once; on another server instance they show within FLAG_CACHE_MS.
+const FLAG_CACHE_MS = 30_000;
+const FLAG_CACHE_FAMILIES = 500;
+let statesCache: { at: number; states: Map<string, FlagState> } | null = null;
+const overridesCache = new Map<string, { at: number; overrides: Map<string, boolean> }>();
+
+/** Forgets the remembered flag state (after a change, and in tests). */
+export function clearFlagCache(): void {
+  statesCache = null;
+  overridesCache.clear();
+}
+
+async function cachedStates(now = Date.now()): Promise<Map<string, FlagState>> {
+  if (statesCache && now - statesCache.at < FLAG_CACHE_MS) return statesCache.states;
+  const states = await flagStates();
+  statesCache = { at: now, states };
+  return states;
+}
+
+async function cachedOverrides(familyId: string, now = Date.now()): Promise<Map<string, boolean>> {
+  const hit = overridesCache.get(familyId);
+  if (hit && now - hit.at < FLAG_CACHE_MS) return hit.overrides;
+  const overrides = await familyOverrides(familyId);
+  if (overridesCache.size >= FLAG_CACHE_FAMILIES) overridesCache.clear();
+  overridesCache.set(familyId, { at: now, overrides });
+  return overrides;
+}
+
 export async function flagStates(): Promise<Map<string, FlagState>> {
   const rows = await query<{ key: string; enabled: number; rollout: number }>("SELECT key, enabled, rollout FROM feature_flags");
   return new Map(rows.map((r) => [String(r.key), { enabled: Boolean(Number(r.enabled)), rollout: Number(r.rollout) }]));
@@ -16,6 +46,7 @@ export async function setFlag(key: string, state: FlagState, now = Date.now()): 
      ON CONFLICT(key) DO UPDATE SET enabled = excluded.enabled, rollout = excluded.rollout, updated_at = excluded.updated_at`,
     [key, state.enabled ? 1 : 0, state.rollout, now],
   );
+  clearFlagCache();
 }
 
 export async function familyOverrides(familyId: string): Promise<Map<string, boolean>> {
@@ -27,6 +58,7 @@ export async function familyOverrides(familyId: string): Promise<Map<string, boo
 export async function setOverride(key: string, familyId: string, enabled: boolean | null, now = Date.now()): Promise<void> {
   if (enabled === null) {
     await run("DELETE FROM flag_overrides WHERE key = ? AND family_id = ?", [key, familyId]);
+    overridesCache.delete(familyId);
     return;
   }
   await run(
@@ -34,6 +66,7 @@ export async function setOverride(key: string, familyId: string, enabled: boolea
      ON CONFLICT(key, family_id) DO UPDATE SET enabled = excluded.enabled`,
     [key, familyId, enabled ? 1 : 0, now],
   );
+  overridesCache.delete(familyId);
 }
 
 export async function overrideCounts(): Promise<Map<string, number>> {
@@ -45,12 +78,13 @@ export async function overrideCounts(): Promise<Map<string, number>> {
 export async function isFlagOn(key: string, familyId: string | null): Promise<boolean> {
   const def = flagDef(key);
   if (!def) return false;
-  const state = (await query<{ enabled: number; rollout: number }>("SELECT enabled, rollout FROM feature_flags WHERE key = ?", [key]))[0];
-  const override = familyId ? (await query<{ enabled: number }>("SELECT enabled FROM flag_overrides WHERE key = ? AND family_id = ?", [key, familyId]))[0] : undefined;
+  const [states, overrides] = await Promise.all([cachedStates(), familyId ? cachedOverrides(familyId) : Promise.resolve(new Map<string, boolean>())]);
+  const state = states.get(key);
+  const override = overrides.get(key);
   return flagOn(
     def,
-    state ? { enabled: Boolean(Number(state.enabled)), rollout: Number(state.rollout) } : undefined,
-    override ? Boolean(Number(override.enabled)) : undefined,
+    state,
+    override,
     familyId,
   );
 }

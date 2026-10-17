@@ -153,6 +153,26 @@ describe("live questions", () => {
     expect(await childGet(parent)).toBeNull();
   });
 
+  it("makes the teacher's preview once per question and swap, not on every refresh", async () => {
+    const { teacher, parent, cls, kid } = await classWithChild("lv-cache");
+    const asked = (await (await teacherLive.POST(req("/api/classes/live/", "POST", { classId: cls.id, unitKey: UNIT }, teacher))).json()).live;
+    const stored = async () => (await dbm.query<{ next_data: string | null }>("SELECT next_data FROM live_questions WHERE id = ?", [asked.id]))[0].next_data;
+    expect(JSON.parse((await stored()) ?? "null").shown.data.prompt).toBe(asked.next.prompt);
+    // Refreshing reads the kept copy: a marker put in it comes back.
+    const cache = JSON.parse((await stored())!);
+    cache.shown.data.prompt = "kept copy";
+    await dbm.run("UPDATE live_questions SET next_data = ? WHERE id = ?", [JSON.stringify(cache), asked.id]);
+    const polled = (await (await teacherLive.GET(req(`/api/classes/live/?classId=${cls.id}`, "GET", undefined, teacher))).json()).live;
+    expect(polled.next.prompt).toBe("kept copy");
+    // A swap replaces it, and the child's poll carries their answer in the same read.
+    const swapped = (await (await teacherLive.PATCH(req("/api/classes/live/", "PATCH", { classId: cls.id, action: "swap-next" }, teacher))).json()).live;
+    expect(swapped.next.prompt).not.toBe("kept copy");
+    expect(JSON.parse((await stored())!).shown.data.prompt).toBe(swapped.next.prompt);
+    await childLive.POST(req("/api/live/", "POST", { questionId: asked.id, profileId: kid, choice: asked.question.answer }, parent));
+    const seen = (await (await childLive.GET(req(`/api/live/?profile=${kid}`, "GET", undefined, parent))).json()).live;
+    expect(seen.mine).toBe(asked.question.answer);
+  });
+
   it("previews the next question for the teacher only, swaps it, and asks the one that was shown", async () => {
     const { teacher, parent, cls, kid } = await classWithChild("preview");
     const post = async () => (await (await teacherLive.POST(req("/api/classes/live/", "POST", { classId: cls.id, unitKey: UNIT }, teacher))).json()).live;
@@ -192,10 +212,12 @@ describe("live questions", () => {
     // A student session still can't use the teacher's side.
     expect((await teacherLive.GET(req(`/api/classes/live/?classId=${cls.id}`, "GET", undefined, student))).status).toBe(401);
 
-    await dbm.run("INSERT OR REPLACE INTO feature_flags (key, enabled, rollout, updated_at) VALUES ('live-questions', 0, 100, ?)", [Date.now()]);
+    const flags = await import("@/server/flags");
+    await flags.setFlag("live-questions", { enabled: false, rollout: 100 });
     expect((await (await childLive.GET(req(`/api/live/?profile=${ava.profileId}`, "GET", undefined, student))).json()).live).toBeNull();
     expect((await teacherLive.POST(req("/api/classes/live/", "POST", { classId: cls.id, unitKey: UNIT }, teacher))).status).toBe(503);
     await dbm.run("DELETE FROM feature_flags WHERE key = 'live-questions'");
+    flags.clearFlagCache();
 
     expect((await classes.DELETE(req(`/api/classes/?id=${cls.id}`, "DELETE", undefined, teacher))).status).toBe(200);
     expect((await dbm.query<{ n: number }>("SELECT COUNT(*) AS n FROM live_questions WHERE class_id = ?", [cls.id]))[0].n).toBe(0);
