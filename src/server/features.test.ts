@@ -346,12 +346,12 @@ describe("daily email job", () => {
 describe("report a problem", () => {
   const body = { unitKey: "2/math/tens-and-ones", prompt: "What is 3 tens and 4 ones?", reason: "wrong-answer" };
 
-  it("stores a report with a fixed reason and emails the team", async () => {
+  it("stores a report with a fixed reason and sends no email", async () => {
     const before = email.outbox().length;
     expect((await feedback.POST(req("/api/feedback/", "POST", body))).status).toBe(200);
     const rows = await dbm.query<{ reason: string; family_id: string | null }>("SELECT reason, family_id FROM question_reports");
     expect(rows.at(-1)).toMatchObject({ reason: "wrong-answer", family_id: null });
-    expect(email.outbox().length).toBe(before + 1);
+    expect(email.outbox().length).toBe(before);
   });
 
   it("rejects free-text reasons, odd unit keys and floods", async () => {

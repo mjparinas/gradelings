@@ -1,11 +1,8 @@
-import { appOrigin, clientIp, error, getSession, json, newId, rateLimited, sameOrigin } from "@/server/auth";
+import { clientIp, error, getSession, json, newId, rateLimited, sameOrigin } from "@/server/auth";
 import { run } from "@/server/db";
-import { sendEmail } from "@/server/email";
-import { questionReportEmail } from "@/server/emailTemplates";
-import { CONTACT_EMAIL } from "@/lib/brand";
 import { REPORT_REASONS } from "@/lib/reportReasons";
 import { cleanReportDetails } from "@/lib/questionReport";
-import { FRAMEWORKS, getFramework } from "@/content/frameworks";
+import { FRAMEWORKS } from "@/content/frameworks";
 
 const UNIT_KEY = /^[\w.-]{1,12}\/[\w-]{1,24}\/[\w-]{1,80}$/;
 
@@ -33,6 +30,5 @@ export async function POST(req: Request) {
     framework,
     details ? JSON.stringify(details) : null,
   ]);
-  await sendEmail(questionReportEmail(CONTACT_EMAIL, { unitKey: body.unitKey, prompt, reason: reason.label, curriculum: framework ? getFramework(framework).name : undefined, details }, appOrigin(req)));
   return json({ ok: true });
 }

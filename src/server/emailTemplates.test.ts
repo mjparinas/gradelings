@@ -13,8 +13,6 @@ const every = [
   t.trialEndingEmail("a@example.com", O, 2),
   t.weeklyEmail("a@example.com", O, [{ name: "Maya", minutes: 30, answers: 40, accuracy: 80 }], "u"),
   t.reminderEmail("a@example.com", O, [{ name: "Maya", daysQuiet: 5 }], "u"),
-  t.questionReportEmail("a@example.com", { unitKey: "math/add", prompt: "2+2", reason: "typo" }, O),
-  t.questionReportEmail("a@example.com", { unitKey: "3/math/multiplication", prompt: "What is 2 × 4?", reason: "unclear", curriculum: "British Columbia", details: { choices: ["8", "10"], answer: "8" } }, O),
   t.newSignInEmail("a@example.com", O, "Safari on iPad"),
   t.passwordChangedEmail("a@example.com", O),
   t.accountDeletedEmail("a@example.com", O),
@@ -106,14 +104,5 @@ describe("emails to a US family", () => {
     expect(text).toContain("Their favorite lessons");
     expect(t.reminderEmail("a@example.com", O, [{ name: "Maya", daysQuiet: 5 }], "u").text).toContain("Their favourite lessons");
     expect(t.trialRecapEmail("a@example.com", O, 5, kids, "CA").text).toContain("Maya has practised on 3 days");
-  });
-});
-
-describe("question report email", () => {
-  it("names the curriculum and lists the choices and answer the child saw", () => {
-    const e = t.questionReportEmail("a@example.com", { unitKey: "3/math/multiplication", prompt: "What is 2 × 4?", reason: "unclear", curriculum: "British Columbia", details: { choices: ["8", "10"], answer: "8" } }, O);
-    expect(e.text).toContain("Curriculum: British Columbia");
-    expect(e.text).toContain("Choices: 8 · 10");
-    expect(e.text).toContain("Answer: 8");
   });
 });
