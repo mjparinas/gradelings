@@ -18,7 +18,8 @@ vi.mock("@/content", () => ({
     subject: "math",
     units: [{ id: "counting", emoji: "🔢", title: "Counting" }, { id: "patterns", emoji: "🟣", title: "Patterns" }],
   }],
-  getUnitRef: (key: string) => ({ "3/math/counting": { unit: { title: "Counting", emoji: "🔢" } }, "3/math/patterns": { unit: { title: "Patterns", emoji: "🟣" } } })[key],
+  getUnitRef: (key: string) => ({ "3/math/counting": { unit: { title: "Counting", emoji: "🔢", generate: () => [{ kind: "choice", prompt: "What comes after 4?", hint: "Count on one.", answer: "5", choices: [{ id: "5", label: "5" }, { id: "6", label: "6" }] }] } }, "3/math/patterns": { unit: { title: "Patterns", emoji: "🟣", generate: () => [] } } })[key],
+  parseUnitKey: (key: string) => { const [grade, subject, unitId] = key.split("/"); return { grade, subject, unitId }; },
   loadGrade: vi.fn().mockResolvedValue(undefined),
 }));
 
@@ -938,6 +939,23 @@ describe("homework tools", () => {
     expect(link).toHaveAttribute("target", "_blank");
     expect(link).toHaveAttribute("rel", expect.stringContaining("noopener"));
     expect(screen.getByRole("link", { name: "Preview Patterns (opens in a new tab)" })).toHaveAttribute("href", "/curriculum/ontario/grade-3/math/patterns/");
+  });
+
+  it("lets a teacher try an assigned unit as a student, and nothing is sent to the server", async () => {
+    serve(withExtras);
+    const user = await openClass();
+    await openTab(user, "Homework");
+    mocks.call.mockClear();
+    await user.click(screen.getByRole("button", { name: "Try Counting as a student" }));
+    const dialog = await screen.findByRole("dialog", { name: /Try as a student: .*Counting/ });
+    expect(await within(dialog).findByText("What comes after 4?")).toBeInTheDocument();
+    await user.click(within(dialog).getByRole("button", { name: /5/ }));
+    expect(await within(dialog).findByText(/Right!/)).toBeInTheDocument();
+    await user.click(within(dialog).getByRole("button", { name: "Finish" }));
+    expect(await within(dialog).findByText(/1 of 1 right on the first try/)).toBeInTheDocument();
+    expect(mocks.call).not.toHaveBeenCalled();
+    await user.keyboard("{Escape}");
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
   });
 
   it("puts a removed unit back with its date, questions, students and the day it was first assigned", async () => {
