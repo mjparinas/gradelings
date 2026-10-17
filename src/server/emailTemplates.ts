@@ -6,7 +6,6 @@ import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, SUBSCRIBE_HREF } from "@/lib/plan"
 import { countryOf, type CountryCode } from "@/lib/country";
 import type { EmailKind } from "@/lib/emailKinds";
 import { localizeCopy } from "@/content/locale";
-import { detailLines, type ReportDetails } from "@/lib/questionReport";
 import type { Email } from "./email";
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
@@ -249,20 +248,6 @@ export function reminderEmail(to: string, origin: string, children: ReminderChil
     body: [...lines, "Every bit counts, and there's no streak to lose. Their favourite lessons are always waiting."],
     button: { label: `Open ${APP_NAME}`, url: `${origin}/play/` },
     footnote: "You asked for practice reminders. We send at most one a week, and only after a few quiet days.",
-  });
-}
-
-export function questionReportEmail(
-  to: string,
-  p: { unitKey: string; prompt: string; reason: string; curriculum?: string; details?: ReportDetails },
-  origin: string,
-): Email {
-  return layout({
-    to,
-    origin,
-    subject: `Question reported: ${p.unitKey}`,
-    heading: "A question was reported",
-    body: [`Unit: ${p.unitKey}`, ...(p.curriculum ? [`Curriculum: ${p.curriculum}`] : []), `Reason: ${p.reason}`, `Question: ${p.prompt}`, ...detailLines(p.details)],
   });
 }
 
