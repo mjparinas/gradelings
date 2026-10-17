@@ -50,7 +50,7 @@ Gradelings is a web app (installable, with an Android wrapper) for practice and 
 Student's device (browser, saves on the device first)
    |  HTTPS, signed-in cookie
    v
-Gradelings app servers, Montreal  --->  Database (Turso, Virginia, US)
+Gradelings app servers, Virginia  --->  Database (Turso, Virginia, US)
    |
    +--> Resend: teacher account emails only (confirmation, password reset)
    +--> Sentry: crash reports and request timing, scrubbed of names, emails, cookies and what was tapped
@@ -63,14 +63,14 @@ Students' devices also keep a copy of progress in the browser (IndexedDB and loc
 
 | Provider | Purpose | Data it sees | Location |
 | --- | --- | --- | --- |
-| Vercel | App hosting, functions in Montréal (`yul1`) | Requests, logs | Canada for functions **(confirm: edge and logging may be outside Canada)** |
+| Vercel | App hosting, functions in Washington, D.C. (`iad1`, beside the database) | Requests, logs | United States for functions **(confirm: edge and logging location)** |
 | Turso (on AWS) | Database | All account data above | Virginia, United States (`aws-us-east-1`) **(confirm encryption at rest)** |
 | Resend | Teacher emails | Teacher email address and message; whether each email was opened and which links were clicked (open and click tracking is on) | United States |
 | Sentry | Crash reports and request timing | Scrubbed errors; route names and durations | United States or EU |
 | Stripe | Parent payments | Parent email and payment | United States. Not used for schools while classes are free. |
 | Vercel Web Analytics | Anonymous page counts, and counts of trial and subscribe button presses, on public pages only | Page, country | Switched off in the student app and teacher area |
 
-If a district requires all providers to be in Canada, the database (Turso, Virginia), Resend and Sentry are the gaps. Resend and Sentry can be switched off for a school-only deployment; the database would need a different host, since Turso has no Canadian location. Decision for the owner.
+If a district requires all providers to be in Canada, the app functions (Vercel, moved from Montréal to Washington, D.C. in October 2026), the database (Turso, Virginia), Resend and Sentry are the gaps. Resend and Sentry can be switched off for a school-only deployment; the functions can go back to `yul1` in `vercel.json` (at the cost of the slower hop to the database); the database would need a different host, since Turso has no Canadian location. Decision for the owner.
 
 ## 7. Retention and deletion
 

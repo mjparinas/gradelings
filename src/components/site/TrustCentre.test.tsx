@@ -36,7 +36,7 @@ describe("TrustCentre", () => {
   it("says where data is stored as the privacy policy does, never that it stays in Canada", () => {
     render(<TrustCentre />);
     const text = screen.getByRole("article").textContent ?? "";
-    expect(text).toContain("Servers in Montréal, Canada; database in Virginia, US.");
+    expect(text).toContain("Servers and database in Virginia, US.");
     expect(text).not.toMatch(/stored in Canada|stays in Canada|Canadian data centre/i);
   });
 
