@@ -2,6 +2,7 @@ import { parseUnitKey } from "@/content";
 import type { SubjectId } from "@/content/types";
 import { dayKey, type AppEvent, type Mode } from "./model";
 import { unitLevel } from "./proficiency";
+import { READING_SAMPLES_KEPT, type ReadingSample } from "./readingLevel";
 import { TIER_COINS, TIER_POINTS, trophyTier } from "./trophies";
 
 // Everything a child has achieved is computed from their event log. Because
@@ -102,6 +103,8 @@ export interface Derived {
   /** The goal the child chose for each day (the last pick wins). */
   goalPicks: Record<string, { level: "easy" | "regular" | "stretch"; minutes: number }>;
   dailyDone: string[];
+  /** The latest first-try results on passage questions, with each passage's reading level, oldest first. */
+  reading: ReadingSample[];
 }
 
 /** XP needed to go from `level` to `level + 1`. */
@@ -157,6 +160,7 @@ export function derive(events: AppEvent[], now = Date.now()): Derived {
     questsClaimed: {},
     goalPicks: {},
     dailyDone: [],
+    reading: [],
     secrets: [],
   };
   const seen = new Set<string>();
@@ -189,6 +193,10 @@ export function derive(events: AppEvent[], now = Date.now()): Derived {
         const away = u.lastT > 0 && e.t - u.lastT >= 30 * 86_400_000;
         u.attempts++;
         if (e.hinted) d.totals.hints++;
+        if (typeof e.rl === "number") {
+          d.reading.push({ rl: e.rl, ok: e.correct });
+          if (d.reading.length > READING_SAMPLES_KEPT) d.reading.shift();
+        }
         if (e.correct) u.firstTry++;
         u.recent.push(e.correct);
         if (u.recent.length > 20) u.recent.shift();

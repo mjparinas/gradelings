@@ -5,6 +5,7 @@ import type { AgeBand, FrameworkId, GradeId, Question, SubjectId } from "@/conte
 import { pickNext, type PickOptions } from "@/lib/adaptive";
 import type { Derived } from "@/lib/derive";
 import { dayKey, type Mode } from "@/lib/model";
+import { closestSet } from "@/lib/readingLevel";
 
 // How each mode chooses questions, how long it lasts, and its rules.
 
@@ -34,9 +35,20 @@ export interface Plan {
 
 const QUICK = (q: Question) => q.kind === "choice" || q.kind === "input";
 
-function oneFrom(ref: UnitRef, difficulty: 1 | 2 | 3, filter?: (q: Question) => boolean): Question | undefined {
+/**
+ * A unit's questions. For a language arts unit with passages, when the child's reading level is known,
+ * it tries each difficulty and keeps the set whose passage reads closest to that level.
+ */
+export function generateFor(ref: UnitRef, difficulty: 1 | 2 | 3, readingLevel?: number): Question[] {
+  const qs = ref.unit.generate({ difficulty });
+  if (readingLevel === undefined || ref.course.subject !== "language") return qs;
+  const others = ([1, 2, 3] as const).filter((d) => d !== difficulty).map((d) => ref.unit.generate({ difficulty: d }));
+  return closestSet([qs, ...others], readingLevel);
+}
+
+function oneFrom(ref: UnitRef, difficulty: 1 | 2 | 3, filter?: (q: Question) => boolean, readingLevel?: number): Question | undefined {
   for (let tries = 0; tries < 4; tries++) {
-    const qs = ref.unit.generate({ difficulty });
+    const qs = generateFor(ref, difficulty, readingLevel);
     const ok = filter ? qs.filter(filter) : qs;
     if (ok.length) return pick(ok);
   }
@@ -60,6 +72,8 @@ export interface PlanInput {
   allowed: (ref: UnitRef) => boolean;
   /** Five questions at a time in Adventure and Review. */
   short?: boolean;
+  /** The child's estimated reading level (grade scale); passages are matched to it when set. */
+  readingLevel?: number;
   /** The unit key a parent picked as this child's focus, if any. */
   focus?: string;
 }
@@ -83,7 +97,7 @@ export function makePlan(input: PlanInput): Plan | null {
     if (!ref) return null;
     const challenge = mode === "challenge";
     const difficulty = challenge ? 3 : difficultyFromMastery(derived.units[ref.key]?.mastery);
-    let qs = ref.unit.generate({ difficulty });
+    let qs = challenge ? ref.unit.generate({ difficulty }) : generateFor(ref, difficulty, input.readingLevel);
     if (challenge) {
       while (qs.length < 10) qs = [...qs, ...ref.unit.generate({ difficulty })];
       qs = qs.slice(0, 10);
@@ -164,7 +178,7 @@ export function makePlan(input: PlanInput): Plan | null {
     next: ({ recent, derived: d }) => {
       const p = pickNext(pickOpts(review ? "review" : "adventure", recent, d));
       if (!p) return undefined;
-      const q = oneFrom(p.ref, p.difficulty);
+      const q = oneFrom(p.ref, p.difficulty, undefined, input.readingLevel);
       return q ? { question: q, unitKey: p.ref.key, difficulty: p.difficulty } : undefined;
     },
   };

@@ -6,6 +6,8 @@ import { useMemo, useState } from "react";
 import { getFramework } from "@/content/frameworks";
 import { getSubjectMeta, SUBJECTS } from "@/content/subjects";
 import { gradeLabel } from "@/lib/gradeLabel";
+import { estimateReadingLevel, readingLevelNote } from "@/lib/readingLevel";
+import type { GradeId } from "@/content/types";
 import { buildReport } from "@/lib/reports";
 import { useSay } from "@/lib/say";
 import { eventsFor, useChildSettings, useDerived, useStore } from "@/lib/store";
@@ -31,6 +33,10 @@ export function ReportsPage({ childId }: { childId?: string }) {
   if (!child || !report) return <NoChildren />;
   const scheme = getFramework(child.framework).scoringFor(child.grade);
   const t = report.totals;
+  const readingLevel = estimateReadingLevel(d.reading, child.grade);
+  const readingGrade: GradeId | undefined =
+    readingLevel === undefined ? undefined : readingLevel < 0.5 ? "k" : (String(Math.min(9, Math.round(readingLevel))) as GradeId);
+  const readingNote = readingLevel === undefined ? undefined : readingLevelNote(readingLevel, child.grade);
   const prev = report.previous;
   const acc = t.answers ? t.correct / t.answers : 0;
   const prevAcc = prev.answers ? prev.correct / prev.answers : 0;
@@ -81,6 +87,14 @@ export function ReportsPage({ childId }: { childId?: string }) {
         <p className="mt-3 rounded-xl bg-help-soft px-4 py-2 font-read">
           💡 Hints opened before answering: <b>{t.hints}</b> of {t.answers} questions.{" "}
           {settings?.freeHints ? "These still count as first-try answers for this child." : "These count like a retry, so they don’t add to “right on the first try”."}
+        </p>
+      )}
+
+      {readingGrade && readingLevel !== undefined && (
+        <p className="mt-3 rounded-xl bg-help-soft px-4 py-2 font-read">
+          📖 Reading level: {child.name} is doing well with passages that read at about <b>{gradeLabel(readingGrade, child.framework)}</b> level
+          {readingNote === "above" ? ", ahead of grade." : readingNote === "below" ? ", a little under grade." : ", right on grade."}{" "}
+          This is an estimate from {d.reading.length} recent passage answers, not a report-card mark.
         </p>
       )}
 

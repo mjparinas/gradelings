@@ -345,6 +345,12 @@ Tests are duplicated across screen sizes only where layout can break:
 - **Challenge:** 10 questions at difficulty 3, a 300 s time limit (420 s for little kids) and no retries.
   - Passing takes 8 out of 10, and passing is the only way to reach Extending.
 
+### Reading-level matching (language arts)
+- **Passages are tagged by computation, not by hand** (`src/lib/readingLevel.ts`): a passage or story in English gets a level on the grade scale from its text (Flesch-Kincaid, 0 to 12), so all existing language arts content is levelled and new passages are too. French and non-passage questions have none.
+- **A child's level is estimated from answers**: Session logs `rl` (the passage's level) on language arts answer events; `derive` keeps the last 100 as `reading`; `estimateReadingLevel` moves a grade-scale ability up and down (about 3 in 4 right at the passage's own level). It needs 8 passage answers first. Nothing is stored; it is not a report-card mark.
+- **What changes:** in Practice, Adventure and Review, a language arts unit tries each difficulty and keeps the set whose passage reads closest to the child's level (`generateFor` in `plans.ts`). The Daily Challenge (shared seed), Speed Run and Challenge do not adapt. The parent Reports page shows the estimate as one quiet line. Flag `reading-level-match` turns the matching off.
+- Known limit: matching only chooses between the passages a unit already has per difficulty; a unit whose passages don't vary with difficulty can't adapt until more passages are written.
+
 ### Lessons ("how it works")
 - A unit can carry an optional `lesson` (2 to 4 short steps and one worked example; `Lesson` in `src/content/types.ts`). Lessons are written once per grade in `src/content/lessons/<grade>.ts`, keyed `subject/unit-id`, and attached by `withLessons` in each BC grade's `index.ts`, so a unit shared by BC, Ontario and Alberta has the lesson in all and each grade's lessons stay in that grade's download.
 - Children open one from the unit dialog ("How it works") or, for little kids, automatically before their first practice of a unit. It never changes scoring. The public unit page shows it under "How we explain it".

@@ -117,6 +117,18 @@ describe("ReportsPage", () => {
     expect(screen.getByText(/These still count as first-try answers for this child\./)).toBeInTheDocument();
   });
 
+  it("shows an estimated reading level only after enough passage answers", () => {
+    const { unmount } = render(<ReportsPage />);
+    expect(screen.queryByText(/Reading level:/)).not.toBeInTheDocument();
+    unmount();
+    const reading = Array.from({ length: 12 }, (_, i) => answer("3/language/main-idea", Date.now() - DAY + i * 1000, true, { rl: 6.5 } as Partial<AppEvent>));
+    useStore.setState({ events: [...practice(), ...reading] });
+    render(<ReportsPage />);
+    const note = screen.getByText(/Reading level:/);
+    expect(note).toHaveTextContent(/Grade [67] level, ahead of grade/);
+    expect(note).toHaveTextContent("estimate from 12 recent passage answers, not a report-card mark");
+  });
+
   it("shows encouraging empty states when nothing has been practised", () => {
     useStore.setState({ events: [] });
     render(<ReportsPage />);
