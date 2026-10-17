@@ -74,6 +74,8 @@ export interface PlanInput {
   short?: boolean;
   /** The child's estimated reading level (grade scale); passages are matched to it when set. */
   readingLevel?: number;
+  /** The unit key a parent picked as this child's focus, if any. */
+  focus?: string;
 }
 
 export function makePlan(input: PlanInput): Plan | null {
@@ -86,6 +88,7 @@ export function makePlan(input: PlanInput): Plan | null {
     recent,
     mode: m,
     allowed,
+    focus: input.focus,
     subject: subjects.includes(scope as SubjectId) ? (scope as SubjectId) : undefined,
   });
 

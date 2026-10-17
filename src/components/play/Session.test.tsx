@@ -12,6 +12,7 @@ const h = vi.hoisted(() => ({
   go: vi.fn(),
   plan: null as unknown,
   settings: {} as Record<string, unknown>,
+  unitRef: undefined as unknown,
 }));
 
 vi.mock("@/lib/store", () => {
@@ -28,7 +29,7 @@ vi.mock("@/lib/store", () => {
 vi.mock("./SaveProgress", () => ({ SaveProgress: () => null }));
 vi.mock("./plans", () => ({ makePlan: () => h.plan }));
 vi.mock("./useAllowed", () => ({ useAllowed: () => () => true }));
-vi.mock("@/content", () => ({ getUnitRef: () => undefined }));
+vi.mock("@/content", () => ({ getUnitRef: () => h.unitRef }));
 vi.mock("@/lib/router", () => ({ go: h.go }));
 vi.mock("@/lib/juice", () => ({ burstFrom: vi.fn(), celebrate: vi.fn(), floatText: vi.fn(), replay: vi.fn() }));
 vi.mock("@/lib/speech", () => ({ speak: vi.fn(), stopSpeaking: vi.fn() }));
@@ -72,6 +73,7 @@ beforeEach(() => {
   h.log.mockClear();
   h.go.mockClear();
   h.settings = {};
+  h.unitRef = undefined;
   h.plan = makePlan();
 });
 
@@ -144,6 +146,42 @@ describe("Session answer flow", () => {
     expect(answers()).toEqual([expect.objectContaining({ correct: false, attempts: 2, revealed: true })]);
     expect(screen.getByText("Here's how:")).toBeInTheDocument();
     expect(screen.getByText("Hint 1")).toBeInTheDocument();
+  });
+
+  it("offers 'Ask a grown-up' after the answer is revealed and logs one help event for the unit", async () => {
+    start();
+    await click("No");
+    expect(screen.queryByRole("button", { name: /ask a grown-up/i })).not.toBeInTheDocument();
+    await click("OK");
+    await click("Nope");
+    expect(screen.queryByRole("button", { name: /show me another way/i })).not.toBeInTheDocument();
+    await click(/ask a grown-up/i);
+    const helps = h.log.mock.calls.flatMap((c) => c[0]).filter((e: { type: string }) => e.type === "help");
+    expect(helps).toEqual([{ type: "help", unit: "math-1:u1" }]);
+    expect(screen.getByText(/your grown-up will see/i)).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /ask a grown-up/i })).not.toBeInTheDocument();
+  });
+
+  it("shows the unit's 'how it works' in a window when it has one", async () => {
+    h.unitRef = {
+      course: { subject: "math" },
+      unit: { emoji: "➕", title: "Adding", lesson: { steps: ["Count on from the bigger number."], example: { question: "2 + 5", work: ["Start at 5, count 2 more."], answer: "7" } } },
+    };
+    start();
+    await click("No");
+    await click("OK");
+    await click("Nope");
+    await click(/show me another way/i);
+    expect(screen.getByRole("dialog", { name: "How it works" })).toHaveTextContent("Count on from the bigger number.");
+    await click("Got it");
+    expect(screen.queryByRole("dialog", { name: "How it works" })).not.toBeInTheDocument();
+  });
+
+  it("offers no help button in a mode without retries", async () => {
+    h.plan = makePlan({ retries: false });
+    start();
+    await click("No");
+    expect(screen.queryByRole("button", { name: /ask a grown-up/i })).not.toBeInTheDocument();
   });
 
   it("a hint opened first means no first-try credit", async () => {

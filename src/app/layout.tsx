@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Andika, Fredoka } from "next/font/google";
+import localFont from "next/font/local";
 import { AppEffects } from "@/components/AppEffects";
 import { PageLang } from "@/components/PageLang";
 import { SiteAnalytics } from "@/components/SiteAnalytics";
@@ -19,6 +20,18 @@ const andika = Andika({
   variable: "--font-andika",
   subsets: ["latin"],
   weight: ["400", "700"],
+});
+
+// OpenDyslexic (SIL OFL, licence beside the files) is only for children whose parent turned on the
+// dyslexia-friendly font, so it isn't preloaded: the browser fetches it when a page first uses it.
+const openDyslexic = localFont({
+  variable: "--font-dyslexic",
+  display: "swap",
+  preload: false,
+  src: [
+    { path: "../../assets/fonts/opendyslexic-400.woff2", weight: "400", style: "normal" },
+    { path: "../../assets/fonts/opendyslexic-700.woff2", weight: "700", style: "normal" },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -50,7 +63,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     // A US state's pages are en-US: the build writes each page's own lang (src/lib/pageLang.mjs), so React
     // must keep it rather than flag the difference while hydrating.
-    <html lang={DEFAULT_LANG} className={`${fredoka.variable} ${andika.variable} antialiased`} suppressHydrationWarning>
+    <html lang={DEFAULT_LANG} className={`${fredoka.variable} ${andika.variable} ${openDyslexic.variable} antialiased`} suppressHydrationWarning>
       <body>
         <AppEffects />
         <PageLang />

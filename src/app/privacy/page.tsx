@@ -43,6 +43,7 @@ export default function PrivacyPage() {
         <ul>
           <li>Your email address and a password. Passwords are stored only as a salted scrypt hash, never in readable form.</li>
           <li>Subscription details: your plan, billing interval, renewal date and the amounts paid (when you delete your account, the amounts stay in our totals with nothing linking them to you). Payments are handled by Stripe, so we never see or store your card number.</li>
+          <li>Gift plans: if you buy a gift, Stripe takes your payment and email; we keep the gift code we made, the Stripe checkout id and whether the code was used. The code is emailed to you, and we do not ask for or store the recipient’s name or email.</li>
           <li>Referrals: a referral code for your family, and, if you signed up through a friend’s link, which family’s code you used. A parent can’t see who used their code, only how many families joined and how many free months that earned.</li>
         </ul>
         <p>
@@ -51,7 +52,8 @@ export default function PrivacyPage() {
         <ul>
           <li>A first name or nickname, grade, an avatar and, if you choose, a birth year (used only to suggest a grade).</li>
           <li>Practice activity: which questions were answered, whether they were right, when, and how long a lesson took. From this we work out progress, levels, trophies and your reports.</li>
-          <li>Settings you choose, such as daily goal, timers, game time, sound, read-aloud and calm options.</li>
+          <li>Settings you choose, such as daily goal, timers, game time, sound, read-aloud, reading font and colour, a focus unit and calm options, and the name you give a reward (type only what you would say to your own child).</li>
+          <li>A note when your child taps “Ask a grown-up to help”: which unit and when. It shows only on your Overview and is deleted with the child.</li>
         </ul>
         <p>
           <strong>If you report a problem with a question:</strong> we keep the question as it was shown (its picture, answer choices and right answer), the province or state it was set for, the reason you picked from a fixed list and the date, linked to your family so we can follow up.

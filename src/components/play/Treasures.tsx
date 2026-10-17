@@ -7,6 +7,7 @@ import { useIsOn } from "@/lib/remoteFlags";
 import { useDerived } from "@/lib/store";
 import { useBand } from "../band";
 import { Page } from "../ui";
+import { RewardCard } from "./FamilyCards";
 import { BackButton } from "./Practice";
 
 interface Treasure {
@@ -58,6 +59,7 @@ export function Treasures() {
           </div>
         ))}
       </div>
+      <RewardCard />
     </Page>
   );
 }

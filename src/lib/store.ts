@@ -12,6 +12,7 @@ import {
   dayKey,
   defaultChildSettings,
   newId,
+  READING_TINTS,
   type AppEvent,
   type ChildSettings,
   type FamilyInfo,
@@ -496,6 +497,8 @@ if (typeof document !== "undefined") {
     root.toggle("calm", Boolean(s?.calmMotion));
     root.toggle("roomy", Boolean(s?.roomyText));
     root.toggle("contrast", Boolean(s?.highContrast));
+    root.toggle("dyslexic", Boolean(s?.dyslexiaFont));
+    for (const tint of READING_TINTS) root.toggle(`tint-${tint}`, s?.readingTint === tint);
   };
   useStore.subscribe(apply);
   apply();

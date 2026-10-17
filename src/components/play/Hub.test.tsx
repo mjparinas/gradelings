@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { fireEvent, render, screen, within } from "@testing-library/react";
+import { cleanup, fireEvent, render, screen, within } from "@testing-library/react";
 import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import { allUnitRefs, loadGrade, type UnitRef } from "@/content";
 import type { AgeBand } from "@/content/types";
@@ -37,6 +37,7 @@ vi.mock("@/lib/store", () => ({
   useChildSettings: () => h.settings,
   useDerived: () => h.derived,
 }));
+vi.mock("./FamilyCards", () => ({ RewardCard: () => <div data-testid="reward-card" />, TogetherCard: () => <div data-testid="together-card" /> }));
 vi.mock("./useClasswork", () => ({ useClasswork: () => h.classwork }));
 vi.mock("./LiveQuestion", async (importOriginal) => {
   const actual = await importOriginal<typeof import("./LiveQuestion")>();
@@ -349,6 +350,37 @@ describe("Hub cards", () => {
     expect(first).toHaveTextContent("Try to finish by Thu, Oct 15");
     // A past date is simply not shown: never a warning.
     expect(second).not.toHaveTextContent("Try to finish by");
+  });
+
+  it("shows the unit a grown-up picked, with the days to go, and nothing when it has passed", () => {
+    const [a] = mathRefs();
+    h.settings = { ...h.settings, focus: { unit: a.key, until: dayKey(NOW + 3 * DAY), setAt: NOW } };
+    show();
+    const section = screen.getByRole("region", { name: "From your grown-up" });
+    expect(section).toHaveTextContent(a.unit.title);
+    expect(section).toHaveTextContent("3 days to go");
+    expect(within(section).getByRole("link")).toHaveAttribute("href", `#/session?mode=practice&scope=${encodeURIComponent(a.key)}`);
+    cleanup();
+    h.settings = { ...h.settings, focus: { unit: a.key, until: dayKey(NOW - DAY), setAt: NOW - 5 * DAY } };
+    show();
+    expect(screen.queryByRole("region", { name: "From your grown-up" })).not.toBeInTheDocument();
+  });
+
+  it("shows the family cards on the home screen of older children only", () => {
+    show();
+    expect(screen.getByTestId("reward-card")).toBeInTheDocument();
+    expect(screen.getByTestId("together-card")).toBeInTheDocument();
+    cleanup();
+    show("little");
+    expect(screen.queryByTestId("reward-card")).not.toBeInTheDocument();
+    expect(screen.queryByTestId("together-card")).not.toBeInTheDocument();
+  });
+
+  it("keeps a little child's home screen calm: a focus unit adds no card", () => {
+    const [a] = mathRefs();
+    h.settings = { ...h.settings, focus: { unit: a.key, setAt: NOW } };
+    show("little");
+    expect(screen.queryByRole("region", { name: "From your grown-up" })).not.toBeInTheDocument();
   });
 
   it("counts homework questions done since it was assigned, on the device", () => {

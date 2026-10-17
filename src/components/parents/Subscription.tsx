@@ -243,6 +243,16 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
         </Panel>
         {family.account && !family.account.student && <ReferralPanel />}
         {family.account && !lifetime && !inIosApp && <RedeemPanel />}
+        {!inStoreApp && (
+          <Panel title="Give a gift">
+            <p className="text-sm text-ink-soft">
+              {say("Know a family who would love this? A gift is a year of the family plan, paid once, that arrives as a code you can pass on. It never renews.")}{" "}
+              <a href="/account/gift/" className="font-semibold text-[#2f6fd6] underline">
+                Give a year of {APP_NAME}
+              </a>
+            </p>
+          </Panel>
+        )}
       </div>
     </>
   );

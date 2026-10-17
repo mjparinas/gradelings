@@ -1468,6 +1468,23 @@ function numberLineFraction(d: Level): Question {
   );
 }
 
+/** Put a marker on a 0 to 1 number line cut into equal jumps. */
+function markFraction(d: Level): Question {
+  const den = pick(d === 2 ? [3, 4, 5, 6] : [5, 6, 8, 10]);
+  const k = randInt(1, den - 1);
+  return {
+    kind: "place",
+    prompt: `Move the marker to ${fr(k, den)}.`,
+    hint: `The space from 0 to 1 is cut into ${den} equal jumps. ${fr(k, den)} is ${k} ${k === 1 ? "jump" : "jumps"} from 0.`,
+    min: 0,
+    max: 1,
+    step: 1 / den,
+    target: k / den,
+    labelEvery: den,
+    fractionDenominator: den,
+  };
+}
+
 function storyCompare(d: Level): Question {
   const [A, B] = sample(NAMES, 2);
   const same = "They are the same";
@@ -1565,7 +1582,7 @@ function fractions(opts?: GenerateOptions): Question[] {
       () => benchmarkHalf(2),
       () => orderFractions(2),
       equivalentChoice,
-      () => numberLineFraction(2),
+      () => markFraction(2),
       () => storyCompare(2),
     ]);
   }
@@ -1576,7 +1593,7 @@ function fractions(opts?: GenerateOptions): Question[] {
     () => benchmarkHalf(3),
     () => orderFractions(3),
     equivalentMissing,
-    () => numberLineFraction(3),
+    () => markFraction(3),
     () => storyCompare(3),
   ]);
 }

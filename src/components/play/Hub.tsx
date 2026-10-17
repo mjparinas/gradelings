@@ -34,6 +34,8 @@ import { useAllowed } from "./useAllowed";
 import { useClasswork } from "./useClasswork";
 import { homeworkDone } from "@/lib/classroom";
 import { ParentNote } from "./ParentNote";
+import { RewardCard, TogetherCard } from "./FamilyCards";
+import { FocusCard } from "./FocusCard";
 import { LevelChip } from "./Practice";
 import { InstallChip } from "./InstallChip";
 
@@ -263,6 +265,9 @@ export function Hub() {
         })}
       </div>
 
+      {/* Little kids' home screen stays calm: a parent's focus only shapes their Adventure. */}
+      {!little && <FocusCard />}
+
       {classwork.length > 0 && (
         <section className="card p-4 sm:p-5" aria-label="From your teacher">
           <h2 className="mb-3 flex items-center justify-between gap-2 text-xl font-bold sm:text-2xl">
@@ -301,6 +306,13 @@ export function Hub() {
             })}
           </ul>
         </section>
+      )}
+
+      {!little && (
+        <>
+          <RewardCard />
+          <TogetherCard />
+        </>
       )}
 
       {little ? (

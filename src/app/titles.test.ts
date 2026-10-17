@@ -33,6 +33,7 @@ import * as trust from "./trust/page";
 vi.stubEnv("__NEXT_TRAILING_SLASH", "1");
 // The root layout loads its fonts at build time; only its title template matters here.
 vi.mock("next/font/google", () => ({ Fredoka: () => ({ variable: "" }), Andika: () => ({ variable: "" }) }));
+vi.mock("next/font/local", () => ({ default: () => ({ variable: "" }) }));
 
 type Page = { metadata?: Metadata; generateMetadata?: (p: never) => Promise<Metadata>; generateStaticParams?: () => Record<string, string>[] };
 

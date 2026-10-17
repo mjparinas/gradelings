@@ -12,6 +12,8 @@ vi.mock("@/lib/store", () => ({
   useDerived: () => ({ coins: 120, trophies: { "first-steps": 1, "streak-3": 2 } }),
 }));
 
+vi.mock("./FamilyCards", () => ({ RewardCard: () => <div data-testid="reward-card" /> }));
+
 import { TreasureBack, Treasures } from "./Treasures";
 
 const inBand = (band: AgeBand, ui: React.ReactElement) => render(<BandProvider value={band}>{ui}</BandProvider>);
@@ -29,6 +31,11 @@ describe("Treasures", () => {
     expect(links.map((a) => a.getAttribute("href"))).toEqual(["#/stickers", "#/trophies", "#/room", "#/shop", "#/map"]);
     expect(screen.getByRole("link", { name: /Trophies/ })).toHaveTextContent("2");
     expect(screen.getByRole("link", { name: /Shop/ })).toHaveTextContent("🪙 120");
+  });
+
+  it("shows a promised reward below the chest", () => {
+    inBand("little", <Treasures />);
+    expect(screen.getByTestId("reward-card")).toBeInTheDocument();
   });
 
   it("leaves out the screens the admin switched off", () => {

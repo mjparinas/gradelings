@@ -5,11 +5,13 @@ import { recordConsent } from "@/server/consent";
 import { familyPath, sendAlert } from "@/server/alerts";
 import { recordWebhook } from "@/server/monitor";
 import { recordInvoice, recordRefund } from "@/server/payments";
+import { fulfilGift, isPaidGift } from "@/server/gifts";
 import { verifyWebhook } from "@/server/stripe";
 
 // Stripe tells us when a subscription starts, renews, changes or ends.
 // Configure the endpoint in Stripe for: checkout.session.completed,
 // customer.subscription.created, customer.subscription.updated, customer.subscription.deleted,
+// (a paid gift checkout also makes the gift code),
 // and, for the admin dashboard's revenue numbers, invoice.paid and charge.refunded.
 
 interface StripeEvent {
@@ -64,6 +66,8 @@ async function apply(req: Request, event: StripeEvent, obj: Record<string, unkno
   if (event.type === "invoice.payment_failed" || event.type === "charge.dispute.created") await alertBilling(event.type, obj, now);
 
   if (event.type === "checkout.session.completed") {
+    // A gift is paid once and delivered as a code; it belongs to no family yet.
+    if (isPaidGift(obj)) await fulfilGift(obj, appOrigin(req), now);
     const familyId = (obj.client_reference_id as string) ?? (obj.metadata as Record<string, string>)?.family_id;
     // Only a paid checkout grants premium; a delayed payment method sends a later event when it clears.
     const paid = obj.payment_status === "paid" || obj.payment_status === "no_payment_required";
