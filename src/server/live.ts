@@ -31,6 +31,14 @@ export interface LiveRow {
   ended_at: number | null;
   /** The seed variant the previewed next question is drawn from; the teacher raises it to swap the preview. */
   next_swaps?: number | null;
+  /** The previewed next question, kept for the `next_swaps` it was drawn at (JSON of `PreviewCache`). */
+  next_data?: string | null;
+}
+
+type Preview = { data: LiveQuestionData; variant: number };
+interface PreviewCache {
+  swaps: number;
+  shown: Preview | null;
 }
 
 /**
@@ -80,7 +88,7 @@ const PREVIEW_TRIES = 8;
  * the open question's unit, skipping any that repeat the current prompt (or one in `avoid`), starting
  * from the variant the teacher has swapped to. Null when the unit has nothing else to ask.
  */
-export async function previewNext(cls: ClassRow, row: LiveRow, avoid: string[] = []): Promise<{ data: LiveQuestionData; variant: number } | null> {
+export async function previewNext(cls: ClassRow, row: LiveRow, avoid: string[] = []): Promise<Preview | null> {
   const current = (JSON.parse(row.data) as LiveQuestionData).prompt;
   let fallback: { data: LiveQuestionData; variant: number } | null = null;
   const start = Number(row.next_swaps ?? 0);
@@ -93,15 +101,34 @@ export async function previewNext(cls: ClassRow, row: LiveRow, avoid: string[] =
   return fallback;
 }
 
+/**
+ * `previewNext`, remembered on the row. The teacher's screen asks every few seconds and the answer only changes
+ * when the teacher swaps it, so it is generated once per question and swap instead of on every refresh.
+ */
+export async function cachedPreview(cls: ClassRow, row: LiveRow): Promise<Preview | null> {
+  const swaps = Number(row.next_swaps ?? 0);
+  if (row.next_data) {
+    try {
+      const cache = JSON.parse(row.next_data) as PreviewCache;
+      if (cache.swaps === swaps) return cache.shown;
+    } catch {
+      // A damaged copy is just made again below.
+    }
+  }
+  const shown = await previewNext(cls, row);
+  await run("UPDATE live_questions SET next_data = ? WHERE id = ?", [JSON.stringify({ swaps, shown } satisfies PreviewCache), row.id]);
+  return shown;
+}
+
 /** Swaps the previewed next question for a different one. Returns false when nothing is open or nothing else fits. */
 export async function swapNextLive(cls: ClassRow, now = Date.now()): Promise<boolean> {
   const row = await openLive(cls.id, now);
   if (!row) return false;
-  const shown = await previewNext(cls, row);
+  const shown = await cachedPreview(cls, row);
   if (!shown) return false;
   const other = await previewNext(cls, { ...row, next_swaps: shown.variant + 1 }, [shown.data.prompt]);
   if (!other || other.data.prompt === shown.data.prompt) return false;
-  await run("UPDATE live_questions SET next_swaps = ? WHERE id = ?", [other.variant, row.id]);
+  await run("UPDATE live_questions SET next_swaps = ?, next_data = ? WHERE id = ?", [other.variant, JSON.stringify({ swaps: other.variant, shown: other } satisfies PreviewCache), row.id]);
   return true;
 }
 
@@ -116,7 +143,7 @@ export async function startLive(cls: ClassRow, unitKey: string, teacherId: strin
   const n = last ? Number(last.n) + 1 : 0;
   // Asking the next question from the open one's unit asks the question the teacher was shown.
   const open = await openLive(cls.id, now);
-  const picked = open && open.unit_key === unitKey ? ((await previewNext(cls, open))?.data ?? null) : await pickLiveQuestion(cls, unitKey, n);
+  const picked = open && open.unit_key === unitKey ? ((await cachedPreview(cls, open))?.data ?? null) : await pickLiveQuestion(cls, unitKey, n);
   if (!picked) return null;
   const data: LiveQuestionData = { ...picked, readAloud: options.readAloud !== false };
   await pruneLive(now);
@@ -175,19 +202,19 @@ export async function answerLive(familyId: string, profileId: string, questionId
   return "saved";
 }
 
-/** The open question in any class this child is in, with their own answer. */
+/** The open question in any class this child is in, with their own answer (one query). */
 export async function liveForChild(familyId: string, profileId: string, now = Date.now()): Promise<{ row: LiveRow; className: string; mine: string | null } | null> {
-  const rows = await query<LiveRow & { class_name: string }>(
-    `SELECT q.*, c.name AS class_name FROM live_questions q
+  const rows = await query<LiveRow & { class_name: string; mine: string | null }>(
+    `SELECT q.*, c.name AS class_name, a.choice AS mine FROM live_questions q
      JOIN class_members m ON m.class_id = q.class_id AND m.family_id = ? AND m.profile_id = ?
      JOIN classes c ON c.id = q.class_id AND c.closed_at IS NULL
+     LEFT JOIN live_answers a ON a.question_id = q.id AND a.profile_id = m.profile_id
      WHERE q.ended_at IS NULL AND q.created_at > ? ORDER BY q.created_at DESC LIMIT 1`,
     [familyId, profileId, now - LIVE_OPEN_FOR],
   );
   const row = rows[0];
   if (!row) return null;
-  const mine = (await query<{ choice: string }>("SELECT choice FROM live_answers WHERE question_id = ? AND profile_id = ?", [row.id, profileId]))[0];
-  return { row, className: row.class_name, mine: mine?.choice ?? null };
+  return { row, className: row.class_name, mine: row.mine ?? null };
 }
 
 /** Deletes live questions and answers older than a day. */

@@ -2,7 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { choiceIndexForKey, shortcutBlocked } from "@/lib/keys";
-import { LIVE_POLL_IDLE_MS, LIVE_POLL_OPEN_MS, type LiveForChild } from "@/lib/live";
+import type { LiveForChild } from "@/lib/live";
+import { subscribeLivePoll } from "@/lib/livePoll";
 import { useChildSay } from "@/lib/say";
 import { speakQuestion } from "@/lib/readaloud";
 import { useActiveProfile, useChildSettings, useStore } from "@/lib/store";
@@ -10,8 +11,8 @@ import type { ChoiceQuestion } from "@/content/types";
 import { Coin, QuestionVisual, Shape } from "../visuals";
 
 // A question the child's teacher is asking the class right now. It needs a connection: the device
-// asks the server for an open question (often while one is open, rarely otherwise) only while it is
-// online, visible and the child is in a class. Offline it shows nothing new, and practice carries on
+// asks the server for an open question (often while one is open, rarely otherwise, together with the
+// class timer: see livePoll.ts) only while it is online, visible and the child is in a class. Offline it shows nothing new, and practice carries on
 // as always. Live answers never count toward levels, XP or reports.
 
 export interface LiveState {
@@ -46,49 +47,18 @@ export function useLiveQuestion(): LiveState {
   // The home screen is keyed by child, so a different child starts with a fresh state.
   useEffect(() => {
     if (!inClass || !profileId) return;
-    let stopped = false;
-    let timer: ReturnType<typeof setTimeout> | undefined;
-    const schedule = () => {
-      if (!stopped) timer = setTimeout(poll, liveRef.current ? LIVE_POLL_OPEN_MS : LIVE_POLL_IDLE_MS);
-    };
-    const poll = async () => {
-      if (document.visibilityState !== "visible") return schedule();
-      if (navigator.onLine === false) {
-        if (liveRef.current) setOffline(true);
-        return schedule();
-      }
-      try {
-        const res = await fetch(`/api/live/?profile=${encodeURIComponent(profileId)}`, { credentials: "same-origin", cache: "no-store" });
-        if (!res.ok) throw new Error(String(res.status));
-        const data = (await res.json()) as { live: LiveForChild | null };
-        if (!stopped) {
-          // An answer still on its way stays picked rather than flicking back.
-          const cur = liveRef.current;
-          const next = data.live;
-          show(next && cur?.id === next.id && cur.mine && !next.mine ? { ...next, mine: cur.mine } : next);
-          setOffline(false);
-        }
-      } catch {
+    return subscribeLivePoll(profileId, (event) => {
+      if ("offline" in event || "error" in event) {
         // Offline, maintenance or a server hiccup: keep what is on screen and say why it is stuck.
-        if (!stopped && liveRef.current) setOffline(true);
+        if (liveRef.current) setOffline(true);
+        return;
       }
-      schedule();
-    };
-    void poll();
-    const onVisible = () => {
-      if (document.visibilityState === "visible") {
-        clearTimeout(timer);
-        void poll();
-      }
-    };
-    document.addEventListener("visibilitychange", onVisible);
-    window.addEventListener("online", onVisible);
-    return () => {
-      stopped = true;
-      clearTimeout(timer);
-      document.removeEventListener("visibilitychange", onVisible);
-      window.removeEventListener("online", onVisible);
-    };
+      // An answer still on its way stays picked rather than flicking back.
+      const cur = liveRef.current;
+      const next = event.data.live;
+      show(next && cur?.id === next.id && cur.mine && !next.mine ? { ...next, mine: cur.mine } : next);
+      setOffline(false);
+    });
   }, [inClass, profileId, show]);
 
   const answer = useCallback(

@@ -36,10 +36,10 @@ describe("ClassTimerChip", () => {
   it("counts down on its own between answers, then says time's up, and goes when the teacher stops it", async () => {
     h.classwork = [{ profileId: "p1" }];
     let timer: unknown = { label: "Silent reading", totalMs: 60_000, left: 10_000, running: true, className: "Room 4" };
-    fetchMock.mockImplementation(() => respond({ timer }));
+    fetchMock.mockImplementation(() => respond({ live: null, timer }));
     render(<ClassTimerChip />);
     await act(() => vi.advanceTimersByTimeAsync(0));
-    expect(fetchMock).toHaveBeenCalledWith("/api/live/?profile=p1&timer=1", expect.objectContaining({ cache: "no-store" }));
+    expect(fetchMock).toHaveBeenCalledWith("/api/live/?profile=p1", expect.objectContaining({ cache: "no-store" }));
     expect(screen.getByText("Silent reading")).toBeInTheDocument();
     expect(screen.getByRole("timer")).toHaveTextContent("0:10");
     // It takes no taps, so it can never sit on top of a button.
@@ -58,7 +58,7 @@ describe("ClassTimerChip", () => {
 
   it("shows a paused timer frozen", async () => {
     h.classwork = [{ profileId: "p1" }];
-    fetchMock.mockImplementation(() => respond({ timer: { label: "", totalMs: 60_000, left: 42_000, running: false, className: "Room 4" } }));
+    fetchMock.mockImplementation(() => respond({ live: null, timer: { label: "", totalMs: 60_000, left: 42_000, running: false, className: "Room 4" } }));
     render(<ClassTimerChip />);
     await act(() => vi.advanceTimersByTimeAsync(10_000));
     expect(screen.getByRole("timer")).toHaveTextContent("0:42 · paused");
