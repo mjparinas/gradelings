@@ -70,6 +70,37 @@ describe("TwoFactorSetup", () => {
   });
 });
 
+describe("RecoveryCodes copy button", () => {
+  const showCodes = async (user: ReturnType<typeof userEvent.setup>) => {
+    mocks.call.mockResolvedValue({ codes });
+    render(<TwoFactorCard info={on} onChange={() => {}} />);
+    await user.click(screen.getByRole("button", { name: "Make New Recovery Codes" }));
+    await user.type(screen.getByLabelText("Code from your authenticator app"), "654321");
+    await user.click(screen.getByRole("button", { name: "Make New Codes" }));
+    await screen.findByRole("heading", { name: "Save Your Recovery Codes" });
+  };
+
+  it("says the codes are copied once they are", async () => {
+    const user = userEvent.setup();
+    const writeText = vi.fn().mockResolvedValue(undefined);
+    await showCodes(user);
+    Object.defineProperty(navigator, "clipboard", { configurable: true, value: { writeText } });
+    expect(screen.queryByText(/Codes copied/)).toBeNull();
+    await user.click(screen.getByRole("button", { name: "Copy Codes" }));
+    expect(writeText).toHaveBeenCalledWith(codes.join("\n"));
+    expect(await screen.findByRole("status")).toHaveTextContent("Codes copied to your clipboard.");
+  });
+
+  it("says so when the browser won't copy, instead of claiming success", async () => {
+    const user = userEvent.setup();
+    await showCodes(user);
+    Object.defineProperty(navigator, "clipboard", { configurable: true, value: { writeText: vi.fn().mockRejectedValue(new Error("denied")) } });
+    await user.click(screen.getByRole("button", { name: "Copy Codes" }));
+    expect(await screen.findByRole("status")).toHaveTextContent("Couldn't copy");
+    expect(screen.queryByText(/Codes copied/)).toBeNull();
+  });
+});
+
 describe("TwoFactorCard", () => {
   it("shows the state and the recovery codes left", () => {
     render(<TwoFactorCard info={{ ...on, backupCodesLeft: 1 }} onChange={() => {}} />);
