@@ -141,7 +141,7 @@
   "2/math": {
     "overview": "578493c8a5",
     "units": [
-      "tens-and-ones text=a06b4ff229 std=20a944ae5f q=d83b7ce264",
+      "tens-and-ones text=a06b4ff229 std=20a944ae5f q=0fd2e9673e",
       "bigger-or-smaller text=cf0195a846 std=1efcc1b40e q=c9b0be2184",
       "facts-to-20 text=af85ace8fc std=f72ac01a6f q=99f8dd1343",
       "adding-to-100 text=fcd816add2 std=0e008db4fc q=1358227643",
@@ -384,8 +384,8 @@
       "mb-mental-math-5 text=d109457dda std=b247869b72 q=5f92d222a6",
       "multiply text=5470ec5ee2 std=1b275929cc q=f6bb06f6ba",
       "divide text=8852642ad6 std=dfab32f35e q=d29f08f12e",
-      "equivalent-fractions text=cf635b163a std=a277f954c2 q=0858915281",
-      "decimals text=5aeaecae0c std=d8f8c43a57 q=dcfba1ab03",
+      "equivalent-fractions text=cf635b163a std=a277f954c2 q=2ff4c287ec",
+      "decimals text=5aeaecae0c std=d8f8c43a57 q=df303e4d1a",
       "patterns-and-equations text=d0038d1743 std=2551aefc04 q=63c8c98922",
       "area-and-perimeter text=dd2c32445d std=02a935952e q=a117b4fc31",
       "mb-measuring-5 text=6aaba2fee2 std=49f74693d0 q=8afa462355",
@@ -464,8 +464,8 @@
     "units": [
       "thousandths-to-billions text=e8fb8a823a std=8b86bee7b3 q=1b37333b3f",
       "facts-and-factors text=8f9365a330 std=f8ae400df7 q=ceb9f65a75",
-      "mixed-numbers-and-ratios text=9a52ba7712 std=570c0f71a9 q=41fce702ad",
-      "percents-and-budgets text=136c6c6ae5 std=f2a42b1988 q=75b13cdb47",
+      "mixed-numbers-and-ratios text=9a52ba7712 std=570c0f71a9 q=5eedd9b35d",
+      "percents-and-budgets text=136c6c6ae5 std=f2a42b1988 q=99bdc2230a",
       "decimal-multiply-divide text=fc458a18fb std=94e007963e q=74b38a2450",
       "patterns-and-graphs text=dab33ccdd4 std=2e517c2367 q=3278e6bf42",
       "equations text=5c61d003c6 std=f20ef67d27 q=0e4e24070f",
@@ -552,10 +552,10 @@
     "overview": "17459931f2",
     "units": [
       "mb-divisibility text=c9dba11416 std=16a6d0b694 q=0426819aa6",
-      "integer-add-subtract text=0f49d1bba6 std=48c5d91312 q=4f89d4d4ad",
+      "integer-add-subtract text=0f49d1bba6 std=48c5d91312 q=688da6d68b",
       "fractions-7 text=7c1f63c272 std=128e667ce7 q=bacf9d4e33",
       "decimal-operations text=56ab979d6a std=56876f74c4 q=7f89d319c6",
-      "fractions-decimals-percents text=12d27e2a2e std=8dd7b87503 q=c8b1446bef",
+      "fractions-decimals-percents text=12d27e2a2e std=8dd7b87503 q=720141998e",
       "tax-tips-discounts text=89d00189fd std=0599a2fc7a q=9acde90248",
       "mb-expressions-equations text=16e53b328d std=51598ac3fa q=612cb1ab65",
       "two-step-equations text=ddaa3cce54 std=756173b3b5 q=4d67a1e779",

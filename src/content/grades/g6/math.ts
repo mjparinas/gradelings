@@ -692,6 +692,24 @@ function mixedRatios(opts?: GenerateOptions): Question[] {
   }
 
   {
+    const den = pick(d === 1 ? [2, 4] : d === 2 ? [3, 4] : [4, 3]);
+    const max = d === 1 ? 2 : 3;
+    const w = randInt(0, max - 1);
+    const r = properPart(den);
+    out.push({
+      kind: "place",
+      prompt: `Move the marker to ${w ? mixed(w, r, den) : `${r}/${den}`}.`,
+      hint: `Each whole is cut into ${den} equal jumps of 1/${den}. Start at ${w}, then count ${plural(r, "jump")} past it.`,
+      min: 0,
+      max,
+      step: 1 / den,
+      target: w + r / den,
+      labelEvery: den,
+      fractionDenominator: den,
+    });
+  }
+
+  {
     const [p0, p1] = pick(RATIO_PAIRS);
     let a = 0;
     let b = 0;
@@ -984,6 +1002,18 @@ function percentsBudgets(opts?: GenerateOptions): Question[] {
         { suffix: "%", visual: { type: "fraction", numerator: num, denominator: den } },
       ),
     );
+  }
+
+  {
+    const [parts, each] = pick([[10, 10], [4, 25], [5, 20]]);
+    const k = randInt(1, parts - 1);
+    out.push({
+      kind: "shade",
+      prompt: `This bar is 100%. Shade ${k * each}% of it.`,
+      hint: `The bar has ${parts} equal parts, so each part is ${each}%. Shade ${k * each} ÷ ${each} = ${k} parts.`,
+      parts,
+      target: k,
+    });
   }
 
   {

@@ -202,6 +202,29 @@ function integerAddSub(opts?: GenerateOptions): Question[] {
     );
   }
 
+  // Put a marker where a jump lands.
+  {
+    let a: number, b: number;
+    do {
+      a = signed(1, d === 1 ? 4 : 5);
+      b = signed(1, 6);
+    } while (Math.abs(a + b) > 6 || a + b === a);
+    const end = a + b;
+    qs.push({
+      kind: "place",
+      prompt: `Start at ${a} and add ${br(b)}. Move the marker to where you land.`,
+      hint:
+        b > 0
+          ? `Adding a positive number moves right. From ${a}, jump ${b} to the right.`
+          : `Adding a negative number moves left. From ${a}, jump ${-b} to the left.`,
+      min: -6,
+      max: 6,
+      step: 1,
+      target: end,
+      labelEvery: 1,
+    });
+  }
+
   // Sums (three terms for a stretch).
   if (d < 3) {
     const a = signed(1, R);
@@ -919,6 +942,22 @@ function fractionsDecimalsPercents(opts?: GenerateOptions): Question[] {
         visual: den <= 24 ? { type: "fraction", numerator: n, denominator: den, shape: "bar" } : undefined,
       }),
     );
+  }
+
+  // A decimal on a number line.
+  {
+    const [n, den] = pick([[1, 2], [1, 5], [2, 5], [3, 5], [4, 5], [1, 4], [3, 4], [3, 10], [7, 10]]);
+    const quarters = den === 4;
+    qs.push({
+      kind: "place",
+      prompt: `Move the marker to the decimal that equals ${n}/${den}.`,
+      hint: `${n}/${den} = ${fmt(n / den)}. The line from 0 to 1 is cut into ${quarters ? 4 : 10} equal jumps of ${quarters ? "0.25" : "0.1"}.`,
+      min: 0,
+      max: 1,
+      step: quarters ? 0.25 : 0.1,
+      target: n / den,
+      labelEvery: quarters ? 2 : 5,
+    });
   }
 
   // Percent → decimal, or repeating decimals.

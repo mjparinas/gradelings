@@ -170,7 +170,7 @@
   "2/math": {
     "overview": "a3c37a1c53",
     "units": [
-      "tens-and-ones text=a06b4ff229 std=33d7accb4c q=d83b7ce264",
+      "tens-and-ones text=a06b4ff229 std=33d7accb4c q=0fd2e9673e",
       "numbers-to-200 text=5c02a93ffc std=575af1f126 q=45bb251792",
       "numbers-to-1000-ab text=de88305a93 std=e43e823af4 q=1001d56e75",
       "bigger-or-smaller text=cf0195a846 std=9383727283 q=c9b0be2184",
@@ -429,7 +429,7 @@
     "overview": "1bc68380fb",
     "units": [
       "numbers-to-a-million text=a9556c05b9 std=63a066988f q=4faaabfcc1",
-      "decimals text=5aeaecae0c std=8682896caf q=dcfba1ab03",
+      "decimals text=5aeaecae0c std=8682896caf q=df303e4d1a",
       "add-and-subtract text=91f560bbe1 std=675f6a6cd0 q=51a3f942f4",
       "multiply text=5470ec5ee2 std=af133a5933 q=f6bb06f6ba",
       "divide text=8852642ad6 std=8062860993 q=d29f08f12e",
@@ -603,9 +603,9 @@
       "decimal-operations text=56ab979d6a std=74eeaff6fa q=7f89d319c6",
       "fractions-ab text=c5775d6c92 std=f022110c9b q=1a2acfe3ef",
       "compare-order-ab text=e088a95ec5 std=a2cedfeb9a q=c7441cb4ba",
-      "fractions-decimals-percents text=12d27e2a2e std=1cc0bc96cd q=c8b1446bef",
+      "fractions-decimals-percents text=12d27e2a2e std=1cc0bc96cd q=720141998e",
       "tax-tips-discounts text=89d00189fd std=e7fa9f92da q=9acde90248",
-      "integer-add-subtract text=0f49d1bba6 std=33a580041c q=4f89d4d4ad",
+      "integer-add-subtract text=0f49d1bba6 std=33a580041c q=688da6d68b",
       "linear-relations text=8a41482ba7 std=c54a178793 q=52c3309ac5",
       "expressions-ab text=d92f1eb9fb std=4924db9abc q=0a47682054",
       "two-step-equations text=ddaa3cce54 std=ef039ac1ea q=4d67a1e779",
