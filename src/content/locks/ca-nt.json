@@ -144,7 +144,7 @@
   "2/math": {
     "overview": "55599f2020",
     "units": [
-      "tens-and-ones text=a06b4ff229 std=6f9ce83d02 q=d83b7ce264",
+      "tens-and-ones text=a06b4ff229 std=6f9ce83d02 q=0fd2e9673e",
       "bigger-or-smaller text=cf0195a846 std=3284121ea1 q=c9b0be2184",
       "facts-to-20 text=af85ace8fc std=a3001895e1 q=99f8dd1343",
       "adding-to-100 text=fcd816add2 std=6b1623ace1 q=1358227643",
@@ -357,8 +357,8 @@
       "add-and-subtract text=91f560bbe1 std=aa0125ec1e q=51a3f942f4",
       "multiply text=5470ec5ee2 std=ebbca85402 q=f6bb06f6ba",
       "divide text=8852642ad6 std=0fe8739205 q=d29f08f12e",
-      "equivalent-fractions text=cf635b163a std=76f6d12c8f q=0858915281",
-      "decimals text=5aeaecae0c std=a58830c356 q=dcfba1ab03",
+      "equivalent-fractions text=cf635b163a std=76f6d12c8f q=2ff4c287ec",
+      "decimals text=5aeaecae0c std=a58830c356 q=df303e4d1a",
       "patterns-and-equations text=d0038d1743 std=e4c5946540 q=63c8c98922",
       "area-and-perimeter text=dd2c32445d std=5638274957 q=a117b4fc31",
       "time-and-duration text=47a744d59a std=fb72e4808f q=639e106ecf",
@@ -435,9 +435,9 @@
     "units": [
       "thousandths-to-billions text=e8fb8a823a std=c76938e885 q=1b37333b3f",
       "facts-and-factors text=8f9365a330 std=307ba29247 q=ceb9f65a75",
-      "mixed-numbers-and-ratios text=9a52ba7712 std=c0ce2419ff q=41fce702ad",
+      "mixed-numbers-and-ratios text=9a52ba7712 std=c0ce2419ff q=5eedd9b35d",
       "decimal-multiply-divide text=fc458a18fb std=4245a2ee2d q=74b38a2450",
-      "percents-and-budgets text=136c6c6ae5 std=1c82874692 q=75b13cdb47",
+      "percents-and-budgets text=136c6c6ae5 std=1c82874692 q=99bdc2230a",
       "patterns-and-graphs text=dab33ccdd4 std=210e7cecea q=3278e6bf42",
       "equations text=5c61d003c6 std=e21390a9c6 q=0e4e24070f",
       "perimeter-and-area text=44afdbe788 std=3d01d0ac4f q=8a2b7b1158",
@@ -513,10 +513,10 @@
   "7/math": {
     "overview": "af29cbb97c",
     "units": [
-      "integer-add-subtract text=0f49d1bba6 std=057ef371e4 q=4f89d4d4ad",
+      "integer-add-subtract text=0f49d1bba6 std=057ef371e4 q=688da6d68b",
       "integer-multiply-divide text=cc9f995f0b std=a51a870197 q=bd11105e46",
       "decimal-operations text=56ab979d6a std=ccd1670aba q=7f89d319c6",
-      "fractions-decimals-percents text=12d27e2a2e std=b6a40f074e q=c8b1446bef",
+      "fractions-decimals-percents text=12d27e2a2e std=b6a40f074e q=720141998e",
       "tax-tips-discounts text=89d00189fd std=e4a2806e95 q=9acde90248",
       "coordinates-transformations text=4061b902e5 std=18c00301d6 q=56537171c2",
       "linear-relations text=8a41482ba7 std=98b48fabaf q=52c3309ac5",

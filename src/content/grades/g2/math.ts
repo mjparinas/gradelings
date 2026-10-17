@@ -56,7 +56,20 @@ function placeValue(): Question[] {
     );
   });
 
-  return shuffle([...builds, ...reads, ...digits]);
+  const [step, max] = pick([[10, 100], [5, 50]]);
+  const spot = step * randInt(1, max / step - 1);
+  const mark: Question = {
+    kind: "place",
+    prompt: `Move the marker to ${spot}.`,
+    hint: `The line goes from 0 to ${max} in jumps of ${step}. Count ${spot / step} jumps from 0 to get ${spot}.`,
+    min: 0,
+    max,
+    step,
+    target: spot,
+    labelEvery: 1,
+  };
+
+  return shuffle([...builds, ...reads.slice(0, 2), ...digits, mark]);
 }
 
 // ---------- Bigger or Smaller ----------

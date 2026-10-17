@@ -462,10 +462,10 @@
   "5/math": {
     "overview": "f97e2a6e98",
     "units": [
-      "decimals text=5aeaecae0c std=e3fe8c6bec q=dcfba1ab03",
+      "decimals text=5aeaecae0c std=e3fe8c6bec q=df303e4d1a",
       "multiply text=5470ec5ee2 std=cd71787538 q=57e21909b3",
       "divide text=8852642ad6 std=fc7d559de6 q=55ed922eee",
-      "equivalent-fractions text=cf635b163a std=58477cfda2 q=0858915281",
+      "equivalent-fractions text=cf635b163a std=58477cfda2 q=2ff4c287ec",
       "patterns-and-equations text=d0038d1743 std=05c06e95f7 q=0d4d16b1ef",
       "mb-quadrilaterals-5 text=d391700228 std=581d23676d q=ad05b43077",
       "wa-g5-conversions text=88f9478a3b std=9468c8fc66 q=93c01b2ebc",
@@ -571,9 +571,9 @@
     "units": [
       "numbers-6 text=54d144b67b std=e1380cb7a8 q=e4fdd9f708",
       "facts-and-factors text=8f9365a330 std=d40bd4cf54 q=ceb9f65a75",
-      "mixed-numbers-and-ratios text=9a52ba7712 std=de37229a75 q=41fce702ad",
+      "mixed-numbers-and-ratios text=9a52ba7712 std=de37229a75 q=5eedd9b35d",
       "decimal-multiply-divide text=fc458a18fb std=6e10f92eed q=bd81c6eb6d",
-      "percents-and-budgets text=136c6c6ae5 std=3a4f359f8f q=75b13cdb47",
+      "percents-and-budgets text=136c6c6ae5 std=3a4f359f8f q=99bdc2230a",
       "patterns-and-graphs text=dab33ccdd4 std=640726b8fa q=dfa60e317e",
       "equations text=5c61d003c6 std=224c097621 q=0e4e24070f",
       "perimeter-and-area text=44afdbe788 std=61d5043ec5 q=a0bb87355d",
@@ -675,9 +675,9 @@
   "7/math": {
     "overview": "bbe71c85a8",
     "units": [
-      "integer-add-subtract text=0f49d1bba6 std=2f4c8433d9 q=4f89d4d4ad",
+      "integer-add-subtract text=0f49d1bba6 std=2f4c8433d9 q=688da6d68b",
       "decimal-operations text=56ab979d6a std=6bbe780461 q=7f89d319c6",
-      "fractions-decimals-percents text=12d27e2a2e std=d2838e9f1b q=c8b1446bef",
+      "fractions-decimals-percents text=12d27e2a2e std=d2838e9f1b q=720141998e",
       "two-step-equations text=ddaa3cce54 std=c8eb924cfc q=4d67a1e779",
       "circles text=9910166981 std=a86686fa78 q=2f9fffb18b",
       "volume text=edb22b36a3 std=c214fdb043 q=609393c28a",

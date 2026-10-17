@@ -1133,8 +1133,47 @@ function fractionOfSet(d: Level): Question {
   );
 }
 
+/** A simplest-form fraction whose denominator can double and still fit on a 12-part bar or line. */
+function smallFraction(d: Level): [number, number] {
+  for (;;) {
+    const f = baseFraction(d === 1 ? 1 : 2);
+    if (f[1] <= 6) return f;
+  }
+}
+
+/** Tap the parts of a bar cut into more pieces so they match a simpler fraction. */
+function shadeEquivalent(d: Level): Question {
+  const [n, den] = smallFraction(d);
+  const k = randInt(2, Math.min(d === 3 ? 4 : 3, Math.floor(12 / den)));
+  return {
+    kind: "shade",
+    prompt: `This bar is cut into ${den * k} equal parts. Shade the parts that match ${n}/${den}.`,
+    hint: `${n}/${den} = ${n * k}/${den * k}. Multiply the top and bottom by ${k}, then shade ${n * k} of the ${den * k} parts.`,
+    parts: den * k,
+    target: n * k,
+  };
+}
+
+/** Put a marker where an equivalent fraction sits on a line cut into smaller jumps. */
+function markEquivalent(d: Level): Question {
+  const [n, den] = smallFraction(d);
+  const k = randInt(2, Math.min(3, Math.floor(12 / den)));
+  return {
+    kind: "place",
+    prompt: `Move the marker to ${n * k}/${den * k}. It is equal to ${n}/${den}.`,
+    hint: `The line from 0 to 1 is cut into ${den * k} equal jumps. ${n * k}/${den * k} is ${n * k} jumps from 0, and that is the same spot as ${n}/${den}.`,
+    min: 0,
+    max: 1,
+    step: 1 / (den * k),
+    target: n / den,
+    labelEvery: den * k,
+    fractionDenominator: den * k,
+  };
+}
+
 function fractions(d: Level): Question[] {
   return finish([
+    d === 1 ? shadeEquivalent(d) : chance(0.5) ? markEquivalent(d) : shadeEquivalent(d),
     missingEquivalent(d),
     shadedFraction(d),
     pickEquivalent(d),
@@ -1224,6 +1263,26 @@ function decimalLine(d: Level): Question {
       },
     },
   );
+}
+
+/** Put a marker on a decimal line: tenths, then hundredths, then thousandths. */
+function markDecimal(d: Level): Question {
+  const stepTh = d === 1 ? 100 : d === 2 ? 10 : 1;
+  const minTh = d === 1 ? 0 : d === 2 ? randInt(1, 8) * 100 : randInt(10, 90) * 10;
+  const maxTh = d === 1 ? 1000 : minTh + 10 * stepTh;
+  const ticks = (maxTh - minTh) / stepTh;
+  const k = randInt(1, ticks - 1);
+  const ansTh = minTh + k * stepTh;
+  return {
+    kind: "place",
+    prompt: `Move the marker to ${dec(ansTh)}.`,
+    hint: `The line goes from ${dec(minTh)} to ${dec(maxTh)} in ${ticks} equal jumps, so each jump is ${dec(stepTh)}. Count ${k} ${k === 1 ? "jump" : "jumps"} up from ${dec(minTh)}.`,
+    min: minTh / 1000,
+    max: maxTh / 1000,
+    step: stepTh / 1000,
+    target: ansTh / 1000,
+    labelEvery: d === 1 ? 5 : ticks / 2,
+  };
 }
 
 function orderDecimals(d: Level): Question {
@@ -1353,6 +1412,7 @@ function decimals(d: Level): Question[] {
     decimalWords(d),
     fractionToDecimal(d),
     decimalLine(d),
+    markDecimal(d),
     orderDecimals(d),
     roundDecimal(d),
     addDecimals(d),
