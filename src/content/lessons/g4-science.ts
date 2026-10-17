@@ -523,4 +523,28 @@ export const lessons: GradeLessons = {
     ["The dam turns falling water into electricity.", "That is moving water, or hydropower."],
     "moving water (hydropower)",
   ),
+  "science/fl-g4-plants-and-traits": lesson(
+    ["Flowering plants reproduce in steps: pollination, fertilization (seeds form), seed dispersal, germination.", "Traits like fur colour are inherited. Some traits, like a plant's height, are also affected by the environment.", "Instinct is inherited. Other behaviours are learned."],
+    "A spider spins a web without being taught. Is that behaviour inherited or learned?",
+    ["Nobody taught the spider.", "It was born knowing how, so it is inherited."],
+    "inherited",
+  ),
+  "science/fl-g4-florida-life": lesson(
+    ["Complete metamorphosis has four stages: egg, larva, pupa, adult. Incomplete has three: egg, nymph, adult.", "Florida's winters are mild, so its seasonal changes are smaller than in colder places.", "People affect nature: invasive species and boat strikes hurt wildlife, and planting native plants helps."],
+    "A butterfly goes through egg, larva, pupa and adult. Which kind of metamorphosis is this?",
+    ["There are four stages, including a pupa.", "That is complete metamorphosis."],
+    "complete metamorphosis",
+  ),
+  "science/fl-g4-florida-earth": lesson(
+    ["Much of Florida's rock is limestone, a sedimentary rock made from sea shells.", "Water can dissolve limestone and make caves, springs and sinkholes.", "Renewable resources, like sun and wind, can be replaced. Oil and phosphate cannot be replaced quickly.", "Florida has water, phosphate, oil, limestone, sand, wind and sun."],
+    "What forms a sinkhole in Florida?",
+    ["Water slowly dissolves limestone underground.", "When the roof of the hole gives way, the ground collapses."],
+    "water dissolving limestone",
+  ),
+  "science/fl-g4-space-coast": lesson(
+    ["Rockets launch from Florida's Space Coast. Space work creates jobs and brings visitors.", "A microscope shows very small things. A telescope shows very far things.", "Earth rotates every 24 hours and revolves around the Sun every year, so the sky seems to move.", "The Moon goes through its phases in about a month."],
+    "Why does the Sun seem to move across the sky each day?",
+    ["Earth turns once every 24 hours.", "As Earth rotates, the Sun seems to cross the sky."],
+    "Earth is rotating",
+  ),
 };

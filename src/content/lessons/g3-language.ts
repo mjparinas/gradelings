@@ -193,4 +193,16 @@ export const lessons: GradeLessons = {
     ["Nobody could really eat a horse.", "A big exaggeration is hyperbole."],
     "hyperbole",
   ),
+  "language/fl-g3-kinds-of-poems": lesson(
+    ["A haiku has three short lines, often 5, 7 and 5 syllables.", "A limerick has five funny lines. Lines 1, 2 and 5 rhyme.", "Rhymed verse has line endings that rhyme. Free verse has no set pattern."],
+    "A poem has three short lines and no rhyme. It is most likely a…",
+    ["Limericks have five lines.", "Three short lines make a haiku."],
+    "haiku",
+  ),
+  "language/fl-g3-claims-evidence-purpose": lesson(
+    ["A claim is what the author wants you to believe.", "Evidence is a fact or detail that backs up the claim.", "The purpose is why the author wrote: to inform, persuade or entertain."],
+    "Claim: Libraries help everyone. Which is evidence?  They lend books for free. Libraries are great.",
+    ["Evidence is a fact.", "Lending books for free is a fact."],
+    "They lend books for free.",
+  ),
 };

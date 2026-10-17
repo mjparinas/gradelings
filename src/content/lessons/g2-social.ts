@@ -511,4 +511,34 @@ export const lessons: GradeLessons = {
     ["No money changes hands.", "Swapping goods is bartering."],
     "bartering",
   ),
+  "social/fl-g2-first-americans": lesson(
+    ["Native Americans were the first people to live in North America. Their nations are different and are still here today.", "Nations lived in homes that fit the land and weather where they were.", "Settlers came later. Many Native nations lost land, and colonial life changed over time."],
+    "Who lived in North America first?",
+    ["Think about who was here before the colonies.", "Native Americans lived here first."],
+    "Native Americans",
+  ),
+  "social/fl-g2-immigration": lesson(
+    ["An immigrant moves to a new country. People come for freedom, jobs, safety or to join family.", "Ellis Island was an immigration station in New York Harbor from 1892 to 1954. The Statue of Liberty welcomed ships.", "Immigrants still come today and share foods, music, languages and ideas."],
+    "Which place checked many new arrivals from 1892 to 1954?",
+    ["It was an island in New York Harbor.", "It was called Ellis Island."],
+    "Ellis Island",
+  ),
+  "social/fl-g2-citizens-documents": lesson(
+    ["People form governments to make laws and keep everyone safe and free.", "The Constitution is the highest law of the United States. Florida has its own Constitution too.", "Citizens have rights and duties, such as following laws and voting when they are old enough."],
+    "What is the highest law of the United States?",
+    ["It is a written plan for the government.", "It is the Constitution."],
+    "the Constitution",
+  ),
+  "social/fl-g2-north-america": lesson(
+    ["Florida is a state in the United States. The United States is in North America.", "Maps have a title, a compass rose, a key and symbols. A star often marks a capital.", "Mexico, Canada and the island nations of the Caribbean are our neighbours."],
+    "Which city is the capital of the United States?",
+    ["It is not in a state. It is a special district.", "It is Washington, D.C."],
+    "Washington, D.C.",
+  ),
+  "social/fl-g2-service-folktales": lesson(
+    ["Civic service means helping your country or community.", "Colin Powell, Willa Brown and Carter G. Woodson served in different ways.", "A folktale is a story people tell for many years. Anansi the Spider is a clever trickster."],
+    "How are folktales passed down?",
+    ["Many were told aloud before they were written down.", "That is called an oral tradition."],
+    "by telling them aloud",
+  ),
 };

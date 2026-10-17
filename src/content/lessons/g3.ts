@@ -206,6 +206,25 @@ const math: GradeLessons = {
     ["12 ÷ 3 = 4 square units.", "There are 3 equal parts, so each is 1/3."],
     "4 square units, 1/3 of the whole",
   ),
+  // Florida
+  "math/fl-g3-even-odd-multiples": lesson(
+    ["Even numbers end in 0, 2, 4, 6 or 8.", "Odd numbers end in 1, 3, 5, 7 or 9.", "A multiple of 6 is in the 6 times table."],
+    "Is 42 a multiple of 6?",
+    ["6 × 7 = 42.", "So 42 is in the 6 times table."],
+    "yes",
+  ),
+  "math/fl-g3-line-symmetry": lesson(
+    ["A line of symmetry splits a shape into two matching halves.", "Fold the shape: the halves should fit exactly.", "Some shapes have more than one line of symmetry."],
+    "How many lines of symmetry does a square have?",
+    ["Fold it down the middle and across.", "Fold it corner to corner both ways."],
+    "4",
+  ),
+  "math/fl-g3-composite-area": lesson(
+    ["Split a joined shape into rectangles.", "Find the area of each rectangle: length × width.", "Add the areas together."],
+    "A shape is a 4 by 3 rectangle joined to a 2 by 2 rectangle. What is the area?",
+    ["4 × 3 = 12.", "2 × 2 = 4.", "12 + 4 = 16."],
+    "16 square units",
+  ),
 };
 
 // Math lessons ship with the grade. The other subjects' lessons are a second download, fetched once the grade is in.

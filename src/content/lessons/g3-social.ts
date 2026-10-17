@@ -703,4 +703,40 @@ export const lessons: GradeLessons = {
     ["Demand is high and supply is low.", "The price usually goes up."],
     "it goes up",
   ),
+  "social/fl-g3-constitutions-government": lesson(
+    ["The U.S. Constitution is the plan for our national government. It begins with \"We the People\" because the government's power comes from the people.", "The government has three branches: one makes laws, one carries them out and one decides what they mean.", "Florida has its own Constitution. There is local, state and national government."],
+    "Which branch of government makes the laws?",
+    ["The three branches are legislative, executive and judicial.", "The legislative branch writes the laws."],
+    "the legislative branch",
+  ),
+  "social/fl-g3-civics-symbols": lesson(
+    ["Good citizens show civility, cooperate and volunteer.", "Citizens who are 18 or older can vote to choose leaders.", "Patriotic holidays and symbols, such as the flag and the Liberty Bell, help us remember our country."],
+    "What can citizens do to help choose their leaders?",
+    ["Citizens who are old enough have a say.", "They vote in elections."],
+    "vote",
+  ),
+  "social/fl-g3-heroes-patriots": lesson(
+    ["A hero is brave and helps others. A patriot loves and serves their country.", "Booker T. Washington, Jesse Owens, the Tuskegee Airmen, Martin Luther King Jr., Rosa Parks and Barack Obama each showed courage.", "Dr. King and Rosa Parks worked peacefully for fair treatment for all."],
+    "Who led peaceful protests for equal rights?",
+    ["He gave a famous speech in 1963.", "It was Martin Luther King Jr."],
+    "Martin Luther King Jr.",
+  ),
+  "social/fl-g3-north-america": lesson(
+    ["North America includes Canada, the United States and Mexico, and the islands of the Caribbean.", "Each place has landforms, climate and resources. Warm Caribbean islands and cold northern Canada are very different.", "Landmarks can be natural, like the Everglades, or built by people, like the CN Tower."],
+    "Which country is just north of the United States?",
+    ["Look at a map of North America.", "Canada is north of the United States."],
+    "Canada",
+  ),
+  "social/fl-g3-people-and-money": lesson(
+    ["People often settle near water, good land and jobs.", "Many cultures have settled the United States, Canada, Mexico and the Caribbean and shared their foods, music and languages.", "Different countries use different money, like dollars and pesos."],
+    "What is Mexico's money called?",
+    ["It is not the dollar.", "It is the peso."],
+    "the peso",
+  ),
+  "social/fl-g3-us-regions": lesson(
+    ["The United States has five regions: Northeast, Southeast, Midwest, Southwest and West.", "Each region has its own land, weather and landmarks. Florida is in the Southeast.", "Use a map to find a state and see which region it is in."],
+    "Which region is Florida in?",
+    ["Florida is in the southeastern corner of the country.", "It is in the Southeast."],
+    "the Southeast",
+  ),
 };

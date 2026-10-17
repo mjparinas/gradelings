@@ -257,6 +257,37 @@ const math: GradeLessons = {
     ["y = 2 × 5 + 6.", "y = 16."],
     "16 cm",
   ),
+  // Florida
+  "math/fl-g8-multiply-expressions": lesson(
+    ["Multiply each term in the first bracket by each term in the second.", "Combine like terms.", "To factor, pull out the common factor."],
+    "Multiply (x + 2)(x + 3).",
+    ["x² + 3x + 2x + 6.", "Combine: 5x."],
+    "x² + 5x + 6",
+  ),
+  "math/fl-g8-two-step-inequalities": lesson(
+    ["Solve like a two-step equation.", "Undo adding or subtracting first.", "Flip the sign if you divide by a negative."],
+    "Solve 2x + 3 > 11.",
+    ["Subtract 3: 2x > 8.", "Divide by 2: x > 4."],
+    "x > 4",
+  ),
+  "math/fl-g8-polygon-angles": lesson(
+    ["Split a polygon into triangles from one corner.", "A polygon with n sides makes n − 2 triangles.", "Each triangle has 180°."],
+    "What is the angle sum of a hexagon?",
+    ["6 sides: 6 − 2 = 4 triangles.", "4 × 180 = 720."],
+    "720°",
+  ),
+  "math/fl-g8-dilations": lesson(
+    ["A dilation enlarges or shrinks a figure.", "Scale factor = image length ÷ original length.", "A scale factor over 1 enlarges."],
+    "A side of 4 becomes 10. What is the scale factor?",
+    ["10 ÷ 4 = 2.5."],
+    "2.5",
+  ),
+  "math/fl-g8-repeated-experiments": lesson(
+    ["List every outcome of the experiment.", "For repeated tries, multiply the outcomes of each try.", "A coin flipped 3 times has 2 × 2 × 2 outcomes."],
+    "How many outcomes in 3 coin flips?",
+    ["2 × 2 × 2 = 8."],
+    "8",
+  ),
 };
 
 // Math lessons ship with the grade. The other subjects' lessons are a second download, fetched once the grade is in.

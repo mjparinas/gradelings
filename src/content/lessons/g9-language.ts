@@ -163,4 +163,22 @@ export const lessons: GradeLessons = {
     ["She is alone, so she isn’t talking to anyone.", "Speaking private thoughts aloud alone is a soliloquy."],
     "a soliloquy",
   ),
+  "language/fl-g9-epic-poetry": lesson(
+    ["An epic is a long poem about heroic deeds, such as the Odyssey.", "Features: an invocation, epithets, epic similes and a quest.", "Common themes are fate, pride, duty and the journey home."],
+    "“In medias res” means an epic begins…",
+    ["The words mean in the middle.", "It starts mid-action."],
+    "in the middle of the action",
+  ),
+  "language/fl-g9-opposing-arguments": lesson(
+    ["Opposing arguments take different positions on one topic.", "Find each claim. Then compare the reasoning and evidence.", "Watch for fallacies, such as the bandwagon and the slippery slope."],
+    "“If we ban one snack, soon we’ll ban all food.” This is a…",
+    ["It jumps to an extreme.", "That is a slippery slope."],
+    "slippery slope fallacy",
+  ),
+  "language/fl-g9-adaptations-and-key-elements": lesson(
+    ["An adaptation retells a story in a new setting or from a new view.", "Compare what the author kept and what changed.", "Motifs, contrast and setting add layers of meaning."],
+    "A novel retells the Odyssey from Penelope’s point of view. This is an…",
+    ["It retells a classic.", "A retelling is an adaptation."],
+    "adaptation",
+  ),
 };

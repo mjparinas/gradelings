@@ -283,4 +283,22 @@ export const lessons: GradeLessons = {
     ["It copies other birds' songs.", "It is the mockingbird."],
     "the mockingbird",
   ),
+  "social/fl-k-symbols": lesson(
+    ["A symbol is a picture or thing that stands for something.", "The flag stands for our country. Florida has a flag too.", "We show respect for our country. That is patriotism."],
+    "What does the American flag stand for?",
+    ["A flag is a symbol.", "The American flag stands for our country."],
+    "our country",
+  ),
+  "social/fl-k-find-florida": lesson(
+    ["Florida is the state we live in. It has water on almost all sides.", "North, south, east and west are directions.", "A map or globe shows land and water."],
+    "On a globe, what do the blue parts show?",
+    ["Look at the colours on a globe.", "Blue shows water, like oceans."],
+    "water",
+  ),
+  "social/fl-k-inventors-heroes": lesson(
+    ["An inventor makes something new.", "Honesty, courage and responsibility are good character.", "Mae Jemison flew in space. George Washington Carver studied plants."],
+    "Who makes something new?",
+    ["Think about what an inventor does.", "An inventor thinks of a new idea."],
+    "an inventor",
+  ),
 };

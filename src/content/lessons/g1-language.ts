@@ -169,4 +169,16 @@ export const lessons: GradeLessons = {
     ["Split it: sun + set.", "Both are real words."],
     "sun and set",
   ),
+  "language/fl-g1-poems-and-describing": lesson(
+    ["A stanza is a group of lines in a poem.", "A line break is where one line ends.", "Describing words tell how things look, sound or feel."],
+    "Rain falls / on the town. / Puddles shine. How many lines?",
+    ["Count each row.", "There are three rows."],
+    "3",
+  ),
+  "language/fl-g1-opinions-and-comparing": lesson(
+    ["An opinion tells what someone thinks.", "Words like best and love often show an opinion.", "Two books on one topic can tell the same or different facts."],
+    "Which is an opinion? Apples grow on trees. Apples are the tastiest.",
+    ["Can you check it?", "Tastiest is what someone thinks."],
+    "Apples are the tastiest.",
+  ),
 };

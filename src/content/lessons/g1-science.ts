@@ -241,4 +241,16 @@ export const lessons: GradeLessons = {
     ["A whale swims in salt water."],
     "a whale",
   ),
+  "science/fl-g1-sky-and-sun": lesson(
+    ["There are more stars than anyone can count.", "Gravity pulls things toward Earth without touching them.", "A magnifier makes small things look bigger.", "The Sun helps plants grow, but too much can burn skin."],
+    "What can help you see a tiny ant's legs?",
+    ["Ant legs are very small.", "A magnifier makes small things look bigger."],
+    "a magnifier",
+  ),
+  "science/fl-g1-water-and-changes": lesson(
+    ["Earth's surface has water, rocks, soil and living things.", "Swim with a grown-up and near a lifeguard.", "Some changes are fast, like lightning. Some are slow, like a tree growing."],
+    "A tall palm tree grows from a seed. Is this fast or slow?",
+    ["A tree takes many years to grow."],
+    "slow",
+  ),
 };

@@ -1,0 +1,132 @@
+Florida science (NGSSS), Kindergarten to Grade 9: benchmarks no unit practises yet.
+Every other benchmark in docs/research/florida/outcomes.json for these grades is cited by a unit in
+src/content/florida/plan/science.ts or by a fl- unit in src/content/florida/units/science-*.ts.
+
+Reasons: NoS = nature of science benchmark needing free-text investigation design, a lab or critique that a
+multiple-choice practice unit cannot show (the shared units practise the vocabulary, not these skills);
+A&P = Anatomy and Physiology Honors benchmarks, a course beyond Biology 1 that this app does not teach;
+HS-adv = Chemistry, Physics or Biology Honors benchmarks that need quantitative or lab work not built; 
+no unit = no neutral shared unit practises it yet (an adopted unit on the topic names another state or Canada, or none exists).
+
+
+Grade K (0 of 19 benchmarks without a unit)
+
+Grade 1 (0 of 19 benchmarks without a unit)
+
+Grade 2 (2 of 30 benchmarks without a unit)
+SC.2.N.1.5  [NoS]  Distinguish between empirical observation (what you see, hear, feel, smell, or taste) and ideas or inferences (what you think).
+SC.2.N.1.6  [NoS]  Explain how scientists alone or in groups are always investigating new ways to solve problems.
+
+Grade 3 (4 of 32 benchmarks without a unit)
+SC.3.N.1.2  [NoS]  Compare the observations made by different groups using the same tools and seek reasons to explain the differences across groups.
+SC.3.N.1.6  [NoS]  Infer based on observation.
+SC.3.N.3.2  [NoS]  Recognize that scientists use models to help understand and explain how things work.
+SC.3.N.3.3  [NoS]  Recognize that all models are approximations of natural phenomena; as such, they do not perfectly account for all observations.
+
+Grade 4 (12 of 42 benchmarks without a unit)
+SC.4.P.9.1  [no unit]  Identify some familiar changes in materials that result in other materials with different characteristics, such as decaying animal or plant matter, bu
+SC.4.P.10.4  [no unit]  Describe how moving water and air are sources of energy and can be used to move things.
+SC.4.N.1.1  [NoS]  Raise questions about the natural world, use appropriate reference materials that support understanding to obtain information (identifying the source)
+SC.4.N.1.2  [NoS]  Compare the observations made by different groups using multiple tools and seek reasons to explain the differences across groups.
+SC.4.N.1.3  [NoS]  Explain that science does not always follow a rigidly defined method ("the scientific method") but that science does involve the use of observations a
+SC.4.N.1.4  [NoS]  Attempt reasonable answers to scientific questions and cite evidence in support.
+SC.4.N.1.5  [NoS]  Compare the methods and results of investigations done by other classmates.
+SC.4.N.1.6  [NoS]  Keep records that describe observations made, carefully distinguishing actual observations from ideas and inferences about the observations.
+SC.4.N.1.7  [NoS]  Recognize and explain that scientists base their explanations on evidence.
+SC.4.N.1.8  [NoS]  Recognize that science involves creativity in designing experiments.
+SC.4.N.2.1  [NoS]  Explain that science focuses solely on the natural world.
+SC.4.N.3.1  [NoS]  Explain that models can be three dimensional, two dimensional, an explanation in your mind, or a computer model.
+
+Grade 5 (6 of 37 benchmarks without a unit)
+SC.5.N.1.2  [NoS]  Explain the difference between an experiment and other types of scientific investigation.
+SC.5.N.1.4  [NoS]  Identify a control group and explain its importance in an experiment.
+SC.5.N.1.5  [NoS]  Recognize and explain that authentic scientific investigation frequently does not parallel the steps of "the scientific method."
+SC.5.N.1.6  [NoS]  Recognize and explain the difference between personal opinion/interpretation and verified observation.
+SC.5.N.2.1  [NoS]  Recognize and explain that science is grounded in empirical observations that are testable; explanation must always be linked with evidence.
+SC.5.N.2.2  [NoS]  Recognize and explain that when scientific investigations are carried out, the evidence produced by those investigations should be replicable by other
+
+Grade 6 (0 of 35 benchmarks without a unit)
+
+Grade 7 (0 of 34 benchmarks without a unit)
+
+Grade 8 (0 of 40 benchmarks without a unit)
+
+Grade 9 (73 of 210 benchmarks without a unit)
+SC.912.L.14.7  [A&P]  Relate the structure of each of the major plant organs and tissues to physiological processes.
+SC.912.L.14.8  [A&P]  Explain alternation of generations in plants.
+SC.912.L.14.9  [A&P]  Relate the major structure of fungi to their functions.
+SC.912.L.14.10  [A&P]  Discuss the relationship between the evolution of land plants and their anatomy.
+SC.912.L.14.11  [A&P]  Classify and state the defining characteristics of epithelial tissue, connective tissue, muscle tissue, and nervous tissue.
+SC.912.L.14.12  [A&P]  Describe the anatomy and histology of bone tissue.
+SC.912.L.14.13  [A&P]  Distinguish between bones of the axial skeleton and the appendicular skeleton.
+SC.912.L.14.14  [A&P]  Identify the major bones of the axial and appendicular skeleton.
+SC.912.L.14.15  [A&P]  Identify major markings (such as foramina, fossae, tubercles, etc.) on a skeleton. Explain why these markings are important.
+SC.912.L.14.16  [A&P]  Describe the anatomy and histology, including ultrastructure, of muscle tissue.
+SC.912.L.14.17  [A&P]  List the steps involved in the sliding filament of muscle contraction.
+SC.912.L.14.18  [A&P]  Describe signal transmission across a myoneural junction.
+SC.912.L.14.19  [A&P]  Explain the physiology of skeletal muscle.
+SC.912.L.14.20  [A&P]  Identify the major muscles of the human on a model or diagram.
+SC.912.L.14.21  [A&P]  Describe the anatomy, histology, and physiology of the central and peripheral nervous systems and name the major divisions of the nervous system.
+SC.912.L.14.22  [A&P]  Describe the physiology of nerve conduction, including the generator potential, action potential, and the synapse.
+SC.912.L.14.23  [A&P]  Identify the parts of a reflex arc.
+SC.912.L.14.24  [A&P]  Identify the general parts of a synapse and describe the physiology of signal transmission across a synapse.
+SC.912.L.14.25  [A&P]  Identify the major parts of a cross section through the spinal cord.
+SC.912.L.14.26  [A&P]  Identify the major parts of the brain on diagrams or models.
+SC.912.L.14.27  [A&P]  Identify the functions of the major parts of the brain, including the meninges, medulla, pons, midbrain, hypothalamus, thalamus, cerebellum and cerebr
+SC.912.L.14.28  [A&P]  Identify the major functions of the spinal cord.
+SC.912.L.14.29  [A&P]  Define the terms endocrine and exocrine.
+SC.912.L.14.30  [A&P]  Compare endocrine and neural controls of physiology.
+SC.912.L.14.31  [A&P]  Describe the physiology of hormones including the different types and the mechanisms of their action.
+SC.912.L.14.32  [A&P]  Describe the anatomy and physiology of the endocrine system.
+SC.912.L.14.33  [A&P]  Describe the basic anatomy and physiology of the reproductive system.
+SC.912.L.14.34  [A&P]  Describe the composition and physiology of blood, including that of the plasma and the formed elements.
+SC.912.L.14.35  [A&P]  Describe the steps in hemostasis, including the mechanism of coagulation. Include the basis for blood typing and transfusion reactions.
+SC.912.L.14.36  [A&P]  Describe the factors affecting blood flow through the cardiovascular system.
+SC.912.L.14.37  [A&P]  Explain the components of an electrocardiogram.
+SC.912.L.14.38  [A&P]  Describe normal heart sounds and what they mean.
+SC.912.L.14.39  [A&P]  Describe hypertension and some of the factors that produce it.
+SC.912.L.14.40  [A&P]  Describe the histology of the major arteries and veins of systemic, pulmonary, hepatic portal, and coronary circulation.
+SC.912.L.14.41  [A&P]  Describe fetal circulation and changes that occur to the circulatory system at birth.
+SC.912.L.14.42  [A&P]  Describe the anatomy and the physiology of the lymph system.
+SC.912.L.14.43  [A&P]  Describe the histology of the respiratory system.
+SC.912.L.14.44  [A&P]  Describe the physiology of the respiratory system including the mechanisms of ventilation, gas exchange, gas transport and the mechanisms that control
+SC.912.L.14.45  [A&P]  Describe the histology of the alimentary canal and its associated accessory organs.
+SC.912.L.14.46  [A&P]  Describe the physiology of the digestive system, including mechanical digestion, chemical digestion, absorption and the neural and hormonal mechanisms
+SC.912.L.14.47  [A&P]  Describe the physiology of urine formation by the kidney.
+SC.912.L.14.48  [A&P]  Describe the anatomy, histology, and physiology of the ureters, the urinary bladder and the urethra.
+SC.912.L.14.49  [A&P]  Identify the major functions associated with the sympathetic and parasympathetic nervous systems.
+SC.912.L.14.50  [A&P]  Describe the structure of vertebrate sensory organs. Relate structure to function in vertebrate sensory systems.
+SC.912.L.14.51  [A&P]  Describe the function of the vertebrate integumentary system.
+SC.912.L.15.12  [HS-adv]  List the conditions for Hardy-Weinberg equilibrium in a population and why these conditions are not likely to appear in nature. Use the Hardy-Weinberg
+SC.912.L.16.6  [HS-adv]  Discuss the mechanisms for regulation of gene expression in prokaryotes and eukaryotes at transcription and translation level.
+SC.912.L.16.7  [HS-adv]  Describe how viruses and bacteria transfer genetic material between cells and the role of this process in biotechnology.
+SC.912.L.16.10  [HS-adv]  Evaluate the impact of biotechnology on the individual, society and the environment, including medical and ethical issues.
+SC.912.L.16.11  [HS-adv]  Discuss the technologies associated with forensic medicine and DNA identification, including restriction fragment length polymorphism (RFLP) analysis.
+SC.912.L.16.12  [HS-adv]  Describe how basic DNA technology (restriction digestion by endonucleases, gel electrophoresis, polymerase chain reaction, ligation, and transformatio
+SC.912.L.16.13  [HS-adv]  Describe the basic anatomy and physiology of the human reproductive system. Describe the process of human development from fertilization to birth and
+SC.912.L.17.3  [HS-adv]  Discuss how various oceanic and freshwater processes, such as currents, tides, and waves, affect the abundance of aquatic organisms.
+SC.912.L.18.5  [HS-adv]  Discuss the use of chemiosmotic gradients for ATP production in chloroplasts and mitochondria.
+SC.912.L.18.6  [HS-adv]  Discuss the role of anaerobic respiration in living things and in human society.
+SC.912.P.8.9  [HS-adv]  Apply the mole concept and the law of conservation of mass to calculate quantities of chemicals participating in reactions.
+SC.912.P.8.13  [HS-adv]  Identify selected functional groups and relate how they contribute to properties of carbon compounds.
+SC.912.P.10.6  [HS-adv]  Create and interpret potential energy diagrams, for example: chemical reactions, orbits around a central body, motion of a pendulum.
+SC.912.P.10.8  [HS-adv]  Explain entropy's role in determining the efficiency of processes that convert energy to work.
+SC.912.P.10.9  [HS-adv]  Describe the quantization of energy at the atomic level.
+SC.912.P.10.11  [HS-adv]  Explain and compare nuclear reactions (radioactive decay, fission and fusion), the energy changes associated with them and their associated safety iss
+SC.912.P.10.12  [HS-adv]  Differentiate between chemical and nuclear reactions.
+SC.912.P.10.14  [HS-adv]  Differentiate among conductors, semiconductors, and insulators.
+SC.912.P.10.17  [HS-adv]  Explore the theory of electromagnetism by explaining electromagnetic waves in terms of oscillating electric and magnetic fields.
+SC.912.P.10.19  [HS-adv]  Explain that all objects emit and absorb electromagnetic radiation and distinguish between objects that are blackbody radiators and those that are not
+SC.912.P.10.21  [HS-adv]  Qualitatively describe the shift in frequency in sound or electromagnetic waves due to the relative motion of a source or a receiver.
+SC.912.P.10.22  [HS-adv]  Construct ray diagrams and use thin lens and mirror equations to locate the images formed by lenses and mirrors.
+SC.912.P.12.6  [HS-adv]  Qualitatively apply the concept of angular momentum.
+SC.912.P.12.7  [HS-adv]  Recognize that nothing travels faster than the speed of light in vacuum which is the same for all observers no matter how they or the light source are
+SC.912.P.12.8  [HS-adv]  Recognize that Newton's Laws are a limiting case of Einstein's Special Theory of Relativity at speeds that are much smaller than the speed of light.
+SC.912.P.12.9  [HS-adv]  Recognize that time, length, and energy depend on the frame of reference.
+SC.912.P.12.11  [HS-adv]  Describe phase transitions in terms of kinetic molecular theory.
+SC.912.E.6.6  [HS-adv]  Analyze past, present, and potential future consequences to the environment resulting from various energy production technologies.
+
+Notes
+- Partial coverage: benchmarks covered only by an adopted unit practise the topic but not always the benchmark's exact wording. The plan lists the closest unit.
+- Grade 9 is the Biology 1, Earth and Space Science and Physical Science benchmarks (SC.912) that a first science course draws on; the fl-g9 units add the Florida examples.
+- Several adopted units from other frameworks name another state or Canada and were left out of Florida; Florida's own fl- units cover the same benchmarks with Florida examples where possible.

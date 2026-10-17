@@ -8,6 +8,6 @@ export const contract: FrameworkContract = {
   cite: codeCite(OUTCOMES, "Washington"),
   ownPrefix: "wa-",
   // Other states may adopt them; no Canadian framework ever gets them.
-  ownSharedWith: ["us-or", "us-ca", "us-ny", "us-tx", "us-me", "us-mn", "us-ak", "us-al", "us-az", "us-ar"],
+  ownSharedWith: ["us-or", "us-ca", "us-ny", "us-tx", "us-me", "us-mn", "us-ak", "us-al", "us-az", "us-ar", "us-fl"],
   plan: PLAN,
 };

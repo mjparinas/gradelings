@@ -511,4 +511,28 @@ export const lessons: GradeLessons = {
     ["In December the North Pole is tilted away from the sun.", "Places far north stay in Earth's shadow all day."],
     "the North Pole tilts away from the sun",
   ),
+  "science/fl-g8-matter-measures": lesson(
+    ["Mass is the amount of matter in an object. It stays the same everywhere.", "Weight is the pull of gravity on an object. It changes with the planet.", "Heating usually speeds up chemical changes, so food spoils faster in the heat.", "In a chemical change, atoms are rearranged, not lost, so total mass stays the same."],
+    "An astronaut weighs 120 pounds on Earth. About what does the astronaut weigh on the Moon?",
+    ["The Moon's gravity is about one sixth of Earth's.", "120 ÷ 6 = 20."],
+    "20 pounds",
+  ),
+  "science/fl-g8-space-sun-history": lesson(
+    ["A light-year is the distance light travels in one year. Space is far too big for miles.", "The Sun is a star. It makes energy by fusion in its core.", "Sunspots are cooler spots. Flares are bursts of energy. Prominences are loops of gas.", "The geocentric model put Earth at the centre. The heliocentric model puts the Sun at the centre."],
+    "Which model puts the Sun at the centre of the Solar System?",
+    ["Helio means Sun.", "Copernicus and Galileo's evidence supported it."],
+    "the heliocentric model",
+  ),
+  "science/fl-g8-space-florida": lesson(
+    ["Probes, rovers and telescopes go where people cannot, so technology is essential to space science.", "Rockets launch east from Florida's Space Coast. Earth's spin adds speed, and the ocean is a safe area.", "The space industry brings jobs and visitors to Florida.", "Space research also leads to spinoffs, like memory foam."],
+    "Why do rockets from Florida launch toward the east?",
+    ["Earth spins toward the east.", "That gives a rocket extra speed."],
+    "Earth's spin adds speed",
+  ),
+  "science/fl-g8-nature-of-science": lesson(
+    ["A study starts with a question. Plan the variables, the measurements and the number of trials.", "Repeated trials and replication make results more reliable.", "Say 'the results support' or 'fail to support'. Science does not claim final proof.", "Pseudoscience makes claims that cannot be tested and leans on stories instead of evidence."],
+    "Which is better: 'the results support the hypothesis' or 'the results prove it forever'?",
+    ["New evidence could change a conclusion.", "So science avoids claiming proof."],
+    "the results support the hypothesis",
+  ),
 };

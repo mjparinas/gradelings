@@ -261,6 +261,19 @@ const math: GradeLessons = {
     "38",
     { type: "numberLine", min: 0, max: 50, step: 5, labelEvery: 10, jumps: [{ from: 0, to: 25 }, { from: 25, to: 38 }] },
   ),
+  // Florida
+  "math/fl-g2-perimeter": lesson(
+    ["Perimeter is the distance around a shape.", "Add the length of every side.", "A rectangle has two long and two short sides."],
+    "A rectangle is 5 in by 3 in. What is the perimeter?",
+    ["5 + 3 + 5 + 3.", "That is 16."],
+    "16 in",
+  ),
+  "math/fl-g2-equal-parts": lesson(
+    ["Equal parts are the same size.", "2 equal parts are halves, 3 are thirds and 4 are fourths.", "A shape can be cut into equal parts in different ways."],
+    "A rectangle is cut into 3 equal parts. What is each part called?",
+    ["Three equal parts are thirds."],
+    "a third",
+  ),
 };
 
 // Math lessons ship with the grade. The other subjects' lessons are a second download, fetched once the grade is in.

@@ -169,4 +169,22 @@ export const lessons: GradeLessons = {
     ["“Best” and “better than all others” say the same thing.", "The reason just repeats the claim."],
     "circular reasoning",
   ),
+  "language/fl-g8-archetypes-and-perspectives": lesson(
+    ["An archetype is a pattern that appears in many stories.", "Common ones are the hero, mentor, trickster, villain and outsider.", "Authors show a character’s perspective through thoughts, speech and choices."],
+    "An old wizard trains a young farm boy to face an evil sorcerer. The wizard is the…",
+    ["He teaches and guides.", "That is the mentor."],
+    "mentor",
+  ),
+  "language/fl-g8-poetry-craft": lesson(
+    ["Imagery appeals to the senses. A symbol stands for a larger idea.", "Sound, such as alliteration, and structure shape a poem’s feeling.", "A cracked mirror or a candle can be symbols."],
+    "A dove in a poem often symbolizes…",
+    ["A symbol stands for an idea.", "Doves are a sign of peace."],
+    "peace",
+  ),
+  "language/fl-g8-weighing-arguments": lesson(
+    ["Reasoning can be cause and effect, analogy, authority or evidence.", "Check if evidence is accurate, relevant and from a reliable source.", "Improve an argument with stronger evidence and a reply to counterclaims."],
+    "“Everyone is buying it, so it must be good.” What is the flaw?",
+    ["Many people can be wrong.", "Popularity is not proof."],
+    "popularity is not proof of quality",
+  ),
 };

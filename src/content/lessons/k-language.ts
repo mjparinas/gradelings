@@ -145,4 +145,16 @@ export const lessons: GradeLessons = {
     ["Who is the story about?", "Ben the bear."],
     "Ben the bear",
   ),
+  "language/fl-k-authors-and-illustrators": lesson(
+    ["The author writes the words in a book.", "The illustrator draws the pictures.", "The title is on the cover. It names the book."],
+    "Who draws the pictures in a book?",
+    ["The author writes the words.", "The illustrator makes the pictures."],
+    "the illustrator",
+  ),
+  "language/fl-k-facts-and-opinions": lesson(
+    ["A fact can be checked. A cat has whiskers.", "An opinion is what someone thinks. Cats are cute.", "Clue words like best and prettiest show opinions."],
+    "Which is an opinion? Fish live in water. Fish are boring.",
+    ["Can you check it?", "Boring is a feeling."],
+    "Fish are boring.",
+  ),
 };

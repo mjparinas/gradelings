@@ -148,6 +148,31 @@ const math: GradeLessons = {
     "3 sticks",
     { type: "shape", shape: "triangle" },
   ),
+  // Florida
+  "math/fl-k-first-to-fifth": lesson(
+    ["First, second, third, fourth and fifth tell the place in a line.", "Start counting from the front of the line.", "Say the place words in order."],
+    "Who is third in the line?",
+    ["First is the front.", "Second is next.", "Third is the next one after that."],
+    "the third one in line",
+  ),
+  "math/fl-k-number-line-20": lesson(
+    ["A number line shows numbers in order.", "Numbers farther right are greater.", "Numbers farther left are less."],
+    "Which is greater, 7 or 12?",
+    ["Find 7 and 12 on the line.", "12 is farther to the right."],
+    "12",
+  ),
+  "math/fl-k-measure-with-objects": lesson(
+    ["Line up small objects end to end.", "Leave no gaps and no overlaps.", "Count the objects to get the length."],
+    "A book is 8 cubes long. A pen is 5 cubes long. Which is longer?",
+    ["8 is more than 5."],
+    "the book",
+  ),
+  "math/fl-k-put-shapes-together": lesson(
+    ["You can join shapes to make a bigger shape.", "Two squares side by side make a rectangle.", "Two triangles can make a square."],
+    "What can two squares make?",
+    ["Put two squares side by side.", "The new shape is long."],
+    "a rectangle",
+  ),
 };
 
 // Math lessons ship with the grade. The other subjects' lessons are a second download, fetched once the grade is in.

@@ -415,4 +415,28 @@ export const lessons: GradeLessons = {
     ["In June, the North Pole is tilted toward the sun.", "Places far north stay in sunlight almost all day."],
     "the North Pole is tilted toward the sun",
   ),
+  "science/fl-g5-structures-and-survival": lesson(
+    ["Plants and animals have structures that do jobs: roots take in water, gills and lungs take in oxygen.", "Different structures can do the same job in different living things.", "Variation means individuals differ a little.", "Some differences help an individual survive when the place changes."],
+    "Fish use gills and people use lungs. What do both do?",
+    ["Both are structures that take in oxygen.", "Different structures can do the same job."],
+    "take in oxygen",
+  ),
+  "science/fl-g5-static-charge": lesson(
+    ["Rubbing can give objects an electric charge.", "Charges that are alike push apart. Charges that are different pull together.", "Charged objects can pull or push without touching.", "A spark or lightning is charge jumping across a gap."],
+    "Two balloons rubbed on hair both have the same charge. What do they do?",
+    ["Alike charges repel.", "The balloons push apart."],
+    "push apart",
+  ),
+  "science/fl-g5-solar-system": lesson(
+    ["Our Sun is one star in the Milky Way galaxy.", "The four inner planets are small and rocky. The four outer planets are large and made of gas or ice.", "Moons orbit planets. Asteroids and comets orbit the Sun.", "Comets have tails, made as the Sun heats their ice."],
+    "Which group has Earth: the inner or the outer planets?",
+    ["Mercury, Venus, Earth and Mars are close to the Sun.", "They are the inner, rocky planets."],
+    "the inner planets",
+  ),
+  "science/fl-g5-florida-weather": lesson(
+    ["The water cycle: water evaporates, condenses into clouds, then falls as rain or snow.", "Weather is the air now. Climate is the usual weather over many years.", "Warm, wet air near the ocean can grow into a hurricane.", "A family plan: a kit, a safe place and a way to stay in touch."],
+    "Is a sunny day today weather or climate?",
+    ["It is the air right now.", "That is weather. Climate is the long-term pattern."],
+    "weather",
+  ),
 };

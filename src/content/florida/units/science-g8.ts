@@ -1,0 +1,161 @@
+import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
+
+// Florida's own Grade 8 science units (`fl-` ids), for the benchmarks no shared unit practises: mass and weight,
+// temperature and chemical change, and conservation in living systems (SC.8.P.8.2, 8.P.9.3, 8.L.18.4), space
+// distances, the Sun and historical models of the Solar System (SC.8.E.5.1, 5.6, 5.8), space technology and its effects
+// on Florida's economy and culture (SC.8.E.5.10, 5.12) and how science works (SC.8.N.1.1 to 1.4, 2.1, 2.2).
+
+const MATTER_MEASURES: Q[] = [
+  ["Mass is…", "the amount of matter in an object", ["the pull of gravity on an object", "how big something looks", "how hot it is"], "Mass does not change with place."],
+  ["Weight is…", "the pull of gravity on an object", ["the amount of matter", "its volume", "its temperature"], "Weight depends on gravity."],
+  ["Mass is measured with a…", "balance", ["thermometer", "ruler", "stopwatch"], "A balance compares masses."],
+  ["Weight is measured with a…", "spring scale", ["thermometer", "ruler", "stopwatch"], "It measures the pull of gravity."],
+  ["An astronaut's mass on the Moon, compared with on Earth, is…", "the same", ["one sixth as much", "six times greater", "zero"], "Mass stays the same everywhere."],
+  ["An astronaut's weight on the Moon, compared with on Earth, is about…", "one sixth as much", ["the same", "six times greater", "zero"], "The Moon's gravity is weaker."],
+  ["Far from any planet or star, an object's weight is…", "almost zero, but its mass is unchanged", ["the same as on Earth", "zero mass", "twice its Earth weight"], "Gravity is tiny there."],
+  ["Weight depends on…", "mass and the strength of gravity", ["color", "temperature", "size only"], "Weight = pull of gravity on the mass."],
+  ["Which is a unit of weight?", "pound", ["kilogram", "liter", "degree"], "Pounds measure the pull of gravity."],
+  ["A 2 kilogram rock is carried to Mars. Its mass is…", "still 2 kilograms", ["less than 2 kilograms", "more than 2 kilograms", "zero"], "Mass is the same everywhere."],
+  ["Heating usually makes chemical changes happen…", "faster", ["slower", "not at all", "in reverse"], "Particles move faster and collide more."],
+  ["Why does food spoil faster on a hot Florida day?", "heat speeds up the chemical changes of decay", ["heat makes food heavier", "cold speeds up spoiling", "gravity pulls on it"], "Warmth speeds reactions."],
+  ["Why do we put milk in the refrigerator?", "cold slows the chemical changes that spoil it", ["cold makes milk heavier", "cold makes milk sweeter", "cold adds oxygen"], "Slower reactions mean it lasts longer."],
+  ["An antacid tablet dissolves and fizzes faster in…", "warm water", ["cold water", "ice", "no water"], "Heat speeds the reaction."],
+  ["Which is a sign of a chemical change?", "gas bubbles and a new substance forming", ["ice melting", "a glass breaking", "sugar dissolving in water"], "A new substance is made."],
+  ["In a chemical reaction, the total mass of the products…", "equals the total mass of the reactants", ["is greater", "is less", "is always zero"], "Mass is conserved."],
+  ["Atoms in the food a living thing eats are…", "rearranged, not lost", ["destroyed", "created", "turned into nothing"], "Conservation of mass."],
+  ["A plant makes sugar from carbon dioxide and water. The atoms are…", "rearranged into new substances", ["destroyed", "created from nothing", "turned into light"], "The same atoms, new arrangement."],
+  ["A candle burns inside a closed jar. The total mass of the jar and its contents…", "stays the same", ["goes up", "goes down", "drops to zero"], "Nothing leaves the jar."],
+  ["An object weighs 60 pounds on Earth. On the Moon it weighs about…", "10 pounds", ["60 pounds", "360 pounds", "0 pounds"], "One sixth of 60 is 10.", true],
+  ["Most of a growing tree's mass comes from…", "carbon dioxide and water", ["soil only", "sunlight", "wind"], "Photosynthesis builds the tree from air and water.", true],
+  ["Energy from the food an animal eats is…", "changed to other forms, not created or destroyed", ["destroyed", "created from nothing", "lost forever"], "Conservation of energy.", true],
+  ["A glow stick lasts longer when it is…", "kept cold", ["kept hot", "shaken", "left in the Sun"], "Cold slows the reaction.", true],
+  ["A balance shows that two objects have the same…", "mass", ["weight on every planet only", "color", "temperature"], "It compares masses.", true],
+];
+
+const SPACE_SUN_HISTORY: Q[] = [
+  ["Distances in space are measured in light-years because…", "they are so large", ["stars are loud", "light is slow", "planets are tiny"], "Miles would be huge numbers."],
+  ["A light-year is the distance…", "light travels in one year", ["a rocket flies in a year", "the Moon moves in a year", "Earth moves in a day"], "It is a distance, not a time."],
+  ["Light from the Sun takes about how long to reach Earth?", "8 minutes", ["8 seconds", "8 hours", "8 days"], "The Sun is about 93 million miles away."],
+  ["Light from a star 100 light-years away left it…", "100 years ago", ["100 minutes ago", "yesterday", "100 days ago"], "We see it as it was."],
+  ["Space travel is hard mostly because distances are…", "enormous", ["tiny", "always the same", "measured in inches"], "Even the nearest star is very far."],
+  ["The Sun makes energy…", "in its core by fusion", ["on its surface by burning wood", "from lightning", "from the Moon"], "Hydrogen nuclei fuse to helium."],
+  ["The Sun's visible surface is the…", "photosphere", ["core", "corona", "crust"], "It is the layer we see."],
+  ["Dark, cooler spots on the Sun are…", "sunspots", ["craters", "prominences", "flares"], "They are cooler than the area around them."],
+  ["A sudden burst of energy from the Sun is a…", "solar flare", ["sunspot", "prominence", "comet"], "It releases energy fast."],
+  ["A huge loop of gas rising off the Sun is a…", "prominence", ["sunspot", "flare", "crater"], "It arcs above the surface."],
+  ["Hot gas rising and cooler gas sinking inside the Sun is…", "convection", ["fusion", "reflection", "erosion"], "Heat moves by flowing."],
+  ["Strong solar flares can disturb…", "satellites and radio signals", ["tides", "seasons", "earthquakes"], "Charged particles reach Earth."],
+  ["The geocentric model puts…", "Earth at the center", ["the Sun at the center", "the Moon at the center", "Mars at the center"], "Geo means Earth."],
+  ["The heliocentric model puts…", "the Sun at the center", ["Earth at the center", "the Moon at the center", "Jupiter at the center"], "Helio means Sun."],
+  ["Who published the heliocentric model in 1543?", "Copernicus", ["Ptolemy", "Newton", "Edison"], "A Polish astronomer."],
+  ["Who used a telescope to see moons orbiting Jupiter?", "Galileo", ["Ptolemy", "Copernicus", "Aristotle"], "That showed not everything orbits Earth."],
+  ["Ptolemy's model of the sky was…", "geocentric", ["heliocentric", "a model of atoms", "a map of Earth"], "Earth stood at the center."],
+  ["Kepler showed that planets move in…", "ellipses", ["perfect circles", "straight lines", "squares"], "Orbits are oval."],
+  ["Which model do scientists accept today?", "the heliocentric model", ["the geocentric model", "a flat Earth model", "a model with no Sun"], "Planets orbit the Sun."],
+  ["A sunspot looks dark because it is…", "cooler than the area around it", ["a hole in the Sun", "a cloud", "a planet"], "Cooler gas gives off less light."],
+  ["The Sun is…", "a star", ["a planet", "a moon", "a comet"], "It is the star at the center of the Solar System."],
+  ["Why did the geocentric model last so long?", "it matched what people saw and could predict motions", ["no one looked at the sky", "it was proved by telescopes", "it was a law"], "It fit the evidence people had.", true],
+  ["Galileo saw Venus go through phases. This supported…", "the heliocentric model", ["the geocentric model", "a flat Earth", "no model"], "Venus orbits the Sun.", true],
+  ["Light from the Sun is energy released by…", "nuclear fusion", ["burning coal", "friction", "lightning"], "Fusion in the core.", true],
+  ["The Sun's rotation takes about…", "a month", ["a day", "a year", "an hour"], "Its rotation time varies by latitude.", true],
+];
+
+const SPACE_FLORIDA: Q[] = [
+  ["Rockets launch from Florida's Space Coast on the…", "Atlantic side", ["Gulf side only", "northern border", "inland lakes"], "Launches go east over the ocean."],
+  ["Launching toward the east over the ocean helps because…", "Earth's spin adds speed and the ocean is a safe area", ["there are mountains to the east", "rockets prefer cold", "the Moon pulls east"], "Earth rotates eastward."],
+  ["Apollo 11 launched from Florida in which year?", "1969", ["1959", "1979", "1989"], "It carried the first people to land on the Moon."],
+  ["The Space Shuttle program launched from Florida from 1981 until…", "2011", ["1991", "2001", "2021"], "The last shuttle flew in 2011."],
+  ["Weather satellites help Florida by…", "tracking hurricanes so people can be warned", ["making rain", "stopping storms", "cooling the air"], "Forecasters watch storms from space."],
+  ["Why is technology essential to space science?", "humans cannot go everywhere, so probes and telescopes go for us", ["it is only for fun", "space has no science", "telescopes are not needed"], "Tools extend our reach."],
+  ["A space probe is…", "an uncrewed spacecraft that explores", ["a rocket for tourists", "a kind of telescope on Earth", "an astronaut suit"], "No people on board."],
+  ["A telescope in orbit, like Hubble, avoids…", "the blurring caused by Earth's atmosphere", ["the Sun", "all light", "gravity entirely"], "Space gives a clearer view."],
+  ["Robotic rovers have been used to explore…", "Mars", ["the Sun", "the core of Earth", "Jupiter's clouds"], "Rovers drive on Mars."],
+  ["Space exploration helps Florida's economy by…", "creating jobs and bringing visitors", ["closing businesses", "stopping tourism", "lowering all prices"], "Many people work in the space industry."],
+  ["Visitors come to the Kennedy Space Center Visitor Complex to…", "see rockets and spacecraft", ["ski", "mine for gold", "watch glaciers"], "Space tourism is a big business."],
+  ["Companies that build and launch rockets in Florida add…", "high-tech jobs", ["only farm work", "no jobs", "only fishing jobs"], "Engineers and technicians."],
+  ["Space exploration affects culture by…", "inspiring people to study science and engineering", ["ending all school", "stopping art", "making people forget history"], "Exploration inspires."],
+  ["Which everyday product came from space research?", "memory foam", ["umbrellas", "bricks", "pencils"], "Spinoffs from space technology."],
+  ["A spinoff is…", "an everyday product that came from space research", ["a spacecraft part", "a type of rocket", "a space tourist"], "Space inventions find new uses."],
+  ["Reusable rockets that land and fly again can…", "lower the cost of going to space", ["make space travel impossible", "stop all launches", "add to the weight"], "You do not throw away the rocket.", true],
+  ["A launch is delayed when there is lightning nearby because…", "lightning could damage the rocket", ["rockets hate sunshine", "lightning is loud", "crowds are too big"], "Safety first.", true],
+  ["The Hubble Space Telescope was launched in 1990 by…", "a space shuttle", ["a balloon", "a submarine", "a train"], "It flew from Florida aboard a shuttle.", true],
+  ["Space-industry jobs in the 1960s…", "brought many families to Florida's Space Coast", ["emptied the coast", "stopped all building", "ended tourism"], "The population grew.", true],
+  ["Space telescopes help scientists see…", "light that Earth's atmosphere blocks", ["only the Sun", "sound", "heat from Earth"], "Some light never reaches the ground.", true],
+  ["Satellites in orbit are launched using…", "rockets", ["airplanes only", "balloons only", "cannons only"], "Rockets reach orbit.", true],
+  ["Astronauts practice in a large pool because it…", "helps simulate weightlessness", ["is cold", "has waves", "is always dark"], "Floating feels a little like space.", true],
+  ["Which technology lets scientists study Mars from orbit?", "a satellite orbiting Mars", ["a balloon", "a submarine", "a telescope on a boat"], "Orbiters photograph the surface.", true],
+  ["Which type of tool collects samples from an asteroid?", "a robotic spacecraft", ["a fishing net", "a shovel on Earth", "a telescope"], "Robots can visit places humans cannot go.", true],
+];
+
+const NATURE_OF_SCIENCE: Q[] = [
+  ["The first step in a scientific study is to define…", "a problem or question", ["the answer", "a conclusion", "the results"], "Start with a question."],
+  ["Repeated trials help show whether results are…", "reliable", ["colorful", "expensive", "finished"], "More trials give more confidence."],
+  ["Replication means…", "others repeat the study and get similar results", ["one person does it once", "changing the data", "making the study longer"], "Others can check the work."],
+  ["A study with one trial is…", "less reliable than one with many trials", ["more reliable", "always correct", "always wrong"], "One result could be chance."],
+  ["Which wording fits science best?", "The results support the hypothesis.", ["The results prove the hypothesis forever.", "The hypothesis is a fact now.", "The hypothesis cannot be wrong."], "Science avoids saying 'proof'."],
+  ["Science does not claim 'proof' because…", "new evidence could change a conclusion", ["scientists are unsure about everything", "tests are never done", "results are secret"], "Knowledge stays open to revision."],
+  ["A hypothesis that is not supported by the data is…", "still useful because it leads to new questions", ["a failure of science", "a lie", "useless"], "It tells you what is not true."],
+  ["Which of these is pseudoscience?", "predicting your day from your birth month", ["a controlled plant experiment", "a peer-reviewed study", "measuring rainfall"], "It makes claims that are not tested."],
+  ["Pseudoscience often makes claims that…", "cannot be tested", ["are carefully tested", "are backed by data", "are peer reviewed"], "Untestable ideas are not scientific."],
+  ["A sign of pseudoscience is relying on…", "personal stories instead of evidence", ["repeated experiments", "careful measurements", "peer review"], "Stories are not data."],
+  ["Science is characterized by…", "testable explanations based on evidence", ["opinions only", "secret methods", "unchangeable ideas"], "Evidence and testing."],
+  ["Seeds are grown in three light levels with ten pots each. This makes the results…", "more trustworthy", ["less trustworthy", "useless", "impossible"], "Replication within the study."],
+  ["More samples in a study generally give…", "more reliable results", ["less reliable results", "no results", "the same as one sample"], "Larger samples reduce chance effects."],
+  ["A good way to plan a study is to decide the variables, measurements and number of trials…", "first", ["last", "after the results", "never"], "Plan before you start."],
+  ["Scientists use reference materials to…", "learn what is already known", ["avoid testing", "hide results", "skip planning"], "Build on past work."],
+  ["Why should you identify the source of information?", "to judge whether it is reliable", ["to make it longer", "to hide it", "to change it"], "Some sources are better than others."],
+  ["Which is a testable question?", "Does salt change how fast seeds sprout?", ["Which seed is prettiest?", "Are seeds fun?", "Should seeds taste sweeter?"], "You can measure sprouting."],
+  ["A conclusion should be based on…", "the data", ["a guess", "what you hoped", "what is popular"], "Follow the evidence."],
+  ["Controlled variables are…", "kept the same in every trial", ["changed each time", "ignored", "measured only once"], "Only one thing changes."],
+  ["Science and pseudoscience differ because science…", "revises claims when evidence changes", ["never changes", "ignores evidence", "uses only stories"], "Science corrects itself.", true],
+  ["'Invisible helpers move the planets' is not scientific because it…", "cannot be tested", ["is too old", "is too short", "is not popular"], "No evidence could show it wrong.", true],
+  ["Scientists say 'fail to support' because…", "one study cannot rule out every possibility", ["they like long phrases", "hypotheses are never wrong", "results are secret"], "Careful wording.", true],
+  ["A product says it works 'because scientists say so' but shows no data. It is…", "a claim without evidence", ["a proven law", "peer-reviewed science", "a controlled experiment"], "Ask for the evidence.", true],
+  ["Failing to support a hypothesis is…", "a normal part of science", ["a disaster", "cheating", "the end of the study"], "It teaches something.", true],
+];
+
+export const UNITS: Unit[] = [
+  bankUnit({
+    id: "fl-g8-matter-measures",
+    title: "Mass, Weight & Chemical Change",
+    emoji: "⚖️",
+    blurb: "Mass versus weight, how heat changes reactions, and conservation in living things.",
+    parentNote:
+      "Practices the difference between mass and weight, how temperature affects chemical changes (such as food spoiling in Florida's heat), and how living systems follow the laws of conservation of mass and energy (Florida benchmarks SC.8.P.8.2, 8.P.9.3 and 8.L.18.4).",
+    standards: ["SC.8.P.8.2; SC.8.P.9.3; SC.8.L.18.4", "mass and weight, temperature and chemical change, and conservation of mass and energy in living systems"],
+    items: MATTER_MEASURES,
+  }),
+  bankUnit({
+    id: "fl-g8-space-sun-history",
+    title: "Space Distances, the Sun & Old Models",
+    emoji: "☀️",
+    blurb: "Light-years, the Sun's features and how models of the Solar System changed.",
+    parentNote:
+      "Practices the enormous distances in space and how light helps measure them, the Sun's structure, sunspots, flares and prominences, and how the geocentric and heliocentric models of the Solar System compare (Florida benchmarks SC.8.E.5.1, 5.6 and 5.8).",
+    standards: ["SC.8.E.5.1; SC.8.E.5.6; SC.8.E.5.8", "distances in space, solar properties, and historical models of the Solar System"],
+    items: SPACE_SUN_HISTORY,
+  }),
+  bankUnit({
+    id: "fl-g8-space-florida",
+    title: "Space Technology & Florida",
+    emoji: "🚀",
+    blurb: "How technology reaches space, and how the Space Coast shapes Florida.",
+    parentNote:
+      "Practices why technology is essential to space science (probes, telescopes, rovers, satellites) and the effects of space exploration on Florida's economy and culture, from Apollo and the Space Shuttle to today's launches (Florida benchmarks SC.8.E.5.10 and 5.12).",
+    standards: ["SC.8.E.5.10; SC.8.E.5.12", "technology in space science, and the effects of space exploration on the economy and culture of Florida"],
+    items: SPACE_FLORIDA,
+  }),
+  bankUnit({
+    id: "fl-g8-nature-of-science",
+    title: "Studies, Evidence & Pseudoscience",
+    emoji: "🧪",
+    blurb: "Plan a study, use repeated trials and tell science from pseudoscience.",
+    parentNote:
+      "Practices defining a problem and planning a study with repeated trials, wording conclusions carefully (results support or fail to support), valuing hypotheses that are not supported, and telling science from pseudoscience (Florida benchmarks SC.8.N.1.1 to 1.4, 2.1 and 2.2).",
+    standards: ["SC.8.N.1.1; SC.8.N.1.2; SC.8.N.1.3; SC.8.N.1.4; SC.8.N.2.1; SC.8.N.2.2", "planning studies with repeated trials, careful conclusions, and what characterizes science compared with pseudoscience"],
+    items: NATURE_OF_SCIENCE,
+  }),
+];
+/** Put the own units before the planned ones. */
+export const FIRST = false;

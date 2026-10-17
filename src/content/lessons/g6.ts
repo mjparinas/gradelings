@@ -245,6 +245,43 @@ const math: GradeLessons = {
     ["Range = 9 − 2 = 7.", "Most values are low, with one value far to the right: a tail to the right."],
     "Range 7, tail to the right",
   ),
+  // Florida
+  "math/fl-g6-absolute-value": lesson(
+    ["Absolute value is the distance from 0.", "Distance is never negative.", "Compare absolute values to see which is farther from 0."],
+    "What is |−9|?",
+    ["−9 is 9 steps from 0."],
+    "9",
+  ),
+  "math/fl-g6-multiply-integers": lesson(
+    ["Same signs give a positive answer.", "Different signs give a negative answer.", "Divide integers with the same rule."],
+    "(−6) × (−4) = ?",
+    ["Both are negative, so the answer is positive.", "6 × 4 = 24."],
+    "24",
+  ),
+  "math/fl-g6-common-factor": lesson(
+    ["Find a number that divides both parts of a sum.", "Write the sum as that factor times a sum.", "Check with the distributive property."],
+    "Rewrite 12 + 18 using a common factor.",
+    ["6 goes into 12 and 18.", "12 = 6 × 2 and 18 = 6 × 3."],
+    "6(2 + 3)",
+  ),
+  "math/fl-g6-expressions-inequalities": lesson(
+    ["Plus and more than mean add. Minus and less than mean subtract.", "At least means ≥. At most means ≤.", "Test a value to see if it makes it true."],
+    "Write: 5 more than x.",
+    ["More than means add.", "x + 5."],
+    "x + 5",
+  ),
+  "math/fl-g6-statistical-questions": lesson(
+    ["A statistical question expects different answers.", "It can be answered by collecting data.", "Asking about one person is not statistical."],
+    "Is 'How tall are the students in our class?' statistical?",
+    ["Heights vary.", "It needs data from many students."],
+    "yes",
+  ),
+  "math/fl-g6-box-plots": lesson(
+    ["A box plot shows five numbers: minimum, lower quartile, median, upper quartile and maximum.", "Range = maximum − minimum.", "The box holds the middle half of the data."],
+    "Minimum 4 and maximum 20. What is the range?",
+    ["20 − 4 = 16."],
+    "16",
+  ),
 };
 
 // Math lessons ship with the grade. The other subjects' lessons are a second download, fetched once the grade is in.
