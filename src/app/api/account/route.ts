@@ -6,6 +6,9 @@ import { accountDeletedEmail } from "@/server/emailTemplates";
 import { getFamilyRow } from "@/server/family";
 import { cancelSubscriptions, stripeCancellationConfigured } from "@/server/stripe";
 
+/** How recent a sign-in must be to delete an account that has no password. */
+const FRESH_SIGN_IN_MS = 30 * 60_000;
+
 /** Deletes the family's account and every piece of data stored on the server. */
 export async function DELETE(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
@@ -14,10 +17,17 @@ export async function DELETE(req: Request) {
   const f = session.familyId;
   // Deleting is permanent, so it asks for the password again.
   if (await rateLimited(`delete:${session.parentId}:${clientIp(req)}`, 5, 60 * 60_000)) return error(429, "Too many attempts. Try again later.");
-  const body = (await req.json().catch(() => null)) as { password?: unknown } | null;
-  const password = typeof body?.password === "string" ? body.password : "";
+  const body = (await req.json().catch(() => null)) as { password?: unknown; email?: unknown } | null;
   const stored = await query<{ password_hash: string }>("SELECT password_hash FROM parents WHERE id = ?", [session.parentId]);
-  if (!stored[0] || password.length > 200 || !(await verifyPassword(password, stored[0].password_hash))) return error(403, "Please type your password to confirm.");
+  if (stored[0] && !stored[0].password_hash.startsWith("scrypt$")) {
+    // A Google-only account has no password to type, so it confirms with its email and a recent sign-in instead.
+    const typed = typeof body?.email === "string" ? body.email.trim().toLowerCase() : "";
+    if (typed !== session.email.toLowerCase()) return error(403, "Please type your email address to confirm.");
+    if (Date.now() - session.createdAt > FRESH_SIGN_IN_MS) return error(403, "For your safety, sign out and sign in with Google again, then delete your account.");
+  } else {
+    const password = typeof body?.password === "string" ? body.password : "";
+    if (!stored[0] || password.length > 200 || !(await verifyPassword(password, stored[0].password_hash))) return error(403, "Please type your password to confirm.");
+  }
   // Stop billing first. If Stripe can't be reached, keep the account so the parent can try again.
   const family = await getFamilyRow(f);
   if (family?.stripe_customer && stripeCancellationConfigured()) {

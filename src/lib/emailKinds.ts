@@ -5,6 +5,7 @@ export const EMAIL_KINDS = {
   reset: "Password reset",
   "new-sign-in": "New sign-in",
   "password-changed": "Password changed",
+  "google-linked": "Google sign-in added",
   "trial-recap": "Trial recap",
   "trial-ending": "Trial ending",
   weekly: "Weekly report",

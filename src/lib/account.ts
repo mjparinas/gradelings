@@ -52,6 +52,18 @@ export async function signIn(email: string, password: string) {
 }
 
 /**
+ * Back from Google: the server has already signed this browser in, so take the family it answers with and
+ * download the account's history, as a password sign-in does.
+ */
+export async function finishGoogleSignIn(): Promise<BillingInfo | null> {
+  useStore.getState().setSync({ cursor: 0 });
+  const billing = await refreshAccount();
+  clearReferralCode();
+  await syncNow();
+  return billing;
+}
+
+/**
  * A student signs in with their own code (plus the class code, for cards printed before one-code
  * sign-in). This device then becomes that student's: anything already on it is cleared first, so
  * nobody's practice mixes with another child's.
@@ -164,8 +176,9 @@ export async function redeemCode(code: string): Promise<RedeemResult> {
   return result;
 }
 
-export async function deleteAccount(password: string) {
-  await post("/api/account/", { password }, "DELETE");
+/** Deletes the account. A Google-only account has no password, so it confirms with its email address instead. */
+export async function deleteAccount(confirm: string, withEmail = false) {
+  await post("/api/account/", withEmail ? { email: confirm } : { password: confirm }, "DELETE");
   await useStore.getState().wipeDevice();
 }
 
@@ -180,10 +193,15 @@ export interface DeviceSession {
   current: boolean;
 }
 
-export async function listDevices(): Promise<DeviceSession[]> {
+export async function loadSecurity(): Promise<{ sessions: DeviceSession[]; hasPassword: boolean }> {
   const res = await fetch("/api/auth/sessions/", { credentials: "same-origin" });
   if (!res.ok) throw new Error("Couldn't load your devices.");
-  return ((await res.json()) as { sessions: DeviceSession[] }).sessions;
+  const data = (await res.json()) as { sessions: DeviceSession[]; hasPassword?: boolean };
+  return { sessions: data.sessions, hasPassword: data.hasPassword !== false };
+}
+
+export async function listDevices(): Promise<DeviceSession[]> {
+  return (await loadSecurity()).sessions;
 }
 
 /** Signs out one device, or every device but this one when no id is given. */

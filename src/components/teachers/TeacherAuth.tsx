@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { APP_NAME } from "@/lib/brand";
 import { call } from "@/lib/classroom";
+import { GoogleButton, useGoogleError } from "../GoogleButton";
 
 const btn = "min-h-11 rounded-xl px-4 font-bold";
 
@@ -14,6 +15,7 @@ export function AuthForm({ onDone, initialMode = "in" }: { onDone: () => void; i
   const [err, setErr] = useState("");
   const [notice, setNotice] = useState("");
   const [busy, setBusy] = useState(false);
+  const googleError = useGoogleError();
 
   const submit = async (e: FormEvent) => {
     e.preventDefault();
@@ -48,6 +50,7 @@ export function AuthForm({ onDone, initialMode = "in" }: { onDone: () => void; i
           {APP_NAME} for teachers is where you set up a class, assign practice by unit and see how each student is doing. Students sign in with a code you give them, with no email needed, and you only see first names and practice results.
         </p>
       )}
+      {mode !== "forgot" && <GoogleButton from="teachers" />}
       <label className="flex flex-col text-sm font-semibold">
         Email
         <input className="mt-1 min-h-11 rounded-xl border border-line px-3" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
@@ -58,9 +61,9 @@ export function AuthForm({ onDone, initialMode = "in" }: { onDone: () => void; i
           <input className="mt-1 min-h-11 rounded-xl border border-line px-3" type="password" autoComplete={mode === "in" ? "current-password" : "new-password"} minLength={8} value={password} onChange={(e) => setPassword(e.target.value)} required />
         </label>
       )}
-      {err && (
+      {(err || googleError) && (
         <p role="alert" className="text-nudge-dark">
-          {err}
+          {err || googleError}
         </p>
       )}
       {notice && (

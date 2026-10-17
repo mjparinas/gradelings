@@ -117,6 +117,32 @@ describe("signing up and in", () => {
   });
 });
 
+describe("Google sign-in", () => {
+  it("takes the account the server signed this browser in to and downloads its whole history", async () => {
+    routes["GET /api/auth/me/"] = () => json({ family: signedIn, billing: { stripe: true, dev: false } });
+    useStore.getState().setSync({ cursor: 42 });
+    const billing = await account.finishGoogleSignIn();
+    expect(billing).toEqual({ stripe: true, dev: false });
+    expect(useStore.getState().sync.cursor).toBe(0);
+    expect(useStore.getState().family.account?.email).toBe("p@example.com");
+    expect(syncNow).toHaveBeenCalledOnce();
+  });
+
+  it("confirms deleting a Google-only account with the email address instead of a password", async () => {
+    useStore.setState({ family: signedIn, profiles: [kid("a")] });
+    routes["DELETE /api/account/"] = () => json({ ok: true });
+    await account.deleteAccount("p@example.com", true);
+    expect(calls[0]).toEqual({ url: "/api/account/", method: "DELETE", body: { email: "p@example.com" } });
+  });
+
+  it("says whether the account has a password, treating an older server's answer as yes", async () => {
+    routes["GET /api/auth/sessions/"] = () => json({ sessions: [], hasPassword: false });
+    expect((await account.loadSecurity()).hasPassword).toBe(false);
+    routes["GET /api/auth/sessions/"] = () => json({ sessions: [] });
+    expect((await account.loadSecurity()).hasPassword).toBe(true);
+  });
+});
+
 describe("class sign-in", () => {
   it("refuses while a grown-up is signed in on the device", async () => {
     useStore.setState({ family: signedIn });

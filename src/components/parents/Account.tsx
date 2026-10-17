@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useState, useSyncExternalStore } from "react";
-import { changePassword, deleteAccount, forgotPassword, listDevices, signOutDevices, type DeviceSession, refreshAccount, resendVerification, signIn, signOut, signUp, type BillingInfo } from "@/lib/account";
+import { changePassword, deleteAccount, forgotPassword, loadSecurity, signOutDevices, type DeviceSession, refreshAccount, resendVerification, signIn, signOut, signUp, type BillingInfo } from "@/lib/account";
 import * as localdb from "@/lib/localdb";
 import { go, useRoute } from "@/lib/router";
 import { useLocale } from "@/lib/say";
@@ -10,6 +10,7 @@ import { useStore } from "@/lib/store";
 import { savedReferralCode } from "@/lib/referral";
 import { syncNow } from "@/lib/sync";
 import { Dialog } from "../ui";
+import { GoogleButton, useGoogleError } from "../GoogleButton";
 import { emailChoice, emailPatch, type EmailChoice, type EmailPrefs } from "@/lib/settingChoices";
 import { Choice, PageTitle, Panel } from "./common";
 import { ParentPin } from "./ParentPin";
@@ -25,6 +26,7 @@ function AuthForm({ onDone }: { onDone: () => void }) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
+  const googleError = useGoogleError();
   // The server snapshot is false so the first render matches the static page.
   const invited = useSyncExternalStore(noSubscribe, () => savedReferralCode() !== null, () => false);
   const submit = async (e: React.FormEvent) => {
@@ -55,6 +57,7 @@ function AuthForm({ onDone }: { onDone: () => void }) {
           </button>
         ))}
       </div>
+      {mode !== "forgot" && <GoogleButton from="parents" trialEndsAt={useStore.getState().family.trialEndsAt} referral={savedReferralCode()} />}
       <label className="flex flex-col gap-1">
         <span className="font-semibold">Email</span>
         <input type="email" autoComplete="email" required value={email} onChange={(e) => setEmail(e.target.value)} className="rounded-xl border-2 border-line px-3 py-2 text-lg" />
@@ -75,7 +78,7 @@ function AuthForm({ onDone }: { onDone: () => void }) {
       </label>
       )}
       {notice && <p className="rounded-xl bg-[#e8f7f0] p-3 font-semibold">{notice}</p>}
-      {error && <p className="font-semibold text-nudge-dark">{error}</p>}
+      {(error || googleError) && <p className="font-semibold text-nudge-dark">{error || googleError}</p>}
       {mode === "signup" && invited && (
         <p className="rounded-xl bg-[#e8f7f0] p-3 font-semibold">🎁 A friend invited you. When you confirm your email, they get a free month. Thank you!</p>
       )}
@@ -177,7 +180,17 @@ function SecurityPanel() {
   const [next, setNext] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
-  const load = () => void listDevices().then(setDevices, () => setDevices(null));
+  // False for an account made with Google, which has no password until the parent asks for a link to add one.
+  const [passwordSet, setPasswordSet] = useState(true);
+  const email = useStore((s) => s.family.account?.email ?? "");
+  const load = () =>
+    void loadSecurity().then(
+      (d) => {
+        setDevices(d.sessions);
+        setPasswordSet(d.hasPassword);
+      },
+      () => setDevices(null),
+    );
   useEffect(load, []);
   const run = async (fn: () => Promise<void>, done: string) => {
     setError("");
@@ -192,6 +205,20 @@ function SecurityPanel() {
   };
   return (
     <Panel title="🔒 Security">
+      {!passwordSet && (
+        <div className="flex max-w-md flex-col gap-2">
+          <h3 className="font-semibold">Password</h3>
+          <p className="text-sm text-ink-soft">You sign in with Google, so there&apos;s no password. If you&apos;d like one as well, we&apos;ll email you a link to set it.</p>
+          <button type="button" className="self-start rounded-xl border border-line px-4 py-2 font-semibold" onClick={() => {
+              setError("");
+              setMessage("");
+              void forgotPassword(email).then(setMessage, (e: Error) => setError(e.message));
+            }}>
+            Email me a link to add a password
+          </button>
+        </div>
+      )}
+      {passwordSet && (
       <form
         className="flex max-w-md flex-col gap-2"
         onSubmit={(e) => {
@@ -210,6 +237,7 @@ function SecurityPanel() {
           Change password
         </button>
       </form>
+      )}
       <h3 className="mt-4 font-semibold">Devices signed in</h3>
       {devices && (
         <ul className="mt-1 flex flex-col gap-1.5 text-sm">
@@ -277,7 +305,14 @@ export function AccountPage({ onBilling }: { onBilling: (b: BillingInfo | null) 
   const [confirmDelete, setConfirmDelete] = useState(false);
   const [deletePassword, setDeletePassword] = useState("");
   const [error, setError] = useState("");
+  // An account made with Google has no password, so deleting it asks for the email address instead.
+  const [passwordSet, setPasswordSet] = useState(true);
   const router = useRouter();
+
+  const signedIn = Boolean(account);
+  useEffect(() => {
+    if (signedIn) void loadSecurity().then((d) => setPasswordSet(d.hasPassword), () => undefined);
+  }, [signedIn]);
 
   useEffect(() => {
     void localdb.unsyncedEvents(5000).then((e) => setPending(e.length));
@@ -349,15 +384,15 @@ export function AccountPage({ onBilling }: { onBilling: (b: BillingInfo | null) 
         </div>
       </div>
       <Dialog open={confirmDelete} title="Delete everything?" onClose={() => setConfirmDelete(false)}>
-        <p className="mb-3 font-read text-ink-soft">This can&apos;t be undone. Type your password to confirm.</p>
-        <input type="password" autoComplete="current-password" aria-label="Password" value={deletePassword} onChange={(e) => setDeletePassword(e.target.value)} className="mb-4 w-full rounded-xl border-2 border-line px-3 py-2 text-lg" />
+        <p className="mb-3 font-read text-ink-soft">This can&apos;t be undone. {passwordSet ? "Type your password to confirm." : "Type your email address to confirm."}</p>
+        <input type={passwordSet ? "password" : "email"} autoComplete={passwordSet ? "current-password" : "email"} aria-label={passwordSet ? "Password" : "Email address"} value={deletePassword} onChange={(e) => setDeletePassword(e.target.value)} className="mb-4 w-full rounded-xl border-2 border-line px-3 py-2 text-lg" />
         {error && <p className="mb-2 text-nudge-dark">{error}</p>}
         <div className="flex flex-col gap-3">
           <button
             type="button"
             className="btn btn-nudge min-h-14 text-xl"
             onClick={() =>
-              void deleteAccount(deletePassword)
+              void deleteAccount(deletePassword, !passwordSet)
                 .then(() => router.push("/play/"))
                 .catch((e: Error) => setError(e.message))
             }
