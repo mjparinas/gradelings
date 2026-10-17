@@ -4,6 +4,7 @@ import { questionLabel } from "@/lib/questionLabel";
 import { ReportQuestion } from "./ReportQuestion";
 import { reportDetails, type ReportDetails } from "@/lib/questionReport";
 import { SaveProgress } from "./SaveProgress";
+import { LessonBody } from "./LessonScreen";
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { getUnitRef } from "@/content";
 import type { Question } from "@/content/types";
@@ -129,6 +130,9 @@ function Runner({ plan }: { plan: Plan }) {
   const [checkpoint, setCheckpoint] = useState(false);
   const [confirmExit, setConfirmExit] = useState(false);
   const [hinted, setHinted] = useState(false);
+  // After two misses a child can tell a grown-up they need help, or look at how the unit works.
+  const [helpAsked, setHelpAsked] = useState(false);
+  const [showLesson, setShowLesson] = useState(false);
   const [flash, setFlash] = useState<"good" | "bad" | null>(null);
   const stage = useRef<HTMLDivElement>(null);
   const loggedUpTo = useRef(0);
@@ -140,7 +144,9 @@ function Runner({ plan }: { plan: Plan }) {
   const remaining = plan.timeLimit ? plan.timeLimit - elapsed : undefined;
   const answered = status === "correct" || status === "revealed";
   const firstTry = results.filter((r) => r.correct).length;
-  const guide = getUnitRef(item?.unitKey ?? "")?.course.subject;
+  const unitRef = getUnitRef(item?.unitKey ?? "", profile.framework);
+  const guide = unitRef?.course.subject;
+  const lesson = unitRef?.unit.lesson;
   const companion = profile.companion ?? "ollie";
 
   // Clock.
@@ -241,6 +247,8 @@ function Runner({ plan }: { plan: Plan }) {
     setStatus("answering");
     setMisses(0);
     setHinted(false);
+    setHelpAsked(false);
+    setShowLesson(false);
     setMood("happy");
     setMessage("");
   }
@@ -453,8 +461,32 @@ function Runner({ plan }: { plan: Plan }) {
           report={band === "little" || !item ? undefined : { unitKey: item.unitKey, prompt: q.prompt, framework: profile.framework, details: reportDetails(q) }}
           onNext={advance}
           onDismiss={() => setStatus("answering")}
+          help={
+            item && plan.retries && status === "revealed"
+              ? {
+                  asked: helpAsked,
+                  onAsk: () => {
+                    setHelpAsked(true);
+                    log([{ type: "help", unit: item.unitKey }]);
+                  },
+                  onLesson: lesson ? () => setShowLesson(true) : undefined,
+                }
+              : undefined
+          }
           last={plan.total !== undefined && index + 1 >= plan.total}
         />
+      )}
+
+      {showLesson && lesson && (
+        <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-ink/40 p-4 backdrop-blur-[2px]" role="dialog" aria-modal="true" aria-label="How it works" onClick={() => setShowLesson(false)}>
+          <div className="my-auto flex w-full max-w-2xl animate-pop-in flex-col gap-4 rounded-3xl bg-paper p-4 sm:p-6" onClick={(e) => e.stopPropagation()}>
+            <h2 className="text-2xl font-bold">{unitRef?.unit.emoji} How {unitRef?.unit.title} works</h2>
+            <LessonBody lesson={lesson} />
+            <button type="button" autoFocus className="btn btn-good min-h-14 text-xl" onClick={() => setShowLesson(false)}>
+              Got it
+            </button>
+          </div>
+        </div>
       )}
 
       <Dialog open={confirmExit} title={plan.mode === "adventure" ? "Stop your adventure?" : "Stop now?"} onClose={() => setConfirmExit(false)}>
@@ -491,6 +523,7 @@ function FeedbackBar({
   message,
   hint,
   report,
+  help,
   onNext,
   onDismiss,
   last,
@@ -499,6 +532,8 @@ function FeedbackBar({
   message: string;
   hint: string;
   report?: { unitKey: string; prompt: string; framework?: string; details?: ReportDetails };
+  /** After two misses: ask a grown-up for help, or look at the unit's "how it works". */
+  help?: { asked: boolean; onAsk: () => void; onLesson?: () => void };
   onNext: () => void;
   onDismiss: () => void;
   last: boolean;
@@ -518,6 +553,22 @@ function FeedbackBar({
           <div>
             <p className={`text-2xl font-bold sm:text-3xl ${theme.text}`}>{message}</p>
             <p className="font-read text-lg leading-snug text-ink sm:text-xl">{hint}</p>
+            {help && (
+              <div className="mt-2 flex flex-wrap items-center gap-2">
+                {help.onLesson && (
+                  <button type="button" className="btn btn-soft min-h-12 px-4 text-base" onClick={help.onLesson}>
+                    <span aria-hidden="true">📖</span> Show me another way
+                  </button>
+                )}
+                {help.asked ? (
+                  <p className="font-read text-base font-bold text-good-dark">✓ Your grown-up will see you want help with this.</p>
+                ) : (
+                  <button type="button" className="btn btn-soft min-h-12 px-4 text-base" onClick={help.onAsk}>
+                    <span aria-hidden="true">🤝</span> Ask a grown-up to help
+                  </button>
+                )}
+              </div>
+            )}
           </div>
         </div>
         {status === "retry" ? (

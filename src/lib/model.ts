@@ -136,6 +136,8 @@ export type AppEvent = EventBase &
         correct: number;
         ms: number;
       }
+    /** The child asked a grown-up to help with this unit after missing a question twice. Not practice: it never counts toward XP or proficiency. */
+    | { type: "help"; unit: string }
     | { type: "play"; game: string; seconds: number }
     | { type: "game"; game: string; score: number; level: number }
     | { type: "trophy"; trophy: string }

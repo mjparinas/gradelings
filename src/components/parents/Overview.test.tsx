@@ -53,6 +53,20 @@ describe("Overview", () => {
     expect(screen.queryByText(/Progress is saved on this device only\./)).not.toBeInTheDocument();
   });
 
+  it("lists the units a child asked a grown-up to help with", () => {
+    const help = (id: string, ago: number): AppEvent => ({ id, profileId: "a", t: Date.now() - ago * 1000, type: "help", unit: math.key });
+    useStore.setState({ events: [help("h1", 60), help("h2", 30)] });
+    render(<Overview />);
+    const asked = within(card("Ava")).getByRole("group", { name: "Ava asked for help" });
+    expect(asked).toHaveTextContent(math.unit.title);
+    expect(asked).toHaveTextContent("2 times");
+  });
+
+  it("shows no help list when nothing was asked", () => {
+    render(<Overview />);
+    expect(screen.queryByRole("group", { name: /asked for help/ })).not.toBeInTheDocument();
+  });
+
   it("asks for a child when there are none", () => {
     useStore.setState({ profiles: [] });
     render(<Overview />);

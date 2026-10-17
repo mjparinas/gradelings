@@ -9,6 +9,7 @@ import { useLocale, useSay } from "@/lib/say";
 import { useDerived, useProfiles, useStore } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 import { FamilyGoal } from "./FamilyGoal";
+import { HelpAsks } from "./HelpAsks";
 import { InstallNudge } from "./InstallNudge";
 import { Milestones } from "./Milestones";
 import { ShareGradelings } from "./ShareGradelings";
@@ -54,6 +55,7 @@ function ChildCard({ p }: { p: Profile }) {
         </div>
       </dl>
       <FamilyGoal p={p} />
+      <HelpAsks p={p} />
       <ul className="mt-4 flex flex-col gap-2">
         {subjectSummaries(d, p.grade, p.framework).map((s) => {
           const level = scheme.levels[s.level];
