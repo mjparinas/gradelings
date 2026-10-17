@@ -33,6 +33,7 @@ function metrics(over: Partial<MetricsInput> = {}) {
     payments: [],
     activity: [],
     activeFamilies: { d1: 0, d7: 0, d30: 0 },
+    guestDevices: { d1: 0, d7: 0, d30: 0 },
     monthlyCosts: 0,
     redemptions: 0,
     reports: 0,
@@ -269,6 +270,7 @@ describe("practice", () => {
         { day: today - 30, families: 9, answers: 99, ms: 0 }, // too old
       ],
       activeFamilies: { d1: 2, d7: 5, d30: 10 },
+      guestDevices: { d1: 1, d7: 4, d30: 9 },
     });
     expect(m.engagement.daily).toHaveLength(30);
     expect(m.engagement.daily.at(-1)).toEqual({ label: "Mar 15", families: 3, answers: 40, minutes: 10 });
@@ -277,6 +279,8 @@ describe("practice", () => {
     expect(m.engagement.answers30).toBe(45);
     expect(m.engagement.minutes30).toBe(11);
     expect(m.engagement.stickiness).toBe(0.2);
+    // Guest players are counted apart from families and never change their numbers.
+    expect(m.engagement.guests).toEqual({ d1: 1, d7: 4, d30: 9 });
   });
 });
 
@@ -309,6 +313,7 @@ describe("one section at a time", () => {
         { day: Math.floor(NOW / DAY) - 2, families: 1, answers: 12, ms: 90_000 },
       ],
       activeFamilies: { d1: 3, d7: 4, d30: 5 },
+      guestDevices: { d1: 1, d7: 2, d30: 6 },
       monthlyCosts: 5000,
       redemptions: 2,
       reports: 1,

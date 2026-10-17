@@ -495,7 +495,8 @@ Tests are duplicated across screen sizes only where layout can break:
   - practice results.
 - **No free text, photos or voice recordings from kids.**
 - **Parents can export everything or delete everything** at any time.
-- **Analytics in use, all disclosed on `/privacy/`:** Vercel Web Analytics and Speed Insights (cookieless, public pages only, `SiteAnalytics.tsx`; two custom events count clicks on trial and Subscribe links with the page's path, `src/lib/ctaEvents.ts`, shown in the admin Traffic tab) and Resend's open and click tracking on emails. There is no analytics in the kids' app or parent area. We no longer promise "no tracking" (owner, October 2026), so never write that promise into copy; keep `/privacy/` and `docs/school/` true whenever a provider or setting changes.
+- **Guest player count** (owner approved, October 2026): a device with no parent account says once a day that a child played (`src/lib/guestPing.ts`, `POST /api/guests/seen/`), and the server keeps a one-way hash of the device's random id with the last UTC day, for 35 days (`guest_devices`, `src/server/guests.ts`), only to show "Guest players" on the admin dashboard. Never for a US child (COPPA), a signed-in parent or a class student. Don't add anything else to that ping; keep `/privacy/` true.
+- **Analytics in use, all disclosed on `/privacy/`:** Vercel Web Analytics and Speed Insights (cookieless, public pages only, `SiteAnalytics.tsx`; two custom events count clicks on trial and Subscribe links with the page's path, `src/lib/ctaEvents.ts`, shown in the admin Traffic tab) and Resend's open and click tracking on emails. There is no analytics in the kids' app or parent area (the guest count above is the one count, with no analytics provider). We no longer promise "no tracking" (owner, October 2026), so never write that promise into copy; keep `/privacy/` and `docs/school/` true whenever a provider or setting changes.
 
 ## Design decisions
 

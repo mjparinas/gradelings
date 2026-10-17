@@ -2,6 +2,7 @@ import { toCountryCode } from "@/lib/country";
 import { error, json } from "@/server/auth";
 import { audit, requireAdmin } from "@/server/admin";
 import { query } from "@/server/db";
+import { guestCounts } from "@/server/guests";
 import { getSetting, importPayments, setSetting } from "@/server/payments";
 import { stripeCancellationConfigured } from "@/server/stripe";
 import { LATEST_REFUNDED, OPEN_CLASS_STUDENTS, OPEN_CLASS_TEACHERS } from "@/server/adminDetail";
@@ -77,6 +78,7 @@ function loaders(now: number): Loaders {
       const [d1, d7, d30] = await Promise.all([active(DAY), active(7 * DAY), active(30 * DAY)]);
       return { d1, d7, d30 };
     },
+    guestDevices: () => guestCounts(now),
     monthlyCosts: async () => Number((await getSetting(COSTS_KEY)) ?? 0) || 0,
     redemptions: () => count("SELECT COUNT(*) AS n FROM code_redemptions"),
     reports: () => count("SELECT COUNT(*) AS n FROM question_reports"),

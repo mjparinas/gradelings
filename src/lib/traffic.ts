@@ -70,6 +70,8 @@ export interface VisitsReport {
   /** Clicks on "Try it free" and Subscribe links by the page they were on, most first. Missing when Vercel
    * couldn't give custom events (they need a paid plan). */
   clicks?: { key: string; trial: number; subscribe: number }[];
+  /** All clicks in the period, counting pages Vercel folds into "Others", so it can be more than the rows of `clicks` add up to. */
+  clickTotals?: { trial: number; subscribe: number };
 }
 
 /** A part that isn't set up says which settings to add; one that failed says why. */
