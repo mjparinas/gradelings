@@ -116,13 +116,13 @@ describe("Overview", () => {
     useStore.setState({ events: answers("a", Date.now() - 60_000 * 10, 6, 6) });
     render(<Overview />);
     await userEvent.click(screen.getByRole("combobox", { name: "Days a week for Ava" }));
-    fireEvent.pointerDown(screen.getByRole("option", { name: "3 days a week" }));
+    fireEvent.click(screen.getByRole("option", { name: "3 days a week" }));
     expect(useStore.getState().settings.a.weeklyGoalDays).toBe(3);
     expect(screen.getByRole("list", { name: "1 of 3 days practised this week" })).toBeInTheDocument();
     expect(screen.getByText("1 of 3 days so far this week.")).toBeInTheDocument();
 
     await userEvent.click(screen.getByRole("combobox", { name: "Days a week for Ava" }));
-    fireEvent.pointerDown(screen.getByRole("option", { name: "No goal" }));
+    fireEvent.click(screen.getByRole("option", { name: "No goal" }));
     expect(useStore.getState().settings.a.weeklyGoalDays).toBeUndefined();
     expect(screen.queryByText(/days so far this week/)).not.toBeInTheDocument();
   });
@@ -141,7 +141,7 @@ describe("Overview", () => {
     expect(screen.getByText("The note appears once on their home screen. We never send a push to children.")).toBeInTheDocument();
     expect(screen.queryByRole("textbox")).not.toBeInTheDocument();
     await userEvent.click(screen.getByRole("combobox", { name: "Note for Ava" }));
-    fireEvent.pointerDown(screen.getByRole("option", { name: NUDGE_PRESETS[11].text }));
+    fireEvent.click(screen.getByRole("option", { name: NUDGE_PRESETS[11].text }));
     await userEvent.click(screen.getByRole("button", { name: "Send" }));
     expect(useStore.getState().settings.a.nudge).toMatchObject({ preset: NUDGE_PRESETS[11].id });
     expect(screen.getByText(`Sent: "${NUDGE_PRESETS[11].text}" It shows on Ava's home screen the next time they open the app.`)).toBeInTheDocument();

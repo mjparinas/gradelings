@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { render, screen, within } from "@testing-library/react";
+import { fireEvent, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
 import { SelectMenu } from "./SelectMenu";
@@ -27,6 +27,16 @@ describe("SelectMenu", () => {
     expect(onChange).toHaveBeenCalledWith("on");
     expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
     expect(box).toHaveFocus();
+  });
+
+  it("does not pick an option when a finger lands on it to scroll", async () => {
+    const onChange = vi.fn();
+    render(<SelectMenu label="Province" value="bc" onChange={onChange} options={options} />);
+    await userEvent.click(screen.getByRole("combobox", { name: "Province" }));
+    // A touch scroll starts with pointerdown and never reaches click.
+    fireEvent.pointerDown(screen.getByRole("option", { name: "Ontario" }), { pointerType: "touch" });
+    expect(onChange).not.toHaveBeenCalled();
+    expect(screen.getByRole("listbox")).toBeInTheDocument();
   });
 
   it("skips a disabled option with the arrow keys", async () => {

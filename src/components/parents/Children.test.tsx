@@ -38,7 +38,7 @@ const live = () => useStore.getState().profiles.filter((p) => !p.deleted);
 /** Opens a SelectMenu by its label and picks the option with this text. */
 async function pick(label: string, option: string) {
   await userEvent.click(screen.getByRole("combobox", { name: label }));
-  fireEvent.pointerDown(screen.getByRole("option", { name: option }));
+  fireEvent.click(screen.getByRole("option", { name: option }));
 }
 
 beforeEach(() => {

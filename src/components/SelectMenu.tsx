@@ -187,8 +187,10 @@ export function SelectMenu({
         onMouseEnter={() => {
           if (!option.disabled) setActive(index);
         }}
-        onPointerDown={(e) => {
-          e.preventDefault();
+        // Pick on click, not pointerdown: on a touch screen pointerdown fires when a finger lands to scroll the list.
+        // Keeping the mouse-down default prevented stops the button losing focus, which would close the list.
+        onMouseDown={(e) => e.preventDefault()}
+        onClick={(e) => {
           e.stopPropagation();
           choose(option);
         }}

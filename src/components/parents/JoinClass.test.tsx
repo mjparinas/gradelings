@@ -93,7 +93,7 @@ describe("JoinClass", () => {
     };
     render(<JoinClass />);
     await userEvent.click(screen.getByRole("combobox", { name: "Child" }));
-    fireEvent.pointerDown(screen.getByRole("option", { name: "Ben" }));
+    fireEvent.click(screen.getByRole("option", { name: "Ben" }));
     fireEvent.change(codeBox(), { target: { value: "ABC123" } });
     await userEvent.click(screen.getByRole("button", { name: "Join class" }));
     expect(await screen.findByRole("status")).toHaveTextContent("Joined Room 12. The teacher can now see first name, grade and practice results");
