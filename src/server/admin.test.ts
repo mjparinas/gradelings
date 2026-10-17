@@ -286,6 +286,16 @@ describe("users", () => {
     expect((await act({ familyId: parent.familyId, action: "remove-access" })).status).toBe(200);
     expect((await detail(parent.familyId)).family.accessUntil).toBeNull();
 
+    // The school plan (roster import) is kept apart from the family's own access.
+    expect((await act({ familyId: parent.familyId, action: "grant-school", days: 365 })).status).toBe(200);
+    expect((await detail(parent.familyId)).family.schoolUntil).toBeGreaterThan(Date.now() + 364 * 86_400_000);
+    expect((await detail(parent.familyId)).family.accessUntil).toBeNull();
+    expect((await act({ familyId: parent.familyId, action: "grant-school", days: 0 })).status).toBe(400);
+    expect((await act({ familyId: parent.familyId, action: "grant-school", days: null })).status).toBe(200);
+    expect((await detail(parent.familyId)).family.schoolUntil).toBe(LIFETIME_ACCESS);
+    expect((await act({ familyId: parent.familyId, action: "remove-school" })).status).toBe(200);
+    expect((await detail(parent.familyId)).family.schoolUntil).toBeNull();
+
     const late = (await dbm.query<{ id: string; family_id: string }>("SELECT id, family_id FROM parents WHERE email = 'late@example.com'"))[0];
     expect((await act({ familyId: late.family_id, action: "verify-email", parentId: parent.familyId })).status).toBe(400);
     expect((await act({ familyId: late.family_id, action: "verify-email", parentId: late.id })).status).toBe(200);
@@ -574,7 +584,7 @@ describe("codes, reports, stats and the change log", () => {
   it("records every change with who made it", async () => {
     const entries = (await (await as(admin.cookie).get(auditLog, "/api/admin/audit/")).json()).entries as { admin: string; action: string; detail: string | null }[];
     const actions = new Set(entries.map((e) => e.action));
-    for (const a of ["flag.set", "user.override", "experiment.create", "experiment.start", "experiment.stop", "experiment.delete", "user.extend-trial", "user.grant-access", "user.remove-access", "user.verify-email", "user.sign-out", "user.delete", "code.create", "code.disable", "reports.clear", "stats.costs"]) {
+    for (const a of ["flag.set", "user.override", "experiment.create", "experiment.start", "experiment.stop", "experiment.delete", "user.extend-trial", "user.grant-access", "user.remove-access", "user.grant-school", "user.remove-school", "user.verify-email", "user.sign-out", "user.delete", "code.create", "code.disable", "reports.clear", "stats.costs"]) {
       expect(actions.has(a), a).toBe(true);
     }
     expect(entries.every((e) => e.admin === ADMIN_EMAIL)).toBe(true);

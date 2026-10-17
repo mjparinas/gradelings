@@ -68,6 +68,7 @@ Students' devices also keep a copy of progress in the browser (IndexedDB and loc
 | Resend | Teacher emails | Teacher email address and message; whether each email was opened and which links were clicked (open and click tracking is on) | United States |
 | Sentry | Crash reports and request timing | Scrubbed errors; route names and durations | United States or EU |
 | Stripe | Parent payments | Parent email and payment | United States. Not used for schools while classes are free. |
+| Google Classroom, Clever, ClassLink (only when a teacher imports a roster) | The teacher signs in with the service and we read their class names and each student's first name and the service's ID for them, once. No email, family name or token is kept | The service learns the teacher signed in; the roster is held up to 30 minutes in our database, then deleted | United States (the services' own locations) **(confirm)** |
 | Vercel Web Analytics | Anonymous page counts, and counts of trial and subscribe button presses, on public pages only | Page, country | Switched off in the student app and teacher area |
 
 If a district requires all providers to be in Canada, the app functions (Vercel, moved from Montréal to Washington, D.C. in October 2026), the database (Turso, Virginia), Resend and Sentry are the gaps. Resend and Sentry can be switched off for a school-only deployment; the functions can go back to `yul1` in `vercel.json` (at the cost of the slower hop to the database); the database would need a different host, since Turso has no Canadian location. Decision for the owner.

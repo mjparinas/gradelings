@@ -74,6 +74,9 @@ export default function PrivacyPage() {
           A teacher can use {APP_NAME} with a class in two ways. A parent can link their own child to a class with the class code, which is the parent’s choice and can be undone at any time. Or the teacher can add students by first name or nickname, and each student signs in with their own login code. Students added by a teacher have no email address and no password.
         </p>
         <p>
+          <strong>Importing a roster:</strong> a teacher can instead bring a class in from Google Classroom, Clever or ClassLink. The teacher signs in with that service, and we read the names of their classes and each student’s first name and the service’s ID for the student, once, to make the class. We do not ask for or read email addresses, family names or anything else about students, and we do not keep the service’s sign-in token. The classes read are held for up to half an hour while the teacher chooses, then deleted. The service’s ID for each student stays on the student’s account, so importing again does not add the same student twice, and is deleted with it. The service learns that the teacher signed in to {APP_NAME}, under its own privacy policy. Students still sign in with their login codes.
+        </p>
+        <p>
           <strong>What we keep about a student a teacher added:</strong> the first name or nickname the teacher typed, the class’s grade and curriculum, an avatar, comfort settings and practice results. Nothing else: no email, birth year, surname, photo, voice or free text. These accounts have no parent area and no billing, and a student’s sign-in works only for their own play.
         </p>
         <p>

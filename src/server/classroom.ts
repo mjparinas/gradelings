@@ -76,6 +76,11 @@ export async function ownedClass(id: string, parentId: string): Promise<ClassRow
   return (await query<ClassRow>("SELECT * FROM classes WHERE id = ? AND owner_parent_id = ? AND closed_at IS NULL", [id, parentId]))[0];
 }
 
+/** How many open classes a teacher owns. */
+export async function classOwnedCount(parentId: string): Promise<number> {
+  return Number((await query<{ n: number }>("SELECT COUNT(*) AS n FROM classes WHERE owner_parent_id = ? AND closed_at IS NULL", [parentId]))[0].n);
+}
+
 export type TeacherRole = "owner" | "co-teacher";
 
 /**

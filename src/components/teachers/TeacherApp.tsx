@@ -26,6 +26,7 @@ import { TeacherDialog } from "./Dialog";
 import { TryUnit } from "./TryUnit";
 import { LiveClass } from "./LiveClass";
 import { QrCode } from "./QrCode";
+import { RosterConnect, RosterReview } from "./RosterImport";
 import { AuthForm } from "./TeacherAuth";
 import { TeacherLoading, Wordmark } from "./TeacherChrome";
 
@@ -304,6 +305,7 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
       <p role="status" className="sr-only">
         {notice}
       </p>
+      <RosterConnect />
       <form onSubmit={create} className="mt-6 flex flex-wrap items-end gap-3 rounded-2xl border border-line bg-white p-4">
         <label className="flex flex-col text-sm font-semibold">
           Class name
@@ -1668,11 +1670,12 @@ export function TeacherApp() {
   // #/class/{id}/{tab} opens a class on one tab; anything else is the class list.
   const classId = path[0] === "class" && path[1] ? path[1] : null;
   const onAccount = path[0] === "account";
+  const importId = path[0] === "import" && path[1] ? path[1] : null;
   const tab = CLASS_TABS.find((t) => t.path === path[2])?.path ?? "progress";
 
   useEffect(() => {
-    if (!classId) setPageTitle(signedIn === false ? "Sign in" : onAccount ? "Your account" : "Your classes");
-  }, [classId, signedIn, onAccount]);
+    if (!classId) setPageTitle(signedIn === false ? "Sign in" : onAccount ? "Your account" : importId ? "Bring in classes" : "Your classes");
+  }, [classId, signedIn, onAccount, importId]);
 
   useEffect(() => {
     // A class student's login is not a teacher's: only a real account counts.
@@ -1756,6 +1759,8 @@ export function TeacherApp() {
           }} />
         ) : onAccount ? (
           <AccountPage email={account.email} onSignedOut={() => setSignedIn(false)} />
+        ) : importId ? (
+          <RosterReview key={importId} id={importId} onBack={() => go("/")} onOpenClass={(id) => go(`/class/${encodeURIComponent(id)}/students`)} />
         ) : classId ? (
           <ClassPage key={classId} id={classId} tab={tab} preselect={query.get("students")?.split(",").filter(Boolean)} onBack={() => go("/")} />
         ) : (

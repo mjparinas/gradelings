@@ -182,6 +182,7 @@ interface FamilyDetail {
     plan: string;
     trialEndsAt: number;
     accessUntil: number | null;
+    schoolUntil: number | null;
     discountCode: string | null;
     stripeCustomer: string | null;
     subscriptionStatus: string | null;
@@ -346,6 +347,7 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
           <div><dt className="inline font-semibold">Plan: </dt><dd className="inline">{planText(f)}</dd></div>
           <div><dt className="inline font-semibold">Trial ends: </dt><dd className="inline">{day(f.trialEndsAt)}</dd></div>
           <div><dt className="inline font-semibold">Code or admin access: </dt><dd className="inline">{accessText(f.accessUntil)}</dd></div>
+          <div><dt className="inline font-semibold">School plan: </dt><dd className="inline">{accessText(f.schoolUntil)}</dd></div>
           <div><dt className="inline font-semibold">Subscription: </dt><dd className="inline">{f.subscriptionStatus ? `${f.subscriptionStatus}${f.subscriptionInterval ? `, ${f.subscriptionInterval}ly` : ""}${f.currentPeriodEnd ? `, renews ${day(f.currentPeriodEnd)}` : ""}` : "None"}</dd></div>
           <div><dt className="inline font-semibold">Waiting discount: </dt><dd className="inline">{f.discountCode ?? "None"}</dd></div>
           <div><dt className="inline font-semibold">Last practice: </dt><dd className="inline">{day(d.activity.lastActive)} ({d.activity.events.toLocaleString("en-CA")} events)</dd></div>
@@ -404,6 +406,20 @@ function UserDetail({ id, flags, onBack }: { id: string; flags: FlagRow[]; onBac
           {f.accessUntil && (
             <button type="button" disabled={busy} className={danger} onClick={() => void run("remove-access", {}, "Code and admin access removed.")}>
               Remove Access
+            </button>
+          )}
+        </div>
+        <div className="mt-3 flex flex-wrap items-end gap-2">
+          <span className="text-sm font-semibold">School plan (roster import)</span>
+          <button type="button" disabled={busy} className={quiet} onClick={() => void run("grant-school", { days: 365 }, "School plan added for a year.")}>
+            Add A Year
+          </button>
+          <button type="button" disabled={busy} className={quiet} onClick={() => void run("grant-school", { days: null }, "Lifetime school plan given.")}>
+            Give Lifetime School Plan
+          </button>
+          {f.schoolUntil && (
+            <button type="button" disabled={busy} className={danger} onClick={() => void run("remove-school", {}, "School plan removed.")}>
+              Remove School Plan
             </button>
           )}
         </div>
