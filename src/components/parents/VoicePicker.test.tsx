@@ -111,7 +111,7 @@ describe("VoicePicker", () => {
   it("saves a chosen voice for this device and stops any speech first", async () => {
     await openPicker();
     await userEvent.click(screen.getByRole("combobox", { name: "Device voice" }));
-    fireEvent.pointerDown(screen.getByRole("option", { name: "Karen · Australian · Good" }));
+    fireEvent.click(screen.getByRole("option", { name: "Karen · Australian · Good" }));
     expect(h.stop).toHaveBeenCalled();
     expect(h.setPref).toHaveBeenCalledWith("karen");
   });
@@ -123,7 +123,7 @@ describe("VoicePicker", () => {
     expect(menu).toHaveTextContent("Fred · American · Robotic");
     expect(screen.getByText("Fred: Robotic")).toBeInTheDocument();
     await userEvent.click(menu);
-    fireEvent.pointerDown(screen.getAllByRole("option")[0]);
+    fireEvent.click(screen.getAllByRole("option")[0]);
     expect(h.setPref).toHaveBeenCalledWith(null);
   });
 
@@ -158,7 +158,7 @@ describe("VoicePicker", () => {
     const menu = screen.getByRole("combobox", { name: "Voice for French lessons" });
     expect(menu).toHaveTextContent("Automatic: Amélie · Canadian French · Good");
     await userEvent.click(menu);
-    fireEvent.pointerDown(screen.getByRole("option", { name: "Amélie · Canadian French · Good" }));
+    fireEvent.click(screen.getByRole("option", { name: "Amélie · Canadian French · Good" }));
     expect(h.setPref).toHaveBeenCalledWith("amelie", "fr");
     await userEvent.click(screen.getByRole("button", { name: "▶ Preview French" }));
     expect(h.preview).toHaveBeenCalledWith(null, "fr");

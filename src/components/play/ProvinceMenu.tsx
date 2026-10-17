@@ -172,8 +172,10 @@ export function ProvinceMenu({ value, onChange, frameworks = FRAMEWORKS }: { val
           selected ? "border-good-dark bg-good text-[#0f172a]" : current ? "border-help bg-help-soft text-ink" : "border-line bg-white text-ink"
         }`}
         onMouseEnter={() => setActive(i)}
-        onPointerDown={(e) => {
-          e.preventDefault();
+        // Pick on click, not pointerdown: on a touch screen pointerdown fires when a finger lands to scroll the list.
+        // Keeping the mouse-down default prevented stops the button losing focus, which would close the list.
+        onMouseDown={(e) => e.preventDefault()}
+        onClick={(e) => {
           e.stopPropagation();
           choose(f.id);
         }}
