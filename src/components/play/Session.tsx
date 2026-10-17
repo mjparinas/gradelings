@@ -29,6 +29,8 @@ import { ChoiceQuestion } from "../questions/ChoiceQuestion";
 import { CoinsQuestion } from "../questions/CoinsQuestion";
 import { InputQuestion } from "../questions/InputQuestion";
 import { OrderQuestion } from "../questions/OrderQuestion";
+import { PlaceQuestion } from "../questions/PlaceQuestion";
+import { ShadeQuestion } from "../questions/ShadeQuestion";
 import { SortQuestion } from "../questions/SortQuestion";
 import type { QuestionProps, Status } from "../questions/types";
 import { Dialog, Page, ProgressBar } from "../ui";
@@ -62,6 +64,10 @@ export function QuestionBody(props: QuestionProps<Question>) {
       return <SortQuestion {...props} q={q} />;
     case "input":
       return <InputQuestion {...props} q={q} />;
+    case "shade":
+      return <ShadeQuestion {...props} q={q} />;
+    case "place":
+      return <PlaceQuestion {...props} q={q} />;
   }
 }
 

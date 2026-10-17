@@ -51,6 +51,12 @@ export function reportDetails(q: Question): ReportDetails {
       out.choices = q.items.map((i) => `${choiceText(i)} → ${q.bins.find((b) => b.id === i.bin)?.label ?? i.bin}`);
       out.answer = "Each item in the basket listed";
       break;
+    case "shade":
+      out.answer = `${q.target} of ${q.parts} parts shaded`;
+      break;
+    case "place":
+      out.answer = `${q.target} (from ${q.min} to ${q.max})`;
+      break;
   }
   if (q.visual) out.visual = q.visual;
   return out;

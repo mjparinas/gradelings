@@ -192,6 +192,18 @@ function checkQuestion(q: Question, course: Course) {
       expect(new Set(q.items.map((i) => i.id)).size).toBe(q.items.length);
       expect(new Set(q.items.map((i) => i.label)).size).toBe(q.items.length);
       break;
+    case "shade":
+      expect(Number.isInteger(q.parts) && q.parts >= 2 && q.parts <= 12, `shade parts ${q.parts}`).toBe(true);
+      expect(Number.isInteger(q.target) && q.target >= 1 && q.target <= q.parts, `shade target ${q.target}`).toBe(true);
+      break;
+    case "place": {
+      const ticks = (q.max - q.min) / q.step;
+      expect(Math.abs(ticks - Math.round(ticks)) < 1e-9 && ticks >= 2 && ticks <= 12, `place needs 2 to 12 whole steps, got ${ticks}`).toBe(true);
+      const at = (q.target - q.min) / q.step;
+      expect(Math.abs(at - Math.round(at)) < 1e-9 && q.target >= q.min && q.target <= q.max, `place target ${q.target} must sit on a tick`).toBe(true);
+      expect(band, "place needs a pointer or keys, not for the littlest").not.toBe("little");
+      break;
+    }
     case "sort": {
       const bins = q.bins.map((b) => b.id);
       expect(bins.length).toBeGreaterThanOrEqual(2);

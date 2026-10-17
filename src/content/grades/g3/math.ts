@@ -1314,21 +1314,6 @@ function shadedInput(d: Level): Question {
   );
 }
 
-function notShaded(d: Level): Question {
-  const { num, den, visual } = shadedModel(d);
-  return fracChoice(
-    "What fraction is NOT shaded?",
-    [den - num, den],
-    [
-      [num, den],
-      [den - num, num],
-      [den - num + 1, den],
-    ],
-    `There are ${den} equal parts and ${num} ${num === 1 ? "is" : "are"} shaded, so ${den - num} ${den - num === 1 ? "is" : "are"} not shaded: ${frac(den - num, den)}.`,
-    visual,
-  );
-}
-
 function partsCount(): Question {
   const den = pick([2, 3, 4, 5, 6, 8]);
   return typeIn(
@@ -1484,12 +1469,42 @@ function lineFraction(): Question {
   );
 }
 
+/** Tap parts of a bar to show a fraction. */
+function shadeIt(d: Level): Question {
+  const den = pick(d === 1 ? [2, 3, 4] : d === 2 ? [4, 5, 6] : [6, 8, 10]);
+  const k = randInt(1, den - 1);
+  return {
+    kind: "shade",
+    prompt: `Shade ${frac(k, den)} of the bar.`,
+    hint: `The bar has ${den} equal parts. The top number says how many to shade: ${k}.`,
+    parts: den,
+    target: k,
+  };
+}
+
+/** Put a marker on a number line from 0 to 1 cut into equal jumps. */
+function markFraction(): Question {
+  const den = pick([3, 4, 5, 6, 8]);
+  const k = randInt(1, den - 1);
+  return {
+    kind: "place",
+    prompt: `Move the marker to ${frac(k, den)}.`,
+    hint: `The line from 0 to 1 is cut into ${den} equal jumps. ${frac(k, den)} is ${plural(k, "jump")} from 0.`,
+    min: 0,
+    max: 1,
+    step: 1 / den,
+    target: k / den,
+    labelEvery: den,
+    fractionDenominator: den,
+  };
+}
+
 function fractions(opts?: GenerateOptions): Question[] {
   const d = levelOf(opts);
   if (d === 1) {
     return buildSet([
       () => shadedChoice(1),
-      () => shadedChoice(1),
+      () => shadeIt(1),
       () => shadedInput(1),
       partsCount,
       () => compareUnit(1),
@@ -1502,7 +1517,7 @@ function fractions(opts?: GenerateOptions): Question[] {
     return buildSet([
       () => shadedChoice(2),
       () => shadedInput(2),
-      () => notShaded(2),
+      () => shadeIt(2),
       () => partsMeaning(2),
       () => compareUnit(2),
       () => compareSame(2),
@@ -1512,7 +1527,7 @@ function fractions(opts?: GenerateOptions): Question[] {
   }
   return buildSet([
     () => shadedInput(3),
-    () => notShaded(3),
+    markFraction,
     () => compareUnit(3),
     () => compareSame(3),
     () => fractionOfSet(3),
