@@ -53,8 +53,10 @@ export async function recordInvoice(invoice: Obj, fallbackAt = Date.now()): Prom
 /** A refunded charge lowers the revenue of the invoice it paid for. */
 export async function recordRefund(charge: Obj): Promise<void> {
   const invoice = typeof charge.invoice === "string" ? charge.invoice : get(charge, "invoice", "id");
-  if (typeof invoice !== "string") return;
-  await run("UPDATE payments SET refunded = ? WHERE id = ?", [Math.max(0, Number(charge.amount_refunded ?? 0)), invoice]);
+  // A gift is a one-off payment with no invoice; its row is keyed by the payment intent.
+  const id = typeof invoice === "string" ? invoice : charge.payment_intent;
+  if (typeof id !== "string") return;
+  await run("UPDATE payments SET refunded = ? WHERE id = ?", [Math.max(0, Number(charge.amount_refunded ?? 0)), id]);
 }
 
 /** Copies paid invoices from Stripe. Stops after `maxPages` pages of 100, newest first. */

@@ -157,6 +157,13 @@ describe("money", () => {
     expect(metrics({ families: [family({ plan: "premium", subscriptionInterval: "month" })], payments: [pay()] }).revenue.usd).toBeNull();
   });
 
+  it("counts gift payments in revenue but not as a paying family", () => {
+    const m = metrics({ payments: [pay({ familyId: null, interval: "gift", amount: 11999, paidAt: Date.UTC(2026, 2, 2) })] });
+    const mar = m.revenue.months.find((x) => x.label === "Mar 2026")!;
+    expect(mar.revenue).toBe(11999);
+    expect(mar.paying).toBe(0);
+  });
+
   it("sums payments by month, less refunds, with estimated fees and costs", () => {
     const m = metrics({
       monthlyCosts: 5000,
