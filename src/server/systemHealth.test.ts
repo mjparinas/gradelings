@@ -584,6 +584,15 @@ describe("settings", () => {
     expect(JSON.stringify(c)).not.toContain("re_value_never_shown");
   });
 
+  it("checks the Google sign-in ID and secret, warning when either is missing", async () => {
+    delete process.env.GOOGLE_CLIENT_ID;
+    process.env.GOOGLE_CLIENT_SECRET = "gs_value_never_shown";
+    const c = health.settingsCheck();
+    expect(c.rows.find((r) => r.label === "Google sign-in ID")).toMatchObject({ state: "warn", value: expect.stringMatching(/^Missing: GOOGLE_CLIENT_ID\./) });
+    expect(c.rows.find((r) => r.label === "Google sign-in secret")).toMatchObject({ state: "ok", value: "Set (GOOGLE_CLIENT_SECRET)" });
+    expect(JSON.stringify(c)).not.toContain("gs_value_never_shown");
+  });
+
   it("flags a test-only setting left on in production", async () => {
     process.env.ALLOW_DEV_BILLING = "1";
     process.env.VERCEL_ENV = "production";
