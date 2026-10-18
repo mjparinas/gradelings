@@ -1,0 +1,37 @@
+# One-off: copies the Supertonic 2 models, voice styles and licence from the Hugging Face revision
+# pinned below to the supertonic-voices-1 release, checking every sha256 in
+# src/lib/supertonic-manifest.json first. Assets are never replaced: if the release exists, it does nothing.
+name: Publish supertonic-voices-1
+on:
+  push:
+    branches: [claude/project-thread-cr5ht3]
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          if gh release view supertonic-voices-1 >/dev/null 2>&1; then echo "supertonic-voices-1 already exists"; exit 0; fi
+          mkdir supertonic-files
+          node -e '
+            const SOURCE = "https://huggingface.co/Supertone/supertonic-2/resolve/75e6727618a02f323c720cba9478152d4bc16ca4/";
+            const m = require("./src/lib/supertonic-manifest.json");
+            const files = { ...m.model };
+            for (const v of Object.values(m.voices)) Object.assign(files, v.files);
+            for (const [src, sha] of Object.entries(files)) console.log(`${sha}  ${src.split("/").pop()} ${SOURCE}${src}`);
+          ' > files.txt
+          while read -r sha name url; do
+            curl -fsSL -o "supertonic-files/$name" "$url"
+            echo "$sha  supertonic-files/$name" | sha256sum -c -
+          done < files.txt
+          curl -fsSL -o supertonic-files/LICENSE "https://huggingface.co/Supertone/supertonic-2/resolve/75e6727618a02f323c720cba9478152d4bc16ca4/LICENSE"
+          echo "0d944a9110fed9a9602d60e0423a272903e7bd21ab060490774efc77c2275e9f  supertonic-files/LICENSE" | sha256sum -c -
+          gh release create supertonic-voices-1 supertonic-files/* \
+            --title "Supertonic voices 1" \
+            --notes "Supertonic 2 (Supertone Inc., BigScience Open RAIL-M, see LICENSE) models, voice styles F1 and F2 and config, copied unchanged from Supertone/supertonic-2 at revision 75e6727618a02f323c720cba9478152d4bc16ca4 and checked by sha256 (see src/lib/supertonic-manifest.json). Never replace these assets: upload a new supertonic-voices-{n} release instead."
