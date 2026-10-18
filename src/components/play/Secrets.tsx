@@ -151,7 +151,7 @@ export function MooseVisitor() {
 
   if (!show) return null;
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 overflow-hidden">
+    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 overflow-hidden pt-10">
       <div className="animate-cross flex items-end" style={{ animationDuration: "9s" }} onAnimationEnd={() => setShow(false)}>
         <button
           type="button"

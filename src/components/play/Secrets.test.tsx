@@ -178,6 +178,8 @@ describe("MooseVisitor", () => {
     act(() => void vi.advanceTimersByTime(1_000));
     fireEvent.click(moose()!);
     expect(screen.getByText("Sorry!")).toBeInTheDocument();
+    // The clipping wrapper needs room above the moose or the speech bubble is cut off.
+    expect(screen.getByText("Sorry!").closest(".overflow-hidden")).toHaveClass("pt-10");
     expect(found()).toEqual(["polite-moose"]);
   });
 
