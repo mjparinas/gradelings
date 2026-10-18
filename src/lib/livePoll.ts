@@ -1,3 +1,4 @@
+import type { ClassGoal } from "./classGoal";
 import { TIMER_POLL_OPEN_MS, type ClassTimer } from "./classTimer";
 import { LIVE_POLL_IDLE_MS, LIVE_POLL_OPEN_MS, type LiveForChild } from "./live";
 
@@ -9,6 +10,7 @@ import { LIVE_POLL_IDLE_MS, LIVE_POLL_OPEN_MS, type LiveForChild } from "./live"
 export interface LivePollData {
   live: LiveForChild | null;
   timer: (ClassTimer & { className: string }) | null;
+  goal: (ClassGoal & { className: string }) | null;
   /** When the answer arrived (a timer's `left` counts from here). */
   at: number;
 }
@@ -72,9 +74,9 @@ class Poller {
     try {
       const res = await fetch(`/api/live/?profile=${encodeURIComponent(this.profileId)}`, { credentials: "same-origin", cache: "no-store" });
       if (!res.ok) throw new Error(String(res.status));
-      const body = (await res.json()) as { live?: LiveForChild | null; timer?: LivePollData["timer"] };
+      const body = (await res.json()) as { live?: LiveForChild | null; timer?: LivePollData["timer"]; goal?: LivePollData["goal"] };
       if (!this.stopped) {
-        this.last = { live: body.live ?? null, timer: body.timer ?? null, at: Date.now() };
+        this.last = { live: body.live ?? null, timer: body.timer ?? null, goal: body.goal ?? null, at: Date.now() };
         this.emit({ data: this.last });
       }
     } catch {

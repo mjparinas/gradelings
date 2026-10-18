@@ -34,6 +34,7 @@ import { useAllowed } from "./useAllowed";
 import { useClasswork } from "./useClasswork";
 import { homeworkDone } from "@/lib/classroom";
 import { ParentNote } from "./ParentNote";
+import { ClassGoalCard } from "./ClassGoalCard";
 import { RewardCard, TogetherCard } from "./FamilyCards";
 import { FocusCard } from "./FocusCard";
 import { LevelChip } from "./Practice";
@@ -312,6 +313,7 @@ export function Hub() {
         <>
           <RewardCard />
           <TogetherCard />
+          <ClassGoalCard />
         </>
       )}
 

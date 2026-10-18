@@ -2,6 +2,7 @@ import { error, getSession, json, sameOrigin } from "@/server/auth";
 import { isFlagOn } from "@/server/flags";
 import { answerLive, liveForChild } from "@/server/live";
 import { timerForChild } from "@/server/classTimer";
+import { goalForChild } from "@/server/classGoal";
 import type { LiveForChild, LiveQuestionData } from "@/lib/live";
 
 // Live questions, from a child's device. A class student's narrow session may use this route as well
@@ -14,20 +15,20 @@ import type { LiveForChild, LiveQuestionData } from "@/lib/live";
  */
 export async function GET(req: Request) {
   const session = await getSession(req, { student: true });
-  if (!session) return json({ live: null, timer: null });
+  if (!session) return json({ live: null, timer: null, goal: null });
   const params = new URL(req.url).searchParams;
   const profileId = params.get("profile") ?? "";
   const timerOnly = Boolean(params.get("timer"));
-  if (!profileId) return json({ live: null, timer: null });
-  const [liveOn, timerOn] = await Promise.all([timerOnly ? false : isFlagOn("live-questions", session.familyId), isFlagOn("class-timer", session.familyId)]);
-  const [found, foundTimer] = await Promise.all([liveOn ? liveForChild(session.familyId, profileId) : null, timerOn ? timerForChild(session.familyId, profileId) : null]);
+  if (!profileId) return json({ live: null, timer: null, goal: null });
+  const [liveOn, timerOn, goalOn] = await Promise.all([timerOnly ? false : isFlagOn("live-questions", session.familyId), isFlagOn("class-timer", session.familyId), timerOnly ? false : isFlagOn("class-goal", session.familyId)]);
+  const [found, foundTimer, goal] = await Promise.all([liveOn ? liveForChild(session.familyId, profileId) : null, timerOn ? timerForChild(session.familyId, profileId) : null, goalOn ? goalForChild(session.familyId, profileId) : null]);
   const timer = foundTimer ? { ...foundTimer.timer, className: foundTimer.className } : null;
   if (timerOnly) return json({ timer });
-  if (!found) return json({ live: null, timer });
+  if (!found) return json({ live: null, timer, goal });
   const { answer, hint, ...question } = JSON.parse(found.row.data) as LiveQuestionData;
   const revealed = found.row.revealed_at != null;
   const live: LiveForChild = { id: found.row.id, className: found.className, question, mine: found.mine, ...(revealed ? { answer, hint } : {}) };
-  return json({ live, timer });
+  return json({ live, timer, goal });
 }
 
 /** Sends a child's answer (`{ questionId, profileId, choice }`). The first answer counts. */
