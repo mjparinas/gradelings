@@ -30,7 +30,7 @@ describe("MagicForm", () => {
     await userEvent.click(button);
     expect(await screen.findByRole("heading", { name: "You're signed in" })).toBeInTheDocument();
     expect(JSON.parse(fetchMock.mock.calls[0][1].body as string)).toEqual({ token: "abc123" });
-    expect(screen.getByRole("link", { name: "Go to the Parent area" })).toHaveAttribute("href", "/parents/");
+    expect(screen.getByRole("link", { name: "Go to the Parent area" })).toHaveAttribute("href", "/parents/?signedin=1#/account");
   });
 
   it("explains a link with no token", async () => {

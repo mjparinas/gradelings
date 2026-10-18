@@ -78,14 +78,20 @@ describe("sign-in links", () => {
     expect((await verify.POST(post("/api/auth/magic/verify/", { token: await auth.createAuthToken(row.id, "reset", 60_000) }))).status).toBe(400);
   });
 
-  it("is not sent to admin accounts or accounts with two-step sign-in", async () => {
+  it("tells admin accounts and accounts with two-step sign-in to use their password, with no link", async () => {
     await account("boss-magic@example.com");
     await account("twostep-magic@example.com");
     await dbm.run("UPDATE parents SET totp_enabled_at = ? WHERE email = ?", [Date.now(), "twostep-magic@example.com"]);
-    const before = email.outbox().length;
-    await ask("boss-magic@example.com");
-    await ask("twostep-magic@example.com");
-    expect(email.outbox().length).toBe(before);
+    for (const address of ["boss-magic@example.com", "twostep-magic@example.com"]) {
+      const before = email.outbox().length;
+      const res = await ask(address);
+      expect((await res.json()).message).toContain("we've sent a link");
+      expect(email.outbox().length).toBe(before + 1);
+      const mail = email.outbox().at(-1)!;
+      expect(mail.to).toBe(address);
+      expect(mail.text).toContain("password");
+      expect(mail.text).not.toContain("token=");
+    }
   });
 
   it("refuses a link sent before the account turned on two-step sign-in", async () => {

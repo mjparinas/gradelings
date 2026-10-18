@@ -113,6 +113,20 @@ describe("ParentApp", () => {
     window.history.replaceState(null, "", "/");
   });
 
+  it("takes the account from the server after an emailed sign-in link, and takes ?signedin=1 out of the address", async () => {
+    h.kv.family = trial(5);
+    fetchMock.mockImplementation(async () => json({ family: trial(5, { account, plan: "premium" }), billing: { stripe: true, dev: false } }));
+    window.history.replaceState(null, "", "/parents/?signedin=1#/account");
+    render(<ParentApp />);
+    await userEvent.click(await screen.findByRole("button", { name: "Unlock" }));
+    expect(await screen.findByText("page:account", {}, { timeout: 15_000 })).toBeInTheDocument();
+    expect(useStore.getState().family.account?.email).toBe("p@example.com");
+    expect(h.syncNow).toHaveBeenCalled();
+    expect(window.location.search).toBe("");
+    expect(window.location.hash).toBe("#/account");
+    window.history.replaceState(null, "", "/");
+  });
+
   it("skips the PIN on the way back from Stripe", async () => {
     h.kv.family = trial(5, { account });
     h.billingPass = true;

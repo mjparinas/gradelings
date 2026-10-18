@@ -138,6 +138,20 @@ export function magicLinkEmail(to: string, origin: string, token: string, dest: 
   });
 }
 
+/** For an account that signs in with its password (and a code), when someone asks it for a sign-in link. */
+export function magicLinkUnavailableEmail(to: string, origin: string): Email {
+  return layout({
+    kind: "magic",
+    to,
+    origin,
+    subject: `Sign-in links aren't available for your ${APP_NAME} account`,
+    heading: "Please use your password",
+    body: ["Someone asked for a sign-in link for this account. For security, this account signs in with its password (and a code from your authenticator app, if it has two-step sign-in turned on) instead of a link."],
+    button: { label: "Go to sign in", url: `${origin}/parents/` },
+    footnote: "If you didn't ask for this, you can ignore this email; nothing has changed.",
+  });
+}
+
 /** What a child did during the trial: first name and practice totals only. */
 export interface TrialChild {
   name: string;

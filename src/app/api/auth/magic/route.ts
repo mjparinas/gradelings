@@ -1,7 +1,7 @@
 import { appOrigin, clientIp, createAuthToken, error, json, rateLimited, sameOrigin } from "@/server/auth";
 import { sendEmail } from "@/server/email";
-import { magicLinkEmail } from "@/server/emailTemplates";
-import { MAGIC_TTL_MS, magicAccountId } from "@/server/magic";
+import { magicLinkEmail, magicLinkUnavailableEmail } from "@/server/emailTemplates";
+import { MAGIC_TTL_MS, magicAccount } from "@/server/magic";
 
 /** Emails a one-time sign-in link. Always answers the same way, so it can't be used to find out which emails have accounts. */
 export async function POST(req: Request) {
@@ -12,7 +12,10 @@ export async function POST(req: Request) {
   const reply = json({ ok: true, message: "If that email has an account, we've sent a link that signs you in. It works for 15 minutes." });
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 200) return reply;
   if (await rateLimited(`magic-email:${email}`, 3, 60 * 60_000)) return reply;
-  const id = await magicAccountId(email);
-  if (id) await sendEmail(magicLinkEmail(email, appOrigin(req), await createAuthToken(id, "magic", MAGIC_TTL_MS), body?.to === "teachers" ? "teachers" : "parents"));
+  const account = await magicAccount(email);
+  if (!account) return reply;
+  const origin = appOrigin(req);
+  if (account.eligible) await sendEmail(magicLinkEmail(email, origin, await createAuthToken(account.id, "magic", MAGIC_TTL_MS), body?.to === "teachers" ? "teachers" : "parents"));
+  else await sendEmail(magicLinkUnavailableEmail(email, origin));
   return reply;
 }
