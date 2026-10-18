@@ -158,7 +158,7 @@ describe("ParentApp", () => {
 
   it("colours the name in the header letter by letter, like the other pages", async () => {
     const header = await open();
-    const letters = [...within(header).getByTestId("wordmark").querySelectorAll<HTMLElement>("span")];
+    const letters = [...within(header).getByTestId("wordmark").querySelectorAll<HTMLElement>("span[aria-hidden]")];
     expect(letters.map((el) => el.textContent).join("")).toBe(APP_NAME);
     const swatch = document.createElement("i");
     const css = (c: string) => ((swatch.style.color = c), swatch.style.color);

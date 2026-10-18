@@ -80,7 +80,8 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
               ← Kids&apos; area
             </Link>
             <span className="text-lg font-bold">
-              <span aria-label={APP_NAME} data-testid="wordmark">
+              <span data-testid="wordmark">
+                <span className="sr-only">{APP_NAME}</span>
                 {APP_NAME.split("").map((ch, i) => (
                   <span key={i} aria-hidden="true" style={{ color: WORDMARK_COLOURS[i % WORDMARK_COLOURS.length] }}>
                     {ch}
