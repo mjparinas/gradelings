@@ -21,6 +21,7 @@ import { sayFor } from "@/lib/say";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
 import { AccountPage } from "./AccountPage";
 import { rememberTeacher } from "@/lib/teacherHint";
+import { ClassGoalPanel } from "./ClassGoalPanel";
 import { ClassTimerPanel } from "./ClassTimerPanel";
 import { TeacherDialog } from "./Dialog";
 import { TryUnit } from "./TryUnit";
@@ -1374,6 +1375,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
               </div>
             )}
           </section>
+          <ClassGoalPanel classId={data.class.id} students={students.length} />
           <Insights data={data} label={label} />
         </>
       )}

@@ -209,6 +209,13 @@ const SCHEMA = [
     paused_left INTEGER,
     updated_at INTEGER NOT NULL
   )`,
+  // A weekly question goal a teacher sets for the whole class: a target and the teacher's time zone offset, nothing about a child.
+  `CREATE TABLE IF NOT EXISTS class_goals (
+    class_id TEXT PRIMARY KEY,
+    target INTEGER NOT NULL,
+    tz_offset INTEGER NOT NULL DEFAULT 0,
+    updated_at INTEGER NOT NULL
+  )`,
   // Weekly-report browser notifications were removed (the weekly email says the same); drop any saved push addresses.
   `DROP TABLE IF EXISTS push_subscriptions`,
   // Codes the owner hands out: free access for a number of days (or for life), or a discount at checkout.

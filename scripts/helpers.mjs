@@ -63,6 +63,19 @@ export async function stepOnce(page) {
     await page.getByRole("button", { name: /Check/ }).click({ force: true });
     return "build";
   }
+  if (await vis(page.getByTestId("shade-part"))) {
+    const parts = page.getByTestId("shade-part");
+    await parts.nth(Math.floor(Math.random() * (await parts.count()))).click({ force: true });
+    await page.getByRole("button", { name: /Check/ }).click({ force: true });
+    return "shade";
+  }
+  if (await vis(page.getByTestId("place-marker"))) {
+    const marker = page.getByTestId("place-marker");
+    await marker.focus();
+    for (let i = 0; i < 1 + Math.floor(Math.random() * 4); i++) await marker.press("ArrowRight");
+    await page.getByRole("button", { name: /Check/ }).click({ force: true });
+    return "place";
+  }
   const coin = page.getByRole("button", { name: /^(?!Take out).*(nickel|dime|quarter|loonie|toonie|bill)/i });
   if (await vis(coin)) {
     await coin.first().click({ force: true });

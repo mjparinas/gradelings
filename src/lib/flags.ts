@@ -39,6 +39,7 @@ export const FLAGS: readonly FlagDef[] = [
   { key: "roster-import", label: "Roster import", description: "Teachers bringing in classes and students from Google Classroom, Clever or ClassLink (each also needs its keys set on the server). Off until the providers' keys are in and an import has been tried.", scope: "server", defaultOn: false },
   { key: "school-plan", label: "School plan", description: "Roster import needs the school plan: a teacher account the owner has switched it on for under Users. Off: every teacher with roster import on may use it. Turn on only once the school price is decided.", scope: "server", defaultOn: false },
   { key: "class-timer", label: "Class timer", description: "A countdown a teacher starts for the whole class, shown on the teacher's screen and on students' devices. Off: no new timers start and devices stop showing them; practice is unchanged.", scope: "server", defaultOn: true },
+  { key: "class-goal", label: "Class goal", description: "A weekly question goal a teacher sets for the whole class, shown to students as a shared progress bar with counts only. Off: no new goals are set and devices stop showing them; practice is unchanged.", scope: "server", defaultOn: true },
 ];
 
 export type FlagKey = (typeof FLAGS)[number]["key"];
