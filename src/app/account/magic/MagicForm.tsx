@@ -43,7 +43,8 @@ export function MagicForm() {
     }
   }
 
-  const home = teacher ? "/teachers/" : "/parents/";
+  // The parent area takes the account the server just signed in from this flag; without it the device would still look signed out.
+  const home = teacher ? "/teachers/" : "/parents/?signedin=1#/account";
   const homeName = teacher ? "Go to the teacher area" : "Go to the Parent area";
   if (state === "done") {
     return (

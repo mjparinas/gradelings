@@ -156,10 +156,11 @@ export function ParentApp() {
       .init()
       .then(() => {
         startBackgroundSync();
-        // Back from Google: the server has signed this browser in, so take the account (and its history) from it.
+        // Back from Google or an emailed sign-in link: the server has signed this browser in, so take the account (and its history) from it.
         const url = new URL(window.location.href);
-        if (url.searchParams.get("google") === "1") {
+        if (url.searchParams.get("google") === "1" || url.searchParams.get("signedin") === "1") {
           url.searchParams.delete("google");
+          url.searchParams.delete("signedin");
           window.history.replaceState(null, "", url.pathname + url.search + url.hash);
           void finishGoogleSignIn().then(setBilling);
         } else if (useStore.getState().family.account) void refreshAccount().then(setBilling);
