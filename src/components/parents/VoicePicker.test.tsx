@@ -11,9 +11,9 @@ const h = vi.hoisted(() => ({
   prefs: { en: null as string | null, fr: null as string | null },
   setPref: vi.fn(),
   preview: vi.fn(),
-  previewKokoro: vi.fn(),
+  previewSupertonic: vi.fn(),
   stop: vi.fn(),
-  kokoro: undefined as undefined | { enabled: boolean; voices: { en: { state: string }; fr: { state: string } } },
+  supertonic: undefined as undefined | { enabled: boolean; voices: { en: { state: string }; fr: { state: string } } },
 }));
 vi.mock("@/lib/speech", async (importOriginal) => {
   const real = await importOriginal<typeof import("@/lib/speech")>();
@@ -25,19 +25,19 @@ vi.mock("@/lib/speech", async (importOriginal) => {
     getVoicePreference: (lang: SpeechLanguage = "en") => h.prefs[lang],
     setVoicePreference: h.setPref,
     previewVoice: h.preview,
-    previewKokoro: h.previewKokoro,
+    previewSupertonic: h.previewSupertonic,
     stopSpeaking: h.stop,
   };
 });
-vi.mock("@/lib/kokoro", () => ({
-  subscribeKokoro: () => () => {},
-  getKokoroState: () => h.kokoro,
-  KOKORO_VOICES: { en: { name: "Heart", credit: "" }, fr: { name: "Siwis", credit: "" } },
-  kokoroSupported: () => h.kokoro !== undefined,
-  kokoroDownloadBytes: vi.fn().mockResolvedValue(undefined),
-  downloadKokoro: vi.fn(),
-  removeKokoro: vi.fn(),
-  setKokoroEnabled: vi.fn(),
+vi.mock("@/lib/supertonic", () => ({
+  subscribeSupertonic: () => () => {},
+  getSupertonicState: () => h.supertonic,
+  SUPERTONIC_VOICES: { en: { name: "Wren", credit: "" }, fr: { name: "Fleur", credit: "" } },
+  supertonicSupported: () => h.supertonic !== undefined,
+  supertonicDownloadBytes: vi.fn().mockResolvedValue(undefined),
+  downloadSupertonic: vi.fn(),
+  removeSupertonic: vi.fn(),
+  setSupertonicEnabled: vi.fn(),
 }));
 
 import { VoicePicker } from "./VoicePicker";
@@ -56,9 +56,9 @@ beforeEach(() => {
   h.prefs = { en: null, fr: null };
   h.setPref.mockReset();
   h.preview.mockReset();
-  h.previewKokoro.mockReset().mockResolvedValue(undefined);
+  h.previewSupertonic.mockReset().mockResolvedValue(undefined);
   h.stop.mockReset();
-  h.kokoro = undefined;
+  h.supertonic = undefined;
   setOnline(true);
 });
 
@@ -173,20 +173,20 @@ describe("VoicePicker", () => {
     await userEvent.click(screen.getByRole("button", { name: "▶ Hear it" }));
     expect(h.stop).toHaveBeenCalled();
     expect(h.preview).toHaveBeenCalledWith("karen");
-    expect(h.previewKokoro).not.toHaveBeenCalled();
+    expect(h.previewSupertonic).not.toHaveBeenCalled();
   });
 
   it("names the offline voice once it is on and here, and plays it as the sample", async () => {
-    h.kokoro = { enabled: true, voices: { en: { state: "ready" }, fr: { state: "missing" } } };
+    h.supertonic = { enabled: true, voices: { en: { state: "ready" }, fr: { state: "missing" } } };
     render(<VoicePicker />);
-    expect(screen.getByText(/Reading with:/).parentElement).toHaveTextContent("Reading with: Heart, the offline natural voice");
+    expect(screen.getByText(/Reading with:/).parentElement).toHaveTextContent("Reading with: Wren, the offline natural voice");
     await userEvent.click(screen.getByRole("button", { name: "▶ Hear it" }));
-    expect(h.previewKokoro).toHaveBeenCalledWith("en");
+    expect(h.previewSupertonic).toHaveBeenCalledWith("en");
     expect(h.preview).not.toHaveBeenCalled();
   });
 
   it("says when the offline voice downloads while it isn't here yet", () => {
-    h.kokoro = { enabled: true, voices: { en: { state: "missing" }, fr: { state: "missing" } } };
+    h.supertonic = { enabled: true, voices: { en: { state: "missing" }, fr: { state: "missing" } } };
     render(<VoicePicker />);
     expect(screen.getByText(/Reading with:/).parentElement).toHaveTextContent("Reading with: Aria (sounds natural)");
     expect(screen.getByText(/a natural voice that works offline, downloads by itself once a child has/)).toBeInTheDocument();

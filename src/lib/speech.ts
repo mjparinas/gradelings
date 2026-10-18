@@ -3,12 +3,12 @@
 // Read-aloud with the device's own voices (Web Speech API), so it works offline
 // and costs nothing. Voice quality varies hugely between devices, so we rank the
 // installed voices and pick the most natural one; parents can choose another in
-// Settings (saved per device, because every device has different voices). By default the Kokoro
-// voice (src/lib/kokoro.ts) downloads in the background when the app opens for a child with
+// Settings (saved per device, because every device has different voices). By default the Supertonic
+// voice (src/lib/supertonic.ts) downloads in the background when the app opens for a child with
 // read-aloud on, or the first time the speaker button is tapped, and then reads instead of the
 // device voice; until it's here, or if it fails, the device voice reads.
 
-import { autoDownloadKokoro, markKokoroFailed, kokoroCanSpeak, kokoroMightSpeak, kokoroWanted, speakKokoro, stopKokoro } from "./kokoro";
+import { autoDownloadSupertonic, markSupertonicFailed, supertonicCanSpeak, supertonicMightSpeak, supertonicWanted, speakSupertonic, stopSupertonic } from "./supertonic";
 
 /** English is the app's language; French is for French Immersion and Core French questions. */
 export type SpeechLanguage = "en" | "fr";
@@ -96,7 +96,7 @@ function hasSynth(): boolean {
 }
 
 export function canSpeak(): boolean {
-  return hasSynth() || (typeof window !== "undefined" && kokoroCanSpeak());
+  return hasSynth() || (typeof window !== "undefined" && supertonicCanSpeak());
 }
 
 function refresh() {
@@ -182,12 +182,12 @@ export function forSpeech(text: string, language: SpeechLanguage = "en"): string
 // A touch slower than normal for young listeners.
 const RATE = 0.92;
 
-// Kokoro voices have their own natural pace, a little brisk for beginning readers: Heart (English)
-// is slowed a touch, and Siwis (French) reads as slowly as the device voices.
-export const KOKORO_RATE: Record<SpeechLanguage, number> = { en: 0.9, fr: RATE };
+// Supertonic voices have their own natural pace, a little brisk for beginning readers: Wren (English)
+// is slowed a touch, and Fleur (French) reads as slowly as the device voices.
+export const SUPERTONIC_RATE: Record<SpeechLanguage, number> = { en: 0.9, fr: RATE };
 
-// Pauses (such as between a question and its answers) are half as long when Kokoro reads.
-export const KOKORO_PAUSE_SCALE = 0.5;
+// Pauses (such as between a question and its answers) are half as long when Supertonic reads.
+export const SUPERTONIC_PAUSE_SCALE = 0.5;
 
 // Chrome on Android silently drops an utterance spoken straight after cancel(), so there speech
 // waits this long after a cancel. Still well inside the tap's user activation.
@@ -233,16 +233,16 @@ function queue(text: string, voiceUri: string | null | undefined, language: Spee
   // A named voice (the device-voice preview in Settings) always uses that voice.
   if (voiceUri !== undefined) return queueDevice(text, voiceUri, language, onDone);
   // Hearing a question (the speaker button, in any grade) is the moment to fetch that language's voice.
-  void autoDownloadKokoro(language).catch(() => false);
-  if (!kokoroMightSpeak(language)) return queueDevice(text, voiceUri, language, onDone);
+  void autoDownloadSupertonic(language).catch(() => false);
+  if (!supertonicMightSpeak(language)) return queueDevice(text, voiceUri, language, onDone);
   const id = run;
-  void kokoroWanted(language).then((wanted) => {
+  void supertonicWanted(language).then((wanted) => {
     if (id !== run) return;
     if (!wanted) return queueDevice(text, voiceUri, language, onDone);
-    speakKokoro(forSpeech(text, language), language, KOKORO_RATE[language]).then(
+    speakSupertonic(forSpeech(text, language), language, SUPERTONIC_RATE[language]).then(
       () => id === run && onDone?.(),
       () => {
-        markKokoroFailed(language);
+        markSupertonicFailed(language);
         if (id === run) queueDevice(text, voiceUri, language, onDone);
       },
     );
@@ -286,7 +286,7 @@ function cancelAll() {
   run++;
   clearTimeout(pauseTimer);
   clearTimeout(speakTimer);
-  stopKokoro();
+  stopSupertonic();
   if (!hasSynth()) return;
   const synth = window.speechSynthesis;
   // On Android a cancel with nothing playing still swallows the next utterance, so skip it there.
@@ -309,8 +309,8 @@ export function speakSegments(segments: readonly SpeechPiece[]) {
     const go = () => {
       if (id === run) queue(piece.text, undefined, piece.lang, next);
     };
-    // Kokoro takes a moment to make each piece, so its pauses are shorter to feel the same.
-    const pause = piece.pause && kokoroMightSpeak(piece.lang) ? piece.pause * KOKORO_PAUSE_SCALE : piece.pause;
+    // Supertonic takes a moment to make each piece, so its pauses are shorter to feel the same.
+    const pause = piece.pause && supertonicMightSpeak(piece.lang) ? piece.pause * SUPERTONIC_PAUSE_SCALE : piece.pause;
     if (pause) pauseTimer = setTimeout(go, pause);
     else go();
   };
@@ -331,9 +331,9 @@ export function previewVoice(uri: string | null, language: SpeechLanguage = "en"
   speak(SAMPLE[language], uri, language);
 }
 
-/** A short sample of the Kokoro voice. Rejects if it can't play, so Settings can say so. */
-export function previewKokoro(language: SpeechLanguage = "en"): Promise<void> {
+/** A short sample of the Supertonic voice. Rejects if it can't play, so Settings can say so. */
+export function previewSupertonic(language: SpeechLanguage = "en"): Promise<void> {
   if (typeof window === "undefined") return Promise.resolve();
   cancelAll();
-  return speakKokoro(forSpeech(SAMPLE[language], language), language, KOKORO_RATE[language]);
+  return speakSupertonic(forSpeech(SAMPLE[language], language), language, SUPERTONIC_RATE[language]);
 }

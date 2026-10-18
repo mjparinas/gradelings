@@ -1,64 +1,64 @@
 "use client";
 
 import { useEffect, useState, useSyncExternalStore } from "react";
-import { downloadKokoro, getKokoroState, KOKORO_VOICES, kokoroDownloadBytes, kokoroSupported, removeKokoro, setKokoroEnabled, subscribeKokoro, type KokoroState } from "@/lib/kokoro";
-import { previewKokoro, stopSpeaking, type SpeechLanguage } from "@/lib/speech";
+import { downloadSupertonic, getSupertonicState, SUPERTONIC_VOICES, supertonicDownloadBytes, supertonicSupported, removeSupertonic, setSupertonicEnabled, subscribeSupertonic, type SupertonicState } from "@/lib/supertonic";
+import { previewSupertonic, stopSpeaking, type SpeechLanguage } from "@/lib/speech";
 import { useSay } from "@/lib/say";
 import { Switch } from "./common";
 
 const mb = (bytes: number) => `${Math.max(1, Math.round(bytes / 1e6))} MB`;
 
 /**
- * The Kokoro voice for one language on this device. English carries the on/off switch, which is on
+ * The Supertonic voice for one language on this device. English carries the on/off switch, which is on
  * by default: the voice then downloads by itself in the background for children with read-aloud on.
  */
-export function KokoroVoice({ language }: { language: SpeechLanguage }) {
-  const kokoro = useSyncExternalStore<KokoroState | undefined>(subscribeKokoro, getKokoroState, () => undefined);
+export function SupertonicVoice({ language }: { language: SpeechLanguage }) {
+  const supertonic = useSyncExternalStore<SupertonicState | undefined>(subscribeSupertonic, getSupertonicState, () => undefined);
   const [size, setSize] = useState<number>();
   const [previewing, setPreviewing] = useState(false);
   const [previewFailed, setPreviewFailed] = useState(false);
   const say = useSay();
-  const voice = kokoro?.voices[language];
-  const otherReady = kokoro?.voices[language === "en" ? "fr" : "en"].state === "ready";
+  const voice = supertonic?.voices[language];
+  const otherReady = supertonic?.voices[language === "en" ? "fr" : "en"].state === "ready";
 
   useEffect(() => {
-    if (voice?.state === "missing") void kokoroDownloadBytes(language).then(setSize);
+    if (voice?.state === "missing") void supertonicDownloadBytes(language).then(setSize);
   }, [voice?.state, language, otherReady]);
 
-  if (!kokoro || !voice || voice.state === "checking") return null;
-  if (!kokoroSupported()) return language === "en" ? <p className="text-sm text-ink-soft">This browser can&apos;t run the offline voice.</p> : null;
+  if (!supertonic || !voice || voice.state === "checking") return null;
+  if (!supertonicSupported()) return language === "en" ? <p className="text-sm text-ink-soft">This browser can&apos;t run the offline voice.</p> : null;
 
   const french = language === "fr";
   // The French voice downloads by itself for a child with read-aloud and French on, so there's no button for it.
   if (french && voice.state === "missing") return null;
   const download = () => {
     // Downloading by hand means the parent wants to hear it.
-    if (!french) setKokoroEnabled(true);
-    void downloadKokoro(language);
+    if (!french) setSupertonicEnabled(true);
+    void downloadSupertonic(language);
   };
   const toggle = (
     <Switch
       label="Use the offline voice for read-aloud"
-      value={kokoro.enabled}
+      value={supertonic.enabled}
       onChange={(on) => {
         stopSpeaking();
-        setKokoroEnabled(on);
+        setSupertonicEnabled(on);
       }}
       help="On this device only. Turn it off to use the device voice instead."
     />
   );
-  const name = KOKORO_VOICES[language].name;
+  const name = SUPERTONIC_VOICES[language].name;
   const preview = () => {
     stopSpeaking();
     setPreviewFailed(false);
     setPreviewing(true);
-    previewKokoro(language)
+    previewSupertonic(language)
       .catch(() => setPreviewFailed(true))
       .finally(() => setPreviewing(false));
   };
 
   return (
-    <div className="flex flex-col gap-3 rounded-xl border-2 border-line p-4" data-testid={`kokoro-${language}`}>
+    <div className="flex flex-col gap-3 rounded-xl border-2 border-line p-4" data-testid={`supertonic-${language}`}>
       <div>
         <h3 className="text-lg font-bold">{french ? "Offline French voice" : "Offline natural voice"}</h3>
         <p className="text-sm text-ink-soft">
@@ -72,7 +72,7 @@ export function KokoroVoice({ language }: { language: SpeechLanguage }) {
 
       {voice.state === "missing" && (
         <>
-          {kokoro.enabled && (
+          {supertonic.enabled && (
             <p className="text-sm text-ink-soft">
               {french
                 ? "It downloads by itself for a child with \"Read questions out loud\" and French switched on, when this device isn't on mobile data."
@@ -82,17 +82,17 @@ export function KokoroVoice({ language }: { language: SpeechLanguage }) {
           <button
             type="button"
             className="self-start rounded-xl bg-[#4f8ef7] px-4 py-2.5 font-bold text-[#0f172a] disabled:opacity-40"
-            disabled={kokoro.voices[french ? "en" : "fr"].state === "downloading"}
+            disabled={supertonic.voices[french ? "en" : "fr"].state === "downloading"}
             onClick={download}
           >
-            {`⬇ Download ${french ? "French voice" : "voice"}${kokoro.enabled ? " now" : ""}${size ? ` (${mb(size)})` : ""}`}
+            {`⬇ Download ${french ? "French voice" : "voice"}${supertonic.enabled ? " now" : ""}${size ? ` (${mb(size)})` : ""}`}
           </button>
           {voice.error && (
             <p role="alert" className="text-sm font-semibold text-nudge-dark">
               {voice.error}
             </p>
           )}
-          {!french && !kokoro.enabled && <p className="text-sm text-ink-soft">Best on Wi-Fi. Until it&apos;s downloaded and switched on, read-aloud uses the device voice below.</p>}
+          {!french && !supertonic.enabled && <p className="text-sm text-ink-soft">Best on Wi-Fi. Until it&apos;s downloaded and switched on, read-aloud uses the device voice below.</p>}
         </>
       )}
 
@@ -118,7 +118,7 @@ export function KokoroVoice({ language }: { language: SpeechLanguage }) {
             <button type="button" className="rounded-xl bg-[#4f8ef7] px-4 py-2.5 font-bold text-[#0f172a]" onClick={preview} disabled={previewing}>
               {previewing ? "Speaking…" : french ? "▶ Preview French" : "▶ Preview"}
             </button>
-            <button type="button" className="rounded-xl border-2 border-line px-4 py-2.5 font-semibold" onClick={() => void removeKokoro(language)}>
+            <button type="button" className="rounded-xl border-2 border-line px-4 py-2.5 font-semibold" onClick={() => void removeSupertonic(language)}>
               Remove from this device
             </button>
           </div>
@@ -130,8 +130,7 @@ export function KokoroVoice({ language }: { language: SpeechLanguage }) {
         </>
       )}
       <p className="text-xs text-ink-soft">
-        {KOKORO_VOICES[language].credit} Speech by <a className="underline" href="https://github.com/hexgrad/kokoro">Kokoro</a> and{" "}
-        <a className="underline" href="https://github.com/espeak-ng/espeak-ng">eSpeak NG</a> (GPL-3.0).
+        {SUPERTONIC_VOICES[language].credit} Speech by <a className="underline" href="https://github.com/supertone-inc/supertonic">Supertonic</a>.
       </p>
     </div>
   );

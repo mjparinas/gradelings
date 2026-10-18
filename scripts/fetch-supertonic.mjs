@@ -1,19 +1,19 @@
-// Puts the Kokoro read-aloud files in public/kokoro/{version}/ so the site serves them itself:
-// the speech engine (onnxruntime-web and the espeak-ng phonemizer) is copied from node_modules, and
-// the model, its tokenizer and the voices are downloaded from our own GitHub release
-// (`kokoro-voices-{version}`, copied unchanged from onnx-community/Kokoro-82M-v1.0-ONNX) and checked by sha256. Files already in place are kept, so it only
-// downloads once. Runs before `next dev` and `next build` (see package.json).
+// Puts the Supertonic read-aloud files in public/supertonic/{version}/ so the site serves them itself:
+// the speech engine (onnxruntime-web) is copied from node_modules, and the models, their settings and
+// the voices are downloaded from our own GitHub release (`supertonic-voices-{version}`, copied
+// unchanged from Supertone/supertonic-2) and checked by sha256. Files already in place are kept, so it
+// only downloads once. Runs before `next dev` and `next build` (see package.json).
 //
-//   node scripts/fetch-kokoro.mjs             fails if a file can't be downloaded
-//   node scripts/fetch-kokoro.mjs --optional  warns instead (for `npm run dev` offline)
+//   node scripts/fetch-supertonic.mjs             fails if a file can't be downloaded
+//   node scripts/fetch-supertonic.mjs --optional  warns instead (for `npm run dev` offline)
 import { createHash } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
-const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, "src/lib/kokoro-manifest.json"), "utf8"));
-const OUT = path.join(ROOT, "public/kokoro", manifest.version);
+const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, "src/lib/supertonic-manifest.json"), "utf8"));
+const OUT = path.join(ROOT, "public/supertonic", manifest.version);
 const optional = process.argv.includes("--optional");
 
 const sha256 = (file) => createHash("sha256").update(fs.readFileSync(file)).digest("hex");
@@ -38,9 +38,9 @@ async function download(source, hash) {
       const got = createHash("sha256").update(bytes).digest("hex");
       if (got !== hash) throw new Error(`sha256 ${got}, expected ${hash}`);
       fs.writeFileSync(dest, bytes);
-      console.log(`fetch-kokoro: downloaded ${name} (${(bytes.length / 1e6).toFixed(1)} MB)`);
+      console.log(`fetch-supertonic: downloaded ${name} (${(bytes.length / 1e6).toFixed(1)} MB)`);
     } catch (e) {
-      console.error(`fetch-kokoro: could not download ${name}: ${e instanceof Error ? e.message : e}`);
+      console.error(`fetch-supertonic: could not download ${name}: ${e instanceof Error ? e.message : e}`);
       failed = true;
       return undefined;
     }
@@ -54,7 +54,7 @@ for (const [name, from] of Object.entries(manifest.engine)) {
   list.engine[name] = fs.statSync(dest).size;
 }
 
-// The model and tokenizer are shared by every language, so they count as engine files.
+// The models and their settings are shared by every language, so they count as engine files.
 for (const [source, hash] of Object.entries(manifest.model)) {
   const got = await download(source, hash);
   if (got) list.engine[got[0]] = got[1];
@@ -72,10 +72,10 @@ if (failed) {
   // Without a complete list the app reports the voice as unavailable instead of half-downloading it.
   fs.rmSync(path.join(OUT, "files.json"), { force: true });
   if (optional) {
-    console.warn("fetch-kokoro: the natural voice won't be available until this succeeds");
+    console.warn("fetch-supertonic: the natural voice won't be available until this succeeds");
     process.exit(0);
   }
   process.exit(1);
 }
 fs.writeFileSync(path.join(OUT, "files.json"), JSON.stringify(list));
-console.log(`fetch-kokoro: public/kokoro/${manifest.version} is ready`);
+console.log(`fetch-supertonic: public/supertonic/${manifest.version} is ready`);
