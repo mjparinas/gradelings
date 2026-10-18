@@ -117,6 +117,8 @@ async function playByKeys(page, target, label, until = async () => false) {
       if (document.querySelector('[aria-label="Delete"]')) return { kind: "keypad" };
       if (document.querySelector('[data-testid="pool-item"]')) return { kind: "order" };
       if (document.querySelector('[data-testid="bin"]')) return { kind: "sort" };
+      if (document.querySelector('[data-testid="shade-part"]')) return { kind: "shade" };
+      if (document.querySelector('[data-testid="place-marker"]')) return { kind: "place" };
       if (buttons.some((b) => /^\+ Ten$/.test(b.textContent.trim()))) return { kind: "build" };
       if (buttons.some((b) => /nickel|dime|quarter|loonie|toonie|bill/i.test(b.textContent) && !b.getAttribute("aria-label"))) return { kind: "coins" };
       return { kind: "wait" };
@@ -155,6 +157,16 @@ async function playByKeys(page, target, label, until = async () => false) {
       await page.keyboard.press("Enter");
     } else if (state.kind === "sort") {
       ok = await tabToSelector(page, '[data-testid="bin"]', sortTry++);
+      await page.keyboard.press("Enter");
+    } else if (state.kind === "shade") {
+      ok = await tabToSelector(page, '[data-testid="shade-part"]');
+      await page.keyboard.press("Space");
+      ok = ok && (await tabTo(page, /Check/));
+      await page.keyboard.press("Enter");
+    } else if (state.kind === "place") {
+      ok = await tabToSelector(page, '[data-testid="place-marker"]');
+      await page.keyboard.press("ArrowRight");
+      ok = ok && (await tabTo(page, /Check/));
       await page.keyboard.press("Enter");
     } else if (state.kind === "build") {
       ok = await tabTo(page, /^\+ Ten$/);
