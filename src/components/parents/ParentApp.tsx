@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState, useSyncExternalStore, type ReactNode } from "react";
-import { APP_NAME } from "@/lib/brand";
+import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { finishGoogleSignIn, refreshAccount, type BillingInfo } from "@/lib/account";
 import { takeBillingPass } from "@/lib/billingReturn";
 import { hasPaidPlan, isPremium, trialDaysLeft } from "@/lib/plan";
@@ -80,7 +80,15 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
               ← Kids&apos; area
             </Link>
             <span className="text-lg font-bold">
-              {APP_NAME} <span className="font-semibold text-ink-soft">for parents</span>
+              <span data-testid="wordmark">
+                <span className="sr-only">{APP_NAME}</span>
+                {APP_NAME.split("").map((ch, i) => (
+                  <span key={i} aria-hidden="true" style={{ color: WORDMARK_COLOURS[i % WORDMARK_COLOURS.length] }}>
+                    {ch}
+                  </span>
+                ))}
+              </span>{" "}
+              <span className="font-semibold text-ink-soft">for parents</span>
             </span>
           </div>
           <div className="flex items-center gap-2">
