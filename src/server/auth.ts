@@ -205,7 +205,7 @@ export async function refundRateLimit(key: string): Promise<void> {
 
 // ---------- One-time tokens (password reset, email confirmation) ----------
 
-export type TokenKind = "reset" | "verify";
+export type TokenKind = "reset" | "verify" | "magic";
 
 export async function createAuthToken(parentId: string, kind: TokenKind, ttlMs: number): Promise<string> {
   const token = randomBytes(32).toString("base64url");

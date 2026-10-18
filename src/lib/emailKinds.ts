@@ -3,6 +3,7 @@
 export const EMAIL_KINDS = {
   verify: "Confirm email",
   reset: "Password reset",
+  magic: "Sign-in link",
   "new-sign-in": "New sign-in",
   "password-changed": "Password changed",
   "google-linked": "Google sign-in added",

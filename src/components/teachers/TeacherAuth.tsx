@@ -3,19 +3,21 @@
 import { useState, type FormEvent } from "react";
 import { APP_NAME } from "@/lib/brand";
 import { call } from "@/lib/classroom";
+import { useMagicLinkOn } from "@/lib/magicLink";
 import { GoogleButton, useGoogleError } from "../GoogleButton";
 
 const btn = "min-h-11 rounded-xl px-4 font-bold";
 
 /** Sign in, create an account or ask for a reset link. A first visit opens on "create", since that is what the button said. */
 export function AuthForm({ onDone, initialMode = "in" }: { onDone: () => void; initialMode?: "in" | "up" }) {
-  const [mode, setMode] = useState<"in" | "up" | "forgot">(initialMode);
+  const [mode, setMode] = useState<"in" | "up" | "forgot" | "link">(initialMode);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [err, setErr] = useState("");
   const [notice, setNotice] = useState("");
   const [busy, setBusy] = useState(false);
   const googleError = useGoogleError();
+  const magicOn = useMagicLinkOn();
 
   const submit = async (e: FormEvent) => {
     e.preventDefault();
@@ -23,7 +25,9 @@ export function AuthForm({ onDone, initialMode = "in" }: { onDone: () => void; i
     setErr("");
     setNotice("");
     try {
-      if (mode === "forgot") {
+      if (mode === "link") {
+        setNotice((await call<{ message: string }>("/api/auth/magic/", "POST", { email, to: "teachers" })).message);
+      } else if (mode === "forgot") {
         // Always answers the same way, so it never says whether an email has an account.
         setNotice((await call<{ message: string }>("/api/auth/forgot/", "POST", { email })).message);
       } else {
@@ -44,18 +48,18 @@ export function AuthForm({ onDone, initialMode = "in" }: { onDone: () => void; i
 
   return (
     <form onSubmit={submit} className="mx-auto mt-8 flex max-w-sm flex-col gap-3 rounded-2xl border border-line bg-white p-5">
-      <h1 className="text-2xl font-bold">{mode === "in" ? "Teacher sign in" : mode === "up" ? "Create a teacher account" : "Reset your password"}</h1>
-      {mode !== "forgot" && (
+      <h1 className="text-2xl font-bold">{mode === "in" ? "Teacher sign in" : mode === "up" ? "Create a teacher account" : mode === "link" ? "Sign in with a link" : "Reset your password"}</h1>
+      {mode !== "forgot" && mode !== "link" && (
         <p className="font-read text-ink-soft">
           {APP_NAME} for teachers is where you set up a class, assign practice by unit and see how each student is doing. Students sign in with a code you give them, with no email needed, and you only see first names and practice results.
         </p>
       )}
-      {mode !== "forgot" && <GoogleButton from="teachers" />}
+      {mode !== "forgot" && mode !== "link" && <GoogleButton from="teachers" />}
       <label className="flex flex-col text-sm font-semibold">
         Email
         <input className="mt-1 min-h-11 rounded-xl border border-line px-3" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
       </label>
-      {mode !== "forgot" && (
+      {mode !== "forgot" && mode !== "link" && (
         <label className="flex flex-col text-sm font-semibold">
           Password
           <input className="mt-1 min-h-11 rounded-xl border border-line px-3" type="password" autoComplete={mode === "in" ? "current-password" : "new-password"} minLength={8} value={password} onChange={(e) => setPassword(e.target.value)} required />
@@ -72,11 +76,16 @@ export function AuthForm({ onDone, initialMode = "in" }: { onDone: () => void; i
         </p>
       )}
       <button disabled={busy} className={`${btn} bg-[#4f8ef7] text-[#0f172a] disabled:opacity-50`}>
-        {mode === "in" ? "Sign in" : mode === "up" ? "Create account" : "Email me a reset link"}
+        {mode === "in" ? "Sign in" : mode === "up" ? "Create account" : mode === "link" ? "Email me a sign-in link" : "Email me a reset link"}
       </button>
       {mode === "in" && (
         <button type="button" className="text-sm font-semibold underline" onClick={() => switchTo("forgot")}>
           Forgot your password?
+        </button>
+      )}
+      {mode === "in" && magicOn && (
+        <button type="button" className="text-sm font-semibold underline" onClick={() => switchTo("link")}>
+          Email me a sign-in link instead
         </button>
       )}
       <button type="button" className="text-sm font-semibold underline" onClick={() => switchTo(mode === "in" ? "up" : "in")}>
