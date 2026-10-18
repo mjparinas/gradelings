@@ -23,7 +23,7 @@ describe("openDuringMaintenance", () => {
       "/manifest.webmanifest",
       "/icon-192.png",
       "/robots.txt",
-      "/kokoro/3/en.onnx",
+      "/supertonic/3/en.onnx",
     ])
       expect(openDuringMaintenance(p), p).toBe(true);
   });

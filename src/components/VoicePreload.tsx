@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { languagesOf } from "@/content/subjects";
-import { preloadKokoroVoices } from "@/lib/kokoro";
+import { preloadSupertonicVoices } from "@/lib/supertonic";
 import { useStore } from "@/lib/store";
 
 type Wanted = "" | "en" | "en,fr";
@@ -20,7 +20,7 @@ export function VoicePreload() {
   });
   useEffect(() => {
     if (!wanted) return;
-    const run = () => void preloadKokoroVoices(wanted === "en" ? ["en"] : ["en", "fr"]);
+    const run = () => void preloadSupertonicVoices(wanted === "en" ? ["en"] : ["en", "fr"]);
     // After the lessons have loaded, so the voice never slows the first question.
     if ("requestIdleCallback" in window) {
       const id = window.requestIdleCallback(run, { timeout: 10_000 });

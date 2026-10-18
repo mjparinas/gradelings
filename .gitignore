@@ -56,8 +56,8 @@ next-env.d.ts
 /android/*.aab
 /android/*.apk
 
-# Kokoro read-aloud files, written by scripts/fetch-kokoro.mjs
-/public/kokoro/
+# Supertonic read-aloud files, written by scripts/fetch-supertonic.mjs
+/public/supertonic/
 
 # iOS build output (docs/IOS.md). The Xcode project is generated from ios/project.yml.
 /ios/Gradelings.xcodeproj/

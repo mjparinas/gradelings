@@ -10,7 +10,7 @@
 //   1. a Grade 5 child's lessons work in a fresh tab with the server gone;
 //   2. adding a Kindergartener offline (never downloaded) shows the friendly screen;
 //   3. once the server is back, "Try again" loads Kindergarten;
-//   4. the Kokoro voice downloads by itself once a parent turns on "Read questions out loud", is on under
+//   4. the Supertonic voice downloads by itself once a parent turns on "Read questions out loud", is on under
 //      Account without a parent touching it, and reads a question aloud with the server gone;
 //   5. in maintenance mode, the saved kids' app keeps working while a new device gets the maintenance page.
 import { spawn } from "node:child_process";
@@ -57,7 +57,7 @@ try {
   await waitForServer();
   browser = await chromium.launch();
   const ctx = await browser.newContext({ viewport: { width: 1180, height: 820 }, reducedMotion: "reduce" });
-  // Counts audio clips that start playing, so we know the Kokoro voice really made sound.
+  // Counts audio clips that start playing, so we know the Supertonic voice really made sound.
   await ctx.addInitScript(() => {
     // The app skips the background voice download in automated browsers; this test is the one
     // place that checks it really happens.
@@ -82,21 +82,21 @@ try {
   await page.waitForTimeout(5000); // let the worker take control and keep the lessons
 
   // Grade 5 doesn't read aloud by default, so nothing downloads until a parent turns it on.
-  if (await page.evaluate(async () => (await caches.keys()).includes("grademap-kokoro") && (await (await caches.open("grademap-kokoro")).keys()).length > 0)) throw new Error("the voice downloaded with read-aloud off");
+  if (await page.evaluate(async () => (await caches.keys()).includes("grademap-supertonic") && (await (await caches.open("grademap-supertonic")).keys()).length > 0)) throw new Error("the voice downloaded with read-aloud off");
   await page.goto(BASE + "/parents/#/settings");
   await enterPin(page, true);
   await page.getByRole("switch", { name: /Read questions out loud/ }).first().click();
   // The list of files is saved last, once everything else is in.
-  const voiceSaved = () => page.evaluate(async () => (await (await caches.open("grademap-kokoro")).keys()).some((r) => r.url.endsWith("/files.json")));
+  const voiceSaved = () => page.evaluate(async () => (await (await caches.open("grademap-supertonic")).keys()).some((r) => r.url.endsWith("/files.json")));
   for (const t0 = Date.now(); !(await voiceSaved()); await sleep(1000)) if (Date.now() - t0 > 180000) throw new Error("the offline voice didn't download by itself");
 
   // Account shows it on and ready, without a parent doing anything.
   await page.goto(BASE + "/parents/#/account");
   await page.getByRole("button", { name: "Change voice" }).click();
-  const kokoro = page.getByTestId("kokoro-en");
-  await kokoro.getByRole("button", { name: "▶ Preview", exact: true }).waitFor({ timeout: 15000 });
-  if ((await kokoro.getByRole("switch", { name: /Use the offline voice/ }).getAttribute("aria-checked")) !== "true") throw new Error("the offline voice isn't on by default");
-  console.log("✓ online: the Kokoro voice downloads by itself and is on by default");
+  const supertonic = page.getByTestId("supertonic-en");
+  await supertonic.getByRole("button", { name: "▶ Preview", exact: true }).waitFor({ timeout: 15000 });
+  if ((await supertonic.getByRole("switch", { name: /Use the offline voice/ }).getAttribute("aria-checked")) !== "true") throw new Error("the offline voice isn't on by default");
+  console.log("✓ online: the Supertonic voice downloads by itself and is on by default");
 
   await stopServer();
   if (await fetch(BASE + "/").then(() => true, () => false)) throw new Error("server still answering");
@@ -114,7 +114,7 @@ try {
   await tab.waitForFunction((n) => window.__audioClips > n, clipsBefore, { timeout: 90000 });
   await tab.getByRole("button", { name: "Stop", exact: true }).first().click({ force: true });
   await tab.getByRole("dialog").getByRole("button", { name: "Stop", exact: true }).click({ force: true });
-  console.log("✓ offline: the Kokoro voice reads a question aloud");
+  console.log("✓ offline: the Supertonic voice reads a question aloud");
 
   await tab.goto(BASE + "/play/");
   await tab.getByText("Ava").first().click({ force: true }); // opens the player picker

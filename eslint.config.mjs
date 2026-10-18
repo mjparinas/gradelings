@@ -41,8 +41,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    // Kokoro's speech engine, copied from node_modules by scripts/fetch-kokoro.mjs.
-    "public/kokoro/**",
+    // Supertonic's speech engine, copied from node_modules by scripts/fetch-supertonic.mjs.
+    "public/supertonic/**",
   ]),
 ]);
 
