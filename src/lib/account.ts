@@ -92,6 +92,12 @@ export async function forgotPassword(email: string): Promise<string> {
   return message;
 }
 
+/** Asks for an emailed sign-in link. Always answers the same way, so it never says whether an address has an account. */
+export async function emailSignInLink(email: string, to: "parents" | "teachers" = "parents"): Promise<string> {
+  const { message } = await post<{ message: string }>("/api/auth/magic/", { email, to });
+  return message;
+}
+
 export async function resendVerification() {
   await post("/api/auth/resend-verification/");
 }

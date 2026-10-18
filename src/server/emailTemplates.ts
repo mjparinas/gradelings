@@ -124,6 +124,20 @@ export function resetEmail(to: string, origin: string, token: string): Email {
   });
 }
 
+/** `to` picks where the link lands once signed in: the parent area or the teacher area. */
+export function magicLinkEmail(to: string, origin: string, token: string, dest: "parents" | "teachers" = "parents"): Email {
+  return layout({
+    kind: "magic",
+    to,
+    origin,
+    subject: `Your ${APP_NAME} sign-in link`,
+    heading: "Sign in with one tap",
+    body: ["Use the button below to sign in. You won't need your password."],
+    button: { label: "Sign in", url: `${origin}/account/magic/?token=${encodeURIComponent(token)}${dest === "teachers" ? "&to=teachers" : ""}` },
+    footnote: "This link works for 15 minutes and can be used once. If you didn't ask for it, you can ignore this email; nobody can sign in without it.",
+  });
+}
+
 /** What a child did during the trial: first name and practice totals only. */
 export interface TrialChild {
   name: string;

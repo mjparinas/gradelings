@@ -15,7 +15,7 @@ export const MAINTENANCE_MESSAGE = "The site is under maintenance. Please try ag
 /** What sync shows a parent while the site is down for maintenance. */
 export const MAINTENANCE_SYNC_MESSAGE = "The site is under maintenance. Progress is saved on this device and uploads when it's back.";
 
-const OPEN_EXACT = new Set(["/", "/opengraph-image", "/api/auth/login/", "/api/auth/logout/", "/api/auth/me/", "/api/health/", "/api/billing/webhook/", "/api/email/webhook/", "/api/email/unsubscribe/"]);
+const OPEN_EXACT = new Set(["/", "/opengraph-image", "/api/auth/login/", "/api/auth/magic/", "/api/auth/magic/verify/", "/api/auth/logout/", "/api/auth/me/", "/api/health/", "/api/billing/webhook/", "/api/email/webhook/", "/api/email/unsubscribe/"]);
 const OPEN_PREFIX = ["/admin/", "/api/admin/", "/api/cron/", "/_next/"];
 
 /** Whether a path still works during maintenance. */

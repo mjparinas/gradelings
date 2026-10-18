@@ -87,12 +87,12 @@ const parentRow = async (address: string) => (await dbm.query<Record<string, unk
 
 describe("starting a Google sign-in", () => {
   it("only offers the button when Google is set up and switched on", async () => {
-    expect(await (await providers.GET(new Request("https://gradelings.test/api/auth/providers/"))).json()).toEqual({ google: true });
+    expect(await (await providers.GET(new Request("https://gradelings.test/api/auth/providers/"))).json()).toEqual({ google: true, magic: true });
     await flags.setFlag("google-sign-in", { enabled: false, rollout: 100 });
-    expect(await (await providers.GET(new Request("https://gradelings.test/api/auth/providers/"))).json()).toEqual({ google: false });
+    expect(await (await providers.GET(new Request("https://gradelings.test/api/auth/providers/"))).json()).toEqual({ google: false, magic: true });
     await flags.setFlag("google-sign-in", { enabled: true, rollout: 100 });
     delete process.env.GOOGLE_CLIENT_SECRET;
-    expect(await (await providers.GET(new Request("https://gradelings.test/api/auth/providers/"))).json()).toEqual({ google: false });
+    expect(await (await providers.GET(new Request("https://gradelings.test/api/auth/providers/"))).json()).toEqual({ google: false, magic: true });
   });
 
   it("sends the browser to Google with state, a nonce and a PKCE challenge, and keeps the secrets in an HttpOnly cookie", async () => {

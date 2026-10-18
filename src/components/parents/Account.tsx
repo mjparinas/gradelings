@@ -2,11 +2,12 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useState, useSyncExternalStore } from "react";
-import { changePassword, deleteAccount, forgotPassword, loadSecurity, signOutDevices, type DeviceSession, refreshAccount, resendVerification, signIn, signOut, signUp, type BillingInfo } from "@/lib/account";
+import { changePassword, deleteAccount, emailSignInLink, forgotPassword, loadSecurity, signOutDevices, type DeviceSession, refreshAccount, resendVerification, signIn, signOut, signUp, type BillingInfo } from "@/lib/account";
 import * as localdb from "@/lib/localdb";
 import { go, useRoute } from "@/lib/router";
 import { useLocale } from "@/lib/say";
 import { useStore } from "@/lib/store";
+import { useMagicLinkOn } from "@/lib/magicLink";
 import { savedReferralCode } from "@/lib/referral";
 import { syncNow } from "@/lib/sync";
 import { Dialog } from "../ui";
@@ -20,13 +21,14 @@ import { VoicePicker } from "./VoicePicker";
 const noSubscribe = () => () => {};
 
 function AuthForm({ onDone }: { onDone: () => void }) {
-  const [mode, setMode] = useState<"signup" | "signin" | "forgot">("signup");
+  const [mode, setMode] = useState<"signup" | "signin" | "forgot" | "link">("signup");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
   const googleError = useGoogleError();
+  const magicOn = useMagicLinkOn();
   // The server snapshot is false so the first render matches the static page.
   const invited = useSyncExternalStore(noSubscribe, () => savedReferralCode() !== null, () => false);
   const submit = async (e: React.FormEvent) => {
@@ -35,8 +37,8 @@ function AuthForm({ onDone }: { onDone: () => void }) {
     setError("");
     setNotice("");
     try {
-      if (mode === "forgot") {
-        setNotice(await forgotPassword(email));
+      if (mode === "forgot" || mode === "link") {
+        setNotice(await (mode === "forgot" ? forgotPassword : emailSignInLink)(email));
         return;
       }
       if (mode === "signup") await signUp(email, password);
@@ -57,12 +59,12 @@ function AuthForm({ onDone }: { onDone: () => void }) {
           </button>
         ))}
       </div>
-      {mode !== "forgot" && <GoogleButton from="parents" trialEndsAt={useStore.getState().family.trialEndsAt} referral={savedReferralCode()} />}
+      {mode !== "forgot" && mode !== "link" && <GoogleButton from="parents" trialEndsAt={useStore.getState().family.trialEndsAt} referral={savedReferralCode()} />}
       <label className="flex flex-col gap-1">
         <span className="font-semibold">Email</span>
         <input type="email" autoComplete="email" required value={email} onChange={(e) => setEmail(e.target.value)} className="rounded-xl border-2 border-line px-3 py-2 text-lg" />
       </label>
-      {mode !== "forgot" && (
+      {mode !== "forgot" && mode !== "link" && (
       <label className="flex flex-col gap-1">
         <span className="font-semibold">Password</span>
         <input
@@ -96,14 +98,19 @@ function AuthForm({ onDone }: { onDone: () => void }) {
         </p>
       )}
       <button type="submit" disabled={busy} className="rounded-xl bg-[#25b47e] px-4 py-3 text-lg font-bold text-[#0f172a] disabled:opacity-60">
-        {busy ? "One moment…" : mode === "signup" ? "Create account & sync" : mode === "forgot" ? "Email me a reset link" : "Sign in & sync"}
+        {busy ? "One moment…" : mode === "signup" ? "Create account & sync" : mode === "forgot" ? "Email me a reset link" : mode === "link" ? "Email me a sign-in link" : "Sign in & sync"}
       </button>
       {mode === "signin" && (
         <button type="button" className="self-start text-sm font-semibold underline" onClick={() => setMode("forgot")}>
           Forgot your password?
         </button>
       )}
-      {mode === "forgot" && (
+      {mode === "signin" && magicOn && (
+        <button type="button" className="self-start text-sm font-semibold underline" onClick={() => setMode("link")}>
+          Email me a sign-in link instead
+        </button>
+      )}
+      {(mode === "forgot" || mode === "link") && (
         <button type="button" className="self-start text-sm font-semibold underline" onClick={() => setMode("signin")}>
           Back to sign in
         </button>
