@@ -114,6 +114,8 @@ export async function signOut() {
 export interface BillingInfo {
   stripe: boolean;
   dev: boolean;
+  /** The family has a Stripe customer, so the billing portal can open. Missing from older servers. */
+  portal?: boolean;
 }
 
 export async function refreshAccount(): Promise<BillingInfo | null> {

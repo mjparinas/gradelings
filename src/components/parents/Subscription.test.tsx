@@ -307,6 +307,24 @@ describe("SubscriptionPage billing actions", () => {
     expect(goToStripe).not.toHaveBeenCalled();
   });
 
+  it("never leaves the Manage panel empty when billing details are missing", () => {
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account, subscription: { status: "active", interval: "month", currentPeriodEnd: Date.UTC(2027, 2, 3, 12) } };
+    const onBilling = vi.fn();
+    const { unmount } = render(<SubscriptionPage billing={null} onBilling={onBilling} />);
+    expect(screen.getByText(/couldn't load your billing details/)).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Try again" })).toBeInTheDocument();
+    unmount();
+    render(<SubscriptionPage billing={{ ...billing, stripe: false, dev: false }} onBilling={onBilling} />);
+    expect(screen.getByText(/Billing changes aren't available right now/)).toBeInTheDocument();
+  });
+
+  it("explains instead of failing when a subscriber has no Stripe customer to manage", () => {
+    state.family = { plan: "free", trialEndsAt: 0, updatedAt: 1, account, subscription: { status: "active", interval: "month", currentPeriodEnd: Date.UTC(2027, 2, 3, 12) } };
+    render(<SubscriptionPage billing={{ ...billing, stripe: true, portal: false }} onBilling={() => {}} />);
+    expect(screen.queryByRole("button", { name: "Manage billing, change plan or cancel" })).not.toBeInTheDocument();
+    expect(screen.getByText(/nothing to change here/)).toBeInTheDocument();
+  });
+
   it("says a cancelled trial ends without a charge, and a cancelled plan stays on until its end", () => {
     state.family = { plan: "premium", trialEndsAt: 0, updatedAt: 1, account, subscription: { status: "trialing", interval: "month", currentPeriodEnd: Date.UTC(2026, 10, 9, 12), cancelAt: Date.UTC(2026, 10, 9, 12) } };
     const { unmount } = render(<SubscriptionPage billing={billing} onBilling={() => {}} />);

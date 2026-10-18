@@ -65,7 +65,8 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
     return () => clearTimeout(again);
   }, [checkout, fromPortal, onBilling]);
 
-  const portalReady = subscribed && Boolean(billing?.stripe) && !inStoreApp;
+  const hasPortal = Boolean(billing?.stripe) && billing?.portal !== false;
+  const portalReady = subscribed && hasPortal && !inStoreApp;
   const [portal, setPortal] = useState<{ url: string; at: number } | null>(null);
   useEffect(() => {
     if (!portalReady) return;
@@ -183,7 +184,7 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
             </p>
           ) : subscribed ? (
             <div className="flex flex-col gap-3">
-              {billing?.stripe ? (
+              {hasPortal ? (
                 <button type="button" disabled={busy} aria-busy={busy} className="rounded-xl bg-[#253047] px-4 py-3 font-bold text-white disabled:opacity-80" onClick={manageBilling}>
                   {busy ? "Opening billing…" : "Manage billing, change plan or cancel"}
                 </button>
@@ -191,7 +192,18 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
                 <button type="button" disabled={busy} className="rounded-xl border border-line px-4 py-3 font-semibold" onClick={() => void run(() => devBilling("cancel"))}>
                   Cancel (development mode)
                 </button>
-              ) : null}
+              ) : billing?.stripe ? (
+                <p className="font-read">{`Your membership wasn't set up through card billing, so there is nothing to change here. Contact us if you need a hand.`}</p>
+              ) : billing ? (
+                <p className="font-read">{`Billing changes aren't available right now. Please try again later or contact us.`}</p>
+              ) : (
+                <>
+                  <p className="font-read">{`We couldn't load your billing details. Check your connection and try again.`}</p>
+                  <button type="button" className="rounded-xl border border-line px-4 py-3 font-semibold" onClick={() => void refreshAccount().then(onBilling)}>
+                    Try again
+                  </button>
+                </>
+              )}
             </div>
           ) : (
             <div className="flex flex-col gap-3">
