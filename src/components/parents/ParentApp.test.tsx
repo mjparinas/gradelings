@@ -42,7 +42,7 @@ vi.mock("./Subscription", () => ({
   },
 }));
 
-import { SITE_HOST } from "@/lib/brand";
+import { APP_NAME, SITE_HOST, WORDMARK_COLOURS } from "@/lib/brand";
 import { useStore } from "@/lib/store";
 import { ParentApp } from "./ParentApp";
 
@@ -154,6 +154,15 @@ describe("ParentApp", () => {
     });
     expect(screen.getByText("page:children")).toBeInTheDocument();
     expect(screen.queryByRole("button", { name: "Unlock" })).not.toBeInTheDocument();
+  });
+
+  it("colours the name in the header letter by letter, like the other pages", async () => {
+    const header = await open();
+    const letters = [...within(header).getByTestId("wordmark").querySelectorAll<HTMLElement>("span")];
+    expect(letters.map((el) => el.textContent).join("")).toBe(APP_NAME);
+    const swatch = document.createElement("i");
+    const css = (c: string) => ((swatch.style.color = c), swatch.style.color);
+    expect(letters.map((el) => el.style.color)).toEqual([...APP_NAME].map((_, i) => css(WORDMARK_COLOURS[i % WORDMARK_COLOURS.length])));
   });
 
   it("has six sections, with Placement and Report card as views under Reports", async () => {
