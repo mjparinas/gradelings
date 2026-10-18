@@ -407,7 +407,7 @@ Tests are duplicated across screen sizes only where layout can break:
 - **Ask a grown-up / show me another way** (`help` event, `src/lib/helpAsks.ts`): offered after a revealed answer in modes with retries; the parent Overview lists the units asked about for 14 days.
 - **Dyslexia-friendly font and page colour** (`dyslexiaFont`, `readingTint`): OpenDyslexic (OFL) is self-hosted and loaded only when switched on.
 - **Gift a plan** (`src/server/gifts.ts`, flag `gift-plans`, off by default): one-time Stripe payment for a year, fulfilled as a single-use access code emailed to the buyer; not shown in store apps; refunds are done in Stripe.
-- **Question kinds `shade` and `place`**: tap equal parts, or put a marker on a number line (pointer or keys). New units can use them; the fairness checks cover both.
+- **Question kinds `shade` and `place`**: tap equal parts, or put a marker on a number line (pointer or keys). New units can use them; the fairness checks cover both. They are used in Grade 3 and 4 fractions, Grade 2 tens and ones (a 0 to 100 line), Grade 5 equivalent fractions and decimals, Grade 6 mixed numbers and percents, and Grade 7 integers and fractions-decimals-percents; `questionKinds.test.ts` fails if a listed unit stops asking them. `place` is never used in Kindergarten and Grade 1.
 
 ### Arcade games
 - **Open from the start:** **Number Munchers** (math), **Word Ninja** (a Fruit Ninja-style game with Dolch sight words by grade), **Critter Catch** (science), **Bubble Pop** (phonics) and **Memory Match**.

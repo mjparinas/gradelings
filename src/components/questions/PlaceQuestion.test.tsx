@@ -23,6 +23,13 @@ describe("PlaceQuestion", () => {
     expect(placeTicks(q)).toBe(4);
   });
 
+  it("labels mixed numbers and negatives", () => {
+    const m = { fractionDenominator: 4 };
+    expect(placeLabel(m, 1.25)).toBe("1 1/4");
+    expect(placeLabel(m, 2)).toBe("2");
+    expect(placeLabel({}, -4)).toBe("\u22124");
+  });
+
   it("is moved with the keys and checked", async () => {
     const onAttempt = setup();
     expect(screen.getByRole("button", { name: "Check ✓" })).toBeDisabled();
