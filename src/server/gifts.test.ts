@@ -77,6 +77,19 @@ describe("a paid gift checkout", () => {
     expect((await giftCodes()).filter((c) => c.note === "Gift cs_g2")).toHaveLength(1);
   });
 
+  it("counts the gift in the revenue, once, and lowers it when Stripe refunds it", async () => {
+    const rows = () => dbm.query<{ id: string; family_id: string | null; amount: number; refunded: number; currency: string; interval: string }>("SELECT * FROM payments WHERE id = 'pi_g7'");
+    const s = paidGift("cs_g7", { payment_intent: "pi_g7", amount_total: giftCents("CAD") });
+    await webhook.POST(event("evt_g7a", s));
+    await webhook.POST(event("evt_g7b", s));
+    expect(await rows()).toEqual([expect.objectContaining({ family_id: null, amount: giftCents("CAD"), refunded: 0, currency: "CAD", interval: "gift" })]);
+    const payload = JSON.stringify({ id: "evt_g7r", created: Math.floor(Date.now() / 1000), type: "charge.refunded", data: { object: { payment_intent: "pi_g7", amount_refunded: giftCents("CAD") } } });
+    const t = Math.floor(Date.now() / 1000);
+    const sig = `t=${t},v1=${createHmac("sha256", "whsec_test").update(`${t}.${payload}`).digest("hex")}`;
+    await webhook.POST(new Request("http://localhost/api/billing/webhook/", { method: "POST", headers: { "stripe-signature": sig }, body: payload }));
+    expect((await rows())[0].refunded).toBe(giftCents("CAD"));
+  });
+
   it("gives a family a year of access when they redeem it, and only once", async () => {
     await webhook.POST(event("evt_g3", paidGift("cs_g3")));
     const code = (await giftCodes()).find((c) => c.note === "Gift cs_g3")!.code;

@@ -49,7 +49,7 @@ function table(columns: DetailColumn[], rows: DetailRow[], title?: string): Deta
 type Row = Record<string, unknown>;
 const rowsOf = (sql: string, args: (string | number)[] = []) => query<Row>(sql, args);
 
-const intervalText = (i: unknown) => (i === "year" ? "Yearly" : i === "month" ? "Monthly" : "—");
+const intervalText = (i: unknown) => (i === "year" ? "Yearly" : i === "month" ? "Monthly" : i === "gift" ? "Gift" : "—");
 const perMonth = (i: unknown, usd: boolean) => (i === "year" ? Math.round((usd ? YEARLY_CENTS_USD : YEARLY_CENTS) / 12) : usd ? MONTHLY_CENTS_USD : MONTHLY_CENTS);
 /** A US family pays in USD, as the dashboard decides it. */
 const usFamily = (r: Row) => countryOf(toCountryCode(r.country)).currency === "USD";
@@ -77,7 +77,7 @@ async function payments(from: number, to: number, title: string): Promise<Detail
       [col("Paid", "date"), col("Account", "account"), col("Plan"), col("Amount", money), col("Refunded", money), col("Fee (est.)", money)],
       rs.map((r) => ({
         familyId: (r.family_id as string | null) ?? undefined,
-        cells: [Number(r.paid_at), (r.email as string | null) ?? "Deleted account", intervalText(r.interval), Number(r.amount), Number(r.refunded), fee(Number(r.amount))],
+        cells: [Number(r.paid_at), (r.email as string | null) ?? (r.interval === "gift" ? "Gift buyer" : "Deleted account"), intervalText(r.interval), Number(r.amount), Number(r.refunded), fee(Number(r.amount))],
       })),
       heading,
     );

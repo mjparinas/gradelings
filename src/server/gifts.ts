@@ -1,7 +1,7 @@
 import "server-only";
 import { GIFT_CODE_VALID_DAYS, GIFT_DAYS, giftCents, type Currency } from "@/lib/plan";
 import { createCode, formatCode } from "./codes";
-import { query } from "./db";
+import { query, run } from "./db";
 import { sendEmail } from "./email";
 import { giftEmail } from "./emailTemplates";
 
@@ -22,6 +22,8 @@ interface CheckoutSession {
   metadata?: Record<string, string> | null;
   customer_details?: { email?: unknown } | null;
   customer_email?: unknown;
+  amount_total?: unknown;
+  payment_intent?: unknown;
 }
 
 /**
@@ -42,6 +44,22 @@ export interface GiftResult {
   emailed: boolean;
 }
 
+/**
+ * Counts the gift in the admin revenue: a payments row (interval "gift", no family) keyed by the payment intent,
+ * which is what `charge.refunded` names, so a refund in Stripe lowers it. A repeat only updates the amount.
+ */
+async function recordGiftPayment(session: CheckoutSession, now: number): Promise<void> {
+  const currency = toCurrency(session.currency);
+  const amount = Number(session.amount_total ?? session.amount_subtotal);
+  if (!currency || !(amount > 0)) return;
+  const id = typeof session.payment_intent === "string" && session.payment_intent ? session.payment_intent : String(session.id);
+  await run(
+    `INSERT INTO payments (id, family_id, amount, currency, interval, paid_at) VALUES (?, NULL, ?, ?, 'gift', ?)
+     ON CONFLICT (id) DO UPDATE SET amount = excluded.amount`,
+    [id, amount, currency, now],
+  );
+}
+
 /** Makes the gift's code (once per checkout, however many times Stripe repeats the event) and emails it. Throws when the email fails so Stripe retries. */
 export async function fulfilGift(session: CheckoutSession, origin: string, now = Date.now()): Promise<GiftResult> {
   const note = `Gift ${String(session.id)}`;
@@ -52,6 +70,7 @@ export async function fulfilGift(session: CheckoutSession, origin: string, now =
   }
   if (!made) throw new Error("Could not make a gift code.");
   const code: string = made;
+  await recordGiftPayment(session, now);
   const to = session.customer_details?.email ?? session.customer_email;
   if (typeof to !== "string" || !to.includes("@")) return { code, emailed: false };
   const expires = new Date(now + GIFT_CODE_VALID_DAYS * DAY).toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric" });

@@ -301,7 +301,7 @@ export function computeMetrics(input: MetricsInput): Metrics {
     // A family counts as paying in a month if a monthly payment landed in it, or a yearly one in the 12 months up to it.
     const payingIn = new Set(
       input.payments
-        .filter((p) => net(p) > 0 && (p.interval === "year" ? p.paidAt >= monthStart(from, -11) && p.paidAt < to : p.paidAt >= from && p.paidAt < to))
+        .filter((p) => p.interval !== "gift" && net(p) > 0 && (p.interval === "year" ? p.paidAt >= monthStart(from, -11) && p.paidAt < to : p.paidAt >= from && p.paidAt < to))
         .map((p, k) => p.familyId ?? `deleted-${k}`),
     ).size;
     // The current month only carries costs for the days gone so far, so profit compares like with like.
