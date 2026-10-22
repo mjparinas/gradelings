@@ -20,6 +20,7 @@ export const DETAIL_VIEWS = [
   "unconfirmed",
   "referrals",
   "customers-ever",
+  "ltv",
   "practising",
   "guests",
   "try-it-free",

@@ -164,6 +164,16 @@ function Money({ m, show, onDetail, reload }: { m: NonNullable<Parts["money"]>; 
             sub={`this month · ${moneyUsd(r.usd.mrr)} MRR from ${num(r.usd.renewing)} renewing of ${num(r.usd.paying)} paying · ${moneyUsd(r.usd.yearToDate)} in ${year}`}
           />
         )}
+        <Tile
+          onOpen={show("ltv")}
+          label="Customer lifetime value"
+          value={r.ltv.average === null ? "—" : money(r.ltv.average)}
+          sub={
+            r.ltv.average === null
+              ? "no paying customers yet"
+              : `paid so far, on average, by ${num(r.ltv.customers)} ${r.ltv.customers === 1 ? "customer" : "customers"} · top ${money(r.ltv.top)}${r.lifetimeValue === null ? "" : ` · expected ${money(r.lifetimeValue)} over their time`}${r.ltv.usd?.average == null ? "" : ` · ${moneyUsd(r.ltv.usd.average)} for US families`}`
+          }
+        />
         <Tile onOpen={show("cancelled")}
           label="Cancelled in 30 days"
           value={num(r.cancelled30)}

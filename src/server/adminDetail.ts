@@ -702,6 +702,77 @@ export async function detailFor(view: DetailView, now = Date.now()): Promise<Det
         ],
       };
     }
+    case "ltv": {
+      // Customer lifetime value so far: what each family that has paid has actually paid, after refunds. Same
+      // families and window as "Families who have paid"; CAD and USD stay apart.
+      const rows = await rowsOf(
+        `SELECT pm.family_id, MIN(pm.paid_at) AS first, MAX(pm.paid_at) AS last, COUNT(*) AS n,
+           SUM(CASE WHEN LOWER(pm.currency) = 'usd' THEN 0 ELSE MAX(pm.amount - pm.refunded, 0) END) AS total,
+           SUM(CASE WHEN LOWER(pm.currency) = 'usd' THEN MAX(pm.amount - pm.refunded, 0) ELSE 0 END) AS total_usd,
+           (SELECT p.email FROM parents p WHERE p.family_id = pm.family_id ORDER BY p.created_at LIMIT 1) AS email,
+           (SELECT f.plan FROM families f WHERE f.id = pm.family_id) AS plan,
+           (SELECT f.created_at FROM families f WHERE f.id = pm.family_id) AS signed_up,
+           (SELECT COUNT(*) FROM profiles pr WHERE pr.family_id = pm.family_id AND COALESCE(json_extract(pr.data, '$.deleted'), 0) = 0) AS children,
+           (SELECT MAX(e.t) FROM events e WHERE e.family_id = pm.family_id) AS last_practice
+         FROM payments pm WHERE pm.family_id IS NOT NULL AND pm.paid_at >= ? GROUP BY pm.family_id
+         HAVING SUM(CASE WHEN pm.amount > pm.refunded THEN 1 ELSE 0 END) > 0 ORDER BY total DESC, total_usd DESC`,
+        [Date.UTC(new Date(now).getUTCFullYear() - 2, 0, 1)],
+      );
+      const ca = rows.filter((r) => Number(r.total) > 0);
+      const caTotal = ca.reduce((s, r) => s + Number(r.total), 0);
+      const us = rows.filter((r) => Number(r.total_usd) > 0);
+      const usTotal = us.reduce((s, r) => s + Number(r.total_usd), 0);
+      return {
+        title: "Customer lifetime value",
+        intro:
+          "A customer is a family with a payment that wasn't refunded in full. Lifetime value is what they have paid so far, after refunds (gifts have no family, so they aren't here). Highest first; click an account for the full picture. Payments go back to the start of the year two years ago. US payments are in US dollars, apart.",
+        summary: [
+          { label: "Customers", value: rows.length, kind: "number" },
+          { label: "Average lifetime value", value: ca.length ? Math.round(caTotal / ca.length) : 0, kind: "money" },
+          { label: "Highest lifetime value", value: Math.max(0, ...ca.map((r) => Number(r.total))), kind: "money" },
+          { label: "Total collected", value: caTotal, kind: "money" },
+          ...(us.length
+            ? [
+                { label: "US average lifetime value", value: Math.round(usTotal / us.length), kind: "money-usd" as const },
+                { label: "US total collected", value: usTotal, kind: "money-usd" as const },
+              ]
+            : []),
+        ],
+        tables: [
+          table(
+            [
+              col("Account", "account"),
+              col("Lifetime value", "money"),
+              ...(us.length ? [col("Lifetime value (US)", "money-usd")] : []),
+              col("Payments", "number"),
+              col("Months as customer", "number"),
+              col("First payment", "date"),
+              col("Latest payment", "date"),
+              col("Children", "number"),
+              col("Signed up", "date"),
+              col("Last practice", "date"),
+              col("Paying now", "yesno"),
+            ],
+            rows.map((r) => ({
+              familyId: String(r.family_id),
+              cells: [
+                (r.email as string | null) ?? "—",
+                Number(r.total),
+                ...(us.length ? [Number(r.total_usd)] : []),
+                Number(r.n),
+                Math.max(1, Math.round((Math.max(Number(r.last), r.plan === "premium" ? now : 0) - Number(r.first)) / (30.44 * DAY))),
+                Number(r.first),
+                Number(r.last),
+                Number(r.children),
+                n(r.signed_up),
+                n(r.last_practice),
+                r.plan === "premium",
+              ],
+            })),
+          ),
+        ],
+      };
+    }
     case "practising": {
       // Families count over the last 30 × 24 hours, like the tiles; questions, minutes and days count over the
       // 30 calendar days (UTC) that "Questions answered, 30 days" and its chart use, which that window holds.

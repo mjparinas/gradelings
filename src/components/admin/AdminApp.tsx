@@ -205,12 +205,15 @@ interface FamilyDetail {
   activity: { events: number; lastActive: number | null };
   sessions: { active: number; lastSignIn: number | null };
   classes: number;
+  value: { cad: number; usd: number; payments: number; firstPaidAt: number; lastPaidAt: number } | null;
   redemptions: { code: string; kind: string | null; redeemedAt: number }[];
   overrides: Record<string, boolean>;
   experiments: Record<string, string>;
   sees: { premium: boolean; paid: boolean; trialDaysLeft: number; flags: string[] };
   notes: { id: number; author: string; body: string; createdAt: number }[];
 }
+
+const cents = (n: number, currency: "CAD" | "USD") => `${(n / 100).toLocaleString("en-CA", { style: "currency", currency })}${currency === "USD" ? " USD" : ""}`;
 
 type Role = "admin" | "support";
 
@@ -359,6 +362,14 @@ function UserDetail({ id, flags, role, email, onBack }: { id: string; flags: Fla
           <div><dt className="inline font-semibold">Last practice: </dt><dd className="inline">{day(d.activity.lastActive)} ({d.activity.events.toLocaleString("en-CA")} events)</dd></div>
           <div><dt className="inline font-semibold">Last sign-in: </dt><dd className="inline">{d.parents[0]?.lastLogin ? formatAgo(d.parents[0].lastLogin) : "—"}</dd></div>
           <div><dt className="inline font-semibold">Signed in on: </dt><dd className="inline">{d.sessions.active} {d.sessions.active === 1 ? "device" : "devices"}</dd></div>
+          <div>
+            <dt className="inline font-semibold">Lifetime value: </dt>
+            <dd className="inline">
+              {d.value
+                ? `${[d.value.cad ? cents(d.value.cad, "CAD") : "", d.value.usd ? cents(d.value.usd, "USD") : ""].filter(Boolean).join(" + ")} from ${d.value.payments} ${d.value.payments === 1 ? "payment" : "payments"}, first on ${day(d.value.firstPaidAt)}, latest on ${day(d.value.lastPaidAt)}`
+                : "Has not paid"}
+            </dd>
+          </div>
           <div><dt className="inline font-semibold">Open classes: </dt><dd className="inline">{d.classes}</dd></div>
           <div><dt className="inline font-semibold">Family id: </dt><dd className="inline break-all font-mono text-sm">{f.id}</dd></div>
         </dl>
