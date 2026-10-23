@@ -26,7 +26,7 @@ export function GoalChip({ minutes, goal }: { minutes: number; goal: number }) {
   if (settings?.lockGoal) return label;
   return (
     <>
-      <button type="button" className="inline-flex min-h-12 items-center gap-1 rounded-full px-2 text-sm font-semibold whitespace-nowrap text-ink-soft" aria-label={`Today's goal is ${goal} minutes. Change it`} onClick={() => setOpen(true)}>
+      <button type="button" className="inline-flex min-h-12 items-center gap-1 rounded-full px-2 text-sm font-semibold whitespace-nowrap text-ink-soft" aria-label={`${minutes}/${goal} min. Today's goal is ${goal} minutes. Change it`} onClick={() => setOpen(true)}>
         ⏱ {minutes}/{goal} min <span aria-hidden>✏️</span>
       </button>
       {open && <GoalDialog onClose={() => setOpen(false)} />}
