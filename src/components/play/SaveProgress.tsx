@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { getFramework } from "@/content/frameworks";
 import { signUpForReports } from "@/lib/account";
+import { countryOf } from "@/lib/country";
 import { dayKey } from "@/lib/model";
 import { useFlag } from "@/lib/remoteFlags";
 import { askToSaveProgress } from "@/lib/saveNudge";
@@ -27,10 +29,14 @@ export function SaveProgress() {
   const [sent, setSent] = useState("");
 
   if (sent) {
+    const name = profile?.name ?? "Your child";
+    // A US child's progress waits on the server until a parent ticks the privacy notice (COPPA), so say so.
+    const consent = profile && countryOf(getFramework(profile.framework)).parentalConsent;
     return (
       <section className="w-full rounded-2xl border-2 border-dashed border-line bg-white/70 p-4 text-left" aria-label="For grown-ups" role="status">
         <p className="font-read text-base">
-          <b>📬 Done!</b> {profile?.name ?? "Your child"}&apos;s progress is backed up. Check <b>{sent}</b> for a link to confirm, and the weekly report will start.
+          <b>📬 Done!</b> Check <b>{sent}</b> for a link to confirm, and the weekly report will start.{" "}
+          {consent ? `To back up ${name}'s progress, open the Parent area and agree to the privacy notice.` : `${name}'s progress is backed up.`}
         </p>
       </section>
     );

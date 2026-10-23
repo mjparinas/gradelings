@@ -7,12 +7,13 @@ const h = vi.hoisted(() => ({
   family: {} as Record<string, unknown>,
   sessions: 1,
   flag: true,
+  framework: "ca-bc",
   signUp: vi.fn(),
 }));
 
 vi.mock("@/lib/store", () => ({
   useStore: (pick: (s: { family: unknown }) => unknown) => pick({ family: h.family }),
-  useActiveProfile: () => ({ id: "p1", name: "Ava" }),
+  useActiveProfile: () => ({ id: "p1", name: "Ava", framework: h.framework }),
   useDerived: () => ({ totals: { sessions: h.sessions }, days: { "2026-10-12": { sessions: h.sessions } } }),
 }));
 vi.mock("@/lib/useNow", () => ({ useNow: () => NOW }));
@@ -31,6 +32,7 @@ beforeEach(() => {
   h.family = { plan: "trial", trialEndsAt: NOW + 20 * 86_400_000, updatedAt: 1 };
   h.sessions = 1;
   h.flag = true;
+  h.framework = "ca-bc";
   h.signUp.mockReset().mockResolvedValue(undefined);
 });
 
@@ -48,6 +50,15 @@ describe("SaveProgress", () => {
     send(" parent@example.com ");
     await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("Check parent@example.com for a link to confirm"));
     expect(h.signUp).toHaveBeenCalledWith("parent@example.com");
+    expect(screen.getByRole("status")).toHaveTextContent("Ava's progress is backed up.");
+  });
+
+  it("tells a US family the progress waits for the privacy notice", async () => {
+    h.framework = "us-wa";
+    render(<SaveProgress />);
+    send("parent@example.com");
+    await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("To back up Ava's progress, open the Parent area and agree to the privacy notice."));
+    expect(screen.getByRole("status")).not.toHaveTextContent("is backed up");
   });
 
   it("points to sign-in when the email already has an account, and shows other errors", async () => {
