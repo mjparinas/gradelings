@@ -45,13 +45,70 @@ export function filesFor(list: SupertonicFileList, language: SpeechLanguage): [u
 
 const MAX_CHUNK = 300;
 
+// Supertonic has no sound for many maths and science symbols: it skips them or mumbles ("2 × 4"
+// came out as "two or four"), where device voices say them. So they are put into words first.
+type Words = Record<SpeechLanguage, string>;
+const SYMBOLS: [RegExp, Words][] = [
+  [/≠/g, { en: " does not equal ", fr: " n'égale pas " }],
+  [/≤/g, { en: " is less than or equal to ", fr: " est plus petit ou égal à " }],
+  [/≥/g, { en: " is greater than or equal to ", fr: " est plus grand ou égal à " }],
+  [/≈/g, { en: " is about ", fr: " environ " }],
+  [/≅/g, { en: " is congruent to ", fr: " est isométrique à " }],
+  [/=/g, { en: " equals ", fr: " égale " }],
+  [/</g, { en: " is less than ", fr: " est plus petit que " }],
+  [/>/g, { en: " is greater than ", fr: " est plus grand que " }],
+  [/[×✕]/g, { en: " times ", fr: " fois " }],
+  [/÷/g, { en: " divided by ", fr: " divisé par " }],
+  [/√/g, { en: " the square root of ", fr: " la racine carrée de " }],
+  [/∛/g, { en: " the cube root of ", fr: " la racine cubique de " }],
+  [/π/g, { en: " pi ", fr: " pi " }],
+  [/[µμ]/g, { en: " mu ", fr: " mu " }],
+  [/Ω/g, { en: " ohms ", fr: " ohms " }],
+  [/°\s*C\b/g, { en: " degrees Celsius", fr: " degrés Celsius" }],
+  [/°\s*F\b/g, { en: " degrees Fahrenheit", fr: " degrés Fahrenheit" }],
+  [/°/g, { en: " degrees", fr: " degrés" }],
+  [/%/g, { en: " percent", fr: " pour cent" }],
+  [/\^/g, { en: " to the power of ", fr: " exposant " }],
+  [/′/g, { en: " prime ", fr: " prime " }],
+  [/△/g, { en: " triangle ", fr: " triangle " }],
+  [/[□■]/g, { en: " blank ", fr: " mot manquant " }],
+];
+const FRACTIONS: Record<string, [number, number]> = { "½": [1, 2], "⅓": [1, 3], "⅔": [2, 3], "¼": [1, 4], "¾": [3, 4], "⅕": [1, 5], "⅛": [1, 8] };
+const DENOMINATORS: Record<SpeechLanguage, [one: string, many: string][]> = {
+  en: [["", ""], ["", ""], ["half", "halves"], ["third", "thirds"], ["fourth", "fourths"], ["fifth", "fifths"], ["sixth", "sixths"], ["seventh", "sevenths"], ["eighth", "eighths"], ["ninth", "ninths"], ["tenth", "tenths"], ["eleventh", "elevenths"], ["twelfth", "twelfths"]],
+  fr: [["", ""], ["", ""], ["demi", "demis"], ["tiers", "tiers"], ["quart", "quarts"], ["cinquième", "cinquièmes"], ["sixième", "sixièmes"], ["septième", "septièmes"], ["huitième", "huitièmes"], ["neuvième", "neuvièmes"], ["dixième", "dixièmes"], ["onzième", "onzièmes"], ["douzième", "douzièmes"]],
+};
+
+/** A fraction in words: "3 fourths", "1 half", and "7 over 15" past twelfths. */
+function fraction(top: number, bottom: number, language: SpeechLanguage): string {
+  const name = DENOMINATORS[language][bottom];
+  if (!name?.[0]) return ` ${top} ${language === "fr" ? "sur" : "over"} ${bottom} `;
+  return ` ${top} ${top === 1 ? name[0] : name[1]} `;
+}
+
+/** Puts the symbols Supertonic can't say into words (only for Supertonic: device voices say them already). */
+export function supertonicText(text: string, language: SpeechLanguage): string {
+  // Absolute value bars, "|−3|".
+  let t = text.replace(/\|([^|]{1,12})\|/g, language === "fr" ? " la valeur absolue de $1 " : " the absolute value of $1 ");
+  t = t.replace(/(\d+)\s*\/\s*(\d+)/g, (_, a: string, b: string) => fraction(Number(a), Number(b), language));
+  t = t.replace(/(\d*)([½⅓⅔¼¾⅕⅛])/g, (_, whole: string, f: string) => {
+    const [a, b] = FRACTIONS[f];
+    return `${whole ? ` ${whole} ${language === "fr" ? "et" : "and"}` : ""}${fraction(a, b, language)}`;
+  });
+  for (const [re, words] of SYMBOLS) t = t.replace(re, words[language]);
+  // Counting dots aren't read; arrows and bullets between items are a short pause.
+  t = t.replace(/[●○◦]+/g, " ").replace(/\s*[→←⟶➜•·]+\s*/g, ", ");
+  return t.replace(/[ \t]+/g, " ").replace(/ ([,.!?;:])/g, "$1").replace(/([.!?;:,]),+/g, "$1").replace(/^[,\s]+|[,\s]+$/g, "").trim();
+}
+
 /**
  * Splits text into sentences so the first one can play while the rest are still being made.
+ * A full stop ends a sentence only before a space or the end, so 3.14 and $4.50 stay whole.
  * Very long sentences are split between words.
  */
 export function splitSentences(text: string): string[] {
   const out: string[] = [];
-  for (const sentence of text.match(/[^.!?…\n]+(?:[.!?…]+|\n|$)/g) ?? []) {
+  for (const sentence of text.match(/[^\n]*?(?:[.!?…]+(?=\s|$)|$)/gm) ?? []) {
     let piece = "";
     for (const word of sentence.trim().split(/\s+/)) {
       if (piece && piece.length + word.length + 1 > MAX_CHUNK) {
@@ -355,7 +412,7 @@ export function speakSupertonic(text: string, language: SpeechLanguage, rate = 1
   audio ??= new AudioContext();
   if (audio.state === "suspended") void audio.resume();
   const ac = audio;
-  const sentences = splitSentences(text);
+  const sentences = splitSentences(supertonicText(text, language));
   if (sentences.length === 0) return Promise.resolve();
   const id = ++nextId;
   const w = getWorker();
