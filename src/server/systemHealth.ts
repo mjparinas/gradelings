@@ -672,6 +672,20 @@ export function settingsCheck(): HealthCheck {
     const set = s.names.some((n) => env(n));
     return { label: s.label, value: set ? `Set (${s.names.find((n) => env(n))})` : `Missing: ${s.names.join(" or ")}. ${s.what}`, state: set ? "ok" : s.need === "required" ? "down" : s.need === "recommended" ? "warn" : undefined };
   });
+  // Links in emails and shared pages use this address, so a set-but-wrong value is as bad as a missing one.
+  const site = env("NEXT_PUBLIC_SITE_URL");
+  if (site) {
+    let problem = "";
+    try {
+      const u = new URL(site);
+      if (u.protocol !== "https:") problem = "It should start with https://.";
+      else if (/^(localhost|127\.|0\.0\.0\.0)/.test(u.hostname)) problem = "It points at this computer, not the public site.";
+      else if (u.pathname !== "/" || u.search) problem = "It should be just the address, with no path.";
+      rows.push({ label: "Site address format", value: problem ? `${problem} Now: ${u.origin}${u.pathname}` : `Public address: ${u.host}`, state: problem ? "warn" : "ok" });
+    } catch {
+      rows.push({ label: "Site address format", value: "It isn't a web address. Use https://www.gradelings.com.", state: "warn" });
+    }
+  }
   const forbidden = NEVER_IN_PRODUCTION.filter((n) => env(n));
   for (const n of forbidden) rows.unshift({ label: n, value: production ? "Set in production: turn it off" : "Set (fine outside production)", state: production ? "down" : "warn" });
   const missing = SETTINGS.filter((s) => s.need === "required" && !s.names.some((n) => env(n)));

@@ -18,6 +18,7 @@ import { gradeLabel } from "@/lib/gradeLabel";
 import { levelInfo } from "@/lib/proficiency";
 import { go, useRoute } from "@/lib/router";
 import { sayFor } from "@/lib/say";
+import { FeedbackLink } from "@/components/FeedbackLink";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
 import { AccountPage } from "./AccountPage";
 import { rememberTeacher } from "@/lib/teacherHint";
@@ -534,8 +535,9 @@ function EditStudent({ cls, student, onClose, onSave }: { cls: ClassDetail["clas
 }
 
 /** Add students by first name, share each one's login code, and print the cards. */
-function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChange: ChangeFn; onBulk: (calls: { url: string; method: string; body?: unknown }[], success?: string) => Promise<boolean>; onPrint: (ids?: string[]) => void }) {
+function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChange: ChangeFn; onBulk: (calls: { url: string; method: string; body?: unknown }[], success?: string) => Promise<boolean>; onPrint: (ids?: string[], large?: boolean) => void }) {
   const [names, setNames] = useState("");
+  const [largePrint, setLargePrint] = useState(false);
   const [busy, setBusy] = useState(false);
   const [removing, setRemoving] = useState<RosterEntry | null>(null);
   const [upgrading, setUpgrading] = useState(false);
@@ -565,7 +567,7 @@ function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChan
           {chosen.length > 0 && (
             <>
               <span className="text-sm text-ink-soft" role="status">{chosen.length} selected</span>
-              <button type="button" className="min-h-11 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => onPrint(chosen)}>
+              <button type="button" className="min-h-11 rounded-xl border border-line px-3 text-sm font-semibold" onClick={() => onPrint(chosen, largePrint)}>
                 Print cards for selected
               </button>
               <button
@@ -652,9 +654,15 @@ function Roster({ data, onChange, onBulk, onPrint }: { data: ClassDetail; onChan
             Add students
           </button>
           {roster.length > 0 && (
-            <button type="button" className={`${btn} border border-line`} onClick={() => onPrint()}>
-              Print login cards
-            </button>
+            <>
+              <button type="button" className={`${btn} border border-line`} onClick={() => onPrint(undefined, largePrint)}>
+                Print login cards
+              </button>
+              <label className="flex min-h-11 items-center gap-2 text-sm font-semibold">
+                <input type="checkbox" className="h-5 w-5" checked={largePrint} onChange={(e) => setLargePrint(e.target.checked)} />
+                Larger print (fewer cards per page)
+              </label>
+            </>
           )}
         </div>
       </form>
@@ -919,8 +927,11 @@ function SendHome({ cls }: { cls: ClassDetail["class"] }) {
   );
 }
 
+/** A class summary with more assigned units than this has too many columns for a portrait page, so it prints sideways. */
+const WIDE_SUMMARY_UNITS = 4;
+
 /** What prints: a login card for each student, or a one-page class summary. Hidden on screen. */
-function PrintSheet({ data, label, mode, only }: { data: ClassDetail; label: (key: string) => string; mode: "cards" | "summary"; only?: string[] }) {
+function PrintSheet({ data, label, mode, only, large }: { data: ClassDetail; label: (key: string) => string; mode: "cards" | "summary"; only?: string[]; large?: boolean }) {
   const { class: cls, roster, students, assignments } = data;
   const byProfile = new Map(students.map((s) => [s.profileId, s]));
   const levelLabel = (level: number) => (level < 0 ? "Not started" : levelInfo(cls.framework, cls.grade, level)?.label ?? "");
@@ -928,28 +939,28 @@ function PrintSheet({ data, label, mode, only }: { data: ClassDetail; label: (ke
   const insights = classInsights(students, assignments, label, now);
   if (mode === "cards") {
     return (
-      <div className="hidden print:grid print:grid-cols-2 print:gap-3">
+      <div className={`hidden print:grid print:gap-3 ${large ? "print:grid-cols-1" : "print:grid-cols-2"}`}>
         {roster.filter((r) => !only || only.includes(r.id)).map((r) => (
-          <div key={r.id} className="flex break-inside-avoid items-start justify-between gap-3 rounded-xl border-2 border-dashed border-black p-4">
+          <div key={r.id} className={`flex break-inside-avoid items-start justify-between gap-3 rounded-xl border-2 border-dashed border-black p-4 ${large ? "text-2xl" : ""}`}>
             <div>
-              <p className="text-lg font-bold">{byProfile.get(r.profileId)?.name}</p>
+              <p className={`font-bold ${large ? "text-4xl" : "text-lg"}`}>{byProfile.get(r.profileId)?.name}</p>
               <p>
                 Go to <b>{typeof window === "undefined" ? "" : window.location.host}/play</b> and tap “My teacher gave me a code”, or scan the square.
               </p>
               {!isOneCode(r.loginCode) && (
                 <p className="mt-2">
-                  Class code: <b className="font-mono text-xl tracking-widest">{cls.joinCode}</b>
+                  Class code: <b className={`font-mono tracking-widest ${large ? "text-4xl" : "text-xl"}`}>{cls.joinCode}</b>
                 </p>
               )}
               <p className={isOneCode(r.loginCode) ? "mt-2" : undefined}>
-                My code: <b className="font-mono text-xl tracking-widest">{showLoginCode(r.loginCode)}</b>
+                My code: <b className={`font-mono tracking-widest ${large ? "text-4xl" : "text-xl"}`}>{showLoginCode(r.loginCode)}</b>
               </p>
             </div>
             {typeof window !== "undefined" && (
               <QrCode
                 text={classSignInHref(isOneCode(r.loginCode) ? { studentCode: r.loginCode } : { classCode: cls.joinCode, studentCode: r.loginCode }, window.location.origin)}
                 label={`Sign-in code for ${byProfile.get(r.profileId)?.name ?? "this student"}`}
-                className="size-28 shrink-0"
+                className={`shrink-0 ${large ? "size-40" : "size-28"}`}
               />
             )}
           </div>
@@ -958,7 +969,7 @@ function PrintSheet({ data, label, mode, only }: { data: ClassDetail; label: (ke
     );
   }
   return (
-    <div className="hidden print:block">
+    <div className={`hidden print:block ${assignments.length > WIDE_SUMMARY_UNITS ? "print-landscape" : ""}`}>
       <h1 className="text-2xl font-bold">
         {cls.name} · {classGradeText(cls)} · {getFramework(cls.framework).curriculumName}
       </h1>
@@ -976,7 +987,7 @@ function PrintSheet({ data, label, mode, only }: { data: ClassDetail; label: (ke
         </thead>
         <tbody>
           {students.map((s) => (
-            <tr key={s.profileId}>
+            <tr key={s.profileId} className="break-inside-avoid">
               <th scope="row" className="border border-black p-1">{s.name}</th>
               {s.units.map((u) => (
                 <td key={u.key} className="border border-black p-1">
@@ -1192,6 +1203,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
   }
   const [printMode, setPrintMode] = useState<"cards" | "summary" | null>(null);
   const [printOnly, setPrintOnly] = useState<string[] | undefined>();
+  const [printLarge, setPrintLarge] = useState(false);
   const heading = useRef<HTMLHeadingElement>(null);
   const openedTab = useRef(tab);
   const className = data?.class.name;
@@ -1342,7 +1354,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
 
   return (
     <>
-      {printMode && <PrintSheet data={data} label={label} mode={printMode} only={printOnly} />}
+      {printMode && <PrintSheet data={data} label={label} mode={printMode} only={printOnly} large={printLarge} />}
       <div className="print:hidden">
       <h1 ref={heading} tabIndex={-1} className="text-3xl font-bold outline-none">{cls.name}</h1>
       <p className="font-read text-ink-soft">
@@ -1564,8 +1576,9 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
             data={data}
             onChange={change}
             onBulk={bulk}
-            onPrint={(ids) => {
+            onPrint={(ids, large) => {
               setPrintOnly(ids);
+              setPrintLarge(Boolean(large));
               setPrintMode("cards");
             }}
           />
@@ -1769,6 +1782,7 @@ export function TeacherApp() {
           <ClassList account={account} onOpen={(id) => go(`/class/${encodeURIComponent(id)}`)} />
         )}
       </main>
+      {signedIn && <FeedbackLink audience="teacher" signedIn />}
     </div>
   );
 }

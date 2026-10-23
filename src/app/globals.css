@@ -498,3 +498,11 @@ main[tabindex="-1"]:focus {
     border: 2px solid ButtonText;
   }
 }
+
+/* A class summary with many units prints sideways. Browsers without named pages print it upright, which still works. */
+@page summary-wide {
+  size: landscape;
+}
+.print-landscape {
+  page: summary-wide;
+}

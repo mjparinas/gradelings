@@ -90,6 +90,20 @@ const SCHEMA = [
     reason TEXT NOT NULL,
     created_at INTEGER NOT NULL
   )`,
+  // "How's Gradelings?": a grown-up's rating and a line of feedback. No child data; family_id is null when no one was signed in.
+  `CREATE TABLE IF NOT EXISTS app_feedback (
+    id TEXT PRIMARY KEY,
+    family_id TEXT,
+    parent_id TEXT,
+    audience TEXT NOT NULL,
+    rating INTEGER,
+    topic TEXT,
+    comment TEXT NOT NULL DEFAULT '',
+    can_reply INTEGER NOT NULL DEFAULT 0,
+    created_at INTEGER NOT NULL,
+    handled_at INTEGER
+  )`,
+  `CREATE INDEX IF NOT EXISTS app_feedback_created ON app_feedback (created_at)`,
   // Classroom mode. A teacher is an ordinary account; a class never stores anything about a child
   // beyond the link a parent chose to make with the join code.
   `CREATE TABLE IF NOT EXISTS classes (

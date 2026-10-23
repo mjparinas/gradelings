@@ -198,6 +198,14 @@ describe("live questions", () => {
     expect((await swap()).status).toBe(409);
   });
 
+  it("doesn't repeat a question from the same unit when five are asked in a row (an exit ticket)", async () => {
+    const { teacher, cls } = await classWithChild("ticket");
+    const post = async () => (await (await teacherLive.POST(req("/api/classes/live/", "POST", { classId: cls.id, unitKey: UNIT }, teacher))).json()).live;
+    const prompts: string[] = [];
+    for (let i = 0; i < 5; i++) prompts.push((await post()).question.prompt);
+    expect(new Set(prompts).size).toBe(5);
+  });
+
   it("works for class student accounts, stops when the flag is off and is deleted with the class", async () => {
     const teacher = await account("live2-teacher@example.com");
     const { class: cls } = await (await classes.POST(req("/api/classes/", "POST", { name: "Room 8", grade: "2" }, teacher))).json();

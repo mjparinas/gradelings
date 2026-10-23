@@ -119,13 +119,18 @@ check(
   "the student's home screen marks the homework done",
 );
 
-// The teacher tries the assigned unit as a student: it plays, and nothing is recorded.
-{
+// The teacher in a browser of their own, signed in with the session the API calls above made.
+async function teacherBrowser() {
   const teacherContext = await browser.newContext({ viewport: { width: 1100, height: 900 } });
   const [name, value] = cookie.split("=");
   // The production cookie carries the __Host- prefix: Secure, no Domain, path "/". Chromium refuses that when set from a plain http url, so give the host and path (localhost counts as secure).
   await teacherContext.addCookies([{ name, value, domain: new URL(BASE).hostname, path: "/", httpOnly: true, ...(name.startsWith("__Host-") ? { secure: true } : {}) }]);
-  const teacherPage = await teacherContext.newPage();
+  return { teacherContext, teacherPage: await teacherContext.newPage() };
+}
+
+// The teacher tries the assigned unit as a student: it plays, and nothing is recorded.
+{
+  const { teacherContext, teacherPage } = await teacherBrowser();
   const before = (await api(`/api/classes/?id=${cls.id}`)).data.students?.[0]?.units?.[0]?.attempts ?? 0;
   await teacherPage.goto(`${BASE}/teachers/#/class/${encodeURIComponent(cls.id)}/homework`);
   await teacherPage.getByRole("button", { name: /as a student/ }).first().click({ timeout: 60000 });
@@ -141,10 +146,12 @@ check(
 
 // A live question: the teacher asks, the student taps, the teacher sees it.
 let asked;
+let askedKey = "";
 for (const key of [unit, "3/math/fractions", "3/math/place-value", "3/language/rhymes"]) {
   const res = await api("/api/classes/live/", "POST", { classId: cls.id, unitKey: key });
   if (res.status === 200) {
     asked = res.data.live;
+    askedKey = key;
     break;
   }
 }
@@ -161,6 +168,66 @@ if (asked) {
   check(await card.getByText(/You got it|The answer is/).waitFor({ timeout: 20000 }).then(() => true, () => false), "the student sees the answer once the teacher shows it");
   await api(`/api/classes/live/?classId=${cls.id}`, "DELETE");
   check(await card.waitFor({ state: "detached", timeout: 20000 }).then(() => true, () => false), "ending the live question clears it from the student's screen");
+}
+
+// An exit ticket: three live questions back to back, then one results page.
+if (askedKey) {
+  if (askedKey !== unit) await api("/api/classes/assignments/", "POST", { classId: cls.id, unitKey: askedKey });
+  const { teacherContext, teacherPage } = await teacherBrowser();
+  await teacherPage.goto(`${BASE}/teachers/#/class/${encodeURIComponent(cls.id)}/live`);
+  const live = teacherPage.getByRole("region", { name: "Live questions" });
+  await live.getByRole("button", { name: "Start an exit ticket" }).click({ timeout: 60000 });
+  check(await live.getByText("Exit ticket · question 1 of 3").waitFor({ timeout: 20000 }).then(() => true, () => false), "the teacher starts an exit ticket");
+  await live.getByRole("button", { name: "Next question" }).click();
+  await live.getByText("Exit ticket · question 2 of 3").waitFor({ timeout: 20000 });
+  await live.getByRole("button", { name: "Next question" }).click();
+  await live.getByText("Exit ticket · question 3 of 3").waitFor({ timeout: 20000 });
+  check(!(await vis(live.getByRole("button", { name: "Next question" }))), "the last question of the ticket has no next question");
+  await live.getByRole("button", { name: "Finish the exit ticket" }).click();
+  const results = live.getByLabel("Exit ticket results");
+  check(await results.getByText(/Maya: 0 of 3 right/).waitFor({ timeout: 20000 }).then(() => true, () => false), "the exit ticket ends with a results page for each student");
+  await teacherPage.screenshot({ path: `${OUT}/teacher-exit-ticket.png` });
+  await results.getByRole("button", { name: "Done" }).click();
+  check(await vis(live.getByRole("button", { name: "Start an exit ticket" })), "Done goes back to asking questions");
+  await api(`/api/classes/live/?classId=${cls.id}`, "DELETE");
+  await teacherContext.close();
+}
+
+// Printing: a class summary with many units prints sideways, a short one upright (Chromium reads the page size from the CSS).
+{
+  const { teacherContext, teacherPage } = await teacherBrowser();
+  const pageSize = async () => {
+    await teacherPage.evaluate(() => {
+      // The app prints and then clears its print sheet at once; keep a copy so there is something to lay out.
+      window.print = () => {
+        const sheet = document.querySelector(".print\\:block");
+        if (!sheet) return;
+        const copy = sheet.cloneNode(true);
+        copy.id = "printed-copy";
+        document.body.appendChild(copy);
+      };
+    });
+    await teacherPage.getByRole("button", { name: "Print class summary" }).click();
+    await teacherPage.locator("#printed-copy").waitFor({ state: "attached" });
+    await teacherPage.emulateMedia({ media: "print" });
+    const pdf = (await teacherPage.pdf({ preferCSSPageSize: true })).toString("latin1");
+    await teacherPage.emulateMedia({ media: "screen" });
+    await teacherPage.evaluate(() => document.getElementById("printed-copy")?.remove());
+    const boxes = [...pdf.matchAll(/\/MediaBox\s*\[\s*0\s+0\s+([\d.]+)\s+([\d.]+)\s*\]/g)].map((m) => ({ width: Number(m[1]), height: Number(m[2]) }));
+    return boxes.length ? boxes : null;
+  };
+  await teacherPage.goto(`${BASE}/teachers/#/class/${encodeURIComponent(cls.id)}/progress`);
+  await teacherPage.getByRole("button", { name: "Print class summary" }).waitFor({ timeout: 60000 });
+  const short = await pageSize();
+  check(Boolean(short) && short.every((b) => b.height > b.width), `a class summary with a few units prints upright (${JSON.stringify(short)})`);
+  for (const key of ["3/math/fractions", "3/math/patterns-and-equations", "3/math/measuring", "3/math/time", "3/language/read-and-think"]) {
+    await api("/api/classes/assignments/", "POST", { classId: cls.id, unitKey: key });
+  }
+  await teacherPage.reload();
+  await teacherPage.getByRole("button", { name: "Print class summary" }).waitFor({ timeout: 60000 });
+  const wide = await pageSize();
+  check(Boolean(wide) && wide.some((b) => b.width > b.height), `a class summary with many units prints sideways (${JSON.stringify(wide)})`);
+  await teacherContext.close();
 }
 
 // Sign out leaves nothing on the device.

@@ -85,18 +85,21 @@ const PREVIEW_TRIES = 8;
 
 /**
  * The question "Next question" would ask now, so the teacher can look at it first: the next one from
- * the open question's unit, skipping any that repeat the current prompt (or one in `avoid`), starting
+ * the open question's unit, skipping any that repeat the current prompt, one asked from the unit today (or one in `avoid`), starting
  * from the variant the teacher has swapped to. Null when the unit has nothing else to ask.
  */
 export async function previewNext(cls: ClassRow, row: LiveRow, avoid: string[] = []): Promise<Preview | null> {
   const current = (JSON.parse(row.data) as LiveQuestionData).prompt;
+  // Nor one the class was asked from this unit earlier today, so a run of questions (an exit ticket) doesn't repeat itself.
+  const earlier = (await recentLive(cls.id)).filter((r) => r.unit_key === row.unit_key).map((r) => (JSON.parse(r.data) as LiveQuestionData).prompt);
+  const skip = [...avoid, ...earlier];
   let fallback: { data: LiveQuestionData; variant: number } | null = null;
   const start = Number(row.next_swaps ?? 0);
   for (let variant = start; variant < start + PREVIEW_TRIES; variant++) {
     const data = await pickLiveQuestion(cls, row.unit_key, Number(row.n) + 1, variant);
     if (!data) return fallback;
     fallback ??= { data, variant };
-    if (data.prompt !== current && !avoid.includes(data.prompt)) return { data, variant };
+    if (data.prompt !== current && !skip.includes(data.prompt)) return { data, variant };
   }
   return fallback;
 }

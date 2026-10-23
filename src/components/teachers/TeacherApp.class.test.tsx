@@ -71,6 +71,7 @@ beforeEach(() => {
   window.location.hash = "";
   window.scrollTo = vi.fn() as unknown as typeof window.scrollTo;
   localStorage.clear();
+  sessionStorage.clear();
 });
 
 afterEach(() => {
@@ -160,6 +161,89 @@ describe("TeacherApp class page", () => {
     expect(await within(section).findByText(/answer shown to the class/)).toBeInTheDocument();
     await user.click(within(section).getByRole("button", { name: "End" }));
     expect(await within(section).findByRole("button", { name: "Ask a live question" })).toBeInTheDocument();
+  });
+
+  it("runs an exit ticket: questions back to back, then one results page", async () => {
+    const asked: string[] = [];
+    const prompts = ["One?", "Two?", "Three?"];
+    const questionFor = (i: number) => ({ prompt: prompts[i], hint: "", choices: [{ id: "a", label: "3" }, { id: "b", label: "4" }], answer: "b" });
+    let n = 0;
+    let state: unknown = null;
+    const sets: Record<string, unknown> = {};
+    serve(detail, (url, method) => {
+      if (url === "/api/classes/live/?classId=class-1&recap=1") return { recap: Object.values(sets) };
+      if (!url.startsWith("/api/classes/live/")) return undefined;
+      if (method === "POST") {
+        const id = `q${n + 1}`;
+        asked.push(id);
+        const answers = [{ profileId: "p1", choice: "b", correct: true }, { profileId: "p2", choice: n === 0 ? "b" : "a", correct: n === 0 }];
+        state = { id, unitKey: "3/math/counting", question: questionFor(n), revealed: false, createdAt: now + n, answers, next: n < 2 ? questionFor(n + 1) : null };
+        sets[id] = state;
+        n += 1;
+      }
+      if (method === "DELETE") state = null;
+      return { live: state };
+    });
+    const user = await openClass();
+    await openTab(user, "Live");
+    const section = screen.getByRole("region", { name: "Live questions" });
+    await user.click(within(section).getByRole("combobox", { name: "Exit ticket length" }));
+    await user.click(screen.getByRole("option", { name: "3 questions" }));
+    await user.click(within(section).getByRole("button", { name: "Start an exit ticket" }));
+    expect(await within(section).findByText("Exit ticket · question 1 of 3")).toBeInTheDocument();
+    await user.click(within(section).getByRole("button", { name: "Next question" }));
+    expect(await within(section).findByText("Exit ticket · question 2 of 3")).toBeInTheDocument();
+    await user.click(within(section).getByRole("button", { name: "Next question" }));
+    expect(await within(section).findByText("Exit ticket · question 3 of 3")).toBeInTheDocument();
+    // The last question has no next one: the button finishes the ticket, and no preview is shown.
+    expect(within(section).queryByRole("button", { name: "Next question" })).not.toBeInTheDocument();
+    expect(within(section).queryByLabelText("Next question preview")).not.toBeInTheDocument();
+    await user.click(within(section).getByRole("button", { name: "Finish the exit ticket" }));
+    const results = await within(section).findByLabelText("Exit ticket results");
+    expect(results).toHaveTextContent("One?");
+    expect(results).toHaveTextContent("Three?");
+    // Maya got all three; Sam only the first; Alex answered nothing.
+    expect(within(results).getByLabelText("Each student")).toHaveTextContent("Maya: 3 of 3 right");
+    expect(within(results).getByLabelText("Each student")).toHaveTextContent("Sam: 1 of 3 right");
+    expect(results).toHaveTextContent("To check in with: Sam");
+    expect(results).toHaveTextContent("Did not answer: Alex");
+    const write = vi.spyOn(navigator.clipboard, "writeText");
+    await user.click(within(results).getByRole("button", { name: "Copy the results" }));
+    expect(write).toHaveBeenCalledWith(expect.stringContaining("Sam: 1 of 3 right"));
+    expect(write).toHaveBeenCalledWith(expect.stringContaining("not a report-card mark"));
+    await user.click(within(results).getByRole("button", { name: "Done" }));
+    expect(await within(section).findByRole("button", { name: "Start an exit ticket" })).toBeInTheDocument();
+    expect(sessionStorage.getItem("grademap.ticket.class-1")).toBeNull();
+    expect(asked).toEqual(["q1", "q2", "q3"]);
+  });
+
+  it("keeps an exit ticket across a reload, and shows its results if it was ended early", async () => {
+    const question = { prompt: "How many?", hint: "", choices: [{ id: "a", label: "3" }, { id: "b", label: "4" }], answer: "b" };
+    sessionStorage.setItem("grademap.ticket.class-1", JSON.stringify({ total: 4, ids: ["q1"] }));
+    serve(detail, (url) =>
+      url === "/api/classes/live/?classId=class-1&recap=1"
+        ? { recap: [{ id: "q1", unitKey: "3/math/counting", question, revealed: true, createdAt: now, answers: [{ profileId: "p1", choice: "b", correct: true }] }] }
+        : url.startsWith("/api/classes/live/") ? { live: null } : undefined,
+    );
+    const user = await openClass();
+    await openTab(user, "Live");
+    const section = screen.getByRole("region", { name: "Live questions" });
+    expect(await within(section).findByText("The exit ticket has ended.")).toBeInTheDocument();
+    await user.click(within(section).getByRole("button", { name: "See the results" }));
+    const results = await within(section).findByLabelText("Exit ticket results");
+    expect(within(results).getByLabelText("Each student")).toHaveTextContent("Maya: 1 of 1 right");
+    await user.click(within(results).getByRole("button", { name: "Done" }));
+    expect(sessionStorage.getItem("grademap.ticket.class-1")).toBeNull();
+  });
+
+  it("says so when the questions of an exit ticket are gone", async () => {
+    sessionStorage.setItem("grademap.ticket.class-1", JSON.stringify({ total: 3, ids: ["gone"] }));
+    serve(detail, (url) => (url === "/api/classes/live/?classId=class-1&recap=1" ? { recap: [] } : url.startsWith("/api/classes/live/") ? { live: null } : undefined));
+    const user = await openClass();
+    await openTab(user, "Live");
+    await user.click(await screen.findByRole("button", { name: "See the results" }));
+    expect(await screen.findByText("The questions from this exit ticket are no longer available.")).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Copy the results" })).not.toBeInTheDocument();
   });
 
   it("starts, pauses, extends and stops the class timer", async () => {
@@ -359,6 +443,53 @@ describe("TeacherApp class page", () => {
     expect(mocks.call).not.toHaveBeenCalledWith(expect.stringContaining("all=1"), "PATCH", undefined);
     await user.click(screen.getByRole("button", { name: "Yes, make new codes" }));
     await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/?classId=class-1&all=1", "PATCH", undefined));
+  });
+
+  it("prints login cards in larger type, one to a row, when asked", async () => {
+    serve(detail);
+    const user = await openClass();
+    await openTab(user, "Students");
+    let layout = { grid: "", card: "", qr: "" };
+    const print = vi.spyOn(window, "print").mockImplementation(() => {
+      const grid = document.querySelector(".print\\:grid")!;
+      layout = { grid: grid.className, card: grid.children[0].className, qr: grid.querySelector("svg")!.getAttribute("class") ?? "" };
+    });
+    await user.click(screen.getByRole("checkbox", { name: "Larger print (fewer cards per page)" }));
+    await user.click(screen.getByRole("button", { name: "Print login cards" }));
+    await waitFor(() => expect(print).toHaveBeenCalledOnce());
+    expect(layout.grid).toContain("print:grid-cols-1");
+    expect(layout.card).toContain("text-2xl");
+    expect(layout.qr).toContain("size-40");
+    // Without it, cards are two to a row at the usual size.
+    await user.click(screen.getByRole("checkbox", { name: "Larger print (fewer cards per page)" }));
+    await user.click(screen.getByRole("button", { name: "Print login cards" }));
+    await waitFor(() => expect(print).toHaveBeenCalledTimes(2));
+    expect(layout.grid).toContain("print:grid-cols-2");
+    expect(layout.card).not.toContain("text-2xl");
+    expect(layout.qr).toContain("size-28");
+  });
+
+  it("prints a class summary sideways only when it has many units", async () => {
+    const wide = (n: number) => {
+      const keys = Array.from({ length: n }, (_, i) => `3/math/unit-${i}`);
+      serve({ ...detail, assignments: keys, students: detail.students.map((st) => ({ ...st, units: keys.map((key) => ({ key, level: -1, attempts: 0, accuracy: 0 })) })) });
+    };
+    const printed: string[] = [];
+    vi.spyOn(window, "print").mockImplementation(() => {
+      printed.push(document.querySelector(".print\\:block")!.className);
+    });
+    wide(4);
+    const user = await openClass();
+    await user.click(screen.getByRole("button", { name: "Print class summary" }));
+    await waitFor(() => expect(printed).toHaveLength(1));
+    expect(printed[0]).not.toContain("print-landscape");
+    cleanup();
+    window.location.hash = "";
+    wide(5);
+    const again = await openClass();
+    await again.click(screen.getByRole("button", { name: "Print class summary" }));
+    await waitFor(() => expect(printed).toHaveLength(2));
+    expect(printed[1]).toContain("print-landscape");
   });
 
   it("prints a class summary that says it is practice", async () => {

@@ -205,12 +205,15 @@ interface FamilyDetail {
   activity: { events: number; lastActive: number | null };
   sessions: { active: number; lastSignIn: number | null };
   classes: number;
+  value: { cad: number; usd: number; payments: number; firstPaidAt: number; lastPaidAt: number } | null;
   redemptions: { code: string; kind: string | null; redeemedAt: number }[];
   overrides: Record<string, boolean>;
   experiments: Record<string, string>;
   sees: { premium: boolean; paid: boolean; trialDaysLeft: number; flags: string[] };
   notes: { id: number; author: string; body: string; createdAt: number }[];
 }
+
+const cents = (n: number, currency: "CAD" | "USD") => `${(n / 100).toLocaleString("en-CA", { style: "currency", currency })}${currency === "USD" ? " USD" : ""}`;
 
 type Role = "admin" | "support";
 
@@ -359,6 +362,14 @@ function UserDetail({ id, flags, role, email, onBack }: { id: string; flags: Fla
           <div><dt className="inline font-semibold">Last practice: </dt><dd className="inline">{day(d.activity.lastActive)} ({d.activity.events.toLocaleString("en-CA")} events)</dd></div>
           <div><dt className="inline font-semibold">Last sign-in: </dt><dd className="inline">{d.parents[0]?.lastLogin ? formatAgo(d.parents[0].lastLogin) : "—"}</dd></div>
           <div><dt className="inline font-semibold">Signed in on: </dt><dd className="inline">{d.sessions.active} {d.sessions.active === 1 ? "device" : "devices"}</dd></div>
+          <div>
+            <dt className="inline font-semibold">Lifetime value: </dt>
+            <dd className="inline">
+              {d.value
+                ? `${[d.value.cad ? cents(d.value.cad, "CAD") : "", d.value.usd ? cents(d.value.usd, "USD") : ""].filter(Boolean).join(" + ")} from ${d.value.payments} ${d.value.payments === 1 ? "payment" : "payments"}, first on ${day(d.value.firstPaidAt)}, latest on ${day(d.value.lastPaidAt)}`
+                : "Has not paid"}
+            </dd>
+          </div>
           <div><dt className="inline font-semibold">Open classes: </dt><dd className="inline">{d.classes}</dd></div>
           <div><dt className="inline font-semibold">Family id: </dt><dd className="inline break-all font-mono text-sm">{f.id}</dd></div>
         </dl>
@@ -1017,6 +1028,84 @@ function Experiments() {
   );
 }
 
+// ---------- Customer feedback ----------
+
+interface FeedbackRow {
+  id: string;
+  familyId: string | null;
+  audience: string;
+  rating: number | null;
+  topic: string | null;
+  comment: string;
+  at: number;
+  handled: boolean;
+  email: string | null;
+}
+
+const FACES = ["", "😞", "😕", "😐", "🙂", "😍"];
+
+function Feedback({ onOpenFamily }: { onOpenFamily: (id: string) => void }) {
+  const [data, setData] = useState<{ feedback: FeedbackRow[]; averages: { audience: string; count: number; average: number | null }[] } | null>(null);
+  const load = useCallback(() => {
+    call<NonNullable<typeof data>>("/api/admin/app-feedback/").then(setData, () => setData({ feedback: [], averages: [] }));
+  }, []);
+  useEffect(load, [load]);
+  const { act, err, ok, busy } = useAction(load);
+  return (
+    <section aria-labelledby="feedback-h">
+      <h2 id="feedback-h" className="text-2xl font-bold">Customer Feedback</h2>
+      <p className="mt-1 font-read text-ink-soft">
+        What parents and teachers said in the app. Nothing here is about a child. An email shows only when the sender ticked &quot;OK to email me back&quot;.
+      </p>
+      {!!data?.averages.length && (
+        <p className="mt-2 text-sm font-semibold">
+          {data.averages.map((a) => `${a.audience === "teacher" ? "Teachers" : "Parents"}: ${a.average ?? "–"} out of 5 (${a.count})`).join(" · ")}
+        </p>
+      )}
+      <Notice err={err} ok={ok} />
+      {!data && <LoadingCards count={3} />}
+      {data?.feedback.length === 0 && <p className="mt-3 font-read">No feedback yet.</p>}
+      <ul className="mt-3 flex flex-col gap-3">
+        {data?.feedback.map((f) => (
+          <li key={f.id} className={card}>
+            <p className="text-sm text-ink-soft">
+              {f.audience === "teacher" ? "Teacher" : "Parent"} · {day(f.at)}
+              {f.topic ? ` · ${f.topic}` : ""}
+              {f.handled ? " · done" : ""}
+            </p>
+            {f.rating !== null && (
+              <p className="text-2xl" role="img" aria-label={`${f.rating} out of 5`}>
+                {FACES[f.rating]}
+              </p>
+            )}
+            {f.comment && <p className="font-read text-lg whitespace-pre-wrap">{f.comment}</p>}
+            <div className="mt-2 flex flex-wrap gap-2">
+              {f.email && (
+                <a className={primary} href={`mailto:${f.email}?subject=${encodeURIComponent("Your Gradelings feedback")}`}>
+                  Reply to {f.email}
+                </a>
+              )}
+              {f.familyId && f.email && (
+                <button type="button" className={quiet} onClick={() => onOpenFamily(f.familyId!)}>
+                  Open Family
+                </button>
+              )}
+              {!f.handled && (
+                <button type="button" disabled={busy} className={quiet} onClick={() => void act("/api/admin/app-feedback/", "PATCH", { id: f.id }, "Marked done.")}>
+                  Mark Done
+                </button>
+              )}
+              <button type="button" disabled={busy} className={quiet} onClick={() => void act("/api/admin/app-feedback/", "PATCH", { id: f.id, remove: true }, "Removed.")}>
+                Remove
+              </button>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 // ---------- Question reports ----------
 
 interface ReportRow {
@@ -1155,7 +1244,7 @@ function AuditLog() {
 
 // ---------- The app ----------
 
-const TABS = ["Overview", "To Do", "Users", "Funnel", "Traffic", "Emails", "Inbox", "Automations", "Codes", "Sales", "Flags", "A/B Tests", "Reports", "System", "Log"] as const;
+const TABS = ["Overview", "To Do", "Users", "Funnel", "Traffic", "Emails", "Inbox", "Automations", "Codes", "Sales", "Flags", "A/B Tests", "Feedback", "Reports", "System", "Log"] as const;
 type Tab = (typeof TABS)[number];
 
 /** `?tab=` and `?family=` from a link in an alert email, read once when the panel opens. */
@@ -1259,6 +1348,7 @@ function Panel({ twoFactor, onSecurityChange, role, email }: { twoFactor: TwoFac
       <Queue
         onOpenFamily={openFamily}
         onReports={() => go("Reports")}
+        onFeedback={() => go("Feedback")}
         onInbox={(id) => {
           setInboxId(id);
           go("Inbox");
@@ -1283,6 +1373,7 @@ function Panel({ twoFactor, onSecurityChange, role, email }: { twoFactor: TwoFac
     Sales: <Sales />,
     Flags: <Flags flags={flags} reload={loadFlags} />,
     "A/B Tests": <Experiments />,
+    Feedback: <Feedback onOpenFamily={openFamily} />,
     Reports: <Reports />,
     System: (
       <>
