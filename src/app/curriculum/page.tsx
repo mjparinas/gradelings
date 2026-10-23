@@ -17,7 +17,7 @@ export const metadata: Metadata = pageMeta({
 
 export default function CurriculumIndex() {
   return (
-    <SitePage cta>
+    <SitePage cta lead="trial">
       <Crumbs items={[{ label: "Home", href: "/" }, { label: "Curriculum" }]} />
       <h1 className="text-4xl font-bold">Curriculum</h1>
       <p className="mt-2 max-w-2xl font-read text-lg text-ink-soft">

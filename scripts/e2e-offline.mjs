@@ -77,7 +77,6 @@ try {
   await page.getByLabel("Name").fill("Ava");
   await page.getByRole("button", { name: "Grade 5", exact: true }).click();
   await page.getByRole("button", { name: "Start!" }).click({ force: true });
-  await page.getByRole("button", { name: /Not now, let's play/ }).click({ force: true });
   await page.getByRole("button", { name: /Adventure/ }).waitFor();
   await page.waitForTimeout(5000); // let the worker take control and keep the lessons
 

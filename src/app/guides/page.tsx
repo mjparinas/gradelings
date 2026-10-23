@@ -15,7 +15,7 @@ export const metadata: Metadata = pageMeta({
 /** Every region's guide hub in one place, so the site footer can link here instead of listing every region. */
 export default function GuidesIndex() {
   return (
-    <SitePage cta>
+    <SitePage cta lead="trial">
       <Crumbs items={[{ label: "Home", href: "/" }, { label: "Parent guides" }]} />
       <h1 className="text-4xl font-bold">Parent guides</h1>
       <p className="mt-2 max-w-2xl font-read text-lg text-ink-soft">

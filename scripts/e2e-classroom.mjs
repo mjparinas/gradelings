@@ -255,8 +255,6 @@ await page.getByRole("button", { name: /Let.s go/ }).click({ force: true });
 await page.getByLabel("Name").fill("Sam");
 await page.getByRole("button", { name: "Grade 3" }).click();
 await page.getByRole("button", { name: "Start!" }).click();
-// The first child on a device with no account is offered the progress emails once.
-await page.getByRole("button", { name: /Not now, let's play/ }).click({ timeout: 5000, force: true }).catch(() => undefined);
 await page.getByText("Adventure", { exact: true }).first().waitFor({ timeout: 15000 });
 const scan = async () => {
   await page.goto(`${BASE}/play/#/class?s=${code}`);

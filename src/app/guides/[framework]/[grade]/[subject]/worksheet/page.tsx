@@ -19,6 +19,7 @@ import { JsonLd, ORG_REF, absolute } from "@/lib/site";
 import { PinLink, ShareButton } from "@/components/site/ShareButton";
 import { pageMeta } from "@/lib/pageMeta";
 import { playHref } from "@/lib/playLink";
+import { TRIAL_DAYS } from "@/lib/plan";
 
 export const dynamicParams = false;
 
@@ -81,7 +82,7 @@ export default async function WorksheetPage({ params }: Props) {
   ];
 
   return (
-    <SitePage play={playHref({ framework: f.id, grade, subject: course.subject })}>
+    <SitePage lead="trial" play={playHref({ framework: f.id, grade, subject: course.subject })}>
       <JsonLd
         data={[
           breadcrumbJsonLd(crumbs),
@@ -135,6 +136,13 @@ export default async function WorksheetPage({ params }: Props) {
           <SampleQuestion key={i} q={it.q} n={i + 1} seedText={it.seed} className="print:break-inside-avoid" />
         ))}
       </ol>
+      {/* On paper only: the sheet is what a parent keeps, so it says where the rest is. */}
+      <p className="mt-6 hidden rounded-xl border-2 border-line p-3 font-read text-lg print:block print:break-inside-avoid">
+        <b>
+          More {label} {name} practice, with new questions every time:
+        </b>{" "}
+        {absolute(curriculumPath.subject(f, grade, course.subject)).replace(/^https?:\/\//, "")} · Free for {TRIAL_DAYS} days, no card needed.
+      </p>
 
       <section aria-labelledby="key" className="mt-10 rounded-3xl bg-white p-6 print:break-before-page">
         <h2 id="key" className="text-2xl font-bold">
@@ -160,7 +168,7 @@ export default async function WorksheetPage({ params }: Props) {
             .
           </p>
         </div>
-        <SubscribeActions size="md" play={playHref({ framework: f.id, grade, subject: course.subject })} />
+        <SubscribeActions lead="trial" size="md" play={playHref({ framework: f.id, grade, subject: course.subject })} />
       </section>
     </SitePage>
   );

@@ -76,7 +76,7 @@ export default async function UnitPage({ params }: Props) {
   ];
 
   return (
-    <SitePage play={play}>
+    <SitePage lead="trial" play={play}>
       <JsonLd
         data={[
           breadcrumbJsonLd(crumbs),
@@ -149,13 +149,26 @@ export default async function UnitPage({ params }: Props) {
             </div>
           )}
         </section>
-        <aside className="card flex flex-col gap-3 p-5">
+        {/* On phones the practice box comes straight under the title, before the parent note and the lesson. */}
+        <aside className="card order-first flex flex-col gap-3 p-5 lg:order-none">
           <p className="text-lg font-bold">{say(f, "Practise this unit")}</p>
           <p className="font-read text-ink-soft">New questions every time, with hints, read-aloud and rewards. Works offline.</p>
-          <SubscribeActions trialLabel="Play free" className="w-full" play={play} />
+          <SubscribeActions lead="trial" trialLabel="Play free" className="w-full" play={play} />
           <ShareButton path={path} title={`${unit.title}: ${gradeLabel(f, grade)} ${name}`} text={`Can your ${gradeLabel(f, grade)} child solve these? Free ${unit.title} practice:`} label="Share these questions" />
         </aside>
       </div>
+
+      <section aria-labelledby="samples" className="mt-8">
+        <h2 id="samples" className="mb-1 text-2xl font-bold">
+          Try a few questions
+        </h2>
+        <p className="mb-4 font-read text-ink-soft">A taste of this unit. In the app, questions change every time and get easier or harder to match your child.</p>
+        <ol className="grid items-start gap-4 md:grid-cols-2">
+          {questions.map((q, i) => (
+            <SampleQuestion key={i} q={q} n={i + 1} seedText={`${seed}#${i}`} tryIt={{ play, playLabel: say(f, "Practise this unit") }} />
+          ))}
+        </ol>
+      </section>
 
       <section aria-labelledby="in-region" className="card mt-8 p-5">
         <h2 id="in-region" className="text-2xl font-bold">
@@ -189,18 +202,6 @@ export default async function UnitPage({ params }: Props) {
         <p className="mt-3 font-read text-ink-soft">
           Source: <a href={f.sourceUrl} className="underline">{f.sourceName}</a>
         </p>
-      </section>
-
-      <section aria-labelledby="samples" className="mt-8">
-        <h2 id="samples" className="mb-1 text-2xl font-bold">
-          Sample questions
-        </h2>
-        <p className="mb-4 font-read text-ink-soft">A taste of this unit. In the app, questions change every time and get easier or harder to match your child.</p>
-        <ol className="grid items-start gap-4 md:grid-cols-2">
-          {questions.map((q, i) => (
-            <SampleQuestion key={i} q={q} n={i + 1} seedText={`${seed}#${i}`} />
-          ))}
-        </ol>
       </section>
 
       <nav aria-label="More units" className="mt-8 flex flex-wrap justify-between gap-3">

@@ -213,17 +213,20 @@ describe("UnitList", () => {
     expect(h.go).toHaveBeenLastCalledWith("/session", { mode: "practice", scope: "2/math/add" });
   });
 
-  it("a link from the unit's public page opens that unit once, as if it was tapped", () => {
+  it("a link from the unit's public page starts that unit's practice once, and takes the unit out of the address", () => {
     h.query = new URLSearchParams("unit=sub");
+    const replace = vi.spyOn(window.history, "replaceState");
     const { rerender } = inBand("big", <UnitList subject="math" />);
-    expect(screen.getByRole("dialog", { name: /Subtracting/ })).toBeInTheDocument();
-    fireEvent.click(screen.getByRole("dialog"));
+    expect(h.go).toHaveBeenCalledWith("/session", { mode: "practice", scope: "2/math/sub" });
+    expect(replace).toHaveBeenCalledWith(window.history.state, "", "#/practice/math");
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
     rerender(
       <BandProvider value="big">
         <UnitList subject="math" />
       </BandProvider>,
     );
-    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    expect(h.go).toHaveBeenCalledTimes(1);
+    replace.mockRestore();
   });
 
   it("a link sends little kids straight into the unit, and ignores a unit the course doesn't have", () => {
