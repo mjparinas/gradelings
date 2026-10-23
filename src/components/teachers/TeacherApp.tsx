@@ -18,6 +18,7 @@ import { gradeLabel } from "@/lib/gradeLabel";
 import { levelInfo } from "@/lib/proficiency";
 import { go, useRoute } from "@/lib/router";
 import { sayFor } from "@/lib/say";
+import { FeedbackLink } from "@/components/FeedbackLink";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
 import { AccountPage } from "./AccountPage";
 import { rememberTeacher } from "@/lib/teacherHint";
@@ -1781,6 +1782,7 @@ export function TeacherApp() {
           <ClassList account={account} onOpen={(id) => go(`/class/${encodeURIComponent(id)}`)} />
         )}
       </main>
+      {signedIn && <FeedbackLink audience="teacher" signedIn />}
     </div>
   );
 }

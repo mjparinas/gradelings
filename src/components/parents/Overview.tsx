@@ -8,6 +8,7 @@ import { subjectSummaries } from "@/lib/proficiency";
 import { useLocale, useSay } from "@/lib/say";
 import { useDerived, useProfiles, useStore } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
+import { FeedbackCard } from "./FeedbackCard";
 import { FamilyGoal } from "./FamilyGoal";
 import { FocusUnit } from "./FocusUnit";
 import { HelpAsks } from "./HelpAsks";
@@ -110,6 +111,7 @@ export function Overview() {
           ))}
           <TogetherPanel />
           <ShareGradelings />
+          <FeedbackCard />
         <div className="grid gap-5 lg:grid-cols-2">
           {profiles.map((p) => (
             <div key={p.id}>

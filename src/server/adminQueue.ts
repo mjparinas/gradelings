@@ -16,7 +16,7 @@ const RECENT_PANEL_MAIL = "EXISTS (SELECT 1 FROM email_log l WHERE l.family_id =
 /** Items of one kind shown at most. */
 const PER_KIND = 50;
 
-export type QueueAction = { type: "email"; preset: string } | { type: "verify" } | { type: "open" } | { type: "reports" } | { type: "inbox"; id: string } | { type: "task" };
+export type QueueAction = { type: "email"; preset: string } | { type: "verify" } | { type: "open" } | { type: "reports" } | { type: "feedback" } | { type: "inbox"; id: string } | { type: "task" };
 
 export interface QueueItem {
   key: string;
@@ -40,6 +40,7 @@ export const QUEUE_KINDS = {
   unconfirmed: "Email not confirmed",
   bounced: "Email bouncing",
   reports: "Question reports",
+  feedback: "Feedback from customers",
   setup: "Set up the social accounts",
 } as const;
 export type QueueKind = keyof typeof QUEUE_KINDS;
@@ -55,7 +56,7 @@ export async function queueItems(now = Date.now()): Promise<QueueItem[]> {
   const fam = (where: string, args: number[], order: string, extra = "") =>
     query<Row>(`SELECT f.id, ${EMAIL} AS email, f.created_at, f.trial_ends_at, f.billing_event_at, ${LAST_PRACTICE} AS last ${extra} FROM families f WHERE ${REAL} AND ${where} ORDER BY ${order} LIMIT ${PER_KIND}`, args);
   const weekAgo = now - 7 * DAY;
-  const [pastDue, trialEnding, cancelled, quiet, never, unconfirmed, bounced, reports] = await Promise.all([
+  const [pastDue, trialEnding, cancelled, quiet, never, unconfirmed, bounced, reports, feedback] = await Promise.all([
     fam("f.subscription_status = 'past_due'", [], "f.billing_event_at"),
     fam(`f.plan != 'premium' AND f.trial_ends_at > ? AND f.trial_ends_at <= ? AND COALESCE(f.access_until, 0) <= ? AND ${VERIFIED} AND ${LAST_PRACTICE} IS NOT NULL AND NOT ${RECENT_PANEL_MAIL}`, [now, now + 3 * DAY, now, weekAgo], "f.trial_ends_at"),
     fam(`f.plan != 'premium' AND f.subscription_status = 'canceled' AND f.billing_event_at > ? AND ${VERIFIED} AND NOT ${RECENT_PANEL_MAIL}`, [now - 14 * DAY, weekAgo], "f.billing_event_at DESC"),
@@ -68,6 +69,8 @@ export async function queueItems(now = Date.now()): Promise<QueueItem[]> {
     ),
     fam("EXISTS (SELECT 1 FROM parents p WHERE p.family_id = f.id AND p.email_bounced_at > ?)", [now - 30 * DAY], "f.created_at DESC", ", (SELECT MAX(p.email_bounced_at) FROM parents p WHERE p.family_id = f.id) AS bounced_at"),
     query<{ n: number; first: number | null }>("SELECT COUNT(*) AS n, MIN(created_at) AS first FROM question_reports"),
+    // A low rating, or any written comment, that nobody has dealt with yet.
+    query<{ n: number; first: number | null }>("SELECT COUNT(*) AS n, MIN(created_at) AS first FROM app_feedback WHERE handled_at IS NULL AND (rating <= 2 OR comment != '')"),
   ]);
   const item = (kind: QueueKind, r: Row, at: number, detail: string, action: QueueAction): QueueItem => ({
     key: `${kind}:${r.id}`,
@@ -95,6 +98,8 @@ export async function queueItems(now = Date.now()): Promise<QueueItem[]> {
     ...unconfirmed.map((r) => item("unconfirmed", r, Number(r.created_at), `Signed up ${plural(days(now - Number(r.created_at)), "day")} ago and hasn't confirmed the email.`, { type: "verify" })),
     ...bounced.map((r) => item("bounced", r, Number(r.bounced_at), "Email to this address bounced or was marked as spam. The panel won't email it.", { type: "open" })),
   ];
+  const fb = Number(feedback[0]?.n ?? 0);
+  if (fb) items.push({ key: "feedback", kind: "feedback", title: QUEUE_KINDS.feedback, detail: `${plural(fb, "message")} from customers waiting to be read.`, at: Number(feedback[0]?.first ?? now), action: { type: "feedback" } });
   const n = Number(reports[0]?.n ?? 0);
   if (n) items.push({ key: "reports", kind: "reports", title: QUEUE_KINDS.reports, detail: `${plural(n, "question report")} waiting to be looked at.`, at: Number(reports[0]?.first ?? now), action: { type: "reports" } });
 

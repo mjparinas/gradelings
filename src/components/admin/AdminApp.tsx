@@ -1028,6 +1028,84 @@ function Experiments() {
   );
 }
 
+// ---------- Customer feedback ----------
+
+interface FeedbackRow {
+  id: string;
+  familyId: string | null;
+  audience: string;
+  rating: number | null;
+  topic: string | null;
+  comment: string;
+  at: number;
+  handled: boolean;
+  email: string | null;
+}
+
+const FACES = ["", "😞", "😕", "😐", "🙂", "😍"];
+
+function Feedback({ onOpenFamily }: { onOpenFamily: (id: string) => void }) {
+  const [data, setData] = useState<{ feedback: FeedbackRow[]; averages: { audience: string; count: number; average: number | null }[] } | null>(null);
+  const load = useCallback(() => {
+    call<NonNullable<typeof data>>("/api/admin/app-feedback/").then(setData, () => setData({ feedback: [], averages: [] }));
+  }, []);
+  useEffect(load, [load]);
+  const { act, err, ok, busy } = useAction(load);
+  return (
+    <section aria-labelledby="feedback-h">
+      <h2 id="feedback-h" className="text-2xl font-bold">Customer Feedback</h2>
+      <p className="mt-1 font-read text-ink-soft">
+        What parents and teachers said in the app. Nothing here is about a child. An email shows only when the sender ticked &quot;OK to email me back&quot;.
+      </p>
+      {!!data?.averages.length && (
+        <p className="mt-2 text-sm font-semibold">
+          {data.averages.map((a) => `${a.audience === "teacher" ? "Teachers" : "Parents"}: ${a.average ?? "–"} out of 5 (${a.count})`).join(" · ")}
+        </p>
+      )}
+      <Notice err={err} ok={ok} />
+      {!data && <LoadingCards count={3} />}
+      {data?.feedback.length === 0 && <p className="mt-3 font-read">No feedback yet.</p>}
+      <ul className="mt-3 flex flex-col gap-3">
+        {data?.feedback.map((f) => (
+          <li key={f.id} className={card}>
+            <p className="text-sm text-ink-soft">
+              {f.audience === "teacher" ? "Teacher" : "Parent"} · {day(f.at)}
+              {f.topic ? ` · ${f.topic}` : ""}
+              {f.handled ? " · done" : ""}
+            </p>
+            {f.rating !== null && (
+              <p className="text-2xl" role="img" aria-label={`${f.rating} out of 5`}>
+                {FACES[f.rating]}
+              </p>
+            )}
+            {f.comment && <p className="font-read text-lg whitespace-pre-wrap">{f.comment}</p>}
+            <div className="mt-2 flex flex-wrap gap-2">
+              {f.email && (
+                <a className={primary} href={`mailto:${f.email}?subject=${encodeURIComponent("Your Gradelings feedback")}`}>
+                  Reply to {f.email}
+                </a>
+              )}
+              {f.familyId && f.email && (
+                <button type="button" className={quiet} onClick={() => onOpenFamily(f.familyId!)}>
+                  Open Family
+                </button>
+              )}
+              {!f.handled && (
+                <button type="button" disabled={busy} className={quiet} onClick={() => void act("/api/admin/app-feedback/", "PATCH", { id: f.id }, "Marked done.")}>
+                  Mark Done
+                </button>
+              )}
+              <button type="button" disabled={busy} className={quiet} onClick={() => void act("/api/admin/app-feedback/", "PATCH", { id: f.id, remove: true }, "Removed.")}>
+                Remove
+              </button>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 // ---------- Question reports ----------
 
 interface ReportRow {
@@ -1166,7 +1244,7 @@ function AuditLog() {
 
 // ---------- The app ----------
 
-const TABS = ["Overview", "To Do", "Users", "Funnel", "Traffic", "Emails", "Inbox", "Automations", "Codes", "Sales", "Flags", "A/B Tests", "Reports", "System", "Log"] as const;
+const TABS = ["Overview", "To Do", "Users", "Funnel", "Traffic", "Emails", "Inbox", "Automations", "Codes", "Sales", "Flags", "A/B Tests", "Feedback", "Reports", "System", "Log"] as const;
 type Tab = (typeof TABS)[number];
 
 /** `?tab=` and `?family=` from a link in an alert email, read once when the panel opens. */
@@ -1270,6 +1348,7 @@ function Panel({ twoFactor, onSecurityChange, role, email }: { twoFactor: TwoFac
       <Queue
         onOpenFamily={openFamily}
         onReports={() => go("Reports")}
+        onFeedback={() => go("Feedback")}
         onInbox={(id) => {
           setInboxId(id);
           go("Inbox");
@@ -1294,6 +1373,7 @@ function Panel({ twoFactor, onSecurityChange, role, email }: { twoFactor: TwoFac
     Sales: <Sales />,
     Flags: <Flags flags={flags} reload={loadFlags} />,
     "A/B Tests": <Experiments />,
+    Feedback: <Feedback onOpenFamily={openFamily} />,
     Reports: <Reports />,
     System: (
       <>
