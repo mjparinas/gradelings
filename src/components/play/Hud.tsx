@@ -70,7 +70,7 @@ export function Hud() {
         type="button"
         className="btn h-16 gap-2 pr-4 pl-1.5 text-left"
         onClick={() => setActive(null)}
-        aria-label={`${profile.name}. Switch player`}
+        aria-label={`${profile.name}${title ? `, ${say(title.name)}` : ""}. Switch player`}
       >
         <span className="flex h-12 w-12 items-center justify-center rounded-xl p-0.5" style={{ background: profile.colour }}>
           <CritterSvg id={profile.avatar} />

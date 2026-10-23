@@ -80,8 +80,12 @@ export async function openLive(classId: string, now = Date.now()): Promise<LiveR
   )[0];
 }
 
-/** How many seed variants to look through for a next question that isn't a repeat. */
-const PREVIEW_TRIES = 8;
+/**
+ * How many seed variants to look through for a next question that isn't a repeat. Questions with a picture
+ * share a prompt ("What number do the blocks show?"), so a unit can give the same prompt ten variants in a row;
+ * eight wasn't always enough to swap past them (about 1 class in 250), sixteen was for 3,000 classes tried.
+ */
+const PREVIEW_TRIES = 16;
 
 /**
  * The question "Next question" would ask now, so the teacher can look at it first: the next one from

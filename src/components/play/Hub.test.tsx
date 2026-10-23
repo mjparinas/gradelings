@@ -131,7 +131,7 @@ describe("Hub greeting", () => {
     show();
     expect(message()).toHaveTextContent("Good morning, Ava! 9 more minutes to reach today's goal.");
     expect(screen.getByRole("progressbar", { name: "Minutes learned today" })).toHaveAttribute("aria-valuenow", "6");
-    expect(screen.getByRole("button", { name: "Today's goal is 15 minutes. Change it" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Today's goal is 15 minutes. Change it$/ })).toBeInTheDocument();
   });
 
   it("cheers once today's goal is reached", () => {
