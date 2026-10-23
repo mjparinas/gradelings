@@ -204,8 +204,11 @@ page.goto = (url) => goto(url, { waitUntil: "networkidle" });
 console.log("Skip link");
 for (const path of ["/", "/pricing/", "/curriculum/bc/grade-3/math/"]) {
   await page.goto(BASE + path);
+  // The link keeps the address only once the page has hydrated, which can come after network idle. Next's router
+  // writes its own history entry when hydration is done, so wait for that.
+  await page.waitForFunction(() => history.state?.__NA === true);
   await page.keyboard.press("Tab");
-  const first = await page.evaluate(() => document.activeElement?.textContent?.trim());
+  const first =await page.evaluate(() => document.activeElement?.textContent?.trim());
   check(first === "Skip to main content", `${path}: the first Tab stop is "Skip to main content" (got "${first}")`);
   await page.waitForTimeout(100); // let the link slide into place
   const shown = await page.evaluate(() => document.activeElement.getBoundingClientRect().top >= 0);
