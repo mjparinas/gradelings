@@ -9,6 +9,7 @@ import { useLocale } from "@/lib/say";
 import { useStore } from "@/lib/store";
 import { useMagicLinkOn } from "@/lib/magicLink";
 import { savedReferralCode } from "@/lib/referral";
+import { knownParent } from "@/lib/parentHint";
 import { syncNow } from "@/lib/sync";
 import { Dialog } from "../ui";
 import { GoogleButton, useGoogleError } from "../GoogleButton";
@@ -20,8 +21,9 @@ import { VoicePicker } from "./VoicePicker";
 
 const noSubscribe = () => () => {};
 
-function AuthForm({ onDone }: { onDone: () => void }) {
-  const [mode, setMode] = useState<"signup" | "signin" | "forgot" | "link">("signup");
+/** Sign in comes first for someone coming back; a first visit opens on create account. */
+export function AuthForm({ onDone, initialMode = "signup" }: { onDone: () => void; initialMode?: "signup" | "signin" }) {
+  const [mode, setMode] = useState<"signup" | "signin" | "forgot" | "link">(initialMode);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);
@@ -53,8 +55,8 @@ function AuthForm({ onDone }: { onDone: () => void }) {
   return (
     <form onSubmit={submit} className="flex max-w-md flex-col gap-3">
       <div className="flex gap-2">
-        {(["signup", "signin"] as const).map((m) => (
-          <button key={m} type="button" onClick={() => setMode(m)} className={`rounded-xl px-3 py-2 text-sm font-semibold ${mode === m ? "bg-[#253047] text-white" : "bg-paper"}`}>
+        {(["signin", "signup"] as const).map((m) => (
+          <button key={m} type="button" aria-pressed={mode === m} onClick={() => setMode(m)} className={`rounded-xl px-3 py-2 text-sm font-semibold ${mode === m ? "bg-[#253047] text-white" : "bg-paper"}`}>
             {m === "signup" ? "Create account" : "Sign in"}
           </button>
         ))}
@@ -308,6 +310,8 @@ export function AccountPage({ onBilling }: { onBilling: (b: BillingInfo | null) 
   const sync = useStore((s) => s.sync);
   const locale = useLocale();
   const { query } = useRoute();
+  // A "Sign in" link (mode=signin) or a device that has had an account opens on the sign-in form.
+  const [returning] = useState(() => query.get("mode") === "signin" || knownParent());
   const [pending, setPending] = useState<number | null>(null);
   const [confirmDelete, setConfirmDelete] = useState(false);
   const [deletePassword, setDeletePassword] = useState("");
@@ -362,11 +366,12 @@ export function AccountPage({ onBilling }: { onBilling: (b: BillingInfo | null) 
               </details>
             </Panel>
           ) : (
-            <Panel title={query.get("next") === "subscription" ? "Create an account to subscribe" : "Create a free account"}>
+            <Panel title={query.get("next") === "subscription" ? "Create an account to subscribe" : returning ? "Sign in" : "Create a free account"}>
               {query.get("next") === "subscription" && (
                 <p className="mb-3 font-read text-ink-soft">After this you&apos;ll pick monthly or yearly. The free trial is optional, and confirming your email lets you pay.</p>
               )}
               <AuthForm
+                initialMode={returning ? "signin" : "signup"}
                 onDone={() => {
                   void refreshAccount().then(onBilling);
                   if (query.get("next") === "subscription") go("/subscription");
