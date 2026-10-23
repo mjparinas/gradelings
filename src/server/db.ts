@@ -426,6 +426,16 @@ const SCHEMA = [
     last_day INTEGER NOT NULL
   )`,
   `CREATE INDEX IF NOT EXISTS guest_devices_day ON guest_devices (last_day)`,
+  // Failed sign-ins to admin and support accounts, for the System page's Admin security card and the alert for
+  // repeated failures. Only addresses listed in ADMIN_EMAILS or SUPPORT_EMAILS are recorded (their own addresses,
+  // never a visitor's), with which step failed. Rows older than 30 days are deleted as new ones are added.
+  `CREATE TABLE IF NOT EXISTS staff_sign_in_failures (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    at INTEGER NOT NULL,
+    email TEXT NOT NULL,
+    step TEXT NOT NULL
+  )`,
+  `CREATE INDEX IF NOT EXISTS staff_sign_in_failures_at ON staff_sign_in_failures (at)`,
 ];
 
 /** Columns added after the first release. SQLite has no "ADD COLUMN IF NOT EXISTS". */
