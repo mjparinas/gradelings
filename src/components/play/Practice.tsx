@@ -187,19 +187,18 @@ export function UnitList({ subject }: { subject: SubjectId }) {
     // Little kids go straight in (after a first look at how it works, when the unit has a lesson);
     // older kids see their level and the Challenge option first.
     if (band === "little") go(ref.unit.lesson && !d.units[key] ? "/lesson" : "/session", ref.unit.lesson && !d.units[key] ? { scope: key } : { mode: "practice", scope: key });
-    else if (fromLink) go("/session", { mode: "practice", scope: key });
+    else if (fromLink) go("/session", { mode: "practice", scope: key }, true);
     else setSelected(key);
   };
 
   // A link from the unit's public page (`playHref`) starts that unit's practice once: a visitor who came for
-  // "the water cycle" gets its first question, not a list. The unit comes out of the address first, so Back from
-  // the practice lands on this list instead of starting it again.
+  // "the water cycle" gets its first question, not a list. The practice replaces this address (which still names
+  // the unit), so Back never lands here to start it again.
   const wanted = useRoute().query.get("unit");
   const opened = useRef(false);
   useEffect(() => {
     if (opened.current || !wanted || !course?.units.some((u) => u.id === wanted)) return;
     opened.current = true;
-    window.history.replaceState(window.history.state, "", href(`/practice/${subject}`));
     start(wanted, true);
   });
 

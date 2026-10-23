@@ -213,12 +213,10 @@ describe("UnitList", () => {
     expect(h.go).toHaveBeenLastCalledWith("/session", { mode: "practice", scope: "2/math/add" });
   });
 
-  it("a link from the unit's public page starts that unit's practice once, and takes the unit out of the address", () => {
+  it("a link from the unit's public page starts that unit's practice once, in place of the link", () => {
     h.query = new URLSearchParams("unit=sub");
-    const replace = vi.spyOn(window.history, "replaceState");
     const { rerender } = inBand("big", <UnitList subject="math" />);
-    expect(h.go).toHaveBeenCalledWith("/session", { mode: "practice", scope: "2/math/sub" });
-    expect(replace).toHaveBeenCalledWith(window.history.state, "", "#/practice/math");
+    expect(h.go).toHaveBeenCalledWith("/session", { mode: "practice", scope: "2/math/sub" }, true);
     expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
     rerender(
       <BandProvider value="big">
@@ -226,7 +224,6 @@ describe("UnitList", () => {
       </BandProvider>,
     );
     expect(h.go).toHaveBeenCalledTimes(1);
-    replace.mockRestore();
   });
 
   it("a link sends little kids straight into the unit, and ignores a unit the course doesn't have", () => {
