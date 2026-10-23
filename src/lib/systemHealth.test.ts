@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { betterStackState, emailRateState, SETTINGS, statuspageState, stripeStatusState, uptimePercent, worst } from "./systemHealth";
+import { betterStackState, capacityState, emailRateState, megabytes, restoreDrillState, SETTINGS, speedState, statuspageState, stripeStatusState, uptimePercent, worst } from "./systemHealth";
 
 describe("system health helpers", () => {
   it("takes the worst state, ignoring checks that aren't set up", () => {
@@ -34,5 +34,33 @@ describe("system health helpers", () => {
       for (const n of s.names) expect(n).toMatch(/^[A-Z][A-Z0-9_]+$/);
       expect(s.what).toMatch(/\.$/);
     }
+  });
+
+  it("warns when no restore practice is recorded or it is over 35 days old", () => {
+    const now = Date.parse("2026-10-23T12:00:00Z");
+    const day = 86_400_000;
+    expect(restoreDrillState(null, now)).toBe("warn");
+    expect(restoreDrillState(now - 35 * day, now)).toBe("ok");
+    expect(restoreDrillState(now - 36 * day, now)).toBe("warn");
+  });
+
+  it("warns on slow or failing sync, or repeated fetch failures", () => {
+    expect(speedState(900, 0.01, 0)).toBe("ok");
+    expect(speedState(null, null, null)).toBe("ok");
+    expect(speedState(3001, 0, 0)).toBe("warn");
+    expect(speedState(900, 0.05, 0)).toBe("warn");
+    expect(speedState(900, 0, 5)).toBe("warn");
+  });
+
+  it("warns at 70% of the storage limit and goes down at 90%", () => {
+    expect(capacityState(null)).toBe("ok");
+    expect(capacityState(0.69)).toBe("ok");
+    expect(capacityState(0.7)).toBe("warn");
+    expect(capacityState(0.9)).toBe("down");
+  });
+
+  it("writes sizes in megabytes", () => {
+    expect(megabytes(1_048_576 * 2.46)).toBe("2.5 MB");
+    expect(megabytes(1_048_576 * 1240)).toBe("1,240 MB");
   });
 });

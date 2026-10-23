@@ -56,6 +56,10 @@ export const CHECKS = [
   { id: "payments", title: "Payments (Stripe)" },
   { id: "email", title: "Email (Resend)" },
   { id: "job", title: "Daily email job" },
+  { id: "backups", title: "Backups" },
+  { id: "speed", title: "Speed (Sync)" },
+  { id: "security", title: "Admin security" },
+  { id: "capacity", title: "Capacity" },
   { id: "settings", title: "Settings" },
 ] as const;
 export type CheckId = (typeof CHECKS)[number]["id"];
@@ -124,6 +128,43 @@ export function emailRateState(sent: number, bounced: number, complained: number
   return "ok";
 }
 
+/** A restore drill (docs/RESTORE.md) older than this is stale: monthly, with a few days of slack. */
+export const RESTORE_DRILL_DAYS = 35;
+
+/** Warns when no restore drill has been recorded or the last one is stale. */
+export function restoreDrillState(at: number | null, now: number): CheckState {
+  if (at == null) return "warn";
+  return now - at > RESTORE_DRILL_DAYS * 86_400_000 ? "warn" : "ok";
+}
+
+/** Sync is slow past a 95th-percentile of 3 seconds, or when 5 in 100 timed requests fail. */
+export const SYNC_SLOW_MS = 3000;
+export const SYNC_FAILURE_RATE = 0.05;
+/** "fetch failed" errors in a day (the server couldn't reach the database or another service). */
+export const FETCH_FAILED_WARN = 5;
+
+export function speedState(p95Ms: number | null, failureRate: number | null, fetchFailed: number | null): CheckState {
+  if ((p95Ms ?? 0) > SYNC_SLOW_MS || (failureRate ?? 0) >= SYNC_FAILURE_RATE || (fetchFailed ?? 0) >= FETCH_FAILED_WARN) return "warn";
+  return "ok";
+}
+
+/** Failed staff sign-ins in a day before the card warns. */
+export const STAFF_FAILURES_WARN = 10;
+/** Failed staff sign-ins inside this window, across all staff addresses, send the owner an alert. */
+export const STAFF_FLOOD = { count: 5, windowMs: 15 * 60_000 } as const;
+
+/** Share of the database size limit used, as a state: a warning at 70%, down at 90%. */
+export function capacityState(usedShare: number | null): CheckState {
+  if (usedShare == null) return "ok";
+  return usedShare >= 0.9 ? "down" : usedShare >= 0.7 ? "warn" : "ok";
+}
+
+/** Whole megabytes with a thousands separator ("1,240 MB"), or one decimal under 10. */
+export function megabytes(bytes: number): string {
+  const mb = bytes / 1_048_576;
+  return mb < 10 ? `${Math.round(mb * 10) / 10} MB` : `${Math.round(mb).toLocaleString("en-CA")} MB`;
+}
+
 /** The settings the System page checks are present. Values are never read out, only whether each is set. */
 export const SETTINGS: { names: string[]; label: string; need: "required" | "recommended" | "optional"; what: string }[] = [
   { names: ["NEXT_PUBLIC_SITE_URL"], label: "Site address", need: "required", what: "Links in emails." },
@@ -146,6 +187,7 @@ export const SETTINGS: { names: string[]; label: string; need: "required" | "rec
   { names: ["GOOGLE_CLIENT_ID"], label: "Google sign-in ID", need: "recommended", what: "The \"Continue with Google\" button (with the secret below)." },
   { names: ["GOOGLE_CLIENT_SECRET"], label: "Google sign-in secret", need: "recommended", what: "The \"Continue with Google\" button (with the ID above)." },
   { names: ["ANTHROPIC_API_KEY"], label: "AI drafts key", need: "optional", what: "Draft with AI in the Inbox." },
+  { names: ["DATABASE_SIZE_LIMIT_MB"], label: "Database size limit", need: "optional", what: "Your Turso plan's storage, in megabytes, for the Capacity card's warning." },
   { names: ["GITHUB_TOKEN"], label: "GitHub read token", need: "optional", what: "Uptime and builds on this page." },
 ];
 

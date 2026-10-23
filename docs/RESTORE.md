@@ -60,7 +60,7 @@ You need the [Turso CLI](https://docs.turso.tech/cli/introduction) signed in (`t
    turso db destroy gradelings-restore-test-20261017 --yes
    ```
 
-8. **Record it.** Add the date, the time restored to, how long steps 2 to 4 took and any problem to the table at the bottom of this page, and tick the "Turso backups" item in `docs/DEPLOY.md` section 6.
+8. **Record it.** In the admin panel's System tab, press **Record Restore Practice** on the Backups card (it warns after 35 days without one). Add the date, the time restored to, how long steps 2 to 4 took and any problem to the table at the bottom of this page, and tick the "Turso backups" item in `docs/DEPLOY.md` section 6.
 
 ## In a real emergency
 
