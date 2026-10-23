@@ -7,8 +7,17 @@ import {
   type CheckResult,
   type StatusPageName,
   emailRateState,
+  capacityState,
+  FETCH_FAILED_WARN,
+  megabytes,
   NEVER_IN_PRODUCTION,
+  restoreDrillState,
+  RESTORE_DRILL_DAYS,
   SETTINGS,
+  speedState,
+  STAFF_FAILURES_WARN,
+  SYNC_FAILURE_RATE,
+  SYNC_SLOW_MS,
   statuspageState,
   stripeStatusState,
   uptimePercent,
@@ -20,6 +29,9 @@ import {
   type SystemReport,
 } from "@/lib/systemHealth";
 import { createHash } from "node:crypto";
+import { traceRate, traceScale } from "@/lib/sentry-traces";
+import { adminEmails, audit, supportEmails, twoFactorMode } from "./admin";
+import { STAFF_ALERT_KEY, staffFailuresSince } from "./staffSignIns";
 import { PRICES_BY_CURRENCY, type Currency } from "@/lib/plan";
 import { query } from "./db";
 import { emailCounts } from "./emailLog";
@@ -664,6 +676,251 @@ function summarizeJob(detail: string): string {
   }
 }
 
+// ---------- Backups ----------
+
+const DRILL_KEY = "restore-drill";
+export interface RestoreDrill {
+  /** When the restore was practised (docs/RESTORE.md). */
+  at: number;
+  by: string;
+  /** When it was written down here. */
+  recordedAt: number;
+}
+
+export async function lastRestoreDrill(): Promise<RestoreDrill | null> {
+  try {
+    const d = JSON.parse((await getSetting(DRILL_KEY)) ?? "null") as Partial<RestoreDrill> | null;
+    return d && typeof d.at === "number" ? { at: d.at, by: String(d.by ?? ""), recordedAt: Number(d.recordedAt ?? d.at) } : null;
+  } catch {
+    return null;
+  }
+}
+
+/** Writes down that a restore was practised on a day (not in the future, not over a year ago). Throws a message to show. */
+export async function recordRestoreDrill(admin: string, at: number, now = Date.now()): Promise<RestoreDrill> {
+  if (!Number.isFinite(at) || at > now + DAY) throw new Error("That date is in the future.");
+  if (at < now - 400 * DAY) throw new Error("That date is over a year ago. Practise a restore again.");
+  const drill: RestoreDrill = { at: Math.min(at, now), by: admin, recordedAt: now };
+  await setSetting(DRILL_KEY, JSON.stringify(drill));
+  await audit(admin, "restore-drill.record", null, { at: drill.at });
+  return drill;
+}
+
+export async function backupsCheck(now = Date.now()): Promise<HealthCheck> {
+  const url = env("DATABASE_URL") || env("TURSO_DATABASE_URL");
+  const hosted = /^(libsql|https?|wss?):/.test(url);
+  const repo = env("GITHUB_REPOSITORY");
+  const link = hosted ? { label: "Turso dashboard", href: "https://app.turso.tech/" } : repo ? { label: "Restore runbook", href: `https://github.com/${repo}/blob/main/docs/RESTORE.md` } : undefined;
+  if (!hosted) return { id: "backups", title: "Backups", state: "off", summary: "The database is a local file, so Turso's backups don't apply.", rows: [] };
+  const drill = await lastRestoreDrill();
+  const state = restoreDrillState(drill?.at ?? null, now);
+  return {
+    id: "backups",
+    title: "Backups",
+    state,
+    summary: !drill
+      ? "No restore practice has been recorded. A backup you haven't restored is only a hope."
+      : state === "warn"
+        ? `The last restore practice was over ${RESTORE_DRILL_DAYS} days ago.`
+        : "A restore was practised recently.",
+    rows: [
+      drill ? { label: "Last restore practised", value: drill.by ? `Recorded by ${drill.by}` : "", at: drill.at, state } : { label: "Last restore practised", value: "Never recorded", state },
+      { label: "How", value: "docs/RESTORE.md: restore into a new database, run scripts/restore-check.mjs, delete the copy." },
+    ],
+    setup: drill && state === "ok" ? undefined : "Practise a restore (docs/RESTORE.md), then record the date below.",
+    link,
+  };
+}
+
+// ---------- Speed ----------
+
+const SYNC_TRANSACTION = "POST /api/sync/";
+
+async function sentryTable(base: string, token: string, org: string, project: string, dataset: string, fields: string[], query: string): Promise<Record<string, unknown>> {
+  const p = new URLSearchParams({ dataset, statsPeriod: "24h", query: `project:${project} ${query}`, per_page: "1" });
+  for (const f of fields) p.append("field", f);
+  const res = await getJson<{ data?: Record<string, unknown>[] }>("Sentry", `${base}/api/0/organizations/${encodeURIComponent(org)}/events/?${p}`, { authorization: `Bearer ${token}` });
+  return res.data?.[0] ?? {};
+}
+
+const num = (v: unknown): number | null => (typeof v === "number" && Number.isFinite(v) ? v : null);
+
+export async function speedCheck(): Promise<HealthCheck> {
+  const token = env("SENTRY_READ_TOKEN") || env("SENTRY_AUTH_TOKEN");
+  const org = env("SENTRY_ORG");
+  const project = env("SENTRY_PROJECT");
+  const title = "Speed (Sync)";
+  if (!token || !org || !project)
+    return { id: "speed", title, state: "off", summary: "Timing is read from Sentry, which isn't connected to this page.", rows: [], setup: "Set SENTRY_READ_TOKEN (read access to the organization's events), SENTRY_ORG and SENTRY_PROJECT." };
+  const base = (env("SENTRY_API_BASE") || "https://sentry.io").replace(/\/$/, "");
+  const [timing, fetchFailed] = await Promise.allSettled([
+    sentryTable(base, token, org, project, "spans", ["count()", "p50(span.duration)", "p95(span.duration)", "failure_rate()"], `is_transaction:true transaction:"${SYNC_TRANSACTION}"`),
+    sentryTable(base, token, org, project, "errors", ["count()"], 'message:"fetch failed"'),
+  ]);
+  const refused = [timing, fetchFailed].find((r) => r.status === "rejected" && r.reason instanceof HttpError && (r.reason.status === 401 || r.reason.status === 403));
+  if (refused)
+    return { id: "speed", title, state: "down", summary: `${(refused as PromiseRejectedResult).reason.message} The token can't read the organization's events.`, rows: [], setup: "Give the Sentry token read access to the organization (org:read) as well as Issue & Event." };
+  const rows: CheckRow[] = [];
+  const t = timing.status === "fulfilled" ? timing.value : null;
+  const p95 = t ? num(t["p95(span.duration)"]) : null;
+  const rate = t ? num(t["failure_rate()"]) : null;
+  const n = t ? num(t["count()"]) : null;
+  const failed = fetchFailed.status === "fulfilled" ? num(fetchFailed.value["count()"]) : null;
+  // A question Sentry couldn't answer is never "all fine".
+  const state: CheckState = !t || fetchFailed.status === "rejected" ? "warn" : speedState(p95, rate, failed);
+  if (t) {
+    const sample = traceRate(SYNC_TRANSACTION, traceScale(env("SENTRY_TRACES_SCALE")));
+    rows.push(
+      { label: "Timed syncs in 24 hours", value: `${(n ?? 0).toLocaleString("en-CA")}${sample > 0 && sample < 1 ? ` (about 1 in ${Math.round(1 / sample)} are timed)` : ""}` },
+      { label: "Typical sync", value: p50ms(t) },
+      { label: "Slowest 1 in 20 syncs", value: p95 == null ? "No data" : `${Math.round(p95).toLocaleString("en-CA")} ms`, state: (p95 ?? 0) > SYNC_SLOW_MS ? "warn" : undefined },
+      { label: "Syncs that failed", value: rate == null ? "No data" : `${Math.round(rate * 1000) / 10}%`, state: (rate ?? 0) >= SYNC_FAILURE_RATE ? "warn" : undefined },
+    );
+  } else rows.push({ label: "Sync timing", value: `Couldn't read it: ${(timing as PromiseRejectedResult).reason.message}`, state: "warn" });
+  if (fetchFailed.status === "fulfilled") rows.push({ label: "\"fetch failed\" errors in 24 hours", value: String(failed ?? 0), state: (failed ?? 0) >= FETCH_FAILED_WARN ? "warn" : undefined });
+  else rows.push({ label: "\"fetch failed\" errors", value: `Couldn't read them: ${(fetchFailed as PromiseRejectedResult).reason.message}`, state: "warn" });
+  const bothFailed = !t && fetchFailed.status === "rejected";
+  return {
+    id: "speed",
+    title,
+    state,
+    summary: bothFailed
+      ? "Sentry didn't answer."
+      : !t || fetchFailed.status === "rejected"
+        ? "Part of the timing couldn't be read from Sentry."
+        : state === "warn"
+        ? "Sync is slow or failing: check Sentry."
+        : n === 0 && t
+          ? "No syncs were timed in the last day."
+          : "Sync is fast and not failing.",
+    rows,
+    link: { label: "Sentry performance", href: `https://${org}.sentry.io/explore/traces/` },
+  };
+}
+
+function p50ms(t: Record<string, unknown>): string {
+  const v = num(t["p50(span.duration)"]);
+  return v == null ? "No data" : `${Math.round(v).toLocaleString("en-CA")} ms`;
+}
+
+// ---------- Admin security ----------
+
+export async function securityCheck(now = Date.now()): Promise<HealthCheck> {
+  const admins = [...adminEmails()];
+  const support = [...supportEmails()];
+  const staff = [...admins, ...support];
+  const title = "Admin security";
+  if (!staff.length) return { id: "security", title, state: "off", summary: "No admin accounts are listed.", rows: [], setup: "Set ADMIN_EMAILS." };
+  const accounts = await query<{ email: string; verified: number | null; totp: number | null }>(
+    `SELECT email, email_verified_at AS verified, totp_enabled_at AS totp FROM parents WHERE role != 'student' AND LOWER(email) IN (${staff.map(() => "?").join(",")})`,
+    staff,
+  );
+  const byEmail = new Map(accounts.map((a) => [String(a.email).toLowerCase(), a]));
+  const mode = twoFactorMode();
+  const rows: CheckRow[] = staff.map((e) => {
+    const a = byEmail.get(e);
+    const role = admins.includes(e) ? "Admin" : "Support";
+    if (!a) return { label: `${role} ${e}`, value: "No account yet" };
+    if (a.totp != null) return { label: `${role} ${e}`, value: "Two-step on", at: Number(a.totp), state: "ok" as CheckState };
+    return { label: `${role} ${e}`, value: mode === "required" ? "No two-step: can't open the panel until it's set up" : "No two-step (optional on this server)", state: "warn" as CheckState };
+  });
+  const without = rows.filter((r) => r.state === "warn").length;
+  const day = await staffFailuresSince(now - DAY);
+  const week = await staffFailuresSince(now - 7 * DAY);
+  const alerts = await query<{ key: string; at: number }>(
+    "SELECT key, updated_at AS at FROM admin_settings WHERE (key = ? OR key LIKE 'alert-sent:student-login-guessing%') AND updated_at >= ?",
+    [`alert-sent:${STAFF_ALERT_KEY}`, now - 7 * DAY],
+  );
+  const staffAlert = alerts.filter((a) => a.key === `alert-sent:${STAFF_ALERT_KEY}`).map((a) => Number(a.at))[0];
+  const studentAlert = Math.max(0, ...alerts.filter((a) => a.key !== `alert-sent:${STAFF_ALERT_KEY}`).map((a) => Number(a.at)));
+  rows.push(
+    { label: "Two-step sign-in", value: mode === "required" ? "Required for the panel" : "Optional (ADMIN_2FA=optional)", state: mode === "required" ? "ok" : "warn" },
+    { label: "Failed sign-ins in 24 hours", value: String(day.total), state: day.total >= STAFF_FAILURES_WARN ? "warn" : undefined },
+    { label: "Failed sign-ins in 7 days", value: week.total ? `${week.total} (${week.byEmail.map((r) => `${r.n} for ${r.email}`).join(", ")})` : "0" },
+    staffAlert ? { label: "Admin sign-in alert", value: "Sent", at: staffAlert, state: "warn" } : { label: "Admin sign-in alert", value: "None in 7 days" },
+    studentAlert ? { label: "Class sign-in guessing alert", value: "Sent", at: studentAlert, state: "warn" } : { label: "Class sign-in guessing alert", value: "None in 7 days" },
+  );
+  const state = worst(rows.map((r) => r.state ?? "ok"));
+  return {
+    id: "security",
+    title,
+    state,
+    summary: without
+      ? `${plural(without, "staff account")} without two-step sign-in.`
+      : staffAlert || day.total >= STAFF_FAILURES_WARN
+        ? "Repeated failed sign-ins to staff accounts."
+        : mode === "optional"
+          ? "Two-step sign-in is optional on this server."
+          : "Every staff account uses two-step sign-in.",
+    rows,
+  };
+}
+
+// ---------- Capacity ----------
+
+const SAMPLES_KEY = "capacity-samples";
+interface SizeSample {
+  at: number;
+  bytes: number;
+}
+
+/** The database's size now, one sample a day kept for 90 days so growth can be shown. */
+async function sizeSamples(bytes: number, now: number): Promise<SizeSample[]> {
+  let samples: SizeSample[] = [];
+  try {
+    samples = (JSON.parse((await getSetting(SAMPLES_KEY)) ?? "[]") as SizeSample[]).filter((s) => Number.isFinite(s.at) && Number.isFinite(s.bytes));
+  } catch {
+    samples = [];
+  }
+  const last = samples[samples.length - 1];
+  if (!last || now - last.at >= DAY) {
+    samples = [...samples, { at: now, bytes }].filter((s) => s.at >= now - 90 * DAY);
+    await setSetting(SAMPLES_KEY, JSON.stringify(samples));
+  }
+  return samples;
+}
+
+export async function capacityCheck(now = Date.now()): Promise<HealthCheck> {
+  const title = "Capacity";
+  const [size] = await query<{ pages: number; page_size: number }>("SELECT (SELECT page_count FROM pragma_page_count) AS pages, (SELECT page_size FROM pragma_page_size) AS page_size");
+  const bytes = Number(size?.pages ?? 0) * Number(size?.page_size ?? 0);
+  const [ev] = await query<{ last: number | null }>("SELECT MAX(seq) AS last FROM events");
+  const samples = await sizeSamples(bytes, now);
+  const limitMb = Number(env("DATABASE_SIZE_LIMIT_MB"));
+  const limit = Number.isFinite(limitMb) && limitMb > 0 ? limitMb * 1_048_576 : null;
+  const used = limit ? bytes / limit : null;
+  const state = capacityState(used);
+  const rows: CheckRow[] = [
+    { label: "Database size", value: bytes ? megabytes(bytes) : "Unknown", state: state === "ok" ? undefined : state },
+    { label: "Practice events written", value: Number(ev?.last ?? 0).toLocaleString("en-CA") },
+    { label: "Practice events kept", value: "Forever: nothing deletes them, so this only grows" },
+  ];
+  const first = samples[0];
+  const days = first ? (now - first.at) / DAY : 0;
+  let perMonth: number | null = null;
+  if (first && days >= 7) {
+    perMonth = Math.max(0, ((bytes - first.bytes) / days) * 30);
+    rows.push({ label: `Growth over ${Math.round(days)} days`, value: `${megabytes(Math.max(0, bytes - first.bytes))}, about ${megabytes(perMonth)} a month` });
+  } else rows.push({ label: "Growth", value: "Measured once a week of history has built up" });
+  if (limit) {
+    rows.push({ label: "Plan limit", value: `${megabytes(limit)} (${Math.round((used ?? 0) * 100)}% used)`, state });
+    if (perMonth && perMonth > 0 && bytes < limit) rows.push({ label: "Full in about", value: plural(Math.max(1, Math.round((limit - bytes) / perMonth)), "month") });
+  }
+  return {
+    id: "capacity",
+    title,
+    state,
+    summary: limit
+      ? state === "ok"
+        ? `${Math.round((used ?? 0) * 100)}% of the storage limit is used.`
+        : `${Math.round((used ?? 0) * 100)}% of the storage limit is used: upgrade the Turso plan or prune data.`
+      : "Set the plan's storage limit to get a warning before the database fills.",
+    rows,
+    setup: limit ? undefined : "Set DATABASE_SIZE_LIMIT_MB to your Turso plan's storage in megabytes (shown on Turso's pricing page and your dashboard).",
+    link: { label: "Turso dashboard", href: "https://app.turso.tech/" },
+  };
+}
+
 // ---------- Settings ----------
 
 export function settingsCheck(): HealthCheck {
@@ -760,6 +1017,10 @@ const RUNNERS: Record<CheckId, (now: number) => Promise<HealthCheck>> = {
   payments: (now) => paymentsCheck(now),
   email: (now) => emailCheck(now),
   job: (now) => jobCheck(now),
+  backups: (now) => backupsCheck(now),
+  speed: () => speedCheck(),
+  security: (now) => securityCheck(now),
+  capacity: (now) => capacityCheck(now),
   settings: async () => settingsCheck(),
 };
 

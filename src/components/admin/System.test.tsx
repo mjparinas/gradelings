@@ -78,6 +78,32 @@ describe("System", () => {
     expect(screen.getByText(/open 3 h/)).toBeInTheDocument();
   });
 
+  it("records a restore practice from the Backups card and shows the new answer", async () => {
+    const backups = (state: "warn" | "ok", summary: string): HealthCheck => ({ id: "backups", title: "Backups", state, summary, rows: [] });
+    const r = report({ checks: [backups("warn", "No restore practice has been recorded.")], statusPages: [] });
+    serve(r);
+    const user = userEvent.setup();
+    render(<System />);
+    const card = (await screen.findByText("No restore practice has been recorded.")).closest("li")!;
+    mocks.call.mockImplementation((url: string, method?: string) => {
+      if (method === "POST") return Promise.resolve({});
+      return Promise.resolve({ checkedAt: now, result: backups("ok", "A restore was practised recently.") });
+    });
+    await user.click(within(card).getByRole("button", { name: "Record Restore Practice" }));
+    expect(mocks.call).toHaveBeenCalledWith("/api/admin/system/", "POST", { restoreDrill: new Date().toISOString().slice(0, 10) });
+    expect(await screen.findByText("A restore was practised recently.")).toBeInTheDocument();
+  });
+
+  it("shows why a restore practice couldn't be recorded", async () => {
+    serve(report({ checks: [{ id: "backups", title: "Backups", state: "warn", summary: "Never.", rows: [] }], statusPages: [] }));
+    const user = userEvent.setup();
+    render(<System />);
+    await screen.findByText("Never.");
+    mocks.call.mockRejectedValueOnce(new Error("That date is in the future."));
+    await user.click(screen.getByRole("button", { name: "Record Restore Practice" }));
+    expect(await screen.findByText("That date is in the future.")).toBeInTheDocument();
+  });
+
   it("draws every card at once and fills each in as its answer arrives", async () => {
     const held = serve(report(), { hold: ["errors", "Vercel"] });
     render(<System />);
@@ -87,7 +113,7 @@ describe("System", () => {
     const errors = screen.getByRole("heading", { name: "Errors (Sentry)" }).closest("li")!;
     expect(errors).toHaveAttribute("aria-busy", "true");
     expect(within(errors).getByText("Checking…")).toBeInTheDocument();
-    expect(screen.getByText(/^Checking every service… 13 of 15 done\.$/)).toBeInTheDocument();
+    expect(screen.getByText(/^Checking every service… 17 of 19 done\.$/)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Checking…" })).toBeDisabled();
     await act(async () => held.errors());
     expect(within(screen.getByRole("heading", { name: "Errors (Sentry)" }).closest("li")!).getByText("Needs a look")).toBeInTheDocument();

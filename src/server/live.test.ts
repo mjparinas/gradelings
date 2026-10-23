@@ -198,6 +198,18 @@ describe("live questions", () => {
     expect((await swap()).status).toBe(409);
   });
 
+  it("finds another question to swap in when many in a row share a prompt (blocks pictures)", async () => {
+    // This class's seeds give "What number do the blocks show?" (a different picture each time) for ten
+    // variants in a row, which a look through only eight couldn't get past.
+    const teacher = await account("swap-run-teacher@example.com");
+    const { class: made } = await (await classes.POST(req("/api/classes/", "POST", { name: "Room 9", grade: "2" }, teacher))).json();
+    const id = "de75492b-3c79-480e-868e-9c639d027e72";
+    await dbm.run("UPDATE classes SET id = ? WHERE id = ?", [id, made.id]);
+    const cls = (await dbm.query<import("@/server/classroom").ClassRow>("SELECT * FROM classes WHERE id = ?", [id]))[0];
+    expect(await live.startLive(cls, UNIT, "t", Date.now())).not.toBeNull();
+    expect(await live.swapNextLive(cls)).toBe(true);
+  });
+
   it("doesn't repeat a question from the same unit when five are asked in a row (an exit ticket)", async () => {
     const { teacher, cls } = await classWithChild("ticket");
     const post = async () => (await (await teacherLive.POST(req("/api/classes/live/", "POST", { classId: cls.id, unitKey: UNIT }, teacher))).json()).live;

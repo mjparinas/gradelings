@@ -5,7 +5,10 @@ import { query } from "./db";
 import { sendEmail } from "./email";
 import { alertEmail } from "./emailTemplates";
 import { getSetting, setSetting } from "./payments";
+import { recordStaffFailure, STAFF_ALERT_KEY, staffFailuresSince, type StaffStep } from "./staffSignIns";
 import { systemReport } from "./systemHealth";
+import { staffEmails } from "./admin";
+import { STAFF_FLOOD } from "@/lib/systemHealth";
 
 // Email to the owner: instant alerts (a payment failed, a dispute, the daily job failed, a System check went
 // down) and a morning digest from the daily job. They go only to confirmed accounts listed in ADMIN_EMAILS.
@@ -63,6 +66,31 @@ export async function sendAlert(key: string, a: { subject: string; lines: string
   } catch (e) {
     console.error("[alert] could not send", (e as Error).message);
     return false;
+  }
+}
+
+/**
+ * Notes a failed sign-in to an admin or support account (other addresses are ignored) and alerts the admins when
+ * several fail within a few minutes. Never throws: the sign-in answer must not depend on it.
+ */
+export async function reportStaffFailure(email: string, step: StaffStep, now = Date.now(), origin?: string): Promise<void> {
+  try {
+    if (!staffEmails().has(email.toLowerCase())) return;
+    await recordStaffFailure(email, step, now);
+    const recent = await staffFailuresSince(now - STAFF_FLOOD.windowMs);
+    if (recent.total < STAFF_FLOOD.count) return;
+    await sendAlert(
+      STAFF_ALERT_KEY,
+      {
+        subject: "Repeated failed admin sign-ins",
+        lines: [`${recent.total} sign-ins to admin or support accounts failed in the last ${STAFF_FLOOD.windowMs / 60_000} minutes.`, "If that wasn't you, check the Admin Security card on the System tab."],
+        path: "/admin/?tab=System",
+      },
+      now,
+      origin,
+    );
+  } catch (e) {
+    console.error("[alert] could not note a failed staff sign-in", (e as Error).message);
   }
 }
 

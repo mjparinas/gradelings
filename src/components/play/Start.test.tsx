@@ -33,6 +33,9 @@ vi.mock("../Critter", async (orig) => ({
 import { CRITTERS } from "../Critter";
 import { CardSignIn, ClassSignIn, FirstRun, NewChild, Picker } from "./Start";
 
+// next.config.ts sets trailingSlash, which next/link reads from this variable.
+vi.stubEnv("__NEXT_TRAILING_SLASH", "1");
+
 const click = (name: string | RegExp) => fireEvent.click(screen.getByRole("button", { name }));
 
 beforeEach(() => {
@@ -41,6 +44,7 @@ beforeEach(() => {
   h.account = null;
   h.flagOn = true;
   window.location.hash = "";
+  localStorage.clear();
 });
 
 async function fillIn(name = "Sam") {
@@ -65,6 +69,31 @@ describe("FirstRun", () => {
     expect(screen.getByRole("heading", { name: "Sign in to your class" })).toBeInTheDocument();
     click("← Back");
     expect(screen.getByText(/I'm Ollie the Otter/)).toBeInTheDocument();
+  });
+});
+
+describe("FirstRun sign-in", () => {
+  it("offers a link to sign in with an existing account", () => {
+    localStorage.clear();
+    render(<FirstRun />);
+    expect(screen.getByRole("link", { name: "Already have an account? Sign in" })).toHaveAttribute("href", "/parents/#/account?mode=signin");
+    expect(screen.queryByText(/Welcome back/)).not.toBeInTheDocument();
+  });
+
+  it("welcomes back a device a parent has signed in on, still letting a new child start", () => {
+    localStorage.setItem("grademap.parent", "1");
+    render(<FirstRun />);
+    expect(screen.getByRole("link", { name: "Welcome back! Sign in" })).toHaveAttribute("href", "/parents/#/account?mode=signin");
+    expect(screen.queryByRole("link", { name: "Already have an account? Sign in" })).not.toBeInTheDocument();
+    click("I'm new here");
+    expect(screen.getByText("What's your name?")).toBeInTheDocument();
+    localStorage.clear();
+  });
+
+  it("opens the class sign-in with no codes when the link asks for it", () => {
+    window.location.hash = "#/class";
+    render(<FirstRun />);
+    expect(screen.getByRole("heading", { name: "Sign in to your class" })).toBeInTheDocument();
   });
 });
 

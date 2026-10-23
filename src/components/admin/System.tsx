@@ -68,7 +68,7 @@ function StateBadge({ state }: { state: CheckState }) {
   );
 }
 
-function CheckCard({ c, now }: { c: HealthCheck; now: number }) {
+function CheckCard({ c, now, children }: { c: HealthCheck; now: number; children?: React.ReactNode }) {
   return (
     <li className={card}>
       <div className="flex flex-wrap items-start justify-between gap-2">
@@ -103,7 +103,51 @@ function CheckCard({ c, now }: { c: HealthCheck; now: number }) {
           </a>
         </p>
       )}
+      {children}
     </li>
+  );
+}
+
+const today = () => new Date().toISOString().slice(0, 10);
+
+/** Writes down the day a restore was practised (docs/RESTORE.md), for the Backups card. */
+function RestoreDrillForm({ onSaved }: { onSaved: () => void }) {
+  const [day, setDay] = useState(today);
+  const [busy, setBusy] = useState(false);
+  const [msg, setMsg] = useState("");
+  const save = async () => {
+    setBusy(true);
+    setMsg("");
+    try {
+      await call("/api/admin/system/", "POST", { restoreDrill: day });
+      onSaved();
+    } catch (e) {
+      setMsg((e as Error).message);
+    } finally {
+      setBusy(false);
+    }
+  };
+  return (
+    <form
+      className="mt-3 flex flex-wrap items-end gap-2 border-t border-line pt-3 text-sm"
+      onSubmit={(e) => {
+        e.preventDefault();
+        void save();
+      }}
+    >
+      <label className="flex flex-col gap-1 font-semibold">
+        Restore practised on
+        <input type="date" value={day} max={today()} onChange={(e) => setDay(e.target.value)} className="min-h-11 rounded-xl border border-line px-3 font-normal" required />
+      </label>
+      <button type="submit" disabled={busy || !day} className="min-h-11 rounded-xl bg-[#2a5bd7] px-4 font-semibold text-white disabled:opacity-50">
+        {busy ? "Saving…" : "Record Restore Practice"}
+      </button>
+      {msg && (
+        <p role="alert" className="w-full text-nudge-dark">
+          {msg}
+        </p>
+      )}
+    </form>
   );
 }
 
@@ -190,6 +234,12 @@ export function System() {
     }
   }, []);
   useEffect(() => load(false), [load]);
+  const reloadOne = useCallback((id: string) => {
+    call<CheckResult<HealthCheck>>(`/api/admin/system/?check=${id}&refresh=1`).then(
+      (r) => setChecks((s) => ({ ...s, [id]: r })),
+      (e: Error) => setErr(`Couldn't check ${id}: ${e.message}`),
+    );
+  }, []);
 
   // Auto refresh: a quiet round every AUTO_REFRESH_MS while the tab is in view. Cards keep their last answer
   // until the new one arrives, so nothing flickers. A hidden tab asks for nothing, and catches up when it is
@@ -273,7 +323,13 @@ export function System() {
       <ul className="grid gap-3 lg:grid-cols-2">
         {CHECKS.map((c) => {
           const r = checks[c.id];
-          return r ? <CheckCard key={c.id} c={r.result} now={r.checkedAt} /> : <Skeleton key={c.id} title={c.title} />;
+          return r ? (
+            <CheckCard key={c.id} c={r.result} now={r.checkedAt}>
+              {c.id === "backups" && r.result.state !== "off" && <RestoreDrillForm onSaved={() => reloadOne("backups")} />}
+            </CheckCard>
+          ) : (
+            <Skeleton key={c.id} title={c.title} />
+          );
         })}
       </ul>
       <section aria-labelledby="status-h" className="flex flex-col gap-2">

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { AVAILABLE_GRADES } from "@/content";
 import { DEFAULT_FRAMEWORK, FRAMEWORKS, getFramework } from "@/content/frameworks";
 import { GRADE_SHORT } from "@/content/subjects";
@@ -21,6 +21,8 @@ import { useFlag } from "@/lib/remoteFlags";
 import { CLASS_ROUTE, readClassSignIn, readPlayStart, START_ROUTE, type ClassCodes, type PlayStart } from "@/lib/playLink";
 import { useRoute } from "@/lib/router";
 import { getKV } from "@/lib/localdb";
+import { PARENT_SIGN_IN } from "@/lib/accountLinks";
+import { knownParent } from "@/lib/parentHint";
 
 /** The province or state and grade a "Try it free" link from a public page asked for (`playHref`), if any. */
 export function usePlayStart(): PlayStart | null {
@@ -62,9 +64,17 @@ const HELLO = "Hi! I'm Ollie the Otter. My friends and I can't wait to learn and
 
 export function FirstRun() {
   const cardLink = useClassSignInLink();
-  // A login card's QR code goes straight to the class sign-in, with the codes filled in.
-  const [step, setStep] = useState(cardLink ? -1 : 0);
+  // A login card's QR code goes straight to the class sign-in, with the codes filled in; the header's "Sign in with a code" opens it empty.
+  const { path, query } = useRoute();
+  const bareClassLink = `/${path[0] ?? ""}` === CLASS_ROUTE && !query.has("c") && !query.has("s");
+  const [step, setStep] = useState(cardLink || bareClassLink ? -1 : 0);
   const preset = usePlayStart();
+  // A device a parent has signed in on before: the way back to their account comes first.
+  const returning = useSyncExternalStore(
+    () => () => {},
+    knownParent,
+    () => false,
+  );
   if (step === 0) {
     return (
       <Page className="items-center justify-center gap-6 text-center short:gap-3">
@@ -80,10 +90,20 @@ export function FirstRun() {
           <p className="flex-1 font-read text-2xl font-bold leading-snug short:text-lg">{HELLO}</p>
           <SayButton text={HELLO} />
         </SpeechBubble>
-        <button type="button" className="btn btn-good min-h-20 w-full max-w-sm animate-pulse-soft text-3xl short:min-h-14 short:text-2xl" onClick={() => setStep(1)}>
-          Let&apos;s go! →
+        {returning && (
+          <Link href={PARENT_SIGN_IN} className="btn btn-good min-h-20 w-full max-w-sm text-3xl short:min-h-14 short:text-2xl">
+            Welcome back! Sign in
+          </Link>
+        )}
+        <button type="button" className={`btn min-h-20 w-full max-w-sm text-3xl short:min-h-14 short:text-2xl ${returning ? "" : "btn-good animate-pulse-soft"}`} onClick={() => setStep(1)}>
+          {returning ? "I'm new here" : "Let's go! →"}
         </button>
         <GrownUpsLink />
+        {!returning && (
+          <Link href={PARENT_SIGN_IN} className="inline-flex min-h-12 items-center text-base font-semibold text-ink-soft underline">
+            Already have an account? Sign in
+          </Link>
+        )}
         <button type="button" className="text-base font-semibold text-ink-soft underline" onClick={() => setStep(-1)}>
           My teacher gave me a code
         </button>

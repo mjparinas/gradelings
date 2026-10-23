@@ -561,8 +561,8 @@ describe("TeacherApp class page", () => {
     serve({ ...detail, audience: { "3/math/patterns": ["p1"] } });
     const user = await openClass();
     await openTab(user, "Homework");
-    expect(screen.getByRole("button", { name: "Who gets Counting: Whole class" })).toHaveTextContent("For: Whole class");
-    await user.click(screen.getByRole("button", { name: "Who gets Patterns: 1 student" }));
+    expect(screen.getByRole("button", { name: "Who gets Counting? For: Whole class" })).toHaveTextContent("For: Whole class");
+    await user.click(screen.getByRole("button", { name: "Who gets Patterns? For: 1 student" }));
     const group = screen.getByRole("group", { name: "Students for Patterns" });
     expect(within(group).getByRole("checkbox", { name: "Maya" })).toBeChecked();
     await user.click(within(group).getByRole("checkbox", { name: "Sam" }));
@@ -1077,7 +1077,7 @@ describe("homework tools", () => {
     const user = await openClass();
     await openTab(user, "Homework");
     mocks.call.mockClear();
-    await user.click(screen.getByRole("button", { name: "Try Counting as a student" }));
+    await user.click(screen.getByRole("button", { name: "Try it as a student: Counting" }));
     const dialog = await screen.findByRole("dialog", { name: /Try as a student: .*Counting/ });
     expect(await within(dialog).findByText("What comes after 4?")).toBeInTheDocument();
     await user.click(within(dialog).getByRole("button", { name: /5/ }));

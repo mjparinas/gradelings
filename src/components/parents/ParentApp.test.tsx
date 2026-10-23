@@ -33,7 +33,7 @@ vi.mock("./Reports", () => ({ ReportsPage: ({ childId }: { childId?: string }) =
 vi.mock("./Placement", () => ({ PlacementPage: ({ childId }: { childId?: string }) => <p>page:placement:{childId ?? "-"}</p> }));
 vi.mock("./Children", () => ({ ChildrenPage: () => <p>page:children</p> }));
 vi.mock("./Settings", () => ({ SettingsPage: ({ childId }: { childId?: string }) => <p>page:settings:{childId ?? "-"}</p> }));
-vi.mock("./Account", () => ({ AccountPage: () => <p>page:account</p> }));
+vi.mock("./Account", () => ({ AccountPage: () => <p>page:account</p>, AuthForm: ({ initialMode }: { initialMode?: string }) => <p>form:{initialMode}</p> }));
 vi.mock("./ReportCards", () => ({ ReportCardsPage: ({ childId }: { childId?: string }) => <p>page:report-cards:{childId ?? "-"}</p> }));
 vi.mock("./Subscription", () => ({
   SubscriptionPage: ({ billing }: { billing: unknown }) => {
@@ -77,6 +77,30 @@ async function open(hash = "#/") {
   // The first page waits for the children's lessons to download, which can be slow on a busy machine.
   return screen.findByRole("banner", {}, { timeout: 15_000 });
 }
+
+describe("ParentApp sign-in link", () => {
+  it("opens the sign-in form without a PIN when this device has none yet", async () => {
+    render(<ParentApp />);
+    window.location.hash = "#/account?mode=signin";
+    expect(await screen.findByText("form:signin")).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Welcome back" })).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Unlock" })).not.toBeInTheDocument();
+  });
+
+  it("still asks for the PIN when the device has one", async () => {
+    h.kv.pin = { hash: "x", salt: "y" };
+    window.location.hash = "#/account?mode=signin";
+    render(<ParentApp />);
+    expect(await screen.findByRole("button", { name: "Unlock" })).toBeInTheDocument();
+    expect(screen.queryByText("form:signin")).not.toBeInTheDocument();
+  });
+
+  it("does not skip the PIN for other pages when there is no PIN", async () => {
+    window.location.hash = "#/children";
+    render(<ParentApp />);
+    expect(await screen.findByRole("button", { name: "Unlock" })).toBeInTheDocument();
+  });
+});
 
 describe("ParentApp", () => {
   it("loads the device's data, starts background sync, then asks for the PIN", async () => {
