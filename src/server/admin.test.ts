@@ -557,6 +557,7 @@ describe("codes, reports, stats and the change log", () => {
       ["payments-year", "US revenue", s.revenue.usd.yearToDate],
       ["cancelled", "Last 30 days", s.revenue.cancelled30],
       ["customers-ever", "Families", s.revenue.customersEver],
+      ["ltv", "Customers", s.revenue.customersEver],
       ["signups", "This month", s.acquisition.thisMonth],
       ["trial-conversion", "Trials ended", s.acquisition.trialsEnded],
       ["trial-conversion", "Paying now", s.acquisition.trialsConverted],
@@ -573,6 +574,14 @@ describe("codes, reports, stats and the change log", () => {
     expect(s.people.students).toBe(2);
     expect(await head("teachers", "Linked by parents")).toBe(1);
     expect(s.revenue.usd.mrr).toBe(1499);
+    // Lifetime value: the US payer is listed with US dollars, the fully refunded family is not a customer, and the
+    // family's own page shows the same total.
+    const ltv = await (await as(admin.cookie).get(statsDetail, "/api/admin/stats/detail/?view=ltv")).json();
+    const usRow = ltv.tables[0].rows.find((r: { familyId: string }) => r.familyId === us.familyId);
+    expect(usRow.cells[ltv.tables[0].columns.findIndex((c: { label: string }) => c.label === "Lifetime value (US)")]).toBe(1499);
+    expect(ltv.tables[0].rows.some((r: { familyId: string }) => r.familyId === refunded.familyId)).toBe(false);
+    expect((await (await as(admin.cookie).get(users, `/api/admin/users/?id=${us.familyId}`)).json()).value).toMatchObject({ cad: 0, usd: 1499, payments: 1 });
+    expect((await (await as(admin.cookie).get(users, `/api/admin/users/?id=${refunded.familyId}`)).json()).value).toBeNull();
     expect(s.engagement.d1).toBeGreaterThanOrEqual(1);
     // Guest players: 3 of the 4 devices played in the last 30 days, and the list adds up to the tile.
     expect(s.engagement.guests).toEqual({ d1: 1, d7: 2, d30: 3 });
