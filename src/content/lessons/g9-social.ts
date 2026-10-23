@@ -1027,4 +1027,28 @@ export const lessons: GradeLessons = {
     ["Sellers offer more than buyers want.", "That is a surplus.", "70 − 40 = 30."],
     "a surplus of 30",
   ),
+  "social/il-g9-governing-illinois": lesson(
+    ["Illinois's 1970 constitution sets up three branches and starts with a Bill of Rights.", "Voters elect six executive officers. The 177-member General Assembly can override a veto with three-fifths of each house.", "Judges face retention votes; large cities have home rule; the state income tax must be a flat rate."],
+    "How large a vote does the General Assembly need to override the governor's veto?",
+    ["Congress needs two-thirds.", "Illinois's constitution sets three-fifths."],
+    "three-fifths of each house",
+  ),
+  "social/il-g9-us-government": lesson(
+    ["Article I sets up Congress, Article II the President and Article III the courts.", "Each branch checks the others: vetoes, overrides, confirmations and judicial review.", "The Bill of Rights and later amendments protect individual rights."],
+    "Which body must confirm a President's nominee to the Supreme Court?",
+    ["The President nominates.", "The Senate confirms."],
+    "the Senate",
+  ),
+  "social/il-g9-personal-finance": lesson(
+    ["Net (take-home) pay = gross pay − what is withheld. Sale price = price − the discount.", "Compound interest earns interest on interest. Rule of 72: years to double ≈ 72 ÷ the rate.", "Pay bills on time for a good credit score; keep an emergency fund; spread risk."],
+    "Using the Rule of 72, about how long does money take to double at 6% a year?",
+    ["Divide 72 by the rate.", "72 ÷ 6 = 12."],
+    "about 12 years",
+  ),
+  "social/il-g9-economics": lesson(
+    ["When price rises, quantity demanded falls and quantity supplied rises.", "A poor harvest cuts supply and raises the price.", "GDP, inflation and unemployment show how the economy is doing; trade lets countries specialize."],
+    "A drought hurts the corn harvest. What most likely happens to the price of corn?",
+    ["There is less corn to sell.", "Less supply pushes the price up."],
+    "it rises",
+  ),
 };

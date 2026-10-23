@@ -1069,4 +1069,46 @@ export const lessons: GradeLessons = {
     ["It is what you give up.", "It is the value of the next best choice you give up."],
     "the next best choice you give up",
   ),
+  "social/il-g4-illinois-land": lesson(
+    ["Illinois has three regions: Northern (Chicago), Central (farmland) and Southern (hills and forests).", "Five states border it: Wisconsin, Indiana, Kentucky, Missouri and Iowa.", "People changed the land: plowing the prairie, draining wetlands, digging canals and mines."],
+    "Which region of Illinois has the most people?",
+    ["Chicago is the biggest city.", "Chicago is in Northern Illinois."],
+    "Northern Illinois",
+  ),
+  "social/il-g4-first-peoples": lesson(
+    ["People have lived in Illinois for thousands of years.", "Cahokia was a large city of Mississippian people around the years 1050 to 1200, with earthen mounds.", "Native nations with ties to Illinois, such as the Peoria, Potawatomi and Kickapoo, are living communities today, each with its own government."],
+    "What is Monks Mound?",
+    ["It is at Cahokia.", "It is the biggest earthen mound there."],
+    "the largest mound at Cahokia",
+  ),
+  "social/il-g4-early-illinois": lesson(
+    ["French explorers and traders came first, starting in 1673.", "Britain, then the United States, took over. The Northwest Ordinance of 1787 banned slavery there.", "Illinois became the 21st state in 1818. Abraham Lincoln lived and worked in Springfield."],
+    "Which country first claimed the Illinois area?",
+    ["Marquette and Jolliet were French.", "France claimed it first."],
+    "France",
+  ),
+  "social/il-g4-growing-state": lesson(
+    ["A cause makes something happen. An effect is what happens.", "Railroads (cause) helped Chicago grow fast (effect).", "The 1871 fire (cause) led to stronger buildings and the first skyscrapers (effect)."],
+    "Why did many Black families move to Chicago in the Great Migration?",
+    ["Look for push and pull reasons.", "They came for factory jobs and to escape unfair laws in the South."],
+    "for jobs and to escape unfair laws",
+  ),
+  "social/il-g4-illinois-timeline": lesson(
+    ["A timeline puts events in order, earliest first.", "Years from 1801 to 1900 are the 19th century. Years from 1901 to 2000 are the 20th century.", "To find how far apart two events are, subtract the earlier year from the later one."],
+    "Illinois became a state in 1818. The Great Chicago Fire was in 1871. How many years apart?",
+    ["Subtract the earlier year.", "1871 − 1818 = 53."],
+    "53 years",
+  ),
+  "social/il-g4-governing-illinois": lesson(
+    ["Illinois's government has three branches: the governor, the General Assembly and the courts.", "The General Assembly has a 59-member Senate and a 118-member House.", "A bill becomes law when both houses pass it and the governor signs it."],
+    "How many members are in the Illinois Senate?",
+    ["The House has 118 members.", "The Senate is smaller."],
+    "59",
+  ),
+  "social/il-g4-illinois-economy": lesson(
+    ["Natural resources come from nature, like soil and coal.", "Human resources are people's work and skills. Capital resources are tools and machines.", "Profit is the money a seller keeps after paying costs."],
+    "A farmer's tractor is which kind of resource?",
+    ["It is a machine people made.", "Tools and machines are capital resources."],
+    "a capital resource",
+  ),
 };
