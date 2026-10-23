@@ -1,6 +1,7 @@
 "use client";
 
 import { grantBillingPass } from "./billingReturn";
+import { rememberParent } from "./parentHint";
 import type { FamilyInfo } from "./model";
 import { clearReferralCode, forgetMyInvite, myInviteCode, rememberMyInvite, savedReferralCode } from "./referral";
 import { useStore } from "./store";
@@ -27,6 +28,7 @@ async function post<T>(url: string, body?: unknown, method = "POST"): Promise<T>
 }
 
 function adopt(family: FamilyInfo) {
+  if (family.account && !family.account.student) rememberParent();
   useStore.getState().setFamily(family, true);
   useStore.getState().setSync({ status: "idle" });
 }

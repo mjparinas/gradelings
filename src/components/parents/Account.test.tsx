@@ -69,6 +69,30 @@ afterEach(() => vi.unstubAllGlobals());
 const fill = (label: string | RegExp, value: string) => fireEvent.change(screen.getByLabelText(label), { target: { value } });
 
 describe("AccountPage signed out", () => {
+  it("opens on the sign-in form when the link says so, with Sign in first", async () => {
+    window.location.hash = "#/account?mode=signin";
+    render(<AccountPage onBilling={vi.fn()} />);
+    expect(screen.getByRole("heading", { name: "Sign in" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Sign in" })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByLabelText("Password")).toHaveAttribute("autocomplete", "current-password");
+    const tabs = screen.getAllByRole("button", { name: /^(Sign in|Create account)$/ });
+    expect(tabs.map((b) => b.textContent)).toEqual(["Sign in", "Create account"]);
+    window.location.hash = "";
+  });
+
+  it("opens on sign-in on a device that has had a parent account", () => {
+    localStorage.setItem("grademap.parent", "1");
+    render(<AccountPage onBilling={vi.fn()} />);
+    expect(screen.getByRole("heading", { name: "Sign in" })).toBeInTheDocument();
+    localStorage.clear();
+  });
+
+  it("opens on create account for a first visit", () => {
+    localStorage.clear();
+    render(<AccountPage onBilling={vi.fn()} />);
+    expect(screen.getByRole("heading", { name: "Create a free account" })).toBeInTheDocument();
+  });
+
   it("creates an account at /api/auth/signup/, adopts the family and reports billing", async () => {
     routes["POST /api/auth/signup/"] = () => json({ family: signedIn(false) });
     const onBilling = vi.fn();
@@ -102,6 +126,9 @@ describe("AccountPage signed out", () => {
     await waitFor(() => expect(useStore.getState().family.account?.email).toBe("parent@example.com"));
     expect(bodyOf("POST", "/api/auth/login/")).toEqual({ email: "parent@example.com", password: "secret-pass" });
     expect(useStore.getState().sync.cursor).toBe(0);
+    // The device remembers a parent signed in here, so the site can say "My account" and "Welcome back".
+    expect(localStorage.getItem("grademap.parent")).toBe("1");
+    localStorage.clear();
   });
 
   it("shows the server's error for a wrong password and keeps the form", async () => {

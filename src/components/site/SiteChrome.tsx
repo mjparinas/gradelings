@@ -5,6 +5,7 @@ import { APP_NAME, LEGAL_NAME, socialLinks, WORDMARK_COLOURS } from "@/lib/brand
 import { SUBSCRIBE_HREF, TRIAL_DAYS } from "@/lib/plan";
 import { teacherPath, TEACHER_SIGNUP } from "./teachers";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
+import { HeaderSignIn } from "./HeaderSignIn";
 import { NavLink } from "./NavLink";
 import { PromoBanner } from "./PromoBanner";
 import { RefCapture } from "./ShareButton";
@@ -23,7 +24,7 @@ export function SiteHeader({ play = "/play/" }: { play?: string }) {
           ))}
         </NavLink>
         <nav aria-label="Main" className="flex items-center gap-1 text-sm font-semibold sm:gap-3 sm:text-base">
-          <NavLink href="/curriculum/" className="rounded-lg px-2 py-1 hover:bg-black/5">
+          <NavLink href="/curriculum/" className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
             Curriculum
           </NavLink>
           <NavLink href="/report-cards/" className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
@@ -41,6 +42,7 @@ export function SiteHeader({ play = "/play/" }: { play?: string }) {
           <a href={SUBSCRIBE_HREF} className="hidden rounded-lg px-2 py-1 font-bold hover:bg-black/5 lg:inline">
             Subscribe
           </a>
+          <HeaderSignIn />
           {/* The apps are big single-page bundles: fetch them on tap, not on every public page view. */}
           <Link prefetch={false} href={play} className="btn btn-good h-11 px-4 text-base">
             Play free
