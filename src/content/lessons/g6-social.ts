@@ -757,4 +757,10 @@ export const lessons: GradeLessons = {
     ["An indentured servant had a contract for a set number of years.", "Slavery lasted for life and passed to children."],
     "An indentured contract ended; slavery lasted for life",
   ),
+  "social/il-g6-world-regions": lesson(
+    ["World regions share features like climate, landforms and culture. Know which countries are in which region: India in Asia, New Zealand in Oceania.", "People adapt to climate, like warm clothing and insulated homes in the cold.", "The Ring of Fire around the Pacific has many volcanoes and earthquakes. Trade connects regions."],
+    "The Amazon rainforest is mostly in which country?",
+    ["The Amazon is in South America.", "Most of it lies in the largest South American country."],
+    "Brazil",
+  ),
 };

@@ -361,4 +361,10 @@ export const lessons: GradeLessons = {
     ["A poem is words in lines.", "Maya Angelou was a poet."],
     "Maya Angelou",
   ),
+  "social/il-g1-illinois-symbols": lesson(
+    ["A symbol is a picture or thing that stands for something.", "Illinois's state bird is the cardinal. Its state flower is the violet.", "Springfield is the capital. Chicago is the biggest city."],
+    "Which red bird is Illinois's state bird?",
+    ["Look for the bright red bird.", "It is the northern cardinal."],
+    "the cardinal",
+  ),
 };
