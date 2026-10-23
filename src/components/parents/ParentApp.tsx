@@ -26,6 +26,7 @@ import { SubscriptionPage } from "./Subscription";
 import { UpgradeBanner } from "./UpgradeBanner";
 import { UsConsent } from "./UsConsent";
 import { ReportTabs } from "./common";
+import { FeedbackLink } from "@/components/FeedbackLink";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
 
 const NAV = [
@@ -129,6 +130,7 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
         <UpgradeBanner />
         {children}
       </main>
+      <FeedbackLink audience="parent" signedIn={Boolean(family.account)} />
     </div>
   );
 }
