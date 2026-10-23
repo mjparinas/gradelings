@@ -136,6 +136,11 @@ export interface Metrics {
     lifetimeValue: number | null;
     /** Families that have ever paid. */
     customersEver: number;
+    /**
+     * What customers have actually paid, after refunds: total collected per paying family (a customer is a family
+     * with a payment not refunded in full; gifts have no family). CAD and USD apart, never added.
+     */
+    ltv: { customers: number; average: number | null; top: number; usd: { customers: number; average: number | null; top: number } | null };
     months: MonthMoney[];
     /** US families' money, in USD cents, kept apart from everything above. Null until there is any. */
     usd: { mrr: number; arr: number; paying: number; renewing: number; thisMonth: number; lastMonth: number; yearToDate: number } | null;
@@ -315,6 +320,13 @@ export function computeMetrics(input: MetricsInput): Metrics {
   const usdNet = (from: number, to: number) => usdPayments.filter((p) => p.paidAt >= from && p.paidAt < to).reduce((s, p) => s + Math.max(0, p.amount - p.refunded), 0);
   const usOther = usRenewing - usRenewMonthly - usRenewYearly;
   const usdMrr = Math.round((usRenewMonthly + usOther) * MONTHLY_CENTS_USD + (usRenewYearly * YEARLY_CENTS_USD) / 12);
+  const spendBy = (list: PaymentFacts[]) => {
+    const byFamily = new Map<string, number>();
+    for (const p of list) if (p.familyId && p.amount > p.refunded) byFamily.set(p.familyId, (byFamily.get(p.familyId) ?? 0) + net(p));
+    const totals = [...byFamily.values()];
+    return { customers: totals.length, average: totals.length ? Math.round(totals.reduce((a, b) => a + b, 0) / totals.length) : null, top: Math.max(0, ...totals) };
+  };
+  const ltvUsd = spendBy(usdPayments);
   const usd =
     usPaying || usdPayments.length
       ? { mrr: usdMrr, arr: usdMrr * 12, paying: usPaying, renewing: usRenewing, thisMonth: usdNet(thisMonthStart, now + 1), lastMonth: usdNet(lastMonthStart, thisMonthStart), yearToDate: usdNet(yearStart, now + 1) }
@@ -375,6 +387,7 @@ export function computeMetrics(input: MetricsInput): Metrics {
       // Average revenue per paying family over how long one stays (1 / monthly churn). Unknown until someone has cancelled.
       lifetimeValue: arppu !== null && churnRate ? Math.round(arppu / churnRate) : null,
       customersEver: payers.size,
+      ltv: { ...spendBy(payments), usd: ltvUsd.customers ? ltvUsd : null },
       months,
       usd,
     },

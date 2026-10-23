@@ -593,6 +593,20 @@ describe("settings", () => {
     expect(JSON.stringify(c)).not.toContain("gs_value_never_shown");
   });
 
+  it("checks the site address is a public https address, without a path", async () => {
+    const row = (url: string) => {
+      process.env.NEXT_PUBLIC_SITE_URL = url;
+      return health.settingsCheck().rows.find((r) => r.label === "Site address format");
+    };
+    expect(row("https://www.gradelings.com")).toMatchObject({ state: "ok", value: "Public address: www.gradelings.com" });
+    expect(row("http://www.gradelings.com")).toMatchObject({ state: "warn" });
+    expect(row("http://localhost:3000")).toMatchObject({ state: "warn" });
+    expect(row("https://www.gradelings.com/play")).toMatchObject({ state: "warn", value: expect.stringContaining("no path") });
+    expect(row("not a url")).toMatchObject({ state: "warn" });
+    delete process.env.NEXT_PUBLIC_SITE_URL;
+    expect(health.settingsCheck().rows.find((r) => r.label === "Site address format")).toBeUndefined();
+  });
+
   it("flags a test-only setting left on in production", async () => {
     process.env.ALLOW_DEV_BILLING = "1";
     process.env.VERCEL_ENV = "production";

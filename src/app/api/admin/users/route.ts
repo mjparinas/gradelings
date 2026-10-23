@@ -68,6 +68,14 @@ export async function GET(req: Request) {
   });
 }
 
+/** What a family has paid so far, after refunds. CAD and USD stay apart. Null until it has paid anything. */
+function customerValue(rows: { amount: number; refunded: number; currency: string; paid_at: number }[]) {
+  const paid = rows.filter((p) => Number(p.amount) > Number(p.refunded));
+  if (!paid.length) return null;
+  const sum = (usd: boolean) => paid.filter((p) => (String(p.currency ?? "cad").toLowerCase() === "usd") === usd).reduce((s, p) => s + Number(p.amount) - Number(p.refunded), 0);
+  return { cad: sum(false), usd: sum(true), payments: paid.length, firstPaidAt: Number(paid[0].paid_at), lastPaidAt: Number(paid[paid.length - 1].paid_at) };
+}
+
 async function familyDetail(id: string) {
   const family = (await query<Record<string, unknown>>("SELECT * FROM families WHERE id = ?", [id]))[0];
   if (!family) return null;
@@ -87,7 +95,8 @@ async function familyDetail(id: string) {
     [id],
   );
   if (!parents.length || parents.some((p) => p.role === "student")) return null;
-  const [profiles, activity, sessions, redemptions, overrides, experiments, classes, emails, notes, flagValues] = await Promise.all([
+  const [payments, profiles, activity, sessions, redemptions, overrides, experiments, classes, emails, notes, flagValues] = await Promise.all([
+    query<{ amount: number; refunded: number; currency: string; paid_at: number }>("SELECT amount, refunded, currency, paid_at FROM payments WHERE family_id = ? ORDER BY paid_at", [id]),
     query<{ data: string }>("SELECT data FROM profiles WHERE family_id = ?", [id]),
     query<{ n: number; last: number | null }>("SELECT COUNT(*) AS n, MAX(t) AS last FROM events WHERE family_id = ?", [id]),
     query<{ n: number; last: number | null }>("SELECT COUNT(*) AS n, MAX(created_at) AS last FROM sessions WHERE family_id = ? AND expires_at > ?", [id, Date.now()]),
@@ -157,6 +166,7 @@ async function familyDetail(id: string) {
     activity: { events: Number(activity[0]?.n ?? 0), lastActive: n(activity[0]?.last) },
     sessions: { active: Number(sessions[0]?.n ?? 0), lastSignIn: n(sessions[0]?.last) },
     classes: Number(classes[0]?.n ?? 0),
+    value: customerValue(payments),
     redemptions: redemptions.map((r) => ({ code: r.code, kind: r.kind ?? null, redeemedAt: Number(r.redeemed_at) })),
     overrides: Object.fromEntries(overrides),
     experiments: Object.fromEntries(experiments.map((e) => [e.experiment, e.variant])),

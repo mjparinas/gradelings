@@ -221,6 +221,25 @@ describe("money", () => {
     expect(m.revenue.lifetimeValue).toBe(1499 * 4);
   });
 
+  it("works out what customers have paid so far, after refunds, in each currency", () => {
+    const m = metrics({
+      families: [family({ plan: "premium" })],
+      payments: [
+        pay({ familyId: "a", amount: 1499 }),
+        pay({ familyId: "a", amount: 1499, refunded: 499 }),
+        pay({ familyId: "b", amount: 1499 }),
+        pay({ familyId: "c", amount: 1499, refunded: 1499 }), // refunded in full: not a customer
+        pay({ familyId: null, amount: 11999, interval: "gift" }), // a gift has no family
+        pay({ familyId: "u", amount: 1499, currency: "usd" }),
+      ],
+    });
+    expect(m.revenue.ltv).toEqual({ customers: 2, average: Math.round((1499 + 1000 + 1499) / 2), top: 2499, usd: { customers: 1, average: 1499, top: 1499 } });
+  });
+
+  it("has no lifetime value until someone has paid", () => {
+    expect(metrics().revenue.ltv).toEqual({ customers: 0, average: null, top: 0, usd: null });
+  });
+
   it("stops counting a plan toward MRR from the day it is cancelled, while it still has access", () => {
     const m = metrics({
       families: [
