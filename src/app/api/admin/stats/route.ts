@@ -6,9 +6,10 @@ import { guestCounts } from "@/server/guests";
 import { getSetting, importPayments, setSetting } from "@/server/payments";
 import { stripeCancellationConfigured } from "@/server/stripe";
 import { LATEST_REFUNDED, OPEN_CLASS_STUDENTS, OPEN_CLASS_TEACHERS } from "@/server/adminDetail";
-import { computeMetrics, emptyInput, isMetricSection, SECTION_INPUTS, sectionOf, type FamilyFacts, type MetricsInput } from "@/lib/adminMetrics";
+import { COHORT_COUNT, computeMetrics, emptyInput, isMetricSection, SECTION_INPUTS, sectionOf, type FamilyFacts, type MetricsInput } from "@/lib/adminMetrics";
 
 const DAY = 86_400_000;
+const WEEK = 7 * DAY;
 /** Families that are class student accounts are not customers, so the numbers leave them out. */
 const REAL = "NOT EXISTS (SELECT 1 FROM parents p WHERE p.family_id = f.id AND p.role = 'student')";
 const REAL_EVENTS = "family_id NOT IN (SELECT family_id FROM parents WHERE role = 'student')";
@@ -18,7 +19,7 @@ const MS_CAP = 60_000;
 
 const count = async (sql: string, args: (string | number)[] = []) => Number((await query<{ n: number }>(sql, args))[0]?.n ?? 0);
 
-type Loaders = { [K in keyof Omit<MetricsInput, "now">]: () => Promise<MetricsInput[K]> };
+type Loaders = { [K in keyof Omit<MetricsInput, "now">]-?: () => Promise<MetricsInput[K]> };
 
 /** One query per part of the input, so a section runs only the queries it needs. */
 function loaders(now: number): Loaders {
@@ -79,6 +80,23 @@ function loaders(now: number): Loaders {
       return { d1, d7, d30 };
     },
     guestDevices: () => guestCounts(now),
+    // Recent sign-ups and the weeks after signing up in which a child answered a question.
+    cohorts: async () => {
+      const since = now - COHORT_COUNT * WEEK;
+      const [families, weeks] = await Promise.all([
+        query<{ id: string; created_at: number }>(`SELECT f.id, f.created_at FROM families f WHERE f.created_at >= ? AND ${REAL}`, [since]),
+        query<{ family_id: string; w: number }>(
+          `SELECT e.family_id, CAST((e.t - f.created_at) / ${WEEK} AS INTEGER) AS w
+           FROM events e JOIN families f ON f.id = e.family_id
+           WHERE f.created_at >= ? AND e.t >= f.created_at AND json_extract(e.data, '$.type') = 'answer' AND ${REAL}
+           GROUP BY e.family_id, w`,
+          [since],
+        ),
+      ]);
+      const byFamily = new Map<string, number[]>();
+      for (const r of weeks) byFamily.set(r.family_id, [...(byFamily.get(r.family_id) ?? []), Number(r.w)]);
+      return families.map((f) => ({ createdAt: Number(f.created_at), weeks: byFamily.get(f.id) ?? [] }));
+    },
     monthlyCosts: async () => Number((await getSetting(COSTS_KEY)) ?? 0) || 0,
     redemptions: () => count("SELECT COUNT(*) AS n FROM code_redemptions"),
     reports: () => count("SELECT COUNT(*) AS n FROM question_reports"),

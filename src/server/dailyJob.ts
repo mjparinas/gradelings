@@ -12,6 +12,9 @@ import { getSetting, setSetting } from "@/server/payments";
 import { deleteInactiveClass, pruneOldCodes } from "@/server/students";
 import { pruneGuests } from "@/server/guests";
 import { pruneLive } from "@/server/live";
+import { isFlagOn } from "@/server/flags";
+import type { Profile } from "@/lib/model";
+import { schoolYearLines } from "@/lib/schoolYear";
 
 // The daily job (src/app/api/cron/weekly/route.ts), split into phases that can stop and carry on.
 //
@@ -377,9 +380,11 @@ async function weeklyReports(ctx: Ctx): Promise<boolean> {
     // One family's bad data must never stop everyone else's email.
     try {
       const children: WeeklyChild[] = [];
+      const profiles: Profile[] = [];
       for (const id of await familyProfileIds(p.family_id)) {
         const r = await loadChildReport(p.family_id, id, 7, now);
         if (!r) continue;
+        profiles.push(r.profile);
         const t = r.report.totals;
         const month = firstSunday ? (await loadChildReport(p.family_id, id, 30, now))?.report : undefined;
         children.push({
@@ -393,7 +398,8 @@ async function weeklyReports(ctx: Ctx): Promise<boolean> {
         });
       }
       if (!children.length) continue;
-      const sent = await sendEmail(weeklyEmail(p.email, origin, children, await unsubscribeToken(p.id), toCountryCode(p.country)));
+      const school = (await isFlagOn("school-year", p.family_id)) ? schoolYearLines(profiles, now) : [];
+      const sent = await sendEmail(weeklyEmail(p.email, origin, children, await unsubscribeToken(p.id), toCountryCode(p.country), school));
       if (sent.ok) {
         await run("UPDATE parents SET last_weekly_at = ? WHERE id = ?", [now, p.id]);
         result.weekly++;

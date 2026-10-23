@@ -88,6 +88,18 @@ describe("US parental consent emails", () => {
   });
 });
 
+describe("school-year lines in the weekly email", () => {
+  it("come after the children, before the practice note, in the family's English", () => {
+    const line = "Summer sneak peek: Maya can try Grade 5 lessons from the Lessons screen. Whatever they practise counts once they move up.";
+    const ca = t.weeklyEmail("a@example.com", O, [{ name: "Maya", minutes: 30, answers: 40, accuracy: 80 }], "u", "CA", [line]);
+    expect(ca.text.indexOf("Maya: 30 min")).toBeLessThan(ca.text.indexOf("Summer sneak peek"));
+    expect(ca.text.indexOf("Summer sneak peek")).toBeLessThan(ca.text.indexOf("This reflects practice"));
+    expect(ca.html).toContain("Whatever they practise counts");
+    expect(t.weeklyEmail("a@example.com", O, [{ name: "Maya", minutes: 30, answers: 40, accuracy: 80 }], "u", "US", [line]).text).toContain("Whatever they practice counts");
+    expect(t.weeklyEmail("a@example.com", O, [{ name: "Maya", minutes: 30, answers: 40, accuracy: 80 }], "u").text).not.toContain("sneak peek");
+  });
+});
+
 describe("emails to a US family", () => {
   const kids = [{ name: "Maya", answers: 40, activeDays: 3, minutes: 30, strength: "Colours and shapes" }];
   it("are in US English, and the same emails stay Canadian for a Canadian family", () => {

@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 import { ColumnChart, LineChart, niceMax, RowBars } from "@/components/parents/charts";
 import { call } from "@/lib/classroom";
-import { METRIC_SECTIONS, type MetricSection, type SectionMetrics } from "@/lib/adminMetrics";
+import { METRIC_SECTIONS, RETENTION_WEEKS, type MetricSection, type RetentionCell, type SectionMetrics } from "@/lib/adminMetrics";
 import type { Detail, DetailView } from "@/lib/adminDetail";
 import type { Part, VisitsReport } from "@/lib/traffic";
 import { cancelReasonRows } from "@/lib/cancelReasons";
@@ -276,6 +276,87 @@ function Growth({ g, show }: { g: NonNullable<Parts["growth"]>; show: (view: Det
     </>
   );
 }
+const cellRate = (c: RetentionCell) => (c && c.of ? c.n / c.of : null);
+/** A light blue ramp, so dark text stays readable on every shade; the number is always written too. */
+function shade(r: number | null): string {
+  if (r === null || r === 0) return "";
+  if (r < 0.25) return "bg-[#e8f1fc]";
+  if (r < 0.5) return "bg-[#cfe2f8]";
+  if (r < 0.75) return "bg-[#b7d3f6]";
+  return "bg-[#9cc3f2]";
+}
+const weekName = (w: number) => (w === 0 ? "First week" : `Week ${w}`);
+
+/** Each week's sign-ups and the share that practised in the weeks after: the way to see whether a change helped. */
+function RetentionTable({ retention }: { retention: NonNullable<Parts["practice"]>["engagement"]["retention"] }) {
+  const cellText = (c: RetentionCell) => (c ? `${share(cellRate(c))}` : "");
+  const cellTitle = (c: RetentionCell) => (c ? `${num(c.n)} of ${num(c.of)} families` : "Not over yet");
+  const row = (label: string, families: number, weeks: RetentionCell[], strong = false) => (
+    <tr key={label} className={strong ? "border-t-2 border-line font-bold" : "border-t border-line"}>
+      <th scope="row" className="py-2 pr-3 text-left font-semibold whitespace-nowrap">
+        {label}
+      </th>
+      <td className="px-2 py-2 text-right tabular-nums">{num(families)}</td>
+      {weeks.map((c, i) => (
+        <td key={RETENTION_WEEKS[i]} title={cellTitle(c)} className={`px-2 py-2 text-right tabular-nums ${shade(cellRate(c))}`}>
+          {c ? (
+            <>
+              {cellText(c)}
+              <span className="sr-only">, {cellTitle(c)}</span>
+            </>
+          ) : (
+            <>
+              <span aria-hidden className="text-ink-soft">
+                ·
+              </span>
+              <span className="sr-only">Not over yet</span>
+            </>
+          )}
+        </td>
+      ))}
+    </tr>
+  );
+  const total = retention.rows.reduce((s, r) => s + r.families, 0);
+  return (
+    <figure className={`${card} min-w-0 lg:col-span-2`}>
+      <figcaption>
+        <h3 className="font-bold">Who Comes Back</h3>
+        <p className="text-sm text-ink-soft">
+          Families by the week they signed up, and the share with a child answering questions in each week after. A dot means that week isn&apos;t over yet. Compare the weeks before and after a change.
+        </p>
+      </figcaption>
+      {total ? (
+        <div className="relative mt-3 overflow-x-auto">
+          {/* Relative, so the screen-reader text inside scrolls with the table instead of widening the page. */}
+          <table className="w-full min-w-[30rem] text-sm">
+            <thead>
+              <tr className="text-ink-soft">
+                <th scope="col" className="py-1 pr-3 text-left font-semibold">
+                  Signed up week of
+                </th>
+                <th scope="col" className="px-2 py-1 text-right font-semibold">
+                  New families
+                </th>
+                {RETENTION_WEEKS.map((w) => (
+                  <th key={w} scope="col" className="px-2 py-1 text-right font-semibold whitespace-nowrap">
+                    {weekName(w)}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {retention.rows.filter((r) => r.families).map((r) => row(r.label, r.families, r.weeks))}
+              {row(`All ${retention.rows.length} weeks`, total, retention.all, true)}
+            </tbody>
+          </table>
+        </div>
+      ) : (
+        <p className="mt-3 text-ink-soft">No sign-ups in the last {retention.rows.length} weeks yet.</p>
+      )}
+    </figure>
+  );
+}
+
 function Practice({ e, show }: { e: NonNullable<Parts["practice"]>["engagement"]; show: (view: DetailView) => () => void }) {
   return (
     <>
@@ -285,8 +366,11 @@ function Practice({ e, show }: { e: NonNullable<Parts["practice"]>["engagement"]
         <Tile onOpen={show("practising")} label="Stickiness" value={share(e.stickiness)} sub="daily ÷ monthly practising families" />
         <Tile onOpen={show("practising")} label="Questions answered, 30 days" value={num(e.answers30)} sub={`${num(e.minutes30)} minutes`} />
         <Tile onOpen={show("guests")} label="Guest players, 30 days" value={num(e.guests.d30)} sub={`no parent account · ${num(e.guests.d7)} this week, ${num(e.guests.d1)} today`} />
+        <Tile label="Back in week 1" value={share(cellRate(e.retention.all[RETENTION_WEEKS.indexOf(1)]))} sub="new families practising in their second week" />
+        <Tile label="Back in week 4" value={share(cellRate(e.retention.all[RETENTION_WEEKS.indexOf(4)]))} sub="new families practising a month in" />
       </ul>
       <div className={charts}>
+        <RetentionTable retention={e.retention} />
         <ColumnChart title="Families Practising per Day" subtitle="Last 30 days" data={e.daily.map((d) => ({ label: d.label, value: d.families }))} unit="families" />
         <ColumnChart title="Questions Answered per Day" subtitle="Last 30 days" data={e.daily.map((d) => ({ label: d.label, value: d.answers, detail: `${num(d.minutes)} minutes` }))} unit="questions" />
       </div>

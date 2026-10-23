@@ -60,6 +60,28 @@ export interface DayActivity {
   ms: number;
 }
 
+/** A family that signed up recently, with the weeks after sign-up in which a child answered a question (0 = the first 7 days). */
+export interface CohortFamily {
+  createdAt: number;
+  weeks: number[];
+}
+
+/** The weeks after sign-up the retention table shows: the first week, then weeks 1, 2, 4 and 8. */
+export const RETENTION_WEEKS = [0, 1, 2, 4, 8] as const;
+/** How many weekly sign-up groups the retention table shows, newest first. */
+export const COHORT_COUNT = 12;
+
+/** Of the families old enough to have had that week (`of`), how many practised in it (`n`). Null when none are old enough yet. */
+export type RetentionCell = { n: number; of: number } | null;
+
+export interface CohortRow {
+  /** The first day of the sign-up week, such as "Mar 9". */
+  label: string;
+  families: number;
+  /** One cell per entry of `RETENTION_WEEKS`. */
+  weeks: RetentionCell[];
+}
+
 export interface MetricsInput {
   now: number;
   families: FamilyFacts[];
@@ -74,6 +96,8 @@ export interface MetricsInput {
   activeFamilies: { d1: number; d7: number; d30: number };
   /** Devices that played with no parent account (UTC days: today, the last 7 and the last 30). */
   guestDevices: { d1: number; d7: number; d30: number };
+  /** Families that signed up in the last `COHORT_COUNT` weeks, for the retention table. */
+  cohorts?: CohortFamily[];
   /** Running costs per month, in cents, entered by the admin (hosting, email, tools). */
   monthlyCosts: number;
   redemptions: number;
@@ -115,7 +139,7 @@ export interface Metrics {
     weekly: Point[];
     monthly: Point[];
   };
-  engagement: { d1: number; d7: number; d30: number; guests: { d1: number; d7: number; d30: number }; stickiness: number | null; daily: { label: string; families: number; answers: number; minutes: number }[]; answers30: number; minutes30: number };
+  engagement: { d1: number; d7: number; d30: number; guests: { d1: number; d7: number; d30: number }; stickiness: number | null; retention: { rows: CohortRow[]; all: RetentionCell[] }; daily: { label: string; families: number; answers: number; minutes: number }[]; answers30: number; minutes30: number };
   revenue: {
     mrr: number;
     arr: number;
@@ -146,6 +170,27 @@ export interface Metrics {
     usd: { mrr: number; arr: number; paying: number; renewing: number; thisMonth: number; lastMonth: number; yearToDate: number } | null;
   };
   other: { redemptions: number; reports: number };
+}
+
+/**
+ * Weekly sign-up groups, newest first, with the share of each that practised in the weeks after signing up. A week
+ * counts for a family only once it is over, so a group that is too young for a week shows nothing there rather
+ * than a low number. `all` adds up every group.
+ */
+export function retentionTable(cohorts: CohortFamily[], now: number): { rows: CohortRow[]; all: RetentionCell[] } {
+  const cell = (list: CohortFamily[], w: number): RetentionCell => {
+    const old = list.filter((f) => now >= f.createdAt + (w + 1) * WEEK);
+    return old.length ? { n: old.filter((f) => f.weeks.includes(w)).length, of: old.length } : null;
+  };
+  const rows: CohortRow[] = [];
+  const counted: CohortFamily[] = [];
+  for (let i = 0; i < COHORT_COUNT; i++) {
+    const from = now - (i + 1) * WEEK;
+    const group = cohorts.filter((f) => f.createdAt >= from && f.createdAt < from + WEEK);
+    counted.push(...group);
+    rows.push({ label: dayLabel(from), families: group.length, weeks: RETENTION_WEEKS.map((w) => cell(group, w)) });
+  }
+  return { rows, all: RETENTION_WEEKS.map((w) => cell(counted, w)) };
 }
 
 const rate = (part: number, whole: number) => (whole > 0 ? part / whole : null);
@@ -364,6 +409,7 @@ export function computeMetrics(input: MetricsInput): Metrics {
       ...input.activeFamilies,
       guests: input.guestDevices,
       stickiness: rate(input.activeFamilies.d1, input.activeFamilies.d30),
+      retention: retentionTable(input.cohorts ?? [], now),
       daily,
       answers30: daily.reduce((s, d) => s + d.answers, 0),
       minutes30: daily.reduce((s, d) => s + d.minutes, 0),
@@ -407,7 +453,7 @@ export const SECTION_INPUTS: Record<MetricSection, readonly (keyof Omit<MetricsI
   money: ["families", "payments", "monthlyCosts"],
   customers: ["families", "parents", "children", "teachers", "students", "classes", "redemptions", "reports"],
   growth: ["families", "payments"],
-  practice: ["activity", "activeFamilies", "guestDevices"],
+  practice: ["activity", "activeFamilies", "guestDevices", "cohorts"],
 };
 
 export interface SectionMetrics {
@@ -430,6 +476,7 @@ export const emptyInput = (now: number): MetricsInput => ({
   activity: [],
   activeFamilies: { d1: 0, d7: 0, d30: 0 },
   guestDevices: { d1: 0, d7: 0, d30: 0 },
+  cohorts: [],
   monthlyCosts: 0,
   redemptions: 0,
   reports: 0,
