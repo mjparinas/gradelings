@@ -661,4 +661,40 @@ export const lessons: GradeLessons = {
     ["You give up some cleaning to save money.", "Giving up one thing for another is a trade-off."],
     "a trade-off",
   ),
+  "science/ga-g6-seasons-tides": lesson(
+    ["Earth's axis is tilted about 23.5°. Without the tilt there would be almost no seasons.", "When a hemisphere tilts toward the Sun, sunlight hits more directly and it has summer.", "Earth orbits the Sun about every 365 days.", "The Moon's and Sun's gravity pull on the oceans to make tides."],
+    "When the Northern Hemisphere tilts toward the Sun, what season does it have?",
+    ["Tilted toward the Sun means more direct sunlight.", "More direct sunlight means summer."],
+    "summer",
+  ),
+  "science/ga-g6-water": lesson(
+    ["A watershed is all the land that drains into one river or lake.", "An aquifer is an underground layer of rock that holds water, such as the Ogallala or the Edwards.", "Runoff can carry pollution. Wetlands filter water and slow floods."],
+    "What is an underground layer of rock that holds usable water called?",
+    ["People pump water up from it for farms and towns."],
+    "an aquifer",
+  ),
+  "science/ga-g6-atmosphere": lesson(
+    ["Air is about 78% nitrogen and 21% oxygen, with a little carbon dioxide and other gases.", "The atmosphere protects life from harmful radiation, and greenhouse gases hold heat near Earth.", "The Sun heats land, water and air unevenly. Warm air rises and cooler air moves in. That is wind.", "At the coast by day, a sea breeze blows from water to land."],
+    "On a sunny afternoon on the Georgia coast, which way does the beach breeze blow?",
+    ["Land heats faster than water.", "Warm air rises over land.", "Cooler air flows in from the sea."],
+    "from the sea toward the land",
+  ),
+  "science/ga-g6-weather": lesson(
+    ["Warm air is less dense, so it rises. Cold air sinks.", "Humidity is the amount of water vapour in the air.", "Water vapour cools and condenses to form clouds.", "Air masses meet at fronts, which bring weather changes. An anemometer measures wind speed."],
+    "Warm, moist air rises and cools. What forms?",
+    ["Cooling vapour condenses into droplets.", "Lots of droplets make clouds."],
+    "clouds",
+  ),
+  "science/ga-g6-plate-tectonics": lesson(
+    ["Earth's surface is broken into plates that move slowly.", "Plates push together at convergent boundaries, pull apart at divergent ones and slide past at transform ones.", "Most earthquakes and volcanoes are at plate edges. Places far from edges, like Georgia, rarely have strong quakes.", "Matching fossils and rocks on different continents supported continental drift."],
+    "Two plates move toward each other. What kind of boundary is this?",
+    ["Divergent means apart; transform means sliding past.", "Pushing together is convergent."],
+    "convergent",
+  ),
+  "science/ga-g6-climate": lesson(
+    ["Climate is the average weather of a place over many years.", "Burning fossil fuels adds carbon dioxide, which traps heat. This is the main cause of recent warming.", "As Earth warms, ice melts and seawater expands, so sea level rises.", "Forests help slow climate change because trees take in carbon dioxide."],
+    "Why do forests help slow climate change?",
+    ["Carbon dioxide traps heat.", "Trees take in carbon dioxide to make food."],
+    "trees take in carbon dioxide",
+  ),
 };

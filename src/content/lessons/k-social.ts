@@ -325,4 +325,10 @@ export const lessons: GradeLessons = {
     ["It belongs to someone else.", "Give it back."],
     "give it back",
   ),
+  "social/ga-k-my-state": lesson(
+    ["We live in the state of Georgia.", "Georgia is one of 50 states in the United States.", "Our country's flag has stars and stripes."],
+    "What country is Georgia part of?",
+    ["Georgia is a state.", "States are part of a country."],
+    "the United States",
+  ),
 };

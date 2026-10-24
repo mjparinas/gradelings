@@ -613,4 +613,28 @@ export const lessons: GradeLessons = {
     ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
     "the bare hillside",
   ),
+  "science/solar-system": lesson(
+    ["The planets in order from the Sun: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.", "The asteroid belt lies between Mars and Jupiter.", "A moon is a natural object that orbits a planet.", "The farther a planet is from the Sun, the longer it takes to orbit once."],
+    "Which takes longer to orbit the Sun: Mars or Saturn?",
+    ["Saturn is much farther from the Sun than Mars.", "Farther planets have longer orbits."],
+    "Saturn",
+  ),
+  "science/ga-g4-seasons-moon": lesson(
+    ["The seasons repeat every year: spring, summer, fall, winter.", "Days have the most daylight in summer and the least in winter, around December.", "The Moon's main phases repeat about every month: new, first quarter, full, third quarter."],
+    "Which main phase comes after the full moon?",
+    ["Order: new → first quarter → full → third quarter.", "After the full moon comes the third quarter."],
+    "third quarter moon",
+  ),
+  "science/ga-g4-weather-climate": lesson(
+    ["Weather is what the air is like now, like a rainy afternoon.", "Climate is the usual pattern of weather over many years.", "One odd day does not change a place's climate."],
+    "“It snowed in our town yesterday.” Is that weather or climate?",
+    ["It describes one day, not many years."],
+    "weather",
+  ),
+  "science/ga-g4-food-webs": lesson(
+    ["Energy flows from the Sun to producers (plants), then to consumers.", "Decomposers, like fungi, bacteria and some insects, break down dead things.", "Decomposers return nutrients to the soil for plants to use.", "If a predator disappears, its prey usually increases."],
+    "In grass → grasshopper → bird, which consumer eats the producer?",
+    ["Grass is the producer.", "The grasshopper eats the grass."],
+    "the grasshopper",
+  ),
 };

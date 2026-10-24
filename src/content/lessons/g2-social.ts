@@ -589,4 +589,28 @@ export const lessons: GradeLessons = {
     ["Find column B first.", "Then go to row 3."],
     "column B, then row 3",
   ),
+  "social/ga-g2-georgia-founders": lesson(
+    ["James Oglethorpe brought the first colonists to Georgia in 1733.", "Tomochichi, a Yamacraw leader, made peace with him, and Mary Musgrove translated.", "Sequoyah created a way to write the Cherokee language."],
+    "Who helped the English and the Creek understand each other?",
+    ["She spoke both languages.", "She was a translator and trader."],
+    "Mary Musgrove",
+  ),
+  "social/ga-g2-georgia-regions": lesson(
+    ["Georgia has five regions: Blue Ridge, Valley and Ridge, Appalachian Plateau, Piedmont and Coastal Plain.", "The mountains are in the north, and the flat Coastal Plain is in the south and east.", "Big rivers include the Chattahoochee, Flint and Savannah."],
+    "Which region of Georgia has flat land near the ocean?",
+    ["The coast is in the southeast.", "Plain means flat land."],
+    "the Coastal Plain",
+  ),
+  "social/ga-g2-creek-cherokee": lesson(
+    ["The Muscogee (Creek) and Cherokee lived in Georgia long ago.", "They farmed corn, beans and squash, hunted and fished.", "Today both nations have their own governments, mostly in Oklahoma."],
+    "What crops did the Muscogee (Creek) and Cherokee grow?",
+    ["Think of the Three Sisters.", "Corn, beans and squash grow well together."],
+    "corn, beans and squash",
+  ),
+  "social/ga-g2-leaders": lesson(
+    ["The president leads the nation and works in Washington, D.C.", "The governor leads Georgia and works in Atlanta.", "A mayor leads a city."],
+    "Who is the leader of a state?",
+    ["The nation has a president.", "A city has a mayor."],
+    "the governor",
+  ),
 };
