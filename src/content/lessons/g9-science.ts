@@ -625,4 +625,11 @@ export const lessons: GradeLessons = {
     ["About 10% passes on.", "10% of 5,000 is 500."],
     "500 units",
   ),
+  // Indiana (us-in)
+"science/in-g9-ecosystems": lesson(
+    ["A population levels off at carrying capacity on a logistic growth curve.", "About 10% of energy passes up each trophic level.", "After disturbances like wildfire, succession rebuilds the community; stable ecosystems recover."],
+    "Shrubs sprout again after a wildfire. What is this an example of?",
+    ["The community is rebuilding over time.", "Gradual change in a community is succession."],
+    "succession",
+  ),
 };

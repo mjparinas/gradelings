@@ -21,7 +21,7 @@ describe("Prince Edward Island", () => {
     expect(own.length).toBeGreaterThan(10);
     // Nunavut, New York, Minnesota, Alabama, Arizona, Arkansas, Florida, Pennsylvania and Georgia may copy a unit that names no province (src/content/nunavut/plan.ts,
     // src/content/new-york/plan/); a copy in the same grade merges into one unit carrying both sets of standards.
-    for (const { g, u } of own) for (const f of Object.keys(u.standards)) expect(["ca-pe", "ca-nu", "us-ny", "us-mn", "us-al", "us-az", "us-ar", "us-fl", "us-pa", "us-ga"], `${g}/${u.id}`).toContain(f);
+    for (const { g, u } of own) for (const f of Object.keys(u.standards)) expect(["ca-pe", "ca-nu", "us-ny", "us-mn", "us-al", "us-az", "us-ar", "us-fl", "us-pa", "us-ga", "us-in"], `${g}/${u.id}`).toContain(f);
     expect(own.filter(({ u }) => u.standards["ca-pe"]).length).toBeGreaterThan(10);
   });
 

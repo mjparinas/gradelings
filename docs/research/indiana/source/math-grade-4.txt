@@ -1,0 +1,350 @@
+                      2023 Indiana Academic Standards: Grade 4 Mathematics
+
+
+Indiana Academic Standards Context and Purpose
+
+
+Introduction
+The Indiana Academic Standards for Grade 4 Mathematics are the result of a process designed
+to identify, evaluate, synthesize, and create high-quality, rigorous learning expectations for
+Indiana students.
+
+Pursuant to Indiana Code (IC) 20-31-3-1(c-d), the Indiana Department of Education (IDOE)
+facilitated the prioritization of the Indiana Academic Standards. All standards are required to be
+taught. Standards identified as essential for mastery by the end of the grade level are indicated
+with shading and an “E.” The learning outcome statement for each domain immediately
+precedes each set of standards.
+
+The Indiana Academic Standards are designed to ensure that all Indiana students, upon
+graduation, are prepared with essential knowledge and skills needed to access employment,
+enrollment, or enlistment leading to service.
+
+What are the Indiana Academic Standards and how should they be used?
+The Indiana Academic Standards are designed to help educators, parents, students, and
+community members understand the necessary content for each grade level, and within each
+content area domain, to access employment, enrollment, or enlistment leading to service. These
+standards should form the basis for strong core instruction for all students at each grade level
+and content area. The standards identify the minimum academic content or skills that Indiana
+students need in order to be prepared for success after graduation, but they are not an
+exhaustive list.
+
+While the Indiana Academic Standards establish key expectations for knowledge and skills and
+should be used as the basis for curriculum, the standards by themselves do not constitute a
+curriculum. It is the responsibility of the local school corporation to select and formally adopt
+curricular tools, including textbooks and any other supplementary materials, that align with
+Indiana Academic Standards. Additionally, corporation and school leaders should consider the
+appropriate instructional sequence of the standards as well as the length of time needed to
+teach each standard. Every standard has a unique place in the continuum of learning, but each
+standard will not require the same amount of time and attention. A deep understanding of the
+vertical articulation of the standards will enable educators to make the best instructional
+decisions. These standards must also be complemented by robust, evidence-based
+instructional practices to support overall student development. By utilizing strategic and
+intentional instructional practices, other areas such as STEM and employability skills can be
+integrated with the content standards.
+
+
+
+
+                                                 2
+                     2023 Indiana Academic Standards: Grade 4 Mathematics
+
+
+Content-Specific Considerations
+The Indiana Academic Standards for Grade 4 Mathematics consist of five domains: Number
+Sense, Computation and Algebraic Thinking, Geometry, Measurement, and Data Analysis. The
+skills listed in each domain indicate what students should know and be able to do in
+Mathematics at each grade level. The Process Standards demonstrate the ways in which
+students should develop conceptual understanding of mathematical content, and the ways in
+which students should synthesize and apply mathematical skills.
+
+Acknowledgments
+The Indiana Department of Education appreciates the time, dedication, and expertise offered by
+Indiana’s K-12 educators, higher education professors, representatives from business and
+industry, families, and other stakeholders who contributed to the development of the Indiana
+Academic Standards. We wish to specially acknowledge the committee members, as well as
+participants in the public comment period, who dedicated many hours to the review and
+evaluation of these standards designed to prepare Indiana students for success after
+graduation.
+
+
+
+
+                                              3
+                         2023 Indiana Academic Standards: Grade 4 Mathematics
+
+
+Mathematics Process Standards
+
+PS.1: Make sense of problems and persevere in solving them.
+
+Mathematically proficient students start by explaining to themselves the meaning of a problem and looking
+for entry points to its solution. They analyze givens, constraints, relationships, and goals. They make
+conjectures about the form and meaning of the solution and plan a solution pathway, rather than simply
+jumping into a solution attempt. They consider analogous problems and try special cases and simpler
+forms of the original problem in order to gain insight into its solution. They monitor and evaluate their
+progress and change course if necessary. Mathematically proficient students check their answers to
+problems using a different method, and they continually ask themselves, “Does this make sense?” and "Is
+my answer reasonable?" They understand the approaches of others to solving complex problems and
+identify correspondences between different approaches. Mathematically proficient students understand
+how mathematical ideas interconnect and build on one another to produce a coherent whole.
+
+PS.2: Reason abstractly and quantitatively.
+
+Mathematically proficient students make sense of quantities and their relationships in problem situations.
+They bring two complementary abilities to bear on problems involving quantitative relationships: the ability
+to decontextualize—to abstract a given situation and represent it symbolically and manipulate the
+representing symbols as if they have a life of their own, without necessarily attending to their
+referents—and the ability to contextualize, to pause as needed during the manipulation process in order to
+probe into the referents for the symbols involved. Quantitative reasoning entails habits of creating a
+coherent representation of the problem at hand; considering the units involved; attending to the meaning of
+quantities, not just how to compute them; and knowing and flexibly using different properties of operations
+and objects.
+
+PS.3: Construct viable arguments and critique the reasoning of others.
+
+Mathematically proficient students understand and use stated assumptions, definitions, and previously
+established results in constructing arguments. They make conjectures and build a logical progression of
+statements to explore the truth of their conjectures. They analyze situations by breaking them into cases
+and recognize and use counterexamples. They organize their mathematical thinking, justify their
+conclusions and communicate them to others, and respond to the arguments of others. They reason
+inductively about data, making plausible arguments that take into account the context from which the data
+arose. Mathematically proficient students are also able to compare the effectiveness of two plausible
+arguments, distinguish correct logic or reasoning from that which is flawed, and—if there is a flaw in an
+argument—explain what it is. They justify whether a given statement is always true, sometimes, or never.
+Mathematically proficient students participate and collaborate in a mathematics community. They listen to
+or read the arguments of others, decide whether they make sense, and ask useful questions to clarify or
+improve the arguments.
+
+PS.4: Model with mathematics.
+
+Mathematically proficient students apply the mathematics they know to solve problems arising in everyday
+life, society, and the workplace using a variety of appropriate strategies. They create and use a variety of
+representations to solve problems and to organize and communicate mathematical ideas. Mathematically
+proficient students apply what they know and are comfortable making assumptions and approximations to
+simplify a complicated situation, realizing that these may need revision later. They are able to identify
+important quantities in a practical situation and map their relationships using such tools as diagrams,
+two-way tables, graphs, flowcharts, and formulas. They analyze those relationships mathematically to draw
+conclusions. They routinely interpret their mathematical results in the context of the situation and reflect on
+whether the results make sense, possibly improving the model if it has not served its purpose.
+
+
+
+
+                                                      4
+                          2023 Indiana Academic Standards: Grade 4 Mathematics
+
+
+
+PS.5: Use appropriate tools strategically.
+
+Mathematically proficient students consider the available tools when solving a mathematical problem.
+These tools might include pencil and paper, models, a ruler, a protractor, a calculator, a spreadsheet, a
+computer algebra system, a statistical package, or dynamic geometry software. Mathematically proficient
+students are sufficiently familiar with tools appropriate for their grade or course to make sound decisions
+about when each of these tools might be helpful, recognizing both the insight to be gained and their
+limitations. Mathematically proficient students identify relevant external mathematical resources, such as
+digital content, and use them to pose or solve problems. They use technological tools to explore and
+deepen their understanding of concepts and to support the development of learning mathematics. They
+use technology to contribute to concept development, simulation, representation, reasoning,
+communication, and problem solving.
+
+PS.6: Attend to precision.
+
+Mathematically proficient students communicate precisely to others. They use clear definitions, including
+correct mathematical language, in discussion with others and in their own reasoning. They state the
+meaning of the symbols they choose, including using the equal sign consistently and appropriately. They
+express solutions clearly and logically by using the appropriate mathematical terms and notation. They
+specify units of measure and label axes to clarify the correspondence with quantities in a problem. They
+calculate accurately and efficiently and check the validity of their results in the context of the problem. They
+express numerical answers with a degree of precision appropriate for the problem context.
+
+PS.7: Look for and make use of structure.
+
+Mathematically proficient students look closely to discern a pattern or structure. They step back for an
+overview and shift perspective. They recognize and use properties of operations and equality. They
+organize and classify geometric shapes based on their attributes. They see expressions, equations, and
+geometric figures as single objects or as being composed of several objects.
+
+PS.8: Look for and express regularity in repeated reasoning.
+
+Mathematically proficient students notice if calculations are repeated and look for general methods and
+shortcuts. They notice regularity in mathematical problems and their work to create a rule or formula.
+Mathematically proficient students maintain oversight of the process, while attending to the details as they
+solve a problem. They continually evaluate the reasonableness of their intermediate results.
+
+
+
+
+                                                       5
+                         2023 Indiana Academic Standards: Grade 4 Mathematics
+
+
+Grade 4 Mathematics
+Standards identified as essential for mastery by the end of the grade level are indicated with gray
+shading and an “E.” The learning outcome statement for each domain immediately precedes each
+set of standards.
+
+
+                                                Number Sense
+
+ Learning Outcome: Students represent and round multi-digit numbers. Students model, compare, and
+ generate equivalent fractions, mixed numbers, and decimal numbers to the tenths and hundredths.
+
+                Read and write whole numbers up to 1,000,000. Use words, models, standard form, and
+    4.NS.1
+                expanded form to represent and show equivalent forms of whole numbers up to 1,000,000.
+
+                Model mixed numbers and improper fractions using visual fraction models such as number
+    4.NS.2      lines and area models. Use a visual fraction model to show the equivalency between whole
+                numbers and whole numbers as fractions.
+
+                Use fraction models to represent two equivalent fractions with attention to how the number
+                and size of the parts differ even though the fractions themselves are the same size. Use this
+    4.NS.3
+                principle to generate equivalent fractions. [In grade 4, limit denominators of fractions to 2, 3,
+                4, 5, 6, 8, 10, 25, 100.] (E)
+
+                Compare two fractions with different numerators and different denominators (e.g., by
+                creating common denominators or numerators, or by comparing to a benchmark, such as 0,
+    4.NS.4      1/2, and 1). Explain why comparisons are valid only when the two fractions refer to the
+                same whole. Record the results of comparisons with symbols > , = , or < , and justify the
+                conclusions (e.g., by using a visual fraction model). (E)
+
+                Write tenths and hundredths in decimal and fraction notations. Use words, models, standard
+                form, and expanded form to represent decimal numbers to hundredths. Mentally calculate
+    4.NS.5
+                fraction and decimal equivalents for halves and fourths (e.g., 1/2 = 0.5 = 0.50, 7/4 = 1 3/4 =
+                1.75). (E)
+
+                Compare two decimals to hundredths by reasoning about their size based on the same
+    4.NS.6      whole. Record the results of comparisons with the symbols > , = , or < , and justify the
+                conclusions (e.g., by using a visual model). (E)
+
+    4.NS.7      Use place value understanding to round multi-digit whole numbers to any given place value.
+
+                                   Computation and Algebraic Thinking
+
+ Learning Outcome: Students solve real-world problems using place value strategies and properties of
+ multiplication and division with limitations. Students compose (addition) and decompose (subtraction)
+ non-unit fractions and mixed numbers using models and strategies, applying these concepts to real-world
+ situations. Students investigate the relationship between two given sets of numbers and generate number
+ patterns based upon given rules.
+
+                Multiply a whole number of up to four digits by a one-digit whole number and multiply two
+    4.CA.1      two-digit numbers, using strategies based on place value and the properties of operations.
+                Describe the strategy and explain the reasoning. (E)
+
+    4.CA.2      Find whole-number quotients and remainders with up to four-digit dividends and one-digit
+
+
+
+
+                                                       6
+                         2023 Indiana Academic Standards: Grade 4 Mathematics
+
+
+
+               divisors using strategies based on place value, the properties of operations, and/or the
+               relationship between multiplication and division. Describe the strategy and explain the
+               reasoning. (E)
+
+               Show how the order in which two numbers are multiplied (commutative property) and how
+               numbers are grouped in multiplication (associative property) will not change the product.
+  4.CA.3
+               Use these properties to show that numbers can be multiplied in any order. Investigate and
+               apply the distributive property. (E)
+
+               Investigate the mathematical relationship between factors and multiples for whole numbers
+  4.CA.4       from 1-100, including the set of factors and multiples for given numbers. Identify sets of
+               factors and multiples for any given whole number up to 100.
+
+               Solve real-world problems with whole numbers involving multiplicative comparison (e.g., by
+               using drawings and equations with a symbol for the unknown number to represent the
+  4.CA.5
+               problem), distinguishing multiplicative comparison from additive comparison. [In grade 4,
+               division problems should not include a remainder.] (E)
+
+               Add and subtract fractions with common denominators using visual fraction models.
+  4.CA.6
+               Decompose non-unit fractions to represent them as iterations of unit fractions. (E)
+
+               Add and subtract mixed numbers with common denominators (e.g., by replacing each
+  4.CA.7       mixed number with an equivalent fraction and/or by using properties of operations and the
+               relationship between addition and subtraction).
+
+               Solve real-world problems involving addition and subtraction of fractions referring to the
+  4.CA.8       same whole and having common denominators (e.g., by using visual fraction models and
+               equations to represent the problem). (E)
+
+               Describe the relationship between two terms and use it to find a second number when a first
+  4.CA.9
+               number is given. Generate a number pattern that follows a given rule.
+
+                                                  Geometry
+
+Learning Outcome: Students utilize appropriate tools to identify, describe, and draw parallelograms,
+rhombuses, and trapezoids in addition to classifying two-dimensional shapes.
+
+               Identify, describe, and draw parallelograms, rhombuses, and trapezoids using appropriate
+   4.G.1
+               tools (e.g., ruler, straightedge, and technology).
+
+               Identify, describe, and draw rays, angles (right, acute, obtuse), and perpendicular and
+   4.G.2       parallel lines using appropriate tools (e.g., ruler, straightedge, and technology). Identify
+               these in two-dimensional figures.
+
+               Classify triangles and quadrilaterals based on the presence or absence of parallel or
+   4.G.3
+               perpendicular lines, or right, acute, or obtuse angles.
+
+                                                Measurement
+
+Learning Outcome: Students solve real-world problems involving distance, intervals of time, volumes,
+masses of objects, and money by applying computation strategies, precise measurement skills, and
+relationships between systems of measurement. Students continue to apply the concept of area and
+perimeter to complex shapes to identify solutions.
+
+   4.M.1       Measure length to the nearest quarter-inch, eighth-inch, and millimeter. (E)
+
+
+
+                                                      7
+                       2023 Indiana Academic Standards: Grade 4 Mathematics
+
+
+
+              Within given measurement systems, convert larger units to smaller units, including km, m,
+   4.M.2      cm; kg, g; lb, oz; l, ml; hr, min, sec., and use these conversions to solve real-world
+              problems. (E)
+
+              Use the four operations to solve real-world problems involving distances, intervals of time,
+              volumes, masses of objects, and money. Include addition and subtraction problems
+   4.M.3
+              involving simple fractions and problems that require expressing measurements given in a
+              larger unit in terms of a smaller unit. (E)
+
+              Apply the area and perimeter formulas for rectangles to solve real-world and other
+              mathematical problems. Investigate the area of complex shapes composed of rectangles by
+   4.M.4      decomposing them into non-overlapping rectangles and adding the areas of the
+              non-overlapping parts; apply this technique to solve real-world problems and other
+              mathematical problems. (E)
+
+                                              Data Analysis
+
+Learning Outcome: Students collect and ask questions of the data.
+
+              Formulate questions that can be addressed with data. Collect, organize, and graph data
+              from observations, surveys, and experiments using line plots with whole number intervals,
+  4.DA.1      single- and scaled bar graphs, and frequency tables. Solve real-world problems by
+              analyzing and interpreting the data using grade-level computation and comparison
+              strategies. (E)
+
+              Make a line plot to display a data set of measurements in fractions of a unit (1/2, 1/4, 1/8).
+  4.DA.2      Solve problems involving addition and subtraction of fractions by using data displayed in
+              line plots.
+
+
+
+
+                                                     8
+

@@ -1291,4 +1291,53 @@ export const lessons: GradeLessons = {
     ["They are in the middle of the country.", "They are wide, flat grasslands."],
     "flat grasslands",
   ),
+  // Indiana (us-in)
+  "social/in-g4-indiana-land": lesson(
+    ["Indiana has three regions: the Northern Lake and Moraine, the Central Till Plain and the Southern Hills and Lowlands.", "Glaciers flattened much of the north and middle, leaving rich soil for farms.", "The Wabash River crosses most of the state."],
+    "What flattened much of northern and central Indiana long ago?",
+    ["It was a huge sheet of ice.", "It moved slowly and scraped the land."],
+    "glaciers",
+  ),
+  "social/in-g4-first-peoples": lesson(
+    ["Long ago, Mound Builders made earthworks in Indiana, such as at Angel Mounds.", "Later the Miami, Potawatomi, Delaware (Lenape) and Shawnee lived here.", "Many were forced to leave, but the Miami and Potawatomi Nations are living communities today, some still in Indiana."],
+    "Which Native nation still has many members living in Indiana today?",
+    ["Its name is also the name of a river and a city in Ohio.", "Many members live near Peru, Indiana."],
+    "the Miami",
+  ),
+  "social/in-g4-territory-statehood": lesson(
+    ["Indiana was part of the Northwest Territory, then became the Indiana Territory in 1800.", "Indiana became the 19th state in 1816. Corydon was its first capital.", "The capital moved to Indianapolis in 1825, near the middle of the state."],
+    "In what year did Indiana become a state?",
+    ["It was the 19th state.", "It was 40 years after 1776."],
+    "1816",
+  ),
+  "social/in-g4-lincoln-civil-war": lesson(
+    ["Abraham Lincoln grew up in southern Indiana from age 7 to 21.", "Indiana was a free state. Some Hoosiers helped people escape slavery on the Underground Railroad.", "Many Hoosiers fought for the Union in the Civil War."],
+    "Where did Abraham Lincoln live as a boy?",
+    ["He moved there from Kentucky at age 7.", "His boyhood home is a national memorial there."],
+    "southern Indiana",
+  ),
+  "social/in-g4-growing-indiana": lesson(
+    ["Canals, then railroads and roads, helped Indiana grow.", "Factories in places like Gary and Indianapolis made steel and cars.", "Indiana is called the Crossroads of America because many highways meet there."],
+    "Why is Indiana called the Crossroads of America?",
+    ["Think about roads and travel.", "Many highways pass through it."],
+    "many highways meet there",
+  ),
+  "social/in-g4-governing-indiana": lesson(
+    ["Indiana's government has three branches, like the nation's.", "The General Assembly makes laws, the governor carries them out, and the courts decide what they mean.", "Indiana's capital is Indianapolis, where the Statehouse is."],
+    "Which branch of Indiana's government makes laws?",
+    ["It has a Senate and a House.", "It is called the General Assembly."],
+    "the General Assembly (legislative branch)",
+  ),
+  "social/in-g4-indiana-economy": lesson(
+    ["Producers make goods and services. Consumers buy them.", "Indiana grows corn and soybeans and makes steel, cars and medicines.", "Trading lets Indiana sell what it makes well and buy what it needs."],
+    "Which crop is one of Indiana's biggest?",
+    ["It is grown on many Indiana farms.", "Popcorn is one kind of it."],
+    "corn",
+  ),
+  "social/in-g4-indiana-timeline": lesson(
+    ["A timeline puts events in order from earliest to latest.", "Indiana became a state in 1816, and Indianapolis became the capital in 1825.", "Find two dates on the timeline and subtract to see how many years apart they are."],
+    "Indiana became a state in 1816 and Indianapolis became the capital in 1825. How many years apart?",
+    ["Subtract the earlier year from the later year.", "1825 − 1816"],
+    "9 years",
+  ),
 };

@@ -1,0 +1,465 @@
+                                                   Grade 1 English/Language Arts
+
+This document provides correlations between the 2023 Indiana Academic Standards (IAS) and the Common Core State Standards
+(CCSS) for easy reference. This correlation guide is intended to help support conversations regarding state and national standards and
+may be used as one of many tools to help inform a variety of local decisions (e.g., selection of high-quality curricular materials,
+curriculum maps).
+
+The 2023 Indiana Academic Standards resulted from the standards streamlining process required by Indiana Code (IC) 20-31-3-1(c-d)
+and were adopted by the Indiana State Board of Education in June 2023. Standards designated as essential (E) for student mastery by
+the end of the grade level are shaded in gray and all standards were renumbered to avoid gaps in sequencing.
+
+                                                                                                           Differences Between
+      2023 Indiana Academic Standard                      Common Core State Standard
+                                                                                                           2023 IAS and CCSS
+
+                                                    Domain: Reading Foundations
+
+Number                      Text                   Number                    Text                               Description
+
+                                                            Demonstrate understanding of the
+                                                            organization and basic features of
+           Recognize components of a
+                                                            print. Recognize the distinguishing
+ 1.RF.1    sentence (e.g., capitalization, first   RF.1.1.A                                           No content differences identified.
+                                                            features of a sentence (e.g., first
+           word, ending punctuation).
+                                                            word, capitalization, ending
+                                                            punctuation).
+
+                                                            Demonstrate understanding of
+                                                            spoken words, syllables, and sounds
+           Blend sounds, including consonant                                                    IAS requires students to blend
+                                                            (phonemes). Orally produce
+ 1.RF.2    blends, to produce single- and          RF.1.2.B                                     sounds in single and multi-syllable
+                                                            single-syllable words by blending
+           multi-syllable words. (E)                                                            words.
+                                                            sounds (phonemes), including
+                                                            consonant blends.
+
+
+
+
+                                                                    1
+                  2023 Indiana Academics Standards - CCSS Correlation Guide for English/Language Arts Grade 1
+
+
+                                                           Demonstrate understanding of
+                                                           spoken words, syllables, and sounds
+         Identify and produce beginning,
+                                                           (phonemes). Isolate and pronounce
+1.RF.3   middle (medial), and final sounds in     RF.1.2.C
+                                                           initial, medial vowel, and final
+         single-syllable words. (E)
+                                                           sounds (phonemes) in spoken
+                                                           single-syllable words.
+                                                                                                  No content differences identified.
+                                                           Demonstrate understanding of
+                                                           spoken words, syllables, and sounds
+         Segment individual phonemes in                    (phonemes). Segment spoken
+1.RF.4                                            RF.1.2.D
+         one-syllable words. (E)                           single-syllable words into their
+                                                           complete sequence of individual
+                                                           sounds (phonemes).
+
+         Use letter-sound knowledge of
+         single consonants (hard and soft
+                                                                                                 IAS requires students to use
+         sounds), short and long vowels,
+                                                                                                 knowledge of consonants, vowels,
+         consonant blends and digraphs,                    Know the spelling-sound
+                                                                                                 digraphs, vowel teams, and
+1.RF.5   vowel teams (e.g., ai), and digraphs,    RF.1.3.A correspondences for common
+                                                                                                 r-controlled vowels to decode
+         and r-controlled vowels to decode                 consonant digraphs.
+                                                                                                 phonetically regular words,
+         phonetically regular words (e.g., cat,
+                                                                                                 independent of context.
+         go, black, boat, her), independent of
+         context. (E)
+
+         Decode one-syllable words in the
+                                                                                                 IAS emphasizes decoding using the
+         major syllable types (CVC, CVr, V,                Decode regularly spelled
+1.RF.6                                            RF.1.3.B                                       major syllable types (CVC, CVr, V,
+         VV, VCe), independent of context.                 one-syllable words.
+                                                                                                 VV, and VCe).
+         (E)
+
+         Decode grade-appropriate base                                                           IAS specifies students decoding
+                                                             Read words with inflectional
+1.RF.7   words and affixes, including             RF.1.3.F                                       base words, affixes, verb tense,
+                                                             endings.
+         common prefixes, plurals, verb                                                          comparatives, compound words,
+
+
+
+                                                        Updated July 2024                                                           2
+                  2023 Indiana Academics Standards - CCSS Correlation Guide for English/Language Arts Grade 1
+
+
+         tense, inflectional suffixes (e.g.,                                                     and contractions.
+         plurals, verb tenses), simple
+         compound words (e.g.,
+         cupcake), and contractions (e.g.,
+         isn’t). (E)
+
+                                                            Read with sufficient accuracy and
+                                                 RF.1.4
+                                                            fluency to support comprehension.    IAS combines all CCSS standards
+                                                                                                 with emphasis on orally reading
+                                                            Read grade-level text with purpose   decodable texts with fluency. IC
+                                                RF.1.4.A
+                                                            and understanding.                   20-26-12-24.5 requires public
+         Orally read decodable texts with
+                                                         Read grade-level text orally with       schools, including charter schools,
+         appropriate fluency (rate, accuracy,
+1.RF.8                                          RF.1.4.B accuracy, appropriate rate, and         to adopt curriculum or supplemental
+         and prosody) while
+                                                         expression on successive readings.      materials that are aligned with the
+         reading.
+                                                                                                 science of reading, and states that
+                                                         Use context to confirm or               schools may not adopt curricula or
+                                                         self-correct word recognition and       materials that are based on the
+                                                RF.1.4.C
+                                                         understanding, rereading as             three-cueing model.
+                                                         necessary.
+
+                                                                                                        Differences Between
+    2023 Indiana Academic Standard                        Common Core State Standard
+                                                                                                        2023 IAS and CCSS
+
+                                                Domain: Reading Comprehension
+
+Number                    Text                  Number                     Text                              Description
+
+                                                            Ask and answer questions about key IAS combines CCSS standards and
+         Ask and answer questions about the     RL.1.1
+                                                            details in a text.                 requires students to use the main
+         main idea and key details to clarify
+1.RC.1                                                                                         idea and key details to clarify and
+         and confirm understanding of a text.               Ask and answer questions about key confirm reading comprehension in
+         (E)                                     RI.1.1
+                                                            details in a text.                 fiction and nonfiction text.
+
+
+
+
+                                                      Updated July 2024                                                           3
+                  2023 Indiana Academics Standards - CCSS Correlation Guide for English/Language Arts Grade 1
+
+
+         Retell stories, fables, and fairy tales
+                                                            Retell stories, including key details,    IAS emphasizes retelling in
+         in sequence, including key details,
+1.RC.2                                             RL.1.2   and demonstrate understanding of          sequence and includes fables and
+         and demonstrate comprehension of
+                                                            their central message or lesson.          fairy tales.
+         their central message or lesson.
+
+         Using key details, identify and                    Describe characters, settings, and
+1.RC.3   describe the elements of plot,            RL.1.3   major events in a story, using key         No content differences identified.
+         character, and setting. (E)                        details.
+
+         Make and confirm predictions about
+1.RC.4
+         what will happen next in a story.
+
+         Identify the basic characteristics of
+         familiar narrative text genres (e.g.,
+1.RC.5
+         fairy tales, nursery rhymes,
+         storybooks).
+
+         Retell main ideas and key details of               Identify the main topic and retell key
+1.RC.6                                             RI.1.2
+         a text. (E)                                        details of a text.
+
+                                                            Know and use various text features
+         Know and use various text features                                                            No content differences identified.
+                                                            (e.g., headings, tables of contents,
+         (e.g., table of contents, glossary,
+1.RC.7                                             RI.1.5   glossaries, electronic menus, icons)
+         illustrations) to locate and describe
+                                                            to locate key facts or information in a
+         key facts or information in a text.
+                                                            text.
+
+         Identify how a nonfiction text can be
+         structured to indicate order (e.g.,
+1.RC.8
+         sequential) or to explain a simple
+         cause-and-effect relationship. (E)
+
+
+
+
+                                                        Updated July 2024                                                               4
+                   2023 Indiana Academics Standards - CCSS Correlation Guide for English/Language Arts Grade 1
+
+
+          Demonstrate comprehension that
+          context clues (e.g., words and
+                                                                                                  IAS emphasizes the use of text
+          sentence clues) and text features                  Use sentence-level context as a clue
+1.RC.9                                            L.1.4.A                                         features and context clues to aid in
+          (e.g., glossaries, illustrations) may              to the meaning of a word or phrase.
+                                                                                                  understanding unknown words.
+          be used to help understand
+          unknown words.
+
+                                                             Define words by category and by
+          Define and sort words into
+                                                             one or more key attributes (e.g., a
+1.RC.10   categories (e.g., antonyms, living      L.1.5.B                                                No content differences identified.
+                                                             duck is a bird that swims; a tiger is a
+          things, synonyms). (E)
+                                                             large cat with stripes).
+
+                                                                                                              Differences Between
+    2023 Indiana Academic Standard                        Common Core State Standard
+                                                                                                              2023 IAS and CCSS
+
+                                                            Domain: Writing
+
+Number                     Text                   Number                      Text                                  Description
+
+          Write all uppercase (capital) and                                                            IAS requires students to write all
+          lowercase letters legibly and space                Print all upper- and lowercase            letters legibly and use appropriate
+ 1.W.1                                            L.1.1.A
+          letters, words, and sentences                      letters.                                  spacing for letters, words, and
+          appropriately.                                                                               sentences.
+
+          Produce (when writing or speaking)                 Write opinion pieces in which they
+          logically connected sentences to                   introduce the topic or name the book      IAS requires students to identify a
+          make a proposal to a particular                    they are writing about, state an          particular audience for writing their
+ 1.W.2                                            W.1.1
+          audience (e.g., a parent, classmate),              opinion, supply a reason for the          proposal and justify why their
+          and give reasons why the proposal                  opinion, and provide some sense of        proposal should be considered.
+          should be considered. (E)                          closure.
+
+
+
+
+                                                       Updated July 2024                                                                     5
+                2023 Indiana Academics Standards - CCSS Correlation Guide for English/Language Arts Grade 1
+
+
+        Produce (when writing or speaking)
+                                                       Write informative/explanatory texts
+        a topic sentence or main idea,
+                                                       in which they name a topic, supply
+1.W.3   provide some facts or details about    W.1.2                                              No content differences identified.
+                                                       some facts about the topic, and
+        the topic, and provide a concluding
+                                                       provide some sense of closure.
+        statement. (E)
+
+                                                       Write narratives in which they
+        Produce (when writing or speaking)
+                                                       recount two or more appropriately
+        narratives using precise words to
+                                                       sequenced events, include some           IAS emphasizes usage of precise
+        describe characters and actions and
+1.W.4                                          W.1.3   details regarding what happened,         words to describe characters and
+        temporal words to signal event
+                                                       use temporal words to signal event       actions.
+        order, with ideas organized into a
+                                                       order, and provide some sense of
+        beginning, middle, and ending. (E)
+                                                       closure.
+
+        With support, apply the writing
+        process to:                                    With guidance and support from
+           a. Plan by generating ideas for             adults, focus on a topic, respond to
+                                                                                                IAS details the writing process with
+              writing through oral             W.1.5   questions and suggestions from
+                                                                                                respect to developmental needs.
+              discussions and drawings;                peers, and add details to strengthen
+           b. Develop drafts in pictorial or           writing as needed.
+              written form by organizing
+              ideas;
+1.W.5      c. Revise writing to add details
+              in pictures or words (e.g.,                                                       IAS specifies students plan writing
+              sentence structure); edit                                                         ideas through oral discussions and
+                                                       With guidance and support from
+              writing for conventions (e.g.,                                                    drawings; draft and organize ideas
+                                                       adults, use a variety of digital tools
+              correct spelling of frequently   W.1.6                                            in pictorial or written form; revise
+                                                       to produce and publish writing,
+              used words, basic                                                                 writing by adding details in pictures
+                                                       including in collaboration with peers.
+              capitalization, end                                                               or words, and edit writing for
+              punctuation); and                                                                 conventions.
+           d. Use available technology to
+
+
+
+                                                   Updated July 2024                                                                6
+                2023 Indiana Academics Standards - CCSS Correlation Guide for English/Language Arts Grade 1
+
+
+               produce and publish legible
+               documents.
+
+        With support, conduct research on a              Participate in shared research and
+        topic.                                           writing projects (e.g., explore a
+                                               W.1.7     number of "how-to" books on a
+           a. Identify several sources of                                                      IAS combines all CCSS standards
+                                                         given topic and use them to write a
+              information and indicate the                                                     with emphasis on indicating sources,
+                                                         sequence of instructions).
+1.W.6         sources.                                                                         using aids to organize information,
+           b. Organize information using                 With guidance and support from        and making informal presentations
+              graphic organizers or other                adults, recall information from       on information gathered.
+              aids.                            W.1.8     experiences or gather information
+           c. Make informal presentations                from provided sources to answer a
+              on information gathered.                   question.
+
+        Demonstrate command of English                   Demonstrate command of the
+        grammar and usage, when writing or               conventions of standard English
+                                                L.1.1                                           No content differences identified.
+        speaking, focusing on:                           grammar and usage when writing or
+           a. Nouns/Pronouns – Using                     speaking.
+              sentences that include
+              common and proper nouns                    Use common, proper, and               IAS specifies the use of possessive
+                                               L.1.1.B
+              and personal pronouns.                     possessive nouns.                     nouns in grade two.
+1.W.7      b. Verbs – Using sentences
+              with verbs to convey a sense               Use personal, possessive, and         IAS specifies the use of possessive
+              of past, present, and future.    L.1.1.D
+                                                         indefinite pronouns.                  pronouns in grade two.
+           c. Usage – Using complete,
+              simple declarative,
+              interrogative, imperative, and             Use verbs to convey a sense of
+              exclamatory sentences in         L.1.1.E                                          No content differences identified.
+                                                         past, present, and future.
+              response to prompts.
+
+
+
+
+                                                    Updated July 2024                                                            7
+                2023 Indiana Academics Standards - CCSS Correlation Guide for English/Language Arts Grade 1
+
+
+                                                         Produce and expand complete
+                                                         simple and compound declarative,
+                                               L.1.1.J   interrogative, imperative, and         No content differences identified.
+                                                         exclamatory sentences in response
+                                                         to prompts.
+
+        Demonstrate command of                           Demonstrate command of the
+        capitalization, punctuation, and                 conventions of standard English
+        spelling, focusing on:                  L.1.2                                           No content differences identified.
+                                                         capitalization, punctuation, and
+           a. Capitalization – Capitalizing              spelling when writing.
+              the first word of a sentence,
+              dates, names of people, and                                                      IAS emphasizes the capitalization of
+              the pronoun I.                             Capitalize dates and names of         the first word in a sentence and the
+                                               L.1.2.A
+           b. Punctuation –                              people.                               pronoun I, as well as dates and
+                 I.    Correctly using a                                                       names of people.
+                       period, question
+                       mark, and               L.1.2.B   Use end punctuation for sentences.
+                       exclamation mark at
+1.W.8                  the end of a
+                       sentence.                         Use commas in dates and to
+                II.    Using commas in         L.1.2.C
+                                                         separate single words in a series.
+                       dates and to separate
+                       items in a series.
+           c. Encoding –                                 Use conventional spelling for words    No content differences identified.
+                 I.    Spelling unknown                  with common spelling patterns and
+                                               L.1.2.D
+                       words phonetically,               for frequently occurring irregular
+                       drawing on phonemic               words.
+                       awareness and
+                       spelling conventions.             Spell untaught words phonetically,
+                II.    Correctly spelling      L.1.2.E   drawing on phonemic awareness
+                       words with common                 and spelling conventions.
+
+
+                                                    Updated July 2024                                                            8
+                 2023 Indiana Academics Standards - CCSS Correlation Guide for English/Language Arts Grade 1
+
+
+                        spelling patterns.
+                 III.   Correctly spelling
+                        common
+                        irregularly-spelled,
+                        grade-appropriate
+                        words (e.g., said,
+                        does, gone). (E)
+
+                                                                                                          Differences Between
+    2023 Indiana Academic Standard                        Common Core State Standard
+                                                                                                          2023 IAS and CCSS
+
+                                               Domain: Communication and Collaboration
+
+Number                   Text                      Number                     Text                             Description
+
+         Participate in collaborative                         Participate in collaborative
+         conversations about                                  conversations with diverse partners
+1.CC.1   grade-appropriate topics and texts         SL.1.1    about grade 1 topics and texts with
+         with peers and adults in small and                   peers and adults in small and larger
+         larger groups. (E)                                   groups.
+
+                                                            Follow agreed-upon rules for
+                                                            discussions (e.g., listening to others
+         Listen to others, take turns speaking     SL.1.1.A with care, speaking one at a time        No content differences identified.
+         about the topic, and add one’s own                 about the topics and texts under
+1.CC.2                                                      discussion).
+         ideas in small group discussions or
+         tasks.                                             Build on others' talk in conversations
+                                                   SL.1.1.B by responding to the comments of
+                                                            others through multiple exchanges.
+
+         Ask and answer questions about                       Ask and answer questions about
+1.CC.3                                              SL.1.3
+         what a speaker says to clarify                       what a speaker says in order to
+
+
+
+                                                         Updated July 2024                                                            9
+                  2023 Indiana Academics Standards - CCSS Correlation Guide for English/Language Arts Grade 1
+
+
+         something that is not understood.                 gather additional information or
+                                                           clarify something that is not
+                                                           understood.
+
+         Ask and answer questions about key                Ask and answer questions about key
+         details in what is read, heard, or                details in a text read aloud or
+1.CC.4                                            SL.1.2                                           No content differences identified.
+         viewed to demonstrate                             information presented orally or
+         comprehension. (E)                                through other media.
+
+         Speaking audibly and using
+                                                                                                  IAS requires students to speak
+         appropriate language, recite poems,               Describe people, places, things, and
+                                                                                                  audibly when reciting poems,
+         rhymes, songs, and stories, with                  events with relevant details,
+1.CC.5                                            SL.1.4                                          rhymes, songs, and stories. It also
+         careful attention to sensory detail               expressing ideas and feelings
+                                                                                                  requires students to describe using
+         when describing people, places,                   clearly.
+                                                                                                  sensory details.
+         things, and events.
+
+         Add drawings or other visual                      Add drawings or other visual
+         displays, such as pictures and                    displays to descriptions when
+1.CC.6                                            SL.1.5                                           No content differences identified.
+         objects, when sharing information to              appropriate to clarify ideas,
+         clarify ideas, thoughts, and feelings.            thoughts, and feelings.
+
+         Give and follow oral directions with              Produce complete sentences when        IAS requires students to follow as
+1.CC.7                                            SL.1.6
+         two or three steps.                               appropriate to task and situation.     well as give oral directions.
+
+
+
+
+                                                      Updated July 2024                                                            10
+

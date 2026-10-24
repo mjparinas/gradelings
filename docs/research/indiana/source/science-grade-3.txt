@@ -1,0 +1,877 @@
+Indiana Academic Standards Context and Purpose
+                         2023 Indiana Academic Standards: Grade 3 Science
+
+
+Indiana Academic Standards Context and Purpose
+
+
+Introduction
+The Indiana Academic Standards for Grade 3 Science are the result of a process designed to
+identify, evaluate, synthesize, and create high-quality, rigorous learning expectations for Indiana
+students.
+
+Pursuant to Indiana Code (IC) 20-31-3-1(c-d), the Indiana Department of Education (IDOE)
+facilitated the prioritization of the Indiana Academic Standards. All standards are required to be
+taught. Standards identified as essential for mastery by the end of the grade level are indicated
+with the word “Essential” under the standard number.
+
+The Indiana Academic Standards are designed to ensure that all Indiana students, upon
+graduation, are prepared with essential knowledge and skills needed to access employment,
+enrollment, or enlistment leading to service.
+
+What are the Indiana Academic Standards and how should they be used?
+The Indiana Academic Standards for Grades K-12 Science are based on A Framework for K-12
+Science Education (NRC, 2012) and the Next Generation Science Standards (NGSS Lead
+States, 2013). The following conceptual shifts reflect what is new about these science
+standards. The Indiana Academic Standards for Science:
+   ●   Reflect science as it is practiced and experienced in the real world;
+   ●   Build logically from kindergarten through grade 12;
+   ●   Focus on deeper understanding as well as application of content; and
+   ●   Integrate practices, crosscutting concepts, and core ideas.
+The K-12 Science Indiana Academic Standards outline the knowledge, science, and
+engineering practices that all students should learn by the end of high school. The standards
+are three-dimensional because each student performance expectation engages students at the
+nexus of the following three dimensions:
+   ●   Dimension 1 describes scientific and engineering practices.
+   ●   Dimension 2 describes crosscutting concepts, overarching science concepts that apply
+       across science disciplines.
+   ●   Dimension 3 describes core ideas in the science disciplines.
+
+Science and Engineering Practices (as found in NGSS)
+The eight practices describe what scientists use to investigate and build models and theories of
+the world around them or that engineers use as they build and design systems. The practices
+are essential for all students to learn and are as follows:
+   1. Asking questions (for science) and defining problems (for engineering);
+   2. Developing and using models;
+
+
+                                                 2
+                        2023 Indiana Academic Standards: Grade 3 Science
+
+
+   3.   Planning and carrying out investigations;
+   4.   Analyzing and interpreting data;
+   5.   Using mathematics and computational thinking;
+   6.   Constructing explanations for science and designing solutions for engineering;
+   7.   Engaging in argument from evidence; and
+   8.   Obtaining, evaluating, and communicating information.
+
+Crosscutting Concepts (as found in NGSS)
+The seven crosscutting concepts bridge disciplinary boundaries and unit core ideas throughout
+the fields of science and engineering. Their purpose is to help students deepen their
+understanding of the disciplinary core ideas, and develop a coherent, and scientifically based
+view of the world. The seven crosscutting concepts are as follows:
+   1. Patterns. Observed patterns of forms and events guide organization and classification,
+      and prompt questions about relationships and the factors that influence them.
+   2. Cause and Effect: Mechanism and Explanation. Events have causes, sometimes simple,
+      sometimes multifaceted. A major activity of science is investigating and explaining
+      causal relationships and the mechanisms by which they are mediated. Such
+      mechanisms can then be tested across given contexts and used to predict and explain
+      events in new contexts.
+   3. Scale, Proportion, and Quantity. In considering phenomena, it is critical to recognize
+      what is relevant at different measures of size, time, and energy and to recognize how
+      changes in scale, proportion, or quantity affect a system’s structure or performance.
+   4. Systems and System Models. Defining the system under study—specifying its
+      boundaries and making explicit a model of that system—provides tools for
+      understanding and testing ideas that are applicable throughout science and
+      engineering.
+   5. Energy and Matter: Flows, Cycles, and Conservation. Tracking fluxes of energy and
+      matter into, out of, and within systems helps one understand the systems’ possibilities
+      and limitations.
+   6. Structure and Function. The way in which an object or living thing is shaped and its
+      substructure determines many of its properties and functions.
+   7. Stability and Change. For natural and built systems alike, conditions of stability and
+      determinants of rates of change or evolution of a system are critical elements of study.
+
+Disciplinary Core Ideas (as found in NGSS)
+The disciplinary core ideas describe the content that occurs at each grade or course. The K-12
+Science Indiana Academic Standards focus on a limited number of core ideas in science and
+engineering both within and across the disciplines and are built on the notion of learning as a
+developmental progression. The Disciplinary Core Ideas are grouped into the following
+domains:
+   ●    Physical Science (PS)
+   ●    Life Science (LS)
+   ●    Earth and Space Science (ESS)
+
+
+                                                3
+                        2023 Indiana Academic Standards: Grade 3 Science
+
+
+   ●   Engineering, Technology and Applications of Science (ETS)
+
+While the Indiana Academic Standards establish key expectations for knowledge and skills and
+should be used as the basis for curriculum, the standards by themselves do not constitute a
+curriculum. It is the responsibility of the local school corporation to select and formally adopt
+curricular tools, including textbooks and any other supplementary materials, that align with
+Indiana Academic Standards. Additionally, corporation and school leaders should consider the
+appropriate instructional sequence of the standards as well as the length of time needed to
+teach each standard. Every standard has a unique place in the continuum of learning, but each
+standard will not require the same amount of time and attention. A deep understanding of the
+vertical articulation of the standards will enable educators to make the best instructional
+decisions. These standards must also be complemented by robust, evidence-based
+instructional practices to support overall student development. By utilizing strategic and
+intentional instructional practices, other areas such as STEM and employability skills can be
+integrated with the content standards.
+
+Acknowledgments
+The Indiana Department of Education appreciates the time, dedication, and expertise offered by
+Indiana’s K-12 educators, higher education professors, representatives from business and
+industry, families, and other stakeholders who contributed to the development of the Indiana
+Academic Standards. We wish to specially acknowledge the committee members, as well as
+participants in the public comment period, who dedicated many hours to the review and
+evaluation of these standards designed to prepare Indiana students for success after
+graduation.
+
+References
+   ●   National Research Council. 2012. A Framework for K-12 Science Education: Practices,
+       Crosscutting Concepts, and Core Ideas. Washington, DC: The National Academies
+       Press. https://doi.org/10.17226/13165.
+   ●   NGSS Lead States. 2013. Next Generation Science Standards: For States, By States.
+       Washington, DC: The National Academies Press.
+
+
+
+
+                                                4
+                                2023 Indiana Academic Standards: Grade 3 Science
+
+
+       How to Read the Indiana Academic Standards for K-12 Science
+Standard Number                   Title
+
+Students who demonstrate understanding can:
+Standard           Performance Expectation: A statement that combines practices, core ideas, and
+Number             crosscutting concepts together to describe how students can show what they have
+                   learned. [Clarification Statement: A statement that supplies examples or additional clarification
+Essential          to the performance expectation.]
+
+
+
+Science and Engineering Practices                                        Disciplinary Core Ideas
+                                                  Disciplinary Core Ideas are concepts in science and engineering that have
+Science and Engineering Practices are             broad importance within and across disciplines as well as relevance in
+activities that scientists and engineers engage   people’s lives.
+in to either understand the world or solve the
+problem.                                          To be considered core, the ideas should meet at least two of the following
+                                                  criteria and ideally all four:
+There are 8 practices. These are integrated
+                                                       ●    Have broad importance across multiple sciences or engineering
+into each standard. They were previously
+                                                            disciplines or be a key organizing concept of a single discipline.
+found at the beginning of each grade level
+content standard and known as SEPs.                    ●    Provide a key tool for understanding or investigating more
+                                                            complex ideas and solving problems.
+   Connections to the Nature of Science                ●    Relate to the interests and life experiences of students or be
+                                                            connected to societal or personal concerns that require scientific
+Connections are listed in either practices or               or technological knowledge.
+the crosscutting concepts section.
+                                                       ●    Be teachable and learnable over multiple grades at increasing
+                                                            levels of depth and sophistication.
+                                                  Disciplinary ideas are grouped in four domains: the physical sciences; the
+                                                  life sciences; the earth and space sciences; and engineering, technology,
+                                                  and applications of science.
+                                                  A disciplinary core idea is identified as “(secondary)” when the other
+                                                  featured disciplinary core ideas connect to the science and engineering
+                                                  practices and crosscutting concepts as the main focus of the performance
+                                                  expectation.
+                                                  A boundary statement, where applicable, provides guidance regarding the
+                                                  scope of a performance expectation.
+
+
+                                                                         Crosscutting Concepts
+                                                  Crosscutting concepts are seven ideas such as Patterns and Cause and
+                                                  Effect, which are not specific to any one discipline but cut across them all.
+                                                  Crosscutting concepts have value because they provide students with
+                                                  connections and intellectual tools that are related across the differing areas
+                                                  of disciplinary content and can enrich their application of practices and
+                                                  their understanding of core ideas.
+                                                  Connections to Engineering, Technology and Applications of Science
+                                                       ●    These connections are drawn from either the Disciplinary Core
+                                                            Ideas or Science and Engineering Practices.
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+
+                                                             5
+                                2023 Indiana Academic Standards: Grade 3 Science
+
+
+
+3-PS2-1 Motion and Stability: Forces and Interactions
+Students who demonstrate understanding can:
+3-PS2-1           Plan and conduct an investigation to provide evidence of the effects of balanced and
+                  unbalanced forces on the motion of an object. [Clarification Statement: Examples could
+Essential         include an unbalanced force on one side of a ball can make it start moving; and balanced
+                  forces pushing on a box from both sides will not produce any motion at all.]
+
+
+
+        Science and Engineering Practices                                        Disciplinary Core Ideas
+SEP.3: Planning and Carrying Out Investigations                     PS2.A: Forces and Motion
+Planning and carrying out investigations to answer                      ●   Each force acts on one particular object and has
+questions or test solutions to problems in 3–5 builds on K–2                both strength and a direction. An object at rest
+experiences and progresses to include investigations that                   typically has multiple forces acting on it, but they
+control variables and provide evidence to support                           add to give zero net force on the object. Forces that
+explanations or design solutions.                                           do not sum to zero can cause changes in the
+                                                                            object’s speed or direction of motion. (Boundary:
+    ●     Plan and conduct an investigation collaboratively                 Qualitative and conceptual, but not quantitative
+          to produce data to serve as the basis for evidence,               addition of forces are used at this level.)
+          using fair tests in which variables are controlled
+          and the number of trials considered.                      PS2.B: Types of Interactions
+               -----------------------
+                                                                        ●   Objects in contact exert forces on each other.
+            Connections to Nature of Science
+Scientific Investigations Use a Variety of Methods                                Crosscutting Concepts
+    ●     Science investigations use a variety of methods,
+          tools, and techniques.                                    CC.2: Cause and Effect
+                                                                        ●   Cause and effect relationships are routinely
+                                                                            identified.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                                6
+                               2023 Indiana Academic Standards: Grade 3 Science
+
+
+
+3-PS2-2 Motion and Stability: Forces and Interactions
+Students who demonstrate understanding can:
+3-PS2-2           Make observations and/or measurements of an object’s motion to provide evidence that
+                  a pattern can be used to predict future motion. [Clarification Statement: Examples of motion
+                  with a predictable pattern could include a child swinging in a swing, a ball rolling back and forth
+                  in a bowl, and two children on a seesaw.]
+
+
+        Science and Engineering Practices                                       Disciplinary Core Ideas
+SEP.3: Planning and Carrying Out Investigations                    PS2.A: Forces and Motion
+Planning and carrying out investigations to answer                     ●   The patterns of an object’s motion in various
+questions or test solutions to problems in 3–5 builds on K–2               situations can be observed and measured; when
+experiences and progresses to include investigations that                  that past motion exhibits a regular pattern, future
+control variables and provide evidence to support                          motion can be predicted from it. (Boundary:
+explanations or design solutions.                                          Technical terms, such as magnitude, velocity,
+    ●     Make observations and/or measurements to                         momentum, and vector quantity, are not introduced
+          produce data to serve as the basis for evidence                  at this level, but the concept that some quantities
+          for an explanation of a phenomenon or test a                     need both size and direction to be described is
+          design solution.                                                 developed.)
+           -----------------------------
+            Connections to Nature of Science                                    Crosscutting Concepts
+Science Knowledge is Based on Empirical Evidence                   CC.1: Patterns
+    ●   Science findings are based on recognizing
+        patterns.                                                      ●   Patterns of change can be used to make
+                                                                           predictions.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                               7
+                               2023 Indiana Academic Standards: Grade 3 Science
+
+
+
+3-PS2-3 Motion and Stability: Forces and Interactions
+Students who demonstrate understanding can:
+3-PS2-3           Ask questions to determine cause and effect relationships of electric or magnetic
+                  interactions between two objects not in contact with each other. [Clarification Statement:
+                  Examples of an electric force could include the force on hair from an electrically charged
+                  balloon and the electrical forces between a charged rod and pieces of paper; examples of a
+                  magnetic force could include the force between two permanent magnets, the force between an
+                  electromagnet and steel paperclips, and the force exerted by one magnet versus the force
+                  exerted by two magnets. Examples of cause-and-effect relationships could include how the
+                  distance between objects affects strength of the force, and how the orientation of magnets
+                  affects the direction of the magnetic force.]
+
+
+        Science and Engineering Practices                                     Disciplinary Core Ideas
+SEP.1: Asking Questions and Defining Problems                    PS2.B: Types of Interactions
+Asking questions and defining problems in grades 3–5                 ●   Electric, and magnetic forces between a pair of
+builds on grades K–2 experiences and progresses to                       objects do not require that the objects be in
+specifying qualitative relationships.                                    contact. The sizes of the forces in each situation
+                                                                         depend on the properties of the objects and their
+    ●     Ask questions that can be investigated based on                distances apart and, for forces between two
+          patterns such as cause and effect relationships.               magnets, on their orientation relative to each other.
+
+
+                                                                              Crosscutting Concepts
+                                                                 CC.2: Cause and Effect
+                                                                     ●   Cause and effect relationships are routinely
+                                                                         identified, tested, and used to explain change.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                             8
+                              2023 Indiana Academic Standards: Grade 3 Science
+
+
+
+3-PS2-4 Motion and Stability: Forces and Interactions
+Students who demonstrate understanding can:
+3-PS2-4          Define a simple design problem that can be solved by applying scientific ideas about
+                 magnets. [Clarification Statement: Examples of problems could include constructing a latch to
+                 keep a door shut and creating a device to keep two moving objects from touching each other.]
+
+
+        Science and Engineering Practices                                  Disciplinary Core Ideas
+SEP.1: Asking Questions and Defining Problems                PS2.B: Types of Interactions
+Asking questions and defining problems in grades 3–5             ●    Electric, and magnetic forces between a pair of
+builds on grades K–2 experiences and progresses to                    objects do not require that the objects be in
+specifying qualitative relationships.                                 contact. The sizes of the forces in each situation
+                                                                      depend on the properties of the objects and their
+    ●     Define a simple problem that can be solved                  distances apart and, for forces between two
+          through the development of a new or improved                magnets, on their orientation relative to each other.
+          object or tool.
+
+                                                                           Crosscutting Concepts
+                                                                     Connections to Engineering, Technology,
+                                                                          and Applications of Science
+                                                             Interdependence of Science, Engineering, and
+                                                             Technology
+                                                                 ●    Scientific discoveries about the natural world can
+                                                                      often lead to new and improved technologies,
+                                                                      which are developed through the engineering
+                                                                      design process.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                         9
+                               2023 Indiana Academic Standards: Grade 3 Science
+
+
+
+3-LS1-1 From Molecules to Organisms: Structures and Processes
+Students who demonstrate understanding can:
+3-LS1-1           Develop models to describe that organisms have unique and diverse life cycles but all
+                  have in common birth, growth, reproduction, and death. [Clarification Statement: Changes
+Essential         organisms go through during their life form a pattern.]
+
+
+
+        Science and Engineering Practices                                       Disciplinary Core Ideas
+SEP.2: Developing and Using Models                                 LS1.B: Growth and Development of Organisms
+Modeling in 3–5 builds on K–2 experiences and progresses               ●   Reproduction is essential to the continued
+to building and revising simple models and using models to                 existence of every kind of organism. Plants and
+represent events and design solutions.                                     animals have unique and diverse life cycles.
+    ●     Develop models to describe phenomena.
+     ------------------------------------                                       Crosscutting Concepts
+          Connections to Nature of Science                         CC.1: Patterns
+Scientific Knowledge is Based on Empirical Evidence                    ●   Patterns of change can be used to make
+    ●     Science findings are based on recognizing                        predictions.
+          patterns.
+
+
+
+
+3-LS2-1 Ecosystems: Interactions, Energy, and Dynamics
+Students who demonstrate understanding can:
+3-LS2-1           Construct an argument that some animals form groups that help members survive.
+
+
+        Science and Engineering Practices                                       Disciplinary Core Ideas
+SEP.7: Engaging in Argument from Evidence                          LS2.D: Social Interactions and Group Behavior
+Engaging in argument from evidence in 3–5 builds on K–2                ●   Being part of a group helps animals obtain food,
+experiences and progresses to critiquing the scientific                    defend themselves, and cope with changes.
+explanations or solutions proposed by peers by citing                      Groups may serve different functions and vary
+relevant evidence about the natural and designed world(s).                 dramatically in size.
+    ●     Construct an argument with evidence, data, and/or
+          a model.                                                              Crosscutting Concepts
+                                                                   CC.2: Cause and Effect
+                                                                       ●   Cause and effect relationships are routinely
+                                                                           identified and used to explain change.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+                                                              10
+                                 2023 Indiana Academic Standards: Grade 3 Science
+
+
+
+3-LS3-1 Heredity: Inheritance and Variation of Traits
+Students who demonstrate understanding can:
+3-LS3-1            Analyze and interpret data to provide evidence that plants and animals have traits
+                   inherited from parents and that variation of these traits exists in a group of similar
+Essential          organisms. [Clarification Statement: Patterns are the similarities and differences in traits shared
+                   between offspring and their parents, or among siblings. Emphasis is on organisms other than
+                   humans.]
+
+
+         Science and Engineering Practices                                         Disciplinary Core Ideas
+SEP.4: Analyzing and Interpreting Data                               LS3.A: Inheritance of Traits
+Analyzing data in 3–5 builds on K–2 experiences and                      ●    Many characteristics of organisms are inherited
+progresses to introducing quantitative approaches to                          from their parents.
+collecting data and conducting multiple trials of qualitative
+observations. When possible and feasible, digital tools              LS3.B: Variation of Traits
+should be used.                                                          ●    Different organisms vary in how they look and
+     ●    Analyze and interpret data to make sense of                         function because they have different inherited
+          phenomena using logical reasoning.                                  information.
+
+
+                                                                                      Crosscutting Concepts
+                                                                     CC.1: Patterns
+                                                                         ●    Similarities and differences in patterns can be used
+                                                                              to sort and classify natural phenomena.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                                11
+                                2023 Indiana Academic Standards: Grade 3 Science
+
+
+
+3-LS3-2 Heredity: Inheritance and Variation of Traits
+Students who demonstrate understanding can:
+3-LS3-2           Use evidence to support the explanation that traits can be influenced by the
+                  environment. [Clarification Statement: Examples of the environment affecting a trait could
+                  include normally tall plants grown with insufficient water are stunted; and a pet dog that is given
+                  too much food and little exercise may become overweight.]
+
+
+        Science and Engineering Practices                                         Disciplinary Core Ideas
+SEP.6: Constructing Explanations and Designing                      LS3.A: Inheritance of Traits
+Solutions
+                                                                        ●    Other characteristics result from individuals’
+Constructing explanations and designing solutions in 3–5                     interactions with the environment, which can range
+builds on K–2 experiences and progresses to the use of                       from diet to learning. Many characteristics involve
+evidence in constructing explanations that specify variables                 both inheritance and environment.
+that describe and predict phenomena and in designing
+multiple solutions to design problems.                              LS3.B: Variation of Traits
+
+    ●     Use evidence (e.g., observations, patterns) to                ●    The environment also affects the traits that an
+          support an explanation.                                            organism develops.
+
+
+                                                                                  Crosscutting Concepts
+                                                                    CC.2: Cause and Effect
+                                                                        ●    Cause and effect relationships are routinely
+                                                                             identified and used to explain change.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                               12
+                                  2023 Indiana Academic Standards: Grade 3 Science
+
+
+
+3-LS4-1 Biological Evolution: Unity and Diversity
+Students who demonstrate understanding can:
+3-LS4-1            Analyze and interpret data from fossils to provide evidence of the organisms and the
+                   environments in which they lived long ago. [Clarification Statement: Examples of data could
+                   include type, size, and distributions of fossil organisms. Examples of fossils and environments
+                   could include marine fossils found on dry land, tropical plant fossils found in Arctic areas, and
+                   fossils of extinct organisms.]
+
+
+         Science and Engineering Practices                                        Disciplinary Core Ideas
+SEP.4: Analyzing and Interpreting Data                               LS4.A: Evidence of Common Ancestry and Diversity
+Analyzing data in 3–5 builds on K–2 experiences and                      ●   Some kinds of plants and animals that once lived
+progresses to introducing quantitative approaches to                         on Earth are no longer found anywhere.
+collecting data and conducting multiple trials of qualitative
+observations. When possible and feasible, digital tools                  ●   Fossils provide evidence about the types of
+should be used.                                                              organisms that lived long ago and about the nature
+                                                                             of their environments.
+     ●    Analyze and interpret data to make sense of
+          phenomena using logical reasoning.
+                                                                                   Crosscutting Concepts
+                                                                     CC.3: Scale, Proportion, and Quantity
+                                                                         ●   Observable phenomena exist from very short to
+                                                                             very long time periods.
+                                                                                     -------------------
+                                                                                Connections to Nature of Science
+                                                                     Scientific Knowledge Assumes an Order and
+                                                                     Consistency in Natural Systems
+                                                                         ●   Science assumes consistent patterns in natural
+                                                                             systems.
+
+
+
+
+ Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+ Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                                13
+                                2023 Indiana Academic Standards: Grade 3 Science
+
+
+
+3-LS4-2 Biological Evolution: Unity and Diversity
+Students who demonstrate understanding can:
+3-LS4-2           Use evidence to construct an explanation for how the variations in characteristics among
+                  individuals of the same species may provide advantages in surviving, finding mates, and
+Essential         reproducing. [Clarification Statement: Examples of cause-and-effect relationships could be
+                  plants that have larger thorns than other plants may be less likely to be eaten by predators; and
+                  animals that have better camouflage coloration than other animals may be more likely to survive
+                  and therefore more likely to leave offspring.]
+
+
+
+        Science and Engineering Practices                                        Disciplinary Core Ideas
+SEP.6: Constructing Explanations and Designing                      LS4.B: Natural Selection
+Solutions
+                                                                        ●   Sometimes the differences in characteristics
+Constructing explanations and designing solutions in 3–5                    between individuals of the same species provide
+builds on K–2 experiences and progresses to the use of                      advantages in surviving, finding mates, and
+evidence in constructing explanations that specify variables                reproducing.
+that describe and predict phenomena and in designing
+multiple solutions to design problems.
+                                                                                 Crosscutting Concepts
+    ●     Use evidence (e.g., observations, patterns) to
+          construct an explanation.                                 CC.2: Cause and Effect
+                                                                        ●   Cause and effect relationships are routinely
+                                                                            identified and used to explain change.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                               14
+                               2023 Indiana Academic Standards: Grade 3 Science
+
+
+
+3-LS4-3 Biological Evolution: Unity and Diversity
+Students who demonstrate understanding can:
+3-LS4-3      Construct an argument with evidence that in a particular habitat some organisms can
+             survive well, some survive less well, and some cannot survive at all. [Clarification Statement:
+             Examples of evidence could include needs and characteristics of the organisms and habitats
+             involved. The organisms and their habitat make up a system in which the parts depend on each
+             other.]
+
+
+        Science and Engineering Practices                                      Disciplinary Core Ideas
+SEP.7: Engaging in Argument from Evidence                         LS4.C: Adaptation
+Engaging in argument from evidence in 3–5 builds on K–2               ●   For any particular environment, some kinds of
+experiences and progresses to critiquing the scientific                   organisms survive well, some survive less well, and
+explanations or solutions proposed by peers by citing                     some cannot survive at all.
+relevant evidence about the natural and designed world(s).
+    ●     Construct an argument with evidence.
+                                                                               Crosscutting Concepts
+                                                                  CC.2: Cause and Effect
+                                                                      ●   Cause and effect relationships are routinely
+                                                                          identified and used to explain change.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+
+                                                             15
+                                2023 Indiana Academic Standards: Grade 3 Science
+
+
+
+3-LS4-4 Biological Evolution: Unity and Diversity
+Students who demonstrate understanding can:
+3-LS4-4           Make a claim about the merit of a solution to a problem caused when the environment
+                  changes and the types of plants and animals that live there may change. [Clarification
+                  Statement: Examples of environmental changes could include changes in land characteristics,
+                  water distribution, temperature, food, and other organisms.]
+
+
+        Science and Engineering Practices                                         Disciplinary Core Ideas
+SEP.7: Engaging in Argument from Evidence                           LS2.C: Ecosystem Dynamics, Functioning, and
+                                                                    Resilience
+Engaging in argument from evidence in 3–5 builds on K–2
+experiences and progresses to critiquing the scientific                 ●    When the environment changes in ways that affect
+explanations or solutions proposed by peers by citing                        a place’s physical characteristics, temperature, or
+relevant evidence about the natural and designed world(s).                   availability of resources, some organisms survive
+                                                                             and reproduce, others move to new locations, yet
+    ●     Make a claim about the merit of a solution to a                    others move into the transformed environment, and
+          problem by citing relevant evidence about how it                   some die. (secondary)
+          meets the criteria and constraints of the problem.
+                                                                    LS4.D: Biodiversity and Humans
+                                                                        ●    Populations live in a variety of habitats and change
+                                                                             in those habitats affects the organisms living there.
+
+
+                                                                                  Crosscutting Concepts
+                                                                    CC.4: Systems and System Models
+                                                                        ●    A system can be described in terms of its
+                                                                             components and their interactions.
+                                                                                     -------------------
+                                                                            Connections to Engineering, Technology,
+                                                                                 and Applications of Science
+                                                                    Interdependence of Engineering, Technology, and
+                                                                    Science on Society and the Natural World
+                                                                        ●    Knowledge of relevant scientific concepts and
+                                                                             research findings is important in engineering.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                               16
+                                  2023 Indiana Academic Standards: Grade 3 Science
+
+
+
+3-ESS2-1 Earth's Systems
+Students who demonstrate understanding can:
+3-ESS2-1           Represent data in tables and graphical displays to describe typical weather conditions
+                   expected during a particular season. [Clarification Statement: Examples of data could include
+Essential          average temperature, precipitation, and wind direction.]
+
+
+
+         Science and Engineering Practices                                        Disciplinary Core Ideas
+SEP.4: Analyzing and Interpreting Data                               ESS2.D: Weather and Climate
+Analyzing data in 3–5 builds on K–2 experiences and                      ●   Scientists record patterns of the weather across
+progresses to introducing quantitative approaches to                         different times and areas so that they can make
+collecting data and conducting multiple trials of qualitative                predictions about what kind of weather might
+observations. When possible and feasible, digital tools                      happen next.
+should be used.
+     ●    Represent data in tables and various graphical                          Crosscutting Concepts
+          displays (bar graphs and pictographs) to reveal
+          patterns that indicate relationships.                      CC.1: Patterns
+                                                                         ●   Patterns of change can be used to make
+                                                                             predictions.
+
+
+
+
+3-ESS2-2 Earth's Systems
+Students who demonstrate understanding can:
+3-ESS2-2           Obtain and combine information to describe climates in different regions of the world.
+
+
+         Science and Engineering Practices                                        Disciplinary Core Ideas
+SEP.8: Obtaining, Evaluating, and Communicating                      ESS2.D: Weather and Climate
+Information
+                                                                         ●   Climate describes a range of an area's typical
+Obtaining, evaluating, and communicating information in 3–5                  weather conditions and the extent to which those
+builds on K–2 experiences and progresses to evaluating the                   conditions vary over years.
+merit and accuracy of ideas and methods.
+     ●    Obtain and combine information from books and                           Crosscutting Concepts
+          other reliable media to explain phenomena.
+                                                                     CC.1: Patterns
+                                                                         ●   Patterns of change can be used to make
+                                                                             predictions.
+
+
+
+
+ Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+ Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+                                                                17
+                                2023 Indiana Academic Standards: Grade 3 Science
+
+
+
+3-ESS3-1 Earth and Human Activity
+Students who demonstrate understanding can:
+3-ESS3-1         Make a claim about the merit of a design solution that reduces the impacts of a
+                 weather-related hazard. [Clarification Statement: Examples of design solutions to
+                 weather-related hazards could include barriers to prevent flooding, wind resistant roofs, and
+                 lighting rods.]
+
+
+        Science and Engineering Practices                                       Disciplinary Core Ideas
+SEP.7: Engaging in Argument from Evidence                          ESS3.B: Natural Hazards
+Engaging in argument from evidence in 3–5 builds on K–2                ●   A variety of natural hazards result from natural
+experiences and progresses to critiquing the scientific                    processes. Humans cannot eliminate natural
+explanations or solutions proposed by peers by citing                      hazards but can take steps to reduce their
+relevant evidence about the natural and designed world(s).                 impacts. (Note: This Disciplinary Core Idea is also
+    ●    Make a claim about the merit of a solution to a                   addressed by 4-ESS3-2.)
+         problem by citing relevant evidence about how it
+         meets the criteria and constraints of the problem.
+                                                                                 Crosscutting Concepts
+                                                                   CC.2: Cause and Effect
+                                                                       ●   Cause and effect relationships are routinely
+                                                                           identified, tested, and used to explain change.
+                                                                            -------------------------------
+                                                                           Connections to Engineering, Technology,
+                                                                                and Applications of Science
+                                                                   Influence of Engineering, Technology, and Science on
+                                                                   Society and the Natural World
+                                                                       ●   Engineers improve existing technologies or develop
+                                                                           new ones to increase their benefits (e.g., better
+                                                                           artificial limbs), decrease known risks (e.g.,
+                                                                           seatbelts in cars), and meet societal demands (e.g.,
+                                                                           cell phones).
+                                                                    --------------------------------
+                                                                              Connections to Nature of Science
+                                                                   Science is a Human Endeavor
+                                                                       ●   Science affects everyday life.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                              18
+                                2023 Indiana Academic Standards: Grade 3 Science
+
+
+
+3-5-ETS1-1 Engineering Design
+Students who demonstrate understanding can:
+3-5-ETS1-1       Define a simple design problem reflecting a need or a want that includes specified criteria
+                 for success and constraints on materials, time, or cost.
+
+
+
+        Science and Engineering Practices                                         Disciplinary Core Ideas
+SEP.1: Asking Questions and Defining Problems                        ETS1.A: Defining and Delimiting Engineering Problems
+Asking questions and defining problems in 3–5 builds on                  ●   Possible solutions to a problem are limited by
+grades K–2 experiences and progresses to specifying                          available materials and resources (constraints). The
+qualitative relationships.                                                   success of a designed solution is determined by
+                                                                             considering the desired features of a solution
+    ●    Define a simple design problem that can be solved                   (criteria). Different proposals for solutions can be
+         through the development of an object, tool,                         compared on the basis of how well each one meets
+         process, or system and includes several criteria for                the specified criteria for success or how well each
+         success and constraints on materials, time, or cost.                takes the constraints into account.
+
+
+                                                                                   Crosscutting Concepts
+                                                                             Connections to Engineering, Technology,
+                                                                                  and Applications of Science
+                                                                     Influence of Science, Engineering, and Technology on
+                                                                     Society and the Natural World
+                                                                         ●   People’s needs and wants change over time, as do
+                                                                             their demands for new and improved technologies.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+                                                                19
+                                2023 Indiana Academic Standards: Grade 3 Science
+
+
+
+3-5-ETS1-2 Engineering Design
+Students who demonstrate understanding can:
+3-5-ETS1-2       Generate and compare multiple possible solutions to a problem based on how well each is
+                 likely to meet the criteria and constraints of the problem.
+
+
+
+        Science and Engineering Practices                                         Disciplinary Core Ideas
+SEP.6: Constructing Explanations and Designing                      ETS1.B: Developing Possible Solutions
+Solutions
+                                                                        ●   Research on a problem should be carried out before
+Constructing explanations and designing solutions in 3–5                    beginning to design a solution. Testing a solution
+builds on K–2 experiences and progresses to the use of                      involves investigating how well it performs under a
+evidence in constructing explanations that specify variables                range of likely conditions.
+that describe and predict phenomena and in designing                    ●   At whatever stage, communicating with peers about
+multiple solutions to design problems.                                      proposed solutions is an important part of the design
+                                                                            process, and shared ideas can lead to improved
+    ●    Generate and compare multiple solutions to a                       designs.
+         problem based on how well they meet the criteria
+         and constraints of the design problem.
+                                                                                  Crosscutting Concepts
+                                                                            Connections to Engineering, Technology,
+                                                                                 and Applications of Science
+                                                                    Influence of Science, Engineering, and Technology on
+                                                                    Society and the Natural World
+                                                                        ●   Engineers improve existing technologies or develop
+                                                                            new ones to increase their benefits, decrease known
+                                                                            risks, and meet societal demands.
+
+
+
+
+ Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+ Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                               20
+                                2023 Indiana Academic Standards: Grade 3 Science
+
+
+
+3-5-ETS1-3 Engineering Design
+Students who demonstrate understanding can:
+3-5-ETS1-3       Plan and carry out fair tests in which variables are controlled and failure points are
+                 considered to identify aspects of a model or prototype that can be improved.
+
+
+
+        Science and Engineering Practices                                          Disciplinary Core Ideas
+SEP.3: Planning and Carrying Out Investigations                      ETS1.B: Developing Possible Solutions
+Planning and carrying out investigations to answer questions             ●   Tests are often designed to identify failure points or
+or test solutions to problems in 3–5 builds on K–2                           difficulties, which suggest the elements of the design
+experiences and progresses to include investigations that                    that need to be improved.
+control variables and provide evidence to support
+explanations or design solutions.                                    ETS1.C: Optimizing the Design Solution
+
+    ●    Plan and conduct an investigation collaboratively to            ●   Different solutions need to be tested in order to
+         produce data to serve as the basis for evidence,                    determine which of them best solves the problem,
+         using fair tests in which variables are controlled                  given the criteria and the constraints.
+         and the number of trials considered.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                                21
+

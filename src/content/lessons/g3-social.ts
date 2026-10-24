@@ -859,4 +859,23 @@ export const lessons: GradeLessons = {
     ["It is a tool people made.", "Tools and machines are capital resources."],
     "a capital resource",
   ),
+  // Indiana (us-in)
+  "social/in-g3-indiana-midwest": lesson(
+    ["Indiana is in the Midwest, between Illinois and Ohio, with Michigan and Lake Michigan to the north and Kentucky to the south.", "The Ohio River forms Indiana's southern border.", "Use a map's compass rose and key to find places."],
+    "Which river forms Indiana's southern border?",
+    ["It is on the south side of the state.", "Kentucky is across it."],
+    "the Ohio River",
+  ),
+  "social/in-g3-indiana-communities": lesson(
+    ["Communities can be urban (cities), suburban (near cities) or rural (farms and small towns).", "Indianapolis is Indiana's capital and largest city.", "Communities change as people, jobs and transportation change."],
+    "A small town surrounded by farms is what kind of community?",
+    ["It is far from a big city.", "Farms are in the countryside."],
+    "rural",
+  ),
+  "social/in-g3-levels-of-government": lesson(
+    ["Government has three levels: local, state and national.", "A mayor leads a city, the governor leads Indiana, and the president leads the country.", "Each level has its own jobs: towns fix streets, states build highways, the nation prints money."],
+    "Who leads the state of Indiana?",
+    ["It is not the mayor or the president.", "The state leader is elected by all of Indiana."],
+    "the governor",
+  ),
 };

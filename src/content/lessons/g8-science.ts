@@ -595,4 +595,42 @@ export const lessons: GradeLessons = {
     ["You aren’t touching anything hot.", "The heat travels as rays through the air."],
     "radiation",
   ),
+  // Indiana (us-in)
+"science/in-g8-weather": lesson(
+    ["Evaporation: liquid water becomes vapour. Condensation: vapour cools into cloud droplets.", "Humidity is the amount of water vapour in the air.", "Most storms move across Indiana from west to east.", "Cold air picks up moisture over Lake Michigan, then drops it as lake-effect snow on northern Indiana."],
+    "Why does northwest Indiana get lake-effect snow?",
+    ["The air crosses a big lake first.", "It picks up moisture there and drops it as snow on land."],
+    "cold air picks up moisture over Lake Michigan",
+  ),
+"science/in-g8-climate": lesson(
+    ["Climate is the average weather over many years.", "Oceans keep coastal temperatures steady, so coastal cities have mild winters.", "People burn much more fossil fuel than 200 years ago, so there is more CO₂ in the air.", "We can use less energy, like walking short trips, and adapt, like planting shade trees."],
+    "Why does a coastal city have milder winters than a city far inland?",
+    ["Ocean water warms and cools slowly.", "It keeps nearby temperatures steady."],
+    "the ocean keeps temperatures steady",
+  ),
+"science/in-g8-growth": lesson(
+    ["Asexual reproduction needs one parent: bacteria splitting, strawberry runners.", "Sexual reproduction needs two parents and creates variation.", "Behaviours like nest building and feeding chicks help young survive.", "Genes and the environment both affect growth: the same plants grow differently in sun and shade."],
+    "Two identical plants grow in sun and in shade and end up different heights. Why?",
+    ["Their genes are the same.", "So the difference comes from where they grew."],
+    "the environment",
+  ),
+"science/in-g8-earth-history": lesson(
+    ["Rock layers and fossils order Earth’s 4.6-billion-year history; lower layers are older.", "Most of that history is the Precambrian. We live in the Cenozoic Era.", "Homologous structures show that living things share ancestors."],
+    "In which era do we live today?",
+    ["The eras go Paleozoic, Mesozoic, Cenozoic.", "The latest is the Cenozoic."],
+    "the Cenozoic Era",
+  ),
+  // Indiana: units Indiana teaches in this grade
+  "science/ca-g6-human-impact": lesson(
+    ["Human impacts include fertilizer runoff, litter and cutting forests.", "Monitor an impact by measuring it over time, like weekly litter counts or satellite images.", "Storm drains carry rainwater straight to creeks and the ocean without treatment.", "A good solution has a criterion you can measure, like less litter in weekly counts."],
+    "How could scientists track forest loss over many years?",
+    ["They need the same view of the forest at regular times.", "Satellites can take those pictures."],
+    "satellite images taken at regular times",
+  ),
+  "science/ca-g7-materials": lesson(
+    ["Synthetic materials are made by people through chemical processes from natural resources.", "Most plastics come from petroleum and natural gas. Glass is made by melting sand.", "They help us, but some, like plastic litter, take hundreds of years to break down."],
+    "Most plastics are made from which natural resources?",
+    ["Plastics are made in chemical plants.", "Their raw materials are fossil fuels."],
+    "petroleum and natural gas",
+  ),
 };

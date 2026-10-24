@@ -1,0 +1,284 @@
+                    2023 Indiana Academic Standards: Kindergarten Mathematics
+
+
+Indiana Academic Standards Context and Purpose
+
+
+Introduction
+The Indiana Academic Standards for Kindergarten Mathematics are the result of a process
+designed to identify, evaluate, synthesize, and create high quality, rigorous learning
+expectations for Indiana students.
+
+Pursuant to Indiana Code (IC) 20-31-3-1(c-d), the Indiana Department of Education (IDOE)
+facilitated the prioritization of the Indiana Academic Standards. All standards are required to be
+taught. Standards identified as essential for mastery by the end of the grade level are indicated
+with shading and an “E.” The learning outcome statement for each domain immediately
+precedes each set of standards.
+
+The Indiana Academic Standards are designed to ensure that all Indiana students, upon
+graduation, are prepared with essential knowledge and skills needed to access employment,
+enrollment, or enlistment leading to service.
+
+What are the Indiana Academic Standards and how should they be used?
+The Indiana Academic Standards are designed to help educators, parents, students, and
+community members understand the necessary content for each grade level, and within each
+content area domain, to access employment, enrollment, or enlistment leading to service. These
+standards should form the basis for strong core instruction for all students at each grade level
+and content area. The standards identify the minimum academic content or skills that Indiana
+students need in order to be prepared for success after graduation, but they are not an
+exhaustive list.
+
+While the Indiana Academic Standards establish key expectations for knowledge and skills and
+should be used as the basis for curriculum, the standards by themselves do not constitute a
+curriculum. It is the responsibility of the local school corporation to select and formally adopt
+curricular tools, including textbooks and any other supplementary materials, that align with
+Indiana Academic Standards. Additionally, corporation and school leaders should consider the
+appropriate instructional sequence of the standards as well as the length of time needed to
+teach each standard. Every standard has a unique place in the continuum of learning, but each
+standard will not require the same amount of time and attention. A deep understanding of the
+vertical articulation of the standards will enable educators to make the best instructional
+decisions. These standards must also be complemented by robust, evidence-based
+instructional practices to support overall student development. By utilizing strategic and
+intentional instructional practices, other areas such as STEM and employability skills can be
+integrated with the content standards.
+
+
+
+
+                                                 2
+                   2023 Indiana Academic Standards: Kindergarten Mathematics
+
+
+Content-Specific Considerations
+The Indiana Academic Standards for Kindergarten Mathematics consist of five domains:
+Number Sense, Computation and Algebraic Thinking, Geometry, Measurement, and Data
+Analysis. The skills listed in each domain indicate what students should know and be able to do
+in Mathematics at each grade level. The Process Standards demonstrate the ways in which
+students should develop conceptual understanding of mathematical content, and the ways in
+which students should synthesize and apply mathematical skills.
+
+Acknowledgments
+The Indiana Department of Education appreciates the time, dedication, and expertise offered by
+Indiana’s K-12 educators, higher education professors, representatives from business and
+industry, families, and other stakeholders who contributed to the development of the Indiana
+Academic Standards. We wish to specially acknowledge the committee members, as well as
+participants in the public comment period, who dedicated many hours to the review and
+evaluation of these standards designed to prepare Indiana students for success after
+graduation.
+
+
+
+
+                                               3
+                       2023 Indiana Academic Standards: Kindergarten Mathematics
+
+
+Mathematics Process Standards
+
+PS.1: Make sense of problems and persevere in solving them.
+
+Mathematically proficient students start by explaining to themselves the meaning of a problem and looking
+for entry points to its solution. They analyze givens, constraints, relationships, and goals. They make
+conjectures about the form and meaning of the solution and plan a solution pathway, rather than simply
+jumping into a solution attempt. They consider analogous problems and try special cases and simpler
+forms of the original problem in order to gain insight into its solution. They monitor and evaluate their
+progress and change course if necessary. Mathematically proficient students check their answers to
+problems using a different method, and they continually ask themselves, “Does this make sense?” and "Is
+my answer reasonable?" They understand the approaches of others to solving complex problems and
+identify correspondences between different approaches. Mathematically proficient students understand
+how mathematical ideas interconnect and build on one another to produce a coherent whole.
+
+PS.2: Reason abstractly and quantitatively.
+
+Mathematically proficient students make sense of quantities and their relationships in problem situations.
+They bring two complementary abilities to bear on problems involving quantitative relationships: the ability
+to decontextualize—to abstract a given situation and represent it symbolically and manipulate the
+representing symbols as if they have a life of their own, without necessarily attending to their
+referents—and the ability to contextualize, to pause as needed during the manipulation process in order to
+probe into the referents for the symbols involved. Quantitative reasoning entails habits of creating a
+coherent representation of the problem at hand; considering the units involved; attending to the meaning of
+quantities, not just how to compute them; and knowing and flexibly using different properties of operations
+and objects.
+
+PS.3: Construct viable arguments and critique the reasoning of others.
+
+Mathematically proficient students understand and use stated assumptions, definitions, and previously
+established results in constructing arguments. They make conjectures and build a logical progression of
+statements to explore the truth of their conjectures. They analyze situations by breaking them into cases
+and recognize and use counterexamples. They organize their mathematical thinking, justify their
+conclusions and communicate them to others, and respond to the arguments of others. They reason
+inductively about data, making plausible arguments that take into account the context from which the data
+arose. Mathematically proficient students are also able to compare the effectiveness of two plausible
+arguments, distinguish correct logic or reasoning from that which is flawed, and—if there is a flaw in an
+argument—explain what it is. They justify whether a given statement is always true, sometimes, or never.
+Mathematically proficient students participate and collaborate in a mathematics community. They listen to
+or read the arguments of others, decide whether they make sense, and ask useful questions to clarify or
+improve the arguments.
+
+PS.4: Model with mathematics.
+
+Mathematically proficient students apply the mathematics they know to solve problems arising in everyday
+life, society, and the workplace using a variety of appropriate strategies. They create and use a variety of
+representations to solve problems and to organize and communicate mathematical ideas. Mathematically
+proficient students apply what they know and are comfortable making assumptions and approximations to
+simplify a complicated situation, realizing that these may need revision later. They are able to identify
+important quantities in a practical situation and map their relationships using such tools as diagrams,
+two-way tables, graphs, flowcharts, and formulas. They analyze those relationships mathematically to draw
+conclusions. They routinely interpret their mathematical results in the context of the situation and reflect on
+whether the results make sense, possibly improving the model if it has not served its purpose.
+
+
+
+
+                                                      4
+                       2023 Indiana Academic Standards: Kindergarten Mathematics
+
+
+
+PS.5: Use appropriate tools strategically.
+
+Mathematically proficient students consider the available tools when solving a mathematical problem.
+These tools might include pencil and paper, models, a ruler, a protractor, a calculator, a spreadsheet, a
+computer algebra system, a statistical package, or dynamic geometry software. Mathematically proficient
+students are sufficiently familiar with tools appropriate for their grade or course to make sound decisions
+about when each of these tools might be helpful, recognizing both the insight to be gained and their
+limitations. Mathematically proficient students identify relevant external mathematical resources, such as
+digital content, and use them to pose or solve problems. They use technological tools to explore and
+deepen their understanding of concepts and to support the development of learning mathematics. They
+use technology to contribute to concept development, simulation, representation, reasoning,
+communication, and problem solving.
+
+PS.6: Attend to precision.
+
+Mathematically proficient students communicate precisely to others. They use clear definitions, including
+correct mathematical language, in discussion with others and in their own reasoning. They state the
+meaning of the symbols they choose, including using the equal sign consistently and appropriately. They
+express solutions clearly and logically by using the appropriate mathematical terms and notation. They
+specify units of measure and label axes to clarify the correspondence with quantities in a problem. They
+calculate accurately and efficiently and check the validity of their results in the context of the problem. They
+express numerical answers with a degree of precision appropriate for the problem context.
+
+PS.7: Look for and make use of structure.
+
+Mathematically proficient students look closely to discern a pattern or structure. They step back for an
+overview and shift perspective. They recognize and use properties of operations and equality. They
+organize and classify geometric shapes based on their attributes. They see expressions, equations, and
+geometric figures as single objects or as being composed of several objects.
+
+PS.8: Look for and express regularity in repeated reasoning.
+
+Mathematically proficient students notice if calculations are repeated and look for general methods and
+shortcuts. They notice regularity in mathematical problems and their work to create a rule or formula.
+Mathematically proficient students maintain oversight of the process, while attending to the details as they
+solve a problem. They continually evaluate the reasonableness of their intermediate results.
+
+
+
+
+                                                       5
+                       2023 Indiana Academic Standards: Kindergarten Mathematics
+
+
+Kindergarten Mathematics
+Standards identified as essential for mastery by the end of the grade level are indicated with gray
+shading and an “E.” The learning outcome statement for each domain immediately precedes each
+set of standards.
+
+
+                                               Number Sense
+
+ Learning Outcome: Students explore the foundations of numbers through counting strategies, one-to-one
+ correspondence, and place value of numbers up to 20.
+
+   K.NS.1       Count to at least 100 by ones and tens. Count by one from any given number. (E)
+
+                Write whole numbers from 0 to 20 and identify number words from 0 to 10. Represent a
+   K.NS.2
+                number of objects with a written numeral 0-20 (with 0 representing a count of no objects). (E)
+
+                Say the number names in standard order when counting objects, pairing each object with
+                one and only one number name and each number name with one and only one object.
+   K.NS.3       Understand that the last number name said describes the number of objects counted and
+                that the number of objects is the same regardless of their arrangement or the order in which
+                they were counted. Count out the number of objects, given a number from 1 to 20. (E)
+
+                Identify sets of 1 to 10 objects in patterned arrangements and tell how many without
+   K.NS.4
+                counting. (E)
+
+                Identify whether the number of objects in one group is greater than, less than, or equal to the
+   K.NS.5
+                number of objects in another group (e.g., by using matching and counting strategies).
+
+   K.NS.6       Compare the values of two numbers from 1 to 20 presented as written numerals.
+
+                Define and model a "ten" as a group of ten ones. Model equivalent forms of whole numbers
+   K.NS.7
+                from 10 to 20 as groups of tens and ones using objects and drawings. (E)
+
+                                   Computation and Algebraic Thinking
+
+ Learning Outcome: Within the numbers 1-10, students use objects and drawings to model the composing
+ (addition) and decomposing (subtraction) of numbers, and solve real-world problems. Students investigate
+ beginning algebra concepts through simple repeating and growing patterns.
+
+                Solve real-world problems that involve addition and subtraction within 10 using modeling with
+   K.CA.1
+                objects or drawings. (E)
+
+                Use objects or drawings to model the decomposition of numbers less than 10 into pairs in
+   K.CA.2
+                more than one way. Identify corresponding equations. (E)
+
+                Find the number that makes 10 when added to the given number for any number from 1 to 9
+   K.CA.3
+                (e.g., by using objects or drawings), and record the answer with a drawing or an equation. (E)
+
+                Create, extend, and give an appropriate rule for simple repeating and growing patterns with
+   K.CA.4
+                numbers and shapes.
+
+
+
+
+                                                      6
+                      2023 Indiana Academic Standards: Kindergarten Mathematics
+
+
+
+                                                   Geometry
+
+Learning Outcome: Students investigate and compare two- and three-dimensional shapes based on simple
+attributes.
+
+               Compare two- and three-dimensional shapes in different sizes and orientations, using
+   K.G.1       informal language to describe their similarities, differences, parts (e.g., number of sides and
+               vertices/"corners"), and other attributes (e.g., having sides of equal length).
+
+                                                 Measurement
+
+Learning Outcome: Students investigate beginning concepts of length, weight, capacity, temperature, and
+time through observations of direct comparisons.
+
+               Make direct comparisons of the length, capacity, weight, and temperature of objects, and
+   K.M.1       identify which object is shorter, longer, taller, lighter, heavier, warmer, cooler, or holds more.
+               (E)
+
+               Identify and use appropriate terms to describe intervals of time including: morning, afternoon,
+   K.M.2       evening, today, yesterday, tomorrow, day, week, month, and year; describe how calendars
+               and clocks are tools to measure time.
+
+                                                Data Analysis
+
+Learning Outcome: Students begin interacting with data to create and interpret data for patterns and
+comparison.
+
+               With guidance, collect and organize data into simple bar graphs, pictographs, and/or tables
+  K.DA.1
+               to identify patterns and make comparisons. (E)
+
+
+
+
+                                                       7
+
