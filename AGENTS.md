@@ -358,6 +358,10 @@ Tests are duplicated across screen sizes only where layout can break:
 - **Daily Challenge:** 10 questions, seeded so everyone gets the same set that day.
 - **Challenge:** 10 questions at difficulty 3, a 300 s time limit (420 s for little kids) and no retries.
   - Passing takes 8 out of 10, and passing is the only way to reach Extending.
+- **Math Facts** (`src/lib/facts.ts`, `Facts.tsx`, `#/facts`; flag `math-facts`): addition and subtraction facts to 10 (Grades 1 and 2, 45 each) and to 20 (Grade 2 up, 100 each), then times tables and division facts to 10 × 10 (Grade 3 up, 100 each). None in Kindergarten (no typed answers). Rounds of 20 typed facts (10 with short sessions); a right answer moves straight on, a miss gets the usual hint and another try, and "Show me another way" opens the set's strategy lesson.
+  - Each fact is tracked on its own: answer events carry `fact` ("mul:7:8") and `derive` builds `facts` from them, never stored. A fact is known after its last two tries were right the first time without a hint. Missed facts come back most, then facts being learned, then new ones (slower while 8 are being learned), then known ones now and then (`pickFact`). Fact sets share ids, so "3 + 4" practised in Adding to 10 counts in Addition facts too.
+  - Fact answers use the unit key `<grade>/math/facts`, so they count as math practice (XP, minutes, subject totals, streaks) but never as a unit: no level, no report-card row, no "ask a grown-up" entry and no question report.
+  - Older kids get a home-screen tile; little kids (Grade 1) find it on the Lessons screen. It needs the family plan (`Feature` "facts") and math switched on. Parent Reports say "knows 64 of 100 times-table facts" for each set practised, with the facts still being practised (`FactsLine`). Trophies: Fact Finder, Fact Collector (50 known) and one gold per set of 100 (`facts-add`, `facts-sub`, `facts-mul`, `facts-div`), shown only where the grade has the set; daily quest "Do a Math Facts round" for non-little kids.
 
 ### Reading-level matching (language arts)
 - **Passages are tagged by computation, not by hand** (`src/lib/readingLevel.ts`): a passage or story in English gets a level on the grade scale from its text (Flesch-Kincaid, 0 to 12), so all existing language arts content is levelled and new passages are too. French and non-passage questions have none.
@@ -390,7 +394,7 @@ Tests are duplicated across screen sizes only where layout can break:
   - Session bonuses: +15 per session, +25 when perfect, +40 for the Daily Challenge, +30 for passing a Challenge.
   - Level *n* needs `80 + 40(n−1)` XP.
 - **Coins** come from correct answers, sessions, games, trophies and quests. They're spent in a pretend shop on critter companions, titles and confetti styles.
-- **Trophies:** 193 in the list, about 105 visible to a child at any one grade (mastery trophies are per grade), including a French group kept in its own list (`src/lib/trophies.ts`), in Xbox/PlayStation-style tiers. Everything a child can do has a trophy: every subject (a practice ladder for each of math, language, science, social studies and both French subjects), every mode, every arcade game, streaks, levels, shop, and mastery for every grade and subject.
+- **Trophies:** 199 in the list, about 110 visible to a child at any one grade (mastery trophies are per grade), including a French group kept in its own list (`src/lib/trophies.ts`), in Xbox/PlayStation-style tiers. Everything a child can do has a trophy: every subject (a practice ladder for each of math, language, science, social studies and both French subjects), every mode, every arcade game, streaks, levels, shop, and mastery for every grade and subject.
 
   | Tier | Points | Coins |
   | --- | --- | --- |

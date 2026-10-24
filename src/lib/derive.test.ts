@@ -255,3 +255,22 @@ describe("derive: streaks and rest-day shields", () => {
     expect(derive([], now(0)).streak).toMatchObject({ current: 0, best: 0, shields: 0, shieldsUsed: 0, saved: false });
   });
 });
+
+describe("derive: math facts", () => {
+  const fact = (id: string, correct: boolean, t: number) => answer(correct, t, { unit: "3/math/facts", mode: "facts", fact: id });
+
+  it("tracks each fact on its own, keeping the last four first-try results", () => {
+    const d = derive([fact("mul:7:8", false, T0), fact("mul:7:8", true, T0 + 1), fact("mul:7:8", true, T0 + 2), fact("mul:6:9", true, T0 + 3), fact("mul:7:8", true, T0 + 4), fact("mul:7:8", true, T0 + 5)]);
+    expect(d.facts["mul:7:8"]).toEqual({ attempts: 5, recent: [true, true, true, true], lastT: T0 + 5 });
+    expect(d.facts["mul:6:9"].attempts).toBe(1);
+  });
+
+  it("counts fact answers as math practice with XP, but never as a unit", () => {
+    const d = derive([fact("add:3:4", true, T0), fact("add:3:4", true, T0 + 1), session("facts", 2, 2, T0 + 2, "add")]);
+    expect(d.units).toEqual({});
+    expect(d.subjects.math).toEqual({ answers: 2, correct: 2 });
+    expect(d.modeAnswers.facts).toBe(2);
+    expect(d.modes.facts).toBe(1);
+    expect(d.xp).toBe(10 + 12 + 15);
+  });
+});

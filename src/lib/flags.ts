@@ -19,6 +19,7 @@ export interface FlagDef {
 export const FLAGS: readonly FlagDef[] = [
   { key: "daily-challenge", label: "Daily Challenge", description: "The Daily Challenge tile on the kids' home screen.", scope: "app", defaultOn: true },
   { key: "speed-run", label: "Speed Run", description: "The Speed Run tile and screen.", scope: "app", defaultOn: true },
+  { key: "math-facts", label: "Math Facts", description: "Math Facts: addition and subtraction facts to 20, times tables and division facts, tracked fact by fact, with a line on parent reports.", scope: "app", defaultOn: true },
   { key: "arcade", label: "Arcade", description: "The arcade games (still limited by each family's game-time settings).", scope: "app", defaultOn: true },
   { key: "sticker-book", label: "Sticker Book", description: "The Sticker Book tile and screen.", scope: "app", defaultOn: true },
   { key: "my-room", label: "My Room", description: "The My Room tile and screen.", scope: "app", defaultOn: true },

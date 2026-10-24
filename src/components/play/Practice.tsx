@@ -6,6 +6,7 @@ import { coursesForGrade, getUnitRef, unitKey } from "@/content";
 import { getSubjectMeta } from "@/content/subjects";
 import type { GradeId, SubjectId } from "@/content/types";
 import { dayKey } from "@/lib/model";
+import { factSetsFor } from "@/lib/facts";
 import { canUse } from "@/lib/plan";
 import { levelInfo, nextStep, unitLevel } from "@/lib/proficiency";
 import { useIsOn } from "@/lib/remoteFlags";
@@ -93,6 +94,7 @@ export function SubjectPicker() {
       </div>
       <SneakPeekCard />
       {band === "little" && <DailyCard />}
+      {band === "little" && <FactsCard />}
     </Page>
   );
 }
@@ -114,6 +116,26 @@ function DailyCard() {
       </span>
       <span className="flex-1 text-3xl font-bold">Daily Challenge</span>
       {done && <span className="rounded-full bg-white/40 px-3 py-1 text-lg font-bold">✓</span>}
+    </a>
+  );
+}
+
+/** Little kids find Math Facts here too (Grade 1: adding and taking away to 10), not on their home screen. */
+function FactsCard() {
+  const profile = useActiveProfile()!;
+  const settings = useChildSettings();
+  const isOn = useIsOn();
+  if (!isOn("math-facts") || !(settings?.enabledSubjects ?? []).includes("math") || factSetsFor(profile.grade).length === 0) return null;
+  return (
+    <a
+      href={href("/facts")}
+      className="btn w-full items-center justify-start gap-4 p-5 text-left"
+      style={{ "--btn-bg": "#14b8a6", "--btn-edge": "#0f8f81", "--btn-fg": onColour("#14b8a6") } as CSSProperties}
+    >
+      <span className="text-5xl" aria-hidden="true">
+        🧮
+      </span>
+      <span className="flex-1 text-3xl font-bold">Math Facts</span>
     </a>
   );
 }

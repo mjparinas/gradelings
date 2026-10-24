@@ -1,5 +1,6 @@
 import { parseUnitKey } from "@/content";
 import type { SubjectId } from "@/content/types";
+import type { FactStat } from "./facts";
 import { dayKey, type AppEvent, type Mode } from "./model";
 import { unitLevel } from "./proficiency";
 import { READING_SAMPLES_KEPT, type ReadingSample } from "./readingLevel";
@@ -105,6 +106,8 @@ export interface Derived {
   dailyDone: string[];
   /** The latest first-try results on passage questions, with each passage's reading level, oldest first. */
   reading: ReadingSample[];
+  /** Math facts answered, by fact id ("mul:7:8"). Fact answers count as math practice but never as a unit. */
+  facts: Record<string, FactStat>;
 }
 
 /** XP needed to go from `level` to `level + 1`. */
@@ -115,6 +118,10 @@ export function xpForLevel(level: number): number {
 /** Learning time counted for one answer, so a child who walks away doesn't rack up minutes. */
 export function learnSecondsFor(ms: number): number {
   return Math.min(ms, 60_000) / 1000;
+}
+
+function newUnitStat(key: string): UnitStat {
+  return { key, attempts: 0, firstTry: 0, recent: [], mastery: 0, lastT: 0, sessions: 0, challengePassed: false, ms: 0, wasEmerging: false, grew: false, returnLeft: 0, kept: false };
 }
 
 function emptyDay(day: string): DayStat {
@@ -161,6 +168,7 @@ export function derive(events: AppEvent[], now = Date.now()): Derived {
     goalPicks: {},
     dailyDone: [],
     reading: [],
+    facts: {},
     secrets: [],
   };
   const seen = new Set<string>();
@@ -174,21 +182,15 @@ export function derive(events: AppEvent[], now = Date.now()): Derived {
 
     switch (e.type) {
       case "answer": {
-        const u = (d.units[e.unit] ??= {
-          key: e.unit,
-          attempts: 0,
-          firstTry: 0,
-          recent: [],
-          mastery: 0,
-          lastT: 0,
-          sessions: 0,
-          challengePassed: false,
-          ms: 0,
-          wasEmerging: false,
-          grew: false,
-          returnLeft: 0,
-          kept: false,
-        });
+        if (e.fact) {
+          const f = (d.facts[e.fact] ??= { attempts: 0, recent: [], lastT: 0 });
+          f.attempts++;
+          f.recent.push(e.correct);
+          if (f.recent.length > 4) f.recent.shift();
+          f.lastT = e.t;
+        }
+        // A fact isn't a unit: it has no level, lesson list entry or report-card row.
+        const u = e.fact ? newUnitStat(e.unit) : (d.units[e.unit] ??= newUnitStat(e.unit));
         const levelBefore = unitLevel(u);
         const away = u.lastT > 0 && e.t - u.lastT >= 30 * 86_400_000;
         u.attempts++;
