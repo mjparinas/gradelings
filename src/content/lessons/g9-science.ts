@@ -644,4 +644,11 @@ export const lessons: GradeLessons = {
     ["The community is rebuilding over time.", "Gradual change in a community is succession."],
     "succession",
   ),
+  // South Carolina (us-sc)
+  "science/sc-g9-ecosystems": lesson(
+    ["Relationships: predation, parasitism, commensalism, mutualism and competition.", "Density-dependent factors depend on crowding; density-independent ones, like hurricanes, don’t.", "Invasive species and disturbances can upset stability; stable ecosystems recover from small ones."],
+    "A barnacle rides on a whale, which is not harmed. Which relationship is this?",
+    ["The barnacle benefits.", "The whale is neither helped nor harmed: commensalism."],
+    "commensalism",
+  ),
 };

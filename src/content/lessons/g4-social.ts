@@ -1430,4 +1430,29 @@ export const lessons: GradeLessons = {
     ["Subtract the earlier year from the later year.", "1825 − 1816"],
     "9 years",
   ),
+  // South Carolina (us-sc)
+  "social/sc-g4-carolina-colony": lesson(
+    ["Native nations lived in South Carolina long before Europeans came, and the Catawba Indian Nation is still here today.", "In 1670 English colonists founded Charles Town, in the colony owned by the Lords Proprietors.", "Enslaved Africans did the hard work, and brought the know-how, that made rice and indigo grow. Their descendants' Gullah Geechee culture lives on."],
+    "Which two crops made colonial South Carolina's planters rich?",
+    ["The wet Lowcountry was good for one crop that grows in flooded fields.", "Another crop made a blue dye."],
+    "rice and indigo",
+  ),
+  "social/sc-g4-sc-revolution": lesson(
+    ["In 1776 a fort of soft palmetto logs on Sullivan's Island held off British warships, so the palmetto is on the flag.", "The British captured Charleston in 1780, but partisans like Francis Marion, the \"Swamp Fox,\" kept fighting.", "Victories at Kings Mountain (1780) and Cowpens (1781) helped turn the war in the South."],
+    "Why is a palmetto tree on South Carolina's flag?",
+    ["In 1776 the fort on Sullivan's Island was built of palmetto logs.", "The soft logs soaked up British cannonballs, and the fort held."],
+    "to remember the palmetto log fort that beat the British",
+  ),
+  "social/sc-g4-sc-civil-war": lesson(
+    ["Cotton grown by enslaved people made planters rich, and many white South Carolinians wanted slavery to spread west.", "In December 1860 South Carolina became the first state to secede from the Union.", "The Civil War began at Fort Sumter in Charleston Harbor in 1861. Robert Smalls escaped slavery by sailing a ship to the Union fleet."],
+    "Where did the first shots of the Civil War happen?",
+    ["Confederate guns fired on a Union fort in April 1861.", "The fort was in Charleston Harbor."],
+    "Fort Sumter",
+  ),
+  "social/sc-g4-sc-reconstruction": lesson(
+    ["After the war, the 13th, 14th and 15th Amendments ended slavery, made freed people citizens and gave Black men the vote.", "The Freedmen's Bureau opened schools, and Black leaders such as Joseph Rainey and Robert Smalls served in Congress.", "Violence and unfair laws ended Reconstruction in 1877 and led to Jim Crow segregation."],
+    "Joseph Rainey of South Carolina was the first Black member of what?",
+    ["During Reconstruction, Black men could vote and run for office.", "Rainey was elected to Congress in 1870."],
+    "the US House of Representatives",
+  ),
 };

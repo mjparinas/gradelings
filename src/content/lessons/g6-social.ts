@@ -915,4 +915,29 @@ export const lessons: GradeLessons = {
     ["Senate seats are equal for each state.", "House seats depend on how many people live there."],
     "House seats are based on population",
   ),
+  // South Carolina (us-sc)
+  "social/ny-g9-atlantic-world": lesson(
+    ["Sailors used tools like the astrolabe to find their latitude at sea.", "The Columbian Exchange’s deadliest result for Indigenous peoples of the Americas was disease, such as smallpox, which killed millions.", "Most enslaved Africans were forced to work on sugar plantations in Brazil and the Caribbean."],
+    "Which tool helped sailors find their latitude?",
+    ["Latitude tells how far north or south you are.", "Sailors measured the angle of the Sun or stars.", "They used an astrolabe."],
+    "the astrolabe",
+  ),
+  "social/al-g9-imperialism": lesson(
+    ["Imperial powers wanted colonies for raw materials, markets and power. The Berlin Conference set off the Scramble for Africa.", "In a sphere of influence, a foreign power controls trade and investment, as in China. The British East India Company took political control in India.", "People resisted: Ethiopia beat Italy at Adwa (1896); the Indian Rebellion and the Boxer Rebellion."],
+    "Ethiopia defeated Italy in 1896 at which battle?",
+    ["Ethiopia kept its independence.", "The battle was at Adwa."],
+    "Adwa",
+  ),
+  "social/al-g9-world-today": lesson(
+    ["Economies are linked by trade and finance, so a problem in one spreads fast. Multinationals work in many countries; outsourcing moves work abroad.", "Climate change comes mainly from greenhouse gases from burning fossil fuels.", "Deforestation is cutting down large areas of forest, like rainforest."],
+    "What is a multinational corporation?",
+    ["“Multi” means many.", "It is a company that operates in many countries."],
+    "a company that operates in many countries",
+  ),
+  "social/sc-g6-cold-war": lesson(
+    ["After World War II, Churchill said an Iron Curtain divided Europe. The US offered the Truman Doctrine and Marshall Plan; the Soviets answered with COMECON.", "Alliances (NATO and the Warsaw Pact), the Korean War, the Cuban Missile Crisis and arms and space races followed.", "Gorbachev’s glasnost (openness) and perestroika (restructuring) and Poland’s Solidarity helped end it."],
+    "What did the Marshall Plan do?",
+    ["Europe was in ruins after World War II.", "The US gave billions to rebuild Western Europe."],
+    "gave billions of dollars to rebuild Western Europe",
+  ),
 };

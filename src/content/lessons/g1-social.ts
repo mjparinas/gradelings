@@ -440,4 +440,23 @@ export const lessons: GradeLessons = {
     ["It is named for the first president."],
     "Washington, D.C.",
   ),
+  // South Carolina (us-sc)
+  "social/sc-g1-our-state": lesson(
+    ["South Carolina is a state in the United States, on the Atlantic Ocean.", "North Carolina and Georgia are its neighbours. Columbia is the capital.", "Our flag has a palmetto tree and a crescent moon on blue."],
+    "What is the capital city of South Carolina?",
+    ["A capital is where the state's leaders work.", "South Carolina's leaders meet in Columbia."],
+    "Columbia",
+  ),
+  "social/sc-g1-land-and-places": lesson(
+    ["South Carolina has mountains, hills, sandhills and a sandy coast.", "A city is busy and crowded. A farm town in the country is rural.", "Suburbs are the quieter places just outside a city."],
+    "A place with farms and lots of open land is…",
+    ["Cities have many buildings close together.", "Farms and open land are out in the country."],
+    "rural",
+  ),
+  "social/sc-g1-government": lesson(
+    ["Laws are rules that keep people safe and treat everyone fairly.", "A mayor leads a town. The governor leads the whole state.", "Good citizens vote, help others and work together on problems."],
+    "Who leads the whole state of South Carolina?",
+    ["A mayor leads one town or city.", "The governor leads the state."],
+    "the governor",
+  ),
 };

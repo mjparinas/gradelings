@@ -1177,4 +1177,35 @@ export const lessons: GradeLessons = {
     ["Start with the money earned.", "Take away the costs."],
     "money left after costs are paid",
   ),
+  // South Carolina (us-sc)
+  "social/sc-g8-carolina-colony": lesson(
+    ["The Lords Proprietors founded Carolina in 1663, and settlers built Charles Town in 1670.", "Rice and indigo, grown by enslaved Africans whose skills made the crops succeed, made the Lowcountry rich.", "Conflicts such as the Yamasee War (1715) and the Stono Rebellion (1739) shaped the colony, which then tightened its slave laws."],
+    "Why did the colony pass harsher slave laws after 1739?",
+    ["The Stono Rebellion was a large uprising of enslaved people.", "Planters feared more uprisings and tightened control."],
+    "in reaction to the Stono Rebellion",
+  ),
+  "social/sc-g8-sc-revolution": lesson(
+    ["Many South Carolinians protested British taxes, while Loyalists stayed with the king.", "The war in the backcountry was a bitter civil war between neighbours.", "After the war, South Carolina delegates helped write the US Constitution, which divides power between the nation and the states (federalism)."],
+    "What is federalism?",
+    ["The Constitution gives some powers to the national government.", "It leaves other powers to the states."],
+    "sharing power between the national government and the states",
+  ),
+  "social/sc-g8-divided": lesson(
+    ["Cotton and slavery made South Carolina's planters rich and powerful.", "In the Nullification Crisis (1832), led by John C. Calhoun's ideas, South Carolina claimed it could cancel a federal tariff.", "After Lincoln's election, South Carolina seceded in December 1860, and the war began at Fort Sumter in 1861."],
+    "What did nullification claim a state could do?",
+    ["South Carolina opposed a federal tax on imports.", "It said a state could declare a federal law void inside its borders."],
+    "refuse to follow a federal law it thought unconstitutional",
+  ),
+  "social/sc-g8-new-south": lesson(
+    ["During Reconstruction, Black South Carolinians voted, held office and helped write a new state constitution in 1868.", "The 1895 constitution took away most Black men's votes, and Jim Crow laws kept people segregated.", "Textile mills grew in the Upstate, and the boll weevil and Jim Crow pushed many Black families north in the Great Migration."],
+    "What did South Carolina's 1895 constitution do to Black voters?",
+    ["It added rules such as literacy tests and poll taxes.", "These rules were used to stop Black men from voting."],
+    "It took away most Black men's right to vote.",
+  ),
+  "social/sc-g8-modern-sc": lesson(
+    ["New Deal projects such as Santee Cooper brought jobs and electricity in the 1930s.", "World War II and the Cold War brought military bases and the Savannah River Site.", "After the Civil Rights Movement, the economy changed from textiles to cars, airplanes, ports and tourism."],
+    "Why did many textile mills in South Carolina close in the late 1900s?",
+    ["Companies could make cloth more cheaply in other countries.", "Jobs moved to new industries such as car making."],
+    "Cloth could be made more cheaply overseas.",
+  ),
 };

@@ -686,4 +686,11 @@ export const lessons: GradeLessons = {
     ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
     "the bare hillside",
   ),
+  // South Carolina (us-sc)
+  "science/sc-g4-rocks-erosion": lesson(
+    ["Weathering breaks rock. Erosion moves it. Running water moves the most.", "Glaciers scrape and carry rock. Roots growing in cracks can split rock.", "Over a very long time, erosion can carve deep canyons.", "Plants and their roots slow erosion on a hillside."],
+    "Which hillside erodes faster in heavy rain: a bare one or a grassy one?",
+    ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
+    "the bare hillside",
+  ),
 };

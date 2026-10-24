@@ -693,4 +693,17 @@ export const lessons: GradeLessons = {
     ["Plastics are made in chemical plants.", "Their raw materials are fossil fuels."],
     "petroleum and natural gas",
   ),
+  // South Carolina (us-sc)
+  "science/tx-g7-reproduction": lesson(
+    ["Asexual reproduction uses one parent and makes identical offspring: budding, runners, cuttings, splitting.", "Sexual reproduction uses two parents, so offspring get a mix of traits.", "Variety helps a population survive diseases and changes."],
+    "A strawberry plant grows a runner that roots into a new plant. Asexual or sexual?",
+    ["Only one parent plant is involved.", "The new plant is identical."],
+    "asexual",
+  ),
+  "science/sc-g8-seasons-tides": lesson(
+    ["Earth's axis is tilted about 23.5°. Without the tilt there would be almost no seasons.", "When a hemisphere tilts toward the Sun, sunlight hits more directly and it has summer.", "Earth orbits the Sun about every 365 days.", "The Moon's and Sun's gravity pull on the oceans to make tides."],
+    "When the Northern Hemisphere tilts toward the Sun, what season does it have?",
+    ["Tilted toward the Sun means more direct sunlight.", "More direct sunlight means summer."],
+    "summer",
+  ),
 };
