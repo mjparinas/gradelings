@@ -26,6 +26,7 @@ const h = vi.hoisted(() => ({
   now: 0,
 }));
 
+vi.mock("./FestivalCard", () => ({ FestivalCard: () => <div data-testid="festival-card" /> }));
 vi.mock("@/lib/router", () => ({ go: vi.fn() }));
 vi.mock("@/lib/useNow", () => ({ useNow: () => h.now }));
 vi.mock("@/lib/remoteFlags", () => ({ useIsOn: () => (key: string) => !h.off.has(key) }));
@@ -419,6 +420,14 @@ describe("Hub cards", () => {
     show("little");
     expect(screen.queryByTestId("reward-card")).not.toBeInTheDocument();
     expect(screen.queryByTestId("together-card")).not.toBeInTheDocument();
+  });
+
+  it("shows the festival card to older children; little kids find it in My Treasures", () => {
+    show();
+    expect(screen.getByTestId("festival-card")).toBeInTheDocument();
+    cleanup();
+    show("little");
+    expect(screen.queryByTestId("festival-card")).not.toBeInTheDocument();
   });
 
   it("keeps a little child's home screen calm: a focus unit adds no card", () => {
