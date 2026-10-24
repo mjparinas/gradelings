@@ -1,0 +1,676 @@
+                                                          Grade 5 Mathematics
+
+This document provides correlations between the 2023 Indiana Academic Standards (IAS) and the Common Core State Standards
+(CCSS) for easy reference. This correlation guide is intended to help support conversations regarding state and national standards and
+may be used as one of many tools to help inform a variety of local decisions (e.g., selection of high-quality curricular materials, curriculum
+maps).
+
+The 2023 Indiana Academic Standards resulted from the standards streamlining process required by Indiana Code (IC) 20-31-3-1(c-d)
+and were adopted by the Indiana State Board of Education in June 2023. Standards designated as essential (E) for student mastery by
+the end of the grade level are shaded in gray and all standards were renumbered to avoid gaps in sequencing.
+
+                                                                                                                 Differences Between
+        2023 Indiana Academic Standard                          Common Core State Standard
+                                                                                                                 2023 IAS and CCSS
+
+                                                          Domain: Number Sense
+
+ Number                       Text                    Number                       Text                               Description
+
+            Use a number line to compare and
+                                                               Compare two decimals to thousandths          IAS requires students to use a
+            order fractions, mixed numbers, and
+                                                               based on meanings of the digits in           number line to compare and
+ 5.NS.1     decimals to thousandths. Write the        5.NBT.3b
+                                                               each place, using >, =, and < symbols        order numbers and includes
+            results using > , = , and < symbols.
+                                                               to record the results of comparisons.        fractions and mixed numbers.
+            (E)
+
+                                                                  Interpret a fraction as division of the
+                                                                  numerator by the denominator (a/b = a
+            Explain different interpretations of                  ÷ b). Solve word problems involving
+            fractions, including as parts of a                    division of whole numbers leading to    IAS requires students to explain
+ 5.NS.2                                                5.NF.3
+            whole, parts of a set, and division of                answers in the form of fractions or     interpretations of fractions.
+            whole numbers by whole numbers.                       mixed numbers, e.g., by using visual
+                                                                  fraction models or equations to
+                                                                  represent the problem.
+
+
+
+
+                                                                       1
+          2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 5 Mathematics
+
+
+         Explain patterns in the number of                     Explain patterns in the number of
+         zeros of the product when multiplying                 zeros of the product when multiplying
+         a number by powers of 10, and                         a number by powers of 10, and
+         explain patterns in the placement of                  explain patterns in the placement of
+5.NS.3                                             5.NBT.2                                                No content differences identified.
+         the decimal point when a decimal is                   the decimal point when a decimal is
+         multiplied or divided by a power of 10.               multiplied or divided by a power of 10.
+         Use whole-number exponents to                         Use whole-number exponents to
+         denote powers of 10.                                  denote powers of 10.
+
+         Model percents as parts of 100 using
+5.NS.4   pictures or diagrams and identify the
+         equivalent fraction.
+
+                                                                                                               Differences Between
+     2023 Indiana Academic Standard                          Common Core State Standard
+                                                                                                               2023 IAS and CCSS
+
+                                          Domain: Computation and Algebraic Thinking
+
+Number                    Text                     Number                        Text                               Description
+
+                                                               Find whole-number quotients of whole
+         Find whole-number quotients and
+                                                               numbers with up to four-digit dividends
+         remainders with up to four-digit
+                                                               and two-digit divisors, using strategies
+         dividends and two-digit divisors using                                                           IAS requires students to find
+                                                               based on place value, the properties
+         strategies based on place value, the                                                             remainders. CCSS specifies how
+5.CA.1                                             5.NBT.6     of operations, and/or the relationship
+         properties of operations, and/or the                                                             students describe the strategy or
+                                                               between multiplication and division.
+         relationship between multiplication                                                              explain the reasoning.
+                                                               Illustrate and explain the calculation
+         and division. Describe the strategy
+                                                               by using equations, rectangular
+         and explain the reasoning used. (E)
+                                                               arrays, and/or area models.
+
+
+
+
+                                                             Updated July 2024                                                           2
+          2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 5 Mathematics
+
+
+
+                                                             Solve multistep word problems posed
+                                                             with whole numbers and having
+         Solve real-world problems involving                 whole-number answers using the four        IAS places emphasis on solving
+         multiplication and division of whole                operations, including problems in          real-world problems, and only
+         numbers (e.g., by using equations to                which remainders must be interpreted.      requires students to solve
+5.CA.2   represent the problem). In division       4.OA.3    Represent these problems using             multiplication and division
+         problems that involve a remainder,                  equations with a letter standing for the   problems. CCSS included
+         explain how the remainder affects the               unknown quantity. Assess the               assessing the reasonableness of
+         solution to the problem. (E)                        reasonableness of answers using            answers.
+                                                             mental computation and estimation
+                                                             strategies including rounding.
+
+
+                                                             Add and subtract fractions with unlike
+                                                             denominators (including mixed
+         Add and subtract fractions and mixed
+                                                             numbers) by replacing given fractions IAS includes using the standard
+         numbers with unlike denominators
+5.CA.3                                             5.NF.1    with equivalent fractions in such a way algorithm. CCSS specifies the
+         using strategies or the standard
+                                                             as to produce an equivalent sum or      strategy to be used.
+         algorithm.
+                                                             difference of fractions with like
+                                                             denominators.
+
+         Solve real-world problems involving                 Solve word problems involving
+         addition and subtraction of fractions               addition and subtraction of fractions
+         referring to the same whole, including              referring to the same whole, including
+         cases of unlike denominators (e.g., by              cases of unlike denominators, e.g., by
+         using visual fraction models and                    using visual fraction models or         IAS places emphasis on solving
+5.CA.4                                             5.NF.2
+         equations to represent the problem).                equations to represent the problem.     real-world problems.
+         Use benchmark fractions and number                  Use benchmark fractions and number
+         sense of fractions to estimate mentally             sense of fractions to estimate mentally
+         and assess whether the answer is                    and assess the reasonableness of
+         reasonable. (E)                                     answers.
+
+
+
+                                                            Updated July 2024                                                       3
+          2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 5 Mathematics
+
+
+                                                              Interpret the product (a/b) × q as a
+                                                              parts of a partition of q into b equal
+                                                   5.NF.4a
+                                                              parts; equivalently, as the result of a
+                                                              sequence of operations a × q ÷ b.
+         Use visual fraction models to multiply
+                                                              Understand a fraction a/b as a multiple
+5.CA.5   a fraction by a fraction or a whole       4.NF.4a                                            IAS requires the use of models.
+                                                              of 1/b.
+         number. (E)
+                                                              Understand a multiple of a/b as a
+                                                              multiple of 1/b, and use this
+                                                   4.NF.4b
+                                                              understanding to multiply a fraction by
+                                                              a whole number.
+
+                                                              Interpret division of a unit fraction by a   IAS includes all fractions (not
+                                                   5.NF.7a    non-zero whole number, and compute           limited to unit fractions) and
+         Use visual fraction models and                       such quotients.                              division of a fraction by a
+5.CA.6   numbers to divide a fraction by a
+                                                              Interpret division of a whole number         fraction. IAS also requires
+         fraction or a whole number. (E)
+                                                   5.NF.7b    by a unit fraction, and compute such         students to use visual fraction
+                                                              quotients.                                   models and numbers.
+
+         Solve real-world problems involving                  Solve real world problems involving
+         multiplication of fractions, including               multiplication of fractions and mixed
+5.CA.7   mixed numbers (e.g., by using visual      5.NF.6     numbers, e.g., by using visual fraction      No content differences identified.
+         fraction models and equations to                     models or equations to represent the
+         represent the problem). (E)                          problem.
+
+                                                              Solve real world problems involving
+         Solve real-world problems involving
+                                                              division of unit fractions by non-zero
+         division of fractions and mixed                                                                   IAS includes all types of
+                                                              whole numbers and division of whole
+5.CA.8   numbers (e.g., by using visual fraction   5.NF.7c                                                 fractions (not limited to unit
+                                                              numbers by unit fractions, e.g., by
+         models and equations to represent                                                                 fractions) and mixed numbers.
+                                                              using visual fraction models and
+         the problem). (E)
+                                                              equations to represent the problem.
+
+
+
+                                                             Updated July 2024                                                               4
+           2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 5 Mathematics
+
+
+                                                               Add, subtract, multiply, and divide
+                                                               decimals to hundredths, using
+          Add, subtract, multiply, and divide
+                                                               concrete models or drawings and
+          decimals to hundredths, using models
+                                                               strategies based on place value,
+          or drawings and strategies based on                                                               No content differences
+5.CA.9                                              5.NBT.7    properties of operations, and/or the
+          place value or the properties of                                                                       identified.
+                                                               relationship between addition and
+          operations. Describe the strategy and
+                                                               subtraction; relate the strategy to a
+          explain the reasoning.
+                                                               written method and explain the
+                                                               reasoning used.
+
+          Solve real-world problems involving                  Add, subtract, multiply, and divide
+          addition, subtraction, multiplication,               decimals to hundredths, using
+          and division with decimals to                        concrete models or drawings and
+                                                                                                       IAS places emphasis on solving
+          hundredths including problems that                   strategies based on place value,
+                                                                                                       real-world problems and
+5.CA.10   involve money in decimal notation         5.NBT.7    properties of operations, and/or the
+                                                                                                       includes problems that involve
+          (e.g., by using equations, models or                 relationship between addition and
+                                                                                                       money in decimal notation.
+          drawings, and strategies based on                    subtraction; relate the strategy to a
+          place value or properties of operations              written method and explain the
+          to represent the problem). (E)                       reasoning used.
+
+          Represent real-world problems and                    Represent real world and
+          equations by graphing ordered pairs                  mathematical problems by graphing
+          in the first quadrant of the coordinate              points in the first quadrant of the
+5.CA.11                                              5.G.2                                             No content differences identified.
+          plane, and interpret coordinate values               coordinate plane, and interpret
+          of points in the context of the                      coordinate values of points in the
+          situation.                                           context of the situation.
+
+
+
+
+                                                              Updated July 2024                                                       5
+          2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 5 Mathematics
+
+
+                                                                                                                 Differences Between
+     2023 Indiana Academic Standard                           Common Core State Standard
+                                                                                                                 2023 IAS and CCSS
+
+                                                         Domain: Geometry
+
+Number                    Text                      Number                         Text                               Description
+
+         Identify, describe, and draw triangles
+         (right, acute, obtuse) and circles using
+         appropriate tools (e.g., ruler or
+ 5.G.1   straightedge, compass, and
+         technology). Define and model the
+         relationship between radius and
+         diameter.
+
+                                                                                                                 Differences Between
+     2023 Indiana Academic Standard                           Common Core State Standard
+                                                                                                                 2023 IAS and CCSS
+
+                                                       Domain: Measurement
+
+Number                    Text                      Number                         Text                               Description
+
+                                                                Convert among different-sized
+         Convert among different-sized
+                                                                standard measurement units within a
+         standard measurement units within a
+                                                                given measurement system (e.g.,
+ 5.M.1   given measurement system and use           5.MD.1                                                  No content differences identified.
+                                                                convert 5 cm to 0.05 m), and use
+         these conversions in solving
+                                                                these conversions in solving
+         multi-step, real-world problems.
+                                                                multi-step, real world problems.
+
+         Find the area of a rectangle with                      Find the area of a rectangle with
+         fractional side lengths by modeling                    fractional side lengths by tiling it with
+ 5.M.2   with unit squares of the appropriate       5.NF.4b     unit squares of the appropriate unit        No content differences identified.
+         unit fraction side lengths, and show                   fraction side lengths, and show that
+         that the area is the same as would be                  the area is the same as would be
+
+
+                                                              Updated July 2024                                                            6
+         2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 5 Mathematics
+
+
+        found by multiplying the side lengths.                found by multiplying the side lengths.
+        Multiply fractional side lengths to find              Multiply fractional side lengths to find
+        areas of rectangles, and represent                    areas of rectangles, and represent
+        fraction products as rectangular                      fraction products as rectangular areas.
+        areas.
+
+        Develop and use formulas for the area
+        of triangles, parallelograms, and
+        trapezoids. Solve real-world and other
+5.M.3   mathematical problems that involve
+        perimeter and area of triangles,
+        parallelograms, and trapezoids, using
+        appropriate units for measures. (E)
+
+                                                              A cube with side length 1 unit, called a
+                                                              "unit cube," is said to have "one cubic
+                                                   5.MD.3a
+                                                              unit" of volume, and can be used to
+                                                              measure volume.
+
+                                                              A solid figure which can be packed
+        Find the volume of a right rectangular                without gaps or overlaps using n unit
+        prism with whole-number side lengths       5.MD.3b
+                                                              cubes is said to have a volume of n
+        by packing it with unit cubes, and                    cubic units.
+5.M.4   show that the volume is the same as                                                              No content differences identified.
+        would be found by multiplying the                     Measure volumes by counting unit
+        edge lengths or multiplying the height     5.MD.4     cubes, using cubic cm, cubic in, cubic
+        by the area of the base. (E)                          ft., and improvised units.
+
+                                                              Find the volume of a right rectangular
+                                                              prism with whole-number side lengths
+                                                   5.MD.5a    by packing it with unit cubes, and
+                                                              show that the volume is the same as
+                                                              would be found by multiplying the
+
+
+                                                             Updated July 2024                                                          7
+          2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 5 Mathematics
+
+
+                                                              edge lengths, equivalently by
+                                                              multiplying the height by the area of
+                                                              the base. Represent threefold
+                                                              whole-number products as volumes,
+                                                              e.g., to represent the associative
+                                                              property of multiplication.
+
+         Apply the formulas V = l × w × h and V               Apply the formulas V = l × w × h and V
+         = B × h for right rectangular prisms to              = b × h for rectangular prisms to find
+         find volumes of right rectangular                    volumes of right rectangular prisms
+ 5.M.5                                             5.MD.5b                                           No content differences identified.
+         prisms with whole-number edge                        with whole number edge lengths in the
+         lengths to solve real-world problems                 context of solving real world and
+         and other mathematical problems. (E)                 mathematical problems.
+
+                                                                                                            Differences Between
+     2023 Indiana Academic Standard                         Common Core State Standard
+                                                                                                            2023 IAS and CCSS
+
+                                                      Domain: Data Analysis
+
+Number                    Text                     Number                        Text                             Description
+
+                                                                                                       IAS requires students to
+         Formulate questions that can be
+                                                                                                       formulate questions to make
+         addressed with categorical and
+                                                                                                       predictions about data by using
+         numerical data and make predictions                  Make a line plot to display a data set
+                                                                                                       observation, surveys, and
+         about the data. Collect, organize, and               of measurements in fractions of a unit
+                                                                                                       experiments to collect,
+         graph data from observations,                        (1/2, 1/4, 1/8). Use operations on
+5.DA.1                                             5.MD.2                                              represent, and interpret data
+         surveys, and experiments using line                  fractions for this grade to solve
+                                                                                                       using table and bar and line
+         plots with fractional intervals,                     problems involving information
+                                                                                                       graphs. CCSS requires students
+         histograms, or other graphical                       presented in line plots.
+                                                                                                       to use measurements in
+         representations that appropriately
+                                                                                                       fractions of a unit or use fraction
+         represent the data set. (E)
+                                                                                                       operations to solve problems.
+
+
+
+
+                                                             Updated July 2024                                                         8
+          2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 5 Mathematics
+
+
+         Calculate measures of central
+         tendency (mean, median, and mode)
+         to describe a data set. Analyze data
+5.DA.2
+         sets to determine which measure of
+         central tendency appropriately
+         describes the distribution of data. (E)
+
+
+
+
+                                                       Updated July 2024                                            9
+            2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 5 Mathematics
+
+
+
+                                                Mathematics Process Standards
+
+                                                                                                                 Differences Between
+       2023 Indiana Academic Standard                        Common Core State Standard
+                                                                                                                 2023 IAS and CCSS
+
+                                                    MP.1: Make sense of problems and persevere
+PS.1: Make sense of problems and persevere          in solving them.
+in solving them.                                    Mathematically proficient students start by
+Mathematically proficient students start by         explaining to themselves the meaning of a
+explaining to themselves the meaning of a           problem and looking for entry points to its solution.
+problem and looking for entry points to its         They analyze givens, constraints, relationships,
+solution. They analyze givens, constraints,         and goals. They make conjectures about the form
+relationships, and goals. They make conjectures     and meaning of the solution and plan a solution
+about the form and meaning of the solution and      pathway rather than simply jumping into a solution
+plan a solution pathway, rather than simply         attempt. They consider analogous problems, and
+                                                                                                            IAS summarizes what
+jumping into a solution attempt. They consider      try special cases and simpler forms of the original
+                                                                                                            mathematically proficient
+analogous problems and try special cases and        problem in order to gain insight into its solution.
+                                                                                                            students can do, while CCSS
+simpler forms of the original problem in order to   They monitor and evaluate their progress and
+                                                                                                            gives examples of what
+gain insight into its solution. They monitor and    change course if necessary. Older students might,
+                                                                                                            mathematically proficient
+evaluate their progress and change course if        depending on the context of the problem,
+                                                                                                            students might do at different
+necessary. Mathematically proficient students       transform algebraic expressions or change the
+                                                                                                            grade levels.
+check their answers to problems using a different   viewing window on their graphing calculator to get
+method, and they continually ask themselves,        the information they need. Mathematically
+“Does this make sense?” and "Is my answer           proficient students can explain correspondences
+reasonable?" They understand the approaches of      between equations, verbal descriptions, tables,
+others to solving complex problems and identify     and graphs or draw diagrams of important
+correspondences between different approaches.       features and relationships, graph data, and search
+Mathematically proficient students understand       for regularity or trends. Younger students might
+how mathematical ideas interconnect and build       rely on using concrete objects or pictures to help
+on one another to produce a coherent whole.         conceptualize and solve a problem.
+                                                    Mathematically proficient students check their
+
+
+
+                                                             Updated July 2024                                                               10
+             2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 5 Mathematics
+
+
+                                                       answers to problems using a different method,
+                                                       and they continually ask themselves, "Does this
+                                                       make sense?" They can understand the
+                                                       approaches of others to solving complex problems
+                                                       and identify correspondences between different
+                                                       approaches.
+
+PS.2: Reason abstractly and quantitatively.            MP.2: Reason abstractly and quantitatively.
+Mathematically proficient students make sense of       Mathematically proficient students make sense of
+quantities and their relationships in problem          quantities and their relationships in problem
+situations. They bring two complementary abilities     situations. They bring two complementary abilities
+to bear on problems involving quantitative             to bear on problems involving quantitative
+relationships: the ability to decontextualize—to       relationships: the ability to decontextualize—to
+abstract a given situation and represent it            abstract a given situation and represent it
+symbolically and manipulate the representing           symbolically and manipulate the representing
+symbols as if they have a life of their own, without   symbols as if they have a life of their own, without
+necessarily attending to their referents—and the       necessarily attending to their referents—and the     No content differences identified.
+ability to contextualize, to pause as needed           ability to contextualize, to pause as needed during
+during the manipulation process in order to probe      the manipulation process in order to probe into the
+into the referents for the symbols involved.           referents for the symbols involved. Quantitative
+Quantitative reasoning entails habits of creating a    reasoning entails habits of creating a coherent
+coherent representation of the problem at hand;        representation of the problem at hand; considering
+considering the units involved; attending to the       the units involved; attending to the meaning of
+meaning of quantities, not just how to compute         quantities, not just how to compute them; and
+them; and knowing and flexibly using different         knowing and flexibly using different properties of
+properties of operations and objects.                  operations and objects.
+
+PS.3: Construct viable arguments and critique          MP.3: Construct viable arguments and critique        IAS explains that mathematically
+the reasoning of others.                               the reasoning of others.                             proficient students can justify
+Mathematically proficient students understand          Mathematically proficient students understand and    statements that are true always,
+and use stated assumptions, definitions, and           use stated assumptions, definitions, and             sometimes, or never. IAS also
+previously established results in constructing         previously established results in constructing       states that mathematically
+
+
+
+                                                                Updated July 2024                                                         11
+             2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 5 Mathematics
+
+
+arguments. They make conjectures and build a          arguments. They make conjectures and build a           proficient students participate
+logical progression of statements to explore the      logical progression of statements to explore the       and collaborate in a
+truth of their conjectures. They analyze situations   truth of their conjectures. They are able to analyze   mathematics community. CCSS
+by breaking them into cases and recognize and         situations by breaking them into cases, and can        gives examples of what
+use counterexamples. They organize their              recognize and use counterexamples. They justify        mathematically proficient
+mathematical thinking, justify their conclusions      their conclusions, communicate them to others,         students might do at different
+and communicate them to others, and respond to        and respond to the arguments of others. They           grade levels.
+the arguments of others. They reason inductively      reason inductively about data, making plausible
+about data, making plausible arguments that take      arguments that take into account the context from
+into account the context from which the data          which the data arose. Mathematically proficient
+arose. Mathematically proficient students are also    students are also able to compare the
+able to compare the effectiveness of two plausible    effectiveness of two plausible arguments,
+arguments, distinguish correct logic or reasoning     distinguish correct logic or reasoning from that
+from that which is flawed, and—if there is a flaw     which is flawed, and—if there is a flaw in an
+in an argument—explain what it is. They justify       argument—explain what it is. Elementary students
+whether a given statement is true always,             can construct arguments using concrete referents
+sometimes, or never. Mathematically proficient        such as objects, drawings, diagrams, and actions.
+students participate and collaborate in a             Such arguments can make sense and be correct,
+mathematics community. They listen to or read         even though they are not generalized or made
+the arguments of others, decide whether they          formal until later grades. Later, students learn to
+make sense, and ask useful questions to clarify       determine domains to which an argument applies.
+or improve the arguments.                             Students at all grades can listen or read the
+                                                      arguments of others, decide whether they make
+                                                      sense, and ask useful questions to clarify or
+                                                      improve the arguments.
+
+PS.4: Model with mathematics.                         MP.4: Model with mathematics.                          IAS summarizes what
+Mathematically proficient students apply the          Mathematically proficient students can apply the       mathematically proficient
+mathematics they know to solve problems arising       mathematics they know to solve problems arising        students can do, while CCSS
+in everyday life, society, and the workplace using    in everyday life, society, and the workplace. In       gives examples of what
+a variety of appropriate strategies. They create      early grades, this might be as simple as writing an    mathematically proficient
+
+
+
+                                                               Updated July 2024                                                           12
+             2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 5 Mathematics
+
+
+and use a variety of representations to solve         addition equation to describe a situation. In middle students might do at different
+problems and to organize and communicate              grades, a student might apply proportional            grade levels.
+mathematical ideas. Mathematically proficient         reasoning to plan a school event or analyze a
+students apply what they know and are                 problem in the community. By high school, a
+comfortable making assumptions and                    student might use geometry to solve a design
+approximations to simplify a complicated              problem or use a function to describe how one
+situation, realizing that these may need revision     quantity of interest depends on another.
+later. They are able to identify important            Mathematically proficient students who can apply
+quantities in a practical situation and map their     what they know are comfortable making
+relationships using such tools as diagrams,           assumptions and approximations to simplify a
+two-way tables, graphs, flowcharts and formulas.      complicated situation, realizing that these may
+They analyze those relationships mathematically       need revision later. They are able to identify
+to draw conclusions. They routinely interpret their   important quantities in a practical situation and
+mathematical results in the context of the            map their relationships using such tools as
+situation and reflect on whether the results make     diagrams, two-way tables, graphs, flowcharts and
+sense, possibly improving the model if it has not     formulas. They can analyze those relationships
+served its purpose.                                   mathematically to draw conclusions. They
+                                                      routinely interpret their mathematical results in the
+                                                      context of the situation and reflect on whether the
+                                                      results make sense, possibly improving the model
+                                                      if it has not served its purpose.
+
+
+
+
+                                                               Updated July 2024                                                            13
+             2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 5 Mathematics
+
+
+                                                       MP.5: Use appropriate tools strategically.
+                                                       Mathematically proficient students consider the
+                                                       available tools when solving a mathematical
+PS.5: Use appropriate tools strategically.             problem. These tools might include pencil and
+Mathematically proficient students consider the        paper, concrete models, a ruler, a protractor, a
+available tools when solving a mathematical            calculator, a spreadsheet, a computer algebra
+problem. These tools might include pencil and          system, a statistical package, or dynamic
+paper, models, a ruler, a protractor, a calculator, a geometry software. Proficient students are
+spreadsheet, a computer algebra system, a              sufficiently familiar with tools appropriate for their
+statistical package, or dynamic geometry               grade or course to make sound decisions about
+software. Mathematically proficient students are       when each of these tools might be helpful,
+                                                                                                                IAS summarizes what
+sufficiently familiar with tools appropriate for their recognizing both the insight to be gained and their
+                                                                                                                mathematically proficient
+grade or course to make sound decisions about          limitations. For example, mathematically proficient
+                                                                                                                students can do, while CCSS
+when each of these tools might be helpful,             high school students analyze graphs of functions
+                                                                                                                gives examples of what
+recognizing both the insight to be gained and          and solutions generated using a graphing
+                                                                                                                mathematically proficient
+their limitations. Mathematically proficient           calculator. They detect possible errors by
+                                                                                                                students might do at different
+students identify relevant external mathematical       strategically using estimation and other
+                                                                                                                grade levels.
+resources, such as digital content, and use them mathematical knowledge. When making
+to pose or solve problems. They use                    mathematical models, they know that technology
+technological tools to explore and deepen their        can enable them to visualize the results of varying
+understanding of concepts and to support the           assumptions, explore consequences, and
+development of learning mathematics. They use          compare predictions with data. Mathematically
+technology to contribute to concept development, proficient students at various grade levels are able
+simulation, representation, reasoning,                 to identify relevant external mathematical
+communication and problem solving.                     resources, such as digital content located on a
+                                                       website, and use them to pose or solve problems.
+                                                       They are able to use technological tools to explore
+                                                       and deepen their understanding of concepts.
+
+
+
+
+                                                                Updated July 2024                                                                14
+             2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 5 Mathematics
+
+
+
+PS.6: Attend to precision.                           MP.6: Attend to precision.
+Mathematically proficient students communicate       Mathematically proficient students try to
+precisely to others. They use clear definitions,     communicate precisely to others. They try to use
+including precision. correct mathematical            clear definitions in discussion with others and in
+language, in discussion with others and in their     their own reasoning. They state the meaning of
+own reasoning. They state the meaning of the         the symbols they choose, including using the          IAS summarizes what
+symbols they choose, including using the equal       equal sign consistently and appropriately. They       mathematically proficient
+sign consistently and appropriately. They express    are careful about specifying units of measure, and    students can do, while CCSS
+solutions clearly and logically by using the         labeling axes to clarify the correspondence with      gives examples of what
+appropriate mathematical terms and notation.         quantities in a problem. They calculate accurately    mathematically proficient
+They specify units of measure and label axes to      and efficiently, express numerical answers with a     students might do at different
+clarify the correspondence with quantities in a      degree of precision appropriate for the problem       grade levels.
+problem. They calculate accurately and efficiently   context. In the elementary grades, students give
+and check the validity of their results in the       carefully formulated explanations to each other.
+context of the problem. They express numerical       By the time they reach high school they have
+answers with a degree of precision appropriate       learned to examine claims and make explicit use
+for the problem context.                             of definitions.
+
+
+                                                     MPS.7: Look for and make use of structure.
+PS.7: Look for and make use of structure.            Mathematically proficient students look closely to
+Mathematically proficient students look closely to   discern a pattern or structure. Young students, for
+                                                                                                           IAS summarizes what
+discern a pattern or structure. They step back for   example, might notice that three and seven more
+                                                                                                           mathematically proficient
+an overview and shift perspective. They              is the same amount as seven and three more, or
+                                                                                                           students can do, while CCSS
+recognize and use properties of operations and       they may sort a collection of shapes according to
+                                                                                                           gives examples of what
+equality. They organize and classify geometric       how many sides the shapes have. Later, students
+                                                                                                           mathematically proficient
+shapes based on their attributes. They see           will see 7 × 8 equals the well remembered 7 × 5 +
+                                                                                                           students might do at different
+expressions, equations, and geometric figures as     7 × 3, in preparation for learning about the
+                                                                                                           grade levels.
+single objects or as being composed of several       distributive property. In the expression x2 + 9x +
+objects.                                             14, older students can see the 14 as 2 × 7 and the
+                                                     9 as 2 + 7. They recognize the significance of an
+
+
+
+                                                              Updated July 2024                                                             15
+             2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 5 Mathematics
+
+
+                                                    existing line in a geometric figure and can use the
+                                                    strategy of drawing an auxiliary line for solving
+                                                    problems. They also can step back for an
+                                                    overview and shift perspective. They can see
+                                                    complicated things, such as some algebraic
+                                                    expressions, as single objects or as being
+                                                    composed of several objects. For example, they
+                                                    can see 5 - 3(x - y)2 as 5 minus a positive number
+                                                    times a square and use that to realize that its
+                                                    value cannot be more than 5 for any real numbers
+                                                    x and y.
+
+                                                    MP.8: Look for and express regularity in
+                                                    repeated reasoning.
+                                                    Mathematically proficient students notice if
+                                                    calculations are repeated, and look both for
+PS.8: Look for and express regularity in            general methods and for shortcuts. Upper
+repeated reasoning.                                 elementary students might notice when dividing
+Mathematically proficient students notice if        25 by 11 that they are repeating the same             IAS summarizes what
+calculations are repeated and look for general      calculations over and over again, and conclude        mathematically proficient
+methods and shortcuts. They notice regularity in    they have a repeating decimal. By paying              students can do, while CCSS
+mathematical problems and their work to create a attention to the calculation of slope as they            gives examples of what
+rule or formula. Mathematically proficient students repeatedly check whether points are on the line       mathematically proficient
+maintain oversight of the process, while attending through (1, 2) with slope 3, middle school students    students might do at different
+to the details as they solve a problem. They        might abstract the equation (y - 2)/(x - 1) = 3.      grade levels.
+continually evaluate the reasonableness of their    Noticing the regularity in the way terms cancel
+intermediate results.                               when expanding (x - 1)(x + 1), (x - 1)(x2 + x + 1),
+                                                    and (x - 1)(x3 + x2 + x + 1) might lead them to the
+                                                    general formula for the sum of a geometric series.
+                                                    As they work to solve a problem, mathematically
+                                                    proficient students maintain oversight of the
+
+
+
+
+                                                             Updated July 2024                                                             16
+2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 5 Mathematics
+
+
+                                   process, while attending to the details. They
+                                   continually evaluate the reasonableness of their
+                                   intermediate results.
+
+
+
+
+                                            Updated July 2024                                             17
+

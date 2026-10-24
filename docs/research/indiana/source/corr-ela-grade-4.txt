@@ -1,0 +1,634 @@
+                                                   Grade 4 English/Language Arts
+
+This document provides correlations between the 2023 Indiana Academic Standards (IAS) and the Common Core State Standards
+(CCSS) for easy reference. This correlation guide is intended to help support conversations regarding state and national standards and
+may be used as one of many tools to help inform a variety of local decisions (e.g., selection of high-quality curricular materials,
+curriculum maps).
+
+The 2023 Indiana Academic Standards resulted from the standards streamlining process required by Indiana Code (IC) 20-31-3-1(c-d)
+and were adopted by the Indiana State Board of Education in June 2023. Standards designated as essential (E) for student mastery by
+the end of the grade level are shaded in gray and all standards were renumbered to avoid gaps in sequencing.
+
+                                                                                                           Differences Between
+      2023 Indiana Academic Standard                      Common Core State Standard
+                                                                                                           2023 IAS and CCSS
+
+                                                    Domain: Reading Foundations
+
+Number                     Text                    Number                    Text                               Description
+
+
+
+           Use the six major syllable patterns
+ 4.RF.1    (CVC, CVr, V, VV, VCe, Cle) to read
+           unknown words.
+
+
+
+                                                            Use combined knowledge of all
+           Use knowledge of all letter-sound
+                                                            letter-sound correspondences,
+           correspondences, syllabication
+                                                            syllabication patterns, and
+           patterns, and morphology (e.g.,
+ 4.RF.2                                            RF.4.3.A morphology (e.g., roots and affixes)      No content differences identified.
+           roots and affixes) to accurately read
+                                                            to read accurately unfamiliar
+           unfamiliar, multisyllabic words in
+                                                            multisyllabic words in context and
+           context. (E)
+                                                            out of context.
+
+
+
+
+                                                                    1
+                 2023 Indiana Academics Standards and CCSS Correlation Guide: Grade 4 English/Language Arts
+
+
+
+                                                           Read with sufficient accuracy and    IAS combines all CCSS standards
+                                                RF.4.4
+                                                           fluency to support comprehension.    with emphasis on orally reading text
+                                                                                                that is at or above grade level. IC
+                                                                                                20-26-12-24.5 requires public
+         Orally read grade-level appropriate
+                                                           Read grade-level text with purpose   schools, including charter schools,
+         or higher texts smoothly and          RF.4.4.A
+4.RF.3                                                     and understanding.                   to adopt curriculum or supplemental
+         accurately with expression that
+                                                                                                materials that are aligned with the
+         connotes comprehension.
+                                                                                                science of reading, and states that
+                                                        Read grade-level prose and poetry       schools may not adopt curricula or
+                                                        orally with accuracy, appropriate       materials that are based on the
+                                               RF.4.4.B
+                                                        rate, and expression on successive      three-cueing model.
+                                                        readings.
+
+                                                                                                      Differences Between
+    2023 Indiana Academic Standard                       Common Core State Standard
+                                                                                                      2023 IAS and CCSS
+
+                                               Domain: Reading Comprehension
+
+Number                   Text                  Number                         Text                          Description
+
+                                                           Refer to details and examples in a
+                                                           text when explaining what the text
+                                               RL.4.1
+         Refer to details and examples in a                says explicitly and when drawing
+         text when explaining what a text                  inferences from the text.
+4.RC.1                                                                                           No content differences identified.
+         says explicitly and when drawing                  Refer to details and examples in a
+         inferences from the text. (E)                     text when explaining what the text
+                                                RI.4.1
+                                                           says explicitly and when drawing
+                                                           inferences from the text.
+
+
+
+
+                                                          Updated July 2024                                                       2
+                 2023 Indiana Academics Standards and CCSS Correlation Guide: Grade 4 English/Language Arts
+
+
+         Paraphrase or summarize the main
+                                                                                                   IAS requires students to paraphrase
+         events in a story, myth, legend, or               Determine a theme of a story,
+                                                                                                   and summarize the main events in a
+4.RC.2   novel; identify the theme and           RL.4.2    drama, or poem from details in the
+                                                                                                   story, and provide textual evidence
+         provide evidence for the                          text; summarize the text.
+                                                                                                   when identifying themes.
+         interpretation. (E)
+
+                                                           Describe in depth a character,
+         Describe a character, setting, or
+                                                           setting, or event in a story or drama, IAS emphasizes drawing on specific
+         event in a story or play, drawing on
+4.RC.3                                           RL.4.3    drawing on specific details in the text details in the text and explaining
+         specific details in the text, and how
+                                                           (e.g., a character's thoughts, words, how these details affect the plot.
+         that impacts the plot.
+                                                           or actions).
+
+         Compare and contrast the point of                 Compare and contrast the point of
+         view from which different stories are             view from which different stories are
+4.RC.4   narrated, including the difference      RL.4.6    narrated, including the difference
+         between first- and third-person                   between first- and third-person
+         narrations. (E)                                   narrations.                               No content differences identified.
+
+         Determine the main idea of a text                 Determine the main idea of a text
+4.RC.5   and explain how it is supported by      RI.4.2    and explain how it is supported by
+         key details; summarize the text. (E)              key details; summarize the text.
+
+                                                           Interpret information presented
+                                                           visually, orally, or quantitatively (e.g.,
+         Apply knowledge of text features to
+                                                           in charts, graphs, diagrams, time
+         locate information and gain meaning                                                          IAS specifies applying knowledge of
+                                                           lines, animations, or interactive
+4.RC.6   from a text (e.g., charts, tables,      RI.4.7                                               text features to locate information
+                                                           elements on Web pages) and
+         graphs, headings, subheadings,                                                               and make meaning of a text.
+                                                           explain how the information
+         font/format).
+                                                           contributes to an understanding of
+                                                           the text in which it appears.
+
+
+
+
+                                                          Updated July 2024                                                            3
+                   2023 Indiana Academics Standards and CCSS Correlation Guide: Grade 4 English/Language Arts
+
+
+          Describe the organizational structure
+          (e.g., chronological,
+                                                                Describe the overall structure (e.g.,
+          problem-solution,
+                                                                chronology, comparison,
+          comparison/contrast, procedural,
+4.RC.7                                               RI.4.5     cause/effect, problem/solution) of          No content differences identified.
+          cause/effect, sequential, description)
+                                                                events, ideas, concepts, or
+          of events, ideas, concepts, or
+                                                                information in a text or part of a text.
+          information in a text or part of a text.
+          (E)
+
+                                                                                                           IAS requires students to distinguish
+          Distinguish between fact and
+                                                                                                           between fact and opinion and
+          opinion; explain how an author uses                   Explain how an author uses reasons
+                                                                                                           specifies students must explain how
+4.RC.8    reasons and evidence to support a          RI.4.8     and evidence to support particular
+                                                                                                           an author uses reasons and
+          statement or position (claim) in a                    points in a text.
+                                                                                                           evidence to support a statement or
+          text.
+                                                                                                           position (claim) in a text.
+
+                                                                Compare and contrast a firsthand
+          Combine information from two texts
+                                                                and secondhand account of the
+          on the same topic in order to                                                                    IAS specifies combining information
+4.RC.9                                               RI.4.6     same event or topic; describe the
+          demonstrate knowledge about the                                                                  from two texts on the same topic.
+                                                                differences in focus and the
+          subject.
+                                                                information provided.
+
+          Apply context clues (e.g., word,
+          phrase, sentence, and paragraph                       Use context (e.g., definitions,            IAS requires the use of context clues
+          context) and text features (e.g.,                     examples, or restatements in text)         up to the paragraph-level and a
+4.RC.10                                              L.4.4.A
+          charts, headings/subheadings,                         as a clue to the meaning of a word         variety of text features to determine
+          font/format) to determine the                         or phrase.                                 the meanings of unknown words.
+          meanings of unknown words.
+
+
+
+
+                                                               Updated July 2024                                                             4
+                  2023 Indiana Academics Standards and CCSS Correlation Guide: Grade 4 English/Language Arts
+
+
+          Identify relationships among words,                Demonstrate understanding of
+                                                                                                        IAS adds additional word
+          including more complex                             words by relating them to their
+                                                                                                        relationships including: more
+4.RC.11   homographs, homonyms,                   L.4.5.C    opposites (antonyms) and to words
+                                                                                                        complex homographs, homonyms,
+          synonyms, antonyms, and multiple                   with similar but not identical
+                                                                                                        and words with multiple meanings.
+          meanings. (E)                                      meanings (synonyms).
+
+          Apply knowledge of word structure
+                                                             Use common, grade-appropriate              IAS adds students should apply their
+          elements (e.g., suffixes, prefixes,
+                                                             Greek and Latin affixes and roots as       knowledge of known words and
+4.RC.12   common Greek and Latin affixes          L.4.4.B
+                                                             clues to the meaning of a word (e.g.,      word patterns to aid in determining
+          and roots), known words, and word
+                                                             telegraph, photograph, autograph).         meaning.
+          patterns to determine meaning.
+
+                                                             Demonstrate understanding of
+          Determine how words and phrases                    figurative language, word
+                                                   L.4.5
+          provide meaning to works of                        relationships, and nuances in word
+4.RC.13   literature, including figurative                   meanings.                                   No content differences identified.
+          language (e.g., similes, metaphors,                Explain the meaning of simple
+          or hyperbole).                          L.4.5.A    similes and metaphors (e.g., as
+                                                             pretty as a picture) in context.
+
+                                                                                                              Differences Between
+    2023 Indiana Academic Standard                         Common Core State Standard
+                                                                                                              2023 IAS and CCSS
+
+                                                            Domain: Writing
+
+Number                    Text                    Number                        Text                               Description
+
+          Write persuasive compositions in a                                                            IAS combines all CCSS standards
+                                                             Write opinion pieces on topics or
+          variety of forms that:                                                                        and requires students to write
+                                                  W.4.1      texts, supporting a point of view with
+ 4.W.1        a. In an introductory statement,                                                          persuasive compositions.
+                                                             reasons and information.
+                  clearly state an opinion to a
+                  particular audience.            W.4.1.A    Introduce a topic or text clearly, state    No content differences identified.
+
+
+                                                            Updated July 2024                                                             5
+                2023 Indiana Academics Standards and CCSS Correlation Guide: Grade 4 English/Language Arts
+
+
+           b. Support the opinion with                    an opinion, and create an
+              facts and details from various              organizational structure in which
+              sources, including texts.                   related ideas are grouped to support
+           c. Use an organizational                       the writer's purpose.
+              structure to group related
+              ideas that support the                      Provide reasons that are supported
+                                               W.4.1.B
+              purpose.                                    by facts and details.
+           d. Connect opinion and reasons
+                                                          Link opinion and reasons using
+              using words and phrases.
+                                               W.4.1.C    words and phrases (e.g., for
+           e. Provide a concluding
+                                                          instance, in order to, in addition).
+              statement or section related
+              to the position presented. (E)              Provide a concluding statement or
+                                               W.4.1.D    section related to the opinion
+                                                          presented.
+
+        Write informative compositions on a               Write informative/explanatory texts IAS combines all CCSS standards,
+        variety of topics that:                W.4.2      to examine a topic and convey ideas specifies informative composition
+           a. Provide an introductory                     and information clearly.            types.
+              paragraph with a clear main
+                                                          Introduce a topic clearly and group
+              idea.
+                                                          related information in paragraphs
+           b. Provide supporting                                                                 IAS adds the use of photographs
+                                                          and sections; include formatting
+              paragraphs with topic and        W.4.2.A                                           and maps as text features to aid
+                                                          (e.g., headings), illustrations, and
+              summary sentences.                                                                 comprehension.
+4.W.2                                                     multimedia when useful to aiding
+           c. Provide facts, specific
+                                                          comprehension.
+              details, and examples from
+              various sources and texts to                Develop the topic with facts,
+              support ideas and extend                    definitions, concrete details,
+                                               W.4.2.B
+              explanations.                               quotations, or other information and
+                                                                                                  No content differences identified.
+           d. Connect ideas using words                   examples related to the topic.
+              and phrases.
+           e. Include text features (e.g.,     W.4.2.C    Link ideas within categories of
+
+
+
+                                                         Updated July 2024                                                          6
+                2023 Indiana Academics Standards and CCSS Correlation Guide: Grade 4 English/Language Arts
+
+
+              formatting, photographs,                      information using words and
+              maps) and multimedia when                     phrases (e.g., another, for example,
+              useful to aid comprehension.                  also, because).
+           f. Use language and
+              vocabulary appropriate to the                 Use precise language and
+              audience and topic.                W.4.2.D    domain-specific vocabulary to inform
+           g. Provide a concluding                          about or explain the topic.
+              statement or section. (E)                     Provide a concluding statement or
+                                                 W.4.2.E    section related to the information or
+                                                            explanation presented.
+
+        Write narrative compositions in a                   Write narratives to develop real or
+        variety of forms that:                              imagined experiences or events
+           a. Establish an introduction with     W.4.3      using effective technique,
+              context to allow the reader to                descriptive details, and clear event
+              imagine the world of the                      sequences:
+              event or experience.
+           b. Organize events that unfold                   Orient the reader by establishing a
+              naturally using meaningful                    situation and introducing a narrator
+                                                 W.4.3.A
+              paragraphing and transitional                 and/or characters; organize an event
+              words and phrases.                            sequence that unfolds naturally.
+4.W.3                                                                                               No content differences identified.
+           c. Use dialogue and descriptive
+              details to develop events and                 Use dialogue and description to
+              reveal characters’                            develop experiences and events or
+                                                 W.4.3.B
+              personalities, feelings, and                  show the responses of characters to
+              responses to situations.                      situations.
+           d. Employ vocabulary with
+              sufficient sensory (i.e., sight,              Use a variety of transitional words
+              sound, smell, touch, taste)        W.4.3.C    and phrases to manage the
+              details to give clear pictures                sequence of events.
+              of ideas and events.
+
+
+                                                           Updated July 2024                                                         7
+                2023 Indiana Academics Standards and CCSS Correlation Guide: Grade 4 English/Language Arts
+
+
+           e. Provide an ending that                     Use concrete words and phrases
+              follows the narrated            W.4.3.D    and sensory details to convey
+              experiences or events. (E)                 experiences and events precisely.
+
+                                                         Provide a conclusion that follows
+                                              W.4.3.E    from the narrated experiences or
+                                                         events.
+
+        Apply the writing process to:
+           a. Generate a draft by                        Produce clear and coherent writing
+              developing, selecting, and                 in which the development and
+              organizing ideas relevant to               organization are appropriate to task,
+              topic, purpose, and genre;      W.4.4      purpose, and audience.
+              revise to improve writing,                 (Grade-specific expectations for
+              using appropriate reference                writing types are defined in
+              materials (e.g., quality of                standards 1-3 above.)
+              ideas, organization, sentence
+              fluency, word choice); edit                                                        No content differences identified.
+              writing for format and                     With guidance and support from
+              conventions (e.g., spelling,               peers and adults, develop and
+              capitalization, usage,                     strengthen writing as needed by
+              punctuation).                              planning, revising, and editing.
+                                              W.4.5
+4.W.4      b. Use technology to interact                 (Editing for conventions should
+              and collaborate with others                demonstrate command of Language
+              to produce and publish                     standards 1-3 up to and including
+              legible documents.                         grade 4 here.)
+
+
+
+
+                                                        Updated July 2024                                                         8
+                2023 Indiana Academics Standards and CCSS Correlation Guide: Grade 4 English/Language Arts
+
+
+
+                                                         With some guidance and support
+                                                         from adults, use technology,
+                                                         including the Internet, to produce
+                                                         and publish writing as well as to         Timed keyboarding skills and a
+                                                W.4.6    interact and collaborate with others;     specific number of pages are unique
+                                                         demonstrate sufficient command of         to CCSS.
+                                                         keyboarding skills to type a
+                                                         minimum of one page in a single
+                                                         sitting.
+
+        Conduct research on a topic.                     Conduct short research projects that      IAS requires students to identify a
+           a. Identify a specific question to            build knowledge through                   specific research question and
+                                                W.4.7
+              address (e.g., What is the                 investigation of different aspects of a   present the research, choosing from
+              history of the Indy 500?).                 topic.                                    a variety of formats.
+           b. Use organizational features
+              of print and digital sources to            Recall relevant information from
+              efficiently locate further                 experiences or gather relevant            IAS requires students to summarize
+              information.                               information from print and digital        and organize information in their
+4.W.5                                           W.4.8
+           c. Determine the reliability of               sources; take notes and categorize        own words as well as determine and
+              the sources.                               information, and provide a list of        give credit to reliable sources.
+           d. Summarize and organize                     sources.
+              information in their own
+              words, giving credit to the
+              source.                                    Draw evidence from literary or
+           e. Present the research              W.4.9    informational texts to support             No content differences identified.
+              information, choosing from a               analysis, reflection, and research.
+              variety of formats. (E)
+
+
+
+
+                                                        Updated July 2024                                                            9
+               2023 Indiana Academics Standards and CCSS Correlation Guide: Grade 4 English/Language Arts
+
+
+                                                             Apply grade 4 Reading standards to
+                                                             literature (e.g., "Describe in depth a
+                                                             character, setting, or event in a story
+                                                W.4.9.A
+                                                             or drama, drawing on specific details
+                                                             in the text [e.g., a character's
+                                                             thoughts, words, or actions].").
+
+                                                             Apply grade 4 Reading standards to
+                                                             informational texts (e.g., "Explain
+                                                W.4.9.B      how an author uses reasons and
+                                                             evidence to support particular points
+                                                             in a text").
+
+        Demonstrate command of English                       Demonstrate command of the
+        grammar and usage, focusing on:                      conventions of standard English
+                                                 L.4.1                                                   No content differences identified.
+           a. Nouns/Pronouns – Writing                       grammar and usage when writing or
+              sentences that include                         speaking.
+              relative pronouns (e.g., who,
+                                                                                                       IAS adds the use of reflexive
+              which) and reflexive                           Use relative pronouns (who, whose,
+                                                                                                       pronouns (e.g., myself, ourselves)
+              pronouns (e.g., myself,           L.4.1.A      whom, which, that) and relative
+                                                                                                       and the explanation of their function
+              ourselves) and explaining                      adverbs (where, when, why).
+                                                                                                       in a sentence
+              their functions in the
+              sentence.
+                                                             Form and use the progressive (e.g.,
+           b. Verbs –
+                                                L.4.1.B:     I was walking; I am walking; I will be
+4.W.6            I.   Writing sentences
+                                                             walking) verb tenses.
+                      that use progressive
+                      verb tenses.                                                                       No content differences identified.
+                II.   Recognizing and
+                                                             Use modal auxiliaries (e.g., can,
+                      correcting
+                                                L.4.1.C      may, must) to convey various
+                      inappropriate shifts in
+                                                             conditions.
+                      verb tense.
+
+
+
+                                                           Updated July 2024                                                             10
+                2023 Indiana Academics Standards and CCSS Correlation Guide: Grade 4 English/Language Arts
+
+
+                III.  Using modal
+                                                            Order adjectives within sentences
+                      auxiliaries (e.g., can,
+                                                            according to conventional patterns     IAS addresses coordinating
+                      may, must).               L.4.1.D
+                                                            (e.g., a small red bag rather than a   adjectives in grade three.
+           c. Adjectives/Adverbs – Writing
+                                                            red small bag).
+              sentences using relative
+              adverbs (e.g., where, when),
+              explaining their functions in                                                     IAS requires students to explain
+                                                L.4.1.E     Form and use prepositional phrases. prepositional phrases and their
+              the sentence.
+                                                                                                functions in a sentence.
+           d. Prepositions – Writing
+              sentences that include
+              prepositions, explaining their
+              functions in the sentence.
+                                                                                                   IAS specifies accurately writing
+           e. Usage – Writing complete
+                                                                                                   simple, compound and complex,
+              simple, compound, and                         Produce complete sentences,
+                                                                                                   declarative, interrogative,
+              complex declarative,                          recognizing and correcting
+                                                L.4.1.F                                            imperative, and exclamatory
+              interrogative, imperative, and                inappropriate fragments and
+                                                                                                   sentences as well as correctly using
+              exclamatory sentences,                        run-ons.
+                                                                                                   coordinating and subordinating
+              using coordinating and
+                                                                                                   conjunctions.
+              subordinating conjunctions
+              (e.g., yet, nor, so) correctly.
+              (E)
+
+        Demonstrate command of                              Demonstrate command of the             IAS combines all CCSS standards
+        capitalization, punctuation, and                    conventions of standard English        and requires students to correctly
+                                                 L.4.2
+        spelling, focusing on:                              capitalization, punctuation, and       use apostrophes to form
+           a. Capitalization – Capitalizing                 spelling when writing.                 possessives and contractions.
+4.W.7         names of magazines,
+              newspapers, works of art,
+              musical compositions,             L.4.2.A     Use correct capitalization.             No content differences identified.
+              organizations, and the first
+              word in quotations, when
+
+
+
+                                                          Updated July 2024                                                         11
+    2023 Indiana Academics Standards and CCSS Correlation Guide: Grade 4 English/Language Arts
+
+
+   appropriate.                                Use commas and quotation marks to
+b. Punctuation –                   L.4.2.B     mark direct speech and quotations
+      I.   Correctly using                     from a text.
+           apostrophes to form
+           possessives and                     Use a comma before a coordinating
+           contractions.           L.4.2.C     conjunction in a compound
+     II.   Correctly using                     sentence.
+           quotation marks and
+           commas to mark
+           direct speech.
+    III.   Using a comma
+           before a coordinating
+           conjunction in a                                                          IAS adds the use of spelling patterns
+           compound sentence.                                                        and generalizations (e.g., word
+c. Spelling – Using spelling                                                         families, position-based spellings,
+                                               Spell grade-appropriate words
+   patterns and generalizations                                                      syllable patterns, ending rules,
+                                   L.4.2.D     correctly, consulting references as
+   (e.g., word families,                                                             meaningful word parts,
+                                               needed.
+   position-based spellings,                                                         homophones/homographs) when
+   syllable patterns, ending                                                         writing single and multisyllable
+   rules, meaningful word parts,                                                     words.
+   homophones/homographs) in
+   writing single and
+   multisyllable words. (E)
+
+
+
+
+                                             Updated July 2024                                                        12
+                  2023 Indiana Academics Standards and CCSS Correlation Guide: Grade 4 English/Language Arts
+
+
+                                                                                                              Differences Between
+    2023 Indiana Academic Standard                          Common Core State Standard
+                                                                                                              2023 IAS and CCSS
+
+                                              Domain: Communication and Collaboration
+
+Number                     Text                      Number                        Text                            Description
+
+         Engage effectively in a range of                        Engage effectively in a range of
+         collaborative discussions                               collaborative discussions
+         (one-on-one, in groups, and                             (one-on-one, in groups, and
+4.CC.1   teacher-led) on grade-appropriate            SL.4.1     teacher-led) with diverse partners on
+         topics and texts, building on others’                   grade 4 topics and texts, building on
+         ideas and expressing personal ideas                     others' ideas and expressing their
+         clearly. (E)                                            own clearly.                            No content differences identified.
+
+         Pose and respond to specific                         Pose and respond to specific
+         questions to clarify or follow up on                 questions to clarify or follow up on
+4.CC.2   information, and make comments              SL.4.1.C information, and make comments
+         that contribute to the discussion and                that contribute to the discussion and
+         link to the remarks of others. (E)                   link to the remarks of others.
+
+         Summarize major ideas and
+                                                                 Paraphrase portions of a text read
+         supportive evidence from text read                                                            IAS requires students to summarize
+                                                                 aloud or information presented in
+4.CC.3   aloud or information presented in            SL.4.2                                           the major ideas and supporting
+                                                                 diverse media and formats, including
+         diverse media and formats, including                                                          evidence.
+                                                                 visually, quantitatively, and orally.
+         visually, quantitatively, and orally. (E)
+
+                                                                 Identify the reasons and evidence a
+         Identify and use evidence a speaker
+4.CC.4                                                SL.4.3     speaker provides to support             No content differences identified.
+         provides to support particular points.
+                                                                 particular points.
+
+
+
+
+                                                               Updated July 2024                                                         13
+                 2023 Indiana Academics Standards and CCSS Correlation Guide: Grade 4 English/Language Arts
+
+
+
+         Use appropriate language to report
+         on a topic or text, or provide a
+                                                         Report on a topic or text, tell a story,
+         narrative that organizes ideas
+                                                         or recount an experience in an
+         appropriately using effective                                                            IAS specifies the use of appropriate
+                                                         organized manner, using appropriate
+         introductions and conclusions. Use                                                       language to report on a topic or text,
+4.CC.5                                        SL.4.4     facts and relevant, descriptive
+         appropriate structure, facts, and                                                        or provide a chronological narrative.
+                                                         details to support main ideas or
+         relevant, descriptive details to
+                                                         themes; speak clearly at an
+         support main ideas or themes,
+                                                         understandable pace.
+         speaking at an understandable pace
+         in a clear and concise manner. (E)
+
+                                                         Create oral presentations that
+                                                         maintain a clear focus, using
+                                              SL.4.2     multimedia to enhance the
+         Create oral presentations that                  development of main ideas and
+         maintain a clear focus, using                   themes that engage the audience.
+4.CC.6   multimedia to enhance the                                                                 No content differences identified.
+         development of main ideas and                   Add audio recordings and visual
+         themes that engage the audience.                displays to presentations when
+                                              SL.4.5     appropriate to enhance the
+                                                         development of main ideas or
+                                                         themes.
+
+         Recognize claims in print, image,
+         and multimedia and identify
+4.CC.7
+         evidence used to support these
+         claims. (E)
+
+
+
+
+                                                       Updated July 2024                                                            14
+
