@@ -38,6 +38,7 @@ import type { QuestionProps, Status } from "../questions/types";
 import { Dialog, Page, ProgressBar } from "../ui";
 import { QuestionVisual } from "../visuals";
 import { makePlan, type Item, type Plan } from "./plans";
+import { factSummary, getFactSet } from "@/lib/facts";
 import { useAllowed } from "./useAllowed";
 import { useNow } from "@/lib/useNow";
 import { timerChoice } from "@/lib/timers";
@@ -157,8 +158,9 @@ function Runner({ plan }: { plan: Plan }) {
   const answered = status === "correct" || status === "revealed";
   const firstTry = results.filter((r) => r.correct).length;
   const unitRef = getUnitRef(item?.unitKey ?? "", profile.framework);
-  const guide = unitRef?.course.subject;
-  const lesson = unitRef?.unit.lesson;
+  const guide = item?.fact ? "math" : unitRef?.course.subject;
+  const lesson = plan.lesson ?? unitRef?.unit.lesson;
+  const lessonTitle = unitRef ? `${unitRef.unit.emoji} How ${unitRef.unit.title} works` : `${plan.icon} ${plan.title}: how it works`;
   const companion = profile.companion ?? "ollie";
 
   // Clock.
@@ -203,11 +205,12 @@ function Runner({ plan }: { plan: Plan }) {
         attempts,
         revealed,
         ...(hinted ? { hinted: true } : {}),
-        ...(q && !q.visual ? { q: questionLabel(q.prompt) } : {}),
+        ...(q && !q.visual && !item.fact ? { q: questionLabel(q.prompt) } : {}),
         ...(rl !== undefined ? { rl } : {}),
         ms: Date.now() - shownAt,
         mode: plan.mode,
         difficulty: item.difficulty,
+        ...(item.fact ? { fact: item.fact } : {}),
       },
     ]);
     setResults((r) => [...r, { correct }]);
@@ -252,7 +255,7 @@ function Runner({ plan }: { plan: Plan }) {
       setCheckpoint(true);
       return;
     }
-    if (item) recent.current = [...recent.current.slice(-5), item.unitKey];
+    if (item) recent.current = [...recent.current.slice(-5), item.fact ?? item.unitKey];
     const nextItem = plan.next({ index: nextIndex, recent: recent.current, derived: derivedFor(useStore.getState(), profile.id) });
     if (!nextItem) return finish();
     setIndex(nextIndex);
@@ -296,7 +299,7 @@ function Runner({ plan }: { plan: Plan }) {
       sounds.correct(newRun);
       burstFrom(el ?? null, fast ? 14 : 26);
       floatText(el ?? null, clean ? (newRun >= 3 ? `🔥 ${newRun}` : "+1 ⭐") : "✓");
-      if (fast) {
+      if (fast || plan.quickCorrect) {
         setFlash("good");
         setTimeout(() => setFlash(null), 300);
         setTimeout(advance, 280);
@@ -472,17 +475,20 @@ function Runner({ plan }: { plan: Plan }) {
           status={status}
           message={message}
           hint={q.hint}
-          report={band === "little" || !item ? undefined : { unitKey: item.unitKey, prompt: q.prompt, framework: profile.framework, details: reportDetails(q) }}
+          report={band === "little" || !item || item.fact ? undefined : { unitKey: item.unitKey, prompt: q.prompt, framework: profile.framework, details: reportDetails(q) }}
           onNext={advance}
           onDismiss={() => setStatus("answering")}
           help={
             item && plan.retries && status === "revealed"
               ? {
                   asked: helpAsked,
-                  onAsk: () => {
-                    setHelpAsked(true);
-                    log([{ type: "help", unit: item.unitKey }]);
-                  },
+                  // A grown-up's help list names units, and a fact isn't one.
+                  onAsk: item.fact
+                    ? undefined
+                    : () => {
+                        setHelpAsked(true);
+                        log([{ type: "help", unit: item.unitKey }]);
+                      },
                   onLesson: lesson ? () => setShowLesson(true) : undefined,
                 }
               : undefined
@@ -494,7 +500,7 @@ function Runner({ plan }: { plan: Plan }) {
       {showLesson && lesson && (
         <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-ink/40 p-4 backdrop-blur-[2px]" role="dialog" aria-modal="true" aria-label="How it works" onClick={() => setShowLesson(false)}>
           <div className="my-auto flex w-full max-w-2xl animate-pop-in flex-col gap-4 rounded-3xl bg-paper p-4 sm:p-6" onClick={(e) => e.stopPropagation()}>
-            <h2 className="text-2xl font-bold">{unitRef?.unit.emoji} How {unitRef?.unit.title} works</h2>
+            <h2 className="text-2xl font-bold">{lessonTitle}</h2>
             <LessonBody lesson={lesson} />
             <button type="button" autoFocus className="btn btn-good min-h-14 text-xl" onClick={() => setShowLesson(false)}>
               Got it
@@ -547,7 +553,7 @@ function FeedbackBar({
   hint: string;
   report?: { unitKey: string; prompt: string; framework?: string; details?: ReportDetails };
   /** After two misses: ask a grown-up for help, or look at the unit's "how it works". */
-  help?: { asked: boolean; onAsk: () => void; onLesson?: () => void };
+  help?: { asked: boolean; onAsk?: () => void; onLesson?: () => void };
   onNext: () => void;
   onDismiss: () => void;
   last: boolean;
@@ -577,9 +583,11 @@ function FeedbackBar({
                 {help.asked ? (
                   <p className="font-read text-base font-bold text-good-dark">✓ Your grown-up will see you want help with this.</p>
                 ) : (
-                  <button type="button" className="btn btn-soft min-h-12 px-4 text-base" onClick={help.onAsk}>
-                    <span aria-hidden="true">🤝</span> Ask a grown-up to help
-                  </button>
+                  help.onAsk && (
+                    <button type="button" className="btn btn-soft min-h-12 px-4 text-base" onClick={help.onAsk}>
+                      <span aria-hidden="true">🤝</span> Ask a grown-up to help
+                    </button>
+                  )
                 )}
               </div>
             )}
@@ -637,6 +645,9 @@ function Summary({ plan, results, startDerived }: { plan: Plan; results: Result[
   const best = plan.mode === "speed" ? (startDerived.speedBest[plan.scope] ?? 0) : 0;
   const newBest = plan.mode === "speed" && correct > best;
   const passed = plan.mode === "challenge" && ratio >= 0.8;
+  const factSet = plan.mode === "facts" ? getFactSet(plan.scope) : undefined;
+  const facts = factSet ? factSummary(factSet, d.facts) : undefined;
+  const factsBefore = factSet ? factSummary(factSet, startDerived.facts).known : 0;
   const celebration = celebrationOf(profile.confetti);
 
   useEffect(() => {
@@ -714,6 +725,20 @@ function Summary({ plan, results, startDerived }: { plan: Plan; results: Result[
           </div>
         )}
 
+        {facts && (
+          <div className="card flex w-full flex-col gap-2 p-4 text-left animate-rise-in" style={{ animationDelay: "1.5s" }}>
+            <p className="text-2xl font-bold">
+              {facts.set.emoji} You know {facts.known} of {facts.total} {facts.set.noun}
+            </p>
+            <ProgressBar value={facts.known} max={facts.total} label={`${facts.set.title} you know`} />
+            <p className="font-read text-base text-ink-soft">
+              {facts.known > factsBefore
+                ? `${facts.known - factsBefore} new ${facts.known - factsBefore === 1 ? "fact" : "facts"} today! A fact counts once you get it right twice in a row.`
+                : "A fact counts once you get it right twice in a row. Tricky ones come back more often."}
+            </p>
+          </div>
+        )}
+
         {total > 0 && (
           <div className="card w-full p-4 text-left animate-rise-in" style={{ animationDelay: "1.8s" }}>
             <h2 className="mb-1 text-lg font-bold">Coming up</h2>
@@ -729,8 +754,8 @@ function Summary({ plan, results, startDerived }: { plan: Plan; results: Result[
           <button type="button" className="btn btn-soft min-h-16 flex-1 text-xl" onClick={() => go("/session", { mode: plan.mode, scope: plan.scope, r: Date.now() }, true)}>
             ↻ Play again
           </button>
-          <button type="button" className="btn btn-good min-h-16 flex-1 text-xl" onClick={() => go(unit ? `/practice/${unit.course.subject}` : "/")}>
-            {unit ? "More lessons →" : "Home →"}
+          <button type="button" className="btn btn-good min-h-16 flex-1 text-xl" onClick={() => go(unit ? `/practice/${unit.course.subject}` : factSet ? "/facts" : "/")}>
+            {unit ? "More lessons →" : factSet ? "More facts →" : "Home →"}
           </button>
         </div>
         {total > 0 && <SaveProgress />}

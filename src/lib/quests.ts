@@ -86,12 +86,14 @@ function pool(band: AgeBand): Quest[] {
     { id: "daily", title: "Do the Daily Challenge", icon: "☀️", reward: 25, target: 1, progress: (day) => day?.modes.daily ?? 0 },
     { id: "adventure", title: "Play Adventure", icon: "🗺️", reward: 15, target: 1, progress: (day) => day?.modes.adventure ?? 0 },
     { id: "challenge", title: "Try a Challenge", icon: "🛡️", reward: 30, target: 1, progress: (day) => day?.modes.challenge ?? 0 },
-    // Little kids don't get Speed Run or Review.
+    // Little kids don't get Speed Run, Review or Math Facts.
     ...(little
       ? []
       : [
           { id: "speed", title: "Try a Speed Run", icon: "⚡", reward: 15, target: 1, progress: (day: DayStat | undefined) => day?.modes.speed ?? 0 },
           { id: "review", title: "Do a Review", icon: "🔍", reward: 20, target: 1, progress: (day: DayStat | undefined) => day?.modes.review ?? 0 },
+          // Grade 2 and up all have Math Facts (Grade 1 finds it on the Lessons screen, and Kindergarten has none).
+          { id: "facts", title: "Do a Math Facts round", icon: "🧮", reward: 20, target: 1, progress: (day: DayStat | undefined) => day?.modes.facts ?? 0 },
         ]),
   ];
 }

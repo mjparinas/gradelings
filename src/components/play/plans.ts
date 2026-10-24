@@ -1,8 +1,9 @@
-import { allUnitRefs, getUnitRef, type UnitRef } from "@/content";
+import { allUnitRefs, getUnitRef, unitKey, type UnitRef } from "@/content";
 import { hashSeed, pick, sample, shuffle, withSeed } from "@/content/random";
 import { getSubjectMeta } from "@/content/subjects";
-import type { AgeBand, FrameworkId, GradeId, Question, SubjectId } from "@/content/types";
+import type { AgeBand, FrameworkId, GradeId, Lesson, Question, SubjectId } from "@/content/types";
 import { pickNext, type PickOptions } from "@/lib/adaptive";
+import { FACTS_PER_ROUND, FACTS_UNIT_ID, factQuestion, factSetsFor, getFactSet, pickFact } from "@/lib/facts";
 import type { Derived } from "@/lib/derive";
 import { dayKey, type Mode } from "@/lib/model";
 import { closestSet } from "@/lib/readingLevel";
@@ -13,6 +14,8 @@ export interface Item {
   question: Question;
   unitKey: string;
   difficulty: number;
+  /** The math fact asked (Math Facts only), tracked per fact. */
+  fact?: string;
 }
 
 export interface Plan {
@@ -30,6 +33,10 @@ export interface Plan {
   feedback: "bar" | "flash";
   /** Endless modes pause for a summary every N questions. */
   checkpoint?: number;
+  /** A right answer moves straight on (no feedback bar); a miss still gets a hint and another try. */
+  quickCorrect?: boolean;
+  /** The "show me another way" lesson for the whole session, when its questions don't come from a unit. */
+  lesson?: Lesson;
   next: (ctx: { index: number; recent: string[]; derived: Derived }) => Item | undefined;
 }
 
@@ -140,6 +147,28 @@ export function makePlan(input: PlanInput): Plan | null {
       retries: true,
       feedback: "bar",
       next: ({ index }) => items[index],
+    };
+  }
+
+  if (mode === "facts") {
+    // A set this grade sees, and only while math is switched on for the child.
+    const set = getFactSet(scope);
+    if (!set || !subjects.includes("math") || !factSetsFor(grade).some((s) => s.id === set.id)) return null;
+    const key = unitKey(grade, "math", FACTS_UNIT_ID);
+    return {
+      mode,
+      scope,
+      title: set.title,
+      icon: set.emoji,
+      total: input.short ? FACTS_PER_ROUND / 2 : FACTS_PER_ROUND,
+      retries: true,
+      feedback: "bar",
+      quickCorrect: true,
+      lesson: set.lesson,
+      next: ({ recent, derived: d }) => {
+        const fact = pickFact(set.id, d.facts ?? {}, recent);
+        return { question: factQuestion(fact), unitKey: key, difficulty: 1, fact: fact.id };
+      },
     };
   }
 

@@ -73,6 +73,7 @@ const screenStub = vi.hoisted(() => (name: string) => {
 });
 vi.mock("./Arcade", () => ({ Arcade: screenStub("Arcade"), GameScreen: screenStub("GameScreen") }));
 vi.mock("./Hub", () => ({ Hub: screenStub("Hub") }));
+vi.mock("./Facts", () => ({ FactsPicker: screenStub("FactsPicker") }));
 vi.mock("./Practice", () => ({ SpeedPicker: screenStub("SpeedPicker"), SubjectPicker: screenStub("SubjectPicker"), UnitList: screenStub("UnitList") }));
 vi.mock("./PlacementTest", () => ({ PlacementTest: screenStub("PlacementTest") }));
 vi.mock("./Secrets", () => ({ SecretsListener: () => <p>secrets on</p> }));
@@ -253,6 +254,8 @@ describe("PlayApp routes", () => {
     ["stickers", "StickerBook"],
     ["room", "Room"],
     ["speed", "SpeedPicker"],
+    ["facts", "FactsPicker"],
+    ["session?mode=facts&scope=mul", "Session mode=facts scope=mul"],
     ["session?mode=review", "Session mode=review scope=mix"],
     ["session?mode=practice&scope=3/math/add", "Session mode=practice scope=3/math/add"],
     ["placement/math", "PlacementTest subject=math"],
@@ -306,6 +309,8 @@ describe("PlayApp routes", () => {
     ["shop", "shop"],
     ["session?mode=daily", "daily-challenge"],
     ["session?mode=speed&scope=mix", "speed-run"],
+    ["facts", "math-facts"],
+    ["session?mode=facts&scope=add", "math-facts"],
   ])("#/%s shows the home screen when %s is switched off", (route, flag) => {
     h.route = route;
     h.off = new Set([flag]);

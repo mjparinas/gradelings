@@ -126,7 +126,7 @@ Flags are defined in code, in `FLAGS` in `src/lib/flags.ts`, so the panel can on
 
 | Flag | Where | What it switches |
 | --- | --- | --- |
-| `daily-challenge`, `speed-run`, `arcade`, `sticker-book`, `my-room`, `shop` | Kids' app | The home-screen tile and its screen (an open screen falls back to the home screen) |
+| `daily-challenge`, `speed-run`, `math-facts`, `arcade`, `sticker-book`, `my-room`, `shop` | Kids' app | The home-screen tile and its screen (an open screen falls back to the home screen) |
 | `secrets` | Kids' app | The Konami code, secret words and the moose |
 | `signups` | Server | Creating accounts (`/api/auth/signup/` answers 503 while off) |
 | `redeem-codes` | Server | Redeeming codes |
