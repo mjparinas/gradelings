@@ -121,6 +121,23 @@ describe("SubjectPicker", () => {
     expect(screen.queryByRole("link", { name: /Daily Challenge/ })).not.toBeInTheDocument();
   });
 
+  it("gives little kids the Story Library here, unless it's off or they have no language arts", () => {
+    const first = inBand("little", <SubjectPicker />);
+    expect(screen.getByRole("link", { name: /Stories/ })).toHaveAttribute("href", "#/stories");
+    first.unmount();
+    const older = inBand("middle", <SubjectPicker />);
+    expect(screen.queryByRole("link", { name: /Stories/ })).not.toBeInTheDocument();
+    older.unmount();
+    h.settings = { enabledSubjects: ["math"] };
+    const noLanguage = inBand("little", <SubjectPicker />);
+    expect(screen.queryByRole("link", { name: /Stories/ })).not.toBeInTheDocument();
+    noLanguage.unmount();
+    h.settings = { enabledSubjects: ["math", "language"] };
+    h.off = new Set(["story-library"]);
+    inBand("little", <SubjectPicker />);
+    expect(screen.queryByRole("link", { name: /Stories/ })).not.toBeInTheDocument();
+  });
+
   it("hides the little kids' Daily Challenge when the admin switched it off", () => {
     h.off = new Set(["daily-challenge"]);
     inBand("little", <SubjectPicker />);

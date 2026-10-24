@@ -160,6 +160,11 @@ export function canUse(family: FamilyInfo, _feature: Feature, now = Date.now()):
   return isPremium(family, now);
 }
 
+/** On the free plan, the first few stories of each tier in the Story Library stay open (`isFreeStory`). */
+export function storyOpen(family: FamilyInfo, free: boolean, now = Date.now()): boolean {
+  return free || isPremium(family, now);
+}
+
 /** On the free plan, the first few units of each course stay open. */
 export function unitOpen(family: FamilyInfo, unitIndex: number, now = Date.now()): boolean {
   return isPremium(family, now) || unitIndex < FREE_UNITS_PER_COURSE;

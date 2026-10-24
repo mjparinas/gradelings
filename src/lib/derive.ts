@@ -3,6 +3,7 @@ import type { SubjectId } from "@/content/types";
 import { dayKey, type AppEvent, type Mode } from "./model";
 import { unitLevel } from "./proficiency";
 import { READING_SAMPLES_KEPT, type ReadingSample } from "./readingLevel";
+import { storyLearnSeconds } from "./stories";
 import { TIER_COINS, TIER_POINTS, trophyTier } from "./trophies";
 
 // Everything a child has achieved is computed from their event log. Because
@@ -41,6 +42,8 @@ export interface DayStat {
   perfect: number;
   playSeconds: number;
   bestRun: number;
+  /** Stories read to the end that day (Story Library). */
+  stories: number;
   /** Per-subject answers that day. */
   subjects: Partial<Record<SubjectId, number>>;
   modes: Partial<Record<Mode, number>>;
@@ -85,6 +88,8 @@ export interface Derived {
     comebacks: number;
     /** Answers where the child opened the hint first. */
     hints: number;
+    /** Stories read to the end (every read, re-reads included). */
+    stories: number;
   };
   subjects: Partial<Record<SubjectId, { answers: number; correct: number }>>;
   modes: Partial<Record<Mode, number>>;
@@ -105,6 +110,8 @@ export interface Derived {
   dailyDone: string[];
   /** The latest first-try results on passage questions, with each passage's reading level, oldest first. */
   reading: ReadingSample[];
+  /** Stories read to the end, by story id: how often, and the most questions right on one read. */
+  stories: Record<string, { reads: number; best: number; questions: number; lastT: number }>;
 }
 
 /** XP needed to go from `level` to `level + 1`. */
@@ -118,7 +125,7 @@ export function learnSecondsFor(ms: number): number {
 }
 
 function emptyDay(day: string): DayStat {
-  return { day, learnSeconds: 0, answers: 0, correct: 0, sessions: 0, perfect: 0, playSeconds: 0, bestRun: 0, subjects: {}, modes: {} };
+  return { day, learnSeconds: 0, answers: 0, correct: 0, sessions: 0, perfect: 0, playSeconds: 0, bestRun: 0, stories: 0, subjects: {}, modes: {} };
 }
 
 export function derive(events: AppEvent[], now = Date.now()): Derived {
@@ -147,6 +154,7 @@ export function derive(events: AppEvent[], now = Date.now()): Derived {
       currentRun: 0,
       comebacks: 0,
       hints: 0,
+      stories: 0,
     },
     subjects: {},
     modes: {},
@@ -161,6 +169,7 @@ export function derive(events: AppEvent[], now = Date.now()): Derived {
     goalPicks: {},
     dailyDone: [],
     reading: [],
+    stories: {},
     secrets: [],
   };
   const seen = new Set<string>();
@@ -280,6 +289,25 @@ export function derive(events: AppEvent[], now = Date.now()): Derived {
         if (e.mode === "challenge" && ratio >= 0.8) d.xp += 30;
         break;
       }
+      case "story": {
+        const s = d.stories[e.story];
+        const right = e.results.filter(Boolean).length;
+        // The first read is the honest one: re-reading teaches the answers, so only it feeds the reading level.
+        if (!s && e.results.length) {
+          for (const ok of e.results) d.reading.push({ rl: e.rl, ok });
+          while (d.reading.length > READING_SAMPLES_KEPT) d.reading.shift();
+        }
+        d.stories[e.story] = { reads: (s?.reads ?? 0) + 1, best: Math.max(s?.best ?? 0, right), questions: Math.max(s?.questions ?? 0, e.results.length), lastT: e.t };
+        d.totals.stories++;
+        day.stories++;
+        const secs = storyLearnSeconds(e.ms, e.pages, e.results.length);
+        day.learnSeconds += secs;
+        d.totals.learnSeconds += secs;
+        // Like finishing a lesson; right answers earn more on the first read only.
+        d.xp += 15 + (s ? 0 : 10 * right);
+        d.coins += 5 + (s ? 0 : right);
+        break;
+      }
       case "play":
         day.playSeconds += e.seconds;
         d.totals.playSeconds += e.seconds;
@@ -339,9 +367,9 @@ export function derive(events: AppEvent[], now = Date.now()): Derived {
   d.levelXp = xp;
   d.levelNeed = xpForLevel(level);
 
-  // Streak: days with real practice (a finished session or 5+ answers).
+  // Streak: days with real practice (a finished session, a story read to the end or 5+ answers).
   // Every 7 practice days earns a rest-day shield (up to 2) that covers a missed day.
-  const active = (s: DayStat | undefined) => !!s && (s.sessions > 0 || s.answers >= 5);
+  const active = (s: DayStat | undefined) => !!s && (s.sessions > 0 || s.stories > 0 || s.answers >= 5);
   const dayNum = (k: string) => Math.round(new Date(`${k}T12:00:00`).getTime() / 86_400_000);
   const days = Object.keys(d.days).sort();
   let best = 0;

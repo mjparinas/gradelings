@@ -34,7 +34,13 @@ const subjectQuest = (subject: SubjectId, band: AgeBand, n: number, reward = 20)
 
 const subjectsTried = (day: DayStat | undefined) => SUBJECTS.filter((s) => (day?.subjects[s] ?? 0) >= 3).length;
 
-function pool(band: AgeBand): Quest[] {
+/** What the child can do today that some quests need. Left out means it's there. */
+export interface QuestOptions {
+  /** The Story Library is on (its flag) and the child has language arts. */
+  stories?: boolean;
+}
+
+function pool(band: AgeBand, opts: QuestOptions = {}): Quest[] {
   const little = band === "little";
   const n = little ? 5 : 8;
   return [
@@ -86,6 +92,7 @@ function pool(band: AgeBand): Quest[] {
     { id: "daily", title: "Do the Daily Challenge", icon: "☀️", reward: 25, target: 1, progress: (day) => day?.modes.daily ?? 0 },
     { id: "adventure", title: "Play Adventure", icon: "🗺️", reward: 15, target: 1, progress: (day) => day?.modes.adventure ?? 0 },
     { id: "challenge", title: "Try a Challenge", icon: "🛡️", reward: 30, target: 1, progress: (day) => day?.modes.challenge ?? 0 },
+    ...(opts.stories === false ? [] : [{ id: "story", title: "Read a story", icon: "📖", reward: 20, target: 1, progress: (day: DayStat | undefined) => day?.stories ?? 0 }]),
     // Little kids don't get Speed Run or Review.
     ...(little
       ? []
@@ -96,9 +103,9 @@ function pool(band: AgeBand): Quest[] {
   ];
 }
 
-export function dailyQuests(profileId: string, day: string, band: AgeBand): Quest[] {
+export function dailyQuests(profileId: string, day: string, band: AgeBand, opts?: QuestOptions): Quest[] {
   return withSeed(hashSeed(`${profileId}:${day}`), () => {
-    const all = pool(band);
+    const all = pool(band, opts);
     // One "answer questions" quest, plus two others.
     const answer = sample(all.filter((q) => q.id.startsWith("answers")), 1);
     const rest = sample(all.filter((q) => !q.id.startsWith("answers")), 2);
@@ -120,9 +127,9 @@ export function weekDays(start: string): string[] {
   return Array.from({ length: 7 }, (_, i) => dayKey(base + i * 86_400_000));
 }
 
-export const activeDay = (d: DayStat) => d.sessions > 0 || d.answers >= 5;
+export const activeDay = (d: DayStat) => d.sessions > 0 || d.stories > 0 || d.answers >= 5;
 
-function weeklyPool(band: AgeBand): WeeklyQuest[] {
+function weeklyPool(band: AgeBand, opts: QuestOptions = {}): WeeklyQuest[] {
   const little = band === "little";
   const total = (f: (d: DayStat) => number) => (days: DayStat[]) => days.reduce((a, d) => a + f(d), 0);
   const answers = little ? 100 : 200;
@@ -144,10 +151,11 @@ function weeklyPool(band: AgeBand): WeeklyQuest[] {
     { id: "w-lessons", title: "Finish 10 lessons", icon: "📗", reward: 60, target: 10, progress: total((d) => d.sessions) },
     { id: "w-run", title: `Get ${little ? 8 : 12} right in a row`, icon: "🔥", reward: 50, target: little ? 8 : 12, progress: (days) => Math.max(0, ...days.map((d) => d.bestRun)) },
     { id: "w-challenge", title: "Finish 2 Challenges", icon: "🛡️", reward: 70, target: 2, progress: total((d) => d.modes.challenge ?? 0) },
+    ...(opts.stories === false ? [] : [{ id: "w-stories", title: "Read 3 stories this week", icon: "📚", reward: 60, target: 3, progress: total((d) => d.stories ?? 0) }]),
   ];
 }
 
 /** Two bigger quests per week, claimed automatically like the daily ones. */
-export function weeklyQuests(profileId: string, start: string, band: AgeBand): WeeklyQuest[] {
-  return withSeed(hashSeed(`${profileId}:${start}:week`), () => sample(weeklyPool(band), 2));
+export function weeklyQuests(profileId: string, start: string, band: AgeBand, opts?: QuestOptions): WeeklyQuest[] {
+  return withSeed(hashSeed(`${profileId}:${start}:week`), () => sample(weeklyPool(band, opts), 2));
 }

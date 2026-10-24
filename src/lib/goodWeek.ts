@@ -11,12 +11,12 @@ export const SHARE_SNOOZE_MS = 30 * 86_400_000;
 
 const KEY = "gradelings.shareSnooze";
 
-/** A day counts like a streak day: a finished session or at least 5 answers. */
+/** A day counts like a streak day: a finished session, a story read to the end or at least 5 answers. */
 export function practisedDays(days: Record<string, DayStat | undefined>, now: number): number {
   let n = 0;
   for (let i = 0; i < 7; i++) {
     const d = days[dayKey(now - i * 86_400_000)];
-    if (d && (d.sessions > 0 || d.answers >= 5)) n++;
+    if (d && (d.sessions > 0 || d.stories > 0 || d.answers >= 5)) n++;
   }
   return n;
 }

@@ -10,7 +10,8 @@ import type { FrameworkId, GradeId, SubjectId } from "@/content/types";
 import type { Mode } from "@/lib/model";
 import { PLACEMENT_SUBJECTS } from "@/lib/placement";
 import { useRoute } from "@/lib/router";
-import { useActiveProfile, useProfiles, useReady, useStore } from "@/lib/store";
+import { useActiveProfile, useChildSettings, useProfiles, useReady, useStore } from "@/lib/store";
+import { storiesFor } from "@/lib/stories";
 import { startBackgroundSync } from "@/lib/sync";
 import { prefetchGrades } from "@/lib/useGradeContent";
 import { BandProvider } from "../band";
@@ -34,6 +35,7 @@ import { go } from "@/lib/router";
 import { Toasts } from "./Toasts";
 import { LessonScreen } from "./LessonScreen";
 import { StickerBook } from "./StickerBook";
+import { StoryLibrary, StoryReader } from "./Stories";
 import { Room } from "./Room";
 import { TrailMap } from "./TrailMap";
 import { TrophyRoom } from "./Trophies";
@@ -42,7 +44,7 @@ import { Treasures } from "./Treasures";
 const MODES: Mode[] = ["practice", "adventure", "review", "speed", "daily", "challenge"];
 
 /** Screens the admin panel can switch off for everyone (src/lib/flags.ts). A switched-off screen shows the home screen. */
-const SCREEN_FLAGS: Record<string, FlagKey> = { stickers: "sticker-book", room: "my-room", speed: "speed-run", arcade: "arcade", shop: "shop" };
+const SCREEN_FLAGS: Record<string, FlagKey> = { stickers: "sticker-book", room: "my-room", speed: "speed-run", arcade: "arcade", shop: "shop", stories: "story-library" };
 
 /** Next grade's lessons for the summer sneak peek: downloaded on first use, like any grade. */
 function NextGrade({ grade, children }: { grade: GradeId; children: ReactNode }) {
@@ -54,6 +56,7 @@ function Screen() {
   const { path, query } = useRoute();
   const isOn = useIsOn();
   const profile = useActiveProfile()!;
+  const settings = useChildSettings();
   const peek = nextGrade(profile.grade);
   // A lesson or session from the sneak peek needs that grade's download too.
   const scopeGrade = parseUnitKey(query.get("scope") ?? "")?.grade;
@@ -82,6 +85,10 @@ function Screen() {
       return withPeek(<LessonScreen key={query.get("scope") ?? ""} unitKey={query.get("scope") ?? ""} />);
     case "map":
       return <TrailMap />;
+    case "stories":
+      // Stories are reading practice, so they go with language arts when a parent has turned that off.
+      if (!storiesFor(settings, true)) return <Hub />;
+      return path[1] ? <StoryReader key={path[1]} id={path[1]} /> : <StoryLibrary />;
     case "treasures":
       return <Treasures />;
     case "stickers":

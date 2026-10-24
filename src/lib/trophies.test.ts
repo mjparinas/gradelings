@@ -34,7 +34,7 @@ function didEverything(level: 2 | 3): Derived {
   d.speedBest = { mix: BIG };
   d.gameBest = Object.fromEntries(GAMES.map((g) => [g.id, BIG]));
   d.gamesPlayed = Object.fromEntries(GAMES.map((g) => [g.id, 1]));
-  d.days = { "2026-10-01": { day: "2026-10-01", learnSeconds: 0, answers: BIG, correct: BIG, sessions: 1, perfect: 0, playSeconds: 0, bestRun: 0, subjects: {}, modes: {} } };
+  d.days = { "2026-10-01": { day: "2026-10-01", learnSeconds: 0, answers: BIG, correct: BIG, sessions: 1, perfect: 0, playSeconds: 0, bestRun: 0, stories: 0, subjects: {}, modes: {} } };
   d.level = BIG;
   d.owned = SHOP.map((i) => i.id);
   d.coinsEarned = BIG;
@@ -42,6 +42,7 @@ function didEverything(level: 2 | 3): Derived {
   d.wishSessions = 1;
   d.activeDays = BIG;
   d.secrets = ["konami", "dizzy-ollie", "polite-moose", "secret-word"];
+  d.stories = Object.fromEntries(Array.from({ length: 30 }, (_, i) => [`story-${i}`, { reads: 1, best: 3, questions: 3, lastT: 0 }]));
   return d;
 }
 
@@ -113,8 +114,8 @@ describe("the trophy list", () => {
     expect(shown("7")).toContain("tower-300");
   });
 
-  it("has 193 trophies with the secret ones hidden", () => {
-    expect(TROPHIES).toHaveLength(193);
+  it("has 197 trophies with the secret ones hidden", () => {
+    expect(TROPHIES).toHaveLength(197);
     expect(TROPHIES.filter((t) => t.hidden).map((t) => t.id).sort()).toEqual(
       ["early-bird", "konami", "marathon", "dizzy-ollie", "polite-moose", "secret-word", "palindrome", "make-a-wish", ...GRADES.map((g) => `polymath-${g}`)].sort(),
     );
@@ -146,6 +147,32 @@ describe("the trophy list", () => {
 
   it("labels every tier", () => {
     expect(Object.fromEntries(Object.entries(TIER_STYLE).map(([tier, s]) => [tier, s.label]))).toEqual({ bronze: "Bronze", silver: "Silver", gold: "Gold", platinum: "Platinum" });
+  });
+});
+
+describe("story trophies", () => {
+  const ctx: TrophyContext = { grade: "2", framework: "us-wa" };
+  const read = (n: number, allRight: number) => {
+    const d = derive([]);
+    d.stories = Object.fromEntries(Array.from({ length: n }, (_, i) => [`s${i}`, { reads: 2, best: i < allRight ? 3 : 1, questions: 3, lastT: 0 }]));
+    return d;
+  };
+
+  it("counts different stories, not re-reads", () => {
+    expect(getTrophy("story-1")!.progress(read(1, 0), ctx)).toEqual({ value: 1, target: 1 });
+    expect(getTrophy("story-10")!.progress(read(9, 0), ctx)).toEqual({ value: 9, target: 10 });
+    expect(getTrophy("story-25")!.progress(read(40, 0), ctx)).toEqual({ value: 25, target: 25 });
+  });
+
+  it("counts stories with every question right for Sharp Reader", () => {
+    expect(getTrophy("story-sharp")!.progress(read(12, 9), ctx)).toEqual({ value: 9, target: 10 });
+    expect(newlyEarned(read(12, 10), ctx).map((t) => t.id)).toEqual(expect.arrayContaining(["story-1", "story-10", "story-sharp"]));
+  });
+
+  it("shows them in every grade and curriculum", () => {
+    for (const c of [{ grade: "k", framework: "ca-on" }, { grade: "9", framework: "us-tx" }] as TrophyContext[]) {
+      expect(visibleTrophies(derive([]), c).filter((t) => t.category === "Stories")).toHaveLength(4);
+    }
   });
 });
 

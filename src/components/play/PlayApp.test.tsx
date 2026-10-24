@@ -18,6 +18,7 @@ const h = vi.hoisted(() => ({
   go: vi.fn(),
   start: null as null | { framework: string; grade?: string; subject?: string; unit?: string },
   card: null as null | { classCode?: string; studentCode: string },
+  subjects: ["math", "language", "science", "social"],
 }));
 
 vi.mock("@/lib/router", () => ({
@@ -43,6 +44,7 @@ vi.mock("@/lib/store", () => ({
   useReady: () => h.ready,
   useProfiles: () => h.profiles,
   useActiveProfile: () => h.active,
+  useChildSettings: () => ({ enabledSubjects: h.subjects }),
   useStore: Object.assign((select: (s: unknown) => unknown) => select({ family: {} }), {
     getState: () => ({ init: h.init, setActive: h.setActive }),
   }),
@@ -101,6 +103,7 @@ vi.mock("./Room", () => ({ Room: screenStub("Room") }));
 vi.mock("./TrailMap", () => ({ TrailMap: screenStub("TrailMap") }));
 vi.mock("./Trophies", () => ({ TrophyRoom: screenStub("TrophyRoom") }));
 vi.mock("./Treasures", () => ({ Treasures: screenStub("Treasures") }));
+vi.mock("./Stories", () => ({ StoryLibrary: screenStub("StoryLibrary"), StoryReader: screenStub("StoryReader") }));
 
 import { PlayApp } from "./PlayApp";
 
@@ -116,6 +119,7 @@ beforeEach(() => {
   h.off = new Set();
   h.init.mockResolvedValue(undefined);
   h.start = null;
+  h.subjects = ["math", "language", "science", "social"];
 });
 
 describe("a link from a public page", () => {
@@ -260,6 +264,8 @@ describe("PlayApp routes", () => {
     ["arcade/ninja", "GameScreen id=ninja"],
     ["trophies", "TrophyRoom"],
     ["shop", "Shop"],
+    ["stories", "StoryLibrary"],
+    ["stories/theo-kite", "StoryReader id=theo-kite"],
     ["nowhere", "Hub"],
   ])("#/%s shows %s", (route, expected) => {
     h.route = route;
@@ -288,6 +294,13 @@ describe("PlayApp routes", () => {
     expect(shown()).toMatch(/^UnitList subject=math band=middle$/);
   });
 
+  it("keeps the stories with language arts: a child without it goes home", () => {
+    h.route = "stories";
+    h.subjects = ["math", "science"];
+    render(<PlayApp />);
+    expect(shown()).toMatch(/^Hub/);
+  });
+
   it("an unknown session mode or placement subject goes home", () => {
     h.route = "session?mode=cheat";
     const { unmount } = render(<PlayApp />);
@@ -304,6 +317,8 @@ describe("PlayApp routes", () => {
     ["speed", "speed-run"],
     ["arcade/memory", "arcade"],
     ["shop", "shop"],
+    ["stories", "story-library"],
+    ["stories/theo-kite", "story-library"],
     ["session?mode=daily", "daily-challenge"],
     ["session?mode=speed&scope=mix", "speed-run"],
   ])("#/%s shows the home screen when %s is switched off", (route, flag) => {

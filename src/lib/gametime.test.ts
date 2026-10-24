@@ -11,6 +11,7 @@ const day = (learnSeconds: number, playSeconds: number) => ({
   sessions: 0,
   perfect: 0,
   bestRun: 0,
+  stories: 0,
   subjects: {},
   modes: {},
 });
