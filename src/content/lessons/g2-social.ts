@@ -643,4 +643,11 @@ export const lessons: GradeLessons = {
     ["Services cost money.", "People pay taxes, and the government uses them for services."],
     "the people, through taxes",
   ),
+  // Indiana (us-in)
+  "social/in-g2-pledge-harrison": lesson(
+    ["The Pledge of Allegiance is a promise to be loyal to the United States.", "Benjamin Harrison, from Indiana, was the 23rd president. He asked schools to fly the flag.", "Good citizens follow rules, help others and care for their community."],
+    "Benjamin Harrison was a president from which state?",
+    ["He lived in Indianapolis.", "His home is still there."],
+    "Indiana",
+  ),
 };

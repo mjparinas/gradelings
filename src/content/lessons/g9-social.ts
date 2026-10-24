@@ -1237,4 +1237,17 @@ export const lessons: GradeLessons = {
     ["Michigan elects its judges.", "Voters choose them for eight-year terms."],
     "by the voters",
   ),
+  // Indiana (us-in)
+  "social/in-g9-governing-indiana": lesson(
+    ["Indiana's General Assembly has 50 senators and 100 representatives.", "A majority of each house can override the governor's veto, which is easier than in Congress.", "Benjamin Harrison, the only president elected from Indiana, won the Electoral College in 1888 with fewer popular votes."],
+    "What does the Indiana General Assembly need to override a governor's veto?",
+    ["Congress needs two-thirds.", "Indiana's rule is easier."],
+    "a majority of the members of each house",
+  ),
+  "social/in-g9-economics": lesson(
+    ["Scarcity means wants are greater than resources, so every choice has an opportunity cost.", "Fiscal policy is taxes and spending; monetary policy is the money supply and interest rates, set by the Federal Reserve.", "Raising interest rates usually slows borrowing and fights inflation."],
+    "You choose to study instead of working a shift. What is the opportunity cost?",
+    ["It is the next best choice you gave up.", "You gave up the pay from the shift."],
+    "the pay from the shift you didn't work",
+  ),
 };

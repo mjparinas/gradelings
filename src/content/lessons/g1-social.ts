@@ -439,4 +439,11 @@ export const lessons: GradeLessons = {
     ["It is our country's birthday.", "The Declaration was signed in 1776."],
     "the country's independence",
   ),
+  // Indiana (us-in)
+"social/in-g1-american-symbols": lesson(
+    ["The Pledge of Allegiance is a promise to be loyal.", "Washington, D.C. is the capital of the United States.", "Lincoln helped end slavery. He is on the penny."],
+    "What is the capital of the United States?",
+    ["It is named for the first president."],
+    "Washington, D.C.",
+  ),
 };

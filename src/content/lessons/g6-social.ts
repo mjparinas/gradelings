@@ -907,4 +907,30 @@ export const lessons: GradeLessons = {
     ["The Amazon is in South America.", "Most of it lies in the largest South American country."],
     "Brazil",
   ),
+  // Indiana (us-in)
+  "social/in-g6-indiana-constitution": lesson(
+    ["Indiana's current constitution was adopted in 1851. Article 1 is its Bill of Rights.", "Articles 4, 5 and 7 set up the General Assembly, the governor and the courts.", "The US Constitution is the supreme law, so an Indiana law cannot go against it."],
+    "Which article of the Indiana Constitution lists people's rights?",
+    ["It comes first.", "It is called the Bill of Rights."],
+    "Article 1",
+  ),
+  // Indiana: units Indiana teaches in this grade
+  "social/ny-g9-absolutism-enlightenment": lesson(
+    ["Absolute monarchs held total power; Peter the Great modernized Russia with a navy and a new capital, St. Petersburg.", "In the Scientific Revolution, Copernicus argued that Earth and the planets move around the Sun.", "Enlightenment thinkers questioned power: Rousseau wrote that government gets its authority from a social contract among the people."],
+    "According to Rousseau, where does a government get its authority?",
+    ["Absolute monarchs claimed power came from God.", "Rousseau disagreed.", "He said it comes from an agreement among the people."],
+    "from a social contract among the people",
+  ),
+  "social/al-g9-industrial-revolution": lesson(
+    ["Coal-powered steam engines drove the Industrial Revolution. The factory system brought workers to machines in one place.", "Hard conditions led to new ideas: Robert Owen’s model town; Mill’s utilitarianism (the greatest good for the greatest number).", "Capitalism lets private owners run industry; socialism wants society or government to control it. Marx and Engels wrote The Communist Manifesto."],
+    "What did Karl Marx and Friedrich Engels write?",
+    ["They argued workers should take control of industry.", "Their 1848 pamphlet was The Communist Manifesto."],
+    "The Communist Manifesto",
+  ),
+  "social/ca-g9-three-branches": lesson(
+    ["Article I sets up Congress (the Speaker leads the House), Article II the president (the vice president is next in line), Article III the courts.", "House seats are based on population; every state has 2 senators.", "The Supreme Court picks a small number of cases, often about the Constitution."],
+    "Why does the House have more members from California than from Wyoming?",
+    ["Senate seats are equal for each state.", "House seats depend on how many people live there."],
+    "House seats are based on population",
+  ),
 };

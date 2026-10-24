@@ -685,4 +685,23 @@ export const lessons: GradeLessons = {
     ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
     "the bare hillside",
   ),
+  // Indiana (us-in)
+"science/in-g4-earth-hazards": lesson(
+    ["Many earthquakes and volcanoes happen along the edges of Earth's plates.", "Indiana is far from a plate edge, but small earthquakes still happen in the Wabash Valley. Tornadoes and floods are Indiana's most common hazards.", "During an earthquake: drop, cover and hold on.", "A tsunami is a giant ocean wave. Volcanoes can drop falling ash."],
+    "The ground starts shaking at school. What should you do?",
+    ["Get low so you don't fall.", "Get under a desk and hold on until it stops."],
+    "drop, cover and hold on",
+  ),
+"science/in-g4-energy-resources": lesson(
+    ["Renewable resources, like sunlight, wind and moving water, won't run out.", "Solar farms use sunlight and wind farms in northern Indiana use wind. Geothermal plants use heat from inside Earth.", "Dams make electricity from moving water but can block fish from swimming upstream.", "Every energy choice has good points and costs for the environment."],
+    "A geothermal power plant makes electricity from what?",
+    ["“Geo” means Earth and “thermal” means heat."],
+    "heat from inside Earth",
+  ),
+"science/in-g4-rocks-erosion": lesson(
+    ["Weathering breaks rock. Erosion moves it. Running water moves the most.", "Glaciers scrape and carry rock. Roots growing in cracks can split rock.", "Over a very long time, erosion can carve deep canyons.", "Plants and their roots slow erosion on a hillside."],
+    "Which hillside erodes faster in heavy rain: a bare one or a grassy one?",
+    ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
+    "the bare hillside",
+  ),
 };
