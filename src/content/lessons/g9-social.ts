@@ -1159,4 +1159,41 @@ export const lessons: GradeLessons = {
     ["Lenders want to know if you repay.", "Paying on time matters most."],
     "payment history",
   ),
+  // North Carolina's own units.
+  "social/nc-g9-nc-government": lesson(
+    ["Federalism divides power between the nation and the states; North Carolina's counties and cities have only the powers the General Assembly gives them.", "Local governments include counties, cities (often council-manager) and special districts.", "North Carolina's courts run from District and Superior Court to the Court of Appeals and the state Supreme Court; federal cases go to federal courts."],
+    "Which North Carolina court hears felony trials?",
+    ["District Court handles misdemeanors and traffic cases.", "Superior Court handles felonies."],
+    "Superior Court",
+  ),
+  "social/nc-g9-money-plan": lesson(
+    ["Gross pay is the full amount earned; net pay is what's left after deductions like taxes and FICA.", "A spending plan lists income and fixed and variable expenses, with money set aside to save.", "Interest and fees add to what things cost, so compare them before you borrow or pay late."],
+    "Gross pay is $1,000 and deductions are $230. What is net pay?",
+    ["Net pay = gross pay − deductions.", "1,000 − 230 = 770."],
+    "$770",
+  ),
+  "social/nc-g9-credit-insurance": lesson(
+    ["Credit lets you borrow now and pay later, usually with interest (shown as the APR).", "Paying on time and using little of your available credit build a good credit score.", "Insurance spreads risk: you pay a premium, and after the deductible, the insurer pays covered costs."],
+    "What is a deductible?",
+    ["You pay a premium to keep a policy.", "The deductible is what you pay before insurance pays."],
+    "the amount you pay before insurance pays",
+  ),
+  "social/nc-g9-economics": lesson(
+    ["Economies can be traditional, command, market or mixed; the United States has a mixed economy.", "GDP, unemployment and inflation rise and fall through the business cycle: expansion, peak, contraction and trough.", "Fiscal policy (Congress and the president: taxes and spending) and monetary policy (the Federal Reserve: interest rates) try to keep the economy steady."],
+    "Who sets monetary policy in the United States?",
+    ["Congress and the president set fiscal policy.", "The Federal Reserve sets monetary policy."],
+    "the Federal Reserve",
+  ),
+  "social/nc-g9-consumer": lesson(
+    ["Advertising and social media try to shape what you buy; sponsored posts must say so.", "Common frauds include phishing, fake prizes, bait-and-switch and pyramid schemes.", "Protect yourself with strong passwords, by checking sellers, paying with protected methods, and reporting scams to the Attorney General or the FTC."],
+    "A caller says you won a prize but must pay a fee first. What is it most likely?",
+    ["Real prizes don't charge winners a fee.", "Asking for payment first is a sign of fraud."],
+    "a scam",
+  ),
+  "social/nc-g9-careers-investing": lesson(
+    ["More education and training usually raise lifetime income, but compare costs, aid and future pay.", "Stocks are shares of ownership, bonds are loans, and mutual and index funds pool many investments.", "Starting early lets compound growth work; diversifying spreads risk."],
+    "By the Rule of 72, how long does money take to double at 8% a year?",
+    ["Divide 72 by the rate.", "72 ÷ 8 = 9."],
+    "about 9 years",
+  ),
 };

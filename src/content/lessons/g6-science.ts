@@ -697,4 +697,42 @@ export const lessons: GradeLessons = {
     ["Carbon dioxide traps heat.", "Trees take in carbon dioxide to make food."],
     "trees take in carbon dioxide",
   ),
+  // Units North Carolina teaches in this grade, with the lesson they have in the grade where they began.
+  "science/heat-transfer-7": lesson(
+    ["Conduction moves heat through touching materials, like a hot pan handle.", "Convection moves heat through flowing liquids or gases, like warm air rising.", "Radiation moves heat as rays with no material needed, like sunlight. Insulators slow heat loss."],
+    "You feel warm sitting near a fire without touching it. Which kind of heat transfer is it?",
+    ["You aren’t touching anything hot.", "The heat travels as rays through the air."],
+    "radiation",
+  ),
+  "science/light-and-radiation": lesson(
+    ["The electromagnetic spectrum, from longest to shortest wavelength: radio, microwave, infrared, visible light, ultraviolet, X-ray, gamma.", "Shorter wavelength means higher frequency and more energy.", "Light reflects off mirrors and bends (refracts) when it passes into a new material. Block UV with sunscreen and shade."],
+    "Which has a longer wavelength: radio waves or X-rays?",
+    ["Radio waves are at the long end of the spectrum.", "X-rays are near the short end."],
+    "radio waves",
+  ),
+  "science/sound-4": lesson(
+    ["Sound is made by vibrations that travel as waves.", "Pitch is how high or low. Volume is how loud or soft.", "Sound travels through air, water and solids, but not empty space. An echo is sound bouncing back."],
+    "Why do you see lightning before you hear thunder?",
+    ["Both happen at the same time.", "Light reaches you first because it is faster."],
+    "light travels much faster than sound",
+  ),
+  "science/photosynthesis-respiration-9": lesson(
+    ["Photosynthesis (in chloroplasts): carbon dioxide + water + light → glucose + oxygen.", "Cellular respiration (in mitochondria): glucose + oxygen → carbon dioxide + water + energy.", "The products of each are the reactants of the other, which cycles carbon."],
+    "Which process releases oxygen: photosynthesis or respiration?",
+    ["Respiration uses oxygen.", "Photosynthesis gives it off."],
+    "photosynthesis",
+  ),
+  // North Carolina's own units.
+  "science/nc-g6-plate-tectonics": lesson(
+    ["Earth's crust is broken into plates that move slowly on the mantle.", "Convergent boundaries collide (building mountains like the Appalachians long ago), divergent ones pull apart, and transform ones slide past each other.", "Most earthquakes and volcanoes happen along plate edges."],
+    "Two plates pull apart and new crust forms. Which kind of boundary is this?",
+    ["“Diverge” means to move apart."],
+    "divergent",
+  ),
+  "science/nc-g6-earth-moon-sun": lesson(
+    ["Earth's tilt causes the seasons: the Northern Hemisphere has summer when it tilts toward the sun.", "The moon's pull causes tides; spring tides happen when the sun, moon and Earth line up.", "In a solar eclipse the moon is between the sun and Earth; in a lunar eclipse Earth is between the sun and the moon."],
+    "During a solar eclipse, which body is in the middle?",
+    ["A solar eclipse blocks the sun from Earth.", "Only the moon can be between them to do that."],
+    "the moon",
+  ),
 };

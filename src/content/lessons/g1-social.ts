@@ -427,4 +427,11 @@ export const lessons: GradeLessons = {
     ["She knew the land and languages.", "Her name starts with S."],
     "Sacagawea",
   ),
+  // Units North Carolina teaches in this grade, with the lesson they have in the grade where they began.
+  "social/ca-k-good-citizens": lesson(
+    ["A good citizen follows rules and helps others.", "Breaking a rule has a consequence.", "Honest means telling the truth. Brave means trying."],
+    "Which is a way to be a good citizen at school?",
+    ["Good citizens help others.", "Cleaning up helps the class."],
+    "help clean up",
+  ),
 };

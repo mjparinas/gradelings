@@ -619,4 +619,42 @@ export const lessons: GradeLessons = {
     ["It was around only briefly but in many places.", "Finding it dates the rock layer."],
     "it lived for a short time over a wide area",
   ),
+  // Units North Carolina teaches in this grade, with the lesson they have in the grade where they began.
+  "science/newtons-laws": lesson(
+    ["First law (inertia): an object keeps doing what it's doing unless a force acts on it.", "Second law: net force = mass × acceleration. Force is measured in newtons (N).", "Third law: every action has an equal and opposite reaction.", "Friction is a force that slows things, so a puck slides farther on smooth ice."],
+    "A 30 kg cart speeds up at 2 m/s². What net force acts on it?",
+    ["Force = mass × acceleration.", "30 × 2 = 60."],
+    "60 N",
+  ),
+  "science/wa-g8-energy": lesson(
+    ["Kinetic energy is the energy of motion. Faster or heavier objects have more.", "Potential energy is stored energy due to position or condition.", "A high object has gravitational potential energy. A stretched band has elastic potential energy.", "Pushing an object transfers energy to it, so it speeds up."],
+    "A stretched rubber band is about to be let go. Which kind of energy does it have?",
+    ["It is not moving yet, so the energy is stored.", "Stretching stores elastic potential energy."],
+    "elastic potential energy",
+  ),
+  "science/work-energy-8": lesson(
+    ["In science, work means a force moves something a distance: work = force × distance.", "Work and energy are measured in joules (J).", "No machine is perfect: some energy is wasted, often as heat.", "Efficiency = useful energy out ÷ energy in × 100%."],
+    "A motor takes in 500 J and gives 350 J of useful energy. What is its efficiency?",
+    ["Efficiency = useful ÷ total × 100%.", "350 ÷ 500 = 0.7.", "0.7 × 100% = 70%."],
+    "70%",
+  ),
+  "science/ny-g9-climate-systems": lesson(
+    ["Weather is conditions at one time and place; climate is the long-term pattern.", "Greenhouse gases trap heat given off by Earth. Burning fossil fuels adds carbon dioxide.", "Ice cores and glaciers give evidence of past climates."],
+    "“It rained today.” Weather or climate?",
+    ["It describes one day.", "Short-term conditions are weather."],
+    "weather",
+  ),
+  "science/wa-g3-hazards": lesson(
+    ["Weather hazards include floods, strong wind, lightning and heavy snow.", "People design solutions: storm shutters, windbreaks, fish ladders.", "Judge a solution by asking: does it solve the problem?"],
+    "Trees planted in a row to block wind are a…?",
+    ["They break the force of the wind."],
+    "windbreak",
+  ),
+  // North Carolina's own units.
+  "science/nc-g7-atmosphere": lesson(
+    ["The air is about 78% nitrogen and 21% oxygen. Almost all weather happens in the lowest layer, the troposphere; the ozone layer is in the stratosphere.", "The sun's energy drives the water cycle, and gravity brings precipitation back down.", "Uneven heating causes convection and global winds, and the jet stream steers storms. Monitoring air quality helps people stay healthy."],
+    "In which layer of the atmosphere does almost all weather happen?",
+    ["It is the lowest layer.", "That layer is the troposphere."],
+    "the troposphere",
+  ),
 };

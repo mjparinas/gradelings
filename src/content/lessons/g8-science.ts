@@ -595,4 +595,42 @@ export const lessons: GradeLessons = {
     ["You aren’t touching anything hot.", "The heat travels as rays through the air."],
     "radiation",
   ),
+  // Units North Carolina teaches in this grade, with the lesson they have in the grade where they began.
+  "science/food-chains-7": lesson(
+    ["The energy in most food chains first comes from the Sun.", "Producers make food. Consumers get energy by eating other organisms.", "Herbivores eat plants, carnivores eat animals and omnivores eat both.", "Arrows show the direction energy flows: from the food to the eater."],
+    "In grass → deer → wolf, which way does the energy flow?",
+    ["Arrows point from food to eater.", "Energy moves from grass to deer to wolf."],
+    "from grass to deer to wolf",
+  ),
+  // North Carolina's own units.
+  "science/nc-g8-earth-history": lesson(
+    ["In undisturbed rock layers, lower layers are older. A fault or intrusion is younger than the layers it cuts.", "Index fossils, which lived for a short time over a wide area, help match the ages of layers in different places.", "Fossils show how life and environments changed, like shark teeth far inland where an ocean once was."],
+    "In undisturbed rock layers, where is the oldest layer?",
+    ["Layers pile up over time.", "The first layer laid down is at the bottom."],
+    "at the bottom",
+  ),
+  "science/nc-g8-ocean-currents": lesson(
+    ["Surface currents are driven by wind; deep currents are driven by differences in temperature and salinity.", "Cold, salty water is denser and sinks; warm, fresher water rises.", "Currents like the Gulf Stream carry heat, which shapes climate, and they carry food and young sea life."],
+    "Does cold, salty water sink or rise?",
+    ["Cold and salty both make water denser.", "Denser water sinks."],
+    "It sinks.",
+  ),
+  "science/nc-g8-changing-climate": lesson(
+    ["Greenhouse gases, such as carbon dioxide, trap heat near Earth's surface like a blanket.", "Burning fossil fuels since industrialization has added carbon dioxide, and measurements show global temperatures have risen.", "Rising seas threaten low coasts like the Outer Banks. Renewable energy and using less energy help."],
+    "Which is renewable: coal, natural gas or solar energy?",
+    ["Coal and natural gas are fossil fuels that run out.", "Sunlight keeps arriving every day."],
+    "solar energy",
+  ),
+  "science/nc-g8-energy-resources": lesson(
+    ["Renewable resources, like sunlight, wind, moving water and biomass, are replaced by nature.", "Nonrenewable resources, like coal, oil and natural gas, take millions of years to form.", "Every energy source has effects: burning fuels can pollute air and water, and dams change rivers."],
+    "Is natural gas renewable or nonrenewable?",
+    ["It formed over millions of years.", "It can't be replaced in our lifetime."],
+    "nonrenewable",
+  ),
+  "science/nc-g8-nc-water": lesson(
+    ["About 97% of Earth's water is salty ocean water; most fresh water is frozen.", "North Carolina has 17 river basins, and rivers like the Neuse flow into estuaries such as the Albemarle–Pamlico Sound, where fresh and salt water mix.", "Scientists judge water safety with pH, dissolved oxygen, turbidity, bacteria and chemicals like PFAS."],
+    "Why is low dissolved oxygen a problem in a river?",
+    ["Fish take oxygen from the water to breathe.", "Too little oxygen can kill them."],
+    "Fish and other animals can't breathe.",
+  ),
 };

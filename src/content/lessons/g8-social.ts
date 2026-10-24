@@ -1135,4 +1135,47 @@ export const lessons: GradeLessons = {
     ["Start with the money earned.", "Take away the costs."],
     "money left after costs are paid",
   ),
+  // North Carolina's own units.
+  "social/nc-g8-colony-to-state": lesson(
+    ["North Carolina's shallow coast slowed its growth as a colony.", "Debate and compromise shaped the state: the Regulators protested unfair officials, and the Halifax Resolves called for independence.", "Anti-Federalists kept North Carolina out of the Union until the Bill of Rights was proposed; it ratified the Constitution in 1789."],
+    "Why did North Carolina refuse to ratify the Constitution in 1788?",
+    ["Many delegates were Anti-Federalists.", "They wanted rights written into the Constitution first."],
+    "It had no bill of rights yet.",
+  ),
+  "social/nc-g8-slavery-civil-war": lesson(
+    ["Slavery was central to North Carolina's plantation economy, and enslaved people resisted by escaping, slowing work and keeping their culture.", "The Cherokee removal of 1838 (the Trail of Tears) was a forced migration that killed thousands.", "North Carolina seceded in 1861 to defend slavery, though the state was divided; the war ended slavery and left the state poor."],
+    "Was the Trail of Tears a forced or a voluntary migration?",
+    ["The Cherokee were made to leave by the US government.", "Migration people are made to do is forced."],
+    "forced",
+  ),
+  "social/nc-g8-jim-crow-civil-rights": lesson(
+    ["After Reconstruction, the 1898 Wilmington coup, the 1900 voting amendment and Jim Crow laws took rights from Black North Carolinians.", "People resisted: the Greensboro sit-ins, SNCC (founded at Shaw University), lawsuits like Swann v. Charlotte-Mecklenburg, and voter drives.", "Judging a reform means asking how it changed laws, institutions and people's lives."],
+    "Which 1965 law banned literacy tests for voting?",
+    ["The 1964 law banned segregation in public places.", "The 1965 law protected voting."],
+    "the Voting Rights Act",
+  ),
+  "social/nc-g8-nc-economy": lesson(
+    ["After the Civil War, sharecropping trapped many families in debt; tobacco and textile mills then grew in the Piedmont.", "Research Triangle Park and Charlotte's banks led new growth, while mills and furniture factories closed as work moved overseas.", "Women, American Indian and Black North Carolinians built businesses and wealth, like Durham's Black Wall Street, despite discrimination."],
+    "What is one reason many textile mills closed after the 1990s?",
+    ["Trade agreements made it easier to make cloth elsewhere.", "Costs were lower in other countries."],
+    "Production moved to other countries.",
+  ),
+  "social/nc-g8-government-ideals": lesson(
+    ["Democratic ideals include consent of the governed, equality, liberty and the rule of law.", "Federalism divides power between the nation and the states; tribal governments are sovereign too.", "State laws sometimes matched these ideals (free public schools) and sometimes conflicted with them (taking votes away from free Black men in 1835)."],
+    "Federalism divides power between which two levels?",
+    ["One level is the whole country.", "The other is each state."],
+    "the national government and the states",
+  ),
+  "social/nc-g8-innovation": lesson(
+    ["Innovations like railroads, the cigarette machine and the first airplane flight (1903) changed North Carolina.", "New Deal programs brought electricity and the Blue Ridge Parkway; Research Triangle Park brought science and medicine.", "Innovation brings benefits and costs, so ask who gained, who lost and how life changed."],
+    "Where did the Wright brothers make the first powered flight?",
+    ["They chose a windy spot with soft sand.", "It was Kill Devil Hills, near Kitty Hawk."],
+    "near Kitty Hawk",
+  ),
+  "social/nc-g8-peoples": lesson(
+    ["Many peoples shaped North Carolina: American Indian nations, English, Scots-Irish, German and Highland Scots settlers, and Africans and African Americans.", "Geography helped and hindered movement: the Great Wagon Road brought settlers, while mountains and the Outer Banks isolated communities.", "Recent migration from Latin America and Asia, and return migration from the North, keep changing the state."],
+    "The Great Wagon Road brought settlers mostly to which region?",
+    ["It ran south from Pennsylvania.", "It led into the Piedmont."],
+    "the Piedmont",
+  ),
 };

@@ -295,4 +295,11 @@ export const lessons: GradeLessons = {
     ["Magnets pull some metals.", "Wood is not metal."],
     "no",
   ),
+  // Units North Carolina teaches in this grade, with the lesson they have in the grade where they began.
+  "science/tx-k-earth-materials": lesson(
+    ["Rocks can be big or small, round or rough.", "Wind is moving air. Air is all around us.", "We use soil to grow plants and water to drink."],
+    "Why do gardens need soil?",
+    ["Plant roots grow in soil.", "Soil helps plants grow."],
+    "so plants can grow",
+  ),
 };

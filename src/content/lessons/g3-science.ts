@@ -535,4 +535,42 @@ export const lessons: GradeLessons = {
     ["Alligators need warm water.", "Swamps are warm and wet."],
     "in the Okefenokee Swamp",
   ),
+  // Units North Carolina teaches in this grade, with the lesson they have in the grade where they began.
+  "science/states-of-matter-5": lesson(
+    ["Matter is anything that has mass and takes up space.", "A solid keeps its shape and volume. A liquid takes the shape of its container but keeps its volume.", "A gas spreads out to fill its whole container.", "We choose materials for their properties, like steel for strong bridges."],
+    "Juice is poured from a tall glass into a wide bowl. What stays the same?",
+    ["A liquid changes shape to fit its container.", "It keeps the same volume."],
+    "its volume",
+  ),
+  "science/heart-bones-muscles": lesson(
+    ["The heart pumps blood to the lungs to pick up oxygen, then out to the whole body.", "Exercise makes your heart beat faster, because muscles need more oxygen.", "Bones hold you up and protect organs. Muscles pull on bones through tendons.", "Muscles can only pull: the biceps contracts to bend your arm."],
+    "Your heart beats 72 times a minute at rest and 118 after running. How many more beats?",
+    ["Subtract the rest rate from the running rate.", "118 − 72 = 46."],
+    "46 more beats per minute",
+  ),
+  "science/solar-system": lesson(
+    ["The planets in order from the Sun: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.", "The asteroid belt lies between Mars and Jupiter.", "A moon is a natural object that orbits a planet.", "The farther a planet is from the Sun, the longer it takes to orbit once."],
+    "Which takes longer to orbit the Sun: Mars or Saturn?",
+    ["Saturn is much farther from the Sun than Mars.", "Farther planets have longer orbits."],
+    "Saturn",
+  ),
+  // North Carolina's own units.
+  "science/nc-g3-land-features": lesson(
+    ["Land features include mountains, valleys, canyons, caverns, volcanoes and islands.", "Mountains are high; valleys and canyons are low places between higher land, and canyons have steep walls.", "Moving water carves valleys, canyons and caverns slowly over a very long time."],
+    "Which land feature has water all around it?",
+    ["A peninsula has water on three sides.", "An island has water on every side."],
+    "an island",
+  ),
+  "science/nc-g3-water-features": lesson(
+    ["Earth's water is salt water (oceans and seas) or fresh water (rivers, lakes, ponds, streams and glaciers).", "Almost all of Earth's water is in the oceans, and most fresh water is frozen in glaciers and ice sheets.", "Rivers and streams flow downhill; lakes and ponds hold water that is mostly still."],
+    "Is a lake salt water or fresh water?",
+    ["Most lakes are filled by rivers and rain.", "That water is fresh."],
+    "fresh water",
+  ),
+  "science/nc-g3-soil": lesson(
+    ["Soil has living parts (worms, roots) and non-living parts (bits of rock, air and water).", "Humus is made from rotted plants and animals, and it feeds plants.", "Water drains quickly through sandy soil and slowly through clay. Loam, a mix, is best for most plants."],
+    "Water drains through clay soil quickly or slowly?",
+    ["Clay has tiny, tightly packed bits.", "Water squeezes through slowly."],
+    "slowly",
+  ),
 };

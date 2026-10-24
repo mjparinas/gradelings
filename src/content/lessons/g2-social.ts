@@ -613,4 +613,36 @@ export const lessons: GradeLessons = {
     ["The nation has a president.", "A city has a mayor."],
     "the governor",
   ),
+  // Units North Carolina teaches in this grade, with the lesson they have in the grade where they began.
+  "social/ny-g1-american-symbols": lesson(
+    ["The Pledge of Allegiance is a promise to be loyal.", "Washington, D.C. is the capital of the United States.", "Lincoln helped end slavery. He is on the penny."],
+    "What is the capital of the United States?",
+    ["It is named for the first president."],
+    "Washington, D.C.",
+  ),
+  "social/meeting-needs": lesson(
+    ["Everyone needs food, water, shelter and clothing.", "People meet their needs with what their land and weather give them.", "When people can't grow or make something, they trade for it."],
+    "Why do people in very hot places often wear loose, light clothes?",
+    ["Clothing is a need, and it has to suit the weather.", "Loose, light clothes let air move and keep people cool."],
+    "to stay cool in the heat",
+  ),
+  // North Carolina's own units.
+  "social/nc-g2-our-government": lesson(
+    ["In a democracy, citizens choose leaders by voting, and leaders must follow the law too.", "The national government has three branches: Congress makes laws, the president carries them out, and the courts decide what laws mean.", "Each branch can check the others, so no one has too much power."],
+    "Which branch decides what a law means?",
+    ["Congress makes laws.", "The president carries them out.", "The courts explain what they mean."],
+    "the courts",
+  ),
+  "social/nc-g2-americans-who-made-a-difference": lesson(
+    ["Many people helped make America fairer: Harriet Tubman led people to freedom, and Susan B. Anthony worked for women's right to vote.", "Martin Luther King Jr. and Rosa Parks worked peacefully for equal rights.", "People of many backgrounds, like Sacagawea and César Chávez, helped shape the country."],
+    "Who worked for women's right to vote?",
+    ["Harriet Tubman led people out of slavery.", "Susan B. Anthony spoke and wrote for women's votes."],
+    "Susan B. Anthony",
+  ),
+  "social/nc-g2-us-geography": lesson(
+    ["Use a compass rose: north is up on most maps, and south is down.", "The Appalachian Mountains are in the east, the Great Plains in the middle and the Rocky Mountains in the west.", "North Carolina is in the Southeast, on the Atlantic coast. Virginia is north of it and South Carolina is south."],
+    "Which ocean is on North Carolina's coast?",
+    ["North Carolina is on the East Coast.", "The ocean to the east is the Atlantic."],
+    "the Atlantic Ocean",
+  ),
 };

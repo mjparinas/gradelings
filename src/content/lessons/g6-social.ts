@@ -871,4 +871,11 @@ export const lessons: GradeLessons = {
     ["The middle is hot and dry.", "The coast has more rain and milder weather."],
     "the coast has a milder climate and more water",
   ),
+  // Units North Carolina teaches in this grade, with the lesson they have in the grade where they began.
+  "social/or-g7-african-kingdoms": lesson(
+    ["Ghana, Mali and Songhai grew rich from gold and salt trade across the Sahara. Mansa Musa of Mali went on pilgrimage to Makkah in 1324.", "Swahili city-states like Kilwa and Mombasa traded across the Indian Ocean. Great Zimbabwe, Benin and Ethiopia were also powerful.", "Historians use Arabic writings, griots’ oral histories and archaeology."],
+    "The empire of Mali grew rich from trading what?",
+    ["Mali controlled routes across the Sahara.", "Gold from the south was traded for salt from the desert."],
+    "gold and salt",
+  ),
 };

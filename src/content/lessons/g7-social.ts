@@ -1201,4 +1201,35 @@ export const lessons: GradeLessons = {
     ["They are in southern Asia.", "Mount Everest is part of them."],
     "the Himalayas",
   ),
+  // Units North Carolina teaches in this grade, with the lesson they have in the grade where they began.
+  "social/ny-g5-columbian-exchange": lesson(
+    ["After 1492, plants, animals, people, ideas and diseases crossed the Atlantic: the Columbian Exchange.", "Corn and potatoes went to Europe. Horses, cattle and wheat came to the Americas.", "Diseases killed millions, and more than 12 million Africans were forced across the Atlantic in the Middle Passage."],
+    "Which went from the Americas to Europe: potatoes or horses?",
+    ["Horses came from Europe.", "Potatoes first grew in South America."],
+    "potatoes",
+  ),
+  "social/tx-g6-governments": lesson(
+    ["Limited governments follow laws and protect rights; unlimited ones do not.", "Autocracy is rule by one person; democracy is rule by the people. India is the world's largest democracy.", "Citizens' duties include voting and staying informed. Rights come with responsibilities."],
+    "What is rule by one person called?",
+    ["“Auto” means self.", "One person rules alone."],
+    "autocracy",
+  ),
+  "social/tx-g6-economies": lesson(
+    ["Factors of production: land (resources), labour (work people do) and capital (tools).", "Industries: agricultural (farming), manufacturing (factories), service.", "In free enterprise, private people own most businesses. GDP per capita is GDP divided by population."],
+    "Is a car factory part of agriculture or manufacturing?",
+    ["A factory makes goods from parts.", "Making goods is manufacturing."],
+    "manufacturing",
+  ),
+  "social/al-g9-interwar": lesson(
+    ["After World War I the Ottoman lands were divided; the Sykes-Picot Agreement split them between Britain and France.", "The Great Depression began with the 1929 crash and spread worldwide.", "Dictators rose: Stalin forced collectivization; fascism glorified nation, leader and military (Mussolini invaded Ethiopia in 1935); Hitler took power in 1933."],
+    "In what year did Adolf Hitler become chancellor of Germany?",
+    ["It was during the Great Depression.", "The year was 1933."],
+    "1933",
+  ),
+  "social/al-g9-holocaust": lesson(
+    ["Antisemitism is hatred of or prejudice against Jewish people. The Nazis built on it with lies and propaganda.", "Step by step, rights were taken: the Nuremberg Laws (1935) removed citizenship; then came ghettos and camps such as Dachau (1933).", "Six million Jews were murdered. People who risked their lives to save Jews are honoured as Righteous Among the Nations."],
+    "What did the Nuremberg Laws of 1935 do?",
+    ["They were laws passed by the Nazi government.", "They stripped German Jews of citizenship and rights."],
+    "took away German Jews’ citizenship and rights",
+  ),
 };
