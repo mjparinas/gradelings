@@ -427,4 +427,10 @@ export const lessons: GradeLessons = {
     ["She knew the land and languages.", "Her name starts with S."],
     "Sacagawea",
   ),
+  "social/mi-g1-symbols-holidays": lesson(
+    ["Symbols stand for things. The flag stands for our country.", "The bald eagle and the Statue of Liberty are symbols too.", "Holidays like the Fourth of July honour events and people."],
+    "What does the Fourth of July celebrate?",
+    ["It is our country's birthday.", "The Declaration was signed in 1776."],
+    "the country's independence",
+  ),
 };

@@ -655,4 +655,22 @@ export const lessons: GradeLessons = {
     ["It was around only briefly but in many places.", "Finding it dates the rock layer."],
     "it lived for a short time over a wide area",
   ),
+  "science/mi-g7-resources": lesson(
+    ["Minerals, energy and water are spread unevenly because of past geologic processes.", "Scientists map hazards such as earthquakes, tsunamis, floods and wildfires.", "Monitoring networks (seismometers, GPS, gas sensors) help warn people early."],
+    "What does a tsunami hazard map show?",
+    ["Tsunamis flood low coastal land.", "People need to know where to go."],
+    "areas that could flood and routes to high ground",
+  ),
+  "science/mi-g7-biodiversity": lesson(
+    ["Biodiversity is the variety of life in an area.", "Ecosystem services include clean water, food and storm protection.", "Protecting kelp forests, wetlands and redwood forests keeps habitat for many species."],
+    "How do coastal wetlands help people?",
+    ["Wetland plants trap dirt.", "They also slow storm waves."],
+    "by filtering water and softening storm waves",
+  ),
+  "science/mi-g7-earth-surface": lesson(
+    ["Matching coastlines, fossils and rocks on far-apart continents show they were once joined.", "Plates pull apart at mid-ocean ridges and collide to build mountains and volcanoes, such as the Cascades.", "Some changes are sudden (earthquakes); others take millions of years (mountain building)."],
+    "Is a landslide a fast or a very slow change to Earth’s surface?",
+    ["A landslide happens in minutes.", "Mountain building takes millions of years."],
+    "fast",
+  ),
 };

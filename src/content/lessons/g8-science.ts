@@ -643,4 +643,16 @@ export const lessons: GradeLessons = {
     ["You aren’t touching anything hot.", "The heat travels as rays through the air."],
     "radiation",
   ),
+  "science/mi-g8-space": lesson(
+    ["Mercury is closest to the Sun. Gravity keeps planets in orbit.", "Seasons happen because Earth’s axis is tilted.", "Tides are caused mostly by the Moon’s gravity. A solar eclipse is when the Moon passes between the Sun and Earth."],
+    "Why does Earth have seasons?",
+    ["It isn’t because Earth gets much closer to the Sun.", "Earth’s tilt changes how direct the sunlight is."],
+    "Earth’s axis is tilted",
+  ),
+  "science/mi-g8-earth-history": lesson(
+    ["Rock layers and fossils order Earth’s 4.6-billion-year history; lower layers are older.", "Most of that history is the Precambrian. We live in the Cenozoic Era.", "Homologous structures show that living things share ancestors."],
+    "In which era do we live today?",
+    ["The eras go Paleozoic, Mesozoic, Cenozoic.", "The latest is the Cenozoic."],
+    "the Cenozoic Era",
+  ),
 };

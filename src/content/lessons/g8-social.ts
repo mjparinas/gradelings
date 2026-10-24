@@ -1159,4 +1159,16 @@ export const lessons: GradeLessons = {
     ["Start with the money earned.", "Take away the costs."],
     "money left after costs are paid",
   ),
+  "social/mi-g8-michigan-and-the-nation": lesson(
+    ["The Northwest Ordinance of 1787 banned slavery in the land that became Michigan.", "Michigan joined the Union as a free state in 1837, and the Republican Party was founded in Jackson in 1854.", "About 90,000 Michiganders served in the Civil War, including a regiment of Black soldiers raised in Detroit."],
+    "Where was the Republican Party founded in 1854?",
+    ["Its first meeting was held outdoors, 'under the oaks'.", "The town is in southern Michigan."],
+    "Jackson, Michigan",
+  ),
+  "social/mi-g8-new-nation": lesson(
+    ["Washington's Farewell Address warned against political parties and foreign alliances.", "In Marbury v. Madison (1803), the Supreme Court gained the power to strike down laws: judicial review.", "The Louisiana Purchase (1803) doubled the nation, and westward growth forced Native nations from their homelands."],
+    "Which case gave the Supreme Court the power of judicial review?",
+    ["It was decided in 1803.", "Chief Justice John Marshall wrote it."],
+    "Marbury v. Madison",
+  ),
 };

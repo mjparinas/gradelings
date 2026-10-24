@@ -883,4 +883,22 @@ export const lessons: GradeLessons = {
     ["The middle is hot and dry.", "The coast has more rain and milder weather."],
     "the coast has a milder climate and more water",
   ),
+  "social/maps-graphs-8": lesson(
+    ["Use the map scale: multiply the map distance by what 1 cm stands for.", "A choropleth map shades areas to show a rate or density, such as people per square kilometre.", "On a scatter graph, look for a trend: as one value rises, does the other rise or fall?"],
+    "On a map, 1 cm represents 25 km. Two cities are 3 cm apart. How far apart are they?",
+    ["Each centimetre is 25 km.", "3 × 25 = 75."],
+    "75 km",
+  ),
+  "social/mi-g6-landforms-climates": lesson(
+    ["The Western Hemisphere is North and South America.", "Big features: the Andes and Rockies, the Amazon rainforest and River, and the Panama Canal.", "A political map shows countries and borders. A physical map shows landforms."],
+    "What is the largest rainforest in the world?",
+    ["It is in South America.", "It is named after a great river."],
+    "the Amazon rainforest",
+  ),
+  "social/mi-g6-world-regions": lesson(
+    ["World regions share features like climate, landforms and culture. Know which countries are in which region: India in Asia, New Zealand in Oceania.", "People adapt to climate, like warm clothing and insulated homes in the cold.", "The Ring of Fire around the Pacific has many volcanoes and earthquakes. Trade connects regions."],
+    "The Amazon rainforest is mostly in which country?",
+    ["The Amazon is in South America.", "Most of it lies in the largest South American country."],
+    "Brazil",
+  ),
 };

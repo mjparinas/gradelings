@@ -721,4 +721,28 @@ export const lessons: GradeLessons = {
     ["Carbon dioxide traps heat.", "Trees take in carbon dioxide to make food."],
     "trees take in carbon dioxide",
   ),
+  "science/mi-g6-climate": lesson(
+    ["Climate is the average weather over many years.", "Oceans keep coastal temperatures steady, so coastal cities have mild winters.", "People burn much more fossil fuel than 200 years ago, so there is more CO₂ in the air.", "We can use less energy, like walking short trips, and adapt, like planting shade trees."],
+    "Why does a coastal city have milder winters than a city far inland?",
+    ["Ocean water warms and cools slowly.", "It keeps nearby temperatures steady."],
+    "the ocean keeps temperatures steady",
+  ),
+  "science/mi-g6-growth": lesson(
+    ["Asexual reproduction needs one parent: bacteria splitting, strawberry runners.", "Sexual reproduction needs two parents and creates variation.", "Behaviours like nest building and feeding chicks help young survive.", "Genes and the environment both affect growth: the same plants grow differently in sun and shade."],
+    "Two identical plants grow in sun and in shade and end up different heights. Why?",
+    ["Their genes are the same.", "So the difference comes from where they grew."],
+    "the environment",
+  ),
+  "science/mi-g6-design": lesson(
+    ["Criteria are what a solution must do to succeed. Constraints are limits.", "A decision matrix compares designs against the criteria.", "A trade-off is giving up some of one thing to get more of another.", "After a test fails, improve the design and test again."],
+    "A cheaper filter cleans water less well. Choosing it means accepting a… what?",
+    ["You give up some cleaning to save money.", "Giving up one thing for another is a trade-off."],
+    "a trade-off",
+  ),
+  "science/mi-g6-weather": lesson(
+    ["Evaporation turns water into vapour; condensation cools vapour into cloud droplets.", "An air mass is a big body of air with the same temperature and moisture.", "Where a cold air mass meets a warm one, a front forms and the weather changes, often with storms."],
+    "Cold air from Canada pushes into warm, moist air over Michigan. What often happens?",
+    ["The warm air is pushed up and cools.", "Its water vapour condenses into clouds and rain."],
+    "a cold front brings clouds and storms",
+  ),
 };

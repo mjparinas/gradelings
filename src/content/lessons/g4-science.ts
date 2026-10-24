@@ -649,4 +649,22 @@ export const lessons: GradeLessons = {
     ["Grass is the producer.", "The grasshopper eats the grass."],
     "the grasshopper",
   ),
+  "science/mi-g4-energy-resources": lesson(
+    ["Renewable resources, like sunlight, wind and moving water, won't run out.", "Solar farms use sunlight. Geothermal plants use heat from inside Earth.", "Dams make electricity from moving water but can block fish like salmon.", "Every energy choice has good points and costs for the environment."],
+    "A geothermal power plant makes electricity from what?",
+    ["“Geo” means Earth and “thermal” means heat."],
+    "heat from inside Earth",
+  ),
+  "science/mi-g4-earth-hazards": lesson(
+    ["Maps show patterns: many mountains, volcanoes and earthquakes are along the edges of Earth's plates.", "People cannot stop natural hazards, but they can reduce the harm they do.", "Warning systems, strong buildings and safe plans help during storms, floods and earthquakes."],
+    "A tornado warning sounds at school. What helps keep people safe?",
+    ["Get away from windows.", "Go to an inside room on the lowest floor and cover your head."],
+    "go to a safe inside room and cover up",
+  ),
+  "science/mi-g4-rocks-erosion": lesson(
+    ["Weathering breaks rock. Erosion moves it. Running water moves the most.", "Glaciers scrape and carry rock. Roots growing in cracks can split rock.", "Over a very long time, erosion can carve deep canyons.", "Plants and their roots slow erosion on a hillside."],
+    "Which hillside erodes faster in heavy rain: a bare one or a grassy one?",
+    ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
+    "the bare hillside",
+  ),
 };

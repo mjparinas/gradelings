@@ -289,4 +289,16 @@ export const lessons: GradeLessons = {
     ["Cause and effect shows a result.", "Consequently means as a result."],
     "consequently",
   ),
+  "language/mi-g7-story-analysis": lesson(
+    ["Support an analysis with several pieces of evidence.", "Trace how a theme develops across the story, and summarize without opinions.", "Compare a story with a film version or a history text about the same time."],
+    "What is a central idea?",
+    ["It isn’t one detail.", "It is what the whole text keeps building."],
+    "the main point the text develops over its course",
+  ),
+  "language/mi-g7-info-analysis": lesson(
+    ["Many texts have two central ideas. Show how people, events and ideas affect each other.", "Word choice matters: a metaphor like “a lifeline” suggests something that saves.", "Two writers can stress different evidence on the same topic. Transitions like consequently show cause and effect."],
+    "Which transition shows a cause-and-effect relationship: consequently, similarly or meanwhile?",
+    ["Cause and effect shows a result.", "Consequently means as a result."],
+    "consequently",
+  ),
 };
