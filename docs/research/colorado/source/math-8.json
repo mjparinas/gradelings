@@ -1,0 +1,931 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D2980651",
+   "id": "D2980651",
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.cde.state.co.us/comath/2020cas-ma-p12",
+   "title": "Colorado Academic Standards: Mathematics",
+   "valid": "2020"
+  },
+  "educationLevels": [
+   "08"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D2980651_grade-08",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/3.0/us/",
+   "rightsHolder": "D2L Corporation",
+   "title": "CC BY 3.0 US"
+  },
+  "normalizedSubject": "Math",
+  "standards": {
+   "005B8E4BA1864477BCEEF112DCB7C521": {
+    "ancestorIds": [
+     "3ED24E5CE17A47BFB481CD81E2BF5E4A"
+    ],
+    "asnIdentifier": "S21029608",
+    "depth": 1,
+    "description": "Reason abstractly and quantitatively.",
+    "id": "005B8E4BA1864477BCEEF112DCB7C521",
+    "parentId": "3ED24E5CE17A47BFB481CD81E2BF5E4A",
+    "position": 3000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP2"
+   },
+   "05B6F423F96A4D41992F0BE6B62EBD57": {
+    "ancestorIds": [
+     "3ED24E5CE17A47BFB481CD81E2BF5E4A"
+    ],
+    "asnIdentifier": "S21029613",
+    "depth": 1,
+    "description": "Look for and make use of structure.",
+    "id": "05B6F423F96A4D41992F0BE6B62EBD57",
+    "parentId": "3ED24E5CE17A47BFB481CD81E2BF5E4A",
+    "position": 8000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP7"
+   },
+   "07FD7F13E8D441CBAE1574C5B3F622AA": {
+    "ancestorIds": [
+     "EDB3D8851B7C43118A1E807677C75A06",
+     "443F11D5E94B4716B88057C990A04C9E",
+     "FB5E5D1DE66B4F268C203D8CB3058937"
+    ],
+    "asnIdentifier": "S21045510",
+    "depth": 3,
+    "description": "Demonstrate informally that every number has a decimal expansion; for rational numbers show that the decimal expansion repeats eventually, and convert a decimal expansion which repeats eventually into a rational number. Define irrational numbers as numbers that are not rational.",
+    "id": "07FD7F13E8D441CBAE1574C5B3F622AA",
+    "parentId": "EDB3D8851B7C43118A1E807677C75A06",
+    "position": 13000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.NS.A.1"
+   },
+   "16EB427083FE404AB0215EDF86BA0EA1": {
+    "ancestorIds": [
+     "863E659BF463424B8767BF22C64DA38B",
+     "1906F2A2285247DF955E7498123FE846",
+     "364B8A181C3748959D9AC26CF183ABDE"
+    ],
+    "asnIdentifier": "S21045540",
+    "depth": 3,
+    "description": "Demonstrate that a two-dimensional figure is similar to another if the second can be obtained from the first by a sequence of rotations, reflections, translations, and dilations; given two similar two-dimensional figures, describe a sequence that exhibits the similarity between them.",
+    "id": "16EB427083FE404AB0215EDF86BA0EA1",
+    "parentId": "863E659BF463424B8767BF22C64DA38B",
+    "position": 57000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.G.A.4"
+   },
+   "1906F2A2285247DF955E7498123FE846": {
+    "ancestorIds": [
+     "364B8A181C3748959D9AC26CF183ABDE"
+    ],
+    "asnIdentifier": "S21029771",
+    "depth": 1,
+    "description": "Geometry",
+    "id": "1906F2A2285247DF955E7498123FE846",
+    "parentId": "364B8A181C3748959D9AC26CF183ABDE",
+    "position": 49000
+   },
+   "1A0132998DB544B5A5D4FFDC705C923B": {
+    "ancestorIds": [
+     "95B80BEB52214F8B9388E97B335B3CEE",
+     "A7BF4F8FC7B64A7C82FCAD2A425137E4",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21045526",
+    "depth": 3,
+    "description": "Compare properties of two functions each represented in a different way (algebraically, graphically, numerically in tables, or by verbal descriptions).",
+    "id": "1A0132998DB544B5A5D4FFDC705C923B",
+    "parentId": "95B80BEB52214F8B9388E97B335B3CEE",
+    "position": 36000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.F.A.2"
+   },
+   "1C976898FA44478882B6CE32E1E852CE": {
+    "ancestorIds": [
+     "BC999174F5BA4042985FDF30D174B307"
+    ],
+    "asnIdentifier": "S21029750",
+    "depth": 1,
+    "description": "Statistics & Probability",
+    "id": "1C976898FA44478882B6CE32E1E852CE",
+    "parentId": "BC999174F5BA4042985FDF30D174B307",
+    "position": 42000
+   },
+   "2FF51733410F403CB4EAF4A1415957B8": {
+    "ancestorIds": [
+     "61DB6F33E81F4564992C580D4A9B0924",
+     "1C976898FA44478882B6CE32E1E852CE",
+     "BC999174F5BA4042985FDF30D174B307"
+    ],
+    "asnIdentifier": "S21045532",
+    "depth": 3,
+    "description": "Use the equation of a linear model to solve problems in the context of bivariate measurement data, interpreting the slope and intercept.",
+    "id": "2FF51733410F403CB4EAF4A1415957B8",
+    "parentId": "61DB6F33E81F4564992C580D4A9B0924",
+    "position": 46000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.SP.A.3"
+   },
+   "30E63D6FCDCD48209D8459255667F24B": {
+    "ancestorIds": [
+     "A7812F16DF2F4844B32DE488DCF832D1",
+     "9AFCF1EA66C04244AAD8F5317FA537CD",
+     "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21045520",
+    "depth": 4,
+    "description": "Solve linear equations with rational number coefficients, including equations with variables on both sides and whose solutions require expanding expressions using the distributive property and collecting like terms.",
+    "id": "30E63D6FCDCD48209D8459255667F24B",
+    "parentId": "A7812F16DF2F4844B32DE488DCF832D1",
+    "position": 28000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.EE.C.7.b"
+   },
+   "364B8A181C3748959D9AC26CF183ABDE": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029770",
+    "depth": 0,
+    "description": "Geometry",
+    "id": "364B8A181C3748959D9AC26CF183ABDE",
+    "parentId": null,
+    "position": 48000,
+    "statementLabel": "Standard",
+    "statementNotation": "G.4"
+   },
+   "3696159DE316437A8250AED25C6B8F00": {
+    "ancestorIds": [
+     "99B565E7EC2141A98D0F2692F794E38F",
+     "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21045512",
+    "depth": 3,
+    "description": "Know and apply the properties of integer exponents to generate equivalent numerical expressions.",
+    "id": "3696159DE316437A8250AED25C6B8F00",
+    "parentId": "99B565E7EC2141A98D0F2692F794E38F",
+    "position": 18000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.EE.A.1"
+   },
+   "3B9CADF18D6F457CB7495EDA2A3F2F39": {
+    "ancestorIds": [
+     "99B565E7EC2141A98D0F2692F794E38F",
+     "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21045513",
+    "depth": 3,
+    "description": "Use square root and cube root symbols to represent solutions to equations of the form x² = p and x³ = p, where p is a positive rational number. Evaluate square roots of small perfect squares (up to 100) and cube roots of small perfect cubes (up to 64). Know that √2 is irrational.",
+    "id": "3B9CADF18D6F457CB7495EDA2A3F2F39",
+    "parentId": "99B565E7EC2141A98D0F2692F794E38F",
+    "position": 19000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.EE.A.2"
+   },
+   "3ED24E5CE17A47BFB481CD81E2BF5E4A": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029606",
+    "depth": 0,
+    "description": "Standards for Mathematical Practice",
+    "id": "3ED24E5CE17A47BFB481CD81E2BF5E4A",
+    "parentId": null,
+    "position": 1000
+   },
+   "443F11D5E94B4716B88057C990A04C9E": {
+    "ancestorIds": [
+     "FB5E5D1DE66B4F268C203D8CB3058937"
+    ],
+    "asnIdentifier": "S21029647",
+    "depth": 1,
+    "description": "The Number System",
+    "id": "443F11D5E94B4716B88057C990A04C9E",
+    "parentId": "FB5E5D1DE66B4F268C203D8CB3058937",
+    "position": 11000
+   },
+   "457EF415B4BC4489A9977B05DF3B92A7": {
+    "ancestorIds": [
+     "61DB6F33E81F4564992C580D4A9B0924",
+     "1C976898FA44478882B6CE32E1E852CE",
+     "BC999174F5BA4042985FDF30D174B307"
+    ],
+    "asnIdentifier": "S21045533",
+    "depth": 3,
+    "description": "Explain that patterns of association can also be seen in bivariate categorical data by displaying frequencies and relative frequencies in a two-way table. Construct and interpret a two-way table summarizing data on two categorical variables collected from the same subjects. Use relative frequencies calculated for rows or columns to describe possible association between the two variables.",
+    "id": "457EF415B4BC4489A9977B05DF3B92A7",
+    "parentId": "61DB6F33E81F4564992C580D4A9B0924",
+    "position": 47000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.SP.A.4"
+   },
+   "46DB30F8A04741188983DAFD8A4D6BB4": {
+    "ancestorIds": [
+     "3ED24E5CE17A47BFB481CD81E2BF5E4A"
+    ],
+    "asnIdentifier": "S21029607",
+    "depth": 1,
+    "description": "Make sense of problems and persevere in solving them.",
+    "id": "46DB30F8A04741188983DAFD8A4D6BB4",
+    "parentId": "3ED24E5CE17A47BFB481CD81E2BF5E4A",
+    "position": 2000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP1"
+   },
+   "47B0FD4184B4499197F6593851F5152D": {
+    "ancestorIds": [
+     "CEA3D69CCF9E4402B0E17ED034F42CB4",
+     "863E659BF463424B8767BF22C64DA38B",
+     "1906F2A2285247DF955E7498123FE846",
+     "364B8A181C3748959D9AC26CF183ABDE"
+    ],
+    "asnIdentifier": "S21045537",
+    "depth": 4,
+    "description": "Parallel lines are taken to parallel lines.",
+    "id": "47B0FD4184B4499197F6593851F5152D",
+    "parentId": "CEA3D69CCF9E4402B0E17ED034F42CB4",
+    "position": 54000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.G.A.1.c"
+   },
+   "4A00DB62480843F7B2406F32E39F7F85": {
+    "ancestorIds": [
+     "C9298814616940439133E9C5DED386C6",
+     "1906F2A2285247DF955E7498123FE846",
+     "364B8A181C3748959D9AC26CF183ABDE"
+    ],
+    "asnIdentifier": "S21045544",
+    "depth": 3,
+    "description": "Apply the Pythagorean Theorem to find the distance between two points in a coordinate system.",
+    "id": "4A00DB62480843F7B2406F32E39F7F85",
+    "parentId": "C9298814616940439133E9C5DED386C6",
+    "position": 62000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.G.B.8"
+   },
+   "4F915B62404042E6BD05F5C0D377AA49": {
+    "ancestorIds": [
+     "863E659BF463424B8767BF22C64DA38B",
+     "1906F2A2285247DF955E7498123FE846",
+     "364B8A181C3748959D9AC26CF183ABDE"
+    ],
+    "asnIdentifier": "S21045538",
+    "depth": 3,
+    "description": "Demonstrate that a two-dimensional figure is congruent to another if the second can be obtained from the first by a sequence of rotations, reflections, and translations; given two congruent figures, describe a sequence that exhibits the congruence between them.",
+    "id": "4F915B62404042E6BD05F5C0D377AA49",
+    "parentId": "863E659BF463424B8767BF22C64DA38B",
+    "position": 55000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.G.A.2"
+   },
+   "543A31CD102B4E05B11C5736C278220C": {
+    "ancestorIds": [
+     "99B565E7EC2141A98D0F2692F794E38F",
+     "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21045514",
+    "depth": 3,
+    "description": "Use numbers expressed in the form of a single digit times an integer power of 10 to estimate very large or very small quantities, and to express how many times as much one is than the other. For example, estimate the population of the United States as 3 times 108 and the population of the world as 7 times 109, and determine that the world population is more than 20 times larger.",
+    "id": "543A31CD102B4E05B11C5736C278220C",
+    "parentId": "99B565E7EC2141A98D0F2692F794E38F",
+    "position": 20000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.EE.A.3"
+   },
+   "61DB6F33E81F4564992C580D4A9B0924": {
+    "ancestorIds": [
+     "1C976898FA44478882B6CE32E1E852CE",
+     "BC999174F5BA4042985FDF30D174B307"
+    ],
+    "asnIdentifier": "S21029756",
+    "depth": 2,
+    "description": "Investigate patterns of association in bivariate data.",
+    "id": "61DB6F33E81F4564992C580D4A9B0924",
+    "parentId": "1C976898FA44478882B6CE32E1E852CE",
+    "position": 43000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "8.SP.A"
+   },
+   "65EF6112784743B7A6E27A9142629FF2": {
+    "ancestorIds": [
+     "1906F2A2285247DF955E7498123FE846",
+     "364B8A181C3748959D9AC26CF183ABDE"
+    ],
+    "asnIdentifier": "S21029787",
+    "depth": 2,
+    "description": "Solve real-world and mathematical problems involving volume of cylinders, cones, and spheres.",
+    "id": "65EF6112784743B7A6E27A9142629FF2",
+    "parentId": "1906F2A2285247DF955E7498123FE846",
+    "position": 63000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "8.G.C"
+   },
+   "7723087000924D4DBBD7D80CE26BBEE1": {
+    "ancestorIds": [
+     "3ED24E5CE17A47BFB481CD81E2BF5E4A"
+    ],
+    "asnIdentifier": "S21029614",
+    "depth": 1,
+    "description": "Look for and express regularity in repeated reasoning.",
+    "id": "7723087000924D4DBBD7D80CE26BBEE1",
+    "parentId": "3ED24E5CE17A47BFB481CD81E2BF5E4A",
+    "position": 9000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP8"
+   },
+   "77A5FB9C2A724C3080462394F1976378": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029666",
+    "depth": 0,
+    "description": "Algebra and Functions",
+    "id": "77A5FB9C2A724C3080462394F1976378",
+    "parentId": null,
+    "position": 15000,
+    "statementLabel": "Standard",
+    "statementNotation": "AF.2"
+   },
+   "7851B27AF90345F48ED31B4A78863653": {
+    "ancestorIds": [
+     "B751AADE13224276905CF42E58E0A102",
+     "A7BF4F8FC7B64A7C82FCAD2A425137E4",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21045529",
+    "depth": 3,
+    "description": "Describe qualitatively the functional relationship between two quantities by analyzing a graph (e.g., where the function is increasing or decreasing, linear or nonlinear). Sketch a graph that exhibits the qualitative features of a function that has been described verbally.",
+    "id": "7851B27AF90345F48ED31B4A78863653",
+    "parentId": "B751AADE13224276905CF42E58E0A102",
+    "position": 40000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.F.B.5"
+   },
+   "79C3AE920F4F42BEBE5832F11FB9BFFB": {
+    "ancestorIds": [
+     "D53F92A5D97743D9BC11254538617A2E",
+     "9AFCF1EA66C04244AAD8F5317FA537CD",
+     "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21045524",
+    "depth": 4,
+    "description": "Solve real-world and mathematical problems leading to two linear equations in two variables.",
+    "id": "79C3AE920F4F42BEBE5832F11FB9BFFB",
+    "parentId": "D53F92A5D97743D9BC11254538617A2E",
+    "position": 32000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.EE.C.8.c"
+   },
+   "81FD05B4AAFA4BE3837FBCFB7CF63BA9": {
+    "ancestorIds": [
+     "3ED24E5CE17A47BFB481CD81E2BF5E4A"
+    ],
+    "asnIdentifier": "S21029612",
+    "depth": 1,
+    "description": "Attend to precision.",
+    "id": "81FD05B4AAFA4BE3837FBCFB7CF63BA9",
+    "parentId": "3ED24E5CE17A47BFB481CD81E2BF5E4A",
+    "position": 7000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP6"
+   },
+   "863E659BF463424B8767BF22C64DA38B": {
+    "ancestorIds": [
+     "1906F2A2285247DF955E7498123FE846",
+     "364B8A181C3748959D9AC26CF183ABDE"
+    ],
+    "asnIdentifier": "S21029785",
+    "depth": 2,
+    "description": "Understand congruence and similarity using physical models, transparencies, or geometry software.",
+    "id": "863E659BF463424B8767BF22C64DA38B",
+    "parentId": "1906F2A2285247DF955E7498123FE846",
+    "position": 50000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "8.G.A"
+   },
+   "95B80BEB52214F8B9388E97B335B3CEE": {
+    "ancestorIds": [
+     "A7BF4F8FC7B64A7C82FCAD2A425137E4",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21029697",
+    "depth": 2,
+    "description": "Define, evaluate, and compare functions.",
+    "id": "95B80BEB52214F8B9388E97B335B3CEE",
+    "parentId": "A7BF4F8FC7B64A7C82FCAD2A425137E4",
+    "position": 34000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "8.F.A"
+   },
+   "95E0800A7AFA48B5BF96FBA0889E4A49": {
+    "ancestorIds": [
+     "95B80BEB52214F8B9388E97B335B3CEE",
+     "A7BF4F8FC7B64A7C82FCAD2A425137E4",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21045525",
+    "depth": 3,
+    "description": "Define a function as a rule that assigns to each input exactly one output. Show that the graph of a function is the set of ordered pairs consisting of an input and the corresponding output. (Function notation is not required for Grade 8.)",
+    "id": "95E0800A7AFA48B5BF96FBA0889E4A49",
+    "parentId": "95B80BEB52214F8B9388E97B335B3CEE",
+    "position": 35000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.F.A.1"
+   },
+   "985E939C5F9546989EF6B9EA9FC165E6": {
+    "ancestorIds": [
+     "3ED24E5CE17A47BFB481CD81E2BF5E4A"
+    ],
+    "asnIdentifier": "S21029611",
+    "depth": 1,
+    "description": "Use appropriate tools strategically.",
+    "id": "985E939C5F9546989EF6B9EA9FC165E6",
+    "parentId": "3ED24E5CE17A47BFB481CD81E2BF5E4A",
+    "position": 6000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP5"
+   },
+   "98F200A15F5A4D2E88B7CCBD504119D1": {
+    "ancestorIds": [
+     "D53F92A5D97743D9BC11254538617A2E",
+     "9AFCF1EA66C04244AAD8F5317FA537CD",
+     "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21045523",
+    "depth": 4,
+    "description": "Solve systems of two linear equations in two variables algebraically, and estimate solutions by graphing the equations. Solve simple cases by inspection.",
+    "id": "98F200A15F5A4D2E88B7CCBD504119D1",
+    "parentId": "D53F92A5D97743D9BC11254538617A2E",
+    "position": 31000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.EE.C.8.b"
+   },
+   "99B565E7EC2141A98D0F2692F794E38F": {
+    "ancestorIds": [
+     "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21029693",
+    "depth": 2,
+    "description": "Work with radicals and integer exponents.",
+    "id": "99B565E7EC2141A98D0F2692F794E38F",
+    "parentId": "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+    "position": 17000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "8.EE.A"
+   },
+   "99E8AFBBFBC946B8BA65790AE98718D4": {
+    "ancestorIds": [
+     "3ED24E5CE17A47BFB481CD81E2BF5E4A"
+    ],
+    "asnIdentifier": "S21029609",
+    "depth": 1,
+    "description": "Construct viable arguments and critique the reasoning of others.",
+    "id": "99E8AFBBFBC946B8BA65790AE98718D4",
+    "parentId": "3ED24E5CE17A47BFB481CD81E2BF5E4A",
+    "position": 4000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP3"
+   },
+   "9AFCF1EA66C04244AAD8F5317FA537CD": {
+    "ancestorIds": [
+     "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21029695",
+    "depth": 2,
+    "description": "Analyze and solve linear equations and pairs of simultaneous linear equations.",
+    "id": "9AFCF1EA66C04244AAD8F5317FA537CD",
+    "parentId": "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+    "position": 25000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "8.EE.C"
+   },
+   "9BD53CCE231641B1A809D284CBCB303D": {
+    "ancestorIds": [
+     "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21029694",
+    "depth": 2,
+    "description": "Understand the connections between proportional relationships, lines, and linear equations.",
+    "id": "9BD53CCE231641B1A809D284CBCB303D",
+    "parentId": "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+    "position": 22000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "8.EE.B"
+   },
+   "9FF3861085784D53A0FD8C3D4AF5FBAE": {
+    "ancestorIds": [
+     "EDB3D8851B7C43118A1E807677C75A06",
+     "443F11D5E94B4716B88057C990A04C9E",
+     "FB5E5D1DE66B4F268C203D8CB3058937"
+    ],
+    "asnIdentifier": "S21045511",
+    "depth": 3,
+    "description": "Use rational approximations of irrational numbers to compare the size of irrational numbers, locate them approximately on a number line diagram, and estimate the value of expressions (e.g., π²).",
+    "id": "9FF3861085784D53A0FD8C3D4AF5FBAE",
+    "parentId": "EDB3D8851B7C43118A1E807677C75A06",
+    "position": 14000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.NS.A.2"
+   },
+   "A6AECBDBE3B14292BA41B8E08DC38E9A": {
+    "ancestorIds": [
+     "D53F92A5D97743D9BC11254538617A2E",
+     "9AFCF1EA66C04244AAD8F5317FA537CD",
+     "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21045522",
+    "depth": 4,
+    "description": "Explain that solutions to a system of two linear equations in two variables correspond to points of intersection of their graphs, because points of intersection satisfy both equations simultaneously.",
+    "id": "A6AECBDBE3B14292BA41B8E08DC38E9A",
+    "parentId": "D53F92A5D97743D9BC11254538617A2E",
+    "position": 30000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.EE.C.8.a"
+   },
+   "A77A528B74D3422A89D4B28FF5401269": {
+    "ancestorIds": [
+     "61DB6F33E81F4564992C580D4A9B0924",
+     "1C976898FA44478882B6CE32E1E852CE",
+     "BC999174F5BA4042985FDF30D174B307"
+    ],
+    "asnIdentifier": "S21045531",
+    "depth": 3,
+    "description": "Know that straight lines are widely used to model relationships between two quantitative variables. For scatter plots that suggest a linear association, informally fit a straight line, and informally assess the model fit by judging the closeness of the data points to the line.",
+    "id": "A77A528B74D3422A89D4B28FF5401269",
+    "parentId": "61DB6F33E81F4564992C580D4A9B0924",
+    "position": 45000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.SP.A.2"
+   },
+   "A7812F16DF2F4844B32DE488DCF832D1": {
+    "ancestorIds": [
+     "9AFCF1EA66C04244AAD8F5317FA537CD",
+     "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21045518",
+    "depth": 3,
+    "description": "Solve linear equations in one variable.",
+    "id": "A7812F16DF2F4844B32DE488DCF832D1",
+    "parentId": "9AFCF1EA66C04244AAD8F5317FA537CD",
+    "position": 26000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.EE.C.7"
+   },
+   "A7BF4F8FC7B64A7C82FCAD2A425137E4": {
+    "ancestorIds": [
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21029696",
+    "depth": 1,
+    "description": "Functions",
+    "id": "A7BF4F8FC7B64A7C82FCAD2A425137E4",
+    "parentId": "77A5FB9C2A724C3080462394F1976378",
+    "position": 33000
+   },
+   "AAB225C6DEDB482DAC0E2AB0B0D12570": {
+    "ancestorIds": [
+     "95B80BEB52214F8B9388E97B335B3CEE",
+     "A7BF4F8FC7B64A7C82FCAD2A425137E4",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21045527",
+    "depth": 3,
+    "description": "Interpret the equation y = mx + b as defining a linear function, whose graph is a straight line; give examples of functions that are not linear.",
+    "id": "AAB225C6DEDB482DAC0E2AB0B0D12570",
+    "parentId": "95B80BEB52214F8B9388E97B335B3CEE",
+    "position": 37000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.F.A.3"
+   },
+   "AFACDB49C6544F09A1D5701A9801DFC5": {
+    "ancestorIds": [
+     "3ED24E5CE17A47BFB481CD81E2BF5E4A"
+    ],
+    "asnIdentifier": "S21029610",
+    "depth": 1,
+    "description": "Model with mathematics.",
+    "id": "AFACDB49C6544F09A1D5701A9801DFC5",
+    "parentId": "3ED24E5CE17A47BFB481CD81E2BF5E4A",
+    "position": 5000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP4"
+   },
+   "B0AE59FC41EB4F968FF5A8AE040A9361": {
+    "ancestorIds": [
+     "9BD53CCE231641B1A809D284CBCB303D",
+     "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21045517",
+    "depth": 3,
+    "description": "Use similar triangles to explain why the slope m is the same between any two distinct points on a non-vertical line in the coordinate plane; derive the equation y = mx for a line through the origin and the equation y = mx + b for a line intercepting the vertical axis at b.",
+    "id": "B0AE59FC41EB4F968FF5A8AE040A9361",
+    "parentId": "9BD53CCE231641B1A809D284CBCB303D",
+    "position": 24000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.EE.B.6"
+   },
+   "B4E41B5C97274D12AA5CAFB0D4E45D32": {
+    "ancestorIds": [
+     "A7812F16DF2F4844B32DE488DCF832D1",
+     "9AFCF1EA66C04244AAD8F5317FA537CD",
+     "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21045519",
+    "depth": 4,
+    "description": "Give examples of linear equations in one variable with one solution, infinitely many solutions, or no solutions. Show which of these possibilities is the case by successively transforming the given equation into simpler forms, until an equivalent equation of the form x = a, a = a, or a = b results (where a and b are different numbers).",
+    "id": "B4E41B5C97274D12AA5CAFB0D4E45D32",
+    "parentId": "A7812F16DF2F4844B32DE488DCF832D1",
+    "position": 27000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.EE.C.7.a"
+   },
+   "B751AADE13224276905CF42E58E0A102": {
+    "ancestorIds": [
+     "A7BF4F8FC7B64A7C82FCAD2A425137E4",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21029698",
+    "depth": 2,
+    "description": "Use functions to model relationships between quantities.",
+    "id": "B751AADE13224276905CF42E58E0A102",
+    "parentId": "A7BF4F8FC7B64A7C82FCAD2A425137E4",
+    "position": 38000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "8.F.B"
+   },
+   "B93EFC7435834711A02330802D4153CC": {
+    "ancestorIds": [
+     "863E659BF463424B8767BF22C64DA38B",
+     "1906F2A2285247DF955E7498123FE846",
+     "364B8A181C3748959D9AC26CF183ABDE"
+    ],
+    "asnIdentifier": "S21045541",
+    "depth": 3,
+    "description": "Use informal arguments to establish facts about the angle sum and exterior angle of triangles, about the angles created when parallel lines are cut by a transversal, and the angle-angle criterion for similarity of triangles.",
+    "id": "B93EFC7435834711A02330802D4153CC",
+    "parentId": "863E659BF463424B8767BF22C64DA38B",
+    "position": 58000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.G.A.5"
+   },
+   "B993D30F996F4A8BA9A34ADE5E6F4F50": {
+    "ancestorIds": [
+     "65EF6112784743B7A6E27A9142629FF2",
+     "1906F2A2285247DF955E7498123FE846",
+     "364B8A181C3748959D9AC26CF183ABDE"
+    ],
+    "asnIdentifier": "S21045545",
+    "depth": 3,
+    "description": "State the formulas for the volumes of cones, cylinders, and spheres and use them to solve real-world and mathematical problems.",
+    "id": "B993D30F996F4A8BA9A34ADE5E6F4F50",
+    "parentId": "65EF6112784743B7A6E27A9142629FF2",
+    "position": 64000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.G.C.9"
+   },
+   "BC999174F5BA4042985FDF30D174B307": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029728",
+    "depth": 0,
+    "description": "Data, Statistics, and Probability",
+    "id": "BC999174F5BA4042985FDF30D174B307",
+    "parentId": null,
+    "position": 41000,
+    "statementLabel": "Standard",
+    "statementNotation": "DSP.3"
+   },
+   "C1965D2858354AFE92629E9CEE72F96C": {
+    "ancestorIds": [
+     "CEA3D69CCF9E4402B0E17ED034F42CB4",
+     "863E659BF463424B8767BF22C64DA38B",
+     "1906F2A2285247DF955E7498123FE846",
+     "364B8A181C3748959D9AC26CF183ABDE"
+    ],
+    "asnIdentifier": "S21045535",
+    "depth": 4,
+    "description": "Lines are taken to lines, and line segments to line segments of the same length.",
+    "id": "C1965D2858354AFE92629E9CEE72F96C",
+    "parentId": "CEA3D69CCF9E4402B0E17ED034F42CB4",
+    "position": 52000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.G.A.1.a"
+   },
+   "C72E1236FDCA43A98B336AC844C5EE42": {
+    "ancestorIds": [
+     "9BD53CCE231641B1A809D284CBCB303D",
+     "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21045516",
+    "depth": 3,
+    "description": "Graph proportional relationships, interpreting the unit rate as the slope of the graph. Compare two different proportional relationships represented in different ways.",
+    "id": "C72E1236FDCA43A98B336AC844C5EE42",
+    "parentId": "9BD53CCE231641B1A809D284CBCB303D",
+    "position": 23000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.EE.B.5"
+   },
+   "C7D9EAA4C3D34B3EAA3ACE56D06B94F8": {
+    "ancestorIds": [
+     "C9298814616940439133E9C5DED386C6",
+     "1906F2A2285247DF955E7498123FE846",
+     "364B8A181C3748959D9AC26CF183ABDE"
+    ],
+    "asnIdentifier": "S21045543",
+    "depth": 3,
+    "description": "Apply the Pythagorean Theorem to determine unknown side lengths in right triangles in real-world and mathematical problems in two and three dimensions.",
+    "id": "C7D9EAA4C3D34B3EAA3ACE56D06B94F8",
+    "parentId": "C9298814616940439133E9C5DED386C6",
+    "position": 61000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.G.B.7"
+   },
+   "C7F49D4BD0BC4B86A329CA359C9AFDB9": {
+    "ancestorIds": [
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21029687",
+    "depth": 1,
+    "description": "Expressions & Equations",
+    "id": "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+    "parentId": "77A5FB9C2A724C3080462394F1976378",
+    "position": 16000
+   },
+   "C9298814616940439133E9C5DED386C6": {
+    "ancestorIds": [
+     "1906F2A2285247DF955E7498123FE846",
+     "364B8A181C3748959D9AC26CF183ABDE"
+    ],
+    "asnIdentifier": "S21029786",
+    "depth": 2,
+    "description": "Understand and apply the Pythagorean Theorem.",
+    "id": "C9298814616940439133E9C5DED386C6",
+    "parentId": "1906F2A2285247DF955E7498123FE846",
+    "position": 59000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "8.G.B"
+   },
+   "CEA3D69CCF9E4402B0E17ED034F42CB4": {
+    "ancestorIds": [
+     "863E659BF463424B8767BF22C64DA38B",
+     "1906F2A2285247DF955E7498123FE846",
+     "364B8A181C3748959D9AC26CF183ABDE"
+    ],
+    "asnIdentifier": "S21045534",
+    "depth": 3,
+    "description": "Verify experimentally the properties of rotations, reflections, and translations:",
+    "id": "CEA3D69CCF9E4402B0E17ED034F42CB4",
+    "parentId": "863E659BF463424B8767BF22C64DA38B",
+    "position": 51000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.G.A.1"
+   },
+   "D324AC19A31C43D0BDD4E531F3587EDE": {
+    "ancestorIds": [
+     "863E659BF463424B8767BF22C64DA38B",
+     "1906F2A2285247DF955E7498123FE846",
+     "364B8A181C3748959D9AC26CF183ABDE"
+    ],
+    "asnIdentifier": "S21045539",
+    "depth": 3,
+    "description": "Describe the effect of dilations, translations, rotations, and reflections on two-dimensional figures using coordinates.",
+    "id": "D324AC19A31C43D0BDD4E531F3587EDE",
+    "parentId": "863E659BF463424B8767BF22C64DA38B",
+    "position": 56000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.G.A.3"
+   },
+   "D53F92A5D97743D9BC11254538617A2E": {
+    "ancestorIds": [
+     "9AFCF1EA66C04244AAD8F5317FA537CD",
+     "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21045521",
+    "depth": 3,
+    "description": "Analyze and solve pairs of simultaneous linear equations.",
+    "id": "D53F92A5D97743D9BC11254538617A2E",
+    "parentId": "9AFCF1EA66C04244AAD8F5317FA537CD",
+    "position": 29000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.EE.C.8"
+   },
+   "E1FFDA03A2304FBA95149307B230BB59": {
+    "ancestorIds": [
+     "C9298814616940439133E9C5DED386C6",
+     "1906F2A2285247DF955E7498123FE846",
+     "364B8A181C3748959D9AC26CF183ABDE"
+    ],
+    "asnIdentifier": "S21045542",
+    "depth": 3,
+    "description": "Explain a proof of the Pythagorean Theorem and its converse.",
+    "id": "E1FFDA03A2304FBA95149307B230BB59",
+    "parentId": "C9298814616940439133E9C5DED386C6",
+    "position": 60000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.G.B.6"
+   },
+   "E7A86F79949242AB8A907F8FC44117C5": {
+    "ancestorIds": [
+     "61DB6F33E81F4564992C580D4A9B0924",
+     "1C976898FA44478882B6CE32E1E852CE",
+     "BC999174F5BA4042985FDF30D174B307"
+    ],
+    "asnIdentifier": "S21045530",
+    "depth": 3,
+    "description": "Construct and interpret scatter plots for bivariate measurement data to investigate patterns of association between two quantities. Describe patterns such as clustering, outliers, positive or negative association, linear association, and nonlinear association.",
+    "id": "E7A86F79949242AB8A907F8FC44117C5",
+    "parentId": "61DB6F33E81F4564992C580D4A9B0924",
+    "position": 44000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.SP.A.1"
+   },
+   "EDB3D8851B7C43118A1E807677C75A06": {
+    "ancestorIds": [
+     "443F11D5E94B4716B88057C990A04C9E",
+     "FB5E5D1DE66B4F268C203D8CB3058937"
+    ],
+    "asnIdentifier": "S21029652",
+    "depth": 2,
+    "description": "Know that there are numbers that are not rational, and approximate them by rational numbers.",
+    "id": "EDB3D8851B7C43118A1E807677C75A06",
+    "parentId": "443F11D5E94B4716B88057C990A04C9E",
+    "position": 12000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "8.NS.A"
+   },
+   "F8BBDF32F703434887679530E9D26CCF": {
+    "ancestorIds": [
+     "CEA3D69CCF9E4402B0E17ED034F42CB4",
+     "863E659BF463424B8767BF22C64DA38B",
+     "1906F2A2285247DF955E7498123FE846",
+     "364B8A181C3748959D9AC26CF183ABDE"
+    ],
+    "asnIdentifier": "S21045536",
+    "depth": 4,
+    "description": "Angles are taken to angles of the same measure.",
+    "id": "F8BBDF32F703434887679530E9D26CCF",
+    "parentId": "CEA3D69CCF9E4402B0E17ED034F42CB4",
+    "position": 53000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.G.A.1.b"
+   },
+   "FB19F01EF70E4A41A1817F12C8823D34": {
+    "ancestorIds": [
+     "B751AADE13224276905CF42E58E0A102",
+     "A7BF4F8FC7B64A7C82FCAD2A425137E4",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21045528",
+    "depth": 3,
+    "description": "Construct a function to model a linear relationship between two quantities. Determine the rate of change and initial value of the function from a description of a relationship or from two (x, y) values, including reading these from a table or from a graph. Interpret the rate of change and initial value of a linear function in terms of the situation it models, and in terms of its graph or a table of values.",
+    "id": "FB19F01EF70E4A41A1817F12C8823D34",
+    "parentId": "B751AADE13224276905CF42E58E0A102",
+    "position": 39000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.F.B.4"
+   },
+   "FB5E5D1DE66B4F268C203D8CB3058937": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029615",
+    "depth": 0,
+    "description": "Number and Quantity",
+    "id": "FB5E5D1DE66B4F268C203D8CB3058937",
+    "parentId": null,
+    "position": 10000,
+    "statementLabel": "Standard",
+    "statementNotation": "NQ.1"
+   },
+   "FF2D217EB2F9403FA00F96914E1D7019": {
+    "ancestorIds": [
+     "99B565E7EC2141A98D0F2692F794E38F",
+     "C7F49D4BD0BC4B86A329CA359C9AFDB9",
+     "77A5FB9C2A724C3080462394F1976378"
+    ],
+    "asnIdentifier": "S21045515",
+    "depth": 3,
+    "description": "Perform operations with numbers expressed in scientific notation, including problems where both decimal and scientific notation are used. Use scientific notation and choose units of appropriate size for measurements of very large or very small quantities (e.g., use millimeters per year for seafloor spreading). Interpret scientific notation that has been generated by technology.",
+    "id": "FF2D217EB2F9403FA00F96914E1D7019",
+    "parentId": "99B565E7EC2141A98D0F2692F794E38F",
+    "position": 21000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "8.EE.A.4"
+   }
+  },
+  "subject": "Mathematics (2020-)",
+  "title": "Grade 8"
+ }
+}

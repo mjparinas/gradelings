@@ -51,7 +51,7 @@ export default async function SubjectPage({ params }: PageProps<"/curriculum/[fr
   ];
 
   return (
-    <SitePage cta play={playHref({ framework: f.id, grade, subject: course.subject })}>
+    <SitePage cta lead="trial" play={playHref({ framework: f.id, grade, subject: course.subject })}>
       <JsonLd
         data={[
           breadcrumbJsonLd(crumbs),

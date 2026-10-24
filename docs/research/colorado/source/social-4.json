@@ -1,0 +1,1046 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D21428307",
+   "id": "D21428307",
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.cde.state.co.us/cosocialstudies/cas-ss-p12-2022",
+   "title": "Colorado Academic Standards: Social Studies",
+   "valid": "2022"
+  },
+  "educationLevels": [
+   "04"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D21428307_grade-04",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": null,
+   "rightsHolder": "D2L Corporation",
+   "title": null
+  },
+  "normalizedSubject": "Social Studies",
+  "standards": {
+   "0125748A7D2E41028A6626B39847F882": {
+    "ancestorIds": [
+     "04777CB161FB4FE582454573EC07D2F5",
+     "C5A0BE497051410682641EAB8D66C66C",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428654",
+    "depth": 3,
+    "description": "Define choice and opportunity cost.",
+    "id": "0125748A7D2E41028A6626B39847F882",
+    "parentId": "04777CB161FB4FE582454573EC07D2F5",
+    "position": 66000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.PF.1.a"
+   },
+   "0295786AC40C4FE09653F642C1542C66": {
+    "ancestorIds": [
+     "AB7500CC95D1415AABB76308C08219E1",
+     "5B09CA350BF74E70B47975E5447733BE",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428650",
+    "depth": 3,
+    "description": "Describe how a citizen might engage in local and state government to demonstrate their rights or initiate change.",
+    "id": "0295786AC40C4FE09653F642C1542C66",
+    "parentId": "AB7500CC95D1415AABB76308C08219E1",
+    "position": 62000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.C.2.e"
+   },
+   "04269350B1814F2DA713CF85E8BB2849": {
+    "ancestorIds": [
+     "BD23492D8DF74564AC462AC4C5D26F8A",
+     "499C063A19894B2AA869F6E86555FE3C",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428635",
+    "depth": 3,
+    "description": "Set goals and develop strategies which take into account positive and negative incentives in order to remain focused on learning goals.",
+    "id": "04269350B1814F2DA713CF85E8BB2849",
+    "parentId": "BD23492D8DF74564AC462AC4C5D26F8A",
+    "position": 47000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "4.EES.1.1"
+   },
+   "04777CB161FB4FE582454573EC07D2F5": {
+    "ancestorIds": [
+     "C5A0BE497051410682641EAB8D66C66C",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428653",
+    "depth": 2,
+    "description": "Determine the opportunity cost when making a choice.",
+    "id": "04777CB161FB4FE582454573EC07D2F5",
+    "parentId": "C5A0BE497051410682641EAB8D66C66C",
+    "position": 65000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "4.PF.1"
+   },
+   "04C0E36C42D8433384B7F3418632F803": {
+    "ancestorIds": [
+     "04777CB161FB4FE582454573EC07D2F5",
+     "C5A0BE497051410682641EAB8D66C66C",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428656",
+    "depth": 3,
+    "description": "Analyze scenarios of choices including opportunity cost.",
+    "id": "04C0E36C42D8433384B7F3418632F803",
+    "parentId": "04777CB161FB4FE582454573EC07D2F5",
+    "position": 68000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.PF.1.c"
+   },
+   "0B5B74FBC1B64BC693FD4B6CF3A62A69": {
+    "ancestorIds": [
+     "8CABE91B943944DBA1000443B9081DC6",
+     "1A44D87D4D0D4C96BBF941BDD1B5FEE3",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428622",
+    "depth": 3,
+    "description": "Ask questions to develop further understanding about the geography and development of Colorado.",
+    "id": "0B5B74FBC1B64BC693FD4B6CF3A62A69",
+    "parentId": "8CABE91B943944DBA1000443B9081DC6",
+    "position": 34000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "4.GES.1.2"
+   },
+   "16E283DD5D2F4D6CB22FE50BC2D4FDDD": {
+    "ancestorIds": [
+     "359AFB6CF4F84206A17CD22165152BFE",
+     "5B09CA350BF74E70B47975E5447733BE",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428644",
+    "depth": 3,
+    "description": "Participate in social or community activities.",
+    "id": "16E283DD5D2F4D6CB22FE50BC2D4FDDD",
+    "parentId": "359AFB6CF4F84206A17CD22165152BFE",
+    "position": 56000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "4.CES.1.3"
+   },
+   "1A44D87D4D0D4C96BBF941BDD1B5FEE3": {
+    "ancestorIds": [
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428614",
+    "depth": 1,
+    "description": "Geography",
+    "id": "1A44D87D4D0D4C96BBF941BDD1B5FEE3",
+    "parentId": "960A3B30193D4AECAE30115002B56115",
+    "position": 26000,
+    "statementLabel": "Content Area"
+   },
+   "24B5B6A2D2884EEFB61FE2E507FF93CA": {
+    "ancestorIds": [
+     "8CABE91B943944DBA1000443B9081DC6",
+     "1A44D87D4D0D4C96BBF941BDD1B5FEE3",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428618",
+    "depth": 3,
+    "description": "Create and investigate geographic questions about Colorado in relation to other places.",
+    "id": "24B5B6A2D2884EEFB61FE2E507FF93CA",
+    "parentId": "8CABE91B943944DBA1000443B9081DC6",
+    "position": 30000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.G.1.c"
+   },
+   "2F5AD9A3AFDD4D599D7B49FA3E7DD613": {
+    "ancestorIds": [
+     "04777CB161FB4FE582454573EC07D2F5",
+     "C5A0BE497051410682641EAB8D66C66C",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428658",
+    "depth": 3,
+    "description": "Regulate one's emotions, thoughts, and behaviors in different situations when making a purchase.",
+    "id": "2F5AD9A3AFDD4D599D7B49FA3E7DD613",
+    "parentId": "04777CB161FB4FE582454573EC07D2F5",
+    "position": 70000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "4.PFES.1.2"
+   },
+   "359AFB6CF4F84206A17CD22165152BFE": {
+    "ancestorIds": [
+     "5B09CA350BF74E70B47975E5447733BE",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428637",
+    "depth": 2,
+    "description": "Investigate multiple perspectives on civic issues.",
+    "id": "359AFB6CF4F84206A17CD22165152BFE",
+    "parentId": "5B09CA350BF74E70B47975E5447733BE",
+    "position": 49000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "4.C.1"
+   },
+   "386305E9093E45778E6B68A1553407F7": {
+    "ancestorIds": [
+     "9B3103EC0D384FBABADB956AF284CADE",
+     "7E8E70886CB548E19C7731031940E719",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428601",
+    "depth": 3,
+    "description": "Draw inferences about Colorado history from primary sources such as journals, diaries, maps, treaties, oral histories, etc.",
+    "id": "386305E9093E45778E6B68A1553407F7",
+    "parentId": "9B3103EC0D384FBABADB956AF284CADE",
+    "position": 13000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.H.1.a"
+   },
+   "3BBFF88F78F04D6396A89AA17F61C9EC": {
+    "ancestorIds": [
+     "8CABE91B943944DBA1000443B9081DC6",
+     "1A44D87D4D0D4C96BBF941BDD1B5FEE3",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428617",
+    "depth": 3,
+    "description": "Use geographic grids, including latitude and longitude, to locate places and answer questions about maps and images of Colorado.",
+    "id": "3BBFF88F78F04D6396A89AA17F61C9EC",
+    "parentId": "8CABE91B943944DBA1000443B9081DC6",
+    "position": 29000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.G.1.b"
+   },
+   "3FAA0D83A2014FAB9A850DAC4DDAAF79": {
+    "ancestorIds": [
+     "8CABE91B943944DBA1000443B9081DC6",
+     "1A44D87D4D0D4C96BBF941BDD1B5FEE3",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428619",
+    "depth": 3,
+    "description": "Illustrate, using geographic tools, how places in Colorado have changed and developed over time due to human activity.",
+    "id": "3FAA0D83A2014FAB9A850DAC4DDAAF79",
+    "parentId": "8CABE91B943944DBA1000443B9081DC6",
+    "position": 31000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.G.1.d"
+   },
+   "4112E044DD5842C28E57B2E70E371FBE": {
+    "ancestorIds": [
+     "1A44D87D4D0D4C96BBF941BDD1B5FEE3",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428623",
+    "depth": 2,
+    "description": "Examine the relationship between the physical environment and its effect on human activity.",
+    "id": "4112E044DD5842C28E57B2E70E371FBE",
+    "parentId": "1A44D87D4D0D4C96BBF941BDD1B5FEE3",
+    "position": 35000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "4.G.2"
+   },
+   "499C063A19894B2AA869F6E86555FE3C": {
+    "ancestorIds": [
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428629",
+    "depth": 1,
+    "description": "Economics",
+    "id": "499C063A19894B2AA869F6E86555FE3C",
+    "parentId": "960A3B30193D4AECAE30115002B56115",
+    "position": 41000,
+    "statementLabel": "Content Area"
+   },
+   "4D0CB7E40A4B4262B9C0144D79A82DB2": {
+    "ancestorIds": [
+     "359AFB6CF4F84206A17CD22165152BFE",
+     "5B09CA350BF74E70B47975E5447733BE",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428642",
+    "depth": 3,
+    "description": "Regulate reactions to differing perspectives.",
+    "id": "4D0CB7E40A4B4262B9C0144D79A82DB2",
+    "parentId": "359AFB6CF4F84206A17CD22165152BFE",
+    "position": 54000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "4.CES.1.1"
+   },
+   "4F6FACF050394A358AD2EACB99F907AD": {
+    "ancestorIds": [
+     "9E8FDA17382F4DD3B1361D6C530ACE29",
+     "7E8E70886CB548E19C7731031940E719",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428612",
+    "depth": 3,
+    "description": "Describe the impact of various technological developments. For example: Changes in mining technologies, agricultural technology (center pivot irrigation), transportation, early 20th century industrial developments, and 20th century nuclear and computer technologies.",
+    "id": "4F6FACF050394A358AD2EACB99F907AD",
+    "parentId": "9E8FDA17382F4DD3B1361D6C530ACE29",
+    "position": 24000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.H.2.d"
+   },
+   "4F913EF1CF3B4304842B621B02433565": {
+    "ancestorIds": [
+     "359AFB6CF4F84206A17CD22165152BFE",
+     "5B09CA350BF74E70B47975E5447733BE",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428643",
+    "depth": 3,
+    "description": "Identify and explain multiple perspectives when exploring issues faced by the state of Colorado.",
+    "id": "4F913EF1CF3B4304842B621B02433565",
+    "parentId": "359AFB6CF4F84206A17CD22165152BFE",
+    "position": 55000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "4.CES.1.2"
+   },
+   "50F251D263924417A59D453CF3B1B69A": {
+    "ancestorIds": [
+     "359AFB6CF4F84206A17CD22165152BFE",
+     "5B09CA350BF74E70B47975E5447733BE",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428638",
+    "depth": 3,
+    "description": "Give examples of issues faced by the state of Colorado and develop possible solutions.",
+    "id": "50F251D263924417A59D453CF3B1B69A",
+    "parentId": "359AFB6CF4F84206A17CD22165152BFE",
+    "position": 50000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.C.1.a"
+   },
+   "55055F19312E405087FE5D3411A13DAE": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21428308",
+    "depth": 0,
+    "description": "Prepared Graduates in Social Studies",
+    "id": "55055F19312E405087FE5D3411A13DAE",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": "Content Area"
+   },
+   "58C83337B893420CA41611EC897636EB": {
+    "ancestorIds": [
+     "8CABE91B943944DBA1000443B9081DC6",
+     "1A44D87D4D0D4C96BBF941BDD1B5FEE3",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428620",
+    "depth": 3,
+    "description": "Describe similarities and differences between the physical geography of Colorado and its neighboring states.",
+    "id": "58C83337B893420CA41611EC897636EB",
+    "parentId": "8CABE91B943944DBA1000443B9081DC6",
+    "position": 32000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.G.1.e"
+   },
+   "59B7D07B55714F6EB1F5199CDC51C280": {
+    "ancestorIds": [
+     "359AFB6CF4F84206A17CD22165152BFE",
+     "5B09CA350BF74E70B47975E5447733BE",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428639",
+    "depth": 3,
+    "description": "Provide supportive arguments for both sides of a current public policy debate involving diverse stakeholders.",
+    "id": "59B7D07B55714F6EB1F5199CDC51C280",
+    "parentId": "359AFB6CF4F84206A17CD22165152BFE",
+    "position": 51000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.C.1.b"
+   },
+   "5B09CA350BF74E70B47975E5447733BE": {
+    "ancestorIds": [
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428636",
+    "depth": 1,
+    "description": "Civics",
+    "id": "5B09CA350BF74E70B47975E5447733BE",
+    "parentId": "960A3B30193D4AECAE30115002B56115",
+    "position": 48000,
+    "statementLabel": "Content Area"
+   },
+   "5E4C290B573C4F7DBDB35AC2ED8E5D49": {
+    "ancestorIds": [
+     "4112E044DD5842C28E57B2E70E371FBE",
+     "1A44D87D4D0D4C96BBF941BDD1B5FEE3",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428627",
+    "depth": 3,
+    "description": "Describe how places in Colorado are connected by movement of goods, services, and technology.",
+    "id": "5E4C290B573C4F7DBDB35AC2ED8E5D49",
+    "parentId": "4112E044DD5842C28E57B2E70E371FBE",
+    "position": 39000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.G.2.d"
+   },
+   "60B13190A73D421693625B58955DA3F5": {
+    "ancestorIds": [
+     "9B3103EC0D384FBABADB956AF284CADE",
+     "7E8E70886CB548E19C7731031940E719",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428604",
+    "depth": 3,
+    "description": "Identify and describe how political and cultural groups have affected the development of the region. Including but not limited to: African American, Latino, Asian American, Indigenous Peoples, religious groups, and European settlers.",
+    "id": "60B13190A73D421693625B58955DA3F5",
+    "parentId": "9B3103EC0D384FBABADB956AF284CADE",
+    "position": 16000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.H.1.d"
+   },
+   "61B3C1649F9A4317B6B8D67FA5C9F865": {
+    "ancestorIds": [
+     "55055F19312E405087FE5D3411A13DAE"
+    ],
+    "asnIdentifier": "S21428309",
+    "depth": 1,
+    "description": "Apply the process of inquiry to examine and analyze how historical knowledge is viewed, constructed, and interpreted.",
+    "id": "61B3C1649F9A4317B6B8D67FA5C9F865",
+    "parentId": "55055F19312E405087FE5D3411A13DAE",
+    "position": 2000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.1"
+   },
+   "671029E66E584CDEAF92EB3E9537FC3A": {
+    "ancestorIds": [
+     "AB7500CC95D1415AABB76308C08219E1",
+     "5B09CA350BF74E70B47975E5447733BE",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428646",
+    "depth": 3,
+    "description": "Explain the historical foundation and events that led to the Colorado Constitution and the formation of the three branches of Colorado government.",
+    "id": "671029E66E584CDEAF92EB3E9537FC3A",
+    "parentId": "AB7500CC95D1415AABB76308C08219E1",
+    "position": 58000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.C.2.a"
+   },
+   "7339A262EC104519B0FDBBEB84F5760E": {
+    "ancestorIds": [
+     "359AFB6CF4F84206A17CD22165152BFE",
+     "5B09CA350BF74E70B47975E5447733BE",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428640",
+    "depth": 3,
+    "description": "Discuss how various individuals and groups influence the way an issue affecting the state is viewed and resolved. Including but not limited to the contributions of African Americans, Latinos, Japanese Americans, Indigenous Peoples, LGBTQ, and religious groups.",
+    "id": "7339A262EC104519B0FDBBEB84F5760E",
+    "parentId": "359AFB6CF4F84206A17CD22165152BFE",
+    "position": 52000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.C.1.c"
+   },
+   "7673136D6B6040B2803AC772D6539811": {
+    "ancestorIds": [
+     "BD23492D8DF74564AC462AC4C5D26F8A",
+     "499C063A19894B2AA869F6E86555FE3C",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428631",
+    "depth": 3,
+    "description": "Define positive and negative economic incentives and describe how people typically respond to those incentives.",
+    "id": "7673136D6B6040B2803AC772D6539811",
+    "parentId": "BD23492D8DF74564AC462AC4C5D26F8A",
+    "position": 43000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.E.1.a"
+   },
+   "7A1DA4C07FB34F00B1387A8418F371B4": {
+    "ancestorIds": [
+     "9B3103EC0D384FBABADB956AF284CADE",
+     "7E8E70886CB548E19C7731031940E719",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428602",
+    "depth": 3,
+    "description": "Identify cause-and-effect relationships using primary sources to understand the history of Colorado's development.",
+    "id": "7A1DA4C07FB34F00B1387A8418F371B4",
+    "parentId": "9B3103EC0D384FBABADB956AF284CADE",
+    "position": 14000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.H.1.b"
+   },
+   "7C5499FE659B48039F7C77C6163B7FEB": {
+    "ancestorIds": [
+     "9B3103EC0D384FBABADB956AF284CADE",
+     "7E8E70886CB548E19C7731031940E719",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428605",
+    "depth": 3,
+    "description": "Discuss the multiple perspectives of settler colonialism/Westward Expansion and the impact on the political and cultural landscape of the region presently known as Colorado.",
+    "id": "7C5499FE659B48039F7C77C6163B7FEB",
+    "parentId": "9B3103EC0D384FBABADB956AF284CADE",
+    "position": 17000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.H.1.e"
+   },
+   "7D0FB29DACF74127959AD2E1C80E6785": {
+    "ancestorIds": [
+     "55055F19312E405087FE5D3411A13DAE"
+    ],
+    "asnIdentifier": "S21428313",
+    "depth": 1,
+    "description": "Evaluate how scarce resources are allocated in societies through the analysis of individual choice, market interaction, and public policy.",
+    "id": "7D0FB29DACF74127959AD2E1C80E6785",
+    "parentId": "55055F19312E405087FE5D3411A13DAE",
+    "position": 6000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.5"
+   },
+   "7E8E70886CB548E19C7731031940E719": {
+    "ancestorIds": [
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428599",
+    "depth": 1,
+    "description": "History",
+    "id": "7E8E70886CB548E19C7731031940E719",
+    "parentId": "960A3B30193D4AECAE30115002B56115",
+    "position": 11000,
+    "statementLabel": "Content Area"
+   },
+   "805B992E6846432EAA41AF1659EA8898": {
+    "ancestorIds": [
+     "55055F19312E405087FE5D3411A13DAE"
+    ],
+    "asnIdentifier": "S21428316",
+    "depth": 1,
+    "description": "Apply economic reasoning skills to make informed personal financial decisions.",
+    "id": "805B992E6846432EAA41AF1659EA8898",
+    "parentId": "55055F19312E405087FE5D3411A13DAE",
+    "position": 9000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.8"
+   },
+   "83C19E222E4B4EECBA806A03D908827E": {
+    "ancestorIds": [
+     "55055F19312E405087FE5D3411A13DAE"
+    ],
+    "asnIdentifier": "S21428310",
+    "depth": 1,
+    "description": "Analyze historical time periods and patterns of continuity and change, through multiple perspectives, within and among cultures and societies.",
+    "id": "83C19E222E4B4EECBA806A03D908827E",
+    "parentId": "55055F19312E405087FE5D3411A13DAE",
+    "position": 3000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.2"
+   },
+   "89D51C760C9843E594A8868A8BE3F348": {
+    "ancestorIds": [
+     "AB7500CC95D1415AABB76308C08219E1",
+     "5B09CA350BF74E70B47975E5447733BE",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428648",
+    "depth": 3,
+    "description": "Identify and explain the services the state government provides and how those services are funded.",
+    "id": "89D51C760C9843E594A8868A8BE3F348",
+    "parentId": "AB7500CC95D1415AABB76308C08219E1",
+    "position": 60000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.C.2.c"
+   },
+   "8C91D3E1D2D545C29C09B55113691561": {
+    "ancestorIds": [
+     "AB7500CC95D1415AABB76308C08219E1",
+     "5B09CA350BF74E70B47975E5447733BE",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428651",
+    "depth": 3,
+    "description": "Recognize how members of a community rely on each other to make decisions and enact change.",
+    "id": "8C91D3E1D2D545C29C09B55113691561",
+    "parentId": "AB7500CC95D1415AABB76308C08219E1",
+    "position": 63000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "4.CES.2.1"
+   },
+   "8CABE91B943944DBA1000443B9081DC6": {
+    "ancestorIds": [
+     "1A44D87D4D0D4C96BBF941BDD1B5FEE3",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428615",
+    "depth": 2,
+    "description": "Use geographic tools to research and answer questions about Colorado geography.",
+    "id": "8CABE91B943944DBA1000443B9081DC6",
+    "parentId": "1A44D87D4D0D4C96BBF941BDD1B5FEE3",
+    "position": 27000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "4.G.1"
+   },
+   "8E1650D51C65444587605FFE9A0EC8D1": {
+    "ancestorIds": [
+     "8CABE91B943944DBA1000443B9081DC6",
+     "1A44D87D4D0D4C96BBF941BDD1B5FEE3",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428616",
+    "depth": 3,
+    "description": "Answer questions about Colorado regions using maps and other geographic tools.",
+    "id": "8E1650D51C65444587605FFE9A0EC8D1",
+    "parentId": "8CABE91B943944DBA1000443B9081DC6",
+    "position": 28000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.G.1.a"
+   },
+   "902E50E4AFA04F689C03E566A612DE5C": {
+    "ancestorIds": [
+     "9E8FDA17382F4DD3B1361D6C530ACE29",
+     "7E8E70886CB548E19C7731031940E719",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428609",
+    "depth": 3,
+    "description": "Construct a timeline of the major events in Colorado history.",
+    "id": "902E50E4AFA04F689C03E566A612DE5C",
+    "parentId": "9E8FDA17382F4DD3B1361D6C530ACE29",
+    "position": 21000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.H.2.a"
+   },
+   "90D588C1698B4A2FA536E648086D9192": {
+    "ancestorIds": [
+     "55055F19312E405087FE5D3411A13DAE"
+    ],
+    "asnIdentifier": "S21428312",
+    "depth": 1,
+    "description": "Examine the characteristics of places and regions, and the changing nature among geographic and human interactions.",
+    "id": "90D588C1698B4A2FA536E648086D9192",
+    "parentId": "55055F19312E405087FE5D3411A13DAE",
+    "position": 5000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.4"
+   },
+   "917F9044EC004DDCBC4758FB8E1F6CD5": {
+    "ancestorIds": [
+     "04777CB161FB4FE582454573EC07D2F5",
+     "C5A0BE497051410682641EAB8D66C66C",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428655",
+    "depth": 3,
+    "description": "Determine the relationship between long-term goals and opportunity cost.",
+    "id": "917F9044EC004DDCBC4758FB8E1F6CD5",
+    "parentId": "04777CB161FB4FE582454573EC07D2F5",
+    "position": 67000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.PF.1.b"
+   },
+   "960A3B30193D4AECAE30115002B56115": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21428598",
+    "depth": 0,
+    "description": "Fourth Grade",
+    "id": "960A3B30193D4AECAE30115002B56115",
+    "parentId": null,
+    "position": 10000
+   },
+   "96D9196CC24646EEBE07A0465D167656": {
+    "ancestorIds": [
+     "9E8FDA17382F4DD3B1361D6C530ACE29",
+     "7E8E70886CB548E19C7731031940E719",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428613",
+    "depth": 3,
+    "description": "Recognize and describe cause-and-effect relationships within Colorado history and draw conclusions about how various events and people affected the development of the state.",
+    "id": "96D9196CC24646EEBE07A0465D167656",
+    "parentId": "9E8FDA17382F4DD3B1361D6C530ACE29",
+    "position": 25000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "4.HES.2.1"
+   },
+   "9B3103EC0D384FBABADB956AF284CADE": {
+    "ancestorIds": [
+     "7E8E70886CB548E19C7731031940E719",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428600",
+    "depth": 2,
+    "description": "Analyze primary and secondary sources from multiple points of view to develop an understanding of the history of Colorado.",
+    "id": "9B3103EC0D384FBABADB956AF284CADE",
+    "parentId": "7E8E70886CB548E19C7731031940E719",
+    "position": 12000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "4.H.1"
+   },
+   "9C66511D4E7843CA9115F177E329C39B": {
+    "ancestorIds": [
+     "9B3103EC0D384FBABADB956AF284CADE",
+     "7E8E70886CB548E19C7731031940E719",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428606",
+    "depth": 3,
+    "description": "Identify and explain the perspectives of the various groups important in Colorado history when exploring the development of the state. For example: African American, Latino, Asian American, Indigenous Peoples, LGBTQ, religious groups, working class, and labor unions.",
+    "id": "9C66511D4E7843CA9115F177E329C39B",
+    "parentId": "9B3103EC0D384FBABADB956AF284CADE",
+    "position": 18000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "4.HES.1.1"
+   },
+   "9D58884529AE4CCBB7A09B72E4BE6A23": {
+    "ancestorIds": [
+     "9E8FDA17382F4DD3B1361D6C530ACE29",
+     "7E8E70886CB548E19C7731031940E719",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428610",
+    "depth": 3,
+    "description": "Explain the relationship between major events in Colorado history and events in United States history during the same era. Including but not limited to: Colorado statehood, the Ludlow and Sand Creek Massacres, creation of national parks in Colorado, the Great Depression, the Dust Bowl, Amaché, Chicano movement, and busing in Denver.",
+    "id": "9D58884529AE4CCBB7A09B72E4BE6A23",
+    "parentId": "9E8FDA17382F4DD3B1361D6C530ACE29",
+    "position": 22000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.H.2.b"
+   },
+   "9E8FDA17382F4DD3B1361D6C530ACE29": {
+    "ancestorIds": [
+     "7E8E70886CB548E19C7731031940E719",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428608",
+    "depth": 2,
+    "description": "Describe the historical eras, individuals, groups, ideas, and themes in Colorado history and their relationship to key events in the United States within the same historical period.",
+    "id": "9E8FDA17382F4DD3B1361D6C530ACE29",
+    "parentId": "7E8E70886CB548E19C7731031940E719",
+    "position": 20000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "4.H.2"
+   },
+   "9EFF3AD938C0422691F725B1046FAE25": {
+    "ancestorIds": [
+     "4112E044DD5842C28E57B2E70E371FBE",
+     "1A44D87D4D0D4C96BBF941BDD1B5FEE3",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428628",
+    "depth": 3,
+    "description": "Define the problems faced by people in Colorado because of the physical environment they encountered.",
+    "id": "9EFF3AD938C0422691F725B1046FAE25",
+    "parentId": "4112E044DD5842C28E57B2E70E371FBE",
+    "position": 40000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "4.GES.2.1"
+   },
+   "A9AEF20A7822476AA4CB8E9353780439": {
+    "ancestorIds": [
+     "BD23492D8DF74564AC462AC4C5D26F8A",
+     "499C063A19894B2AA869F6E86555FE3C",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428634",
+    "depth": 3,
+    "description": "Explain how productive resources (natural, human, and capital) have influenced the types of goods produced and services provided in Colorado.",
+    "id": "A9AEF20A7822476AA4CB8E9353780439",
+    "parentId": "BD23492D8DF74564AC462AC4C5D26F8A",
+    "position": 46000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.E.1.d"
+   },
+   "AA273033D3AE4241BD1369B61FE918B9": {
+    "ancestorIds": [
+     "AB7500CC95D1415AABB76308C08219E1",
+     "5B09CA350BF74E70B47975E5447733BE",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428649",
+    "depth": 3,
+    "description": "Describe how the decisions of the state government affect local governments and interact with the federal government and sovereign indigenous nations.",
+    "id": "AA273033D3AE4241BD1369B61FE918B9",
+    "parentId": "AB7500CC95D1415AABB76308C08219E1",
+    "position": 61000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.C.2.d"
+   },
+   "AB7500CC95D1415AABB76308C08219E1": {
+    "ancestorIds": [
+     "5B09CA350BF74E70B47975E5447733BE",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428645",
+    "depth": 2,
+    "description": "Describe the origins, structures, and functions of the Colorado government.",
+    "id": "AB7500CC95D1415AABB76308C08219E1",
+    "parentId": "5B09CA350BF74E70B47975E5447733BE",
+    "position": 57000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "4.C.2"
+   },
+   "B3AFD3BC76894375A9209BDC928FF20B": {
+    "ancestorIds": [
+     "04777CB161FB4FE582454573EC07D2F5",
+     "C5A0BE497051410682641EAB8D66C66C",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428659",
+    "depth": 3,
+    "description": "Ask questions to develop further personal understanding of how to make informed purchases.",
+    "id": "B3AFD3BC76894375A9209BDC928FF20B",
+    "parentId": "04777CB161FB4FE582454573EC07D2F5",
+    "position": 71000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "4.PFES.1.3"
+   },
+   "BD23492D8DF74564AC462AC4C5D26F8A": {
+    "ancestorIds": [
+     "499C063A19894B2AA869F6E86555FE3C",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428630",
+    "depth": 2,
+    "description": "Explain how people respond to positive and negative incentives.",
+    "id": "BD23492D8DF74564AC462AC4C5D26F8A",
+    "parentId": "499C063A19894B2AA869F6E86555FE3C",
+    "position": 42000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "4.E.1"
+   },
+   "C0B20D92AEDD4FFB9B2176C0A1B04F82": {
+    "ancestorIds": [
+     "359AFB6CF4F84206A17CD22165152BFE",
+     "5B09CA350BF74E70B47975E5447733BE",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428641",
+    "depth": 3,
+    "description": "Identify and use appropriate sources to investigate and analyze issues from multiple diverse perspectives.",
+    "id": "C0B20D92AEDD4FFB9B2176C0A1B04F82",
+    "parentId": "359AFB6CF4F84206A17CD22165152BFE",
+    "position": 53000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.C.1.d"
+   },
+   "C5A0BE497051410682641EAB8D66C66C": {
+    "ancestorIds": [
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428652",
+    "depth": 1,
+    "description": "Personal Financial Literacy",
+    "id": "C5A0BE497051410682641EAB8D66C66C",
+    "parentId": "960A3B30193D4AECAE30115002B56115",
+    "position": 64000,
+    "statementLabel": "Content Area"
+   },
+   "D58FDD0EA5AB4A65A991B0BAF1F696EE": {
+    "ancestorIds": [
+     "BD23492D8DF74564AC462AC4C5D26F8A",
+     "499C063A19894B2AA869F6E86555FE3C",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428633",
+    "depth": 3,
+    "description": "Give examples of the kinds of goods and services produced in Colorado, in different historical periods, and their connection to economic incentives.",
+    "id": "D58FDD0EA5AB4A65A991B0BAF1F696EE",
+    "parentId": "BD23492D8DF74564AC462AC4C5D26F8A",
+    "position": 45000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.E.1.c"
+   },
+   "D5FC9340DB774581B0292ACD41BEBD79": {
+    "ancestorIds": [
+     "AB7500CC95D1415AABB76308C08219E1",
+     "5B09CA350BF74E70B47975E5447733BE",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428647",
+    "depth": 3,
+    "description": "Identify and explain a variety of roles leaders, citizens, and others play in state government.",
+    "id": "D5FC9340DB774581B0292ACD41BEBD79",
+    "parentId": "AB7500CC95D1415AABB76308C08219E1",
+    "position": 59000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.C.2.b"
+   },
+   "D9E3735E14154F22990D473E0A758262": {
+    "ancestorIds": [
+     "55055F19312E405087FE5D3411A13DAE"
+    ],
+    "asnIdentifier": "S21428315",
+    "depth": 1,
+    "description": "Analyze the origins, structures, and functions of governments to evaluate the impact on citizens and the global society.",
+    "id": "D9E3735E14154F22990D473E0A758262",
+    "parentId": "55055F19312E405087FE5D3411A13DAE",
+    "position": 8000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.7"
+   },
+   "DB71251C9E414EBFA03E2F30414EB93F": {
+    "ancestorIds": [
+     "9B3103EC0D384FBABADB956AF284CADE",
+     "7E8E70886CB548E19C7731031940E719",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428603",
+    "depth": 3,
+    "description": "Explain, through multiple perspectives, the human interactions among people and cultures that are indigenous to or migrated to present-day Colorado. Including but not limited to: historic tribes of Colorado, the Ute Mountain Ute, Southern Ute, Spanish explorers, trappers, and traders.",
+    "id": "DB71251C9E414EBFA03E2F30414EB93F",
+    "parentId": "9B3103EC0D384FBABADB956AF284CADE",
+    "position": 15000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.H.1.c"
+   },
+   "DC21B397B1954175BFCDAD8D21D02602": {
+    "ancestorIds": [
+     "8CABE91B943944DBA1000443B9081DC6",
+     "1A44D87D4D0D4C96BBF941BDD1B5FEE3",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428621",
+    "depth": 3,
+    "description": "Articulate the most effective tools to access information about the geography of Colorado.",
+    "id": "DC21B397B1954175BFCDAD8D21D02602",
+    "parentId": "8CABE91B943944DBA1000443B9081DC6",
+    "position": 33000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "4.GES.1.1"
+   },
+   "E151D70BF8374F8FA09FE9CEA589157B": {
+    "ancestorIds": [
+     "04777CB161FB4FE582454573EC07D2F5",
+     "C5A0BE497051410682641EAB8D66C66C",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428657",
+    "depth": 3,
+    "description": "Make connections between information gathered and personal experiences to apply and/or test solutions when making a purchase.",
+    "id": "E151D70BF8374F8FA09FE9CEA589157B",
+    "parentId": "04777CB161FB4FE582454573EC07D2F5",
+    "position": 69000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "4.PFES.1.1"
+   },
+   "E5EDA8BBA25F4E7EB661CF6DF885D589": {
+    "ancestorIds": [
+     "4112E044DD5842C28E57B2E70E371FBE",
+     "1A44D87D4D0D4C96BBF941BDD1B5FEE3",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428626",
+    "depth": 3,
+    "description": "Analyze how people use geographic factors in creating settlements and have adapted to and modified the local physical environment.",
+    "id": "E5EDA8BBA25F4E7EB661CF6DF885D589",
+    "parentId": "4112E044DD5842C28E57B2E70E371FBE",
+    "position": 38000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.G.2.c"
+   },
+   "E7C25271BD4A4EB889FA3811321C61A7": {
+    "ancestorIds": [
+     "55055F19312E405087FE5D3411A13DAE"
+    ],
+    "asnIdentifier": "S21428311",
+    "depth": 1,
+    "description": "Apply geographic representations and perspectives to analyze human movement, spatial patterns, systems, and the connections and relationships among them.",
+    "id": "E7C25271BD4A4EB889FA3811321C61A7",
+    "parentId": "55055F19312E405087FE5D3411A13DAE",
+    "position": 4000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.3"
+   },
+   "E9CE0E20F1944591B7ACB3F2B8D00E9A": {
+    "ancestorIds": [
+     "BD23492D8DF74564AC462AC4C5D26F8A",
+     "499C063A19894B2AA869F6E86555FE3C",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428632",
+    "depth": 3,
+    "description": "In a given situation, create a plan of appropriate incentives to achieve a desired result. For example: Offering a prize to the person who picks up the most trash on the playground.",
+    "id": "E9CE0E20F1944591B7ACB3F2B8D00E9A",
+    "parentId": "BD23492D8DF74564AC462AC4C5D26F8A",
+    "position": 44000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.E.1.b"
+   },
+   "EF060D86F4684BBEA4CD778823C71F07": {
+    "ancestorIds": [
+     "9E8FDA17382F4DD3B1361D6C530ACE29",
+     "7E8E70886CB548E19C7731031940E719",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428611",
+    "depth": 3,
+    "description": "Describe both past and present interactions among the people and cultures in Colorado. For example: African Americans, Latinos, Asian Americans, Indigenous Peoples, LGBTQ, and religious groups.",
+    "id": "EF060D86F4684BBEA4CD778823C71F07",
+    "parentId": "9E8FDA17382F4DD3B1361D6C530ACE29",
+    "position": 23000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.H.2.c"
+   },
+   "F0A87DE7AAC74730AD3AD79281E836D8": {
+    "ancestorIds": [
+     "55055F19312E405087FE5D3411A13DAE"
+    ],
+    "asnIdentifier": "S21428314",
+    "depth": 1,
+    "description": "Express an understanding of how civic participation affects policy by applying the rights and responsibilities of a citizen.",
+    "id": "F0A87DE7AAC74730AD3AD79281E836D8",
+    "parentId": "55055F19312E405087FE5D3411A13DAE",
+    "position": 7000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.6"
+   },
+   "F3D11196ED6449CAB92808D4E8DA668A": {
+    "ancestorIds": [
+     "4112E044DD5842C28E57B2E70E371FBE",
+     "1A44D87D4D0D4C96BBF941BDD1B5FEE3",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428624",
+    "depth": 3,
+    "description": "Describe how the physical environment provides opportunities for and places constraints on human activities.",
+    "id": "F3D11196ED6449CAB92808D4E8DA668A",
+    "parentId": "4112E044DD5842C28E57B2E70E371FBE",
+    "position": 36000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.G.2.a"
+   },
+   "F58552F4C5174DAE85B6F5BC6732F4DE": {
+    "ancestorIds": [
+     "9B3103EC0D384FBABADB956AF284CADE",
+     "7E8E70886CB548E19C7731031940E719",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428607",
+    "depth": 3,
+    "description": "Recognize and describe cause-and-effect relationships in the history of Colorado.",
+    "id": "F58552F4C5174DAE85B6F5BC6732F4DE",
+    "parentId": "9B3103EC0D384FBABADB956AF284CADE",
+    "position": 19000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "4.HES.1.2"
+   },
+   "FF8662E6EBB0437892A6B11AB9830F28": {
+    "ancestorIds": [
+     "4112E044DD5842C28E57B2E70E371FBE",
+     "1A44D87D4D0D4C96BBF941BDD1B5FEE3",
+     "960A3B30193D4AECAE30115002B56115"
+    ],
+    "asnIdentifier": "S21428625",
+    "depth": 3,
+    "description": "Explain how physical environments influence immigration into the state.",
+    "id": "FF8662E6EBB0437892A6B11AB9830F28",
+    "parentId": "4112E044DD5842C28E57B2E70E371FBE",
+    "position": 37000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "4.G.2.b"
+   }
+  },
+  "subject": "Social Studies (2022-)",
+  "title": "Grade 4"
+ }
+}

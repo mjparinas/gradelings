@@ -739,4 +739,40 @@ export const lessons: GradeLessons = {
     ["Florida is in the southeastern corner of the country.", "It is in the Southeast."],
     "the Southeast",
   ),
+  "social/il-g3-illinois-land": lesson(
+    ["Illinois is in the Midwest, with Lake Michigan to the northeast.", "The Mississippi River is its west border and the Ohio River its south border.", "Glaciers flattened most of the land, which is why it is good for farms."],
+    "Which river forms Illinois's western border?",
+    ["The Ohio River is on the south side.", "The west border is the Mississippi."],
+    "the Mississippi River",
+  ),
+  "social/il-g3-illinois-communities": lesson(
+    ["An urban community is a big city, like Chicago.", "A suburban community is near a city, where people live and drive to work.", "A rural community has farms and open land."],
+    "A small town surrounded by cornfields is what kind of community?",
+    ["It is not a big city or near one.", "Farms and open land mean rural."],
+    "rural",
+  ),
+  "social/il-g3-local-government": lesson(
+    ["A mayor and a city council or village board lead a town.", "Taxes pay for services like fire departments, libraries and parks.", "When you choose one thing, you give up another."],
+    "What pays for a town's library?",
+    ["The library is free to use.", "People pay taxes, and taxes pay for it."],
+    "taxes",
+  ),
+  "social/co-g3-colorado-land": lesson(
+    ["Colorado has plains in the east, the Rocky Mountains in the middle and plateaus and canyons in the west.", "Most people live along the Front Range, where the plains meet the mountains.", "Rivers like the South Platte and the Colorado begin with mountain snow."],
+    "Where do most Coloradans live?",
+    ["Denver and Colorado Springs are big cities.", "They sit where the plains meet the mountains."],
+    "along the Front Range",
+  ),
+  "social/co-g3-colorado-communities": lesson(
+    ["Communities grow and change over time.", "Towns grew near rivers, mines, farms and railroads.", "Many groups have shaped Colorado's communities: Native nations, Hispano families, miners, farmers and newcomers from many countries."],
+    "Why did many mountain towns start?",
+    ["People came looking for gold and silver.", "Towns grew near the mines."],
+    "mining",
+  ),
+  "social/co-g3-local-government": lesson(
+    ["Local governments run cities, towns and counties. Colorado has 64 counties.", "A mayor and city council lead many cities.", "Local governments pay for services like parks, police and streets with taxes, and voters choose the leaders."],
+    "Who pays for a city's parks and streets?",
+    ["Services cost money.", "The money comes from people's taxes."],
+    "taxes",
+  ),
 };

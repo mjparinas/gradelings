@@ -439,4 +439,40 @@ export const lessons: GradeLessons = {
     ["It is the air right now.", "That is weather. Climate is the long-term pattern."],
     "weather",
   ),
+  "science/il-g5-sun-stars": lesson(
+    ["The sun is a star. It looks bigger and brighter because it is much closer than other stars.", "Earth spins once a day, so shadows change from morning to noon to evening.", "Earth moves around the sun, so we see different stars in different seasons."],
+    "When is your shadow shortest: at noon or early morning?",
+    ["At noon the sun is highest.", "A high sun makes a short shadow."],
+    "at noon",
+  ),
+  "science/il-g5-earth-water": lesson(
+    ["Earth has four systems: the geosphere (rock and soil), hydrosphere (water), atmosphere (air) and biosphere (living things).", "They interact: rain wears away soil, and plants put water vapour into the air.", "Almost all of Earth's water is salty ocean water; very little is fresh and easy to use."],
+    "Rain washes soil into a river. Which two systems interact?",
+    ["Rain and rivers are water.", "Soil is part of the geosphere."],
+    "the hydrosphere and the geosphere",
+  ),
+  "science/il-g5-ecosystems": lesson(
+    ["Producers (plants) make food. Consumers eat plants or other animals.", "Decomposers, like mushrooms, worms and bacteria, break down dead things.", "They return matter to the soil so plants can use it again.", "Without decomposers, dead things would pile up."],
+    "Which is a decomposer: a hawk, a mushroom or a fern?",
+    ["A hawk is a consumer and a fern is a producer.", "A mushroom breaks down dead matter."],
+    "a mushroom",
+  ),
+  "science/co-g5-sun-stars": lesson(
+    ["The sun is a star. It looks bigger and brighter because it is much closer than other stars.", "Earth spins once a day, so shadows change from morning to noon to evening.", "Earth moves around the sun, so we see different stars in different seasons."],
+    "When is your shadow shortest: at noon or early morning?",
+    ["At noon the sun is highest.", "A high sun makes a short shadow."],
+    "at noon",
+  ),
+  "science/co-g5-earth-water": lesson(
+    ["Earth has four systems: the geosphere (rock and soil), hydrosphere (water), atmosphere (air) and biosphere (living things).", "They interact: rain wears away soil, and plants put water vapour into the air.", "Almost all of Earth's water is salty ocean water; very little is fresh and easy to use."],
+    "Rain washes soil into a river. Which two systems interact?",
+    ["Rain and rivers are water.", "Soil is part of the geosphere."],
+    "the hydrosphere and the geosphere",
+  ),
+  "science/co-g5-ecosystems": lesson(
+    ["Producers (plants) make food. Consumers eat plants or other animals.", "Decomposers, like mushrooms, worms and bacteria, break down dead things.", "They return matter to the soil so plants can use it again.", "Without decomposers, dead things would pile up."],
+    "Which is a decomposer: a hawk, a mushroom or a fern?",
+    ["A hawk is a consumer and a fern is a producer.", "A mushroom breaks down dead matter."],
+    "a mushroom",
+  ),
 };

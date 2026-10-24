@@ -99,9 +99,11 @@ export function PromoBanner({
       aria-label="Sale"
       className={`print:hidden bg-[#0f172a] text-white ${className}`}
     >
-      <div className="mx-auto flex max-w-6xl items-start gap-2 px-4 py-1.5 text-sm sm:items-center sm:py-2 sm:text-base">
-        <div className="flex min-w-0 flex-1 flex-wrap items-center gap-x-4 gap-y-1 sm:gap-y-2">
-          <p className="min-w-0 flex-1 basis-64">
+      <div className="mx-auto flex max-w-6xl items-center gap-2 px-4 py-1 text-sm sm:py-2 sm:text-base">
+        {/* Phones get one row: the headline, the code and the close button, so the page's own title and main
+            button stay on the first screen. The countdown, "Copy" and the link join them from small tablets up. */}
+        <div className="flex min-w-0 flex-1 items-center gap-x-4 gap-y-1 sm:flex-wrap sm:gap-y-2">
+          <p className="line-clamp-2 min-w-0 flex-1 sm:line-clamp-none sm:basis-64">
             <b className="font-bold">
               <span aria-hidden="true">{promo.emoji} </span>
               {promo.headline}
@@ -114,7 +116,7 @@ export function PromoBanner({
               </span>
             )}
           </p>
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex shrink-0 flex-wrap items-center gap-2">
             <button
               type="button"
               onClick={() => void copy()}
@@ -124,7 +126,7 @@ export function PromoBanner({
               <span className="sr-only">: copy code</span>
               <span
                 aria-hidden="true"
-                className="ml-2 font-sans text-sm font-semibold narrow:hidden"
+                className="ml-2 hidden font-sans text-sm font-semibold sm:inline"
               >
                 {copied ? "Copied" : "Copy"}
               </span>
@@ -132,7 +134,7 @@ export function PromoBanner({
             <span role="status" className="sr-only">
               {copied ? "Code copied" : ""}
             </span>
-            <span className="font-semibold text-[#cbd5e1] sm:text-sm">
+            <span className="hidden font-semibold text-[#cbd5e1] sm:inline sm:text-sm">
               {countdown(promo.endsAt, now)}
             </span>
             {showLink && (
@@ -145,7 +147,7 @@ export function PromoBanner({
             )}
           </div>
         </div>
-        {/* Beside the words, not under them, so the banner stays two rows on a 320 px phone. */}
+        {/* Beside the words, not under them, so the banner stays one row on a phone. */}
         <button
           type="button"
           onClick={hide}

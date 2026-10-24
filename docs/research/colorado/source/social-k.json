@@ -1,0 +1,896 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D21428307",
+   "id": "D21428307",
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.cde.state.co.us/cosocialstudies/cas-ss-p12-2022",
+   "title": "Colorado Academic Standards: Social Studies",
+   "valid": "2022"
+  },
+  "educationLevels": [
+   "K"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D21428307_grade-k",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": null,
+   "rightsHolder": "D2L Corporation",
+   "title": null
+  },
+  "normalizedSubject": "Social Studies",
+  "standards": {
+   "01160122A96940EE9C636E82E20CDE03": {
+    "ancestorIds": [
+     "2978636FD39F4676900D6547D3C7B0B1",
+     "EF6308CA02D847B2A1120CBF2374128D",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428376",
+    "depth": 3,
+    "description": "Identify the costs and benefits of a choice an individual makes when acquiring an item.",
+    "id": "01160122A96940EE9C636E82E20CDE03",
+    "parentId": "2978636FD39F4676900D6547D3C7B0B1",
+    "position": 35000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.E.1.a"
+   },
+   "0693A85299134899A9409DF9AB7CF506": {
+    "ancestorIds": [
+     "3647E8FB9506485BB01082FBEFBB4CBF",
+     "BD23CAEA29D542A48EAD8A1D71321ED0",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428354",
+    "depth": 3,
+    "description": "Ask questions about the past using question starters. For example: What did? Where did? When did? Which did? Who did? Why did? How did? From whose perspective?",
+    "id": "0693A85299134899A9409DF9AB7CF506",
+    "parentId": "3647E8FB9506485BB01082FBEFBB4CBF",
+    "position": 13000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.H.1.a"
+   },
+   "0AE3AF5798A54B2FB96B6EBDEB69DA68": {
+    "ancestorIds": [
+     "53D706159CF74E7596B9ADF80795DC82",
+     "B63F3DF0425847C0A087E71631DF5387",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428400",
+    "depth": 3,
+    "description": "Make personal financial decisions based on spending options (Self-Advocacy and Initiative).",
+    "id": "0AE3AF5798A54B2FB96B6EBDEB69DA68",
+    "parentId": "53D706159CF74E7596B9ADF80795DC82",
+    "position": 59000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "K.PFES.1.1"
+   },
+   "19A6E2411C944444A6B264BDC0D2A494": {
+    "ancestorIds": [
+     "C939B4FCC0564DB5971597739F86D3F4",
+     "AE0FAFB2727842FE9A77DC0D8A23EE11",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428394",
+    "depth": 3,
+    "description": "Recognize how personal actions have had a positive or negative impact with feedback as needed.",
+    "id": "19A6E2411C944444A6B264BDC0D2A494",
+    "parentId": "C939B4FCC0564DB5971597739F86D3F4",
+    "position": 53000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "K.CES.2.2"
+   },
+   "22942E9DA7AB46139341057FD3BECFEE": {
+    "ancestorIds": [
+     "BD23CAEA29D542A48EAD8A1D71321ED0",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428359",
+    "depth": 2,
+    "description": "Understand that the sequence of events is important when describing the past.",
+    "id": "22942E9DA7AB46139341057FD3BECFEE",
+    "parentId": "BD23CAEA29D542A48EAD8A1D71321ED0",
+    "position": 18000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "K.H.2"
+   },
+   "23B6A74BAB494AC5ABED22FA1F82D83A": {
+    "ancestorIds": [
+     "2978636FD39F4676900D6547D3C7B0B1",
+     "EF6308CA02D847B2A1120CBF2374128D",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428378",
+    "depth": 3,
+    "description": "Recognize that problems can be identified, and possible solutions can be created when making choices.",
+    "id": "23B6A74BAB494AC5ABED22FA1F82D83A",
+    "parentId": "2978636FD39F4676900D6547D3C7B0B1",
+    "position": 37000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "K.EES.1.1"
+   },
+   "2502BEDA092D43D884C2DC922B060665": {
+    "ancestorIds": [
+     "BBEC0CB05A2D4B129ED2619721A52419",
+     "AE0FAFB2727842FE9A77DC0D8A23EE11",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428384",
+    "depth": 3,
+    "description": "Identify the difference between fact and opinion.",
+    "id": "2502BEDA092D43D884C2DC922B060665",
+    "parentId": "BBEC0CB05A2D4B129ED2619721A52419",
+    "position": 43000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.C.1.d"
+   },
+   "2531F7D70E58482E9F7FBC36442204E2": {
+    "ancestorIds": [
+     "4673ED7F55954B1FA4F02138FF252BB8"
+    ],
+    "asnIdentifier": "S21428309",
+    "depth": 1,
+    "description": "Apply the process of inquiry to examine and analyze how historical knowledge is viewed, constructed, and interpreted.",
+    "id": "2531F7D70E58482E9F7FBC36442204E2",
+    "parentId": "4673ED7F55954B1FA4F02138FF252BB8",
+    "position": 2000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.1"
+   },
+   "2978636FD39F4676900D6547D3C7B0B1": {
+    "ancestorIds": [
+     "EF6308CA02D847B2A1120CBF2374128D",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428375",
+    "depth": 2,
+    "description": "Explain how individuals make choices based on needs and wants.",
+    "id": "2978636FD39F4676900D6547D3C7B0B1",
+    "parentId": "EF6308CA02D847B2A1120CBF2374128D",
+    "position": 34000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "K.E.1"
+   },
+   "314FFDD21364464084147F80AADF312D": {
+    "ancestorIds": [
+     "22942E9DA7AB46139341057FD3BECFEE",
+     "BD23CAEA29D542A48EAD8A1D71321ED0",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428360",
+    "depth": 3,
+    "description": "Explore differences and similarities in the lives of children and families from different time periods by using a variety of sources. For example: Personal artifacts and stories, texts, pictures, and videos from different societies.",
+    "id": "314FFDD21364464084147F80AADF312D",
+    "parentId": "22942E9DA7AB46139341057FD3BECFEE",
+    "position": 19000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.H.2.a"
+   },
+   "3647E8FB9506485BB01082FBEFBB4CBF": {
+    "ancestorIds": [
+     "BD23CAEA29D542A48EAD8A1D71321ED0",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428353",
+    "depth": 2,
+    "description": "Ask questions and discuss ideas about the past.",
+    "id": "3647E8FB9506485BB01082FBEFBB4CBF",
+    "parentId": "BD23CAEA29D542A48EAD8A1D71321ED0",
+    "position": 12000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "K.H.1"
+   },
+   "37529FE8EE3F4233A3BBBF739D2A959F": {
+    "ancestorIds": [
+     "22942E9DA7AB46139341057FD3BECFEE",
+     "BD23CAEA29D542A48EAD8A1D71321ED0",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428362",
+    "depth": 3,
+    "description": "Explain why knowing the order of events is important.",
+    "id": "37529FE8EE3F4233A3BBBF739D2A959F",
+    "parentId": "22942E9DA7AB46139341057FD3BECFEE",
+    "position": 21000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.H.2.c"
+   },
+   "3D0FFA286267434BB5540C6A986B8738": {
+    "ancestorIds": [
+     "53D706159CF74E7596B9ADF80795DC82",
+     "B63F3DF0425847C0A087E71631DF5387",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428397",
+    "depth": 3,
+    "description": "Recognize choices people make with their money and explain how financial decisions are made.",
+    "id": "3D0FFA286267434BB5540C6A986B8738",
+    "parentId": "53D706159CF74E7596B9ADF80795DC82",
+    "position": 56000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.PF.1.a"
+   },
+   "3E556BE1CC1E4B998AF71D0D940496F8": {
+    "ancestorIds": [
+     "4673ED7F55954B1FA4F02138FF252BB8"
+    ],
+    "asnIdentifier": "S21428312",
+    "depth": 1,
+    "description": "Examine the characteristics of places and regions, and the changing nature among geographic and human interactions.",
+    "id": "3E556BE1CC1E4B998AF71D0D940496F8",
+    "parentId": "4673ED7F55954B1FA4F02138FF252BB8",
+    "position": 5000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.4"
+   },
+   "466438667382408985DEAB80CB814EF0": {
+    "ancestorIds": [
+     "C939B4FCC0564DB5971597739F86D3F4",
+     "AE0FAFB2727842FE9A77DC0D8A23EE11",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428391",
+    "depth": 3,
+    "description": "Contribute to making and maintaining class community decisions.",
+    "id": "466438667382408985DEAB80CB814EF0",
+    "parentId": "C939B4FCC0564DB5971597739F86D3F4",
+    "position": 50000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.C.2.d"
+   },
+   "4673ED7F55954B1FA4F02138FF252BB8": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21428308",
+    "depth": 0,
+    "description": "Prepared Graduates in Social Studies",
+    "id": "4673ED7F55954B1FA4F02138FF252BB8",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": "Content Area"
+   },
+   "53D706159CF74E7596B9ADF80795DC82": {
+    "ancestorIds": [
+     "B63F3DF0425847C0A087E71631DF5387",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428396",
+    "depth": 2,
+    "description": "Describe choices people make about how to use the money they earn.",
+    "id": "53D706159CF74E7596B9ADF80795DC82",
+    "parentId": "B63F3DF0425847C0A087E71631DF5387",
+    "position": 55000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "K.PF.1"
+   },
+   "54436FD4A4934D0B91AC0E2D225F7064": {
+    "ancestorIds": [
+     "4673ED7F55954B1FA4F02138FF252BB8"
+    ],
+    "asnIdentifier": "S21428313",
+    "depth": 1,
+    "description": "Evaluate how scarce resources are allocated in societies through the analysis of individual choice, market interaction, and public policy.",
+    "id": "54436FD4A4934D0B91AC0E2D225F7064",
+    "parentId": "4673ED7F55954B1FA4F02138FF252BB8",
+    "position": 6000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.5"
+   },
+   "5A2C6D60515046C8AA58A8BBF56B18D7": {
+    "ancestorIds": [
+     "BBEC0CB05A2D4B129ED2619721A52419",
+     "AE0FAFB2727842FE9A77DC0D8A23EE11",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428386",
+    "depth": 3,
+    "description": "Identify and reflect upon personal connections to community systems.",
+    "id": "5A2C6D60515046C8AA58A8BBF56B18D7",
+    "parentId": "BBEC0CB05A2D4B129ED2619721A52419",
+    "position": 45000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "K.CES.1.2"
+   },
+   "627A553FC30E455EB006C34E0DAE53DB": {
+    "ancestorIds": [
+     "4673ED7F55954B1FA4F02138FF252BB8"
+    ],
+    "asnIdentifier": "S21428311",
+    "depth": 1,
+    "description": "Apply geographic representations and perspectives to analyze human movement, spatial patterns, systems, and the connections and relationships among them.",
+    "id": "627A553FC30E455EB006C34E0DAE53DB",
+    "parentId": "4673ED7F55954B1FA4F02138FF252BB8",
+    "position": 4000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.3"
+   },
+   "69C32E40AA3F4F85AC70A5E50415B59D": {
+    "ancestorIds": [
+     "B11C689806D142B49EFB4CE910CA3F0B",
+     "DF85C2E2DBE04601B24AB140133A699B",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428370",
+    "depth": 3,
+    "description": "Identify ways students' lives are similar and different from those in other communities.",
+    "id": "69C32E40AA3F4F85AC70A5E50415B59D",
+    "parentId": "B11C689806D142B49EFB4CE910CA3F0B",
+    "position": 29000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.G.2.a"
+   },
+   "6A7D63CFE21B4BDD88FAD29C23150C61": {
+    "ancestorIds": [
+     "C939B4FCC0564DB5971597739F86D3F4",
+     "AE0FAFB2727842FE9A77DC0D8A23EE11",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428393",
+    "depth": 3,
+    "description": "Within democratic traditions, articulate personal strengths and challenges using information and communication technologies to express themselves.",
+    "id": "6A7D63CFE21B4BDD88FAD29C23150C61",
+    "parentId": "C939B4FCC0564DB5971597739F86D3F4",
+    "position": 52000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "K.CES.2.1"
+   },
+   "6C8B6736CF674911A25307A6CF74CC92": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21428351",
+    "depth": 0,
+    "description": "Kindergarten",
+    "id": "6C8B6736CF674911A25307A6CF74CC92",
+    "parentId": null,
+    "position": 10000
+   },
+   "77F3A21033D842E3A69480609B4E9925": {
+    "ancestorIds": [
+     "53D706159CF74E7596B9ADF80795DC82",
+     "B63F3DF0425847C0A087E71631DF5387",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428402",
+    "depth": 3,
+    "description": "Demonstrate curiosity, imagination, and eagerness to learn more (Creativity and Innovation).",
+    "id": "77F3A21033D842E3A69480609B4E9925",
+    "parentId": "53D706159CF74E7596B9ADF80795DC82",
+    "position": 61000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "K.PFES.1.3"
+   },
+   "7869B7C515B84BE39E350D718A713E14": {
+    "ancestorIds": [
+     "4673ED7F55954B1FA4F02138FF252BB8"
+    ],
+    "asnIdentifier": "S21428310",
+    "depth": 1,
+    "description": "Analyze historical time periods and patterns of continuity and change, through multiple perspectives, within and among cultures and societies.",
+    "id": "7869B7C515B84BE39E350D718A713E14",
+    "parentId": "4673ED7F55954B1FA4F02138FF252BB8",
+    "position": 3000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.2"
+   },
+   "7D3EDD3283BE4FF58082AD20779AF4EE": {
+    "ancestorIds": [
+     "B7F372D99F7E45A494DA635CD6892F0C",
+     "DF85C2E2DBE04601B24AB140133A699B",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428366",
+    "depth": 3,
+    "description": "Distinguish between a map and a globe as ways to show places people live.",
+    "id": "7D3EDD3283BE4FF58082AD20779AF4EE",
+    "parentId": "B7F372D99F7E45A494DA635CD6892F0C",
+    "position": 25000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.G.1.a"
+   },
+   "82E3ADECFE144EF3B877634E91AC2A1B": {
+    "ancestorIds": [
+     "BBEC0CB05A2D4B129ED2619721A52419",
+     "AE0FAFB2727842FE9A77DC0D8A23EE11",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428381",
+    "depth": 3,
+    "description": "Differentiate among examples of civic participation. For example: Describe personal connections to community events, such as voting, debating, running for office, advocating, fundraising, and volunteering.",
+    "id": "82E3ADECFE144EF3B877634E91AC2A1B",
+    "parentId": "BBEC0CB05A2D4B129ED2619721A52419",
+    "position": 40000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.C.1.a"
+   },
+   "91166023AA1D4ADCB784C5DE7EC11BD0": {
+    "ancestorIds": [
+     "3647E8FB9506485BB01082FBEFBB4CBF",
+     "BD23CAEA29D542A48EAD8A1D71321ED0",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428355",
+    "depth": 3,
+    "description": "Identify information from primary and/or secondary sources that answer questions about the past and contribute to the collective memory.",
+    "id": "91166023AA1D4ADCB784C5DE7EC11BD0",
+    "parentId": "3647E8FB9506485BB01082FBEFBB4CBF",
+    "position": 14000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.H.1.b"
+   },
+   "9301F1D5DF174704B5311490CC6E4EC0": {
+    "ancestorIds": [
+     "3647E8FB9506485BB01082FBEFBB4CBF",
+     "BD23CAEA29D542A48EAD8A1D71321ED0",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428357",
+    "depth": 3,
+    "description": "Recognize and describe cause-and-effect relationships about the past.",
+    "id": "9301F1D5DF174704B5311490CC6E4EC0",
+    "parentId": "3647E8FB9506485BB01082FBEFBB4CBF",
+    "position": 16000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "K.HES.1.1"
+   },
+   "947BBC458A0E4D7483338BBF02E3D558": {
+    "ancestorIds": [
+     "B11C689806D142B49EFB4CE910CA3F0B",
+     "DF85C2E2DBE04601B24AB140133A699B",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428372",
+    "depth": 3,
+    "description": "Compare attitudes and beliefs as an individual to others.",
+    "id": "947BBC458A0E4D7483338BBF02E3D558",
+    "parentId": "B11C689806D142B49EFB4CE910CA3F0B",
+    "position": 31000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "K.GES.2.1"
+   },
+   "A139601CCD514BEDA1CA9721CC97A5C5": {
+    "ancestorIds": [
+     "22942E9DA7AB46139341057FD3BECFEE",
+     "BD23CAEA29D542A48EAD8A1D71321ED0",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428361",
+    "depth": 3,
+    "description": "Sequence information using words. For example: Present, future, days, weeks, months, years, first, next, last, before, and after.",
+    "id": "A139601CCD514BEDA1CA9721CC97A5C5",
+    "parentId": "22942E9DA7AB46139341057FD3BECFEE",
+    "position": 20000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.H.2.b"
+   },
+   "A58EE607E1EE4989B81AA8824D9487AF": {
+    "ancestorIds": [
+     "C939B4FCC0564DB5971597739F86D3F4",
+     "AE0FAFB2727842FE9A77DC0D8A23EE11",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428392",
+    "depth": 3,
+    "description": "Explain the difference between democratic decision-making and decisions made by authorities. For example: A parent, teacher, principal, and a police officer.",
+    "id": "A58EE607E1EE4989B81AA8824D9487AF",
+    "parentId": "C939B4FCC0564DB5971597739F86D3F4",
+    "position": 51000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.C.2.e"
+   },
+   "A65E57AAE3DB4B9295285036B3D457FE": {
+    "ancestorIds": [
+     "BBEC0CB05A2D4B129ED2619721A52419",
+     "AE0FAFB2727842FE9A77DC0D8A23EE11",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428385",
+    "depth": 3,
+    "description": "Compare one's attitudes and beliefs about civic participation to others.",
+    "id": "A65E57AAE3DB4B9295285036B3D457FE",
+    "parentId": "BBEC0CB05A2D4B129ED2619721A52419",
+    "position": 44000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "K.CES.1.1"
+   },
+   "AB837E35418349CF919D3B3099DCBEAE": {
+    "ancestorIds": [
+     "22942E9DA7AB46139341057FD3BECFEE",
+     "BD23CAEA29D542A48EAD8A1D71321ED0",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428363",
+    "depth": 3,
+    "description": "Recognize and describe patterns in the sequence of events from the past.",
+    "id": "AB837E35418349CF919D3B3099DCBEAE",
+    "parentId": "22942E9DA7AB46139341057FD3BECFEE",
+    "position": 22000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "K.HES.2.1"
+   },
+   "AE0FAFB2727842FE9A77DC0D8A23EE11": {
+    "ancestorIds": [
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428379",
+    "depth": 1,
+    "description": "Civics",
+    "id": "AE0FAFB2727842FE9A77DC0D8A23EE11",
+    "parentId": "6C8B6736CF674911A25307A6CF74CC92",
+    "position": 38000,
+    "statementLabel": "Content Area"
+   },
+   "B11C689806D142B49EFB4CE910CA3F0B": {
+    "ancestorIds": [
+     "DF85C2E2DBE04601B24AB140133A699B",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428369",
+    "depth": 2,
+    "description": "Identify how the environment influences the way people live.",
+    "id": "B11C689806D142B49EFB4CE910CA3F0B",
+    "parentId": "DF85C2E2DBE04601B24AB140133A699B",
+    "position": 28000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "K.G.2"
+   },
+   "B2572C9D3F7C4362B045F520CD7600FF": {
+    "ancestorIds": [
+     "B11C689806D142B49EFB4CE910CA3F0B",
+     "DF85C2E2DBE04601B24AB140133A699B",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428373",
+    "depth": 3,
+    "description": "Recognize and describe cause-and-effect relationships between people and their surroundings.",
+    "id": "B2572C9D3F7C4362B045F520CD7600FF",
+    "parentId": "B11C689806D142B49EFB4CE910CA3F0B",
+    "position": 32000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "K.GES.2.2"
+   },
+   "B4B7711251494CFC81548F58038164DB": {
+    "ancestorIds": [
+     "4673ED7F55954B1FA4F02138FF252BB8"
+    ],
+    "asnIdentifier": "S21428314",
+    "depth": 1,
+    "description": "Express an understanding of how civic participation affects policy by applying the rights and responsibilities of a citizen.",
+    "id": "B4B7711251494CFC81548F58038164DB",
+    "parentId": "4673ED7F55954B1FA4F02138FF252BB8",
+    "position": 7000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.6"
+   },
+   "B5104834A2114C80BCB905FFE4FC876B": {
+    "ancestorIds": [
+     "53D706159CF74E7596B9ADF80795DC82",
+     "B63F3DF0425847C0A087E71631DF5387",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428399",
+    "depth": 3,
+    "description": "Identify the difference between a want and a need and how that impacts purchasing decisions when resources are limited. For example: Buying a healthy snack vs. a candy bar, new shoes vs. a new toy, or a coat vs. a new game.",
+    "id": "B5104834A2114C80BCB905FFE4FC876B",
+    "parentId": "53D706159CF74E7596B9ADF80795DC82",
+    "position": 58000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.PF.1.c"
+   },
+   "B5B4993BAE6B469EA6ABFA2CD15B9669": {
+    "ancestorIds": [
+     "C939B4FCC0564DB5971597739F86D3F4",
+     "AE0FAFB2727842FE9A77DC0D8A23EE11",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428390",
+    "depth": 3,
+    "description": "Explain how a class rule may promote fairness and resolve conflict and compare against a rule that may not.",
+    "id": "B5B4993BAE6B469EA6ABFA2CD15B9669",
+    "parentId": "C939B4FCC0564DB5971597739F86D3F4",
+    "position": 49000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.C.2.c"
+   },
+   "B63F3DF0425847C0A087E71631DF5387": {
+    "ancestorIds": [
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428395",
+    "depth": 1,
+    "description": "Personal Financial Literacy",
+    "id": "B63F3DF0425847C0A087E71631DF5387",
+    "parentId": "6C8B6736CF674911A25307A6CF74CC92",
+    "position": 54000,
+    "statementLabel": "Content Area"
+   },
+   "B7F372D99F7E45A494DA635CD6892F0C": {
+    "ancestorIds": [
+     "DF85C2E2DBE04601B24AB140133A699B",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428365",
+    "depth": 2,
+    "description": "Recognize that geographic tools represent places and spaces.",
+    "id": "B7F372D99F7E45A494DA635CD6892F0C",
+    "parentId": "DF85C2E2DBE04601B24AB140133A699B",
+    "position": 24000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "K.G.1"
+   },
+   "BBEC0CB05A2D4B129ED2619721A52419": {
+    "ancestorIds": [
+     "AE0FAFB2727842FE9A77DC0D8A23EE11",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428380",
+    "depth": 2,
+    "description": "Identify ways in which civic participation takes place across multiple groups.",
+    "id": "BBEC0CB05A2D4B129ED2619721A52419",
+    "parentId": "AE0FAFB2727842FE9A77DC0D8A23EE11",
+    "position": 39000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "K.C.1"
+   },
+   "BCC9B9A6F6FD46738CB8776324EFDED5": {
+    "ancestorIds": [
+     "4673ED7F55954B1FA4F02138FF252BB8"
+    ],
+    "asnIdentifier": "S21428316",
+    "depth": 1,
+    "description": "Apply economic reasoning skills to make informed personal financial decisions.",
+    "id": "BCC9B9A6F6FD46738CB8776324EFDED5",
+    "parentId": "4673ED7F55954B1FA4F02138FF252BB8",
+    "position": 9000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.8"
+   },
+   "BD23CAEA29D542A48EAD8A1D71321ED0": {
+    "ancestorIds": [
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428352",
+    "depth": 1,
+    "description": "History",
+    "id": "BD23CAEA29D542A48EAD8A1D71321ED0",
+    "parentId": "6C8B6736CF674911A25307A6CF74CC92",
+    "position": 11000,
+    "statementLabel": "Content Area"
+   },
+   "BDBD9227CBE6499FAB15E2BD94B4DBB5": {
+    "ancestorIds": [
+     "53D706159CF74E7596B9ADF80795DC82",
+     "B63F3DF0425847C0A087E71631DF5387",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428401",
+    "depth": 3,
+    "description": "Determine how to spend money depending on values and choices (Self-Advocacy and Initiative).",
+    "id": "BDBD9227CBE6499FAB15E2BD94B4DBB5",
+    "parentId": "53D706159CF74E7596B9ADF80795DC82",
+    "position": 60000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "K.PFES.1.2"
+   },
+   "BE577BED60494035952E047A9130C129": {
+    "ancestorIds": [
+     "BBEC0CB05A2D4B129ED2619721A52419",
+     "AE0FAFB2727842FE9A77DC0D8A23EE11",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428383",
+    "depth": 3,
+    "description": "Practice citizenship skills when working with others including courtesy, honesty, and fairness.",
+    "id": "BE577BED60494035952E047A9130C129",
+    "parentId": "BBEC0CB05A2D4B129ED2619721A52419",
+    "position": 42000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.C.1.c"
+   },
+   "C14B4903FDC944E484CB1A01044747B4": {
+    "ancestorIds": [
+     "3647E8FB9506485BB01082FBEFBB4CBF",
+     "BD23CAEA29D542A48EAD8A1D71321ED0",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428356",
+    "depth": 3,
+    "description": "Provide rationale about something from the past using statements. For example: Because, as a result, I know ___.",
+    "id": "C14B4903FDC944E484CB1A01044747B4",
+    "parentId": "3647E8FB9506485BB01082FBEFBB4CBF",
+    "position": 15000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.H.1.c"
+   },
+   "C199B5CA9DAC4F689D1B16F8135A1471": {
+    "ancestorIds": [
+     "53D706159CF74E7596B9ADF80795DC82",
+     "B63F3DF0425847C0A087E71631DF5387",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428398",
+    "depth": 3,
+    "description": "Explain how money gives people the ability to buy goods and services.",
+    "id": "C199B5CA9DAC4F689D1B16F8135A1471",
+    "parentId": "53D706159CF74E7596B9ADF80795DC82",
+    "position": 57000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.PF.1.b"
+   },
+   "C5C094140B2343AEBDAF224FCF87FCAC": {
+    "ancestorIds": [
+     "BBEC0CB05A2D4B129ED2619721A52419",
+     "AE0FAFB2727842FE9A77DC0D8A23EE11",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428382",
+    "depth": 3,
+    "description": "Explain the qualities of an informed and engaged citizen.",
+    "id": "C5C094140B2343AEBDAF224FCF87FCAC",
+    "parentId": "BBEC0CB05A2D4B129ED2619721A52419",
+    "position": 41000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.C.1.b"
+   },
+   "C939B4FCC0564DB5971597739F86D3F4": {
+    "ancestorIds": [
+     "AE0FAFB2727842FE9A77DC0D8A23EE11",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428387",
+    "depth": 2,
+    "description": "Participate in making logical decisions using democratic principles.",
+    "id": "C939B4FCC0564DB5971597739F86D3F4",
+    "parentId": "AE0FAFB2727842FE9A77DC0D8A23EE11",
+    "position": 46000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "K.C.2"
+   },
+   "DE15F183F2F64184B1146A134ACAC672": {
+    "ancestorIds": [
+     "C939B4FCC0564DB5971597739F86D3F4",
+     "AE0FAFB2727842FE9A77DC0D8A23EE11",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428388",
+    "depth": 3,
+    "description": "Explain why rules are needed.",
+    "id": "DE15F183F2F64184B1146A134ACAC672",
+    "parentId": "C939B4FCC0564DB5971597739F86D3F4",
+    "position": 47000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.C.2.a"
+   },
+   "DF85C2E2DBE04601B24AB140133A699B": {
+    "ancestorIds": [
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428364",
+    "depth": 1,
+    "description": "Geography",
+    "id": "DF85C2E2DBE04601B24AB140133A699B",
+    "parentId": "6C8B6736CF674911A25307A6CF74CC92",
+    "position": 23000,
+    "statementLabel": "Content Area"
+   },
+   "E5E8CB1EBC2643EFB88D32C4E51EB68D": {
+    "ancestorIds": [
+     "3647E8FB9506485BB01082FBEFBB4CBF",
+     "BD23CAEA29D542A48EAD8A1D71321ED0",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428358",
+    "depth": 3,
+    "description": "Demonstrate curiosity about the past.",
+    "id": "E5E8CB1EBC2643EFB88D32C4E51EB68D",
+    "parentId": "3647E8FB9506485BB01082FBEFBB4CBF",
+    "position": 17000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "K.HES.1.2"
+   },
+   "EA5A195A25104D70A403D7B6799D306C": {
+    "ancestorIds": [
+     "B11C689806D142B49EFB4CE910CA3F0B",
+     "DF85C2E2DBE04601B24AB140133A699B",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428371",
+    "depth": 3,
+    "description": "Identify how the environment, geographic features, and climate impact lifestyles. For example: Food, sports, shelter, transportation, school, etc.",
+    "id": "EA5A195A25104D70A403D7B6799D306C",
+    "parentId": "B11C689806D142B49EFB4CE910CA3F0B",
+    "position": 30000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.G.2.b"
+   },
+   "EA8C8E08BBC34ECEB0D7C3EAA0BDDB11": {
+    "ancestorIds": [
+     "C939B4FCC0564DB5971597739F86D3F4",
+     "AE0FAFB2727842FE9A77DC0D8A23EE11",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428389",
+    "depth": 3,
+    "description": "Create and follow classroom rules.",
+    "id": "EA8C8E08BBC34ECEB0D7C3EAA0BDDB11",
+    "parentId": "C939B4FCC0564DB5971597739F86D3F4",
+    "position": 48000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.C.2.b"
+   },
+   "EE45086372DC416499A37472757C13AF": {
+    "ancestorIds": [
+     "2978636FD39F4676900D6547D3C7B0B1",
+     "EF6308CA02D847B2A1120CBF2374128D",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428377",
+    "depth": 3,
+    "description": "Recognize and engage in ways to use another individual's items. For example: Asking for permission to share and taking turns.",
+    "id": "EE45086372DC416499A37472757C13AF",
+    "parentId": "2978636FD39F4676900D6547D3C7B0B1",
+    "position": 36000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.E.1.b"
+   },
+   "EF6308CA02D847B2A1120CBF2374128D": {
+    "ancestorIds": [
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428374",
+    "depth": 1,
+    "description": "Economics",
+    "id": "EF6308CA02D847B2A1120CBF2374128D",
+    "parentId": "6C8B6736CF674911A25307A6CF74CC92",
+    "position": 33000,
+    "statementLabel": "Content Area"
+   },
+   "F1A15EB7EC8748D5807758AA40169921": {
+    "ancestorIds": [
+     "B7F372D99F7E45A494DA635CD6892F0C",
+     "DF85C2E2DBE04601B24AB140133A699B",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428368",
+    "depth": 3,
+    "description": "Find information using geographic technologies.",
+    "id": "F1A15EB7EC8748D5807758AA40169921",
+    "parentId": "B7F372D99F7E45A494DA635CD6892F0C",
+    "position": 27000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "K.GES.1.1"
+   },
+   "F4AE68A83548427F91167A06D6876F9B": {
+    "ancestorIds": [
+     "B7F372D99F7E45A494DA635CD6892F0C",
+     "DF85C2E2DBE04601B24AB140133A699B",
+     "6C8B6736CF674911A25307A6CF74CC92"
+    ],
+    "asnIdentifier": "S21428367",
+    "depth": 3,
+    "description": "Use geographic tools to describe places. For example: Globes, maps, and GPS.",
+    "id": "F4AE68A83548427F91167A06D6876F9B",
+    "parentId": "B7F372D99F7E45A494DA635CD6892F0C",
+    "position": 26000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "K.G.1.b"
+   },
+   "FB3F170EABBA41BD9C40F7BDAD2E4B01": {
+    "ancestorIds": [
+     "4673ED7F55954B1FA4F02138FF252BB8"
+    ],
+    "asnIdentifier": "S21428315",
+    "depth": 1,
+    "description": "Analyze the origins, structures, and functions of governments to evaluate the impact on citizens and the global society.",
+    "id": "FB3F170EABBA41BD9C40F7BDAD2E4B01",
+    "parentId": "4673ED7F55954B1FA4F02138FF252BB8",
+    "position": 8000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.7"
+   }
+  },
+  "subject": "Social Studies (2022-)",
+  "title": "Grade K"
+ }
+}

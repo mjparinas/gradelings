@@ -391,4 +391,40 @@ export const lessons: GradeLessons = {
     ["Thunder means lightning is close.", "Lightning can strike water, so get out and go inside."],
     "get out and go inside",
   ),
+  "science/il-g2-habitats": lesson(
+    ["A habitat is a place where a living thing lives.", "Badgers dig on the prairie. Deer live in the woods. Frogs live in wetlands.", "Each habitat gives its animals food, water and shelter."],
+    "Where do frogs and herons live: a wetland or a desert?",
+    ["A desert is very dry.", "Frogs and herons need water, so they live in wetlands."],
+    "a wetland",
+  ),
+  "science/il-g2-land-water": lesson(
+    ["Land can be hills, valleys, plains or islands.", "Water can be rivers, lakes or oceans.", "Lake Michigan is a lake. The Mississippi is a river. Central Illinois is a plain."],
+    "Land with water all around it is an…?",
+    ["A peninsula has water on three sides.", "Land with water all around is an island."],
+    "island",
+  ),
+  "science/il-g2-earth-changes": lesson(
+    ["Some changes are fast, like volcanoes, landslides and floods.", "Some are slow, like wind and water wearing away land over years.", "Plant roots and rock walls help slow these changes."],
+    "Water carves a canyon over many years. Fast or slow?",
+    ["Many years is a long time.", "That is a slow change."],
+    "slow",
+  ),
+  "science/co-g2-habitats": lesson(
+    ["A habitat is a place where a living thing lives.", "Prairie dogs dig on the plains. Elk live in mountain forests. Frogs live in wetlands.", "Each habitat gives its animals food, water and shelter."],
+    "Where do frogs and herons live: a wetland or a desert?",
+    ["A desert is very dry.", "Frogs and herons need water, so they live in wetlands."],
+    "a wetland",
+  ),
+  "science/co-g2-land-water": lesson(
+    ["Land can be mountains, hills, valleys, plains or islands.", "Water can be rivers, lakes or oceans.", "Pikes Peak is a mountain. The Colorado River is a river. The Eastern Plains are a plain."],
+    "Land with water all around it is an…?",
+    ["A peninsula has water on three sides.", "Land with water all around is an island."],
+    "island",
+  ),
+  "science/co-g2-earth-changes": lesson(
+    ["Some changes are fast, like volcanoes, landslides and floods.", "Some are slow, like wind and water wearing away land over years.", "Plant roots and rock walls help slow these changes."],
+    "Water carves a canyon over many years. Fast or slow?",
+    ["Many years is a long time.", "That is a slow change."],
+    "slow",
+  ),
 };

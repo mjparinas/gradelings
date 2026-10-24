@@ -1,0 +1,794 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D2980651",
+   "id": "D2980651",
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.cde.state.co.us/comath/2020cas-ma-p12",
+   "title": "Colorado Academic Standards: Mathematics",
+   "valid": "2020"
+  },
+  "educationLevels": [
+   "02"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D2980651_grade-02",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/3.0/us/",
+   "rightsHolder": "D2L Corporation",
+   "title": "CC BY 3.0 US"
+  },
+  "normalizedSubject": "Math",
+  "standards": {
+   "008173B318104D5493F03939EF526C6C": {
+    "ancestorIds": [
+     "EE1AD61F966D44A798C986BBF7E14098",
+     "2E8BD18E6BC14480986DEF8790F818D3",
+     "49FDCE09E01D41DCB8BF8DB046B32D1A"
+    ],
+    "asnIdentifier": "S21045306",
+    "depth": 3,
+    "description": "Partition circles and rectangles into two, three, or four equal shares, describe the shares using the words halves, thirds, half of, a third of, etc., and describe the whole as two halves, three thirds, four fourths. Recognize that equal shares of identical wholes need not have the same shape.",
+    "id": "008173B318104D5493F03939EF526C6C",
+    "parentId": "EE1AD61F966D44A798C986BBF7E14098",
+    "position": 55000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.G.A.3"
+   },
+   "0241F694366744AFB279BAAA40B5C0EC": {
+    "ancestorIds": [
+     "C92C16CB66F34F06AC2C9CD5BB245B32"
+    ],
+    "asnIdentifier": "S21029610",
+    "depth": 1,
+    "description": "Model with mathematics.",
+    "id": "0241F694366744AFB279BAAA40B5C0EC",
+    "parentId": "C92C16CB66F34F06AC2C9CD5BB245B32",
+    "position": 5000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP4"
+   },
+   "057A9B9D0F224BAD9CA24709E8BC66F4": {
+    "ancestorIds": [
+     "1337428D98C84AB981107E5287824111",
+     "A01A1A627A7049749716A85847A4EEAC",
+     "1BBB7A60A7D3495B99D65AF9C85A32E2"
+    ],
+    "asnIdentifier": "S21045287",
+    "depth": 3,
+    "description": "Add and subtract within 1000, using concrete models or drawings and strategies based on place value, properties of operations, and/or the relationship between addition and subtraction; relate the strategy to a written method. Understand that in adding or subtracting three-digit numbers, one adds or subtracts hundreds and hundreds, tens and tens, ones and ones; and sometimes it is necessary to compose or decompose tens or hundreds.",
+    "id": "057A9B9D0F224BAD9CA24709E8BC66F4",
+    "parentId": "1337428D98C84AB981107E5287824111",
+    "position": 22000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.NBT.B.7"
+   },
+   "057FEBA6586142AB86B937DA2A3344C0": {
+    "ancestorIds": [
+     "C4E96F32BF134903B79312F0C4621631",
+     "90A22B566386415F9F2DC82713E55954",
+     "C0495C12F2FC40A2B2DBB7BAB8E5AC5D"
+    ],
+    "asnIdentifier": "S21045301",
+    "depth": 3,
+    "description": "Solve word problems involving dollar bills, quarters, dimes, nickels, and pennies, using $ and ¢ symbols appropriately.",
+    "id": "057FEBA6586142AB86B937DA2A3344C0",
+    "parentId": "C4E96F32BF134903B79312F0C4621631",
+    "position": 46000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.MD.C.8"
+   },
+   "06A9B164E69A4F0ABB53249BE727F014": {
+    "ancestorIds": [
+     "7B1DA39F4D8D4B67864CDAF577D85DD8",
+     "EFA833172F964BAE85D888F298EBF835"
+    ],
+    "asnIdentifier": "S21029675",
+    "depth": 2,
+    "description": "Represent and solve problems involving addition and subtraction.",
+    "id": "06A9B164E69A4F0ABB53249BE727F014",
+    "parentId": "7B1DA39F4D8D4B67864CDAF577D85DD8",
+    "position": 27000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "2.OA.A"
+   },
+   "1337428D98C84AB981107E5287824111": {
+    "ancestorIds": [
+     "A01A1A627A7049749716A85847A4EEAC",
+     "1BBB7A60A7D3495B99D65AF9C85A32E2"
+    ],
+    "asnIdentifier": "S21029631",
+    "depth": 2,
+    "description": "Use place value understanding and properties of operations to add and subtract.",
+    "id": "1337428D98C84AB981107E5287824111",
+    "parentId": "A01A1A627A7049749716A85847A4EEAC",
+    "position": 19000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "2.NBT.B"
+   },
+   "135E634CCBCD482B9802B7E0A14B1DE1": {
+    "ancestorIds": [
+     "6B3A91312AC1412E93AA109E547475EF",
+     "E9200F7753CC4A22A1E81CF56EDA1B7C",
+     "A01A1A627A7049749716A85847A4EEAC",
+     "1BBB7A60A7D3495B99D65AF9C85A32E2"
+    ],
+    "asnIdentifier": "S21045281",
+    "depth": 4,
+    "description": "The numbers 100, 200, 300, 400, 500, 600, 700, 800, 900 refer to one, two, three, four, five, six, seven, eight, or nine hundreds (and 0 tens and 0 ones).",
+    "id": "135E634CCBCD482B9802B7E0A14B1DE1",
+    "parentId": "6B3A91312AC1412E93AA109E547475EF",
+    "position": 15000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.NBT.A.1.b"
+   },
+   "160267B5715C40FD82662B535C30DFD2": {
+    "ancestorIds": [
+     "C92C16CB66F34F06AC2C9CD5BB245B32"
+    ],
+    "asnIdentifier": "S21029608",
+    "depth": 1,
+    "description": "Reason abstractly and quantitatively.",
+    "id": "160267B5715C40FD82662B535C30DFD2",
+    "parentId": "C92C16CB66F34F06AC2C9CD5BB245B32",
+    "position": 3000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP2"
+   },
+   "174CF9A22FD146F19A70E112430BC76E": {
+    "ancestorIds": [
+     "C3FFC535CB5A471E8836A500CA5DFD0D",
+     "90A22B566386415F9F2DC82713E55954",
+     "C0495C12F2FC40A2B2DBB7BAB8E5AC5D"
+    ],
+    "asnIdentifier": "S21045302",
+    "depth": 3,
+    "description": "Generate measurement data by measuring lengths of several objects to the nearest whole unit, or by making repeated measurements of the same object. Show the measurements by making a line plot, where the horizontal scale is marked off in whole-number units.",
+    "id": "174CF9A22FD146F19A70E112430BC76E",
+    "parentId": "C3FFC535CB5A471E8836A500CA5DFD0D",
+    "position": 48000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.MD.D.9"
+   },
+   "1B8D763153A0472DAD9AC81B0951B349": {
+    "ancestorIds": [
+     "1337428D98C84AB981107E5287824111",
+     "A01A1A627A7049749716A85847A4EEAC",
+     "1BBB7A60A7D3495B99D65AF9C85A32E2"
+    ],
+    "asnIdentifier": "S21045288",
+    "depth": 3,
+    "description": "Mentally add 10 or 100 to a given number 100–900, and mentally subtract 10 or 100 from a given number 100–900.",
+    "id": "1B8D763153A0472DAD9AC81B0951B349",
+    "parentId": "1337428D98C84AB981107E5287824111",
+    "position": 23000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.NBT.B.8"
+   },
+   "1BBB7A60A7D3495B99D65AF9C85A32E2": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029615",
+    "depth": 0,
+    "description": "Number and Quantity",
+    "id": "1BBB7A60A7D3495B99D65AF9C85A32E2",
+    "parentId": null,
+    "position": 10000,
+    "statementLabel": "Standard",
+    "statementNotation": "NQ.1"
+   },
+   "1E5430E87E564E2AB8FE6614B296B23C": {
+    "ancestorIds": [
+     "1337428D98C84AB981107E5287824111",
+     "A01A1A627A7049749716A85847A4EEAC",
+     "1BBB7A60A7D3495B99D65AF9C85A32E2"
+    ],
+    "asnIdentifier": "S21045289",
+    "depth": 3,
+    "description": "Explain why addition and subtraction strategies work, using place value and the properties of operations. (Explanations may be supported by drawings or objects.)",
+    "id": "1E5430E87E564E2AB8FE6614B296B23C",
+    "parentId": "1337428D98C84AB981107E5287824111",
+    "position": 24000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.NBT.B.9"
+   },
+   "2888127929A64B0EABDF01277695A4C2": {
+    "ancestorIds": [
+     "6F9F8A3AA19642F9AB9A6C2C9DDFEF66",
+     "90A22B566386415F9F2DC82713E55954",
+     "C0495C12F2FC40A2B2DBB7BAB8E5AC5D"
+    ],
+    "asnIdentifier": "S21045297",
+    "depth": 3,
+    "description": "Measure to determine how much longer one object is than another, expressing the length difference in terms of a standard length unit.",
+    "id": "2888127929A64B0EABDF01277695A4C2",
+    "parentId": "6F9F8A3AA19642F9AB9A6C2C9DDFEF66",
+    "position": 40000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.MD.A.4"
+   },
+   "2B2F508F4611413FBD6B845E0D369BC8": {
+    "ancestorIds": [
+     "C92C16CB66F34F06AC2C9CD5BB245B32"
+    ],
+    "asnIdentifier": "S21029612",
+    "depth": 1,
+    "description": "Attend to precision.",
+    "id": "2B2F508F4611413FBD6B845E0D369BC8",
+    "parentId": "C92C16CB66F34F06AC2C9CD5BB245B32",
+    "position": 7000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP6"
+   },
+   "2BF1212D01584E31AB1A18072228C5CF": {
+    "ancestorIds": [
+     "6F9F8A3AA19642F9AB9A6C2C9DDFEF66",
+     "90A22B566386415F9F2DC82713E55954",
+     "C0495C12F2FC40A2B2DBB7BAB8E5AC5D"
+    ],
+    "asnIdentifier": "S21045294",
+    "depth": 3,
+    "description": "Measure the length of an object by selecting and using appropriate tools such as rulers, yardsticks, meter sticks, and measuring tapes.",
+    "id": "2BF1212D01584E31AB1A18072228C5CF",
+    "parentId": "6F9F8A3AA19642F9AB9A6C2C9DDFEF66",
+    "position": 37000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.MD.A.1"
+   },
+   "2E8BD18E6BC14480986DEF8790F818D3": {
+    "ancestorIds": [
+     "49FDCE09E01D41DCB8BF8DB046B32D1A"
+    ],
+    "asnIdentifier": "S21029771",
+    "depth": 1,
+    "description": "Geometry",
+    "id": "2E8BD18E6BC14480986DEF8790F818D3",
+    "parentId": "49FDCE09E01D41DCB8BF8DB046B32D1A",
+    "position": 51000
+   },
+   "35CB03858609450A859270CCB4EB29B8": {
+    "ancestorIds": [
+     "EEC11D233BE54B6ABED9EB33D2421EFE",
+     "7B1DA39F4D8D4B67864CDAF577D85DD8",
+     "EFA833172F964BAE85D888F298EBF835"
+    ],
+    "asnIdentifier": "S21045291",
+    "depth": 3,
+    "description": "Fluently add and subtract within 20 using mental strategies. (See 1.OA.C.6 for a list of strategies.) By end of Grade 2, know from memory all sums of two one-digit numbers.",
+    "id": "35CB03858609450A859270CCB4EB29B8",
+    "parentId": "EEC11D233BE54B6ABED9EB33D2421EFE",
+    "position": 30000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.OA.B.2"
+   },
+   "3F295C7A35F3489E82395824EDCBAA7A": {
+    "ancestorIds": [
+     "E9200F7753CC4A22A1E81CF56EDA1B7C",
+     "A01A1A627A7049749716A85847A4EEAC",
+     "1BBB7A60A7D3495B99D65AF9C85A32E2"
+    ],
+    "asnIdentifier": "S21045284",
+    "depth": 3,
+    "description": "Compare two three-digit numbers based on meanings of the hundreds, tens, and ones digits, using >, =, and < symbols to record the results of comparisons.",
+    "id": "3F295C7A35F3489E82395824EDCBAA7A",
+    "parentId": "E9200F7753CC4A22A1E81CF56EDA1B7C",
+    "position": 18000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.NBT.A.4"
+   },
+   "40356D7601E24F0B8FFB360978991667": {
+    "ancestorIds": [
+     "76855BE0718A49E7826E121E88C1E004",
+     "7B1DA39F4D8D4B67864CDAF577D85DD8",
+     "EFA833172F964BAE85D888F298EBF835"
+    ],
+    "asnIdentifier": "S21045293",
+    "depth": 3,
+    "description": "Use addition to find the total number of objects arranged in rectangular arrays with up to 5 rows and up to 5 columns; write an equation to express the total as a sum of equal addends.",
+    "id": "40356D7601E24F0B8FFB360978991667",
+    "parentId": "76855BE0718A49E7826E121E88C1E004",
+    "position": 33000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.OA.C.4"
+   },
+   "49FDCE09E01D41DCB8BF8DB046B32D1A": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029770",
+    "depth": 0,
+    "description": "Geometry",
+    "id": "49FDCE09E01D41DCB8BF8DB046B32D1A",
+    "parentId": null,
+    "position": 50000,
+    "statementLabel": "Standard",
+    "statementNotation": "G.4"
+   },
+   "4F5AEB103F6646359EDF385C922843F1": {
+    "ancestorIds": [
+     "58BB775E9D0D4ED6BC97377C04F18AF9",
+     "90A22B566386415F9F2DC82713E55954",
+     "C0495C12F2FC40A2B2DBB7BAB8E5AC5D"
+    ],
+    "asnIdentifier": "S21045299",
+    "depth": 3,
+    "description": "Represent whole numbers as lengths from 0 on a number line diagram with equally spaced points corresponding to the numbers 0,1,2,…, and represent whole-number sums and differences within 100 on a number line diagram.",
+    "id": "4F5AEB103F6646359EDF385C922843F1",
+    "parentId": "58BB775E9D0D4ED6BC97377C04F18AF9",
+    "position": 43000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.MD.B.6"
+   },
+   "50747C88DC19465EBC3CCA344FEA1EB9": {
+    "ancestorIds": [
+     "6B3A91312AC1412E93AA109E547475EF",
+     "E9200F7753CC4A22A1E81CF56EDA1B7C",
+     "A01A1A627A7049749716A85847A4EEAC",
+     "1BBB7A60A7D3495B99D65AF9C85A32E2"
+    ],
+    "asnIdentifier": "S21045280",
+    "depth": 4,
+    "description": "100 can be thought of as a bundle of ten tens — called a \"hundred.\"",
+    "id": "50747C88DC19465EBC3CCA344FEA1EB9",
+    "parentId": "6B3A91312AC1412E93AA109E547475EF",
+    "position": 14000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.NBT.A.1.a"
+   },
+   "58BB775E9D0D4ED6BC97377C04F18AF9": {
+    "ancestorIds": [
+     "90A22B566386415F9F2DC82713E55954",
+     "C0495C12F2FC40A2B2DBB7BAB8E5AC5D"
+    ],
+    "asnIdentifier": "S21029737",
+    "depth": 2,
+    "description": "Relate addition and subtraction to length.",
+    "id": "58BB775E9D0D4ED6BC97377C04F18AF9",
+    "parentId": "90A22B566386415F9F2DC82713E55954",
+    "position": 41000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "2.MD.B"
+   },
+   "5CCFEAB1D0D34C40BE1F58D116F134DB": {
+    "ancestorIds": [
+     "E9200F7753CC4A22A1E81CF56EDA1B7C",
+     "A01A1A627A7049749716A85847A4EEAC",
+     "1BBB7A60A7D3495B99D65AF9C85A32E2"
+    ],
+    "asnIdentifier": "S21045282",
+    "depth": 3,
+    "description": "Count within 1000; skip-count by 5s, 10s, and 100s.",
+    "id": "5CCFEAB1D0D34C40BE1F58D116F134DB",
+    "parentId": "E9200F7753CC4A22A1E81CF56EDA1B7C",
+    "position": 16000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.NBT.A.2"
+   },
+   "5F6B46031EDF44C0A0852DBA50919FAC": {
+    "ancestorIds": [
+     "C92C16CB66F34F06AC2C9CD5BB245B32"
+    ],
+    "asnIdentifier": "S21029613",
+    "depth": 1,
+    "description": "Look for and make use of structure.",
+    "id": "5F6B46031EDF44C0A0852DBA50919FAC",
+    "parentId": "C92C16CB66F34F06AC2C9CD5BB245B32",
+    "position": 8000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP7"
+   },
+   "672760B55545467996FE6345CA1A0A26": {
+    "ancestorIds": [
+     "EE1AD61F966D44A798C986BBF7E14098",
+     "2E8BD18E6BC14480986DEF8790F818D3",
+     "49FDCE09E01D41DCB8BF8DB046B32D1A"
+    ],
+    "asnIdentifier": "S21045304",
+    "depth": 3,
+    "description": "Recognize and draw shapes having specified attributes, such as a given number of angles or a given number of equal faces. (Sizes are compared directly or visually, not compared by measuring.) Identify triangles, quadrilaterals, pentagons, hexagons, and cubes.",
+    "id": "672760B55545467996FE6345CA1A0A26",
+    "parentId": "EE1AD61F966D44A798C986BBF7E14098",
+    "position": 53000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.G.A.1"
+   },
+   "6B3A91312AC1412E93AA109E547475EF": {
+    "ancestorIds": [
+     "E9200F7753CC4A22A1E81CF56EDA1B7C",
+     "A01A1A627A7049749716A85847A4EEAC",
+     "1BBB7A60A7D3495B99D65AF9C85A32E2"
+    ],
+    "asnIdentifier": "S21045279",
+    "depth": 3,
+    "description": "Understand that the three digits of a three-digit number represent amounts of hundreds, tens, and ones; e.g., 706 equals 7 hundreds, 0 tens, and 6 ones. Understand the following as special cases:",
+    "id": "6B3A91312AC1412E93AA109E547475EF",
+    "parentId": "E9200F7753CC4A22A1E81CF56EDA1B7C",
+    "position": 13000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.NBT.A.1"
+   },
+   "6F9F8A3AA19642F9AB9A6C2C9DDFEF66": {
+    "ancestorIds": [
+     "90A22B566386415F9F2DC82713E55954",
+     "C0495C12F2FC40A2B2DBB7BAB8E5AC5D"
+    ],
+    "asnIdentifier": "S21029736",
+    "depth": 2,
+    "description": "Measure and estimate lengths in standard units.",
+    "id": "6F9F8A3AA19642F9AB9A6C2C9DDFEF66",
+    "parentId": "90A22B566386415F9F2DC82713E55954",
+    "position": 36000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "2.MD.A"
+   },
+   "76855BE0718A49E7826E121E88C1E004": {
+    "ancestorIds": [
+     "7B1DA39F4D8D4B67864CDAF577D85DD8",
+     "EFA833172F964BAE85D888F298EBF835"
+    ],
+    "asnIdentifier": "S21029677",
+    "depth": 2,
+    "description": "Work with equal groups of objects to gain foundations for multiplication.",
+    "id": "76855BE0718A49E7826E121E88C1E004",
+    "parentId": "7B1DA39F4D8D4B67864CDAF577D85DD8",
+    "position": 31000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "2.OA.C"
+   },
+   "770BCEAB8ACA4BBFA23C1FC022CA73C1": {
+    "ancestorIds": [
+     "6F9F8A3AA19642F9AB9A6C2C9DDFEF66",
+     "90A22B566386415F9F2DC82713E55954",
+     "C0495C12F2FC40A2B2DBB7BAB8E5AC5D"
+    ],
+    "asnIdentifier": "S21045295",
+    "depth": 3,
+    "description": "Measure the length of an object twice, using length units of different lengths for the two measurements; describe how the two measurements relate to the size of the unit chosen.",
+    "id": "770BCEAB8ACA4BBFA23C1FC022CA73C1",
+    "parentId": "6F9F8A3AA19642F9AB9A6C2C9DDFEF66",
+    "position": 38000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.MD.A.2"
+   },
+   "7A686058494D463E9ACEE92EF29FFC97": {
+    "ancestorIds": [
+     "6F9F8A3AA19642F9AB9A6C2C9DDFEF66",
+     "90A22B566386415F9F2DC82713E55954",
+     "C0495C12F2FC40A2B2DBB7BAB8E5AC5D"
+    ],
+    "asnIdentifier": "S21045296",
+    "depth": 3,
+    "description": "Estimate lengths using units of inches, feet, centimeters, and meters.",
+    "id": "7A686058494D463E9ACEE92EF29FFC97",
+    "parentId": "6F9F8A3AA19642F9AB9A6C2C9DDFEF66",
+    "position": 39000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.MD.A.3"
+   },
+   "7B1DA39F4D8D4B67864CDAF577D85DD8": {
+    "ancestorIds": [
+     "EFA833172F964BAE85D888F298EBF835"
+    ],
+    "asnIdentifier": "S21029667",
+    "depth": 1,
+    "description": "Operations & Algebraic Thinking",
+    "id": "7B1DA39F4D8D4B67864CDAF577D85DD8",
+    "parentId": "EFA833172F964BAE85D888F298EBF835",
+    "position": 26000
+   },
+   "7DC01009647A4C7ABE4560803652EA91": {
+    "ancestorIds": [
+     "C92C16CB66F34F06AC2C9CD5BB245B32"
+    ],
+    "asnIdentifier": "S21029609",
+    "depth": 1,
+    "description": "Construct viable arguments and critique the reasoning of others.",
+    "id": "7DC01009647A4C7ABE4560803652EA91",
+    "parentId": "C92C16CB66F34F06AC2C9CD5BB245B32",
+    "position": 4000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP3"
+   },
+   "857F778D599545BABDEA66A3A3FDA44A": {
+    "ancestorIds": [
+     "C92C16CB66F34F06AC2C9CD5BB245B32"
+    ],
+    "asnIdentifier": "S21029614",
+    "depth": 1,
+    "description": "Look for and express regularity in repeated reasoning.",
+    "id": "857F778D599545BABDEA66A3A3FDA44A",
+    "parentId": "C92C16CB66F34F06AC2C9CD5BB245B32",
+    "position": 9000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP8"
+   },
+   "90502C2B3A3E489FB4DD9EDDD961EBA3": {
+    "ancestorIds": [
+     "1337428D98C84AB981107E5287824111",
+     "A01A1A627A7049749716A85847A4EEAC",
+     "1BBB7A60A7D3495B99D65AF9C85A32E2"
+    ],
+    "asnIdentifier": "S21045285",
+    "depth": 3,
+    "description": "Fluently add and subtract within 100 using strategies based on place value, properties of operations, and/or the relationship between addition and subtraction.",
+    "id": "90502C2B3A3E489FB4DD9EDDD961EBA3",
+    "parentId": "1337428D98C84AB981107E5287824111",
+    "position": 20000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.NBT.B.5"
+   },
+   "90A22B566386415F9F2DC82713E55954": {
+    "ancestorIds": [
+     "C0495C12F2FC40A2B2DBB7BAB8E5AC5D"
+    ],
+    "asnIdentifier": "S21029729",
+    "depth": 1,
+    "description": "Measurement & Data",
+    "id": "90A22B566386415F9F2DC82713E55954",
+    "parentId": "C0495C12F2FC40A2B2DBB7BAB8E5AC5D",
+    "position": 35000
+   },
+   "90E49A4A842042C0B976F6FFA299AD37": {
+    "ancestorIds": [
+     "1337428D98C84AB981107E5287824111",
+     "A01A1A627A7049749716A85847A4EEAC",
+     "1BBB7A60A7D3495B99D65AF9C85A32E2"
+    ],
+    "asnIdentifier": "S21045286",
+    "depth": 3,
+    "description": "Add up to four two-digit numbers using strategies based on place value and properties of operations.",
+    "id": "90E49A4A842042C0B976F6FFA299AD37",
+    "parentId": "1337428D98C84AB981107E5287824111",
+    "position": 21000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.NBT.B.6"
+   },
+   "9AF26E282BA94F02888B00D47AC8956D": {
+    "ancestorIds": [
+     "C92C16CB66F34F06AC2C9CD5BB245B32"
+    ],
+    "asnIdentifier": "S21029611",
+    "depth": 1,
+    "description": "Use appropriate tools strategically.",
+    "id": "9AF26E282BA94F02888B00D47AC8956D",
+    "parentId": "C92C16CB66F34F06AC2C9CD5BB245B32",
+    "position": 6000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP5"
+   },
+   "9BD89479C986489EA6C2A13DAA44562F": {
+    "ancestorIds": [
+     "C3FFC535CB5A471E8836A500CA5DFD0D",
+     "90A22B566386415F9F2DC82713E55954",
+     "C0495C12F2FC40A2B2DBB7BAB8E5AC5D"
+    ],
+    "asnIdentifier": "S21045303",
+    "depth": 3,
+    "description": "Draw a picture graph and a bar graph (with single-unit scale) to represent a data set with up to four categories. Solve simple put-together, take-apart, and compare problems using information presented in a bar graph.",
+    "id": "9BD89479C986489EA6C2A13DAA44562F",
+    "parentId": "C3FFC535CB5A471E8836A500CA5DFD0D",
+    "position": 49000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.MD.D.10"
+   },
+   "A01A1A627A7049749716A85847A4EEAC": {
+    "ancestorIds": [
+     "1BBB7A60A7D3495B99D65AF9C85A32E2"
+    ],
+    "asnIdentifier": "S21029625",
+    "depth": 1,
+    "description": "Number & Operations in Base Ten",
+    "id": "A01A1A627A7049749716A85847A4EEAC",
+    "parentId": "1BBB7A60A7D3495B99D65AF9C85A32E2",
+    "position": 11000
+   },
+   "A14B0351296C4973AC12C4F11E7A1442": {
+    "ancestorIds": [
+     "C4E96F32BF134903B79312F0C4621631",
+     "90A22B566386415F9F2DC82713E55954",
+     "C0495C12F2FC40A2B2DBB7BAB8E5AC5D"
+    ],
+    "asnIdentifier": "S21045300",
+    "depth": 3,
+    "description": "Tell and write time from analog and digital clocks to the nearest five minutes, using a.m. and p.m.",
+    "id": "A14B0351296C4973AC12C4F11E7A1442",
+    "parentId": "C4E96F32BF134903B79312F0C4621631",
+    "position": 45000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.MD.C.7"
+   },
+   "AE31747F365F484C9E0BBB6D3C6A8C71": {
+    "ancestorIds": [
+     "C92C16CB66F34F06AC2C9CD5BB245B32"
+    ],
+    "asnIdentifier": "S21029607",
+    "depth": 1,
+    "description": "Make sense of problems and persevere in solving them.",
+    "id": "AE31747F365F484C9E0BBB6D3C6A8C71",
+    "parentId": "C92C16CB66F34F06AC2C9CD5BB245B32",
+    "position": 2000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP1"
+   },
+   "B5490F890A634EDD9F0BFC72CC5A0909": {
+    "ancestorIds": [
+     "EE1AD61F966D44A798C986BBF7E14098",
+     "2E8BD18E6BC14480986DEF8790F818D3",
+     "49FDCE09E01D41DCB8BF8DB046B32D1A"
+    ],
+    "asnIdentifier": "S21045305",
+    "depth": 3,
+    "description": "Partition a rectangle into rows and columns of same-size squares and count to find the total number of them.",
+    "id": "B5490F890A634EDD9F0BFC72CC5A0909",
+    "parentId": "EE1AD61F966D44A798C986BBF7E14098",
+    "position": 54000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.G.A.2"
+   },
+   "C0495C12F2FC40A2B2DBB7BAB8E5AC5D": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029728",
+    "depth": 0,
+    "description": "Data, Statistics, and Probability",
+    "id": "C0495C12F2FC40A2B2DBB7BAB8E5AC5D",
+    "parentId": null,
+    "position": 34000,
+    "statementLabel": "Standard",
+    "statementNotation": "DSP.3"
+   },
+   "C3FFC535CB5A471E8836A500CA5DFD0D": {
+    "ancestorIds": [
+     "90A22B566386415F9F2DC82713E55954",
+     "C0495C12F2FC40A2B2DBB7BAB8E5AC5D"
+    ],
+    "asnIdentifier": "S21029739",
+    "depth": 2,
+    "description": "Represent and interpret data.",
+    "id": "C3FFC535CB5A471E8836A500CA5DFD0D",
+    "parentId": "90A22B566386415F9F2DC82713E55954",
+    "position": 47000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "2.MD.D"
+   },
+   "C4E96F32BF134903B79312F0C4621631": {
+    "ancestorIds": [
+     "90A22B566386415F9F2DC82713E55954",
+     "C0495C12F2FC40A2B2DBB7BAB8E5AC5D"
+    ],
+    "asnIdentifier": "S21029738",
+    "depth": 2,
+    "description": "Work with time and money.",
+    "id": "C4E96F32BF134903B79312F0C4621631",
+    "parentId": "90A22B566386415F9F2DC82713E55954",
+    "position": 44000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "2.MD.C"
+   },
+   "C92C16CB66F34F06AC2C9CD5BB245B32": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029606",
+    "depth": 0,
+    "description": "Standards for Mathematical Practice",
+    "id": "C92C16CB66F34F06AC2C9CD5BB245B32",
+    "parentId": null,
+    "position": 1000
+   },
+   "DA3A260AAB9C4E3A965CB034FFCB9758": {
+    "ancestorIds": [
+     "76855BE0718A49E7826E121E88C1E004",
+     "7B1DA39F4D8D4B67864CDAF577D85DD8",
+     "EFA833172F964BAE85D888F298EBF835"
+    ],
+    "asnIdentifier": "S21045292",
+    "depth": 3,
+    "description": "Determine whether a group of objects (up to 20) has an odd or even number of members, e.g., by pairing objects or counting them by 2s; write an equation to express an even number as a sum of two equal addends.",
+    "id": "DA3A260AAB9C4E3A965CB034FFCB9758",
+    "parentId": "76855BE0718A49E7826E121E88C1E004",
+    "position": 32000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.OA.C.3"
+   },
+   "E0E96FAC6CC74E7C9976EA85C6A411E7": {
+    "ancestorIds": [
+     "58BB775E9D0D4ED6BC97377C04F18AF9",
+     "90A22B566386415F9F2DC82713E55954",
+     "C0495C12F2FC40A2B2DBB7BAB8E5AC5D"
+    ],
+    "asnIdentifier": "S21045298",
+    "depth": 3,
+    "description": "Use addition and subtraction within 100 to solve word problems involving lengths that are given in the same units, e.g., by using drawings (such as drawings of rulers) and equations with a symbol for the unknown number to represent the problem.",
+    "id": "E0E96FAC6CC74E7C9976EA85C6A411E7",
+    "parentId": "58BB775E9D0D4ED6BC97377C04F18AF9",
+    "position": 42000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.MD.B.5"
+   },
+   "E737AA37F08A497381F689A0923A5415": {
+    "ancestorIds": [
+     "06A9B164E69A4F0ABB53249BE727F014",
+     "7B1DA39F4D8D4B67864CDAF577D85DD8",
+     "EFA833172F964BAE85D888F298EBF835"
+    ],
+    "asnIdentifier": "S21045290",
+    "depth": 3,
+    "description": "Use addition and subtraction within 100 to solve one- and two-step word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using drawings and equations with a symbol for the unknown number to represent the problem.",
+    "id": "E737AA37F08A497381F689A0923A5415",
+    "parentId": "06A9B164E69A4F0ABB53249BE727F014",
+    "position": 28000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.OA.A.1"
+   },
+   "E9200F7753CC4A22A1E81CF56EDA1B7C": {
+    "ancestorIds": [
+     "A01A1A627A7049749716A85847A4EEAC",
+     "1BBB7A60A7D3495B99D65AF9C85A32E2"
+    ],
+    "asnIdentifier": "S21029630",
+    "depth": 2,
+    "description": "Understand place value.",
+    "id": "E9200F7753CC4A22A1E81CF56EDA1B7C",
+    "parentId": "A01A1A627A7049749716A85847A4EEAC",
+    "position": 12000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "2.NBT.A"
+   },
+   "EC82E9D9A8AF4BFA9C82C9847B14B6DB": {
+    "ancestorIds": [
+     "E9200F7753CC4A22A1E81CF56EDA1B7C",
+     "A01A1A627A7049749716A85847A4EEAC",
+     "1BBB7A60A7D3495B99D65AF9C85A32E2"
+    ],
+    "asnIdentifier": "S21045283",
+    "depth": 3,
+    "description": "Read and write numbers to 1000 using base-ten numerals, number names, and expanded form.",
+    "id": "EC82E9D9A8AF4BFA9C82C9847B14B6DB",
+    "parentId": "E9200F7753CC4A22A1E81CF56EDA1B7C",
+    "position": 17000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "2.NBT.A.3"
+   },
+   "EE1AD61F966D44A798C986BBF7E14098": {
+    "ancestorIds": [
+     "2E8BD18E6BC14480986DEF8790F818D3",
+     "49FDCE09E01D41DCB8BF8DB046B32D1A"
+    ],
+    "asnIdentifier": "S21029777",
+    "depth": 2,
+    "description": "Reason with shapes and their attributes.",
+    "id": "EE1AD61F966D44A798C986BBF7E14098",
+    "parentId": "2E8BD18E6BC14480986DEF8790F818D3",
+    "position": 52000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "2.G.A"
+   },
+   "EEC11D233BE54B6ABED9EB33D2421EFE": {
+    "ancestorIds": [
+     "7B1DA39F4D8D4B67864CDAF577D85DD8",
+     "EFA833172F964BAE85D888F298EBF835"
+    ],
+    "asnIdentifier": "S21029676",
+    "depth": 2,
+    "description": "Add and subtract within 20.",
+    "id": "EEC11D233BE54B6ABED9EB33D2421EFE",
+    "parentId": "7B1DA39F4D8D4B67864CDAF577D85DD8",
+    "position": 29000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "2.OA.B"
+   },
+   "EFA833172F964BAE85D888F298EBF835": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029666",
+    "depth": 0,
+    "description": "Algebra and Functions",
+    "id": "EFA833172F964BAE85D888F298EBF835",
+    "parentId": null,
+    "position": 25000,
+    "statementLabel": "Standard",
+    "statementNotation": "AF.2"
+   }
+  },
+  "subject": "Mathematics (2020-)",
+  "title": "Grade 2"
+ }
+}

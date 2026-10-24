@@ -67,6 +67,34 @@ describe("Try it free links", () => {
   });
 });
 
+describe("which button leads", () => {
+  const links = (container: HTMLElement) => [...container.querySelectorAll("a.btn")].map((a) => [a.textContent, a.classList.contains("btn-good")]);
+
+  it("puts Subscribe first and green unless the page leads with the free trial", () => {
+    const sub = render(<SubscribeActions />);
+    expect(links(sub.container)).toEqual([
+      ["Subscribe", true],
+      ["Try it free", false],
+    ]);
+    const trial = render(<SubscribeActions lead="trial" />);
+    expect(links(trial.container)).toEqual([
+      ["Try it free", true],
+      ["Subscribe", false],
+    ]);
+  });
+
+  it("drops the phone's full-width Subscribe bar on pages that lead with the trial", () => {
+    const bar = (c: HTMLElement) => [...c.querySelectorAll("header a")].filter((a) => a.textContent === "Subscribe" && a.className.includes("w-full"));
+    expect(bar(render(<SiteHeader />).container)).toHaveLength(1);
+    expect(bar(render(<SiteHeader lead="trial" />).container)).toHaveLength(0);
+  });
+
+  it("words the closing call to action the same way round", () => {
+    render(<PageCta lead="trial" />);
+    expect(screen.getByText(/Try everything free for 30 days with no card, then subscribe if it helps\./)).toBeInTheDocument();
+  });
+});
+
 describe("About and Contact links", () => {
   it("puts About in the header and both pages in the footer", () => {
     render(<SiteHeader />);

@@ -45,6 +45,22 @@ export async function signUp(email: string, password: string) {
   await syncNow();
 }
 
+/**
+ * "Send me the reports" from the end of a lesson: an account from an email alone, with the weekly report on.
+ * This device is signed in at once and its progress uploads; the email asks the parent to confirm.
+ */
+export async function signUpForReports(email: string) {
+  const { family } = await post<{ family: FamilyInfo }>("/api/auth/signup/", {
+    email,
+    passwordless: true,
+    trialEndsAt: useStore.getState().family.trialEndsAt,
+    referralCode: savedReferralCode() ?? undefined,
+  });
+  clearReferralCode();
+  adopt(family);
+  await syncNow();
+}
+
 export async function signIn(email: string, password: string) {
   const { family } = await post<{ family: FamilyInfo }>("/api/auth/login/", { email, password });
   // A fresh sign-in downloads the whole family history.

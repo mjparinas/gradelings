@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { render, screen, within } from "@testing-library/react";
+import { fireEvent, render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { coursesFor, curriculumPath, gradesWithContent } from "@/components/site/curriculum";
 import { FRAMEWORKS, getFramework } from "@/content/frameworks";
@@ -35,11 +35,26 @@ describe("curriculum unit page", () => {
     expect(steps.map((li) => li.textContent)).toEqual(unit.lesson!.steps);
     expect(screen.getByText(`Answer: ${unit.lesson!.example.answer}`)).toBeInTheDocument();
 
-    const samples = within(screen.getByRole("region", { name: "Sample questions" })).getAllByText(/^Question \d$/);
+    const samples = within(screen.getByRole("region", { name: "Try a few questions" })).getAllByText(/^Question \d$/);
     expect(samples.map((s) => s.textContent)).toEqual(["Question 1", "Question 2", "Question 3", "Question 4", "Question 5", "Question 6"]);
     // The side panel's own call to action, besides the header's.
     expect(within(screen.getByRole("complementary")).getByRole("link", { name: "Play free" })).toHaveAttribute("href", `/play/#/start?framework=ca-bc&grade=3&subject=math&unit=${unit.id}`);
     expect(within(screen.getByRole("complementary")).getByRole("button", { name: /Share these questions/ })).toBeInTheDocument();
+  });
+
+  it("lets a visitor answer a tap-to-answer sample on the page, then offers the unit in the app", async () => {
+    const f = getFramework("ca-bc");
+    const unit = coursesFor(f, "2").find((c) => c.subject === "math")!.units[0];
+    render(await UnitPage(props("bc", "grade-2", "math", unit.id)));
+    const region = screen.getByRole("region", { name: "Try a few questions" });
+    const card = within(region).getAllByRole("listitem").find((li) => within(li).queryByText("Tap an answer to try it."));
+    expect(card).toBeDefined();
+    const choices = within(within(card!).getByRole("list", { name: "Choices" })).getAllByRole("button");
+    // Two misses (or one right answer) end it with the answer and the app link; pick wrong ones while they last.
+    for (const button of choices.slice(0, 2)) fireEvent.click(button);
+    const link = within(card!).getByRole("link", { name: /Practise this unit/ });
+    expect(link).toHaveAttribute("href", `/play/#/start?framework=ca-bc&grade=2&subject=math&unit=${unit.id}`);
+    expect(within(card!).getByText(/That's right!|The answer is/)).toBeInTheDocument();
   });
 
   it("links the previous and next unit and the grade's other subjects", async () => {
@@ -61,10 +76,10 @@ describe("curriculum unit page", () => {
     const f = getFramework("ca-sk");
     const unit = coursesFor(f, "6").find((c) => c.subject === "math")!.units[0];
     const first = render(await UnitPage(props("saskatchewan", "grade-6", "math", unit.id)));
-    const text = screen.getByRole("region", { name: "Sample questions" }).textContent;
+    const text = screen.getByRole("region", { name: "Try a few questions" }).textContent;
     first.unmount();
     render(await UnitPage(props("saskatchewan", "grade-6", "math", unit.id)));
-    expect(screen.getByRole("region", { name: "Sample questions" }).textContent).toBe(text);
+    expect(screen.getByRole("region", { name: "Try a few questions" }).textContent).toBe(text);
   });
 
   it("aligns the structured data to this framework's standard", async () => {
@@ -91,10 +106,10 @@ describe("curriculum unit page", () => {
     const yukon = getFramework("ca-yt");
     const unit = coursesFor(yukon, "4").find((c) => c.subject === "math")!.units.find((u) => u.standards["ca-bc"])!;
     const bc = render(await UnitPage(props("bc", "grade-4", "math", unit.id)));
-    const bcText = screen.getByRole("region", { name: "Sample questions" }).textContent;
+    const bcText = screen.getByRole("region", { name: "Try a few questions" }).textContent;
     bc.unmount();
     render(await UnitPage(props("yukon", "grade-4", "math", unit.id)));
-    expect(screen.getByRole("region", { name: "Sample questions" }).textContent).not.toBe(bcText);
+    expect(screen.getByRole("region", { name: "Try a few questions" }).textContent).not.toBe(bcText);
   });
 
   it("says where the unit sits in this region's course, links its guides and source, and dates the structured data", async () => {

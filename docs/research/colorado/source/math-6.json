@@ -1,0 +1,1106 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D2980651",
+   "id": "D2980651",
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.cde.state.co.us/comath/2020cas-ma-p12",
+   "title": "Colorado Academic Standards: Mathematics",
+   "valid": "2020"
+  },
+  "educationLevels": [
+   "06"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D2980651_grade-06",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/3.0/us/",
+   "rightsHolder": "D2L Corporation",
+   "title": "CC BY 3.0 US"
+  },
+  "normalizedSubject": "Math",
+  "standards": {
+   "025814DC88F44823AD8E93D477006899": {
+    "ancestorIds": [
+     "0793D8A2EFB8484789D30ED6FA388EC6",
+     "6AC0E1B5C9A84D9DB45F067DA3D4B47A",
+     "75E0E98E0A8648BCB115F05029C601DB"
+    ],
+    "asnIdentifier": "S21045485",
+    "depth": 3,
+    "description": "Write and evaluate numerical expressions involving whole-number exponents.",
+    "id": "025814DC88F44823AD8E93D477006899",
+    "parentId": "0793D8A2EFB8484789D30ED6FA388EC6",
+    "position": 42000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.EE.A.1"
+   },
+   "038ACBD48CF84B358CCDF055A914CD58": {
+    "ancestorIds": [
+     "7701C8A2529C4C48AF7CDB45C05790D6",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21029645",
+    "depth": 2,
+    "description": "Understand ratio concepts and use ratio reasoning to solve problems.",
+    "id": "038ACBD48CF84B358CCDF055A914CD58",
+    "parentId": "7701C8A2529C4C48AF7CDB45C05790D6",
+    "position": 12000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.RP.A"
+   },
+   "04F9C28C5DF44A1CB26E9B3A53EFCA33": {
+    "ancestorIds": [
+     "8938CD614BE84D7390F390ED74868ECE",
+     "644B47B861404DC096C2BB0FA824365E",
+     "55E2EF75616444A1ABAD41068A66BE3D"
+    ],
+    "asnIdentifier": "S21045499",
+    "depth": 3,
+    "description": "Explain that a measure of center for a numerical data set summarizes all of its values with a single number, while a measure of variation describes how its values vary with a single number.",
+    "id": "04F9C28C5DF44A1CB26E9B3A53EFCA33",
+    "parentId": "8938CD614BE84D7390F390ED74868ECE",
+    "position": 61000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.SP.A.3"
+   },
+   "0793D8A2EFB8484789D30ED6FA388EC6": {
+    "ancestorIds": [
+     "6AC0E1B5C9A84D9DB45F067DA3D4B47A",
+     "75E0E98E0A8648BCB115F05029C601DB"
+    ],
+    "asnIdentifier": "S21029688",
+    "depth": 2,
+    "description": "Apply and extend previous understandings of arithmetic to algebraic expressions.",
+    "id": "0793D8A2EFB8484789D30ED6FA388EC6",
+    "parentId": "6AC0E1B5C9A84D9DB45F067DA3D4B47A",
+    "position": 41000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.EE.A"
+   },
+   "095687B58F3948C6B747A52BEE3C4A86": {
+    "ancestorIds": [
+     "91A8DE4CB46746D7B1D4ED78A0577B3D"
+    ],
+    "asnIdentifier": "S21029612",
+    "depth": 1,
+    "description": "Attend to precision.",
+    "id": "095687B58F3948C6B747A52BEE3C4A86",
+    "parentId": "91A8DE4CB46746D7B1D4ED78A0577B3D",
+    "position": 7000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP6"
+   },
+   "1627DD58201F4B90B15868396D58F5A4": {
+    "ancestorIds": [
+     "8938CD614BE84D7390F390ED74868ECE",
+     "644B47B861404DC096C2BB0FA824365E",
+     "55E2EF75616444A1ABAD41068A66BE3D"
+    ],
+    "asnIdentifier": "S21045498",
+    "depth": 3,
+    "description": "Demonstrate that a set of data collected to answer a statistical question has a distribution that can be described by its center, spread, and overall shape.",
+    "id": "1627DD58201F4B90B15868396D58F5A4",
+    "parentId": "8938CD614BE84D7390F390ED74868ECE",
+    "position": 60000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.SP.A.2"
+   },
+   "19A9E6024B574A21923EE1AFD32096E0": {
+    "ancestorIds": [
+     "A9C5FECA7D8A42969FED3B94B4C75ABF",
+     "0793D8A2EFB8484789D30ED6FA388EC6",
+     "6AC0E1B5C9A84D9DB45F067DA3D4B47A",
+     "75E0E98E0A8648BCB115F05029C601DB"
+    ],
+    "asnIdentifier": "S21045487",
+    "depth": 4,
+    "description": "Write expressions that record operations with numbers and with letters standing for numbers.",
+    "id": "19A9E6024B574A21923EE1AFD32096E0",
+    "parentId": "A9C5FECA7D8A42969FED3B94B4C75ABF",
+    "position": 44000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.EE.A.2.a"
+   },
+   "1FD371D3740649629F814B77A656ECBF": {
+    "ancestorIds": [
+     "3F477A07F5B54F12B11692F7AE005F10",
+     "038ACBD48CF84B358CCDF055A914CD58",
+     "7701C8A2529C4C48AF7CDB45C05790D6",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045467",
+    "depth": 4,
+    "description": "Solve unit rate problems including those involving unit pricing and constant speed.",
+    "id": "1FD371D3740649629F814B77A656ECBF",
+    "parentId": "3F477A07F5B54F12B11692F7AE005F10",
+    "position": 17000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.RP.A.3.b"
+   },
+   "22D7653F88C84883BA6B63DF4F45FFB8": {
+    "ancestorIds": [
+     "6AC0E1B5C9A84D9DB45F067DA3D4B47A",
+     "75E0E98E0A8648BCB115F05029C601DB"
+    ],
+    "asnIdentifier": "S21029690",
+    "depth": 2,
+    "description": "Represent and analyze quantitative relationships between dependent and independent variables.",
+    "id": "22D7653F88C84883BA6B63DF4F45FFB8",
+    "parentId": "6AC0E1B5C9A84D9DB45F067DA3D4B47A",
+    "position": 54000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.EE.C"
+   },
+   "22F60930F92E450FA96E34B509265767": {
+    "ancestorIds": [
+     "644B47B861404DC096C2BB0FA824365E",
+     "55E2EF75616444A1ABAD41068A66BE3D"
+    ],
+    "asnIdentifier": "S21029752",
+    "depth": 2,
+    "description": "Summarize and describe distributions.",
+    "id": "22F60930F92E450FA96E34B509265767",
+    "parentId": "644B47B861404DC096C2BB0FA824365E",
+    "position": 62000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.SP.B"
+   },
+   "249383A0BA6B4EFEB1ECA36C7689A719": {
+    "ancestorIds": [
+     "22F60930F92E450FA96E34B509265767",
+     "644B47B861404DC096C2BB0FA824365E",
+     "55E2EF75616444A1ABAD41068A66BE3D"
+    ],
+    "asnIdentifier": "S21045500",
+    "depth": 3,
+    "description": "Display numerical data in plots on a number line, including dot plots, histograms, and box plots.",
+    "id": "249383A0BA6B4EFEB1ECA36C7689A719",
+    "parentId": "22F60930F92E450FA96E34B509265767",
+    "position": 63000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.SP.B.4"
+   },
+   "26398E0FE7244A9F800283CF18111883": {
+    "ancestorIds": [
+     "DBC3075C1D674FBAA8FE7927F13FB252",
+     "F1791656C1214D6E891E4EB0CBC50396",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045470",
+    "depth": 3,
+    "description": "Interpret and compute quotients of fractions, and solve word problems involving division of fractions by fractions, e.g., by using visual fraction models and equations to represent the problem.",
+    "id": "26398E0FE7244A9F800283CF18111883",
+    "parentId": "DBC3075C1D674FBAA8FE7927F13FB252",
+    "position": 22000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.NS.A.1"
+   },
+   "2A05C65034EA4BF799342112A37AC5B0": {
+    "ancestorIds": [
+     "CF71685A5DA846AF89E8DB9F9774D935",
+     "F1791656C1214D6E891E4EB0CBC50396",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045475",
+    "depth": 3,
+    "description": "Describe a rational number as a point on the number line. Extend number line diagrams and coordinate axes familiar from previous grades to represent points on the line and in the plane with negative number coordinates.",
+    "id": "2A05C65034EA4BF799342112A37AC5B0",
+    "parentId": "CF71685A5DA846AF89E8DB9F9774D935",
+    "position": 29000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.NS.C.6"
+   },
+   "2F842E2E08D5427585B07849438B1038": {
+    "ancestorIds": [
+     "2A05C65034EA4BF799342112A37AC5B0",
+     "CF71685A5DA846AF89E8DB9F9774D935",
+     "F1791656C1214D6E891E4EB0CBC50396",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045478",
+    "depth": 4,
+    "description": "Find and position integers and other rational numbers on a horizontal or vertical number line diagram; find and position pairs of integers and other rational numbers on a coordinate plane.",
+    "id": "2F842E2E08D5427585B07849438B1038",
+    "parentId": "2A05C65034EA4BF799342112A37AC5B0",
+    "position": 32000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.NS.C.6.c"
+   },
+   "2FCE08A8A954438783EE9E429086378C": {
+    "ancestorIds": [
+     "8938CD614BE84D7390F390ED74868ECE",
+     "644B47B861404DC096C2BB0FA824365E",
+     "55E2EF75616444A1ABAD41068A66BE3D"
+    ],
+    "asnIdentifier": "S21045497",
+    "depth": 3,
+    "description": "Identify a statistical question as one that anticipates variability in the data related to the question and accounts for it in the answers.",
+    "id": "2FCE08A8A954438783EE9E429086378C",
+    "parentId": "8938CD614BE84D7390F390ED74868ECE",
+    "position": 59000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.SP.A.1"
+   },
+   "318FC38B7DA84E5683DA66A9F9DDA168": {
+    "ancestorIds": [
+     "712FB3AD1F5C4128B0FE106559C6D0B7",
+     "C0E14EB752F443579751F8E08D5FF306",
+     "7B85DCE78F2D4805A2D25CB756A902BB"
+    ],
+    "asnIdentifier": "S21045507",
+    "depth": 3,
+    "description": "Find the volume of a right rectangular prism with fractional edge lengths by packing it with unit cubes of the appropriate unit fraction edge lengths, and show that the volume is the same as would be found by multiplying the edge lengths of the prism. Apply the formulas V=lwh and V=bh to find volumes of right rectangular prisms with fractional edge lengths in the context of solving real-world and mathematical problems.",
+    "id": "318FC38B7DA84E5683DA66A9F9DDA168",
+    "parentId": "712FB3AD1F5C4128B0FE106559C6D0B7",
+    "position": 73000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.G.A.2"
+   },
+   "332532C312034F9992BF712754EC76F7": {
+    "ancestorIds": [
+     "B579D54F790146B09A499452534401D2",
+     "22F60930F92E450FA96E34B509265767",
+     "644B47B861404DC096C2BB0FA824365E",
+     "55E2EF75616444A1ABAD41068A66BE3D"
+    ],
+    "asnIdentifier": "S21045505",
+    "depth": 4,
+    "description": "Relating the choice of measures of center and variability to the shape of the data distribution and the context in which the data were gathered.",
+    "id": "332532C312034F9992BF712754EC76F7",
+    "parentId": "B579D54F790146B09A499452534401D2",
+    "position": 68000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.SP.B.5.d"
+   },
+   "3F477A07F5B54F12B11692F7AE005F10": {
+    "ancestorIds": [
+     "038ACBD48CF84B358CCDF055A914CD58",
+     "7701C8A2529C4C48AF7CDB45C05790D6",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045465",
+    "depth": 3,
+    "description": "Use ratio and rate reasoning to solve real-world and mathematical problems, e.g., by reasoning about tables of equivalent ratios, tape diagrams, double number line diagrams, or equations.",
+    "id": "3F477A07F5B54F12B11692F7AE005F10",
+    "parentId": "038ACBD48CF84B358CCDF055A914CD58",
+    "position": 15000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.RP.A.3"
+   },
+   "40134601FBD24A07BD015C5945E002D0": {
+    "ancestorIds": [
+     "712FB3AD1F5C4128B0FE106559C6D0B7",
+     "C0E14EB752F443579751F8E08D5FF306",
+     "7B85DCE78F2D4805A2D25CB756A902BB"
+    ],
+    "asnIdentifier": "S21045509",
+    "depth": 3,
+    "description": "Represent three-dimensional figures using nets made up of rectangles and triangles, and use the nets to find the surface area of these figures. Apply these techniques in the context of solving real-world and mathematical problems.",
+    "id": "40134601FBD24A07BD015C5945E002D0",
+    "parentId": "712FB3AD1F5C4128B0FE106559C6D0B7",
+    "position": 75000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.G.A.4"
+   },
+   "401C1A54BDB844A9A5984F8FB7C8C3BE": {
+    "ancestorIds": [
+     "B579D54F790146B09A499452534401D2",
+     "22F60930F92E450FA96E34B509265767",
+     "644B47B861404DC096C2BB0FA824365E",
+     "55E2EF75616444A1ABAD41068A66BE3D"
+    ],
+    "asnIdentifier": "S21045504",
+    "depth": 4,
+    "description": "Giving quantitative measures of center (median and/or mean) and variability (interquartile range and/or mean absolute deviation), as well as describing any overall pattern and any striking deviations from the overall pattern with reference to the context in which the data were gathered.",
+    "id": "401C1A54BDB844A9A5984F8FB7C8C3BE",
+    "parentId": "B579D54F790146B09A499452534401D2",
+    "position": 67000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.SP.B.5.c"
+   },
+   "43BB4F1337D040A69FA3DB35392D28AB": {
+    "ancestorIds": [
+     "DD8A3910655041F699FBC8371922EC0B",
+     "CF71685A5DA846AF89E8DB9F9774D935",
+     "F1791656C1214D6E891E4EB0CBC50396",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045482",
+    "depth": 4,
+    "description": "Define the absolute value of a rational number as its distance from 0 on the number line; interpret absolute value as magnitude for a positive or negative quantity in a real-world situation.",
+    "id": "43BB4F1337D040A69FA3DB35392D28AB",
+    "parentId": "DD8A3910655041F699FBC8371922EC0B",
+    "position": 36000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.NS.C.7.c"
+   },
+   "4EA47C4948C74980919F509A89584420": {
+    "ancestorIds": [
+     "A9C5FECA7D8A42969FED3B94B4C75ABF",
+     "0793D8A2EFB8484789D30ED6FA388EC6",
+     "6AC0E1B5C9A84D9DB45F067DA3D4B47A",
+     "75E0E98E0A8648BCB115F05029C601DB"
+    ],
+    "asnIdentifier": "S21045488",
+    "depth": 4,
+    "description": "Identify parts of an expression using mathematical terms (sum, term, product, factor, quotient, coefficient); view one or more parts of an expression as a single entity.",
+    "id": "4EA47C4948C74980919F509A89584420",
+    "parentId": "A9C5FECA7D8A42969FED3B94B4C75ABF",
+    "position": 45000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.EE.A.2.b"
+   },
+   "4EDEA471E3EB47C987765FE17553E198": {
+    "ancestorIds": [
+     "50CC57B5B7B14585ACACE35E30D1E5B2",
+     "F1791656C1214D6E891E4EB0CBC50396",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045473",
+    "depth": 3,
+    "description": "Find the greatest common factor of two whole numbers less than or equal to 100 and the least common multiple of two whole numbers less than or equal to 12. Use the distributive property to express a sum of two whole numbers 1–100 with a common factor as a multiple of a sum of two whole numbers with no common factor.",
+    "id": "4EDEA471E3EB47C987765FE17553E198",
+    "parentId": "50CC57B5B7B14585ACACE35E30D1E5B2",
+    "position": 26000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.NS.B.4"
+   },
+   "50CC57B5B7B14585ACACE35E30D1E5B2": {
+    "ancestorIds": [
+     "F1791656C1214D6E891E4EB0CBC50396",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21029649",
+    "depth": 2,
+    "description": "Compute fluently with multi-digit numbers and find common factors and multiples.",
+    "id": "50CC57B5B7B14585ACACE35E30D1E5B2",
+    "parentId": "F1791656C1214D6E891E4EB0CBC50396",
+    "position": 23000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.NS.B"
+   },
+   "540425AFF9BB45BDB317B2862B644E61": {
+    "ancestorIds": [
+     "91A8DE4CB46746D7B1D4ED78A0577B3D"
+    ],
+    "asnIdentifier": "S21029610",
+    "depth": 1,
+    "description": "Model with mathematics.",
+    "id": "540425AFF9BB45BDB317B2862B644E61",
+    "parentId": "91A8DE4CB46746D7B1D4ED78A0577B3D",
+    "position": 5000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP4"
+   },
+   "55E2EF75616444A1ABAD41068A66BE3D": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029728",
+    "depth": 0,
+    "description": "Data, Statistics, and Probability",
+    "id": "55E2EF75616444A1ABAD41068A66BE3D",
+    "parentId": null,
+    "position": 56000,
+    "statementLabel": "Standard",
+    "statementNotation": "DSP.3"
+   },
+   "5B04544AB9064F22A7B20320D4E878B3": {
+    "ancestorIds": [
+     "B579D54F790146B09A499452534401D2",
+     "22F60930F92E450FA96E34B509265767",
+     "644B47B861404DC096C2BB0FA824365E",
+     "55E2EF75616444A1ABAD41068A66BE3D"
+    ],
+    "asnIdentifier": "S21045502",
+    "depth": 4,
+    "description": "Reporting the number of observations.",
+    "id": "5B04544AB9064F22A7B20320D4E878B3",
+    "parentId": "B579D54F790146B09A499452534401D2",
+    "position": 65000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.SP.B.5.a"
+   },
+   "644B47B861404DC096C2BB0FA824365E": {
+    "ancestorIds": [
+     "55E2EF75616444A1ABAD41068A66BE3D"
+    ],
+    "asnIdentifier": "S21029750",
+    "depth": 1,
+    "description": "Statistics & Probability",
+    "id": "644B47B861404DC096C2BB0FA824365E",
+    "parentId": "55E2EF75616444A1ABAD41068A66BE3D",
+    "position": 57000
+   },
+   "6A9FF9FA646D421F8AA9350B7BB124E0": {
+    "ancestorIds": [
+     "712FB3AD1F5C4128B0FE106559C6D0B7",
+     "C0E14EB752F443579751F8E08D5FF306",
+     "7B85DCE78F2D4805A2D25CB756A902BB"
+    ],
+    "asnIdentifier": "S21045506",
+    "depth": 3,
+    "description": "Find the area of right triangles, other triangles, special quadrilaterals, and polygons by composing into rectangles or decomposing into triangles and other shapes; apply these techniques in the context of solving real-world and mathematical problems.",
+    "id": "6A9FF9FA646D421F8AA9350B7BB124E0",
+    "parentId": "712FB3AD1F5C4128B0FE106559C6D0B7",
+    "position": 72000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.G.A.1"
+   },
+   "6AC0E1B5C9A84D9DB45F067DA3D4B47A": {
+    "ancestorIds": [
+     "75E0E98E0A8648BCB115F05029C601DB"
+    ],
+    "asnIdentifier": "S21029687",
+    "depth": 1,
+    "description": "Expressions & Equations",
+    "id": "6AC0E1B5C9A84D9DB45F067DA3D4B47A",
+    "parentId": "75E0E98E0A8648BCB115F05029C601DB",
+    "position": 40000
+   },
+   "6F6491FB8C5E4E7A91AD985F3B18DC5C": {
+    "ancestorIds": [
+     "91A8DE4CB46746D7B1D4ED78A0577B3D"
+    ],
+    "asnIdentifier": "S21029609",
+    "depth": 1,
+    "description": "Construct viable arguments and critique the reasoning of others.",
+    "id": "6F6491FB8C5E4E7A91AD985F3B18DC5C",
+    "parentId": "91A8DE4CB46746D7B1D4ED78A0577B3D",
+    "position": 4000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP3"
+   },
+   "712FB3AD1F5C4128B0FE106559C6D0B7": {
+    "ancestorIds": [
+     "C0E14EB752F443579751F8E08D5FF306",
+     "7B85DCE78F2D4805A2D25CB756A902BB"
+    ],
+    "asnIdentifier": "S21029782",
+    "depth": 2,
+    "description": "Solve real-world and mathematical problems involving area, surface area, and volume.",
+    "id": "712FB3AD1F5C4128B0FE106559C6D0B7",
+    "parentId": "C0E14EB752F443579751F8E08D5FF306",
+    "position": 71000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.G.A"
+   },
+   "749751C9BF954BEF9D9504268B1DAAFA": {
+    "ancestorIds": [
+     "712FB3AD1F5C4128B0FE106559C6D0B7",
+     "C0E14EB752F443579751F8E08D5FF306",
+     "7B85DCE78F2D4805A2D25CB756A902BB"
+    ],
+    "asnIdentifier": "S21045508",
+    "depth": 3,
+    "description": "Draw polygons in the coordinate plane given coordinates for the vertices; use coordinates to find the length of a side joining points with the same first coordinate or the same second coordinate. Apply these techniques in the context of solving real-world and mathematical problems.",
+    "id": "749751C9BF954BEF9D9504268B1DAAFA",
+    "parentId": "712FB3AD1F5C4128B0FE106559C6D0B7",
+    "position": 74000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.G.A.3"
+   },
+   "75E0E98E0A8648BCB115F05029C601DB": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029666",
+    "depth": 0,
+    "description": "Algebra and Functions",
+    "id": "75E0E98E0A8648BCB115F05029C601DB",
+    "parentId": null,
+    "position": 39000,
+    "statementLabel": "Standard",
+    "statementNotation": "AF.2"
+   },
+   "7701C8A2529C4C48AF7CDB45C05790D6": {
+    "ancestorIds": [
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21029644",
+    "depth": 1,
+    "description": "Ratios & Proportional Relationships",
+    "id": "7701C8A2529C4C48AF7CDB45C05790D6",
+    "parentId": "EB615DE2715B401EA0A4B9ED1906CCBF",
+    "position": 11000
+   },
+   "79E834EE6571402193B82AC6953880B7": {
+    "ancestorIds": [
+     "50CC57B5B7B14585ACACE35E30D1E5B2",
+     "F1791656C1214D6E891E4EB0CBC50396",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045472",
+    "depth": 3,
+    "description": "Fluently add, subtract, multiply, and divide multi-digit decimals using the standard algorithm for each operation.",
+    "id": "79E834EE6571402193B82AC6953880B7",
+    "parentId": "50CC57B5B7B14585ACACE35E30D1E5B2",
+    "position": 25000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.NS.B.3"
+   },
+   "79EE6F2A8B094B01B63B2BC681714D86": {
+    "ancestorIds": [
+     "A9C5FECA7D8A42969FED3B94B4C75ABF",
+     "0793D8A2EFB8484789D30ED6FA388EC6",
+     "6AC0E1B5C9A84D9DB45F067DA3D4B47A",
+     "75E0E98E0A8648BCB115F05029C601DB"
+    ],
+    "asnIdentifier": "S21045489",
+    "depth": 4,
+    "description": "Evaluate expressions at specific values of their variables. Include expressions that arise from formulas used in real-world problems. Perform arithmetic operations, including those involving whole-number exponents, in the conventional order when there are no parentheses to specify a particular order (Order of Operations).",
+    "id": "79EE6F2A8B094B01B63B2BC681714D86",
+    "parentId": "A9C5FECA7D8A42969FED3B94B4C75ABF",
+    "position": 46000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.EE.A.2.c"
+   },
+   "7B85DCE78F2D4805A2D25CB756A902BB": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029770",
+    "depth": 0,
+    "description": "Geometry",
+    "id": "7B85DCE78F2D4805A2D25CB756A902BB",
+    "parentId": null,
+    "position": 69000,
+    "statementLabel": "Standard",
+    "statementNotation": "G.4"
+   },
+   "830CE53D21874B42BA5264ED9EB37E6B": {
+    "ancestorIds": [
+     "3F477A07F5B54F12B11692F7AE005F10",
+     "038ACBD48CF84B358CCDF055A914CD58",
+     "7701C8A2529C4C48AF7CDB45C05790D6",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045468",
+    "depth": 4,
+    "description": "Find a percent of a quantity as a rate per 100 (e.g., 30% of a quantity means 30/100 times the quantity); solve problems involving finding the whole, given a part and the percent.",
+    "id": "830CE53D21874B42BA5264ED9EB37E6B",
+    "parentId": "3F477A07F5B54F12B11692F7AE005F10",
+    "position": 18000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.RP.A.3.c"
+   },
+   "8374DE440AD2455BB251D8C162880B57": {
+    "ancestorIds": [
+     "91A8DE4CB46746D7B1D4ED78A0577B3D"
+    ],
+    "asnIdentifier": "S21029607",
+    "depth": 1,
+    "description": "Make sense of problems and persevere in solving them.",
+    "id": "8374DE440AD2455BB251D8C162880B57",
+    "parentId": "91A8DE4CB46746D7B1D4ED78A0577B3D",
+    "position": 2000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP1"
+   },
+   "84DFF1FE38384BA898510281672C1FFD": {
+    "ancestorIds": [
+     "B579D54F790146B09A499452534401D2",
+     "22F60930F92E450FA96E34B509265767",
+     "644B47B861404DC096C2BB0FA824365E",
+     "55E2EF75616444A1ABAD41068A66BE3D"
+    ],
+    "asnIdentifier": "S21045503",
+    "depth": 4,
+    "description": "Describing the nature of the attribute under investigation, including how it was measured and its units of measurement.",
+    "id": "84DFF1FE38384BA898510281672C1FFD",
+    "parentId": "B579D54F790146B09A499452534401D2",
+    "position": 66000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.SP.B.5.b"
+   },
+   "86AB2E1C5211428493042614143C772B": {
+    "ancestorIds": [
+     "DCA6A07467BE451AAC222BC00F8B0E1B",
+     "6AC0E1B5C9A84D9DB45F067DA3D4B47A",
+     "75E0E98E0A8648BCB115F05029C601DB"
+    ],
+    "asnIdentifier": "S21045495",
+    "depth": 3,
+    "description": "Write an inequality of the form x > c, x ≥ c, x < c, or x ≤ c to represent a constraint or condition in a real-world or mathematical problem. Show that inequalities of the form x > c, x ≥ c, x < c, or x ≤ c have infinitely many solutions; represent solutions of such inequalities on number line diagrams.",
+    "id": "86AB2E1C5211428493042614143C772B",
+    "parentId": "DCA6A07467BE451AAC222BC00F8B0E1B",
+    "position": 53000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.EE.B.8"
+   },
+   "8938CD614BE84D7390F390ED74868ECE": {
+    "ancestorIds": [
+     "644B47B861404DC096C2BB0FA824365E",
+     "55E2EF75616444A1ABAD41068A66BE3D"
+    ],
+    "asnIdentifier": "S21029751",
+    "depth": 2,
+    "description": "Develop understanding of statistical variability.",
+    "id": "8938CD614BE84D7390F390ED74868ECE",
+    "parentId": "644B47B861404DC096C2BB0FA824365E",
+    "position": 58000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.SP.A"
+   },
+   "8BCE77F80287498D8BFB08A5C5B56EDE": {
+    "ancestorIds": [
+     "DCA6A07467BE451AAC222BC00F8B0E1B",
+     "6AC0E1B5C9A84D9DB45F067DA3D4B47A",
+     "75E0E98E0A8648BCB115F05029C601DB"
+    ],
+    "asnIdentifier": "S21045493",
+    "depth": 3,
+    "description": "Use variables to represent numbers and write expressions when solving a real-world or mathematical problem; recognize that a variable can represent an unknown number, or, depending on the purpose at hand, any number in a specified set.",
+    "id": "8BCE77F80287498D8BFB08A5C5B56EDE",
+    "parentId": "DCA6A07467BE451AAC222BC00F8B0E1B",
+    "position": 51000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.EE.B.6"
+   },
+   "9151333B1F034F3F89D0E0E85B5CFEAE": {
+    "ancestorIds": [
+     "DD8A3910655041F699FBC8371922EC0B",
+     "CF71685A5DA846AF89E8DB9F9774D935",
+     "F1791656C1214D6E891E4EB0CBC50396",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045483",
+    "depth": 4,
+    "description": "Distinguish comparisons of absolute value from statements about order.",
+    "id": "9151333B1F034F3F89D0E0E85B5CFEAE",
+    "parentId": "DD8A3910655041F699FBC8371922EC0B",
+    "position": 37000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.NS.C.7.d"
+   },
+   "91A8DE4CB46746D7B1D4ED78A0577B3D": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029606",
+    "depth": 0,
+    "description": "Standards for Mathematical Practice",
+    "id": "91A8DE4CB46746D7B1D4ED78A0577B3D",
+    "parentId": null,
+    "position": 1000
+   },
+   "99CBBCEED0D446B69742D49B2CB43A96": {
+    "ancestorIds": [
+     "DD8A3910655041F699FBC8371922EC0B",
+     "CF71685A5DA846AF89E8DB9F9774D935",
+     "F1791656C1214D6E891E4EB0CBC50396",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045480",
+    "depth": 4,
+    "description": "Interpret statements of inequality as statements about the relative position of two numbers on a number line diagram.",
+    "id": "99CBBCEED0D446B69742D49B2CB43A96",
+    "parentId": "DD8A3910655041F699FBC8371922EC0B",
+    "position": 34000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.NS.C.7.a"
+   },
+   "9FEF6DE19AB847E89371443EE54E64EF": {
+    "ancestorIds": [
+     "CF71685A5DA846AF89E8DB9F9774D935",
+     "F1791656C1214D6E891E4EB0CBC50396",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045474",
+    "depth": 3,
+    "description": "Explain why positive and negative numbers are used together to describe quantities having opposite directions or values (e.g., temperature above/below zero, elevation above/below sea level, credits/debits, positive/negative electric charge); use positive and negative numbers to represent quantities in real-world contexts, explaining the meaning of 0 in each situation.",
+    "id": "9FEF6DE19AB847E89371443EE54E64EF",
+    "parentId": "CF71685A5DA846AF89E8DB9F9774D935",
+    "position": 28000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.NS.C.5"
+   },
+   "A16D935B1F8E4E49827B55DB7E5EF954": {
+    "ancestorIds": [
+     "2A05C65034EA4BF799342112A37AC5B0",
+     "CF71685A5DA846AF89E8DB9F9774D935",
+     "F1791656C1214D6E891E4EB0CBC50396",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045477",
+    "depth": 4,
+    "description": "Understand signs of numbers in ordered pairs as indicating locations in quadrants of the coordinate plane; explain that when two ordered pairs differ only by signs, the locations of the points are related by reflections across one or both axes.",
+    "id": "A16D935B1F8E4E49827B55DB7E5EF954",
+    "parentId": "2A05C65034EA4BF799342112A37AC5B0",
+    "position": 31000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.NS.C.6.b"
+   },
+   "A9C5FECA7D8A42969FED3B94B4C75ABF": {
+    "ancestorIds": [
+     "0793D8A2EFB8484789D30ED6FA388EC6",
+     "6AC0E1B5C9A84D9DB45F067DA3D4B47A",
+     "75E0E98E0A8648BCB115F05029C601DB"
+    ],
+    "asnIdentifier": "S21045486",
+    "depth": 3,
+    "description": "Write, read, and evaluate expressions in which letters stand for numbers.",
+    "id": "A9C5FECA7D8A42969FED3B94B4C75ABF",
+    "parentId": "0793D8A2EFB8484789D30ED6FA388EC6",
+    "position": 43000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.EE.A.2"
+   },
+   "ABAE0AE4359D4F05BAE4901BC2623139": {
+    "ancestorIds": [
+     "DCA6A07467BE451AAC222BC00F8B0E1B",
+     "6AC0E1B5C9A84D9DB45F067DA3D4B47A",
+     "75E0E98E0A8648BCB115F05029C601DB"
+    ],
+    "asnIdentifier": "S21045494",
+    "depth": 3,
+    "description": "Solve real-world and mathematical problems by writing and solving equations of the form x±p=q and px=q for cases in which p, q, and x are all nonnegative rational numbers.",
+    "id": "ABAE0AE4359D4F05BAE4901BC2623139",
+    "parentId": "DCA6A07467BE451AAC222BC00F8B0E1B",
+    "position": 52000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.EE.B.7"
+   },
+   "B121F91F1A9747CE85B7E0EF97C9FB71": {
+    "ancestorIds": [
+     "91A8DE4CB46746D7B1D4ED78A0577B3D"
+    ],
+    "asnIdentifier": "S21029613",
+    "depth": 1,
+    "description": "Look for and make use of structure.",
+    "id": "B121F91F1A9747CE85B7E0EF97C9FB71",
+    "parentId": "91A8DE4CB46746D7B1D4ED78A0577B3D",
+    "position": 8000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP7"
+   },
+   "B24C1360973F4523B734AF81F014E57B": {
+    "ancestorIds": [
+     "91A8DE4CB46746D7B1D4ED78A0577B3D"
+    ],
+    "asnIdentifier": "S21029611",
+    "depth": 1,
+    "description": "Use appropriate tools strategically.",
+    "id": "B24C1360973F4523B734AF81F014E57B",
+    "parentId": "91A8DE4CB46746D7B1D4ED78A0577B3D",
+    "position": 6000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP5"
+   },
+   "B579D54F790146B09A499452534401D2": {
+    "ancestorIds": [
+     "22F60930F92E450FA96E34B509265767",
+     "644B47B861404DC096C2BB0FA824365E",
+     "55E2EF75616444A1ABAD41068A66BE3D"
+    ],
+    "asnIdentifier": "S21045501",
+    "depth": 3,
+    "description": "Summarize numerical data sets in relation to their context, such as by:",
+    "id": "B579D54F790146B09A499452534401D2",
+    "parentId": "22F60930F92E450FA96E34B509265767",
+    "position": 64000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.SP.B.5"
+   },
+   "B872FF3EC5BF4751B798C2635E630F16": {
+    "ancestorIds": [
+     "038ACBD48CF84B358CCDF055A914CD58",
+     "7701C8A2529C4C48AF7CDB45C05790D6",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045463",
+    "depth": 3,
+    "description": "Apply the concept of a ratio and use ratio language to describe a ratio relationship between two quantities.",
+    "id": "B872FF3EC5BF4751B798C2635E630F16",
+    "parentId": "038ACBD48CF84B358CCDF055A914CD58",
+    "position": 13000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.RP.A.1"
+   },
+   "C0E14EB752F443579751F8E08D5FF306": {
+    "ancestorIds": [
+     "7B85DCE78F2D4805A2D25CB756A902BB"
+    ],
+    "asnIdentifier": "S21029771",
+    "depth": 1,
+    "description": "Geometry",
+    "id": "C0E14EB752F443579751F8E08D5FF306",
+    "parentId": "7B85DCE78F2D4805A2D25CB756A902BB",
+    "position": 70000
+   },
+   "C4818FFA9DAD47E989CD29D00C2184B1": {
+    "ancestorIds": [
+     "91A8DE4CB46746D7B1D4ED78A0577B3D"
+    ],
+    "asnIdentifier": "S21029614",
+    "depth": 1,
+    "description": "Look for and express regularity in repeated reasoning.",
+    "id": "C4818FFA9DAD47E989CD29D00C2184B1",
+    "parentId": "91A8DE4CB46746D7B1D4ED78A0577B3D",
+    "position": 9000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP8"
+   },
+   "C9E66F74DFD749EAA80B0A6F13892945": {
+    "ancestorIds": [
+     "22D7653F88C84883BA6B63DF4F45FFB8",
+     "6AC0E1B5C9A84D9DB45F067DA3D4B47A",
+     "75E0E98E0A8648BCB115F05029C601DB"
+    ],
+    "asnIdentifier": "S21045496",
+    "depth": 3,
+    "description": "Use variables to represent two quantities in a real-world problem that change in relationship to one another; write an equation to express one quantity, thought of as the dependent variable, in terms of the other quantity, thought of as the independent variable. Analyze the relationship between the dependent and independent variables using graphs and tables, and relate these to the equation.",
+    "id": "C9E66F74DFD749EAA80B0A6F13892945",
+    "parentId": "22D7653F88C84883BA6B63DF4F45FFB8",
+    "position": 55000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.EE.C.9"
+   },
+   "CA74BD442E7B4EE98D56EFDC73EA3141": {
+    "ancestorIds": [
+     "DD8A3910655041F699FBC8371922EC0B",
+     "CF71685A5DA846AF89E8DB9F9774D935",
+     "F1791656C1214D6E891E4EB0CBC50396",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045481",
+    "depth": 4,
+    "description": "Write, interpret, and explain statements of order for rational numbers in real-world contexts.",
+    "id": "CA74BD442E7B4EE98D56EFDC73EA3141",
+    "parentId": "DD8A3910655041F699FBC8371922EC0B",
+    "position": 35000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.NS.C.7.b"
+   },
+   "CD4FD4985215435EA91AFCFDE583DFD9": {
+    "ancestorIds": [
+     "0793D8A2EFB8484789D30ED6FA388EC6",
+     "6AC0E1B5C9A84D9DB45F067DA3D4B47A",
+     "75E0E98E0A8648BCB115F05029C601DB"
+    ],
+    "asnIdentifier": "S21045490",
+    "depth": 3,
+    "description": "Apply the properties of operations to generate equivalent expressions.",
+    "id": "CD4FD4985215435EA91AFCFDE583DFD9",
+    "parentId": "0793D8A2EFB8484789D30ED6FA388EC6",
+    "position": 47000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.EE.A.3"
+   },
+   "CF71685A5DA846AF89E8DB9F9774D935": {
+    "ancestorIds": [
+     "F1791656C1214D6E891E4EB0CBC50396",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21029650",
+    "depth": 2,
+    "description": "Apply and extend previous understandings of numbers to the system of rational numbers.",
+    "id": "CF71685A5DA846AF89E8DB9F9774D935",
+    "parentId": "F1791656C1214D6E891E4EB0CBC50396",
+    "position": 27000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.NS.C"
+   },
+   "CF8D8A4E52544924ADB2D4C5AB5DE042": {
+    "ancestorIds": [
+     "0793D8A2EFB8484789D30ED6FA388EC6",
+     "6AC0E1B5C9A84D9DB45F067DA3D4B47A",
+     "75E0E98E0A8648BCB115F05029C601DB"
+    ],
+    "asnIdentifier": "S21045491",
+    "depth": 3,
+    "description": "Identify when two expressions are equivalent (i.e., when the two expressions name the same number regardless of which value is substituted into them).",
+    "id": "CF8D8A4E52544924ADB2D4C5AB5DE042",
+    "parentId": "0793D8A2EFB8484789D30ED6FA388EC6",
+    "position": 48000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.EE.A.4"
+   },
+   "D06DC15E8EE04D53A15B415C781D254C": {
+    "ancestorIds": [
+     "50CC57B5B7B14585ACACE35E30D1E5B2",
+     "F1791656C1214D6E891E4EB0CBC50396",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045471",
+    "depth": 3,
+    "description": "Fluently divide multi-digit numbers using the standard algorithm.",
+    "id": "D06DC15E8EE04D53A15B415C781D254C",
+    "parentId": "50CC57B5B7B14585ACACE35E30D1E5B2",
+    "position": 24000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.NS.B.2"
+   },
+   "D2F0E7724AEF4B3786BE880338FDDB5A": {
+    "ancestorIds": [
+     "DCA6A07467BE451AAC222BC00F8B0E1B",
+     "6AC0E1B5C9A84D9DB45F067DA3D4B47A",
+     "75E0E98E0A8648BCB115F05029C601DB"
+    ],
+    "asnIdentifier": "S21045492",
+    "depth": 3,
+    "description": "Describe solving an equation or inequality as a process of answering a question: Which values from a specified set, if any, make the equation or inequality true? Use substitution to determine whether a given number in a specified set makes an equation or inequality true.",
+    "id": "D2F0E7724AEF4B3786BE880338FDDB5A",
+    "parentId": "DCA6A07467BE451AAC222BC00F8B0E1B",
+    "position": 50000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.EE.B.5"
+   },
+   "D430F63C04B84360A03B9E363FF5F049": {
+    "ancestorIds": [
+     "3F477A07F5B54F12B11692F7AE005F10",
+     "038ACBD48CF84B358CCDF055A914CD58",
+     "7701C8A2529C4C48AF7CDB45C05790D6",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045469",
+    "depth": 4,
+    "description": "Use ratio reasoning to convert measurement units; manipulate and transform units appropriately when multiplying or dividing quantities.",
+    "id": "D430F63C04B84360A03B9E363FF5F049",
+    "parentId": "3F477A07F5B54F12B11692F7AE005F10",
+    "position": 19000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.RP.A.3.d"
+   },
+   "D970A18B039D4F19BD7C3678DECF5420": {
+    "ancestorIds": [
+     "91A8DE4CB46746D7B1D4ED78A0577B3D"
+    ],
+    "asnIdentifier": "S21029608",
+    "depth": 1,
+    "description": "Reason abstractly and quantitatively.",
+    "id": "D970A18B039D4F19BD7C3678DECF5420",
+    "parentId": "91A8DE4CB46746D7B1D4ED78A0577B3D",
+    "position": 3000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP2"
+   },
+   "DB2FD82B116141C3A1ECCA0FCEE3A607": {
+    "ancestorIds": [
+     "038ACBD48CF84B358CCDF055A914CD58",
+     "7701C8A2529C4C48AF7CDB45C05790D6",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045464",
+    "depth": 3,
+    "description": "Apply the concept of a unit rate a/b associated with a ratio a:b with b≠0, and use rate language in the context of a ratio relationship.",
+    "id": "DB2FD82B116141C3A1ECCA0FCEE3A607",
+    "parentId": "038ACBD48CF84B358CCDF055A914CD58",
+    "position": 14000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.RP.A.2"
+   },
+   "DBC3075C1D674FBAA8FE7927F13FB252": {
+    "ancestorIds": [
+     "F1791656C1214D6E891E4EB0CBC50396",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21029648",
+    "depth": 2,
+    "description": "Apply and extend previous understandings of multiplication and division to divide fractions by fractions.",
+    "id": "DBC3075C1D674FBAA8FE7927F13FB252",
+    "parentId": "F1791656C1214D6E891E4EB0CBC50396",
+    "position": 21000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.NS.A"
+   },
+   "DC07AFACA0084768A4E085E1C8854E53": {
+    "ancestorIds": [
+     "CF71685A5DA846AF89E8DB9F9774D935",
+     "F1791656C1214D6E891E4EB0CBC50396",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045484",
+    "depth": 3,
+    "description": "Solve real-world and mathematical problems by graphing points in all four quadrants of the coordinate plane. Include use of coordinates and absolute value to find distances between points with the same first coordinate or the same second coordinate.",
+    "id": "DC07AFACA0084768A4E085E1C8854E53",
+    "parentId": "CF71685A5DA846AF89E8DB9F9774D935",
+    "position": 38000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.NS.C.8"
+   },
+   "DCA6A07467BE451AAC222BC00F8B0E1B": {
+    "ancestorIds": [
+     "6AC0E1B5C9A84D9DB45F067DA3D4B47A",
+     "75E0E98E0A8648BCB115F05029C601DB"
+    ],
+    "asnIdentifier": "S21029689",
+    "depth": 2,
+    "description": "Reason about and solve one-variable equations and inequalities.",
+    "id": "DCA6A07467BE451AAC222BC00F8B0E1B",
+    "parentId": "6AC0E1B5C9A84D9DB45F067DA3D4B47A",
+    "position": 49000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.EE.B"
+   },
+   "DD8A3910655041F699FBC8371922EC0B": {
+    "ancestorIds": [
+     "CF71685A5DA846AF89E8DB9F9774D935",
+     "F1791656C1214D6E891E4EB0CBC50396",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045479",
+    "depth": 3,
+    "description": "Order and find absolute value of rational numbers.",
+    "id": "DD8A3910655041F699FBC8371922EC0B",
+    "parentId": "CF71685A5DA846AF89E8DB9F9774D935",
+    "position": 33000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.NS.C.7"
+   },
+   "E9BD124763C9422A929372F29E830E1E": {
+    "ancestorIds": [
+     "3F477A07F5B54F12B11692F7AE005F10",
+     "038ACBD48CF84B358CCDF055A914CD58",
+     "7701C8A2529C4C48AF7CDB45C05790D6",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045466",
+    "depth": 4,
+    "description": "Make tables of equivalent ratios relating quantities with whole-number measurements, find missing values in the tables, and plot the pairs of values on the coordinate plane. Use tables to compare ratios.",
+    "id": "E9BD124763C9422A929372F29E830E1E",
+    "parentId": "3F477A07F5B54F12B11692F7AE005F10",
+    "position": 16000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.RP.A.3.a"
+   },
+   "EB1573D6286D46A6B9EE2083BE9DF479": {
+    "ancestorIds": [
+     "2A05C65034EA4BF799342112A37AC5B0",
+     "CF71685A5DA846AF89E8DB9F9774D935",
+     "F1791656C1214D6E891E4EB0CBC50396",
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21045476",
+    "depth": 4,
+    "description": "Use opposite signs of numbers as indicating locations on opposite sides of 0 on the number line; identify that the opposite of the opposite of a number is the number itself, e.g., −(−3)=3, and that 0 is its own opposite.",
+    "id": "EB1573D6286D46A6B9EE2083BE9DF479",
+    "parentId": "2A05C65034EA4BF799342112A37AC5B0",
+    "position": 30000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.NS.C.6.a"
+   },
+   "EB615DE2715B401EA0A4B9ED1906CCBF": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029615",
+    "depth": 0,
+    "description": "Number and Quantity",
+    "id": "EB615DE2715B401EA0A4B9ED1906CCBF",
+    "parentId": null,
+    "position": 10000,
+    "statementLabel": "Standard",
+    "statementNotation": "NQ.1"
+   },
+   "F1791656C1214D6E891E4EB0CBC50396": {
+    "ancestorIds": [
+     "EB615DE2715B401EA0A4B9ED1906CCBF"
+    ],
+    "asnIdentifier": "S21029647",
+    "depth": 1,
+    "description": "The Number System",
+    "id": "F1791656C1214D6E891E4EB0CBC50396",
+    "parentId": "EB615DE2715B401EA0A4B9ED1906CCBF",
+    "position": 20000
+   }
+  },
+  "subject": "Mathematics (2020-)",
+  "title": "Grade 6"
+ }
+}

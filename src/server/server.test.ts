@@ -81,6 +81,21 @@ describe("signup, login and email confirmation", () => {
     expect((await login.POST(post("/api/auth/login/", { email: "b@example.com", password: "correct horse" }))).status).toBe(200);
   });
 
+  it("makes an account from an email alone for the weekly report, with no password and the report on", async () => {
+    const res = await signup.POST(post("/api/auth/signup/", { email: "reports@example.com", passwordless: true }));
+    expect(res.status).toBe(200);
+    expect((await res.json()).family.account.verified).toBe(false);
+    const row = (await dbm.query<{ password_hash: string; weekly_report: number }>("SELECT password_hash, weekly_report FROM parents WHERE email = 'reports@example.com'"))[0];
+    expect(row).toEqual({ password_hash: "!", weekly_report: 1 });
+    expect(lastEmail().text).toContain("weekly progress report");
+    // No password ever matches it, and the address can't be taken twice.
+    expect((await login.POST(post("/api/auth/login/", { email: "reports@example.com", password: "!" }))).status).toBe(401);
+    expect((await signup.POST(post("/api/auth/signup/", { email: "reports@example.com", passwordless: true }))).status).toBe(409);
+    // A password sign-up still needs a real password and leaves the weekly report off.
+    await newAccount("with-password@example.com");
+    expect((await dbm.query<{ weekly_report: number }>("SELECT weekly_report FROM parents WHERE email = 'with-password@example.com'"))[0].weekly_report).toBe(0);
+  });
+
   it("refuses cross-site posts", async () => {
     const req = post("/api/auth/login/", { email: "b@example.com", password: "correct horse" });
     req.headers.set("origin", "https://evil.example");

@@ -70,7 +70,7 @@ export default async function SubjectGuide({ params }: Props) {
   ];
 
   return (
-    <SitePage play={playHref({ framework: f.id, grade, subject: course.subject })}>
+    <SitePage lead="trial" play={playHref({ framework: f.id, grade, subject: course.subject })}>
       <JsonLd
         data={[
           breadcrumbJsonLd(crumbs),
@@ -180,7 +180,7 @@ export default async function SubjectGuide({ params }: Props) {
         <Link href={guidePath.worksheet(f, grade, course.subject)} className="btn min-h-12 px-6 text-lg">
           Get the sheet
         </Link>
-        <SubscribeActions play={playHref({ framework: f.id, grade, subject: course.subject })} size="md" trialLabel={say(f, `Practise in ${APP_NAME}`)} />
+        <SubscribeActions lead="trial" play={playHref({ framework: f.id, grade, subject: course.subject })} size="md" trialLabel={say(f, `Practise in ${APP_NAME}`)} />
       </section>
     </SitePage>
   );

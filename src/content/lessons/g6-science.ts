@@ -559,4 +559,52 @@ export const lessons: GradeLessons = {
     ["A theory explains why.", "A law describes what happens.", "They are different kinds of ideas."],
     "no",
   ),
+  "science/il-g6-weather": lesson(
+    ["An air mass is a huge body of air with the same temperature and moisture.", "Where two air masses meet is a front; fronts often bring storms.", "Sunlight drives evaporation, and gravity brings rain and snow back down."],
+    "A cold front passes. What usually happens to the temperature?",
+    ["Cold air pushes in behind the front.", "So the temperature drops."],
+    "it drops",
+  ),
+  "science/il-g6-climate": lesson(
+    ["Climate depends on latitude, nearness to large bodies of water, mountains and winds.", "Places far from oceans, like Illinois, have hot summers and cold winters.", "Greenhouse gases like carbon dioxide trap heat and are warming Earth."],
+    "Why is southern Illinois usually warmer than northern Illinois?",
+    ["Think about latitude.", "It is closer to the equator."],
+    "it is closer to the equator",
+  ),
+  "science/il-g6-growth": lesson(
+    ["Animals use behaviours like songs and nests to help them reproduce.", "Plants use flowers, scents and wind to spread pollen and seeds.", "Growth depends on genes and the environment (water, food, light). Sexual reproduction mixes genes from two parents; asexual makes copies of one."],
+    "A potato grows from a piece of potato. Sexual or asexual reproduction?",
+    ["There is only one parent.", "The new plant is a copy, so it is asexual."],
+    "asexual",
+  ),
+  "science/il-g6-design": lesson(
+    ["Criteria are what a solution must do to succeed. Constraints are limits.", "A decision matrix compares designs against the criteria.", "A trade-off is giving up some of one thing to get more of another.", "After a test fails, improve the design and test again."],
+    "A cheaper filter cleans water less well. Choosing it means accepting a… what?",
+    ["You give up some cleaning to save money.", "Giving up one thing for another is a trade-off."],
+    "a trade-off",
+  ),
+  "science/co-g6-weather": lesson(
+    ["An air mass is a huge body of air with the same temperature and moisture.", "Where two air masses meet is a front; fronts often bring storms.", "Sunlight drives evaporation, and gravity brings rain and snow back down."],
+    "A cold front passes. What usually happens to the temperature?",
+    ["Cold air pushes in behind the front.", "So the temperature drops."],
+    "it drops",
+  ),
+  "science/co-g6-climate": lesson(
+    ["Climate depends on latitude, nearness to large bodies of water, mountains and winds.", "Places far from oceans, like Colorado, have hot summers and cold winters, and higher places are colder.", "Greenhouse gases like carbon dioxide trap heat and are warming Earth."],
+    "Why are mountain towns usually colder than towns on the plains?",
+    ["Think about elevation.", "Air gets cooler as you go higher."],
+    "they are higher up",
+  ),
+  "science/co-g6-growth": lesson(
+    ["Animals use behaviours like songs and nests to help them reproduce.", "Plants use flowers, scents and wind to spread pollen and seeds.", "Growth depends on genes and the environment (water, food, light). Sexual reproduction mixes genes from two parents; asexual makes copies of one."],
+    "A potato grows from a piece of potato. Sexual or asexual reproduction?",
+    ["There is only one parent.", "The new plant is a copy, so it is asexual."],
+    "asexual",
+  ),
+  "science/co-g6-design": lesson(
+    ["Criteria are what a solution must do to succeed. Constraints are limits.", "A decision matrix compares designs against the criteria.", "A trade-off is giving up some of one thing to get more of another.", "After a test fails, improve the design and test again."],
+    "A cheaper filter cleans water less well. Choosing it means accepting a… what?",
+    ["You give up some cleaning to save money.", "Giving up one thing for another is a trade-off."],
+    "a trade-off",
+  ),
 };

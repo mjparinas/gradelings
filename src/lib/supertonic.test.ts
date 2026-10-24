@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import manifest from "./supertonic-manifest.json";
-import { filesFor, SUPERTONIC_BASE, splitSentences, type SupertonicFileList } from "./supertonic";
+import { filesFor, SUPERTONIC_BASE, splitSentences, supertonicText, type SupertonicFileList } from "./supertonic";
 
 describe("Supertonic sentence splitting", () => {
   it("splits on sentence ends so the first sentence can play early", () => {
@@ -15,6 +15,15 @@ describe("Supertonic sentence splitting", () => {
     expect(splitSentences("Line one\nLine two")).toEqual(["Line one", "Line two"]);
   });
 
+  it("keeps decimals and money whole", () => {
+    expect(splitSentences("A circle is 10 cm wide. Using 3.14 for pi, what is its area? It costs $4.50.")).toEqual([
+      "A circle is 10 cm wide.",
+      "Using 3.14 for pi, what is its area?",
+      "It costs $4.50.",
+    ]);
+    expect(splitSentences("The day is…")).toEqual(["The day is…"]);
+  });
+
   it("drops pieces with nothing to say and splits very long sentences between words", () => {
     expect(splitSentences("... ! ?")).toEqual([]);
     const long = Array.from({ length: 120 }, (_, i) => `word${i}`).join(" ");
@@ -22,6 +31,39 @@ describe("Supertonic sentence splitting", () => {
     expect(parts.length).toBeGreaterThan(1);
     expect(parts.every((p) => p.length <= 300)).toBe(true);
     expect(parts.join(" ")).toBe(long);
+  });
+});
+
+// The Supertonic model has no sound for these symbols (it skipped or mumbled them when its audio was
+// transcribed), so they are said as words. Device voices read the original text.
+describe("Supertonic symbols", () => {
+  it("says maths symbols as words", () => {
+    expect(supertonicText("What is 2 × 4?", "en")).toBe("What is 2 times 4?");
+    expect(supertonicText("What is 20 ÷ 5?", "en")).toBe("What is 20 divided by 5?");
+    expect(supertonicText("6 + 4 = 10.", "en")).toBe("6 + 4 equals 10.");
+    expect(supertonicText("Which is true? 3 < 5", "en")).toBe("Which is true? 3 is less than 5");
+    expect(supertonicText("x ≤ 12 and y ≥ 2, so x ≠ y", "en")).toBe("x is less than or equal to 12 and y is greater than or equal to 2, so x does not equal y");
+    expect(supertonicText("What is √16? Using 3.14 for π", "en")).toBe("What is the square root of 16? Using 3.14 for pi");
+    expect(supertonicText("What is 50% of 20? What is |−3|?", "en")).toBe("What is 50 percent of 20? What is the absolute value of −3?");
+    expect(supertonicText("(2³)³ = 2^?", "en")).toBe("(2³)³ equals 2 to the power of?");
+    expect(supertonicText("Point A was moved to A′.", "en")).toBe("Point A was moved to A prime.");
+  });
+
+  it("says temperatures, units and fractions", () => {
+    expect(supertonicText("A thermometer reads 95 °F. Angle B = 52°.", "en")).toBe("A thermometer reads 95 degrees Fahrenheit. Angle B equals 52 degrees.");
+    expect(supertonicText("Il fait 20 °C.", "fr")).toBe("Il fait 20 degrés Celsius.");
+    expect(supertonicText("Two resistors, 6 Ω each", "en")).toBe("Two resistors, 6 ohms each");
+    expect(supertonicText("Shaded: 3/4 1/2 5/6 7/15", "en")).toBe("Shaded: 3 fourths 1 half 5 sixths 7 over 15");
+    expect(supertonicText("½ × base × height, or 2¾", "en")).toBe("1 half times base times height, or 2 and 3 fourths");
+    expect(supertonicText("Quelle fraction ? 3/4 ou 1/3", "fr")).toBe("Quelle fraction? 3 quarts ou 1 tiers");
+    expect(supertonicText("Combien font 3 × 4 ?", "fr")).toBe("Combien font 3 fois 4?");
+  });
+
+  it("reads arrows and dots as pauses, and leaves plain words alone", () => {
+    expect(supertonicText("Seeds → mouse → owl", "en")).toBe("Seeds, mouse, owl");
+    expect(supertonicText("Which shows 3? ●●● or ●●●●", "en")).toBe("Which shows 3? or");
+    const plain = "Hi! I'm Ollie the Otter. Let's count: one, two, three. It costs $4.50.";
+    expect(supertonicText(plain, "en")).toBe(plain);
   });
 });
 

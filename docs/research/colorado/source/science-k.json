@@ -1,0 +1,269 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D2980644",
+   "id": "D2980644",
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.cde.state.co.us/coscience/2020cas-sc-p12",
+   "title": "Colorado Academic Standards: Science",
+   "valid": "2020"
+  },
+  "educationLevels": [
+   "K"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D2980644_grade-k",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/3.0/us/",
+   "rightsHolder": "D2L Corporation",
+   "title": "CC BY 3.0 US"
+  },
+  "normalizedSubject": "Science",
+  "standards": {
+   "0AD5C2F438A54DD5A10E9B1939D3E030": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2987156",
+    "depth": 0,
+    "description": "Earth and Space Science",
+    "id": "0AD5C2F438A54DD5A10E9B1939D3E030",
+    "parentId": null,
+    "position": 11000,
+    "statementLabel": "Standard",
+    "statementNotation": "ESS3"
+   },
+   "0C1D372ECD56436AA1FDCF7D09D9FD33": {
+    "ancestorIds": [
+     "FED45DAD8E0C48E69D550E76CE6654F5"
+    ],
+    "asnIdentifier": "S2986918",
+    "depth": 1,
+    "description": "Pushes and pulls can have different strengths and directions, and can change the speed or direction of an object's motion or start or stop it.",
+    "id": "0C1D372ECD56436AA1FDCF7D09D9FD33",
+    "parentId": "FED45DAD8E0C48E69D550E76CE6654F5",
+    "position": 2000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.K.1"
+   },
+   "18B193392BEF40EE934A3FF51AF3840D": {
+    "ancestorIds": [
+     "36EC91A18622409E8CA90F7347AA48B9",
+     "0AD5C2F438A54DD5A10E9B1939D3E030"
+    ],
+    "asnIdentifier": "S2987173",
+    "depth": 2,
+    "description": "Ask questions to obtain information about the purpose of weather forecasting to prepare for, and respond to, severe weather.",
+    "id": "18B193392BEF40EE934A3FF51AF3840D",
+    "parentId": "36EC91A18622409E8CA90F7347AA48B9",
+    "position": 17000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.K.2.b"
+   },
+   "3545C1681AB04D9FB487C285D5765FB9": {
+    "ancestorIds": [
+     "36EC91A18622409E8CA90F7347AA48B9",
+     "0AD5C2F438A54DD5A10E9B1939D3E030"
+    ],
+    "asnIdentifier": "S2987172",
+    "depth": 2,
+    "description": "Use a model to represent the relationship between the needs of different plants or animals (including humans) and the places they live.",
+    "id": "3545C1681AB04D9FB487C285D5765FB9",
+    "parentId": "36EC91A18622409E8CA90F7347AA48B9",
+    "position": 16000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.K.2.a"
+   },
+   "36EC91A18622409E8CA90F7347AA48B9": {
+    "ancestorIds": [
+     "0AD5C2F438A54DD5A10E9B1939D3E030"
+    ],
+    "asnIdentifier": "S2987171",
+    "depth": 1,
+    "description": "Plants and animals meet their needs in their habitats and impact one another; people can prepare for severe weather.",
+    "id": "36EC91A18622409E8CA90F7347AA48B9",
+    "parentId": "0AD5C2F438A54DD5A10E9B1939D3E030",
+    "position": 15000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.K.2"
+   },
+   "5140E5765BC948FEAB5B540C8FD0A60B": {
+    "ancestorIds": [
+     "0C1D372ECD56436AA1FDCF7D09D9FD33",
+     "FED45DAD8E0C48E69D550E76CE6654F5"
+    ],
+    "asnIdentifier": "S2986920",
+    "depth": 2,
+    "description": "Analyze data to determine if a design solution works as intended to change the speed or direction of an object with a push or a pull.",
+    "id": "5140E5765BC948FEAB5B540C8FD0A60B",
+    "parentId": "0C1D372ECD56436AA1FDCF7D09D9FD33",
+    "position": 4000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.K.1.b"
+   },
+   "5F01E9EBF4114C06A3CEFD6B2701E7DB": {
+    "ancestorIds": [
+     "0AD5C2F438A54DD5A10E9B1939D3E030"
+    ],
+    "asnIdentifier": "S2987168",
+    "depth": 1,
+    "description": "Patterns are observed when measuring the local weather, including how humans and other organisms impact their environment.",
+    "id": "5F01E9EBF4114C06A3CEFD6B2701E7DB",
+    "parentId": "0AD5C2F438A54DD5A10E9B1939D3E030",
+    "position": 12000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.K.1"
+   },
+   "6F599186F01140F6807881CD31FE4844": {
+    "ancestorIds": [
+     "0C1D372ECD56436AA1FDCF7D09D9FD33",
+     "FED45DAD8E0C48E69D550E76CE6654F5"
+    ],
+    "asnIdentifier": "S2986919",
+    "depth": 2,
+    "description": "Plan and conduct an investigation to compare the effects of different strengths or different directions of pushes and pulls on the motion of an object.",
+    "id": "6F599186F01140F6807881CD31FE4844",
+    "parentId": "0C1D372ECD56436AA1FDCF7D09D9FD33",
+    "position": 3000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.K.1.a"
+   },
+   "7A79B5099B5149A787616AE5A972A951": {
+    "ancestorIds": [
+     "90549588E1E04F3EB250AB45AFAB18A4",
+     "FED45DAD8E0C48E69D550E76CE6654F5"
+    ],
+    "asnIdentifier": "S2986923",
+    "depth": 2,
+    "description": "Use tools and materials to design and build a structure that will reduce the warming effect of sunlight on an area.",
+    "id": "7A79B5099B5149A787616AE5A972A951",
+    "parentId": "90549588E1E04F3EB250AB45AFAB18A4",
+    "position": 7000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.K.2.b"
+   },
+   "82977BA2EC854E579900F93245184F2D": {
+    "ancestorIds": [
+     "B218A90260A742039D6C3EE658E33FB7"
+    ],
+    "asnIdentifier": "S2987052",
+    "depth": 1,
+    "description": "To live and grow, animals obtain food they need from plants or other animals, and plants need water and light.",
+    "id": "82977BA2EC854E579900F93245184F2D",
+    "parentId": "B218A90260A742039D6C3EE658E33FB7",
+    "position": 9000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "LS2.K.1"
+   },
+   "90549588E1E04F3EB250AB45AFAB18A4": {
+    "ancestorIds": [
+     "FED45DAD8E0C48E69D550E76CE6654F5"
+    ],
+    "asnIdentifier": "S2986921",
+    "depth": 1,
+    "description": "Sunlight affects the Earth's surface.",
+    "id": "90549588E1E04F3EB250AB45AFAB18A4",
+    "parentId": "FED45DAD8E0C48E69D550E76CE6654F5",
+    "position": 5000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.K.2"
+   },
+   "9B28475993A54318A7B4577E7834708D": {
+    "ancestorIds": [
+     "5F01E9EBF4114C06A3CEFD6B2701E7DB",
+     "0AD5C2F438A54DD5A10E9B1939D3E030"
+    ],
+    "asnIdentifier": "S2987169",
+    "depth": 2,
+    "description": "Use and share observations of local weather conditions to describe patterns over time.",
+    "id": "9B28475993A54318A7B4577E7834708D",
+    "parentId": "5F01E9EBF4114C06A3CEFD6B2701E7DB",
+    "position": 13000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.K.1.a"
+   },
+   "9C53F8E554A34EA9AC660F52923DFC6D": {
+    "ancestorIds": [
+     "36EC91A18622409E8CA90F7347AA48B9",
+     "0AD5C2F438A54DD5A10E9B1939D3E030"
+    ],
+    "asnIdentifier": "S2987174",
+    "depth": 2,
+    "description": "Communicate solutions that will reduce the impact of humans on the land, water, air and/or other living things in the local environment.",
+    "id": "9C53F8E554A34EA9AC660F52923DFC6D",
+    "parentId": "36EC91A18622409E8CA90F7347AA48B9",
+    "position": 18000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.K.2.c"
+   },
+   "B218A90260A742039D6C3EE658E33FB7": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2987039",
+    "depth": 0,
+    "description": "Life Science",
+    "id": "B218A90260A742039D6C3EE658E33FB7",
+    "parentId": null,
+    "position": 8000,
+    "statementLabel": "Standard",
+    "statementNotation": "LS2"
+   },
+   "DE851302BA5E41EABE9E8EB4851A18CE": {
+    "ancestorIds": [
+     "90549588E1E04F3EB250AB45AFAB18A4",
+     "FED45DAD8E0C48E69D550E76CE6654F5"
+    ],
+    "asnIdentifier": "S2986922",
+    "depth": 2,
+    "description": "Make observations to determine the effect of sunlight on Earth's surface.",
+    "id": "DE851302BA5E41EABE9E8EB4851A18CE",
+    "parentId": "90549588E1E04F3EB250AB45AFAB18A4",
+    "position": 6000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.K.2.a"
+   },
+   "EB4E6647C57648848DDE6DCD869F6747": {
+    "ancestorIds": [
+     "5F01E9EBF4114C06A3CEFD6B2701E7DB",
+     "0AD5C2F438A54DD5A10E9B1939D3E030"
+    ],
+    "asnIdentifier": "S2987170",
+    "depth": 2,
+    "description": "Construct an argument supported by evidence for how plants and animals (including humans) can change the environment to meet their needs.",
+    "id": "EB4E6647C57648848DDE6DCD869F6747",
+    "parentId": "5F01E9EBF4114C06A3CEFD6B2701E7DB",
+    "position": 14000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.K.1.b"
+   },
+   "F33528ED3B5540F09167EF1E4FA04616": {
+    "ancestorIds": [
+     "82977BA2EC854E579900F93245184F2D",
+     "B218A90260A742039D6C3EE658E33FB7"
+    ],
+    "asnIdentifier": "S2987053",
+    "depth": 2,
+    "description": "Use observations to describe patterns of what plants and animals (including humans) need to survive.",
+    "id": "F33528ED3B5540F09167EF1E4FA04616",
+    "parentId": "82977BA2EC854E579900F93245184F2D",
+    "position": 10000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.K.1.a"
+   },
+   "FED45DAD8E0C48E69D550E76CE6654F5": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2986907",
+    "depth": 0,
+    "description": "Physical Science",
+    "id": "FED45DAD8E0C48E69D550E76CE6654F5",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": "Standard",
+    "statementNotation": "PS1"
+   }
+  },
+  "subject": "Science (2020-)",
+  "title": "Grade K"
+ }
+}
