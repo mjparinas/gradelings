@@ -643,4 +643,10 @@ export const lessons: GradeLessons = {
     ["You aren’t touching anything hot.", "The heat travels as rays through the air."],
     "radiation",
   ),
+  "science/ca-g7-food-molecules": lesson(
+    ["Digestion breaks big food molecules into small ones, such as starch into sugar.", "Cells use small molecules to build new parts or release energy in cellular respiration.", "Atoms are rearranged, never lost or made."],
+    "Enzymes in your saliva start breaking starch into what?",
+    ["Starch is a long chain of sugar units.", "Enzymes snip the chain apart."],
+    "sugar",
+  ),
 };

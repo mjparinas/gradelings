@@ -481,4 +481,10 @@ export const lessons: GradeLessons = {
     ["Shadows point away from the sun.", "Away from west is east."],
     "east",
   ),
+  "science/ma-g2-earth-changes": lesson(
+    ["Some changes are fast, like landslides, floods and big storms.", "Some are slow, like waves wearing away a beach over many years.", "Plant roots and rock walls help slow these changes."],
+    "Waves wear away a cliff on Cape Cod over many years. Fast or slow?",
+    ["Many years is a long time.", "That is a slow change."],
+    "slow",
+  ),
 };

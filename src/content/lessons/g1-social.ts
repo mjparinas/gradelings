@@ -427,4 +427,28 @@ export const lessons: GradeLessons = {
     ["She knew the land and languages.", "Her name starts with S."],
     "Sacagawea",
   ),
+  "social/ma-g1-american-symbols": lesson(
+    ["The Pledge of Allegiance is a promise to be loyal.", "Washington, D.C. is the capital of the United States.", "Lincoln helped end slavery. He is on the penny."],
+    "What is the capital of the United States?",
+    ["It is named for the first president."],
+    "Washington, D.C.",
+  ),
+  "social/ma-g1-continents-oceans": lesson(
+    ["Most of Earth is covered by water.", "Big land areas are continents. Big waters are oceans.", "Massachusetts is on the Atlantic Ocean."],
+    "Which ocean is next to Massachusetts?",
+    ["Cape Cod sticks out into it.", "It is east of us."],
+    "the Atlantic Ocean",
+  ),
+  "social/ma-g1-families-near-far": lesson(
+    ["Families are different, here and far away.", "Families celebrate in many ways.", "A family timeline shows events in order."],
+    "Baby, toddler, Grade 1 kid. Which comes last?",
+    ["A baby grows into a toddler.", "A toddler grows into a school kid."],
+    "Grade 1 kid",
+  ),
+  "social/ma-g1-citizens-and-resources": lesson(
+    ["Citizens help their community. They follow rules and take turns.", "Natural resources come from nature, like water, trees and fish.", "People in Massachusetts fish in the ocean and grow cranberries."],
+    "Is a tree a natural resource?",
+    ["Did people make it, or did it grow in nature?", "Trees grow in nature."],
+    "yes",
+  ),
 };

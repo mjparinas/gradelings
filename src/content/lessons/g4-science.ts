@@ -649,4 +649,10 @@ export const lessons: GradeLessons = {
     ["Grass is the producer.", "The grasshopper eats the grass."],
     "the grasshopper",
   ),
+  "science/ma-g4-rocks-erosion": lesson(
+    ["Weathering breaks rock. Erosion moves it. Running water moves the most.", "Glaciers scraped across New England, carrying rocks and leaving hills and boulders.", "Rock layers and fossils show how a place has changed over time.", "Plants and their roots slow erosion on a hillside."],
+    "Which hillside erodes faster in heavy rain: a bare one or a grassy one?",
+    ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
+    "the bare hillside",
+  ),
 };

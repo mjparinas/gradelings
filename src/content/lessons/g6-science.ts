@@ -721,4 +721,28 @@ export const lessons: GradeLessons = {
     ["Carbon dioxide traps heat.", "Trees take in carbon dioxide to make food."],
     "trees take in carbon dioxide",
   ),
+  "science/ca-g8-embryos": lesson(
+    ["Embryos of different species can look alike early on, even when adults look very different.", "Shared features, like early tails and pharyngeal pouches, suggest common ancestry.", "Structures that develop the same way are stronger evidence than look-alike adult parts."],
+    "A human embryo has a tail early on. What does it become in an adult?",
+    ["It shrinks as the embryo grows.", "A small bone remains."],
+    "the tailbone",
+  ),
+  "science/ca-g8-signals": lesson(
+    ["Analog signals are smooth, changing waves. Digital signals are patterns of 0s and 1s.", "Copying an analog signal adds noise each time; digital copies stay the same.", "Digital storage has drawbacks, like files that old devices can no longer read."],
+    "Why does a copy of a copy of a cassette tape sound worse?",
+    ["Tape stores an analog wave.", "Each copy adds noise."],
+    "noise is added with each copy",
+  ),
+  "science/light-and-radiation": lesson(
+    ["The electromagnetic spectrum, from longest to shortest wavelength: radio, microwave, infrared, visible light, ultraviolet, X-ray, gamma.", "Shorter wavelength means higher frequency and more energy.", "Light reflects off mirrors and bends (refracts) when it passes into a new material. Block UV with sunscreen and shade."],
+    "Which has a longer wavelength: radio waves or X-rays?",
+    ["Radio waves are at the long end of the spectrum.", "X-rays are near the short end."],
+    "radio waves",
+  ),
+  "science/ma-g6-earth-history": lesson(
+    ["Rock layers and fossils order Earth's 4.6-billion-year history; lower layers are older.", "Most of that history is the Precambrian. We live in the Cenozoic Era.", "Homologous structures show that living things share ancestors."],
+    "In which era do we live today?",
+    ["The eras go Paleozoic, Mesozoic, Cenozoic.", "The latest is the Cenozoic."],
+    "the Cenozoic Era",
+  ),
 };

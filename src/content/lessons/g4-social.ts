@@ -1339,4 +1339,28 @@ export const lessons: GradeLessons = {
     ["They are in the middle of the country.", "They are wide, flat grasslands."],
     "flat grasslands",
   ),
+  "social/ny-g5-encounters": lesson(
+    ["Columbus, Cabot, Cartier (for France), Cabral and Balboa explored for European countries.", "Cortés led the Spanish conquest of the Aztec Empire. Europeans claimed land where Native nations already lived.", "After contact, Native populations fell sharply, mostly from new diseases."],
+    "Why is French spoken in Haiti today?",
+    ["Languages often spread through colonies.", "France once ruled Haiti."],
+    "France once had a colony there.",
+  ),
+  "social/tx-g5-growing-nation": lesson(
+    ["The Louisiana Purchase (1803) doubled the country; Lewis and Clark explored it to the Pacific.", "In the War of 1812, Americans built factories; the anthem was written; Andrew Jackson won at New Orleans (1815).", "Westward settlement took much land from American Indian nations."],
+    "During which war was “The Star-Spangled Banner” written?",
+    ["Francis Scott Key watched the attack on Fort McHenry in 1814.", "That attack was part of the War of 1812."],
+    "the War of 1812",
+  ),
+  "social/ma-g4-first-peoples": lesson(
+    ["Many Native Peoples have lived in North America for thousands of years, in every region.", "Where people lived shaped their homes, food and travel, like canoes on rivers.", "Native nations, such as the Wampanoag and the Nipmuc in Massachusetts, are living communities today."],
+    "Why did many Native Peoples near rivers travel by canoe?",
+    ["Think about what is easiest on water.", "A canoe moves well on rivers and lakes."],
+    "rivers made canoe travel easy",
+  ),
+  "social/ma-g4-us-regions": lesson(
+    ["The United States is often split into five regions: Northeast, Southeast, Midwest, Southwest and West.", "Each region has its own landforms, climate and resources.", "Massachusetts is in the Northeast region."],
+    "Which region is Massachusetts in?",
+    ["It is in the northeast corner of the country.", "The other New England states are there too."],
+    "the Northeast",
+  ),
 };
