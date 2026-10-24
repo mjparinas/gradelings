@@ -745,6 +745,38 @@ export const lessons: GradeLessons = {
     ["Carbon dioxide traps heat.", "Trees take in carbon dioxide to make food."],
     "trees take in carbon dioxide",
   ),
+  // Indiana (us-in)
+"science/in-g6-space": lesson(
+    ["Mercury is closest to the Sun. Gravity keeps planets in orbit.", "Seasons happen because Earth’s axis is tilted.", "Tides are caused mostly by the Moon’s gravity. A solar eclipse is when the Moon passes between the Sun and Earth."],
+    "Why does Earth have seasons?",
+    ["It isn’t because Earth gets much closer to the Sun.", "Earth’s tilt changes how direct the sunlight is."],
+    "Earth’s axis is tilted",
+  ),
+"science/in-g6-biodiversity": lesson(
+    ["Biodiversity is the variety of life in an area.", "Ecosystem services include clean water, food and storm protection.", "Protecting wetlands, forests and prairies keeps habitat for many species."],
+    "How do coastal wetlands help people?",
+    ["Wetland plants trap dirt.", "They also slow storm waves."],
+    "by filtering water and softening storm waves",
+  ),
+"science/in-g6-design": lesson(
+    ["Criteria are what a solution must do to succeed. Constraints are limits.", "A decision matrix compares designs against the criteria.", "A trade-off is giving up some of one thing to get more of another.", "After a test fails, improve the design and test again."],
+    "A cheaper filter cleans water less well. Choosing it means accepting a… what?",
+    ["You give up some cleaning to save money.", "Giving up one thing for another is a trade-off."],
+    "a trade-off",
+  ),
+  // Indiana: units Indiana teaches in this grade
+  "science/light-and-radiation": lesson(
+    ["The electromagnetic spectrum, from longest to shortest wavelength: radio, microwave, infrared, visible light, ultraviolet, X-ray, gamma.", "Shorter wavelength means higher frequency and more energy.", "Light reflects off mirrors and bends (refracts) when it passes into a new material. Block UV with sunscreen and shade."],
+    "Which has a longer wavelength: radio waves or X-rays?",
+    ["Radio waves are at the long end of the spectrum.", "X-rays are near the short end."],
+    "radio waves",
+  ),
+  "science/ca-g8-signals": lesson(
+    ["Analog signals are smooth, changing waves. Digital signals are patterns of 0s and 1s.", "Copying an analog signal adds noise each time; digital copies stay the same.", "Digital storage has drawbacks, like files that old devices can no longer read."],
+    "Why does a copy of a copy of a cassette tape sound worse?",
+    ["Tape stores an analog wave.", "Each copy adds noise."],
+    "noise is added with each copy",
+  ),
   "science/va-g6-seasons-tides": lesson(
     ["Earth's axis is tilted about 23.5°. Without the tilt there would be almost no seasons.", "When a hemisphere tilts toward the Sun, sunlight hits more directly and it has summer.", "Earth orbits the Sun about every 365 days.", "The Moon's and Sun's gravity pull on the oceans to make tides."],
     "When the Northern Hemisphere tilts toward the Sun, what season does it have?",

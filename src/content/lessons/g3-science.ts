@@ -571,6 +571,19 @@ export const lessons: GradeLessons = {
     ["Alligators need warm water.", "Swamps are warm and wet."],
     "in the Okefenokee Swamp",
   ),
+  // Indiana (us-in)
+"science/in-g3-fossils": lesson(
+    ["Fossils are remains or traces of living things from long ago.", "Mud covering a leaf can harden into a leaf print in rock.", "In rock layers, older fossils are usually lower down."],
+    "In rock layers, are older fossils usually higher or lower?",
+    ["Layers pile up over time.", "The first layers are at the bottom."],
+    "lower down",
+  ),
+"science/in-g3-weather-climate": lesson(
+    ["Weather is what the air is like today. Climate is the usual weather over many years.", "Read temperature and rain data for each season.", "Mountains get the most snow in winter."],
+    "Highs of 30 °F, 28 °F and 32 °F. Which season is it?",
+    ["Those are cold temperatures."],
+    "winter",
+  ),
   "science/water-world": lesson(
     ["The sun warms water, and it rises into the air.", "The water forms clouds of tiny drops, then falls as rain or snow.", "The water flows back to lakes and oceans, and the cycle starts again."],
     "What comes right after clouds form in the water cycle?",

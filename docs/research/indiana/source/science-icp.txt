@@ -1,0 +1,759 @@
+                2023 Indiana Academic Standards: Integrated Chemistry and Physics
+
+
+Indiana Academic Standards Context and Purpose
+
+
+Introduction
+The Indiana Academic Standards for Integrated Chemistry and Physics are the result of a
+process designed to identify, evaluate, synthesize, and create high-quality, rigorous learning
+expectations for Indiana students.
+
+Pursuant to Indiana Code (IC) 20-31-3-1(c-d), the Indiana Department of Education (IDOE)
+facilitated the prioritization of the Indiana Academic Standards. All standards are required to be
+taught. Standards identified as essential for mastery by the end of the course are indicated with
+the word “Essential” under the standard number.
+
+The Indiana Academic Standards are designed to ensure that all Indiana students, upon
+graduation, are prepared with essential knowledge and skills needed to access employment,
+enrollment, or enlistment leading to service.
+
+What are the Indiana Academic Standards and how should they be used?
+The Indiana Academic Standards for Grades K-12 Science are based on A Framework for K-12
+Science Education (NRC, 2012) and the Next Generation Science Standards (NGSS Lead
+States, 2013). The following conceptual shifts reflect what is new about these science
+standards. The Indiana Academic Standards for Science:
+   ●   Reflect science as it is practiced and experienced in the real world;
+   ●   Build logically from kindergarten through grade 12;
+   ●   Focus on deeper understanding as well as application of content; and
+   ●   Integrate practices, crosscutting concepts, and core ideas.
+The K-12 Science Indiana Academic Standards outline the knowledge, science, and
+engineering practices that all students should learn by the end of high school. The standards
+are three-dimensional because each student performance expectation engages students at the
+nexus of the following three dimensions:
+   ●   Dimension 1 describes scientific and engineering practices.
+   ●   Dimension 2 describes crosscutting concepts, overarching science concepts that apply
+       across science disciplines.
+   ●   Dimension 3 describes core ideas in the science disciplines.
+
+Science and Engineering Practices (as found in NGSS)
+The eight practices describe what scientists use to investigate and build models and theories of
+the world around them or that engineers use as they build and design systems. The practices
+are essential for all students to learn and are as follows:
+   1. Asking questions (for science) and defining problems (for engineering);
+   2. Developing and using models;
+
+
+
+                                                2
+                 2023 Indiana Academic Standards: Integrated Chemistry and Physics
+
+
+   3.   Planning and carrying out investigations;
+   4.   Analyzing and interpreting data;
+   5.   Using mathematics and computational thinking;
+   6.   Constructing explanations for science and designing solutions for engineering;
+   7.   Engaging in argument from evidence; and
+   8.   Obtaining, evaluating, and communicating information.
+
+Crosscutting Concepts (as found in NGSS)
+The seven crosscutting concepts bridge disciplinary boundaries and unit core ideas throughout
+the fields of science and engineering. Their purpose is to help students deepen their
+understanding of the disciplinary core ideas, and develop a coherent, and scientifically based
+view of the world. The seven crosscutting concepts are as follows:
+   1. Patterns. Observed patterns of forms and events guide organization and classification,
+      and prompt questions about relationships and the factors that influence them.
+   2. Cause and Effect: Mechanism and Explanation. Events have causes, sometimes simple,
+      sometimes multifaceted. A major activity of science is investigating and explaining
+      causal relationships and the mechanisms by which they are mediated. Such
+      mechanisms can then be tested across given contexts and used to predict and explain
+      events in new contexts.
+   3. Scale, Proportion, and Quantity. In considering phenomena, it is critical to recognize
+      what is relevant at different measures of size, time, and energy and to recognize how
+      changes in scale, proportion, or quantity affect a system’s structure or performance.
+   4. Systems and System Models. Defining the system under study—specifying its
+      boundaries and making explicit a model of that system—provides tools for
+      understanding and testing ideas that are applicable throughout science and
+      engineering.
+   5. Energy and Matter: Flows, Cycles, and Conservation. Tracking fluxes of energy and
+      matter into, out of, and within systems helps one understand the systems’ possibilities
+      and limitations.
+   6. Structure and Function. The way in which an object or living thing is shaped and its
+      substructure determines many of its properties and functions.
+   7. Stability and Change. For natural and built systems alike, conditions of stability and
+      determinants of rates of change or evolution of a system are critical elements of study.
+
+Disciplinary Core Ideas (as found in NGSS)
+The disciplinary core ideas describe the content that occurs at each grade or course. The K-12
+Science Indiana Academic Standards focus on a limited number of core ideas in science and
+engineering both within and across the disciplines and are built on the notion of learning as a
+developmental progression. The Disciplinary Core Ideas are grouped into the following
+domains:
+   ●    Physical Science (PS)
+   ●    Life Science (LS)
+   ●    Earth and Space Science (ESS)
+
+
+                                                3
+                2023 Indiana Academic Standards: Integrated Chemistry and Physics
+
+
+   ●   Engineering, Technology and Applications of Science (ETS)
+
+While the Indiana Academic Standards establish key expectations for knowledge and skills and
+should be used as the basis for curriculum, the standards by themselves do not constitute a
+curriculum. It is the responsibility of the local school corporation to select and formally adopt
+curricular tools, including textbooks and any other supplementary materials, that align with
+Indiana Academic Standards. Additionally, corporation and school leaders should consider the
+appropriate instructional sequence of the standards as well as the length of time needed to
+teach each standard. Every standard has a unique place in the continuum of learning, but each
+standard will not require the same amount of time and attention. A deep understanding of the
+vertical articulation of the standards will enable educators to make the best instructional
+decisions. These standards must also be complemented by robust, evidence-based
+instructional practices to support overall student development. By utilizing strategic and
+intentional instructional practices, other areas such as STEM and employability skills can be
+integrated with the content standards.
+
+Acknowledgments
+The Indiana Department of Education appreciates the time, dedication, and expertise offered by
+Indiana’s K-12 educators, higher education professors, representatives from business and
+industry, families, and other stakeholders who contributed to the development of the Indiana
+Academic Standards. We wish to specially acknowledge the committee members, as well as
+participants in the public comment period, who dedicated many hours to the review and
+evaluation of these standards designed to prepare Indiana students for success after
+graduation.
+
+References
+   ●   National Research Council. 2012. A Framework for K-12 Science Education: Practices,
+       Crosscutting Concepts, and Core Ideas. Washington, DC: The National Academies
+       Press. https://doi.org/10.17226/13165.
+   ●   NGSS Lead States. 2013. Next Generation Science Standards: For States, By States.
+       Washington, DC: The National Academies Press.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas,
+and Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+                                                4
+                     2023 Indiana Academic Standards: Integrated Chemistry and Physics
+
+
+      How to Read the Indiana Academic Standards for K-12 Science
+Standard Number                   Title
+
+Students who demonstrate understanding can:
+Standard           Performance Expectation: A statement that combines practices, core ideas, and
+Number             crosscutting concepts together to describe how students can show what they have
+                   learned. [Clarification Statement: A statement that supplies examples or additional clarification
+Essential          to the performance expectation.]
+
+
+
+  Science and Engineering Practices                                        Disciplinary Core Ideas
+Science and Engineering Practices are               Disciplinary Core Ideas are concepts in science and engineering that
+activities that scientists and engineers engage     have broad importance within and across disciplines as well as relevance
+in to either understand the world or solve the      in people’s lives.
+problem.                                            To be considered core, the ideas should meet at least two of the following
+There are 8 practices. These are integrated         criteria and ideally all four:
+into each standard. They were previously found          ●    Have broad importance across multiple sciences or engineering
+at the beginning of each grade level content                 disciplines or be a key organizing concept of a single discipline.
+standard and known as SEPs.                             ●    Provide a key tool for understanding or investigating more
+   Connections to the Nature of Science                      complex ideas and solving problems.
+
+Connections are listed in either practices or the       ●    Relate to the interests and life experiences of students or be
+crosscutting concepts section.                               connected to societal or personal concerns that require
+                                                             scientific or technological knowledge.
+                                                        ●    Be teachable and learnable over multiple grades at increasing
+                                                             levels of depth and sophistication.
+                                                    Disciplinary ideas are grouped in four domains: the physical sciences;
+                                                    the life sciences; the earth and space sciences; and engineering,
+                                                    technology, and applications of science.
+                                                    A disciplinary core idea is identified as “(secondary)” when the other
+                                                    featured disciplinary core ideas connect to the science and engineering
+                                                    practices and crosscutting concepts as the main focus of the
+                                                    performance expectation.
+                                                    A boundary statement, where applicable, provides guidance regarding
+                                                    the scope of a performance expectation.
+
+
+                                                                           Crosscutting Concepts
+                                                    Crosscutting concepts are seven ideas such as Patterns and Cause and
+                                                    Effect, which are not specific to any one discipline but cut across them
+                                                    all.
+                                                    Crosscutting concepts have value because they provide students with
+                                                    connections and intellectual tools that are related across the differing
+                                                    areas of disciplinary content and can enrich their application of practices
+                                                    and their understanding of core ideas.
+                                                        Connections to Engineering, Technology and Applications of
+                                                                                 Science
+                                                        ●    These connections are drawn from either the Disciplinary Core
+                                                             Ideas or Science and Engineering Practices.
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+                                                             5
+                   2023 Indiana Academic Standards: Integrated Chemistry and Physics
+
+
+
+HS-ICP1-1         Matter and its Interactions
+Students who demonstrate understanding can:
+HS-ICP1-1         Use the periodic table as a model to predict the relative properties of elements based
+                  on the patterns of electrons in the outermost energy level of atoms. [Clarification
+Essential         Statement: Examples of properties that could be predicted from patterns could include
+                  reactivity of metals, types of bonds formed, numbers of bonds formed, and reactions with
+                  oxygen.]
+Reference: NGSS HS-PS1-1
+
+        Science and Engineering Practices                                        Disciplinary Core Ideas
+SEP.2: Developing and Using Models                              PS1.A: Structure and Properties of Matter
+Modeling in 9–12 builds on K–8 and progresses to using,             ●   Each atom has a charged substructure consisting
+synthesizing, and developing models to predict and show                 of a nucleus, which is made of protons and
+relationships among variables between systems and their                 neutrons, surrounded by electrons.
+components in the natural and designed world(s).                    ●   The periodic table orders elements horizontally by
+    ●    Use a model to predict the relationships between               the number of protons in the atom’s nucleus and
+         systems or between components of a system.                     places those with similar chemical properties in
+                                                                        columns. The repeating patterns of this table reflect
+                                                                        patterns of outer electron states.
+
+
+                                                                                 Crosscutting Concepts
+                                                                CC.1: Patterns
+                                                                    ●   Different patterns may be observed at each of the
+                                                                        scales at which a system is studied and can
+                                                                        provide evidence for causality in explanations of
+                                                                        phenomena.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+                                                            6
+                    2023 Indiana Academic Standards: Integrated Chemistry and Physics
+
+
+
+HS-ICP1-2          Matter and its Interactions
+Students who demonstrate understanding can:
+HS-ICP1-2         Construct and revise an explanation for the outcome of a simple chemical reaction
+                  based on the outermost electron states of atoms, trends in the periodic table, and
+Essential         knowledge of the patterns of chemical properties. [Clarification Statement: Examples of
+                  chemical reactions could include the reaction of sodium and chlorine, of carbon and oxygen, or
+                  of carbon and hydrogen.]
+Reference: NGSS HS-PS1-2
+
+        Science and Engineering Practices                                          Disciplinary Core Ideas
+SEP.6: Constructing Explanations and Designing                    PS1.A: Structure and Properties of Matter
+Solutions
+                                                                      ●   The periodic table orders elements horizontally by
+Constructing explanations and designing solutions in 9–12                 the number of protons in the atom’s nucleus and
+builds on K–8 experiences and progresses to explanations                  places those with similar chemical properties in
+and designs that are supported by multiple and                            columns. The repeating patterns of this table reflect
+independent student-generated sources of evidence                         patterns of outer electron states.
+consistent with scientific ideas, principles, and theories.
+                                                                  PS1.B: Chemical Reactions
+    ●    Construct and revise an explanation based on
+         valid and reliable evidence obtained from a                  ●   The fact that atoms are conserved, together with
+         variety of sources (including students’ own                      knowledge of the chemical properties of the
+         investigations, models, theories, simulations, and               elements involved, can be used to describe and
+         peer review) and the assumption that theories                    predict chemical reactions.
+         and laws that describe the natural world operate
+         today as they did in the past and will continue to                        Crosscutting Concepts
+         do so in the future.
+                                                                  CC.1: Patterns
+                                                                      ●   Different patterns may be observed at each of the
+                                                                          scales at which a system is studied and can
+                                                                          provide evidence for causality in explanations of
+                                                                          phenomena.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+                                                              7
+                    2023 Indiana Academic Standards: Integrated Chemistry and Physics
+
+
+
+HS-ICP1-3          Matter and its Interactions
+Students who demonstrate understanding can:
+HS-ICP1-3          Plan and conduct an investigation to gather evidence to compare the structure of
+                   substances at the bulk scale to infer the strength of electrical forces between
+                   particles. [Clarification Statement: Emphasis is on understanding the strengths of forces
+                   between particles, not on naming specific intermolecular forces (such as dipole-dipole).
+                   Examples of particles could include ions, atoms, molecules, and networked materials (such
+                   as graphite). Examples of bulk properties of substances could include the melting point and
+                   boiling point, vapor pressure, and surface tension.]
+Reference: NGSS HS-PS1-3
+
+        Science and Engineering Practices                                              Disciplinary Core Ideas
+SEP.3: Planning and Carrying Out Investigations                       PS1.A: Structure and Properties of Matter
+Planning and carrying out investigations in 9-12 builds on                ●   The structure and interactions of matter at the bulk
+K-8 experiences and progresses to include investigations                      scale are determined by electrical forces within and
+that provide evidence for and test conceptual,                                between atoms.
+mathematical, physical, and empirical models.
+    ●    Plan and conduct an investigation individually                                Crosscutting Concepts
+         and collaboratively to produce data to serve as
+         the basis for evidence, and in the design: decide            CC.1: Patterns
+         on types, how much, and accuracy of data                         ●   Different patterns may be observed at each of the
+         needed to produce reliable measurements and                          scales at which a system is studied and can
+         consider limitations on the precision of the data                    provide evidence for causality in explanations of
+         (e.g., number of trials, cost, risk, time), and refine               phenomena.
+         the design accordingly.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+                                                                  8
+                   2023 Indiana Academic Standards: Integrated Chemistry and Physics
+
+
+
+HS-ICP1-4         Matter and its Interactions
+Students who demonstrate understanding can:
+HS-ICP1-4        Develop a model to illustrate that the release or absorption of energy from a chemical
+                 reaction system depends upon the changes in total bond energy. [Clarification Statement:
+                 Emphasis is on the idea that a chemical reaction is a system that affects the energy change.
+                 Examples of models could include molecular-level drawings and diagrams of reactions, graphs
+                 showing the relative energies of reactants and products, and representations showing energy
+                 is conserved.]
+Reference: NGSS HS-PS1-4
+
+        Science and Engineering Practices                                     Disciplinary Core Ideas
+SEP.2: Developing and Using Models                             PS1.A: Structure and Properties of Matter
+Modeling in 9–12 builds on K–8 and progresses to using,            ●   A stable molecule has less energy than the same
+synthesizing, and developing models to predict and show                set of atoms separated; one must provide at least
+relationships among variables between systems and their                this energy in order to take the molecule apart.
+components in the natural and designed worlds.
+                                                               PS1.B: Chemical Reactions
+    ●    Develop a model based on evidence to illustrate
+         the relationships between systems or between              ●   Chemical processes, their rates, and whether or not
+         components of a system.                                       energy is stored or released can be understood in
+                                                                       terms of the collisions of molecules and the
+                                                                       rearrangements of atoms into new molecules, with
+                                                                       consequent changes in the sum of all bond
+                                                                       energies in the set of molecules that are matched
+                                                                       by changes in kinetic energy.
+
+
+                                                                              Crosscutting Concepts
+                                                               CC.5: Energy and Matter
+                                                                   ●   Changes of energy and matter in a system can be
+                                                                       described in terms of energy and matter flows into,
+                                                                       out of, and within that system.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+
+                                                           9
+                   2023 Indiana Academic Standards: Integrated Chemistry and Physics
+
+
+
+HS-ICP1-5         Matter and its Interactions
+Students who demonstrate understanding can:
+HS-ICP1-5        Develop models to illustrate the changes in the composition of the nucleus of the atom
+                 and the energy released during the processes of fission, fusion, and radioactive decay.
+                 [Clarification Statement: Emphasis is on simple qualitative models, such as pictures or
+                 diagrams, and on the scale of energy released in nuclear processes relative to other kinds of
+                 transformations.]
+Reference: NGSS HS-PS1-8
+
+        Science and Engineering Practices                                 Disciplinary Core Ideas
+SEP.2: Developing and Using Models                          PS1.C: Nuclear Processes
+Modeling in 9–12 builds on K–8 and progresses to using,         ●   Nuclear processes, including fusion, fission, and
+synthesizing, and developing models to predict and show             radioactive decays of unstable nuclei, involve
+relationships among variables between systems and their             release or absorption of energy. The total number
+components in the natural and designed worlds.                      of neutrons plus protons does not change in any
+    ●    Develop a model based on evidence to illustrate            nuclear process.
+         the relationships between systems or between
+         components of a system.                                           Crosscutting Concepts
+                                                            CC.5: Energy and Matter
+                                                                ●   In nuclear processes, atoms are not conserved, but
+                                                                    the total number of protons plus neutrons is
+                                                                    conserved.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+                                                           10
+                    2023 Indiana Academic Standards: Integrated Chemistry and Physics
+
+
+
+HS-ICP2-1         Forces
+Students who demonstrate understanding can:
+HS-ICP2-1         Analyze data to support the claim that Newton’s second law of motion describes the
+                  mathematical relationship among the net force on a macroscopic object, its mass, and
+Essential         its acceleration. [Clarification Statement: Examples of data could include tables or graphs of
+                  position or velocity as a function of time for objects subject to a net unbalanced force, such
+                  as a falling object, an object rolling down a ramp, or a moving object being pulled by a
+                  constant force.]
+Reference: NGSS HS-PS2-1
+
+        Science and Engineering Practices                                        Disciplinary Core Ideas
+SEP.4: Analyzing and Interpreting Data                             PS2.A: Forces and Motion
+Analyzing data in 9–12 builds on K–8 and progresses to                 ●   Newton’s second law accurately predicts changes
+introducing more detailed statistical analysis, the                        in the motion of macroscopic objects.
+comparison of data sets for consistency, and the use of
+models to generate and analyze data.
+                                                                                 Crosscutting Concepts
+    ●    Analyze data using tools, technologies, and/or
+         models (e.g., computational, mathematical) in             CC.2: Cause and Effect
+         order to make valid and reliable scientific claims
+         or determine an optimal design solution.                      ●   Empirical evidence is required to differentiate
+                                                                           between cause and correlation and make claims
+        --------------------------------                                   about specific causes and effects.
+          Connections to Nature of Science
+
+
+Science Models, Laws, Mechanisms, and Theories
+Explain Natural Phenomena
+    ●    Theories and laws provide explanations in
+         science.
+    ●    Laws are statements or descriptions of the
+         relationships among observable phenomena.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                              11
+                    2023 Indiana Academic Standards: Integrated Chemistry and Physics
+
+
+
+HS-ICP3-1          Energy
+Students who demonstrate understanding can:
+HS-ICP3-1         Quantitatively analyze various scenarios to describe how the change of energy in one
+                  component in a system responds to the change in energy of the other components and
+                  flow of energy into and out of the system are known.
+
+
+        Science and Engineering Practices                                          Disciplinary Core Ideas
+SEP.5: Using Mathematics and Computational                          PS3.A: Definitions of Energy
+Thinking
+                                                                        ●   Energy is a quantitative property of a system that
+Mathematical and computational thinking at the 9–12 level                   depends on the motion and interactions of matter
+builds on K–8 and progresses to using algebraic thinking                    and radiation within that system. That there is a
+and analysis; a range of linear and nonlinear functions                     single quantity called energy is due to the fact that a
+including trigonometric functions, exponentials, and                        system’s total energy is conserved, even as, within
+logarithms; and computational tools for statistical analysis                the system, energy is continually transferred from
+to analyze, represent, and model data. Simple                               one object to another and between its various
+computational simulations are created and used based on                     possible forms.
+mathematical models of basic assumptions.
+                                                                    PS3.B: Conservation of Energy and Energy Transfer
+    ●    Create a computational model or simulation of a
+         phenomenon, designed device, process, or                       ●   Conservation of energy means that the total change
+         system.                                                            of energy in any system is always equal to the total
+                                                                            energy transferred into or out of the system.
+                                                                        ●   Energy cannot be created or destroyed, but it can
+                                                                            be transported from one place to another and
+                                                                            transferred between systems.
+                                                                        ●   Mathematical expressions, which quantify how the
+                                                                            stored energy in a system depends on its
+                                                                            configuration (e.g., relative positions of charged
+                                                                            particles, compression of a spring) and how kinetic
+                                                                            energy depends on mass and speed, allow the
+                                                                            concept of conservation of energy to be used to
+                                                                            predict and describe system behavior.
+                                                                        ●   The availability of energy limits what can occur in
+                                                                            any system.
+
+
+                                                                                   Crosscutting Concepts
+                                                                    CC.4: Systems and System Models
+                                                                        ●   Models can be used to predict the behavior of a
+                                                                            system, but these predictions have limited precision
+                                                                            and reliability due to the assumptions and
+                                                                            approximations inherent in models.
+                                                                                 ------------------------
+                                                                               Connections to Nature of Science
+                                                                    Scientific Knowledge Assumes an Order and
+                                                                    Consistency in Natural Systems
+                                                                        ●   Science assumes the universe is a vast single
+                                                                            system in which basic laws are consistent.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                               12
+                   2023 Indiana Academic Standards: Integrated Chemistry and Physics
+
+
+
+HS-ICP3-2         Energy
+Students who demonstrate understanding can:
+HS-ICP3-2        Develop and use models to illustrate that energy at the macroscopic scale can be
+                 accounted for as a combination of energy associated with the motions of particles
+Essential        (objects) and energy associated with the relative positions of particles objects).
+                 [Clarification Statement: Examples of phenomena at the macroscopic scale could include the
+                 conversion of kinetic energy to thermal energy, the energy stored due to position of an object
+                 above the earth, and the energy stored between two electrically-charged plates. Examples of
+                 models could include diagrams, drawings, descriptions, and computer simulations.]
+Reference: NGSS HS-PS3-2
+
+        Science and Engineering Practices                                     Disciplinary Core Ideas
+SEP.2: Developing and Using Models                              PS3.A: Definitions of Energy
+Modeling in 9–12 builds on K–8 and progresses to using,             ●   Energy is a quantitative property of a system that
+synthesizing, and developing models to predict and show                 depends on the motion and interactions of matter
+relationships among variables between systems and their                 and radiation within that system. That there is a
+components in the natural and designed worlds.                          single quantity called energy is due to the fact that
+    ●    Develop and use a model based on evidence to                   a system’s total energy is conserved, even as,
+         illustrate the relationships between systems or                within the system, energy is continually transferred
+         between components of a system.                                from one object to another and between its various
+                                                                        possible forms.
+                                                                    ●   At the macroscopic scale, energy manifests itself
+                                                                        in multiple ways, such as in motion, sound, light,
+                                                                        and thermal energy.
+                                                                    ●   These relationships are better understood at the
+                                                                        microscopic scale, at which all of the different
+                                                                        manifestations of energy can be modeled as a
+                                                                        combination of energy associated with the motion
+                                                                        of particles and energy associated with the
+                                                                        configuration (relative position of the particles). In
+                                                                        some cases, the relative position energy can be
+                                                                        thought of as stored in fields (which mediate
+                                                                        interactions between particles). This last concept
+                                                                        includes radiation, a phenomenon in which energy
+                                                                        stored in fields moves across space.
+
+
+                                                                               Crosscutting Concepts
+                                                                CC.5: Energy and Matter
+                                                                    ●   Energy cannot be created or destroyed; it only
+                                                                        moves between one place and another place,
+                                                                        between objects and/or fields, or between
+                                                                        systems.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                           13
+                    2023 Indiana Academic Standards: Integrated Chemistry and Physics
+
+
+
+HS-ICP3-3          Energy
+Students who demonstrate understanding can:
+HS-ICP3-3         Design, build, and refine a device that works within given constraints to convert one
+                  form of energy into another form of energy. [Clarification Statement: Emphasis is on both
+                  qualitative and quantitative evaluations of devices. Examples of devices could include Rube
+                  Goldberg devices, wind turbines, solar cells, solar ovens, and generators. Examples of
+                  constraints could include use of renewable energy forms and efficiency.]
+Reference: NGSS HS-PS3-3
+
+        Science and Engineering Practices                                            Disciplinary Core Ideas
+SEP.6: Constructing Explanations and Designing                     PS3.A: Definitions of Energy
+Solutions                                                              ●      At the macroscopic scale, energy manifests itself in
+Constructing explanations and designing solutions in 9–12                     multiple ways, such as in motion, sound, light, and
+builds on K–8 experiences and progresses to explanations                      thermal energy.
+and designs that are supported by multiple and                     PS3.D: Energy in Chemical Processes
+independent student-generated sources of evidence
+consistent with scientific ideas, principles, and theories.            ●      Although energy cannot be destroyed, it can be
+                                                                              converted to less useful forms — for example, to
+    ●    Design, evaluate, and/or refine a solution to a                      thermal energy in the surrounding environment.
+         complex real-world problem based on scientific
+         knowledge, student-generated sources of                   ETS1.A: Defining and Delimiting an Engineering Problem
+         evidence, prioritized criteria, and tradeoff                  ●      Criteria and constraints also include satisfying any
+         considerations.                                                      requirements set by society, such as taking issues
+                                                                              of risk mitigation into account, and they should be
+                                                                              quantified to the extent possible and stated in such
+                                                                              a way that one can tell if a given design meets
+                                                                              them. (secondary)
+
+
+                                                                                     Crosscutting Concepts
+                                                                   CC.5: Energy and Matter
+                                                                       ●     Changes of energy and matter in a system can be
+                                                                             described in terms of energy and matter flows into,
+                                                                             out of, and within that system.
+                                                                                  ------------------------
+                                                                           Connections to Engineering, Technology, and
+                                                                                      Applications of Science
+                                                                   Influence of Science, Engineering and Technology on
+                                                                   Society and the Natural World
+                                                                       ●      Modern civilization depends on major technological
+                                                                              systems. Engineers continuously modify these
+                                                                              technological systems by applying scientific
+                                                                              knowledge and engineering design practices to
+                                                                              increase benefits while decreasing costs and risks.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+
+                                                              14
+                   2023 Indiana Academic Standards: Integrated Chemistry and Physics
+
+
+
+HS-ICP3-4         Energy
+Students who demonstrate understanding can:
+HS-ICP3-4         Develop and use a model of two objects interacting through electric or magnetic
+                  fields to illustrate the forces between objects and the changes in energy of the
+                  objects due to the interaction. [Clarification Statement: Examples of models could include
+                  drawings, diagrams, and texts, such as drawings of what happens when two charges of
+                  opposite polarity are near each other.]
+Reference: NGSS HS-PS3-5
+
+        Science and Engineering Practices                                     Disciplinary Core Ideas
+SEP.2: Developing and Using Models                              PS3.C: Relationship Between Energy and Forces
+Modeling in 9–12 builds on K–8 and progresses to using,             ●   When two objects interacting through a field change
+synthesizing, and developing models to predict and show                 relative position, the energy stored in the field is
+relationships among variables between systems and their                 changed.
+components in the natural and designed world(s).
+    ●    Develop and use a model based on evidence to                          Crosscutting Concepts
+         illustrate the relationships between systems or
+         between components of a system.                        CC.2: Cause and Effect
+                                                                    ●   Cause and effect relationships can be suggested
+                                                                        and predicted for complex natural and
+                                                                        human-designed systems by examining what is
+                                                                        known about smaller scale mechanisms within the
+                                                                        system.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+                                                           15
+                   2023 Indiana Academic Standards: Integrated Chemistry and Physics
+
+
+
+HS-ICP3-5         Energy
+Students who demonstrate understanding can:
+HS-ICP3-5         Gather data to build a model to describe and explain the flow of current through
+                  series and parallel electric circuits.
+
+
+        Science and Engineering Practices                                        Disciplinary Core Ideas
+SEP.2: Developing and Using Models                              PS3.B: Conservation of Energy and Energy Transfer
+Modeling in 9–12 builds on K–8 and progresses to using,             ●     Conservation of energy means that the total change
+synthesizing, and developing models to predict and show                   of energy in any system is always equal to the total
+relationships among variables between systems and their                   energy transferred into or out of the system.
+components in the natural and designed world(s).                    ●     Energy cannot be created or destroyed, but it can
+    ●    Develop and use a model based on evidence to                     be transported from one place to another and
+         illustrate the relationships between systems or                  transferred between systems.
+         between components of a system.                            ●     Mathematical expressions, which quantify how the
+                                                                          stored energy in a system depends on its
+                                                                          configuration (e.g., relative positions of charged
+                                                                          particles, compression of a spring) and how kinetic
+                                                                          energy depends on mass and speed, allow the
+                                                                          concept of conservation of energy to be used to
+                                                                          predict and describe system behavior.
+                                                                    ●     The availability of energy limits what can occur in
+                                                                          any system.
+
+
+                                                                                 Crosscutting Concepts
+                                                                CC.5: Energy and Matter
+                                                                    ●     Changes of energy and matter in a system can be
+                                                                          described in terms of energy and matter flows into,
+                                                                          out of, and within that system.
+                                                                               ------------------------
+                                                                        Connections to Engineering, Technology, and
+                                                                                  Applications of Science
+                                                                Influence of Science, Engineering and Technology on
+                                                                Society and the Natural World
+                                                                    ●     Modern civilization depends on major technological
+                                                                          systems. Engineers continuously modify these
+                                                                          technological systems by applying scientific
+                                                                          knowledge and engineering design practices to
+                                                                          increase benefits while decreasing costs and risks.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+                                                           16
+                     2023 Indiana Academic Standards: Integrated Chemistry and Physics
+
+
+HS-ICP4-1         Waves and their Applications in Technologies for Information Transfer
+Students who demonstrate understanding can:
+HS-ICP4-1          Use mathematical representations to support a claim regarding relationships among
+                   the frequency, wavelength, and speed of waves. [Clarification Statement: Examples of
+                   data could include electromagnetic radiation traveling in a vacuum and glass, sound waves
+                   traveling through air and water, and seismic waves traveling through the Earth.]
+Reference: NGSS HS-PS4-1
+
+  The performance expectation above was developed using the following elements from A Framework for K-12 Science Education:
+
+        Science and Engineering Practices                                           Disciplinary Core Ideas
+SEP.5: Using Mathematics and Computational                          PS4.A: Wave Properties
+Thinking                                                                ●    The wavelength and frequency of a wave are
+Mathematical and computational thinking at the 9-12 level                    related to one another by the speed of travel of the
+builds on K-8 and progresses to using algebraic thinking                     wave, which depends on the type of wave and the
+and analysis; a range of linear and nonlinear functions                      medium through which it is passing.
+including trigonometric functions, exponentials, and
+logarithms; and computational tools for statistical analysis
+to analyze, represent and model data. Simple                                        Crosscutting Concepts
+computational simulations are created and used based on
+                                                                    CC.2: Cause and Effect
+mathematical models of basic assumptions.
+                                                                       ●    Empirical evidence is required to differentiate
+    ●    Use mathematical representations of phenomena
+                                                                            between cause and correlation and make claims
+         or design solutions to describe and/or support
+         claims and/or explanations.                                        about specific causes and effects.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+                                                               17
+

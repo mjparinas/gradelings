@@ -1,0 +1,714 @@
+                                                          Grade 8 Mathematics
+
+This document provides correlations between the 2023 Indiana Academic Standards (IAS) and the Common Core State Standards
+(CCSS) for easy reference. This correlation guide is intended to help support conversations regarding state and national standards and
+may be used as one of many tools to help inform a variety of local decisions (e.g., selection of high-quality curricular materials, curriculum
+maps).
+
+The 2023 Indiana Academic Standards resulted from the standards streamlining process required by Indiana Code (IC) 20-31-3-1(c-d)
+and were adopted by the Indiana State Board of Education in June 2023. Standards designated as essential (E) for student mastery by
+the end of the grade level are shaded in gray and all standards were renumbered to avoid gaps in sequencing.
+
+
+       2023 Indiana Academic Standard                       Common Core State Standard                         Differences Between
+                                                                                                               2023 IAS and CCSS
+
+                                                          Domain: Number Sense
+
+ Number                      Text                   Number                      Text                                Description
+
+                                                                Know that numbers that are not
+            Give examples of rational and
+                                                                rational are called irrational.
+            irrational numbers, and explain the
+                                                                Understand informally that every
+            difference between them. State
+                                                                number has a decimal expansion;
+            decimal equivalents for any number.
+ 8.NS.1                                              8.NS.1     for rational numbers show that the        No content differences identified.
+            For rational numbers, show that the
+                                                                decimal expansion repeats
+            decimal equivalent terminates or
+                                                                eventually, and convert a decimal
+            repeats, and convert a repeating
+                                                                expansion which repeats eventually
+            decimal into a rational number.
+                                                                into a rational number.
+
+
+
+
+                                                                       1
+          2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 8 Mathematics
+
+
+         Use rational approximations of                     Use rational approximations of
+         irrational numbers to compare the                  irrational numbers to compare the
+         size of irrational numbers, plot them              size of irrational numbers, locate
+8.NS.2                                            8.NS.2                                             No content differences identified.
+         approximately on a number line, and                them approximately on a number
+         estimate the value of expressions                  line diagram, and estimate the value
+         involving irrational numbers.                      of expressions (e.g., π2).
+
+         Given a numeric expression with
+         common rational number bases and                   Know and apply the properties of
+8.NS.3   integer exponents, apply the             8.EE.1    integer exponents to generate            No content differences identified.
+         properties of exponents to generate                equivalent numerical expressions.
+         equivalent expressions. (E)
+
+         Solve real-world problems with                     Solve real-world and mathematical
+                                                                                                    IAS includes multiple operations
+8.NS.4   rational numbers by using multiple       7.NS.3    problems involving the four
+                                                                                                    beyond the basic four.
+         operations. (E)                                    operations with rational numbers.
+
+                                                                                                           Differences Between
+    2023 Indiana Academic Standard                      Common Core State Standard
+                                                                                                           2023 IAS and CCSS
+
+                                                  Domain: Algebra and Functions
+
+Number                    Text                    Number                    Text                                Description
+
+         Solve linear equations and                         Solve linear equations with rational
+         inequalities with rational number                  number coefficients, including
+         coefficients fluently, including those             equations whose solutions require
+         whose solutions require expanding        8.EE.7b   expanding expressions using the
+8.AF.1   expressions using the distributive                 distributive property and collecting     No content differences identified.
+         property and collecting like terms.                like terms.
+         Represent real-world problems
+         using linear equations and                         Use variables to represent quantities
+                                                  7.EE.4
+         inequalities in one variable and                   in a real-world or mathematical
+
+
+
+                                                            Updated July 2024                                                          2
+          2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 8 Mathematics
+
+
+         solve such problems. (E)                            problem, and construct simple
+                                                             equations and inequalities to solve
+                                                             problems by reasoning about the
+                                                             quantities.
+
+                                                             Give examples of linear equations in
+                                                             one variable with one solution,
+                                                             infinitely many solutions, or no
+         Generate linear equations in one                    solutions. Show which of these
+         variable with one solution, infinitely              possibilities is the case by              CCSS specifies the justification
+8.AF.2                                             8.EE.7a
+         many solutions, or no solutions.                    successively transforming the given       steps to be used.
+         Justify the classification given.                   equation into simpler forms, until an
+                                                             equivalent equation of the form x =
+                                                             a, a = a, or a = b results (where a
+                                                             and b are different numbers).
+
+         Understand that a function assigns                  Understand that a function is a rule
+                                                                                                       IAS describes the x-value and
+         to each x-value (independent                        that assigns to each input exactly
+                                                                                                       y-value as independent and
+         variable) exactly one y-value                       one output. The graph of a function
+8.AF.3                                              8.F.1                                              dependent variables respectively,
+         (dependent variable), and that the                  is the set of ordered pairs consisting
+                                                                                                       whereas the CCSS refers to them as
+         graph of a function is the set of                   of an input and the corresponding
+                                                                                                       inputs (x) and outputs (y).
+         ordered pairs (x,y).                                output.
+
+         Describe qualitatively the functional
+                                                             Describe qualitatively the functional
+         relationship between two quantities
+                                                             relationship between two quantities
+         by analyzing a graph (e.g., where
+                                                             by analyzing a graph (e.g., where
+         the function is increasing or
+                                                             the function is increasing or             IAS includes maximum and
+8.AF.4   decreasing, linear or nonlinear, has       8.F.5
+                                                             decreasing, linear or nonlinear).         minimum value.
+         a maximum or minimum value).
+                                                             Sketch a graph that exhibits the
+         Sketch a graph that exhibits the
+                                                             qualitative features of a function that
+         qualitative features of a function that
+                                                             has been described verbally.
+         has been verbally described. (E)
+
+
+
+                                                             Updated July 2024                                                            3
+          2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 8 Mathematics
+
+
+                                                            Interpret the equation y = mx + b as
+         Interpret the equation y = mx + b as
+                                                            defining a linear function, whose
+         defining a linear function whose
+                                                            graph is a straight line; give
+         graph is a straight line; give
+                                                            examples of functions that are not       IAS requires students to describe
+         examples of functions that are not
+                                                            linear. For example, the function A =    similarities and differences between
+8.AF.5   linear. Describe similarities and        8.F.A.3
+                                                            s2 giving the area of a square as a      linear and nonlinear functions in
+         differences between linear and
+                                                            function of its side length is not       multiple forms.
+         nonlinear functions from tables,
+                                                            linear because its graph contains the
+         graphs, verbal descriptions, and
+                                                            points (1,1), (2,4) and (3,9), which
+         equations.
+                                                            are not on a straight line.
+
+                                                            Construct a function to model a
+                                                            linear relationship between two
+                                                            quantities. Determine the rate of
+         Construct a function to model a
+                                                            change and initial value of the
+         linear relationship between two
+                                                            function from a description of a
+         quantities given a verbal description,
+                                                            relationship or from two (x, y)
+8.AF.6   table of values, or graph. Within the     8.F.4                                              No content differences identified.
+                                                            values, including reading these from
+         context of a problem, describe the
+                                                            a table or from a graph. Interpret the
+         meaning of m (rate of change) and b
+                                                            rate of change and initial value of a
+         (y-intercept) in y = mx + b. (E)
+                                                            linear function in terms of the
+                                                            situation it models, and in terms of
+                                                            its graph or a table of values.
+
+         Compare properties of two linear
+         functions given in different forms,
+                                                            Compare properties of two functions
+         such as a table of values, equation,
+                                                            each represented in a different way      IAS provides specific examples to
+         verbal description, and graph (e.g.,
+8.AF.7                                             8.F.2    (algebraically, graphically,             be used in the comparison of
+         compare a distance-time graph to a
+                                                            numerically in tables, or by verbal      properties of linear functions.
+         distance-time equation to determine
+                                                            descriptions).
+         which of two moving objects has
+         greater speed).
+
+
+                                                            Updated July 2024                                                            4
+          2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 8 Mathematics
+
+
+                                                           Understand that solutions to a
+                                                           system of two linear equations in
+                                                           two variables correspond to points of
+                                                8.EE.8a    intersection of their graphs, because
+                                                           points of intersection satisfy both
+         Approximate the solution of a                     equations simultaneously.             CCSS includes solving systems of
+         system of equations by graphing                   Solve systems of two linear           two linear equations algebraically
+8.AF.8
+         and interpreting the reasonableness               equations in two variables            and solving simple cases by
+         of the approximation. (E)                         algebraically, and estimate solutions inspection.
+                                                           by graphing the equations. Solve
+                                                8.EE.8b
+                                                           simple cases by inspection. For
+                                                           example, 3x + 2y = 5 and 3x + 2y =
+                                                           6 have no solution because 3x + 2y
+                                                           cannot simultaneously be 5 and 6.
+
+    2023 Indiana Academic Standard                       Common Core State Standard                     Differences Between
+                                                                                                        2023 IAS and CCSS
+
+                                               Domain: Geometry and Measurement
+
+Number                    Text                  Number                      Text                             Description
+
+         Explore dilations, translations,                  Describe the effect of dilations,
+         rotations, and reflections on                     translations, rotations, and          IAS specifies exploring the four
+8.GM.1                                           8.G.3
+         two-dimensional figures in the                    reflections on two-dimensional        types of transformations.
+         coordinate plane. (E)                             figures using coordinates.
+
+         Solve real-world and other                                                             IAS includes the volume of pyramids
+                                                           Know the formulas for the volumes
+         mathematical problems involving                                                        and the surface area of spheres.
+                                                           of cones, cylinders, and spheres and
+8.GM.2   volume of cones, spheres, and           8.G.9                                          CCSS includes volume of cylinders
+                                                           use them to solve real-world and
+         pyramids and surface area of                                                           and requires students to know the
+                                                           mathematical problems.
+         spheres. (E)                                                                           formulas.
+
+
+
+                                                           Updated July 2024                                                        5
+           2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 8 Mathematics
+
+
+          Apply the Pythagorean Theorem to                     Apply the Pythagorean Theorem to
+          determine unknown side lengths in                    determine unknown side lengths in        CCSS includes applying the
+8.GM.3    right triangles in real-world and other    8.G.7     right triangles in real-world and        Pythagorean Theorem in three
+          mathematical problems in two                         mathematical problems in two and         dimensions.
+          dimensions. (E)                                      three dimensions.
+
+    2023 Indiana Academic Standard                           Common Core State Standard                        Differences Between
+                                                                                                               2023 IAS and CCSS
+
+                                          Domain: Data Analysis, Statistics, and Probability
+
+Number                     Text                     Number                      Text                                Description
+
+          Construct and interpret scatter plots
+                                                               Construct and interpret scatter plots
+          for bivariate measurement data to
+                                                               for bivariate measurement data to
+          investigate patterns of association
+                                                               investigate patterns of association
+          between two quantitative variables.
+                                                               between two quantities. Describe
+8.DSP.1   Describe patterns such as                 8.SP.1                                                No content differences identified.
+                                                               patterns such as clustering, outliers,
+          clustering, outliers, positive or
+                                                               positive or negative association,
+          negative association, linear
+                                                               linear association, and nonlinear
+          association, and nonlinear
+                                                               association.
+          association.
+
+                                                               Use the equation of a linear model
+                                                               to solve problems in the context of
+          Write and use equations that model
+                                                               bivariate measurement data,
+          linear relationships to make
+                                                               interpreting the slope and intercept.
+          predictions, including interpolation                                                          IAS includes interpolation and
+                                                               For example, in a linear model for a
+8.DSP.2   and extrapolation, in real-world          8.SP.3                                              extrapolation and emphasizes
+                                                               biology experiment, interpret a slope
+          situations involving bivariate                                                                problems in real-world situations.
+                                                               of 1.5 cm/hr as meaning that an
+          measurement data. Interpret the
+                                                               additional hour of sunlight each day
+          slope and y-intercept in context. (E)
+                                                               is associated with an additional 1.5
+                                                               cm in mature plant height.
+
+
+
+                                                               Updated July 2024                                                             6
+           2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 8 Mathematics
+
+
+                                                            Find probabilities of compound
+                                                  7.SP.8    events using organized lists, tables,
+                                                            tree diagrams, and simulation.
+          Represent sample spaces and find                  Represent sample spaces for
+          probabilities of compound events                  compound events using methods              CCSS includes finding probabilities
+8.DSP.3   (independent and dependent) using                 such as organized lists, tables and        of compound events using
+          organized lists, tables, and tree                 tree diagrams. For an event                simulations.
+          diagrams.(E)                            7.SP.8b
+                                                            described in everyday language
+                                                            (e.g., "rolling double sixes"), identify
+                                                            the outcomes in the sample space
+                                                            which compose the event.
+
+          Define the probability of a compound
+          event, just as with simple events, as
+          the fraction of outcomes in the                   Understand that, just as with simple
+          sample space for which the                        events, the probability of a               IAS requires students to use
+8.DSP.4   compound event occurs. Use              7.SP.8a   compound event is the fraction of          appropriate terminology to describe
+          appropriate terminology to describe               outcomes in the sample space for           events.
+          independent, dependent,                           which the compound event occurs.
+          complementary, and mutually
+          exclusive events. (E)
+
+          For events with a large number of
+          outcomes, understand the use of the
+          multiplication counting principle.
+8.DSP.5
+          Develop the multiplication counting
+          principle, and apply it to situations
+          with a large number of outcomes.
+
+
+
+
+                                                            Updated July 2024                                                           7
+             2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 8 Mathematics
+
+
+                                                      Mathematics Process Standards
+
+       2023 Indiana Academic Standard                         Common Core State Standard                         Differences Between
+                                                                                                                 2023 IAS and CCSS
+                                                      MP.1: Make sense of problems and persevere
+PS.1: Make sense of problems and
+                                                      in solving them.
+persevere in solving them.
+                                                      Mathematically proficient students start by
+Mathematically proficient students start by
+                                                      explaining to themselves the meaning of a
+explaining to themselves the meaning of a
+                                                      problem and looking for entry points to its
+problem and looking for entry points to its
+                                                      solution. They analyze givens, constraints,
+solution. They analyze givens, constraints,
+                                                      relationships, and goals. They make conjectures
+relationships, and goals. They make
+                                                      about the form and meaning of the solution and
+conjectures about the form and meaning of the
+                                                      plan a solution pathway rather than simply
+solution and plan a solution pathway, rather
+                                                      jumping into a solution attempt. They consider
+than simply jumping into a solution attempt.
+                                                      analogous problems, and try special cases and
+They consider analogous problems and try                                                                  IAS summarizes what
+                                                      simpler forms of the original problem in order to
+special cases and simpler forms of the original                                                           mathematically proficient students
+                                                      gain insight into its solution. They monitor and
+problem in order to gain insight into its solution.                                                       can do, while CCSS gives examples
+                                                      evaluate their progress and change course if
+They monitor and evaluate their progress and                                                              of what mathematically proficient
+                                                      necessary. Older students might, depending on
+change course if necessary. Mathematically                                                                students might do at different grade
+                                                      the context of the problem, transform algebraic
+proficient students check their answers to                                                                levels.
+                                                      expressions or change the viewing window on
+problems using a different method, and they
+                                                      their graphing calculator to get the information
+continually ask themselves, “Does this make
+                                                      they need. Mathematically proficient students
+sense?” and "Is my answer reasonable?" They
+                                                      can explain correspondences between
+understand the approaches of others to solving
+                                                      equations, verbal descriptions, tables, and
+complex problems and identify
+                                                      graphs or draw diagrams of important features
+correspondences between different
+                                                      and relationships, graph data, and search for
+approaches. Mathematically proficient students
+                                                      regularity or trends. Younger students might rely
+understand how mathematical ideas
+                                                      on using concrete objects or pictures to help
+interconnect and build on one another to
+                                                      conceptualize and solve a problem.
+produce a coherent whole.
+                                                      Mathematically proficient students check their
+
+
+
+                                                                Updated July 2024                                                          8
+             2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 8 Mathematics
+
+
+                                                    answers to problems using a different method,
+                                                    and they continually ask themselves, "Does this
+                                                    make sense?" They can understand the
+                                                    approaches of others to solving complex
+                                                    problems and identify correspondences
+                                                    between different approaches.
+
+PS.2: Reason abstractly and quantitatively.         MP.2: Reason abstractly and quantitatively.
+Mathematically proficient students make sense       Mathematically proficient students make sense
+of quantities and their relationships in problem    of quantities and their relationships in problem
+situations. They bring two complementary            situations. They bring two complementary
+abilities to bear on problems involving             abilities to bear on problems involving
+quantitative relationships: the ability to          quantitative relationships: the ability to
+decontextualize—to abstract a given situation       decontextualize—to abstract a given situation
+and represent it symbolically and manipulate        and represent it symbolically and manipulate the
+the representing symbols as if they have a life     representing symbols as if they have a life of
+of their own, without necessarily attending to      their own, without necessarily attending to their
+                                                                                                        No content differences identified.
+their referents—and the ability to contextualize,   referents—and the ability to contextualize, to
+to pause as needed during the manipulation          pause as needed during the manipulation
+process in order to probe into the referents for    process in order to probe into the referents for
+the symbols involved. Quantitative reasoning        the symbols involved. Quantitative reasoning
+entails habits of creating a coherent               entails habits of creating a coherent
+representation of the problem at hand;              representation of the problem at hand;
+considering the units involved; attending to the    considering the units involved; attending to the
+meaning of quantities, not just how to compute      meaning of quantities, not just how to compute
+them; and knowing and flexibly using different      them; and knowing and flexibly using different
+properties of operations and objects.               properties of operations and objects.
+
+
+
+
+                                                              Updated July 2024                                                          9
+             2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 8 Mathematics
+
+
+                                                    MP.3: Construct viable arguments and
+                                                    critique the reasoning of others.
+PS.3: Construct viable arguments and
+                                                    Mathematically proficient students understand
+critique the reasoning of others.
+                                                    and use stated assumptions, definitions, and
+Mathematically proficient students understand
+                                                    previously established results in constructing
+and use stated assumptions, definitions, and
+                                                    arguments. They make conjectures and build a
+previously established results in constructing
+                                                    logical progression of statements to explore the
+arguments. They make conjectures and build a
+                                                    truth of their conjectures. They are able to
+logical progression of statements to explore the
+                                                    analyze situations by breaking them into cases,
+truth of their conjectures. They analyze
+                                                    and can recognize and use counterexamples.
+situations by breaking them into cases and
+                                                    They justify their conclusions, communicate
+recognize and use counterexamples. They                                                                   IAS explains that mathematically
+                                                    them to others, and respond to the arguments of
+organize their mathematical thinking, justify their                                                       proficient students can justify
+                                                    others. They reason inductively about data,
+conclusions and communicate them to others,                                                               statements that are true always,
+                                                    making plausible arguments that take into
+and respond to the arguments of others. They                                                              sometimes, or never. IAS also states
+                                                    account the context from which the data arose.
+reason inductively about data, making plausible                                                           that mathematically proficient
+                                                    Mathematically proficient students are also able
+arguments that take into account the context                                                              students participate and collaborate
+                                                    to compare the effectiveness of two plausible
+from which the data arose. Mathematically                                                                 in a mathematics community. CCSS
+                                                    arguments, distinguish correct logic or
+proficient students are also able to compare the                                                          gives examples of what
+                                                    reasoning from that which is flawed, and—if
+effectiveness of two plausible arguments,                                                                 mathematically proficient students
+                                                    there is a flaw in an argument—explain what it
+distinguish correct logic or reasoning from that                                                          might do at different grade levels.
+                                                    is. Elementary students can construct
+which is flawed, and—if there is a flaw in an
+                                                    arguments using concrete referents such as
+argument—explain what it is. They justify
+                                                    objects, drawings, diagrams, and actions. Such
+whether a given statement is true always,
+                                                    arguments can make sense and be correct,
+sometimes, or never. Mathematically proficient
+                                                    even though they are not generalized or made
+students participate and collaborate in a
+                                                    formal until later grades. Later, students learn to
+mathematics community. They listen to or read
+                                                    determine domains to which an argument
+the arguments of others, decide whether they
+                                                    applies. Students at all grades can listen or read
+make sense, and ask useful questions to clarify
+                                                    the arguments of others, decide whether they
+or improve the arguments.
+                                                    make sense, and ask useful questions to clarify
+                                                    or improve the arguments.
+
+
+
+                                                              Updated July 2024                                                           10
+             2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 8 Mathematics
+
+
+                                                  MP.4: Model with mathematics.
+                                                  Mathematically proficient students can apply the
+                                                  mathematics they know to solve problems
+PS.4: Model with mathematics.
+                                                  arising in everyday life, society, and the
+Mathematically proficient students apply the
+                                                  workplace. In early grades, this might be as
+mathematics they know to solve problems
+                                                  simple as writing an addition equation to
+arising in everyday life, society, and the
+                                                  describe a situation. In middle grades, a student
+workplace using a variety of appropriate
+                                                  might apply proportional reasoning to plan a
+strategies. They create and use a variety of
+                                                  school event or analyze a problem in the
+representations to solve problems and to
+                                                  community. By high school, a student might use
+organize and communicate mathematical ideas.
+                                                  geometry to solve a design problem or use a
+Mathematically proficient students apply what
+                                                  function to describe how one quantity of interest   IAS summarizes what
+they know and are comfortable making
+                                                  depends on another. Mathematically proficient       mathematically proficient students
+assumptions and approximations to simplify a
+                                                  students who can apply what they know are           can do, while CCSS gives examples
+complicated situation, realizing that these may
+                                                  comfortable making assumptions and                  of what mathematically proficient
+need revision later. They are able to identify
+                                                  approximations to simplify a complicated            students might do at different grade
+important quantities in a practical situation and
+                                                  situation, realizing that these may need revision   levels.
+map their relationships using such tools as
+                                                  later. They are able to identify important
+diagrams, two-way tables, graphs, flowcharts
+                                                  quantities in a practical situation and map their
+and formulas. They analyze those relationships
+                                                  relationships using such tools as diagrams,
+mathematically to draw conclusions. They
+                                                  two-way tables, graphs, flowcharts and
+routinely interpret their mathematical results in
+                                                  formulas. They can analyze those relationships
+the context of the situation and reflect on
+                                                  mathematically to draw conclusions. They
+whether the results make sense, possibly
+                                                  routinely interpret their mathematical results in
+improving the model if it has not served its
+                                                  the context of the situation and reflect on
+purpose.
+                                                  whether the results make sense, possibly
+                                                  improving the model if it has not served its
+                                                  purpose.
+
+
+
+
+                                                            Updated July 2024                                                         11
+             2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 8 Mathematics
+
+
+
+                                                      MP.5: Use appropriate tools strategically.
+                                                      Mathematically proficient students consider the
+                                                      available tools when solving a mathematical
+                                                      problem. These tools might include pencil and
+PS.5: Use appropriate tools strategically.
+                                                      paper, concrete models, a ruler, a protractor, a
+Mathematically proficient students consider the
+                                                      calculator, a spreadsheet, a computer algebra
+available tools when solving a mathematical
+                                                      system, a statistical package, or dynamic
+problem. These tools might include pencil and
+                                                      geometry software. Proficient students are
+paper, models, a ruler, a protractor, a calculator,
+                                                      sufficiently familiar with tools appropriate for
+a spreadsheet, a computer algebra system, a
+                                                      their grade or course to make sound decisions
+statistical package, or dynamic geometry
+                                                      about when each of these tools might be helpful,
+software. Mathematically proficient students are
+                                                      recognizing both the insight to be gained and
+sufficiently familiar with tools appropriate for                                                           IAS summarizes what
+                                                      their limitations. For example, mathematically
+their grade or course to make sound decisions                                                              mathematically proficient students
+                                                      proficient high school students analyze graphs
+about when each of these tools might be                                                                    can do, while CCSS gives examples
+                                                      of functions and solutions generated using a
+helpful, recognizing both the insight to be                                                                of what mathematically proficient
+                                                      graphing calculator. They detect possible errors
+gained and their limitations. Mathematically                                                               students might do at different grade
+                                                      by strategically using estimation and other
+proficient students identify relevant external                                                             levels.
+                                                      mathematical knowledge. When making
+mathematical resources, such as digital content,
+                                                      mathematical models, they know that
+and use them to pose or solve problems. They
+                                                      technology can enable them to visualize the
+use technological tools to explore and deepen
+                                                      results of varying assumptions, explore
+their understanding of concepts and to support
+                                                      consequences, and compare predictions with
+the development of learning mathematics. They
+                                                      data. Mathematically proficient students at
+use technology to contribute to concept
+                                                      various grade levels are able to identify relevant
+development, simulation, representation,
+                                                      external mathematical resources, such as digital
+reasoning, communication and problem solving.
+                                                      content located on a website, and use them to
+                                                      pose or solve problems. They are able to use
+                                                      technological tools to explore and deepen their
+                                                      understanding of concepts.
+
+
+
+
+                                                               Updated July 2024                                                           12
+             2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 8 Mathematics
+
+
+PS.6: Attend to precision.                          MP.6: Attend to precision.
+Mathematically proficient students communicate      Mathematically proficient students try to
+precisely to others. They use clear definitions,    communicate precisely to others. They try to
+including precision. correct mathematical           use clear definitions in discussion with others
+language, in discussion with others and in their    and in their own reasoning. They state the
+own reasoning. They state the meaning of the        meaning of the symbols they choose, including
+symbols they choose, including using the equal      using the equal sign consistently and                IAS summarizes what
+sign consistently and appropriately. They           appropriately. They are careful about specifying     mathematically proficient students
+express solutions clearly and logically by using    units of measure, and labeling axes to clarify the   can do, while CCSS gives examples
+the appropriate mathematical terms and              correspondence with quantities in a problem.         of what mathematically proficient
+notation. They specify units of measure and         They calculate accurately and efficiently,           students might do at different grade
+label axes to clarify the correspondence with       express numerical answers with a degree of           levels.
+quantities in a problem. They calculate             precision appropriate for the problem context. In
+accurately and efficiently and check the validity   the elementary grades, students give carefully
+of their results in the context of the problem.     formulated explanations to each other. By the
+They express numerical answers with a degree        time they reach high school they have learned
+of precision appropriate for the problem context.   to examine claims and make explicit use of
+                                                    definitions.
+
+PS.7: Look for and make use of structure.           MPS.7: Look for and make use of structure.
+Mathematically proficient students look closely     Mathematically proficient students look closely
+to discern a pattern or structure. They step back   to discern a pattern or structure. Young
+for an overview and shift perspective. They         students, for example, might notice that three       IAS summarizes what
+recognize and use properties of operations and      and seven more is the same amount as seven           mathematically proficient students
+equality. They organize and classify geometric      and three more, or they may sort a collection of     can do, while CCSS gives examples
+shapes based on their attributes. They see          shapes according to how many sides the               of what mathematically proficient
+expressions, equations, and geometric figures       shapes have. Later, students will see 7 × 8          students might do at different grade
+as single objects or as being composed of           equals the well remembered 7 × 5 + 7 × 3, in         levels.
+several objects.                                    preparation for learning about the distributive
+                                                    property. In the expression x2 + 9x + 14, older
+                                                    students can see the 14 as 2 × 7 and the 9 as 2
+
+
+
+
+                                                             Updated July 2024                                                           13
+            2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 8 Mathematics
+
+
+                                                   + 7. They recognize the significance of an
+                                                   existing line in a geometric figure and can use
+                                                   the strategy of drawing an auxiliary line for
+                                                   solving problems. They also can step back for
+                                                   an overview and shift perspective. They can see
+                                                   complicated things, such as some algebraic
+                                                   expressions, as single objects or as being
+                                                   composed of several objects. For example, they
+                                                   can see 5 - 3(x - y)2 as 5 minus a positive
+                                                   number times a square and use that to realize
+                                                   that its value cannot be more than 5 for any real
+                                                   numbers x and y.
+
+PS.8: Look for and express regularity in           MP.8: Look for and express regularity in
+repeated reasoning.                                repeated reasoning.
+Mathematically proficient students notice if       Mathematically proficient students notice if
+calculations are repeated and look for general     calculations are repeated, and look both for
+methods and shortcuts. They notice regularity in   general methods and for shortcuts. Upper
+mathematical problems and their work to create     elementary students might notice when dividing
+a rule or formula. Mathematically proficient       25 by 11 that they are repeating the same            IAS summarizes what
+students maintain oversight of the process,        calculations over and over again, and conclude       mathematically proficient students
+while attending to the details as they solve a     they have a repeating decimal. By paying             can do, while CCSS gives examples
+problem. They continually evaluate the             attention to the calculation of slope as they        of what mathematically proficient
+reasonableness of their intermediate results.      repeatedly check whether points are on the line      students might do at different grade
+                                                   through (1, 2) with slope 3, middle school           levels.
+                                                   students might abstract the equation (y - 2)/(x -
+                                                   1) = 3. Noticing the regularity in the way terms
+                                                   cancel when expanding (x - 1)(x + 1), (x - 1)(x2 +
+                                                   x + 1), and (x - 1)(x3 + x2 + x + 1) might lead
+                                                   them to the general formula for the sum of a
+                                                   geometric series. As they work to solve a
+
+
+
+
+                                                            Updated July 2024                                                           14
+2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 8 Mathematics
+
+
+                                  problem, mathematically proficient students
+                                  maintain oversight of the process, while
+                                  attending to the details. They continually
+                                  evaluate the reasonableness of their
+                                  intermediate results.
+
+
+
+
+                                           Updated July 2024                                              15
+
