@@ -271,6 +271,12 @@ export const lessons: GradeLessons = {
     ["Water flows to lower ground."],
     "downhill",
   ),
+  "science/wa-gk-sunlight": lesson(
+    ["Sunlight warms the ground, water and sand.", "Shade blocks the sun and keeps things cooler.", "Hats, umbrellas and trees make shade."],
+    "A rock sits in the sun all day. Does it get warmer or cooler?",
+    ["The sun warms things it shines on."],
+    "warmer",
+  ),
   "science/weather-and-seasons": lesson(
     ["The seasons go spring, summer, fall, winter.", "Winter is the coldest season. Summer is the warmest.", "The sun lights the sky in the daytime."],
     "Which season comes after fall?",
@@ -282,12 +288,6 @@ export const lessons: GradeLessons = {
     "A very hot day is coming. What helps?",
     ["Heat makes us thirsty.", "Drink lots of water."],
     "drink lots of water",
-  ),
-  "science/wa-gk-sunlight": lesson(
-    ["Sunlight warms the ground, water and sand.", "Shade blocks the sun and keeps things cooler.", "Hats, umbrellas and trees make shade."],
-    "A rock sits in the sun all day. Does it get warmer or cooler?",
-    ["The sun warms things it shines on."],
-    "warmer",
   ),
   "science/tx-k-magnets-light": lesson(
     ["Magnets pull some metal things, like paper clips.", "We need light to see.", "When something blocks light, it makes a shadow."],

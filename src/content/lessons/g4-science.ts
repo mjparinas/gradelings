@@ -613,6 +613,18 @@ export const lessons: GradeLessons = {
     ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
     "the bare hillside",
   ),
+  "science/ny-g3-fossils": lesson(
+    ["Fossils are clues about life long ago.", "Fish and coral fossils together mean there was once a warm sea.", "In rock layers, older fossils are usually lower down."],
+    "A fossil has fins and gills. Where did it live?",
+    ["Fins and gills are for life in water."],
+    "in water",
+  ),
+  "science/oh-g4-landforms": lesson(
+    ["Moving water carves canyons by eroding the riverbed over a very long time.", "A delta forms where a river slows and drops sediment as it enters a larger body of water.", "Wind piles sand into dunes, like the Monahans Sandhills.", "Glaciers carve valleys and drop rock."],
+    "Where does a delta form?",
+    ["A river slows when it reaches a lake or the sea.", "It drops its sediment there."],
+    "where a river enters a larger body of water",
+  ),
   "science/solar-system": lesson(
     ["The planets in order from the Sun: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.", "The asteroid belt lies between Mars and Jupiter.", "A moon is a natural object that orbits a planet.", "The farther a planet is from the Sun, the longer it takes to orbit once."],
     "Which takes longer to orbit the Sun: Mars or Saturn?",
@@ -643,12 +655,6 @@ export const lessons: GradeLessons = {
     "Two magnets snap together. Are the ends alike or opposite poles?",
     ["Like poles push apart.", "Opposite poles pull together."],
     "opposite poles",
-  ),
-  "science/ny-g3-fossils": lesson(
-    ["Fossils are clues about life long ago.", "Fish and coral fossils together mean there was once a warm sea.", "In rock layers, older fossils are usually lower down."],
-    "A fossil has fins and gills. Where did it live?",
-    ["Fins and gills are for life in water."],
-    "in water",
   ),
   "science/rock-cycle": lesson(
     ["Igneous rock forms when magma or lava cools.", "Sedimentary rock forms when pieces from weathering and erosion settle in layers and press together.", "Metamorphic rock forms when heat and pressure change a rock.", "The rock cycle has no start: any rock can become any other type."],
