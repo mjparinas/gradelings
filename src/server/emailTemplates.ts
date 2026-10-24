@@ -7,6 +7,7 @@ import { countryOf, type CountryCode } from "@/lib/country";
 import type { EmailKind } from "@/lib/emailKinds";
 import { localizeCopy } from "@/content/locale";
 import type { Email } from "./email";
+import { schoolYearName, yearReviewLines, type YearReviewChild } from "@/lib/yearReview";
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
 
@@ -259,6 +260,29 @@ export function weeklyEmail(to: string, origin: string, children: WeeklyChild[],
   });
 }
 
+/** The June year in review: each child's school year in practice totals, with a button to the printable page. Goes with progress emails, so it unsubscribes like the weekly report. */
+export function yearReviewEmail(to: string, origin: string, children: YearReviewChild[], unsubToken: string, country: CountryCode | undefined, year: number): Email {
+  const q = encodeURIComponent(unsubToken);
+  const names = children.map((c) => c.name);
+  const who = names.length === 1 ? `${names[0]}'s` : "your family's";
+  return layout({
+    country,
+    kind: "year-review",
+    to,
+    origin,
+    unsubscribeUrl: `${origin}/api/email/unsubscribe/?token=${q}`,
+    unsubscribePage: `${origin}/account/unsubscribe/?token=${q}`,
+    subject: `${APP_NAME}: ${who} ${schoolYearName(year)} school year`,
+    heading: `The ${schoolYearName(year)} school year in review`,
+    body: [
+      ...children.flatMap(yearReviewLines),
+      "The parent area has a page for each child with stickers, trophies and every unit that grew, ready to print or keep.",
+      "This reflects practice in the app. It isn't a report-card mark; your child's teacher decides proficiency.",
+    ],
+    button: { label: "See the year in review", url: `${origin}/parents/#/year` },
+  });
+}
+
 export interface ReminderChild {
   name: string;
   /** Whole days since the last practice. */
@@ -390,6 +414,27 @@ export function inactiveClassEmail(to: string, origin: string, className: string
       "Deleting the class removes its assignments and class-account student profiles, settings, practice history and sessions. Children linked by a parent are unlinked; their family data is kept.",
     ],
     button: { label: `Sign in to ${APP_NAME}`, url: `${origin}/teachers/` },
+  });
+}
+
+/**
+ * The Monday class email a teacher turned on: per class, who practised, current homework, units to reteach and students to
+ * check in with (src/lib/classDigest.ts). First names and practice only. `button` opens the one class, or the class list.
+ */
+export function classDigestEmail(to: string, origin: string, classes: string[][], unsubToken: string, buttonPath: string, country?: CountryCode): Email {
+  const q = encodeURIComponent(unsubToken);
+  return layout({
+    country,
+    kind: "class-digest",
+    to,
+    origin,
+    unsubscribeUrl: `${origin}/api/email/unsubscribe/?kind=class&token=${q}`,
+    unsubscribePage: `${origin}/account/unsubscribe/?kind=class&token=${q}`,
+    subject: `${APP_NAME}: your class this week`,
+    heading: "Your class this week",
+    body: [...classes.flat(), "This reflects practice in the app, not a report-card mark. You decide proficiency."],
+    button: { label: classes.length === 1 ? "Open the class" : "Open your classes", url: `${origin}${buttonPath}` },
+    footnote: "You turned on the Monday class email in the teacher area. You can turn it off there, or with the unsubscribe link below.",
   });
 }
 

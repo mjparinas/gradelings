@@ -253,6 +253,24 @@ export const lessons: GradeLessons = {
     ["A tree takes many years to grow."],
     "slow",
   ),
+  "science/pa-g1-resources-and-recycling": lesson(
+    ["Resources are things from nature that people use, like water, wood and soil.", "Some things can be reused or recycled, so we waste less.", "Recycling turns old paper, cans and bottles into new things."],
+    "A can goes in the recycling bin. What can it become?",
+    ["Recycled metal is melted.", "It is made into a new thing."],
+    "a new can or other metal item",
+  ),
+  "science/pa-g1-design-it": lesson(
+    ["A design is a plan for making something that solves a problem.", "Build it, test it, and fix what does not work.", "Pick a material that fits the job. A raincoat should keep water out."],
+    "Which material is best for a rain hat: paper towel or plastic?",
+    ["Paper towel soaks up water.", "Plastic keeps water out."],
+    "plastic",
+  ),
+  "science/pa-g1-penns-places": lesson(
+    ["Pennsylvania has mountains, rivers, lakes and farms.", "Water runs downhill from the hills to streams and rivers.", "People take care of these places."],
+    "Water on a hill runs which way: uphill or downhill?",
+    ["Water flows to lower ground."],
+    "downhill",
+  ),
   "science/wa-gk-sunlight": lesson(
     ["Sunlight warms the ground, water and sand.", "Shade blocks the sun and keeps things cooler.", "Hats, umbrellas and trees make shade."],
     "A rock sits in the sun all day. Does it get warmer or cooler?",

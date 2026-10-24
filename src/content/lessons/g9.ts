@@ -361,6 +361,18 @@ const math: GradeLessons = {
     ["Every slice of a sphere is round."],
     "a circle",
   ),
+  "math/pa-g9-polynomial-identities": lesson(
+    ["Two patterns save work: (x + a)² = x² + 2ax + a² and (x + a)(x − a) = x² − a².", "Run the patterns forward to multiply, and backward to factor.", "They also help with mental math: 51 × 49 is (50 + 1)(50 − 1)."],
+    "Find 51 × 49 using (a + b)(a − b) = a² − b².",
+    ["Write it as (50 + 1)(50 − 1).", "That is 50² − 1² = 2,500 − 1."],
+    "2,499",
+  ),
+  "math/pa-g9-probability-rules": lesson(
+    ["For independent events, multiply the probabilities to find the chance of both.", "For events that cannot happen together, add the probabilities to find the chance of either one.", "The chance of something not happening is 1 minus the chance that it does."],
+    "A fair coin is flipped and a fair die is rolled. What is P(heads and a 4)?",
+    ["P(heads) = 1/2.", "P(4) = 1/6.", "1/2 × 1/6 = 1/12."],
+    "1/12",
+  ),
   "math/il-g9-absolute-value": lesson(
     ["|x − a| is the distance between x and a on the number line.", "|x − a| = b means x − a = b or x − a = −b, so there are two answers (none if b is negative).", "|x − a| < b means x is between a − b and a + b. |x − a| > b means x is outside them."],
     "Solve |x − 3| = 5.",

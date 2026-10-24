@@ -7,6 +7,7 @@ import { trackJob } from "@/server/monitor";
 // `Authorization: Bearer $CRON_SECRET`. The work is in src/server/dailyJob.ts:
 // Every day: a one-time trial recap 4 to 10 days before the trial ends, and a "trial ends soon" notice to confirmed parents, once. On Sundays: the weekly report
 // to parents who opted in (with a month summary on the first Sunday of the month). Every day: a gentle practice reminder, to opted-in parents only, at most once a week,
+// from June 15 to June 30 the year in review, once per school year, to parents with progress emails on; on Mondays the class email to teachers who turned it on;
 // and the delayed confirmation of US parental consent (src/server/consent.ts), once, a day or more after it was given.
 //
 // A run that is running out of time stops cleanly and says what is left (`complete: false`, `remaining`). The hourly

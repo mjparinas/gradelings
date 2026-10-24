@@ -241,4 +241,22 @@ export const lessons: GradeLessons = {
     ["Real cows cannot fly planes.", "So it is pretend."],
     "pretend",
   ),
+  "science/pa-gk-caring-for-nature": lesson(
+    ["We get things from nature, like water and wood.", "Reduce means use less. Reuse means use again. Recycle means make something new.", "We can keep parks and streams clean."],
+    "Which one reuses: refilling a bottle or throwing it away?",
+    ["Refilling uses the bottle again."],
+    "refilling a bottle",
+  ),
+  "science/pa-gk-everyday-tools": lesson(
+    ["A tool is something people make to help them do a job.", "Scissors cut. A spoon scoops. A ramp helps things roll.", "We use tools safely and ask a grown-up when we are not sure."],
+    "Which tool helps you cut paper: scissors or a spoon?",
+    ["Scissors are made for cutting."],
+    "scissors",
+  ),
+  "science/pa-gk-penns-woods": lesson(
+    ["Pennsylvania has many woods, rivers and farms.", "Deer, trout, grouse and fireflies live there.", "Plants and animals live where they can find what they need."],
+    "Which animal lives in a Pennsylvania stream: a trout or a camel?",
+    ["Trout live in cool streams."],
+    "a trout",
+  ),
 };

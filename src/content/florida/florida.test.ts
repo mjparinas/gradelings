@@ -56,7 +56,7 @@ describe("Florida", () => {
     // Treaties alone aren't a sign (adopted civics units ask about the Treaty of Paris), and neither is "Native
     // Americans" in a general US history unit such as the Columbian Exchange.
     const words = /\b(Tribes?|Tribal)\b|California Indian/;
-    for (const { u, key } of florida.filter(({ u }) => /^(wa|or|ca|ny|tx|mn|me|ak|al|az|ar)-/.test(u.id))) {
+    for (const { u, key } of florida.filter(({ u }) => /^(wa|or|ca|ny|tx|mn|me|ak|al|az|ar|pa)-/.test(u.id))) {
       const text = sampleOf((o) => u.generate(o)).map(questionText).join("\n");
       expect(words.test(text) ? key : "", `${key} is another state's unit about Tribes`).toBe("");
     }

@@ -3,7 +3,7 @@ import type { FrameworkId, GradeId, SubjectId } from "@/content/types";
 
 // Shared shapes for the device database, the sync API and the server.
 
-export type Mode = "practice" | "adventure" | "review" | "speed" | "daily" | "challenge";
+export type Mode = "practice" | "adventure" | "review" | "speed" | "daily" | "challenge" | "facts";
 
 export interface Profile {
   id: string;
@@ -134,6 +134,8 @@ export type AppEvent = EventBase &
         ms: number;
         mode: Mode;
         difficulty?: number;
+        /** A math fact ("mul:7:8", see `facts.ts`), for answers in Math Facts. Tracked per fact, not as a unit. */
+        fact?: string;
       }
     | {
         type: "session";

@@ -187,4 +187,40 @@ export const lessons: GradeLessons = {
     ["Many people can be wrong.", "Popularity is not proof."],
     "popularity is not proof of quality",
   ),
+  "language/pa-g8-archetypes-and-perspectives": lesson(
+    ["An archetype is a pattern that appears in many stories.", "Common ones are the hero, mentor, trickster, villain and outsider.", "Authors show a character’s perspective through thoughts, speech and choices."],
+    "An old wizard trains a young farm boy to face an evil sorcerer. The wizard is the…",
+    ["He teaches and guides.", "That is the mentor."],
+    "mentor",
+  ),
+  "language/pa-g8-poetry-craft": lesson(
+    ["Imagery appeals to the senses. A symbol stands for a larger idea.", "Sound, such as alliteration, and structure shape a poem’s feeling.", "A cracked mirror or a candle can be symbols."],
+    "A dove in a poem often symbolizes…",
+    ["A symbol stands for an idea.", "Doves are a sign of peace."],
+    "peace",
+  ),
+  "language/pa-g8-weighing-arguments": lesson(
+    ["Reasoning can be cause and effect, analogy, authority or evidence.", "Check if evidence is accurate, relevant and from a reliable source.", "Improve an argument with stronger evidence and a reply to counterclaims."],
+    "“Everyone is buying it, so it must be good.” What is the flaw?",
+    ["Many people can be wrong.", "Popularity is not proof."],
+    "popularity is not proof of quality",
+  ),
+  "language/pa-g8-new-words": lesson(
+    ["Academic words appear across subjects. Learn their roots and meanings.", "Connotation is the feeling a word suggests; denotation is its dictionary meaning.", "An allusion is an indirect reference to a known story or event."],
+    "“Refute” means…",
+    ["Think about arguments.", "To refute is to prove wrong."],
+    "to prove wrong",
+  ),
+  "language/pa-g8-writing-moves": lesson(
+    ["Introduce a focused topic or precise claim.", "Organize with a strategy such as comparison, cause and effect or sequence.", "Support with relevant evidence, link with transitions and conclude."],
+    "Which sentence includes a counterclaim?",
+    ["It names another view and answers it.", "“Some argue it costs too much; the savings prove otherwise.”"],
+    "“Some argue it costs too much; the savings prove otherwise.”",
+  ),
+  "language/pa-g8-prove-it": lesson(
+    ["Cite the text evidence that most strongly supports an analysis.", "Analyze connections and distinctions among people, ideas and events.", "Dialogue and incidents can reveal character and move the plot."],
+    "“Ava gave away her only umbrella in the rain.” What does this reveal?",
+    ["Think about what she gave up.", "It shows generosity."],
+    "she is generous",
+  ),
 };

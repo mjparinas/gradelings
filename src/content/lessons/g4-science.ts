@@ -547,6 +547,36 @@ export const lessons: GradeLessons = {
     ["Earth turns once every 24 hours.", "As Earth rotates, the Sun seems to cross the sky."],
     "Earth is rotating",
   ),
+  "science/pa-g4-penns-energy": lesson(
+    ["Fuels, like coal, oil and natural gas, are burned for energy. They can run out.", "Wind and sunlight are renewable energy resources.", "Using any energy resource affects the environment in some way."],
+    "Which will run out someday: coal or sunlight?",
+    ["Coal formed over millions of years.", "Sunlight keeps coming each day."],
+    "coal",
+  ),
+  "science/pa-g4-systems-and-design": lesson(
+    ["A system is made of parts, and some parts form smaller subsystems.", "A design must meet criteria (what it should do) and fit constraints (limits).", "If a system fails, find which part is not working, then fix it."],
+    "A bridge must hold 2 kg and cost under $5. Which is the constraint?",
+    ["Holding 2 kg is the goal (criterion).", "Cost under $5 is a limit."],
+    "cost under $5",
+  ),
+  "science/pa-g4-penns-watersheds": lesson(
+    ["A watershed is land where all the water drains to the same river.", "Rain in much of Pennsylvania flows to the Susquehanna, the Delaware or the Ohio.", "What goes into a stream travels downstream."],
+    "Oil spills in a storm drain near a stream. Where might it go?",
+    ["Storm drains lead to streams.", "Streams flow downstream to rivers."],
+    "downstream into a river",
+  ),
+  "science/pa-g4-rocks-erosion": lesson(
+    ["Rock layers and fossils are clues to how land has changed.", "Weathering breaks rock into pieces. Erosion carries the pieces away.", "Water, ice and wind slowly shape mountains and valleys."],
+    "A trilobite fossil is found on a Pennsylvania ridge. What does it show?",
+    ["Trilobites lived in the sea.", "So the land was once under water."],
+    "the land was once under a sea",
+  ),
+  "science/pa-g4-earth-hazards": lesson(
+    ["Maps show mountains, rivers and low land, so we can see where hazards happen.", "Floods are most likely on low land near rivers.", "People reduce harm with warnings, strong buildings and by staying away from danger."],
+    "Where is a flood most likely on a map: low land by a river or a hilltop?",
+    ["Water collects in low places.", "Hilltops are high."],
+    "low land by a river",
+  ),
   "science/il-g4-earth-hazards": lesson(
     ["Maps show patterns: volcanoes and earthquakes line up where Earth's plates meet.", "Hazards like tornadoes, floods and earthquakes can't be stopped, but harm can be reduced.", "Sirens, levees, strong buildings and safe places all help."],
     "A tornado warning sounds. Where is the safest place in a house?",

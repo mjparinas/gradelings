@@ -1,0 +1,126 @@
+import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
+
+// Pennsylvania's extra Grade 6 English language arts units (`pa-` ids): academic words and word relationships, the
+// thinking behind informative, argument and narrative writing (tapped, not written), and citing evidence from a short
+// passage. The passages are original. Reading only.
+
+const WORDS: Q[] = [
+  ["“The speaker’s tone was formal.” Formal means…", "serious and proper", ["silly", "very loud", "secret"], "A formal tone follows rules of polite speech."],
+  ["Which word means “to examine closely to understand”?", "analyze", ["borrow", "decorate", "ignore"], "Analyze means study the parts."],
+  ["Which word best fits? “She will ___ the data to find a pattern.”", "interpret", ["bake", "polish", "sprint"], "Interpret means explain the meaning."],
+  ["“The evidence is relevant.” Relevant means…", "connected to the topic", ["too long", "very old", "hard to read"], "Relevant evidence fits the point."],
+  ["“The law has a significant effect.” Significant means…", "important", ["tiny", "quiet", "secret"], "Significant means important."],
+  ["“The author infers…” To infer means…", "to figure out from clues", ["to copy", "to hide", "to count"], "Inference uses clues."],
+  ["Which word means “a statement that something is true”?", "assertion", ["decoration", "invitation", "creation"], "An assertion states a claim."],
+  ["Which word has a positive connotation?", "slender", ["scrawny", "bony", "gaunt"], "Slender sounds positive."],
+  ["Which word has a negative connotation?", "stubborn", ["determined", "firm", "steady"], "Stubborn sounds negative."],
+  ["Which pair differ in connotation? “thrifty” and “cheap”", "thrifty is positive; cheap is negative", ["they are opposites", "both are positive", "they mean fast and slow"], "Same idea, different feeling."],
+  ["The Greek root “graph” means write. “Autograph” means…", "your own signature", ["a kind of map", "a print of a leaf", "a pen"], "Auto = self, graph = write."],
+  ["The Latin root “dict” means say. “Predict” means…", "say before it happens", ["say again", "not say", "say loudly"], "Pre = before."],
+  ["The root “spect” means look. “Spectator” means…", "a person who watches", ["a person who sings", "a person who builds", "a person who cooks"], "Spect means look."],
+  ["Which analogy is correct? hot : cold :: tall : ___", "short", ["big", "warm", "high"], "Hot and cold are opposites."],
+  ["Which analogy is correct? author : book :: composer : ___", "song", ["paint", "chair", "movie"], "A composer creates music."],
+  ["“The cheetah’s speed is remarkable.” Which word means about the same as remarkable?", "extraordinary", ["ordinary", "hidden", "gentle"], "Remarkable means worthy of notice."],
+  ["Which word best fits a science report? “The ___ evaporated from the puddle.”", "water", ["jealousy", "song", "idea"], "Evaporation involves liquid."],
+  ["“Bacteria are microscopic.” Microscopic means…", "too small to see without a microscope", ["very loud", "very far", "very bright"], "The root micro means small."],
+  ["“The ambassador was gracious.” Gracious means…", "polite and kind", ["rude", "late", "shy"], "Gracious means courteous."],
+  ["“Her answer was ambiguous.” Ambiguous means…", "unclear, with more than one meaning", ["very loud", "very clear", "very short"], "An ambiguous answer is hard to pin down.", true],
+  ["“The athlete’s resilience impressed us.” Resilience means…", "the ability to recover", ["a kind of shoe", "loud cheering", "a record"], "Resilient people bounce back.", true],
+  ["Which word is closest to “mention briefly”?", "allude", ["dictate", "construct", "ignore"], "To allude is to refer in passing.", true],
+  ["“The report was concise.” Concise means…", "brief but complete", ["long and boring", "full of errors", "secret"], "Concise means short and clear.", true],
+  ["“The villagers were wary of the stranger.” Wary means…", "careful and suspicious", ["happy", "bored", "sleepy"], "Wary means cautious.", true],
+  ["Which sentence uses a figure of speech?", "The classroom was a zoo.", ["The class had a zoo trip.", "The zoo was big.", "I like the zoo."], "A metaphor compares without like or as.", true],
+  ["Which words are synonyms with different shades of meaning?", "chilly and freezing", ["hot and cold", "up and down", "fast and quick"], "Both are cold but one is stronger.", true],
+  ["Which dictionary entry fits “The bank of the river”? Bank 1: a place for money. Bank 2: the land beside a river.", "Bank 2", ["Bank 1", "neither", "both"], "Use context to choose the meaning.", true],
+];
+
+const WRITING: Q[] = [
+  ["Which sentence introduces a report on coral reefs for classmates?", "Coral reefs are underwater communities that protect shores and shelter thousands of species.", ["Reefs are somewhere.", "I saw a fish.", "Water is deep."], "A clear introduction names the topic for the audience."],
+  ["Which fact best develops a report on how volcanoes form?", "Magma pushes up through cracks in Earth’s crust.", ["Volcano is a word.", "Some mountains are tall.", "Lava is in a movie."], "Choose relevant, concrete details."],
+  ["Which organization strategy fits a report on how cats and dogs differ?", "comparison and contrast", ["order of size", "alphabetical order", "random order"], "Compare and contrast shows likenesses and differences."],
+  ["Which strategy best organizes a report on why bridges collapse?", "cause and effect", ["classification", "definition only", "chronology only"], "Cause and effect explains why."],
+  ["Which transition shows contrast?", "in contrast", ["for example", "therefore", "similarly"], "In contrast signals a difference."],
+  ["Which transition shows a result?", "as a result", ["on the other hand", "for instance", "in contrast"], "As a result shows an effect."],
+  ["Which sentence is an argument’s claim?", "Schools should start later in the morning.", ["Schools open at eight.", "Buses are yellow.", "Mornings are bright."], "A claim takes a position."],
+  ["Which evidence best supports “Later start times help students learn”?", "A study found students at later-start schools scored higher on tests.", ["Mornings are early.", "My bus is blue.", "Some kids like cereal."], "Use credible, relevant evidence."],
+  ["Which is the most credible source for a claim about sleep and health?", "a medical journal article", ["an anonymous blog", "a friend’s text", "a cartoon"], "Credible sources are reliable."],
+  ["Which sentence acknowledges an opposing view?", "Some argue later starts would end sports practice too late, but schedules can adjust.", ["Everybody agrees.", "No one disagrees.", "Opposing views are boring."], "Address a different view."],
+  ["Which words clarify the relationship between a claim and a reason?", "because, since, therefore", ["red, green, blue", "run, hop, skip", "first, last"], "They link reasons to claims."],
+  ["Which conclusion supports an argument well?", "For these reasons, our school should move to a later start time.", ["The bell is loud.", "Time is a word.", "School has desks."], "A conclusion restates the claim."],
+  ["Which sentence engages the reader at the start of a narrative?", "The map was missing, the sun was setting, and Mia was a long way from camp.", ["Mia had a map.", "The sun is a star.", "Camp is outdoors."], "Establish a context and engage the reader."],
+  ["Which sentence uses dialogue to reveal a character?", "“I’m not scared,” Leo said, but his voice cracked.", ["Leo spoke.", "Leo had a voice.", "The room was big."], "Dialogue and details reveal feeling."],
+  ["Which technique slows down an important moment in a story?", "describing each sound and movement in detail", ["skipping the scene", "using only one word", "repeating the title"], "Pacing shapes tension."],
+  ["Which transition signals a shift in time?", "Hours later", ["For instance", "In conclusion", "As a result"], "Hours later moves forward."],
+  ["Which sentence varies sentence patterns for style?", "Thunder rolled. As the first drops fell, we sprinted for the porch, laughing.", ["Thunder rolled. Rain fell. We ran. We laughed.", "Thunder rolled and rain fell and we ran and we laughed.", "Thunder. Rain. Run."], "Mix short and long sentences."],
+  ["Which word choice is more precise? “The wind ___ through the trees.”", "whistled", ["went", "was", "did"], "Whistled shows sound.", true],
+  ["Which sentence uses domain-specific vocabulary correctly in a science report?", "Photosynthesis lets plants turn sunlight into food.", ["Plants do sun things.", "Photosynthesis is a song.", "Plants like to sit."], "Use subject words accurately.", true],
+  ["Which sentence supports a claim with credible sources named?", "According to the National Weather Service, hurricanes are becoming wetter.", ["I heard it somewhere.", "Hurricanes are wet.", "People say so."], "Name the source.", true],
+  ["Which sentence adds analysis to a fact?", "Because the reef is shrinking, fewer fish have places to live.", ["The reef is shrinking.", "Fish live in oceans.", "Reefs have names."], "Analysis explains what a fact means.", true],
+  ["Which graphic would best support a report on rainfall by month?", "a bar graph of rainfall by month", ["a drawing of a dog", "a map of a mall", "a photo of a cake"], "Match the visual to the data.", true],
+  ["Which sentence is a stronger claim?", "Our town must plant 100 trees to reduce summer heat.", ["Trees are good, maybe.", "Some people like trees.", "Trees exist."], "A strong claim is specific.", true],
+  ["Which sentence avoids relying on only personal opinion?", "Studies show that students who read daily improve vocabulary.", ["I feel reading is good.", "Everyone just knows it.", "My brother says so."], "Support claims with evidence.", true],
+  ["Which sentence uses a comparison to explain?", "Like a thermostat, the body works to keep its temperature steady.", ["The body is a body.", "Thermostats have dials.", "Temperature is a word."], "Comparisons clarify.", true],
+];
+
+const PROVE: Q[] = [
+  ["Which quote best supports the idea that the storm was fierce? Text: “The wind tore shingles from roofs and flung trash cans down the street.”", "“tore shingles from roofs and flung trash cans”", ["“the wind”", "“the street”", "“a storm came”"], "Choose the strongest evidence."],
+  ["Text: “The city introduced bike lanes in 2015. By 2020, bike commuters had tripled.” How does the text elaborate the idea of bike lanes?", "it gives a result after the lanes were added", ["it lists bike brands", "it names the mayor", "it describes weather"], "Look at how the idea is developed."],
+  ["Text: “The experiment began with a hypothesis, followed by tests, and ended with a conclusion.” How is the idea introduced?", "as a series of steps", ["as a joke", "as a poem", "as a map"], "The text lists the sequence."],
+  ["Plot: Kira loses a race, trains hard and wins the next year. How does Kira respond to the challenge?", "she works to improve", ["she quits", "she hides", "she blames others"], "Her response drives the plot."],
+  ["Text: “At first Dev thought the old house was creepy. After he met its owner, he saw it as cozy.” How does Dev change?", "he becomes friendlier toward the house", ["he becomes afraid", "he forgets it", "he moves away"], "Compare before and after."],
+  ["Text: “The boy gripped the rail, took a breath and stepped onto the dock.” What can you infer?", "he is nervous but brave", ["he is asleep", "he is bored", "he is angry"], "Gripping and breathing suggest nerves."],
+  ["Text: “The villagers rebuilt the bridge again and again after each flood.” What can you conclude?", "they are determined", ["they dislike bridges", "they are careless", "they forgot the flood"], "Repeated rebuilding shows determination."],
+  ["Which statement is an inference supported by the text? “The field was empty and the farmer wore a worried frown.”", "The crops may have failed.", ["The farmer likes empty fields.", "It is a holiday.", "The farmer is a baker."], "Use clues from the text."],
+  ["Which detail shows how an idea is illustrated? “Wolves help forests. For example, by hunting elk, they let young trees grow.”", "the example about elk and young trees", ["the word wolves", "the word forests", "the word help"], "Examples illustrate."],
+  ["Which sentence is a summary, not an opinion? “Penguins live in cold places. They huddle for warmth. Chicks stay near their parents.”", "Penguins have ways of surviving in the cold.", ["Penguins are the cutest.", "Cold places are boring.", "I would visit penguins."], "A summary states the key ideas objectively."],
+  ["Text: “Industry grew quickly. Factories filled the city with smoke, and rivers turned gray.” What is the author’s point about industry?", "it caused pollution", ["it made music", "it ended winter", "it stopped rivers"], "Details support the point."],
+  ["Two authors write about wolves. One calls them “dangerous predators.” The other calls them “vital to forests.” How do they differ?", "one stresses danger, the other benefits", ["they agree", "they discuss ducks", "one is a poem"], "Compare the angle."],
+  ["Which pair shows how two texts present the same event differently? A news report vs. a diary entry", "facts reported vs. personal feelings", ["both are poems", "both are recipes", "both are maps"], "Types of text differ in approach."],
+  ["Text: “Despite rain, the fans cheered. The team had waited decades for this day.” Which words suggest the fans’ feelings?", "“cheered” and “waited decades”", ["“rain”", "“team”", "“day”"], "Pick words that show feeling."],
+  ["Which line best shows the theme of perseverance? ", "“Though she fell twice, she stood up and finished the course.”", ["“She wore green shoes.”", "“The course was long.”", "“It was a sunny day.”"], "Theme is shown through actions."],
+  ["Plot: Mia loses her key, searches her room, calls her friend and finds it in her coat. Which event is the climax?", "finding the key", ["losing the key", "searching her room", "calling her friend"], "The climax is the turning point."],
+  ["Text: “Sound travels in waves. Louder sounds have larger waves.” What is the central idea?", "the size of a sound wave relates to loudness", ["waves are blue", "sound is silent", "waves are small"], "The central idea summarizes."],
+  ["Which graphic best supports the text “Rainfall rose each month from June to October”?", "a line graph rising over those months", ["a drawing of a cloud only", "a map of Europe", "a photo of a shoe"], "Match a visual with text.", true],
+  ["Text: “He said he was fine, but he kept rubbing his ankle.” What can you infer?", "he is hurt", ["he is hungry", "he is thrilled", "he is late"], "His actions say otherwise.", true],
+  ["Text: “The mayor praised the plan but voted against it.” What can you infer?", "she had concerns", ["she loved every part", "she forgot to vote", "she left town"], "Her actions conflict with her praise.", true],
+  ["Text: “Though the scientists agreed on the problem, they disagreed on the cause.” What is the difference?", "they agree on one thing and not another", ["they agree on everything", "they never met", "they have no problem"], "Though signals a contrast.", true],
+  ["Text: “A single-use bottle takes 450 years to break down.” Which claim does this support?", "plastic waste lasts a very long time", ["bottles are blue", "recycling is a hobby", "water is wet"], "Evidence supports a claim.", true],
+  ["Text: “Ana’s mom smiled and quietly packed an extra lunch.” What can you infer about her mom?", "she is caring", ["she is angry", "she is lost", "she is bored"], "Her actions show care.", true],
+  ["Which sentence best summarizes? “The river floods each spring, leaving rich soil. Farmers plant after the water recedes. The soil gives them strong harvests.”", "Spring floods help farmers by enriching the soil.", ["Rivers are wet.", "Farmers like spring.", "Soil is brown."], "A summary names the key idea.", true],
+  ["Text: “The stranger wore a faded cap and moved quietly.” How is the character introduced?", "through details about his appearance and actions", ["through a long speech", "through a map", "through a chart"], "Look at how the author describes him.", true],
+  ["Text: “Meanwhile, back at camp, the fire began to die.” What does meanwhile show?", "events happening at the same time", ["a result", "a place", "a number"], "Meanwhile connects simultaneous events.", true],
+];
+
+export const EXTRA: Unit[] = [
+  bankUnit({
+    id: "pa-g6-new-words",
+    title: "Academic Words & Connotation",
+    emoji: "🧭",
+    blurb: "School-subject words, word parts, shades of meaning and analogies.",
+    parentNote:
+      "Pennsylvania’s Grade 6 standards ask students to acquire and use accurately academic and subject words and to gather vocabulary knowledge by looking at a word’s relationships and shades of meaning, and to interpret figurative language in context. Students tap the word or meaning that fits.",
+    standards: ["CC.1.2.6.J; CC.1.3.6.J; CC.1.2.6.K; CC.1.3.6.I; CC.1.2.6.F", "academic and subject words, word relationships and shades of meaning, word parts and figurative language"],
+    items: WORDS,
+  }),
+  bankUnit({
+    id: "pa-g6-writing-moves",
+    title: "Reports, Arguments & Stories",
+    emoji: "✏️",
+    blurb: "Pick the sentence that introduces, organizes, supports and wraps up.",
+    parentNote:
+      "Pennsylvania’s Grade 6 writing standards ask students to introduce a topic for an audience, to organize information with strategies such as comparison and cause and effect, to support a claim with clear reasons and credible evidence, and to use narrative techniques such as dialogue and pacing. Students are not asked to write here: they tap the sentence that does each job best.",
+    standards: ["CC.1.4.6.B; CC.1.4.6.C; CC.1.4.6.D; CC.1.4.6.E; CC.1.4.6.H; CC.1.4.6.I; CC.1.4.6.J; CC.1.4.6.N; CC.1.4.6.O; CC.1.4.6.P; CC.1.4.6.Q", "introducing and organizing a topic, supporting a claim with credible evidence, using narrative techniques, and varying sentences for style"],
+    items: WRITING,
+  }),
+  bankUnit({
+    id: "pa-g6-prove-it",
+    title: "Prove It",
+    emoji: "🔍",
+    blurb: "Cite the best evidence and explain how an idea or character develops.",
+    parentNote:
+      "Pennsylvania’s Grade 6 standards ask students to cite textual evidence to support analysis and inferences, to analyze how a key individual, event or idea is introduced and elaborated, and to describe how a plot unfolds and how characters respond and change. Students read a short passage and choose the answer the text supports.",
+    standards: ["CC.1.2.6.B; CC.1.2.6.C; CC.1.3.6.B; CC.1.3.6.C; CC.1.4.6.S", "citing evidence for analysis and inferences, how ideas are introduced and elaborated, how a plot unfolds and characters change"],
+    items: PROVE,
+  }),
+];

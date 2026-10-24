@@ -1,0 +1,125 @@
+import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
+
+// Pennsylvania's extra Grade 8 English language arts units (`pa-` ids): academic words, connotation and word
+// relationships, the thinking behind informative, argument and narrative writing (tapped, not written), and choosing the
+// evidence that most strongly supports a point from a short passage. The passages are original. Reading only.
+
+const WORDS: Q[] = [
+  ["Which word means “to prove something wrong”?", "refute", ["endorse", "assume", "postpone"], "To refute is to disprove."],
+  ["Which word means “to state something in a way that is not direct”?", "imply", ["announce", "shout", "erase"], "To imply is to suggest."],
+  ["“The author’s argument is cogent.” Cogent means…", "clear, logical and convincing", ["confusing", "tiny", "borrowed"], "Cogent arguments persuade."],
+  ["“The facts are substantiated by data.” Substantiated means…", "backed up with evidence", ["hidden from view", "made louder", "forgotten"], "Substantiate means support."],
+  ["Which word means “the attitude a writer takes toward a subject”?", "tone", ["plot", "rhyme", "scene"], "Tone shows attitude."],
+  ["Which word has the strongest negative connotation?", "scheming", ["planning", "organizing", "preparing"], "Scheming suggests dishonesty."],
+  ["Which connotation fits “The politician was resolute”?", "determined in a positive way", ["secretive", "foolish", "sleepy"], "Resolute is admirable."],
+  ["“The report’s technical language was dense.” Technical language is…", "words used in a specialized field", ["slang", "poetry", "jokes"], "Technical terms belong to a subject area."],
+  ["The Latin root “bene” means good. “Benefit” means…", "an advantage", ["a harm", "a rule", "a mistake"], "Bene means good."],
+  ["The Greek root “anthrop” means human. “Anthropology” studies…", "human beings", ["stars", "rocks", "birds"], "Anthrop means human."],
+  ["The Latin root “scrib/script” means write. “Manuscript” means…", "something written by hand or typed", ["a kind of glue", "a painting", "a map"], "Script means write."],
+  ["The prefix “anti-” means against. “Antibiotic” fights…", "bacteria", ["trees", "ice", "sound"], "Anti- means against."],
+  ["The prefix “mal-” means bad. “Malfunction” means…", "to work badly", ["to work well", "to stop on time", "to work twice"], "Mal- means bad."],
+  ["Which word is the best synonym for “meticulous”?", "careful", ["careless", "sleepy", "loud"], "Meticulous means very careful."],
+  ["“The orator’s rhetoric inspired the crowd.” Rhetoric is…", "the art of using words persuasively", ["a kind of map", "a loud noise", "a fact list"], "Rhetoric persuades."],
+  ["“Her demeanor was reserved.” Reserved means…", "quiet and holding back", ["very loud", "very rude", "very silly"], "A reserved person is not outgoing."],
+  ["“The article provides a balanced account.” Balanced means…", "fair to different views", ["one-sided", "very short", "very funny"], "Balanced covers both sides."],
+  ["“The novel’s allusion to Pandora’s box…” An allusion is…", "an indirect reference to something known", ["a kind of rhyme", "a long speech", "a table"], "An allusion points to another work or story."],
+  ["Which word means “to make less severe”?", "alleviate", ["worsen", "ignore", "copy"], "Alleviate means ease."],
+  ["Which word is closest to “unwilling to change one’s mind”?", "obstinate", ["flexible", "cheerful", "generous"], "Obstinate means stubborn.", true],
+  ["“The speaker’s sarcasm was biting.” Sarcasm is…", "saying the opposite to mock", ["very kind words", "a list of facts", "a short poem"], "Sarcasm is ironic mockery.", true],
+  ["Which sentence uses a word’s connotation to create a negative image?", "The crowd swarmed the stage like locusts.", ["The crowd walked to the stage.", "The crowd stood near the stage.", "The crowd sat down."], "Locusts have a negative connotation.", true],
+  ["“The treaty’s terms were onerous.” Onerous means…", "burdensome", ["welcome", "brief", "secret"], "Onerous means heavy or difficult.", true],
+  ["Which pair are antonyms?", "ephemeral and lasting", ["swift and rapid", "brief and short", "huge and vast"], "Ephemeral means lasting a short time.", true],
+  ["“The government’s policy was ambiguous.” Which context clue best defines ambiguous?", "Officials could not agree on what it meant.", ["It was printed in blue.", "It was announced on Monday.", "It was thirty pages."], "Look for clues around the word.", true],
+  ["Which word relates to “credible”?", "believable", ["breakable", "visible", "edible"], "Credible means believable.", true],
+  ["A glossary says: “inflation: a general rise in prices.” “Inflation” most likely appears in a text about…", "the economy", ["volcanoes", "poetry", "geometry"], "Prices relate to economics.", true],
+];
+
+const WRITING: Q[] = [
+  ["Which opening best focuses a report on ocean plastic?", "Every year, millions of tons of plastic enter the ocean, harming wildlife and entering the food chain.", ["Plastic is common.", "The ocean is big.", "I saw trash once."], "A focused opening names the topic and why it matters."],
+  ["Which organization best fits a report that compares two energy sources?", "comparison and contrast", ["alphabetical order", "chronology only", "random order"], "Comparison and contrast shows similarities and differences."],
+  ["Which strategy best organizes a report on how a bill becomes law?", "chronological order", ["classification", "alphabetical order", "random order"], "Steps happen in sequence."],
+  ["Which transition links two contrasting ideas?", "on the contrary", ["for instance", "in addition", "likewise"], "On the contrary shows opposition."],
+  ["Which sentence best develops the topic “honeybee decline” with a relevant fact?", "A 2019 survey reported that beekeepers lost more than 40 percent of their colonies.", ["Bees are insects.", "Honey is sweet.", "Colonies are large."], "Choose a specific, relevant fact."],
+  ["Which sentence presents a precise claim?", "Our district should replace paper handouts with tablets because they reduce waste and support learning.", ["Technology is good.", "Tablets exist.", "Paper is paper."], "A precise claim states a position and reasons."],
+  ["Which sentence distinguishes a claim from a counterclaim?", "While some claim tablets distract students, studies suggest guided use improves engagement.", ["Tablets are distracting.", "Students like tablets.", "Tablets are black."], "It names and responds to the opposing claim."],
+  ["Which evidence is most relevant to “Tablets reduce waste”?", "The district spent $12,000 less on paper after switching.", ["Tablets are shiny.", "Some students own phones.", "The school is old."], "Relevant evidence connects directly."],
+  ["Which is a fair acknowledgement of a limitation?", "Tablets cost more to start, though the savings grow over time.", ["Tablets are perfect.", "No one could object.", "Cost does not matter."], "A fair argument admits limits."],
+  ["Which sentence links a claim and a reason with a clause?", "Because paper uses trees, switching to tablets protects forests.", ["Paper. Trees. Forests.", "Trees are trees.", "Forests are forests."], "A clause shows the relationship."],
+  ["Which concluding sentence best follows from an argument?", "Given the savings and benefits, the district should adopt tablets this year.", ["Tablets are devices.", "Savings are numbers.", "Districts are places."], "A conclusion follows from the evidence."],
+  ["Which opening sets up a narrative with a problem and a point of view?", "I knew the moment I opened the envelope that nothing would ever be the same.", ["Envelopes are paper.", "Mail comes daily.", "The sky was blue."], "It engages with a narrator and problem."],
+  ["Which technique shows a character’s thoughts?", "Reflection: “Maybe I should have listened,” Ana thought.", ["A list of dates", "A table of numbers", "A footnote"], "Reflection reveals inner life."],
+  ["Which technique creates a smooth progression of events?", "using transitions such as “soon after” and “by evening”", ["repeating the same word", "jumping randomly in time", "skipping the ending"], "Transitions guide the reader."],
+  ["Which sentence conveys a concrete sensory detail?", "The kitchen smelled of cinnamon and burnt sugar.", ["The kitchen was nice.", "It was a room.", "There was food."], "Sensory details help readers imagine."],
+  ["Which style fits a formal research paper?", "Researchers have concluded that…", ["Scientists just figured out…", "So yeah, they found…", "It’s totally clear that…"], "Formal style avoids slang."],
+  ["Which sentence varies sentence patterns for effect?", "Waves crashed. Then, as the tide pulled back, the whole beach seemed to breathe.", ["Waves crashed. Tide pulled. Beach breathed.", "Waves crashed and the tide pulled and the beach breathed and we watched.", "Wave. Tide. Beach."], "Mix simple and complex sentences.", true],
+  ["Which sentence integrates a quotation correctly?", "The mayor explained, “We cannot ignore the data.”", ["The mayor explained we cannot ignore the “data.”", "Mayor “explained,” we cannot ignore the data.", "“The mayor” explained we cannot ignore the data."], "Introduce and punctuate quotations.", true],
+  ["Which sentence gives analysis after a quotation? Quote: “The river was silent.”", "The silence suggests that the river, like the town, has lost its life.", ["The quote has four words.", "The river is blue.", "Rivers are long."], "Explain what the evidence shows.", true],
+  ["Which graphic would support a claim about rising temperatures?", "a line graph of average yearly temperature", ["a photo of a hat", "a map of a mall", "a drawing of a cake"], "Match visuals to claims.", true],
+  ["Which sentence cites a source clearly?", "According to the National Oceanic and Atmospheric Administration, sea levels have risen about eight inches since 1900.", ["Some people say seas rise.", "Seas rise, I think.", "It is on the internet."], "Name the source.", true],
+  ["Which word choice is most precise? “The senator ___ the proposal.”", "denounced", ["did", "said", "had"], "Denounced shows strong criticism.", true],
+  ["Which sentence follows parallel structure?", "The club plans to read, to write and to discuss.", ["The club plans to read, writing and discuss.", "The club plans reading, to write and discussion.", "The club plans to read, write and discussion."], "Parallel structure keeps forms matching.", true],
+  ["Which sentence uses a colon correctly?", "Bring three things: a pencil, a notebook and water.", ["Bring: three things a pencil, a notebook and water.", "Bring three things a pencil: a notebook and water.", "Bring three: things a pencil, a notebook and water."], "A colon introduces a list after a complete clause.", true],
+  ["Which sentence signals a counterargument?", "Some critics argue the program costs too much.", ["Programs are lists.", "Critics are people.", "Cost is a number."], "It introduces another view.", true],
+];
+
+const PROVE: Q[] = [
+  ["Which quote most strongly supports the claim that the town values history? Text: “The library keeps every newspaper since 1890. Residents volunteer to guide tours of the old mill. The parking lot is new.”", "“Residents volunteer to guide tours of the old mill.”", ["“The parking lot is new.”", "“The library keeps…”", "“tours”"], "Choose the strongest evidence."],
+  ["Which evidence best supports the idea that the drought hurt farmers? Text: “Rain was scarce. Wells ran dry. Corn withered and many farmers sold their land.”", "“Corn withered and many farmers sold their land.”", ["“Rain was scarce.”", "“Wells ran dry.”", "“Corn.”"], "This detail shows the harm to farmers."],
+  ["Text: “The city’s growth brought jobs, but it also raised rents.” How does the text connect growth and rents?", "it shows a benefit and a drawback of growth", ["it says growth ended rents", "it ignores jobs", "it lists city names"], "Look at connections and distinctions."],
+  ["Which line shows a character’s change? “At first, Ravi hid in the back row. By June, he led the class debate.”", "“By June, he led the class debate.”", ["“At first, Ravi hid.”", "“in the back row”", "“the class”"], "Change shows in the later details."],
+  ["Which line of dialogue reveals Nora is stubborn? ", "“I don’t care what the map says, we’re going my way.”", ["“Pass the water, please.”", "“It’s getting dark.”", "“I see a bird.”"], "Dialogue can reveal traits."],
+  ["Which incident propels the action? “The lights went out. Mia felt for the door and found it locked.”", "the door being locked", ["the word Mia", "the color of the door", "the weather"], "It creates the next problem."],
+  ["Text: “The author lists three studies, then admits one had a small sample.” What does the admission suggest?", "the author is being honest about limits", ["the author is hiding facts", "the author is silly", "the studies are fiction"], "Acknowledging limits builds trust."],
+  ["Which statement is an inference supported by the text? “Ming kept checking her phone and tapping her foot.”", "She is anxious or impatient.", ["She is asleep.", "She lost her phone.", "She is full."], "Actions suggest feelings."],
+  ["Text: “Despite their differences, the two leaders signed the agreement.” Which connection does the text show?", "contrast between differences and agreement", ["cause and effect", "chronology only", "description only"], "Despite signals contrast."],
+  ["Which sentence best summarizes? “Sloths move slowly to save energy. They eat low-calorie leaves. Their fur grows algae that helps them hide.”", "Sloths have traits that help them survive on little energy.", ["Sloths are cute.", "Algae are green.", "Leaves fall."], "A summary captures the main idea."],
+  ["Which text feature strengthens a report on climate? ", "a chart of yearly temperature", ["a recipe", "a cartoon pirate", "a game board"], "Data features support evidence."],
+  ["Text: “The mayor praised the volunteers, though she cut their funding.” What does the author highlight?", "an inconsistency in the mayor’s actions", ["the mayor’s favorite food", "the town’s age", "a new road"], "Notice the conflict between words and actions."],
+  ["Two accounts of the same event differ: one calls the crowd “unruly,” the other calls it “passionate.” What does this show?", "word choice can reveal each writer’s view", ["the event never happened", "both are maps", "the crowd was silent"], "Connotation shows viewpoint."],
+  ["Which detail best supports the claim “The winter was harsh”? ", "Temperatures stayed below zero for two weeks and pipes froze.", ["The winter had snow.", "It was January.", "Coats were warm."], "Choose specific, strong evidence."],
+  ["Text: “The senator’s critics say the bill is too costly; supporters say it saves lives.” What are the connections and distinctions?", "two groups differ on cost versus lives saved", ["both groups agree", "neither group speaks", "the bill is a poem"], "Analyze the contrast."],
+  ["Which character’s response shows courage? “The firefighter shook, but she climbed the ladder anyway.”", "climbing despite shaking", ["shaking", "the ladder", "the firefighter"], "Courage is acting despite fear."],
+  ["Text: “Though the evidence was thin, the committee approved the plan.” What can you infer about the committee?", "it acted without strong proof", ["it was thorough", "it rejected the plan", "it studied for years"], "Though shows contrast.", true],
+  ["Which quote best supports the claim that Elena is generous? Text: “Elena gave her lunch to a classmate. She wore blue shoes. She sat near the window.”", "“Elena gave her lunch to a classmate.”", ["“She wore blue shoes.”", "“She sat near the window.”", "“Elena”"], "Select the strongest evidence.", true],
+  ["Text: “After the policy changed, test scores rose 12 percent.” Which words are most careful about cause?", "Scores rose after the policy changed, but other factors may matter.", ["The policy certainly caused it.", "Scores always rise.", "Policies never matter."], "Careful analysis avoids overclaiming.", true],
+  ["Text: “Harlan stuffed the letter in his pocket and avoided his friend’s eyes.” What does this incident reveal?", "he is hiding something", ["he is happy", "he is sleepy", "he is lost"], "Actions reveal concealment.", true],
+  ["Which statement best describes how the author builds a claim? “First, an expert is quoted. Then, a chart is explained. Last, a conclusion is stated.”", "with evidence in a logical order", ["with jokes", "with random facts", "with no support"], "Look at structure.", true],
+  ["Text: “Where others saw a vacant lot, Imani saw a garden.” What does this contrast reveal?", "Imani imagines possibilities", ["Imani dislikes gardens", "the lot is crowded", "others are gardeners"], "Contrast reveals character.", true],
+  ["Which pair of sentences shows a connection between two ideas? “Plastic never fully decays. It builds up in oceans.”", "the first helps explain the second", ["they are unrelated", "they are jokes", "they contradict"], "The ideas connect through cause.", true],
+  ["Text: “Her advice was clear: practice slowly, then speed up.” What strategy does the author suggest?", "build speed gradually", ["avoid practice", "start fast", "skip steps"], "Use the text’s exact advice.", true],
+  ["Text: “His laugh was loud, but his eyes stayed worried.” What does the contrast show?", "his cheer is not fully real", ["he is sleepy", "he is cold", "he is tall"], "Contrast reveals hidden feelings.", true],
+];
+
+export const EXTRA: Unit[] = [
+  bankUnit({
+    id: "pa-g8-new-words",
+    title: "Academic Words & Connotation",
+    emoji: "🧭",
+    blurb: "Words used across subjects, connotation, word parts and allusion.",
+    parentNote:
+      "Pennsylvania’s Grade 8 standards ask students to acquire and use accurately academic and subject words, to gather vocabulary knowledge from a word’s relationships, and to analyze the influence of the words and phrases in a text, including figurative, connotative and technical meanings. Students tap the word or meaning that fits.",
+    standards: ["CC.1.2.8.J; CC.1.3.8.J; CC.1.2.8.K; CC.1.3.8.I; CC.1.2.8.F", "academic and subject words, connotation and technical meaning, and word parts"],
+    items: WORDS,
+  }),
+  bankUnit({
+    id: "pa-g8-writing-moves",
+    title: "Reports, Arguments & Stories",
+    emoji: "✏️",
+    blurb: "Pick the sentence that focuses, organizes, supports and concludes.",
+    parentNote:
+      "Pennsylvania’s Grade 8 writing standards ask students to introduce a focused topic, to organize information with strategies such as comparison, to support a precise claim with relevant evidence while distinguishing it from counterclaims, and to use narrative techniques. Students are not asked to write here: they tap the sentence that does each job best.",
+    standards: ["CC.1.4.8.B; CC.1.4.8.C; CC.1.4.8.D; CC.1.4.8.E; CC.1.4.8.H; CC.1.4.8.I; CC.1.4.8.J; CC.1.4.8.N; CC.1.4.8.O; CC.1.4.8.P; CC.1.4.8.Q", "focusing and organizing a topic, supporting a precise claim against counterclaims, using narrative techniques, and style"],
+    items: WRITING,
+  }),
+  bankUnit({
+    id: "pa-g8-prove-it",
+    title: "Prove It",
+    emoji: "🔍",
+    blurb: "Choose the evidence that most strongly supports a point.",
+    parentNote:
+      "Pennsylvania’s Grade 8 standards ask students to cite the textual evidence that most strongly supports an analysis, to analyze how a text makes connections among and distinctions between individuals, ideas or events, and to analyze how lines of dialogue or incidents propel the action or reveal character. Students read a short passage and choose the answer the text supports.",
+    standards: ["CC.1.2.8.B; CC.1.2.8.C; CC.1.3.8.B; CC.1.3.8.C; CC.1.4.8.S", "choosing the strongest evidence, analyzing connections and distinctions, how dialogue and incidents reveal character, and drawing evidence from a text"],
+    items: PROVE,
+  }),
+];

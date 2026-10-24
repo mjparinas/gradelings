@@ -11,6 +11,8 @@ export const EMAIL_KINDS = {
   "trial-ending": "Trial ending",
   weekly: "Weekly report",
   reminder: "Practice reminder",
+  "year-review": "Year in review",
+  "class-digest": "Monday class email",
   "class-inactive": "Class inactivity warning",
   "class-invite": "Co-teacher invitation",
   consent: "US parental consent",

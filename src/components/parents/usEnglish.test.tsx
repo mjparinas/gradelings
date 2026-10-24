@@ -32,6 +32,7 @@ import { ReportCardsPage } from "./ReportCards";
 import { ReportsPage } from "./Reports";
 import { SettingsPage } from "./Settings";
 import { SubscriptionPage } from "./Subscription";
+import { YearReviewPage } from "./YearReview";
 
 const DAY = 86_400_000;
 const kid: Profile = { id: "a", name: "Ava", avatar: "ollie", colour: "#fff", grade: "4", framework: "us-wa", createdAt: 1, updatedAt: 1 };
@@ -83,6 +84,7 @@ describe("the parent area for a US family", () => {
   it("Report cards", () => expectUs(<ReportCardsPage childId="a" />));
   it("Conference sheet", () => expectUs(<ConferenceSheet childId="a" />));
   it("Placement", () => expectUs(<PlacementPage childId="a" />));
+  it("Year in review", () => expectUs(<YearReviewPage childId="a" />));
   it("Children", () => expectUs(<ChildrenPage />));
   it("Editing a child", async () => {
     await expectUs(<ChildrenPage />, [/Edit/]);

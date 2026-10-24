@@ -157,4 +157,34 @@ export const lessons: GradeLessons = {
     ["Can you check it?", "Boring is a feeling."],
     "Fish are boring.",
   ),
+  "language/pa-gk-authors-and-illustrators": lesson(
+    ["The author writes the words in a book.", "The illustrator draws the pictures.", "The title is on the cover. It names the book."],
+    "Who draws the pictures in a book?",
+    ["The author writes the words.", "The illustrator makes the pictures."],
+    "the illustrator",
+  ),
+  "language/pa-gk-facts-and-opinions": lesson(
+    ["A fact can be checked. A cat has whiskers.", "An opinion is what someone thinks. Cats are cute.", "Clue words like best and prettiest show opinions."],
+    "Which is an opinion? Fish live in water. Fish are boring.",
+    ["Can you check it?", "Boring is a feeling."],
+    "Fish are boring.",
+  ),
+  "language/pa-gk-new-words": lesson(
+    ["Some words tell us what things are called. Some tell us what we do.", "Look at the picture. Think about what the word means.", "Say the word out loud. Does it fit?"],
+    "A cat has fur and says meow. Which word names the animal?",
+    ["Think about the picture.", "The animal is a cat."],
+    "cat",
+  ),
+  "language/pa-gk-reasons-and-order": lesson(
+    ["First, next and last tell us the order.", "Because tells us why something happens.", "Pick the answer that goes with the story."],
+    "We plant a seed. Next we water it. What do we do first?",
+    ["First comes before next.", "We plant the seed first."],
+    "plant the seed",
+  ),
+  "language/pa-gk-prove-it": lesson(
+    ["Listen to the story. The story has the answer.", "Look for the words in the story that tell you.", "Pick the answer that matches the story."],
+    "Sam has a red hat. What kind of hat does Sam have?",
+    ["Listen for the word that tells about the hat.", "The story says red."],
+    "red",
+  ),
 };

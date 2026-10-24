@@ -459,6 +459,11 @@ const PARENT_COLUMNS: [string, string][] = [
   ["email_bounced_at", "INTEGER"],
   // The teacher's classes they have hidden from their own class list (comma-separated class ids).
   ["hidden_classes", "TEXT"],
+  // The school year (2025 for 2025-26) whose June year-in-review email was sent (src/lib/yearReview.ts).
+  ["year_review_year", "INTEGER"],
+  // The teacher's Monday class email (opt-in, from the teacher area), and when the last one went.
+  ["class_digest", "INTEGER NOT NULL DEFAULT 0"],
+  ["last_class_digest_at", "INTEGER"],
   // Two-step sign-in with an authenticator app (src/server/twoFactor.ts). The secret is encrypted when TWO_FACTOR_KEY is set.
   // `totp_pending` is a secret shown during setup and not yet confirmed; `totp_last_step` stops a code being used twice.
   ["totp_secret", "TEXT"],

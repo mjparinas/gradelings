@@ -1,0 +1,125 @@
+import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
+
+// Pennsylvania's extra Grade 4 English language arts units (`pa-` ids): precise and academic words, the thinking behind
+// informative, opinion and narrative writing (tapped, not written), and answering questions with evidence from a short
+// passage. The passages are original. Reading only.
+
+const WORDS: Q[] = [
+  ["Which word is more precise than “walked” for moving very slowly and quietly?", "tiptoed", ["went", "moved", "was"], "Tiptoed tells exactly how."],
+  ["Which word shows a stronger emotion than “upset”?", "furious", ["bothered", "puzzled", "tired"], "Furious means extremely angry."],
+  ["Which word names a state of being, not an action?", "exhausted", ["leaped", "twirled", "tossed"], "Exhausted describes how someone is."],
+  ["Which word means “to say something is true without proof”?", "claim", ["whisper", "borrow", "polish"], "To claim is to state something."],
+  ["“The scientist formed a hypothesis.” A hypothesis is…", "an idea that can be tested", ["a kind of rock", "a tool", "a final answer"], "Scientists test ideas."],
+  ["“The author described the setting in great detail.” Setting means…", "where and when a story happens", ["the main character", "the ending", "the title"], "Setting is the place and time."],
+  ["Which word fits the math sentence? “The ___ of 12 and 3 is 4.”", "quotient", ["sum", "product", "difference"], "Quotient is the answer to division."],
+  ["“The citizens voted.” Citizens are…", "people who belong to a place", ["animals in a forest", "kinds of laws", "tools for maps"], "Citizens live in a community."],
+  ["“Heat energy is transferred from a stove to a pot.” Transferred means…", "moved from one place to another", ["kept in one place", "thrown away", "made smaller"], "Transfer means move."],
+  ["Which pair shows a word and its meaning from context? “The path was treacherous, full of slippery rocks and steep drops.”", "treacherous: dangerous", ["treacherous: flat", "treacherous: short", "treacherous: shady"], "Slippery rocks and drops are dangerous."],
+  ["“The diplomat was tactful.” Tactful means…", "careful not to upset others", ["very loud", "always late", "rich"], "A tactful person is careful with words."],
+  ["The word “transport” has the root port. Port means…", "carry", ["see", "write", "break"], "Transport means to carry across."],
+  ["The root “aud” means hear. An “audience” is…", "people who listen", ["people who run", "a kind of food", "a kind of tree"], "Aud connects to hearing."],
+  ["The prefix “mis-” means wrong. “Misspell” means…", "spell wrongly", ["spell twice", "spell again", "not spell"], "Mis- means wrongly."],
+  ["Which word signals a precise action?", "sprinted", ["did", "got", "went"], "Sprinted tells exactly how someone ran."],
+  ["Which word signals an emotion?", "thrilled", ["steady", "folded", "narrow"], "Thrilled is a feeling."],
+  ["“The explorers traveled across the arid land.” Arid means…", "very dry", ["very wet", "very cold", "very green"], "Arid land has little rain."],
+  ["“The recipe is simple, yet delicious.” Yet shows…", "an unexpected contrast", ["a time", "a place", "a number"], "Yet is like but."],
+  ["Which word goes with “evidence”?", "support", ["whisper", "slide", "bake"], "Evidence supports a claim."],
+  ["“Frequent visits to the library improved Ana’s reading.” Frequent means…", "happening often", ["happening once", "happening never", "happening far away"], "Frequent means often."],
+  ["Which word means the opposite of “expand”?", "shrink", ["grow", "stretch", "widen"], "Expand means grow bigger."],
+  ["Which is the best word? “The hungry lion ___ toward the zebra.”", "stalked", ["moved", "was", "did"], "Stalked shows hunting.", true],
+  ["“The meeting was brief.” Brief means…", "short", ["loud", "long", "late"], "Brief means short.", true],
+  ["“The judge was impartial.” Impartial means…", "fair to both sides", ["angry", "late", "playful"], "Impartial means not taking sides.", true],
+  ["Which pair is a word and a related word with the same root? “form”", "formation", ["fortune", "farm", "fern"], "Formation comes from form.", true],
+  ["“Her demeanor was calm.” Demeanor means…", "the way a person acts", ["a kind of dress", "a type of weather", "a song"], "Demeanor is behavior.", true],
+];
+
+const WRITING: Q[] = [
+  ["Which sentence introduces the topic clearly for a report on hurricanes?", "Hurricanes are powerful storms that form over warm ocean water.", ["Storms are things.", "I saw rain once.", "Water is wet."], "A clear introduction names the topic."],
+  ["Which fact belongs in a report on hurricanes?", "A hurricane’s winds blow at least 74 miles per hour.", ["Cats like to nap.", "Pizza has cheese.", "A bike has two wheels."], "Pick a fact on the topic."],
+  ["Which would be the best quotation in a report about astronauts?", "“We could see the whole Earth from space,” said one astronaut.", ["“I like cake,” said Dan.", "“It is a bus,” said Lin.", "“Today is Monday,” said Mia."], "Use a quotation that fits."],
+  ["How should a writer group ideas in a report on whales?", "put facts about food together and facts about size together", ["mix every fact in any order", "put each fact on its own page", "list facts by length"], "Group related information."],
+  ["Which linking word connects a fact to an example?", "for instance", ["blue", "under", "silent"], "For instance introduces an example."],
+  ["Which sentence is a strong concluding statement for a report on honey bees?", "Without honey bees, many of the foods we enjoy would disappear.", ["Bees are insects.", "Hives are made of wax.", "Bees can fly."], "A conclusion sums up the importance."],
+  ["Which is the most precise language for a report on volcanoes?", "magma rises through a vent and erupts as lava", ["hot stuff comes out", "the mountain does things", "it goes boom"], "Use precise, subject words."],
+  ["Which sentence states an opinion?", "Every school should offer music classes.", ["Music classes meet on Fridays.", "Drums are loud.", "Violins have four strings."], "An opinion tells what a writer thinks should be."],
+  ["Which reason is supported by facts and details?", "Students who play instruments often score higher on listening tests, according to a study.", ["Music is nice.", "My cousin plays drums.", "I like songs."], "Strong reasons use facts."],
+  ["Which order best organizes an opinion piece?", "opinion, reasons grouped in order, then a concluding statement", ["conclusion, then opinion, then a joke", "reasons, then a title, then a list", "a joke, then facts, then an opinion"], "Plan a logical order."],
+  ["Which sentence orients the reader at the start of a story?", "On a windy autumn afternoon, twins Ivy and Omar set out to find their runaway kite.", ["Kites are toys.", "Autumn is a season.", "Twins are two people."], "Set the situation and characters."],
+  ["Which sentence uses sensory details?", "The warm bread smelled sweet and crackled as Mom cut it.", ["The bread was bread.", "We ate.", "Bread is food."], "Sensory details show what we see, hear, smell, taste or feel."],
+  ["Which sentence uses dialogue to show a character’s feelings?", "“I can’t believe we won!” Tanya shouted, jumping up and down.", ["Tanya was in a game.", "The game ended.", "There were players."], "Dialogue and action show feelings."],
+  ["Which transition shows a change in time in a story?", "Later that evening", ["For example", "In conclusion", "On the other hand"], "Later that evening moves time forward."],
+  ["Which transition shows an example?", "For example", ["Meanwhile", "Suddenly", "Later"], "For example introduces an example."],
+  ["Which transition signals a contrast?", "On the other hand", ["For instance", "In addition", "First"], "It shows a different side."],
+  ["Which sentence gives a conclusion to a story about overcoming fear?", "By the end of the summer, Leo was no longer afraid to dive.", ["Leo had a towel.", "The pool was blue.", "There was a lifeguard."], "A conclusion shows the outcome."],
+  ["Which phrase conveys the idea more precisely?", "a tiny, shimmering minnow", ["a thing in the water", "a fish that is somewhere", "an animal"], "Precise words help readers picture it.", true],
+  ["Which word choice is more precise? “The builder ___ the wall.”", "constructed", ["made it be", "got", "did"], "Constructed is exact.", true],
+  ["A writer wants to describe how a character walks into a room scared. Which fits?", "crept", ["marched", "bounced", "pranced"], "Crept shows fear.", true],
+  ["Which sentence adds an illustration idea to a report on the water cycle?", "A diagram shows how water moves from the ocean to the clouds and back as rain.", ["Water is a liquid.", "Clouds are white.", "Rain is wet."], "Describe a helpful visual.", true],
+  ["Which opinion statement is clearest?", "In my opinion, the town should plant more trees on Main Street.", ["Trees.", "Maybe trees, maybe not.", "Some trees are tall."], "State the opinion clearly.", true],
+  ["Which sentence reasons from a source? Source: “Trees cool streets by up to 10 degrees.”", "According to the article, trees can cool streets by as much as 10 degrees.", ["Trees are nice.", "I like shade.", "Streets are long."], "Cite your source.", true],
+  ["A story gives two events: Kim spilled juice. Then she mopped it up. What transition best joins them?", "Right away", ["For example", "In summary", "However"], "It shows she acted quickly.", true],
+  ["Which sentence shows paragraphs linked with a word or phrase?", "Another reason is that exercise helps students focus.", ["Exercise.", "Focus is a word.", "Students are in a class."], "Another reason links ideas.", true],
+];
+
+const PROVE: Q[] = [
+  ["Passage: “Whales are mammals. They breathe air through a blowhole on top of their heads.” How do whales breathe?", "through a blowhole", ["through gills", "through their tails", "through their fins"], "Refer to the details."],
+  ["Passage: “The glacier moved only an inch a day, but over years it carved a deep valley.” What can you tell from the text?", "slow movement can change land over time", ["glaciers are fast", "valleys are small", "inches are long"], "The text explains what happened and why."],
+  ["Passage: “The town’s river flooded after weeks of heavy rain, so families moved to higher ground.” What happened and why?", "families moved because the river flooded", ["rain stopped because the river rose", "families built boats for fun", "the rain came after the flood"], "Use what happened and why."],
+  ["Passage: “Maya’s hands trembled as she opened the letter. She read it twice, then smiled.” What can you infer?", "the letter had good news", ["the letter was blank", "Maya was sleepy", "Maya was lost"], "She smiled after reading."],
+  ["Which detail from the text best supports the idea that the desert is harsh? Text: “Days are scorching, nights are freezing, and rain is rare.”", "Days are scorching, nights are freezing, and rain is rare.", ["The desert has sand.", "Some animals live there.", "People visit."], "Pick evidence that matches."],
+  ["Passage: “Mr. Cruz grinned, tipped his hat and whistled all the way home.” What kind of mood is he in?", "cheerful", ["worried", "bored", "angry"], "Grinning and whistling show cheer."],
+  ["Passage: “The old barn creaked in the wind. A shutter banged. Ellie held her breath.” How does Ellie feel?", "afraid", ["silly", "proud", "sleepy"], "She holds her breath at spooky sounds."],
+  ["Passage: “Jasper wanted a dog. He did chores, saved coins and asked politely.” What does Jasper’s behavior show?", "he works hard for what he wants", ["he gives up easily", "he is lazy", "he does not care"], "Describe the character using details."],
+  ["Passage: “Ivy used her allowance to buy seeds. She planted rows of beans, watched them sprout and gave baskets to neighbors.” What was the result of her work?", "she gave beans to neighbors", ["she lost the seeds", "the beans never grew", "she moved away"], "Look at what happened."],
+  ["Passage: “First, ice melts in spring. Next, water fills the stream. Then the stream flows to the sea.” What is the order?", "melting, filling the stream, flowing to the sea", ["flowing, melting, filling", "filling, flowing, melting", "melting, flowing, filling"], "Follow the time words."],
+  ["Passage: “A volcano erupts when pressure builds up under the ground.” What causes an eruption?", "pressure building up", ["rain", "wind", "snow"], "The text gives the cause."],
+  ["Which is a main idea? “Bees dance to show where flowers are. They share the news with the hive. This helps the hive gather food.”", "Bees use dance to share information", ["Flowers are red", "Hives are made of wax", "Bees sleep at night"], "The details support this idea."],
+  ["Which summary is best? “A fox sneaked into a coop and found it empty. Next, it searched the barn and found hens asleep. It crept closer, but a dog barked and the fox ran away.”", "A fox looked for food but was scared away by a dog.", ["A fox owned a coop.", "Dogs are friends of hens.", "A barn is red."], "A summary gives main events."],
+  ["Passage: “Writers use first-person to tell a story as ‘I.’” What word signals first-person?", "I", ["they", "he", "she"], "First-person uses I."],
+  ["Passage A says a fort is “a safe place for kids.” Passage B says it is “a dusty old shed.” How do they differ?", "they describe the fort from different points of view", ["they describe different towns", "they are both songs", "they are both maps"], "Compare how each describes it."],
+  ["Text: “Bats use echoes to find food in the dark.” What can you infer about bats?", "they can find food without sight", ["they cannot hear", "they eat in daylight only", "they live in water"], "Echoes help them locate food."],
+  ["A diagram shows a plant with arrows from roots to leaves. What does it explain?", "how water moves through a plant", ["how birds fly", "why seasons change", "how rocks form"], "The arrows show movement."],
+  ["A timeline shows: 1969 first moon landing; 1981 first space shuttle flight. Which happened first?", "the moon landing", ["the shuttle flight", "they happened together", "the timeline does not say"], "Compare the years.", true],
+  ["Text: “The path split at an old oak. Zara chose the left fork because it had fresh footprints.” Why did Zara choose it?", "it had fresh footprints", ["it was shorter", "the oak told her", "it was sunny"], "The text gives the reason.", true],
+  ["Passage: “The class built a bridge from toothpicks. It collapsed twice. They added triangles. It held.” What can you conclude?", "triangles made the bridge stronger", ["toothpicks are heavy", "bridges never hold", "the class gave up"], "The change led to success.", true],
+  ["Two texts describe a storm. One is a weather report. One is a diary of a person in the storm. How might they differ?", "the diary shows personal feelings", ["the report is a poem", "the diary has a forecast map", "they cannot describe the same storm"], "A diary shares personal experience.", true],
+  ["Text: “Honeybees collect nectar. Back at the hive, they turn it into honey.” Which sentence tells why bees collect nectar?", "to make honey", ["to find shade", "to build a nest of mud", "to scare birds"], "The text tells what nectar becomes.", true],
+  ["Text: “Lena stayed late to fix the poster, though her friends had left.” Which word describes Lena?", "dedicated", ["careless", "forgetful", "bored"], "She stays to finish.", true],
+  ["Text: “Though the climb was steep, the hikers kept going.” What does though show?", "a contrast between steep and kept going", ["a time", "a place", "a sound"], "Though signals contrast.", true],
+  ["Text: “The map shows a trail from the lake to the cabin.” Which question can the map answer?", "How do you get from the lake to the cabin?", ["Who lives in the cabin?", "How old is the lake?", "What is for dinner?"], "Use the map’s information.", true],
+  ["Text: “After the town planted gardens, fewer lots stayed empty.” What can you infer?", "the gardens helped fill the lots", ["empty lots grew bigger", "no one lived there", "the gardens failed"], "Draw on the text.", true],
+];
+
+export const EXTRA: Unit[] = [
+  bankUnit({
+    id: "pa-g4-new-words",
+    title: "Precise & Academic Words",
+    emoji: "🧭",
+    blurb: "Exact words for actions and feelings, plus words used in school subjects.",
+    parentNote:
+      "Pennsylvania’s Grade 4 standards ask children to acquire and use accurately academic and subject words, including those that signal precise actions, emotions or states of being, and to work out unknown words from context and word parts. Children tap the word or meaning that fits.",
+    standards: ["CC.1.2.4.J; CC.1.3.4.J; CC.1.2.4.K; CC.1.3.4.I; CC.1.4.4.K", "precise and academic words, words for actions and feelings, and working out unknown words"],
+    items: WORDS,
+  }),
+  bankUnit({
+    id: "pa-g4-writing-moves",
+    title: "Reports, Opinions & Stories",
+    emoji: "✏️",
+    blurb: "Choose the sentence that introduces, supports, links and wraps up.",
+    parentNote:
+      "Pennsylvania’s Grade 4 writing standards ask children to introduce a topic and develop it with facts and quotations, to group related information with linking words, to support an opinion with reasons and facts, and to tell a story with dialogue, sensory details and transition words. Children are not asked to write here: they tap the sentence that does each job best.",
+    standards: ["CC.1.4.4.B; CC.1.4.4.C; CC.1.4.4.D; CC.1.4.4.E; CC.1.4.4.H; CC.1.4.4.I; CC.1.4.4.J; CC.1.4.4.N; CC.1.4.4.O; CC.1.4.4.P; CC.1.4.4.Q", "introducing a topic with facts, supporting an opinion with reasons, telling a story with dialogue and transitions, and choosing precise words"],
+    items: WRITING,
+  }),
+  bankUnit({
+    id: "pa-g4-prove-it",
+    title: "Prove It",
+    emoji: "🔍",
+    blurb: "Infer, explain what happened and why, and cite the details.",
+    parentNote:
+      "Pennsylvania’s Grade 4 standards ask children to refer to details and examples in a text to support what it says and to make inferences, to explain events, ideas or procedures including what happened and why, and to describe a character or setting in depth. Children read a short passage and choose the answer the text supports.",
+    standards: ["CC.1.2.4.B; CC.1.2.4.C; CC.1.3.4.B; CC.1.3.4.C; CC.1.4.4.S", "using details to support what a text says and to make inferences, explaining what happened and why, and describing characters and settings"],
+    items: PROVE,
+  }),
+];

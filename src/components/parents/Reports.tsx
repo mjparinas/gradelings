@@ -9,6 +9,7 @@ import { gradeLabel } from "@/lib/gradeLabel";
 import { estimateReadingLevel, readingLevelNote } from "@/lib/readingLevel";
 import type { GradeId } from "@/content/types";
 import { buildReport } from "@/lib/reports";
+import { factSetsFor, factSummary, factText, type FactStat } from "@/lib/facts";
 import { useSay } from "@/lib/say";
 import { eventsFor, useChildSettings, useDerived, useStore } from "@/lib/store";
 import { getTrophy, TIER_STYLE } from "@/lib/trophies";
@@ -97,6 +98,8 @@ export function ReportsPage({ childId }: { childId?: string }) {
           This is an estimate from {d.reading.length} recent passage answers, not a report-card mark.
         </p>
       )}
+
+      <FactsLine name={child.name} grade={child.grade} facts={d.facts} />
 
       <div className="mt-5 grid gap-5 lg:grid-cols-2">
         <ColumnChart
@@ -237,5 +240,30 @@ export function ReportsPage({ childId }: { childId?: string }) {
         )}
       </Panel>
     </>
+  );
+}
+
+/** "Knows 64 of 100 times-table facts", for each fact set the child has practised in Math Facts. */
+export function FactsLine({ name, grade, facts }: { name: string; grade: GradeId; facts: Record<string, FactStat> }) {
+  const sets = factSetsFor(grade)
+    .map((s) => factSummary(s, facts))
+    .filter((s) => s.tried > 0);
+  if (sets.length === 0) return null;
+  const tricky = [...new Map(sets.flatMap((s) => s.tricky).map((f) => [f.id, f])).values()].slice(0, 5);
+  return (
+    <p className="mt-3 rounded-xl bg-help-soft px-4 py-2 font-read">
+      🧮 Math facts: {name} knows{" "}
+      {sets.map((s, i) => (
+        <span key={s.set.id}>
+          {i > 0 && (i === sets.length - 1 ? " and " : ", ")}
+          <b>
+            {s.known} of {s.total}
+          </b>{" "}
+          {s.set.noun}
+        </span>
+      ))}
+      .{tricky.length > 0 && <> Still practising: {tricky.map(factText).join(", ")}.</>} A fact counts as known after two right answers in a row on the first
+      try. This is practice, not a report-card mark.
+    </p>
   );
 }

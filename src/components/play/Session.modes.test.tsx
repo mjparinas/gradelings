@@ -316,3 +316,60 @@ describe("Session extras", () => {
     expect(sessions()).toHaveLength(1);
   });
 });
+
+describe("Math Facts", () => {
+  const facts = (over: Partial<Plan> = {}) =>
+    makePlan({
+      mode: "facts",
+      scope: "mul",
+      title: "Times tables",
+      icon: "✖️",
+      total: 2,
+      quickCorrect: true,
+      lesson: { steps: ["Think of groups.", "Turn it around."], example: { question: "2 × 3 = ?", work: ["2 groups of 3."], answer: "6" } },
+      next: ({ index }) => ({ question: question(index + 1), unitKey: "2/math/facts", difficulty: 1, fact: `mul:7:${index + 1}` }),
+      ...over,
+    });
+  const answers = () => h.log.mock.calls.flatMap((c) => c[0]).filter((e: { type: string }) => e.type === "answer");
+
+  it("moves straight on after a right answer and logs the fact", () => {
+    vi.useFakeTimers();
+    h.plan = facts();
+    start("middle", "facts");
+    click("Yes");
+    expect(screen.queryByRole("button", { name: /Next/ })).not.toBeInTheDocument();
+    act(() => void vi.advanceTimersByTime(300));
+    expect(screen.getByText("Question number 2")).toBeInTheDocument();
+    expect(answers()[0]).toMatchObject({ unit: "2/math/facts", mode: "facts", fact: "mul:7:1", correct: true });
+    expect(answers()[0].q).toBeUndefined();
+    // Hoot, the math guide, asks the facts.
+    expect(screen.getAllByTestId("guide")[0]).toHaveTextContent("hoot");
+  });
+
+  it("gives a hint and another try after a miss, and offers the set's lesson but not a grown-up's help list", () => {
+    h.plan = facts();
+    start("middle", "facts");
+    click("No");
+    expect(screen.getByText("Hint 1")).toBeInTheDocument();
+    click("OK");
+    click("Nope");
+    expect(screen.queryByRole("button", { name: /Ask a grown-up/ })).not.toBeInTheDocument();
+    click(/Show me another way/);
+    expect(screen.getByRole("heading", { name: "✖️ Times tables: how it works" })).toBeInTheDocument();
+    expect(answers()[0]).toMatchObject({ fact: "mul:7:1", correct: false, revealed: true });
+  });
+
+  it("says how many facts in the set the child knows at the end", () => {
+    vi.useFakeTimers();
+    h.plan = facts({ total: 1 });
+    h.now = h.derived({ facts: { "mul:7:1": { attempts: 2, recent: [true, true], lastT: 1 } } });
+    h.start = h.derived({ facts: {} });
+    start("middle", "facts");
+    click("Yes");
+    act(() => void vi.advanceTimersByTime(300));
+    expect(screen.getByText("✖️ You know 1 of 100 times-table facts")).toBeInTheDocument();
+    expect(screen.getByText(/1 new fact today!/)).toBeInTheDocument();
+    click("More facts →");
+    expect(h.go).toHaveBeenCalledWith("/facts");
+  });
+});

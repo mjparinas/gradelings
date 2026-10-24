@@ -65,7 +65,7 @@ describe("Alaska", () => {
     );
     for (const { u, key } of own) {
       // Florida may copy Alaska's units, so it can carry its own standards beside Alaska's.
-      expect(Object.keys(u.standards).filter((f) => f !== "us-fl"), `${key} carries only Alaska standards`).toEqual(["us-ak"]);
+      expect(Object.keys(u.standards).filter((f) => f !== "us-fl" && f !== "us-pa"), `${key} carries only Alaska standards`).toEqual(["us-ak"]);
       expect(["social", "science"], `${key} is a social studies or science unit`).toContain(key.split("/")[1]);
     }
   });

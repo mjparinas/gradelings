@@ -465,4 +465,27 @@ describe("TeacherApp", () => {
     expect(screen.queryByRole("region", { name: "Confirm your email" })).not.toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Create class" })).toBeEnabled();
   });
+
+  it("turns the Monday class email on and off from the class list, saved on the account", async () => {
+    mocks.call.mockImplementation((url: string, method = "GET") => {
+      if (url === "/api/auth/me/") return Promise.resolve({ family: { account: { student: false, verified: true } } });
+      if (url === "/api/classes/" && method === "GET") return Promise.resolve({ classes: [cls], mondayEmail: false });
+      return Promise.resolve({});
+    });
+    const user = userEvent.setup();
+    render(<TeacherApp />);
+    const box = await screen.findByRole("checkbox", { name: /Email me every Monday/ });
+    expect(box).not.toBeChecked();
+    await user.click(box);
+    expect(box).toBeChecked();
+    expect(mocks.call).toHaveBeenCalledWith("/api/classes/digest/", "PATCH", { on: true });
+    await user.click(box);
+    expect(mocks.call).toHaveBeenCalledWith("/api/classes/digest/", "PATCH", { on: false });
+  });
+
+  it("hides the Monday email switch when it isn't offered", async () => {
+    render(<TeacherApp />);
+    await screen.findByRole("heading", { name: "Your classes" });
+    expect(screen.queryByRole("checkbox", { name: /Email me every Monday/ })).not.toBeInTheDocument();
+  });
 });

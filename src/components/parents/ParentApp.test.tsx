@@ -212,6 +212,7 @@ describe("ParentApp", () => {
     expect(within(views).getByRole("link", { name: "Progress" })).toHaveAttribute("href", "#/reports/a");
     expect(within(views).getByRole("link", { name: "Placement test" })).toHaveAttribute("aria-current", "page");
     expect(within(views).getByRole("link", { name: "Report card" })).toHaveAttribute("href", "#/report-cards/a");
+    expect(within(views).getByRole("link", { name: "Year in review" })).toHaveAttribute("href", "#/year/a");
   });
 
   it("shows no report views outside Reports, and marks Account for the old privacy link", async () => {

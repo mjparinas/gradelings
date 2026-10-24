@@ -1015,6 +1015,36 @@ export const lessons: GradeLessons = {
     ["Courts decide what laws mean.", "That is the judicial branch."],
     "judicial",
   ),
+  "social/pa-g8-gettysburg": lesson(
+    ["The Battle of Gettysburg was fought in Pennsylvania from July 1 to 3, 1863. The Union army stopped General Lee's Confederate army, and Lee retreated south.", "In November 1863 Lincoln gave the Gettysburg Address at a new national cemetery, saying the nation was founded on the idea that all people are created equal.", "Pennsylvania helped the Union with soldiers trained at Camp Curtin and with coal, iron and supplies from its mines and mills."],
+    "Where was the Gettysburg Address given?",
+    ["It was at a cemetery for soldiers.", "The cemetery was near the battlefield."],
+    "at the dedication of a national cemetery in Gettysburg",
+  ),
+  "social/pa-g8-freedom-seekers": lesson(
+    ["The Underground Railroad was a secret network that helped enslaved people reach freedom. Pennsylvania, a free state next to Maryland, was on many routes.", "William Still of Philadelphia kept records, and Quakers such as Lucretia Mott spoke out. The Fugitive Slave Act of 1850 made helping freedom seekers a crime.", "After the war, the 13th, 14th and 15th Amendments ended slavery, made people born here citizens and protected the right to vote regardless of race."],
+    "Why did many freedom seekers cross Pennsylvania?",
+    ["Look at the state next door.", "Pennsylvania was a free state."],
+    "it was a free state next to slave states such as Maryland",
+  ),
+  "social/pa-g8-industry-immigration": lesson(
+    ["In the 1800s Pennsylvania led in oil (Titusville, 1859), coal, steel and railroads. Immigrants from Ireland, Germany, Italy and Poland worked in its mills.", "Work was often dangerous, with long hours and low pay. Workers formed unions and held strikes, such as the Homestead strike in 1892.", "Reformers pushed for safer work and child labor laws. Pennsylvania voted to ratify the 19th Amendment in 1919."],
+    "Why did workers form unions?",
+    ["Think about the long hours and low pay.", "Together they had more power."],
+    "to ask together for better pay and safer jobs",
+  ),
+  "social/pa-g8-pa-and-us-government": lesson(
+    ["Pennsylvania and the nation both have three branches. The General Assembly has 50 senators and 203 representatives; Congress has 100 and 435.", "Pennsylvania voters elect their judges. Federal judges are picked by the president and approved by the Senate.", "Rights are listed in the Bill of Rights and in Pennsylvania's Declaration of Rights. Local, state and federal taxes pay for different services."],
+    "Who picks federal judges?",
+    ["It is not the voters.", "The Senate has to approve."],
+    "the president, with the Senate's approval",
+  ),
+  "social/pa-g8-world-media": lesson(
+    ["Foreign policy tools include diplomacy, treaties, aid and sanctions (penalties). The president leads, the Senate approves treaties and Congress declares war.", "Countries and groups such as the United Nations work together on shared problems, like disasters and pollution.", "Mass media and symbols shape what people think. Compare several reliable sources, and notice a message that only tries to stir feelings."],
+    "What is a sanction?",
+    ["It is a way to pressure a country.", "It is a penalty, not a reward."],
+    "a penalty meant to pressure a country to change its actions",
+  ),
   "social/il-g8-illinois-and-nation": lesson(
     ["Illinois joined as a free state in 1818, but its Black Laws limited free Black residents.", "Illinoisans argued over slavery: Lovejoy was killed for his paper; Douglas and Lincoln debated in 1858.", "Lincoln led the Union, Grant led its armies, and Illinois ratified the 13th Amendment first."],
     "What were the 1858 Lincoln–Douglas debates mainly about?",

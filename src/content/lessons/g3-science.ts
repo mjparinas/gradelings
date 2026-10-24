@@ -463,6 +463,30 @@ export const lessons: GradeLessons = {
     ["Water vapor in the air touches the cold glass.", "Cooling turns the vapor into liquid: condensation."],
     "condensation",
   ),
+  "science/pa-g3-tools-and-technology": lesson(
+    ["Technology is made by people to meet a need or solve a problem.", "Tools and machines can help people do more than they could alone.", "Every technology has trade-offs, such as cost, safety or waste."],
+    "A truck carries heavy loads far, but burns fuel. What is the trade-off?",
+    ["The truck helps people move goods.", "It also uses fuel and makes pollution."],
+    "it helps carry loads but uses fuel",
+  ),
+  "science/pa-g3-resources-and-sustainability": lesson(
+    ["Renewable resources, like sunlight and wind, keep coming. Nonrenewable ones, like coal, can run out.", "People change the environment when they build, farm and mine.", "We can choose to use less, reuse and protect nature."],
+    "Which is renewable: wind or coal?",
+    ["Wind keeps blowing.", "Coal takes millions of years to form."],
+    "wind",
+  ),
+  "science/pa-g3-penns-wildlife": lesson(
+    ["Habitats give animals food, water, shelter and space.", "White-tailed deer, ruffed grouse, brook trout and hellbenders live in Pennsylvania.", "If a habitat changes, the animals that live there are affected."],
+    "Brook trout need cold, clean streams. What could harm them?",
+    ["Trout need cool water.", "Cutting shade trees warms the stream."],
+    "warm or polluted water",
+  ),
+  "science/pa-g3-weather-climate": lesson(
+    ["Weather is what the air is like today. It changes from day to day.", "Climate is the typical weather of a place over many years.", "Tables and graphs show the weather of each season, so we can see patterns."],
+    "Pennsylvania has snow in January. What does a graph of winter show?",
+    ["Winter is cold in Pennsylvania.", "A graph shows more snow in winter than summer."],
+    "winter is the snowiest season",
+  ),
   "science/il-g3-fossils": lesson(
     ["A fossil is what is left of a plant or animal from long ago, kept in rock.", "Fossils show what lived in a place and what the place was like.", "Sea-animal fossils on dry land show a sea once covered it."],
     "Coral fossils are found in a field far from any sea. What does that tell us?",

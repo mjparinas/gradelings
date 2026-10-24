@@ -152,3 +152,26 @@ describe("suggestions", () => {
     expect(picked.every((r) => r.key.startsWith("2/math/"))).toBe(true);
   });
 });
+
+describe("makePlan: Math Facts", () => {
+  it("asks 20 typed facts from the set, each tagged with its fact, with retries and a lesson", () => {
+    const plan = makePlan(input({ mode: "facts", scope: "add" }))!;
+    expect(plan).toMatchObject({ total: 20, retries: true, feedback: "bar", quickCorrect: true, title: "Addition facts" });
+    expect(plan.lesson?.steps.length).toBeGreaterThan(1);
+    const item = plan.next({ index: 0, recent: [], derived: derive([]) })!;
+    expect(item.unitKey).toBe("2/math/facts");
+    expect(item.fact).toMatch(/^add:\d+:\d+$/);
+    expect(item.question).toMatchObject({ kind: "input", keypad: "number" });
+  });
+
+  it("asks 10 with short sessions", () => {
+    expect(makePlan(input({ mode: "facts", scope: "sub", short: true }))?.total).toBe(10);
+  });
+
+  it("is only there for sets the grade sees, and while math is on", () => {
+    expect(makePlan(input({ mode: "facts", scope: "mul" }))).toBeNull();
+    expect(makePlan(input({ mode: "facts", scope: "add", grade: "k" }))).toBeNull();
+    expect(makePlan(input({ mode: "facts", scope: "add", subjects: ["language"] }))).toBeNull();
+    expect(makePlan(input({ mode: "facts", scope: "nope" }))).toBeNull();
+  });
+});

@@ -193,4 +193,40 @@ export const lessons: GradeLessons = {
     ["Both are about one event.", "They stress different parts."],
     "in what they emphasize",
   ),
+  "language/pa-g6-appeals-and-reasoning": lesson(
+    ["Ethos appeals to trust, pathos to feelings and logos to logic.", "Reasoning can use cause and effect, analogy, authority or an example.", "Check that evidence is accurate and fits the claim."],
+    "“Studies show 9 of 10 students who sleep 8 hours earn better grades.” Which appeal is this?",
+    ["It uses data.", "Data appeals to logic."],
+    "logos",
+  ),
+  "language/pa-g6-poetic-forms-and-narrators": lesson(
+    ["A sonnet has 14 lines. A ballad tells a story. An ode praises something.", "An elegy mourns. Free verse has no set pattern.", "A narrator tells the story. Some stories have more than one."],
+    "Which poem form praises or honours something?",
+    ["Think about the name.", "An ode praises."],
+    "an ode",
+  ),
+  "language/pa-g6-accounts-across-time": lesson(
+    ["Two accounts of one event can differ because of the author’s purpose.", "Word choice shows what an author stresses and feels.", "Authors in different times may use different words and beliefs."],
+    "One account stresses damage. Another stresses rescue. How do they differ?",
+    ["Both are about one event.", "They stress different parts."],
+    "in what they emphasize",
+  ),
+  "language/pa-g6-new-words": lesson(
+    ["Use context, roots and a dictionary to find a word’s meaning.", "Connotation is the feeling a word carries beyond its definition.", "Figures such as personification and hyperbole add meaning."],
+    "Which has a more positive feeling: thrifty or cheap?",
+    ["Both mean careful with money.", "Thrifty sounds positive."],
+    "thrifty",
+  ),
+  "language/pa-g6-writing-moves": lesson(
+    ["Introduce a topic or claim clearly.", "Organize ideas and back them with relevant evidence.", "Use transitions, then finish with a conclusion that follows from what you said."],
+    "Which transition shows contrast?",
+    ["Look for opposite ideas.", "However shows contrast."],
+    "however",
+  ),
+  "language/pa-g6-prove-it": lesson(
+    ["Cite the textual evidence that supports your analysis.", "Check that each piece of evidence matches the claim.", "Separate what the text says from your opinion."],
+    "“Rosa practiced every night and finally won.” Which evidence shows she was determined?",
+    ["Look at her actions.", "She practiced every night."],
+    "she practiced every night",
+  ),
 };

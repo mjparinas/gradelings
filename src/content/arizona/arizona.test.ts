@@ -77,7 +77,7 @@ describe("Arizona", () => {
     );
     for (const { u, key } of own) {
       // Florida may copy Arizona's units, so it can carry its own standards beside Arizona's.
-      expect(Object.keys(u.standards).filter((f) => f !== "us-fl"), `${key} carries only Arizona standards`).toEqual(["us-az"]);
+      expect(Object.keys(u.standards).filter((f) => f !== "us-fl" && f !== "us-pa"), `${key} carries only Arizona standards`).toEqual(["us-az"]);
     }
   });
 });

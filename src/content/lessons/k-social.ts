@@ -301,6 +301,30 @@ export const lessons: GradeLessons = {
     ["Think about what an inventor does.", "An inventor thinks of a new idea."],
     "an inventor",
   ),
+  "social/pa-gk-our-state": lesson(
+    ["We live in the state of Pennsylvania.", "Its capital is Harrisburg. Its nickname is the Keystone State.", "The governor leads our state. The Liberty Bell is in Philadelphia."],
+    "What is the capital of Pennsylvania?",
+    ["It starts with an H.", "The governor works there."],
+    "Harrisburg",
+  ),
+  "social/pa-gk-jobs-and-helpers": lesson(
+    ["Helpers keep us safe and healthy: fire fighters, police officers and nurses.", "People work at jobs to make things or help others.", "Taxes help pay for fire trucks, roads and schools."],
+    "Who puts out a fire?",
+    ["Think of a red truck.", "A fire fighter helps put out fires."],
+    "a fire fighter",
+  ),
+  "social/pa-gk-money-and-saving": lesson(
+    ["People earn money by working.", "You can spend money, save it or share it.", "A bank keeps money safe."],
+    "Ana puts coins in a piggy bank to use later. What is she doing?",
+    ["She is keeping the coins.", "Keeping money for later is saving."],
+    "saving",
+  ),
+  "social/pa-gk-safe-and-shared": lesson(
+    ["Stay safe: look both ways and hold a grown-up's hand.", "Keep private things, like your address, to yourself.", "If you borrow a toy, give it back."],
+    "You borrow a book. What do you do when you finish?",
+    ["It belongs to someone else.", "Give it back."],
+    "give it back",
+  ),
   "social/oh-k-ohio-symbols": lesson(
     ["Ohio is our state. The United States is our country.", "Ohio's flag has a swallowtail shape, with a notch at the end.", "Our state bird is the red cardinal. Our state tree is the buckeye."],
     "What is Ohio's state bird?",

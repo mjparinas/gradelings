@@ -589,6 +589,30 @@ export const lessons: GradeLessons = {
     ["You can measure it.", "A measurement is an observation."],
     "an observation",
   ),
+  "science/pa-g9-sustainability-and-systems": lesson(
+    ["Trends, technologies and policies change food, water and other resources.", "Best management practices, such as buffers beside streams, reduce harm.", "Environmental laws work when data show the pollution has gone down."],
+    "How can a town tell whether a stormwater rule worked?",
+    ["Collect data before the rule.", "Collect data after, and compare."],
+    "compare stream and flood data before and after",
+  ),
+  "science/pa-g9-technology-and-society": lesson(
+    ["Judge a technology by the resources it uses, its waste and its effects on people.", "A life cycle assessment follows a product from raw materials to disposal.", "Laws and public opinion can slow or shape a technology."],
+    "An electric car has no tailpipe. What else should you evaluate?",
+    ["Look at the whole life cycle.", "Check how the electricity and battery are made."],
+    "how its electricity and battery are produced",
+  ),
+  "science/pa-g9-design-thinking": lesson(
+    ["Start by defining the problem and the people it affects.", "Brainstorm many ideas, then judge them against criteria and constraints.", "Optimizing means balancing qualities, such as strength and weight, and testing again."],
+    "A backpack is lighter but its straps tear. What should the designers do?",
+    ["Strength is a criterion.", "Keep it light but strengthen the straps."],
+    "keep it light enough and make the straps stronger",
+  ),
+  "science/pa-g9-environmental-data": lesson(
+    ["Plan an investigation with a question you can answer with data.", "Compare sites fairly: same time of day, same method, many samples.", "Data can also show whether risks are shared fairly, and whether pest control worked."],
+    "A stream site has only 2 kinds of insects, and others have 12. What does that suggest?",
+    ["Sensitive insects need clean water.", "Few kinds suggests poorer water quality."],
+    "the site with 2 kinds is probably more polluted",
+  ),
   "science/il-g9-ecosystems": lesson(
     ["Carrying capacity is the largest population an environment can support over time.", "Only about 10% of energy passes from one trophic level to the next.", "Ecosystems recover from disturbance through succession; people can reduce harm, for example by stopping invasive species."],
     "Grasses store 5,000 units of energy. About how much reaches the animals that eat them?",

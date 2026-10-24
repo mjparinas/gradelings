@@ -27,6 +27,7 @@ import { ageBandFor } from "@/content/subjects";
 import { useStore } from "@/lib/store";
 import { BandProvider } from "../band";
 import { Arcade } from "./Arcade";
+import { FactsPicker } from "./Facts";
 import { Hub } from "./Hub";
 import { SubjectPicker, UnitList } from "./Practice";
 import { Room } from "./Room";
@@ -99,6 +100,7 @@ describe("the kids' app for a US child", () => {
   it("A subject's units", () => expectUs(<UnitList subject="math" />));
   it("Trail map", () => expectUs(<TrailMap />));
   it("Treasures", () => expectUs(<Treasures />));
+  it("Math Facts", () => expectUs(<FactsPicker />));
   it("Sticker book", () => expectUs(<StickerBook />));
   it("My Room", () => expectUs(<Room />));
   it("Trophies", () => expectUs(<TrophyRoom />));
