@@ -403,6 +403,12 @@ export const lessons: GradeLessons = {
     ["Look for the bright red bird.", "It is the northern cardinal."],
     "the cardinal",
   ),
+  "social/wi-g1-wisconsin-symbols": lesson(
+    ["A symbol is a picture or thing that stands for something.", "Wisconsin's state animal is the badger. Its state bird is the robin.", "Madison is the capital. Milwaukee is the biggest city."],
+    "Which animal gives Wisconsin its nickname?",
+    ["Wisconsin is the Badger State.", "The animal is the badger."],
+    "the badger",
+  ),
   "social/nj-g1-new-jersey-symbols": lesson(
     ["A symbol is a picture or thing that stands for something.", "Our state bird is the eastern goldfinch. Our state flower is the violet.", "Trenton is the capital. Newark is the biggest city."],
     "Which yellow bird is New Jersey's state bird?",

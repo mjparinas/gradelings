@@ -1087,7 +1087,19 @@ export const lessons: GradeLessons = {
     ["Congress needs two-thirds.", "Illinois's constitution sets three-fifths."],
     "three-fifths of each house",
   ),
+  "social/wi-g9-governing-wisconsin": lesson(
+    ["Wisconsin's constitution of 1848 is its only one. It is changed when two Legislatures in a row pass an amendment and voters approve it.", "Voters elect six statewide officers, 132 lawmakers and seven Supreme Court justices for ten-year terms.", "The governor's partial veto can strike parts of a spending bill. Two-thirds of the members present in each house can override a veto."],
+    "What must happen before an amendment is added to the Wisconsin Constitution?",
+    ["The Legislature votes twice.", "Then voters have the final say."],
+    "two Legislatures pass it and voters approve it",
+  ),
   "social/il-g9-us-government": lesson(
+    ["Article I sets up Congress, Article II the President and Article III the courts.", "Each branch checks the others: vetoes, overrides, confirmations and judicial review.", "The Bill of Rights and later amendments protect individual rights."],
+    "Which body must confirm a President's nominee to the Supreme Court?",
+    ["The President nominates.", "The Senate confirms."],
+    "the Senate",
+  ),
+  "social/wi-g9-us-government": lesson(
     ["Article I sets up Congress, Article II the President and Article III the courts.", "Each branch checks the others: vetoes, overrides, confirmations and judicial review.", "The Bill of Rights and later amendments protect individual rights."],
     "Which body must confirm a President's nominee to the Supreme Court?",
     ["The President nominates.", "The Senate confirms."],
@@ -1111,6 +1123,12 @@ export const lessons: GradeLessons = {
     ["Divide 72 by the rate.", "72 ÷ 6 = 12."],
     "about 12 years",
   ),
+  "social/wi-g9-personal-finance": lesson(
+    ["Net (take-home) pay = gross pay − what is withheld. Sale price = price − the discount.", "Compound interest earns interest on interest. Rule of 72: years to double ≈ 72 ÷ the rate.", "Pay bills on time for a good credit score; keep an emergency fund; spread risk."],
+    "Using the Rule of 72, about how long does money take to double at 6% a year?",
+    ["Divide 72 by the rate.", "72 ÷ 6 = 12."],
+    "about 12 years",
+  ),
   "social/nj-g9-personal-finance": lesson(
     ["Net (take-home) pay = gross pay − what is withheld. Sale price = price − the discount.", "Compound interest earns interest on interest. Rule of 72: years to double ≈ 72 ÷ the rate.", "Pay bills on time for a good credit score; keep an emergency fund; spread risk."],
     "Using the Rule of 72, about how long does money take to double at 6% a year?",
@@ -1118,6 +1136,12 @@ export const lessons: GradeLessons = {
     "about 12 years",
   ),
   "social/il-g9-economics": lesson(
+    ["When price rises, quantity demanded falls and quantity supplied rises.", "A poor harvest cuts supply and raises the price.", "GDP, inflation and unemployment show how the economy is doing; trade lets countries specialize."],
+    "A drought hurts the corn harvest. What most likely happens to the price of corn?",
+    ["There is less corn to sell.", "Less supply pushes the price up."],
+    "it rises",
+  ),
+  "social/wi-g9-economics": lesson(
     ["When price rises, quantity demanded falls and quantity supplied rises.", "A poor harvest cuts supply and raises the price.", "GDP, inflation and unemployment show how the economy is doing; trade lets countries specialize."],
     "A drought hurts the corn harvest. What most likely happens to the price of corn?",
     ["There is less corn to sell.", "Less supply pushes the price up."],

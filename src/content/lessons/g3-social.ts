@@ -787,13 +787,31 @@ export const lessons: GradeLessons = {
     ["The Ohio River is on the south side.", "The west border is the Mississippi."],
     "the Mississippi River",
   ),
+  "social/wi-g3-wisconsin-land": lesson(
+    ["Wisconsin is in the Midwest, with Lake Superior to the north and Lake Michigan to the east.", "The Mississippi and St. Croix rivers make its western border.", "Glaciers shaped most of the land and left thousands of lakes. The Driftless Area in the southwest was missed."],
+    "Which river forms much of Wisconsin's western border?",
+    ["Lake Michigan is on the east side.", "The west border is mostly the Mississippi."],
+    "the Mississippi River",
+  ),
   "social/il-g3-illinois-communities": lesson(
     ["An urban community is a big city, like Chicago.", "A suburban community is near a city, where people live and drive to work.", "A rural community has farms and open land."],
     "A small town surrounded by cornfields is what kind of community?",
     ["It is not a big city or near one.", "Farms and open land mean rural."],
     "rural",
   ),
+  "social/wi-g3-wisconsin-communities": lesson(
+    ["An urban community is a big city, like Milwaukee.", "A suburban community is near a city, where people live and drive to work.", "A rural community has farms and open land. Tribal nations have their own communities too."],
+    "A small town surrounded by dairy farms is what kind of community?",
+    ["It is not a big city or near one.", "Farms and open land mean rural."],
+    "rural",
+  ),
   "social/il-g3-local-government": lesson(
+    ["A mayor and a city council or village board lead a town.", "Taxes pay for services like fire departments, libraries and parks.", "When you choose one thing, you give up another."],
+    "What pays for a town's library?",
+    ["The library is free to use.", "People pay taxes, and taxes pay for it."],
+    "taxes",
+  ),
+  "social/wi-g3-local-government": lesson(
     ["A mayor and a city council or village board lead a town.", "Taxes pay for services like fire departments, libraries and parks.", "When you choose one thing, you give up another."],
     "What pays for a town's library?",
     ["The library is free to use.", "People pay taxes, and taxes pay for it."],

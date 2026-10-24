@@ -1051,14 +1051,32 @@ export const lessons: GradeLessons = {
     ["Douglas's Kansas-Nebraska Act let settlers vote on slavery.", "They argued about whether slavery should spread."],
     "whether slavery should spread to new territories",
   ),
+  "social/wi-g8-wisconsin-and-nation": lesson(
+    ["The Northwest Ordinance banned slavery in the land that became Wisconsin, a free state from 1848.", "In 1854 a crowd in Milwaukee freed Joshua Glover, a freedom seeker. The same year, a meeting in Ripon helped start the Republican Party.", "About 90,000 Wisconsin soldiers served in the Civil War. Ezekiel Gillespie won Black men the vote in Wisconsin in 1866."],
+    "Why did the Glover rescue matter to the nation?",
+    ["The Fugitive Slave Act was a federal law.", "Wisconsin people and courts resisted it."],
+    "a free state resisted a federal slavery law",
+  ),
   "social/il-g8-us-timeline": lesson(
     ["A timeline puts events in order, earliest first.", "Big eras: the founding (1776–1791), expansion, the road to war, the Civil War (1861–1865) and Reconstruction (1865–1877).", "To find how far apart two events are, subtract the earlier year from the later one."],
     "How many years passed between the Northwest Ordinance (1787) and Illinois statehood (1818)?",
     ["Subtract the earlier year.", "1818 − 1787 = 31."],
     "31 years",
   ),
+  "social/wi-g8-us-timeline": lesson(
+    ["A timeline puts events in order, earliest first.", "Big eras: the founding (1776–1791), expansion, the road to war, the Civil War (1861–1865) and Reconstruction (1865–1877).", "To find how far apart two events are, subtract the earlier year from the later one."],
+    "How many years passed between the Northwest Ordinance (1787) and Wisconsin statehood (1848)?",
+    ["Subtract the earlier year.", "1848 − 1787 = 61."],
+    "61 years",
+  ),
   "social/il-g8-constitutions": lesson(
     ["The US Constitution starts with the Preamble, sets up three branches (Articles I to III) and has 27 amendments.", "The first ten amendments are the Bill of Rights. Checks and balances let each branch limit the others.", "Illinois's constitution of 1970 also has three branches and its own Bill of Rights."],
+    "Which branch makes federal laws?",
+    ["The President carries out laws; courts interpret them.", "Article I sets up Congress to make laws."],
+    "Congress",
+  ),
+  "social/wi-g8-constitutions": lesson(
+    ["The US Constitution starts with the Preamble, sets up three branches (Articles I to III) and has 27 amendments.", "The first ten amendments are the Bill of Rights. Checks and balances let each branch limit the others.", "Wisconsin's constitution of 1848 also has three branches and its own Declaration of Rights, and it bans slavery."],
     "Which branch makes federal laws?",
     ["The President carries out laws; courts interpret them.", "Article I sets up Congress to make laws."],
     "Congress",

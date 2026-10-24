@@ -1159,11 +1159,23 @@ export const lessons: GradeLessons = {
     ["Chicago is the biggest city.", "Chicago is in Northern Illinois."],
     "Northern Illinois",
   ),
+  "social/wi-g4-wisconsin-land": lesson(
+    ["Wisconsin has five land regions: the Lake Superior Lowland, Northern Highland, Central Plain, Eastern Ridges and Lowlands, and Western Upland.", "It borders Minnesota, Iowa, Illinois and Michigan, and two Great Lakes: Superior and Michigan.", "Glaciers left more than 15,000 lakes. The Driftless Area in the southwest has steep hills because glaciers missed it."],
+    "Why does the Driftless Area have steep hills and deep valleys?",
+    ["Think about what flattened the rest of the state.", "The last glaciers did not cover it."],
+    "glaciers did not flatten it",
+  ),
   "social/il-g4-first-peoples": lesson(
     ["People have lived in Illinois for thousands of years.", "Cahokia was a large city of Mississippian people around the years 1050 to 1200, with earthen mounds.", "Native nations with ties to Illinois, such as the Peoria, Potawatomi and Kickapoo, are living communities today, each with its own government."],
     "What is Monks Mound?",
     ["It is at Cahokia.", "It is the biggest earthen mound there."],
     "the largest mound at Cahokia",
+  ),
+  "social/wi-g4-first-nations": lesson(
+    ["Wisconsin has eleven tribal nations: six Ojibwe bands, the Menominee, Ho-Chunk, Oneida, Potawatomi and Stockbridge-Munsee.", "Each nation is sovereign: it has its own government, laws and leaders.", "Treaties are agreements between nations. Through treaties, Ojibwe nations kept the right to hunt, fish and gather on lands they sold."],
+    "What does it mean that a tribal nation is sovereign?",
+    ["Think about who makes its laws.", "It governs itself."],
+    "it governs itself",
   ),
   "social/il-g4-early-illinois": lesson(
     ["French explorers and traders came first, starting in 1673.", "Britain, then the United States, took over. The Northwest Ordinance of 1787 banned slavery there.", "Illinois became the 21st state in 1818. Abraham Lincoln lived and worked in Springfield."],
@@ -1171,17 +1183,35 @@ export const lessons: GradeLessons = {
     ["Marquette and Jolliet were French.", "France claimed it first."],
     "France",
   ),
+  "social/wi-g4-early-wisconsin": lesson(
+    ["Jean Nicolet reached Green Bay in 1634. French traders and Native nations traded furs for metal tools and cloth.", "Britain, then the United States, took over. Lead miners came in the 1820s, and the Black Hawk War of 1832 pushed Sauk and Meskwaki people out.", "Wisconsin became a territory in 1836 and the 30th state on May 29, 1848."],
+    "Why is Wisconsin called the Badger State?",
+    ["Think about the lead miners.", "Some lived in holes dug into hillsides, like badgers."],
+    "early miners lived like badgers",
+  ),
   "social/il-g4-growing-state": lesson(
     ["A cause makes something happen. An effect is what happens.", "Railroads (cause) helped Chicago grow fast (effect).", "The 1871 fire (cause) led to stronger buildings and the first skyscrapers (effect)."],
     "Why did many Black families move to Chicago in the Great Migration?",
     ["Look for push and pull reasons.", "They came for factory jobs and to escape unfair laws in the South."],
     "for jobs and to escape unfair laws",
   ),
+  "social/wi-g4-growing-state": lesson(
+    ["A cause makes something happen. An effect is what happens.", "Worn-out soil for wheat (cause) led farmers to switch to dairy cows (effect).", "Cutting the northern forests (cause) brought lumber jobs, then fires and cut-over land (effects)."],
+    "Why did many Wisconsin farmers switch from wheat to dairy farming?",
+    ["Look for the cause.", "Wheat stopped growing well in the worn-out soil."],
+    "wheat stopped growing well",
+  ),
   "social/il-g4-illinois-timeline": lesson(
     ["A timeline puts events in order, earliest first.", "Years from 1801 to 1900 are the 19th century. Years from 1901 to 2000 are the 20th century.", "To find how far apart two events are, subtract the earlier year from the later one."],
     "Illinois became a state in 1818. The Great Chicago Fire was in 1871. How many years apart?",
     ["Subtract the earlier year.", "1871 − 1818 = 53."],
     "53 years",
+  ),
+  "social/wi-g4-wisconsin-timeline": lesson(
+    ["A timeline puts events in order, earliest first.", "Years from 1801 to 1900 are the 19th century. Years from 1901 to 2000 are the 20th century.", "To find how far apart two events are, subtract the earlier year from the later one."],
+    "Wisconsin became a state in 1848. The Peshtigo Fire was in 1871. How many years apart?",
+    ["Subtract the earlier year.", "1871 − 1848 = 23."],
+    "23 years",
   ),
   "social/nj-g4-lenape": lesson(
     ["The Lenape (Lenni-Lenape) lived in what is now New Jersey long before Europeans came. Their homeland is called Lenapehoking.", "They farmed corn, beans and squash, fished and traveled by dugout canoe. Many places, like Hackensack and Passaic, have Lenape names.", "European settlement took Lenape land and lives. Lenape nations and communities live today in Oklahoma, Wisconsin and New Jersey."],
@@ -1231,9 +1261,21 @@ export const lessons: GradeLessons = {
     ["The House has 118 members.", "The Senate is smaller."],
     "59",
   ),
+  "social/wi-g4-governing-wisconsin": lesson(
+    ["Wisconsin's government has three branches: the governor, the Legislature and the courts. It meets in Madison.", "The Legislature has a 33-member Senate and a 99-member Assembly. The Supreme Court has seven elected justices.", "A bill becomes law when both houses pass it and the governor signs it."],
+    "How many members are in the Wisconsin State Assembly?",
+    ["The Senate has 33 members.", "The Assembly is three times as big."],
+    "99",
+  ),
   "social/il-g4-illinois-economy": lesson(
     ["Natural resources come from nature, like soil and coal.", "Human resources are people's work and skills. Capital resources are tools and machines.", "Profit is the money a seller keeps after paying costs."],
     "A farmer's tractor is which kind of resource?",
+    ["It is a machine people made.", "Tools and machines are capital resources."],
+    "a capital resource",
+  ),
+  "social/wi-g4-wisconsin-economy": lesson(
+    ["Natural resources come from nature, like soil, forests and lakes.", "Human resources are people's work and skills. Capital resources are tools and machines.", "Wisconsin makes more cheese than any other state and grows most of the country's cranberries."],
+    "A dairy farmer's milking machine is which kind of resource?",
     ["It is a machine people made.", "Tools and machines are capital resources."],
     "a capital resource",
   ),
