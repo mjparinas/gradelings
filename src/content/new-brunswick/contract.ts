@@ -14,6 +14,6 @@ export const contract: FrameworkContract = {
     return labels.filter((l) => !official.has(l)).map((l) => `cites "${l}", which is not in New Brunswick ${grade}/${subject}`);
   },
   ownPrefix: "nb-",
-  ownSharedWith: ["us-wa", "us-or", "us-ca", "us-ny", "us-tx", "us-me", "us-mn", "us-ak", "us-al", "us-az", "us-ar", "us-fl", "us-il", "us-co", "us-pa", "us-oh", "us-ga", "us-in"],
+  ownSharedWith: ["us-wa", "us-or", "us-ca", "us-ny", "us-tx", "us-me", "us-mn", "us-ak", "us-al", "us-az", "us-ar", "us-fl", "us-il", "us-co", "us-pa", "us-oh", "us-ga", "us-nj", "us-in"],
   foreign: /Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada|Saskatchewan|Regina|Alberta|Manitoba|Winnipeg|Nova Scotia|Halifax|Yukon|Northwest Territories/,
 };
