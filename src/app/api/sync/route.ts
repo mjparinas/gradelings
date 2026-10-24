@@ -9,6 +9,7 @@ import { UPCOMING_FRAMEWORKS } from "@/content/frameworks";
 import { GRADE_ORDER } from "@/content/subjects";
 import { familyCountry } from "@/lib/coppa";
 import { getFamilyRow, toFamilyInfo } from "@/server/family";
+import { syncEpoch } from "@/server/syncEpoch";
 
 // Two-way sync. Devices upload events they haven't sent yet, plus any profile
 // or settings changes, and download everything new since their cursor.
@@ -21,7 +22,7 @@ const MAX_FAMILY_EVENTS = 250_000;
 const MAX_JSON = 4000;
 /** Most child records (deleted ones included) one family can store. Families have at most 3 children at a time. */
 const MAX_FAMILY_PROFILES = 50;
-const EVENT_TYPES = new Set(["answer", "session", "play", "game", "trophy", "secret", "buy", "quest", "goal", "placement", "help"]);
+const EVENT_TYPES = new Set(["answer", "session", "play", "game", "trophy", "secret", "buy", "quest", "goal", "placement", "help", "story"]);
 
 interface SyncBody {
   cursor?: number;
@@ -200,6 +201,7 @@ export async function POST(req: Request) {
 
   return json({
     accepted,
+    epoch: syncEpoch(),
     cursor: rows.length ? Number(rows[rows.length - 1].seq) : cursor,
     more: rows.length === PAGE,
     events: rows.map((r) => JSON.parse(r.data)),

@@ -637,4 +637,10 @@ export const lessons: GradeLessons = {
     ["Shells form in the sea.", "Plate movement pushed the rock upward."],
     "the rock formed under the sea and was pushed up",
   ),
+  "science/heat-transfer-7": lesson(
+    ["Conduction moves heat through touching materials, like a hot pan handle.", "Convection moves heat through flowing liquids or gases, like warm air rising.", "Radiation moves heat as rays with no material needed, like sunlight. Insulators slow heat loss."],
+    "You feel warm sitting near a fire without touching it. Which kind of heat transfer is it?",
+    ["You aren’t touching anything hot.", "The heat travels as rays through the air."],
+    "radiation",
+  ),
 };

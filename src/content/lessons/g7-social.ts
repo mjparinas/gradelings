@@ -1159,4 +1159,58 @@ export const lessons: GradeLessons = {
     ["Columbus crossed the Atlantic but did not circle the globe.", "Magellan’s expedition sailed all the way around."],
     "Magellan’s expedition",
   ),
+  "social/al-g9-decolonization": lesson(
+    ["After World War II, colonies won independence: India (1947), Ghana (1957, led by Nkrumah), Algeria (1962, after a long war).", "Some fought, like Kenya’s Mau Mau Rebellion against British rule.", "The Suez Crisis (1956) showed Britain and France could no longer act as world powers without US support."],
+    "In what year did India gain independence from Britain?",
+    ["It was soon after World War II.", "India became independent in 1947."],
+    "1947",
+  ),
+  "social/mn-g8-forms-of-government": lesson(
+    ["In a monarchy a king or queen rules; in a republic citizens elect leaders; in a dictatorship one person holds all power.", "In a presidential system, the president is elected separately from the legislature; in a parliamentary system, the leader comes from the legislature.", "Popular sovereignty means power comes from the people, shown in free and fair elections."],
+    "Citizens vote in free and fair elections. Which idea does this show?",
+    ["It shows where power comes from.", "The people choose their leaders.", "Power from the people is popular sovereignty."],
+    "popular sovereignty",
+  ),
+  "social/or-g5-earn-and-save": lesson(
+    ["Income is money you earn. Profit is income minus costs.", "To find earnings, multiply the price by how many times you work.", "To plan saving, divide the goal by how much you save each week."],
+    "Sam wants a $45 game and saves $9 each week. How many weeks will it take?",
+    ["Divide the goal by the weekly savings.", "45 ÷ 9 = 5."],
+    "5 weeks",
+  ),
+  "social/ga-g7-cold-war": lesson(
+    ["After World War II, Churchill said an Iron Curtain divided Europe. The US offered the Truman Doctrine and Marshall Plan; the Soviets answered with COMECON.", "Alliances (NATO and the Warsaw Pact), the Korean War, the Cuban Missile Crisis and arms and space races followed.", "Gorbachev’s glasnost (openness) and perestroika (restructuring) and Poland’s Solidarity helped end it."],
+    "What did the Marshall Plan do?",
+    ["Europe was in ruins after World War II.", "The US gave billions to rebuild Western Europe."],
+    "gave billions of dollars to rebuild Western Europe",
+  ),
+  "social/ga-g7-economies": lesson(
+    ["In a command economy the government decides what to make; in a market economy buyers and sellers do; a mixed economy blends both.", "Exports are sold to other countries; imports are bought from them. A tariff is a tax on imports.", "Comparative advantage: make what you can produce at the lowest opportunity cost, then trade."],
+    "In a command economy, who makes the main decisions about production?",
+    ["“Command” means orders from the top.", "The government gives those orders."],
+    "the government",
+  ),
+  "social/ga-g7-population": lesson(
+    ["Demography is the study of human populations. Population density is how many people live in an area.", "Cities often grow along rivers and coasts for water and trade.", "Push factors drive people away; pull factors draw them. Newcomers keep culture alive with language and festivals."],
+    "Why do cities often grow along rivers and coasts?",
+    ["People need water.", "Rivers and coasts are also routes for trade."],
+    "They offer water and trade routes",
+  ),
+  "social/ga-g7-africa": lesson(
+    ["Key features include the Sahara, the Sahel, the Nile and the Congo River.", "Desertification in the Sahel and unsafe water are big environmental issues.", "Many African countries gained independence in the 1950s and 1960s."],
+    "What is desertification?",
+    ["Desert means dry land.", "Land slowly becomes like a desert."],
+    "good land turning into desert",
+  ),
+  "social/ga-g7-southwest-asia": lesson(
+    ["Key features include the Tigris and Euphrates Rivers, the Persian Gulf and the Arabian Peninsula.", "Oil is the region's most important export.", "Water is scarce, so sharing rivers is an important issue."],
+    "What is Southwest Asia's most important export?",
+    ["It is found under the desert and the Gulf.", "It is used for fuel."],
+    "oil",
+  ),
+  "social/ga-g7-southern-eastern-asia": lesson(
+    ["Key features include the Himalayas, the Ganges and the Yangtze Rivers.", "The Ganges is polluted and the Yangtze has huge dams.", "China, India and Japan have large economies."],
+    "Which mountains are the highest in the world?",
+    ["They are in southern Asia.", "Mount Everest is part of them."],
+    "the Himalayas",
+  ),
 };

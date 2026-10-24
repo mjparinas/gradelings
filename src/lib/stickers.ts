@@ -53,6 +53,7 @@ const MOMENTS: { id: string; name: string; emoji: string; hint: string; earned: 
   { id: "daily", name: "Daily Challenge", emoji: "☀️", hint: "Finish a Daily Challenge", earned: (d) => d.dailyDone.length >= 1 },
   { id: "speed", name: "Speedy", emoji: "⚡", hint: "Try a Speed Run", earned: (d) => (d.modes.speed ?? 0) >= 1 },
   { id: "challenge", name: "Challenger", emoji: "🏅", hint: "Pass a Challenge", earned: (d) => Object.values(d.units).some((u) => u.challengePassed) },
+  { id: "story", name: "Story time", emoji: "📖", hint: "Read a story in the Story Library", earned: (d) => d.totals.stories >= 1 },
   { id: "arcade", name: "Game on", emoji: "🕹️", hint: "Play an arcade game", earned: (d) => Object.keys(d.gamesPlayed).length >= 1 },
   { id: "shopper", name: "New friend", emoji: "🛍️", hint: "Get something from the shop", earned: (d) => d.owned.length >= 1 },
   { id: "all-subjects", name: "Explorer", emoji: "🧭", hint: "Answer in all four subjects", earned: (d) => (["math", "language", "science", "social"] as SubjectId[]).every((s) => (d.subjects[s]?.answers ?? 0) > 0) },

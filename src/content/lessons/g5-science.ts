@@ -553,4 +553,40 @@ export const lessons: GradeLessons = {
     ["One spin gives one day and one night."],
     "about 24 hours",
   ),
+  "science/grouping-living-things": lesson(
+    ["Scientists sort living things into groups by their features.", "Mammals have fur or hair and feed their babies milk. Birds have feathers. Fish have fins and gills.", "Biodiversity means the variety of life in a place."],
+    "A bat has fur and feeds its babies milk. Which group is it in?",
+    ["Fur or hair and milk for babies are mammal features.", "Flying does not make it a bird."],
+    "mammal",
+  ),
+  "science/wa-g6-cells": lesson(
+    ["All living things are made of cells. Most cells are seen with a microscope.", "Cell parts have jobs: the nucleus holds the instructions and mitochondria release energy from food.", "Similar cells working together form a tissue. Tissues form organs."],
+    "Which cell part releases energy from food?",
+    ["The nucleus is the control centre.", "Mitochondria are the cell's power plants."],
+    "mitochondria",
+  ),
+  "science/pe-microbes-arthropods-6": lesson(
+    ["Microorganisms are tiny living things, often one cell. Some move with hair-like parts or tails.", "Some microbes are helpful, like the ones that make yogurt.", "Arthropods have jointed legs and a hard exoskeleton.", "Insects have 6 legs. Arachnids, like spiders, have 8. Crustaceans include crabs and shrimp."],
+    "A creature has 8 legs and a hard outer covering. Which group is it?",
+    ["A hard outer covering means an arthropod.", "Eight legs means an arachnid."],
+    "an arachnid",
+  ),
+  "science/pe-electromagnets-6": lesson(
+    ["Electricity running through a coil of wire makes an electromagnet.", "Electricity has effects: heat (a kettle), light (a bulb), motion (a motor).", "A generator changes motion energy into electrical energy. Moving water, wind or steam can spin it.", "Coal is nonrenewable. Wind and water are renewable."],
+    "What does a generator do?",
+    ["Something spins the generator.", "It turns that motion into electricity."],
+    "changes motion energy into electrical energy",
+  ),
+  "science/ga-g5-landforms": lesson(
+    ["Moving water carves canyons by eroding the riverbed over a very long time.", "A delta forms where a river slows and drops sediment as it enters a larger body of water.", "Wind piles sand into dunes, like the Monahans Sandhills.", "Glaciers carve valleys and drop rock."],
+    "Where does a delta form?",
+    ["A river slows when it reaches a lake or the sea.", "It drops its sediment there."],
+    "where a river enters a larger body of water",
+  ),
+  "science/ga-g5-static-charge": lesson(
+    ["Rubbing can give objects an electric charge.", "Charges that are alike push apart. Charges that are different pull together.", "Charged objects can pull or push without touching.", "A spark or lightning is charge jumping across a gap."],
+    "Two balloons rubbed on hair both have the same charge. What do they do?",
+    ["Alike charges repel.", "The balloons push apart."],
+    "push apart",
+  ),
 };

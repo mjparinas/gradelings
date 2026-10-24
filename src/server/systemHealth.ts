@@ -11,9 +11,14 @@ import {
   FETCH_FAILED_WARN,
   megabytes,
   NEVER_IN_PRODUCTION,
+  pageAssets,
+  pagePolicyProblems,
   restoreDrillState,
   RESTORE_DRILL_DAYS,
   SETTINGS,
+  SITE_FILES,
+  SITE_PAGES,
+  SITE_SLOW_MS,
   speedState,
   STAFF_FAILURES_WARN,
   SYNC_FAILURE_RATE,
@@ -29,6 +34,7 @@ import {
   type SystemReport,
 } from "@/lib/systemHealth";
 import { createHash } from "node:crypto";
+import { MAINTENANCE_HEADER } from "@/lib/maintenance";
 import { traceRate, traceScale } from "@/lib/sentry-traces";
 import { adminEmails, audit, supportEmails, twoFactorMode } from "./admin";
 import { STAFF_ALERT_KEY, staffFailuresSince } from "./staffSignIns";
@@ -182,6 +188,96 @@ export async function uptimeCheck(now = Date.now()): Promise<HealthCheck> {
     ],
     link,
   };
+}
+
+// ---------- The live site, loaded from outside ----------
+
+interface Probe {
+  status: number;
+  ms: number;
+  headers: Headers;
+  body: string;
+}
+
+/** Loads one address the way a visitor's browser would, or says why it couldn't. */
+async function probe(url: string, text = false): Promise<Probe | { error: string }> {
+  const started = Date.now();
+  try {
+    const res = await fetch(url, { cache: "no-store", redirect: "follow", headers: { "user-agent": "Gradelings-System-Check" }, signal: AbortSignal.timeout(TIMEOUT) });
+    const body = text ? await res.text() : "";
+    if (!text) await res.body?.cancel();
+    return { status: res.status, ms: Date.now() - started, headers: res.headers, body };
+  } catch (e) {
+    return { error: (e as Error).name === "TimeoutError" ? "didn't answer in time" : "couldn't be reached" };
+  }
+}
+
+const isProbe = (p: Probe | { error: string }): p is Probe => !("error" in p);
+
+/**
+ * Loads the public pages, the app and the parent area from the site's own address and checks what a browser needs:
+ * each answers, carries its security policy tag, and the scripts and styles it names are really there. A console
+ * error in a browser can't be seen from here; the playthrough tests catch those before a deploy.
+ */
+export async function siteCheck(): Promise<HealthCheck> {
+  const origin = env("NEXT_PUBLIC_SITE_URL").replace(/\/$/, "") || "https://gradelings.com";
+  const title = "Live site";
+  let host: string;
+  try {
+    host = new URL(origin).hostname;
+  } catch {
+    return { id: "site", title, state: "off", summary: "The site address isn't a valid address.", rows: [], setup: "Set NEXT_PUBLIC_SITE_URL to the live address, such as https://gradelings.com." };
+  }
+  if (host === "localhost" || host === "127.0.0.1" || host.endsWith(".local")) {
+    return { id: "site", title, state: "off", summary: "The site address points at this computer, so there is no live site to load.", rows: [], setup: "Set NEXT_PUBLIC_SITE_URL to the live address, such as https://gradelings.com." };
+  }
+
+  const pages = await Promise.all(SITE_PAGES.map(async (path) => ({ path, got: await probe(origin + path, true) })));
+  const files = await Promise.all(SITE_FILES.map(async (path) => ({ path, got: await probe(origin + path) })));
+  if ([...pages, ...files].some((r) => isProbe(r.got) && r.got.headers.has(MAINTENANCE_HEADER) && r.path !== "/")) {
+    return { id: "site", title, state: "warn", summary: "Maintenance mode is on, so every page but the home page answers with the maintenance message.", rows: [], link: { label: "Open the site", href: origin } };
+  }
+
+  // The build files each page names. A different page often shares them, so each address is fetched once.
+  const assetPages = new Map<string, string>();
+  for (const { path, got } of pages) if (isProbe(got) && got.status === 200) for (const a of pageAssets(got.body)) if (!assetPages.has(a)) assetPages.set(a, path);
+  const assets = await Promise.all([...assetPages].map(async ([a, path]) => ({ a, path, got: await probe(origin + a) })));
+  const missing = assets.filter((x) => !isProbe(x.got) || x.got.status !== 200);
+
+  const rows: CheckRow[] = [];
+  const problems: string[] = [];
+  for (const { path, got } of pages) {
+    if (!isProbe(got)) {
+      rows.push({ label: path, value: `Page ${got.error}`, state: "down" });
+      problems.push(`${path} ${got.error}`);
+      continue;
+    }
+    const wrong = got.status !== 200 ? [`answered ${got.status}`] : pagePolicyProblems(got.body, got.headers.get("content-security-policy"));
+    const slow = got.ms > SITE_SLOW_MS;
+    rows.push({ label: path, value: wrong.length ? wrong.join(", ") : `Loaded in ${got.ms} ms`, state: wrong.length ? "down" : slow ? "warn" : "ok" });
+    if (wrong.length) problems.push(got.status !== 200 ? `${path} ${wrong[0]}` : `${path} has ${wrong.join(" and ")}`);
+  }
+  for (const { path, got } of files) {
+    const bad = !isProbe(got) ? got.error : got.status !== 200 ? `answered ${got.status}` : "";
+    rows.push({ label: path, value: bad || `Loaded in ${(got as Probe).ms} ms`, state: bad ? "down" : "ok" });
+    if (bad) problems.push(`${path} ${bad}`);
+  }
+  const checked = assets.length;
+  rows.push({
+    label: "Scripts and styles",
+    value: missing.length ? `${checked - missing.length} of ${checked} loaded; missing: ${missing.slice(0, 3).map((x) => x.a.split("?")[0].split("/").pop()).join(", ")}` : checked ? `All ${checked} loaded` : "None found on the pages",
+    state: missing.length ? "down" : checked ? "ok" : "warn",
+  });
+  if (missing.length) problems.push(`${plural(missing.length, "build file")} named by ${[...new Set(missing.map((x) => x.path))].join(", ")} didn't load`);
+
+  const slow = rows.filter((r) => r.state === "warn");
+  const state: CheckState = problems.length ? "down" : slow.length || !checked ? "warn" : "ok";
+  const summary = problems.length
+    ? `${problems[0].charAt(0).toUpperCase()}${problems[0].slice(1)}.${problems.length > 1 ? ` ${problems.length - 1} more problem${problems.length > 2 ? "s" : ""}.` : ""}`
+    : state === "warn"
+      ? "Everything answers, but something is slow or the pages named no build files."
+      : `All ${SITE_PAGES.length} pages and ${SITE_FILES.length} files load, each page with its security policy.`;
+  return { id: "site", title, state, summary, rows, link: { label: "Open the site", href: origin } };
 }
 
 export async function buildsCheck(): Promise<HealthCheck> {
@@ -1011,6 +1107,7 @@ export async function statusPages(): Promise<StatusPage[]> {
 const RUNNERS: Record<CheckId, (now: number) => Promise<HealthCheck>> = {
   database: () => databaseCheck(),
   uptime: (now) => uptimeCheck(now),
+  site: () => siteCheck(),
   deploys: (now) => deploysCheck(now),
   builds: () => buildsCheck(),
   errors: (now) => errorsCheck(now),

@@ -85,6 +85,7 @@ const day = (over: Partial<DayStat>): DayStat => ({
   perfect: 0,
   playSeconds: 0,
   bestRun: 0,
+  stories: 0,
   subjects: {},
   modes: {},
   ...over,
@@ -235,6 +236,23 @@ describe("Hub tiles", () => {
     show("little");
     expect(within(tile("Games")).getByText("🔒")).toBeInTheDocument();
     expect(within(tile("Lessons")).queryByText("🔒")).not.toBeInTheDocument();
+  });
+
+  it("opens the Story Library from its own tile, which stays free and goes with language arts", () => {
+    h.family = free;
+    const { unmount } = show();
+    expect(within(tile("Stories")).queryByText("🔒")).not.toBeInTheDocument();
+    fireEvent.click(tile("Stories"));
+    expect(window.location.hash).toBe("#/stories");
+    unmount();
+    h.settings = { ...h.settings, enabledSubjects: ["math", "science", "social"] };
+    const second = show();
+    expect(screen.queryByText("Stories")).not.toBeInTheDocument();
+    second.unmount();
+    h.settings = { ...h.settings, enabledSubjects: ["math", "language"] };
+    h.off = new Set(["story-library"]);
+    show();
+    expect(screen.queryByText("Stories")).not.toBeInTheDocument();
   });
 
   it("hides the tiles the admin switched off", () => {

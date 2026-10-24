@@ -259,4 +259,10 @@ export const lessons: GradeLessons = {
     ["Trout live in cool streams."],
     "a trout",
   ),
+  "science/wa-g1-parents-young": lesson(
+    ["Animal parents feed, protect and teach their young.", "Babies look like their parents, but not exactly.", "A baby kangaroo stays safe in its mother's pouch."],
+    "A baby bird chirps with its mouth open. Why?",
+    ["Baby birds can't find food yet.", "They call so a parent feeds them."],
+    "to get food",
+  ),
 };

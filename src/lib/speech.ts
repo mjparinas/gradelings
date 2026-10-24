@@ -296,18 +296,28 @@ function cancelAll() {
   current = undefined;
 }
 
+/** Told as a sequence plays: `onStart` as each piece starts (for read-along highlighting), `onDone` after the last. */
+export interface SpeechEvents {
+  onStart?: (index: number) => void;
+  onDone?: () => void;
+}
+
 /** Speaks pieces one after another, each in its own language, with optional pauses between them. */
-export function speakSegments(segments: readonly SpeechPiece[]) {
+export function speakSegments(segments: readonly SpeechPiece[], events: SpeechEvents = {}) {
   if (!canSpeak() || segments.length === 0) return;
   watch();
   cancelAll();
   const id = run;
   let i = 0;
   const next = () => {
-    if (id !== run || i >= segments.length) return;
-    const piece = segments[i++];
+    if (id !== run) return;
+    if (i >= segments.length) return events.onDone?.();
+    const index = i++;
+    const piece = segments[index];
     const go = () => {
-      if (id === run) queue(piece.text, undefined, piece.lang, next);
+      if (id !== run) return;
+      events.onStart?.(index);
+      queue(piece.text, undefined, piece.lang, next);
     };
     // Supertonic takes a moment to make each piece, so its pauses are shorter to feel the same.
     const pause = piece.pause && supertonicMightSpeak(piece.lang) ? piece.pause * SUPERTONIC_PAUSE_SCALE : piece.pause;

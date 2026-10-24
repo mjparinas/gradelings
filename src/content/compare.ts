@@ -59,7 +59,7 @@ export const COMPETITORS: Competitor[] = [
       },
       {
         topic: "Curriculum",
-        them: "Skills are mapped to provincial curricula in Canada and to state standards in the US, including Washington, Oregon, California, New York, Texas, Maine, Minnesota, Alaska, Alabama, Arizona, Arkansas, Florida, Illinois, Colorado, Pennsylvania and Ohio.",
+        them: "Skills are mapped to provincial curricula in Canada and to state standards in the US, including Washington, Oregon, California, New York, Texas, Maine, Minnesota, Alaska, Alabama, Arizona, Arkansas, Florida, Illinois, Colorado, Pennsylvania, Georgia and Ohio.",
         us: "Every unit is matched to a learning standard in your child's province or state, and the units are ordered the way that grade is taught there.",
       },
       {

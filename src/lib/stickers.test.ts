@@ -89,6 +89,7 @@ describe("moment stickers", () => {
     ["daily", (d) => { d.dailyDone = ["2026-10-10"]; }, () => {}],
     ["speed", (d) => { d.modes.speed = 1; }, (d) => { d.modes.practice = 3; }],
     ["challenge", (d) => { d.units = { [KEY]: unitAt(KEY, 3) }; }, (d) => { d.units = { [KEY]: unitAt(KEY, 2) }; }],
+    ["story", (d) => { d.totals.stories = 1; }, () => {}],
     ["arcade", (d) => { d.gamesPlayed = { munchers: 1 }; }, () => {}],
     ["shopper", (d) => { d.owned = ["hat"]; }, () => {}],
     ["all-subjects", (d) => { d.subjects = { math: { answers: 1, correct: 0 }, language: { answers: 1, correct: 0 }, science: { answers: 1, correct: 0 }, social: { answers: 1, correct: 0 } }; },

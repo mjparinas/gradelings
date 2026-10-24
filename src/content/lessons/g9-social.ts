@@ -1153,4 +1153,34 @@ export const lessons: GradeLessons = {
     ["Ohio's 1851 constitution changed how judges are picked.", "Voters elect them, for six-year terms."],
     "by the voters",
   ),
+  "social/ga-g9-georgia-local-government": lesson(
+    ["Federalism shares power between the nation and the states.", "Georgia's counties and cities get their powers from the state and pay for services with property and sales taxes.", "A referendum lets voters decide an issue directly; a recall can remove an official."],
+    "Which kind of power, like running schools, is kept by the states?",
+    ["The 10th Amendment keeps them.", "They are reserved."],
+    "a reserved power",
+  ),
+  "social/ga-g9-congress-president": lesson(
+    ["Representatives serve 2-year terms and senators 6-year terms.", "A president must be 35, a natural-born citizen and a resident for 14 years.", "The Electoral College elects the president: 270 of 538 votes wins."],
+    "How many electoral votes does a candidate need to win?",
+    ["There are 538 in all.", "A majority is more than half."],
+    "270",
+  ),
+  "social/ga-g9-criminal-justice": lesson(
+    ["The 4th, 5th, 6th and 14th Amendments protect due process.", "Felonies are serious crimes; misdemeanors are less serious.", "Criminal guilt must be proved beyond a reasonable doubt; civil cases need only more likely than not."],
+    "Is shoplifting a small item usually a felony or a misdemeanor?",
+    ["It is a less serious crime.", "Less serious crimes are misdemeanors."],
+    "a misdemeanor",
+  ),
+  "social/ga-g9-money-basics": lesson(
+    ["Gross pay is what you earn; net pay is what is left after taxes and deductions.", "A budget lists income, expenses and savings.", "Debit takes money from your account; credit is borrowed and may cost interest."],
+    "Your gross pay is $500 and $80 is taken out. What is your net pay?",
+    ["Net pay is gross pay minus deductions.", "500 − 80 = 420"],
+    "$420",
+  ),
+  "social/ga-g9-credit-investing": lesson(
+    ["Payment history is the biggest part of a credit score.", "Compound interest earns interest on interest, so savings grow faster over time.", "Higher returns come with higher risk; diversifying lowers risk."],
+    "What is the biggest part of a credit score?",
+    ["Lenders want to know if you repay.", "Paying on time matters most."],
+    "payment history",
+  ),
 };

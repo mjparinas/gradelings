@@ -541,4 +541,22 @@ export const lessons: GradeLessons = {
     ["Oil formed from ancient living things over millions of years.", "We use it much faster than it forms, so it will run out."],
     "no, it is nonrenewable",
   ),
+  "science/tx-g1-heat": lesson(
+    ["Heat melts, cooks and dries things.", "Some changes go back: melted butter can get hard again.", "Some do not: a cooked egg can't go back."],
+    "Can a cooked egg turn back to raw?",
+    ["Cooking changes the egg for good."],
+    "no",
+  ),
+  "science/ga-g3-rocks-and-soil": lesson(
+    ["Earth is made of rocks. They come in many sizes and shapes.", "Soil is tiny pieces of rock mixed with bits of dead plants and animals.", "Soils differ in colour, texture and how much water they hold. Sand drains fast. Clay holds water."],
+    "Which soil would drain water fastest, sand or clay?",
+    ["Sand has big gaps between its grains.", "Water slips through big gaps quickly."],
+    "sand",
+  ),
+  "science/ga-g3-georgia-habitats": lesson(
+    ["A habitat gives a living thing food, water and shelter.", "Georgia has mountains, the Piedmont, the Coastal Plain, the Okefenokee Swamp and the coast.", "Animals have adaptations, like camouflage or hibernation, that suit their habitat."],
+    "Where in Georgia would you most likely find an alligator?",
+    ["Alligators need warm water.", "Swamps are warm and wet."],
+    "in the Okefenokee Swamp",
+  ),
 };

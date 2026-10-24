@@ -224,6 +224,22 @@ async function everyDevice(device, page) {
     }
   }
 
+  // Story Library and a story page: no sideways scroll, page buttons on screen and tappable.
+  await page.goto(`${BASE}/play/#/stories`);
+  await page.getByRole("heading", { name: /Story Library/ }).waitFor();
+  await page.waitForTimeout(300);
+  await noSideScroll(device, page, "story library");
+  await checkTargets(device, "story library: story cards", page.locator("main [data-story]"), KID_TARGET);
+  await page.goto(`${BASE}/play/#/stories/wiggly-tooth`);
+  const nextPage = page.getByRole("button", { name: /Next page/ });
+  await nextPage.waitFor();
+  await page.waitForTimeout(300);
+  await noSideScroll(device, page, "story page");
+  const np = await onScreen(page, nextPage);
+  record(device, "story page: Next page on screen", np.ok, np.detail);
+  await checkTargets(device, "story page: page buttons", page.getByRole("button", { name: /Next page|Previous page|Read this page to me/ }), KID_TARGET);
+  await shot(page, device, "5-story");
+
   // Parent reports
   await page.goto(`${BASE}/parents/`);
   await enterPin(page, true);
@@ -231,7 +247,7 @@ async function everyDevice(device, page) {
   await page.getByRole("heading", { name: /report/i }).first().waitFor();
   await page.waitForTimeout(400);
   await noSideScroll(device, page, "parent reports");
-  await shot(page, device, "5-parent-reports");
+  await shot(page, device, "6-parent-reports");
 }
 
 /** The teacher area, on its own browser context so the teacher's sign-in never touches the kids' app checks. */

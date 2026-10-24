@@ -134,6 +134,25 @@ export async function markSynced(ids: string[]): Promise<void> {
   });
 }
 
+/** Marks every event as waiting to upload again, for when the server's database was replaced by an older copy. */
+export async function markAllUnsynced(): Promise<void> {
+  const db = await open();
+  if (!db) {
+    for (const r of memory.events.values()) r.synced = 0;
+    return;
+  }
+  await tx("events", "readwrite", (s) => {
+    const req = s.index("synced").openCursor(IDBKeyRange.only(1));
+    req.onsuccess = () => {
+      const cursor = req.result;
+      if (cursor) {
+        cursor.update({ ...cursor.value, synced: 0 });
+        cursor.continue();
+      }
+    };
+  });
+}
+
 export async function deleteProfileEvents(profileId: string): Promise<void> {
   const db = await open();
   if (!db) {

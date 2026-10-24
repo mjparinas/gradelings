@@ -1105,4 +1105,58 @@ export const lessons: GradeLessons = {
     ["It was ratified in 1865, right after the Civil War.", "It is the first of the three Reconstruction amendments."],
     "the 13th Amendment",
   ),
+  "social/ga-g8-georgia-geography": lesson(
+    ["Georgia's five regions are the Blue Ridge, Valley and Ridge, Appalachian Plateau, Piedmont and Coastal Plain.", "The Fall Line, where the Piedmont meets the Coastal Plain, gave Columbus, Macon and Augusta water power.", "Rivers, ports and the barrier islands shaped where Georgians live and work."],
+    "Why did cities grow along the Fall Line?",
+    ["Boats could not go past the falls.", "Falling water turned mills."],
+    "boats stopped there and falling water gave power",
+  ),
+  "social/ga-g8-first-peoples-colony": lesson(
+    ["Mississippian people built mounds; the Muscogee (Creek) and Cherokee lived in Georgia at European contact.", "The Charter of 1732 gave three reasons: philanthropy, economics and defense.", "Oglethorpe founded Savannah in 1733 with help from Tomochichi and Mary Musgrove."],
+    "Which reason for founding Georgia was about protecting South Carolina from Spanish Florida?",
+    ["Georgia was a buffer.", "A buffer protects."],
+    "defense",
+  ),
+  "social/ga-g8-revolution": lesson(
+    ["British taxes after the French and Indian War, like the Stamp Act, angered colonists.", "Button Gwinnett, Lyman Hall and George Walton signed the Declaration for Georgia.", "Patriots won at Kettle Creek in 1779; the Articles of Confederation were too weak and led to the Constitution."],
+    "Name one weakness of the Articles of Confederation.",
+    ["Think about money.", "Congress had to ask the states for it."],
+    "Congress could not collect taxes",
+  ),
+  "social/ga-g8-growth-removal": lesson(
+    ["Land lotteries and the headright system gave land to settlers; the Yazoo Land Fraud was a bribery scandal.", "The cotton gin and railroads made Georgia grow, and slavery grew with cotton.", "After gold was found at Dahlonega, Georgia and President Jackson forced the Cherokee west on the Trail of Tears."],
+    "In Worcester v. Georgia, what did the Supreme Court decide?",
+    ["John Marshall wrote the ruling.", "It was about Cherokee land."],
+    "Georgia's laws did not apply on Cherokee land",
+  ),
+  "social/ga-g8-civil-war-reconstruction": lesson(
+    ["Slavery and states' rights divided the nation; Georgia seceded in 1861.", "Sherman captured Atlanta in 1864 and marched to Savannah.", "The 13th, 14th and 15th Amendments ended slavery and promised citizenship and the vote; sharecropping kept many poor."],
+    "Which amendment ended slavery?",
+    ["It was ratified in 1865.", "It comes before the 14th."],
+    "the 13th Amendment",
+  ),
+  "social/ga-g8-new-south-to-wwii": lesson(
+    ["Henry Grady called for a New South with factories.", "Jim Crow laws, the white primary and violence denied African Americans their rights.", "The boll weevil and the Depression hurt farmers; the New Deal and World War II brought jobs."],
+    "What did the boll weevil destroy?",
+    ["It is a beetle.", "It ate Georgia's main crop."],
+    "cotton crops",
+  ),
+  "social/ga-g8-modern-georgia": lesson(
+    ["Dr. Martin Luther King Jr. and John Lewis led the civil rights movement; the Albany Movement fought segregation.", "Maynard Jackson became Atlanta's first Black mayor in 1973.", "Jimmy Carter became president, and Atlanta hosted the 1996 Olympics."],
+    "Which Georgian served as state senator, governor and president?",
+    ["He is from Plains.", "He was president from 1977 to 1981."],
+    "Jimmy Carter",
+  ),
+  "social/ga-g8-governing-georgia": lesson(
+    ["The General Assembly makes Georgia's laws; the governor carries them out; the courts interpret them.", "A bill passes both houses, then the governor signs or vetoes it.", "Juvenile courts treat young people differently: unruly acts are offenses only for young people."],
+    "Who can veto a bill passed by the General Assembly?",
+    ["It is the head of the executive branch.", "They work at the State Capitol."],
+    "the governor",
+  ),
+  "social/ga-g8-georgia-economy": lesson(
+    ["Roads, Hartsfield-Jackson airport, the ports of Savannah and Brunswick, and railroads move Georgia's goods.", "Entrepreneurs take risks hoping to earn a profit.", "A budget plans income, spending and saving; debt must be paid back with interest."],
+    "What is profit?",
+    ["Start with the money earned.", "Take away the costs."],
+    "money left after costs are paid",
+  ),
 };

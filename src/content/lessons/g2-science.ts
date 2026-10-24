@@ -469,4 +469,16 @@ export const lessons: GradeLessons = {
     ["Seashells come from animals that live in the sea."],
     "the land was once covered by sea",
   ),
+  "science/sky-and-seasons": lesson(
+    ["The sun comes up in the morning and goes down in the evening.", "The seasons go spring, summer, fall, winter.", "Leaves change colour and fall in fall."],
+    "Which season comes after winter?",
+    ["Spring, summer, fall, winter… then spring again."],
+    "spring",
+  ),
+  "science/ga-g2-sun-stars": lesson(
+    ["The sun looks bright because it is the closest star to Earth.", "Earth spins once a day, so the sun rises in the east and sets in the west.", "Shadows point away from the sun: west in the morning, shortest around noon.", "Days in Georgia are longest in June and shortest in December."],
+    "In the evening the sun is in the west. Which way does your shadow point?",
+    ["Shadows point away from the sun.", "Away from west is east."],
+    "east",
+  ),
 };

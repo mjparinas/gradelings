@@ -277,4 +277,22 @@ export const lessons: GradeLessons = {
     ["The sun warms things it shines on."],
     "warmer",
   ),
+  "science/weather-and-seasons": lesson(
+    ["The seasons go spring, summer, fall, winter.", "Winter is the coldest season. Summer is the warmest.", "The sun lights the sky in the daytime."],
+    "Which season comes after fall?",
+    ["Spring, summer, fall, then winter."],
+    "winter",
+  ),
+  "science/wa-gk-weather-safety": lesson(
+    ["A forecast tells what the weather will be.", "It helps us get ready for storms, snow or heat.", "If you hear thunder, go inside."],
+    "A very hot day is coming. What helps?",
+    ["Heat makes us thirsty.", "Drink lots of water."],
+    "drink lots of water",
+  ),
+  "science/tx-k-magnets-light": lesson(
+    ["Magnets pull some metal things, like paper clips.", "We need light to see.", "When something blocks light, it makes a shadow."],
+    "Will a magnet pull a wooden block?",
+    ["Magnets pull some metals.", "Wood is not metal."],
+    "no",
+  ),
 };
