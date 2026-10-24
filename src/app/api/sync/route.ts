@@ -9,6 +9,7 @@ import { UPCOMING_FRAMEWORKS } from "@/content/frameworks";
 import { GRADE_ORDER } from "@/content/subjects";
 import { familyCountry } from "@/lib/coppa";
 import { getFamilyRow, toFamilyInfo } from "@/server/family";
+import { syncEpoch } from "@/server/syncEpoch";
 
 // Two-way sync. Devices upload events they haven't sent yet, plus any profile
 // or settings changes, and download everything new since their cursor.
@@ -200,6 +201,7 @@ export async function POST(req: Request) {
 
   return json({
     accepted,
+    epoch: syncEpoch(),
     cursor: rows.length ? Number(rows[rows.length - 1].seq) : cursor,
     more: rows.length === PAGE,
     events: rows.map((r) => JSON.parse(r.data)),
