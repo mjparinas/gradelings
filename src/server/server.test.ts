@@ -206,6 +206,21 @@ describe("sync", () => {
     expect(again.events).toHaveLength(2);
   });
 
+  it("names its database so devices can tell when it was replaced", async () => {
+    const { cookie } = await newAccount("epoch@example.com");
+    const first = await (await sync.POST(post("/api/sync/", {}, cookie))).json();
+    expect(first.epoch).toMatch(/^[0-9a-f]{16}$/);
+    expect((await (await sync.POST(post("/api/sync/", {}, cookie))).json()).epoch).toBe(first.epoch);
+    process.env.SYNC_EPOCH = "after-restore";
+    try {
+      const changed = (await (await sync.POST(post("/api/sync/", {}, cookie))).json()).epoch;
+      expect(changed).toMatch(/^[0-9a-f]{16}$/);
+      expect(changed).not.toBe(first.epoch);
+    } finally {
+      delete process.env.SYNC_EPOCH;
+    }
+  });
+
   it("ignores events for children that belong to another family", async () => {
     const a = await newAccount("fam-a@example.com");
     const b = await newAccount("fam-b@example.com");

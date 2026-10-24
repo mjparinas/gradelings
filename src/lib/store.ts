@@ -45,6 +45,8 @@ export interface Toast {
 
 export interface SyncState {
   cursor: number;
+  /** Which server database the cursor and the events' "sent" marks belong to (see src/server/syncEpoch.ts). */
+  epoch?: string;
   lastSyncAt?: number;
   status: "idle" | "syncing" | "error" | "offline" | "signed-out";
   error?: string;
@@ -386,7 +388,7 @@ export const useStore = create<State>()((set, get) => ({
   setSync: (patch) => {
     const sync = { ...get().sync, ...patch };
     set({ sync });
-    save("sync", { cursor: sync.cursor, lastSyncAt: sync.lastSyncAt, dirtyProfiles: sync.dirtyProfiles, dirtyFamily: sync.dirtyFamily });
+    save("sync", { cursor: sync.cursor, epoch: sync.epoch, lastSyncAt: sync.lastSyncAt, dirtyProfiles: sync.dirtyProfiles, dirtyFamily: sync.dirtyFamily });
   },
 
   mergeRemote: ({ events, profiles, settings, family, classwork }) => {

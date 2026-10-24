@@ -100,6 +100,11 @@ class FakeObjectStore {
             () =>
               i < keys.length
                 ? {
+                    value: structuredClone(this.data.rows.get(keys[i])),
+                    update: (v: unknown) => {
+                      this.t.write();
+                      this.data.rows.set(keys[i], structuredClone(v));
+                    },
                     delete: () => {
                       this.t.write();
                       this.data.rows.delete(keys[i]);
@@ -205,6 +210,15 @@ describe("localdb on IndexedDB", () => {
     expect(idb.dbs.get("grademap")!.db.stores.get("events")!.rows.has("missing")).toBe(false);
   });
 
+  it("queues every event for upload again when asked", async () => {
+    const db = await load();
+    await db.putEvents([ev("a"), ev("b"), ev("c")]);
+    await db.markSynced(["a", "b"]);
+    await db.markAllUnsynced();
+    expect((await db.unsyncedEvents()).map((e) => e.id)).toEqual(["a", "b", "c"]);
+    expect((await db.allEvents()).map((e) => e.id).sort()).toEqual(["a", "b", "c"]);
+  });
+
   it("never downgrades an event the server already has", async () => {
     const db = await load();
     await db.putEvents([ev("a")], 1);
@@ -288,6 +302,8 @@ describe("localdb without IndexedDB (private modes)", () => {
     expect((await db.unsyncedEvents(2)).map((e) => e.id)).toEqual(["a1", "a2"]);
     await db.markSynced(["a1", "nope"]);
     expect((await db.unsyncedEvents()).map((e) => e.id)).toEqual(["a2", "b1"]);
+    await db.markAllUnsynced();
+    expect((await db.unsyncedEvents()).map((e) => e.id).sort()).toEqual(["a1", "a2", "b1", "s"]);
 
     await db.deleteProfileEvents("a");
     expect((await db.allEvents()).map((e) => e.id)).toEqual(["b1", "s"]);

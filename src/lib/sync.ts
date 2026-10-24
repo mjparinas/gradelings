@@ -17,6 +17,8 @@ let running: Promise<void> | null = null;
 
 interface SyncResponse {
   accepted: string[];
+  /** Names the server database; absent from older servers. */
+  epoch?: string;
   cursor: number;
   more: boolean;
   events: AppEvent[];
@@ -72,9 +74,21 @@ async function doSync(): Promise<void> {
       if (!res.ok) throw new Error(`Sync failed (${res.status})`);
       const data = (await res.json()) as SyncResponse;
       await localdb.markSynced(data.accepted);
+      // A different epoch means the server's database was replaced (restored from a backup). What this device
+      // marked as sent, and how far it had downloaded, no longer holds: send everything again and start over.
+      // Events have unique ids, so the server keeps one copy of each however often they arrive.
+      const known = state.sync.epoch;
+      const replaced = Boolean(data.epoch && known && data.epoch !== known);
+      if (replaced) await localdb.markAllUnsynced();
       useStore.getState().mergeRemote(data);
-      useStore.getState().setSync({ cursor: data.cursor, lastSyncAt: Date.now(), dirtyProfiles: [], dirtyFamily: false });
-      if (!data.more && events.length < BATCH) break;
+      useStore.getState().setSync({
+        cursor: replaced ? 0 : data.cursor,
+        epoch: data.epoch ?? known,
+        lastSyncAt: Date.now(),
+        dirtyProfiles: [],
+        dirtyFamily: false,
+      });
+      if (!replaced && !data.more && events.length < BATCH) break;
     }
     useStore.getState().setSync({ status: "idle" });
   } catch (e) {
