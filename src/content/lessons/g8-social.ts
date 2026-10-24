@@ -1051,4 +1051,28 @@ export const lessons: GradeLessons = {
     ["It was ratified in 1865.", "It came first of the three Reconstruction amendments."],
     "the 13th Amendment",
   ),
+  "social/wa-g5-thirteen-colonies": lesson(
+    ["The thirteen colonies were in three regions: New England, Middle and Southern.", "The Southern colonies grew cash crops, crops grown to sell, like tobacco, rice and indigo.", "Early self-government included the Mayflower Compact and the House of Burgesses."],
+    "What is a cash crop?",
+    ["Some crops are eaten at home.", "Others are grown to make money."],
+    "a crop grown to sell",
+  ),
+  "social/oh-g8-westward": lesson(
+    ["After the Revolution, settlers moved west into the Ohio Country, then across the Mississippi.", "The Louisiana Purchase (1803) doubled the nation's size, and Lewis and Clark explored it.", "Westward growth forced Native nations from their homelands, as on the Trail of Tears after the Indian Removal Act of 1830."],
+    "Which event doubled the size of the United States in 1803?",
+    ["France sold a huge area west of the Mississippi.", "It was named for the territory of Louisiana."],
+    "the Louisiana Purchase",
+  ),
+  "social/oh-g8-us-timeline": lesson(
+    ["Put events in order by comparing their years.", "The Declaration of Independence was in 1776 and the Constitution was written in 1787.", "Ohio became a state in 1803, the Civil War lasted from 1861 to 1865, and Reconstruction followed until 1877."],
+    "Put in order: Ohio statehood, the Civil War, the Constitution.",
+    ["The years are 1803, 1861 and 1787.", "The smallest year comes first."],
+    "the Constitution, Ohio statehood, the Civil War",
+  ),
+  "social/oh-g8-rights-citizenship": lesson(
+    ["The Bill of Rights, the first ten amendments, protects rights like speech, religion and a fair trial.", "At first, many people were left out: enslaved people, women and most people without property could not vote.", "After the Civil War, the 13th, 14th and 15th Amendments ended slavery, made citizenship a right and barred race limits on voting."],
+    "Which amendment ended slavery in the United States?",
+    ["It was ratified in 1865, right after the Civil War.", "It is the first of the three Reconstruction amendments."],
+    "the 13th Amendment",
+  ),
 };

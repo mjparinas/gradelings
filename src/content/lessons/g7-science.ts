@@ -577,4 +577,40 @@ export const lessons: GradeLessons = {
     ["A landslide happens in minutes.", "Mountain building takes millions of years."],
     "fast",
   ),
+  "science/periodic-table-9": lesson(
+    ["Rows are periods. Elements in a period have the same number of electron shells.", "Columns are groups. Group 18 elements, like neon, have a full outer shell.", "Metals are shiny, bend and conduct electricity. Metalloids, like silicon, are in between.", "Count the numbers in an electron arrangement to find the shells: 2, 8, 1 has 3 shells."],
+    "Sodium has electrons arranged 2, 8, 1. Which period is it in?",
+    ["Each number is one shell.", "2, 8, 1 is three shells."],
+    "period 3",
+  ),
+  "science/work-energy-8": lesson(
+    ["In science, work means a force moves something a distance: work = force × distance.", "Work and energy are measured in joules (J).", "No machine is perfect: some energy is wasted, often as heat.", "Efficiency = useful energy out ÷ energy in × 100%."],
+    "A motor takes in 500 J and gives 350 J of useful energy. What is its efficiency?",
+    ["Efficiency = useful ÷ total × 100%.", "350 ÷ 500 = 0.7.", "0.7 × 100% = 70%."],
+    "70%",
+  ),
+  "science/oh-g7-weather": lesson(
+    ["Warm air is less dense, so it rises. Cold air sinks.", "Humidity is the amount of water vapour in the air.", "Water vapour cools and condenses to form clouds.", "Air masses meet at fronts, which bring weather changes. An anemometer measures wind speed."],
+    "Warm, moist air rises and cools. What forms?",
+    ["Cooling vapour condenses into droplets.", "Lots of droplets make clouds."],
+    "clouds",
+  ),
+  "science/oh-g7-climate": lesson(
+    ["Climate is the average weather over many years.", "Greenhouse gases, like carbon dioxide, trap heat. Burning fossil fuels is the main cause of recent warming.", "Using renewable energy reduces carbon dioxide emissions.", "Lake-effect snow makes places just east of Lake Ontario some of the snowiest in the eastern United States."],
+    "Which is a greenhouse gas: oxygen or carbon dioxide?",
+    ["Greenhouse gases trap heat near Earth's surface.", "Carbon dioxide does this."],
+    "carbon dioxide",
+  ),
+  "science/oh-g7-seasons-tides": lesson(
+    ["Earth's axis is tilted about 23.5°. Without the tilt there would be almost no seasons.", "When a hemisphere tilts toward the Sun, sunlight hits more directly and it has summer.", "Earth orbits the Sun about every 365 days.", "The Moon's and Sun's gravity pull on the oceans to make tides."],
+    "When the Northern Hemisphere tilts toward the Sun, what season does it have?",
+    ["Tilted toward the Sun means more direct sunlight.", "More direct sunlight means summer."],
+    "summer",
+  ),
+  "science/oh-g7-water": lesson(
+    ["A watershed is all the land that drains into one river or lake.", "An aquifer is an underground layer of rock that holds water, such as the Ogallala or the Edwards.", "Runoff can carry pollution. Wetlands filter water and slow floods."],
+    "What is an underground layer of rock that holds usable water called?",
+    ["People pump water up from it for farms and towns."],
+    "an aquifer",
+  ),
 };

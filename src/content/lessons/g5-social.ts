@@ -757,4 +757,16 @@ export const lessons: GradeLessons = {
     ["Freedom of speech is in the Bill of Rights.", "It is listed with religion, press and assembly.", "That is the First Amendment."],
     "the First Amendment",
   ),
+  "social/oh-g5-americas-geography": lesson(
+    ["The Western Hemisphere is North and South America.", "Big features: the Andes and Rockies, the Amazon rainforest and River, and the Panama Canal.", "A political map shows countries and borders. A physical map shows landforms."],
+    "What is the largest rainforest in the world?",
+    ["It is in South America.", "It is named after a great river."],
+    "the Amazon rainforest",
+  ),
+  "social/oh-g5-early-americas": lesson(
+    ["A civilization has cities, government, specialized jobs, writing and social classes.", "The Olmec and Maya lived in Mexico and Central America. The Aztec built Tenochtitlan.", "The Inca linked their empire with roads and rope bridges. Mississippians built mound cities."],
+    "How did the Inca connect their huge empire?",
+    ["Their empire stretched across the Andes mountains.", "They built a long road system."],
+    "with roads and rope bridges",
+  ),
 };

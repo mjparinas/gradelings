@@ -301,4 +301,10 @@ export const lessons: GradeLessons = {
     ["Think about what an inventor does.", "An inventor thinks of a new idea."],
     "an inventor",
   ),
+  "social/oh-k-ohio-symbols": lesson(
+    ["Ohio is our state. The United States is our country.", "Ohio's flag has a swallowtail shape, with a notch at the end.", "Our state bird is the red cardinal. Our state tree is the buckeye."],
+    "What is Ohio's state bird?",
+    ["It is a red bird.", "You can see it in winter too."],
+    "the cardinal",
+  ),
 };
