@@ -739,6 +739,48 @@ export const lessons: GradeLessons = {
     ["Florida is in the southeastern corner of the country.", "It is in the Southeast."],
     "the Southeast",
   ),
+  "social/pa-g3-pennsylvania-basics": lesson(
+    ["Pennsylvania is a Commonwealth with 67 counties. Harrisburg is the capital.", "On December 12, 1787 it became the second state to ratify the Constitution.", "Symbols include the white-tailed deer, mountain laurel and ruffed grouse."],
+    "Which state was the second to ratify the Constitution?",
+    ["It happened on December 12, 1787.", "It was Pennsylvania."],
+    "Pennsylvania",
+  ),
+  "social/pa-g3-local-government": lesson(
+    ["Local government provides services like police, fire and trash pickup.", "Voters elect mayors, councils and school boards.", "A bill passes the General Assembly and the governor signs it."],
+    "Who signs a bill to make it a state law?",
+    ["The leader of the state.", "The governor signs it."],
+    "the governor",
+  ),
+  "social/pa-g3-documents-and-ideals": lesson(
+    ["The Declaration of Independence and the Constitution were written in Philadelphia.", "The Bill of Rights protects people's rights, like free speech.", "Citizens have rights and responsibilities, like voting and obeying laws."],
+    "Where were the Declaration and the Constitution written?",
+    ["It is a Pennsylvania city.", "They were written in Philadelphia."],
+    "Philadelphia",
+  ),
+  "social/pa-g3-land-and-people": lesson(
+    ["Pennsylvania has mountains, rivers and Lake Erie.", "Philadelphia, Pittsburgh and Erie are large cities.", "Land shapes where people live, and people change the land."],
+    "Which Great Lake is on Pennsylvania's northwest border?",
+    ["Pennsylvania has a short shore there.", "It is Lake Erie."],
+    "Lake Erie",
+  ),
+  "social/pa-g3-penn-and-newcomers": lesson(
+    ["The Lenape lived in the Delaware Valley long before Penn. Many Lenape live today in Oklahoma and elsewhere.", "William Penn founded Pennsylvania in 1681 as a place of religious freedom.", "Many groups came later, including Germans, Quakers and the Amish."],
+    "Why did William Penn found Pennsylvania?",
+    ["He was a Quaker.", "It was a place of religious freedom."],
+    "for religious freedom",
+  ),
+  "social/pa-g3-work-and-resources": lesson(
+    ["Scarcity means there is not enough of something for everyone.", "Pennsylvania has coal, steel, oil and railroads.", "Entrepreneurs like Milton Hershey started businesses."],
+    "What is opportunity cost?",
+    ["It is what you give up.", "It is the next best choice you give up."],
+    "the next best choice you give up",
+  ),
+  "social/pa-g3-money-skills": lesson(
+    ["A budget plans how to spend and save your money.", "People pay with cash, debit cards or credit. Credit must be paid back.", "Insurance and savings help when something goes wrong."],
+    "Sam earns $20 and spends $12. How much is left?",
+    ["Subtract.", "20 − 12 = 8."],
+    "$8",
+  ),
   "social/il-g3-illinois-land": lesson(
     ["Illinois is in the Midwest, with Lake Michigan to the northeast.", "The Mississippi River is its west border and the Ohio River its south border.", "Glaciers flattened most of the land, which is why it is good for farms."],
     "Which river forms Illinois's western border?",

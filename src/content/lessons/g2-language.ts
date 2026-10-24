@@ -193,4 +193,34 @@ export const lessons: GradeLessons = {
     ["Facts teach readers.", "To teach is to inform."],
     "inform",
   ),
+  "language/pa-g2-rhyme-schemes-and-sayings": lesson(
+    ["A rhyme scheme uses letters for the line endings that rhyme.", "moon, night, spoon, light is ABAB.", "A simile uses like or as. An idiom means more than its words."],
+    "Line endings: day, sea, play, tree. What is the rhyme pattern?",
+    ["Lines 1 and 3 rhyme.", "Lines 2 and 4 rhyme."],
+    "ABAB",
+  ),
+  "language/pa-g2-authors-purpose-and-evidence": lesson(
+    ["An author writes to inform, to persuade or to entertain.", "An opinion is what the author thinks. A reason or fact backs it up.", "Two texts on one topic can share facts or tell different ones."],
+    "A book of facts about whales has the purpose to…",
+    ["Facts teach readers.", "To teach is to inform."],
+    "inform",
+  ),
+  "language/pa-g2-new-words": lesson(
+    ["Prefixes like re- and un- change a word’s meaning. Re- means again and un- means not.", "Word clues in a sentence help you find a meaning.", "Words that mean almost the same are synonyms."],
+    "Unlock means…",
+    ["Un- means not.", "To unlock is to open a lock."],
+    "to open a lock",
+  ),
+  "language/pa-g2-writing-moves": lesson(
+    ["Start with a topic sentence. Add facts or details.", "Use linking words like because, also and but.", "End with a closing sentence."],
+    "Which linking word fits? “I like soup, ___ it is warm.”",
+    ["A reason is coming.", "Because shows a reason."],
+    "because",
+  ),
+  "language/pa-g2-prove-it": lesson(
+    ["Read the passage closely.", "Find the sentence that proves your answer.", "The best evidence matches the question."],
+    "“Mei fed the birds every morning.” What does Mei do each day?",
+    ["Look for each morning.", "She feeds the birds."],
+    "she feeds the birds",
+  ),
 };

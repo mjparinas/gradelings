@@ -541,6 +541,42 @@ export const lessons: GradeLessons = {
     ["Many were told aloud before they were written down.", "That is called an oral tradition."],
     "by telling them aloud",
   ),
+  "social/pa-g2-pennsylvania-past": lesson(
+    ["William Penn started Pennsylvania in 1681. Philadelphia was planned in 1682.", "Independence Hall and the Liberty Bell are in Philadelphia.", "Farms, coal mines and steel mills changed how people worked."],
+    "Who started the colony of Pennsylvania?",
+    ["He was a Quaker.", "It was William Penn."],
+    "William Penn",
+  ),
+  "social/pa-g2-government": lesson(
+    ["Rules and laws help communities stay safe and fair.", "Town leaders include mayors and councils. Harrisburg is the state capital.", "The president and Congress work in Washington, D.C."],
+    "Where do Pennsylvania's lawmakers meet?",
+    ["It is the state capital.", "They meet in Harrisburg."],
+    "Harrisburg",
+  ),
+  "social/pa-g2-land-and-weather": lesson(
+    ["Pennsylvania has rivers, mountains and a shore on Lake Erie.", "A physical map shows land and water. A political map shows borders.", "Floods, droughts and snowstorms can change places."],
+    "Which map shows state borders?",
+    ["The word has to do with government.", "A political map shows borders."],
+    "a political map",
+  ),
+  "social/pa-g2-money-and-choices": lesson(
+    ["People earn income and use it to pay for needs and wants.", "A bank keeps savings safe. Saving helps you reach a goal.", "Taxes pay for roads, parks and schools."],
+    "What do taxes help pay for?",
+    ["Think of things everyone shares.", "They pay for roads, parks and schools."],
+    "roads, parks and schools",
+  ),
+  "social/pa-g2-timelines-and-sources": lesson(
+    ["A timeline puts events in order, earliest first.", "A primary source comes from the time, like a letter or photo.", "A fact can be proved. An opinion is what someone thinks."],
+    "A letter written in 1776 is which kind of source?",
+    ["It was written at that time.", "It is a primary source."],
+    "a primary source",
+  ),
+  "social/pa-g2-remembering-together": lesson(
+    ["We remember people and events with holidays and monuments.", "The Declaration of Independence and the Constitution are important documents.", "Countries work together on problems like clean water."],
+    "Why do we have monuments?",
+    ["They help us remember.", "To remember people and events."],
+    "to remember people and events",
+  ),
   "social/il-g2-reading-maps": lesson(
     ["A map is a drawing of a place seen from above. North is usually at the top.", "On a grid map, find the column letter, then the row number.", "The key explains symbols, like a star for a capital city."],
     "On a grid map, the park is in square B3. How do you find it?",
