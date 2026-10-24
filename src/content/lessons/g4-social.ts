@@ -1183,6 +1183,48 @@ export const lessons: GradeLessons = {
     ["Subtract the earlier year.", "1871 − 1818 = 53."],
     "53 years",
   ),
+  "social/nj-g4-lenape": lesson(
+    ["The Lenape (Lenni-Lenape) lived in what is now New Jersey long before Europeans came. Their homeland is called Lenapehoking.", "They farmed corn, beans and squash, fished and traveled by dugout canoe. Many places, like Hackensack and Passaic, have Lenape names.", "European settlement took Lenape land and lives. Lenape nations and communities live today in Oklahoma, Wisconsin and New Jersey."],
+    "Where do place names like Hackensack and Passaic come from?",
+    ["They are older than the English names.", "They come from the Lenape language."],
+    "the Lenape language",
+  ),
+  "social/nj-g4-colony": lesson(
+    ["The Dutch (New Netherland) and Swedes (New Sweden) settled first. Bergen, now part of Jersey City, was the first lasting European town in 1660.", "The English took over in 1664 and named the colony after the island of Jersey. Quakers in West Jersey believed in religious freedom.", "Indentured servants worked for a set number of years. Enslaved Africans were forced to work for life with no pay."],
+    "How was slavery different from indentured servitude?",
+    ["Indentured servants became free after their years were up.", "Enslaved people were held for life, and so were their children."],
+    "slavery was for life",
+  ),
+  "social/nj-g4-revolution": lesson(
+    ["New Jersey was the Crossroads of the Revolution: armies crossed it between New York and Philadelphia.", "Washington crossed the Delaware on December 25, 1776, and won at Trenton and Princeton. His army survived a hard winter at Morristown.", "William Livingston was the first state governor. The New Jersey Plan asked for an equal vote for each state, and New Jersey became the third state in 1787."],
+    "Why was the win at Trenton important?",
+    ["The army had lost many battles before it.", "The surprise win gave Americans hope to keep fighting."],
+    "it gave the army hope",
+  ),
+  "social/nj-g4-growing-state": lesson(
+    ["Paterson used the Great Falls to power mills. Canals and early railroads carried coal and goods across the state.", "Morse and Vail showed the telegraph at Speedwell in 1838. Thomas Edison invented the phonograph at Menlo Park.", "Immigrants and families of the Great Migration came for jobs. New Jerseyans like Harriet Tubman, Clara Barton and Alice Paul worked to improve society."],
+    "What did Thomas Edison invent at Menlo Park in 1877?",
+    ["It recorded sound.", "It was the phonograph."],
+    "the phonograph",
+  ),
+  "social/nj-g4-new-jersey-timeline": lesson(
+    ["A timeline puts events in order, earliest first.", "Years from 1801 to 1900 are the 19th century. Years from 1901 to 2000 are the 20th century.", "To find how far apart two events are, subtract the earlier year from the later one."],
+    "New Jersey became a state in 1787. Edison invented the phonograph in 1877. How many years apart?",
+    ["Subtract the earlier year.", "1877 − 1787 = 90."],
+    "90 years",
+  ),
+  "social/nj-g4-governing-new-jersey": lesson(
+    ["New Jersey's constitution is from 1947. The state government meets in Trenton.", "The governor leads the executive branch. The Legislature has a 40-member Senate and an 80-member General Assembly. The Supreme Court has seven justices.", "A bill becomes a law when both houses pass it and the governor signs it."],
+    "How many members does the New Jersey Senate have?",
+    ["There are 40 legislative districts.", "Each district elects one senator."],
+    "40",
+  ),
+  "social/nj-g4-new-jersey-economy": lesson(
+    ["Natural resources come from nature, like sandy soil for blueberries. Human resources are workers' skills. Capital resources are tools and machines.", "New Jersey's jobs include farming in the south, moving goods at the port of Newark and Elizabeth, making medicines and tourism at the shore.", "A budget is a plan for spending and saving money."],
+    "Blueberries grow well in South Jersey's sandy soil. What kind of resource is the soil?",
+    ["It comes from nature.", "So it is a natural resource."],
+    "a natural resource",
+  ),
   "social/il-g4-governing-illinois": lesson(
     ["Illinois's government has three branches: the governor, the General Assembly and the courts.", "The General Assembly has a 59-member Senate and a 118-member House.", "A bill becomes law when both houses pass it and the governor signs it."],
     "How many members are in the Illinois Senate?",

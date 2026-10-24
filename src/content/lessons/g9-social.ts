@@ -1093,7 +1093,25 @@ export const lessons: GradeLessons = {
     ["The President nominates.", "The Senate confirms."],
     "the Senate",
   ),
+  "social/nj-g9-governing-new-jersey": lesson(
+    ["New Jersey has had three constitutions: 1776, 1844 and 1947. The 1947 constitution made a strong governor with a four-year term.", "Voters elect only the governor and lieutenant governor statewide. The governor appoints Supreme Court justices with the Senate's consent.", "The 1947 constitution banned segregation in public schools, and courts and the Law Against Discrimination worked to end discrimination."],
+    "Who chooses New Jersey Supreme Court justices?",
+    ["Justices are not elected in New Jersey.", "The governor appoints them, and the Senate consents."],
+    "the governor, with the Senate's consent",
+  ),
+  "social/nj-g9-us-government": lesson(
+    ["Article I sets up Congress, Article II the President and Article III the courts.", "Each branch checks the others: vetoes, overrides, confirmations and judicial review.", "The Bill of Rights and later amendments protect individual rights."],
+    "Which body must confirm a President's nominee to the Supreme Court?",
+    ["The President nominates.", "The Senate confirms."],
+    "the Senate",
+  ),
   "social/il-g9-personal-finance": lesson(
+    ["Net (take-home) pay = gross pay − what is withheld. Sale price = price − the discount.", "Compound interest earns interest on interest. Rule of 72: years to double ≈ 72 ÷ the rate.", "Pay bills on time for a good credit score; keep an emergency fund; spread risk."],
+    "Using the Rule of 72, about how long does money take to double at 6% a year?",
+    ["Divide 72 by the rate.", "72 ÷ 6 = 12."],
+    "about 12 years",
+  ),
+  "social/nj-g9-personal-finance": lesson(
     ["Net (take-home) pay = gross pay − what is withheld. Sale price = price − the discount.", "Compound interest earns interest on interest. Rule of 72: years to double ≈ 72 ÷ the rate.", "Pay bills on time for a good credit score; keep an emergency fund; spread risk."],
     "Using the Rule of 72, about how long does money take to double at 6% a year?",
     ["Divide 72 by the rate.", "72 ÷ 6 = 12."],
@@ -1103,6 +1121,12 @@ export const lessons: GradeLessons = {
     ["When price rises, quantity demanded falls and quantity supplied rises.", "A poor harvest cuts supply and raises the price.", "GDP, inflation and unemployment show how the economy is doing; trade lets countries specialize."],
     "A drought hurts the corn harvest. What most likely happens to the price of corn?",
     ["There is less corn to sell.", "Less supply pushes the price up."],
+    "it rises",
+  ),
+  "social/nj-g9-economics": lesson(
+    ["When price rises, quantity demanded falls and quantity supplied rises.", "A storm that closes the port cuts supply and raises prices.", "GDP, inflation and unemployment show how the economy is doing; trade lets countries specialize."],
+    "A drought hurts the blueberry harvest. What most likely happens to the price of blueberries?",
+    ["There are fewer blueberries to sell.", "Less supply pushes the price up."],
     "it rises",
   ),
   "social/co-g9-us-government": lesson(
