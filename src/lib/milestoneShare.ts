@@ -9,8 +9,8 @@ export const COUNT_STEPS = {
   days: [30, 100, 180, 365, 730],
 } as const;
 
-export type CountKind = "right" | "days" | "grew" | "kept" | "streak";
-const COUNT_KINDS: CountKind[] = ["right", "days", "grew", "kept", "streak"];
+export type CountKind = "right" | "days" | "grew" | "kept" | "streak" | "year";
+const COUNT_KINDS: CountKind[] = ["right", "days", "grew", "kept", "streak", "year"];
 
 const fmt = (n: number) => n.toLocaleString("en-CA");
 const plural = (n: number, one: string, many = `${one}s`) => `${fmt(n)} ${n === 1 ? one : many}`;
@@ -42,6 +42,8 @@ export function countTitle(kind: string, n: number): string | undefined {
       return `Remembered ${plural(n, "topic")} after a month away`;
     case "streak":
       return `A ${fmt(n)}-day practice streak`;
+    case "year":
+      return `${plural(n, "topic")} grown in one school year`;
   }
 }
 

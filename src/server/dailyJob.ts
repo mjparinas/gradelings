@@ -1,10 +1,14 @@
 import "server-only";
-import { loadChildReport, familyProfileIds } from "@/server/reportData";
+import { loadChildData, loadChildReport, familyProfileIds } from "@/server/reportData";
+import { getUnitRef, loadGrade } from "@/content";
+import { assignedAt, assignmentDue, assignmentGoals, assignmentKeys, classGrades, classProgressAndMisses, type ClassRow } from "@/server/classroom";
+import { classDigestLines } from "@/lib/classDigest";
+import { isYearReviewEmailDay, reviewYearOf, schoolYearStart, yearReview, type YearReviewChild } from "@/lib/yearReview";
 import { unsubscribeToken } from "@/server/auth";
 import { toCountryCode } from "@/lib/country";
 import { query, run } from "@/server/db";
 import { sendEmail } from "@/server/email";
-import { inactiveClassEmail, reminderEmail, trialEndingEmail, trialRecapEmail, weeklyEmail, type ReminderChild, type TrialChild, type WeeklyChild } from "@/server/emailTemplates";
+import { classDigestEmail, inactiveClassEmail, reminderEmail, yearReviewEmail, trialEndingEmail, trialRecapEmail, weeklyEmail, type ReminderChild, type TrialChild, type WeeklyChild } from "@/server/emailTemplates";
 import { sendDigest } from "@/server/alerts";
 import { runAutomations } from "@/server/automations";
 import { sendConsentFollowUps } from "@/server/consent";
@@ -36,7 +40,7 @@ const WEEKLY_CATCH_UP_DAYS = 2;
 /** After this many runs in one day that still left work undone, the admins are told. */
 export const STUCK_AFTER_RUNS = 4;
 
-export const PHASES = ["cleanup", "recaps", "trial-notices", "reminders", "weekly", "consent", "automations", "digest"] as const;
+export const PHASES = ["cleanup", "recaps", "trial-notices", "reminders", "weekly", "year-review", "class-digest", "consent", "automations", "digest"] as const;
 export type Phase = (typeof PHASES)[number];
 
 export interface DailyState {
@@ -81,6 +85,8 @@ export interface DailyResult {
   trialRecaps: number;
   weekly: number;
   reminders: number;
+  yearReviews: number;
+  classDigests: number;
   inactiveClassWarnings: number;
   inactiveClassesDeleted: number;
   studentsDeleted: number;
@@ -128,6 +134,8 @@ export async function runDaily(opts: DailyOptions): Promise<DailyResult> {
     trialRecaps: 0,
     weekly: 0,
     reminders: 0,
+    yearReviews: 0,
+    classDigests: 0,
     inactiveClassWarnings: 0,
     inactiveClassesDeleted: 0,
     studentsDeleted: 0,
@@ -175,6 +183,8 @@ const PHASE_RUNNERS: Record<Phase, (ctx: Ctx) => Promise<boolean>> = {
   "trial-notices": trialNotices,
   reminders: practiceReminders,
   weekly: weeklyReports,
+  "year-review": yearReviews,
+  "class-digest": classDigests,
   consent: async (ctx) => {
     ctx.result.consentFollowUps = await sendConsentFollowUps(ctx.origin, ctx.now).catch((e: Error) => (console.error("[consent] follow-ups failed", e.message), 0));
     return true;
@@ -409,5 +419,100 @@ async function weeklyReports(ctx: Ctx): Promise<boolean> {
     }
   }
   await setSetting(WEEKLY_KEY, JSON.stringify({ sunday, done: true } satisfies WeeklyState));
+  return true;
+}
+
+// From June 15 to June 30: the year in review, once per school year, to parents with progress emails on. Families whose
+// children didn't practise this school year are marked too, so they aren't looked at again every day.
+async function yearReviews(ctx: Ctx): Promise<boolean> {
+  const { now, origin, result } = ctx;
+  if (!isYearReviewEmailDay(now)) return true;
+  const year = reviewYearOf(now);
+  const from = schoolYearStart(year);
+  const parents = await query<{ id: string; email: string; family_id: string; country: string | null }>(
+    `SELECT p.id, p.email, p.family_id, f.country FROM parents p LEFT JOIN families f ON f.id = p.family_id
+     WHERE p.weekly_report = 1 AND p.email_verified_at IS NOT NULL AND COALESCE(p.year_review_year, 0) < ?`,
+    [year],
+  );
+  for (const p of parents) {
+    if (ctx.over()) return false;
+    ctx.worked++;
+    try {
+      if (!(await isFlagOn("year-in-review", p.family_id))) continue;
+      const children: YearReviewChild[] = [];
+      for (const id of await familyProfileIds(p.family_id)) {
+        const data = await loadChildData(p.family_id, id, 7, now);
+        if (!data || !data.events.some((e) => e.type === "answer" && e.t >= from)) continue;
+        const r = yearReview(data.events, now);
+        children.push({
+          name: data.profile.name,
+          daysPractised: r.daysPractised,
+          minutes: r.minutes,
+          answers: r.answers,
+          grown: r.grown.length,
+          // Units from a grade the child has left aren't loaded; the email names only the ones it can.
+          grownTitles: r.grown.flatMap((g) => getUnitRef(g.key, data.profile.framework)?.unit.title ?? []).slice(0, 3),
+        });
+      }
+      if (children.length) {
+        const sent = await sendEmail(yearReviewEmail(p.email, origin, children, await unsubscribeToken(p.id), toCountryCode(p.country), year));
+        if (!sent.ok) continue;
+        result.yearReviews++;
+      }
+      await run("UPDATE parents SET year_review_year = ? WHERE id = ?", [year, p.id]);
+    } catch (e) {
+      console.error("[year review] failed for one family", (e as Error).message);
+    }
+  }
+  return true;
+}
+
+const DIGEST_DAYS = [1, 2]; // Monday, and Tuesday to finish a Monday that ran out of time (UTC)
+
+// On Mondays: the class email to teachers who turned it on, one per teacher covering every class they teach.
+async function classDigests(ctx: Ctx): Promise<boolean> {
+  const { now, origin, result } = ctx;
+  if (!DIGEST_DAYS.includes(new Date(now).getUTCDay())) return true;
+  const teachers = await query<{ id: string; email: string; family_id: string; country: string | null }>(
+    `SELECT p.id, p.email, p.family_id, f.country FROM parents p LEFT JOIN families f ON f.id = p.family_id
+     WHERE p.class_digest = 1 AND p.email_verified_at IS NOT NULL AND (p.last_class_digest_at IS NULL OR p.last_class_digest_at < ?)`,
+    [now - 5 * DAY],
+  );
+  for (const t of teachers) {
+    if (ctx.over()) return false;
+    ctx.worked++;
+    try {
+      if (!(await isFlagOn("teacher-monday-email", t.family_id))) continue;
+      const classes = await query<ClassRow>(
+        `SELECT * FROM classes WHERE closed_at IS NULL AND (owner_parent_id = ? OR id IN (SELECT class_id FROM class_teachers WHERE parent_id = ?)) ORDER BY created_at`,
+        [t.id, t.id],
+      );
+      const sections: { id: string; lines: string[] }[] = [];
+      for (const cls of classes) {
+        const keys = await assignmentKeys(cls.id);
+        if (!keys.length) continue;
+        const { students } = await classProgressAndMisses(cls.id);
+        if (!students.length) continue;
+        for (const g of classGrades(cls)) await loadGrade(g, cls.framework);
+        const unitName = (key: string) => getUnitRef(key, cls.framework)?.unit.title ?? key;
+        const lines = classDigestLines(
+          { name: cls.name, students, assignments: keys, due: await assignmentDue(cls.id), goal: await assignmentGoals(cls.id), assignedAt: await assignedAt(cls.id) },
+          unitName,
+          now,
+        );
+        if (lines.length) sections.push({ id: cls.id, lines });
+      }
+      if (sections.length) {
+        const path = sections.length === 1 ? `/teachers/#/class/${encodeURIComponent(sections[0].id)}` : "/teachers/";
+        const sent = await sendEmail(classDigestEmail(t.email, origin, sections.map((x) => x.lines), await unsubscribeToken(t.id), path, toCountryCode(t.country)));
+        if (!sent.ok) continue;
+        result.classDigests++;
+      }
+      // Marked even with nothing to say, so Tuesday's catch-up doesn't read every class again.
+      await run("UPDATE parents SET last_class_digest_at = ? WHERE id = ?", [now, t.id]);
+    } catch (e) {
+      console.error("[class digest] failed for one teacher", (e as Error).message);
+    }
+  }
   return true;
 }
