@@ -1237,4 +1237,58 @@ export const lessons: GradeLessons = {
     ["It is what she gave up.", "She did not choose the book."],
     "the book",
   ),
+  "social/wa-g5-road-to-revolution": lesson(
+    ["After 1763, Britain taxed the colonies to pay war debts. Colonists said “No taxation without representation.”", "Protests grew: the Boston Massacre (1770), the Boston Tea Party (1773), then the Intolerable Acts closed Boston's port.", "Patriots wanted change; Loyalists stayed loyal to the king."],
+    "How did Britain punish Boston after the Tea Party?",
+    ["Britain passed harsh laws in 1774.", "They closed Boston's port until the tea was paid for."],
+    "It closed the port with the Intolerable Acts.",
+  ),
+  "social/ca-g5-revolution": lesson(
+    ["The Declaration of Independence was adopted July 4, 1776. It says governments get power from the consent of the governed.", "George Washington led the army; Franklin won France as an ally. Bunker Hill showed colonists could stand up to the British.", "Women ran farms and businesses and made supplies."],
+    "Where does the Declaration say governments get their power?",
+    ["It says the people choose to be governed.", "That agreement is called consent."],
+    "from the consent of the governed",
+  ),
+  "social/ca-g5-constitution": lesson(
+    ["Delegates met in Philadelphia in 1787. Congress has two parts: the Senate and the House of Representatives.", "Legislative makes laws, executive (the president) carries them out, judicial (courts) interprets them.", "Some wanted a Bill of Rights to protect freedoms. Amendments let it change, so it is a “living document”."],
+    "Which branch carries out the laws?",
+    ["Congress makes laws; courts interpret them.", "The president leads the branch that carries them out."],
+    "the executive",
+  ),
+  "social/wa-g8-bill-of-rights": lesson(
+    ["The Bill of Rights is the first ten amendments: the First protects speech, religion, press, assembly and petition; the Second is about keeping and bearing arms.", "Later amendments added rights: the 13th ended slavery, the 14th made people born in the US citizens, the 15th protected voting regardless of race.", "Match each amendment by its number and the right it protects."],
+    "Which amendment protects freedom of speech?",
+    ["Freedom of speech is in the Bill of Rights.", "It is listed with religion, press and assembly.", "That is the First Amendment."],
+    "the First Amendment",
+  ),
+  "social/ca-g8-new-nation": lesson(
+    ["Early presidents built the new government; the Whiskey Rebellion (1794) showed it could enforce its laws.", "Jefferson bought Louisiana in 1803. The US fought Britain in the War of 1812.", "The Monroe Doctrine (1823) told Europe not to start new colonies in the Americas."],
+    "What did the Monroe Doctrine warn European countries not to do?",
+    ["It was about the Americas.", "The US did not want new European colonies here."],
+    "start new colonies in the Americas",
+  ),
+  "social/ca-g5-westward": lesson(
+    ["Between 1789 and 1850, many immigrants came from Ireland and Germany.", "Settlers moved west on trails to find land and opportunity. California became a state in 1850.", "American Indian nations lost the most: land and lives."],
+    "Who lost the most when settlers moved west?",
+    ["Settlers took land where people already lived.", "Those people were American Indian nations."],
+    "American Indian nations",
+  ),
+  "social/ca-g8-divided-nation": lesson(
+    ["As the country grew, North and South argued over whether slavery would spread to new lands.", "The Compromise of 1850 made California a free state and passed a stronger Fugitive Slave Act, forcing free states to help return people who escaped.", "Frederick Douglass escaped slavery and became a famous speaker and writer against it."],
+    "What did the Fugitive Slave Act of 1850 require?",
+    ["It was part of the Compromise of 1850.", "It was about people who escaped slavery.", "People in free states had to help return them."],
+    "people in free states had to help return people who had escaped slavery",
+  ),
+  "social/ca-g8-civil-war": lesson(
+    ["Fights over slavery grew: “Bleeding Kansas” and the Dred Scott decision (1857).", "Lincoln's election in 1860 led Southern states to secede.", "The Union's Anaconda Plan blockaded ports and the Mississippi; Sherman's March (1864) destroyed Southern resources."],
+    "Whose election in 1860 led Southern states to secede?",
+    ["He opposed slavery spreading into new territories.", "He became the 16th president."],
+    "Abraham Lincoln",
+  ),
+  "social/wa-g5-us-geography": lesson(
+    ["Use a compass rose: Canada is north of the United States, Mexico is south.", "Big landforms: the Appalachians in the east, the Great Plains in the middle, the Rocky Mountains in the west.", "The Mississippi and Missouri rivers make the longest river system. Know the regions, like New England and the Southeast."],
+    "The Great Plains are mostly what?",
+    ["They are in the middle of the country.", "They are wide, flat grasslands."],
+    "flat grasslands",
+  ),
 };

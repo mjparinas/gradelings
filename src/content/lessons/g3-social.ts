@@ -817,4 +817,46 @@ export const lessons: GradeLessons = {
     ["Services cost money.", "The money comes from people's taxes."],
     "taxes",
   ),
+  "social/ca-g5-thirteen-colonies": lesson(
+    ["Jamestown, Virginia (1607) was the first lasting English colony.", "New England's rocky soil and long winters led to fishing, shipbuilding and trade. Southern Colonies like Georgia grew cash crops.", "Colonies grew along rivers and harbours so boats could carry goods. Rhode Island allowed religious freedom."],
+    "Why did many colonies grow along rivers and harbours?",
+    ["There were few roads.", "Boats could carry goods and people."],
+    "Boats could carry goods and people.",
+  ),
+  "social/ga-g3-explorers": lesson(
+    ["Columbus sailed for Spain in 1492. Henry Hudson explored for the Dutch and the English.", "Lewis and Clark explored the Louisiana Purchase to the Pacific; Sacagawea, a Shoshone woman, was their interpreter and guide.", "Colonists and nations sometimes cooperated through trade and alliances."],
+    "How did Sacagawea help Lewis and Clark?",
+    ["She knew the Shoshone language and the land.", "She translated and guided them."],
+    "as an interpreter and guide",
+  ),
+  "social/ga-g3-money-and-voting": lesson(
+    ["People specialize in one kind of work and trade for the rest. Workers’ skills are human capital.", "Every choice has a cost (what you give up) and a benefit (what you get).", "Taxes pay for community services. Voting is a civic duty."],
+    "What do taxes pay for in a city?",
+    ["Taxes are money people pay to the government.", "The government uses it for things everyone shares."],
+    "services like parks, roads and fire stations",
+  ),
+  "social/ga-g3-american-indian-regions": lesson(
+    ["American Indian nations lived in many regions of North America.", "Each nation used what its land gave: forests, plains, deserts, coasts.", "Many of these nations are living communities today."],
+    "On the Great Plains, many nations hunted which large animal?",
+    ["It roamed the grasslands in huge herds.", "Its hide made shelters and clothing."],
+    "the bison (buffalo)",
+  ),
+  "social/ga-g3-three-branches": lesson(
+    ["The legislative branch makes laws.", "The executive branch carries out laws; the president leads it for the nation and the governor for Georgia.", "The judicial branch, the courts, decides what laws mean."],
+    "Which branch makes the laws?",
+    ["Congress and the General Assembly make laws.", "They are part of the same branch."],
+    "the legislative branch",
+  ),
+  "social/ga-g3-us-map": lesson(
+    ["The Mississippi River runs down the middle of the United States.", "The Rocky Mountains are in the West; the Appalachian Mountains are in the East.", "The Rio Grande forms part of the border with Mexico."],
+    "Which mountains are in the eastern United States?",
+    ["The Rockies are in the West.", "Georgia's mountains are part of this range."],
+    "the Appalachian Mountains",
+  ),
+  "social/ga-g3-productive-resources": lesson(
+    ["Natural resources come from nature, like wood and water.", "Human resources are people working; capital resources are tools and machines.", "An entrepreneur starts a business using these resources."],
+    "A tractor on a farm is which kind of resource?",
+    ["It is a tool people made.", "Tools and machines are capital resources."],
+    "a capital resource",
+  ),
 };

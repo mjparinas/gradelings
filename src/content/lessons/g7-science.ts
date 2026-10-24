@@ -613,4 +613,10 @@ export const lessons: GradeLessons = {
     ["A landslide happens in minutes.", "Mountain building takes millions of years."],
     "fast",
   ),
+  "science/ga-g7-earth-history": lesson(
+    ["In undisturbed rock layers, the oldest are at the bottom (superposition).", "An index fossil lived for a short time over a wide area, so it dates layers.", "Homologous structures, like a human arm and a bat wing, show shared ancestors."],
+    "Why is an index fossil useful?",
+    ["It was around only briefly but in many places.", "Finding it dates the rock layer."],
+    "it lived for a short time over a wide area",
+  ),
 };
