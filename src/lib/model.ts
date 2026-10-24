@@ -22,6 +22,8 @@ export interface Profile {
   room?: Record<string, string>;
   /** Progress before this time is ignored (a parent reset it). */
   resetAt?: number;
+  /** The school year (2026 for 2026-27) the grade was last set or kept for, so the back-to-school prompt asks once (`src/lib/schoolYear.ts`). */
+  gradeYear?: number;
   createdAt: number;
   updatedAt: number;
   deleted?: boolean;

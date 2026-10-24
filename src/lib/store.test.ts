@@ -17,6 +17,7 @@ import { MAX_CHILDREN, TRIAL_DAYS } from "./plan";
 import { STRETCH_QUEST, STRETCH_REWARD } from "./goal";
 import { setRemoteFlags } from "./remoteFlags";
 import { derivedFor, eventsFor, TEST_COINS, useStore } from "./store";
+import { schoolYearOf } from "./schoolYear";
 
 const child = { name: "A", avatar: "ollie", colour: "#fff", grade: "2" as const };
 const st = () => useStore.getState();
@@ -123,6 +124,17 @@ describe("changing a child", () => {
     // A child with no settings yet starts from the defaults.
     expect(st().settings.unknown).toMatchObject({ calmMotion: true, dailyGoalMinutes: 15 });
     expect(st().sync.dirtyProfiles).toEqual([id, "unknown"]);
+  });
+
+  it("remembers which school year a changed grade is for, so the back-to-school card asks once", () => {
+    const id = st().addProfile({ ...child, grade: "3" });
+    expect(st().profiles.at(-1)!.gradeYear).toBeUndefined();
+    st().updateProfile(id, { name: "Bea", grade: "3" }); // same grade: nothing to record
+    expect(st().profiles.find((p) => p.id === id)!.gradeYear).toBeUndefined();
+    st().updateProfile(id, { grade: "4" });
+    expect(st().profiles.find((p) => p.id === id)!.gradeYear).toBe(schoolYearOf(Date.now()));
+    st().updateProfile(id, { gradeYear: 2020 });
+    expect(st().profiles.find((p) => p.id === id)!.gradeYear).toBe(2020);
   });
 
   it("removing a child forgets their history on this device", () => {

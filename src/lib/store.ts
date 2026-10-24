@@ -32,6 +32,7 @@ import { getItem, isUnlocked, STARTER } from "./shop";
 import { setQuietCheck, setSoundCheck } from "./sound";
 import { forgetMyInvite } from "./referral";
 import { getTrophy, newlyEarned, TIER_STYLE } from "./trophies";
+import { schoolYearOf } from "./schoolYear";
 
 export interface Toast {
   id: string;
@@ -208,7 +209,10 @@ export const useStore = create<State>()((set, get) => ({
   },
 
   updateProfile: (id, patch) => {
-    const profiles = get().profiles.map((p) => (p.id === id ? { ...p, ...patch, updatedAt: Date.now() } : p));
+    const now = Date.now();
+    // A grade a parent changes is the grade for this school year, so the back-to-school prompt doesn't ask again.
+    const year = (p: Profile) => (patch.grade && patch.grade !== p.grade && patch.gradeYear === undefined ? { gradeYear: schoolYearOf(now) } : {});
+    const profiles = get().profiles.map((p) => (p.id === id ? { ...p, ...patch, ...year(p), updatedAt: now } : p));
     set({ profiles });
     save("profiles", profiles);
     get().setSync({ dirtyProfiles: [...new Set([...get().sync.dirtyProfiles, id])] });

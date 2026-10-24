@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { VoicePreload } from "@/components/VoicePreload";
 import { ClassTimerChip } from "./ClassTimer";
 import type { FlagKey } from "@/lib/flags";
@@ -27,7 +27,9 @@ import { Session } from "./Session";
 import { Shop } from "./Shop";
 import type { ClassCodes } from "@/lib/playLink";
 import { CardSignIn, FirstRun, Picker, useClassSignInLink, usePlayStart } from "./Start";
-import { getCourse } from "@/content";
+import { getCourse, parseUnitKey } from "@/content";
+import { nextGrade } from "@/lib/schoolYear";
+import { SneakPeek } from "./SneakPeek";
 import { go } from "@/lib/router";
 import { Toasts } from "./Toasts";
 import { LessonScreen } from "./LessonScreen";
@@ -42,16 +44,42 @@ const MODES: Mode[] = ["practice", "adventure", "review", "speed", "daily", "cha
 /** Screens the admin panel can switch off for everyone (src/lib/flags.ts). A switched-off screen shows the home screen. */
 const SCREEN_FLAGS: Record<string, FlagKey> = { stickers: "sticker-book", room: "my-room", speed: "speed-run", arcade: "arcade", shop: "shop" };
 
+/** Next grade's lessons for the summer sneak peek: downloaded on first use, like any grade. */
+function NextGrade({ grade, children }: { grade: GradeId; children: ReactNode }) {
+  const profile = useActiveProfile()!;
+  return <ContentGate targets={[{ grade, framework: profile.framework }]}>{children}</ContentGate>;
+}
+
 function Screen() {
   const { path, query } = useRoute();
   const isOn = useIsOn();
+  const profile = useActiveProfile()!;
+  const peek = nextGrade(profile.grade);
+  // A lesson or session from the sneak peek needs that grade's download too.
+  const scopeGrade = parseUnitKey(query.get("scope") ?? "")?.grade;
+  const withPeek = (node: ReactNode) => (peek && scopeGrade === peek ? <NextGrade grade={peek}>{node}</NextGrade> : node);
   const flag = SCREEN_FLAGS[path[0]] ?? (path[0] === "session" && query.get("mode") === "daily" ? "daily-challenge" : path[0] === "session" && query.get("mode") === "speed" ? "speed-run" : undefined);
   if (flag && !isOn(flag)) return <Hub />;
   switch (path[0]) {
     case "practice":
+      if (path[1] && peek && query.get("grade") === peek) {
+        return (
+          <NextGrade grade={peek}>
+            <UnitList key={`${peek}/${path[1]}`} subject={path[1] as SubjectId} grade={peek} />
+          </NextGrade>
+        );
+      }
       return path[1] ? <UnitList key={path[1]} subject={path[1] as SubjectId} /> : <SubjectPicker />;
+    case "peek":
+      return peek ? (
+        <NextGrade grade={peek}>
+          <SneakPeek />
+        </NextGrade>
+      ) : (
+        <Hub />
+      );
     case "lesson":
-      return <LessonScreen key={query.get("scope") ?? ""} unitKey={query.get("scope") ?? ""} />;
+      return withPeek(<LessonScreen key={query.get("scope") ?? ""} unitKey={query.get("scope") ?? ""} />);
     case "map":
       return <TrailMap />;
     case "treasures":
@@ -67,7 +95,7 @@ function Screen() {
       const scope = query.get("scope") ?? "mix";
       if (!MODES.includes(mode)) return <Hub />;
       // A new key restarts the session cleanly when "Play again" is pressed.
-      return <Session key={`${mode}:${scope}:${query.get("r") ?? ""}`} mode={mode} scope={scope} />;
+      return withPeek(<Session key={`${mode}:${scope}:${query.get("r") ?? ""}`} mode={mode} scope={scope} />);
     }
     case "placement":
       if (!PLACEMENT_SUBJECTS.includes(path[1] as SubjectId)) return <Hub />;

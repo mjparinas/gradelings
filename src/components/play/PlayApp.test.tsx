@@ -28,6 +28,10 @@ vi.mock("@/lib/router", () => ({
   go: h.go,
 }));
 vi.mock("@/content", () => ({
+  parseUnitKey: (key: string) => {
+    const [grade, subject, unitId] = key.split("/");
+    return unitId ? { grade, subject, unitId } : undefined;
+  },
   getCourse: (grade: string, subject: string) => (grade === "3" && subject === "math" ? { grade, subject, units: [{ id: "fractions" }] } : undefined),
 }));
 vi.mock("@/lib/remoteFlags", () => ({ refreshFlags: h.refreshFlags, useIsOn: () => (k: string) => !h.off.has(k) }));
@@ -73,6 +77,7 @@ vi.mock("./Practice", () => ({ SpeedPicker: screenStub("SpeedPicker"), SubjectPi
 vi.mock("./PlacementTest", () => ({ PlacementTest: screenStub("PlacementTest") }));
 vi.mock("./Secrets", () => ({ SecretsListener: () => <p>secrets on</p> }));
 vi.mock("./Session", () => ({ Session: screenStub("Session") }));
+vi.mock("./SneakPeek", () => ({ SneakPeek: screenStub("SneakPeek") }));
 vi.mock("./Shop", () => ({ Shop: screenStub("Shop") }));
 vi.mock("./Start", () => ({
   FirstRun: screenStub("FirstRun"),
@@ -260,6 +265,27 @@ describe("PlayApp routes", () => {
     h.route = route;
     render(<PlayApp />);
     expect(shown()).toMatch(new RegExp(`^${expected.replace(/[/?]/g, "\\$&")} band=middle$`));
+  });
+
+  it("opens the summer sneak peek at the next grade only, downloading that grade first", () => {
+    const next = { grade: "4", framework: h.active!.framework };
+    for (const [route, expected] of [
+      ["peek", "SneakPeek"],
+      ["practice/math?grade=4", "UnitList subject=math grade=4"],
+      ["lesson?scope=4/math/add", "LessonScreen unitKey=4/math/add"],
+      ["session?mode=practice&scope=4/math/add", "Session mode=practice scope=4/math/add"],
+    ]) {
+      h.route = route;
+      h.gate.mockClear();
+      const { unmount } = render(<PlayApp />);
+      expect(shown()).toMatch(new RegExp(`^${expected.replace(/[/?]/g, "\\$&")} band=middle$`));
+      expect(h.gate).toHaveBeenCalledWith(expect.objectContaining({ targets: [next] }));
+      unmount();
+    }
+    // Any other grade is this year's list.
+    h.route = "practice/math?grade=7";
+    render(<PlayApp />);
+    expect(shown()).toMatch(/^UnitList subject=math band=middle$/);
   });
 
   it("an unknown session mode or placement subject goes home", () => {

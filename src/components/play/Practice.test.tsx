@@ -32,12 +32,13 @@ const h = vi.hoisted(() => {
     off: new Set<string>(),
     speak: vi.fn(),
     query: new URLSearchParams(),
+    now: 0,
   };
 });
 
 vi.mock("@/lib/router", () => ({ go: h.go, href: (path: string) => `#${path}`, useRoute: () => ({ path: [], query: h.query }) }));
 vi.mock("@/content", () => ({
-  coursesForGrade: () => h.courses,
+  coursesForGrade: (grade: string) => h.courses.map((c) => ({ ...c, grade })),
   unitKey: (grade: string, subject: string, id: string) => `${grade}/${subject}/${id}`,
   getUnitRef: (key: string) => {
     const [, subject, id] = key.split("/");
@@ -55,8 +56,8 @@ vi.mock("@/lib/store", () => ({
   useChildSettings: () => h.settings,
   useDerived: () => ({ units: h.units, speedBest: h.speedBest, level: 1, dailyDone: h.dailyDone }),
 }));
-vi.mock("@/lib/remoteFlags", () => ({ useIsOn: () => (key: string) => !h.off.has(key) }));
-vi.mock("@/lib/useNow", () => ({ useNow: () => new Date(2026, 9, 12, 9, 0).getTime() }));
+vi.mock("@/lib/remoteFlags", () => ({ useIsOn: () => (key: string) => !h.off.has(key), useFlag: (key: string) => !h.off.has(key) }));
+vi.mock("@/lib/useNow", () => ({ useNow: () => h.now }));
 vi.mock("../Critter", () => ({
   Critter: () => null,
   SpeechBubble: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
@@ -65,6 +66,7 @@ vi.mock("./Companion", () => ({ Companion: () => null }));
 vi.mock("@/lib/speech", () => ({ speak: h.speak, stopSpeaking: () => {} }));
 
 import { SpeedPicker, SubjectPicker, UnitList } from "./Practice";
+import { SneakPeek } from "./SneakPeek";
 
 const stat = (attempts: number, right: number, over: Partial<UnitStat> = {}): UnitStat =>
   ({ attempts, firstTry: right, recent: Array.from({ length: attempts }, (_, i) => i < right), challengePassed: false, ...over }) as UnitStat;
@@ -83,6 +85,7 @@ beforeEach(() => {
   h.assigned = [];
   h.dailyDone = [];
   h.off = new Set();
+  h.now = new Date(2026, 9, 12, 9, 0).getTime();
 });
 
 describe("SubjectPicker", () => {
@@ -279,5 +282,40 @@ describe("SpeedPicker", () => {
     expect(h.go).toHaveBeenCalledWith("/session", { mode: "speed", scope: "mix" });
     click(/Math/);
     expect(h.go).toHaveBeenCalledWith("/session", { mode: "speed", scope: "math" });
+  });
+});
+
+describe("summer sneak peek", () => {
+  it("offers next grade's lessons on the Lessons screen in summer only", () => {
+    const october = inBand("middle", <SubjectPicker />);
+    expect(screen.queryByText("Summer sneak peek")).not.toBeInTheDocument();
+    october.unmount();
+    h.now = new Date(2026, 6, 10, 9, 0).getTime();
+    const july = inBand("middle", <SubjectPicker />);
+    expect(screen.getByRole("link", { name: /Summer sneak peek/ })).toHaveAttribute("href", "#/peek");
+    expect(screen.getByText("Try some Grade 3 lessons before school starts.")).toBeInTheDocument();
+    july.unmount();
+    inBand("little", <SubjectPicker />);
+    expect(screen.getByRole("link", { name: /Peek at Grade 3!/ })).toBeInTheDocument();
+  });
+
+  it("can be switched off", () => {
+    h.now = new Date(2026, 6, 10, 9, 0).getTime();
+    h.off = new Set(["school-year"]);
+    inBand("middle", <SubjectPicker />);
+    expect(screen.queryByText("Summer sneak peek")).not.toBeInTheDocument();
+  });
+
+  it("lists next grade's subjects the child has turned on", () => {
+    inBand("middle", <SneakPeek />);
+    expect(screen.getByRole("heading", { name: /Grade 3 sneak peek/ })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /Math/ })).toHaveAttribute("href", "#/practice/math");
+    expect(screen.queryByRole("link", { name: /Science/ })).not.toBeInTheDocument();
+  });
+
+  it("practises next grade's units under their own grade, so they count after moving up", () => {
+    inBand("little", <UnitList subject="math" grade="3" />);
+    click(/Subtracting/);
+    expect(h.go).toHaveBeenCalledWith("/session", { mode: "practice", scope: "3/math/sub" });
   });
 });
