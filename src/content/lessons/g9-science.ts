@@ -625,6 +625,12 @@ export const lessons: GradeLessons = {
     ["About 10% passes on.", "10% of 5,000 is 500."],
     "500 units",
   ),
+  "science/oh-g9-ecosystems": lesson(
+    ["A population grows until limits stop it at the carrying capacity, so a logistic curve levels off.", "Density-dependent factors, like disease, grow stronger in crowds; density-independent ones, like storms, don’t.", "Only about 10% of energy passes to each next trophic level. Producers are the first level."],
+    "Disease spreads faster in a crowded population. Density-dependent or density-independent?",
+    ["Its effect grows with crowding.", "That makes it density-dependent."],
+    "density-dependent",
+  ),
   // Indiana (us-in)
 "science/in-g9-ecosystems": lesson(
     ["A population levels off at carrying capacity on a logistic growth curve.", "About 10% of energy passes up each trophic level.", "After disturbances like wildfire, succession rebuilds the community; stable ecosystems recover."],
