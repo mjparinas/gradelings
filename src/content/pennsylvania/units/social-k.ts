@@ -36,7 +36,13 @@ const OUR_STATE: Q[] = [
   ["A state flag is a symbol of…", "a state", ["a school", "a game", "a store"], "Each state has its own.", true],
   ["Our state's leaders work in the capital city called…", "Harrisburg", ["Philadelphia", "Pittsburgh", "Erie"], "It is on the Susquehanna River.", true],
   ["A photograph of the Liberty Bell shows…", "a place you can learn about in Pennsylvania", ["a place in outer space", "a kitchen only", "a pet"], "Photos help us learn.", true],
-];
+
+  ["A class rule chart is a…", "paper that lists our class rules", ["toy", "snack", "bus"], "It hangs on the classroom wall."],
+  ["A class calendar shows…", "the days of the month", ["what you ate", "how tall you are", "the price of milk"], "We use it to count days."],
+  ["Which paper tells whose turn it is to help today?", "a job chart", ["a menu", "a ticket", "a bill"], "Each child gets a job."],
+  ["A class photo helps us…", "remember our class", ["lose our class", "eat lunch", "tie shoes"], "It is something we keep."],
+  ["The Liberty Bell is an old object that helps us…", "remember history", ["bake bread", "cross a street", "tell the weather"], "People visit it in Philadelphia."],
+  ["A paper that lists our class helpers is a…", "class chart", ["rocket", "pillow", "song"], "It is important to our class."],];
 
 const MONEY: Q[] = [
   ["Money is something people use to…", "buy things", ["fly", "swim", "sleep"], "Coins and bills are money."],
@@ -66,7 +72,17 @@ const MONEY: Q[] = [
   ["Who might help you decide how to spend money?", "a grown-up", ["a stranger", "a squirrel", "the wind"], "Families talk about money.", true],
   ["Your friends or family can change how you feel about…", "spending money", ["the sky", "your name", "your shoe size"], "People learn about money from others.", true],
   ["Sam spends all his coins today. What may happen tomorrow?", "he may have no coins left", ["he has more coins", "coins come back", "nothing at all"], "Spending uses money up.", true],
-];
+
+  ["Ben's family saves coins in a jar. Ben may want to…", "save coins too", ["hate coins", "eat coins", "hide from money"], "Families show us what to do with money."],
+  ["Your friend wants to save for a big toy. You might…", "think about saving too", ["throw coins away", "fall asleep", "hide"], "Friends can change how we think about money."],
+  ["Putting money in a bank is called…", "depositing", ["flying", "baking", "jumping"], "You add money to your account."],
+  ["A machine that gives you cash from a bank account is an…", "ATM", ["oven", "elevator", "swing"], "Grown-ups use it."],
+  ["Where can grown-ups get cash from their account?", "at a bank", ["from a tree", "from a cloud", "from a shoe"], "Banks help people with money."],
+  ["Lena sells lemonade at a stand. She is an…", "entrepreneur", ["astronaut", "umpire", "pilot"], "She runs a tiny business."],
+  ["A person who starts their own business is an…", "entrepreneur", ["audience", "umpire", "visitor"], "They make a plan."],
+  ["Mia has $2. She can buy a snack or save. That is a…", "choice", ["storm", "map", "song"], "She decides how to spend."],
+  ["Sam needs a coat and wants a toy. Which should he get first?", "the coat", ["the toy", "a game", "a sticker"], "Needs come before wants."],
+  ["What can change what you choose to buy?", "how much money you have", ["the color of the sky", "your shoe size", "the weather"], "Prices and money matter."],];
 
 const SAFE: Q[] = [
   ["A risk is something that could…", "hurt you or cause a problem", ["be fun for sure", "be a gift", "make a cake"], "We try to stay safe."],
@@ -134,7 +150,7 @@ export const UNITS: Unit[] = [
     blurb: "Pennsylvania's capital, symbols and the Liberty Bell",
     parentNote:
       "Pennsylvania as our state, Harrisburg as its capital, the Keystone State nickname, the state animal, bird, flower, dog, drink, insect and fish, and the Liberty Bell and Independence Hall in Philadelphia. It also asks who leads a state and a country.",
-    standards: ["8.2.K.A; 8.2.K.B; 8.3.K.A", "people in authority, and photographs of documents, artifacts and places unique to Pennsylvania"],
+    standards: ["8.2.K.A; 8.2.K.B; 8.3.K.A; 8.3.K.B", "people in authority, and photographs of documents, artifacts and places unique to Pennsylvania, and documents and objects that are important to the classroom community"],
     items: OUR_STATE,
   }),
   bankUnit({
@@ -154,7 +170,7 @@ export const UNITS: Unit[] = [
     blurb: "Earning, spending, saving and sharing",
     parentNote:
       "Why people earn money, the difference between money received and money spent, saving for a goal, keeping money safe, banks, and sharing or giving to help others.",
-    standards: ["17.1.K-2.A; 17.2.K-2.A; 17.3.K-2.C; 17.3.K-2.D; 17.3.K-2.M; 17.4.K-2.B; 17.4.K-2.C; 6.4.K-2.D", "financial goals, income, money received and spent, saving, giving, keeping money safe and banks"],
+    standards: ["17.1.K-2.A; 17.2.K-2.A; 17.3.K-2.C; 17.3.K-2.D; 17.3.K-2.M; 17.4.K-2.B; 17.4.K-2.C; 6.4.K-2.D; 17.1.K-2.C; 17.1.K-2.F; 17.2.K-2.G; 17.3.K-2.A", "financial goals, income, money received and spent, saving, giving, keeping money safe and banks, how family and friends shape ideas about money, banks, entrepreneurs and spending choices"],
     items: MONEY,
   }),
   bankUnit({

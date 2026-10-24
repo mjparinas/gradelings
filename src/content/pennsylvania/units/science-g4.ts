@@ -1,5 +1,7 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { copyOf, from } from "./kit";
+import { UNITS as NEW_YORK_4 } from "../../new-york/units/science-g4";
 
 // Pennsylvania's own Grade 4 science units (`pa-` ids), for the STEELS standards no shared unit practises: where energy
 // and fuels come from, with Pennsylvania's coal, oil and natural gas as the examples (3.3.4.D; 3.4.3-5.F; 3.5.3-5.E, F),
@@ -121,6 +123,50 @@ export const UNITS: Unit[] = [
     standards: ["3.4.3-5.C; 3.4.3-5.D; 3.4.3-5.A", "collecting and displaying data about a local environment, modeling how a local environmental issue connects to larger systems, and how living things and the environment affect each other"],
     items: PENNS_WATERSHEDS,
   }),
+  copyOf(
+    from(NEW_YORK_4, "ny-g4-rocks-erosion"),
+    {
+      id: "pa-g4-rocks-erosion",
+      title: "Rocks, Fossils & Changing Land",
+      emoji: "🪨",
+      blurb: "How rock layers, fossils, weathering and erosion tell the story of the land.",
+      parentNote:
+        "Practices how rock layers and fossils are evidence of how a landscape has changed, and how weathering and erosion by water, ice and wind shape the land, with Pennsylvania examples such as trilobite fossils, the worn Appalachian Mountains, the Delaware Water Gap and limestone caves.",
+      standards: ["3.3.4.A; 3.3.4.B", "rock layers and fossils show landscape change, and weathering and erosion shape the land"],
+    },
+    [
+      ["Pennsylvania's state fossil, the trilobite, was an animal that lived…", "in an ancient sea long ago", ["last year", "in a tree today", "on the Moon"], "Trilobites are extinct sea animals."],
+      ["Fossils of sea animals found on a Pennsylvania mountain show the land was once…", "under a sea", ["a desert", "a city", "a glacier only"], "Sea animals lived in water."],
+      ["Pennsylvania's Appalachian Mountains are rounded because…", "wind, water and ice have worn them down over a very long time", ["they are brand new", "they were sanded by hand", "they have no rock"], "Weathering and erosion wear mountains down."],
+      ["A river cut the Delaware Water Gap through a mountain ridge. This shows that…", "moving water can carve rock over a long time", ["rivers cannot move rock", "mountains grow overnight", "ice made it in a day"], "Erosion is slow but powerful."],
+      ["Pine Creek Gorge, a deep valley in Pennsylvania, was carved mostly by…", "running water over a long time", ["one storm", "wind only", "people with shovels"], "Water carries away rock and soil."],
+      ["Water that seeps underground can dissolve limestone and make…", "caves and sinkholes", ["volcanoes", "glaciers", "sand dunes"], "Limestone slowly dissolves."],
+      ["Water freezes in a crack in a rock and the rock splits. This is…", "weathering", ["deposition", "a fossil", "a volcano"], "Weathering breaks rock into pieces."],
+      ["Which is an example of erosion?", "a stream carrying soil downstream", ["a rock sitting still", "a tree growing", "a cloud forming"], "Erosion moves broken pieces from place to place."],
+    ],
+  ),
+  copyOf(
+    from(NEW_YORK_4, "ny-g4-earth-hazards"),
+    {
+      id: "pa-g4-earth-hazards",
+      title: "Hazards & Maps",
+      emoji: "🌊",
+      blurb: "Maps show where hazards happen, and how people stay safe.",
+      parentNote:
+        "Practices reading maps of mountains, rivers and low land to find patterns, and comparing solutions that reduce the harm of natural hazards, with Pennsylvania examples such as floods, winter storms and sinkholes.",
+      standards: ["3.3.4.C; 3.3.4.E", "patterns of Earth's features on maps, and solutions that reduce the harm of natural hazards"],
+    },
+    [
+      ["The most common natural hazard in Pennsylvania is…", "flooding", ["volcanic eruptions", "tsunamis", "sandstorms"], "Heavy rain can make rivers overflow."],
+      ["Pennsylvania has few strong earthquakes because it is…", "far from the edges of Earth's plates", ["on the edge of a plate", "above a volcano", "under the ocean"], "Quakes are most common at plate edges."],
+      ["Which solution lowers harm from a flood?", "moving homes away from rivers and building flood walls", ["building homes on the river bank", "cutting down all the trees upstream", "paving fields"], "Stay out of the water's path."],
+      ["A weather alert on a phone gives people…", "time to get to safety", ["more rain", "a new map", "more snow"], "Warnings help people prepare."],
+      ["A snowstorm blocks roads. Which choice helps keep people safe?", "staying home with emergency supplies", ["driving fast", "walking on ice", "ignoring warnings"], "Be ready and stay put."],
+      ["On a map, floods are most likely…", "near rivers on low land", ["on the highest mountain tops", "far from any water", "in the middle of a hill"], "Water collects in low places."],
+      ["In 1889 a dam broke above the town of Johnstown and caused a huge flood. Today, dams are…", "inspected and built to be safer", ["never checked", "removed from every river", "made of sand only"], "Better rules and tests keep people safe."],
+      ["A sinkhole forms when the ground collapses into an empty space, often where…", "water has dissolved rock underground", ["lava has cooled", "a glacier melted", "wind blew"], "Limestone can dissolve underground."],
+    ],
+  ),
 ];
 /** Put the own units before the planned ones. */
 export const FIRST = false;

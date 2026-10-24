@@ -1147,4 +1147,10 @@ export const lessons: GradeLessons = {
     ["Compare 1863 and 1940.", "The smaller year came first."],
     "Gettysburg",
   ),
+  "social/pa-g4-world-history": lesson(
+    ["World history has famous places like the pyramids, the Great Wall and the Colosseum.", "Documents like the Magna Carta (1215) show how ideas about rights spread.", "Over time some things change, like inventions, and some stay the same, like traditions."],
+    "Which came first: the Magna Carta in 1215 or the printing press in the 1400s?",
+    ["Compare 1215 and the 1400s.", "The smaller number came first."],
+    "the Magna Carta",
+  ),
 };

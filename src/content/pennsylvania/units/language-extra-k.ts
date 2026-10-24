@@ -80,7 +80,7 @@ const PROVE: Q[] = [
   ["Seeds grow into plants. Plants make fruit. What do seeds become?", "plants", ["rocks", "clouds", "shoes"], "The text says seeds grow into plants."],
   ["First we mix. Then we bake. What do we do after mixing?", "bake", ["mix again", "eat the dough", "wash the table"], "Then means next."],
   ["Which picture detail fits “a tall giraffe”?", "a long neck", ["a tiny tail only", "a round shell", "a big beak"], "Giraffes are tall."],
-  ["The page shows a duck and the words say “The duck swims.” What do the words tell?", "what the duck does", ["what color the sky is", "where the car is", "how old the duck is"], "The words tell what the duck does."],
+  ["A page has a duck and “The duck swims.” What do the words tell?", "what the duck does", ["what color the sky is", "where the car is", "how old the duck is"], "The words tell what the duck does."],
   ["Which question can the story answer? “Rosa fed her fish.”", "Who fed the fish?", ["Who owns a horse?", "Where is the moon?", "What is for lunch?"], "The story tells who."],
   ["The author wrote, “Penguins live where it is cold.” Why do penguins live there?", "it is where they live best", ["to buy hats", "to ride buses", "to read books"], "The text tells where they live.", true],
   ["Sam is yawning and rubbing his eyes. What does he need?", "sleep", ["a snack bar", "a kite", "a drum"], "Yawning shows tiredness.", true],

@@ -137,7 +137,13 @@ const GOVERNMENT: Q[] = [
   ["How can a citizen influence lawmakers?", "by voting and writing letters", ["by staying silent", "by ignoring laws", "by hiding"], "Citizens can speak up.", true],
   ["Why do we need three branches of government?", "so no one has all the power", ["to make it slower for fun", "because three is lucky", "to have more flags"], "Each branch checks the others.", true],
   ["Two groups disagree about a new park. A good way to settle it is…", "to talk and find a compromise", ["to shout", "to refuse to listen", "to give up"], "People can influence decisions peacefully.", true],
-];
+
+  ["A school rule is meant to…", "keep students safe and treat them fairly", ["make school hard", "hide things", "stop learning"], "Rules help everyone."],
+  ["A fair consequence for breaking a school rule is one that…", "fits the rule that was broken", ["is harsh for every mistake", "never happens", "is a prize"], "Fair means it fits."],
+  ["Why should school consequences be the same for everyone?", "so the rules are fair", ["so no one learns", "to confuse people", "to avoid rules"], "Fairness matters."],
+  ["Everyone in a classroom has the right to…", "be treated with respect", ["interrupt always", "take others' things", "never listen"], "Rights go with respect."],
+  ["One student needs quiet to read and another needs to move. A fair plan is to…", "find a way that works for both", ["ignore one student", "make everyone move", "ban books"], "Respect everyone's needs."],
+  ["Rights in a community also come with…", "responsibilities", ["prizes", "holidays", "bells"], "Citizens have duties."],];
 
 const SYMBOLS: Q[] = [
   ["Pennsylvania's nickname is…", "the Keystone State", ["the Sunshine State", "the Peach State", "the Lone Star State"], "A keystone is the top stone in an arch."],
@@ -351,7 +357,14 @@ const MARKETS: Q[] = [
   ["Banks bring together…", "savers and borrowers", ["farmers and miners", "teachers and students", "buyers and judges"], "They lend savers' money to borrowers.", true],
   ["Inflation is when…", "prices rise over time", ["prices fall", "no one buys", "banks close"], "Money buys less than before.", true],
   ["Unemployment is when…", "people who want jobs cannot find them", ["everyone has a job", "no one wants work", "workers get raises"], "It can hurt a community.", true],
-];
+
+  ["A hardware store mainly sells…", "goods", ["services only", "weather", "time"], "Goods are things you can buy."],
+  ["A barber shop mainly provides…", "a service", ["goods only", "a mountain", "a map"], "A service is work done for you."],
+  ["Which business mainly provides a service?", "a car wash", ["a toy store", "a bakery", "a shoe store"], "Someone cleans your car."],
+  ["Which business mainly sells goods?", "a bookstore", ["a dentist", "a bus company", "a window cleaner"], "You take the item home."],
+  ["The cost of buying a bike is the money spent. A benefit is…", "being able to ride it", ["spending the money", "the receipt", "the price tag"], "A benefit is a good result."],
+  ["To weigh a decision well, compare its…", "costs and benefits", ["colors", "sounds", "sizes"], "Think about both sides."],
+  ["A town builds a new park. A cost is…", "the money to build it", ["fun for kids", "more trees", "cleaner air"], "A cost is what you give up or pay."],];
 
 const FINANCE: Q[] = [
   ["A financial goal is…", "something you plan to save or pay for", ["a game", "a bank", "a tax"], "Goals help you plan."],
@@ -382,6 +395,56 @@ const FINANCE: Q[] = [
   ["How does an emergency fund help?", "it covers unexpected costs", ["it buys toys", "it lowers taxes", "it earns a salary"], "Savings protect against surprises.", true],
   ["Why do people donate to causes?", "to help others and support what they care about", ["to lose money", "to avoid taxes only", "to buy toys"], "Giving is a choice.", true],
   ["Which is a smart habit with money?", "saving some of what you earn", ["spending everything at once", "borrowing without a plan", "hiding bills"], "Small habits add up.", true],
+
+  ["Ava spends $10 on a movie, so she cannot spend that $10 on a book. What did she give up?", "the book", ["the movie", "the weather", "her shoes"], "That is the opportunity cost."],
+  ["Opportunity cost is…", "the next best thing you give up", ["the price on the tag", "the cheapest choice", "a kind of tax"], "Every choice gives something up."],
+  ["Which can help a person earn more income?", "more education and training", ["quitting school", "avoiding practice", "hiding skills"], "Skills can raise pay."],
+  ["A nurse who finishes more training may earn more. This shows that…", "skills can raise income", ["skills lower income", "training is useless", "income never changes"], "Training pays off."],
+  ["Experience on a job can lead to…", "better pay", ["no learning", "less skill", "a tax"], "Skills grow with practice."],
+  ["Which is a way to pay for something?", "a debit card", ["a rule", "a map", "a flag"], "It uses money in a bank account."],
+  ["A debit card takes money from…", "your bank account", ["a stranger", "a tree", "a game"], "The money is already yours."],
+  ["A gift card lets you spend…", "money already put on the card", ["money you do not have", "nothing", "only at school"], "It is paid in advance."],
+  ["A check is a written order to a bank to pay…", "a certain amount of money", ["a dance", "a weather report", "a rule"], "You sign it."],
+  ["Sales tax is added to…", "the price of certain purchases", ["every word", "your shoes only", "your height"], "It makes the total higher."],
+  ["A $20 game has a 5% sales tax. What is the total?", "$21", ["$20", "$25", "$19"], "5% of $20 is $1.", true],
+  ["Why do people take part in fundraisers?", "to help a cause they care about", ["to avoid people", "to lose money", "to stop a cause"], "People give to causes."],
+  ["A school bake sale to buy library books is a…", "fundraiser", ["tax", "loan", "fine"], "It raises money for a cause."],
+  ["Which unexpected event could hurt a family's finances?", "a flood in the home", ["a sunny picnic", "a nap", "a new crayon"], "Surprises can cost money."],
+  ["A car accident can cause…", "unexpected costs", ["free money", "lower prices", "a holiday"], "Repairs cost money."],
+  ["Emergency savings are money set aside for…", "unexpected costs", ["new toys", "vacations only", "gifts only"], "Plan for surprises."],
+  ["Which helps cover a surprise repair bill?", "emergency savings", ["a new toy", "a coupon for pizza", "a ticket"], "Save for a rainy day."],
+  ["Insurance helps people…", "share the cost of a big loss", ["avoid all bills", "earn interest", "lose money on purpose"], "Many people pay a little."],
+  ["Which is a kind of insurance?", "health insurance", ["a savings jar", "a gift card", "a library card"], "It helps pay medical bills."],
+  ["A family pays a small amount each month for car insurance so that…", "a big loss will be paid for", ["the car will never break", "they can skip driving", "taxes go away"], "Insurance transfers risk."],];
+
+const WORLD: Q[] = [
+  ["The pyramids at Giza were built in ancient…", "Egypt", ["Iceland", "Norway", "Finland"], "They are near the Nile River."],
+  ["Which document from 1215 limited the power of an English king?", "the Magna Carta", ["the Declaration of Independence", "the Bill of Rights", "the Mayflower Compact"], "It was signed in England."],
+  ["The Great Wall was built in ancient…", "China", ["Mexico", "Italy", "Egypt"], "It stretches across northern China."],
+  ["The Rosetta Stone helped people read ancient…", "Egyptian writing", ["Roman coins", "Greek songs", "Chinese maps"], "It shows the same text in three scripts."],
+  ["Ancient Athens is known for an early form of…", "democracy", ["railroads", "television", "radio"], "Citizens voted on laws."],
+  ["The Silk Road was a network of routes for…", "trade between Asia and Europe", ["airplanes", "swimming", "space travel"], "Merchants carried silk and spices."],
+  ["Ancient Rome built roads and…", "aqueducts to carry water", ["rockets", "skyscrapers", "cell phones"], "Engineers moved water to cities."],
+  ["The printing press, invented in the 1400s, made it easier to…", "copy books", ["fly planes", "travel to space", "cook food"], "Gutenberg built one."],
+  ["Beliefs and traditions passed down in families are an example of…", "continuity", ["change only", "conflict", "trade"], "Continuity means staying the same."],
+  ["When a new invention changes how people live, that is…", "change", ["continuity", "a rule", "a tax"], "Things become different."],
+  ["Which is an example of continuity?", "a family tradition kept for hundreds of years", ["a brand-new gadget", "a new road", "a new school"], "It stays the same over time."],
+  ["The wheel changed world history because it made it easier to…", "move people and goods", ["bake bread", "grow flowers", "tell time"], "It helped with travel and trade."],
+  ["Groups working together to build a canal show…", "cooperation", ["conflict", "a tax", "a monopoly"], "They share the work."],
+  ["When two groups fight over land, it is a…", "conflict", ["cooperation", "celebration", "tradition"], "They disagree and clash."],
+  ["Trade between faraway peoples often spread new…", "ideas and goods", ["storms", "rivers", "mountains"], "People shared what they knew."],
+  ["A treaty that ends a war is an example of…", "cooperation after a conflict", ["more fighting", "a tax", "a festival"], "Both sides agree."],
+  ["Which is a political group?", "a city council in ancient Athens", ["a bakery", "a family picnic", "a puppet show"], "Political groups make decisions for a community."],
+  ["Farming peoples along the Nile depended on the river's…", "yearly floods", ["snowstorms", "volcanoes", "sandstorms"], "The floods left rich soil."],
+  ["Machu Picchu is a historic site built by the…", "Inca", ["Romans", "Vikings", "Egyptians"], "It is high in the Andes mountains."],
+  ["The Taj Mahal is a famous building and historic site in…", "India", ["Brazil", "Norway", "Kenya"], "It is in the city of Agra."],
+  ["Which famous site is in Italy?", "the Colosseum", ["the Great Wall", "the Taj Mahal", "Machu Picchu"], "It is in Rome."],
+  ["Which group mainly buys and sells goods?", "merchants", ["judges", "farmers only", "teachers only"], "Their work is trade."],
+  ["Which is a cultural group?", "a people who share a language and traditions", ["a river", "a mountain range", "a road"], "Culture is how people live and what they share."],
+  ["Why do historians study artifacts from many places?", "to learn how people lived and what they valued", ["to make toys", "to avoid learning", "to guess the weather"], "Objects tell stories."],
+  ["The Olympic Games began in ancient…", "Greece", ["Brazil", "Norway", "Peru"], "They were held at Olympia."],
+  ["Which came first in history?", "the pyramids of Egypt", ["the printing press", "the airplane", "the telephone"], "They are thousands of years old.", true],
+  ["The Declaration of Independence and the Magna Carta are both…", "documents about rights and the power of leaders", ["maps", "songs", "toys"], "Both limit or explain government power.", true],
 ];
 
 const TIMELINE: Dated[] = [
@@ -442,7 +505,7 @@ export const UNITS: Unit[] = [
     blurb: "The General Assembly, the governor, the courts and voting",
     parentNote:
       "The General Assembly (50 senators and 203 representatives), the governor, the courts, the Constitution of 1968, Harrisburg, the 67 counties, voting and the services of local, state and national government.",
-    standards: ["5.1.4.B; 5.1.4.C; 5.2.4.C; 5.2.4.D; 5.3.4.A; 5.3.4.B; 5.3.4.C; 5.3.4.D; 5.3.4.E; 5.3.4.G", "rules and laws, ideals of government, leadership and public service, the three branches, elected bodies, services, positions of authority, the voting process and influence"],
+    standards: ["5.1.4.B; 5.1.4.C; 5.2.4.C; 5.2.4.D; 5.3.4.A; 5.3.4.B; 5.3.4.C; 5.3.4.D; 5.3.4.E; 5.3.4.G; 5.1.4.A; 5.2.4.A", "rules and laws, ideals of government, leadership and public service, the three branches, elected bodies, services, positions of authority, the voting process and influence, school rules and consequences and the rights and needs of individuals and others"],
     items: GOVERNMENT,
   }),
   bankUnit({
@@ -512,7 +575,7 @@ export const UNITS: Unit[] = [
     blurb: "How buyers, sellers, money, taxes and trade work together",
     parentNote:
       "The three basic economic questions, barter and money, scarcity and opportunity cost, specialization and interdependence, imports and exports, competition and monopoly, incentives, taxes, public and private goods, banks, inflation and unemployment.",
-    standards: ["6.1.3-5.B; 6.1.3-5.C; 6.1.3-5.G; 6.1.3-5.H; 6.1.3-5.I; 6.1.3-5.J; 6.1.3-5.K; 6.1.3-5.M; 6.2.3-5.A; 6.2.3-5.B; 6.2.3-5.C; 6.2.3-5.D; 6.2.3-5.I; 6.3.3-5.A; 6.3.3-5.E; 6.3.3-5.F; 6.3.3-5.I; 6.4.3-5.A; 6.4.3-5.B; 6.4.3-5.D", "economic systems, scarcity, opportunity cost, incentives, specialization, trade, markets, competition, taxes, public and private goods, money and banks"],
+    standards: ["6.1.3-5.B; 6.1.3-5.C; 6.1.3-5.G; 6.1.3-5.H; 6.1.3-5.I; 6.1.3-5.J; 6.1.3-5.K; 6.1.3-5.M; 6.2.3-5.A; 6.2.3-5.B; 6.2.3-5.C; 6.2.3-5.D; 6.2.3-5.I; 6.3.3-5.A; 6.3.3-5.E; 6.3.3-5.F; 6.3.3-5.I; 6.4.3-5.A; 6.4.3-5.B; 6.4.3-5.D; 6.1.3-5.F; 6.2.3-5.H", "economic systems, scarcity, opportunity cost, incentives, specialization, trade, markets, competition, taxes, public and private goods, money and banks, the costs and benefits of a decision and businesses that provide goods or services"],
     items: MARKETS,
   }),
   bankUnit({
@@ -522,8 +585,18 @@ export const UNITS: Unit[] = [
     blurb: "Goals, spending, credit, value over time and keeping information safe",
     parentNote:
       "Financial goals, how family and life events shape attitudes toward money, what banks offer, entrepreneurship and supplemental income, spending choices, household spending, items that gain or lose value, borrowing and credit, emergency savings, giving and keeping private information safe.",
-    standards: ["17.1.3-5.A; 17.1.3-5.C; 17.1.3-5.D; 17.1.3-5.E; 17.1.3-5.F; 17.2.3-5.G; 17.3.3-5.A; 17.3.3-5.C; 17.4.3-5.A; 17.5.3-5.H; 17.6.3-5.A; 17.6.3-5.C; 17.6.3-5.D; 17.6.3-5.E", "financial goals, attitudes toward money, financial institutions, entrepreneurship, spending, values over time, private information and borrowing"],
+    standards: ["17.1.3-5.A; 17.1.3-5.C; 17.1.3-5.D; 17.1.3-5.E; 17.1.3-5.F; 17.2.3-5.G; 17.3.3-5.A; 17.3.3-5.C; 17.4.3-5.A; 17.5.3-5.H; 17.6.3-5.A; 17.6.3-5.C; 17.6.3-5.D; 17.6.3-5.E; 17.1.3-5.B; 17.2.3-5.C; 17.3.3-5.G; 17.3.3-5.L; 17.3.3-5.M; 17.5.3-5.A; 17.5.3-5.B; 17.5.3-5.C", "financial goals, attitudes toward money, financial institutions, entrepreneurship, spending, values over time, private information and borrowing, opportunity cost, building skills to earn more, payment methods, sales tax, fundraising, unexpected events, emergency savings and insurance"],
     items: FINANCE,
+  }),
+  bankUnit({
+    id: "pa-g4-world-history",
+    title: "World History Connections",
+    emoji: "🌍",
+    blurb: "Famous places, documents and ideas from around the world",
+    parentNote:
+      "Groups in world history (political, cultural and economic), famous documents, artifacts and sites such as the pyramids, the Great Wall and the Magna Carta, how things stay the same or change, and how peoples cooperate or clash.",
+    standards: ["8.4.4.A; 8.4.4.B; 8.4.4.C; 8.4.4.D", "groups in world history, documents, artifacts and sites critical to world history, continuity and change, and conflict and cooperation among groups"],
+    items: WORLD,
   }),
   timelineUnit({
     id: "pa-g4-pennsylvania-timeline",

@@ -57,7 +57,6 @@ export const PLAN_SOCIAL_MIDDLE: Record<string, Entry[]> = {
     ["tx-g6-cultures", "adopt", "7.3.6.A; 8.4.6.C", "culture regions, institutions and holy days around the world"],
     ["tx-g6-tech-and-change", "adopt", "8.4.6.C; 8.1.6.A", "inventions that shaped the world and how technology changed societies"],
     ["tx-g6-world-regions", "adopt", "7.1.6.B; 7.2.6.A; 7.3.6.A; 7.4.6.A", "countries, climates, regions and how people and their surroundings shape each other"],
-    ["or-g6-world-maps", "adopt", "7.1.6.A; 7.1.6.B", "continents, oceans, coordinates and reading world maps and globes"],
     ["ny-g6-eastern-hemisphere", "adopt", "7.1.6.B; 7.3.6.A; 7.2.6.A", "continents, regions, rivers and climates of the Eastern Hemisphere"],
     ["tx-g6-economies", "adopt", "6.1.6-8.A; 6.1.6-8.B; 6.1.6-8.D; 6.1.6-8.C", "traditional, command and market economies, scarcity and how societies answer the basic economic questions"],
   ],

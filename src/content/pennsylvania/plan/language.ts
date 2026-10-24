@@ -90,7 +90,6 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     ["mb-wonder-and-find-out", "adopt", "CC.1.2.3.E; CC.1.4.3.W", "asking research questions and choosing sources"],
     ["wa-g3-media-messages", "adopt", "CC.1.2.3.D; CC.1.2.3.G", "facts and opinions, what a message is for and choosing sources"],
     ["ca-g3-compare-and-connect", "adopt", "CC.1.2.3.I; CC.1.3.3.H", "points of view and comparing two texts on the same topic"],
-    ["fact-or-opinion", "share", "CC.1.2.3.D; CC.1.2.3.B", "telling facts from opinions in what you read"],
     ["ny-g3-pictures-and-perspectives", "adopt", "CC.1.3.3.G; CC.1.2.3.G; CC.1.2.3.D", "how illustrations and text features add meaning, and comparing points of view"],
     ["ny-g3-genres", "adopt", "CC.1.3.3.H; CC.1.3.3.E", "recognizing kinds of text and connecting texts to each other"],
     ["sentences-3", "adopt", "CC.1.4.3.F; CC.1.4.3.R", "simple, compound and complex sentences"],
@@ -159,8 +158,6 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     ["tx-g6-roots", "adopt", "CC.1.2.6.K; CC.1.3.6.I", "Greek and Latin roots that unlock academic words"],
     ["ny-g6-read-closely", "adopt", "CC.1.2.6.B; CC.1.3.6.A; CC.1.3.6.C", "citing evidence for inferences, theme and how characters change"],
     ["ny-g6-compare-texts", "adopt", "CC.1.3.6.H; CC.1.2.6.I", "comparing texts across genres and authors"],
-    ["sources-bias", "share", "CC.1.2.6.H; CC.1.4.6.I", "judging sources for reliability and bias"],
-    ["sentences-6", "adopt", "CC.1.4.6.F; CC.1.4.6.R", "complex sentences with adjective clauses"],
     ["grammar-6", "adopt", "CC.1.4.6.F; CC.1.4.6.L", "gerunds, and active and passive voice"],
   ],
   "7/language": [
@@ -179,11 +176,7 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     ["wa-g7-spelling-rules", "adopt", "CC.1.4.7.F; CC.1.4.7.R", "spelling correctly with prefix, suffix and plural rules"],
     ["tx-g7-rhetoric", "adopt", "CC.1.2.7.D; CC.1.2.7.H", "direct address, rhetorical questions and loaded language"],
     ["tx-g7-roots", "adopt", "CC.1.2.7.K; CC.1.3.7.I", "Greek and Latin roots for all, word, birth and more"],
-    ["semicolons-colons-dashes", "share", "CC.1.4.7.F; CC.1.4.7.L", "semicolons, colons and dashes"],
-    ["source-check", "share", "CC.1.2.7.H; CC.1.2.7.I", "checking whether a source is credible and why it was made"],
-    ["text-patterns-7", "adopt", "CC.1.2.7.E; CC.1.2.7.C", "cause and effect in information texts and features such as a bibliography"],
     ["ny-g7-text-and-versions", "adopt", "CC.1.2.7.G; CC.1.3.7.G", "comparing a written text with an audio, filmed or staged version"],
-    ["grammar-7", "adopt", "CC.1.4.7.F; CC.1.4.7.L", "indirect objects, predicate adjectives and participles"],
   ],
   "8/language": [
     ["close-reading", "share", "CC.1.3.8.A; CC.1.3.8.B; CC.1.2.8.A; CC.1.2.8.B", "theme, tone and textual evidence"],
@@ -203,7 +196,6 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     ["ca-g8-verbs-voice-mood", "adopt", "CC.1.4.8.F; CC.1.4.8.L", "gerunds, passive voice and the subjunctive"],
     ["tx-g8-rhetoric", "adopt", "CC.1.2.8.D; CC.1.2.8.H", "analogy, contrast and fallacies"],
     ["tx-g8-roots", "adopt", "CC.1.2.8.K; CC.1.3.8.I", "Greek and Latin roots for star, quiet, feeling and more"],
-    ["argument-and-media", "share", "CC.1.2.8.H; CC.1.2.8.G", "claims, evidence, persuasive appeals and media techniques"],
     ["ny-g8-dialogue-and-criteria", "adopt", "CC.1.3.8.C", "how dialogue and events propel action and reveal character"],
   ],
   "9/language": [
@@ -222,8 +214,6 @@ export const PLAN_LANGUAGE: Record<string, Entry[]> = {
     ["ca-g9-world-literature", "adopt", "CC.1.3.9-10.H; CC.1.3.9-10.G", "cultural views, two art forms and retellings"],
     ["tx-g9-borrowed-phrases", "adopt", "CC.1.2.9-10.F; CC.1.3.9-10.F", "borrowed words and phrases, and their connotations"],
     ["tx-g9-drama-and-rhetoric", "adopt", "CC.1.3.9-10.D; CC.1.2.9-10.D", "asides, soliloquies, dramatic irony and satire"],
-    ["argument-and-rhetoric", "share", "CC.1.2.9-10.D; CC.1.2.9-10.H", "rhetorical appeals, logic and how an argument is built"],
-    ["language-and-style", "share", "CC.1.2.9-10.F; CC.1.4.9-10.K", "connotation, register and elements of style"],
     ["ny-g9-evaluate-arguments", "adopt", "CC.1.2.9-10.H; CC.1.2.9-10.I", "evaluating an argument's reasoning and evidence"],
   ],
 };

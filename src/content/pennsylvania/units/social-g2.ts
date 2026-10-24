@@ -66,7 +66,13 @@ const GOVERNMENT: Q[] = [
   ["A voter must usually be…", "an adult citizen", ["a baby", "a pet", "a stranger"], "Children can learn and take part in other ways.", true],
   ["Why do leaders need to be fair?", "so people trust them", ["so no one listens", "so rules disappear", "so they win every time"], "Fair leaders treat people equally.", true],
   ["Which level of government is the biggest?", "the national government", ["the town council", "the school", "the family"], "It serves the whole country.", true],
-];
+
+  ["A class has a problem: too much noise at lunch. A first step is to…", "name the problem", ["ignore it", "yell louder", "leave"], "Say what is wrong."],
+  ["After naming a problem, the next step is to…", "think of ways to solve it", ["forget it", "blame someone", "hide"], "Make a plan."],
+  ["Neighbors see trash in a park. A good way to help is to…", "organize a clean-up", ["leave it", "add more", "only complain"], "Citizens can act."],
+  ["Which is a fair way to choose a plan?", "vote on it", ["let the loudest win", "ignore people", "flip a table"], "Voting lets everyone speak."],
+  ["A town has a dangerous crossing. What can citizens do?", "ask leaders to add a crosswalk", ["do nothing", "close their eyes", "stop walking forever"], "Leaders can help fix problems."],
+  ["Why try a solution and then check it?", "to see if it works", ["to waste time", "to be silly", "to lose the plan"], "Good problem solvers check."],];
 
 const PLACES: Q[] = [
   ["A landmark helps people find a place because it is…", "easy to see and remember", ["hidden", "tiny", "always moving"], "Like a tall tower or a big park."],
@@ -126,7 +132,26 @@ const MONEY: Q[] = [
   ["If you borrow money, what usually must you do?", "pay it back", ["keep it", "forget it", "give a bigger toy"], "That is the deal.", true],
   ["Which is private information that should not be shared online?", "your home address", ["your favorite color", "your favorite song", "what you like to draw"], "Keep personal things safe.", true],
   ["Why might a person spend money differently after seeing a friend's new toy?", "friends can change what we want", ["toys are free", "money disappears", "friends pay for it"], "Think before you buy.", true],
-];
+
+  ["A shop that sells shoes is a…", "business", ["rule", "river", "mountain"], "It earns money by selling."],
+  ["Which businesses sell goods?", "a toy store and a bakery", ["a river and a hill", "a rule and a law", "a cloud and a star"], "Goods are things you can buy."],
+  ["Zoe has $10 and wants a $6 book and a $7 game. What limits her?", "she does not have enough money for both", ["the weather", "the book's cover", "her shoes"], "Money is limited."],
+  ["Because money is limited, people must…", "make choices", ["buy everything", "stop eating", "hide"], "You cannot buy it all."],
+  ["Raj's family plans before buying. This can shape how Raj feels about…", "spending money", ["the weather", "the stars", "the moon"], "Families teach by example."],
+  ["Which is a financial institution?", "a bank", ["a library", "a bakery", "a gym"], "It helps people with money."],
+  ["People can deposit money at…", "a bank", ["a bus stop", "a park", "a pool"], "It keeps money safe."],
+  ["A nurse needs to learn how to…", "care for sick people", ["bake pies", "race cars", "paint walls only"], "Jobs need skills."],
+  ["A person who runs a pet-walking business is…", "an entrepreneur", ["an umpire", "a customer", "a judge"], "They started a business."],
+  ["Mia can buy a toy now or wait for a sale. What may change her choice?", "the price", ["the shape of the coin", "the color of the bag", "the day's weather"], "Spending choices depend on cost."],
+  ["Ben gets $3 from his grandma. This is money…", "received", ["spent", "lost", "burned"], "He got it."],
+  ["Ben pays $3 for a book. This is money…", "spent", ["received", "found", "earned"], "He paid it."],
+  ["Which is something your family owns?", "your family's car", ["the library", "the bus", "the school"], "It belongs to your family."],
+  ["To keep your coins from getting lost, you can…", "keep them in a safe place", ["leave them on the bus", "drop them in the grass", "give them to a stranger"], "Be careful with money."],
+  ["Which is a risk when you carry a lot of cash?", "it could be lost or stolen", ["it would always grow", "it would turn into flowers", "it would sing"], "Cash can disappear."],
+  ["Which action reduces a risk online?", "keeping passwords private", ["sharing your password", "telling strangers where you live", "clicking every link"], "Keep private things private."],
+  ["Looking both ways before crossing reduces the risk of…", "getting hurt", ["getting taller", "getting hungry", "getting a prize"], "It keeps you safe."],
+  ["An advantage of lending a toy to a friend is that it…", "helps your friend", ["makes the toy vanish", "turns it into money", "makes it bigger"], "Sharing is kind."],
+  ["A disadvantage of lending your toy is that it could…", "get broken or lost", ["grow bigger", "turn into a bird", "become free money"], "Be careful when lending."],];
 
 const TIMELINES: Q[] = [
   ["A timeline shows events in…", "the order they happened", ["alphabetical order", "random order", "color order"], "Earliest first."],
@@ -205,7 +230,7 @@ export const UNITS: Unit[] = [
     blurb: "Leaders, laws, elections and services",
     parentNote:
       "Rules and laws, mayors and town councils, the governor and the General Assembly in Harrisburg, the president and Congress in Washington, D.C., elections, public services paid for by taxes, and what a responsible citizen does.",
-    standards: ["5.1.2.A; 5.1.2.B; 5.1.2.F; 5.2.2.D; 5.3.2.C; 5.3.2.D; 5.3.2.E; 5.3.2.F", "the purpose of rules, symbols, community services, positions of authority, elections and responsible citizens"],
+    standards: ["5.1.2.A; 5.1.2.B; 5.1.2.F; 5.2.2.D; 5.3.2.C; 5.3.2.D; 5.3.2.E; 5.3.2.F; 5.2.2.B", "the purpose of rules, symbols, community services, positions of authority, elections and responsible citizens, identifying a problem and trying to solve it"],
     items: GOVERNMENT,
   }),
   bankUnit({
@@ -225,7 +250,7 @@ export const UNITS: Unit[] = [
     blurb: "Income, saving, giving, taxes and starting a business",
     parentNote:
       "Income and needs, banks and saving goals, goods and services, entrepreneurs, why people trade and divide work, taxes, giving, borrowing and private information.",
-    standards: ["6.1.K-2.I; 6.1.K-2.J; 6.2.K-2.A; 6.2.K-2.J; 6.3.K-2.E; 6.4.K-2.D; 17.1.K-2.A; 17.2.K-2.A; 17.3.K-2.D; 17.3.K-2.M; 17.4.K-2.B; 17.5.K-2.H; 17.6.K-2.A", "income, banks and saving, goods and services, entrepreneurs, trade, taxes, giving, private information and borrowing"],
+    standards: ["6.1.K-2.I; 6.1.K-2.J; 6.2.K-2.A; 6.2.K-2.J; 6.3.K-2.E; 6.4.K-2.D; 17.1.K-2.A; 17.2.K-2.A; 17.3.K-2.D; 17.3.K-2.M; 17.4.K-2.B; 17.5.K-2.H; 17.6.K-2.A; 6.2.K-2.H; 17.1.K-2.B; 17.1.K-2.C; 17.1.K-2.F; 17.2.K-2.C; 17.2.K-2.G; 17.3.K-2.A; 17.3.K-2.C; 17.4.K-2.A; 17.4.K-2.C; 17.5.K-2.A; 17.5.K-2.B; 17.6.K-2.E", "income, banks and saving, goods and services, entrepreneurs, trade, taxes, giving, private information and borrowing, limited money and choices, how family shapes attitudes, financial institutions, skills for jobs, things people own, everyday risks and the pros and cons of borrowing"],
     items: MONEY,
   }),
   bankUnit({

@@ -541,4 +541,40 @@ export const lessons: GradeLessons = {
     ["Models are approximations.", "When data disagrees, they improve or replace the model."],
     "improve or replace it",
   ),
+  "science/ny-g6-growth": lesson(
+    ["Sexual reproduction creates variation in offspring.", "Animals use behaviours like songs and bright feathers to attract a mate.", "Plants spread seeds in many ways, like hooks that catch on fur.", "Traits like size come mostly from genes, but the environment matters too."],
+    "Some seeds have hooks that catch on fur. How does this help the plant?",
+    ["Animals carry the seeds away.", "The seeds land in new places to grow."],
+    "it spreads its seeds",
+  ),
+  "science/ny-g8-embryos": lesson(
+    ["Early embryos of fish, birds and mammals look very alike, with tails and gill-like folds.", "Scientists compare embryos at matching stages to look for patterns.", "Vestigial parts, like the human tailbone, have little use now but hint at ancestors."],
+    "The human tailbone has little use. What is a part like this called?",
+    ["It is a small leftover structure."],
+    "vestigial",
+  ),
+  "science/pa-g7-food-and-agriculture": lesson(
+    ["A food system covers growing, processing, moving, selling and eating food.", "Farmers protect soil with cover crops, crop rotation and no-till planting.", "Integrated pest management watches pests first and uses chemicals last."],
+    "A farmer counts insects on plants each week. Which IPM step is this?",
+    ["Counting finds how many pests there are.", "That is called scouting."],
+    "scouting",
+  ),
+  "science/pa-g7-stewardship-and-sustainability": lesson(
+    ["Sustainability means using resources so they last for the future.", "Laws like the Clean Water Act and Clean Air Act limit pollution.", "Environmental justice asks that all communities share risks and benefits fairly."],
+    "A landfill is always built near the same neighborhood. Why is that unfair?",
+    ["Landfills carry pollution risks.", "That neighborhood bears more of them."],
+    "that community carries more of the pollution risk",
+  ),
+  "science/pa-g7-technology-impacts": lesson(
+    ["Making and using technology consumes resources and makes waste.", "Reduce, reuse and recycle cut that waste.", "A technology can help and harm at the same time, and the time and place it was made in shape it."],
+    "Plastic bags are cheap and useful. Name a harmful effect.",
+    ["Think about where bags end up.", "Litter can harm wildlife."],
+    "they become litter that can harm wildlife",
+  ),
+  "science/pa-g7-penns-forests": lesson(
+    ["Forests have living parts (plants, animals, fungi) and nonliving parts (soil, water, light).", "Limited resources, like food and light, limit population sizes.", "A change to one part, like losing a tree species, affects the others."],
+    "Deer eat many young trees. What may happen to the forest?",
+    ["Young trees become the next forest.", "If they are eaten, few grow up."],
+    "few young trees grow up, so the forest changes",
+  ),
 };

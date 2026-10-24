@@ -535,4 +535,34 @@ export const lessons: GradeLessons = {
     ["New evidence could change a conclusion.", "So science avoids claiming proof."],
     "the results support the hypothesis",
   ),
+  "science/ny-g7-synthetic-materials": lesson(
+    ["A synthetic material is made by people through chemical processes, such as plastic, nylon and synthetic rubber.", "Many are made from oil and natural gas.", "They are useful, but plastic waste can harm land and oceans."],
+    "Synthetic rubber, made from oil, is often used to make what?",
+    ["It must grip the road and bend.", "Cars roll on it."],
+    "tires",
+  ),
+  "science/particles-heat-ab": lesson(
+    ["Solid particles vibrate in place, liquid particles slide past each other, gas particles move freely.", "Heating speeds particles up; cooling slows them down.", "Melting, freezing, evaporation and condensation change state, but the mass stays the same."],
+    "Which has the fastest-moving particles: ice, water or steam?",
+    ["Steam is a gas.", "Gas particles move fastest."],
+    "steam",
+  ),
+  "science/pa-g8-design-and-testing": lesson(
+    ["Criteria say what a design must do. Constraints are limits such as cost and time.", "Test a model fairly: change one thing, use the right instruments and repeat the trials.", "Use the data to refine the design and to defend your choices."],
+    "Two bridges held 3 kg and 4 kg. What else should you compare?",
+    ["Look at all the criteria and constraints.", "Check cost and materials used too."],
+    "cost and materials used, not just strength",
+  ),
+  "science/pa-g8-control-and-systems": lesson(
+    ["A system takes inputs, runs a process, makes outputs and may use feedback.", "An open-loop system has no feedback and needs a person to change it.", "A closed-loop system uses feedback to adjust on its own, like a thermostat."],
+    "A sprinkler shuts off when sensors find wet soil. Open-loop or closed-loop?",
+    ["The sensor gives feedback.", "The system adjusts without a person."],
+    "closed-loop",
+  ),
+  "science/pa-g8-engineering-tradeoffs": lesson(
+    ["A trade-off means giving up some of one thing to get more of another.", "Science and mathematics help engineers predict how designs will work.", "Surprises can lead to inventions, so creativity matters in engineering."],
+    "A lighter bike frame costs more. What kind of choice is this?",
+    ["Weight and cost compete.", "You give up one to gain the other."],
+    "a trade-off",
+  ),
 };

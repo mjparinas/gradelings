@@ -1,5 +1,22 @@
 import type { Unit } from "../../types";
+import { questionText } from "../../locale";
 import { bankUnit, type Q } from "../own";
+import { copyOf, from } from "./kit";
+import { UNITS as NEW_YORK_3 } from "../../new-york/units/science-g3";
+
+/** New York's unit without the questions that name Lake Ontario, which a US course may not show beside Canada's province. */
+const withoutOntario = (base: Unit): Unit => ({
+  ...base,
+  generate: (opts) => {
+    const out: ReturnType<Unit["generate"]> = [];
+    for (let tries = 0; tries < 30 && out.length < 8; tries++) {
+      for (const q of base.generate(opts)) {
+        if (out.length < 8 && !/Ontario/.test(questionText(q)) && !out.some((x) => x.prompt === q.prompt)) out.push(q);
+      }
+    }
+    return out;
+  },
+});
 
 // Pennsylvania's own Grade 3 science units (`pa-` ids), for the STEELS standards no shared unit practises: tools,
 // machines and how technology helps and harms (3.5.3-5.A, B, C, D, G, K, L, W), renewable and nonrenewable resources and
@@ -122,6 +139,29 @@ export const UNITS: Unit[] = [
     standards: ["3.1.3.G; 3.1.3.H; 3.4.3-5.A", "how well different organisms survive in a habitat, how changes to the environment affect the plants and animals that live there, and how living things and their environment affect each other"],
     items: PENNS_WILDLIFE,
   }),
+  copyOf(
+    withoutOntario(from(NEW_YORK_3, "ny-g3-weather-climate")),
+    {
+      id: "pa-g3-weather-climate",
+      title: "Weather & Climate",
+      emoji: "🌦️",
+      blurb: "Weather in each season, and the climates of different places.",
+      parentNote:
+        "Practices describing typical weather in each season with tables and graphs, and comparing the climates of different regions of the world, with Pennsylvania examples such as snowy winters, hot summers and the cooler mountains.",
+      standards: ["3.3.3.A; 3.3.3.B", "typical weather in each season shown in tables and graphs, and climates in different regions of the world"],
+    },
+    [
+      ["Which season is usually the snowiest in Pennsylvania?", "winter", ["summer", "spring", "fall"], "Winter is cold enough for snow."],
+      ["Pennsylvania's summers are usually…", "warm to hot and often humid", ["freezing", "dry like a desert", "snowy"], "Summer is the warm season."],
+      ["The weather report says 90 degrees and sunny in July. Which season is it?", "summer", ["winter", "spring", "fall"], "Hot weather points to summer."],
+      ["A table shows Harrisburg's rainfall each month. What does it help you find?", "which months are usually wetter or drier", ["the tallest tree", "the time of day", "the name of a river"], "Tables show weather data."],
+      ["Weather is…", "what the air is like in a place today", ["the same every year", "what a place is like over 30 years", "a kind of rock"], "Weather changes from day to day."],
+      ["Climate is…", "the typical weather in a place over many years", ["today's weather", "this week's weather", "a storm"], "Climate is a long-term pattern."],
+      ["Mountains in Pennsylvania are often cooler than the valleys below. This is a difference in…", "climate",
+        ["gravity", "soil color", "river names"], "Place changes climate."],
+      ["Erie gets more winter snow than Philadelphia because of…", "cold air moving over the warm water of Lake Erie", ["a volcano", "a desert", "the Moon"], "Lake-effect snow falls near big lakes."],
+    ],
+  ),
 ];
 /** Put the own units before the planned ones. */
 export const FIRST = false;

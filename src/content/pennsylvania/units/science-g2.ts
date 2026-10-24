@@ -1,5 +1,7 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { copyOf, from } from "./kit";
+import { UNITS as NEW_YORK_2 } from "../../new-york/units/science-g2";
 
 // Pennsylvania's own Grade 2 science units (`pa-` ids), for the STEELS standards no shared unit practises: how people use
 // resources and how technology has changed the way we live (3.4.K-2.A, D; 3.5.K-2.D, E, Y), how everyday things work as
@@ -121,6 +123,50 @@ export const UNITS: Unit[] = [
     standards: ["3.1.2.C; 3.4.K-2.C; 3.4.K-2.D", "comparing the variety of life in different habitats, how places differ in their physical characteristics, and investigating an issue in the local environment"],
     items: HABITATS_AND_WATER,
   }),
+  copyOf(
+    from(NEW_YORK_2, "ny-g2-land-water"),
+    {
+      id: "pa-g2-land-water",
+      title: "Land & Water Around Us",
+      emoji: "🏞️",
+      blurb: "Mountains, valleys, rivers and lakes, and where water is found.",
+      parentNote:
+        "Practices the shapes and kinds of land (mountains, valleys, hills) and bodies of water (rivers, lakes, ponds, oceans) in an area, with Pennsylvania examples such as the Allegheny Mountains, the Susquehanna and Delaware Rivers and Lake Erie, and where water is found on Earth.",
+      standards: ["3.3.2.C; 3.3.2.D", "modeling the shapes and kinds of land and bodies of water in an area, and where water is found"],
+    },
+    [
+      ["Which is a body of water in Pennsylvania?", "Lake Erie", ["a desert", "a volcano", "a canyon wall"], "Lake Erie is in the northwest corner."],
+      ["The Delaware River is on Pennsylvania's…", "eastern border", ["highest mountain", "largest desert", "tallest hill"], "It flows along the east side of the state."],
+      ["Two rivers meet in Pittsburgh to make the Ohio River. A river is…", "water that flows in a long channel", ["still water in a bowl", "tall land", "dry sand"], "Rivers move."],
+      ["The Allegheny Mountains are…", "high land with rounded tops", ["flat water", "a river", "an ocean"], "Mountains are high land."],
+      ["A valley is…", "low land between hills or mountains", ["high land with snow", "a flat sea", "a kind of river"], "Valleys lie between higher land."],
+      ["On a map, water is usually colored…", "blue", ["red", "brown", "yellow"], "Blue shows water."],
+      ["The Susquehanna is a long…", "river", ["mountain", "island", "desert"], "It runs through central Pennsylvania."],
+      ["Which landform is the highest?", "a mountain", ["a valley", "a pond", "a plain"], "Mountains rise above the land around them."],
+    ],
+  ),
+  copyOf(
+    from(NEW_YORK_2, "ny-g2-earth-changes"),
+    {
+      id: "pa-g2-earth-changes",
+      title: "Fast & Slow Earth Changes",
+      emoji: "🌧️",
+      blurb: "Some changes to the land are fast, some are slow, and people can slow them down.",
+      parentNote:
+        "Practices that Earth events can happen quickly (floods, landslides) or slowly (rivers carving valleys, mountains wearing down), and ways to stop wind and water from changing land, with Pennsylvania creeks, hills and farms as examples.",
+      standards: ["3.3.2.A; 3.3.2.B", "Earth events happen quickly or slowly, and ways to stop wind and water from changing land"],
+    },
+    [
+      ["A flood after heavy rain changes a creek bank…", "quickly", ["very slowly", "never", "over millions of years"], "Floods change land fast."],
+      ["A river carving a valley is a change that happens…", "slowly", ["in one minute", "right away", "never"], "It takes a very long time."],
+      ["Which is a fast change to land?", "a landslide after a storm", ["a river carving a valley", "a mountain wearing down", "soil forming"], "Landslides happen in moments."],
+      ["Which is a slow change to land?", "wind and water wearing down a mountain", ["a landslide", "a flash flood", "a rock falling"], "Wearing down takes a very long time."],
+      ["Planting grass on a bare hill helps stop…", "rain from washing the soil away", ["the Sun from shining", "rain from falling", "the hill from existing"], "Roots hold soil."],
+      ["A farmer plants a row of trees at the edge of a field to…", "slow the wind and hold the soil", ["make wind stronger", "remove soil", "stop crops growing"], "Trees block wind."],
+      ["A wall of rocks along a creek bank helps…", "keep the bank from washing away", ["stop the water flowing", "keep fish out", "keep the Sun out"], "Rocks hold the bank."],
+      ["After a storm, a creek carries muddy water. The water is moving…", "soil from one place to another", ["rocks to the Moon", "the Sun", "clouds"], "Water carries soil away."],
+    ],
+  ),
 ];
 /** Put the own units before the planned ones. */
 export const FIRST = false;

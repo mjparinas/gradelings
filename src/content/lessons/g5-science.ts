@@ -439,4 +439,40 @@ export const lessons: GradeLessons = {
     ["It is the air right now.", "That is weather. Climate is the long-term pattern."],
     "weather",
   ),
+  "science/pa-g5-people-and-environment": lesson(
+    ["Living things and the environment affect each other.", "People can cause pollution, but people can also protect and repair nature.", "Collecting data, such as counts and measurements, helps us understand a place."],
+    "Planting trees along a stream helps in what way?",
+    ["Trees give shade.", "Roots hold soil so less washes into the water."],
+    "it keeps the water cooler and cleaner",
+  ),
+  "science/pa-g5-engineering-process": lesson(
+    ["Engineers define the problem, design a solution, build a model, test it and improve it.", "Criteria say what a solution must do. Constraints are limits such as cost or time.", "A fair test changes one thing at a time."],
+    "To compare two paper airplane designs fairly, what should stay the same?",
+    ["Change only the design.", "Keep the paper, the throw and the place the same."],
+    "the paper, the throw and the place",
+  ),
+  "science/pa-g5-technology-and-society": lesson(
+    ["Inventions change how people live, work and communicate.", "Needs and wants lead people to invent things.", "A new technology can have good and bad effects, so people weigh them."],
+    "Phones help people talk far away. Name one possible downside.",
+    ["Think about time and attention.", "Think about the waste made when phones are thrown away."],
+    "too much screen time or electronic waste",
+  ),
+  "science/pa-g5-ecosystems": lesson(
+    ["Plants take in water and air to make food. Animals eat plants or other animals.", "Decomposers, like fungi and bacteria, break down dead things.", "Matter moves around and is used again, so it is not lost."],
+    "What happens to the nutrients in a fallen leaf?",
+    ["Decomposers break the leaf down.", "The nutrients go back into the soil."],
+    "they go back into the soil",
+  ),
+  "science/pa-g5-gravity": lesson(
+    ["Gravity pulls objects toward the middle of Earth.", "We call that direction down, wherever you are on Earth.", "Gravity makes things fall and rivers flow downhill."],
+    "A ball is dropped in Erie and another far away on the other side of Earth. Where does gravity pull each?",
+    ["Down is toward Earth's middle.", "That is true for both places."],
+    "toward the middle of Earth",
+  ),
+  "science/pa-g5-earth-water": lesson(
+    ["Earth has four systems: geosphere (land), hydrosphere (water), atmosphere (air) and biosphere (life).", "Most of Earth's water is salty ocean. Only a little is fresh water.", "The systems interact. Rain falls from the air into streams."],
+    "A river carves a valley. Which two systems interact?",
+    ["The river is the hydrosphere.", "The valley is the geosphere."],
+    "hydrosphere and geosphere",
+  ),
 };

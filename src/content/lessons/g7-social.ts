@@ -1076,27 +1076,39 @@ export const lessons: GradeLessons = {
     "Austin",
   ),
   "social/pa-g7-pa-government": lesson(
-    ["Pennsylvania has had five constitutions (1776, 1790, 1838, 1874 and 1968). The one in use today is from 1968, and Article I is the Declaration of Rights.", "The General Assembly has a Senate of 50 members (four-year terms) and a House of 203 members (two-year terms). The governor can veto a bill, and two thirds of each chamber can override the veto.", "Courts go from magisterial district courts and the Courts of Common Pleas up to the Superior Court, the Commonwealth Court and the Supreme Court. Pennsylvania holds closed primaries: you vote in a party's primary only if you are registered with it."],
+    ["Pennsylvania has had five constitutions (1776, 1790, 1838, 1874 and 1968). Today's is from 1968, and its Article I is the Declaration of Rights.", "The General Assembly has 50 senators and 203 representatives. The governor can veto a bill, and two thirds of each chamber can override it.", "Courts rise from local courts up to the Superior Court, the Commonwealth Court and the Supreme Court. Primaries are closed: you vote in your own party's."],
     "Which court is the highest in Pennsylvania?",
     ["Think about which court hears the last appeals.", "It has seven justices."],
     "the Supreme Court of Pennsylvania",
   ),
   "social/pa-g7-pa-new-nation": lesson(
-    ["Philadelphia was the nation's capital from 1790 to 1800. In 1780 Pennsylvania passed a law that began to end slavery slowly, and Black leaders such as Richard Allen and Absalom Jones built churches and groups to support their community.", "In 1794 farmers in the west protested a federal tax on whiskey. The Whiskey Rebellion ended when President Washington sent troops, which showed the new government could enforce its laws.", "Turnpikes, Conestoga wagons, the National Road and the Main Line canals and railroad carried people and goods across Pennsylvania."],
+    ["Philadelphia was the nation's capital from 1790 to 1800. A 1780 law began to end slavery slowly, and Black leaders such as Richard Allen built community groups.", "In 1794 western farmers protested a federal tax on whiskey. The Whiskey Rebellion ended when President Washington sent troops.", "Turnpikes, Conestoga wagons, the National Road, canals and railroads carried people and goods across Pennsylvania."],
     "Why did farmers in western Pennsylvania make whiskey?",
     ["Think about carrying grain over mountains.", "A barrel of whiskey was easier to carry than sacks of grain."],
     "it was easier to carry than bulky grain",
   ),
   "social/pa-g7-pa-geography": lesson(
-    ["Pennsylvania has mountain ridges, plateaus and river valleys. The Delaware, Susquehanna, Allegheny and Monongahela are major rivers, and the Allegheny and Monongahela meet at Pittsburgh to form the Ohio River.", "Physical processes such as erosion and glaciers shape the land. Mining, logging and farming show how people change the land, and rivers and valleys shape where people settle.", "Geographers use maps, graphs and population data to compare places and regions."],
+    ["Pennsylvania has mountain ridges, plateaus and river valleys. The Delaware, Susquehanna, Allegheny and Monongahela are major rivers.", "The Allegheny and Monongahela meet at Pittsburgh to form the Ohio River. Erosion and glaciers shape the land, and rivers shape where people settle.", "Geographers use maps, graphs and population data to compare places and regions."],
     "Which two rivers meet at Pittsburgh to form the Ohio River?",
     ["One of them has a name that starts with A.", "The other is the Monongahela."],
     "the Allegheny and the Monongahela",
   ),
   "social/pa-g7-pennsylvanians": lesson(
-    ["Many Pennsylvanians changed the country. Benjamin Franklin was a printer, scientist and leader, Lucretia Mott worked to end slavery and win women's rights, and Rachel Carson wrote about protecting nature.", "Jonas Salk's vaccine protected children from polio. Marian Anderson, Mary Cassatt and Fred Rogers shaped music, art and television. Milton Hershey and Andrew Carnegie built businesses.", "People contribute in different ways: ideas, art, leadership, science and business."],
+    ["Many Pennsylvanians changed the country. Benjamin Franklin was a printer and scientist, and Lucretia Mott worked to end slavery and win women's rights.", "Jonas Salk's vaccine protected children from polio, and Rachel Carson wrote about protecting nature. Marian Anderson and Mary Cassatt shaped music and art.", "People contribute in different ways: ideas, art, leadership, science and business."],
     "Whose vaccine protected children from polio?",
     ["He was a scientist from Pittsburgh.", "His name starts with S."],
     "Jonas Salk",
+  ),
+  "social/ca-g8-early-republic": lesson(
+    ["The early republic had its own writers: Herman Melville (Moby-Dick), James Fenimore Cooper (The Last of the Mohicans).", "Transcendentalists like Emerson and Thoreau believed in self-reliance and finding truth in nature; Thoreau wrote Walden.", "Treaties often took Native land, such as the Treaty of Fort Jackson (1814), which forced the Muscogee to give up about 23 million acres."],
+    "Thoreau wrote Walden about what?",
+    ["Thoreau was a Transcendentalist.", "He lived for two years in a small cabin.", "It was beside a pond, where he lived simply."],
+    "living simply near a pond",
+  ),
+  "social/ca-g8-westward": lesson(
+    ["Manifest Destiny drove expansion west, at great cost to Native nations.", "The Treaty of Guadalupe Hidalgo (1848) ended the US–Mexican War and promised Mexicans who stayed citizenship and property protection.", "The California Gold Rush began in 1848–49, and the Pony Express (1860–61) carried mail by horse relay."],
+    "What did the Treaty of Guadalupe Hidalgo promise Mexicans who stayed in the US?",
+    ["The treaty ended the US–Mexican War.", "Land became part of the US.", "People who stayed were promised rights."],
+    "citizenship and protection of their property",
   ),
 };

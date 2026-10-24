@@ -391,4 +391,34 @@ export const lessons: GradeLessons = {
     ["Thunder means lightning is close.", "Lightning can strike water, so get out and go inside."],
     "get out and go inside",
   ),
+  "science/pa-g2-resources-and-people": lesson(
+    ["People use resources from nature, like water, trees, soil and sunlight.", "Technology is something people make to solve a problem, and it can change how we live.", "Technology can help and can also cause problems, so people make choices."],
+    "A car helps people travel but makes air pollution. Is that all good?",
+    ["The car helps people.", "The car also has a harmful effect."],
+    "No, it has both helpful and harmful effects",
+  ),
+  "science/pa-g2-how-things-work": lesson(
+    ["A system has parts that work together.", "Simple machines, like a ramp or a lever, make work easier.", "Engineers and designers plan things and test them."],
+    "A bicycle has a chain, pedals and wheels. Why does it need all of them?",
+    ["The parts work together as a system.", "Without one part, it will not go."],
+    "the parts work together",
+  ),
+  "science/pa-g2-habitats-and-water": lesson(
+    ["A habitat is a place where plants and animals find what they need.", "Forests, ponds and streams are different habitats.", "Rain runs downhill into streams and rivers, like the Susquehanna."],
+    "A frog needs water to live. Which habitat fits: a pond or a dry desert?",
+    ["Frogs need water.", "A pond has water."],
+    "a pond",
+  ),
+  "science/pa-g2-land-water": lesson(
+    ["Land has shapes, like mountains, hills and valleys.", "Bodies of water include rivers, lakes, ponds and oceans.", "A map uses blue for water."],
+    "A low place between two mountains is called what?",
+    ["Mountains are high.", "The low land between them is a valley."],
+    "a valley",
+  ),
+  "science/pa-g2-earth-changes": lesson(
+    ["Some changes to land are fast, like a flood or a landslide.", "Some are slow, like a river carving a valley.", "People can slow changes. Roots of plants hold soil in place."],
+    "Planting grass on a bare hill helps stop what?",
+    ["Roots hold soil.", "Rain cannot wash the soil away as easily."],
+    "soil from washing away",
+  ),
 };

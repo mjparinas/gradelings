@@ -183,8 +183,8 @@ export const lessons: GradeLessons = {
   ),
   "language/pa-gk-prove-it": lesson(
     ["Listen to the story. The story has the answer.", "Look for the words in the story that tell you.", "Pick the answer that matches the story."],
-    "Sam has a red hat. What color is Sam’s hat?",
-    ["Listen for the color.", "The story says red."],
+    "Sam has a red hat. What kind of hat does Sam have?",
+    ["Listen for the word that tells about the hat.", "The story says red."],
     "red",
   ),
 };

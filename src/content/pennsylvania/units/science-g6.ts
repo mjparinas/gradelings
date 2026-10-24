@@ -1,5 +1,8 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { copyOf, from } from "./kit";
+import { UNITS as NEW_YORK_6 } from "../../new-york/units/science-g6";
+import { UNITS as NEW_YORK_7 } from "../../new-york/units/science-g7";
 
 // Pennsylvania's own Grade 6 science units (`pa-` ids), for the STEELS environment standards no shared unit practises:
 // how watersheds and wetlands work as systems and how to describe a local environment from data (3.4.6-8.C, E),
@@ -122,6 +125,50 @@ export const UNITS: Unit[] = [
     standards: ["3.3.6-8.K; 3.3.6-8.N; 3.4.6-8.B", "how the uneven distribution of Earth's mineral, energy and groundwater resources comes from geoscience processes, how population and resource use affect Earth's systems, and how different societies use and manage natural resources"],
     items: EARTH_RESOURCES,
   }),
+  copyOf(
+    from(NEW_YORK_6, "ny-g6-climate"),
+    {
+      id: "pa-g6-climate",
+      title: "Climate & Warming",
+      emoji: "🌡️",
+      blurb: "What shapes a region's climate, and why Earth is warming.",
+      parentNote:
+        "Practices what shapes regional climate (latitude, elevation, nearby water, air and ocean circulation) and the causes of the rise in global temperatures, with Pennsylvania examples such as lake-effect snow near Lake Erie and cooler mountains.",
+      standards: ["3.3.6-8.I; 3.3.6-8.O", "what shapes regional climate, and the causes of rising global temperatures"],
+    },
+    [
+      ["Pennsylvania has hot summers and cold winters because it is…", "in the middle latitudes, where seasons change", ["on the equator", "at the North Pole", "under the ocean"], "Latitude affects climate."],
+      ["Areas near Erie get a lot of winter snow because cold air picks up…", "moisture from the warm lake water", ["dust", "heat from the Moon", "salt"], "This is called lake-effect snow."],
+      ["The Allegheny and Pocono mountains are cooler than Philadelphia because…", "air gets cooler as elevation rises", ["they are closer to the Sun", "they have no wind", "they have no clouds"], "Higher places are cooler."],
+      ["Ocean currents and air masses help set a region's…", "climate", ["day length", "gravity", "tides only"], "They move heat around Earth."],
+      ["Average temperatures in Pennsylvania have risen over the past century. A main cause is…", "more greenhouse gases from burning fossil fuels", ["a closer Sun", "fewer stars", "bigger tides"], "Greenhouse gases trap heat."],
+      ["Which gas released by burning coal, oil and gas traps heat?", "carbon dioxide", ["helium", "neon", "argon"], "It is the main greenhouse gas from fuels."],
+      ["Climate is…", "the typical weather of a place over many years", ["today's weather", "the weather this hour", "one storm"], "Weather is short-term; climate is long-term."],
+      ["A data table shows Harrisburg's yearly average temperature rising over 100 years. This is evidence of…", "a warming trend", ["no change", "a cooling trend", "a single storm"], "Look at the pattern over time.", true],
+    ],
+  ),
+  copyOf(
+    from(NEW_YORK_7, "ny-g7-earth-surface"),
+    {
+      id: "pa-g6-earth-surface",
+      title: "Rocks, Plates & Changing Land",
+      emoji: "⛰️",
+      blurb: "The rock cycle, slow and fast changes to the land, and evidence of moving plates.",
+      parentNote:
+        "Practices the rock cycle, how geoscience processes change Earth's surface over different times and sizes, and evidence of moving plates, with Pennsylvania examples such as the Appalachian Mountains, limestone, slate, glaciers and coal.",
+      standards: ["3.3.6-8.F; 3.3.6-8.E; 3.3.6-8.G", "the rock cycle, surface processes at different time and size scales, and evidence of moving plates"],
+    },
+    [
+      ["Pennsylvania's Appalachian Mountains formed when…", "moving plates collided long ago", ["a comet hit", "a volcano erupted last year", "a flood"], "Collisions fold and lift rock."],
+      ["Pennsylvania's mountains are old and rounded because they have been…", "worn down by weathering and erosion for millions of years", ["built last year", "made of soft sand", "sanded by machines"], "Slow processes wear rock away."],
+      ["Pennsylvania has no active volcanoes because it is…", "far from plate boundaries", ["right on a plate boundary", "on a hot spot", "under water"], "Volcanoes cluster at plate edges."],
+      ["Limestone in Pennsylvania's caves formed from…", "shells and sediment on an ancient sea floor", ["lava", "glaciers", "wind"], "Limestone is sedimentary rock."],
+      ["Slate quarried in eastern Pennsylvania is a metamorphic rock formed when shale is changed by…", "heat and pressure", ["cooling lava", "dissolving in rain", "wind"], "Metamorphic rock is rock changed by heat and pressure."],
+      ["Glaciers once covered parts of northwestern and northeastern Pennsylvania. Evidence includes…", "scratched rocks and lakes the ice left behind", ["volcano cones", "tropical coral", "sand dunes only"], "Moving ice scrapes and carves the land."],
+      ["Fossils of ocean animals on Pennsylvania ridges are evidence that…", "the land was once under a sea and has since been lifted", ["oceans are on the ridges today", "fossils fall from the sky", "the animals climbed up"], "Plate motion raised ancient sea floor."],
+      ["Coal beds in Pennsylvania are evidence that the area was once…", "a warm, swampy forest", ["a desert", "a glacier", "a deep ocean"], "Coal comes from buried plants.", true],
+    ],
+  ),
 ];
 /** Put the own units before the planned ones. */
 export const FIRST = false;

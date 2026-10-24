@@ -129,7 +129,14 @@ const RULES: Q[] = [
   ["Why do some jobs help the whole community?", "everyone benefits from them", ["no one likes them", "they are only for fun", "they take things away"], "Fire fighters and police help all.", true],
   ["Laws are rules for…", "a whole community or country", ["only one child", "only toys", "only pets"], "People must follow them.", true],
   ["Who makes laws for Pennsylvania?", "the General Assembly", ["the principal", "a bus driver", "a baker"], "It meets in Harrisburg.", true],
-];
+
+  ["Two children want the same toy. A kind way to solve it is to…", "take turns", ["grab it", "yell", "break it"], "Taking turns is fair."],
+  ["Working together on a class project is called…", "cooperation", ["fighting", "hiding", "yelling"], "Everyone helps."],
+  ["A conflict is…", "a disagreement", ["a snack", "a game", "a song"], "People can solve conflicts peacefully."],
+  ["A story about a long-ago disagreement in a town is about…", "a conflict in the past", ["today's weather", "a new toy", "tomorrow's lunch"], "History is about the past."],
+  ["Which shows cooperation in a classroom?", "children clean up together", ["children fight over crayons", "children ignore the teacher", "children hide the glue"], "Many hands help."],
+  ["Which is a peaceful way to end a conflict?", "talk and listen", ["push", "call names", "run away from class"], "Use words."],
+  ["The American Revolution was a conflict. When did it happen?", "long ago", ["last week", "tomorrow", "this morning"], "It began in 1775."],];
 
 const CELEBRATE: Q[] = [
   ["A holiday is…", "a special day people celebrate", ["a kind of food", "a type of weather", "a school test"], "Many holidays have traditions."],
@@ -187,7 +194,21 @@ const MONEY: Q[] = [
   ["Your friend says buying a toy is cool. What can you do?", "think about whether you want it and can afford it", ["buy it right away", "take it", "copy everyone always"], "Friends can change what we want.", true],
   ["Why do people use a bank instead of a hiding spot?", "a bank keeps money safe", ["it is silly", "it costs nothing to lose", "banks make noise"], "A bank is secure.", true],
   ["Which choice helps you keep your money safe?", "put it in a bank or a safe place", ["leave it on the bus", "drop it outside", "tell strangers"], "Keep it secure.", true],
-];
+
+  ["When people divide a big job into parts, the work is…", "easier", ["harder", "never done", "lost"], "Each person does a part."],
+  ["Which is a business in a community?", "a grocery store", ["a mountain", "a rule", "a map"], "It sells things to people."],
+  ["A bakery is a business that…", "sells bread and treats", ["fixes cars", "teaches math", "grows trees"], "People buy food there."],
+  ["A person who starts a new business is an…", "entrepreneur", ["umpire", "audience", "inspector"], "They try a new idea."],
+  ["Who is an entrepreneur?", "someone who opens a bike shop", ["someone who only watches TV", "someone who naps", "someone who loses things"], "They run their own business."],
+  ["A tax is money people pay to…", "the government", ["a pet", "a friend", "a toy store"], "Taxes help pay for public things."],
+  ["Which can taxes pay for?", "a public park", ["a pizza at home", "a toy in your room", "a game at home"], "Everyone can use it."],
+  ["Why do people use banks to save?", "the money stays safe", ["banks give out toys", "banks bake bread", "banks hide the sun"], "A bank protects savings."],
+  ["A fire fighter needs to know how to…", "use a hose and help people", ["bake cakes", "sing opera", "paint pictures only"], "Every job needs skills."],
+  ["To be a teacher, a person needs to…", "learn how to teach children", ["never read", "stay silent all day", "avoid children"], "Jobs need knowledge and skills."],
+  ["Leo gets $5 for his birthday. That is money…", "received", ["spent", "lost", "burned"], "He got it."],
+  ["Leo buys a puzzle with $5. That is money…", "spent", ["received", "found", "grown"], "He paid it."],
+  ["Which do you own?", "your own backpack", ["the city park", "the school bus", "the town library"], "It belongs to you."],
+  ["Which is something many families own?", "a bike", ["the sun", "the sea", "a cloud"], "It belongs to them."],];
 
 export const UNITS: Unit[] = [
   bankUnit({
@@ -227,7 +248,7 @@ export const UNITS: Unit[] = [
     blurb: "Why we have rules, who leads and how to be a good citizen",
     parentNote:
       "The purpose of rules, responsibilities at home and school, leaders in a school, town, state and country, voting, helpers such as fire fighters and police officers, and solving problems peacefully.",
-    standards: ["5.1.1.A; 5.1.1.B; 5.2.1.A; 5.2.1.B; 5.2.1.C; 5.2.1.D; 5.3.1.C; 5.3.1.D; 5.3.1.E; 5.3.1.F", "the purpose of rules, responsibilities, solving problems, emergency workers, leaders, elections and consequences"],
+    standards: ["5.1.1.A; 5.1.1.B; 5.2.1.A; 5.2.1.B; 5.2.1.C; 5.2.1.D; 5.3.1.C; 5.3.1.D; 5.3.1.E; 5.3.1.F; 8.2.1.D; 8.4.1.D", "the purpose of rules, responsibilities, solving problems, emergency workers, leaders, elections and consequences, conflict in a community's past and conflict and cooperation in the classroom"],
     items: RULES,
   }),
   bankUnit({
@@ -247,7 +268,7 @@ export const UNITS: Unit[] = [
     blurb: "Income, banks, saving, borrowing and keeping things private",
     parentNote:
       "Needs and wants, income, what banks do, saving for a goal, donating, borrowing and returning, private information and everyday risks, and how friends can affect what we want.",
-    standards: ["17.1.K-2.A; 17.1.K-2.C; 17.1.K-2.F; 17.2.K-2.A; 17.3.K-2.A; 17.3.K-2.M; 17.5.K-2.A; 17.5.K-2.B; 17.5.K-2.H; 17.6.K-2.A; 17.6.K-2.E", "financial goals, income, banks, giving, risks, private information and borrowing"],
+    standards: ["17.1.K-2.A; 17.1.K-2.C; 17.1.K-2.F; 17.2.K-2.A; 17.3.K-2.A; 17.3.K-2.M; 17.5.K-2.A; 17.5.K-2.B; 17.5.K-2.H; 17.6.K-2.A; 17.6.K-2.E; 6.1.K-2.I; 6.2.K-2.H; 6.2.K-2.J; 6.3.K-2.E; 6.4.K-2.D; 17.2.K-2.C; 17.2.K-2.G; 17.3.K-2.C; 17.4.K-2.A; 17.4.K-2.C", "financial goals, income, banks, giving, risks, private information and borrowing, dividing tasks, businesses and entrepreneurs, taxes, saving at a bank, skills for jobs, money received and spent, things people own and keeping money safe"],
     items: MONEY,
   }),
 ];

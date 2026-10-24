@@ -1,5 +1,7 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { copyOf, from } from "./kit";
+import { UNITS as NEW_YORK_5 } from "../../new-york/units/science-g5";
 
 // Pennsylvania's own Grade 5 science units (`pa-` ids), for the STEELS standards no shared unit practises: how people and
 // the environment affect each other and what to do about an environmental issue (3.4.3-5.A, B, E, F; 3.3.5.F), the
@@ -122,6 +124,72 @@ export const UNITS: Unit[] = [
     standards: ["3.5.3-5.H; 3.5.3-5.J; 3.5.3-5.EE; 3.5.3-5.FF; 3.5.3-5.GG; 3.5.3-5.HH", "what changes a society's technology, how technologies are adapted when needs change, how economic, political and cultural forces shape solutions, comparing nature and the human-made world, the relationship between science and technology, and the roles of scientists, engineers and technicians"],
     items: TECHNOLOGY_AND_SOCIETY,
   }),
+  copyOf(
+    from(NEW_YORK_5, "ny-g5-ecosystems"),
+    {
+      id: "pa-g5-ecosystems",
+      title: "Matter in Ecosystems",
+      emoji: "🍂",
+      blurb: "How matter moves among plants, animals, decomposers and the environment.",
+      parentNote:
+        "Practices how matter moves among plants, animals, decomposers and the environment, with Pennsylvania forest examples such as fallen hemlock needles, deer, brook trout and mushrooms.",
+      standards: ["3.1.5.B", "the movement of matter among plants, animals, decomposers and the environment"],
+    },
+    [
+      ["Fallen needles on a Pennsylvania forest floor are broken down by…", "decomposers such as fungi and bacteria", ["the Moon", "rain only", "deer"], "Decomposers feed on dead matter."],
+      ["Decomposers return nutrients to the…", "soil", ["sky", "Moon", "clouds"], "Plants take the nutrients back up."],
+      ["A white-tailed deer gets the matter it needs to grow from…", "the plants it eats", ["sunlight directly", "the soil directly", "water only"], "Animals eat food to grow."],
+      ["An oak leaf is eaten by a caterpillar, which a bird eats. The caterpillar gets matter from…", "the oak leaf", ["the bird", "the wind", "the Moon"], "Matter moves along the food chain."],
+      ["Mushrooms growing on a log help…", "break the log down into nutrients for the soil", ["make the log bigger", "add plastic to the soil", "stop plants growing"], "Fungi are decomposers."],
+      ["When a leaf falls and rots, its nutrients…", "go back into the soil", ["disappear", "go to the Moon", "turn into metal"], "Matter is not lost."],
+      ["Plants make their food using sunlight, water and…", "carbon dioxide from the air", ["soil only", "oil", "salt"], "Plants take in air as well as water."],
+      ["Compost piles work because decomposers…", "break food scraps down into soil", ["make scraps bigger", "add plastic", "freeze scraps"], "Rotting returns matter to the soil."],
+    ],
+  ),
+  copyOf(
+    from(NEW_YORK_5, "ny-g5-gravity"),
+    {
+      id: "pa-g5-gravity",
+      title: "Gravity",
+      emoji: "🍎",
+      blurb: "Gravity pulls things down toward the center of Earth.",
+      parentNote:
+        "Practices that Earth's gravity pulls objects toward its center, which we call down, using falling pinecones, flowing rivers and sleds on Pennsylvania hills.",
+      standards: ["3.2.5.F", "Earth's gravitational force on objects is directed down"],
+    },
+    [
+      ["A ball dropped on a playground falls…", "down toward the center of Earth", ["up", "sideways", "it stays in the air"], "Gravity pulls things down."],
+      ["A pinecone falls from an eastern hemlock because of…", "gravity", ["magnets", "heat", "a mirror"], "Gravity pulls it down."],
+      ["Rain falls over Pittsburgh because gravity pulls it…", "down toward Earth", ["up", "sideways", "nowhere"], "Down is toward the center of Earth."],
+      ["Two students, one in Erie and one on the other side of Earth, each drop a ball. Gravity pulls each ball…", "toward the center of Earth", ["to the north", "to the Moon", "up into the sky"], "Down is the same direction for everyone: toward the center."],
+      ["A sled goes down a snowy hill because gravity pulls it…", "down the slope", ["up the slope", "into the sky", "sideways"], "Gravity pulls things down."],
+      ["A river flows downhill because…", "gravity pulls water down", ["the Moon pushes it", "rocks pull it", "wind pulls it"], "Water moves to lower ground."],
+      ["If a hole could go straight through Earth, a dropped rock would be pulled toward…", "Earth's center", ["the Sun", "the sky", "the Moon"], "Gravity points to the center."],
+      ["The Susquehanna River flows toward the Chesapeake Bay because gravity pulls the water…", "downhill", ["uphill", "in circles", "away from the sea"], "Rivers follow the slope of the land."],
+    ],
+  ),
+  copyOf(
+    from(NEW_YORK_5, "ny-g5-earth-water"),
+    {
+      id: "pa-g5-earth-water",
+      title: "Earth's Systems & Water",
+      emoji: "💧",
+      blurb: "How Earth's spheres work together, and where Earth's water is.",
+      parentNote:
+        "Practices how Earth's systems (geosphere, hydrosphere, atmosphere and biosphere) interact, where Earth's water is found, and how communities protect resources, with Pennsylvania streams, Lake Erie and groundwater as examples.",
+      standards: ["3.3.5.C; 3.3.5.D; 3.3.5.E", "Earth's systems interact, where Earth's water is, and how communities protect resources"],
+    },
+    [
+      ["Most of Earth's water is in the…", "salty oceans", ["lakes", "rivers", "clouds"], "The oceans hold nearly all of it."],
+      ["Which water is fresh water?", "a mountain stream", ["the ocean", "seawater", "a salt marsh"], "Fresh water has very little salt."],
+      ["Lake Erie holds a great deal of…", "fresh water", ["salt water", "oil", "lava"], "The Great Lakes are fresh water."],
+      ["Rain that soaks into the soil in Pennsylvania becomes…", "groundwater", ["clouds", "ice", "salt"], "It fills spaces underground."],
+      ["A community can protect its streams by…", "planting trees along the banks", ["dumping trash", "paving the banks", "cutting all the trees"], "Roots hold soil and shade the water."],
+      ["Trees affect the water cycle because they…", "hold soil and release water vapor", ["make water salty", "stop all rain", "freeze water"], "The biosphere affects the other spheres."],
+      ["A river cuts a valley over time. This is the hydrosphere changing the…", "geosphere", ["atmosphere", "biosphere", "Sun"], "Water changes the land."],
+      ["When rain fills a stream, which two Earth systems interact?", "atmosphere and hydrosphere", ["geosphere and Sun", "biosphere and Moon", "Sun and Moon"], "Rain comes from the air; the stream is water."],
+    ],
+  ),
 ];
 /** Put the own units before the planned ones. */
 export const FIRST = false;

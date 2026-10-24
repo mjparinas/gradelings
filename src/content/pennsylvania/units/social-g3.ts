@@ -71,7 +71,13 @@ const LOCAL: Q[] = [
   ["A public good or service is…", "something the government provides for everyone", ["a private toy", "a store's product", "a secret"], "Roads and parks are examples.", true],
   ["A private good or service is…", "something a business sells to buyers", ["a public park", "a public road", "a free library"], "A toy store sells private goods.", true],
   ["A way a person can serve the community is…", "volunteering", ["avoiding others", "breaking rules", "skipping school"], "Volunteers help without pay.", true],
-];
+
+  ["Why do communities have laws?", "to keep people safe and treat them fairly", ["to make life boring", "to hide things", "to stop all fun"], "Laws protect everyone."],
+  ["A consequence is…", "what happens when a rule is broken", ["a reward", "a snack", "a map"], "Rules have consequences."],
+  ["Which is a school rule?", "walk in the hallway", ["run in the hallway", "shout in the hallway", "push in line"], "It keeps students safe."],
+  ["Which is a community law?", "stop at a red light", ["turn left at lunch", "wear blue on Monday", "sing in the car"], "It keeps drivers and walkers safe."],
+  ["A rule in a classroom might be…", "raise your hand to speak", ["talk at the same time", "leave at any time", "throw paper"], "It helps everyone have a turn."],
+  ["Laws are different from classroom rules because laws…", "apply to the whole community", ["only apply to one desk", "are only for pets", "are never written"], "Governments make laws."],];
 
 const DOCUMENTS: Q[] = [
   ["The Declaration of Independence was adopted in…", "1776", ["1492", "1865", "1950"], "It was in Philadelphia."],
@@ -102,7 +108,12 @@ const DOCUMENTS: Q[] = [
   ["A just action is one that is…", "fair", ["quick", "secret", "loud"], "It treats people the way they should be treated.", true],
   ["An unjust action is one that is…", "unfair", ["fair", "kind", "helpful"], "Laws try to prevent it.", true],
   ["Leaders can lead through public service, like…", "running for school board", ["breaking rules", "staying home always", "ignoring people"], "Public service helps others.", true],
-];
+
+  ["An artifact is…", "an object made by people long ago", ["a type of weather", "a kind of rock only", "a modern game"], "It helps us learn about the past."],
+  ["Why do museums keep artifacts?", "to help people learn about cultures", ["to hide them", "to sell lunch", "to break them"], "Artifacts teach history."],
+  ["The pyramids in Egypt are important sites to…", "Egyptian history and culture", ["Pennsylvania farms", "modern sports", "the weather"], "They are very old."],
+  ["Why should people protect historic sites?", "so others can learn from them", ["so they fall apart", "so no one visits", "to hide history"], "Sites hold stories."],
+  ["An old pottery bowl found in the ground can teach about…", "how people lived", ["tomorrow's weather", "the price of milk", "a math test"], "Objects show daily life."],];
 
 const PLACES: Q[] = [
   ["Pennsylvania is in which part of the United States?", "the Northeast", ["the Southwest", "the Pacific coast", "the Northwest"], "It is near New York and New Jersey."],
@@ -165,7 +176,13 @@ const COLONY: Q[] = [
   ["Change over time in Pennsylvania includes…", "new technology and new industries", ["no changes", "going back to horses only", "fewer people forever"], "Continuity and change both happen.", true],
   ["Continuity means…", "something staying the same over time", ["something changing", "something ending", "something lost"], "Some traditions last.", true],
   ["Which has stayed the same in Philadelphia since Penn's time?", "it is still a city by the Delaware River", ["it has no people", "it is a desert", "it has no buildings"], "The location has not changed.", true],
-];
+
+  ["On a timeline, the oldest event is placed…", "on the left", ["on the right", "off the page", "in the middle only"], "Time moves left to right."],
+  ["Yesterday is the past. Tomorrow is the…", "future", ["past", "present", "history"], "It has not happened yet."],
+  ["Which comes first on a timeline: 1681 or 1776?", "1681", ["1776", "they are the same", "neither"], "The smaller year is earlier."],
+  ["A timeline can show…", "events in order", ["the weather", "a list of snacks", "a map's rivers"], "It shows time."],
+  ["Today's date belongs to the…", "present", ["past", "future", "ancient times"], "It is happening now."],
+  ["The Declaration of Independence (1776) comes before the Constitution in…", "1787", ["1681", "1500", "1000"], "1787 is later than 1776."],];
 
 const WORK: Q[] = [
   ["Scarcity means…", "there is not enough of something for everyone", ["there is too much of it", "it is free", "it is hidden"], "People must make choices."],
@@ -196,7 +213,19 @@ const WORK: Q[] = [
   ["Some products are made locally and others are not because of…", "available resources and skills", ["the color of the sky", "luck only", "what the weather forecast says"], "Coal is mined where it is found.", true],
   ["Exports are goods…", "sent to other places to be sold", ["bought from other places", "made at home only", "thrown away"], "Pennsylvania exports many goods.", true],
   ["Imports are goods…", "brought in from other places", ["sent away", "made nowhere", "free"], "We import goods we do not make.", true],
-];
+
+  ["Every economy must decide what to make, how to make it and…", "who gets it", ["when to nap", "what color to paint", "how loud to be"], "Three basic questions."],
+  ["A benefit of buying a bike is that…", "you can ride to places", ["you spend money", "the price is high", "you must save"], "A benefit is a good result."],
+  ["Before deciding, a good thinker compares…", "costs and benefits", ["colors and sounds", "shoes and hats", "days and nights"], "Weigh the good and the bad."],
+  ["A bonus for good work is an example of a…", "positive incentive", ["negative incentive", "monopoly", "tax"], "An incentive pushes people to act."],
+  ["A fine for littering is an example of a…", "negative incentive", ["positive incentive", "gift", "prize"], "It discourages an action."],
+  ["When one business sells a product and has no competitors, it is a…", "monopoly", ["market", "bank", "union"], "Mono means one."],
+  ["Unemployment means…", "people who want jobs cannot find them", ["everyone has a job", "jobs are free", "people work two jobs"], "They are looking for work."],
+  ["Inflation is when prices…", "rise over time", ["always fall", "never change", "disappear"], "Money buys less."],
+  ["When a sales tax is added, the price you pay is…", "higher", ["lower", "the same", "free"], "Taxes add to the price."],
+  ["Noise and traffic from a new factory are…", "unintended consequences", ["taxes", "monopolies", "interest"], "They were not the goal."],
+  ["Why do many countries make their own money?", "to manage their own economy", ["to have more rocks", "to avoid trade", "to save paper"], "Each country controls its money."],
+  ["Banks bring together people who save and people who…", "borrow", ["bake", "swim", "paint"], "Savers' money is lent out."],];
 
 const MONEY: Q[] = [
   ["Which payment method uses paper money and coins?", "cash", ["a debit card", "a gift card", "a check"], "You hand it over."],
@@ -226,7 +255,27 @@ const MONEY: Q[] = [
   ["Friends and family can change how a person feels about…", "money", ["gravity", "weather", "rivers"], "We learn habits from others.", true],
   ["Opportunity cost of saving $10 instead of buying a toy is…", "the toy you gave up", ["the $10", "nothing", "the bank"], "You give up the toy now.", true],
   ["Which item is likely to be worth more over time?", "a rare collectible coin", ["a snack", "a used napkin", "a candy wrapper"], "Some items gain value.", true],
-];
+
+  ["Why do people set financial goals?", "to plan for things they want or need", ["to make money disappear", "to avoid planning", "to lose track"], "A goal is a plan."],
+  ["Which is a financial goal?", "saving $100 for a bike", ["watching TV all day", "losing a coin", "buying nothing ever"], "It is a target for saving."],
+  ["After a family loses a job, they may become more careful about…", "spending", ["sunshine", "birthdays only", "singing"], "Life events change how people feel about money."],
+  ["Which life event can change how a family thinks about money?", "a new baby", ["a sunny day", "a haircut", "a new pencil"], "It changes needs."],
+  ["Which choice may NOT be in a person's best interest?", "spending all savings on one fad toy", ["saving for an emergency", "comparing prices", "making a budget"], "Think about the long run."],
+  ["Talking with family about money can help you…", "learn to make good choices", ["lose money", "forget prices", "avoid planning"], "Good talks teach."],
+  ["Which is a service a bank provides?", "a savings account", ["a bike repair", "a haircut", "a school lunch"], "Banks hold money."],
+  ["Which is a product a bank offers?", "a checking account", ["a pizza", "a movie", "a toy"], "People use it to pay bills."],
+  ["Mei walks dogs for neighbors to earn extra money. This is…", "entrepreneurship", ["inflation", "a tax", "a monopoly"], "She started her own small business."],
+  ["A person with a job who also sells crafts on weekends has…", "supplemental income", ["no income", "a monopoly", "a tax"], "Extra money on top of a job."],
+  ["Which factor can change what a family buys first?", "needs and prices", ["the shape of the moon", "a cloud", "a song"], "People prioritize."],
+  ["Which is a source of household income?", "wages from a job", ["a grocery bill", "a gas bill", "rent due"], "Income is money coming in."],
+  ["Rent and food are examples of household…", "spending", ["income", "interest", "wages"], "Money going out."],
+  ["Which is more likely to increase in value over time?", "land in a growing town", ["a worn-out toy", "a torn jacket", "a used paper cup"], "Demand can raise value."],
+  ["Which usually loses value as it gets older?", "a used bicycle", ["land in a growing town", "a house in a growing town", "a rare book in demand"], "Wear and age lower value."],
+  ["Why do people deposit money in a savings account?", "to keep it safe and earn interest", ["to lose it", "to burn it", "to hide it forever"], "Banks pay interest."],
+  ["A trait that helps someone borrow responsibly is being…", "trustworthy", ["careless", "forgetful", "late"], "Lenders look for responsibility."],
+  ["Someone who returns borrowed things on time is likely to be…", "trusted to borrow again", ["never trusted", "given all the money", "forced to move"], "Responsible borrowers earn trust."],
+  ["Which is usually paid for over time with credit?", "a car", ["a pencil", "a stick of gum", "a sticker"], "Big purchases cost a lot."],
+  ["Paying over time with credit means paying back the money plus…", "interest", ["a toy", "a dance", "a game"], "Credit costs extra."],];
 
 export const UNITS: Unit[] = [
   bankUnit({
@@ -246,7 +295,7 @@ export const UNITS: Unit[] = [
     blurb: "Mayors, councils, services, elections and how laws are made",
     parentNote:
       "Local government services, mayors and councils, ordinances, the school board, elections, the General Assembly and the governor, how a bill becomes a law, the three branches of government, and public and private goods.",
-    standards: ["5.3.3.A; 5.3.3.B; 5.3.3.C; 5.3.3.D; 5.3.3.E; 5.3.3.G; 6.3.3-5.F; 6.3.3-5.I", "the three branches, how local laws are made, services, positions of authority, elections, taxes and public goods"],
+    standards: ["5.3.3.A; 5.3.3.B; 5.3.3.C; 5.3.3.D; 5.3.3.E; 5.3.3.G; 6.3.3-5.F; 6.3.3-5.I; 5.1.3.A; 5.1.3.B", "the three branches, how local laws are made, services, positions of authority, elections, taxes and public goods, the purposes of rules, laws and consequences at school and in the community"],
     items: LOCAL,
   }),
   bankUnit({
@@ -256,7 +305,7 @@ export const UNITS: Unit[] = [
     blurb: "The Declaration, the Constitution and the ideals of American government",
     parentNote:
       "The Declaration of Independence and the Constitution, both written in Philadelphia, the Bill of Rights, the Pennsylvania Constitution of 1968, the ideals of liberty, democracy, justice and equality, rights and responsibilities of citizens, and solving conflicts fairly.",
-    standards: ["5.1.3.C; 5.1.3.D; 5.2.3.A; 5.2.3.B; 5.2.3.C; 5.2.3.D; 5.3.3.F; 8.3.3.B", "ideals of government, key documents, rights and responsibilities, resolving conflict, public service and fairness"],
+    standards: ["5.1.3.C; 5.1.3.D; 5.2.3.A; 5.2.3.B; 5.2.3.C; 5.2.3.D; 5.3.3.F; 8.3.3.B; 8.4.3.B", "ideals of government, key documents, rights and responsibilities, resolving conflict, public service and fairness, why artifacts and sites matter to different cultures"],
     items: DOCUMENTS,
   }),
   bankUnit({
@@ -276,7 +325,7 @@ export const UNITS: Unit[] = [
     blurb: "William Penn, Philadelphia, the Lenape and the people who came to Pennsylvania",
     parentNote:
       "William Penn and the founding of Pennsylvania, the Lenape and other Native peoples tied to the land and their nations today, the Walking Purchase, Germans and the Amish, Benjamin Franklin, Independence Hall, Valley Forge and Gettysburg, Quakers and slavery, and change and continuity. Native nations are described as living peoples with governments and communities today, in Oklahoma and elsewhere; nothing sacred or ceremonial is asked about.",
-    standards: ["8.2.3.A; 8.2.3.B; 8.2.3.C; 8.2.3.D; 8.3.3.A; 8.3.3.C; 8.3.3.D", "contributions of individuals and groups in Pennsylvania, places critical to its history, continuity and change, and conflict and cooperation"],
+    standards: ["8.2.3.A; 8.2.3.B; 8.2.3.C; 8.2.3.D; 8.3.3.A; 8.3.3.C; 8.3.3.D; 8.1.3.A", "contributions of individuals and groups in Pennsylvania, places critical to its history, continuity and change, and conflict and cooperation, telling past, present and future with timelines"],
     items: COLONY,
   }),
   bankUnit({
@@ -286,7 +335,7 @@ export const UNITS: Unit[] = [
     blurb: "Coal, steel, oil, railroads and Pennsylvania entrepreneurs",
     parentNote:
       "Scarcity and opportunity cost, goods and services, consumers and producers, markets and competition, profit and loss, Pennsylvania's coal, steel, oil and railroads, and entrepreneurs such as Milton Hershey.",
-    standards: ["6.1.3-5.C; 6.1.3-5.G; 6.1.3-5.I; 6.1.3-5.K; 6.1.3-5.M; 6.2.3-5.A; 6.2.3-5.B; 6.2.3-5.D; 6.2.3-5.E; 6.2.3-5.H; 6.2.3-5.I; 6.2.3-5.J", "scarcity, opportunity cost, specialization, trade, buyers and sellers, competition, profit and loss, Pennsylvania's resources and entrepreneurs"],
+    standards: ["6.1.3-5.C; 6.1.3-5.G; 6.1.3-5.I; 6.1.3-5.K; 6.1.3-5.M; 6.2.3-5.A; 6.2.3-5.B; 6.2.3-5.D; 6.2.3-5.E; 6.2.3-5.H; 6.2.3-5.I; 6.2.3-5.J; 6.1.3-5.B; 6.1.3-5.F; 6.1.3-5.H; 6.2.3-5.C; 6.3.3-5.A; 6.3.3-5.E; 6.3.3-5.H; 6.4.3-5.B; 6.4.3-5.D", "scarcity, opportunity cost, specialization, trade, buyers and sellers, competition, profit and loss, Pennsylvania's resources and entrepreneurs, the three basic economic questions, costs and benefits, incentives, monopolies, unemployment and inflation, taxes and prices, unintended consequences, countries' money and how banks link savers and borrowers"],
     items: WORK,
   }),
   bankUnit({
@@ -296,7 +345,7 @@ export const UNITS: Unit[] = [
     blurb: "Budgets, payment methods, interest, insurance and giving",
     parentNote:
       "Ways to pay (cash, debit cards, gift cards, credit), making a simple budget, income and ways to earn more, sales tax, interest and fees, insurance and emergency savings, saving goals, giving, and keeping private information safe.",
-    standards: ["17.1.3-5.B; 17.2.3-5.A; 17.2.3-5.C; 17.3.3-5.D; 17.3.3-5.G; 17.3.3-5.L; 17.3.3-5.M; 17.4.3-5.B; 17.5.3-5.A; 17.5.3-5.B; 17.5.3-5.C; 17.5.3-5.H; 17.6.3-5.D; 17.6.3-5.E", "opportunity cost, income, budgets, payment methods, taxes, giving, savings, risk, insurance, private information and borrowing"],
+    standards: ["17.1.3-5.B; 17.2.3-5.A; 17.2.3-5.C; 17.3.3-5.D; 17.3.3-5.G; 17.3.3-5.L; 17.3.3-5.M; 17.4.3-5.B; 17.5.3-5.A; 17.5.3-5.B; 17.5.3-5.C; 17.5.3-5.H; 17.6.3-5.D; 17.6.3-5.E; 17.1.3-5.A; 17.1.3-5.C; 17.1.3-5.D; 17.1.3-5.E; 17.1.3-5.F; 17.2.3-5.G; 17.3.3-5.A; 17.3.3-5.C; 17.4.3-5.A; 17.4.3-5.C; 17.6.3-5.A; 17.6.3-5.C", "opportunity cost, income, budgets, payment methods, taxes, giving, savings, risk, insurance, private information and borrowing, financial goals, how life events change attitudes toward money, financial institutions, entrepreneurship and extra income, household income and spending, value over time, deposits and borrowing on credit"],
     items: MONEY,
   }),
 ];
