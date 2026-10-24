@@ -1,6 +1,7 @@
 "use client";
 
 import { grantBillingPass } from "./billingReturn";
+import { rememberParent } from "./parentHint";
 import type { FamilyInfo } from "./model";
 import { clearReferralCode, forgetMyInvite, myInviteCode, rememberMyInvite, savedReferralCode } from "./referral";
 import { useStore } from "./store";
@@ -27,6 +28,7 @@ async function post<T>(url: string, body?: unknown, method = "POST"): Promise<T>
 }
 
 function adopt(family: FamilyInfo) {
+  if (family.account && !family.account.student) rememberParent();
   useStore.getState().setFamily(family, true);
   useStore.getState().setSync({ status: "idle" });
 }
@@ -35,6 +37,22 @@ export async function signUp(email: string, password: string) {
   const { family } = await post<{ family: FamilyInfo }>("/api/auth/signup/", {
     email,
     password,
+    trialEndsAt: useStore.getState().family.trialEndsAt,
+    referralCode: savedReferralCode() ?? undefined,
+  });
+  clearReferralCode();
+  adopt(family);
+  await syncNow();
+}
+
+/**
+ * "Send me the reports" from the end of a lesson: an account from an email alone, with the weekly report on.
+ * This device is signed in at once and its progress uploads; the email asks the parent to confirm.
+ */
+export async function signUpForReports(email: string) {
+  const { family } = await post<{ family: FamilyInfo }>("/api/auth/signup/", {
+    email,
+    passwordless: true,
     trialEndsAt: useStore.getState().family.trialEndsAt,
     referralCode: savedReferralCode() ?? undefined,
   });

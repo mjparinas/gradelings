@@ -487,4 +487,28 @@ export const lessons: GradeLessons = {
     ["Winter is cold in Pennsylvania.", "A graph shows more snow in winter than summer."],
     "winter is the snowiest season",
   ),
+  "science/il-g3-fossils": lesson(
+    ["A fossil is what is left of a plant or animal from long ago, kept in rock.", "Fossils show what lived in a place and what the place was like.", "Sea-animal fossils on dry land show a sea once covered it."],
+    "Coral fossils are found in a field far from any sea. What does that tell us?",
+    ["Coral only grows in warm, shallow seas.", "So that place was once under a warm sea."],
+    "it was once a warm sea",
+  ),
+  "science/il-g3-weather-climate": lesson(
+    ["Weather is what the air is like today: hot, cold, rainy or windy.", "Climate is the usual weather over many years.", "Illinois has hot summers, cold winters and spring storms."],
+    "Is 'Chicago gets snow most winters' about weather or climate?",
+    ["It talks about many winters, not one day.", "A pattern over many years is climate."],
+    "climate",
+  ),
+  "science/co-g3-fossils": lesson(
+    ["A fossil is what is left of a plant or animal from long ago, kept in rock.", "Fossils show what lived in a place and what the place was like.", "Sea-animal fossils on dry land show a sea once covered it."],
+    "Coral fossils are found in a field far from any sea. What does that tell us?",
+    ["Coral only grows in warm, shallow seas.", "So that place was once under a warm sea."],
+    "it was once a warm sea",
+  ),
+  "science/co-g3-weather-climate": lesson(
+    ["Weather is what the air is like today: hot, cold, rainy or windy.", "Climate is the usual weather over many years.", "Colorado has many sunny days, summer thunderstorms and snowy mountain winters."],
+    "Is 'Denver gets snow most winters' about weather or climate?",
+    ["It talks about many winters, not one day.", "A pattern over many years is climate."],
+    "climate",
+  ),
 };

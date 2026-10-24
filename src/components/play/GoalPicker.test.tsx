@@ -21,7 +21,7 @@ vi.mock("@/lib/useNow", () => ({ useNow: () => NOW }));
 
 import { GoalChip } from "./GoalPicker";
 
-const open = () => fireEvent.click(screen.getByRole("button", { name: "Today's goal is 15 minutes. Change it" }));
+const open = () => fireEvent.click(screen.getByRole("button", { name: /Today's goal is 15 minutes. Change it$/ }));
 
 beforeEach(() => {
   vi.clearAllMocks();

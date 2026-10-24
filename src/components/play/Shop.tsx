@@ -99,15 +99,16 @@ export function Shop() {
                 type="button"
                 onClick={() => choose(item)}
                 className={`btn h-full w-full flex-col gap-2 p-3 ${isOn ? "btn-good" : ""}`}
-                aria-label={`${say(item.name)}${isOn ? ", equipped" : isOwned ? ", owned" : locked ? `, locked: ${item.unlock?.label}` : `, ${item.cost} coins`}`}
               >
-                <span className="flex h-24 w-24 items-center justify-center">
+                <span aria-hidden="true" className="flex h-24 w-24 items-center justify-center">
                   {item.critter ? <CritterSvg id={item.critter} mood={isOn ? "cheer" : "happy"} /> : <span className="text-6xl">{item.icon}</span>}
                 </span>
                 <span className="text-lg leading-tight font-bold">{say(item.name)}</span>
-                <span className={`rounded-full px-3 py-0.5 text-sm font-bold ${isOn ? "bg-white/30" : isOwned ? "bg-good-soft text-good-dark" : locked ? "bg-black/5 text-ink-soft" : affordable ? "bg-[#fff4cc] text-[#7a5700]" : "bg-black/5 text-ink-soft"}`}>
+                {/* The chip's emoji and dots are for the eye; the button is named in words below, from its own text, so what it says and what it is called never differ. */}
+                <span aria-hidden="true" className={`rounded-full px-3 py-0.5 text-sm font-bold ${isOn ? "bg-white/30" : isOwned ? "bg-good-soft text-good-dark" : locked ? "bg-black/5 text-ink-soft" : affordable ? "bg-[#fff4cc] text-[#7a5700]" : "bg-black/5 text-ink-soft"}`}>
                   {isOn ? "Using ✓" : isOwned ? "Owned · Use" : locked ? `🔒 ${item.unlock?.label} · 🪙 ${item.cost}` : `🪙 ${item.cost}`}
                 </span>
+                <span className="sr-only">{isOn ? ", equipped" : isOwned ? ", owned" : locked ? `, locked: ${item.unlock?.label}` : `, ${item.cost} coins`}</span>
               </button>
             </div>
           );

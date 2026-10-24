@@ -352,10 +352,10 @@ interface QueueItem {
   familyId?: string;
   email?: string;
   at: number;
-  action: { type: "email"; preset: string } | { type: "verify" } | { type: "open" } | { type: "reports" } | { type: "inbox"; id: string } | { type: "task" };
+  action: { type: "email"; preset: string } | { type: "verify" } | { type: "open" } | { type: "reports" } | { type: "feedback" } | { type: "inbox"; id: string } | { type: "task" };
 }
 
-export function Queue({ onOpenFamily, onReports, onInbox, onCount }: { onOpenFamily: (id: string) => void; onReports: () => void; onInbox: (id: string) => void; onCount?: (n: number) => void }) {
+export function Queue({ onOpenFamily, onReports, onFeedback, onInbox, onCount }: { onOpenFamily: (id: string) => void; onReports: () => void; onFeedback?: () => void; onInbox: (id: string) => void; onCount?: (n: number) => void }) {
   const [items, setItems] = useState<QueueItem[] | null>(null);
   const [err, setErr] = useState("");
   const [open, setOpen] = useState<string | null>(null);
@@ -447,6 +447,11 @@ export function Queue({ onOpenFamily, onReports, onInbox, onCount }: { onOpenFam
                   {it.action.type === "reports" && (
                     <button type="button" className={primary} onClick={onReports}>
                       Open Reports
+                    </button>
+                  )}
+                  {it.action.type === "feedback" && (
+                    <button type="button" className={primary} onClick={onFeedback}>
+                      Open Feedback
                     </button>
                   )}
                   {it.action.type === "inbox" && (

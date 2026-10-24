@@ -1,0 +1,429 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D2980644",
+   "id": "D2980644",
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.cde.state.co.us/coscience/2020cas-sc-p12",
+   "title": "Colorado Academic Standards: Science",
+   "valid": "2020"
+  },
+  "educationLevels": [
+   "04"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D2980644_grade-04",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/3.0/us/",
+   "rightsHolder": "D2L Corporation",
+   "title": "CC BY 3.0 US"
+  },
+  "normalizedSubject": "Science",
+  "standards": {
+   "07C0BCA0557946CD96B706C02E493E32": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2986907",
+    "depth": 0,
+    "description": "Physical Science",
+    "id": "07C0BCA0557946CD96B706C02E493E32",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": "Standard",
+    "statementNotation": "PS1"
+   },
+   "11EE39D2ED334119BD58CFF91D6886AC": {
+    "ancestorIds": [
+     "07C0BCA0557946CD96B706C02E493E32"
+    ],
+    "asnIdentifier": "S2986950",
+    "depth": 1,
+    "description": "An object can be seen when light reflected from its surface enters the eyes.",
+    "id": "11EE39D2ED334119BD58CFF91D6886AC",
+    "parentId": "07C0BCA0557946CD96B706C02E493E32",
+    "position": 12000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.4.6"
+   },
+   "17D45D4C2F554386A599E6ECFEA9DB93": {
+    "ancestorIds": [
+     "B71228F92021472D974F799EACCFAF35",
+     "07C0BCA0557946CD96B706C02E493E32"
+    ],
+    "asnIdentifier": "S2986953",
+    "depth": 2,
+    "description": "Generate and compare multiple solutions that use patterns to transfer information.",
+    "id": "17D45D4C2F554386A599E6ECFEA9DB93",
+    "parentId": "B71228F92021472D974F799EACCFAF35",
+    "position": 15000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.4.7.a"
+   },
+   "1F4BE3C9F7EB41619204F4BAFFEBA1E1": {
+    "ancestorIds": [
+     "690B00ACA55E47B99F188FA40C1B843D"
+    ],
+    "asnIdentifier": "S2987193",
+    "depth": 1,
+    "description": "Earth's physical features occur in patterns.",
+    "id": "1F4BE3C9F7EB41619204F4BAFFEBA1E1",
+    "parentId": "690B00ACA55E47B99F188FA40C1B843D",
+    "position": 25000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.4.3"
+   },
+   "21E96BEECF6041F0B4579F2898B4C4EE": {
+    "ancestorIds": [
+     "266D133842994BC3B30CB1D9C7EB4B52",
+     "38D866ECE4DC4DAB8F065442660D1A90"
+    ],
+    "asnIdentifier": "S2987079",
+    "depth": 2,
+    "description": "Use a model to describe that animals receive different types of information through their senses, process the information in their brain, and respond to the information in different ways.",
+    "id": "21E96BEECF6041F0B4579F2898B4C4EE",
+    "parentId": "266D133842994BC3B30CB1D9C7EB4B52",
+    "position": 19000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.4.1.b"
+   },
+   "266D133842994BC3B30CB1D9C7EB4B52": {
+    "ancestorIds": [
+     "38D866ECE4DC4DAB8F065442660D1A90"
+    ],
+    "asnIdentifier": "S2987077",
+    "depth": 1,
+    "description": "Organisms have both internal and external structures that serve various functions.",
+    "id": "266D133842994BC3B30CB1D9C7EB4B52",
+    "parentId": "38D866ECE4DC4DAB8F065442660D1A90",
+    "position": 17000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "LS2.4.1"
+   },
+   "2750192AF10D4C87ACA57BEBA4BE1C8B": {
+    "ancestorIds": [
+     "A6300E538F7E4B67BF304F75B67626C0",
+     "07C0BCA0557946CD96B706C02E493E32"
+    ],
+    "asnIdentifier": "S2986943",
+    "depth": 2,
+    "description": "Make observations to provide evidence that energy can be transferred from place to place by sound, light, heat and electric currents.",
+    "id": "2750192AF10D4C87ACA57BEBA4BE1C8B",
+    "parentId": "A6300E538F7E4B67BF304F75B67626C0",
+    "position": 5000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.4.2.a"
+   },
+   "2E59DCFCD41446CCBDCF84B1AB1788C3": {
+    "ancestorIds": [
+     "1F4BE3C9F7EB41619204F4BAFFEBA1E1",
+     "690B00ACA55E47B99F188FA40C1B843D"
+    ],
+    "asnIdentifier": "S2987194",
+    "depth": 2,
+    "description": "Analyze and interpret data from maps to describe patterns of Earth's features.",
+    "id": "2E59DCFCD41446CCBDCF84B1AB1788C3",
+    "parentId": "1F4BE3C9F7EB41619204F4BAFFEBA1E1",
+    "position": 26000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.4.3.a"
+   },
+   "37BBD4986D34433CAF979F77834B69A5": {
+    "ancestorIds": [
+     "F210982A4C8C4517815632944AAABC90",
+     "690B00ACA55E47B99F188FA40C1B843D"
+    ],
+    "asnIdentifier": "S2987192",
+    "depth": 2,
+    "description": "Make observations and/or measurements to provide evidence of the effects of weathering or the rate of erosion by water, ice, wind, or vegetation.",
+    "id": "37BBD4986D34433CAF979F77834B69A5",
+    "parentId": "F210982A4C8C4517815632944AAABC90",
+    "position": 24000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.4.2.a"
+   },
+   "38D866ECE4DC4DAB8F065442660D1A90": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2987039",
+    "depth": 0,
+    "description": "Life Science",
+    "id": "38D866ECE4DC4DAB8F065442660D1A90",
+    "parentId": null,
+    "position": 16000,
+    "statementLabel": "Standard",
+    "statementNotation": "LS2"
+   },
+   "408DACFFF20C4BA0ABD8026EAAA7DFE1": {
+    "ancestorIds": [
+     "07C0BCA0557946CD96B706C02E493E32"
+    ],
+    "asnIdentifier": "S2986946",
+    "depth": 1,
+    "description": "Energy can be produced, used or released by converting stored energy.",
+    "id": "408DACFFF20C4BA0ABD8026EAAA7DFE1",
+    "parentId": "07C0BCA0557946CD96B706C02E493E32",
+    "position": 8000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.4.4"
+   },
+   "523D1B6CF2F840C68315FF2561A54176": {
+    "ancestorIds": [
+     "690B00ACA55E47B99F188FA40C1B843D"
+    ],
+    "asnIdentifier": "S2987189",
+    "depth": 1,
+    "description": "Earth has changed over time.",
+    "id": "523D1B6CF2F840C68315FF2561A54176",
+    "parentId": "690B00ACA55E47B99F188FA40C1B843D",
+    "position": 21000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.4.1"
+   },
+   "566A08C866564BBC95D8446AAF57D902": {
+    "ancestorIds": [
+     "408DACFFF20C4BA0ABD8026EAAA7DFE1",
+     "07C0BCA0557946CD96B706C02E493E32"
+    ],
+    "asnIdentifier": "S2986947",
+    "depth": 2,
+    "description": "Apply scientific ideas to design, test and refine a device that converts energy from one form to another.",
+    "id": "566A08C866564BBC95D8446AAF57D902",
+    "parentId": "408DACFFF20C4BA0ABD8026EAAA7DFE1",
+    "position": 9000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.4.4.a"
+   },
+   "58BB863C047E41228A7D15E15C44ACF4": {
+    "ancestorIds": [
+     "76C15066901C4FB2BCEBE0090CB7581B",
+     "690B00ACA55E47B99F188FA40C1B843D"
+    ],
+    "asnIdentifier": "S2987198",
+    "depth": 2,
+    "description": "Generate and compare multiple solutions to reduce the impacts of natural Earth processes on humans.",
+    "id": "58BB863C047E41228A7D15E15C44ACF4",
+    "parentId": "76C15066901C4FB2BCEBE0090CB7581B",
+    "position": 30000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.4.5.a"
+   },
+   "6597F00A7BF04D7BB479E96E558090F8": {
+    "ancestorIds": [
+     "DD58916551DE437A9D7867709B4F86D0",
+     "690B00ACA55E47B99F188FA40C1B843D"
+    ],
+    "asnIdentifier": "S2987196",
+    "depth": 2,
+    "description": "Obtain and combine information to describe that energy and fuels are derived from natural resources and their uses affect the environment.",
+    "id": "6597F00A7BF04D7BB479E96E558090F8",
+    "parentId": "DD58916551DE437A9D7867709B4F86D0",
+    "position": 28000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.4.4.a"
+   },
+   "68F46D00A1554344BBB91C45FD5B9D04": {
+    "ancestorIds": [
+     "BA751876D3F04A4DBCA738ECC6A69FCE",
+     "07C0BCA0557946CD96B706C02E493E32"
+    ],
+    "asnIdentifier": "S2986941",
+    "depth": 2,
+    "description": "Use evidence to construct an explanation relating the speed of an object to the energy of that object.",
+    "id": "68F46D00A1554344BBB91C45FD5B9D04",
+    "parentId": "BA751876D3F04A4DBCA738ECC6A69FCE",
+    "position": 3000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.4.1.a"
+   },
+   "690B00ACA55E47B99F188FA40C1B843D": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2987156",
+    "depth": 0,
+    "description": "Earth and Space Science",
+    "id": "690B00ACA55E47B99F188FA40C1B843D",
+    "parentId": null,
+    "position": 20000,
+    "statementLabel": "Standard",
+    "statementNotation": "ESS3"
+   },
+   "76C15066901C4FB2BCEBE0090CB7581B": {
+    "ancestorIds": [
+     "690B00ACA55E47B99F188FA40C1B843D"
+    ],
+    "asnIdentifier": "S2987197",
+    "depth": 1,
+    "description": "A variety of hazards result from natural process; humans cannot eliminate natural hazards but can reduce their impacts' effect.",
+    "id": "76C15066901C4FB2BCEBE0090CB7581B",
+    "parentId": "690B00ACA55E47B99F188FA40C1B843D",
+    "position": 29000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.4.5"
+   },
+   "8BC96CD56378462E8457F3352316CC1C": {
+    "ancestorIds": [
+     "07C0BCA0557946CD96B706C02E493E32"
+    ],
+    "asnIdentifier": "S2986944",
+    "depth": 1,
+    "description": "When objects collide contact forces transfer so as to change objects' motion.",
+    "id": "8BC96CD56378462E8457F3352316CC1C",
+    "parentId": "07C0BCA0557946CD96B706C02E493E32",
+    "position": 6000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.4.3"
+   },
+   "A6300E538F7E4B67BF304F75B67626C0": {
+    "ancestorIds": [
+     "07C0BCA0557946CD96B706C02E493E32"
+    ],
+    "asnIdentifier": "S2986942",
+    "depth": 1,
+    "description": "Energy can be moved from place to place.",
+    "id": "A6300E538F7E4B67BF304F75B67626C0",
+    "parentId": "07C0BCA0557946CD96B706C02E493E32",
+    "position": 4000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.4.2"
+   },
+   "A9A81E8C98EE4C0FA9B49F662C925748": {
+    "ancestorIds": [
+     "11EE39D2ED334119BD58CFF91D6886AC",
+     "07C0BCA0557946CD96B706C02E493E32"
+    ],
+    "asnIdentifier": "S2986951",
+    "depth": 2,
+    "description": "Develop a model to describe that light reflecting from objects and entering the eye allows objects to be seen.",
+    "id": "A9A81E8C98EE4C0FA9B49F662C925748",
+    "parentId": "11EE39D2ED334119BD58CFF91D6886AC",
+    "position": 13000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.4.6.a"
+   },
+   "B25CFCE1CFFA4901B524E74088A4921B": {
+    "ancestorIds": [
+     "07C0BCA0557946CD96B706C02E493E32"
+    ],
+    "asnIdentifier": "S2986948",
+    "depth": 1,
+    "description": "Waves are regular patterns of motion.",
+    "id": "B25CFCE1CFFA4901B524E74088A4921B",
+    "parentId": "07C0BCA0557946CD96B706C02E493E32",
+    "position": 10000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.4.5"
+   },
+   "B3F2085DC8AF48158898D89754A6284E": {
+    "ancestorIds": [
+     "523D1B6CF2F840C68315FF2561A54176",
+     "690B00ACA55E47B99F188FA40C1B843D"
+    ],
+    "asnIdentifier": "S2987190",
+    "depth": 2,
+    "description": "Identify evidence from patterns in rock formations and fossils in rock layers to support an explanation for changes in a landscape over time.",
+    "id": "B3F2085DC8AF48158898D89754A6284E",
+    "parentId": "523D1B6CF2F840C68315FF2561A54176",
+    "position": 22000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.4.1.a"
+   },
+   "B71228F92021472D974F799EACCFAF35": {
+    "ancestorIds": [
+     "07C0BCA0557946CD96B706C02E493E32"
+    ],
+    "asnIdentifier": "S2986952",
+    "depth": 1,
+    "description": "Patterns can encode, send, receive and decode information.",
+    "id": "B71228F92021472D974F799EACCFAF35",
+    "parentId": "07C0BCA0557946CD96B706C02E493E32",
+    "position": 14000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.4.7"
+   },
+   "BA751876D3F04A4DBCA738ECC6A69FCE": {
+    "ancestorIds": [
+     "07C0BCA0557946CD96B706C02E493E32"
+    ],
+    "asnIdentifier": "S2986940",
+    "depth": 1,
+    "description": "The faster an object moves the more energy it has.",
+    "id": "BA751876D3F04A4DBCA738ECC6A69FCE",
+    "parentId": "07C0BCA0557946CD96B706C02E493E32",
+    "position": 2000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.4.1"
+   },
+   "CEAE3DB4B7AF4FD5ADE1D7CEA68EE9A2": {
+    "ancestorIds": [
+     "8BC96CD56378462E8457F3352316CC1C",
+     "07C0BCA0557946CD96B706C02E493E32"
+    ],
+    "asnIdentifier": "S2986945",
+    "depth": 2,
+    "description": "Ask questions and predict outcomes about the changes in energy that occur when objects collide.",
+    "id": "CEAE3DB4B7AF4FD5ADE1D7CEA68EE9A2",
+    "parentId": "8BC96CD56378462E8457F3352316CC1C",
+    "position": 7000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.4.3.a"
+   },
+   "DD58916551DE437A9D7867709B4F86D0": {
+    "ancestorIds": [
+     "690B00ACA55E47B99F188FA40C1B843D"
+    ],
+    "asnIdentifier": "S2987195",
+    "depth": 1,
+    "description": "Energy and fuels that humans use are derived from natural sources and their use affects the environment in multiple ways.",
+    "id": "DD58916551DE437A9D7867709B4F86D0",
+    "parentId": "690B00ACA55E47B99F188FA40C1B843D",
+    "position": 27000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.4.4"
+   },
+   "E32230F664BC44C096F23CB4801E4E0F": {
+    "ancestorIds": [
+     "B25CFCE1CFFA4901B524E74088A4921B",
+     "07C0BCA0557946CD96B706C02E493E32"
+    ],
+    "asnIdentifier": "S2986949",
+    "depth": 2,
+    "description": "Develop a model of waves to describe patterns in terms of amplitude and wavelength and that waves can cause objects to move.",
+    "id": "E32230F664BC44C096F23CB4801E4E0F",
+    "parentId": "B25CFCE1CFFA4901B524E74088A4921B",
+    "position": 11000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.4.5.a"
+   },
+   "E61E6FDFA4B5416EBE8C6E808A14DDE3": {
+    "ancestorIds": [
+     "266D133842994BC3B30CB1D9C7EB4B52",
+     "38D866ECE4DC4DAB8F065442660D1A90"
+    ],
+    "asnIdentifier": "S2987078",
+    "depth": 2,
+    "description": "Construct an argument that plants and animals have internal and external structures that function to support survival, growth, behavior and reproduction.",
+    "id": "E61E6FDFA4B5416EBE8C6E808A14DDE3",
+    "parentId": "266D133842994BC3B30CB1D9C7EB4B52",
+    "position": 18000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.4.1.a"
+   },
+   "F210982A4C8C4517815632944AAABC90": {
+    "ancestorIds": [
+     "690B00ACA55E47B99F188FA40C1B843D"
+    ],
+    "asnIdentifier": "S2987191",
+    "depth": 1,
+    "description": "Four major earth systems interact.",
+    "id": "F210982A4C8C4517815632944AAABC90",
+    "parentId": "690B00ACA55E47B99F188FA40C1B843D",
+    "position": 23000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.4.2"
+   }
+  },
+  "subject": "Science (2020-)",
+  "title": "Grade 4"
+ }
+}

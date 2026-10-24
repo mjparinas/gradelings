@@ -161,14 +161,7 @@ async function everyDevice(device, page) {
   record(device, "first run: Let's go above the fold", goPos.ok, goPos.detail);
   await go.click();
   await checkTargets(device, "new player: grade buttons", page.getByRole("button", { name: /^(Kindergarten|Grade \d)$/ }), KID_TARGET);
-  await newChild(page, "Maya", "Grade 3", {
-    onEmailStep: async (p) => {
-      await noSideScroll(device, p, "email reports step");
-      const play = await onScreen(p, p.getByRole("button", { name: /Not now, let's play/ }));
-      record(device, "email reports step: Let's play above the fold", play.ok, play.detail);
-      await checkTargets(device, "email reports step: buttons", p.locator("main a.btn, main button"), KID_TARGET);
-    },
-  });
+  await newChild(page, "Maya", "Grade 3");
 
   // Hub
   const adventure = page.getByRole("button", { name: /Adventure/ });

@@ -40,7 +40,7 @@ export default async function ReportCardsPage({ params }: PageProps<"/report-car
   const crumbs = [{ label: "Home", href: "/" }, { label: "Report cards", href: "/report-cards/" }, { label: f.name }];
 
   return (
-    <SitePage play={playHref({ framework: f.id })}>
+    <SitePage lead="trial" play={playHref({ framework: f.id })}>
       <JsonLd data={[breadcrumbJsonLd(crumbs), faqJsonLd(f.reportCard.faqs)]} />
       <Crumbs items={crumbs} />
       <div className="grid gap-8 lg:grid-cols-[2fr_1fr]">
@@ -52,7 +52,7 @@ export default async function ReportCardsPage({ params }: PageProps<"/report-car
             <p className="font-read text-ink-soft">
               {APP_NAME} tracks every unit on the same four levels, so you know exactly which skills are {f.country === "US" ? f.scoringFor("3").levels[2]?.label : "Proficient"} and which need a little more practice before the next report card.
             </p>
-            <SubscribeActions className="w-full" play={playHref({ framework: f.id })} />
+            <SubscribeActions lead="trial" className="w-full" play={playHref({ framework: f.id })} />
             <ShareButton path={`/report-cards/${f.slug}/`} title={`${f.shortName} report cards, explained`} text={`What the ${f.shortName} report card levels mean, in plain words:`} label="Share this explainer" />
             <Link href={curriculumPath.framework(f)} className="font-semibold text-[#2f6fd6] underline">
               Browse the {f.curriculumName}

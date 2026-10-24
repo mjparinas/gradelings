@@ -6,7 +6,7 @@ import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { finishGoogleSignIn, refreshAccount, type BillingInfo } from "@/lib/account";
 import { takeBillingPass } from "@/lib/billingReturn";
 import { hasPaidPlan, isPremium, trialDaysLeft } from "@/lib/plan";
-import { useRoute } from "@/lib/router";
+import { go, useRoute } from "@/lib/router";
 import { useLocale } from "@/lib/say";
 import { useProfiles, useReady, useStore } from "@/lib/store";
 import { VoicePreload } from "@/components/VoicePreload";
@@ -14,7 +14,7 @@ import { startBackgroundSync, syncNow } from "@/lib/sync";
 import { isStoreApp } from "@/lib/twa";
 import { ContentGate } from "../ContentGate";
 import { LoadingScreen } from "../ui";
-import { AccountPage } from "./Account";
+import { AccountPage, AuthForm } from "./Account";
 import { ChildrenPage } from "./Children";
 import { Gate } from "./Gate";
 import { Overview } from "./Overview";
@@ -26,6 +26,7 @@ import { SubscriptionPage } from "./Subscription";
 import { UpgradeBanner } from "./UpgradeBanner";
 import { UsConsent } from "./UsConsent";
 import { ReportTabs } from "./common";
+import { FeedbackLink } from "@/components/FeedbackLink";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
 
 const NAV = [
@@ -129,6 +130,7 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
         <UpgradeBanner />
         {children}
       </main>
+      <FeedbackLink audience="parent" signedIn={Boolean(family.account)} />
     </div>
   );
 }
@@ -148,13 +150,31 @@ function ClassAccountNotice() {
   );
 }
 
+/** The sign-in form on its own, for a device that has no parent PIN yet. */
+function SignInOnly() {
+  return (
+    <main id={MAIN_ID} tabIndex={-1} className="mx-auto flex min-h-dvh max-w-md flex-col gap-4 px-4 py-6">
+      <div>
+        <a href="/play/" className="btn h-12 px-4 text-base">
+          ← Back
+        </a>
+      </div>
+      <h1 className="text-3xl font-bold">Welcome back</h1>
+      <p className="font-read text-ink-soft">Sign in to get your children and their progress on this device.</p>
+      <AuthForm initialMode="signin" onDone={() => { void refreshAccount(); go("/"); }} />
+    </main>
+  );
+}
+
 export function ParentApp() {
   const ready = useReady();
   // Back from Stripe straight after typing the PIN: don't ask for it again (src/lib/billingReturn.ts).
   const [unlocked, setUnlocked] = useState(() => typeof window !== "undefined" && takeBillingPass(window.location.hash));
   const [billing, setBilling] = useState<BillingInfo | null>(null);
-  const { path } = useRoute();
+  const { path, query } = useRoute();
   const profiles = useProfiles();
+  const hasPin = useStore((s) => Boolean(s.pin));
+  const signedIn = useStore((s) => Boolean(s.family.account));
   const isStudent = useStore((s) => Boolean(s.family.account?.student));
 
   useEffect(() => {
@@ -177,6 +197,9 @@ export function ParentApp() {
 
   if (!ready) return <LoadingScreen />;
   if (isStudent) return <ClassAccountNotice />;
+  // No PIN has been made on this device yet, so there is nothing to unlock: a returning parent's "Sign in" link goes
+  // straight to the form instead of asking them to invent a PIN first. Signing in then leads to the PIN screen as usual.
+  if (!unlocked && !hasPin && !signedIn && path[0] === "account" && query.get("mode") === "signin") return <SignInOnly />;
   if (!unlocked) return <Gate onPass={() => setUnlocked(true)} />;
 
   const section = path[0] ?? "";

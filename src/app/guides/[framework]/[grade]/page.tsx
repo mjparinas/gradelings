@@ -120,7 +120,7 @@ export default async function GradeGuide({ params }: Props) {
   const title = `What your child learns in ${label} in ${f.shortName}`;
 
   return (
-    <SitePage play={playHref({ framework: f.id, grade })}>
+    <SitePage lead="trial" play={playHref({ framework: f.id, grade })}>
       <JsonLd
         data={[
           breadcrumbJsonLd(crumbs),
@@ -303,9 +303,9 @@ export default async function GradeGuide({ params }: Props) {
 
       <section className="card mt-10 flex flex-col gap-2 p-6">
         <p className="text-xl font-bold">{say(f, "Practise")} {label} skills with {APP_NAME}</p>
-        <p className="font-read text-ink-soft">Kind hints, no ads, and reports in the language of the {f.shortName} report card. Subscribe now, or try it free for {TRIAL_DAYS} days with no card.</p>
+        <p className="font-read text-ink-soft">Kind hints, no ads, and reports in the language of the {f.shortName} report card. Try it free for {TRIAL_DAYS} days with no card, then subscribe if it helps.</p>
         <div className="flex flex-wrap gap-3">
-          <SubscribeActions play={playHref({ framework: f.id, grade })} />
+          <SubscribeActions lead="trial" play={playHref({ framework: f.id, grade })} />
         </div>
       </section>
 

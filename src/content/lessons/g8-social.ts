@@ -1045,4 +1045,40 @@ export const lessons: GradeLessons = {
     ["It is a way to pressure a country.", "It is a penalty, not a reward."],
     "a penalty meant to pressure a country to change its actions",
   ),
+  "social/il-g8-illinois-and-nation": lesson(
+    ["Illinois joined as a free state in 1818, but its Black Laws limited free Black residents.", "Illinoisans argued over slavery: Lovejoy was killed for his paper; Douglas and Lincoln debated in 1858.", "Lincoln led the Union, Grant led its armies, and Illinois ratified the 13th Amendment first."],
+    "What were the 1858 Lincoln–Douglas debates mainly about?",
+    ["Douglas's Kansas-Nebraska Act let settlers vote on slavery.", "They argued about whether slavery should spread."],
+    "whether slavery should spread to new territories",
+  ),
+  "social/il-g8-us-timeline": lesson(
+    ["A timeline puts events in order, earliest first.", "Big eras: the founding (1776–1791), expansion, the road to war, the Civil War (1861–1865) and Reconstruction (1865–1877).", "To find how far apart two events are, subtract the earlier year from the later one."],
+    "How many years passed between the Northwest Ordinance (1787) and Illinois statehood (1818)?",
+    ["Subtract the earlier year.", "1818 − 1787 = 31."],
+    "31 years",
+  ),
+  "social/il-g8-constitutions": lesson(
+    ["The US Constitution starts with the Preamble, sets up three branches (Articles I to III) and has 27 amendments.", "The first ten amendments are the Bill of Rights. Checks and balances let each branch limit the others.", "Illinois's constitution of 1970 also has three branches and its own Bill of Rights."],
+    "Which branch makes federal laws?",
+    ["The President carries out laws; courts interpret them.", "Article I sets up Congress to make laws."],
+    "Congress",
+  ),
+  "social/co-g8-westward": lesson(
+    ["The Louisiana Purchase (1803) and the Mexican Cession (1848) brought the land of Colorado into the United States.", "Gold (1858), the Homestead Act and railroads pulled settlers west.", "Settlers took Native land and broke treaties; the Sand Creek Massacre (1864) killed about 230 Cheyenne and Arapaho people."],
+    "Which 1848 treaty ended the Mexican-American War?",
+    ["It added the Mexican Cession.", "It is named for a town near Mexico City."],
+    "the Treaty of Guadalupe Hidalgo",
+  ),
+  "social/co-g8-us-timeline": lesson(
+    ["Order events by year: the Revolution, the Constitution, expansion west, the Civil War and Reconstruction.", "Subtract years to find how far apart events are.", "Causes come before their effects."],
+    "Which came first: the Louisiana Purchase or the Civil War?",
+    ["The Louisiana Purchase was in 1803.", "The Civil War began in 1861."],
+    "the Louisiana Purchase",
+  ),
+  "social/co-g8-rights-citizenship": lesson(
+    ["The Constitution sets up three branches with checks and balances; the Bill of Rights protects freedoms.", "The 13th Amendment ended slavery, the 14th promised citizenship and equal protection, and the 15th protected voting regardless of race.", "Citizenship grew unevenly: women won the national vote in 1920, and most Native Americans became citizens in 1924."],
+    "Which amendment abolished slavery?",
+    ["It was ratified in 1865.", "It came first of the three Reconstruction amendments."],
+    "the 13th Amendment",
+  ),
 };

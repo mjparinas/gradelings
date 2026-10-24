@@ -5,13 +5,17 @@ import { APP_NAME, LEGAL_NAME, socialLinks, WORDMARK_COLOURS } from "@/lib/brand
 import { SUBSCRIBE_HREF, TRIAL_DAYS } from "@/lib/plan";
 import { teacherPath, TEACHER_SIGNUP } from "./teachers";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
+import { HeaderSignIn } from "./HeaderSignIn";
 import { NavLink } from "./NavLink";
 import { PromoBanner } from "./PromoBanner";
 import { RefCapture } from "./ShareButton";
 import { byCountry, regionList } from "./provinces";
 
-/** `play` is the "Try it free" link for this page (`playHref`), so the app opens on what the visitor was reading. */
-export function SiteHeader({ play = "/play/" }: { play?: string }) {
+/**
+ * `play` is the "Try it free" link for this page (`playHref`), so the app opens on what the visitor was reading.
+ * `lead`: which button comes first (see `Lead`). A page that leads with the trial has no full-width Subscribe bar on phones.
+ */
+export function SiteHeader({ play = "/play/", lead = "subscribe" }: { play?: string; lead?: Lead }) {
   return (
     <header className="print:hidden sticky top-0 z-30 border-b border-line bg-paper/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
@@ -23,7 +27,7 @@ export function SiteHeader({ play = "/play/" }: { play?: string }) {
           ))}
         </NavLink>
         <nav aria-label="Main" className="flex items-center gap-1 text-sm font-semibold sm:gap-3 sm:text-base">
-          <NavLink href="/curriculum/" className="rounded-lg px-2 py-1 hover:bg-black/5">
+          <NavLink href="/curriculum/" className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
             Curriculum
           </NavLink>
           <NavLink href="/report-cards/" className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
@@ -41,17 +45,20 @@ export function SiteHeader({ play = "/play/" }: { play?: string }) {
           <a href={SUBSCRIBE_HREF} className="hidden rounded-lg px-2 py-1 font-bold hover:bg-black/5 lg:inline">
             Subscribe
           </a>
+          <HeaderSignIn />
           {/* The apps are big single-page bundles: fetch them on tap, not on every public page view. */}
           <Link prefetch={false} href={play} className="btn btn-good h-11 px-4 text-base">
             Play free
           </Link>
         </nav>
       </div>
-      <div className="border-t border-line px-4 py-2 lg:hidden">
-        <a href={SUBSCRIBE_HREF} className="btn btn-good h-11 w-full text-base">
-          Subscribe
-        </a>
-      </div>
+      {lead === "subscribe" && (
+        <div className="border-t border-line px-4 py-2 lg:hidden">
+          <a href={SUBSCRIBE_HREF} className="btn btn-good h-11 w-full text-base">
+            Subscribe
+          </a>
+        </div>
+      )}
     </header>
   );
 }
@@ -181,7 +188,7 @@ export function SiteFooter({ build }: { /** A build line such as "Build 3f9a1c2"
  * explains the curriculum or a guide ends with it (`<SitePage cta>`), so a parent who has read
  * enough always has a button to start practising.
  */
-export function PageCta({ play }: { play?: string }) {
+export function PageCta({ play, lead = "subscribe" }: { play?: string; lead?: Lead }) {
   // Every region by name, Canadian provinces and territories first, then US states.
   const provinces = byCountry(FRAMEWORKS)
     .map((g) => regionList(g.frameworks))
@@ -192,10 +199,10 @@ export function PageCta({ play }: { play?: string }) {
         Ready to try {APP_NAME}?
       </h2>
       <p className="font-read text-ink-soft">
-        Curriculum-matched practice for Kindergarten to Grade 9 in {provinces}, with kind hints, learning games and no ads. Subscribe now, or try everything free for {TRIAL_DAYS} days with no card.
+        Curriculum-matched practice for Kindergarten to Grade 9 in {provinces}, with kind hints, learning games and no ads. {lead === "trial" ? `Try everything free for ${TRIAL_DAYS} days with no card, then subscribe if it helps.` : `Subscribe now, or try everything free for ${TRIAL_DAYS} days with no card.`}
       </p>
       <div className="flex flex-wrap gap-3">
-        <SubscribeActions play={play} />
+        <SubscribeActions play={play} lead={lead} />
         <Link href="/pricing/" className="btn min-h-14 px-6 text-lg">
           See pricing
         </Link>
@@ -204,30 +211,54 @@ export function PageCta({ play }: { play?: string }) {
   );
 }
 
-/** Subscribe is the main action. The free trial stays one tap away for parents who want to try first. */
-export function SubscribeActions({ size = "lg", trialLabel = "Try it free", className = "", play = "/play/" }: { size?: "md" | "lg"; trialLabel?: string; className?: string; /** The trial link (`playHref`). */ play?: string }) {
+/**
+ * Which button a page puts first. Subscribe leads where people come to look at buying (home, pricing, about).
+ * Pages people find from a search (curriculum, guides, worksheets, report cards) lead with the free trial: a
+ * stranger from Google tries before paying (October 2026: 7 Subscribe clicks against about 45 trial clicks there).
+ */
+export type Lead = "subscribe" | "trial";
+
+/** Subscribe and the free trial, `lead` first and green. */
+export function SubscribeActions({
+  size = "lg",
+  trialLabel = "Try it free",
+  className = "",
+  play = "/play/",
+  lead = "subscribe",
+}: {
+  size?: "md" | "lg";
+  trialLabel?: string;
+  className?: string;
+  /** The trial link (`playHref`). */
+  play?: string;
+  lead?: Lead;
+}) {
   const cls = size === "lg" ? "min-h-14 px-8 text-xl" : "min-h-12 px-6 text-lg";
-  return (
-    <>
-      <a href={SUBSCRIBE_HREF} className={`btn btn-good ${cls} ${className}`}>
-        Subscribe
-      </a>
-      <Link prefetch={false} href={play} className={`btn ${cls} ${className}`}>
-        {trialLabel}
-      </Link>
-    </>
+  const subscribe = (
+    <a key="subscribe" href={SUBSCRIBE_HREF} className={`btn ${lead === "subscribe" ? "btn-good" : ""} ${cls} ${className}`}>
+      Subscribe
+    </a>
   );
+  const trial = (
+    <Link key="trial" prefetch={false} href={play} className={`btn ${lead === "trial" ? "btn-good" : ""} ${cls} ${className}`}>
+      {trialLabel}
+    </Link>
+  );
+  return <>{lead === "trial" ? [trial, subscribe] : [subscribe, trial]}</>;
 }
 
 export function SitePage({
   children,
   cta = false,
   play,
+  lead,
   build,
 }: {
   children: ReactNode;
   /** Ends the page with the call to action. */
   cta?: boolean;
+  /** Which button leads on this page (`Lead`); Subscribe unless said. */
+  lead?: Lead;
   /** Where this page's "Try it free" buttons open the app (`playHref`): the page's province or state, grade and unit. */
   play?: string;
   /** A build line for the footer (`buildLabel`); the home page passes it. */
@@ -239,10 +270,10 @@ export function SitePage({
       {/* First, so it is the first thing a keyboard reaches; outside the header, whose blur would anchor it. */}
       <SkipLink />
       <PromoBanner />
-      <SiteHeader play={play} />
+      <SiteHeader play={play} lead={lead} />
       <main id={MAIN_ID} tabIndex={-1} className="mx-auto max-w-6xl px-4 py-8">
         {children}
-        {cta && <PageCta play={play} />}
+        {cta && <PageCta play={play} lead={lead} />}
       </main>
       <SiteFooter build={build} />
     </>

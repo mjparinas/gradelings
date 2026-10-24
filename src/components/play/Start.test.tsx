@@ -11,8 +11,6 @@ const h = vi.hoisted(() => ({
   signOutStudent: vi.fn(),
   profiles: [] as Partial<Profile>[],
   account: null as null | { familyId: string; student?: boolean },
-  flagOn: true,
-  getKV: vi.fn(async () => undefined),
 }));
 
 vi.mock("@/lib/store", () => ({
@@ -21,8 +19,6 @@ vi.mock("@/lib/store", () => ({
   useDerived: (id: string) => ({ level: id === "a" ? 4 : 1 }),
 }));
 vi.mock("@/lib/account", () => ({ signInStudent: h.signInStudent, signOutStudent: h.signOutStudent }));
-vi.mock("@/lib/remoteFlags", () => ({ useFlag: () => h.flagOn }));
-vi.mock("@/lib/localdb", () => ({ getKV: h.getKV }));
 vi.mock("@/lib/sound", () => ({ sounds: { complete: vi.fn() } }));
 vi.mock("../Critter", async (orig) => ({
   ...(await orig<typeof import("../Critter")>()),
@@ -33,14 +29,17 @@ vi.mock("../Critter", async (orig) => ({
 import { CRITTERS } from "../Critter";
 import { CardSignIn, ClassSignIn, FirstRun, NewChild, Picker } from "./Start";
 
+// next.config.ts sets trailingSlash, which next/link reads from this variable.
+vi.stubEnv("__NEXT_TRAILING_SLASH", "1");
+
 const click = (name: string | RegExp) => fireEvent.click(screen.getByRole("button", { name }));
 
 beforeEach(() => {
   vi.clearAllMocks();
   h.profiles = [];
   h.account = null;
-  h.flagOn = true;
   window.location.hash = "";
+  localStorage.clear();
 });
 
 async function fillIn(name = "Sam") {
@@ -59,6 +58,17 @@ describe("FirstRun", () => {
     expect(screen.queryByRole("button", { name: "Cancel" })).not.toBeInTheDocument();
   });
 
+  it("a link from a public page skips the hello and asks the name at once, unless a parent signed in here before", () => {
+    window.location.hash = "#/start?framework=ca-ab&grade=3&subject=science&unit=water-cycle-ab";
+    const { unmount } = render(<FirstRun />);
+    expect(screen.getByText("What's your name?")).toBeInTheDocument();
+    expect(screen.queryByText(/I'm Ollie the Otter/)).not.toBeInTheDocument();
+    unmount();
+    localStorage.setItem("grademap.parent", "1");
+    render(<FirstRun />);
+    expect(screen.getByText(/I'm Ollie the Otter/)).toBeInTheDocument();
+  });
+
   it("a child with a teacher's code goes to class sign-in and can come back", () => {
     render(<FirstRun />);
     click("My teacher gave me a code");
@@ -68,13 +78,38 @@ describe("FirstRun", () => {
   });
 });
 
+describe("FirstRun sign-in", () => {
+  it("offers a link to sign in with an existing account", () => {
+    localStorage.clear();
+    render(<FirstRun />);
+    expect(screen.getByRole("link", { name: "Already have an account? Sign in" })).toHaveAttribute("href", "/parents/#/account?mode=signin");
+    expect(screen.queryByText(/Welcome back/)).not.toBeInTheDocument();
+  });
+
+  it("welcomes back a device a parent has signed in on, still letting a new child start", () => {
+    localStorage.setItem("grademap.parent", "1");
+    render(<FirstRun />);
+    expect(screen.getByRole("link", { name: "Welcome back! Sign in" })).toHaveAttribute("href", "/parents/#/account?mode=signin");
+    expect(screen.queryByRole("link", { name: "Already have an account? Sign in" })).not.toBeInTheDocument();
+    click("I'm new here");
+    expect(screen.getByText("What's your name?")).toBeInTheDocument();
+    localStorage.clear();
+  });
+
+  it("opens the class sign-in with no codes when the link asks for it", () => {
+    window.location.hash = "#/class";
+    render(<FirstRun />);
+    expect(screen.getByRole("heading", { name: "Sign in to your class" })).toBeInTheDocument();
+  });
+});
+
 describe("FirstRun from a public page's link", () => {
   it("starts with the page's province or state and grade picked", () => {
     window.location.hash = "#/start?framework=ca-on&grade=2&subject=math&unit=adding-to-100";
     render(<FirstRun />);
-    click(/Let's go!/);
-    expect(screen.getByRole("button", { name: "Grade 2" })).toHaveAttribute("aria-pressed", "true");
     expect(screen.getByText(/Grade 2 · .*Ontario/)).toBeInTheDocument();
+    click("Change grade");
+    expect(screen.getByRole("button", { name: "Grade 2" })).toHaveAttribute("aria-pressed", "true");
   });
 
   it("ignores a link that names no framework we know", () => {
@@ -258,51 +293,26 @@ describe("NewChild", () => {
   });
 });
 
-describe("NewChild on a device with no account", () => {
-  it("offers the progress emails before the first child plays, and Not now just starts", async () => {
+describe("NewChild", () => {
+  it("starts the first child at once, with no screen before play", async () => {
     const onDone = vi.fn();
     render(<NewChild onDone={onDone} first />);
     await fillIn();
-    expect(h.addProfile).not.toHaveBeenCalled();
-    expect(screen.getByRole("heading", { name: /For grown-ups/ })).toBeInTheDocument();
-    expect(screen.getByText(/Get Sam's progress by email/)).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Email me the reports" })).toHaveAttribute("href", "/parents/#/account");
-    click(/Not now, let's play!/);
     expect(h.addProfile).toHaveBeenCalledWith(expect.objectContaining({ name: "Sam", grade: "3" }));
     expect(onDone).toHaveBeenCalledWith("new-id");
-  });
-
-  it("Email me the reports adds the child, waits for the save, then opens the parent area", async () => {
-    const assign = vi.fn();
-    const real = window.location;
-    Object.defineProperty(window, "location", { configurable: true, value: { ...real, assign, href: real.href, hash: real.hash } });
-    try {
-      render(<NewChild onDone={() => {}} first />);
-      await fillIn();
-      fireEvent.click(screen.getByRole("link", { name: "Email me the reports" }));
-      expect(h.addProfile).toHaveBeenCalled();
-      await vi.waitFor(() => expect(assign).toHaveBeenCalledWith(expect.stringContaining("/parents/#/account")));
-      expect(h.getKV).toHaveBeenCalledWith("profiles");
-    } finally {
-      Object.defineProperty(window, "location", { configurable: true, value: real });
-    }
-  });
-
-  it.each([
-    ["the family is signed in", () => (h.account = { familyId: "f" })],
-    ["the flag is off", () => (h.flagOn = false)],
-  ])("skips the step when %s", async (_, set) => {
-    set();
-    render(<NewChild onDone={() => {}} first />);
-    await fillIn();
-    expect(h.addProfile).toHaveBeenCalled();
     expect(screen.queryByRole("heading", { name: /For grown-ups/ })).not.toBeInTheDocument();
   });
 
-  it("never asks when adding another child", async () => {
-    render(<NewChild onDone={() => {}} onCancel={() => {}} />);
-    await fillIn();
-    expect(h.addProfile).toHaveBeenCalled();
+  it("shows a grade a link named as one line, so the name is all it needs, and can still change it", async () => {
+    render(<NewChild onDone={() => {}} first preset={{ framework: "ca-ab", grade: "3" }} />);
+    expect(screen.queryByRole("button", { name: "Grade 4" })).not.toBeInTheDocument();
+    expect(screen.getByText(/Grade 3 · /)).toBeInTheDocument();
+    await userEvent.type(screen.getByLabelText("Name"), "Sam");
+    expect(screen.getByRole("button", { name: "Start!" })).toBeEnabled();
+    click("Change grade");
+    click("Grade 4");
+    click("Start!");
+    expect(h.addProfile).toHaveBeenCalledWith(expect.objectContaining({ name: "Sam", grade: "4", framework: "ca-ab" }));
   });
 });
 

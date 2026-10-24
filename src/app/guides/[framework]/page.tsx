@@ -61,7 +61,7 @@ export default async function GuidesHub({
   const description = `Plain-language guides for parents following the ${f.curriculumName}, plus free printable practice sheets.`;
 
   return (
-    <SitePage cta play={playHref({ framework: f.id })}>
+    <SitePage cta lead="trial" play={playHref({ framework: f.id })}>
       <JsonLd
         data={[
           breadcrumbJsonLd(crumbs),

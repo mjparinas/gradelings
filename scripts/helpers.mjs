@@ -102,21 +102,12 @@ export async function enterPin(page, create) {
   await page.waitForTimeout(500);
 }
 
-/**
- * Fills in the new-player screen and starts. The first child on a device with no account gets one screen for
- * grown-ups offering the progress emails; `onEmailStep(page)` runs while it shows, then "Not now" carries on.
- */
-export async function newChild(page, name, grade, { onEmailStep } = {}) {
+/** Fills in the new-player screen and starts. */
+export async function newChild(page, name, grade) {
   await page.getByLabel("Name").fill(name);
   await page.getByRole("button", { name: grade, exact: true }).click();
   await page.getByRole("button", { name: "Start!" }).click({ force: true });
   await page.waitForTimeout(600);
-  const notNow = page.getByRole("button", { name: /Not now, let's play/ });
-  if (await notNow.isVisible()) {
-    if (onEmailStep) await onEmailStep(page);
-    await notNow.click({ force: true });
-    await page.waitForTimeout(600);
-  }
 }
 
 /** Real voice names as Microsoft Edge on Windows reports them. */

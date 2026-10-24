@@ -98,14 +98,20 @@ ${MAILING_ADDRESS ? `<p style="font-size:12px;color:#5b6478;margin:4px 4px 0">${
   return { to: p.to, subject: p.subject, html, text, unsubscribeUrl: p.unsubscribeUrl, kind: p.kind };
 }
 
-export function verifyEmail(to: string, origin: string, token: string): Email {
+/** `reports`: the account was made from an email alone to get the weekly report, so it has no password yet. */
+export function verifyEmail(to: string, origin: string, token: string, reports = false): Email {
   return layout({
     kind: "verify",
     to,
     origin,
     subject: `Confirm your email for ${APP_NAME}`,
     heading: `Welcome to ${APP_NAME}!`,
-    body: ["Please confirm your email address so we can reach you about your account, and so you can reset your password if you ever forget it."],
+    body: reports
+      ? [
+          "Please confirm your email address, and we'll start sending the weekly progress report and a note before the free trial ends.",
+          "Your child's progress is now backed up. To open the parent area on another device, ask for a sign-in link there: there's no password to remember.",
+        ]
+      : ["Please confirm your email address so we can reach you about your account, and so you can reset your password if you ever forget it."],
     button: { label: "Confirm my email", url: `${origin}/account/verify/?token=${encodeURIComponent(token)}` },
     footnote: "This link works for 3 days. If you didn't create an account, you can ignore this email.",
   });
@@ -229,7 +235,8 @@ export function monthLine(name: string, m: NonNullable<WeeklyChild["month"]>): s
   return `${base}.`;
 }
 
-export function weeklyEmail(to: string, origin: string, children: WeeklyChild[], unsubToken: string, country?: CountryCode): Email {
+/** `schoolYear`: lines from `schoolYearLines` (src/lib/schoolYear.ts), shown after the children. */
+export function weeklyEmail(to: string, origin: string, children: WeeklyChild[], unsubToken: string, country?: CountryCode, schoolYear: string[] = []): Email {
   const lines = children.flatMap((c) => [
     c.answers
       ? `${c.name}: ${c.minutes} min of practice, ${c.answers} questions${c.accuracy === null ? "" : `, ${c.accuracy}% right on the first try`}.`
@@ -247,7 +254,7 @@ export function weeklyEmail(to: string, origin: string, children: WeeklyChild[],
     unsubscribePage: `${origin}/account/unsubscribe/?token=${encodeURIComponent(unsubToken)}`,
     subject: `${APP_NAME}: your week in learning`,
     heading: "Your week in learning",
-    body: [...lines, "This reflects practice in the app. It isn't a report-card mark; your child's teacher decides proficiency."],
+    body: [...lines, ...schoolYear, "This reflects practice in the app. It isn't a report-card mark; your child's teacher decides proficiency."],
     button: { label: "Open full reports", url: `${origin}/parents/#/reports` },
   });
 }

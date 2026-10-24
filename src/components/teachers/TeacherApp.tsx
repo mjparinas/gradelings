@@ -18,6 +18,7 @@ import { gradeLabel } from "@/lib/gradeLabel";
 import { levelInfo } from "@/lib/proficiency";
 import { go, useRoute } from "@/lib/router";
 import { sayFor } from "@/lib/say";
+import { FeedbackLink } from "@/components/FeedbackLink";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
 import { AccountPage } from "./AccountPage";
 import { rememberTeacher } from "@/lib/teacherHint";
@@ -470,7 +471,7 @@ function RowAudience({ unitLabel, students, current, onSave }: { unitLabel: stri
       <button
         type="button"
         aria-expanded={open}
-        aria-label={`Who gets ${unitLabel}: ${summary}`}
+        aria-label={`Who gets ${unitLabel}? For: ${summary}`}
         className="min-h-11 rounded-xl border border-line px-3 text-sm font-semibold"
         onClick={() => {
           setWho(current.length ? "some" : "all");
@@ -1426,7 +1427,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
                 <a href={previewHref(k)} target="_blank" rel="noopener" aria-label={`Preview ${label(k)} (opens in a new tab)`} className="inline-flex min-h-11 items-center text-sm font-semibold underline">
                   Preview
                 </a>
-                <button type="button" aria-label={`Try ${label(k)} as a student`} className="inline-flex min-h-11 min-w-11 items-center justify-center text-sm font-semibold underline" onClick={() => setTrying(k)}>
+                <button type="button" aria-label={`Try it as a student: ${label(k)}`} className="inline-flex min-h-11 min-w-11 items-center justify-center text-sm font-semibold underline" onClick={() => setTrying(k)}>
                   Try it
                 </button>
                 <button type="button" aria-label={`Remove ${label(k)}`} className="min-h-11 min-w-11 rounded-full font-bold" onClick={() => {
@@ -1466,7 +1467,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
                     <a href={previewHref(pick)} target="_blank" rel="noopener" aria-label={`Preview ${label(pick)} (opens in a new tab)`} className="inline-flex min-h-11 items-center font-semibold underline">
                       Preview
                     </a>
-                    <button type="button" aria-label={`Try ${label(pick)} as a student`} className="inline-flex min-h-11 min-w-11 items-center justify-center font-semibold underline" onClick={() => setTrying(pick)}>
+                    <button type="button" aria-label={`Try it as a student: ${label(pick)}`} className="inline-flex min-h-11 min-w-11 items-center justify-center font-semibold underline" onClick={() => setTrying(pick)}>
                       Try it
                     </button>
                   </>
@@ -1781,6 +1782,7 @@ export function TeacherApp() {
           <ClassList account={account} onOpen={(id) => go(`/class/${encodeURIComponent(id)}`)} />
         )}
       </main>
+      {signedIn && <FeedbackLink audience="teacher" signedIn />}
     </div>
   );
 }

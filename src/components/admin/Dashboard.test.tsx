@@ -67,6 +67,8 @@ describe("admin dashboard", () => {
       expect(screen.getByRole("img", { name })).toBeInTheDocument();
     }
     expect(screen.getByText("Where Families Are")).toBeInTheDocument();
+    // No sign-ups in the retention window yet.
+    expect(screen.getByText("No sign-ups in the last 12 weeks yet.")).toBeInTheDocument();
     // Without Stripe there is nothing to import.
     expect(screen.queryByRole("button", { name: "Import Payments From Stripe" })).toBeNull();
   });
@@ -204,5 +206,31 @@ describe("admin dashboard", () => {
     const alerts = await screen.findAllByRole("alert");
     expect(alerts).toHaveLength(4);
     for (const a of alerts) expect(a).toHaveTextContent("Stats unavailable");
+  });
+
+  it("shows the week-by-week retention table", async () => {
+    const WEEK = 7 * DAY;
+    mocks.call.mockResolvedValue(
+      data({
+        cohorts: [
+          { createdAt: now - 6 * WEEK + DAY, weeks: [0, 1, 4] },
+          { createdAt: now - 6 * WEEK + 2 * DAY, weeks: [0] },
+          { createdAt: now - 3 * DAY, weeks: [0] },
+        ],
+      }),
+    );
+    render(<Dashboard />);
+    const table = (await screen.findByText("Who Comes Back")).closest("figure")!;
+    const rows = within(table).getAllByRole("row");
+    // Header, one sign-up week per row that has families, then all weeks together.
+    expect(rows).toHaveLength(4);
+    const older = rows.find((r) => r.textContent?.startsWith("May 4"))!;
+    expect(within(older).getByText("100%")).toBeInTheDocument();
+    expect(within(older).getAllByText("50%")).toHaveLength(2);
+    expect(within(older).getAllByText("1 of 2 families", { exact: false })).toHaveLength(2);
+    // The newest family's first week isn't over.
+    expect(within(rows[1]).getAllByText("Not over yet")).toHaveLength(5);
+    expect(within(tile("Back in week 1")).getByText("50%")).toBeInTheDocument();
+    expect(within(tile("Back in week 4")).getByText("50%")).toBeInTheDocument();
   });
 });

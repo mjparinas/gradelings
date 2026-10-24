@@ -391,6 +391,25 @@ describe("codes, reports, stats and the change log", () => {
     expect((await as(parent.cookie).get(stats, "/api/admin/stats/?section=money")).status).toBe(404);
   });
 
+  it("shows which new families come back, week by week after signing up", async () => {
+    const DAY = 86_400_000;
+    const back = await account("comes-back@example.com");
+    const joined = Date.now() - 9 * DAY;
+    await dbm.run("UPDATE families SET created_at = ? WHERE id = ?", [joined, back.familyId]);
+    const event = (t: number, type: string) =>
+      dbm.run("INSERT INTO events (id, family_id, profile_id, t, data) VALUES (?, ?, ?, ?, ?)", [`back-${t}-${type}`, back.familyId, "p-back", t, JSON.stringify({ type })]);
+    await event(joined + DAY, "answer");
+    await event(joined + 8 * DAY, "buy"); // not practice
+    const before = (await (await as(admin.cookie).get(stats, "/api/admin/stats/?section=practice")).json()).engagement.retention;
+    expect(before.all[0]).toEqual({ n: 1, of: 1 });
+    expect(before.all[1]).toBeNull(); // the second week isn't over yet
+    const row = before.rows.find((r: { families: number; weeks: unknown[] }) => r.families && r.weeks[0]);
+    expect(row.weeks[0]).toEqual({ n: 1, of: 1 });
+    await dbm.run("DELETE FROM events WHERE family_id = ?", [back.familyId]);
+    expect((await (await as(admin.cookie).get(stats, "/api/admin/stats/?section=practice")).json()).engagement.retention.all[0]).toEqual({ n: 0, of: 1 });
+    await dbm.run("UPDATE families SET created_at = ? WHERE id = ?", [Date.now(), back.familyId]);
+  });
+
   it("records paid invoices and refunds from Stripe and shows them as revenue", async () => {
     const payer = await account("payer@example.com");
     await dbm.run("UPDATE families SET stripe_customer = 'cus_payer', plan = 'premium', subscription_interval = 'month' WHERE id = ?", [payer.familyId]);

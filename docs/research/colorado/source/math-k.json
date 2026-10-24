@@ -1,0 +1,747 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D2980651",
+   "id": "D2980651",
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.cde.state.co.us/comath/2020cas-ma-p12",
+   "title": "Colorado Academic Standards: Mathematics",
+   "valid": "2020"
+  },
+  "educationLevels": [
+   "K"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D2980651_grade-k",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/3.0/us/",
+   "rightsHolder": "D2L Corporation",
+   "title": "CC BY 3.0 US"
+  },
+  "normalizedSubject": "Math",
+  "standards": {
+   "001ABC457C2F4F84AB16EEF4DDA8F361": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029728",
+    "depth": 0,
+    "description": "Data, Statistics, and Probability",
+    "id": "001ABC457C2F4F84AB16EEF4DDA8F361",
+    "parentId": null,
+    "position": 36000,
+    "statementLabel": "Standard",
+    "statementNotation": "DSP.3"
+   },
+   "01290FA9070B4188A92339A95ADFE23E": {
+    "ancestorIds": [
+     "CB7B899455BA4C6CA25E4AD275264BCA",
+     "F2B22EC1589C4233ACDE80D145F782F8",
+     "EB01E582227E423498CE6D9AFC282BF7"
+    ],
+    "asnIdentifier": "S21045244",
+    "depth": 3,
+    "description": "For any number from 1 to 9, find the number that makes 10 when added to the given number, e.g., by using objects or drawings, and record the answer with a drawing or equation.",
+    "id": "01290FA9070B4188A92339A95ADFE23E",
+    "parentId": "CB7B899455BA4C6CA25E4AD275264BCA",
+    "position": 34000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.OA.A.4"
+   },
+   "070E87D4EF0847F59B237F62643E62CA": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029615",
+    "depth": 0,
+    "description": "Number and Quantity",
+    "id": "070E87D4EF0847F59B237F62643E62CA",
+    "parentId": null,
+    "position": 10000,
+    "statementLabel": "Standard",
+    "statementNotation": "NQ.1"
+   },
+   "09F9B1A591014D2BA7647C5163AD4C82": {
+    "ancestorIds": [
+     "8AD951B97C6F43D0A8594D743291E2BD",
+     "8D6A10C4D0104DDBBF843D5E45BE6583",
+     "D416F61227494CAD8609BB326CF3E3DA"
+    ],
+    "asnIdentifier": "S21045250",
+    "depth": 3,
+    "description": "Correctly name shapes regardless of their orientations or overall size.",
+    "id": "09F9B1A591014D2BA7647C5163AD4C82",
+    "parentId": "8AD951B97C6F43D0A8594D743291E2BD",
+    "position": 47000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.G.A.2"
+   },
+   "0D2D00C77C0A4FC0AE1F908F06148926": {
+    "ancestorIds": [
+     "B79CB6C24A45481893C547BF1DA7C19C",
+     "070E87D4EF0847F59B237F62643E62CA"
+    ],
+    "asnIdentifier": "S21029624",
+    "depth": 2,
+    "description": "Compare numbers.",
+    "id": "0D2D00C77C0A4FC0AE1F908F06148926",
+    "parentId": "B79CB6C24A45481893C547BF1DA7C19C",
+    "position": 22000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "K.CC.C"
+   },
+   "127D55F8197D43C5BDB029FFFCEF94E4": {
+    "ancestorIds": [
+     "0D2D00C77C0A4FC0AE1F908F06148926",
+     "B79CB6C24A45481893C547BF1DA7C19C",
+     "070E87D4EF0847F59B237F62643E62CA"
+    ],
+    "asnIdentifier": "S21045239",
+    "depth": 3,
+    "description": "Compare two numbers between 1 and 10 presented as written numerals.",
+    "id": "127D55F8197D43C5BDB029FFFCEF94E4",
+    "parentId": "0D2D00C77C0A4FC0AE1F908F06148926",
+    "position": 24000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.CC.C.7"
+   },
+   "1B0C1E32912F4E719BEE5F1349D044A5": {
+    "ancestorIds": [
+     "42F44A28D351401AA9F50F869BEA98EC",
+     "B79CB6C24A45481893C547BF1DA7C19C",
+     "070E87D4EF0847F59B237F62643E62CA"
+    ],
+    "asnIdentifier": "S21045230",
+    "depth": 3,
+    "description": "Count to 100 by ones and by tens.",
+    "id": "1B0C1E32912F4E719BEE5F1349D044A5",
+    "parentId": "42F44A28D351401AA9F50F869BEA98EC",
+    "position": 13000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.CC.A.1"
+   },
+   "211DDC043EA547EEA72251F864965BEF": {
+    "ancestorIds": [
+     "F51CF22ACC344A3DB8A78A4DB1BFB99B",
+     "E725440BD384422A933D6BB0937B846F",
+     "B79CB6C24A45481893C547BF1DA7C19C",
+     "070E87D4EF0847F59B237F62643E62CA"
+    ],
+    "asnIdentifier": "S21045234",
+    "depth": 4,
+    "description": "When counting objects, say the number names in the standard order, pairing each object with one and only one number name and each number name with one and only one object.",
+    "id": "211DDC043EA547EEA72251F864965BEF",
+    "parentId": "F51CF22ACC344A3DB8A78A4DB1BFB99B",
+    "position": 18000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.CC.B.4.a"
+   },
+   "21B1C94FC0EC47C190CE1382F602C8EF": {
+    "ancestorIds": [
+     "001ABC457C2F4F84AB16EEF4DDA8F361"
+    ],
+    "asnIdentifier": "S21029729",
+    "depth": 1,
+    "description": "Measurement & Data",
+    "id": "21B1C94FC0EC47C190CE1382F602C8EF",
+    "parentId": "001ABC457C2F4F84AB16EEF4DDA8F361",
+    "position": 37000
+   },
+   "271AD4BC205F462C9135B8128F11072F": {
+    "ancestorIds": [
+     "21B1C94FC0EC47C190CE1382F602C8EF",
+     "001ABC457C2F4F84AB16EEF4DDA8F361"
+    ],
+    "asnIdentifier": "S21029731",
+    "depth": 2,
+    "description": "Describe and compare measurable attributes.",
+    "id": "271AD4BC205F462C9135B8128F11072F",
+    "parentId": "21B1C94FC0EC47C190CE1382F602C8EF",
+    "position": 38000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "K.MD.A"
+   },
+   "347A7A221C884904A0C3CBE1C01FCD17": {
+    "ancestorIds": [
+     "617F3A68B2464A5FA5E53DFEBA3FC2F1",
+     "AD6F6B52CA6149D1842A46815844D77B",
+     "070E87D4EF0847F59B237F62643E62CA"
+    ],
+    "asnIdentifier": "S21045240",
+    "depth": 3,
+    "description": "Compose and decompose numbers from 11 to 19 into ten ones and some further ones, e.g., by using objects or drawings, and record each composition or decomposition by a drawing or equation (such as 18=10+8); understand that these numbers are composed of ten ones and one, two, three, four, five, six, seven, eight, or nine ones.",
+    "id": "347A7A221C884904A0C3CBE1C01FCD17",
+    "parentId": "617F3A68B2464A5FA5E53DFEBA3FC2F1",
+    "position": 27000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.NBT.A.1"
+   },
+   "35DA120F74DF4E4E9371F0BF26879ED5": {
+    "ancestorIds": [
+     "271AD4BC205F462C9135B8128F11072F",
+     "21B1C94FC0EC47C190CE1382F602C8EF",
+     "001ABC457C2F4F84AB16EEF4DDA8F361"
+    ],
+    "asnIdentifier": "S21045246",
+    "depth": 3,
+    "description": "Describe measurable attributes of objects, such as length or weight. Describe several measurable attributes of a single object. (CCSS: K.MD.A.1)",
+    "id": "35DA120F74DF4E4E9371F0BF26879ED5",
+    "parentId": "271AD4BC205F462C9135B8128F11072F",
+    "position": 39000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.MD.A.1"
+   },
+   "39E211B60EFF4325B21822A78F73EC7F": {
+    "ancestorIds": [
+     "3C841C725E204E08B40D4BB87C3ED034"
+    ],
+    "asnIdentifier": "S21029614",
+    "depth": 1,
+    "description": "Look for and express regularity in repeated reasoning.",
+    "id": "39E211B60EFF4325B21822A78F73EC7F",
+    "parentId": "3C841C725E204E08B40D4BB87C3ED034",
+    "position": 9000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP8"
+   },
+   "3C841C725E204E08B40D4BB87C3ED034": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029606",
+    "depth": 0,
+    "description": "Standards for Mathematical Practice",
+    "id": "3C841C725E204E08B40D4BB87C3ED034",
+    "parentId": null,
+    "position": 1000
+   },
+   "42F44A28D351401AA9F50F869BEA98EC": {
+    "ancestorIds": [
+     "B79CB6C24A45481893C547BF1DA7C19C",
+     "070E87D4EF0847F59B237F62643E62CA"
+    ],
+    "asnIdentifier": "S21029622",
+    "depth": 2,
+    "description": "Use number names and the count sequence.",
+    "id": "42F44A28D351401AA9F50F869BEA98EC",
+    "parentId": "B79CB6C24A45481893C547BF1DA7C19C",
+    "position": 12000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "K.CC.A"
+   },
+   "450ED0981E524499B44717C504D638A7": {
+    "ancestorIds": [
+     "E725440BD384422A933D6BB0937B846F",
+     "B79CB6C24A45481893C547BF1DA7C19C",
+     "070E87D4EF0847F59B237F62643E62CA"
+    ],
+    "asnIdentifier": "S21045237",
+    "depth": 3,
+    "description": "Count to answer \"how many?\" questions about as many as 20 things arranged in a line, a rectangular array, or a circle, or as many as 10 things in a scattered configuration; given a number from 1–20, count out that many objects.",
+    "id": "450ED0981E524499B44717C504D638A7",
+    "parentId": "E725440BD384422A933D6BB0937B846F",
+    "position": 21000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.CC.B.5"
+   },
+   "45762461FF4D4FCE9DDC2EBA58350D9C": {
+    "ancestorIds": [
+     "8AD951B97C6F43D0A8594D743291E2BD",
+     "8D6A10C4D0104DDBBF843D5E45BE6583",
+     "D416F61227494CAD8609BB326CF3E3DA"
+    ],
+    "asnIdentifier": "S21045251",
+    "depth": 3,
+    "description": "Identify shapes as two-dimensional (lying in a plane, \"flat\") or three-dimensional (\"solid\").",
+    "id": "45762461FF4D4FCE9DDC2EBA58350D9C",
+    "parentId": "8AD951B97C6F43D0A8594D743291E2BD",
+    "position": 48000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.G.A.3"
+   },
+   "5E76F25C8B0A424899D3437F93026701": {
+    "ancestorIds": [
+     "42F44A28D351401AA9F50F869BEA98EC",
+     "B79CB6C24A45481893C547BF1DA7C19C",
+     "070E87D4EF0847F59B237F62643E62CA"
+    ],
+    "asnIdentifier": "S21045232",
+    "depth": 3,
+    "description": "Write numbers from 0 to 20. Represent a number of objects with a written numeral 0–20 (with 0 representing a count of no objects).",
+    "id": "5E76F25C8B0A424899D3437F93026701",
+    "parentId": "42F44A28D351401AA9F50F869BEA98EC",
+    "position": 15000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.CC.A.3"
+   },
+   "617F3A68B2464A5FA5E53DFEBA3FC2F1": {
+    "ancestorIds": [
+     "AD6F6B52CA6149D1842A46815844D77B",
+     "070E87D4EF0847F59B237F62643E62CA"
+    ],
+    "asnIdentifier": "S21029626",
+    "depth": 2,
+    "description": "Work with numbers 11–19 to gain foundations for place value.",
+    "id": "617F3A68B2464A5FA5E53DFEBA3FC2F1",
+    "parentId": "AD6F6B52CA6149D1842A46815844D77B",
+    "position": 26000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "K.NBT.A"
+   },
+   "61ACC0141C7D4A28969A2B932B3A4AB2": {
+    "ancestorIds": [
+     "3C841C725E204E08B40D4BB87C3ED034"
+    ],
+    "asnIdentifier": "S21029613",
+    "depth": 1,
+    "description": "Look for and make use of structure.",
+    "id": "61ACC0141C7D4A28969A2B932B3A4AB2",
+    "parentId": "3C841C725E204E08B40D4BB87C3ED034",
+    "position": 8000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP7"
+   },
+   "651E9575890A46AB9871D27302B77D41": {
+    "ancestorIds": [
+     "8660BE6B295345F39806AB21CDD998C6",
+     "8D6A10C4D0104DDBBF843D5E45BE6583",
+     "D416F61227494CAD8609BB326CF3E3DA"
+    ],
+    "asnIdentifier": "S21045252",
+    "depth": 3,
+    "description": "Analyze and compare two- and three-dimensional shapes, in different sizes and orientations, using informal language to describe their similarities, differences, parts (e.g., number of sides and vertices/\"corners\") and other attributes (e.g., having sides of equal length).",
+    "id": "651E9575890A46AB9871D27302B77D41",
+    "parentId": "8660BE6B295345F39806AB21CDD998C6",
+    "position": 50000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.G.B.4"
+   },
+   "68010BBEC22E48E9B570058FB64828A5": {
+    "ancestorIds": [
+     "F51CF22ACC344A3DB8A78A4DB1BFB99B",
+     "E725440BD384422A933D6BB0937B846F",
+     "B79CB6C24A45481893C547BF1DA7C19C",
+     "070E87D4EF0847F59B237F62643E62CA"
+    ],
+    "asnIdentifier": "S21045236",
+    "depth": 4,
+    "description": "Understand that each successive number name refers to a quantity that is one larger.",
+    "id": "68010BBEC22E48E9B570058FB64828A5",
+    "parentId": "F51CF22ACC344A3DB8A78A4DB1BFB99B",
+    "position": 20000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.CC.B.4.c"
+   },
+   "6B97D4717E434EB483D25406F2C48074": {
+    "ancestorIds": [
+     "CB7B899455BA4C6CA25E4AD275264BCA",
+     "F2B22EC1589C4233ACDE80D145F782F8",
+     "EB01E582227E423498CE6D9AFC282BF7"
+    ],
+    "asnIdentifier": "S21045241",
+    "depth": 3,
+    "description": "Represent addition and subtraction with objects, fingers, mental images, drawings (drawings need not show details, but should show the mathematics in the problem), sounds (e.g., claps), acting out situations, verbal explanations, expressions, or equations.",
+    "id": "6B97D4717E434EB483D25406F2C48074",
+    "parentId": "CB7B899455BA4C6CA25E4AD275264BCA",
+    "position": 31000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.OA.A.1"
+   },
+   "6ECA622AD9154FB6862C9ACC8CD95204": {
+    "ancestorIds": [
+     "F51CF22ACC344A3DB8A78A4DB1BFB99B",
+     "E725440BD384422A933D6BB0937B846F",
+     "B79CB6C24A45481893C547BF1DA7C19C",
+     "070E87D4EF0847F59B237F62643E62CA"
+    ],
+    "asnIdentifier": "S21045235",
+    "depth": 4,
+    "description": "Understand that the last number name said tells the number of objects counted. The number of objects is the same regardless of their arrangement or the order in which they were counted.",
+    "id": "6ECA622AD9154FB6862C9ACC8CD95204",
+    "parentId": "F51CF22ACC344A3DB8A78A4DB1BFB99B",
+    "position": 19000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.CC.B.4.b"
+   },
+   "78E78AE9A73F4A26AFAF76EC5B1D7826": {
+    "ancestorIds": [
+     "42F44A28D351401AA9F50F869BEA98EC",
+     "B79CB6C24A45481893C547BF1DA7C19C",
+     "070E87D4EF0847F59B237F62643E62CA"
+    ],
+    "asnIdentifier": "S21045231",
+    "depth": 3,
+    "description": "Count forward beginning from a given number within the known sequence (instead of having to begin at 1).",
+    "id": "78E78AE9A73F4A26AFAF76EC5B1D7826",
+    "parentId": "42F44A28D351401AA9F50F869BEA98EC",
+    "position": 14000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.CC.A.2"
+   },
+   "7C9CCF670EC444DEBA4DFCFB29777ED7": {
+    "ancestorIds": [
+     "3C841C725E204E08B40D4BB87C3ED034"
+    ],
+    "asnIdentifier": "S21029609",
+    "depth": 1,
+    "description": "Construct viable arguments and critique the reasoning of others.",
+    "id": "7C9CCF670EC444DEBA4DFCFB29777ED7",
+    "parentId": "3C841C725E204E08B40D4BB87C3ED034",
+    "position": 4000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP3"
+   },
+   "84F7F8C04E73459484BBE6B8346D5CD9": {
+    "ancestorIds": [
+     "8660BE6B295345F39806AB21CDD998C6",
+     "8D6A10C4D0104DDBBF843D5E45BE6583",
+     "D416F61227494CAD8609BB326CF3E3DA"
+    ],
+    "asnIdentifier": "S21045254",
+    "depth": 3,
+    "description": "Compose simple shapes to form larger shapes. For example, \"Can you join these two triangles with full sides touching to make a rectangle?\"",
+    "id": "84F7F8C04E73459484BBE6B8346D5CD9",
+    "parentId": "8660BE6B295345F39806AB21CDD998C6",
+    "position": 52000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.G.B.6"
+   },
+   "8660BE6B295345F39806AB21CDD998C6": {
+    "ancestorIds": [
+     "8D6A10C4D0104DDBBF843D5E45BE6583",
+     "D416F61227494CAD8609BB326CF3E3DA"
+    ],
+    "asnIdentifier": "S21029775",
+    "depth": 2,
+    "description": "Analyze, compare, create, and compose shapes.",
+    "id": "8660BE6B295345F39806AB21CDD998C6",
+    "parentId": "8D6A10C4D0104DDBBF843D5E45BE6583",
+    "position": 49000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "K.G.B"
+   },
+   "8812BA2B652C4C63A080AD3989572816": {
+    "ancestorIds": [
+     "CB7B899455BA4C6CA25E4AD275264BCA",
+     "F2B22EC1589C4233ACDE80D145F782F8",
+     "EB01E582227E423498CE6D9AFC282BF7"
+    ],
+    "asnIdentifier": "S21045242",
+    "depth": 3,
+    "description": "Solve addition and subtraction word problems, and add and subtract within 10, e.g., by using objects or drawings to represent the problem.",
+    "id": "8812BA2B652C4C63A080AD3989572816",
+    "parentId": "CB7B899455BA4C6CA25E4AD275264BCA",
+    "position": 32000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.OA.A.2"
+   },
+   "8AD951B97C6F43D0A8594D743291E2BD": {
+    "ancestorIds": [
+     "8D6A10C4D0104DDBBF843D5E45BE6583",
+     "D416F61227494CAD8609BB326CF3E3DA"
+    ],
+    "asnIdentifier": "S21029774",
+    "depth": 2,
+    "description": "Identify and describe shapes (squares, circles, triangles, rectangles, hexagons, cubes, cones, cylinders, and spheres).",
+    "id": "8AD951B97C6F43D0A8594D743291E2BD",
+    "parentId": "8D6A10C4D0104DDBBF843D5E45BE6583",
+    "position": 45000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "K.G.A"
+   },
+   "8BAC18CB62A946408FACD2674988EB8D": {
+    "ancestorIds": [
+     "CBFC3B3D39C04C94B0A51F1F4636DD22",
+     "21B1C94FC0EC47C190CE1382F602C8EF",
+     "001ABC457C2F4F84AB16EEF4DDA8F361"
+    ],
+    "asnIdentifier": "S21045248",
+    "depth": 3,
+    "description": "Classify objects into given categories; count the numbers of objects in each category and sort the categories by count. (Limit category counts to be less than or equal to 10.)",
+    "id": "8BAC18CB62A946408FACD2674988EB8D",
+    "parentId": "CBFC3B3D39C04C94B0A51F1F4636DD22",
+    "position": 42000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.MD.B.3"
+   },
+   "8D6A10C4D0104DDBBF843D5E45BE6583": {
+    "ancestorIds": [
+     "D416F61227494CAD8609BB326CF3E3DA"
+    ],
+    "asnIdentifier": "S21029771",
+    "depth": 1,
+    "description": "Geometry",
+    "id": "8D6A10C4D0104DDBBF843D5E45BE6583",
+    "parentId": "D416F61227494CAD8609BB326CF3E3DA",
+    "position": 44000
+   },
+   "8FB95F82C0DA41E091AC7699C6F3B9F9": {
+    "ancestorIds": [
+     "3C841C725E204E08B40D4BB87C3ED034"
+    ],
+    "asnIdentifier": "S21029607",
+    "depth": 1,
+    "description": "Make sense of problems and persevere in solving them.",
+    "id": "8FB95F82C0DA41E091AC7699C6F3B9F9",
+    "parentId": "3C841C725E204E08B40D4BB87C3ED034",
+    "position": 2000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP1"
+   },
+   "96C3844F4D2A4F088AA7F9462C13C7A9": {
+    "ancestorIds": [
+     "CB7B899455BA4C6CA25E4AD275264BCA",
+     "F2B22EC1589C4233ACDE80D145F782F8",
+     "EB01E582227E423498CE6D9AFC282BF7"
+    ],
+    "asnIdentifier": "S21045245",
+    "depth": 3,
+    "description": "Fluently add and subtract within 5.",
+    "id": "96C3844F4D2A4F088AA7F9462C13C7A9",
+    "parentId": "CB7B899455BA4C6CA25E4AD275264BCA",
+    "position": 35000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.OA.A.5"
+   },
+   "98B3CC7C31714C6C983BB763AE043F3B": {
+    "ancestorIds": [
+     "3C841C725E204E08B40D4BB87C3ED034"
+    ],
+    "asnIdentifier": "S21029608",
+    "depth": 1,
+    "description": "Reason abstractly and quantitatively.",
+    "id": "98B3CC7C31714C6C983BB763AE043F3B",
+    "parentId": "3C841C725E204E08B40D4BB87C3ED034",
+    "position": 3000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP2"
+   },
+   "AD6F6B52CA6149D1842A46815844D77B": {
+    "ancestorIds": [
+     "070E87D4EF0847F59B237F62643E62CA"
+    ],
+    "asnIdentifier": "S21029625",
+    "depth": 1,
+    "description": "Number & Operations in Base Ten",
+    "id": "AD6F6B52CA6149D1842A46815844D77B",
+    "parentId": "070E87D4EF0847F59B237F62643E62CA",
+    "position": 25000
+   },
+   "B490DF46B95F4268A424CFD2B3769AC7": {
+    "ancestorIds": [
+     "271AD4BC205F462C9135B8128F11072F",
+     "21B1C94FC0EC47C190CE1382F602C8EF",
+     "001ABC457C2F4F84AB16EEF4DDA8F361"
+    ],
+    "asnIdentifier": "S21045247",
+    "depth": 3,
+    "description": "Directly compare two objects with a measurable attribute in common, to see which object has \"more of\"/\"less of\" the attribute, and describe the difference. For example, directly compare the heights of two children and describe one child as taller/shorter.",
+    "id": "B490DF46B95F4268A424CFD2B3769AC7",
+    "parentId": "271AD4BC205F462C9135B8128F11072F",
+    "position": 40000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.MD.A.2"
+   },
+   "B79CB6C24A45481893C547BF1DA7C19C": {
+    "ancestorIds": [
+     "070E87D4EF0847F59B237F62643E62CA"
+    ],
+    "asnIdentifier": "S21029616",
+    "depth": 1,
+    "description": "Counting and Cardinality",
+    "id": "B79CB6C24A45481893C547BF1DA7C19C",
+    "parentId": "070E87D4EF0847F59B237F62643E62CA",
+    "position": 11000
+   },
+   "C3103DD1AC514425930B6996ADBCEC23": {
+    "ancestorIds": [
+     "3C841C725E204E08B40D4BB87C3ED034"
+    ],
+    "asnIdentifier": "S21029610",
+    "depth": 1,
+    "description": "Model with mathematics.",
+    "id": "C3103DD1AC514425930B6996ADBCEC23",
+    "parentId": "3C841C725E204E08B40D4BB87C3ED034",
+    "position": 5000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP4"
+   },
+   "CB7B899455BA4C6CA25E4AD275264BCA": {
+    "ancestorIds": [
+     "F2B22EC1589C4233ACDE80D145F782F8",
+     "EB01E582227E423498CE6D9AFC282BF7"
+    ],
+    "asnIdentifier": "S21029670",
+    "depth": 2,
+    "description": "Model and describe addition as putting together and adding to, and subtraction as taking apart and taking from, using objects or drawings.",
+    "id": "CB7B899455BA4C6CA25E4AD275264BCA",
+    "parentId": "F2B22EC1589C4233ACDE80D145F782F8",
+    "position": 30000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "K.OA.A"
+   },
+   "CBD272E97BFC4975B86ADA7BBEB21E6D": {
+    "ancestorIds": [
+     "3C841C725E204E08B40D4BB87C3ED034"
+    ],
+    "asnIdentifier": "S21029611",
+    "depth": 1,
+    "description": "Use appropriate tools strategically.",
+    "id": "CBD272E97BFC4975B86ADA7BBEB21E6D",
+    "parentId": "3C841C725E204E08B40D4BB87C3ED034",
+    "position": 6000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP5"
+   },
+   "CBFC3B3D39C04C94B0A51F1F4636DD22": {
+    "ancestorIds": [
+     "21B1C94FC0EC47C190CE1382F602C8EF",
+     "001ABC457C2F4F84AB16EEF4DDA8F361"
+    ],
+    "asnIdentifier": "S21029732",
+    "depth": 2,
+    "description": "Classify objects and count the number of objects in each category.",
+    "id": "CBFC3B3D39C04C94B0A51F1F4636DD22",
+    "parentId": "21B1C94FC0EC47C190CE1382F602C8EF",
+    "position": 41000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "K.MD.B"
+   },
+   "CF18AEF9078C4FE4939616CA281EAFE7": {
+    "ancestorIds": [
+     "8660BE6B295345F39806AB21CDD998C6",
+     "8D6A10C4D0104DDBBF843D5E45BE6583",
+     "D416F61227494CAD8609BB326CF3E3DA"
+    ],
+    "asnIdentifier": "S21045253",
+    "depth": 3,
+    "description": "Model shapes in the world by building shapes from components (e.g., sticks and clay balls) and drawing shapes.",
+    "id": "CF18AEF9078C4FE4939616CA281EAFE7",
+    "parentId": "8660BE6B295345F39806AB21CDD998C6",
+    "position": 51000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.G.B.5"
+   },
+   "D0EFC359972C40D19517CF49E95BFCDF": {
+    "ancestorIds": [
+     "8AD951B97C6F43D0A8594D743291E2BD",
+     "8D6A10C4D0104DDBBF843D5E45BE6583",
+     "D416F61227494CAD8609BB326CF3E3DA"
+    ],
+    "asnIdentifier": "S21045249",
+    "depth": 3,
+    "description": "Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as above, below, beside, in front of, behind, and next to.",
+    "id": "D0EFC359972C40D19517CF49E95BFCDF",
+    "parentId": "8AD951B97C6F43D0A8594D743291E2BD",
+    "position": 46000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.G.A.1"
+   },
+   "D416F61227494CAD8609BB326CF3E3DA": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029770",
+    "depth": 0,
+    "description": "Geometry",
+    "id": "D416F61227494CAD8609BB326CF3E3DA",
+    "parentId": null,
+    "position": 43000,
+    "statementLabel": "Standard",
+    "statementNotation": "G.4"
+   },
+   "D51DFF8AEDD947CDA81B63C933EBB11E": {
+    "ancestorIds": [
+     "3C841C725E204E08B40D4BB87C3ED034"
+    ],
+    "asnIdentifier": "S21029612",
+    "depth": 1,
+    "description": "Attend to precision.",
+    "id": "D51DFF8AEDD947CDA81B63C933EBB11E",
+    "parentId": "3C841C725E204E08B40D4BB87C3ED034",
+    "position": 7000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP6"
+   },
+   "DDFE1A95A1524CA095C13F11F1B109FB": {
+    "ancestorIds": [
+     "CB7B899455BA4C6CA25E4AD275264BCA",
+     "F2B22EC1589C4233ACDE80D145F782F8",
+     "EB01E582227E423498CE6D9AFC282BF7"
+    ],
+    "asnIdentifier": "S21045243",
+    "depth": 3,
+    "description": "Decompose numbers less than or equal to 10 into pairs in more than one way, e.g., by using objects or drawings, and record each decomposition by a drawing or equation (e.g., 5=2+3 and 5=4+1).",
+    "id": "DDFE1A95A1524CA095C13F11F1B109FB",
+    "parentId": "CB7B899455BA4C6CA25E4AD275264BCA",
+    "position": 33000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.OA.A.3"
+   },
+   "DEEF4EA687534CAE8251B4E3743358CA": {
+    "ancestorIds": [
+     "0D2D00C77C0A4FC0AE1F908F06148926",
+     "B79CB6C24A45481893C547BF1DA7C19C",
+     "070E87D4EF0847F59B237F62643E62CA"
+    ],
+    "asnIdentifier": "S21045238",
+    "depth": 3,
+    "description": "Identify whether the number of objects in one group is greater than, less than, or equal to the number of objects in another group, e.g., by using matching and counting strategies. (Include groups with up to 10 objects.)",
+    "id": "DEEF4EA687534CAE8251B4E3743358CA",
+    "parentId": "0D2D00C77C0A4FC0AE1F908F06148926",
+    "position": 23000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.CC.C.6"
+   },
+   "E725440BD384422A933D6BB0937B846F": {
+    "ancestorIds": [
+     "B79CB6C24A45481893C547BF1DA7C19C",
+     "070E87D4EF0847F59B237F62643E62CA"
+    ],
+    "asnIdentifier": "S21029623",
+    "depth": 2,
+    "description": "Count to determine the number of objects.",
+    "id": "E725440BD384422A933D6BB0937B846F",
+    "parentId": "B79CB6C24A45481893C547BF1DA7C19C",
+    "position": 16000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "K.CC.B"
+   },
+   "EB01E582227E423498CE6D9AFC282BF7": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029666",
+    "depth": 0,
+    "description": "Algebra and Functions",
+    "id": "EB01E582227E423498CE6D9AFC282BF7",
+    "parentId": null,
+    "position": 28000,
+    "statementLabel": "Standard",
+    "statementNotation": "AF.2"
+   },
+   "F2B22EC1589C4233ACDE80D145F782F8": {
+    "ancestorIds": [
+     "EB01E582227E423498CE6D9AFC282BF7"
+    ],
+    "asnIdentifier": "S21029667",
+    "depth": 1,
+    "description": "Operations & Algebraic Thinking",
+    "id": "F2B22EC1589C4233ACDE80D145F782F8",
+    "parentId": "EB01E582227E423498CE6D9AFC282BF7",
+    "position": 29000
+   },
+   "F51CF22ACC344A3DB8A78A4DB1BFB99B": {
+    "ancestorIds": [
+     "E725440BD384422A933D6BB0937B846F",
+     "B79CB6C24A45481893C547BF1DA7C19C",
+     "070E87D4EF0847F59B237F62643E62CA"
+    ],
+    "asnIdentifier": "S21045233",
+    "depth": 3,
+    "description": "Apply the relationship between numbers and quantities and connect counting to cardinality.",
+    "id": "F51CF22ACC344A3DB8A78A4DB1BFB99B",
+    "parentId": "E725440BD384422A933D6BB0937B846F",
+    "position": 17000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "K.CC.B.4"
+   }
+  },
+  "subject": "Mathematics (2020-)",
+  "title": "Grade K"
+ }
+}

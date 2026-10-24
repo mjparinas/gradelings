@@ -217,6 +217,21 @@ describe("daily email job", () => {
     expect(monthly()).toBe(1);
   });
 
+  it("asks about the new grade in the weekly email on the first Sunday of August", async () => {
+    const f = await family("grade-up@example.com");
+    await prefs.POST(req("/api/account/prefs/", "POST", { weeklyReport: true }, f.cookie));
+    const d = new Date();
+    d.setUTCHours(12, 0, 0, 0);
+    // The first Sunday of next August: Maya was added in an earlier school year.
+    d.setUTCFullYear(d.getUTCMonth() >= 7 ? d.getUTCFullYear() + 1 : d.getUTCFullYear(), 7, 1);
+    while (d.getUTCDay() !== 0) d.setUTCDate(d.getUTCDate() + 1);
+    vi.useFakeTimers({ toFake: ["Date"] });
+    vi.setSystemTime(d);
+    await run();
+    const mail = email.outbox().filter((m) => m.to === "grade-up@example.com" && m.subject.includes("week")).at(-1)!;
+    expect(mail.text).toContain("New school year: is Maya starting Grade 3?");
+  });
+
   it("sends a practice reminder only to opted-in parents, only after quiet days, at most once a week", async () => {
     const f = await family("nudge@example.com");
     await family("nudge-off@example.com");

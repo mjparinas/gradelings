@@ -25,6 +25,30 @@ describe("SiteHeader", () => {
   });
 });
 
+describe("SiteHeader sign in", () => {
+  it("offers Sign in on every screen size, opening the chooser", () => {
+    localStorage.clear();
+    render(<SiteHeader />);
+    const link = screen.getByRole("link", { name: "Sign in" });
+    expect(link).toHaveAttribute("href", "/account/sign-in/");
+    expect(link.className).not.toMatch(/\bhidden\b/);
+  });
+
+  it("says My account and goes straight to the parent area on a device with a parent account", () => {
+    localStorage.setItem("grademap.parent", "1");
+    render(<SiteHeader />);
+    expect(screen.getByRole("link", { name: "My account" })).toHaveAttribute("href", "/parents/#/account");
+    localStorage.clear();
+  });
+
+  it("goes to the teacher area on a device with a teacher", () => {
+    localStorage.setItem("grademap.teacher", "1");
+    render(<SiteHeader />);
+    expect(screen.getByRole("link", { name: "My account" })).toHaveAttribute("href", "/teachers/");
+    localStorage.clear();
+  });
+});
+
 describe("Try it free links", () => {
   const deep = "/play/#/start?framework=ca-on&grade=2&subject=math&unit=adding-to-100";
 
@@ -40,6 +64,34 @@ describe("Try it free links", () => {
     expect(screen.getByRole("link", { name: "Practise free" })).toHaveAttribute("href", deep);
     render(<PageCta play={deep} />);
     expect(screen.getAllByRole("link", { name: "Try it free" }).at(-1)).toHaveAttribute("href", deep);
+  });
+});
+
+describe("which button leads", () => {
+  const links = (container: HTMLElement) => [...container.querySelectorAll("a.btn")].map((a) => [a.textContent, a.classList.contains("btn-good")]);
+
+  it("puts Subscribe first and green unless the page leads with the free trial", () => {
+    const sub = render(<SubscribeActions />);
+    expect(links(sub.container)).toEqual([
+      ["Subscribe", true],
+      ["Try it free", false],
+    ]);
+    const trial = render(<SubscribeActions lead="trial" />);
+    expect(links(trial.container)).toEqual([
+      ["Try it free", true],
+      ["Subscribe", false],
+    ]);
+  });
+
+  it("drops the phone's full-width Subscribe bar on pages that lead with the trial", () => {
+    const bar = (c: HTMLElement) => [...c.querySelectorAll("header a")].filter((a) => a.textContent === "Subscribe" && a.className.includes("w-full"));
+    expect(bar(render(<SiteHeader />).container)).toHaveLength(1);
+    expect(bar(render(<SiteHeader lead="trial" />).container)).toHaveLength(0);
+  });
+
+  it("words the closing call to action the same way round", () => {
+    render(<PageCta lead="trial" />);
+    expect(screen.getByText(/Try everything free for 30 days with no card, then subscribe if it helps\./)).toBeInTheDocument();
   });
 });
 

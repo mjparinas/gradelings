@@ -1,0 +1,1256 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D21428307",
+   "id": "D21428307",
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.cde.state.co.us/cosocialstudies/cas-ss-p12-2022",
+   "title": "Colorado Academic Standards: Social Studies",
+   "valid": "2022"
+  },
+  "educationLevels": [
+   "07"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D21428307_grade-07",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": null,
+   "rightsHolder": "D2L Corporation",
+   "title": null
+  },
+  "normalizedSubject": "Social Studies",
+  "standards": {
+   "05044DCB14844F3BB5EF05DA748E302E": {
+    "ancestorIds": [
+     "81747E0CDA8D4D88A79CC07A47B32EAC",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428872",
+    "depth": 2,
+    "description": "Investigate the role of consumers and businesses within the Eastern Hemisphere.",
+    "id": "05044DCB14844F3BB5EF05DA748E302E",
+    "parentId": "81747E0CDA8D4D88A79CC07A47B32EAC",
+    "position": 80000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "7.PF.1"
+   },
+   "0536CB3287E44E669BAE42076994E1B1": {
+    "ancestorIds": [
+     "6C26F1D587DA4E61AC24AFE3C870CC7C"
+    ],
+    "asnIdentifier": "S21428310",
+    "depth": 1,
+    "description": "Analyze historical time periods and patterns of continuity and change, through multiple perspectives, within and among cultures and societies.",
+    "id": "0536CB3287E44E669BAE42076994E1B1",
+    "parentId": "6C26F1D587DA4E61AC24AFE3C870CC7C",
+    "position": 3000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.2"
+   },
+   "056B1F79022440ABBEB43E200580B811": {
+    "ancestorIds": [
+     "6C26F1D587DA4E61AC24AFE3C870CC7C"
+    ],
+    "asnIdentifier": "S21428316",
+    "depth": 1,
+    "description": "Apply economic reasoning skills to make informed personal financial decisions.",
+    "id": "056B1F79022440ABBEB43E200580B811",
+    "parentId": "6C26F1D587DA4E61AC24AFE3C870CC7C",
+    "position": 9000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.8"
+   },
+   "0A736ACC9B294844BBCB6F4B67BB0B2A": {
+    "ancestorIds": [
+     "6C26F1D587DA4E61AC24AFE3C870CC7C"
+    ],
+    "asnIdentifier": "S21428312",
+    "depth": 1,
+    "description": "Examine the characteristics of places and regions, and the changing nature among geographic and human interactions.",
+    "id": "0A736ACC9B294844BBCB6F4B67BB0B2A",
+    "parentId": "6C26F1D587DA4E61AC24AFE3C870CC7C",
+    "position": 5000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.4"
+   },
+   "0EDBB1AAB325474D9D4F7436FB51E257": {
+    "ancestorIds": [
+     "05044DCB14844F3BB5EF05DA748E302E",
+     "81747E0CDA8D4D88A79CC07A47B32EAC",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428875",
+    "depth": 3,
+    "description": "Compare and contrast goods and services available to consumers within different cultures as they developed in the Eastern Hemisphere throughout history.",
+    "id": "0EDBB1AAB325474D9D4F7436FB51E257",
+    "parentId": "05044DCB14844F3BB5EF05DA748E302E",
+    "position": 83000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.PF.1.c"
+   },
+   "11228875EB614BBDB65B1DAEDBCC7BD4": {
+    "ancestorIds": [
+     "F0464BB80CD6440B8A64E8C596091143",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428850",
+    "depth": 3,
+    "description": "Describe civic virtues and principles that guide governments and societies. For example: Citizenship, civic participation, and rule of law.",
+    "id": "11228875EB614BBDB65B1DAEDBCC7BD4",
+    "parentId": "F0464BB80CD6440B8A64E8C596091143",
+    "position": 58000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.C.1.a"
+   },
+   "1154EBF8B8374D6285CE5603805C89C3": {
+    "ancestorIds": [
+     "F0464BB80CD6440B8A64E8C596091143",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428857",
+    "depth": 3,
+    "description": "Analyze how a specific problem can manifest itself at local, regional, and global levels, and how media can influence beliefs and behaviors.",
+    "id": "1154EBF8B8374D6285CE5603805C89C3",
+    "parentId": "F0464BB80CD6440B8A64E8C596091143",
+    "position": 65000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.CES.1.3"
+   },
+   "178BB59603F548A1B2B3692458FA769A": {
+    "ancestorIds": [
+     "F48C4203ECC34C9AA119A041FE50D700",
+     "EDF908D217C64864B69327B4AD3EF0CD",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428805",
+    "depth": 3,
+    "description": "Analyze primary and secondary sources to explain the interdependence and uniqueness among peoples in the Eastern Hemisphere, including their influence on modern society.",
+    "id": "178BB59603F548A1B2B3692458FA769A",
+    "parentId": "F48C4203ECC34C9AA119A041FE50D700",
+    "position": 13000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.H.1.a"
+   },
+   "1ED3198B1478456FA94722636EA83CFD": {
+    "ancestorIds": [
+     "F48C4203ECC34C9AA119A041FE50D700",
+     "EDF908D217C64864B69327B4AD3EF0CD",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428809",
+    "depth": 3,
+    "description": "Examine different historical perspectives expressed in primary and secondary sources (Adaptability and Flexibility).",
+    "id": "1ED3198B1478456FA94722636EA83CFD",
+    "parentId": "F48C4203ECC34C9AA119A041FE50D700",
+    "position": 17000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.HES.1.3"
+   },
+   "1FA4D28105004D1083FB04E677E00DA1": {
+    "ancestorIds": [
+     "05044DCB14844F3BB5EF05DA748E302E",
+     "81747E0CDA8D4D88A79CC07A47B32EAC",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428876",
+    "depth": 3,
+    "description": "Demonstrate an understanding of cause and effect related to personal decisions.",
+    "id": "1FA4D28105004D1083FB04E677E00DA1",
+    "parentId": "05044DCB14844F3BB5EF05DA748E302E",
+    "position": 84000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.PFES.1.1"
+   },
+   "24D76DB351D44BBB992641BBA1C6E08B": {
+    "ancestorIds": [
+     "F48C4203ECC34C9AA119A041FE50D700",
+     "EDF908D217C64864B69327B4AD3EF0CD",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428811",
+    "depth": 3,
+    "description": "Utilize primary and secondary sources to examine how individuals interpret messages differently, how values and points of view are included or excluded, and how media can influence beliefs and behaviors.",
+    "id": "24D76DB351D44BBB992641BBA1C6E08B",
+    "parentId": "F48C4203ECC34C9AA119A041FE50D700",
+    "position": 19000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.HES.1.5"
+   },
+   "29AD834B32C846CB9FD10563EA513778": {
+    "ancestorIds": [
+     "AF63AB617E214C3A88949CBB25CED156",
+     "EDF908D217C64864B69327B4AD3EF0CD",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428813",
+    "depth": 3,
+    "description": "Identify and explain the historical context of key people, regions, events, and ideas, including the roots of current issues. For example: The contributions of Mansa Musa, the roots of Abrahamic religions, the significance of political revolutions, the implications of the Atlantic Slave Trade, the rise of European Nationalism, and the rise of Communism.",
+    "id": "29AD834B32C846CB9FD10563EA513778",
+    "parentId": "AF63AB617E214C3A88949CBB25CED156",
+    "position": 21000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.H.2.a"
+   },
+   "2B7D56983F204306B9CEEB1566BBA562": {
+    "ancestorIds": [
+     "57B3BFB872DC4944A3DB061E590FC89E",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428863",
+    "depth": 3,
+    "description": "Evaluate and analyze how various governments and organizations interact, resolve their differences, and cooperate. For example: The African Union (AU), the Association of Southeast Asian Nations (ASEAN), the United Nations, the World Bank, international treaties, and diplomacy.",
+    "id": "2B7D56983F204306B9CEEB1566BBA562",
+    "parentId": "57B3BFB872DC4944A3DB061E590FC89E",
+    "position": 71000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.C.2.b"
+   },
+   "30F8BECA738741E0BCE69F90C3CBBCD8": {
+    "ancestorIds": [
+     "05044DCB14844F3BB5EF05DA748E302E",
+     "81747E0CDA8D4D88A79CC07A47B32EAC",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428877",
+    "depth": 3,
+    "description": "Identify and explain multiple perspectives (cultural and global) when exploring events, ideas, issues.",
+    "id": "30F8BECA738741E0BCE69F90C3CBBCD8",
+    "parentId": "05044DCB14844F3BB5EF05DA748E302E",
+    "position": 85000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.PFES.1.2"
+   },
+   "39E69F5EFF39461C95814EE7459FEFB7": {
+    "ancestorIds": [
+     "487A116FF7A54E5386942CA190944ED9",
+     "E8F63DDEFCE64950846CEEA554D2140E",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428836",
+    "depth": 3,
+    "description": "Look for and find value in perspectives expressed by others.",
+    "id": "39E69F5EFF39461C95814EE7459FEFB7",
+    "parentId": "487A116FF7A54E5386942CA190944ED9",
+    "position": 44000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.GES.2.1"
+   },
+   "3CE0E53CCE774AC5A0EB7E1A77F1D5DF": {
+    "ancestorIds": [
+     "57B3BFB872DC4944A3DB061E590FC89E",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428868",
+    "depth": 3,
+    "description": "Examine how individuals in the Eastern Hemisphere interpret messages differently, how values and points of view are included or excluded.",
+    "id": "3CE0E53CCE774AC5A0EB7E1A77F1D5DF",
+    "parentId": "57B3BFB872DC4944A3DB061E590FC89E",
+    "position": 76000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.CES.2.4"
+   },
+   "40D6366E819C4E64830B5D3E5535C1DD": {
+    "ancestorIds": [
+     "F0464BB80CD6440B8A64E8C596091143",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428859",
+    "depth": 3,
+    "description": "Plan and evaluate complex solutions to global challenges in the Eastern Hemisphere, using multiple disciplinary lenses such as cultural, ethnic, historical, and scientific.",
+    "id": "40D6366E819C4E64830B5D3E5535C1DD",
+    "parentId": "F0464BB80CD6440B8A64E8C596091143",
+    "position": 67000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.CES.1.5"
+   },
+   "42582D7711524068A018BE853BFA7448": {
+    "ancestorIds": [
+     "487A116FF7A54E5386942CA190944ED9",
+     "E8F63DDEFCE64950846CEEA554D2140E",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428834",
+    "depth": 3,
+    "description": "Determine how physical and political features impact cultural diffusion and regional differences. For example: Modern environmental issues, cultural patterns, trade barriers, and economic interdependence.",
+    "id": "42582D7711524068A018BE853BFA7448",
+    "parentId": "487A116FF7A54E5386942CA190944ED9",
+    "position": 42000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.G.2.a"
+   },
+   "45096AC4ED7F4D7485025B8861167128": {
+    "ancestorIds": [
+     "F0464BB80CD6440B8A64E8C596091143",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428856",
+    "depth": 3,
+    "description": "Participate in social or community activities.",
+    "id": "45096AC4ED7F4D7485025B8861167128",
+    "parentId": "F0464BB80CD6440B8A64E8C596091143",
+    "position": 64000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.CES.1.2"
+   },
+   "4662A72CBEBF41B691056DDB157A5CF8": {
+    "ancestorIds": [
+     "F0464BB80CD6440B8A64E8C596091143",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428854",
+    "depth": 3,
+    "description": "Compare and contrast examples of governmental implementation of civic virtues or principles.",
+    "id": "4662A72CBEBF41B691056DDB157A5CF8",
+    "parentId": "F0464BB80CD6440B8A64E8C596091143",
+    "position": 62000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.C.1.e"
+   },
+   "471E83E73A174787A4AA9E5D7BC70FFF": {
+    "ancestorIds": [
+     "05044DCB14844F3BB5EF05DA748E302E",
+     "81747E0CDA8D4D88A79CC07A47B32EAC",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428874",
+    "depth": 3,
+    "description": "Summarize how the distribution of resources impacts consumerism.",
+    "id": "471E83E73A174787A4AA9E5D7BC70FFF",
+    "parentId": "05044DCB14844F3BB5EF05DA748E302E",
+    "position": 82000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.PF.1.b"
+   },
+   "472EB1CC3D984371AF396A1B8BE82D5F": {
+    "ancestorIds": [
+     "69DE7ABD57C143D8AB24136F5E19BF4D",
+     "E8F63DDEFCE64950846CEEA554D2140E",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428824",
+    "depth": 3,
+    "description": "Collect, classify, and analyze data to make geographic inferences and predictions.",
+    "id": "472EB1CC3D984371AF396A1B8BE82D5F",
+    "parentId": "69DE7ABD57C143D8AB24136F5E19BF4D",
+    "position": 32000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.G.1.b"
+   },
+   "48141A9DBA5646C497831A5F755E6F08": {
+    "ancestorIds": [
+     "AF63AB617E214C3A88949CBB25CED156",
+     "EDF908D217C64864B69327B4AD3EF0CD",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428815",
+    "depth": 3,
+    "description": "Describe the interactions, conflicts, and contributions of various peoples and cultures that have lived in or migrated within/to the Eastern Hemisphere. For example: Conflicts over land and resources between countries, the foundations of eastern world religions, the historical roots of current issues, East/West contact, settlement patterns, the Korean War, the war in Vietnam, the Chinese Cultural Revolution, the Khmer Rouge in Cambodia, including acts of violence towards groups of people, and the discriminatory policies and events preceding those acts.",
+    "id": "48141A9DBA5646C497831A5F755E6F08",
+    "parentId": "AF63AB617E214C3A88949CBB25CED156",
+    "position": 23000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.H.2.c"
+   },
+   "487A116FF7A54E5386942CA190944ED9": {
+    "ancestorIds": [
+     "E8F63DDEFCE64950846CEEA554D2140E",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428833",
+    "depth": 2,
+    "description": "Evaluate regional differences and perspectives in the Eastern Hemisphere and how they impact human and environmental interactions.",
+    "id": "487A116FF7A54E5386942CA190944ED9",
+    "parentId": "E8F63DDEFCE64950846CEEA554D2140E",
+    "position": 41000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "7.G.2"
+   },
+   "48C6D52D4ACD44BCA09BBE730B0506F4": {
+    "ancestorIds": [
+     "05044DCB14844F3BB5EF05DA748E302E",
+     "81747E0CDA8D4D88A79CC07A47B32EAC",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428873",
+    "depth": 3,
+    "description": "Define resources from an economic and personal finance perspective.",
+    "id": "48C6D52D4ACD44BCA09BBE730B0506F4",
+    "parentId": "05044DCB14844F3BB5EF05DA748E302E",
+    "position": 81000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.PF.1.a"
+   },
+   "4A9692C68AB64F67B3CB9FF110444916": {
+    "ancestorIds": [
+     "F48C4203ECC34C9AA119A041FE50D700",
+     "EDF908D217C64864B69327B4AD3EF0CD",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428806",
+    "depth": 3,
+    "description": "Examine primary and secondary sources from multiple and diverse perspectives to identify point of view using art, eyewitness accounts, letters and diaries, artifacts, historical sites, charts, graphs, diagrams, and written texts.",
+    "id": "4A9692C68AB64F67B3CB9FF110444916",
+    "parentId": "F48C4203ECC34C9AA119A041FE50D700",
+    "position": 14000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.H.1.b"
+   },
+   "4AFF8144D4DA41C0861410C6396D8B2C": {
+    "ancestorIds": [
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428848",
+    "depth": 1,
+    "description": "Civics",
+    "id": "4AFF8144D4DA41C0861410C6396D8B2C",
+    "parentId": "F65F413E958042B5AF4E4C4666EA156A",
+    "position": 56000,
+    "statementLabel": "Content Area"
+   },
+   "4D9284DDE97D42EE9E43605E1CA66A71": {
+    "ancestorIds": [
+     "D2CFD6B2FB4C46C884D965700E9991B7",
+     "D5C92F0AB5B34BC784ADB6DFC3BEA7B3",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428842",
+    "depth": 3,
+    "description": "Explain how trade supply and demand affects the production of goods and services in different regions.",
+    "id": "4D9284DDE97D42EE9E43605E1CA66A71",
+    "parentId": "D2CFD6B2FB4C46C884D965700E9991B7",
+    "position": 50000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.E.1.c"
+   },
+   "4EF83D3019814652BF70AB3305154905": {
+    "ancestorIds": [
+     "57B3BFB872DC4944A3DB061E590FC89E",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428866",
+    "depth": 3,
+    "description": "Follow a process identified by others to help generate ideas, negotiate roles and responsibilities, and respect consensus in decision making.",
+    "id": "4EF83D3019814652BF70AB3305154905",
+    "parentId": "57B3BFB872DC4944A3DB061E590FC89E",
+    "position": 74000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.CES.2.2"
+   },
+   "57B3BFB872DC4944A3DB061E590FC89E": {
+    "ancestorIds": [
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428861",
+    "depth": 2,
+    "description": "Analyze how nations in various regions of the Eastern Hemisphere interact with international organizations, govern, organize, and impact their societies in different ways.",
+    "id": "57B3BFB872DC4944A3DB061E590FC89E",
+    "parentId": "4AFF8144D4DA41C0861410C6396D8B2C",
+    "position": 69000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "7.C.2"
+   },
+   "5D4F9DCC6CB44C92B2C89683A36326A7": {
+    "ancestorIds": [
+     "D2CFD6B2FB4C46C884D965700E9991B7",
+     "D5C92F0AB5B34BC784ADB6DFC3BEA7B3",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428844",
+    "depth": 3,
+    "description": "Take action from failure, connect learning across domains, and recognize new opportunities.",
+    "id": "5D4F9DCC6CB44C92B2C89683A36326A7",
+    "parentId": "D2CFD6B2FB4C46C884D965700E9991B7",
+    "position": 52000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.EES.1.1"
+   },
+   "60CF736C16634273A18E557101892FE7": {
+    "ancestorIds": [
+     "69DE7ABD57C143D8AB24136F5E19BF4D",
+     "E8F63DDEFCE64950846CEEA554D2140E",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428827",
+    "depth": 3,
+    "description": "Investigate geographic sources to formulate inquiry questions to understand the past, analyze the present, or plan for the future.",
+    "id": "60CF736C16634273A18E557101892FE7",
+    "parentId": "69DE7ABD57C143D8AB24136F5E19BF4D",
+    "position": 35000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.G.1.e"
+   },
+   "61EC14CC28D24E16BEAC5A068E5A0E53": {
+    "ancestorIds": [
+     "487A116FF7A54E5386942CA190944ED9",
+     "E8F63DDEFCE64950846CEEA554D2140E",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428835",
+    "depth": 3,
+    "description": "Examine the geographic location and distribution of resources within a region to determine the economic and social impact on its people. For example: Middle Eastern water rights, the acceptance of refugees from other countries, and the Salt Trade.",
+    "id": "61EC14CC28D24E16BEAC5A068E5A0E53",
+    "parentId": "487A116FF7A54E5386942CA190944ED9",
+    "position": 43000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.G.2.b"
+   },
+   "643BBE8D9B40427195AFF5DB75AC6F59": {
+    "ancestorIds": [
+     "F48C4203ECC34C9AA119A041FE50D700",
+     "EDF908D217C64864B69327B4AD3EF0CD",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428810",
+    "depth": 3,
+    "description": "Use a focus statement and questioning protocols to generate, evaluate, improve, and select high quality historical inquiry questions (Critical Thinking and Analysis).",
+    "id": "643BBE8D9B40427195AFF5DB75AC6F59",
+    "parentId": "F48C4203ECC34C9AA119A041FE50D700",
+    "position": 18000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.HES.1.4"
+   },
+   "67FE9FCA4B8D47BDA9AFD9C6B84E691E": {
+    "ancestorIds": [
+     "6C26F1D587DA4E61AC24AFE3C870CC7C"
+    ],
+    "asnIdentifier": "S21428313",
+    "depth": 1,
+    "description": "Evaluate how scarce resources are allocated in societies through the analysis of individual choice, market interaction, and public policy.",
+    "id": "67FE9FCA4B8D47BDA9AFD9C6B84E691E",
+    "parentId": "6C26F1D587DA4E61AC24AFE3C870CC7C",
+    "position": 6000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.5"
+   },
+   "6859A7D0B41B436A9AC02746D7397821": {
+    "ancestorIds": [
+     "69DE7ABD57C143D8AB24136F5E19BF4D",
+     "E8F63DDEFCE64950846CEEA554D2140E",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428826",
+    "depth": 3,
+    "description": "Interpret maps to make inferences and predictions.",
+    "id": "6859A7D0B41B436A9AC02746D7397821",
+    "parentId": "69DE7ABD57C143D8AB24136F5E19BF4D",
+    "position": 34000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.G.1.d"
+   },
+   "69DE7ABD57C143D8AB24136F5E19BF4D": {
+    "ancestorIds": [
+     "E8F63DDEFCE64950846CEEA554D2140E",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428822",
+    "depth": 2,
+    "description": "Use geographic tools and sources to research and make geographic inferences and predictions about the Eastern Hemisphere.",
+    "id": "69DE7ABD57C143D8AB24136F5E19BF4D",
+    "parentId": "E8F63DDEFCE64950846CEEA554D2140E",
+    "position": 30000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "7.G.1"
+   },
+   "6C26F1D587DA4E61AC24AFE3C870CC7C": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21428308",
+    "depth": 0,
+    "description": "Prepared Graduates in Social Studies",
+    "id": "6C26F1D587DA4E61AC24AFE3C870CC7C",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": "Content Area"
+   },
+   "710E68E57C444C1D9D7C8309F287BD8E": {
+    "ancestorIds": [
+     "69DE7ABD57C143D8AB24136F5E19BF4D",
+     "E8F63DDEFCE64950846CEEA554D2140E",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428831",
+    "depth": 3,
+    "description": "Look for and find value in studying different perspectives expressed by others.",
+    "id": "710E68E57C444C1D9D7C8309F287BD8E",
+    "parentId": "69DE7ABD57C143D8AB24136F5E19BF4D",
+    "position": 39000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.GES.1.3"
+   },
+   "77EC91F55EAE44ECB7D4D1929197147D": {
+    "ancestorIds": [
+     "57B3BFB872DC4944A3DB061E590FC89E",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428862",
+    "depth": 3,
+    "description": "Explain the origins, functions, and structure of different governments. For example: Dictatorship, totalitarianism, authoritarian, monarchy, democracy, constitutional republic, socialism, fascism, and communism.",
+    "id": "77EC91F55EAE44ECB7D4D1929197147D",
+    "parentId": "57B3BFB872DC4944A3DB061E590FC89E",
+    "position": 70000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.C.2.a"
+   },
+   "78061DDC56EC463FA050C5A553F89224": {
+    "ancestorIds": [
+     "AF63AB617E214C3A88949CBB25CED156",
+     "EDF908D217C64864B69327B4AD3EF0CD",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428820",
+    "depth": 3,
+    "description": "Examine different historical perspectives expressed in primary and secondary sources.",
+    "id": "78061DDC56EC463FA050C5A553F89224",
+    "parentId": "AF63AB617E214C3A88949CBB25CED156",
+    "position": 28000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.HES.2.3"
+   },
+   "7A0C813511B24825B648EA7588152DB7": {
+    "ancestorIds": [
+     "D2CFD6B2FB4C46C884D965700E9991B7",
+     "D5C92F0AB5B34BC784ADB6DFC3BEA7B3",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428841",
+    "depth": 3,
+    "description": "Evaluate the different economic systems in the Eastern Hemisphere, utilizing economic data. For example: Economic growth, per capita income, and standard of living.",
+    "id": "7A0C813511B24825B648EA7588152DB7",
+    "parentId": "D2CFD6B2FB4C46C884D965700E9991B7",
+    "position": 49000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.E.1.b"
+   },
+   "7E945AEDBF364575A5513DB3749B7C29": {
+    "ancestorIds": [
+     "6C26F1D587DA4E61AC24AFE3C870CC7C"
+    ],
+    "asnIdentifier": "S21428311",
+    "depth": 1,
+    "description": "Apply geographic representations and perspectives to analyze human movement, spatial patterns, systems, and the connections and relationships among them.",
+    "id": "7E945AEDBF364575A5513DB3749B7C29",
+    "parentId": "6C26F1D587DA4E61AC24AFE3C870CC7C",
+    "position": 4000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.3"
+   },
+   "7F0866725D1943178B7D1D1A828AA767": {
+    "ancestorIds": [
+     "F0464BB80CD6440B8A64E8C596091143",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428852",
+    "depth": 3,
+    "description": "Give examples illustrating the interactions between nations and their citizens. For example: South Africa's system of Apartheid, human rights violations, genocide, Shari'ah law, government sanctioned economic policies, and socialized healthcare and education.",
+    "id": "7F0866725D1943178B7D1D1A828AA767",
+    "parentId": "F0464BB80CD6440B8A64E8C596091143",
+    "position": 60000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.C.1.c"
+   },
+   "7F6B3CE1FDF747E48F318ED4D9674ED0": {
+    "ancestorIds": [
+     "6C26F1D587DA4E61AC24AFE3C870CC7C"
+    ],
+    "asnIdentifier": "S21428309",
+    "depth": 1,
+    "description": "Apply the process of inquiry to examine and analyze how historical knowledge is viewed, constructed, and interpreted.",
+    "id": "7F6B3CE1FDF747E48F318ED4D9674ED0",
+    "parentId": "6C26F1D587DA4E61AC24AFE3C870CC7C",
+    "position": 2000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.1"
+   },
+   "806BA9039222460296DD6B653CE66A98": {
+    "ancestorIds": [
+     "6C26F1D587DA4E61AC24AFE3C870CC7C"
+    ],
+    "asnIdentifier": "S21428314",
+    "depth": 1,
+    "description": "Express an understanding of how civic participation affects policy by applying the rights and responsibilities of a citizen.",
+    "id": "806BA9039222460296DD6B653CE66A98",
+    "parentId": "6C26F1D587DA4E61AC24AFE3C870CC7C",
+    "position": 7000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.6"
+   },
+   "81747E0CDA8D4D88A79CC07A47B32EAC": {
+    "ancestorIds": [
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428871",
+    "depth": 1,
+    "description": "Personal Financial Literacy",
+    "id": "81747E0CDA8D4D88A79CC07A47B32EAC",
+    "parentId": "F65F413E958042B5AF4E4C4666EA156A",
+    "position": 79000,
+    "statementLabel": "Content Area"
+   },
+   "82DEA5E259E747188E59A52D0A3912FF": {
+    "ancestorIds": [
+     "D2CFD6B2FB4C46C884D965700E9991B7",
+     "D5C92F0AB5B34BC784ADB6DFC3BEA7B3",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428843",
+    "depth": 3,
+    "description": "Determine how scarcity affects the economic system in the Eastern Hemisphere.",
+    "id": "82DEA5E259E747188E59A52D0A3912FF",
+    "parentId": "D2CFD6B2FB4C46C884D965700E9991B7",
+    "position": 51000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.E.1.d"
+   },
+   "8370005EC0434386806CE1DF0F223BB2": {
+    "ancestorIds": [
+     "F48C4203ECC34C9AA119A041FE50D700",
+     "EDF908D217C64864B69327B4AD3EF0CD",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428808",
+    "depth": 3,
+    "description": "Engage in novel approaches, ideas, and/or perspectives while using inquiry and primary and secondary sources (Creativity and Innovation).",
+    "id": "8370005EC0434386806CE1DF0F223BB2",
+    "parentId": "F48C4203ECC34C9AA119A041FE50D700",
+    "position": 16000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.HES.1.2"
+   },
+   "838A17A67CD34C029D75EE52916C2143": {
+    "ancestorIds": [
+     "69DE7ABD57C143D8AB24136F5E19BF4D",
+     "E8F63DDEFCE64950846CEEA554D2140E",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428823",
+    "depth": 3,
+    "description": "Use maps and geographic tools to find patterns in human systems and/or physical features to investigate and propose a solution to geographic problems.",
+    "id": "838A17A67CD34C029D75EE52916C2143",
+    "parentId": "69DE7ABD57C143D8AB24136F5E19BF4D",
+    "position": 31000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.G.1.a"
+   },
+   "8872809BF71C43169A298AB88FBBD48D": {
+    "ancestorIds": [
+     "F0464BB80CD6440B8A64E8C596091143",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428853",
+    "depth": 3,
+    "description": "Identify international and regional public problems, research ways in which governments address those problems, and make connections to how the United States government addresses issues to protect the public good.",
+    "id": "8872809BF71C43169A298AB88FBBD48D",
+    "parentId": "F0464BB80CD6440B8A64E8C596091143",
+    "position": 61000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.C.1.d"
+   },
+   "8F607CE1F47C437FB4EA0DE46D46FB2F": {
+    "ancestorIds": [
+     "F0464BB80CD6440B8A64E8C596091143",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428860",
+    "depth": 3,
+    "description": "Look for and find value in different perspectives expressed by others.",
+    "id": "8F607CE1F47C437FB4EA0DE46D46FB2F",
+    "parentId": "F0464BB80CD6440B8A64E8C596091143",
+    "position": 68000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.CES.1.6"
+   },
+   "91A73827CD5E4C4D91CAC03384AA8FF2": {
+    "ancestorIds": [
+     "6C26F1D587DA4E61AC24AFE3C870CC7C"
+    ],
+    "asnIdentifier": "S21428315",
+    "depth": 1,
+    "description": "Analyze the origins, structures, and functions of governments to evaluate the impact on citizens and the global society.",
+    "id": "91A73827CD5E4C4D91CAC03384AA8FF2",
+    "parentId": "6C26F1D587DA4E61AC24AFE3C870CC7C",
+    "position": 8000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.7"
+   },
+   "9523E4E298C947B5BFD4576EE6D7B1A6": {
+    "ancestorIds": [
+     "69DE7ABD57C143D8AB24136F5E19BF4D",
+     "E8F63DDEFCE64950846CEEA554D2140E",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428830",
+    "depth": 3,
+    "description": "Evaluate information using spatial technologies.",
+    "id": "9523E4E298C947B5BFD4576EE6D7B1A6",
+    "parentId": "69DE7ABD57C143D8AB24136F5E19BF4D",
+    "position": 38000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.GES.1.2"
+   },
+   "9E45DB2CF3C04F10935C31FC62397677": {
+    "ancestorIds": [
+     "D2CFD6B2FB4C46C884D965700E9991B7",
+     "D5C92F0AB5B34BC784ADB6DFC3BEA7B3",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428845",
+    "depth": 3,
+    "description": "Plan and evaluate complex solutions to global economic system challenges using multiple disciplinary lenses, such as cultural, historical, and scientific.",
+    "id": "9E45DB2CF3C04F10935C31FC62397677",
+    "parentId": "D2CFD6B2FB4C46C884D965700E9991B7",
+    "position": 53000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.EES.1.2"
+   },
+   "A02DD9E6F7CC42A5950FEE2F441D80A0": {
+    "ancestorIds": [
+     "69DE7ABD57C143D8AB24136F5E19BF4D",
+     "E8F63DDEFCE64950846CEEA554D2140E",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428825",
+    "depth": 3,
+    "description": "Apply inquiry and research utilizing geographic tools. For example: GPS and satellite imagery.",
+    "id": "A02DD9E6F7CC42A5950FEE2F441D80A0",
+    "parentId": "69DE7ABD57C143D8AB24136F5E19BF4D",
+    "position": 33000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.G.1.c"
+   },
+   "A340C031448A47198B1436FB6578D106": {
+    "ancestorIds": [
+     "AF63AB617E214C3A88949CBB25CED156",
+     "EDF908D217C64864B69327B4AD3EF0CD",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428814",
+    "depth": 3,
+    "description": "Investigate and evaluate the social, political, cultural, and technological development of regions in the Eastern Hemisphere. For example: The river valley civilizations, Hammurabi's Code, Greek democracy, the Roman Republic, the Chinese inventions of gunpowder and the compass, and the printing press.",
+    "id": "A340C031448A47198B1436FB6578D106",
+    "parentId": "AF63AB617E214C3A88949CBB25CED156",
+    "position": 22000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.H.2.b"
+   },
+   "A5B3C26A5AD946E2B4368C0B819082EF": {
+    "ancestorIds": [
+     "57B3BFB872DC4944A3DB061E590FC89E",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428864",
+    "depth": 3,
+    "description": "Investigate examples of collaboration and interdependence between international organizations and countries. For example: The protection of human rights; the role of non-governmental organizations (NGOs), the Red Cross, World Health Organization, and United Nations Educational, Scientific, and Cultural Organization (UNESCO).",
+    "id": "A5B3C26A5AD946E2B4368C0B819082EF",
+    "parentId": "57B3BFB872DC4944A3DB061E590FC89E",
+    "position": 72000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.C.2.c"
+   },
+   "A89C1C9825C942679C67952B172F20AB": {
+    "ancestorIds": [
+     "57B3BFB872DC4944A3DB061E590FC89E",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428865",
+    "depth": 3,
+    "description": "Apply ethical perspectives/concepts to an ethical question/situation/scenario.",
+    "id": "A89C1C9825C942679C67952B172F20AB",
+    "parentId": "57B3BFB872DC4944A3DB061E590FC89E",
+    "position": 73000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.CES.2.1"
+   },
+   "AB06BC4EAC064D90A3DC585A0CDD8CA9": {
+    "ancestorIds": [
+     "69DE7ABD57C143D8AB24136F5E19BF4D",
+     "E8F63DDEFCE64950846CEEA554D2140E",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428829",
+    "depth": 3,
+    "description": "Test hypotheses/prototypes with planned processes for getting feedback.",
+    "id": "AB06BC4EAC064D90A3DC585A0CDD8CA9",
+    "parentId": "69DE7ABD57C143D8AB24136F5E19BF4D",
+    "position": 37000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.GES.1.1"
+   },
+   "AF63AB617E214C3A88949CBB25CED156": {
+    "ancestorIds": [
+     "EDF908D217C64864B69327B4AD3EF0CD",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428812",
+    "depth": 2,
+    "description": "Apply an understanding of the historical context of significant current events, individuals, groups, ideas, and themes within regions of the Eastern Hemisphere and their relationships with one another, to draw conclusions, and solve problems.",
+    "id": "AF63AB617E214C3A88949CBB25CED156",
+    "parentId": "EDF908D217C64864B69327B4AD3EF0CD",
+    "position": 20000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "7.H.2"
+   },
+   "AFA0066D50BF4E1982DC78CF8CCF86C0": {
+    "ancestorIds": [
+     "AF63AB617E214C3A88949CBB25CED156",
+     "EDF908D217C64864B69327B4AD3EF0CD",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428817",
+    "depth": 3,
+    "description": "Describe how the non-violent strategies employed by Dr. King and his followers overcame segregation in the American South.",
+    "id": "AFA0066D50BF4E1982DC78CF8CCF86C0",
+    "parentId": "AF63AB617E214C3A88949CBB25CED156",
+    "position": 25000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.H.2.e"
+   },
+   "B0D0B4D508844FA38780B57AE5BDFFAC": {
+    "ancestorIds": [
+     "D2CFD6B2FB4C46C884D965700E9991B7",
+     "D5C92F0AB5B34BC784ADB6DFC3BEA7B3",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428846",
+    "depth": 3,
+    "description": "Look for and find value in different economic perspectives.",
+    "id": "B0D0B4D508844FA38780B57AE5BDFFAC",
+    "parentId": "D2CFD6B2FB4C46C884D965700E9991B7",
+    "position": 54000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.EES.1.3"
+   },
+   "C1F919FCBE8C426081FB5C6C449F9521": {
+    "ancestorIds": [
+     "F0464BB80CD6440B8A64E8C596091143",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428851",
+    "depth": 3,
+    "description": "Analyze the opportunities and limitations of civic participation in societies in the Eastern Hemisphere.",
+    "id": "C1F919FCBE8C426081FB5C6C449F9521",
+    "parentId": "F0464BB80CD6440B8A64E8C596091143",
+    "position": 59000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.C.1.b"
+   },
+   "C44F81CF87D445789AF794FBD2A6B008": {
+    "ancestorIds": [
+     "AF63AB617E214C3A88949CBB25CED156",
+     "EDF908D217C64864B69327B4AD3EF0CD",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428816",
+    "depth": 3,
+    "description": "Explain the interdependence and uniqueness among peoples in the Eastern Hemisphere during significant eras or events, including their influence on modern society. For example: African Empires, the Silk Road and cultural diffusion, and the colonization of Africa, India, and Australia.",
+    "id": "C44F81CF87D445789AF794FBD2A6B008",
+    "parentId": "AF63AB617E214C3A88949CBB25CED156",
+    "position": 24000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.H.2.d"
+   },
+   "C9EDF55C0D7B43E59E14984986191035": {
+    "ancestorIds": [
+     "F0464BB80CD6440B8A64E8C596091143",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428858",
+    "depth": 3,
+    "description": "Examine how individuals in the Eastern Hemisphere receive messages differently, and how values and points of view are included or excluded.",
+    "id": "C9EDF55C0D7B43E59E14984986191035",
+    "parentId": "F0464BB80CD6440B8A64E8C596091143",
+    "position": 66000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.CES.1.4"
+   },
+   "CE8B537B65EB47C1BC147B8FB8B31036": {
+    "ancestorIds": [
+     "57B3BFB872DC4944A3DB061E590FC89E",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428867",
+    "depth": 3,
+    "description": "Analyze how a specific problem can manifest itself at local, regional, and global levels, and how media can influence beliefs and behaviors.",
+    "id": "CE8B537B65EB47C1BC147B8FB8B31036",
+    "parentId": "57B3BFB872DC4944A3DB061E590FC89E",
+    "position": 75000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.CES.2.3"
+   },
+   "CF927A9794744724BAF358D4B2A1A2BE": {
+    "ancestorIds": [
+     "F0464BB80CD6440B8A64E8C596091143",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428855",
+    "depth": 3,
+    "description": "Follow a process identified by others to help generate ideas, negotiate roles and responsibilities, and respect consensus in decision making.",
+    "id": "CF927A9794744724BAF358D4B2A1A2BE",
+    "parentId": "F0464BB80CD6440B8A64E8C596091143",
+    "position": 63000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.CES.1.1"
+   },
+   "D0F3B7CF4B8E434C9D2DCCCC25A47EBF": {
+    "ancestorIds": [
+     "69DE7ABD57C143D8AB24136F5E19BF4D",
+     "E8F63DDEFCE64950846CEEA554D2140E",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428832",
+    "depth": 3,
+    "description": "Plan and evaluate complex solutions to global challenges within the Eastern Hemisphere that are appropriate to their contexts using multiple disciplinary lenses such as ethnic, historical, and scientific.",
+    "id": "D0F3B7CF4B8E434C9D2DCCCC25A47EBF",
+    "parentId": "69DE7ABD57C143D8AB24136F5E19BF4D",
+    "position": 40000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.GES.1.4"
+   },
+   "D2CFD6B2FB4C46C884D965700E9991B7": {
+    "ancestorIds": [
+     "D5C92F0AB5B34BC784ADB6DFC3BEA7B3",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428839",
+    "depth": 2,
+    "description": "Describe how economic systems in the Eastern Hemisphere developed based on access to resources, societal values, and human experiences in order to address the problem of scarcity.",
+    "id": "D2CFD6B2FB4C46C884D965700E9991B7",
+    "parentId": "D5C92F0AB5B34BC784ADB6DFC3BEA7B3",
+    "position": 47000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "7.E.1"
+   },
+   "D5C92F0AB5B34BC784ADB6DFC3BEA7B3": {
+    "ancestorIds": [
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428838",
+    "depth": 1,
+    "description": "Economics",
+    "id": "D5C92F0AB5B34BC784ADB6DFC3BEA7B3",
+    "parentId": "F65F413E958042B5AF4E4C4666EA156A",
+    "position": 46000,
+    "statementLabel": "Content Area"
+   },
+   "DC725A8A71B943169726A1E317698A48": {
+    "ancestorIds": [
+     "69DE7ABD57C143D8AB24136F5E19BF4D",
+     "E8F63DDEFCE64950846CEEA554D2140E",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428828",
+    "depth": 3,
+    "description": "Assess geographic data to draw conclusions, make predictions, and justify potential solutions to problems in the Eastern Hemisphere at the local, state, national, and global levels using supporting evidence and logical reasoning.",
+    "id": "DC725A8A71B943169726A1E317698A48",
+    "parentId": "69DE7ABD57C143D8AB24136F5E19BF4D",
+    "position": 36000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.G.1.f"
+   },
+   "E8F63DDEFCE64950846CEEA554D2140E": {
+    "ancestorIds": [
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428821",
+    "depth": 1,
+    "description": "Geography",
+    "id": "E8F63DDEFCE64950846CEEA554D2140E",
+    "parentId": "F65F413E958042B5AF4E4C4666EA156A",
+    "position": 29000,
+    "statementLabel": "Content Area"
+   },
+   "EB3D719AD35542D69343EE3CE19D247F": {
+    "ancestorIds": [
+     "57B3BFB872DC4944A3DB061E590FC89E",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428869",
+    "depth": 3,
+    "description": "Plan and evaluate complex solutions to challenges in the Eastern Hemisphere using multiple disciplinary lenses such as cultural, ethnic, historical, and scientific.",
+    "id": "EB3D719AD35542D69343EE3CE19D247F",
+    "parentId": "57B3BFB872DC4944A3DB061E590FC89E",
+    "position": 77000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.CES.2.5"
+   },
+   "ECA89CB6BC204F5E83F6FB23A3DF3D45": {
+    "ancestorIds": [
+     "D2CFD6B2FB4C46C884D965700E9991B7",
+     "D5C92F0AB5B34BC784ADB6DFC3BEA7B3",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428847",
+    "depth": 3,
+    "description": "Make connections between information gathered and personal experiences to research economic questions.",
+    "id": "ECA89CB6BC204F5E83F6FB23A3DF3D45",
+    "parentId": "D2CFD6B2FB4C46C884D965700E9991B7",
+    "position": 55000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.EES.1.4"
+   },
+   "ED944C26BF154B7594E59DF9F2D556DD": {
+    "ancestorIds": [
+     "AF63AB617E214C3A88949CBB25CED156",
+     "EDF908D217C64864B69327B4AD3EF0CD",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428819",
+    "depth": 3,
+    "description": "Plan and evaluate complex solutions to global challenges within the Eastern Hemisphere using multiple disciplinary lenses such as ethnic, historical, and scientific.",
+    "id": "ED944C26BF154B7594E59DF9F2D556DD",
+    "parentId": "AF63AB617E214C3A88949CBB25CED156",
+    "position": 27000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.HES.2.2"
+   },
+   "EDF908D217C64864B69327B4AD3EF0CD": {
+    "ancestorIds": [
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428803",
+    "depth": 1,
+    "description": "History",
+    "id": "EDF908D217C64864B69327B4AD3EF0CD",
+    "parentId": "F65F413E958042B5AF4E4C4666EA156A",
+    "position": 11000,
+    "statementLabel": "Content Area"
+   },
+   "F0464BB80CD6440B8A64E8C596091143": {
+    "ancestorIds": [
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428849",
+    "depth": 2,
+    "description": "Investigate similarities and differences of civic participation within different governmental systems of the Eastern Hemisphere.",
+    "id": "F0464BB80CD6440B8A64E8C596091143",
+    "parentId": "4AFF8144D4DA41C0861410C6396D8B2C",
+    "position": 57000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "7.C.1"
+   },
+   "F48C4203ECC34C9AA119A041FE50D700": {
+    "ancestorIds": [
+     "EDF908D217C64864B69327B4AD3EF0CD",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428804",
+    "depth": 2,
+    "description": "Analyze and interpret a variety of primary and secondary sources from multiple perspectives in the Eastern Hemisphere to formulate an appropriate thesis supported by relevant evidence.",
+    "id": "F48C4203ECC34C9AA119A041FE50D700",
+    "parentId": "EDF908D217C64864B69327B4AD3EF0CD",
+    "position": 12000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "7.H.1"
+   },
+   "F4DDD667307D4193B84FD1D6E3CE767E": {
+    "ancestorIds": [
+     "57B3BFB872DC4944A3DB061E590FC89E",
+     "4AFF8144D4DA41C0861410C6396D8B2C",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428870",
+    "depth": 3,
+    "description": "Look for and find value in different perspectives expressed by others.",
+    "id": "F4DDD667307D4193B84FD1D6E3CE767E",
+    "parentId": "57B3BFB872DC4944A3DB061E590FC89E",
+    "position": 78000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.CES.2.6"
+   },
+   "F5BA85B7DAE64003B243D7007C03078F": {
+    "ancestorIds": [
+     "487A116FF7A54E5386942CA190944ED9",
+     "E8F63DDEFCE64950846CEEA554D2140E",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428837",
+    "depth": 3,
+    "description": "Plan for and evaluate complex solutions to global challenges using multiple disciplinary lenses such as ethnic, historical, and scientific.",
+    "id": "F5BA85B7DAE64003B243D7007C03078F",
+    "parentId": "487A116FF7A54E5386942CA190944ED9",
+    "position": 45000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.GES.2.2"
+   },
+   "F65F413E958042B5AF4E4C4666EA156A": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21428802",
+    "depth": 0,
+    "description": "Seventh Grade",
+    "id": "F65F413E958042B5AF4E4C4666EA156A",
+    "parentId": null,
+    "position": 10000
+   },
+   "F6F9755F2A65476FA4A50B600FCF309F": {
+    "ancestorIds": [
+     "D2CFD6B2FB4C46C884D965700E9991B7",
+     "D5C92F0AB5B34BC784ADB6DFC3BEA7B3",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428840",
+    "depth": 3,
+    "description": "Describe how economic systems in the Eastern Hemisphere (such as traditional, command, market, and mixed) were developed.",
+    "id": "F6F9755F2A65476FA4A50B600FCF309F",
+    "parentId": "D2CFD6B2FB4C46C884D965700E9991B7",
+    "position": 48000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "7.E.1.a"
+   },
+   "FA3E85D1A2614CD7ABC993005720E5C3": {
+    "ancestorIds": [
+     "AF63AB617E214C3A88949CBB25CED156",
+     "EDF908D217C64864B69327B4AD3EF0CD",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428818",
+    "depth": 3,
+    "description": "Use a focus statement and questioning protocols to generate, evaluate, improve, and select high quality historical inquiry questions.",
+    "id": "FA3E85D1A2614CD7ABC993005720E5C3",
+    "parentId": "AF63AB617E214C3A88949CBB25CED156",
+    "position": 26000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.HES.2.1"
+   },
+   "FECB20597C8B4D91B3771790E227B5E8": {
+    "ancestorIds": [
+     "F48C4203ECC34C9AA119A041FE50D700",
+     "EDF908D217C64864B69327B4AD3EF0CD",
+     "F65F413E958042B5AF4E4C4666EA156A"
+    ],
+    "asnIdentifier": "S21428807",
+    "depth": 3,
+    "description": "Make connections between information gathered and personal experiences to generate a thesis (Critical Thinking and Analysis).",
+    "id": "FECB20597C8B4D91B3771790E227B5E8",
+    "parentId": "F48C4203ECC34C9AA119A041FE50D700",
+    "position": 15000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "7.HES.1.1"
+   }
+  },
+  "subject": "Social Studies (2022-)",
+  "title": "Grade 7"
+ }
+}

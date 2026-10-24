@@ -397,4 +397,16 @@ export const lessons: GradeLessons = {
     ["You cannot live without it.", "Food is a need."],
     "a need",
   ),
+  "social/il-g1-illinois-symbols": lesson(
+    ["A symbol is a picture or thing that stands for something.", "Illinois's state bird is the cardinal. Its state flower is the violet.", "Springfield is the capital. Chicago is the biggest city."],
+    "Which red bird is Illinois's state bird?",
+    ["Look for the bright red bird.", "It is the northern cardinal."],
+    "the cardinal",
+  ),
+  "social/co-g1-colorado-symbols": lesson(
+    ["Colorado's capital is Denver. The State Capitol has a gold dome.", "State symbols include the lark bunting, the columbine and the blue spruce.", "Colorado's flag has a red C, a gold circle, and blue and white stripes."],
+    "What is Colorado's state flower?",
+    ["It is blue and white.", "It grows in mountain meadows."],
+    "the columbine",
+  ),
 };

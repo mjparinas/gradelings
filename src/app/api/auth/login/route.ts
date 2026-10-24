@@ -1,5 +1,6 @@
 import { burnPasswordCheck, appOrigin, clientIp, createSession, deviceLabel, error, json, rateLimited, sameOrigin, sessionCookie, verifyPassword } from "@/server/auth";
 import { query } from "@/server/db";
+import { reportStaffFailure } from "@/server/alerts";
 import { sendEmail } from "@/server/email";
 import { newSignInEmail } from "@/server/emailTemplates";
 import { getFamilyRow, toFamilyInfo } from "@/server/family";
@@ -29,6 +30,7 @@ export async function POST(req: Request) {
   const parent = rows[0];
   if (!parent) await burnPasswordCheck(password); // same response time as a wrong password
   if (!parent || !(await verifyPassword(password, parent.password_hash))) {
+    await reportStaffFailure(email, "password", Date.now(), appOrigin(req));
     return error(401, "That email and password don't match.");
   }
   // Two-step sign-in: the password alone opens nothing on an account that has it on. Asking for the code only
@@ -37,6 +39,7 @@ export async function POST(req: Request) {
   if (twoStep) {
     if (!code.trim()) return json({ error: "This account uses two-step sign-in. Sign in at /admin/ and enter the code from your authenticator app.", mfaRequired: true }, { status: 401 });
     const step = await checkSecondFactor(parent.id, code.slice(0, 40));
+    if (step !== "ok") await reportStaffFailure(email, step === "limited" ? "limited" : "code", Date.now(), appOrigin(req));
     if (step === "limited") return error(429, TOO_MANY);
     if (step === "bad") return json({ error: "That code didn't work. Check the code in your authenticator app, or use a recovery code.", mfaRequired: true }, { status: 401 });
   }

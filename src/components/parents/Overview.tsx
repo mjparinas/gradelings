@@ -8,12 +8,14 @@ import { subjectSummaries } from "@/lib/proficiency";
 import { useLocale, useSay } from "@/lib/say";
 import { useDerived, useProfiles, useStore } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
+import { FeedbackCard } from "./FeedbackCard";
 import { FamilyGoal } from "./FamilyGoal";
 import { FocusUnit } from "./FocusUnit";
 import { HelpAsks } from "./HelpAsks";
 import { InstallNudge } from "./InstallNudge";
 import { Milestones } from "./Milestones";
 import { RewardGoal } from "./RewardGoal";
+import { SchoolYearCards } from "./SchoolYear";
 import { ShareGradelings } from "./ShareGradelings";
 import { TogetherPanel } from "./TogetherPanel";
 import { Avatar, NoChildren, PageTitle, Panel } from "./common";
@@ -108,8 +110,10 @@ export function Overview() {
           {profiles.map((p) => (
             <Milestones key={p.id} p={p} limit={3} />
           ))}
+          <SchoolYearCards />
           <TogetherPanel />
           <ShareGradelings />
+          <FeedbackCard />
         <div className="grid gap-5 lg:grid-cols-2">
           {profiles.map((p) => (
             <div key={p.id}>

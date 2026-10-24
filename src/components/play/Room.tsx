@@ -108,13 +108,14 @@ export function Room() {
                 if (place(item.id)) sounds.pop(3);
               }}
               className={`btn h-full min-h-32 w-full flex-col gap-1 p-3 ${on ? "btn-good" : ""}`}
-              aria-label={`${say(item.name)}${on ? ", in your room" : owned ? ", owned" : locked ? `, locked: ${item.unlock?.label}` : `, ${item.cost} coins`}`}
             >
               <span aria-hidden="true" className="text-5xl">{item.icon}</span>
               <span className="text-lg leading-tight font-bold">{say(item.name)}</span>
-              <span className={`rounded-full px-3 py-0.5 text-sm font-bold ${on ? "bg-white/30" : owned ? "bg-good-soft text-good-dark" : cannotAfford || locked ? "bg-black/5 text-ink-soft" : "bg-[#fff4cc] text-[#7a5700]"}`}>
+              {/* Named in words from its own text (the chip is for the eye), so what it says and what it is called never differ. */}
+              <span aria-hidden="true" className={`rounded-full px-3 py-0.5 text-sm font-bold ${on ? "bg-white/30" : owned ? "bg-good-soft text-good-dark" : cannotAfford || locked ? "bg-black/5 text-ink-soft" : "bg-[#fff4cc] text-[#7a5700]"}`}>
                 {on ? "In your room ✓" : owned ? "Owned · Use" : locked ? `🔒 ${item.unlock?.label}` : `🪙 ${item.cost}`}
               </span>
+              <span className="sr-only">{on ? ", in your room" : owned ? ", owned" : locked ? `, locked: ${item.unlock?.label}` : `, ${item.cost} coins`}</span>
             </button>
           );
         })}

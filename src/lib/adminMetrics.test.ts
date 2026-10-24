@@ -340,6 +340,7 @@ describe("one section at a time", () => {
       ],
       activeFamilies: { d1: 3, d7: 4, d30: 5 },
       guestDevices: { d1: 1, d7: 2, d30: 6 },
+      cohorts: [{ createdAt: NOW - 3 * 7 * DAY, weeks: [0, 2] }],
       monthlyCosts: 5000,
       redemptions: 2,
       reports: 1,
@@ -349,5 +350,39 @@ describe("one section at a time", () => {
       const input = { ...emptyInput(NOW), ...Object.fromEntries(SECTION_INPUTS[section].map((k) => [k, full[k]])) } as MetricsInput;
       expect(sectionOf(computeMetrics(input), section)).toEqual(sectionOf(all, section));
     }
+  });
+});
+
+describe("retention table", () => {
+  const WEEK = 7 * DAY;
+  it("groups sign-ups by week and counts a week only once it is over", () => {
+    const m = metrics({
+      cohorts: [
+        // Signed up 10 weeks ago: practised in weeks 0, 1 and 8.
+        { createdAt: NOW - 10 * WEEK + DAY, weeks: [0, 1, 8] },
+        // Same week, practised only in the first week.
+        { createdAt: NOW - 10 * WEEK + 2 * DAY, weeks: [0] },
+        // Signed up 3 days ago: only the first week has started, and it isn't over.
+        { createdAt: NOW - 3 * DAY, weeks: [0] },
+        // Signed up 2 weeks ago, never practised.
+        { createdAt: NOW - 2 * WEEK + DAY, weeks: [] },
+        // Too old for the table.
+        { createdAt: NOW - 20 * WEEK, weeks: [0, 1, 2] },
+      ],
+    });
+    const { rows, all } = m.engagement.retention;
+    expect(rows).toHaveLength(12);
+    expect(rows[0]).toMatchObject({ families: 1, weeks: [null, null, null, null, null] });
+    expect(rows[1]).toMatchObject({ families: 1, weeks: [{ n: 0, of: 1 }, null, null, null, null] });
+    expect(rows[9]).toMatchObject({ families: 2, weeks: [{ n: 2, of: 2 }, { n: 1, of: 2 }, { n: 0, of: 2 }, { n: 0, of: 2 }, { n: 1, of: 2 }] });
+    expect(rows[9].label).toBe("Jan 4");
+    // All groups together: week 0 counts the three families whose first week is over.
+    expect(all).toEqual([{ n: 2, of: 3 }, { n: 1, of: 2 }, { n: 0, of: 2 }, { n: 0, of: 2 }, { n: 1, of: 2 }]);
+  });
+
+  it("is empty without sign-ups", () => {
+    const { rows, all } = metrics().engagement.retention;
+    expect(rows.every((r) => r.families === 0)).toBe(true);
+    expect(all).toEqual([null, null, null, null, null]);
   });
 });

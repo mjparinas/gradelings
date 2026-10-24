@@ -577,4 +577,40 @@ export const lessons: GradeLessons = {
     ["Water collects in low places.", "Hilltops are high."],
     "low land by a river",
   ),
+  "science/il-g4-earth-hazards": lesson(
+    ["Maps show patterns: volcanoes and earthquakes line up where Earth's plates meet.", "Hazards like tornadoes, floods and earthquakes can't be stopped, but harm can be reduced.", "Sirens, levees, strong buildings and safe places all help."],
+    "A tornado warning sounds. Where is the safest place in a house?",
+    ["Windows can break and fly.", "Go low, to a basement or an inside room."],
+    "a basement or inside room",
+  ),
+  "science/il-g4-energy-resources": lesson(
+    ["Energy comes from natural resources.", "Renewable resources like wind, sunlight and moving water don't run out.", "Fossil fuels like coal take millions of years to form, and burning them adds pollution."],
+    "Is wind on the Illinois prairie renewable or nonrenewable?",
+    ["The wind keeps blowing.", "It will not run out, so it is renewable."],
+    "renewable",
+  ),
+  "science/il-g4-rocks-erosion": lesson(
+    ["Weathering breaks rock. Erosion moves it. Running water moves the most.", "Glaciers scrape and carry rock. Roots growing in cracks can split rock.", "Over a very long time, erosion can carve deep canyons.", "Plants and their roots slow erosion on a hillside."],
+    "Which hillside erodes faster in heavy rain: a bare one or a grassy one?",
+    ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
+    "the bare hillside",
+  ),
+  "science/co-g4-earth-hazards": lesson(
+    ["Maps show patterns: volcanoes and earthquakes line up where Earth's plates meet.", "Hazards like tornadoes, floods and earthquakes can't be stopped, but harm can be reduced.", "Sirens, levees, strong buildings and safe places all help."],
+    "A tornado warning sounds. Where is the safest place in a house?",
+    ["Windows can break and fly.", "Go low, to a basement or an inside room."],
+    "a basement or inside room",
+  ),
+  "science/co-g4-energy-resources": lesson(
+    ["Energy comes from natural resources.", "Renewable resources like wind, sunlight and moving water don't run out.", "Fossil fuels like coal take millions of years to form, and burning them adds pollution."],
+    "Is wind on the Eastern Plains renewable or nonrenewable?",
+    ["The wind keeps blowing.", "It will not run out, so it is renewable."],
+    "renewable",
+  ),
+  "science/co-g4-rocks-erosion": lesson(
+    ["Weathering breaks rock. Erosion moves it. Running water moves the most.", "Glaciers scrape and carry rock. Roots growing in cracks can split rock.", "Over a very long time, erosion can carve deep canyons.", "Plants and their roots slow erosion on a hillside."],
+    "Which hillside erodes faster in heavy rain: a bare one or a grassy one?",
+    ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
+    "the bare hillside",
+  ),
 };

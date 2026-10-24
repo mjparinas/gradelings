@@ -4,7 +4,7 @@ import { onColour } from "@/lib/contrast";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { coursesForGrade, getUnitRef, unitKey } from "@/content";
 import { getSubjectMeta } from "@/content/subjects";
-import type { SubjectId } from "@/content/types";
+import type { GradeId, SubjectId } from "@/content/types";
 import { dayKey } from "@/lib/model";
 import { canUse } from "@/lib/plan";
 import { levelInfo, nextStep, unitLevel } from "@/lib/proficiency";
@@ -20,6 +20,7 @@ import { MembershipLock } from "./MembershipLock";
 import { SayButton, useBuddySays } from "./BuddySays";
 import { useAllowed } from "./useAllowed";
 import { useClasswork } from "./useClasswork";
+import { SneakPeekCard } from "./SneakPeek";
 
 export function BackButton({ to = "/", label = "Back" }: { to?: string; label?: string }) {
   return (
@@ -90,6 +91,7 @@ export function SubjectPicker() {
           );
         })}
       </div>
+      <SneakPeekCard />
       {band === "little" && <DailyCard />}
     </Page>
   );
@@ -163,13 +165,14 @@ export function UnitDialog({ unitKey: key, onClose, onLocked }: { unitKey: strin
   );
 }
 
-export function UnitList({ subject }: { subject: SubjectId }) {
+/** One subject's lessons. `grade` is set only for the summer sneak peek at the next grade. */
+export function UnitList({ subject, grade }: { subject: SubjectId; grade?: GradeId }) {
   const profile = useActiveProfile()!;
   const settings = useChildSettings();
   const d = useDerived();
   const band = useBand();
   const allowed = useAllowed();
-  const course = coursesForGrade(profile.grade, profile.framework).find((c) => c.subject === subject);
+  const course = coursesForGrade(grade ?? profile.grade, profile.framework).find((c) => c.subject === subject);
   const meta = getSubjectMeta(subject);
   const assigned = new Set(useClasswork().map((a) => a.ref.key));
   const [selected, setSelected] = useState<string | null>(null);
@@ -178,7 +181,8 @@ export function UnitList({ subject }: { subject: SubjectId }) {
   const say = nextUp ? `Pick a lesson! I think “${nextUp.title}” would be fun.` : "You've tried them all! Keep growing every one.";
   useBuddySays(course ? say : "", Boolean(settings?.autoRead));
 
-  const start = (id: string) => {
+  /** `fromLink`: opened by a link from the unit's public page, so older kids skip the dialog and start too. */
+  const start = (id: string, fromLink = false) => {
     if (!course) return;
     const key = unitKey(course.grade, subject, id);
     const ref = { key, course, unit: course.units.find((u) => u.id === id)! };
@@ -186,16 +190,19 @@ export function UnitList({ subject }: { subject: SubjectId }) {
     // Little kids go straight in (after a first look at how it works, when the unit has a lesson);
     // older kids see their level and the Challenge option first.
     if (band === "little") go(ref.unit.lesson && !d.units[key] ? "/lesson" : "/session", ref.unit.lesson && !d.units[key] ? { scope: key } : { mode: "practice", scope: key });
+    else if (fromLink) go("/session", { mode: "practice", scope: key }, true);
     else setSelected(key);
   };
 
-  // A link from the unit's public page (`playHref`) opens that unit once, as if it had been tapped.
+  // A link from the unit's public page (`playHref`) starts that unit's practice once: a visitor who came for
+  // "the water cycle" gets its first question, not a list. The practice replaces this address (which still names
+  // the unit), so Back never lands here to start it again.
   const wanted = useRoute().query.get("unit");
   const opened = useRef(false);
   useEffect(() => {
     if (opened.current || !wanted || !course?.units.some((u) => u.id === wanted)) return;
     opened.current = true;
-    start(wanted);
+    start(wanted, true);
   });
 
   if (!course) return null;
@@ -203,7 +210,7 @@ export function UnitList({ subject }: { subject: SubjectId }) {
   return (
     <Page style={subjectVars(meta)} className="gap-6">
       <header className="flex items-center gap-3">
-        <BackButton to="/practice" />
+        <BackButton to={grade ? "/peek" : "/practice"} />
         <h1 className="text-3xl font-bold sm:text-4xl" style={{ color: meta.colourDark }}>
           {meta.emoji} {meta.title[band]}
         </h1>

@@ -90,6 +90,20 @@ const SCHEMA = [
     reason TEXT NOT NULL,
     created_at INTEGER NOT NULL
   )`,
+  // "How's Gradelings?": a grown-up's rating and a line of feedback. No child data; family_id is null when no one was signed in.
+  `CREATE TABLE IF NOT EXISTS app_feedback (
+    id TEXT PRIMARY KEY,
+    family_id TEXT,
+    parent_id TEXT,
+    audience TEXT NOT NULL,
+    rating INTEGER,
+    topic TEXT,
+    comment TEXT NOT NULL DEFAULT '',
+    can_reply INTEGER NOT NULL DEFAULT 0,
+    created_at INTEGER NOT NULL,
+    handled_at INTEGER
+  )`,
+  `CREATE INDEX IF NOT EXISTS app_feedback_created ON app_feedback (created_at)`,
   // Classroom mode. A teacher is an ordinary account; a class never stores anything about a child
   // beyond the link a parent chose to make with the join code.
   `CREATE TABLE IF NOT EXISTS classes (
@@ -412,6 +426,16 @@ const SCHEMA = [
     last_day INTEGER NOT NULL
   )`,
   `CREATE INDEX IF NOT EXISTS guest_devices_day ON guest_devices (last_day)`,
+  // Failed sign-ins to admin and support accounts, for the System page's Admin security card and the alert for
+  // repeated failures. Only addresses listed in ADMIN_EMAILS or SUPPORT_EMAILS are recorded (their own addresses,
+  // never a visitor's), with which step failed. Rows older than 30 days are deleted as new ones are added.
+  `CREATE TABLE IF NOT EXISTS staff_sign_in_failures (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    at INTEGER NOT NULL,
+    email TEXT NOT NULL,
+    step TEXT NOT NULL
+  )`,
+  `CREATE INDEX IF NOT EXISTS staff_sign_in_failures_at ON staff_sign_in_failures (at)`,
 ];
 
 /** Columns added after the first release. SQLite has no "ADD COLUMN IF NOT EXISTS". */

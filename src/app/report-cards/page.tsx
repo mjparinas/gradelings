@@ -15,7 +15,7 @@ export const metadata: Metadata = pageMeta({
 
 export default function ReportCardsIndex() {
   return (
-    <SitePage cta>
+    <SitePage cta lead="trial">
       <Crumbs items={[{ label: "Home", href: "/" }, { label: "Report cards" }]} />
       <h1 className="text-4xl font-bold">Report cards explained</h1>
       <p className="mt-2 max-w-2xl font-read text-lg text-ink-soft">Every province and state reports learning a little differently. Pick yours for a plain-language guide.</p>

@@ -577,4 +577,40 @@ export const lessons: GradeLessons = {
     ["Young trees become the next forest.", "If they are eaten, few grow up."],
     "few young trees grow up, so the forest changes",
   ),
+  "science/il-g7-resources": lesson(
+    ["Resources like coal, minerals, soil and water are found where past processes put them.", "So they are spread unevenly around Earth.", "Scientists use data from the past (river levels, radar, quake records) to forecast hazards."],
+    "Why does Illinois have coal?",
+    ["Coal forms from buried plants.", "Long ago Illinois was covered by swamps."],
+    "it was once covered by swamps",
+  ),
+  "science/il-g7-biodiversity": lesson(
+    ["Biodiversity is the variety of life in a place.", "Healthy ecosystems give services like clean water, flood control and pollination.", "Good solutions protect biodiversity, for example restoring prairie or stopping invasive species."],
+    "Which helps pollinators more: planting native flowers or paving a field?",
+    ["Pollinators need flowers for food.", "Native flowers give food and shelter."],
+    "planting native flowers",
+  ),
+  "science/il-g7-earth-surface": lesson(
+    ["Matching coastlines, fossils and rocks on far-apart continents show they were once joined.", "Plates pull apart at mid-ocean ridges and collide to build mountains and volcanoes, such as the Himalayas.", "Some changes are sudden (earthquakes); others take millions of years (mountain building)."],
+    "Is a landslide a fast or a very slow change to Earth’s surface?",
+    ["A landslide happens in minutes.", "Mountain building takes millions of years."],
+    "fast",
+  ),
+  "science/co-g7-resources": lesson(
+    ["Resources like coal, minerals, soil and water are found where past processes put them.", "So they are spread unevenly around Earth.", "Scientists use data from the past (river levels, radar, quake records) to forecast hazards."],
+    "Why does Colorado have coal?",
+    ["Coal forms from buried plants.", "Long ago, swamps covered parts of Colorado."],
+    "it was once covered by swamps",
+  ),
+  "science/co-g7-biodiversity": lesson(
+    ["Biodiversity is the variety of life in a place.", "Healthy ecosystems give services like clean water, flood control and pollination.", "Good solutions protect biodiversity, for example restoring prairie or stopping invasive species."],
+    "Which helps pollinators more: planting native flowers or paving a field?",
+    ["Pollinators need flowers for food.", "Native flowers give food and shelter."],
+    "planting native flowers",
+  ),
+  "science/co-g7-earth-surface": lesson(
+    ["Matching coastlines, fossils and rocks on far-apart continents show they were once joined.", "Plates pull apart at mid-ocean ridges and collide to build mountains and volcanoes, such as the Himalayas.", "Some changes are sudden (earthquakes); others take millions of years (mountain building)."],
+    "Is a landslide a fast or a very slow change to Earth’s surface?",
+    ["A landslide happens in minutes.", "Mountain building takes millions of years."],
+    "fast",
+  ),
 };
