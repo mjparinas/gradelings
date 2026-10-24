@@ -1147,4 +1147,16 @@ export const lessons: GradeLessons = {
     ["Many routes crossed deserts.", "Travellers and camels needed water."],
     "Travellers needed water and supplies.",
   ),
+  "social/oh-g7-japan": lesson(
+    ["Japan is a chain of mountainous islands with the Pacific Ocean to the east. Mount Fuji is its tallest peak.", "Little flat land meant farming in valleys and lots of fishing.", "Shinto honours kami, spirits in nature; Buddhism and Confucian ideas of family, order and duty also shaped Japanese values."],
+    "Shinto, an old belief in Japan, honours what?",
+    ["Shinto shrines are often in natural places, marked by a torii gate.", "They honour kami, the spirits in nature and special places."],
+    "kami, the spirits in nature and special places",
+  ),
+  "social/oh-g7-exploration": lesson(
+    ["New ships like the caravel could sail against the wind. Portugal explored Africa’s west coast first.", "Columbus reached the Caribbean in 1492; Magellan’s expedition was first to sail around the world.", "Colonial rule often took land, forced labour and banned languages. In 1492 Spain forced Jewish people to convert or leave."],
+    "Which expedition was the first to sail all the way around the world?",
+    ["Columbus crossed the Atlantic but did not circle the globe.", "Magellan’s expedition sailed all the way around."],
+    "Magellan’s expedition",
+  ),
 };

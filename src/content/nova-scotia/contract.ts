@@ -14,6 +14,6 @@ export const contract: FrameworkContract = {
     return labels.filter((l) => !official.has(l)).map((l) => `cites "${l}", which is not in Nova Scotia ${grade}/${subject}`);
   },
   ownPrefix: "ns-",
-  ownSharedWith: ["ca-nb", "us-wa", "us-or", "us-ca", "us-ny", "us-tx", "us-me", "us-mn", "us-ak", "us-al", "us-az", "us-ar", "us-fl", "us-il", "us-co", "us-pa"],
+  ownSharedWith: ["ca-nb", "us-wa", "us-or", "us-ca", "us-ny", "us-tx", "us-me", "us-mn", "us-ak", "us-al", "us-az", "us-ar", "us-fl", "us-il", "us-co", "us-pa", "us-oh"],
   foreign: /Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada|Saskatchewan|Regina|Alberta|Manitoba|Winnipeg/,
 };

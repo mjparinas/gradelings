@@ -457,4 +457,16 @@ export const lessons: GradeLessons = {
     ["Many years is a long time.", "That is a slow change."],
     "slow",
   ),
+  "science/oh-g2-weather-changes": lesson(
+    ["Weather is what the air is like today. Climate is the usual weather over many years.", "Read weather data for patterns, like warm highs in summer.", "Climates differ: rainy, desert, polar."],
+    "“It rains a lot every winter.” Weather or climate?",
+    ["It describes a pattern year after year."],
+    "climate",
+  ),
+  "science/oh-g2-fossils": lesson(
+    ["Fossils are remains or traces of living things from long ago.", "Most are found in sedimentary rock. Amber can hold an insect.", "Fossils tell about past places: seashells on dry land mean sea once covered it."],
+    "Fossil seashells are found on a hill. What does that tell us?",
+    ["Seashells come from animals that live in the sea."],
+    "the land was once covered by sea",
+  ),
 };

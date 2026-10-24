@@ -589,4 +589,52 @@ export const lessons: GradeLessons = {
     ["The eras go Paleozoic, Mesozoic, Cenozoic.", "The latest is the Cenozoic."],
     "the Cenozoic Era",
   ),
+  "science/magnets-and-motors": lesson(
+    ["Like poles push apart; opposite poles pull together. A compass lines up with Earth’s magnetic field.", "An electromagnet gets stronger with more coils of wire, more current or an iron core.", "A motor changes electrical energy into motion. A generator changes motion into electrical energy."],
+    "A wind turbine spins and makes electricity. Is it a motor or a generator?",
+    ["It starts with motion from the wind.", "It ends with electrical energy.", "Motion into electricity is a generator."],
+    "generator",
+  ),
+  "science/forces-at-work": lesson(
+    ["Gravity is a force of attraction between objects that have mass.", "Mass is the amount of matter. Weight is the pull of gravity on that mass.", "Friction slows sliding objects. Rough surfaces like carpet give more friction.", "Air resistance slows light, spread-out objects like feathers. Unbalanced forces change motion."],
+    "A puck slides on ice, wood and carpet. Where does it slow down fastest?",
+    ["Rougher surfaces make more friction.", "Carpet is the roughest."],
+    "on carpet",
+  ),
+  "science/natural-selection": lesson(
+    ["Inherited traits come from parents in genes. Acquired traits are learned or gained during one life and are not passed on.", "Members of a species vary. Those best suited to their surroundings survive and have more young.", "Over many generations, the helpful traits become more common in the population."],
+    "Mice live on dark soil, and owls hunt them by sight. Which mice will become more common?",
+    ["Owls spot light mice more easily on dark soil.", "Dark mice survive and have more young.", "Their colour is inherited, so it spreads."],
+    "dark mice",
+  ),
+  "science/tx-g6-earth-systems": lesson(
+    ["The spheres: atmosphere (gases), hydrosphere (water), biosphere (life) and geosphere (rock, soil and Earth's interior).", "Earth's layers: crust, mantle, liquid outer core and solid inner core.", "Temperature increases as you go deeper inside Earth.", "Spheres interact, like roots (biosphere) breaking rock (geosphere)."],
+    "Which layer of Earth is liquid metal?",
+    ["The inner core is solid.", "The layer around it is liquid."],
+    "the outer core",
+  ),
+  "science/oh-g8-plate-tectonics": lesson(
+    ["Earth has a crust, mantle, outer core and a solid inner core of iron and nickel.", "Convergent boundaries collide, divergent ones pull apart, transform ones slide past each other.", "In an earthquake: drop, cover and hold on. Near the coast, go to high ground after strong shaking."],
+    "Two plates pull apart and new crust forms. Which type of boundary is this?",
+    ["“Diverge” means to move apart."],
+    "divergent",
+  ),
+  "science/oh-g8-restless-earth": lesson(
+    ["Earth’s layers from the outside in: crust, mantle, outer core, inner core.", "Earth’s crust is broken into plates that move slowly. Earthquakes and volcanoes happen mostly where plates meet.", "In undisturbed rock layers, the lowest layers and their fossils are the oldest."],
+    "Which is older: a fossil in a deep layer or one in a layer above it?",
+    ["Layers settle one on top of another.", "The lower layer formed first."],
+    "the fossil in the deeper layer",
+  ),
+  "science/oh-g8-earth-history": lesson(
+    ["In undisturbed rock layers, the oldest are at the bottom (superposition).", "An index fossil lived for a short time over a wide area, so it dates layers.", "Homologous structures, like a human arm and a bat wing, show shared ancestors."],
+    "Why is an index fossil useful?",
+    ["It was around only briefly but in many places.", "Finding it dates the rock layer."],
+    "it lived for a short time over a wide area",
+  ),
+  "science/oh-g8-plate-boundaries": lesson(
+    ["Fossils, matching continents and rock layers show Earth has changed over time.", "Plates move slowly, about as fast as fingernails grow.", "Plates spreading apart form ocean basins; colliding plates build mountains and cause earthquakes and volcanoes."],
+    "Sea shell fossils are found high in mountains. What does this show?",
+    ["Shells form in the sea.", "Plate movement pushed the rock upward."],
+    "the rock formed under the sea and was pushed up",
+  ),
 };

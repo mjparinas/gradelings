@@ -817,4 +817,28 @@ export const lessons: GradeLessons = {
     ["Services cost money.", "The money comes from people's taxes."],
     "taxes",
   ),
+  "social/or-g5-history-detective": lesson(
+    ["A primary source is from the time, like a letter. A secondary source is made later, like a textbook.", "A fact can be proved true. An opinion is what someone thinks.", "Check a source’s maker, date and purpose. A century is 100 years."],
+    "Is a colonist’s diary from 1750 a primary or secondary source?",
+    ["It was written by someone living then.", "Sources from the time are primary."],
+    "a primary source",
+  ),
+  "social/oh-g3-ohio-environment": lesson(
+    ["People change the land to meet their needs: they clear fields, build roads and make lakes with dams.", "Changes can help people and also harm plants, animals, air and water.", "Over time Ohioans moved people and goods by river, canal, railroad, highway and airplane."],
+    "Which came first in Ohio: canals or highways?",
+    ["Canals were dug in the 1820s and 1830s.", "Highways came much later, with cars and trucks."],
+    "canals",
+  ),
+  "social/oh-g3-ohio-communities": lesson(
+    ["An urban community is a city, with many people and tall buildings close together.", "A suburban community is near a city, with more homes and yards.", "A rural community is in the country, with farms and open land."],
+    "A small town surrounded by corn and soybean fields is…",
+    ["Look at the clues: farms and open land.", "Communities with farms and open land are rural."],
+    "a rural community",
+  ),
+  "social/oh-g3-local-government": lesson(
+    ["Local government makes rules and gives services for a city, village, township or county.", "A city often has a mayor and a city council. A township has elected trustees.", "Taxes pay for services like fire fighters, parks, roads and libraries."],
+    "Who pays for a town's fire trucks?",
+    ["Services cost money.", "People in the community pay taxes, and the government uses them for services."],
+    "the people, through taxes",
+  ),
 };

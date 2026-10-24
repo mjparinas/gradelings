@@ -613,4 +613,16 @@ export const lessons: GradeLessons = {
     ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
     "the bare hillside",
   ),
+  "science/ny-g3-fossils": lesson(
+    ["Fossils are clues about life long ago.", "Fish and coral fossils together mean there was once a warm sea.", "In rock layers, older fossils are usually lower down."],
+    "A fossil has fins and gills. Where did it live?",
+    ["Fins and gills are for life in water."],
+    "in water",
+  ),
+  "science/oh-g4-landforms": lesson(
+    ["Moving water carves canyons by eroding the riverbed over a very long time.", "A delta forms where a river slows and drops sediment as it enters a larger body of water.", "Wind piles sand into dunes, like the Monahans Sandhills.", "Glaciers carve valleys and drop rock."],
+    "Where does a delta form?",
+    ["A river slows when it reaches a lake or the sea.", "It drops its sediment there."],
+    "where a river enters a larger body of water",
+  ),
 };

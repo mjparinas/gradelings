@@ -271,4 +271,10 @@ export const lessons: GradeLessons = {
     ["Water flows to lower ground."],
     "downhill",
   ),
+  "science/wa-gk-sunlight": lesson(
+    ["Sunlight warms the ground, water and sand.", "Shade blocks the sun and keeps things cooler.", "Hats, umbrellas and trees make shade."],
+    "A rock sits in the sun all day. Does it get warmer or cooler?",
+    ["The sun warms things it shines on."],
+    "warmer",
+  ),
 };
