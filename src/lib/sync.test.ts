@@ -11,6 +11,7 @@ vi.mock("./localdb", () => ({
   clearAll: vi.fn(),
   unsyncedEvents: vi.fn(async (limit: number) => db.unsynced.filter((e) => !db.synced.has(e.id)).slice(0, limit)),
   markSynced: vi.fn(async (ids: string[]) => ids.forEach((id) => db.synced.add(id))),
+  markAllUnsynced: vi.fn(async () => db.synced.clear()),
 }));
 
 import { useStore } from "./store";
@@ -55,7 +56,7 @@ const settings = (profileId: string, updatedAt: number): ChildSettings => ({
   updatedAt,
 });
 
-function reply(body: Partial<{ accepted: string[]; cursor: number; more: boolean; events: AppEvent[]; profiles: Profile[]; settings: ChildSettings[] }>, status = 200) {
+function reply(body: Partial<{ epoch: string; accepted: string[]; cursor: number; more: boolean; events: AppEvent[]; profiles: Profile[]; settings: ChildSettings[] }>, status = 200) {
   return new Response(JSON.stringify({ accepted: [], cursor: 0, more: false, events: [], profiles: [], settings: [], ...body }), { status });
 }
 
@@ -150,6 +151,46 @@ describe("syncNow", () => {
     expect(sent().map((c) => c.body.cursor)).toEqual([7, 10, 20]);
     expect(useStore.getState().sync.cursor).toBe(25);
     expect(useStore.getState().events.map((e) => e.id)).toEqual(["r1", "r2"]);
+  });
+
+  it("remembers which server database it synced with, and keeps going when it is the same one", async () => {
+    db.unsynced = [answer("e1")];
+    fetchMock.mockResolvedValueOnce(reply({ epoch: "aaaa", accepted: ["e1"], cursor: 3 }));
+    await syncNow();
+    expect(useStore.getState().sync.epoch).toBe("aaaa");
+    fetchMock.mockResolvedValueOnce(reply({ epoch: "aaaa", cursor: 4 }));
+    await syncNow();
+    expect(sent().map((c) => c.body.cursor)).toEqual([7, 3]);
+    expect([...db.synced]).toEqual(["e1"]);
+  });
+
+  it("sends everything again and downloads from the start when the server's database was replaced", async () => {
+    useStore.setState({ sync: { ...useStore.getState().sync, cursor: 500, epoch: "old" } });
+    db.unsynced = [answer("e1"), answer("e2")];
+    db.synced = new Set(["e1", "e2"]);
+    // Cursor 500 belongs to the old database; the restored one only goes up to 120.
+    fetchMock
+      .mockResolvedValueOnce(reply({ epoch: "new", cursor: 500 }))
+      .mockImplementationOnce(async (_url, init) => {
+        const ids = (JSON.parse(String(init.body)) as { events: AppEvent[] }).events.map((e) => e.id);
+        return reply({ epoch: "new", accepted: ids, cursor: 120, events: [answer("r1")] });
+      });
+    await syncNow();
+    const calls = sent();
+    expect(calls).toHaveLength(2);
+    expect(calls[1].body.cursor).toBe(0);
+    expect((calls[1].body.events as AppEvent[]).map((e) => e.id)).toEqual(["e1", "e2"]);
+    expect([...db.synced].sort()).toEqual(["e1", "e2"]);
+    expect(useStore.getState().sync).toMatchObject({ epoch: "new", cursor: 120, status: "idle" });
+  });
+
+  it("adopts the epoch of an older device without resending anything", async () => {
+    db.synced = new Set(["e1"]);
+    fetchMock.mockResolvedValueOnce(reply({ epoch: "first", cursor: 9 }));
+    await syncNow();
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(useStore.getState().sync).toMatchObject({ epoch: "first", cursor: 9 });
+    expect([...db.synced]).toEqual(["e1"]);
   });
 
   it("uploads a big backlog in batches of 500", async () => {
