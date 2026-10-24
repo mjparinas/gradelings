@@ -481,4 +481,16 @@ export const lessons: GradeLessons = {
     ["Shadows point away from the sun.", "Away from west is east."],
     "east",
   ),
+  "science/mo-g2-earth-changes": lesson(
+    ["Some changes are fast, like volcanoes, landslides and floods.", "Some are slow, like wind and water wearing away land over years.", "Plant roots and rock walls help slow these changes."],
+    "Water carves a canyon over many years. Fast or slow?",
+    ["Many years is a long time.", "That is a slow change."],
+    "slow",
+  ),
+  "science/mo-g2-land-water": lesson(
+    ["Landforms: mountains, valleys, hills and plains.", "Bodies of water: rivers, lakes, oceans and bays. A bay is ocean partly closed in by land.", "Solid water stays in glaciers on high mountains."],
+    "Low land between mountains is a…?",
+    ["Mountains are high.", "The low land between them is a valley."],
+    "valley",
+  ),
 };

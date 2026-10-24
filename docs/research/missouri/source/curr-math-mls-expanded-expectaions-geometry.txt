@@ -1,0 +1,312 @@
+                       Geometry Course-Level Expanded Expectations
+                                                          CONGRUENCE: CO
+ G.CO.A     Experiment with transformations in the plane.
+            Define angle, circle, perpendicular line, parallel line,
+                                                                   The expectation of the student is to know precise definitions of angle,
+            line segment and ray based on the undefined            circle, perpendicular line, parallel line, line segment and ray based on the
+ G.CO.A.1
+            notions of point, line, distance along a line and      undefined notions of point, line and distance along a line and distance
+            distance around a circular arc.                        around a circular arc.
+                                                                   The expectation of the student is to represent transformations in the plane
+            Represent transformations in the plane, and            (e.g., transparencies and geometry software); describe transformations as
+ G.CO.A.2   describe them as functions that take points in the     functions that take points in the plane as inputs and give other points as
+            plane as inputs and give other points as outputs.      outputs. Compare transformations that preserve distance and angle to
+                                                                   those that do not. (e.g., translation versus horizontal stretch)
+                                                                   The expectation of the student is given a figure (e.g., rectangle,
+            Describe the rotational symmetry and lines of
+ G.CO.A.3                                                          parallelogram, trapezoid or regular polygon) describe the rotations and
+            symmetry of two-dimensional figures.
+                                                                   reflections that carry it onto itself.
+            Develop definitions of rotations, reflections and      The expectation of the student is to develop definitions of rotations,
+ G.CO.A.4   translations in terms of angles, circles,              reflections and translations in terms of angles, circles, perpendicular lines,
+            perpendicular lines, parallel lines and line segments. parallel lines and line segments.
+            Demonstrate the ability to rotate, reflect or          The expectation of the student is given a geometric figure and a rotation,
+            translate a figure, and determine a possible           reflection or translation, draw the transformed figure using. (e.g., graph
+ G.CO.A.5
+            sequence of transformations between two                paper, tracing paper or geometry software.) Specify a sequence of
+            congruent figures.                                     transformations that will carry a given figure onto another.
+ G.CO.B     Understand congruence in terms of rigid motions.
+
+
+
+
+CLEs – GEOMETRY
+                                                                The expectation of the student is to use the descriptions of rigid motions
+                                                                (translations, rotations, reflections) to transform figures and predict the
+            Develop the definition of congruence in terms of    effect of a given rigid motion on a given figure; given two figures, use the
+ G.CO.B.6
+            rigid motions.                                      definition of congruence in terms of rigid motions (preserving size and
+                                                                shape) to decide if they are congruent. (e.g., Is there a combination of rigid
+                                                                motions that transforms the first figure onto the second?)
+                                                                The expectation of the student is to use the definition of congruence in
+                                                                terms of rigid motions to show that two triangles are congruent if and only
+            Develop the criteria for triangle congruence from   if corresponding pairs of sides and corresponding pairs of angles are
+ G.CO.B.7   the definition of congruence in terms of rigid      congruent. Explain how the criteria for triangle congruence (ASA, AAS, SAS
+            motions.                                            and SSS) follow from the definition of congruence in terms of rigid motions
+                                                                and that they represent minimum requirements for congruence of any two
+                                                                triangles.
+ G.CO.C     Prove geometric theorems.
+                                                                The expectation of the student is to prove theorems about lines and angles.
+                                                                (Theorems should include, but are not limited to, the following: vertical
+                                                                angles are congruent; when a transversal crosses parallel lines, alternate
+ G.CO.C.8   Prove theorems about lines and angles.
+                                                                interior angles are congruent and corresponding angles are congruent;
+                                                                points on a perpendicular bisector of a line segment are exactly those
+                                                                equidistant from the segment’s endpoints.)
+                                                                The expectation of the student is to prove theorems about triangles.
+                                                                (Theorems should include, but are not limited to, the following: measures
+                                                                of interior angles of a triangle sum to 180°; base angles of isosceles triangles
+ G.CO.C.9   Prove theorems about triangles.
+                                                                are congruent; the segment joining midpoints of two sides of a triangle is
+                                                                parallel to the third side and half the length; the medians of a triangle meet
+                                                                at a point.)
+                                                                The expectation of the student is to prove theorems about polygons.
+                                                                (Theorems should include, but are not limited to, the following: opposite
+G.CO.C.10   Prove theorems about polygons.                      sides are congruent, opposite angles are congruent, the diagonals of a
+                                                                parallelogram bisect each other, and conversely, rectangles are
+                                                                parallelograms with congruent diagonals.)
+ G.CO.D     Make geometric constructions.
+
+
+CLEs – GEOMETRY
+                                                                    The expectation of the student is to make formal geometric constructions
+                                                                    with a variety of tools and methods (compass and straightedge, string,
+                                                                    reflective devices, paper folding, dynamic geometric software, etc.).
+                                                                        a. Construct basic geometric components. (e.g., copying a segment;
+            Construct geometric figures using various tools and             copying an angle; bisecting a segment; bisecting an angle;
+G.CO.D.11
+            methods.                                                        constructing perpendicular lines, including the perpendicular bisector
+                                                                            of a line segment; and constructing a line parallel to a given line
+                                                                            through a point not on the line)
+                                                                        b. Construct specific geometric shapes. (e.g., regular hexagons
+                                                                            inscribed in circles, equilateral triangles, squares, etc.)
+
+                   SIMILARITY, RIGHT TRIANGLES AND TRIGONOMETRY: SRT
+ G.SRT.A    Understand similarity in terms of similarity transformations.
+                                                                    The expectation of the student is to verify experimentally the properties of
+                                                                    dilations given by a center and a scale factor:
+                                                                        a. A dilation takes a line not passing through the center of the dilation
+            Construct and analyze scale changes of geometric
+G.SRT.A.1                                                                   to a parallel line and leaves a line passing through the center
+            figures.
+                                                                            unchanged.
+                                                                        b. The dilation of a line segment is longer or shorter in the same ratio
+                                                                            as given by the scale factor.
+                                                                    The expectation of the student is given two figures, use the definition of
+            Use the definition of similarity to decide if figures   similarity in terms of similarity transformations to decide if they are similar;
+G.SRT.A.2   are similar and to solve problems involving similar     explain using similarity transformations the meaning of similarity for
+            figures.                                                triangles as the equality of all corresponding pairs of angles and the
+                                                                    proportionality of all corresponding pairs of sides.
+            Use the properties of similarity transformations to     The expectation of the student is to use the properties of similarity
+G.SRT.A.3   establish the AA criterion for two triangles to be      transformations to establish the AA criterion for two triangles to be similar.
+            similar.
+ G.SRT.B    Prove theorems involving similarity.
+
+
+
+
+CLEs – GEOMETRY
+                                                                      The expectation of the student is to prove theorems about triangles.
+                                                                      (Theorems should include, but not be limited to: a line parallel to one side
+            Use congruence and similarity criteria for triangles
+                                                                      of a triangle divides the other two sides proportionally, and conversely, the
+G.SRT.B.4   to solve problems and to prove relationships in
+                                                                      Pythagorean Theorem proven using triangle similarity.) Use congruence and
+            geometric figures.
+                                                                      similarity criteria for triangles to solve problems and to prove relationships
+                                                                      in geometric figures.
+ G.SRT.C    Define trigonometric ratios, and solve problems involving right triangles.
+                                                                      The expectation of the student is to understand, using similarity, that side
+            Understand that side ratios in right triangles define
+G.SRT.C.5                                                             ratios in right triangles define the trigonometric ratios (sine, cosine,
+            the trigonometric ratios for acute angles.
+                                                                      tangent, secant, cosecant, cotangent) for acute angles.
+            Explain and use the relationship between the sine         The expectation of the student is to explain and use the relationship
+G.SRT.C.6
+            and cosine of complementary angles.                       between the sine and cosine of complementary angles.
+            Use trigonometric ratios and the Pythagorean              The expectation of the student is to use trigonometric ratios and the
+G.SRT.C.7
+            Theorem to solve right triangles.                         Pythagorean Theorem to solve right triangles in applied problems.
+            Derive the formula A = 1/2 ab sin(C) for the area of      The expectation of the student is to derive the formula A=1/2 ab sin (C) for
+G.SRT.C.8
+            a triangle.                                               the area of a triangle.
+
+                                                                  CIRCLES: C
+  G.C.A     Understand and apply theorems about circles.
+            Prove that all circles are similar using similarity       The expectation of the student is to prove that all circles are similar using
+ G.C.A.1
+            transformations.                                          similarity transformations (dilations).
+                                                                      The expectation of the student is to identify and describe relationships
+                                                                      among inscribed angles, radii and chords. (Include, but not limited to, the
+            Identify and describe relationships among inscribed
+ G.C.A.2                                                              relationship between central, inscribed and circumscribed angles; inscribed
+            angles, radii and chords of circles.
+                                                                      angles on a diameter are right angles; the radius of a circle is perpendicular
+                                                                      to the tangent where the radius intersects the circle.)
+            Construct the inscribed and circumscribed circles of      The expectation of the student is to construct the inscribed and
+ G.C.A.3    a triangle, and prove properties of angles for a          circumscribed circles of a triangle, and prove properties of angles for a
+            quadrilateral inscribed in a circle.                      quadrilateral inscribed in a circle.
+  G.C.B     Find arc lengths and areas of sectors of circles.
+
+
+CLEs – GEOMETRY
+            Derive the formula for the length of an arc of a      The expectation of the student is to derive, using similarity, the fact that the
+ G.C.B.4
+            circle.                                               length of the arc intercepted by an angle is proportional to the radius.
+            Derive the formula for the area of a sector of a      The expectation of the student is to derive the formula for the area of a
+ G.C.B.5
+            circle.                                               sector of a circle using ratios of arc lengths.
+
+                  EXPRESSING GEOMETRY PROPERTIES WITH EQUATIONS: GPE
+G.GPE.A     Translate between the geometric description and the equation for a conic section.
+                                                                  The expectation of the student is to derive the equation of a circle, given
+G.GPE.A.1   Derive the equation of a circle.                      the center and radius using the Pythagorean Theorem; complete the square
+                                                                  to find the center and radius of a circle given by an equation.
+                                                                  The expectation of the student is to derive the equation of a parabola given
+            Derive the equation of a parabola given a focus and
+G.GPE.A.2                                                         a focus and directrix, using the fact that the distances to the focus and to
+            directrix.
+                                                                  the directrix are equal from any point on the parabola.
+G.GPE.B     Use coordinates to prove geometric theorems algebraically.
+                                                                  The expectation of the student is to use coordinates to prove simple
+                                                                  geometric theorems algebraically. (e.g., prove or disprove that a figure
+            Use coordinates to prove geometric theorems
+G.GPE.B.3                                                         defined by four given points in the Cartesian coordinate plane is a rectangle;
+            algebraically.
+                                                                  prove or disprove that the point (1, √3) lies on the circle centered at the
+                                                                  origin and containing the point (0, 2).)
+                                                                  The expectation of the student is to prove the slope criteria for parallel and
+            Prove the slope criteria for parallel and
+                                                                  perpendicular lines and use them to solve geometric problems. (e.g., Find
+G.GPE.B.4   perpendicular lines and use them to solve
+                                                                  the equation of a line parallel or perpendicular to a given line that passes
+            problems.
+                                                                  through a given point.)
+            Find the point on a directed line segment between     The expectation of the student is to find the point on a directed line
+G.GPE.B.5   two given points that partitions the segment in a     segment between two given points that partitions the segment in a given
+            given ratio.                                          ratio.
+                                                                  The expectation of the student is to use coordinates to compute perimeters
+            Use coordinates to compute perimeters of polygons
+G.GPE.B.6                                                         of polygons and areas of triangles and rectangles. (e.g., using the distance
+            and areas of triangles and rectangles.
+                                                                  formula)
+
+                       GEOMETRIC MEASUREMENT AND DIMENSION: GMD
+
+CLEs – GEOMETRY
+             Explain volume formulas and use them to
+G.GMD.A
+             solve problems.
+                                                                   The expectation of the student is to give an informal argument for the
+          Give an informal argument for the formulas for the
+                                                                   formulas for the circumference of a circle, area of a circle, volume of a
+G.GMD.A.1 circumference of a circle, area of a circle, volume of
+                                                                   cylinder, pyramid and cone. Use dissection arguments, Cavalieri’s principle
+          a cylinder, pyramid and cone.
+                                                                   or informal limit arguments.
+                                                                   The expectation of the student is to use volume formulas for cylinders,
+             Use volume formulas for cylinders, pyramids, cones,
+G.GMD.A.2                                                          pyramids, cones, spheres and composite figures to solve mathematical
+             spheres and composite figures to solve problems.
+                                                                   modeling problems.
+G.GMD.B Visualize relationships between two-dimensional and three-dimensional objects.
+                                                                   The expectation of the student is to identify the shapes of two-dimensional
+          Identify the shapes of two-dimensional cross-            cross-sections of three-dimensional objects. (e.g., What is the shape of a
+G.GMD.B.3
+          sections of three-dimensional objects.                   plane section parallel to the base of a cylinder? What is the shape of a plane
+                                                                   section not parallel to but not intersecting the base of a cube?
+             Identify three-dimensional objects generated by       The expectation of the student is to identify three-dimensional objects
+G.GMD.B.4
+             transformations of two-dimensional objects.           generated by transformations of two-dimensional objects.
+
+                                        MODELING WITH GEOMETRY: MG
+             Apply geometric concepts in modeling
+ G.MG.A
+             situations.
+                                                                   The expectation of the student is to use geometric shapes, their measures
+             Use geometric shapes, their measures and their        and their properties to describe objects. (e.g., Modeling a tree trunk or a
+G.MG.A.1
+             properties to describe objects.                       human torso as a cylinder. Estimate the volume of a water tower using a
+                                                                   sphere or cylinder.)
+                                                                   The expectation of the student is to apply concepts of density based on
+             Apply concepts of density based on area and
+G.MG.A.2                                                           area and volume in modeling situations. (e.g., persons per square mile, BTUs
+             volume in modeling situations.
+                                                                   per cubic foot)
+                                                                   The expectation of the student is to apply geometric methods to solve
+             Apply geometric methods to solve design               design mathematical modeling problems. (e.g., Design an object or
+G.MG.A.3
+             mathematical modeling problems.                       structure to satisfy physical constraints or minimize cost. Calculate how
+                                                                   many boxes a truck can hold.)
+
+
+
+CLEs – GEOMETRY
+        CONDITIONAL PROBABILITY AND RULES THE RULES OF PROBABILITY: CP
+ G.CP.A     Understand independence and conditional probability and use them to interpret data.
+                                                                  The expectation of the student is to describe events as subsets of a sample
+            Describe events as subsets of a sample space using
+                                                                  space (the set of outcomes) using characteristics (or categories) of the
+ G.CP.A.1   characteristics of the outcomes, or as unions,
+                                                                  outcomes, or as unions, intersections or complements of other events
+            intersections or complements of other events.
+                                                                  (“or”, “and”, “not”).
+                                                                  The expectation of the student is to understand that two events A and B are
+            Understand the definition of independent events       independent if the probability of A and B occurring together is the product
+ G.CP.A.2
+            and use it to solve problems.                         of their probabilities, and use this characterization to determine if they are
+                                                                  independent.
+                                                                  The expectation of the student is to understand the conditional probability
+                                                                  of A given B as P(A and B)/P(B). Interpret independence of A and B as saying
+                                                                  that the conditional probability of A given B is the same as the probability of
+ G.CP.A.3   Calculate conditional probabilities of events.
+                                                                  A. The conditional probability of B given A is the same as the probability of
+                                                                  B. Find the conditional probability of A given B as the fraction of B’s
+                                                                  outcomes that also belong to A. Interpret the answer in terms of the model.
+                                                                  The expectation of the student is to construct and interpret two-way
+                                                                  frequency tables of data when two categories are associated with each
+            Construct and interpret two-way frequency tables
+                                                                  object being classified. Using the two-way table as a sample space to decide
+            of data when two categories are associated with
+                                                                  if events are independent and to approximate conditional probabilities.
+            each object being classified. Use the two-way table
+ G.CP.A.4                                                         (e.g., Collect data from a random sample of students in your school on their
+            as a sample space to decide if events are
+                                                                  favorite subject among math, science and English. Estimate the probability
+            independent and to approximate conditional
+                                                                  that a randomly selected student from your school will favor science given
+            probabilities.
+                                                                  that the student is in tenth grade. Do the same for other subjects and
+                                                                  compare the results.)
+                                                                  The expectation of the student is to recognize and explain the concepts of
+            Recognize and explain the concepts of conditional     conditional probability and independence in everyday language and
+ G.CP.A.5
+            probability and independence in a context.            everyday situations. (e.g., Compare the chance of having lung cancer if you
+                                                                  are a smoker with the chance of being a smoker if you have lung cancer.)
+            Apply and interpret the Addition Rule for calculating The expectation of the student is to apply the Addition Rule, P(A or B) = P(A)
+ G.CP.A.6
+            probabilities.                                        + P(B) – P(A and B), and interpret the answer in terms of the model.
+
+
+
+CLEs – GEOMETRY
+                     Apply and Interpret the general Multiplication Rule                                 The expectation of the student is to apply and interpret the general
+  G.CP.A.7
+                     in a uniform probability model.                                                     Multiplication Rule in a uniform probability model.
+                     Use permutations and combinations to solve                                          The expectation of the student is to use permutations and combinations to
+  G.CP.A.8
+                     problems.                                                                           solve problems.
+
+
+
+
+The Department of Elementary and Secondary Education does not discriminate on the basis of race, color, religion, gender, gender identity, sexual orientation, national origin, age, veteran status, mental or physical
+disability, or any other basis prohibited by statute in its programs and activities. Inquiries related to department programs and to the location of services, activities, and facilities that are accessible by persons with
+disabilities may be directed to the Jefferson State Office Building, Director of Civil Rights Compliance and MOA Coordinator (Title VI/Title VII/Title IX/504/ADA/ADAAA/Age Act/GINA/USDA Title VI), 5th Floor, 205 Jefferson
+Street, P.O. Box 480, Jefferson City, MO 65102-0480; telephone number 573-526-4757 or TTY 800-735-2966; email civilrights@dese.mo.gov
+
+
+
+
+CLEs – GEOMETRY
+

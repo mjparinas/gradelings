@@ -1,0 +1,233 @@
+                                Grade 4 Grade-Level Expanded Expectations
+                                NUMBER SENSE AND OPERATIONS IN BASE TEN: NBT
+                 Use place value understanding and properties of operations to perform multi-digit arithmetic with
+  4.NBT.A
+                 numbers up to one million.
+                 Round multi-digit whole numbers to any                                     The expectation of the student is to use place value understanding to round
+  4.NBT.A.1
+                 place.                                                                     multi-digit whole numbers to any place in the context of estimation.
+                 Read, write and identify multi-digit whole                                 The expectation of the student is to read, write and identify multi-digit whole
+                 numbers up to one million using number                                     numbers up to one million using base ten numerals, number names and
+  4.NBT.A.2
+                 names, base ten numerals and expanded                                      expanded notation.
+                 form.
+                                                                                            The expectation of the student is to compare two multi-digit numbers based on
+                 Compare two multi-digit numbers using the
+  4.NBT.A.3                                                                                 meanings of the digits in each place using >, = or < to record the results of the
+                 symbols >, = or <, and justify the solution.
+                                                                                            comparison (this may be verbal).
+                 Understand that in a multi-digit whole                                     The expectation of the student is to understand that in a multi-digit whole
+  4.NBT.A.4      number, a digit represents 10 times what it                                number, a digit in one place represents ten times what it represents in the
+                 would represent in the place to its right.                                 place to its right.
+                 Demonstrate fluency with addition and                                      The expectation of the student is to demonstrate fluency with addition and
+  4.NBT.A.5                                                                                 subtraction of whole numbers. (Fluency refers to accuracy and efficiency and
+                 subtraction of whole numbers.
+                                                                                            does not equate to memorization.)
+                                                                                            The expectation of the student is to multiply a whole number of up to four
+                 Multiply a whole number of up to four digits
+                                                                                            digits by a one-digit whole number, and multiply two two-digit numbers, using
+                 by a one-digit whole number and multiply
+  4.NBT.A.6                                                                                 strategies based on place value and the properties of operations. Illustrate and
+                 two two-digit numbers, and justify the
+                                                                                            explain the calculation by using equations, rectangular arrays, area models
+                 solution.
+                                                                                            and/or other methods.
+
+
+
+
+                  The Department of Elementary and Secondary Education does not discriminate on the basis of race, color, religion, gender, gender identity, sexual orientation, national origin, age, veteran status,
+                  mental or physical disability, or any other basis prohibited by statute in its programs and activities. Inquiries related to department programs and to the location of services, activities, and facilities
+                  that are accessible by persons with disabilities may be directed to the Jefferson State Office Building, Director of Civil Rights Compliance and MOA Coordinator (Title VI/Title VII/Title IX/504/ADA/
+                  ADAAA/Age Act/GINA/USDA Title VI), 5th Floor, 205 Jefferson Street, P.O. Box 480, Jefferson City, MO 65102-0480; telephone number 573-526-4757 or TTY 800-735-2966; email
+                  civilrights@dese.mo.gov
+GLEs – GRADE 4
+                                                                The expectation of the student is to find whole-number quotients and
+                 Find whole-number quotients and                remainders with up to four-digit dividends and one-digit divisors, using
+                 remainders with up to four-digit dividends     strategies based on place value, the properties of operations and/or the
+  4.NBT.A.7
+                 and one-digit divisors, and justify the        relationship between multiplication and division. Illustrate and explain the
+                 solution.                                      calculation by using equations, rectangular arrays, area models and/or other
+                                                                methods.
+
+                         NUMBER SENSE AND OPERATIONS IN FRACTIONS: NF
+                 Extend understanding of fraction equivalence and ordering. (Limit denominators to 2, 3, 4, 5, 6, 8, 10, 12
+   4.NF.A
+                 and 100.)
+                 Explain and/or illustrate why two fractions    The expectation of the student is to explain and/or illustrate why two fractions
+   4.NF.A.1
+                 are equivalent.                                are equivalent.
+                                                                The expectation of the student is to recognize and generate equivalent
+   4.NF.A.2      Recognize and generate equivalent fractions.
+                                                                fractions.
+                                                                The expectation of the student is to compare two fractions with different
+                 Compare two fractions using the symbols >, =   numerators and different denominators. (e.g., by creating common
+   4.NF.A.3                                                     denominators or numerators, or by comparing to a benchmark fraction such as
+                 or <, and justify the solution.
+                                                                ½) Record the results of comparisons with symbols >, =, <, and justify the
+                                                                conclusions. (e.g., by using a visual fraction model)
+   4.NF.B        Extend understanding of operations on whole numbers to fraction operations.
+                 Understand addition and subtraction of         The expectation of the student is to understand addition and subtraction of
+                 fractions as joining/composing and             fractions as joining/composing and separating/decomposing parts referring to
+   4.NF.B.4
+                 separating/decomposing parts referring to      the same whole.
+                 the same whole.
+                                                                The expectation of the student is to decompose a fraction into a sum of
+                 Decompose a fraction into a sum of fractions
+                                                                fractions with the same denominator in more than one way, recording each
+                 with the same denominator and record each
+   4.NF.B.5                                                     decomposition with an equation. (e.g., 3/8 = 1/8 + 2/8; 2 1/8 = 1 + 1 + 1/8 = 8/8
+                 decomposition with an equation and
+                                                                + 8/8 + 1/8 = 17/8) Justify decompositions. (e.g., by using number lines,
+                 justification.
+                                                                manipulative or drawings)
+
+
+
+
+GLEs – GRADE 4
+                                                                  The expectation of the student is to solve problems involving adding and
+                 Solve problems involving adding and              subtracting fractions and mixed numbers with like denominators. (Sums and
+   4.NF.B.6      subtracting fractions and mixed numbers          differences may be expressed in equivalent forms and simplified forms are not
+                                                                                   1 2 3
+                 with like denominators.                          required.) (e.g., + = ; 2 1/8 + 3/8 = 2 4/8; 3 1/3 + 2 2/3 = 5 3/3)
+                                                                                  4   4   4
+
+
+                                                                  The expectation of the student is to apply and extend previous understandings
+                 Apply and extend previous understandings of
+                                                                  of multiplication to multiply a fraction by a whole number. (e.g., 10 x 2/5
+   4.NF.B.7      multiplication to multiply a fraction by a
+                                                                  means 10 groups of 2/5 or 20 fifths; alternatively 2/5 x 10 means 2/5 of a group
+                 whole number.
+                                                                  of 10)
+                 Solve problems involving multiplication of a     The expectation of the student is to solve word problems involving
+   4.NF.B.8
+                 fraction by a whole number.                      multiplication of a fraction by a whole number.
+   4.NF.C        Understand decimal notation for fractions, and compare decimal fractions. (Denominators of 10 or 100)
+                 Use decimal notation for fractions with          The expectation of the student is to use decimal notation for fractions with
+   4.NF.C.9
+                 denominators of 10 or 100.                       denominators of 10 or 100.
+                 Understand that fractions and decimals are       The expectation of the student is to understand that fractions (with
+  4.NF.C.10      equivalent representations of the same           denominators of 10 or 100) and decimals are equivalent representations of the
+                 quantity.                                        same quantity.
+                 Read, write and identify decimals to the         The expectation of the student is to read, write and write decimals to the
+  4.NF.C.11      hundredths place using number names, base        hundredths place in word, standard and expanded form.
+                 ten numerals and expanded form.
+                                                                  The expectation of the student is to compare two decimals to the hundredths
+                 Compare two decimals to the hundredths
+                                                                  place by reasoning about their size. Record the results of comparisons with
+  4.NF.C.12      place using the symbols >, = or <, and justify
+                                                                  symbols >, = or <, and justify the conclusions. (e.g., by using number lines,
+                 the solution.
+                                                                  manipulatives or drawings)
+
+                              RELATIONSHIPS AND ALGEBRAIC THINKING: RA
+   4.RA.A        Use the four operations with whole numbers to solve problems.
+                                                                  The expectation of the student is to multiply or divide to solve word problems
+                 Multiply or divide to solve problems involving   involving multiplicative comparison. (e.g., Brad ran 5 laps. Gerry ran three times
+   4.RA.A.1
+                 a multiplicative comparison.                     as many laps as Brad. How many laps did Gerry run? Janet ate 12 cookies. This
+                                                                  was four times as many as Lori ate. How many did Lori eat?)
+
+
+GLEs – GRADE 4
+                 Solve multi-step whole number problems          The expectation of the student is to solve multi-step word problems posed with
+                 involving the four operations and variables     whole numbers and having whole-number answers using the four operations.
+   4.RA.A.2
+                 and using estimation to interpret the           Represent these problems using equations with a letter standing for the
+                 reasonableness of the answer.                   unknown quantity. Use estimation to assess reasonableness of answers.
+                                                                 The expectation of the student is to solve whole number division word
+                 Solve whole number division problems
+                                                                 problems in which remainders need to be interpreted. Represent these
+   4.RA.A.3      involving variables in which remainders need
+                                                                 problems using equations with a letter standing for the unknown quantity. Use
+                 to be interpreted, and justify the solution.
+                                                                 estimation to assess reasonableness of answers.
+   4.RA.B        Work with factors and multiples.
+                 Recognize that a whole number is a multiple     The expectation of the student is to recognize that a whole number is a
+   4.RA.B.4      of each of its factors and find the multiples   multiple of each of its factors and find the multiples for a given whole number.
+                 for a given whole number.
+                 Determine if a whole number within 100 is       The expectation of the student is to find all factor pairs for whole numbers up
+   4.RA.B.5      composite or prime, and find all factor pairs   to 100. Determine whether a given whole number in the range 1 – 100 is
+                 for whole numbers within 100.                   composite or prime.
+   4.RA.C        Generate and analyze patterns.
+                 Generate a number pattern that follows a        The expectation of the student is to generate a number pattern that follows a
+   4.RA.C.6
+                 given rule.                                     given rule.
+                                                                 The expectation of the student is to use words or mathematical symbols to
+                 Use words or mathematical symbols to
+   4.RA.C.7                                                      express the rule for a given pattern. (e.g., “starting at zero add three to each
+                 express a rule for a given pattern.
+                                                                 term; starting at three add two each time”)
+
+                                      GEOMETRY AND MEASUREMENT: GM
+  4.GM.A         Classify 2-dimensional shapes by properties of their lines and angles.
+                 Draw and identify points, lines, line           The expectation of the student is to draw points, lines, line segments, rays,
+  4.GM.A.1       segments, rays, angles, perpendicular lines     angles (right, acute or obtuse) and perpendicular and parallel lines. Identify
+                 and parallel lines.                             these in two-dimensional figures.
+                                                                 The expectation of the student is to classify two-dimensional shapes by their
+                 Classify two-dimensional shapes by their
+  4.GM.A.2                                                       sides and/or angles (e.g., acute equilateral triangle; if a quadrilateral has two
+                 sides and/or angles.
+                                                                 pairs of parallel sides it would be classified as a parallelogram)
+
+
+GLEs – GRADE 4
+                 Construct lines of symmetry for a two-           The expectation of the student is to identify and construct lines of symmetry
+  4.GM.A.3
+                 dimensional figure.                              for a two-dimensional figure.
+  4.GM.B         Understand the concepts of angle and measure angles.
+                                                                  The expectation of the student is to identify and estimate angles and their
+                 Identify and estimate angles and their           measure. Understand angles as geometric shapes that are formed wherever
+  4.GM.B.4
+                 measure.                                         two rays share a common endpoint, and understand angles are measured with
+                                                                  reference to the degrees of a circle.
+                 Draw and measure angles in whole-number          The expectation of the student is to draw and measure angles in whole-number
+  4.GM.B.5
+                 degrees using a protractor.                      degrees using a protractor.
+                 Solve problems involving measurement and conversion of measurements from a larger unit to a smaller
+  4.GM.C
+                 unit.
+                                                                  The expectation of the student is to know relative sizes of measurement units
+                 Know relative sizes of measurement units         within one system of units limited to in., ft., yd., km, m, cm; kg, g, lb., oz.; l, ml,
+                 within one system of units.                      pt., qt., gal; hr., min, sec. Within a single system of measurement, express
+  4.GM.C.6
+                    a) Convert measurements in a larger           measurements of a larger unit in terms of a smaller unit given the equivalent
+                        unit in terms of a smaller unit.          unit conversion (e.g., know that 1 ft. is 12 times as long as 1 in., express the
+                                                                  length of a 4 ft. snake as 48 in.)
+                 Use the four operations to solve problems        The expectation of the student is to use the four operations to solve word
+  4.GM.C.7       involving distances, intervals of time, liquid   problems involving distances, intervals of time, liquid volume, weight of objects
+                 volume, weight of objects and money.             and money, including problems involving simple fractions or decimals.
+                                                                  The expectation of the student is to apply the area and perimeter formulas for
+                                                                  rectangles in real world and mathematical problems. (For this grade level, area
+                 Apply the area and perimeter formulas for
+  4.GM.C.8                                                        problems involve whole-number side lengths and division problems involve
+                 rectangles to solve problems.
+                                                                  single digit divisors.) (e.g., find the width of a rectangular room given the area
+                                                                  of the flooring and the length)
+
+                                                  DATA AND STATISTICS: DS
+   4.DS.A        Represent and analyze data.
+                                                                  The expectation of the student is to create a frequency table and/or line plot
+                 Create a frequency table and/or line plot to                                                                        1 1 1
+   4.DS.A.1                                                       with the scale marked in whole numbers and/or fractions of a unit ( , , ) to
+                 display measurement data.                                                                                           2 4 8
+                                                                  display a data set of measurements.
+
+
+GLEs – GRADE 4
+                 Solve problems involving addition and         The expectation of the student is to solve problems involving addition and
+   4.DS.A.2      subtraction by using information presented in subtraction by using information presented in a data display (e.g., line plot, bar
+                 a data display.                               graph, picture graph, frequency table)
+                                                               The expectation of the student is to analyze the data in a frequency table, line
+                 Analyze the data in a frequency table, line
+   4.DS.A.3                                                    plot, bar graph or picture graph to include determining the mode and range. (At
+                 plot, bar graph or picture graph.
+                                                               this grade level, fraction operations use only like denominators.)
+
+
+
+
+GLEs – GRADE 4
+

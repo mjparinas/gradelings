@@ -559,4 +559,10 @@ export const lessons: GradeLessons = {
     ["Alligators need warm water.", "Swamps are warm and wet."],
     "in the Okefenokee Swamp",
   ),
+  "science/mo-g3-weather-climate": lesson(
+    ["Weather is what the air is like today. Climate is the usual weather over many years.", "Read temperature and rain data for each season.", "Mountains get the most snow in winter."],
+    "Highs of 30 °F, 28 °F and 32 °F. Which season is it?",
+    ["Those are cold temperatures."],
+    "winter",
+  ),
 };

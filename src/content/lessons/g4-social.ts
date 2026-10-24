@@ -1339,4 +1339,46 @@ export const lessons: GradeLessons = {
     ["They are in the middle of the country.", "They are wide, flat grasslands."],
     "flat grasslands",
   ),
+  "social/ca-g5-thirteen-colonies": lesson(
+    ["Jamestown, Virginia (1607) was the first lasting English colony.", "New England's rocky soil and long winters led to fishing, shipbuilding and trade. Southern Colonies like Georgia grew cash crops.", "Colonies grew along rivers and harbours so boats could carry goods. Rhode Island allowed religious freedom."],
+    "Why did many colonies grow along rivers and harbours?",
+    ["There were few roads.", "Boats could carry goods and people."],
+    "Boats could carry goods and people.",
+  ),
+  "social/ca-g5-slavery-and-resistance": lesson(
+    ["The transatlantic slave trade forced millions of African people across the ocean, breaking apart families.", "The Declaration said all men are created equal, yet slavery was legal in all 13 colonies.", "Enslaved people kept cultures alive with music, stories, faith and family. Gradual abolition ended slavery step by step."],
+    "What did gradual abolition mean?",
+    ["Gradual means little by little.", "Slavery was ended step by step over years."],
+    "Slavery was ended step by step over years.",
+  ),
+  "social/ca-g5-home-front": lesson(
+    ["During the Revolution, men were away and goods were scarce. Soldiers at Valley Forge lacked food, clothing and shoes.", "Profiteering means charging unfair prices to make money from a war.", "After 1776, each state wrote a constitution. The Northwest Ordinance (1787) let territories become equal states."],
+    "What did the Northwest Ordinance say territories could become?",
+    ["It planned for land west of the 13 states.", "New areas could join as equals."],
+    "states equal to the original 13",
+  ),
+  "social/ca-g5-american-creed": lesson(
+    ["The American creed is a set of shared ideals, like liberty and equality.", "“The Star-Spangled Banner” (“O say can you see”) became the national anthem in 1931.", "“My Country, 'Tis of Thee” says “let freedom ring”. “America the Beautiful” was inspired by Pikes Peak."],
+    "Which song begins “O say can you see”?",
+    ["It is the national anthem.", "It was written about a flag during the War of 1812."],
+    "“The Star-Spangled Banner”",
+  ),
+  "social/or-g5-timeline": lesson(
+    ["Find each event's year, then put the smallest year first.", "Anchor dates: Columbus 1492, St. Augustine 1565, Jamestown 1607, Declaration 1776, Constitution 1787.", "Causes come before effects: the Stamp Act came before the war."],
+    "Which happened first: the Stamp Act or the Battles of Lexington and Concord?",
+    ["The Stamp Act was in 1765.", "Lexington and Concord were in 1775."],
+    "the Stamp Act",
+  ),
+  "social/mo-g4-explorers": lesson(
+    ["Columbus sailed for Spain in 1492. Henry Hudson explored for the Dutch and the English.", "Lewis and Clark explored the Louisiana Purchase to the Pacific; Sacagawea, a Shoshone woman, was their interpreter and guide.", "Colonists and nations sometimes cooperated through trade and alliances."],
+    "How did Sacagawea help Lewis and Clark?",
+    ["She knew the Shoshone language and the land.", "She translated and guided them."],
+    "as an interpreter and guide",
+  ),
+  "social/mo-g4-first-americans": lesson(
+    ["Many scientists think the first people came to the Americas from Asia more than 15,000 years ago.", "Native nations lived in different ways in each region, using the land, plants and animals around them.", "Contact with Europeans brought trade, new animals like horses, and diseases that harmed many people. Native nations govern themselves today."],
+    "Why did nations in different regions build different kinds of homes?",
+    ["Each region has different materials and weather.", "People used what their land gave them."],
+    "they used the materials and climate of their region",
+  ),
 };

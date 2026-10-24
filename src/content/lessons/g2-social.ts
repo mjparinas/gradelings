@@ -625,4 +625,10 @@ export const lessons: GradeLessons = {
     ["The nation has a president.", "A city has a mayor."],
     "the governor",
   ),
+  "social/mo-g2-missouri-regions": lesson(
+    ["Missouri has regions with different land.", "The Ozarks in the south have hills, forests and springs.", "The north has rolling plains and farms. The Missouri and Mississippi rivers shape the state."],
+    "Which Missouri region has hills, forests and springs?",
+    ["It is in the south of the state.", "It is the Ozarks."],
+    "the Ozarks",
+  ),
 };
