@@ -511,4 +511,28 @@ export const lessons: GradeLessons = {
     ["It talks about many winters, not one day.", "A pattern over many years is climate."],
     "climate",
   ),
+  "science/tx-g5-conservation": lesson(
+    ["Using natural resources can harm land, water and air, but good designs reduce the harm.", "Farmers rotate crops and plant cover crops to keep soil healthy.", "Carpooling burns less fuel. Recycling aluminum saves energy.", "Proper trash disposal keeps litter from hurting animals and water."],
+    "How does carpooling help the environment?",
+    ["Fewer cars make the trip.", "That burns less fuel and makes less pollution."],
+    "less fuel and less air pollution",
+  ),
+  "science/tx-g1-heat": lesson(
+    ["Heat melts, cooks and dries things.", "Some changes go back: melted butter can get hard again.", "Some do not: a cooked egg can't go back."],
+    "Can a cooked egg turn back to raw?",
+    ["Cooking changes the egg for good."],
+    "no",
+  ),
+  "science/ga-g3-rocks-and-soil": lesson(
+    ["Earth is made of rocks. They come in many sizes and shapes.", "Soil is tiny pieces of rock mixed with bits of dead plants and animals.", "Soils differ in colour, texture and how much water they hold. Sand drains fast. Clay holds water."],
+    "Which soil would drain water fastest, sand or clay?",
+    ["Sand has big gaps between its grains.", "Water slips through big gaps quickly."],
+    "sand",
+  ),
+  "science/ga-g3-georgia-habitats": lesson(
+    ["A habitat gives a living thing food, water and shelter.", "Georgia has mountains, the Piedmont, the Coastal Plain, the Okefenokee Swamp and the coast.", "Animals have adaptations, like camouflage or hibernation, that suit their habitat."],
+    "Where in Georgia would you most likely find an alligator?",
+    ["Alligators need warm water.", "Swamps are warm and wet."],
+    "in the Okefenokee Swamp",
+  ),
 };

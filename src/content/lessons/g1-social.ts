@@ -409,4 +409,22 @@ export const lessons: GradeLessons = {
     ["It is blue and white.", "It grows in mountain meadows."],
     "the columbine",
   ),
+  "social/or-g2-world-maps": lesson(
+    ["A country is a land with its own government.", "A physical map shows mountains, rivers and other land and water.", "Australia is the smallest continent. Mexico is south of the United States."],
+    "Which is the smallest continent?",
+    ["Australia is a continent and a country.", "It is the smallest continent."],
+    "Australia",
+  ),
+  "social/ga-g1-american-symbols": lesson(
+    ["The Pledge of Allegiance is a promise to be loyal.", "Washington, D.C. is the capital of the United States.", "Lincoln helped end slavery. He is on the penny."],
+    "What is the capital of the United States?",
+    ["It is named for the first president."],
+    "Washington, D.C.",
+  ),
+  "social/ga-g1-american-heroes": lesson(
+    ["Some people long ago changed America.", "Benjamin Franklin was an inventor and writer.", "Lewis and Clark explored the West, helped by Sacagawea."],
+    "Who helped Lewis and Clark find their way?",
+    ["She knew the land and languages.", "Her name starts with S."],
+    "Sacagawea",
+  ),
 };

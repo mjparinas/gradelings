@@ -829,4 +829,46 @@ export const lessons: GradeLessons = {
     ["They were one of the earliest civilizations in Mesoamerica.", "They lived along the Gulf Coast."],
     "the Gulf Coast of Mexico",
   ),
+  "social/al-g9-interwar": lesson(
+    ["After World War I the Ottoman lands were divided; the Sykes-Picot Agreement split them between Britain and France.", "The Great Depression began with the 1929 crash and spread worldwide.", "Dictators rose: Stalin forced collectivization; fascism glorified nation, leader and military (Mussolini invaded Ethiopia in 1935); Hitler took power in 1933."],
+    "In what year did Adolf Hitler become chancellor of Germany?",
+    ["It was during the Great Depression.", "The year was 1933."],
+    "1933",
+  ),
+  "social/al-g9-holocaust": lesson(
+    ["Antisemitism is hatred of or prejudice against Jewish people. The Nazis built on it with lies and propaganda.", "Step by step, rights were taken: the Nuremberg Laws (1935) removed citizenship; then came ghettos and camps such as Dachau (1933).", "Six million Jews were murdered. People who risked their lives to save Jews are honoured as Righteous Among the Nations."],
+    "What did the Nuremberg Laws of 1935 do?",
+    ["They were laws passed by the Nazi government.", "They stripped German Jews of citizenship and rights."],
+    "took away German Jews’ citizenship and rights",
+  ),
+  "social/or-g5-earn-and-save": lesson(
+    ["Income is money you earn. Profit is income minus costs.", "To find earnings, multiply the price by how many times you work.", "To plan saving, divide the goal by how much you save each week."],
+    "Sam wants a $45 game and saves $9 each week. How many weeks will it take?",
+    ["Divide the goal by the weekly savings.", "45 ÷ 9 = 5."],
+    "5 weeks",
+  ),
+  "social/ga-g6-cold-war": lesson(
+    ["After World War II, Churchill said an Iron Curtain divided Europe. The US offered the Truman Doctrine and Marshall Plan; the Soviets answered with COMECON.", "Alliances (NATO and the Warsaw Pact), the Korean War, the Cuban Missile Crisis and arms and space races followed.", "Gorbachev’s glasnost (openness) and perestroika (restructuring) and Poland’s Solidarity helped end it."],
+    "What did the Marshall Plan do?",
+    ["Europe was in ruins after World War II.", "The US gave billions to rebuild Western Europe."],
+    "gave billions of dollars to rebuild Western Europe",
+  ),
+  "social/ga-g6-latin-america": lesson(
+    ["Key features: the Amazon Rainforest, the Andes Mountains and the Atacama Desert.", "Most people speak Spanish, but Brazil speaks Portuguese.", "Issues include rainforest loss in Brazil and air pollution in Mexico City."],
+    "Why is the Amazon Rainforest shrinking?",
+    ["People clear land.", "Trees are cut for farms, ranches, logging and mining."],
+    "people cut and clear it for farms and logging",
+  ),
+  "social/ga-g6-europe": lesson(
+    ["Key features include the Alps, the Pyrenees, the Ural Mountains and the Rhine River.", "Europe has many languages and religions in a small area.", "The European Union helps member countries trade and work together."],
+    "Which mountains are often called the line between Europe and Asia?",
+    ["They run north to south through Russia.", "Their name starts with U."],
+    "the Ural Mountains",
+  ),
+  "social/ga-g6-australia": lesson(
+    ["Australia is a country and a continent, with the Great Barrier Reef and the Outback.", "Most Australians live near the coast, where the climate is milder.", "Aboriginal Australians have lived there for tens of thousands of years."],
+    "Why do most Australians live near the coast?",
+    ["The middle is hot and dry.", "The coast has more rain and milder weather."],
+    "the coast has a milder climate and more water",
+  ),
 };

@@ -589,4 +589,10 @@ export const lessons: GradeLessons = {
     ["The eras go Paleozoic, Mesozoic, Cenozoic.", "The latest is the Cenozoic."],
     "the Cenozoic Era",
   ),
+  "science/heat-transfer-7": lesson(
+    ["Conduction moves heat through touching materials, like a hot pan handle.", "Convection moves heat through flowing liquids or gases, like warm air rising.", "Radiation moves heat as rays with no material needed, like sunlight. Insulators slow heat loss."],
+    "You feel warm sitting near a fire without touching it. Which kind of heat transfer is it?",
+    ["You aren’t touching anything hot.", "The heat travels as rays through the air."],
+    "radiation",
+  ),
 };
