@@ -47,7 +47,7 @@ describe("homepage province coverage", () => {
 
   it("names every province, with 'the' before the Northwest Territories", () => {
     expect(regionList(FRAMEWORKS)).toBe(
-      "British Columbia, Ontario, Alberta, Saskatchewan, Manitoba, Yukon, the Northwest Territories, Nova Scotia, New Brunswick, Newfoundland and Labrador, Prince Edward Island, Nunavut, Washington, Oregon, California, New York, Texas, Maine, Minnesota, Alaska, Alabama, Arizona, Arkansas, Florida, Illinois, Colorado, Pennsylvania, Georgia and New Jersey",
+      "British Columbia, Ontario, Alberta, Saskatchewan, Manitoba, Yukon, the Northwest Territories, Nova Scotia, New Brunswick, Newfoundland and Labrador, Prince Edward Island, Nunavut, Washington, Oregon, California, New York, Texas, Maine, Minnesota, Alaska, Alabama, Arizona, Arkansas, Florida, Illinois, Colorado, Pennsylvania, Georgia, Ohio and New Jersey",
     );
   });
 
@@ -102,8 +102,8 @@ describe("provinces and states in marketing copy", () => {
     expect(offersUsd([...ca, wa])).toBe(true);
   });
 
-  it("offers Washington, Oregon, California, New York, Texas, Maine, Minnesota, Alaska, Alabama, Arizona, Arkansas, Florida, Illinois, Colorado, Pennsylvania, Georgia and New Jersey on the public site", () => {
-    expect(FRAMEWORKS.map((f) => f.id)).toEqual(expect.arrayContaining(["us-wa", "us-or", "us-ca", "us-ny", "us-tx", "us-me", "us-mn", "us-ak", "us-al", "us-az", "us-ar", "us-fl", "us-il", "us-co", "us-pa", "us-ga", "us-nj"]));
-    expect(regionSummary(FRAMEWORKS)).toBe("12 Canadian provinces and territories and 17 US states");
+  it("offers Washington, Oregon, California, New York, Texas, Maine, Minnesota, Alaska, Alabama, Arizona, Arkansas, Florida, Illinois, Colorado, Pennsylvania, Georgia, Ohio and New Jersey on the public site", () => {
+    expect(FRAMEWORKS.map((f) => f.id)).toEqual(expect.arrayContaining(["us-wa", "us-or", "us-ca", "us-ny", "us-tx", "us-me", "us-mn", "us-ak", "us-al", "us-az", "us-ar", "us-fl", "us-il", "us-co", "us-pa", "us-ga", "us-oh", "us-nj"]));
+    expect(regionSummary(FRAMEWORKS)).toBe("12 Canadian provinces and territories and 18 US states");
   });
 });

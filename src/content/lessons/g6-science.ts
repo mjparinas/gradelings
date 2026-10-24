@@ -685,6 +685,30 @@ export const lessons: GradeLessons = {
     ["You give up some cleaning to save money.", "Giving up one thing for another is a trade-off."],
     "a trade-off",
   ),
+  "science/particles-and-matter": lesson(
+    ["Particles in solids vibrate in place; in liquids they slide; in gases they move freely.", "Melting, freezing, evaporation and condensation are changes of state. Condensation is gas to liquid.", "Atoms have protons and neutrons (made of quarks) in the nucleus, with electrons around it. An element has one kind of atom."],
+    "Water droplets form on a cold glass. Which change of state is this?",
+    ["Water vapour in the air touches the cold glass.", "Gas becomes liquid."],
+    "condensation",
+  ),
+  "science/tx-g7-motion": lesson(
+    ["Average speed = distance ÷ time.", "Velocity includes direction. Displacement is how far you end up from the start, with direction.", "On a distance-time graph, a steeper line is faster and a flat line means stopped."],
+    "You walk 5 m east, then 3 m west. What is your displacement?",
+    ["You end up 5 − 3 = 2 m from the start.", "You are still east of the start."],
+    "2 m east",
+  ),
+  "science/cells-diffusion-ab": lesson(
+    ["All living things are made of cells. Plant cells also have a cell wall and chloroplasts.", "Materials move into and out of cells through the cell membrane, from more crowded to less crowded areas.", "Cells form tissues, tissues form organs, organs form systems. Magnification = eyepiece × objective."],
+    "A microscope has a 10× eyepiece and a 40× objective. What is the magnification?",
+    ["Multiply the two lenses.", "10 × 40 = 400."],
+    "400×",
+  ),
+  "science/oh-g6-rock-cycle": lesson(
+    ["Igneous rock, like granite, forms from cooled magma or lava.", "Sedimentary rock, like limestone, forms from pressed layers of sediment and shells.", "Metamorphic rock forms when heat and pressure change rock.", "Heat inside Earth drives plate motion. The sun drives weathering and the water cycle."],
+    "What drives the movement of Earth's plates?",
+    ["The sun drives weathering, not plates.", "Plates move because of heat from deep inside Earth."],
+    "heat from inside Earth",
+  ),
   "science/ga-g6-seasons-tides": lesson(
     ["Earth's axis is tilted about 23.5°. Without the tilt there would be almost no seasons.", "When a hemisphere tilts toward the Sun, sunlight hits more directly and it has summer.", "Earth orbits the Sun about every 365 days.", "The Moon's and Sun's gravity pull on the oceans to make tides."],
     "When the Northern Hemisphere tilts toward the Sun, what season does it have?",

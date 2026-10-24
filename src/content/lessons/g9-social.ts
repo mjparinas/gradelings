@@ -1153,6 +1153,30 @@ export const lessons: GradeLessons = {
     ["TABOR is the Taxpayer's Bill of Rights.", "It gives the final say to the people."],
     "the voters",
   ),
+  "social/oh-g9-us-government": lesson(
+    ["Separation of powers splits government into three branches: Article I Congress, Article II the president, Article III the courts.", "A president serves 4 years. The House impeaches and the Senate holds the trial.", "Unlike a parliamentary system, the US elects its president separately from Congress."],
+    "Which article of the US Constitution sets up the federal courts?",
+    ["Article I is Congress; Article II the president.", "Article III sets up the courts."],
+    "Article III",
+  ),
+  "social/oh-g9-personal-finance": lesson(
+    ["Net (take-home) pay = gross pay − what is withheld. Sale price = price − the discount.", "Compound interest earns interest on interest. Rule of 72: years to double ≈ 72 ÷ the rate.", "Pay bills on time for a good credit score; keep an emergency fund; spread risk."],
+    "You earn $15 an hour for 20 hours, and 10% is withheld. What is your take-home pay?",
+    ["Gross: $15 × 20 = $300.", "10% of $300 is $30.", "$300 − $30 = $270."],
+    "$270",
+  ),
+  "social/oh-g9-economics": lesson(
+    ["When price rises, quantity demanded falls and quantity supplied rises.", "A poor harvest cuts supply and raises the price.", "Command economies are run by government, market economies by buyers and sellers; most countries, including the US, are mixed."],
+    "A poor wild blueberry harvest would most likely do what to the price?",
+    ["A poor harvest means fewer blueberries to sell.", "Less supply pushes the price up."],
+    "raise it",
+  ),
+  "social/oh-g9-governing-ohio": lesson(
+    ["Ohio's constitution of 1851 is still in force, though it has been amended many times.", "It splits power among the General Assembly, the governor and other elected officers, and the elected courts.", "Since 1912, Ohio voters can propose laws by initiative and approve or reject laws by referendum."],
+    "How are Ohio Supreme Court justices chosen?",
+    ["Ohio's 1851 constitution changed how judges are picked.", "Voters elect them, for six-year terms."],
+    "by the voters",
+  ),
   "social/ga-g9-georgia-local-government": lesson(
     ["Federalism shares power between the nation and the states.", "Georgia's counties and cities get their powers from the state and pay for services with property and sales taxes.", "A referendum lets voters decide an issue directly; a recall can remove an official."],
     "Which kind of power, like running schools, is kept by the states?",

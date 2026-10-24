@@ -595,6 +595,18 @@ export const lessons: GradeLessons = {
     ["Find column B first.", "Then go to row 3."],
     "column B, then row 3",
   ),
+  "social/oh-g2-reading-maps": lesson(
+    ["A map is a drawing of a place seen from above. North is usually at the top.", "On a grid map, find the column letter, then the row number.", "The key explains symbols, like a star for a capital city."],
+    "On a grid map, the park is in square B3. How do you find it?",
+    ["Find column B first.", "Then go to row 3."],
+    "column B, then row 3",
+  ),
+  "social/oh-g2-ohio-regions": lesson(
+    ["A region is an area that is alike in some way, like its land or its work.", "Flat land in western Ohio is good for big farms. Southeastern Ohio has hills and forests.", "Lake Erie is in the north and the Ohio River is in the south, so cities grew by the water."],
+    "Why are there many farms in western Ohio?",
+    ["Think about what the land is like there.", "Flat land with rich soil is easy to plow and plant."],
+    "the land is flat with rich soil",
+  ),
   "social/ga-g2-georgia-founders": lesson(
     ["James Oglethorpe brought the first colonists to Georgia in 1733.", "Tomochichi, a Yamacraw leader, made peace with him, and Mary Musgrove translated.", "Sequoyah created a way to write the Cherokee language."],
     "Who helped the English and the Creek understand each other?",
