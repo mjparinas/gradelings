@@ -217,4 +217,40 @@ export const lessons: GradeLessons = {
     ["Think about what the boy does.", "The lesson is about kindness."],
     "kindness matters",
   ),
+  "language/pa-g4-text-structures": lesson(
+    ["Sequence tells steps or events in order: first, next, then.", "Problem and solution names a trouble and how it was fixed.", "Description tells what something is like using details."],
+    "“The lake was drying up. The town built a pipeline to bring in water.” What is the structure?",
+    ["A trouble is named.", "Then a fix is given."],
+    "problem and solution",
+  ),
+  "language/pa-g4-claims-reasons-perspective": lesson(
+    ["A claim is what the author wants you to accept.", "A reason says why. Evidence is a fact or example that backs the reason.", "Word choice shows the author’s perspective."],
+    "Claim: Schools should have gardens. Which is a reason?  Gardens teach about plants. Plants are green.",
+    ["A reason supports the claim.", "Teaching about plants supports gardens."],
+    "Gardens teach about plants.",
+  ),
+  "language/pa-g4-theme-and-poetry": lesson(
+    ["A theme is the big message of a story.", "A stated theme is told. An implied theme is shown by what happens.", "Rhyme, short lines and stanzas change how a poem feels."],
+    "A boy shares his lunch with a friend who forgot hers. A theme is…",
+    ["Think about what the boy does.", "The lesson is about kindness."],
+    "kindness matters",
+  ),
+  "language/pa-g4-new-words": lesson(
+    ["Greek and Latin roots help with meanings, such as graph meaning write.", "Context clues can be a definition, an example or a contrast.", "Figurative words like similes and idioms mean more than their words."],
+    "“Autograph” uses the root graph. It means…",
+    ["Graph means write.", "An autograph is a signature."],
+    "a person’s signature",
+  ),
+  "language/pa-g4-writing-moves": lesson(
+    ["State an opinion or topic clearly and give reasons.", "Support reasons with facts and details.", "Use linking words like for example and in addition, then add a conclusion."],
+    "Which phrase introduces an example?",
+    ["It shows a case.", "For example gives a case."],
+    "for example",
+  ),
+  "language/pa-g4-prove-it": lesson(
+    ["Refer to details when you explain a text.", "Quote or restate the words that prove it.", "Make an inference, then check it against the text."],
+    "“Ben kept looking at the clock.” What can you infer?",
+    ["Think about why someone checks a clock.", "He may be waiting or worried."],
+    "he is waiting or impatient",
+  ),
 };

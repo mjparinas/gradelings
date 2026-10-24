@@ -277,6 +277,12 @@ const math: GradeLessons = {
     ["4 + 6 + 8 = 18.", "18 ÷ 3 = 6."],
     "6",
   ),
+  "math/pa-g5-graph-scales": lesson(
+    ["The scale on a graph counts by the same step each time.", "Pick a scale that reaches past the biggest number and counts by an easy step, such as 5, 10 or 20.", "A bar that ends halfway between two marks shows the number halfway between them."],
+    "A bar ends halfway between 20 and 30. What does it show?",
+    ["The marks are 10 apart.", "Half of 10 is 5.", "20 + 5 = 25."],
+    "25",
+  ),
 };
 
 // Math lessons ship with the grade. The other subjects' lessons are a second download, fetched once the grade is in.

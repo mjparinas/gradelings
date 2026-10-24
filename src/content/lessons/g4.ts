@@ -228,6 +228,12 @@ const math: GradeLessons = {
     ["9:15 + 2 h = 11:15.", "11:15 + 30 min = 11:45."],
     "11:45 a.m.",
   ),
+  "math/pa-g4-data-displays": lesson(
+    ["A bar graph, a pictograph and a table can hold the same facts.", "To move from a bar graph to a table, read the top of each bar on the scale.", "For a pictograph, count the pictures and multiply by what each picture stands for."],
+    "Each picture stands for 5. A row has 4 pictures. What number goes in the table?",
+    ["Count the pictures: 4.", "Multiply by 5: 4 × 5 = 20."],
+    "20",
+  ),
 };
 
 // Math lessons ship with the grade. The other subjects' lessons are a second download, fetched once the grade is in.

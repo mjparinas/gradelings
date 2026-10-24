@@ -223,4 +223,40 @@ export const lessons: GradeLessons = {
     ["The writer was there.", "Firsthand means primary."],
     "a primary source",
   ),
+  "language/pa-g5-tracking-arguments": lesson(
+    ["An argument has a claim, evidence and reasoning.", "Evidence is a fact, example or data. Reasoning explains how it supports the claim.", "Strong evidence is specific, accurate and fits the claim."],
+    "“Schools with gardens saw science scores rise.” Is this the claim, the evidence or the reasoning?",
+    ["It reports a result.", "Results are evidence."],
+    "evidence",
+  ),
+  "language/pa-g5-poetic-elements": lesson(
+    ["A simile compares with like or as. A metaphor says one thing is another.", "Personification gives a human action to a thing.", "Imagery, sound and rhythm work together to build a mood."],
+    "“The sun smiled down on us.” What is this?",
+    ["The sun cannot smile.", "Giving it a human action is personification."],
+    "personification",
+  ),
+  "language/pa-g5-primary-and-secondary": lesson(
+    ["A primary source is a firsthand account, like a diary or a photo from the time.", "A secondary source is written later by someone who was not there.", "Comparing both gives a fuller picture."],
+    "A diary written by a pioneer on the trail is what kind of source?",
+    ["The writer was there.", "Firsthand means primary."],
+    "a primary source",
+  ),
+  "language/pa-g5-new-words": lesson(
+    ["Roots, prefixes and suffixes help you build meaning.", "Figurative language such as metaphors and idioms means more than the literal words.", "Words like however and therefore show how ideas connect."],
+    "“Transport” has the root port. It means…",
+    ["Port means carry.", "To transport is to carry across."],
+    "to carry across",
+  ),
+  "language/pa-g5-writing-moves": lesson(
+    ["Introduce a topic and group ideas in logical order.", "Support a point of view with reasons and facts.", "Link ideas with words such as in contrast and as a result."],
+    "Which linking phrase shows an effect?",
+    ["It shows what came after.", "As a result shows an effect."],
+    "as a result",
+  ),
+  "language/pa-g5-prove-it": lesson(
+    ["Quote accurately when you explain what a text says.", "Compare how two texts handle the same topic.", "Choose the evidence that best supports the point."],
+    "“The river rose, so families left.” Which words show a cause?",
+    ["Find what made it happen.", "The river rose."],
+    "“The river rose”",
+  ),
 };

@@ -1,0 +1,10 @@
+Pennsylvania math: standards with no unit, and why. Every other PA Core standard in Kindergarten to Grade 9 has at least one unit (cov: see src/content/pennsylvania/plan/math.ts and units/math-*.ts).
+
+Grade 9 (Algebra I; the high school strands are written for a whole high school sequence, and these are outside the Algebra I course):
+CC.2.1.HS.F.6 | arithmetic with complex numbers: complex numbers are not part of Algebra I
+CC.2.1.HS.F.7 | complex numbers in polynomial identities and quadratic equations: not part of Algebra I
+CC.2.2.HS.C.7 | radian measure and the unit circle: trigonometry belongs to a later course
+CC.2.2.HS.C.8 | trigonometric functions modeling periodic phenomena: later course
+CC.2.2.HS.C.9 | the Pythagorean identity and trigonometric ratios: later course
+CC.2.2.HS.D.6 | rational functions rewritten in equivalent forms: later course (Algebra II)
+CC.2.4.HS.B.5 | inferences and justified conclusions from sample surveys, experiments and observational studies: needs reading and judging written study designs, which multiple-choice and typed questions cannot practise well; Grade 7 sampling units cover the basic idea

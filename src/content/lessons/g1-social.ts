@@ -361,6 +361,42 @@ export const lessons: GradeLessons = {
     ["A poem is words in lines.", "Maya Angelou was a poet."],
     "Maya Angelou",
   ),
+  "social/pa-g1-keystone-state": lesson(
+    ["Pennsylvania is the Keystone State. Its capital is Harrisburg.", "The state motto is Virtue, Liberty and Independence.", "Symbols stand for a state: a flower, a bird, an animal and a flag."],
+    "What is Pennsylvania's nickname?",
+    ["A keystone holds an arch together.", "It is the Keystone State."],
+    "the Keystone State",
+  ),
+  "social/pa-g1-landmarks": lesson(
+    ["A landmark is a famous place people know and visit.", "The Liberty Bell and Independence Hall are in Philadelphia.", "The Statue of Liberty and the Eiffel Tower are landmarks too."],
+    "Where is the Liberty Bell?",
+    ["It is in a big Pennsylvania city.", "It is in Philadelphia."],
+    "Philadelphia",
+  ),
+  "social/pa-g1-pennsylvania-map": lesson(
+    ["A map shows places from above. A compass rose shows north, south, east and west.", "Pennsylvania has mountains, hills, rivers and Lake Erie.", "Philadelphia, Pittsburgh and Harrisburg are cities."],
+    "What does a compass rose show?",
+    ["It has four main points.", "It shows directions."],
+    "directions",
+  ),
+  "social/pa-g1-rules-and-leaders": lesson(
+    ["Rules keep us safe and help us get along.", "Leaders make choices for a group: a principal, a mayor, a governor, a president.", "People vote to choose leaders."],
+    "Why do we have rules?",
+    ["Think about the playground.", "Rules keep us safe and fair."],
+    "to keep us safe and fair",
+  ),
+  "social/pa-g1-celebrations": lesson(
+    ["Holidays help us remember people and events.", "On July 4 we celebrate our country's birthday.", "Families around the world have their own celebrations."],
+    "What do we celebrate on July 4?",
+    ["There are fireworks.", "It is our country's birthday."],
+    "our country's birthday",
+  ),
+  "social/pa-g1-money-and-risk": lesson(
+    ["A need is something you must have. A want is something extra.", "People earn income. Banks keep money safe.", "Save for a goal and keep private things private."],
+    "Is food a need or a want?",
+    ["You cannot live without it.", "Food is a need."],
+    "a need",
+  ),
   "social/il-g1-illinois-symbols": lesson(
     ["A symbol is a picture or thing that stands for something.", "Illinois's state bird is the cardinal. Its state flower is the violet.", "Springfield is the capital. Chicago is the biggest city."],
     "Which red bird is Illinois's state bird?",
