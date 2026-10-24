@@ -1,0 +1,640 @@
+                           Indiana Academic Standards: Grade 1 Science
+
+
+Indiana Academic Standards Context and Purpose
+
+
+Introduction
+The Indiana Academic Standards for Grade 1 Science are the result of a process designed to
+identify, evaluate, synthesize, and create high-quality, rigorous learning expectations for Indiana
+students.
+
+Pursuant to Indiana Code (IC) 20-31-3-1(c-d), the Indiana Department of Education (IDOE)
+facilitated the prioritization of the Indiana Academic Standards. All standards are required to be
+taught. Standards identified as essential for mastery by the end of the grade level are indicated
+with the word “Essential” under the standard number.
+
+The Indiana Academic Standards are designed to ensure that all Indiana students, upon
+graduation, are prepared with essential knowledge and skills needed to access employment,
+enrollment, or enlistment leading to service.
+
+What are the Indiana Academic Standards and how should they be used?
+The Indiana Academic Standards for Grades K-12 Science are based on A Framework for K-12
+Science Education (NRC, 2012) and the Next Generation Science Standards (NGSS Lead
+States, 2013). The following conceptual shifts reflect what is new about these science
+standards. The Indiana Academic Standards for Science:
+   ●   Reflect science as it is practiced and experienced in the real world;
+   ●   Build logically from kindergarten through grade 12;
+   ●   Focus on deeper understanding as well as application of content; and
+   ●   Integrate practices, crosscutting concepts, and core ideas.
+The K-12 Science Indiana Academic Standards outline the knowledge, science, and
+engineering practices that all students should learn by the end of high school. The standards
+are three-dimensional because each student performance expectation engages students at the
+nexus of the following three dimensions:
+   ●   Dimension 1 describes scientific and engineering practices.
+   ●   Dimension 2 describes crosscutting concepts, overarching science concepts that apply
+       across science disciplines.
+   ●   Dimension 3 describes core ideas in the science disciplines.
+
+Science and Engineering Practices (as found in NGSS)
+The eight practices describe what scientists use to investigate and build models and theories of
+the world around them or that engineers use as they build and design systems. The practices
+are essential for all students to learn and are as follows:
+   1. Asking questions (for science) and defining problems (for engineering);
+   2. Developing and using models;
+
+
+
+                                                 2
+                           Indiana Academic Standards: Grade 1 Science
+
+
+   3.   Planning and carrying out investigations;
+   4.   Analyzing and interpreting data;
+   5.   Using mathematics and computational thinking;
+   6.   Constructing explanations for science and designing solutions for engineering;
+   7.   Engaging in argument from evidence; and
+   8.   Obtaining, evaluating, and communicating information.
+
+Crosscutting Concepts (as found in NGSS)
+The seven crosscutting concepts bridge disciplinary boundaries and unit core ideas throughout
+the fields of science and engineering. Their purpose is to help students deepen their
+understanding of the disciplinary core ideas, and develop a coherent, and scientifically based
+view of the world. The seven crosscutting concepts are as follows:
+   1. Patterns. Observed patterns of forms and events guide organization and classification,
+      and prompt questions about relationships and the factors that influence them.
+   2. Cause and Effect: Mechanism and Explanation. Events have causes, sometimes simple,
+      sometimes multifaceted. A major activity of science is investigating and explaining
+      causal relationships and the mechanisms by which they are mediated. Such
+      mechanisms can then be tested across given contexts and used to predict and explain
+      events in new contexts.
+   3. Scale, Proportion, and Quantity. In considering phenomena, it is critical to recognize
+      what is relevant at different measures of size, time, and energy and to recognize how
+      changes in scale, proportion, or quantity affect a system’s structure or performance.
+   4. Systems and System Models. Defining the system under study—specifying its
+      boundaries and making explicit a model of that system—provides tools for
+      understanding and testing ideas that are applicable throughout science and
+      engineering.
+   5. Energy and Matter: Flows, Cycles, and Conservation. Tracking fluxes of energy and
+      matter into, out of, and within systems helps one understand the systems’ possibilities
+      and limitations.
+   6. Structure and Function. The way in which an object or living thing is shaped and its
+      substructure determines many of its properties and functions.
+   7. Stability and Change. For natural and built systems alike, conditions of stability and
+      determinants of rates of change or evolution of a system are critical elements of study.
+
+Disciplinary Core Ideas (as found in NGSS)
+The disciplinary core ideas describe the content that occurs at each grade or course. The K-12
+Science Indiana Academic Standards focus on a limited number of core ideas in science and
+engineering both within and across the disciplines and are built on the notion of learning as a
+developmental progression. The Disciplinary Core Ideas are grouped into the following
+domains:
+   ●    Physical Science (PS)
+   ●    Life Science (LS)
+   ●    Earth and Space Science (ESS)
+
+
+                                                3
+                           Indiana Academic Standards: Grade 1 Science
+
+
+   ●   Engineering, Technology and Applications of Science (ETS)
+
+While the Indiana Academic Standards establish key expectations for knowledge and skills and
+should be used as the basis for curriculum, the standards by themselves do not constitute a
+curriculum. It is the responsibility of the local school corporation to select and formally adopt
+curricular tools, including textbooks and any other supplementary materials, that align with
+Indiana Academic Standards. Additionally, corporation and school leaders should consider the
+appropriate instructional sequence of the standards as well as the length of time needed to
+teach each standard. Every standard has a unique place in the continuum of learning, but each
+standard will not require the same amount of time and attention. A deep understanding of the
+vertical articulation of the standards will enable educators to make the best instructional
+decisions. These standards must also be complemented by robust, evidence-based
+instructional practices to support overall student development. By utilizing strategic and
+intentional instructional practices, other areas such as STEM and employability skills can be
+integrated with the content standards.
+
+Acknowledgments
+The Indiana Department of Education appreciates the time, dedication, and expertise offered by
+Indiana’s K-12 educators, higher education professors, representatives from business and
+industry, families, and other stakeholders who contributed to the development of the Indiana
+Academic Standards. We wish to specially acknowledge the committee members, as well as
+participants in the public comment period, who dedicated many hours to the review and
+evaluation of these standards designed to prepare Indiana students for success after
+graduation.
+
+References
+   ●   National Research Council. 2012. A Framework for K-12 Science Education: Practices,
+       Crosscutting Concepts, and Core Ideas. Washington, DC: The National Academies
+       Press. https://doi.org/10.17226/13165.
+   ●   NGSS Lead States. 2013. Next Generation Science Standards: For States, By States.
+       Washington, DC: The National Academies Press.
+
+
+
+
+                                                4
+                                    Indiana Academic Standards: Grade 1 Science
+
+
+       How to Read the Indiana Academic Standards for K-12 Science
+Standard Number                   Title
+
+Students who demonstrate understanding can:
+Standard          Performance Expectation: A statement that combines practices, core ideas, and
+Number            crosscutting concepts together to describe how students can show what they have
+                  learned. [Clarification Statement: A statement that supplies examples or additional clarification to
+Essential         the performance expectation.]
+
+
+
+ Science and Engineering Practices                                        Disciplinary Core Ideas
+                                                    Disciplinary Core Ideas are concepts in science and engineering that
+Science and Engineering Practices are activities    have broad importance within and across disciplines as well as relevance
+that scientists and engineers engage in to either   in people’s lives.
+understand the world or solve the problem.
+                                                    To be considered core, the ideas should meet at least two of the following
+There are 8 practices. These are integrated into    criteria and ideally all four:
+each standard. They were previously found at
+                                                         ●    Have broad importance across multiple sciences or engineering
+the beginning of each grade level content
+                                                              disciplines or be a key organizing concept of a single discipline.
+standard and known as SEPs.
+                                                         ●    Provide a key tool for understanding or investigating more
+    Connections to the Nature of Science                      complex ideas and solving problems.
+                                                         ●    Relate to the interests and life experiences of students or be
+Connections are listed in either practices or the             connected to societal or personal concerns that require scientific
+crosscutting concepts section.                                or technological knowledge.
+                                                         ●    Be teachable and learnable over multiple grades at increasing
+                                                              levels of depth and sophistication.
+                                                    Disciplinary ideas are grouped in four domains: the physical sciences; the
+                                                    life sciences; the earth and space sciences; and engineering, technology,
+                                                    and applications of science.
+                                                    A disciplinary core idea is identified as “(secondary)” when the other
+                                                    featured disciplinary core ideas connect to the science and engineering
+                                                    practices and crosscutting concepts as the main focus of the performance
+                                                    expectation.
+                                                    A boundary statement, where applicable, provides guidance regarding the
+                                                    scope of a performance expectation.
+
+
+
+                                                                          Crosscutting Concepts
+                                                    Crosscutting concepts are seven ideas such as Patterns and Cause and
+                                                    Effect, which are not specific to any one discipline but cut across them all.
+                                                    Crosscutting concepts have value because they provide students with
+                                                    connections and intellectual tools that are related across the differing
+                                                    areas of disciplinary content and can enrich their application of practices
+                                                    and their understanding of core ideas.
+                                                        Connections to Engineering, Technology and Applications of
+                                                                                 Science
+                                                         ●    These connections are drawn from either the Disciplinary Core
+                                                              Ideas or Science and Engineering Practices.
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                              5
+                                    Indiana Academic Standards: Grade 1 Science
+
+
+
+1-PS4-1 Waves and Their Applications in Technologies for Information Transfer
+Students who demonstrate understanding can:
+1-PS4-1            Plan and conduct investigations to provide evidence that vibrating materials can make
+                   sound and that sound can make materials vibrate. [Clarification Statement: Examples of
+Essential          vibrating materials that make sound could include tuning forks and plucking a stretched string.
+                   Examples of how sound can make matter vibrate could include holding a piece of paper near a
+                   speaker making sound and holding an object near a vibrating tuning fork.]
+
+
+
+
+        Science and Engineering Practices                                        Disciplinary Core Ideas
+SEP.3: Planning and Carrying Out Investigations                    PS4.A: Wave Properties
+Planning and carrying out investigations to answer                     ●   Sound can make matter vibrate, and vibrating
+questions or test solutions to problems in K–2 builds on                   matter can make sound.
+prior experiences and progresses to simple investigations,
+based on fair tests, which provide data to support
+explanations or design solutions.
+                                                                                 Crosscutting Concepts
+    ●     Plan and conduct investigations collaboratively to
+          produce evidence to answer a question.                   CC.2: Cause and Effect
+
+        -----------------------------------                            ●   Simple tests can be designed to gather evidence to
+                                                                           support or refute student ideas about causes.
+            Connections to Nature of Science
+Scientific Investigations Use a Variety of Methods
+    ●     Science investigations begin with a question.
+    ●     Scientists use different ways to study the world.
+
+
+
+1-PS4-2 Waves and Their Applications in Technologies for Information Transfer
+Students who demonstrate understanding can:
+1-PS4-2           Make observations to construct an evidence-based account that objects in darkness can
+                  be seen only when illuminated. [Clarification Statement: Examples of observations could
+                  include those made in a completely dark room, a pinhole box, and a video of a cave explorer with
+                  a flashlight. Illumination could be from an external light source or by an object giving off its own
+                  light.]
+
+
+        Science and Engineering Practices                                        Disciplinary Core Ideas
+SEP.6: Constructing Explanations and Designing                     PS4.B: Electromagnetic Radiation
+Solutions
+                                                                       ●   Objects can be seen if light is available to illuminate
+Constructing explanations and designing solutions in K–2                   them or if they give off their own light.
+builds on prior experiences and progresses to the use of
+evidence and ideas in constructing evidence-based
+accounts of natural phenomena and designing solutions.                           Crosscutting Concepts
+    ●     Make observations (firsthand or from media) to           CC.2: Cause and Effect
+          construct an evidence-based account for natural
+                                                                       ●   Simple tests can be designed to gather evidence to
+          phenomena.
+                                                                           support or refute student ideas about causes.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+                                                               6
+                                   Indiana Academic Standards: Grade 1 Science
+
+
+
+1-PS4-3 Waves and Their Applications in Technologies for Information Transfer
+Students who demonstrate understanding can:
+1-PS4-3           Plan and conduct investigations to determine the effect of placing objects made with
+                  different materials in the path of a beam of light. [Clarification Statement: Examples of
+                  materials could include those that are transparent (such as clear plastic), translucent (such as
+                  wax paper), opaque (such as cardboard), and reflective (such as a mirror).]
+
+
+        Science and Engineering Practices                                          Disciplinary Core Ideas
+SEP.3: Planning and Carrying Out Investigations                      PS4.B: Electromagnetic Radiation
+Planning and carrying out investigations to answer                       ●   Some materials allow light to pass through them,
+questions or test solutions to problems in K–2 builds on prior               others allow only some light through, and others
+experiences and progresses to simple investigations, based                   block all the light and create a dark shadow on any
+on fair tests, which provide data to support explanations or                 surface beyond them, where the light cannot reach.
+design solutions.                                                            Mirrors can be used to redirect a light beam.
+                                                                             (Boundary: The idea that light travels from place to
+    ●     Plan and conduct investigations collaboratively to                 place is developed through experiences with light
+          produce evidence to answer a question.                             sources, mirrors, and shadows, but no attempt is
+                                                                             made to discuss the speed of light.)
+
+
+                                                                                   Crosscutting Concepts
+                                                                     CC.2: Cause and Effect
+                                                                         ●   Simple tests can be designed to gather evidence to
+                                                                             support or refute student ideas about causes.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                                 7
+                                   Indiana Academic Standards: Grade 1 Science
+
+
+
+1-PS4-4 Waves and Their Applications in Technologies for Information Transfer
+Students who demonstrate understanding can:
+1-PS4-4           Use tools and materials to design and build a device that uses light or sound to solve
+                  the problem of communicating over a distance. [Clarification Statement: Examples of
+                  devices could include a light source to send signals, paper cup and string “telephones,” and a
+                  pattern of drum beats.]
+
+
+        Science and Engineering Practices                                      Disciplinary Core Ideas
+SEP.6: Constructing Explanations and Designing                 PS4.C: Information Technologies and Instrumentation
+Solutions
+                                                                   ●     People also use a variety of devices to
+Constructing explanations and designing solutions in K–2                 communicate (send and receive information) over
+builds on prior experiences and progresses to the use of                 long distances.
+evidence and ideas in constructing evidence-based
+accounts of natural phenomena and designing solutions.
+                                                                               Crosscutting Concepts
+    ●     Use tools and materials provided to design a
+          device that solves a specific problem.                       Connections to Engineering, Technology, and
+                                                                                 Applications of Science
+                                                               Influence of Engineering, Technology, and Science, on
+                                                               Society and the Natural World
+                                                                   ●     People depend on various technologies in their
+                                                                         lives; human life would be very different without
+                                                                         technology.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+                                                           8
+                                   Indiana Academic Standards: Grade 1 Science
+
+
+
+1-LS1-1 From Molecules to Organisms: Structures and Processes
+Students who demonstrate understanding can:
+1-LS1-1           Use materials to design a solution to a human problem by mimicking how plants
+                  and/or animals use their external parts to help them survive, grow, and meet their
+Essential         needs. [Clarification Statement: Examples of human problems that can be solved by
+                  mimicking plant or animal solutions could include designing clothing or equipment to protect
+                  bicyclists by mimicking turtle shells, acorn shells, and animal scales; stabilizing structures by
+                  mimicking animal tails and roots on plants; keeping out intruders by mimicking thorns on
+                  branches and animal quills; and, detecting intruders by mimicking eyes and ears.]
+
+
+        Science and Engineering Practices                                     Disciplinary Core Ideas
+SEP.6: Constructing Explanations and Designing                 LS1.A: Structure and Function
+Solutions
+                                                                   ●   All organisms have external parts. Different animals
+Constructing explanations and designing solutions in K–2               use their body parts in different ways to see, hear,
+builds on prior experiences and progresses to the use of               grasp objects, protect themselves, move from place
+evidence and ideas in constructing evidence-based                      to place, and seek, find, and take in food, water, and
+accounts of natural phenomena and designing solutions.                 air. Plants also have different parts (roots, stems,
+                                                                       leaves, flowers, fruits) that help them survive and
+    ●     Use materials to design a device that solves a               grow.
+          specific problem or a solution to a specific
+          problem.                                             LS1.D: Information Processing
+                                                                   ●   Animals have body parts that capture and convey
+                                                                       different kinds of information needed for growth and
+                                                                       survival. Animals respond to these inputs with
+                                                                       behaviors that help them survive. Plants also
+                                                                       respond to some external inputs.
+
+
+                                                                              Crosscutting Concepts
+                                                               CC.6: Structure and Function
+                                                                   ●    The shape and stability of structures of natural and
+                                                                        designed objects are related to their function(s).
+                                                                           --------------------------
+                                                                       Connections to Engineering, Technology,
+                                                                              and Applications of Science
+
+                                                               Influence of Science, Engineering and Technology on
+                                                               Society and the Natural World
+                                                                   ●   Every human-made product is designed by applying
+                                                                       some knowledge of the natural world and is built
+                                                                       using materials derived from the natural world.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+                                                           9
+                                   Indiana Academic Standards: Grade 1 Science
+
+
+
+1-LS1-2 From Molecules to Organisms: Structures and Processes
+Students who demonstrate understanding can:
+1-LS1-2           Read texts and use media to determine patterns in behavior of parents and offspring
+                  that help offspring survive. [Clarification Statement: Examples of patterns of behaviors
+                  could include the signals that offspring make (such as crying, cheeping, and other
+                  vocalizations) and the responses of the parents (such as feeding, comforting, and protecting
+                  the offspring).]
+
+
+        Science and Engineering Practices                                           Disciplinary Core Ideas
+SEP.8: Obtaining, Evaluating, and Communicating                    LS1.B: Growth and Development of Organisms
+Information
+                                                                       ●   Adult plants and animals can have young. In many
+Obtaining, evaluating, and communicating information in                    kinds of animals, parents, and the offspring
+K–2 builds on prior experiences and uses observations and                  themselves engage in behaviors that help the
+texts to communicate new information.                                      offspring to survive.
+    ●   Read grade-appropriate texts and use media to
+        obtain scientific information to determine patterns                         Crosscutting Concepts
+        in the natural world.
+     ------------------------------------                          CC.1: Patterns
+
+            Connections to Nature of Science                           ●   Patterns in the natural and human designed world
+                                                                           can be observed, used to describe phenomena, and
+Scientific Knowledge is Based on Empirical Evidence                        used as evidence.
+    ●     Scientists look for patterns and order when
+          making observations about the world.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                              10
+                                  Indiana Academic Standards: Grade 1 Science
+
+
+
+1-LS3-1 Heredity: Inheritance and Variation of Traits
+Students who demonstrate understanding can:
+1-LS3-1           Make observations to construct an evidence-based account that young plants and
+                  animals are like, but not exactly like, their parents. [Clarification Statement: Examples of
+                  patterns could include features plants or animals share. Examples of observations could
+                  include leaves from the same kind of plant are the same shape but can differ in size; and a
+                  particular breed of dog looks like its parents but is not exactly the same.]
+
+
+        Science and Engineering Practices                                         Disciplinary Core Ideas
+SEP.6: Constructing Explanations and Designing                   LS3.A: Inheritance of Traits
+Solutions
+                                                                     ●    Young animals are very much, but not exactly like,
+Constructing explanations and designing solutions in K–2                  their parents. Plants also are very much, but not
+builds on prior experiences and progresses to the use of                  exactly, like their parents.
+evidence and ideas in constructing evidence-based
+accounts of natural phenomena and designing solutions.           LS3.B: Variation of Traits
+
+    ●     Make observations (firsthand or from media) to             ●    Individuals of the same kind of plant or animal are
+          construct an evidence-based account for natural                 recognizable as similar but can also vary in many
+          phenomena.                                                      ways.
+
+
+                                                                                  Crosscutting Concepts
+                                                                 CC.1: Patterns
+                                                                     ●    Patterns in the natural and human designed world
+                                                                          can be observed, used to describe phenomena, and
+                                                                          used as evidence.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                            11
+                                   Indiana Academic Standards: Grade 1 Science
+
+
+
+1-ESS1-1 Earth's Place in the Universe
+Students who demonstrate understanding can:
+1-ESS1-1          Use observations of the sun, moon, and stars to describe patterns that can be
+                  predicted. [Clarification Statement: Examples of patterns could include that the sun and moon
+                  appear to rise in one part of the sky, move across the sky, and set; and stars other than
+                  our sun are visible at night but not during the day.]
+
+
+        Science and Engineering Practices                                           Disciplinary Core Ideas
+SEP.4: Analyzing and Interpreting Data                             ESS1.A: The Universe and its Stars
+Analyzing data in K–2 builds on prior experiences and                  ●   Patterns of the motion of the sun, moon, and stars in
+progresses to collecting, recording, and sharing                           the sky can be observed, described, and predicted.
+observations.
+    ●    Use observations (firsthand or from media) to                              Crosscutting Concepts
+         describe patterns in the natural world in order to
+         answer scientific questions.                              CC.1: Patterns
+                                                                       ●   Patterns in the natural world can be observed, used
+                                                                           to describe phenomena, and used as evidence.
+                                                                           ---------------------------------
+                                                                              Connections to Nature of Science
+                                                                   Scientific Knowledge Assumes an Order and Consistency
+                                                                   in Natural Systems
+                                                                       ●   Science assumes natural events happen today as
+                                                                           they happened in the past.
+                                                                       ●   Many events are repeated.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                              12
+                                  Indiana Academic Standards: Grade 1 Science
+
+
+
+1-ESS1-2 Earth's Place in the Universe
+Students who demonstrate understanding can:
+1-ESS1-2         Make observations at different times of year to relate the amount of daylight to the
+                 time of year. [Clarification Statement: Emphasis is on relative comparisons of the amount
+Essential        of daylight in the winter to the amount in the spring or fall.]
+
+
+
+
+        Science and Engineering Practices                                            Disciplinary Core Ideas
+SEP.3: Planning and Carrying Out Investigations                     ESS1.B: Earth and the Solar System
+Planning and carrying out investigations to answer questions            ●   Seasonal patterns of sunrise and sunset can be
+or test solutions to problems in K–2 builds on prior                        observed, described, and predicted.
+experiences and progresses to simple investigations, based
+on fair tests, which provide data to support explanations or
+design solutions.                                                                    Crosscutting Concepts
+    ●    Make observations (firsthand or from media) to             CC.1: Patterns
+         collect data that can be used to make
+                                                                        ●   Patterns in the natural world can be observed, used
+         comparisons.
+                                                                            to describe phenomena, and used as evidence.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+                                                               13
+                                  Indiana Academic Standards: Grade 1 Science
+
+
+
+K-2-ETS1-1 Engineering Design
+Students who demonstrate understanding can:
+K-2-ETS1-1       Ask questions, make observations, and gather information about a situation people want
+                 to change to define a simple problem that can be solved through the development of a
+                 new or improved object or tool.
+
+
+
+        Science and Engineering Practices                                        Disciplinary Core Ideas
+SEP.1: Asking Questions and Defining Problems                      ETS1.A: Defining and Delimiting Engineering Problems
+Asking questions and defining problems in K–2 builds on                ●   A situation that people want to change or create can
+prior experiences and progresses to simple descriptive                     be approached as a problem to be solved through
+questions.                                                                 engineering.
+                                                                       ●   Asking questions, making observations, and
+    ●    Ask questions based on observations to find more                  gathering information are helpful in thinking about
+         information about the natural and/or designed                     problems.
+         world(s).                                                     ●   Before beginning to design a solution, it is important
+    ●    Define a simple problem that can be solved through                to clearly understand the problem.
+         the development of a new or improved object or
+         tool.
+
+
+
+
+K-2-ETS1-2 Engineering Design
+Students who demonstrate understanding can:
+K-2-ETS1-2       Develop a simple sketch, drawing, or physical model to illustrate how the shape of an
+                 object helps it function as needed to solve a given problem.
+
+
+
+        Science and Engineering Practices                                        Disciplinary Core Ideas
+SEP.2: Developing and Using Models                                 ETS1.B: Developing Possible Solutions
+Modeling in K–2 builds on prior experiences and progresses             ●   Designs can be conveyed through sketches,
+to include using and developing models (i.e., diagram,                     drawings, or physical models. These representations
+drawing, physical replica, diorama, dramatization, or                      are useful in communicating ideas for a problem’s
+storyboard) that represent concrete events or design                       solutions to other people.
+solutions.
+    ●    Develop a simple model based on evidence to                             Crosscutting Concepts
+         represent a proposed object or tool.
+                                                                   CC.6: Structure and Function
+                                                                       ●   The shape and stability of structures of natural and
+                                                                           designed objects are related to their function(s).
+
+
+
+
+ Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+ Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                              14
+                                   Indiana Academic Standards: Grade 1 Science
+
+
+
+K-2-ETS1-3 Engineering Design
+Students who demonstrate understanding can:
+K-2-ETS1-3       Analyze data from tests of two objects designed to solve the same problem to compare the
+                 strengths and weaknesses of how each performs.
+
+
+
+        Science and Engineering Practices                                     Disciplinary Core Ideas
+SEP.4: Analyzing and Interpreting Data                          ETS1.C: Optimizing the Design Solution
+Analyzing data in K–2 builds on prior experiences and               ●   Because there is always more than one possible
+progresses to collecting, recording, and sharing                        solution to a problem, it is useful to compare and
+observations.                                                           test designs.
+    ●    Analyze data from tests of an object or tool to
+         determine if it works as intended.
+
+
+
+
+Note: Performance Expectations, Science and Engineering Practices, Disciplinary Core Ideas, and
+Crosscutting Concepts appear as defined in the Next Generation Science Standards.
+
+
+
+                                                           15
+

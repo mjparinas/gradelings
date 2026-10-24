@@ -337,6 +337,7 @@ export const lessons: GradeLessons = {
     ["Georgia is a state.", "States are part of a country."],
     "the United States",
   ),
+  // Massachusetts (us-ma)
   "social/ma-gk-my-state": lesson(
     ["We live in the United States. Our state is Massachusetts.", "Boston is the capital of Massachusetts.", "Our state has a flag, a state bird and a state tree."],
     "What is the name of our state?",

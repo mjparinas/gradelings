@@ -1,0 +1,382 @@
+                                                   Kindergarten English/Language Arts
+
+This document provides correlations between the 2023 Indiana Academic Standards (IAS) and the Common Core State Standards (CCSS)
+for easy reference. This correlation guide is intended to help support conversations regarding state and national standards and may be used
+as one of many tools to help inform a variety of local decisions (e.g., selection of high-quality curricular materials, curriculum maps).
+
+The 2023 Indiana Academic Standards resulted from the standards streamlining process required by Indiana Code (IC) 20-31-3-1(c-d)
+and were adopted by the Indiana State Board of Education in June 2023. Standards designated as essential (E) for student mastery by
+the end of the grade level are shaded in gray and all standards were renumbered to avoid gaps in sequencing.
+
+
+      2023 Indiana Academic Standard                        Common Core State Standard                         Differences Between
+                                                                                                               2023 IAS and CCSS
+
+                                                      Domain: Reading Foundations
+
+Number                     Text                      Number                      Text                               Description
+
+                                                                Demonstrate understanding of the
+           Demonstrate understanding that             RF.K.1    organization and basic features of
+ K.RF.1    print moves from left to right across                print.
+           the page and from top to bottom.                     Follow words from left to right, top to
+                                                     RF.K.1.A
+                                                                bottom, and page by page.
+
+                                                              Recognize that spoken words are
+           Recognize that written words are                                                               No content differences identified.
+ K.RF.2                                              RF.K.1.B represented in written language by
+           made up of sequences of letters.
+                                                              specific sequences of letters.
+
+                                                              Demonstrate understanding of the
+           Identify and name all uppercase                    organization and basic features of
+ K.RF.3    (capital) and lowercase letters of the    RF.K.1.D print. Recognize and name all
+           alphabet. (E)                                      upper- and lowercase letters of the
+                                                              alphabet.
+
+
+
+                                                                       1
+               2023 Indiana Academics Standards and CCSS Correlation Guide: Kindergarten English/Language Arts
+
+
+                                                         Demonstrate understanding of
+                                                         spoken words, syllables, and sounds
+K.RF.4   Identify and produce rhyming words.    RF.K.2.A
+                                                         (phonemes). Recognize and
+                                                         produce rhyming words.
+
+                                                         Demonstrate understanding of             No content differences identified.
+                                                         spoken words, syllables, and sounds
+                                                RF.K.2.B (phonemes). Count, pronounce,
+         Orally pronounce, blend, and                    blend, and segment syllables in
+K.RF.5                                                   spoken words.
+         segment words into syllables. (E)
+                                                         Blend and segment onsets and           IAS requires students to orally
+                                                RF.K.2.C rimes of single-syllable spoken        pronounce, blend, and segment
+                                                         words.                                 words.
+
+                                                         Demonstrate understanding of
+                                                         spoken words, syllables, and sounds
+                                                         (phonemes). Isolate and pronounce      IAS requires students to identify and
+         Identify and produce the beginning,             the initial, medial vowel, and final   produce beginning, middle, and final
+K.RF.6   middle (medial), and final sounds in   RF.K.2.D sounds (phonemes) in                   sounds in three- and four- phoneme
+         three and four phoneme words. (E)               three-phoneme                          words, including CVC words ending
+                                                         (consonant-vowel-consonant, or         in /l/, /r/, or /x/.
+                                                         CVC) words.* (This does not include
+                                                         CVCs ending with /l/, /r/, or /x/.)
+
+                                                         Demonstrate basic knowledge of
+         Use letter-sound knowledge to                   one-to-one letter-sound
+                                                                                             IAS requires students to decode all
+K.RF.7   decode the sound of each               RF.K.3.A correspondences by producing the
+                                                                                             possible sounds for each consonant.
+         consonant. (E)                                  primary sound or many of the most
+                                                         frequent sounds for each consonant.
+
+
+
+
+                                                      Updated July 2024                                                            2
+               2023 Indiana Academics Standards and CCSS Correlation Guide: Kindergarten English/Language Arts
+
+
+                                                                                                     IAS requires students to use
+                                                                                                     letter-sound correspondence to
+                                                                                                     decode the sounds of all syllable
+                                                                                                     types, consonant digraphs, and
+         Use letter-sound knowledge to                                                               blends. IC 20-26-12-24.5 requires
+                                                           Read common high-frequency
+         decode words, including open and                                                            public schools, including charter
+K.RF.8                                            RF.K.3.C words by sight (e.g., the, of, to, you,
+         closed syllables, consonant                                                                 schools, to adopt curriculum or
+                                                           she, my, is, are, do, does).
+         digraphs, and blends. (E)                                                                   supplemental materials that are
+                                                                                                     aligned with the science of reading,
+                                                                                                     and states that schools may not
+                                                                                                     adopt curricula or materials that are
+                                                                                                     based on the three-cueing model.
+
+         Orally read decodable texts with                                                            IAS requires students to read
+                                                              Read emergent-reader texts with
+K.RF.9   appropriate accuracy and                  RF.K.4                                            decodable texts with emphasis on
+                                                              purpose and understanding.
+         automaticity.                                                                               accuracy and automaticity.
+
+    2023 Indiana Academic Standard                          Common Core State Standard                      Differences Between
+                                                                                                            2023 IAS and CCSS
+
+                                                  Domain: Reading Comprehension
+
+Number                    Text                    Number                      Text                                Description
+
+                                                              With prompting and support, ask
+                                                   RL.K.1     and answer questions about key         IAS specifies students ask and
+         With support, ask and answer                         details in a text.                     answer questions about both main
+K.RC.1   questions about main topics and key
+                                                              With prompting and support, ask        topics and key details in a text that is
+         details in a text heard or read. (E)
+                                                   RI.K.1     and answer questions about key         heard or read.
+                                                              details in a text.
+
+K.RC.2   With support, retell familiar stories,    RL.K.2     With prompting and support, retell     IAS requires students to retell
+
+
+
+                                                         Updated July 2024                                                                3
+                2023 Indiana Academics Standards and CCSS Correlation Guide: Kindergarten English/Language Arts
+
+
+         poems, and nursery rhymes,                             familiar stories, including key details. familiar stories with an emphasis on
+         including key details. (E)                                                                      poems and nursery rhymes.
+
+         Identify important elements within a                   With prompting and support, identify    IAS requires students to
+K.RC.3   text (e.g., characters, settings, or         RL.K.3    characters, settings, and major         independently identify important text
+         events). (E)                                           events in a story.                      elements.
+
+         With support, make predictions
+K.RC.4
+         about what will happen in a text.
+
+                                                                With prompting and support, identify    IAS emphasizes retelling the main
+         With support, retell the main idea
+K.RC.5                                                RI.K.2    the main topic and retell key details   idea as well as the key details of a
+         and key details of a text.
+                                                                of a text.                              text.
+
+         Identify text features of a nonfiction                                                         IAS requires students to identify
+         text (e.g., title, author, illustrations),                                                     various nonfiction text features with
+                                                                Identify the front cover, back cover,
+K.RC.6   and describe the relationship                RI.K.5                                            emphasis on describing the
+                                                                and title page of a book.
+         between those features and the text                                                            relationship between those features
+         in which they appear. (E)                                                                      and the text.
+
+                                                                With guidance and support from
+                                                                adults, explore word relationships
+         Identify and sort pictures of objects                                                          IAS emphasizes using oral
+                                                                and nuances in word meanings. Sort
+         into categories (e.g., colors, shapes,                                                         discussions with students to identify
+K.RC.7                                                L.K.5.A   common objects into categories
+         opposites) through oral discussions.                                                           and sort pictures of objects into
+                                                                (e.g., shapes, foods) to gain a sense
+         (E)                                                                                            categories.
+                                                                of the concepts the categories
+                                                                represent.
+
+
+
+
+                                                           Updated July 2024                                                               4
+               2023 Indiana Academics Standards and CCSS Correlation Guide: Kindergarten English/Language Arts
+
+
+
+
+    2023 Indiana Academic Standard                       Common Core State Standard                         Differences Between
+                                                                                                            2023 IAS and CCSS
+
+                                                           Domain: Writing
+
+Number                   Text                    Number                      Text                                Description
+
+         Write most uppercase (capital) and
+                                                                                                     IAS requires students to correctly
+         lowercase letters of the alphabet,                 Print many upper- and lowercase
+K.W.1                                            L.K.1.A                                             shape and space letters of the
+         correctly shaping and spacing the                  letters.
+                                                                                                     alphabet in words.
+         letters of the words.
+
+         Write by moving from left to right
+K.W.2
+         across the page and top to bottom.
+
+                                                            Use a combination of drawing,
+                                                            dictating, and writing to compose
+         Use words and pictures to develop a
+                                                            informative/explanatory texts in
+K.W.3    main idea and provide information       W.K.2                                                 No content differences identified.
+                                                            which they name what they are
+         about a topic. (E)
+                                                            writing about and supply some
+                                                            information about the topic.
+
+                                                            Use a combination of drawing,
+         Use words, pictures, and dictation to
+                                                            dictating, and writing to narrate a
+K.W.4    narrate a single event or simple        W.K.3                                                 No content differences identified.
+                                                            single event or several loosely linked
+         story, arranging ideas in order. (E)
+                                                            events, tell about the events in the
+
+
+
+                                                      Updated July 2024                                                                   5
+              2023 Indiana Academics Standards and CCSS Correlation Guide: Kindergarten English/Language Arts
+
+
+                                                          order in which they occurred, and
+                                                          provide a reaction to what
+                                                          happened.
+
+        With support, apply the writing
+        process to:
+                                                                                               IAS details the writing process with
+           a.​ Plan by generating ideas for                                                    respect to developmental needs.
+               writing through oral                                                            IAS specifies students plan writing
+               discussions and drawings;                  With guidance and support from
+                                                                                               ideas through oral discussions and
+           b.​ Develop drafts in pictorial or             adults, respond to questions and
+                                                                                               drawings; draft and organize ideas
+K.W.5          written form by organizing       W.K.5     suggestions from peers and add
+                                                                                               in pictorial or written form; revise
+               ideas;                                     details to strengthen writing as
+                                                                                               writing by adding details in pictures
+           c.​ Revise writing by adding                   needed.
+                                                                                               or words, and use technology
+               details in pictures or words;                                                   available to produce and publish
+               and                                                                             writing.
+           d.​ Use available technology to
+               produce and publish writing.
+
+        With support, build understanding of
+        a topic using various sources.                                                         IAS requires students to use various
+                                                          With guidance and support from
+                                                                                               sources, with emphasis on
+           a.​ Identify relevant pictures,                adults, recall information from
+                                                                                               identifying relevant pictures, charts,
+K.W.6          charts, grade-appropriate        W.K.8     experiences or gather information
+                                                                                               texts, personal experiences, or
+               texts, personal experiences,               from provided sources to answer a
+                                                                                               people, in order to build their
+               or people as sources of                    question.
+                                                                                               understanding of a topic.
+               information on a topic.
+
+                                                          Demonstrate command of the
+                                                          conventions of standard English
+                                                 L.K.1                                           No content differences identified.
+                                                          grammar and usage when writing or
+K.W.7   Demonstrate command of English
+                                                          speaking.
+        grammar and usage when writing or
+        speaking, focusing on:                  L.K.1.B   Use frequently occurring nouns and   IAS emphasizes students using
+
+
+                                                     Updated July 2024                                                             6
+              2023 Indiana Academics Standards and CCSS Correlation Guide: Kindergarten English/Language Arts
+
+
+           a.​ Nouns/Pronouns – Using                    verbs.                                   nouns, pronouns, and verbs when
+               sentences that include                                                             writing or speaking.
+               singular and/or plural nouns              Form regular plural nouns orally by
+               (e.g., dog/dogs, cat/cats).     L.K.1.C   adding /s/ or /es/ (e.g., dog, dogs;
+           b.​ Verbs – Using sentences that              wish, wishes).
+               include verbs.                            Understand and use question words
+           c.​ Usage – Recognizing that                                                           IAS emphasizes recognition of
+                                               L.K.1.D   (interrogatives) (e.g., who, what,
+               there are different kinds of                                                       different sentence types.
+                                                         where, when, why, how).
+               sentences (e.g., sentences
+               that tell something,                      Use the most frequently occurring        IAS emphasizes the overall
+               sentences that ask              L.K.1.E   prepositions (e.g., to, from, in, out,   command of English grammar and
+               something)                                on, off, for, of, by, with).             usage.
+
+                                                         Produce and expand complete
+                                                                                                  IAS emphasizes recognition of
+                                               L.K.1.F   sentences in shared language
+                                                                                                  different sentence types.
+                                                         activities.
+
+                                                         Demonstrate command of the
+                                                         conventions of standard English
+        Demonstrate command of                  L.K.2
+                                                         capitalization, punctuation, and
+        capitalization, punctuation, and                 spelling when writing.
+        spelling, focusing on:
+                                                                                                   No content differences identified.
+           a.​ Capitalization – Capitalizing             Capitalize the first word in a
+                                               L.K.2.A
+               the first word in a sentence              sentence and the pronoun I.
+K.W.8          and the pronoun I.                        Recognize and name end
+           b.​ Punctuation – Recognizing       L.K.2.B
+                                                         punctuation.
+               and naming end punctuation.
+           c.​ Encoding – Spelling simple                Write a letter or letters for most
+                                                                                                  IAS emphasizes phonetic spelling,
+               words phonetically, drawing     L.K.2.C   consonant and short-vowel sounds
+                                                                                                  overall.
+               on phonemic awareness.                    (phonemes).
+
+                                               L.K.2.D   Spell simple words phonetically,          No content differences identified.
+
+
+
+                                                    Updated July 2024                                                               7
+               2023 Indiana Academics Standards and CCSS Correlation Guide: Kindergarten English/Language Arts
+
+
+                                                           drawing on knowledge of
+                                                           sound-letter relationships.
+
+
+
+    2023 Indiana Academic Standard                     Common Core State Standard                         Differences Between
+                                                                                                          2023 IAS and CCSS
+
+                                            Domain: Communication and Collaboration
+
+Number                   Text                     Number                    Text                               Description
+
+         Participate in collaborative                      Participate in collaborative
+         conversations about                               conversations with diverse partners
+K.CC.1   grade-appropriate topics and texts       SL.K.1   about kindergarten topics and texts       No content differences identified.
+         with peers and adults in small and                with peers and adults in small and
+         larger groups. (E)                                larger groups.
+
+                                                           Ask and answer questions in order
+         Ask questions to seek help, obtain
+                                                           to seek help, get information, or
+K.CC.2   information, or clarify something that   SL.K.3
+                                                           clarify something that is not
+         is not understood.
+                                                           understood.
+
+                                                           Confirm understanding of a text read      No content differences identified.
+         Ask and answer questions about key                aloud or information presented orally
+         details in a text read aloud or                   or through other media by asking
+K.CC.3                                            SL.K.2
+         information presented orally or                   and answering questions about key
+         through other media. (E)                          details and requesting clarification if
+                                                           something is not understood.
+
+
+
+
+                                                       Updated July 2024                                                              8
+               2023 Indiana Academics Standards and CCSS Correlation Guide: Kindergarten English/Language Arts
+
+
+         Audibly recite poems, rhymes, and
+                                                                                                  IAS emphasizes audible recitation of
+         songs, and use complete sentences
+                                                                                                  poems, rhymes, songs and use of
+         to describe familiar people, places,            Speak audibly and express
+K.CC.4                                          SL.K.6                                            complete sentences to describe
+         things, and events. With support,               thoughts, feelings, and ideas clearly.
+                                                                                                  familiar people, places, things, and
+         provide additional details on these
+                                                                                                  events.
+         topics.
+
+         Follow simple two or three-step oral
+K.CC.5
+         directions.
+
+
+
+
+                                                     Updated July 2024                                                             9
+

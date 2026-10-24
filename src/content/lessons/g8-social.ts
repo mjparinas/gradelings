@@ -1177,6 +1177,7 @@ export const lessons: GradeLessons = {
     ["Start with the money earned.", "Take away the costs."],
     "money left after costs are paid",
   ),
+  // Massachusetts (us-ma)
   "social/ca-g9-rights": lesson(
     ["The Bill of Rights protects freedoms like speech, which shields even unpopular ideas.", "Courts follow precedent, so old cases still matter: Gideon (1963) gives a lawyer to those who can’t afford one.", "Citizens have duties too, like jury service and paying taxes. Rights can be limited to protect safety or others’ rights."],
     "Why can a court case decided long ago still affect you today?",

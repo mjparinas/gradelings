@@ -673,12 +673,20 @@ export const lessons: GradeLessons = {
     ["It was around only briefly but in many places.", "Finding it dates the rock layer."],
     "it lived for a short time over a wide area",
   ),
-  "science/ca-g8-population-resources": lesson(
-    ["Total resource use = number of people × use per person.", "Using more water, energy, land and materials affects Earth’s systems, such as habitats and clean water.", "Better technology and using less per person can lower the impact."],
-    "A town’s population doubles and each person uses the same water. What happens to total water use?",
-    ["Use per person stays the same.", "Twice the people means twice the water."],
-    "it doubles",
+  // Indiana (us-in)
+"science/in-g7-resources": lesson(
+    ["Minerals, energy and water are spread unevenly because of past geologic processes.", "Scientists map hazards such as earthquakes, tsunamis, floods and wildfires.", "Monitoring networks (seismometers, GPS, gas sensors) help warn people early."],
+    "What does a tsunami hazard map show?",
+    ["Tsunamis flood low coastal land.", "People need to know where to go."],
+    "areas that could flood and routes to high ground",
   ),
+"science/in-g7-earth-surface": lesson(
+    ["Matching coastlines, fossils and rocks on far-apart continents show they were once joined.", "Plates pull apart at mid-ocean ridges and collide to build mountains and volcanoes, such as the Appalachians long ago.", "Some changes are sudden (earthquakes); others take millions of years (mountain building)."],
+    "Is a landslide a fast or a very slow change to Earth’s surface?",
+    ["A landslide happens in minutes.", "Mountain building takes millions of years."],
+    "fast",
+  ),
+  // Indiana: units Indiana teaches in this grade
   "science/wa-g6-thermal": lesson(
     ["Thermal energy always flows from warmer objects to cooler ones.", "Conduction: heat moves through touching things. Convection: heat moves with flowing liquids or gases.", "Radiation: heat travels as waves, like warmth from the sun.", "Insulators, like thick cooler walls, slow heat flow."],
     "Warm air rises from a heater and spreads through a room. Which kind of heat flow is this?",
@@ -696,6 +704,13 @@ export const lessons: GradeLessons = {
     "When is gravity between two objects stronger?",
     ["More mass means more pull.", "Being closer also means more pull."],
     "when they are more massive and closer",
+  ),
+  // Massachusetts (us-ma)
+  "science/ca-g8-population-resources": lesson(
+    ["Total resource use = number of people × use per person.", "Using more water, energy, land and materials affects Earth’s systems, such as habitats and clean water.", "Better technology and using less per person can lower the impact."],
+    "A town’s population doubles and each person uses the same water. What happens to total water use?",
+    ["Use per person stays the same.", "Twice the people means twice the water."],
+    "it doubles",
   ),
   "science/ma-g7-design": lesson(
     ["Criteria are what a solution must do to succeed. Constraints are limits.", "A decision matrix compares designs against the criteria.", "A trade-off is giving up some of one thing to get more of another.", "After a test fails, improve the design and test again."],

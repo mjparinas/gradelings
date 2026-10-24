@@ -571,6 +571,20 @@ export const lessons: GradeLessons = {
     ["Alligators need warm water.", "Swamps are warm and wet."],
     "in the Okefenokee Swamp",
   ),
+  // Indiana (us-in)
+"science/in-g3-fossils": lesson(
+    ["Fossils are remains or traces of living things from long ago.", "Mud covering a leaf can harden into a leaf print in rock.", "In rock layers, older fossils are usually lower down."],
+    "In rock layers, are older fossils usually higher or lower?",
+    ["Layers pile up over time.", "The first layers are at the bottom."],
+    "lower down",
+  ),
+"science/in-g3-weather-climate": lesson(
+    ["Weather is what the air is like today. Climate is the usual weather over many years.", "Read temperature and rain data for each season.", "Mountains get the most snow in winter."],
+    "Highs of 30 °F, 28 °F and 32 °F. Which season is it?",
+    ["Those are cold temperatures."],
+    "winter",
+  ),
+  // Massachusetts (us-ma)
   "science/ca-g4-design": lesson(
     ["Criteria are what a design must do to succeed.", "Constraints are limits, like cost, time or materials.", "Compare designs with a table that scores each one on each criterion.", "Test fairly, then choose the design that best meets the criteria within the constraints."],
     "A kite must fly for 1 minute and cost under $3. Which is the constraint?",
