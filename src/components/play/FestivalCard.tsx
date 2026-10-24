@@ -34,7 +34,6 @@ export function FestivalCard() {
       href={`#/stickers?page=${run.key}`}
       className="card flex items-center gap-3 border-2 p-4 sm:p-5"
       style={{ borderColor: run.season.colour }}
-      aria-label={`${run.season.name}: ${got} of ${stickers.length} stickers, ${left} ${left === 1 ? "day" : "days"} left`}
       data-testid="festival-card"
     >
       <span aria-hidden="true" className="text-5xl">{run.season.emoji}</span>
