@@ -697,4 +697,16 @@ export const lessons: GradeLessons = {
     ["Carbon dioxide traps heat.", "Trees take in carbon dioxide to make food."],
     "trees take in carbon dioxide",
   ),
+  "science/va-g6-seasons-tides": lesson(
+    ["Earth's axis is tilted about 23.5°. Without the tilt there would be almost no seasons.", "When a hemisphere tilts toward the Sun, sunlight hits more directly and it has summer.", "Earth orbits the Sun about every 365 days.", "The Moon's and Sun's gravity pull on the oceans to make tides."],
+    "When the Northern Hemisphere tilts toward the Sun, what season does it have?",
+    ["Tilted toward the Sun means more direct sunlight.", "More direct sunlight means summer."],
+    "summer",
+  ),
+  "science/va-g6-watersheds": lesson(
+    ["A watershed is all the land that drains into one body of water.", "Most of Virginia drains to the Chesapeake Bay, an estuary. Some drains to the Gulf of Mexico or straight to the Atlantic Ocean.", "Pollution and sediment on land wash into streams, so caring for land protects the water."],
+    "Why does mud washing into a river harm underwater grasses?",
+    ["Mud makes the water cloudy.", "Plants need sunlight to grow."],
+    "It blocks the sunlight they need.",
+  ),
 };

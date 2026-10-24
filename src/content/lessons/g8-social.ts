@@ -1135,4 +1135,52 @@ export const lessons: GradeLessons = {
     ["Start with the money earned.", "Take away the costs."],
     "money left after costs are paid",
   ),
+  "social/ny-g5-countries-capitals": lesson(
+    ["North America: Canada, the US, Mexico. Panama connects Central and South America.", "Learn capitals in pairs: Bogotá, Colombia; Kingston, Jamaica; Belmopan, Belize; Georgetown, Guyana.", "Mexico borders the US to the south."],
+    "What is the capital of Colombia?",
+    ["Colombia is in the north of South America.", "Its capital is high in the Andes."],
+    "Bogotá",
+  ),
+  "social/ny-g6-eastern-hemisphere": lesson(
+    ["The Eastern Hemisphere holds Africa, Asia, Europe and Australia.", "The Ural Mountains divide Europe and Asia. The Nile is Africa's longest river; the Tigris and Euphrates flow through Iraq.", "A peninsula has water on three sides."],
+    "What is a peninsula?",
+    ["“Pen” means almost and “insula” means island.", "It is almost an island."],
+    "land surrounded by water on three sides",
+  ),
+  "social/va-g8-global-trade": lesson(
+    ["In a command economy, the government makes the main decisions; in a market economy, buyers and sellers do.", "Most countries, including the United States, have mixed economies.", "Countries trade to get goods they can’t make as cheaply; trade can help economies grow."],
+    "In a market economy, who mainly decides what gets made?",
+    ["In a command economy, the government decides.", "In a market economy, prices guide choices.", "Buyers and sellers decide."],
+    "buyers and sellers",
+  ),
+  "social/va-g8-latin-america": lesson(
+    ["The Western Hemisphere is North and South America.", "Big features: the Andes and Rockies, the Amazon rainforest and River, and the Panama Canal.", "A political map shows countries and borders. A physical map shows landforms."],
+    "What is the largest rainforest in the world?",
+    ["It is in South America.", "It is named after a great river."],
+    "the Amazon rainforest",
+  ),
+  "social/va-g8-population": lesson(
+    ["Urbanization means more people living in cities.", "Cities often grow along rivers and coasts, which offer water and trade routes.", "People migrate for push and pull reasons, and newcomers bring their languages, foods and customs with them."],
+    "Why do cities often grow along rivers and coasts?",
+    ["People need water.", "Boats carry goods.", "Rivers and coasts give water and trade routes."],
+    "They offer water and trade routes.",
+  ),
+  "social/va-g8-world-maps": lesson(
+    ["There are 7 continents and 5 oceans. The Atlantic lies between the Americas and Europe and Africa.", "North latitude means the Northern Hemisphere; west longitude means the Western Hemisphere.", "Use the scale: multiply the map distance by what 1 unit stands for. A thematic map shows one topic."],
+    "A map's scale says 1 cm = 50 km. Two towns are 6 cm apart. How far apart are they?",
+    ["Each centimetre stands for 50 km.", "6 × 50 = 300."],
+    "300 km",
+  ),
+  "social/va-g8-united-states": lesson(
+    ["The United States has regions: the Northeast, the South, the Midwest and the West.", "Each region's landforms, climate and resources shape its economy.", "Rivers like the Mississippi and the Great Lakes help move goods."],
+    "Which mountains run through the eastern United States?",
+    ["They include the Blue Ridge in Virginia.", "They are the Appalachians."],
+    "the Appalachian Mountains",
+  ),
+  "social/va-g8-world-regions": lesson(
+    ["Geographers divide the world into regions such as Europe, Russia and Central Asia, and Australia and the Pacific.", "Physical features like rivers, mountains and seas affect where people live and how they trade.", "Narrow waterways like the Strait of Hormuz matter because much of the world's trade passes through them."],
+    "Why is the Danube River important in Europe?",
+    ["It flows through many countries.", "Boats carry goods and people along it."],
+    "It links many countries for trade and travel.",
+  ),
 };

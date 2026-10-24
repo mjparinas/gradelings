@@ -535,4 +535,10 @@ export const lessons: GradeLessons = {
     ["Alligators need warm water.", "Swamps are warm and wet."],
     "in the Okefenokee Swamp",
   ),
+  "science/water-world": lesson(
+    ["The sun warms water, and it rises into the air.", "The water forms clouds of tiny drops, then falls as rain or snow.", "The water flows back to lakes and oceans, and the cycle starts again."],
+    "What comes right after clouds form in the water cycle?",
+    ["Clouds hold tiny drops of water.", "When the drops get heavy, they fall."],
+    "rain or snow falls",
+  ),
 };

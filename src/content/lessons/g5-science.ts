@@ -547,4 +547,16 @@ export const lessons: GradeLessons = {
     ["Alike charges repel.", "The balloons push apart."],
     "push apart",
   ),
+  "science/sound-4": lesson(
+    ["Sound is made by vibrations that travel as waves.", "Pitch is how high or low. Volume is how loud or soft.", "Sound travels through air, water and solids, but not empty space. An echo is sound bouncing back."],
+    "Why do you see lightning before you hear thunder?",
+    ["Both happen at the same time.", "Light reaches you first because it is faster."],
+    "light travels much faster than sound",
+  ),
+  "science/va-g5-energy-resources": lesson(
+    ["Renewable resources, like sunlight and wind, won't run out.", "Nonrenewable resources, like oil and coal, will run out.", "Solar panels use sunlight and wind turbines use wind to make electricity.", "Dams make electricity but can block fish like salmon."],
+    "Gasoline comes from oil. Is it renewable?",
+    ["Oil took millions of years to form.", "It will run out."],
+    "no, it is nonrenewable",
+  ),
 };
