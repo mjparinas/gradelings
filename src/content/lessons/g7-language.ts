@@ -217,4 +217,40 @@ export const lessons: GradeLessons = {
     ["Achilles had one weak spot.", "So it means a weak spot."],
     "his weak spot",
   ),
+  "language/pa-g7-diction-and-syntax": lesson(
+    ["Diction is word choice. Syntax is how sentences are built.", "Short sentences feel fast or tense. Long ones feel calm.", "Formal words suit serious writing. Informal words suit friends."],
+    "“The rain fell. The wind rose. The door slammed.” What does the syntax create?",
+    ["The sentences are short.", "Short sentences build tension."],
+    "tension",
+  ),
+  "language/pa-g7-setting-themes-central-ideas": lesson(
+    ["Setting is when and where a story happens. It shapes character and plot.", "A text can have more than one theme or central idea.", "To compare them, track how details develop each one."],
+    "A story is set in a blizzard. How might setting affect the plot?",
+    ["Snow keeps people inside.", "Characters must work together."],
+    "characters must stay in and work together",
+  ),
+  "language/pa-g7-allusions-and-perspectives": lesson(
+    ["An allusion is a brief reference to a well-known story, person or event.", "Achilles’ heel means a weak spot. A Scrooge is stingy.", "Authors with different perspectives choose different evidence and words."],
+    "“That’s his Achilles’ heel.” What does it mean?",
+    ["Achilles had one weak spot.", "So it means a weak spot."],
+    "his weak spot",
+  ),
+  "language/pa-g7-new-words": lesson(
+    ["Use context, roots and affixes to work out unfamiliar words.", "Connotation and tone change how a message feels.", "Figures of speech, such as allusion and irony, add layers of meaning."],
+    "Which has a stronger negative feeling: demanding or tyrannical?",
+    ["Both describe a strict person.", "Tyrannical is harsher."],
+    "tyrannical",
+  ),
+  "language/pa-g7-writing-moves": lesson(
+    ["Introduce a claim and organize reasons and evidence.", "Use transitions and precise language to connect ideas.", "Close with a conclusion that follows from the argument."],
+    "Which transition adds a similar idea?",
+    ["It joins ideas that agree.", "Likewise adds a similar idea."],
+    "likewise",
+  ),
+  "language/pa-g7-prove-it": lesson(
+    ["Cite several pieces of text evidence that support an analysis.", "Pick the strongest, most relevant lines.", "Show how the evidence proves the point."],
+    "“Though tired, Noor stayed to help.” What does this show about Noor?",
+    ["Look at her action despite tiredness.", "She is caring."],
+    "she is caring and dependable",
+  ),
 };

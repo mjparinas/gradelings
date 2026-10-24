@@ -181,4 +181,34 @@ export const lessons: GradeLessons = {
     ["Can you check it?", "Tastiest is what someone thinks."],
     "Apples are the tastiest.",
   ),
+  "language/pa-g1-poems-and-describing": lesson(
+    ["A stanza is a group of lines in a poem.", "A line break is where one line ends.", "Describing words tell how things look, sound or feel."],
+    "Rain falls / on the town. / Puddles shine. How many lines?",
+    ["Count each row.", "There are three rows."],
+    "3",
+  ),
+  "language/pa-g1-opinions-and-comparing": lesson(
+    ["An opinion tells what someone thinks.", "Words like best and love often show an opinion.", "Two books on one topic can tell the same or different facts."],
+    "Which is an opinion? Apples grow on trees. Apples are the tastiest.",
+    ["Can you check it?", "Tastiest is what someone thinks."],
+    "Apples are the tastiest.",
+  ),
+  "language/pa-g1-new-words": lesson(
+    ["A word can have a small word inside it, like play in playing.", "Clues around a word can help you know what it means.", "Some words tell about feelings, like happy and sad."],
+    "“The puppy was tiny. It fit in my hand.” Tiny means…",
+    ["Look at the clue: it fit in my hand.", "Tiny means very small."],
+    "very small",
+  ),
+  "language/pa-g1-writing-moves": lesson(
+    ["A good sentence starts with a capital letter and ends with a mark.", "Good writers tell what happened first, next and last.", "They give a reason with the word because."],
+    "Which tells a reason? “I like rain because it helps the flowers grow.”",
+    ["Find the word because.", "The reason comes after because."],
+    "it helps the flowers grow",
+  ),
+  "language/pa-g1-prove-it": lesson(
+    ["Read the story. The story has the answer.", "Find the words that show it.", "Choose the answer the words prove."],
+    "“Lin put on a coat and boots. Snow fell.” Why did Lin wear a coat?",
+    ["Look for the weather.", "It was snowing."],
+    "because it was snowing",
+  ),
 };

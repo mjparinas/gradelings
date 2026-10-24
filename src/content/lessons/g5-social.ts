@@ -757,4 +757,34 @@ export const lessons: GradeLessons = {
     ["Freedom of speech is in the Bill of Rights.", "It is listed with religion, press and assembly.", "That is the First Amendment."],
     "the First Amendment",
   ),
+  "social/pa-g5-penns-colony": lesson(
+    ["In 1681 King Charles II gave William Penn a charter for land in America. The colony was named Pennsylvania, which means Penn's Woods.", "Penn was a Quaker. He wanted a colony where people of different beliefs could live together in peace.", "Philadelphia means brotherly love. Settlers came from many countries, so the colony grew fast."],
+    "Why did William Penn want a colony in America?",
+    ["He was a Quaker, and Quakers were often punished in England.", "He hoped to show that people of different beliefs could live in peace."],
+    "so people could practise their beliefs freely and live in peace",
+  ),
+  "social/pa-g5-lenape-and-neighbors": lesson(
+    ["The Lenape, Susquehannock, Shawnee and Nanticoke lived in what is now Pennsylvania long before Penn came. Each nation has its own language and history.", "Over many years settlement, treaties and wars pushed many nations west. Their nations live today in other states and have their own governments.", "Some nations, such as the Seneca, kept ties to Pennsylvania land. Name each nation, never one name for all."],
+    "Why is it better to say \"the Lenape\" than to call every Native nation by one name?",
+    ["Each nation has its own language, government and history.", "Naming a nation shows respect."],
+    "each nation is different",
+  ),
+  "social/pa-g5-philadelphia-nation": lesson(
+    ["Many big events of the founding happened in Philadelphia. The Declaration of Independence was adopted in 1776 and the Constitution was written in 1787.", "Both were debated in Independence Hall. George Washington led the army at Valley Forge and later led the Constitutional Convention.", "Pennsylvania approved the Constitution on December 12, 1787. Philadelphia was the capital from 1790 to 1800."],
+    "Which two great documents were debated in Independence Hall?",
+    ["One was adopted in 1776 and told the king the colonies were free.", "The other, from 1787, is the plan of government."],
+    "the Declaration of Independence and the Constitution",
+  ),
+  "social/pa-g5-pa-government": lesson(
+    ["Pennsylvania is a Commonwealth with its capital in Harrisburg. Its legislature, the General Assembly, has a Senate and a House of Representatives.", "The governor leads the executive branch for four years. The courts are the judicial branch. Pennsylvania has 67 counties.", "State symbols include the mountain laurel, the eastern hemlock, the white-tailed deer and the motto Virtue, Liberty and Independence."],
+    "What is Pennsylvania's legislature called?",
+    ["It makes the laws for the whole Commonwealth.", "It has two parts, a Senate and a House."],
+    "the General Assembly",
+  ),
+  "social/pa-g5-pa-resources": lesson(
+    ["Pennsylvania has forests, coal, oil, iron, rivers and good farmland. These natural resources shaped how people made a living.", "Rivers, canals and railroads moved goods. Pittsburgh grew because three rivers meet there and coal and iron were nearby.", "An entrepreneur starts a business. Milton Hershey, H. J. Heinz and Andrew Carnegie built businesses in Pennsylvania."],
+    "Why did Pittsburgh become a city that made so much steel?",
+    ["Coal and iron were nearby.", "Three rivers and railroads helped move heavy goods."],
+    "coal and iron were nearby, and rivers and railroads could carry the steel",
+  ),
 };

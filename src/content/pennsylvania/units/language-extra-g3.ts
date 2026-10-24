@@ -1,0 +1,125 @@
+import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
+
+// Pennsylvania's extra Grade 3 English language arts units (`pa-` ids): academic words and words that signal time, place
+// and cause, the thinking behind informative, opinion and story writing (tapped, not written), and answering questions
+// with evidence from a short passage. The passages are original. Reading only.
+
+const WORDS: Q[] = [
+  ["Which word is a signal word for time? “___ the bell rang, we lined up.”", "When", ["Under", "Beneath", "Green"], "When tells the time."],
+  ["Which word signals a place? “The cat slept ___ the couch.”", "beneath", ["during", "after", "because"], "Beneath tells where."],
+  ["“We stopped for lunch. Afterward, we hiked.” Afterward signals…", "time order", ["a place", "a reason", "a color"], "It tells what came next."],
+  ["“It rained all night. As a result, the creek rose.” As a result signals…", "cause and effect", ["a place", "a size", "a sound"], "It tells what happened because of something."],
+  ["Which signal word shows a reason?", "because", ["meanwhile", "beside", "later"], "Because gives a reason."],
+  ["“Nearby, a stream trickled.” Nearby tells…", "where", ["when", "why", "how many"], "Nearby tells the place."],
+  ["“The race was thrilling.” “Her laugh was thrilling to hear.” Thrilling means…", "very exciting", ["very dull", "very cold", "very short"], "It means exciting."],
+  ["“The explorer’s map was accurate.” Accurate means…", "correct", ["torn", "colorful", "old"], "An accurate map is right."],
+  ["“The tiny seed contains a baby plant.” Contains means…", "holds inside", ["throws away", "paints", "forgets"], "A seed holds a plant inside."],
+  ["“Ana was reluctant to jump.” Reluctant means…", "not wanting to", ["eager to", "able to", "tired of"], "Reluctant means unwilling."],
+  ["The word “disagree” means…", "not agree", ["agree again", "agree before", "agree a lot"], "Dis- means not."],
+  ["The word “careless” means…", "without care", ["full of care", "care again", "very careful"], "-less means without."],
+  ["“It is raining cats and dogs.” This means it is…", "raining very hard", ["full of pets", "snowing", "sunny"], "It is an idiom."],
+  ["“Mia has a heart of gold.” This means Mia is…", "very kind", ["made of metal", "rich", "sick"], "It is nonliteral."],
+  ["Which sentence uses a literal meaning?", "The ice is cold.", ["I am frozen with fear.", "My heart is a stone.", "Time flew by."], "Literal means exactly what the words say."],
+  ["Which sentence uses a nonliteral meaning?", "The test was a piece of cake.", ["The cake was sweet.", "The test was on paper.", "Dad baked a cake."], "Nonliteral means not exactly what the words say."],
+  ["Which word is stronger than “said”?", "whispered", ["talked", "spoke", "told"], "It tells how the words were spoken.", true],
+  ["Which word is closer to “walked slowly”?", "strolled", ["sprinted", "hopped", "bolted"], "Strolled is a slow walk.", true],
+  ["Which word means “not a lot”?", "scarce", ["abundant", "huge", "plenty"], "Scarce means hard to find.", true],
+  ["“The explorers were weary.” Weary means…", "very tired", ["very loud", "very rich", "very fast"], "Weary means tired.", true],
+  ["“A habitat provides food and shelter.” Provides means…", "gives", ["takes", "hides", "breaks"], "Provide means give.", true],
+  ["Which words are in order from least to most? cool, warm, hot, scorching", "cool, warm, hot, scorching", ["scorching, cool, warm, hot", "hot, cool, scorching, warm", "warm, cool, hot, scorching"], "Think of how hot each is.", true],
+  ["“The sentence was a mouthful.” Which is a good meaning?", "it was long and hard to say", ["it was full of food", "it was tiny", "it was funny"], "A mouthful can mean a lot to say.", true],
+  ["Which is a general academic word?", "analyze", ["sandwich", "puppy", "bicycle"], "Analyze is used across school subjects.", true],
+  ["Which word is specific to science?", "habitat", ["basket", "chair", "ribbon"], "Habitat is a science word.", true],
+  ["Which word is specific to math?", "numerator", ["sailor", "tuba", "meadow"], "A numerator is part of a fraction.", true],
+];
+
+const WRITING: Q[] = [
+  ["Which sentence best introduces a report on sharks?", "Sharks are fish that have lived in the oceans for millions of years.", ["I went to the beach once.", "Water is blue.", "Fish are in the store."], "An introduction names the topic clearly."],
+  ["Which fact belongs in a report on rainforests?", "Rainforests get a lot of rain each year.", ["Tigers live in snow dens.", "Deserts are dry.", "I like pizza."], "Stay on the topic."],
+  ["Which detail would an illustration of a coral reef show?", "colorful fish near coral", ["a snowy mountain", "a desert road", "a busy city"], "Match the picture to the topic."],
+  ["Which definition helps explain “predator”?", "an animal that hunts other animals", ["a plant that grows fast", "a kind of rock", "a loud sound"], "A definition explains a word."],
+  ["Which group of sentences is organized by topic?", "First, how frogs start life. Next, how they grow legs. Last, how they live as adults.", ["Frogs are green. Pizza is hot. Trains are fast.", "Last, frogs live. First, a train. Then, my shoe.", "Frogs are green and winter is cold."], "Group ideas in a logical order."],
+  ["Which concluding sentence fits a report on honey bees?", "Honey bees are small, but they do big jobs for our world.", ["Bees fly.", "Honey is sweet.", "Hives are made of wax."], "A conclusion sums up the report."],
+  ["Which sentence introduces an opinion about school uniforms?", "I believe students should choose their own clothes.", ["Uniforms are made of cloth.", "Some schools open at eight.", "Students have lockers."], "State the topic and opinion."],
+  ["Which reason best supports “Recess helps students learn”?", "Exercise gives students energy and helps them focus.", ["Recess is on the schedule.", "Some kids like swings.", "The playground is outside."], "A strong reason connects to the opinion."],
+  ["Which words link a reason to an opinion?", "for example, because, since", ["red, blue, green", "yesterday, today", "run, jump, skip"], "These words connect ideas."],
+  ["Which order makes the best opinion piece?", "Opinion, then reasons, then a closing sentence", ["Closing sentence, then reasons, then opinion", "Reasons, then closing, then opinion", "Opinion, then closing, then a joke"], "Plan in a logical order."],
+  ["Which closing sentence fits “Our town needs a new library”?", "That is why a new library would help everyone in our town.", ["Libraries have books.", "I like to read.", "Books have pages."], "A closing restates the opinion."],
+  ["Which sentence introduces a narrator and characters?", "My cousin Rosa and I were building a fort when the storm began.", ["Storms are loud.", "Forts are made of blankets.", "Cousins are family."], "Set up who and what."],
+  ["Which sentence uses dialogue?", "“Let’s go!” shouted Zoe.", ["Zoe was happy.", "The race started.", "It was a sunny day."], "Dialogue is what characters say."],
+  ["Which sentence describes a character’s thoughts and feelings?", "Ben’s stomach flipped as he stepped onto the stage.", ["The stage was wooden.", "Ben was nine.", "The room was big."], "It shows how Ben feels."],
+  ["Which words signal the order of events?", "first, then, after that, finally", ["red, big, loud", "cat, bat, hat", "because, so, but"], "They show time order."],
+  ["Which sentence provides a good ending for a story about a lost puppy?", "At last, the puppy was home, safe in Maya’s arms.", ["The puppy ran.", "Maya looked.", "It was a sunny day."], "An ending resolves the problem."],
+  ["Which sentence is a more exact choice than “The dog went to the park”?", "The dog bounded to the park.", ["The dog was at the park.", "The dog got there.", "The dog did a thing."], "Pick words that show what happened.", true],
+  ["Which word adds the most feeling? “The wind ___ through the trees.”", "howled", ["went", "was", "did"], "A strong verb shows more.", true],
+  ["Which sentence mixes short and long sentences well?", "Rain fell. It drummed on the roof while we sat inside with warm mugs.", ["Rain fell. Rain fell. Rain fell.", "Rain fell and it drummed and we sat and it was warm and we had mugs.", "Rain. Roof. Mug."], "Vary sentence types.", true],
+  ["Which sentence is a question that grabs a reader’s attention?", "Did you know a hummingbird’s heart beats over 1,000 times a minute?", ["Hummingbirds are birds.", "Hummingbirds are small.", "Birds have wings."], "A question can hook the reader.", true],
+  ["Which source could support a fact in a report on volcanoes?", "an encyclopedia entry on volcanoes", ["a comic about pirates", "a menu", "a toy ad"], "Use sources about the topic.", true],
+  ["Which sentence gives evidence from a text about owls? Text: “Owls hunt at night using sharp hearing.”", "The text says owls hunt at night with sharp hearing.", ["Owls are the best.", "I saw an owl.", "Owls sleep all day."], "Evidence comes from the text.", true],
+  ["Which sentence correctly uses quotation marks?", "“I’m ready,” said Kai.", ["“I’m ready, said Kai.”", "I’m ready, “said Kai.”", "“I’m ready said” Kai."], "Quotation marks surround the spoken words.", true],
+  ["Which sentence has a capitalized proper noun?", "We visited Grandma in July.", ["We visited grandma in july.", "we visited Grandma in July.", "We visited grandma in July"], "Names and months start with capitals.", true],
+  ["Which sentence is best for the middle of a story?", "Suddenly, the lights went out and Kim heard a noise.", ["The story begins.", "The end.", "Kim has a name."], "The middle has a problem or action.", true],
+];
+
+const PROVE: Q[] = [
+  ["Text: “Frogs lay eggs in water. The eggs hatch into tadpoles.” Where do frogs lay eggs?", "in water", ["in trees", "in sand", "in nests"], "The text says in water."],
+  ["Text: “Cheetahs can run 60 miles an hour.” What does the text tell?", "how fast cheetahs can run", ["what cheetahs eat", "where cheetahs sleep", "how big cheetahs are"], "Use the text’s facts."],
+  ["Text: “The ice melted, so the puddle grew.” What caused the puddle to grow?", "the ice melted", ["the sun set", "a bird landed", "it snowed"], "So tells the effect."],
+  ["Text: “First, the caterpillar eats leaves. Next, it makes a chrysalis. Last, a butterfly comes out.” What happens right after the caterpillar eats?", "it makes a chrysalis", ["a butterfly comes out", "it lays eggs", "it flies"], "Use the order words."],
+  ["Which sentence tells how steps are connected? “Mix the flour and eggs. After that, pour the batter in a pan.”", "After that connects the steps in time.", ["The flour is white.", "Pans are metal.", "Eggs are food."], "Time words connect steps."],
+  ["Text: “Mia stared at the door, her hands shaking. She took a deep breath and knocked.” How does Mia feel?", "nervous", ["bored", "proud", "silly"], "Shaking hands and a deep breath show nerves."],
+  ["Text: “Leo dropped his cone. His shoulders sagged.” What can you infer?", "he is disappointed", ["he is excited", "he is sleepy", "he is angry at a friend"], "Sagging shoulders show disappointment."],
+  ["Text: “Ravi packed a map, water and a flashlight.” What can you infer?", "he is going on a hike or trip", ["he is going to sleep", "he is going to a party", "he is baking"], "These items fit an outdoor trip."],
+  ["Text: “Ana shared her lunch with the new student.” What does this action show about Ana?", "she is kind", ["she is mean", "she is lost", "she is afraid"], "Her actions show kindness."],
+  ["Text: “The wind blew the sail, and the boat sped across the lake.” What caused the boat to speed?", "the wind", ["the lake", "the sun", "the sail’s color"], "The wind moved the sail."],
+  ["What is the main idea? “Bats sleep in caves. They hunt at night. They use sound to find insects.”", "Bats have special ways of living.", ["Caves are cold.", "Insects are small.", "Night is dark."], "The details tell about bats."],
+  ["Which detail supports the main idea “Sea turtles are great swimmers”?", "They can swim thousands of miles.", ["Some are green.", "They lay eggs on beaches.", "They have shells."], "Pick the detail about swimming."],
+  ["A character’s actions: Zoe finished her work, then helped her classmate. These actions help the story move by…", "showing she is helpful", ["changing the setting", "naming the author", "ending the story"], "Actions reveal character and move events."],
+  ["Text: “Dad said, ‘Time for bed.’ Tim groaned and pulled the blanket up.” Which action shows what Tim wants?", "pulling the blanket up", ["Dad speaking", "time for bed", "the clock"], "Tim’s action shows he is not ready."],
+  ["Which sentence makes an inference? “The window was broken and a ball lay on the floor.”", "The ball broke the window.", ["The window is glass.", "A ball is round.", "The floor is wood."], "An inference uses clues."],
+  ["Which sentence quotes the text? Text: “Penguins huddle to stay warm.”", "The text says, “Penguins huddle to stay warm.”", ["Penguins like ice.", "Penguins are black and white.", "I like penguins."], "Evidence is quoted or referred to."],
+  ["Text: “Wind and water slowly wear down rock.” What does the text say wears down rock?", "wind and water", ["snow", "birds", "sunlight"], "Refer to the text."],
+  ["Text: “The river rose after three days of rain.” What is the effect?", "the river rose", ["the rain started", "the sun came out", "the days passed"], "The effect is the result."],
+  ["Text: “Before we plant, we dig a hole. Then we place the seed.” What do we do first?", "dig a hole", ["place the seed", "water the plant", "pick a flower"], "Before means first.", true],
+  ["Text: “Because the soil was dry, the plants drooped.” Why did the plants droop?", "the soil was dry", ["the sun set", "they were sad", "it was night"], "Because gives the reason.", true],
+  ["Text: “Jada practiced every day. By spring, she could play the whole song.” What does this show?", "practice helps", ["songs are short", "spring is warm", "Jada is tall"], "Cause and effect.", true],
+  ["Text: “Gabe grinned and held up the trophy.” What can you infer?", "he won", ["he lost", "he is lost", "he is sleepy"], "A grin and a trophy mean he won.", true],
+  ["Text: “Sparrows eat seeds. Hawks eat small animals.” How are the two birds different?", "they eat different foods", ["they live in the same tree", "they are both tiny", "they both swim"], "The text compares their foods.", true],
+  ["Text: “A tadpole breathes with gills. A frog breathes with lungs.” How are they different?", "how they breathe", ["where they live in winter", "what color they are", "how they are named"], "Compare the two sentences.", true],
+  ["Two texts are about volcanoes. One says lava is hot rock. The other says lava can reach 2,000 degrees. What is the difference?", "the second adds how hot", ["the first is about snow", "the second is a poem", "both say the same"], "Compare the details.", true],
+  ["Text: “The moon doesn’t make its own light. It shines because it reflects the sun.” Why does the moon shine?", "it reflects sunlight", ["it has lamps", "it is a star", "it makes its own light"], "Use the text.", true],
+];
+
+export const EXTRA: Unit[] = [
+  bankUnit({
+    id: "pa-g3-new-words",
+    title: "Signal Words & Word Meanings",
+    emoji: "🧭",
+    blurb: "Words for time, place and cause, plus literal and nonliteral meaning.",
+    parentNote:
+      "Pennsylvania’s Grade 3 standards ask children to acquire and use accurately grade-appropriate academic and subject words, including words that signal spatial and temporal relationships, and to tell literal from nonliteral meaning. Children tap the word or meaning that fits.",
+    standards: ["CC.1.2.3.J; CC.1.3.3.J; CC.1.2.3.F; CC.1.3.3.F; CC.1.2.3.K", "academic words, words that signal time, place and cause, and literal and nonliteral meaning"],
+    items: WORDS,
+  }),
+  bankUnit({
+    id: "pa-g3-writing-moves",
+    title: "Topics, Opinions & Stories",
+    emoji: "✏️",
+    blurb: "Introduce, support, order and wrap up a piece of writing.",
+    parentNote:
+      "Pennsylvania’s Grade 3 writing standards ask children to introduce a topic and develop it with facts and details, to state an opinion and link reasons in a logical order, and to tell a story with dialogue and time words. Children are not asked to write here: they tap the sentence that does each job best.",
+    standards: ["CC.1.4.3.B; CC.1.4.3.C; CC.1.4.3.D; CC.1.4.3.H; CC.1.4.3.I; CC.1.4.3.J; CC.1.4.3.N; CC.1.4.3.O; CC.1.4.3.P; CC.1.4.3.K", "introducing a topic with facts, supporting an opinion with reasons, telling a story with dialogue, and choosing words for the audience"],
+    items: WRITING,
+  }),
+  bankUnit({
+    id: "pa-g3-prove-it",
+    title: "Prove It",
+    emoji: "🔍",
+    blurb: "Infer, find causes and show your proof from the text.",
+    parentNote:
+      "Pennsylvania’s Grade 3 standards ask children to ask and answer questions about a text and make inferences that refer to the text, to explain how events, ideas or steps are connected using time, sequence and cause and effect, and to explain how characters’ actions contribute to the events. Children read a short passage and choose the answer the text supports.",
+    standards: ["CC.1.2.3.B; CC.1.2.3.C; CC.1.3.3.B; CC.1.3.3.C; CC.1.4.3.S", "making inferences, explaining cause and effect, sequence and characters’ actions, and drawing evidence from a text"],
+    items: PROVE,
+  }),
+];

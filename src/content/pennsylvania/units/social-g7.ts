@@ -1,4 +1,176 @@
 import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
 
-export const UNITS: Unit[] = [];
+// Pennsylvania's own Grade 7 social studies units (`pa-` ids). Grade 7 here is United States history and government to
+// the 1840s, so Pennsylvania's units cover its constitution and government (5.1.7 to 5.3.7), the Commonwealth in the
+// early republic (8.2.7, 8.3.7), its land and rivers (7.x.7) and the Pennsylvanians who shaped the country (8.2.7.A).
+// Slavery and the early fight against it are told plainly. Facts are from docs/research/pennsylvania/FACTS.md or are
+// well established.
+
+const PA_GOVERNMENT_7: Q[] = [
+  ["How many constitutions has Pennsylvania had?", "five", ["one", "three", "ten"], "1776, 1790, 1838, 1874 and 1968."],
+  ["The Pennsylvania Constitution now in use was adopted in…", "1968", ["1776", "1874", "1787"], "It replaced the one from 1874."],
+  ["Article I of the Pennsylvania Constitution is the…", "Declaration of Rights", ["Bill of Sales", "Treaty of Peace", "Table of Laws"], "It lists the rights of the people."],
+  ["The Declaration of Rights says all power is inherent in…", "the people", ["the governor", "the courts", "the General Assembly"], "Government gets its power from the citizens."],
+  ["How many members does Pennsylvania's House of Representatives have?", "203", ["50", "100", "435"], "Each district elects one."],
+  ["How many senators are in the Pennsylvania Senate?", "50", ["2", "100", "203"], "One for each senatorial district."],
+  ["State senators in Pennsylvania serve terms of…", "four years", ["one year", "two years", "six years"], "Representatives serve a shorter term."],
+  ["Members of the Pennsylvania House of Representatives serve terms of…", "two years", ["one year", "four years", "six years"], "They face voters often."],
+  ["Pennsylvania's governor serves a four-year term and may serve…", "two terms in a row", ["only one term ever", "ten terms in a row", "no limit at all"], "The limit is one additional consecutive term."],
+  ["The governor and the lieutenant governor in Pennsylvania are elected…", "together as a team", ["by the courts", "by the legislature", "by the president"], "They run on one ticket."],
+  ["Who presides over the Pennsylvania Senate?", "the lieutenant governor", ["the chief justice", "the attorney general", "the mayor of Harrisburg"], "The vice president does a similar job in Congress."],
+  ["To veto a bill means to…", "refuse to sign it into law", ["write it", "vote on it in the House", "print it"], "The governor can do this."],
+  ["The General Assembly can override a governor's veto with…", "a two-thirds vote in each chamber", ["a vote of the courts", "a majority of the school boards", "nothing, it cannot"], "It takes more votes than passing the bill."],
+  ["In Pennsylvania, a bill must be considered on how many different days in each chamber before it passes?", "three", ["one", "seven", "twenty"], "It is a rule to slow things down.", true],
+  ["Bills that raise money, such as tax bills, must begin in the…", "House of Representatives", ["Supreme Court", "Senate", "governor's office"], "The same rule applies in Congress.", true],
+  ["The highest court in Pennsylvania is the…", "Supreme Court of Pennsylvania", ["Superior Court", "Court of Common Pleas", "magisterial district court"], "It has seven justices."],
+  ["The Superior Court and the Commonwealth Court mainly…", "hear appeals", ["write laws", "run elections", "collect taxes"], "They review decisions of lower courts."],
+  ["Each county's main trial court is the…", "Court of Common Pleas", ["Supreme Court", "Commonwealth Court", "State Senate"], "It holds trials."],
+  ["Magisterial district judges handle matters such as…", "traffic tickets and small claims", ["amending the constitution", "presidential elections", "federal treaties"], "They are the courts closest to most people."],
+  ["Judges in Pennsylvania are chosen by…", "voters", ["the president", "the king", "a lottery"], "They are elected."],
+  ["Pennsylvania's attorney general is the Commonwealth's…", "chief law officer, elected by the voters", ["highest judge", "leader of the Senate", "head of the state police"], "The attorney general represents the state in legal matters.", true],
+  ["In Pennsylvania's closed primary, a voter may vote only for candidates of…", "the party they are registered with", ["any party", "no party", "the other party"], "Voters registered with no party cannot vote in a party primary."],
+  ["A group of people who work together to try to influence lawmakers about an issue is called…", "an interest group", ["a jury", "a cabinet", "a court"], "Trying to persuade lawmakers is called lobbying."],
+  ["Pennsylvania's Constitution has an Equal Rights Amendment, added in 1971. It protects equal rights regardless of a person's…", "sex", ["height", "favorite sport", "hometown"], "It is in Article I.", true],
+  ["To amend the Pennsylvania Constitution, a proposal must pass the General Assembly and then be…", "approved by the voters", ["signed by the president", "approved by the Supreme Court only", "printed in a newspaper"], "The people have the final say.", true],
+  ["Which is a tax collected by the national government?", "federal income tax", ["property tax on a house", "Pennsylvania sales tax", "a school tax"], "Collected by the IRS."],
+  ["Which is a tax collected by the Commonwealth of Pennsylvania?", "state sales tax", ["federal income tax", "customs duty on imports", "tax on stamps"], "Charged when you buy things."],
+  ["A government in which one person holds all the power is a…", "dictatorship", ["republic", "democracy", "school board"], "No sharing of power."],
+  ["Local governments such as boroughs and townships make rules about…", "things close to home such as zoning, streets and local services", ["national defense", "printing money", "the federal budget"], "Local jobs."],
+];
+
+const PA_NEW_NATION: Q[] = [
+  ["From 1790 to 1800 the nation's capital was…", "Philadelphia", ["Pittsburgh", "Harrisburg", "Gettysburg"], "The government met there while Washington, D.C. was built."],
+  ["In 1780 Pennsylvania passed a law that began to end…", "slavery gradually", ["the Revolution", "all taxes", "the use of wagons"], "It was an early step toward freedom."],
+  ["Under Pennsylvania's 1780 law, children born to enslaved mothers would become free…", "when they reached adulthood", ["at birth", "after one week", "never"], "They were free at age 28.", true],
+  ["Richard Allen, once enslaved, became the first bishop of a church he helped found in Philadelphia, the…", "African Methodist Episcopal Church", ["Church of England", "Salvation Army", "Quaker Meeting"], "Mother Bethel is its mother church."],
+  ["The Free African Society, begun in Philadelphia in 1787, was started by Richard Allen and…", "Absalom Jones", ["Thomas Jefferson", "Patrick Henry", "John Adams"], "Both were leaders of Philadelphia's Black community."],
+  ["During the yellow fever outbreak of 1793, Black Philadelphians such as Richard Allen helped…", "care for the sick and bury the dead", ["collect taxes", "build the capitol", "run the Mint"], "They risked their own health."],
+  ["In 1794 farmers in western Pennsylvania protested a federal tax on…", "whiskey", ["tea", "flour", "coal"], "The protest is called the Whiskey Rebellion."],
+  ["Western farmers made whiskey because…", "it was easier to carry across the mountains than bulky grain", ["they disliked bread", "grain was illegal", "they had no corn"], "Barrels were easier to pack on a horse than sacks of grain."],
+  ["The Whiskey Rebellion showed that the new national government…", "could enforce its laws, including its taxes", ["had no power", "had no president", "could not collect any money"], "President Washington sent troops.", true],
+  ["The Lancaster Turnpike, finished in 1795, helped trade by…", "linking Philadelphia and Lancaster with a hard road", ["closing the ports", "ending farming", "replacing the Delaware River"], "It was one of the first long paved roads."],
+  ["Conestoga wagons, first made in Lancaster County, were used to…", "carry heavy loads of goods and families", ["fly over mountains", "sail on the Delaware", "pull a train"], "They were pulled by horses."],
+  ["The Pennsylvania long rifle, once called the Kentucky rifle, was first made by gunsmiths in…", "Pennsylvania", ["Kentucky", "Texas", "California"], "German craftspeople in Lancaster County built it.", true],
+  ["The National Road, the first major highway built by the federal government, crossed southwestern…", "Pennsylvania", ["Florida", "Maine", "Nevada"], "It carried settlers and goods west."],
+  ["Pittsburgh was called the \"Gateway to the West\" because…", "settlers and goods moved on rivers from there into the interior", ["it was on the Pacific", "it was the capital", "it was next to the sea"], "Three rivers meet there."],
+  ["Pennsylvania's Main Line of Public Works (1834) combined canals and railroads to link…", "Philadelphia and Pittsburgh across the mountains", ["Boston and New York", "Harrisburg and Erie only", "Washington and Richmond"], "Boats were even lifted over mountains on rails.", true],
+  ["Alexander Hamilton's Bank of the United States opened in 1791 in…", "Philadelphia", ["Boston", "Richmond", "Charleston"], "It was the capital then."],
+  ["Benjamin Franklin served as president of the Pennsylvania Abolition Society, which worked to…", "end slavery", ["build canals", "print money", "found a college"], "He signed a petition to Congress in 1790.", true],
+  ["After Philadelphia, Pennsylvania's state capital moved to Lancaster and then, in 1812, to…", "Harrisburg", ["Pittsburgh", "Erie", "Allentown"], "It is more central.", true],
+  ["In 1808 Jesse Fell of Wilkes-Barre showed that anthracite coal could be burned to…", "heat a home", ["power a plane", "make glass only", "build a canoe"], "Hard coal burns slowly and hot.", true],
+  ["Robert Fulton, who built the first successful commercial steamboat, was born in…", "Pennsylvania", ["Spain", "Texas", "Ohio"], "He grew up in Lancaster County."],
+  ["In 1787 John Fitch tested a steamboat on the Delaware River at…", "Philadelphia", ["Boston", "Albany", "Baltimore"], "Steam power on water."],
+  ["The Quaker meeting houses of Pennsylvania were places where Quakers…", "gathered to worship quietly", ["trained soldiers", "printed money", "held auctions"], "Quakers valued peace."],
+  ["Many German and Scots-Irish settlers moved from Philadelphia into the interior because…", "they wanted farmland", ["there was no land", "they were ordered by the king", "to find gold in the mountains"], "Good land was found west and south of the city."],
+  ["Which was a result of Pennsylvania's many rivers and roads in the early republic?", "goods and people could move into the interior", ["trade ended", "all travel stopped", "cities disappeared"], "Transportation shaped growth.", true],
+  ["Why did Pennsylvania's Quakers play a large part in the early fight against slavery?", "they believed all people were equal in God's eyes", ["they owned the most farms", "the king ordered it", "they had no neighbors"], "It was a matter of faith.", true],
+  ["After 1800 Philadelphia was no longer the nation's capital, but it remained…", "a major center of trade, banking and printing", ["a small village", "a fort", "empty"], "It stayed a big, important city.", true],
+];
+
+const PA_GEOGRAPHY: Q[] = [
+  ["Pennsylvania's northern neighbor is…", "New York", ["Ohio", "Maryland", "New Jersey"], "North on a map."],
+  ["Pennsylvania's eastern neighbor, across the Delaware River, is…", "New Jersey", ["Ohio", "West Virginia", "Maine"], "Philadelphia faces it across the river."],
+  ["Pennsylvania's western neighbor is…", "Ohio", ["New Jersey", "New York", "Delaware"], "West on a map."],
+  ["Which Great Lake touches Pennsylvania?", "Lake Erie", ["Lake Michigan", "Lake Superior", "Lake Huron"], "Erie is a city on its shore."],
+  ["The Mason–Dixon Line forms much of Pennsylvania's border with…", "Maryland", ["New York", "Ohio", "New Jersey"], "It is Pennsylvania's southern border."],
+  ["Pennsylvania lies in which region of the United States?", "the Northeast", ["the West", "the Southwest", "the Midwest"], "Census regions group the states."],
+  ["Which two big rivers join at Pittsburgh to form the Ohio River?", "the Allegheny and the Monongahela", ["the Delaware and the Susquehanna", "the Hudson and the Potomac", "the Schuylkill and the Delaware"], "The place where they meet is called the Point."],
+  ["Philadelphia sits on the Delaware River and the…", "Schuylkill River", ["Susquehanna River", "Allegheny River", "Ohio River"], "Say it SKOO-kul."],
+  ["The Appalachian Mountains cross Pennsylvania from…", "southwest to northeast", ["north to south only", "east to west only", "northwest to southeast only"], "The ridges line up that way."],
+  ["The highest point in Pennsylvania, Mount Davis, is about…", "3,200 feet above sea level", ["320 feet", "12,000 feet", "20,000 feet"], "It is in the southwest, in Somerset County.", true],
+  ["Pennsylvania's Ridge and Valley region is known for…", "long ridges with valleys between them", ["flat desert", "volcanoes", "sand dunes"], "The land is folded."],
+  ["The Piedmont in southeastern Pennsylvania has rolling hills and…", "rich farmland", ["glaciers", "deserts", "ice caps"], "Lancaster County is there."],
+  ["Much of western and northern Pennsylvania is a hilly plateau because…", "rivers have cut deep valleys into high, flat land", ["volcanoes erupted", "the ocean covered it today", "wind built giant dunes"], "Erosion carved the land.", true],
+  ["The Delaware Water Gap is a gap in a ridge that was cut by…", "the Delaware River over a very long time", ["a volcano", "a bulldozer", "a glacier from the sea"], "Water wears away rock.", true],
+  ["Glaciers from the last ice age reached parts of Pennsylvania and left behind…", "lakes and boulders in the northeast and northwest", ["volcanoes", "coral reefs", "deserts"], "The Poconos have many glacial lakes.", true],
+  ["Erosion is…", "the wearing away and moving of rock and soil by water, wind or ice", ["a kind of volcano", "the building of a dam", "the growth of a forest"], "Rivers cause erosion."],
+  ["Pennsylvania's largest city is…", "Philadelphia", ["Pittsburgh", "Harrisburg", "Erie"], "On the Delaware River."],
+  ["Pennsylvania's second largest city is…", "Pittsburgh", ["Allentown", "Scranton", "Reading"], "Where three rivers meet."],
+  ["About how many people live in Pennsylvania?", "nearly 13 million", ["about 1 million", "about 50 million", "about 300,000"], "It is one of the most populous states."],
+  ["Pennsylvania is about how many miles long from east to west?", "309 miles", ["50 miles", "1,000 miles", "90 miles"], "Think of a drive of about five hours."],
+  ["Which area of northeastern Pennsylvania is a popular vacation spot with mountains and lakes?", "the Pocono Mountains", ["the Everglades", "the Great Plains", "the Rocky Mountains"], "Resorts and ski slopes."],
+  ["The only national forest in Pennsylvania is the…", "Allegheny National Forest", ["Yellowstone", "Sherwood Forest", "Tongass"], "It is in the northwest.", true],
+  ["Coal mining can harm streams when water running through old mines becomes…", "acidic and pollutes them", ["clearer", "warmer", "saltier like the sea"], "This is called acid mine drainage.", true],
+  ["Pennsylvania's forests were heavily logged in the late 1800s. Today they…", "have grown back across much of the state", ["are gone forever", "cover only parks", "have turned to desert"], "Trees regrew when logging slowed."],
+  ["The Susquehanna River supplies about half the fresh water that flows into the…", "Chesapeake Bay", ["Gulf of Mexico", "Lake Erie", "Pacific Ocean"], "What happens upstream affects the bay.", true],
+  ["On a map, a key (or legend) tells you…", "what the symbols and colors mean", ["who made the map only", "how old the map is", "the weather"], "It explains the symbols."],
+  ["A physical map mainly shows…", "landforms and bodies of water", ["borders and cities only", "population only", "voting results"], "Mountains and rivers."],
+  ["A political map mainly shows…", "borders, capitals and cities", ["only mountains", "only weather", "only rainfall"], "Human-made lines."],
+  ["Lines of latitude run…", "east and west and measure distance north or south of the equator", ["north and south and measure distance east or west", "only in Pennsylvania", "from the poles to the sky"], "They are parallel to the equator."],
+];
+
+const PENNSYLVANIANS: Q[] = [
+  ["Which Philadelphian started a library where members could borrow books and helped found a university?", "Benjamin Franklin", ["George Washington", "Thomas Edison", "Paul Revere"], "He also invented the lightning rod."],
+  ["Benjamin Franklin was born in Boston but made which Pennsylvania city his home?", "Philadelphia", ["Harrisburg", "Pittsburgh", "Erie"], "He lived and worked there for most of his life."],
+  ["Rachel Carson, born in Springdale, Pennsylvania, wrote Silent Spring, a book about the dangers of…", "pesticides to nature", ["space flight", "steam engines", "telephones"], "It helped start the modern environmental movement."],
+  ["At the University of Pittsburgh, Jonas Salk developed the first successful…", "polio vaccine", ["telephone", "airplane", "television"], "It was announced in 1955."],
+  ["Fred Rogers of Latrobe, Pennsylvania, created a children's TV show called…", "Mister Rogers' Neighborhood", ["Sesame Street", "Looney Tunes", "Cartoon Corner"], "It was made in Pittsburgh."],
+  ["Marian Anderson, born in Philadelphia, gave a famous concert at the Lincoln Memorial in…", "1939", ["1776", "1865", "2001"], "Thousands came to hear her sing."],
+  ["Marian Anderson was a famous…", "singer", ["inventor", "general", "governor"], "She sang opera and spirituals."],
+  ["Mary Cassatt, a Pennsylvania-born painter, was known for…", "paintings of mothers and children", ["steel buildings", "vaccines", "baseball cards"], "She was part of the Impressionist group."],
+  ["Andy Warhol, who grew up in Pittsburgh, was a famous…", "pop artist", ["president", "polar explorer", "astronaut"], "He painted soup cans and portraits."],
+  ["Lucretia Mott, a Quaker minister from Philadelphia, worked for the end of slavery and for…", "women's rights", ["new coins", "taller buildings", "faster ships"], "She helped plan the 1848 Seneca Falls Convention."],
+  ["Thaddeus Stevens, a lawyer and congressman from Lancaster, fought to end slavery and for…", "equal rights for all", ["a new capital", "higher tariffs only", "free railroads"], "He worked on the Reconstruction amendments."],
+  ["The only president born in Pennsylvania was…", "James Buchanan", ["Abraham Lincoln", "George Washington", "Thomas Jefferson"], "He was the 15th president.", true],
+  ["Nellie Bly, born in Pennsylvania, was a reporter who…", "traveled around the world in 72 days", ["flew to the moon", "invented the telephone", "discovered penicillin"], "She raced a record from a story.", true],
+  ["Milton Hershey, who built a chocolate business, also started a school for…", "orphan boys, now the Milton Hershey School", ["sailors", "soldiers", "bankers"], "He gave his wealth to the school."],
+  ["Which Pennsylvania town makes Crayola crayons?", "Easton", ["Erie", "Reading", "Gettysburg"], "It is near the Delaware River.", true],
+  ["Who built a steel empire in Pittsburgh and gave away much of his money to libraries?", "Andrew Carnegie", ["Milton Hershey", "H. J. Heinz", "Benjamin Franklin"], "He was born in Scotland."],
+  ["Richard Allen, born in Philadelphia and once enslaved, founded…", "the African Methodist Episcopal Church", ["a steel company", "a bank", "a university"], "He became its first bishop."],
+  ["Marian Anderson was the first Black singer to perform at the…", "Metropolitan Opera in New York in 1955", ["Liberty Bell", "Lincoln Memorial only", "Philadelphia Zoo"], "A barrier broken by talent.", true],
+  ["William Penn, who founded Pennsylvania, believed in…", "religious freedom and peaceful dealings", ["war with neighbors", "one required church", "no laws"], "He was a Quaker."],
+  ["Rachel Carson's writing helped lead to…", "stronger protection of the environment", ["new railroads", "bigger factories", "the Mint"], "She asked people to think about nature."],
+  ["A contribution to history is…", "something a person does that makes a lasting difference", ["only a coin collection", "only a birthday", "a type of tax"], "People can contribute in many ways."],
+  ["Why do we study people from Pennsylvania's past?", "to learn how their choices shaped the Commonwealth and country", ["to copy their clothing", "to avoid all history", "to win a contest"], "People make history."],
+  ["Which Pennsylvanian helped lead the fight to end slavery by working in Congress?", "Thaddeus Stevens", ["Milton Hershey", "Andy Warhol", "Fred Rogers"], "He was a congressman."],
+  ["Fred Rogers is remembered for speaking to children with…", "kindness and respect", ["fear", "silly tricks", "loud shouting"], "He wanted every child to feel valued."],
+  ["Jonas Salk's vaccine protected children from…", "polio, a disease that can cause paralysis", ["broken bones", "colds", "hay fever"], "Millions of children were vaccinated."],
+  ["Which of these people was a Pennsylvanian artist?", "Mary Cassatt", ["Pablo Picasso", "Leonardo da Vinci", "Vincent van Gogh"], "She worked in France for many years."],
+];
+
+export const UNITS: Unit[] = [
+  bankUnit({
+    id: "pa-g7-pa-government",
+    title: "Pennsylvania's Constitution & Government",
+    emoji: "📜",
+    blurb: "The Commonwealth's constitutions, legislature, governor and courts.",
+    parentNote:
+      "Practices Pennsylvania's constitutions (1776, 1790, 1838, 1874 and 1968), the Declaration of Rights, the General Assembly (50 senators and 203 representatives), the governor and lieutenant governor, vetoes and overrides, how bills pass, Pennsylvania's courts from magisterial district courts to the Supreme Court, the closed primary, interest groups and the taxes of each level of government.",
+    standards: ["5.1.7.A; 5.1.7.B; 5.1.7.E; 5.3.7.A; 5.3.7.B; 5.3.7.D; 5.3.7.E; 5.3.7.F; 5.3.7.G; 5.3.7.I; 5.3.7.J; 5.2.7.C", "the rule of law, Pennsylvania's and the nation's constitutions compared, the three branches, leaders, the closed primary, courts, interest groups and taxes"],
+    items: PA_GOVERNMENT_7,
+  }),
+  bankUnit({
+    id: "pa-g7-pa-new-nation",
+    title: "Pennsylvania in the New Nation",
+    emoji: "🛤️",
+    blurb: "The capital, the fight against slavery, roads, rivers and the Whiskey Rebellion.",
+    parentNote:
+      "Practices Pennsylvania's part in the early republic: Philadelphia as the capital (1790 to 1800), the 1780 law that began to end slavery gradually and Black Philadelphians such as Richard Allen and Absalom Jones, the 1793 yellow fever outbreak, the Whiskey Rebellion, turnpikes, wagons, the National Road and the Main Line canals and railroad, and the early steamboat builders.",
+    standards: ["8.2.7.A; 8.2.7.B; 8.2.7.C; 8.2.7.D; 8.3.7.A; 8.3.7.C", "the contributions of Pennsylvanians, communities and places to the early United States, and how transportation, technology and conflict shaped it"],
+    items: PA_NEW_NATION,
+  }),
+  bankUnit({
+    id: "pa-g7-pa-geography",
+    title: "Pennsylvania's Land & Rivers",
+    emoji: "⛰️",
+    blurb: "Mountains, rivers, regions and how people change the land.",
+    parentNote:
+      "Practices Pennsylvania's geography: its neighbors, Lake Erie, the Delaware, Susquehanna, Allegheny and Monongahela rivers, the Appalachian ridges and plateaus, the Piedmont, the Delaware Water Gap, glaciers and erosion, cities and population, and how mining, logging and rivers connect people and places, along with the map skills used to read them.",
+    standards: ["7.1.7.A; 7.1.7.B; 7.2.7.A; 7.2.7.B; 7.3.7.A; 7.4.7.A; 7.4.7.B", "geographic tools, the regions and physical features of Pennsylvania, the processes that shape them, its human characteristics and how people and land affect each other"],
+    items: PA_GEOGRAPHY,
+  }),
+  bankUnit({
+    id: "pa-g7-pennsylvanians",
+    title: "Pennsylvanians Who Made a Difference",
+    emoji: "🌟",
+    blurb: "Scientists, artists, leaders and entrepreneurs from the Commonwealth.",
+    parentNote:
+      "Practices facts about Pennsylvanians who shaped the country: Benjamin Franklin, William Penn, Lucretia Mott, Thaddeus Stevens, Rachel Carson, Jonas Salk, Fred Rogers, Marian Anderson, Mary Cassatt, Andy Warhol, Nellie Bly, James Buchanan and the business builders Milton Hershey and Andrew Carnegie.",
+    standards: ["8.2.7.A; 8.3.7.A; 8.4.7.A", "the social, political, cultural and economic contributions of individuals from Pennsylvania"],
+    items: PENNSYLVANIANS,
+  }),
+];
+
+/** Put the own units before the planned ones. */
 export const FIRST = false;

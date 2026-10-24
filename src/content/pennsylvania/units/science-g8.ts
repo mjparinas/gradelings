@@ -1,4 +1,130 @@
 import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
 
-export const UNITS: Unit[] = [];
+// Pennsylvania's own Grade 8 science units (`pa-` ids), for the STEELS technology and engineering standards no shared
+// unit practises: gathering and judging data from tests and refining a design (3.5.6-8.B, L, M, O, P, T, V, W, X), how
+// technological systems take inputs and use feedback, open and closed loops, and keeping a system working (3.5.6-8.A, J, K,
+// EE, FF, GG, HH), and weighing trade-offs, predicting outcomes and the link between creativity and invention (3.5.6-8.H, S,
+// U, Y, AA, BB, DD, II, KK).
+
+const DESIGN_AND_TESTING: Q[] = [
+  ["Criteria in a design problem are…", "the things a solution must do to succeed", ["the colors of the drawing", "the names of the team", "the day of the test"], "Criteria say what success looks like."],
+  ["Constraints in a design problem are…", "the limits, such as cost, time and materials", ["the goals of the project", "the winners of a contest", "the weather forecast"], "Constraints limit what you can do."],
+  ["A team must build a bridge from craft sticks that holds 2 kg and costs under $5. Which is a constraint?", "costs under $5", ["holds 2 kg", "built from a bridge", "looks nice to the team"], "A limit on cost is a constraint."],
+  ["In the same problem, which is a criterion?", "holds 2 kg", ["costs under $5", "uses craft sticks only", "must be done on Friday"], "Holding the weight is what the bridge must do."],
+  ["Before designing, why should a team define criteria and constraints clearly?", "so they can tell whether a solution works", ["to make the project longer", "to avoid testing", "to choose a color"], "Clear goals make evaluation fair."],
+  ["Which tool measures the mass of a model bridge?", "a balance", ["a thermometer", "a stopwatch", "a ruler"], "Mass is measured with a balance."],
+  ["Which instrument measures how long a car takes to roll down a ramp?", "a stopwatch", ["a balance", "a thermometer", "a compass"], "Time is measured with a timer."],
+  ["A tester wants data on how well two bike helmets absorb a drop. A fair test drops each helmet…", "from the same height with the same weight inside", ["from different heights", "once for one and ten times for the other", "with a different test head each time"], "A fair test changes one thing only."],
+  ["Which would most improve the accuracy of a measurement?", "repeating it several times and averaging the results", ["measuring once and guessing", "using a different tool each time", "changing the test each time"], "Repeated trials reduce error."],
+  ["A student measures a ramp time three times: 2.1 s, 2.2 s and 5.8 s. What should the student do?", "check why the 5.8 s trial differed and repeat the test", ["use only 5.8 s", "ignore all three", "add them and call it the time"], "An odd result needs a check.", true],
+  ["A model is useful in design because it lets a team…", "test and improve a design before building the final one", ["avoid all testing", "skip planning", "make it more expensive"], "Models allow iterative testing."],
+  ["Iterative design means…", "testing, changing and testing again", ["building once and stopping", "choosing at random", "never changing a plan"], "It is a repeating cycle."],
+  ["Two bridge designs held 3 kg and 4 kg. Design A used 40 sticks, Design B used 70 sticks. Which test result should the team also consider?", "how many sticks each used", ["the color of the sticks", "the team's names", "the weather that day"], "A design is judged against all criteria and constraints."],
+  ["A decision matrix helps a team…", "compare designs against the criteria in a systematic way", ["pick a favorite without looking", "avoid choosing", "hide results"], "A matrix scores each option."],
+  ["Design A scores 8 on strength and 3 on cost. Design B scores 6 and 6. If strength and cost count equally, which design has the higher total?", "Design B, with 12 compared to 11", ["Design A, with 12 compared to 11", "They are tied", "Design A, with 24"], "Add each design's scores.", true],
+  ["Human factors in design means thinking about…", "how people will use and handle the product", ["only how it looks to machines", "only its price", "only its weight on Mars"], "Designs must fit people."],
+  ["A door handle for young children is placed lower on the door. This shows a design that considers…", "human factors", ["only color", "only cost", "only speed"], "It fits the user's size."],
+  ["Good design for people with different abilities often includes…", "options that work for many users", ["only one way to use the product", "tiny buttons only", "no instructions"], "Inclusive design helps more people."],
+  ["After testing, a team finds the bridge snaps at its middle. Which change is a good refinement?", "add braces near the middle where the stress is highest", ["remove sticks from the middle", "make the bridge longer", "ignore the break"], "Data guides improvements.", true],
+  ["A team defends its design choice by…", "using test data and the criteria to explain why", ["saying it is the prettiest", "ignoring questions", "changing the criteria"], "Evidence supports decisions."],
+  ["Which statement is a good way to defend a design?", "Our model held the most weight and stayed under budget.", ["We like blue.", "It looks cool.", "Our friend made it."], "Use evidence tied to the criteria.", true],
+  ["A team combines the strong base of Design A and the light roof of Design B. This is…", "combining the best features of several designs", ["copying without testing", "giving up", "starting over without data"], "Compare tests, then combine strengths."],
+  ["Which sources of information should a team use to define a design problem?", "research, user needs and scientific principles", ["only guesses", "only rumors", "only a favorite color"], "Good criteria come from knowledge.", true],
+  ["Which of these is an instrument for gathering data on the performance of a toaster?", "a thermometer", ["a pencil", "a paper clip", "a hammer"], "A thermometer tracks heating.", true],
+  ["To test a flashlight's battery life fairly, you would…", "time how long each battery lasts in the same flashlight", ["use different flashlights", "stop at random times", "only use the new battery"], "Keep the test the same for each battery.", true],
+  ["A team's prototype fails the test. What is the best next step?", "study why it failed and refine the design", ["throw out the data", "blame the tools", "stop the project"], "Failure gives data for the next design.", true],
+];
+
+const CONTROL_AND_SYSTEMS: Q[] = [
+  ["A system is…", "a group of parts that work together", ["a single part", "a kind of metal", "a type of rock"], "A system has parts that interact."],
+  ["The input of a system is…", "what goes into it", ["what comes out of it", "its color", "its name"], "Inputs start the process."],
+  ["The output of a system is…", "what the system produces", ["what goes in", "its brand", "its cost only"], "Outputs are the results."],
+  ["In a toaster, the bread going in is the…", "input", ["output", "feedback", "process"], "The bread goes in."],
+  ["In a toaster, heating the bread is the…", "process", ["input", "output", "feedback"], "The toaster changes the bread."],
+  ["In a toaster, the toast popping up is the…", "output", ["input", "process", "feedback"], "The finished toast is the result."],
+  ["Feedback in a system is…", "information about the output that is used to adjust the system", ["the cost of the system", "a loud sound", "a color change"], "Feedback helps control the system."],
+  ["A thermostat turns a furnace on when a room is cold and off when it is warm. It uses…", "feedback", ["no information", "only guessing", "only the weather outside"], "It senses temperature and adjusts."],
+  ["An open-loop system…", "has no feedback path and needs a person to change it", ["adjusts itself using feedback", "has no inputs", "never stops"], "A person must step in."],
+  ["A closed-loop system…", "uses feedback to adjust itself without a person", ["has no feedback", "always needs a person", "has no output"], "Feedback closes the loop."],
+  ["A simple toaster with a timer is an open-loop system because…", "it does not check how brown the toast is", ["it senses the color", "it has no timer", "it has no heat"], "It runs for a set time no matter what."],
+  ["Which is a closed-loop system?", "a thermostat that keeps a room at a set temperature", ["a light switch you flip by hand", "a hand crank", "a flashlight with a plain switch"], "It senses and adjusts on its own."],
+  ["A person flips a switch to turn on a lamp and flips it off later. This is…", "an open-loop system", ["a closed-loop system", "a feedback system", "an automatic system"], "A person controls it.", true],
+  ["A sprinkler that waters for 20 minutes whether or not it has rained is…", "open-loop", ["closed-loop", "a thermostat", "a motor"], "It has no sensor.", true],
+  ["A sprinkler with a sensor that shuts it off when the soil is wet is…", "closed-loop", ["open-loop", "not a system", "a broken sprinkler"], "The sensor gives feedback.", true],
+  ["A device that controls a technological system, such as a remote, is an example of…", "a control device", ["a power plant", "a natural resource", "a kind of food"], "It sends commands."],
+  ["A traffic light that changes on a timer, not by cars, is…", "open-loop", ["closed-loop", "a thermostat", "a sensor"], "It ignores traffic."],
+  ["A traffic light that waits for cars to arrive and then changes uses…", "sensor feedback", ["no information", "a map", "only a timer"], "Sensors detect cars."],
+  ["Cruise control in a car keeps a set speed by checking the car's speed and adjusting the engine. It is…", "closed-loop", ["open-loop", "manual", "unpowered"], "It uses feedback."],
+  ["Systems thinking means considering…", "how all the parts and the surroundings fit together", ["only one part", "only the color", "only the price"], "Parts and the environment interact."],
+  ["A new factory changes traffic, jobs and water use in a town. That is an example of…", "systems affecting each other", ["no connections", "random chance", "a single cause only"], "Technological, economic and environmental systems interact.", true],
+  ["Before fixing a broken machine, you should first…", "read instructions, check safety and unplug it", ["start pulling parts", "run it harder", "ignore the problem"], "Safe diagnosis comes first."],
+  ["Which is a safe way to repair a system?", "turn off the power, use the right tool and wear safety gear", ["use any tool", "work while it runs", "skip the instructions"], "Safety is part of repair.", true],
+  ["A technician finds that a bicycle's brakes squeal. Which is a good way to diagnose the problem?", "inspect the brake pads and cables one at a time", ["replace the whole bike", "ignore it", "ride faster"], "Check parts in order.", true],
+  ["Why do people keep a user manual for a product?", "it explains how to use and maintain it", ["it makes it work", "it adds power", "it is not useful"], "Research helps with use and care."],
+  ["Which would help maintain a technological product?", "following the maker's directions for cleaning and checks", ["leaving it in the rain", "dropping it often", "using it in unsafe ways"], "Maintenance extends the life of a product.", true],
+  ["A car's check-engine light shows that the system…", "has detected a problem and is giving feedback", ["is turned off", "has no sensors", "has no computer"], "It is a signal for the driver.", true],
+];
+
+const ENGINEERING_TRADEOFFS: Q[] = [
+  ["A trade-off is…", "giving up some of one thing to get more of another", ["getting everything", "avoiding every choice", "choosing at random"], "Designs balance competing factors."],
+  ["A lighter bike frame is easier to ride uphill but may cost more. This is a…", "trade-off", ["solution to everything", "criterion only", "perfect design"], "Weight and cost compete."],
+  ["A phone with a large battery lasts longer but is…", "heavier or thicker", ["lighter and cheaper", "the same size", "smaller"], "Features have trade-offs."],
+  ["Which is a trade-off when building a school bus with extra safety features?", "a higher cost", ["no change in cost", "lower weight", "fewer passengers"], "Safety features add cost and weight."],
+  ["A good engineering decision about a new bridge listens to…", "engineers, drivers, neighbors and the environment", ["only one person", "no one", "only the builder"], "Different people see different effects."],
+  ["Engineers wanted to build a bridge in a city with many rivers. A perspective that matters to the neighbors is…", "noise and traffic near their homes", ["the color of the sky", "the bridge's name", "the day it opens"], "Neighbors are affected.", true],
+  ["Different approaches to design, such as building a bridge or a tunnel, offer…", "different benefits and opportunities", ["the same benefits", "no benefits", "only drawbacks"], "Each approach has strengths."],
+  ["A tunnel under a river does not block boat traffic. A bridge may be cheaper. These are…", "benefits of different approaches", ["flaws in both", "errors", "tests"], "Approaches differ.", true],
+  ["Strengths and weaknesses of a design are judged against…", "established principles and the problem's criteria", ["favorite colors", "luck", "rumors"], "Evaluate with a standard."],
+  ["Which would be a strength of a rain jacket?", "it keeps water out and lets some air through", ["it soaks up water", "it is invisible", "it is very heavy"], "It meets the criteria."],
+  ["Science helps engineers by…", "explaining how materials and forces behave", ["picking colors", "avoiding tests", "naming products"], "Science gives knowledge to apply."],
+  ["Mathematics helps engineers by…", "letting them calculate sizes, loads and costs", ["making products colorful", "removing the need for tests", "changing the weather"], "Math supports design."],
+  ["Which pair of fields helped design a wheelchair ramp?", "engineering and mathematics", ["music and dance", "poetry and drama", "cooking and sewing"], "Engineers use math to set the slope."],
+  ["Technology is the products and systems people make. Engineering is…", "the design process used to make them", ["the products themselves", "the weather", "an animal"], "Engineers design technologies."],
+  ["A foam cooler made for lunches is adapted to keep medicine cold on a trip. This is…", "using an existing product in a different setting", ["inventing a brand new idea", "copying without change", "breaking the product"], "Adapting reuses a design."],
+  ["A raincoat design is adapted into a poncho for a hike. This shows…", "adapting a product to solve a problem in a new setting", ["a failed design", "no design at all", "a new law"], "The design was adjusted.", true],
+  ["Predicting the outcomes of a design at the start helps a team…", "avoid problems before building", ["skip testing", "avoid planning", "ignore users"], "Prediction guides planning."],
+  ["Before making a new playground, a team thinks about who might get hurt and how the area will be cleaned. This is…", "predicting outcomes early", ["wasting time", "ignoring criteria", "random thinking"], "Think ahead.", true],
+  ["Sticky notes were invented when a glue meant for strong bonding turned out weak and reusable. This shows…", "creativity can lead to unintended innovations", ["glue is always strong", "inventions are planned perfectly", "mistakes have no uses"], "Unexpected results can lead to new ideas."],
+  ["Penicillin was discovered when mold stopped bacteria from growing in a dish. This is an example of…", "a surprising result leading to a new medicine", ["a planned recipe", "a broken tool", "a law"], "Observation of the unexpected led to a discovery.", true],
+  ["Knowledge from art helps design a product by…", "improving how it looks and feels", ["making it heavier", "removing the need for engineering", "hiding it"], "Other subjects affect design."],
+  ["Knowledge about health helps design which product?", "a helmet that protects the head", ["a book with no words", "a plain rock", "a paper clip"], "Health knowledge shapes safe design.", true],
+  ["Engineers who test a model aircraft wing in a wind tunnel, change it and test again are…", "using a research and development process", ["avoiding data", "ending the project", "making a final product"], "R&D improves designs through tests."],
+  ["The first airplanes flew only a short distance. Later planes flew farther because inventors…", "tested and refined earlier designs over time", ["gave up", "copied birds exactly", "stopped using science"], "Innovation builds on earlier work.", true],
+  ["A community must choose between a new road and a park on the same land. Which question helps weigh the choice?", "Who benefits from each, and what do we give up?", ["Which has a nicer name?", "Which is closer to the Moon?", "Which one is blue?"], "Good decisions compare benefits and costs.", true],
+  ["When a trade-off has no perfect answer, the best option is usually…", "a careful compromise that meets the most important criteria", ["pick whatever is fastest", "ignore the criteria", "choose by chance"], "Compromise balances competing factors.", true],
+];
+
+export const UNITS: Unit[] = [
+  bankUnit({
+    id: "pa-g8-design-and-testing",
+    title: "Design, Test & Improve",
+    emoji: "📐",
+    blurb: "Define a problem, test designs fairly and refine them with data.",
+    parentNote:
+      "Practices defining the criteria and constraints of a design problem, gathering accurate data with instruments, iterative testing of a model, comparing competing designs with a decision matrix, applying human factors, refining a design and defending decisions with evidence.",
+    standards: ["3.5.6-8.B; 3.5.6-8.L; 3.5.6-8.M; 3.5.6-8.O; 3.5.6-8.P; 3.5.6-8.T; 3.5.6-8.V; 3.5.6-8.W; 3.5.6-8.X", "using instruments and designed methods to gather data, iterative testing of a model, interpreting accuracy, evaluating competing designs, applying human factors, refining designs, defining criteria and constraints and defending design decisions"],
+    items: DESIGN_AND_TESTING,
+  }),
+  bankUnit({
+    id: "pa-g8-control-and-systems",
+    title: "Systems, Feedback & Control",
+    emoji: "🎛️",
+    blurb: "Inputs, outputs, feedback, and keeping a system working safely.",
+    parentNote:
+      "Practices telling inputs, processes, outputs and feedback apart in technological systems, open-loop and closed-loop systems (a toaster, a thermostat, a sprinkler, a traffic light), systems thinking, control devices, and safely reading instructions to maintain, diagnose and repair a system.",
+    standards: ["3.5.6-8.A; 3.5.6-8.J; 3.5.6-8.K; 3.5.6-8.EE; 3.5.6-8.FF; 3.5.6-8.GG; 3.5.6-8.HH", "researching how to use and maintain products, safely diagnosing and repairing systems, using devices to control systems, inputs, processes, outputs and feedback, systems thinking, and open-loop and closed-loop systems"],
+    items: CONTROL_AND_SYSTEMS,
+  }),
+  bankUnit({
+    id: "pa-g8-engineering-tradeoffs",
+    title: "Trade-Offs & Innovation",
+    emoji: "⚖️",
+    blurb: "Weigh competing needs, link science and math to design, and see how inventions grow.",
+    parentNote:
+      "Practices evaluating trade-offs from different perspectives, the benefits of different design approaches, the strengths and weaknesses of designs, how science, mathematics and other subjects contribute to technology, adapting a product to a new setting, predicting outcomes early, and how creativity can lead to unintended innovations.",
+    standards: ["3.5.6-8.H; 3.5.6-8.S; 3.5.6-8.U; 3.5.6-8.Y; 3.5.6-8.AA; 3.5.6-8.BB; 3.5.6-8.DD; 3.5.6-8.II; 3.5.6-8.KK", "evaluating trade-offs, the benefits of different approaches to design, the strengths and weaknesses of designs, contributions of science, technology, engineering and mathematics, adapting a product, research and development, predicting outcomes and creativity in innovation"],
+    items: ENGINEERING_TRADEOFFS,
+  }),
+];
 export const FIRST = false;

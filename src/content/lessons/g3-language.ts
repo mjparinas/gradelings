@@ -205,4 +205,34 @@ export const lessons: GradeLessons = {
     ["Evidence is a fact.", "Lending books for free is a fact."],
     "They lend books for free.",
   ),
+  "language/pa-g3-kinds-of-poems": lesson(
+    ["A haiku has three short lines, often 5, 7 and 5 syllables.", "A limerick has five funny lines. Lines 1, 2 and 5 rhyme.", "Rhymed verse has line endings that rhyme. Free verse has no set pattern."],
+    "A poem has three short lines and no rhyme. It is most likely a…",
+    ["Limericks have five lines.", "Three short lines make a haiku."],
+    "haiku",
+  ),
+  "language/pa-g3-claims-evidence-purpose": lesson(
+    ["A claim is what the author wants you to believe.", "Evidence is a fact or detail that backs up the claim.", "The purpose is why the author wrote: to inform, persuade or entertain."],
+    "Claim: Libraries help everyone. Which is evidence?  They lend books for free. Libraries are great.",
+    ["Evidence is a fact.", "Lending books for free is a fact."],
+    "They lend books for free.",
+  ),
+  "language/pa-g3-new-words": lesson(
+    ["Roots and affixes help you decode a word. Un- means not and -ful means full of.", "A sentence can give a clue to a word’s meaning.", "Some words have more than one meaning, so context decides."],
+    "Careful means…",
+    ["-ful means full of.", "Careful means full of care."],
+    "full of care",
+  ),
+  "language/pa-g3-writing-moves": lesson(
+    ["Introduce your topic. Group related facts together.", "Linking words such as also, another and because connect ideas.", "Finish with a concluding sentence."],
+    "Which linking word adds a fact? “Owls hunt at night. ___, they have sharp hearing.”",
+    ["You are adding more.", "Also adds a fact."],
+    "Also",
+  ),
+  "language/pa-g3-prove-it": lesson(
+    ["Ask yourself, where in the text does it say so?", "Use details and facts as proof.", "Check that your answer matches the words."],
+    "“Rain filled the creek, so the bridge was closed.” Why was the bridge closed?",
+    ["Look for the word so.", "The rain filled the creek."],
+    "the creek was full of rain",
+  ),
 };

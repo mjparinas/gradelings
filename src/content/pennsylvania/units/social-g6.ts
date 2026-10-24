@@ -1,4 +1,143 @@
 import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
 
-export const UNITS: Unit[] = [];
+// Pennsylvania's own Grade 6 social studies units (`pa-` ids). Grade 6 here is world history and geography with
+// economics and how governments work, so Pennsylvania's own units cover what the shared world units don't: the
+// Commonwealth's businesses and entrepreneurs (6.2.6-8), its local, state and national governments and taxes (5.3.6),
+// and personal finance (17.x.6-8). Facts are from docs/research/pennsylvania/FACTS.md or are well established.
+
+const BUSINESS: Q[] = [
+  ["A business owned and run by one person is a…", "sole proprietorship", ["partnership", "corporation", "public school"], "One owner."],
+  ["A business owned by two or more people who share the work, profits and risks is a…", "partnership", ["sole proprietorship", "corporation", "government agency"], "Partners share."],
+  ["A business owned by shareholders, and treated by law as its own entity, is a…", "corporation", ["sole proprietorship", "partnership", "family"], "Owners hold shares."],
+  ["One advantage of a corporation is that its owners usually…", "are not personally responsible for the company's debts", ["never pay any taxes", "always make a profit", "cannot sell their shares"], "This is called limited liability."],
+  ["Profit is the money left after a business pays its…", "costs", ["customers", "taxes only", "employees' friends"], "Revenue minus costs."],
+  ["A business that earns $5,000 and spends $3,200 has made a profit of…", "$1,800", ["$8,200", "$1,200", "$18,000"], "Subtract the costs from the income."],
+  ["A business that earns $2,000 but spends $2,600 has a…", "loss of $600", ["profit of $600", "profit of $4,600", "loss of $4,600"], "It spent more than it earned."],
+  ["Profit is an incentive because it…", "rewards businesses for making goods people want", ["punishes hard work", "lowers all prices", "stops competition"], "People work for rewards."],
+  ["An entrepreneur is a person who…", "starts a business and takes a risk to earn a profit", ["only works for a large company", "collects taxes", "lends money for free"], "Think of Milton Hershey."],
+  ["Starting a business involves risk because…", "it might lose money", ["it always earns money", "it never needs customers", "it has no costs"], "Success is not guaranteed."],
+  ["Milton Hershey built a chocolate factory in Pennsylvania and also built…", "a town with homes, a school and a park for his workers", ["the Liberty Bell", "a steel mill in Pittsburgh", "Independence Hall"], "The town is named Hershey."],
+  ["In 1901 Andrew Carnegie sold his steel company, which became part of…", "U.S. Steel", ["Standard Oil", "Hershey's", "the Pennsylvania Railroad"], "It became a giant company.", true],
+  ["H. J. Heinz started a food company in…", "Pittsburgh, Pennsylvania", ["Boston", "Dallas", "Seattle"], "Ketchup."],
+  ["Benjamin Franklin ran a successful printing business in Philadelphia. That makes him an example of…", "an entrepreneur", ["a monopoly", "a consumer only", "a tax collector"], "He started and ran a business."],
+  ["Standard Oil was called a monopoly because it…", "controlled most of the oil refining in the country", ["sold only toys", "was owned by the government", "had many equal rivals"], "One company dominated the market.", true],
+  ["Why can a monopoly hurt customers?", "with no competition it can raise prices and offer fewer choices", ["it always lowers prices", "it gives away products", "it adds more stores"], "Customers have nowhere else to go."],
+  ["Competition between businesses often leads to…", "lower prices and better products", ["higher prices and fewer choices", "no customers", "closed stores"], "Each tries to win customers."],
+  ["A snowstorm makes many people want shovels at once. The price will usually…", "go up", ["go down", "stay at zero", "not change ever"], "Demand rises."],
+  ["A store has many unsold winter coats in March. It will likely…", "lower the price", ["raise the price", "close forever", "stop selling all clothes"], "Supply is higher than demand."],
+  ["Workers with rare skills that many employers need usually earn…", "higher wages", ["lower wages", "no wages", "the same as everyone"], "Demand for them is high."],
+  ["Productivity is…", "how much is made with the time and resources used", ["how many workers there are", "how big a factory is", "how many days off people take"], "Output per worker."],
+  ["A new machine lets a worker make twice as many boxes in an hour. That raises…", "productivity", ["prices only", "taxes", "scarcity"], "More output in the same time."],
+  ["Pittsburgh grew as a steel city because…", "coal, iron ore, rivers and railroads were close", ["there were no rivers", "iron was too far away", "railroads avoided it"], "Resources and transportation matter.", true],
+  ["Pennsylvania's Lancaster Turnpike, finished in 1795, helped trade by…", "giving wagons a hard road between Philadelphia and Lancaster", ["blocking farm goods", "ending all travel", "replacing the rivers"], "It was one of America's first long paved roads.", true],
+  ["Why did factories in the 1800s often locate near coal and rivers?", "coal powered the machines and rivers carried goods", ["coal was too heavy to use", "rivers could not carry boats", "factories needed no power"], "Energy and transportation."],
+  ["Successful entrepreneurs are often…", "willing to take risks and work hard", ["afraid of any change", "unwilling to learn", "sure never to lose money"], "They try new ideas."],
+  ["Which business sells a service rather than a good?", "a barber shop", ["a toy factory", "a bakery", "a shoe maker"], "A service is work done for someone."],
+  ["Who decides how many of a good to produce in a market economy?", "businesses responding to what buyers want and will pay", ["a king", "nobody", "only the weather"], "Buyers and sellers guide it."],
+];
+
+const GOVERNMENTS_TAXES: Q[] = [
+  ["Pennsylvania has three levels of government: local, state and…", "national (federal)", ["royal", "military", "tribal only"], "The United States government."],
+  ["Pennsylvania has more than 2,500 local governments called municipalities. They include cities, boroughs and…", "townships", ["castles", "kingdoms", "ships"], "Local governments take care of nearby needs."],
+  ["Which of these is usually a local government service?", "trash pickup and local parks", ["printing money", "running the army", "building national highways"], "Close to home."],
+  ["Pennsylvania has about 500 school districts. Each is led by…", "an elected school board", ["a king", "the governor alone", "the president"], "Voters pick members."],
+  ["Most Pennsylvania counties are led by a board of…", "county commissioners", ["kings", "generals", "senators"], "Usually three of them."],
+  ["A mayor leads…", "a city", ["a state", "the nation", "a school district"], "Local leader."],
+  ["Which level of government is responsible for national defense and printing money?", "the national government", ["the school board", "the county", "a borough"], "These are national powers."],
+  ["Which service does the state government of Pennsylvania provide?", "building and repairing state highways", ["picking up trash on your street", "running the post office", "defending the nation"], "Roads across the Commonwealth."],
+  ["The state's laws are made in Harrisburg by the…", "General Assembly", ["Supreme Court only", "school board", "county commissioners"], "Senate and House."],
+  ["A tax is…", "money people and businesses must pay to government", ["a gift to friends", "a kind of loan", "a store coupon"], "It pays for services."],
+  ["Why does government collect taxes?", "to pay for services such as roads, schools, police and fire protection", ["to make people poor", "to buy toys", "for no reason"], "Public services cost money."],
+  ["A property tax is paid on…", "land and buildings", ["groceries", "earned pay", "library books"], "Owners pay it."],
+  ["In Pennsylvania, local property taxes are a main source of money for…", "public schools", ["interstate highways only", "the army", "the post office"], "School districts depend on them."],
+  ["An income tax is a tax on…", "money people earn", ["things people buy", "houses only", "water"], "Paychecks."],
+  ["A sales tax is a tax on…", "things people buy", ["money people earn", "land", "gifts to family"], "You pay it at the register."],
+  ["Pennsylvania's state sales tax rate is…", "6 percent", ["1 percent", "16 percent", "60 percent"], "Six cents on each dollar."],
+  ["With a 6 percent sales tax, the tax on a $50 board game is…", "$3.00", ["$0.30", "$6.00", "$30.00"], "6% of 50 is 0.06 × 50."],
+  ["With a 6 percent sales tax, the tax on a $20 toy is…", "$1.20", ["$12.00", "$0.12", "$2.00"], "0.06 × 20.", true],
+  ["Which purchase is generally not charged Pennsylvania sales tax?", "basic groceries such as bread and milk", ["a board game", "a toy", "a pair of headphones"], "Food at the store is mostly exempt."],
+  ["A tax that takes the same percent from everyone is called…", "proportional", ["progressive", "regressive", "optional"], "Same share for all."],
+  ["A tax that takes a larger percent from people with higher incomes is called…", "progressive", ["proportional", "regressive", "flat"], "The rate goes up with income."],
+  ["A tax that takes a larger share of income from people with lower incomes is called…", "regressive", ["progressive", "proportional", "voluntary"], "A $1 tax hurts a family with less money more.", true],
+  ["Pennsylvania's personal income tax is a flat rate of 3.07 percent. That makes it a…", "proportional tax", ["progressive tax", "regressive tax", "property tax"], "Everyone pays the same rate.", true],
+  ["A public good or service, such as a road or a fire department, is…", "provided by government for everyone to use", ["sold only to the rich", "made only by one company", "never paid for"], "It benefits the whole community."],
+  ["Before a person can vote in an election, they must…", "register to vote", ["join a party", "run for office", "own a house"], "Registering puts your name on the list."],
+  ["A primary election is held to…", "choose each party's candidates", ["decide who wins the office", "pick a new flag", "set taxes"], "A step before the general election."],
+  ["A general election is held to…", "choose who will hold the office", ["pick the party's candidates", "write a new constitution", "set the price of milk"], "The final vote."],
+  ["Courts help solve conflicts by…", "applying the law to the facts of a case", ["voting on every case", "ignoring the law", "asking the governor to decide"], "Judges and juries decide."],
+  ["What do all levels of government have in common?", "they make rules and provide services for people", ["they are all the same size", "they run the same businesses", "they never cost money"], "Each has its own job."],
+];
+
+const MONEY_BASICS: Q[] = [
+  ["Gross pay is…", "pay before anything is taken out", ["pay after taxes", "a bonus", "tips only"], "The total earned."],
+  ["Net pay, or take-home pay, is…", "pay after deductions", ["pay before deductions", "the tax rate", "the hourly wage"], "What you actually receive."],
+  ["Payroll deductions often include…", "taxes and sometimes health insurance", ["a free lunch", "gifts", "coupons"], "Money withheld from a paycheck."],
+  ["Maya earns $12 an hour and works 10 hours. Her gross pay is…", "$120", ["$22", "$1.20", "$1,200"], "12 × 10."],
+  ["Omar earns a salary of $48,000 a year. Before taxes, he earns each month…", "$4,000", ["$400", "$40,000", "$4,800"], "Divide by 12."],
+  ["Pay based on how much a worker sells is called…", "commission", ["an allowance", "a refund", "a coupon"], "More sales, more pay."],
+  ["Extra money a customer gives for good service is a…", "tip", ["tax", "fee", "loan"], "A thank-you."],
+  ["Being paid for each item you make is called…", "piecework", ["salary", "tips", "interest"], "Pay by the piece."],
+  ["A budget is a plan for…", "income, spending and saving", ["only spending", "only saving", "only borrowing"], "It balances money coming in and going out."],
+  ["A fixed expense is one that…", "stays about the same each month, such as rent", ["changes every day", "is never paid", "is only a gift"], "Same amount each time."],
+  ["A variable expense is one that…", "changes from month to month, such as groceries", ["stays exactly the same", "is never needed", "is always zero"], "It goes up and down."],
+  ["Ravi earns $200 a month mowing lawns and plans to save 25 percent. How much does he save?", "$50", ["$25", "$100", "$5"], "A quarter of 200."],
+  ["Which of these is a want, not a need?", "a new video game", ["groceries", "a bus pass to get to school", "basic medicine"], "Needs keep you healthy and able to live and learn."],
+  ["Simple interest on $200 saved at 5 percent for 1 year is…", "$10", ["$1", "$100", "$20"], "5% of 200."],
+  ["Simple interest on $100 at 10 percent for 3 years is…", "$30", ["$3", "$10", "$300"], "$10 each year for 3 years.", true],
+  ["Compound interest means you earn interest on…", "your savings and on interest already earned", ["only your first deposit", "nothing", "only what you borrow"], "Interest earns interest."],
+  ["A 12-ounce box of cereal costs $3.00. The price per ounce is…", "$0.25", ["$0.36", "$2.50", "$3.12"], "Divide the price by the ounces."],
+  ["Which is the better buy: 10 pencils for $2.50 or 24 pencils for $5.28?", "24 pencils for $5.28", ["10 pencils for $2.50", "they cost the same per pencil", "neither"], "Compare the price of one pencil: $0.25 versus $0.22.", true],
+  ["A $40 backpack is 25 percent off. The sale price is…", "$30", ["$10", "$25", "$35"], "25% of 40 is 10; subtract."],
+  ["A debit card…", "takes money straight from your bank account", ["lets you borrow without repaying", "has no connection to a bank", "never needs a PIN"], "You spend your own money."],
+  ["A credit card…", "lets you borrow money that you must repay, with interest if you don't pay it all", ["is free money", "takes money from your account at once", "can never be used online"], "Borrowing."],
+  ["Interest on a loan is…", "the fee for borrowing money", ["a gift from the bank", "a kind of tax", "the cost of a bank account"], "The borrower pays it."],
+  ["A credit score shows…", "how reliably a person has paid back borrowed money", ["how tall a person is", "a person's favorite store", "how much a person earns"], "Lenders use it."],
+  ["Sharing your bank PIN or password with a stranger is…", "unsafe", ["a good way to be safe", "required", "the same as a gift"], "Keep it private."],
+  ["Why shouldn't you share your Social Security number online?", "thieves can use it to steal your identity", ["it makes the website faster", "it is public already", "it earns interest"], "Protect personal information."],
+  ["Insurance protects people by…", "sharing the risk of big costs among many people who pay premiums", ["stopping accidents", "paying for all wants", "giving free money to everyone"], "Many pay a little."],
+  ["A premium is…", "the regular payment you make for insurance", ["a coupon", "a tax refund", "a type of loan"], "You pay it to stay covered."],
+  ["A deductible is…", "the amount you pay first before insurance pays", ["a bonus from the insurer", "a tax", "the price of a policy"], "Out-of-pocket cost.", true],
+  ["An emergency fund is…", "savings set aside for unexpected costs", ["money for gifts", "money for vacations only", "money lent to friends"], "For surprises."],
+  ["The opportunity cost of spending $20 on a game is…", "the next best thing you could have done with the $20", ["the price of the game", "nothing at all", "the tax on the game"], "What you give up."],
+  ["Owning a share of a company's stock means you own…", "a small piece of the company", ["all of the company", "a building only", "a loan to the company"], "Stockholders are part owners."],
+  ["Investing can earn more than saving, but it can also…", "lose value", ["never change", "be guaranteed", "stop all risk"], "Risk and reward go together.", true],
+  ["Giving money to a charity is making a…", "donation", ["profit", "loan", "purchase tax"], "A gift to a cause."],
+  ["At a 6 percent sales tax, a $30 toy costs how much in tax?", "$1.80", ["$18.00", "$0.18", "$3.00"], "0.06 × 30."],
+];
+
+export const UNITS: Unit[] = [
+  bankUnit({
+    id: "pa-g6-pa-business",
+    title: "Pennsylvania Businesses & Entrepreneurs",
+    emoji: "🏭",
+    blurb: "Profit, competition, wages and the people who built Pennsylvania's businesses.",
+    parentNote:
+      "Practices business and market ideas with Pennsylvania examples: sole proprietorships, partnerships and corporations, profit and loss, incentives, entrepreneurs (Milton Hershey, H. J. Heinz, Andrew Carnegie and Benjamin Franklin), monopolies and competition, supply and demand, wages, productivity, and how resources and transportation shaped where industries grew.",
+    standards: ["6.2.6-8.H; 6.2.6-8.I; 6.2.6-8.J; 6.2.6-8.B; 6.2.6-8.C; 6.2.6-8.D; 6.2.6-8.E; 6.2.6-8.F; 6.2.6-8.G", "types of businesses, profit and loss, entrepreneurs in Pennsylvania and the United States, competition, monopolies, supply and demand, wages, productivity and how resources and transportation shaped economic patterns"],
+    items: BUSINESS,
+  }),
+  bankUnit({
+    id: "pa-g6-governments-taxes",
+    title: "Who Governs & Who Pays",
+    emoji: "🏘️",
+    blurb: "Local, state and national government, and the taxes that pay for them.",
+    parentNote:
+      "Practices how Pennsylvania's three levels of government differ (municipalities, counties, school districts, the General Assembly and the national government), the services each provides, what taxes are and why they are collected (property, income and sales tax, Pennsylvania's 6 percent sales tax and flat 3.07 percent income tax), progressive, proportional and regressive taxes, and the voting steps of registering, primaries and general elections.",
+    standards: ["5.3.6.B; 5.3.6.C; 5.3.6.D; 5.3.6.E; 5.3.6.F; 5.3.6.I; 6.3.6-8.E; 6.3.6-8.F; 6.3.6-8.I", "the role and structure of local, state and national governments, the services they provide, voting, courts, and how taxes are structured and used"],
+    items: GOVERNMENTS_TAXES,
+  }),
+  bankUnit({
+    id: "pa-g6-money-basics",
+    title: "Money Basics",
+    emoji: "💵",
+    blurb: "Paychecks, budgets, interest, credit and keeping your information safe.",
+    parentNote:
+      "Practices personal finance from Pennsylvania's Personal Finance standards: gross and net pay, ways of being paid, budgets, wants and needs, simple and compound interest, unit prices and discounts, sales tax, debit and credit cards, loans, credit scores, insurance, protecting personal information, saving versus investing and giving to charity.",
+    standards: ["17.2.6-8.A; 17.2.6-8.H; 17.3.6-8.B; 17.3.6-8.D; 17.3.6-8.G; 17.3.6-8.L; 17.3.6-8.M; 17.4.6-8.B; 17.4.6-8.C; 17.4.6-8.D; 17.5.6-8.C; 17.5.6-8.F; 17.5.6-8.H; 17.6.6-8.A; 17.6.6-8.D", "pay, budgets, prices and discounts, payment methods, sales tax, saving, interest, investing, insurance, protecting personal information and credit"],
+    items: MONEY_BASICS,
+  }),
+];
+
+/** Put the own units before the planned ones. */
 export const FIRST = false;

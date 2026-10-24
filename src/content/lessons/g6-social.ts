@@ -757,4 +757,22 @@ export const lessons: GradeLessons = {
     ["An indentured servant had a contract for a set number of years.", "Slavery lasted for life and passed to children."],
     "An indentured contract ended; slavery lasted for life",
   ),
+  "social/pa-g6-pa-business": lesson(
+    ["A business can be a sole proprietorship (one owner), a partnership (two or more owners) or a corporation (owned through shares).", "Profit is revenue minus costs. The chance of profit is an incentive, but starting a business is a risk.", "Pennsylvania's Hershey, Heinz and Carnegie built big businesses. Competition lowers prices; a monopoly with no rivals can raise them."],
+    "A shop earns $5,000 and spends $3,200. What is its profit?",
+    ["Profit is the money earned minus the money spent.", "5,000 − 3,200 = 1,800."],
+    "$1,800",
+  ),
+  "social/pa-g6-governments-taxes": lesson(
+    ["Pennsylvania has local governments (cities, boroughs, townships, counties and school districts), a state government and the national government.", "Taxes pay for services. Property tax is on land and buildings, income tax is on pay and sales tax is on things people buy.", "Pennsylvania's sales tax is 6 percent. A tax can be proportional, progressive or regressive, depending on who pays what share."],
+    "How much sales tax is charged on a $50 board game at 6 percent?",
+    ["Change 6 percent to 0.06.", "0.06 × 50 = 3."],
+    "$3.00",
+  ),
+  "social/pa-g6-money-basics": lesson(
+    ["Gross pay is what you earn before deductions. Net pay is what is left after taxes and other deductions come out.", "A budget plans income, spending and saving. Simple interest is the amount times the rate times the years.", "A debit card spends your own money. A credit card borrows money you must repay. Never share your PIN or password."],
+    "What is the simple interest on $200 saved at 5 percent for 1 year?",
+    ["Interest = amount × rate × years.", "200 × 0.05 × 1 = 10."],
+    "$10",
+  ),
 };

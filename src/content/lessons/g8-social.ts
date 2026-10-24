@@ -1015,4 +1015,34 @@ export const lessons: GradeLessons = {
     ["Courts decide what laws mean.", "That is the judicial branch."],
     "judicial",
   ),
+  "social/pa-g8-gettysburg": lesson(
+    ["The Battle of Gettysburg was fought in Adams County, Pennsylvania, from July 1 to 3, 1863. The Union army, led by General Meade, stopped General Lee's Confederate army, and Lee had to retreat south.", "In November 1863 President Lincoln gave the Gettysburg Address at the dedication of a national cemetery. In a few minutes he said the nation was founded on the idea that all people are created equal and called for a new birth of freedom.", "Pennsylvania helped the Union with soldiers trained at Camp Curtin and Camp William Penn, and with coal, iron and supplies from its mines and mills."],
+    "Where was the Gettysburg Address given?",
+    ["It was at a cemetery for soldiers.", "The cemetery was near the battlefield."],
+    "at the dedication of a national cemetery in Gettysburg",
+  ),
+  "social/pa-g8-freedom-seekers": lesson(
+    ["The Underground Railroad was a secret network of people who helped enslaved people reach freedom. Pennsylvania, a free state next to Maryland, was on many routes. Words like conductor and station were code.", "Black and white abolitionists in Pennsylvania worked together. William Still of Philadelphia kept records, Quakers such as Lucretia Mott spoke out, and the Fugitive Slave Act of 1850 made helping freedom seekers a crime.", "Black Pennsylvanians such as James Forten and Robert Purvis built schools, churches and groups. After the war, the 13th, 14th and 15th Amendments ended slavery, made people born here citizens and said that race could not stop a person from voting."],
+    "Why did many freedom seekers cross Pennsylvania?",
+    ["Look at the state next door.", "Pennsylvania was a free state."],
+    "it was a free state next to slave states such as Maryland",
+  ),
+  "social/pa-g8-industry-immigration": lesson(
+    ["In the 1800s Pennsylvania led the way in oil (Titusville, 1859), coal, steel (Pittsburgh), lumber and railroads. Immigrants from Ireland, Germany, Italy, Poland and many other places worked in its mines and mills.", "Work could be dangerous, with long hours and low pay, and children worked too. Workers formed unions and held strikes, such as the Homestead strike in 1892 and the anthracite coal strike of 1902.", "Reformers pushed for safer work and for laws about child labor, and Pennsylvania voted to ratify the 19th Amendment in 1919."],
+    "Why did workers form unions?",
+    ["Think about the long hours and low pay.", "Together they had more power."],
+    "to ask together for better pay and safer jobs",
+  ),
+  "social/pa-g8-pa-and-us-government": lesson(
+    ["Pennsylvania and the United States both have three branches. Pennsylvania's General Assembly has 50 senators and 203 representatives; Congress has 100 senators and 435 representatives.", "The governor leads Pennsylvania for four years, the president the nation. Pennsylvania voters elect their judges; federal judges are appointed by the president and approved by the Senate.", "Rights are listed in the Bill of Rights and in Pennsylvania's Declaration of Rights. Local, state and federal taxes pay for different services."],
+    "Who picks federal judges?",
+    ["It is not the voters.", "The Senate has to approve."],
+    "the president, with the Senate's approval",
+  ),
+  "social/pa-g8-world-media": lesson(
+    ["A country's foreign policy has tools: diplomacy (talking), treaties (agreements), economic aid, military aid and sanctions (penalties). The president leads it, the Senate approves treaties and Congress declares war.", "Countries and groups such as the United Nations work together on shared problems, like disasters and pollution.", "Mass media and symbols shape what people think. Compare several reliable sources, and notice when a message only tries to stir your feelings."],
+    "What is a sanction?",
+    ["It is a way to pressure a country.", "It is a penalty, not a reward."],
+    "a penalty meant to pressure a country to change its actions",
+  ),
 };

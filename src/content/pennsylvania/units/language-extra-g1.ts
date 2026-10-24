@@ -1,0 +1,125 @@
+import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
+
+// Pennsylvania's extra Grade 1 English language arts units (`pa-` ids): words learned from talk and books (including
+// words that connect ideas), the thinking behind informative, opinion and story writing (tapped, not written), and
+// answering questions about key details. The sentences are original. Prompts are short; no typed answers.
+
+const WORDS: Q[] = [
+  ["Which word means the same as “quick”?", "fast", ["slow", "loud", "soft"], "Quick and fast mean the same."],
+  ["Which word means the same as “tired”?", "sleepy", ["hungry", "angry", "silly"], "Tired and sleepy go together."],
+  ["Which word is the opposite of “empty”?", "full", ["light", "small", "wet"], "Empty and full are opposites."],
+  ["Which word is the opposite of “early”?", "late", ["soon", "first", "quiet"], "Early and late are opposites."],
+  ["Which word is the opposite of “smooth”?", "bumpy", ["flat", "shiny", "cold"], "Smooth and bumpy are opposites."],
+  ["Which word means “a little bit wet”?", "damp", ["dry", "dusty", "dark"], "Damp is a little wet."],
+  ["“I like cake, and I like pie.” Which word joins two ideas?", "and", ["like", "cake", "pie"], "And joins ideas."],
+  ["“I stayed home because it rained.” Which word tells why?", "because", ["stayed", "home", "rained"], "Because gives a reason."],
+  ["“I like to run, but I am tired.” Which word shows a difference?", "but", ["like", "run", "tired"], "But shows a difference."],
+  ["“It was cold, so Mia wore a coat.” Which word tells the result?", "so", ["cold", "wore", "coat"], "So tells what happened because of it."],
+  ["“First we mix. Then we bake.” Which word tells the order?", "Then", ["mix", "bake", "we"], "Then tells what is next."],
+  ["Which word fits? “I will clean my room ___ I play.”", "before", ["blue", "cup", "round"], "Before tells the order."],
+  ["“The bird will fly.” “We saw a fly on the wall.” The word fly can be a…", "bug or an action", ["color only", "number only", "place only"], "Some words mean two things."],
+  ["“Please ring the bell.” “She wore a gold ring.” Ring means…", "two different things", ["the same thing", "a color", "a number"], "Same word, two meanings."],
+  ["“The dog’s bark was loud.” Bark means…", "the sound a dog makes", ["the skin of a tree", "a kind of seed", "a leaf"], "Dogs make this sound."],
+  ["“The bark on the tree is rough.” Bark means…", "the outside of a tree", ["a dog’s sound", "a fruit", "a root"], "Trees have it."],
+  ["“Please close the door.” Which word means almost the same as close?", "shut", ["open", "paint", "lift"], "Close and shut mean the same."],
+  ["“A drop of rain.” Which word is the same as drop here?", "bit", ["fall", "toss", "run"], "A drop is a small bit."],
+  ["Which word goes with “red, blue and green”?", "colors", ["shapes", "foods", "sounds"], "They are all colors."],
+  ["Which word does NOT belong? cat, dog, hen, spoon", "spoon", ["cat", "dog", "hen"], "A spoon is not an animal."],
+  ["Which word means a very big storm wind?", "gale", ["breeze", "puff", "drip"], "A gale is a strong wind.", true],
+  ["“The kitten was timid.” Timid means…", "shy and scared", ["loud and proud", "fast and strong", "big and fluffy"], "A timid animal hides.", true],
+  ["“The cake was delicious.” Which is the best sentence that means the same?", "The cake tasted very good.", ["The cake was hot.", "The cake was small.", "The cake was round."], "Delicious means very tasty.", true],
+  ["Which words show sequence?", "first, next, last", ["red, blue, green", "cat, dog, hen", "big, small, tiny"], "They tell the order.", true],
+  ["“We stayed in. Also, we read.” Also means…", "in addition", ["but", "never", "before"], "Also adds more.", true],
+  ["“She was glad, yet nervous.” Yet shows…", "a surprise or difference", ["the order", "a place", "the time"], "Yet is like but.", true],
+];
+
+const WRITING: Q[] = [
+  ["Which sentence tells about ONE topic: dogs?", "Dogs can run and play.", ["Dogs can run and snow is cold.", "Cars have wheels.", "I like pie and dogs."], "Stay on one topic."],
+  ["A writer is telling about bees. Which sentence does NOT fit?", "Cats purr.", ["Bees make honey.", "Bees live in hives.", "Bees can sting."], "That sentence is not about bees."],
+  ["Which is a fact about bees?", "Bees can fly.", ["Bees are the best.", "Bees are scary.", "Everyone loves bees."], "A fact is true."],
+  ["Which two facts are about the moon?", "It shines at night. It looks round.", ["It shines at night. Fish swim.", "Buses stop. It looks round.", "It is cold. Dogs bark."], "Pick facts about the moon."],
+  ["Topic: apples. Which fact fits?", "Apples grow on trees.", ["Dogs can bark.", "Cars have wheels.", "Snow is cold."], "Choose a fact about apples."],
+  ["Which sentence could end a story about a picnic?", "We had fun at the picnic.", ["The picnic started.", "We got the basket.", "Mom made sandwiches."], "An ending wraps up."],
+  ["Which sentence could end a report on frogs?", "Now you know about frogs.", ["Frogs are green.", "Frogs have eyes.", "Frogs jump."], "A closing sentence finishes."],
+  ["Which group of facts goes together?", "Cats purr. Cats nap. Cats climb.", ["Cats purr. Dogs bark. Birds fly.", "Cats purr. Cars honk.", "Cats nap. Cakes bake."], "Group facts on one topic."],
+  ["I think summer is best. Which reason fits?", "I can swim every day.", ["It is on a calendar.", "Pencils are long.", "Frogs are green."], "A reason tells why."],
+  ["I want a dog. Which reason fits?", "Dogs are good friends.", ["Dogs are on a list.", "I have shoes.", "The sky is high."], "A reason supports the opinion."],
+  ["Which is an opinion?", "Soccer is the most fun.", ["Soccer uses a ball.", "A team has players.", "A game has a score."], "An opinion tells what someone thinks."],
+  ["Which sentence gives an opinion with a reason?", "I like the zoo because I can see lions.", ["The zoo is big.", "I went to the zoo.", "Lions have manes."], "Look for because."],
+  ["Which sentence ends an opinion piece well?", "That is why I love the library.", ["The library has books.", "I went on Monday.", "Books have covers."], "An ending repeats the opinion."],
+  ["Which words show the order of events?", "first, then, last", ["big, small, tiny", "red, blue, green", "cat, dog, hen"], "They tell the order."],
+  ["First I put on socks. Then I put on shoes. What do I do last?", "tie my shoes", ["put on socks", "go to bed", "wake up"], "Shoes come after socks."],
+  ["Which story has events in a good order?", "I woke up. I got dressed. I went to school.", ["I went to school. I woke up. I got dressed.", "I got dressed. I went to school. I woke up.", "School woke me up."], "Think about the day."],
+  ["Which sentence tells a feeling?", "I felt proud when I rode my bike.", ["I rode my bike.", "The bike is red.", "Bikes have wheels."], "Proud is a feeling."],
+  ["Which sentence tells about the narrator’s thoughts?", "I thought, This will be fun!", ["The sky was blue.", "There was a hill.", "A bell rang."], "A thought tells what someone thinks."],
+  ["Which sentence tells who the story is about?", "Kim and her dog went out.", ["It was a sunny day.", "They had a ball.", "The park was big."], "It names Kim."],
+  ["Which word tells order?", "Next", ["Pink", "Tall", "Soft"], "Next tells what comes then."],
+  ["Which describing words fit a lemon?", "sour and yellow", ["loud and flat", "sleepy and tall", "round and sad"], "Choose words that fit."],
+  ["Which word is a more exciting word than “big”?", "enormous", ["small", "red", "flat"], "Pick a strong word.", true],
+  ["Which title fits a report about owls?", "All About Owls", ["Pizza Night", "A Day at Sea", "My Red Boots"], "A title tells the topic.", true],
+  ["Which sentence has a capital letter, a name and an end mark?", "Today Ava saw a bird.", ["today ava saw a bird", "today Ava saw a bird.", "Today ava saw a bird"], "Names start with capitals.", true],
+  ["A writer says, “I like snow. It is fun to sled.” What is the opinion?", "I like snow.", ["It is fun to sled.", "Snow is white.", "Sleds have runners."], "The opinion is what the writer thinks.", true],
+  ["Which sentence sounds the most like a good ending?", "At last, we were home.", ["First, we left.", "Then we walked.", "Next, we ate."], "At last wraps up the story.", true],
+];
+
+const PROVE: Q[] = [
+  ["Pip the duck swims in a pond. Where does Pip swim?", "in a pond", ["in a lake", "in a tub", "in a river"], "The story says a pond."],
+  ["Mina has three red apples. How many apples does Mina have?", "three", ["two", "four", "five"], "Look for the number."],
+  ["Jo packed a sandwich and a juice. What did Jo pack?", "a sandwich and a juice", ["a toy and a ball", "a hat and a coat", "a book and a pen"], "Use the details."],
+  ["Kai put on his coat, hat and gloves. What is the weather most likely like?", "cold", ["hot", "sunny and warm", "dusty"], "Warm clothes mean cold weather."],
+  ["Ana’s eyes got wide and she smiled at the cake. How did Ana feel?", "excited", ["sad", "bored", "angry"], "Wide eyes and a smile show excitement."],
+  ["Ben tripped and his book fell. Why did the book fall?", "Ben tripped", ["Ben sang", "the sun came out", "a bus came"], "The story tells why."],
+  ["The pond froze, so the ducks flew south. Why did the ducks leave?", "the pond froze", ["they were hungry", "they wanted a bath", "they heard a song"], "The word so shows a result."],
+  ["Mia wanted to ride a bike, so she asked for one. What did she want?", "a bike", ["a hat", "a kite", "a ball"], "Look at what she asked for."],
+  ["First the egg cracks. Then a chick comes out. What happens after the egg cracks?", "a chick comes out", ["the egg grows", "the hen leaves", "the farmer sings"], "Then tells what is next."],
+  ["Ray swept the floor. Then he mopped. What did he do first?", "swept the floor", ["mopped the floor", "washed a dish", "read a book"], "First comes before then."],
+  ["The author tells that whales are big. Which sentence is from the text?", "Whales are big.", ["Whales can drive.", "Whales live on land.", "Whales are tiny."], "Use the author’s words."],
+  ["A book says, “Ants carry food.” What do ants do?", "carry food", ["sing songs", "drive cars", "bake bread"], "The text tells what ants do."],
+  ["Two books are about dogs. One has photos. One has drawings. How are they different?", "pictures", ["topics", "titles", "authors"], "One has photos, one has drawings."],
+  ["Both books tell how to plant a seed. How are they alike?", "both tell how to plant a seed", ["both are poems", "both are maps", "both are about fish"], "They share a topic."],
+  ["Which sentence tells a connection between two ideas?", "Rain falls, so the grass grows.", ["The grass is green.", "Rain is wet.", "It is a day."], "So connects two ideas."],
+  ["The picture shows a girl holding an umbrella in the rain. What does the picture tell?", "it is raining", ["it is snowing", "it is night", "it is a party"], "The umbrella and rain are clues."],
+  ["A story says Lin was “jumping for joy.” How did Lin feel?", "very happy", ["very sad", "very sleepy", "very cold"], "Jumping for joy means very happy."],
+  ["The bear gets fat in fall and sleeps in winter. Why does it get fat?", "to get ready for winter", ["to play games", "to find a friend", "to learn to read"], "The bear stores up food."],
+  ["Mia says the book is funny. Which detail could prove it?", "The dog wore a hat and sang.", ["The book has a cover.", "It has pages.", "It is on a shelf."], "Pick a detail that fits funny.", true],
+  ["Sam drops his ice cream and sighs. How does Sam feel?", "sad", ["proud", "sleepy", "silly"], "A sigh can show sadness.", true],
+  ["A text says, “Seeds need water and sun.” What do seeds need to grow?", "water and sun", ["snow and wind", "sand and ice", "paper and glue"], "The text says water and sun.", true],
+  ["Kim took a map and a compass on her walk. What might she be doing?", "finding her way", ["baking a cake", "taking a nap", "painting a wall"], "A map and compass help find a way.", true],
+  ["First, Ana plants a seed. Next, it rains. Last, a flower grows. Why does the flower grow?", "rain helped the seed", ["Ana sang", "the moon rose", "a bus stopped"], "The rain comes before the flower.", true],
+  ["A page says, “Look at the chart.” Where could the answer be?", "in the chart", ["on the cover only", "on the back of a chair", "in a song"], "A chart gives facts.", true],
+  ["Rosa read that the moon has no light of its own. Why does it look bright?", "it reflects sunlight", ["it has a lamp", "it is made of paper", "it is a star"], "The moon reflects light.", true],
+];
+
+export const EXTRA: Unit[] = [
+  bankUnit({
+    id: "pa-g1-new-words",
+    title: "Words That Connect",
+    emoji: "🔗",
+    blurb: "Words that match, words that differ and words that join ideas.",
+    parentNote:
+      "Pennsylvania’s Grade 1 standards ask children to use words and phrases learned from conversations and reading, including words that signal connections such as because, but, so and then, and to work out unknown and multiple-meaning words. Children tap the word that fits the sentence.",
+    standards: ["CC.1.2.1.J; CC.1.3.1.J; CC.1.2.1.K; CC.1.3.1.I", "using words learned from talk and books, words that signal connections, and multiple-meaning words"],
+    items: WORDS,
+  }),
+  bankUnit({
+    id: "pa-g1-writing-moves",
+    title: "Facts, Opinions & Order",
+    emoji: "✏️",
+    blurb: "Stay on a topic, give a reason and tell what happens in order.",
+    parentNote:
+      "Pennsylvania’s Grade 1 writing standards ask children to name one topic and develop it with two or more facts, to support an opinion with reasons, and to tell events in order with time words. Children are not asked to write here: they tap the fact that fits, the reason that helps, or the event that comes next.",
+    standards: ["CC.1.4.1.B; CC.1.4.1.C; CC.1.4.1.D; CC.1.4.1.I; CC.1.4.1.J; CC.1.4.1.N; CC.1.4.1.O; CC.1.4.1.P", "naming a topic with facts, giving reasons for an opinion, and telling events in order with time words"],
+    items: WRITING,
+  }),
+  bankUnit({
+    id: "pa-g1-prove-it",
+    title: "Prove It",
+    emoji: "🔍",
+    blurb: "Answer questions with details, connections and clues.",
+    parentNote:
+      "Pennsylvania’s Grade 1 standards ask children to ask and answer questions about key details, describe the connection between two events or ideas, and compare two texts on the same topic. Children read a short passage and tap what the words say or what the clues show.",
+    standards: ["CC.1.2.1.B; CC.1.2.1.C; CC.1.3.1.B; CC.1.2.1.I", "answering questions about key details, describing connections between events or ideas, and comparing two texts"],
+    items: PROVE,
+  }),
+];

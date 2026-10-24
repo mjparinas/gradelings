@@ -1,4 +1,168 @@
 import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
 
-export const UNITS: Unit[] = [];
+// Pennsylvania's own Grade 9 science units (`pa-` ids), for the STEELS environment and technology standards no shared unit
+// practises: how issues, trends and policies affect food, water and natural resources and how resource management and
+// stewardship work (3.4.9-12.A, C, G, H), investigating a local environmental issue, integrated pest management and
+// environmental justice with data (3.4.9-12.D, E, F, I), evaluating technologies and their effects on health, society and the
+// environment (3.5.9-12.B to H, L), and design thinking, trade-offs and optimizing a design (3.5.9-12.I, M, N, P, Q, S, U, V,
+// W, X, Y).
+
+const SUSTAINABILITY_AND_SYSTEMS: Q[] = [
+  ["Which is a trend that can affect a food system?", "rising temperatures that change growing seasons", ["the color of a tractor", "the name of a farm", "the shape of a barn"], "Trends are long-term changes."],
+  ["A policy that pays farmers to plant trees along streams is meant to…", "protect water quality", ["increase erosion", "reduce shade", "raise stream temperature"], "Policies encourage practices."],
+  ["Which technology could help farmers use less water?", "drip irrigation that delivers water to plant roots", ["flooding the whole field", "watering at noon in the sun", "leaving taps on"], "Targeted watering wastes less."],
+  ["Precision agriculture uses GPS and sensors to…", "apply seed, water and fertilizer only where needed", ["spread fertilizer everywhere", "plant at random", "ignore soil data"], "Data lets farmers use inputs efficiently."],
+  ["A policy that limits how much fertilizer farms may apply near streams helps…", "reduce the nutrients that cause algae blooms", ["increase pollution", "make streams hotter", "end all farming"], "Nutrient limits protect water."],
+  ["Which trend in a watershed would most increase flooding?", "more pavement and fewer wetlands", ["more forest", "more wetlands", "more rain gardens"], "Hard surfaces speed up runoff."],
+  ["Pennsylvania has thousands of miles of streams and rivers. Protecting water resources matters because they supply…", "drinking water, farms, industry and wildlife", ["only decoration", "only boats", "nothing important"], "Water supports many uses."],
+  ["Water from the Susquehanna River flows into the Chesapeake Bay, so a policy to reduce pollution in the river also helps…", "the bay far downstream", ["no one", "only the river's source", "only the clouds"], "Watersheds connect places."],
+  ["A town debates a new rule that requires builders to hold stormwater on site. The rule would likely…", "reduce flooding and pollution in nearby streams", ["increase flooding", "dry up the streams", "have no effect"], "On-site storage slows runoff."],
+  ["Which is a policy, not a technology?", "a law that limits what a factory can release", ["a water filter", "a rain barrel", "a soil sensor"], "Policies are rules, laws and plans."],
+  ["Which is a technology, not a policy?", "a wastewater treatment plant", ["a zoning rule", "a fine for dumping", "an environmental law"], "Technologies are tools and systems.", true],
+  ["Best management practices (BMPs) on a farm include…", "fencing livestock out of streams and planting buffers", ["pushing manure into streams", "removing all plants", "plowing to the bank"], "BMPs are proven ways to reduce harm."],
+  ["Sustainability of a natural resource is achieved when…", "its use does not reduce what is available for the future", ["it is used up quickly", "no one may use it", "it is polluted"], "Use must stay within what can be renewed."],
+  ["Which law is designed to protect the quality of the nation's drinking water?", "the Safe Drinking Water Act", ["the Clean Air Act", "the Endangered Species Act", "a speed limit"], "It sets standards for public water systems."],
+  ["Environmental laws can be evaluated by asking…", "whether the pollution they target has gone down over time", ["how long the law is", "what color the paper is", "who wrote the title"], "Data show whether a law works.", true],
+  ["The Clean Air Act helped reduce lead in the air by…", "ending the use of leaded gasoline", ["adding lead", "banning cars", "changing the weather"], "Policy changed a source of pollution.", true],
+  ["Acid rain caused by sulfur dioxide from burning coal harmed lakes and forests. Which policy reduced it?", "limits on sulfur dioxide released from power plants", ["more coal burning", "no limits at all", "new highways"], "Regulations lowered emissions.", true],
+  ["How can individuals promote stewardship in their community?", "by joining stream cleanups, saving water and planting native plants", ["by littering", "by ignoring problems", "by wasting water"], "Everyone can help."],
+  ["How can a community evaluate whether a tree-planting plan improves environmental quality?", "compare air and water measurements before and after", ["ask if people like trees", "count the number of shovels", "use no data"], "Evaluate with data.", true],
+  ["A solution to polluted runoff in a neighborhood also improves well-being if it…", "creates green space that people can enjoy", ["adds more pavement", "removes trees", "increases noise"], "Environmental quality and community well-being are linked.", true],
+  ["Which issue is global in scope?", "rising carbon dioxide in the atmosphere", ["a leaky faucet", "a stream in one park", "litter on one street"], "Greenhouse gases mix around the world."],
+  ["Which issue is local in scope?", "a polluted creek behind a school", ["the ozone layer", "ocean warming", "worldwide fish decline"], "It affects one place.", true],
+  ["Which issue is regional in scope?", "pollution that moves down a river to many towns", ["one backyard", "the whole planet's air", "a single classroom"], "It affects a region, such as a river's watershed.", true],
+  ["A researcher wants to investigate an environmental issue. What should she do first?", "ask a clear question and gather reliable information", ["write the conclusion", "skip the research", "guess the data"], "Research starts with a question."],
+  ["Which source is the most reliable for data on air quality?", "measurements published by a government agency or university", ["a rumor online", "a cartoon", "an advertisement"], "Check the source of data.", true],
+  ["Why can it be hard for communities to agree on an environmental policy?", "people have different needs, costs and values", ["no one cares", "the data cannot exist", "the Sun is in the way"], "Policy involves trade-offs among groups.", true],
+];
+
+const TECHNOLOGY_AND_SOCIETY: Q[] = [
+  ["A technology that minimizes waste when making a product is…", "efficient in its use of resources", ["always expensive", "always harmful", "never useful"], "Less waste means better resource use."],
+  ["A life cycle assessment looks at a product's effect from…", "getting its materials until it is thrown away or recycled", ["the store to the home only", "the label only", "the advertisement only"], "It follows the whole life of a product."],
+  ["Which step is part of a product's life cycle?", "mining or growing the raw materials", ["the color of its ad", "the name of its store", "the owner's birthday"], "Materials come first."],
+  ["Which solution to a packaging problem has the least environmental impact?", "reusable containers that last for many uses", ["single-use plastic wrap", "larger boxes", "more layers of packaging"], "Fewer materials are used over time."],
+  ["A company redesigns a water bottle to use 20% less plastic. This design…", "reduces resource use and waste", ["increases waste", "uses more material", "has no impact"], "Less material means less waste."],
+  ["Which statement critiques whether a technology uses resources sustainably?", "It relies on a nonrenewable fuel that will run out", ["It looks modern", "It is popular", "It costs a lot"], "Sustainability considers future supply."],
+  ["Solar and wind power are often called sustainable because they…", "use resources that are renewed continuously", ["use only coal", "run out quickly", "need no building"], "Sunlight and wind keep coming."],
+  ["Which change in technology has helped people live longer?", "vaccines and clean water systems", ["longer commutes", "more fast food", "louder music"], "Health technology affects human capabilities."],
+  ["Jonas Salk developed a polio vaccine in Pittsburgh in the 1950s. This technology…", "prevented a disease that once paralyzed many children", ["caused polio", "made no difference", "was a tool for farming"], "Medical innovations alter human health.", true],
+  ["Eyeglasses, hearing aids and prosthetic limbs are technologies that…", "extend human capabilities", ["limit human capabilities", "are only for show", "have no use"], "They help people do more."],
+  ["A technological innovation that arose from a society's need is…", "irrigation systems built where rainfall was scarce", ["a toy with no purpose", "a random object", "a sound with no use"], "Needs shape technologies."],
+  ["Mining in Pennsylvania created a need for pumps to remove water from coal mines. The steam engine was improved to…", "meet that need", ["avoid the need", "harm the miners", "stop the mines"], "Technology responds to needs of a society.", true],
+  ["Some people feared early railroads and tried to stop them. This shows a technology can face…", "societal resistance that affects its development", ["no opinions", "no debate", "no laws"], "Public views can shape technology.", true],
+  ["A new technology is resisted because people worry it will take away jobs. This resistance may…", "slow or change how the technology is used", ["make it disappear overnight", "end all innovation", "have no effect"], "Societal concerns affect adoption.", true],
+  ["Which statement shows technology impacting society, individuals and the environment together?", "Cars gave people freedom to travel but increased air pollution", ["Cars are red", "Cars have wheels", "Cars come in many sizes"], "Impacts are in all three areas."],
+  ["Which law sets rules for how much a car may pollute?", "a vehicle emissions standard", ["a school dress code", "a speed sign", "a zoning map"], "Regulations affect technology."],
+  ["How do regulations affect the development of a technology?", "they set limits that designers must meet", ["they remove all limits", "they stop all changes", "they have no effect"], "Laws shape design choices.", true],
+  ["Why do medical devices need to be approved before they are sold?", "to make sure they are safe and work as claimed", ["to make them cost more", "to make them heavier", "to slow people down"], "Regulation protects users.", true],
+  ["Patents give an inventor…", "the right to stop others from copying the invention for a time", ["permission to copy anything", "the right to change the law", "ownership of a river"], "Patents are a legal protection for inventors."],
+  ["A data set shows a product's sales fell as a new technology became common. Analyzing this trend helps a company…", "make decisions about its product", ["avoid all change", "ignore the market", "hide the data"], "Data guide choices.", true],
+  ["Which question best evaluates a technology's effect on the environment?", "How much energy and material does it use, and what waste does it make?", ["Is it blue?", "Is it new?", "Is it loud?"], "Look at inputs and waste.", true],
+  ["Electric vehicles produce no tailpipe pollution. A fair evaluation also looks at…", "how the electricity and the battery are produced", ["only the car's color", "only the tires", "nothing else"], "Impacts occur through the life cycle.", true],
+  ["A technology that works well in a city may not suit a rural area because…", "different places have different needs and resources", ["rural areas have no needs", "technology never changes", "cities have no problems"], "Context matters.", true],
+  ["Social networks changed how news spreads. A benefit and a risk are…", "fast sharing, and the spread of false information", ["no sharing, and no news", "slow sharing, and fewer people", "only benefits"], "Technology has both effects.", true],
+  ["Automation in factories can make products faster and cheaper. A concern is…", "workers may need to learn new skills as jobs change", ["factories become smaller", "products cost less in every way", "no change at all"], "Technology affects people's work.", true],
+];
+
+const DESIGN_THINKING: Q[] = [
+  ["The first stage of many design processes is to…", "define the problem and the people it affects", ["build the final product", "ship the product", "pick a name"], "Understand the need first."],
+  ["Human-centered design starts by…", "learning what the users need and how they use things", ["ignoring users", "choosing the cheapest part", "making it look strange"], "Designs should fit people."],
+  ["A designer interviews a group of older adults before designing a pill organizer. This is…", "a human-centered design step", ["wasted time", "the final test", "a marketing step"], "Learn from users."],
+  ["Brainstorming in design is used to…", "come up with many possible solutions", ["choose only one idea at the start", "avoid thinking", "make rules"], "Generate options first."],
+  ["After brainstorming, a design team should…", "evaluate the ideas against criteria and constraints", ["use the first idea", "throw out all ideas", "stop designing"], "Judge ideas fairly."],
+  ["Which is an element of design?", "line, shape, color or texture", ["a calendar", "a schedule", "a coupon"], "Elements are the building blocks of a design."],
+  ["Which is a principle of design?", "balance, contrast or emphasis", ["a price tag", "a trademark", "a barcode"], "Principles guide how elements are arranged."],
+  ["A poster uses a large bold title and smaller text beneath. This applies the principle of…", "emphasis", ["randomness", "erosion", "friction"], "Emphasis draws the eye to what matters.", true],
+  ["The purpose of a design is…", "what it is meant to do for the people who use it", ["only how it looks", "only its cost", "its color only"], "Define purpose before building."],
+  ["A teacher says a student's lamp design has a beautiful shape but is hard to switch on. What is wrong with it?", "it does not meet its purpose well for users", ["it uses electricity", "it is made of metal", "it has a base"], "A good design must work for people.", true],
+  ["To optimize a design is to…", "get the best balance of qualities within the criteria and constraints", ["use the most expensive materials", "make it as large as possible", "avoid testing"], "Optimizing balances trade-offs."],
+  ["A team makes a backpack lighter, but the straps tear. Optimizing means…", "making it light enough while keeping it strong", ["ignoring strength", "ignoring weight", "making it twice as big"], "Balance competing qualities.", true],
+  ["A cost-benefit analysis compares…", "what a choice costs with what it provides", ["colors with shapes", "days with weeks", "names with numbers"], "It weighs benefits against costs."],
+  ["Which would a designer prioritize for a child's car seat?", "safety above cost", ["color above safety", "cost above safety", "weight above safety"], "Criteria must be prioritized."],
+  ["A complex problem, such as reducing a town's energy use, is easier to solve if…", "it is broken into smaller problems", ["it is ignored", "it is made larger", "it is solved all at once"], "Break big problems into parts."],
+  ["Which is a smaller problem within 'reduce a school's energy use'?", "find which rooms use the most electricity", ["buy a new school", "forget the problem", "paint the school"], "A manageable step.", true],
+  ["A team builds a computer simulation of traffic at a new intersection. What does the simulation help them do?", "test the effects of design choices without building it first", ["avoid thinking", "replace all data", "choose the color"], "Simulations model results.", true],
+  ["A team wants a design for the marketplace. What should they do before selling it?", "test it with users and meet safety rules", ["skip testing", "copy a competitor exactly", "hide problems"], "Products must be safe and useful.", true],
+  ["Market research for a new product asks…", "who will want it and what they will pay", ["what color the Moon is", "how clouds form", "what rocks are made of"], "Research informs a design."],
+  ["An invention that answers a specific need is…", "a ramp that helps a wheelchair user enter a building", ["a toy with no purpose", "a random pile of parts", "a broken tool"], "Intentional inventions meet needs."],
+  ["Which step shows implementing the best solution using an explicit process?", "following a written plan, building it and checking it against the criteria", ["building without a plan", "choosing at random", "skipping the criteria"], "Process keeps the work organized.", true],
+  ["A design team keeps a log of its decisions and test results. This helps them…", "explain and improve their design", ["avoid testing", "avoid the criteria", "hide mistakes"], "Documentation supports improvement.", true],
+  ["Which is the best reason to test a prototype with real users?", "users may find problems the designers did not notice", ["it makes the prototype heavier", "it removes the need for criteria", "it saves no time"], "Fresh eyes find issues.", true],
+  ["A design that gets better each time it is tested is an example of…", "iteration", ["erosion", "pollination", "evaporation"], "Repeat and improve."],
+  ["After a final test shows a design meets all criteria, the team should…", "document the results and share the design", ["throw the design away", "start over with no data", "change the criteria"], "Communicate the outcome."],
+  ["Which pair of qualities often trade off in a design?", "strength and weight", ["color and the day of the week", "name and size", "date and time"], "Making something stronger often makes it heavier.", true],
+];
+
+const ENVIRONMENTAL_DATA: Q[] = [
+  ["Planning an investigation of a local environmental issue begins with…", "a question that can be answered with data", ["a conclusion", "a guess with no tests", "a name for the project"], "Ask a testable question."],
+  ["A student wants to study a stream. Which is a good question?", "How does dissolved oxygen change from upstream to downstream?", ["Is the stream pretty?", "Who named it?", "Is it Monday?"], "Good questions can be measured."],
+  ["Which is a variable you might measure in a stream?", "temperature", ["the name of a fish", "the owner of the land", "the day's date"], "Temperature is measurable."],
+  ["Which tool measures how much dissolved oxygen is in water?", "a dissolved oxygen test kit or probe", ["a ruler", "a stopwatch", "a compass"], "Specialized tools measure water chemistry."],
+  ["The pH of a stream is 4.5. Stream water is typically close to neutral, which is…", "7", ["1", "14", "0"], "7 is neutral on the pH scale."],
+  ["A stream with a pH of 4.5 is most likely…", "acidic, possibly from acid mine drainage", ["very basic", "neutral", "pure salt water"], "Acidic water can come from old mines.", true],
+  ["To compare two sites fairly, a student should collect samples…", "at the same time of day, with the same method", ["with different tools", "at different seasons", "using a different method for each"], "Control other factors."],
+  ["Why take many samples instead of one?", "to see patterns and reduce the effect of an unusual result", ["to make the work longer", "to avoid analysis", "to hide differences"], "More data make conclusions stronger.", true],
+  ["A table lists the number of insect types found in four streams: 12, 11, 2 and 13. Which stream is probably the most polluted?", "the one with 2 types", ["the one with 13 types", "the one with 12 types", "they are all the same"], "Few kinds of sensitive insects suggest poor water quality.", true],
+  ["A graph shows air quality getting worse near a highway. This is evidence of…", "a regional environmental condition", ["a random drawing", "a made-up claim", "a sound effect"], "Data show conditions."],
+  ["Environmental justice asks whether…", "environmental risks and benefits are shared fairly across communities", ["only some people have rights", "people pay equally", "pollution disappears"], "It is about fairness."],
+  ["A map shows that most waste sites are in low-income neighborhoods. This pattern raises a concern about…", "equity in how risks are shared", ["the weather forecast", "the color of the map", "stars"], "Data can show unfair patterns.", true],
+  ["Which data would help show whether a neighborhood has fair access to green space?", "the amount of park area per person in each neighborhood", ["the number of cars", "the number of clocks", "the ages of trees only"], "Compare across neighborhoods.", true],
+  ["Why is it important to include community members when making decisions about an environmental problem?", "they know the area and are affected by the outcome", ["they do not know anything", "it slows the work", "they cannot read data"], "Equity includes voice.", true],
+  ["Integrated pest management in a school uses…", "monitoring, prevention, sanitation and then targeted treatments", ["frequent broad spraying", "no monitoring", "removing all plants"], "Reduce risk through combined methods."],
+  ["A school wants to control cockroaches. Which IPM step is best first?", "find and fix food and water sources", ["spray the entire building", "ignore the problem", "leave food out"], "Remove what attracts pests.", true],
+  ["Compared with spraying on a calendar, IPM often…", "reduces chemical use and exposure", ["increases chemical use", "adds more pests", "ignores people"], "IPM uses treatment only when needed.", true],
+  ["A grower finds a pest count under the action threshold. According to IPM, the grower should…", "keep monitoring without spraying yet", ["spray at once", "pull all the plants", "stop watching"], "Treatment begins when pests reach a set level.", true],
+  ["Which result best shows that IPM worked in an orchard?", "less crop damage and fewer sprays used", ["more damage and more sprays", "no data", "more pests and fewer fruits"], "Evaluate with outcomes.", true],
+  ["Honeybees are important to Pennsylvania farms because they…", "pollinate crops such as apples", ["eat the fruit", "make the soil", "stop the rain"], "Spraying must protect pollinators."],
+  ["Why should a spray that kills many kinds of insects be used carefully?", "it can also kill helpful insects such as pollinators", ["it makes plants shrink", "it cools the soil", "it changes the water cycle"], "Broad sprays have side effects.", true],
+  ["A stream monitoring group checks the same spot every month for five years. What does this long-term data best show?", "trends over time", ["only one day's results", "the weather forecast", "the color of the fish"], "Long records show trends."],
+  ["A town wants to know whether a new wetland reduces nutrients leaving a farm. Which measurements make a good test?", "nutrient levels in water entering and leaving the wetland", ["the number of birds only", "the wetland's name", "the day it was built"], "Compare before and after.", true],
+  ["After collecting data, a student should…", "analyze it and communicate findings with evidence", ["hide the data", "change the data to fit a guess", "stop without a conclusion"], "Share what the data show."],
+  ["A claim says a new law reduced stream pollution. Which evidence would support it?", "measurements showing less pollution after the law took effect", ["a petition", "a slogan", "a promise"], "Data are the evidence.", true],
+  ["A student finds that a stream's fish count dropped after a drought. What is the best conclusion?", "the drought may have affected the fish, but more data are needed", ["the drought did nothing", "all streams lose fish in droughts", "fish do not need water"], "Be careful about claims from limited data.", true],
+];
+
+export const UNITS: Unit[] = [
+  bankUnit({
+    id: "pa-g9-sustainability-and-systems",
+    title: "Policies, Water & Food",
+    emoji: "🌾",
+    blurb: "How trends, technologies and policies affect food, water and natural resources.",
+    parentNote:
+      "Practices how issues, trends, technologies and policies affect agriculture, food, watersheds and water resources (including Pennsylvania's rivers and the Chesapeake Bay), how best management practices and environmental laws such as the Clean Air Act, Safe Drinking Water Act and the rules on stormwater and fertilizer achieve sustainability, and how individuals and communities can promote stewardship.",
+    standards: ["3.4.9-12.A; 3.4.9-12.C; 3.4.9-12.D; 3.4.9-12.G; 3.4.9-12.H", "how issues, trends, technologies and policies impact agricultural, food and water systems, systematically investigating issues from local to global, how best resource management practices and environmental laws achieve sustainability, and solutions that promote stewardship and community well-being"],
+    items: SUSTAINABILITY_AND_SYSTEMS,
+  }),
+  bankUnit({
+    id: "pa-g9-technology-and-society",
+    title: "Technology & Society",
+    emoji: "🧪",
+    blurb: "Judge technologies by resources, health, society and the environment.",
+    parentNote:
+      "Practices evaluating technologies that minimize resource use and waste, life cycles, how technology and engineering alter human health and capabilities (vaccines, assistive devices), innovations that arose from a society's needs or met resistance, how laws and regulations affect technology, and weighing positive and negative impacts on individuals, society and the environment.",
+    standards: ["3.5.9-12.B; 3.5.9-12.C; 3.5.9-12.D; 3.5.9-12.E; 3.5.9-12.F; 3.5.9-12.G; 3.5.9-12.H; 3.5.9-12.J; 3.5.9-12.L", "assessing technologies that minimize resource use and waste, solutions with the least negative impact, sustainability of technologies, effects on health and capabilities, innovations from a society's need or met with resistance, impacts on individuals, society and the environment, data trends and the effect of laws and regulations"],
+    items: TECHNOLOGY_AND_SOCIETY,
+  }),
+  bankUnit({
+    id: "pa-g9-design-thinking",
+    title: "Design Thinking",
+    emoji: "✏️",
+    blurb: "Define a problem, design for people, optimize and improve.",
+    parentNote:
+      "Practices the design thinking process: defining the purpose of a design, human-centered design, brainstorming and evaluating ideas, the elements and principles of design, optimizing within criteria and constraints, breaking a complex problem into smaller ones, simulating a solution, and developing a product for the marketplace.",
+    standards: ["3.5.9-12.I; 3.5.9-12.M; 3.5.9-12.N; 3.5.9-12.P; 3.5.9-12.Q; 3.5.9-12.S; 3.5.9-12.U; 3.5.9-12.V; 3.5.9-12.W; 3.5.9-12.X; 3.5.9-12.Y", "applying a design thinking process, evaluating solutions against prioritized criteria and trade-offs, human-centered design, the elements and principles of design, optimizing a design, breaking down complex problems, developing a device for the marketplace and implementing the best solution through an explicit process"],
+    items: DESIGN_THINKING,
+  }),
+  bankUnit({
+    id: "pa-g9-environmental-data",
+    title: "Investigating Environmental Data",
+    emoji: "📈",
+    blurb: "Plan an investigation, read stream and air data, and look for fairness and pests.",
+    parentNote:
+      "Practices planning and carrying out an investigation of a local environmental issue (stream temperature, dissolved oxygen, pH and the insects that live there), reading data on regional conditions for environmental justice and social equity, and evaluating integrated pest management in homes, schools and orchards.",
+    standards: ["3.4.9-12.D; 3.4.9-12.E; 3.4.9-12.F; 3.4.9-12.I", "investigating environmental issues with data, planning and conducting an investigation of a local issue, evaluating integrated pest management, and interpreting data on a regional environmental condition and its implications for environmental justice and social equity"],
+    items: ENVIRONMENTAL_DATA,
+  }),
+];
 export const FIRST = false;

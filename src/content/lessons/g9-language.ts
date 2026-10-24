@@ -181,4 +181,40 @@ export const lessons: GradeLessons = {
     ["It retells a classic.", "A retelling is an adaptation."],
     "adaptation",
   ),
+  "language/pa-g9-epic-poetry": lesson(
+    ["An epic is a long poem about heroic deeds, such as the Odyssey.", "Features: an invocation, epithets, epic similes and a quest.", "Common themes are fate, pride, duty and the journey home."],
+    "“In medias res” means an epic begins…",
+    ["The words mean in the middle.", "It starts mid-action."],
+    "in the middle of the action",
+  ),
+  "language/pa-g9-opposing-arguments": lesson(
+    ["Opposing arguments take different positions on one topic.", "Find each claim. Then compare the reasoning and evidence.", "Watch for fallacies, such as the bandwagon and the slippery slope."],
+    "“If we ban one snack, soon we’ll ban all food.” This is a…",
+    ["It jumps to an extreme.", "That is a slippery slope."],
+    "slippery slope fallacy",
+  ),
+  "language/pa-g9-adaptations-and-key-elements": lesson(
+    ["An adaptation retells a story in a new setting or from a new view.", "Compare what the author kept and what changed.", "Motifs, contrast and setting add layers of meaning."],
+    "A novel retells the Odyssey from Penelope’s point of view. This is an…",
+    ["It retells a classic.", "A retelling is an adaptation."],
+    "adaptation",
+  ),
+  "language/pa-g9-new-words": lesson(
+    ["Use roots, affixes and context to work out unfamiliar academic words.", "Connotation and tone shape meaning beyond the dictionary definition.", "Figures such as metaphor, irony and hyperbole add layers of meaning."],
+    "“Mitigate” means…",
+    ["Think about making something less harsh.", "To mitigate is to lessen."],
+    "to make less severe",
+  ),
+  "language/pa-g9-writing-moves": lesson(
+    ["Introduce a precise claim and distinguish it from opposing claims.", "Organize evidence logically and cite sources.", "Use transitions, formal style and a conclusion that follows from the argument."],
+    "Which transition shows cause and effect?",
+    ["It shows a result.", "As a result shows an effect."],
+    "as a result",
+  ),
+  "language/pa-g9-prove-it": lesson(
+    ["Cite the strongest and most thorough textual evidence for an analysis.", "Analyze how ideas, events and characters connect and develop.", "Ask whether a source’s interests could shape what it says."],
+    "“The report’s authors were paid by the company.” What should a careful reader ask?",
+    ["Think about bias.", "Whether the funding influenced the findings."],
+    "whether the funding influenced the findings",
+  ),
 };
