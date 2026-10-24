@@ -1,0 +1,118 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D21371896",
+   "id": "D21371896",
+   "publicationStatus": "Published",
+   "sourceURL": "http://www.cde.state.co.us/standardsandinstruction/hgstandards",
+   "title": "Colorado Academic Standards: Holocaust and Genocide Standards",
+   "valid": "2023"
+  },
+  "educationLevels": [
+   "07"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D21371896_grade-07",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": "",
+   "rightsHolder": "D2L Corporation",
+   "title": ""
+  },
+  "normalizedSubject": "Social Studies",
+  "standards": {
+   "2706B75A7C5C4FABB74BB0E084DDE65F": {
+    "ancestorIds": [
+     "9F1654289D7B4E708AB92A5BDECC2B22"
+    ],
+    "asnIdentifier": "S21371909",
+    "depth": 1,
+    "description": "Geographic thinkers study ethnic and religious groups, in order to explain how they view a region and evaluate the use of resources in a region to predict and propose future uses.",
+    "id": "2706B75A7C5C4FABB74BB0E084DDE65F",
+    "parentId": "9F1654289D7B4E708AB92A5BDECC2B22",
+    "position": 6000,
+    "statementLabel": "Standard",
+    "statementNotation": "7.G.GLE.2.1"
+   },
+   "48CDBD9FB8D94B4397D099B26A2A8CDD": {
+    "ancestorIds": [
+     "9F1654289D7B4E708AB92A5BDECC2B22"
+    ],
+    "asnIdentifier": "S21371907",
+    "depth": 1,
+    "description": "Plan and evaluate complex solutions to global challenges within the Eastern Hemisphere that are appropriate to their contexts using multiple disciplinary lenses such as ethnic, historical, and scientific.",
+    "id": "48CDBD9FB8D94B4397D099B26A2A8CDD",
+    "parentId": "9F1654289D7B4E708AB92A5BDECC2B22",
+    "position": 4000,
+    "statementLabel": "Standard",
+    "statementNotation": "7.G.GLE.1.4"
+   },
+   "78B0F05609BF473E9BE7D330344145C6": {
+    "ancestorIds": [
+     "9F1654289D7B4E708AB92A5BDECC2B22"
+    ],
+    "asnIdentifier": "S21371908",
+    "depth": 1,
+    "description": "Plan for and evaluate complex solutions to global challenges using multiple disciplinary lenses such as ethnic, historical, and scientific.",
+    "id": "78B0F05609BF473E9BE7D330344145C6",
+    "parentId": "9F1654289D7B4E708AB92A5BDECC2B22",
+    "position": 5000,
+    "statementLabel": "Standard",
+    "statementNotation": "7.G.GLE.2.2"
+   },
+   "9F1654289D7B4E708AB92A5BDECC2B22": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21371904",
+    "depth": 0,
+    "description": "Grade 7",
+    "id": "9F1654289D7B4E708AB92A5BDECC2B22",
+    "parentId": null,
+    "position": 1000
+   },
+   "A228F0EC596D4B74A09A675488519BB3": {
+    "ancestorIds": [
+     "9F1654289D7B4E708AB92A5BDECC2B22"
+    ],
+    "asnIdentifier": "S21371910",
+    "depth": 1,
+    "description": "Give examples illustrating the interactions between nations and their citizens.",
+    "id": "A228F0EC596D4B74A09A675488519BB3",
+    "parentId": "9F1654289D7B4E708AB92A5BDECC2B22",
+    "position": 7000,
+    "statementLabel": "Standard",
+    "statementNotation": "7.C.GLE.1.EOc"
+   },
+   "F1974BBED35E4748A5A90F7072E85760": {
+    "ancestorIds": [
+     "9F1654289D7B4E708AB92A5BDECC2B22"
+    ],
+    "asnIdentifier": "S21371906",
+    "depth": 1,
+    "description": "Plan and evaluate complex solutions to global challenges in the Eastern Hemisphere, using multiple disciplinary lenses such as ethnic, historical, and scientific.",
+    "id": "F1974BBED35E4748A5A90F7072E85760",
+    "parentId": "9F1654289D7B4E708AB92A5BDECC2B22",
+    "position": 3000,
+    "statementLabel": "Standard",
+    "statementNotation": "7.H.GLE.2.2"
+   },
+   "F5C9B99B522E4BCAA97A20C4205C55A4": {
+    "ancestorIds": [
+     "9F1654289D7B4E708AB92A5BDECC2B22"
+    ],
+    "asnIdentifier": "S21371905",
+    "depth": 1,
+    "description": "Describe the interactions, conflicts, and contributions of various peoples and cultures that have lived in or migrated within/to the Eastern Hemisphere.",
+    "id": "F5C9B99B522E4BCAA97A20C4205C55A4",
+    "parentId": "9F1654289D7B4E708AB92A5BDECC2B22",
+    "position": 2000,
+    "statementLabel": "Standard",
+    "statementNotation": "7.H.GLE.2.EOc"
+   }
+  },
+  "subject": "Social Studies (2022-)",
+  "title": "Holocaust and Genocide: Grade 7"
+ }
+}

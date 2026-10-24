@@ -1,0 +1,136 @@
+import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
+import { timelineUnit, type Dated } from "./kit";
+
+// Colorado Grade 8 social studies, United States history from the American Revolution through Reconstruction: the
+// nation's growth west and what it meant for the land that became Colorado (8.H.2, 8.G.1, 8.G.2), with a timeline
+// (8.H.1, 8.H.2), and the founding documents, rule of law and the changing meaning of citizenship (8.C.1, 8.C.2).
+// Removal, Sand Creek and slavery are told plainly; Native nations are named as living communities.
+
+const WEST: Q[] = [
+  ["The Louisiana Purchase of 1803 added land that includes eastern…", "Colorado", ["California", "Florida"], "The US bought it from France."],
+  ["Who sent Lewis and Clark to explore the Louisiana Purchase?", "Thomas Jefferson", ["George Washington", "Abraham Lincoln"], "They set out in 1804."],
+  ["Zebulon Pike's 1806 expedition explored the…", "southern edge of the Louisiana Purchase", ["coast of Maine", "Great Lakes"], "He reached the Front Range."],
+  ["The Santa Fe Trail, opened in 1821, linked Missouri with…", "Santa Fe in Mexico", ["Boston", "Atlanta"], "Its Mountain Route passed Bent's Fort."],
+  ["The idea that the United States should spread across the continent was called…", "Manifest Destiny", ["the Monroe Doctrine", "popular sovereignty"], "The phrase spread in the 1840s."],
+  ["The Indian Removal Act of 1830 led to…", "the forced removal of Native nations from the Southeast", ["new reservations in Colorado", "Native nations gaining land"], "The Cherokee called it the Trail of Tears."],
+  ["The Treaty of Guadalupe Hidalgo ended the…", "Mexican-American War", ["War of 1812", "Civil War"], "It was signed in 1848."],
+  ["In the Mexican Cession, the United States gained land that includes western and southern…", "Colorado", ["Ohio", "Georgia"], "California, Utah and Nevada too."],
+  ["The treaty promised Mexican citizens who stayed that…", "their property would be respected", ["they must leave", "they could not farm"], "Many Hispano families later lost land grants anyway."],
+  ["The 1858 gold discovery near Cherry Creek led to the…", "Pikes Peak gold rush", ["California gold rush", "Klondike gold rush"], "About 100,000 people came in 1859."],
+  ["Colorado Territory was created in 1861 from parts of Kansas, Nebraska, Utah and…", "New Mexico territories", ["Texas and Ohio", "Canada"], "Its borders were drawn as straight lines."],
+  ["In 1862, Colorado volunteers fought Confederate troops at…", "Glorieta Pass in New Mexico", ["Gettysburg", "Fort Sumter"], "They helped stop a Confederate push into the West."],
+  ["The Homestead Act of 1862 offered settlers…", "160 acres of land if they farmed it for five years", ["free gold", "a railroad ticket only"], "It pulled many families west."],
+  ["The transcontinental railroad was finished in 1869 in…", "Utah", ["Denver", "St. Louis"], "Two lines met at Promontory Summit."],
+  ["In the Treaty of Fort Wise (1861), Cheyenne and Arapaho leaders…", "gave up most of their land in Colorado", ["gained all of Colorado", "moved the capital"], "Many in the nations did not agree to it."],
+  ["The Sand Creek Massacre of 1864 was an attack on…", "a peaceful Cheyenne and Arapaho camp", ["a Confederate fort", "a gold mine"], "About 230 people were killed, mostly women, children and elders."],
+  ["Which pull factor brought many people to Colorado in 1859?", "the chance to find gold", ["a ban on farming", "a war in Colorado"], "Pull factors draw people to a place."],
+  ["Which is a push factor that made people leave the East in the 1850s?", "hard times after the Panic of 1857", ["gold in Colorado", "free land in the West"], "Push factors drive people away.", true],
+  ["Why did Native nations of the Plains resist the flood of settlers?", "settlers took their land and the bison they relied on", ["they wanted more railroads", "they had no homes"], "Competition over land and resources led to conflict.", true],
+  ["How did the railroads change the West?", "they moved people and goods quickly and brought more settlers", ["they slowed trade", "they kept settlers out"], "Denver got its first railroad in 1870.", true],
+  ["Why did the Missouri Compromise of 1820 and the Compromise of 1850 matter to new western lands?", "they decided where slavery could spread", ["they set railroad prices", "they made Colorado a state"], "Each new territory raised the slavery question.", true],
+  ["Why do historians compare Army reports with Cheyenne and Arapaho accounts of Sand Creek?", "the sources tell very different stories", ["they are identical", "only one source exists"], "Weigh each source's point of view.", true],
+  ["A newspaper in 1859 calling Colorado a land of easy gold was likely…", "exaggerating to draw settlers and sell goods", ["a neutral source", "a government map"], "Check sources for propaganda.", true],
+  ["Comparing an 1850 map with an 1870 map of the West shows…", "how US territories and borders changed", ["that nothing changed", "where today's highways are"], "Maps are geographic sources.", true],
+  ["Why did towns like Denver and Pueblo grow where rivers leave the mountains?", "water and level land for supplies and farms", ["ocean ports", "no winter"], "Settlement follows the environment.", true],
+];
+
+const EVENTS: readonly Dated[] = [
+  ["The Declaration of Independence is signed", 1776],
+  ["The Constitution is signed", 1787],
+  ["The Bill of Rights is ratified", 1791],
+  ["Marbury v. Madison establishes judicial review", 1803],
+  ["The Louisiana Purchase", 1803],
+  ["Zebulon Pike reaches the Front Range", 1806],
+  ["The War of 1812 begins", 1812],
+  ["The Missouri Compromise", 1820],
+  ["The Santa Fe Trail opens", 1821],
+  ["The Indian Removal Act is passed", 1830],
+  ["Bent's Fort is built", 1833],
+  ["The Mexican-American War begins", 1846],
+  ["The Seneca Falls Convention", 1848],
+  ["The Compromise of 1850", 1850],
+  ["The Kansas-Nebraska Act", 1854],
+  ["The Dred Scott decision", 1857],
+  ["Gold is found near Cherry Creek", 1858],
+  ["The Civil War begins and Colorado Territory is created", 1861],
+  ["The Homestead Act and the Battle of Glorieta Pass", 1862],
+  ["The Emancipation Proclamation takes effect", 1863],
+  ["The Sand Creek Massacre", 1864],
+  ["The Civil War ends and the 13th Amendment is ratified", 1865],
+  ["The 14th Amendment is ratified", 1868],
+  ["The transcontinental railroad is completed", 1869],
+  ["The 15th Amendment is ratified", 1870],
+  ["Colorado becomes a state", 1876],
+  ["Reconstruction ends", 1877],
+];
+
+const TIMELINE_ITEMS: Q[] = [
+  ["How many years passed between the Declaration of Independence and Colorado statehood?", "100", ["90", "110"], "1876 − 1776 = 100."],
+  ["Which came first, the Missouri Compromise or the Kansas-Nebraska Act?", "the Missouri Compromise", ["the Kansas-Nebraska Act", "they happened the same year"], "1820 comes before 1854."],
+  ["The years 1861 to 1865 are the years of the…", "Civil War", ["American Revolution", "War of 1812"], "It began at Fort Sumter."],
+  ["Reconstruction is the period after the Civil War, from 1865 to about…", "1877", ["1820", "1900"], "Federal troops left the South in 1877."],
+  ["Which happened during Reconstruction?", "the 14th Amendment was ratified", ["the Bill of Rights was ratified", "the Louisiana Purchase"], "Reconstruction began in 1865."],
+  ["Which happened during the Civil War?", "the Sand Creek Massacre", ["the Louisiana Purchase", "Colorado statehood"], "The war lasted from 1861 to 1865.", true],
+  ["Colorado became a territory in 1861 and a state in 1876. How many years apart?", "15", ["25", "5"], "Subtract.", true],
+  ["Why was 1848 a turning point for the land that became Colorado?", "the Mexican Cession made the rest of it US territory", ["Colorado became a state", "gold was found at Cherry Creek"], "The Treaty of Guadalupe Hidalgo.", true],
+];
+
+const RIGHTS: Q[] = [
+  ["The US Constitution begins with the words…", "We the People", ["When in the Course", "Four score and seven"], "This part is the Preamble."],
+  ["The Preamble explains…", "the goals of the Constitution", ["the names of the states", "how to amend it"], "Justice, domestic tranquility, the common defense and more."],
+  ["The first ten amendments are called the…", "Bill of Rights", ["Articles of Confederation", "Federalist Papers"], "They were ratified in 1791."],
+  ["Which branch makes federal laws?", "Congress", ["the President", "the Supreme Court"], "Article I sets it up."],
+  ["Which branch carries out federal laws?", "the executive branch, led by the President", ["Congress", "the courts"], "Article II sets it up."],
+  ["Which branch decides what laws mean?", "the judicial branch", ["the executive branch", "Congress"], "Article III sets it up."],
+  ["Checks and balances means…", "each branch can limit the others", ["one branch has all the power", "states check the President"], "A veto is one check."],
+  ["Federalism means power is shared between…", "the national and state governments", ["Congress and the courts only", "cities and counties only"], "Some powers belong to each."],
+  ["The Declaration of Independence says people have the right to…", "life, liberty and the pursuit of happiness", ["free land and gold", "a king"], "Thomas Jefferson wrote most of it."],
+  ["Rule of law means…", "everyone, including leaders, must follow the law", ["leaders are above the law", "laws are optional"], "No one is above the law."],
+  ["Marbury v. Madison (1803) gave the Supreme Court the power to…", "strike down laws that go against the Constitution", ["elect the President", "declare war"], "This is called judicial review."],
+  ["The 13th Amendment…", "abolished slavery", ["gave women the vote", "created income tax"], "It was ratified in 1865."],
+  ["The 14th Amendment promised…", "citizenship and equal protection of the laws", ["the right to bear arms", "an end to Prohibition"], "It was ratified in 1868."],
+  ["The 15th Amendment said the right to vote could not be denied because of…", "race", ["age", "income"], "It was ratified in 1870."],
+  ["In the Dred Scott decision of 1857, the Supreme Court wrongly ruled that Black Americans…", "could not be citizens", ["could vote in every state", "must move west"], "The 14th Amendment overturned it."],
+  ["Which right is in the First Amendment?", "freedom of speech", ["the right to a jury in civil cases", "protection from cruel punishment"], "It also protects religion, press, assembly and petition."],
+  ["The Seneca Falls Convention of 1848 called for…", "equal rights for women, including the vote", ["the end of the railroad", "a new capital"], "Elizabeth Cady Stanton helped lead it."],
+  ["Frederick Douglass escaped slavery and became a leading…", "abolitionist speaker and writer", ["Confederate general", "fur trapper"], "He spoke against slavery across the North."],
+  ["How can the US Constitution be amended?", "two-thirds of Congress proposes and three-fourths of states ratify", ["the President signs a paper", "one state votes"], "It is hard on purpose.", true],
+  ["Why did the framers include a way to amend the Constitution?", "so it could change as the country changed", ["to make it easier to ignore", "because they were unsure of everything"], "It has 27 amendments.", true],
+  ["The US Constitution is the supreme law of the land. That means…", "state laws can't conflict with it", ["states can ignore it", "it applies only in Washington, D.C."], "Article VI says so.", true],
+  ["Why did the 15th Amendment not give women the vote?", "it only banned denying the vote because of race", ["women already voted everywhere", "it was never ratified"], "Women won the national vote in 1920.", true],
+  ["Native Americans were not counted as US citizens by the 14th Amendment. This shows that…", "citizenship was expanded unevenly", ["everyone gained rights at once", "Native nations wanted no rights"], "Most gained citizenship by law in 1924.", true],
+  ["Which strategy did abolitionists use to bring change?", "speeches, newspapers and petitions", ["closing the courts", "banning newspapers"], "Citizens can voice opinions peacefully.", true],
+  ["Which is a responsibility of citizens, not a right?", "serving on a jury when called", ["freedom of religion", "freedom of the press"], "Responsibilities are duties.", true],
+];
+
+export const SOCIAL_8: Unit[] = [
+  bankUnit({
+    id: "co-g8-westward",
+    title: "The Nation Moves West",
+    emoji: "🐂",
+    blurb: "Expansion and what it meant for Colorado",
+    parentNote: "The growth of the United States and the land that became Colorado: the Louisiana Purchase, the Santa Fe Trail, Indian removal, the Mexican Cession, the gold rush and Colorado Territory, the Civil War in the West, the Homestead Act and railroads, with the Sand Creek Massacre and the loss of Native and Hispano lands told plainly.",
+    standards: ["8.H.1.b; 8.H.1.c; 8.H.2.b; 8.H.2.c; 8.G.1.a; 8.G.1.c; 8.G.2.a; 8.G.2.b; 8.G.2.d", "sources with conflicting accounts, the causes and effects of expansion, land acquisition, push and pull factors, and conflict over land and resources"],
+    items: WEST,
+  }),
+  timelineUnit({
+    id: "co-g8-us-timeline",
+    title: "From Independence to Reconstruction",
+    emoji: "📜",
+    blurb: "Put the nation's and Colorado's big moments in order",
+    parentNote: "Ordering events in United States and Colorado history from 1776 to 1877 (the founding, expansion west, the road to the Civil War, the war, Colorado statehood and Reconstruction) and working out how far apart they are.",
+    standards: ["8.H.2.a; 8.H.2.e", "the historical context of key events from the Revolution through Reconstruction, and the causes and effects of major conflicts"],
+    events: EVENTS,
+    items: TIMELINE_ITEMS,
+  }),
+  bankUnit({
+    id: "co-g8-rights-citizenship",
+    title: "Rights & Citizenship",
+    emoji: "⚖️",
+    blurb: "The Constitution, its amendments and who counted",
+    parentNote: "The Declaration of Independence, the Constitution (the Preamble, branches, checks and balances, federalism and amending it), the Bill of Rights, rule of law and judicial review, the Reconstruction amendments, and how the meaning of citizenship changed for Black Americans, women and Native Americans.",
+    standards: ["8.C.1.a; 8.C.1.d; 8.C.1.e; 8.C.2.a; 8.C.2.b; 8.C.2.c; 8.C.2.d; 8.C.2.f", "the changing definition of citizenship, strategies for change, the founding documents, rule of law, the amendments, the branches and judicial review"],
+    items: RIGHTS,
+  }),
+];

@@ -1033,4 +1033,22 @@ export const lessons: GradeLessons = {
     ["The President carries out laws; courts interpret them.", "Article I sets up Congress to make laws."],
     "Congress",
   ),
+  "social/co-g8-westward": lesson(
+    ["The Louisiana Purchase (1803) and the Mexican Cession (1848) brought the land of Colorado into the United States.", "Gold (1858), the Homestead Act and railroads pulled settlers west.", "Settlers took Native land and broke treaties; the Sand Creek Massacre (1864) killed about 230 Cheyenne and Arapaho people."],
+    "Which 1848 treaty ended the Mexican-American War?",
+    ["It added the Mexican Cession.", "It is named for a town near Mexico City."],
+    "the Treaty of Guadalupe Hidalgo",
+  ),
+  "social/co-g8-us-timeline": lesson(
+    ["Order events by year: the Revolution, the Constitution, expansion west, the Civil War and Reconstruction.", "Subtract years to find how far apart events are.", "Causes come before their effects."],
+    "Which came first: the Louisiana Purchase or the Civil War?",
+    ["The Louisiana Purchase was in 1803.", "The Civil War began in 1861."],
+    "the Louisiana Purchase",
+  ),
+  "social/co-g8-rights-citizenship": lesson(
+    ["The Constitution sets up three branches with checks and balances; the Bill of Rights protects freedoms.", "The 13th Amendment ended slavery, the 14th promised citizenship and equal protection, and the 15th protected voting regardless of race.", "Citizenship grew unevenly: women won the national vote in 1920, and most Native Americans became citizens in 1924."],
+    "Which amendment abolished slavery?",
+    ["It was ratified in 1865.", "It came first of the three Reconstruction amendments."],
+    "the 13th Amendment",
+  ),
 };

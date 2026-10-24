@@ -1,0 +1,390 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D2980644",
+   "id": "D2980644",
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.cde.state.co.us/coscience/2020cas-sc-p12",
+   "title": "Colorado Academic Standards: Science",
+   "valid": "2020"
+  },
+  "educationLevels": [
+   "05"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D2980644_grade-05",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/3.0/us/",
+   "rightsHolder": "D2L Corporation",
+   "title": "CC BY 3.0 US"
+  },
+  "normalizedSubject": "Science",
+  "standards": {
+   "05B71DE692E54899BF67AEA6899AA42E": {
+    "ancestorIds": [
+     "431047FAB4DC45E3B22F5D09D245E50D"
+    ],
+    "asnIdentifier": "S2987205",
+    "depth": 1,
+    "description": "Most of Earth's water is in the ocean and much of Earth's freshwater in glaciers or underground.",
+    "id": "05B71DE692E54899BF67AEA6899AA42E",
+    "parentId": "431047FAB4DC45E3B22F5D09D245E50D",
+    "position": 24000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.5.4"
+   },
+   "123E501FC1D34446A9D0AA1572B52E09": {
+    "ancestorIds": [
+     "4298BB418ADB4EB3B84B8613B77BACC2",
+     "431047FAB4DC45E3B22F5D09D245E50D"
+    ],
+    "asnIdentifier": "S2987202",
+    "depth": 2,
+    "description": "Represent data in graphical displays to reveal patterns of daily changes in length and direction of shadows, day and night, and the seasonal appearance of some stars in the night sky.",
+    "id": "123E501FC1D34446A9D0AA1572B52E09",
+    "parentId": "4298BB418ADB4EB3B84B8613B77BACC2",
+    "position": 21000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.5.2.a"
+   },
+   "253F659175574710967719CD7BC3A595": {
+    "ancestorIds": [
+     "ED62EA3850CF4798B1BBA5F1D0136C24"
+    ],
+    "asnIdentifier": "S2986957",
+    "depth": 1,
+    "description": "Chemical Reactions that occur when substances are mixed can be identified by the emergence of substances with different properties; the total mass remains the same.",
+    "id": "253F659175574710967719CD7BC3A595",
+    "parentId": "ED62EA3850CF4798B1BBA5F1D0136C24",
+    "position": 5000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.5.2"
+   },
+   "2F8894ACAAFB4F7483D626C9F9C1BC8E": {
+    "ancestorIds": [
+     "DCF0D576FFAE422DAB0BBDC99FB1EE62",
+     "ED62EA3850CF4798B1BBA5F1D0136C24"
+    ],
+    "asnIdentifier": "S2986955",
+    "depth": 2,
+    "description": "Develop a model to describe that matter is made of particles too small to be seen.",
+    "id": "2F8894ACAAFB4F7483D626C9F9C1BC8E",
+    "parentId": "DCF0D576FFAE422DAB0BBDC99FB1EE62",
+    "position": 3000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.5.1.a"
+   },
+   "3394B367D8D54222AFC3B2E38F6274C5": {
+    "ancestorIds": [
+     "895A418FE0FF4039A77DB10B62089C51",
+     "94D56E6CDD424B139CC68A35FDB4942C"
+    ],
+    "asnIdentifier": "S2987083",
+    "depth": 2,
+    "description": "Develop a model to describe the movement of matter among plants, animals, decomposers, and the environment.",
+    "id": "3394B367D8D54222AFC3B2E38F6274C5",
+    "parentId": "895A418FE0FF4039A77DB10B62089C51",
+    "position": 16000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.5.2.a"
+   },
+   "37301141E42845358F3882FCBF25AD1D": {
+    "ancestorIds": [
+     "431047FAB4DC45E3B22F5D09D245E50D"
+    ],
+    "asnIdentifier": "S2987203",
+    "depth": 1,
+    "description": "Earth's major systems interact in multiple ways to affect Earth's surface materials and processes.",
+    "id": "37301141E42845358F3882FCBF25AD1D",
+    "parentId": "431047FAB4DC45E3B22F5D09D245E50D",
+    "position": 22000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.5.3"
+   },
+   "4298BB418ADB4EB3B84B8613B77BACC2": {
+    "ancestorIds": [
+     "431047FAB4DC45E3B22F5D09D245E50D"
+    ],
+    "asnIdentifier": "S2987199",
+    "depth": 1,
+    "description": "Stars range greatly in size and distance from Earth, and this can explain their relative brightness.",
+    "id": "4298BB418ADB4EB3B84B8613B77BACC2",
+    "parentId": "431047FAB4DC45E3B22F5D09D245E50D",
+    "position": 18000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.5.1"
+   },
+   "431047FAB4DC45E3B22F5D09D245E50D": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2987156",
+    "depth": 0,
+    "description": "Earth and Space Science",
+    "id": "431047FAB4DC45E3B22F5D09D245E50D",
+    "parentId": null,
+    "position": 17000,
+    "statementLabel": "Standard",
+    "statementNotation": "ESS3"
+   },
+   "5FFBED2222474C3186E326C6EE2B547D": {
+    "ancestorIds": [
+     "9A7D6A7DD52E4685BBE7E2588D4B2B2F",
+     "ED62EA3850CF4798B1BBA5F1D0136C24"
+    ],
+    "asnIdentifier": "S2986963",
+    "depth": 2,
+    "description": "Use models to describe that energy in animals' food (used for body repair, growth and motion and to maintain body warmth) was once energy from the sun.",
+    "id": "5FFBED2222474C3186E326C6EE2B547D",
+    "parentId": "9A7D6A7DD52E4685BBE7E2588D4B2B2F",
+    "position": 11000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.5.4.a"
+   },
+   "6EDC2DC32E39468C94F83089E9F6A869": {
+    "ancestorIds": [
+     "4298BB418ADB4EB3B84B8613B77BACC2",
+     "431047FAB4DC45E3B22F5D09D245E50D"
+    ],
+    "asnIdentifier": "S2987200",
+    "depth": 2,
+    "description": "Support an argument that differences in the apparent brightness of the sun compared to other stars is due to their relative distances from the Earth.",
+    "id": "6EDC2DC32E39468C94F83089E9F6A869",
+    "parentId": "4298BB418ADB4EB3B84B8613B77BACC2",
+    "position": 19000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.5.1.a"
+   },
+   "71D42C26B71C4A769C9223A408D68727": {
+    "ancestorIds": [
+     "77DBAEC61BC14EE79D7D9BEDD99D4371",
+     "94D56E6CDD424B139CC68A35FDB4942C"
+    ],
+    "asnIdentifier": "S2987081",
+    "depth": 2,
+    "description": "Support an argument that plants get the materials they need for growth chiefly from air and water.",
+    "id": "71D42C26B71C4A769C9223A408D68727",
+    "parentId": "77DBAEC61BC14EE79D7D9BEDD99D4371",
+    "position": 14000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.5.1.a"
+   },
+   "739D0097716D44D8B0D378F3018A42E8": {
+    "ancestorIds": [
+     "05B71DE692E54899BF67AEA6899AA42E",
+     "431047FAB4DC45E3B22F5D09D245E50D"
+    ],
+    "asnIdentifier": "S2987206",
+    "depth": 2,
+    "description": "Describe and graph the amounts and percentages of saltwater and freshwater in various reservoirs to provide evidence about the distribution of water on Earth.",
+    "id": "739D0097716D44D8B0D378F3018A42E8",
+    "parentId": "05B71DE692E54899BF67AEA6899AA42E",
+    "position": 25000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.5.4.a"
+   },
+   "74BC6C55AB6740F7A5B47B34883C1D7C": {
+    "ancestorIds": [
+     "7C4160DA435B471FB2F1EE51F8A84986",
+     "431047FAB4DC45E3B22F5D09D245E50D"
+    ],
+    "asnIdentifier": "S2987208",
+    "depth": 2,
+    "description": "Obtain and combine information about ways individual communities use science ideas to protect the Earth's resources and environment.",
+    "id": "74BC6C55AB6740F7A5B47B34883C1D7C",
+    "parentId": "7C4160DA435B471FB2F1EE51F8A84986",
+    "position": 27000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.5.5.a"
+   },
+   "77DBAEC61BC14EE79D7D9BEDD99D4371": {
+    "ancestorIds": [
+     "94D56E6CDD424B139CC68A35FDB4942C"
+    ],
+    "asnIdentifier": "S2987080",
+    "depth": 1,
+    "description": "Plants acquire their material from growth chiefly from air and water.",
+    "id": "77DBAEC61BC14EE79D7D9BEDD99D4371",
+    "parentId": "94D56E6CDD424B139CC68A35FDB4942C",
+    "position": 13000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "LS2.5.1"
+   },
+   "7C4160DA435B471FB2F1EE51F8A84986": {
+    "ancestorIds": [
+     "431047FAB4DC45E3B22F5D09D245E50D"
+    ],
+    "asnIdentifier": "S2987207",
+    "depth": 1,
+    "description": "Societal activities have had major effects on land, ocean, atmosphere and even outer space.",
+    "id": "7C4160DA435B471FB2F1EE51F8A84986",
+    "parentId": "431047FAB4DC45E3B22F5D09D245E50D",
+    "position": 26000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.5.5"
+   },
+   "80B7422718904FDFAFA6460BD096108B": {
+    "ancestorIds": [
+     "B981C8E6ADD047379FC3D177175BB653",
+     "ED62EA3850CF4798B1BBA5F1D0136C24"
+    ],
+    "asnIdentifier": "S2986961",
+    "depth": 2,
+    "description": "Support an argument that the gravitational force exerted by Earth on objects is directed down.",
+    "id": "80B7422718904FDFAFA6460BD096108B",
+    "parentId": "B981C8E6ADD047379FC3D177175BB653",
+    "position": 9000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.5.3.a"
+   },
+   "895A418FE0FF4039A77DB10B62089C51": {
+    "ancestorIds": [
+     "94D56E6CDD424B139CC68A35FDB4942C"
+    ],
+    "asnIdentifier": "S2987082",
+    "depth": 1,
+    "description": "Matter cycles between air and soil and among plants, animals and microbes as these organisms live and die.",
+    "id": "895A418FE0FF4039A77DB10B62089C51",
+    "parentId": "94D56E6CDD424B139CC68A35FDB4942C",
+    "position": 15000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "LS2.5.2"
+   },
+   "912EA8057E804145BF5B1BF6CC379F23": {
+    "ancestorIds": [
+     "4298BB418ADB4EB3B84B8613B77BACC2",
+     "431047FAB4DC45E3B22F5D09D245E50D"
+    ],
+    "asnIdentifier": "S2987201",
+    "depth": 2,
+    "description": "Earth's orbit and rotation and the orbit of the moon around earth cause observable patterns.",
+    "id": "912EA8057E804145BF5B1BF6CC379F23",
+    "parentId": "4298BB418ADB4EB3B84B8613B77BACC2",
+    "position": 20000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.5.2"
+   },
+   "94D56E6CDD424B139CC68A35FDB4942C": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2987039",
+    "depth": 0,
+    "description": "Life Science",
+    "id": "94D56E6CDD424B139CC68A35FDB4942C",
+    "parentId": null,
+    "position": 12000,
+    "statementLabel": "Standard",
+    "statementNotation": "LS2"
+   },
+   "960625987ED34459AE62DAE1B6185B24": {
+    "ancestorIds": [
+     "DCF0D576FFAE422DAB0BBDC99FB1EE62",
+     "ED62EA3850CF4798B1BBA5F1D0136C24"
+    ],
+    "asnIdentifier": "S2986956",
+    "depth": 2,
+    "description": "Make observations and measurements to identify materials based on their properties.",
+    "id": "960625987ED34459AE62DAE1B6185B24",
+    "parentId": "DCF0D576FFAE422DAB0BBDC99FB1EE62",
+    "position": 4000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.5.1.b"
+   },
+   "986BE84836DE4EB4874C1C81AD9505FB": {
+    "ancestorIds": [
+     "37301141E42845358F3882FCBF25AD1D",
+     "431047FAB4DC45E3B22F5D09D245E50D"
+    ],
+    "asnIdentifier": "S2987204",
+    "depth": 2,
+    "description": "Develop a model using an example to describe ways the geosphere, biosphere, hydrosphere and/or atmosphere interact.",
+    "id": "986BE84836DE4EB4874C1C81AD9505FB",
+    "parentId": "37301141E42845358F3882FCBF25AD1D",
+    "position": 23000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.5.3.a"
+   },
+   "9A7D6A7DD52E4685BBE7E2588D4B2B2F": {
+    "ancestorIds": [
+     "ED62EA3850CF4798B1BBA5F1D0136C24"
+    ],
+    "asnIdentifier": "S2986962",
+    "depth": 1,
+    "description": "The energy released from food was once energy from the sun.",
+    "id": "9A7D6A7DD52E4685BBE7E2588D4B2B2F",
+    "parentId": "ED62EA3850CF4798B1BBA5F1D0136C24",
+    "position": 10000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.5.4"
+   },
+   "B981C8E6ADD047379FC3D177175BB653": {
+    "ancestorIds": [
+     "ED62EA3850CF4798B1BBA5F1D0136C24"
+    ],
+    "asnIdentifier": "S2986960",
+    "depth": 1,
+    "description": "The gravitational force of Earth acting on an object near Earth's surface pulls that object toward the planet's center.",
+    "id": "B981C8E6ADD047379FC3D177175BB653",
+    "parentId": "ED62EA3850CF4798B1BBA5F1D0136C24",
+    "position": 8000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.5.3"
+   },
+   "DCF0D576FFAE422DAB0BBDC99FB1EE62": {
+    "ancestorIds": [
+     "ED62EA3850CF4798B1BBA5F1D0136C24"
+    ],
+    "asnIdentifier": "S2986954",
+    "depth": 1,
+    "description": "Matter exists as particles that are too small to be seen; measurements of a variety of observable properties can be used to identify particular materials.",
+    "id": "DCF0D576FFAE422DAB0BBDC99FB1EE62",
+    "parentId": "ED62EA3850CF4798B1BBA5F1D0136C24",
+    "position": 2000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.5.1"
+   },
+   "ED62EA3850CF4798B1BBA5F1D0136C24": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2986907",
+    "depth": 0,
+    "description": "Physical Science",
+    "id": "ED62EA3850CF4798B1BBA5F1D0136C24",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": "Standard",
+    "statementNotation": "PS1"
+   },
+   "EEE6EF2D17C44B7389608F05FE6BB5CC": {
+    "ancestorIds": [
+     "253F659175574710967719CD7BC3A595",
+     "ED62EA3850CF4798B1BBA5F1D0136C24"
+    ],
+    "asnIdentifier": "S2986958",
+    "depth": 2,
+    "description": "Measure and graph quantities to provide evidence that regardless of the type of change that occurs when heating, cooling or mixing substances, the total weight of matter is conserved.",
+    "id": "EEE6EF2D17C44B7389608F05FE6BB5CC",
+    "parentId": "253F659175574710967719CD7BC3A595",
+    "position": 6000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.5.2.a"
+   },
+   "EFAE88514F224788B2CDF772E1FCB8F1": {
+    "ancestorIds": [
+     "253F659175574710967719CD7BC3A595",
+     "ED62EA3850CF4798B1BBA5F1D0136C24"
+    ],
+    "asnIdentifier": "S2986959",
+    "depth": 2,
+    "description": "Conduct an investigation to determine whether the mixing of two or more substances results in new substances.",
+    "id": "EFAE88514F224788B2CDF772E1FCB8F1",
+    "parentId": "253F659175574710967719CD7BC3A595",
+    "position": 7000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.5.2.b"
+   }
+  },
+  "subject": "Science (2020-)",
+  "title": "Grade 5"
+ }
+}

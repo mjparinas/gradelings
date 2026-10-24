@@ -1,0 +1,1033 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D2980651",
+   "id": "D2980651",
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.cde.state.co.us/comath/2020cas-ma-p12",
+   "title": "Colorado Academic Standards: Mathematics",
+   "valid": "2020"
+  },
+  "educationLevels": [
+   "07"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D2980651_grade-07",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/3.0/us/",
+   "rightsHolder": "D2L Corporation",
+   "title": "CC BY 3.0 US"
+  },
+  "normalizedSubject": "Math",
+  "standards": {
+   "013115BF85AF4A87AB3EBC4103DE7587": {
+    "ancestorIds": [
+     "AE1A7593431744EB9108DEC86CD7E6D9",
+     "D461D4C2ECCA47ECB1A960E130450A1A",
+     "79FBD75A636A487781FBB26477028AD1"
+    ],
+    "asnIdentifier": "S21045409",
+    "depth": 3,
+    "description": "Use data from a random sample to draw inferences about a population with an unknown characteristic of interest. Generate multiple samples (or simulated samples) of the same size to gauge the variation in estimates or predictions.",
+    "id": "013115BF85AF4A87AB3EBC4103DE7587",
+    "parentId": "AE1A7593431744EB9108DEC86CD7E6D9",
+    "position": 47000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.SP.A.2"
+   },
+   "030E66D871AC4F73A98BDDE9DC851A89": {
+    "ancestorIds": [
+     "9140DCEC01844A05A2EC797E90F4DB49",
+     "BB281AB2A2344392B00D6110FCA3DBA6",
+     "F98C7A8F31BC47D79E478535105D4399",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21045388",
+    "depth": 4,
+    "description": "Represent proportional relationships by equations.",
+    "id": "030E66D871AC4F73A98BDDE9DC851A89",
+    "parentId": "9140DCEC01844A05A2EC797E90F4DB49",
+    "position": 17000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.RP.A.2.c"
+   },
+   "0AD5591C25A441E2B4FD73C938857230": {
+    "ancestorIds": [
+     "E32711D8651B47A4AFDFDB556DFC8A2B",
+     "6E36888974B64DFD95843F681ECB4A85",
+     "A8CA71F0D8B44612B62A2BFA440175BB"
+    ],
+    "asnIdentifier": "S21045403",
+    "depth": 3,
+    "description": "Demonstrate that rewriting an expression in different forms in a problem context can shed light on the problem and how the quantities in it are related.",
+    "id": "0AD5591C25A441E2B4FD73C938857230",
+    "parentId": "E32711D8651B47A4AFDFDB556DFC8A2B",
+    "position": 37000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.EE.A.2"
+   },
+   "0EB3944F18F34926A320EDECC17DCA1C": {
+    "ancestorIds": [
+     "9140DCEC01844A05A2EC797E90F4DB49",
+     "BB281AB2A2344392B00D6110FCA3DBA6",
+     "F98C7A8F31BC47D79E478535105D4399",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21045386",
+    "depth": 4,
+    "description": "Determine whether two quantities are in a proportional relationship, e.g., by testing for equivalent ratios in a table or graphing on a coordinate plane and observing whether the graph is a straight line through the origin.",
+    "id": "0EB3944F18F34926A320EDECC17DCA1C",
+    "parentId": "9140DCEC01844A05A2EC797E90F4DB49",
+    "position": 15000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.RP.A.2.a"
+   },
+   "155FA16532654377A70709A4EE9DB7F6": {
+    "ancestorIds": [
+     "559B281B14C64C14B4BB7864183519A7",
+     "38ED54FDEBC540C9AFEAC747968CF1C6",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21045396",
+    "depth": 3,
+    "description": "Apply and extend previous understandings of multiplication and division and of fractions to multiply and divide rational numbers.",
+    "id": "155FA16532654377A70709A4EE9DB7F6",
+    "parentId": "559B281B14C64C14B4BB7864183519A7",
+    "position": 27000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.NS.A.2"
+   },
+   "1C4A50D9F10A468C92887AC610C8E5B6": {
+    "ancestorIds": [
+     "90CC1A66E3BA471AA2D2555CBFEA85BB",
+     "C14D2C4C8FFD40E0BE4E8E58A7829F7C",
+     "96459ED57C82449DB021695DCEDFA70B"
+    ],
+    "asnIdentifier": "S21045425",
+    "depth": 3,
+    "description": "Use facts about supplementary, complementary, vertical, and adjacent angles in a multistep problem to write and solve simple equations for an unknown angle in a figure.",
+    "id": "1C4A50D9F10A468C92887AC610C8E5B6",
+    "parentId": "90CC1A66E3BA471AA2D2555CBFEA85BB",
+    "position": 69000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.G.B.5"
+   },
+   "1DB0D0BFCBA6460C93E91AAC6838E963": {
+    "ancestorIds": [
+     "43B10ADA22334C0A8ADC85F50138DC0E",
+     "C14D2C4C8FFD40E0BE4E8E58A7829F7C",
+     "96459ED57C82449DB021695DCEDFA70B"
+    ],
+    "asnIdentifier": "S21045422",
+    "depth": 3,
+    "description": "Draw (freehand, with ruler and protractor, and with technology) geometric shapes with given conditions. Focus on constructing triangles from three measures of angles or sides, noticing when the conditions determine a unique triangle, more than one triangle, or no triangle.",
+    "id": "1DB0D0BFCBA6460C93E91AAC6838E963",
+    "parentId": "43B10ADA22334C0A8ADC85F50138DC0E",
+    "position": 65000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.G.A.2"
+   },
+   "1DC69156BBF0438C8A1B8EC84936373C": {
+    "ancestorIds": [
+     "43B10ADA22334C0A8ADC85F50138DC0E",
+     "C14D2C4C8FFD40E0BE4E8E58A7829F7C",
+     "96459ED57C82449DB021695DCEDFA70B"
+    ],
+    "asnIdentifier": "S21045423",
+    "depth": 3,
+    "description": "Describe the two-dimensional figures that result from slicing three-dimensional figures, as in cross sections of right rectangular prisms and right rectangular pyramids.",
+    "id": "1DC69156BBF0438C8A1B8EC84936373C",
+    "parentId": "43B10ADA22334C0A8ADC85F50138DC0E",
+    "position": 66000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.G.A.3"
+   },
+   "20D6EC026284488683262B682051FFF3": {
+    "ancestorIds": [
+     "E32711D8651B47A4AFDFDB556DFC8A2B",
+     "6E36888974B64DFD95843F681ECB4A85",
+     "A8CA71F0D8B44612B62A2BFA440175BB"
+    ],
+    "asnIdentifier": "S21045402",
+    "depth": 3,
+    "description": "Apply properties of operations as strategies to add, subtract, factor, and expand linear expressions with rational coefficients.",
+    "id": "20D6EC026284488683262B682051FFF3",
+    "parentId": "E32711D8651B47A4AFDFDB556DFC8A2B",
+    "position": 36000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.EE.A.1"
+   },
+   "2356D78AC4C3431DBC095D7E4BBDC484": {
+    "ancestorIds": [
+     "155FA16532654377A70709A4EE9DB7F6",
+     "559B281B14C64C14B4BB7864183519A7",
+     "38ED54FDEBC540C9AFEAC747968CF1C6",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21045399",
+    "depth": 4,
+    "description": "Apply properties of operations as strategies to multiply and divide rational numbers.",
+    "id": "2356D78AC4C3431DBC095D7E4BBDC484",
+    "parentId": "155FA16532654377A70709A4EE9DB7F6",
+    "position": 30000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.NS.A.2.c"
+   },
+   "28B28E98D4D548638EC3ECD1211CFC78": {
+    "ancestorIds": [
+     "401487A3F8FB49F393CBD8C06F7C318D"
+    ],
+    "asnIdentifier": "S21029614",
+    "depth": 1,
+    "description": "Look for and express regularity in repeated reasoning.",
+    "id": "28B28E98D4D548638EC3ECD1211CFC78",
+    "parentId": "401487A3F8FB49F393CBD8C06F7C318D",
+    "position": 9000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP8"
+   },
+   "2B68BF8FDF9E4FD5AFD35EE2F99A5C62": {
+    "ancestorIds": [
+     "401487A3F8FB49F393CBD8C06F7C318D"
+    ],
+    "asnIdentifier": "S21029611",
+    "depth": 1,
+    "description": "Use appropriate tools strategically.",
+    "id": "2B68BF8FDF9E4FD5AFD35EE2F99A5C62",
+    "parentId": "401487A3F8FB49F393CBD8C06F7C318D",
+    "position": 6000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP5"
+   },
+   "2F66CF6060F4473BA1820B6DDE459ED9": {
+    "ancestorIds": [
+     "DB602715EEC14C8083CC0932A1681D09",
+     "D461D4C2ECCA47ECB1A960E130450A1A",
+     "79FBD75A636A487781FBB26477028AD1"
+    ],
+    "asnIdentifier": "S21045411",
+    "depth": 3,
+    "description": "Use measures of center and measures of variability for numerical data from random samples to draw informal comparative inferences about two populations.",
+    "id": "2F66CF6060F4473BA1820B6DDE459ED9",
+    "parentId": "DB602715EEC14C8083CC0932A1681D09",
+    "position": 50000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.SP.B.4"
+   },
+   "38ED54FDEBC540C9AFEAC747968CF1C6": {
+    "ancestorIds": [
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21029647",
+    "depth": 1,
+    "description": "The Number System",
+    "id": "38ED54FDEBC540C9AFEAC747968CF1C6",
+    "parentId": "9E4A6BC9233345E591F326CFCA6C9F44",
+    "position": 20000
+   },
+   "3C8DECB470704AE1923ADC27FCBE3C90": {
+    "ancestorIds": [
+     "DE59B9F124904555BE937FC7A0DD4CD3",
+     "6E36888974B64DFD95843F681ECB4A85",
+     "A8CA71F0D8B44612B62A2BFA440175BB"
+    ],
+    "asnIdentifier": "S21045405",
+    "depth": 3,
+    "description": "Use variables to represent quantities in a real-world or mathematical problem, and construct simple equations and inequalities to solve problems by reasoning about the quantities.",
+    "id": "3C8DECB470704AE1923ADC27FCBE3C90",
+    "parentId": "DE59B9F124904555BE937FC7A0DD4CD3",
+    "position": 40000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.EE.B.4"
+   },
+   "401487A3F8FB49F393CBD8C06F7C318D": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029606",
+    "depth": 0,
+    "description": "Standards for Mathematical Practice",
+    "id": "401487A3F8FB49F393CBD8C06F7C318D",
+    "parentId": null,
+    "position": 1000
+   },
+   "4056C3386B64458C8B79A085A60E5E1B": {
+    "ancestorIds": [
+     "155FA16532654377A70709A4EE9DB7F6",
+     "559B281B14C64C14B4BB7864183519A7",
+     "38ED54FDEBC540C9AFEAC747968CF1C6",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21045398",
+    "depth": 4,
+    "description": "Understand that integers can be divided, provided that the divisor is not zero, and every quotient of integers (with non-zero divisor) is a rational number. If p and q are integers, then -(p/q) = -p/q = p/-q. Interpret quotients of rational numbers by describing real-world contexts.",
+    "id": "4056C3386B64458C8B79A085A60E5E1B",
+    "parentId": "155FA16532654377A70709A4EE9DB7F6",
+    "position": 29000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.NS.A.2.b"
+   },
+   "43B10ADA22334C0A8ADC85F50138DC0E": {
+    "ancestorIds": [
+     "C14D2C4C8FFD40E0BE4E8E58A7829F7C",
+     "96459ED57C82449DB021695DCEDFA70B"
+    ],
+    "asnIdentifier": "S21029783",
+    "depth": 2,
+    "description": "Draw, construct, and describe geometrical figures and describe the relationships between them.",
+    "id": "43B10ADA22334C0A8ADC85F50138DC0E",
+    "parentId": "C14D2C4C8FFD40E0BE4E8E58A7829F7C",
+    "position": 63000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "7.G.A"
+   },
+   "44319338EAE946C1A715CD91B9E9E0F2": {
+    "ancestorIds": [
+     "CB71B857203F4D3C95B686EBB536C625",
+     "559B281B14C64C14B4BB7864183519A7",
+     "38ED54FDEBC540C9AFEAC747968CF1C6",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21045393",
+    "depth": 4,
+    "description": "Demonstrate p+q as the number located a distance |q| from p, in the positive or negative direction depending on whether q is positive or negative. Show that a number and its opposite have a sum of 0 (are additive inverses). Interpret sums of rational numbers by describing real-world contexts.",
+    "id": "44319338EAE946C1A715CD91B9E9E0F2",
+    "parentId": "CB71B857203F4D3C95B686EBB536C625",
+    "position": 24000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.NS.A.1.b"
+   },
+   "46348CEBDF5E4F56AB2873A2573EF336": {
+    "ancestorIds": [
+     "9140DCEC01844A05A2EC797E90F4DB49",
+     "BB281AB2A2344392B00D6110FCA3DBA6",
+     "F98C7A8F31BC47D79E478535105D4399",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21045387",
+    "depth": 4,
+    "description": "Identify the constant of proportionality (unit rate) in tables, graphs, equations, diagrams, and verbal descriptions of proportional relationships.",
+    "id": "46348CEBDF5E4F56AB2873A2573EF336",
+    "parentId": "9140DCEC01844A05A2EC797E90F4DB49",
+    "position": 16000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.RP.A.2.b"
+   },
+   "484AE0FBD9DF4A51B2075F61A34A3FF4": {
+    "ancestorIds": [
+     "90CC1A66E3BA471AA2D2555CBFEA85BB",
+     "C14D2C4C8FFD40E0BE4E8E58A7829F7C",
+     "96459ED57C82449DB021695DCEDFA70B"
+    ],
+    "asnIdentifier": "S21045424",
+    "depth": 3,
+    "description": "State the formulas for the area and circumference of a circle and use them to solve problems; give an informal derivation of the relationship between the circumference and area of a circle.",
+    "id": "484AE0FBD9DF4A51B2075F61A34A3FF4",
+    "parentId": "90CC1A66E3BA471AA2D2555CBFEA85BB",
+    "position": 68000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.G.B.4"
+   },
+   "559B281B14C64C14B4BB7864183519A7": {
+    "ancestorIds": [
+     "38ED54FDEBC540C9AFEAC747968CF1C6",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21029651",
+    "depth": 2,
+    "description": "Apply and extend previous understandings of operations with fractions to add, subtract, multiply, and divide rational numbers.",
+    "id": "559B281B14C64C14B4BB7864183519A7",
+    "parentId": "38ED54FDEBC540C9AFEAC747968CF1C6",
+    "position": 21000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "7.NS.A"
+   },
+   "5AB631727C894CF1AB82301A86794475": {
+    "ancestorIds": [
+     "D6161B13FE8B4732A197BC638FEB6D55",
+     "949B754923854049B81C4DD1928C4467",
+     "D461D4C2ECCA47ECB1A960E130450A1A",
+     "79FBD75A636A487781FBB26477028AD1"
+    ],
+    "asnIdentifier": "S21045418",
+    "depth": 4,
+    "description": "Explain that, just as with simple events, the probability of a compound event is the fraction of outcomes in the sample space for which the compound event occurs.",
+    "id": "5AB631727C894CF1AB82301A86794475",
+    "parentId": "D6161B13FE8B4732A197BC638FEB6D55",
+    "position": 58000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.SP.C.8.a"
+   },
+   "605BAE9BE9D24D278913480784CB41F6": {
+    "ancestorIds": [
+     "D6161B13FE8B4732A197BC638FEB6D55",
+     "949B754923854049B81C4DD1928C4467",
+     "D461D4C2ECCA47ECB1A960E130450A1A",
+     "79FBD75A636A487781FBB26477028AD1"
+    ],
+    "asnIdentifier": "S21045420",
+    "depth": 4,
+    "description": "Design and use a simulation to generate frequencies for compound events.",
+    "id": "605BAE9BE9D24D278913480784CB41F6",
+    "parentId": "D6161B13FE8B4732A197BC638FEB6D55",
+    "position": 60000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.SP.C.8.c"
+   },
+   "63A2BC6426CF4DF8AFB46C4EEB2635F1": {
+    "ancestorIds": [
+     "DB602715EEC14C8083CC0932A1681D09",
+     "D461D4C2ECCA47ECB1A960E130450A1A",
+     "79FBD75A636A487781FBB26477028AD1"
+    ],
+    "asnIdentifier": "S21045410",
+    "depth": 3,
+    "description": "Informally assess the degree of visual overlap of two numerical data distributions with similar variabilities, measuring the difference between the centers by expressing it as a multiple of a measure of variability.",
+    "id": "63A2BC6426CF4DF8AFB46C4EEB2635F1",
+    "parentId": "DB602715EEC14C8083CC0932A1681D09",
+    "position": 49000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.SP.B.3"
+   },
+   "68B87B78562141F0BC1451CFA59AD47C": {
+    "ancestorIds": [
+     "3C8DECB470704AE1923ADC27FCBE3C90",
+     "DE59B9F124904555BE937FC7A0DD4CD3",
+     "6E36888974B64DFD95843F681ECB4A85",
+     "A8CA71F0D8B44612B62A2BFA440175BB"
+    ],
+    "asnIdentifier": "S21045407",
+    "depth": 4,
+    "description": "Solve word problems leading to inequalities of the form px±q > r, px±q ≥ r, px±q < r, or px±q ≤ r, where p, q, and r are specific rational numbers. Graph the solution set of the inequality and interpret it in the context of the problem.",
+    "id": "68B87B78562141F0BC1451CFA59AD47C",
+    "parentId": "3C8DECB470704AE1923ADC27FCBE3C90",
+    "position": 42000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.EE.B.4.b"
+   },
+   "6E36888974B64DFD95843F681ECB4A85": {
+    "ancestorIds": [
+     "A8CA71F0D8B44612B62A2BFA440175BB"
+    ],
+    "asnIdentifier": "S21029687",
+    "depth": 1,
+    "description": "Expressions & Equations",
+    "id": "6E36888974B64DFD95843F681ECB4A85",
+    "parentId": "A8CA71F0D8B44612B62A2BFA440175BB",
+    "position": 34000
+   },
+   "7673D1A72ABD450F93EAA825399E84FF": {
+    "ancestorIds": [
+     "949B754923854049B81C4DD1928C4467",
+     "D461D4C2ECCA47ECB1A960E130450A1A",
+     "79FBD75A636A487781FBB26477028AD1"
+    ],
+    "asnIdentifier": "S21045412",
+    "depth": 3,
+    "description": "Explain that the probability of a chance event is a number between 0 and 1 that expresses the likelihood of the event occurring. Larger numbers indicate greater likelihood. A probability near 0 indicates an unlikely event, a probability around ½ indicates an event that is neither unlikely nor likely, and a probability near 1 indicates a likely event.",
+    "id": "7673D1A72ABD450F93EAA825399E84FF",
+    "parentId": "949B754923854049B81C4DD1928C4467",
+    "position": 52000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.SP.C.5"
+   },
+   "79FBD75A636A487781FBB26477028AD1": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029728",
+    "depth": 0,
+    "description": "Data, Statistics, and Probability",
+    "id": "79FBD75A636A487781FBB26477028AD1",
+    "parentId": null,
+    "position": 43000,
+    "statementLabel": "Standard",
+    "statementNotation": "DSP.3"
+   },
+   "7AE0C121896D4EAF8BD176A730F87D02": {
+    "ancestorIds": [
+     "155FA16532654377A70709A4EE9DB7F6",
+     "559B281B14C64C14B4BB7864183519A7",
+     "38ED54FDEBC540C9AFEAC747968CF1C6",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21045400",
+    "depth": 4,
+    "description": "Convert a rational number to a decimal using long division; know that the decimal form of a rational number terminates in 0s or eventually repeats.",
+    "id": "7AE0C121896D4EAF8BD176A730F87D02",
+    "parentId": "155FA16532654377A70709A4EE9DB7F6",
+    "position": 31000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.NS.A.2.d"
+   },
+   "7CF0644EE77A423E90F451AB5932B29A": {
+    "ancestorIds": [
+     "559B281B14C64C14B4BB7864183519A7",
+     "38ED54FDEBC540C9AFEAC747968CF1C6",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21045401",
+    "depth": 3,
+    "description": "Solve real-world and mathematical problems involving the four operations with rational numbers.",
+    "id": "7CF0644EE77A423E90F451AB5932B29A",
+    "parentId": "559B281B14C64C14B4BB7864183519A7",
+    "position": 32000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.NS.A.3"
+   },
+   "81C28428FF49454A870976A59BC45214": {
+    "ancestorIds": [
+     "CB71B857203F4D3C95B686EBB536C625",
+     "559B281B14C64C14B4BB7864183519A7",
+     "38ED54FDEBC540C9AFEAC747968CF1C6",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21045394",
+    "depth": 4,
+    "description": "Demonstrate subtraction of rational numbers as adding the additive inverse, p-q = p+(-q). Show that the distance between two rational numbers on the number line is the absolute value of their difference, and apply this principle in real-world contexts.",
+    "id": "81C28428FF49454A870976A59BC45214",
+    "parentId": "CB71B857203F4D3C95B686EBB536C625",
+    "position": 25000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.NS.A.1.c"
+   },
+   "85DF989C8E9B445A8E08F94D19A6575F": {
+    "ancestorIds": [
+     "90CC1A66E3BA471AA2D2555CBFEA85BB",
+     "C14D2C4C8FFD40E0BE4E8E58A7829F7C",
+     "96459ED57C82449DB021695DCEDFA70B"
+    ],
+    "asnIdentifier": "S21045426",
+    "depth": 3,
+    "description": "Solve real-world and mathematical problems involving area, volume, and surface area of two- and three-dimensional objects composed of triangles, quadrilaterals, polygons, cubes, and right prisms.",
+    "id": "85DF989C8E9B445A8E08F94D19A6575F",
+    "parentId": "90CC1A66E3BA471AA2D2555CBFEA85BB",
+    "position": 70000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.G.B.6"
+   },
+   "88169D4CB22C4B5B97C71ED10D6A6F22": {
+    "ancestorIds": [
+     "935E80AB4E5A4454B7F3817CD75199FD",
+     "949B754923854049B81C4DD1928C4467",
+     "D461D4C2ECCA47ECB1A960E130450A1A",
+     "79FBD75A636A487781FBB26477028AD1"
+    ],
+    "asnIdentifier": "S21045415",
+    "depth": 4,
+    "description": "Develop a uniform probability model by assigning equal probability to all outcomes, and use the model to determine probabilities of events.",
+    "id": "88169D4CB22C4B5B97C71ED10D6A6F22",
+    "parentId": "935E80AB4E5A4454B7F3817CD75199FD",
+    "position": 55000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.SP.C.7.a"
+   },
+   "90CC1A66E3BA471AA2D2555CBFEA85BB": {
+    "ancestorIds": [
+     "C14D2C4C8FFD40E0BE4E8E58A7829F7C",
+     "96459ED57C82449DB021695DCEDFA70B"
+    ],
+    "asnIdentifier": "S21029784",
+    "depth": 2,
+    "description": "Solve real-life and mathematical problems involving angle measure, area, surface area, and volume.",
+    "id": "90CC1A66E3BA471AA2D2555CBFEA85BB",
+    "parentId": "C14D2C4C8FFD40E0BE4E8E58A7829F7C",
+    "position": 67000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "7.G.B"
+   },
+   "9140DCEC01844A05A2EC797E90F4DB49": {
+    "ancestorIds": [
+     "BB281AB2A2344392B00D6110FCA3DBA6",
+     "F98C7A8F31BC47D79E478535105D4399",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21045385",
+    "depth": 3,
+    "description": "Identify and represent proportional relationships between quantities.",
+    "id": "9140DCEC01844A05A2EC797E90F4DB49",
+    "parentId": "BB281AB2A2344392B00D6110FCA3DBA6",
+    "position": 14000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.RP.A.2"
+   },
+   "935E80AB4E5A4454B7F3817CD75199FD": {
+    "ancestorIds": [
+     "949B754923854049B81C4DD1928C4467",
+     "D461D4C2ECCA47ECB1A960E130450A1A",
+     "79FBD75A636A487781FBB26477028AD1"
+    ],
+    "asnIdentifier": "S21045414",
+    "depth": 3,
+    "description": "Develop a probability model and use it to find probabilities of events. Compare probabilities from a model to observed frequencies; if the agreement is not good, explain possible sources of the discrepancy.",
+    "id": "935E80AB4E5A4454B7F3817CD75199FD",
+    "parentId": "949B754923854049B81C4DD1928C4467",
+    "position": 54000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.SP.C.7"
+   },
+   "949B754923854049B81C4DD1928C4467": {
+    "ancestorIds": [
+     "D461D4C2ECCA47ECB1A960E130450A1A",
+     "79FBD75A636A487781FBB26477028AD1"
+    ],
+    "asnIdentifier": "S21029755",
+    "depth": 2,
+    "description": "Investigate chance processes and develop, use, and evaluate probability models.",
+    "id": "949B754923854049B81C4DD1928C4467",
+    "parentId": "D461D4C2ECCA47ECB1A960E130450A1A",
+    "position": 51000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "7.SP.C"
+   },
+   "96459ED57C82449DB021695DCEDFA70B": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029770",
+    "depth": 0,
+    "description": "Geometry",
+    "id": "96459ED57C82449DB021695DCEDFA70B",
+    "parentId": null,
+    "position": 61000,
+    "statementLabel": "Standard",
+    "statementNotation": "G.4"
+   },
+   "995A1A5CFA644CCC9FC63CD43D774F25": {
+    "ancestorIds": [
+     "401487A3F8FB49F393CBD8C06F7C318D"
+    ],
+    "asnIdentifier": "S21029610",
+    "depth": 1,
+    "description": "Model with mathematics.",
+    "id": "995A1A5CFA644CCC9FC63CD43D774F25",
+    "parentId": "401487A3F8FB49F393CBD8C06F7C318D",
+    "position": 5000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP4"
+   },
+   "9E4A6BC9233345E591F326CFCA6C9F44": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029615",
+    "depth": 0,
+    "description": "Number and Quantity",
+    "id": "9E4A6BC9233345E591F326CFCA6C9F44",
+    "parentId": null,
+    "position": 10000,
+    "statementLabel": "Standard",
+    "statementNotation": "NQ.1"
+   },
+   "A550A35236CE45E5BD4DEF366FE29087": {
+    "ancestorIds": [
+     "BB281AB2A2344392B00D6110FCA3DBA6",
+     "F98C7A8F31BC47D79E478535105D4399",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21045390",
+    "depth": 3,
+    "description": "Use proportional relationships to solve multistep ratio and percent problems.",
+    "id": "A550A35236CE45E5BD4DEF366FE29087",
+    "parentId": "BB281AB2A2344392B00D6110FCA3DBA6",
+    "position": 19000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.RP.A.3"
+   },
+   "A8CA71F0D8B44612B62A2BFA440175BB": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029666",
+    "depth": 0,
+    "description": "Algebra and Functions",
+    "id": "A8CA71F0D8B44612B62A2BFA440175BB",
+    "parentId": null,
+    "position": 33000,
+    "statementLabel": "Standard",
+    "statementNotation": "AF.2"
+   },
+   "AE1A7593431744EB9108DEC86CD7E6D9": {
+    "ancestorIds": [
+     "D461D4C2ECCA47ECB1A960E130450A1A",
+     "79FBD75A636A487781FBB26477028AD1"
+    ],
+    "asnIdentifier": "S21029753",
+    "depth": 2,
+    "description": "Use random sampling to draw inferences about a population.",
+    "id": "AE1A7593431744EB9108DEC86CD7E6D9",
+    "parentId": "D461D4C2ECCA47ECB1A960E130450A1A",
+    "position": 45000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "7.SP.A"
+   },
+   "B5739940844E4CCFAC03042B737B6C4E": {
+    "ancestorIds": [
+     "CB71B857203F4D3C95B686EBB536C625",
+     "559B281B14C64C14B4BB7864183519A7",
+     "38ED54FDEBC540C9AFEAC747968CF1C6",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21045395",
+    "depth": 4,
+    "description": "Apply properties of operations as strategies to add and subtract rational numbers.",
+    "id": "B5739940844E4CCFAC03042B737B6C4E",
+    "parentId": "CB71B857203F4D3C95B686EBB536C625",
+    "position": 26000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.NS.A.1.d"
+   },
+   "BAE609DBE8B34BB68BEBE67789508E17": {
+    "ancestorIds": [
+     "935E80AB4E5A4454B7F3817CD75199FD",
+     "949B754923854049B81C4DD1928C4467",
+     "D461D4C2ECCA47ECB1A960E130450A1A",
+     "79FBD75A636A487781FBB26477028AD1"
+    ],
+    "asnIdentifier": "S21045416",
+    "depth": 4,
+    "description": "Develop a probability model (which may not be uniform) by observing frequencies in data generated from a chance process.",
+    "id": "BAE609DBE8B34BB68BEBE67789508E17",
+    "parentId": "935E80AB4E5A4454B7F3817CD75199FD",
+    "position": 56000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.SP.C.7.b"
+   },
+   "BB281AB2A2344392B00D6110FCA3DBA6": {
+    "ancestorIds": [
+     "F98C7A8F31BC47D79E478535105D4399",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21029646",
+    "depth": 2,
+    "description": "Analyze proportional relationships and use them to solve real-world and mathematical problems.",
+    "id": "BB281AB2A2344392B00D6110FCA3DBA6",
+    "parentId": "F98C7A8F31BC47D79E478535105D4399",
+    "position": 12000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "7.RP.A"
+   },
+   "C14D2C4C8FFD40E0BE4E8E58A7829F7C": {
+    "ancestorIds": [
+     "96459ED57C82449DB021695DCEDFA70B"
+    ],
+    "asnIdentifier": "S21029771",
+    "depth": 1,
+    "description": "Geometry",
+    "id": "C14D2C4C8FFD40E0BE4E8E58A7829F7C",
+    "parentId": "96459ED57C82449DB021695DCEDFA70B",
+    "position": 62000
+   },
+   "C26025265EEB4CBBAA64ADE7E381448A": {
+    "ancestorIds": [
+     "401487A3F8FB49F393CBD8C06F7C318D"
+    ],
+    "asnIdentifier": "S21029613",
+    "depth": 1,
+    "description": "Look for and make use of structure.",
+    "id": "C26025265EEB4CBBAA64ADE7E381448A",
+    "parentId": "401487A3F8FB49F393CBD8C06F7C318D",
+    "position": 8000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP7"
+   },
+   "C293F4FA24674AC0803B1062B07873E7": {
+    "ancestorIds": [
+     "3C8DECB470704AE1923ADC27FCBE3C90",
+     "DE59B9F124904555BE937FC7A0DD4CD3",
+     "6E36888974B64DFD95843F681ECB4A85",
+     "A8CA71F0D8B44612B62A2BFA440175BB"
+    ],
+    "asnIdentifier": "S21045406",
+    "depth": 4,
+    "description": "Solve word problems leading to equations of the form px ± q = r and p(x±q) = r, where p, q, and r are specific rational numbers. Solve equations of these forms fluently. Compare an algebraic solution to an arithmetic solution, identifying the sequence of the operations used in each approach.",
+    "id": "C293F4FA24674AC0803B1062B07873E7",
+    "parentId": "3C8DECB470704AE1923ADC27FCBE3C90",
+    "position": 41000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.EE.B.4.a"
+   },
+   "C75D031C04814D1AA8A6716E5A4B98E3": {
+    "ancestorIds": [
+     "43B10ADA22334C0A8ADC85F50138DC0E",
+     "C14D2C4C8FFD40E0BE4E8E58A7829F7C",
+     "96459ED57C82449DB021695DCEDFA70B"
+    ],
+    "asnIdentifier": "S21045421",
+    "depth": 3,
+    "description": "Solve problems involving scale drawings of geometric figures, including computing actual lengths and areas from a scale drawing and reproducing a scale drawing at a different scale.",
+    "id": "C75D031C04814D1AA8A6716E5A4B98E3",
+    "parentId": "43B10ADA22334C0A8ADC85F50138DC0E",
+    "position": 64000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.G.A.1"
+   },
+   "CB71B857203F4D3C95B686EBB536C625": {
+    "ancestorIds": [
+     "559B281B14C64C14B4BB7864183519A7",
+     "38ED54FDEBC540C9AFEAC747968CF1C6",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21045391",
+    "depth": 3,
+    "description": "Apply and extend previous understandings of addition and subtraction to add and subtract rational numbers; represent addition and subtraction on a horizontal or vertical number line diagram.",
+    "id": "CB71B857203F4D3C95B686EBB536C625",
+    "parentId": "559B281B14C64C14B4BB7864183519A7",
+    "position": 22000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.NS.A.1"
+   },
+   "CEE5C8F5BC774A8CBFA3F6625E611F6E": {
+    "ancestorIds": [
+     "DE59B9F124904555BE937FC7A0DD4CD3",
+     "6E36888974B64DFD95843F681ECB4A85",
+     "A8CA71F0D8B44612B62A2BFA440175BB"
+    ],
+    "asnIdentifier": "S21045404",
+    "depth": 3,
+    "description": "Solve multi-step real-life and mathematical problems posed with positive and negative rational numbers in any form (whole numbers, fractions, and decimals), using tools strategically. Apply properties of operations to calculate with numbers in any form; convert between forms as appropriate; and assess the reasonableness of answers using mental computation and estimation strategies.",
+    "id": "CEE5C8F5BC774A8CBFA3F6625E611F6E",
+    "parentId": "DE59B9F124904555BE937FC7A0DD4CD3",
+    "position": 39000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.EE.B.3"
+   },
+   "D317B6BEDB284A238C43C5ADE93103A5": {
+    "ancestorIds": [
+     "401487A3F8FB49F393CBD8C06F7C318D"
+    ],
+    "asnIdentifier": "S21029607",
+    "depth": 1,
+    "description": "Make sense of problems and persevere in solving them.",
+    "id": "D317B6BEDB284A238C43C5ADE93103A5",
+    "parentId": "401487A3F8FB49F393CBD8C06F7C318D",
+    "position": 2000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP1"
+   },
+   "D461D4C2ECCA47ECB1A960E130450A1A": {
+    "ancestorIds": [
+     "79FBD75A636A487781FBB26477028AD1"
+    ],
+    "asnIdentifier": "S21029750",
+    "depth": 1,
+    "description": "Statistics & Probability",
+    "id": "D461D4C2ECCA47ECB1A960E130450A1A",
+    "parentId": "79FBD75A636A487781FBB26477028AD1",
+    "position": 44000
+   },
+   "D6161B13FE8B4732A197BC638FEB6D55": {
+    "ancestorIds": [
+     "949B754923854049B81C4DD1928C4467",
+     "D461D4C2ECCA47ECB1A960E130450A1A",
+     "79FBD75A636A487781FBB26477028AD1"
+    ],
+    "asnIdentifier": "S21045417",
+    "depth": 3,
+    "description": "Find probabilities of compound events using organized lists, tables, tree diagrams, and simulation.",
+    "id": "D6161B13FE8B4732A197BC638FEB6D55",
+    "parentId": "949B754923854049B81C4DD1928C4467",
+    "position": 57000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.SP.C.8"
+   },
+   "D8329129784A4D6F8D8929E34117C6EC": {
+    "ancestorIds": [
+     "401487A3F8FB49F393CBD8C06F7C318D"
+    ],
+    "asnIdentifier": "S21029608",
+    "depth": 1,
+    "description": "Reason abstractly and quantitatively.",
+    "id": "D8329129784A4D6F8D8929E34117C6EC",
+    "parentId": "401487A3F8FB49F393CBD8C06F7C318D",
+    "position": 3000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP2"
+   },
+   "D93E25B1ABE345D09F5D36A70826E997": {
+    "ancestorIds": [
+     "CB71B857203F4D3C95B686EBB536C625",
+     "559B281B14C64C14B4BB7864183519A7",
+     "38ED54FDEBC540C9AFEAC747968CF1C6",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21045392",
+    "depth": 4,
+    "description": "Describe situations in which opposite quantities combine to make 0.",
+    "id": "D93E25B1ABE345D09F5D36A70826E997",
+    "parentId": "CB71B857203F4D3C95B686EBB536C625",
+    "position": 23000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.NS.A.1.a"
+   },
+   "DB602715EEC14C8083CC0932A1681D09": {
+    "ancestorIds": [
+     "D461D4C2ECCA47ECB1A960E130450A1A",
+     "79FBD75A636A487781FBB26477028AD1"
+    ],
+    "asnIdentifier": "S21029754",
+    "depth": 2,
+    "description": "Draw informal comparative inferences about two populations.",
+    "id": "DB602715EEC14C8083CC0932A1681D09",
+    "parentId": "D461D4C2ECCA47ECB1A960E130450A1A",
+    "position": 48000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "7.SP.B"
+   },
+   "DE59B9F124904555BE937FC7A0DD4CD3": {
+    "ancestorIds": [
+     "6E36888974B64DFD95843F681ECB4A85",
+     "A8CA71F0D8B44612B62A2BFA440175BB"
+    ],
+    "asnIdentifier": "S21029692",
+    "depth": 2,
+    "description": "Solve real-life and mathematical problems using numerical and algebraic expressions and equations.",
+    "id": "DE59B9F124904555BE937FC7A0DD4CD3",
+    "parentId": "6E36888974B64DFD95843F681ECB4A85",
+    "position": 38000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "7.EE.B"
+   },
+   "DE5E19F6A08547278F69D974FF22D3BE": {
+    "ancestorIds": [
+     "401487A3F8FB49F393CBD8C06F7C318D"
+    ],
+    "asnIdentifier": "S21029609",
+    "depth": 1,
+    "description": "Construct viable arguments and critique the reasoning of others.",
+    "id": "DE5E19F6A08547278F69D974FF22D3BE",
+    "parentId": "401487A3F8FB49F393CBD8C06F7C318D",
+    "position": 4000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP3"
+   },
+   "DEDCACE882514D4BA403F5A3D3006DF4": {
+    "ancestorIds": [
+     "155FA16532654377A70709A4EE9DB7F6",
+     "559B281B14C64C14B4BB7864183519A7",
+     "38ED54FDEBC540C9AFEAC747968CF1C6",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21045397",
+    "depth": 4,
+    "description": "Understand that multiplication is extended from fractions to rational numbers by requiring that operations continue to satisfy the properties of operations, particularly the distributive property, leading to products such as (−1)(−1)=1 and the rules for multiplying signed numbers. Interpret products of rational numbers by describing real-world contexts.",
+    "id": "DEDCACE882514D4BA403F5A3D3006DF4",
+    "parentId": "155FA16532654377A70709A4EE9DB7F6",
+    "position": 28000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.NS.A.2.a"
+   },
+   "E01367D2216B401B9022AEA50B9E546D": {
+    "ancestorIds": [
+     "9140DCEC01844A05A2EC797E90F4DB49",
+     "BB281AB2A2344392B00D6110FCA3DBA6",
+     "F98C7A8F31BC47D79E478535105D4399",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21045389",
+    "depth": 4,
+    "description": "Explain what a point (x, y) on the graph of a proportional relationship means in terms of the situation, with special attention to the points (0,0) and (1, r) where r is the unit rate.",
+    "id": "E01367D2216B401B9022AEA50B9E546D",
+    "parentId": "9140DCEC01844A05A2EC797E90F4DB49",
+    "position": 18000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.RP.A.2.d"
+   },
+   "E32711D8651B47A4AFDFDB556DFC8A2B": {
+    "ancestorIds": [
+     "6E36888974B64DFD95843F681ECB4A85",
+     "A8CA71F0D8B44612B62A2BFA440175BB"
+    ],
+    "asnIdentifier": "S21029691",
+    "depth": 2,
+    "description": "Use properties of operations to generate equivalent expressions.",
+    "id": "E32711D8651B47A4AFDFDB556DFC8A2B",
+    "parentId": "6E36888974B64DFD95843F681ECB4A85",
+    "position": 35000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "7.EE.A"
+   },
+   "E7325C66270E4C2180D08D47F6E956DA": {
+    "ancestorIds": [
+     "AE1A7593431744EB9108DEC86CD7E6D9",
+     "D461D4C2ECCA47ECB1A960E130450A1A",
+     "79FBD75A636A487781FBB26477028AD1"
+    ],
+    "asnIdentifier": "S21045408",
+    "depth": 3,
+    "description": "Understand that statistics can be used to gain information about a population by examining a sample of the population; explain that generalizations about a population from a sample are valid only if the sample is representative of that population. Explain that random sampling tends to produce representative samples and support valid inferences.",
+    "id": "E7325C66270E4C2180D08D47F6E956DA",
+    "parentId": "AE1A7593431744EB9108DEC86CD7E6D9",
+    "position": 46000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.SP.A.1"
+   },
+   "ED17F3077CE84599A877839BE88AD7C7": {
+    "ancestorIds": [
+     "401487A3F8FB49F393CBD8C06F7C318D"
+    ],
+    "asnIdentifier": "S21029612",
+    "depth": 1,
+    "description": "Attend to precision.",
+    "id": "ED17F3077CE84599A877839BE88AD7C7",
+    "parentId": "401487A3F8FB49F393CBD8C06F7C318D",
+    "position": 7000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP6"
+   },
+   "F057B302FA1944BEA3EF3E4BB97FE345": {
+    "ancestorIds": [
+     "D6161B13FE8B4732A197BC638FEB6D55",
+     "949B754923854049B81C4DD1928C4467",
+     "D461D4C2ECCA47ECB1A960E130450A1A",
+     "79FBD75A636A487781FBB26477028AD1"
+    ],
+    "asnIdentifier": "S21045419",
+    "depth": 4,
+    "description": "Represent sample spaces for compound events using methods such as organized lists, tables, and tree diagrams. For an event described in everyday language (e.g., \"rolling double sixes\"), identify the outcomes in the sample space which compose the event.",
+    "id": "F057B302FA1944BEA3EF3E4BB97FE345",
+    "parentId": "D6161B13FE8B4732A197BC638FEB6D55",
+    "position": 59000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.SP.C.8.b"
+   },
+   "F98C7A8F31BC47D79E478535105D4399": {
+    "ancestorIds": [
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21029644",
+    "depth": 1,
+    "description": "Ratios & Proportional Relationships",
+    "id": "F98C7A8F31BC47D79E478535105D4399",
+    "parentId": "9E4A6BC9233345E591F326CFCA6C9F44",
+    "position": 11000
+   },
+   "FB60A628E0174263B5177F8218904503": {
+    "ancestorIds": [
+     "949B754923854049B81C4DD1928C4467",
+     "D461D4C2ECCA47ECB1A960E130450A1A",
+     "79FBD75A636A487781FBB26477028AD1"
+    ],
+    "asnIdentifier": "S21045413",
+    "depth": 3,
+    "description": "Approximate the probability of a chance event by collecting data on the chance process that produces it and observing its long-run relative frequency, and predict the approximate relative frequency given the probability.",
+    "id": "FB60A628E0174263B5177F8218904503",
+    "parentId": "949B754923854049B81C4DD1928C4467",
+    "position": 53000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.SP.C.6"
+   },
+   "FDC7613807194783BC8437844EB6623E": {
+    "ancestorIds": [
+     "BB281AB2A2344392B00D6110FCA3DBA6",
+     "F98C7A8F31BC47D79E478535105D4399",
+     "9E4A6BC9233345E591F326CFCA6C9F44"
+    ],
+    "asnIdentifier": "S21045384",
+    "depth": 3,
+    "description": "Compute unit rates associated with ratios of fractions, including ratios of lengths, areas, and other quantities measured in like or different units.",
+    "id": "FDC7613807194783BC8437844EB6623E",
+    "parentId": "BB281AB2A2344392B00D6110FCA3DBA6",
+    "position": 13000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "7.RP.A.1"
+   }
+  },
+  "subject": "Mathematics (2020-)",
+  "title": "Grade 7"
+ }
+}

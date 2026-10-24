@@ -1,0 +1,4122 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D2980651",
+   "id": "D2980651",
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.cde.state.co.us/comath/2020cas-ma-p12",
+   "title": "Colorado Academic Standards: Mathematics",
+   "valid": "2020"
+  },
+  "educationLevels": [
+   "09",
+   "10",
+   "11",
+   "12"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D2980651_grades-09-10-11-12",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/3.0/us/",
+   "rightsHolder": "D2L Corporation",
+   "title": "CC BY 3.0 US"
+  },
+  "normalizedSubject": "Math",
+  "standards": {
+   "0254634C9FD8493093125CB90E399803": {
+    "ancestorIds": [
+     "97AAB8BDC28C47739C67F0EF15A5A5EE",
+     "1AE4A20E80014F1FB8ED789E35CB7735",
+     "06F1271EA47743FF844728C5B910916C",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045713",
+    "depth": 4,
+    "description": "Show that the dilation of a line segment is longer or shorter in the ratio given by the scale factor.",
+    "id": "0254634C9FD8493093125CB90E399803",
+    "parentId": "97AAB8BDC28C47739C67F0EF15A5A5EE",
+    "position": 239000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-SRT.A.1.b"
+   },
+   "039CB44DC0E54E12A12C2873A240E73E": {
+    "ancestorIds": [
+     "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029710",
+    "depth": 2,
+    "description": "Understand solving equations as a process of reasoning and explain the reasoning.",
+    "id": "039CB44DC0E54E12A12C2873A240E73E",
+    "parentId": "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+    "position": 89000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.A-REI.A"
+   },
+   "0413DAAD2B724A7CA87C0E624F8F8B87": {
+    "ancestorIds": [
+     "0FDFD0E6D0F44F1E98EAE2632A6D7119",
+     "06F1271EA47743FF844728C5B910916C",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045719",
+    "depth": 3,
+    "description": "Explain and use the relationship between the sine and cosine of complementary angles.",
+    "id": "0413DAAD2B724A7CA87C0E624F8F8B87",
+    "parentId": "0FDFD0E6D0F44F1E98EAE2632A6D7119",
+    "position": 247000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-SRT.C.7"
+   },
+   "04A5E50535734409B0F330895DAE39DC": {
+    "ancestorIds": [
+     "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029712",
+    "depth": 2,
+    "description": "Solve systems of equations.",
+    "id": "04A5E50535734409B0F330895DAE39DC",
+    "parentId": "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+    "position": 97000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.A-REI.C"
+   },
+   "06F1271EA47743FF844728C5B910916C": {
+    "ancestorIds": [
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029793",
+    "depth": 1,
+    "description": "Similarity, Right Triangles, and Trigonometry",
+    "id": "06F1271EA47743FF844728C5B910916C",
+    "parentId": "EEF2DD4F9F404A90A531FEFC9CB70FF1",
+    "position": 235000
+   },
+   "0878BD413CE54867B568254E7048EA56": {
+    "ancestorIds": [
+     "4DADF313A5D141C381E8C2841E4E7F4D",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029719",
+    "depth": 2,
+    "description": "Build a function that models a relationship between two quantities.",
+    "id": "0878BD413CE54867B568254E7048EA56",
+    "parentId": "4DADF313A5D141C381E8C2841E4E7F4D",
+    "position": 128000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.F-BF.A"
+   },
+   "0A725D32CC984FD5800D3BAA42EF5A4C": {
+    "ancestorIds": [
+     "9CAF8B076FBA4F02A9B881179ADA5F13"
+    ],
+    "asnIdentifier": "S21029613",
+    "depth": 1,
+    "description": "Look for and make use of structure.",
+    "id": "0A725D32CC984FD5800D3BAA42EF5A4C",
+    "parentId": "9CAF8B076FBA4F02A9B881179ADA5F13",
+    "position": 8000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP7"
+   },
+   "0AC390FAD39F498FB78ACBC381A5A13D": {
+    "ancestorIds": [
+     "0FDFD0E6D0F44F1E98EAE2632A6D7119",
+     "06F1271EA47743FF844728C5B910916C",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045718",
+    "depth": 3,
+    "description": "Explain that by similarity, side ratios in right triangles are properties of the angles in the triangle, leading to definitions of trigonometric ratios for acute angles.",
+    "id": "0AC390FAD39F498FB78ACBC381A5A13D",
+    "parentId": "0FDFD0E6D0F44F1E98EAE2632A6D7119",
+    "position": 246000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-SRT.C.6"
+   },
+   "0D9C98993CCB471692477A154D8F95CF": {
+    "ancestorIds": [
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21029656",
+    "depth": 1,
+    "description": "Quantities",
+    "id": "0D9C98993CCB471692477A154D8F95CF",
+    "parentId": "F365DCC35C624A4695E525B0AB8361DC",
+    "position": 17000
+   },
+   "0E08DA576D1C40B2972C558E02DD000A": {
+    "ancestorIds": [
+     "95A87820539D4BFA8EE4E4027D7797A2",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029708",
+    "depth": 2,
+    "description": "Create equations that describe numbers or relationships.",
+    "id": "0E08DA576D1C40B2972C558E02DD000A",
+    "parentId": "95A87820539D4BFA8EE4E4027D7797A2",
+    "position": 83000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.A-CED.A"
+   },
+   "0ED965CAE2844524B7C6BB62CFC632E1": {
+    "ancestorIds": [
+     "9CAF8B076FBA4F02A9B881179ADA5F13"
+    ],
+    "asnIdentifier": "S21029610",
+    "depth": 1,
+    "description": "Model with mathematics.",
+    "id": "0ED965CAE2844524B7C6BB62CFC632E1",
+    "parentId": "9CAF8B076FBA4F02A9B881179ADA5F13",
+    "position": 5000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP4"
+   },
+   "0EFB4DE58BED47A39DF8FA9476B9F564": {
+    "ancestorIds": [
+     "493D66D00AEB4A03BBD82841C200AEC0",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21029760",
+    "depth": 2,
+    "description": "Interpret linear models.",
+    "id": "0EFB4DE58BED47A39DF8FA9476B9F564",
+    "parentId": "493D66D00AEB4A03BBD82841C200AEC0",
+    "position": 180000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.S-ID.C"
+   },
+   "0FADA7DF20654A5FA94B5F90AADD2700": {
+    "ancestorIds": [
+     "31612C2568B44C90825D342883C96921",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029701",
+    "depth": 2,
+    "description": "Write expressions in equivalent forms to solve problems.",
+    "id": "0FADA7DF20654A5FA94B5F90AADD2700",
+    "parentId": "31612C2568B44C90825D342883C96921",
+    "position": 63000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.A-SSE.B"
+   },
+   "0FB454CFD6FD42C9AB7F762F7B0B0E32": {
+    "ancestorIds": [
+     "D27D0B72A581477AB7B74B3BBAC503D9",
+     "DA4B8A1E15124977B900EA90FE7FA93E",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045686",
+    "depth": 3,
+    "description": "Apply the Addition Rule, P(A or B) = P(A)+P(B)-P(A and B), and interpret the answer in terms of the model.",
+    "id": "0FB454CFD6FD42C9AB7F762F7B0B0E32",
+    "parentId": "D27D0B72A581477AB7B74B3BBAC503D9",
+    "position": 201000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-CP.B.7"
+   },
+   "0FDFD0E6D0F44F1E98EAE2632A6D7119": {
+    "ancestorIds": [
+     "06F1271EA47743FF844728C5B910916C",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029796",
+    "depth": 2,
+    "description": "Define trigonometric ratios and solve problems involving right triangles.",
+    "id": "0FDFD0E6D0F44F1E98EAE2632A6D7119",
+    "parentId": "06F1271EA47743FF844728C5B910916C",
+    "position": 245000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.G-SRT.C"
+   },
+   "134A279D53B74EF7905DBEF1EFBF4955": {
+    "ancestorIds": [
+     "2D4CBCEA2CA845CCBDCED5D44BA14D5F",
+     "0FADA7DF20654A5FA94B5F90AADD2700",
+     "31612C2568B44C90825D342883C96921",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045584",
+    "depth": 4,
+    "description": "Complete the square in a quadratic expression to reveal the maximum or minimum value of the function it defines.",
+    "id": "134A279D53B74EF7905DBEF1EFBF4955",
+    "parentId": "2D4CBCEA2CA845CCBDCED5D44BA14D5F",
+    "position": 66000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-SSE.B.3.b"
+   },
+   "16F90599FB8D48F49FED4A6ACC6B24E7": {
+    "ancestorIds": [
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029798",
+    "depth": 1,
+    "description": "Circles",
+    "id": "16F90599FB8D48F49FED4A6ACC6B24E7",
+    "parentId": "EEF2DD4F9F404A90A531FEFC9CB70FF1",
+    "position": 253000
+   },
+   "17374BBA5E43486AB54E7632669B758F": {
+    "ancestorIds": [
+     "3FD1BF2BF5C943B5BD0565D776294C5E",
+     "06F1271EA47743FF844728C5B910916C",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045717",
+    "depth": 3,
+    "description": "Use congruence and similarity criteria for triangles to solve problems and to prove relationships in geometric figures.",
+    "id": "17374BBA5E43486AB54E7632669B758F",
+    "parentId": "3FD1BF2BF5C943B5BD0565D776294C5E",
+    "position": 244000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-SRT.B.5"
+   },
+   "1AE4A20E80014F1FB8ED789E35CB7735": {
+    "ancestorIds": [
+     "06F1271EA47743FF844728C5B910916C",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029794",
+    "depth": 2,
+    "description": "Understand similarity in terms of similarity transformations.",
+    "id": "1AE4A20E80014F1FB8ED789E35CB7735",
+    "parentId": "06F1271EA47743FF844728C5B910916C",
+    "position": 236000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.G-SRT.A"
+   },
+   "1C3658504EA042F09F85C202FC169AC2": {
+    "ancestorIds": [
+     "568E75E1E81B476A9443127D236517F7",
+     "F30FE1162E8D4503BF83040EA38ACC76",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045710",
+    "depth": 3,
+    "description": "(+) Construct an equilateral triangle, a square, and a regular hexagon inscribed in a circle.",
+    "id": "1C3658504EA042F09F85C202FC169AC2",
+    "parentId": "568E75E1E81B476A9443127D236517F7",
+    "position": 234000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-CO.D.13"
+   },
+   "1DD2D86051FA4CDC91290AD9B6EB6C96": {
+    "ancestorIds": [
+     "5B462CB87F794AD0BDD097F1BAC6722B",
+     "B6CABDEAAE1F441D837F2EB5765A3D9A",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045623",
+    "depth": 3,
+    "description": "Graph functions expressed symbolically and show key features of the graph, by hand in simple cases and using technology for more complicated cases.",
+    "id": "1DD2D86051FA4CDC91290AD9B6EB6C96",
+    "parentId": "5B462CB87F794AD0BDD097F1BAC6722B",
+    "position": 117000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-IF.C.7"
+   },
+   "1E13543DB9E144D59237B7227120F849": {
+    "ancestorIds": [
+     "D407C3EAE5DB480EBCE0FD740E5B5082",
+     "BC0A326E69B1479DA8511AD4CAA2691C",
+     "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045608",
+    "depth": 4,
+    "description": "Solve quadratic equations (e.g., for x²=49) by inspection, taking square roots, completing the square, the quadratic formula and factoring, as appropriate to the initial form of the equation. Recognize when the quadratic formula gives complex solutions and write them as a ± bi for real numbers a and b.",
+    "id": "1E13543DB9E144D59237B7227120F849",
+    "parentId": "D407C3EAE5DB480EBCE0FD740E5B5082",
+    "position": 96000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-REI.B.4.b"
+   },
+   "1F1E44DDEFB44898A99F82D214B472BF": {
+    "ancestorIds": [
+     "95530FE2DFCB4A6E8E0823FF353FBB81",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21029768",
+    "depth": 2,
+    "description": "Calculate expected values and use them to solve problems.",
+    "id": "1F1E44DDEFB44898A99F82D214B472BF",
+    "parentId": "95530FE2DFCB4A6E8E0823FF353FBB81",
+    "position": 205000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.S-MD.A"
+   },
+   "1FC51386FD5A474F9F80239D9370F41A": {
+    "ancestorIds": [
+     "1AE4A20E80014F1FB8ED789E35CB7735",
+     "06F1271EA47743FF844728C5B910916C",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045715",
+    "depth": 3,
+    "description": "Use the properties of similarity transformations to establish the AA criterion for two triangles to be similar.",
+    "id": "1FC51386FD5A474F9F80239D9370F41A",
+    "parentId": "1AE4A20E80014F1FB8ED789E35CB7735",
+    "position": 241000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-SRT.A.3"
+   },
+   "20EDD1A4C0C1412E88178FFCBFB95E84": {
+    "ancestorIds": [
+     "612B89D750A54464AF390DE0F93F91B4",
+     "4B27D000C366439C93251BF4D497C578",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045742",
+    "depth": 3,
+    "description": "Apply geometric methods to solve design problems (e.g., designing an object or structure to satisfy physical constraints or minimize cost; working with typographic grid systems based on ratios).",
+    "id": "20EDD1A4C0C1412E88178FFCBFB95E84",
+    "parentId": "612B89D750A54464AF390DE0F93F91B4",
+    "position": 282000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-MG.A.3"
+   },
+   "22D9C1EC30644D15B4EE86E234435E0D": {
+    "ancestorIds": [
+     "EA0475F4713D4FEFB1A02F5ABAA5474E",
+     "0FADA7DF20654A5FA94B5F90AADD2700",
+     "31612C2568B44C90825D342883C96921",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045587",
+    "depth": 4,
+    "description": "(+) Derive the formula for the sum of a finite geometric series (when the common ratio is not 1).",
+    "id": "22D9C1EC30644D15B4EE86E234435E0D",
+    "parentId": "EA0475F4713D4FEFB1A02F5ABAA5474E",
+    "position": 69000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-SSE.B.4.a"
+   },
+   "234F917190EA4B6C883117926E8C33C1": {
+    "ancestorIds": [
+     "ED23BD5542B8426DA1170D57FFE70683",
+     "992A43D4C9E94A6C829C8953084E011A",
+     "31612C2568B44C90825D342883C96921",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045579",
+    "depth": 4,
+    "description": "Interpret parts of an expression, such as terms, factors, and coefficients.",
+    "id": "234F917190EA4B6C883117926E8C33C1",
+    "parentId": "ED23BD5542B8426DA1170D57FFE70683",
+    "position": 60000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-SSE.A.1.a"
+   },
+   "23C85BD3DBD84463977A2CE37F206F52": {
+    "ancestorIds": [
+     "C1D5C74B76474580AC2D49C5858E7B12",
+     "0D9C98993CCB471692477A154D8F95CF",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045550",
+    "depth": 3,
+    "description": "Define appropriate quantities for the purpose of descriptive modeling.",
+    "id": "23C85BD3DBD84463977A2CE37F206F52",
+    "parentId": "C1D5C74B76474580AC2D49C5858E7B12",
+    "position": 20000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-Q.A.2"
+   },
+   "23DD4EAE3DD54E73BD1A3CE32A46C9A1": {
+    "ancestorIds": [
+     "49EA0CAEF3AF483DAE627BD347A4A6E9",
+     "47D84B52CB944B80B8F239C865DC7ECF",
+     "4DADF313A5D141C381E8C2841E4E7F4D",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045640",
+    "depth": 4,
+    "description": "Solve an equation of the form f(x)=c for a simple function f that has an inverse and write an expression for the inverse.",
+    "id": "23DD4EAE3DD54E73BD1A3CE32A46C9A1",
+    "parentId": "49EA0CAEF3AF483DAE627BD347A4A6E9",
+    "position": 137000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-BF.B.4.a"
+   },
+   "2402B3C1B5B44C0BB5279B43DCFFA787": {
+    "ancestorIds": [
+     "3FD1BF2BF5C943B5BD0565D776294C5E",
+     "06F1271EA47743FF844728C5B910916C",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045716",
+    "depth": 3,
+    "description": "Prove theorems about triangles.",
+    "id": "2402B3C1B5B44C0BB5279B43DCFFA787",
+    "parentId": "3FD1BF2BF5C943B5BD0565D776294C5E",
+    "position": 243000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-SRT.B.4"
+   },
+   "25D8F0F011D3437FBE7D394345690336": {
+    "ancestorIds": [
+     "1F1E44DDEFB44898A99F82D214B472BF",
+     "95530FE2DFCB4A6E8E0823FF353FBB81",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045690",
+    "depth": 3,
+    "description": "(+) Calculate the expected value of a random variable; interpret it as the mean of the probability distribution.",
+    "id": "25D8F0F011D3437FBE7D394345690336",
+    "parentId": "1F1E44DDEFB44898A99F82D214B472BF",
+    "position": 207000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-MD.A.2"
+   },
+   "2617D81787434ADD8B851C780DDB0EAF": {
+    "ancestorIds": [
+     "493D66D00AEB4A03BBD82841C200AEC0",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21029758",
+    "depth": 2,
+    "description": "Summarize, represent, and interpret data on a single count or measurement variable.",
+    "id": "2617D81787434ADD8B851C780DDB0EAF",
+    "parentId": "493D66D00AEB4A03BBD82841C200AEC0",
+    "position": 168000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.S-ID.A"
+   },
+   "28CCB93394FD4D51812FA6983C7F8FAD": {
+    "ancestorIds": [
+     "F24BFD56C8FE4FD7AB7B52D90DDE51C7",
+     "EC5E23A7E1E749619B7B38064736FB24",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045676",
+    "depth": 3,
+    "description": "Identify the purposes of and differences among sample surveys, experiments, and observational studies; explain how randomization relates to each.",
+    "id": "28CCB93394FD4D51812FA6983C7F8FAD",
+    "parentId": "F24BFD56C8FE4FD7AB7B52D90DDE51C7",
+    "position": 188000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-IC.B.3"
+   },
+   "28D40B6DA5AA4854904BBE5488CA60E4": {
+    "ancestorIds": [
+     "F706F51BBF814692957709B3D5CA170B",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029703",
+    "depth": 2,
+    "description": "Perform arithmetic operations on polynomials.",
+    "id": "28D40B6DA5AA4854904BBE5488CA60E4",
+    "parentId": "F706F51BBF814692957709B3D5CA170B",
+    "position": 71000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.A-APR.A"
+   },
+   "29B7407F8C91451EA13D0F43015A9ABB": {
+    "ancestorIds": [
+     "D5D2E17EA634498B9AA9DA15D29638D6",
+     "DA4B8A1E15124977B900EA90FE7FA93E",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045680",
+    "depth": 3,
+    "description": "Describe events as subsets of a sample space (the set of outcomes) using characteristics (or categories) of the outcomes, or as unions, intersections, or complements of other events (\"or,\" \"and,\" \"not\").",
+    "id": "29B7407F8C91451EA13D0F43015A9ABB",
+    "parentId": "D5D2E17EA634498B9AA9DA15D29638D6",
+    "position": 194000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-CP.A.1"
+   },
+   "2A2555D96B804970A913F27F96696F03": {
+    "ancestorIds": [
+     "B08A13AE65EB4631B0C3273E3AB21D86",
+     "F63A3AAE1A204D6FA117D15C3F20FF4E",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045652",
+    "depth": 3,
+    "description": "Interpret the parameters in a linear or exponential function in terms of a context.",
+    "id": "2A2555D96B804970A913F27F96696F03",
+    "parentId": "B08A13AE65EB4631B0C3273E3AB21D86",
+    "position": 152000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-LE.B.5"
+   },
+   "2AA31880EC1C4DA8B0522AA5A1B175B3": {
+    "ancestorIds": [
+     "5B462CB87F794AD0BDD097F1BAC6722B",
+     "B6CABDEAAE1F441D837F2EB5765A3D9A",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045632",
+    "depth": 3,
+    "description": "Compare properties of two functions each represented in a different way (algebraically, graphically, numerically in tables, or by verbal descriptions).",
+    "id": "2AA31880EC1C4DA8B0522AA5A1B175B3",
+    "parentId": "5B462CB87F794AD0BDD097F1BAC6722B",
+    "position": 126000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-IF.C.9"
+   },
+   "2D4CBCEA2CA845CCBDCED5D44BA14D5F": {
+    "ancestorIds": [
+     "0FADA7DF20654A5FA94B5F90AADD2700",
+     "31612C2568B44C90825D342883C96921",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045582",
+    "depth": 3,
+    "description": "Choose and produce an equivalent form of an expression to reveal and explain properties of the quantity represented by the expression.",
+    "id": "2D4CBCEA2CA845CCBDCED5D44BA14D5F",
+    "parentId": "0FADA7DF20654A5FA94B5F90AADD2700",
+    "position": 64000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-SSE.B.3"
+   },
+   "2D953E3F47914F44BE0F74629D0ECDB2": {
+    "ancestorIds": [
+     "9CAF8B076FBA4F02A9B881179ADA5F13"
+    ],
+    "asnIdentifier": "S21029607",
+    "depth": 1,
+    "description": "Make sense of problems and persevere in solving them.",
+    "id": "2D953E3F47914F44BE0F74629D0ECDB2",
+    "parentId": "9CAF8B076FBA4F02A9B881179ADA5F13",
+    "position": 2000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP1"
+   },
+   "2DBE153851194D76B9EEFD1745B5538F": {
+    "ancestorIds": [
+     "2617D81787434ADD8B851C780DDB0EAF",
+     "493D66D00AEB4A03BBD82841C200AEC0",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045665",
+    "depth": 3,
+    "description": "Use the mean and standard deviation of a data set to fit it to a normal distribution and to estimate population percentages and identify data sets for which such a procedure is not appropriate. Use calculators, spreadsheets, and tables to estimate areas under the normal curve.",
+    "id": "2DBE153851194D76B9EEFD1745B5538F",
+    "parentId": "2617D81787434ADD8B851C780DDB0EAF",
+    "position": 172000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-ID.A.4"
+   },
+   "2ECA98BA3F564D1580DF49D5F1E5D09E": {
+    "ancestorIds": [
+     "9CAF8B076FBA4F02A9B881179ADA5F13"
+    ],
+    "asnIdentifier": "S21029611",
+    "depth": 1,
+    "description": "Use appropriate tools strategically.",
+    "id": "2ECA98BA3F564D1580DF49D5F1E5D09E",
+    "parentId": "9CAF8B076FBA4F02A9B881179ADA5F13",
+    "position": 6000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP5"
+   },
+   "2F4EA1B4DBC14ADD955213CEFE41E10C": {
+    "ancestorIds": [
+     "568E75E1E81B476A9443127D236517F7",
+     "F30FE1162E8D4503BF83040EA38ACC76",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045709",
+    "depth": 3,
+    "description": "Make formal geometric constructions with a variety of tools and methods (compass and straightedge, string, reflective devices, paper folding, dynamic geometric software, etc.). Copying a segment; copying an angle; bisecting a segment; bisecting an angle; constructing perpendicular lines, including the perpendicular bisector of a line segment; and constructing a line parallel to a given line through a point not on the line.",
+    "id": "2F4EA1B4DBC14ADD955213CEFE41E10C",
+    "parentId": "568E75E1E81B476A9443127D236517F7",
+    "position": 233000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-CO.D.12"
+   },
+   "2FA79EABA95A4C0A99D4ADB8AE373266": {
+    "ancestorIds": [
+     "92A14B2D3243413787C7294D917C5634",
+     "95530FE2DFCB4A6E8E0823FF353FBB81",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045696",
+    "depth": 3,
+    "description": "(+) Use probabilities to make fair decisions (e.g., drawing by lots, using a random number generator).",
+    "id": "2FA79EABA95A4C0A99D4ADB8AE373266",
+    "parentId": "92A14B2D3243413787C7294D917C5634",
+    "position": 214000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-MD.B.6"
+   },
+   "31612C2568B44C90825D342883C96921": {
+    "ancestorIds": [
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029699",
+    "depth": 1,
+    "description": "Seeing Structure in Expressions",
+    "id": "31612C2568B44C90825D342883C96921",
+    "parentId": "3B76F4B519124D52A06D47ACFD87BE01",
+    "position": 57000
+   },
+   "316E84B5C20A4D679BCFB8E14848E4C4": {
+    "ancestorIds": [
+     "F24BFD56C8FE4FD7AB7B52D90DDE51C7",
+     "EC5E23A7E1E749619B7B38064736FB24",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045678",
+    "depth": 3,
+    "description": "Use data from a randomized experiment to compare two treatments; use simulations to decide if differences between parameters are significant.",
+    "id": "316E84B5C20A4D679BCFB8E14848E4C4",
+    "parentId": "F24BFD56C8FE4FD7AB7B52D90DDE51C7",
+    "position": 190000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-IC.B.5"
+   },
+   "322179516D2A446C843BEC83D407C1BE": {
+    "ancestorIds": [
+     "8FD944936444478CA644B1825777F2F1",
+     "92A14B2D3243413787C7294D917C5634",
+     "95530FE2DFCB4A6E8E0823FF353FBB81",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045695",
+    "depth": 4,
+    "description": "Evaluate and compare strategies on the basis of expected values.",
+    "id": "322179516D2A446C843BEC83D407C1BE",
+    "parentId": "8FD944936444478CA644B1825777F2F1",
+    "position": 213000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-MD.B.5.b"
+   },
+   "322407D454954254B856005D80206E11": {
+    "ancestorIds": [
+     "FA5578CB29A84B609B0C4A412ECA2EC1",
+     "F30457ECABC04FEDB22F1751DD548D98",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045659",
+    "depth": 3,
+    "description": "(+) Use inverse function to solve trigonometric equations that arise in modeling contexts; evaluate the solutions using technology, and interpret them in terms of the context.",
+    "id": "322407D454954254B856005D80206E11",
+    "parentId": "FA5578CB29A84B609B0C4A412ECA2EC1",
+    "position": 162000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-TF.B.7"
+   },
+   "330AC388F8124725AF3D3F5F2CAA56A4": {
+    "ancestorIds": [
+     "CE479512D0114982922AE8D0403CE05B",
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045564",
+    "depth": 3,
+    "description": "(+) Add and subtract vectors.",
+    "id": "330AC388F8124725AF3D3F5F2CAA56A4",
+    "parentId": "CE479512D0114982922AE8D0403CE05B",
+    "position": 41000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-VM.B.4"
+   },
+   "34CBDC0EC644464C95ECAE65D7F90E5F": {
+    "ancestorIds": [
+     "FB8AD98A03DA48C995DBF8F5729172F1",
+     "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045615",
+    "depth": 3,
+    "description": "Explain why the x-coordinates of the points where the graphs of the equations y=f(x) and y=g(x) intersect are the solutions of the equation f(x) = g(x); find the solutions approximately e.g., using technology to graph the functions, make tables of values, or find successive approximations. Include cases where f(x) and/or g(x) are linear, polynomial, rational, absolute value, exponential, and logarithmic functions.",
+    "id": "34CBDC0EC644464C95ECAE65D7F90E5F",
+    "parentId": "FB8AD98A03DA48C995DBF8F5729172F1",
+    "position": 105000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-REI.D.11"
+   },
+   "35E4F1D867F14238B0BCC70D5F71D446": {
+    "ancestorIds": [
+     "7A2124AF61FB469484E4AE4FA2946C0B",
+     "EC5E23A7E1E749619B7B38064736FB24",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045674",
+    "depth": 3,
+    "description": "Describe statistics as a process for making inferences about population parameters based on a random sample from that population.",
+    "id": "35E4F1D867F14238B0BCC70D5F71D446",
+    "parentId": "7A2124AF61FB469484E4AE4FA2946C0B",
+    "position": 185000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-IC.A.1"
+   },
+   "3648005552854E518B6A767AA4A8AD81": {
+    "ancestorIds": [
+     "5A97D1B04C6548249B0B126121D4BD7D",
+     "16F90599FB8D48F49FED4A6ACC6B24E7",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045727",
+    "depth": 3,
+    "description": "(+) Construct a tangent line from a point outside a given circle to the circle.",
+    "id": "3648005552854E518B6A767AA4A8AD81",
+    "parentId": "5A97D1B04C6548249B0B126121D4BD7D",
+    "position": 258000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-C.A.4"
+   },
+   "378E5A50F64C440AB7D5DC4AA017DDA2": {
+    "ancestorIds": [
+     "FB8AD98A03DA48C995DBF8F5729172F1",
+     "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045616",
+    "depth": 3,
+    "description": "Graph the solutions to a linear inequality in two variables as a half-plane (excluding the boundary in the case of a strict inequality), and graph the solution set to a system of linear inequalities in two variables as the intersection of the corresponding half-planes.",
+    "id": "378E5A50F64C440AB7D5DC4AA017DDA2",
+    "parentId": "FB8AD98A03DA48C995DBF8F5729172F1",
+    "position": 106000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-REI.D.12"
+   },
+   "38241563AE404DC6B72AE292A463B464": {
+    "ancestorIds": [
+     "D27D0B72A581477AB7B74B3BBAC503D9",
+     "DA4B8A1E15124977B900EA90FE7FA93E",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045685",
+    "depth": 3,
+    "description": "Find the conditional probability of A given B as the fraction of B's outcomes that also belong to A, and interpret the answer in terms of the model.",
+    "id": "38241563AE404DC6B72AE292A463B464",
+    "parentId": "D27D0B72A581477AB7B74B3BBAC503D9",
+    "position": 200000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-CP.B.6"
+   },
+   "38A2AACE26614DA592B5A1D90CE91032": {
+    "ancestorIds": [
+     "039CB44DC0E54E12A12C2873A240E73E",
+     "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045604",
+    "depth": 3,
+    "description": "Solve simple rational and radical equations in one variable, and give examples showing how extraneous solutions may arise.",
+    "id": "38A2AACE26614DA592B5A1D90CE91032",
+    "parentId": "039CB44DC0E54E12A12C2873A240E73E",
+    "position": 91000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-REI.A.2"
+   },
+   "3A3F6AC797B94BBDAFF0A9C62B9415BB": {
+    "ancestorIds": [
+     "B6E54196FD7B4A77AE45B643B2ED578D",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21029655",
+    "depth": 2,
+    "description": "Use properties of rational and irrational numbers.",
+    "id": "3A3F6AC797B94BBDAFF0A9C62B9415BB",
+    "parentId": "B6E54196FD7B4A77AE45B643B2ED578D",
+    "position": 15000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.N-RN.B"
+   },
+   "3B1A877E4515466A935DF771B2B16A18": {
+    "ancestorIds": [
+     "53621E04276243B6A406F4DDD99DDDC7",
+     "F706F51BBF814692957709B3D5CA170B",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045592",
+    "depth": 3,
+    "description": "(+) Know and apply the Binomial Theorem for the expansion of in powers of x and y for a positive integer n, where x and y are any numbers, with coefficients determined for example by Pascal's Triangle. (The Binomial Theorem can be proved by mathematical induction or by a combinatorial argument.)",
+    "id": "3B1A877E4515466A935DF771B2B16A18",
+    "parentId": "53621E04276243B6A406F4DDD99DDDC7",
+    "position": 78000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-APR.C.5"
+   },
+   "3B593FB26BB5472AA8C380C2CE7AC516": {
+    "ancestorIds": [
+     "E60FCD0E3F534739A91C22CB7C65047D",
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045571",
+    "depth": 3,
+    "description": "(+) Use matrices to represent and manipulate data, e.g., as when all of the payoffs or incidence relationships in a network.",
+    "id": "3B593FB26BB5472AA8C380C2CE7AC516",
+    "parentId": "E60FCD0E3F534739A91C22CB7C65047D",
+    "position": 49000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-VM.C.6"
+   },
+   "3B76F4B519124D52A06D47ACFD87BE01": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029666",
+    "depth": 0,
+    "description": "Algebra and Functions",
+    "id": "3B76F4B519124D52A06D47ACFD87BE01",
+    "parentId": null,
+    "position": 56000,
+    "statementLabel": "Standard",
+    "statementNotation": "AF.2"
+   },
+   "3D16B8418686472C9B87CFDEC612302E": {
+    "ancestorIds": [
+     "47D84B52CB944B80B8F239C865DC7ECF",
+     "4DADF313A5D141C381E8C2841E4E7F4D",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045638",
+    "depth": 3,
+    "description": "Identify the effect on the graph of replacing f(x) by f(x)+k, kf(x), f(kx), and f(x+k) for specific values of k both positive and negative; find the value of k given the graphs. Experiment with cases and illustrate an explanation of the effects on the graph using technology.",
+    "id": "3D16B8418686472C9B87CFDEC612302E",
+    "parentId": "47D84B52CB944B80B8F239C865DC7ECF",
+    "position": 135000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-BF.B.3"
+   },
+   "3F76A59C0B9D4184A9BBD768924B01A2": {
+    "ancestorIds": [
+     "60D3451E6425426AABFE3AC707817A8E",
+     "CF0209C1A8624575B49A030227F29655",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045556",
+    "depth": 3,
+    "description": "(+) Represent addition, subtraction, multiplication, and conjugation of complex numbers geometrically on the complex plane; use properties of this representation for computation.",
+    "id": "3F76A59C0B9D4184A9BBD768924B01A2",
+    "parentId": "60D3451E6425426AABFE3AC707817A8E",
+    "position": 29000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-CN.B.5"
+   },
+   "3FD1BF2BF5C943B5BD0565D776294C5E": {
+    "ancestorIds": [
+     "06F1271EA47743FF844728C5B910916C",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029795",
+    "depth": 2,
+    "description": "Prove theorems involving similarity.",
+    "id": "3FD1BF2BF5C943B5BD0565D776294C5E",
+    "parentId": "06F1271EA47743FF844728C5B910916C",
+    "position": 242000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.G-SRT.B"
+   },
+   "402BC0AC116844DEBC54F404087B313D": {
+    "ancestorIds": [
+     "F30457ECABC04FEDB22F1751DD548D98",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029727",
+    "depth": 2,
+    "description": "Prove and apply trigonometric identities.",
+    "id": "402BC0AC116844DEBC54F404087B313D",
+    "parentId": "F30457ECABC04FEDB22F1751DD548D98",
+    "position": 163000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.F-TF.C"
+   },
+   "41EEE5EDE20A4BBB93DF25055CE69199": {
+    "ancestorIds": [
+     "862D35D894464DCA9D852EF102D3313F",
+     "493D66D00AEB4A03BBD82841C200AEC0",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045666",
+    "depth": 3,
+    "description": "Summarize categorical data for two categories in two-way frequency tables. Interpret relative frequencies in the context of the data (including joint, marginal, and conditional relative frequencies). Recognize possible associations and trends in the data.",
+    "id": "41EEE5EDE20A4BBB93DF25055CE69199",
+    "parentId": "862D35D894464DCA9D852EF102D3313F",
+    "position": 174000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-ID.B.5"
+   },
+   "420A08FC78E24DF0A6C1137B384113CE": {
+    "ancestorIds": [
+     "E60FCD0E3F534739A91C22CB7C65047D",
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045572",
+    "depth": 3,
+    "description": "(+) Multiply matrices by scalars to produce new matrices, e.g., as when all of the payoffs in a game are doubled.",
+    "id": "420A08FC78E24DF0A6C1137B384113CE",
+    "parentId": "E60FCD0E3F534739A91C22CB7C65047D",
+    "position": 50000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-VM.C.7"
+   },
+   "4241CBA68DFC4F95A6B270E27E64E35D": {
+    "ancestorIds": [
+     "E1DAE76D82B74DB2B3588D4723EAB357",
+     "F30FE1162E8D4503BF83040EA38ACC76",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045706",
+    "depth": 3,
+    "description": "Prove theorems about lines and angles.",
+    "id": "4241CBA68DFC4F95A6B270E27E64E35D",
+    "parentId": "E1DAE76D82B74DB2B3588D4723EAB357",
+    "position": 229000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-CO.C.9"
+   },
+   "432534B132074F4BBC124A3247034E1F": {
+    "ancestorIds": [
+     "A139F0EFD7924D7DB07C08FC97B6E960",
+     "F706F51BBF814692957709B3D5CA170B",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045594",
+    "depth": 3,
+    "description": "(+) Understand that rational expressions form a system analogous to the rational numbers, closed under addition, subtraction, multiplication, and division by a nonzero rational expressions; add, subtract, multiply, and divide rational expressions.",
+    "id": "432534B132074F4BBC124A3247034E1F",
+    "parentId": "A139F0EFD7924D7DB07C08FC97B6E960",
+    "position": 81000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-APR.D.7"
+   },
+   "44FE3D61CF16436CBA518E6512780393": {
+    "ancestorIds": [
+     "1DD2D86051FA4CDC91290AD9B6EB6C96",
+     "5B462CB87F794AD0BDD097F1BAC6722B",
+     "B6CABDEAAE1F441D837F2EB5765A3D9A",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045628",
+    "depth": 4,
+    "description": "Graph exponential and logarithmic functions, showing intercepts and end behavior, and trigonometric functions, showing period, midline, and amplitude.",
+    "id": "44FE3D61CF16436CBA518E6512780393",
+    "parentId": "1DD2D86051FA4CDC91290AD9B6EB6C96",
+    "position": 122000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-IF.C.7.e"
+   },
+   "46266FB34DD64411AA5D54D041FBC3C2": {
+    "ancestorIds": [
+     "EB90C4E273FF4FA781F9E6BBCE574C31",
+     "0878BD413CE54867B568254E7048EA56",
+     "4DADF313A5D141C381E8C2841E4E7F4D",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045637",
+    "depth": 4,
+    "description": "Write arithmetic and geometric sequences both recursively and with an explicit formula, use them to model situations, and translate between the two forms.",
+    "id": "46266FB34DD64411AA5D54D041FBC3C2",
+    "parentId": "EB90C4E273FF4FA781F9E6BBCE574C31",
+    "position": 133000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-BF.A.2"
+   },
+   "47D84B52CB944B80B8F239C865DC7ECF": {
+    "ancestorIds": [
+     "4DADF313A5D141C381E8C2841E4E7F4D",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029720",
+    "depth": 2,
+    "description": "Build new functions from existing functions.",
+    "id": "47D84B52CB944B80B8F239C865DC7ECF",
+    "parentId": "4DADF313A5D141C381E8C2841E4E7F4D",
+    "position": 134000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.F-BF.B"
+   },
+   "4879CB1C94484EE6BED7374E3B44EFF9": {
+    "ancestorIds": [
+     "E1DAE76D82B74DB2B3588D4723EAB357",
+     "F30FE1162E8D4503BF83040EA38ACC76",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045707",
+    "depth": 3,
+    "description": "Prove theorems about triangles.",
+    "id": "4879CB1C94484EE6BED7374E3B44EFF9",
+    "parentId": "E1DAE76D82B74DB2B3588D4723EAB357",
+    "position": 230000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-CO.C.10"
+   },
+   "48AFBBC438B4422F97AE68CA6E83866E": {
+    "ancestorIds": [
+     "7F3F0CD2BFA040599DE4D1B7A4001BDC",
+     "CF0209C1A8624575B49A030227F29655",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045552",
+    "depth": 3,
+    "description": "Define complex number i such that i² = -1, and show that every complex number has the form a + bi where a and b are real numbers.",
+    "id": "48AFBBC438B4422F97AE68CA6E83866E",
+    "parentId": "7F3F0CD2BFA040599DE4D1B7A4001BDC",
+    "position": 24000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-CN.A.1"
+   },
+   "493D66D00AEB4A03BBD82841C200AEC0": {
+    "ancestorIds": [
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21029757",
+    "depth": 1,
+    "description": "Interpreting Categorical & Quantitative Data",
+    "id": "493D66D00AEB4A03BBD82841C200AEC0",
+    "parentId": "50A4C3CEADA44EE98846ADAD403F48BA",
+    "position": 167000
+   },
+   "49EA0CAEF3AF483DAE627BD347A4A6E9": {
+    "ancestorIds": [
+     "47D84B52CB944B80B8F239C865DC7ECF",
+     "4DADF313A5D141C381E8C2841E4E7F4D",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045639",
+    "depth": 3,
+    "description": "Find inverse functions.",
+    "id": "49EA0CAEF3AF483DAE627BD347A4A6E9",
+    "parentId": "47D84B52CB944B80B8F239C865DC7ECF",
+    "position": 136000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-BF.B.4"
+   },
+   "4A0219CA438743DFB684A855250D283F": {
+    "ancestorIds": [
+     "7C1B845AF77846DC92098F42186032A4",
+     "8A68E58DDD114252AD7B669216D95519",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045731",
+    "depth": 3,
+    "description": "(+) Derive the equations of ellipses and hyperbolas given the foci, using the fact that the sum or difference of distances from the foci is constant.",
+    "id": "4A0219CA438743DFB684A855250D283F",
+    "parentId": "7C1B845AF77846DC92098F42186032A4",
+    "position": 265000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-GPE.A.3"
+   },
+   "4B14A3F3085943448A674BE5B41D6E28": {
+    "ancestorIds": [
+     "A4FE576ECD7D4A64A86A403E9BBADD25",
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045562",
+    "depth": 3,
+    "description": "(+) Find the components of a vector by subtracting the coordinates of an initial point from the coordinates of a terminal point.",
+    "id": "4B14A3F3085943448A674BE5B41D6E28",
+    "parentId": "A4FE576ECD7D4A64A86A403E9BBADD25",
+    "position": 38000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-VM.A.2"
+   },
+   "4B27D000C366439C93251BF4D497C578": {
+    "ancestorIds": [
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029807",
+    "depth": 1,
+    "description": "Modeling with Geometry",
+    "id": "4B27D000C366439C93251BF4D497C578",
+    "parentId": "EEF2DD4F9F404A90A531FEFC9CB70FF1",
+    "position": 278000
+   },
+   "4C43CBF6DC4D4302874C4BCC739B4C3A": {
+    "ancestorIds": [
+     "F24BFD56C8FE4FD7AB7B52D90DDE51C7",
+     "EC5E23A7E1E749619B7B38064736FB24",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045677",
+    "depth": 3,
+    "description": "Use data from a sample survey to estimate a population mean or proportion; develop a margin of error through the use of simulation models for random sampling.",
+    "id": "4C43CBF6DC4D4302874C4BCC739B4C3A",
+    "parentId": "F24BFD56C8FE4FD7AB7B52D90DDE51C7",
+    "position": 189000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-IC.B.4"
+   },
+   "4DADF313A5D141C381E8C2841E4E7F4D": {
+    "ancestorIds": [
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029718",
+    "depth": 1,
+    "description": "Building Functions",
+    "id": "4DADF313A5D141C381E8C2841E4E7F4D",
+    "parentId": "3B76F4B519124D52A06D47ACFD87BE01",
+    "position": 127000
+   },
+   "4EEB42DCF98F45DE9CEDCFC804FC3CE0": {
+    "ancestorIds": [
+     "B0B0A0739BCF40A5A7E53BA25DFF64D6",
+     "862D35D894464DCA9D852EF102D3313F",
+     "493D66D00AEB4A03BBD82841C200AEC0",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045670",
+    "depth": 4,
+    "description": "Fit a linear function for a scatter plot that suggests a linear association.",
+    "id": "4EEB42DCF98F45DE9CEDCFC804FC3CE0",
+    "parentId": "B0B0A0739BCF40A5A7E53BA25DFF64D6",
+    "position": 178000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-ID.B.6.c"
+   },
+   "508BD8D4F9E74CC2BA18B3FB7CD4A654": {
+    "ancestorIds": [
+     "CF0209C1A8624575B49A030227F29655",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21029661",
+    "depth": 2,
+    "description": "Use complex numbers in polynomial identities and equations.",
+    "id": "508BD8D4F9E74CC2BA18B3FB7CD4A654",
+    "parentId": "CF0209C1A8624575B49A030227F29655",
+    "position": 31000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.N-CN.C"
+   },
+   "50A4C3CEADA44EE98846ADAD403F48BA": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029728",
+    "depth": 0,
+    "description": "Data, Statistics, and Probability",
+    "id": "50A4C3CEADA44EE98846ADAD403F48BA",
+    "parentId": null,
+    "position": 166000,
+    "statementLabel": "Standard",
+    "statementNotation": "DSP.3"
+   },
+   "50B4DABEC7554C048931B1FC506EE8C9": {
+    "ancestorIds": [
+     "612B89D750A54464AF390DE0F93F91B4",
+     "4B27D000C366439C93251BF4D497C578",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045741",
+    "depth": 3,
+    "description": "Apply concepts of density based on area and volume in modeling situations (e.g., persons per square mile, BTUs per cubic foot).",
+    "id": "50B4DABEC7554C048931B1FC506EE8C9",
+    "parentId": "612B89D750A54464AF390DE0F93F91B4",
+    "position": 281000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-MG.A.2"
+   },
+   "50B5EDD1FBD54036B88D955F0DD9AC8D": {
+    "ancestorIds": [
+     "0FDFD0E6D0F44F1E98EAE2632A6D7119",
+     "06F1271EA47743FF844728C5B910916C",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045720",
+    "depth": 3,
+    "description": "Use trigonometric ratios and the Pythagorean Theorem to solve right triangles in applied problems.",
+    "id": "50B5EDD1FBD54036B88D955F0DD9AC8D",
+    "parentId": "0FDFD0E6D0F44F1E98EAE2632A6D7119",
+    "position": 248000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-SRT.C.8"
+   },
+   "527DD729A7B743DAB12E47B8C8D58AF9": {
+    "ancestorIds": [
+     "92776AB195AF4AB9A03CD1BCC166E487",
+     "B6CABDEAAE1F441D837F2EB5765A3D9A",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045621",
+    "depth": 3,
+    "description": "Relate the domain of a function to its graph and, where applicable, to the quantitative relationship it describes.",
+    "id": "527DD729A7B743DAB12E47B8C8D58AF9",
+    "parentId": "92776AB195AF4AB9A03CD1BCC166E487",
+    "position": 114000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-IF.B.5"
+   },
+   "53621E04276243B6A406F4DDD99DDDC7": {
+    "ancestorIds": [
+     "F706F51BBF814692957709B3D5CA170B",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029705",
+    "depth": 2,
+    "description": "Use polynomial identities to solve problems.",
+    "id": "53621E04276243B6A406F4DDD99DDDC7",
+    "parentId": "F706F51BBF814692957709B3D5CA170B",
+    "position": 76000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.A-APR.C"
+   },
+   "55D4B3A37B184BEBAC8474CA94420448": {
+    "ancestorIds": [
+     "E640AF6AAB2D47EE9D91705B4A02DC9B",
+     "F706F51BBF814692957709B3D5CA170B",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045589",
+    "depth": 3,
+    "description": "Know and apply the Remainder Theorem. For a polynomial p(x) and a number a, the remainder on division by x-a is p(a), so p(a)=0 if and only if (x-a) is a factor of p(x). (Students need not apply the Remainder Theorem to polynomials of degree greater than 4.)",
+    "id": "55D4B3A37B184BEBAC8474CA94420448",
+    "parentId": "E640AF6AAB2D47EE9D91705B4A02DC9B",
+    "position": 74000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-APR.B.2"
+   },
+   "568E75E1E81B476A9443127D236517F7": {
+    "ancestorIds": [
+     "F30FE1162E8D4503BF83040EA38ACC76",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029792",
+    "depth": 2,
+    "description": "Make geometric constructions.",
+    "id": "568E75E1E81B476A9443127D236517F7",
+    "parentId": "F30FE1162E8D4503BF83040EA38ACC76",
+    "position": 232000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.G-CO.D"
+   },
+   "5790DA61B0D24168B9938AD0D84A3649": {
+    "ancestorIds": [
+     "D5D2E17EA634498B9AA9DA15D29638D6",
+     "DA4B8A1E15124977B900EA90FE7FA93E",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045681",
+    "depth": 3,
+    "description": "Explain that two events A and B are independent if the probability of A and B occurring together is the product of their probabilities, and use this characterization to determine if they are independent.",
+    "id": "5790DA61B0D24168B9938AD0D84A3649",
+    "parentId": "D5D2E17EA634498B9AA9DA15D29638D6",
+    "position": 195000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-CP.A.2"
+   },
+   "595AE0680D3640DB9B29780916470606": {
+    "ancestorIds": [
+     "8616F82BAD084CBE858EB5A0EFE1B256",
+     "B6CABDEAAE1F441D837F2EB5765A3D9A",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045617",
+    "depth": 3,
+    "description": "Explain that a function is a correspondence from one set (called the domain) to another set (called the range) that assigns to each element of the domain exactly one element of the range. If f is a function and x is an element of its domain, then f(x) denotes the output of f corresponding to the input x. The graph of f is the graph of the equation y=f(x).",
+    "id": "595AE0680D3640DB9B29780916470606",
+    "parentId": "8616F82BAD084CBE858EB5A0EFE1B256",
+    "position": 109000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-IF.A.1"
+   },
+   "5A97D1B04C6548249B0B126121D4BD7D": {
+    "ancestorIds": [
+     "16F90599FB8D48F49FED4A6ACC6B24E7",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029799",
+    "depth": 2,
+    "description": "Understand and apply theorems about circles.",
+    "id": "5A97D1B04C6548249B0B126121D4BD7D",
+    "parentId": "16F90599FB8D48F49FED4A6ACC6B24E7",
+    "position": 254000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.G-C.A"
+   },
+   "5AEAC6E87438436EA004661E61E703C6": {
+    "ancestorIds": [
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21029662",
+    "depth": 1,
+    "description": "Vector & Matrix Quantities",
+    "id": "5AEAC6E87438436EA004661E61E703C6",
+    "parentId": "F365DCC35C624A4695E525B0AB8361DC",
+    "position": 35000
+   },
+   "5B462CB87F794AD0BDD097F1BAC6722B": {
+    "ancestorIds": [
+     "B6CABDEAAE1F441D837F2EB5765A3D9A",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029717",
+    "depth": 2,
+    "description": "Analyze functions using different representations.",
+    "id": "5B462CB87F794AD0BDD097F1BAC6722B",
+    "parentId": "B6CABDEAAE1F441D837F2EB5765A3D9A",
+    "position": 116000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.F-IF.C"
+   },
+   "5C448AE6AD014A7D82DD8CF89D4E6FAB": {
+    "ancestorIds": [
+     "BE501227EEB44732BC5D1A176BA4F5A9",
+     "8A68E58DDD114252AD7B669216D95519",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045732",
+    "depth": 3,
+    "description": "Use coordinates to prove simple geometric theorems algebraically.",
+    "id": "5C448AE6AD014A7D82DD8CF89D4E6FAB",
+    "parentId": "BE501227EEB44732BC5D1A176BA4F5A9",
+    "position": 267000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-GPE.B.4"
+   },
+   "5C6A4F9DB4C64CD28A0351B020BD0C48": {
+    "ancestorIds": [
+     "1AE4A20E80014F1FB8ED789E35CB7735",
+     "06F1271EA47743FF844728C5B910916C",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045714",
+    "depth": 3,
+    "description": "Given two figures, use the definition of similarity in terms of similarity transformations to decide if they are similar; explain using similarity transformations the meaning of similarity for triangles as the equality of all corresponding pairs of angles and the proportionality of all corresponding pairs of sides.",
+    "id": "5C6A4F9DB4C64CD28A0351B020BD0C48",
+    "parentId": "1AE4A20E80014F1FB8ED789E35CB7735",
+    "position": 240000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-SRT.A.2"
+   },
+   "5E96757BF9C1402A892D281001D168A2": {
+    "ancestorIds": [
+     "2617D81787434ADD8B851C780DDB0EAF",
+     "493D66D00AEB4A03BBD82841C200AEC0",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045662",
+    "depth": 3,
+    "description": "Model data in context with plots on the real number line (dot plots, histograms, and box plots).",
+    "id": "5E96757BF9C1402A892D281001D168A2",
+    "parentId": "2617D81787434ADD8B851C780DDB0EAF",
+    "position": 169000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-ID.A.1"
+   },
+   "5F1FE9CF86B44DD7BD76772015831DA9": {
+    "ancestorIds": [
+     "7C1B845AF77846DC92098F42186032A4",
+     "8A68E58DDD114252AD7B669216D95519",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045730",
+    "depth": 3,
+    "description": "(+) Derive the equation of a parabola given a focus and directrix.",
+    "id": "5F1FE9CF86B44DD7BD76772015831DA9",
+    "parentId": "7C1B845AF77846DC92098F42186032A4",
+    "position": 264000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-GPE.A.2"
+   },
+   "60D3451E6425426AABFE3AC707817A8E": {
+    "ancestorIds": [
+     "CF0209C1A8624575B49A030227F29655",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21029660",
+    "depth": 2,
+    "description": "Represent complex numbers and their operations on the complex plane.",
+    "id": "60D3451E6425426AABFE3AC707817A8E",
+    "parentId": "CF0209C1A8624575B49A030227F29655",
+    "position": 27000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.N-CN.B"
+   },
+   "612B89D750A54464AF390DE0F93F91B4": {
+    "ancestorIds": [
+     "4B27D000C366439C93251BF4D497C578",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029808",
+    "depth": 2,
+    "description": "Apply geometric concepts in modeling situations.",
+    "id": "612B89D750A54464AF390DE0F93F91B4",
+    "parentId": "4B27D000C366439C93251BF4D497C578",
+    "position": 279000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.G-MG.A"
+   },
+   "61B89D9F1045419AA37723CC807951C4": {
+    "ancestorIds": [
+     "92A14B2D3243413787C7294D917C5634",
+     "95530FE2DFCB4A6E8E0823FF353FBB81",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045697",
+    "depth": 3,
+    "description": "(+) Analyze decisions and strategies using probability concepts (e.g., product testing, medical testing, pulling a hockey goalie at the end of a game).",
+    "id": "61B89D9F1045419AA37723CC807951C4",
+    "parentId": "92A14B2D3243413787C7294D917C5634",
+    "position": 215000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-MD.B.7"
+   },
+   "62BC60DED5504356A467A555940EAF65": {
+    "ancestorIds": [
+     "9CAF8B076FBA4F02A9B881179ADA5F13"
+    ],
+    "asnIdentifier": "S21029608",
+    "depth": 1,
+    "description": "Reason abstractly and quantitatively.",
+    "id": "62BC60DED5504356A467A555940EAF65",
+    "parentId": "9CAF8B076FBA4F02A9B881179ADA5F13",
+    "position": 3000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP2"
+   },
+   "6357309E840E4E66A9AB1A1410DD562A": {
+    "ancestorIds": [
+     "DAB950CBB5584172B2992BF0F6033DB4",
+     "F63A3AAE1A204D6FA117D15C3F20FF4E",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045650",
+    "depth": 3,
+    "description": "Use graphs and tables to describe that a quantity increasing exponentially eventually exceeds a quantity increasing linearly, quadratically, or (more generally) as a polynomial function.",
+    "id": "6357309E840E4E66A9AB1A1410DD562A",
+    "parentId": "DAB950CBB5584172B2992BF0F6033DB4",
+    "position": 149000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-LE.A.3"
+   },
+   "6462D8AB47D744E7BD69545E769EB6C3": {
+    "ancestorIds": [
+     "9CAF8B076FBA4F02A9B881179ADA5F13"
+    ],
+    "asnIdentifier": "S21029609",
+    "depth": 1,
+    "description": "Construct viable arguments and critique the reasoning of others.",
+    "id": "6462D8AB47D744E7BD69545E769EB6C3",
+    "parentId": "9CAF8B076FBA4F02A9B881179ADA5F13",
+    "position": 4000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP3"
+   },
+   "6625D05F25134522A0B64E23885D7B07": {
+    "ancestorIds": [
+     "8F1850EC967042ADAFFA6D4FE1BED4B8",
+     "F30FE1162E8D4503BF83040EA38ACC76",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045704",
+    "depth": 3,
+    "description": "Use the definition of congruence in terms of rigid motions to show that two triangles are congruent if and only if corresponding pairs of sides and corresponding pairs of angles are congruent.",
+    "id": "6625D05F25134522A0B64E23885D7B07",
+    "parentId": "8F1850EC967042ADAFFA6D4FE1BED4B8",
+    "position": 226000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-CO.B.7"
+   },
+   "6663E263DF2F49FCA4B6182135119417": {
+    "ancestorIds": [
+     "E8021FBE894640FE923511826D4B343F",
+     "BFC0DD33E3794537A03A9D8C3ABA600F",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045737",
+    "depth": 3,
+    "description": "(+) Give an informal argument using Cavalieri's principle for the formulas for the volume of a sphere and other solid figures.",
+    "id": "6663E263DF2F49FCA4B6182135119417",
+    "parentId": "E8021FBE894640FE923511826D4B343F",
+    "position": 274000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-GMD.A.2"
+   },
+   "6728FB46A5714F0FA26C2E501D330CA4": {
+    "ancestorIds": [
+     "8FD944936444478CA644B1825777F2F1",
+     "92A14B2D3243413787C7294D917C5634",
+     "95530FE2DFCB4A6E8E0823FF353FBB81",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045694",
+    "depth": 4,
+    "description": "Find the expected payoff for a game of chance.",
+    "id": "6728FB46A5714F0FA26C2E501D330CA4",
+    "parentId": "8FD944936444478CA644B1825777F2F1",
+    "position": 212000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-MD.B.5.a"
+   },
+   "67D7EA4A08FA437CB731463E2380C0AB": {
+    "ancestorIds": [
+     "FA5578CB29A84B609B0C4A412ECA2EC1",
+     "F30457ECABC04FEDB22F1751DD548D98",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045658",
+    "depth": 3,
+    "description": "(+) Understand that restricting a trigonometric function to a domain on which it is always increasing or always decreasing allows its inverse to be constructed.",
+    "id": "67D7EA4A08FA437CB731463E2380C0AB",
+    "parentId": "FA5578CB29A84B609B0C4A412ECA2EC1",
+    "position": 161000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-TF.B.6"
+   },
+   "699E3EEE3B3A4A18B72B0DA0DAEACCEF": {
+    "ancestorIds": [
+     "B5CEC9BA0FF74A3BAA57FB3D73A9C1E6",
+     "F30457ECABC04FEDB22F1751DD548D98",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045653",
+    "depth": 3,
+    "description": "(+) Use radian measure of an angle as the length of the arc on the unit circle subtended by the angle.",
+    "id": "699E3EEE3B3A4A18B72B0DA0DAEACCEF",
+    "parentId": "B5CEC9BA0FF74A3BAA57FB3D73A9C1E6",
+    "position": 155000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-TF.A.1"
+   },
+   "6AA4A0FA5937453287B22B0374D71401": {
+    "ancestorIds": [
+     "04A5E50535734409B0F330895DAE39DC",
+     "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045613",
+    "depth": 3,
+    "description": "(+) Find the inverse of a matrix if it exists and use it to solve systems of linear equations (using technology for matrices of dimension 3×3 or greater).",
+    "id": "6AA4A0FA5937453287B22B0374D71401",
+    "parentId": "04A5E50535734409B0F330895DAE39DC",
+    "position": 102000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-REI.C.9"
+   },
+   "6B946D64D6044832AB115697426C471D": {
+    "ancestorIds": [
+     "9B2B59BFC5454E8789A28917AE790FA8",
+     "F30FE1162E8D4503BF83040EA38ACC76",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045700",
+    "depth": 3,
+    "description": "Given a rectangle, parallelogram, trapezoid, or regular polygon, describe the rotations and reflections that carry it onto itself.",
+    "id": "6B946D64D6044832AB115697426C471D",
+    "parentId": "9B2B59BFC5454E8789A28917AE790FA8",
+    "position": 221000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-CO.A.3"
+   },
+   "6D387F16B24945488951EE70CA932B46": {
+    "ancestorIds": [
+     "7F3F0CD2BFA040599DE4D1B7A4001BDC",
+     "CF0209C1A8624575B49A030227F29655",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045553",
+    "depth": 3,
+    "description": "Use the relation i² and the commutative, associative, and distributive properties to add, subtract, and multiply complex numbers.",
+    "id": "6D387F16B24945488951EE70CA932B46",
+    "parentId": "7F3F0CD2BFA040599DE4D1B7A4001BDC",
+    "position": 25000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-CN.A.2"
+   },
+   "6D899CA7CDF046B184E40F23348C1D1E": {
+    "ancestorIds": [
+     "04A5E50535734409B0F330895DAE39DC",
+     "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045612",
+    "depth": 3,
+    "description": "(+) Represent a system of linear equations as a single matrix equation in a vector variable.",
+    "id": "6D899CA7CDF046B184E40F23348C1D1E",
+    "parentId": "04A5E50535734409B0F330895DAE39DC",
+    "position": 101000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-REI.C.8"
+   },
+   "6F35BBA592CD4989BDD942E77EE72B07": {
+    "ancestorIds": [
+     "FA5578CB29A84B609B0C4A412ECA2EC1",
+     "F30457ECABC04FEDB22F1751DD548D98",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045657",
+    "depth": 3,
+    "description": "Model periodic phenomena with trigonometric functions with specified amplitude, frequency, and midline.",
+    "id": "6F35BBA592CD4989BDD942E77EE72B07",
+    "parentId": "FA5578CB29A84B609B0C4A412ECA2EC1",
+    "position": 160000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-TF.B.5"
+   },
+   "6FD407C7742349D1B423B7C0811FC73C": {
+    "ancestorIds": [
+     "53621E04276243B6A406F4DDD99DDDC7",
+     "F706F51BBF814692957709B3D5CA170B",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045591",
+    "depth": 3,
+    "description": "(+) Prove polynomial identities and use them to describe numerical relationships.",
+    "id": "6FD407C7742349D1B423B7C0811FC73C",
+    "parentId": "53621E04276243B6A406F4DDD99DDDC7",
+    "position": 77000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-APR.C.4"
+   },
+   "70AC505FC9834BB1B056404CA476C6A1": {
+    "ancestorIds": [
+     "F24BFD56C8FE4FD7AB7B52D90DDE51C7",
+     "EC5E23A7E1E749619B7B38064736FB24",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045679",
+    "depth": 3,
+    "description": "Evaluate reports based on data. Define and explain the meaning of significance, both statistical (using p-values) and practical (using effect size).",
+    "id": "70AC505FC9834BB1B056404CA476C6A1",
+    "parentId": "F24BFD56C8FE4FD7AB7B52D90DDE51C7",
+    "position": 191000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-IC.B.6"
+   },
+   "7508F0735CA747D1832FE2602E975B43": {
+    "ancestorIds": [
+     "8616F82BAD084CBE858EB5A0EFE1B256",
+     "B6CABDEAAE1F441D837F2EB5765A3D9A",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045619",
+    "depth": 3,
+    "description": "Demonstrate that sequences are functions, sometimes defined recursively, whose domain is a subset of the integers.",
+    "id": "7508F0735CA747D1832FE2602E975B43",
+    "parentId": "8616F82BAD084CBE858EB5A0EFE1B256",
+    "position": 111000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-IF.A.3"
+   },
+   "786F3EE98F81429BA818CC9401FBB05E": {
+    "ancestorIds": [
+     "D27D0B72A581477AB7B74B3BBAC503D9",
+     "DA4B8A1E15124977B900EA90FE7FA93E",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045688",
+    "depth": 3,
+    "description": "(+) Use permutations and combinations to compute probabilities of compound events and solve problems.",
+    "id": "786F3EE98F81429BA818CC9401FBB05E",
+    "parentId": "D27D0B72A581477AB7B74B3BBAC503D9",
+    "position": 203000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-CP.B.9"
+   },
+   "79D45157578444C898E78C7D0FA3EA7B": {
+    "ancestorIds": [
+     "7FD35BD8BD794241A0B0B228C613FABB",
+     "CE479512D0114982922AE8D0403CE05B",
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045569",
+    "depth": 4,
+    "description": "Represent scalar multiplication graphically by scaling vectors and possibly reversing their direction; perform scalar multiplication component-wise, e.g. as c(v<sub>x</sub>, v<sub>y</sub>) = (cv<sub>x</sub>, cv<sub>y</sub>).",
+    "id": "79D45157578444C898E78C7D0FA3EA7B",
+    "parentId": "7FD35BD8BD794241A0B0B228C613FABB",
+    "position": 46000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-VM.B.5.a"
+   },
+   "7A2124AF61FB469484E4AE4FA2946C0B": {
+    "ancestorIds": [
+     "EC5E23A7E1E749619B7B38064736FB24",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21029762",
+    "depth": 2,
+    "description": "Understand and evaluate random processes underlying statistical experiments.",
+    "id": "7A2124AF61FB469484E4AE4FA2946C0B",
+    "parentId": "EC5E23A7E1E749619B7B38064736FB24",
+    "position": 184000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.S-IC.A"
+   },
+   "7C1B845AF77846DC92098F42186032A4": {
+    "ancestorIds": [
+     "8A68E58DDD114252AD7B669216D95519",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029802",
+    "depth": 2,
+    "description": "Translate between the geometric description and the equation for a conic section.",
+    "id": "7C1B845AF77846DC92098F42186032A4",
+    "parentId": "8A68E58DDD114252AD7B669216D95519",
+    "position": 262000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.G-GPE.A"
+   },
+   "7D32512A334447579135B3BF468A583F": {
+    "ancestorIds": [
+     "BC0A326E69B1479DA8511AD4CAA2691C",
+     "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045605",
+    "depth": 3,
+    "description": "Solve linear equations and inequalities in one variable, including equations with coefficients represented by letters.",
+    "id": "7D32512A334447579135B3BF468A583F",
+    "parentId": "BC0A326E69B1479DA8511AD4CAA2691C",
+    "position": 93000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-REI.B.3"
+   },
+   "7D9F1871A13A4C77897E1D6EED4858F4": {
+    "ancestorIds": [
+     "0E08DA576D1C40B2972C558E02DD000A",
+     "95A87820539D4BFA8EE4E4027D7797A2",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045597",
+    "depth": 3,
+    "description": "Represent constraints by equations or inequalities, and by systems of equations and/or inequalities, and interpret solutions as viable or nonviable options in a modeling context.",
+    "id": "7D9F1871A13A4C77897E1D6EED4858F4",
+    "parentId": "0E08DA576D1C40B2972C558E02DD000A",
+    "position": 86000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-CED.A.3"
+   },
+   "7EF3C7E9EE4A4CF4AEE446A8653641F0": {
+    "ancestorIds": [
+     "1F1E44DDEFB44898A99F82D214B472BF",
+     "95530FE2DFCB4A6E8E0823FF353FBB81",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045691",
+    "depth": 3,
+    "description": "(+) Develop a probability distribution for a random variable defined for a sample space in which theoretical probabilities can be calculated; find the expected value.",
+    "id": "7EF3C7E9EE4A4CF4AEE446A8653641F0",
+    "parentId": "1F1E44DDEFB44898A99F82D214B472BF",
+    "position": 208000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-MD.A.3"
+   },
+   "7EFA2A5AE74F437388FDEA4A4F635AD8": {
+    "ancestorIds": [
+     "B5CEC9BA0FF74A3BAA57FB3D73A9C1E6",
+     "F30457ECABC04FEDB22F1751DD548D98",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045654",
+    "depth": 3,
+    "description": "(+) Explain how the unit circle in the coordinate plane enables the extension of trigonometric functions to all real numbers, interpreted as radian measures of angles traversed counterclockwise around the unit circle.",
+    "id": "7EFA2A5AE74F437388FDEA4A4F635AD8",
+    "parentId": "B5CEC9BA0FF74A3BAA57FB3D73A9C1E6",
+    "position": 156000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-TF.A.2"
+   },
+   "7F3F0CD2BFA040599DE4D1B7A4001BDC": {
+    "ancestorIds": [
+     "CF0209C1A8624575B49A030227F29655",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21029659",
+    "depth": 2,
+    "description": "Perform arithmetic operations with complex numbers.",
+    "id": "7F3F0CD2BFA040599DE4D1B7A4001BDC",
+    "parentId": "CF0209C1A8624575B49A030227F29655",
+    "position": 23000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.N-CN.A"
+   },
+   "7F72BA39D3804C2DBA48511044472AF9": {
+    "ancestorIds": [
+     "9B2B59BFC5454E8789A28917AE790FA8",
+     "F30FE1162E8D4503BF83040EA38ACC76",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045698",
+    "depth": 3,
+    "description": "State precise definitions of angle, circle, perpendicular line, parallel line, and line segment, based on the undefined notions of point, line, distance along a line, and distance around a circular arc.",
+    "id": "7F72BA39D3804C2DBA48511044472AF9",
+    "parentId": "9B2B59BFC5454E8789A28917AE790FA8",
+    "position": 219000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-CO.A.1"
+   },
+   "7FBE450A5AC84586864D5EC2AB2AC981": {
+    "ancestorIds": [
+     "039CB44DC0E54E12A12C2873A240E73E",
+     "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045603",
+    "depth": 3,
+    "description": "Explain each step in solving a simple equation as following from the equality of numbers asserted at the previous step, starting from the assumption that the original equation has a solution. Construct a viable argument to justify a solution method.",
+    "id": "7FBE450A5AC84586864D5EC2AB2AC981",
+    "parentId": "039CB44DC0E54E12A12C2873A240E73E",
+    "position": 90000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-REI.A.1"
+   },
+   "7FD35BD8BD794241A0B0B228C613FABB": {
+    "ancestorIds": [
+     "CE479512D0114982922AE8D0403CE05B",
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045568",
+    "depth": 3,
+    "description": "(+) Multiply a vector by a scalar.",
+    "id": "7FD35BD8BD794241A0B0B228C613FABB",
+    "parentId": "CE479512D0114982922AE8D0403CE05B",
+    "position": 45000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-VM.B.5"
+   },
+   "807B415D4F214A638BA1A5A6314789A2": {
+    "ancestorIds": [
+     "28D40B6DA5AA4854904BBE5488CA60E4",
+     "F706F51BBF814692957709B3D5CA170B",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045588",
+    "depth": 3,
+    "description": "Explain that polynomials form a system analogous to the integers, namely, they are closed under the operations of addition, subtraction, and multiplication; add, subtract, and multiply polynomials.",
+    "id": "807B415D4F214A638BA1A5A6314789A2",
+    "parentId": "28D40B6DA5AA4854904BBE5488CA60E4",
+    "position": 72000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-APR.A.1"
+   },
+   "84943926DAA643F0AC9A2F2C2242F8E9": {
+    "ancestorIds": [
+     "92776AB195AF4AB9A03CD1BCC166E487",
+     "B6CABDEAAE1F441D837F2EB5765A3D9A",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045622",
+    "depth": 3,
+    "description": "Calculate and interpret the average rate of change presented symbolically or as a table, of a function over a specified interval. Estimate the rate of change from a graph.",
+    "id": "84943926DAA643F0AC9A2F2C2242F8E9",
+    "parentId": "92776AB195AF4AB9A03CD1BCC166E487",
+    "position": 115000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-IF.B.6"
+   },
+   "84B3F8A1E1124DFAA18C3FE6E67079D5": {
+    "ancestorIds": [
+     "A139F0EFD7924D7DB07C08FC97B6E960",
+     "F706F51BBF814692957709B3D5CA170B",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045593",
+    "depth": 3,
+    "description": "Rewrite simple rational expressions in different forms; write a(x)/b(x) in the form q(x)+r(x)/b(x), where a(x), b(x), q(x) and r(x) are polynomials with the degree of r(x) less than the degree of b(x) using inspection, long division, or, for the more complicated examples, a computer algebra system.",
+    "id": "84B3F8A1E1124DFAA18C3FE6E67079D5",
+    "parentId": "A139F0EFD7924D7DB07C08FC97B6E960",
+    "position": 80000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-APR.D.6"
+   },
+   "85982C3D31F5434EA307B8143A72044B": {
+    "ancestorIds": [
+     "1F1E44DDEFB44898A99F82D214B472BF",
+     "95530FE2DFCB4A6E8E0823FF353FBB81",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045689",
+    "depth": 3,
+    "description": "(+) Define a random variable for a quantity of interest by assigning a numerical value to each event in a sample space; graph the corresponding probability distribution using the same graphical displays as for data distributions.",
+    "id": "85982C3D31F5434EA307B8143A72044B",
+    "parentId": "1F1E44DDEFB44898A99F82D214B472BF",
+    "position": 206000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-MD.A.1"
+   },
+   "8616F82BAD084CBE858EB5A0EFE1B256": {
+    "ancestorIds": [
+     "B6CABDEAAE1F441D837F2EB5765A3D9A",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029715",
+    "depth": 2,
+    "description": "Understand the concept of a function and use function notation.",
+    "id": "8616F82BAD084CBE858EB5A0EFE1B256",
+    "parentId": "B6CABDEAAE1F441D837F2EB5765A3D9A",
+    "position": 108000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.F-IF.A"
+   },
+   "862D35D894464DCA9D852EF102D3313F": {
+    "ancestorIds": [
+     "493D66D00AEB4A03BBD82841C200AEC0",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21029759",
+    "depth": 2,
+    "description": "Summarize, represent, and interpret data on two categorical and quantitative variables.",
+    "id": "862D35D894464DCA9D852EF102D3313F",
+    "parentId": "493D66D00AEB4A03BBD82841C200AEC0",
+    "position": 173000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.S-ID.B"
+   },
+   "8642EFAB92D74814B1AC03CB9832058B": {
+    "ancestorIds": [
+     "7C1B845AF77846DC92098F42186032A4",
+     "8A68E58DDD114252AD7B669216D95519",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045729",
+    "depth": 3,
+    "description": "Derive the equation of a circle of given center and radius using the Pythagorean Theorem; complete the square to find the center and radius of a circle given by an equation.",
+    "id": "8642EFAB92D74814B1AC03CB9832058B",
+    "parentId": "7C1B845AF77846DC92098F42186032A4",
+    "position": 263000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-GPE.A.1"
+   },
+   "87E5F140F5C44FC0B387487B749298F5": {
+    "ancestorIds": [
+     "BAF0E93A739049C8B949EFAD4631F89C",
+     "DAB950CBB5584172B2992BF0F6033DB4",
+     "F63A3AAE1A204D6FA117D15C3F20FF4E",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045647",
+    "depth": 4,
+    "description": "Identify situations in which one quantity changes at a constant rate per unit interval relative to another.",
+    "id": "87E5F140F5C44FC0B387487B749298F5",
+    "parentId": "BAF0E93A739049C8B949EFAD4631F89C",
+    "position": 146000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-LE.A.1.b"
+   },
+   "889BA43480104D8D930A95933C84BFA3": {
+    "ancestorIds": [
+     "9B2B59BFC5454E8789A28917AE790FA8",
+     "F30FE1162E8D4503BF83040EA38ACC76",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045699",
+    "depth": 3,
+    "description": "Represent transformations in the plane using e.g., transparencies and geometry software; describe transformations as functions that take points in the plane as inputs and give other points as outputs. Compare transformations that preserve distance and angle to those that do not (e.g., translation versus horizontal stretch).",
+    "id": "889BA43480104D8D930A95933C84BFA3",
+    "parentId": "9B2B59BFC5454E8789A28917AE790FA8",
+    "position": 220000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-CO.A.2"
+   },
+   "8A68E58DDD114252AD7B669216D95519": {
+    "ancestorIds": [
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029801",
+    "depth": 1,
+    "description": "Expressing Geometric Properties with Equations",
+    "id": "8A68E58DDD114252AD7B669216D95519",
+    "parentId": "EEF2DD4F9F404A90A531FEFC9CB70FF1",
+    "position": 261000
+   },
+   "8A6ABA5AF9FD4F5284ED9F365B4E7775": {
+    "ancestorIds": [
+     "FB8AD98A03DA48C995DBF8F5729172F1",
+     "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045614",
+    "depth": 3,
+    "description": "Explain that the graph of an equation in two variables is the set of all its solutions plotted in the coordinate plane, often forming a curve (which could be a line).",
+    "id": "8A6ABA5AF9FD4F5284ED9F365B4E7775",
+    "parentId": "FB8AD98A03DA48C995DBF8F5729172F1",
+    "position": 104000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-REI.D.10"
+   },
+   "8B8F2EE8DE2A469B88DE7D4DD8DAF665": {
+    "ancestorIds": [
+     "612B89D750A54464AF390DE0F93F91B4",
+     "4B27D000C366439C93251BF4D497C578",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045740",
+    "depth": 3,
+    "description": "Use geometric shapes, their measures, and their properties to describe objects (e.g., modeling a tree trunk or a human torso as a cylinder).",
+    "id": "8B8F2EE8DE2A469B88DE7D4DD8DAF665",
+    "parentId": "612B89D750A54464AF390DE0F93F91B4",
+    "position": 280000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-MG.A.1"
+   },
+   "8C06C258F8B0443291A798A0711360C4": {
+    "ancestorIds": [
+     "04A5E50535734409B0F330895DAE39DC",
+     "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045609",
+    "depth": 3,
+    "description": "Prove that, given a system of two equations in two variables, replacing one equation by the sum of that equation and a multiple of the other produces a system with the same solutions.",
+    "id": "8C06C258F8B0443291A798A0711360C4",
+    "parentId": "04A5E50535734409B0F330895DAE39DC",
+    "position": 98000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-REI.C.5"
+   },
+   "8DF3E5CC8A5544BB81A19A7625AE5673": {
+    "ancestorIds": [
+     "8F1850EC967042ADAFFA6D4FE1BED4B8",
+     "F30FE1162E8D4503BF83040EA38ACC76",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045703",
+    "depth": 3,
+    "description": "Use geometric descriptions of rigid motions to transform figures and to predict the effect of a given rigid motion on a given figure; given two figures, use the definition of congruence in terms of rigid motions to decide if they are congruent.",
+    "id": "8DF3E5CC8A5544BB81A19A7625AE5673",
+    "parentId": "8F1850EC967042ADAFFA6D4FE1BED4B8",
+    "position": 225000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-CO.B.6"
+   },
+   "8F1850EC967042ADAFFA6D4FE1BED4B8": {
+    "ancestorIds": [
+     "F30FE1162E8D4503BF83040EA38ACC76",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029790",
+    "depth": 2,
+    "description": "Understand congruence in terms of rigid motions.",
+    "id": "8F1850EC967042ADAFFA6D4FE1BED4B8",
+    "parentId": "F30FE1162E8D4503BF83040EA38ACC76",
+    "position": 224000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.G-CO.B"
+   },
+   "8FB475B47C0A4892AEFB57778E25F66E": {
+    "ancestorIds": [
+     "B0B0A0739BCF40A5A7E53BA25DFF64D6",
+     "862D35D894464DCA9D852EF102D3313F",
+     "493D66D00AEB4A03BBD82841C200AEC0",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045669",
+    "depth": 4,
+    "description": "Informally assess the fit of a function by plotting and analyzing residuals.",
+    "id": "8FB475B47C0A4892AEFB57778E25F66E",
+    "parentId": "B0B0A0739BCF40A5A7E53BA25DFF64D6",
+    "position": 177000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-ID.B.6.b"
+   },
+   "8FD944936444478CA644B1825777F2F1": {
+    "ancestorIds": [
+     "92A14B2D3243413787C7294D917C5634",
+     "95530FE2DFCB4A6E8E0823FF353FBB81",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045693",
+    "depth": 3,
+    "description": "(+) Weigh the possible outcomes of a decision by assigning probabilities to payoff values and finding expected values.",
+    "id": "8FD944936444478CA644B1825777F2F1",
+    "parentId": "92A14B2D3243413787C7294D917C5634",
+    "position": 211000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-MD.B.5"
+   },
+   "8FE23821A1764FC4AD700118D74EF53A": {
+    "ancestorIds": [
+     "1DD2D86051FA4CDC91290AD9B6EB6C96",
+     "5B462CB87F794AD0BDD097F1BAC6722B",
+     "B6CABDEAAE1F441D837F2EB5765A3D9A",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045626",
+    "depth": 4,
+    "description": "Graph polynomial functions, identifying zeros when suitable factorizations are available, and showing end behavior.",
+    "id": "8FE23821A1764FC4AD700118D74EF53A",
+    "parentId": "1DD2D86051FA4CDC91290AD9B6EB6C96",
+    "position": 120000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-IF.C.7.c"
+   },
+   "92776AB195AF4AB9A03CD1BCC166E487": {
+    "ancestorIds": [
+     "B6CABDEAAE1F441D837F2EB5765A3D9A",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029716",
+    "depth": 2,
+    "description": "Interpret functions that arise in applications in terms of the context.",
+    "id": "92776AB195AF4AB9A03CD1BCC166E487",
+    "parentId": "B6CABDEAAE1F441D837F2EB5765A3D9A",
+    "position": 112000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.F-IF.B"
+   },
+   "929380220EFA44ED854225F1C576D658": {
+    "ancestorIds": [
+     "D5D2E17EA634498B9AA9DA15D29638D6",
+     "DA4B8A1E15124977B900EA90FE7FA93E",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045683",
+    "depth": 3,
+    "description": "Construct and interpret two-way frequency tables of data when two categories are associated with each object being classified. Use the two-way table as a sample space to decide if events are independent and to approximate conditional probabilities.",
+    "id": "929380220EFA44ED854225F1C576D658",
+    "parentId": "D5D2E17EA634498B9AA9DA15D29638D6",
+    "position": 197000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-CP.A.4"
+   },
+   "92A14B2D3243413787C7294D917C5634": {
+    "ancestorIds": [
+     "95530FE2DFCB4A6E8E0823FF353FBB81",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21029769",
+    "depth": 2,
+    "description": "Use probability to evaluate outcomes of decisions.",
+    "id": "92A14B2D3243413787C7294D917C5634",
+    "parentId": "95530FE2DFCB4A6E8E0823FF353FBB81",
+    "position": 210000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.S-MD.B"
+   },
+   "9421795973074AC2920AF7894B23501E": {
+    "ancestorIds": [
+     "FDDBBD6CCA0F4B8D8FDD55A31FC40CDF",
+     "B6E54196FD7B4A77AE45B643B2ED578D",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045547",
+    "depth": 3,
+    "description": "Rewrite expressions involving radicals and rational exponents using the properties of exponents.",
+    "id": "9421795973074AC2920AF7894B23501E",
+    "parentId": "FDDBBD6CCA0F4B8D8FDD55A31FC40CDF",
+    "position": 14000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-RN.A.2"
+   },
+   "9522D3B1656648D48656827F51A86303": {
+    "ancestorIds": [
+     "C8A69F628A8547EA8119F7CBF49470DD",
+     "5B462CB87F794AD0BDD097F1BAC6722B",
+     "B6CABDEAAE1F441D837F2EB5765A3D9A",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045631",
+    "depth": 4,
+    "description": "Use the properties of exponents to interpret expressions for exponential functions.",
+    "id": "9522D3B1656648D48656827F51A86303",
+    "parentId": "C8A69F628A8547EA8119F7CBF49470DD",
+    "position": 125000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-IF.C.8.b"
+   },
+   "95530FE2DFCB4A6E8E0823FF353FBB81": {
+    "ancestorIds": [
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21029767",
+    "depth": 1,
+    "description": "Using Probability to Make Decisions",
+    "id": "95530FE2DFCB4A6E8E0823FF353FBB81",
+    "parentId": "50A4C3CEADA44EE98846ADAD403F48BA",
+    "position": 204000
+   },
+   "95A87820539D4BFA8EE4E4027D7797A2": {
+    "ancestorIds": [
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029707",
+    "depth": 1,
+    "description": "Creating Equations",
+    "id": "95A87820539D4BFA8EE4E4027D7797A2",
+    "parentId": "3B76F4B519124D52A06D47ACFD87BE01",
+    "position": 82000
+   },
+   "95DC458580954E8A9866D87C21563631": {
+    "ancestorIds": [
+     "402BC0AC116844DEBC54F404087B313D",
+     "F30457ECABC04FEDB22F1751DD548D98",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045660",
+    "depth": 3,
+    "description": "(+) Prove the Pythagorean identity sin²(θ) + cos²(θ) =1 and use it to find sin(θ), cos(θ), or tan(θ) given sin(θ), cos(θ), or tan(θ) and the quadrant of the angle.",
+    "id": "95DC458580954E8A9866D87C21563631",
+    "parentId": "402BC0AC116844DEBC54F404087B313D",
+    "position": 164000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-TF.C.8"
+   },
+   "95E67819876D4DADBAD1D9FB34DB793D": {
+    "ancestorIds": [
+     "D27D0B72A581477AB7B74B3BBAC503D9",
+     "DA4B8A1E15124977B900EA90FE7FA93E",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045687",
+    "depth": 3,
+    "description": "(+) Apply the general Multiplication Rule in a uniform probability model, P(A and B) = P(A)P(B|A) = P(B)P(A|B), and interpret the answer in terms of the model.",
+    "id": "95E67819876D4DADBAD1D9FB34DB793D",
+    "parentId": "D27D0B72A581477AB7B74B3BBAC503D9",
+    "position": 202000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-CP.B.8"
+   },
+   "970B53614FC745D983DDEDE66D664165": {
+    "ancestorIds": [
+     "B5CEC9BA0FF74A3BAA57FB3D73A9C1E6",
+     "F30457ECABC04FEDB22F1751DD548D98",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045655",
+    "depth": 3,
+    "description": "(+) Use special triangles to determine geometrically the values to sine, cosine, tangent for π/3, π/4, and π/6 use the unit circle to express the values sine, cosine, and tangent for x, π+x. and 2π-x and in terms of their values for x where x is any real number.",
+    "id": "970B53614FC745D983DDEDE66D664165",
+    "parentId": "B5CEC9BA0FF74A3BAA57FB3D73A9C1E6",
+    "position": 157000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-TF.A.3"
+   },
+   "9729389F66164B60A8EF053588C9C6DE": {
+    "ancestorIds": [
+     "E60FCD0E3F534739A91C22CB7C65047D",
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045574",
+    "depth": 3,
+    "description": "(+) Understand that, unlike the multiplication of numbers, matrix multiplication for square matrices is not a commutative operation, but still satisfies the associative and distributive properties.",
+    "id": "9729389F66164B60A8EF053588C9C6DE",
+    "parentId": "E60FCD0E3F534739A91C22CB7C65047D",
+    "position": 52000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-VM.C.9"
+   },
+   "97AAB8BDC28C47739C67F0EF15A5A5EE": {
+    "ancestorIds": [
+     "1AE4A20E80014F1FB8ED789E35CB7735",
+     "06F1271EA47743FF844728C5B910916C",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045711",
+    "depth": 3,
+    "description": "Verify experimentally the properties of dilations given by a center and a scale factor.",
+    "id": "97AAB8BDC28C47739C67F0EF15A5A5EE",
+    "parentId": "1AE4A20E80014F1FB8ED789E35CB7735",
+    "position": 237000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-SRT.A.1"
+   },
+   "97C0F985AE9446EDA9EB333A332D6A89": {
+    "ancestorIds": [
+     "7A2124AF61FB469484E4AE4FA2946C0B",
+     "EC5E23A7E1E749619B7B38064736FB24",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045675",
+    "depth": 3,
+    "description": "Decide if a specified model is consistent with results from a given data-generating process, e.g., using simulation.",
+    "id": "97C0F985AE9446EDA9EB333A332D6A89",
+    "parentId": "7A2124AF61FB469484E4AE4FA2946C0B",
+    "position": 186000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-IC.A.2"
+   },
+   "98540DC3D92C4210B955263D922C0C15": {
+    "ancestorIds": [
+     "BE501227EEB44732BC5D1A176BA4F5A9",
+     "8A68E58DDD114252AD7B669216D95519",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045733",
+    "depth": 3,
+    "description": "Prove the slope criteria for parallel and perpendicular lines and use them to solve geometric problems (e.g., find the equation of a line parallel or perpendicular to a given line that passes through a given point).",
+    "id": "98540DC3D92C4210B955263D922C0C15",
+    "parentId": "BE501227EEB44732BC5D1A176BA4F5A9",
+    "position": 268000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-GPE.B.5"
+   },
+   "992A43D4C9E94A6C829C8953084E011A": {
+    "ancestorIds": [
+     "31612C2568B44C90825D342883C96921",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029700",
+    "depth": 2,
+    "description": "Interpret the structure of expressions.",
+    "id": "992A43D4C9E94A6C829C8953084E011A",
+    "parentId": "31612C2568B44C90825D342883C96921",
+    "position": 58000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.A-SSE.A"
+   },
+   "99ABAE7236CF430B9FE3D3E654A0347A": {
+    "ancestorIds": [
+     "FA6E1D56740043B0B6184CB2D308EF19",
+     "06F1271EA47743FF844728C5B910916C",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045721",
+    "depth": 3,
+    "description": "(+) Derive the formula A = ½ ab sin (C) for the area of a triangle by drawing an auxiliary line from a vertex perpendicular to the opposite side.",
+    "id": "99ABAE7236CF430B9FE3D3E654A0347A",
+    "parentId": "FA6E1D56740043B0B6184CB2D308EF19",
+    "position": 250000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-SRT.D.9"
+   },
+   "9B2B59BFC5454E8789A28917AE790FA8": {
+    "ancestorIds": [
+     "F30FE1162E8D4503BF83040EA38ACC76",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029789",
+    "depth": 2,
+    "description": "Experiment with transformations in the plane.",
+    "id": "9B2B59BFC5454E8789A28917AE790FA8",
+    "parentId": "F30FE1162E8D4503BF83040EA38ACC76",
+    "position": 218000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.G-CO.A"
+   },
+   "9CAF8B076FBA4F02A9B881179ADA5F13": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029606",
+    "depth": 0,
+    "description": "Standards for Mathematical Practice",
+    "id": "9CAF8B076FBA4F02A9B881179ADA5F13",
+    "parentId": null,
+    "position": 1000
+   },
+   "9D1F8C1F505C40739DFD31E5610A9E7E": {
+    "ancestorIds": [
+     "1F1E44DDEFB44898A99F82D214B472BF",
+     "95530FE2DFCB4A6E8E0823FF353FBB81",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045692",
+    "depth": 3,
+    "description": "(+) Develop a probability distribution for a random variable defined for a sample space in which probabilities are assigned empirically; find the expected value.",
+    "id": "9D1F8C1F505C40739DFD31E5610A9E7E",
+    "parentId": "1F1E44DDEFB44898A99F82D214B472BF",
+    "position": 209000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-MD.A.4"
+   },
+   "9D424C91A0844ED79FA44F308F4579A6": {
+    "ancestorIds": [
+     "60D3451E6425426AABFE3AC707817A8E",
+     "CF0209C1A8624575B49A030227F29655",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045557",
+    "depth": 3,
+    "description": "(+) Calculate the distance between numbers in the complex plane as the modulus of the difference, and the midpoint of a segment as the average of the numbers at its endpoints.",
+    "id": "9D424C91A0844ED79FA44F308F4579A6",
+    "parentId": "60D3451E6425426AABFE3AC707817A8E",
+    "position": 30000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-CN.B.6"
+   },
+   "9DBFD4F9B9734E8BBF6B1C8C2CEA64D8": {
+    "ancestorIds": [
+     "C1D5C74B76474580AC2D49C5858E7B12",
+     "0D9C98993CCB471692477A154D8F95CF",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045551",
+    "depth": 3,
+    "description": "Choose a level of accuracy appropriate to limitations on measurement when reporting quantities.",
+    "id": "9DBFD4F9B9734E8BBF6B1C8C2CEA64D8",
+    "parentId": "C1D5C74B76474580AC2D49C5858E7B12",
+    "position": 21000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-Q.A.3"
+   },
+   "9E687DC2F34A4F4AB9986D4A180FCA72": {
+    "ancestorIds": [
+     "BE501227EEB44732BC5D1A176BA4F5A9",
+     "8A68E58DDD114252AD7B669216D95519",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045734",
+    "depth": 3,
+    "description": "Find the point on a directed line segment between two given points that partitions the segment in a given ratio.",
+    "id": "9E687DC2F34A4F4AB9986D4A180FCA72",
+    "parentId": "BE501227EEB44732BC5D1A176BA4F5A9",
+    "position": 269000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-GPE.B.6"
+   },
+   "9EA684A7156648F0A2C0BC96902A7CA7": {
+    "ancestorIds": [
+     "49EA0CAEF3AF483DAE627BD347A4A6E9",
+     "47D84B52CB944B80B8F239C865DC7ECF",
+     "4DADF313A5D141C381E8C2841E4E7F4D",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045642",
+    "depth": 4,
+    "description": "(+) Read values of an inverse function from a graph or table, given that the function has an inverse.",
+    "id": "9EA684A7156648F0A2C0BC96902A7CA7",
+    "parentId": "49EA0CAEF3AF483DAE627BD347A4A6E9",
+    "position": 139000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-BF.B.4.c"
+   },
+   "9FFDE024FC234C9F93C84FA043C33B2C": {
+    "ancestorIds": [
+     "B5CEC9BA0FF74A3BAA57FB3D73A9C1E6",
+     "F30457ECABC04FEDB22F1751DD548D98",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045656",
+    "depth": 3,
+    "description": "(+) Use the unit circle to explain symmetry (odd and even) and periodicity of trigonometric functions.",
+    "id": "9FFDE024FC234C9F93C84FA043C33B2C",
+    "parentId": "B5CEC9BA0FF74A3BAA57FB3D73A9C1E6",
+    "position": 158000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-TF.A.4"
+   },
+   "A139F0EFD7924D7DB07C08FC97B6E960": {
+    "ancestorIds": [
+     "F706F51BBF814692957709B3D5CA170B",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029706",
+    "depth": 2,
+    "description": "Rewrite rational expressions.",
+    "id": "A139F0EFD7924D7DB07C08FC97B6E960",
+    "parentId": "F706F51BBF814692957709B3D5CA170B",
+    "position": 79000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.A-APR.D"
+   },
+   "A1EEE36486C041E78F36A6E3CB838150": {
+    "ancestorIds": [
+     "7FD35BD8BD794241A0B0B228C613FABB",
+     "CE479512D0114982922AE8D0403CE05B",
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045570",
+    "depth": 4,
+    "description": "Compute the magnitude of a scalar multiple cv using ||cv|| = |c|v. Compute the direction of cv knowing that when |c|v ≠ 0, the direction of cv is either along v (for c>0) or against v(for c<0).",
+    "id": "A1EEE36486C041E78F36A6E3CB838150",
+    "parentId": "7FD35BD8BD794241A0B0B228C613FABB",
+    "position": 47000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-VM.B.5.b"
+   },
+   "A36A199E3AEA417EBC6A7D0FBF432B51": {
+    "ancestorIds": [
+     "E60FCD0E3F534739A91C22CB7C65047D",
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045577",
+    "depth": 3,
+    "description": "(+) Work with 2×2 matrices as transformations of the plane and interpret the absolute value of the determinant in terms of area.",
+    "id": "A36A199E3AEA417EBC6A7D0FBF432B51",
+    "parentId": "E60FCD0E3F534739A91C22CB7C65047D",
+    "position": 55000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-VM.C.12"
+   },
+   "A42D7BA9A4E449549759FB1B73E10F4D": {
+    "ancestorIds": [
+     "E640AF6AAB2D47EE9D91705B4A02DC9B",
+     "F706F51BBF814692957709B3D5CA170B",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045590",
+    "depth": 3,
+    "description": "Identify zeros of polynomials when suitable factorizations are available, and use the zeros to construct a rough graph of the function defined by the polynomial.",
+    "id": "A42D7BA9A4E449549759FB1B73E10F4D",
+    "parentId": "E640AF6AAB2D47EE9D91705B4A02DC9B",
+    "position": 75000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-APR.B.3"
+   },
+   "A4FE576ECD7D4A64A86A403E9BBADD25": {
+    "ancestorIds": [
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21029663",
+    "depth": 2,
+    "description": "Represent and model with vector quantities.",
+    "id": "A4FE576ECD7D4A64A86A403E9BBADD25",
+    "parentId": "5AEAC6E87438436EA004661E61E703C6",
+    "position": 36000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.N-VM.A"
+   },
+   "A5D3992CD0DE409088EDA359EA700C44": {
+    "ancestorIds": [
+     "330AC388F8124725AF3D3F5F2CAA56A4",
+     "CE479512D0114982922AE8D0403CE05B",
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045565",
+    "depth": 4,
+    "description": "Add vectors end-to-end, component-wise, and by the parallelogram rule. Understand that the magnitude of a sum of two vectors is typically not the sum of the magnitudes.",
+    "id": "A5D3992CD0DE409088EDA359EA700C44",
+    "parentId": "330AC388F8124725AF3D3F5F2CAA56A4",
+    "position": 42000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-VM.B.4.a"
+   },
+   "A71893568E064C7ABEA0787D343811EE": {
+    "ancestorIds": [
+     "E8021FBE894640FE923511826D4B343F",
+     "BFC0DD33E3794537A03A9D8C3ABA600F",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045736",
+    "depth": 3,
+    "description": "Give an informal argument for the formulas for the circumference of a circle, area of a circle, volume of a cylinder, pyramid, and cone.",
+    "id": "A71893568E064C7ABEA0787D343811EE",
+    "parentId": "E8021FBE894640FE923511826D4B343F",
+    "position": 273000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-GMD.A.1"
+   },
+   "A793D0C971D1424D873481600B1868D9": {
+    "ancestorIds": [
+     "92776AB195AF4AB9A03CD1BCC166E487",
+     "B6CABDEAAE1F441D837F2EB5765A3D9A",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045620",
+    "depth": 3,
+    "description": "For a function that models a relationship between two quantities, interpret key features of graphs and tables in terms of the quantities, and sketch graphs showing key features. Key features include: intercepts; intervals where the function is increasing, decreasing, positive, or negative; relative maximums and minimums; symmetries; end behavior; and periodicity.",
+    "id": "A793D0C971D1424D873481600B1868D9",
+    "parentId": "92776AB195AF4AB9A03CD1BCC166E487",
+    "position": 113000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-IF.B.4"
+   },
+   "A964A181409B4A6F8B2A560899AB9DEF": {
+    "ancestorIds": [
+     "04A5E50535734409B0F330895DAE39DC",
+     "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045611",
+    "depth": 3,
+    "description": "Solve a simple system consisting of a linear equation and a quadratic equation in two variables algebraically and graphically.",
+    "id": "A964A181409B4A6F8B2A560899AB9DEF",
+    "parentId": "04A5E50535734409B0F330895DAE39DC",
+    "position": 100000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-REI.C.7"
+   },
+   "AA0FFAFDDF784641B4BAFE30E33D29CF": {
+    "ancestorIds": [
+     "FA6E1D56740043B0B6184CB2D308EF19",
+     "06F1271EA47743FF844728C5B910916C",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045723",
+    "depth": 3,
+    "description": "(+) Understand and apply the Law of Sines and the Law of Cosines to find unknown measurements in right and non-right triangles (e.g., surveying problems, resultant forces).",
+    "id": "AA0FFAFDDF784641B4BAFE30E33D29CF",
+    "parentId": "FA6E1D56740043B0B6184CB2D308EF19",
+    "position": 252000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-SRT.D.11"
+   },
+   "AAA1EFB0BA1D4DA7A774343A03E1EB39": {
+    "ancestorIds": [
+     "0E08DA576D1C40B2972C558E02DD000A",
+     "95A87820539D4BFA8EE4E4027D7797A2",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045598",
+    "depth": 3,
+    "description": "Rearrange formulas to highlight a quantity of interest, using the same reasoning as in solving equations.",
+    "id": "AAA1EFB0BA1D4DA7A774343A03E1EB39",
+    "parentId": "0E08DA576D1C40B2972C558E02DD000A",
+    "position": 87000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-CED.A.4"
+   },
+   "AB4B2238B404430D9625697B595861A4": {
+    "ancestorIds": [
+     "47D84B52CB944B80B8F239C865DC7ECF",
+     "4DADF313A5D141C381E8C2841E4E7F4D",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045644",
+    "depth": 3,
+    "description": "(+) Understand the inverse relationship between exponents and logarithms and use this relationship to solve problems involving logarithms and exponents.",
+    "id": "AB4B2238B404430D9625697B595861A4",
+    "parentId": "47D84B52CB944B80B8F239C865DC7ECF",
+    "position": 141000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-BF.B.5"
+   },
+   "AD4A0E76EF19485A97EB68C5BA3A19E7": {
+    "ancestorIds": [
+     "BE501227EEB44732BC5D1A176BA4F5A9",
+     "8A68E58DDD114252AD7B669216D95519",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045735",
+    "depth": 3,
+    "description": "Use coordinates and the distance formula to compute perimeters of polygons and areas of triangles and rectangles.",
+    "id": "AD4A0E76EF19485A97EB68C5BA3A19E7",
+    "parentId": "BE501227EEB44732BC5D1A176BA4F5A9",
+    "position": 270000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-GPE.B.7"
+   },
+   "AE0BC6E76E37491DBBB8A919FB5DEB1B": {
+    "ancestorIds": [
+     "EB90C4E273FF4FA781F9E6BBCE574C31",
+     "0878BD413CE54867B568254E7048EA56",
+     "4DADF313A5D141C381E8C2841E4E7F4D",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045636",
+    "depth": 4,
+    "description": "(+) Compose functions.",
+    "id": "AE0BC6E76E37491DBBB8A919FB5DEB1B",
+    "parentId": "EB90C4E273FF4FA781F9E6BBCE574C31",
+    "position": 132000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-BF.A.1.c"
+   },
+   "AEB89E2C9744461FAF5177520188204D": {
+    "ancestorIds": [
+     "992A43D4C9E94A6C829C8953084E011A",
+     "31612C2568B44C90825D342883C96921",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045581",
+    "depth": 3,
+    "description": "Use the structure of an expression to identify ways to rewrite it.",
+    "id": "AEB89E2C9744461FAF5177520188204D",
+    "parentId": "992A43D4C9E94A6C829C8953084E011A",
+    "position": 62000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-SSE.A.2"
+   },
+   "AF4FFCD5CDFC4387A2124CC54C87BF9A": {
+    "ancestorIds": [
+     "2D4CBCEA2CA845CCBDCED5D44BA14D5F",
+     "0FADA7DF20654A5FA94B5F90AADD2700",
+     "31612C2568B44C90825D342883C96921",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045583",
+    "depth": 4,
+    "description": "Factor a quadratic expression to reveal the zeros of the function it defines.",
+    "id": "AF4FFCD5CDFC4387A2124CC54C87BF9A",
+    "parentId": "2D4CBCEA2CA845CCBDCED5D44BA14D5F",
+    "position": 65000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-SSE.B.3.a"
+   },
+   "AFA70852C79443869D6D55BE273CEFB1": {
+    "ancestorIds": [
+     "E60FCD0E3F534739A91C22CB7C65047D",
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045573",
+    "depth": 3,
+    "description": "(+) Add, subtract, and multiply matrices of appropriate dimensions.",
+    "id": "AFA70852C79443869D6D55BE273CEFB1",
+    "parentId": "E60FCD0E3F534739A91C22CB7C65047D",
+    "position": 51000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-VM.C.8"
+   },
+   "B03F539F46E94EB68D36BAC21D9AAA90": {
+    "ancestorIds": [
+     "862D35D894464DCA9D852EF102D3313F",
+     "493D66D00AEB4A03BBD82841C200AEC0",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045671",
+    "depth": 3,
+    "description": "Distinguish between correlation and causation.",
+    "id": "B03F539F46E94EB68D36BAC21D9AAA90",
+    "parentId": "862D35D894464DCA9D852EF102D3313F",
+    "position": 179000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-ID.B.7"
+   },
+   "B08A13AE65EB4631B0C3273E3AB21D86": {
+    "ancestorIds": [
+     "F63A3AAE1A204D6FA117D15C3F20FF4E",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029723",
+    "depth": 2,
+    "description": "Interpret expressions for functions in terms of the situation they model.",
+    "id": "B08A13AE65EB4631B0C3273E3AB21D86",
+    "parentId": "F63A3AAE1A204D6FA117D15C3F20FF4E",
+    "position": 151000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.F-LE.B"
+   },
+   "B0B0A0739BCF40A5A7E53BA25DFF64D6": {
+    "ancestorIds": [
+     "862D35D894464DCA9D852EF102D3313F",
+     "493D66D00AEB4A03BBD82841C200AEC0",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045667",
+    "depth": 3,
+    "description": "Represent data on two quantitative variables on a scatter plot, and describe how the variables are related.",
+    "id": "B0B0A0739BCF40A5A7E53BA25DFF64D6",
+    "parentId": "862D35D894464DCA9D852EF102D3313F",
+    "position": 175000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-ID.B.6"
+   },
+   "B2CB24AD71C24DE9A1928D4C06A55886": {
+    "ancestorIds": [
+     "2D4CBCEA2CA845CCBDCED5D44BA14D5F",
+     "0FADA7DF20654A5FA94B5F90AADD2700",
+     "31612C2568B44C90825D342883C96921",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045585",
+    "depth": 4,
+    "description": "Use the properties of exponents to transform expressions for exponential functions.",
+    "id": "B2CB24AD71C24DE9A1928D4C06A55886",
+    "parentId": "2D4CBCEA2CA845CCBDCED5D44BA14D5F",
+    "position": 67000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-SSE.B.3.c"
+   },
+   "B59CEAAC66554170BEC8C85A9140276D": {
+    "ancestorIds": [
+     "EB90C4E273FF4FA781F9E6BBCE574C31",
+     "0878BD413CE54867B568254E7048EA56",
+     "4DADF313A5D141C381E8C2841E4E7F4D",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045634",
+    "depth": 4,
+    "description": "Determine an explicit expression, a recursive process, or steps for calculation from a context.",
+    "id": "B59CEAAC66554170BEC8C85A9140276D",
+    "parentId": "EB90C4E273FF4FA781F9E6BBCE574C31",
+    "position": 130000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-BF.A.1.a"
+   },
+   "B5CEC9BA0FF74A3BAA57FB3D73A9C1E6": {
+    "ancestorIds": [
+     "F30457ECABC04FEDB22F1751DD548D98",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029725",
+    "depth": 2,
+    "description": "Extend the domain of trigonometric functions using the unit circle.",
+    "id": "B5CEC9BA0FF74A3BAA57FB3D73A9C1E6",
+    "parentId": "F30457ECABC04FEDB22F1751DD548D98",
+    "position": 154000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.F-TF.A"
+   },
+   "B690BD6637994E32854B8FA37A2D41E3": {
+    "ancestorIds": [
+     "1DD2D86051FA4CDC91290AD9B6EB6C96",
+     "5B462CB87F794AD0BDD097F1BAC6722B",
+     "B6CABDEAAE1F441D837F2EB5765A3D9A",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045624",
+    "depth": 4,
+    "description": "Graph linear and quadratic functions and show intercepts, maxima, and minima.",
+    "id": "B690BD6637994E32854B8FA37A2D41E3",
+    "parentId": "1DD2D86051FA4CDC91290AD9B6EB6C96",
+    "position": 118000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-IF.C.7.a"
+   },
+   "B6CABDEAAE1F441D837F2EB5765A3D9A": {
+    "ancestorIds": [
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029714",
+    "depth": 1,
+    "description": "Interpreting Functions",
+    "id": "B6CABDEAAE1F441D837F2EB5765A3D9A",
+    "parentId": "3B76F4B519124D52A06D47ACFD87BE01",
+    "position": 107000
+   },
+   "B6E54196FD7B4A77AE45B643B2ED578D": {
+    "ancestorIds": [
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21029653",
+    "depth": 1,
+    "description": "The Real Number System",
+    "id": "B6E54196FD7B4A77AE45B643B2ED578D",
+    "parentId": "F365DCC35C624A4695E525B0AB8361DC",
+    "position": 11000
+   },
+   "B92DFD6F4F9D45AC83CBFA00A60D4F38": {
+    "ancestorIds": [
+     "D407C3EAE5DB480EBCE0FD740E5B5082",
+     "BC0A326E69B1479DA8511AD4CAA2691C",
+     "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045607",
+    "depth": 4,
+    "description": "Use the method of completing the square to transform any quadratic equation in x into an equation of the form (x-p)² = q that has the same solutions. Derive the quadratic formula from this form.",
+    "id": "B92DFD6F4F9D45AC83CBFA00A60D4F38",
+    "parentId": "D407C3EAE5DB480EBCE0FD740E5B5082",
+    "position": 95000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-REI.B.4.a"
+   },
+   "B93AC6D2BDC64BDB8B363E4E6CE54026": {
+    "ancestorIds": [
+     "D5D2E17EA634498B9AA9DA15D29638D6",
+     "DA4B8A1E15124977B900EA90FE7FA93E",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045684",
+    "depth": 3,
+    "description": "Recognize and explain the concepts of conditional probability and independence in everyday language and everyday situations.",
+    "id": "B93AC6D2BDC64BDB8B363E4E6CE54026",
+    "parentId": "D5D2E17EA634498B9AA9DA15D29638D6",
+    "position": 198000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-CP.A.5"
+   },
+   "BA8462258E5645D1A09EC9FC17CE9646": {
+    "ancestorIds": [
+     "60D3451E6425426AABFE3AC707817A8E",
+     "CF0209C1A8624575B49A030227F29655",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045555",
+    "depth": 3,
+    "description": "(+) Represent complex numbers on the complex plane in rectangular and polar form (including real and imaginary numbers), and explain why the rectangular and polar forms of a given complex number represent the same number.",
+    "id": "BA8462258E5645D1A09EC9FC17CE9646",
+    "parentId": "60D3451E6425426AABFE3AC707817A8E",
+    "position": 28000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-CN.B.4"
+   },
+   "BAF0E93A739049C8B949EFAD4631F89C": {
+    "ancestorIds": [
+     "DAB950CBB5584172B2992BF0F6033DB4",
+     "F63A3AAE1A204D6FA117D15C3F20FF4E",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045645",
+    "depth": 3,
+    "description": "Distinguish between situations that can be modeled with linear functions and with exponential functions.",
+    "id": "BAF0E93A739049C8B949EFAD4631F89C",
+    "parentId": "DAB950CBB5584172B2992BF0F6033DB4",
+    "position": 144000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-LE.A.1"
+   },
+   "BB657644A0D248D9AFC6B2AC7681882E": {
+    "ancestorIds": [
+     "D5D2E17EA634498B9AA9DA15D29638D6",
+     "DA4B8A1E15124977B900EA90FE7FA93E",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045682",
+    "depth": 3,
+    "description": "Using the conditional probability of A given B as P(A and B)/P(B), interpret the independence of A and B as saying that the conditional probability of A given B is the same as the probability of A, and the conditional probability of A given B is the same as the probability of B.",
+    "id": "BB657644A0D248D9AFC6B2AC7681882E",
+    "parentId": "D5D2E17EA634498B9AA9DA15D29638D6",
+    "position": 196000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-CP.A.3"
+   },
+   "BC0A326E69B1479DA8511AD4CAA2691C": {
+    "ancestorIds": [
+     "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029711",
+    "depth": 2,
+    "description": "Solve equations and inequalities in one variable.",
+    "id": "BC0A326E69B1479DA8511AD4CAA2691C",
+    "parentId": "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+    "position": 92000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.A-REI.B"
+   },
+   "BE4062C3E2DA4518A6ED167E1ADEE7C8": {
+    "ancestorIds": [
+     "8616F82BAD084CBE858EB5A0EFE1B256",
+     "B6CABDEAAE1F441D837F2EB5765A3D9A",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045618",
+    "depth": 3,
+    "description": "Use function notation, evaluate functions for inputs in their domains, and interpret statements that use function notation in terms of a context.",
+    "id": "BE4062C3E2DA4518A6ED167E1ADEE7C8",
+    "parentId": "8616F82BAD084CBE858EB5A0EFE1B256",
+    "position": 110000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-IF.A.2"
+   },
+   "BE501227EEB44732BC5D1A176BA4F5A9": {
+    "ancestorIds": [
+     "8A68E58DDD114252AD7B669216D95519",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029803",
+    "depth": 2,
+    "description": "Use coordinates to prove simple geometric theorems algebraically.",
+    "id": "BE501227EEB44732BC5D1A176BA4F5A9",
+    "parentId": "8A68E58DDD114252AD7B669216D95519",
+    "position": 266000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.G-GPE.B"
+   },
+   "BF79AE93E45D45578455F03397F895BB": {
+    "ancestorIds": [
+     "A4FE576ECD7D4A64A86A403E9BBADD25",
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045563",
+    "depth": 3,
+    "description": "(+) Solve problems involving velocity and other quantities that can be represented by vectors.",
+    "id": "BF79AE93E45D45578455F03397F895BB",
+    "parentId": "A4FE576ECD7D4A64A86A403E9BBADD25",
+    "position": 39000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-VM.A.3"
+   },
+   "BFC0DD33E3794537A03A9D8C3ABA600F": {
+    "ancestorIds": [
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029804",
+    "depth": 1,
+    "description": "Geometric Measurement and Dimension",
+    "id": "BFC0DD33E3794537A03A9D8C3ABA600F",
+    "parentId": "EEF2DD4F9F404A90A531FEFC9CB70FF1",
+    "position": 271000
+   },
+   "BFFC2C449878452DB6ED38535323A54B": {
+    "ancestorIds": [
+     "FDDBBD6CCA0F4B8D8FDD55A31FC40CDF",
+     "B6E54196FD7B4A77AE45B643B2ED578D",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045546",
+    "depth": 3,
+    "description": "Explain how the definition of the meaning of rational exponents follows from extending the properties of integer exponents to those values, allowing for a notation for radicals in terms of rational exponents.",
+    "id": "BFFC2C449878452DB6ED38535323A54B",
+    "parentId": "FDDBBD6CCA0F4B8D8FDD55A31FC40CDF",
+    "position": 13000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-RN.A.1"
+   },
+   "C035AFE85F314DE39E8B8881C8863834": {
+    "ancestorIds": [
+     "5A97D1B04C6548249B0B126121D4BD7D",
+     "16F90599FB8D48F49FED4A6ACC6B24E7",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045724",
+    "depth": 3,
+    "description": "Prove that all circles are similar.",
+    "id": "C035AFE85F314DE39E8B8881C8863834",
+    "parentId": "5A97D1B04C6548249B0B126121D4BD7D",
+    "position": 255000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-C.A.1"
+   },
+   "C1196B198CE6464EAD6AC6F6198E69A2": {
+    "ancestorIds": [
+     "BAF0E93A739049C8B949EFAD4631F89C",
+     "DAB950CBB5584172B2992BF0F6033DB4",
+     "F63A3AAE1A204D6FA117D15C3F20FF4E",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045648",
+    "depth": 4,
+    "description": "Identify situations in which a quantity grows or decays by a constant percent rate per unit interval relative to another.",
+    "id": "C1196B198CE6464EAD6AC6F6198E69A2",
+    "parentId": "BAF0E93A739049C8B949EFAD4631F89C",
+    "position": 147000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-LE.A.1.c"
+   },
+   "C128FE223D654492B70FD58FE6286DE5": {
+    "ancestorIds": [
+     "8F1850EC967042ADAFFA6D4FE1BED4B8",
+     "F30FE1162E8D4503BF83040EA38ACC76",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045705",
+    "depth": 3,
+    "description": "Explain how the criteria for triangle congruence (ASA, SAS, and SSS) follow from the definition of congruence in terms of rigid motions.",
+    "id": "C128FE223D654492B70FD58FE6286DE5",
+    "parentId": "8F1850EC967042ADAFFA6D4FE1BED4B8",
+    "position": 227000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-CO.B.8"
+   },
+   "C1D5C74B76474580AC2D49C5858E7B12": {
+    "ancestorIds": [
+     "0D9C98993CCB471692477A154D8F95CF",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21029657",
+    "depth": 2,
+    "description": "Reason quantitatively and use units to solve problems.",
+    "id": "C1D5C74B76474580AC2D49C5858E7B12",
+    "parentId": "0D9C98993CCB471692477A154D8F95CF",
+    "position": 18000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.N-Q.A"
+   },
+   "C245B31C8EB246009162D00C3C156C31": {
+    "ancestorIds": [
+     "2617D81787434ADD8B851C780DDB0EAF",
+     "493D66D00AEB4A03BBD82841C200AEC0",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045664",
+    "depth": 3,
+    "description": "Interpret differences in shape, center, and spread in the context of the data sets, accounting for possible effects of extreme data points (outliers).",
+    "id": "C245B31C8EB246009162D00C3C156C31",
+    "parentId": "2617D81787434ADD8B851C780DDB0EAF",
+    "position": 171000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-ID.A.3"
+   },
+   "C3ED3C6D7B2848D78B6C8CBED1F0AA87": {
+    "ancestorIds": [
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029709",
+    "depth": 1,
+    "description": "Reasoning with Equations & Inequalities",
+    "id": "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+    "parentId": "3B76F4B519124D52A06D47ACFD87BE01",
+    "position": 88000
+   },
+   "C46C559A1E5241A898AEB4DCF03D9623": {
+    "ancestorIds": [
+     "A4FE576ECD7D4A64A86A403E9BBADD25",
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045561",
+    "depth": 3,
+    "description": "(+) Recognize vector quantities as having both magnitude and direction. Represent vector quantities by directed line segments, and use appropriate symbols for vectors and their magnitudes (e.g., v, |v|, ||v||, v).",
+    "id": "C46C559A1E5241A898AEB4DCF03D9623",
+    "parentId": "A4FE576ECD7D4A64A86A403E9BBADD25",
+    "position": 37000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-VM.A.1"
+   },
+   "C512A95508344B4D91821D5E7CC68C66": {
+    "ancestorIds": [
+     "E547F57D0C5A425BB971049C495E61FD",
+     "BFC0DD33E3794537A03A9D8C3ABA600F",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045739",
+    "depth": 3,
+    "description": "Identify the shapes of two-dimensional cross-sections of three-dimensional objects, and identify three-dimensional objects generated by rotations of two-dimensional objects.",
+    "id": "C512A95508344B4D91821D5E7CC68C66",
+    "parentId": "E547F57D0C5A425BB971049C495E61FD",
+    "position": 277000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-GMD.B.4"
+   },
+   "C74D063EACB549A282E41F538B0DB2E3": {
+    "ancestorIds": [
+     "508BD8D4F9E74CC2BA18B3FB7CD4A654",
+     "CF0209C1A8624575B49A030227F29655",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045560",
+    "depth": 3,
+    "description": "(+)Know the Fundamental Theorem of Algebra; show that it is true for quadratic polynomials.",
+    "id": "C74D063EACB549A282E41F538B0DB2E3",
+    "parentId": "508BD8D4F9E74CC2BA18B3FB7CD4A654",
+    "position": 34000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-CN.C.9"
+   },
+   "C7DF0C24A4424905A28F206CB3F309D1": {
+    "ancestorIds": [
+     "F64E62732A0C42CBAA27814F9A522CC6",
+     "16F90599FB8D48F49FED4A6ACC6B24E7",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045728",
+    "depth": 3,
+    "description": "(+) Derive using similarity the fact that the length of the arc intercepted by an angle is proportional to the radius, and define the radian measure of the angle as the constant of proportionality; derive the formula for the area of a sector.",
+    "id": "C7DF0C24A4424905A28F206CB3F309D1",
+    "parentId": "F64E62732A0C42CBAA27814F9A522CC6",
+    "position": 260000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-C.B5"
+   },
+   "C86C1C8097A34CB0A581248996661247": {
+    "ancestorIds": [
+     "49EA0CAEF3AF483DAE627BD347A4A6E9",
+     "47D84B52CB944B80B8F239C865DC7ECF",
+     "4DADF313A5D141C381E8C2841E4E7F4D",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045643",
+    "depth": 4,
+    "description": "(+) Produce an invertible function from a non-invertible function by restricting the domain.",
+    "id": "C86C1C8097A34CB0A581248996661247",
+    "parentId": "49EA0CAEF3AF483DAE627BD347A4A6E9",
+    "position": 140000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-BF.B.4.d"
+   },
+   "C8A69F628A8547EA8119F7CBF49470DD": {
+    "ancestorIds": [
+     "5B462CB87F794AD0BDD097F1BAC6722B",
+     "B6CABDEAAE1F441D837F2EB5765A3D9A",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045629",
+    "depth": 3,
+    "description": "Write a function defined by an expression in different but equivalent forms to reveal and explain different properties of the function.",
+    "id": "C8A69F628A8547EA8119F7CBF49470DD",
+    "parentId": "5B462CB87F794AD0BDD097F1BAC6722B",
+    "position": 123000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-IF.C.8"
+   },
+   "C8F72FA492CB4EBDBBFA90883915A0B3": {
+    "ancestorIds": [
+     "ED23BD5542B8426DA1170D57FFE70683",
+     "992A43D4C9E94A6C829C8953084E011A",
+     "31612C2568B44C90825D342883C96921",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045580",
+    "depth": 4,
+    "description": "Interpret complicated expressions by viewing one or more of their parts as a single entity.",
+    "id": "C8F72FA492CB4EBDBBFA90883915A0B3",
+    "parentId": "ED23BD5542B8426DA1170D57FFE70683",
+    "position": 61000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-SSE.A.1.b"
+   },
+   "CD468BBCF66E423483F837D21F076E03": {
+    "ancestorIds": [
+     "E60FCD0E3F534739A91C22CB7C65047D",
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045575",
+    "depth": 3,
+    "description": "(+) Understand that the zero and identity matrices play a role in matrix addition and multiplication similar to the role of 0 and 1 in the real numbers. The determinant of a square matrix is nonzero if and only if the matrix has a multiplicative inverse.",
+    "id": "CD468BBCF66E423483F837D21F076E03",
+    "parentId": "E60FCD0E3F534739A91C22CB7C65047D",
+    "position": 53000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-VM.C.10"
+   },
+   "CDCB315067EB4C77B12DBA4212DCA692": {
+    "ancestorIds": [
+     "9B2B59BFC5454E8789A28917AE790FA8",
+     "F30FE1162E8D4503BF83040EA38ACC76",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045701",
+    "depth": 3,
+    "description": "Develop definitions of rotations, reflections, and translations in terms of angles, circles, perpendicular lines, parallel lines, and line segments.",
+    "id": "CDCB315067EB4C77B12DBA4212DCA692",
+    "parentId": "9B2B59BFC5454E8789A28917AE790FA8",
+    "position": 222000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-CO.A.4"
+   },
+   "CE479512D0114982922AE8D0403CE05B": {
+    "ancestorIds": [
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21029664",
+    "depth": 2,
+    "description": "Perform operations on vectors.",
+    "id": "CE479512D0114982922AE8D0403CE05B",
+    "parentId": "5AEAC6E87438436EA004661E61E703C6",
+    "position": 40000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.N-VM.B"
+   },
+   "CEE5BFDD1EE0459E9CD38C5D6403A4CF": {
+    "ancestorIds": [
+     "E1DAE76D82B74DB2B3588D4723EAB357",
+     "F30FE1162E8D4503BF83040EA38ACC76",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045708",
+    "depth": 3,
+    "description": "Prove theorems about parallelograms.",
+    "id": "CEE5BFDD1EE0459E9CD38C5D6403A4CF",
+    "parentId": "E1DAE76D82B74DB2B3588D4723EAB357",
+    "position": 231000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-CO.C.11"
+   },
+   "CF0209C1A8624575B49A030227F29655": {
+    "ancestorIds": [
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21029658",
+    "depth": 1,
+    "description": "The Complex Number System",
+    "id": "CF0209C1A8624575B49A030227F29655",
+    "parentId": "F365DCC35C624A4695E525B0AB8361DC",
+    "position": 22000
+   },
+   "D27B28C94482433EB95761E609B7FCD6": {
+    "ancestorIds": [
+     "0E08DA576D1C40B2972C558E02DD000A",
+     "95A87820539D4BFA8EE4E4027D7797A2",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045595",
+    "depth": 3,
+    "description": "Create equations and inequalities in one variable and use them to solve problems. Include equations arising from linear and quadratic functions, and simple rational and exponential functions.",
+    "id": "D27B28C94482433EB95761E609B7FCD6",
+    "parentId": "0E08DA576D1C40B2972C558E02DD000A",
+    "position": 84000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-CED.A.1"
+   },
+   "D27D0B72A581477AB7B74B3BBAC503D9": {
+    "ancestorIds": [
+     "DA4B8A1E15124977B900EA90FE7FA93E",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21029766",
+    "depth": 2,
+    "description": "Use the rules of probability to compute probabilities of compound events in a uniform probability model.",
+    "id": "D27D0B72A581477AB7B74B3BBAC503D9",
+    "parentId": "DA4B8A1E15124977B900EA90FE7FA93E",
+    "position": 199000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.S-CP.B"
+   },
+   "D31874347ABD47C496CD47C8C1E43AEA": {
+    "ancestorIds": [
+     "1DD2D86051FA4CDC91290AD9B6EB6C96",
+     "5B462CB87F794AD0BDD097F1BAC6722B",
+     "B6CABDEAAE1F441D837F2EB5765A3D9A",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045625",
+    "depth": 4,
+    "description": "Graph square root, cube root, and piecewise-defined functions, including step functions and absolute value functions.",
+    "id": "D31874347ABD47C496CD47C8C1E43AEA",
+    "parentId": "1DD2D86051FA4CDC91290AD9B6EB6C96",
+    "position": 119000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-IF.C.7.b"
+   },
+   "D407C3EAE5DB480EBCE0FD740E5B5082": {
+    "ancestorIds": [
+     "BC0A326E69B1479DA8511AD4CAA2691C",
+     "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045606",
+    "depth": 3,
+    "description": "Solve quadratic equations in one variable.",
+    "id": "D407C3EAE5DB480EBCE0FD740E5B5082",
+    "parentId": "BC0A326E69B1479DA8511AD4CAA2691C",
+    "position": 94000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-REI.B.4"
+   },
+   "D46D2005E6974FC480F67ADFA295737A": {
+    "ancestorIds": [
+     "BAF0E93A739049C8B949EFAD4631F89C",
+     "DAB950CBB5584172B2992BF0F6033DB4",
+     "F63A3AAE1A204D6FA117D15C3F20FF4E",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045646",
+    "depth": 4,
+    "description": "Prove that linear functions grow by equal differences over equal intervals, and that exponential functions grow by equal factors over equal intervals.",
+    "id": "D46D2005E6974FC480F67ADFA295737A",
+    "parentId": "BAF0E93A739049C8B949EFAD4631F89C",
+    "position": 145000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-LE.A.1.a"
+   },
+   "D5D2E17EA634498B9AA9DA15D29638D6": {
+    "ancestorIds": [
+     "DA4B8A1E15124977B900EA90FE7FA93E",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21029765",
+    "depth": 2,
+    "description": "Understand independence and conditional probability and use them to interpret data.",
+    "id": "D5D2E17EA634498B9AA9DA15D29638D6",
+    "parentId": "DA4B8A1E15124977B900EA90FE7FA93E",
+    "position": 193000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.S-CP.A"
+   },
+   "D6A33A131C574387A0C38CB2C5F2E044": {
+    "ancestorIds": [
+     "FA6E1D56740043B0B6184CB2D308EF19",
+     "06F1271EA47743FF844728C5B910916C",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045722",
+    "depth": 3,
+    "description": "(+) Prove the Laws of Sines and Cosines and use them to solve problems.",
+    "id": "D6A33A131C574387A0C38CB2C5F2E044",
+    "parentId": "FA6E1D56740043B0B6184CB2D308EF19",
+    "position": 251000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-SRT.D.10"
+   },
+   "D9618183D53446D493690036914364F9": {
+    "ancestorIds": [
+     "E60FCD0E3F534739A91C22CB7C65047D",
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045576",
+    "depth": 3,
+    "description": "(+) Multiply a vector (regarded as a matrix with one column) by a matrix of suitable dimension to produce another vector. Work with matrices as transformations of vectors.",
+    "id": "D9618183D53446D493690036914364F9",
+    "parentId": "E60FCD0E3F534739A91C22CB7C65047D",
+    "position": 54000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-VM.C.11"
+   },
+   "DA4B8A1E15124977B900EA90FE7FA93E": {
+    "ancestorIds": [
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21029764",
+    "depth": 1,
+    "description": "Conditional Probability & the Rules of Probability",
+    "id": "DA4B8A1E15124977B900EA90FE7FA93E",
+    "parentId": "50A4C3CEADA44EE98846ADAD403F48BA",
+    "position": 192000
+   },
+   "DAB950CBB5584172B2992BF0F6033DB4": {
+    "ancestorIds": [
+     "F63A3AAE1A204D6FA117D15C3F20FF4E",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029722",
+    "depth": 2,
+    "description": "Construct and compare linear, quadratic, and exponential models and solve problems.",
+    "id": "DAB950CBB5584172B2992BF0F6033DB4",
+    "parentId": "F63A3AAE1A204D6FA117D15C3F20FF4E",
+    "position": 143000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.F-LE.A"
+   },
+   "DD3A8195FCBE429E91E35F3689E4299D": {
+    "ancestorIds": [
+     "5A97D1B04C6548249B0B126121D4BD7D",
+     "16F90599FB8D48F49FED4A6ACC6B24E7",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045726",
+    "depth": 3,
+    "description": "Construct the inscribed and circumscribed circles of a triangle, and prove properties of angles for a quadrilateral inscribed in a circle.",
+    "id": "DD3A8195FCBE429E91E35F3689E4299D",
+    "parentId": "5A97D1B04C6548249B0B126121D4BD7D",
+    "position": 257000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-C.A.3"
+   },
+   "DFD762472D3F4F8FB8F6BC316A3AB63C": {
+    "ancestorIds": [
+     "97AAB8BDC28C47739C67F0EF15A5A5EE",
+     "1AE4A20E80014F1FB8ED789E35CB7735",
+     "06F1271EA47743FF844728C5B910916C",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045712",
+    "depth": 4,
+    "description": "Show that a dilation takes a line not passing through the center of the dilation to a parallel line, and leaves a line passing through the center unchanged.",
+    "id": "DFD762472D3F4F8FB8F6BC316A3AB63C",
+    "parentId": "97AAB8BDC28C47739C67F0EF15A5A5EE",
+    "position": 238000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-SRT.A.1.a"
+   },
+   "E00B4181B65B49DFAB79F501875526EB": {
+    "ancestorIds": [
+     "0EFB4DE58BED47A39DF8FA9476B9F564",
+     "493D66D00AEB4A03BBD82841C200AEC0",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045672",
+    "depth": 3,
+    "description": "Interpret the slope (rate of change) and the intercept (constant term) of a linear model in the context of the data.",
+    "id": "E00B4181B65B49DFAB79F501875526EB",
+    "parentId": "0EFB4DE58BED47A39DF8FA9476B9F564",
+    "position": 181000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-ID.C.7"
+   },
+   "E031AEC4413749638F026055CE7741F0": {
+    "ancestorIds": [
+     "C8A69F628A8547EA8119F7CBF49470DD",
+     "5B462CB87F794AD0BDD097F1BAC6722B",
+     "B6CABDEAAE1F441D837F2EB5765A3D9A",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045630",
+    "depth": 4,
+    "description": "Use the process of factoring and completing the square in a quadratic function to show zeros, extreme values, and symmetry of the graph, and interpret these in terms of a context.",
+    "id": "E031AEC4413749638F026055CE7741F0",
+    "parentId": "C8A69F628A8547EA8119F7CBF49470DD",
+    "position": 124000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-IF.C.8.a"
+   },
+   "E1DAE76D82B74DB2B3588D4723EAB357": {
+    "ancestorIds": [
+     "F30FE1162E8D4503BF83040EA38ACC76",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029791",
+    "depth": 2,
+    "description": "Prove geometric theorems.",
+    "id": "E1DAE76D82B74DB2B3588D4723EAB357",
+    "parentId": "F30FE1162E8D4503BF83040EA38ACC76",
+    "position": 228000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.G-CO.C"
+   },
+   "E1F6699F294A4DC89C41049BCA680F03": {
+    "ancestorIds": [
+     "1DD2D86051FA4CDC91290AD9B6EB6C96",
+     "5B462CB87F794AD0BDD097F1BAC6722B",
+     "B6CABDEAAE1F441D837F2EB5765A3D9A",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045627",
+    "depth": 4,
+    "description": "(+) Graph rational functions, identifying zeros and asymptotes when suitable factorizations are available, and showing end behavior.",
+    "id": "E1F6699F294A4DC89C41049BCA680F03",
+    "parentId": "1DD2D86051FA4CDC91290AD9B6EB6C96",
+    "position": 121000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-IF.C.7.d"
+   },
+   "E547F57D0C5A425BB971049C495E61FD": {
+    "ancestorIds": [
+     "BFC0DD33E3794537A03A9D8C3ABA600F",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029806",
+    "depth": 2,
+    "description": "Visualize relationships between two-dimensional and three-dimensional objects.",
+    "id": "E547F57D0C5A425BB971049C495E61FD",
+    "parentId": "BFC0DD33E3794537A03A9D8C3ABA600F",
+    "position": 276000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.G-GMD.B"
+   },
+   "E55227AD00224B10AC51E8DD65EDD84D": {
+    "ancestorIds": [
+     "9CAF8B076FBA4F02A9B881179ADA5F13"
+    ],
+    "asnIdentifier": "S21029614",
+    "depth": 1,
+    "description": "Look for and express regularity in repeated reasoning.",
+    "id": "E55227AD00224B10AC51E8DD65EDD84D",
+    "parentId": "9CAF8B076FBA4F02A9B881179ADA5F13",
+    "position": 9000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP8"
+   },
+   "E60FCD0E3F534739A91C22CB7C65047D": {
+    "ancestorIds": [
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21029665",
+    "depth": 2,
+    "description": "Perform operations on matrices and use matrices in applications.",
+    "id": "E60FCD0E3F534739A91C22CB7C65047D",
+    "parentId": "5AEAC6E87438436EA004661E61E703C6",
+    "position": 48000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.N-VM.C"
+   },
+   "E640AF6AAB2D47EE9D91705B4A02DC9B": {
+    "ancestorIds": [
+     "F706F51BBF814692957709B3D5CA170B",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029704",
+    "depth": 2,
+    "description": "Understand the relationship between zeros and factors of polynomials.",
+    "id": "E640AF6AAB2D47EE9D91705B4A02DC9B",
+    "parentId": "F706F51BBF814692957709B3D5CA170B",
+    "position": 73000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.A-APR.B"
+   },
+   "E672DB6D64E4435287CC4E064DFC9A2C": {
+    "ancestorIds": [
+     "508BD8D4F9E74CC2BA18B3FB7CD4A654",
+     "CF0209C1A8624575B49A030227F29655",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045558",
+    "depth": 3,
+    "description": "Solve quadratic equations with real coefficients that have complex solutions.",
+    "id": "E672DB6D64E4435287CC4E064DFC9A2C",
+    "parentId": "508BD8D4F9E74CC2BA18B3FB7CD4A654",
+    "position": 32000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-CN.C.7"
+   },
+   "E6993ACC22FA46FCB53B2A6C416D6D4E": {
+    "ancestorIds": [
+     "0E08DA576D1C40B2972C558E02DD000A",
+     "95A87820539D4BFA8EE4E4027D7797A2",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045596",
+    "depth": 3,
+    "description": "Create equations in two or more variables to represent relationships between quantities and graph equations on coordinate axes with labels and scales.",
+    "id": "E6993ACC22FA46FCB53B2A6C416D6D4E",
+    "parentId": "0E08DA576D1C40B2972C558E02DD000A",
+    "position": 85000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-CED.A.2"
+   },
+   "E73D3E26A83D42E28C1C1AE30907F24E": {
+    "ancestorIds": [
+     "E8021FBE894640FE923511826D4B343F",
+     "BFC0DD33E3794537A03A9D8C3ABA600F",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045738",
+    "depth": 3,
+    "description": "Use volume formulas for cylinders, pyramids, cones, and spheres to solve problems.",
+    "id": "E73D3E26A83D42E28C1C1AE30907F24E",
+    "parentId": "E8021FBE894640FE923511826D4B343F",
+    "position": 275000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-GMD.A.3"
+   },
+   "E7B12F7BA677405E9EA067706E9559BF": {
+    "ancestorIds": [
+     "04A5E50535734409B0F330895DAE39DC",
+     "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045610",
+    "depth": 3,
+    "description": "Solve systems of linear equations exactly and approximately (e.g., with graphs), focusing on pairs of linear equations in two variables.",
+    "id": "E7B12F7BA677405E9EA067706E9559BF",
+    "parentId": "04A5E50535734409B0F330895DAE39DC",
+    "position": 99000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-REI.C.6"
+   },
+   "E8021FBE894640FE923511826D4B343F": {
+    "ancestorIds": [
+     "BFC0DD33E3794537A03A9D8C3ABA600F",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029805",
+    "depth": 2,
+    "description": "Explain volume formulas and use them to solve problems.",
+    "id": "E8021FBE894640FE923511826D4B343F",
+    "parentId": "BFC0DD33E3794537A03A9D8C3ABA600F",
+    "position": 272000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.G-GMD.A"
+   },
+   "E979B453AC49449BB62EC122D925147C": {
+    "ancestorIds": [
+     "2617D81787434ADD8B851C780DDB0EAF",
+     "493D66D00AEB4A03BBD82841C200AEC0",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045663",
+    "depth": 3,
+    "description": "Use statistics appropriate to the shape of the data distribution to compare center (median, mean) and spread (interquartile range, standard deviation) of two or more different data sets.",
+    "id": "E979B453AC49449BB62EC122D925147C",
+    "parentId": "2617D81787434ADD8B851C780DDB0EAF",
+    "position": 170000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-ID.A.2"
+   },
+   "EA0475F4713D4FEFB1A02F5ABAA5474E": {
+    "ancestorIds": [
+     "0FADA7DF20654A5FA94B5F90AADD2700",
+     "31612C2568B44C90825D342883C96921",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045586",
+    "depth": 3,
+    "description": "Use the formula for the sum of a finite geometric series (when the common ratio is not 1) to solve problems.",
+    "id": "EA0475F4713D4FEFB1A02F5ABAA5474E",
+    "parentId": "0FADA7DF20654A5FA94B5F90AADD2700",
+    "position": 68000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-SSE.B.4"
+   },
+   "EB90C4E273FF4FA781F9E6BBCE574C31": {
+    "ancestorIds": [
+     "0878BD413CE54867B568254E7048EA56",
+     "4DADF313A5D141C381E8C2841E4E7F4D",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045633",
+    "depth": 3,
+    "description": "Write a function that describes a relationship between two quantities.",
+    "id": "EB90C4E273FF4FA781F9E6BBCE574C31",
+    "parentId": "0878BD413CE54867B568254E7048EA56",
+    "position": 129000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-BF.A.1"
+   },
+   "EC5E23A7E1E749619B7B38064736FB24": {
+    "ancestorIds": [
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21029761",
+    "depth": 1,
+    "description": "Making Inferences & Justifying Conclusions",
+    "id": "EC5E23A7E1E749619B7B38064736FB24",
+    "parentId": "50A4C3CEADA44EE98846ADAD403F48BA",
+    "position": 183000
+   },
+   "ECC3B2C36FAD479EAC55CC6D81043BA1": {
+    "ancestorIds": [
+     "330AC388F8124725AF3D3F5F2CAA56A4",
+     "CE479512D0114982922AE8D0403CE05B",
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045566",
+    "depth": 4,
+    "description": "Given two vectors in magnitude and direction form, determine the magnitude and direction of their sum.",
+    "id": "ECC3B2C36FAD479EAC55CC6D81043BA1",
+    "parentId": "330AC388F8124725AF3D3F5F2CAA56A4",
+    "position": 43000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-VM.B.4.b"
+   },
+   "ECD5CEC134BF42CDBDD74E032217532D": {
+    "ancestorIds": [
+     "DAB950CBB5584172B2992BF0F6033DB4",
+     "F63A3AAE1A204D6FA117D15C3F20FF4E",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045651",
+    "depth": 3,
+    "description": "For exponential models, express as a logarithm the solution to ab<sup>ct</sup> = d where a, c, and d are numbers and the base b is 2, 10, or e; evaluate the logarithm using technology.",
+    "id": "ECD5CEC134BF42CDBDD74E032217532D",
+    "parentId": "DAB950CBB5584172B2992BF0F6033DB4",
+    "position": 150000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-LE.A.4"
+   },
+   "ED23BD5542B8426DA1170D57FFE70683": {
+    "ancestorIds": [
+     "992A43D4C9E94A6C829C8953084E011A",
+     "31612C2568B44C90825D342883C96921",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045578",
+    "depth": 3,
+    "description": "Interpret expressions that represent a quantity in terms of its context.",
+    "id": "ED23BD5542B8426DA1170D57FFE70683",
+    "parentId": "992A43D4C9E94A6C829C8953084E011A",
+    "position": 59000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.A-SSE.A.1"
+   },
+   "ED2822B44DEF43158AA48240E7EA8706": {
+    "ancestorIds": [
+     "402BC0AC116844DEBC54F404087B313D",
+     "F30457ECABC04FEDB22F1751DD548D98",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045661",
+    "depth": 3,
+    "description": "(+) Prove the addition and subtraction formulas for sine, cosine, and tangent and use them to solve problems.",
+    "id": "ED2822B44DEF43158AA48240E7EA8706",
+    "parentId": "402BC0AC116844DEBC54F404087B313D",
+    "position": 165000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-TF.C.9"
+   },
+   "EE56983903744C9F863BAE1009B9A3E0": {
+    "ancestorIds": [
+     "B0B0A0739BCF40A5A7E53BA25DFF64D6",
+     "862D35D894464DCA9D852EF102D3313F",
+     "493D66D00AEB4A03BBD82841C200AEC0",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045668",
+    "depth": 4,
+    "description": "Fit a function to the data; use functions fitted to data to solve problems in the context of the data. Use given functions or choose a function suggested by the context. Emphasize linear, quadratic, and exponential models.",
+    "id": "EE56983903744C9F863BAE1009B9A3E0",
+    "parentId": "B0B0A0739BCF40A5A7E53BA25DFF64D6",
+    "position": 176000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-ID.B.6.a"
+   },
+   "EE831987209942C2B62442BE6847350C": {
+    "ancestorIds": [
+     "9B2B59BFC5454E8789A28917AE790FA8",
+     "F30FE1162E8D4503BF83040EA38ACC76",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045702",
+    "depth": 3,
+    "description": "Given a geometric figure and a rotation, reflection, or translation, draw the transformed figure using appropriate tools (e.g., graph paper, tracing paper, or geometry software). Specify a sequence of transformations that will carry a given figure onto another.",
+    "id": "EE831987209942C2B62442BE6847350C",
+    "parentId": "9B2B59BFC5454E8789A28917AE790FA8",
+    "position": 223000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-CO.A.5"
+   },
+   "EEF2DD4F9F404A90A531FEFC9CB70FF1": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029770",
+    "depth": 0,
+    "description": "Geometry",
+    "id": "EEF2DD4F9F404A90A531FEFC9CB70FF1",
+    "parentId": null,
+    "position": 216000,
+    "statementLabel": "Standard",
+    "statementNotation": "G.4"
+   },
+   "F24BFD56C8FE4FD7AB7B52D90DDE51C7": {
+    "ancestorIds": [
+     "EC5E23A7E1E749619B7B38064736FB24",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21029763",
+    "depth": 2,
+    "description": "Make inferences and justify conclusions from sample surveys, experiments, and observational studies.",
+    "id": "F24BFD56C8FE4FD7AB7B52D90DDE51C7",
+    "parentId": "EC5E23A7E1E749619B7B38064736FB24",
+    "position": 187000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.S-IC.B"
+   },
+   "F278092BD28242F4BC5597102B875D90": {
+    "ancestorIds": [
+     "5A97D1B04C6548249B0B126121D4BD7D",
+     "16F90599FB8D48F49FED4A6ACC6B24E7",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21045725",
+    "depth": 3,
+    "description": "Identify and describe relationships among inscribed angles, radii, and chords.",
+    "id": "F278092BD28242F4BC5597102B875D90",
+    "parentId": "5A97D1B04C6548249B0B126121D4BD7D",
+    "position": 256000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.G-C.A.2"
+   },
+   "F30457ECABC04FEDB22F1751DD548D98": {
+    "ancestorIds": [
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029724",
+    "depth": 1,
+    "description": "Trigonometric Functions",
+    "id": "F30457ECABC04FEDB22F1751DD548D98",
+    "parentId": "3B76F4B519124D52A06D47ACFD87BE01",
+    "position": 153000
+   },
+   "F30FE1162E8D4503BF83040EA38ACC76": {
+    "ancestorIds": [
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029788",
+    "depth": 1,
+    "description": "Congruence",
+    "id": "F30FE1162E8D4503BF83040EA38ACC76",
+    "parentId": "EEF2DD4F9F404A90A531FEFC9CB70FF1",
+    "position": 217000
+   },
+   "F365DCC35C624A4695E525B0AB8361DC": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029615",
+    "depth": 0,
+    "description": "Number and Quantity",
+    "id": "F365DCC35C624A4695E525B0AB8361DC",
+    "parentId": null,
+    "position": 10000,
+    "statementLabel": "Standard",
+    "statementNotation": "NQ.1"
+   },
+   "F4DEF44BB06C49188CD4D337A4AAB86E": {
+    "ancestorIds": [
+     "EB90C4E273FF4FA781F9E6BBCE574C31",
+     "0878BD413CE54867B568254E7048EA56",
+     "4DADF313A5D141C381E8C2841E4E7F4D",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045635",
+    "depth": 4,
+    "description": "Combine standard function types using arithmetic operations.",
+    "id": "F4DEF44BB06C49188CD4D337A4AAB86E",
+    "parentId": "EB90C4E273FF4FA781F9E6BBCE574C31",
+    "position": 131000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-BF.A.1.b"
+   },
+   "F63A3AAE1A204D6FA117D15C3F20FF4E": {
+    "ancestorIds": [
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029721",
+    "depth": 1,
+    "description": "Linear, Quadratic & Exponential Models",
+    "id": "F63A3AAE1A204D6FA117D15C3F20FF4E",
+    "parentId": "3B76F4B519124D52A06D47ACFD87BE01",
+    "position": 142000
+   },
+   "F64E62732A0C42CBAA27814F9A522CC6": {
+    "ancestorIds": [
+     "16F90599FB8D48F49FED4A6ACC6B24E7",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029800",
+    "depth": 2,
+    "description": "Find arc lengths and areas of sectors of circles.",
+    "id": "F64E62732A0C42CBAA27814F9A522CC6",
+    "parentId": "16F90599FB8D48F49FED4A6ACC6B24E7",
+    "position": 259000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.G-C.B"
+   },
+   "F6FE478E8F7B468992F1818E62108C1B": {
+    "ancestorIds": [
+     "7F3F0CD2BFA040599DE4D1B7A4001BDC",
+     "CF0209C1A8624575B49A030227F29655",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045554",
+    "depth": 3,
+    "description": "(+) Find the conjugate of a complex number; use conjugates to find moduli and quotients of complex numbers.",
+    "id": "F6FE478E8F7B468992F1818E62108C1B",
+    "parentId": "7F3F0CD2BFA040599DE4D1B7A4001BDC",
+    "position": 26000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-CN.A.3"
+   },
+   "F706F51BBF814692957709B3D5CA170B": {
+    "ancestorIds": [
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029702",
+    "depth": 1,
+    "description": "Arithmetic with Polynomials & Rational Expressions",
+    "id": "F706F51BBF814692957709B3D5CA170B",
+    "parentId": "3B76F4B519124D52A06D47ACFD87BE01",
+    "position": 70000
+   },
+   "F71A4492E37343E2B93E2AFC484ACBE8": {
+    "ancestorIds": [
+     "9CAF8B076FBA4F02A9B881179ADA5F13"
+    ],
+    "asnIdentifier": "S21029612",
+    "depth": 1,
+    "description": "Attend to precision.",
+    "id": "F71A4492E37343E2B93E2AFC484ACBE8",
+    "parentId": "9CAF8B076FBA4F02A9B881179ADA5F13",
+    "position": 7000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP6"
+   },
+   "F7CE30304E8E47948E1E06160767043F": {
+    "ancestorIds": [
+     "330AC388F8124725AF3D3F5F2CAA56A4",
+     "CE479512D0114982922AE8D0403CE05B",
+     "5AEAC6E87438436EA004661E61E703C6",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045567",
+    "depth": 4,
+    "description": "Understand vector subtraction v-w as v+(-w), where -w is the additive inverse of w, with the same magnitude as w and pointing in the opposite direction. Represent vector subtraction graphically by connecting the tips in the appropriate order, and perform vector subtraction component-wise.",
+    "id": "F7CE30304E8E47948E1E06160767043F",
+    "parentId": "330AC388F8124725AF3D3F5F2CAA56A4",
+    "position": 44000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-VM.B.4.c"
+   },
+   "F7D6253A9BFA4934A17E4D2128BFAAB5": {
+    "ancestorIds": [
+     "508BD8D4F9E74CC2BA18B3FB7CD4A654",
+     "CF0209C1A8624575B49A030227F29655",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045559",
+    "depth": 3,
+    "description": "(+)Extend polynomial identities to the complex numbers.",
+    "id": "F7D6253A9BFA4934A17E4D2128BFAAB5",
+    "parentId": "508BD8D4F9E74CC2BA18B3FB7CD4A654",
+    "position": 33000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-CN.C.8"
+   },
+   "F82713ED8A57482C8D10B78E1C25FD13": {
+    "ancestorIds": [
+     "0EFB4DE58BED47A39DF8FA9476B9F564",
+     "493D66D00AEB4A03BBD82841C200AEC0",
+     "50A4C3CEADA44EE98846ADAD403F48BA"
+    ],
+    "asnIdentifier": "S21045673",
+    "depth": 3,
+    "description": "Using technology, compute and interpret the correlation coefficient of a linear fit.",
+    "id": "F82713ED8A57482C8D10B78E1C25FD13",
+    "parentId": "0EFB4DE58BED47A39DF8FA9476B9F564",
+    "position": 182000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.S-ID.C.8"
+   },
+   "F9D39F4092234317935AC4B8810EEEC1": {
+    "ancestorIds": [
+     "3A3F6AC797B94BBDAFF0A9C62B9415BB",
+     "B6E54196FD7B4A77AE45B643B2ED578D",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045548",
+    "depth": 3,
+    "description": "(+) Explain why the sum or product of two rational numbers is rational; that the sum of a rational number and an irrational number is irrational; and that the product of a nonzero rational number and an irrational number is irrational.",
+    "id": "F9D39F4092234317935AC4B8810EEEC1",
+    "parentId": "3A3F6AC797B94BBDAFF0A9C62B9415BB",
+    "position": 16000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-RN.B.3"
+   },
+   "FA5578CB29A84B609B0C4A412ECA2EC1": {
+    "ancestorIds": [
+     "F30457ECABC04FEDB22F1751DD548D98",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029726",
+    "depth": 2,
+    "description": "Model periodic phenomena with trigonometric functions.",
+    "id": "FA5578CB29A84B609B0C4A412ECA2EC1",
+    "parentId": "F30457ECABC04FEDB22F1751DD548D98",
+    "position": 159000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.F-TF.B"
+   },
+   "FA6E1D56740043B0B6184CB2D308EF19": {
+    "ancestorIds": [
+     "06F1271EA47743FF844728C5B910916C",
+     "EEF2DD4F9F404A90A531FEFC9CB70FF1"
+    ],
+    "asnIdentifier": "S21029797",
+    "depth": 2,
+    "description": "Apply trigonometry to general triangles.",
+    "id": "FA6E1D56740043B0B6184CB2D308EF19",
+    "parentId": "06F1271EA47743FF844728C5B910916C",
+    "position": 249000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.G-SRT.D"
+   },
+   "FB6B046E7713464B9E3FD65269761483": {
+    "ancestorIds": [
+     "C1D5C74B76474580AC2D49C5858E7B12",
+     "0D9C98993CCB471692477A154D8F95CF",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21045549",
+    "depth": 3,
+    "description": "Use units as a way to understand problems and to guide the solution of multi-step problems; choose and interpret units consistently in formulas; choose and interpret the scale and the origin in graphs and data displays.",
+    "id": "FB6B046E7713464B9E3FD65269761483",
+    "parentId": "C1D5C74B76474580AC2D49C5858E7B12",
+    "position": 19000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.N-Q.A.1"
+   },
+   "FB8AD98A03DA48C995DBF8F5729172F1": {
+    "ancestorIds": [
+     "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21029713",
+    "depth": 2,
+    "description": "Represent and solve equations and inequalities graphically.",
+    "id": "FB8AD98A03DA48C995DBF8F5729172F1",
+    "parentId": "C3ED3C6D7B2848D78B6C8CBED1F0AA87",
+    "position": 103000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.A-REI.D"
+   },
+   "FCCC2772585949A0A03309D14EC4585C": {
+    "ancestorIds": [
+     "DAB950CBB5584172B2992BF0F6033DB4",
+     "F63A3AAE1A204D6FA117D15C3F20FF4E",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045649",
+    "depth": 3,
+    "description": "Construct linear and exponential functions, including arithmetic and geometric sequences, given a graph, a description of a relationship, or two input-output pairs (include reading these from a table).",
+    "id": "FCCC2772585949A0A03309D14EC4585C",
+    "parentId": "DAB950CBB5584172B2992BF0F6033DB4",
+    "position": 148000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-LE.A.2"
+   },
+   "FDDBBD6CCA0F4B8D8FDD55A31FC40CDF": {
+    "ancestorIds": [
+     "B6E54196FD7B4A77AE45B643B2ED578D",
+     "F365DCC35C624A4695E525B0AB8361DC"
+    ],
+    "asnIdentifier": "S21029654",
+    "depth": 2,
+    "description": "Extend the properties of exponents to rational exponents.",
+    "id": "FDDBBD6CCA0F4B8D8FDD55A31FC40CDF",
+    "parentId": "B6E54196FD7B4A77AE45B643B2ED578D",
+    "position": 12000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "HS.N-RN.A"
+   },
+   "FEE870197EBE49C28E50C2F8DEA4148F": {
+    "ancestorIds": [
+     "49EA0CAEF3AF483DAE627BD347A4A6E9",
+     "47D84B52CB944B80B8F239C865DC7ECF",
+     "4DADF313A5D141C381E8C2841E4E7F4D",
+     "3B76F4B519124D52A06D47ACFD87BE01"
+    ],
+    "asnIdentifier": "S21045641",
+    "depth": 4,
+    "description": "(+) Verify by composition that one function is the inverse of another.",
+    "id": "FEE870197EBE49C28E50C2F8DEA4148F",
+    "parentId": "49EA0CAEF3AF483DAE627BD347A4A6E9",
+    "position": 138000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "HS.F-BF.B.4.b"
+   }
+  },
+  "subject": "Mathematics (2020-)",
+  "title": "Grades 9, 10, 11, 12"
+ }
+}

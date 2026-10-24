@@ -1051,4 +1051,28 @@ export const lessons: GradeLessons = {
     ["There is less corn to sell.", "Less supply pushes the price up."],
     "it rises",
   ),
+  "social/co-g9-us-government": lesson(
+    ["Article I sets up Congress, Article II the President and Article III the courts.", "Each branch checks the others: vetoes, overrides, confirmations and judicial review.", "The Bill of Rights and later amendments protect individual rights."],
+    "Which body must confirm a President's nominee to the Supreme Court?",
+    ["The President nominates.", "The Senate confirms."],
+    "the Senate",
+  ),
+  "social/co-g9-personal-finance": lesson(
+    ["Net (take-home) pay = gross pay − what is withheld. Sale price = price − the discount.", "Compound interest earns interest on interest. Rule of 72: years to double ≈ 72 ÷ the rate.", "Pay bills on time for a good credit score; keep an emergency fund; spread risk."],
+    "Using the Rule of 72, about how long does money take to double at 6% a year?",
+    ["Divide 72 by the rate.", "72 ÷ 6 = 12."],
+    "about 12 years",
+  ),
+  "social/co-g9-economics": lesson(
+    ["When price rises, quantity demanded falls and quantity supplied rises.", "A poor harvest cuts supply and raises the price.", "GDP, inflation and unemployment show how the economy is doing; trade lets countries specialize."],
+    "A drought hurts the corn harvest. What most likely happens to the price of corn?",
+    ["There is less corn to sell.", "Less supply pushes the price up."],
+    "it rises",
+  ),
+  "social/co-g9-governing-colorado": lesson(
+    ["Colorado's constitution dates from 1876 and has been amended many times.", "The governor leads the executive branch; the General Assembly has 35 senators and 65 representatives; the Supreme Court has 7 justices.", "Voters can propose laws by initiative, recall officials, and must approve new taxes under TABOR."],
+    "Under TABOR, who must approve a new state tax?",
+    ["TABOR is the Taxpayer's Bill of Rights.", "It gives the final say to the people."],
+    "the voters",
+  ),
 };
