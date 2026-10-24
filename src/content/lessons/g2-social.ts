@@ -631,6 +631,13 @@ export const lessons: GradeLessons = {
     ["The nation has a president.", "A city has a mayor."],
     "the governor",
   ),
+  // Indiana (us-in)
+  "social/in-g2-pledge-harrison": lesson(
+    ["The Pledge of Allegiance is a promise to be loyal to the United States.", "Benjamin Harrison, from Indiana, was the 23rd president. He asked schools to fly the flag.", "Good citizens follow rules, help others and care for their community."],
+    "Benjamin Harrison was a president from which state?",
+    ["He lived in Indianapolis.", "His home is still there."],
+    "Indiana",
+  ),
   // Tennessee
   "social/tn-g2-tennessee-neighbors": lesson(
     ["Tennessee shares borders with eight states, more than almost any other state.", "Kentucky and Virginia are north; Georgia, Alabama and Mississippi are south.", "North Carolina is east, and Arkansas and Missouri are across the Mississippi River to the west."],
