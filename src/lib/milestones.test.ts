@@ -26,7 +26,7 @@ function stats(over: { startedDaysAgo?: number; activeDays?: number; correct?: n
   return d;
 }
 
-const emptyDay = (day: string) => ({ day, learnSeconds: 0, answers: 0, correct: 0, sessions: 0, perfect: 0, playSeconds: 0, bestRun: 0, subjects: {}, modes: {} });
+const emptyDay = (day: string) => ({ day, learnSeconds: 0, answers: 0, correct: 0, sessions: 0, perfect: 0, playSeconds: 0, bestRun: 0, stories: 0, subjects: {}, modes: {} });
 
 const titles = (d: Derived, past?: Derived) => milestones("Sam", d, past, NOW).map((m) => m.title);
 const byId = (d: Derived, id: string, past?: Derived) => milestones("Sam", d, past, NOW).find((m) => m.id === id);

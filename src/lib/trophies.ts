@@ -24,7 +24,7 @@ export const TIER_STYLE: Record<Tier, { label: string; colour: string; dark: str
   platinum: { label: "Platinum", colour: "#8fd3f0", dark: "#3d93b8", glow: "#e0f6ff", text: "#1f6a8a" },
 };
 
-export type TrophyCategory = "Getting started" | "Practice" | "Streaks" | "Mastery" | "Modes" | "Arcade" | "Collector" | "Journey" | "French" | "Secret";
+export type TrophyCategory = "Getting started" | "Practice" | "Streaks" | "Mastery" | "Modes" | "Stories" | "Arcade" | "Collector" | "Journey" | "French" | "Secret";
 
 export interface TrophyContext {
   grade: GradeId;
@@ -171,6 +171,18 @@ const FRENCH_TROPHIES: Trophy[] = ([
   { id: "french-extending-1", name: "Étoile du français", description: "Reach Extending in any French unit.", tier: "silver", icon: "⭐", category: "French", progress: count(1, (d, ctx) => frenchUnits(d, ctx.grade, ctx.framework, 3)) },
 ] satisfies Omit<Trophy, "applies">[]).map((t) => ({ ...t, applies: hasFrench }));
 
+/** Different stories read to the end, and those with every question right. */
+const storiesRead = (d: Derived) => Object.keys(d.stories).length;
+const storiesAllRight = (d: Derived) => Object.values(d.stories).filter((s) => s.questions > 0 && s.best === s.questions).length;
+
+/** The Story Library. Every child can reach every story, so these are always possible. */
+const STORY_TROPHIES: Trophy[] = [
+  { id: "story-1", name: "Once Upon a Time", description: "Read a story to the end in the Story Library.", tier: "bronze", icon: "📖", category: "Stories", progress: count(1, storiesRead) },
+  { id: "story-10", name: "Bookworm", description: "Read 10 different stories.", tier: "silver", icon: "🐛", category: "Stories", progress: count(10, storiesRead) },
+  { id: "story-25", name: "Library Card", description: "Read 25 different stories.", tier: "gold", icon: "📚", category: "Stories", progress: count(25, storiesRead) },
+  { id: "story-sharp", name: "Sharp Reader", description: "Get every question right after 10 different stories.", tier: "silver", icon: "🔎", category: "Stories", progress: count(10, storiesAllRight) },
+];
+
 const subjectCorrect = (subject: SubjectId) => (d: Derived) => d.subjects[subject]?.correct ?? 0;
 
 /** Every subject has its own ladder, so a child who loves science or social studies earns for it too. */
@@ -273,6 +285,7 @@ export const TROPHIES: Trophy[] = [
   { id: "collect-6", name: "Collector", description: "Own 6 shop items.", tier: "silver", icon: "🧸", category: "Collector", progress: count(6, (d) => d.owned.length) },
   { id: "coins-1000", name: "Treasure Hunter", description: "Earn 1,000 coins in total.", tier: "silver", icon: "💰", category: "Collector", progress: count(1000, (d) => d.coinsEarned) },
 
+  ...STORY_TROPHIES,
   ...FRENCH_TROPHIES,
   ...SUBJECT_TROPHIES,
 

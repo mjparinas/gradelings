@@ -16,6 +16,7 @@ import { nextUp } from "@/lib/nextup";
 import { levelInfo, unitLevel } from "@/lib/proficiency";
 import type { FlagKey } from "@/lib/flags";
 import { useIsOn } from "@/lib/remoteFlags";
+import { storiesFor } from "@/lib/stories";
 import { signOutStudent } from "@/lib/account";
 import { go } from "@/lib/router";
 import { useChildSay } from "@/lib/say";
@@ -82,10 +83,11 @@ export function Hub() {
   const games = gameTime(settings, d, now);
   const weak = weakest({ grade: profile.grade, framework: profile.framework, derived: d, subjects }, 10).length;
   const dailyDone = d.dailyDone.includes(today);
-  const quests = dailyQuests(profile.id, today, band);
+  const stories = storiesFor(settings, isOn("story-library"));
+  const quests = dailyQuests(profile.id, today, band, { stories });
   const claimed = d.questsClaimed[today] ?? [];
   const monday = weekStart(now);
-  const weekly = weeklyQuests(profile.id, monday, band);
+  const weekly = weeklyQuests(profile.id, monday, band, { stories });
   const weekStats = weekDays(monday).flatMap((k) => (d.days[k] ? [d.days[k]] : []));
   const weekClaimed = d.questsClaimed[monday] ?? [];
   const suggested = suggestions(profile.grade, profile.framework, d, subjects, allowed, 1)[0];
@@ -140,6 +142,7 @@ export function Hub() {
   const shownKnown = shownSet ? factSummary(shownSet, d.facts) : undefined;
   const factsDesc = !shownKnown ? "" : shownKnown.known > 0 ? `${shownKnown.known} of ${shownKnown.total} ${shownSet.noun}` : shownSet.op === "mul" ? "Times tables and more" : "Adding and taking away";
   const lessonsTile: Tile = { id: "practice", title: little ? "Lessons" : "Practice", desc: "Pick a subject and topic", icon: "📚", colour: "#4f8ef7", dark: "#2f6fd6", href: "#/practice" };
+  const storiesTile: Tile = { id: "stories", title: "Stories", desc: "Read along at your level", icon: "📖", colour: "#ff7a59", dark: "#d4553a", href: "#/stories", flag: "story-library" };
   const arcadeTile: Tile = { id: "arcade", title: little ? "Games" : "Arcade", desc: gameDesc, icon: "🕹️", colour: "#7c4fe0", dark: "#5d34c4", href: "#/arcade", feature: "arcade", flag: "arcade" };
   // Kindergarten and Grade 1 get three big picture tiles. The collections sit behind My Treasures and
   // the Daily Challenge moves to the Lessons screen, so there is less to read and choose from here.
@@ -161,6 +164,7 @@ export function Hub() {
       flag: "daily-challenge",
     },
     lessonsTile,
+    ...(stories ? [storiesTile] : []),
     { id: "trail", title: "Trail Map", desc: "See how far you've come", icon: "🧭", colour: "#f08a4b", dark: "#c46a2c", href: "#/map" },
     ...(hasFacts
       ? [{ id: "facts", title: "Math Facts", desc: factsDesc, icon: "🧮", colour: "#14b8a6", dark: "#0f8f81", href: "#/facts", feature: "facts" as Feature, flag: "math-facts" as FlagKey }]

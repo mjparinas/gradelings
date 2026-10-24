@@ -256,6 +256,43 @@ describe("derive: streaks and rest-day shields", () => {
   });
 });
 
+describe("derive: stories", () => {
+  const story = (t: number, results: boolean[], extra: Partial<Extract<AppEvent, { type: "story" }>> = {}): AppEvent => ({
+    id: id(), profileId: "p1", t, type: "story", story: "theo-kite", rl: 2.1, results, pages: 6, ms: 4 * 60_000, ...extra,
+  });
+
+  it("counts a story read to the end, with XP and coins like a lesson plus the questions right", () => {
+    const d = derive([story(T0, [true, false, true])]);
+    expect(d.totals.stories).toBe(1);
+    expect(d.days[dayKey(T0)].stories).toBe(1);
+    expect(d.stories["theo-kite"]).toEqual({ reads: 1, best: 2, questions: 3, lastT: T0 });
+    expect(d.xp).toBe(15 + 20);
+    expect(d.coins).toBe(5 + 2);
+    // Stories never touch unit stats or lesson counts.
+    expect(d.units).toEqual({});
+    expect(d.totals.sessions).toBe(0);
+  });
+
+  it("feeds the reading level from the first read only, so a re-read can't inflate it", () => {
+    const d = derive([story(T0, [true, false, true]), story(T0 + 1, [true, true, true])]);
+    expect(d.reading).toEqual([{ rl: 2.1, ok: true }, { rl: 2.1, ok: false }, { rl: 2.1, ok: true }]);
+    expect(d.stories["theo-kite"]).toMatchObject({ reads: 2, best: 3 });
+    expect(d.xp).toBe(15 + 20 + 15);
+    expect(d.totals.stories).toBe(2);
+  });
+
+  it("counts reading time, capped at a minute a page and a minute a question", () => {
+    expect(derive([story(T0, [true, true, true])]).totals.learnSeconds).toBe(240);
+    expect(derive([story(T0, [true, true, true], { ms: 60 * 60_000 })]).totals.learnSeconds).toBe(9 * 60);
+  });
+
+  it("keeps a streak alive on a day with only a story", () => {
+    const d = derive([session("practice", 10, 8, T0), story(T0 + DAY, [true, true, true])], T0 + DAY);
+    expect(d.streak).toMatchObject({ current: 2, activeToday: true });
+    expect(d.activeDays).toBe(2);
+  });
+});
+
 describe("derive: math facts", () => {
   const fact = (id: string, correct: boolean, t: number) => answer(correct, t, { unit: "3/math/facts", mode: "facts", fact: id });
 

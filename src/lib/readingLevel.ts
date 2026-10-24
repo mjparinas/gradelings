@@ -39,7 +39,8 @@ const round1 = (n: number) => Math.round(n * 10) / 10;
 export function textReadingLevel(text: string): number | undefined {
   const words = text.match(/[A-Za-z][A-Za-z'’-]*/g);
   if (!words || words.length < 8) return undefined;
-  const sentences = Math.max(1, (text.match(/[.!?…]+(?:\s|$)/g) ?? []).length);
+  // A closing quotation mark can follow the full stop: "Hi!" she said.
+  const sentences = Math.max(1, (text.match(/[.!?…]+["”’)]*(?:\s|$)/g) ?? []).length);
   const syl = words.reduce((n, w) => n + syllables(w), 0);
   const grade = 0.39 * (words.length / sentences) + 11.8 * (syl / words.length) - 15.59;
   return round1(clamp(grade, 0, MAX_READING_LEVEL));

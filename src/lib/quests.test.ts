@@ -8,7 +8,7 @@ const DAY = 86_400_000;
 const T = new Date(2026, 0, 1, 12).getTime();
 
 const dayStat = (over: Partial<DayStat> = {}): DayStat => ({
-  day: "2026-10-05", learnSeconds: 0, answers: 0, correct: 0, sessions: 0, perfect: 0, playSeconds: 0, bestRun: 0, subjects: {}, modes: {}, ...over,
+  day: "2026-10-05", learnSeconds: 0, answers: 0, correct: 0, sessions: 0, perfect: 0, playSeconds: 0, bestRun: 0, stories: 0, subjects: {}, modes: {}, ...over,
 });
 
 /** Every quest a band can get, gathered from a few years of days and two children. */
@@ -31,7 +31,7 @@ const sorted = (o: Record<string, [number, number]>) => Object.fromEntries(Objec
 
 const SHARED = {
   run: [5, 20], lessons: [2, 20], "lessons-3": [3, 30], flawless: [1, 25], "two-subjects": [2, 20], "three-subjects": [3, 30],
-  practice: [1, 15], daily: [1, 25], adventure: [1, 15], challenge: [1, 30],
+  practice: [1, 15], daily: [1, 25], adventure: [1, 15], challenge: [1, 30], story: [1, 20],
 } satisfies Record<string, [number, number]>;
 
 describe("daily quests", () => {
@@ -69,7 +69,7 @@ describe("daily quests", () => {
 
   it("reads each quest's progress from the right part of the day", () => {
     const day = dayStat({
-      answers: 11, sessions: 3, perfect: 2, learnSeconds: 659, bestRun: 6,
+      answers: 11, sessions: 3, perfect: 2, learnSeconds: 659, bestRun: 6, stories: 2,
       subjects: { math: 7, language: 3, science: 2 },
       modes: { practice: 4, daily: 5, adventure: 16, challenge: 17, speed: 18, review: 19, facts: 20 },
     });
@@ -77,11 +77,18 @@ describe("daily quests", () => {
     const progress = Object.fromEntries([...pool.values()].map((q) => [q.id, q.progress(day)]));
     expect(progress).toEqual({
       answers: 11, "answers-big": 11, run: 6, "run-8": 6, lessons: 3, "lessons-3": 3, flawless: 2, minutes: 10, "minutes-long": 10,
-      "two-subjects": 2, "three-subjects": 2, practice: 4, daily: 5, adventure: 16, challenge: 17, speed: 18, review: 19, facts: 20,
+      "two-subjects": 2, "three-subjects": 2, practice: 4, daily: 5, adventure: 16, challenge: 17, speed: 18, review: 19, facts: 20, story: 2,
       "math-8": 7, "language-8": 3, "science-8": 2, "social-8": 0, "math-15": 7, "language-15": 3, "science-15": 2, "social-15": 0,
     });
     for (const q of pool.values()) expect(q.progress(undefined), q.id).toBe(0);
     for (const q of pool.values()) expect(q.progress(dayStat()), q.id).toBe(0);
+  });
+
+  it("leaves out the story quest when the Story Library is off for the child", () => {
+    const ids = new Set<string>();
+    for (let i = 0; i < 1000; i++) for (const q of dailyQuests("p1", dayKey(T + i * DAY), "middle", { stories: false })) ids.add(q.id);
+    expect(ids.has("story")).toBe(false);
+    expect(ids.has("daily")).toBe(true);
   });
 
   it("names subject quests after the subject as the child's age band says it", () => {
@@ -92,7 +99,7 @@ describe("daily quests", () => {
 
 describe("weekly quests", () => {
   it("has smaller goals for little kids", () => {
-    const shared = { "w-days": [4, 60], "w-flawless": [3, 60], "w-all-subjects": [4, 80], "w-daily": [3, 70], "w-lessons": [10, 60], "w-challenge": [2, 70] } satisfies Record<string, [number, number]>;
+    const shared = { "w-days": [4, 60], "w-flawless": [3, 60], "w-all-subjects": [4, 80], "w-daily": [3, 70], "w-lessons": [10, 60], "w-challenge": [2, 70], "w-stories": [3, 60] } satisfies Record<string, [number, number]>;
     expect(summary(weeklyPool("little"))).toEqual(sorted({ ...shared, "w-answers": [100, 60], "w-minutes": [30, 70], "w-run": [8, 50] }));
     expect(summary(weeklyPool("middle"))).toEqual(sorted({ ...shared, "w-answers": [200, 60], "w-minutes": [60, 70], "w-run": [12, 50] }));
   });
@@ -101,11 +108,11 @@ describe("weekly quests", () => {
     const days = [
       dayStat({ answers: 11, sessions: 3, perfect: 2, learnSeconds: 659, bestRun: 6, subjects: { math: 7, language: 3, science: 2 }, modes: { daily: 5, challenge: 7 } }),
       dayStat({ answers: 4, perfect: 1, learnSeconds: 61, bestRun: 9, subjects: { math: 8, language: 12, science: 20 }, modes: { daily: 1 } }),
-      dayStat({ answers: 5 }),
+      dayStat({ answers: 5, stories: 2 }),
     ];
     const progress = Object.fromEntries([...weeklyPool("middle").values()].map((q) => [q.id, q.progress(days)]));
     expect(progress).toEqual({
-      "w-answers": 20, "w-days": 2, "w-flawless": 3, "w-all-subjects": 3, "w-daily": 6, "w-minutes": 12, "w-lessons": 3, "w-run": 9, "w-challenge": 7,
+      "w-answers": 20, "w-days": 2, "w-flawless": 3, "w-all-subjects": 3, "w-daily": 6, "w-minutes": 12, "w-lessons": 3, "w-run": 9, "w-challenge": 7, "w-stories": 2,
     });
     for (const q of weeklyPool("middle").values()) expect(q.progress([]), q.id).toBe(0);
   });
@@ -117,8 +124,16 @@ describe("weekly quests", () => {
     expect(allSubjects.progress(week(15))).toBe(4);
   });
 
-  it("counts a day with a finished lesson or at least 5 answers", () => {
+  it("leaves out the story quest when the Story Library is off for the child", () => {
+    const ids = new Set<string>();
+    for (let i = 0; i < 300; i++) for (const q of weeklyQuests("p1", weekStart(T + i * 7 * DAY), "middle", { stories: false })) ids.add(q.id);
+    expect(ids.has("w-stories")).toBe(false);
+    expect(ids.size).toBe(9);
+  });
+
+  it("counts a day with a finished lesson, a story read to the end or at least 5 answers", () => {
     expect(activeDay(dayStat({ sessions: 1 }))).toBe(true);
+    expect(activeDay(dayStat({ stories: 1 }))).toBe(true);
     expect(activeDay(dayStat({ answers: 4 }))).toBe(false);
     expect(activeDay(dayStat({ answers: 5 }))).toBe(true);
     expect(activeDay(dayStat())).toBe(false);
