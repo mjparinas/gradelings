@@ -631,6 +631,14 @@ export const lessons: GradeLessons = {
     ["The nation has a president.", "A city has a mayor."],
     "the governor",
   ),
+  // Indiana (us-in)
+  "social/in-g2-pledge-harrison": lesson(
+    ["The Pledge of Allegiance is a promise to be loyal to the United States.", "Benjamin Harrison, from Indiana, was the 23rd president. He asked schools to fly the flag.", "Good citizens follow rules, help others and care for their community."],
+    "Benjamin Harrison was a president from which state?",
+    ["He lived in Indianapolis.", "His home is still there."],
+    "Indiana",
+  ),
+  // Missouri (us-mo)
   "social/mo-g2-missouri-regions": lesson(
     ["Missouri has regions with different land.", "The Ozarks in the south have hills, forests and springs.", "The north has rolling plains and farms. The Missouri and Mississippi rivers shape the state."],
     "Which Missouri region has hills, forests and springs?",

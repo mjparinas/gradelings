@@ -337,6 +337,7 @@ export const lessons: GradeLessons = {
     ["Georgia is a state.", "States are part of a country."],
     "the United States",
   ),
+  // Missouri (us-mo)
   "social/mo-k-flag-and-holidays": lesson(
     ["The American flag has stars and stripes.", "We say the Pledge of Allegiance to the flag.", "Holidays like the Fourth of July help us remember our country."],
     "What do we celebrate on the Fourth of July?",

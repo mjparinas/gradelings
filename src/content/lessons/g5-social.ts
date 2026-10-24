@@ -859,6 +859,7 @@ export const lessons: GradeLessons = {
     ["Banks lend money.", "A home loan is called a mortgage."],
     "a bank",
   ),
+  // Missouri (us-mo)
   "social/wa-g8-reconstruction": lesson(
     ["Reconstruction (1865–1877) rebuilt the South and brought Southern states back into the Union.", "The Reconstruction Amendments: the 13th ended slavery, the 14th made formerly enslaved people citizens, and the 15th protected the vote for Black men.", "After 1877, many of these rights were rolled back by Jim Crow laws."],
     "Which amendment made formerly enslaved people citizens?",

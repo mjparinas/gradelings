@@ -1177,6 +1177,7 @@ export const lessons: GradeLessons = {
     ["Start with the money earned.", "Take away the costs."],
     "money left after costs are paid",
   ),
+  // Missouri (us-mo)
   "social/mo-g8-rights-citizenship": lesson(
     ["The Constitution sets up three branches with checks and balances; the Bill of Rights protects freedoms.", "The 13th Amendment ended slavery, the 14th promised citizenship and equal protection, and the 15th protected voting regardless of race.", "Citizenship grew unevenly: women won the national vote in 1920, and most Native Americans became citizens in 1924."],
     "Which amendment abolished slavery?",

@@ -673,6 +673,39 @@ export const lessons: GradeLessons = {
     ["It was around only briefly but in many places.", "Finding it dates the rock layer."],
     "it lived for a short time over a wide area",
   ),
+  // Indiana (us-in)
+"science/in-g7-resources": lesson(
+    ["Minerals, energy and water are spread unevenly because of past geologic processes.", "Scientists map hazards such as earthquakes, tsunamis, floods and wildfires.", "Monitoring networks (seismometers, GPS, gas sensors) help warn people early."],
+    "What does a tsunami hazard map show?",
+    ["Tsunamis flood low coastal land.", "People need to know where to go."],
+    "areas that could flood and routes to high ground",
+  ),
+"science/in-g7-earth-surface": lesson(
+    ["Matching coastlines, fossils and rocks on far-apart continents show they were once joined.", "Plates pull apart at mid-ocean ridges and collide to build mountains and volcanoes, such as the Appalachians long ago.", "Some changes are sudden (earthquakes); others take millions of years (mountain building)."],
+    "Is a landslide a fast or a very slow change to Earth’s surface?",
+    ["A landslide happens in minutes.", "Mountain building takes millions of years."],
+    "fast",
+  ),
+  // Indiana: units Indiana teaches in this grade
+  "science/wa-g6-thermal": lesson(
+    ["Thermal energy always flows from warmer objects to cooler ones.", "Conduction: heat moves through touching things. Convection: heat moves with flowing liquids or gases.", "Radiation: heat travels as waves, like warmth from the sun.", "Insulators, like thick cooler walls, slow heat flow."],
+    "Warm air rises from a heater and spreads through a room. Which kind of heat flow is this?",
+    ["Heat is carried by moving air, a gas.", "Heat moving with a flowing gas or liquid is convection."],
+    "convection",
+  ),
+  "science/wa-g8-energy": lesson(
+    ["Kinetic energy is the energy of motion. Faster or heavier objects have more.", "Potential energy is stored energy due to position or condition.", "A high object has gravitational potential energy. A stretched band has elastic potential energy.", "Pushing an object transfers energy to it, so it speeds up."],
+    "A stretched rubber band is about to be let go. Which kind of energy does it have?",
+    ["It is not moving yet, so the energy is stored.", "Stretching stores elastic potential energy."],
+    "elastic potential energy",
+  ),
+  "science/wa-g8-fields": lesson(
+    ["Some forces act at a distance: gravity, magnetism and electric force.", "Gravity is stronger between objects that are more massive and closer. It keeps planets in orbit.", "Rubbing a balloon gives it a static charge, so it sticks to a wall.", "Magnets attract or repel without touching."],
+    "When is gravity between two objects stronger?",
+    ["More mass means more pull.", "Being closer also means more pull."],
+    "when they are more massive and closer",
+  ),
+  // Missouri (us-mo)
   "science/mo-g7-resources": lesson(
     ["Minerals, energy and water are spread unevenly because of past geologic processes; Missouri has lead deposits in the Ozarks.", "Scientists map hazards such as earthquakes, floods, tornadoes and wildfires.", "Monitoring networks (seismometers, river gauges, weather radar) help warn people early."],
     "What does a flood hazard map show?",

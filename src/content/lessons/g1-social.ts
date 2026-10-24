@@ -433,6 +433,14 @@ export const lessons: GradeLessons = {
     ["She knew the land and languages.", "Her name starts with S."],
     "Sacagawea",
   ),
+  // Indiana (us-in)
+"social/in-g1-american-symbols": lesson(
+    ["The Pledge of Allegiance is a promise to be loyal.", "Washington, D.C. is the capital of the United States.", "Lincoln helped end slavery. He is on the penny."],
+    "What is the capital of the United States?",
+    ["It is named for the first president."],
+    "Washington, D.C.",
+  ),
+  // Missouri (us-mo)
   "social/mo-g1-american-symbols": lesson(
     ["Symbols stand for our country.", "The bald eagle and the flag are symbols of the United States.", "The Gateway Arch in St. Louis is a Missouri landmark."],
     "Which bird is a symbol of the United States?",
