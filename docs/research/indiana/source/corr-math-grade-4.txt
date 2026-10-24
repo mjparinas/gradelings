@@ -1,0 +1,785 @@
+                                                        Grade 4 Mathematics
+
+This document provides correlations between the 2023 Indiana Academic Standards (IAS) and the Common Core State Standards (CCSS)
+for easy reference. This correlation guide is intended to help support conversations regarding state and national standards and may be used
+as one of many tools to help inform a variety of local decisions (e.g., selection of high-quality curricular materials, curriculum maps).
+
+The 2023 Indiana Academic Standards resulted from the standards streamlining process required by Indiana Code (IC) 20-31-3-1(c-d) and
+were adopted by the Indiana State Board of Education in June 2023. Standards designated as essential (E) for student mastery by the end
+of the grade level are shaded in gray and all standards were renumbered to avoid gaps in sequencing.
+
+
+      2023 Indiana Academic Standard                      Common Core State Standard                         Differences Between
+                                                                                                             2023 IAS and CCSS
+
+                                                         Domain: Number Sense
+
+Number                     Text                   Number                      Text                                Description
+
+                                                             Read and write multi-digit whole
+           Read and write whole numbers up to                numbers using base-ten numerals,
+           1,000,000. Use words, models,                     number names, and expanded form.       IAS specifies a range up to 1,000,000
+           standard form, and expanded form                  Compare two multi-digit numbers        and the use of models to represent
+ 4.NS.1                                           4.NBT.2
+           to represent and show equivalent                  based on meanings of the digits in     and show equivalent forms. CCSS
+           forms of whole numbers up to                      each place, using >, =, and <          requires comparing numbers.
+           1,000,000.                                        symbols to record the results of
+                                                             comparisons.
+
+           Model mixed numbers and improper
+           fractions using visual fraction
+           models such as number lines and                   Express whole numbers as fractions,    IAS requires the use of visual fraction
+ 4.NS.2    area models. Use a visual fraction      3.NF.3c   and recognize fractions that are       models and modeling mixed numbers
+           model to show the equivalency                     equivalent to whole numbers.           and improper fractions.
+           between whole numbers and whole
+           numbers as fractions.
+
+
+
+                                                                    1
+          2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 4 Mathematics
+
+
+         Use fraction models to represent two               Explain why a fraction a/b is
+         equivalent fractions with attention to             equivalent to a fraction (n × a)/(n × b)
+         how the number and size of the                     by using visual fraction models, with
+         parts differ even though the fractions             attention to how the number and size       IAS specifies which denominators of
+4.NS.3   themselves are the same size. Use         4.NF.1   of the parts differ even though the        fractions to use.
+         this principle to generate equivalent              two fractions themselves are the
+         fractions. [In grade 4, limit                      same size. Use this principle to
+         denominators of fractions to 2, 3, 4,              recognize and generate equivalent
+         5, 6, 8, 10, 25, 100.] (E)                         fractions.
+
+         Compare two fractions with different
+                                                            Compare two fractions with different
+         numerators and different
+                                                            numerators and different
+         denominators (e.g., by creating
+                                                            denominators, e.g., by creating
+         common denominators or
+                                                            common denominators or
+         numerators, or by comparing to a
+                                                            numerators, or by comparing to a
+         benchmark, such as 0, 1/2, and 1).
+                                                            benchmark fraction such as 1/2.
+4.NS.4   Explain why comparisons are valid         4.NF.2                                                No content differences identified.
+                                                            Recognize that comparisons are valid
+         only when the two fractions refer to
+                                                            only when the two fractions refer to
+         the same whole. Record the results
+                                                            the same whole. Record the results
+         of comparisons with symbols > , = ,
+                                                            of comparisons with symbols >, =, or
+         or < , and justify the conclusions
+                                                            <, and justify the conclusions, e.g., by
+         (e.g., by using a visual fraction
+                                                            using a visual fraction model.
+         model). (E)
+
+         Write tenths and hundredths in                     Use decimal notation for fractions
+                                                   4.NF.6                                              IAS requires the use of models to
+         decimal and fraction notations. Use                with denominators 10 or 100.
+                                                                                                       represent decimal numbers and to
+         words, models, standard form, and
+                                                                                                       know fraction and decimal equivalents
+         expanded form to represent decimal                Read and write decimals to
+4.NS.5                                                                                                 for halves and fourths. CCSS includes
+         numbers to hundredths. Mentally                   thousandths using base-ten
+                                                  5.NBT.3a                                             reading and writing decimals to
+         calculate fraction and decimal                    numerals, number names, and                 thousandths.
+         equivalents for halves and fourths                expanded form, e.g., 347.392 = 3 ×
+         (e.g., 1/2 = 0.5 = 0.50, 7/4 = 1 3/4 =
+
+
+                                                            Updated July 2024                                                           2
+          2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 4 Mathematics
+
+
+         1.75). (E)                                           100 + 4 × 10 + 7 × 1 + 3 × (1/10) + 9
+                                                              × (1/100) + 2 × (1/1000).
+
+                                                              Compare two decimals to hundredths
+         Compare two decimals to
+                                                              by reasoning about their size.
+         hundredths by reasoning about their
+                                                              Recognize that comparisons are valid
+         size based on the same whole.
+                                                              only when the two decimals refer to
+4.NS.6   Record the results of comparisons         4.NF.7                                                No content differences identified.
+                                                              the same whole. Record the results
+         with the symbols > , = , or < , and
+                                                              of comparisons with the symbols >,
+         justify the conclusions (e.g., by using
+                                                              =, or <, and justify the conclusions,
+         a visual model). (E)
+                                                              e.g., by using a visual model.
+
+         Use place value understanding to                     Use place value understanding to
+4.NS.7   round multi-digit whole numbers to        4.NBT.3    round multi-digit whole numbers to         No content differences identified.
+         any given place value.                               any place.
+
+    2023 Indiana Academic Standard                          Common Core State Standard                         Differences Between
+                                                                                                               2023 IAS and CCSS
+
+                                             Domain: Computation and Algebraic Thinking
+
+Number                    Text                     Number                      Text                                Description
+
+         Multiply a whole number of up to                     Multiply a whole number of up to four
+         four digits by a one-digit whole                     digits by a one-digit whole number,
+         number and multiply two two-digit                    and multiply two two-digit numbers,
+         numbers, using strategies based on                   using strategies based on place
+                                                                                                       CCSS specifies how to explain the
+4.CA.1   place value and the properties of         4.NBT.5    value and the properties of
+                                                                                                       reasoning.
+         operations. Describe the strategy                    operations. Illustrate and explain the
+         and explain the reasoning. (E)                       calculation by using equations,
+                                                              rectangular arrays, and/or area
+                                                              models.
+
+
+
+
+                                                              Updated July 2024                                                         3
+          2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 4 Mathematics
+
+
+         Find whole-number quotients and                    Find whole-number quotients and
+         remainders with up to four-digit                   remainders with up to four-digit
+         dividends and one-digit divisors                   dividends and one-digit divisors,
+         using strategies based on place                    using strategies based on place
+         value, the properties of operations,               value, the properties of operations,      CCSS specifies how to explain the
+4.CA.2                                            4.NBT.6
+         and/or the relationship between                    and/or the relationship between           reasoning.
+         multiplication and division. Describe              multiplication and division. Illustrate
+         the strategy and explain the                       and explain the calculation by using
+         reasoning. (E)                                     equations, rectangular arrays, and/or
+                                                            area models.
+
+         Show how the order in which two
+         numbers are multiplied
+         (commutative property) and how
+         numbers are grouped in
+         multiplication (associative property)
+4.CA.3
+         will not change the product. Use
+         these properties to show that
+         numbers can be multiplied in any
+         order. Investigate and apply the
+         distributive property. (E)
+
+                                                            Find all factor pairs for a whole
+         Investigate the mathematical                       number in the range 1-100.
+         relationship between factors and                   Recognize that a whole number is a
+         multiples for whole numbers from                   multiple of each of its factors.
+         1-100, including the set of factors                Determine whether a given whole           CCSS requires students to determine
+4.CA.4                                            4.OA.4
+         and multiples for given numbers.                   number in the range 1-100 is a            prime and composite numbers.
+         Identify sets of factors and multiples             multiple of a given one-digit number.
+         for any given whole number up to                   Determine whether a given whole
+         100.                                               number in the range 1-100 is prime
+                                                            or composite.
+
+
+                                                            Updated July 2024                                                        4
+          2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 4 Mathematics
+
+
+         Solve real-world problems with
+         whole numbers involving
+                                                          Multiply or divide to solve word
+         multiplicative comparison (e.g., by
+                                                          problems involving multiplicative
+         using drawings and equations with a
+                                                          comparison, e.g., by using drawings
+         symbol for the unknown number to                                                          IAS specifies that real-world division
+                                                          and equations with a symbol for the
+4.CA.5   represent the problem),                4.OA.2                                             problems should not include a
+                                                          unknown number to represent the
+         distinguishing multiplicative                                                             remainder.
+                                                          problem, distinguishing multiplicative
+         comparison from additive
+                                                          comparison from additive
+         comparison. [In grade 4, division
+                                                          comparison.
+         problems should not include a
+         remainder.] (E)
+
+                                                          Understand addition and subtraction
+                                                4.NF.3a   of fractions as joining and separating
+         Add and subtract fractions with                  parts referring to the same whole.
+         common denominators using visual                 Decompose a fraction into a sum of    CCSS includes justifying
+4.CA.6   fraction models. Decompose                       fractions with the same denominator decompositions.
+         non-unit fractions to represent them             in more than one way, recording each
+         as iterations of unit fractions. (E)   4.NF.3b
+                                                          decomposition by an equation. Justify
+                                                          decompositions, e.g., by using a
+                                                          visual fraction model.
+
+         Add and subtract mixed numbers                   Add and subtract mixed numbers
+         with common denominators (e.g., by               with like denominators, e.g., by
+         replacing each mixed number with                 replacing each mixed number with an
+4.CA.7   an equivalent fraction and/or by       4.NF.3c   equivalent fraction, and/or by using        No content differences identified.
+         using properties of operations and               properties of operations and the
+         the relationship between addition                relationship between addition and
+         and subtraction).                                subtraction.
+
+
+
+
+                                                          Updated July 2024                                                          5
+          2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 4 Mathematics
+
+
+         Solve real-world problems involving
+                                                            Solve word problems involving
+         addition and subtraction of fractions
+                                                            addition and subtraction of fractions
+         referring to the same whole and
+                                                            referring to the same whole and         IAS places emphasis on solving
+4.CA.8   having common denominators (e.g.,       4.NF.3d
+                                                            having like denominators, e.g., by      real-world problems.
+         by using visual fraction models and
+                                                            using visual fraction models and
+         equations to represent the problem).
+                                                            equations to represent the problem.
+         (E)
+
+         Describe the relationship between
+                                                            Generate a number or shape pattern
+         two terms and use it to find a second
+                                                            that follows a given rule. Identify
+4.CA.9   number when a first number is           4.OA.5                                                No content differences identified.
+                                                            apparent features of the pattern that
+         given. Generate a number pattern
+                                                            were not explicit in the rule itself.
+         that follows a given rule.
+
+     2023 Indiana Academic Standard                       Common Core State Standard                        Differences Between
+                                                                                                            2023 IAS and CCSS
+
+                                                           Domain: Geometry
+
+Number                    Text                   Number                      Text                                Description
+
+         Identify, describe, and draw
+         parallelograms, rhombuses, and
+ 4.G.1   trapezoids using appropriate tools
+         (e.g., ruler, straightedge, and
+         technology).
+
+         Identify, describe, and draw rays,
+                                                            Draw points, lines, line segments,
+         angles (right, acute, obtuse), and                                                         IAS includes describing these objects
+                                                            rays, angles (right, acute, obtuse),
+         perpendicular and parallel lines                                                           and specifies using appropriate tools.
+ 4.G.2                                            4.G.1     and perpendicular and parallel lines.
+         using appropriate tools (e.g., ruler,                                                      IAS includes points, lines, and line
+                                                            Identify these in two-dimensional
+         straightedge, and technology).                                                             segments in 3.G.2.
+                                                            figures.
+         Identify these in two-dimensional
+
+
+
+                                                            Updated July 2024                                                         6
+          2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 4 Mathematics
+
+
+         figures.
+
+                                                             Classify two-dimensional figures
+                                                             based on the presence or absence of
+         Classify triangles and quadrilaterals
+                                                             parallel or perpendicular lines, or the
+         based on the presence or absence                                                               IAS specifies classifying triangles and
+ 4.G.3                                             4.G.2     presence or absence of angles of a
+         of parallel or perpendicular lines, or                                                         quadrilaterals.
+                                                             specified size. Recognize right
+         right, acute, or obtuse angles.
+                                                             triangles as a category, and identify
+                                                             right triangles.
+
+     2023 Indiana Academic Standard                        Common Core State Standard                           Differences Between
+                                                                                                                2023 IAS and CCSS
+
+                                                           Domain: Measurement
+
+Number                    Text                    Number                       Text                                  Description
+
+         Measure length to the nearest
+ 4.M.1   quarter-inch, eighth-inch, and
+         millimeter. (E)
+
+                                                             Know relative sizes of measurement
+                                                             units within one system of units
+         Within given measurement systems,
+                                                             including km, m, cm; kg, g; lb., oz.; l,
+         convert larger units to smaller units,
+                                                             ml; hr., min, sec. Within a single         IAS requires conversions be used to
+         including km, m, cm; kg, g; lb, oz; l,
+ 4.M.2                                            4.MD.1     system of measurement, express             solve real-world problems. CCSS
+         ml; hr, min, sec., and use these
+                                                             measurements in a larger unit in           specifies using two-column tables.
+         conversions to solve real-world
+                                                             terms of a smaller unit. Record
+         problems. (E)
+                                                             measurement equivalents in a
+                                                             two-column table.
+
+
+
+
+                                                              Updated July 2024                                                           7
+         2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 4 Mathematics
+
+
+                                                         Use the four operations to solve word
+                                                         problems involving distances,
+        Use the four operations to solve
+                                                         intervals of time, liquid volumes,
+        real-world problems involving
+                                                         masses of objects, and money,
+        distances, intervals of time,                                                            IAS places emphasis on solving
+                                                         including problems involving simple
+        volumes, masses of objects, and                                                          real-world problems and using addition
+                                                         fractions or decimals, and problems
+        money. Include addition and                                                              and subtraction involving simple
+4.M.3                                          4.MD.2    that require expressing
+        subtraction problems involving                                                           fractions. CCSS requires students to
+                                                         measurements given in a larger unit
+        simple fractions and problems that                                                       represent measurement quantities
+                                                         in terms of a smaller unit. Represent
+        require expressing measurements                                                          using diagrams.
+                                                         measurement quantities using
+        given in a larger unit in terms of a
+                                                         diagrams such as number line
+        smaller unit. (E)
+                                                         diagrams that feature a measurement
+                                                         scale.
+
+        Apply the area and perimeter                     Apply the area and perimeter
+        formulas for rectangles to solve       4.MD.3    formulas for rectangles in real world
+        real-world and other mathematical                and mathematical problems.
+        problems. Investigate the area of
+        complex shapes composed of                       Recognize area as additive. Find
+        rectangles by decomposing them                   areas of rectilinear figures by
+4.M.4                                                    decomposing them into                     No content differences identified.
+        into non-overlapping rectangles and
+        adding the areas of the                          non-overlapping rectangles and
+                                               3.MD.7d
+        non-overlapping parts; apply this                adding the areas of the
+        technique to solve real-world                    non-overlapping parts, applying this
+        problems and other mathematical                  technique to solve real world
+        problems. (E)                                    problems.
+
+
+
+
+                                                         Updated July 2024                                                        8
+          2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 4 Mathematics
+
+
+                                                                                                           Differences Between
+    2023 Indiana Academic Standard                         Common Core State Standard
+                                                                                                           2023 IAS and CCSS
+
+                                                       Domain: Data Analysis
+
+Number                   Text                     Number                     Text                               Description
+
+         Formulate questions that can be
+         addressed with data. Collect,
+         organize, and graph data from
+         observations, surveys, and
+         experiments using line plots with
+4.DA.1   whole number intervals, single- and
+         scaled bar graphs, and frequency
+         tables. Solve real-world problems by
+         analyzing and interpreting the data
+         using grade-level computation and
+         comparison strategies. (E)
+
+         Make a line plot to display a data set              Make a line plot to display a data set
+         of measurements in fractions of a                   of measurements in fractions of a unit
+         unit (1/2, 1/4, 1/8). Solve problems                (1/2, 1/4, 1/8). Solve problems
+4.DA.2                                            4.MD.4                                              No content differences identified.
+         involving addition and subtraction of               involving addition and subtraction of
+         fractions by using data displayed in                fractions by using information
+         line plots.                                         presented in line plots.
+
+
+
+
+                                                             Updated July 2024                                                       9
+             2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 4 Mathematics
+
+
+
+                                                       Mathematics Process Standards
+
+       2023 Indiana Academic Standard                         Common Core State Standard                         Differences Between
+                                                                                                                 2023 IAS and CCSS
+
+PS.1: Make sense of problems and                      MP.1: Make sense of problems and persevere
+persevere in solving them.                            in solving them.
+Mathematically proficient students start by           Mathematically proficient students start by
+explaining to themselves the meaning of a             explaining to themselves the meaning of a
+problem and looking for entry points to its           problem and looking for entry points to its
+solution. They analyze givens, constraints,           solution. They analyze givens, constraints,
+relationships, and goals. They make                   relationships, and goals. They make conjectures
+conjectures about the form and meaning of the         about the form and meaning of the solution and
+solution and plan a solution pathway, rather          plan a solution pathway rather than simply
+than simply jumping into a solution attempt.          jumping into a solution attempt. They consider
+They consider analogous problems and try              analogous problems, and try special cases and
+                                                                                                          IAS summarizes what mathematically
+special cases and simpler forms of the original       simpler forms of the original problem in order to
+                                                                                                          proficient students can do, while
+problem in order to gain insight into its solution.   gain insight into its solution. They monitor and
+                                                                                                          CCSS gives examples of what
+They monitor and evaluate their progress and          evaluate their progress and change course if
+                                                                                                          mathematically proficient students
+change course if necessary. Mathematically            necessary. Older students might, depending on
+                                                                                                          might do at different grade levels.
+proficient students check their answers to            the context of the problem, transform algebraic
+problems using a different method, and they           expressions or change the viewing window on
+continually ask themselves, “Does this make           their graphing calculator to get the information
+sense?” and "Is my answer reasonable?" They           they need. Mathematically proficient students can
+understand the approaches of others to solving        explain correspondences between equations,
+complex problems and identify                         verbal descriptions, tables, and graphs or draw
+correspondences between different                     diagrams of important features and relationships,
+approaches. Mathematically proficient students        graph data, and search for regularity or trends.
+understand how mathematical ideas                     Younger students might rely on using concrete
+interconnect and build on one another to              objects or pictures to help conceptualize and
+produce a coherent whole.                             solve a problem. Mathematically proficient
+
+
+
+                                                                Updated July 2024                                                      10
+             2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 4 Mathematics
+
+
+                                                    students check their answers to problems using a
+                                                    different method, and they continually ask
+                                                    themselves, "Does this make sense?" They can
+                                                    understand the approaches of others to solving
+                                                    complex problems and identify correspondences
+                                                    between different approaches.
+
+PS.2: Reason abstractly and quantitatively.         MP.2: Reason abstractly and quantitatively.
+Mathematically proficient students make sense       Mathematically proficient students make sense of
+of quantities and their relationships in problem    quantities and their relationships in problem
+situations. They bring two complementary            situations. They bring two complementary
+abilities to bear on problems involving             abilities to bear on problems involving
+quantitative relationships: the ability to          quantitative relationships: the ability to
+decontextualize—to abstract a given situation       decontextualize—to abstract a given situation
+and represent it symbolically and manipulate        and represent it symbolically and manipulate the
+the representing symbols as if they have a life     representing symbols as if they have a life of
+of their own, without necessarily attending to      their own, without necessarily attending to their
+                                                                                                        No content differences identified.
+their referents—and the ability to contextualize,   referents—and the ability to contextualize, to
+to pause as needed during the manipulation          pause as needed during the manipulation
+process in order to probe into the referents for    process in order to probe into the referents for
+the symbols involved. Quantitative reasoning        the symbols involved. Quantitative reasoning
+entails habits of creating a coherent               entails habits of creating a coherent
+representation of the problem at hand;              representation of the problem at hand;
+considering the units involved; attending to the    considering the units involved; attending to the
+meaning of quantities, not just how to compute      meaning of quantities, not just how to compute
+them; and knowing and flexibly using different      them; and knowing and flexibly using different
+properties of operations and objects.               properties of operations and objects.
+
+
+
+
+                                                              Updated July 2024                                                       11
+             2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 4 Mathematics
+
+
+                                                    MP.3: Construct viable arguments and
+                                                    critique the reasoning of others.
+PS.3: Construct viable arguments and
+                                                    Mathematically proficient students understand
+critique the reasoning of others.
+                                                    and use stated assumptions, definitions, and
+Mathematically proficient students understand
+                                                    previously established results in constructing
+and use stated assumptions, definitions, and
+                                                    arguments. They make conjectures and build a
+previously established results in constructing
+                                                    logical progression of statements to explore the
+arguments. They make conjectures and build a
+                                                    truth of their conjectures. They are able to
+logical progression of statements to explore the
+                                                    analyze situations by breaking them into cases,
+truth of their conjectures. They analyze
+                                                    and can recognize and use counterexamples.
+situations by breaking them into cases and
+                                                    They justify their conclusions, communicate them
+recognize and use counterexamples. They                                                                 IAS explains that mathematically
+                                                    to others, and respond to the arguments of
+organize their mathematical thinking, justify their                                                     proficient students can justify
+                                                    others. They reason inductively about data,
+conclusions and communicate them to others,                                                             statements that are true always,
+                                                    making plausible arguments that take into
+and respond to the arguments of others. They                                                            sometimes, or never. IAS also states
+                                                    account the context from which the data arose.
+reason inductively about data, making plausible                                                         that mathematically proficient students
+                                                    Mathematically proficient students are also able
+arguments that take into account the context                                                            participate and collaborate in a
+                                                    to compare the effectiveness of two plausible
+from which the data arose. Mathematically                                                               mathematics community. CCSS gives
+                                                    arguments, distinguish correct logic or reasoning
+proficient students are also able to compare the                                                        examples of what mathematically
+                                                    from that which is flawed, and—if there is a flaw
+effectiveness of two plausible arguments,                                                               proficient students might do at different
+                                                    in an argument—explain what it is. Elementary
+distinguish correct logic or reasoning from that                                                        grade levels.
+                                                    students can construct arguments using concrete
+which is flawed, and—if there is a flaw in an
+                                                    referents such as objects, drawings, diagrams,
+argument—explain what it is. They justify
+                                                    and actions. Such arguments can make sense
+whether a given statement is true always,
+                                                    and be correct, even though they are not
+sometimes, or never. Mathematically proficient
+                                                    generalized or made formal until later grades.
+students participate and collaborate in a
+                                                    Later, students learn to determine domains to
+mathematics community. They listen to or read
+                                                    which an argument applies. Students at all
+the arguments of others, decide whether they
+                                                    grades can listen or read the arguments of
+make sense, and ask useful questions to clarify
+                                                    others, decide whether they make sense, and
+or improve the arguments.
+                                                    ask useful questions to clarify or improve the
+                                                    arguments.
+
+
+
+                                                             Updated July 2024                                                           12
+             2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 4 Mathematics
+
+
+                                                  MP.4: Model with mathematics.
+                                                  Mathematically proficient students can apply the
+PS.4: Model with mathematics.
+                                                  mathematics they know to solve problems arising
+Mathematically proficient students apply the
+                                                  in everyday life, society, and the workplace. In
+mathematics they know to solve problems
+                                                  early grades, this might be as simple as writing
+arising in everyday life, society, and the
+                                                  an addition equation to describe a situation. In
+workplace using a variety of appropriate
+                                                  middle grades, a student might apply proportional
+strategies. They create and use a variety of
+                                                  reasoning to plan a school event or analyze a
+representations to solve problems and to
+                                                  problem in the community. By high school, a
+organize and communicate mathematical ideas.
+                                                  student might use geometry to solve a design
+Mathematically proficient students apply what
+                                                  problem or use a function to describe how one
+they know and are comfortable making                                                                    IAS summarizes what mathematically
+                                                  quantity of interest depends on another.
+assumptions and approximations to simplify a                                                            proficient students can do, while
+                                                  Mathematically proficient students who can apply
+complicated situation, realizing that these may                                                         CCSS gives examples of what
+                                                  what they know are comfortable making
+need revision later. They are able to identify                                                          mathematically proficient students
+                                                  assumptions and approximations to simplify a
+important quantities in a practical situation and                                                       might do at different grade levels.
+                                                  complicated situation, realizing that these may
+map their relationships using such tools as
+                                                  need revision later. They are able to identify
+diagrams, two-way tables, graphs, flowcharts
+                                                  important quantities in a practical situation and
+and formulas. They analyze those relationships
+                                                  map their relationships using such tools as
+mathematically to draw conclusions. They
+                                                  diagrams, two-way tables, graphs, flowcharts and
+routinely interpret their mathematical results in
+                                                  formulas. They can analyze those relationships
+the context of the situation and reflect on
+                                                  mathematically to draw conclusions. They
+whether the results make sense, possibly
+                                                  routinely interpret their mathematical results in
+improving the model if it has not served its
+                                                  the context of the situation and reflect on whether
+purpose.
+                                                  the results make sense, possibly improving the
+                                                  model if it has not served its purpose.
+
+
+
+
+                                                             Updated July 2024                                                       13
+             2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 4 Mathematics
+
+
+                                                      MP.5: Use appropriate tools strategically.
+                                                      Mathematically proficient students consider the
+                                                      available tools when solving a mathematical
+                                                      problem. These tools might include pencil and
+PS.5: Use appropriate tools strategically.
+                                                      paper, concrete models, a ruler, a protractor, a
+Mathematically proficient students consider the
+                                                      calculator, a spreadsheet, a computer algebra
+available tools when solving a mathematical
+                                                      system, a statistical package, or dynamic
+problem. These tools might include pencil and
+                                                      geometry software. Proficient students are
+paper, models, a ruler, a protractor, a calculator,
+                                                      sufficiently familiar with tools appropriate for their
+a spreadsheet, a computer algebra system, a
+                                                      grade or course to make sound decisions about
+statistical package, or dynamic geometry
+                                                      when each of these tools might be helpful,
+software. Mathematically proficient students are
+                                                      recognizing both the insight to be gained and
+sufficiently familiar with tools appropriate for
+                                                      their limitations. For example, mathematically           IAS summarizes what mathematically
+their grade or course to make sound decisions
+                                                      proficient high school students analyze graphs of        proficient students can do, while
+about when each of these tools might be
+                                                      functions and solutions generated using a                CCSS gives examples of what
+helpful, recognizing both the insight to be
+                                                      graphing calculator. They detect possible errors         mathematically proficient students
+gained and their limitations. Mathematically
+                                                      by strategically using estimation and other              might do at different grade levels.
+proficient students identify relevant external
+                                                      mathematical knowledge. When making
+mathematical resources, such as digital content,
+                                                      mathematical models, they know that technology
+and use them to pose or solve problems. They
+                                                      can enable them to visualize the results of
+use technological tools to explore and deepen
+                                                      varying assumptions, explore consequences, and
+their understanding of concepts and to support
+                                                      compare predictions with data. Mathematically
+the development of learning mathematics. They
+                                                      proficient students at various grade levels are
+use technology to contribute to concept
+                                                      able to identify relevant external mathematical
+development, simulation, representation,
+                                                      resources, such as digital content located on a
+reasoning, communication and problem solving.
+                                                      website, and use them to pose or solve
+                                                      problems. They are able to use technological
+                                                      tools to explore and deepen their understanding
+                                                      of concepts.
+
+
+
+
+                                                                 Updated July 2024                                                          14
+             2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 4 Mathematics
+
+
+PS.6: Attend to precision.                          MP.6: Attend to precision.
+Mathematically proficient students communicate      Mathematically proficient students try to
+precisely to others. They use clear definitions,    communicate precisely to others. They try to use
+including precision. correct mathematical           clear definitions in discussion with others and in
+language, in discussion with others and in their    their own reasoning. They state the meaning of
+own reasoning. They state the meaning of the        the symbols they choose, including using the
+symbols they choose, including using the equal      equal sign consistently and appropriately. They      IAS summarizes what mathematically
+sign consistently and appropriately. They           are careful about specifying units of measure,       proficient students can do, while
+express solutions clearly and logically by using    and labeling axes to clarify the correspondence      CCSS gives examples of what
+the appropriate mathematical terms and              with quantities in a problem. They calculate         mathematically proficient students
+notation. They specify units of measure and         accurately and efficiently, express numerical        might do at different grade levels.
+label axes to clarify the correspondence with       answers with a degree of precision appropriate
+quantities in a problem. They calculate             for the problem context. In the elementary
+accurately and efficiently and check the validity   grades, students give carefully formulated
+of their results in the context of the problem.     explanations to each other. By the time they
+They express numerical answers with a degree        reach high school they have learned to examine
+of precision appropriate for the problem context.   claims and make explicit use of definitions.
+
+                                                  MPS.7: Look for and make use of structure.
+                                                  Mathematically proficient students look closely to
+PS.7: Look for and make use of structure.
+                                                  discern a pattern or structure. Young students,
+Mathematically proficient students look closely
+                                                  for example, might notice that three and seven
+to discern a pattern or structure. They step back
+                                                  more is the same amount as seven and three             IAS summarizes what mathematically
+for an overview and shift perspective. They
+                                                  more, or they may sort a collection of shapes          proficient students can do, while
+recognize and use properties of operations and
+                                                  according to how many sides the shapes have.           CCSS gives examples of what
+equality. They organize and classify geometric
+                                                  Later, students will see 7 × 8 equals the well         mathematically proficient students
+shapes based on their attributes. They see
+                                                  remembered 7 × 5 + 7 × 3, in preparation for           might do at different grade levels.
+expressions, equations, and geometric figures
+                                                  learning about the distributive property. In the
+as single objects or as being composed of
+                                                  expression x2 + 9x + 14, older students can see
+several objects.
+                                                  the 14 as 2 × 7 and the 9 as 2 + 7. They
+                                                  recognize the significance of an existing line in a
+
+
+
+                                                               Updated July 2024                                                      15
+             2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 4 Mathematics
+
+
+                                                  geometric figure and can use the strategy of
+                                                  drawing an auxiliary line for solving problems.
+                                                  They also can step back for an overview and shift
+                                                  perspective. They can see complicated things,
+                                                  such as some algebraic expressions, as single
+                                                  objects or as being composed of several objects.
+                                                  For example, they can see 5 - 3(x - y)2 as 5
+                                                  minus a positive number times a square and use
+                                                  that to realize that its value cannot be more than
+                                                  5 for any real numbers x and y.
+
+                                                 MP.8: Look for and express regularity in
+                                                 repeated reasoning.
+                                                 Mathematically proficient students notice if
+                                                 calculations are repeated, and look both for
+                                                 general methods and for shortcuts. Upper
+PS.8: Look for and express regularity in
+                                                 elementary students might notice when dividing
+repeated reasoning.
+                                                 25 by 11 that they are repeating the same
+Mathematically proficient students notice if
+                                                 calculations over and over again, and conclude
+calculations are repeated and look for general                                                          IAS summarizes what mathematically
+                                                 they have a repeating decimal. By paying
+methods and shortcuts. They notice regularity in                                                        proficient students can do, while
+                                                 attention to the calculation of slope as they
+mathematical problems and their work to create                                                          CCSS gives examples of what
+                                                 repeatedly check whether points are on the line
+a rule or formula. Mathematically proficient                                                            mathematically proficient students
+                                                 through (1, 2) with slope 3, middle school
+students maintain oversight of the process,                                                             might do at different grade levels.
+                                                 students might abstract the equation (y - 2)/(x - 1)
+while attending to the details as they solve a
+                                                 = 3. Noticing the regularity in the way terms
+problem. They continually evaluate the
+                                                 cancel when expanding (x - 1)(x + 1), (x - 1)(x2 +
+reasonableness of their intermediate results.
+                                                 x + 1), and (x - 1)(x3 + x2 + x + 1) might lead them
+                                                 to the general formula for the sum of a geometric
+                                                 series. As they work to solve a problem,
+                                                 mathematically proficient students maintain
+                                                 oversight of the process, while attending to the
+
+
+
+
+                                                             Updated July 2024                                                       16
+2023 Indiana Academic Standards - Common Core State Standards Correlation Guide for Grade 4 Mathematics
+
+
+                                  details. They continually evaluate the
+                                  reasonableness of their intermediate results.
+
+
+
+
+                                            Updated July 2024                                             17
+

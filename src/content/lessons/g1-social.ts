@@ -433,7 +433,15 @@ export const lessons: GradeLessons = {
     ["She knew the land and languages.", "Her name starts with S."],
     "Sacagawea",
   ),
-  // Units North Carolina teaches in this grade, with the lesson they have in the grade where they began.
+  // Indiana (us-in)
+"social/in-g1-american-symbols": lesson(
+    ["The Pledge of Allegiance is a promise to be loyal.", "Washington, D.C. is the capital of the United States.", "Lincoln helped end slavery. He is on the penny."],
+    "What is the capital of the United States?",
+    ["It is named for the first president."],
+    "Washington, D.C.",
+  ),
+
+  // North Carolina's units (us-nc).
   "social/ca-k-good-citizens": lesson(
     ["A good citizen follows rules and helps others.", "Breaking a rule has a consequence.", "Honest means telling the truth. Brave means trying."],
     "Which is a way to be a good citizen at school?",

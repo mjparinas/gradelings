@@ -1219,7 +1219,22 @@ export const lessons: GradeLessons = {
     ["They are in southern Asia.", "Mount Everest is part of them."],
     "the Himalayas",
   ),
-  // Units North Carolina teaches in this grade, with the lesson they have in the grade where they began.
+  // Indiana (us-in)
+"social/in-g7-japan": lesson(
+    ["Japan is a chain of islands; Honshu is the largest of its four main islands.", "Much of the land is mountainous, so most people live on narrow coastal plains.", "Both geography and beliefs, such as Shinto, Buddhism and Confucian ideas, shaped how people in Japan lived and saw the world."],
+    "Why do most people in Japan live along the coasts?",
+    ["Much of Japan is covered by mountains.", "Mountains are hard to farm and build on.", "Flat coastal plains are easier to live on."],
+    "Much of the land is mountainous.",
+  ),
+  // Indiana: units Indiana teaches in this grade
+  "social/al-g9-imperialism": lesson(
+    ["Imperial powers wanted colonies for raw materials, markets and power. The Berlin Conference set off the Scramble for Africa.", "In a sphere of influence, a foreign power controls trade and investment, as in China. The British East India Company took political control in India.", "People resisted: Ethiopia beat Italy at Adwa (1896); the Indian Rebellion and the Boxer Rebellion."],
+    "Ethiopia defeated Italy in 1896 at which battle?",
+    ["Ethiopia kept its independence.", "The battle was at Adwa."],
+    "Adwa",
+  ),
+
+  // North Carolina's units (us-nc).
   "social/ny-g5-columbian-exchange": lesson(
     ["After 1492, plants, animals, people, ideas and diseases crossed the Atlantic: the Columbian Exchange.", "Corn and potatoes went to Europe. Horses, cattle and wheat came to the Americas.", "Diseases killed millions, and more than 12 million Africans were forced across the Atlantic in the Middle Passage."],
     "Which went from the Americas to Europe: potatoes or horses?",

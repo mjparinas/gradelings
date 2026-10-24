@@ -607,7 +607,27 @@ export const lessons: GradeLessons = {
     ["Alike charges repel.", "The balloons push apart."],
     "push apart",
   ),
-  // North Carolina's own units.
+  // Indiana (us-in)
+"science/in-g5-sun-stars": lesson(
+    ["The sun looks brighter than other stars because it is much closer to Earth.", "Far-off headlights look dim and near ones bright: distance works the same way for stars.", "Earth spins once about every 24 hours, giving day and night.", "The North Star seems to stay still because it is almost straight above Earth's axis."],
+    "Some stars are bigger than the sun. Why do they look so small?",
+    ["Things far away look dimmer and smaller.", "Those stars are much farther from Earth."],
+    "they are very far away",
+  ),
+"science/in-g5-earth-water": lesson(
+    ["The geosphere is rocks and land; the hydrosphere is water; the atmosphere is air; the biosphere is life.", "Most fresh water is frozen in ice caps and glaciers.", "Only a small part of Earth's water is fresh and easy to use.", "Lake Michigan and Indiana's rivers and reservoirs hold fresh water many people use."],
+    "Trees take in water and give off water vapour. Which systems interact?",
+    ["Trees: biosphere. Water: hydrosphere.", "The vapour goes into the air: atmosphere."],
+    "biosphere, hydrosphere and atmosphere",
+  ),
+"science/in-g5-ecosystems": lesson(
+    ["Producers make food. Consumers eat other living things.", "Decomposers, like worms and fungi, return nutrients to the soil.", "Matter moves around an ecosystem again and again."],
+    "Great blue herons eat fish. Are herons producers or consumers?",
+    ["Herons can't make their own food.", "They eat other animals."],
+    "consumers",
+  ),
+
+  // North Carolina's units (us-nc).
   "science/nc-g5-ecosystems": lesson(
     ["Producers (plants) make food from sunlight. Consumers eat plants or other animals.", "Decomposers, like mushrooms, worms and bacteria, break down dead things and return matter to the soil.", "In an ecosystem, like a salt marsh, every part depends on the others."],
     "Which is a decomposer: a hawk, a mushroom or a fern?",

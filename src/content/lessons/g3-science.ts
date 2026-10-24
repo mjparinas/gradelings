@@ -571,7 +571,21 @@ export const lessons: GradeLessons = {
     ["Alligators need warm water.", "Swamps are warm and wet."],
     "in the Okefenokee Swamp",
   ),
-  // Units North Carolina teaches in this grade, with the lesson they have in the grade where they began.
+  // Indiana (us-in)
+"science/in-g3-fossils": lesson(
+    ["Fossils are remains or traces of living things from long ago.", "Mud covering a leaf can harden into a leaf print in rock.", "In rock layers, older fossils are usually lower down."],
+    "In rock layers, are older fossils usually higher or lower?",
+    ["Layers pile up over time.", "The first layers are at the bottom."],
+    "lower down",
+  ),
+"science/in-g3-weather-climate": lesson(
+    ["Weather is what the air is like today. Climate is the usual weather over many years.", "Read temperature and rain data for each season.", "Mountains get the most snow in winter."],
+    "Highs of 30 °F, 28 °F and 32 °F. Which season is it?",
+    ["Those are cold temperatures."],
+    "winter",
+  ),
+
+  // North Carolina's units (us-nc).
   "science/heart-bones-muscles": lesson(
     ["The heart pumps blood to the lungs to pick up oxygen, then out to the whole body.", "Exercise makes your heart beat faster, because muscles need more oxygen.", "Bones hold you up and protect organs. Muscles pull on bones through tendons.", "Muscles can only pull: the biceps contracts to bend your arm."],
     "Your heart beats 72 times a minute at rest and 118 after running. How many more beats?",
@@ -584,7 +598,6 @@ export const lessons: GradeLessons = {
     ["Saturn is much farther from the Sun than Mars.", "Farther planets have longer orbits."],
     "Saturn",
   ),
-  // North Carolina's own units.
   "science/nc-g3-land-features": lesson(
     ["Land features include mountains, valleys, canyons, caverns, volcanoes and islands.", "Mountains are high; valleys and canyons are low places between higher land, and canyons have steep walls.", "Moving water carves valleys, canyons and caverns slowly over a very long time."],
     "Which land feature has water all around it?",

@@ -667,7 +667,27 @@ export const lessons: GradeLessons = {
     ["Grass is the producer.", "The grasshopper eats the grass."],
     "the grasshopper",
   ),
-  // Units North Carolina teaches in this grade, with the lesson they have in the grade where they began.
+  // Indiana (us-in)
+"science/in-g4-earth-hazards": lesson(
+    ["Many earthquakes and volcanoes happen along the edges of Earth's plates.", "Indiana is far from a plate edge, but small earthquakes still happen in the Wabash Valley. Tornadoes and floods are Indiana's most common hazards.", "During an earthquake: drop, cover and hold on.", "A tsunami is a giant ocean wave. Volcanoes can drop falling ash."],
+    "The ground starts shaking at school. What should you do?",
+    ["Get low so you don't fall.", "Get under a desk and hold on until it stops."],
+    "drop, cover and hold on",
+  ),
+"science/in-g4-energy-resources": lesson(
+    ["Renewable resources, like sunlight, wind and moving water, won't run out.", "Solar farms use sunlight and wind farms in northern Indiana use wind. Geothermal plants use heat from inside Earth.", "Dams make electricity from moving water but can block fish from swimming upstream.", "Every energy choice has good points and costs for the environment."],
+    "A geothermal power plant makes electricity from what?",
+    ["“Geo” means Earth and “thermal” means heat."],
+    "heat from inside Earth",
+  ),
+"science/in-g4-rocks-erosion": lesson(
+    ["Weathering breaks rock. Erosion moves it. Running water moves the most.", "Glaciers scrape and carry rock. Roots growing in cracks can split rock.", "Over a very long time, erosion can carve deep canyons.", "Plants and their roots slow erosion on a hillside."],
+    "Which hillside erodes faster in heavy rain: a bare one or a grassy one?",
+    ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
+    "the bare hillside",
+  ),
+
+  // North Carolina's units (us-nc).
   "science/pe-magnets-static-3": lesson(
     ["Magnets attract iron and steel. Like poles push apart. Opposite poles pull together.", "A magnet's force can pass through thin things, like paper.", "A compass uses a magnet to find direction. Static electricity makes a balloon stick to a wall."],
     "Two magnets snap together. Are the ends alike or opposite poles?",
@@ -686,7 +706,6 @@ export const lessons: GradeLessons = {
     ["Fewer cars make the trip.", "That burns less fuel and makes less pollution."],
     "less fuel and less air pollution",
   ),
-  // North Carolina's own units.
   "science/nc-g4-earth-changes": lesson(
     ["Some changes to Earth's surface are fast, like earthquakes, landslides and floods.", "Others are slow, like weathering (breaking rock) and erosion (carrying pieces away) over many years.", "Plant roots, sea oats on dunes and walls can slow erosion."],
     "Waves slowly move sand along a beach over many years. Fast or slow change?",

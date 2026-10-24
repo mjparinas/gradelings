@@ -901,14 +901,33 @@ export const lessons: GradeLessons = {
     ["It is a tool people made.", "Tools and machines are capital resources."],
     "a capital resource",
   ),
-  // Units North Carolina teaches in this grade, with the lesson they have in the grade where they began.
+  // Indiana (us-in)
+  "social/in-g3-indiana-midwest": lesson(
+    ["Indiana is in the Midwest, between Illinois and Ohio, with Michigan and Lake Michigan to the north and Kentucky to the south.", "The Ohio River forms Indiana's southern border.", "Use a map's compass rose and key to find places."],
+    "Which river forms Indiana's southern border?",
+    ["It is on the south side of the state.", "Kentucky is across it."],
+    "the Ohio River",
+  ),
+  "social/in-g3-indiana-communities": lesson(
+    ["Communities can be urban (cities), suburban (near cities) or rural (farms and small towns).", "Indianapolis is Indiana's capital and largest city.", "Communities change as people, jobs and transportation change."],
+    "A small town surrounded by farms is what kind of community?",
+    ["It is far from a big city.", "Farms are in the countryside."],
+    "rural",
+  ),
+  "social/in-g3-levels-of-government": lesson(
+    ["Government has three levels: local, state and national.", "A mayor leads a city, the governor leads Indiana, and the president leads the country.", "Each level has its own jobs: towns fix streets, states build highways, the nation prints money."],
+    "Who leads the state of Indiana?",
+    ["It is not the mayor or the president.", "The state leader is elected by all of Indiana."],
+    "the governor",
+  ),
+
+  // North Carolina's units (us-nc).
   "social/communities-compared": lesson(
     ["Urban communities are cities: many people, buildings and busy streets.", "Rural communities have more open space and fewer people.", "All communities need food, water, shelter and clothing."],
     "Which place is likely quieter and has more open space?",
     ["Cities are busy and crowded.", "The countryside has fields and fewer people."],
     "a rural area",
   ),
-  // North Carolina's own units.
   "social/nc-g3-nc-regions-communities": lesson(
     ["North Carolina has three regions: the Coastal Plain in the east, the Piedmont in the middle and the Mountains in the west.", "The land and climate of each region shape how people live and work there.", "Communities can be rural (farms and small towns), suburban or urban (cities)."],
     "Which region has the beaches and the Outer Banks?",

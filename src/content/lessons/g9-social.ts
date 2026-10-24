@@ -1207,7 +1207,21 @@ export const lessons: GradeLessons = {
     ["Lenders want to know if you repay.", "Paying on time matters most."],
     "payment history",
   ),
-  // North Carolina's own units.
+  // Indiana (us-in)
+  "social/in-g9-governing-indiana": lesson(
+    ["Indiana's General Assembly has 50 senators and 100 representatives.", "A majority of each house can override the governor's veto, which is easier than in Congress.", "Benjamin Harrison, the only president elected from Indiana, won the Electoral College in 1888 with fewer popular votes."],
+    "What does the Indiana General Assembly need to override a governor's veto?",
+    ["Congress needs two-thirds.", "Indiana's rule is easier."],
+    "a majority of the members of each house",
+  ),
+  "social/in-g9-economics": lesson(
+    ["Scarcity means wants are greater than resources, so every choice has an opportunity cost.", "Fiscal policy is taxes and spending; monetary policy is the money supply and interest rates, set by the Federal Reserve.", "Raising interest rates usually slows borrowing and fights inflation."],
+    "You choose to study instead of working a shift. What is the opportunity cost?",
+    ["It is the next best choice you gave up.", "You gave up the pay from the shift."],
+    "the pay from the shift you didn't work",
+  ),
+
+  // North Carolina's units (us-nc).
   "social/nc-g9-nc-government": lesson(
     ["Federalism divides power between the nation and the states; North Carolina's counties and cities have only the powers the General Assembly gives them.", "Local governments include counties, cities (often council-manager) and special districts.", "North Carolina's courts run from District and Superior Court to the Court of Appeals and the state Supreme Court; federal cases go to federal courts."],
     "Which North Carolina court hears felony trials?",

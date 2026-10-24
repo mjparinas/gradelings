@@ -631,7 +631,15 @@ export const lessons: GradeLessons = {
     ["The nation has a president.", "A city has a mayor."],
     "the governor",
   ),
-  // Units North Carolina teaches in this grade, with the lesson they have in the grade where they began.
+  // Indiana (us-in)
+  "social/in-g2-pledge-harrison": lesson(
+    ["The Pledge of Allegiance is a promise to be loyal to the United States.", "Benjamin Harrison, from Indiana, was the 23rd president. He asked schools to fly the flag.", "Good citizens follow rules, help others and care for their community."],
+    "Benjamin Harrison was a president from which state?",
+    ["He lived in Indianapolis.", "His home is still there."],
+    "Indiana",
+  ),
+
+  // North Carolina's units (us-nc).
   "social/ny-g1-american-symbols": lesson(
     ["The Pledge of Allegiance is a promise to be loyal.", "Washington, D.C. is the capital of the United States.", "Lincoln helped end slavery. He is on the penny."],
     "What is the capital of the United States?",
@@ -644,7 +652,6 @@ export const lessons: GradeLessons = {
     ["Clothing is a need, and it has to suit the weather.", "Loose, light clothes let air move and keep people cool."],
     "to stay cool in the heat",
   ),
-  // North Carolina's own units.
   "social/nc-g2-our-government": lesson(
     ["In a democracy, citizens choose leaders by voting, and leaders must follow the law too.", "The national government has three branches: Congress makes laws, the president carries them out, and the courts decide what laws mean.", "Each branch can check the others, so no one has too much power."],
     "Which branch decides what a law means?",
