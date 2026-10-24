@@ -619,6 +619,12 @@ export const lessons: GradeLessons = {
     ["Cold air pushes in behind the front.", "So the temperature drops."],
     "it drops",
   ),
+  "science/md-g6-weather": lesson(
+    ["An air mass is a huge body of air with the same temperature and moisture.", "Where two air masses meet is a front; fronts often bring storms.", "Sunlight drives evaporation, and gravity brings rain and snow back down."],
+    "A cold front passes. What usually happens to the temperature?",
+    ["Cold air pushes in behind the front.", "So the temperature drops."],
+    "it drops",
+  ),
   "science/nj-g6-weather": lesson(
     ["An air mass is a huge body of air with the same temperature and moisture.", "Where two air masses meet is a front; fronts often bring storms.", "Sunlight drives evaporation, and gravity brings rain and snow back down."],
     "A cold front passes. What usually happens to the temperature?",
@@ -630,6 +636,12 @@ export const lessons: GradeLessons = {
     "Why is southern Illinois usually warmer than northern Illinois?",
     ["Think about latitude.", "It is closer to the equator."],
     "it is closer to the equator",
+  ),
+  "science/md-g6-climate": lesson(
+    ["Climate depends on latitude, nearness to large bodies of water, mountains and winds.", "Places near the ocean, like Maryland's coast, have milder winters than high or inland places.", "Greenhouse gases like carbon dioxide trap heat and are warming Earth."],
+    "Why is the Eastern Shore usually warmer in winter than the mountains of Garrett County?",
+    ["Think about height and the ocean.", "Low land near the ocean stays warmer than high mountains."],
+    "it is lower and closer to the ocean",
   ),
   "science/nj-g6-climate": lesson(
     ["Climate depends on latitude, nearness to large bodies of water, mountains and winds.", "The ocean keeps the Jersey Shore milder in winter than the hills of the northwest.", "Greenhouse gases like carbon dioxide trap heat and are warming Earth."],
@@ -643,6 +655,12 @@ export const lessons: GradeLessons = {
     ["There is only one parent.", "The new plant is a copy, so it is asexual."],
     "asexual",
   ),
+  "science/md-g6-growth": lesson(
+    ["Animals use behaviours like songs and nests to help them reproduce.", "Plants use flowers, scents and wind to spread pollen and seeds.", "Growth depends on genes and the environment (water, food, light). Sexual reproduction mixes genes from two parents; asexual makes copies of one."],
+    "A potato grows from a piece of potato. Sexual or asexual reproduction?",
+    ["There is only one parent.", "The new plant is a copy, so it is asexual."],
+    "asexual",
+  ),
   "science/nj-g6-growth": lesson(
     ["Animals use behaviors like songs and nests to help them reproduce.", "Plants use flowers, scents and wind to spread pollen and seeds.", "Growth depends on genes and the environment (water, food, light). Sexual reproduction mixes genes from two parents; asexual makes copies of one."],
     "A potato grows from a piece of potato. Sexual or asexual reproduction?",
@@ -650,6 +668,12 @@ export const lessons: GradeLessons = {
     "asexual",
   ),
   "science/il-g6-design": lesson(
+    ["Criteria are what a solution must do to succeed. Constraints are limits.", "A decision matrix compares designs against the criteria.", "A trade-off is giving up some of one thing to get more of another.", "After a test fails, improve the design and test again."],
+    "A cheaper filter cleans water less well. Choosing it means accepting a… what?",
+    ["You give up some cleaning to save money.", "Giving up one thing for another is a trade-off."],
+    "a trade-off",
+  ),
+  "science/md-g6-design": lesson(
     ["Criteria are what a solution must do to succeed. Constraints are limits.", "A decision matrix compares designs against the criteria.", "A trade-off is giving up some of one thing to get more of another.", "After a test fails, improve the design and test again."],
     "A cheaper filter cleans water less well. Choosing it means accepting a… what?",
     ["You give up some cleaning to save money.", "Giving up one thing for another is a trade-off."],

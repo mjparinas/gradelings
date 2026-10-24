@@ -440,4 +440,10 @@ export const lessons: GradeLessons = {
     ["It is named for the first president."],
     "Washington, D.C.",
   ),
+  "social/md-g1-maryland-symbols": lesson(
+    ["A symbol stands for something special about a place.", "Maryland's bird is the Baltimore oriole. Its flower is the black-eyed Susan.", "Maryland's capital is Annapolis. Its biggest city is Baltimore."],
+    "What is Maryland's state bird?",
+    ["It is orange and black.", "It shares its name with Maryland's biggest city."],
+    "the Baltimore oriole",
+  ),
 };

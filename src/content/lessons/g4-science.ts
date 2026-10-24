@@ -583,6 +583,12 @@ export const lessons: GradeLessons = {
     ["Windows can break and fly.", "Go low, to a basement or an inside room."],
     "a basement or inside room",
   ),
+  "science/md-g4-earth-hazards": lesson(
+    ["Maps show patterns: volcanoes and earthquakes line up where Earth's plates meet.", "Hazards like hurricanes, floods and tornadoes can't be stopped, but harm can be reduced.", "Sirens, levees, strong buildings and safe places all help."],
+    "A tornado warning sounds. Where is the safest place in a house?",
+    ["Windows can break and fly.", "Go low, to a basement or an inside room."],
+    "a basement or inside room",
+  ),
   "science/nj-g4-earth-hazards": lesson(
     ["Maps show patterns: volcanoes and earthquakes line up where Earth's plates meet.", "Hazards like hurricanes, floods and earthquakes can't be stopped, but harm can be reduced.", "Warnings, dunes, raised homes and strong buildings all help."],
     "A hurricane is coming to the shore. What is one way to reduce harm?",
@@ -595,6 +601,12 @@ export const lessons: GradeLessons = {
     ["The wind keeps blowing.", "It will not run out, so it is renewable."],
     "renewable",
   ),
+  "science/md-g4-energy-resources": lesson(
+    ["Energy comes from natural resources.", "Renewable resources like wind, sunlight and moving water don't run out.", "Fossil fuels like coal take millions of years to form, and burning them adds pollution."],
+    "Is wind blowing off Maryland's ocean coast renewable or nonrenewable?",
+    ["The wind keeps blowing.", "It will not run out, so it is renewable."],
+    "renewable",
+  ),
   "science/nj-g4-energy-resources": lesson(
     ["Energy comes from natural resources.", "Renewable resources like wind, sunlight and moving water don't run out.", "Fossil fuels like natural gas take millions of years to form, and burning them adds pollution."],
     "Is sunlight on New Jersey's solar panels renewable or nonrenewable?",
@@ -603,6 +615,12 @@ export const lessons: GradeLessons = {
   ),
   "science/il-g4-rocks-erosion": lesson(
     ["Weathering breaks rock. Erosion moves it. Running water moves the most.", "Glaciers scrape and carry rock. Roots growing in cracks can split rock.", "Over a very long time, erosion can carve deep canyons.", "Plants and their roots slow erosion on a hillside."],
+    "Which hillside erodes faster in heavy rain: a bare one or a grassy one?",
+    ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
+    "the bare hillside",
+  ),
+  "science/md-g4-rocks-erosion": lesson(
+    ["Weathering breaks rock. Erosion moves it. Running water moves the most.", "Waves wear away cliffs along the bay. Roots growing in cracks can split rock.", "Over a very long time, erosion can carve deep canyons.", "Plants and their roots slow erosion on a hillside."],
     "Which hillside erodes faster in heavy rain: a bare one or a grassy one?",
     ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
     "the bare hillside",

@@ -1220,4 +1220,46 @@ export const lessons: GradeLessons = {
     ["It is the next best choice you gave up.", "You gave up the pay from the shift."],
     "the pay from the shift you didn't work",
   ),
+  "social/md-g9-governing-maryland": lesson(
+    ["Maryland's constitution dates from 1867 and begins with a Declaration of Rights.", "The General Assembly has a Senate (47 members) and a House of Delegates (141 members). The governor leads; the Supreme Court of Maryland is the top court.", "Under federalism, some powers belong to the nation, some to the states and some are shared."],
+    "How many members are in the Maryland House of Delegates?",
+    ["There are 47 districts.", "Each district elects three delegates: 47 × 3 = 141."],
+    "141",
+  ),
+  "social/md-g9-courts-and-rights": lesson(
+    ["Judicial review (Marbury v. Madison, 1803) lets courts strike down laws that break the Constitution.", "Due process means government must use fair procedures. The 14th Amendment applies most of the Bill of Rights to the states.", "Criminal cases are brought by the government. Civil cases settle disputes between people, sometimes by mediation or arbitration."],
+    "Who brings a criminal case to court?",
+    ["A crime is an offense against the community.", "The government, through a prosecutor, brings the case."],
+    "the government",
+  ),
+  "social/md-g9-us-government": lesson(
+    ["The Constitution sets up three branches: Congress makes laws, the President carries them out and the courts interpret them.", "Checks and balances let each branch limit the others.", "The Bill of Rights and later amendments protect people's rights."],
+    "Which branch can declare a law unconstitutional?",
+    ["Courts decide what laws mean.", "That is the judicial branch."],
+    "the judicial branch",
+  ),
+  "social/md-g9-economic-policy": lesson(
+    ["Scarcity means government must choose; the opportunity cost is the next best choice given up.", "Fiscal policy is government taxing and spending. Congress and the President set it.", "Monetary policy is the Federal Reserve changing interest rates and the money supply."],
+    "The Federal Reserve raises interest rates. Is that fiscal or monetary policy?",
+    ["Fiscal policy is taxing and spending.", "The Fed's tools are monetary policy."],
+    "monetary policy",
+  ),
+  "social/md-g9-foreign-policy": lesson(
+    ["US foreign policy balances three goals: trade, national security and human rights.", "The President negotiates treaties and leads the military, but the Senate approves treaties and Congress declares war.", "Tools include diplomacy, foreign aid, economic sanctions and military force. NATO and the United Nations help countries act together."],
+    "Refusing to trade with a country to pressure it is which foreign policy tool?",
+    ["It is not aid and not force.", "It is an economic penalty: sanctions."],
+    "economic sanctions",
+  ),
+  "social/md-g9-public-policy": lesson(
+    ["Regulatory agencies such as the EPA, FDA and OSHA are part of the executive branch and carry out laws Congress passes.", "Government may step in when a market fails, such as when pollution harms people who did not choose it.", "Shared problems, like cleaning up the Chesapeake Bay, lead states, the federal government and local governments to work together."],
+    "Which agency protects air and water quality?",
+    ["Its name includes the word environment.", "It is the Environmental Protection Agency."],
+    "the EPA",
+  ),
+  "social/md-g9-elections": lesson(
+    ["Primaries choose each party's candidate. In a closed primary, only that party's registered voters take part.", "The President is chosen by the Electoral College: 538 electors, and 270 are needed to win. A state's electors equal its senators plus its representatives.", "A bill goes through committees and votes in both houses of Congress, then the President signs or vetoes it."],
+    "How many electoral votes does Maryland have?",
+    ["Maryland has 2 senators and 8 representatives.", "2 + 8 = 10."],
+    "10",
+  ),
 };

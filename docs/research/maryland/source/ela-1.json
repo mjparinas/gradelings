@@ -1,0 +1,1950 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.marylandpublicschools.org/programs/Documents/ELA/Standards/Grades_1_2_MCCR_RELA_Standards.pdf",
+   "title": "Maryland College and Career Ready Standards for English Language Arts Grades 1-2 "
+  },
+  "educationLevels": [
+   "01"
+  ],
+  "id": "3FC2D02A6B4B469D9800867F326B8734",
+  "jurisdiction": {
+   "id": "49FCDFBD2CF04033A9C347BFA0584DF0",
+   "title": "Maryland"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "0213588DA27C4B64B69B15BC3404BBC6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "664B5777C301416E8BAC42EDFC4FEB8A",
+     "3DBABA17985349A98740549E9549CEFD"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Ask and answer questions about key details in a text. ",
+    "id": "0213588DA27C4B64B69B15BC3404BBC6",
+    "listId": "1",
+    "parentId": "664B5777C301416E8BAC42EDFC4FEB8A",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "RI.1.1"
+   },
+   "04B9E55F01AF451795008E1C9A69BAED": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A4445650C25843BC972E243C90996560",
+     "F3AC89B003ED418EA7B9C6B84862BF90",
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Orally produce single-syllable words by blending sounds\n(phonemes), including consonant blends. ",
+    "id": "04B9E55F01AF451795008E1C9A69BAED",
+    "listId": "b",
+    "parentId": "A4445650C25843BC972E243C90996560",
+    "position": 1037,
+    "statementLabel": null,
+    "statementNotation": "RF.1.2.b"
+   },
+   "0896AC96DF0D41F8935F22CA2A656D84": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5A640E56A08E45999519DA71B2FAA140"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Production and Distribution of Writing ",
+    "id": "0896AC96DF0D41F8935F22CA2A656D84",
+    "listId": "",
+    "parentId": "5A640E56A08E45999519DA71B2FAA140",
+    "position": 1059,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "09B7E3F8763643309FF6B14D512EC4DA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5B1EA42A6895498592CC91BC5B3219A3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Key Ideas and Details ",
+    "id": "09B7E3F8763643309FF6B14D512EC4DA",
+    "listId": "",
+    "parentId": "5B1EA42A6895498592CC91BC5B3219A3",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "0A0BEEAB9E4B4D3682A14272245D48D7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "73D35294CDAB4FF6877531716038BBCE",
+     "5A7E214350084BB28A38A4CBEE5FD157",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify real-life connections between words and their use\n(e.g., note places at home that are cozy). ",
+    "id": "0A0BEEAB9E4B4D3682A14272245D48D7",
+    "listId": "c",
+    "parentId": "73D35294CDAB4FF6877531716038BBCE",
+    "position": 1110,
+    "statementLabel": null,
+    "statementNotation": "L.1.5.c"
+   },
+   "0AE30AAE004D4A9FB35CC5A928C6B489": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3DBABA17985349A98740549E9549CEFD"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Integration of Knowledge and Ideas",
+    "id": "0AE30AAE004D4A9FB35CC5A928C6B489",
+    "listId": "",
+    "parentId": "3DBABA17985349A98740549E9549CEFD",
+    "position": 1024,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "0B906DF9FBEE493A993F071CFF58E320": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "73D35294CDAB4FF6877531716038BBCE",
+     "5A7E214350084BB28A38A4CBEE5FD157",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Sort words into categories (e.g., colors, clothing) to gain a\nsense of the concepts the categories represent. ",
+    "id": "0B906DF9FBEE493A993F071CFF58E320",
+    "listId": "a",
+    "parentId": "73D35294CDAB4FF6877531716038BBCE",
+    "position": 1108,
+    "statementLabel": null,
+    "statementNotation": "L.1.5.a"
+   },
+   "0DD092032DA8441AA86D1A15A39DF1F6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BF705AF90E7844B6A1826C21B80B5B0C",
+     "D9670809F5874CBDB5C25B4605B1FD79",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use verbs to convey a sense of past, present, and future\n(e.g., Yesterday I walked home; Today I walk home; Tomorrow I will\nwalk home).",
+    "id": "0DD092032DA8441AA86D1A15A39DF1F6",
+    "listId": "e",
+    "parentId": "BF705AF90E7844B6A1826C21B80B5B0C",
+    "position": 1088,
+    "statementLabel": null,
+    "statementNotation": "L.1.1.e"
+   },
+   "13B88101544842C9BF751A364BCFB216": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BF705AF90E7844B6A1826C21B80B5B0C",
+     "D9670809F5874CBDB5C25B4605B1FD79",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use frequently occurring adjectives.",
+    "id": "13B88101544842C9BF751A364BCFB216",
+    "listId": "f",
+    "parentId": "BF705AF90E7844B6A1826C21B80B5B0C",
+    "position": 1089,
+    "statementLabel": null,
+    "statementNotation": "L.1.1.f"
+   },
+   "140D5D3F216246FAB065DCBDC5C690F9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BF705AF90E7844B6A1826C21B80B5B0C",
+     "D9670809F5874CBDB5C25B4605B1FD79",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Print all upper- and lowercase letters.",
+    "id": "140D5D3F216246FAB065DCBDC5C690F9",
+    "listId": "a",
+    "parentId": "BF705AF90E7844B6A1826C21B80B5B0C",
+    "position": 1084,
+    "statementLabel": null,
+    "statementNotation": "L.1.1.a"
+   },
+   "16D69BE830AF41669AAECBA625F47865": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A4445650C25843BC972E243C90996560",
+     "F3AC89B003ED418EA7B9C6B84862BF90",
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Distinguish long from short vowel sounds in spoken single-syllable words. ",
+    "id": "16D69BE830AF41669AAECBA625F47865",
+    "listId": "a",
+    "parentId": "A4445650C25843BC972E243C90996560",
+    "position": 1036,
+    "statementLabel": null,
+    "statementNotation": "RF.1.2.a"
+   },
+   "1AAA78E7DCFF4AE29E2F0C3E1DD3E124": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8F7420EFBF49428DB339F2C142DE7C99"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Presentation of Knowledge and Ideas ",
+    "id": "1AAA78E7DCFF4AE29E2F0C3E1DD3E124",
+    "listId": "",
+    "parentId": "8F7420EFBF49428DB339F2C142DE7C99",
+    "position": 1077,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "1B11DC183C64458381ECC07D42E6F5A4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "09B7E3F8763643309FF6B14D512EC4DA",
+     "5B1EA42A6895498592CC91BC5B3219A3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Describe characters, settings, and major events in a story, using\nkey details.",
+    "id": "1B11DC183C64458381ECC07D42E6F5A4",
+    "listId": "3",
+    "parentId": "09B7E3F8763643309FF6B14D512EC4DA",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "RL.1.3"
+   },
+   "1B16E13C285D4932980DFD851E22142C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "AD680071A018436D9A3D6DEA0FB3BEAD",
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Know and apply grade-level phonics and word analysis skills in\ndecoding words.",
+    "id": "1B16E13C285D4932980DFD851E22142C",
+    "listId": "3",
+    "parentId": "AD680071A018436D9A3D6DEA0FB3BEAD",
+    "position": 1041,
+    "statementLabel": null,
+    "statementNotation": "RF.1.3"
+   },
+   "1BD2DBF88FED4C7EABC73234F3DE7198": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5418BCE80A454D788685266C399392DB",
+     "A6C057EC2C6341BB869FDEE27093CF0B",
+     "8F7420EFBF49428DB339F2C142DE7C99"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Ask questions to clear up any confusion about the topics\nand texts under discussion. ",
+    "id": "1BD2DBF88FED4C7EABC73234F3DE7198",
+    "listId": "c",
+    "parentId": "5418BCE80A454D788685266C399392DB",
+    "position": 1074,
+    "statementLabel": null,
+    "statementNotation": "SL.1.1.c"
+   },
+   "2342CC0FC2604B059F645CB98A12D660": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1B16E13C285D4932980DFD851E22142C",
+     "AD680071A018436D9A3D6DEA0FB3BEAD",
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Know the spelling-sound correspondences for common\nconsonant digraphs.",
+    "id": "2342CC0FC2604B059F645CB98A12D660",
+    "listId": "a",
+    "parentId": "1B16E13C285D4932980DFD851E22142C",
+    "position": 1042,
+    "statementLabel": null,
+    "statementNotation": "RF.1.3.a"
+   },
+   "2461F9C587274E35AAF215B270DAC21D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1B16E13C285D4932980DFD851E22142C",
+     "AD680071A018436D9A3D6DEA0FB3BEAD",
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use knowledge that every syllable must have a vowel\nsound to determine the number of syllables in a printed word. ",
+    "id": "2461F9C587274E35AAF215B270DAC21D",
+    "listId": "d",
+    "parentId": "1B16E13C285D4932980DFD851E22142C",
+    "position": 1045,
+    "statementLabel": null,
+    "statementNotation": "RF.1.3.d"
+   },
+   "26B254ACBA93425FA44FAC36510DDC4F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9BE8C6340B52428ABEAC5D61D2DF5502",
+     "6201873DA6A342D0A9C1603AD0A05414",
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use context to confirm or self-correct word recognition\nand understanding, rereading as necessary",
+    "id": "26B254ACBA93425FA44FAC36510DDC4F",
+    "listId": "c",
+    "parentId": "9BE8C6340B52428ABEAC5D61D2DF5502",
+    "position": 1053,
+    "statementLabel": null,
+    "statementNotation": "RF.1.4.c"
+   },
+   "2877F018F5764038A124A757723284ED": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A4445650C25843BC972E243C90996560",
+     "F3AC89B003ED418EA7B9C6B84862BF90",
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Isolate and pronounce initial, medial vowel, and final\nsounds (phonemes), in spoken single-syllable words. ",
+    "id": "2877F018F5764038A124A757723284ED",
+    "listId": "c",
+    "parentId": "A4445650C25843BC972E243C90996560",
+    "position": 1038,
+    "statementLabel": null,
+    "statementNotation": "RF.1.2.c"
+   },
+   "2ACBC5E8F1B64A4BB8F6B07EDAF1F7D2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D9670809F5874CBDB5C25B4605B1FD79",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Demonstrate command of the conventions of standard\nEnglish capitalization, punctuation, and spelling when writing. ",
+    "id": "2ACBC5E8F1B64A4BB8F6B07EDAF1F7D2",
+    "listId": "2",
+    "parentId": "D9670809F5874CBDB5C25B4605B1FD79",
+    "position": 1094,
+    "statementLabel": null,
+    "statementNotation": "L.1.2"
+   },
+   "2F46BE535C434312AEC2E11997B8B044": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C2E29811B2844D18B3182E1281F3C9CB",
+     "5A7E214350084BB28A38A4CBEE5FD157",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use frequently occurring affixes as a clue to the meaning of a\nword. ",
+    "id": "2F46BE535C434312AEC2E11997B8B044",
+    "listId": "b",
+    "parentId": "C2E29811B2844D18B3182E1281F3C9CB",
+    "position": 1105,
+    "statementLabel": null,
+    "statementNotation": "L.1.4.b"
+   },
+   "337D7ADFA00943E8879399A2A4BD7820": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5B1EA42A6895498592CC91BC5B3219A3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Craft and Structure",
+    "id": "337D7ADFA00943E8879399A2A4BD7820",
+    "listId": "",
+    "parentId": "5B1EA42A6895498592CC91BC5B3219A3",
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "3500A0028BD544289B493610873B122A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4D82C291C51B429A99FA528DD9C32BC6",
+     "5A640E56A08E45999519DA71B2FAA140"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "(Begins in Grade 4.) ",
+    "id": "3500A0028BD544289B493610873B122A",
+    "listId": "9",
+    "parentId": "4D82C291C51B429A99FA528DD9C32BC6",
+    "position": 1066,
+    "statementLabel": null,
+    "statementNotation": "W.1.9"
+   },
+   "352FB498CE3B49BAB0D5AAD02A60209A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3DBABA17985349A98740549E9549CEFD"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Range of Reading and Level of Text Complexity",
+    "id": "352FB498CE3B49BAB0D5AAD02A60209A",
+    "listId": "",
+    "parentId": "3DBABA17985349A98740549E9549CEFD",
+    "position": 1028,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "3AFC57B890494E07BCDEE986E881B52A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2ACBC5E8F1B64A4BB8F6B07EDAF1F7D2",
+     "D9670809F5874CBDB5C25B4605B1FD79",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use end punctuation for sentences.",
+    "id": "3AFC57B890494E07BCDEE986E881B52A",
+    "listId": "b",
+    "parentId": "2ACBC5E8F1B64A4BB8F6B07EDAF1F7D2",
+    "position": 1096,
+    "statementLabel": null,
+    "statementNotation": "L.1.2.b"
+   },
+   "3D4E37B10CBA4D0697419B2CFCE810FA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4D82C291C51B429A99FA528DD9C32BC6",
+     "5A640E56A08E45999519DA71B2FAA140"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "With guidance and support from adults, recall information from\nexperiences or gather information from provided sources to answer a\nquestion.",
+    "id": "3D4E37B10CBA4D0697419B2CFCE810FA",
+    "listId": "8",
+    "parentId": "4D82C291C51B429A99FA528DD9C32BC6",
+    "position": 1065,
+    "statementLabel": null,
+    "statementNotation": "W.1.8"
+   },
+   "3D6CC135D6C84F3190470384ECA76361": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BF705AF90E7844B6A1826C21B80B5B0C",
+     "D9670809F5874CBDB5C25B4605B1FD79",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use determiners (e.g., articles, demonstratives).",
+    "id": "3D6CC135D6C84F3190470384ECA76361",
+    "listId": "h",
+    "parentId": "BF705AF90E7844B6A1826C21B80B5B0C",
+    "position": 1091,
+    "statementLabel": null,
+    "statementNotation": "L.1.1.h"
+   },
+   "3D86E83418D54DB6AB543EB75830EE3D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C2E29811B2844D18B3182E1281F3C9CB",
+     "5A7E214350084BB28A38A4CBEE5FD157",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify frequently occurring root words (e.g., look) and their\ninflectional forms (e.g. looks, looked, looking). ",
+    "id": "3D86E83418D54DB6AB543EB75830EE3D",
+    "listId": "c",
+    "parentId": "C2E29811B2844D18B3182E1281F3C9CB",
+    "position": 1106,
+    "statementLabel": null,
+    "statementNotation": "L.1.4.c"
+   },
+   "3DBABA17985349A98740549E9549CEFD": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Reading Informational Text Standards",
+    "id": "3DBABA17985349A98740549E9549CEFD",
+    "listId": "",
+    "parentId": null,
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "3F11D6632CD2438BA1235548B83631F8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "90C757F551744414B8B87D0CC336CF5B",
+     "5B1EA42A6895498592CC91BC5B3219A3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use illustrations and details in a story to describe its characters,\nsetting, or events. ",
+    "id": "3F11D6632CD2438BA1235548B83631F8",
+    "listId": "7",
+    "parentId": "90C757F551744414B8B87D0CC336CF5B",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": "RL.1.7"
+   },
+   "42A6CF1DCF5A494F9E622810C1689D19": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0AE30AAE004D4A9FB35CC5A928C6B489",
+     "3DBABA17985349A98740549E9549CEFD"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use the illustrations and details in a text to describe its key ideas. ",
+    "id": "42A6CF1DCF5A494F9E622810C1689D19",
+    "listId": "7",
+    "parentId": "0AE30AAE004D4A9FB35CC5A928C6B489",
+    "position": 1025,
+    "statementLabel": null,
+    "statementNotation": "RI.1.7"
+   },
+   "444BA65B54C045E183E98BDC8714FBA8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "337D7ADFA00943E8879399A2A4BD7820",
+     "5B1EA42A6895498592CC91BC5B3219A3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify words and phrases in stories or poems that suggest\nfeelings or appeal to the senses.  ",
+    "id": "444BA65B54C045E183E98BDC8714FBA8",
+    "listId": "4",
+    "parentId": "337D7ADFA00943E8879399A2A4BD7820",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "RL.1.4"
+   },
+   "4663D95D26D04360AFE5C4C8CE5F6ACD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1B16E13C285D4932980DFD851E22142C",
+     "AD680071A018436D9A3D6DEA0FB3BEAD",
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Know final -e and common vowel team conventions for\nrepresenting long vowel sounds. ",
+    "id": "4663D95D26D04360AFE5C4C8CE5F6ACD",
+    "listId": "c",
+    "parentId": "1B16E13C285D4932980DFD851E22142C",
+    "position": 1044,
+    "statementLabel": null,
+    "statementNotation": "RF.1.3.c"
+   },
+   "4753658025D747C4B7229A012ECF2BFA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0AE30AAE004D4A9FB35CC5A928C6B489",
+     "3DBABA17985349A98740549E9549CEFD"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify basic similarities in and differences between two texts on\nthe same topic (e.g., in illustrations, descriptions, or procedures). ",
+    "id": "4753658025D747C4B7229A012ECF2BFA",
+    "listId": "9",
+    "parentId": "0AE30AAE004D4A9FB35CC5A928C6B489",
+    "position": 1027,
+    "statementLabel": null,
+    "statementNotation": "RI.1.9"
+   },
+   "4AFA1F9BB6C4429FAD2E86440700A75E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9BE8C6340B52428ABEAC5D61D2DF5502",
+     "6201873DA6A342D0A9C1603AD0A05414",
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Read grade-level text orally with accuracy, appropriate\nrate, and expression on successive readings.",
+    "id": "4AFA1F9BB6C4429FAD2E86440700A75E",
+    "listId": "b",
+    "parentId": "9BE8C6340B52428ABEAC5D61D2DF5502",
+    "position": 1052,
+    "statementLabel": null,
+    "statementNotation": "RF.1.4.b"
+   },
+   "4D82C291C51B429A99FA528DD9C32BC6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5A640E56A08E45999519DA71B2FAA140"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Research to Build and Present Knowledge",
+    "id": "4D82C291C51B429A99FA528DD9C32BC6",
+    "listId": "",
+    "parentId": "5A640E56A08E45999519DA71B2FAA140",
+    "position": 1063,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "4F09D2127D1B4054ACA0BEF575831955": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "09B7E3F8763643309FF6B14D512EC4DA",
+     "5B1EA42A6895498592CC91BC5B3219A3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Retell stories, including key details, and demonstrate\nunderstanding of their central message or lesson. ",
+    "id": "4F09D2127D1B4054ACA0BEF575831955",
+    "listId": "2",
+    "parentId": "09B7E3F8763643309FF6B14D512EC4DA",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "RL.1.2"
+   },
+   "5418BCE80A454D788685266C399392DB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6C057EC2C6341BB869FDEE27093CF0B",
+     "8F7420EFBF49428DB339F2C142DE7C99"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Participate in collaborative conversations with diverse partners\nabout grade 1 topics and texts with peers and adults in small and larger\ngroups.  ",
+    "id": "5418BCE80A454D788685266C399392DB",
+    "listId": "1",
+    "parentId": "A6C057EC2C6341BB869FDEE27093CF0B",
+    "position": 1071,
+    "statementLabel": null,
+    "statementNotation": "SL.1.1"
+   },
+   "591A9BE3E0614F6D9AC6A00DBB44708F": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Language Standards",
+    "id": "591A9BE3E0614F6D9AC6A00DBB44708F",
+    "listId": "",
+    "parentId": null,
+    "position": 1081,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "5A640E56A08E45999519DA71B2FAA140": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Writing Standards",
+    "id": "5A640E56A08E45999519DA71B2FAA140",
+    "listId": "",
+    "parentId": null,
+    "position": 1054,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "5A7E214350084BB28A38A4CBEE5FD157": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Vocabulary Acquisition and Use",
+    "id": "5A7E214350084BB28A38A4CBEE5FD157",
+    "listId": "",
+    "parentId": "591A9BE3E0614F6D9AC6A00DBB44708F",
+    "position": 1102,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "5AB3B6DCA67C4F39AE1F9B307A5FE000": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6EA90562766E4FD38A263D331E29466F",
+     "5A640E56A08E45999519DA71B2FAA140"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Write narratives in which they recount two or more appropriately\nsequenced events, include some details regarding what happened, use\ntemporal words to signal event order, and provide some sense of\nclosure. ",
+    "id": "5AB3B6DCA67C4F39AE1F9B307A5FE000",
+    "listId": "3",
+    "parentId": "6EA90562766E4FD38A263D331E29466F",
+    "position": 1058,
+    "statementLabel": null,
+    "statementNotation": "W.1.3"
+   },
+   "5B1EA42A6895498592CC91BC5B3219A3": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Reading Literature Standards",
+    "id": "5B1EA42A6895498592CC91BC5B3219A3",
+    "listId": "",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "5D5BFCEDD5AE4D4EB497870F0F49D28E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BF705AF90E7844B6A1826C21B80B5B0C",
+     "D9670809F5874CBDB5C25B4605B1FD79",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use common, proper, and possessive nouns. ",
+    "id": "5D5BFCEDD5AE4D4EB497870F0F49D28E",
+    "listId": "",
+    "parentId": "BF705AF90E7844B6A1826C21B80B5B0C",
+    "position": 1085,
+    "statementLabel": null,
+    "statementNotation": "L.1.1.b"
+   },
+   "5D6147DDF7B24EE6BAADD1F4ED79B9E6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1B16E13C285D4932980DFD851E22142C",
+     "AD680071A018436D9A3D6DEA0FB3BEAD",
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Decode regularly spelled one-syllable words.",
+    "id": "5D6147DDF7B24EE6BAADD1F4ED79B9E6",
+    "listId": "b",
+    "parentId": "1B16E13C285D4932980DFD851E22142C",
+    "position": 1043,
+    "statementLabel": null,
+    "statementNotation": "RF.1.3.b"
+   },
+   "60E052C33A4549A4B855DF62550F0666": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3DBABA17985349A98740549E9549CEFD"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Craft and Structure",
+    "id": "60E052C33A4549A4B855DF62550F0666",
+    "listId": "",
+    "parentId": "3DBABA17985349A98740549E9549CEFD",
+    "position": 1020,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "6201873DA6A342D0A9C1603AD0A05414": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Fluency",
+    "id": "6201873DA6A342D0A9C1603AD0A05414",
+    "listId": "",
+    "parentId": "6E800CCA930E48BB8874161F829CDCB1",
+    "position": 1049,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "6304B4FD32444278B8F71CBFB472809C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2ACBC5E8F1B64A4BB8F6B07EDAF1F7D2",
+     "D9670809F5874CBDB5C25B4605B1FD79",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Spell untaught words phonetically, drawing on phonemic\nawareness and spelling conventions.",
+    "id": "6304B4FD32444278B8F71CBFB472809C",
+    "listId": "e",
+    "parentId": "2ACBC5E8F1B64A4BB8F6B07EDAF1F7D2",
+    "position": 1099,
+    "statementLabel": null,
+    "statementNotation": "L.1.2.e"
+   },
+   "64374FD6FFBF4B0295068A2A491DB221": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6C057EC2C6341BB869FDEE27093CF0B",
+     "8F7420EFBF49428DB339F2C142DE7C99"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Ask and answer questions about what a speaker says in order to\ngather additional information, or clarify something that is not\nunderstood. ",
+    "id": "64374FD6FFBF4B0295068A2A491DB221",
+    "listId": "3",
+    "parentId": "A6C057EC2C6341BB869FDEE27093CF0B",
+    "position": 1076,
+    "statementLabel": null,
+    "statementNotation": "SL.1.3"
+   },
+   "65D35761497A4CD8BABBB2562C9A6A0B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5418BCE80A454D788685266C399392DB",
+     "A6C057EC2C6341BB869FDEE27093CF0B",
+     "8F7420EFBF49428DB339F2C142DE7C99"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Follow agreed-upon rules for discussion (e.g., listening to\nothers with care, speaking one at a time about the topics and texts\nunder discussion).",
+    "id": "65D35761497A4CD8BABBB2562C9A6A0B",
+    "listId": "a",
+    "parentId": "5418BCE80A454D788685266C399392DB",
+    "position": 1072,
+    "statementLabel": null,
+    "statementNotation": "SL.1.1.a"
+   },
+   "664B5777C301416E8BAC42EDFC4FEB8A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3DBABA17985349A98740549E9549CEFD"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Key Ideas and Details",
+    "id": "664B5777C301416E8BAC42EDFC4FEB8A",
+    "listId": "",
+    "parentId": "3DBABA17985349A98740549E9549CEFD",
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "6984834ADAE54531B3ACB58306F06F27": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "60E052C33A4549A4B855DF62550F0666",
+     "3DBABA17985349A98740549E9549CEFD"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Know and use various text features (e.g., headings, tables of\ncontents, glossaries, electronic menus, icons) to locate key facts or\ninformation in a text.",
+    "id": "6984834ADAE54531B3ACB58306F06F27",
+    "listId": "5",
+    "parentId": "60E052C33A4549A4B855DF62550F0666",
+    "position": 1022,
+    "statementLabel": null,
+    "statementNotation": "RI.1.5"
+   },
+   "6BB97090A5324056B74274374ECC609C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1B16E13C285D4932980DFD851E22142C",
+     "AD680071A018436D9A3D6DEA0FB3BEAD",
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize and read grade-appropriate irregularly spelled\nwords. ",
+    "id": "6BB97090A5324056B74274374ECC609C",
+    "listId": "g",
+    "parentId": "1B16E13C285D4932980DFD851E22142C",
+    "position": 1048,
+    "statementLabel": null,
+    "statementNotation": "RF.1.3.g"
+   },
+   "6E800CCA930E48BB8874161F829CDCB1": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Reading Foundational Skills Standards",
+    "id": "6E800CCA930E48BB8874161F829CDCB1",
+    "listId": "",
+    "parentId": null,
+    "position": 1030,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "6EA90562766E4FD38A263D331E29466F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5A640E56A08E45999519DA71B2FAA140"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Text Types and Purposes",
+    "id": "6EA90562766E4FD38A263D331E29466F",
+    "listId": "",
+    "parentId": "5A640E56A08E45999519DA71B2FAA140",
+    "position": 1055,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "6F91A786EDB140759621549573D0D57F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "337D7ADFA00943E8879399A2A4BD7820",
+     "5B1EA42A6895498592CC91BC5B3219A3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Explain major differences between books that tell stories and\nbooks that give information, drawing on a wide reading of a range of text\ntypes. ",
+    "id": "6F91A786EDB140759621549573D0D57F",
+    "listId": "5",
+    "parentId": "337D7ADFA00943E8879399A2A4BD7820",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": "RL.1.5"
+   },
+   "700288E7B7EA4F99842FC5E6758C225F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "664B5777C301416E8BAC42EDFC4FEB8A",
+     "3DBABA17985349A98740549E9549CEFD"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify the main topic and retell key details of a text. ",
+    "id": "700288E7B7EA4F99842FC5E6758C225F",
+    "listId": "2",
+    "parentId": "664B5777C301416E8BAC42EDFC4FEB8A",
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "RI.1.2"
+   },
+   "707015EB1B76401F9F79A3C1A79045BD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0896AC96DF0D41F8935F22CA2A656D84",
+     "5A640E56A08E45999519DA71B2FAA140"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "With guidance and support from adults, use a variety of ",
+    "id": "707015EB1B76401F9F79A3C1A79045BD",
+    "listId": "6",
+    "parentId": "0896AC96DF0D41F8935F22CA2A656D84",
+    "position": 1062,
+    "statementLabel": null,
+    "statementNotation": "W.1.6"
+   },
+   "7254BAAF2AEE4B20ABE18097B74E7157": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Print Concepts",
+    "id": "7254BAAF2AEE4B20ABE18097B74E7157",
+    "listId": "",
+    "parentId": "6E800CCA930E48BB8874161F829CDCB1",
+    "position": 1031,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "72A0F298727B494F9D23D92063196EB5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6EA90562766E4FD38A263D331E29466F",
+     "5A640E56A08E45999519DA71B2FAA140"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Write informative/explanatory texts in which they name a topic,\nsupply some facts about the topic, and provide some sense of closure. ",
+    "id": "72A0F298727B494F9D23D92063196EB5",
+    "listId": "2",
+    "parentId": "6EA90562766E4FD38A263D331E29466F",
+    "position": 1057,
+    "statementLabel": null,
+    "statementNotation": "W.1.2"
+   },
+   "73D35294CDAB4FF6877531716038BBCE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5A7E214350084BB28A38A4CBEE5FD157",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "With guidance and support from adults, demonstrate\nunderstanding of word relationships and nuances in word\nmeanings. ",
+    "id": "73D35294CDAB4FF6877531716038BBCE",
+    "listId": "5",
+    "parentId": "5A7E214350084BB28A38A4CBEE5FD157",
+    "position": 1107,
+    "statementLabel": null,
+    "statementNotation": "L.1.5"
+   },
+   "7932965066C24594ABB8A75B3EC1E606": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "664B5777C301416E8BAC42EDFC4FEB8A",
+     "3DBABA17985349A98740549E9549CEFD"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Describe the connection between two individuals, events, ideas,\nor pieces of information in a text.",
+    "id": "7932965066C24594ABB8A75B3EC1E606",
+    "listId": "3",
+    "parentId": "664B5777C301416E8BAC42EDFC4FEB8A",
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": "RI.1.3"
+   },
+   "80C4CB9CCBFC4501A1196A15972A223B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0896AC96DF0D41F8935F22CA2A656D84",
+     "5A640E56A08E45999519DA71B2FAA140"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "(Begins in Grade 3.) ",
+    "id": "80C4CB9CCBFC4501A1196A15972A223B",
+    "listId": "4",
+    "parentId": "0896AC96DF0D41F8935F22CA2A656D84",
+    "position": 1060,
+    "statementLabel": null,
+    "statementNotation": "W.1.4"
+   },
+   "834DE7062B8E4A77BA2D3B210A085038": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "60E052C33A4549A4B855DF62550F0666",
+     "3DBABA17985349A98740549E9549CEFD"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Distinguish between information provided by pictures or other\nillustrations and information provided by the words in a text. ",
+    "id": "834DE7062B8E4A77BA2D3B210A085038",
+    "listId": "6",
+    "parentId": "60E052C33A4549A4B855DF62550F0666",
+    "position": 1023,
+    "statementLabel": null,
+    "statementNotation": "RI.1.6"
+   },
+   "837A24F91C10496DBB9D5C977F5DEFB5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "352FB498CE3B49BAB0D5AAD02A60209A",
+     "3DBABA17985349A98740549E9549CEFD"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "With prompting and support, read informational texts\nappropriately complex for grade 1.",
+    "id": "837A24F91C10496DBB9D5C977F5DEFB5",
+    "listId": "10",
+    "parentId": "352FB498CE3B49BAB0D5AAD02A60209A",
+    "position": 1029,
+    "statementLabel": null,
+    "statementNotation": "RI.1.10"
+   },
+   "83E3F53598AA4D8284E82CDD52588AB8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "337D7ADFA00943E8879399A2A4BD7820",
+     "5B1EA42A6895498592CC91BC5B3219A3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify who is telling the story at various points in a text. ",
+    "id": "83E3F53598AA4D8284E82CDD52588AB8",
+    "listId": "6",
+    "parentId": "337D7ADFA00943E8879399A2A4BD7820",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "RL.1.6"
+   },
+   "8598D6056715464A861C359D103F0D6E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DA3D5EF9C23E43699A08C930A19E95F5",
+     "5A640E56A08E45999519DA71B2FAA140"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "(Begins in Grade 3.)",
+    "id": "8598D6056715464A861C359D103F0D6E",
+    "listId": "10",
+    "parentId": "DA3D5EF9C23E43699A08C930A19E95F5",
+    "position": 1068,
+    "statementLabel": null,
+    "statementNotation": "W.1.10"
+   },
+   "85F3F292DDEA4505AC549CDFC5E062D5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2ACBC5E8F1B64A4BB8F6B07EDAF1F7D2",
+     "D9670809F5874CBDB5C25B4605B1FD79",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use commas in dates and to separate single words in a series.",
+    "id": "85F3F292DDEA4505AC549CDFC5E062D5",
+    "listId": "c",
+    "parentId": "2ACBC5E8F1B64A4BB8F6B07EDAF1F7D2",
+    "position": 1097,
+    "statementLabel": null,
+    "statementNotation": "L.1.2.c"
+   },
+   "86742B516ADB4FE199103C98CD91461E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "90C757F551744414B8B87D0CC336CF5B",
+     "5B1EA42A6895498592CC91BC5B3219A3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Compare and contrast the adventures and experiences of\ncharacters in stories. ",
+    "id": "86742B516ADB4FE199103C98CD91461E",
+    "listId": "9",
+    "parentId": "90C757F551744414B8B87D0CC336CF5B",
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "RL.1.9"
+   },
+   "8F7420EFBF49428DB339F2C142DE7C99": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Speaking and Listening Standards ",
+    "id": "8F7420EFBF49428DB339F2C142DE7C99",
+    "listId": "",
+    "parentId": null,
+    "position": 1069,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "90C757F551744414B8B87D0CC336CF5B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5B1EA42A6895498592CC91BC5B3219A3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Integration of Knowledge and Ideas",
+    "id": "90C757F551744414B8B87D0CC336CF5B",
+    "listId": "",
+    "parentId": "5B1EA42A6895498592CC91BC5B3219A3",
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "93EFB91FB52E474290F835F2289039B4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5A7E214350084BB28A38A4CBEE5FD157",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use words and phrases acquired through conversations,\nreading and being read to, and responding to texts, including\nusing frequently occurring conjunctions to signal simple\nrelationships (e.g., because).",
+    "id": "93EFB91FB52E474290F835F2289039B4",
+    "listId": "6",
+    "parentId": "5A7E214350084BB28A38A4CBEE5FD157",
+    "position": 1112,
+    "statementLabel": null,
+    "statementNotation": "L.1.6"
+   },
+   "9893F8826DA94CDB9B4A1B70D669DF39": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5B1EA42A6895498592CC91BC5B3219A3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Range of Reading and Level of Text Complexity ",
+    "id": "9893F8826DA94CDB9B4A1B70D669DF39",
+    "listId": "",
+    "parentId": "5B1EA42A6895498592CC91BC5B3219A3",
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "9BE8C6340B52428ABEAC5D61D2DF5502": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6201873DA6A342D0A9C1603AD0A05414",
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Read with sufficient accuracy and fluency to support\ncomprehension. ",
+    "id": "9BE8C6340B52428ABEAC5D61D2DF5502",
+    "listId": "4",
+    "parentId": "6201873DA6A342D0A9C1603AD0A05414",
+    "position": 1050,
+    "statementLabel": null,
+    "statementNotation": "RF.1.4"
+   },
+   "9CF6E1E3C5E74A52A39E9654DDD1B6B3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7254BAAF2AEE4B20ABE18097B74E7157",
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Demonstrate understanding of the organization and basic\nfeatures of print.",
+    "id": "9CF6E1E3C5E74A52A39E9654DDD1B6B3",
+    "listId": "1",
+    "parentId": "7254BAAF2AEE4B20ABE18097B74E7157",
+    "position": 1032,
+    "statementLabel": null,
+    "statementNotation": "RF.1.1"
+   },
+   "9F40055EE40B47C8B68A9F9A5CC1D407": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1AAA78E7DCFF4AE29E2F0C3E1DD3E124",
+     "8F7420EFBF49428DB339F2C142DE7C99"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Add drawings or other visual displays to descriptions when\nappropriate to clarify ideas, thoughts, and feelings. ",
+    "id": "9F40055EE40B47C8B68A9F9A5CC1D407",
+    "listId": "5",
+    "parentId": "1AAA78E7DCFF4AE29E2F0C3E1DD3E124",
+    "position": 1079,
+    "statementLabel": null,
+    "statementNotation": "SL.1.5"
+   },
+   "A0C9D324093343F1827D430DEFCF4745": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EF8F30C5817B4EF0826E0CC25E547078",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "(Begins in Grade 2.)",
+    "id": "A0C9D324093343F1827D430DEFCF4745",
+    "listId": "3",
+    "parentId": "EF8F30C5817B4EF0826E0CC25E547078",
+    "position": 1101,
+    "statementLabel": null,
+    "statementNotation": "L.1.3"
+   },
+   "A4445650C25843BC972E243C90996560": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F3AC89B003ED418EA7B9C6B84862BF90",
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Demonstrate understanding of spoken words, syllables, and\nsounds (phonemes). ",
+    "id": "A4445650C25843BC972E243C90996560",
+    "listId": "2",
+    "parentId": "F3AC89B003ED418EA7B9C6B84862BF90",
+    "position": 1035,
+    "statementLabel": null,
+    "statementNotation": "RF.1.2"
+   },
+   "A6C057EC2C6341BB869FDEE27093CF0B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8F7420EFBF49428DB339F2C142DE7C99"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Comprehension and Collaboration",
+    "id": "A6C057EC2C6341BB869FDEE27093CF0B",
+    "listId": "",
+    "parentId": "8F7420EFBF49428DB339F2C142DE7C99",
+    "position": 1070,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "A6E8F11BD84C486982C02F7B6B25F4B9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "90C757F551744414B8B87D0CC336CF5B",
+     "5B1EA42A6895498592CC91BC5B3219A3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "(Not applicable to literature) ",
+    "id": "A6E8F11BD84C486982C02F7B6B25F4B9",
+    "listId": "8",
+    "parentId": "90C757F551744414B8B87D0CC336CF5B",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "RL.1.8"
+   },
+   "A804E1E0F24544B1A70EE31FE8AE3C76": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BF705AF90E7844B6A1826C21B80B5B0C",
+     "D9670809F5874CBDB5C25B4605B1FD79",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use singular and plural nouns with matching verbs in basic\nsentences (e.g., He hops; We hop).",
+    "id": "A804E1E0F24544B1A70EE31FE8AE3C76",
+    "listId": "c",
+    "parentId": "BF705AF90E7844B6A1826C21B80B5B0C",
+    "position": 1086,
+    "statementLabel": null,
+    "statementNotation": "L.1.1.c"
+   },
+   "AB61C454906A46568156553FF8E1775F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1AAA78E7DCFF4AE29E2F0C3E1DD3E124",
+     "8F7420EFBF49428DB339F2C142DE7C99"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Produce complete sentences when appropriate to task and\nsituation. (See grade 1 Language standards 1 and 3 for specific\nexpectations.)",
+    "id": "AB61C454906A46568156553FF8E1775F",
+    "listId": "6",
+    "parentId": "1AAA78E7DCFF4AE29E2F0C3E1DD3E124",
+    "position": 1080,
+    "statementLabel": null,
+    "statementNotation": "SL.1.6"
+   },
+   "AD680071A018436D9A3D6DEA0FB3BEAD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Phonics and Word Recognition",
+    "id": "AD680071A018436D9A3D6DEA0FB3BEAD",
+    "listId": "",
+    "parentId": "6E800CCA930E48BB8874161F829CDCB1",
+    "position": 1040,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "B3B761FC610E44CC97F738428185601E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6EA90562766E4FD38A263D331E29466F",
+     "5A640E56A08E45999519DA71B2FAA140"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Write opinion pieces in which they introduce the topic or name\nthe book they are writing about, state an opinion, supply a reason for\nthe opinion, and provide some sense of closure. ",
+    "id": "B3B761FC610E44CC97F738428185601E",
+    "listId": "1",
+    "parentId": "6EA90562766E4FD38A263D331E29466F",
+    "position": 1056,
+    "statementLabel": null,
+    "statementNotation": "W.1.1"
+   },
+   "B9E662A7411E45238B13F8962AD6D886": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BF705AF90E7844B6A1826C21B80B5B0C",
+     "D9670809F5874CBDB5C25B4605B1FD79",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use personal, possessive, and indefinite pronouns (e.g., I,\nme, my; they, them, their, anyone, everything).",
+    "id": "B9E662A7411E45238B13F8962AD6D886",
+    "listId": "d",
+    "parentId": "BF705AF90E7844B6A1826C21B80B5B0C",
+    "position": 1087,
+    "statementLabel": null,
+    "statementNotation": "L.1.1.d"
+   },
+   "BA2DBB5D18084F44BE3203161014CEBA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BF705AF90E7844B6A1826C21B80B5B0C",
+     "D9670809F5874CBDB5C25B4605B1FD79",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Produce and expand complete simple and compound\ndeclarative, interrogative, imperative, and exclamatory sentences\nin response to prompts.",
+    "id": "BA2DBB5D18084F44BE3203161014CEBA",
+    "listId": "j",
+    "parentId": "BF705AF90E7844B6A1826C21B80B5B0C",
+    "position": 1093,
+    "statementLabel": null,
+    "statementNotation": "L.1.1.j"
+   },
+   "BE5501A6A00A4F74936401D3941926D9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2ACBC5E8F1B64A4BB8F6B07EDAF1F7D2",
+     "D9670809F5874CBDB5C25B4605B1FD79",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use conventional spelling for words with common spelling\npatterns and for frequently occurring irregular words.",
+    "id": "BE5501A6A00A4F74936401D3941926D9",
+    "listId": "d",
+    "parentId": "2ACBC5E8F1B64A4BB8F6B07EDAF1F7D2",
+    "position": 1098,
+    "statementLabel": null,
+    "statementNotation": "L.1.2.d"
+   },
+   "BF705AF90E7844B6A1826C21B80B5B0C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D9670809F5874CBDB5C25B4605B1FD79",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Demonstrate command of the conventions of\nstandard English grammar and usage when writing or\nspeaking. ",
+    "id": "BF705AF90E7844B6A1826C21B80B5B0C",
+    "listId": "1",
+    "parentId": "D9670809F5874CBDB5C25B4605B1FD79",
+    "position": 1083,
+    "statementLabel": null,
+    "statementNotation": "L.1.1"
+   },
+   "C18C9FDD6A884FB9B46507383E613537": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0AE30AAE004D4A9FB35CC5A928C6B489",
+     "3DBABA17985349A98740549E9549CEFD"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify the reasons an author gives to support points in a text. ",
+    "id": "C18C9FDD6A884FB9B46507383E613537",
+    "listId": "8",
+    "parentId": "0AE30AAE004D4A9FB35CC5A928C6B489",
+    "position": 1026,
+    "statementLabel": null,
+    "statementNotation": "RI.1.8"
+   },
+   "C2E29811B2844D18B3182E1281F3C9CB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5A7E214350084BB28A38A4CBEE5FD157",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Determine or clarify the meaning of unknown and multiple-meaning words and phrases based on grade 1 reading and content,\nchoosing flexibly from an array of strategies. ",
+    "id": "C2E29811B2844D18B3182E1281F3C9CB",
+    "listId": "4",
+    "parentId": "5A7E214350084BB28A38A4CBEE5FD157",
+    "position": 1103,
+    "statementLabel": null,
+    "statementNotation": "L.1.4"
+   },
+   "C7D8360FC3B1469FAFE875331CA9C824": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0896AC96DF0D41F8935F22CA2A656D84",
+     "5A640E56A08E45999519DA71B2FAA140"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "With guidance and support from adults, focus on a topic, respond\nto questions and suggestions from peers, and add details to strengthen\nwriting as needed. ",
+    "id": "C7D8360FC3B1469FAFE875331CA9C824",
+    "listId": "5",
+    "parentId": "0896AC96DF0D41F8935F22CA2A656D84",
+    "position": 1061,
+    "statementLabel": null,
+    "statementNotation": "W.1.5"
+   },
+   "C88ADDE4124845A1AC25686716B7FE51": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2ACBC5E8F1B64A4BB8F6B07EDAF1F7D2",
+     "D9670809F5874CBDB5C25B4605B1FD79",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Capitalize dates and names of people.",
+    "id": "C88ADDE4124845A1AC25686716B7FE51",
+    "listId": "a",
+    "parentId": "2ACBC5E8F1B64A4BB8F6B07EDAF1F7D2",
+    "position": 1095,
+    "statementLabel": null,
+    "statementNotation": "L.1.2.a"
+   },
+   "CAB6B095BE37495E8F7649ED2B04C656": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5418BCE80A454D788685266C399392DB",
+     "A6C057EC2C6341BB869FDEE27093CF0B",
+     "8F7420EFBF49428DB339F2C142DE7C99"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Build on others' talk in conversations by responding to the\ncomments of others through multiple exchanges. ",
+    "id": "CAB6B095BE37495E8F7649ED2B04C656",
+    "listId": "b",
+    "parentId": "5418BCE80A454D788685266C399392DB",
+    "position": 1073,
+    "statementLabel": null,
+    "statementNotation": "SL.1.1.b"
+   },
+   "CD6F777D76DC430FB00B10CFECF5960E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BF705AF90E7844B6A1826C21B80B5B0C",
+     "D9670809F5874CBDB5C25B4605B1FD79",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use frequently occurring conjunctions (e.g., and, but, or, so,\nbecause).",
+    "id": "CD6F777D76DC430FB00B10CFECF5960E",
+    "listId": "g",
+    "parentId": "BF705AF90E7844B6A1826C21B80B5B0C",
+    "position": 1090,
+    "statementLabel": null,
+    "statementNotation": "L.1.1.g"
+   },
+   "CD786817830545DCBDA021A4DC893096": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1AAA78E7DCFF4AE29E2F0C3E1DD3E124",
+     "8F7420EFBF49428DB339F2C142DE7C99"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Describe people, places, things, and events with\nrelevant details, expressing ideas and feelings clearly. ",
+    "id": "CD786817830545DCBDA021A4DC893096",
+    "listId": "4",
+    "parentId": "1AAA78E7DCFF4AE29E2F0C3E1DD3E124",
+    "position": 1078,
+    "statementLabel": null,
+    "statementNotation": "SL.1.4"
+   },
+   "CED98FFF76CB49C1B962A07240E5A793": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9CF6E1E3C5E74A52A39E9654DDD1B6B3",
+     "7254BAAF2AEE4B20ABE18097B74E7157",
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize the distinguishing features of a sentence (e.g.,\nfirst word, capitalization, ending punctuation).",
+    "id": "CED98FFF76CB49C1B962A07240E5A793",
+    "listId": "a",
+    "parentId": "9CF6E1E3C5E74A52A39E9654DDD1B6B3",
+    "position": 1033,
+    "statementLabel": null,
+    "statementNotation": "RF.1.1.a"
+   },
+   "D292EFC91B574099A9236E1C13115C0F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1B16E13C285D4932980DFD851E22142C",
+     "AD680071A018436D9A3D6DEA0FB3BEAD",
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Read words with inflectional endings. ",
+    "id": "D292EFC91B574099A9236E1C13115C0F",
+    "listId": "f",
+    "parentId": "1B16E13C285D4932980DFD851E22142C",
+    "position": 1047,
+    "statementLabel": null,
+    "statementNotation": "RF.1.3.f"
+   },
+   "D294D5441C7A44A8AE7C877B5097B0E8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BF705AF90E7844B6A1826C21B80B5B0C",
+     "D9670809F5874CBDB5C25B4605B1FD79",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use frequently occurring prepositions (e.g., during, beyond,\ntoward).",
+    "id": "D294D5441C7A44A8AE7C877B5097B0E8",
+    "listId": "i",
+    "parentId": "BF705AF90E7844B6A1826C21B80B5B0C",
+    "position": 1092,
+    "statementLabel": null,
+    "statementNotation": "L.1.1.i"
+   },
+   "D6621883E0554A1080DD752231735E5E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9893F8826DA94CDB9B4A1B70D669DF39",
+     "5B1EA42A6895498592CC91BC5B3219A3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "With prompting and support, read prose and poetry of\nappropriate complexity for grade 1.",
+    "id": "D6621883E0554A1080DD752231735E5E",
+    "listId": "10",
+    "parentId": "9893F8826DA94CDB9B4A1B70D669DF39",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "RL.1.10"
+   },
+   "D76AD4FB71F74F1185948C7A6254EF76": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4D82C291C51B429A99FA528DD9C32BC6",
+     "5A640E56A08E45999519DA71B2FAA140"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Participate in shared research and writing projects (e.g., explore a\nnumber of \"how-to\" books on a given topic and use them to write a\nsequence of instructions). ",
+    "id": "D76AD4FB71F74F1185948C7A6254EF76",
+    "listId": "7",
+    "parentId": "4D82C291C51B429A99FA528DD9C32BC6",
+    "position": 1064,
+    "statementLabel": null,
+    "statementNotation": "W.1.7"
+   },
+   "D801E6E3149B4B6EB5BDEF141FB1A1D5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9BE8C6340B52428ABEAC5D61D2DF5502",
+     "6201873DA6A342D0A9C1603AD0A05414",
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Read grade-level text with purpose and understanding.",
+    "id": "D801E6E3149B4B6EB5BDEF141FB1A1D5",
+    "listId": "a",
+    "parentId": "9BE8C6340B52428ABEAC5D61D2DF5502",
+    "position": 1051,
+    "statementLabel": null,
+    "statementNotation": "RF.1.4.a"
+   },
+   "D8C2124CD8C44DE1B14C78BA2E22448E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "60E052C33A4549A4B855DF62550F0666",
+     "3DBABA17985349A98740549E9549CEFD"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Ask and answer questions to help determine or clarify the\nmeaning of words and phrases in a text.",
+    "id": "D8C2124CD8C44DE1B14C78BA2E22448E",
+    "listId": "4",
+    "parentId": "60E052C33A4549A4B855DF62550F0666",
+    "position": 1021,
+    "statementLabel": null,
+    "statementNotation": "RI.1.4"
+   },
+   "D9670809F5874CBDB5C25B4605B1FD79": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Contents of Standard English",
+    "id": "D9670809F5874CBDB5C25B4605B1FD79",
+    "listId": "",
+    "parentId": "591A9BE3E0614F6D9AC6A00DBB44708F",
+    "position": 1082,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "DA3D5EF9C23E43699A08C930A19E95F5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5A640E56A08E45999519DA71B2FAA140"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Range of Writing",
+    "id": "DA3D5EF9C23E43699A08C930A19E95F5",
+    "listId": "",
+    "parentId": "5A640E56A08E45999519DA71B2FAA140",
+    "position": 1067,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "E8FD217B495D4A97BC3959E2607B4872": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A4445650C25843BC972E243C90996560",
+     "F3AC89B003ED418EA7B9C6B84862BF90",
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Segment spoken single-syllable words into their complete\nsequence of individual sounds (phonemes).",
+    "id": "E8FD217B495D4A97BC3959E2607B4872",
+    "listId": "d",
+    "parentId": "A4445650C25843BC972E243C90996560",
+    "position": 1039,
+    "statementLabel": null,
+    "statementNotation": "RF.1.2.d"
+   },
+   "EAA5CD3FFF124709B31E179DC842BA24": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "73D35294CDAB4FF6877531716038BBCE",
+     "5A7E214350084BB28A38A4CBEE5FD157",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Define words by category and by one or more key attributes\n(e.g., a duck is a bird that swims; a tiger is a large cat with stripes).",
+    "id": "EAA5CD3FFF124709B31E179DC842BA24",
+    "listId": "b",
+    "parentId": "73D35294CDAB4FF6877531716038BBCE",
+    "position": 1109,
+    "statementLabel": null,
+    "statementNotation": "L.1.5.b"
+   },
+   "EF8F30C5817B4EF0826E0CC25E547078": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Knowledge of Language ",
+    "id": "EF8F30C5817B4EF0826E0CC25E547078",
+    "listId": "",
+    "parentId": "591A9BE3E0614F6D9AC6A00DBB44708F",
+    "position": 1100,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "F3AC89B003ED418EA7B9C6B84862BF90": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Phonological Awareness",
+    "id": "F3AC89B003ED418EA7B9C6B84862BF90",
+    "listId": "",
+    "parentId": "6E800CCA930E48BB8874161F829CDCB1",
+    "position": 1034,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "F3CAFEEE6AB5482F861C14768A8CBEDE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6C057EC2C6341BB869FDEE27093CF0B",
+     "8F7420EFBF49428DB339F2C142DE7C99"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Ask and answer questions about key details in a text read aloud or\ninformation presented orally or through other media. ",
+    "id": "F3CAFEEE6AB5482F861C14768A8CBEDE",
+    "listId": "2",
+    "parentId": "A6C057EC2C6341BB869FDEE27093CF0B",
+    "position": 1075,
+    "statementLabel": null,
+    "statementNotation": "SL.1.2"
+   },
+   "F54A7FB557B74E24BA506BB057F1164D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "09B7E3F8763643309FF6B14D512EC4DA",
+     "5B1EA42A6895498592CC91BC5B3219A3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Ask and answer questions about key details in a text.",
+    "id": "F54A7FB557B74E24BA506BB057F1164D",
+    "listId": "1",
+    "parentId": "09B7E3F8763643309FF6B14D512EC4DA",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": "RL.1.1"
+   },
+   "F7F6DC369A10491E921647A62EFE53CF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "73D35294CDAB4FF6877531716038BBCE",
+     "5A7E214350084BB28A38A4CBEE5FD157",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Distinguish shades of meaning among verbs differing in\nmanner (e.g., look, peek, glance, stare, glare, scowl) and adjectives\ndiffering in intensity (e.g., large, gigantic) by defining or choosing\nthem or by acting out the meanings.",
+    "id": "F7F6DC369A10491E921647A62EFE53CF",
+    "listId": "d",
+    "parentId": "73D35294CDAB4FF6877531716038BBCE",
+    "position": 1111,
+    "statementLabel": null,
+    "statementNotation": "L.1.5.d"
+   },
+   "FD6A45821E474A02B7ACFEDF5C70AC72": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C2E29811B2844D18B3182E1281F3C9CB",
+     "5A7E214350084BB28A38A4CBEE5FD157",
+     "591A9BE3E0614F6D9AC6A00DBB44708F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use sentence-level context as a clue to the meaning of a\nword or phrase. ",
+    "id": "FD6A45821E474A02B7ACFEDF5C70AC72",
+    "listId": "a",
+    "parentId": "C2E29811B2844D18B3182E1281F3C9CB",
+    "position": 1104,
+    "statementLabel": null,
+    "statementNotation": "L.1.4.a"
+   },
+   "FF2F510FB3DC4519AF58B144EDAD53F3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1B16E13C285D4932980DFD851E22142C",
+     "AD680071A018436D9A3D6DEA0FB3BEAD",
+     "6E800CCA930E48BB8874161F829CDCB1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Decode two-syllable words following basic patterns by\nbreaking the words into syllables. ",
+    "id": "FF2F510FB3DC4519AF58B144EDAD53F3",
+    "listId": "e",
+    "parentId": "1B16E13C285D4932980DFD851E22142C",
+    "position": 1046,
+    "statementLabel": null,
+    "statementNotation": "RF.1.3.e"
+   }
+  },
+  "subject": "English Language Arts (2022-)",
+  "title": "Grade 1"
+ }
+}

@@ -1430,4 +1430,40 @@ export const lessons: GradeLessons = {
     ["Subtract the earlier year from the later year.", "1825 − 1816"],
     "9 years",
   ),
+  "social/md-g4-worlds-collide": lesson(
+    ["Before 1600, the Piscataway and other nations around the bay farmed, fished and traded by canoe.", "Europeans explored for riches, trade and land. John Smith mapped the Chesapeake in 1608.", "The Columbian Exchange moved plants, animals and diseases across the ocean. It helped some groups and hurt many Native and African peoples."],
+    "Corn went from the Americas to Europe. Horses came the other way. What is this called?",
+    ["Things crossed the Atlantic in both directions after 1492.", "It is named after Columbus."],
+    "the Columbian Exchange",
+  ),
+  "social/md-g4-maryland-colony": lesson(
+    ["The Calverts received the Maryland charter in 1632. Colonists arrived on the Ark and the Dove in 1634 and built St. Mary's City.", "The Calverts wanted a place where Catholics and Protestants could live in peace. The Toleration Act of 1649 protected Christians, not other faiths.", "Tobacco was the main crop. The capital moved to Annapolis in 1695."],
+    "Who did the Toleration Act of 1649 protect?",
+    ["It was about religious freedom.", "It covered people who believed in Jesus, but not other faiths."],
+    "Christians",
+  ),
+  "social/md-g4-slavery-in-maryland": lesson(
+    ["A 1664 law made slavery in Maryland last for life and passed it to children.", "Enslaved people did most of the work on tobacco plantations, without pay and without freedom.", "They resisted by running away, slowing work and keeping their families, faith and culture alive. Benjamin Banneker, born free in 1731, spoke against it."],
+    "What did Maryland's 1664 law do?",
+    ["Before, some Africans were treated like servants who could become free.", "The law made slavery permanent and passed it to children."],
+    "made slavery last for life",
+  ),
+  "social/md-g4-maryland-revolution": lesson(
+    ["Britain taxed the colonies to pay for war, and colonists protested 'no taxation without representation'.", "In 1774, Annapolis protesters burned the tea ship Peggy Stewart. The Maryland 400 held off the British at the Battle of Long Island in 1776.", "Annapolis was the nation's capital in 1783 and 1784, and Washington resigned his command at the State House."],
+    "Why did protesters burn the Peggy Stewart in 1774?",
+    ["Colonists were angry about British taxes.", "The ship carried taxed tea."],
+    "it carried taxed tea",
+  ),
+  "social/md-g4-maryland-timeline": lesson(
+    ["A timeline puts events in order, earliest first.", "Years from 1601 to 1700 are the 17th century. Years from 1701 to 1800 are the 18th century.", "To find how far apart two events are, subtract the earlier year from the later one."],
+    "The colonists arrived in 1634. Annapolis became the capital in 1695. How many years apart?",
+    ["Subtract the earlier year.", "1695 − 1634 = 61."],
+    "61 years",
+  ),
+  "social/ca-g5-thirteen-colonies": lesson(
+    ["Jamestown, Virginia (1607) was the first lasting English colony. Maryland was founded in 1634 at St. Mary's City.", "New England's rocky soil and long winters led to fishing, shipbuilding and trade. Southern Colonies grew cash crops such as tobacco.", "Colonies grew along rivers and harbours so boats could carry goods. Maryland's Toleration Act of 1649 protected many Christians' worship."],
+    "Why did many colonies grow along rivers and harbours?",
+    ["There were few roads.", "Boats could carry goods and people."],
+    "Boats could carry goods and people.",
+  ),
 };
