@@ -511,6 +511,48 @@ export const lessons: GradeLessons = {
     ["A hawk is a consumer and a fern is a producer.", "A mushroom breaks down dead matter."],
     "a mushroom",
   ),
+  "science/space-and-sky-ab": lesson(
+    ["The Sun and other stars make their own light.", "The Moon and the planets, like Venus and Mars, reflect sunlight.", "The Moon's phases repeat about every month. A lunar calendar follows them.", "Star patterns, like the Big Dipper, help people find the North Star."],
+    "Does Jupiter make its own light or reflect sunlight?",
+    ["Jupiter is a planet, not a star.", "Planets shine because they reflect sunlight."],
+    "it reflects sunlight",
+  ),
+  "science/sound-4": lesson(
+    ["Sound is made by vibrations that travel as waves.", "Pitch is how high or low. Volume is how loud or soft.", "Sound travels through air, water and solids, but not empty space. An echo is sound bouncing back."],
+    "Why do you see lightning before you hear thunder?",
+    ["Both happen at the same time.", "Light reaches you first because it is faster."],
+    "light travels much faster than sound",
+  ),
+  "science/food-webs-4": lesson(
+    ["A food chain starts with a producer that gets energy from the Sun.", "Consumers eat plants or animals. Decomposers break down dead things.", "A food web is many food chains connected together."],
+    "In grass → grasshopper → frog → heron, what does the frog eat?",
+    ["The arrow points from the food to the eater.", "The arrow into the frog comes from the grasshopper."],
+    "the grasshopper",
+  ),
+  "science/oh-g5-gravity": lesson(
+    ["Gravity is a force that pulls objects toward each other.", "Earth's gravity pulls everything toward its centre, everywhere on Earth.", "That's why balls fall back down, water flows downhill and the oceans stay on Earth."],
+    "You throw a ball straight up. What happens next, and why?",
+    ["Earth's gravity keeps pulling the ball toward Earth's centre."],
+    "it comes back down because of gravity",
+  ),
+  "science/oh-g5-ecosystems": lesson(
+    ["Producers make food. Consumers eat other living things.", "Decomposers, like worms and fungi, return nutrients to the soil.", "Matter moves around an ecosystem again and again."],
+    "Orcas eat salmon. Are orcas producers or consumers?",
+    ["Orcas can't make their own food.", "They eat other animals."],
+    "consumers",
+  ),
+  "science/oh-g5-sun-stars": lesson(
+    ["The sun looks bright because it is the closest star to Earth.", "Earth spins once a day, so the sun rises in the east and sets in the west.", "Shadows point away from the sun: west in the morning, shortest around noon.", "Days in Washington are longest in June and shortest in December."],
+    "In the evening the sun is in the west. Which way does your shadow point?",
+    ["Shadows point away from the sun.", "Away from west is east."],
+    "east",
+  ),
+  "science/oh-g5-day-night": lesson(
+    ["Earth spins once about every 24 hours, giving day and night.", "Earth orbits the sun about once a year.", "The sun seems to rise in the east and set in the west. Shadows are shortest around noon.", "Some stars are bigger than the sun but look tiny because they are very far away."],
+    "How long does Earth take to spin once?",
+    ["One spin gives one day and one night."],
+    "about 24 hours",
+  ),
   "science/grouping-living-things": lesson(
     ["Scientists sort living things into groups by their features.", "Mammals have fur or hair and feed their babies milk. Birds have feathers. Fish have fins and gills.", "Biodiversity means the variety of life in a place."],
     "A bat has fur and feeds its babies milk. Which group is it in?",
@@ -546,12 +588,6 @@ export const lessons: GradeLessons = {
     "Two balloons rubbed on hair both have the same charge. What do they do?",
     ["Alike charges repel.", "The balloons push apart."],
     "push apart",
-  ),
-  "science/sound-4": lesson(
-    ["Sound is made by vibrations that travel as waves.", "Pitch is how high or low. Volume is how loud or soft.", "Sound travels through air, water and solids, but not empty space. An echo is sound bouncing back."],
-    "Why do you see lightning before you hear thunder?",
-    ["Both happen at the same time.", "Light reaches you first because it is faster."],
-    "light travels much faster than sound",
   ),
   "science/va-g5-energy-resources": lesson(
     ["Renewable resources, like sunlight and wind, won't run out.", "Nonrenewable resources, like oil and coal, will run out.", "Solar panels use sunlight and wind turbines use wind to make electricity.", "Dams make electricity but can block fish like salmon."],
