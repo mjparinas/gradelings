@@ -304,7 +304,7 @@ async function eventsWaiting(page) {
     // Placement and Report card are views under Reports; the old Privacy link opens Account.
     await page.goto(`${BASE}/parents/#/report-cards`);
     await page.waitForTimeout(500);
-    if ((await page.getByRole("navigation", { name: "Report views" }).getByRole("link").count()) !== 3) errors.push("reports: the Progress / Placement / Report card views are missing");
+    if ((await page.getByRole("navigation", { name: "Report views" }).getByRole("link").count()) !== 4) errors.push("reports: the Progress / Placement / Report card / Year in review views are missing");
     await page.goto(`${BASE}/parents/#/privacy`);
     await page.waitForTimeout(500);
     if (!(await vis(page.getByRole("heading", { name: "Your data, your choice" })))) errors.push("old privacy link: Account didn't show the privacy panels");

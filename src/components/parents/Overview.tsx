@@ -16,6 +16,7 @@ import { InstallNudge } from "./InstallNudge";
 import { Milestones } from "./Milestones";
 import { RewardGoal } from "./RewardGoal";
 import { SchoolYearCards } from "./SchoolYear";
+import { YearReviewCard } from "./YearReview";
 import { ShareGradelings } from "./ShareGradelings";
 import { TogetherPanel } from "./TogetherPanel";
 import { Avatar, NoChildren, PageTitle, Panel } from "./common";
@@ -111,6 +112,7 @@ export function Overview() {
             <Milestones key={p.id} p={p} limit={3} />
           ))}
           <SchoolYearCards />
+          <YearReviewCard />
           <TogetherPanel />
           <ShareGradelings />
           <FeedbackCard />

@@ -48,6 +48,18 @@ describe("UnsubscribeView", () => {
     expect(await screen.findByText(/You won’t get practice reminders any more\./)).toBeInTheDocument();
   });
 
+  it("stops the Monday class email when the link is for it, and points back to the teacher area", async () => {
+    openAt("/account/unsubscribe/?kind=class&token=c1");
+    fetchMock.mockResolvedValue(new Response(null, { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+    render(<UnsubscribeView />);
+    expect(await screen.findByRole("heading", { name: "Stop the Monday class email?" })).toBeInTheDocument();
+    await userEvent.click(screen.getByRole("button", { name: "Unsubscribe" }));
+    expect(fetchMock).toHaveBeenCalledWith("/api/email/unsubscribe/?kind=class&token=c1", { method: "POST" });
+    expect(await screen.findByText(/You won’t get the Monday class email any more\. You can turn it back on any time in the teacher area\./)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Go to your classes" })).toHaveAttribute("href", "/teachers/");
+  });
+
   it("stops news and tips when the link is for them", async () => {
     openAt("/account/unsubscribe/?kind=updates&token=u1");
     fetchMock.mockResolvedValue(new Response(null, { status: 200 }));
