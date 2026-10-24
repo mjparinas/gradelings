@@ -50,6 +50,7 @@ export interface SystemReport {
 export const CHECKS = [
   { id: "database", title: "Database" },
   { id: "uptime", title: "Uptime" },
+  { id: "site", title: "Live site" },
   { id: "deploys", title: "Deploys (Vercel)" },
   { id: "builds", title: "Builds (GitHub Actions)" },
   { id: "errors", title: "Errors (Sentry)" },
@@ -146,6 +147,40 @@ export const FETCH_FAILED_WARN = 5;
 export function speedState(p95Ms: number | null, failureRate: number | null, fetchFailed: number | null): CheckState {
   if ((p95Ms ?? 0) > SYNC_SLOW_MS || (failureRate ?? 0) >= SYNC_FAILURE_RATE || (fetchFailed ?? 0) >= FETCH_FAILED_WARN) return "warn";
   return "ok";
+}
+
+/** Pages the Live site card loads from outside. The first group is prerendered, so each carries its own security policy tag. */
+export const SITE_PAGES = ["/", "/play/", "/parents/", "/pricing/"] as const;
+/** Other addresses it checks: the service worker, the sitemap and the health answer. */
+export const SITE_FILES = ["/sw.js", "/sitemap.xml", "/api/health/"] as const;
+/** A page that takes longer than this to answer is worth a look. */
+export const SITE_SLOW_MS = 3000;
+/** Build files (scripts and styles) fetched from each page, to catch a deploy whose files are missing. */
+export const SITE_ASSETS_PER_PAGE = 4;
+
+const POLICY_TAG = /<meta http-equiv="Content-Security-Policy" content="([^"]*)"/i;
+
+/**
+ * What is wrong with a prerendered page, in words: it has no policy tag (the build step that writes it didn't run,
+ * as on the first Vercel deploys), the tag lets any inline script run, or the header that stops other sites framing
+ * the page is missing. Empty when the page is fine.
+ */
+export function pagePolicyProblems(html: string, contentSecurityPolicy: string | null): string[] {
+  const problems: string[] = [];
+  const tag = POLICY_TAG.exec(html)?.[1].replace(/&#x27;|&apos;/g, "'");
+  if (!tag) problems.push("no security policy tag");
+  else if (/script-src[^;]*'unsafe-inline'/.test(tag)) problems.push("the policy allows any inline script");
+  if (!/frame-ancestors/.test(contentSecurityPolicy ?? "")) problems.push("no frame-ancestors header");
+  return problems;
+}
+
+/** Build files a page loads: its first stylesheet, then its scripts, up to `limit`. A `?dpl=` version suffix is kept. */
+export function pageAssets(html: string, limit = SITE_ASSETS_PER_PAGE): string[] {
+  const found = [...html.matchAll(/(?:src|href)="(\/_next\/static\/[^"#]+?\.(?:js|css)(?:\?[^"#]*)?)"/g)].map((m) => m[1]);
+  const unique = [...new Set(found)];
+  const scripts = unique.filter((u) => /\.js(\?|$)/.test(u));
+  const styles = unique.filter((u) => /\.css(\?|$)/.test(u));
+  return [...styles.slice(0, 1), ...scripts].slice(0, limit);
 }
 
 /** Failed staff sign-ins in a day before the card warns. */

@@ -113,7 +113,7 @@ describe("System", () => {
     const errors = screen.getByRole("heading", { name: "Errors (Sentry)" }).closest("li")!;
     expect(errors).toHaveAttribute("aria-busy", "true");
     expect(within(errors).getByText("Checking…")).toBeInTheDocument();
-    expect(screen.getByText(/^Checking every service… 17 of 19 done\.$/)).toBeInTheDocument();
+    expect(screen.getByText(/^Checking every service… 18 of 20 done\.$/)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Checking…" })).toBeDisabled();
     await act(async () => held.errors());
     expect(within(screen.getByRole("heading", { name: "Errors (Sentry)" }).closest("li")!).getByText("Needs a look")).toBeInTheDocument();

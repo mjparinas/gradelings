@@ -120,7 +120,7 @@ describe("the route", () => {
     const res = await system.GET(req("/api/admin/system/", "GET", undefined, { cookie: admin }));
     expect(res.status).toBe(200);
     const r = await res.json();
-    expect(r.checks.map((c: { id: string }) => c.id)).toEqual(["database", "uptime", "deploys", "builds", "errors", "payments", "email", "job", "backups", "speed", "security", "capacity", "settings"]);
+    expect(r.checks.map((c: { id: string }) => c.id)).toEqual(["database", "uptime", "site", "deploys", "builds", "errors", "payments", "email", "job", "backups", "speed", "security", "capacity", "settings"]);
     expect(r.statusPages.map((p: { name: string }) => p.name)).toEqual(["Vercel", "GitHub", "Sentry", "Resend", "Stripe", "Turso"]);
   });
 
