@@ -859,4 +859,77 @@ export const lessons: GradeLessons = {
     ["Banks lend money.", "A home loan is called a mortgage."],
     "a bank",
   ),
+  // Tennessee
+  "social/az-g2-continents-oceans": lesson(
+    ["There are 7 continents and 5 oceans. We live in North America.", "On a globe, blue is water. Green and brown are land.", "The Arctic is the smallest ocean."],
+    "Which continent do we live on?",
+    ["Find the United States on a globe.", "It is on the continent of North America."],
+    "North America",
+  ),
+  "social/tn-g5-first-tennesseans": lesson(
+    ["People have lived in Tennessee for thousands of years, building mound towns and farming corn, beans and squash.", "The Cherokee, Chickasaw, Shawnee and Creek peoples lived on lands that are now Tennessee.", "These nations are living communities today, with their own governments."],
+    "Which three crops were grown together by many early farmers?",
+    ["They are sometimes called the Three Sisters.", "Corn, beans and squash help each other grow."],
+    "corn, beans and squash",
+  ),
+  "social/tn-g5-frontier": lesson(
+    ["Settlers crossed the Appalachians through the Cumberland Gap.", "The Watauga Association and the State of Franklin were early attempts to govern on the frontier.", "Nashville began as Fort Nashborough in 1779."],
+    "What pass did settlers use to cross the Appalachian Mountains?",
+    ["It is a natural gap in the mountains.", "It is named for a river and a region."],
+    "the Cumberland Gap",
+  ),
+  "social/tn-g5-statehood": lesson(
+    ["Tennessee became the 16th state on June 1, 1796.", "John Sevier was its first governor, and the state wrote its first constitution.", "Andrew Jackson, James K. Polk and Andrew Johnson became Presidents from Tennessee."],
+    "In what year did Tennessee become a state?",
+    ["It was 20 years after 1776.", "1776 + 20 = 1796."],
+    "1796",
+  ),
+  "social/tn-g5-civil-war": lesson(
+    ["Tennessee was the last state to leave the Union, in 1861, and East Tennessee mostly stayed loyal.", "Battles such as Shiloh, Fort Donelson and Chattanooga were fought in Tennessee.", "Tennessee was the first Confederate state to rejoin the Union, in 1866."],
+    "Which part of Tennessee mostly stayed loyal to the Union?",
+    ["Think about which region had small farms and few enslavers.", "It is the mountain region."],
+    "East Tennessee",
+  ),
+  "social/tn-g5-modern-tennessee": lesson(
+    ["The Tennessee Valley Authority built dams in the 1930s to bring electricity and control floods.", "Oak Ridge was built in secret during World War II.", "Nashville sit-ins and the work in Memphis were key parts of the civil rights movement."],
+    "What did TVA dams bring to many Tennessee homes?",
+    ["Dams can turn falling water into power.", "Many farms had no power before the 1930s."],
+    "electricity",
+  ),
+  "social/tn-g5-music-people": lesson(
+    ["Tennessee is famous for music: country in Nashville, blues and rock 'n' roll in Memphis.", "The Grand Ole Opry is a country music radio show from Nashville.", "Tennesseans such as Sequoyah, Davy Crockett and Wilma Rudolph shaped history."],
+    "Which Tennessee city is called Music City?",
+    ["The Grand Ole Opry is there.", "It is also the capital."],
+    "Nashville",
+  ),
+  "social/tn-g5-government-economy": lesson(
+    ["Tennessee's government has three branches, like the nation's.", "The governor leads the executive branch; the General Assembly makes laws.", "Tennessee's economy includes farming, cars, music, health care and tourism."],
+    "Who leads Tennessee's executive branch?",
+    ["The executive branch carries out laws.", "The state's top leader does this."],
+    "the governor",
+  ),
+  "social/tn-g5-tennessee-regions": lesson(
+    ["Tennessee has three grand divisions: East, Middle and West Tennessee.", "East has the Appalachian Mountains and the Great Smoky Mountains.", "West Tennessee is flat land along the Mississippi River, with Memphis."],
+    "Which grand division has the Great Smoky Mountains?",
+    ["The mountains are on the side next to North Carolina.", "That side is the east."],
+    "East Tennessee",
+  ),
+  "social/tn-g5-tennessee-timeline": lesson(
+    ["A timeline puts events in order from earliest to latest.", "Compare the years: a smaller year came first.", "Tennessee became a state in 1796, joined the Confederacy in 1861 and got TVA dams in the 1930s."],
+    "Which came first: statehood or the Civil War?",
+    ["Statehood was in 1796.", "The Civil War began in 1861."],
+    "statehood",
+  ),
+  "social/tn-g5-us-geography": lesson(
+    ["Use a compass rose: Canada is north of the United States, Mexico is south.", "Big landforms: the Appalachians in the east, the Great Plains in the middle, the Rocky Mountains in the west.", "The Mississippi and Missouri rivers make the longest river system. Know the regions, like New England and the Southeast."],
+    "The Great Plains are mostly what?",
+    ["They are in the middle of the country.", "They are wide, flat grasslands."],
+    "flat grasslands",
+  ),
+  "social/tn-g5-world-maps": lesson(
+    ["There are 7 continents and 5 oceans. The Atlantic lies between the Americas and Europe and Africa.", "Latitude runs from 0° at the equator to 90° at the poles. Longitude is measured from the prime meridian.", "Every flat map (projection) stretches some places."],
+    "What latitude is the equator?",
+    ["Latitude counts from the middle of the Earth.", "The equator is the starting line."],
+    "0°",
+  ),
 };

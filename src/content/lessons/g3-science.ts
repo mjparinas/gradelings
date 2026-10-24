@@ -559,4 +559,35 @@ export const lessons: GradeLessons = {
     ["Alligators need warm water.", "Swamps are warm and wet."],
     "in the Okefenokee Swamp",
   ),
+  // Tennessee
+  "science/changing-materials": lesson(
+    ["Cutting, bending, melting and freezing change size, shape or state. It is still the same material.", "Cooking, burning and rusting make a new material.", "Ask: can it go back the way it was?"],
+    "Toasting bread: same material or a new one?",
+    ["Toast can't turn back into soft bread.", "Heat made something new."],
+    "a new one",
+  ),
+  "science/solar-system": lesson(
+    ["The planets in order from the Sun: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.", "The asteroid belt lies between Mars and Jupiter.", "A moon is a natural object that orbits a planet.", "The farther a planet is from the Sun, the longer it takes to orbit once."],
+    "Which takes longer to orbit the Sun: Mars or Saturn?",
+    ["Saturn is much farther from the Sun than Mars.", "Farther planets have longer orbits."],
+    "Saturn",
+  ),
+  "science/ny-g4-engineering-design": lesson(
+    ["Criteria tell engineers what a design must do to succeed.", "Constraints are limits, like time, cost or materials.", "Test a design, find what failed and improve it.", "Share designs and compare them to choose the one that best meets the criteria."],
+    "A water filter must make muddy water clear. Is that a criterion or a constraint?",
+    ["It says what the filter must do to succeed."],
+    "a criterion",
+  ),
+  "science/tn-g3-weather-climate": lesson(
+    ["Weather is what the air is like today. Climate is the usual weather over many years.", "Read weather data for patterns, like warm highs in summer.", "Climates differ: rainy, desert, polar."],
+    "“It rains a lot every winter.” Weather or climate?",
+    ["It describes a pattern year after year."],
+    "climate",
+  ),
+  "science/tn-g3-earth-hazards": lesson(
+    ["Maps show where hazards happen, like volcanoes and earthquakes along plate edges.", "A storm surge is ocean water pushed onto land by a big storm.", "Signs show tsunami routes to higher ground. Sensors on volcanoes warn people early.", "Sand dunes and sea walls help protect coasts."],
+    "Hurricane winds push ocean water onto a city's streets. What is this called?",
+    ["The storm pushes sea water up onto the land."],
+    "a storm surge",
+  ),
 };

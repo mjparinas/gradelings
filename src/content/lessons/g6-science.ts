@@ -721,4 +721,41 @@ export const lessons: GradeLessons = {
     ["Carbon dioxide traps heat.", "Trees take in carbon dioxide to make food."],
     "trees take in carbon dioxide",
   ),
+  // Tennessee
+  "science/tn-g6-climate": lesson(
+    ["Climate is the average weather of a place over many years.", "Burning fossil fuels adds carbon dioxide, which traps heat. This is the main cause of recent warming.", "As Earth warms, ice melts and seawater expands, so sea level rises.", "Forests help slow climate change because trees take in carbon dioxide."],
+    "Why do forests help slow climate change?",
+    ["Carbon dioxide traps heat.", "Trees take in carbon dioxide to make food."],
+    "trees take in carbon dioxide",
+  ),
+  "science/heat-transfer-7": lesson(
+    ["Conduction moves heat through touching materials, like a hot pan handle.", "Convection moves heat through flowing liquids or gases, like warm air rising.", "Radiation moves heat as rays with no material needed, like sunlight. Insulators slow heat loss."],
+    "You feel warm sitting near a fire without touching it. Which kind of heat transfer is it?",
+    ["You aren’t touching anything hot.", "The heat travels as rays through the air."],
+    "radiation",
+  ),
+  "science/tn-g6-weather": lesson(
+    ["Warm air is less dense, so it rises. Cold air sinks.", "Humidity is the amount of water vapour in the air.", "Water vapour cools and condenses to form clouds.", "Air masses meet at fronts, which bring weather changes. An anemometer measures wind speed."],
+    "Warm, moist air rises and cools. What forms?",
+    ["Cooling vapour condenses into droplets.", "Lots of droplets make clouds."],
+    "clouds",
+  ),
+  "science/tn-g6-design": lesson(
+    ["Criteria are what a solution must do to succeed. Constraints are limits.", "A decision matrix compares designs against the criteria.", "A trade-off is giving up some of one thing to get more of another.", "After a test fails, improve the design and test again."],
+    "A cheaper filter cleans water less well. Choosing it means accepting a… what?",
+    ["You give up some cleaning to save money.", "Giving up one thing for another is a trade-off."],
+    "a trade-off",
+  ),
+  "science/tn-g6-biodiversity": lesson(
+    ["Biodiversity is the variety of life. More variety makes ecosystems more stable.", "Ecosystems give services such as clean water, food and pollination.", "Invasive species are non-native and cause harm. Native plants and protected habitat help."],
+    "Fewer insects live in a meadow. Why does that harm the birds there?",
+    ["Many birds eat insects.", "Fewer insects means less food."],
+    "the birds have less food",
+  ),
+  "science/tn-g6-resources": lesson(
+    ["Minerals, fuels and groundwater are found only where past geologic processes put them.", "Scientists forecast hazards from data, such as small earthquakes and swelling ground before an eruption.", "Good designs reduce human impact by using less and polluting less."],
+    "Why are some minerals found in only a few places?",
+    ["Minerals collect through processes like volcanoes and ancient seas.", "Those happened in some places, not everywhere."],
+    "past geologic processes concentrated them there",
+  ),
 };

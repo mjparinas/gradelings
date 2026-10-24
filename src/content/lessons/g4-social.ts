@@ -1339,4 +1339,65 @@ export const lessons: GradeLessons = {
     ["They are in the middle of the country.", "They are wide, flat grasslands."],
     "flat grasslands",
   ),
+  // Tennessee
+  "social/ca-g8-industrial-america": lesson(
+    ["After the Civil War, railroads (with land grants), factories and inventions grew fast. Ford’s assembly line made cars faster and cheaper.", "Big businesses became monopolies; the Sherman Antitrust Act (1890) tried to protect competition.", "Immigrants filled crowded tenements; workers formed unions, and farmers backed the Populist Party."],
+    "What did the Sherman Antitrust Act of 1890 try to do?",
+    ["A monopoly controls a whole industry.", "The law tried to break up monopolies and protect competition."],
+    "break up monopolies and protect competition",
+  ),
+  "social/ny-g8-workers-progressives": lesson(
+    ["The Triangle Shirtwaist Factory fire (1911) killed 146 workers, leading to new safety laws.", "Workers formed unions; a strike is when workers stop working until their demands are met.", "Progressives pushed reform: Lewis Hine photographed child labour, and Frances Perkins became the first woman US Secretary of Labor."],
+    "What is a strike?",
+    ["Workers want better pay or conditions.", "They stop working together.", "They return when demands are met."],
+    "when workers stop working until their demands are met",
+  ),
+  "social/ny-g8-city-immigrants": lesson(
+    ["From the 1890s, millions of immigrants came through Ellis Island, and many lived in crowded tenements in New York City.", "Jacob Riis’s 1890 book How the Other Half Lives used photographs to show the hard lives of the poor.", "In 1898 five boroughs joined to form Greater New York City; its first subway opened in 1904. Tammany Hall was a powerful political machine."],
+    "Which five areas joined in 1898 to form Greater New York City?",
+    ["They became the five boroughs.", "Manhattan, Brooklyn and the Bronx are three.", "Queens and Staten Island are the other two."],
+    "Manhattan, Brooklyn, the Bronx, Queens and Staten Island",
+  ),
+  "social/ny-g8-world-war-i": lesson(
+    ["World War I (1914–1918) had causes such as militarism, alliances, imperialism and nationalism; soldiers fought from trenches.", "The US joined in 1917 after Germany returned to unrestricted submarine warfare, attacking ships near Britain.", "In Schenck v. United States (1919), the Court ruled that speech creating a “clear and present danger” can be limited."],
+    "Why did unrestricted submarine warfare push the US into the war?",
+    ["German submarines would attack any ship near Britain.", "That included American ships.", "Americans were killed, and the US entered the war in 1917."],
+    "Germany would attack American ships.",
+  ),
+  "social/ny-g8-roaring-twenties": lesson(
+    ["The 1920s are called the Roaring Twenties because the economy boomed and new music, fashions and ideas spread.", "In the Great Migration, millions of Black Southerners moved to cities in the North and West.", "The Harlem Renaissance was a burst of Black art, writing and jazz in New York City."],
+    "What was the Great Migration?",
+    ["Many people left the rural South.", "They wanted jobs and to escape Jim Crow laws.", "They moved to cities in the North and West."],
+    "the movement of millions of Black Southerners to northern and western cities",
+  ),
+  "social/ny-g8-great-depression": lesson(
+    ["The stock market crash of 1929 began the Great Depression, and the Dust Bowl hit farmers on the Plains.", "FDR’s New Deal was a set of programs for relief, recovery and reform. As governor of New York, he had already set up a relief agency.", "Eleanor Roosevelt travelled the country and spoke up for the poor and for civil rights."],
+    "The New Deal had three goals, all starting with R. What were they?",
+    ["Relief helped people in need right away.", "Recovery helped the economy grow again.", "Reform tried to prevent another depression."],
+    "relief, recovery and reform",
+  ),
+  "social/ny-g8-world-war-ii": lesson(
+    ["Totalitarian leaders such as Hitler in Germany and Mussolini in Italy rose to power before World War II.", "The Axis powers were Germany, Italy and Japan. The US entered the war after Japan attacked Pearl Harbor in December 1941.", "On D-Day (6 June 1944) the Allies landed in France. At home, “Rosie the Riveter” stood for women taking factory jobs."],
+    "Which event brought the US into World War II?",
+    ["The war began in Europe in 1939.", "The US stayed out at first.", "Japan attacked Pearl Harbor on December 7, 1941."],
+    "the attack on Pearl Harbor",
+  ),
+  "social/al-g9-holocaust": lesson(
+    ["Antisemitism is hatred of or prejudice against Jewish people. The Nazis built on it with lies and propaganda.", "Step by step, rights were taken: the Nuremberg Laws (1935) removed citizenship; then came ghettos and camps such as Dachau (1933).", "Six million Jews were murdered. People who risked their lives to save Jews are honoured as Righteous Among the Nations."],
+    "What did the Nuremberg Laws of 1935 do?",
+    ["They were laws passed by the Nazi government.", "They stripped German Jews of citizenship and rights."],
+    "took away German Jews’ citizenship and rights",
+  ),
+  "social/ny-g8-new-era": lesson(
+    ["The Cold War ended when the Soviet Union broke up in 1991.", "On September 11, 2001, terrorist attacks killed nearly 3,000 people.", "Globalization linked the world’s economies; the World Trade Organization, created in 1995, sets rules for trade between nations."],
+    "What does the World Trade Organization do?",
+    ["It was created in 1995.", "Its members are countries.", "It sets rules for trade between them."],
+    "sets rules for trade between nations",
+  ),
+  "social/ny-g8-civil-rights": lesson(
+    ["Brown v. Board of Education (1954) ended legal school segregation under the 14th Amendment’s equal protection clause.", "Leaders like Martin Luther King Jr. led peaceful protests; Shirley Chisholm of Brooklyn became the first Black woman in Congress in 1968.", "Other groups fought for equal rights too: César Chávez and Dolores Huerta organized farm workers."],
+    "Brown v. Board was decided under which amendment?",
+    ["The case was about equal treatment in schools.", "The equal protection clause is in one amendment.", "That is the 14th Amendment."],
+    "the 14th",
+  ),
 };

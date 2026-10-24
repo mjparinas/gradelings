@@ -265,4 +265,11 @@ export const lessons: GradeLessons = {
     ["Baby birds can't find food yet.", "They call so a parent feeds them."],
     "to get food",
   ),
+  // Tennessee
+  "science/light-and-sound-ab": lesson(
+    ["Sound is made by vibrations, tiny shakes.", "Soft things make sound quieter.", "Light comes from the Sun or fire, and bounces off a mirror."],
+    "Hum with your fingers on your throat. What do you feel?",
+    ["Sound is made by shaking.", "You feel a vibration."],
+    "a vibration",
+  ),
 };

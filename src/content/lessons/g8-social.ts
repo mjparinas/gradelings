@@ -1159,4 +1159,23 @@ export const lessons: GradeLessons = {
     ["Start with the money earned.", "Take away the costs."],
     "money left after costs are paid",
   ),
+  // Tennessee
+  "social/ca-g5-colonial-economy": lesson(
+    ["Needs are things people must have, like food and shelter. Wants are nice to have.", "Colonists specialized and traded, sometimes by barter: trading goods without money.", "The Atlantic slave trade took millions of Africans from their homes and tore families apart."],
+    "What is barter?",
+    ["Money is not used.", "Goods are swapped directly."],
+    "trading goods directly without money",
+  ),
+  "social/tn-g8-jacksonian-tennessee": lesson(
+    ["Jacksonian Democracy said government should answer to ordinary citizens, and more white men could vote.", "The Indian Removal Act and the Trail of Tears forced the Cherokee and others from their homelands.", "Tennessee's 1834 constitution dropped property rules for white men but took the vote from free Black men."],
+    "How did the 1834 constitution narrow democracy in Tennessee?",
+    ["Look at who lost a right.", "Free Black men had voted under the 1796 constitution."],
+    "it took the vote from free Black men",
+  ),
+  "social/tn-g8-divided-tennessee": lesson(
+    ["Tennessee voted to secede in June 1861, but East Tennessee mostly stayed loyal to the Union.", "Andrew Johnson became President in 1865, clashed with the Radical Republicans and was impeached.", "The 1870 constitution let all men vote but allowed a poll tax and segregated schools."],
+    "By how many votes did the Senate fail to remove Andrew Johnson?",
+    ["Two-thirds of the Senate was needed.", "The vote fell just short."],
+    "one vote",
+  ),
 };

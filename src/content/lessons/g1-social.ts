@@ -427,4 +427,29 @@ export const lessons: GradeLessons = {
     ["She knew the land and languages.", "Her name starts with S."],
     "Sacagawea",
   ),
+  // Tennessee
+  "social/ca-k-good-citizens": lesson(
+    ["A good citizen follows rules and helps others.", "Breaking a rule has a consequence.", "Honest means telling the truth. Brave means trying."],
+    "Which is a way to be a good citizen at school?",
+    ["Good citizens help others.", "Cleaning up helps the class."],
+    "help clean up",
+  ),
+  "social/tn-g1-tennessee-map": lesson(
+    ["A map shows places from above. Tennessee is a state in the United States.", "Nashville is the capital of Tennessee.", "The Mississippi River is Tennessee's border on the west."],
+    "What is the capital of Tennessee?",
+    ["The capital is where the state government meets.", "It is in the middle of the state."],
+    "Nashville",
+  ),
+  "social/tn-g1-tennessee-symbols": lesson(
+    ["Symbols stand for a place. Tennessee has a state flag, bird and flower.", "The state bird is the mockingbird. The state flower is the iris.", "Tennessee's nickname is the Volunteer State."],
+    "What is Tennessee's state bird?",
+    ["It is a bird that copies other birds' songs.", "Its name has the word mock in it."],
+    "the mockingbird",
+  ),
+  "social/tn-g1-leaders-holidays": lesson(
+    ["Holidays help us remember people and events.", "On Independence Day, July 4, we remember 1776.", "Leaders like Abraham Lincoln and Martin Luther King Jr. worked for fairness."],
+    "Which holiday is on July 4?",
+    ["It is the country's birthday.", "Families watch fireworks."],
+    "Independence Day",
+  ),
 };

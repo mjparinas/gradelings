@@ -883,4 +883,65 @@ export const lessons: GradeLessons = {
     ["It is a tool people made.", "Tools and machines are capital resources."],
     "a capital resource",
   ),
+  // Tennessee
+  "social/ca-g5-explorers": lesson(
+    ["Columbus sailed for Spain in 1492. Henry Hudson explored for the Dutch and the English.", "Lewis and Clark explored the Louisiana Purchase to the Pacific; Sacagawea, a Shoshone woman, was their interpreter and guide.", "Colonists and nations sometimes cooperated through trade and alliances."],
+    "How did Sacagawea help Lewis and Clark?",
+    ["She knew the Shoshone language and the land.", "She translated and guided them."],
+    "as an interpreter and guide",
+  ),
+  "social/wa-g5-thirteen-colonies": lesson(
+    ["The thirteen colonies were in three regions: New England, Middle and Southern.", "The Southern colonies grew cash crops, crops grown to sell, like tobacco, rice and indigo.", "Early self-government included the Mayflower Compact and the House of Burgesses."],
+    "What is a cash crop?",
+    ["Some crops are eaten at home.", "Others are grown to make money."],
+    "a crop grown to sell",
+  ),
+  "social/ca-g5-colonial-economy": lesson(
+    ["Needs are things people must have, like food and shelter. Wants are nice to have.", "Colonists specialized and traded, sometimes by barter: trading goods without money.", "The Atlantic slave trade took millions of Africans from their homes and tore families apart."],
+    "What is barter?",
+    ["Money is not used.", "Goods are swapped directly."],
+    "trading goods directly without money",
+  ),
+  "social/ca-g5-road-to-revolution": lesson(
+    ["Britain taxed the colonies after 1763 to pay debts from the French and Indian War.", "Colonists had no elected members in Parliament: “No taxation without representation.”", "The Sons of Liberty protested, Committees of Correspondence shared news, and the Quartering Act made colonists house soldiers."],
+    "Why did Britain start taxing the colonies after 1763?",
+    ["Britain had just fought a long war in North America.", "Wars cost a lot of money."],
+    "to pay its debts from the French and Indian War",
+  ),
+  "social/ca-g5-revolution": lesson(
+    ["The Declaration of Independence was adopted July 4, 1776. It says governments get power from the consent of the governed.", "George Washington led the army; Franklin won France as an ally. Bunker Hill showed colonists could stand up to the British.", "Women ran farms and businesses and made supplies."],
+    "Where does the Declaration say governments get their power?",
+    ["It says the people choose to be governed.", "That agreement is called consent."],
+    "from the consent of the governed",
+  ),
+  "social/ca-g5-constitution": lesson(
+    ["Delegates met in Philadelphia in 1787. Congress has two parts: the Senate and the House of Representatives.", "Legislative makes laws, executive (the president) carries them out, judicial (courts) interprets them.", "Some wanted a Bill of Rights to protect freedoms. Amendments let it change, so it is a “living document”."],
+    "Which branch carries out the laws?",
+    ["Congress makes laws; courts interpret them.", "The president leads the branch that carries them out."],
+    "the executive",
+  ),
+  "social/ca-g8-new-nation": lesson(
+    ["Early presidents built the new government; the Whiskey Rebellion (1794) showed it could enforce its laws.", "Jefferson bought Louisiana in 1803. The US fought Britain in the War of 1812.", "The Monroe Doctrine (1823) told Europe not to start new colonies in the Americas."],
+    "What did the Monroe Doctrine warn European countries not to do?",
+    ["It was about the Americas.", "The US did not want new European colonies here."],
+    "start new colonies in the Americas",
+  ),
+  "social/ca-g5-westward": lesson(
+    ["Between 1789 and 1850, many immigrants came from Ireland and Germany.", "Settlers moved west on trails to find land and opportunity. California became a state in 1850.", "American Indian nations lost the most: land and lives."],
+    "Who lost the most when settlers moved west?",
+    ["Settlers took land where people already lived.", "Those people were American Indian nations."],
+    "American Indian nations",
+  ),
+  "social/ca-g8-industry-reform": lesson(
+    ["The Industrial Revolution brought machines and factories. Interchangeable parts made manufacturing faster.", "The Lowell mills hired young women from farms. Immigrants filled many factory jobs.", "Reformers: abolitionists worked to end slavery; Seneca Falls (1848) was for women's rights; Horace Mann pushed for public schools."],
+    "What was the Seneca Falls Convention of 1848 about?",
+    ["It produced a Declaration of Sentiments.", "It said women should have equal rights."],
+    "women's rights",
+  ),
+  "social/tn-g3-volunteer-state": lesson(
+    ["Many Tennesseans volunteered to fight in the War of 1812, so Tennessee became the Volunteer State.", "Andrew Jackson won at New Orleans and later signed the Indian Removal Act, which led to the Trail of Tears.", "President James K. Polk believed in Manifest Destiny and the country grew to the Pacific."],
+    "Why is Tennessee called the Volunteer State?",
+    ["Think about the War of 1812.", "Many people chose to help fight."],
+    "many Tennesseans volunteered to fight",
+  ),
 };

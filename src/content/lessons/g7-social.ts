@@ -1213,4 +1213,17 @@ export const lessons: GradeLessons = {
     ["They are in southern Asia.", "Mount Everest is part of them."],
     "the Himalayas",
   ),
+  // Tennessee
+  "social/ny-g9-crusades-plague": lesson(
+    ["The Crusades were wars over the Holy Land; Venice and Genoa grew rich shipping crusaders and trading.", "The Reconquista was Christian kingdoms taking back Iberia from Muslim rulers.", "The Black Death reached Europe in 1347 by trade routes, carried by fleas on rats. Cities used quarantine (40 days apart) to slow it."],
+    "What was the Reconquista?",
+    ["Muslim rulers had held much of Spain and Portugal.", "Christian kingdoms fought to take it back."],
+    "the effort by Christian kingdoms to take back the Iberian Peninsula",
+  ),
+  "social/ny-g5-columbian-exchange": lesson(
+    ["After 1492, plants, animals, people, ideas and diseases crossed the Atlantic: the Columbian Exchange.", "Corn and potatoes went to Europe. Horses, cattle and wheat came to the Americas.", "Diseases killed millions, and more than 12 million Africans were forced across the Atlantic in the Middle Passage."],
+    "Which went from the Americas to Europe: potatoes or horses?",
+    ["Horses came from Europe.", "Potatoes first grew in South America."],
+    "potatoes",
+  ),
 };

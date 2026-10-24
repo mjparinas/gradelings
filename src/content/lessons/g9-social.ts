@@ -1183,4 +1183,11 @@ export const lessons: GradeLessons = {
     ["Lenders want to know if you repay.", "Paying on time matters most."],
     "payment history",
   ),
+  // Tennessee
+  "social/tn-g9-governing-tennessee": lesson(
+    ["Tennessee has two US senators and nine US representatives.", "The General Assembly has a 33-member Senate and a 99-member House; the governor leads the executive.", "Tennessee has 95 counties, plus city and metro governments that get their powers from the state."],
+    "How many counties does Tennessee have?",
+    ["It is close to 100.", "The state has 95."],
+    "95",
+  ),
 };

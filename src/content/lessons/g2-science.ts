@@ -481,4 +481,29 @@ export const lessons: GradeLessons = {
     ["Shadows point away from the sun.", "Away from west is east."],
     "east",
   ),
+  // Tennessee
+  "science/movement-ab": lesson(
+    ["Direction tells where a thing is going.", "Things move in a straight line, a curve, a zigzag or a circle.", "Speed tells how fast a thing moves."],
+    "A merry-go-round moves in a…?",
+    ["It goes round and round."],
+    "circle",
+  ),
+  "science/tn-g2-land-water": lesson(
+    ["Land can be mountains, valleys, hills or plains.", "Water can be rivers, lakes, oceans or ice.", "The ocean is salt water. Rivers are flowing fresh water."],
+    "The Great Smoky Mountains are made of very tall land. Each one is a…?",
+    ["It is very tall land with a peak."],
+    "mountain",
+  ),
+  "science/tn-g2-earth-changes": lesson(
+    ["Some changes are fast, like volcanoes, landslides and floods.", "Some are slow, like wind and water wearing away land over years.", "Plant roots and rock walls help slow these changes."],
+    "Water carves a canyon over many years. Fast or slow?",
+    ["Many years is a long time.", "That is a slow change."],
+    "slow",
+  ),
+  "science/tn-g2-food-chains": lesson(
+    ["Producers are plants. They make their own food.", "Consumers are animals. They eat plants or other animals.", "Arrows in a food chain point to the one that eats."],
+    "Grass → rabbit → ___. Who eats the rabbit?",
+    ["The arrow points to the eater.", "A hawk eats rabbits."],
+    "a hawk",
+  ),
 };
