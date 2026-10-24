@@ -1117,6 +1117,12 @@ export const lessons: GradeLessons = {
     ["Shinto shrines are often in natural places, marked by a torii gate.", "They honour kami, the spirits in nature and special places."],
     "kami, the spirits in nature and special places",
   ),
+  "social/nj-g7-japan": lesson(
+    ["Japan is a chain of mountainous islands with the Pacific Ocean to the east. Mount Fuji is its tallest peak.", "Little flat land meant farming in valleys and lots of fishing.", "Shinto honors kami, spirits in nature; Buddhism and Confucian ideas of family, order and duty also shaped Japanese values."],
+    "Shinto, an old belief in Japan, honors what?",
+    ["Shinto shrines are often in natural places, marked by a torii gate.", "They honor kami, the spirits in nature and special places."],
+    "kami, the spirits in nature and special places",
+  ),
   "social/co-g7-japan": lesson(
     ["Japan is a chain of mountainous islands with the Pacific Ocean to the east. Mount Fuji is its tallest peak.", "Little flat land meant farming in valleys and lots of fishing.", "Shinto honours kami, spirits in nature; Buddhism and Confucian ideas of family, order and duty also shaped Japanese values."],
     "Shinto, an old belief in Japan, honours what?",

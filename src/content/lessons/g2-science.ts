@@ -427,14 +427,32 @@ export const lessons: GradeLessons = {
     ["A desert is very dry.", "Frogs and herons need water, so they live in wetlands."],
     "a wetland",
   ),
+  "science/nj-g2-habitats": lesson(
+    ["A habitat is a place where a living thing lives.", "Pitch pines grow in the Pine Barrens. Deer live in the woods. Crabs live in salt marshes.", "Each habitat gives its animals food, water and shelter."],
+    "Where do frogs and herons live: a wetland or a desert?",
+    ["A desert is very dry.", "Frogs and herons need water, so they live in wetlands."],
+    "a wetland",
+  ),
   "science/il-g2-land-water": lesson(
     ["Land can be hills, valleys, plains or islands.", "Water can be rivers, lakes or oceans.", "Lake Michigan is a lake. The Mississippi is a river. Central Illinois is a plain."],
     "Land with water all around it is an…?",
     ["A peninsula has water on three sides.", "Land with water all around is an island."],
     "island",
   ),
+  "science/nj-g2-land-water": lesson(
+    ["Land can be hills, valleys, plains or islands.", "Water can be rivers, lakes, bays or oceans.", "The Delaware is a river. The Atlantic is an ocean. Long Beach Island is an island."],
+    "Land with water all around it is an…?",
+    ["A peninsula has water on three sides.", "Land with water all around is an island."],
+    "island",
+  ),
   "science/il-g2-earth-changes": lesson(
     ["Some changes are fast, like volcanoes, landslides and floods.", "Some are slow, like wind and water wearing away land over years.", "Plant roots and rock walls help slow these changes."],
+    "Water carves a canyon over many years. Fast or slow?",
+    ["Many years is a long time.", "That is a slow change."],
+    "slow",
+  ),
+  "science/nj-g2-earth-changes": lesson(
+    ["Some changes are fast, like landslides, floods and storms that move beach sand.", "Some are slow, like wind and water wearing away land over years.", "Plant roots, dunes and rock walls help slow these changes."],
     "Water carves a canyon over many years. Fast or slow?",
     ["Many years is a long time.", "That is a slow change."],
     "slow",
