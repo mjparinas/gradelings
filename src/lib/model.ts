@@ -146,6 +146,11 @@ export type AppEvent = EventBase &
         correct: number;
         ms: number;
       }
+    /**
+     * A story read to the end in the Story Library, with the questions after it. `rl` is the story's reading level and
+     * `results` the first-try result of each question. Never tied to a unit, so it doesn't change unit levels.
+     */
+    | { type: "story"; story: string; rl: number; results: boolean[]; pages: number; ms: number }
     /** The child asked a grown-up to help with this unit after missing a question twice. Not practice: it never counts toward XP or proficiency. */
     | { type: "help"; unit: string }
     | { type: "play"; game: string; seconds: number }

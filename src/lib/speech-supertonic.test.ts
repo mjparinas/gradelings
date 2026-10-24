@@ -110,6 +110,36 @@ describe("read-aloud with the Supertonic voice", () => {
     }
   });
 
+  it("says as each piece starts and when the last one ends, for read-along highlighting", async () => {
+    supertonic.wanted = true;
+    const { speakSegments } = await import("./speech");
+    const started: number[] = [];
+    let done = 0;
+    speakSegments(
+      [
+        { text: "Ollie is an otter.", lang: "en" },
+        { text: "Ollie likes to swim.", lang: "en" },
+      ],
+      { onStart: (i) => started.push(i), onDone: () => done++ },
+    );
+    for (let i = 0; i < 5; i++) await flush();
+    expect(supertonic.spoken.map((s) => s.text)).toEqual(["Ollie is an otter.", "Ollie likes to swim."]);
+    expect(started).toEqual([0, 1]);
+    expect(done).toBe(1);
+  });
+
+  it("says nothing more once speech is stopped part-way", async () => {
+    const { speakSegments, stopSpeaking } = await import("./speech");
+    const started: number[] = [];
+    let done = 0;
+    vi.stubGlobal("speechSynthesis", { getVoices: () => [], speak: (u: { text: string }) => synthSaid.push(u.text), cancel: () => {}, addEventListener: () => {} });
+    speakSegments([{ text: "One.", lang: "en" }, { text: "Two.", lang: "en" }], { onStart: (i) => started.push(i), onDone: () => done++ });
+    stopSpeaking();
+    await flush();
+    expect(started).toEqual([0]);
+    expect(done).toBe(0);
+  });
+
   it("keeps the full pause for the device voice", async () => {
     vi.useFakeTimers();
     try {

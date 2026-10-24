@@ -10,6 +10,7 @@ import { factSetsFor } from "@/lib/facts";
 import { canUse } from "@/lib/plan";
 import { levelInfo, nextStep, unitLevel } from "@/lib/proficiency";
 import { useIsOn } from "@/lib/remoteFlags";
+import { storiesFor } from "@/lib/stories";
 import { go, href, useRoute } from "@/lib/router";
 import { useChildSay } from "@/lib/say";
 import { useActiveProfile, useChildSettings, useDerived, useStore } from "@/lib/store";
@@ -93,9 +94,29 @@ export function SubjectPicker() {
         })}
       </div>
       <SneakPeekCard />
+      {band === "little" && <StoriesCard />}
       {band === "little" && <DailyCard />}
       {band === "little" && <FactsCard />}
     </Page>
+  );
+}
+
+/** Little kids find the Story Library here, on the Lessons screen, so their home screen stays to three tiles. */
+function StoriesCard() {
+  const settings = useChildSettings();
+  const isOn = useIsOn();
+  if (!storiesFor(settings, isOn("story-library"))) return null;
+  return (
+    <a
+      href={href("/stories")}
+      className="btn w-full items-center justify-start gap-4 p-5 text-left"
+      style={{ "--btn-bg": "#ff7a59", "--btn-edge": "#d4553a", "--btn-fg": onColour("#ff7a59") } as CSSProperties}
+    >
+      <span className="text-5xl" aria-hidden="true">
+        📖
+      </span>
+      <span className="flex-1 text-3xl font-bold">Stories</span>
+    </a>
   );
 }
 

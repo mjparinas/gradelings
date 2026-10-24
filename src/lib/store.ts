@@ -26,7 +26,8 @@ import { effectiveGoal, STRETCH_QUEST, STRETCH_REWARD } from "./goal";
 import { gamesOpenedBetween } from "./arcade";
 import { growthStage } from "./buddy";
 import { dailyQuests, weekDays, weeklyQuests, weekStart } from "./quests";
-import { hasTestCoins } from "./remoteFlags";
+import { hasTestCoins, isOn } from "./remoteFlags";
+import { storiesFor } from "./stories";
 import { getRoomItem, isRoomOwned } from "./room";
 import { getItem, isUnlocked, STARTER } from "./shop";
 import { setQuietCheck, setSoundCheck } from "./sound";
@@ -259,7 +260,8 @@ export const useStore = create<State>()((set, get) => ({
     const day = dayKey(now);
     const claimed = after.questsClaimed[day] ?? [];
     const questEvents: AppEvent[] = [];
-    for (const q of dailyQuests(profile.id, day, ageBandFor(profile.grade))) {
+    const questOpts = { stories: storiesFor(state.settings[profile.id], isOn("story-library")) };
+    for (const q of dailyQuests(profile.id, day, ageBandFor(profile.grade), questOpts)) {
       if (!claimed.includes(q.id) && q.progress(after.days[day]) >= q.target) {
         questEvents.push({ type: "quest", quest: q.id, day, reward: q.reward, id: newId(), t: now + 50, profileId: profile.id });
         toasts.push({ kind: "quest", title: "Quest complete!", subtitle: `${q.title} · +${q.reward} coins`, icon: q.icon });
@@ -277,7 +279,7 @@ export const useStore = create<State>()((set, get) => ({
     const monday = weekStart(now);
     const weekClaimed = after.questsClaimed[monday] ?? [];
     const thisWeek = weekDays(monday).flatMap((k) => (after.days[k] ? [after.days[k]] : []));
-    for (const q of weeklyQuests(profile.id, monday, ageBandFor(profile.grade))) {
+    for (const q of weeklyQuests(profile.id, monday, ageBandFor(profile.grade), questOpts)) {
       if (!weekClaimed.includes(q.id) && q.progress(thisWeek) >= q.target) {
         questEvents.push({ type: "quest", quest: q.id, day: monday, reward: q.reward, id: newId(), t: now + 60, profileId: profile.id });
         toasts.push({ kind: "quest", title: "Weekly quest complete!", subtitle: `${q.title} · +${q.reward} coins`, icon: q.icon });
