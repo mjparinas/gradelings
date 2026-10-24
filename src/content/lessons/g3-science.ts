@@ -511,11 +511,35 @@ export const lessons: GradeLessons = {
     ["It talks about many winters, not one day.", "A pattern over many years is climate."],
     "climate",
   ),
+  "science/forms-of-energy-5": lesson(
+    ["Kinetic energy is the energy of motion.", "Potential energy is stored. Higher objects have more gravitational potential energy.", "Springs, food and batteries also store energy.", "Energy changes form. Friction turns motion into heat."],
+    "Which has more potential energy: a ball on the floor or a ball on a table?",
+    ["Higher objects have more gravitational potential energy.", "The table is higher than the floor."],
+    "the ball on the table",
+  ),
+  "science/tx-k-earth-materials": lesson(
+    ["Rocks can be big or small, round or rough.", "Wind is moving air. Air is all around us.", "We use soil to grow plants and water to drink."],
+    "Why do gardens need soil?",
+    ["Plant roots grow in soil.", "Soil helps plants grow."],
+    "so plants can grow",
+  ),
   "science/tx-g5-conservation": lesson(
     ["Using natural resources can harm land, water and air, but good designs reduce the harm.", "Farmers rotate crops and plant cover crops to keep soil healthy.", "Carpooling burns less fuel. Recycling aluminum saves energy.", "Proper trash disposal keeps litter from hurting animals and water."],
     "How does carpooling help the environment?",
     ["Fewer cars make the trip.", "That burns less fuel and makes less pollution."],
     "less fuel and less air pollution",
+  ),
+  "science/states-of-matter-5": lesson(
+    ["Matter is anything that has mass and takes up space.", "A solid keeps its shape and volume. A liquid takes the shape of its container but keeps its volume.", "A gas spreads out to fill its whole container.", "We choose materials for their properties, like steel for strong bridges."],
+    "Juice is poured from a tall glass into a wide bowl. What stays the same?",
+    ["A liquid changes shape to fit its container.", "It keeps the same volume."],
+    "its volume",
+  ),
+  "science/oh-g3-energy-resources": lesson(
+    ["Renewable resources, like sunlight and wind, won't run out.", "Nonrenewable resources, like oil, coal and natural gas, will run out.", "Burning fossil fuels puts pollution and carbon dioxide into the air.", "Solar panels use sunlight, wind turbines use wind and dams use moving water."],
+    "Gasoline is made from oil. Is it renewable?",
+    ["Oil formed from ancient living things over millions of years.", "We use it much faster than it forms, so it will run out."],
+    "no, it is nonrenewable",
   ),
   "science/tx-g1-heat": lesson(
     ["Heat melts, cooks and dries things.", "Some changes go back: melted butter can get hard again.", "Some do not: a cooked egg can't go back."],

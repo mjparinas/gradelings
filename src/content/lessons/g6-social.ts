@@ -829,6 +829,18 @@ export const lessons: GradeLessons = {
     ["They were one of the earliest civilizations in Mesoamerica.", "They lived along the Gulf Coast."],
     "the Gulf Coast of Mexico",
   ),
+  "social/oh-g6-world-regions": lesson(
+    ["World regions share features like climate, landforms and culture. Know which countries are in which region: India in Asia, New Zealand in Oceania.", "People adapt to climate, like warm clothing and insulated homes in the cold.", "The Ring of Fire around the Pacific has many volcanoes and earthquakes. Trade connects regions."],
+    "The Amazon rainforest is mostly in which country?",
+    ["The Amazon is in South America.", "Most of it lies in the largest South American country."],
+    "Brazil",
+  ),
+  "social/oh-g6-world-maps": lesson(
+    ["Absolute location uses latitude and longitude.", "The equator splits north and south; the prime meridian splits east and west.", "Earth turns 360° in 24 hours, so time zones change about every 15°. A political map shows borders and capitals."],
+    "Why do time zones change about every 15° of longitude?",
+    ["Earth turns 360° in 24 hours.", "360 ÷ 24 = 15° each hour."],
+    "Earth turns 15° each hour.",
+  ),
   "social/al-g9-interwar": lesson(
     ["After World War I the Ottoman lands were divided; the Sykes-Picot Agreement split them between Britain and France.", "The Great Depression began with the 1929 crash and spread worldwide.", "Dictators rose: Stalin forced collectivization; fascism glorified nation, leader and military (Mussolini invaded Ethiopia in 1935); Hitler took power in 1933."],
     "In what year did Adolf Hitler become chancellor of Germany?",
