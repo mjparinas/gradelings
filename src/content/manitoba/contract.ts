@@ -12,6 +12,6 @@ export const contract: FrameworkContract = {
     return codes.filter((c) => !official.has(c)).map((c) => `cites ${c}, which is not in Manitoba ${grade}/${subject}`);
   },
   ownPrefix: "mb-",
-  ownSharedWith: ["ca-nb", "ca-nl", "ca-ns", "ca-nu", "ca-pe", "us-wa", "us-or", "us-ca", "us-ny", "us-tx", "us-me", "us-mn", "us-ak", "us-al", "us-az", "us-ar", "us-fl", "us-il", "us-co", "us-pa", "us-oh", "us-ga", "us-mo"],
+  ownSharedWith: ["ca-nb", "ca-nl", "ca-ns", "ca-nu", "ca-pe", "us-wa", "us-or", "us-ca", "us-ny", "us-tx", "us-me", "us-mn", "us-ak", "us-al", "us-az", "us-ar", "us-fl", "us-il", "us-co", "us-pa", "us-oh", "us-ga", "us-nj", "us-mo"],
   foreign: /Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada|Saskatchewan|Regina|Alberta/,
 };

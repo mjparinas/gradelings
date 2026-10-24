@@ -403,6 +403,12 @@ export const lessons: GradeLessons = {
     ["Look for the bright red bird.", "It is the northern cardinal."],
     "the cardinal",
   ),
+  "social/nj-g1-new-jersey-symbols": lesson(
+    ["A symbol is a picture or thing that stands for something.", "Our state bird is the eastern goldfinch. Our state flower is the violet.", "Trenton is the capital. Newark is the biggest city."],
+    "Which yellow bird is New Jersey's state bird?",
+    ["Look for the small, bright yellow bird.", "It is the eastern goldfinch."],
+    "the eastern goldfinch",
+  ),
   "social/co-g1-colorado-symbols": lesson(
     ["Colorado's capital is Denver. The State Capitol has a gold dome.", "State symbols include the lark bunting, the columbine and the blue spruce.", "Colorado's flag has a red C, a gold circle, and blue and white stripes."],
     "What is Colorado's state flower?",
