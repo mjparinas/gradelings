@@ -1063,6 +1063,24 @@ export const lessons: GradeLessons = {
     ["The President carries out laws; courts interpret them.", "Article I sets up Congress to make laws."],
     "Congress",
   ),
+  "social/nj-g8-new-jersey-and-nation": lesson(
+    ["New Jersey's 1804 law ended slavery only gradually, so some people were still enslaved in New Jersey until the 13th Amendment in 1865.", "Freedom seekers crossed New Jersey on the Underground Railroad, helped by free Black communities and people like William Still, born in Burlington County.", "New Jersey's factories helped the Union win the war. In 1870, Thomas Mundy Peterson of Perth Amboy was the first Black man to vote under the 15th Amendment."],
+    "Why did slavery last in New Jersey until 1865 even after the 1804 law?",
+    ["The law did not free anyone at once.", "It freed children born after 1804 only after years of service."],
+    "the law ended slavery slowly",
+  ),
+  "social/nj-g8-us-timeline": lesson(
+    ["A timeline puts events in order and shows how one led to another.", "Between the founding (1776 to 1791) and the Civil War (1861 to 1865) came expansion and fights over slavery in new territories.", "Reconstruction ran from 1865 to 1877 and added the 13th, 14th and 15th Amendments."],
+    "New Jersey passed its gradual abolition law in 1804. The 13th Amendment came in 1865. How many years apart?",
+    ["Subtract the earlier year.", "1865 − 1804 = 61."],
+    "61 years",
+  ),
+  "social/nj-g8-new-jersey-plan": lesson(
+    ["The Articles of Confederation made a weak national government that could not collect taxes.", "At the 1787 Convention, the Virginia Plan wanted representation by population. William Paterson's New Jersey Plan wanted an equal vote for every state.", "The Great Compromise made a Senate with equal votes and a House based on population.", "The Three-Fifths Compromise counted enslaved people as three-fifths of a person, giving slaveholding states more seats."],
+    "Which part of Congress reflects the New Jersey Plan?",
+    ["The New Jersey Plan gave every state an equal vote.", "Every state has two senators."],
+    "the Senate",
+  ),
   "social/co-g8-westward": lesson(
     ["The Louisiana Purchase (1803) and the Mexican Cession (1848) brought the land of Colorado into the United States.", "Gold (1858), the Homestead Act and railroads pulled settlers west.", "Settlers took Native land and broke treaties; the Sand Creek Massacre (1864) killed about 230 Cheyenne and Arapaho people."],
     "Which 1848 treaty ended the Mexican-American War?",

@@ -799,6 +799,24 @@ export const lessons: GradeLessons = {
     ["The library is free to use.", "People pay taxes, and taxes pay for it."],
     "taxes",
   ),
+  "social/nj-g3-new-jersey-land": lesson(
+    ["New Jersey is in the Northeast, with the Atlantic Ocean on its east side.", "The Delaware River is its west border and the Hudson River is in the northeast.", "The northwest has ridges and High Point. Most of the south is the low, flat Coastal Plain, with the Pine Barrens and the shore."],
+    "Which river forms New Jersey's western border?",
+    ["The Hudson is in the northeast.", "The west border is the Delaware."],
+    "the Delaware River",
+  ),
+  "social/nj-g3-communities": lesson(
+    ["An urban community is a big city, like Newark or Jersey City.", "A suburban community is near a city, where people live and drive or take the train to work.", "A rural community has farms and open land. Each region of New Jersey makes different things: farm crops, port jobs, tourism."],
+    "A small town surrounded by blueberry farms is what kind of community?",
+    ["It is not a big city or near one.", "Farms and open land mean rural."],
+    "rural",
+  ),
+  "social/nj-g3-local-government": lesson(
+    ["A mayor and a town council lead a town. New Jersey's 21 counties are led by county commissioners.", "The governor leads the state from Trenton.", "Taxes pay for services like police, fire departments, libraries, parks and schools."],
+    "What pays for a town's library?",
+    ["The library is free to use.", "People pay taxes, and taxes pay for it."],
+    "taxes",
+  ),
   "social/co-g3-colorado-land": lesson(
     ["Colorado has plains in the east, the Rocky Mountains in the middle and plateaus and canyons in the west.", "Most people live along the Front Range, where the plains meet the mountains.", "Rivers like the South Platte and the Colorado begin with mountain snow."],
     "Where do most Coloradans live?",
