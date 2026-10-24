@@ -17,10 +17,8 @@ import { AVATARS, Critter, CritterSvg, SpeechBubble } from "../Critter";
 import { signInStudent, signOutStudent } from "@/lib/account";
 import { Page } from "../ui";
 import { ProvinceMenu } from "./ProvinceMenu";
-import { useFlag } from "@/lib/remoteFlags";
 import { CLASS_ROUTE, readClassSignIn, readPlayStart, START_ROUTE, type ClassCodes, type PlayStart } from "@/lib/playLink";
 import { useRoute } from "@/lib/router";
-import { getKV } from "@/lib/localdb";
 import { PARENT_SIGN_IN } from "@/lib/accountLinks";
 import { knownParent } from "@/lib/parentHint";
 
@@ -67,8 +65,10 @@ export function FirstRun() {
   // A login card's QR code goes straight to the class sign-in, with the codes filled in; the header's "Sign in with a code" opens it empty.
   const { path, query } = useRoute();
   const bareClassLink = `/${path[0] ?? ""}` === CLASS_ROUTE && !query.has("c") && !query.has("s");
-  const [step, setStep] = useState(cardLink || bareClassLink ? -1 : 0);
   const preset = usePlayStart();
+  // A "Play free" link from a public page skips the hello and asks the child's name at once, unless a parent has
+  // signed in on this device before (their way back comes first).
+  const [step, setStep] = useState(cardLink || bareClassLink ? -1 : preset && !knownParent() ? 1 : 0);
   // A device a parent has signed in on before: the way back to their account comes first.
   const returning = useSyncExternalStore(
     () => () => {},
@@ -260,11 +260,10 @@ export function NewChild({ onDone, onCancel, first = false, preset = null }: { o
   const [grade, setGrade] = useState<GradeId | null>(preset?.grade && AVAILABLE_GRADES.includes(preset.grade) ? preset.grade : null);
   const [avatar, setAvatar] = useState(AVATARS[0].id);
   const addProfile = useStore((s) => s.addProfile);
-  const signedIn = useStore((s) => Boolean(s.family.account));
-  const askEmail = useFlag("email-at-start") && first && !signedIn;
-  const [asking, setAsking] = useState(false);
   const ready = name.trim().length > 0 && grade !== null;
   const [frameworkId, setFrameworkId] = useState<FrameworkId>(preset?.framework ?? DEFAULT_FRAMEWORK);
+  // A link that already named the grade shows it as one line, so the name is all a new child has to give.
+  const [pickGrade, setPickGrade] = useState(grade === null);
   const framework = getFramework(frameworkId);
 
   const add = () => {
@@ -275,8 +274,6 @@ export function NewChild({ onDone, onCancel, first = false, preset = null }: { o
     onDone(id);
     return id;
   };
-
-  if (asking) return <EmailReports name={name.trim()} onPlay={add} />;
 
   return (
     <Page className="items-center justify-center gap-6 text-center">
@@ -297,27 +294,36 @@ export function NewChild({ onDone, onCancel, first = false, preset = null }: { o
         className="w-full max-w-md rounded-2xl border-4 border-line bg-white px-5 py-4 text-center font-read text-3xl font-bold focus:border-[#4f8ef7]"
       />
 
-      <div className="w-full max-w-2xl">
-        <p className="mb-3 text-2xl font-semibold">What grade?</p>
-        <div className="flex flex-wrap justify-center gap-2">
-          {AVAILABLE_GRADES.map((g) => (
-            <button
-              key={g}
-              type="button"
-              aria-pressed={grade === g}
-              onClick={() => setGrade(g)}
-              className={`btn h-16 min-w-16 px-4 text-2xl ${grade === g ? "btn-good scale-110" : ""}`}
-              aria-label={gradeLabel(g, frameworkId)}
-            >
-              {GRADE_SHORT[g]}
-            </button>
-          ))}
+      {pickGrade ? (
+        <div className="w-full max-w-2xl">
+          <p className="mb-3 text-2xl font-semibold">What grade?</p>
+          <div className="flex flex-wrap justify-center gap-2">
+            {AVAILABLE_GRADES.map((g) => (
+              <button
+                key={g}
+                type="button"
+                aria-pressed={grade === g}
+                onClick={() => setGrade(g)}
+                className={`btn h-16 min-w-16 px-4 text-2xl ${grade === g ? "btn-good scale-110" : ""}`}
+                aria-label={gradeLabel(g, frameworkId)}
+              >
+                {GRADE_SHORT[g]}
+              </button>
+            ))}
+          </div>
+          <p className="mt-2 font-read text-sm text-ink-soft">
+            {grade ? `${gradeLabel(grade, frameworkId)} · ${framework.curriculumName}` : "K means Kindergarten."}
+          </p>
+          {FRAMEWORKS.length > 1 && <ProvinceMenu value={frameworkId} onChange={setFrameworkId} />}
         </div>
-        <p className="mt-2 font-read text-sm text-ink-soft">
-          {grade ? `${gradeLabel(grade, frameworkId)} · ${framework.curriculumName}` : "K means Kindergarten."}
+      ) : (
+        <p className="font-read text-lg text-ink-soft">
+          {gradeLabel(grade!, frameworkId)} · {framework.curriculumName}{" "}
+          <button type="button" aria-label="Change grade" className="inline-flex min-h-12 items-center font-semibold underline" onClick={() => setPickGrade(true)}>
+            Change
+          </button>
         </p>
-        {FRAMEWORKS.length > 1 && <ProvinceMenu value={frameworkId} onChange={setFrameworkId} />}
-      </div>
+      )}
 
       <div>
         <p className="mb-3 text-2xl font-semibold">Pick your animal</p>
@@ -344,9 +350,7 @@ export function NewChild({ onDone, onCancel, first = false, preset = null }: { o
           disabled={!ready}
           className={`btn btn-good min-h-20 text-3xl ${ready ? "" : "opacity-50"}`}
           onClick={() => {
-            if (!grade) return;
-            if (askEmail) setAsking(true);
-            else add();
+            if (grade) add();
           }}
         >
           Start!
@@ -357,45 +361,6 @@ export function NewChild({ onDone, onCancel, first = false, preset = null }: { o
           </button>
         )}
       </div>
-    </Page>
-  );
-}
-
-/**
- * First run on a device with no account: before the child starts, one screen for the grown-up offers the progress
- * emails, which need a free account. "Let's play" is the big button, so a child who is setting up alone just
- * carries on; the account link goes through the parent PIN gate, like the save-progress card.
- */
-function EmailReports({ name, onPlay }: { name: string; onPlay: () => void }) {
-  return (
-    <Page className="items-center justify-center gap-6 text-center">
-      <Critter id="ollie" mood="happy" size={100} />
-      <section className="w-full max-w-md rounded-2xl border-2 border-dashed border-line bg-white/80 p-5 text-left" aria-labelledby="grown-ups">
-        <h2 id="grown-ups" className="text-2xl font-bold">
-          🔒 For grown-ups
-        </h2>
-        <p className="mt-2 font-read text-lg">
-          Get {name ? `${name}'s` : "your child's"} progress by email: a weekly summary in report-card words, and a note before the free trial ends. It takes a free account, which also backs up progress.
-        </p>
-        <a
-          href="/parents/#/account"
-          className="btn mt-4 min-h-14 w-full text-lg"
-          onClick={async (e) => {
-            // Add the child first, and wait until the device has saved them, so nothing typed here is lost on the
-            // way to the parent area (a read queues behind the writes before it).
-            e.preventDefault();
-            const target = e.currentTarget.href;
-            onPlay();
-            await getKV("profiles").catch(() => undefined);
-            window.location.assign(target);
-          }}
-        >
-          Email me the reports
-        </a>
-      </section>
-      <button type="button" className="btn btn-good min-h-20 w-full max-w-md text-3xl short:min-h-14 short:text-2xl" onClick={onPlay}>
-        Not now, let&apos;s play! →
-      </button>
     </Page>
   );
 }

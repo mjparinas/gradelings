@@ -45,7 +45,7 @@ export default async function GradePage({ params }: PageProps<"/curriculum/[fram
   const i = grades.indexOf(grade);
 
   return (
-    <SitePage cta play={playHref({ framework: f.id, grade })}>
+    <SitePage cta lead="trial" play={playHref({ framework: f.id, grade })}>
       <JsonLd data={[breadcrumbJsonLd(crumbs), itemListJsonLd(`${gradeLabel(f, grade)} subjects in the ${f.curriculumName}`, courses.map((c) => ({ name: subjectSeoTitle(c.subject), path: curriculumPath.subject(f, grade, c.subject) })))]} />
       <Crumbs items={crumbs} />
       <h1 className="text-4xl font-bold">

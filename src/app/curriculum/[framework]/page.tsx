@@ -35,7 +35,7 @@ export default async function FrameworkPage({ params }: PageProps<"/curriculum/[
   if (!r) notFound();
   const f = r.framework;
   return (
-    <SitePage cta play={playHref({ framework: f.id })}>
+    <SitePage cta lead="trial" play={playHref({ framework: f.id })}>
       <Crumbs items={[{ label: "Home", href: "/" }, { label: "Curriculum", href: curriculumPath.index() }, { label: f.curriculumName }]} />
       <h1 className="text-4xl font-bold">{f.curriculumName}: {gradeSpan(f, true)}</h1>
       <p className="mt-2 max-w-3xl font-read text-lg text-ink-soft">
