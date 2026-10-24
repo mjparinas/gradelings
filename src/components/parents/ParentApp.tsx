@@ -20,6 +20,7 @@ import { Gate } from "./Gate";
 import { Overview } from "./Overview";
 import { PlacementPage } from "./Placement";
 import { ReportCardsPage } from "./ReportCards";
+import { YearReviewPage } from "./YearReview";
 import { ReportsPage } from "./Reports";
 import { SettingsPage } from "./Settings";
 import { SubscriptionPage } from "./Subscription";
@@ -39,7 +40,7 @@ const NAV = [
 ];
 
 /** Older links still open: Placement and Report cards live under Reports, Privacy under Account. */
-const NAV_PARENT: Record<string, string> = { placement: "reports", "report-cards": "reports", privacy: "account" };
+const NAV_PARENT: Record<string, string> = { placement: "reports", "report-cards": "reports", year: "reports", privacy: "account" };
 
 const noSubscribe = () => () => {};
 
@@ -213,6 +214,9 @@ export function ParentApp() {
       break;
     case "report-cards":
       page = <ReportCardsPage childId={path[1]} />;
+      break;
+    case "year":
+      page = <YearReviewPage childId={path[1]} />;
       break;
     case "children":
       page = <ChildrenPage />;

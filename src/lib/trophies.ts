@@ -5,6 +5,7 @@ import type { Derived } from "./derive";
 import type { Mode } from "./model";
 import { SHOP } from "./shop";
 import { getGame } from "./arcade";
+import { factKnown, factSetsFor, factsIn, type FactSetId } from "./facts";
 import { unitLevel } from "./proficiency";
 
 // Console-style trophies: bronze, silver, gold and one platinum per grade.
@@ -62,6 +63,24 @@ function unitsAtLevel(d: Derived, grade: GradeId, framework: FrameworkId, min: n
 function unitsInGrade(grade: GradeId, framework: FrameworkId, subject?: SubjectId): number {
   return allUnitRefs(grade, framework).filter((r) => (subject ? r.course.subject === subject : isCoreSubject(r.course.subject))).length;
 }
+
+/** A Math Facts trophy only shows where the grade has one of these fact sets. */
+const hasFactSet = (...sets: FactSetId[]) => (ctx: TrophyContext) => factSetsFor(ctx.grade).some((s) => sets.includes(s.id));
+
+/** Know every fact in a set (read from the fact stats, so it never depends on loaded content). */
+const factSetTrophy = (set: FactSetId, name: string, description: string, icon: string): Trophy => ({
+  id: `facts-${set}`,
+  name,
+  description,
+  tier: "gold",
+  icon,
+  category: "Modes",
+  applies: hasFactSet(set),
+  progress: (d) => {
+    const facts = factsIn(set);
+    return { value: facts.filter((f) => factKnown(d.facts[f.id])).length, target: facts.length };
+  },
+});
 
 /** A game trophy only shows where the game has content for the grade. */
 const fitsGame = (id: string) => (ctx: TrophyContext) => !!getGame(id)?.grades?.includes(ctx.grade);
@@ -235,6 +254,13 @@ export const TROPHIES: Trophy[] = [
   { id: "adventure-100", name: "Adventurer", description: "Answer 100 questions in Adventure mode.", tier: "silver", icon: "🗺️", category: "Modes", progress: count(100, (d) => d.modeAnswers.adventure ?? 0) },
   { id: "practice-100", name: "Practice Makes Progress", description: "Answer 100 questions in Practice mode.", tier: "bronze", icon: "📚", category: "Modes", progress: count(100, (d) => d.modeAnswers.practice ?? 0) },
   { id: "review-5", name: "Second Look", description: "Finish 5 Review sessions.", tier: "bronze", icon: "🔍", category: "Modes", progress: count(5, (d) => d.modes.review ?? 0) },
+  // Math Facts: only where the grade has facts to practise (not Kindergarten; times tables from Grade 3).
+  { id: "facts-1", name: "Fact Finder", description: "Finish a Math Facts round.", tier: "bronze", icon: "🧮", category: "Modes", applies: hasFactSet("add10", "add"), progress: count(1, (d) => d.modes.facts ?? 0) },
+  { id: "facts-known-50", name: "Fact Collector", description: "Know 50 math facts.", tier: "silver", icon: "🔢", category: "Modes", applies: hasFactSet("add10", "add"), progress: count(50, (d) => Object.values(d.facts).filter(factKnown).length) },
+  factSetTrophy("add", "Addition Ace", "Know all 100 addition facts to 20.", "➕"),
+  factSetTrophy("sub", "Take-Away Pro", "Know all 100 subtraction facts to 20.", "➖"),
+  factSetTrophy("mul", "Times Table Hero", "Know all 100 times-table facts, 1 × 1 to 10 × 10.", "✖️"),
+  factSetTrophy("div", "Division Dynamo", "Know all 100 division facts.", "➗"),
 
   // Arcade
   { id: "game-first", name: "Game On", description: "Play an arcade game.", tier: "bronze", icon: "🕹️", category: "Arcade", progress: count(1, (d) => Object.values(d.gamesPlayed).reduce((a, b) => a + b, 0)) },

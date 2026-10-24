@@ -174,7 +174,18 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
   const [hidden, setHidden] = useState<string[]>([]);
   const [showHidden, setShowHidden] = useState(false);
   const [notice, setNotice] = useState("");
+  // The Monday class email, saved on the account. Null when it isn't offered.
+  const [mondayEmail, setMondayEmail] = useState<boolean | null>(null);
 
+  const setMonday = (on: boolean) => {
+    setMondayEmail(on);
+    setNotice(on ? "Monday email turned on." : "Monday email turned off.");
+    call("/api/classes/digest/", "PATCH", { on }).catch((e: Error) => {
+      setMondayEmail(!on);
+      setNotice("");
+      setErr(e.message);
+    });
+  };
   const hide = (id: string, on: boolean) => {
     const before = hidden;
     setHidden(on ? [...new Set([...hidden, id])] : hidden.filter((h) => h !== id));
@@ -186,9 +197,10 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
     });
   };
   const load = useCallback(() => {
-    call<{ classes: ClassSummary[] }>("/api/classes/")
+    call<{ classes: ClassSummary[]; mondayEmail?: boolean | null }>("/api/classes/")
       .then((r) => {
         setClasses(r.classes);
+        setMondayEmail(r.mondayEmail ?? null);
         let now = r.classes.filter((c) => c.hidden).map((c) => c.id);
         // Classes hidden on this device before the choice moved to the account: save them there once, then forget them here.
         const old = readStore(HIDDEN_KEY).split(",").filter((id) => id && r.classes.some((c) => c.id === id) && !now.includes(id));
@@ -303,6 +315,19 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
           </button>{" "}
           Hiding only tidies your list, on every device you sign in on. The class and its students aren’t changed.
         </p>
+      )}
+      {mondayEmail !== null && (classes?.length ?? 0) > 0 && (
+        <section className="mt-4 rounded-2xl border border-line bg-white p-4" aria-label="Monday email">
+          <label className="flex min-h-11 cursor-pointer items-start gap-3">
+            <input type="checkbox" className="mt-1 size-6 shrink-0" checked={mondayEmail} disabled={account.verified === false} onChange={(e) => setMonday(e.target.checked)} />
+            <span>
+              <b className="block">📬 Email me every Monday</b>
+              <span className="block font-read text-sm text-ink-soft">
+                For each class: who practised last week, homework done and not started, units worth reteaching and students to check in with. First names only, and it reflects practice, not a report-card mark.
+              </span>
+            </span>
+          </label>
+        </section>
       )}
       <p role="status" className="sr-only">
         {notice}

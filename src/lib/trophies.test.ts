@@ -5,6 +5,7 @@ import type { GradeId, SubjectId } from "@/content/types";
 import { derive, type Derived, type UnitStat } from "./derive";
 import { SHOP } from "./shop";
 import { arcadeFor, GAMES } from "./arcade";
+import { FACT_SETS, factsIn } from "./facts";
 import { EXPLORER_GAMES, getTrophy, newlyEarned, TIER_STYLE, TROPHIES, trophyTier, visibleTrophies, type TrophyContext } from "./trophies";
 
 const GRADES: GradeId[] = ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -27,7 +28,8 @@ function didEverything(level: 2 | 3): Derived {
   d.units = Object.fromEntries(keys.map((k) => [k, unitAt(k, level)]));
   Object.assign(d.totals, { answers: BIG, correct: BIG, sessions: BIG, perfectSessions: BIG, learnSeconds: BIG * 60, bestRun: BIG, comebacks: BIG });
   d.subjects = Object.fromEntries(SUBJECTS.map((s) => [s, { answers: BIG, correct: BIG }]));
-  d.modes = { practice: BIG, adventure: BIG, review: BIG, speed: BIG, daily: BIG, challenge: BIG };
+  d.modes = { practice: BIG, adventure: BIG, review: BIG, speed: BIG, daily: BIG, challenge: BIG, facts: BIG };
+  d.facts = Object.fromEntries(FACT_SETS.flatMap((s) => factsIn(s.id)).map((f) => [f.id, { attempts: 2, recent: [true, true], lastT: 1 }]));
   d.modeAnswers = { ...d.modes };
   d.streak = { ...d.streak, best: BIG, shieldsUsed: 1 };
   d.dailyDone = Array.from({ length: 1000 }, (_, i) => `day-${i}`);
@@ -114,8 +116,21 @@ describe("the trophy list", () => {
     expect(shown("7")).toContain("tower-300");
   });
 
-  it("has 197 trophies with the secret ones hidden", () => {
-    expect(TROPHIES).toHaveLength(197);
+  it("has a Math Facts trophy for each fact set, only in the grades that practise it", () => {
+    const shown = (grade: GradeId) => TROPHIES.filter((t) => t.id.startsWith("facts-") && (t.applies?.({ grade, framework: "ca-bc" }) ?? true)).map((t) => t.id);
+    expect(shown("k")).toEqual([]);
+    expect(shown("1")).toEqual(["facts-1", "facts-known-50"]);
+    expect(shown("2")).toEqual(["facts-1", "facts-known-50", "facts-add", "facts-sub"]);
+    expect(shown("5")).toEqual(["facts-1", "facts-known-50", "facts-add", "facts-sub", "facts-mul", "facts-div"]);
+    const times = TROPHIES.find((t) => t.id === "facts-mul")!;
+    const d = derive([]);
+    expect(times.progress(d, { grade: "4", framework: "ca-bc" })).toEqual({ value: 0, target: 100 });
+    d.facts = { "mul:7:8": { attempts: 2, recent: [true, true], lastT: 1 }, "mul:6:9": { attempts: 1, recent: [true], lastT: 1 } };
+    expect(times.progress(d, { grade: "4", framework: "ca-bc" }).value).toBe(1);
+  });
+
+  it("has 203 trophies with the secret ones hidden", () => {
+    expect(TROPHIES).toHaveLength(203);
     expect(TROPHIES.filter((t) => t.hidden).map((t) => t.id).sort()).toEqual(
       ["early-bird", "konami", "marathon", "dizzy-ollie", "polite-moose", "secret-word", "palindrome", "make-a-wish", ...GRADES.map((g) => `polymath-${g}`)].sort(),
     );

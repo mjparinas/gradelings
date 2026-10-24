@@ -99,7 +99,7 @@ export const TAX_NOTE: Record<Currency, { short: string; long: string }> = {
 /** How a currency is named in a sentence ("Prices in Canadian dollars"). */
 export const CURRENCY_NAME: Record<Currency, string> = { CAD: "Canadian dollars", USD: "US dollars" };
 
-export type Feature = "allUnits" | "adventure" | "review" | "speed" | "challenge" | "arcade" | "fullReports";
+export type Feature = "allUnits" | "adventure" | "review" | "speed" | "facts" | "challenge" | "arcade" | "fullReports";
 
 const ACTIVE = new Set(["active", "trialing", "past_due"]);
 

@@ -47,7 +47,7 @@ describe("daily quests", () => {
       ...SHARED, answers: [20, 20], "answers-big": [40, 35], "run-8": [8, 25], minutes: [10, 25], "minutes-long": [15, 35],
       "math-8": [8, 20], "language-8": [8, 20], "science-8": [8, 20], "social-8": [8, 20],
       "math-15": [15, 30], "language-15": [15, 30], "science-15": [15, 30], "social-15": [15, 30],
-      speed: [1, 15], review: [1, 20],
+      speed: [1, 15], review: [1, 20], facts: [1, 20],
     }));
   });
 
@@ -71,13 +71,13 @@ describe("daily quests", () => {
     const day = dayStat({
       answers: 11, sessions: 3, perfect: 2, learnSeconds: 659, bestRun: 6, stories: 2,
       subjects: { math: 7, language: 3, science: 2 },
-      modes: { practice: 4, daily: 5, adventure: 16, challenge: 17, speed: 18, review: 19 },
+      modes: { practice: 4, daily: 5, adventure: 16, challenge: 17, speed: 18, review: 19, facts: 20 },
     });
     const pool = dailyPool("big");
     const progress = Object.fromEntries([...pool.values()].map((q) => [q.id, q.progress(day)]));
     expect(progress).toEqual({
       answers: 11, "answers-big": 11, run: 6, "run-8": 6, lessons: 3, "lessons-3": 3, flawless: 2, minutes: 10, "minutes-long": 10,
-      "two-subjects": 2, "three-subjects": 2, practice: 4, daily: 5, adventure: 16, challenge: 17, speed: 18, review: 19, story: 2,
+      "two-subjects": 2, "three-subjects": 2, practice: 4, daily: 5, adventure: 16, challenge: 17, speed: 18, review: 19, facts: 20, story: 2,
       "math-8": 7, "language-8": 3, "science-8": 2, "social-8": 0, "math-15": 7, "language-15": 3, "science-15": 2, "social-15": 0,
     });
     for (const q of pool.values()) expect(q.progress(undefined), q.id).toBe(0);

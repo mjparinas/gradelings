@@ -19,6 +19,7 @@ import { ContentGate } from "../ContentGate";
 import { LoadingScreen } from "../ui";
 import { Arcade, GameScreen } from "./Arcade";
 import { Hub } from "./Hub";
+import { FactsPicker } from "./Facts";
 import { setLivePaused } from "@/lib/livePause";
 import { LiveQuestionCard, useLiveQuestion } from "./LiveQuestion";
 import { SpeedPicker, SubjectPicker, UnitList } from "./Practice";
@@ -41,10 +42,12 @@ import { TrailMap } from "./TrailMap";
 import { TrophyRoom } from "./Trophies";
 import { Treasures } from "./Treasures";
 
-const MODES: Mode[] = ["practice", "adventure", "review", "speed", "daily", "challenge"];
+const MODES: Mode[] = ["practice", "adventure", "review", "speed", "daily", "challenge", "facts"];
 
 /** Screens the admin panel can switch off for everyone (src/lib/flags.ts). A switched-off screen shows the home screen. */
-const SCREEN_FLAGS: Record<string, FlagKey> = { stickers: "sticker-book", room: "my-room", speed: "speed-run", arcade: "arcade", shop: "shop", stories: "story-library" };
+const SCREEN_FLAGS: Record<string, FlagKey> = { stickers: "sticker-book", room: "my-room", speed: "speed-run", facts: "math-facts", arcade: "arcade", shop: "shop", stories: "story-library" };
+/** Sessions whose mode the admin panel can switch off. */
+const MODE_FLAGS: Partial<Record<Mode, FlagKey>> = { daily: "daily-challenge", speed: "speed-run", facts: "math-facts" };
 
 /** Next grade's lessons for the summer sneak peek: downloaded on first use, like any grade. */
 function NextGrade({ grade, children }: { grade: GradeId; children: ReactNode }) {
@@ -61,7 +64,7 @@ function Screen() {
   // A lesson or session from the sneak peek needs that grade's download too.
   const scopeGrade = parseUnitKey(query.get("scope") ?? "")?.grade;
   const withPeek = (node: ReactNode) => (peek && scopeGrade === peek ? <NextGrade grade={peek}>{node}</NextGrade> : node);
-  const flag = SCREEN_FLAGS[path[0]] ?? (path[0] === "session" && query.get("mode") === "daily" ? "daily-challenge" : path[0] === "session" && query.get("mode") === "speed" ? "speed-run" : undefined);
+  const flag = SCREEN_FLAGS[path[0]] ?? (path[0] === "session" ? MODE_FLAGS[query.get("mode") as Mode] : undefined);
   if (flag && !isOn(flag)) return <Hub />;
   switch (path[0]) {
     case "practice":
@@ -97,6 +100,8 @@ function Screen() {
       return <Room />;
     case "speed":
       return <SpeedPicker />;
+    case "facts":
+      return <FactsPicker />;
     case "session": {
       const mode = query.get("mode") as Mode;
       const scope = query.get("scope") ?? "mix";

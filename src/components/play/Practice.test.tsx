@@ -138,6 +138,24 @@ describe("SubjectPicker", () => {
     expect(screen.queryByRole("link", { name: /Stories/ })).not.toBeInTheDocument();
   });
 
+  it("gives little kids Math Facts here too, unless math or the flag is off", () => {
+    const first = inBand("little", <SubjectPicker />);
+    expect(screen.getByRole("link", { name: /Math Facts/ })).toBeInTheDocument();
+    first.unmount();
+    h.off = new Set(["math-facts"]);
+    const second = inBand("little", <SubjectPicker />);
+    expect(screen.queryByRole("link", { name: /Math Facts/ })).not.toBeInTheDocument();
+    second.unmount();
+    h.off = new Set();
+    h.settings = { enabledSubjects: ["language"] };
+    const third = inBand("little", <SubjectPicker />);
+    expect(screen.queryByRole("link", { name: /Math Facts/ })).not.toBeInTheDocument();
+    third.unmount();
+    h.settings = { enabledSubjects: ["math", "language"] };
+    inBand("middle", <SubjectPicker />);
+    expect(screen.queryByRole("link", { name: /Math Facts/ })).not.toBeInTheDocument();
+  });
+
   it("hides the little kids' Daily Challenge when the admin switched it off", () => {
     h.off = new Set(["daily-challenge"]);
     inBand("little", <SubjectPicker />);

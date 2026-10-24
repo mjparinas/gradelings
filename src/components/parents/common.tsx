@@ -208,9 +208,10 @@ const REPORT_TABS = [
   { path: "reports", label: "Progress" },
   { path: "placement", label: "Placement test" },
   { path: "report-cards", label: "Report card" },
+  { path: "year", label: "Year in review" },
 ];
 
-/** The three views under Reports, keeping the chosen child. */
+/** The views under Reports, keeping the chosen child. */
 export function ReportTabs({ current, childId }: { current: string; childId?: string }) {
   return (
     <nav aria-label="Report views" className="mb-5 print:hidden">

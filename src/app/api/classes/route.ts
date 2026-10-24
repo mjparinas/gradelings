@@ -61,7 +61,12 @@ export async function GET(req: Request) {
     [session.parentId, session.parentId],
   );
   const hidden = new Set(await hiddenClassIds(session.parentId));
+  // The Monday class email: null when the switch shouldn't show (the flag is off).
+  const digest = (await isFlagOn("teacher-monday-email", session.familyId))
+    ? Boolean((await query<{ class_digest: number }>("SELECT class_digest FROM parents WHERE id = ?", [session.parentId]))[0]?.class_digest)
+    : null;
   return json({
+    mondayEmail: digest,
     classes: rows.map((r) => ({ id: r.id, name: r.name, grade: r.grade, grade2: r.grade2, framework: r.framework, joinCode: r.join_code, students: Number(r.students), role: r.owner_parent_id === session.parentId ? "owner" : "co-teacher", hidden: hidden.has(r.id) })),
   });
 }

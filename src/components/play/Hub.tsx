@@ -6,6 +6,7 @@ import { useState, type CSSProperties } from "react";
 import { allUnitRefs, getUnitRef } from "@/content";
 import { getSubjectMeta } from "@/content/subjects";
 import { refresherUnit, weakest } from "@/lib/adaptive";
+import { factSetsFor, factSummary } from "@/lib/facts";
 import { gameTime } from "@/lib/gametime";
 import { effectiveGoal } from "@/lib/goal";
 import { dayKey } from "@/lib/model";
@@ -134,6 +135,12 @@ export function Hub() {
         ? `Learn ${Math.ceil(games.nextInSeconds / 60)} more min`
         : "Done for today";
 
+  // Math Facts: a tile from Grade 2 up (little kids find it on the Lessons screen), while math is switched on.
+  const factSets = subjects.includes("math") ? factSetsFor(profile.grade) : [];
+  const hasFacts = factSets.length > 0;
+  const shownSet = factSets.find((s) => s.id === "mul") ?? factSets.find((s) => s.id === "add") ?? factSets[0];
+  const shownKnown = shownSet ? factSummary(shownSet, d.facts) : undefined;
+  const factsDesc = !shownKnown ? "" : shownKnown.known > 0 ? `${shownKnown.known} of ${shownKnown.total} ${shownSet.noun}` : shownSet.op === "mul" ? "Times tables and more" : "Adding and taking away";
   const lessonsTile: Tile = { id: "practice", title: little ? "Lessons" : "Practice", desc: "Pick a subject and topic", icon: "📚", colour: "#4f8ef7", dark: "#2f6fd6", href: "#/practice" };
   const storiesTile: Tile = { id: "stories", title: "Stories", desc: "Read along at your level", icon: "📖", colour: "#ff7a59", dark: "#d4553a", href: "#/stories", flag: "story-library" };
   const arcadeTile: Tile = { id: "arcade", title: little ? "Games" : "Arcade", desc: gameDesc, icon: "🕹️", colour: "#7c4fe0", dark: "#5d34c4", href: "#/arcade", feature: "arcade", flag: "arcade" };
@@ -159,6 +166,9 @@ export function Hub() {
     lessonsTile,
     ...(stories ? [storiesTile] : []),
     { id: "trail", title: "Trail Map", desc: "See how far you've come", icon: "🧭", colour: "#f08a4b", dark: "#c46a2c", href: "#/map" },
+    ...(hasFacts
+      ? [{ id: "facts", title: "Math Facts", desc: factsDesc, icon: "🧮", colour: "#14b8a6", dark: "#0f8f81", href: "#/facts", feature: "facts" as Feature, flag: "math-facts" as FlagKey }]
+      : []),
     { id: "speed", title: "Speed Run", desc: "How many in 60 seconds?", icon: "⚡", colour: "#e9559a", dark: "#c43a7c", href: "#/speed", feature: "speed", flag: "speed-run" },
     {
       id: "review",

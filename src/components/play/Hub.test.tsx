@@ -204,6 +204,33 @@ describe("Hub tiles", () => {
     expect(window.location.hash).toBe("#/treasures");
   });
 
+  it("has a Math Facts tile from Grade 2, with how many facts are known once some are", () => {
+    show();
+    expect(tile("Math Facts")).toHaveTextContent("Adding and taking away");
+    fireEvent.click(tile("Math Facts"));
+    expect(window.location.hash).toBe("#/facts");
+    cleanup();
+    set({ facts: { "add:3:4": { attempts: 2, recent: [true, true], lastT: NOW } } });
+    show();
+    expect(tile("Math Facts")).toHaveTextContent("1 of 100 addition facts to 20");
+  });
+
+  it("leaves Math Facts off the home screen when math or the flag is off, and locks it on the free plan", () => {
+    h.settings = { ...h.settings, enabledSubjects: ["language"] };
+    const first = show();
+    expect(screen.queryByText("Math Facts")).not.toBeInTheDocument();
+    first.unmount();
+    h.settings = { ...h.settings, enabledSubjects: ["math"] };
+    h.off = new Set(["math-facts"]);
+    const second = show();
+    expect(screen.queryByText("Math Facts")).not.toBeInTheDocument();
+    second.unmount();
+    h.off = new Set();
+    h.family = free;
+    show();
+    expect(within(tile("Math Facts")).getByText("🔒")).toBeInTheDocument();
+  });
+
   it("little kids' Games tile still asks for a grown-up on the free plan", () => {
     h.family = free;
     show("little");
