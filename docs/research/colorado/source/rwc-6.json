@@ -1,0 +1,1495 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D21132944",
+   "id": "D21132944",
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.cde.state.co.us/coreadingwriting/2020cas-rw-p12",
+   "title": "Colorado Academic Standards: Reading, Writing and Communicating",
+   "valid": "2020"
+  },
+  "educationLevels": [
+   "06"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D21132944_grade-06",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/3.0/us/",
+   "rightsHolder": "D2L Corporation",
+   "title": "CC BY 3.0 US"
+  },
+  "normalizedSubject": "English",
+  "standards": {
+   "005E5EFBB66748118FE301C3B4ED6F4F": {
+    "ancestorIds": [
+     "0C45B6984F4A484ABE5ECA1C5708C350",
+     "ED1FEA28EBC942C39E24B65C550F3B3A"
+    ],
+    "asnIdentifier": "S21133053",
+    "depth": 2,
+    "description": "Include multimedia components (for example: graphics, images, music, sound) and visual displays in presentations to clarify information.",
+    "id": "005E5EFBB66748118FE301C3B4ED6F4F",
+    "parentId": "0C45B6984F4A484ABE5ECA1C5708C350",
+    "position": 12000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.1.2.b"
+   },
+   "02B233F7E87C4CB0A392788E72B5F113": {
+    "ancestorIds": [
+     "9589E8BCDB5D4419884F61B71F0CC7D1",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133938",
+    "depth": 2,
+    "description": "Use knowledge of language and its conventions when writing, speaking, reading, or listening.",
+    "id": "02B233F7E87C4CB0A392788E72B5F113",
+    "parentId": "9589E8BCDB5D4419884F61B71F0CC7D1",
+    "position": 89000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.4.c"
+   },
+   "02DA1F2E903F46BF8E5E4485C1CE3255": {
+    "ancestorIds": [
+     "1A2276528CFA49ADAA2B2E573F592503",
+     "B59C1969999549F8AB239F49DDAF537D",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133498",
+    "depth": 3,
+    "description": "Determine an author's point of view or purpose in a text and explain how it is conveyed in the text.",
+    "id": "02DA1F2E903F46BF8E5E4485C1CE3255",
+    "parentId": "1A2276528CFA49ADAA2B2E573F592503",
+    "position": 37000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.2.b.iii"
+   },
+   "05870FBC1DFA47BE9F1A0800B6350B65": {
+    "ancestorIds": [
+     "FC1E03C6AD424FC6A14FA7B5E82BFCE3",
+     "9589E8BCDB5D4419884F61B71F0CC7D1",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133931",
+    "depth": 3,
+    "description": "Use intensive pronouns (e.g., myself, ourselves).",
+    "id": "05870FBC1DFA47BE9F1A0800B6350B65",
+    "parentId": "FC1E03C6AD424FC6A14FA7B5E82BFCE3",
+    "position": 82000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.4.a.ii"
+   },
+   "0781C88363BA4318AE2D563C622109C1": {
+    "ancestorIds": [
+     "252DDA29887F47DDBDEC231210EE3122",
+     "C9765A8A2B4443888B525FA6B4D8C55B",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133924",
+    "depth": 3,
+    "description": "Use a variety of transition words, phrases, and clauses to convey sequence and signal shifts from one time frame or setting to another.",
+    "id": "0781C88363BA4318AE2D563C622109C1",
+    "parentId": "252DDA29887F47DDBDEC231210EE3122",
+    "position": 75000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.3.a.iii"
+   },
+   "0A1EF3B9DCA14A5D95592355E8DC7C87": {
+    "ancestorIds": [
+     "201D573321CF4D68B065F4D3D1E0F421",
+     "9589E8BCDB5D4419884F61B71F0CC7D1",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133937",
+    "depth": 3,
+    "description": "Correctly spell frequently used words and consult reference materials (for example: dictionaries, both print and digital, spell check, and/or trusted peers and/or adults) to determine the spelling of less frequent vocabulary.",
+    "id": "0A1EF3B9DCA14A5D95592355E8DC7C87",
+    "parentId": "201D573321CF4D68B065F4D3D1E0F421",
+    "position": 88000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.4.b.ii"
+   },
+   "0BAD560DFEC244DBBD7E0C560EB51829": {
+    "ancestorIds": [
+     "FC1E03C6AD424FC6A14FA7B5E82BFCE3",
+     "9589E8BCDB5D4419884F61B71F0CC7D1",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133934",
+    "depth": 3,
+    "description": "Recognize variations from Standard English in their own and others' writing and speaking, and identify and use strategies to improve expression in conventional language.",
+    "id": "0BAD560DFEC244DBBD7E0C560EB51829",
+    "parentId": "FC1E03C6AD424FC6A14FA7B5E82BFCE3",
+    "position": 85000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.4.a.v"
+   },
+   "0C45B6984F4A484ABE5ECA1C5708C350": {
+    "ancestorIds": [
+     "ED1FEA28EBC942C39E24B65C550F3B3A"
+    ],
+    "asnIdentifier": "S21133051",
+    "depth": 1,
+    "description": "Develop, organize, and present ideas and opinions effectively.",
+    "id": "0C45B6984F4A484ABE5ECA1C5708C350",
+    "parentId": "ED1FEA28EBC942C39E24B65C550F3B3A",
+    "position": 10000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.1.2"
+   },
+   "0D3F1EB28738468D930A19CCA4895F12": {
+    "ancestorIds": [
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133505",
+    "depth": 1,
+    "description": "Apply knowledge of word relationships, word structures, and sentence structures to determine the meaning of new words in context.",
+    "id": "0D3F1EB28738468D930A19CCA4895F12",
+    "parentId": "4655B0AD13A1444A974EEDD4AD3D6AF0",
+    "position": 44000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.2.3"
+   },
+   "1514C2AB95DF4DECADD320CB2311B1D6": {
+    "ancestorIds": [
+     "9589E8BCDB5D4419884F61B71F0CC7D1",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133942",
+    "depth": 2,
+    "description": "With some guidance and support from peers and adults, develop and strengthen writing as needed by planning, revising, editing, rewriting, or trying a new approach.",
+    "id": "1514C2AB95DF4DECADD320CB2311B1D6",
+    "parentId": "9589E8BCDB5D4419884F61B71F0CC7D1",
+    "position": 93000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.4.e"
+   },
+   "16FEFB05F5C044F1920026E977A54946": {
+    "ancestorIds": [
+     "B26A3D1A0A3547C39D7A6488877E5C40",
+     "9DE055D59D2248BBBBDD1A358AC00756",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133914",
+    "depth": 3,
+    "description": "Introduce a topic; organize ideas, concepts, and information, using strategies such as definition, classification, comparison/contrast, and cause/effect; include formatting (for example: headings), graphics (for example: charts, tables), and multimedia when useful to aiding comprehension.",
+    "id": "16FEFB05F5C044F1920026E977A54946",
+    "parentId": "B26A3D1A0A3547C39D7A6488877E5C40",
+    "position": 65000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.2.a.i"
+   },
+   "1890C6795E1347B09256940EBBB56EE3": {
+    "ancestorIds": [
+     "C0FCAEFFB4464ACCAC7CC194903A6563",
+     "B59C1969999549F8AB239F49DDAF537D",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133492",
+    "depth": 3,
+    "description": "Cite textual evidence to support analysis of what the text says explicitly as well as inferences drawn from the text.",
+    "id": "1890C6795E1347B09256940EBBB56EE3",
+    "parentId": "C0FCAEFFB4464ACCAC7CC194903A6563",
+    "position": 31000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.2.a.i"
+   },
+   "1A2276528CFA49ADAA2B2E573F592503": {
+    "ancestorIds": [
+     "B59C1969999549F8AB239F49DDAF537D",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133495",
+    "depth": 2,
+    "description": "Use Craft and Structure to:",
+    "id": "1A2276528CFA49ADAA2B2E573F592503",
+    "parentId": "B59C1969999549F8AB239F49DDAF537D",
+    "position": 34000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.2.b"
+   },
+   "1BD1CCCABB30463781E3479AED728FFD": {
+    "ancestorIds": [
+     "9BD7BB0AF0D648DE8DAECFC434138755",
+     "9C488EA0BBE04701B486572D8959CB52",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133478",
+    "depth": 3,
+    "description": "Cite textual evidence to support analysis of what the text says explicitly as well as inferences drawn from the text.",
+    "id": "1BD1CCCABB30463781E3479AED728FFD",
+    "parentId": "9BD7BB0AF0D648DE8DAECFC434138755",
+    "position": 17000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.1.a.i"
+   },
+   "201D573321CF4D68B065F4D3D1E0F421": {
+    "ancestorIds": [
+     "9589E8BCDB5D4419884F61B71F0CC7D1",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133935",
+    "depth": 2,
+    "description": "Demonstrate command of the conventions of Standard English capitalization, punctuation, and spelling when writing.",
+    "id": "201D573321CF4D68B065F4D3D1E0F421",
+    "parentId": "9589E8BCDB5D4419884F61B71F0CC7D1",
+    "position": 86000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.4.b"
+   },
+   "2444879AF28E4FF0A907AA5A94083AD1": {
+    "ancestorIds": [
+     "F21F91965BEE493CA31C18DFC174D015",
+     "ED1FEA28EBC942C39E24B65C550F3B3A"
+    ],
+    "asnIdentifier": "S21133049",
+    "depth": 2,
+    "description": "Interpret information presented in diverse media and formats (for example: visually, quantitatively, orally) and explain how it contributes to a topic, text, or issue under study.",
+    "id": "2444879AF28E4FF0A907AA5A94083AD1",
+    "parentId": "F21F91965BEE493CA31C18DFC174D015",
+    "position": 8000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.1.1.b"
+   },
+   "252DDA29887F47DDBDEC231210EE3122": {
+    "ancestorIds": [
+     "C9765A8A2B4443888B525FA6B4D8C55B",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133921",
+    "depth": 2,
+    "description": "Write narratives to develop real or imagined experiences or events using effective technique, relevant descriptive details, and well-structured event sequences.",
+    "id": "252DDA29887F47DDBDEC231210EE3122",
+    "parentId": "C9765A8A2B4443888B525FA6B4D8C55B",
+    "position": 72000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.3.a"
+   },
+   "255431153D844DDFA143772582418E00": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21134095",
+    "depth": 0,
+    "description": "Research Inquiry and Design",
+    "id": "255431153D844DDFA143772582418E00",
+    "parentId": null,
+    "position": 96000,
+    "statementLabel": "Standard",
+    "statementNotation": "RID.4"
+   },
+   "2803F30F9E9B437488718917522B672C": {
+    "ancestorIds": [
+     "FC1E03C6AD424FC6A14FA7B5E82BFCE3",
+     "9589E8BCDB5D4419884F61B71F0CC7D1",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133930",
+    "depth": 3,
+    "description": "Ensure that pronouns are in the proper case (subjective, objective, and possessive).",
+    "id": "2803F30F9E9B437488718917522B672C",
+    "parentId": "FC1E03C6AD424FC6A14FA7B5E82BFCE3",
+    "position": 81000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.4.a.i"
+   },
+   "288800E21B7C4B2AA7D247F3F44EA7C9": {
+    "ancestorIds": [
+     "6D99F483ED2A424195AD299D463F124B",
+     "5417BCC7088E41D1BD8B3E2C960DC4CC",
+     "255431153D844DDFA143772582418E00"
+    ],
+    "asnIdentifier": "S21134151",
+    "depth": 3,
+    "description": "Apply grade 6 Reading standards to literature (for example: \"Compare and contrast texts in different forms or genres [for example: stories and poems; historical novels and fantasy stories] in terms of their approaches to similar themes and topics\").",
+    "id": "288800E21B7C4B2AA7D247F3F44EA7C9",
+    "parentId": "6D99F483ED2A424195AD299D463F124B",
+    "position": 101000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.4.1.c.i"
+   },
+   "2A7D606607464AE1A57AD03EFA05A841": {
+    "ancestorIds": [
+     "252DDA29887F47DDBDEC231210EE3122",
+     "C9765A8A2B4443888B525FA6B4D8C55B",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133927",
+    "depth": 3,
+    "description": "Use stylistic techniques (for example: alliteration, onomatopoeia, rhyme scheme); figurative language (for example: simile, metaphor, personification); and graphic elements (for example: capital letters, line length, word position) to express personal or narrative voice.",
+    "id": "2A7D606607464AE1A57AD03EFA05A841",
+    "parentId": "252DDA29887F47DDBDEC231210EE3122",
+    "position": 78000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.3.a.vi"
+   },
+   "2BCF4A7EA0784C3BB718487AB9B11397": {
+    "ancestorIds": [
+     "9589E8BCDB5D4419884F61B71F0CC7D1",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133944",
+    "depth": 2,
+    "description": "Write routinely over extended time frames (time for research, reflection, and revision) and shorter time frames (a single sitting or a day or two) for a range of discipline-specific tasks, purposes, and audiences.",
+    "id": "2BCF4A7EA0784C3BB718487AB9B11397",
+    "parentId": "9589E8BCDB5D4419884F61B71F0CC7D1",
+    "position": 95000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.4.g"
+   },
+   "2C157B33D099470DAF111D160B5A1F69": {
+    "ancestorIds": [
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133905",
+    "depth": 1,
+    "description": "Write arguments that support claim(s) using clear reasons, relevant evidence, credible sources, and a formal style.",
+    "id": "2C157B33D099470DAF111D160B5A1F69",
+    "parentId": "E00D92AA31D342638575E183CE817B66",
+    "position": 56000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.3.1"
+   },
+   "300688E55D9C46409282DF3B1AB6C13B": {
+    "ancestorIds": [
+     "B26A3D1A0A3547C39D7A6488877E5C40",
+     "9DE055D59D2248BBBBDD1A358AC00756",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133918",
+    "depth": 3,
+    "description": "Establish and maintain a formal style.",
+    "id": "300688E55D9C46409282DF3B1AB6C13B",
+    "parentId": "B26A3D1A0A3547C39D7A6488877E5C40",
+    "position": 69000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.2.a.v"
+   },
+   "33ECB187BF7C47EF8A5E9FEDBE47379C": {
+    "ancestorIds": [
+     "E4F9B11FB6784602B0C1B89474A81174",
+     "2C157B33D099470DAF111D160B5A1F69",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133909",
+    "depth": 3,
+    "description": "Use words, phrases, and clauses to clarify the relationships among claim(s) and reasons.",
+    "id": "33ECB187BF7C47EF8A5E9FEDBE47379C",
+    "parentId": "E4F9B11FB6784602B0C1B89474A81174",
+    "position": 60000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.1.a.iii"
+   },
+   "37BC116103634DF2A96E19B4296CE6BE": {
+    "ancestorIds": [
+     "B26A3D1A0A3547C39D7A6488877E5C40",
+     "9DE055D59D2248BBBBDD1A358AC00756",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133915",
+    "depth": 3,
+    "description": "Develop the topic with relevant facts, definitions, concrete details, quotations, or other information and examples.",
+    "id": "37BC116103634DF2A96E19B4296CE6BE",
+    "parentId": "B26A3D1A0A3547C39D7A6488877E5C40",
+    "position": 66000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.2.a.ii"
+   },
+   "415E4FF7B2E64898A67E2FBFC3D3E4C5": {
+    "ancestorIds": [
+     "72E309F0EEF54D35A466709A685953D3",
+     "F21F91965BEE493CA31C18DFC174D015",
+     "ED1FEA28EBC942C39E24B65C550F3B3A"
+    ],
+    "asnIdentifier": "S21133046",
+    "depth": 3,
+    "description": "Follow rules for collegial discussions, set specific goals and deadlines, and define individual roles as needed.",
+    "id": "415E4FF7B2E64898A67E2FBFC3D3E4C5",
+    "parentId": "72E309F0EEF54D35A466709A685953D3",
+    "position": 5000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.1.1.a.ii"
+   },
+   "4655B0AD13A1444A974EEDD4AD3D6AF0": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21133104",
+    "depth": 0,
+    "description": "Reading for All Purposes",
+    "id": "4655B0AD13A1444A974EEDD4AD3D6AF0",
+    "parentId": null,
+    "position": 14000,
+    "statementLabel": "Standard",
+    "statementNotation": "RAP.2"
+   },
+   "4A3339685DA8442EA4D21E32A050BFEE": {
+    "ancestorIds": [
+     "72E309F0EEF54D35A466709A685953D3",
+     "F21F91965BEE493CA31C18DFC174D015",
+     "ED1FEA28EBC942C39E24B65C550F3B3A"
+    ],
+    "asnIdentifier": "S21133047",
+    "depth": 3,
+    "description": "Pose and respond to specific questions with elaboration and detail by making comments that contribute to the topic, text, or issue under discussion.",
+    "id": "4A3339685DA8442EA4D21E32A050BFEE",
+    "parentId": "72E309F0EEF54D35A466709A685953D3",
+    "position": 6000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.1.1.a.iii"
+   },
+   "4ACFD03EE9B4456F93E910E2FE0CE288": {
+    "ancestorIds": [
+     "9BD7BB0AF0D648DE8DAECFC434138755",
+     "9C488EA0BBE04701B486572D8959CB52",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133480",
+    "depth": 3,
+    "description": "Describe how a particular story's or drama's plot unfolds in a series of episodes as well as how the characters respond or change as the plot moves toward a resolution.",
+    "id": "4ACFD03EE9B4456F93E910E2FE0CE288",
+    "parentId": "9BD7BB0AF0D648DE8DAECFC434138755",
+    "position": 19000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.1.a.iii"
+   },
+   "4C16BBB2309E4BFAA23E4FDE7C4FC1A0": {
+    "ancestorIds": [
+     "0C45B6984F4A484ABE5ECA1C5708C350",
+     "ED1FEA28EBC942C39E24B65C550F3B3A"
+    ],
+    "asnIdentifier": "S21133054",
+    "depth": 2,
+    "description": "Adapt speech to a variety of contexts and tasks, demonstrating command of formal English when indicated or appropriate.",
+    "id": "4C16BBB2309E4BFAA23E4FDE7C4FC1A0",
+    "parentId": "0C45B6984F4A484ABE5ECA1C5708C350",
+    "position": 13000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.1.2.c"
+   },
+   "4DEC6800265C42FFB489FCD559F95FCC": {
+    "ancestorIds": [
+     "0D3F1EB28738468D930A19CCA4895F12",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133506",
+    "depth": 2,
+    "description": "Determine or clarify the meaning of unknown and multiple-meaning words and phrases based on grade 6 reading and content, choosing flexibly from a range of strategies.",
+    "id": "4DEC6800265C42FFB489FCD559F95FCC",
+    "parentId": "0D3F1EB28738468D930A19CCA4895F12",
+    "position": 45000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.3.a"
+   },
+   "5417BCC7088E41D1BD8B3E2C960DC4CC": {
+    "ancestorIds": [
+     "255431153D844DDFA143772582418E00"
+    ],
+    "asnIdentifier": "S21134147",
+    "depth": 1,
+    "description": "Pose research question(s), gather, synthesize, and credit relevant and credible resources, and present findings.",
+    "id": "5417BCC7088E41D1BD8B3E2C960DC4CC",
+    "parentId": "255431153D844DDFA143772582418E00",
+    "position": 97000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.4.1"
+   },
+   "56115D0AC77648328EC1FF2B837A474A": {
+    "ancestorIds": [
+     "1A2276528CFA49ADAA2B2E573F592503",
+     "B59C1969999549F8AB239F49DDAF537D",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133496",
+    "depth": 3,
+    "description": "Determine the meaning of words and phrases as they are used in a text, including figurative, connotative, and technical meanings.",
+    "id": "56115D0AC77648328EC1FF2B837A474A",
+    "parentId": "1A2276528CFA49ADAA2B2E573F592503",
+    "position": 35000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.2.b.i"
+   },
+   "56E00EBD2C5C4552ACF0587B766ABD70": {
+    "ancestorIds": [
+     "9589E8BCDB5D4419884F61B71F0CC7D1",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133941",
+    "depth": 2,
+    "description": "Produce clear and coherent writing in which the development, organization, and style are appropriate to task, purpose, and audience. (Grade-specific expectations for writing types are defined in grade level expectations 1 and 2 above.)",
+    "id": "56E00EBD2C5C4552ACF0587B766ABD70",
+    "parentId": "9589E8BCDB5D4419884F61B71F0CC7D1",
+    "position": 92000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.4.d"
+   },
+   "56EA24A9BA8B4227BA6CCC5F0A88EAD5": {
+    "ancestorIds": [
+     "252DDA29887F47DDBDEC231210EE3122",
+     "C9765A8A2B4443888B525FA6B4D8C55B",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133923",
+    "depth": 3,
+    "description": "Use narrative techniques, such as dialogue, pacing, and description, to develop experiences, events, and/or characters.",
+    "id": "56EA24A9BA8B4227BA6CCC5F0A88EAD5",
+    "parentId": "252DDA29887F47DDBDEC231210EE3122",
+    "position": 74000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.3.a.ii"
+   },
+   "59E73359EC8248638A41C39FBE7C0180": {
+    "ancestorIds": [
+     "FC1E03C6AD424FC6A14FA7B5E82BFCE3",
+     "9589E8BCDB5D4419884F61B71F0CC7D1",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133932",
+    "depth": 3,
+    "description": "Recognize and correct inappropriate shifts in pronoun number and person.",
+    "id": "59E73359EC8248638A41C39FBE7C0180",
+    "parentId": "FC1E03C6AD424FC6A14FA7B5E82BFCE3",
+    "position": 83000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.4.a.iii"
+   },
+   "5B76EE564BFC4CE6A5E98EE7D9147518": {
+    "ancestorIds": [
+     "BA1A716B2AA041E9A6C849C2607D8A4E",
+     "B59C1969999549F8AB239F49DDAF537D",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133504",
+    "depth": 3,
+    "description": "By the end of the year, read and comprehend literary nonfiction in the grades 6-8 text complexity band proficiently, with scaffolding as needed at the high end of the range.",
+    "id": "5B76EE564BFC4CE6A5E98EE7D9147518",
+    "parentId": "BA1A716B2AA041E9A6C849C2607D8A4E",
+    "position": 43000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.2.d.i"
+   },
+   "5C3A72F02D80423781417FCB344DF110": {
+    "ancestorIds": [
+     "E4F9B11FB6784602B0C1B89474A81174",
+     "2C157B33D099470DAF111D160B5A1F69",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133908",
+    "depth": 3,
+    "description": "Support claim(s) with clear reasons and relevant evidence, using credible sources and demonstrating an understanding of the topic or text.",
+    "id": "5C3A72F02D80423781417FCB344DF110",
+    "parentId": "E4F9B11FB6784602B0C1B89474A81174",
+    "position": 59000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.1.a.ii"
+   },
+   "6445B82BB4EB42C5817890C015DCD2E6": {
+    "ancestorIds": [
+     "5417BCC7088E41D1BD8B3E2C960DC4CC",
+     "255431153D844DDFA143772582418E00"
+    ],
+    "asnIdentifier": "S21134149",
+    "depth": 2,
+    "description": "Gather relevant information from multiple print and digital sources; assess the credibility of each source; and quote or paraphrase the data and conclusions of others while avoiding plagiarism and providing basic bibliographic information for sources.",
+    "id": "6445B82BB4EB42C5817890C015DCD2E6",
+    "parentId": "5417BCC7088E41D1BD8B3E2C960DC4CC",
+    "position": 99000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.4.1.b"
+   },
+   "660FB47904A64BC5B563F84E981BDE73": {
+    "ancestorIds": [
+     "252DDA29887F47DDBDEC231210EE3122",
+     "C9765A8A2B4443888B525FA6B4D8C55B",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133922",
+    "depth": 3,
+    "description": "Engage and orient the reader by establishing a context and introducing a narrator and/or characters; organize an event sequence that unfolds naturally and logically.",
+    "id": "660FB47904A64BC5B563F84E981BDE73",
+    "parentId": "252DDA29887F47DDBDEC231210EE3122",
+    "position": 73000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.3.a.i"
+   },
+   "66961EE9D9374CD0AE0F0F0595D6BCE1": {
+    "ancestorIds": [
+     "4DEC6800265C42FFB489FCD559F95FCC",
+     "0D3F1EB28738468D930A19CCA4895F12",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133508",
+    "depth": 3,
+    "description": "Use common, grade-appropriate Greek or Latin affixes and roots as clues to the meaning of a word (for example: audience, auditory, audible).",
+    "id": "66961EE9D9374CD0AE0F0F0595D6BCE1",
+    "parentId": "4DEC6800265C42FFB489FCD559F95FCC",
+    "position": 47000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.3.a.ii"
+   },
+   "6B06BE869B6349FDB2D4D37B07200C45": {
+    "ancestorIds": [
+     "B26A3D1A0A3547C39D7A6488877E5C40",
+     "9DE055D59D2248BBBBDD1A358AC00756",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133919",
+    "depth": 3,
+    "description": "Provide a concluding statement or section that follows from the information or explanation presented.",
+    "id": "6B06BE869B6349FDB2D4D37B07200C45",
+    "parentId": "B26A3D1A0A3547C39D7A6488877E5C40",
+    "position": 70000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.2.a.vi"
+   },
+   "6D99F483ED2A424195AD299D463F124B": {
+    "ancestorIds": [
+     "5417BCC7088E41D1BD8B3E2C960DC4CC",
+     "255431153D844DDFA143772582418E00"
+    ],
+    "asnIdentifier": "S21134150",
+    "depth": 2,
+    "description": "Draw evidence from literary or informational texts to support analysis, reflection, and research.",
+    "id": "6D99F483ED2A424195AD299D463F124B",
+    "parentId": "5417BCC7088E41D1BD8B3E2C960DC4CC",
+    "position": 100000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.4.1.c"
+   },
+   "6FB2FA70BF7D48DE95D84366FCE70270": {
+    "ancestorIds": [
+     "252DDA29887F47DDBDEC231210EE3122",
+     "C9765A8A2B4443888B525FA6B4D8C55B",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133925",
+    "depth": 3,
+    "description": "Use precise words and phrases, relevant descriptive details, and sensory language to convey experiences and events.",
+    "id": "6FB2FA70BF7D48DE95D84366FCE70270",
+    "parentId": "252DDA29887F47DDBDEC231210EE3122",
+    "position": 76000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.3.a.iv"
+   },
+   "72E309F0EEF54D35A466709A685953D3": {
+    "ancestorIds": [
+     "F21F91965BEE493CA31C18DFC174D015",
+     "ED1FEA28EBC942C39E24B65C550F3B3A"
+    ],
+    "asnIdentifier": "S21133044",
+    "depth": 2,
+    "description": "Engage effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grade 6 topics, texts, and issues, building on others' ideas and expressing their own clearly.",
+    "id": "72E309F0EEF54D35A466709A685953D3",
+    "parentId": "F21F91965BEE493CA31C18DFC174D015",
+    "position": 3000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.1.1.a"
+   },
+   "74482CEC048D411DB1A78E390A76E6E8": {
+    "ancestorIds": [
+     "FEDF9B4250DC459DB8E94526F2F3012C",
+     "0D3F1EB28738468D930A19CCA4895F12",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133513",
+    "depth": 3,
+    "description": "Use the relationship between particular words (for example: cause/effect, part/whole, item/category) to better understand each of the words.)",
+    "id": "74482CEC048D411DB1A78E390A76E6E8",
+    "parentId": "FEDF9B4250DC459DB8E94526F2F3012C",
+    "position": 52000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.3.b.ii"
+   },
+   "7617CE4D649643B1954F10A6E8C72B5D": {
+    "ancestorIds": [
+     "A7D2C7AAD6234373B20B5CB7EF2652A3",
+     "9C488EA0BBE04701B486572D8959CB52",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133486",
+    "depth": 3,
+    "description": "Compare and contrast the experience of reading a story, drama, or poem to listening to or viewing an audio, video, or live version of the text, including contrasting what they \"see\" and \"hear\" when reading the text to what they perceive when they listen or watch.",
+    "id": "7617CE4D649643B1954F10A6E8C72B5D",
+    "parentId": "A7D2C7AAD6234373B20B5CB7EF2652A3",
+    "position": 25000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.1.c.i"
+   },
+   "762B55C5D67446CD815167F33D3CA46E": {
+    "ancestorIds": [
+     "B26A3D1A0A3547C39D7A6488877E5C40",
+     "9DE055D59D2248BBBBDD1A358AC00756",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133916",
+    "depth": 3,
+    "description": "Use appropriate transitions to clarify the relationships among ideas and concepts. )",
+    "id": "762B55C5D67446CD815167F33D3CA46E",
+    "parentId": "B26A3D1A0A3547C39D7A6488877E5C40",
+    "position": 67000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.2.a.iii"
+   },
+   "773C889B0DCC478BAE63620A8389CA9F": {
+    "ancestorIds": [
+     "02B233F7E87C4CB0A392788E72B5F113",
+     "9589E8BCDB5D4419884F61B71F0CC7D1",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133939",
+    "depth": 3,
+    "description": "Vary sentence patterns for meaning, reader/listener interest, and style.",
+    "id": "773C889B0DCC478BAE63620A8389CA9F",
+    "parentId": "02B233F7E87C4CB0A392788E72B5F113",
+    "position": 90000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.4.c.i"
+   },
+   "84259298163F4A588716756EAEBE8902": {
+    "ancestorIds": [
+     "DA04F5D2B9A94BE2BDB478FED9DAD6C6",
+     "B59C1969999549F8AB239F49DDAF537D",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133500",
+    "depth": 3,
+    "description": "Integrate information presented in different media or formats (for example: visually, quantitatively) as well as in words to develop a coherent understanding of a topic or issue.",
+    "id": "84259298163F4A588716756EAEBE8902",
+    "parentId": "DA04F5D2B9A94BE2BDB478FED9DAD6C6",
+    "position": 39000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.2.c.i"
+   },
+   "8472C12E0AA0445D8CC959D194DA5FD7": {
+    "ancestorIds": [
+     "4DEC6800265C42FFB489FCD559F95FCC",
+     "0D3F1EB28738468D930A19CCA4895F12",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133510",
+    "depth": 3,
+    "description": "Verify the preliminary determination of the meaning of a word or phrase (for example: by checking the inferred meaning in context or in a dictionary).",
+    "id": "8472C12E0AA0445D8CC959D194DA5FD7",
+    "parentId": "4DEC6800265C42FFB489FCD559F95FCC",
+    "position": 49000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.3.a.iv"
+   },
+   "869C343C86A944ACBEABE22BEE4FC636": {
+    "ancestorIds": [
+     "1A2276528CFA49ADAA2B2E573F592503",
+     "B59C1969999549F8AB239F49DDAF537D",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133497",
+    "depth": 3,
+    "description": "Analyze how a particular sentence, paragraph, chapter, or section fits into the overall structure of a text and contributes to the development of the ideas.",
+    "id": "869C343C86A944ACBEABE22BEE4FC636",
+    "parentId": "1A2276528CFA49ADAA2B2E573F592503",
+    "position": 36000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.2.b.ii"
+   },
+   "8AFEBC66C1B7413BB1C95C09B94E33BC": {
+    "ancestorIds": [
+     "0C45B6984F4A484ABE5ECA1C5708C350",
+     "ED1FEA28EBC942C39E24B65C550F3B3A"
+    ],
+    "asnIdentifier": "S21133052",
+    "depth": 2,
+    "description": "Present claims and findings, sequencing ideas logically and using pertinent descriptions, facts, and details to accentuate main ideas or themes; use appropriate eye contact, adequate volume, and clear pronunciation.",
+    "id": "8AFEBC66C1B7413BB1C95C09B94E33BC",
+    "parentId": "0C45B6984F4A484ABE5ECA1C5708C350",
+    "position": 11000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.1.2.a"
+   },
+   "9063DBBE53C543EEBAABAC43EB7138EC": {
+    "ancestorIds": [
+     "72E309F0EEF54D35A466709A685953D3",
+     "F21F91965BEE493CA31C18DFC174D015",
+     "ED1FEA28EBC942C39E24B65C550F3B3A"
+    ],
+    "asnIdentifier": "S21133045",
+    "depth": 3,
+    "description": "Come to discussions prepared, having read or studied required material; explicitly draw on that preparation by referring to evidence on the topic, text, or issue to probe and reflect on ideas under discussion.",
+    "id": "9063DBBE53C543EEBAABAC43EB7138EC",
+    "parentId": "72E309F0EEF54D35A466709A685953D3",
+    "position": 4000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.1.1.a.i"
+   },
+   "91EA2410F69D4480AE05AA63CDA7EFD5": {
+    "ancestorIds": [
+     "BB07228780C64070AA479F7EB1583E9A",
+     "9C488EA0BBE04701B486572D8959CB52",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133484",
+    "depth": 3,
+    "description": "Explain how an author develops the point of view of the narrator or speaker in a text.",
+    "id": "91EA2410F69D4480AE05AA63CDA7EFD5",
+    "parentId": "BB07228780C64070AA479F7EB1583E9A",
+    "position": 23000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.1.b.iii"
+   },
+   "924555331867498280C50ABD2B5A794C": {
+    "ancestorIds": [
+     "F21F91965BEE493CA31C18DFC174D015",
+     "ED1FEA28EBC942C39E24B65C550F3B3A"
+    ],
+    "asnIdentifier": "S21133050",
+    "depth": 2,
+    "description": "Delineate a speaker's argument and specific claims, distinguishing claims that are supported by reasons and evidence from claims that are not.",
+    "id": "924555331867498280C50ABD2B5A794C",
+    "parentId": "F21F91965BEE493CA31C18DFC174D015",
+    "position": 9000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.1.1.c"
+   },
+   "9589E8BCDB5D4419884F61B71F0CC7D1": {
+    "ancestorIds": [
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133928",
+    "depth": 1,
+    "description": "Plan, draft, edit, and revise as needed to craft clear and coherent writing that demonstrates a grasp of standard conventions for grammar, usage, and mechanics as well as a style appropriate for purpose and audience.",
+    "id": "9589E8BCDB5D4419884F61B71F0CC7D1",
+    "parentId": "E00D92AA31D342638575E183CE817B66",
+    "position": 79000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.3.4"
+   },
+   "9613FC4E7142418E846BE9B24BEEDF5D": {
+    "ancestorIds": [
+     "A7D2C7AAD6234373B20B5CB7EF2652A3",
+     "9C488EA0BBE04701B486572D8959CB52",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133487",
+    "depth": 3,
+    "description": "Compare and contrast texts in different forms or genres (for example: stories and poems; historical novels and fantasy stories) in terms of their approaches to similar themes and topics.",
+    "id": "9613FC4E7142418E846BE9B24BEEDF5D",
+    "parentId": "A7D2C7AAD6234373B20B5CB7EF2652A3",
+    "position": 26000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.1.c.ii"
+   },
+   "97A4145F4E224968BAC9C3E3C601D439": {
+    "ancestorIds": [
+     "DA04F5D2B9A94BE2BDB478FED9DAD6C6",
+     "B59C1969999549F8AB239F49DDAF537D",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133502",
+    "depth": 3,
+    "description": "Compare and contrast one author's presentation of events with that of another (for example: a memoir written by and a biography on the same person).",
+    "id": "97A4145F4E224968BAC9C3E3C601D439",
+    "parentId": "DA04F5D2B9A94BE2BDB478FED9DAD6C6",
+    "position": 41000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.2.c.iii"
+   },
+   "988961ECF4E64AD5945008C08CB13528": {
+    "ancestorIds": [
+     "201D573321CF4D68B065F4D3D1E0F421",
+     "9589E8BCDB5D4419884F61B71F0CC7D1",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133936",
+    "depth": 3,
+    "description": "Use punctuation (commas, parentheses, dashes) to set off nonrestrictive/parenthetical elements.",
+    "id": "988961ECF4E64AD5945008C08CB13528",
+    "parentId": "201D573321CF4D68B065F4D3D1E0F421",
+    "position": 87000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.4.b.i"
+   },
+   "9BD7BB0AF0D648DE8DAECFC434138755": {
+    "ancestorIds": [
+     "9C488EA0BBE04701B486572D8959CB52",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133477",
+    "depth": 2,
+    "description": "Use Key Ideas and Details to:",
+    "id": "9BD7BB0AF0D648DE8DAECFC434138755",
+    "parentId": "9C488EA0BBE04701B486572D8959CB52",
+    "position": 16000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.1.a"
+   },
+   "9C04E28D53274F7BB60AF894882CBA13": {
+    "ancestorIds": [
+     "9C488EA0BBE04701B486572D8959CB52",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133488",
+    "depth": 2,
+    "description": "Use Range of Reading and Complexity of Text to:",
+    "id": "9C04E28D53274F7BB60AF894882CBA13",
+    "parentId": "9C488EA0BBE04701B486572D8959CB52",
+    "position": 27000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.1.d"
+   },
+   "9C488EA0BBE04701B486572D8959CB52": {
+    "ancestorIds": [
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133476",
+    "depth": 1,
+    "description": "Analyze literary elements within different types of literature to make meaning.",
+    "id": "9C488EA0BBE04701B486572D8959CB52",
+    "parentId": "4655B0AD13A1444A974EEDD4AD3D6AF0",
+    "position": 15000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.2.1"
+   },
+   "9DC9BB20CEBF4478BAC5D259454119DF": {
+    "ancestorIds": [
+     "FC1E03C6AD424FC6A14FA7B5E82BFCE3",
+     "9589E8BCDB5D4419884F61B71F0CC7D1",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133933",
+    "depth": 3,
+    "description": "Recognize and correct vague pronouns (i.e., ones with unclear or ambiguous antecedents).",
+    "id": "9DC9BB20CEBF4478BAC5D259454119DF",
+    "parentId": "FC1E03C6AD424FC6A14FA7B5E82BFCE3",
+    "position": 84000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.4.a.iv"
+   },
+   "9DE055D59D2248BBBBDD1A358AC00756": {
+    "ancestorIds": [
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133912",
+    "depth": 1,
+    "description": "Write informative/explanatory texts characterized by appropriate organization, ample development, precise language and formal style.",
+    "id": "9DE055D59D2248BBBBDD1A358AC00756",
+    "parentId": "E00D92AA31D342638575E183CE817B66",
+    "position": 63000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.3.2"
+   },
+   "A4CE0714A02E4551A6F6853AB36DBA85": {
+    "ancestorIds": [
+     "FEDF9B4250DC459DB8E94526F2F3012C",
+     "0D3F1EB28738468D930A19CCA4895F12",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133514",
+    "depth": 3,
+    "description": "Distinguish among the connotations (associations) of words with similar denotations (definitions) (for example: stingy, scrimping, economical, unwasteful, and thrifty).",
+    "id": "A4CE0714A02E4551A6F6853AB36DBA85",
+    "parentId": "FEDF9B4250DC459DB8E94526F2F3012C",
+    "position": 53000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.3.b.iii"
+   },
+   "A6066B62C57E433981061599F41BB388": {
+    "ancestorIds": [
+     "0D3F1EB28738468D930A19CCA4895F12",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133515",
+    "depth": 2,
+    "description": "Acquire and use accurately grade-appropriate general academic and domain-specific words and phrases; gather vocabulary knowledge when considering a word or phrase important to comprehension or expression.",
+    "id": "A6066B62C57E433981061599F41BB388",
+    "parentId": "0D3F1EB28738468D930A19CCA4895F12",
+    "position": 54000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.3.c"
+   },
+   "A7D2C7AAD6234373B20B5CB7EF2652A3": {
+    "ancestorIds": [
+     "9C488EA0BBE04701B486572D8959CB52",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133485",
+    "depth": 2,
+    "description": "Use Integration of Knowledge and Ideas to:",
+    "id": "A7D2C7AAD6234373B20B5CB7EF2652A3",
+    "parentId": "9C488EA0BBE04701B486572D8959CB52",
+    "position": 24000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.1.c"
+   },
+   "A87BC9B7861447BD9690284E0B26CAE3": {
+    "ancestorIds": [
+     "E4F9B11FB6784602B0C1B89474A81174",
+     "2C157B33D099470DAF111D160B5A1F69",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133907",
+    "depth": 3,
+    "description": "Introduce claim(s) and organize the reasons and evidence clearly.",
+    "id": "A87BC9B7861447BD9690284E0B26CAE3",
+    "parentId": "E4F9B11FB6784602B0C1B89474A81174",
+    "position": 58000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.1.a.i"
+   },
+   "A8B763A7CEED45338A9D3A521D603AD6": {
+    "ancestorIds": [
+     "C0FCAEFFB4464ACCAC7CC194903A6563",
+     "B59C1969999549F8AB239F49DDAF537D",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133493",
+    "depth": 3,
+    "description": "Determine a central idea of a text and how it is conveyed through particular details; provide a summary of the text distinct from personal opinions or judgments.",
+    "id": "A8B763A7CEED45338A9D3A521D603AD6",
+    "parentId": "C0FCAEFFB4464ACCAC7CC194903A6563",
+    "position": 32000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.2.a.ii"
+   },
+   "B1CC158601AE4541AAC93159658FB159": {
+    "ancestorIds": [
+     "4DEC6800265C42FFB489FCD559F95FCC",
+     "0D3F1EB28738468D930A19CCA4895F12",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133507",
+    "depth": 3,
+    "description": "Use context (for example: the overall meaning of a sentence or paragraph; a word's position or function in a sentence) as a clue to the meaning of a word or phrase.",
+    "id": "B1CC158601AE4541AAC93159658FB159",
+    "parentId": "4DEC6800265C42FFB489FCD559F95FCC",
+    "position": 46000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.3.a.i"
+   },
+   "B26A3D1A0A3547C39D7A6488877E5C40": {
+    "ancestorIds": [
+     "9DE055D59D2248BBBBDD1A358AC00756",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133913",
+    "depth": 2,
+    "description": "Write informative/explanatory texts to examine a topic and convey ideas, concepts, and information through the selection, organization, and analysis of relevant content.",
+    "id": "B26A3D1A0A3547C39D7A6488877E5C40",
+    "parentId": "9DE055D59D2248BBBBDD1A358AC00756",
+    "position": 64000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.2.a"
+   },
+   "B59C1969999549F8AB239F49DDAF537D": {
+    "ancestorIds": [
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133490",
+    "depth": 1,
+    "description": "Analyze organization and structure of informational text to make meaning.",
+    "id": "B59C1969999549F8AB239F49DDAF537D",
+    "parentId": "4655B0AD13A1444A974EEDD4AD3D6AF0",
+    "position": 29000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.2.2"
+   },
+   "B7F55C50DA6C46BCAF7009FD850FA1EF": {
+    "ancestorIds": [
+     "E4F9B11FB6784602B0C1B89474A81174",
+     "2C157B33D099470DAF111D160B5A1F69",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133911",
+    "depth": 3,
+    "description": "Provide a concluding statement or section that follows from the argument presented.",
+    "id": "B7F55C50DA6C46BCAF7009FD850FA1EF",
+    "parentId": "E4F9B11FB6784602B0C1B89474A81174",
+    "position": 62000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.1.a.v"
+   },
+   "BA1A716B2AA041E9A6C849C2607D8A4E": {
+    "ancestorIds": [
+     "B59C1969999549F8AB239F49DDAF537D",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133503",
+    "depth": 2,
+    "description": "Use Range of Reading and Complexity of Text to:",
+    "id": "BA1A716B2AA041E9A6C849C2607D8A4E",
+    "parentId": "B59C1969999549F8AB239F49DDAF537D",
+    "position": 42000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.2.d"
+   },
+   "BA7A692A68FA4B8DAE7F036A5D5AACC8": {
+    "ancestorIds": [
+     "4DEC6800265C42FFB489FCD559F95FCC",
+     "0D3F1EB28738468D930A19CCA4895F12",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133509",
+    "depth": 3,
+    "description": "Consult reference materials (for example: dictionaries, glossaries, thesauruses), both print and digital, to find the pronunciation of a word or determine or clarify its precise meaning or its part of speech.",
+    "id": "BA7A692A68FA4B8DAE7F036A5D5AACC8",
+    "parentId": "4DEC6800265C42FFB489FCD559F95FCC",
+    "position": 48000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.3.a.iii"
+   },
+   "BB07228780C64070AA479F7EB1583E9A": {
+    "ancestorIds": [
+     "9C488EA0BBE04701B486572D8959CB52",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133481",
+    "depth": 2,
+    "description": "Use Craft and Structure to:",
+    "id": "BB07228780C64070AA479F7EB1583E9A",
+    "parentId": "9C488EA0BBE04701B486572D8959CB52",
+    "position": 20000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.1.b"
+   },
+   "BBD737E1FF1042B8ACF2F5F229B32F2D": {
+    "ancestorIds": [
+     "9BD7BB0AF0D648DE8DAECFC434138755",
+     "9C488EA0BBE04701B486572D8959CB52",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133479",
+    "depth": 3,
+    "description": "Determine a theme or central idea of a text and how it is conveyed through particular details; provide a summary of the text distinct from personal opinions or judgments.",
+    "id": "BBD737E1FF1042B8ACF2F5F229B32F2D",
+    "parentId": "9BD7BB0AF0D648DE8DAECFC434138755",
+    "position": 18000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.1.a.ii"
+   },
+   "C0FCAEFFB4464ACCAC7CC194903A6563": {
+    "ancestorIds": [
+     "B59C1969999549F8AB239F49DDAF537D",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133491",
+    "depth": 2,
+    "description": "Use Key Ideas and Details to:",
+    "id": "C0FCAEFFB4464ACCAC7CC194903A6563",
+    "parentId": "B59C1969999549F8AB239F49DDAF537D",
+    "position": 30000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.2.a"
+   },
+   "C262EF99BB8149A29EA1BDB4F705BBDC": {
+    "ancestorIds": [
+     "9589E8BCDB5D4419884F61B71F0CC7D1",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133943",
+    "depth": 2,
+    "description": "Use technology, including the Internet, to produce and publish writing as well as to interact and collaborate with others.",
+    "id": "C262EF99BB8149A29EA1BDB4F705BBDC",
+    "parentId": "9589E8BCDB5D4419884F61B71F0CC7D1",
+    "position": 94000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.4.f"
+   },
+   "C49C594F5AE74BACBAD0EA52623D8806": {
+    "ancestorIds": [
+     "02B233F7E87C4CB0A392788E72B5F113",
+     "9589E8BCDB5D4419884F61B71F0CC7D1",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133940",
+    "depth": 3,
+    "description": "Maintain consistency in style and tone.",
+    "id": "C49C594F5AE74BACBAD0EA52623D8806",
+    "parentId": "02B233F7E87C4CB0A392788E72B5F113",
+    "position": 91000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.4.c.ii"
+   },
+   "C67A82372A3A4AE3B80B5AB253A1A61E": {
+    "ancestorIds": [
+     "72E309F0EEF54D35A466709A685953D3",
+     "F21F91965BEE493CA31C18DFC174D015",
+     "ED1FEA28EBC942C39E24B65C550F3B3A"
+    ],
+    "asnIdentifier": "S21133048",
+    "depth": 3,
+    "description": "Review the key ideas expressed and demonstrate understanding of multiple perspectives through reflection and paraphrasing.",
+    "id": "C67A82372A3A4AE3B80B5AB253A1A61E",
+    "parentId": "72E309F0EEF54D35A466709A685953D3",
+    "position": 7000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.1.1.a.iv"
+   },
+   "C9765A8A2B4443888B525FA6B4D8C55B": {
+    "ancestorIds": [
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133920",
+    "depth": 1,
+    "description": "Write engaging real or imagined narratives using techniques such as sensory language, dialogue, description and sequencing to convey experiences and events.",
+    "id": "C9765A8A2B4443888B525FA6B4D8C55B",
+    "parentId": "E00D92AA31D342638575E183CE817B66",
+    "position": 71000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.3.3"
+   },
+   "CE48C60894BA4E789599F6A078078133": {
+    "ancestorIds": [
+     "DA04F5D2B9A94BE2BDB478FED9DAD6C6",
+     "B59C1969999549F8AB239F49DDAF537D",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133501",
+    "depth": 3,
+    "description": "Trace and evaluate the argument and specific claims in a text, distinguishing claims that are supported by reasons and evidence from claims that are not.",
+    "id": "CE48C60894BA4E789599F6A078078133",
+    "parentId": "DA04F5D2B9A94BE2BDB478FED9DAD6C6",
+    "position": 40000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.2.c.ii"
+   },
+   "D72BF70930E940278627FE6B2A77CD47": {
+    "ancestorIds": [
+     "BB07228780C64070AA479F7EB1583E9A",
+     "9C488EA0BBE04701B486572D8959CB52",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133482",
+    "depth": 3,
+    "description": "Determine the meaning of words and phrases as they are used in a text, including figurative and connotative meanings; analyze the impact of a specific word choice on meaning and tone.",
+    "id": "D72BF70930E940278627FE6B2A77CD47",
+    "parentId": "BB07228780C64070AA479F7EB1583E9A",
+    "position": 21000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.1.b.i"
+   },
+   "DA04F5D2B9A94BE2BDB478FED9DAD6C6": {
+    "ancestorIds": [
+     "B59C1969999549F8AB239F49DDAF537D",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133499",
+    "depth": 2,
+    "description": "Use Integration of Knowledge and Ideas to:",
+    "id": "DA04F5D2B9A94BE2BDB478FED9DAD6C6",
+    "parentId": "B59C1969999549F8AB239F49DDAF537D",
+    "position": 38000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.2.c"
+   },
+   "DFA8A3F891E04B8DBC7EC8C624CACF87": {
+    "ancestorIds": [
+     "9C04E28D53274F7BB60AF894882CBA13",
+     "9C488EA0BBE04701B486572D8959CB52",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133489",
+    "depth": 3,
+    "description": "By the end of the year, read and comprehend literature, including stories, dramas, and poems, in the grades 6–8 text complexity band proficiently, with scaffolding as needed at the high end of the range.",
+    "id": "DFA8A3F891E04B8DBC7EC8C624CACF87",
+    "parentId": "9C04E28D53274F7BB60AF894882CBA13",
+    "position": 28000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.1.d.i"
+   },
+   "E00D92AA31D342638575E183CE817B66": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21133681",
+    "depth": 0,
+    "description": "Writing and Composition",
+    "id": "E00D92AA31D342638575E183CE817B66",
+    "parentId": null,
+    "position": 55000,
+    "statementLabel": "Standard",
+    "statementNotation": "WC.3"
+   },
+   "E1E5320B2D3F4A4F9DABC4B561DDBEFA": {
+    "ancestorIds": [
+     "5417BCC7088E41D1BD8B3E2C960DC4CC",
+     "255431153D844DDFA143772582418E00"
+    ],
+    "asnIdentifier": "S21134148",
+    "depth": 2,
+    "description": "Conduct short research projects to answer a question, drawing on several sources and refocusing the inquiry when appropriate.",
+    "id": "E1E5320B2D3F4A4F9DABC4B561DDBEFA",
+    "parentId": "5417BCC7088E41D1BD8B3E2C960DC4CC",
+    "position": 98000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.4.1.a"
+   },
+   "E36C47DEDBD444EF885CB5E1FFC30918": {
+    "ancestorIds": [
+     "C0FCAEFFB4464ACCAC7CC194903A6563",
+     "B59C1969999549F8AB239F49DDAF537D",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133494",
+    "depth": 3,
+    "description": "Analyze in detail how a key individual, event, or idea is introduced, illustrated, and elaborated on in a text (for example: through examples or anecdotes).",
+    "id": "E36C47DEDBD444EF885CB5E1FFC30918",
+    "parentId": "C0FCAEFFB4464ACCAC7CC194903A6563",
+    "position": 33000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.2.a.iii"
+   },
+   "E4F9B11FB6784602B0C1B89474A81174": {
+    "ancestorIds": [
+     "2C157B33D099470DAF111D160B5A1F69",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133906",
+    "depth": 2,
+    "description": "Write arguments to support claims with clear reasons and relevant evidence.",
+    "id": "E4F9B11FB6784602B0C1B89474A81174",
+    "parentId": "2C157B33D099470DAF111D160B5A1F69",
+    "position": 57000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.1.a"
+   },
+   "E65C4D98E2E94AB29F1135C04DD10954": {
+    "ancestorIds": [
+     "B26A3D1A0A3547C39D7A6488877E5C40",
+     "9DE055D59D2248BBBBDD1A358AC00756",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133917",
+    "depth": 3,
+    "description": "Use precise language and domain-specific vocabulary to inform about or explain the topic.",
+    "id": "E65C4D98E2E94AB29F1135C04DD10954",
+    "parentId": "B26A3D1A0A3547C39D7A6488877E5C40",
+    "position": 68000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.2.a.iv"
+   },
+   "EA0B1F6A82E0412AA302AEBB888252C6": {
+    "ancestorIds": [
+     "252DDA29887F47DDBDEC231210EE3122",
+     "C9765A8A2B4443888B525FA6B4D8C55B",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133926",
+    "depth": 3,
+    "description": "Provide a conclusion that follows from the narrated experiences or events.",
+    "id": "EA0B1F6A82E0412AA302AEBB888252C6",
+    "parentId": "252DDA29887F47DDBDEC231210EE3122",
+    "position": 77000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.3.a.v"
+   },
+   "ED1FEA28EBC942C39E24B65C550F3B3A": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21132945",
+    "depth": 0,
+    "description": "Oral Expression and Listening",
+    "id": "ED1FEA28EBC942C39E24B65C550F3B3A",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": "Standard",
+    "statementNotation": "OL.1"
+   },
+   "F033299574DF498991090C489C438EA7": {
+    "ancestorIds": [
+     "6D99F483ED2A424195AD299D463F124B",
+     "5417BCC7088E41D1BD8B3E2C960DC4CC",
+     "255431153D844DDFA143772582418E00"
+    ],
+    "asnIdentifier": "S21134152",
+    "depth": 3,
+    "description": "Apply grade 6 Reading standards to literary nonfiction (for example: \"Trace and evaluate the argument and specific claims in a text, distinguishing claims that are supported by reasons and evidence from claims that are not\").",
+    "id": "F033299574DF498991090C489C438EA7",
+    "parentId": "6D99F483ED2A424195AD299D463F124B",
+    "position": 102000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.4.1.c.ii"
+   },
+   "F21F91965BEE493CA31C18DFC174D015": {
+    "ancestorIds": [
+     "ED1FEA28EBC942C39E24B65C550F3B3A"
+    ],
+    "asnIdentifier": "S21133043",
+    "depth": 1,
+    "description": "Employ appropriate presentation and collaboration strategies to meet the needs of a given task and purpose.",
+    "id": "F21F91965BEE493CA31C18DFC174D015",
+    "parentId": "ED1FEA28EBC942C39E24B65C550F3B3A",
+    "position": 2000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "6.1.1"
+   },
+   "F5DB8A0F760741718D53A39ADEB0725B": {
+    "ancestorIds": [
+     "FEDF9B4250DC459DB8E94526F2F3012C",
+     "0D3F1EB28738468D930A19CCA4895F12",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133512",
+    "depth": 3,
+    "description": "Interpret figures of speech (for example: personification) in context.",
+    "id": "F5DB8A0F760741718D53A39ADEB0725B",
+    "parentId": "FEDF9B4250DC459DB8E94526F2F3012C",
+    "position": 51000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.3.b.i"
+   },
+   "F7137AEC570B4CAFA23A920B87D245AE": {
+    "ancestorIds": [
+     "E4F9B11FB6784602B0C1B89474A81174",
+     "2C157B33D099470DAF111D160B5A1F69",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133910",
+    "depth": 3,
+    "description": "Establish and maintain a formal style.",
+    "id": "F7137AEC570B4CAFA23A920B87D245AE",
+    "parentId": "E4F9B11FB6784602B0C1B89474A81174",
+    "position": 61000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.1.a.iv"
+   },
+   "FC1E03C6AD424FC6A14FA7B5E82BFCE3": {
+    "ancestorIds": [
+     "9589E8BCDB5D4419884F61B71F0CC7D1",
+     "E00D92AA31D342638575E183CE817B66"
+    ],
+    "asnIdentifier": "S21133929",
+    "depth": 2,
+    "description": "Demonstrate command of the conventions of Standard English grammar and usage when writing or speaking.",
+    "id": "FC1E03C6AD424FC6A14FA7B5E82BFCE3",
+    "parentId": "9589E8BCDB5D4419884F61B71F0CC7D1",
+    "position": 80000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.3.4.a"
+   },
+   "FC30922BF5D34B85A4EB0286E92BE1BA": {
+    "ancestorIds": [
+     "BB07228780C64070AA479F7EB1583E9A",
+     "9C488EA0BBE04701B486572D8959CB52",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133483",
+    "depth": 3,
+    "description": "Analyze how a particular sentence, chapter, scene, or stanza fits into the overall structure of a text and contributes to the development of the theme, setting, or plot.",
+    "id": "FC30922BF5D34B85A4EB0286E92BE1BA",
+    "parentId": "BB07228780C64070AA479F7EB1583E9A",
+    "position": 22000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.1.b.ii"
+   },
+   "FEDF9B4250DC459DB8E94526F2F3012C": {
+    "ancestorIds": [
+     "0D3F1EB28738468D930A19CCA4895F12",
+     "4655B0AD13A1444A974EEDD4AD3D6AF0"
+    ],
+    "asnIdentifier": "S21133511",
+    "depth": 2,
+    "description": "Demonstrate understanding of figurative language, word relationships, and nuances in word meanings.",
+    "id": "FEDF9B4250DC459DB8E94526F2F3012C",
+    "parentId": "0D3F1EB28738468D930A19CCA4895F12",
+    "position": 50000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "6.2.3.b"
+   }
+  },
+  "subject": "Reading, Writing and Communicating (2020-)\n",
+  "title": "Grade 6"
+ }
+}

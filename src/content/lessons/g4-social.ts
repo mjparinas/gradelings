@@ -1111,4 +1111,46 @@ export const lessons: GradeLessons = {
     ["It is a machine people made.", "Tools and machines are capital resources."],
     "a capital resource",
   ),
+  "social/co-g4-colorado-land": lesson(
+    ["Colorado's regions are the Eastern Plains, the Rocky Mountains and the Colorado Plateau.", "The Continental Divide runs through Colorado: water flows west to the Pacific or east toward the Atlantic.", "The land helps people (farms, skiing, water) and limits them (steep passes, dry plains)."],
+    "Rain falls just west of the Continental Divide. Which ocean does it flow toward?",
+    ["West of the divide, water flows west.", "The Colorado River carries it toward the Pacific."],
+    "the Pacific Ocean",
+  ),
+  "social/co-g4-first-peoples": lesson(
+    ["Ancestral Puebloans built cliff dwellings at Mesa Verde long ago.", "The Ute, Cheyenne and Arapaho lived in Colorado. The Southern Ute and Ute Mountain Ute tribes have reservations in Colorado today, each with its own government.", "At Sand Creek in 1864, US soldiers killed about 230 Cheyenne and Arapaho people at a peaceful camp."],
+    "Which two tribes have reservations in Colorado today?",
+    ["Both are Ute tribes.", "Their governments are in southwest Colorado."],
+    "the Southern Ute and Ute Mountain Ute",
+  ),
+  "social/co-g4-early-colorado": lesson(
+    ["Spanish explorers, fur traders and Bent's Fort came first; Hispano settlers founded San Luis in 1851.", "Gold found near Cherry Creek in 1858 started the Pikes Peak gold rush.", "Colorado became a territory in 1861 and the 38th state in 1876."],
+    "Why is Colorado called the Centennial State?",
+    ["Centennial means 100 years.", "It became a state in 1876, 100 years after 1776."],
+    "it became a state 100 years after 1776",
+  ),
+  "social/co-g4-growing-state": lesson(
+    ["Railroads reached Denver in 1870, and silver made Leadville boom.", "In 1893, Colorado men voted to let women vote.", "Newcomers came from many places, and new parks, ski areas and cities grew in the 1900s."],
+    "What did Colorado voters decide in 1893?",
+    ["It was about who could vote.", "Men voted to share the vote."],
+    "women could vote",
+  ),
+  "social/co-g4-colorado-timeline": lesson(
+    ["A timeline puts events in order from earliest to latest.", "Subtract years to find how far apart events are.", "The 1800s are the 19th century; the 1900s are the 20th century."],
+    "Gold was found in 1858 and Colorado became a state in 1876. How many years apart?",
+    ["Subtract the earlier year from the later one.", "1876 − 1858 = 18."],
+    "18 years",
+  ),
+  "social/co-g4-governing-colorado": lesson(
+    ["Colorado has three branches: the General Assembly makes laws, the governor carries them out, and courts decide what they mean.", "The General Assembly has 35 senators and 65 representatives.", "Citizens can vote, contact leaders and put ideas on the ballot."],
+    "Who signs a bill to make it a Colorado law?",
+    ["Both houses pass it first.", "Then the head of the executive branch signs it."],
+    "the governor",
+  ),
+  "social/co-g4-colorado-economy": lesson(
+    ["Natural resources come from nature, human resources are people's skills, and capital resources are tools.", "Colorado produces beef, wheat, potatoes and peaches, and many people work in tourism.", "Every choice has an opportunity cost: the next-best thing you give up."],
+    "Ana picks a ski lesson instead of a new book. What is her opportunity cost?",
+    ["It is what she gave up.", "She did not choose the book."],
+    "the book",
+  ),
 };

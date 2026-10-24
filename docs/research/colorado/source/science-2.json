@@ -1,0 +1,283 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D2980644",
+   "id": "D2980644",
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.cde.state.co.us/coscience/2020cas-sc-p12",
+   "title": "Colorado Academic Standards: Science",
+   "valid": "2020"
+  },
+  "educationLevels": [
+   "02"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D2980644_grade-02",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/3.0/us/",
+   "rightsHolder": "D2L Corporation",
+   "title": "CC BY 3.0 US"
+  },
+  "normalizedSubject": "Science",
+  "standards": {
+   "12FB3DBCAE38421D8369972527A28E63": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2986907",
+    "depth": 0,
+    "description": "Physical Science",
+    "id": "12FB3DBCAE38421D8369972527A28E63",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": "Standard",
+    "statementNotation": "PS1"
+   },
+   "1EDC47FF027043CBA7E52ED548C3763D": {
+    "ancestorIds": [
+     "E8AB622F9D74457BADB0364CEC855CE1",
+     "51AAD8EFE65848EDBBA0CA8C43241D86"
+    ],
+    "asnIdentifier": "S2987060",
+    "depth": 2,
+    "description": "Plan and conduct an investigation to determine if plants need sunlight and water to grow.",
+    "id": "1EDC47FF027043CBA7E52ED548C3763D",
+    "parentId": "E8AB622F9D74457BADB0364CEC855CE1",
+    "position": 9000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.2.1.a"
+   },
+   "34AA51FFBF544B2FAF0DFDC7073E53D7": {
+    "ancestorIds": [
+     "E8AB622F9D74457BADB0364CEC855CE1",
+     "51AAD8EFE65848EDBBA0CA8C43241D86"
+    ],
+    "asnIdentifier": "S2987061",
+    "depth": 2,
+    "description": "Develop a simple model that mimics the function of an animal in dispersing seeds or pollinating plants.",
+    "id": "34AA51FFBF544B2FAF0DFDC7073E53D7",
+    "parentId": "E8AB622F9D74457BADB0364CEC855CE1",
+    "position": 10000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.2.1.b"
+   },
+   "3EB54F3A63904FDD91ABB041153B8EA1": {
+    "ancestorIds": [
+     "48A3C24B3F224935B4E5C3644E3B9006",
+     "51AAD8EFE65848EDBBA0CA8C43241D86"
+    ],
+    "asnIdentifier": "S2987063",
+    "depth": 2,
+    "description": "Make observations of plants and animals to compare the diversity of life in different habitats.",
+    "id": "3EB54F3A63904FDD91ABB041153B8EA1",
+    "parentId": "48A3C24B3F224935B4E5C3644E3B9006",
+    "position": 12000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.2.2.a"
+   },
+   "48A3C24B3F224935B4E5C3644E3B9006": {
+    "ancestorIds": [
+     "51AAD8EFE65848EDBBA0CA8C43241D86"
+    ],
+    "asnIdentifier": "S2987062",
+    "depth": 1,
+    "description": "A range of different organisms lives in different places.",
+    "id": "48A3C24B3F224935B4E5C3644E3B9006",
+    "parentId": "51AAD8EFE65848EDBBA0CA8C43241D86",
+    "position": 11000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "LS2.2.2"
+   },
+   "4AFF46F62E45439BBD54781817AA5CB9": {
+    "ancestorIds": [
+     "AC91E3131D714BD9BE3D29AB45999A7E",
+     "12FB3DBCAE38421D8369972527A28E63"
+    ],
+    "asnIdentifier": "S2986932",
+    "depth": 2,
+    "description": "Make observations to construct an evidence-based account of how an object made of a small set of pieces can be disassembled and made into a new object.",
+    "id": "4AFF46F62E45439BBD54781817AA5CB9",
+    "parentId": "AC91E3131D714BD9BE3D29AB45999A7E",
+    "position": 5000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.2.1.c"
+   },
+   "51AAD8EFE65848EDBBA0CA8C43241D86": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2987039",
+    "depth": 0,
+    "description": "Life Science",
+    "id": "51AAD8EFE65848EDBBA0CA8C43241D86",
+    "parentId": null,
+    "position": 7000,
+    "statementLabel": "Standard",
+    "statementNotation": "LS2"
+   },
+   "54CA6F3BBB2E40909459E028AD5122CB": {
+    "ancestorIds": [
+     "83E1DC499C3C4DED921E0F15B6649A23",
+     "EFF763FEA8444599A618B60C2845DA5A"
+    ],
+    "asnIdentifier": "S2987181",
+    "depth": 2,
+    "description": "Compare multiple solutions designed to slow or prevent wind or water from changing the shape of the land.",
+    "id": "54CA6F3BBB2E40909459E028AD5122CB",
+    "parentId": "83E1DC499C3C4DED921E0F15B6649A23",
+    "position": 17000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.2.2.a"
+   },
+   "83E1DC499C3C4DED921E0F15B6649A23": {
+    "ancestorIds": [
+     "EFF763FEA8444599A618B60C2845DA5A"
+    ],
+    "asnIdentifier": "S2987180",
+    "depth": 1,
+    "description": "Wind and water can change the shape of the land; models can show the shape and these changes to the land.",
+    "id": "83E1DC499C3C4DED921E0F15B6649A23",
+    "parentId": "EFF763FEA8444599A618B60C2845DA5A",
+    "position": 16000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.2.2"
+   },
+   "9B02ED5450D64277B9D319C15275330F": {
+    "ancestorIds": [
+     "AE8B25E8D6664E059D51FDE5A8584EA3",
+     "EFF763FEA8444599A618B60C2845DA5A"
+    ],
+    "asnIdentifier": "S2987179",
+    "depth": 2,
+    "description": "Use information from several sources to provide evidence that Earth events can occur quickly or slowly.",
+    "id": "9B02ED5450D64277B9D319C15275330F",
+    "parentId": "AE8B25E8D6664E059D51FDE5A8584EA3",
+    "position": 15000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.2.1.a"
+   },
+   "A0EC77EACD934C41823F8F0B905CBFD5": {
+    "ancestorIds": [
+     "AC91E3131D714BD9BE3D29AB45999A7E",
+     "12FB3DBCAE38421D8369972527A28E63"
+    ],
+    "asnIdentifier": "S2986931",
+    "depth": 2,
+    "description": "Analyze data obtained from testing different materials to determine which materials have the properties that are best suited for an intended purpose.",
+    "id": "A0EC77EACD934C41823F8F0B905CBFD5",
+    "parentId": "AC91E3131D714BD9BE3D29AB45999A7E",
+    "position": 4000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.2.1.b"
+   },
+   "AC91E3131D714BD9BE3D29AB45999A7E": {
+    "ancestorIds": [
+     "12FB3DBCAE38421D8369972527A28E63"
+    ],
+    "asnIdentifier": "S2986929",
+    "depth": 1,
+    "description": "Matter exists as different substances that have observable different properties.",
+    "id": "AC91E3131D714BD9BE3D29AB45999A7E",
+    "parentId": "12FB3DBCAE38421D8369972527A28E63",
+    "position": 2000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.2.1"
+   },
+   "AE8B25E8D6664E059D51FDE5A8584EA3": {
+    "ancestorIds": [
+     "EFF763FEA8444599A618B60C2845DA5A"
+    ],
+    "asnIdentifier": "S2987178",
+    "depth": 1,
+    "description": "Some events on Earth occur quickly; others can occur very slowly.",
+    "id": "AE8B25E8D6664E059D51FDE5A8584EA3",
+    "parentId": "EFF763FEA8444599A618B60C2845DA5A",
+    "position": 14000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.2.1"
+   },
+   "B985408A6C7043FC9F69EBFF01B4CCA2": {
+    "ancestorIds": [
+     "AC91E3131D714BD9BE3D29AB45999A7E",
+     "12FB3DBCAE38421D8369972527A28E63"
+    ],
+    "asnIdentifier": "S2986930",
+    "depth": 2,
+    "description": "Plan and conduct an investigation to describe and classify different kinds of materials by their observable properties.",
+    "id": "B985408A6C7043FC9F69EBFF01B4CCA2",
+    "parentId": "AC91E3131D714BD9BE3D29AB45999A7E",
+    "position": 3000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.2.1.a"
+   },
+   "CE9701D863DE4C2BBFAFD7BC596F3BC2": {
+    "ancestorIds": [
+     "83E1DC499C3C4DED921E0F15B6649A23",
+     "EFF763FEA8444599A618B60C2845DA5A"
+    ],
+    "asnIdentifier": "S2987183",
+    "depth": 2,
+    "description": "Obtain information to identify where water is found on Earth and that it can be solid or liquid.",
+    "id": "CE9701D863DE4C2BBFAFD7BC596F3BC2",
+    "parentId": "83E1DC499C3C4DED921E0F15B6649A23",
+    "position": 19000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.2.2.c"
+   },
+   "E6AEA56B180348D19CD016AE21832992": {
+    "ancestorIds": [
+     "83E1DC499C3C4DED921E0F15B6649A23",
+     "EFF763FEA8444599A618B60C2845DA5A"
+    ],
+    "asnIdentifier": "S2987182",
+    "depth": 2,
+    "description": "Develop a model to represent the shapes and kinds of land and bodies of water in an area.",
+    "id": "E6AEA56B180348D19CD016AE21832992",
+    "parentId": "83E1DC499C3C4DED921E0F15B6649A23",
+    "position": 18000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.2.2.b"
+   },
+   "E8AB622F9D74457BADB0364CEC855CE1": {
+    "ancestorIds": [
+     "51AAD8EFE65848EDBBA0CA8C43241D86"
+    ],
+    "asnIdentifier": "S2987059",
+    "depth": 1,
+    "description": "Plants depend on water and light to grow and on animals for pollination or to move their seeds around.",
+    "id": "E8AB622F9D74457BADB0364CEC855CE1",
+    "parentId": "51AAD8EFE65848EDBBA0CA8C43241D86",
+    "position": 8000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "LS2.2.1"
+   },
+   "ECB5A29FFFD94FE294EF34371081A5CE": {
+    "ancestorIds": [
+     "AC91E3131D714BD9BE3D29AB45999A7E",
+     "12FB3DBCAE38421D8369972527A28E63"
+    ],
+    "asnIdentifier": "S2986933",
+    "depth": 2,
+    "description": "Construct an argument with evidence that some changes caused by heating or cooling can be reversed and some cannot.",
+    "id": "ECB5A29FFFD94FE294EF34371081A5CE",
+    "parentId": "AC91E3131D714BD9BE3D29AB45999A7E",
+    "position": 6000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.2.1.d"
+   },
+   "EFF763FEA8444599A618B60C2845DA5A": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2987156",
+    "depth": 0,
+    "description": "Earth and Space Science",
+    "id": "EFF763FEA8444599A618B60C2845DA5A",
+    "parentId": null,
+    "position": 13000,
+    "statementLabel": "Standard",
+    "statementNotation": "ESS3"
+   }
+  },
+  "subject": "Science (2020-)",
+  "title": "Grade 2"
+ }
+}

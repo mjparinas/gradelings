@@ -1,0 +1,1433 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D2980644",
+   "id": "D2980644",
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.cde.state.co.us/coscience/2020cas-sc-p12",
+   "title": "Colorado Academic Standards: Science",
+   "valid": "2020"
+  },
+  "educationLevels": [
+   "06",
+   "07",
+   "08"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D2980644_grades-06-07-08",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/3.0/us/",
+   "rightsHolder": "D2L Corporation",
+   "title": "CC BY 3.0 US"
+  },
+  "normalizedSubject": "Science",
+  "standards": {
+   "03CCC9DA76FC4E028B73E060BF4A746F": {
+    "ancestorIds": [
+     "7BE24E1AAC5A4AE1A3EDFC86B127F5BA",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987109",
+    "depth": 2,
+    "description": "Apply scientific ideas to construct an explanation for the anatomical similarities and differences among modern organisms and between modern and fossil organisms to infer evolutionary relationships.",
+    "id": "03CCC9DA76FC4E028B73E060BF4A746F",
+    "parentId": "7BE24E1AAC5A4AE1A3EDFC86B127F5BA",
+    "position": 62000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.9.b"
+   },
+   "06BFE3789F884D60A1D991854699C4FC": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2986907",
+    "depth": 0,
+    "description": "Physical Science",
+    "id": "06BFE3789F884D60A1D991854699C4FC",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": "Standard",
+    "statementNotation": "PS1"
+   },
+   "079C49C91D5B485981FAB6ED3BE11068": {
+    "ancestorIds": [
+     "29A06B4825A845DB894031A9EA120E24",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987225",
+    "depth": 2,
+    "description": "Develop a model to describe the cycling of water through Earth's systems driven by energy from the sun and the force of gravity.",
+    "id": "079C49C91D5B485981FAB6ED3BE11068",
+    "parentId": "29A06B4825A845DB894031A9EA120E24",
+    "position": 89000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.6.b"
+   },
+   "07D7A61A1699469ABA4E5FE4DDDF7B40": {
+    "ancestorIds": [
+     "BDCDF01ADB1D42CF873465C359F1FCE9",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986984",
+    "depth": 2,
+    "description": "Construct, use, and present arguments to support the claim that when the kinetic energy of an object changes, energy is transferred to or from the object.",
+    "id": "07D7A61A1699469ABA4E5FE4DDDF7B40",
+    "parentId": "BDCDF01ADB1D42CF873465C359F1FCE9",
+    "position": 22000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.5.e"
+   },
+   "0BCA3C7C2F36429A8FAD2198663F58E2": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2987156",
+    "depth": 0,
+    "description": "Earth and Space Science",
+    "id": "0BCA3C7C2F36429A8FAD2198663F58E2",
+    "parentId": null,
+    "position": 72000,
+    "statementLabel": "Standard",
+    "statementNotation": "ESS3"
+   },
+   "12CD91A9DA0347AFB7CB39BDCF70333C": {
+    "ancestorIds": [
+     "3D63FD405B07450CA96D695364B55052",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987093",
+    "depth": 2,
+    "description": "Develop a model to describe how food is rearranged through chemical reactions forming new molecules that support growth and/or release energy as this matter moves through an organism.",
+    "id": "12CD91A9DA0347AFB7CB39BDCF70333C",
+    "parentId": "3D63FD405B07450CA96D695364B55052",
+    "position": 46000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.3.b"
+   },
+   "136E607EE7494260BFDAB99E23FAB03A": {
+    "ancestorIds": [
+     "291FFB6D0E8D46848EEB996A807EA802",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987100",
+    "depth": 2,
+    "description": "Develop a model to describe the cycling of matter and flow of energy among living and nonliving parts of an ecosystem.",
+    "id": "136E607EE7494260BFDAB99E23FAB03A",
+    "parentId": "291FFB6D0E8D46848EEB996A807EA802",
+    "position": 53000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.6.a"
+   },
+   "1405E49D40FA44B48910CA57913E63AB": {
+    "ancestorIds": [
+     "837852D1AE3A4E9CA217C9D2CE36B0A6",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987114",
+    "depth": 2,
+    "description": "Use mathematical representations to support explanations of how natural selection may lead to increases and decreases of specific traits in populations over time.",
+    "id": "1405E49D40FA44B48910CA57913E63AB",
+    "parentId": "837852D1AE3A4E9CA217C9D2CE36B0A6",
+    "position": 67000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.10.c"
+   },
+   "1616985E9B2F482F9125FDE407F55714": {
+    "ancestorIds": [
+     "A6E3CC25E97D47CABF13A93B1F39A33A",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986974",
+    "depth": 2,
+    "description": "Apply Newton's Third Law to design a solution to a problem involving the motion of two colliding objects.",
+    "id": "1616985E9B2F482F9125FDE407F55714",
+    "parentId": "A6E3CC25E97D47CABF13A93B1F39A33A",
+    "position": 12000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.3.a"
+   },
+   "17FF69BBC84243B0808196E1EE14ABC3": {
+    "ancestorIds": [
+     "C715A9FC1A2C4ADCB9233624E3268110",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987087",
+    "depth": 2,
+    "description": "Use argument supported by evidence for how the body is a system of interacting subsystems composed of groups of cells.",
+    "id": "17FF69BBC84243B0808196E1EE14ABC3",
+    "parentId": "C715A9FC1A2C4ADCB9233624E3268110",
+    "position": 40000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.1.c"
+   },
+   "185C7D30CC424BD6AE28FD8B4207BF0A": {
+    "ancestorIds": [
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986991",
+    "depth": 1,
+    "description": "A simple wave model has a repeating pattern with specific wavelength, frequency, and amplitude and mechanical waves need a medium through which they are transmitted. This model can explain many phenomena which include light and sound.",
+    "id": "185C7D30CC424BD6AE28FD8B4207BF0A",
+    "parentId": "06BFE3789F884D60A1D991854699C4FC",
+    "position": 29000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.MS.8"
+   },
+   "18A654E93A21457BB11F647E9052DBD0": {
+    "ancestorIds": [
+     "DC19B89322FF4AFD9817FD9C11F08B49",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986978",
+    "depth": 2,
+    "description": "Construct and present arguments using evidence to support the claim that gravitational interactions are attractive and depend on the masses of interacting objects.",
+    "id": "18A654E93A21457BB11F647E9052DBD0",
+    "parentId": "DC19B89322FF4AFD9817FD9C11F08B49",
+    "position": 16000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.4.b"
+   },
+   "18BC23F1EAD44CE7A8C2BDA86BABE855": {
+    "ancestorIds": [
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987088",
+    "depth": 1,
+    "description": "Organisms reproduce, either sexually or asexually, and transfer their genetic information to their offspring.",
+    "id": "18BC23F1EAD44CE7A8C2BDA86BABE855",
+    "parentId": "4A86E7C7ED504C1C842C4F4FF0F75C75",
+    "position": 41000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "LS2.MS.2"
+   },
+   "18FA92AD5C1840F1A9F7FC039B99BD82": {
+    "ancestorIds": [
+     "52AFEAD0E2454684BD3F04489DA749CF",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987229",
+    "depth": 2,
+    "description": "Collect data to provide evidence for how the motions and complex interactions of air masses result in changes in weather conditions.",
+    "id": "18FA92AD5C1840F1A9F7FC039B99BD82",
+    "parentId": "52AFEAD0E2454684BD3F04489DA749CF",
+    "position": 93000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.7.a"
+   },
+   "19E4172EF60448DF8BB591C125763F7E": {
+    "ancestorIds": [
+     "BEEF75B75E29410BAEA93D1EA43C240D",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987102",
+    "depth": 2,
+    "description": "Construct an argument supported by empirical evidence that changes to physical or biological components of an ecosystem affect populations.",
+    "id": "19E4172EF60448DF8BB591C125763F7E",
+    "parentId": "BEEF75B75E29410BAEA93D1EA43C240D",
+    "position": 55000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.7.a"
+   },
+   "2754BFD4E0474726B8C862CE7AD55F47": {
+    "ancestorIds": [
+     "29A06B4825A845DB894031A9EA120E24",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987227",
+    "depth": 2,
+    "description": "Develop and use a model to describe how unequal heating and rotation of the Earth cause patterns of atmospheric and oceanic circulation that determine regional climates.",
+    "id": "2754BFD4E0474726B8C862CE7AD55F47",
+    "parentId": "29A06B4825A845DB894031A9EA120E24",
+    "position": 91000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.6.d"
+   },
+   "2917C1B243744ABE83B3A3F9451620A8": {
+    "ancestorIds": [
+     "A6D9857715B34FEC895E2AD1D01C8548",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986970",
+    "depth": 2,
+    "description": "Analyze and interpret data on the properties of substances before and after the substances interact to determine if a chemical reaction has occurred.",
+    "id": "2917C1B243744ABE83B3A3F9451620A8",
+    "parentId": "A6D9857715B34FEC895E2AD1D01C8548",
+    "position": 8000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.2.a"
+   },
+   "291FFB6D0E8D46848EEB996A807EA802": {
+    "ancestorIds": [
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987099",
+    "depth": 1,
+    "description": "Ecosystems are sustained by the continuous flow of energy, originating primarily from the sun, and the recycling of matter and nutrients within the system.",
+    "id": "291FFB6D0E8D46848EEB996A807EA802",
+    "parentId": "4A86E7C7ED504C1C842C4F4FF0F75C75",
+    "position": 52000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "LS2.MS.6"
+   },
+   "29A06B4825A845DB894031A9EA120E24": {
+    "ancestorIds": [
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987223",
+    "depth": 1,
+    "description": "Water cycles among land, ocean, and atmosphere, and is propelled by sunlight and gravity. Density variations of sea water drive interconnected ocean currents. Water movement causes weathering and erosion, changing landscape features.",
+    "id": "29A06B4825A845DB894031A9EA120E24",
+    "parentId": "0BCA3C7C2F36429A8FAD2198663F58E2",
+    "position": 87000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.MS.6"
+   },
+   "2A89C0EB9A054E37884318D26FDA408A": {
+    "ancestorIds": [
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987096",
+    "depth": 1,
+    "description": "Organisms and populations of organisms are dependent on their environmental interactions both with other living things and with nonliving.",
+    "id": "2A89C0EB9A054E37884318D26FDA408A",
+    "parentId": "4A86E7C7ED504C1C842C4F4FF0F75C75",
+    "position": 49000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "LS2.MS.5"
+   },
+   "2EA0160207FE41B694325197FF955112": {
+    "ancestorIds": [
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987238",
+    "depth": 1,
+    "description": "Human activities affect global warming. Decisions to reduce the impact of global warming depend on understanding climate science, engineering capabilities, and social dynamics.",
+    "id": "2EA0160207FE41B694325197FF955112",
+    "parentId": "0BCA3C7C2F36429A8FAD2198663F58E2",
+    "position": 102000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.MS.11"
+   },
+   "301F42C75F3C4A2994D7D694D5A1B50F": {
+    "ancestorIds": [
+     "91EA164B7969402AAB9B37236FB160C1",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987105",
+    "depth": 2,
+    "description": "Develop and use a model to describe why structural changes to genes (mutations) located on chromosomes may affect proteins and may result in harmful, beneficial, or neutral effects to the structure and function of the organism.",
+    "id": "301F42C75F3C4A2994D7D694D5A1B50F",
+    "parentId": "91EA164B7969402AAB9B37236FB160C1",
+    "position": 58000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.8.a"
+   },
+   "3AC65B6EE55D4556972CC208309E9392": {
+    "ancestorIds": [
+     "29A06B4825A845DB894031A9EA120E24",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987224",
+    "depth": 2,
+    "description": "Construct an explanation based on evidence for how geoscience processes have changed Earth's surface at varying time and spatial scales.",
+    "id": "3AC65B6EE55D4556972CC208309E9392",
+    "parentId": "29A06B4825A845DB894031A9EA120E24",
+    "position": 88000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.6.a"
+   },
+   "3BF1555FE85A4520A1DF24B7913F891D": {
+    "ancestorIds": [
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986985",
+    "depth": 1,
+    "description": "Energy changes to and from each type can be tracked through physical or chemical interactions. The relationship between the temperature and the total energy of a system depends on the types, states and amounts of matter.",
+    "id": "3BF1555FE85A4520A1DF24B7913F891D",
+    "parentId": "06BFE3789F884D60A1D991854699C4FC",
+    "position": 23000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.MS.6"
+   },
+   "3D63FD405B07450CA96D695364B55052": {
+    "ancestorIds": [
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987091",
+    "depth": 1,
+    "description": "Sustaining life requires substantial energy and matter inputs.",
+    "id": "3D63FD405B07450CA96D695364B55052",
+    "parentId": "4A86E7C7ED504C1C842C4F4FF0F75C75",
+    "position": 44000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "LS2.MS.3"
+   },
+   "41D1AF255686428681B5CA7361C64D4D": {
+    "ancestorIds": [
+     "C715A9FC1A2C4ADCB9233624E3268110",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987085",
+    "depth": 2,
+    "description": "Conduct an investigation to provide evidence that living things are made of cells; either one cell or many different numbers and types of cells.",
+    "id": "41D1AF255686428681B5CA7361C64D4D",
+    "parentId": "C715A9FC1A2C4ADCB9233624E3268110",
+    "position": 38000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.1.a"
+   },
+   "472D8F4ED2BD4870A02E1E820152B714": {
+    "ancestorIds": [
+     "3BF1555FE85A4520A1DF24B7913F891D",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986986",
+    "depth": 2,
+    "description": "Apply scientific principles to design, construct, and test a device that either minimizes or maximizes thermal energy transfer.",
+    "id": "472D8F4ED2BD4870A02E1E820152B714",
+    "parentId": "3BF1555FE85A4520A1DF24B7913F891D",
+    "position": 24000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.6.a"
+   },
+   "47D5B9C6190D4D969BA34EDA83E02CD6": {
+    "ancestorIds": [
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986996",
+    "depth": 1,
+    "description": "Designed technologies can transmit digital information as wave pulses.",
+    "id": "47D5B9C6190D4D969BA34EDA83E02CD6",
+    "parentId": "06BFE3789F884D60A1D991854699C4FC",
+    "position": 34000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.MS.10"
+   },
+   "4A86E7C7ED504C1C842C4F4FF0F75C75": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2987039",
+    "depth": 0,
+    "description": "Life Science",
+    "id": "4A86E7C7ED504C1C842C4F4FF0F75C75",
+    "parentId": null,
+    "position": 36000,
+    "statementLabel": "Standard",
+    "statementNotation": "LS2"
+   },
+   "4E855184F26B4334B0426FFF6521611A": {
+    "ancestorIds": [
+     "A6E3CC25E97D47CABF13A93B1F39A33A",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986975",
+    "depth": 2,
+    "description": "Plan an investigation to provide evidence that the change in an objects motion depends on the sum of the forces on the object and the mass of the object.",
+    "id": "4E855184F26B4334B0426FFF6521611A",
+    "parentId": "A6E3CC25E97D47CABF13A93B1F39A33A",
+    "position": 13000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.3.b"
+   },
+   "501BA5E709464745AB736D236A45A3DC": {
+    "ancestorIds": [
+     "6DE2941D7B41424C98BF7646C4A18A8E",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987116",
+    "depth": 2,
+    "description": "Use mathematical representations to support explanations of how natural selection may lead to increases and decreases of specific traits in populations over time.",
+    "id": "501BA5E709464745AB736D236A45A3DC",
+    "parentId": "6DE2941D7B41424C98BF7646C4A18A8E",
+    "position": 69000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.11.a"
+   },
+   "52AFEAD0E2454684BD3F04489DA749CF": {
+    "ancestorIds": [
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987228",
+    "depth": 1,
+    "description": "Complex interactions determine local weather patterns and influence climate, including the role of the ocean.",
+    "id": "52AFEAD0E2454684BD3F04489DA749CF",
+    "parentId": "0BCA3C7C2F36429A8FAD2198663F58E2",
+    "position": 92000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.MS.7"
+   },
+   "54B817CDF4E4451EBABB49EA02175C7C": {
+    "ancestorIds": [
+     "7BE24E1AAC5A4AE1A3EDFC86B127F5BA",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987108",
+    "depth": 2,
+    "description": "Analyze and interpret data for patterns in the fossil record that document the existence, diversity, extinction, and change of life forms throughout the history of life on Earth under the assumption that natural laws operate today as in the past.",
+    "id": "54B817CDF4E4451EBABB49EA02175C7C",
+    "parentId": "7BE24E1AAC5A4AE1A3EDFC86B127F5BA",
+    "position": 61000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.9.a"
+   },
+   "55B1FCB673A243E39A553D79775F6D15": {
+    "ancestorIds": [
+     "FD7FE40FA92949A1981DFB9B83EE6886",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987210",
+    "depth": 2,
+    "description": "Develop and use a model of the Earth-sun-moon system to describe the cyclic patterns of lunar phases, eclipses of the sun and moon, and seasons.",
+    "id": "55B1FCB673A243E39A553D79775F6D15",
+    "parentId": "FD7FE40FA92949A1981DFB9B83EE6886",
+    "position": 74000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.1.a"
+   },
+   "582BA0604BB64CE0ACFE93C2C1263C73": {
+    "ancestorIds": [
+     "5AFD48B26AD34B38A2C50D4EEAABFCD3",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987237",
+    "depth": 2,
+    "description": "Construct an argument supported by evidence for how increases in human population and per-capita consumption of natural resources impact Earth's systems.",
+    "id": "582BA0604BB64CE0ACFE93C2C1263C73",
+    "parentId": "5AFD48B26AD34B38A2C50D4EEAABFCD3",
+    "position": 101000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.10.b"
+   },
+   "59B14FA313004EF8807D329FCC9104F5": {
+    "ancestorIds": [
+     "18BC23F1EAD44CE7A8C2BDA86BABE855",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987090",
+    "depth": 2,
+    "description": "Construct a scientific explanation based on evidence for how environmental and genetic factors influence the growth of organisms.",
+    "id": "59B14FA313004EF8807D329FCC9104F5",
+    "parentId": "18BC23F1EAD44CE7A8C2BDA86BABE855",
+    "position": 43000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.2.b"
+   },
+   "5AFD48B26AD34B38A2C50D4EEAABFCD3": {
+    "ancestorIds": [
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987235",
+    "depth": 1,
+    "description": "Human activities have altered the biosphere, sometimes damaging it, although changes to environments can have different impacts for different living things.",
+    "id": "5AFD48B26AD34B38A2C50D4EEAABFCD3",
+    "parentId": "0BCA3C7C2F36429A8FAD2198663F58E2",
+    "position": 99000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.MS.10"
+   },
+   "5B5D0C1C8F784F2099BBBF1B32D807BB": {
+    "ancestorIds": [
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987216",
+    "depth": 1,
+    "description": "Rock strata and the fossil record can be used as evidence to organize the relative occurrence of major historical events in Earth's history.",
+    "id": "5B5D0C1C8F784F2099BBBF1B32D807BB",
+    "parentId": "0BCA3C7C2F36429A8FAD2198663F58E2",
+    "position": 80000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.MS.3"
+   },
+   "5DDCD9549F714D4D9E47963A6A935A22": {
+    "ancestorIds": [
+     "FD7FE40FA92949A1981DFB9B83EE6886",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987211",
+    "depth": 2,
+    "description": "Develop and use a model to describe the role of gravity in the motions within galaxies and the solar system.",
+    "id": "5DDCD9549F714D4D9E47963A6A935A22",
+    "parentId": "FD7FE40FA92949A1981DFB9B83EE6886",
+    "position": 75000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.1.b"
+   },
+   "63596B3ABBC043DD93588CE1FE320853": {
+    "ancestorIds": [
+     "7BE24E1AAC5A4AE1A3EDFC86B127F5BA",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987110",
+    "depth": 2,
+    "description": "Analyze displays of pictorial data to compare patterns of similarities in the embryological development across multiple species to identify relationships not evident in the fully formed anatomy.",
+    "id": "63596B3ABBC043DD93588CE1FE320853",
+    "parentId": "7BE24E1AAC5A4AE1A3EDFC86B127F5BA",
+    "position": 63000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.9.c"
+   },
+   "690B0EA3BF14453B9BF0E1C598832BEA": {
+    "ancestorIds": [
+     "7506BF1F81FE4FD5A5F961AECF89E797",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987118",
+    "depth": 2,
+    "description": "Evaluate competing design solutions for maintaining biodiversity and ecosystem services.",
+    "id": "690B0EA3BF14453B9BF0E1C598832BEA",
+    "parentId": "7506BF1F81FE4FD5A5F961AECF89E797",
+    "position": 71000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.12.a"
+   },
+   "6DE2941D7B41424C98BF7646C4A18A8E": {
+    "ancestorIds": [
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987115",
+    "depth": 1,
+    "description": "Adaptation by natural selection acting over generations is one important process by which species change over time in response to changes in environmental conditions.",
+    "id": "6DE2941D7B41424C98BF7646C4A18A8E",
+    "parentId": "4A86E7C7ED504C1C842C4F4FF0F75C75",
+    "position": 68000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "LS2.MS.11"
+   },
+   "7506BF1F81FE4FD5A5F961AECF89E797": {
+    "ancestorIds": [
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987117",
+    "depth": 1,
+    "description": "Biodiversity is the wide range of existing life forms that have adapted to the variety of conditions on Earth, from terrestrial to marine ecosystems.",
+    "id": "7506BF1F81FE4FD5A5F961AECF89E797",
+    "parentId": "4A86E7C7ED504C1C842C4F4FF0F75C75",
+    "position": 70000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "LS2.MS.12"
+   },
+   "755C7957EEDE4A86B2BF47BB18D098DA": {
+    "ancestorIds": [
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987094",
+    "depth": 1,
+    "description": "Each sense receptor responds to different inputs (electromagnetic, mechanical, chemical), transmitting them as signals that travel along nerve cells to the brain.",
+    "id": "755C7957EEDE4A86B2BF47BB18D098DA",
+    "parentId": "4A86E7C7ED504C1C842C4F4FF0F75C75",
+    "position": 47000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "LS2.MS.4"
+   },
+   "75EF5A6399F848289497B9CD5DF733FC": {
+    "ancestorIds": [
+     "5AFD48B26AD34B38A2C50D4EEAABFCD3",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987236",
+    "depth": 2,
+    "description": "Apply scientific principles to design a method for monitoring and minimizing a human impact on the environment.",
+    "id": "75EF5A6399F848289497B9CD5DF733FC",
+    "parentId": "5AFD48B26AD34B38A2C50D4EEAABFCD3",
+    "position": 100000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.10.a"
+   },
+   "79A13B144FE8416DBE8E2145200A2E3F": {
+    "ancestorIds": [
+     "18BC23F1EAD44CE7A8C2BDA86BABE855",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987089",
+    "depth": 2,
+    "description": "Use argument based on empirical evidence and scientific reasoning to support an explanation for how characteristic animal behaviors and specialized plant structures affect the probability of successful reproduction of animals and plants respectively.",
+    "id": "79A13B144FE8416DBE8E2145200A2E3F",
+    "parentId": "18BC23F1EAD44CE7A8C2BDA86BABE855",
+    "position": 42000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.2.a"
+   },
+   "7BE24E1AAC5A4AE1A3EDFC86B127F5BA": {
+    "ancestorIds": [
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987107",
+    "depth": 1,
+    "description": "Fossils are mineral replacements, preserved remains, or traces of organisms that lived in the past.",
+    "id": "7BE24E1AAC5A4AE1A3EDFC86B127F5BA",
+    "parentId": "4A86E7C7ED504C1C842C4F4FF0F75C75",
+    "position": 60000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "LS2.MS.9"
+   },
+   "82E133AF6E3D465CB09CF34BEDDB283F": {
+    "ancestorIds": [
+     "A6D9857715B34FEC895E2AD1D01C8548",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986971",
+    "depth": 2,
+    "description": "Develop and use a model to describe how the total number of atoms does not change in a chemical reaction and thus mass is conserved.",
+    "id": "82E133AF6E3D465CB09CF34BEDDB283F",
+    "parentId": "A6D9857715B34FEC895E2AD1D01C8548",
+    "position": 9000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.2.b"
+   },
+   "837852D1AE3A4E9CA217C9D2CE36B0A6": {
+    "ancestorIds": [
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987111",
+    "depth": 1,
+    "description": "Genetic variations among individuals in a population give some individuals an advantage in surviving and reproducing in their environment.",
+    "id": "837852D1AE3A4E9CA217C9D2CE36B0A6",
+    "parentId": "4A86E7C7ED504C1C842C4F4FF0F75C75",
+    "position": 64000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "LS2.MS.10"
+   },
+   "83CCACB272444559BD2946371A5AC09E": {
+    "ancestorIds": [
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987233",
+    "depth": 1,
+    "description": "Mapping the history of natural hazards in a region and understanding related geological forces.",
+    "id": "83CCACB272444559BD2946371A5AC09E",
+    "parentId": "0BCA3C7C2F36429A8FAD2198663F58E2",
+    "position": 97000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.MS.9"
+   },
+   "865B0E1723494546A4AACAA8DE81307F": {
+    "ancestorIds": [
+     "DC19B89322FF4AFD9817FD9C11F08B49",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986979",
+    "depth": 2,
+    "description": "Conduct an investigation and evaluate the experimental design to provide evidence that fields exist between objects exerting forces on each other even though the objects are not in contact.",
+    "id": "865B0E1723494546A4AACAA8DE81307F",
+    "parentId": "DC19B89322FF4AFD9817FD9C11F08B49",
+    "position": 17000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.4.c"
+   },
+   "8A775C2F3F22472B81ECD1A0A21D9460": {
+    "ancestorIds": [
+     "185C7D30CC424BD6AE28FD8B4207BF0A",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986993",
+    "depth": 2,
+    "description": "Develop and use a model to describe that waves are reflected, absorbed or transmitted through various materials.",
+    "id": "8A775C2F3F22472B81ECD1A0A21D9460",
+    "parentId": "185C7D30CC424BD6AE28FD8B4207BF0A",
+    "position": 31000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.8.b"
+   },
+   "8BDDDEF3473C4683B0E196B7FEFA2AEE": {
+    "ancestorIds": [
+     "3BF1555FE85A4520A1DF24B7913F891D",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986988",
+    "depth": 2,
+    "description": "Construct, use, and present arguments to support the claim that when kinetic energy of an object changes, energy is transferred to or from the object.",
+    "id": "8BDDDEF3473C4683B0E196B7FEFA2AEE",
+    "parentId": "3BF1555FE85A4520A1DF24B7913F891D",
+    "position": 26000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.6.c"
+   },
+   "8CA572B2F7414270B7E01ECAC3A137F2": {
+    "ancestorIds": [
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986964",
+    "depth": 1,
+    "description": "The fact that matter is composed of atoms and molecules can be used to explain the properties of substances, diversity of materials, states of matter and phases changes.",
+    "id": "8CA572B2F7414270B7E01ECAC3A137F2",
+    "parentId": "06BFE3789F884D60A1D991854699C4FC",
+    "position": 2000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.MS.1"
+   },
+   "8CE1A3E1C7BF47DB81AA30A16DFAC3F9": {
+    "ancestorIds": [
+     "8CA572B2F7414270B7E01ECAC3A137F2",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986966",
+    "depth": 2,
+    "description": "Analyze and interpret data on the properties of substances before and after the substances interact to determine if a chemical reaction has occurred.",
+    "id": "8CE1A3E1C7BF47DB81AA30A16DFAC3F9",
+    "parentId": "8CA572B2F7414270B7E01ECAC3A137F2",
+    "position": 4000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.1.b"
+   },
+   "8D346E007E8448E480A61BE83C426EEC": {
+    "ancestorIds": [
+     "5B5D0C1C8F784F2099BBBF1B32D807BB",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987217",
+    "depth": 2,
+    "description": "Construct a scientific explanation based on evidence from rock strata for how the geologic time scale is used to organize Earth's 4.6-billion-year-old history.",
+    "id": "8D346E007E8448E480A61BE83C426EEC",
+    "parentId": "5B5D0C1C8F784F2099BBBF1B32D807BB",
+    "position": 81000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.3.a"
+   },
+   "8D963ACBD35B492CAE0689D4E03CFA56": {
+    "ancestorIds": [
+     "52AFEAD0E2454684BD3F04489DA749CF",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987230",
+    "depth": 2,
+    "description": "Develop and use a model to describe how unequal heating and rotation of the Earth cause patterns of atmospheric and oceanic circulation that determine regional climates.",
+    "id": "8D963ACBD35B492CAE0689D4E03CFA56",
+    "parentId": "52AFEAD0E2454684BD3F04489DA749CF",
+    "position": 94000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.7.b"
+   },
+   "91EA164B7969402AAB9B37236FB160C1": {
+    "ancestorIds": [
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987104",
+    "depth": 1,
+    "description": "Heredity explains why offspring resemble, but are not identical to, their parents and is a unifying biological principle. Heredity refers to specific mechanisms by which characteristics or traits are passed from one generation to the next via genes.",
+    "id": "91EA164B7969402AAB9B37236FB160C1",
+    "parentId": "4A86E7C7ED504C1C842C4F4FF0F75C75",
+    "position": 57000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "LS2.MS.8"
+   },
+   "92130368EF164D9CABD44AF295F31B10": {
+    "ancestorIds": [
+     "BEEF75B75E29410BAEA93D1EA43C240D",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987103",
+    "depth": 2,
+    "description": "Evaluate competing design solutions for maintaining biodiversity and ecosystem services.",
+    "id": "92130368EF164D9CABD44AF295F31B10",
+    "parentId": "BEEF75B75E29410BAEA93D1EA43C240D",
+    "position": 56000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.7.b"
+   },
+   "92DA6D667D3C4F48964AC9C7794AA417": {
+    "ancestorIds": [
+     "837852D1AE3A4E9CA217C9D2CE36B0A6",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987113",
+    "depth": 2,
+    "description": "Gather and synthesize information about technologies that have changed the way humans influence the inheritance of desired traits in organisms.",
+    "id": "92DA6D667D3C4F48964AC9C7794AA417",
+    "parentId": "837852D1AE3A4E9CA217C9D2CE36B0A6",
+    "position": 66000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.10.b"
+   },
+   "9A14810489E94C47A537B0CC452E8C80": {
+    "ancestorIds": [
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987218",
+    "depth": 1,
+    "description": "Energy flows and matter cycles within and among Earth's systems, including the sun and Earth's interior as primary energy sources. Plate tectonics is one result of these processes.",
+    "id": "9A14810489E94C47A537B0CC452E8C80",
+    "parentId": "0BCA3C7C2F36429A8FAD2198663F58E2",
+    "position": 82000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.MS.4"
+   },
+   "9D237CB0C88841368CA93284D6C4E7A5": {
+    "ancestorIds": [
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987231",
+    "depth": 1,
+    "description": "Humans depend on Earth's land, ocean, atmosphere, and biosphere for different resources, many of which are limited or not renewable. Resources are distributed unevenly around the planet as a result of past geologic processes.",
+    "id": "9D237CB0C88841368CA93284D6C4E7A5",
+    "parentId": "0BCA3C7C2F36429A8FAD2198663F58E2",
+    "position": 95000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.MS.8"
+   },
+   "A08822059DF24A1982D0695474A4B15B": {
+    "ancestorIds": [
+     "DC19B89322FF4AFD9817FD9C11F08B49",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986977",
+    "depth": 2,
+    "description": "Ask questions about data to determine the factors that affect the strength of electric and magnetic forces.",
+    "id": "A08822059DF24A1982D0695474A4B15B",
+    "parentId": "DC19B89322FF4AFD9817FD9C11F08B49",
+    "position": 15000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.4.a"
+   },
+   "A61E81EB4DC643EB99FD8146302FF6EB": {
+    "ancestorIds": [
+     "3BF1555FE85A4520A1DF24B7913F891D",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986987",
+    "depth": 2,
+    "description": "Plan an investigation to determine the relationships among the energy transferred, the type of matter, the mass, and the change in the average kinetic energy of the particles as measured by the temperature of the sample.",
+    "id": "A61E81EB4DC643EB99FD8146302FF6EB",
+    "parentId": "3BF1555FE85A4520A1DF24B7913F891D",
+    "position": 25000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.6.b"
+   },
+   "A61ECDF3A3714975ACFFCAC5B90EB17A": {
+    "ancestorIds": [
+     "8CA572B2F7414270B7E01ECAC3A137F2",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986965",
+    "depth": 2,
+    "description": "Develop models to describe the atomic composition of simple molecules and extended structures.",
+    "id": "A61ECDF3A3714975ACFFCAC5B90EB17A",
+    "parentId": "8CA572B2F7414270B7E01ECAC3A137F2",
+    "position": 3000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.1.a"
+   },
+   "A6C36706DBC24375B07D881567AA0459": {
+    "ancestorIds": [
+     "CABFB6BA027A43B793A640B634CCB381",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987215",
+    "depth": 2,
+    "description": "Develop and use a model of the Earth-sun-moon system to describe the cyclic patterns of lunar phases, eclipses of the sun and moon, and seasons.",
+    "id": "A6C36706DBC24375B07D881567AA0459",
+    "parentId": "CABFB6BA027A43B793A640B634CCB381",
+    "position": 79000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.2.c"
+   },
+   "A6D9857715B34FEC895E2AD1D01C8548": {
+    "ancestorIds": [
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986969",
+    "depth": 1,
+    "description": "Reacting substances rearrange to form different molecules, but the number of atoms is conserved. Some reactions release energy and others absorb energy.",
+    "id": "A6D9857715B34FEC895E2AD1D01C8548",
+    "parentId": "06BFE3789F884D60A1D991854699C4FC",
+    "position": 7000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.MS.2"
+   },
+   "A6E3CC25E97D47CABF13A93B1F39A33A": {
+    "ancestorIds": [
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986973",
+    "depth": 1,
+    "description": "Motion is described relative to a reference frame that must be shared with others and is determined by the sum of the forces acting on it. The greater the mass of the object, the greater the force needed to achieve the same change in motion.",
+    "id": "A6E3CC25E97D47CABF13A93B1F39A33A",
+    "parentId": "06BFE3789F884D60A1D991854699C4FC",
+    "position": 11000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.MS.3"
+   },
+   "A7CC8D753E89424FBD665674D2573AA4": {
+    "ancestorIds": [
+     "47D5B9C6190D4D969BA34EDA83E02CD6",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986997",
+    "depth": 2,
+    "description": "Integrate qualitative scientific and technical information to support the claim that digitized signals are a more reliable way to encode and transmit information than analog signals.",
+    "id": "A7CC8D753E89424FBD665674D2573AA4",
+    "parentId": "47D5B9C6190D4D969BA34EDA83E02CD6",
+    "position": 35000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.10.a"
+   },
+   "A959A6E7C60F458B813EE15047C00616": {
+    "ancestorIds": [
+     "A6D9857715B34FEC895E2AD1D01C8548",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986972",
+    "depth": 2,
+    "description": "Undertake a design project to construct, test, and modify a device that either releases or absorbs thermal energy by chemical processes.",
+    "id": "A959A6E7C60F458B813EE15047C00616",
+    "parentId": "A6D9857715B34FEC895E2AD1D01C8548",
+    "position": 10000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.2.c"
+   },
+   "A95A7029B0614B688AC4B4859A3CEF20": {
+    "ancestorIds": [
+     "9A14810489E94C47A537B0CC452E8C80",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987220",
+    "depth": 2,
+    "description": "Construct an explanation based on evidence for how geoscience processes have changed Earth's surface at varying time and spatial scales.",
+    "id": "A95A7029B0614B688AC4B4859A3CEF20",
+    "parentId": "9A14810489E94C47A537B0CC452E8C80",
+    "position": 84000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.4.b"
+   },
+   "AC52AAE918DA4F28B1B64DEC808B6EBD": {
+    "ancestorIds": [
+     "2A89C0EB9A054E37884318D26FDA408A",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987097",
+    "depth": 2,
+    "description": "Analyze and interpret data to provide evidence for the effects of resource availability on organisms and populations of organisms in an ecosystem.",
+    "id": "AC52AAE918DA4F28B1B64DEC808B6EBD",
+    "parentId": "2A89C0EB9A054E37884318D26FDA408A",
+    "position": 50000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.5.a"
+   },
+   "B2BF1419DEE4458AA23693DAFAEFCC2E": {
+    "ancestorIds": [
+     "CABFB6BA027A43B793A640B634CCB381",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987213",
+    "depth": 2,
+    "description": "Develop and use a model to describe the role of gravity in the motions within galaxies and the solar system.",
+    "id": "B2BF1419DEE4458AA23693DAFAEFCC2E",
+    "parentId": "CABFB6BA027A43B793A640B634CCB381",
+    "position": 77000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.2.a"
+   },
+   "B6A5BDE58E284AC892BC1E467E609C3A": {
+    "ancestorIds": [
+     "CABFB6BA027A43B793A640B634CCB381",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987214",
+    "depth": 2,
+    "description": "Analyze and interpret data to determine scale properties of objects in the solar system.",
+    "id": "B6A5BDE58E284AC892BC1E467E609C3A",
+    "parentId": "CABFB6BA027A43B793A640B634CCB381",
+    "position": 78000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.2.b"
+   },
+   "B6AAA768B32F47B2B204169DC73AC629": {
+    "ancestorIds": [
+     "83CCACB272444559BD2946371A5AC09E",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987234",
+    "depth": 2,
+    "description": "Analyze and interpret data on natural hazards to forecast future catastrophic events and inform the development of technologies to mitigate their effects.",
+    "id": "B6AAA768B32F47B2B204169DC73AC629",
+    "parentId": "83CCACB272444559BD2946371A5AC09E",
+    "position": 98000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.9.a"
+   },
+   "B9883C6DBB344F28A8D4AF11C48EA6C5": {
+    "ancestorIds": [
+     "9A14810489E94C47A537B0CC452E8C80",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987219",
+    "depth": 2,
+    "description": "Develop a model to describe the cycling of Earth's materials and the flow of energy that drives this process.",
+    "id": "B9883C6DBB344F28A8D4AF11C48EA6C5",
+    "parentId": "9A14810489E94C47A537B0CC452E8C80",
+    "position": 83000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.4.a"
+   },
+   "BCF51BCEA72A434794AC410790B6EB78": {
+    "ancestorIds": [
+     "BDCDF01ADB1D42CF873465C359F1FCE9",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986983",
+    "depth": 2,
+    "description": "Plan an investigation to determine the relationships among the energy transferred, the type of matter, the mass, and the change in the average kinetic energy of the particles as measured by the temperature of the sample.",
+    "id": "BCF51BCEA72A434794AC410790B6EB78",
+    "parentId": "BDCDF01ADB1D42CF873465C359F1FCE9",
+    "position": 21000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.5.d"
+   },
+   "BDCDF01ADB1D42CF873465C359F1FCE9": {
+    "ancestorIds": [
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986980",
+    "depth": 1,
+    "description": "Kinetic energy can be distinguished from the various forms of potential energy.",
+    "id": "BDCDF01ADB1D42CF873465C359F1FCE9",
+    "parentId": "06BFE3789F884D60A1D991854699C4FC",
+    "position": 18000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.MS.5"
+   },
+   "BE7CE86DB6864A5D89733E8A49770F72": {
+    "ancestorIds": [
+     "3D63FD405B07450CA96D695364B55052",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987092",
+    "depth": 2,
+    "description": "Construct a scientific explanation based on evidence for the role of photosynthesis in the cycling of matter and flow of energy into and out of organisms.",
+    "id": "BE7CE86DB6864A5D89733E8A49770F72",
+    "parentId": "3D63FD405B07450CA96D695364B55052",
+    "position": 45000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.3.a"
+   },
+   "BEEF75B75E29410BAEA93D1EA43C240D": {
+    "ancestorIds": [
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987101",
+    "depth": 1,
+    "description": "Ecosystems are dynamic in nature; their characteristics can vary over time. Disruptions to any physical or biological component of an ecosystem.",
+    "id": "BEEF75B75E29410BAEA93D1EA43C240D",
+    "parentId": "4A86E7C7ED504C1C842C4F4FF0F75C75",
+    "position": 54000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "LS2.MS.7"
+   },
+   "BF34743D42174A69BDA8D7B8235A15A2": {
+    "ancestorIds": [
+     "2A89C0EB9A054E37884318D26FDA408A",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987098",
+    "depth": 2,
+    "description": "Construct an explanation that predicts patterns of interactions among organisms across multiple ecosystems.",
+    "id": "BF34743D42174A69BDA8D7B8235A15A2",
+    "parentId": "2A89C0EB9A054E37884318D26FDA408A",
+    "position": 51000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.5.b"
+   },
+   "C03B1400A2FC47F69683FA576A8E5D11": {
+    "ancestorIds": [
+     "F9F210FCDFBB46C1988985BD79DACD46",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986990",
+    "depth": 2,
+    "description": "Develop a model to describe that when the arrangement of objects interacting at a distance changes, different amounts of potential energy are stored in the system.",
+    "id": "C03B1400A2FC47F69683FA576A8E5D11",
+    "parentId": "F9F210FCDFBB46C1988985BD79DACD46",
+    "position": 28000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.7.a"
+   },
+   "C365A17D44A94402B9B9AB4CBD056410": {
+    "ancestorIds": [
+     "BDCDF01ADB1D42CF873465C359F1FCE9",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986981",
+    "depth": 2,
+    "description": "Construct and interpret graphical displays of data to describe the relationships of kinetic energy to the mass of an object and the speed of an object.",
+    "id": "C365A17D44A94402B9B9AB4CBD056410",
+    "parentId": "BDCDF01ADB1D42CF873465C359F1FCE9",
+    "position": 19000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.5.a"
+   },
+   "C4D07F3A136D44F784F9592AB7611569": {
+    "ancestorIds": [
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986994",
+    "depth": 1,
+    "description": "A wave model of light is useful to explain how light interacts with objects through a variety of properties.",
+    "id": "C4D07F3A136D44F784F9592AB7611569",
+    "parentId": "06BFE3789F884D60A1D991854699C4FC",
+    "position": 32000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.MS.9"
+   },
+   "C6223F853E5B4B6F926143ED4A6E3A68": {
+    "ancestorIds": [
+     "9D237CB0C88841368CA93284D6C4E7A5",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987232",
+    "depth": 2,
+    "description": "Construct a scientific explanation based on evidence for how the uneven distributions of Earth's mineral, energy, and groundwater resources are the result of past and current geoscience processes.",
+    "id": "C6223F853E5B4B6F926143ED4A6E3A68",
+    "parentId": "9D237CB0C88841368CA93284D6C4E7A5",
+    "position": 96000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.8.a"
+   },
+   "C715A9FC1A2C4ADCB9233624E3268110": {
+    "ancestorIds": [
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987084",
+    "depth": 1,
+    "description": "All living things are made up of cells, which is the smallest unit that can be said to be alive.",
+    "id": "C715A9FC1A2C4ADCB9233624E3268110",
+    "parentId": "4A86E7C7ED504C1C842C4F4FF0F75C75",
+    "position": 37000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "LS2.MS.1"
+   },
+   "C7C4EE7BF96E4038BBA1B99ABCA818C3": {
+    "ancestorIds": [
+     "91EA164B7969402AAB9B37236FB160C1",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987106",
+    "depth": 2,
+    "description": "Develop and use a model to describe why asexual reproduction results in offspring with identical genetic information and sexual reproduction results in offspring with genetic variation.",
+    "id": "C7C4EE7BF96E4038BBA1B99ABCA818C3",
+    "parentId": "91EA164B7969402AAB9B37236FB160C1",
+    "position": 59000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.8.b"
+   },
+   "CABFB6BA027A43B793A640B634CCB381": {
+    "ancestorIds": [
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987212",
+    "depth": 1,
+    "description": "The solar system contains many varied objects held together by gravity. Solar system models explain and predict eclipses, lunar phases, and seasons.",
+    "id": "CABFB6BA027A43B793A640B634CCB381",
+    "parentId": "0BCA3C7C2F36429A8FAD2198663F58E2",
+    "position": 76000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.MS.2"
+   },
+   "CBE5E830E7064C1CBE8775238AEA31EE": {
+    "ancestorIds": [
+     "8CA572B2F7414270B7E01ECAC3A137F2",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986968",
+    "depth": 2,
+    "description": "Develop a model that predicts and describes changes in particle motion, temperature, and state of a pure substance when thermal energy is added or removed.",
+    "id": "CBE5E830E7064C1CBE8775238AEA31EE",
+    "parentId": "8CA572B2F7414270B7E01ECAC3A137F2",
+    "position": 6000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.1.d"
+   },
+   "CC79DBA1811B4083B73F4033F7D573D3": {
+    "ancestorIds": [
+     "8CA572B2F7414270B7E01ECAC3A137F2",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986967",
+    "depth": 2,
+    "description": "Gather and make sense of information to describe that synthetic materials come from natural resources and impact society.",
+    "id": "CC79DBA1811B4083B73F4033F7D573D3",
+    "parentId": "8CA572B2F7414270B7E01ECAC3A137F2",
+    "position": 5000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.1.c"
+   },
+   "D00F1DA712114307A1F740554952EBF0": {
+    "ancestorIds": [
+     "755C7957EEDE4A86B2BF47BB18D098DA",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987095",
+    "depth": 2,
+    "description": "Gather and synthesize information that sensory receptors respond to stimuli by sending messages to the brain for immediate behavior or storage as memories.",
+    "id": "D00F1DA712114307A1F740554952EBF0",
+    "parentId": "755C7957EEDE4A86B2BF47BB18D098DA",
+    "position": 48000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.4.a"
+   },
+   "D16FF85697F14DD3BD9168F0046AE6E3": {
+    "ancestorIds": [
+     "C4D07F3A136D44F784F9592AB7611569",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986995",
+    "depth": 2,
+    "description": "Develop and use a model to describe that waves are reflected, absorbed or transmitted through various materials.",
+    "id": "D16FF85697F14DD3BD9168F0046AE6E3",
+    "parentId": "C4D07F3A136D44F784F9592AB7611569",
+    "position": 33000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.9.a"
+   },
+   "D8028294970C4587BA961E0CC9925F92": {
+    "ancestorIds": [
+     "FA0A1511DE614374BAF2307A1DDAD45B",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987222",
+    "depth": 2,
+    "description": "Analyze and interpret data on the distribution of fossils and rocks, continental shapes, and seafloor structures to provide evidence of the past plate motions.",
+    "id": "D8028294970C4587BA961E0CC9925F92",
+    "parentId": "FA0A1511DE614374BAF2307A1DDAD45B",
+    "position": 86000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.5.a"
+   },
+   "DC19B89322FF4AFD9817FD9C11F08B49": {
+    "ancestorIds": [
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986976",
+    "depth": 1,
+    "description": "Forces that act a distance (gravitational, electric, and magnetic) can be explained by force fields that extend through space and can be mapped by their effect on a test object.",
+    "id": "DC19B89322FF4AFD9817FD9C11F08B49",
+    "parentId": "06BFE3789F884D60A1D991854699C4FC",
+    "position": 14000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.MS.4"
+   },
+   "DECB1014B57246AAAC639EE9752C91AE": {
+    "ancestorIds": [
+     "29A06B4825A845DB894031A9EA120E24",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987226",
+    "depth": 2,
+    "description": "Collect data to provide evidence for how the motions and complex interactions of air masses result in changes in weather conditions.",
+    "id": "DECB1014B57246AAAC639EE9752C91AE",
+    "parentId": "29A06B4825A845DB894031A9EA120E24",
+    "position": 90000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.6.c"
+   },
+   "E3662C1298294A9091ED3744F57A289E": {
+    "ancestorIds": [
+     "BDCDF01ADB1D42CF873465C359F1FCE9",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986982",
+    "depth": 2,
+    "description": "Develop a model to describe that when the arrangement of objects interacting at a distance changes, different amounts of potential energy are stored in the system.",
+    "id": "E3662C1298294A9091ED3744F57A289E",
+    "parentId": "BDCDF01ADB1D42CF873465C359F1FCE9",
+    "position": 20000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.5.b"
+   },
+   "F06A38E820A9420A91C7A88C957B5929": {
+    "ancestorIds": [
+     "185C7D30CC424BD6AE28FD8B4207BF0A",
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986992",
+    "depth": 2,
+    "description": "Use mathematical representations to describe a simple model for waves that includes how the amplitude of a wave is related to the energy in the wave.",
+    "id": "F06A38E820A9420A91C7A88C957B5929",
+    "parentId": "185C7D30CC424BD6AE28FD8B4207BF0A",
+    "position": 30000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PS1.MS.8.a"
+   },
+   "F27D6CB3A9A245E691FFCFE21848FFC3": {
+    "ancestorIds": [
+     "837852D1AE3A4E9CA217C9D2CE36B0A6",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987112",
+    "depth": 2,
+    "description": "Construct an explanation based on evidence that describes how genetic variations of traits in a population increase some individuals' probability of surviving and reproducing in a specific environment.",
+    "id": "F27D6CB3A9A245E691FFCFE21848FFC3",
+    "parentId": "837852D1AE3A4E9CA217C9D2CE36B0A6",
+    "position": 65000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.10.a"
+   },
+   "F61311F3028A4471916D2B52B990C50A": {
+    "ancestorIds": [
+     "C715A9FC1A2C4ADCB9233624E3268110",
+     "4A86E7C7ED504C1C842C4F4FF0F75C75"
+    ],
+    "asnIdentifier": "S2987086",
+    "depth": 2,
+    "description": "Develop and use a model to describe the function of a cell as a whole and ways the parts of cells contribute to the function.",
+    "id": "F61311F3028A4471916D2B52B990C50A",
+    "parentId": "C715A9FC1A2C4ADCB9233624E3268110",
+    "position": 39000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "LS2.MS.1.b"
+   },
+   "F839B16E4EBA4E278391297426955426": {
+    "ancestorIds": [
+     "2EA0160207FE41B694325197FF955112",
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987239",
+    "depth": 2,
+    "description": "Ask questions to clarify evidence of the factors that have caused the rise in global temperatures over the past century.",
+    "id": "F839B16E4EBA4E278391297426955426",
+    "parentId": "2EA0160207FE41B694325197FF955112",
+    "position": 103000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "ESS3.MS.11.a"
+   },
+   "F9F210FCDFBB46C1988985BD79DACD46": {
+    "ancestorIds": [
+     "06BFE3789F884D60A1D991854699C4FC"
+    ],
+    "asnIdentifier": "S2986989",
+    "depth": 1,
+    "description": "When two objects interact, each one exerts a force on the other that can cause energy to be transferred to and from the object.",
+    "id": "F9F210FCDFBB46C1988985BD79DACD46",
+    "parentId": "06BFE3789F884D60A1D991854699C4FC",
+    "position": 27000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PS1.MS.7"
+   },
+   "FA0A1511DE614374BAF2307A1DDAD45B": {
+    "ancestorIds": [
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987221",
+    "depth": 1,
+    "description": "Plate tectonics is the unifying theory that explains movements of rocks at Earth's surface and geological history.",
+    "id": "FA0A1511DE614374BAF2307A1DDAD45B",
+    "parentId": "0BCA3C7C2F36429A8FAD2198663F58E2",
+    "position": 85000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.MS.5"
+   },
+   "FD7FE40FA92949A1981DFB9B83EE6886": {
+    "ancestorIds": [
+     "0BCA3C7C2F36429A8FAD2198663F58E2"
+    ],
+    "asnIdentifier": "S2987209",
+    "depth": 1,
+    "description": "Motion is predictable in both solar systems and galaxies.",
+    "id": "FD7FE40FA92949A1981DFB9B83EE6886",
+    "parentId": "0BCA3C7C2F36429A8FAD2198663F58E2",
+    "position": 73000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "ESS3.MS.1"
+   }
+  },
+  "subject": "Science (2020-)",
+  "title": "Grades 6, 7, 8"
+ }
+}

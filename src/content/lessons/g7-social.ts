@@ -1081,4 +1081,34 @@ export const lessons: GradeLessons = {
     ["Shinto shrines are often in natural places, marked by a torii gate.", "They honour kami, the spirits in nature and special places."],
     "kami, the spirits in nature and special places",
   ),
+  "social/co-g7-japan": lesson(
+    ["Japan is a chain of mountainous islands with the Pacific Ocean to the east. Mount Fuji is its tallest peak.", "Little flat land meant farming in valleys and lots of fishing.", "Shinto honours kami, spirits in nature; Buddhism and Confucian ideas of family, order and duty also shaped Japanese values."],
+    "Shinto, an old belief in Japan, honours what?",
+    ["Shinto shrines are often in natural places, marked by a torii gate.", "They honour kami, the spirits in nature and special places."],
+    "kami, the spirits in nature and special places",
+  ),
+  "social/ny-g6-eastern-hemisphere": lesson(
+    ["The Eastern Hemisphere holds Africa, Asia, Europe and Australia.", "The Ural Mountains divide Europe and Asia. The Nile is Africa's longest river; the Tigris and Euphrates flow through Iraq.", "A peninsula has water on three sides."],
+    "What is a peninsula?",
+    ["“Pen” means almost and “insula” means island.", "It is almost an island."],
+    "land surrounded by water on three sides",
+  ),
+  "social/ny-g6-classical-china-india": lesson(
+    ["The Qin united China; the Terracotta Army guarded its first emperor's tomb.", "The Han invented paper and chose officials by tests of Confucian teachings. Han China and Rome both had big armies and roads.", "India's Maurya and Gupta empires; the Gupta had a golden age of peace, wealth and achievement."],
+    "During which dynasty was paper invented in China?",
+    ["It came after the Qin.", "It was the dynasty that ruled about 400 years."],
+    "the Han",
+  ),
+  "social/ny-g6-mediterranean": lesson(
+    ["After Rome fell, feudalism grew in Western Europe for protection and order.", "Islam spread across North Africa and Southwest Asia through conquest, trade and travel. The Umayyads ruled from Damascus.", "The Crusades increased trade between Europe and Southwest Asia. Muslim scholars brought the numerals we use to Europe."],
+    "What was one effect of the Crusades?",
+    ["Europeans met goods and ideas from Southwest Asia.", "They wanted more spices and silks."],
+    "more trade between Europe and Southwest Asia",
+  ),
+  "social/ny-g6-mongols-travelers": lesson(
+    ["The Mongols ruled many peoples by allowing many religions and using local officials.", "Trade routes followed oases and rivers for water. Traders swapped West African gold for Sahara salt.", "Travellers like Zheng He sailed to Southeast Asia, India and East Africa. Goods, ideas and diseases spread."],
+    "Why did Silk Road routes follow oases and river valleys?",
+    ["Many routes crossed deserts.", "Travellers and camels needed water."],
+    "Travellers needed water and supplies.",
+  ),
 };

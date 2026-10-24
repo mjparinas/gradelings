@@ -757,4 +757,22 @@ export const lessons: GradeLessons = {
     ["The library is free to use.", "People pay taxes, and taxes pay for it."],
     "taxes",
   ),
+  "social/co-g3-colorado-land": lesson(
+    ["Colorado has plains in the east, the Rocky Mountains in the middle and plateaus and canyons in the west.", "Most people live along the Front Range, where the plains meet the mountains.", "Rivers like the South Platte and the Colorado begin with mountain snow."],
+    "Where do most Coloradans live?",
+    ["Denver and Colorado Springs are big cities.", "They sit where the plains meet the mountains."],
+    "along the Front Range",
+  ),
+  "social/co-g3-colorado-communities": lesson(
+    ["Communities grow and change over time.", "Towns grew near rivers, mines, farms and railroads.", "Many groups have shaped Colorado's communities: Native nations, Hispano families, miners, farmers and newcomers from many countries."],
+    "Why did many mountain towns start?",
+    ["People came looking for gold and silver.", "Towns grew near the mines."],
+    "mining",
+  ),
+  "social/co-g3-local-government": lesson(
+    ["Local governments run cities, towns and counties. Colorado has 64 counties.", "A mayor and city council lead many cities.", "Local governments pay for services like parks, police and streets with taxes, and voters choose the leaders."],
+    "Who pays for a city's parks and streets?",
+    ["Services cost money.", "The money comes from people's taxes."],
+    "taxes",
+  ),
 };

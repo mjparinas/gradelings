@@ -763,4 +763,52 @@ export const lessons: GradeLessons = {
     ["The Amazon is in South America.", "Most of it lies in the largest South American country."],
     "Brazil",
   ),
+  "social/co-g6-world-regions": lesson(
+    ["World regions share features like climate, landforms and culture. Know which countries are in which region: India in Asia, New Zealand in Oceania.", "People adapt to climate, like warm clothing and insulated homes in the cold.", "The Ring of Fire around the Pacific has many volcanoes and earthquakes. Trade connects regions."],
+    "The Amazon rainforest is mostly in which country?",
+    ["The Amazon is in South America.", "Most of it lies in the largest South American country."],
+    "Brazil",
+  ),
+  "social/ny-g5-countries-capitals": lesson(
+    ["North America: Canada, the US, Mexico. Panama connects Central and South America.", "Learn capitals in pairs: Bogotá, Colombia; Kingston, Jamaica; Belmopan, Belize; Georgetown, Guyana.", "Mexico borders the US to the south."],
+    "What is the capital of Colombia?",
+    ["Colombia is in the north of South America.", "Its capital is high in the Andes."],
+    "Bogotá",
+  ),
+  "social/ny-g5-cultures": lesson(
+    ["People of the Americas have ancestors from Native nations, Europe, Africa and Asia.", "Languages come from history: Canada uses English and French; Haiti uses French and Haitian Creole; Brazil uses Portuguese.", "Each country has celebrations; Mexico's Independence Day is September 16."],
+    "What are Canada's two official languages?",
+    ["Canada was colonized by France and Britain.", "Both languages are official."],
+    "English and French",
+  ),
+  "social/ny-g5-governments": lesson(
+    ["The US has three branches: legislative, executive and judicial.", "Mexico is divided into states, like the US. Canada's head of government is the prime minister.", "Groups like the OAS and UNICEF help countries work together and help children."],
+    "Who is the head of government in Canada?",
+    ["The US has a president.", "Canada's government is led by a prime minister."],
+    "the prime minister",
+  ),
+  "social/ny-g5-economics": lesson(
+    ["Every economy answers: what to produce, how to produce it, and for whom.", "Traditional economies follow custom; market economies let buyers and sellers decide prices.", "Needs are things you must have to live. Countries trade resources, like Venezuela's oil."],
+    "In a market economy, who mostly decides prices?",
+    ["Market means people buy and sell freely.", "So buyers and sellers decide."],
+    "buyers and sellers",
+  ),
+  "social/ny-g5-timeline": lesson(
+    ["Find each year and put the smallest first.", "Anchors: Tenochtitlan (1325), Columbus (1492), Tordesillas (1494), Jamestown (1607), Panama Canal (1914), Mexico's constitution (1917).", "If you know only the century, compare the first two digits."],
+    "Which happened first: the English found Jamestown or the Panama Canal opens?",
+    ["Jamestown was founded in 1607.", "The Panama Canal opened in 1914."],
+    "the English found Jamestown",
+  ),
+  "social/co-g6-americas-geography": lesson(
+    ["The Western Hemisphere is North, Central and South America and the Caribbean.", "Big features: the Rocky Mountains, the Andes, the Amazon rainforest (the largest), the Caribbean Sea.", "A climate map shows usual weather. The Arctic is very cold, with long winters."],
+    "What is the largest rainforest in the world?",
+    ["It is in South America.", "It is named for its giant river."],
+    "the Amazon rainforest",
+  ),
+  "social/co-g6-early-americas": lesson(
+    ["A civilization has cities, organized government, jobs and often writing.", "Olmec (Gulf Coast of Mexico), Maya (rainforest), Aztec (central Mexico), Inca (Andes), Mississippian (river valleys).", "Inca stonework fit so tightly no mortar was needed. Many Maya people live in Mexico, Guatemala and Belize today."],
+    "Where did the Olmec live?",
+    ["They were one of the earliest civilizations in Mesoamerica.", "They lived along the Gulf Coast."],
+    "the Gulf Coast of Mexico",
+  ),
 };

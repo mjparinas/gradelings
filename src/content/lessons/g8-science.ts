@@ -547,4 +547,16 @@ export const lessons: GradeLessons = {
     ["The eras go Paleozoic, Mesozoic, Cenozoic.", "The latest is the Cenozoic."],
     "the Cenozoic Era",
   ),
+  "science/co-g8-space": lesson(
+    ["Earth's tilt causes the seasons: the hemisphere tilted toward the sun has summer.", "Moon phases come from seeing different parts of its sunlit half. In a solar eclipse the moon is between the sun and Earth.", "Gravity holds the planets in orbit; the solar system is huge compared with Earth."],
+    "In a solar eclipse, what is between the sun and Earth?",
+    ["Something blocks the sunlight.", "The moon's shadow falls on Earth."],
+    "the moon",
+  ),
+  "science/co-g8-earth-history": lesson(
+    ["Rock layers and fossils order Earth’s 4.6-billion-year history; lower layers are older.", "Most of that history is the Precambrian. We live in the Cenozoic Era.", "Homologous structures show that living things share ancestors."],
+    "In which era do we live today?",
+    ["The eras go Paleozoic, Mesozoic, Cenozoic.", "The latest is the Cenozoic."],
+    "the Cenozoic Era",
+  ),
 };

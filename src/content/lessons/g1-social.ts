@@ -367,4 +367,10 @@ export const lessons: GradeLessons = {
     ["Look for the bright red bird.", "It is the northern cardinal."],
     "the cardinal",
   ),
+  "social/co-g1-colorado-symbols": lesson(
+    ["Colorado's capital is Denver. The State Capitol has a gold dome.", "State symbols include the lark bunting, the columbine and the blue spruce.", "Colorado's flag has a red C, a gold circle, and blue and white stripes."],
+    "What is Colorado's state flower?",
+    ["It is blue and white.", "It grows in mountain meadows."],
+    "the columbine",
+  ),
 };

@@ -1,0 +1,1091 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D21428307",
+   "id": "D21428307",
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.cde.state.co.us/cosocialstudies/cas-ss-p12-2022",
+   "title": "Colorado Academic Standards: Social Studies",
+   "valid": "2022"
+  },
+  "educationLevels": [
+   "03"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D21428307_grade-03",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": null,
+   "rightsHolder": "D2L Corporation",
+   "title": null
+  },
+  "normalizedSubject": "Social Studies",
+  "standards": {
+   "028F4BEFBF3E4AC5ACADCCAAFFBD3CEB": {
+    "ancestorIds": [
+     "DF55983F418447208DA3ADC4490AE10B",
+     "F3038E1414124CECA9D1733567312A10",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428590",
+    "depth": 3,
+    "description": "Create a plan with specific steps to reach a short-term financial goal.",
+    "id": "028F4BEFBF3E4AC5ACADCCAAFFBD3CEB",
+    "parentId": "DF55983F418447208DA3ADC4490AE10B",
+    "position": 67000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.PF.1.d"
+   },
+   "041A4B016D424C48A5BFB0C98C0D736F": {
+    "ancestorIds": [
+     "09E30DCBE5934D38AF71276735C96561",
+     "B596A373C72449A782FD176C1E42BF94",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428550",
+    "depth": 3,
+    "description": "Describe the natural and man-made features of a specific area on a map.",
+    "id": "041A4B016D424C48A5BFB0C98C0D736F",
+    "parentId": "09E30DCBE5934D38AF71276735C96561",
+    "position": 27000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.G.1.c"
+   },
+   "07ADCEDCDE9A40B990B6E6F96B5E1906": {
+    "ancestorIds": [
+     "DF55983F418447208DA3ADC4490AE10B",
+     "F3038E1414124CECA9D1733567312A10",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428595",
+    "depth": 3,
+    "description": "Recognize how members of a community rely on each other, considering personal contributions as applicable, when creating and completing a plan to reach a financial goal.",
+    "id": "07ADCEDCDE9A40B990B6E6F96B5E1906",
+    "parentId": "DF55983F418447208DA3ADC4490AE10B",
+    "position": 72000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "3.PFES.2.4"
+   },
+   "0816A76C3EF948BAB0D77B920F035CD0": {
+    "ancestorIds": [
+     "09E30DCBE5934D38AF71276735C96561",
+     "B596A373C72449A782FD176C1E42BF94",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428548",
+    "depth": 3,
+    "description": "Read and interpret information from geographic tools and formulate geographic questions.",
+    "id": "0816A76C3EF948BAB0D77B920F035CD0",
+    "parentId": "09E30DCBE5934D38AF71276735C96561",
+    "position": 25000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.G.1.a"
+   },
+   "09E30DCBE5934D38AF71276735C96561": {
+    "ancestorIds": [
+     "B596A373C72449A782FD176C1E42BF94",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428547",
+    "depth": 2,
+    "description": "Use geographic tools to develop spatial thinking skills.",
+    "id": "09E30DCBE5934D38AF71276735C96561",
+    "parentId": "B596A373C72449A782FD176C1E42BF94",
+    "position": 24000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "3.G.1"
+   },
+   "0E0BBECF53594579B5DEA31AAE172442": {
+    "ancestorIds": [
+     "13ABE0A8A9674623B6457FF17D8DDB62"
+    ],
+    "asnIdentifier": "S21428313",
+    "depth": 1,
+    "description": "Evaluate how scarce resources are allocated in societies through the analysis of individual choice, market interaction, and public policy.",
+    "id": "0E0BBECF53594579B5DEA31AAE172442",
+    "parentId": "13ABE0A8A9674623B6457FF17D8DDB62",
+    "position": 6000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.5"
+   },
+   "0F80A34674C74EA59FFF233F8B71ADE6": {
+    "ancestorIds": [
+     "E6B298E08BCA4A458B427E967C73DFA7",
+     "B596A373C72449A782FD176C1E42BF94",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428558",
+    "depth": 3,
+    "description": "Investigate a variety of places and communities and draw conclusions about regions.",
+    "id": "0F80A34674C74EA59FFF233F8B71ADE6",
+    "parentId": "E6B298E08BCA4A458B427E967C73DFA7",
+    "position": 35000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "3.GES.2.1"
+   },
+   "13ABE0A8A9674623B6457FF17D8DDB62": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21428308",
+    "depth": 0,
+    "description": "Prepared Graduates in Social Studies",
+    "id": "13ABE0A8A9674623B6457FF17D8DDB62",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": "Content Area"
+   },
+   "14184CACE6FF458FA091F6D6C0D95C0F": {
+    "ancestorIds": [
+     "DF55983F418447208DA3ADC4490AE10B",
+     "F3038E1414124CECA9D1733567312A10",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428588",
+    "depth": 3,
+    "description": "Identify activities that individuals can do to earn money to reach personal financial goals.",
+    "id": "14184CACE6FF458FA091F6D6C0D95C0F",
+    "parentId": "DF55983F418447208DA3ADC4490AE10B",
+    "position": 65000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.PF.1.b"
+   },
+   "14568FD95B8846449A373FCF30AFFE44": {
+    "ancestorIds": [
+     "DF55983F418447208DA3ADC4490AE10B",
+     "F3038E1414124CECA9D1733567312A10",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428593",
+    "depth": 3,
+    "description": "Demonstrate flexibility, imagination, and inventiveness in taking on tasks and activities that will help reach a financial goal.",
+    "id": "14568FD95B8846449A373FCF30AFFE44",
+    "parentId": "DF55983F418447208DA3ADC4490AE10B",
+    "position": 70000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "3.PFES.2.2"
+   },
+   "175C697E6F1C4F3A84B44BF85024DF66": {
+    "ancestorIds": [
+     "B143E32D6EF84774806925E8FF827C17",
+     "683CF738D6144D0B8ECB7C88FF537206",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428536",
+    "depth": 3,
+    "description": "Compare primary sources with works of fiction about the same topic.",
+    "id": "175C697E6F1C4F3A84B44BF85024DF66",
+    "parentId": "B143E32D6EF84774806925E8FF827C17",
+    "position": 13000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.H.1.a"
+   },
+   "18E6CEC534F04272931F7240C5CB1EE5": {
+    "ancestorIds": [
+     "48E80432DF6A4EDD9760603E13A7DFA8",
+     "683CF738D6144D0B8ECB7C88FF537206",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428542",
+    "depth": 3,
+    "description": "Compare past and present situations and events.",
+    "id": "18E6CEC534F04272931F7240C5CB1EE5",
+    "parentId": "48E80432DF6A4EDD9760603E13A7DFA8",
+    "position": 19000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.H.2.a"
+   },
+   "1C0E19444C60474AA2A084C8795AB535": {
+    "ancestorIds": [
+     "FEEECB5BD6644EFF846B82F8A1B997D9",
+     "FB86AC37E97D47D3B48F89BA54A807CF",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428567",
+    "depth": 3,
+    "description": "Identify and explain the perspectives of all parties participating in an exchange.",
+    "id": "1C0E19444C60474AA2A084C8795AB535",
+    "parentId": "FEEECB5BD6644EFF846B82F8A1B997D9",
+    "position": 44000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "3.EES.1.2"
+   },
+   "1E481EA06F264D1287F68AB8C8D4A92C": {
+    "ancestorIds": [
+     "A6E8B1DFFBF34020B341463A7E793CA9",
+     "AAC335BF3F8C45188E83F4983B08AEC3",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428574",
+    "depth": 3,
+    "description": "Appropriately express one's own emotions, thoughts, and values and identify how they influence behavior.",
+    "id": "1E481EA06F264D1287F68AB8C8D4A92C",
+    "parentId": "A6E8B1DFFBF34020B341463A7E793CA9",
+    "position": 51000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "3.CES.1.1"
+   },
+   "1F82E668BD954DED8C8194D10F62160F": {
+    "ancestorIds": [
+     "13ABE0A8A9674623B6457FF17D8DDB62"
+    ],
+    "asnIdentifier": "S21428315",
+    "depth": 1,
+    "description": "Analyze the origins, structures, and functions of governments to evaluate the impact on citizens and the global society.",
+    "id": "1F82E668BD954DED8C8194D10F62160F",
+    "parentId": "13ABE0A8A9674623B6457FF17D8DDB62",
+    "position": 8000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.7"
+   },
+   "20E770699EE14FC49540D04F7E425BD1": {
+    "ancestorIds": [
+     "E6B298E08BCA4A458B427E967C73DFA7",
+     "B596A373C72449A782FD176C1E42BF94",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428555",
+    "depth": 3,
+    "description": "Identify the factors that make a region unique. For example: Cultural diversity, industry and agriculture, and landforms.",
+    "id": "20E770699EE14FC49540D04F7E425BD1",
+    "parentId": "E6B298E08BCA4A458B427E967C73DFA7",
+    "position": 32000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.G.2.b"
+   },
+   "284B989371FC465E912C6B602CCFB32E": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21428533",
+    "depth": 0,
+    "description": "Third Grade",
+    "id": "284B989371FC465E912C6B602CCFB32E",
+    "parentId": null,
+    "position": 10000
+   },
+   "32F69C380FF24185B94E7FB9E911F545": {
+    "ancestorIds": [
+     "48E80432DF6A4EDD9760603E13A7DFA8",
+     "683CF738D6144D0B8ECB7C88FF537206",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428543",
+    "depth": 3,
+    "description": "Give examples of people, events, and developments that brought important changes to a community or region.",
+    "id": "32F69C380FF24185B94E7FB9E911F545",
+    "parentId": "48E80432DF6A4EDD9760603E13A7DFA8",
+    "position": 20000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.H.2.b"
+   },
+   "37482935764747578478BA869B0D7A45": {
+    "ancestorIds": [
+     "DF55983F418447208DA3ADC4490AE10B",
+     "F3038E1414124CECA9D1733567312A10",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428597",
+    "depth": 3,
+    "description": "Articulate task requirements and identify deadlines when developing a plan to meet a financial goal.",
+    "id": "37482935764747578478BA869B0D7A45",
+    "parentId": "DF55983F418447208DA3ADC4490AE10B",
+    "position": 74000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "3.PFES.2.6"
+   },
+   "40AA30ECBC304C55AFDF757DB73AC153": {
+    "ancestorIds": [
+     "DF16F80D7F91497D8E6C0959501648DD",
+     "AAC335BF3F8C45188E83F4983B08AEC3",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428584",
+    "depth": 3,
+    "description": "Connect knowledge from personal experiences in schools and communities to civic engagement.",
+    "id": "40AA30ECBC304C55AFDF757DB73AC153",
+    "parentId": "DF16F80D7F91497D8E6C0959501648DD",
+    "position": 61000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "3.CES.2.1"
+   },
+   "48E80432DF6A4EDD9760603E13A7DFA8": {
+    "ancestorIds": [
+     "683CF738D6144D0B8ECB7C88FF537206",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428541",
+    "depth": 2,
+    "description": "Identify how people in the past influence the development and interaction of different communities or regions.",
+    "id": "48E80432DF6A4EDD9760603E13A7DFA8",
+    "parentId": "683CF738D6144D0B8ECB7C88FF537206",
+    "position": 18000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "3.H.2"
+   },
+   "498ED64D31E440359EC567410276DC75": {
+    "ancestorIds": [
+     "09E30DCBE5934D38AF71276735C96561",
+     "B596A373C72449A782FD176C1E42BF94",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428549",
+    "depth": 3,
+    "description": "Locate oceans and continents, major countries, bodies of water, mountains, urban areas, the state of Colorado, and neighboring states on maps.",
+    "id": "498ED64D31E440359EC567410276DC75",
+    "parentId": "09E30DCBE5934D38AF71276735C96561",
+    "position": 26000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.G.1.b"
+   },
+   "4FE62E64D1F843B5B485BA9921E74E73": {
+    "ancestorIds": [
+     "B143E32D6EF84774806925E8FF827C17",
+     "683CF738D6144D0B8ECB7C88FF537206",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428537",
+    "depth": 3,
+    "description": "Use a variety of primary sources such as artifacts, pictures, oral histories, and documents, to help determine factual information about historical events.",
+    "id": "4FE62E64D1F843B5B485BA9921E74E73",
+    "parentId": "B143E32D6EF84774806925E8FF827C17",
+    "position": 14000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.H.1.b"
+   },
+   "5084087B16284CB78F70A0C8EB6D7A39": {
+    "ancestorIds": [
+     "13ABE0A8A9674623B6457FF17D8DDB62"
+    ],
+    "asnIdentifier": "S21428312",
+    "depth": 1,
+    "description": "Examine the characteristics of places and regions, and the changing nature among geographic and human interactions.",
+    "id": "5084087B16284CB78F70A0C8EB6D7A39",
+    "parentId": "13ABE0A8A9674623B6457FF17D8DDB62",
+    "position": 5000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.4"
+   },
+   "545E5C43BE9E4295BDCDEE05B1BF7B19": {
+    "ancestorIds": [
+     "DF55983F418447208DA3ADC4490AE10B",
+     "F3038E1414124CECA9D1733567312A10",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428592",
+    "depth": 3,
+    "description": "Use a variety of strategies to achieve a financial goal, such as buying a new toy.",
+    "id": "545E5C43BE9E4295BDCDEE05B1BF7B19",
+    "parentId": "DF55983F418447208DA3ADC4490AE10B",
+    "position": 69000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "3.PFES.2.1"
+   },
+   "546AED9E492647E18EDA91B2F4D8A6A7": {
+    "ancestorIds": [
+     "FEEECB5BD6644EFF846B82F8A1B997D9",
+     "FB86AC37E97D47D3B48F89BA54A807CF",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428561",
+    "depth": 3,
+    "description": "Describe the difference between producers and consumers and explain how they need each other.",
+    "id": "546AED9E492647E18EDA91B2F4D8A6A7",
+    "parentId": "FEEECB5BD6644EFF846B82F8A1B997D9",
+    "position": 38000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.E.1.a"
+   },
+   "566E88367B1544F3A9360537CA7AFD21": {
+    "ancestorIds": [
+     "A6E8B1DFFBF34020B341463A7E793CA9",
+     "AAC335BF3F8C45188E83F4983B08AEC3",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428571",
+    "depth": 3,
+    "description": "Identify important personal rights in a democratic society and how they relate to others' rights.",
+    "id": "566E88367B1544F3A9360537CA7AFD21",
+    "parentId": "A6E8B1DFFBF34020B341463A7E793CA9",
+    "position": 48000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.C.1.b"
+   },
+   "6390C42B7B0141B19C54CB064522F35F": {
+    "ancestorIds": [
+     "DF16F80D7F91497D8E6C0959501648DD",
+     "AAC335BF3F8C45188E83F4983B08AEC3",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428579",
+    "depth": 3,
+    "description": "Explain the origins and structures of local government.",
+    "id": "6390C42B7B0141B19C54CB064522F35F",
+    "parentId": "DF16F80D7F91497D8E6C0959501648DD",
+    "position": 56000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.C.2.a"
+   },
+   "683CF738D6144D0B8ECB7C88FF537206": {
+    "ancestorIds": [
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428534",
+    "depth": 1,
+    "description": "History",
+    "id": "683CF738D6144D0B8ECB7C88FF537206",
+    "parentId": "284B989371FC465E912C6B602CCFB32E",
+    "position": 11000,
+    "statementLabel": "Content Area"
+   },
+   "6AAF5ED52AF0406A9B6DBA440A105203": {
+    "ancestorIds": [
+     "DF16F80D7F91497D8E6C0959501648DD",
+     "AAC335BF3F8C45188E83F4983B08AEC3",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428581",
+    "depth": 3,
+    "description": "Identify and explain a variety of roles leaders, citizens, and others play in local government.",
+    "id": "6AAF5ED52AF0406A9B6DBA440A105203",
+    "parentId": "DF16F80D7F91497D8E6C0959501648DD",
+    "position": 58000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.C.2.c"
+   },
+   "6BB14FC12CBD4091A6FE754CB6CCFAF8": {
+    "ancestorIds": [
+     "DF16F80D7F91497D8E6C0959501648DD",
+     "AAC335BF3F8C45188E83F4983B08AEC3",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428583",
+    "depth": 3,
+    "description": "Discuss the role of elections in choosing specific candidates to represent the public interest in local government.",
+    "id": "6BB14FC12CBD4091A6FE754CB6CCFAF8",
+    "parentId": "DF16F80D7F91497D8E6C0959501648DD",
+    "position": 60000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.C.2.e"
+   },
+   "72322B16197242B3BAD2EEEDFE962C9A": {
+    "ancestorIds": [
+     "E6B298E08BCA4A458B427E967C73DFA7",
+     "B596A373C72449A782FD176C1E42BF94",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428557",
+    "depth": 3,
+    "description": "Characterize regions using different types of features such as physical, political, cultural, urban, and rural attributes.",
+    "id": "72322B16197242B3BAD2EEEDFE962C9A",
+    "parentId": "E6B298E08BCA4A458B427E967C73DFA7",
+    "position": 34000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.G.2.d"
+   },
+   "723841A3068F4EF58E4C5069E4B9FFA4": {
+    "ancestorIds": [
+     "A6E8B1DFFBF34020B341463A7E793CA9",
+     "AAC335BF3F8C45188E83F4983B08AEC3",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428573",
+    "depth": 3,
+    "description": "Restate the view or opinion of others with their reasoning when it is different from one's own.",
+    "id": "723841A3068F4EF58E4C5069E4B9FFA4",
+    "parentId": "A6E8B1DFFBF34020B341463A7E793CA9",
+    "position": 50000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.C.1.d"
+   },
+   "7C604985A6134D34A0A8113BB012EAD4": {
+    "ancestorIds": [
+     "09E30DCBE5934D38AF71276735C96561",
+     "B596A373C72449A782FD176C1E42BF94",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428552",
+    "depth": 3,
+    "description": "Articulate the most effective geographic tools to access information needed for developing spatial thinking.",
+    "id": "7C604985A6134D34A0A8113BB012EAD4",
+    "parentId": "09E30DCBE5934D38AF71276735C96561",
+    "position": 29000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "3.GES.1.1"
+   },
+   "7CDBDEA2FB624C7CAE112E9B908FA0AA": {
+    "ancestorIds": [
+     "DF55983F418447208DA3ADC4490AE10B",
+     "F3038E1414124CECA9D1733567312A10",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428591",
+    "depth": 3,
+    "description": "Model strategies to achieve a personal financial goal using arithmetic operations.",
+    "id": "7CDBDEA2FB624C7CAE112E9B908FA0AA",
+    "parentId": "DF55983F418447208DA3ADC4490AE10B",
+    "position": 68000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.PF.1.e"
+   },
+   "7E0D2E2CA1AB472F90F66AE37A58B150": {
+    "ancestorIds": [
+     "B143E32D6EF84774806925E8FF827C17",
+     "683CF738D6144D0B8ECB7C88FF537206",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428539",
+    "depth": 3,
+    "description": "Articulate the most effective kinds of historical sources to access information needed for understanding historic events.",
+    "id": "7E0D2E2CA1AB472F90F66AE37A58B150",
+    "parentId": "B143E32D6EF84774806925E8FF827C17",
+    "position": 16000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "3.HES.1.1"
+   },
+   "7E45F2D5EF854CDDA4CA86DCBC534242": {
+    "ancestorIds": [
+     "FEEECB5BD6644EFF846B82F8A1B997D9",
+     "FB86AC37E97D47D3B48F89BA54A807CF",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428565",
+    "depth": 3,
+    "description": "Cite evidence to show how trade benefits individuals, businesses, and communities, and increases interdependency.",
+    "id": "7E45F2D5EF854CDDA4CA86DCBC534242",
+    "parentId": "FEEECB5BD6644EFF846B82F8A1B997D9",
+    "position": 42000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.E.1.e"
+   },
+   "81268849AE614D85BA63C1A685EC4C45": {
+    "ancestorIds": [
+     "48E80432DF6A4EDD9760603E13A7DFA8",
+     "683CF738D6144D0B8ECB7C88FF537206",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428545",
+    "depth": 3,
+    "description": "Recognize how members of a community rely on each other and interact to influence the development of their communities.",
+    "id": "81268849AE614D85BA63C1A685EC4C45",
+    "parentId": "48E80432DF6A4EDD9760603E13A7DFA8",
+    "position": 22000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "3.HES.2.1"
+   },
+   "84D41D9628EF4AD3A33849236D44B7DD": {
+    "ancestorIds": [
+     "FEEECB5BD6644EFF846B82F8A1B997D9",
+     "FB86AC37E97D47D3B48F89BA54A807CF",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428563",
+    "depth": 3,
+    "description": "Describe how the exchange of goods and services between businesses and consumers affects all parties.",
+    "id": "84D41D9628EF4AD3A33849236D44B7DD",
+    "parentId": "FEEECB5BD6644EFF846B82F8A1B997D9",
+    "position": 40000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.E.1.c"
+   },
+   "88D4A4B43424445692FF8C7F8D6F14C7": {
+    "ancestorIds": [
+     "E6B298E08BCA4A458B427E967C73DFA7",
+     "B596A373C72449A782FD176C1E42BF94",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428554",
+    "depth": 3,
+    "description": "Observe and describe the physical, cultural, and human-made characteristics of a local region. For example: The Eastern Plains, San Luis Valley, Pikes Peak, Northwest, Front Range, South Central, Southwest, and Western Slope.",
+    "id": "88D4A4B43424445692FF8C7F8D6F14C7",
+    "parentId": "E6B298E08BCA4A458B427E967C73DFA7",
+    "position": 31000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.G.2.a"
+   },
+   "97E405E7D2A64AA9A21DEBDF3911F605": {
+    "ancestorIds": [
+     "A6E8B1DFFBF34020B341463A7E793CA9",
+     "AAC335BF3F8C45188E83F4983B08AEC3",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428575",
+    "depth": 3,
+    "description": "Regulate reactions to differing perspectives.",
+    "id": "97E405E7D2A64AA9A21DEBDF3911F605",
+    "parentId": "A6E8B1DFFBF34020B341463A7E793CA9",
+    "position": 52000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "3.CES.1.2"
+   },
+   "9C6097274E7A4A1AA9F656747C30818D": {
+    "ancestorIds": [
+     "13ABE0A8A9674623B6457FF17D8DDB62"
+    ],
+    "asnIdentifier": "S21428311",
+    "depth": 1,
+    "description": "Apply geographic representations and perspectives to analyze human movement, spatial patterns, systems, and the connections and relationships among them.",
+    "id": "9C6097274E7A4A1AA9F656747C30818D",
+    "parentId": "13ABE0A8A9674623B6457FF17D8DDB62",
+    "position": 4000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.3"
+   },
+   "9DB13572C3BA46F2ADA3A86799269544": {
+    "ancestorIds": [
+     "13ABE0A8A9674623B6457FF17D8DDB62"
+    ],
+    "asnIdentifier": "S21428309",
+    "depth": 1,
+    "description": "Apply the process of inquiry to examine and analyze how historical knowledge is viewed, constructed, and interpreted.",
+    "id": "9DB13572C3BA46F2ADA3A86799269544",
+    "parentId": "13ABE0A8A9674623B6457FF17D8DDB62",
+    "position": 2000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.1"
+   },
+   "A07B650DDF884632A002C62A47DD7EAE": {
+    "ancestorIds": [
+     "13ABE0A8A9674623B6457FF17D8DDB62"
+    ],
+    "asnIdentifier": "S21428316",
+    "depth": 1,
+    "description": "Apply economic reasoning skills to make informed personal financial decisions.",
+    "id": "A07B650DDF884632A002C62A47DD7EAE",
+    "parentId": "13ABE0A8A9674623B6457FF17D8DDB62",
+    "position": 9000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.8"
+   },
+   "A6E8B1DFFBF34020B341463A7E793CA9": {
+    "ancestorIds": [
+     "AAC335BF3F8C45188E83F4983B08AEC3",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428569",
+    "depth": 2,
+    "description": "Respect the views and rights of others.",
+    "id": "A6E8B1DFFBF34020B341463A7E793CA9",
+    "parentId": "AAC335BF3F8C45188E83F4983B08AEC3",
+    "position": 46000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "3.C.1"
+   },
+   "AAC335BF3F8C45188E83F4983B08AEC3": {
+    "ancestorIds": [
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428568",
+    "depth": 1,
+    "description": "Civics",
+    "id": "AAC335BF3F8C45188E83F4983B08AEC3",
+    "parentId": "284B989371FC465E912C6B602CCFB32E",
+    "position": 45000,
+    "statementLabel": "Content Area"
+   },
+   "AAFFD965544D4C87885FC84E3D09A2C3": {
+    "ancestorIds": [
+     "DF16F80D7F91497D8E6C0959501648DD",
+     "AAC335BF3F8C45188E83F4983B08AEC3",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428582",
+    "depth": 3,
+    "description": "Describe how local government provides opportunities for people to exercise their rights and initiate change.",
+    "id": "AAFFD965544D4C87885FC84E3D09A2C3",
+    "parentId": "DF16F80D7F91497D8E6C0959501648DD",
+    "position": 59000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.C.2.d"
+   },
+   "ABDA1B944E614AB68180A59E1F1E85EE": {
+    "ancestorIds": [
+     "DF55983F418447208DA3ADC4490AE10B",
+     "F3038E1414124CECA9D1733567312A10",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428587",
+    "depth": 3,
+    "description": "Give examples of short-term spending and savings goals.",
+    "id": "ABDA1B944E614AB68180A59E1F1E85EE",
+    "parentId": "DF55983F418447208DA3ADC4490AE10B",
+    "position": 64000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.PF.1.a"
+   },
+   "AF1B4E351C784449BE8A14084261E42A": {
+    "ancestorIds": [
+     "DF55983F418447208DA3ADC4490AE10B",
+     "F3038E1414124CECA9D1733567312A10",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428596",
+    "depth": 3,
+    "description": "Demonstrate an understanding of cause and effect related to personal decisions they make regarding reaching a financial goal.",
+    "id": "AF1B4E351C784449BE8A14084261E42A",
+    "parentId": "DF55983F418447208DA3ADC4490AE10B",
+    "position": 73000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "3.PFES.2.5"
+   },
+   "AF699E2C0BAC406A9392A2551BC37038": {
+    "ancestorIds": [
+     "FEEECB5BD6644EFF846B82F8A1B997D9",
+     "FB86AC37E97D47D3B48F89BA54A807CF",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428564",
+    "depth": 3,
+    "description": "Recognize that different currencies exist and explain the functions of money. For example: Medium of exchange, store of value, and measure of value.",
+    "id": "AF699E2C0BAC406A9392A2551BC37038",
+    "parentId": "FEEECB5BD6644EFF846B82F8A1B997D9",
+    "position": 41000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.E.1.d"
+   },
+   "B143E32D6EF84774806925E8FF827C17": {
+    "ancestorIds": [
+     "683CF738D6144D0B8ECB7C88FF537206",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428535",
+    "depth": 2,
+    "description": "Compare primary and secondary sources when explaining the past.",
+    "id": "B143E32D6EF84774806925E8FF827C17",
+    "parentId": "683CF738D6144D0B8ECB7C88FF537206",
+    "position": 12000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "3.H.1"
+   },
+   "B596A373C72449A782FD176C1E42BF94": {
+    "ancestorIds": [
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428546",
+    "depth": 1,
+    "description": "Geography",
+    "id": "B596A373C72449A782FD176C1E42BF94",
+    "parentId": "284B989371FC465E912C6B602CCFB32E",
+    "position": 23000,
+    "statementLabel": "Content Area"
+   },
+   "BA2C396DECB147FABE80A9A4F656B404": {
+    "ancestorIds": [
+     "DF55983F418447208DA3ADC4490AE10B",
+     "F3038E1414124CECA9D1733567312A10",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428594",
+    "depth": 3,
+    "description": "Set goals and develop strategies to remain focused on learning and reaching financial goals.",
+    "id": "BA2C396DECB147FABE80A9A4F656B404",
+    "parentId": "DF55983F418447208DA3ADC4490AE10B",
+    "position": 71000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "3.PFES.2.3"
+   },
+   "C6F4B4C66D6844B380C6588DBCD5DB74": {
+    "ancestorIds": [
+     "13ABE0A8A9674623B6457FF17D8DDB62"
+    ],
+    "asnIdentifier": "S21428314",
+    "depth": 1,
+    "description": "Express an understanding of how civic participation affects policy by applying the rights and responsibilities of a citizen.",
+    "id": "C6F4B4C66D6844B380C6588DBCD5DB74",
+    "parentId": "13ABE0A8A9674623B6457FF17D8DDB62",
+    "position": 7000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.6"
+   },
+   "CCB9214A5D554D879448B6185AD3B35D": {
+    "ancestorIds": [
+     "09E30DCBE5934D38AF71276735C96561",
+     "B596A373C72449A782FD176C1E42BF94",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428551",
+    "depth": 3,
+    "description": "Identify geography-based problems and examine the ways that people have tried to solve them.",
+    "id": "CCB9214A5D554D879448B6185AD3B35D",
+    "parentId": "09E30DCBE5934D38AF71276735C96561",
+    "position": 28000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.G.1.d"
+   },
+   "D0EFA2D6C3F441B48BF9F18A99044983": {
+    "ancestorIds": [
+     "A6E8B1DFFBF34020B341463A7E793CA9",
+     "AAC335BF3F8C45188E83F4983B08AEC3",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428577",
+    "depth": 3,
+    "description": "State a position and reflect on possible objections to assumptions and implications of the position.",
+    "id": "D0EFA2D6C3F441B48BF9F18A99044983",
+    "parentId": "A6E8B1DFFBF34020B341463A7E793CA9",
+    "position": 54000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "3.CES.1.4"
+   },
+   "D3B21B780CCC435F81B1AE01858CDF1C": {
+    "ancestorIds": [
+     "A6E8B1DFFBF34020B341463A7E793CA9",
+     "AAC335BF3F8C45188E83F4983B08AEC3",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428570",
+    "depth": 3,
+    "description": "Identify and apply the elements of civil discourse. For example: Listening with respect, speaking in a respectful manner, and restating an opposing viewpoint or opinion.",
+    "id": "D3B21B780CCC435F81B1AE01858CDF1C",
+    "parentId": "A6E8B1DFFBF34020B341463A7E793CA9",
+    "position": 47000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.C.1.a"
+   },
+   "D56320AE42C54894AED99F4375ADCEF3": {
+    "ancestorIds": [
+     "FEEECB5BD6644EFF846B82F8A1B997D9",
+     "FB86AC37E97D47D3B48F89BA54A807CF",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428566",
+    "depth": 3,
+    "description": "Recognize how members of a community rely on each other through exchanging goods and services, considering personal exchange behaviors.",
+    "id": "D56320AE42C54894AED99F4375ADCEF3",
+    "parentId": "FEEECB5BD6644EFF846B82F8A1B997D9",
+    "position": 43000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "3.EES.1.1"
+   },
+   "D67461F2FBFB40D6A980A34E4405E64C": {
+    "ancestorIds": [
+     "DF55983F418447208DA3ADC4490AE10B",
+     "F3038E1414124CECA9D1733567312A10",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428589",
+    "depth": 3,
+    "description": "Differentiate the role of income and expenses when creating a budget.",
+    "id": "D67461F2FBFB40D6A980A34E4405E64C",
+    "parentId": "DF55983F418447208DA3ADC4490AE10B",
+    "position": 66000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.PF.1.c"
+   },
+   "D7D61EB0C5894DBA8B1B0A811498E250": {
+    "ancestorIds": [
+     "13ABE0A8A9674623B6457FF17D8DDB62"
+    ],
+    "asnIdentifier": "S21428310",
+    "depth": 1,
+    "description": "Analyze historical time periods and patterns of continuity and change, through multiple perspectives, within and among cultures and societies.",
+    "id": "D7D61EB0C5894DBA8B1B0A811498E250",
+    "parentId": "13ABE0A8A9674623B6457FF17D8DDB62",
+    "position": 3000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "PG.2"
+   },
+   "DA5A925390694D28A3E267940C0EB767": {
+    "ancestorIds": [
+     "A6E8B1DFFBF34020B341463A7E793CA9",
+     "AAC335BF3F8C45188E83F4983B08AEC3",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428576",
+    "depth": 3,
+    "description": "Identify and explain a different perspective when exploring events or ideas.",
+    "id": "DA5A925390694D28A3E267940C0EB767",
+    "parentId": "A6E8B1DFFBF34020B341463A7E793CA9",
+    "position": 53000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "3.CES.1.3"
+   },
+   "DE39236BFF6E4329BAB1E17FFFDAA71E": {
+    "ancestorIds": [
+     "A6E8B1DFFBF34020B341463A7E793CA9",
+     "AAC335BF3F8C45188E83F4983B08AEC3",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428572",
+    "depth": 3,
+    "description": "Give examples of the relationship between rights and responsibilities.",
+    "id": "DE39236BFF6E4329BAB1E17FFFDAA71E",
+    "parentId": "A6E8B1DFFBF34020B341463A7E793CA9",
+    "position": 49000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.C.1.c"
+   },
+   "DF16F80D7F91497D8E6C0959501648DD": {
+    "ancestorIds": [
+     "AAC335BF3F8C45188E83F4983B08AEC3",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428578",
+    "depth": 2,
+    "description": "Describe the origins, structures, and functions of local government.",
+    "id": "DF16F80D7F91497D8E6C0959501648DD",
+    "parentId": "AAC335BF3F8C45188E83F4983B08AEC3",
+    "position": 55000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "3.C.2"
+   },
+   "DF55983F418447208DA3ADC4490AE10B": {
+    "ancestorIds": [
+     "F3038E1414124CECA9D1733567312A10",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428586",
+    "depth": 2,
+    "description": "Create a plan to meet a financial goal.",
+    "id": "DF55983F418447208DA3ADC4490AE10B",
+    "parentId": "F3038E1414124CECA9D1733567312A10",
+    "position": 63000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "3.PF.1"
+   },
+   "E2CE872C9F0E422B9D18465B26711D65": {
+    "ancestorIds": [
+     "E6B298E08BCA4A458B427E967C73DFA7",
+     "B596A373C72449A782FD176C1E42BF94",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428556",
+    "depth": 3,
+    "description": "Give examples of places that are similar and different from a local region.",
+    "id": "E2CE872C9F0E422B9D18465B26711D65",
+    "parentId": "E6B298E08BCA4A458B427E967C73DFA7",
+    "position": 33000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.G.2.c"
+   },
+   "E59AE86E749A4C9BA5E2F2D096B0095A": {
+    "ancestorIds": [
+     "FEEECB5BD6644EFF846B82F8A1B997D9",
+     "FB86AC37E97D47D3B48F89BA54A807CF",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428562",
+    "depth": 3,
+    "description": "Describe and give examples of forms of exchange. For example: Monetary exchange and barter.",
+    "id": "E59AE86E749A4C9BA5E2F2D096B0095A",
+    "parentId": "FEEECB5BD6644EFF846B82F8A1B997D9",
+    "position": 39000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.E.1.b"
+   },
+   "E6B298E08BCA4A458B427E967C73DFA7": {
+    "ancestorIds": [
+     "B596A373C72449A782FD176C1E42BF94",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428553",
+    "depth": 2,
+    "description": "Define the concept of region through an examination of similarities and differences in places and communities.",
+    "id": "E6B298E08BCA4A458B427E967C73DFA7",
+    "parentId": "B596A373C72449A782FD176C1E42BF94",
+    "position": 30000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "3.G.2"
+   },
+   "F1CED794504740C99D5221C88FB7EF7A": {
+    "ancestorIds": [
+     "DF16F80D7F91497D8E6C0959501648DD",
+     "AAC335BF3F8C45188E83F4983B08AEC3",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428580",
+    "depth": 3,
+    "description": "Explain the services local governments provide and how those services are funded.",
+    "id": "F1CED794504740C99D5221C88FB7EF7A",
+    "parentId": "DF16F80D7F91497D8E6C0959501648DD",
+    "position": 57000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.C.2.b"
+   },
+   "F268390A67B6449295286A84A8DB562D": {
+    "ancestorIds": [
+     "B143E32D6EF84774806925E8FF827C17",
+     "683CF738D6144D0B8ECB7C88FF537206",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428538",
+    "depth": 3,
+    "description": "Compare information from multiple sources recounting the same event.",
+    "id": "F268390A67B6449295286A84A8DB562D",
+    "parentId": "B143E32D6EF84774806925E8FF827C17",
+    "position": 15000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.H.1.c"
+   },
+   "F3038E1414124CECA9D1733567312A10": {
+    "ancestorIds": [
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428585",
+    "depth": 1,
+    "description": "Personal Financial Literacy",
+    "id": "F3038E1414124CECA9D1733567312A10",
+    "parentId": "284B989371FC465E912C6B602CCFB32E",
+    "position": 62000,
+    "statementLabel": "Content Area"
+   },
+   "F4AD5427EE1949C488C4E0E1FE468E33": {
+    "ancestorIds": [
+     "B143E32D6EF84774806925E8FF827C17",
+     "683CF738D6144D0B8ECB7C88FF537206",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428540",
+    "depth": 3,
+    "description": "Ask questions to develop further understanding of reliability of various kinds of historical sources.",
+    "id": "F4AD5427EE1949C488C4E0E1FE468E33",
+    "parentId": "B143E32D6EF84774806925E8FF827C17",
+    "position": 17000,
+    "statementLabel": "Essential Skill",
+    "statementNotation": "3.HES.1.2"
+   },
+   "FA99DF1A7C264847A6A083265D4C6B64": {
+    "ancestorIds": [
+     "48E80432DF6A4EDD9760603E13A7DFA8",
+     "683CF738D6144D0B8ECB7C88FF537206",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428544",
+    "depth": 3,
+    "description": "Describe the history, interaction, and contribution of various peoples and cultures, including African American, Latino, Asian American, Hawaiian/Pacific Islander, Indigenous Peoples, LGBTQ, and religious minorities that have lived in or migrated to a community or region and how that migration has influenced change and development.",
+    "id": "FA99DF1A7C264847A6A083265D4C6B64",
+    "parentId": "48E80432DF6A4EDD9760603E13A7DFA8",
+    "position": 21000,
+    "statementLabel": "Progress Indicator",
+    "statementNotation": "3.H.2.c"
+   },
+   "FB86AC37E97D47D3B48F89BA54A807CF": {
+    "ancestorIds": [
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428559",
+    "depth": 1,
+    "description": "Economics",
+    "id": "FB86AC37E97D47D3B48F89BA54A807CF",
+    "parentId": "284B989371FC465E912C6B602CCFB32E",
+    "position": 36000,
+    "statementLabel": "Content Area"
+   },
+   "FEEECB5BD6644EFF846B82F8A1B997D9": {
+    "ancestorIds": [
+     "FB86AC37E97D47D3B48F89BA54A807CF",
+     "284B989371FC465E912C6B602CCFB32E"
+    ],
+    "asnIdentifier": "S21428560",
+    "depth": 2,
+    "description": "Explain how producers and consumers exchange goods and services in different ways.",
+    "id": "FEEECB5BD6644EFF846B82F8A1B997D9",
+    "parentId": "FB86AC37E97D47D3B48F89BA54A807CF",
+    "position": 37000,
+    "statementLabel": "Learning Expectation",
+    "statementNotation": "3.E.1"
+   }
+  },
+  "subject": "Social Studies (2022-)",
+  "title": "Grade 3"
+ }
+}

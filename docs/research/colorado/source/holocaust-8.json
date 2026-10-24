@@ -1,0 +1,92 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D21371896",
+   "id": "D21371896",
+   "publicationStatus": "Published",
+   "sourceURL": "http://www.cde.state.co.us/standardsandinstruction/hgstandards",
+   "title": "Colorado Academic Standards: Holocaust and Genocide Standards",
+   "valid": "2023"
+  },
+  "educationLevels": [
+   "08"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D21371896_grade-08",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": "",
+   "rightsHolder": "D2L Corporation",
+   "title": ""
+  },
+  "normalizedSubject": "Social Studies",
+  "standards": {
+   "0922AF4622104705BDD19EB9F4E03FDC": {
+    "ancestorIds": [
+     "8E0646E53BCB49D0B13BD344504902E9"
+    ],
+    "asnIdentifier": "S21371913",
+    "depth": 1,
+    "description": "Analyze patterns of conflict and cooperation that resulted from human migration and the economic, political, ethnic, and social implications of those interactions.",
+    "id": "0922AF4622104705BDD19EB9F4E03FDC",
+    "parentId": "8E0646E53BCB49D0B13BD344504902E9",
+    "position": 3000,
+    "statementLabel": "Standard",
+    "statementNotation": "8.G.GLE.2.EOb"
+   },
+   "38AD1EAC655E4735907218F65458FBC6": {
+    "ancestorIds": [
+     "8E0646E53BCB49D0B13BD344504902E9"
+    ],
+    "asnIdentifier": "S21371914",
+    "depth": 1,
+    "description": "Economic thinkers understand that economic actions have both direct and indirect effects on people living in poverty, children, the disabled, ethnic, religious, and cultural groups who may not have a voice in decision-making.",
+    "id": "38AD1EAC655E4735907218F65458FBC6",
+    "parentId": "8E0646E53BCB49D0B13BD344504902E9",
+    "position": 4000,
+    "statementLabel": "Standard",
+    "statementNotation": "8.E.GLE.1.5"
+   },
+   "8E0646E53BCB49D0B13BD344504902E9": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21371911",
+    "depth": 0,
+    "description": "Grade 8",
+    "id": "8E0646E53BCB49D0B13BD344504902E9",
+    "parentId": null,
+    "position": 1000
+   },
+   "9491EFFE12E948F9A80AB537D456F468": {
+    "ancestorIds": [
+     "8E0646E53BCB49D0B13BD344504902E9"
+    ],
+    "asnIdentifier": "S21371915",
+    "depth": 1,
+    "description": "Discuss the tensions between individual rights and liberties with state, tribal, and national laws.",
+    "id": "9491EFFE12E948F9A80AB537D456F468",
+    "parentId": "8E0646E53BCB49D0B13BD344504902E9",
+    "position": 5000,
+    "statementLabel": "Standard",
+    "statementNotation": "8.C.GLE.2.EOe"
+   },
+   "C5A2ACAE787346EFAE92CA64557D60BA": {
+    "ancestorIds": [
+     "8E0646E53BCB49D0B13BD344504902E9"
+    ],
+    "asnIdentifier": "S21371912",
+    "depth": 1,
+    "description": "Geographic thinkers respond to historical and spatial literature, including diverse narratives, to understand issues from a spatial perspective.",
+    "id": "C5A2ACAE787346EFAE92CA64557D60BA",
+    "parentId": "8E0646E53BCB49D0B13BD344504902E9",
+    "position": 2000,
+    "statementLabel": "Standard",
+    "statementNotation": "8.G.GLE.1.4"
+   }
+  },
+  "subject": "Social Studies (2022-)",
+  "title": "Holocaust and Genocide: Grade 8"
+ }
+}
