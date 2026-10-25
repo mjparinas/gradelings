@@ -1430,6 +1430,115 @@ export const lessons: GradeLessons = {
     ["Subtract the earlier year from the later year.", "1825 − 1816"],
     "9 years",
   ),
+  "social/va-g4-regions": lesson(
+    ["Virginia has five regions: Coastal Plain (Tidewater), Piedmont, Blue Ridge, Valley and Ridge, and Appalachian Plateau.", "The Fall Line, where rivers drop in waterfalls, separates the Coastal Plain from the Piedmont.", "Major rivers include the James, York, Rappahannock and Potomac."],
+    "Which region is in the east, along the coast?",
+    ["Look for low, flat land by the water.", "It is called the Coastal Plain, or Tidewater."],
+    "the Coastal Plain",
+  ),
+  "social/va-g4-first-peoples": lesson(
+    ["People have lived in Virginia for thousands of years.", "Algonquian, Siouan and Iroquoian language groups lived in different regions.", "Virginia recognizes eleven tribes today, including the Pamunkey and the Mattaponi."],
+    "Which language group lived on the Coastal Plain, including the Powhatan?",
+    ["The Powhatan lived near the bay.", "They spoke an Algonquian language."],
+    "Algonquian",
+  ),
+  "social/va-g4-jamestown": lesson(
+    ["In 1607 the Virginia Company sent settlers to Jamestown, the first permanent English settlement in North America.", "Settlers faced hunger and disease. Tobacco became a cash crop.", "The first representative assembly met in 1619, and the first Africans arrived that year, beginning slavery in Virginia."],
+    "Which year was Jamestown founded?",
+    ["It was early in the 1600s.", "The ships arrived in 1607."],
+    "1607",
+  ),
+  "social/va-g4-colonial-virginia": lesson(
+    ["Colonial Virginia grew tobacco on large plantations that depended on enslaved Africans.", "Williamsburg became the capital in 1699.", "Most people farmed. Trade went by river to England."],
+    "Why were rivers important in colonial Virginia?",
+    ["There were few roads.", "Ships carried tobacco along the rivers."],
+    "They were used to ship goods.",
+  ),
+  "social/va-g4-revolution": lesson(
+    ["Virginians were leaders of the American Revolution.", "Thomas Jefferson wrote the Declaration of Independence. Patrick Henry said, “Give me liberty or give me death!”", "The war ended at Yorktown, Virginia, in 1781."],
+    "Where did the last major battle of the Revolution take place?",
+    ["It was in Virginia.", "Cornwallis surrendered there in 1781."],
+    "Yorktown",
+  ),
+  "social/va-g4-new-nation": lesson(
+    ["After the Revolution, the capital moved from Williamsburg to Richmond.", "James Madison, the Father of the Constitution, was a Virginian.", "Four of the first five presidents came from Virginia."],
+    "Who is called the Father of the Constitution?",
+    ["He was from Virginia.", "He became the fourth president."],
+    "James Madison",
+  ),
+  "social/va-g4-civil-war": lesson(
+    ["Virginia left the Union in 1861 and Richmond became the Confederate capital.", "West Virginia split off and became a state in 1863.", "Many battles were fought in Virginia, and the war ended at Appomattox in 1865."],
+    "Where did the Civil War end in 1865?",
+    ["Lee surrendered to Grant.", "It was Appomattox Court House, Virginia."],
+    "Appomattox Court House",
+  ),
+  "social/va-g4-reconstruction": lesson(
+    ["After the war, the 13th Amendment ended slavery.", "During Reconstruction, freed people built schools and churches, and some held office.", "Later, Jim Crow laws kept people segregated and kept many from voting."],
+    "Which amendment ended slavery?",
+    ["It came right after the Civil War.", "It was the 13th."],
+    "the 13th Amendment",
+  ),
+  "social/va-g4-modern-virginia": lesson(
+    ["In the 1900s, Virginia changed from farms to cities and new industries.", "Massive Resistance fought school integration, but students like Barbara Johns helped end segregation.", "L. Douglas Wilder became the nation's first elected African American governor in 1989."],
+    "Who was the first elected African American governor in the United States?",
+    ["He was elected in Virginia in 1989.", "His name is L. Douglas Wilder."],
+    "L. Douglas Wilder",
+  ),
+  "social/va-g4-virginia-today": lesson(
+    ["Virginia's government has three branches, with a governor and a General Assembly.", "Its economy includes farming, shipbuilding, technology, government work and tourism.", "Richmond is the capital."],
+    "Which branch makes Virginia's laws?",
+    ["It is called the General Assembly.", "Making laws is the legislative branch."],
+    "the legislative branch (the General Assembly)",
+  ),
+  "social/va-g4-timeline": lesson(
+    ["A timeline shows events in the order they happened.", "Earlier years go first: 1607 Jamestown, 1776 Declaration, 1781 Yorktown, 1865 Appomattox.", "To compare dates, find the smaller year: it came first."],
+    "Which came first: Yorktown or Jamestown?",
+    ["Jamestown was 1607. Yorktown was 1781.", "1607 is earlier."],
+    "Jamestown",
+  ),
+  // Missouri (us-mo)
+  "social/ca-g5-thirteen-colonies": lesson(
+    ["Jamestown, Virginia (1607) was the first lasting English colony.", "New England's rocky soil and long winters led to fishing, shipbuilding and trade. Southern Colonies like Georgia grew cash crops.", "Colonies grew along rivers and harbours so boats could carry goods. Rhode Island allowed religious freedom."],
+    "Why did many colonies grow along rivers and harbours?",
+    ["There were few roads.", "Boats could carry goods and people."],
+    "Boats could carry goods and people.",
+  ),
+  "social/ca-g5-slavery-and-resistance": lesson(
+    ["The transatlantic slave trade forced millions of African people across the ocean, breaking apart families.", "The Declaration said all men are created equal, yet slavery was legal in all 13 colonies.", "Enslaved people kept cultures alive with music, stories, faith and family. Gradual abolition ended slavery step by step."],
+    "What did gradual abolition mean?",
+    ["Gradual means little by little.", "Slavery was ended step by step over years."],
+    "Slavery was ended step by step over years.",
+  ),
+  "social/ca-g5-home-front": lesson(
+    ["During the Revolution, men were away and goods were scarce. Soldiers at Valley Forge lacked food, clothing and shoes.", "Profiteering means charging unfair prices to make money from a war.", "After 1776, each state wrote a constitution. The Northwest Ordinance (1787) let territories become equal states."],
+    "What did the Northwest Ordinance say territories could become?",
+    ["It planned for land west of the 13 states.", "New areas could join as equals."],
+    "states equal to the original 13",
+  ),
+  "social/ca-g5-american-creed": lesson(
+    ["The American creed is a set of shared ideals, like liberty and equality.", "“The Star-Spangled Banner” (“O say can you see”) became the national anthem in 1931.", "“My Country, 'Tis of Thee” says “let freedom ring”. “America the Beautiful” was inspired by Pikes Peak."],
+    "Which song begins “O say can you see”?",
+    ["It is the national anthem.", "It was written about a flag during the War of 1812."],
+    "“The Star-Spangled Banner”",
+  ),
+  "social/or-g5-timeline": lesson(
+    ["Find each event's year, then put the smallest year first.", "Anchor dates: Columbus 1492, St. Augustine 1565, Jamestown 1607, Declaration 1776, Constitution 1787.", "Causes come before effects: the Stamp Act came before the war."],
+    "Which happened first: the Stamp Act or the Battles of Lexington and Concord?",
+    ["The Stamp Act was in 1765.", "Lexington and Concord were in 1775."],
+    "the Stamp Act",
+  ),
+  "social/mo-g4-explorers": lesson(
+    ["Columbus sailed for Spain in 1492. Henry Hudson explored for the Dutch and the English.", "Lewis and Clark explored the Louisiana Purchase to the Pacific; Sacagawea, a Shoshone woman, was their interpreter and guide.", "Colonists and nations sometimes cooperated through trade and alliances."],
+    "How did Sacagawea help Lewis and Clark?",
+    ["She knew the Shoshone language and the land.", "She translated and guided them."],
+    "as an interpreter and guide",
+  ),
+  "social/mo-g4-first-americans": lesson(
+    ["Many scientists think the first people came to the Americas from Asia more than 15,000 years ago.", "Native nations lived in different ways in each region, using the land, plants and animals around them.", "Contact with Europeans brought trade, new animals like horses, and diseases that harmed many people. Native nations govern themselves today."],
+    "Why did nations in different regions build different kinds of homes?",
+    ["Each region has different materials and weather.", "People used what their land gave them."],
+    "they used the materials and climate of their region",
+  ),
 
   // North Carolina's units (us-nc).
   "social/nc-g4-regions": lesson(

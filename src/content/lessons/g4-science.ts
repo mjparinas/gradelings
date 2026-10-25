@@ -686,6 +686,49 @@ export const lessons: GradeLessons = {
     ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
     "the bare hillside",
   ),
+  "science/va-g4-seasons-moon": lesson(
+    ["The seasons repeat every year: spring, summer, fall, winter.", "Days have the most daylight in summer and the least in winter, around December.", "The Moon's main phases repeat about every month: new, first quarter, full, third quarter."],
+    "Which main phase comes after the full moon?",
+    ["Order: new → first quarter → full → third quarter.", "After the full moon comes the third quarter."],
+    "third quarter moon",
+  ),
+  "science/va-g4-ocean": lesson(
+    ["The ocean floor has a continental shelf, a steep slope and a deep, flat abyssal plain.", "Tides rise and fall about twice a day, pulled by the moon.", "Estuaries, like the Chesapeake Bay, mix fresh river water with salt water."],
+    "What is an estuary?",
+    ["Rivers flow into the sea.", "Fresh water mixes with salt water."],
+    "where fresh river water mixes with salt water",
+  ),
+  "science/va-g4-virginia-resources": lesson(
+    ["Virginia's natural resources include forests, water, soil, wildlife and minerals.", "Some energy, like solar and wind, is renewable. Coal and natural gas are not.", "Using resources wisely keeps them for the future."],
+    "Is solar power renewable or nonrenewable?",
+    ["Ask: will it run out?", "The sun keeps shining every day."],
+    "renewable",
+  ),
+  // Missouri (us-mo)
+  "science/mb-speed-and-motion": lesson(
+    ["Speed is how far something travels in a certain time.", "Things keep doing what they are doing until a force acts on them.", "Friction slows things down. Rough grass has more friction than smooth ice."],
+    "A runner goes 10 km in one hour. A walker goes 5 km. Who is faster?",
+    ["Both took one hour.", "10 km is farther than 5 km."],
+    "the runner",
+  ),
+  "science/mb-friction-5": lesson(
+    ["Friction is a force from surfaces rubbing. It slows things and makes heat.", "Smooth or oiled surfaces reduce friction, like wax on sled runners.", "Rough surfaces add friction, like sand on ice.", "Simple machines make work easier by changing a force's size or direction. An axe blade is a wedge."],
+    "Why do people put oil on a bike chain?",
+    ["Oil makes the parts slide past each other smoothly.", "That means less rubbing."],
+    "to reduce friction",
+  ),
+  "science/mo-g4-rocks-erosion": lesson(
+    ["Weathering breaks rock. Erosion moves it. Running water moves the most.", "Glaciers scrape and carry rock. Roots growing in cracks can split rock.", "Over a very long time, erosion can carve deep canyons.", "Plants and their roots slow erosion on a hillside."],
+    "Which hillside erodes faster in heavy rain: a bare one or a grassy one?",
+    ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
+    "the bare hillside",
+  ),
+  "science/mo-g4-earth-hazards": lesson(
+    ["Many earthquakes and volcanoes happen along the edges of Earth's plates.", "The New Madrid Seismic Zone in southeast Missouri has had strong earthquakes, so Missouri schools practice too.", "During an earthquake: drop, cover and hold on.", "Floods and tornadoes are hazards in Missouri; people prepare with warnings and plans."],
+    "The ground starts shaking at school. What should you do?",
+    ["Get low so you don't fall.", "Get under a desk and hold on until it stops."],
+    "drop, cover and hold on",
+  ),
 
   // North Carolina's units (us-nc).
   "science/pe-magnets-static-3": lesson(

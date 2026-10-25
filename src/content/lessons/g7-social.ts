@@ -1233,6 +1233,61 @@ export const lessons: GradeLessons = {
     ["Ethiopia kept its independence.", "The battle was at Adwa."],
     "Adwa",
   ),
+  "social/az-g8-economy": lesson(
+    ["When the price of a good rises, the quantity demanded usually falls.", "Inflation is when prices across the economy keep rising; unemployment is people who want jobs but can’t find them.", "The Federal Reserve can slow inflation by raising interest rates. The US has a mixed economy."],
+    "What can the Federal Reserve do to slow inflation?",
+    ["Inflation means prices keep rising.", "Higher interest rates make borrowing cost more.", "People spend less, so price rises slow."],
+    "raise interest rates",
+  ),
+  "social/ca-g9-elections": lesson(
+    ["General elections are in November. California uses a top-two primary and mail ballots.", "House seats follow population: California sends 52 members.", "Debates let voters compare ideas. Judge campaign ads by checking claims against independent sources."],
+    "How can a voter judge a campaign ad?",
+    ["Ads are made to persuade.", "Check their claims against reliable, independent sources."],
+    "Check its claims against reliable, independent sources",
+  ),
+  "social/ca-g9-foundations": lesson(
+    ["American government has roots in Greek democracy, the Roman Republic (elected representatives), English rights and Enlightenment ideas.", "Popular sovereignty: the people are the source of power (“We the People”). The Constitution replaced the Articles of Confederation.", "The Founders added checks and balances and federalism because people in power can abuse it."],
+    "What does popular sovereignty mean?",
+    ["“Sovereignty” means the highest power.", "“Popular” means of the people."],
+    "The people are the source of government’s power",
+  ),
+  "social/ca-g9-supreme-court": lesson(
+    ["The president appoints justices with the Senate’s consent.", "Precedent (stare decisis) means following earlier rulings; judicial restraint defers to lawmakers, while activism is readier to overturn.", "Know key cases: Plessy (1896) allowed “separate but equal”; Brown (1954) overturned it; Korematsu (1944) upheld Japanese American removal."],
+    "Who appoints Supreme Court justices?",
+    ["The executive nominates, and the Senate checks.", "The president appoints them with the Senate’s consent."],
+    "the president, with the Senate’s consent",
+  ),
+  "social/wa-g9-government-economy": lesson(
+    ["Governments raise money by taxes (federal: mostly income tax; Washington: mostly sales tax) and spend it on services like schools.", "A deficit is spending more than you take in in a year; debt is what has built up.", "Inflation is a general rise in prices. A recession is when the economy shrinks and jobs are lost."],
+    "What is inflation?",
+    ["Watch what happens to prices over time.", "When most prices keep going up, that is inflation."],
+    "a general rise in prices over time",
+  ),
+  "social/va-g7-governing-virginia": lesson(
+    ["The Constitution of Virginia sets up three branches, like the US Constitution.", "The General Assembly (House of Delegates and Senate) makes laws, the governor carries them out, and courts interpret them.", "The governor serves four years and can't serve two terms in a row."],
+    "How long is a Virginia governor's term?",
+    ["It is the same length as a US president's term.", "Four years."],
+    "four years",
+  ),
+  "social/va-g7-local-government": lesson(
+    ["Virginia's local governments are counties, cities and towns. Independent cities are separate from counties.", "Local governments run schools, police, parks and roads, paid for mostly by property taxes.", "Citizens can take part by voting and speaking at public meetings."],
+    "How do local governments pay for most services?",
+    ["They tax land and buildings.", "These are property taxes."],
+    "property taxes",
+  ),
+  // Missouri (us-mo)
+  "social/ca-g6-greek-world": lesson(
+    ["Greeks lived by the sea and traded across the Aegean and Mediterranean.", "Myths: Poseidon ruled the sea; Achilles' heel means a weak spot.", "Thinkers: Socrates taught Plato, who founded the Academy; Hippocrates is the father of medicine. Plays were in open-air theatres."],
+    "Hippocrates is known as the father of what?",
+    ["Doctors still take an oath named after him.", "He studied illness and healing."],
+    "medicine",
+  ),
+  "social/ny-g9-crusades-plague": lesson(
+    ["In 1095, Pope Urban II called on Christians in Western Europe to begin the First Crusade to control Jerusalem.", "The Reconquista was the effort by Christian kingdoms to take back the Iberian Peninsula from Muslim rulers; it ended in 1492.", "The Black Death, a plague spread along trade routes, killed about a third of Europe’s people in the 1300s."],
+    "Who called for the First Crusade in 1095?",
+    ["The call came from the head of the Church.", "He spoke at Clermont in France.", "He was Pope Urban II."],
+    "Pope Urban II",
+  ),
 
   // North Carolina's units (us-nc).
   "social/ny-g5-columbian-exchange": lesson(

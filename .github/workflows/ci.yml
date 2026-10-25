@@ -21,31 +21,40 @@ env:
   ADMIN_2FA: optional
 
 # Everything below runs in parallel. The browser tests only wait for the build, not for the
-# quick static checks, so a slow lint never delays them. The last job, "CI passed", is the one
-# to require in branch protection: it is green only when every other job is.
+# quick static checks, so a slow lint never delays them. Every open pull request shares the
+# account's limit on machines running at once, so quick checks share a machine rather than each
+# taking one. The last job, "CI passed", is the one to require in branch protection: it is green
+# only when every other job is.
 jobs:
-  typecheck:
-    name: Types
+  # Types, lint and the dependency audit are quick, so they share one machine: each job costs
+  # about a minute of setup, and every job waits in the same queue as the other open pull requests.
+  static:
+    name: Types, lint and audit
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7
       - uses: ./.github/actions/setup
       - run: npx next typegen
-      - run: npx tsc --noEmit
+      - name: Types
+        run: npx tsc --noEmit
+      # Each check runs even when the one before it failed, so one run reports them all.
+      - name: Lint
+        if: ${{ !cancelled() }}
+        run: npm run lint
+      # Reads the lockfile only. Production dependencies are what ship to families, so they gate the build.
+      - name: Dependency audit
+        if: ${{ !cancelled() }}
+        run: npm audit --omit=dev --audit-level=high
+      # Dev tooling is reported for visibility but does not block a merge.
+      - if: ${{ !cancelled() }}
+        run: npm audit --audit-level=high
+        continue-on-error: true
 
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v7
-      - uses: ./.github/actions/setup
-      - run: npm run lint
-
-  # The unit tests are the longest static check, so they run on four machines at once.
+  # The unit tests are the longest static check, so they run on three machines at once.
   # scripts/test-shard.mjs deals the files out by weight (scripts/test-weights.json), so the
-  # machines finish together. Each one saves a Vitest blob report with its coverage data.
+  # machines finish together, still well before the build. Each one saves a Vitest blob report
+  # with its coverage data.
   unit:
     name: Unit and content tests · ${{ matrix.shard }}
     runs-on: ubuntu-latest
@@ -53,7 +62,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        shard: ["1/4", "2/4", "3/4", "4/4"]
+        shard: ["1/3", "2/3", "3/3"]
     steps:
       - uses: actions/checkout@v7
       - uses: ./.github/actions/setup
@@ -68,13 +77,17 @@ jobs:
           path: .vitest/blob
           retention-days: 1
 
-  # Puts the four reports back together: the same line coverage as a single run, written to the
-  # run's summary page. It has no threshold yet; e2e scripts are not counted.
+  # Puts the reports back together: the same line coverage as a single run, written to the run's
+  # summary page and, on a pull request, to one comment that is updated each run. It has no
+  # threshold yet; e2e scripts are not counted.
   coverage:
     name: Unit test coverage
     needs: unit
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
       - uses: actions/checkout@v7
       - uses: ./.github/actions/setup
@@ -85,25 +98,8 @@ jobs:
           merge-multiple: true
       - run: npx vitest --mergeReports --coverage
       - run: node scripts/coverage-summary.mjs
-      - uses: actions/upload-artifact@v7
-        with:
-          name: unit-coverage
-          path: coverage/summary.md
-          retention-days: 1
-
-  coverage-comment:
-    name: Coverage comment
-    needs: coverage
-    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]'
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-    steps:
-      - uses: actions/download-artifact@v8
-        with:
-          name: unit-coverage
-          path: coverage
       - uses: actions/github-script@v9
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]'
         with:
           script: |
             const fs = require('node:fs');
@@ -132,30 +128,52 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      # The static job runs the same type check at the same time (next.config.ts).
+      SKIP_BUILD_TYPECHECK: "1"
     steps:
       - uses: actions/checkout@v7
       - uses: ./.github/actions/setup
-      # Next's incremental build cache, so unchanged files aren't compiled again.
-      - uses: actions/cache@v6
+      # Next's incremental build cache, so unchanged files aren't compiled again. It is about 2 GB,
+      # so only main saves it and pull requests reuse main's: a copy saved on every pull request
+      # push filled the repository's 10 GB cache, which then threw out the node_modules and browser
+      # caches every job needs.
+      - uses: actions/cache/restore@v6
         with:
           path: .next/cache
-          key: next-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('src/**', 'next.config.ts') }}
+          key: next-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-${{ github.sha }}
           restore-keys: |
             next-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-
       # The Supertonic voices (about 265 MB from our supertonic-voices release), so each run doesn't download them again.
-      - uses: actions/cache@v6
+      - id: voices
+        uses: actions/cache/restore@v6
         with:
           path: public/supertonic
           key: supertonic-${{ hashFiles('src/lib/supertonic-manifest.json', 'package-lock.json') }}
       - run: npm run build
-      # One tar file keeps the folder layout exactly as built. The Supertonic files go too, for the offline test.
-      - run: tar -cf next-build.tar --exclude=.next/cache .next public/supertonic
+      - if: steps.voices.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v6
+        continue-on-error: true
+        with:
+          path: public/supertonic
+          key: ${{ steps.voices.outputs.cache-primary-key }}
+      # One tar keeps the folder layout exactly as built. The 25 000 prerendered pages are about
+      # 5.4 GB and much alike, so zstd with a long window packs them into about 330 MB (the
+      # artifact's own zip made 1.5 GB of them, which took the browser jobs up to 6 minutes to
+      # download). The voices stay out: the jobs that need them restore them from the cache.
+      - run: tar -cf - --exclude=.next/cache .next | zstd -T0 -9 --long=27 -q -o next-build.tar.zst
       - uses: actions/upload-artifact@v7
         with:
           name: next-build
-          path: next-build.tar
-          compression-level: 1
+          path: next-build.tar.zst
+          compression-level: 0
           retention-days: 1
+      - if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/cache/save@v6
+        continue-on-error: true
+        with:
+          path: .next/cache
+          key: next-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-${{ github.sha }}
 
   # Device layouts run in the Playwright image: WebKit's system libraries take longer to install
   # on each run than the image takes to pull. The image tag must match the Playwright version in
@@ -163,6 +181,9 @@ jobs:
   devices:
     name: Browser · ${{ matrix.name }}
     needs: build
+    # Pull requests only: a merge to main already passed these, so main keeps just types, lint,
+    # unit tests and the build (which saves the Next cache) to save Actions minutes.
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     container:
@@ -172,11 +193,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          # 14 device layouts, split over four machines. iPhones and iPads run in real WebKit.
-          - { name: "devices 1/4", shard: "1/4" }
-          - { name: "devices 2/4", shard: "2/4" }
-          - { name: "devices 3/4", shard: "3/4" }
-          - { name: "devices 4/4", shard: "4/4" }
+          # 14 device layouts, split over two machines. iPhones and iPads run in real WebKit.
+          - { name: "devices 1/2", shard: "1/2" }
+          - { name: "devices 2/2", shard: "2/2" }
     steps:
       - uses: actions/checkout@v7
       - uses: ./.github/actions/setup
@@ -185,7 +204,7 @@ jobs:
       - uses: actions/download-artifact@v8
         with:
           name: next-build
-      - run: tar -xf next-build.tar
+      - run: scripts/ci-unpack.sh next-build.tar.zst
       - name: Run
         run: scripts/ci-with-server.sh node scripts/e2e-devices.mjs http://localhost:3000 e2e-shots/devices --shard ${{ matrix.shard }}
       - uses: actions/upload-artifact@v7
@@ -196,44 +215,59 @@ jobs:
           retention-days: 7
 
   # The Chromium-only checks run on the plain runner, where installing Chromium is quicker than
-  # pulling the Playwright image.
+  # pulling the Playwright image. Each machine runs a few scripts one after another against one
+  # server (scripts/ci-each.mjs runs them all and fails if any failed): most scripts take under
+  # a minute, while setting up a machine and fetching the build takes one or two, and every
+  # machine waits in the queue shared with the other open pull requests.
   browser:
     name: Browser · ${{ matrix.name }}
     needs: build
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     strategy:
       fail-fast: false
+      # Sign-ups are limited to 5 per address in 10 minutes, so keep each group under that
+      # (modes 1, classroom 2, sync 2, admin 2) and the admin panel, which switches maintenance
+      # mode on and off, last in its group.
       matrix:
         include:
-          - { name: "accessibility", serve: true, run: "node scripts/e2e-a11y.mjs http://localhost:3000 e2e-shots/a11y" }
-          - { name: "keyboard and high contrast", serve: true, run: "node scripts/e2e-keyboard.mjs http://localhost:3000 e2e-shots/keyboard" }
-          # The playthrough is split in three so no part is the slowest job.
-          - { name: "playthrough modes", serve: true, run: "node scripts/e2e.mjs http://localhost:3000 e2e-shots --part modes" }
-          - { name: "parent area and arcade", serve: true, run: "node scripts/e2e.mjs http://localhost:3000 e2e-shots --part parents" }
-          - { name: "sync and offline", serve: true, run: "node scripts/e2e.mjs http://localhost:3000 e2e-shots --part sync --offline" }
-          - { name: "classroom", serve: true, run: "node scripts/e2e-classroom.mjs http://localhost:3000 e2e-shots/classroom" }
-          - { name: "placement", serve: true, run: "node scripts/e2e-placement.mjs http://localhost:3000 e2e-shots/placement" }
-          - { name: "admin panel", serve: true, run: "node scripts/e2e-admin.mjs http://localhost:3000 e2e-shots/admin" }
-          # Starts and stops its own server, so only the service worker can answer.
-          - { name: "offline", serve: false, run: "node scripts/e2e-offline.mjs" }
+          - name: "accessibility, placement and offline"
+            run:
+              - "node scripts/e2e-a11y.mjs http://localhost:3000 e2e-shots/a11y"
+              - "node scripts/e2e-placement.mjs http://localhost:3000 e2e-shots/placement"
+              # Starts and stops its own server on another port, so only the service worker can answer.
+              - "node scripts/e2e-offline.mjs"
+          - name: "keyboard, playthrough modes and classroom"
+            run:
+              - "node scripts/e2e-keyboard.mjs http://localhost:3000 e2e-shots/keyboard"
+              - "node scripts/e2e.mjs http://localhost:3000 e2e-shots --part modes"
+              - "node scripts/e2e-classroom.mjs http://localhost:3000 e2e-shots/classroom"
+          - name: "parent area, sync and admin panel"
+            run:
+              - "node scripts/e2e.mjs http://localhost:3000 e2e-shots --part parents"
+              - "node scripts/e2e.mjs http://localhost:3000 e2e-shots --part sync --offline"
+              - "node scripts/e2e-admin.mjs http://localhost:3000 e2e-shots/admin"
     steps:
       - uses: actions/checkout@v7
       - uses: ./.github/actions/setup
       - uses: actions/download-artifact@v8
         with:
           name: next-build
-      - run: tar -xf next-build.tar
+      - run: scripts/ci-unpack.sh next-build.tar.zst
+      # The same voices the build was made with (the offline test downloads one).
+      - uses: actions/cache/restore@v6
+        with:
+          path: public/supertonic
+          key: supertonic-${{ hashFiles('src/lib/supertonic-manifest.json', 'package-lock.json') }}
+          fail-on-cache-miss: true
       - uses: ./.github/actions/browsers
         with:
           browsers: chromium
       - name: Run
-        run: |
-          if [ "${{ matrix.serve }}" = "true" ]; then
-            scripts/ci-with-server.sh ${{ matrix.run }}
-          else
-            ${{ matrix.run }}
-          fi
+        env:
+          COMMANDS: ${{ toJSON(matrix.run) }}
+        run: scripts/ci-with-server.sh node scripts/ci-each.mjs "$COMMANDS"
       - uses: actions/upload-artifact@v7
         if: failure()
         with:
@@ -241,28 +275,15 @@ jobs:
           path: e2e-shots
           retention-days: 7
 
-  audit:
-    name: Dependency audit
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    steps:
-      - uses: actions/checkout@v7
-      # Reads the lockfile only, so there is no install and it finishes in seconds.
-      # Production dependencies are what ship to families, so they gate the build.
-      - run: npm audit --omit=dev --audit-level=high
-      # Dev tooling is reported for visibility but does not block a merge.
-      - run: npm audit --audit-level=high
-        continue-on-error: true
-
   passed:
     name: CI passed
-    needs: [typecheck, lint, unit, coverage, audit, build, devices, browser]
+    needs: [static, unit, coverage, build, devices, browser]
     if: always()
     runs-on: ubuntu-latest
     steps:
       - name: Every job succeeded
         run: |
           echo '${{ toJSON(needs) }}'
-          if [ "${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') || contains(needs.*.result, 'skipped') }}" = "true" ]; then
+          if [ "${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}" = "true" ]; then
             exit 1
           fi

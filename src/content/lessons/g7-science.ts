@@ -705,6 +705,25 @@ export const lessons: GradeLessons = {
     ["More mass means more pull.", "Being closer also means more pull."],
     "when they are more massive and closer",
   ),
+  // Missouri (us-mo)
+  "science/mo-g7-resources": lesson(
+    ["Minerals, energy and water are spread unevenly because of past geologic processes; Missouri has lead deposits in the Ozarks.", "Scientists map hazards such as earthquakes, floods, tornadoes and wildfires.", "Monitoring networks (seismometers, river gauges, weather radar) help warn people early."],
+    "What does a flood hazard map show?",
+    ["Floods cover low land near rivers.", "People need to know where to go."],
+    "areas that could flood and routes to higher ground",
+  ),
+  "science/mo-g7-biodiversity": lesson(
+    ["Biodiversity is the variety of life in an area.", "Ecosystem services include clean water, food and flood protection.", "Protecting Ozark forests, prairies and river wetlands keeps habitat for many species."],
+    "How do wetlands along a river help people?",
+    ["Wetland plants trap dirt.", "They also soak up floodwater."],
+    "by filtering water and holding floodwater",
+  ),
+  "science/mo-g7-earth-surface": lesson(
+    ["Matching coastlines, fossils and rocks on far-apart continents show they were once joined.", "Plates pull apart at mid-ocean ridges and collide to build mountains and volcanoes.", "Some changes are sudden (earthquakes); others take millions of years (mountain building)."],
+    "Is a landslide a fast or a very slow change to Earth's surface?",
+    ["A landslide happens in minutes.", "Mountain building takes millions of years."],
+    "fast",
+  ),
 
   // North Carolina's units (us-nc).
   "science/newtons-laws": lesson(

@@ -920,6 +920,79 @@ export const lessons: GradeLessons = {
     ["It is not the mayor or the president.", "The state leader is elected by all of Indiana."],
     "the governor",
   ),
+  "social/va-g3-citizens": lesson(
+    ["Good citizens are honest, fair and helpful.", "A local public issue is a problem that affects people in the community.", "Primary sources are from the time, like old photos. Timelines show order."],
+    "Which is a primary source about your town’s past: an old photo of Main Street, or a new textbook?",
+    ["A primary source was made at the time.", "The old photo was taken back then."],
+    "an old photo of Main Street",
+  ),
+  "social/va-g3-government": lesson(
+    ["Rules and laws keep people safe and fair. The Constitution is the country’s highest law.", "Government has three branches: one makes laws, one carries them out, one judges them.", "Cities and counties make local laws. People can speak at council meetings."],
+    "A city sets a speed limit near schools. What kind of law is it?",
+    ["The city made it.", "Laws made by a city or county are local laws."],
+    "a local law",
+  ),
+  "social/va-g3-mali": lesson(
+    ["Mali was a rich empire in West Africa, along the Niger River.", "Traders swapped gold from the south for salt from the Sahara.", "Timbuktu was a city of trade and learning, and Mansa Musa was a famous ruler."],
+    "What two goods were traded most in Mali?",
+    ["One came from mines in the south.", "One came from the desert and kept food safe."],
+    "gold and salt",
+  ),
+  // Missouri (us-mo)
+  "social/mo-g3-missouri-map": lesson(
+    ["Missouri is in the middle of the United States and touches eight states.", "The Mississippi River is its eastern border; the Missouri River crosses the state.", "Jefferson City is the capital. Kansas City and St. Louis are its biggest cities."],
+    "What is the capital of Missouri?",
+    ["It is on the Missouri River in the middle of the state.", "It is named for a president."],
+    "Jefferson City",
+  ),
+  "social/mo-g3-first-peoples": lesson(
+    ["People have lived in what is now Missouri for thousands of years.", "Mississippian peoples built large earthen mounds near the rivers.", "The Osage and Missouria lived here when Europeans arrived. The Osage Nation governs itself today, in Oklahoma."],
+    "Which nation lived in much of Missouri when Europeans arrived and still governs itself today?",
+    ["The name is also a river in Missouri.", "It is the Osage Nation."],
+    "the Osage Nation",
+  ),
+  "social/mo-g3-explorers-statehood": lesson(
+    ["French explorers came down the Mississippi in 1673. French settlers founded Ste. Genevieve and St. Louis.", "The United States bought the land in the Louisiana Purchase of 1803. Lewis and Clark set out from near St. Louis in 1804.", "Missouri became the 24th state in 1821."],
+    "In what year did Missouri become a state?",
+    ["It was after the Louisiana Purchase.", "Missouri was the 24th state."],
+    "1821",
+  ),
+  "social/mo-g3-civil-war": lesson(
+    ["Missouri was a border state: slavery was legal, but it stayed in the Union.", "Missourians fought on both sides, so families and neighbors were divided.", "Missouri ended slavery in January 1865."],
+    "Why was Missouri called a border state?",
+    ["It allowed slavery.", "But it did not leave the Union."],
+    "it allowed slavery but stayed in the Union",
+  ),
+  "social/mo-g3-governing-missouri": lesson(
+    ["Missouri's government has three branches, like the nation's.", "The General Assembly makes laws, the governor carries them out, and the courts decide what laws mean.", "Cities and counties have local governments, such as a mayor and a council."],
+    "Who leads Missouri's executive branch?",
+    ["The executive branch carries out laws.", "For a state, that leader is the governor."],
+    "the governor",
+  ),
+  "social/mo-g3-symbols-people": lesson(
+    ["Missouri's nickname is the Show-Me State. Its state bird is the bluebird.", "Famous Missourians include Mark Twain, George Washington Carver and President Harry S. Truman.", "Symbols and people help tell Missouri's story."],
+    "What is Missouri's nickname?",
+    ["It means Missourians want proof.", "It is the Show-Me State."],
+    "the Show-Me State",
+  ),
+  "social/mo-g3-heritage": lesson(
+    ["Many groups shaped Missouri: Native nations, French, German, African American and many newer immigrants.", "Each group brought food, music, words and traditions.", "Kansas City jazz and St. Louis blues are part of Missouri's music."],
+    "Which kind of music grew up in Kansas City?",
+    ["It has swing and improvising.", "It is jazz."],
+    "jazz",
+  ),
+  "social/mo-g3-economy": lesson(
+    ["Missouri farms grow soybeans and corn and raise cattle.", "Factories build cars and airplanes, and the rivers and railroads move goods.", "People make goods or give services, and they trade to get what they need."],
+    "A mechanic fixing a car gives a good or a service?",
+    ["The mechanic is doing work for someone.", "Work done for others is a service."],
+    "a service",
+  ),
+  "social/mo-g3-missouri-timeline": lesson(
+    ["A timeline puts events in order from earliest to latest.", "1673: French explorers on the Mississippi. 1803: Louisiana Purchase. 1821: statehood.", "1865: slavery ended in Missouri. 1965: the Gateway Arch was finished."],
+    "Which came first: statehood or the Louisiana Purchase?",
+    ["The Purchase was in 1803.", "Statehood was in 1821."],
+    "the Louisiana Purchase",
+  ),
 
   // North Carolina's units (us-nc).
   "social/communities-compared": lesson(

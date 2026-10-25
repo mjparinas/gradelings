@@ -3,6 +3,7 @@ import { allUnitRefs, loadGrade } from "@/content";
 import { FRAMEWORKS } from "@/content/frameworks";
 import type { GradeId, SubjectId } from "@/content/types";
 import { derive, type Derived, type UnitStat } from "./derive";
+import { SURPRISE_STICKERS } from "./mystery";
 import { SHOP } from "./shop";
 import { arcadeFor, GAMES } from "./arcade";
 import { FACT_SETS, factsIn } from "./facts";
@@ -44,6 +45,9 @@ function didEverything(level: 2 | 3): Derived {
   d.wishSessions = 1;
   d.activeDays = BIG;
   d.secrets = ["konami", "dizzy-ollie", "polite-moose", "secret-word"];
+  d.mysteries = { "lesson-1": "2026-10-01" };
+  d.surprises = Object.fromEntries(SURPRISE_STICKERS.map((s) => [s.id, 1]));
+  d.questsClaimed = { "2026-10-01": ["s-leaf"], "2026-12-15": ["s-snow"], "2027-03-15": ["s-sprout"], "2027-07-01": ["s-sun"] };
   d.stories = Object.fromEntries(Array.from({ length: 30 }, (_, i) => [`story-${i}`, { reads: 1, best: 3, questions: 3, lastT: 0 }]));
   return d;
 }
@@ -130,7 +134,7 @@ describe("the trophy list", () => {
   });
 
   it("has 203 trophies with the secret ones hidden", () => {
-    expect(TROPHIES).toHaveLength(203);
+    expect(TROPHIES).toHaveLength(208);
     expect(TROPHIES.filter((t) => t.hidden).map((t) => t.id).sort()).toEqual(
       ["early-bird", "konami", "marathon", "dizzy-ollie", "polite-moose", "secret-word", "palindrome", "make-a-wish", ...GRADES.map((g) => `polymath-${g}`)].sort(),
     );

@@ -38,6 +38,7 @@ import { homeworkDone } from "@/lib/classroom";
 import { ParentNote } from "./ParentNote";
 import { ClassGoalCard } from "./ClassGoalCard";
 import { RewardCard, TogetherCard } from "./FamilyCards";
+import { FestivalCard } from "./FestivalCard";
 import { FocusCard } from "./FocusCard";
 import { LevelChip } from "./Practice";
 import { InstallChip } from "./InstallChip";
@@ -282,6 +283,7 @@ export function Hub() {
 
       {/* Little kids' home screen stays calm: a parent's focus only shapes their Adventure. */}
       {!little && <FocusCard />}
+      {!little && <FestivalCard />}
 
       {classwork.length > 0 && (
         <section className="card p-4 sm:p-5" aria-label="From your teacher">
