@@ -302,4 +302,11 @@ export const lessons: GradeLessons = {
     ["Plant roots grow in soil.", "Soil helps plants grow."],
     "so plants can grow",
   ),
+  // Massachusetts (us-ma)
+  "science/or-gk-design": lesson(
+    ["First, spot a problem to fix.", "Draw a plan before you build.", "A shape helps a thing work. Round wheels roll."],
+    "Which shape is best for a wheel?",
+    ["A wheel must roll.", "Circles roll."],
+    "a circle",
+  ),
 };

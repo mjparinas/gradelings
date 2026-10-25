@@ -12,7 +12,7 @@ import { JsonLd } from "@/lib/site";
 import { pageMeta } from "@/lib/pageMeta";
 import { US_CLASS_CONSENT } from "@/lib/classroom";
 
-/** "12 Canadian provinces and territories and 21 US states": short enough to read as more regions are added. */
+/** "12 Canadian provinces and territories and 23 US states": short enough to read as more regions are added. */
 const regions = regionSummary(TEACHER_FRAMEWORKS);
 /** "province", or "province or state" once a US state can have classes. */
 const region = regionWord(TEACHER_FRAMEWORKS);

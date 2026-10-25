@@ -1062,4 +1062,47 @@ export const lessons: GradeLessons = {
     ["Mali controlled routes across the Sahara.", "Gold from the south was traded for salt from the desert."],
     "gold and salt",
   ),
+  // Massachusetts (us-ma)
+  "social/al-g7-southwest-asia": lesson(
+    ["Assyria built a strong army; Ashurbanipal’s library at Nineveh held thousands of clay tablets in cuneiform.", "Phoenician city-states (Tyre, Sidon, Byblos) were sea traders. Their alphabet became the base of Greek and Latin letters.", "Persia under Cyrus and Darius ruled through satrapies (provinces), with the Royal Road and coins."],
+    "What was the Phoenicians’ greatest gift to later peoples?",
+    ["Phoenicians needed simple writing for trade.", "They used letters for sounds, an alphabet."],
+    "an alphabet of letters for sounds",
+  ),
+  "social/ca-g7-arabia-islam": lesson(
+    ["The Arabian Peninsula, between the Red Sea and the Persian Gulf, is mostly hot desert. Mecca grew on caravan routes.", "Muslims follow the Qur’an and the Sunnah, the example of the Prophet Muhammad’s words and actions. They pray in mosques.", "Muslim rule spread through conquest and treaties and blended many cultures."],
+    "What is the Sunnah?",
+    ["The Qur’an is one source of Islamic belief.", "The other is the example of the Prophet Muhammad’s words and actions."],
+    "the example of the Prophet Muhammad’s words and actions",
+  ),
+  "social/mb-egypt-8": lesson(
+    ["The Nile was Egypt’s lifeline. It flows north to the Mediterranean, and its yearly flood left rich black silt.", "Pharaohs ruled a united Egypt; the Great Pyramid at Giza was built for Pharaoh Khufu.", "Scribes kept records, collected taxes and wrote in hieroglyphs."],
+    "What did the Nile’s yearly flood leave behind?",
+    ["When the water went down, the fields were covered in mud.", "This rich black soil is called silt."],
+    "rich black soil called silt",
+  ),
+  "social/mb-mesopotamia": lesson(
+    ["Mesopotamia is the land between the Tigris and Euphrates. Sumer, in the south, had the first city-states.", "People irrigated fields, built ziggurats (stepped temple towers) and wrote cuneiform on wet clay.", "Their counting by 60 lives on in minutes and angles. Law codes carved on stone made laws known to all."],
+    "What was a ziggurat?",
+    ["It was a huge building at the centre of a city.", "It rose in steps and had a temple on top."],
+    "a stepped temple tower",
+  ),
+  "social/ma-g6-central-america-caribbean": lesson(
+    ["Central America is the isthmus joining North and South America; the Caribbean Sea lies to its east.", "The Panama Canal links the Atlantic and Pacific Oceans.", "A tropical climate, volcanoes and hurricanes shape farming, tourism and where people live."],
+    "Which waterway lets ships cross from the Atlantic to the Pacific without going around South America?",
+    ["It cuts across the narrowest part of Central America.", "It opened in 1914."],
+    "the Panama Canal",
+  ),
+  "social/ma-g6-latin-america": lesson(
+    ["Key features: the Amazon Rainforest, the Andes Mountains and the Atacama Desert.", "Most people speak Spanish, but Brazil speaks Portuguese.", "Issues include rainforest loss in Brazil and air pollution in Mexico City."],
+    "Why is the Amazon Rainforest shrinking?",
+    ["People clear land.", "Trees are cut for farms, ranches, logging and mining."],
+    "people cut and clear it for farms and logging",
+  ),
+  "social/ma-g6-early-americas-africa": lesson(
+    ["Scientists think people reached the Americas more than 15,000 years ago.", "The Olmec carved giant stone heads; the Maya built stone cities and an accurate calendar. Maya people live in Central America today.", "Teotihuacan, in what is now Mexico, was one of the largest cities of the ancient world."],
+    "Which ancient people built pyramid cities such as Tikal and kept an accurate calendar?",
+    ["They lived in Mesoamerica.", "Millions of their descendants live there today."],
+    "the Maya",
+  ),
 };

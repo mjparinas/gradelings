@@ -629,4 +629,17 @@ export const lessons: GradeLessons = {
     ["Clay has tiny, tightly packed bits.", "Water squeezes through slowly."],
     "slowly",
   ),
+  // Massachusetts (us-ma)
+  "science/ca-g4-design": lesson(
+    ["Criteria are what a design must do to succeed.", "Constraints are limits, like cost, time or materials.", "Compare designs with a table that scores each one on each criterion.", "Test fairly, then choose the design that best meets the criteria within the constraints."],
+    "A kite must fly for 1 minute and cost under $3. Which is the constraint?",
+    ["Flying for 1 minute is what it must do: a criterion.", "The cost is a limit."],
+    "cost under $3",
+  ),
+  "science/or-g5-design": lesson(
+    ["First, define the problem clearly, like “How can we keep an egg safe if dropped 2 m?”", "Brainstorm several solutions so you can compare them.", "In a fair test, keep everything the same except the design.", "Use the results to improve the best design."],
+    "You test three paper bridges. What should stay the same?",
+    ["Only the bridge design should change.", "Keep the weights and the gap they span the same."],
+    "the weights and the gap",
+  ),
 };

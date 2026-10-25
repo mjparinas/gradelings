@@ -750,4 +750,23 @@ export const lessons: GradeLessons = {
     ["It is the lowest layer.", "That layer is the troposphere."],
     "the troposphere",
   ),
+  // Massachusetts (us-ma)
+  "science/ca-g8-population-resources": lesson(
+    ["Total resource use = number of people × use per person.", "Using more water, energy, land and materials affects Earth’s systems, such as habitats and clean water.", "Better technology and using less per person can lower the impact."],
+    "A town’s population doubles and each person uses the same water. What happens to total water use?",
+    ["Use per person stays the same.", "Twice the people means twice the water."],
+    "it doubles",
+  ),
+  "science/ma-g7-design": lesson(
+    ["Criteria are what a solution must do to succeed. Constraints are limits.", "A decision matrix compares designs against the criteria.", "A trade-off is giving up some of one thing to get more of another.", "After a test fails, improve the design and test again."],
+    "A cheaper filter cleans water less well. Choosing it means accepting a… what?",
+    ["You give up some cleaning to save money.", "Giving up one thing for another is a trade-off."],
+    "a trade-off",
+  ),
+  "science/ma-g7-earth-surface": lesson(
+    ["Matching coastlines, fossils and rocks on far-apart continents show they were once joined.", "Plates pull apart at mid-ocean ridges and collide to build mountains and volcanoes.", "Some changes are sudden (earthquakes); others take millions of years (mountain building)."],
+    "Is a landslide a fast or a very slow change to Earth's surface?",
+    ["A landslide happens in minutes.", "Mountain building takes millions of years."],
+    "fast",
+  ),
 };

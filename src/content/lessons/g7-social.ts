@@ -1320,4 +1320,41 @@ export const lessons: GradeLessons = {
     ["They were laws passed by the Nazi government.", "They stripped German Jews of citizenship and rights."],
     "took away German Jews’ citizenship and rights",
   ),
+  // Massachusetts (us-ma)
+  "social/ca-g6-ancient-india": lesson(
+    ["The Indo-Aryans brought a language that became Sanskrit; their ways blended with earlier ones.", "The caste system divided society; Brahmins were priests and teachers.", "Epics: the Ramayana tells of Rama and Sita; the Bhagavad Gita is part of the Mahabharata. The Maurya Empire united much of India."],
+    "What were Brahmins?",
+    ["They were the top group in the caste system.", "They led worship and taught."],
+    "priests and teachers",
+  ),
+  "social/ca-g6-qin-and-han": lesson(
+    ["Mountains and rivers made China hard to govern because travel was slow.", "Confucius taught that rulers should lead by good example. The Qin united China; the Han ruled for 400 years.", "Under the Han, Buddhism came from India along the Silk Road; monks translated texts. The White Horse Temple is one of the first."],
+    "How did Confucius say a ruler should govern?",
+    ["Confucius valued respect and good behaviour.", "People follow a leader who acts well."],
+    "by setting a good example",
+  ),
+  "social/ca-g6-roman-empire": lesson(
+    ["Rome beat Carthage in three Punic Wars, then grew into an empire from Britain to Egypt and the Middle East.", "The Pax Romana was about 200 years of peace.", "Legacies: Latin (the root of Spanish, French, Italian and many English words), roads, aqueducts and law."],
+    "Rome fought the Punic Wars against which city?",
+    ["It was a powerful trading city in North Africa.", "Hannibal led its army across the Alps."],
+    "Carthage",
+  ),
+  "social/ga-g6-australia": lesson(
+    ["Australia is a country and a continent, with the Great Barrier Reef and the Outback.", "Most Australians live near the coast, where the climate is milder.", "Aboriginal Australians have lived there for tens of thousands of years."],
+    "Why do most Australians live near the coast?",
+    ["The middle is hot and dry.", "The coast has more rain and milder weather."],
+    "the coast has a milder climate and more water",
+  ),
+  "social/ma-g7-asia-geography": lesson(
+    ["The Himalayas, with Mount Everest, separate South Asia from China.", "Great rivers, like the Ganges, the Indus, the Yangtze and the Huang He, gave water and rich soil, so many people live near them.", "Monsoon winds bring heavy summer rain to South Asia."],
+    "Why do so many people in China live in the east?",
+    ["Look at where the plains and rivers are.", "The west has deserts and high mountains."],
+    "the east has rivers and good farmland",
+  ),
+  "social/ma-g7-oceania-europe": lesson(
+    ["Australia is both a continent and a country; most Australians live near the coast.", "Europe has many peninsulas, mountains like the Alps and rivers like the Danube.", "Each time zone is about 15° of longitude wide, counted from the prime meridian."],
+    "It is noon in Boston and 5 p.m. in London. How many hours ahead is London?",
+    ["Subtract the times.", "5 p.m. is 5 hours after noon."],
+    "5 hours",
+  ),
 };

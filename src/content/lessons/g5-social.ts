@@ -920,4 +920,11 @@ export const lessons: GradeLessons = {
     ["The case was about equal treatment in schools.", "The equal protection clause is in one amendment.", "That is the 14th Amendment."],
     "the 14th",
   ),
+  // Massachusetts (us-ma)
+  "social/ma-g5-massachusetts-in-the-nation": lesson(
+    ["Boston's Freedom Trail links places from the Revolution, like Faneuil Hall and the Old North Church.", "Shays' Rebellion (1786–1787) showed the Articles of Confederation were too weak, and led to the Constitution.", "Lowell's textile mills used river power, and their cotton was grown by enslaved people in the South. Massachusetts ended slavery in the 1780s."],
+    "Why did Shays' Rebellion matter to the whole nation?",
+    ["The national government could not stop it.", "Leaders decided to write a stronger plan of government."],
+    "it led to the Constitutional Convention",
+  ),
 };

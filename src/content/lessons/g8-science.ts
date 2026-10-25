@@ -744,4 +744,11 @@ export const lessons: GradeLessons = {
     ["Fish take oxygen from the water to breathe.", "Too little oxygen can kill them."],
     "Fish and other animals can't breathe.",
   ),
+  // Massachusetts (us-ma)
+  "science/ca-g7-food-molecules": lesson(
+    ["Digestion breaks big food molecules into small ones, such as starch into sugar.", "Cells use small molecules to build new parts or release energy in cellular respiration.", "Atoms are rearranged, never lost or made."],
+    "Enzymes in your saliva start breaking starch into what?",
+    ["Starch is a long chain of sugar units.", "Enzymes snip the chain apart."],
+    "sugar",
+  ),
 };

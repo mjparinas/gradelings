@@ -701,4 +701,23 @@ export const lessons: GradeLessons = {
     ["North Carolina is on the East Coast.", "The ocean to the east is the Atlantic."],
     "the Atlantic Ocean",
   ),
+  // Massachusetts (us-ma)
+  "social/ma-g2-reading-maps": lesson(
+    ["The key tells what symbols mean. A title says what the map shows.", "The compass rose shows north, south, east and west, plus in-betweens like northeast.", "Opposites: north–south and east–west."],
+    "The school is north of the park. The park is ___ of the school.",
+    ["Turn around to go back.", "The opposite of north is south."],
+    "south",
+  ),
+  "social/ma-g2-work-and-money": lesson(
+    ["People work to earn money, called income.", "Saving means keeping some money to use later.", "Tools people make, like a hammer, are capital resources."],
+    "Mia puts part of her allowance in a jar for next month. What is she doing?",
+    ["She is not spending it now.", "Keeping money for later is saving."],
+    "saving",
+  ),
+  "social/ma-g2-making-trading": lesson(
+    ["Goods are things. Services are jobs, like a barber's haircut.", "Scarcity means we can't have everything, so we choose. What we give up is the cost.", "People trade and work together, like a farmer and a baker."],
+    "Which worker gives a service, not a good?",
+    ["A barber does not make a thing to hold.", "A haircut is a job done for you."],
+    "a barber",
+  ),
 };

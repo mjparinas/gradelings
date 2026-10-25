@@ -1294,4 +1294,47 @@ export const lessons: GradeLessons = {
     ["It ran south from Pennsylvania.", "It led into the Piedmont."],
     "the Piedmont",
   ),
+  // Massachusetts (us-ma)
+  "social/ca-g9-rights": lesson(
+    ["The Bill of Rights protects freedoms like speech, which shields even unpopular ideas.", "Courts follow precedent, so old cases still matter: Gideon (1963) gives a lawyer to those who can’t afford one.", "Citizens have duties too, like jury service and paying taxes. Rights can be limited to protect safety or others’ rights."],
+    "Why can a court case decided long ago still affect you today?",
+    ["Courts look at past rulings on similar questions.", "They follow that precedent."],
+    "Courts follow precedent from earlier rulings",
+  ),
+  "social/ca-g9-supreme-court": lesson(
+    ["The president appoints justices with the Senate’s consent.", "Precedent (stare decisis) means following earlier rulings; judicial restraint defers to lawmakers, while activism is readier to overturn.", "Know key cases: Plessy (1896) allowed “separate but equal”; Brown (1954) overturned it; Korematsu (1944) upheld Japanese American removal."],
+    "Who appoints Supreme Court justices?",
+    ["The executive nominates, and the Senate checks.", "The president appoints them with the Senate’s consent."],
+    "the president, with the Senate’s consent",
+  ),
+  "social/ca-g9-three-branches": lesson(
+    ["Article I sets up Congress (the Speaker leads the House), Article II the president (the vice president is next in line), Article III the courts.", "House seats are based on population; every state has 2 senators.", "The Supreme Court picks a small number of cases, often about the Constitution."],
+    "Why does the House have more members from California than from Wyoming?",
+    ["Senate seats are equal for each state.", "House seats depend on how many people live there."],
+    "House seats are based on population",
+  ),
+  "social/wa-g5-constitution": lesson(
+    ["The Constitution was written in Philadelphia in 1787. It begins “We the People”.", "Three branches: legislative (Congress makes laws), executive (the president carries them out), judicial (courts, including the Supreme Court).", "Each state has 2 senators. The first ten amendments are the Bill of Rights."],
+    "Which branch includes the Supreme Court?",
+    ["Courts decide what laws mean.", "The courts make up the judicial branch."],
+    "judicial",
+  ),
+  "social/ma-g8-two-constitutions": lesson(
+    ["Federalism shares power between the national government and the states.", "The Tenth Amendment keeps for the states the powers not given to the national government.", "The Massachusetts Constitution of 1780 is the oldest written constitution still in use. It begins with a Declaration of Rights."],
+    "Running public schools is mostly a power of which level of government?",
+    ["The US Constitution doesn't list schools.", "Reserved powers stay with the states."],
+    "the states",
+  ),
+  "social/ma-g8-governing-massachusetts": lesson(
+    ["The governor leads the executive branch; the General Court (House and Senate) makes laws; the Supreme Judicial Court is the highest court.", "Cities usually have a mayor and city council; many towns have a select board and town meeting.", "State taxes pay for things like state highways; local property taxes pay for things like libraries."],
+    "What is the Massachusetts legislature called?",
+    ["It has a House and a Senate.", "Its name uses the word court."],
+    "the General Court",
+  ),
+  "social/ma-g8-elections": lesson(
+    ["General elections are in November; Massachusetts usually holds its state primaries in September.", "House seats follow population: Massachusetts sends 9 members, plus 2 senators like every state.", "Debates let voters compare ideas. Judge campaign ads by checking claims against independent sources."],
+    "How can a voter judge a campaign ad?",
+    ["Ads are made to persuade.", "Check their claims against reliable, independent sources."],
+    "check its claims against reliable, independent sources",
+  ),
 };

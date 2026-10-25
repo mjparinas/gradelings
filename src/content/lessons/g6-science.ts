@@ -846,4 +846,17 @@ export const lessons: GradeLessons = {
     ["A solar eclipse blocks the sun from Earth.", "Only the moon can be between them to do that."],
     "the moon",
   ),
+  // Massachusetts (us-ma)
+  "science/ca-g8-embryos": lesson(
+    ["Embryos of different species can look alike early on, even when adults look very different.", "Shared features, like early tails and pharyngeal pouches, suggest common ancestry.", "Structures that develop the same way are stronger evidence than look-alike adult parts."],
+    "A human embryo has a tail early on. What does it become in an adult?",
+    ["It shrinks as the embryo grows.", "A small bone remains."],
+    "the tailbone",
+  ),
+  "science/ma-g6-earth-history": lesson(
+    ["Rock layers and fossils order Earth's 4.6-billion-year history; lower layers are older.", "Most of that history is the Precambrian. We live in the Cenozoic Era.", "Homologous structures show that living things share ancestors."],
+    "In which era do we live today?",
+    ["The eras go Paleozoic, Mesozoic, Cenozoic.", "The latest is the Cenozoic."],
+    "the Cenozoic Era",
+  ),
 };

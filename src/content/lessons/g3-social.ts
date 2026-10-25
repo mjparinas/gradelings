@@ -1025,4 +1025,65 @@ export const lessons: GradeLessons = {
     ["The baker makes bread to sell.", "People who make goods are producers."],
     "a producer",
   ),
+  // Massachusetts (us-ma)
+  "social/ny-g5-encounters": lesson(
+    ["Columbus, Cabot, Cartier (for France), Cabral and Balboa explored for European countries.", "Cortés led the Spanish conquest of the Aztec Empire. Europeans claimed land where Native nations already lived.", "After contact, Native populations fell sharply, mostly from new diseases."],
+    "Why is French spoken in Haiti today?",
+    ["Languages often spread through colonies.", "France once ruled Haiti."],
+    "France once had a colony there.",
+  ),
+  "social/wa-g5-constitution": lesson(
+    ["The Constitution was written in Philadelphia in 1787. It begins “We the People”.", "Three branches: legislative (Congress makes laws), executive (the president carries them out), judicial (courts, including the Supreme Court).", "Each state has 2 senators. The first ten amendments are the Bill of Rights."],
+    "Which branch includes the Supreme Court?",
+    ["Courts decide what laws mean.", "The courts make up the judicial branch."],
+    "judicial",
+  ),
+  "social/wa-g5-revolution": lesson(
+    ["Order: Boston Tea Party (1773), war begins (1775), Declaration of Independence (1776), Saratoga (1777), Yorktown (1781).", "George Washington led the Continental Army. Benjamin Franklin won France as an ally.", "The Declaration says people have rights to life, liberty and the pursuit of happiness."],
+    "Which came first: the Declaration of Independence or the Battle of Yorktown?",
+    ["The Declaration was signed in 1776.", "Yorktown was in 1781."],
+    "the Declaration of Independence",
+  ),
+  "social/wa-g5-road-to-revolution": lesson(
+    ["After 1763, Britain taxed the colonies to pay war debts. Colonists said “No taxation without representation.”", "Protests grew: the Boston Massacre (1770), the Boston Tea Party (1773), then the Intolerable Acts closed Boston's port.", "Patriots wanted change; Loyalists stayed loyal to the king."],
+    "How did Britain punish Boston after the Tea Party?",
+    ["Britain passed harsh laws in 1774.", "They closed Boston's port until the tea was paid for."],
+    "It closed the port with the Intolerable Acts.",
+  ),
+  "social/ma-g3-cities-and-towns": lesson(
+    ["Massachusetts has 351 cities and towns.", "Many towns hold a town meeting, where voters decide on rules and money.", "Cities usually have a mayor and a city council."],
+    "In an open town meeting, who votes?",
+    ["It is a meeting of the town's people.", "Any registered voter of the town can come and vote."],
+    "the town's voters",
+  ),
+  "social/ma-g3-new-england": lesson(
+    ["New England is six states: Massachusetts, Connecticut, Rhode Island, Vermont, New Hampshire and Maine.", "Glaciers left rocky soil, hills and Cape Cod.", "Rivers, like the Connecticut and the Merrimack, gave water power and travel routes."],
+    "Which state is not in New England: Vermont, Ohio or Rhode Island?",
+    ["New England is in the northeast corner of the country.", "Ohio is farther west."],
+    "Ohio",
+  ),
+  "social/ma-g3-plymouth": lesson(
+    ["The Wampanoag have lived in what is now southeastern Massachusetts for thousands of years, and they still live there today.", "The Pilgrims sailed on the Mayflower in 1620 and signed the Mayflower Compact.", "Many Pilgrims died the first winter. Wampanoag people, including Tisquantum, helped them."],
+    "What was the name of the ship the Pilgrims sailed on?",
+    ["It sailed from England in 1620.", "It was named after a spring flower."],
+    "the Mayflower",
+  ),
+  "social/ma-g3-massachusetts-bay": lesson(
+    ["Puritans founded the Massachusetts Bay Colony in 1630, with Boston as its centre.", "Town life was built around the meetinghouse, where people worshipped and made decisions.", "Puritans opened schools so children could read. Harvard College began in 1636."],
+    "Which city was the centre of the Massachusetts Bay Colony?",
+    ["It is the capital of Massachusetts today.", "John Winthrop led settlers there in 1630."],
+    "Boston",
+  ),
+  "social/ma-g3-revolution": lesson(
+    ["Britain taxed the colonists, who said there should be no taxation without representation.", "The Boston Massacre was in 1770 and the Boston Tea Party in 1773.", "The war began at Lexington and Concord in April 1775."],
+    "Where did the first battles of the American Revolution take place?",
+    ["Paul Revere rode to warn the colonists.", "They were two towns west of Boston."],
+    "Lexington and Concord",
+  ),
+  "social/ma-g3-timeline": lesson(
+    ["A timeline puts events in order, from earliest to latest.", "A smaller year number means earlier.", "The Pilgrims came in 1620, Boston began in 1630, and the Revolution started in 1775."],
+    "Which came first: the Boston Tea Party (1773) or the Pilgrims' landing (1620)?",
+    ["Compare the years.", "1620 is smaller than 1773."],
+    "the Pilgrims' landing",
+  ),
 };

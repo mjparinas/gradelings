@@ -677,4 +677,23 @@ export const lessons: GradeLessons = {
     ["The ocean stores heat from summer.", "It slowly releases that heat in winter."],
     "The ocean releases stored heat.",
   ),
+  // Massachusetts (us-ma)
+  "science/ma-g5-earth-water": lesson(
+    ["The geosphere is rocks and land; the hydrosphere is water; the atmosphere is air; the biosphere is life.", "Most fresh water is frozen in ice caps and glaciers.", "Only a small part of Earth's water is fresh and easy to use.", "Much of Boston's water comes from the Quabbin Reservoir."],
+    "Trees take in water and give off water vapour. Which systems interact?",
+    ["Trees: biosphere. Water: hydrosphere.", "The vapour goes into the air: atmosphere."],
+    "biosphere, hydrosphere and atmosphere",
+  ),
+  "science/ma-g5-ecosystems": lesson(
+    ["Producers make food. Consumers eat other living things.", "Decomposers, like worms and fungi, return nutrients to the soil.", "Matter moves around an ecosystem again and again."],
+    "Whales eat small fish. Are whales producers or consumers?",
+    ["Whales can't make their own food.", "They eat other animals."],
+    "consumers",
+  ),
+  "science/ma-g5-gravity": lesson(
+    ["Gravity is a force that pulls objects toward each other.", "Earth's gravity pulls everything toward its centre, everywhere on Earth.", "That's why balls fall back down, water flows downhill and the oceans stay on Earth."],
+    "You throw a ball straight up. What happens next, and why?",
+    ["Earth's gravity keeps pulling the ball toward Earth's centre."],
+    "it comes back down because of gravity",
+  ),
 };
