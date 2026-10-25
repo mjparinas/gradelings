@@ -1,0 +1,118 @@
+import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
+
+// Kentucky Grade 2 social studies, North America: the cultural groups of North America past and today (2.H.CH.1), how
+// events in North America affected Kentucky (2.H.KH.1) and why settlement in Kentucky and North America followed the
+// patterns it did (2.G.KGE.1); the factors of production in Kentucky and renewable and non-renewable resources
+// (2.E.KE.1, 2.E.IC.1); and how Kentucky's laws change over time (2.C.KGO.1, 2.C.PR.1).
+
+const NORTH_AMERICA: Q[] = [
+  ["Kentucky is a state in which country?", "the United States", ["Mexico", "Brazil", "France"], "The United States has 50 states."],
+  ["The United States is on the continent of…", "North America", ["South America", "Europe", "Africa"], "A continent is a huge area of land."],
+  ["Which country is the United States' neighbor to the south?", "Mexico", ["Japan", "Egypt", "Peru"], "Its capital is Mexico City."],
+  ["Which ocean is on the east coast of North America?", "the Atlantic Ocean", ["the Pacific Ocean", "the Indian Ocean", "the Arctic Ocean"], "Ships crossed it from Europe."],
+  ["Which ocean is on the west coast of North America?", "the Pacific Ocean", ["the Atlantic Ocean", "the Indian Ocean", "the Southern Ocean"], "It is the biggest ocean."],
+  ["The longest river system in North America is the…", "Mississippi and Missouri rivers", ["Kentucky River", "Green River", "Licking River"], "It forms Kentucky's western border."],
+  ["The Appalachian Mountains run through eastern…", "North America, including eastern Kentucky", ["Africa", "Europe", "South America"], "They are very old mountains."],
+  ["Most big cities in early North America grew up beside…", "rivers, lakes or the ocean", ["deserts", "glaciers", "volcanoes"], "Water was the easiest way to travel."],
+  ["Louisville grew up beside the Falls of the Ohio because…", "boats had to stop and unload there", ["it was a desert", "there was no water", "it was on a mountain top"], "The falls were rapids boats couldn't pass."],
+  ["Many Nations, including the Shawnee and the Cherokee,…", "hunted and lived in the land that became Kentucky", ["came from the moon", "never lived in North America", "all lived in one city"], "Their nations continue today."],
+  ["Many settlers came into Kentucky through the…", "Cumberland Gap", ["Panama Canal", "Golden Gate", "Grand Canyon"], "It is a pass through the mountains."],
+  ["Spanish is the main language of…", "Mexico", ["the United Kingdom", "Japan", "Kenya"], "Many Kentuckians speak it too."],
+  ["People in North America speak many languages, including…", "English, Spanish and French", ["only English", "only Latin", "no languages"], "Many cultures share the continent."],
+  ["A culture is a group's…", "way of life, foods, music and traditions", ["height and weight", "favorite color only", "street address"], "Cultures are shared and passed on."],
+  ["Bluegrass music blends fiddle tunes from Europe with the banjo, which grew from instruments made by…", "Africans and African Americans", ["robots", "astronauts", "Vikings only"], "Music mixes as people meet.", true],
+  ["After the Louisiana Purchase in 1803, Kentucky farmers could ship goods down the Mississippi to…", "New Orleans", ["Paris", "Tokyo", "London"], "Boats carried corn and hemp downriver.", true],
+  ["Many people escaping slavery crossed the Ohio River from Kentucky to reach…", "free states and freedom", ["the Pacific Ocean", "Mexico City", "the South Pole"], "This network was the Underground Railroad.", true],
+  ["Why did early Kentucky towns grow along the Ohio River?", "boats carried people and goods on it", ["the river was frozen all year", "it was hidden", "no one could cross it"], "Rivers were the first highways.", true],
+  ["Mexico, the United States and the countries of Central America and the Caribbean are all in…", "North America", ["Asia", "Europe", "Australia"], "North America has many countries.", true],
+  ["How is life in Kentucky like life in Mexico?", "families celebrate holidays and share meals", ["no one in either place has a home", "both are islands", "both have only one city"], "People everywhere share many needs.", true],
+  ["Today many families from Mexico, Guatemala and other countries live in Kentucky. This is an example of…", "migration", ["erosion", "hibernation", "evaporation"], "People move to find work and safety.", true],
+  ["The first people of North America arrived…", "thousands of years before Europeans", ["last year", "after cars were invented", "with the Pilgrims"], "Their nations have long histories.", true],
+  ["Why did settlers in Kentucky often build near springs?", "they needed fresh water", ["springs were warm", "springs kept bears away", "there were no rivers"], "Water is a basic need.", true],
+  ["Which event in North America opened the Wilderness Road into Kentucky?", "Daniel Boone and others cut a trail through the Cumberland Gap in 1775", ["the first car was built", "the Pilgrims landed", "a canal was dug to the Pacific"], "It brought thousands of settlers.", true],
+];
+
+const RESOURCES: Q[] = [
+  ["Natural resources are things from nature people use, like…", "water, soil, trees and coal", ["toys and phones", "schools and roads", "teachers and doctors"], "People don't make natural resources."],
+  ["Human resources are…", "the people who do the work", ["rivers and trees", "machines and tools", "money in a bank"], "A coal miner is a human resource."],
+  ["Capital resources are…", "tools, machines and buildings used to make things", ["sunshine and rain", "workers", "wild animals"], "A tractor is a capital resource."],
+  ["A tractor on a Kentucky farm is a…", "capital resource", ["natural resource", "human resource", "service"], "It is a tool people made."],
+  ["The rich soil of the Bluegrass is a…", "natural resource", ["capital resource", "human resource", "service"], "It comes from nature."],
+  ["A worker building cars in Georgetown is a…", "human resource", ["natural resource", "capital resource", "good"], "People are human resources."],
+  ["A renewable resource is one that…", "can be replaced by nature", ["is gone forever once used", "is made of plastic", "is never used"], "Trees can grow again."],
+  ["Which is a renewable resource?", "trees", ["coal", "oil", "natural gas"], "New trees can be planted."],
+  ["Which is a non-renewable resource?", "coal", ["sunlight", "wind", "trees"], "Coal took millions of years to form."],
+  ["Coal from eastern Kentucky is non-renewable because…", "it takes millions of years to form", ["it grows back each spring", "it falls from the sky", "it is made in factories"], "Once it is used, it is gone."],
+  ["Water in Kentucky's rivers and lakes is renewable because…", "rain and snow refill it", ["it never moves", "people make it in factories", "it is made of coal"], "Water goes around in a cycle."],
+  ["Kentucky's grass and water help farmers raise…", "horses and cattle", ["sharks", "penguins", "camels"], "Animals eat the grass."],
+  ["A saw used to cut lumber in a Kentucky sawmill is a…", "capital resource", ["natural resource", "human resource", "consumer"], "Tools help make goods."],
+  ["A teacher in a Kentucky school is a…", "human resource", ["natural resource", "capital resource", "good"], "Teachers provide a service."],
+  ["To make a wooden chair, you need trees, a woodworker and…", "tools", ["a horse race", "a cave", "a song"], "Every good needs all three kinds of resources."],
+  ["Kentucky's forests give people…", "wood for furniture and homes", ["coal", "salt water", "gold bars"], "Wood is a natural resource."],
+  ["Because coal will run out, people also make electricity from…", "sun, wind and water", ["candy", "snow globes", "sand castles"], "These sources renew."],
+  ["Why do people recycle paper?", "to use fewer trees", ["to make more trash", "to stop the rain", "to grow coal"], "Recycling saves resources."],
+  ["A farmer's barn is a…", "capital resource", ["natural resource", "human resource", "service"], "It is a building used for work.", true],
+  ["Limestone is a natural resource in Kentucky used to make…", "roads and buildings", ["clothes", "bread", "music"], "It is crushed into gravel.", true],
+  ["Kentucky has many dams that make electricity from…", "flowing water", ["coal dust", "moonlight", "sound"], "Water is a renewable resource.", true],
+  ["Why might a coal town look for new kinds of jobs?", "coal is non-renewable and fewer miners are needed", ["coal grows back too fast", "no one lives there", "coal is renewable"], "Towns plan for the future.", true],
+  ["Barrels, furniture and paper all start with which natural resource?", "trees", ["coal", "sand", "iron"], "Kentucky has many forests.", true],
+  ["A truck driver carrying corn to market uses which kinds of resources?", "a human resource and a capital resource", ["only natural resources", "no resources", "only money"], "The driver is a person; the truck is a tool.", true],
+];
+
+const LAWS: Q[] = [
+  ["A law is a rule made by the…", "government", ["weather", "animals", "rivers"], "Lawmakers make laws."],
+  ["Kentucky's laws are made by the…", "General Assembly", ["school principal", "zoo keeper", "mail carrier"], "It meets in Frankfort."],
+  ["An idea for a new law is called a…", "bill", ["coin", "card", "ticket"], "A bill becomes a law if it passes."],
+  ["After the General Assembly passes a bill, it goes to the…", "governor", ["principal", "mayor of Paducah", "zoo"], "The governor signs or vetoes it."],
+  ["When the governor rejects a bill, it is called a…", "veto", ["vote", "parade", "picnic"], "Lawmakers can still pass it with enough votes."],
+  ["Why do laws change over time?", "people's needs and ideas change", ["laws are never written down", "the weather changes them", "animals change them"], "New problems need new rules."],
+  ["Long ago Kentucky had no laws about seat belts because…", "cars had not been invented", ["people didn't ride horses", "there were no roads", "it was always night"], "New inventions bring new laws."],
+  ["Today Kentucky has a law that drivers and riders must wear…", "seat belts", ["hats", "mittens", "costumes"], "It keeps people safe in a crash."],
+  ["Why did Kentucky make laws about school attendance?", "so all children would get an education", ["so children could work all day", "so schools would close", "so no one would learn"], "Long ago many children worked instead."],
+  ["Kentucky voters can change the state constitution by…", "voting yes on an amendment", ["writing on a wall", "skipping an election", "asking a horse"], "Amendments are on the ballot."],
+  ["The rules that set up Kentucky's government are in the Kentucky…", "Constitution", ["Derby", "cookbook", "atlas"], "Kentucky's constitution was written in 1891."],
+  ["Kentucky has had how many state constitutions?", "four", ["one", "twenty", "a hundred"], "The newest one is from 1891."],
+  ["Who can suggest an idea for a new law?", "any citizen, by telling a lawmaker", ["only the President", "only judges", "no one"], "Lawmakers listen to the people they serve."],
+  ["When Kentucky became a state in 1792, only some men could vote. Today…", "citizens 18 and older can vote", ["no one can vote", "only kings vote", "only children vote"], "Voting rights grew over time."],
+  ["Laws that protect children from working in dangerous jobs are called…", "child labor laws", ["traffic laws", "fishing laws", "weather laws"], "They were passed in the early 1900s."],
+  ["A law that says you need a license to fish in Kentucky helps…", "protect fish so there are enough for everyone", ["sell more boats", "stop the rain", "make lakes bigger"], "Laws can protect nature."],
+  ["Why do laws about littering help a community?", "they keep land and water clean", ["they make more trash", "they close parks", "they stop the rain"], "Clean places are healthier."],
+  ["If people think a law is unfair, they can…", "ask lawmakers to change it", ["ignore all laws", "hide from it", "give up"], "In a democracy, people speak up."],
+  ["Kentucky's 1891 Constitution is still used, but it has been changed by…", "amendments", ["erasers", "storms", "horse races"], "Amendments update a constitution.", true],
+  ["In 1904, a Kentucky law made it illegal for Black and white students to learn together at…", "the same school", ["the same farm", "the same river", "the same town"], "Courts and new laws later ended school segregation.", true],
+  ["In 1966, Kentucky passed a civil rights law that…", "banned unfair treatment in jobs and public places", ["closed all schools", "ended voting", "made new taxes on toys"], "It was the first such state law in the South.", true],
+  ["Kentucky's General Assembly meets every year in…", "Frankfort, starting in January", ["Louisville, every summer", "Paducah, only at night", "a cave"], "Lawmakers come from every part of the state.", true],
+  ["How does the General Assembly change an old law?", "by passing a new bill that changes it", ["by burning the old paper", "by waiting for rain", "by asking another state"], "Laws change through the same process that makes them.", true],
+  ["Why does Kentucky have different laws now than in 1792?", "people worked to make laws fairer and safer", ["the laws changed by themselves", "no one ever voted", "laws were lost"], "History shows laws changing.", true],
+];
+
+export const SOCIAL_2: Unit[] = [
+  bankUnit({
+    id: "ky-g2-north-america",
+    title: "Kentucky in North America",
+    emoji: "🌎",
+    blurb: "Rivers, peoples and paths into Kentucky",
+    parentNote: "Kentucky's place in North America: its countries, oceans, rivers and mountains, the Nations who lived on the land, why towns grew by rivers and springs, settlers through the Cumberland Gap, and how North American events such as the Louisiana Purchase and the Underground Railroad touched Kentucky.",
+    standards: ["2.H.CH.1; 2.H.KH.1; 2.G.KGE.1", "North American cultural groups past and today, how events in North America affected Kentucky, and settlement patterns in North America and Kentucky"],
+    items: NORTH_AMERICA,
+  }),
+  bankUnit({
+    id: "ky-g2-kentucky-resources",
+    title: "Kentucky's Resources",
+    emoji: "🌳",
+    blurb: "Natural, human and capital resources",
+    parentNote: "The factors of production with Kentucky examples (natural resources such as soil, water, trees and coal; human resources such as farmers and factory workers; capital resources such as tractors and barns), and renewable and non-renewable resources.",
+    standards: ["2.E.KE.1; 2.E.IC.1", "examples of the factors of production in Kentucky, and renewable and non-renewable resources"],
+    items: RESOURCES,
+  }),
+  bankUnit({
+    id: "ky-g2-kentucky-laws",
+    title: "How Kentucky's Laws Change",
+    emoji: "📜",
+    blurb: "Bills, vetoes and laws that grew fairer",
+    parentNote: "How Kentucky's laws are made and how they change over time: bills, the General Assembly, the governor and vetoes, the Kentucky Constitution and its amendments, and examples of laws that changed as needs and ideas changed, from seat belts and school attendance to voting and civil rights.",
+    standards: ["2.C.KGO.1; 2.C.PR.1", "how Kentucky's laws change over time, and how processes, rules and laws change societies"],
+    items: LAWS,
+  }),
+];
