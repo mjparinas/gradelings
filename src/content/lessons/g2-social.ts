@@ -739,4 +739,10 @@ export const lessons: GradeLessons = {
     ["Rivers give water for drinking and farming.", "Boats could carry people and goods along them."],
     "for water, farming and travel",
   ),
+  "social/wi-g2-reading-maps": lesson(
+    ["A map is a drawing of a place seen from above. North is usually at the top.", "On a grid map, find the column letter, then the row number.", "The key explains symbols, like a star for a capital city."],
+    "On a grid map, the park is in square B3. How do you find it?",
+    ["Find column B first.", "Then go to row 3."],
+    "column B, then row 3",
+  ),
 };

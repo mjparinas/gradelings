@@ -47,7 +47,7 @@ describe("homepage province coverage", () => {
 
   it("names every province, with 'the' before the Northwest Territories", () => {
     expect(regionList(FRAMEWORKS)).toBe(
-      "British Columbia, Ontario, Alberta, Saskatchewan, Manitoba, Yukon, the Northwest Territories, Nova Scotia, New Brunswick, Newfoundland and Labrador, Prince Edward Island, Nunavut, Washington, Oregon, California, New York, Texas, Maine, Minnesota, Alaska, Alabama, Arizona, Arkansas, Florida, Illinois, Colorado, Pennsylvania, Georgia, Ohio, New Jersey, Indiana, Virginia, Missouri, North Carolina, Massachusetts, Maryland and South Carolina",
+      "British Columbia, Ontario, Alberta, Saskatchewan, Manitoba, Yukon, the Northwest Territories, Nova Scotia, New Brunswick, Newfoundland and Labrador, Prince Edward Island, Nunavut, Washington, Oregon, California, New York, Texas, Maine, Minnesota, Alaska, Alabama, Arizona, Arkansas, Florida, Illinois, Colorado, Pennsylvania, Georgia, Ohio, New Jersey, Indiana, Virginia, Missouri, North Carolina, Massachusetts, Maryland, South Carolina and Wisconsin",
     );
   });
 
@@ -102,8 +102,8 @@ describe("provinces and states in marketing copy", () => {
     expect(offersUsd([...ca, wa])).toBe(true);
   });
 
-  it("offers Washington, Oregon, California, New York, Texas, Maine, Minnesota, Alaska, Alabama, Arizona, Arkansas, Florida, Illinois, Colorado, Pennsylvania, Georgia, Ohio, New Jersey, Indiana, Virginia, Missouri, North Carolina, Massachusetts, Maryland and South Carolina on the public site", () => {
-    expect(FRAMEWORKS.map((f) => f.id)).toEqual(expect.arrayContaining(["us-wa", "us-or", "us-ca", "us-ny", "us-tx", "us-me", "us-mn", "us-ak", "us-al", "us-az", "us-ar", "us-fl", "us-il", "us-co", "us-pa", "us-ga", "us-oh", "us-in", "us-va", "us-mo", "us-nc", "us-ma", "us-md", "us-sc"]));
-    expect(regionSummary(FRAMEWORKS)).toBe("12 Canadian provinces and territories and 25 US states");
+  it("offers Washington, Oregon, California, New York, Texas, Maine, Minnesota, Alaska, Alabama, Arizona, Arkansas, Florida, Illinois, Colorado, Pennsylvania, Georgia, Ohio, New Jersey, Indiana, Virginia, Missouri, North Carolina, Massachusetts, Maryland, South Carolina and Wisconsin on the public site", () => {
+    expect(FRAMEWORKS.map((f) => f.id)).toEqual(expect.arrayContaining(["us-wa", "us-or", "us-ca", "us-ny", "us-tx", "us-me", "us-mn", "us-ak", "us-al", "us-az", "us-ar", "us-fl", "us-il", "us-co", "us-pa", "us-ga", "us-oh", "us-in", "us-va", "us-mo", "us-nc", "us-ma", "us-md", "us-sc", "us-wi"]));
+    expect(regionSummary(FRAMEWORKS)).toBe("12 Canadian provinces and territories and 26 US states");
   });
 });

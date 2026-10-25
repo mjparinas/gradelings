@@ -654,4 +654,16 @@ export const lessons: GradeLessons = {
     ["Only the bridge design should change.", "Keep the weights and the gap they span the same."],
     "the weights and the gap",
   ),
+  "science/wi-g3-fossils": lesson(
+    ["A fossil is what is left of a plant or animal from long ago, kept in rock.", "Fossils show what lived in a place and what the place was like.", "Sea-animal fossils on dry land show a sea once covered it."],
+    "Coral fossils are found in a field far from any sea. What does that tell us?",
+    ["Coral only grows in warm, shallow seas.", "So that place was once under a warm sea."],
+    "it was once a warm sea",
+  ),
+  "science/wi-g3-weather-climate": lesson(
+    ["Weather is what the air is like today: hot, cold, rainy or windy.", "Climate is the usual weather over many years.", "Wisconsin has warm summers, cold, snowy winters and spring storms."],
+    "Is 'Milwaukee gets snow most winters' about weather or climate?",
+    ["It talks about many winters, not one day.", "A pattern over many years is climate."],
+    "climate",
+  ),
 };

@@ -1400,4 +1400,10 @@ export const lessons: GradeLessons = {
     ["It is in South America.", "It is named after a great river."],
     "the Amazon rainforest",
   ),
+  "social/wi-g7-japan": lesson(
+    ["Japan is a chain of mountainous islands with the Pacific Ocean to the east. Mount Fuji is its tallest peak.", "Little flat land meant farming in valleys and lots of fishing.", "Shinto honours kami, spirits in nature; Buddhism and Confucian ideas of family, order and duty also shaped Japanese values."],
+    "Shinto, an old belief in Japan, honours what?",
+    ["Shinto shrines are often in natural places, marked by a torii gate.", "They honour kami, the spirits in nature and special places."],
+    "kami, the spirits in nature and special places",
+  ),
 };
