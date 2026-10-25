@@ -1,0 +1,257 @@
+import type { Unit } from "../../types";
+import { SOCIAL_9 as CALIFORNIA_SOCIAL_9 } from "../../california/units/social-g9";
+import { bankUnit, type Q } from "../own";
+import { copyOf, from, timelineUnit, type Dated } from "./kit";
+
+// Oklahoma Grade 9 social studies, Oklahoma History and Government: the land and its first peoples (OKH.C.1), trade
+// centers and removal (OKH.C.2), the Civil War, Reconstruction Treaties and the opening of the land (OKH.C.3), the road to
+// statehood (OKH.C.4), the Oklahoma Constitution and government (OKH.C.5), the twentieth century from oil to the Dust
+// Bowl and World War II (OKH.C.6, OKH.C.7) and civil rights and modern Oklahoma (OKH.C.8); plus an Oklahoma copy of
+// California's elections unit for United States Government (USG.C.5). Tribal nations are living nations, written about
+// in the present tense with nothing sacred or ceremonial; removal, allotment, segregation and the Tulsa Race Massacre are
+// told plainly. Officials are taught by office, not by name.
+
+const EARLY: Q[] = [
+  ["The Cooper Bison Kill Site in northwest Oklahoma is evidence that people lived in the region about…", "10,000 years ago", ["500 years ago", "200 years ago"], "Hunters there used Folsom spear points."],
+  ["A bison skull painted with a red zigzag, found at the Cooper site, is among the oldest…", "painted objects found in North America", ["coins in the world", "maps of Oklahoma"], "It shows early people made art."],
+  ["Spiro Mounds in eastern Oklahoma was a center of the…", "Mississippian culture", ["Inca Empire", "Viking world"], "It thrived about 800 to 1450 CE."],
+  ["Shells, copper and stone found at Spiro show that its people…", "traded across much of North America", ["never left their village", "traded only with Europe"], "Goods came from the Gulf and the Great Lakes."],
+  ["The Caddo and Wichita people were known for…", "farming and trading goods", ["herding sheep", "building stone castles"], "They grew corn, beans and squash."],
+  ["Wichita villages along the Arkansas and Red rivers had homes made of…", "grass over a frame of poles", ["adobe bricks", "snow blocks"], "The homes were cool in summer."],
+  ["In 1541, the Spanish explorer… crossed the Oklahoma Panhandle looking for gold.", "Francisco Vázquez de Coronado", ["Hernán Cortés", "Christopher Columbus"], "He was searching for Quivira."],
+  ["French traders came to the region mainly to…", "trade with nations for furs and hides", ["start cotton farms", "build missions"], "They traveled the rivers."],
+  ["Many American Indian nations saw land as…", "shared by the community", ["something only one person could own", "worthless"], "Settlers often saw land as private property."],
+  ["Oklahoma's environment ranges from short-grass plains in the west to…", "forests and hills in the east", ["deserts of sand dunes everywhere", "glaciers in the south"], "Rain increases from west to east."],
+  ["Oklahoma's ecological regions differ mainly because of differences in…", "rainfall, soil and elevation", ["the number of cities", "the state's flag"], "These shape plants and animals."],
+  ["The Red River and the Arkansas River were important because they were…", "routes for travel and trade", ["borders with Canada", "sources of gold"], "People settled along rivers."],
+  ["The Three Forks area near Muskogee became an early trade center where three rivers meet: the Arkansas, the Verdigris and the…", "Grand", ["Mississippi", "Missouri"], "Traders and forts gathered there."],
+  ["Fort Gibson, built in 1824, was…", "an early US Army post near the Three Forks", ["a Spanish mission", "a French castle"], "It was the westernmost army post at the time."],
+  ["The Indian Removal Act of 1830 led to…", "the forced removal of the Five Tribes to Indian Territory", ["statehood for Oklahoma", "the end of the Civil War"], "Removals took place in the 1830s and 1840s."],
+  ["The Cherokee removal of 1838 and 1839, in which thousands died, is known as the…", "Trail of Tears", ["Long Walk", "Santa Fe Trail"], "Other nations suffered similar removals."],
+  ["After removal, the Five Tribes in Indian Territory…", "rebuilt their governments, schools and towns", ["stopped governing themselves", "moved to Mexico"], "The Cherokee Nation founded Tahlequah as its capital."],
+  ["A lasting consequence of removal was that many nations…", "lost homelands, lives and property", ["gained new farmland in Florida", "became part of Texas"], "The effects are still felt today."],
+  ["Removed nations brought with them…", "their languages, laws and traditions", ["nothing at all", "European kings"], "Cultures were carried west.", true],
+  ["Why was the Cherokee Nation's printing of the Cherokee Phoenix and Cherokee Advocate significant?", "it showed a nation using its own written language and press", ["it was the first English novel", "it ended removal"], "Sequoyah's syllabary made it possible.", true],
+  ["After removal, the Chickasaw first settled on land they bought from…", "the Choctaw Nation", ["the Kingdom of Spain", "the state of Texas"], "The Chickasaw later formed their own separate nation.", true],
+  ["Why did trade grow at early posts like Fort Gibson and Three Forks?", "rivers made them easy to reach by boat", ["they were in the mountains", "they had airports"], "Steamboats came up the Arkansas River.", true],
+  ["Early European explorers and American Indian nations met with goals that were…", "often very different, such as trade, conversion or land", ["always the same", "only about sports"], "Each side wanted different things.", true],
+  ["Which describes how removal changed what is now Oklahoma?", "it brought many nations from the Southeast and Midwest into the region", ["it emptied the region of people", "it brought only Spanish settlers"], "Nations from many places came.", true],
+  ["Spiro is one of the most important sites of its kind because…", "its mounds held many artworks and trade goods", ["it was a Civil War fort", "it was the first state capital"], "Archaeologists study it today.", true],
+];
+
+const TERRITORY: Q[] = [
+  ["During the Civil War, the Five Tribes…", "were divided, and many signed treaties with the Confederacy", ["all fought for the Union", "stayed out of the war completely"], "Divisions caused fighting inside the nations."],
+  ["The largest Civil War battle in Indian Territory was the Battle of…", "Honey Springs", ["Gettysburg", "Bunker Hill"], "It was fought in 1863 near today's Checotah."],
+  ["At Honey Springs, Union troops including the 1st Kansas Colored Infantry…", "won the battle", ["surrendered", "were never there"], "Black soldiers played a major part."],
+  ["The Reconstruction Treaties of 1866 required the Five Tribes to…", "free enslaved people and give up western lands", ["join the Confederacy", "move to Canada"], "They were punished for the Confederate treaties."],
+  ["Freedmen in the Five Tribes were…", "formerly enslaved people and their descendants", ["French traders", "Spanish soldiers"], "The treaties promised them rights in the nations."],
+  ["The Chisholm Trail carried… across Indian Territory to Kansas railroads.", "cattle from Texas", ["gold from California", "cotton from Georgia"], "Cattle drives boomed after 1867."],
+  ["In 1872, the MKT, or \"Katy\", became the first railroad to…", "cross Indian Territory", ["reach the Pacific", "go underground"], "Towns grew along the line."],
+  ["Coal mining near McAlester was one of the region's early…", "industries", ["sports", "religions"], "Miners came from many countries."],
+  ["The idea that the United States should spread across the continent was called…", "Manifest Destiny", ["the Monroe Doctrine", "the New Deal"], "It encouraged settlers to move west."],
+  ["\"Boomers\" such as David Payne pushed for…", "opening the Unassigned Lands to settlers", ["closing the railroads", "keeping settlers out"], "They entered illegally many times."],
+  ["The Land Run of April 22, 1889, opened the…", "Unassigned Lands", ["Cherokee Outlet", "Panhandle"], "About 50,000 people raced for land."],
+  ["The largest land run, in 1893, opened the…", "Cherokee Outlet", ["Unassigned Lands", "Osage Reservation"], "More than 100,000 people took part."],
+  ["The Dawes Act of 1887 and the Dawes Commission pushed for…", "allotment, dividing Tribal land among individual owners", ["new Tribal reservations", "statehood for Indian Territory"], "Land held in common was broken up."],
+  ["The lists of Tribal citizens made for allotment are called the…", "Dawes Rolls", ["Census Rolls", "Land Rolls"], "Many families still use them today."],
+  ["After allotment, lands that were not given to Tribal citizens were often…", "sold or opened to non-Indian settlers", ["returned to Spain", "made into oceans"], "Tribal land shrank."],
+  ["Allotment caused Tribal nations to have…", "less control over their lands", ["more land than ever", "no change at all"], "Fraud and land sales followed."],
+  ["Land was also opened by lottery and by sealed bid instead of a run because…", "runs were chaotic and unfair", ["no one wanted land", "the Army refused"], "The last land opening was in 1906.", true],
+  ["Why did railroads matter to the growth of towns in the territories?", "they brought settlers and carried goods to markets", ["they stopped all trade", "they ran only at night"], "Many towns began at stations.", true],
+  ["Why did many Tribal leaders oppose allotment?", "it broke up land held in common and threatened Tribal governments", ["it gave them more power", "it raised land prices for them"], "Common ownership was part of how nations lived.", true],
+  ["The Unassigned Lands were open to settlement because…", "the Creek and Seminole had ceded them after the Civil War", ["no one had ever lived there", "they were part of Kansas"], "The 1866 treaties made it possible.", true],
+  ["Settlers in a land run were called Sooners when they…", "entered before the official start", ["arrived after the run", "came from the South"], "The nickname later became a source of pride.", true],
+  ["Which describes Manifest Destiny's effect on Indian Territory?", "it brought pressure to open Tribal lands to settlers", ["it protected Tribal lands forever", "it made Indian Territory part of Mexico"], "Settlers wanted the land.", true],
+  ["The cattle industry grew in Indian Territory partly because…", "nations leased grazing land to ranchers", ["cows were native to Oklahoma", "there was no grass"], "Leases brought money to the nations.", true],
+  ["After the Civil War, the Five Tribes had to allow…", "railroads through their lands", ["Spanish forts", "a state government"], "This was in the 1866 treaties."],
+  ["Which change came first?", "the Five Tribes' removal to Indian Territory", ["the Land Run of 1889", "allotment under the Dawes Rolls"], "Removal was in the 1830s."],
+];
+
+const STATEHOOD: Q[] = [
+  ["The Organic Act of 1890 created…", "Oklahoma Territory", ["the state of Oklahoma", "Indian Territory"], "Guthrie became its capital."],
+  ["The Curtis Act of 1898…", "ended Tribal courts and forced allotment of the Five Tribes' lands", ["gave Tribal nations statehood", "created the Dawes Rolls"], "It was meant to prepare the land for statehood."],
+  ["In 1905, Tribal leaders held a convention to create a separate state called…", "Sequoyah", ["Okmulgee", "Cimarron"], "It would have been an Indian-led state."],
+  ["The proposed state of Sequoyah failed because…", "Congress would not admit it", ["voters rejected it", "Texas took the land"], "Congress wanted one state, not two."],
+  ["Many ideas and delegates from the Sequoyah Convention…", "helped shape the Oklahoma Constitution", ["were forgotten", "moved to Mexico"], "Its work was not wasted."],
+  ["The Enabling Act of 1906 allowed Oklahoma Territory and Indian Territory to…", "join and write a constitution for one state", ["stay separate forever", "join Kansas"], "A convention met in Guthrie."],
+  ["Oklahoma became a state on…", "November 16, 1907", ["July 4, 1776", "April 22, 1889"], "It was the 46th state."],
+  ["At statehood, a symbolic \"wedding\" in Guthrie joined a man and a woman representing…", "Oklahoma Territory and Indian Territory", ["Texas and Kansas", "Spain and France"], "The bride was a Cherokee woman."],
+  ["Oklahoma's first capital as a state was…", "Guthrie", ["Tulsa", "Muskogee"], "The capital moved to Oklahoma City in 1910."],
+  ["Thousands of African Americans moved to the territories in the late 1800s, founding…", "more than 50 all-Black towns", ["no new towns", "only one farm"], "Boley is one of the best known."],
+  ["Many African Americans hoped the territories would offer…", "land and freedom from discrimination", ["gold mines", "a new king"], "Some hoped for an all-Black state."],
+  ["The Progressive Movement worked to…", "fix problems such as child labor and unfair business", ["bring back slavery", "end public schools"], "Reformers wanted fairer government."],
+  ["Kate Barnard, a Progressive reformer, was the first woman in Oklahoma to…", "be elected to a statewide office", ["become governor", "fly a plane"], "She worked for children and prisoners."],
+  ["The Oklahoma Constitution was approved by…", "a vote of the people in 1907", ["the King of England", "the governor of Texas"], "Voters also elected the first officials."],
+  ["Charles Haskell became Oklahoma's first…", "governor", ["US President", "Principal Chief"], "He was a delegate to both the Sequoyah and constitutional conventions.", true],
+  ["Why did the federal government want the Five Tribes' governments ended before statehood?", "to bring all of the land under one state government", ["to give them more power", "because the nations asked for it"], "Tribal governments continued in other forms.", true],
+  ["The Sequoyah Convention's constitution showed that Tribal leaders…", "were ready to govern a state themselves", ["did not care about government", "wanted to join Mexico"], "Voters in Indian Territory approved it.", true],
+  ["The Oklahoma Constitution of 1907 reflected the Progressive Era because it…", "gave voters the initiative and referendum", ["banned all elections", "made a king"], "Citizens could propose laws.", true],
+  ["Which happened last?", "statehood", ["the Organic Act", "the Curtis Act"], "1890, 1898, 1907.", true],
+  ["After the Curtis Act, the Five Tribes…", "kept their nations, though their governments were greatly weakened", ["disappeared completely", "became US states"], "The nations survive and govern today.", true],
+  ["Why did many all-Black towns lose population after statehood?", "new segregation and voting laws took rights away", ["the towns ran out of water", "everyone moved to Europe"], "Jim Crow laws spread.", true],
+  ["The first law passed by the new state legislature in 1907…", "required segregation on railroads", ["gave women the vote", "built the State Capitol"], "It was known as Senate Bill 1.", true],
+  ["Statehood combined two territories that had…", "different histories, peoples and governments", ["the same governor", "no people"], "One was settled by land runs, the other by Tribal nations."],
+  ["The two territories that became Oklahoma were Oklahoma Territory and…", "Indian Territory", ["Dakota Territory", "New Mexico Territory"], "They joined in 1907."],
+  ["The Oklahoma Constitution was written by a convention that met in…", "Guthrie", ["Washington, D.C.", "Dallas"], "Guthrie was the territorial capital."],
+];
+
+const GOVERNMENT: Q[] = [
+  ["The Oklahoma Constitution's main purpose is to…", "set up the state government and protect citizens' rights", ["replace the US Constitution", "name the state bird"], "It works within the US Constitution."],
+  ["Oklahoma's Constitution must not conflict with…", "the US Constitution", ["city rules", "school rules"], "The US Constitution is the supreme law of the land."],
+  ["Article II of the Oklahoma Constitution, like the US Bill of Rights, protects…", "rights such as free speech and religion", ["the power of a king", "the right to take property without pay"], "It is Oklahoma's Bill of Rights."],
+  ["The Oklahoma Legislature is made up of the House of Representatives and the Senate, with…", "101 representatives and 48 senators", ["435 representatives and 100 senators", "9 members in all"], "Seats are divided by population."],
+  ["In Oklahoma, a bill becomes law after it passes both houses and…", "the governor signs it", ["the Supreme Court writes it", "the mayor reads it"], "The governor can also veto it."],
+  ["If the governor vetoes a bill, the Legislature can override it with…", "a two-thirds vote in each house", ["a coin toss", "one vote"], "Overrides are hard on purpose."],
+  ["A bill in the Oklahoma Legislature is first studied by a…", "committee", ["jury", "school board"], "Committees hold hearings."],
+  ["Oklahoma's executive branch is led by the…", "governor", ["Speaker of the House", "Chief Justice"], "The governor serves a four-year term."],
+  ["Oklahoma has two highest courts: the Oklahoma Supreme Court and the…", "Court of Criminal Appeals", ["Court of Taxes", "Court of Kings"], "One hears civil cases and the other criminal cases."],
+  ["An initiative petition lets Oklahoma citizens…", "propose a law or amendment by gathering signatures", ["remove the President", "skip paying taxes"], "The question then goes on the ballot."],
+  ["A referendum lets voters…", "approve or reject a law", ["choose the state bird each year", "appoint judges"], "Questions on the ballot are called State Questions."],
+  ["Federalism means power is…", "divided between the national and state governments", ["held by one person", "given only to cities"], "Some powers are shared."],
+  ["Which is a power of the state of Oklahoma, not the federal government?", "running public schools and issuing driver's licenses", ["printing money", "declaring war"], "States handle many daily services."],
+  ["Which is a power of the federal government?", "making treaties with other countries", ["setting city speed limits", "running county fairs"], "Foreign affairs belong to the nation."],
+  ["A major source of money for Oklahoma's state government is…", "sales and income taxes", ["tolls paid by other countries", "lottery tickets alone"], "Taxes pay for roads and schools."],
+  ["Oklahoma also taxes oil and natural gas taken from the ground with a…", "gross production tax", ["ticket tax", "seashell tax"], "Energy is a big part of the state's revenue."],
+  ["Many Tribal nations in Oklahoma earn revenue from…", "businesses such as gaming, under compacts with the state", ["printing their own US dollars", "taxing other states"], "Revenue pays for Tribal services."],
+  ["A compact between Oklahoma and a Tribal nation is…", "an agreement between two governments", ["a kind of car", "a type of court case"], "Compacts cover gaming, tobacco and more."],
+  ["Local governments in Oklahoma include…", "77 counties, cities and towns, and school districts", ["only the State Capitol", "only Tribal nations"], "Each serves people close to home."],
+  ["Why do so many State Questions appear on Oklahoma ballots?", "the constitution lets citizens and the Legislature send questions to voters", ["the governor writes them all", "the federal government requires them"], "Oklahoma's constitution gives voters a direct voice.", true],
+  ["The Oklahoma Constitution of 1907 is one of the longest state constitutions because…", "it includes many detailed rules and has been amended many times", ["it was written in five languages", "it has no amendments"], "Detailed rules need amendments to change.", true],
+  ["Bills that raise revenue in Oklahoma must start in the…", "House of Representatives", ["Senate", "Supreme Court"], "This follows the US Constitution's model.", true],
+  ["Why does the state constitution include ways for voters to propose laws?", "to keep power in the hands of the people", ["to give the governor all power", "to stop elections"], "It reflects Progressive ideas.", true],
+  ["Who presides over the Oklahoma Senate?", "the lieutenant governor", ["the Chief Justice", "the governor of Kansas"], "The lieutenant governor can break a tie.", true],
+  ["The structure of Oklahoma's government mirrors the federal government because both have…", "three branches with checks and balances", ["a king and a council", "no courts"], "Each branch can check the others.", true],
+];
+
+const MODERN: Q[] = [
+  ["The discovery of oil at the Glenn Pool in 1905 made… a boomtown.", "Tulsa", ["Guymon", "Altus"], "Tulsa became the Oil Capital of the World."],
+  ["The oil industry affected Oklahoma's economy by…", "creating jobs, towns and wealth, but with booms and busts", ["ending farming forever", "making no difference"], "Prices rose and fell."],
+  ["In the 1920s, many members of the Osage Nation were murdered for…", "their oil wealth", ["their horses", "their land runs"], "This period is called the Reign of Terror."],
+  ["On May 31 and June 1, 1921, a white mob attacked the Black community of Greenwood in…", "Tulsa", ["Oklahoma City", "Lawton"], "It is called the Tulsa Race Massacre."],
+  ["The Greenwood district was known for its successful Black-owned businesses and was called…", "Black Wall Street", ["Main Street", "Route 66"], "Hundreds of people were killed and the district was burned."],
+  ["During World War I, Choctaw soldiers used their language to…", "send messages the enemy could not understand", ["teach French", "build tanks"], "They were among the first code talkers."],
+  ["In the 1930s, drought and poor farming practices led to the…", "Dust Bowl", ["Gold Rush", "Industrial Revolution"], "Huge dust storms swept the plains."],
+  ["\"Black Sunday\", April 14, 1935, was…", "one of the worst dust storms of the Dust Bowl", ["the day Oklahoma became a state", "the start of the Civil War"], "It turned day into night."],
+  ["Many Oklahoma families who left during the Dust Bowl moved to…", "California", ["Alaska", "Canada"], "They were often called Okies."],
+  ["Plowing up the prairie grass on the plains contributed to the Dust Bowl because…", "nothing held the soil when drought came", ["grass causes storms", "it made too much rain"], "Roots hold soil in place."],
+  ["New Deal programs such as the Civilian Conservation Corps helped Oklahomans by…", "giving jobs, such as planting trees and building parks", ["paying them to leave", "closing schools"], "They also fought soil erosion."],
+  ["Will Rogers was famous during the Great Depression for…", "humor and commentary on politics", ["inventing radio", "leading the army"], "He was a citizen of the Cherokee Nation."],
+  ["Woody Guthrie from Okemah wrote songs about…", "Dust Bowl migrants and ordinary people", ["royal families", "space travel"], "\"This Land Is Your Land\" is one."],
+  ["During World War II, Oklahoma contributed…", "soldiers, code talkers, airplanes and military bases", ["nothing", "only cotton"], "Tinker Field opened near Oklahoma City."],
+  ["In 1958, Clara Luper and young members of the NAACP Youth Council held a sit-in at…", "the Katz Drug Store lunch counter in Oklahoma City", ["the White House", "a Tulsa oil field"], "They wanted equal service."],
+  ["Ada Lois Sipuel Fisher's court case helped open…", "the University of Oklahoma's law school to Black students", ["Oklahoma's first oil well", "the first land run"], "The Supreme Court ruled in 1948."],
+  ["In McLaurin v. Oklahoma State Regents (1950), the Supreme Court ruled that a Black student…", "could not be separated from other students inside the university", ["had to leave the state", "could not take classes"], "It was a step toward Brown v. Board of Education."],
+  ["In 2020, in McGirt v. Oklahoma, the Supreme Court ruled that…", "the Muscogee (Creek) Nation's reservation was never ended by Congress", ["Oklahoma was never a state", "Tribal nations have no courts"], "It affected who prosecutes some crimes."],
+  ["Carl Albert of McAlester rose to become…", "Speaker of the US House of Representatives", ["President", "Chief Justice"], "He was known as the Little Giant from Little Dixie."],
+  ["On April 19, 1995, a bombing destroyed the Alfred P. Murrah Federal Building in…", "Oklahoma City", ["Tulsa", "Norman"], "168 people were killed."],
+  ["The way Oklahomans responded to the 1995 bombing, helping strangers and rescuers, became known as…", "the Oklahoma Standard", ["the Sooner Rule", "the Dust Bowl spirit"], "The Oklahoma City National Memorial honors those lost.", true],
+  ["The Oklahoma Indian Welfare Act of 1936 changed federal policy by…", "helping Tribal nations reorganize their governments", ["removing more nations", "ending Tribal citizenship"], "It followed the Indian Reorganization Act of 1934.", true],
+  ["Why did the Tulsa Race Massacre go largely untaught for decades?", "it was left out of history books and official records", ["it did not happen", "it happened in another state"], "In 2001 a state commission studied it.", true],
+  ["Comanche soldiers served in World War II as…", "code talkers", ["pilots of the first jets", "generals"], "Their messages were never broken.", true],
+  ["Growth in which sector has helped Oklahoma's economy since the late 1900s?", "aerospace and energy, including wind power", ["whaling", "gold mining"], "The economy is more diverse than in the oil boom years.", true],
+  ["Why was depending heavily on oil risky for Oklahoma's economy?", "when oil prices fell, jobs and tax money fell too", ["oil never runs out", "oil prices never change"], "The oil bust of the 1980s hurt many towns.", true],
+];
+
+const EVENTS: Dated[] = [
+  ["The Indian Removal Act is passed", 1830],
+  ["The Battle of Honey Springs", 1863],
+  ["The Reconstruction Treaties with the Five Tribes", 1866],
+  ["The MKT railroad crosses Indian Territory", 1872],
+  ["The Dawes Act is passed", 1887],
+  ["The Land Run opens the Unassigned Lands", 1889],
+  ["The Organic Act creates Oklahoma Territory", 1890],
+  ["The Cherokee Outlet Land Run", 1893],
+  ["The Curtis Act is passed", 1898],
+  ["The Sequoyah Convention", 1905],
+  ["Oklahoma becomes the 46th state", 1907],
+  ["The Tulsa Race Massacre", 1921],
+  ["Black Sunday, the worst Dust Bowl storm", 1935],
+  ["The Supreme Court rules in Ada Lois Sipuel Fisher's case", 1948],
+  ["Clara Luper's sit-in at the Katz Drug Store", 1958],
+  ["The bombing of the Murrah Federal Building", 1995],
+  ["The Supreme Court decides McGirt v. Oklahoma", 2020],
+];
+
+const ELECTIONS: Q[] = [
+  ["How many members does Oklahoma send to the US House of Representatives?", "5", ["2", "48"], "Seats depend on population."],
+  ["How many electoral votes does Oklahoma have?", "7", ["2", "54"], "Five House seats plus two senators."],
+  ["Oklahoma's primary elections are mostly closed, which means…", "voters usually vote only in their own party's primary", ["anyone can vote in every primary", "no one votes in primaries"], "Parties can choose to open theirs to independents."],
+  ["If no candidate wins more than half the vote in an Oklahoma primary, the top two…", "meet in a runoff", ["share the office", "flip a coin"], "Runoffs make sure the winner has a majority."],
+  ["Who oversees elections statewide in Oklahoma?", "the State Election Board", ["the governor of Texas", "the US Senate"], "Each county also has an election board."],
+  ["In Oklahoma, a person can register to vote if they are a US citizen, live in the state and are at least…", "18 by Election Day", ["16", "21"], "You can register up to 25 days before an election."],
+];
+
+export const SOCIAL_9: Unit[] = [
+  bankUnit({
+    id: "ok-g9-early-oklahoma",
+    title: "Early Oklahoma",
+    emoji: "🦬",
+    blurb: "The land, first peoples, trade and removal",
+    parentNote:
+      "Oklahoma's physical features and ecological regions, the Cooper Bison Kill Site and Spiro Mounds, the Caddo and Wichita, early Spanish and French contact, different views of land ownership, early trade centers such as Three Forks and Fort Gibson, and the removal of the Five Tribes to Indian Territory, told plainly.",
+    standards: ["OKH.C.1.1; OKH.C.1.2; OKH.C.1.3; OKH.C.1.4; OKH.C.1.5; OKH.C.1.6; OKH.C.2.1; OKH.C.2.2", "Oklahoma's land and early peoples, European contact, early trade centers and the consequences of removal"],
+    items: EARLY,
+  }),
+  bankUnit({
+    id: "ok-g9-territory",
+    title: "Indian Territory & the Land Runs",
+    emoji: "🐎",
+    blurb: "The Civil War, cattle trails, railroads, land runs and allotment",
+    parentNote:
+      "The Civil War in Indian Territory and the Reconstruction Treaties of 1866, cattle trails, railroads and coal, Manifest Destiny and the Boomers, the land runs, and allotment under the Dawes Act and the Dawes Rolls, which cost Tribal nations control of much of their land.",
+    standards: ["OKH.C.3.1; OKH.C.3.2; OKH.C.3.3; OKH.C.3.4", "the Civil War and Reconstruction Treaties, early industries, Manifest Destiny and the loss of Tribal lands"],
+    items: TERRITORY,
+  }),
+  bankUnit({
+    id: "ok-g9-statehood",
+    title: "The Road to Statehood",
+    emoji: "⭐",
+    blurb: "The Organic Act, the Sequoyah Convention and 1907",
+    parentNote:
+      "The Organic Act of 1890, the Curtis Act of 1898, the Indian-led Sequoyah Convention, African American migration and all-Black towns, Progressive reformers such as Kate Barnard, the Enabling Act and statehood on November 16, 1907.",
+    standards: ["OKH.C.4.1; OKH.C.4.2; OKH.C.4.3; OKH.C.4.4; OKH.C.4.5", "the Curtis Act and the Sequoyah Convention, African American migration, the Organic and Enabling Acts, Progressive reformers and statehood"],
+    items: STATEHOOD,
+  }),
+  bankUnit({
+    id: "ok-g9-oklahoma-government",
+    title: "Governing Oklahoma",
+    emoji: "🏛️",
+    blurb: "The Oklahoma Constitution, lawmaking and State Questions",
+    parentNote:
+      "The purpose and principles of the Oklahoma Constitution and its Bill of Rights, how a bill becomes law in Oklahoma, federalism, the initiative petition and referendum, and where local, state and Tribal governments get their revenue. Officials are taught by office, so look up your own legislators together.",
+    standards: ["OKH.C.5.1; OKH.C.5.2; OKH.C.5.3; OKH.C.5.4; OKH.C.5.5; OKH.C.5.6; USG.C.3.4; USG.C.3.5", "the Oklahoma Constitution, rights, lawmaking, federalism and the levels of government, direct democracy and government revenue"],
+    items: GOVERNMENT,
+  }),
+  bankUnit({
+    id: "ok-g9-modern-oklahoma",
+    title: "Modern Oklahoma",
+    emoji: "🛢️",
+    blurb: "Oil, the Dust Bowl, war and civil rights",
+    parentNote:
+      "Oil booms, the Osage murders and the Tulsa Race Massacre, told plainly, code talkers in both world wars, the Dust Bowl and the New Deal, Will Rogers and Woody Guthrie, Clara Luper and the court cases that opened Oklahoma's universities, McGirt v. Oklahoma, and the Oklahoma Standard after the 1995 bombing.",
+    standards: ["OKH.C.6.1; OKH.C.6.3; OKH.C.6.4; OKH.C.7.2; OKH.C.7.3; OKH.C.7.5; OKH.C.7.6; OKH.C.8.1; OKH.C.8.3; OKH.C.8.4; OKH.C.8.5", "oil, race relations, the world wars, the Dust Bowl, civil rights, state and Tribal relations and modern Oklahoma"],
+    items: MODERN,
+  }),
+  timelineUnit({
+    id: "ok-g9-oklahoma-timeline",
+    title: "Oklahoma History Timeline",
+    emoji: "📅",
+    blurb: "Putting Oklahoma's history in order",
+    parentNote: "Ordering events in Oklahoma history from the Indian Removal Act of 1830 to McGirt v. Oklahoma in 2020, reading years and working out which came first.",
+    standards: ["OKH.C.3.1; OKH.C.4.5; OKH.C.8.1", "sequencing Oklahoma history from removal and the Civil War to statehood and civil rights"],
+    events: EVENTS,
+  }),
+  copyOf(
+    from(CALIFORNIA_SOCIAL_9, "ca-g9-elections"),
+    {
+      id: "ok-g9-elections",
+      title: "Elections & Voting",
+      emoji: "🗳️",
+      blurb: "Voting, parties, primaries and the Electoral College",
+      parentNote:
+        "How citizens take part by voting, political parties and their platforms, primaries and the electoral process, political action committees, the Electoral College and challenges such as redistricting, with Oklahoma's own primaries, runoffs and election board.",
+      standards: ["USG.C.5.1; USG.C.5.2; USG.C.5.3; USG.C.5.4; USG.C.5.5; USG.C.5.6", "voting, parties, the electoral process, PACs, the Electoral College and redistricting"],
+    },
+    ELECTIONS,
+  ),
+];
