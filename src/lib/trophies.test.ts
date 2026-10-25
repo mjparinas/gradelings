@@ -77,8 +77,8 @@ describe("trophy progress", () => {
       }
       expect(newlyEarned(d, ctx).map((t) => t.id)).toEqual(visible.map((t) => t.id));
     }
-    // It walks every grade of every framework, so it grows with each new province or state.
-  }, 60_000);
+    // Runs every trophy in every framework and grade, so it grows with each new province or state.
+  }, 120_000);
 
   it("needs Extending, not just Proficient, for the Extending trophies", () => {
     const d = didEverything(2);

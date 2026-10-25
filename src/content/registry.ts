@@ -11,6 +11,7 @@ import { manifest as georgia } from "./georgia/manifest";
 import { manifest as britishColumbia } from "./grades/manifest";
 import { manifest as illinois } from "./illinois/manifest";
 import { manifest as indiana } from "./indiana/manifest";
+import { manifest as kentucky } from "./kentucky/manifest";
 import { manifest as louisiana } from "./louisiana/manifest";
 import { manifest as maine } from "./maine/manifest";
 import { manifest as manitoba } from "./manitoba/manifest";
@@ -19,6 +20,7 @@ import { manifest as massachusetts } from "./massachusetts/manifest";
 import { manifest as michigan } from "./michigan/manifest";
 import { manifest as minnesota } from "./minnesota/manifest";
 import { manifest as missouri } from "./missouri/manifest";
+import { manifest as nevada } from "./nevada/manifest";
 import { manifest as newBrunswick } from "./new-brunswick/manifest";
 import { manifest as newJersey } from "./new-jersey/manifest";
 import { manifest as newYork } from "./new-york/manifest";
@@ -37,6 +39,7 @@ import { manifest as saskatchewan } from "./saskatchewan/manifest";
 import { manifest as southCarolina } from "./south-carolina/manifest";
 import { manifest as tennessee } from "./tennessee/manifest";
 import { manifest as texas } from "./texas/manifest";
+import { manifest as utah } from "./utah/manifest";
 import { manifest as virginia } from "./virginia/manifest";
 import { manifest as washington } from "./washington/manifest";
 import { manifest as wisconsin } from "./wisconsin/manifest";
@@ -65,6 +68,7 @@ const MANIFESTS = [
   britishColumbia,
   illinois,
   indiana,
+  kentucky,
   louisiana,
   maine,
   manitoba,
@@ -73,6 +77,7 @@ const MANIFESTS = [
   michigan,
   minnesota,
   missouri,
+  nevada,
   newBrunswick,
   newJersey,
   newYork,
@@ -91,6 +96,7 @@ const MANIFESTS = [
   southCarolina,
   tennessee,
   texas,
+  utah,
   virginia,
   washington,
   wisconsin,
